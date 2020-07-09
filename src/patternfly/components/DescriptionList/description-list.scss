@@ -1,17 +1,17 @@
-$pf-c-description-list--breakpoint-map: build-breakpoint-map();
+$pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl", "2xl");
 
 .pf-c-description-list {
-  --pf-c-description-list--AlignItems: baseline;
   --pf-c-description-list--RowGap: var(--pf-global--gutter--md);
   --pf-c-description-list--ColumnGap: var(--pf-global--spacer--md);
   --pf-c-description-list--GridTemplateColumns--count: 1;
-  --pf-c-description-list--GridTemplateColumns--width: auto;
+  --pf-c-description-list--GridTemplateColumns--width: 1fr;
   --pf-c-description-list--GridTemplateColumns: repeat(var(--pf-c-description-list--GridTemplateColumns--count), var(--pf-c-description-list--GridTemplateColumns--width));
 
   // Group
   --pf-c-description-list__group--RowGap: var(--pf-global--spacer--sm);
   --pf-c-description-list__group--ColumnGap: var(--pf-global--spacer--md);
   --pf-c-description-list__group--GridTemplateColumns: auto;
+  --pf-c-description-list__group--GridColumn: auto;
 
   // Term
   --pf-c-description-list__term--FontWeight: var(--pf-global--FontWeight--bold);
@@ -25,6 +25,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map();
   --pf-c-description-list--m-horizontal__term--width: #{pf-size-prem(150px)};
   --pf-c-description-list--m-horizontal__description--width: minmax(#{pf-size-prem(150px)}, auto);
   --pf-c-description-list--m-horizontal__group--GridTemplateColumns: var(--pf-c-description-list--m-horizontal__term--width) var(--pf-c-description-list--m-horizontal__description--width);
+  --pf-c-description-list--m-1-col--GridTemplateColumns--count: 1;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-description-list--m-2-col--GridTemplateColumns--count: 2;
@@ -33,7 +34,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map();
   }
 
   display: grid;
-  align-items: var(--pf-c-description-list--AlignItems);
+  align-items: baseline;
   row-gap: var(--pf-c-description-list--RowGap);
   column-gap: var(--pf-c-description-list--ColumnGap);
   grid-template-columns: var(--pf-c-description-list--GridTemplateColumns);
@@ -53,9 +54,11 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map();
 
 .pf-c-description-list__group {
   display: grid;
+  grid-column: var(--pf-c-description-list__group--GridColumn);
   row-gap: var(--pf-c-description-list__group--RowGap);
   column-gap: var(--pf-c-description-list__group--ColumnGap);
   grid-template-columns: var(--pf-c-description-list__group--GridTemplateColumns);
+  align-items: var(--pf-c-description-list__group--AlignItems);
   align-content: start;
 }
 
@@ -100,3 +103,11 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map();
   }
 }
 // stylelint-enable
+
+// .pf-c-description-list.pf-m-horizontal.pf-m-auto-term-widths {
+//   @supports (grid-template-columns: subgrid) {
+//     --pf-c-description-list--GridTemplateColumns--width: max-content auto;
+//     --pf-c-description-list__group--GridTemplateColumns: subgrid;
+//     --pf-c-description-list__group--GridColumn: auto / span 2;
+//   }
+// }
