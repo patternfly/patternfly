@@ -19,10 +19,6 @@ cssPrefix: pf-c-description-list
 {{> description-list__example description-list--title="Default 3 column DL" description-list--modifier="pf-m-3-col-on-lg"}}
 ```
 
-```hbs title=Default-4-col-on-xl
-{{> description-list__example description-list--title="Default 4 column DL" description-list--modifier="pf-m-4-col-on-xl"}}
-```
-
 ```hbs title=Horizontal
 {{> description-list__example description-list--title="Horizontal DL" description-list--modifier="pf-m-horizontal"}}
 ```
@@ -35,18 +31,14 @@ cssPrefix: pf-c-description-list
 {{> description-list__example description-list--title="Horizontal 3 column DL" description-list--modifier="pf-m-horizontal pf-m-3-col-on-lg"}}
 ```
 
-```hbs title=Horizontal-4-col-on-xl
-{{> description-list__example description-list--title="Horizontal 4 column DL" description-list--modifier="pf-m-horizontal pf-m-4-col-on-xl"}}
-```
-
 ## Responsive column definitions
 
 ```hbs title=Default-responsive-columns
-{{> description-list__example description-list--title="Default responsive DL" description-list--modifier="pf-m-2-col-on-lg pf-m-3-col-on-xl pf-m-4-col-on-2xl"}}
+{{> description-list__example description-list--title="Default responsive DL" description-list--modifier="pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
 ```
 
 ```hbs title=Horizontal-responsive-columns
-{{> description-list__example description-list--title="Horizontal responsive DL" description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg pf-m-3-col-on-xl pf-m-4-col-on-2xl"}}
+{{> description-list__example description-list--title="Horizontal responsive DL" description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
 ```
 
 ## Auto-column-width
@@ -87,10 +79,11 @@ cssPrefix: pf-c-description-list
 | `.pf-c-description-list__group` | `<div>` | Initiates a description list component group. **Required** |
 | `.pf-c-description-list__term` | `<dt>` | Initiates a description list component term. **Required** |
 | `.pf-c-description-list__description` | `<dd>` | Initiates a description list component description. **Required** |
+| `.pf-c-description-list__text` | `<dd>` | Initiates a description list component text element. **Required** |
 | `.pf-m-horizontal` | `.pf-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
 | `.pf-m-auto-column-widths` | `.pf-c-description-list` | Modifies the description list to format automatically. |
 | `.pf-m-inline-grid` | `.pf-c-description-list` | Modifies the description list display to inline-grid. |
-| `.pf-m-{1,2,3,4}-col{-on-[md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list number of columns. |
+| `.pf-m-{1,2,3}-col{-on-[md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list number of columns. |
 
 <!-- | `.pf-m-order[0-12]{-on-[breakpoint]}` | `.pf-c-description-list__group` | Modifies the order of the flex layout element. |
 | `.pf-m-order-first{-on-[breakpoint]}` | `.pf-c-description-list__group` | Modifies the order of the flex layout element to -1. |
