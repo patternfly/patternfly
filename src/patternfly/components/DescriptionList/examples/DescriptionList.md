@@ -15,12 +15,12 @@ cssPrefix: pf-c-description-list
 {{> description-list__example description-list--title="Default 2 column DL" description-list--modifier="pf-m-2-col"}}
 ```
 
-```hbs title=Default-3-col
-{{> description-list__example description-list--title="Default 3 column DL" description-list--modifier="pf-m-3-col"}}
+```hbs title=Default-3-col-on-lg
+{{> description-list__example description-list--title="Default 3 column DL" description-list--modifier="pf-m-3-col-on-lg"}}
 ```
 
-```hbs title=Default-4-col
-{{> description-list__example description-list--title="Default 4 column DL" description-list--modifier="pf-m-4-col"}}
+```hbs title=Default-4-col-on-xl
+{{> description-list__example description-list--title="Default 4 column DL" description-list--modifier="pf-m-4-col-on-xl"}}
 ```
 
 ```hbs title=Horizontal
@@ -31,12 +31,12 @@ cssPrefix: pf-c-description-list
 {{> description-list__example description-list--title="Horizontal 2 column DL" description-list--modifier="pf-m-horizontal pf-m-2-col"}}
 ```
 
-```hbs title=Horizontal-3-col
-{{> description-list__example description-list--title="Horizontal 3 column DL" description-list--modifier="pf-m-horizontal pf-m-3-col"}}
+```hbs title=Horizontal-3-col-on-lg
+{{> description-list__example description-list--title="Horizontal 3 column DL" description-list--modifier="pf-m-horizontal pf-m-3-col-on-lg"}}
 ```
 
-```hbs title=Horizontal-4-col
-{{> description-list__example description-list--title="Horizontal 4 column DL" description-list--modifier="pf-m-horizontal pf-m-4-col"}}
+```hbs title=Horizontal-4-col-on-xl
+{{> description-list__example description-list--title="Horizontal 4 column DL" description-list--modifier="pf-m-horizontal pf-m-4-col-on-xl"}}
 ```
 
 ## Responsive column definitions
@@ -91,6 +91,7 @@ cssPrefix: pf-c-description-list
 | `.pf-m-auto-column-widths` | `.pf-c-description-list` | Modifies the description list to format automatically. |
 | `.pf-m-inline-grid` | `.pf-c-description-list` | Modifies the description list display to inline-grid. |
 | `.pf-m-{1,2,3,4}-col{-on-[md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list number of columns. |
-| `.pf-m-order[0-12]{-on-[breakpoint]}` | `.pf-c-description-list__group` | Modifies the order of the flex layout element. |
+
+<!-- | `.pf-m-order[0-12]{-on-[breakpoint]}` | `.pf-c-description-list__group` | Modifies the order of the flex layout element. |
 | `.pf-m-order-first{-on-[breakpoint]}` | `.pf-c-description-list__group` | Modifies the order of the flex layout element to -1. |
-| `.pf-m-order-last{-on-[breakpoint]}` | `..pf-c-description-list__group` | Modifies the order of the flex layout element to $limit + 1. |
+| `.pf-m-order-last{-on-[breakpoint]}` | `..pf-c-description-list__group` | Modifies the order of the flex layout element to $limit + 1. | -->
