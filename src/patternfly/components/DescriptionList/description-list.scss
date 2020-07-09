@@ -53,8 +53,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "md", "lg",
   row-gap: var(--pf-c-description-list__group--RowGap);
   column-gap: var(--pf-c-description-list__group--ColumnGap);
   grid-template-columns: var(--pf-c-description-list__group--GridTemplateColumns);
-  align-items: var(--pf-c-description-list__group--AlignItems);
-  align-content: baseline;
+  align-items: baseline;
 }
 
 .pf-c-description-list__term,
