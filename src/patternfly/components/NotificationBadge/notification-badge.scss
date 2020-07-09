@@ -30,7 +30,6 @@
 
   // Badge count
   --pf-c-notification-badge--m-attention--Color: var(--pf-global--Color--light-100);
-  --pf-c-notification-badge--m-attention--after--BorderColor: transparent;
   --pf-c-notification-badge--m-attention--after--BackgroundColor: var(--pf-global--danger-color--100);
 
   // Badge count
@@ -82,7 +81,7 @@
 
   &.pf-m-attention {
     --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-attention--after--BackgroundColor);
-    --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--m-attention--after--BorderColor);
+    --pf-c-notification-badge--after--BorderColor: transparent;
 
     color: var(--pf-c-notification-badge--m-attention--Color);
   }

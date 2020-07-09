@@ -55,7 +55,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-tools--c-button--m-selected--before--Height: auto; // remove at breaking change
   --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-page__header-tools--c-button--m-selected--before--BorderRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--xl--MarginRight);
