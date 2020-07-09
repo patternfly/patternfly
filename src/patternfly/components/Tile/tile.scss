@@ -22,8 +22,9 @@
   --pf-c-tile__icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-tile__icon--FontSize: var(--pf-global--icon--FontSize--md);
   --pf-c-tile__icon--Color: var(--pf-global--Color--200);
-  --pf-c-tile--m-selected__icon--Color: var(--pf-global--primary-color--100);
   --pf-c-tile--hover__icon--Color: var(--pf-global--primary-color--100);
+  --pf-c-tile--m-selected__icon--Color: var(--pf-global--primary-color--100);
+  --pf-c-tile--m-disabled__icon--Color: var(--pf-global--disabled-color--100);
 
   // Stacked variatiion
   --pf-c-tile__header--m-stacked__icon--MarginBottom: var(--pf-global--spacer--xs);
@@ -31,7 +32,7 @@
   --pf-c-tile__header--m-stacked__icon--Color: var(--pf-global--Color--100);
   --pf-c-tile--hover__header--m-stacked__icon--Color: var(--pf-global--primary-color--100);
   --pf-c-tile--m-selected__header--m-stacked__icon--Color: var(--pf-global--primary-color--100);
-  --pf-c-tile--m-disabled__header--icon--Color: var(--pf-global--Color--200);
+  --pf-c-tile--m-disabled__header--m-stacked__icon--Color: var(--pf-global--disabled-color--100);
 
   // large variation
   --pf-c-tile--m-display-lg__header--m-stacked__icon--FontSize: var(--pf-global--icon--FontSize--xl);
@@ -63,7 +64,6 @@
     border-radius: var(--pf-c-tile--before--BorderRadius);
   }
 
-  // stylelint-disable
   &:hover {
     --pf-c-tile__title--Color: var(--pf-c-tile--hover__title--Color);
     --pf-c-tile__icon--Color: var(--pf-c-tile--hover__icon--Color);
@@ -80,10 +80,7 @@
     --pf-c-tile__icon--Color: var(--pf-c-tile--m-selected__icon--Color);
     --pf-c-tile--before--BorderWidth: var(--pf-c-tile--m-selected--before--BorderWidth);
     --pf-c-tile--before--BorderColor: var(--pf-c-tile--m-selected--before--BorderColor);
-
-    .pf-c-tile__header.pf-m-stacked .pf-c-tile__icon {
-      --pf-c-tile__icon--Color: var(--pf-c-tile--m-selected__header--m-stacked__icon--Color);
-    }
+    --pf-c-tile__header--m-stacked__icon--Color: var(--pf-c-tile--m-selected__header--m-stacked__icon--Color);
   }
 
   &.pf-m-disabled {
@@ -91,24 +88,23 @@
     --pf-c-tile__title--Color: var(--pf-c-tile--m-disabled__title--Color);
     --pf-c-tile__body--Color: var(--pf-c-tile--m-disabled__body--Color);
     --pf-c-tile--before--BorderWidth: 0;
+    --pf-c-tile__icon--Color: var(--pf-c-tile--m-disabled__icon--Color);
+    --pf-c-tile__header--m-stacked__icon--Color: var(--pf-c-tile--m-disabled__header--m-stacked__icon--Color);
 
     pointer-events: none;
-    cursor: not-allowed;
-
-    .pf-c-tile__header .pf-c-tile__icon {
-      --pf-c-tile__icon--Color: var(--pf-c-tile--m-disabled__header--icon--Color);
-    }
   }
 
   &.pf-m-display-lg {
     .pf-c-tile__header.pf-m-stacked {
-      .pf-c-tile__icon {
-        --pf-c-tile__icon--FontSize: var(--pf-c-tile--m-display-lg__header--m-stacked__icon--FontSize);
+      --pf-c-tile__icon--FontSize: var(--pf-c-tile--m-display-lg__header--m-stacked__icon--FontSize);
 
+      .pf-c-tile__icon {
         width: var(--pf-c-tile--m-display-lg__header--m-stacked__icon--Width);
         height: var(--pf-c-tile--m-display-lg__header--m-stacked__icon--Height);
 
+        // stylelint-disable
         img {
+          // stylelint-enable
           max-width: 100%;
           max-height: 100%;
         }
@@ -123,14 +119,14 @@
   justify-content: center;
 
   &.pf-m-stacked {
+    --pf-c-tile__icon--MarginRight: 0;
+    --pf-c-tile__icon--FontSize: var(--pf-c-tile__header--m-stacked__icon--FontSize);
+    --pf-c-tile__icon--Color: var(--pf-c-tile__header--m-stacked__icon--Color);
+
     flex-direction: column;
     justify-content: initial;
 
     .pf-c-tile__icon {
-      --pf-c-tile__icon--MarginRight: 0;
-      --pf-c-tile__icon--FontSize: var(--pf-c-tile__header--m-stacked__icon--FontSize);
-      --pf-c-tile__icon--Color: var(--pf-c-tile__header--m-stacked__icon--Color);
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -142,7 +138,6 @@
 .pf-c-tile__title {
   color: var(--pf-c-tile__title--Color);
 }
-// stylelint-enable
 
 .pf-c-tile__body {
   font-size: var(--pf-c-tile__body--FontSize);
