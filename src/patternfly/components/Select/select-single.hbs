@@ -7,13 +7,13 @@
   {{#if select--IsEmptyMenu}}
     [Panel contents here]
   {{else}}
-    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Running</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-selected="false">Running</button></li>
     <li>
       <button type="button" class="pf-c-select__menu-item{{#if select--ItemIsSelected}} pf-m-selected{{/if}}"
         {{#if select--ItemIsSelected}}
-          aria-pressed="true"
+          aria-selected="true"
         {{else}}
-          aria-pressed="false"
+          aria-selected="false"
         {{/if}}>
         Stopped
         {{#if select--ItemIsSelected}}
@@ -21,8 +21,8 @@
         {{/if}}
       </button>
     </li>
-    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Down</button></li>
-    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Degraded</button></li>
-    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Needs Maintenance</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-selected="false">Down</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-selected="false">Degraded</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-selected="false">Needs Maintenance</button></li>
   {{/if}}
 </{{#if select-menu--type}}{{select-menu--type}}{{else}}ul{{/if}}>

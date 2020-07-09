@@ -289,9 +289,31 @@ The plain select variation should be used when you do not want a border applied 
 ## Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select__menu-item-description` | `<div>` |  Initiates the select menu item description element. |
-| `.pf-c-select__menu-item-main` | `<div>` | Initiates the select menu item main element. Used when the description element is present. |
+| `.pf-c-select__menu-item-description` | `<span>` |  Initiates the select menu item description element. |
+| `.pf-c-select__menu-item-main` | `<span>` | Initiates the select menu item main element. Used when the description element is present. |
 | `.pf-m-description` | `.pf-c-select__menu-item` | Modifies the select menu item when selected to accommodate the description element. |
+
+
+```hbs title=Favorites
+{{#> select id="select-favorites" select--IsExpanded="true" select--IsFavorites="true"}}
+  Favorites
+{{/select}}
+```
+
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-label="Not starred"` | `.pf-c-select__menu-wrapper > .pf-c-select__menu-item.pf-m-action` | Provides an accessible label indicating that the favorite action is not selected. |
+| `aria-label="Starred"` | `.pf-c-select__menu-wrapper.pf-m-favorite > .pf-c-select__menu-item.pf-m-action` | Provides an accessible label indicating that the favorite action is selected. |
+
+## Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-select__menu-wrapper` | `<li>` | Defines a menu wrapper for use with multiple actionable items in a single item row. |
+| `.pf-m-favorite` | `.pf-c-select__menu-wrapper` | Modifies wrapper to indicate that the item row has been favorited. |
+| `.pf-m-favorite-action` | `.pf-c-select__menu-item` | Modifies an item for favorite styles. |
+| `.pf-m-link` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item for link styles. |
+| `.pf-m-action` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item to for action styles. |
 
 ## Documentation
 ### Overview

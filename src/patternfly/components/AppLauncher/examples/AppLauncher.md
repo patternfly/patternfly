@@ -327,6 +327,7 @@ import './AppLauncher.css'
 | `.pf-c-app-launcher__menu-search` | `<div>` | Defines the wrapper for the search input. |
 | `.pf-c-app-launcher__group` | `<section>` | Defines a group of items. Required when there is more than one group. |
 | `.pf-c-app-launcher__group-title` | `<h1>` | Defines a title for a group of items. |
+| `.pf-c-app-launcher__menu-wrapper` | `<li>` | Defines a menu wrapper for use with multiple actionable items in a single item row. |
 | `.pf-c-app-launcher__menu-item` | `<a>`, `<button>` | Defines a menu item. |
 | `.pf-c-app-launcher__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
 | `.pf-c-app-launcher__menu-item-external-icon` | `<span>` | Defines the wrapper for the external link icon that appears on hover/focus. Use with `.pf-m-external`. |
@@ -335,8 +336,7 @@ import './AppLauncher.css'
 | `.pf-m-align-right` | `.pf-c-app-launcher__menu` | Modifies to display the menu aligned to the right edge of the toggle. |
 | `.pf-m-disabled` | `a.pf-c-app-launcher__menu-item` | Modifies to display the menu item as disabled. |
 | `.pf-m-external` | `.pf-c-app-launcher__menu-item` | Modifies to display the menu item as having an external link icon on hover/focus. |
-| `.pf-m-favorite` | `.pf-c-app-launcher__menu-item` | Modifies item to be a favorited item. |
-| `.pf-m-wrapper` | `.pf-c-app-launcher__menu-item` | Modifies item to be a wrapper with clickable elements inside. |
+| `.pf-m-favorite` | `.pf-c-app-launcher__menu-wrapper` | Modifies wrapper to indicate that the item row has been favorited. |
 | `.pf-m-link` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies item for link styles. |
 | `.pf-m-action` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies item to for action styles. |
 | `.pf-m-active` | `.pf-c-app-launcher__toggle` | Forces display of the active state of the toggle. |
