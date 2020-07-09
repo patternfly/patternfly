@@ -85,7 +85,7 @@ cssPrefix: pf-c-input-group
 {{#> input-group}}
   {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput11" name="textInput11" aria-label="Search input example"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="search button for search input"'}}
+  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search button for search input"'}}
     <i class="fas fa-search" aria-hidden="true"></i>
   {{/button}}
 {{/input-group}}
@@ -93,15 +93,15 @@ cssPrefix: pf-c-input-group
 {{#> input-group}}
   {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput13" name="textInput13" aria-label="Input example with popover"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="popover for input"'}}
+  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Popover for input"'}}
     <i class="fas fa-question-circle" aria-hidden="true"></i>
   {{/button}}
 {{/input-group}}
 <br>
 {{#> input-group}}
-  {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput12" name="textInput12" aria-label="Search input plain example"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput12" name="textInput12" aria-label="Input example with popover"'}}
   {{/form-control}}
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="plain search button for search input"'}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Popover for input"'}}
     <i class="fas fa-question-circle" aria-hidden="true"></i>
   {{/button}}
 {{/input-group}}
