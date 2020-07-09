@@ -60,6 +60,10 @@
     height: var(--pf-c-notification-badge__i--Height);
   }
 
+  & > * {
+    position: relative;
+  }
+
   &.pf-m-unread {
     --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-unread--after--BackgroundColor);
     --pf-c-notification-badge--after--BorderWidth: var(--pf-c-notification-badge--m-unread--after--BorderWidth);
