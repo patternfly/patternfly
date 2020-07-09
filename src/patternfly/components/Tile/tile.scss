@@ -64,20 +64,6 @@
   }
 
   // stylelint-disable
-  &.pf-m-disabled {
-    --pf-c-tile--BackgroundColor: var(--pf-c-tile--m-disabled--BackgroundColor);
-    --pf-c-tile__title--Color: var(--pf-c-tile--m-disabled__title--Color);
-    --pf-c-tile__body--Color: var(--pf-c-tile--m-disabled__body--Color);
-    --pf-c-tile--before--BorderWidth: 0;
-
-    pointer-events: none;
-    cursor: not-allowed;
-
-    .pf-c-tile__header .pf-c-tile__icon {
-      --pf-c-tile__icon--Color: var(--pf-c-tile--m-disabled__header--icon--Color);
-    }
-  }
-
   &:hover {
     --pf-c-tile__title--Color: var(--pf-c-tile--hover__title--Color);
     --pf-c-tile__icon--Color: var(--pf-c-tile--hover__icon--Color);
@@ -97,6 +83,20 @@
 
     .pf-c-tile__header.pf-m-stacked .pf-c-tile__icon {
       --pf-c-tile__icon--Color: var(--pf-c-tile--m-selected__header--m-stacked__icon--Color);
+    }
+  }
+
+  &.pf-m-disabled {
+    --pf-c-tile--BackgroundColor: var(--pf-c-tile--m-disabled--BackgroundColor);
+    --pf-c-tile__title--Color: var(--pf-c-tile--m-disabled__title--Color);
+    --pf-c-tile__body--Color: var(--pf-c-tile--m-disabled__body--Color);
+    --pf-c-tile--before--BorderWidth: 0;
+
+    pointer-events: none;
+    cursor: not-allowed;
+
+    .pf-c-tile__header .pf-c-tile__icon {
+      --pf-c-tile__icon--Color: var(--pf-c-tile--m-disabled__header--icon--Color);
     }
   }
 
