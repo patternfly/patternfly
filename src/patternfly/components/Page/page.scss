@@ -275,6 +275,10 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
       > * {
         position: relative;
       }
+
+      > .pf-c-notification-badge {
+        position: static;
+      }
     }
   }
 }
