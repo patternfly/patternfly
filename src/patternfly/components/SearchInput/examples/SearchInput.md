@@ -1,5 +1,5 @@
 ---
-title: 'Custom search input'
+title: 'Search input'
 beta: true
 section: components
 cssPrefix: pf-c-search-input
