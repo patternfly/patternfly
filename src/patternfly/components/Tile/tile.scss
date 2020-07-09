@@ -12,8 +12,6 @@
   --pf-c-tile--m-selected--before--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-tile--m-disabled--BackgroundColor: var(--pf-global--disabled-color--300);
 
-  // header
-
   // title
   --pf-c-tile__title--Color: var(--pf-global--Color--100);
   --pf-c-tile--hover__title--Color: var(--pf-global--primary-color--100);
@@ -47,10 +45,11 @@
 
   position: relative;
   display: inline-grid;
-  grid-template-rows: min-content;
   padding: var(--pf-c-tile--PaddingTop) var(--pf-c-tile--PaddingRight) var(--pf-c-tile--PaddingBottom) var(--pf-c-tile--PaddingLeft);
   text-align: center;
+  cursor: pointer;
   background-color: var(--pf-c-tile--BackgroundColor);
+  grid-template-rows: min-content;
 
   &::before {
     position: absolute;
@@ -70,21 +69,16 @@
     --pf-c-tile__title--Color: var(--pf-c-tile--m-disabled__title--Color);
     --pf-c-tile__body--Color: var(--pf-c-tile--m-disabled__body--Color);
     --pf-c-tile--before--BorderWidth: 0;
+    --pf-c-tile__icon--Color: var(--pf-c-tile--m-disabled__header--m-stacked__icon--Color);
 
     pointer-events: none;
     cursor: not-allowed;
-
-    .pf-c-tile__header.pf-m-stacked .pf-c-tile__icon {
-      --pf-c-tile__icon--Color: var(--pf-c-tile--disabled__header--m-stacked__icon--Color);
-    }
   }
 
   &:hover {
     --pf-c-tile__title--Color: var(--pf-c-tile--hover__title--Color);
     --pf-c-tile__icon--Color: var(--pf-c-tile--hover__icon--Color);
     --pf-c-tile--before--BorderColor: var(--pf-c-tile--hover--before--BorderColor);
-
-    cursor: pointer;
 
     .pf-c-tile__header.pf-m-stacked .pf-c-tile__icon {
       --pf-c-tile__icon--Color: var(--pf-c-tile--hover__header--m-stacked__icon--Color);
@@ -97,8 +91,6 @@
     --pf-c-tile__icon--Color: var(--pf-c-tile--m-selected__icon--Color);
     --pf-c-tile--before--BorderWidth: var(--pf-c-tile--m-selected--before--BorderWidth);
     --pf-c-tile--before--BorderColor: var(--pf-c-tile--m-selected--before--BorderColor);
-
-    cursor: pointer;
 
     .pf-c-tile__header.pf-m-stacked .pf-c-tile__icon {
       --pf-c-tile__icon--Color: var(--pf-c-tile--m-selected__header--m-stacked__icon--Color);
@@ -137,6 +129,7 @@
       --pf-c-tile__icon--Color: var(--pf-c-tile__header--m-stacked__icon--Color);
 
       display: flex;
+      align-items: center;
       justify-content: center;
       margin-bottom: var(--pf-c-tile__header--m-stacked__icon--MarginBottom);
     }
