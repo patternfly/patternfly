@@ -6,10 +6,10 @@ cssPrefix: pf-c-hint
 ---
 
 ## Examples
-```hbs title=Default-with-title
+```hbs title=Hint-with-title
 {{#> hint}}
   {{#> hint-actions}}
-    {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{#> dropdown id="hint-with-title-dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
   {{/hint-actions}}
   {{#> hint-title}}
     Do more with Find it Fix it capabilities
@@ -23,7 +23,7 @@ cssPrefix: pf-c-hint
 
 {{#> hint}}
   {{#> hint-actions}}
-    {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{#> dropdown id="hint-with-title-with-footer-dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
   {{/hint-actions}}
   {{#> hint-title}}
     Do more with Find it Fix it capabilities
@@ -53,7 +53,7 @@ cssPrefix: pf-c-hint
 
 {{#> hint}}
   {{#> hint-actions}}
-    {{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{#> dropdown id="hint-with-no-title-dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
   {{/hint-actions}}
   {{#> hint-body}}
     Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.
@@ -72,7 +72,7 @@ cssPrefix: pf-c-hint
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-hint` | `<div>` | Initiates the hint component. |
+| `.pf-c-hint` | `<div>` | Initiates the hint component. **Required** |
 | `.pf-c-hint__title` | `<div>` | Initiates the hint title element. |
 | `.pf-c-hint__body` | `<div>` | Initiates the hint body element. |
 | `.pf-c-hint__footer` | `<div>` | Initiates the hint footer element. |

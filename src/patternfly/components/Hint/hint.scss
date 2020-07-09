@@ -1,4 +1,5 @@
 .pf-c-hint {
+  --pf-c-hint--GridRowGap: var(--pf-global--spacer--md);
   --pf-c-hint--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-hint--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-hint--PaddingBottom: var(--pf-global--spacer--lg);
@@ -14,12 +15,9 @@
 
   // Hint Body
   --pf-c-hint__body--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-hint__title--body--MarginTop: var(--pf-global--spacer--md);
 
   // Hint Footer
   --pf-c-hint__footer--child--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-hint__title--footer--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-hint__body--footer--MarginTop: var(--pf-global--spacer--md);
 
   // Hint Actions
   --pf-c-hint__actions--MarginLeft: var(--pf-global--spacer--2xl);
@@ -27,6 +25,7 @@
 
   display: grid;
   grid-template-columns: 1fr auto;
+  grid-row-gap: var(--pf-c-hint--GridRowGap);
   padding: var(--pf-c-hint--PaddingTop) var(--pf-c-hint--PaddingRight) var(--pf-c-hint--PaddingBottom) var(--pf-c-hint--PaddingLeft);
   color: var(--pf-c-hint--Color);
   background-color: var(--pf-c-hint--BackgroundColor);
@@ -40,6 +39,8 @@
 }
 
 .pf-c-hint__actions {
+  display: inline-grid;
+  grid-auto-flow: column;
   margin-left: var(--pf-c-hint__actions--MarginLeft);
   text-align: right;
   grid-column: 2;
@@ -57,23 +58,11 @@
 
 .pf-c-hint__title {
   font-size: var(--pf-c-hint__title--FontSize);
-
-  + .pf-c-hint__body {
-    margin-top: var(--pf-c-hint__title--body--MarginTop);
-  }
-
-  + .pf-c-hint__footer {
-    margin-top: var(--pf-c-hint__title--footer--MarginTop);
-  }
 }
 
 .pf-c-hint__body {
   grid-column: -1 / 1;
   font-size: var(--pf-c-hint__body--FontSize);
-
-  + .pf-c-hint__footer {
-    margin-top: var(--pf-c-hint__body--footer--MarginTop);
-  }
 }
 
 .pf-c-hint__footer {
