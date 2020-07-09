@@ -25,7 +25,7 @@ import './Tile.css'
   {{/tile-header}}
 {{/tile}}
 
-{{#> tile tile--attribute="disabled"}}
+{{#> tile tile--modifier="pf-m-disabled"}}
   {{#> tile-header}}
     {{#> tile-title}}
       Disabled
@@ -58,7 +58,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--attribute="disabled"}}
+{{#> tile tile--modifier="pf-m-disabled"}}
   {{#> tile-header}}
     {{#> tile-title}}
       Disabled
@@ -100,7 +100,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--attribute="disabled"}}
+{{#> tile tile--modifier="pf-m-disabled"}}
   {{#> tile-header}}
     {{#> tile-icon}}
       <i class="fas fa-plus" aria-hidden="true"></i>
@@ -144,7 +144,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--attribute="disabled"}}
+{{#> tile tile--modifier="pf-m-disabled"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       <i class="fas fa-bell" aria-hidden="true"></i>
@@ -189,7 +189,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--attribute="disabled"}}
+{{#> tile tile--modifier="pf-m-disabled"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
@@ -233,7 +233,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-display-lg" tile--attribute="disabled"}}
+{{#> tile tile--modifier="pf-m-display-lg pf-m-disabled"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       <i class="fas fa-bell" aria-hidden="true"></i>
@@ -253,7 +253,7 @@ import './Tile.css'
 {{#> tile tile--modifier="pf-m-display-lg"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
+      <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo" height="54px" width="54px">
     {{/tile-icon}}
     {{#> tile-title}}
       Default
@@ -267,7 +267,7 @@ import './Tile.css'
 {{#> tile tile--modifier="pf-m-display-lg pf-m-selected"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
+      <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo" height="54px" width="54px">
     {{/tile-icon}}
     {{#> tile-title}}
       Selected
@@ -278,10 +278,10 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-display-lg" tile--attribute="disabled"}}
+{{#> tile tile--modifier="pf-m-display-lg pf-m-disabled"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
+      <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo" height="54px" width="54px">
     {{/tile-icon}}
     {{#> tile-title}}
       Disabled
@@ -354,5 +354,6 @@ import './Tile.css'
 | `.pf-c-tile__icon` | `<div>` | Initiates the tile icon or image. |
 | `.pf-c-tile__body` | `<div>` | Initiates the tile body. |
 | `.pf-m-selected` | `.pf-c-tile` | Modifies the tile for the selected state. |
+| `.pf-m-disabled` | `.pf-c-tile` | Modifies the tile for the disabled state. |
 | `.pf-m-stacked` | `.pf-c-tile__header` | Modifies the tile header to be stacked vertically. |
 | `.pf-m-display-lg` | `.pf-c-tile` | Modifies the tile to have large display styling. |
