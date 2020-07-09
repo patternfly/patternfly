@@ -102,12 +102,12 @@
         width: var(--pf-c-tile--m-display-lg__header--m-stacked__icon--Width);
         height: var(--pf-c-tile--m-display-lg__header--m-stacked__icon--Height);
 
-        // stylelint-disable
+        // stylelint-disable max-nesting-depth, selector-max-class
         img {
-          // stylelint-enable
           max-width: 100%;
           max-height: 100%;
         }
+        // stylelint-enable
       }
     }
   }
