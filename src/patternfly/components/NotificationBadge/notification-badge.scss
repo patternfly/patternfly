@@ -35,7 +35,7 @@
   // Badge count
   --pf-c-notification-badge__count--MarginLeft: var(--pf-global--spacer--xs);
 
-  position: relative;
+  position: static;
   display: inline-flex;
   align-items: baseline;
   line-height: 1;
@@ -53,10 +53,6 @@
     border: var(--pf-c-notification-badge--after--BorderWidth) solid var(--pf-c-notification-badge--after--BorderColor);
     border-radius: var(--pf-c-notification-badge--after--BorderRadius);
     transform: translate(var(--pf-c-notification-badge--after--TranslateX), var(--pf-c-notification-badge--after--TranslateY));
-  }
-
-  .pf-c-button & {
-    position: static;
   }
 
   & > i {
