@@ -197,8 +197,11 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Modified content children
 .pf-c-drawer__body {
-  height: 100%;
   padding: var(--pf-c-drawer--child--PaddingTop) var(--pf-c-drawer--child--PaddingRight) var(--pf-c-drawer--child--PaddingBottom) var(--pf-c-drawer--child--PaddingLeft);
+
+  &:only-child {
+    height: 100%;
+  }
 
   // No padding
   &.pf-m-no-padding {

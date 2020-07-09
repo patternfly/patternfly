@@ -125,7 +125,7 @@
 }
 
 .pf-c-notification-drawer__body {
-  overflow-y: scroll;
+  overflow-y: auto;
   box-shadow: var(--pf-c-notification-drawer__body--ZIndex);
 }
 
