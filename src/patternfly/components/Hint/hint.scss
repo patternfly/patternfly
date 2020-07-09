@@ -32,9 +32,10 @@
   border: var(--pf-c-hint--BorderWidth) solid var(--pf-c-hint--BorderColor);
   box-shadow: var(--pf-c-hint--BoxShadow);
 
+  // Remove this when the inline link button is updated
   .pf-c-button.pf-m-link.pf-m-inline {
     text-align: left;
-    white-space: pre-wrap;
+    white-space: normal;
   }
 }
 
@@ -61,7 +62,7 @@
 }
 
 .pf-c-hint__body {
-  grid-column: -1 / 1;
+  grid-column: 1 / -1;
   font-size: var(--pf-c-hint__body--FontSize);
 }
 
