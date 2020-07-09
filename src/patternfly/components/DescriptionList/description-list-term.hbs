@@ -2,5 +2,7 @@
   {{#if description-list-term--attribute}}
     {{{description-list-term--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#> description-list-text}}
+    {{> @partial-block}}
+  {{/description-list-text}}
 </dt>

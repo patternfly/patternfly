@@ -79,7 +79,7 @@ cssPrefix: pf-c-description-list
 | `.pf-c-description-list__group` | `<div>` | Initiates a description list component group. **Required** |
 | `.pf-c-description-list__term` | `<dt>` | Initiates a description list component term. **Required** |
 | `.pf-c-description-list__description` | `<dd>` | Initiates a description list component description. **Required** |
-| `.pf-c-description-list__text` | `<dd>` | Initiates a description list component text element. **Required** |
+| `.pf-c-description-list__text` | `<div>` | Initiates a description list component text element. **Required** |
 | `.pf-m-horizontal` | `.pf-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
 | `.pf-m-auto-column-widths` | `.pf-c-description-list` | Modifies the description list to format automatically. |
 | `.pf-m-inline-grid` | `.pf-c-description-list` | Modifies the description list display to inline-grid. |
