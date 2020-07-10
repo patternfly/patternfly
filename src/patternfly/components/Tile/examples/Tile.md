@@ -164,7 +164,7 @@ import './Tile.css'
 {{#> tile}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      {{#> tile-img-pf}}{{/tile-img-pf}}
+      {{> tile-img-pf}}
     {{/tile-icon}}
     {{#> tile-title}}
       Default
@@ -178,7 +178,7 @@ import './Tile.css'
 {{#> tile tile--modifier="pf-m-selected"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      {{#> tile-img-pf}}{{/tile-img-pf}}
+      {{> tile-img-pf}}
     {{/tile-icon}}
     {{#> tile-title}}
       Selected
@@ -192,7 +192,7 @@ import './Tile.css'
 {{#> tile tile--modifier="pf-m-disabled"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      {{#> tile-img-pf}}{{/tile-img-pf}}
+      {{> tile-img-pf}}
     {{/tile-icon}}
     {{#> tile-title}}
       Disabled
@@ -209,8 +209,21 @@ import './Tile.css'
 {{#> tile}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      {{#> tile-img-insights}}
-      {{/tile-img-insights}}
+      {{> tile-img-insights}}
+    {{/tile-icon}}
+    {{#> tile-title}}
+      Default
+    {{/tile-title}}
+  {{/tile-header}}
+  {{#> tile-body}}
+    Subtext goes here
+  {{/tile-body}}
+{{/tile}}
+
+{{#> tile}}
+  {{#> tile-header tile-header--modifier="pf-m-stacked"}}
+    {{#> tile-icon}}
+      {{> tile-img-openshift}}
     {{/tile-icon}}
     {{#> tile-title}}
       Default
@@ -272,7 +285,7 @@ import './Tile.css'
 {{#> tile tile--modifier="pf-m-display-lg"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      {{#> tile-img-pf}}{{/tile-img-pf}}
+      {{> tile-img-pf}}
     {{/tile-icon}}
     {{#> tile-title}}
       Default
@@ -286,7 +299,7 @@ import './Tile.css'
 {{#> tile tile--modifier="pf-m-display-lg pf-m-selected"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      {{#> tile-img-pf}}{{/tile-img-pf}}
+      {{> tile-img-pf}}
     {{/tile-icon}}
     {{#> tile-title}}
       Selected
@@ -300,7 +313,7 @@ import './Tile.css'
 {{#> tile tile--modifier="pf-m-display-lg pf-m-disabled"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      {{#> tile-img-pf}}{{/tile-img-pf}}
+      {{> tile-img-pf}}
     {{/tile-icon}}
     {{#> tile-title}}
       Disabled
@@ -317,8 +330,21 @@ import './Tile.css'
 {{#> tile tile--modifier="pf-m-display-lg"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
-      {{#> tile-img-insights}}
-      {{/tile-img-insights}}
+      {{> tile-img-insights}}
+    {{/tile-icon}}
+    {{#> tile-title}}
+      Default
+    {{/tile-title}}
+  {{/tile-header}}
+  {{#> tile-body}}
+    Subtext goes here
+  {{/tile-body}}
+{{/tile}}
+
+{{#> tile tile--modifier="pf-m-display-lg"}}
+  {{#> tile-header tile-header--modifier="pf-m-stacked"}}
+    {{#> tile-icon}}
+      {{> tile-img-openshift}}
     {{/tile-icon}}
     {{#> tile-title}}
       Default
