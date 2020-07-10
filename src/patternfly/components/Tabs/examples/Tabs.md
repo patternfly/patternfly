@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-c-tabs
 ---
 
+import './Tabs.css'
+
 ## Examples
 
 ### Default
@@ -60,6 +62,14 @@ cssPrefix: pf-c-tabs
 {{#> tabs tabs--id="box-vertical-example" tabs--modifier="pf-m-box pf-m-vertical"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
+```
+
+### Box tabs alt color scheme
+```hbs
+{{#> tabs tabs--modifier="pf-m-box pf-m-alt-color-scheme" tabs--id="Box-tabs-alt-color-scheme"}}
+  {{> __tabs-list}}
+{{/tabs}}
+<div className="tabs-example-block tabs-example-block-m-alt-color-scheme"></div>
 ```
 
 ### Inset
@@ -194,3 +204,4 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-fill` | `.pf-c-tabs` | Modifies the tabs to fill the available space. |
 | `.pf-m-current` | `.pf-c-tabs__item` | Indicates that a tab item is currently selected. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
+| `. pf-m-alt-color-scheme` | `.pf-c-tabs` | Modifies the tabs component tab background colors. |

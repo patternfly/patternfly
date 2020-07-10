@@ -2,6 +2,7 @@ $pf-c-tabs--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .pf-c-tabs {
+  --pf-c-tabs--BackgroundColor: transparent;
   --pf-c-tabs--inset: 0;
   --pf-c-tabs--before--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-tabs--before--border-width--base: var(--pf-global--BorderWidth--sm);
@@ -18,6 +19,10 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // Box
   --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: var(--pf-c-tabs__link--before--border-width--base);
   --pf-c-tabs--m-box__item--m-current--last-child__link--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
+
+  // Alt color scheme
+  --pf-c-tabs--m-alt-color-scheme__link--BackgroundColor: transparent;
+  --pf-c-tabs--m-alt-color-scheme__item--m-current__link--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
   // Tab link
   --pf-c-tabs__link--Color: var(--pf-global--Color--200);
@@ -91,6 +96,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   padding-right: var(--pf-c-tabs--inset);
   padding-left: var(--pf-c-tabs--inset);
   overflow: hidden;
+  background-color: var(--pf-c-tabs--BackgroundColor);
 
   &::before {
     position: absolute;
@@ -207,6 +213,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       --pf-c-tabs__link--before--Left: 0;
     }
     // stylelint-enable
+
+    &.pf-m-alt-color-scheme {
+      --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs--m-alt-color-scheme__link--BackgroundColor);
+      --pf-c-tabs__item--m-current__link--BackgroundColor: var(--pf-c-tabs--m-alt-color-scheme__item--m-current__link--BackgroundColor);
+    }
   }
 
   // Vertical
