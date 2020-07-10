@@ -175,6 +175,21 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
+{{#> tile}}
+  {{#> tile-header tile-header--modifier="pf-m-stacked"}}
+    {{#> tile-icon}}
+      <img src="/assets/images/rh-insights.svg" alt="Insights logo">
+    {{/tile-icon}}
+    {{#> tile-title}}
+      Default
+    {{/tile-title}}
+  {{/tile-header}}
+  {{#> tile-body}}
+    Subtext goes here
+  {{/tile-body}}
+{{/tile}}
+
+
 {{#> tile tile--modifier="pf-m-selected"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
