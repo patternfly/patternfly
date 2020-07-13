@@ -51,11 +51,11 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-tools-item--Display: block;
 
   // Header tools group button
-  --pf-c-page__header-tools--c-button--m-selected--before--Width: #{pf-size-prem(36px)};
-  --pf-c-page__header-tools--c-button--m-selected--before--Height: #{pf-size-prem(36px)};
+  --pf-c-page__header-tools--c-button--m-selected--before--Width: auto;
+  --pf-c-page__header-tools--c-button--m-selected--before--Height: auto;
   --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-page__header-tools--c-button--m-selected--before--BorderRadius: var(--pf-global--BorderRadius--lg);
-  --pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-tools--c-button--m-selected--before--BorderRadius: var(--pf-global--BorderRadius--sm); // remove at breaking change
+  --pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor: transparent; // remove at breaking change
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--xl--MarginRight);
@@ -258,24 +258,19 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__header-tools-item {
   @include pf-hidden-visible(var(--pf-c-page__header-tools-item--Display));
 
-  .pf-c-button {
-    > * {
-      position: relative;
-    }
-  }
-
   &.pf-m-selected {
     .pf-c-button {
       &::before {
         position: absolute;
         top: 0;
-        left: 50%;
-        width: var(--pf-c-page__header-tools--c-button--m-selected--before--Width);
-        height: var(--pf-c-page__header-tools--c-button--m-selected--before--Height);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: var(--pf-c-page__header-tools--c-button--m-selected--before--Width); // remove at breaking change
+        height: var(--pf-c-page__header-tools--c-button--m-selected--before--Height); // remove at breaking change
         content: "";
         background-color: var(--pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor);
         border-radius: var(--pf-c-page__header-tools--c-button--m-selected--before--BorderRadius);
-        transform: translateX(-50%);
       }
 
       // stylelint-disable
