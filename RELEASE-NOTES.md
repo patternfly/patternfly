@@ -4,6 +4,43 @@ section: overview
 releaseNoteTOC: true
 ---
 
+## 2020.09 release notes (2020-07-15)
+Packages released:
+- [@patternfly/patternfly@v4.23.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.23.1)
+
+### Components
+- **Alert:** Fixed heading order ([#3236](https://github.com/patternfly/patternfly/pull/3236))
+- **Breadcrumb:** Enabled always using a divider and hiding the first one ([#3202](https://github.com/patternfly/patternfly/pull/3202))
+- **Button:** Added CTA variation ([#3214](https://github.com/patternfly/patternfly/pull/3214))
+- **Chip:** Updated docs ([#3103](https://github.com/patternfly/patternfly/pull/3103))
+- **Chip group:** Updated removable action icon ([#3249](https://github.com/patternfly/patternfly/pull/3249))
+- **Chip & chip group:** Updated to use `ch` unit for chip and chip group label max-widths ([#3241](https://github.com/patternfly/patternfly/pull/3241))
+- **Description list:** Added description list component ([#3243](https://github.com/patternfly/patternfly/pull/3243))
+- **Form control:** Adjusted select arrow size ([#3207](https://github.com/patternfly/patternfly/pull/3207))
+- **Hint:** Added hint component ([#3218](https://github.com/patternfly/patternfly/pull/3218))
+- **Input group:** Updated example aria-label ([#3143](https://github.com/patternfly/patternfly/pull/3143))
+- **Modal:** Added medium, adjusted maxwidths for better responsiveness ([#3217](https://github.com/patternfly/patternfly/pull/3217))
+- **Nav:** Updated expandable nav to use `<button>` ([#3250](https://github.com/patternfly/patternfly/pull/3250))
+- **Notification badge:** Updated layout and design ([#3231](https://github.com/patternfly/patternfly/pull/3231))
+- **Notification drawer:** Fixed duplicate ids ([#3237](https://github.com/patternfly/patternfly/pull/3237))
+- **Search input:** Added search input component ([#3264](https://github.com/patternfly/patternfly/pull/3264))
+- **Select:**
+  - Added support for checkbox select with description ([#3224](https://github.com/patternfly/patternfly/pull/3224))
+  - Added favorites ([#3238](https://github.com/patternfly/patternfly/pull/3238))
+- **Table:** Added aria-label to help button ([#3266](https://github.com/patternfly/patternfly/pull/3266))
+- **Tile:** Added tile component ([#3229](https://github.com/patternfly/patternfly/pull/3229))
+- **Toolbar:** Removed beta flag from docs ([#3234](https://github.com/patternfly/patternfly/pull/3234))
+- **Wizard:** Added support for buttons as nav items ([#3216](https://github.com/patternfly/patternfly/pull/3216))
+
+### Other
+- **Workspace:**
+  - Changed title to filepath ([#3232](https://github.com/patternfly/patternfly/pull/3232))
+  - Enabled theme `wrapperTag` to avoid having two `<main>`s on fullscreen pages ([#3233](https://github.com/patternfly/patternfly/pull/3233))
+- **Build:**
+  - Added new component/layout/demo generator script ([#3235](https://github.com/patternfly/patternfly/pull/3235))
+  - Updated size report to use commander, fixed code ([#3242](https://github.com/patternfly/patternfly/pull/3242))
+  - Disabled size report running against master ([#3244](https://github.com/patternfly/patternfly/pull/3244))
+
 ## 2020.08 release notes (2020-06-24)
 Packages released:
 - [@patternfly/patternfly@v4.16.7](https://www.npmjs.com/package/@patternfly/patternfly/v/4.16.7)
