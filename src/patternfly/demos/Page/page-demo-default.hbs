@@ -51,11 +51,12 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-template-breadcrumb}}
-    {{/page-template-breadcrumb}}
-    {{#> page-template-title}}
-    {{/page-template-title}}
-    {{#> page-template-gallery}}
-    {{/page-template-gallery}}
+    {{> page-template-breadcrumb}}
+    {{> page-template-title}}
+    {{#if @partial-block}}
+      {{> @partial-block}}
+    {{else}}
+      {{> page-template-gallery}}
+    {{/if}}
   {{/page-main}}
 {{/page}}
