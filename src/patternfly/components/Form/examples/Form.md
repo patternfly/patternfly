@@ -93,6 +93,20 @@ cssPrefix: pf-c-form
   {{/form-group}}
   {{#> form-group}}
     {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-email"') required='true'}}
+        E-mail
+      {{/form-label}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control form-control--modifier="pf-m-warning" controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-form-email" name="' form--id '-form-email" aria-describedby="' form--id '-form-email-helper"')}}
+      {{/form-control}}
+      {{#> form-helper-text  form-helper-text--modifier="pf-m-warning" form-helper-text--attribute=(concat 'id="' form--id '-form-email-helper" aria-live="polite"')}}
+        This is helper text for a warning input
+      {{/form-helper-text}}
+    {{/form-group-control}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-address"') required='true'}}
         Address
       {{/form-label}}
@@ -178,8 +192,9 @@ cssPrefix: pf-c-form
 | `.pf-c-form__helper-text-icon` | `<span>` |  Initiates a form helper text icon. |
 | `.pf-m-horizontal` | `.pf-c-form` | Modifies form for a horizontal layout. |
 | `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |
-| `.pf-m-error` | `.pf-c-form__helper-text`| Modifies text color of helper text for error state. |
 | `.pf-m-success` | `.pf-c-form__helper-text` | Modifies text color of helper text for success state. |
+| `.pf-m-warning` | `.pf-c-form__helper-text` | Modifies text color of helper text for warning state. |
+| `.pf-m-error` | `.pf-c-form__helper-text`| Modifies text color of helper text for error state. |
 | `.pf-m-inactive` | `.pf-c-form__helper-text`| Modifies display of helper text to none. |
 | `.pf-m-disabled` | `.pf-c-form__label` | Modifies form label to show disabled state. |
 | `.pf-m-no-padding-top` | `.pf-c-form__group-label` | Removes top padding from the label element for labels adjacent to an element that isn't a form control. |

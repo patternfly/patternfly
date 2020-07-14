@@ -60,8 +60,9 @@
   --pf-c-form__helper-text-icon--MarginRight: var(--pf-global--spacer--xs);
 
   // States
-  --pf-c-form__helper-text--m-error--Color: var(--pf-global--danger-color--100);
   --pf-c-form__helper-text--m-success--Color: var(--pf-global--success-color--200);
+  --pf-c-form__helper-text--m-warning--Color: var(--pf-global--warning-color--200);
+  --pf-c-form__helper-text--m-error--Color: var(--pf-global--danger-color--100);
 
   display: grid;
   grid-gap: var(--pf-c-form--GridGap);
@@ -177,6 +178,10 @@
 
   &.pf-m-success {
     --pf-c-form__helper-text--Color: var(--pf-c-form__helper-text--m-success--Color);
+  }
+
+  &.pf-m-warning {
+    --pf-c-form__helper-text--Color: var(--pf-c-form__helper-text--m-warning--Color);
   }
 
   &.pf-m-inactive {
