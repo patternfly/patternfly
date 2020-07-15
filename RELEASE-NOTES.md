@@ -4,9 +4,9 @@ section: overview
 releaseNoteTOC: true
 ---
 
-## 2020.09 release notes (2020-07-15)
+## 2020.09 release notes (2020-07-16)
 Packages released:
-- [@patternfly/patternfly@v4.23.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.23.1)
+- [@patternfly/patternfly@v4.23.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.23.3)
 
 ### Components
 - **Alert:** Fixed heading order ([#3236](https://github.com/patternfly/patternfly/pull/3236))
@@ -21,7 +21,9 @@ Packages released:
 - **Input group:** Updated example aria-label ([#3143](https://github.com/patternfly/patternfly/pull/3143))
 - **Modal:** Added medium, adjusted maxwidths for better responsiveness ([#3217](https://github.com/patternfly/patternfly/pull/3217))
 - **Nav:** Updated expandable nav to use `<button>` ([#3250](https://github.com/patternfly/patternfly/pull/3250))
-- **Notification badge:** Updated layout and design ([#3231](https://github.com/patternfly/patternfly/pull/3231))
+- **Notification badge:**
+  - Updated layout and design ([#3231](https://github.com/patternfly/patternfly/pull/3231))
+  - Reverted enhancements in #3231 ([#3294](https://github.com/patternfly/patternfly/pull/3294))
 - **Notification drawer:** Fixed duplicate ids ([#3237](https://github.com/patternfly/patternfly/pull/3237))
 - **Search input:** Added search input component ([#3264](https://github.com/patternfly/patternfly/pull/3264))
 - **Select:**
