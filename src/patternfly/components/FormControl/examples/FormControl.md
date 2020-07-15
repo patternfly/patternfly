@@ -8,31 +8,31 @@ cssPrefix: pf-c-form-control
 ```hbs title=Input
 {{#> form-control-parent--context controlType="input" input="true" aria-label--string="input example"}}
   {{#> form-control--context form-control--name="standard"}}
-    {{> form-control form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+    {{> form-control form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' aria-label--string '"')}}
   {{/form-control--context}}
   <br><br>
   {{#> form-control--context form-control--name="readonly"}}
-    {{> form-control form-control--attribute=(concat 'readonly type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+    {{> form-control form-control--attribute=(concat 'readonly type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' aria-label--string '"')}}
   {{/form-control--context}}
   <br><br>
   {{#> form-control--context form-control--name="success"}}
-    {{> form-control form-control--modifier="pf-m-success" form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+    {{> form-control form-control--modifier="pf-m-success" form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' aria-label--string '"')}}
   {{/form-control--context}}
   <br><br>
   {{#> form-control--context form-control--name="warning"}}
-    {{> form-control form-control--modifier="pf-m-warning" form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+    {{> form-control form-control--modifier="pf-m-warning" form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' aria-label--string '"')}}
   {{/form-control--context}}
   <br><br>
   {{#> form-control--context form-control--name="invalid"}}
-    {{> form-control form-control--attribute=(concat 'aria-invalid="true" required type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+    {{> form-control form-control--attribute=(concat 'aria-invalid="true" required type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' aria-label--string '"')}}
   {{/form-control--context}}
   <br><br>
   {{#> form-control--context form-control--name="disabled"}}
-    {{> form-control form-control--attribute=(concat 'disabled type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+    {{> form-control form-control--attribute=(concat 'disabled type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' aria-label--string '"')}}
   {{/form-control--context}}
   <br><br>
   {{#> form-control--context form-control--name="search"}}
-    {{> form-control form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+    {{> form-control form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' aria-label--string '"')}}
   {{/form-control--context}}
 {{/form-control-parent--context}}
 ```
