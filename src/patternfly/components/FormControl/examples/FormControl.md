@@ -6,26 +6,35 @@ cssPrefix: pf-c-form-control
 
 ## Examples
 ```hbs title=Input
-{{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
-{{/form-control}}
-<br><br>
-{{#> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="input-readonly" aria-label="Readonly input example"'}}
-{{/form-control}}
-<br><br>
-{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}
-{{/form-control}}
-<br><br>
-{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-warning" form-control--attribute='type="text" value="Warning" id="input-warning" aria-label="Warning state input example"'}}
-{{/form-control}}
-<br><br>
-{{#> form-control controlType="input" input="true" form-control--attribute='required type="text" value="Error" id="input-error" aria-invalid="true" aria-label="Error state input example"'}}
-{{/form-control}}
-<br><br>
-{{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="input-disabled" aria-label="Disabled input example"'}}
-{{/form-control}}
-<br><br>
-{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute='type="search" id="input-search" name="search-input" aria-label="Search input example"'}}
-{{/form-control}}
+{{#> form-control-parent--context controlType="input" input="true" aria-label--string="input example"}}
+  {{#> form-control--context form-control--name="standard"}}
+    {{> form-control form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+  {{/form-control--context}}
+  <br><br>
+  {{#> form-control--context form-control--name="readonly"}}
+    {{> form-control form-control--attribute=(concat 'readonly type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+  {{/form-control--context}}
+  <br><br>
+  {{#> form-control--context form-control--name="success"}}
+    {{> form-control form-control--modifier="pf-m-success" form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+  {{/form-control--context}}
+  <br><br>
+  {{#> form-control--context form-control--name="warning"}}
+    {{> form-control form-control--modifier="pf-m-warning" form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+  {{/form-control--context}}
+  <br><br>
+  {{#> form-control--context form-control--name="invalid"}}
+    {{> form-control form-control--attribute=(concat 'aria-invalid="true" required type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+  {{/form-control--context}}
+  <br><br>
+  {{#> form-control--context form-control--name="disabled"}}
+    {{> form-control form-control--attribute=(concat 'disabled type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+  {{/form-control--context}}
+  <br><br>
+  {{#> form-control--context form-control--name="search"}}
+    {{> form-control form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="text" value="' form-control--name '" id="' controlType '-' form-control--name '" aria-label="' form-control--name ' ' form-control--name '"')}}
+  {{/form-control--context}}
+{{/form-control-parent--context}}
 ```
 
 ```hbs title=Select
