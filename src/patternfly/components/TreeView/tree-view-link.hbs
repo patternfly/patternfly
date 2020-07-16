@@ -1,0 +1,6 @@
+<{{# if tree-view-link--type}}{{tree-view-link--type}}{{else}}button{{/if}} class="pf-c-tree-view__link{{#if tree-view-link--modifier}} {{tree-view-link--modifier}}{{/if}}"
+  {{#if tree-view-link--attribute}}
+    {{{tree-view-link--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</{{# if tree-view-link--type}}{{tree-view-link--type}}{{else}}button{{/if}}>
