@@ -394,6 +394,7 @@
   position: relative;
   display: inline-block;
   color: var(--pf-c-wizard__nav-link--Color);
+  text-align: left; // needed for when the item is a button
   text-decoration: var(--pf-c-wizard__nav-link--TextDecoration);
   word-break: break-word;
   border: 0;
