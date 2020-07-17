@@ -1,11 +1,12 @@
 ---
-title: Backdrop
+id: Backdrop
 section: components
 cssPrefix: pf-c-backdrop
 ---
 
 ## Examples
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> backdrop}}
 {{/backdrop}}
 ```

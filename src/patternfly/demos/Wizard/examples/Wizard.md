@@ -1,11 +1,12 @@
 ---
-title: Wizard
+id: Wizard
 section: demos
 wrapperTag: div
 ---
 
 ## Demos
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> backdrop}}
   {{#> bullseye}}
     {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-label="Basic wizard"'}}
@@ -97,7 +98,8 @@ wrapperTag: div
 {{/backdrop}}
 ```
 
-```hbs title=Nav-expanded-(mobile) isFullscreen
+### Nav expanded (mobile)
+```hbs isFullscreen
 {{#> backdrop}}
   {{#> bullseye}}
     {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-label="Wizard with expanded mobile nav"'}}
@@ -189,7 +191,8 @@ wrapperTag: div
 {{/backdrop}}
 ```
 
-```hbs title=In-page isFullscreen
+### In page
+```hbs isFullscreen
 {{#> page page--id="wizard-in-page"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -327,7 +330,8 @@ wrapperTag: div
 {{/page}}
 ```
 
-```hbs title=In-page-nav-expanded-(mobile) isFullscreen
+### In page nav expanded (mobile)
+```hbs isFullscreen
 {{#> page page--id="wizard-in-page-expanded"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

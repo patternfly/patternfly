@@ -1,23 +1,26 @@
 ---
-title: Accessibility
+id: Accessibility
 section: utilities
 ---
 
 ## Examples
-```hbs title=Screen-reader-only
+### Screen reader only
+```hbs
 Content available only to screen reader, open inspector to investigate
 {{#> accessibility accessibility--type="screen-reader"}}
     This content is intended to be announced by assistive technologies, but not visually presented.
 {{/accessibility}}
 ```
 
-```hbs title=Visible
+### Visible
+```hbs
 {{#> accessibility accessibility--type="visible"}}
     This class unsets .pf-u-screen-reader and .pf-screen-reader. It will be visible.
 {{/accessibility}}
 ```
 
-```hbs title=Hidden
+### Hidden
+```hbs
 The text underneath is hidden.
 {{#> accessibility accessibility--type="hidden"}}
   This text is hidden.

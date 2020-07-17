@@ -1,11 +1,12 @@
 ---
-title: Data list
+id: Data list
 section: demos
 wrapperTag: div
 ---
 
 ## Demos
-```hbs title=Simple isFullscreen
+### Simple
+```hbs isFullscreen
 {{#> page page--id="page-layout-data-list-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -33,7 +34,8 @@ wrapperTag: div
 {{/page}}
 ```
 
-```hbs title=Actionable isFullscreen
+### Actionable
+```hbs isFullscreen
 {{#> page page--id="page-layout-data-list-actionable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -61,7 +63,8 @@ wrapperTag: div
 {{/page}}
 ```
 
-```hbs title=Expandable-demo isFullscreen
+### Expandable demo
+```hbs isFullscreen
 {{#> page page--id="page-layout-data-list-expandable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -89,7 +92,8 @@ wrapperTag: div
 {{/page}}
 ```
 
-```hbs title=Static-bottom-pagination isFullscreen
+### Static bottom pagination
+```hbs isFullscreen
 {{#> page page--id="page-layout-data-list-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

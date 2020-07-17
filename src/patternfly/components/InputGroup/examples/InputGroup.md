@@ -1,11 +1,12 @@
 ---
-title: Input group
+id: Input group
 section: components
 cssPrefix: pf-c-input-group
 ---
 
 ## Examples
-```hbs title=Inputgroup
+### Inputgroup
+```hbs
 {{#> input-group}}
   {{#> button button--modifier="pf-m-control" button--attribute='id="textAreaButton1"'}}
     Button

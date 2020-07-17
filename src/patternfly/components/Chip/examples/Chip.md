@@ -1,11 +1,12 @@
 ---
-title: Chip
+id: Chip
 section: components
 cssPrefix: pf-c-chip
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 
 {{#> chip chip--type="div"}}
   {{#> chip-text chip-text--attribute='id="chip_one"'}}

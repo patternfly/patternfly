@@ -1,24 +1,28 @@
 ---
-title: 'Search input'
+id: 'Search input'
 beta: true
 section: components
 cssPrefix: pf-c-search-input
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{> search-input search-input--placeholder="Find by name"}}
 ```
 
-```hbs title=No-match
+### No match
+```hbs
 {{> search-input search-input--placeholder="Find by name" search-input--value="Joh"}}
 ```
 
-```hbs title=Match-with-result-count
+### Match with result count
+```hbs
 {{> search-input search-input--placeholder="Find by name" search-input--value="John Doe" search-input--count="3"}}
 ```
 
-```hbs title=Match-with-navigable-options
+### Match with navigable options
+```hbs
 {{> search-input search-input--placeholder="Find by name" search-input--value="John Doe" search-input--count="1 / 3" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
 ```
 

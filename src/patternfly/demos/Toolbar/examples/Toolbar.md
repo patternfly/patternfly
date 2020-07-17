@@ -1,5 +1,5 @@
 ---
-title: Toolbar
+id: Toolbar
 section: demos
 ---
 
@@ -7,7 +7,8 @@ import './Toolbar.css'
 
 ## Demos
 
-```hbs title=Toolbar-attribute-value-search-filter-desktop
+### Toolbar attribute value search filter desktop
+```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-search-filter-desktop-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
@@ -51,7 +52,8 @@ import './Toolbar.css'
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-attribute-value-search-filter-mobile
+### Toolbar attribute value search filter mobile
+```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-search-filter-mobile-example"}}
   {{#> toolbar-content toolbar-content--HasToggleGroup="true"}}
     {{#> toolbar-content-section}}
@@ -96,7 +98,8 @@ import './Toolbar.css'
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-attribute-value-single-select-filter-desktop
+### Toolbar attribute value single select filter desktop
+```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-single-select-filter-desktop-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
@@ -138,7 +141,8 @@ import './Toolbar.css'
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-attribute-value-single-select-filter-mobile
+### Toolbar attribute value single select filter mobile
+```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-single-select-filter-mobile-example"}}
   {{#> toolbar-content toolbar-content--HasToggleGroup="true"}}
     {{#> toolbar-content-section}}
@@ -181,7 +185,8 @@ import './Toolbar.css'
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-attribute-value-checkbox-select-filter-desktop
+### Toolbar attribute value checkbox select filter desktop
+```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-checkbox-select-filter-desktop-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
@@ -265,7 +270,8 @@ import './Toolbar.css'
 {{/toolbar}}
 ```
 
-```hbs title=Toolbar-attribute-value-checkbox-select-filter-mobile
+### Toolbar attribute value checkbox select filter mobile
+```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-checkbox-select-filter-mobile-example"}}
   {{#> toolbar-content toolbar-content--HasToggleGroup="true"}}
     {{#> toolbar-content-section}}

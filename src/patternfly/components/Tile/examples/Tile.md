@@ -1,5 +1,5 @@
 ---
-title: Tile
+id: Tile
 section: components
 beta: true
 cssPrefix: pf-c-tile
@@ -8,7 +8,8 @@ cssPrefix: pf-c-tile
 import './Tile.css'
 
 ## Examples
-```hbs title=Basic-tiles
+### Basic tiles
+```hbs
 {{#> tile}}
   {{#> tile-header}}
     {{#> tile-title}}
@@ -115,7 +116,8 @@ import './Tile.css'
 {{/tile}}
 ```
 
-```hbs title=Stacked-tiles
+### Stacked tiles
+```hbs
 {{#> tile}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
@@ -204,7 +206,8 @@ import './Tile.css'
 {{/tile}}
 ```
 
-```hbs title=Stacked-tiles-large
+### Stacked tiles large
+```hbs
 {{#> tile tile--modifier="pf-m-display-lg"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
@@ -293,7 +296,8 @@ import './Tile.css'
 {{/tile}}
 ```
 
-```hbs title=Extra-content
+### Extra content
+```hbs
 {{#> tile}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}

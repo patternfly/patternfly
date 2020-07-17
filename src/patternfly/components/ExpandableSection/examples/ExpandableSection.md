@@ -1,11 +1,12 @@
 ---
-title: Expandable section
+id: Expandable section
 section: components
 cssPrefix: pf-c-expandable-section
 ---
 
 ## Examples
-```hbs title=Hidden
+### Hidden
+```hbs
 {{#> expandable-section}}
   {{#> expandable-section-toggle}}
   {{/expandable-section-toggle}}
@@ -15,7 +16,8 @@ cssPrefix: pf-c-expandable-section
 {{/expandable-section}}
 ```
 
-```hbs title=Expanded
+### Expanded
+```hbs
 {{#> expandable-section expandable-section--IsExpanded="true"}}
   {{#> expandable-section-toggle}}
   {{/expandable-section-toggle}}

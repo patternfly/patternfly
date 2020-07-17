@@ -1,11 +1,12 @@
 ---
-title: Form
+id: Form
 section: components
 cssPrefix: pf-c-form
 ---
 
 ## Examples
-```hbs title=Vertically-aligned-labels
+### Vertically aligned labels
+```hbs
 {{#> form form--id="vertical-align-labels"}}
   {{#> form-group}}
     {{#> form-group-label}}
@@ -21,7 +22,8 @@ cssPrefix: pf-c-form
 {{/form}}
 ```
 
-```hbs title=Horizontally-aligned-labels
+### Horizontally aligned labels
+```hbs
 {{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-1"}}
   {{#> form-group}}
     {{#> form-group-label}}
@@ -75,7 +77,8 @@ cssPrefix: pf-c-form
 {{/form}}
 ```
 
-```hbs title=Help-text
+### Help text
+```hbs
 {{#> form form--id="help-text"}}
   {{#> form-group}}
     {{#> form-group-label}}
@@ -149,7 +152,8 @@ cssPrefix: pf-c-form
 {{/form}}
 ```
 
-```hbs title=Action-group
+### Action group
+```hbs
 {{#> form}}
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-actions}}

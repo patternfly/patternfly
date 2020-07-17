@@ -1,12 +1,13 @@
 ---
-title: 'Hint'
+id: 'Hint'
 section: components
 beta: true
 cssPrefix: pf-c-hint
 ---
 
 ## Examples
-```hbs title=Hint-with-title
+### Hint with title
+```hbs
 {{#> hint}}
   {{#> hint-actions}}
     {{#> dropdown id="hint-with-title-dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
@@ -39,7 +40,8 @@ cssPrefix: pf-c-hint
 {{/hint}}
 ```
 
-```hbs title=Default-with-no-title
+### Default with no title
+```hbs
 {{#> hint}}
   {{#> hint-body}}
     Welcome to the new documentation experience.

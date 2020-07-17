@@ -1,12 +1,13 @@
 ---
-title: Alignment
+id: Alignment
 section: utilities
 ---
 
 import './Alignment.css'
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> alignment alignment--type="left"}}
   Text left
 {{/alignment}}

@@ -1,12 +1,13 @@
 ---
-title: Notification drawer
+id: Notification drawer
 section: components
 beta: true
 cssPrefix: pf-c-notification-drawer
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> notification-drawer notification-drawer--id="notification-drawer-basic"}}
   {{#> notification-drawer-header}}
     {{#> notification-drawer-header-title}}
@@ -25,7 +26,8 @@ cssPrefix: pf-c-notification-drawer
 {{/notification-drawer}}
 ```
 
-```hbs title=Groups
+### Groups
+```hbs
 {{#> notification-drawer notification-drawer--id="notification-drawer-groups"}}
   {{#> notification-drawer-header}}
     {{#> notification-drawer-header-title}}

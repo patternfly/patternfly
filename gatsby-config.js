@@ -1,4 +1,5 @@
 const path = require('path');
+const codeTitleTransformer = require('gatsby-theme-patternfly-org/helpers/codeTitleTransformer');
 
 module.exports = {
   siteMetadata: {
@@ -94,7 +95,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: ['.md']
+        extensions: ['.md'],
+        rehypePlugins: [codeTitleTransformer]
       }
     }
   ]

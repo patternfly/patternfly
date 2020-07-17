@@ -1,12 +1,13 @@
 ---
-title: Simple list
+id: Simple list
 section: components
 beta: true
 cssPrefix: pf-c-simple-list
 ---
 
 ## Examples
-```hbs title=Simple-list
+### Simple list
+```hbs
 {{#> simple-list}}
   {{#> simple-list-list}}
     {{#> simple-list-item}}
@@ -28,7 +29,8 @@ cssPrefix: pf-c-simple-list
 {{/simple-list}}
 ```
 
-```hbs title=Simple-list-with-links
+### Simple list with links
+```hbs
 {{#> simple-list simple-list-item-link--IsLink="true"}}
   {{#> simple-list-list}}
     {{#> simple-list-item}}
@@ -50,7 +52,8 @@ cssPrefix: pf-c-simple-list
 {{/simple-list}}
 ```
 
-```hbs title=Grouped-list
+### Grouped list
+```hbs
 {{#> simple-list}}
   {{#> simple-list-section}}
     {{#> simple-list-title}}

@@ -1,11 +1,12 @@
 ---
-title: Switch
+id: Switch
 section: components
 cssPrefix: pf-c-switch
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> switch switch--attribute='for="switch-with-label-1"'}}
   {{#> switch-input id="switch-with-label-1" aria-labelledby="switch-with-label-1-on" switch-input--attribute='name="switchExample1" checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
@@ -22,7 +23,8 @@ cssPrefix: pf-c-switch
 {{/switch}}
 ```
 
-```hbs title=Without-label
+### Without label
+```hbs
 {{#> switch switch--attribute='for="switch-with-icon-1"'}}
   {{#> switch-input id="switch-with-icon-1" switch-input--attribute='name="switchExample3" checked'}}{{/switch-input}}
   {{#> switch-toggle}}
@@ -39,7 +41,8 @@ cssPrefix: pf-c-switch
 {{/switch}}
 ```
 
-```hbs title=Disabled
+### Disabled
+```hbs
 {{#> switch switch--attribute='for="switch-disabled-1"'}}
   {{#> switch-input id="switch-disabled-1" aria-labelledby="switch-disabled-1-on" switch-input--attribute='name="switchExample5" disabled checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}

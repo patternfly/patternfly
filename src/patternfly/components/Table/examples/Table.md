@@ -1,5 +1,5 @@
 ---
-title: Table
+id: Table
 section: components
 cssPrefix: pf-c-table
 ---
@@ -8,7 +8,8 @@ import './Table.css'
 
 ## Examples
 
-```hbs title=Basic-table
+### Basic table
+```hbs
 {{#> table table--id="table-basic" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
     This is the table caption
@@ -125,7 +126,8 @@ import './Table.css'
 | `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
-```hbs title=Sortable
+### Sortable
+```hbs
 {{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -242,7 +244,8 @@ import './Table.css'
 | `.fa-long-arrow-alt-up` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-down` | `.pf-c-table__sort > button > span > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
 
-```hbs title=With-checkboxes-and-actions
+### With checkboxes and actions
+```hbs
 {{#> table table--id="table-checkboxes-and-actions" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a table with checkboxes"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -406,7 +409,8 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 | `.pf-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
 | `.pf-c-table__inline-edit-action` | `<th>`, `<td>` | Initiates an inline edit action table cell. |
 
-```hbs title=Expandable
+### Expandable
+```hbs
 {{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -601,7 +605,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-expanded` | `.pf-c-table__toggle` > `.pf-c-button`, `.pf-c-table__expandable-row` | Modifies for expanded state. |
 | `.pf-m-no-padding` | `.pf-c-table__expandable-row` > `<td>` | Modifies the expandable row to have no padding. |
 
-```hbs title=With-compound-expansion
+### With compound expansion
+```hbs
 {{#> table table--id="table-compound-expansion" table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -794,7 +799,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-expanded` | `<tbody>`, `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Modifies a tbody with a row and an expandable row. |
 | `.pf-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
 
-```hbs title=Compact
+### Compact
+```hbs
 {{#> table table--id="table-compact" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -958,7 +964,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | -- | -- | -- |
 | `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
 
-```hbs title=Compact-with-no-borders
+### Compact with no borders
+```hbs
 {{#> table table--id="table-compact-no-borders" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -1122,7 +1129,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | -- | -- | -- |
 | `.pf-m-no-border-rows` | `.pf-c-table.pf-m-compact` | Modifies to remove borders between rows. **Note: Can not be used with `.pf-m-expandable`.** |
 
-```hbs title=Compact-expandable
+### Compact expandable
+```hbs
 {{#> table table--id="table-compact-expandable" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -1320,7 +1328,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | -- | -- | -- |
 | `.pf-m-expandable` | `.pf-c-table.pf-m-compact` | Indicates that the table has expandable rows. **Note: Can not be used with `.pf-m-no-border-rows`.** |
 
-```hbs title=With-width-modifiers
+### With width modifiers
+```hbs
 {{#> table table--id="table-width-modifiers" table--grid="true" table--modifier="pf-m-grid-md" table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -1450,7 +1459,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-width-max` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` maximum width. |
 | `.pf-m-fit-content` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` minimum width with no text wrapping. |
 
-```hbs title=With-hidden/visible-breakpoint-modifiers
+### With hidden/visible breakpoint modifiers
+```hbs
 {{#> table table--id="table-hidden-visible" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -1567,7 +1577,8 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 | `.pf-m-fit-content` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Fit column width to cell content.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 | `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Breaks long strings wherever necessary as defined by the table layout. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 
-```hbs title=Modifiers-without-text-wrapper
+### Modifiers without text wrapper
+```hbs
 {{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -1613,7 +1624,8 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 
 By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-c-table__text` wrapper on table cell content. In addition to `.pf-c-table__text`, all PatternFly layouts can be used in table cells and contain table text elements.
 
-```hbs title=Table-text-element
+### Table text element
+```hbs
 {{#> table table--grid="true" table--modifier="pf-m-grid-md" table--id="table-text-element-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
     This table contains <code>.pf-c-table__text</code>&nbsp; examples. The <code>.pf-c-table__text</code>&nbsp; element can be using alone or in a nested configuration.
@@ -1781,7 +1793,8 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 | `.pf-m-fit-content` | `thead`, `tr`, `th`, `.pf-c-table__text` | Modifies `th` to fit its contents. |
 | `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text strings to break. |
 
-```hbs title=th-truncation
+### th truncation
+```hbs
 {{#> tooltip tooltip--modifier="pf-m-top"}}
   {{#> tooltip-content tooltip-content--attribute='id="tooltip-top-content"'}}
     Pull Requests
@@ -1852,7 +1865,8 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 
 ## Long strings in table cells will push content. Add a width modifier to `thead th` to limit string length or add `.pf-m-truncate` to `tbody td`.
 
-```hbs title=Width-constrained
+### Width constrained
+```hbs
 {{#> table table--id="width-constrained-example" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -1916,7 +1930,8 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 {{/table}}
 ```
 
-```hbs title=Sticky-header
+### Sticky header
+```hbs
 {{#> table table--id="table-sticky-header" table--grid="true" table--modifier="pf-m-grid-md pf-m-sticky-header" table--attribute='aria-label="This is a table with sticky header cells"'}}
   {{#> table-thead}}
     {{#> table-tr}}

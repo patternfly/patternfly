@@ -1,12 +1,13 @@
 ---
-title: Context selector
+id: Context selector
 section: components
 cssPrefix: pf-c-context-selector
 ---
 import './ContextSelector.css'
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> context-selector context-selector--id="context-selector-collapsed-example" context-selector--label-text="Selected project"}}
   {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
     {{#> context-selector-toggle-text}}
