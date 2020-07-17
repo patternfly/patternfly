@@ -82,7 +82,7 @@ function lintCSSFunctions() {
 function lintCSSComments() {
   let failed = false;
 
-  return src(['dist/**/*.css', '!dist/site/**'])
+  return src(['dist/**/*.css', '!dist/site/**', '!dist/docs/**'])
     .pipe(
       through2.obj((chunk, _, cb2) => {
         const loggedPath = path.relative(process.cwd(), chunk.history[0]);
