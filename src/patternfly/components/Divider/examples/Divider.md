@@ -7,11 +7,13 @@ cssPrefix: pf-c-divider
 import './Divider.css'
 
 ## Examples
-```hbs title=<hr>
+### <hr>
+```hbs
 {{> divider}}
 ```
 
-```hbs title=<li>
+### <li>
+```hbs
 <ul>
   <li>List item one</li>
   {{> divider divider--type="li"}}
@@ -19,27 +21,33 @@ import './Divider.css'
 </ul>
 ```
 
-```hbs title=<div>
+### <div>
+```hbs
 {{> divider divider--type="div"}}
 ```
 
-```hbs title=Inset-medium
+### Inset medium
+```hbs
 {{> divider divider--type="div" divider--modifier="pf-m-inset-md"}}
 ```
 
-```hbs title=Md-inset,-no-inset-on-md,-3xl-inset-on-lg,-lg-inset-on-xl
+### Md inset, no inset on md, 3xl inset on lg, lg inset on xl
+```hbs
 {{> divider divider--type="div" divider--modifier="pf-m-inset-md pf-m-inset-none-on-md pf-m-inset-3xl-on-lg pf-m-inset-lg-on-xl"}}
 ```
 
-```hbs title=Vertical
+### Vertical
+```hbs
 {{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-md"}}
 ```
 
-```hbs title=Vertical,-inset-medium
+### Vertical, inset medium
+```hbs
 {{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-md"}}
 ```
 
-```hbs title=Vertical,-md-inset,-no-inset-on-md,-lg-inset-on-lg,-sm-inset-on-xl
+### Vertical, md inset, no inset on md, lg inset on lg, sm inset on xl
+```hbs
 {{> divider divider--type="div" divider--modifier="pf-m-vertical pf-m-inset-md pf-m-inset-none-on-md pf-m-inset-lg-on-lg pf-m-inset-sm-on-xl"}}
 ```
 

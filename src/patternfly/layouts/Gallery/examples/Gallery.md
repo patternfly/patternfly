@@ -7,7 +7,8 @@ cssPrefix: pf-l-gallery
 import './Gallery.css'
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> gallery}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
@@ -17,7 +18,8 @@ import './Gallery.css'
 {{/gallery}}
 ```
 
-```hbs title=With-gutter
+### With gutter
+```hbs
 {{#> gallery gallery--modifier="pf-m-gutter"}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}

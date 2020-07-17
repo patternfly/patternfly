@@ -7,7 +7,8 @@ cssPrefix: pf-c-app-launcher
 import './AppLauncher.css'
 
 ## Examples
-```hbs title=Collapsed
+### Collapsed
+```hbs
 {{#> app-launcher id="app-launcher-collapsed"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
@@ -18,7 +19,8 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=Disabled
+### Disabled
+```hbs
 {{#> app-launcher id="app-launcher-disabled" app-launcher--IsDisabled="true"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
@@ -29,7 +31,8 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=Expanded
+### Expanded
+```hbs
 {{#> app-launcher id="app-launcher-expanded"  app-launcher--IsExpanded="true"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
@@ -40,7 +43,8 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=Aligned-right
+### Aligned right
+```hbs
 {{#> app-launcher id="app-launcher-aligned-right" app-launcher--IsExpanded="true"}}
   {{#> app-launcher-menu app-launcher-menu--modifier="pf-m-align-right"}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
@@ -51,7 +55,8 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=Aligned-top
+### Aligned top
+```hbs
 {{#> app-launcher id="app-launcher-aligned-top" app-launcher--IsExpanded="true" app-launcher--modifier="pf-m-top"}}
   {{#> app-launcher-menu}}
     <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
@@ -62,7 +67,8 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=With-sections-and-dividers-between-sections
+### With sections and dividers between sections
+```hbs
 {{#> app-launcher id="app-launcher-sections-and-dividers-between-sections" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
@@ -94,7 +100,8 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=With-sections-and-dividers-between-items
+### With sections and dividers between items
+```hbs
 {{#> app-launcher id="app-launcher-sections-and-dividers-between-items" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
@@ -126,7 +133,8 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=With-sections,-dividers,-icons,-and-external-links
+### With sections, dividers, icons, and external links
+```hbs
 {{#> app-launcher id="app-launcher-sections-dividers-icons-and-external-links" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
@@ -197,7 +205,8 @@ import './AppLauncher.css'
 {{/app-launcher}}
 ```
 
-```hbs title=Favorites
+### Favorites
+```hbs
 {{#> app-launcher id="app-launcher-favorites" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-menu-search}}

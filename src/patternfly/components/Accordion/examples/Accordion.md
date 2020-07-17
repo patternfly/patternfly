@@ -5,7 +5,8 @@ cssPrefix: pf-c-accordion
 ---
 
 ## Examples
-```hbs title=Fluid
+### Fluid
+```hbs
 {{#> accordion}}
   {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
     {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
@@ -49,7 +50,8 @@ cssPrefix: pf-c-accordion
 {{/accordion}}
 ```
 
-```hbs title=Fixed
+### Fixed
+```hbs
 {{#> accordion}}
   {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
     {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
@@ -95,7 +97,8 @@ cssPrefix: pf-c-accordion
 {{/accordion}}
 ```
 
-```hbs title=Definition-list
+### Definition list
+```hbs
 {{#> accordion accordion--IsDefinitionList="true"}}
   {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
     {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}

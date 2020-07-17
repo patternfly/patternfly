@@ -6,7 +6,8 @@ cssPrefix: {nameBEM}
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> {nameDasherized}}}
   Basic example content
 {{/{nameDasherized}}}

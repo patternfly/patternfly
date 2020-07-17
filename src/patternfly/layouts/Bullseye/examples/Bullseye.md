@@ -7,7 +7,8 @@ cssPrefix: pf-l-bullseye
 import './Bullseye.css'
 
 ## Examples
-```hbs title=Basic 
+### Basic
+```hbs 
 {{#> bullseye}}
   {{#> bullseye-item}}content{{/bullseye-item}}
 {{/bullseye}}

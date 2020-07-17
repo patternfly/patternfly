@@ -6,7 +6,8 @@ section: utilities
 import './Float.css'
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> float float--type="left"}}
   Float left
 {{/float}}

@@ -5,7 +5,8 @@ cssPrefix: pf-c-clipboard-copy
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> clipboard-copy clipboard-copy--id="basic-editable"}}
   {{#> clipboard-copy-group}}
     {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="This is editable" id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
@@ -27,7 +28,8 @@ cssPrefix: pf-c-clipboard-copy
 {{/clipboard-copy}}
 ```
 
-```hbs title=Expandable
+### Expandable
+```hbs
 <h4>Editable</h4>
 {{#> clipboard-copy clipboard-copy--id="expandable-not-expanded-editable"}}
   {{#> clipboard-copy-group}}

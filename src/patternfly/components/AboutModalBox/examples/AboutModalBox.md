@@ -5,7 +5,8 @@ cssPrefix: pf-c-about-modal-box
 ---
 
 ## Examples
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> about-modal-box about-modal-box--attribute='aria-labelledby="about-modal-title"'}}
   {{#> about-modal-box-brand}}
     {{#> about-modal-box-brand-image about-modal-box-brand-image--attribute='src="/assets/images/pf_mini_logo_white.svg" alt="PatternFly brand logo"'}}

@@ -5,11 +5,13 @@ wrapperTag: div
 ---
 
 ## Demos
-```hbs title=Collapsed isFullscreen
+### Collapsed
+```hbs isFullscreen
 {{> drawer-demo-default id="drawer-collapsed-demo"}}
 ```
 
-```hbs title=Expanded isFullscreen
+### Expanded
+```hbs isFullscreen
 {{> drawer-demo-default id="drawer-expanded-demo" drawer-panel--IsOpen="true"}}
 ```
 

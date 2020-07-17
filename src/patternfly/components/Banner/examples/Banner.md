@@ -6,7 +6,8 @@ cssPrefix: pf-c-banner
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> banner}}
   Default banner
 {{/banner}}

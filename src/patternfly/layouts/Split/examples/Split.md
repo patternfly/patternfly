@@ -7,7 +7,8 @@ cssPrefix: pf-l-split
 import './Split.css'
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> split}}
   {{#> split-item}}
     content
@@ -21,7 +22,8 @@ import './Split.css'
 {{/split}}
 ```
 
-```hbs title=With-gutter
+### With gutter
+```hbs
 {{#> split split--modifier="pf-m-gutter"}}
   {{#> split-item}}
     content

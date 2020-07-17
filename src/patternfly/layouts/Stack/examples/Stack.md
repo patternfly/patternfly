@@ -7,7 +7,8 @@ cssPrefix: pf-l-stack
 import './Stack.css'
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> stack}}
   {{#> stack-item}}
     content
@@ -21,7 +22,8 @@ import './Stack.css'
 {{/stack}}
 ```
 
-```hbs title=With-gutter
+### With gutter
+```hbs
 {{#> stack stack--modifier="pf-m-gutter"}}
   {{#> stack-item}}
     content

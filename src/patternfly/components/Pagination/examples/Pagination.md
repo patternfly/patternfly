@@ -5,7 +5,8 @@ cssPrefix: pf-c-pagination
 ---
 
 ## Examples
-```hbs title=Top isFullscreen
+### Top
+```hbs isFullscreen
 {{#> pagination}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu options-menu id="pagination-options-menu-top-example" options-menu--IsText="true"}}
@@ -13,7 +14,8 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
-```hbs title=Top-expanded isFullscreen
+### Top expanded
+```hbs isFullscreen
 {{#> pagination}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu options-menu--IsExpanded="true" id="pagination-options-menu-top-expanded-example" options-menu--IsText="true"}}
@@ -21,14 +23,16 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
-```hbs title=Bottom isFullscreen
+### Bottom
+```hbs isFullscreen
 {{#> pagination pagination--modifier="pf-m-bottom"}}
   {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true"}}
   {{> pagination-nav-content}}
 {{/pagination}}
 ```
 
-```hbs title=Top-disabled isFullscreen
+### Top disabled
+```hbs isFullscreen
 {{#> pagination}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu id="pagination-options-menu-top-disabled-example" options-menu--IsText="true" options-menu-toggle--IsDisabled="true"}}
@@ -36,7 +40,8 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
-```hbs title=Compact isFullscreen
+### Compact
+```hbs isFullscreen
 {{#> pagination pagination--IsCompact="true"}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu options-menu id="pagination-options-menu-compact-example" options-menu--IsText="true"}}

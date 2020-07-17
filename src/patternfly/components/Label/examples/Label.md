@@ -7,7 +7,8 @@ cssPrefix: pf-c-label
 import './Label.css'
 
 ## Examples
-```hbs title=Filled
+### Filled
+```hbs
 {{#> label label--id="default-grey"}}
   Grey
 {{/label}}
@@ -232,7 +233,8 @@ import './Label.css'
 ```
 
 
-```hbs title=Outline
+### Outline
+```hbs
 {{#> label label--id="outline-grey" label--modifier="pf-m-outline"}}
   Grey
 {{/label}}

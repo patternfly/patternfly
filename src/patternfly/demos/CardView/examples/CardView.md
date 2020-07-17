@@ -5,7 +5,8 @@ wrapperTag: div
 ---
 
 ## Demos
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> page page--id="card-view"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

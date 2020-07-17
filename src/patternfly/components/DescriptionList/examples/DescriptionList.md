@@ -7,59 +7,71 @@ cssPrefix: pf-c-description-list
 
 ## Examples
 
-```hbs title=Default
+### Default
+```hbs
 {{> description-list__example description-list--title="Default DL" description-list--header="Test"}}
 ```
 
-```hbs title=Default-2-col
+### Default 2 col
+```hbs
 {{> description-list__example description-list--title="Default 2 column DL" description-list--modifier="pf-m-2-col"}}
 ```
 
-```hbs title=Default-3-col-on-lg
+### Default 3 col on lg
+```hbs
 {{> description-list__example description-list--title="Default 3 column DL" description-list--modifier="pf-m-3-col-on-lg"}}
 ```
 
-```hbs title=Horizontal
+### Horizontal
+```hbs
 {{> description-list__example description-list--title="Horizontal DL" description-list--modifier="pf-m-horizontal"}}
 ```
 
-```hbs title=Horizontal-2-col
+### Horizontal 2 col
+```hbs
 {{> description-list__example description-list--title="Horizontal 2 column DL" description-list--modifier="pf-m-horizontal pf-m-2-col"}}
 ```
 
-```hbs title=Horizontal-3-col-on-lg
+### Horizontal 3 col on lg
+```hbs
 {{> description-list__example description-list--title="Horizontal 3 column DL" description-list--modifier="pf-m-horizontal pf-m-3-col-on-lg"}}
 ```
 
 ## Responsive column definitions
 
-```hbs title=Default-responsive-columns
+### Default responsive columns
+```hbs
 {{> description-list__example description-list--title="Default responsive DL" description-list--modifier="pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
 ```
 
-```hbs title=Horizontal-responsive-columns
+### Horizontal responsive columns
+```hbs
 {{> description-list__example description-list--title="Horizontal responsive DL" description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
 ```
 
 ## Auto-column-width
 
-```hbs title=Default-auto-columns-width
+### Default auto columns width
+```hbs
 {{> description-list__example description-list--title="Auto column width DL" description-list--modifier="pf-m-auto-column-widths pf-m-3-col"}}
 ```
 
-```hbs title=Horizontal-auto-column-width
+### Horizontal auto column width
+```hbs
 {{> description-list__example description-list--title="Horizontal ato-fit DL" description-list--modifier="pf-m-horizontal pf-m-auto-column-widths pf-m-2-col-on-lg"}}
 ```
 
 ## Inline grid
 
-```hbs title=Default-inline-grid
+### Default inline grid
+```hbs
 {{> description-list__example description-list--title="Default inline grid" description-list--modifier="pf-m-3-col pf-m-inline-grid"}}
 ```
 
 <!-- ## Auto term with is only supported in FF currently
 
-```hbs title=Horizontal-2-col-auto-term-width
+### Horizontal 2 col auto term width
+```hbs
 {{> description-list__example description-list--title="Horizontal 2 column DL" description-list--modifier="pf-m-horizontal pf-m-auto-term-widths pf-m-2-col"}}
 ``` -->
 

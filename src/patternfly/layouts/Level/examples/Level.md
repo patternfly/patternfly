@@ -7,7 +7,8 @@ cssPrefix: pf-l-level
 import './Level.css'
 
 ## Examples
-```hbs title=Two-items
+### Two items
+```hbs
 {{#> level}}
   {{#> level-item}}
     content
@@ -18,7 +19,8 @@ import './Level.css'
 {{/level}}
 ```
 
-```hbs title=Three-items
+### Three items
+```hbs
 {{#> level}}
   {{#> level-item}}
     content
@@ -32,7 +34,8 @@ import './Level.css'
 {{/level}}
 ```
 
-```hbs title=With-gutters
+### With gutters
+```hbs
 {{#> level level--modifier="pf-m-gutter"}}
   {{#> level-item}}
     content with gutter

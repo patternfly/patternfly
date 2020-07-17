@@ -7,7 +7,8 @@ cssPrefix: pf-l-grid
 import './Grid.css'
 
 ## Examples
-```hbs title=Smart-(responsive)
+### Smart (responsive)
+```hbs
 {{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}
   {{#> grid-item}}
     item 1
@@ -48,7 +49,8 @@ import './Grid.css'
 {{/grid}}
 ```
 
-```hbs title=Smart-with-overrides-(responsive)
+### Smart with overrides (responsive)
+```hbs
 {{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl"}}
   {{#> grid-item grid-item--modifier="pf-m-8-col-on-sm pf-m-4-col-on-lg pf-m-6-col-on-xl"}}
     item 1
@@ -95,7 +97,8 @@ import './Grid.css'
 {{/grid}}
 ```
 
-```hbs title=Base 
+### Base
+```hbs 
 {{#> grid}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
       12 col
@@ -133,7 +136,8 @@ import './Grid.css'
 {{/grid}}
 ```
 
-```hbs title=Gutter
+### Gutter
+```hbs
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
       12 col
@@ -159,7 +163,8 @@ import './Grid.css'
 {{/grid}}
 ```
 
-```hbs title=Responsive
+### Responsive
+```hbs
 {{#> grid}}
   {{#> grid-item grid-item--modifier="pf-m-1-col pf-m-6-col-on-md pf-m-11-col-on-xl"}}
       1 / 6 / 11 col
@@ -194,7 +199,8 @@ import './Grid.css'
 {{/grid}}
 ```
 
-```hbs title=Nested
+### Nested
+```hbs
 {{#> grid}}
   {{#> grid-item grid-item--modifier="pf-m-12-col"}}
     12 col
@@ -222,7 +228,8 @@ import './Grid.css'
 {{/grid}}
 ```
 
-```hbs title=Offsets
+### Offsets
+```hbs
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-11-col pf-m-offset-1-col"}}
       11 col, offset 1
@@ -239,7 +246,8 @@ import './Grid.css'
 {{/grid}}
 ```
 
-```hbs title=Row-spans
+### Row spans
+```hbs
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item grid-item--modifier="pf-m-8-col"}}
     8 col 

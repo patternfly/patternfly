@@ -5,7 +5,8 @@ cssPrefix: pf-c-chip-group
 ---
 
 ## Examples
-```hbs title=Simple-inline-chip-group-overflow
+### Simple inline chip group overflow
+```hbs
 {{#> chip-group chip-group--id="simple-inline-chip-group-overflow"}}
   {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
     {{#> chip-group-list-item}}
@@ -49,7 +50,8 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Simple-inline-chip-group-expanded
+### Simple inline chip group expanded
+```hbs
 {{#> chip-group chip-group--id="simple-inline-chip-group-expanded"}}
   {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
     {{#> chip-group-list-item}}
@@ -113,7 +115,8 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Chip-group-with-categories
+### Chip group with categories
+```hbs
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories"}}
   {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
     Category one
@@ -153,7 +156,8 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Chip-group-with-categories-overflow
+### Chip group with categories overflow
+```hbs
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow"}}
   {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
     Category one
@@ -200,7 +204,8 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Chip-group-with-categories-overflow-expanded
+### Chip group with categories overflow expanded
+```hbs
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow-expanded"}}
   {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
     Category one
@@ -267,7 +272,8 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Chip-group-with-categories-removable
+### Chip group with categories removable
+```hbs
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="Chip-group-with-categories-removable"}}
   {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
     Category one

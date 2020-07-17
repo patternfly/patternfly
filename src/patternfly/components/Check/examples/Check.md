@@ -5,35 +5,40 @@ cssPrefix: pf-c-check
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> check}}
   {{#> check-input check-input--attribute='id="check-basic" name="check-basic"'}}{{/check-input}}
   {{#> check-label check-label--attribute='for="check-basic"'}}Check{{/check-label}}
 {{/check}}
 ```
 
-```hbs title=Checked
+### Checked
+```hbs
 {{#> check}}
   {{#> check-input check-input--attribute='id="check-checked" name="check-checked" checked'}}{{/check-input}}
   {{#> check-label check-label--attribute='for="check-checked"'}}Check checked{{/check-label}}
 {{/check}}
 ```
 
-```hbs title=Label-wrapping-input
+### Label wrapping input
+```hbs
 {{#> check check--type="label" check--attribute='for="check-label-wrapping-input"'}}
   {{#> check-input check-input--attribute='id="check-label-wrapping-input" name="check-label-wrapping-input"'}}{{/check-input}}
   {{#> check-label check-label--type="span"}}Check label wraps input{{/check-label}}
 {{/check}}
 ```
 
-```hbs title=Reversed
+### Reversed
+```hbs
 {{#> check}}
   {{#> check-label check-label--attribute='for="check-reversed"'}}Check reversed{{/check-label}}
   {{#> check-input check-input--attribute='id="check-reversed" name="check-reversed"'}}{{/check-input}}
 {{/check}}
 ```
 
-```hbs title=Disabled
+### Disabled
+```hbs
 {{#> check}}
   {{#> check-input check-input--attribute='id="check-disabled" name="check-disabled" disabled'}}{{/check-input}}
   {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="check-disabled"'}}Check disabled{{/check-label}}
@@ -44,7 +49,8 @@ cssPrefix: pf-c-check
 {{/check}}
 ```
 
-```hbs title=With-description
+### With description
+```hbs
 {{#> check}}
   {{#> check-input check-input--attribute='id="check-with-description" name="check-with-description"'}}{{/check-input}}
   {{#> check-label check-label--attribute='for="check-with-description"'}}Check with description{{/check-label}}

@@ -7,7 +7,8 @@ beta: true
 
 ## Examples
 
-```hbs title=Basic-file-upload
+### Basic file upload
+```hbs
 {{#> file-upload file-upload--id="basic-file-upload"}}
   {{#> file-upload-file-select}}
     {{#> input-group}}
@@ -28,7 +29,8 @@ beta: true
 {{/file-upload}}
 ```
 
-```hbs title=Upload-complete-non-editable
+### Upload complete non editable
+```hbs
 {{#> file-upload file-upload--id="browsed-file-upload-complete"}}
   {{#> file-upload-file-select}}
     {{#> input-group}}
@@ -49,7 +51,8 @@ beta: true
 {{/file-upload}}
 ```
 
-```hbs title=Upload-complete-editable
+### Upload complete editable
+```hbs
 {{#> file-upload file-upload--id="drop-file"}}
   {{#> file-upload-file-select}}
     {{#> input-group}}
@@ -70,7 +73,8 @@ beta: true
 {{/file-upload}}
 ```
 
-```hbs title=Drag-file-hover-component
+### Drag file hover component
+```hbs
 {{#> file-upload file-upload--id="drag-file-hover-component" file-upload--modifier="pf-m-drag-hover"}}
   {{#> file-upload-file-select}}
     {{#> input-group}}
@@ -88,7 +92,8 @@ beta: true
 {{/file-upload}}
 ```
 
-```hbs title=File-upload-in-form-with-error
+### File upload in form with error
+```hbs
 {{#> form}}
   {{#> form-group}}
     {{#> file-upload file-upload--id="file-upload-error"}}
@@ -115,7 +120,8 @@ beta: true
 {{/form}}
 ```
 
-```hbs title=File-upload-loading
+### File upload loading
+```hbs
 {{#> file-upload file-upload--id="file-upload-loading" file-upload--modifier="pf-m-loading"}}
   {{#> file-upload-file-select}}
     {{#> input-group}}

@@ -5,7 +5,8 @@ cssPrefix: pf-c-progress
 ---
 
 ## Examples
-```hbs title=Simple
+### Simple
+```hbs
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -14,7 +15,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Small
+### Small
+```hbs
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -24,7 +26,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Large
+### Large
+```hbs
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -34,7 +37,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Outside
+### Outside
+```hbs
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -44,7 +48,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Inside
+### Inside
+```hbs
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -55,7 +60,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Success
+### Success
+```hbs
 {{#> progress 
   progress__value="100" 
   progress__description="Title" 
@@ -65,7 +71,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Failure
+### Failure
+```hbs
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -75,7 +82,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Inside-success
+### Inside success
+```hbs
 {{#> progress 
   progress__value="100" 
   progress__description="Title" 
@@ -87,7 +95,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Outside-failure
+### Outside failure
+```hbs
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -98,7 +107,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=On-single-line
+### On single line
+```hbs
 {{#> progress 
   progress__value="33"
   progress--modifier="pf-m-singleline"
@@ -107,7 +117,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Without-measure
+### Without measure
+```hbs
 {{#> progress 
   progress__value="33" 
   progress__description="Title" 
@@ -117,7 +128,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Failure-without-measure
+### Failure without measure
+```hbs
 {{#> progress 
   progress__value="33" 
   progress--no-measure="true"
@@ -128,7 +140,8 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-```hbs title=Finite-step
+### Finite step
+```hbs
 {{#> progress 
   progress__value="2"
   progress__valuemax="5" 
@@ -143,7 +156,8 @@ cssPrefix: pf-c-progress
 ### Non-percantage progress
 If the status that displays with the bar is not a percentage, then the ARIA tag `aria-valuetext` should be used to provide this status to screen reader users. This is the only case when setting the `aria-valuemax` to a value other than "100" is recommended, given how different screen readers handle these attributes.
 
-```hbs title=Progress-step-instruction
+### Progress step instruction
+```hbs
 {{#> progress 
   progress__value="2"
   progress__valuemax="5" 
