@@ -127,7 +127,7 @@ jobs:
             if [[ -n $CIRCLE_PULL_REQUEST ]];
             then
                 git fetch --tags
-                node scripts/sizeReport/sizeReport origin/master --comment
+                node scripts/sizeReport/sizeReport --comment
             fi;
           when: always
       - store_artifacts:
