@@ -675,7 +675,7 @@ cssPrefix: pf-c-tree-view
                         Application launcher
                     {{/tree-view-link-text}}
                 {{/tree-view-link}}
-                {{#> tree-view-action}}
+                {{#> tree-view-action tree-view-action--attribute='aria-label="Actions"'}}
                     <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
                 {{/tree-view-action}}
             {{/tree-view-link-wrapper}}
@@ -688,7 +688,7 @@ cssPrefix: pf-c-tree-view
                                 Application 1
                             {{/tree-view-link-text}}
                         {{/tree-view-link}}
-                        {{#> tree-view-action}}
+                        {{#> tree-view-action tree-view-action--attribute='aria-label="Copy"'}}
                             <i class="fas fa-clipboard" aria-hidden="true"></i>
                         {{/tree-view-action}}
                     {{/tree-view-link-wrapper}}
@@ -717,7 +717,7 @@ cssPrefix: pf-c-tree-view
                                 Application 2
                             {{/tree-view-link-text}}
                         {{/tree-view-link}}
-                        {{#> tree-view-action}}
+                        {{#> tree-view-action tree-view-action--attribute='aria-label="Action"'}}
                             <i class="fas fa-bars" aria-hidden="true"></i>
                         {{/tree-view-action}}
                     {{/tree-view-link-wrapper}}
@@ -746,7 +746,7 @@ cssPrefix: pf-c-tree-view
                                                 Loading app 1
                                             {{/tree-view-link-text}}
                                         {{/tree-view-link}}
-                                        {{#> tree-view-action tree-view-link-action--modifier="pf-m-favorite"}}
+                                        {{#> tree-view-action tree-view-action--attribute='aria-label="Favorite"' tree-view-link-action--modifier="pf-m-favorite"}}
                                             <i class="fas fa-star" aria-hidden="true"></i>
                                         {{/tree-view-action}}
                                     {{/tree-view-link-wrapper}}
@@ -795,7 +795,7 @@ cssPrefix: pf-c-tree-view
                         This is a really really really long folder name that overflows from the width of the container.
                     {{/tree-view-link-text}}
                 {{/tree-view-link}}
-                {{#> tree-view-action}}
+                {{#> tree-view-action tree-view-action--attribute='aria-label="Alert"'}}
                     <i class="fas fa-bell" aria-hidden="true"></i>
                 {{/tree-view-action}}
             {{/tree-view-link-wrapper}}
@@ -818,7 +818,7 @@ cssPrefix: pf-c-tree-view
 | `aria-expanded="true"` | `.pf-c-tree-view__list-item.pf-m-expandable.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
 | `tabindex="-1"` | `.pf-c-tree-view__link` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
 | `tabindex="0"` | `.pf-c-tree-view__link` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
-
+| `aria-label="[button label text]"` | `.pf-c-tree-view__action` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
 
 ### Usage
 | Class | Applied | Outcome |
