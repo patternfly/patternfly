@@ -1,7 +1,5 @@
 // Set common reset styles for patternfly components
 [class*="pf-c-"] {
-  color: var(--pf-global--Color--100);
-
   &,
   &::before,
   &::after {

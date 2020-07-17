@@ -277,6 +277,21 @@
 
 /* stylelint-disable */
 .ws-preview-html {
+  .pf-c-page {
+    --pf-c-page__sidebar--BackgroundColor: var(--pf-global--palette--black-700);
+    --pf-c-page__header--BackgroundColor: var(--pf-global--palette--black-900);
+  }
+
+  .pf-c-form-control {
+    --pf-c-form-control--BackgroundColor: var(--pf-global--palette--black-600);
+    --pf-c-form-control--BorderTopColor: transparent;
+    --pf-c-form-control--BorderRightColor: transparent;
+    --pf-c-form-control--BorderBottomColor: transparent;
+    --pf-c-form-control--BorderLeftColor: transparent;
+  }
+}
+
+[class*="pf-c-"] {
   // palette
   --pf-global--palette--black-50: #e7ebeb;
   --pf-global--palette--black-100: #d3d6d7;
@@ -311,18 +326,7 @@
   --pf-global--Color--light-100: #fff;
   --pf-global--Color--200: var(--pf-global--palette--black-200);
 
-  .pf-c-page {
-    --pf-c-page__sidebar--BackgroundColor: var(--pf-global--palette--black-700);
-    --pf-c-page__header--BackgroundColor: var(--pf-global--palette--black-900);
-  }
-
-  .pf-c-form-control {
-    --pf-c-form-control--BackgroundColor: var(--pf-global--palette--black-600);
-    --pf-c-form-control--BorderTopColor: transparent;
-    --pf-c-form-control--BorderRightColor: transparent;
-    --pf-c-form-control--BorderBottomColor: transparent;
-    --pf-c-form-control--BorderLeftColor: transparent;
-  }
+  color: var(--pf-global--Color--100);
 }
 
 // RedHat Font overrides
