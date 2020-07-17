@@ -19,22 +19,32 @@ function getWrapperDiv(section, title, exampleName, toWrap, classNames) {
 
 // https://github.com/unifiedjs/unified#plugin
 function codeTransformer(config) {
-  function visitor(node) {
-    const match = node.meta.match(/title=(\S*)/);
-    if (match) {
-      const id = getId(match[1]);
-      if (config.examples[id]) {
-        node.type = 'html';
-        node.value = getWrapperDiv(
-          config.section,
-          config.title,
-          id.toLowerCase(),
-          config.examples[id].code,
-          'ws-lite-example'
-        );
-        delete node.meta;
-        delete node.language;
+  function visitor(node, _index, parent) {
+    let id = 'no-id';
+    let startLooking = false;
+    for (let i = parent.children.length - 1; i >= 0; i--) {
+      const child = parent.children[i];
+      if (child === node) {
+        startLooking = true;
+      } else if (startLooking) {
+        if (child.type === 'heading' && child.depth === 3 && child.children && child.children[0].value) {
+          id = getId(child.children[0].value);
+          parent.children.splice(i, 1);
+          break;
+        }
       }
+    }
+    if (config.examples[id]) {
+      node.type = 'html';
+      node.value = getWrapperDiv(
+        config.section,
+        config.title,
+        id.toLowerCase(),
+        config.examples[id].code,
+        'ws-lite-example'
+      );
+      delete node.meta;
+      delete node.language;
     }
   }
 
