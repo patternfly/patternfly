@@ -44,7 +44,7 @@ function compileSrcSASS() {
 }
 
 function watchSrcSASS() {
-  return watchSASS(sassFiles);
+  return watchSASS(['./src/patternfly/**/*.scss', '!./src/patternfly/assets/**']);
 }
 
 function compileSrcHBS() {
