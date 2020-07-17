@@ -151,12 +151,38 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/toolbar}}
 ```
 
-### Toolbar spacers
+```hbs title=Insets
+{{#> toolbar toolbar--modifier="pf-m-inset-none pf-m-inset-md-on-md pf-m-inset-2xl-on-lg" toolbar--id="toolbar-inset-example"}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-group}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+      {{> divider divider--modifier="pf-m-vertical"}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
+### Toolbar spacers and insets
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
+| `.pf-m-page-insets` | `.pf-c-toolbar` | Modifies toolbar insets to match page section, table, page header or any other component whose inset shifts from `--pf-global--spacer--md` to `--pf-global--spacer--lg` at the `xl` breakpoint. |
 | `.pf-m-spacer-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar group or item spacing. |
 | `.pf-m-space-items-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-toolbar__group` | Modifies toolbar group child spacing. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-toolbar` | Modifies toolbar horizontal padding. |
 
 ### Group types
 ```hbs
