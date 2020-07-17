@@ -1,5 +1,5 @@
 ---
-title: Label
+id: Label
 section: components
 cssPrefix: pf-c-label
 ---

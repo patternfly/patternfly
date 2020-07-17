@@ -1,5 +1,5 @@
 ---
-title: Notification badge
+id: Notification badge
 section: components
 cssPrefix: pf-c-notification-badge
 ---

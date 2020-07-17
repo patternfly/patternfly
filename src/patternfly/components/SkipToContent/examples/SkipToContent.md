@@ -1,5 +1,5 @@
 ---
-title: Skip to content
+id: Skip to content
 section: components
 cssPrefix: pf-c-skip-to-content
 ---

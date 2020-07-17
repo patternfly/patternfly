@@ -1,5 +1,5 @@
 ---
-title: Flex
+id: Flex
 section: layouts
 cssPrefix: pf-l-flex
 ---

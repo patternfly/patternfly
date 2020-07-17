@@ -1,5 +1,5 @@
 ---
-title: Alert
+id: Alert
 section: demos
 ---
 

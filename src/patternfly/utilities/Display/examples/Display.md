@@ -1,5 +1,5 @@
 ---
-title: Display
+id: Display
 section: utilities
 ---
 

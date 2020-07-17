@@ -1,5 +1,5 @@
 ---
-title: Avatar
+id: Avatar
 section: components
 cssPrefix: pf-c-avatar
 ---

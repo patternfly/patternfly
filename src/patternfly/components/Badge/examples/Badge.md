@@ -1,5 +1,5 @@
 ---
-title: Badge
+id: Badge
 section: components
 cssPrefix: pf-c-badge
 ---

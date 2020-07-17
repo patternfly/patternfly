@@ -1,5 +1,5 @@
 ---
-title: Dropdown
+id: Dropdown
 section: components
 cssPrefix: pf-c-dropdown
 ---

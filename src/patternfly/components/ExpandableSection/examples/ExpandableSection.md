@@ -1,5 +1,5 @@
 ---
-title: Expandable section
+id: Expandable section
 section: components
 cssPrefix: pf-c-expandable-section
 ---

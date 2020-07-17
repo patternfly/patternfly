@@ -1,5 +1,5 @@
 ---
-title: Empty state
+id: Empty state
 section: components
 cssPrefix: pf-c-empty-state
 ---

@@ -1,5 +1,5 @@
 ---
-title: Sizing
+id: Sizing
 section: utilities
 ---
 

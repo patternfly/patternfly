@@ -1,5 +1,5 @@
 ---
-title: Stack
+id: Stack
 section: layouts
 cssPrefix: pf-l-stack
 ---

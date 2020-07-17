@@ -1,5 +1,5 @@
 ---
-title: About modal
+id: About modal
 section: demos
 ---
 

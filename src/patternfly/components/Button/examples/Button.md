@@ -1,5 +1,5 @@
 ---
-title: Button
+id: Button
 section: components
 cssPrefix: pf-c-button
 ---

@@ -1,5 +1,5 @@
 ---
-title: Content
+id: Content
 section: components
 cssPrefix: pf-c-content
 ---

@@ -1,5 +1,5 @@
 ---
-title: Progress
+id: Progress
 section: components
 cssPrefix: pf-c-progress
 ---

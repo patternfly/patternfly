@@ -1,5 +1,5 @@
 ---
-title: Chip
+id: Chip
 section: components
 cssPrefix: pf-c-chip
 ---

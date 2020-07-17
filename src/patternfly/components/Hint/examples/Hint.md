@@ -1,5 +1,5 @@
 ---
-title: 'Hint'
+id: 'Hint'
 section: components
 beta: true
 cssPrefix: pf-c-hint

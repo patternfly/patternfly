@@ -1,5 +1,5 @@
 ---
-title: Switch
+id: Switch
 section: components
 cssPrefix: pf-c-switch
 ---

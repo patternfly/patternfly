@@ -1,5 +1,5 @@
 ---
-title: Breadcrumb
+id: Breadcrumb
 section: components
 cssPrefix: pf-c-breadcrumb
 ---

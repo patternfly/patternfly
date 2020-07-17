@@ -1,5 +1,5 @@
 ---
-title: Spinner
+id: Spinner
 section: components
 cssPrefix: pf-c-spinner
 ---

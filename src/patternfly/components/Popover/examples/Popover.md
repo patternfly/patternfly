@@ -1,5 +1,5 @@
 ---
-title: Popover
+id: Popover
 section: components
 cssPrefix: pf-c-popover
 ---

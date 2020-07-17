@@ -1,5 +1,5 @@
 ---
-title: Master Detail
+id: Master Detail
 section: demos
 wrapperTag: div
 ---

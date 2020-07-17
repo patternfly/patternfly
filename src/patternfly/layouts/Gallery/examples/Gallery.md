@@ -1,5 +1,5 @@
 ---
-title: Gallery
+id: Gallery
 section: layouts
 cssPrefix: pf-l-gallery
 ---

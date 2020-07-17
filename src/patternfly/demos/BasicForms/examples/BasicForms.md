@@ -1,5 +1,5 @@
 ---
-title: Basic forms
+id: Basic forms
 section: demos
 ---
 

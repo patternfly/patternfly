@@ -1,5 +1,5 @@
 ---
-title: Data list
+id: Data list
 section: components
 cssPrefix: pf-c-data-list
 ---

@@ -1,5 +1,5 @@
 ---
-title: Select
+id: Select
 section: components
 cssPrefix: pf-c-select
 ---

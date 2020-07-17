@@ -1,5 +1,5 @@
 ---
-title: Split
+id: Split
 section: layouts
 cssPrefix: pf-l-split
 ---

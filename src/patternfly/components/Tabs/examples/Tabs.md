@@ -1,5 +1,5 @@
 ---
-title: Tabs
+id: Tabs
 section: components
 cssPrefix: pf-c-tabs
 ---

@@ -1,5 +1,5 @@
 ---
-title: 'Banner'
+id: 'Banner'
 section: demos
 beta: true
 cssPrefix: pf-c-banner

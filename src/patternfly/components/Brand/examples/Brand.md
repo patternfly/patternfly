@@ -1,5 +1,5 @@
 ---
-title: Brand
+id: Brand
 section: components
 ---
 

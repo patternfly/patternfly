@@ -1,5 +1,5 @@
 ---
-title: Radio
+id: Radio
 section: components
 cssPrefix: pf-c-radio
 ---

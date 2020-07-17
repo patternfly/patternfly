@@ -1,5 +1,5 @@
 ---
-title: Navigation
+id: Navigation
 section: components
 cssPrefix: pf-c-nav
 ---

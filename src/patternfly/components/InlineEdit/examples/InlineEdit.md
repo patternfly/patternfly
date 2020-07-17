@@ -1,5 +1,5 @@
 ---
-title: Inline edit
+id: Inline edit
 section: components
 beta: true
 cssPrefix: pf-c-inline-edit

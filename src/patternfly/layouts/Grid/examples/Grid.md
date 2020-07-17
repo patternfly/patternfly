@@ -1,5 +1,5 @@
 ---
-title: Grid
+id: Grid
 section: layouts
 cssPrefix: pf-l-grid
 ---

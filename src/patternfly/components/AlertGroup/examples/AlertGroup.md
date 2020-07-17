@@ -1,5 +1,5 @@
 ---
-title: Alert group
+id: Alert group
 section: components
 cssPrefix: pf-c-alert-group
 ---

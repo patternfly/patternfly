@@ -1,5 +1,5 @@
 ---
-title: Tooltip
+id: Tooltip
 section: components
 cssPrefix: pf-c-tooltip
 ---

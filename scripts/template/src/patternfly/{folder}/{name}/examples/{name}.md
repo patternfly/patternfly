@@ -1,5 +1,5 @@
 ---
-title: '{nameTitle}'
+id: '{nameTitle}'
 beta: true
 section: {folder}
 cssPrefix: {nameBEM}

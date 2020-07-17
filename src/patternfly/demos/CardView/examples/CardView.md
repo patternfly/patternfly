@@ -1,5 +1,5 @@
 ---
-title: Card view
+id: Card view
 section: demos
 wrapperTag: div
 ---

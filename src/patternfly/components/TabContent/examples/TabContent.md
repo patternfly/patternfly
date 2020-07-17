@@ -1,5 +1,5 @@
 ---
-title: Tab content
+id: Tab content
 section: components
 cssPrefix: pf-c-tab-content
 ---

@@ -1,5 +1,5 @@
 ---
-title: Table
+id: Table
 section: demos
 wrapperTag: div
 ---

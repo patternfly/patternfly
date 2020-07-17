@@ -1,5 +1,5 @@
 ---
-title: Pagination
+id: Pagination
 section: components
 cssPrefix: pf-c-pagination
 ---

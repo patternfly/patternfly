@@ -1,5 +1,5 @@
 ---
-title: Wizard
+id: Wizard
 section: demos
 wrapperTag: div
 ---

@@ -1,5 +1,5 @@
 ---
-title: Wizard
+id: Wizard
 section: components
 cssPrefix: pf-c-wizard
 wrapperTag: div

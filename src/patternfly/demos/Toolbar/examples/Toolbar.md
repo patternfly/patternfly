@@ -1,5 +1,5 @@
 ---
-title: Toolbar
+id: Toolbar
 section: demos
 ---
 

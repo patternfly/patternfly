@@ -1,5 +1,5 @@
 ---
-title: Accordion
+id: Accordion
 section: components
 cssPrefix: pf-c-accordion
 ---

@@ -1,5 +1,5 @@
 ---
-title: Card
+id: Card
 section: components
 cssPrefix: pf-c-card
 ---

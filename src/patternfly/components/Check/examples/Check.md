@@ -1,5 +1,5 @@
 ---
-title: Check
+id: Check
 section: components
 cssPrefix: pf-c-check
 ---

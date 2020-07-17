@@ -1,5 +1,5 @@
 ---
-title: Tile
+id: Tile
 section: components
 beta: true
 cssPrefix: pf-c-tile

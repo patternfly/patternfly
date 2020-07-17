@@ -1,5 +1,5 @@
 ---
-title: Bullseye
+id: Bullseye
 section: layouts
 cssPrefix: pf-l-bullseye
 ---

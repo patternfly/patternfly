@@ -1,5 +1,5 @@
 ---
-title: Page
+id: Page
 section: demos
 wrapperTag: div
 ---

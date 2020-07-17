@@ -1,5 +1,5 @@
 ---
-title: List
+id: List
 section: components
 cssPrefix: pf-c-list
 ---

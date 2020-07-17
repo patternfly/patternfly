@@ -1,5 +1,5 @@
 ---
-title: Page
+id: Page
 section: components
 cssPrefix: pf-c-page
 wrapperTag: div

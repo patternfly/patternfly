@@ -1,5 +1,5 @@
 ---
-title: Float
+id: Float
 section: utilities
 ---
 

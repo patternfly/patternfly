@@ -1,5 +1,5 @@
 ---
-title: 'Description list'
+id: 'Description list'
 section: components
 beta: true
 cssPrefix: pf-c-description-list

@@ -1,5 +1,5 @@
 ---
-title: Notification drawer
+id: Notification drawer
 section: components
 beta: true
 cssPrefix: pf-c-notification-drawer

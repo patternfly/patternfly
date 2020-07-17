@@ -1,5 +1,5 @@
 ---
-title: Level
+id: Level
 section: layouts
 cssPrefix: pf-l-level
 ---

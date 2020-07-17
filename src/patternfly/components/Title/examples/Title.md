@@ -1,5 +1,5 @@
 ---
-title: Title
+id: Title
 section: components
 cssPrefix: pf-c-title
 ---

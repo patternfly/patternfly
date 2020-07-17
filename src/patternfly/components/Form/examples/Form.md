@@ -1,5 +1,5 @@
 ---
-title: Form
+id: Form
 section: components
 cssPrefix: pf-c-form
 ---
