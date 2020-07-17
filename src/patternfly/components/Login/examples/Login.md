@@ -1,5 +1,5 @@
 ---
-id: Login
+id: Login page
 section: components
 cssPrefix: pf-c-login
 wrapperTag: div

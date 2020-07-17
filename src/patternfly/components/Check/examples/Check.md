@@ -1,5 +1,5 @@
 ---
-id: Check
+id: Checkbox
 section: components
 cssPrefix: pf-c-check
 ---
