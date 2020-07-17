@@ -7,12 +7,12 @@ cssPrefix: pf-c-divider
 import './Divider.css'
 
 ## Examples
-### <hr>
+### hr
 ```hbs
 {{> divider}}
 ```
 
-### <li>
+### li
 ```hbs
 <ul>
   <li>List item one</li>
@@ -21,7 +21,7 @@ import './Divider.css'
 </ul>
 ```
 
-### <div>
+### div
 ```hbs
 {{> divider divider--type="div"}}
 ```
