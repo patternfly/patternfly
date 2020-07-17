@@ -14,9 +14,9 @@
   --pf-c-tree-view__list--m-nested-level-1__list-item__link--PaddingLeft: calc(var(--pf-c-tree-view__link--PaddingLeft) + var(--pf-global--spacer--md));
   --pf-c-tree-view__list--m-nested-level-2__list-item__link--PaddingLeft: calc(var(--pf-c-tree-view__list--m-nested-level-1__list-item__link--PaddingLeft) + var(--pf-global--spacer--lg) + var(--pf-global--spacer--sm));
   --pf-c-tree-view__list--m-nested-level-3__list-item__link--PaddingLeft: calc(var(--pf-c-tree-view__list--m-nested-level-2__list-item__link--PaddingLeft) + var(--pf-global--spacer--md) + var(--pf-global--spacer--sm));
-  --pf-c-tree-view__list--m-nested-level-1__list-item__link--m-expandable--PaddingLeft: calc(var(--pf-c-tree-view__link--PaddingLeft) + var(--pf-global--spacer--md));
-  --pf-c-tree-view__list--m-nested-level-2__list-item__link--m-expandable--PaddingLeft: calc(var(--pf-c-tree-view__list--m-nested-level-1__list-item__link--m-expandable--PaddingLeft) + var(--pf-global--spacer--md));
-  --pf-c-tree-view__list--m-nested-level-3__list-item__link--m-expandable--PaddingLeft: calc(var(--pf-c-tree-view__list--m-nested-level-2__list-item__link--m-expandable--PaddingLeft) + var(--pf-global--spacer--md));
+  --pf-c-tree-view__list--m-nested-level-1__list-item--m-expandable__link--PaddingLeft: calc(var(--pf-c-tree-view__link--PaddingLeft) + var(--pf-global--spacer--md));
+  --pf-c-tree-view__list--m-nested-level-2__list-item--m-expandable__link--PaddingLeft: calc(var(--pf-c-tree-view__list--m-nested-level-1__list-item--m-expandable__link--PaddingLeft) + var(--pf-global--spacer--md));
+  --pf-c-tree-view__list--m-nested-level-3__list-item--m-expandable__link--PaddingLeft: calc(var(--pf-c-tree-view__list--m-nested-level-2__list-item--m-expandable__link--PaddingLeft) + var(--pf-global--spacer--md));
 
   // link hover
   --pf-c-tree-view__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
@@ -58,36 +58,50 @@
 // stylelint-disable
 .pf-c-tree-view__list {
   &.pf-m-nested-level-1 {
-    .pf-c-tree-view__list-item .pf-c-tree-view__link {
-      --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-1__list-item__link--PaddingLeft);
+    .pf-c-tree-view__list-item {
+      &.pf-m-expandable > .pf-c-tree-view__link {
+        --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-1__list-item--m-expandable__link--PaddingLeft);
+      }
 
-      &.pf-m-expandable {
-        --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-1__list-item__link--m-expandable--PaddingLeft);
+      .pf-c-tree-view__link {
+        --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-1__list-item__link--PaddingLeft);
       }
     }
   }
 
   &.pf-m-nested-level-2 {
-    .pf-c-tree-view__list-item .pf-c-tree-view__link {
-      --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-2__list-item__link--PaddingLeft);
+    .pf-c-tree-view__list-item {
+      &.pf-m-expandable > .pf-c-tree-view__link {
+        --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-2__list-item--m-expandable__link--PaddingLeft);
+      }
 
-      &.pf-m-expandable {
-        --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-2__list-item__link--m-expandable--PaddingLeft);
+      .pf-c-tree-view__link {
+        --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-2__list-item__link--PaddingLeft);
       }
     }
   }
 
   &.pf-m-nested-level-3 {
-    .pf-c-tree-view__list-item .pf-c-tree-view__link {
-      --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-3__list-item__link--PaddingLeft);
+    .pf-c-tree-view__list-item {
+      &.pf-m-expandable > .pf-c-tree-view__link {
+        --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-3__list-item--m-expandable__link--PaddingLeft);
+      }
 
-      &.pf-m-expandable {
-        --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-3__list-item__link--m-expandable--PaddingLeft);
+      .pf-c-tree-view__link {
+        --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__list--m-nested-level-3__list-item__link--PaddingLeft);
       }
     }
   }
 }
 // stylelint-enable
+
+.pf-c-tree-view__list-item {
+  &.pf-m-expanded {
+    > .pf-c-tree-view__link > .pf-c-tree-view__link-toggle {
+      transform: rotate(var(--pf-c-tree-view__link--m-expanded__toggle--Rotate));
+    }
+  }
+}
 
 .pf-c-tree-view__link {
   display: flex;
@@ -106,12 +120,6 @@
 
   &.pf-m-first {
     font-weight: var(--pf-c-tree-view__link--m-first--FontWeight);
-  }
-
-  &.pf-m-expanded {
-    .pf-c-tree-view__link-toggle {
-      transform: rotate(var(--pf-c-tree-view__link--m-expanded__toggle--Rotate));
-    }
   }
 
   &:hover {

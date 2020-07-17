@@ -8,22 +8,22 @@ cssPrefix: pf-c-tree-view
 ```hbs title=Default
 {{#> tree-view}}
     {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+            {{#> tree-view-link tree-view-link--IsFirst="true"}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Application launcher
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
-            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-first pf-m-expandable pf-m-expanded"}}
+            {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                    {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
                         {{> tree-view-link-toggle}}
                         {{#> tree-view-link-text}}
                             Application 1
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
                         {{#> tree-view-list-item}}
                             {{#> tree-view-link}}
                                 {{#> tree-view-link-text}}
@@ -40,32 +40,32 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                    {{#> tree-view-link}}
                         {{> tree-view-link-toggle}}
                         {{#> tree-view-link-text}}
                             Application 2
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
                                     Settings
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
                                     Loader
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
-                            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item}}
-                                    {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                            {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
+                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                                    {{#> tree-view-link}}
                                         {{> tree-view-link-toggle}}
                                         {{#> tree-view-link-text}}
                                             Loading app 1
@@ -92,24 +92,24 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Cost management
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Sources
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     This is a really really really long folder name that overflows from the width of the container.
@@ -127,23 +127,23 @@ cssPrefix: pf-c-tree-view
         {{/form-control}}
     {{/tree-view-search}}
     {{> divider}}
-    {{#> tree-view-list}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+    {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+            {{#> tree-view-link tree-view-link--IsFirst="true"}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Application launcher
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
-            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-first pf-m-expandable pf-m-expanded"}}
+            {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                    {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
                         {{> tree-view-link-toggle}}
                         {{#> tree-view-link-text}}
                             Application 1
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
                         {{#> tree-view-list-item}}
                             {{#> tree-view-link}}
                                 {{#> tree-view-link-text}}
@@ -160,32 +160,32 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                    {{#> tree-view-link}}
                         {{> tree-view-link-toggle}}
                         {{#> tree-view-link-text}}
                             Application 2
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
                                     Settings
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
                                     Loader
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
-                            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item}}
-                                    {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                            {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
+                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                                    {{#> tree-view-link}}
                                         {{> tree-view-link-toggle}}
                                         {{#> tree-view-link-text}}
                                             Loading app 1
@@ -212,24 +212,24 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Cost management
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Sources
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     This is a really really really long folder name that overflows from the width of the container.
@@ -242,9 +242,9 @@ cssPrefix: pf-c-tree-view
 
 ```hbs title=With-checkboxes
 {{#> tree-view}}
-    {{#> tree-view-list}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+    {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+            {{#> tree-view-link tree-view-link--IsFirst="true"}}
                 {{> tree-view-link-toggle}}
                 {{#> check}}
                     {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
@@ -253,9 +253,9 @@ cssPrefix: pf-c-tree-view
                     Application launcher
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
-            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-first pf-m-expandable pf-m-expanded"}}
+            {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                    {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
                         {{> tree-view-link-toggle}}
                         {{#> check}}
                             {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
@@ -264,7 +264,7 @@ cssPrefix: pf-c-tree-view
                             Application 1
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
                         {{#> tree-view-list-item}}
                             {{#> tree-view-link}}
                                 {{#> check}}
@@ -287,8 +287,8 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                    {{#> tree-view-link}}
                         {{> tree-view-link-toggle}}
                         {{#> check}}
                             {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
@@ -297,9 +297,9 @@ cssPrefix: pf-c-tree-view
                             Application 2
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> check}}
                                     {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
@@ -309,8 +309,8 @@ cssPrefix: pf-c-tree-view
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> check}}
                                     {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
@@ -319,9 +319,9 @@ cssPrefix: pf-c-tree-view
                                     Loader
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
-                            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item}}
-                                    {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                            {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
+                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                                    {{#> tree-view-link}}
                                         {{> tree-view-link-toggle}}
                                         {{#> check}}
                                             {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
@@ -357,8 +357,8 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> check}}
                     {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
@@ -368,8 +368,8 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                     {{#> check}}
                         {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
@@ -379,8 +379,8 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                     {{#> check}}
                         {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
@@ -396,25 +396,25 @@ cssPrefix: pf-c-tree-view
 
 ```hbs title=With-icons
 {{#> tree-view}}
-    {{#> tree-view-list}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+    {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+            {{#> tree-view-link tree-view-link--IsFirst="true"}}
                 {{> tree-view-link-toggle}}
                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true" tree-view-link-icon--IsExpanded="true"}}
                 {{#> tree-view-link-text}}
                     Application launcher
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
-            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-first pf-m-expandable pf-m-expanded"}}
+            {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                    {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
                         {{> tree-view-link-toggle}}
                         {{> tree-view-link-icon tree-view-link-icon--IsFolder="true" tree-view-link-icon--IsExpanded="true"}}
                         {{#> tree-view-link-text}}
                             Application 1
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
                         {{#> tree-view-list-item}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
@@ -433,17 +433,17 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                    {{#> tree-view-link}}
                         {{> tree-view-link-toggle}}
                         {{> tree-view-link-icon tree-view-link-icon--IsFolder="true" tree-view-link-icon--IsExpanded="true"}}
                         {{#> tree-view-link-text}}
                             Application 2
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
                                 {{#> tree-view-link-text}}
@@ -451,17 +451,17 @@ cssPrefix: pf-c-tree-view
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true" tree-view-link-icon--IsExpanded="true"}}
                                 {{#> tree-view-link-text}}
                                     Loader
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
-                            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item}}
-                                    {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                            {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
+                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                                    {{#> tree-view-link}}
                                         {{> tree-view-link-toggle}}
                                         {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
                                         {{#> tree-view-link-text}}
@@ -491,8 +491,8 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
                 {{#> tree-view-link-text}}
@@ -500,8 +500,8 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
                 {{#> tree-view-link-text}}
@@ -509,8 +509,8 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
                 {{#> tree-view-link-text}}
@@ -524,9 +524,9 @@ cssPrefix: pf-c-tree-view
 
 ```hbs title=With-badges
 {{#> tree-view}}
-    {{#> tree-view-list}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+    {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+            {{#> tree-view-link tree-view-link--IsFirst="true"}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Application launcher
@@ -535,9 +535,9 @@ cssPrefix: pf-c-tree-view
                     2
                 {{/badge}}
             {{/tree-view-link}}
-            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-first pf-m-expandable pf-m-expanded"}}
+            {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                    {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
                         {{> tree-view-link-toggle}}
                         {{#> tree-view-link-text}}
                             Application 1
@@ -546,7 +546,7 @@ cssPrefix: pf-c-tree-view
                                 2
                             {{/badge}}
                     {{/tree-view-link}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
                         {{#> tree-view-list-item}}
                             {{#> tree-view-link}}
                                 {{#> tree-view-link-text}}
@@ -563,8 +563,8 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                    {{#> tree-view-link}}
                         {{> tree-view-link-toggle}}
                         {{#> tree-view-link-text}}
                             Application 2
@@ -573,9 +573,9 @@ cssPrefix: pf-c-tree-view
                             2
                         {{/badge}}
                     {{/tree-view-link}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
                                     Settings
@@ -585,8 +585,8 @@ cssPrefix: pf-c-tree-view
                                 {{/badge}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
                                     Loader
@@ -595,9 +595,9 @@ cssPrefix: pf-c-tree-view
                                     2
                                 {{/badge}}
                             {{/tree-view-link}}
-                            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item}}
-                                    {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                            {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
+                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                                    {{#> tree-view-link}}
                                         {{> tree-view-link-toggle}}
                                         {{#> tree-view-link-text}}
                                             Loading app 1
@@ -627,8 +627,8 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Cost management
@@ -638,8 +638,8 @@ cssPrefix: pf-c-tree-view
                 {{/badge}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Sources
@@ -649,8 +649,8 @@ cssPrefix: pf-c-tree-view
                 {{/badge}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     This is a really really really long folder name that overflows from the width of the container.
@@ -666,10 +666,10 @@ cssPrefix: pf-c-tree-view
 
 ```hbs title=With-action-item
 {{#> tree-view}}
-    {{#> tree-view-list}}
-        {{#> tree-view-list-item}}
+    {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
             {{#> tree-view-link-wrapper}}
-                {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                {{#> tree-view-link tree-view-link--IsFirst="true"}}
                     {{> tree-view-link-toggle}}
                     {{#> tree-view-link-text}}
                         Application launcher
@@ -679,10 +679,10 @@ cssPrefix: pf-c-tree-view
                     <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
                 {{/tree-view-action}}
             {{/tree-view-link-wrapper}}
-            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item}}
+            {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
                     {{#> tree-view-link-wrapper}}
-                        {{#> tree-view-link tree-view-link--modifier="pf-m-first pf-m-expandable pf-m-expanded"}}
+                        {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
                             {{> tree-view-link-toggle}}
                             {{#> tree-view-link-text}}
                                 Application 1
@@ -692,7 +692,7 @@ cssPrefix: pf-c-tree-view
                             <i class="fas fa-clipboard" aria-hidden="true"></i>
                         {{/tree-view-action}}
                     {{/tree-view-link-wrapper}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
                         {{#> tree-view-list-item}}
                             {{#> tree-view-link}}
                                 {{#> tree-view-link-text}}
@@ -709,9 +709,9 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item}}
+                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
                     {{#> tree-view-link-wrapper}}
-                        {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                        {{#> tree-view-link}}
                             {{> tree-view-link-toggle}}
                             {{#> tree-view-link-text}}
                                 Application 2
@@ -721,26 +721,26 @@ cssPrefix: pf-c-tree-view
                             <i class="fas fa-bars" aria-hidden="true"></i>
                         {{/tree-view-action}}
                     {{/tree-view-link-wrapper}}
-                    {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
                                     Settings
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable pf-m-expanded"}}
+                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                            {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
                                     Loader
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
-                            {{#> tree-view-list tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item}}
+                            {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
+                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
                                     {{#> tree-view-link-wrapper}}
-                                        {{#> tree-view-link  tree-view-link--modifier="pf-m-expandable"}}
+                                        {{#> tree-view-link}}
                                             {{> tree-view-link-toggle}}
                                             {{#> tree-view-link-text}}
                                                 Loading app 1
@@ -771,25 +771,25 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Cost management
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
-            {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+            {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Sources
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item}}
+        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
             {{#> tree-view-link-wrapper}}
-                {{#> tree-view-link tree-view-link--modifier="pf-m-expandable"}}
+                {{#> tree-view-link}}
                     {{> tree-view-link-toggle}}
                     {{#> tree-view-link-text}}
                         This is a really really really long folder name that overflows from the width of the container.
@@ -809,8 +809,16 @@ cssPrefix: pf-c-tree-view
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
-| `role="grid"` | `.pf-c-tree-view__list` | Identifies the `<ul>` as a tree widget. **Place on the first <ul> only** |
-| `role="group"` | `.pf-c-tree-view__list` | Identifies the `<ul>` element as a container of treeitem elements that form a branch of the tree. **Place on all ul's except the first ul** |
+| -- | -- | -- |
+| `role="tree"` | `.pf-c-tree-view__list` | Identifies the `ul` as a tree widget. **Place on the first ul only** |
+| `role="group"` | `.pf-c-tree-view__list` | Identifies the `ul` element as a container of treeitem elements that form a branch of the tree. **Place on all ul's except the first ul** |
+| `role="treeitem"`| `.pf-c-tree-view__link` | Identifies the link as a tree item. **Note:** The role is set on the element that is interactive and focusable. |
+| `role="none"` | `.pf-c-tree-view__list-item` | Hides the implicit listitem role of the li element from assistive technologies. |
+| `aria-expanded="false"` | `.pf-c-tree-view__list-item.pf-m-expandable` | Indicates the parent node is closed, i.e., the descendant elements are not visible. |
+| `aria-expanded="true"` | `.pf-c-tree-view__list-item.pf-m-expandable.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
+| `tabindex="-1"` | `.pf-c-tree-view__link` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
+| `tabindex="0"` | `.pf-c-tree-view__link` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
+
 
 ### Usage
 | Class | Applied | Outcome |
@@ -820,8 +828,13 @@ cssPrefix: pf-c-tree-view
 | `.pf-c-tree-view__list-item` | `<li>` | Initiates a tree view list item. **Required** |
 | `.pf-c-tree-view__link` | `<button>`, `<a>` | Initiates a tree view link. **Required** |
 | `.pf-c-tree-view__toggle` | `<span>` | Initiates a tree view toggle. |
-| `.pf-c-tree-view__text | `<span>` | Initiates tree view text. |
-| `.pf-c-tree-view__icon | `<span>` | Initiates a tree view icon. |
+| `.pf-c-tree-view__text` | `<span>` | Initiates tree view text. |
+| `.pf-c-tree-view__icon` | `<span>` | Initiates a tree view icon. |
 | `.pf-c-tree-view__link-wrapper` | `<div>` | Initiates a tree view link wrapper. **Required when using .pf-c-tree-view__action** |
 | `.pf-c-tree-view__action` | `<button>` | Initiates a tree view action. |
 | `.pf-c-tree-view__search` | `<div>` | Initiates a tree view search wrapper. |
+| `.pf-m-first` | `.pf-c-tree-view__link` | Modifies the tree view link to be the first link item. |
+| `.pf-m-nested-level-1` | `.pf-c-tree-view__list` | Modifies the tree view list to be the first nested level. |
+| `.pf-m-nested-level-2` | `.pf-c-tree-view__list` | Modifies the tree view list to be the second nested level. |
+| `.pf-m-nested-level-3` | `.pf-c-tree-view__list` | Modifies the tree view list to be the third nested level. |
+| `.pf-m-current` | `.pf-c-tree-view__link` | Modifies the tree view link to be current. |

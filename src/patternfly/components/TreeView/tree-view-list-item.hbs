@@ -1,4 +1,6 @@
-<li class="pf-c-tree-view__list-item{{#if tree-view-list-item--modifier}} {{tree-view-list-item--modifier}}{{/if}}"
+<li class="pf-c-tree-view__list-item{{#if tree-view-list-item--expandable}} pf-m-expandable{{/if}}{{#if tree-view-list-item--expanded}} pf-m-expanded{{/if}}{{#if tree-view-list-item--modifier}} {{tree-view-list-item--modifier}}{{/if}}"
+  role="none"
+  aria-expanded="{{#if tree-view-list-item--expanded}}true{{else}}false{{/if}}"
   {{#if tree-view-list-item--attribute}}
     {{{tree-view-list-item--attribute}}}
   {{/if}}>
