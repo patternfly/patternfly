@@ -8,7 +8,7 @@ module.exports = plop => {
         type: 'add',
         force: true,
         data: { ...icon },
-        path: resolve(__dirname, `${icon.group}/${icon.id}}.svg`),
+        path: resolve(__dirname, `${icon.group}/${icon.id}.svg`),
         templateFile: resolve(__dirname, 'templates/svgFile.hbs')
       }))
     ]
