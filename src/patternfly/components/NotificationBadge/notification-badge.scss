@@ -23,11 +23,11 @@
   --pf-c-notification-badge--m-read--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-notification-badge--m-read--after--BackgroundColor: transparent;
 
-  // Badge count
+  // Unread
   --pf-c-notification-badge--m-unread--after--BorderColor: transparent; // remove at breaking change
   --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--active-color--100);
 
-  // Badge count
+  // Attention
   --pf-c-notification-badge--m-attention--after--BorderColor: transparent; // remove at breaking change
   --pf-c-notification-badge--m-attention--after--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-notification-badge__count--MarginLeft: var(--pf-global--spacer--xs);
