@@ -260,6 +260,10 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   &.pf-m-selected {
     .pf-c-button {
+      > :not(.pf-c-notification-badge) {
+        position: relative;
+      }
+
       &::before {
         position: absolute;
         top: 0;

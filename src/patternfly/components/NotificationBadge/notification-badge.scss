@@ -1,6 +1,4 @@
 .pf-c-notification-badge {
-  --pf-c-notification-badge--Color: var(--pf-global--Color--light-100);
-
   // update all --after variables to --before at breaking change
   // ::after border treatment
   --pf-c-notification-badge--after--BorderColor: var(--pf-global--BackgroundColor--dark-200);
@@ -35,16 +33,15 @@
   --pf-c-notification-badge__count--MarginLeft: var(--pf-global--spacer--xs);
 
   position: static;
-  color: var(--pf-c-notification-badge--Color);
 
   &::before { // update all --after vars to --before at breaking change
     position: absolute;
-    top: var(--pf-c-notification-badge--after--Top);
-    right: var(--pf-c-notification-badge--after--Right);
+    top: var(--pf-c-notification-badge--after--Top); // replace this var with 0 at breaking change
+    right: var(--pf-c-notification-badge--after--Right); // replace this var with 0 at breaking change
     bottom: 0;
     left: 0;
-    width: var(--pf-c-notification-badge--after--Width);
-    height: var(--pf-c-notification-badge--after--Height);
+    width: var(--pf-c-notification-badge--after--Width); // remove at breaking change
+    height: var(--pf-c-notification-badge--after--Height); // remove at breaking change
     content: "";
     background-color: var(--pf-c-notification-badge--after--BackgroundColor);
     border: var(--pf-c-notification-badge--after--BorderWidth) solid var(--pf-c-notification-badge--after--BorderColor);
