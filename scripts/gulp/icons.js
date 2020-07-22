@@ -24,7 +24,8 @@ function pfIconFont() {
       iconfont({
         fontName: pficonFontName,
         formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
-        timestamp: Math.round(Date.now() / 1000)
+        timestamp: Math.round(Date.now() / 1000),
+        centerHorizontally: true
       })
     )
     .pipe(dest('./src/patternfly/assets/pficon/'));
