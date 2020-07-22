@@ -1,13 +1,97 @@
 .pf-c-skeleton {
+  // Padding modifier
+  --pf-c-skeleton--Padding: var(--pf-global--spacer--lg);
+
+  // Element
   --pf-c-skeleton__element--BackgroundColor: var(--pf-global--palette--black-150);
+  --pf-c-skeleton__element--Height: var(--pf-global--spacer--lg);
+  --pf-c-skeleton__element--BorderRadius: #{pf-size-prem(4px)}; // add variable ?
+  --pf-c-skeleton__element--after--ZIndex: #{pf-size-prem(1px)}; // add variable ?
+  --pf-c-skeleton__element--after--LinearGradientAngle: 90deg;
+  --pf-c-skeleton__element--after--LinearGradientColorStop1: transparent;
+  --pf-c-skeleton__element--after--LinearGradientColorStop2: #ededed;
+  --pf-c-skeleton__element--after--LinearGradientColorStop3: transparent;
+  --pf-c-skeleton--element--after--TranslateX: -100%;
+
+  &.pf-m-padding {
+    padding: var(--pf-c-skeleton--Padding);
+  }
+}
+
+.pf-c-skeleton__container {
+  display: grid;
+
+  &.pf-m-justify-items-center {
+    justify-items: center;
+  }
+
+  &.pf-m-spacer-xs {
+    grid-gap: 4px;
+  }
+
+  &.pf-m-spacer-sm {
+    grid-gap: 8px;
+  }
+
+  &.pf-m-spacer-md {
+    grid-gap: 16px;
+  }
+
+  &.pf-m-spacer-lg {
+    grid-gap: 32px;
+  }
+
+  &.pf-m-spacer-xl {
+    grid-gap: 48px;
+  }
+
+  &.pf-m-padding-top-xs {
+    padding-top: 4px;
+  }
+
+  &.pf-m-padding-top-sm {
+    padding-top: 8px;
+  }
+
+  &.pf-m-padding-top-md {
+    padding-top: 16px;
+  }
+
+  &.pf-m-padding-top-lg {
+    padding-top: 24px;
+  }
+
+  &.pf-m-padding-top-xl {
+    padding-top: 32px;
+  }
+
+  &.pf-m-padding-bottom-xs {
+    padding-bottom: 4px;
+  }
+
+  &.pf-m-padding-bottom-sm {
+    padding-bottom: 8px;
+  }
+
+  &.pf-m-padding-bottom-md {
+    padding-bottom: 16px;
+  }
+
+  &.pf-m-padding-bottom-lg {
+    padding-bottom: 24px;
+  }
+
+  &.pf-m-padding-bottom-xl {
+    padding-bottom: 32px;
+  }
 }
 
 .pf-c-skeleton__element {
   position: relative;
-  height: 1.5em;
+  height: var(--pf-c-skeleton__element--Height);
   overflow: hidden;
   background-color: var(--pf-c-skeleton__element--BackgroundColor);
-  border-radius: 4px;
+  border-radius: var(--pf-c-skeleton__element--BorderRadius);
 
   &::after {
     position: absolute;
@@ -15,13 +99,13 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    z-index: var(--pf-c-skeleton__element--after--ZIndex);
     display: block;
     width: 100%;
     height: 100%;
     content: "";
-    background: linear-gradient(90deg, transparent, #ededed, transparent);
-    transform: translateX(-100%);
+    background: linear-gradient(var(--pf-c-skeleton__element--after--LinearGradientAngle), var(--pf-c-skeleton__element--after--LinearGradientColorStop1), var(--pf-c-skeleton__element--after--LinearGradientColorStop2), var(--pf-c-skeleton__element--after--LinearGradientColorStop3));
+    transform: translateX(var(--pf-c-skeleton--element--after--TranslateX));
     animation: 2s loading linear .5s infinite;
   }
 
@@ -42,38 +126,76 @@
   }
 
   &.pf-m-height-xs {
-    height: .5em;
+    height: 4px;
   }
 
   &.pf-m-height-sm {
-    height: 1em;
+    height: 8px;
   }
 
   &.pf-m-height-md {
-    height: 1.5em;
+    height: 16px;
   }
 
   &.pf-m-height-lg {
-    height: 2em;
+    height: 24px;
   }
 
   &.pf-m-height-xl {
-    height: 2.5em;
+    height: 32px;
   }
 
+  &.pf-m-height-2xl {
+    height: 48px;
+  }
+
+  // Shapes
   &.pf-m-circle-sm {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
   }
 
   &.pf-m-circle-md {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+  }
+
+  &.pf-m-circle-lg {
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+  }
+
+  &.pf-m-square-sm {
     width: 100px;
     height: 100px;
   }
 
-  &.pf-m-circle-lg {
-    width: 150px;
-    height: 150px;
+  &.pf-m-square-md {
+    width: 200px;
+    height: 200px;
+  }
+
+  &.pf-m-square-lg {
+    width: 300px;
+    height: 300px;
+  }
+
+  &.pf-m-rectangle-sm {
+    width: 100%;
+    height: 100px;
+  }
+
+  &.pf-m-rectangle-md {
+    width: 100%;
+    height: 200px;
+  }
+
+  &.pf-m-rectangle-lg {
+    width: 100%;
+    height: 300px;
   }
 }
 
