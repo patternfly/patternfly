@@ -16,7 +16,7 @@ function pfIconFont() {
         fontName: pficonFontName,
         path: 'scss',
         targetPath: 'pficon.scss',
-        fontPath: './',
+        fontPath: '#{$pf-global--fonticon-path}/',
         cssClass: 'pf-icon'
       })
     )

@@ -1,2 +1,13 @@
 // PFIcons
 @import "../assets/pficon/pficon";
+
+[class*="pf-icon"] {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+
+  &::before {
+    vertical-align: bottom;
+  }
+}
