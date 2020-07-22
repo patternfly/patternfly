@@ -1,4 +1,4 @@
-.ws-example .ws-core-c-notificationbadge,
-.ws-lite-example.ws-core-c-notificationbadge {
+#ws-core-c-notificationbadge-basic-dark,
+#ws-core-c-notificationbadge-with-count-dark {
   background-color: var(--pf-global--BackgroundColor--dark-100);
 }

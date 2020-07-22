@@ -11,6 +11,50 @@ import './NotificationBadge.css'
 ### Basic
 
 ```hbs
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-read"}}
+    <i class="fas fa-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
+    <i class="fas fa-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention notifications"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-attention"}}
+    <i class="fas fa-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+```
+
+### With count
+
+```hbs
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-read" notification-badge--count="24"}}
+    <i class="fas fa-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-unread" notification-badge--count="25"}}
+    <i class="fas fa-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention notifications"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-attention" notification-badge--count="26"}}
+    <i class="fas fa-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+```
+
+### Basic dark
+
+```hbs
 <div class="pf-t-dark">
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
     {{#> notification-badge notification-badge--modifier="pf-m-read"}}
@@ -32,7 +76,7 @@ import './NotificationBadge.css'
 </div>
 ```
 
-### With count
+### With count dark
 
 ```hbs
 <div class="pf-t-dark">
