@@ -96,8 +96,8 @@
   --pf-c-notification-drawer__group--m-expanded__group-toggle-icon--Rotate: 90deg;
 
   display: flex;
+  flex: 1 1;
   flex-direction: column;
-  height: 100%;
   background-color: var(--pf-c-notification-drawer--BackgroundColor);
 }
 
