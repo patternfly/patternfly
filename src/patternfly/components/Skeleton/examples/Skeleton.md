@@ -310,7 +310,8 @@ Large rectangle
 | `.pf-c-skeleton__element` | `<div>` | Initiates the skeleton element. **Required** |
 | `.pf-c-skeleton__container` | `<div>` | Initiates the skeleton container. |
 | `.pf-m-padding` | `.pf-c-skeleton` | Modifies the skeleton to have padding. |
-| `.pf-m-spacer-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__container` | Modifies the spacing between skeleton elements in the container. |
+| `.pf-m-spacer-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__container` | Modifies the spacing between skeleton elements in the container. | `.pf-c-skeleton__container` | Modifies the skeleton container to center the elements inside of it. 
+| `pf-m-justify-items-center` | `
 | `.pf-m-padding-top-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__container` | Modifies the padding top on the skeleton container. |
 | `.pf-m-padding-bottom-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__container` | Modifies the padding bottom on the skeleton container. |
 | `.pf-m-height-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__element` | Modifies the height of the skeleton element. |
