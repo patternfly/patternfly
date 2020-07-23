@@ -168,10 +168,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   &.pf-m-no-background {
     --pf-c-drawer__content--BackgroundColor: transparent;
   }
-
-  &.pf-m-overflow-hidden {
-    overflow: hidden;
-  }
 }
 
 // Panel head
@@ -197,11 +193,8 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Modified content children
 .pf-c-drawer__body {
+  min-height: 0;
   padding: var(--pf-c-drawer--child--PaddingTop) var(--pf-c-drawer--child--PaddingRight) var(--pf-c-drawer--child--PaddingBottom) var(--pf-c-drawer--child--PaddingLeft);
-
-  &:only-child {
-    height: 100%;
-  }
 
   // No padding
   &.pf-m-no-padding {
@@ -227,11 +220,10 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   &:not(.pf-m-no-padding) + * {
     --pf-c-drawer--child--PaddingTop: 0;
   }
-}
 
-// Body
-.pf-c-drawer__body:last-of-type {
-  flex: 1 0 auto;
+  &:last-child {
+    flex: 1 1 auto;
+  }
 }
 
 // Expanded
