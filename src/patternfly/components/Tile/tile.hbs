@@ -1,5 +1,9 @@
-<div class="pf-c-tile{{#if tile--modifier}} {{tile--modifier}}{{/if}}"
-  tabindex="0"
+<div class="pf-c-tile{{#if tile--IsDisabled}} pf-m-disabled{{/if}}{{#if tile--modifier}} {{tile--modifier}}{{/if}}"
+  {{#if tile--IsDisabled}}
+    tabindex="-1"
+  {{else}}
+    tabindex="0"
+  {{/if}}
   {{#if tile--attribute}}
     {{{tile--attribute}}}
   {{/if}}>

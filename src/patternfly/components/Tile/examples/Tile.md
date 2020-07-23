@@ -25,7 +25,7 @@ import './Tile.css'
   {{/tile-header}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-disabled"}}
+{{#> tile tile--IsDisabled="true"}}
   {{#> tile-header}}
     {{#> tile-title}}
       Disabled
@@ -58,7 +58,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-disabled"}}
+{{#> tile tile--IsDisabled="true"}}
   {{#> tile-header}}
     {{#> tile-title}}
       Disabled
@@ -100,7 +100,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-disabled"}}
+{{#> tile tile--IsDisabled="true"}}
   {{#> tile-header}}
     {{#> tile-icon}}
       <i class="fas fa-plus" aria-hidden="true"></i>
@@ -144,7 +144,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-disabled"}}
+{{#> tile tile--IsDisabled="true"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       <i class="fas fa-bell" aria-hidden="true"></i>
@@ -189,7 +189,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-disabled"}}
+{{#> tile tile--IsDisabled="true"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       {{> tile-img-pf}}
@@ -265,7 +265,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-display-lg pf-m-disabled"}}
+{{#> tile tile--modifier="pf-m-display-lg" tile--IsDisabled="true"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       <i class="fas fa-bell" aria-hidden="true"></i>
@@ -310,7 +310,7 @@ import './Tile.css'
   {{/tile-body}}
 {{/tile}}
 
-{{#> tile tile--modifier="pf-m-display-lg pf-m-disabled"}}
+{{#> tile tile--modifier="pf-m-display-lg" tile--IsDisabled="true"}}
   {{#> tile-header tile-header--modifier="pf-m-stacked"}}
     {{#> tile-icon}}
       {{> tile-img-pf}}
@@ -408,6 +408,7 @@ import './Tile.css'
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `tabindex="0"` | `.pf-c-tile` | Inserts the tile into the tab order of the page so that it is focusable. **Required** |
+| `tabindex="-1"` | `pf-c-tile` | Removes the tile from keyboard focus when it is disabled. |
 
 ### Usage
 | Class | Applied to | Outcome |
