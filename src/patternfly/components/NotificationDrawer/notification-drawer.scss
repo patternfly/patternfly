@@ -70,7 +70,7 @@
   // Group
   --pf-c-notification-drawer__group--m-expanded--group--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-notification-drawer__group--m-expanded--group--BorderTopColor: var(--pf-global--BorderColor--100);
-  --pf-c-notification-drawer__group--m-expanded--MinHeight: #{pf-size-prem(300px)};
+  --pf-c-notification-drawer__group--m-expanded--MinHeight: 0; // remove at breaking change
 
   // Group toggle
   --pf-c-notification-drawer__group-toggle--PaddingTop: var(--pf-global--spacer--md);
@@ -246,6 +246,8 @@
 
 .pf-c-notification-drawer__group {
   &.pf-m-expanded {
+    min-height: var(--pf-c-notification-drawer__group--m-expanded--MinHeight);
+
     + .pf-c-notification-drawer__group {
       border-top: var(--pf-c-notification-drawer__group--m-expanded--group--BorderTopWidth) solid var(--pf-c-notification-drawer__group--m-expanded--group--BorderTopColor);
     }
