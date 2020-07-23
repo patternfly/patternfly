@@ -243,7 +243,7 @@ Large rectangle
 <br/>
 
 {{#> skeleton skeleton--modifier="pf-m-padding"}}
-  {{#> skeleton-container skeleton-container--modifier="pf-m-justify-items-center pf-m-padding-bottom-md pf-m-padding-bottom-xl"}}
+  {{#> skeleton-container skeleton-container--modifier="pf-m-justify-items-center pf-m-padding-bottom-xl"}}
     {{#> skeleton-element skeleton-element--modifier="pf-m-rectangle-md"}}
     {{/skeleton-element}}
   {{/skeleton-container}}
@@ -309,3 +309,12 @@ Large rectangle
 | `.pf-c-skeleton` | `<div>` | Initiates the skeleton component. **Required** |
 | `.pf-c-skeleton__element` | `<div>` | Initiates the skeleton element. **Required** |
 | `.pf-c-skeleton__container` | `<div>` | Initiates the skeleton container. |
+| `.pf-m-padding` | `.pf-c-skeleton` | Modifies the skeleton to have padding. |
+| `.pf-m-spacer-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__container` | Modifies the spacing between skeleton elements in the container. |
+| `.pf-m-padding-top-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__container` | Modifies the padding top on the skeleton container. |
+| `.pf-m-padding-bottom-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__container` | Modifies the padding bottom on the skeleton container. |
+| `.pf-m-height-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__element` | Modifies the height of the skeleton element. |
+| `.pf-m-width-[20,40,60,80]` | `.pf-c-skeleton__element` | Modifies the width of the skeleton element. The default is 100%. |
+| `.pf-m-circle-[sm,md,lg]` | `.pf-c-skeleton__element` | Modifies the shape of the skeleton element to be a circle. |
+| `.pf-m-square-[sm,md,lg]` | `.pf-c-skeleton__element` | Modifies the shape of the skeleton element to be a square. |
+| `.pf-m-rectangle-[sm,md,lg]` | `.pf-c-skeleton__element` | Modifies the shape of the skeleton element to be a rectangle. |
