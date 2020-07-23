@@ -204,4 +204,4 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-fill` | `.pf-c-tabs` | Modifies the tabs to fill the available space. |
 | `.pf-m-current` | `.pf-c-tabs__item` | Indicates that a tab item is currently selected. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
-| `. pf-m-alt-color-scheme` | `.pf-c-tabs` | Modifies the tabs component tab background colors. |
+| `.pf-m-current-tab-background--light-300` | `.pf-c-tabs` | Modifies the tabs component tab background colors. |
