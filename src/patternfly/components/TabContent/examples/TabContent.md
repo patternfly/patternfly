@@ -1,11 +1,12 @@
 ---
-title: Tab content
+id: Tab content
 section: components
 cssPrefix: pf-c-tab-content
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="tab1-panel"'}}
   Panel 1
 {{/tab-content}}

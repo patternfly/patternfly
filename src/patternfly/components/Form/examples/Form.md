@@ -1,11 +1,12 @@
 ---
-title: Form
+id: Form
 section: components
 cssPrefix: pf-c-form
 ---
 
 ## Examples
-```hbs title=Vertically-aligned-labels
+### Vertically aligned labels
+```hbs
 {{#> form form--id="vertical-align-labels"}}
   {{#> form-group}}
     {{#> form-group-label}}
@@ -21,7 +22,8 @@ cssPrefix: pf-c-form
 {{/form}}
 ```
 
-```hbs title=Horizontally-aligned-labels
+### Horizontally aligned labels
+```hbs
 {{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-1"}}
   {{#> form-group}}
     {{#> form-group-label}}
@@ -75,7 +77,8 @@ cssPrefix: pf-c-form
 {{/form}}
 ```
 
-```hbs title=Help-text
+### Help text
+```hbs
 {{#> form form--id="help-text"}}
   {{#> form-group}}
     {{#> form-group-label}}
@@ -88,6 +91,20 @@ cssPrefix: pf-c-form
       {{/form-control}}
       {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id '-form-name-helper" aria-live="polite"')}}
         This is helper text
+      {{/form-helper-text}}
+    {{/form-group-control}}
+  {{/form-group}}
+  {{#> form-group}}
+    {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-email"') required='true'}}
+        E-mail
+      {{/form-label}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control form-control--modifier="pf-m-warning" controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-form-email" name="' form--id '-form-email" aria-describedby="' form--id '-form-email-helper"')}}
+      {{/form-control}}
+      {{#> form-helper-text  form-helper-text--modifier="pf-m-warning" form-helper-text--attribute=(concat 'id="' form--id '-form-email-helper" aria-live="polite"')}}
+        This is helper text for a warning input
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -135,7 +152,8 @@ cssPrefix: pf-c-form
 {{/form}}
 ```
 
-```hbs title=Action-group
+### Action group
+```hbs
 {{#> form}}
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-actions}}
@@ -178,8 +196,9 @@ cssPrefix: pf-c-form
 | `.pf-c-form__helper-text-icon` | `<span>` |  Initiates a form helper text icon. |
 | `.pf-m-horizontal` | `.pf-c-form` | Modifies form for a horizontal layout. |
 | `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |
-| `.pf-m-error` | `.pf-c-form__helper-text`| Modifies text color of helper text for error state. |
 | `.pf-m-success` | `.pf-c-form__helper-text` | Modifies text color of helper text for success state. |
+| `.pf-m-warning` | `.pf-c-form__helper-text` | Modifies text color of helper text for warning state. |
+| `.pf-m-error` | `.pf-c-form__helper-text`| Modifies text color of helper text for error state. |
 | `.pf-m-inactive` | `.pf-c-form__helper-text`| Modifies display of helper text to none. |
 | `.pf-m-disabled` | `.pf-c-form__label` | Modifies form label to show disabled state. |
 | `.pf-m-no-padding-top` | `.pf-c-form__group-label` | Removes top padding from the label element for labels adjacent to an element that isn't a form control. |

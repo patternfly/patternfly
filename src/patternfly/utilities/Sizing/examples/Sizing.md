@@ -1,12 +1,13 @@
 ---
-title: Sizing
+id: Sizing
 section: utilities
 ---
 
 import './Sizing.css'
 
 ## Examples
-```hbs title=Width-base-and-percentage-units
+### Width base and percentage units
+```hbs
 {{#> sizing sizing--modifier="pf-u-w-0"}}
   .pf-u-w-0
 {{/sizing}}
@@ -42,7 +43,8 @@ import './Sizing.css'
 | `.pf-u-w-75{-on-[breakpoint]}` | `*` | Sets width: 75% |
 | `.pf-u-w-100{-on-[breakpoint]}` | `*` | Sets width: 100% |
 
-```hbs title=Width-viewport-units isFullscreen
+### Width viewport units
+```hbs isFullscreen
 {{#> sizing sizing--modifier="pf-u-w-25vw"}}
   .pf-u-w-25vw
 {{/sizing}}
@@ -72,7 +74,8 @@ import './Sizing.css'
 | `.pf-u-w-75vw{-on-[breakpoint]}` | `*` | Sets width: 75vw |
 | `.pf-u-w-100vw{-on-[breakpoint]}` | `*` | Sets width: 100vw |
 
-```hbs title=Height-base-and-percentage-units
+### Height base and percentage units
+```hbs
 {{#> sizing sizing--modifier="pf-u-h-0 pf-u-display-inline-block"}}
   .pf-u-h-0
 {{/sizing}}
@@ -108,7 +111,8 @@ import './Sizing.css'
 | `.pf-u-h-75{-on-[breakpoint]}`| `*` | Sets height: 75% |
 | `.pf-u-h-100{-on-[breakpoint]}` | `*` | Sets height: 100% |
 
-```hbs title=Height-viewport-units isFullscreen
+### Height viewport units
+```hbs isFullscreen
 {{#> sizing sizing--modifier="pf-u-h-25vh pf-u-display-inline-block"}}
   .pf-u-h-25vh
 {{/sizing}}

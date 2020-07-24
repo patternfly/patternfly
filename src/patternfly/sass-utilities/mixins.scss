@@ -118,6 +118,8 @@
 
 @mixin pf-u-screen-reader {
   position: fixed;
+  top: 0;
+  left: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -199,5 +201,20 @@
 @mixin pf-emit-properties($map) {
   @each $prop, $value in $map {
     #{$value}: #{$prop};
+  }
+}
+
+// Animate tab focus removal
+@mixin pf-animate-remove-tab-focus($element, $delay: $pf-global--TransitionDuration) {
+  @keyframes pf-remove-tab-focus {
+    to {
+      visibility: hidden;
+    }
+  }
+
+  #{$element}[hidden] {
+    animation-name: pf-remove-tab-focus;
+    animation-delay: #{$delay};
+    animation-fill-mode: forwards;
   }
 }

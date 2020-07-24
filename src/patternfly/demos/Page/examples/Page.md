@@ -1,18 +1,22 @@
 ---
-title: Page
+id: Page
 section: demos
+wrapperTag: div
 ---
 
 ## Demos
-```hbs title=Default-nav isFullscreen
+### Default nav
+```hbs isFullscreen
 {{> page-demo-default page-demo-default--id="page-default-nav-example"}}
 ```
 
-```hbs title=Expandable-nav isFullscreen
+### Expandable nav
+```hbs isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example"}}{{/page-demo-expandable-nav}}
 ```
 
-```hbs title=Horizontal-nav isFullscreen
+### Horizontal nav
+```hbs isFullscreen
 {{#> page page--id="page-layout-horizontal-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -68,7 +72,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Tertiary-nav isFullscreen
+### Tertiary nav
+```hbs isFullscreen
 {{#> page page--id="page-layout-tertiary-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -214,7 +219,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Grouped-nav isFullscreen
+### Grouped nav
+```hbs isFullscreen
 {{#> page page--id="page-layout-grouped-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -309,7 +315,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Light-theme-sidebar-and-nav isFullscreen
+### Light theme sidebar and nav
+```hbs isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"  page-sidebar--modifier="pf-m-light" nav--modifier="pf-m-light"}}{{/page-demo-expandable-nav}}
 ```
 

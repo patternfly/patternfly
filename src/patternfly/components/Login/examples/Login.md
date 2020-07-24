@@ -1,11 +1,13 @@
 ---
-title: Login
+id: Login page
 section: components
 cssPrefix: pf-c-login
+wrapperTag: div
 ---
 
 ## Examples
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> background-image}}{{/background-image}}
 {{#> login}}
   {{#> login-container}}
@@ -117,7 +119,8 @@ cssPrefix: pf-c-login
 {{/login}}
 ```
 
-```hbs title=Invalid isFullscreen
+### Invalid
+```hbs isFullscreen
 {{#> background-image}}{{/background-image}}
 {{#> login}}
   {{#> login-container}}

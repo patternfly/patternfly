@@ -394,8 +394,10 @@
   position: relative;
   display: inline-block;
   color: var(--pf-c-wizard__nav-link--Color);
+  text-align: left; // needed for when the item is a button
   text-decoration: var(--pf-c-wizard__nav-link--TextDecoration);
   word-break: break-word;
+  border: 0;
 
   // Common step number styles
   @at-root .pf-c-wizard__toggle-num,
@@ -443,6 +445,7 @@
     }
   }
 
+  &:disabled,
   &.pf-m-disabled {
     --pf-c-wizard__nav-link--Color: var(--pf-c-wizard__nav-link--m-disabled--Color);
 

@@ -1,5 +1,5 @@
 ---
-title: Contribution guidelines
+id: Contribution guidelines
 ---
 ## Component, layout, demo creation
 ### Naming blocks

@@ -1,11 +1,12 @@
 ---
-title: Notification badge
+id: Notification badge
 section: components
 cssPrefix: pf-c-notification-badge
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications"'}}
     {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
       <i class="fas fa-bell" aria-hidden="true"></i>

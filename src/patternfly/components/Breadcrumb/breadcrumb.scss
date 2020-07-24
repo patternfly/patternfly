@@ -84,3 +84,10 @@
     font-weight: var(--pf-global--FontWeight--semi-bold);
   }
 }
+
+// Hide divider of first child - required for react since dividers are included in each item
+// Consider revisiting this in a breaking change release
+.pf-c-breadcrumb__list > :first-child .pf-c-breadcrumb__item-divider {
+  display: none;
+  visibility: hidden;
+}

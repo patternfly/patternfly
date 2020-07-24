@@ -1,4 +1,5 @@
 const path = require('path');
+const codeTitleTransformer = require('gatsby-theme-patternfly-org/helpers/codeTitleTransformer');
 
 module.exports = {
   siteMetadata: {
@@ -11,7 +12,7 @@ module.exports = {
       resolve: `gatsby-theme-patternfly-org`,
       options: {
         context: 'core', // For global items that need sideNav
-        hiddenPages: ['Training'], // By title
+        showFooter: false,
         sideNav: {
           core: [
             { section: 'overview' },
@@ -90,19 +91,12 @@ module.exports = {
         path: `${path.resolve(__dirname)}/UPGRADE-GUIDE.md`
       }
     },
-    // Source training page
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'core', // This goes in URLs and determines sideNav items
-        path: `${path.resolve(__dirname)}/src/site/training.md`
-      }
-    },
     // Pipe MDX files through this plugin that spits out React components
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: ['.md']
+        extensions: ['.md'],
+        rehypePlugins: [codeTitleTransformer]
       }
     }
   ]

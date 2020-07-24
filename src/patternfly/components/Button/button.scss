@@ -84,6 +84,7 @@
   --pf-c-button--m-link--active--BackgroundColor: transparent;
   --pf-c-button--m-link--active--Color: var(--pf-global--link--Color--hover);
   --pf-c-button--m-link--disabled--BackgroundColor: transparent;
+  --pf-c-button--m-link--m-inline--FontSize: inherit;
   --pf-c-button--m-link--m-inline--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
   --pf-c-button--m-link--m-inline--hover--Color: var(--pf-global--link--Color--hover);
 
@@ -126,6 +127,14 @@
   --pf-c-button--m-control--m-expanded--after--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-button--m-control--m-expanded--after--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-button--m-small--FontSize: var(--pf-global--FontSize--sm);
+
+  // CTA Button
+  --pf-c-button--m-display-lg--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-button--m-display-lg--PaddingRight: var(--pf-global--spacer--xl);
+  --pf-c-button--m-display-lg--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-button--m-display-lg--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-button--m-display-lg--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-button--m-link--m-display-lg--FontSize: var(--pf-global--FontSize--lg);
 
   // Styles for an icon in button
   --pf-c-button__icon--m-start--MarginRight: var(--pf-global--spacer--xs);
@@ -177,6 +186,19 @@
 
   &.pf-m-small {
     --pf-c-button--FontSize: var(--pf-c-button--m-small--FontSize);
+  }
+
+  &.pf-m-primary,
+  &.pf-m-secondary,
+  &.pf-m-tertiary,
+  &.pf-m-link {
+    &.pf-m-display-lg {
+      --pf-c-button--PaddingTop: var(--pf-c-button--m-display-lg--PaddingTop);
+      --pf-c-button--PaddingRight: var(--pf-c-button--m-display-lg--PaddingRight);
+      --pf-c-button--PaddingBottom: var(--pf-c-button--m-display-lg--PaddingBottom);
+      --pf-c-button--PaddingLeft: var(--pf-c-button--m-display-lg--PaddingLeft);
+      --pf-c-button--FontWeight: var(--pf-c-button--m-display-lg--FontWeight);
+    }
   }
 
   // Primary buttons
@@ -303,6 +325,8 @@
     }
 
     &.pf-m-inline {
+      --pf-c-button--FontSize: var(--pf-c-button--m-link--m-inline--FontSize);
+
       display: inline;
       padding: 0;
 
@@ -311,6 +335,10 @@
 
         text-decoration: var(--pf-c-button--m-link--m-inline--hover--TextDecoration);
       }
+    }
+
+    &.pf-m-display-lg {
+      --pf-c-button--FontSize: var(--pf-c-button--m-link--m-display-lg--FontSize);
     }
   }
 

@@ -1,11 +1,12 @@
 ---
-title: Badge
+id: Badge
 section: components
 cssPrefix: pf-c-badge
 ---
 
 ## Examples
-```hbs title=Read
+### Read
+```hbs
 {{#> badge badge--modifier="pf-m-read"}}
   7
 {{/badge}}
@@ -20,7 +21,8 @@ cssPrefix: pf-c-badge
 {{/badge}}
 ```
 
-```hbs title=Unread
+### Unread
+```hbs
 {{#> badge badge--modifier="pf-m-unread"}}
   7
 {{/badge}}

@@ -1,11 +1,12 @@
 ---
-title: Skip to content
+id: Skip to content
 section: components
 cssPrefix: pf-c-skip-to-content
 ---
 
 ## Examples
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> skip-to-content skip-to-content--attribute='href="#main-content"'}}
   Skip to content
 {{/skip-to-content}}

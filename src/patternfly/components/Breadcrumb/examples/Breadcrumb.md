@@ -1,14 +1,16 @@
 ---
-title: Breadcrumb
+id: Breadcrumb
 section: components
 cssPrefix: pf-c-breadcrumb
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> breadcrumb}}
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section home
       {{/breadcrumb-link}}
@@ -35,10 +37,12 @@ cssPrefix: pf-c-breadcrumb
 {{/breadcrumb}}
 ```
 
-```hbs title=Without-home-link
+### Without home link
+```hbs
 {{#> breadcrumb}}
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
         Section home
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
@@ -75,10 +79,12 @@ cssPrefix: pf-c-breadcrumb
 {{/breadcrumb}}
 ```
 
-```hbs title=With-heading
+### With heading
+```hbs
 {{#> breadcrumb}}
   {{#> breadcrumb-list}}
     {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
       {{#> breadcrumb-link}}
         Section home
       {{/breadcrumb-link}}

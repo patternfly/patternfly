@@ -1,5 +1,5 @@
 ---
-title: Accessibility guide
+id: Accessibility guide
 ---
 
 <a href="/a11y-report.html">Current a11y status</a>

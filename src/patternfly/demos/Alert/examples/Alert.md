@@ -1,10 +1,11 @@
 ---
-title: Alert
+id: Alert
 section: demos
 ---
 
 ## Demos
-```hbs title=Toast isFullscreen
+### Toast
+```hbs isFullscreen
 {{> page-demo-default page-demo-default--id="alert-toast-example"}}
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
   {{#> alert-item}}

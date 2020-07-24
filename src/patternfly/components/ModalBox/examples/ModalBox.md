@@ -1,11 +1,12 @@
 ---
-title: Modal box
+id: Modal
 section: components
 cssPrefix: pf-c-modal-box
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
@@ -24,7 +25,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Small
+### Small
+```hbs
 {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-sm-title" aria-describedby="modal-sm-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -46,7 +48,31 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Large
+### Medium
+```hbs
+{{#> modal-box modal-box--modifier="pf-m-md" modal-box--attribute='aria-labelledby="modal-md-title" aria-describedby="modal-md-description"'}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
+    <i class="fas fa-times" aria-hidden="true"></i>
+  {{/button}}
+  {{#> modal-box-header}}
+    {{#> modal-box-title modal-box-title--attribute='id="modal-md-title"'}}
+      Modal title
+    {{/modal-box-title}}
+  {{/modal-box-header}}
+  {{#> modal-box-body modal-box-body--attribute='id="modal-md-description"'}}
+    Static text describing modal purpose. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
+  {{/modal-box-body}}
+  {{#> modal-box-footer}}
+    Modal footer
+  {{/modal-box-footer}}
+{{/modal-box}}
+```
+
+### Large
+```hbs
 {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -68,7 +94,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Without-title
+### Without title
+```hbs
 {{#> modal-box modal-box--attribute='aria-label="Example of a modal without a title" aria-describedby="modal-no-title-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -82,7 +109,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=With-description
+### With description
+```hbs
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-with-description-title" aria-describedby="modal-with-description-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
@@ -104,7 +132,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Custom-title
+### Custom title
+```hbs
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-custom-title" aria-describedby="modal-custom-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
@@ -121,7 +150,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Modal-box-as-generic-container
+### Modal box as generic container
+```hbs
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-generic-container-description"'}}
   <p id="modal-generic-container-description">The modal box children elements can be removed, and the modal serves as a generic modal container. One use case of this is when creating a wizard in a modal.</p>
 {{/modal-box}}
@@ -154,4 +184,5 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-c-modal-box__body` | `<div>` | Initiates a modal box body. |
 | `.pf-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
 | `.pf-m-sm` | `.pf-c-modal-box` | Modifies for a small modal box width. |
+| `.pf-m-md` | `.pf-c-modal-box` | Modifies for a medium modal box width. |
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |

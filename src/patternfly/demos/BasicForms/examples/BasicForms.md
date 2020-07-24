@@ -1,10 +1,11 @@
 ---
-title: Basic forms
+id: Basic forms
 section: demos
 ---
 
 ## Demos
-```hbs title=Basic
+### Basic
+```hbs
 {{#> form}}
   {{#> form-group}}
     {{#> form-group-label}}
@@ -71,7 +72,8 @@ section: demos
 {{/form}}
 ```
 
-```hbs title=Horizontal
+### Horizontal
+```hbs
 {{#> form form--modifier="pf-m-horizontal"}}
   {{#> form-group}}
     {{#> form-group-label}}

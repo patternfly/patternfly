@@ -1,10 +1,12 @@
 ---
-title: Table
+id: Table
 section: demos
+wrapperTag: div
 ---
 
 ## Demos
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> page page--id="page-layout-table-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -32,7 +34,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Sortable isFullscreen
+### Sortable
+```hbs isFullscreen
 {{#> page page--id="page-layout-table-sortable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -60,7 +63,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Expandable isFullscreen
+### Expandable
+```hbs isFullscreen
 {{#> page page--id="page-layout-table-expandable"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -88,7 +92,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Compact isFullscreen
+### Compact
+```hbs isFullscreen
 {{#> page page--id="page-layout-table-compact"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -116,7 +121,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Compound-expansion isFullscreen
+### Compound expansion
+```hbs isFullscreen
 {{#> page page--id="page-layout-table-compound-expansion"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -144,7 +150,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Loading-state-demo isFullscreen
+### Loading state demo
+```hbs isFullscreen
 {{#> page page--id="table-loading-demo"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -171,7 +178,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Empty-state isFullscreen
+### Empty state
+```hbs isFullscreen
 {{#> page page--id="table-empty-state-demo"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -198,7 +206,8 @@ section: demos
 {{/page}}
 ```
 
-```hbs title=Static-bottom-pagination isFullscreen
+### Static bottom pagination
+```hbs isFullscreen
 {{#> page page--id="static-bottom-pagination"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -227,7 +236,8 @@ section: demos
 ```
 
 
-```hbs title=Column-management-modal isFullscreen
+### Column management modal
+```hbs isFullscreen
 {{#> page page--id="page-layout-table-simple-compact-pagination-modal-open"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -345,7 +355,8 @@ section: demos
 {{/backdrop}}
 ```
 
-```hbs title=Sticky-header isFullscreen
+### Sticky header
+```hbs isFullscreen
 {{#> page page--id="page-layout-table-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

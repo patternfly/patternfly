@@ -1,5 +1,5 @@
 ---
-title: Upgrading to PatternFly 4
+id: Upgrading to PatternFly 4
 ---
 
 Use the following steps to upgrade from PatternFly 3 to PatternFly 4.

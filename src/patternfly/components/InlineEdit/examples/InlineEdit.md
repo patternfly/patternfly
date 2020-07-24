@@ -1,5 +1,5 @@
 ---
-title: Inline edit
+id: Inline edit
 section: components
 beta: true
 cssPrefix: pf-c-inline-edit
@@ -23,7 +23,8 @@ import './InlineEdit.css'
 
 Inline edit **toggle** can be placed anywhere within `.pf-c-inline-edit`. It initiates the editability of elements. When an element becomes editable, **toggle** is hidden.
 
-```hbs title=Inline-edit-toggle
+### Inline edit toggle
+```hbs
 {{#> inline-edit inline-edit--id="inline-edit-toggle-example"}}
   {{#> inline-edit-toggle}}
     {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
@@ -35,7 +36,8 @@ Inline edit **toggle** can be placed anywhere within `.pf-c-inline-edit`. It ini
 
 Inline edit **value** can be placed anywhere within `.pf-c-inline-edit`. It is visible by default and hidden when inline edit becomes **editable**.
 
-```hbs title=Inline-edit-value
+### Inline edit value
+```hbs
 {{#> inline-edit inline-edit--id="inline-edit-value-example"}}
   {{#> inline-edit-value}}
     Static value
@@ -45,7 +47,8 @@ Inline edit **value** can be placed anywhere within `.pf-c-inline-edit`. It is v
 
 Inline edit **action-group** contains save and cancel actions and is only visible when inline edit is **editable**.
 
-```hbs title=Inline-edit-action-group
+### Inline edit action group
+```hbs
 {{#> inline-edit inline-edit--id="inline-edit-action-group-example" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group"}}
     {{> inline-edit-action-save}}
@@ -54,7 +57,8 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Inline-edit-action-group-icon-buttons
+### Inline edit action group icon buttons
+```hbs
 {{#> inline-edit inline-edit--id="inline-edit-action-group-icon-buttons-example" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
     {{> inline-edit-action-save inline-edit-action-save--IsIcon="true"}}
@@ -63,7 +67,8 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Single-inline-edit-(default)
+### Single inline edit (default)
+```hbs
 {{#> inline-edit inline-edit--id="single-inline-edit-example" inline-edit--type="form"}}
   {{#> inline-edit-group}}
     {{#> inline-edit-value inline-edit-value--IsLabel="true"}}
@@ -87,7 +92,8 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Single-inline-edit-(active)
+### Single inline edit (active)
+```hbs
 {{#> inline-edit inline-edit--id="single-editable-example" inline-edit--type="form" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group}}
     {{#> inline-edit-value inline-edit-value--IsLabel="true"}}
@@ -111,7 +117,8 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Single-inline-edit-with-label-(default)
+### Single inline edit with label (default)
+```hbs
 {{#> inline-edit inline-edit--type="form" inline-edit--id="single-inline-edit-with-label-example"}}
   {{#> inline-edit-group}}
     {{#> inline-edit-label}}
@@ -138,7 +145,8 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=State-valid
+### State valid
+```hbs
 {{#> inline-edit inline-edit--id="inline-edit-state-valid" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group}}
     {{#> inline-edit-label}}
@@ -165,7 +173,8 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=State-invalid
+### State invalid
+```hbs
 {{#> inline-edit inline-edit--id="inline-edit-state-invalid" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-group}}
     {{#> inline-edit-label}}
@@ -193,7 +202,8 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
 {{/inline-edit}}
 ```
 
-```hbs title=Inline-edit-table-row
+### Inline edit table row
+```hbs
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-table-example"}}
   {{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Inline edit table row example"'}}
     {{#> table-caption}}
@@ -418,19 +428,22 @@ All accessibility requirements for inputs apply to elements within inline edit.
 
 
 <!--
-```hbs title=Bulk-edit-dl-(default)
+### Bulk edit dl (default)
+```hbs
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-dl-example-default"}}
   {{#> inline-edit-dl}}{{/inline-edit-dl}}
 {{/inline-edit}}
 ```
 
-```hbs title=Bulk-edit-dl-(active)
+### Bulk edit dl (active)
+```hbs
 {{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-dl-example-active" inline-edit--modifier="pf-m-inline-editable"}}
   {{#> inline-edit-dl}}{{/inline-edit-dl}}
 {{/inline-edit}}
 ```
 
-```hbs title=Inline-edit-dl-example
+### Inline edit dl example
+```hbs
 {{#> list list--type="dl" list--modifier="pf-m-2-col" list--attribute=(concat 'aria-label="Inline edit description list example"')}}
   <div>
     <dt>Name</dt>

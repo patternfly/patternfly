@@ -1,5 +1,5 @@
 ---
-title: Overflow menu
+id: Overflow menu
 section: components
 cssPrefix: pf-c-overflow-menu
 ---
@@ -11,7 +11,8 @@ The overflow menu component condenses actions inside `.pf-c-overflow-menu__conte
 
 The overflow menu relies on groups (`.pf-c-overflow-menu__group`) and items (`.pf-c-overflow-menu__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-c-toolbar--spacer--base`, whose value is `--pf-global--spacer--md` or 16px.
 
-```hbs title=Simple-collapsed
+### Simple collapsed
+```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple"}}
   {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Generic options"}}
     {{#> overflow-menu-dropdown-item}}
@@ -33,7 +34,8 @@ The overflow menu relies on groups (`.pf-c-overflow-menu__group`) and items (`.p
 {{/overflow-menu}}
 ```
 
-```hbs title=Simple-expanded
+### Simple expanded
+```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple-expanded"}}
   {{#> overflow-menu-content}}
     {{#> overflow-menu-item}}
@@ -75,7 +77,8 @@ The overflow menu relies on groups (`.pf-c-overflow-menu__group`) and items (`.p
 | `.pf-c-overflow-menu__group` | `<div>` | Initiates an overflow menu group. |
 | `.pf-c-overflow-menu__item` | `<div>` | Initiates an overflow menu item. **Required** |
 
-```hbs title=Group-types
+### Group types
+```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-button-group-example" overflow-menu-button--aria-label="Options"}}
   {{#> overflow-menu-content}}
     {{#> overflow-menu-group}}
@@ -137,7 +140,8 @@ The action group consists of a primary and secondary action. Any additional acti
 | `.pf-m-button-group` | `.pf-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-c-overflow-menu__group--m-button-group--spacer)`. Child `.pf-c-button` spacer value is set to `var(--pf-c-overflow-menu__group--m-button-group--space-items)`. |
 | `.pf-m-icon-button-group` | `.pf-c-overflow-menu__group` | Modifies overflow menu group spacing. Spacer value is set to `var(--pf-c-overflow-menu__group--m-icon-button-group--spacer)`. Child `.pf-c-button.pf-m-button-plain` spacer value is set to `var(--pf-c-overflow-menu__group--m-icon-button-group--space-items)`. |
 
-```hbs title=Additional-options-in-dropdown-(hidden)
+### Additional options in dropdown (hidden)
+```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-hidden"}}
   {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown with additional options"}}
     {{#> overflow-menu-dropdown-item}}
@@ -165,7 +169,8 @@ The action group consists of a primary and secondary action. Any additional acti
 {{/overflow-menu}}
 ```
 
-```hbs title=Additional-options-in-dropdown-(visible)
+### Additional options in dropdown (visible)
+```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-visible"}}
   {{#> overflow-menu-content}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
@@ -213,7 +218,8 @@ The action group consists of a primary and secondary action. Any additional acti
 
 ## Persistent configuration
 
-```hbs title=Persistent-additional-options-(hidden)
+### Persistent additional options (hidden)
+```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-persistent-hidden"}}
   {{#> overflow-menu-content}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
@@ -238,7 +244,8 @@ The action group consists of a primary and secondary action. Any additional acti
 {{/overflow-menu}}
 ```
 
-```hbs title=Persistent-additional-options-(visible)
+### Persistent additional options (visible)
+```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-persistent-visible-example"}}
   {{#> overflow-menu-content}}
     {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}

@@ -1,11 +1,12 @@
 ---
-title: Chip group
+id: Chip group
 section: components
 cssPrefix: pf-c-chip-group
 ---
 
 ## Examples
-```hbs title=Simple-inline-chip-group-overflow
+### Simple inline chip group overflow
+```hbs
 {{#> chip-group chip-group--id="simple-inline-chip-group-overflow"}}
   {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
     {{#> chip-group-list-item}}
@@ -49,7 +50,8 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Simple-inline-chip-group-expanded
+### Simple inline chip group expanded
+```hbs
 {{#> chip-group chip-group--id="simple-inline-chip-group-expanded"}}
   {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
     {{#> chip-group-list-item}}
@@ -113,7 +115,8 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Chip-group-with-categories
+### Chip group with categories
+```hbs
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories"}}
   {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
     Category one
@@ -153,7 +156,8 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Chip-group-with-categories-overflow
+### Chip group with categories overflow
+```hbs
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow"}}
   {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
     Category one
@@ -200,7 +204,8 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Chip-group-with-categories-overflow-expanded
+### Chip group with categories overflow expanded
+```hbs
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow-expanded"}}
   {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
     Category one
@@ -267,7 +272,8 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-```hbs title=Chip-group-with-categories-removable
+### Chip group with categories removable
+```hbs
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="Chip-group-with-categories-removable"}}
   {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
     Category one
@@ -316,6 +322,7 @@ If you want to create sub-groupings of chips to represent multiple values applie
 The chip group requires the [chip component](/documentation/core/components/chip).
 
 ### Accessibility
+
 **All single chip accessibility and usage requirements apply.**
 
 | Attributes for closable chip group button | Applied to | Outcome |
@@ -331,5 +338,6 @@ The chip group requires the [chip component](/documentation/core/components/chip
 | `.pf-c-chip-group__list` | `<ul>` | Initiates the container for a list of chips. **Required.** |
 | `.pf-c-chip-group__list-item` | `<li>` | Initiates the list item inside of the chip group. **Required.** |
 | `.pf-c-chip-group__label` | `<span>` | Initiates the label to be used in the chip group. |
-| `.pf-c-chip-group__close` | `<div>` | Initiates the container used to remove button in the chip group. **Required.** |
+| `.pf-c-chip-group__close` | `<div>` | Initiates the container used for the button to remove the chip group. |
+| `.pf-c-button` | `.pf-c-chip-group__close <button>` | Initiates the button used to remove the chip group. |
 | `.pf-m-category` | `.pf-c-chip-group` | Modifies the chip group to support category styling. |

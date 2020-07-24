@@ -1,15 +1,17 @@
 ---
-title: Spinner
+id: Spinner
 section: components
 cssPrefix: pf-c-spinner
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> spinner}}Loading...{{/spinner}}
 ```
 
-```hbs title=Multiple-sizes
+### Multiple sizes
+```hbs
 {{#> spinner spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
 
 {{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}

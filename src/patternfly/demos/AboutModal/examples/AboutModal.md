@@ -1,10 +1,11 @@
 ---
-title: About modal
+id: About modal
 section: demos
 ---
 
 ## Demos
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> about-modal}}
   {{#> backdrop}}
     {{#> bullseye}}

@@ -23,7 +23,6 @@ To setup the PatternFly 4 development environment:
 - clone the project
 - run `npm install` from the project root
 - run `npm run build-patternfly`
-- run `npm run cli:setup` (only needed if doing development)
 - run `npm start`
 - open your browser to `http://localhost:8000`
 
@@ -34,29 +33,32 @@ After working on your contribution, check for [accessibility violations](#testin
 If Gatsby needs to run on local IP for testing on other machines or devices use `npm run dev:expose` which sets host to `0.0.0.0`.
 If you want to set host to a specific IP address for example `172.17.12.1` run `npm run dev -H 172.17.12.1`.
 
-### Create a new component
+### Create components, layouts...
 
-- run `pf generate component <name>`
+To create source file scaffolding for a new component, layout, utility, or demo, run the NPM script:
 
-*To view visit http://localhost:8000/components/<name>*
+`node generate <CamelName>`
 
-### Create a new layout
+Below are the full options for this script:
 
-- run `pf generate layout <name>`
+```sh
+Options:
+  -f, --folder <folder>  Source folder (components, demos, layouts, or utilities) (default: "components")
+```
 
-*To view visit http://localhost:8000/layout/<name>*
+#### Examples
 
-### Create a new utility
+To create a "Test component" component (`.pf-c-test-component`), run:
 
-- run `pf generate utility <name>`
+`node generate TestComponent`
 
-*To view visit http://localhost:8000/utilities/<name>*
+To create a "Test layout" layout (`.pf-l-test-layout`), run:
 
-### Create a new demo
+`node generate TestLayout -f layouts`
 
-- run `pf generate demo <name>`
+To create 3 new demos named "Test demo", "Test demo 2", and "Test demo 3", run:
 
-*To view visit http://localhost:8000/demos/<name>*
+`node generate TestDemo TestDemo2 TestDemo3 -f demos`
 
 ## Guidelines for CSS development
 

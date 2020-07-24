@@ -1,12 +1,13 @@
 ---
-title: Flex
+id: Flex
 section: utilities
 ---
 
 import './Flex.css'
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> display display--type="flex"}}
   Display flex
 {{/display}}
@@ -15,7 +16,8 @@ import './Flex.css'
 {{/display}}
 ```
 
-```hbs title=Direction
+### Direction
+```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex row
 {{/title}}
@@ -53,7 +55,8 @@ import './Flex.css'
 {{/display}}
 ```
 
-```hbs title=Justified-content
+### Justified content
+```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Justify content flex-start
 {{/title}}
@@ -100,7 +103,8 @@ import './Flex.css'
 {{/display}}
 ```
 
-```hbs title=Aligned-items
+### Aligned items
+```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align items flex-start
 {{/title}}
@@ -147,7 +151,8 @@ import './Flex.css'
 {{/display}}
 ```
 
-```hbs title=Aligned-self
+### Aligned self
+```hbs
 {{#> display display--type="flex"}}
   {{#> flex-item flex-item--modifier="pf-u-align-self-flex-start"}}
     flex-start
@@ -167,7 +172,8 @@ import './Flex.css'
 {{/display}}
 ```
 
-```hbs title=Aligned-content
+### Aligned content
+```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Align content flex-start
 {{/title}}
@@ -235,7 +241,8 @@ import './Flex.css'
 {{/display}}
 ```
 
-```hbs title=Shrink
+### Shrink
+```hbs
 {{#> display display--type="flex"}}
   {{#> flex-item flex-item--modifier="pf-u-flex-shrink-0"}}
     Flex shrink 0
@@ -246,7 +253,8 @@ import './Flex.css'
 {{/display}}
 ```
 
-```hbs title=Grow
+### Grow
+```hbs
 {{#> display display--type="flex"}}
   {{#> flex-item flex-item--modifier="pf-u-flex-grow-0"}}
     Flex grow 0
@@ -257,7 +265,8 @@ import './Flex.css'
 {{/display}}
 ```
 
-```hbs title=Basis-and-none
+### Basis and none
+```hbs
 {{#> display display--type="flex"}}
   {{#> flex-item flex-item--modifier="pf-u-flex-basis-0"}}
     Flex basis 0
@@ -274,7 +283,8 @@ import './Flex.css'
 {{/display}}
 ```
 
-```hbs title=Fill
+### Fill
+```hbs
 {{#> display display--type="flex"}}
   {{#> flex-item flex-item--modifier="pf-u-flex-none"}}
     Flex none
@@ -285,7 +295,8 @@ import './Flex.css'
 {{/display}}
 ```
 
-```hbs title=Wrap
+### Wrap
+```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Flex wrap
 {{/title}}

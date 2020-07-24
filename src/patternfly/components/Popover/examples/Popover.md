@@ -1,11 +1,12 @@
 ---
-title: Popover
+id: Popover
 section: components
 cssPrefix: pf-c-popover
 ---
 
 ## Examples
-```hbs title=Top
+### Top
+```hbs
 {{#> popover popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -24,7 +25,8 @@ cssPrefix: pf-c-popover
 {{/popover}}
 ```
 
-```hbs title=Right
+### Right
+```hbs
 {{#> popover popover--modifier="pf-m-right" popover--attribute='aria-labelledby="popover-right-header" aria-describedby="popover-right-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -43,7 +45,8 @@ cssPrefix: pf-c-popover
 {{/popover}}
 ```
 
-```hbs title=Bottom
+### Bottom
+```hbs
 {{#> popover popover--modifier="pf-m-bottom" popover--attribute='aria-labelledby="popover-bottom-header" aria-describedby="popover-bottom-body"'}}
   {{#> popover-content}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -62,7 +65,8 @@ cssPrefix: pf-c-popover
 {{/popover}}
 ```
 
-```hbs title=Left
+### Left
+```hbs
 {{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-left-header" aria-describedby="popover-left-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -81,7 +85,8 @@ cssPrefix: pf-c-popover
 {{/popover}}
 ```
 
-```hbs title=Without-header/footer
+### Without header/footer
+```hbs
 {{#> popover popover--modifier="pf-m-right" popover--attribute='aria-label="Popover with no header example" aria-describedby="popover-no-header-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}

@@ -1,11 +1,12 @@
 ---
-title: Alert
+id: Alert
 section: components
 cssPrefix: pf-c-alert
 ---
 
 ## Examples
-```hbs title=Types
+### Types
+```hbs
 {{#> alert alert--attribute='aria-label="Default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
   {{/alert-icon}}
@@ -52,7 +53,8 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title=Variations
+### Variations
+```hbs
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -69,10 +71,10 @@ cssPrefix: pf-c-alert
     Success alert description. This should tell the user more information about the alert.
   {{/alert-description}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -108,10 +110,10 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -165,7 +167,8 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title=Inline-types
+### Inline types
+```hbs
 {{#> alert alert--modifier="pf-m-inline" alert--attribute='aria-label="Inline default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
   {{/alert-icon}}
@@ -212,7 +215,8 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title=Inline-variations
+### Inline variations
+```hbs
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -229,10 +233,10 @@ cssPrefix: pf-c-alert
     Success alert description. This should tell the user more information about the alert.
   {{/alert-description}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -268,10 +272,10 @@ cssPrefix: pf-c-alert
     {{/button}}
   {{/alert-action}}
   {{#> alert-action-group}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       View details
     {{/button}}
-    {{#> button button--modifier="pf-m-link pf-m-inline pf-m-small"}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
       Ignore
     {{/button}}
   {{/alert-action-group}}
@@ -311,7 +315,7 @@ Add a modifier class to the default alert to change the color: `.pf-m-success`, 
 | -- | -- | -- |
 | `.pf-c-alert` | `<div>` |  Applies default alert styling. Always use with a modifier class. ** Required**|
 | `.pf-c-alert__icon` | `<div>` |  	Defines the alert icon. ** Required **|
-| `.pf-c-alert__title` | `<h1>, <h2>, <h3>, <h4>, <h5>, <h6>` |  Defines the alert title. ** Required **|
+| `.pf-c-alert__title` | `<p>, <h1-h6>` |  Defines the alert title. ** Required **|
 | `.pf-c-alert__description` | `<div>` |  Defines the alert description area. |
 | `.pf-c-alert__action` | `<div>` |  Defines the action button wrapper. Should contain `.pf-c-button.pf-m-plain` for close action or `.pf-c-button.pf-m-link` for link text. It should only include one action. |
 | `.pf-c-alert__action-group` | `<div>` |  Defines the action button group. Should contain `.pf-c-button.pf-m-link.pf-m-inline` for inline link text. **Note: ** only inline link buttons are supported in the alert action group. |

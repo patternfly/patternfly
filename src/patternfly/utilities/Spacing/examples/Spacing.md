@@ -1,12 +1,13 @@
 ---
-title: Spacing
+id: Spacing
 section: utilities
 ---
 
 import './Spacing.css'
 
 ## Examples
-```hbs title=Margin
+### Margin
+```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Margin, marginX, marginY
 {{/title}}
@@ -62,7 +63,8 @@ import './Spacing.css'
 {{/display}}
 ```
 
-```hbs title=Padding
+### Padding
+```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Padding, paddingX, paddingY
 {{/title}}
@@ -118,7 +120,8 @@ import './Spacing.css'
 {{/display}}
 ```
 
-```hbs title=Combined
+### Combined
+```hbs
 {{#> title titleType="h2" title--modifier="pf-m-lg"}}
   Combined spacers
 {{/title}}

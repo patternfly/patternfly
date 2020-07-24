@@ -1,12 +1,13 @@
 ---
-title: Data list
+id: Data list
 section: components
 cssPrefix: pf-c-data-list
 ---
 
 ## Examples
 
-```hbs title=Basic
+### Basic
+```hbs
 {{#> data-list data-list--id="data-list-basic" data-list--attribute='aria-label="Basic data list example"'}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
@@ -59,7 +60,8 @@ cssPrefix: pf-c-data-list
 | `.pf-m-no-fill` | `.pf-c-data-list__cell` | Modifies a data list cell to not fill the available horizontal space. |
 | `.pf-m-align-right` | `.pf-c-data-list__cell` | Modifies a data list cell to align-right. |
 
-```hbs title=With-headings
+### With headings
+```hbs
 {{#> data-list data-list--id="data-list-with-headings" data-list--attribute='aria-label="With headings data list example"'}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
@@ -94,7 +96,8 @@ cssPrefix: pf-c-data-list
 
 When a list item includes more than one block of content, it can be difficult for some screen reader users to discern where one list item ends and the next one begins. A simple way to provide better separation of list items is to define the primary content section as a heading. Headings are useful for indicating a new section of contents, but also provide an easy way for screen reader users to navigate to specific sections on the page. The heading level should be based on the context in which the DataList component is being used. For example, if the heading for the section that contains the DataList is a level 3, then `h4` elements should be used in the DataList list items.
 
-```hbs title=Checkboxes,-actions,-and-additional-cells
+### Checkboxes, actions, and additional cells
+```hbs
 {{#> data-list data-list--id="data-list-checkboxes-actions-addl-cells" data-list--attribute='aria-label="Checkbox and action data list example"'}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
@@ -206,7 +209,8 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-data-list__item-action` | Hides an actions container at a given breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-data-list__item-action` | Shows an actions container at a given breakpoint. |
 
-```hbs title=Expandable
+### Expandable
+```hbs
 {{#> data-list data-list--id="data-list-expandable" data-list--attribute='aria-label="Expandable data list example"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
@@ -301,7 +305,8 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-```hbs title=Compact
+### Compact
+```hbs
 {{#> data-list data-list--id="data-list-compact" data-list--attribute='aria-label="Compact data list example"' data-list--modifier="pf-m-compact"}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
@@ -417,7 +422,8 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-no-padding` | `.pf-c-data-list__expandable-content-body` | Removes padding for the expandable content body. |
 | `.pf-m-icon` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. |
 
-```hbs title=Modifiers
+### Modifiers
+```hbs
 {{!-- Example 1 --}}
 <h2 class="Preview__section-title">Default fitting - example 1</h2>
 {{#> data-list data-list--id="data-list-default-fitting" data-list--attribute='aria-label="Width modifier data list example 1"'}}
@@ -537,7 +543,8 @@ When a list item includes more than one block of content, it can be difficult fo
 | -- | -- | -- |
 | `.pf-m-flex-{1, 2, 3, 4, 5}` | `.pf-c-data-list__cell` | Percentage based modifier for `.pf-c-data-list__cell` widths. |
 
-```hbs title=Selectable-rows
+### Selectable rows
+```hbs
 {{#> data-list data-list--id="data-list-selectable-rows" data-list--attribute='aria-label="Selectable rows data list example"'}}
   {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1" tabindex="0"')}}
     {{#> data-list-item-row}}
@@ -581,7 +588,8 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-selectable` | `.pf-c-data-list__item` | Modifies a data list item so that it is selectable. |
 | `.pf-m-selected` | `.pf-c-data-list__item` | Modifies a data list item for the selected state. |
 
-```hbs title=Selectable-expandable-rows
+### Selectable expandable rows
+```hbs
 {{#> data-list data-list--id="data-list-selectable-expandable-rows" data-list--attribute='aria-label="Selectable, expandable data list example"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1" tabindex="0"')}}
     {{#> data-list-item-row}}

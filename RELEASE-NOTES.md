@@ -1,25 +1,100 @@
 ---
-title: Release notes
+id: Release notes
 section: overview
 releaseNoteTOC: true
 ---
 
+## 2020.09 release notes (2020-07-16)
+Packages released:
+- [@patternfly/patternfly@v4.23.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.23.3)
+
+### Components
+- **Alert:** Fixed heading order ([#3236](https://github.com/patternfly/patternfly/pull/3236))
+- **Breadcrumb:** Enabled always using a divider and hiding the first one ([#3202](https://github.com/patternfly/patternfly/pull/3202))
+- **Button:** Added CTA variation ([#3214](https://github.com/patternfly/patternfly/pull/3214))
+- **Chip:** Updated docs ([#3103](https://github.com/patternfly/patternfly/pull/3103))
+- **Chip group:** Updated removable action icon ([#3249](https://github.com/patternfly/patternfly/pull/3249))
+- **Chip & chip group:** Updated to use `ch` unit for chip and chip group label max-widths ([#3241](https://github.com/patternfly/patternfly/pull/3241))
+- **Description list:** Added description list component ([#3243](https://github.com/patternfly/patternfly/pull/3243))
+- **Form control:** Adjusted select arrow size ([#3207](https://github.com/patternfly/patternfly/pull/3207))
+- **Hint:** Added hint component ([#3218](https://github.com/patternfly/patternfly/pull/3218))
+- **Input group:** Updated example aria-label ([#3143](https://github.com/patternfly/patternfly/pull/3143))
+- **Modal:** Added medium, adjusted maxwidths for better responsiveness ([#3217](https://github.com/patternfly/patternfly/pull/3217))
+- **Nav:** Updated expandable nav to use `<button>` ([#3250](https://github.com/patternfly/patternfly/pull/3250))
+- **Notification badge:**
+  - Updated layout and design ([#3231](https://github.com/patternfly/patternfly/pull/3231))
+  - Reverted enhancements in #3231 ([#3294](https://github.com/patternfly/patternfly/pull/3294))
+- **Notification drawer:** Fixed duplicate ids ([#3237](https://github.com/patternfly/patternfly/pull/3237))
+- **Search input:** Added search input component ([#3264](https://github.com/patternfly/patternfly/pull/3264))
+- **Select:**
+  - Added support for checkbox select with description ([#3224](https://github.com/patternfly/patternfly/pull/3224))
+  - Added favorites ([#3238](https://github.com/patternfly/patternfly/pull/3238))
+- **Table:** Added aria-label to help button ([#3266](https://github.com/patternfly/patternfly/pull/3266))
+- **Tile:** Added tile component ([#3229](https://github.com/patternfly/patternfly/pull/3229))
+- **Toolbar:** Removed beta flag from docs ([#3234](https://github.com/patternfly/patternfly/pull/3234))
+- **Wizard:** Added support for buttons as nav items ([#3216](https://github.com/patternfly/patternfly/pull/3216))
+
+### Other
+- **Workspace:**
+  - Changed title to filepath ([#3232](https://github.com/patternfly/patternfly/pull/3232))
+  - Enabled theme `wrapperTag` to avoid having two `<main>`s on fullscreen pages ([#3233](https://github.com/patternfly/patternfly/pull/3233))
+- **Build:**
+  - Added new component/layout/demo generator script ([#3235](https://github.com/patternfly/patternfly/pull/3235))
+  - Updated size report to use commander, fixed code ([#3242](https://github.com/patternfly/patternfly/pull/3242))
+  - Disabled size report running against master ([#3244](https://github.com/patternfly/patternfly/pull/3244))
+
+## 2020.08 release notes (2020-06-24)
+Packages released:
+- [@patternfly/patternfly@v4.16.7](https://www.npmjs.com/package/@patternfly/patternfly/v/4.16.7)
+
+### Components
+- **Alert group:** Updated basic example to inline, removed actions ([#3142](https://github.com/patternfly/patternfly/pull/3142))
+- **Banner:** Added banner component ([#2814](https://github.com/patternfly/patternfly/pull/2814))
+- **Button:**
+  - Added small variation ([#3132](https://github.com/patternfly/patternfly/pull/3132))
+  - Added pf-m-aria-disabled state ([#3166](https://github.com/patternfly/patternfly/pull/3166))
+  - Made inline link inherit font-size, updated alert actions ([#3192](https://github.com/patternfly/patternfly/pull/3192))
+- **Divider:** Added xs spacer to inset map ([#3191](https://github.com/patternfly/patternfly/pull/3191))
+- **Drawer:**
+  - Kept panel content from displaying on top of divider/border ([#3180](https://github.com/patternfly/patternfly/pull/3180))
+  - Added tab focus fix ([#3184](https://github.com/patternfly/patternfly/pull/3184))
+- **Dropdown/select:** Added description element ([#3130](https://github.com/patternfly/patternfly/pull/3130))
+- **Label:** Added purple-50 global color, updated green/purple fill colors ([#3138](https://github.com/patternfly/patternfly/pull/3138))
+- **Modal:** Allowed wizard height to shrink when used in modal ([#3176](https://github.com/patternfly/patternfly/pull/3176))
+- **Notification drawer:** Fixed last item's color line position ([#3149](https://github.com/patternfly/patternfly/pull/3149))
+- **Notification drawer/alert:** Improved title wrapping ([#3145](https://github.com/patternfly/patternfly/pull/3145))
+- **Table:**
+  - Added sticky-header variation ([#3093](https://github.com/patternfly/patternfly/pull/3093))
+  - Added support for column header help ([#3189](https://github.com/patternfly/patternfly/pull/3189))
+  - Updated sticky header border var so border is visible ([#3197](https://github.com/patternfly/patternfly/pull/3197))
+- **Tabs:** Reduced secondary tab font-size ([#3135](https://github.com/patternfly/patternfly/pull/3135))
+
+### Other
+- **Global:** Added RedHatDisplay back as --FontFamily--heading--sans-serif ([#3188](https://github.com/patternfly/patternfly/pull/3188))
+- **Build:**
+  - Enabled publish to prerelease tag ([#3162](https://github.com/patternfly/patternfly/pull/3162))
+  - Upgraded patternfly-a11y ([#3178](https://github.com/patternfly/patternfly/pull/3178))
+- **Docs:**
+  - Copied UPGRADE-GUIDE.md ([#3158](https://github.com/patternfly/patternfly/pull/3158))
+  - Updated upgrade guide RedHatDisplay text ([#3195](https://github.com/patternfly/patternfly/pull/3195))
+- **Workspace:** Updated gatsby version, removed footer ([#3155](https://github.com/patternfly/patternfly/pull/3155))
+
 ## 2020.07 release notes (2020-06-05)
 Packages released:
-- @patternfly/patternfly@v4.10.31
+- [@patternfly/patternfly@v4.10.31](https://www.npmjs.com/package/@patternfly/patternfly/v/4.10.31)
 
 This is our major release. Check out our [upgrade guide](/documentation/core/overview/upgrade-guide) for a list of breaking changes!
 
 ## 2020.06 release notes (2020-05-12)
 Packages released:
-- @patternfly/patternfly@v2.71.6
+- [@patternfly/patternfly@v2.71.6](https://www.npmjs.com/package/@patternfly/patternfly/v/2.71.6)
 
 ### Other
   - **Dev lite:** Removed examples and components on delete ([#2984](https://github.com/patternfly/patternfly/pull/2984))
 
 ## 2020.05 release notes (2020-04-21)
 Packages released:
-- @patternfly/patternfly@v2.71.5
+- [@patternfly/patternfly@v2.71.5](https://www.npmjs.com/package/@patternfly/patternfly/v/2.71.5)
 
 ### Other
 - **Docs:**
@@ -32,11 +107,12 @@ Packages released:
 
 ## 2020.04 release notes (2020-03-31)
 Packages released:
-- @patternfly/patternfly@v2.71.3
+- [@patternfly/patternfly@v2.71.3](https://www.npmjs.com/package/@patternfly/patternfly/v/2.71.3)
 
 ### Components
 - **File upload:** Removed message container, added form to error example ([#2807](https://github.com/patternfly/patternfly/pull/2807))
 - **Table:** Updated text in column management demo modal ([#2875](https://github.com/patternfly/patternfly/pull/2875))
+
 ### Other
 - **Build:**
   - Fixed a11y upload report ([#2790](https://github.com/patternfly/patternfly/pull/2790))
@@ -49,7 +125,7 @@ Packages released:
 
 ## 2020.03 release notes (2020-03-10)
 Packages released:
-- @patternfly/patternfly@v2.68.3
+- [@patternfly/patternfly@v2.68.3](https://www.npmjs.com/package/@patternfly/patternfly/v/2.68.3)
 
 ### Components
 - **Background image:** Removed empty width attribute ([#2739](https://github.com/patternfly/patternfly/pull/2739))
@@ -80,7 +156,7 @@ Packages released:
 
 ## 2020.02 release notes (2020-02-18)
 Packages released:
-- @patternfly/patternfly@v2.65.2
+- [@patternfly/patternfly@v2.65.2](https://www.npmjs.com/package/@patternfly/patternfly/v/2.65.2)
 
 ### Components
 - **Data list:**
@@ -119,7 +195,7 @@ Packages released:
 
 ## 2020.01 release notes (2020-01-28)
 Packages released:
-- @patternfly/patternfly@v2.56.3
+- [@patternfly/patternfly@v2.56.3](https://www.npmjs.com/package/@patternfly/patternfly/v/2.56.3)
 
 ### Components
 - **Button:** Added ability to have icon on left or ride side of text ([#2548](https://github.com/patternfly/patternfly/pull/2548))
@@ -156,7 +232,7 @@ Packages released:
 
 ## 2019.11 release notes (2019-12-18)
 Packages released:
-- @patternfly/patternfly@v2.46.1
+- [@patternfly/patternfly@v2.46.1](https://www.npmjs.com/package/@patternfly/patternfly/v/2.46.1)
 
 ### Components
 - **App launcher:**
@@ -188,7 +264,7 @@ Packages released:
 
 ## 2019.10 release notes (2019-11-25)
 Packages released:
-- @patternfly/patternfly@v2.43.1
+- [@patternfly/patternfly@v2.43.1](https://www.npmjs.com/package/@patternfly/patternfly/v/2.43.1)
 
 ### Components
 - **App launcher:** Added support for search input, favorites ([#2428](https://github.com/patternfly/patternfly/pull/2428))
@@ -215,7 +291,7 @@ Packages released:
 
 ## 2019.09 release notes (2019-11-01)
 Packages released:
-- @patternfly/patternfly@v2.40.6
+- [@patternfly/patternfly@v2.40.6](https://www.npmjs.com/package/@patternfly/patternfly/v/2.40.6)
 
 ### Components
 - **Charts:**
@@ -259,7 +335,7 @@ Packages released:
 
 ## 2019.08 release notes (2019-10-01)
 Packages released:
-- @patternfly/patternfly@2.33.5
+- [@patternfly/patternfly@v2.33.5](https://www.npmjs.com/package/@patternfly/patternfly/v/2.33.5)
 
 ### Components
 - **Button:** Add control modifier ([#2005](https://github.com/patternfly/patternfly/pull/2005))
@@ -294,7 +370,7 @@ Packages released:
 
 ## 2019.07 release notes (2019-09-10)
 Packages released:
-- @patternfly/patternfly@2.31.6
+- [@patternfly/patternfly@v2.31.6](https://www.npmjs.com/package/@patternfly/patternfly/v/2.31.6)
 
 ### Components
 - **Charts:**
@@ -318,7 +394,6 @@ Packages released:
   - Fix nav separator background in dark theme. [#2227](https://github.com/patternfly/patternfly/pull/2227)
 - **Form:** Update horizontal form label alignment. [#2200](https://github.com/patternfly/patternfly/pull/2200)
 
-
 ### Other
 - **A11y:** Fix accessibility issues in basic forms demo. [#2086](https://github.com/patternfly/patternfly/pull/2086)
 - **Dependencies:**
@@ -331,7 +406,7 @@ Packages released:
 
 ## 2019.06 release notes (2019-08-13)
 Packages released:
-- @patternfly/patternfly@2.26.1
+- [@patternfly/patternfly@v2.26.1](https://www.npmjs.com/package/@patternfly/patternfly/v/2.26.1)
 
 ### Components
 - **Alert:** Added default alert ([#2107](https://github.com/patternfly/patternfly/pull/2107))
@@ -359,7 +434,8 @@ Packages released:
 
 ## 2019.05 release notes (2019-07-24)
 Packages released:
-- @patternfly/patternfly@2.23.0
+- [@patternfly/patternfly@v2.23.0](https://www.npmjs.com/package/@patternfly/patternfly/v/2.23.0)
+
 ### Components
 - **About modal:** Updated break-word on content area instead of break-all ([#2035](https://github.com/patternfly/patternfly/pull/2035))
 - **App launcher:**
@@ -391,13 +467,15 @@ Packages released:
   - Fixed data-label attr in table demos ([#2060](https://github.com/patternfly/patternfly/pull/2060))
   - Added example of pf-m-wrap modifier for use in thead cells ([#2065](https://github.com/patternfly/patternfly/pull/2065))
 - **Tooltip:** Broke words in a place to fit in tooltip ([#2033](https://github.com/patternfly/patternfly/pull/2033))
+
 ### Other
 - **Red Hat font:** Added opt-in option to use Red Hat font ([#1813](https://github.com/patternfly/patternfly/pull/1813))
 - **Experimental features:** Added experimental feature support ([#2031](https://github.com/patternfly/patternfly/pull/2031))
 
 ## 2019.04 release notes (2019-07-02)
 Packages released:
-- @patternfly/patternfly@2.17.0
+- [@patternfly/patternfly@v2.17.0](https://www.npmjs.com/package/@patternfly/patternfly/v/2.17.0)
+
 ### Components
 - **About modal box:** Removed the title classes from the strapline paragraph. Changed strapline `font-size` to 14px. ([#1951](https://github.com/patternfly/patternfly/pull/1951))
 - **About modal, app launcher, backdrop, context selector, datalist, dropdown, form control, input group, modal, nav, options menu, select, table, tabs, wizard:**
@@ -439,13 +517,15 @@ Packages released:
   - Added an extra breakpoint. In the data table sortable demo the table needed a larger breakpoint, so that the rows don't overflow outside of their container ([#1880](https://github.com/patternfly/patternfly/pull/1880))
   - Added word-wrap to td's in table, now wraps when on mobile size. ([#1928](https://github.com/patternfly/patternfly/pull/1928))
   - Made column headers bold ([#1949](https://github.com/patternfly/patternfly/pull/1949))
+
 ### Other
 - Added ie11 to build ([#1876](https://github.com/patternfly/patternfly/pull/1876))
 - Updated the window size used for the browser that our a11y audit is run against ([#1911](https://github.com/patternfly/patternfly/pull/1911))
 
 ## 2019.03 RC2.1 release notes (2019-06-11)
 Packages released:
-- @patternfly/patternfly@2.12.5
+- [@patternfly/patternfly@v2.12.5](https://www.npmjs.com/package/@patternfly/patternfly/v/2.12.5)
+
 ### Components
 - **About Modal Box:**
   - Addressed overflow of about modal [#1902](https://github.com/patternfly/patternfly/pull/1902)
@@ -468,7 +548,8 @@ Packages released:
 
 ## 2019.02 release notes (2019-05-28)
 Packages released:
-- @patternfly/patternfly@2.8.2
+- [@patternfly/patternfly@v2.8.2](https://www.npmjs.com/package/@patternfly/patternfly/v/2.8.2)
+
 ### Components
 - **Alert:**
   - Adjusted warning alert webfont icon font-size ([#1805](https://github.com/patternfly/patternfly/pull/1805))
@@ -494,9 +575,11 @@ Packages released:
 - **Wizard:**
   - Fixed wizard closing tag ([#1803](https://github.com/patternfly/patternfly/pull/1803))
   - Set pf-c-wizard__main to grow and fill available height ([#1781](https://github.com/patternfly/patternfly/pull/1781))
+
 ### Layouts
 - **Gutter:**
   - Updated mobile gutter spacing in layouts that have gutters ([#1829](https://github.com/patternfly/patternfly/pull/1829))
+
 ### Other
 - **Charts:**
   - Added CSS Variables for Charts ([#1846](https://github.com/patternfly/patternfly/pull/1846))

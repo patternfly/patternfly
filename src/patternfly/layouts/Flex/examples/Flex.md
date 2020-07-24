@@ -1,5 +1,5 @@
 ---
-title: Flex
+id: Flex
 section: layouts
 cssPrefix: pf-l-flex
 ---
@@ -35,7 +35,8 @@ The flex layout is based on the CSS Flex properties where the layout determines 
 - It can be applied to container elements or components.
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 <h3>
   Basic flex - <code>.pf-l-flex</code>.
 </h3>
@@ -113,7 +114,8 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-l-flex` | `*` | Initiates the flex layout. **Required** |
 | `.pf-l-flex__item` | `.pf-l-flex > *` | Initiates a flex item. **Required** |
 
-```hbs title=Spacing
+### Spacing
+```hbs
 <h3>
   Individually spaced items - <code>.pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>.
 </h3>
@@ -195,7 +197,8 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` |  Modifies a nested flex layout or a flex item spacing. |
 | `.pf-m-space-items-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies the flex layout direct descendant spacing. |
 
-```hbs title=Layout-modifiers
+### Layout modifiers
+```hbs
 <h3>
   Default layout <code>.pf-l-flex</code>.
 </h3>
@@ -274,7 +277,8 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-flex-default{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Resets a nested flex layout or flex item flex shorthand property to 0 1 auto. |
 | `.pf-m-flex-none{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies a nested flex layout or flex item flex shorthand property to none. |
 
-```hbs title=Column-layout-modifiers
+### Column layout modifiers
+```hbs
 <h3>
   Flex column layout. When <code>.pf-m-column</code> is applied to <code>.pf-l-flex</code>, spacing will be applied to margin-bottom for direct descendants.
 </h3>
@@ -350,7 +354,8 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | -- | -- | -- |
 | `.pf-m-column{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies flex-direction property to column. |
 
-```hbs title=Responsive-layout-modifiers
+### Responsive layout modifiers
+```hbs
 <h3>
   Switching between flex-direction column and row at breakpoints (<code>-on-lg</code>).
 </h3>
@@ -428,7 +433,8 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-column{-on-[breakpoint]}` | `.pf-l-flex`  |  Modifies flex-direction property to column. |
 | `.pf-m-row{-on-[breakpoint]}` | `.pf-l-flex`  |  Modifies flex-direction property to row. |
 
-```hbs title=Alignment
+### Alignment
+```hbs
 <h3>Aligning right with <code>.pf-m-align-right</code>. This solution will always align element right by setting margin-left: auto, including when wrapped.</h3>
 {{#> l-flex l-flex--modifier="ws-example-flex-border"}}
   {{#> l-flex-item}}
@@ -616,7 +622,8 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | `.pf-m-align-self-flex-stretch{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies align-self property to stretch. |
 
 
-```hbs title=Justification
+### Justification
+```hbs
 <h3>Justify content with <code>.pf-m-justify-content-flex-end</code>.</h3>
 {{#> l-flex l-flex--modifier="pf-m-justify-content-flex-end ws-example-flex-border"}}
   {{#> l-flex-item}}

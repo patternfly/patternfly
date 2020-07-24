@@ -1,12 +1,13 @@
 ---
-title: Empty state
+id: Empty state
 section: components
 cssPrefix: pf-c-empty-state
 ---
 
 ## Examples
 
-```hbs title=Basic
+### Basic
+```hbs
 {{#> empty-state}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}
@@ -41,7 +42,8 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-```hbs title=Small
+### Small
+```hbs
 {{#> empty-state empty-state--modifier="pf-m-sm"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}
@@ -76,7 +78,8 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-```hbs title=Large
+### Large
+```hbs
 {{#> empty-state empty-state--modifier="pf-m-lg"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}
@@ -111,7 +114,8 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-```hbs title=Extra-large
+### Extra large
+```hbs
 {{#> empty-state empty-state--modifier="pf-m-xl"}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-4xl"}}
@@ -126,7 +130,8 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
-```hbs title=With-primary-element
+### With primary element
+```hbs
 {{#> empty-state}}
   {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-lg"}}

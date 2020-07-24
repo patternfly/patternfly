@@ -1,12 +1,14 @@
 ---
-title: Page
+id: Page
 section: components
 cssPrefix: pf-c-page
+wrapperTag: div
 ---
 
 ## Examples
 
-```hbs title=Vertical-nav
+### Vertical nav
+```hbs
 {{#> page}}
   {{#> page-header}}
     {{#> page-header-brand}}
@@ -37,7 +39,8 @@ cssPrefix: pf-c-page
 {{/page}}
 ```
 
-```hbs title=Horizontal-nav
+### Horizontal nav
+```hbs
 {{#> page page--nav-direction="vertical"}}
   {{#> page-header}}
     {{!-- Brand --}}
@@ -68,7 +71,8 @@ cssPrefix: pf-c-page
 {{/page}}
 ```
 
-```hbs title=With-or-without-fill
+### With or without fill
+```hbs
 {{#> page page--nav-direction="vertical"}}
   {{#> page-header}}
     {{!-- Brand --}}
@@ -99,7 +103,8 @@ cssPrefix: pf-c-page
 {{/page}}
 ```
 
-```hbs title=Main-section-padding
+### Main section padding
+```hbs
 {{#> page}}
   {{#> page-header}}
     {{#> page-header-brand}}

@@ -5,17 +5,17 @@
     {{{select--attribute}}}
   {{/if}}>
   {{#unless select--IsCurrentlyTyping}}
-    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Alabama</button></li>
-    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">Florida</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-selected="false">Alabama</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-selected="false">Florida</button></li>
   {{/unless}}
-  <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">{{#if select--IsCurrentlyTyping}}<mark class="pf-c-select__menu-item--match">{{/if}}New{{#if select--IsCurrentlyTyping}}</mark>{{/if}} Jersey</button></li>
+  <li><button type="button" class="pf-c-select__menu-item" aria-selected="false">{{#if select--IsCurrentlyTyping}}<mark class="pf-c-select__menu-item--match">{{/if}}New{{#if select--IsCurrentlyTyping}}</mark>{{/if}} Jersey</button></li>
   {{#unless select--IsMultiSelect}}
     <li>
       <button type="button" class="pf-c-select__menu-item{{#if select--ItemIsSelected}} pf-m-selected{{/if}}"
         {{#if select--ItemIsSelected}}
-          aria-pressed="true"
+          aria-selected="true"
         {{else}}
-          aria-pressed="false"
+          aria-selected="false"
         {{/if}}>
         {{#if select--IsCurrentlyTyping}}<mark class="pf-c-select__menu-item--match">{{/if}}New{{#if select--IsCurrentlyTyping}}</mark>{{/if}} Mexico
         {{#if select--ItemIsSelected}}
@@ -24,8 +24,8 @@
       </button>
     </li>
   {{/unless}}
-  <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">{{#if select--IsCurrentlyTyping}}<mark class="pf-c-select__menu-item--match">{{/if}}New{{#if select--IsCurrentlyTyping}}</mark>{{/if}} York</button></li>
+  <li><button type="button" class="pf-c-select__menu-item" aria-selected="false">{{#if select--IsCurrentlyTyping}}<mark class="pf-c-select__menu-item--match">{{/if}}New{{#if select--IsCurrentlyTyping}}</mark>{{/if}} York</button></li>
   {{#unless select--IsCurrentlyTyping}}
-    <li><button type="button" class="pf-c-select__menu-item" aria-pressed="false">North Carolina</button></li>
+    <li><button type="button" class="pf-c-select__menu-item" aria-selected="false">North Carolina</button></li>
   {{/unless}}
 </ul>

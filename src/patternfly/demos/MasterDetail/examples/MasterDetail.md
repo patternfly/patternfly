@@ -1,11 +1,13 @@
 ---
-title: Master Detail
+id: Master Detail
 section: demos
+wrapperTag: div
 ---
 
 ## Demos
 
-```hbs title=Master-detail-expanded isFullscreen
+### Master detail expanded
+```hbs isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-expanded-example"
   master-detail-template--title="Master detail expanded"
@@ -59,7 +61,8 @@ section: demos
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-collapsed isFullscreen
+### Master detail collapsed
+```hbs isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-collapsed-example"
   master-detail-template--title="Master detail collapsed"
@@ -113,7 +116,8 @@ section: demos
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-content-body-padding isFullscreen
+### Master detail content body padding
+```hbs isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-panel-body-padding"
   master-detail-template--title="Padded content example"
@@ -162,7 +166,8 @@ section: demos
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-card-view-expanded isFullscreen
+### Master detail card view expanded
+```hbs isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-card-view-expanded-example"
   master-detail-template--title="Main title"
@@ -213,7 +218,8 @@ section: demos
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-card-simple-list-expanded-on-mobile isFullscreen
+### Master detail card simple list expanded on mobile
+```hbs isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-card-simple-list-example"
   master-detail-template--title="Master detail, in card, simple list"
@@ -262,7 +268,8 @@ section: demos
 {{/master-detail-template}}
 ```
 
-```hbs title=Master-detail-card-data-list-expanded-on-mobile isFullscreen
+### Master detail card data list expanded on mobile
+```hbs isFullscreen
 {{#> master-detail-template
   master-detail-template--id="master-detail-card-data-list-example"
   master-detail-template--title="Master detail, in card, data list"
@@ -313,7 +320,8 @@ section: demos
 {{/master-detail-template}}
 ```
 
-```hbs title=Inline-modifier isFullscreen
+### Inline modifier
+```hbs isFullscreen
 {{#> master-detail-template
   master-detail-template--id="independent-scroll-example"
   master-detail-template--title="Master detail expanded, with data-list and .pf-m-inline modifier demo"
