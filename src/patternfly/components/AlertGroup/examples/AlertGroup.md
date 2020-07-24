@@ -55,7 +55,7 @@ cssPrefix: pf-c-alert-group
 | `.pf-c-alert-group__item` | `<li>` | Creates an alert group item. **Required** |
 
 ### Toast alert group
-```hbs isFullscreen=true
+```hbs isFullscreen
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success toast alert"'}}
