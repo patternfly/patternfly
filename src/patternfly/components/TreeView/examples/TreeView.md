@@ -2,121 +2,122 @@
 title: Tree view
 section: components
 cssPrefix: pf-c-tree-view
+beta: true
 ---
 
 ## Examples
 ```hbs title=Default
 {{#> tree-view}}
-    {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
-            {{#> tree-view-link tree-view-link--IsFirst="true"}}
-                {{> tree-view-link-toggle}}
-                {{#> tree-view-link-text}}
-                    Application launcher
-                {{/tree-view-link-text}}
-            {{/tree-view-link}}
-            {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
-                    {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
-                        {{> tree-view-link-toggle}}
-                        {{#> tree-view-link-text}}
-                            Application 1
-                        {{/tree-view-link-text}}
-                    {{/tree-view-link}}
-                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link}}
-                                {{#> tree-view-link-text}}
-                                    Settings
-                                {{/tree-view-link-text}}
-                            {{/tree-view-link}}
-                        {{/tree-view-list-item}}
-                        {{#> tree-view-list-item}}
-                            {{#> tree-view-link tree-view-link--modifier="pf-m-current"}}
-                                {{#> tree-view-link-text}}
-                                    Current
-                                {{/tree-view-link-text}}
-                            {{/tree-view-link}}
-                        {{/tree-view-list-item}}
-                    {{/tree-view-list}}
-                {{/tree-view-list-item}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
-                    {{#> tree-view-link}}
-                        {{> tree-view-link-toggle}}
-                        {{#> tree-view-link-text}}
-                            Application 2
-                        {{/tree-view-link-text}}
-                    {{/tree-view-link}}
-                    {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
-                            {{#> tree-view-link}}
-                                {{> tree-view-link-toggle}}
-                                {{#> tree-view-link-text}}
-                                    Settings
-                                {{/tree-view-link-text}}
-                            {{/tree-view-link}}
-                        {{/tree-view-list-item}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
-                            {{#> tree-view-link}}
-                                {{> tree-view-link-toggle}}
-                                {{#> tree-view-link-text}}
-                                    Loader
-                                {{/tree-view-link-text}}
-                            {{/tree-view-link}}
-                            {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
-                                    {{#> tree-view-link}}
-                                        {{> tree-view-link-toggle}}
-                                        {{#> tree-view-link-text}}
-                                            Loading app 1
-                                        {{/tree-view-link-text}}
-                                    {{/tree-view-link}}
-                                {{/tree-view-list-item}}
-                                {{#> tree-view-list-item}}
-                                    {{#> tree-view-link}}
-                                        {{#> tree-view-link-text}}
-                                            Loader app 2
-                                        {{/tree-view-link-text}}
-                                    {{/tree-view-link}}
-                                {{/tree-view-list-item}}
-                                {{#> tree-view-list-item}}
-                                    {{#> tree-view-link}}
-                                        {{#> tree-view-link-text}}
-                                            Loader app 3
-                                        {{/tree-view-link-text}}
-                                    {{/tree-view-link}}
-                                {{/tree-view-list-item}}
-                            {{/tree-view-list}}
-                        {{/tree-view-list-item}}
-                    {{/tree-view-list}}
-                {{/tree-view-list-item}}
-            {{/tree-view-list}}
-        {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
-            {{#> tree-view-link}}
-                {{> tree-view-link-toggle}}
-                {{#> tree-view-link-text}}
-                    Cost management
-                {{/tree-view-link-text}}
-            {{/tree-view-link}}
-        {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
-            {{#> tree-view-link}}
-                {{> tree-view-link-toggle}}
-                {{#> tree-view-link-text}}
-                    Sources
-                {{/tree-view-link-text}}
-            {{/tree-view-link}}
-        {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
-            {{#> tree-view-link}}
-                {{> tree-view-link-toggle}}
-                {{#> tree-view-link-text}}
-                    This is a really really really long folder name that overflows from the width of the container.
-                {{/tree-view-link-text}}
-            {{/tree-view-link}}
-        {{/tree-view-list-item}}
-    {{/tree-view-list}}
+	{{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+		{{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+			{{#> tree-view-link tree-view-link--IsFirst="true"}}
+				{{> tree-view-link-toggle}}
+				{{#> tree-view-link-text}}
+					Application launcher
+				{{/tree-view-link-text}}
+      {{/tree-view-link}}
+			{{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
+				{{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+					{{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
+						{{> tree-view-link-toggle}}
+						{{#> tree-view-link-text}}
+							Application 1
+						{{/tree-view-link-text}}
+					{{/tree-view-link}}
+					{{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
+						{{#> tree-view-list-item}}
+							{{#> tree-view-link}}
+								{{#> tree-view-link-text}}
+									Settings
+								{{/tree-view-link-text}}
+							{{/tree-view-link}}
+						{{/tree-view-list-item}}
+						{{#> tree-view-list-item}}
+							{{#> tree-view-link tree-view-link--modifier="pf-m-current"}}
+								{{#> tree-view-link-text}}
+									Current
+								{{/tree-view-link-text}}
+							{{/tree-view-link}}
+						{{/tree-view-list-item}}
+					{{/tree-view-list}}
+				{{/tree-view-list-item}}
+				{{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+					{{#> tree-view-link}}
+						{{> tree-view-link-toggle}}
+						{{#> tree-view-link-text}}
+							Application 2
+						{{/tree-view-link-text}}
+					{{/tree-view-link}}
+					{{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
+						{{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+							{{#> tree-view-link}}
+								{{> tree-view-link-toggle}}
+								{{#> tree-view-link-text}}
+									Settings
+								{{/tree-view-link-text}}
+							{{/tree-view-link}}
+						{{/tree-view-list-item}}
+						{{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+							{{#> tree-view-link}}
+								{{> tree-view-link-toggle}}
+								{{#> tree-view-link-text}}
+									Loader
+								{{/tree-view-link-text}}
+							{{/tree-view-link}}
+							{{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
+								{{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+									{{#> tree-view-link}}
+										{{> tree-view-link-toggle}}
+										{{#> tree-view-link-text}}
+											Loading app 1
+										{{/tree-view-link-text}}
+									{{/tree-view-link}}
+								{{/tree-view-list-item}}
+								{{#> tree-view-list-item}}
+									{{#> tree-view-link}}
+										{{#> tree-view-link-text}}
+											Loader app 2
+										{{/tree-view-link-text}}
+									{{/tree-view-link}}
+								{{/tree-view-list-item}}
+								{{#> tree-view-list-item}}
+									{{#> tree-view-link}}
+										{{#> tree-view-link-text}}
+											Loader app 3
+										{{/tree-view-link-text}}
+									{{/tree-view-link}}
+								{{/tree-view-list-item}}
+							{{/tree-view-list}}
+						{{/tree-view-list-item}}
+					{{/tree-view-list}}
+				{{/tree-view-list-item}}
+			{{/tree-view-list}}
+			{{/tree-view-list-item}}
+			{{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+				{{#> tree-view-link}}
+					{{> tree-view-link-toggle}}
+					{{#> tree-view-link-text}}
+						Cost management
+					{{/tree-view-link-text}}
+				{{/tree-view-link}}
+			{{/tree-view-list-item}}
+			{{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+				{{#> tree-view-link}}
+					{{> tree-view-link-toggle}}
+					{{#> tree-view-link-text}}
+						Sources
+					{{/tree-view-link-text}}
+				{{/tree-view-link}}
+			{{/tree-view-list-item}}
+		{{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+			{{#> tree-view-link}}
+				{{> tree-view-link-toggle}}
+				{{#> tree-view-link-text}}
+					This is a really really really long folder name that overflows from the width of the container.
+				{{/tree-view-link-text}}
+			{{/tree-view-link}}
+		{{/tree-view-list-item}}
+	{{/tree-view-list}}
 {{/tree-view}}
 ```
 
@@ -128,7 +129,7 @@ cssPrefix: pf-c-tree-view
     {{/tree-view-search}}
     {{> divider}}
     {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
             {{#> tree-view-link tree-view-link--IsFirst="true"}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
@@ -136,7 +137,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
             {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                     {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
                         {{> tree-view-link-toggle}}
                         {{#> tree-view-link-text}}
@@ -160,7 +161,7 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                     {{#> tree-view-link}}
                         {{> tree-view-link-toggle}}
                         {{#> tree-view-link-text}}
@@ -168,7 +169,7 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
                     {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
@@ -176,7 +177,7 @@ cssPrefix: pf-c-tree-view
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
@@ -184,7 +185,7 @@ cssPrefix: pf-c-tree-view
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                             {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
                                     {{#> tree-view-link}}
                                         {{> tree-view-link-toggle}}
                                         {{#> tree-view-link-text}}
@@ -212,7 +213,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
@@ -220,7 +221,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
@@ -228,7 +229,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
@@ -243,23 +244,19 @@ cssPrefix: pf-c-tree-view
 ```hbs title=With-checkboxes
 {{#> tree-view}}
     {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
             {{#> tree-view-link tree-view-link--IsFirst="true"}}
                 {{> tree-view-link-toggle}}
-                {{#> check}}
-                    {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                {{/check}}
+								<input type="checkbox"/>
                 {{#> tree-view-link-text}}
                     Application launcher
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
             {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                     {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
                         {{> tree-view-link-toggle}}
-                        {{#> check}}
-                            {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                        {{/check}}
+												<input type="checkbox"/>
                         {{#> tree-view-link-text}}
                             Application 1
                         {{/tree-view-link-text}}
@@ -267,9 +264,7 @@ cssPrefix: pf-c-tree-view
                     {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
                         {{#> tree-view-list-item}}
                             {{#> tree-view-link}}
-                                {{#> check}}
-                                    {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                                {{/check}}
+																<input type="checkbox"/>
                                 {{#> tree-view-link-text}}
                                     Settings
                                 {{/tree-view-link-text}}
@@ -277,9 +272,7 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                         {{#> tree-view-list-item}}
                             {{#> tree-view-link tree-view-link--modifier="pf-m-current"}}
-                                {{#> check}}
-                                    {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                                {{/check}}
+																<input type="checkbox"/>
                                 {{#> tree-view-link-text}}
                                     Current
                                 {{/tree-view-link-text}}
@@ -287,45 +280,37 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                     {{#> tree-view-link}}
                         {{> tree-view-link-toggle}}
-                        {{#> check}}
-                            {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                        {{/check}}
+												<input type="checkbox"/>
                         {{#> tree-view-link-text}}
                             Application 2
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
                     {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
-                                {{#> check}}
-                                    {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                                {{/check}}
+																<input type="checkbox"/>
                                 {{#> tree-view-link-text}}
                                     Settings
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
-                                {{#> check}}
-                                    {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                                {{/check}}
+																<input type="checkbox"/>
                                 {{#> tree-view-link-text}}
                                     Loader
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                             {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
                                     {{#> tree-view-link}}
                                         {{> tree-view-link-toggle}}
-                                        {{#> check}}
-                                            {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                                        {{/check}}
+																				<input type="checkbox"/>
                                         {{#> tree-view-link-text}}
                                             Loading app 1
                                         {{/tree-view-link-text}}
@@ -333,9 +318,7 @@ cssPrefix: pf-c-tree-view
                                 {{/tree-view-list-item}}
                                 {{#> tree-view-list-item}}
                                     {{#> tree-view-link}}
-                                        {{#> check}}
-                                            {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                                        {{/check}}
+ 																				<input type="checkbox"/>
                                         {{#> tree-view-link-text}}
                                             Loader app 2
                                         {{/tree-view-link-text}}
@@ -343,9 +326,7 @@ cssPrefix: pf-c-tree-view
                                 {{/tree-view-list-item}}
                                 {{#> tree-view-list-item}}
                                     {{#> tree-view-link}}
-                                        {{#> check}}
-                                            {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                                        {{/check}}
+     																		<input type="checkbox"/>
                                         {{#> tree-view-link-text}}
                                             Loader app 3
                                         {{/tree-view-link-text}}
@@ -357,34 +338,28 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
-                {{#> check}}
-                    {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                {{/check}}
+								<input type="checkbox"/>
                 {{#> tree-view-link-text}}
                     Cost management
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
-                    {{#> check}}
-                        {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                    {{/check}}
+								<input type="checkbox"/>
                 {{#> tree-view-link-text}}
                     Sources
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
-                    {{#> check}}
-                        {{#> check-input check-input--attribute='id="check" name="check"'}}{{/check-input}}
-                    {{/check}}
+								<input type="checkbox"/>
                 {{#> tree-view-link-text}}
                     This is a really really really long folder name that overflows from the width of the container.
                 {{/tree-view-link-text}}
@@ -397,7 +372,7 @@ cssPrefix: pf-c-tree-view
 ```hbs title=With-icons
 {{#> tree-view}}
     {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
             {{#> tree-view-link tree-view-link--IsFirst="true"}}
                 {{> tree-view-link-toggle}}
                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true" tree-view-link-icon--IsExpanded="true"}}
@@ -406,7 +381,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
             {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                     {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
                         {{> tree-view-link-toggle}}
                         {{> tree-view-link-icon tree-view-link-icon--IsFolder="true" tree-view-link-icon--IsExpanded="true"}}
@@ -433,7 +408,7 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                     {{#> tree-view-link}}
                         {{> tree-view-link-toggle}}
                         {{> tree-view-link-icon tree-view-link-icon--IsFolder="true" tree-view-link-icon--IsExpanded="true"}}
@@ -442,7 +417,7 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-link-text}}
                     {{/tree-view-link}}
                     {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
@@ -451,7 +426,7 @@ cssPrefix: pf-c-tree-view
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true" tree-view-link-icon--IsExpanded="true"}}
@@ -460,7 +435,7 @@ cssPrefix: pf-c-tree-view
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                             {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
                                     {{#> tree-view-link}}
                                         {{> tree-view-link-toggle}}
                                         {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
@@ -491,7 +466,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
@@ -500,7 +475,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
@@ -509,7 +484,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{> tree-view-link-icon tree-view-link-icon--IsFolder="true"}}
@@ -525,26 +500,30 @@ cssPrefix: pf-c-tree-view
 ```hbs title=With-badges
 {{#> tree-view}}
     {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
             {{#> tree-view-link tree-view-link--IsFirst="true"}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Application launcher
                 {{/tree-view-link-text}}
-                {{#> badge badge--modifier="pf-m-read"}}
-                    2
-                {{/badge}}
+								{{#> tree-view-link-count}}
+									{{#> badge badge--modifier="pf-m-read"}}
+										2
+									{{/badge}}
+								{{/tree-view-link-count}}
             {{/tree-view-link}}
             {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                     {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
-                        {{> tree-view-link-toggle}}
-                        {{#> tree-view-link-text}}
-                            Application 1
-                        {{/tree-view-link-text}}
-                            {{#> badge badge--modifier="pf-m-read"}}
-                                2
-                            {{/badge}}
+											{{> tree-view-link-toggle}}
+											{{#> tree-view-link-text}}
+												Application 1
+											{{/tree-view-link-text}}
+											{{#> tree-view-link-count}}
+												{{#> badge badge--modifier="pf-m-read"}}
+													2
+												{{/badge}}
+											{{/tree-view-link-count}}
                     {{/tree-view-link}}
                     {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
                         {{#> tree-view-list-item}}
@@ -563,48 +542,56 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                     {{#> tree-view-link}}
                         {{> tree-view-link-toggle}}
                         {{#> tree-view-link-text}}
                             Application 2
                         {{/tree-view-link-text}}
-                        {{#> badge badge--modifier="pf-m-read"}}
-                            2
-                        {{/badge}}
+												{{#> tree-view-link-count}}
+													{{#> badge badge--modifier="pf-m-read"}}
+														2
+													{{/badge}}
+												{{/tree-view-link-count}}
                     {{/tree-view-link}}
                     {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
                                     Settings
                                 {{/tree-view-link-text}}
-                                {{#> badge badge--modifier="pf-m-read"}}
-                                    2
-                                {{/badge}}
+														{{#> tree-view-link-count}}
+															{{#> badge badge--modifier="pf-m-read"}}
+																2
+															{{/badge}}
+														{{/tree-view-link-count}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
                                     Loader
                                 {{/tree-view-link-text}}
-                                {{#> badge badge--modifier="pf-m-read"}}
-                                    2
-                                {{/badge}}
+															{{#> tree-view-link-count}}
+																{{#> badge badge--modifier="pf-m-read"}}
+																	2
+																{{/badge}}
+															{{/tree-view-link-count}}
                             {{/tree-view-link}}
                             {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
                                     {{#> tree-view-link}}
                                         {{> tree-view-link-toggle}}
                                         {{#> tree-view-link-text}}
                                             Loading app 1
                                         {{/tree-view-link-text}}
-                                        {{#> badge badge--modifier="pf-m-read"}}
-                                            2
-                                        {{/badge}}
+																			{{#> tree-view-link-count}}
+																				{{#> badge badge--modifier="pf-m-read"}}
+																					2
+																				{{/badge}}
+																			{{/tree-view-link-count}}
                                     {{/tree-view-link}}
                                 {{/tree-view-list-item}}
                                 {{#> tree-view-list-item}}
@@ -627,37 +614,43 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Cost management
                 {{/tree-view-link-text}}
-                {{#> badge badge--modifier="pf-m-read"}}
-                    2
-                {{/badge}}
+								{{#> tree-view-link-count}}
+									{{#> badge badge--modifier="pf-m-read"}}
+										2
+									{{/badge}}
+								{{/tree-view-link-count}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
                     Sources
                 {{/tree-view-link-text}}
-                {{#> badge badge--modifier="pf-m-read"}}
-                    2
-                {{/badge}}
+								{{#> tree-view-link-count}}
+									{{#> badge badge--modifier="pf-m-read"}}
+										2
+									{{/badge}}
+								{{/tree-view-link-count}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
-                {{> tree-view-link-toggle}}
-                {{#> tree-view-link-text}}
-                    This is a really really really long folder name that overflows from the width of the container.
-                {{/tree-view-link-text}}
-                {{#> badge badge--modifier="pf-m-read"}}
-                    2
-                {{/badge}}
+							{{> tree-view-link-toggle}}
+							{{#> tree-view-link-text}}
+									This is a really really really long folder name that overflows from the width of the container.
+							{{/tree-view-link-text}}
+							{{#> tree-view-link-count}}
+								{{#> badge badge--modifier="pf-m-read"}}
+									2
+								{{/badge}}
+							{{/tree-view-link-count}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
     {{/tree-view-list}}
@@ -667,7 +660,7 @@ cssPrefix: pf-c-tree-view
 ```hbs title=With-action-item
 {{#> tree-view}}
     {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
             {{#> tree-view-link-wrapper}}
                 {{#> tree-view-link tree-view-link--IsFirst="true"}}
                     {{> tree-view-link-toggle}}
@@ -680,7 +673,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-action}}
             {{/tree-view-link-wrapper}}
             {{#> tree-view-list newcontext tree-view-list--IsChild="true" tree-view-list--modifier="pf-m-nested-level-1"}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                     {{#> tree-view-link-wrapper}}
                         {{#> tree-view-link tree-view-link--modifier="pf-m-first"}}
                             {{> tree-view-link-toggle}}
@@ -709,7 +702,7 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-list-item}}
                     {{/tree-view-list}}
                 {{/tree-view-list-item}}
-                {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                     {{#> tree-view-link-wrapper}}
                         {{#> tree-view-link}}
                             {{> tree-view-link-toggle}}
@@ -722,7 +715,7 @@ cssPrefix: pf-c-tree-view
                         {{/tree-view-action}}
                     {{/tree-view-link-wrapper}}
                     {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-2"}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
@@ -730,7 +723,7 @@ cssPrefix: pf-c-tree-view
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                         {{/tree-view-list-item}}
-                        {{#> tree-view-list-item tree-view-list-item--expandable="true" tree-view-list-item--expanded="true"}}
+                        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
                             {{#> tree-view-link}}
                                 {{> tree-view-link-toggle}}
                                 {{#> tree-view-link-text}}
@@ -738,7 +731,7 @@ cssPrefix: pf-c-tree-view
                                 {{/tree-view-link-text}}
                             {{/tree-view-link}}
                             {{#> tree-view-list newcontext tree-view-list--modifier="pf-m-nested-level-3"}}
-                                {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+                                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
                                     {{#> tree-view-link-wrapper}}
                                         {{#> tree-view-link}}
                                             {{> tree-view-link-toggle}}
@@ -771,7 +764,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-list-item}}
             {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
@@ -779,7 +772,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link}}
                 {{> tree-view-link-toggle}}
                 {{#> tree-view-link-text}}
@@ -787,7 +780,7 @@ cssPrefix: pf-c-tree-view
                 {{/tree-view-link-text}}
             {{/tree-view-link}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--expandable="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
             {{#> tree-view-link-wrapper}}
                 {{#> tree-view-link}}
                     {{> tree-view-link-toggle}}
@@ -810,8 +803,8 @@ cssPrefix: pf-c-tree-view
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="tree"` | `.pf-c-tree-view__list` | Identifies the `ul` as a tree widget. **Place on the first ul only** |
-| `role="group"` | `.pf-c-tree-view__list` | Identifies the `ul` element as a container of treeitem elements that form a branch of the tree. **Place on all ul's except the first ul** |
+| `role="tree"` | `.pf-c-tree-view__list` | Identifies the `ul` as a tree widget. **Place on the outermost `ul` only** |
+| `role="group"` | `.pf-c-tree-view__list` | Identifies the `ul` element as a container of treeitem elements that form a branch of the tree. **Place on all `ul`s except the first `ul`** |
 | `role="treeitem"`| `.pf-c-tree-view__link` | Identifies the link as a tree item. **Note:** The role is set on the element that is interactive and focusable. |
 | `role="none"` | `.pf-c-tree-view__list-item` | Hides the implicit listitem role of the li element from assistive technologies. |
 | `aria-expanded="false"` | `.pf-c-tree-view__list-item.pf-m-expandable` | Indicates the parent node is closed, i.e., the descendant elements are not visible. |
@@ -827,7 +820,8 @@ cssPrefix: pf-c-tree-view
 | `.pf-c-tree-view__list` | `<ul>` | Initiates a tree view list. **Required** |
 | `.pf-c-tree-view__list-item` | `<li>` | Initiates a tree view list item. **Required** |
 | `.pf-c-tree-view__link` | `<button>`, `<a>` | Initiates a tree view link. **Required** |
-| `.pf-c-tree-view__toggle` | `<span>` | Initiates a tree view toggle. |
+| `.pf-c-tree-view__link-count` | `<span>` | Initiates a tree view link count. |
+| `.pf-c-tree-view__toggle-icon` | `<span>` | Initiates a tree view toggle icon. |
 | `.pf-c-tree-view__text` | `<span>` | Initiates tree view text. |
 | `.pf-c-tree-view__icon` | `<span>` | Initiates a tree view icon. |
 | `.pf-c-tree-view__link-wrapper` | `<div>` | Initiates a tree view link wrapper. **Required when using .pf-c-tree-view__action** |

@@ -18,22 +18,23 @@
   --pf-c-tree-view__list--m-nested-level-2__list-item--m-expandable__link--PaddingLeft: calc(var(--pf-c-tree-view__list--m-nested-level-1__list-item--m-expandable__link--PaddingLeft) + var(--pf-global--spacer--md));
   --pf-c-tree-view__list--m-nested-level-3__list-item--m-expandable__link--PaddingLeft: calc(var(--pf-c-tree-view__list--m-nested-level-2__list-item--m-expandable__link--PaddingLeft) + var(--pf-global--spacer--md));
 
-  // link hover
+  // link hover/focus
   --pf-c-tree-view__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-tree-view__link--focus--BackgroundColor: var(--pf-global--palette--black-150);
 
-  // toggle
-  --pf-c-tree-view__link--m-expanded__toggle--Rotate: 90deg;
-  --pf-c-tree-view__link-toggle--PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-tree-view__link-toggle--PaddingLeft: var(--pf-global--spacer--xs);
-  --pf-c-tree-view__link-toggle--MinWidth: var(--pf-global--spacer--lg);
-  --pf-c-tree-view__link-toggle--MinHeight: var(--pf-c-tree-view__link-toggle--MinWidth);
+  // toggle icon
+  --pf-c-tree-view__link--m-expanded__toggle-icon--Rotate: 90deg;
+  --pf-c-tree-view__link-toggle-icon--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-tree-view__link-toggle-icon--PaddingLeft: var(--pf-global--spacer--xs);
+  --pf-c-tree-view__link-toggle-icon--MinWidth: var(--pf-global--spacer--lg);
+  --pf-c-tree-view__link-toggle-icon--MinHeight: var(--pf-c-tree-view__link-toggle--icon--MinWidth);
 
   // check
-  --pf-c-tree-view__link--c-check--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__link--input--MarginRight: var(--pf-global--spacer--sm);
 
   // badge
-  --pf-c-tree-view__link--c-badge--MarginLeft: var(--pf-global--spacer--xs);
-  --pf-c-tree-view__link--c-badge--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-tree-view__link-count--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-tree-view__link-count--c-badge--m-read--BackgroundColor: var(--pf-global--disabled-color--200);
 
   // search
   --pf-c-tree-view__search--PaddingTop: var(--pf-global--spacer--sm);
@@ -44,6 +45,9 @@
   // icon
   --pf-c-tree-view__link-icon--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tree-view__link-icon--Color: var(--pf-global--icon--Color--light);
+
+  // text
+  --pf-c-tree-view__link-text--max-lines: 1;
 
   // action
   --pf-c-tree-view__action--PaddingRight: var(--pf-global--spacer--md);
@@ -97,8 +101,8 @@
 
 .pf-c-tree-view__list-item {
   &.pf-m-expanded {
-    > .pf-c-tree-view__link > .pf-c-tree-view__link-toggle {
-      transform: rotate(var(--pf-c-tree-view__link--m-expanded__toggle--Rotate));
+    > .pf-c-tree-view__link > .pf-c-tree-view__link-toggle-icon {
+      transform: rotate(var(--pf-c-tree-view__link--m-expanded__toggle-icon--Rotate));
     }
   }
 }
@@ -126,36 +130,39 @@
     background-color: var(--pf-c-tree-view__link--hover--BackgroundColor);
   }
 
-  .pf-c-check {
-    --pf-c-check__input--MarginTop: 0;
-    --pf-c-check--GridGap: 0;
-
-    padding-right: var(--pf-c-tree-view__link--c-check--PaddingRight);
+  &:focus {
+    background-color: var(--pf-c-tree-view__link--focus--BackgroundColor);
   }
 
-  .pf-c-badge {
-    margin-left: var(--pf-c-tree-view__link--c-badge--MarginLeft);
+  input {
+    margin-right: var(--pf-c-tree-view__link--input--MarginRight);
+  }
 
-    &.pf-m-read {
-      --pf-c-badge--m-read--BackgroundColor: var(--pf-c-tree-view__link--c-badge--BackgroundColor);
+  .pf-c-tree-view__link-count {
+    margin-left: var(--pf-c-tree-view__link-count--MarginLeft);
+
+    .pf-c-badge.pf-m-read {
+      --pf-c-badge--m-read--BackgroundColor: var(--pf-c-tree-view__link-count--c-badge--m-read--BackgroundColor);
     }
   }
 }
 
-.pf-c-tree-view__link-toggle {
+.pf-c-tree-view__link-toggle-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: var(--pf-c-tree-view__link-toggle--MinWidth);
-  min-height: var(--pf-c-tree-view__link-toggle--MinHeight);
-  padding-right: var(--pf-c-tree-view__link-toggle--PaddingRight);
-  padding-left: var(--pf-c-tree-view__link-toggle--PaddingLeft);
+  min-width: var(--pf-c-tree-view__link-toggle-icon--MinWidth);
+  min-height: var(--pf-c-tree-view__link-toggle-icon--MinHeight);
+  padding-right: var(--pf-c-tree-view__link-toggle-icon--PaddingRight);
+  padding-left: var(--pf-c-tree-view__link-toggle-icon--PaddingLeft);
 }
 
 .pf-c-tree-view__link-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  // @include pf-text-overflow;
+
+  @include pf-line-clamp("var(--pf-c-tree-view__link-text--max-lines)");
+
+  word-break: break-word;
 }
 
 .pf-c-tree-view__search {
