@@ -1,4 +1,4 @@
-{{#> toolbar toolbar--id=(concat master-detail-template--id "-toolbar")}}
+{{#> toolbar toolbar--id=(concat primary-detail-template--id "-toolbar")}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
@@ -15,7 +15,7 @@
         {{/button}}
       {{/toolbar-item}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content="true" toolbar-overflow-menu-example--control="true"}}
-      {{#if master-detail-toolbar--HasViewToggle}}
+      {{#if primary-detail-toolbar--HasViewToggle}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-right"}}
           {{#> toolbar-item}}
             {{#> button button--modifier="pf-m-plain pf-m-active" button--attribute='aria-label="Grid view"'}}
