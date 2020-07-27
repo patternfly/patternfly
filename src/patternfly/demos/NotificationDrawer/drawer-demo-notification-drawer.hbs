@@ -1,0 +1,73 @@
+{{#> notification-drawer notification-drawer--id="drawer-demo-notification-drawer-groups"}}
+  {{#> notification-drawer-header}}
+    {{#> notification-drawer-header-title}}
+      Notifications
+    {{/notification-drawer-header-title}}
+    {{#> notification-drawer-header-status}}
+      2 unread
+    {{/notification-drawer-header-status}}
+    {{#> notification-drawer-header-action}}
+      {{#> dropdown id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{/notification-drawer-header-action}}
+  {{/notification-drawer-header}}
+  {{#> notification-drawer-body}}
+    {{#> notification-drawer-group-list}}
+      {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group1')}}
+        <h1>
+          {{#> notification-drawer-group-toggle}}
+            {{#> notification-drawer-group-toggle-title}}
+              First notification group
+            {{/notification-drawer-group-toggle-title}}
+            {{#> notification-drawer-group-toggle-count}}
+              {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+            {{/notification-drawer-group-toggle-count}}
+            {{> notification-drawer-group-toggle-icon}}
+          {{/notification-drawer-group-toggle}}
+        </h1>
+        {{> notification-drawer-basic-list}}
+      {{/notification-drawer-group}}
+      {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group2') notification-drawer-group--IsExpanded="true"}}
+        <h1>
+          {{#> notification-drawer-group-toggle}}
+            {{#> notification-drawer-group-toggle-title}}
+              Second notification group
+            {{/notification-drawer-group-toggle-title}}
+            {{#> notification-drawer-group-toggle-count}}
+              {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+            {{/notification-drawer-group-toggle-count}}
+            {{> notification-drawer-group-toggle-icon}}
+          {{/notification-drawer-group-toggle}}
+        </h1>
+        {{> notification-drawer-basic-list}}
+      {{/notification-drawer-group}}
+      {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group3')}}
+        <h1>
+          {{#> notification-drawer-group-toggle}}
+            {{#> notification-drawer-group-toggle-title}}
+              Third notification group
+            {{/notification-drawer-group-toggle-title}}
+            {{#> notification-drawer-group-toggle-count}}
+              {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+            {{/notification-drawer-group-toggle-count}}
+            {{> notification-drawer-group-toggle-icon}}
+          {{/notification-drawer-group-toggle}}
+        </h1>
+        {{> notification-drawer-basic-list}}
+      {{/notification-drawer-group}}
+      {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group4')}}
+        <h1>
+          {{#> notification-drawer-group-toggle}}
+            {{#> notification-drawer-group-toggle-title}}
+              Fourth notification group
+            {{/notification-drawer-group-toggle-title}}
+            {{#> notification-drawer-group-toggle-count}}
+              {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+            {{/notification-drawer-group-toggle-count}}
+            {{> notification-drawer-group-toggle-icon}}
+          {{/notification-drawer-group-toggle}}
+        </h1>
+        {{> notification-drawer-basic-list}}
+      {{/notification-drawer-group}}
+    {{/notification-drawer-group-list}}
+  {{/notification-drawer-body}}
+{{/notification-drawer}}
