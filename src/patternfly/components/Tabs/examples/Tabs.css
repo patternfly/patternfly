@@ -5,6 +5,6 @@
   background-color: var(--tabs-example-block--BackgroundColor);
 }
 
-.tabs-example-block-m-alt-color-scheme {
+.tabs-example-block-m-current-tab-background--light-300 {
   --tabs-example-block--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 }

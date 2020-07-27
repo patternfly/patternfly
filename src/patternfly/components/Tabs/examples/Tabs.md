@@ -64,12 +64,12 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
-### Box tabs alt color scheme
+### Box tabs current tab background light 300
 ```hbs
-{{#> tabs tabs--modifier="pf-m-box pf-m-alt-color-scheme" tabs--id="Box-tabs-alt-color-scheme"}}
+{{#> tabs tabs--modifier="pf-m-box pf-m-current-tab-background--light-300" tabs--id="Box-tabs-alt-color-scheme"}}
   {{> __tabs-list}}
 {{/tabs}}
-<div className="tabs-example-block tabs-example-block-m-alt-color-scheme"></div>
+<div className="tabs-example-block tabs-example-block-m-current-tab-background--light-300"></div>
 ```
 
 ### Inset
