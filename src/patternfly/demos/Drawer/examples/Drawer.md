@@ -33,13 +33,13 @@ wrapperTag: div
 ### Attention
 
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-attention" notification-badge--modifier="pf-m-attention"}}
+{{> drawer-demo-default id="drawer-attention" notification-badge--modifier="pf-m-attention" page-header-tools--IsAttention="true"}}
 ```
 
 ### Attention expanded
 
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-attention-expanded" notification-badge--modifier="pf-m-attention pf-m-unread" drawer-panel--IsOpen="true"}}
+{{> drawer-demo-default id="drawer-attention-expanded" notification-badge--modifier="pf-m-attention pf-m-unread" drawer-panel--IsOpen="true" page-header-tools--IsAttention="true"}}
 ```
 
 ## Documentation

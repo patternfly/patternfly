@@ -10,7 +10,6 @@
   --pf-c-notification-badge--after--Height: auto; // remove at breaking change
   --pf-c-notification-badge--after--BackgroundColor: transparent;
   --pf-c-notification-badge--hover--after--BorderColor: var(--pf-global--BorderColor--light-100);
-  --pf-c-notification-badge--hover--after--BorderWidth: var(--pf-global--BorderWidth--md);
 
   // This translation works for the Bell icon, although adjusted for a happy medium between FF and Chrome.
   // If other icons are used, a modifier may need to be created to allow for proper positioning on that icon.
@@ -38,6 +37,9 @@
   --pf-c-notification-badge--m-attention--after--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-notification-badge__count--MarginLeft: var(--pf-global--spacer--xs);
 
+  // Attention icon
+  --pf-c-notification-badge--pf-icon-attention-bell--LineHeight: var(--pf-global--LineHeight--sm);
+
   position: static;
 
   &::before { // update all --after vars to --before at breaking change
@@ -57,7 +59,6 @@
 
   &:hover {
     --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--hover--after--BorderColor);
-    --pf-c-notification-badge--after--BorderWidth: var(--pf-c-notification-badge--hover--after--BorderWidth);
   }
 
   & > i {
@@ -68,6 +69,14 @@
   // set children to relative so they appear above ::before
   & > * {
     position: relative;
+  }
+
+  .pf-icon-attention-bell {
+    line-height: var(--pf-c-notification-badge--pf-icon-attention-bell--LineHeight);
+
+    &::before {
+      vertical-align: text-top;
+    }
   }
 
   &.pf-m-read {

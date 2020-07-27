@@ -25,7 +25,7 @@ import './NotificationBadge.css'
 
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention notifications"'}}
   {{#> notification-badge notification-badge--modifier="pf-m-attention"}}
-    <i class="fas fa-bell" aria-hidden="true"></i>
+    <i class="pf-icon-attention-bell" aria-hidden="true"></i>
   {{/notification-badge}}
 {{/button}}
 ```
@@ -47,7 +47,7 @@ import './NotificationBadge.css'
 
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention notifications"'}}
   {{#> notification-badge notification-badge--modifier="pf-m-attention" notification-badge--count="26"}}
-    <i class="fas fa-bell" aria-hidden="true"></i>
+    <i class="pf-icon-attention-bell" aria-hidden="true"></i>
   {{/notification-badge}}
 {{/button}}
 ```
@@ -70,7 +70,7 @@ import './NotificationBadge.css'
 
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention notifications"'}}
     {{#> notification-badge notification-badge--modifier="pf-m-attention"}}
-      <i class="fas fa-bell" aria-hidden="true"></i>
+      <i class="pf-icon-attention-bell" aria-hidden="true"></i>
     {{/notification-badge}}
   {{/button}}
 </div>
@@ -94,7 +94,7 @@ import './NotificationBadge.css'
 
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention notifications"'}}
     {{#> notification-badge notification-badge--modifier="pf-m-attention" notification-badge--count="26"}}
-      <i class="fas fa-bell" aria-hidden="true"></i>
+      <i class="pf-icon-attention-bell" aria-hidden="true"></i>
     {{/notification-badge}}
   {{/button}}
 </div>
