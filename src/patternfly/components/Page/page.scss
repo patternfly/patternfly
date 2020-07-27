@@ -258,12 +258,14 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__header-tools-item {
   @include pf-hidden-visible(var(--pf-c-page__header-tools-item--Display));
 
+  .pf-c-button {
+    > :not(.pf-c-notification-badge) {
+      position: relative;
+    }
+  }
+
   &.pf-m-selected {
     .pf-c-button {
-      > :not(.pf-c-notification-badge) {
-        position: relative;
-      }
-
       &::before {
         position: absolute;
         top: 0;
