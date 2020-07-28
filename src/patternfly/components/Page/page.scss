@@ -50,6 +50,10 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-tools-group--Display: flex;
   --pf-c-page__header-tools-item--Display: block;
 
+  // Header tools notification badge
+  --pf-c-page__header-tools-item--c-notification-badge--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-tools-item--c-notification-badge--hover--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+
   // Header tools group button
   --pf-c-page__header-tools--c-button--m-selected--before--Width: auto;
   --pf-c-page__header-tools--c-button--m-selected--before--Height: auto;
@@ -261,6 +265,16 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   .pf-c-button {
     > :not(.pf-c-notification-badge) {
       position: relative;
+    }
+  }
+
+  .pf-c-notification-badge {
+    &.pf-m-read {
+      --pf-c-notification-badge--after--BorderColor: var(--pf-c-page__header-tools-item--c-notification-badge--BorderColor);
+
+      &:hover {
+        --pf-c-notification-badge--after--BorderColor: var(--pf-c-page__header-tools-item--c-notification-badge--hover--BorderColor);
+      }
     }
   }
 
