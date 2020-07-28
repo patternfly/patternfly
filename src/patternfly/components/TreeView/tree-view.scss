@@ -19,7 +19,7 @@
   --pf-c-tree-view__list--m-nested-level-3__list-item--m-expandable__link--PaddingLeft: calc(var(--pf-c-tree-view__list--m-nested-level-2__list-item--m-expandable__link--PaddingLeft) + var(--pf-global--spacer--md));
 
   // link hover/focus
-  --pf-c-tree-view__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-tree-view__node--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-tree-view__link--focus--BackgroundColor: var(--pf-global--palette--black-150);
 
   // toggle icon
@@ -126,10 +126,6 @@
     font-weight: var(--pf-c-tree-view__link--m-first--FontWeight);
   }
 
-  &:hover {
-    background-color: var(--pf-c-tree-view__link--hover--BackgroundColor);
-  }
-
   &:focus {
     background-color: var(--pf-c-tree-view__link--focus--BackgroundColor);
   }
@@ -174,12 +170,11 @@
   color: var(--pf-c-tree-view__link-icon--Color);
 }
 
-.pf-c-tree-view__link-wrapper {
-  display: grid;
-  grid-template-columns: minmax(0, 100%) auto;
+.pf-c-tree-view__node {
+  display: flex;
 
   &:hover {
-    background-color: var(--pf-c-tree-view__link--hover--BackgroundColor);
+    background-color: var(--pf-c-tree-view__node--hover--BackgroundColor);
 
     .pf-c-tree-view__action {
       display: block;
