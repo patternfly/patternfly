@@ -72,10 +72,11 @@
   }
 
   .pf-icon-attention-bell {
+    display: inline-block;
     line-height: var(--pf-c-notification-badge--pf-icon-attention-bell--LineHeight);
 
     &::before {
-      vertical-align: text-top;
+      vertical-align: bottom;
     }
   }
 
