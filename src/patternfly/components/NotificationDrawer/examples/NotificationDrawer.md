@@ -139,6 +139,7 @@ cssPrefix: pf-c-notification-drawer
 | `.pf-m-warning` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the warning state. |
 | `.pf-m-danger` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the danger state. |
 | `.pf-m-success` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the success state. |
+| `.pf-m-recommendation` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the recommendation state. |
 | `.pf-m-read` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the read state. |
 | `.pf-m-hoverable` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item hover states to inidicate it is clickable. |
 | `.pf-m-expanded` | `.pf-c-notification-drawer__group` | Modifies a notification group for the expanded state. |

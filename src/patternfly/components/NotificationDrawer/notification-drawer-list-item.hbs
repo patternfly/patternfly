@@ -12,6 +12,8 @@
     pf-m-danger
   {{else if notification-drawer-list-item--IsSuccess}}
     pf-m-success
+  {{else if notification-drawer-list-item--IsRecommendation}}
+    pf-m-recommendation
   {{/if}}
   {{#if notification-drawer-list-item--modifier}} {{notification-drawer-list-item--modifier}}{{/if}}"
   {{#unless notification-drawer-list-item--IsRead}}
