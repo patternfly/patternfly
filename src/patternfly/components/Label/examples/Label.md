@@ -39,6 +39,13 @@ import './Label.css'
   Grey link removable
 {{/label}}
 
+{{#> label label--id="default-grey-icon-overflow" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  Grey icon overflow
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="default-blue" label--modifier="pf-m-blue"}}
