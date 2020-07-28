@@ -1,6 +1,12 @@
-<section class="pf-c-page__main-section{{#if page-main-section--modifier}} {{page-main-section--modifier}}{{/if}}"
+<section class="pf-c-page__main-section{{#if page-main-section--IsLimitWidth}} pf-m-limit-width{{/if}}{{#if page-main-section--modifier}} {{page-main-section--modifier}}{{/if}}"
   {{#if page-main-section--attribute}}
     {{{page-main-section--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if page-main-section--IsLimitWidth}}
+    {{#> page-main-section-body}}
+      {{> @partial-block}}
+    {{/page-main-section-body}}
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
 </section>
