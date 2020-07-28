@@ -526,10 +526,10 @@ import './Label.css'
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-label` | `<span>` | Iniates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. **Required** |
+| `.pf-c-label` | `<span>` | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. **Required** |
 | `.pf-c-label__content` | `<span>`, `<a>` | Iniates a label content. Use as an `<a>` element if the label serves as a link. **Required** |
-| `.pf-c-label__icon` | `<span>` | Iniates a label icon. |
-| `.pf-c-label__text` | `<span>` | Iniates label text. |
+| `.pf-c-label__icon` | `<span>` | Initiates a label icon. |
+| `.pf-c-label__text` | `<span>` | Initiates label text. |
 | `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
 | `.pf-m-blue` | `.pf-c-label` | Modifies the label to have blue colored styling. |
 | `.pf-m-green` | `.pf-c-label` | Modifies the label to have green colored styling. |
