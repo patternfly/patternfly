@@ -146,7 +146,6 @@ import './ToggleGroup.css'
 | -- | -- | -- |
 | `aria-label="[button label text]"` | `.pf-c-toggle-group__button` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
 | `disabled` | `.pf-c-toggle-group__button` | When a button element is used, indicates that it is unavailable and removes it from keyboard focus. **Required when button is disabled** |
-| `aria-disabled="true"` | `button.pf-c-toggle-group__button` | When a button element is used, indicates that it is unavailable but does not prevent keyboard or hover interactions. Used when a disabled button provides interactive elements like a tooltip. |
 
 ### Usage
 | Class | Applied to | Outcome |
