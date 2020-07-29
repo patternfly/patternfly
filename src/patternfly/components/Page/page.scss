@@ -94,7 +94,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-breadcrumb--main-section--PaddingTop: var(--pf-global--spacer--md);
 
   // Main section body
-  --pf-c-page__main-section--m-limit-width__main-section-body--MaxWidth: calc(#{pf-size-prem(1710px)} - var(--pf-c-page__sidebar--Width));
+  --pf-c-page__main-section--m-limit-width__main-section-body--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--pf-c-page__sidebar--Width));
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--xl--PaddingTop);
