@@ -1,4 +1,4 @@
-{{#> card card--id="skeleton-card-1" card--modifier="pf-m-hoverable pf-m-compact"}}
+{{#> card card--modifier="pf-m-hoverable pf-m-compact"}}
   {{!-- {{#> card-header}}
     <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
     {{#> card-actions}}
@@ -23,8 +23,10 @@
   {{/card-body}}
   {{#> card-body}}
     {{#> skeleton}}
-      {{#> skeleton-element skeleton-element--modifier="pf-m-circle"}}
-      {{/skeleton-element}}
+      {{#> bullseye}}
+        {{#> skeleton-element skeleton-element--modifier="pf-m-circle pf-m-width-md"}}
+        {{/skeleton-element}}
+      {{/bullseye}}
     {{/skeleton}}
   {{/card-body}}
   {{#> card-body}}

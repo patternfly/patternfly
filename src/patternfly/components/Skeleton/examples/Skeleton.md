@@ -87,23 +87,6 @@ import './Skeleton.css'
 {{/skeleton}}
 ```
 
-```hbs title=Height-modifiers
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-sm"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-md"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-```
-
 ```hbs title=Text-modifiers
 --pf-global--FontSize--4xl
 {{#> skeleton}}
@@ -144,6 +127,53 @@ import './Skeleton.css'
 --pf-global--FontSize--sm
 {{#> skeleton}}
   {{#> skeleton-element skeleton-element--modifier="pf-m-text-sm"}}
+  {{/skeleton-element}}
+{{/skeleton}}
+```
+
+```hbs title=Static-Height-and-Width-modifiers
+{{#> skeleton}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-height-sm"}}
+  {{/skeleton-element}}
+{{/skeleton}}
+<br/>
+{{#> skeleton}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-height-md"}}
+  {{/skeleton-element}}
+{{/skeleton}}
+<br/>
+{{#> skeleton}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg"}}
+  {{/skeleton-element}}
+{{/skeleton}}
+<br/>
+{{#> skeleton}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-width-sm"}}
+  {{/skeleton-element}}
+{{/skeleton}}
+<br/>
+{{#> skeleton}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-width-md"}}
+  {{/skeleton-element}}
+{{/skeleton}}
+<br/>
+{{#> skeleton}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-width-lg"}}
+  {{/skeleton-element}}
+{{/skeleton}}
+<br/>
+{{#> skeleton}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-height-sm pf-m-width-lg"}}
+  {{/skeleton-element}}
+{{/skeleton}}
+<br/>
+{{#> skeleton}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-height-md pf-m-width-sm"}}
+  {{/skeleton-element}}
+{{/skeleton}}
+<br/>
+{{#> skeleton}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg pf-m-width-md"}}
   {{/skeleton-element}}
 {{/skeleton}}
 ```
@@ -205,86 +235,6 @@ Large rectangle
 ```
 
 
-```hbs title=Card-Examples
-{{#> skeleton skeleton--modifier="pf-m-padding"}}
-  {{#> skeleton-container skeleton-container--modifier="pf-m-spacer-sm pf-m-padding-bottom-sm"}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg pf-m-width-60"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg pf-m-width-20"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg pf-m-width-80"}}
-    {{/skeleton-element}}
-  {{/skeleton-container}}
-  {{#> skeleton-container skeleton-container--modifier="pf-m-justify-items-center pf-m-padding-top-xl pf-m-padding-bottom-xl"}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-circle-lg"}}
-    {{/skeleton-element}}
-  {{/skeleton-container}}
-  {{#> skeleton-container skeleton-container--modifier="pf-m-spacer-sm pf-m-padding-top-sm"}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg pf-m-width-20"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg pf-m-width-40"}}
-    {{/skeleton-element}}
-  {{/skeleton-container}}
-{{/skeleton}}
-
-<br/>
-<br/>
-
-{{#> skeleton skeleton--modifier="pf-m-padding"}}
-  {{#> skeleton-container skeleton-container--modifier="pf-m-justify-items-center pf-m-padding-bottom-xl"}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-rectangle-md"}}
-    {{/skeleton-element}}
-  {{/skeleton-container}}
-  {{#> skeleton-container skeleton-container--modifier="pf-m-spacer-sm"}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg pf-m-width-80"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg pf-m-width-40"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg"}}
-    {{/skeleton-element}}
-  {{/skeleton-container}}
-{{/skeleton}}
-```
-
-```hbs title=Table-Examples
-{{#> skeleton skeleton--modifier="pf-m-padding"}}
-  {{#> skeleton-container skeleton-container--modifier="pf-m-spacer-xl"}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl"}}
-    {{/skeleton-element}}
-  {{/skeleton-container}}
-{{/skeleton}}
-
-<br/>
-<br/>
-
-{{#> skeleton skeleton--modifier="pf-m-padding"}}
-  {{#> skeleton-container skeleton-container--modifier="pf-m-spacer-xl"}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl pf-m-width-80"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl pf-m-width-80"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl pf-m-width-40"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl pf-m-width-80"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl pf-m-width-60"}}
-    {{/skeleton-element}}
-    {{#> skeleton-element skeleton-element--modifier="pf-m-height-xl pf-m-width-20"}}
-    {{/skeleton-element}}
-  {{/skeleton-container}}
-{{/skeleton}}
-```
-
 ## Documentation
 ### Overview
 
@@ -299,12 +249,9 @@ Large rectangle
 | `.pf-c-skeleton` | `<div>` | Initiates the skeleton component. **Required** |
 | `.pf-c-skeleton__element` | `<div>` | Initiates the skeleton element. **Required** |
 | `.pf-m-padding` | `.pf-c-skeleton` | Modifies the skeleton to have padding. |
-| `.pf-m-spacer-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__container` | Modifies the spacing between skeleton elements in the container. | `.pf-c-skeleton__container` | Modifies the skeleton container to center the elements inside of it. 
-| `pf-m-justify-items-center` | `
-| `.pf-m-padding-top-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__container` | Modifies the padding top on the skeleton container. |
-| `.pf-m-padding-bottom-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__container` | Modifies the padding bottom on the skeleton container. |
-| `.pf-m-height-[xs,sm,md,lg,xl,2xl]` | `.pf-c-skeleton__element` | Modifies the height of the skeleton element. |
-| `.pf-m-width-[10,15,20,25,30,35,40,45,50,60,70,80,90]` | `.pf-c-skeleton__element` | Modifies the width of the skeleton element. The default is 100%. |
-| `.pf-m-circle-[sm,md,lg]` | `.pf-c-skeleton__element` | Modifies the shape of the skeleton element to be a circle. |
-| `.pf-m-square-[sm,md,lg]` | `.pf-c-skeleton__element` | Modifies the shape of the skeleton element to be a square. |
-| `.pf-m-rectangle-[sm,md,lg]` | `.pf-c-skeleton__element` | Modifies the shape of the skeleton element to be a rectangle. |
+| `.pf-m-height-[sm,md,lg]` | `.pf-c-skeleton__element` | Modifies the height of the skeleton element. |
+| `.pf-m-width-[sm,md,lg]` | `.pf-c-skeleton__element` | Modifies the width of the skeleton element. |
+| `.pf-m-text-[4xl,3xl,2xl,xl,lg,md,sm]` | `.pf-c-skeleton__element` | Modifies the skeleton element height to match the height of PatternFly's text elements. | 
+| `.pf-m-width-[10,15,20,25,30,35,40,45,50,60,70,80,90]` | `.pf-c-skeleton__element` | Modifies the width of the skeleton element to be responsive. The default is 100%. |
+| `.pf-m-circle` | `.pf-c-skeleton__element` | Modifies the border radius of the skeleton element to be a circle. |
+

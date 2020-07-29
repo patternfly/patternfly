@@ -1,19 +1,12 @@
-$pf-c-skeleton--spacer-map: build-spacer-map("xs", "sm", "md", "lg", "xl", "2xl");
-
 .pf-c-skeleton {
   // Padding modifier
   --pf-c-skeleton--m-padding--Padding: var(--pf-global--spacer--lg);
-
-  // Container
-  --pf-c-skeleton__container--GridGap: 0;
-  --pf-c-skeleton__container--PaddingTop: 0;
-  --pf-c-skeleton__container--PaddingBottom: 0;
 
   // Element
   --pf-c-skeleton__element--BackgroundColor: var(--pf-global--palette--black-150);
   --pf-c-skeleton__element--Height: var(--pf-global--spacer--lg);
   --pf-c-skeleton__element--Width: 100%;
-  --pf-c-skeleton__element--BorderRadius: #{pf-size-prem(4px)}; // add variable ?
+  --pf-c-skeleton__element--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-skeleton__element--after--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-skeleton__element--after--LinearGradientAngle: 90deg;
   --pf-c-skeleton__element--after--LinearGradientColorStop1: transparent;
@@ -26,8 +19,10 @@ $pf-c-skeleton--spacer-map: build-spacer-map("xs", "sm", "md", "lg", "xl", "2xl"
   --pf-c-skeleton__element--after--AnimationTimingFunction: linear;
   --pf-c-skeleton__element--after--AnimationDelay: .5s;
 
-  // Shapes
+  // Circle
   --pf-c-skeleton__element--m-circle--BorderRadius: var(--pf-global--BorderRadius--lg);
+
+  // Static width and height
   --pf-c-skeleton__element--m-width-sm--Width: #{pf-size-prem(100px)};
   --pf-c-skeleton__element--m-width-md--Width: #{pf-size-prem(200px)};
   --pf-c-skeleton__element--m-width-lg--Width: #{pf-size-prem(300px)};
@@ -65,35 +60,6 @@ $pf-c-skeleton--spacer-map: build-spacer-map("xs", "sm", "md", "lg", "xl", "2xl"
   }
 }
 
-.pf-c-skeleton__container {
-  display: grid;
-  grid-gap: var(--pf-c-skeleton__container--GridGap);
-  padding-top: var(--pf-c-skeleton__container--PaddingTop);
-  padding-bottom: var(--pf-c-skeleton__container--PaddingBottom);
-
-  &.pf-m-justify-items-center {
-    justify-items: center;
-  }
-
-  @each $spacer, $spacer-value in $pf-c-skeleton--spacer-map {
-    &.pf-m-spacer-#{$spacer} {
-      --pf-c-skeleton__container--GridGap: #{$spacer-value};
-    }
-  }
-
-  @each $spacer, $spacer-value in $pf-c-skeleton--spacer-map {
-    &.pf-m-padding-top-#{$spacer} {
-      --pf-c-skeleton__container--PaddingTop: #{$spacer-value};
-    }
-  }
-
-  @each $spacer, $spacer-value in $pf-c-skeleton--spacer-map {
-    &.pf-m-padding-bottom-#{$spacer} {
-      --pf-c-skeleton__container--PaddingBottom: #{$spacer-value};
-    }
-  }
-}
-
 .pf-c-skeleton__element {
   position: relative;
   width: var(--pf-c-skeleton__element--Width);
@@ -120,9 +86,10 @@ $pf-c-skeleton--spacer-map: build-spacer-map("xs", "sm", "md", "lg", "xl", "2xl"
 
   // Circle
   &.pf-m-circle {
-    border-radius: var(--pf-c-skeleton__element--m-circle--BorderRadius);
+    --pf-c-skeleton__element--BorderRadius: var(--pf-c-skeleton__element--m-circle--BorderRadius);
   }
 
+  // Width
   &.pf-m-width-sm {
     --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-sm--Width);
 
@@ -204,12 +171,6 @@ $pf-c-skeleton--spacer-map: build-spacer-map("xs", "sm", "md", "lg", "xl", "2xl"
 
   &.pf-m-width-90 {
     --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-90--Width);
-  }
-
-  @each $spacer, $spacer-value in $pf-c-skeleton--spacer-map {
-    &.pf-m-height-#{$spacer} {
-      --pf-c-skeleton__element--Height: #{$spacer-value};
-    }
   }
 
   &.pf-m-text-4xl {
