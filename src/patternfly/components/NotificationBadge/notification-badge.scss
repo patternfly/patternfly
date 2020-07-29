@@ -1,37 +1,55 @@
 .pf-c-notification-badge {
-  --pf-c-notification-badge--after--BorderColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-notification-badge--after--BorderRadius: var(--pf-global--BorderRadius--lg);
+  // update all --after variables to --before at breaking change
+  // ::after border treatment
+  --pf-c-notification-badge--after--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-notification-badge--after--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-notification-badge--after--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-notification-badge--after--Top: 0;
-  --pf-c-notification-badge--after--Right: 0;
-  --pf-c-notification-badge--after--Width: calc(var(--pf-global--spacer--sm) + var(--pf-c-notification-badge--after--BorderWidth) + var(--pf-c-notification-badge--after--BorderWidth));
-  --pf-c-notification-badge--after--Height: calc(var(--pf-global--spacer--sm) + var(--pf-c-notification-badge--after--BorderWidth) + var(--pf-c-notification-badge--after--BorderWidth));
+  --pf-c-notification-badge--after--Top: 0; // remove at breaking change
+  --pf-c-notification-badge--after--Right: 0; // remove at breaking change
+  --pf-c-notification-badge--after--Width: auto; // remove at breaking change
+  --pf-c-notification-badge--after--Height: auto; // remove at breaking change
   --pf-c-notification-badge--after--BackgroundColor: transparent;
+  --pf-c-notification-badge--hover--after--BorderColor: var(--pf-global--BorderColor--light-100);
 
   // This translation works for the Bell icon, although adjusted for a happy medium between FF and Chrome.
   // If other icons are used, a modifier may need to be created to allow for proper positioning on that icon.
-  --pf-c-notification-badge--after--TranslateX: 50%;
-  --pf-c-notification-badge--after--TranslateY: calc(var(--pf-c-notification-badge--after--BorderWidth) * -1);
+  --pf-c-notification-badge--after--TranslateX: 0; // remove at breaking change
+  --pf-c-notification-badge--after--TranslateY: 0; // remove at breaking change
 
   // The icon is normalized to be square in order to facilitate consistency in positioning
-  --pf-c-notification-badge__i--Width: var(--pf-global--spacer--md);
-  --pf-c-notification-badge__i--Height: var(--pf-global--spacer--md);
+  --pf-c-notification-badge__i--Width: auto; // remove at breaking change
+  --pf-c-notification-badge__i--Height: auto; // remove at breaking change
 
   // Modifiers
+  --pf-c-notification-badge--m-read--after--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-notification-badge--m-read--after--BackgroundColor: transparent;
-  --pf-c-notification-badge--m-read--after--BorderColor: transparent;
-  --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--active-color--400);
+  --pf-c-notification-badge--m-read--hover--after--BorderColor: var(--pf-global--BorderColor--light-100);
 
-  position: relative;
-  display: inline-block;
-  line-height: 1;
 
-  &::after {
+  // Unread
+  --pf-c-notification-badge--m-unread--Color: var(--pf-global--Color--light-100);
+  --pf-c-notification-badge--m-unread--after--BorderColor: transparent; // remove at breaking change
+  --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--active-color--100);
+
+  // Attention
+  --pf-c-notification-badge--m-attention--Color: var(--pf-global--Color--light-100);
+  --pf-c-notification-badge--m-attention--after--BorderColor: transparent; // remove at breaking change
+  --pf-c-notification-badge--m-attention--after--BackgroundColor: var(--pf-global--danger-color--100);
+  --pf-c-notification-badge__count--MarginLeft: var(--pf-global--spacer--xs);
+
+  // Attention icon
+  --pf-c-notification-badge--pf-icon-attention-bell--LineHeight: var(--pf-global--LineHeight--sm);
+
+  position: static;
+
+  &::before { // update all --after vars to --before at breaking change
     position: absolute;
-    top: var(--pf-c-notification-badge--after--Top);
-    right: var(--pf-c-notification-badge--after--Right);
-    width: var(--pf-c-notification-badge--after--Width);
-    height: var(--pf-c-notification-badge--after--Height);
+    top: var(--pf-c-notification-badge--after--Top); // replace this var with 0 at breaking change
+    right: var(--pf-c-notification-badge--after--Right); // replace this var with 0 at breaking change
+    bottom: 0;
+    left: 0;
+    width: var(--pf-c-notification-badge--after--Width); // remove at breaking change
+    height: var(--pf-c-notification-badge--after--Height); // remove at breaking change
     content: "";
     background-color: var(--pf-c-notification-badge--after--BackgroundColor);
     border: var(--pf-c-notification-badge--after--BorderWidth) solid var(--pf-c-notification-badge--after--BorderColor);
@@ -39,17 +57,53 @@
     transform: translate(var(--pf-c-notification-badge--after--TranslateX), var(--pf-c-notification-badge--after--TranslateY));
   }
 
+  &:hover {
+    --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--hover--after--BorderColor);
+  }
+
   & > i {
     width: var(--pf-c-notification-badge__i--Width);
     height: var(--pf-c-notification-badge__i--Height);
   }
 
-  &.pf-m-unread::after {
-    --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-unread--after--BackgroundColor);
+  // set children to relative so they appear above ::before
+  & > * {
+    position: relative;
   }
 
-  &.pf-m-read::after {
+  .pf-icon-attention-bell {
+    display: inline-block;
+    line-height: var(--pf-c-notification-badge--pf-icon-attention-bell--LineHeight);
+
+    &::before {
+      vertical-align: bottom;
+    }
+  }
+
+  &.pf-m-read {
     --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-read--after--BackgroundColor);
     --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--m-read--after--BorderColor);
+
+    &:hover {
+      --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--m-read--hover--after--BorderColor);
+    }
   }
+
+  &.pf-m-unread {
+    --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-unread--after--BackgroundColor);
+    --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--m-unread--after--BorderColor);
+
+    color: var(--pf-c-notification-badge--m-unread--Color);
+  }
+
+  &.pf-m-attention {
+    --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-attention--after--BackgroundColor);
+    --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--m-attention--after--BorderColor);
+
+    color: var(--pf-c-notification-badge--m-attention--Color);
+  }
+}
+
+.pf-c-notification-badge__count {
+  margin-left: var(--pf-c-notification-badge__count--MarginLeft);
 }

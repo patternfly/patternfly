@@ -3,4 +3,7 @@
     {{{notification-badge--attribute}}}
   {{/if}}>
   {{> @partial-block}}
+  {{#if notification-badge--count}}
+    <span class="pf-c-notification-badge__count">{{{notification-badge--count}}}</span>
+  {{/if}}
 </span>
