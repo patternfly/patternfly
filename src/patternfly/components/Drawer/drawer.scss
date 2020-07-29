@@ -135,7 +135,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 // Content
 .pf-c-drawer__content {
   > .pf-c-drawer__body {
-    padding-top: var(--pf-c-drawer__content--child--PaddingTop) var(--pf-c-drawer__content--child--PaddingRight) var(--pf-c-drawer__content--child--PaddingBottom) var(--pf-c-drawer__content--child--PaddingLeft);
+    padding: var(--pf-c-drawer__content--child--PaddingTop) var(--pf-c-drawer__content--child--PaddingRight) var(--pf-c-drawer__content--child--PaddingBottom) var(--pf-c-drawer__content--child--PaddingLeft);
   }
 
   z-index: var(--pf-c-drawer__content--ZIndex);
