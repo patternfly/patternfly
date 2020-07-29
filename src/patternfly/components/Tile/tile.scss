@@ -24,7 +24,7 @@
   // icon
   --pf-c-tile__icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-tile__icon--FontSize: var(--pf-global--icon--FontSize--md);
-  --pf-c-tile__icon--Color: var(--pf-global--Color--200);
+  --pf-c-tile__icon--Color: var(--pf-global--Color--100);
   --pf-c-tile--hover__icon--Color: var(--pf-global--primary-color--100);
   --pf-c-tile--m-selected__icon--Color: var(--pf-global--primary-color--100);
   --pf-c-tile--m-disabled__icon--Color: var(--pf-global--disabled-color--100);
@@ -33,11 +33,6 @@
   // Stacked variatiion
   --pf-c-tile__header--m-stacked__icon--MarginBottom: var(--pf-global--spacer--xs);
   --pf-c-tile__header--m-stacked__icon--FontSize: var(--pf-global--icon--FontSize--lg);
-  --pf-c-tile__header--m-stacked__icon--Color: var(--pf-global--Color--100);
-  --pf-c-tile--m-disabled__header--m-stacked__icon--Color: var(--pf-global--disabled-color--100);
-  --pf-c-tile--hover__header--m-stacked__icon--Color: var(--pf-global--primary-color--100);
-  --pf-c-tile--m-selected__header--m-stacked__icon--Color: var(--pf-global--primary-color--100);
-  --pf-c-tile--focus__header--m-stacked__icon--Color: var(--pf-global--primary-color--100);
 
   // large variation
   --pf-c-tile--m-display-lg__header--m-stacked__icon--FontSize: var(--pf-global--icon--FontSize--xl);
@@ -71,10 +66,6 @@
     --pf-c-tile__title--Color: var(--pf-c-tile--hover__title--Color);
     --pf-c-tile__icon--Color: var(--pf-c-tile--hover__icon--Color);
     --pf-c-tile--before--BorderColor: var(--pf-c-tile--hover--before--BorderColor);
-
-    .pf-c-tile__header.pf-m-stacked .pf-c-tile__icon {
-      --pf-c-tile__icon--Color: var(--pf-c-tile--hover__header--m-stacked__icon--Color);
-    }
   }
 
   &.pf-m-selected {
@@ -82,7 +73,6 @@
     --pf-c-tile__icon--Color: var(--pf-c-tile--m-selected__icon--Color);
     --pf-c-tile--before--BorderWidth: var(--pf-c-tile--m-selected--before--BorderWidth);
     --pf-c-tile--before--BorderColor: var(--pf-c-tile--m-selected--before--BorderColor);
-    --pf-c-tile__header--m-stacked__icon--Color: var(--pf-c-tile--m-selected__header--m-stacked__icon--Color);
   }
 
   &:focus {
@@ -90,7 +80,6 @@
     --pf-c-tile__icon--Color: var(--pf-c-tile--focus__icon--Color);
     --pf-c-tile--before--BorderWidth: var(--pf-c-tile--focus--before--BorderWidth);
     --pf-c-tile--before--BorderColor: var(--pf-c-tile--focus--before--BorderColor);
-    --pf-c-tile__header--m-stacked__icon--Color: var(--pf-c-tile--focus__header--m-stacked__icon--Color);
   }
 
   &.pf-m-disabled {
@@ -99,7 +88,6 @@
     --pf-c-tile__body--Color: var(--pf-c-tile--m-disabled__body--Color);
     --pf-c-tile--before--BorderWidth: 0;
     --pf-c-tile__icon--Color: var(--pf-c-tile--m-disabled__icon--Color);
-    --pf-c-tile__header--m-stacked__icon--Color: var(--pf-c-tile--m-disabled__header--m-stacked__icon--Color);
 
     pointer-events: none;
   }
@@ -119,7 +107,6 @@
   &.pf-m-stacked {
     --pf-c-tile__icon--MarginRight: 0;
     --pf-c-tile__icon--FontSize: var(--pf-c-tile__header--m-stacked__icon--FontSize);
-    --pf-c-tile__icon--Color: var(--pf-c-tile__header--m-stacked__icon--Color);
 
     flex-direction: column;
     justify-content: initial;
