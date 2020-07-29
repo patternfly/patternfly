@@ -33,6 +33,23 @@
       10 minutes ago
     {{/notification-drawer-list-item-timestamp}}
   {{/notification-drawer-list-item}}
+  {{#> notification-drawer-list-item notification-drawer-list-item--IsDefault="true"}}
+    {{#> notification-drawer-list-item-header}}
+      {{> notification-drawer-list-item-header-icon}}
+      {{#> notification-drawer-list-item-header-title}}
+        Unread recommendation notification title. This is a long title to show how the title will wrap if it is long and wraps to multiple lines.
+      {{/notification-drawer-list-item-header-title}}
+    {{/notification-drawer-list-item-header}}
+    {{#> notification-drawer-list-item-action}}
+      {{#> dropdown id=(concat notification-drawer--id "-action3") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{/notification-drawer-list-item-action}}
+    {{#> notification-drawer-list-item-description}}
+      This is a recommendation notification description. This is a long description to show how the title will wrap if it is long and wraps to multiple lines.
+    {{/notification-drawer-list-item-description}}
+    {{#> notification-drawer-list-item-timestamp}}
+      20 minutes ago
+    {{/notification-drawer-list-item-timestamp}}
+  {{/notification-drawer-list-item}}
   {{#> notification-drawer-list-item notification-drawer-list-item--modifier="pf-m-hoverable" notification-drawer-list-item--IsWarning="true" notification-drawer-list-item--IsRead="true"}}
     {{#> notification-drawer-list-item-header}}
       {{> notification-drawer-list-item-header-icon}}
@@ -41,7 +58,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action3") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{#> dropdown id=(concat notification-drawer--id "-action4") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This is a warning notification description.
@@ -58,7 +75,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action4") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{#> dropdown id=(concat notification-drawer--id "-action5") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This is a success notification description.
@@ -75,7 +92,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action5") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{#> dropdown id=(concat notification-drawer--id "-action6") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This example uses ".pf-m-truncate" to limit the title to a single line and truncate any overflow text with ellipses.
@@ -92,7 +109,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action6") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{#> dropdown id=(concat notification-drawer--id "-action7") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This example uses ".pf-m-truncate" and sets "--pf-c-notification-drawer__list-item-header-title--max-lines: 2" to limit title to two lines and truncate any overflow text with ellipses.
