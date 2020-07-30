@@ -13,13 +13,13 @@ import './NotificationBadge.css'
 ```hbs
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
   {{#> notification-badge notification-badge--modifier="pf-m-read"}}
-    <i class="fas fa-bell" aria-hidden="true"></i>
+    <i class="pf-icon-bell" aria-hidden="true"></i>
   {{/notification-badge}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications"'}}
   {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
-    <i class="fas fa-bell" aria-hidden="true"></i>
+    <i class="pf-icon-bell" aria-hidden="true"></i>
   {{/notification-badge}}
 {{/button}}
 
@@ -35,13 +35,13 @@ import './NotificationBadge.css'
 ```hbs
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
   {{#> notification-badge notification-badge--modifier="pf-m-read" notification-badge--count="24"}}
-    <i class="fas fa-bell" aria-hidden="true"></i>
+    <i class="pf-icon-bell" aria-hidden="true"></i>
   {{/notification-badge}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications"'}}
   {{#> notification-badge notification-badge--modifier="pf-m-unread" notification-badge--count="25"}}
-    <i class="fas fa-bell" aria-hidden="true"></i>
+    <i class="pf-icon-bell" aria-hidden="true"></i>
   {{/notification-badge}}
 {{/button}}
 
