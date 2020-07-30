@@ -1,33 +1,45 @@
 ---
-title: Drawer
+id: Drawer
 section: demos
 wrapperTag: div
 ---
 
 ## Demos
 
-```hbs title=Default isFullscreen
-{{> drawer-demo-default id="drawer-default"}}
+### Collapsed
+
+```hbs isFullscreen
+{{> drawer-demo-default id="drawer-default" notification-badge--modifier="pf-m-read"}}
 ```
 
-```hbs title=Default-expanded isFullscreen
-{{> drawer-demo-default id="drawer-default-expanded" drawer-panel--IsOpen="true"}}
+### Expanded
+
+```hbs isFullscreen
+{{> drawer-demo-default id="drawer-default-expanded" notification-badge--modifier="pf-m-read" drawer-panel--IsOpen="true"}}
 ```
 
-```hbs title=Unread isFullscreen
+### Unread
+
+```hbs isFullscreen
 {{> drawer-demo-default id="drawer-unread" notification-badge--modifier="pf-m-unread"}}
 ```
 
-```hbs title=Unread-expanded isFullscreen
-{{> drawer-demo-default id="drawer-unread-expanded" drawer-panel--IsOpen="true" notification-badge--modifier="pf-m-unread"}}
+### Unread expanded
+
+```hbs isFullscreen
+{{> drawer-demo-default id="drawer-unread-expanded" notification-badge--modifier="pf-m-unread" drawer-panel--IsOpen="true"}}
 ```
 
-```hbs title=Attention isFullscreen
-{{> drawer-demo-default id="drawer-attention" notification-badge--modifier="pf-m-attention"}}
+### Attention
+
+```hbs isFullscreen
+{{> drawer-demo-default id="drawer-attention" notification-badge--modifier="pf-m-attention" page-header-tools--IsAttention="true"}}
 ```
 
-```hbs title=Attention-expanded isFullscreen
-{{> drawer-demo-default id="drawer-attention-expanded" drawer-panel--IsOpen="true" notification-badge--modifier="pf-m-attention pf-m-unread"}}
+### Attention expanded
+
+```hbs isFullscreen
+{{> drawer-demo-default id="drawer-attention-expanded" notification-badge--modifier="pf-m-attention pf-m-unread" drawer-panel--IsOpen="true" page-header-tools--IsAttention="true"}}
 ```
 
 ## Documentation

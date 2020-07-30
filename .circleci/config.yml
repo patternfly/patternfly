@@ -57,6 +57,9 @@ jobs:
         name: Build Dist
         command: npm run build-patternfly
     - run:
+        name: Build HTML MD
+        command: npm run build:docs
+    - run:
         name: Build Site
         command: npm run build:site
     - run:
@@ -127,7 +130,7 @@ jobs:
             if [[ -n $CIRCLE_PULL_REQUEST ]];
             then
                 git fetch --tags
-                node scripts/sizeReport/sizeReport origin/master --comment
+                node scripts/sizeReport/sizeReport --comment
             fi;
           when: always
       - store_artifacts:

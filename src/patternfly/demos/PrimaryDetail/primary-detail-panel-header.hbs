@@ -7,14 +7,14 @@
             {{> drawer-close}}
           {{/unless}}
         {{/drawer-actions}}
-        {{#> title titleType="h2" title--modifier="pf-m-lg" title--attribute=(concat 'id="' master-detail-template--id '-drawer-label"')}}
-          {{{master-detail-panel-header--title}}}
+        {{#> title titleType="h2" title--modifier="pf-m-lg" title--attribute=(concat 'id="' primary-detail-template--id '-drawer-label"')}}
+          {{{primary-detail-panel-header--title}}}
         {{/title}}
       {{/drawer-head}}
     {{/l-flex-item}}
-    {{#if master-detail-panel-header--sub-title}}
+    {{#if primary-detail-panel-header--sub-title}}
       {{#> l-flex-item}}
-        {{{master-detail-panel-header--sub-title}}}
+        {{{primary-detail-panel-header--sub-title}}}
       {{/l-flex-item}}
     {{/if}}
   {{/l-flex}}

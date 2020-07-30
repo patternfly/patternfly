@@ -1,48 +1,55 @@
 ---
-title: Display
+id: Display
 section: utilities
 ---
 
 import './Display.css'
 
 ## Examples
-```hbs title=Inline-block
+### Inline block
+```hbs
 {{#> display display--type="inline-block"}}
   .pf-u-display-inline-block
 {{/display}}
 ```
 
-```hbs title=Block
+### Block
+```hbs
 {{#> display display--type="block"}}
   .pf-u-display-block
 {{/display}}
 ```
 
-```hbs title=Flex
+### Flex
+```hbs
 {{#> display display--type="flex"}}
   .pf-u-display-flex
 {{/display}}
 ```
 
-```hbs title=Inline-flex
+### Inline flex
+```hbs
 {{#> display display--type="inline-flex"}}
   .pf-u-display-inline-flex
 {{/display}}
 ```
 
-```hbs title=Grid
+### Grid
+```hbs
 {{#> display display--type="grid"}}
   .pf-u-display-grid
 {{/display}}
 ```
 
-```hbs title=Inline
+### Inline
+```hbs
 {{#> display display--type="inline"}}
   .pf-u-display-inline
 {{/display}}
 ```
 
-```hbs title=Table
+### Table
+```hbs
 {{#> display display--type="table"}}
   {{#> display display--type="table-row"}}
     {{#> display display--type="table-cell"}}
@@ -69,7 +76,8 @@ import './Display.css'
 {{/display}}
 ```
 
-```hbs title=None
+### None
+```hbs
 {{#> display display--type="none-on-sm"}}
   Hidden on sm breakpoint
 {{/display}}

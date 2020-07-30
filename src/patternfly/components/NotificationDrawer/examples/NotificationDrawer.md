@@ -1,19 +1,20 @@
 ---
-title: Notification drawer
+id: Notification drawer
 section: components
 beta: true
 cssPrefix: pf-c-notification-drawer
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> notification-drawer notification-drawer--id="notification-drawer-basic"}}
   {{#> notification-drawer-header}}
     {{#> notification-drawer-header-title}}
       Notifications
     {{/notification-drawer-header-title}}
     {{#> notification-drawer-header-status}}
-      3 unread
+      2 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
       {{#> dropdown id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
@@ -25,14 +26,15 @@ cssPrefix: pf-c-notification-drawer
 {{/notification-drawer}}
 ```
 
-```hbs title=Groups
+### Groups
+```hbs
 {{#> notification-drawer notification-drawer--id="notification-drawer-groups"}}
   {{#> notification-drawer-header}}
     {{#> notification-drawer-header-title}}
       Notifications
     {{/notification-drawer-header-title}}
     {{#> notification-drawer-header-status}}
-      3 unread
+      2 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
       {{#> dropdown id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
@@ -133,6 +135,7 @@ cssPrefix: pf-c-notification-drawer
 | `.pf-c-notification-drawer__group-title` | `<div>` | Initiates a notification group toggle title. **Required** |
 | `.pf-c-notification-drawer__group-count` | `<div>` | Initiates a notification group toggle count. |
 | `.pf-c-notification-drawer__group-icon` | `<span>` | Initiates a notification group toggle icon. **Required** |
+| `.pf-m-default` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the default state. |
 | `.pf-m-info` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the info state. |
 | `.pf-m-warning` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the warning state. |
 | `.pf-m-danger` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the danger state. |

@@ -1,5 +1,5 @@
 ---
-title: Label
+id: Label
 section: components
 cssPrefix: pf-c-label
 ---
@@ -7,7 +7,8 @@ cssPrefix: pf-c-label
 import './Label.css'
 
 ## Examples
-```hbs title=Filled
+### Filled
+```hbs
 {{#> label label--id="default-grey"}}
   Grey
 {{/label}}
@@ -36,6 +37,15 @@ import './Label.css'
 
 {{#> label label--id="default-grey-link-close" label-content--IsLink="true" label--isRemovable="true"}}
   Grey link removable
+{{/label}}
+
+{{#> label label--id="default-grey-icon-close-overflow" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Grey label with icon that overflows
+  {{/label-text}}
 {{/label}}
 
 <br><br>
@@ -70,6 +80,15 @@ import './Label.css'
   Blue link removable
 {{/label}}
 
+{{#> label label--id="default-blue-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-blue"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Blue label with icon that overflows
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="default-green" label--modifier="pf-m-green"}}
@@ -100,6 +119,15 @@ import './Label.css'
 
 {{#> label label--id="default-green-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-green"}}
   Green link removable
+{{/label}}
+
+{{#> label label--id="default-green-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-green"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Green label with icon that overflows
+  {{/label-text}}
 {{/label}}
 
 <br><br>
@@ -134,6 +162,15 @@ import './Label.css'
   Orange link removable
 {{/label}}
 
+{{#> label label--id="default-orange-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-orange"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Orange label with icon that overflows
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="default-red" label--modifier="pf-m-red"}}
@@ -164,6 +201,15 @@ import './Label.css'
 
 {{#> label label--id="default-red-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-red"}}
   Red link removable
+{{/label}}
+
+{{#> label label--id="default-red-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-red"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Red label with icon that overflows
+  {{/label-text}}
 {{/label}}
 
 <br><br>
@@ -198,6 +244,15 @@ import './Label.css'
   Purple link removable
 {{/label}}
 
+{{#> label label--id="default-purple-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-purple"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Purple label with icon that overflows
+  {{/label-text}}
+{{/label}}
+
 <br><br>
 
 {{#> label label--id="default-cyan" label--modifier="pf-m-cyan"}}
@@ -229,10 +284,20 @@ import './Label.css'
 {{#> label label--id="default-cyan-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-cyan"}}
   Cyan link removable
 {{/label}}
+
+{{#> label label--id="default-grey-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-cyan"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Cyan label with icon that overflows
+  {{/label-text}}
+{{/label}}
 ```
 
 
-```hbs title=Outline
+### Outline
+```hbs
 {{#> label label--id="outline-grey" label--modifier="pf-m-outline"}}
   Grey
 {{/label}}
@@ -461,9 +526,10 @@ import './Label.css'
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-label` | `<span>` | Iniates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. **Required** |
+| `.pf-c-label` | `<span>` | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. **Required** |
 | `.pf-c-label__content` | `<span>`, `<a>` | Iniates a label content. Use as an `<a>` element if the label serves as a link. **Required** |
-| `.pf-c-label__icon` | `<span>` | Iniates a label icon. |
+| `.pf-c-label__icon` | `<span>` | Initiates a label icon. |
+| `.pf-c-label__text` | `<span>` | Initiates label text. |
 | `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
 | `.pf-m-blue` | `.pf-c-label` | Modifies the label to have blue colored styling. |
 | `.pf-m-green` | `.pf-c-label` | Modifies the label to have green colored styling. |

@@ -1,5 +1,5 @@
 ---
-title: Icons
+id: Icons
 ---
 | icon name | icon | code |
 | --- | --- | --- |

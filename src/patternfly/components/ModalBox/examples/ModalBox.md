@@ -1,11 +1,12 @@
 ---
-title: Modal box
+id: Modal
 section: components
 cssPrefix: pf-c-modal-box
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
@@ -24,7 +25,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Small
+### Small
+```hbs
 {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-sm-title" aria-describedby="modal-sm-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -46,7 +48,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Medium
+### Medium
+```hbs
 {{#> modal-box modal-box--modifier="pf-m-md" modal-box--attribute='aria-labelledby="modal-md-title" aria-describedby="modal-md-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -68,7 +71,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Large
+### Large
+```hbs
 {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -90,7 +94,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Without-title
+### Without title
+```hbs
 {{#> modal-box modal-box--attribute='aria-label="Example of a modal without a title" aria-describedby="modal-no-title-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -104,7 +109,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=With-description
+### With description
+```hbs
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-with-description-title" aria-describedby="modal-with-description-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
@@ -126,7 +132,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Custom-title
+### Custom title
+```hbs
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-custom-title" aria-describedby="modal-custom-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
@@ -143,7 +150,8 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
-```hbs title=Modal-box-as-generic-container
+### Modal box as generic container
+```hbs
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-generic-container-description"'}}
   <p id="modal-generic-container-description">The modal box children elements can be removed, and the modal serves as a generic modal container. One use case of this is when creating a wizard in a modal.</p>
 {{/modal-box}}

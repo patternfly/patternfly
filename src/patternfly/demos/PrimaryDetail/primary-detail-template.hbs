@@ -1,4 +1,4 @@
-{{#> page page--id=master-detail-template--id}}
+{{#> page page--id=primary-detail-template--id}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}
@@ -54,8 +54,8 @@
     {{#> page-template-breadcrumb}}{{/page-template-breadcrumb}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{#> content}}
-        <h1>{{{master-detail-template--title}}}</h1>
-        <p>{{{master-detail-template--description}}}</p>
+        <h1>{{{primary-detail-template--title}}}</h1>
+        <p>{{{primary-detail-template--description}}}</p>
       {{/content}}
     {{/page-main-section}}
     {{> @partial-block}}

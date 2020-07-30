@@ -1,11 +1,12 @@
 ---
-title: Alert group
+id: Alert group
 section: components
 cssPrefix: pf-c-alert-group
 ---
 
 ## Examples
-```hbs title=Static-alert-group
+### Static alert group
+```hbs
 {{#> alert-group}}
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-inline pf-m-success" alert--attribute='aria-label="Success alert"'}}
@@ -53,7 +54,8 @@ cssPrefix: pf-c-alert-group
 | `.pf-c-alert-group` | `<ul>` | Creates an alert group component. **Required** |
 | `.pf-c-alert-group__item` | `<li>` | Creates an alert group item. **Required** |
 
-```hbs title=Toast-alert-group isFullscreen=true
+### Toast alert group
+```hbs isFullscreen
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success toast alert"'}}

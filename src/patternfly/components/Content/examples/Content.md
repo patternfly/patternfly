@@ -1,11 +1,12 @@
 ---
-title: Content
+id: Text
 section: components
 cssPrefix: pf-c-content
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> content}}
 <h1>Hello world</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius

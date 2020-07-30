@@ -1,12 +1,13 @@
 ---
-title: '{nameTitle}'
+id: '{nameTitle}'
 beta: true
 section: {folder}
 cssPrefix: {nameBEM}
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> {nameDasherized}}}
   Basic example content
 {{/{nameDasherized}}}

@@ -1,11 +1,12 @@
 ---
-title: Tab content
+id: Tab content
 section: components
 cssPrefix: pf-c-tab-content
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="tab1-panel"'}}
   Panel 1
 {{/tab-content}}
@@ -16,6 +17,23 @@ cssPrefix: pf-c-tab-content
   Panel 3
 {{/tab-content}}
 {{#> tab-content tab-content--attribute='id="tab4-panel"'}}
+  Panel 4
+{{/tab-content}}
+```
+
+### Light 300 background
+
+```hbs
+{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--IsActive="true" tab-content--attribute='id="light-300-tab1-panel"'}}
+  Panel 1
+{{/tab-content}}
+{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="tab2-panel"'}}
+  Panel 2
+{{/tab-content}}
+{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="tab3-panel"'}}
+  Panel 3
+{{/tab-content}}
+{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="tab4-panel"'}}
   Panel 4
 {{/tab-content}}
 ```
@@ -37,3 +55,4 @@ Tab content should be used with the [tabs component](/documentation/core/compone
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-tab-content` | `<section>` |  Initiates the tab content component. **Required** |
+| `.pf-m-light-300` | `.pf-c-tab-content` |  Modifies the tab content component background color. |

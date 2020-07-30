@@ -1,5 +1,5 @@
 ---
-title: Wizard
+id: Wizard
 section: components
 cssPrefix: pf-c-wizard
 wrapperTag: div
@@ -8,7 +8,8 @@ wrapperTag: div
 import './Wizard.css'
 
 ## Examples
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> wizard}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
@@ -94,7 +95,8 @@ import './Wizard.css'
 {{/wizard}}
 ```
 
-```hbs title=Nav-expanded-(mobile) isFullscreen
+### Nav expanded (mobile)
+```hbs isFullscreen
 {{#> wizard wizard--IsExpanded="true"}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
@@ -180,7 +182,8 @@ import './Wizard.css'
 {{/wizard}}
 ```
 
-```hbs title=Finished isFullscreen
+### Finished
+```hbs isFullscreen
 {{#> wizard wizard--modifier="pf-m-finished"}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}

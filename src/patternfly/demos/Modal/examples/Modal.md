@@ -1,10 +1,11 @@
 ---
-title: Modal
+id: Modal
 section: demos
 ---
 
 ## Demos
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
@@ -35,7 +36,8 @@ section: demos
 {{/modal}}
 ```
 
-```hbs title=Scrollable-content isFullscreen
+### Scrollable content
+```hbs isFullscreen
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
@@ -76,7 +78,8 @@ section: demos
 {{/modal}}
 ```
 
-```hbs title=Medium isFullscreen
+### Medium
+```hbs isFullscreen
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}
@@ -107,7 +110,8 @@ section: demos
 {{/modal}}
 ```
 
-```hbs title=Large isFullscreen
+### Large
+```hbs isFullscreen
 {{#> modal}}
   {{#> backdrop}}
     {{#> bullseye}}

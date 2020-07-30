@@ -1,12 +1,13 @@
 ---
-title: Box shadow
+id: Box shadow
 section: utilities
 ---
 
 import './BoxShadow.css'
 
 ## Examples
-```hbs title=Small
+### Small
+```hbs
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm"}}
   Regular
 {{/box-shadow}}
@@ -24,7 +25,8 @@ import './BoxShadow.css'
 {{/box-shadow}}
 ```
 
-```hbs title=Medium
+### Medium
+```hbs
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md"}}
   Regular
 {{/box-shadow}}
@@ -42,7 +44,8 @@ import './BoxShadow.css'
 {{/box-shadow}}
 ```
 
-```hbs title=Large
+### Large
+```hbs
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg"}}
   Regular
 {{/box-shadow}}
@@ -60,7 +63,8 @@ import './BoxShadow.css'
 {{/box-shadow}}
 ```
 
-```hbs title=Extra-large
+### Extra large
+```hbs
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl"}}
   Regular
 {{/box-shadow}}
@@ -78,7 +82,8 @@ import './BoxShadow.css'
 {{/box-shadow}}
 ```
 
-```hbs title=Inset
+### Inset
+```hbs
 {{#> box-shadow box-shadow--modifier="pf-u-box-shadow-inset"}}
   Regular
 {{/box-shadow}}

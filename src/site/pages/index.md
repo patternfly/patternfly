@@ -1,5 +1,5 @@
 ---
-title: Landing page
+id: Landing page
 hideTOC: true
 ---
 import quickRefPdf from './reference-docs/PF-quick-ref.pdf';

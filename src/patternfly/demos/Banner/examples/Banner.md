@@ -1,5 +1,5 @@
 ---
-title: 'Banner'
+id: 'Banner'
 section: demos
 beta: true
 cssPrefix: pf-c-banner
@@ -7,7 +7,8 @@ wrapperTag: div
 ---
 
 ## Examples
-```hbs title=Basic isFullscreen
+### Basic
+```hbs isFullscreen
 {{#> page page--id="page-layout-table-simple"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
@@ -34,7 +35,8 @@ wrapperTag: div
 {{/page}}
 ```
 
-```hbs title=Top/bottom isFullscreen
+### Top/bottom
+```hbs isFullscreen
 {{#> l-flex l-flex--modifier="pf-m-column pf-m-nowrap pf-m-space-items-none" l-flex--attribute='style="height: 100%;"'}}
   {{#> l-flex-item}}
     {{#> banner banner--modifier="pf-m-sticky"}}

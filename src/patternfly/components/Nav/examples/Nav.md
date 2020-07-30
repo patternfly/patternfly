@@ -1,5 +1,5 @@
 ---
-title: Navigation
+id: Navigation
 section: components
 cssPrefix: pf-c-nav
 ---
@@ -8,7 +8,8 @@ import './Nav.css'
 
 ## Examples
 
-```hbs title=Default
+### Default
+```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -35,7 +36,8 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Grouped-nav
+### Grouped nav
+```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
     {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
@@ -84,7 +86,8 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Expanded
+### Expanded
+```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
@@ -154,7 +157,8 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Expanded-with-subnav-titles
+### Expanded with subnav titles
+```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
@@ -210,7 +214,8 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Mixed
+### Mixed
+```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -265,7 +270,8 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Horizontal
+### Horizontal
+```hbs
 {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -287,7 +293,8 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Horizontal-overflow
+### Horizontal overflow
+```hbs
 {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -319,7 +326,8 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Tertiary
+### Tertiary
+```hbs
 {{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -341,7 +349,8 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Tertiary-overflow
+### Tertiary overflow
+```hbs
 {{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -373,7 +382,8 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Default-in-light-mode
+### Default in light mode
+```hbs
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -400,7 +410,8 @@ import './Nav.css'
 {{/nav}}
 ```
 
-```hbs title=Expanded-in-light-mode
+### Expanded in light mode
+```hbs
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}

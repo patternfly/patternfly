@@ -1,11 +1,12 @@
 ---
-title: Title
+id: Title
 section: components
 cssPrefix: pf-c-title
 ---
 
 ## Examples
-```hbs title=Size-modifiers
+### Size modifiers
+```hbs
 {{#> title titleType="h1" title--modifier="pf-m-4xl"}}
     4xl title
 {{/title}}

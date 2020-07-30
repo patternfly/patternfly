@@ -1,11 +1,12 @@
 ---
-title: Alert
+id: Alert
 section: components
 cssPrefix: pf-c-alert
 ---
 
 ## Examples
-```hbs title=Types
+### Types
+```hbs
 {{#> alert alert--attribute='aria-label="Default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
   {{/alert-icon}}
@@ -52,7 +53,8 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title=Variations
+### Variations
+```hbs
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -165,7 +167,8 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title=Inline-types
+### Inline types
+```hbs
 {{#> alert alert--modifier="pf-m-inline" alert--attribute='aria-label="Inline default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
   {{/alert-icon}}
@@ -212,7 +215,8 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
-```hbs title=Inline-variations
+### Inline variations
+```hbs
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}

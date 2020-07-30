@@ -1,10 +1,10 @@
 const { removeSync } = require('fs-extra');
 const { series, parallel, src, dest } = require('gulp');
 const browserSync = require('browser-sync').create();
-const { copyFA, copySource, copyAssets, copyDocs } = require('./scripts/gulp/copy');
+const { copyFA, copySource, copyAssets, copySite, copyDocs } = require('./scripts/gulp/copy');
 const { compileSASS, minifyCSS, watchSASS } = require('./scripts/gulp/sass');
 const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
-const { compileHBS, compileMD, watchHBS, watchMD } = require('./scripts/gulp/html');
+const { compileHBS, compileMD, watchHBS, watchMD, compileDocs } = require('./scripts/gulp/html');
 const { lintCSSComments, lintCSSFunctions } = require('./scripts/gulp/lint');
 const { generateSnippets } = require('./scripts/gulp/snippets');
 
@@ -44,7 +44,7 @@ function compileSrcSASS() {
 }
 
 function watchSrcSASS() {
-  return watchSASS(sassFiles);
+  return watchSASS(['./src/patternfly/**/*.scss', '!./src/patternfly/assets/**']);
 }
 
 function compileSrcHBS() {
@@ -61,6 +61,10 @@ function compileSrcMD() {
 
 function watchSrcMD() {
   return watchMD(mdFiles);
+}
+
+function buildDocs() {
+  return compileDocs(mdFiles);
 }
 
 function copyWorkspaceAssets() {
@@ -85,7 +89,8 @@ function startWorkspaceServer() {
 const buildWorkspace = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD), copyWorkspaceAssets);
 
 module.exports = {
-  build: series(clean, compileSrcSASS, minifyCSS, pfIcons, copyFA, copyDocs, copySourceFiles),
+  build: series(clean, parallel(series(compileSrcSASS, minifyCSS), pfIcons, copyFA, copySite, copySourceFiles)),
+  buildDocs: series(compileSrcHBS, buildDocs, copyDocs),
   buildWorkspace,
   develop: series(buildWorkspace, parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWorkspaceServer)),
   compileSASS: compileSrcSASS,
@@ -99,6 +104,7 @@ module.exports = {
   copyFA,
   copySource: copySourceFiles,
   copyAssets,
+  copySite,
   copyDocs,
   lintCSSFunctions,
   lintCSSComments,

@@ -1,11 +1,12 @@
 ---
-title: Card
+id: Card
 section: components
 cssPrefix: pf-c-card
 ---
 
 ## Examples
-```hbs title=Basic
+### Basic
+```hbs
 {{#> card}}
   {{#> card-title}}
     Title
@@ -19,7 +20,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=With-image-and-action
+### With image and action
+```hbs
 {{#> card card--id="card-action-example-1"}}
   {{#> card-header}}
     {{#> card-header-main}}
@@ -43,7 +45,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=With-title-in-head
+### With title in head
+```hbs
 {{#> card card--id="card-action-example-2"}}
   {{#> card-header}}
     {{#> card-actions}}
@@ -64,7 +67,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=With-only-actions-in-head-(no-title/footer)
+### With only actions in head (no title/footer)
+```hbs
 {{#> card card--id="card-action-example-3"}}
   {{#> card-header}}
     {{#> card-actions}}
@@ -78,7 +82,8 @@ cssPrefix: pf-c-card
   {{/card-body}}
 {{/card}}
 ```
-```hbs title=With-only-image-in-head
+### With only image in head
+```hbs
 {{#> card}}
   {{#> card-header}}
     {{#> card-header-main}}
@@ -97,7 +102,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=With-no-footer
+### With no footer
+```hbs
 {{#> card}}
   {{#> card-title}}
     Title
@@ -108,7 +114,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=With-no-title
+### With no title
+```hbs
 {{#> card}}
   {{#> card-body}}
     This card has no title
@@ -119,7 +126,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=With-only-a-content-section
+### With only a content section
+```hbs
 {{#> card}}
   {{#> card-body}}
     Body
@@ -127,7 +135,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=With-multiple-body-sections
+### With multiple body sections
+```hbs
 {{#> card}}
   {{#> card-title}}
     Title
@@ -147,7 +156,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=With-only-one-body-that-fills
+### With only one body that fills
+```hbs
 {{#> card}}
   {{#> card-title}}
     Title
@@ -167,7 +177,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=Compact
+### Compact
+```hbs
 {{#> card card--modifier="pf-m-compact"}}
   {{#> card-title}}
     Title
@@ -181,7 +192,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=Hover
+### Hover
+```hbs
 {{#> card card--modifier="pf-m-hoverable"}}
   {{#> card-title}}
     Title
@@ -195,7 +207,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=Selectable
+### Selectable
+```hbs
 {{#> card card--modifier="pf-m-selectable" card--attribute='tabindex="0"'}}
   {{#> card-title}}
     Title
@@ -209,7 +222,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=Selected
+### Selected
+```hbs
 {{#> card card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
   {{#> card-title}}
     Title
@@ -223,7 +237,8 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-```hbs title=Flat
+### Flat
+```hbs
 {{#> card card--modifier="pf-m-flat"}}
   {{#> card-title}}
     Title

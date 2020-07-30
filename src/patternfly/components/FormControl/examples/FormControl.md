@@ -1,11 +1,12 @@
 ---
-title: Form control
+id: Form control
 section: components
 cssPrefix: pf-c-form-control
 ---
 
 ## Examples
-```hbs title=Input
+### Input
+```hbs
 {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
 {{/form-control}}
 <br><br>
@@ -28,7 +29,8 @@ cssPrefix: pf-c-form-control
 {{/form-control}}
 ```
 
-```hbs title=Select
+### Select
+```hbs
 {{#> form-control controlType="select" form-control--attribute='id="select-standard" name="select-standard" aria-label="Standard select example"'}}
   <option value="" selected>Please choose</option>
   <option value="Mr">Mr</option>
@@ -88,7 +90,8 @@ cssPrefix: pf-c-form-control
 <br><br>
 ```
 
-```hbs title=Textarea
+### Textarea
+```hbs
 {{#> form-control controlType="textarea" form-control--attribute='name="textarea-standard" id="textarea-standard" aria-label="Standard textarea example"'}}
 Standard
 {{/form-control}}

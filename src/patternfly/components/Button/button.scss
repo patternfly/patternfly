@@ -158,6 +158,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    pointer-events: none;
     content: "";
     border: var(--pf-c-button--after--BorderWidth) solid;
     border-color: var(--pf-c-button--after--BorderColor);

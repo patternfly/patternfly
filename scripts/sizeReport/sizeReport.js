@@ -9,7 +9,7 @@ const program = new Command();
 program
   .version('1.0.0')
   .description("Generates a report comparing a folder's size to another commit's using NPM.")
-  .arguments('<pattern>')
+  .arguments('[pattern]')
   .option('-c, --comment', 'Whether to leave a github comment on CIRCLE_PR_NUMBER', false)
   .option('-d, --dir <dir>', 'Directory to compare', 'dist')
   .action(compare);
@@ -18,12 +18,19 @@ async function compare(pattern, options) {
   let compareDir;
   try {
     // Install from NPM
-    const sha = execSync(`git show-ref -s ${pattern}`);
-    const shaTag = execSync(`git show-ref --tags | grep ${sha}`)
-      .toString()
-      .split(' ')[1]
-      .replace('refs/tags/', '')
-      .replace('prerelease-v', '');
+    let shaTag;
+    if (pattern) {
+      const sha = execSync(`git show-ref -s ${pattern}`);
+      shaTag = execSync(`git show-ref --tags | grep ${sha}`)
+        .toString()
+        .split(' ')[1]
+        .replace('refs/tags/', '')
+        .replace('prerelease-v', '');
+    } else {
+      shaTag = execSync(`git describe --abbrev=0 --tags`)
+        .toString()
+        .replace('prerelease-v', '');
+    }
 
     // eslint-disable-next-line
     const packageName = require(path.join(process.cwd(), 'package.json')).name;
