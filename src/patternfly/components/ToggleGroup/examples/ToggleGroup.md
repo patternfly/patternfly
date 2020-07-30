@@ -13,15 +13,19 @@ import './ToggleGroup.css'
   {{#> toggle-group-button}}
     {{#> toggle-group-text}}
       Option 1
-      {{/toggle-group-text}}
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button}}
-    Option 2
+    {{#> toggle-group-text}}
+      Option 2
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button}}
-    Option 3
+    {{#> toggle-group-text}}
+      Option 3
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
 {{/toggle-group}}
 
@@ -29,15 +33,21 @@ import './ToggleGroup.css'
 
 {{#> toggle-group}}
   {{#> toggle-group-button toggle-group-button--modifier="pf-m-selected"}}
-    Option 1
+    {{#> toggle-group-text}}
+      Option 1
+    {{/toggle-group-text}}
+  {{/toggle-group-button}}
+  {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
+  {{#> toggle-group-button toggle-group-button--modifier="pf-m-selected"}}
+    {{#> toggle-group-text}}
+      Option 2
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button}}
-    Option 2
-  {{/toggle-group-button}}
-  {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
-  {{#> toggle-group-button}}
-    Option 3
+    {{#> toggle-group-text}}
+      Option 3
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
 {{/toggle-group}}
 
@@ -45,15 +55,21 @@ import './ToggleGroup.css'
 
 {{#> toggle-group}}
   {{#> toggle-group-button}}
-    Option 1
+    {{#> toggle-group-text}}
+      Option 1
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button}}
-    Option 2
+    {{#> toggle-group-text}}
+      Option 2
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--attribute="disabled"}}
-    Option 3
+    {{#> toggle-group-text}}
+      Option 3
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
 {{/toggle-group}}
 ```
@@ -61,15 +77,21 @@ import './ToggleGroup.css'
 ```hbs title=With-icon
 {{#> toggle-group}}
   {{#> toggle-group-button toggle-group-button--attribute='aria-label="Copy button"'}}
-    <i class="fas fa-copy" aria-hidden="true"/>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-copy" aria-hidden="true"/>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--attribute='aria-label="Undo button"'}}
-    <i class="fas fa-undo" aria-hidden="true"></i>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-undo" aria-hidden="true"></i>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--attribute='aria-label="Share button"'}}
-    <i class="fas fa-share-square" aria-hidden="true"></i>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-share-square" aria-hidden="true"></i>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
 {{/toggle-group}}
 
@@ -77,15 +99,21 @@ import './ToggleGroup.css'
 
 {{#> toggle-group}}
   {{#> toggle-group-button toggle-group-button--modifier="pf-m-selected" toggle-group-button--attribute='aria-label="Copy button"'}}
-    <i class="fas fa-copy" aria-hidden="true"/>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-copy" aria-hidden="true"/>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--attribute='aria-label="Undo button"'}}
-    <i class="fas fa-undo" aria-hidden="true"></i>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-undo" aria-hidden="true"></i>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--attribute='aria-label="Share button"'}}
-    <i class="fas fa-share-square" aria-hidden="true"></i>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-share-square" aria-hidden="true"></i>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
 {{/toggle-group}}
 
@@ -93,15 +121,21 @@ import './ToggleGroup.css'
 
 {{#> toggle-group}}
   {{#> toggle-group-button toggle-group-button--attribute='aria-label="Copy button"'}}
-    <i class="fas fa-copy" aria-hidden="true"/>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-copy" aria-hidden="true"/>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--attribute='aria-label="Undo button"'}}
-    <i class="fas fa-undo" aria-hidden="true"></i>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-undo" aria-hidden="true"></i>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--attribute='aria-label="Share button" disabled'}}
-    <i class="fas fa-share-square" aria-hidden="true"></i>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-share-square" aria-hidden="true"></i>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
 {{/toggle-group}}
 ```
@@ -109,15 +143,21 @@ import './ToggleGroup.css'
 ```hbs title=Light
 {{#> toggle-group}}
   {{#> toggle-group-button toggle-group-button--modifier="pf-m-light"}}
-    Option 1
+    {{#> toggle-group-text}}
+      Option 1
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--modifier="pf-m-light"}}
-    Option 2
+    {{#> toggle-group-text}}
+      Option 2
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--modifier="pf-m-light pf-m-selected"}}
-    Option 3
+    {{#> toggle-group-text}}
+      Option 3
+    {{/toggle-group-text}}
   {{/toggle-group-button}}
 {{/toggle-group}}
 
@@ -125,15 +165,21 @@ import './ToggleGroup.css'
 
 {{#> toggle-group}}
   {{#> toggle-group-button toggle-group-button--modifier="pf-m-light" toggle-group-button--attribute='aria-label="Copy button"'}}
-    <i class="fas fa-copy" aria-hidden="true"/>
+   {{#> toggle-group-icon}}
+      <i class="fas fa-copy" aria-hidden="true"/>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--modifier="pf-m-light" toggle-group-button--attribute='aria-label="Undo button"'}}
-    <i class="fas fa-undo" aria-hidden="true"></i>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-undo" aria-hidden="true"></i>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button toggle-group-button--modifier="pf-m-light pf-m-selected" toggle-group-button--attribute='aria-label="Share button"'}}
-    <i class="fas fa-share-square" aria-hidden="true"></i>
+    {{#> toggle-group-icon}}
+      <i class="fas fa-share-square" aria-hidden="true"></i>
+    {{/toggle-group-icon}}
   {{/toggle-group-button}}
 {{/toggle-group}}
 ```
