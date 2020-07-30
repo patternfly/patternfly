@@ -131,54 +131,7 @@ import './Skeleton.css'
 {{/skeleton}}
 ```
 
-```hbs title=Static-Height-and-Width-modifiers
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-sm"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-md"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-sm"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-md"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-lg"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-sm pf-m-width-lg"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-md pf-m-width-sm"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-lg pf-m-width-md"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-```
-
-```hbs title=Shape-modifiers
+```hbs title=Static-height-width-and-shape-modifiers
 Small circle
 {{#> skeleton}}
   {{#> skeleton-element skeleton-element--modifier="pf-m-circle pf-m-width-sm"}}
@@ -217,13 +170,13 @@ Large square
 <br/>
 Small rectangle
 {{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-sm"}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-height-sm pf-m-width-md"}}
   {{/skeleton-element}}
 {{/skeleton}}
 <br/>
 Medium rectangle
 {{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-height-md"}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-height-md pf-m-width-lg"}}
   {{/skeleton-element}}
 {{/skeleton}}
 <br/>
