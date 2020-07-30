@@ -237,6 +237,7 @@
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   margin-bottom: var(--pf-c-notification-drawer__list-item-description--MarginBottom);
+  word-break: break-word;
 }
 
 .pf-c-notification-drawer__list-item-timestamp {
@@ -282,6 +283,7 @@
 
   margin-right: var(--pf-c-notification-drawer__group-toggle-title--MarginRight);
   text-align: left;
+  word-break: break-word;
 }
 
 .pf-c-notification-drawer__group-toggle-count {
