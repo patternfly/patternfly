@@ -431,13 +431,11 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__main-section,
 .pf-c-page__main-wizard {
   &.pf-m-limit-width {
-    display: flex;
-    flex-direction: column;
     padding: 0;
 
     .pf-c-page__main-body {
-      flex: 1;
       max-width: var(--pf-c-page--section--m-limit-width--MaxWidth);
+      height: 100%;
     }
   }
 }
