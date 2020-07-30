@@ -11,7 +11,9 @@ import './ToggleGroup.css'
 ```hbs title=Default
 {{#> toggle-group}}
   {{#> toggle-group-button}}
-    Option 1
+    {{#> toggle-group-text}}
+      Option 1
+      {{/toggle-group-text}}
   {{/toggle-group-button}}
   {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
   {{#> toggle-group-button}}
@@ -150,8 +152,9 @@ import './ToggleGroup.css'
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-toggle-group` | `<div>` | Initiates the toggle button group. **Required** |
-| `.pf-c-toggle-group__button` | `<button>` | Initiates the toggle button group button. **Required** |
+| `.pf-c-toggle-group` | `<div>` | Initiates the toggle group. **Required** |
+| `.pf-c-toggle-group__button` | `<button>` | Initiates the toggle group button. **Required** |
+| `.pf-c-toggle-group__text` | `<div>` | Initiates the toggle button text element. |
+| `.pf-c-toggle-group__icon` | `<div>` | Initiates the toggle button icon element. |
 | `.pf-m-selected` | `.pf-c-toggle-group__button` | Modifies the toggle button group button for the selected state. |
-| `.pf-m-disabled` | `.pf-c-toggle-group__button` | Modifies the toggle button group button for the disabled state. |
 | `.pf-m-light` | `.pf-c-toggle-group__button` | Modifies the toggle button group button to have a light background to be used on a darker background. |
