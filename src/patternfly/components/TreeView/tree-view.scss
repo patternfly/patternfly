@@ -69,8 +69,9 @@ $pf-c-tree-view--MaxNesting: 10;
 
 .pf-c-tree-view__node {
   display: flex;
+  flex: 1 1;
   align-items: center;
-  width: 100%;
+  min-width: 0;
   padding: var(--pf-c-tree-view__node--PaddingTop) var(--pf-c-tree-view__node--PaddingRight) var(--pf-c-tree-view__node--PaddingBottom) var(--pf-c-tree-view__node--PaddingLeft);
   color: var(--pf-c-tree-view__node--Color);
   text-align: left;
@@ -113,9 +114,7 @@ $pf-c-tree-view--MaxNesting: 10;
 }
 
 .pf-c-tree-view__node-text {
-  @include pf-line-clamp("var(--pf-c-tree-view__node-text--max-lines)");
-
-  word-break: break-word;
+  @include pf-text-overflow;
 }
 
 .pf-c-tree-view__search {
