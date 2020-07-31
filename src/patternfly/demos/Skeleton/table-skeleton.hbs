@@ -1,0 +1,44 @@
+{{#> table table--id=(concat page--id '-table') table--grid="true" table--modifier=(concat 'pf-m-grid-md ' table-simple-table--modifier) table--attribute='aria-label="This is a table with checkboxes"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="check-all" aria-label="Select all rows">
+      {{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-td}}{{/table-td}}
+    {{/table-tr}}
+  {{/table-thead}}
+  {{#> table-tbody}}
+    {{#> skeleton}}
+      {{#> l-flex l-flex--modifier="pf-m-column pf-m-spacer-lg"}}
+        {{#> skeleton-element skeleton-element--modifier="pf-m-text-md"}}
+        {{/skeleton-element}}
+        {{#> skeleton-element skeleton-element--modifier="pf-m-text-md"}}
+        {{/skeleton-element}}
+        {{#> skeleton-element skeleton-element--modifier="pf-m-text-md"}}
+        {{/skeleton-element}}
+        {{#> skeleton-element skeleton-element--modifier="pf-m-text-md"}}
+        {{/skeleton-element}}
+        {{#> skeleton-element skeleton-element--modifier="pf-m-text-md"}}
+        {{/skeleton-element}}
+        {{#> skeleton-element skeleton-element--modifier="pf-m-text-md"}}
+        {{/skeleton-element}}
+      {{/l-flex}}
+    {{/skeleton}}
+  {{/table-tbody}}
+{{/table}}

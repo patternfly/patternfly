@@ -1,0 +1,9 @@
+#ws-core-c-skeleton-percentage-height-modifiers .ws-preview-html {
+  height: 400px;
+}
+
+#ws-core-c-skeleton-percentage-height-modifiers .ws-preview-html .pf-c-skeleton {
+  display: inline-block;
+  width: 15%;
+  margin-right: 4px;
+}
