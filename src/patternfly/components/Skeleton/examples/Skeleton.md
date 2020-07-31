@@ -92,15 +92,15 @@ Large circle
 {{/skeleton}}
 <br/>
 Small square
-{{#> skeleton skeleton--modifier="pf-m-width-sm"}}
+{{#> skeleton skeleton--modifier="pf-m-square pf-m-width-sm"}}
 {{/skeleton}}
 <br/>
 Medium square
-{{#> skeleton skeleton--modifier="pf-m-width-md"}}
+{{#> skeleton skeleton--modifier="pf-m-square pf-m-width-md"}}
 {{/skeleton}}
 <br/>
 Large square
-{{#> skeleton skeleton--modifier="pf-m-width-lg"}}
+{{#> skeleton skeleton--modifier="pf-m-square pf-m-width-lg"}}
 {{/skeleton}}
 <br/>
 Small rectangle
@@ -124,9 +124,8 @@ Large rectangle
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-skeleton` | `<div>` | Initiates the skeleton component. **Required** |
-| `.pf-m-height-[sm,md,lg]` | `.pf-c-skeleton` | Modifies the height of the skeleton. |
-| `.pf-m-width-[sm,md,lg]` | `.pf-c-skeleton` | Modifies the width of the skeleton. |
-| `.pf-m-text-[4xl,3xl,2xl,xl,lg,md,sm]` | `.pf-c-skeleton` | Modifies the skeleton height to match the height of PatternFly's text elements. | 
-| `.pf-m-width-[10,15,20,25,30,35,40,45,50,60,70,80,90]` | `.pf-c-skeleton` | Modifies the width of the skeleton to be responsive. The default is 100%. |
-| `.pf-m-circle` | `.pf-c-skeleton` | Modifies the border radius of the skeleton to be a circle. |
-
+| `.pf-m-width-[sm, md, lg, 25, 33, 50, 66, 75]` | `.pf-c-skeleton` | Modifies the width of the skeleton. The default is 100%. |
+| `.pf-m-height-[sm, md, lg, 25, 33, 50, 66, 75]` | `.pf-c-skeleton` | Modifies the height of the skeleton. The default is the inherited font size. |
+| `.pf-m-text-[sm, md, lg, xl, 2xl, 3xl, 4xl]` | `.pf-c-skeleton` | Modifies the skeleton height to match the height of PatternFly's text elements. |
+| `.pf-m-circle` | `.pf-c-skeleton` | Modifies the border radius of the skeleton to be a circle. Use a width modifier to specify the size. |
+| `.pf-m-square` | `.pf-c-skeleton` | Modifies the border radius of the skeleton to be a circle. Use a width modifier to specify the size. |
