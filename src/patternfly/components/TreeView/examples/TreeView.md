@@ -444,9 +444,10 @@ beta: true
 | `.pf-c-tree-view__content` | `<div>` | Initiates a tree view node. **Required** |
 | `.pf-c-tree-view__node` | `<button>`, `<a>` | Initiates a tree view node. **Required** |
 | `.pf-c-tree-view__node-count` | `<span>` | Initiates a tree view node count. |
-| `.pf-c-tree-view__toggle-icon` | `<span>` | Initiates a tree view toggle icon. |
-| `.pf-c-tree-view__text` | `<span>` | Initiates tree view text. |
-| `.pf-c-tree-view__icon` | `<span>` | Initiates a tree view icon. |
+| `.pf-c-tree-view__node-toggle-icon` | `<span>` | Initiates a tree view toggle icon. |
+| `.pf-c-tree-view__node-text` | `<span>` | Initiates tree view text. |
+| `.pf-c-tree-view__node-icon` | `<span>` | Initiates a tree view icon. |
+| `.pf-c-tree-view__node-check` | `<span>` | Initiates a tree view check. |
 | `.pf-c-tree-view__action` | `<button>` | Initiates a tree view action. |
 | `.pf-c-tree-view__search` | `<div>` | Initiates a tree view search wrapper. |
 | `.pf-m-active` | `.pf-c-tree-view__node` | Modifies the tree view node to be the root node item. |
