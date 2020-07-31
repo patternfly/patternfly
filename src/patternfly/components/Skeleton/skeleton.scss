@@ -1,11 +1,7 @@
 .pf-c-skeleton {
-  // Padding modifier
-  --pf-c-skeleton--m-padding--Padding: var(--pf-global--spacer--lg);
-
   // Element
   --pf-c-skeleton__element--BackgroundColor: var(--pf-global--palette--black-150);
-  --pf-c-skeleton__element--Height: var(--pf-global--spacer--lg);
-  --pf-c-skeleton__element--Width: 100%;
+  --pf-c-skeleton__element--Height: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md));
   --pf-c-skeleton__element--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-skeleton__element--after--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-skeleton__element--after--LinearGradientAngle: 90deg;
@@ -41,28 +37,15 @@
   --pf-c-skeleton__element--m-text-sm--Height: calc(var(--pf-global--FontSize--sm) * var(--pf-global--LineHeight--md));
 
   // Width
-  --pf-c-skeleton__element--m-width-10--Width: 10%;
-  --pf-c-skeleton__element--m-width-15--Width: 15%;
-  --pf-c-skeleton__element--m-width-20--Width: 20%;
   --pf-c-skeleton__element--m-width-25--Width: 25%;
-  --pf-c-skeleton__element--m-width-30--Width: 30%;
-  --pf-c-skeleton__element--m-width-35--Width: 35%;
-  --pf-c-skeleton__element--m-width-40--Width: 40%;
-  --pf-c-skeleton__element--m-width-45--Width: 45%;
+  --pf-c-skeleton__element--m-width-33--Width: calc(100% / 3);
   --pf-c-skeleton__element--m-width-50--Width: 50%;
-  --pf-c-skeleton__element--m-width-60--Width: 60%;
-  --pf-c-skeleton__element--m-width-70--Width: 70%;
-  --pf-c-skeleton__element--m-width-80--Width: 80%;
-  --pf-c-skeleton__element--m-width-90--Width: 90%;
-
-  &.pf-m-padding {
-    padding: var(--pf-c-skeleton--m-padding--Padding);
-  }
+  --pf-c-skeleton__element--m-width-66--Width: calc(100% / 3 * 2);
+  --pf-c-skeleton__element--m-width-75--Width: 75%;
 }
 
 .pf-c-skeleton__element {
   position: relative;
-  width: var(--pf-c-skeleton__element--Width);
   height: var(--pf-c-skeleton__element--Height);
   overflow: hidden;
   background-color: var(--pf-c-skeleton__element--BackgroundColor);
@@ -97,15 +80,15 @@
 
   // Width
   &.pf-m-width-sm {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-sm--Width);
+    width: var(--pf-c-skeleton__element--m-width-sm--Width);
   }
 
   &.pf-m-width-md {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-md--Width);
+    width: var(--pf-c-skeleton__element--m-width-md--Width);
   }
 
   &.pf-m-width-lg {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-lg--Width);
+    width: var(--pf-c-skeleton__element--m-width-lg--Width);
   }
 
   &.pf-m-width-sm,
@@ -131,56 +114,24 @@
   }
 
   // Width modifiers
-  &.pf-m-width-10 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-10--Width);
-  }
-
-  &.pf-m-width-15 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-15--Width);
-  }
-
-  &.pf-m-width-20 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-20--Width);
-  }
-
   &.pf-m-width-25 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-25--Width);
+    width: var(--pf-c-skeleton__element--m-width-25--Width);
   }
 
-  &.pf-m-width-30 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-30--Width);
-  }
-
-  &.pf-m-width-35 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-35--Width);
-  }
-
-  &.pf-m-width-40 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-40--Width);
-  }
-
-  &.pf-m-width-45 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-45--Width);
+  &.pf-m-width-33 {
+    width: var(--pf-c-skeleton__element--m-width-33--Width);
   }
 
   &.pf-m-width-50 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-50--Width);
+    width: var(--pf-c-skeleton__element--m-width-50--Width);
   }
 
-  &.pf-m-width-60 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-60--Width);
+  &.pf-m-width-66 {
+    width: var(--pf-c-skeleton__element--m-width-66--Width);
   }
 
-  &.pf-m-width-70 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-70--Width);
-  }
-
-  &.pf-m-width-80 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-80--Width);
-  }
-
-  &.pf-m-width-90 {
-    --pf-c-skeleton__element--Width: var(--pf-c-skeleton__element--m-width-90--Width);
+  &.pf-m-width-75 {
+    width: var(--pf-c-skeleton__element--m-width-75--Width);
   }
 
   &.pf-m-text-4xl {

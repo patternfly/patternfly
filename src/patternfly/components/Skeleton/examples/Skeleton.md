@@ -17,42 +17,12 @@ import './Skeleton.css'
 
 ```hbs title=Responsive-width-modifiers
 {{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-10"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-15"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-20"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
   {{#> skeleton-element skeleton-element--modifier="pf-m-width-25"}}
   {{/skeleton-element}}
 {{/skeleton}}
 <br/>
 {{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-30"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-35"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-40"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-45"}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-width-33"}}
   {{/skeleton-element}}
 {{/skeleton}}
 <br/>
@@ -62,22 +32,12 @@ import './Skeleton.css'
 {{/skeleton}}
 <br/>
 {{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-60"}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-width-66"}}
   {{/skeleton-element}}
 {{/skeleton}}
 <br/>
 {{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-70"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-80"}}
-  {{/skeleton-element}}
-{{/skeleton}}
-<br/>
-{{#> skeleton}}
-  {{#> skeleton-element skeleton-element--modifier="pf-m-width-90"}}
+  {{#> skeleton-element skeleton-element--modifier="pf-m-width-75"}}
   {{/skeleton-element}}
 {{/skeleton}}
 <br/>
@@ -201,7 +161,6 @@ Large rectangle
 | -- | -- | -- |
 | `.pf-c-skeleton` | `<div>` | Initiates the skeleton component. **Required** |
 | `.pf-c-skeleton__element` | `<div>` | Initiates the skeleton element. **Required** |
-| `.pf-m-padding` | `.pf-c-skeleton` | Modifies the skeleton to have padding. |
 | `.pf-m-height-[sm,md,lg]` | `.pf-c-skeleton__element` | Modifies the height of the skeleton element. |
 | `.pf-m-width-[sm,md,lg]` | `.pf-c-skeleton__element` | Modifies the width of the skeleton element. |
 | `.pf-m-text-[4xl,3xl,2xl,xl,lg,md,sm]` | `.pf-c-skeleton__element` | Modifies the skeleton element height to match the height of PatternFly's text elements. | 
