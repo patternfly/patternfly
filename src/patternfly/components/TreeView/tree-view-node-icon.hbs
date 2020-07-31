@@ -1,0 +1,10 @@
+<span class="pf-c-tree-view__node-icon{{#if tree-view-node-icon--modifier}} {{tree-view-node-icon--modifier}}{{/if}}"
+  {{#if tree-view-node-icon--attribute}}
+    {{{tree-view-node-icon--attribute}}}
+  {{/if}}>
+  {{#if tree-view-node-icon--IsFolder}}
+    <i class="fas fa-folder{{#if tree-view-list-item--IsExpanded}}-open{{/if}}" aria-hidden="true"></i>
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
+</span>
