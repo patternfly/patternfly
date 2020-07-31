@@ -1,4 +1,4 @@
-$pf-c-tree-view--MaxNesting: 6;
+$pf-c-tree-view--MaxNesting: 10;
 
 .pf-c-tree-view {
   --pf-c-tree-view--PaddingTop: var(--pf-global--spacer--sm);
@@ -17,7 +17,7 @@ $pf-c-tree-view--MaxNesting: 6;
   --pf-c-tree-view__link--Color: var(--pf-global--Color--100);
   --pf-c-tree-view__link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-tree-view__link--m-current--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-tree-view__link--m-root--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-tree-view__link--m-active--FontWeight: var(--pf-global--FontWeight--bold);
 
   // Text
   --pf-c-tree-view__text--PaddingTop: var(--pf-global--spacer--sm);
@@ -58,7 +58,6 @@ $pf-c-tree-view--MaxNesting: 6;
   --pf-c-tree-view__action--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tree-view__action--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-tree-view__action--Color: var(--pf-global--icon--Color--light);
-  --pf-c-tree-view__action--m-favorite--Color: var(--pf-global--palette--gold-400);
 
   padding-top: var(--pf-c-tree-view--PaddingTop);
   padding-bottom: var(--pf-c-tree-view--PaddingBottom);
@@ -67,7 +66,7 @@ $pf-c-tree-view--MaxNesting: 6;
 // stylelint-disable selector-max-class, selector-max-compound-selectors
 .pf-c-tree-view__list-item {
   &.pf-m-expanded {
-    > .pf-c-tree-view__node > .pf-c-tree-view__link > .pf-c-tree-view__link-toggle-icon > i {
+    > .pf-c-tree-view__content > .pf-c-tree-view__link > .pf-c-tree-view__link-toggle-icon > i {
       transform: rotate(90deg);
     }
   }
@@ -94,8 +93,8 @@ $pf-c-tree-view--MaxNesting: 6;
     font-weight: var(--pf-c-tree-view__link--m-current--FontWeight);
   }
 
-  &.pf-m-root {
-    font-weight: var(--pf-c-tree-view__link--m-root--FontWeight);
+  &.pf-m-active {
+    font-weight: var(--pf-c-tree-view__link--m-active--FontWeight);
   }
 
   &:focus {
@@ -163,10 +162,6 @@ $pf-c-tree-view--MaxNesting: 6;
   color: var(--pf-c-tree-view__action--Color);
   visibility: hidden;
   border: 0;
-
-  &.pf-m-favorite {
-    --pf-c-tree-view__action--Color: var(--pf-c-tree-view__action--m-favorite--Color);
-  }
 }
 
 // stylelint-disable no-duplicate-selectors
@@ -177,6 +172,7 @@ $pf-c-tree-view--MaxNesting: 6;
   @for $i from 1 through $pf-c-tree-view--MaxNesting {
     #{$nested-item} {
       --pf-c-tree-view__link--PaddingLeft: calc(var(--pf-c-tree-view__link--padding--base) + (var(--pf-c-tree-view__link--nested-padding--base) * #{$i}));
+      --pf-c-tree-view__text--PaddingLeft: calc(var(--pf-c-tree-view__link--padding--base) + (var(--pf-c-tree-view__link--nested-padding--base) * #{$i}));
     }
 
     #{$nested-item}.pf-m-expandable {

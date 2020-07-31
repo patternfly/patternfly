@@ -1,5 +1,7 @@
 <ul class="pf-c-tree-view__list{{#if tree-view-list--modifier}} {{tree-view-list--modifier}}{{/if}}"
-  {{#if tree-view-list--IsChild}}
+  {{#if tree-view-list--IsRoot}}
+    role="tree"
+  {{else}}
     role="group"
   {{/if}}
   {{#if tree-view-list--attribute}}
