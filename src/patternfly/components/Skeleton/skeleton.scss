@@ -5,6 +5,7 @@
 
   // Before
   --pf-c-skeleton--before--PaddingBottom: 0;
+  --pf-c-skeleton--before--Height: auto;
   --pf-c-skeleton--before--Content: "\00a0";
 
   // After
@@ -22,9 +23,6 @@
   // Circle
   --pf-c-skeleton--m-circle--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-skeleton--m-circle--before--PaddingBottom: 100%;
-
-  // Square
-  --pf-c-skeleton--m-square--before--PaddingBottom: 100%;
 
   // Text modifiers
   --pf-c-skeleton--m-text-4xl--Height: calc(var(--pf-global--FontSize--4xl) * var(--pf-global--LineHeight--sm));
@@ -54,6 +52,7 @@
   --pf-c-skeleton--m-height-50--Height: 50%;
   --pf-c-skeleton--m-height-66--Height: calc(100% / 3 * 2);
   --pf-c-skeleton--m-height-75--Height: 75%;
+  --pf-c-skeleton--m-height-100--Height: 100%;
 
   position: relative;
   height: var(--pf-c-skeleton--Height);
@@ -63,7 +62,7 @@
 
   &::before {
     display: block;
-    height: 0;
+    height: var(--pf-c-skeleton--before--Height);
     padding-bottom: var(--pf-c-skeleton--before--PaddingBottom);
     content: var(--pf-c-skeleton--before--Content);
   }
@@ -84,12 +83,12 @@
   // Circle
   &.pf-m-circle {
     --pf-c-skeleton--BorderRadius: var(--pf-c-skeleton--m-circle--BorderRadius);
-    --pf-c-skeleton--before--PaddingBottom: var(--pf-c-skeleton--m-circle--before--PaddingBottom);
   }
 
-  // Square
-  &.pf-m-square {
-    --pf-c-skeleton--before--PaddingBottom: var(--pf-c-skeleton--m-square--before--PaddingBottom);
+  &.pf-m-square,
+  &.pf-m-circle {
+    --pf-c-skeleton--before--Height: 0;
+    --pf-c-skeleton--before--PaddingBottom: var(--pf-c-skeleton--m-circle--before--PaddingBottom);
   }
 
   // Width
