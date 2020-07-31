@@ -236,7 +236,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 // Page level drawer
-.pf-c-drawer .pf-c-page__main {
+.pf-c-drawer__body > .pf-c-page__main {
   min-height: 100%;
 }
 

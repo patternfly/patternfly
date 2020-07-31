@@ -178,7 +178,7 @@ wrapperTag: div
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-nav page-main-nav--IsLimitWidth="true"}}
       {{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
         {{#> nav-list}}
           {{#> nav-item}}

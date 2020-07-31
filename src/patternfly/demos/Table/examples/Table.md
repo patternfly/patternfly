@@ -18,17 +18,19 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-nav page-main-nav--IsLimitWidth="true"}}
       {{> table-main-section-nav}}
     {{/page-main-nav}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-      {{> table-main-section-content}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light" page-main-section--IsLimitWidth="true"}}
+      {{#> content}}
+        <h1>Table demos</h1>
+        <p>Below is an example of a Table.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit venenatis enim, ut ultrices metus ornare at. Curabitur vel nibh id leo finibus suscipit. Curabitur eu tellus lectus. Vivamus lacus leo, lobortis ac convallis ac, dapibus vel ligula. Suspendisse vitae felis at augue blandit sollicitudin. Sed erat metus, pellentesque vel accumsan vitae, tincidunt id erat. Mauris et pharetra felis. Duis at nisi leo. Nam blandit dui dui, in euismod est dapibus sed. Vivamus sed dolor ullamcorper, euismod orci efficitur, ornare leo. Sed sit amet sollicitudin nulla. Nunc tristique sem ut est laoreet efficitur. Cras tristique finibus risus, eget fringilla tellus porta vitae. Duis id nunc ultricies, ultrices nibh vel, sollicitudin tellus.</p>
+      {{/content}}
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
-      {{#> card}}
-        {{> table-simple-table}}
-        {{> table-pagination-footer}}
-      {{/card}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md pf-m-light" page-main-section--IsLimitWidth="true"}}
+      {{> table-simple-table}}
+      {{> table-pagination-footer}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -269,15 +271,17 @@ wrapperTag: div
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
       {{/button}}
-      {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
-        Manage columns
-      {{/modal-box-title}}
-      {{#> modal-box-description}}
-        {{#> content}}
-          <p>Selected categories will be displayed in the table.</p>
-          {{#> button button--modifier="pf-m-link pf-m-inline"}}Select all{{/button}}
-        {{/content}}
-      {{/modal-box-description}}
+      {{#> modal-box-header}}
+        {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
+          Manage columns
+        {{/modal-box-title}}
+        {{#> modal-box-description}}
+          {{#> content}}
+            <p>Selected categories will be displayed in the table.</p>
+            {{#> button button--modifier="pf-m-link pf-m-inline"}}Select all{{/button}}
+          {{/content}}
+        {{/modal-box-description}}
+      {{/modal-box-header}}
       {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
         {{#> data-list data-list--id="table-column-management" data-list--attribute='aria-label="Table column management"' data-list--modifier="pf-m-compact"}}
           {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}

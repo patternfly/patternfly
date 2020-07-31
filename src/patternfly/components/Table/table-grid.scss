@@ -357,7 +357,7 @@
       content: none;
     }
 
-    td {
+    td, th {
       &.pf-m-no-padding {
         .pf-c-table__expandable-row-content {
           padding: 0;
