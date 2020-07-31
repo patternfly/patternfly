@@ -6,8 +6,6 @@
   // Before
   --pf-c-skeleton--before--PaddingBottom: 0;
   --pf-c-skeleton--before--Content: "\00a0";
-  --pf-c-skeleton--m-width-sm--before--PaddingBottom: 100%;
-  --pf-c-skeleton--m-width-sm--before--Content: "";
 
   // After
   --pf-c-skeleton--after--LinearGradientAngle: 90deg;
@@ -23,15 +21,10 @@
 
   // Circle
   --pf-c-skeleton--m-circle--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-skeleton--m-circle--before--PaddingBottom: 100%;
 
-  // Static width and height
-  --pf-c-skeleton--m-width-sm--Width: #{pf-size-prem(100px)};
-  --pf-c-skeleton--m-width-md--Width: #{pf-size-prem(200px)};
-  --pf-c-skeleton--m-width-lg--Width: #{pf-size-prem(300px)};
-  --pf-c-skeleton--m-height-sm--Height: #{pf-size-prem(100px)};
-  --pf-c-skeleton--m-height-md--Height: #{pf-size-prem(200px)};
-  --pf-c-skeleton--m-height-lg--Height: #{pf-size-prem(300px)};
-
+  // Square
+  --pf-c-skeleton--m-square--before--PaddingBottom: 100%;
 
   // Text modifiers
   --pf-c-skeleton--m-text-4xl--Height: calc(var(--pf-global--FontSize--4xl) * var(--pf-global--LineHeight--sm));
@@ -43,6 +36,9 @@
   --pf-c-skeleton--m-text-sm--Height: calc(var(--pf-global--FontSize--sm) * var(--pf-global--LineHeight--md));
 
   // Width
+  --pf-c-skeleton--m-width-sm--Width: #{pf-size-prem(100px)};
+  --pf-c-skeleton--m-width-md--Width: #{pf-size-prem(200px)};
+  --pf-c-skeleton--m-width-lg--Width: #{pf-size-prem(300px)};
   --pf-c-skeleton--m-width-25--Width: 25%;
   --pf-c-skeleton--m-width-33--Width: calc(100% / 3);
   --pf-c-skeleton--m-width-50--Width: 50%;
@@ -50,6 +46,9 @@
   --pf-c-skeleton--m-width-75--Width: 75%;
 
   // Height
+  --pf-c-skeleton--m-height-sm--Height: #{pf-size-prem(100px)};
+  --pf-c-skeleton--m-height-md--Height: #{pf-size-prem(200px)};
+  --pf-c-skeleton--m-height-lg--Height: #{pf-size-prem(300px)};
   --pf-c-skeleton--m-height-25--Height: 25%;
   --pf-c-skeleton--m-height-33--Height: calc(100% / 3);
   --pf-c-skeleton--m-height-50--Height: 50%;
@@ -64,6 +63,7 @@
 
   &::before {
     display: block;
+    height: 0;
     padding-bottom: var(--pf-c-skeleton--before--PaddingBottom);
     content: var(--pf-c-skeleton--before--Content);
   }
@@ -84,6 +84,12 @@
   // Circle
   &.pf-m-circle {
     --pf-c-skeleton--BorderRadius: var(--pf-c-skeleton--m-circle--BorderRadius);
+    --pf-c-skeleton--before--PaddingBottom: var(--pf-c-skeleton--m-circle--before--PaddingBottom);
+  }
+
+  // Square
+  &.pf-m-square {
+    --pf-c-skeleton--before--PaddingBottom: var(--pf-c-skeleton--m-square--before--PaddingBottom);
   }
 
   // Width
@@ -99,26 +105,6 @@
     width: var(--pf-c-skeleton--m-width-lg--Width);
   }
 
-  &.pf-m-width-sm,
-  &.pf-m-width-md,
-  &.pf-m-width-lg {
-    --pf-c-skeleton--before--PaddingBottom: var(--pf-c-skeleton--m-width-sm--before--PaddingBottom);
-    --pf-c-skeleton--before--Content: var(--pf-c-skeleton--m-width-sm--before--Content);
-  }
-
-  &.pf-m-height-sm {
-    --pf-c-skeleton--Height: var(--pf-c-skeleton--m-height-sm--Height);
-  }
-
-  &.pf-m-height-md {
-    --pf-c-skeleton--Height: var(--pf-c-skeleton--m-height-md--Height);
-  }
-
-  &.pf-m-height-lg {
-    --pf-c-skeleton--Height: var(--pf-c-skeleton--m-height-lg--Height);
-  }
-
-  // Width modifiers
   &.pf-m-width-25 {
     width: var(--pf-c-skeleton--m-width-25--Width);
   }
@@ -139,7 +125,19 @@
     width: var(--pf-c-skeleton--m-width-75--Width);
   }
 
-  // Height modifiers
+  // Height
+  &.pf-m-height-sm {
+    --pf-c-skeleton--Height: var(--pf-c-skeleton--m-height-sm--Height);
+  }
+
+  &.pf-m-height-md {
+    --pf-c-skeleton--Height: var(--pf-c-skeleton--m-height-md--Height);
+  }
+
+  &.pf-m-height-lg {
+    --pf-c-skeleton--Height: var(--pf-c-skeleton--m-height-lg--Height);
+  }
+
   &.pf-m-height-25 {
     --pf-c-skeleton--Height: var(--pf-c-skeleton--m-height-25--Height);
   }
