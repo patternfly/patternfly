@@ -125,7 +125,7 @@ Large rectangle
 | -- | -- | -- |
 | `.pf-c-skeleton` | `<div>` | Initiates the skeleton component. **Required** |
 | `.pf-m-width-[sm, md, lg, 25, 33, 50, 66, 75]` | `.pf-c-skeleton` | Modifies the width of the skeleton. The default is 100%. |
-| `.pf-m-height-[sm, md, lg, 25, 33, 50, 66, 75]` | `.pf-c-skeleton` | Modifies the height of the skeleton. The default is the inherited font size. |
+| `.pf-m-height-[sm, md, lg, 25, 33, 50, 66, 75, 100]` | `.pf-c-skeleton` | Modifies the height of the skeleton. The default is the inherited font size. |
 | `.pf-m-text-[sm, md, lg, xl, 2xl, 3xl, 4xl]` | `.pf-c-skeleton` | Modifies the skeleton height to match the height of PatternFly's text elements. |
 | `.pf-m-circle` | `.pf-c-skeleton` | Modifies the border radius of the skeleton to be a circle. Use a width modifier to specify the size. |
 | `.pf-m-square` | `.pf-c-skeleton` | Modifies the border radius of the skeleton to be a square. Use a width modifier to specify the size. |
