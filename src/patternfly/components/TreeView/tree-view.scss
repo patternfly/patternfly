@@ -113,7 +113,7 @@ $pf-c-tree-view--MaxNesting: 10;
 }
 
 .pf-c-tree-view__node-text {
-  @include pf-line-clamp("var(--pf-c-tree-view__node-text--max-lines)");
+  @include pf-text-overflow;
 
   word-break: break-word;
 }
