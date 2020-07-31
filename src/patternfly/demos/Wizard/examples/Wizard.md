@@ -250,7 +250,7 @@ wrapperTag: div
     {{/page-template-breadcrumb}}
     {{#> page-template-title}}
     {{/page-template-title}}
-    {{#> page-main-wizard}}
+    {{#> page-main-wizard page-main-wizard--IsLimitWidth="true"}}
       {{#> wizard}}
         {{#> wizard-toggle}}
           {{#> wizard-toggle-list}}
@@ -389,7 +389,7 @@ wrapperTag: div
     {{/page-template-breadcrumb}}
     {{#> page-template-title}}
     {{/page-template-title}}
-    {{#> page-main-wizard}}
+    {{#> page-main-wizard page-main-wizard--IsLimitWidth="true"}}
       {{#> wizard wizard--IsExpanded="true"}}
         {{#> wizard-toggle}}
           {{#> wizard-toggle-list}}
