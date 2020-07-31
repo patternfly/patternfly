@@ -1,0 +1,11 @@
+<ul class="pf-c-tree-view__list{{#if tree-view-list--modifier}} {{tree-view-list--modifier}}{{/if}}"
+  {{#if tree-view-list--IsRoot}}
+    role="tree"
+  {{else}}
+    role="group"
+  {{/if}}
+  {{#if tree-view-list--attribute}}
+    {{{tree-view-list--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</ul>

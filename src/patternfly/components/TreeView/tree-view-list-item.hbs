@@ -1,0 +1,14 @@
+<li class="pf-c-tree-view__list-item{{#if tree-view-list-item--IsExpandable}} pf-m-expandable{{/if}}{{#if tree-view-list-item--IsExpanded}} pf-m-expanded{{/if}}{{#if tree-view-list-item--modifier}} {{tree-view-list-item--modifier}}{{/if}}"
+  role="treeitem"
+  aria-expanded="{{#if tree-view-list-item--IsExpanded}}true{{else}}false{{/if}}"
+  {{#if tree-view-list-item--IsExpandable}}
+    tabindex="0"
+  {{else}}
+    tabindex="-1"
+  {{/if}}
+
+  {{#if tree-view-list-item--attribute}}
+    {{{tree-view-list-item--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</li>

@@ -1,0 +1,24 @@
+{{#> tree-view-content}}
+  <{{# if tree-view-node--type}}{{tree-view-node--type}}{{else}}button{{/if}} class="pf-c-tree-view__node{{#if tree-view-node--modifier}} {{tree-view-node--modifier}}{{/if}}{{#if tree-view-node--IsActive}} pf-m-active{{/if}}"
+    {{#if tree-view-node--attribute}}
+      {{{tree-view-node--attribute}}}
+    {{/if}}>
+    {{#if tree-view-node--IsToggle}}
+      {{> tree-view-node-toggle-icon}}
+    {{/if}}
+    {{#if tree-view-node--HasCheckbox}}
+      {{> tree-view-node-check}}
+    {{/if}}
+    {{#if tree-view-node--HasFolderIcon}}
+      {{> tree-view-node-icon tree-view-node-icon--IsFolder="true"}}
+    {{/if}}
+    {{#if tree-view-node--text}}
+      {{#> tree-view-node-text}}
+        {{{tree-view-node--text}}}
+      {{/tree-view-node-text}}
+    {{/if}}
+    {{#if @partial-block}}
+      {{> @partial-block}}
+    {{/if}}
+  </{{# if tree-view-node--type}}{{tree-view-node--type}}{{else}}button{{/if}}>
+{{/tree-view-content}}
