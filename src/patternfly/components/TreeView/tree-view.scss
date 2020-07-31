@@ -5,25 +5,25 @@ $pf-c-tree-view--MaxNesting: 6;
   --pf-c-tree-view--PaddingBottom: var(--pf-global--spacer--sm);
 
   // Link base
-  --pf-c-tree-view__link--base--padding: var(--pf-global--spacer--sm);
-  --pf-c-tree-view__link--padding-nested: var(--pf-global--spacer--lg);
-  --pf-c-tree-view__item--m-expandable__link--padding-nested: var(--pf-global--spacer--lg);
+  --pf-c-tree-view__link--padding--base: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__link--nested-padding--base: var(--pf-global--spacer--lg);
+  --pf-c-tree-view__item--m-expandable__link--nested-padding--base: var(--pf-global--spacer--lg);
 
   // Link
   --pf-c-tree-view__link--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-tree-view__link--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tree-view__link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-tree-view__link--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__link--PaddingLeft: var(--pf-c-tree-view__link--padding--base);
   --pf-c-tree-view__link--Color: var(--pf-global--Color--100);
   --pf-c-tree-view__link--m-current--Color: var(--pf-global--link--Color);
   --pf-c-tree-view__link--m-current--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-tree-view__link--m-first--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-tree-view__link--m-root--FontWeight: var(--pf-global--FontWeight--bold);
 
   // Text
   --pf-c-tree-view__text--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-tree-view__text--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tree-view__text--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-tree-view__text--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__text--PaddingLeft: var(--pf-c-tree-view__link--padding--base);
 
   // link hover/focus
   --pf-c-tree-view__node--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
@@ -94,8 +94,8 @@ $pf-c-tree-view--MaxNesting: 6;
     font-weight: var(--pf-c-tree-view__link--m-current--FontWeight);
   }
 
-  &.pf-m-first {
-    font-weight: var(--pf-c-tree-view__link--m-first--FontWeight);
+  &.pf-m-root {
+    font-weight: var(--pf-c-tree-view__link--m-root--FontWeight);
   }
 
   &:focus {
@@ -176,11 +176,11 @@ $pf-c-tree-view--MaxNesting: 6;
 
   @for $i from 1 through $pf-c-tree-view--MaxNesting {
     #{$nested-item} {
-      --pf-c-tree-view__link--PaddingLeft: calc(var(--pf-c-tree-view__link--base--padding) + (var(--pf-c-tree-view__link--padding-nested) * #{$i}));
+      --pf-c-tree-view__link--PaddingLeft: calc(var(--pf-c-tree-view__link--padding--base) + (var(--pf-c-tree-view__link--nested-padding--base) * #{$i}));
     }
 
     #{$nested-item}.pf-m-expandable {
-      --pf-c-tree-view__link--PaddingLeft: calc(var(--pf-c-tree-view__link--base--padding) + (var(--pf-c-tree-view__item--m-expandable__link--padding-nested) * #{$i}));
+      --pf-c-tree-view__link--PaddingLeft: calc(var(--pf-c-tree-view__link--padding--base) + (var(--pf-c-tree-view__item--m-expandable__link--nested-padding--base) * #{$i}));
     }
 
     $nested-item: $nested-item + " " + $root;

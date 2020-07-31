@@ -16,7 +16,7 @@ beta: true
       {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--text="Application launcher"}}
       {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsFirst="true" tree-view-link--text="Application 1"}}
+          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--text="Application 1"}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
               {{> tree-view-link tree-view-link--text="Settings"}}
@@ -77,7 +77,7 @@ beta: true
       {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--text="Application launcher"}}
       {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsFirst="true" tree-view-link--text="Application 1"}}
+          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--text="Application 1"}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
               {{> tree-view-link tree-view-link--text="Settings"}}
@@ -133,7 +133,7 @@ beta: true
       {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasCheckbox="true" tree-view-link--text="Application launcher"}}
       {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasCheckbox="true" tree-view-link--IsFirst="true" tree-view-link--text="Application 1"}}
+          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasCheckbox="true" tree-view-link--IsRoot="true" tree-view-link--text="Application 1"}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
               {{> tree-view-link tree-view-link--HasCheckbox="true" tree-view-link--text="Settings"}}
@@ -189,18 +189,18 @@ beta: true
       {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Application launcher"}}
       {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsFirst="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Application 1"}}
+          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Application 1"}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
-              {{> tree-view-link tree-view-link--IsFirst="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Settings"}}
+              {{> tree-view-link tree-view-link--IsRoot="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Settings"}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
-              {{> tree-view-link tree-view-link--IsFirst="true" tree-view-link--HasFolderIcon="true" tree-view-link--modifier="pf-m-current" tree-view-link--text="Current"}}
+              {{> tree-view-link tree-view-link--IsRoot="true" tree-view-link--HasFolderIcon="true" tree-view-link--modifier="pf-m-current" tree-view-link--text="Current"}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsFirst="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Application 2"}}
+          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Application 2"}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
               {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Settings"}}
@@ -251,7 +251,7 @@ beta: true
       {{/tree-view-link}}
       {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{#> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsFirst="true" tree-view-link--text="Application 1"}}
+          {{#> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--text="Application 1"}}
             {{#> tree-view-link-count}}
               {{#> badge badge--modifier="pf-m-read"}}
                 2
@@ -359,7 +359,7 @@ beta: true
       {{/tree-view-link}}
       {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{#> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsFirst="true" tree-view-link--text="Application 1"}}
+          {{#> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--text="Application 1"}}
             {{#> tree-view-action tree-view-action--attribute='aria-label="Copy"'}}
               <i class="fas fa-clipboard" aria-hidden="true"></i>
             {{/tree-view-action}}
@@ -451,5 +451,5 @@ beta: true
 | `.pf-c-tree-view__icon` | `<span>` | Initiates a tree view icon. |
 | `.pf-c-tree-view__action` | `<button>` | Initiates a tree view action. |
 | `.pf-c-tree-view__search` | `<div>` | Initiates a tree view search wrapper. |
-| `.pf-m-first` | `.pf-c-tree-view__link` | Modifies the tree view link to be the first link item. |
+| `.pf-m-root` | `.pf-c-tree-view__link` | Modifies the tree view link to be the root link item. |
 | `.pf-m-current` | `.pf-c-tree-view__link` | Modifies the tree view link to be current. |

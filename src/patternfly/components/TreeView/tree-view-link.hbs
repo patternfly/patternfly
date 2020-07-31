@@ -1,7 +1,7 @@
 {{#> tree-view-node}}
-  <{{# if tree-view-link--type}}{{tree-view-link--type}}{{else}}button{{/if}} class="pf-c-tree-view__link{{#if tree-view-link--modifier}} {{tree-view-link--modifier}}{{/if}}{{#if tree-view-link--IsFirst}} pf-m-first{{/if}}"
+  <{{# if tree-view-link--type}}{{tree-view-link--type}}{{else}}button{{/if}} class="pf-c-tree-view__link{{#if tree-view-link--modifier}} {{tree-view-link--modifier}}{{/if}}{{#if tree-view-link--IsRoot}} pf-m-root{{/if}}"
     role="treeitem"
-    {{#if tree-view-link--IsFirst}}
+    {{#if tree-view-link--IsRoot}}
       tabindex="0"
     {{else}}
       tabindex="-1"
