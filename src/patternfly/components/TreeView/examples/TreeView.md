@@ -11,12 +11,12 @@ beta: true
 
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+  {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--text="Application launcher"}}
-      {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
+      {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--text="Application 1"}}
+          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsActive="true" tree-view-link--text="Application 1"}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
               {{> tree-view-link tree-view-link--text="Settings"}}
@@ -72,12 +72,12 @@ beta: true
     {{/form-control}}
   {{/tree-view-search}}
   {{> divider}}
-  {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+  {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--text="Application launcher"}}
-      {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
+      {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--text="Application 1"}}
+          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsActive="true" tree-view-link--text="Application 1"}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
               {{> tree-view-link tree-view-link--text="Settings"}}
@@ -128,12 +128,12 @@ beta: true
 
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+  {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasCheckbox="true" tree-view-link--text="Application launcher"}}
-      {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
+      {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasCheckbox="true" tree-view-link--IsRoot="true" tree-view-link--text="Application 1"}}
+          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasCheckbox="true" tree-view-link--IsActive="true" tree-view-link--text="Application 1"}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
               {{> tree-view-link tree-view-link--HasCheckbox="true" tree-view-link--text="Settings"}}
@@ -184,23 +184,23 @@ beta: true
 
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+  {{#> tree-view-list tree-view-link--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Application launcher"}}
-      {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
+      {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Application 1"}}
+          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsActive="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Application 1"}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
-              {{> tree-view-link tree-view-link--IsRoot="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Settings"}}
+              {{> tree-view-link tree-view-link--HasFolderIcon="true" tree-view-link--text="Settings"}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
-              {{> tree-view-link tree-view-link--IsRoot="true" tree-view-link--HasFolderIcon="true" tree-view-link--modifier="pf-m-current" tree-view-link--text="Current"}}
+              {{> tree-view-link tree-view-link--HasFolderIcon="true" tree-view-link--modifier="pf-m-current" tree-view-link--text="Current"}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Application 2"}}
+          {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Application 2"}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
               {{> tree-view-link tree-view-link--IsToggle="true" tree-view-link--HasFolderIcon="true" tree-view-link--text="Settings"}}
@@ -240,7 +240,7 @@ beta: true
 
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+  {{#> tree-view-list tree-view-link--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-link tree-view-link--IsToggle="true" tree-view-link--text="Application launcher"}}
         {{#> tree-view-link-count}}
@@ -249,9 +249,9 @@ beta: true
           {{/badge}}
         {{/tree-view-link-count}}
       {{/tree-view-link}}
-      {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
+      {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{#> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--text="Application 1"}}
+          {{#> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsActive="true" tree-view-link--text="Application 1"}}
             {{#> tree-view-link-count}}
               {{#> badge badge--modifier="pf-m-read"}}
                 2
@@ -350,16 +350,16 @@ beta: true
 
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-list--attribute='role="tree"'}}
+  {{#> tree-view-list tree-view-link--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-link tree-view-link--IsToggle="true" tree-view-link--text="Application launcher"}}
         {{#> tree-view-action tree-view-action--attribute='aria-label="Actions"'}}
           <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
         {{/tree-view-action}}
       {{/tree-view-link}}
-      {{#> tree-view-list newcontext tree-view-list--IsChild="true"}}
+      {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{#> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsRoot="true" tree-view-link--text="Application 1"}}
+          {{#> tree-view-link tree-view-link--IsToggle="true" tree-view-link--IsActive="true" tree-view-link--text="Application 1"}}
             {{#> tree-view-action tree-view-action--attribute='aria-label="Copy"'}}
               <i class="fas fa-clipboard" aria-hidden="true"></i>
             {{/tree-view-action}}
@@ -417,7 +417,6 @@ beta: true
   {{/tree-view-list}}
 {{/tree-view}}
 ```
-
 ## Documentation
 
 ### Overview
@@ -428,12 +427,11 @@ beta: true
 | -- | -- | -- |
 | `role="tree"` | `.pf-c-tree-view__list` | Identifies the `ul` as a tree widget. **Place on the outermost `ul` only** |
 | `role="group"` | `.pf-c-tree-view__list` | Identifies the `ul` element as a container of treeitem elements that form a branch of the tree. **Place on all `ul`s except the first `ul`** |
-| `role="treeitem"`| `.pf-c-tree-view__link` | Identifies the link as a tree item. **Note:** The role is set on the element that is interactive and focusable. |
-| `role="none"` | `.pf-c-tree-view__list-item` | Hides the implicit listitem role of the li element from assistive technologies. |
+| `role="treeitem"` | `.pf-c-tree-view__list-item` | Hides the implicit listitem role of the li element from assistive technologies. |
 | `aria-expanded="false"` | `.pf-c-tree-view__list-item.pf-m-expandable` | Indicates the parent node is closed, i.e., the descendant elements are not visible. |
 | `aria-expanded="true"` | `.pf-c-tree-view__list-item.pf-m-expandable.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
-| `tabindex="-1"` | `.pf-c-tree-view__link` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
-| `tabindex="0"` | `.pf-c-tree-view__link` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
+| `tabindex="-1"` | `.pf-c-tree-view__list-item` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
+| `tabindex="0"` | `.pf-c-tree-view__list-item` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
 | `aria-label="[button label text]"` | `.pf-c-tree-view__action` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
 
 ### Usage
@@ -443,7 +441,7 @@ beta: true
 | `.pf-c-tree-view` | `<div>` | Initiates the tree view container. **Required** |
 | `.pf-c-tree-view__list` | `<ul>` | Initiates a tree view list. **Required** |
 | `.pf-c-tree-view__list-item` | `<li>` | Initiates a tree view list item. **Required** |
-| `.pf-c-tree-view__node` | `<div>` | Initiates a tree view node. **Required** |
+| `.pf-c-tree-view__content` | `<div>` | Initiates a tree view node. **Required** |
 | `.pf-c-tree-view__link` | `<button>`, `<a>` | Initiates a tree view link. **Required** |
 | `.pf-c-tree-view__link-count` | `<span>` | Initiates a tree view link count. |
 | `.pf-c-tree-view__toggle-icon` | `<span>` | Initiates a tree view toggle icon. |
@@ -451,5 +449,5 @@ beta: true
 | `.pf-c-tree-view__icon` | `<span>` | Initiates a tree view icon. |
 | `.pf-c-tree-view__action` | `<button>` | Initiates a tree view action. |
 | `.pf-c-tree-view__search` | `<div>` | Initiates a tree view search wrapper. |
-| `.pf-m-root` | `.pf-c-tree-view__link` | Modifies the tree view link to be the root link item. |
+| `.pf-m-active` | `.pf-c-tree-view__link` | Modifies the tree view link to be the root link item. |
 | `.pf-m-current` | `.pf-c-tree-view__link` | Modifies the tree view link to be current. |
