@@ -12,6 +12,8 @@ exemptLabels:
   - security
   - accessibility
   - "breaking change :boom:"
+  - enhancement
+  - Feature
 
 # Label to use when marking as stale
 staleLabel: wontfix
