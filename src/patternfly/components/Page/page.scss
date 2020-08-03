@@ -267,12 +267,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__header-tools-item {
   @include pf-hidden-visible(var(--pf-c-page__header-tools-item--Display));
 
-  .pf-c-button {
-    > :not(.pf-c-notification-badge) {
-      position: relative;
-    }
-  }
-
   .pf-c-notification-badge {
     &.pf-m-read {
       --pf-c-notification-badge--after--BorderColor: var(--pf-c-page__header-tools-item--c-notification-badge--BorderColor);
@@ -286,6 +280,10 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   &.pf-m-selected {
     .pf-c-button {
+      background-color: var(--pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor); // update at breaking change
+      border-radius: var(--pf-c-page__header-tools--c-button--m-selected--before--BorderRadius); // update at breaking change
+
+      // remove at breaking change
       &::before {
         position: absolute;
         top: 0;
@@ -295,8 +293,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
         width: var(--pf-c-page__header-tools--c-button--m-selected--before--Width); // remove at breaking change
         height: var(--pf-c-page__header-tools--c-button--m-selected--before--Height); // remove at breaking change
         content: "";
-        background-color: var(--pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor);
-        border-radius: var(--pf-c-page__header-tools--c-button--m-selected--before--BorderRadius);
       }
 
       // stylelint-disable
