@@ -1,4 +1,13 @@
 .pf-c-notification-badge {
+  --pf-c-notification-badge--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-notification-badge--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-notification-badge--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-notification-badge--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-notification-badge--MarginTop: calc(-1 * var(--pf-global--spacer--form-element));
+  --pf-c-notification-badge--MarginRight: calc(-1 * var(--pf-global--spacer--md));
+  --pf-c-notification-badge--MarginBottom: calc(-1 * var(--pf-global--spacer--form-element));
+  --pf-c-notification-badge--MarginLeft: calc(-1 * var(--pf-global--spacer--md));
+
   // update all --after variables to --before at breaking change
   // ::after border treatment
   --pf-c-notification-badge--after--BorderColor: var(--pf-global--BorderColor--100);
@@ -41,6 +50,11 @@
   --pf-c-notification-badge--pf-icon-attention-bell--LineHeight: var(--pf-global--LineHeight--sm);
 
   position: static;
+  display: inline-block;
+  padding: var(--pf-c-notification-badge--PaddingTop) var(--pf-c-notification-badge--PaddingRight) var(--pf-c-notification-badge--PaddingBottom) var(--pf-c-notification-badge--PaddingLeft);
+  margin: var(--pf-c-notification-badge--MarginTop) var(--pf-c-notification-badge--MarginRight) var(--pf-c-notification-badge--MarginBottom) var(--pf-c-notification-badge--MarginLeft);
+  background-color: var(--pf-c-notification-badge--after--BackgroundColor);
+  border-radius: var(--pf-c-notification-badge--after--BorderRadius);
 
   &::before { // update all --after vars to --before at breaking change
     position: absolute;
@@ -51,7 +65,6 @@
     width: var(--pf-c-notification-badge--after--Width); // remove at breaking change
     height: var(--pf-c-notification-badge--after--Height); // remove at breaking change
     content: "";
-    background-color: var(--pf-c-notification-badge--after--BackgroundColor);
     border: var(--pf-c-notification-badge--after--BorderWidth) solid var(--pf-c-notification-badge--after--BorderColor);
     border-radius: var(--pf-c-notification-badge--after--BorderRadius);
     transform: translate(var(--pf-c-notification-badge--after--TranslateX), var(--pf-c-notification-badge--after--TranslateY));
