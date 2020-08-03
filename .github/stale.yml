@@ -9,7 +9,7 @@ daysUntilClose: 30
 # Issues with these labels will never be considered stale
 exemptLabels:
   - accessibility
-  - "breaking changes"
+  - "breaking change"
   - design approved
 
 # Label to use when marking as stale
