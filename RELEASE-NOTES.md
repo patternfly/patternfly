@@ -4,6 +4,61 @@ section: overview
 releaseNoteTOC: true
 ---
 
+## 2020.10 release notes (2020-08-05)
+Packages released:
+- [@patternfly/patternfly@v4.31.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.2)
+
+### Components
+- **Alert group:** Removed misformed metastring ([#3324](https://github.com/patternfly/patternfly/pull/3324))
+- **Description list:**
+  - Changeed component to dl ([#3307](https://github.com/patternfly/patternfly/pull/3307))
+  - Changeed spacer width to 24px column gap ([#3327](https://github.com/patternfly/patternfly/pull/3327))
+- **Drawer:**
+  - Scoped drawer__body >  page__main ([#3268](https://github.com/patternfly/patternfly/pull/3268))
+  - Scoped drawer styles to improve behavior of nested drawers ([#3328](https://github.com/patternfly/patternfly/pull/3328))
+- **Form control:** Added warning state, updated docs ([#3290](https://github.com/patternfly/patternfly/pull/3290))
+- **Label:** Added support for overflow truncation ([#3339](https://github.com/patternfly/patternfly/pull/3339))
+- **Notification badge:**
+  - Fixed notification badge alignment ([#3284](https://github.com/patternfly/patternfly/pull/3284))
+  - Reverted enhancements in #3231 ([#3294](https://github.com/patternfly/patternfly/pull/3294))
+  - Allowed text to display on top of background ([#3365](https://github.com/patternfly/patternfly/pull/3365))
+- **Notification drawer:**
+  - Added notification drawer demo ([#3220](https://github.com/patternfly/patternfly/pull/3220))
+  - Wrapped long item descriptions, group titles ([#3289](https://github.com/patternfly/patternfly/pull/3289))
+  - Added default item variant ([#3338](https://github.com/patternfly/patternfly/pull/3338))
+- **Page:** Added ability to limit width of content in page section ([#3352](https://github.com/patternfly/patternfly/pull/3352))
+- **Skeleton:** Added skeleton component ([#3353](https://github.com/patternfly/patternfly/pull/3353))
+- **Tabs:** Added tab background modifiers ([#3286](https://github.com/patternfly/patternfly/pull/3286))
+- **Table:** Applied no-padding modifiers to th ([#3323](https://github.com/patternfly/patternfly/pull/3323))
+- **Tile:**
+  - Removed support for imgs ([#3274](https://github.com/patternfly/patternfly/pull/3274))
+  - Updated basic tile icon color to match stacked ([#3334](https://github.com/patternfly/patternfly/pull/3334))
+- **Toggle group:** Added toggle group component ([#3355](https://github.com/patternfly/patternfly/pull/3355))
+- **Treeview:** Added treeview component ([#3354](https://github.com/patternfly/patternfly/pull/3354))
+- **Wizard:** Left aligned nav item element ([#3281](https://github.com/patternfly/patternfly/pull/3281))
+
+### Other
+- **Charts:** Adjusted chart tooltip padding ([#3347](https://github.com/patternfly/patternfly/pull/3347))
+- **Build:**
+  - Add compiled example html to dist ([#3301](https://github.com/patternfly/patternfly/pull/3301))
+  - Added .github directory with stalebot configuration file ([#3336](https://github.com/patternfly/patternfly/pull/3336))
+- **Icons:**
+  - Fixed svg filename in generator config ([#3305](https://github.com/patternfly/patternfly/pull/3305))
+  - Added attention-bell icon ([#3309](https://github.com/patternfly/patternfly/pull/3309))
+  - Updated canvas size, positioning for attention-bell ([#3330](https://github.com/patternfly/patternfly/pull/3330))
+  - Added pf-icon-bell ([#3351](https://github.com/patternfly/patternfly/pull/3351))
+- **Global:**
+  - Enabled flag to exclude root font-size unset ([#3275](https://github.com/patternfly/patternfly/pull/3275))
+  - Updated success-200 to be a shade lighter ([#3316](https://github.com/patternfly/patternfly/pull/3316))
+  - Positioned sr-only class to top/left 0 to avoid overflow ([#3319](https://github.com/patternfly/patternfly/pull/3319))
+- **Workspace:**
+  - Updated example titles to be h3 ([#3299](https://github.com/patternfly/patternfly/pull/3299))
+  - Watched more sass for hot reload ([#3300](https://github.com/patternfly/patternfly/pull/3300))
+  - Parse new h3 example titles ([#3302](https://github.com/patternfly/patternfly/pull/3302))
+  - Fixed incorrect example metastring ([#3324](https://github.com/patternfly/patternfly/pull/3324))
+- **Demo:**
+  - Renamed master detail demo to primary-detail ([#3322](https://github.com/patternfly/patternfly/pull/3322))
+
 ## 2020.09 release notes (2020-07-16)
 Packages released:
 - [@patternfly/patternfly@v4.23.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.23.3)
