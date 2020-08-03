@@ -13,6 +13,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Content
   --pf-c-toolbar__content--PaddingRight: var(--pf-global--spacer--md); // remove at breaking change
   --pf-c-toolbar__content--PaddingLeft: var(--pf-global--spacer--md); // remove at breaking change
+  --pf-c-toolbar__content--m-chip-container--RowGap: var(--pf-global--spacer--md);
 
   // Gutters
   --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
@@ -34,8 +35,9 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--gutter--md);
 
   // Chip container
-  --pf-c-toolbar__group--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
-  --pf-c-toolbar__group--m-chip-container__item--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-toolbar__group--m-chip-container--MarginTop: 0; // remove at breaking change
+  --pf-c-toolbar__group--m-chip-container__item--MarginTop: 0; // remove at breaking change
+  --pf-c-toolbar__group--m-chip-container--RowGap: var(--pf-global--spacer--md);
 
   // Base spacer - shared value
   --pf-c-toolbar--spacer--base: var(--pf-global--spacer--md);
@@ -101,8 +103,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   }
 
   position: relative;
-  row-gap: var(--pf-c-toolbar--RowGap);
   display: grid;
+  row-gap: var(--pf-c-toolbar--RowGap);
   padding-top: var(--pf-c-toolbar--PaddingTop);
   padding-bottom: var(--pf-c-toolbar--PaddingBottom);
   background-color: var(--pf-c-toolbar--BackgroundColor);
@@ -116,6 +118,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 // Divider
 .pf-c-toolbar__content-section,
 .pf-c-toolbar__group {
+  row-gap: var(--pf-c-toolbar--RowGap);
+
   // set this var here so specificity is 20
   > .pf-c-divider {
     --pf-c-toolbar--spacer: var(--pf-c-toolbar--c-divider--m-vertical--spacer);
@@ -312,18 +316,26 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
 // Chip container
 // extend chip container layout access to __content to allow custom configurations
+.pf-c-toolbar__content.pf-m-chip-container {
+  row-gap: var(--pf-c-toolbar__content--m-chip-container--RowGap);
+}
+
+.pf-c-toolbar__content.pf-m-chip-container .pf-c-toolbar__group {
+  row-gap: var(--pf-c-toolbar__group--m-chip-container--RowGap);
+}
+
 .pf-c-toolbar__content.pf-m-chip-container,
 .pf-c-toolbar__group.pf-m-chip-container {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  margin-top: var(--pf-c-toolbar__group--m-chip-container--MarginTop);
-  grid-row-gap: 0;
+  margin-top: var(--pf-c-toolbar__group--m-chip-container--MarginTop); // remove at breaking change
+  // grid-row-gap: 0;
 
   .pf-c-toolbar__item {
     --pf-c-toolbar--spacer: var(--pf-c-toolbar__item--spacer);
 
-    margin-top: var(--pf-c-toolbar__group--m-chip-container__item--MarginTop);
+    margin-top: var(--pf-c-toolbar__group--m-chip-container__item--MarginTop); // remove at breaking change
   }
 
   .pf-c-toolbar__group {
@@ -331,7 +343,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
     display: flex;
     flex-wrap: wrap;
-    grid-row-gap: 0;
+    // grid-row-gap: 0;
   }
 
   .pf-c-toolbar__group:last-child,
