@@ -176,6 +176,80 @@ import './ToggleGroup.css'
 {{/toggle-group}}
 ```
 
+```hbs title=Icon-and-text
+{{#> toggle-group}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button}}
+      {{#> toggle-group-icon}}
+        <i class="fas fa-copy" aria-hidden="true"/>
+      {{/toggle-group-icon}}
+      {{#> toggle-group-text}}
+        Copy
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+  {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button toggle-group-button--attribute='aria-label="Undo button"'}}
+      {{#> toggle-group-icon}}
+        <i class="fas fa-undo" aria-hidden="true"></i>
+      {{/toggle-group-icon}}
+      {{#> toggle-group-text}}
+        Undo
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+  {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button toggle-group-button--modifier="pf-m-selected"}}
+      {{#> toggle-group-icon}}
+        <i class="fas fa-share-square" aria-hidden="true"></i>
+      {{/toggle-group-icon}}
+      {{#> toggle-group-text}}
+        Share
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+{{/toggle-group}}
+
+<br/>
+
+{{#> toggle-group}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button}}
+      {{#> toggle-group-text}}
+        Copy
+      {{/toggle-group-text}}
+      {{#> toggle-group-icon}}
+        <i class="fas fa-copy" aria-hidden="true"/>
+      {{/toggle-group-icon}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+  {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button}}
+      {{#> toggle-group-text}}
+        Undo
+      {{/toggle-group-text}}
+      {{#> toggle-group-icon}}
+        <i class="fas fa-undo" aria-hidden="true"></i>
+      {{/toggle-group-icon}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+  {{> divider divider--type="div" divider--modifier="pf-m-vertical"}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button toggle-group-button--modifier="pf-m-selected"}}
+      {{#> toggle-group-text}}
+        Share
+      {{/toggle-group-text}}
+      {{#> toggle-group-icon}}
+        <i class="fas fa-share-square" aria-hidden="true"></i>
+      {{/toggle-group-icon}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+{{/toggle-group}}
+```
+
 ```hbs title=Light
 {{#> toggle-group}}
   {{#> toggle-group-item}}
