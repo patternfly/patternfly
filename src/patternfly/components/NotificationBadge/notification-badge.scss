@@ -34,7 +34,6 @@
   --pf-c-notification-badge--m-read--after--BackgroundColor: transparent;
   --pf-c-notification-badge--m-read--hover--after--BorderColor: var(--pf-global--BorderColor--light-100);
 
-
   // Unread
   --pf-c-notification-badge--m-unread--Color: var(--pf-global--Color--light-100);
   --pf-c-notification-badge--m-unread--after--BorderColor: transparent; // remove at breaking change
@@ -49,7 +48,7 @@
   // Attention icon
   --pf-c-notification-badge--pf-icon-attention-bell--LineHeight: var(--pf-global--LineHeight--sm);
 
-  position: static;
+  position: relative;
   display: inline-block;
   padding: var(--pf-c-notification-badge--PaddingTop) var(--pf-c-notification-badge--PaddingRight) var(--pf-c-notification-badge--PaddingBottom) var(--pf-c-notification-badge--PaddingLeft);
   margin: var(--pf-c-notification-badge--MarginTop) var(--pf-c-notification-badge--MarginRight) var(--pf-c-notification-badge--MarginBottom) var(--pf-c-notification-badge--MarginLeft);
