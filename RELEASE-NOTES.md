@@ -6,7 +6,7 @@ releaseNoteTOC: true
 
 ## 2020.10 release notes (2020-08-05)
 Packages released:
-- [@patternfly/patternfly@v4.31.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.2)
+- [@patternfly/patternfly@v4.31.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.3)
 
 ### Components
 - **Alert group:** Removed misformed metastring ([#3324](https://github.com/patternfly/patternfly/pull/3324))
@@ -26,7 +26,9 @@ Packages released:
   - Added notification drawer demo ([#3220](https://github.com/patternfly/patternfly/pull/3220))
   - Wrapped long item descriptions, group titles ([#3289](https://github.com/patternfly/patternfly/pull/3289))
   - Added default item variant ([#3338](https://github.com/patternfly/patternfly/pull/3338))
-- **Page:** Added ability to limit width of content in page section ([#3352](https://github.com/patternfly/patternfly/pull/3352))
+- **Page:**
+  - Added ability to limit width of content in page section ([#3352](https://github.com/patternfly/patternfly/pull/3352))
+  - Fixed notification badge state and header item conflict ([#3372](https://github.com/patternfly/patternfly/pull/3372))
 - **Skeleton:** Added skeleton component ([#3353](https://github.com/patternfly/patternfly/pull/3353))
 - **Tabs:** Added tab background modifiers ([#3286](https://github.com/patternfly/patternfly/pull/3286))
 - **Table:** Applied no-padding modifiers to th ([#3323](https://github.com/patternfly/patternfly/pull/3323))
