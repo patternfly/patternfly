@@ -1,5 +1,6 @@
 .pf-c-skeleton {
   --pf-c-skeleton--BackgroundColor: var(--pf-global--palette--black-150);
+  --pf-c-skeleton--Width: auto;
   --pf-c-skeleton--Height: auto;
   --pf-c-skeleton--BorderRadius: var(--pf-global--BorderRadius--sm);
 
@@ -10,11 +11,11 @@
 
   // After
   --pf-c-skeleton--after--LinearGradientAngle: 90deg;
-  --pf-c-skeleton--after--LinearGradientColorStop1: transparent;
+  --pf-c-skeleton--after--LinearGradientColorStop1: rgba(255, 255, 255, 0);
   --pf-c-skeleton--after--LinearGradientColorStop2: #ededed;
-  --pf-c-skeleton--after--LinearGradientColorStop3: transparent;
+  --pf-c-skeleton--after--LinearGradientColorStop3: rgba(255, 255, 255, 0);
   --pf-c-skeleton--after--TranslateX: -100%;
-  --pf-c-skeleton--after--AnimationName: loading;
+  --pf-c-skeleton--after--AnimationName: pf-c-skeleton-loading;
   --pf-c-skeleton--after--AnimationDuration: 2s;
   --pf-c-skeleton--after--AnimationIterationCount: infinite;
   --pf-c-skeleton--after--AnimationTimingFunction: linear;
@@ -55,6 +56,7 @@
   --pf-c-skeleton--m-height-100--Height: 100%;
 
   position: relative;
+  width: var(--pf-c-skeleton--Width);
   height: var(--pf-c-skeleton--Height);
   overflow: hidden;
   background-color: var(--pf-c-skeleton--BackgroundColor);
@@ -93,35 +95,35 @@
 
   // Width
   &.pf-m-width-sm {
-    width: var(--pf-c-skeleton--m-width-sm--Width);
+    --pf-c-skeleton--Width: var(--pf-c-skeleton--m-width-sm--Width);
   }
 
   &.pf-m-width-md {
-    width: var(--pf-c-skeleton--m-width-md--Width);
+    --pf-c-skeleton--Width: var(--pf-c-skeleton--m-width-md--Width);
   }
 
   &.pf-m-width-lg {
-    width: var(--pf-c-skeleton--m-width-lg--Width);
+    --pf-c-skeleton--Width: var(--pf-c-skeleton--m-width-lg--Width);
   }
 
   &.pf-m-width-25 {
-    width: var(--pf-c-skeleton--m-width-25--Width);
+    --pf-c-skeleton--Width: var(--pf-c-skeleton--m-width-25--Width);
   }
 
   &.pf-m-width-33 {
-    width: var(--pf-c-skeleton--m-width-33--Width);
+    --pf-c-skeleton--Width: var(--pf-c-skeleton--m-width-33--Width);
   }
 
   &.pf-m-width-50 {
-    width: var(--pf-c-skeleton--m-width-50--Width);
+    --pf-c-skeleton--Width: var(--pf-c-skeleton--m-width-50--Width);
   }
 
   &.pf-m-width-66 {
-    width: var(--pf-c-skeleton--m-width-66--Width);
+    --pf-c-skeleton--Width: var(--pf-c-skeleton--m-width-66--Width);
   }
 
   &.pf-m-width-75 {
-    width: var(--pf-c-skeleton--m-width-75--Width);
+    --pf-c-skeleton--Width: var(--pf-c-skeleton--m-width-75--Width);
   }
 
   // Height
@@ -190,7 +192,7 @@
   }
 }
 
-@keyframes loading {
+@keyframes pf-c-skeleton-loading {
   0% {
     transform: translateX(-100%);
   }

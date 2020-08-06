@@ -2,8 +2,12 @@
   height: 400px;
 }
 
+#ws-core-c-skeleton-percentage-height-modifiers .ws-preview-html {
+  display: flex;
+  align-items: flex-end;
+}
+
 #ws-core-c-skeleton-percentage-height-modifiers .ws-preview-html .pf-c-skeleton {
-  display: inline-block;
-  width: 15%;
-  margin-right: 4px;
+  flex: 1;
+  margin: 0 2px;
 }
