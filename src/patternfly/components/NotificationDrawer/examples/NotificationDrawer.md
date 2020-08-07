@@ -18,6 +18,9 @@ cssPrefix: pf-c-notification-drawer
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
       {{#> dropdown id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}
   {{#> notification-drawer-body}}
