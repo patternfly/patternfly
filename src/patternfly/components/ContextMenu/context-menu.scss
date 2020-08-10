@@ -1,0 +1,11 @@
+.pf-c-context-menu {
+  --pf-c-context-menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-context-menu--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-context-menu--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-context-menu--PaddingBottom: var(--pf-global--spacer--sm);
+
+  padding-top: var(--pf-c-context-menu--PaddingTop);
+  padding-bottom: var(--pf-c-context-menu--PaddingBottom);
+  background-color: var(--pf-c-context-menu--BackgroundColor);
+  box-shadow: var(--pf-c-context-menu--BoxShadow);
+}

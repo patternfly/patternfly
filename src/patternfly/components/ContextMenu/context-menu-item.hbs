@@ -1,0 +1,6 @@
+<{{#if context-menu-item--type}}{{context-menu-item--type}}{{else}}button{{/if}} class="pf-c-context-menu__item{{#if context-menu-item--modifier}} {{context-menu-item--modifier}}{{/if}}"
+  {{#if context-menu-item--attribute}}
+    {{{context-menu-item--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</{{#if context-menu-item--type}}{{context-menu-item--type}}{{else}}button{{/if}}>
