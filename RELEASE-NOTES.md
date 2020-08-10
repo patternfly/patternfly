@@ -6,7 +6,7 @@ releaseNoteTOC: true
 
 ## 2020.10 release notes (2020-08-05)
 Packages released:
-- [@patternfly/patternfly@v4.31.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.3)
+- [@patternfly/patternfly@v4.31.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.4)
 
 ### Components
 - **Alert group:** Removed misformed metastring ([#3324](https://github.com/patternfly/patternfly/pull/3324))
@@ -22,6 +22,7 @@ Packages released:
   - Fixed notification badge alignment ([#3284](https://github.com/patternfly/patternfly/pull/3284))
   - Reverted enhancements in #3231 ([#3294](https://github.com/patternfly/patternfly/pull/3294))
   - Allowed text to display on top of background ([#3365](https://github.com/patternfly/patternfly/pull/3365))
+  - Removed unread state border ([#3389](https://github.com/patternfly/patternfly/pull/3389))
 - **Notification drawer:**
   - Added notification drawer demo ([#3220](https://github.com/patternfly/patternfly/pull/3220))
   - Wrapped long item descriptions, group titles ([#3289](https://github.com/patternfly/patternfly/pull/3289))
