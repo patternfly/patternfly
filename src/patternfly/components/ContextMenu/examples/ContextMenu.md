@@ -5,6 +5,8 @@ beta: true
 cssPrefix: pf-c-context-menu
 ---
 
+import './ContextMenu.css'
+
 ## Examples
 ### Default
 ```hbs
@@ -133,7 +135,7 @@ cssPrefix: pf-c-context-menu
       {{/context-menu-item-text}}
       {{> context-menu-item-toggle-icon}}
     {{/context-menu-item}}
-    {{#> context-menu}}
+    {{#> context-menu context-menu--modifier="pf-m-submenu"}}
       {{#> context-menu-list-item}}
         {{#> context-menu-item}}
           {{#> context-menu-item-text}}

@@ -29,6 +29,12 @@
   padding-bottom: var(--pf-c-context-menu--PaddingBottom);
   background-color: var(--pf-c-context-menu--BackgroundColor);
   box-shadow: var(--pf-c-context-menu--BoxShadow);
+
+  &.pf-m-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
 }
 
 .pf-c-context-menu__list-item {
