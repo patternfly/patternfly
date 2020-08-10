@@ -11,9 +11,9 @@
 
   // After
   --pf-c-skeleton--after--LinearGradientAngle: 90deg;
-  --pf-c-skeleton--after--LinearGradientColorStop1: rgba(255, 255, 255, 0);
+  --pf-c-skeleton--after--LinearGradientColorStop1: rgba(237, 237, 237, 0); // Safari needs the RGB to be --pf-c-skeleton--after--LinearGradientColorStop2
   --pf-c-skeleton--after--LinearGradientColorStop2: #ededed;
-  --pf-c-skeleton--after--LinearGradientColorStop3: rgba(255, 255, 255, 0);
+  --pf-c-skeleton--after--LinearGradientColorStop3: rgba(237, 237, 237, 0);
   --pf-c-skeleton--after--TranslateX: -100%;
   --pf-c-skeleton--after--AnimationName: pf-c-skeleton-loading;
   --pf-c-skeleton--after--AnimationDuration: 2s;
@@ -61,6 +61,7 @@
   overflow: hidden;
   background-color: var(--pf-c-skeleton--BackgroundColor);
   border-radius: var(--pf-c-skeleton--BorderRadius);
+  transform: translate(0); // Creates stacking context necessary for safari
 
   &::before {
     display: block;
