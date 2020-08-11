@@ -375,9 +375,15 @@ import './ContextMenu.css'
             This is a description
           {{/context-menu-item-description}}
         {{/context-menu-item}}
-        {{#> context-menu-item-action context-menu-item-action--IsFavorite="true"}}
-            <i class="fas fa-star" aria-label="Favorite"></i>
-        {{/context-menu-item-action}}
+        {{> context-menu-item-action context-menu-item-action--IsFavorite="true" context-menu-item-action--IsFavorited="true"}}
+      {{/context-menu-list-item}}
+      {{#> context-menu-list-item}}
+        {{#> context-menu-item}}
+          {{#> context-menu-item-text}}
+            Item 3
+          {{/context-menu-item-text}}
+        {{/context-menu-item}}
+        {{> context-menu-item-action context-menu-item-action--IsFavorite="true"}}
       {{/context-menu-list-item}}
     </ul>
   {{/context-menu-group}}
@@ -390,29 +396,33 @@ import './ContextMenu.css'
       {{#> context-menu-list-item}}
         {{#> context-menu-item}}
           {{#> context-menu-item-text}}
-            Option 1
+            Item 1
           {{/context-menu-item-text}}
+          {{#> context-menu-item-description}}
+            This is a description
+          {{/context-menu-item-description}}
         {{/context-menu-item}}
-        {{> context-menu-item-select-icon}}
-        {{#> context-menu-item-action}}
-          {{#> context-menu-item-action-icon}}
-            <i class="fas fa-star" aria-label="Favorite"></i>
-          {{/context-menu-item-action-icon}}
-        {{/context-menu-item-action}}
+        {{> context-menu-item-action context-menu-item-action--IsFavorite="true"}}
       {{/context-menu-list-item}}
       {{#> context-menu-list-item}}
         {{#> context-menu-item}}
           {{#> context-menu-item-text}}
-            Option 2
+            Item 2
           {{/context-menu-item-text}}
+          {{#> context-menu-item-description}}
+            This is a description
+          {{/context-menu-item-description}}
+          {{> context-menu-item-select-icon}}
         {{/context-menu-item}}
+         {{> context-menu-item-action context-menu-item-action--IsFavorite="true"}}
       {{/context-menu-list-item}}
       {{#> context-menu-list-item}}
         {{#> context-menu-item}}
           {{#> context-menu-item-text}}
-            Option 3
+            Item 3
           {{/context-menu-item-text}}
         {{/context-menu-item}}
+        {{> context-menu-item-action context-menu-item-action--IsFavorite="true"}}
       {{/context-menu-list-item}}
     </ul>
   {{/context-menu-group}}

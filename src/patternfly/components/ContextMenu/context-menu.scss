@@ -47,7 +47,9 @@
   --pf-c-context-menu__item-action--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-context-menu__item-action--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-context-menu__item-action--m-favorite__icon--FontSize: var(--pf-global--icon--FontSize--sm);
-  --pf-c-context-menu__item-action--m-favorite__icon--Color: var(--pf-global--palette--gold-400);
+  --pf-c-context-menu__item-action--m-favorite__icon--Color: var(--pf-global--disabled-color--200);
+  --pf-c-context-menu__item-action--m-favorite--m-favorited__icon--Color: var(--pf-global--palette--gold-400);
+  --pf-c-context-menu__item-action--m-favorite--hover__icon--Color: var(--pf-global--Color--dark-100);
 
   // padding-top: var(--pf-c-context-menu--PaddingTop);
   // padding-bottom: var(--pf-c-context-menu--PaddingBottom);
@@ -140,6 +142,15 @@
     .pf-c-context-menu__item-action-icon {
       font-size: var(--pf-c-context-menu__item-action--m-favorite__icon--FontSize);
       color: var(--pf-c-context-menu__item-action--m-favorite__icon--Color);
+    }
+
+    &:hover,
+    &:focus {
+      --pf-c-context-menu__item-action--m-favorite__icon--Color: var(--pf-c-context-menu__item-action--m-favorite--hover__icon--Color);
+    }
+
+    &.pf-m-favorited {
+      --pf-c-context-menu__item-action--m-favorite__icon--Color: var(--pf-c-context-menu__item-action--m-favorite--m-favorited__icon--Color);
     }
   }
 }
