@@ -321,4 +321,4 @@ wrapperTag: div
 ```
 
 ## Documentation
-This demo implements all variations of the nav component in the page component.
+This demo implements all variations of the nav component in the page component. To make the page component take up the full height of the viewport, it is recommended to add `height: 100%;` to all ancestor elements of the page component.

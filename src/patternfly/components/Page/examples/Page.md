@@ -138,7 +138,7 @@ wrapperTag: div
 
 ## Documentation
 ### Overview
-This component provides the basic chrome for a page, including sidebar, header, and main areas.
+This component provides the basic chrome for a page, including sidebar, header, and main areas. To make the page component take up the full height of the viewport, it is recommended to add `height: 100%;` to all ancestor elements of the page component.
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
