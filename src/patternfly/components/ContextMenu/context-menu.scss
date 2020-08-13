@@ -5,6 +5,16 @@
   --pf-c-context-menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-context-menu--PaddingBottom: var(--pf-global--spacer--sm);
 
+  // Divider
+  --pf-c-context-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-context-menu--c-divider--MarginBottom: var(--pf-global--spacer--sm);
+
+  // Header
+  --pf-c-context-menu__header--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-context-menu__header--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-context-menu__header--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-context-menu__header--PaddingLeft: var(--pf-global--spacer--md);
+
   // Menu item
   --pf-c-context-menu__item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-context-menu__item--PaddingRight: var(--pf-global--spacer--md);
@@ -34,12 +44,22 @@
   --pf-c-context-menu__item-description--Color: var(--pf-global--Color--200);
 
   // icon
-  --pf-c-context-menu__item-icon--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-context-menu__item-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-context-menu__item-icon--Color: var(--pf-global--Color--dark-200);
 
   // toggle icon
   --pf-c-context-menu__item-toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-context-menu__item-toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
+
+  // select icon
+  --pf-c-context-menu__item-select-icon--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-context-menu__item-select-icon--Color: var(--pf-global--active-color--100);
+  --pf-c-context-menu__item-select-icon--FontSize: var(--pf-global--icon--FontSize--sm);
+
+  // external icon
+  --pf-c-context-menu__item-external-icon--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-context-menu__item-external-icon--Color: var(--pf-global--link--Color);
+  --pf-c-context-menu__item-external-icon--FontSize: var(--pf-global--icon--FontSize--sm);
 
   // action
   --pf-c-context-menu__item-action--PaddingTop: var(--pf-global--spacer--sm);
@@ -51,9 +71,8 @@
   --pf-c-context-menu__item-action--m-favorite--m-favorited__icon--Color: var(--pf-global--palette--gold-400);
   --pf-c-context-menu__item-action--m-favorite--hover__icon--Color: var(--pf-global--Color--dark-100);
 
-  // padding-top: var(--pf-c-context-menu--PaddingTop);
-  // padding-bottom: var(--pf-c-context-menu--PaddingBottom);
-
+  padding-top: var(--pf-c-context-menu--PaddingTop);
+  padding-bottom: var(--pf-c-context-menu--PaddingBottom);
   background-color: var(--pf-c-context-menu--BackgroundColor);
   box-shadow: var(--pf-c-context-menu--BoxShadow);
 
@@ -62,6 +81,19 @@
     top: 0;
     left: 100%;
   }
+
+  .pf-c-divider {
+    margin-top: var(--pf-c-context-menu--c-divider--MarginTop);
+    margin-bottom: var(--pf-c-context-menu--c-divider--MarginBottom);
+  }
+}
+
+// Header
+.pf-c-context-menu__header {
+  padding-top: var(--pf-c-context-menu__header--PaddingTop);
+  padding-right: var(--pf-c-context-menu__header--PaddingRight);
+  padding-bottom: var(--pf-c-context-menu__header--PaddingBottom);
+  padding-left: var(--pf-c-context-menu__header--PaddingLeft);
 }
 
 // List item
@@ -75,12 +107,17 @@
   &:focus {
     --pf-c-context-menu__list-item--Color: var(--pf-c-context-menu__list-item--hover--Color);
     --pf-c-context-menu__list-item--BackgroundColor: var(--pf-c-context-menu__list-item--hover--BackgroundColor);
+
+    .pf-c-context-menu__item-external-icon {
+      opacity: 1;
+    }
   }
 }
 
 // Item
 .pf-c-context-menu__item {
   display: flex;
+  flex-direction: column;
   width: 100%;
   padding: var(--pf-c-context-menu__item--PaddingTop) var(--pf-c-context-menu__item--PaddingRight) var(--pf-c-context-menu__item--PaddingBottom) var(--pf-c-context-menu__item--PaddingLeft);
   font-size: var(--pf-c-context-menu__item--FontSize);
@@ -96,10 +133,15 @@
   }
 }
 
+.pf-c-context-menu__item-main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 // Item text
 .pf-c-context-menu__item-text {
   flex-grow: 1;
-  white-space: nowrap;
 }
 
 // Group
@@ -119,15 +161,30 @@
   color: var(--pf-c-context-menu__item-description--Color);
 }
 
-// Icons
+// General icon
 .pf-c-context-menu__item-icon {
   margin-right: var(--pf-c-context-menu__item-icon--MarginRight);
   color: var(--pf-c-context-menu__item-icon--Color);
 }
 
+// Toggle icon
 .pf-c-context-menu__item-toggle-icon {
   padding-right: var(--pf-c-context-menu__item-toggle-icon--PaddingRight);
   padding-left: var(--pf-c-context-menu__item-toggle-icon--PaddingLeft);
+}
+
+// Select icon
+.pf-c-context-menu__item-select-icon {
+  margin-left: var(--pf-c-context-menu__item-select-icon--MarginLeft);
+  font-size: var(--pf-c-context-menu__item-select-icon--FontSize);
+  color: var(--pf-c-context-menu__item-select-icon--Color);
+}
+
+.pf-c-context-menu__item-external-icon {
+  margin-left: var(--pf-c-context-menu__item-external-icon--MarginLeft);
+  font-size: var(--pf-c-context-menu__item-external-icon--FontSize);
+  color: var(--pf-c-context-menu__item-external-icon--Color);
+  opacity: 0;
 }
 
 // Actions
