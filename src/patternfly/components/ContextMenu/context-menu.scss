@@ -94,6 +94,13 @@
   padding-right: var(--pf-c-context-menu__header--PaddingRight);
   padding-bottom: var(--pf-c-context-menu__header--PaddingBottom);
   padding-left: var(--pf-c-context-menu__header--PaddingLeft);
+
+  .pf-c-context-menu__item {
+    --pf-c-context-menu__item--PaddingTop: 0;
+    --pf-c-context-menu__item--PaddingRight: 0;
+    --pf-c-context-menu__item--PaddingBottom: 0;
+    --pf-c-context-menu__item--PaddingLeft: 0;
+  }
 }
 
 // List item
@@ -119,7 +126,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: var(--pf-c-context-menu__item--PaddingTop) var(--pf-c-context-menu__item--PaddingRight) var(--pf-c-context-menu__item--PaddingBottom) var(--pf-c-context-menu__item--PaddingLeft);
+  padding-top: var(--pf-c-context-menu__item--PaddingTop);
+  padding-right: var(--pf-c-context-menu__item--PaddingRight);
+  padding-bottom: var(--pf-c-context-menu__item--PaddingBottom);
+  padding-left: var(--pf-c-context-menu__item--PaddingLeft);
   font-size: var(--pf-c-context-menu__item--FontSize);
   font-weight: var(--pf-c-context-menu__item--FontWeight);
   line-height: var(--pf-c-context-menu__item--LineHeight);
@@ -141,6 +151,8 @@
 
 // Item text
 .pf-c-context-menu__item-text {
+  @include pf-text-overflow;
+
   flex-grow: 1;
 }
 
@@ -159,6 +171,7 @@
 .pf-c-context-menu__item-description {
   font-size: var(--pf-c-context-menu__item-description--FontSize);
   color: var(--pf-c-context-menu__item-description--Color);
+  word-break: break-all;
 }
 
 // General icon

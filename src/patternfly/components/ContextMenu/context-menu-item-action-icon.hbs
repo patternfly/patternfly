@@ -3,7 +3,9 @@
     {{{context-menu-item-action-icon--attribute}}}
   {{/if}}>
   {{#if context-menu-item-action--IsFavorite}}
-    <i class="fas fa-star" aria-label="Favorite"></i>
+    <i class="fas fa-star" aria-label="Not starred"></i>
+  {{else if context-menu-item-action--IsFavorited}}
+    <i class="fas fa-star" aria-label="Starred"></i>
   {{else}}
     {{> @partial-block}}
   {{/if}}

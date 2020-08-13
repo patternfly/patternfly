@@ -16,7 +16,16 @@ import './ContextMenu.css'
       {{#> context-menu-item}}
        {{#> context-menu-item-main}}
           {{#> context-menu-item-text}}
-            List item 1
+            Action
+          {{/context-menu-item-text}}
+        {{/context-menu-item-main}}
+      {{/context-menu-item}}
+    {{/context-menu-list-item}}
+    {{#> context-menu-list-item}}
+      {{#> context-menu-item context-menu-item--type="a"}}
+        {{#> context-menu-item-main}}
+          {{#> context-menu-item-text}}
+            Link
           {{/context-menu-item-text}}
         {{/context-menu-item-main}}
       {{/context-menu-item}}
@@ -25,16 +34,16 @@ import './ContextMenu.css'
       {{#> context-menu-item}}
         {{#> context-menu-item-main}}
           {{#> context-menu-item-text}}
-            List item 2
+           Disabled action
           {{/context-menu-item-text}}
         {{/context-menu-item-main}}
       {{/context-menu-item}}
     {{/context-menu-list-item}}
     {{#> context-menu-list-item}}
-      {{#> context-menu-item}}
+      {{#> context-menu-item context-menu-item--modifier="pf-m-disabled" context-menu-item--modifier='aria-disabled="true" tabindex="-1"'}}
         {{#> context-menu-item-main}}
           {{#> context-menu-item-text}}
-            List item 2
+           Disabled link
           {{/context-menu-item-text}}
         {{/context-menu-item-main}}
       {{/context-menu-item}}
@@ -42,6 +51,17 @@ import './ContextMenu.css'
   {{/context-menu-body}}
 {{/context-menu}}
 ```
+
+  <!-- <li>
+    {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--modifier="pf-m-disabled" dropdown-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}
+      Disabled link
+    {{/dropdown-menu-item}}
+  </li>
+  <li>
+    {{#> dropdown-menu-item dropdown-menu-item--attribute='disabled'}}
+      Disabled action
+    {{/dropdown-menu-item}}
+  </li> -->
 
 ### With-icons
 ```hbs
@@ -269,7 +289,7 @@ import './ContextMenu.css'
 {{#> context-menu}}
   {{#> context-menu-body}}
     {{#> context-menu-list-item}}
-      {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#" target="_blank"'}}
+      {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#"'}}
         {{#> context-menu-item-main}}
           {{#> context-menu-item-text}}
             Link 1
@@ -279,7 +299,7 @@ import './ContextMenu.css'
       {{/context-menu-item}}
     {{/context-menu-list-item}}
     {{#> context-menu-list-item}}
-      {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#" target="_blank"'}}
+      {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#"'}}
         {{#> context-menu-item-main}}
           {{#> context-menu-item-text}}
             Link 2
@@ -289,7 +309,7 @@ import './ContextMenu.css'
       {{/context-menu-item}}
     {{/context-menu-list-item}}
     {{#> context-menu-list-item}}
-      {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#" target="_blank"'}}
+      {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#"'}}
         {{#> context-menu-item-main}}
           {{#> context-menu-item-text}}
             Link 3
@@ -343,7 +363,7 @@ import './ContextMenu.css'
 {{#> context-menu}}
   {{#> context-menu-body}}
     {{#> context-menu-list-item}}
-      {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#" target="_blank"'}}
+      {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#"'}}
         {{#> context-menu-item-main}}
           {{#> context-menu-item-text}}
             Link not in group
@@ -358,7 +378,7 @@ import './ContextMenu.css'
       {{/context-menu-group-title}}
       <ul>
         {{#> context-menu-list-item}}
-          {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#" target="_blank"'}}
+          {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#"'}}
             {{#> context-menu-item-main}}
               {{#> context-menu-item-text}}
                 Link 1
@@ -367,7 +387,7 @@ import './ContextMenu.css'
           {{/context-menu-item}}
         {{/context-menu-list-item}}
         {{#> context-menu-list-item}}
-          {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#" target="_blank"'}}
+          {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#"'}}
             {{#> context-menu-item-main}}
               {{#> context-menu-item-text}}
                 Link 2
@@ -384,7 +404,7 @@ import './ContextMenu.css'
       {{/context-menu-group-title}}
       <ul>
         {{#> context-menu-list-item}}
-          {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#" target="_blank"'}}
+          {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#"'}}
             {{#> context-menu-item-main}}
               {{#> context-menu-item-text}}
                 Link 1
@@ -393,7 +413,7 @@ import './ContextMenu.css'
           {{/context-menu-item}}
         {{/context-menu-list-item}}
         {{#> context-menu-list-item}}
-          {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#" target="_blank"'}}
+          {{#> context-menu-item context-menu-item--type="a" context-menu-item--attribute='href="#"'}}
             {{#> context-menu-item-main}}
               {{#> context-menu-item-text}}
                 Link 2
@@ -452,7 +472,7 @@ import './ContextMenu.css'
           {{/context-menu-item-text}}
         {{/context-menu-item-main}}
         {{#> context-menu-item-description}}
-          Description
+          Nunc non ornare ex, et pretium dui. Duis nec augue at urna elementum blandit tincidunt eget metus. Aenean sed metus id urna dignissim interdum. Aenean vel nisl vitae arcu vehicula pulvinar eget nec turpis. Cras sit amet est est. 
         {{/context-menu-item-description}}
       {{/context-menu-item}}
     {{/context-menu-list-item}}
@@ -602,7 +622,7 @@ import './ContextMenu.css'
           {{/context-menu-item-action-icon}}
         {{/context-menu-item-action}}
         {{#> context-menu-item-icon}}
-          <i class="fas fa-cube" aria-hidden="true"></i>
+          <i class="fas fa-cog" aria-hidden="true"></i>
         {{/context-menu-item-icon}}
         {{#> context-menu-item-text}}
           Edit
@@ -645,6 +665,17 @@ import './ContextMenu.css'
 
 ## Documentation
 ### Overview
+
+### Accessibility
+
+| Attribute | Applied | Outcome |
+| -- | -- | -- |
+| `disabled` | `button.pf-c-context-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
+| `aria-disabled="true"` | `a.pf-c-context-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `tabindex="-1"` | `a.pf-c-context-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `aria-hidden="true"` | `.pf-c-context-menu__item-icon`, `.pf-c-context-menu__item-action-icon`, `.pf-c-context-menu__item-external-icon`, `.pf-c-context-menu__item-toggle-icon`, `.pf-c-context-menu__item-select-icon` | Hides the icon from assistive technologies. |
+| `aria-label="Not starred"` | `.pf-c-context-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
+| `aria-label="Starred"` | `.pf-c-context-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |
 
 
 ### Usage
