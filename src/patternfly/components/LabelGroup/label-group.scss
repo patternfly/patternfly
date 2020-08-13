@@ -16,13 +16,17 @@
   // Label in group
   --pf-c-label-group__label--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-label-group__label--MarginBottom: 0;
-  --pf-c-label-group--m-vertical--m-category__label--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-label-group--m-vertical__label--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-label-group__label--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-label-group__label--MaxWidth: 18ch;
 
   // label group close
   --pf-c-label-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-label-group__close--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
+  --pf-c-label-group--m-vertical__close--MarginRight: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-label-group--m-vertical__close--MarginLeft: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-label-group--m-vertical__close--c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-label-group--m-vertical__close--c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
   // label
   --pf-c-label-group__list-item--MarginRight: var(--pf-global--spacer--xs);
@@ -39,19 +43,22 @@
   }
 
   &.pf-m-vertical {
-    --pf-c-label-group--m-category--PaddingTop: 0;
-    --pf-c-label-group--m-category--PaddingRight: 0;
-    --pf-c-label-group--m-category--PaddingBottom: 0;
-    --pf-c-label-group--m-category--PaddingLeft: 0;
-    --pf-c-label-group--m-category--BorderWidth: 0;
     --pf-c-label-group__label--MarginRight: 0;
-    --pf-c-label-group__label--MarginBottom: var(--pf-c-label-group--m-vertical--m-category__label--MarginBottom);
-
+    --pf-c-label-group__label--MarginBottom: var(--pf-c-label-group--m-vertical__label--MarginBottom);
+    --pf-c-label-group__close--MarginTop: 0;
+    --pf-c-label-group__close--MarginLeft: var(--pf-c-label-group--m-vertical__close--MarginLeft);
+    --pf-c-label-group__close--MarginBottom: 0;
+    --pf-c-label-group__close--MarginRight: var(--pf-c-label-group--m-vertical__close--MarginRight);
 
     &.pf-c-label-group,
     .pf-c-label-group__list {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    .pf-c-label-group__close .pf-c-button {
+      --pf-c-button--PaddingLeft: var(--pf-c-label-group--m-vertical__close--c-button--PaddingLeft);
+      --pf-c-button--PaddingRight: var(--pf-c-label-group--m-vertical__close--c-button--PaddingRight);
     }
   }
 }
@@ -85,5 +92,7 @@
 
 .pf-c-label-group__close {
   margin-top: var(--pf-c-label-group__close--MarginTop);
+  margin-right: var(--pf-c-label-group__close--MarginRight);
   margin-bottom: var(--pf-c-label-group__close--MarginBottom);
+  margin-left: var(--pf-c-label-group__close--MarginLeft);
 }

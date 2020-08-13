@@ -356,6 +356,33 @@ cssPrefix: pf-c-label-group
 {{/label-group}}
 ```
 
+### Vertical category removable
+```hbs
+{{#> label-group label-group--id="label-group-vertical-category-removable" label-group--modifier="pf-m-vertical pf-m-category"}}
+  {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label"')}}
+    Group label
+  {{/label-group-label}}
+  {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
+    {{#> label-group-list-item}}
+      {{#> label}}
+        Label
+      {{/label}}
+    {{/label-group-list-item}}
+    {{#> label-group-list-item}}
+      {{#> label label--modifier="pf-m-blue"}}
+        Label 2
+      {{/label}}
+    {{/label-group-list-item}}
+    {{#> label-group-list-item}}
+      {{#> label label--modifier="pf-m-green"}}
+        Label 3
+      {{/label}}
+    {{/label-group-list-item}}
+  {{/label-group-list}}
+  {{> label-group-close}}
+{{/label-group}}
+```
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
