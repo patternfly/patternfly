@@ -7,7 +7,7 @@ releaseNoteTOC: true
 ## 2020.10 release notes (2020-08-05)
 Packages released:
 - [@patternfly/patternfly@v4.31.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.4)
-
+ 
 ### Components
 - **Alert group:** Removed misformed metastring ([#3324](https://github.com/patternfly/patternfly/pull/3324))
 - **Description list:**
