@@ -27,7 +27,8 @@
   --pf-c-data-list__item--m-selectable--hover--item--BorderTopWidth: var(--pf-c-data-list__item--BorderBottomWidth);
   --pf-c-data-list__item--sm--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-data-list__item--sm--BorderBottomColor: var(--pf-global--BorderColor--100);
-  --pf-c-data-list--item--m-draggable--hover--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-data-list__item--m-draggable--hover--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-data-list__item--m-draggable--hover--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
 
   @media screen and (min-width: $pf-global--breakpoint--sm) {
     --pf-c-data-list__item--BorderBottomWidth: var(--pf-c-data-list__item--sm--BorderBottomWidth);
@@ -254,7 +255,8 @@
     }
 
     &:hover:not(.pf-m-dragged) {
-      z-index: var(--pf-c-data-list--item--m-draggable--hover--ZIndex);
+      z-index: var(--pf-c-data-list__item--m-draggable--hover--ZIndex);
+      box-shadow: var(--pf-c-data-list__item--m-draggable--hover--BoxShadow);
 
       &:not(:last-child) {
         --pf-c-data-list__item--BorderBottomWidth: 0;

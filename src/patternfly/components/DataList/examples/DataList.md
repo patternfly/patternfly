@@ -735,6 +735,18 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `tabindex="0"` | `.pf-c-data-list__item.pf-m-draggable` | Inserts the draggable row into the tab order of the page so that it is focusable. **Required** |
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-draggable` | `.pf-c-data-list__item` | Modifies a data list item so that it is draggable. |
+| `.pf-m-dragged` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the dragged state. |
+| `.pf-m-disabled` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the disabled state. |
+
 ## Documentation
 ### Overview
 The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon PatternFly layouts to achieve desired presentation within `pf-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the [table component](/documentation/core/components/table).
