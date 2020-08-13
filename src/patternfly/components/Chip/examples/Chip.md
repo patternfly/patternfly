@@ -53,6 +53,16 @@ cssPrefix: pf-c-chip
     Overflow chip
   {{/chip-text}}
 {{/chip}}
+<br>
+<br>
+{{#> chip chip--type="div" chip--modifier="pf-m-draggable"}}
+  {{#> chip-icon}}
+    <i class="fas fa-grip-vertical" aria-label="Drag"></i>
+  {{/chip-icon}}
+  {{#> chip-text}}
+    Draggable chip
+  {{/chip-text}}
+{{/chip}}
 ```
 
 ## Documentation
@@ -72,6 +82,8 @@ A Chip is used to display items that have been filtered or selected from a large
 | -- | -- | -- |
 | `.pf-c-chip` | `<div>`, `<button>`, | Initiates the chip component. Use a `<button>` with overflow chips **Required** |
 | `.pf-c-chip__text` | `<span>` | Initiates the text inside of the chip. **Required** |
+| `.pf-c-chip__icon` | `<span>` | Initiates the icon inside of the chip. |
 | `.pf-c-button` | `.pf-c-chip <button>` | Initiates the button used to remove the chip. |
 | `.pf-c-badge` | `<span>` | Initiates the badge inside the chip. |
 | `.pf-m-overflow` | `button.pf-c-chip` | Applies styling of the overflow chip. |
+| `.pf-m-draggable` | `.pf-c-chip` | Modifies the chip to be in the draggable state. |

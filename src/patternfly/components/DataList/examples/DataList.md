@@ -666,6 +666,75 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
+### Draggable
+```hbs
+{{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
+  {{#> data-list-item data-list-item--modifier="pf-m-draggable pf-m-disabled" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-icon}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1" checked disabled')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item1">Disabled</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2" tabindex="0"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-icon}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check2" aria-labelledby="' data-list--id '-item2" checked')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item2">Cuisine</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-draggable pf-m-dragged" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-icon}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check3" aria-labelledby="' data-list--id '-item3" checked disabled')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item3">Draggable</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+    {{#> chip chip--type="div" chip--modifier="pf-m-draggable"}}
+      {{#> chip-icon}}
+        <i class="fas fa-grip-vertical" aria-label="Drag"></i>
+      {{/chip-icon}}
+      {{#> chip-text}}
+        Draggable chip
+      {{/chip-text}}
+    {{/chip}}
+  {{/data-list-item}}
+
+{{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4" tabindex="0"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-icon}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check4" aria-labelledby="' data-list--id '-item4" checked')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <span id="{{data-list--id}}-item4">Pricing</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
 ## Documentation
 ### Overview
 The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon PatternFly layouts to achieve desired presentation within `pf-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the [table component](/documentation/core/components/table).

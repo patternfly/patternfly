@@ -12,6 +12,11 @@
   // overflow chip button
   --pf-c-chip--m-overflow__text--Color: var(--pf-global--primary-color--100);
 
+  // draggable chip
+  --pf-c-chip--m-draggable--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-chip--m-draggable--BoxShadow: var(--pf-global--BoxShadow--sm);
+  --pf-c-chip__m-draggable--icon--FontSize: var(--pf-global--icon--FontSize--sm);
+
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-chip__text--Color: var(--pf-global--Color--100);
@@ -29,6 +34,9 @@
 
   // chip badge
   --pf-c-chip__c-badge--MarginLeft: var(--pf-global--spacer--xs);
+
+  // icon
+  --pf-c-chip__icon--MarginRight: var(--pf-global--spacer--xs);
 
   @include pf-t-light;  // This component always needs to be light
 
@@ -60,6 +68,16 @@
     }
   }
 
+  &.pf-m-draggable {
+    --pf-c-chip--BackgroundColor: var(--pf-c-chip--m-draggable--BackgroundColor);
+
+    box-shadow: var(--pf-c-chip--m-draggable--BoxShadow);
+
+    .pf-c-chip__icon {
+      font-size: var(--pf-c-chip__m-draggable--icon--FontSize);
+    }
+  }
+
   // Button
   .pf-c-button {
     --pf-c-button--PaddingTop: var(--pf-c-chip__c-button--PaddingTop);
@@ -87,4 +105,8 @@
   max-width: var(--pf-c-chip__text--MaxWidth);
   font-size: var(--pf-c-chip__text--FontSize);
   color: var(--pf-c-chip__text--Color);
+}
+
+.pf-c-chip__icon {
+  margin-right: var(--pf-c-chip__icon--MarginRight);
 }
