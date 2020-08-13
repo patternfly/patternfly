@@ -52,17 +52,6 @@ import './ContextMenu.css'
 {{/context-menu}}
 ```
 
-  <!-- <li>
-    {{#> dropdown-menu-item dropdown-menu-item--type="a" dropdown-menu-item--modifier="pf-m-disabled" dropdown-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}
-      Disabled link
-    {{/dropdown-menu-item}}
-  </li>
-  <li>
-    {{#> dropdown-menu-item dropdown-menu-item--attribute='disabled'}}
-      Disabled action
-    {{/dropdown-menu-item}}
-  </li> -->
-
 ### With-icons
 ```hbs
 {{#> context-menu}}
