@@ -283,68 +283,7 @@ wrapperTag: div
         {{/modal-box-description}}
       {{/modal-box-header}}
       {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
-        {{#> data-list data-list--id="table-column-management" data-list--attribute='aria-label="Table column management"' data-list--modifier="pf-m-compact"}}
-          {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
-            {{#> data-list-item-row}}
-              {{#> data-list-item-control}}
-                {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1" checked')}}{{/data-list-check}}
-              {{/data-list-item-control}}
-              {{#> data-list-item-content}}
-                {{#> data-list-cell data-list-cell--attribute=(concat 'id="' data-list--id '-item1"')}}
-                  Repositories
-                {{/data-list-cell}}
-              {{/data-list-item-content}}
-            {{/data-list-item-row}}
-          {{/data-list-item}}
-          {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
-            {{#> data-list-item-row}}
-              {{#> data-list-item-control}}
-                {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item2" checked')}}{{/data-list-check}}
-              {{/data-list-item-control}}
-              {{#> data-list-item-content}}
-                {{#> data-list-cell data-list-cell--attribute=(concat 'id="' data-list--id '-item2"')}}
-                  Branches
-                {{/data-list-cell}}
-              {{/data-list-item-content}}
-            {{/data-list-item-row}}
-          {{/data-list-item}}
-          {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
-            {{#> data-list-item-row}}
-              {{#> data-list-item-control}}
-                {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item3" checked')}}{{/data-list-check}}
-              {{/data-list-item-control}}
-              {{#> data-list-item-content}}
-                {{#> data-list-cell data-list-cell--attribute=(concat 'id="' data-list--id '-item3"')}}
-                  Pull requests
-                {{/data-list-cell}}
-              {{/data-list-item-content}}
-            {{/data-list-item-row}}
-          {{/data-list-item}}
-          {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4"')}}
-            {{#> data-list-item-row}}
-              {{#> data-list-item-control}}
-                {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item4" checked')}}{{/data-list-check}}
-              {{/data-list-item-control}}
-              {{#> data-list-item-content}}
-                {{#> data-list-cell data-list-cell--attribute=(concat 'id="' data-list--id '-item4"')}}
-                  Workspaces
-                {{/data-list-cell}}
-              {{/data-list-item-content}}
-            {{/data-list-item-row}}
-          {{/data-list-item}}
-          {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item5"')}}
-            {{#> data-list-item-row}}
-              {{#> data-list-item-control}}
-                {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item5" checked')}}{{/data-list-check}}
-              {{/data-list-item-control}}
-              {{#> data-list-item-content}}
-                {{#> data-list-cell data-list-cell--attribute=(concat 'id="' data-list--id '-item5"')}}
-                  Last commit
-                {{/data-list-cell}}
-              {{/data-list-item-content}}
-            {{/data-list-item-row}}
-          {{/data-list-item}}
-        {{/data-list}}
+        {{> table-manage-cols-data-list}}
       {{/modal-box-body}}
       {{#> modal-box-footer}}
         {{#> button button--modifier="pf-m-primary"}}
