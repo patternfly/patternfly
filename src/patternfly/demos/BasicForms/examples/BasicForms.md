@@ -60,14 +60,16 @@ section: demos
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--modifier="pf-m-action"}}
-    {{#> form-actions}}
-      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-        Submit form
-      {{/button}}
-      {{#> button button--modifier="pf-m-secondary"}}
-        Cancel
-      {{/button}}
-    {{/form-actions}}
+    {{#> form-group-control}}
+      {{#> form-actions}}
+        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+          Submit form
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Cancel
+        {{/button}}
+      {{/form-actions}}
+    {{/form-group-control}}
   {{/form-group}}
 {{/form}}
 ```

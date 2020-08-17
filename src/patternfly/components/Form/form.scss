@@ -102,6 +102,7 @@
 .pf-c-form__group {
   &.pf-m-action {
     margin-top: var(--pf-c-form__group--m-action--MarginTop);
+    overflow: hidden; // keeps the negative bottom margin bottom on .pf-c-form__actions from triggering overflow
   }
 }
 
@@ -212,7 +213,6 @@
   margin-right: var(--pf-c-form__actions--MarginRight);
   margin-bottom: var(--pf-c-form__actions--MarginBottom);
   margin-left: var(--pf-c-form__actions--MarginLeft);
-  overflow: hidden; // keeps the margin bottom on children from causing overflow issues
 
   > * {
     margin-top: var(--pf-c-form__actions--child--MarginTop);
