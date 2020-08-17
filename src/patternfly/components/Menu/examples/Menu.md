@@ -1,0 +1,812 @@
+---
+id: Menu
+section: components
+beta: true
+cssPrefix: pf-c-menu
+---
+
+import './Menu.css'
+
+## Examples
+### Basic
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+       {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Action
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item menu-item--type="a"}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Link
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item menu-list-item--modifier="pf-m-disabled"}}
+      {{#> menu-item menu-item--attribute="disabled"}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+           Disabled action
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item menu-list-item--modifier="pf-m-disabled"}}
+      {{#> menu-item menu-item--type="a" menu-item--modifier='aria-disabled="true" tabindex="-1"'}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+           Disabled link
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### With-icons
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-icon}}
+            <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+          {{#> menu-item-text}}
+            From Git
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-icon}}
+            <i class="fas fa-layer-group" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+          {{#> menu-item-text}}
+            Container image
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-icon}}
+          <i class="fas fa-cube" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+          {{#> menu-item-text}}
+            From DockerFile
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### With-sub-menu
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            From Git
+          {{/menu-item-text}}
+          {{> menu-item-toggle-icon}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Container image
+          {{/menu-item-text}}
+          {{> menu-item-toggle-icon}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-icon}}
+          <i class="fas fa-cube" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+          {{#> menu-item-text}}
+            From DockerFile
+          {{/menu-item-text}}
+          {{> menu-item-toggle-icon}}
+        {{/menu-item-main}}
+        {{#> menu-item-description}}
+          Description
+        {{/menu-item-description}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### With-fly-out
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Start rollout
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Pause rollouts
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Add storage
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Edit
+          {{/menu-item-text}}
+          {{> menu-item-toggle-icon}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+      {{#> menu menu--modifier="pf-m-submenu"}}
+        {{#> menu-body}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-text}}
+                  Application grouping
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-text}}
+                  Count
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-text}}
+                  Labels
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-text}}
+                  Annotations
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
+        {{/menu-body}}
+      {{/menu}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Delete deployment config
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### With-filtering
+```hbs
+{{#> menu}}
+  {{#> menu-header}}
+    {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
+  {{/menu-header}}
+  {{> divider}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Action 1
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Action 2
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Action 3
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### With-links
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Link 1
+          {{/menu-item-text}}
+          {{> menu-item-external-icon}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Link 2
+          {{/menu-item-text}}
+          {{> menu-item-external-icon}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Link 3
+          {{/menu-item-text}}
+          {{> menu-item-external-icon}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### With-separator(s)
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Action 1
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Action 2
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{> divider}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Action 3
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### With-titled-groups
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Link not in group
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{> divider}}
+    {{#> menu-group}}
+      {{#> menu-group-title}}
+        Group 1
+      {{/menu-group-title}}
+      <ul>
+        {{#> menu-list-item}}
+          {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Link 1
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Link 2
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+      </ul>
+    {{/menu-group}}
+    {{> divider}}
+    {{#> menu-group}}
+      {{#> menu-group-title}}
+        Group 2
+      {{/menu-group-title}}
+      <ul>
+        {{#> menu-list-item}}
+          {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Link 1
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Link 2
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+      </ul>
+    {{/menu-group}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### With-description
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-icon}}
+            <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+          {{#> menu-item-text}}
+            Action 1
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+        {{#> menu-item-description}}
+          Description
+        {{/menu-item-description}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item menu-list-item--modifier="pf-m-disabled"}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-icon}}
+            <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+          {{#> menu-item-text}}
+            Action 2 disabled
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+        {{#> menu-item-description}}
+          Description
+        {{/menu-item-description}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-icon}}
+            <i class="fas fa-code-branch" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+          {{#> menu-item-text}}
+            Action 3
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+        {{#> menu-item-description}}
+          Nunc non ornare ex, et pretium dui. Duis nec augue at urna elementum blandit tincidunt eget metus. Aenean sed metus id urna dignissim interdum. Aenean vel nisl vitae arcu vehicula pulvinar eget nec turpis. Cras sit amet est est. 
+        {{/menu-item-description}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### With-actions
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-group}}
+      {{#> menu-group-title}}
+        Actions
+      {{/menu-group-title}}
+      <ul>
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Item 1 
+              {{/menu-item-text}}
+              {{> menu-item-external-icon}}
+            {{/menu-item-main}}
+            {{#> menu-item-description}}
+              This is a description
+            {{/menu-item-description}}
+          {{/menu-item}}
+          {{#> menu-item-action}}
+            <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+          {{/menu-item-action}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Item 2
+              {{/menu-item-text}}
+              {{> menu-item-external-icon}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+          {{#> menu-item-action}}
+            <i class="fas fa-bell" aria-hidden="true"></i>
+          {{/menu-item-action}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Item 3
+              {{/menu-item-text}}
+              {{> menu-item-external-icon}}
+            {{/menu-item-main}}
+            {{#> menu-item-description}}
+              This is a description
+            {{/menu-item-description}}
+          {{/menu-item}}
+          {{#> menu-item-action}}
+            <i class="fas fa-clipboard" aria-hidden="true"></i>
+          {{/menu-item-action}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Item 4
+              {{/menu-item-text}}
+              {{> menu-item-external-icon}}
+              {{> menu-item-select-icon}}
+            {{/menu-item-main}}
+            {{#> menu-item-description}}
+              This is a description
+            {{/menu-item-description}}
+          {{/menu-item}}
+          {{#> menu-item-action}}
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          {{/menu-item-action}}
+        {{/menu-list-item}}
+      </ul>
+    {{/menu-group}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### With-favorites
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-group}}
+      {{#> menu-group-title}}
+        Favorites
+      {{/menu-group-title}}
+      <ul>
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Item 1 
+              {{/menu-item-text}}
+              {{> menu-item-external-icon}}
+            {{/menu-item-main}}
+            {{#> menu-item-description}}
+              This is a description
+            {{/menu-item-description}}
+          {{/menu-item}}
+          {{> menu-item-action menu-item-action--IsFavorite="true" menu-item-action--IsFavorited="true"}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Item 3
+              {{/menu-item-text}}
+              {{> menu-item-external-icon}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+        {{/menu-list-item}}
+      </ul>
+    {{/menu-group}}
+    {{> divider}}
+    {{#> menu-group}}
+      {{#> menu-group-title}}
+        All actions
+      {{/menu-group-title}}
+      <ul>
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Item 1
+              {{/menu-item-text}}
+              {{> menu-item-external-icon}}
+            {{/menu-item-main}}
+            {{#> menu-item-description}}
+              This is a description
+            {{/menu-item-description}}
+          {{/menu-item}}
+          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Item 2
+              {{/menu-item-text}}
+              {{> menu-item-external-icon}}
+              {{> menu-item-select-icon}}
+            {{/menu-item-main}}
+            {{#> menu-item-description}}
+              This is a description
+            {{/menu-item-description}}
+          {{/menu-item}}
+          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Item 3
+              {{/menu-item-text}}
+              {{> menu-item-external-icon}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+          {{> menu-item-action menu-item-action--IsFavorite="true"}}
+        {{/menu-list-item}}
+      </ul>
+    {{/menu-group}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### Option-single-select
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Option 1
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Option 2
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-icon}}
+            <i class="fas fa-table" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+          {{#> menu-item-text}}
+            Option 3
+          {{/menu-item-text}}
+          {{> menu-item-select-icon}}
+        {{/menu-item-main}}
+        {{#> menu-item-description}}
+          Description
+        {{/menu-item-description}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### Option-multi-select
+```hbs
+{{#> menu}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Option 1
+          {{/menu-item-text}}
+          {{> menu-item-select-icon}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Option 2
+          {{/menu-item-text}}
+          {{> menu-item-select-icon}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-icon}}
+            <i class="fas fa-table" aria-hidden="true"></i>
+          {{/menu-item-icon}}
+          {{#> menu-item-text}}
+            Option 3
+          {{/menu-item-text}}
+          {{> menu-item-select-icon}}
+        {{/menu-item-main}}
+        {{#> menu-item-description}}
+          Description
+        {{/menu-item-description}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+### Responsive-drill-down
+```hbs
+{{#> menu}}
+  {{#> menu-header}}
+    {{#> menu-item menu-item--type="div"}}
+      {{#> menu-item-main}}
+        {{#> menu-item-action}}
+          {{#> menu-item-action-icon}}
+            <i class="fas fa-angle-left"></i>
+          {{/menu-item-action-icon}}
+        {{/menu-item-action}}
+        {{#> menu-item-icon}}
+          <i class="fas fa-cog" aria-hidden="true"></i>
+        {{/menu-item-icon}}
+        {{#> menu-item-text}}
+          Edit
+        {{/menu-item-text}}
+      {{/menu-item-main}}
+    {{/menu-item}}
+  {{/menu-header}}
+  {{> divider}}
+  {{#> menu-body}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Start rollout
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Pause rollouts
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+    {{#> menu-list-item}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            Add storage
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/menu-list-item}}
+  {{/menu-body}}
+{{/menu}}
+```
+
+## Documentation
+### Overview
+
+### Accessibility
+
+| Attribute | Applied | Outcome |
+| -- | -- | -- |
+| `disabled` | `button.pf-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
+| `aria-disabled="true"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `tabindex="-1"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `aria-hidden="true"` | `.pf-c-menu__item-icon`, `.pf-c-menu__item-action-icon`, `.pf-c-menu__item-external-icon`, `.pf-c-menu__item-toggle-icon`, `.pf-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
+| `aria-label="Not starred"` | `.pf-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
+| `aria-label="Starred"` | `.pf-c-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |
+
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-menu` | `<div>` | Initiates the menu. **Required** |
+| `.pf-c-menu__header` | `<div>` | Initiates the menu header. Use for filtering and navigation. |
+| `.pf-c-menu__body` | `<ul>` | Initiates the menu body. Use for list items. **Required** |
+| `.pf-c-menu__list-item` | `<li>` | Initiates the menu list item. **Required** |
+| `.pf-c-menu__item` | `<button>`, `<a>`, `<div>` | Initiates the menu item. **Required** |
+| `.pf-c-menu__item-main` | `<div>` | Initiates the menu item main container. **Required** |
+| `.pf-c-menu__item-text` | `<span>` | Initiates the menu item text. **Required** |
+| `.pf-c-menu__item-description` | `<div>` | Initiates the menu item description. |
+| `.pf-c-menu__item-group` | `<section>` | Initiates the menu item group. |
+| `.pf-c-menu__item-group-title` | `<h1>` | Initiates the menu item group title. |
+| `.pf-c-menu__item-icon` | `<span>` | Initiates the menu item icon. |
+| `.pf-c-menu__item-toggle-icon` | `<span>` | Initiates the menu item toggle icon. |
+| `.pf-c-menu__item-select-icon` | `<span>` | Initiates the menu item select icon. |
+| `.pf-c-menu__item-action` | `<button>` | Initiates the menu item action. |
+| `.pf-c-menu__item-action-icon` | `<span>` | Initiates the menu item action icon. |
+| `.pf-c-menu__item-external-icon` | `<span>` | Initiates the menu item external icon. |
+| `.pf-m-submenu` | `.pf-c-menu` | Modifies the menu to be the submenu. |
+| `.pf-m-favorite` | `.pf-c-menu__item-action` | Modifies the menu item action to handle the favorite icon. |
+| `.pf-m-favorited` | `.pf-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |

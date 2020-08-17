@@ -1,0 +1,6 @@
+<{{#if menu-item--type}}{{menu-item--type}}{{else}}button{{/if}} class="pf-c-menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}"
+  {{#if menu-item--attribute}}
+    {{{menu-item--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</{{#if menu-item--type}}{{menu-item--type}}{{else}}button{{/if}}>
