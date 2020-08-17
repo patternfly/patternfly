@@ -8,10 +8,9 @@ daysUntilClose: 30
 
 # Issues with these labels will never be considered stale
 exemptLabels:
-  - pinned
-  - security
   - accessibility
-  - "breaking change :boom:"
+  - breaking change
+  - design approved
 
 # Label to use when marking as stale
 staleLabel: wontfix
