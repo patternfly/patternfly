@@ -24,6 +24,11 @@ import './Button.css'
 {{#> button button--modifier="pf-m-danger"}}
   Danger
 {{/button}}
+
+{{#> button button--modifier="pf-m-warning"}}
+  Warning
+{{/button}}
+
 <br>
 <br>
 {{#> button button--modifier="pf-m-link"}}
@@ -77,6 +82,10 @@ import './Button.css'
   Danger
 {{/button}}
 
+{{#> button button--modifier="pf-m-warning pf-m-small"}}
+  Warning
+{{/button}}
+
 {{#> button button--modifier="pf-m-link pf-m-small"}}
   Link
   {{#> button-icon button-icon--modifier="pf-m-end"}}
@@ -109,6 +118,10 @@ import './Button.css'
 
 {{#> button button--modifier="pf-m-danger" button--attribute="disabled"}}
   Danger disabled
+{{/button}}
+
+{{#> button button--modifier="pf-m-warning" button--attribute="disabled"}}
+  Warning disabled
 {{/button}}
 
 {{#> button button--modifier="pf-m-link" button--attribute="disabled"}}
@@ -149,6 +162,10 @@ import './Button.css'
 
 {{#> button button--modifier="pf-m-danger pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Danger disabled
+{{/button}}
+
+{{#> button button--modifier="pf-m-warning pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
+  Warning disabled
 {{/button}}
 
 {{#> button button--modifier="pf-m-link pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
