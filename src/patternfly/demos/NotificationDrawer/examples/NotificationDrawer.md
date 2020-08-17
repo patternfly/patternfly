@@ -7,17 +7,17 @@ section: demos
 
 ### Collapsed
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-collapsed-demo"}}
+{{> notification-drawer-demo id="drawer-collapsed-demo"}}
 ```
 
-### Expanded basic
+### Expanded basics
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-expanded-basic-demo" drawer-panel--IsOpen="true"}}
+{{> notification-drawer-demo id="drawer-expanded-basics-demo" drawer-panel--IsOpen="true"}}
 ```
 
 ### Expanded groups
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-expanded-groups-demo" drawer-demo--IsGroup="true" drawer-panel--IsOpen="true"}}
+{{> notification-drawer-demo id="drawer-expanded-demo" drawer-demo--IsGroup="true" drawer-panel--IsOpen="true"}}
 ```
 
 ## Documentation
