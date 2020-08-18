@@ -1,6 +1,6 @@
-<a href="{{page-header-brand-link--href}}" class="pf-c-page__header-brand-link{{#if page-header-brand-link--modifier}} {{page-header-brand-link--modifier}}{{/if}}"
+<{{#if page-header-brand-link--href}}a href="{{#if page-header-brand-link--href}}{{page-header-brand-link--href}}{{else}}#{{/if}}" {{else}}span {{/if}} class="pf-c-page__header-brand-link{{#if page-header-brand-link--modifier}} {{page-header-brand-link--modifier}}{{/if}}"
   {{#if page-header-brand-link--attribute}}
     {{{page-header-brand-link--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</a>
+</{{#if page-header-brand-link--href}}a{{else}}span{{/if}}>
