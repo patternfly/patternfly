@@ -44,10 +44,7 @@ cssPrefix: pf-c-hint
 ```hbs
 {{#> hint}}
   {{#> hint-body}}
-    Welcome to the new documentation experience.
-    {{#> button button--modifier="pf-m-link pf-m-inline"}}
-      Learn more about the improved features.
-    {{/button}}
+    Welcome to the new documentation experience. <a href="#">Learn more about the improved features</a>.
   {{/hint-body}}
 {{/hint}}
 
