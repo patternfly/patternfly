@@ -496,7 +496,7 @@ import './Menu.css'
       {{/menu-group-title}}
       {{#> menu-list}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--modifier="pf-m-select"}}
+          {{#> menu-item menu-item--modifier="pf-m-selected"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Item 1 
@@ -525,7 +525,7 @@ import './Menu.css'
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--modifier="pf-m-select"}}
+          {{#> menu-item menu-item--modifier="pf-m-selected"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Item 3
@@ -541,7 +541,7 @@ import './Menu.css'
           {{/menu-item-action}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--modifier="pf-m-select"}}
+          {{#> menu-item menu-item--modifier="pf-m-selected"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Item 4
