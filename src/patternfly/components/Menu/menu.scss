@@ -4,6 +4,13 @@
   --pf-c-menu--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-menu--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-menu--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-menu--m-flyout__sublist--Top: calc(var(--pf-c-menu--PaddingTop) * -1);
+
+  // sublist
+  --pf-c-menu__sublist--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-menu__sublist--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-menu__sublist--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-menu__sublist--PaddingBottom: var(--pf-global--spacer--sm);
 
   // Divider
   --pf-c-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
@@ -15,6 +22,12 @@
   --pf-c-menu__header--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-menu__header--PaddingLeft: var(--pf-global--spacer--md);
 
+  // list item
+  --pf-c-menu__list-item--Color: var(--pf-global--Color--100);
+  --pf-c-menu__list-item--hover--Color: var(--pf-global--Color--100);
+  --pf-c-menu__list-item--BackgroundColor: transparent;
+  --pf-c-menu__list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+
   // Menu item
   --pf-c-menu__item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-menu__item--PaddingRight: var(--pf-global--spacer--md);
@@ -24,12 +37,6 @@
   --pf-c-menu__item--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-menu__item--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-menu__item--disabled--Color: var(--pf-global--Color--dark-200);
-
-  // list item
-  --pf-c-menu__list-item--Color: var(--pf-global--Color--100);
-  --pf-c-menu__list-item--hover--Color: var(--pf-global--Color--100);
-  --pf-c-menu__list-item--BackgroundColor: transparent;
-  --pf-c-menu__list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
   // group
   --pf-c-menu__group-title--PaddingTop: var(--pf-c-menu__item--PaddingTop);
@@ -46,7 +53,6 @@
 
   // icon
   --pf-c-menu__item-icon--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-menu__item-icon--Color: var(--pf-global--Color--dark-200);
 
   // toggle icon
   --pf-c-menu__item-toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
@@ -79,10 +85,28 @@
   background-color: var(--pf-c-menu--BackgroundColor);
   box-shadow: var(--pf-c-menu--BoxShadow);
 
-  &.pf-m-submenu {
-    position: absolute;
-    top: 0;
-    left: 100%;
+  &.pf-m-flyout {
+    .pf-c-menu__sublist {
+      position: absolute;
+      top: var(--pf-c-menu--m-flyout__sublist--Top);
+      left: 100%;
+    }
+
+    .pf-c-menu__list-item {
+      &:hover,
+      &:focus-within {
+        color: unset;
+        background-color: unset;
+      }
+    }
+
+    .pf-c-menu__item {
+      &:hover,
+      &:focus-within {
+        color: var(--pf-c-menu__list-item--hover--Color);
+        background-color: var(--pf-c-menu__list-item--hover--BackgroundColor);
+      }
+    }
   }
 
   .pf-c-divider {
@@ -106,6 +130,13 @@
   }
 }
 
+.pf-c-menu__sublist {
+  padding-top: var(--pf-c-menu__sublist--PaddingTop);
+  padding-bottom: var(--pf-c-menu__sublist--PaddingBottom);
+  background-color: var(--pf-c-menu__sublist--BackgroundColor);
+  box-shadow: var(--pf-c-menu__sublist--BoxShadow);
+}
+
 // List item
 .pf-c-menu__list-item {
   position: relative;
@@ -114,9 +145,14 @@
   background-color: var(--pf-c-menu__list-item--BackgroundColor);
 
   &:hover:not(.pf-m-disabled),
-  &:focus:not(.pf-m-disabled) {
+  &:focus-within:not(.pf-m-disabled) {
     --pf-c-menu__list-item--Color: var(--pf-c-menu__list-item--hover--Color);
     --pf-c-menu__list-item--BackgroundColor: var(--pf-c-menu__list-item--hover--BackgroundColor);
+
+    > .pf-c-menu__sublist > .pf-c-menu__list-item {
+      --pf-c-menu__list-item--Color: unset;
+      --pf-c-menu__list-item--BackgroundColor: none;
+    }
 
     .pf-c-menu__item-external-icon {
       opacity: 1;
@@ -158,6 +194,12 @@
 
     pointer-events: none;
   }
+
+  &.pf-m-selected {
+    .pf-c-menu__item-select-icon {
+      opacity: 1;
+    }
+  }
 }
 
 .pf-c-menu__item-main {
@@ -194,7 +236,6 @@
 // General icon
 .pf-c-menu__item-icon {
   margin-right: var(--pf-c-menu__item-icon--MarginRight);
-  color: var(--pf-c-menu__item-icon--Color);
 }
 
 // Toggle icon
@@ -208,6 +249,7 @@
   margin-left: var(--pf-c-menu__item-select-icon--MarginLeft);
   font-size: var(--pf-c-menu__item-select-icon--FontSize);
   color: var(--pf-c-menu__item-select-icon--Color);
+  opacity: 0;
 }
 
 .pf-c-menu__item-external-icon {
@@ -232,14 +274,14 @@
   }
 
   &.pf-m-favorite {
-    .pf-c-menu__item-action-icon {
-      font-size: var(--pf-c-menu__item-action--m-favorite__icon--FontSize);
-    }
-
     --pf-c-menu__item-action-icon--Color: var(--pf-c-menu__item-action--m-favorite__icon--Color);
 
     &.pf-m-favorited {
       --pf-c-menu__item-action-icon--Color: var(--pf-c-menu__item-action--m-favorite--m-favorited__icon--Color);
+    }
+
+    .pf-c-menu__item-action-icon {
+      font-size: var(--pf-c-menu__item-action--m-favorite__icon--FontSize);
     }
   }
 }
