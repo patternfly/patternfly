@@ -2,14 +2,11 @@
   // splitter
   --pf-c-splitter--Height: var(--pf-global--spacer--sm);
   --pf-c-splitter--Width: 100%;
-  --pf-c-splitter--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-splitter--BackgroundColor: var(--pf-global--BorderColor--100);
   --pf-c-splitter--Cursor: row-resize;
   --pf-c-splitter--m-vertical--Height: 100%;
   --pf-c-splitter--m-vertical--Width: var(--pf-global--spacer--sm);
   --pf-c-splitter--m-vertical--Cursor: col-resize;
-
-  // dark variation
-  --pf-c-splitter--m-dark--BackgroundColor: var(--pf-global--disabled-color--200);
 
   // splitter handle
   --pf-c-splitter__handle--Top: 0;
@@ -22,7 +19,7 @@
   --pf-c-splitter--m-vertical__handle--Bottom: 0;
 
   // splitter handle line
-  --pf-c-splitter__handle-line--BackgroundColor: var(--pf-global--BorderColor--200);
+  --pf-c-splitter__handle-line--BackgroundColor: var(--pf-global--Color--100);
   --pf-c-splitter__handle-line--Height: #{pf-size-prem(1px)};
   --pf-c-splitter__handle-line--Width: #{pf-size-prem(12px)};
   --pf-c-splitter--m-vertical__handle-line--Height: #{pf-size-prem(12px)};
@@ -52,10 +49,6 @@
       --pf-c-splitter__handle-line--Height: var(--pf-c-splitter--m-vertical__handle-line--Height);
       --pf-c-splitter__handle-line--Width: var(--pf-c-splitter--m-vertical__handle-line--Width);
     }
-  }
-
-  &.pf-m-dark {
-    --pf-c-splitter--BackgroundColor: var(--pf-c-splitter--m-dark--BackgroundColor);
   }
 }
 

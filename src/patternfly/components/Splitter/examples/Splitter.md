@@ -14,12 +14,6 @@ import './Splitter.css'
 {{/splitter}}
 ```
 
-```hbs title=Dark
-{{#> splitter splitter--modifier="pf-m-dark"}}
-  {{> splitter-handle}}
-{{/splitter}}
-```
-
 ```hbs title=Vertical
 {{#> splitter splitter--IsVertical="true"}}
   {{> splitter-handle}}
@@ -45,4 +39,3 @@ import './Splitter.css'
 | `.pf-c-splitter__handle` | `<div>` | Initiates the splitter handle element. |
 | `.pf-c-splitter__handle-line` | `<div>` | Initiates the splitter handle line element. |
 | `.pf-m-vertical` |  `.pf-c-splitter` | Modifies the splitter component to be vertical. |
-| `.pf-m-dark` |  `.pf-c-splitter` | Modifies the splitter component to have a dark background. |
