@@ -17,7 +17,6 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node--Color: var(--pf-global--Color--100);
   --pf-c-tree-view__node--m-current--Color: var(--pf-global--link--Color);
   --pf-c-tree-view__node--m-current--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-tree-view__node--m-active--FontWeight: var(--pf-global--FontWeight--bold);
 
   // link hover/focus
   --pf-c-tree-view__node--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
@@ -52,6 +51,7 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__action--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tree-view__action--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-tree-view__action--Color: var(--pf-global--icon--Color--light);
+  --pf-c-tree-view__action--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
 
   padding-top: var(--pf-c-tree-view--PaddingTop);
   padding-bottom: var(--pf-c-tree-view--PaddingBottom);
@@ -83,10 +83,6 @@ $pf-c-tree-view--MaxNesting: 10;
     font-weight: var(--pf-c-tree-view__node--m-current--FontWeight);
   }
 
-  &.pf-m-active {
-    font-weight: var(--pf-c-tree-view__node--m-active--FontWeight);
-  }
-
   &:focus {
     background-color: var(--pf-c-tree-view__node--focus--BackgroundColor);
   }
@@ -102,6 +98,19 @@ $pf-c-tree-view--MaxNesting: 10;
 
 .pf-c-tree-view__node-check {
   margin-right: var(--pf-c-tree-view__node-check--MarginRight);
+}
+
+.pf-c-tree-view__node-toggle {
+  border: 0;
+}
+
+.pf-c-tree-view__node-main {
+  @include pf-text-overflow;
+
+  display: flex;
+  width: 100%;
+  text-align: left;
+  border: 0;
 }
 
 .pf-c-tree-view__node-toggle-icon {
@@ -131,22 +140,19 @@ $pf-c-tree-view--MaxNesting: 10;
 
   &:hover {
     background-color: var(--pf-c-tree-view__node--hover--BackgroundColor);
-
-    .pf-c-tree-view__action {
-      display: block;
-      visibility: visible;
-    }
   }
 }
 
 .pf-c-tree-view__action {
-  display: none;
   padding-right: var(--pf-c-tree-view__action--PaddingRight);
   padding-left: var(--pf-c-tree-view__action--PaddingLeft);
   margin-left: auto;
   color: var(--pf-c-tree-view__action--Color);
-  visibility: hidden;
   border: 0;
+
+  &:focus {
+    background-color: var(--pf-c-tree-view__action--focus--BackgroundColor);
+  }
 }
 
 // stylelint-disable no-duplicate-selectors
