@@ -9,7 +9,7 @@ cssPrefix: pf-c-label-group
 ### Basic
 ```hbs
 {{#> label-group label-group--id="label-group-basic"}}
-  {{#> label-group-list label-group-list--attribute='aria-label="Label group list"'}}
+  {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
     {{#> label-group-list-item}}
       {{#> label}}
         {{#> label-icon}}
@@ -41,7 +41,7 @@ cssPrefix: pf-c-label-group
 ### Overflow
 ```hbs
 {{#> label-group label-group--id="label-group-overflow"}}
-  {{#> label-group-list label-group-list--attribute='aria-label="Label group list"'}}
+  {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
     {{#> label-group-list-item}}
       {{#> label}}
         {{#> label-icon}}
@@ -78,7 +78,7 @@ cssPrefix: pf-c-label-group
 ### Overflow expanded
 ```hbs
 {{#> label-group label-group--id="label-group-overflow-expanded"}}
-  {{#> label-group-list label-group-list--attribute='aria-label="Label group list"'}}
+  {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
     {{#> label-group-list-item}}
       {{#> label}}
         {{#> label-icon}}
@@ -202,7 +202,7 @@ cssPrefix: pf-c-label-group
 ### Vertical
 ```hbs
 {{#> label-group label-group--id="label-group-vertical" label-group--modifier="pf-m-vertical"}}
-  {{#> label-group-list label-group-list--attribute='aria-label="Label group list"'}}
+  {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
     {{#> label-group-list-item}}
       {{#> label}}
         {{#> label-icon}}
@@ -234,7 +234,7 @@ cssPrefix: pf-c-label-group
 ### Vertical overflow
 ```hbs
 {{#> label-group label-group--id="label-group-vertical-overflow" label-group--modifier="pf-m-vertical"}}
-  {{#> label-group-list label-group-list--attribute='aria-label="Label group list"'}}
+  {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
     {{#> label-group-list-item}}
       {{#> label}}
         {{#> label-icon}}
@@ -271,7 +271,7 @@ cssPrefix: pf-c-label-group
 ### Vertical overflow expanded
 ```hbs
 {{#> label-group label-group--id="label-group-vertical-overflow-expanded" label-group--modifier="pf-m-vertical"}}
-  {{#> label-group-list label-group-list--attribute='aria-label="Label group list"'}}
+  {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
     {{#> label-group-list-item}}
       {{#> label}}
         {{#> label-icon}}
