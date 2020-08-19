@@ -15,7 +15,7 @@ wrapperTag: div
       {{#> page-header-brand-toggle}}
         toggle
       {{/page-header-brand-toggle}}
-      {{#> page-header-brand-link}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
         Logo
       {{/page-header-brand-link}}
     {{/page-header-brand}}
@@ -45,7 +45,7 @@ wrapperTag: div
   {{#> page-header}}
     {{!-- Brand --}}
     {{#> page-header-brand}}
-      {{#> page-header-brand-link}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
         Logo
       {{/page-header-brand-link}}
     {{/page-header-brand}}
@@ -77,7 +77,7 @@ wrapperTag: div
   {{#> page-header}}
     {{!-- Brand --}}
     {{#> page-header-brand}}
-      {{#> page-header-brand-link}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
         Logo
       {{/page-header-brand-link}}
     {{/page-header-brand}}
@@ -111,7 +111,7 @@ wrapperTag: div
       {{#> page-header-brand-toggle}}
         toggle
       {{/page-header-brand-toggle}}
-      {{#> page-header-brand-link}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
         Logo
       {{/page-header-brand-link}}
     {{/page-header-brand}}
@@ -144,7 +144,7 @@ wrapperTag: div
       {{#> page-header-brand-toggle}}
         toggle
       {{/page-header-brand-toggle}}
-      {{#> page-header-brand-link}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
         Logo
       {{/page-header-brand-link}}
     {{/page-header-brand}}
@@ -193,7 +193,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-c-page__header` | `<header>` |   Declares the page header. |
 | `.pf-c-page__header-brand` | `<div>` |   Creates a header container to nest the brand component. |
 | `.pf-c-page__header-brand-toggle` | `<div>` |   Creates a container to nest the sidebar toggle. |
-| `.pf-c-page__header-brand-link` | `<a>` |   Creates a link for the brand logo. |
+| `.pf-c-page__header-brand-link` | `<a>`, `<span>` |   Creates a link for the brand logo. Use a `<span>` if there is no link. |
 | `.pf-c-page__header-selector` | `<div>` |   Creates a header container to nest the context selector component. |
 | `.pf-c-page__header-nav` | `<div>` |   Creates a container to nest the navigation component in the header. |
 | `.pf-c-page__header-tools` | `<div>` |   Creates a container to nest the icons and menus in header. |
