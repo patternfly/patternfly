@@ -144,7 +144,7 @@ wrapperTag: div
       {{#> page-header-brand-toggle}}
         toggle
       {{/page-header-brand-toggle}}
-      {{#> page-header-brand-link}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
         Logo
       {{/page-header-brand-link}}
     {{/page-header-brand}}
