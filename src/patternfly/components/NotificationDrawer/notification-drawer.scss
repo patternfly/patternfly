@@ -124,11 +124,13 @@
 }
 
 .pf-c-notification-drawer__header-action {
+  display: flex;
+  align-items: center;
   margin-left: auto;
 
-  .pf-c-dropdown + .pf-c-button {
-    margin-left: var(--pf-c-notification-drawer__header-action--c-dropdown--c-button--MarginLeft);
-  }
+  // .pf-c-dropdown + .pf-c-button {
+  //   margin-left: var(--pf-c-notification-drawer__header-action--c-dropdown--c-button--MarginLeft);
+  // }
 }
 
 .pf-c-notification-drawer__body {
