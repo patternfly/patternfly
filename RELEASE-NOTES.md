@@ -4,17 +4,17 @@ section: overview
 releaseNoteTOC: true
 ---
 
-## 2020.10 release notes (2020-08-05)
+## 2020.10 release notes (2020-08-17)
 Packages released:
-- [@patternfly/patternfly@v4.31.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.3)
+- [@patternfly/patternfly@v4.31.6](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.6)
 
 ### Components
 - **Alert group:** Removed misformed metastring ([#3324](https://github.com/patternfly/patternfly/pull/3324))
 - **Description list:**
-  - Changeed component to dl ([#3307](https://github.com/patternfly/patternfly/pull/3307))
-  - Changeed spacer width to 24px column gap ([#3327](https://github.com/patternfly/patternfly/pull/3327))
+  - Changed component to dl ([#3307](https://github.com/patternfly/patternfly/pull/3307))
+  - Changed spacer width to 24px column gap ([#3327](https://github.com/patternfly/patternfly/pull/3327))
 - **Drawer:**
-  - Scoped drawer__body >  page__main ([#3268](https://github.com/patternfly/patternfly/pull/3268))
+  - Scoped `drawer__body > page__main` ([#3268](https://github.com/patternfly/patternfly/pull/3268))
   - Scoped drawer styles to improve behavior of nested drawers ([#3328](https://github.com/patternfly/patternfly/pull/3328))
 - **Form control:** Added warning state, updated docs ([#3290](https://github.com/patternfly/patternfly/pull/3290))
 - **Label:** Added support for overflow truncation ([#3339](https://github.com/patternfly/patternfly/pull/3339))
@@ -22,6 +22,7 @@ Packages released:
   - Fixed notification badge alignment ([#3284](https://github.com/patternfly/patternfly/pull/3284))
   - Reverted enhancements in #3231 ([#3294](https://github.com/patternfly/patternfly/pull/3294))
   - Allowed text to display on top of background ([#3365](https://github.com/patternfly/patternfly/pull/3365))
+  - Removed unread state border ([#3389](https://github.com/patternfly/patternfly/pull/3389))
 - **Notification drawer:**
   - Added notification drawer demo ([#3220](https://github.com/patternfly/patternfly/pull/3220))
   - Wrapped long item descriptions, group titles ([#3289](https://github.com/patternfly/patternfly/pull/3289))

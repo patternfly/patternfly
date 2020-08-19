@@ -64,6 +64,16 @@
   --pf-c-button--m-tertiary--active--after--BorderColor: var(--pf-global--Color--100);
   --pf-c-button--m-tertiary--active--Color: var(--pf-global--Color--100);
 
+  // Warning btn
+  --pf-c-button--m-warning--BackgroundColor: var(--pf-global--warning-color--100);
+  --pf-c-button--m-warning--Color: var(--pf-global--Color--dark-100);
+  --pf-c-button--m-warning--hover--BackgroundColor: var(--pf-global--palette--gold-500);
+  --pf-c-button--m-warning--hover--Color: var(--pf-global--Color--dark-100);
+  --pf-c-button--m-warning--focus--BackgroundColor: var(--pf-global--palette--gold-500);
+  --pf-c-button--m-warning--focus--Color: var(--pf-global--Color--dark-100);
+  --pf-c-button--m-warning--active--BackgroundColor: var(--pf-global--palette--gold-500);
+  --pf-c-button--m-warning--active--Color: var(--pf-global--Color--dark-100);
+
   // Danger btn
   --pf-c-button--m-danger--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-button--m-danger--Color: var(--pf-global--Color--light-100);
@@ -299,6 +309,29 @@
       --pf-c-button--m-danger--BackgroundColor: var(--pf-c-button--m-danger--active--BackgroundColor);
     }
   }
+
+  // Warning buttons
+  &.pf-m-warning {
+    color: var(--pf-c-button--m-warning--Color);
+    background-color: var(--pf-c-button--m-warning--BackgroundColor);
+
+    &:hover {
+      --pf-c-button--m-warning--Color: var(--pf-c-button--m-warning--hover--Color);
+      --pf-c-button--m-warning--BackgroundColor: var(--pf-c-button--m-warning--hover--BackgroundColor);
+    }
+
+    &:focus {
+      --pf-c-button--m-warning--Color: var(--pf-c-button--m-warning--focus--Color);
+      --pf-c-button--m-warning--BackgroundColor: var(--pf-c-button--m-warning--focus--BackgroundColor);
+    }
+
+    &:active,
+    &.pf-m-active {
+      --pf-c-button--m-warning--Color: var(--pf-c-button--m-warning--active--Color);
+      --pf-c-button--m-warning--BackgroundColor: var(--pf-c-button--m-warning--active--BackgroundColor);
+    }
+  }
+
 
   // Link buttons
   &.pf-m-link {

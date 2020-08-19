@@ -8,12 +8,15 @@ beta: true
 import './Skeleton.css'
 
 ## Examples
-```hbs title=Default
+
+### Default
+```hbs
 {{#> skeleton}}
 {{/skeleton}}
 ```
 
-```hbs title=Percentage-width-modifiers
+### Percentage width modifiers
+```hbs
 {{#> skeleton skeleton--modifier="pf-m-width-25"}}
 {{/skeleton}}
 <br/>
@@ -33,7 +36,8 @@ import './Skeleton.css'
 {{/skeleton}}
 ```
 
-```hbs title=Percentage-height-modifiers
+### Percentage height modifiers
+```hbs
 {{#> skeleton skeleton--modifier="pf-m-height-25"}}
 {{/skeleton}}
 {{#> skeleton skeleton--modifier="pf-m-height-33"}}
@@ -48,7 +52,8 @@ import './Skeleton.css'
 {{/skeleton}}
 ```
 
-```hbs title=Text-modifiers
+### Text modifiers
+```hbs
 --pf-global--FontSize--4xl
 {{#> skeleton skeleton--modifier="pf-m-text-4xl"}}
 {{/skeleton}}
@@ -78,7 +83,8 @@ import './Skeleton.css'
 {{/skeleton}}
 ```
 
-```hbs title=Static-height-width-and-shape-modifiers
+### Static height width and shape modifiers
+```hbs
 Small circle
 {{#> skeleton skeleton--modifier="pf-m-circle pf-m-width-sm"}}
 {{/skeleton}}
@@ -116,9 +122,7 @@ Large rectangle
 {{/skeleton}}
 ```
 
-
 ## Documentation
-### Overview
 
 ### Usage
 | Class | Applied to | Outcome |

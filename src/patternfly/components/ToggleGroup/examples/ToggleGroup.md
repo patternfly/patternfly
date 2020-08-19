@@ -8,7 +8,9 @@ beta: true
 import './ToggleGroup.css'
 
 ## Examples
-```hbs title=Default
+
+### Default
+```hbs
 {{#> toggle-group}}
   {{#> toggle-group-item}}
     {{#> toggle-group-button}}
@@ -92,7 +94,8 @@ import './ToggleGroup.css'
 {{/toggle-group}}
 ```
 
-```hbs title=With-icon
+### With icon
+```hbs
 {{#> toggle-group}}
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Copy button"'}}
@@ -176,7 +179,8 @@ import './ToggleGroup.css'
 {{/toggle-group}}
 ```
 
-```hbs title=Icon-and-text
+### Icon-and-text
+```hbs
 {{#> toggle-group}}
   {{#> toggle-group-item}}
     {{#> toggle-group-button}}
@@ -250,7 +254,8 @@ import './ToggleGroup.css'
 {{/toggle-group}}
 ```
 
-```hbs title=Light
+### Light
+```hbs
 {{#> toggle-group}}
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--modifier="pf-m-light"}}
@@ -306,10 +311,7 @@ import './ToggleGroup.css'
 {{/toggle-group}}
 ```
 
-
 ## Documentation
-### Overview
-
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
