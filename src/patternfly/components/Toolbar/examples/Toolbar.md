@@ -151,8 +151,34 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/toolbar}}
 ```
 
-```hbs title=Insets
+### Insets
+```hbs
 {{#> toolbar toolbar--modifier="pf-m-inset-none pf-m-inset-md-on-md pf-m-inset-2xl-on-lg" toolbar--id="toolbar-inset-example"}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-group}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+      {{> divider divider--modifier="pf-m-vertical"}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
+### Page insets
+```hbs
+{{#> toolbar toolbar--modifier="pf-m-page-insets" toolbar--id="toolbar-page-insets-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group}}
