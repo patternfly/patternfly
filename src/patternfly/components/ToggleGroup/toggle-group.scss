@@ -18,9 +18,6 @@
   --pf-c-toggle-group__item--last-child__button--BorderTopRightRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-toggle-group__item--last-child__button--BorderBottomRightRadius: var(--pf-global--BorderRadius--sm);
 
-  // text
-  --pf-c-toggle-group__text--icon--MarginLeft: var(--pf-global--spacer--sm);
-
   // icon
   --pf-c-toggle-group__icon--text--MarginLeft: var(--pf-global--spacer--sm);
 
@@ -86,10 +83,7 @@
   }
 }
 
-.pf-c-toggle-group__icon + .pf-c-toggle-group__text {
-  margin-left: var(--pf-c-toggle-group__icon--text--MarginLeft);
-}
-
+.pf-c-toggle-group__icon + .pf-c-toggle-group__text,
 .pf-c-toggle-group__text + .pf-c-toggle-group__icon {
-  margin-left: var(--pf-c-toggle-group__text--icon--MarginLeft);
+  margin-left: var(--pf-c-toggle-group__icon--text--MarginLeft);
 }
