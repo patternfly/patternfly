@@ -7,7 +7,7 @@ import './Toolbar.css'
 
 ## Demos
 
-### Toolbar-attribute-value-search-filter-desktop
+### Toolbar attribute value search filter desktop
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-search-filter-desktop-example"}}
   {{#> toolbar-content}}
