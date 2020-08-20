@@ -92,21 +92,21 @@
       left: 100%;
     }
 
-    .pf-c-menu__list-item {
-      &:hover,
-      &:focus-within {
-        color: unset;
-        background-color: unset;
-      }
-    }
+    // .pf-c-menu__list-item {
+    //   &:hover,
+    //   &:focus-within {
+    //     color: unset;
+    //     background-color: unset;
+    //   }
+    // }
 
-    .pf-c-menu__item {
-      &:hover,
-      &:focus-within {
-        color: var(--pf-c-menu__list-item--hover--Color);
-        background-color: var(--pf-c-menu__list-item--hover--BackgroundColor);
-      }
-    }
+    // .pf-c-menu__item {
+    //   &:hover,
+    //   &:focus-within {
+    //     color: var(--pf-c-menu__list-item--hover--Color);
+    //     background-color: var(--pf-c-menu__list-item--hover--BackgroundColor);
+    //   }
+    // }
   }
 
   .pf-c-divider {
@@ -149,10 +149,10 @@
     --pf-c-menu__list-item--Color: var(--pf-c-menu__list-item--hover--Color);
     --pf-c-menu__list-item--BackgroundColor: var(--pf-c-menu__list-item--hover--BackgroundColor);
 
-    > .pf-c-menu__sublist > .pf-c-menu__list-item {
-      --pf-c-menu__list-item--Color: unset;
-      --pf-c-menu__list-item--BackgroundColor: none;
-    }
+    // > .pf-c-menu__sublist > .pf-c-menu__list-item {
+    //   --pf-c-menu__list-item--Color: unset;
+    //   --pf-c-menu__list-item--BackgroundColor: none;
+    // }
 
     .pf-c-menu__item-external-icon {
       opacity: 1;
@@ -206,6 +206,13 @@
   display: flex;
   align-items: center;
   width: 100%;
+
+  .pf-c-menu__item-external-icon {
+    margin-left: var(--pf-c-menu__item-external-icon--MarginLeft);
+    font-size: var(--pf-c-menu__item-external-icon--FontSize);
+    color: var(--pf-c-menu__item-external-icon--Color);
+    opacity: 0;
+  }
 }
 
 // Item text
@@ -249,13 +256,6 @@
   margin-left: var(--pf-c-menu__item-select-icon--MarginLeft);
   font-size: var(--pf-c-menu__item-select-icon--FontSize);
   color: var(--pf-c-menu__item-select-icon--Color);
-  opacity: 0;
-}
-
-.pf-c-menu__item-external-icon {
-  margin-left: var(--pf-c-menu__item-external-icon--MarginLeft);
-  font-size: var(--pf-c-menu__item-external-icon--FontSize);
-  color: var(--pf-c-menu__item-external-icon--Color);
   opacity: 0;
 }
 

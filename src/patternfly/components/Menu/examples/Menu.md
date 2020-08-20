@@ -23,7 +23,7 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
-        {{#> menu-item menu-item--type="a"}}
+        {{#> menu-item menu-item--IsLink="true"}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Link
@@ -41,7 +41,7 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item menu-list-item--modifier="pf-m-disabled"}}
-        {{#> menu-item menu-item--type="a" menu-item--modifier='aria-disabled="true" tabindex="-1"'}}
+        {{#> menu-item menu-item--IsLink="true" menu-item--modifier='aria-disabled="true" tabindex="-1"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
             Disabled link
@@ -54,7 +54,7 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### With-icons
+### With icons
 ```hbs
 {{#> menu}}
   {{#> menu-body}}
@@ -100,7 +100,7 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### With-expanded-toggle
+### With expanded toggle
 ```hbs
 {{#> menu}}
   {{#> menu-body}}
@@ -146,7 +146,7 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### With-fly-out
+### With flyout
 ```hbs
 {{#> menu menu--modifier="pf-m-flyout"}}
   {{#> menu-body}}
@@ -170,16 +170,55 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
-        {{#> menu-item}}
+        {{#> menu-item menu-item--attribute='aria-expanded="false"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Add storage
             {{/menu-item-text}}
+            {{> menu-item-toggle-icon}}
           {{/menu-item-main}}
         {{/menu-item}}
+        {{#> menu-sublist menu-sublist--attribute="hidden"}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-text}}
+                  Application grouping
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-text}}
+                  Count
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-text}}
+                  Labels
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-text}}
+                  Annotations
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
+        {{/menu-sublist}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
-        {{#> menu-item}}
+        {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Edit
@@ -243,7 +282,7 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### With-filtering
+### With filtering
 ```hbs
 {{#> menu}}
   {{#> menu-header}}
@@ -284,13 +323,13 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### With-links
+### With links
 ```hbs
 {{#> menu}}
   {{#> menu-body}}
     {{#> menu-list}}
       {{#> menu-list-item}}
-        {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+        {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Link 1
@@ -300,7 +339,7 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
-        {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+        {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Link 2
@@ -310,12 +349,11 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
-        {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+        {{#> menu-item menu-item--IsLink="true"}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Link 3
             {{/menu-item-text}}
-            {{> menu-item-external-icon}}
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
@@ -324,7 +362,7 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### With-separator(s)
+### With separator(s)
 ```hbs
 {{#> menu}}
   {{#> menu-body}}
@@ -362,12 +400,12 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### With-titled-groups
+### With titled groups
 ```hbs
 {{#> menu}}
   {{#> menu-body}}
     {{#> menu-list-item}}
-      {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+      {{#> menu-item menu-item--IsLink="true"}}
         {{#> menu-item-main}}
           {{#> menu-item-text}}
             Link not in group
@@ -382,7 +420,7 @@ import './Menu.css'
       {{/menu-group-title}}
       {{#> menu-list}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+          {{#> menu-item menu-item--IsLink="true"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Link 1
@@ -391,7 +429,7 @@ import './Menu.css'
           {{/menu-item}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+          {{#> menu-item menu-item--IsLink="true"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Link 2
@@ -408,7 +446,7 @@ import './Menu.css'
       {{/menu-group-title}}
       {{#> menu-list}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+          {{#> menu-item menu-item--IsLink="true"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Link 1
@@ -417,7 +455,7 @@ import './Menu.css'
           {{/menu-item}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--type="a" menu-item--attribute='href="#"'}}
+          {{#> menu-item menu-item--IsLink="true"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Link 2
@@ -431,7 +469,7 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### With-description
+### With description
 ```hbs
 {{#> menu}}
   {{#> menu-body}}
@@ -486,7 +524,7 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### With-actions
+### With actions
 ```hbs
 {{#> menu}}
   {{#> menu-body}}
@@ -562,7 +600,7 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### With-favorites
+### With favorites
 ```hbs
 {{#> menu}}
   {{#> menu-body}}
@@ -572,12 +610,11 @@ import './Menu.css'
       {{/menu-group-title}}
       {{#> menu-list}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--type="a"}}
+          {{#> menu-item menu-item--IsLink="true"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Item 1 
               {{/menu-item-text}}
-              {{> menu-item-external-icon}}
             {{/menu-item-main}}
             {{#> menu-item-description}}
               This is a description
@@ -586,7 +623,7 @@ import './Menu.css'
           {{> menu-item-action menu-item-action--IsFavorite="true" menu-item-action--IsFavorited="true"}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--type="a"}}
+          {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Item 3
@@ -605,12 +642,11 @@ import './Menu.css'
       {{/menu-group-title}}
       {{#> menu-list}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--type="a"}}
+          {{#> menu-item menu-item--IsLink="true"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Item 1
               {{/menu-item-text}}
-              {{> menu-item-external-icon}}
             {{/menu-item-main}}
             {{#> menu-item-description}}
               This is a description
@@ -619,7 +655,7 @@ import './Menu.css'
           {{> menu-item-action menu-item-action--IsFavorite="true"}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--type="a"}}
+          {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Item 2
@@ -633,7 +669,7 @@ import './Menu.css'
           {{> menu-item-action menu-item-action--IsFavorite="true"}}
         {{/menu-list-item}}
         {{#> menu-list-item}}
-          {{#> menu-item menu-item--type="a"}}
+          {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
                 Item 3
@@ -649,7 +685,7 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### Option-single-select
+### Option single select
 ```hbs
 {{#> menu}}
   {{#> menu-body}}
@@ -693,7 +729,7 @@ import './Menu.css'
 {{/menu}}
 ```
 
-### Option-multi-select
+### Option multi-select
 ```hbs
 {{#> menu}}
   {{#> menu-body}}
@@ -732,61 +768,6 @@ import './Menu.css'
           {{#> menu-item-description}}
             Description
           {{/menu-item-description}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-    {{/menu-list}}
-  {{/menu-body}}
-{{/menu}}
-```
-
-### Responsive-drill-down
-```hbs
-{{#> menu}}
-  {{#> menu-header}}
-    {{#> menu-item menu-item--type="div"}}
-      {{#> menu-item-main}}
-        {{#> menu-item-action}}
-          {{#> menu-item-action-icon}}
-            <i class="fas fa-fw fa-angle-left"></i>
-          {{/menu-item-action-icon}}
-        {{/menu-item-action}}
-        {{#> menu-item-icon}}
-          <i class="fas fa-fw fa-cog" aria-hidden="true"></i>
-        {{/menu-item-icon}}
-        {{#> menu-item-text}}
-          Edit
-        {{/menu-item-text}}
-      {{/menu-item-main}}
-    {{/menu-item}}
-  {{/menu-header}}
-  {{> divider}}
-  {{#> menu-body}}
-    {{#> menu-list}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Start rollout
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Pause rollouts
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Add storage
-            {{/menu-item-text}}
-          {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
