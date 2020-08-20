@@ -14,9 +14,12 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // Panel
   --pf-c-drawer__panel--FlexBasis: 100%;
   --pf-c-drawer__panel--md--FlexBasis: 50%;
-  --pf-c-drawer__panel--MinWidth: 50%;
+  --pf-c-drawer__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
+  --pf-c-drawer--m-panel-bottom__panel--md--MinHeight: 50%;
   --pf-c-drawer__panel--xl--MinWidth: #{pf-size-prem(450px)};
   --pf-c-drawer__panel--xl--FlexBasis: #{pf-size-prem(450px)};
+  --pf-c-drawer--m-panel-bottom__panel--xl--MinHeight: #{pf-size-prem(300px)};
+  --pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis: #{pf-size-prem(300px)};
   --pf-c-drawer__panel--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-drawer__panel--TransitionDuration: var(--pf-global--TransitionDuration);
@@ -71,6 +74,12 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--xl--FlexBasis);
     --pf-c-drawer__panel--MinWidth: var(--pf-c-drawer__panel--xl--MinWidth);
+
+    &.pf-m-panel-bottom {
+      --pf-c-drawer__panel--MinWidth: auto;
+      --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis);
+      --pf-c-drawer__panel--MinHeight: var(--pf-c-drawer--m-panel-bottom__panel--xl--MinHeight);
+    }
   }
 
   // Actions
@@ -81,22 +90,21 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__panel--BoxShadow: none;
   --pf-c-drawer--m-expanded__panel--BoxShadow: var(--pf-global--BoxShadow--lg-left);
   --pf-c-drawer--m-expanded--m-panel-left__panel--BoxShadow: var(--pf-global--BoxShadow--lg-right);
+  --pf-c-drawer--m-expanded--m-panel-bottom__panel--BoxShadow: var(--pf-global--BoxShadow--lg-top);
 
   // Divider
   --pf-c-drawer__panel--after--Width: var(--pf-global--BorderWidth--sm);
+  --pf-c-drawer--m-panel-bottom__panel--after--Height: var(--pf-global--BorderWidth--sm);
   --pf-c-drawer__panel--after--BackgroundColor: transparent;
   --pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor: var(--pf-global--BorderColor--100);
   --pf-c-drawer--m-inline__panel--PaddingLeft: var(--pf-c-drawer__panel--after--Width);
   --pf-c-drawer--m-panel-left--m-inline__panel--PaddingRight: var(--pf-c-drawer__panel--after--Width);
+  --pf-c-drawer--m-panel-bottom--m-inline__panel--PaddingTop: var(--pf-c-drawer__panel--after--Width);
 
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow-x: hidden;
-
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    min-width: var(--pf-c-drawer__panel--MinWidth);
-  }
 
   &.pf-m-inline,
   &.pf-m-static {
@@ -104,6 +112,39 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       padding-left: var(--pf-c-drawer--m-inline__panel--PaddingLeft);
     }
   }
+
+  &.pf-m-panel-left > .pf-c-drawer__main {
+    > .pf-c-drawer__panel {
+      order: 0;
+      margin-right: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
+      transform: translateX(-100%);
+    }
+
+    > .pf-c-drawer__content {
+      order: 1;
+    }
+  }
+
+  &.pf-m-panel-bottom > .pf-c-drawer__main {
+    flex-direction: column;
+  }
+
+  // Expanded
+  // stylelint-disable selector-max-class
+  &.pf-m-expanded {
+    > .pf-c-drawer__main > .pf-c-drawer__panel {
+      transform: translateX(-100%);
+    }
+
+    &.pf-m-panel-left > .pf-c-drawer__main > .pf-c-drawer__panel {
+      transform: translateX(0);
+    }
+
+    &.pf-m-panel-bottom > .pf-c-drawer__main > .pf-c-drawer__panel {
+      transform: translate(0, -100%);
+    }
+  }
+  // stylelint-enable
 }
 
 // Header area
@@ -230,11 +271,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 }
 
-// Expanded
-.pf-c-drawer.pf-m-expanded > .pf-c-drawer__main > .pf-c-drawer__panel {
-  transform: translateX(-100%);
-}
-
 // Page level drawer
 .pf-c-drawer__body > .pf-c-page__main {
   min-height: 100%;
@@ -244,16 +280,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 @media screen and (min-width: $pf-global--breakpoint--md) {
   // Default
   .pf-c-drawer {
+    min-width: var(--pf-c-drawer__panel--MinWidth);
+
     // stylelint-disable selector-max-class
-    > .pf-c-drawer__main > .pf-c-drawer__content {
-      order: 0;
-    }
-
-    > .pf-c-drawer__main > .pf-c-drawer__panel {
-      order: 1;
-      transform: translateX(0);
-    }
-
     // Expanded
     &.pf-m-expanded > .pf-c-drawer__main {
       > .pf-c-drawer__panel {
@@ -264,15 +293,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   // Panel left
   .pf-c-drawer.pf-m-panel-left {
-    > .pf-c-drawer__main > .pf-c-drawer__content {
-      order: 1;
-    }
-
-    > .pf-c-drawer__main > .pf-c-drawer__panel {
-      order: 0;
-      margin-right: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
-      transform: translateX(-100%);
-    }
+    --pf-c-drawer--m-expanded__panel--BoxShadow: var(--pf-c-drawer--m-expanded--m-panel-left__panel--BoxShadow);
 
     &.pf-m-inline,
     &.pf-m-static {
@@ -282,22 +303,42 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       }
     }
 
-    // Expanded, panel left
     &.pf-m-expanded > .pf-c-drawer__main > .pf-c-drawer__panel {
-      box-shadow: var(--pf-c-drawer--m-expanded--m-panel-left__panel--BoxShadow);
       transform: translateX(0);
+    }
+
+    > .pf-c-drawer__main > .pf-c-drawer__panel::after {
+      right: 0;
+      left: auto;
     }
   }
 
-  .pf-c-drawer.pf-m-panel-left > .pf-c-drawer__main > .pf-c-drawer__panel::after {
-    right: 0;
-    left: auto;
+  .pf-c-drawer.pf-m-panel-bottom {
+    --pf-c-drawer--m-expanded__panel--BoxShadow: var(--pf-c-drawer--m-expanded--m-panel-bottom__panel--BoxShadow);
+
+    min-width: auto;
+    min-height: var(--pf-c-drawer--m-panel-bottom__panel--md--MinHeight);
+
+    &.pf-m-inline,
+    &.pf-m-static {
+      > .pf-c-drawer__main > .pf-c-drawer__panel:not(.pf-m-no-border) {
+        padding-top: var(--pf-c-drawer--m-panel-bottom--m-inline__panel--PaddingTop);
+        padding-left: 0;
+      }
+    }
+
+    > .pf-c-drawer__main > .pf-c-drawer__panel::after {
+      top: 0;
+      left: auto;
+      width: 100%;
+      height: var(--pf-c-drawer--m-panel-bottom__panel--after--Height);
+    }
   }
 
   // Border
   .pf-c-drawer > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-no-border,
   .pf-c-drawer.pf-m-panel-left > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-no-border {
-    box-shadow: none;
+    --pf-c-drawer--m-expanded__panel--BoxShadow: none;
   }
   // stylelint-enable
 }
@@ -313,7 +354,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   @include pf-apply-breakpoint($breakpoint, $pf-c-drawer--breakpoint-map--width) {
     @each $width-value in $pf-c-drawer__panel--list--width {
       .pf-c-drawer__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
-        flex-basis: #{percentage($width-value / 100)};
+        --pf-c-drawer__panel--FlexBasis: #{percentage($width-value / 100)};
       }
     }
   }
@@ -336,14 +377,13 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       }
 
       > .pf-c-drawer__main > .pf-c-drawer__panel {
-        box-shadow: none;
+        --pf-c-drawer--m-expanded__panel--BoxShadow: none;
 
         &:not(.pf-m-no-border)::after {
           background-color: var(--pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor);
         }
       }
     }
-
 
     // Drawer inline
     .pf-c-drawer.pf-m-inline#{$breakpoint-name} {
@@ -367,13 +407,32 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         display: unset;
         visibility: visible;
       }
-      // stylelint-enable
+
+      // Panel left
+      &.pf-m-panel-left {
+        > .pf-c-drawer__main > .pf-c-drawer__panel {
+          margin-right: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
+          margin-left: 0;
+          transform: translateX(-100%);
+        }
+
+        // Inline, expanded, panel left
+        &.pf-m-expanded > .pf-c-drawer__main > .pf-c-drawer__panel {
+          margin-right: 0;
+          transform: translateX(0);
+        }
+
+        > .pf-c-drawer__main > .pf-c-drawer__panel > .pf-c-drawer__body > .pf-c-drawer__head .pf-c-drawer__close {
+          display: unset;
+          visibility: visible;
+        }
+        // stylelint-enable
+      }
     }
 
     // Static
     .pf-c-drawer.pf-m-static#{$breakpoint-name} {
       > .pf-c-drawer__main > .pf-c-drawer__panel {
-        margin-left: 0;
         transform: translateX(0);
       }
 
@@ -381,44 +440,19 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       &.pf-m-panel-left {
         > .pf-c-drawer__main > .pf-c-drawer__panel {
           margin-right: 0;
-          margin-left: 0;
           transform: translateX(0);
+        }
+      }
 
-          &::after {
-            right: 0;
-            left: auto;
-          }
+      &.pf-m-panel-bottom {
+        > .pf-c-drawer__main > .pf-c-drawer__panel {
+          transform: translateX(0);
         }
       }
 
       > .pf-c-drawer__main > .pf-c-drawer__panel > .pf-c-drawer__body > .pf-c-drawer__head .pf-c-drawer__close {
         display: none;
         visibility: hidden;
-      }
-      // stylelint-enable
-    }
-  }
-
-  @include pf-apply-breakpoint($breakpoint, $pf-c-drawer--breakpoint-map) {
-    // Drawer inline - Panel left
-    .pf-c-drawer.pf-m-panel-left.pf-m-inline#{$breakpoint-name} {
-      // stylelint-disable selector-max-class, max-nesting-depth, selector-max-combinators, selector-max-compound-selectors
-      > .pf-c-drawer__main > .pf-c-drawer__panel {
-        margin-right: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
-        margin-left: 0;
-        box-shadow: none;
-        transform: translateX(-100%);
-      }
-
-      // Inline, expanded, panel left
-      &.pf-m-expanded > .pf-c-drawer__main > .pf-c-drawer__panel {
-        margin-right: 0;
-        transform: translateX(0);
-      }
-
-      > .pf-c-drawer__main > .pf-c-drawer__panel > .pf-c-drawer__body > .pf-c-drawer__head .pf-c-drawer__close {
-        display: unset;
-        visibility: visible;
       }
       // stylelint-enable
     }
