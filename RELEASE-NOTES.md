@@ -4,6 +4,40 @@ section: overview
 releaseNoteTOC: true
 ---
 
+## 2020.11 release notes (2020-08-26)
+Packages released:
+- [@patternfly/patternfly@v4.35.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.35.1)
+
+### Components
+- **Button:** Added warning modifier to buttons ([#3349](https://github.com/patternfly/patternfly/pull/3349))
+- **Drawer:**
+  - Added bottom panel variation ([#3408](https://github.com/patternfly/patternfly/pull/3408))
+  - Fixed drawer and notification drawer partial names ([#3370](https://github.com/patternfly/patternfly/pull/3370))
+- **Dropdown:** Added border-radius to primary dropdown toggle ([#3377](https://github.com/patternfly/patternfly/pull/3377))
+- **Form:** Hid negative margin overflow from `__actions` ([#3393](https://github.com/patternfly/patternfly/pull/3393))
+- **Label group:** Added label group component, overflow label ([#3396](https://github.com/patternfly/patternfly/pull/3396))
+- **Menu:** Added menu component ([#3397](https://github.com/patternfly/patternfly/pull/3397))
+- **Notification drawer:** Added close button ([#3387](https://github.com/patternfly/patternfly/pull/3387))
+- **Page:**
+  - Added href to page-header-brand-link in examples ([#3383](https://github.com/patternfly/patternfly/pull/3383))
+  - Added main section element examples ([#3390](https://github.com/patternfly/patternfly/pull/3390))
+- **Skeleton:** Added width var, fixed safari bug w/ transparent ([#3385](https://github.com/patternfly/patternfly/pull/3385))
+- **Splitter:** Added splitter component ([#3407](https://github.com/patternfly/patternfly/pull/3407))
+- **Table:**
+  - Added usage for using anchor to sort column headers ([#3386](https://github.com/patternfly/patternfly/pull/3386))
+  - Updated loading demo text ([#3406](https://github.com/patternfly/patternfly/pull/3406))
+- **Toggle group:** Added support for icon + text ([#3373](https://github.com/patternfly/patternfly/pull/3373))
+- **Toolbar:**
+  - Added insets ([#3403](https://github.com/patternfly/patternfly/pull/3403))
+  - Added overflow menu to toolbar demos ([#3404](https://github.com/patternfly/patternfly/pull/3404))
+
+### Other
+- **Build:**
+  - Added github plugin ([#3359](https://github.com/patternfly/patternfly/pull/3359))
+  - Updated stalebot ignored labels ([#3357](https://github.com/patternfly/patternfly/pull/3357))
+- **Workspace:**
+  - Updated example titles/metadata ([#3363](https://github.com/patternfly/patternfly/pull/3363))
+
 ## 2020.10 release notes (2020-08-17)
 Packages released:
 - [@patternfly/patternfly@v4.31.6](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.6)
