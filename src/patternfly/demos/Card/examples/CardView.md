@@ -1,11 +1,11 @@
 ---
-id: Card view
+id: Card
 section: demos
 wrapperTag: div
 ---
 
 ## Demos
-### Basic
+### Card view
 ```hbs isFullscreen
 {{#> page page--id="card-view"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
