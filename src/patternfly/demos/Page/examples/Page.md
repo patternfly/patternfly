@@ -12,7 +12,7 @@ wrapperTag: div
 
 ### Expandable nav
 ```hbs isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example"}}{{/page-demo-expandable-nav}}
+{{> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example"}}
 ```
 
 ### Horizontal nav

@@ -39,7 +39,7 @@ Toolbar relies on groups (`.pf-c-toolbar__group`) and items (`.pf-c-toolbar__ite
 
 Several components in the following examples do not include functional and/or accessibility specifications (for example `.pf-c-select`, `.pf-c-options-menu`). Rather, `.pf-c-toolbar` focuses on functionality and accessibility specifications that apply to it only.
 
-**Available breakpoints are: `-on-md, -on-lg, -on-xl, -on-2xl`.**
+**Available breakpoints are: `-on-sm, -on-md, -on-lg, -on-xl, -on-2xl`.**
 
 ## Examples
 
@@ -285,7 +285,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
         {{/toolbar-group}}
       {{/toolbar-group}}
     {{/toolbar-content-section}}
-    {{#> toolbar-expandable-content}}{{/toolbar-expandable-content}}
+    {{> toolbar-expandable-content}}
   {{/toolbar-content}}
 {{/toolbar}}
 ```
@@ -370,7 +370,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--control="true"}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content}}
@@ -398,7 +398,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
         {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--control="true"}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
@@ -448,7 +448,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true"}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content="true" toolbar-overflow-menu-example--control="true"}}
     {{/toolbar-content-section}}
   {{/toolbar-content}}
@@ -502,10 +502,10 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true"}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content="true" toolbar-overflow-menu-example--control="true"}}
     {{/toolbar-content-section}}
-    {{#> toolbar-expandable-content}}{{/toolbar-expandable-content}}
+    {{> toolbar-expandable-content}}
   {{/toolbar-content}}
   {{#> divider}}{{/divider}}
   {{#> toolbar-content}}
@@ -525,7 +525,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
         {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--control="true"}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
@@ -600,10 +600,10 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true"}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content="true" toolbar-overflow-menu-example--control="true" toolbar-overflow-menu-example--IsExpanded="true"}}
     {{/toolbar-content-section}}
-    {{#> toolbar-expandable-content}}{{/toolbar-expandable-content}}
+    {{> toolbar-expandable-content}}
   {{/toolbar-content}}
 {{/toolbar}}
 ```
@@ -640,6 +640,8 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-label` | `.pf-c-toolbar__item` | Modifies toolbar item to label. |
 | `.pf-m-chip-container` | `.pf-c-toolbar__content`, `.pf-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
 | `.pf-m-expanded` | `.pf-c-toolbar__expandable-content`, `.pf-c-toolbar__toggle` | Modifies the component for the expanded state. |
+| `.pf-m-wrap` | `.pf-c-toolbar`, `.pf-c-toolbar__content-section`, `.pf-c-toolbar__group` | Modifies the toolbar element to wrap. |
+| `.pf-m-nowrap` | `.pf-c-toolbar`, `.pf-c-toolbar__group` | Modifies the toolbar element to nowrap. |
 
 ### Accessibility
 
