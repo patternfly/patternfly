@@ -96,7 +96,6 @@
   --pf-c-notification-drawer__group-toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-notification-drawer__group-toggle-icon--Transition: .2s ease-in 0s;
   --pf-c-notification-drawer__group--m-expanded__group-toggle-icon--Rotate: 90deg;
-  --pf-c-notification-drawer__header-action--c-dropdown--c-button--MarginLeft: calc(-1 * var(--pf-global--spacer--sm));
 
   display: flex;
   flex-direction: column;
@@ -127,10 +126,6 @@
   display: flex;
   align-items: center;
   margin-left: auto;
-
-  // .pf-c-dropdown + .pf-c-button {
-  //   margin-left: var(--pf-c-notification-drawer__header-action--c-dropdown--c-button--MarginLeft);
-  // }
 }
 
 .pf-c-notification-drawer__body {
