@@ -178,44 +178,48 @@ import './Menu.css'
             {{> menu-item-toggle-icon}}
           {{/menu-item-main}}
         {{/menu-item}}
-        {{#> menu-sublist menu-sublist--attribute="hidden"}}
-          {{#> menu-list-item}}
-            {{#> menu-item}}
-              {{#> menu-item-main}}
-                {{#> menu-item-text}}
-                  Application grouping
-                {{/menu-item-text}}
-              {{/menu-item-main}}
-            {{/menu-item}}
-          {{/menu-list-item}}
-          {{#> menu-list-item}}
-            {{#> menu-item}}
-              {{#> menu-item-main}}
-                {{#> menu-item-text}}
-                  Count
-                {{/menu-item-text}}
-              {{/menu-item-main}}
-            {{/menu-item}}
-          {{/menu-list-item}}
-          {{#> menu-list-item}}
-            {{#> menu-item}}
-              {{#> menu-item-main}}
-                {{#> menu-item-text}}
-                  Labels
-                {{/menu-item-text}}
-              {{/menu-item-main}}
-            {{/menu-item}}
-          {{/menu-list-item}}
-          {{#> menu-list-item}}
-            {{#> menu-item}}
-              {{#> menu-item-main}}
-                {{#> menu-item-text}}
-                  Annotations
-                {{/menu-item-text}}
-              {{/menu-item-main}}
-            {{/menu-item}}
-          {{/menu-list-item}}
-        {{/menu-sublist}}
+        {{#> menu newcontext menu--attribute="hidden"}}
+          {{#> menu-body}}
+            {{#> menu-list}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Application grouping
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Count
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Labels
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Annotations
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+            {{/menu-list}}
+          {{/menu-body}}
+        {{/menu}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
         {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
@@ -229,44 +233,48 @@ import './Menu.css'
             Description
           {{/menu-item-description}}
         {{/menu-item}}
-        {{#> menu-sublist}}
-          {{#> menu-list-item}}
-            {{#> menu-item}}
-              {{#> menu-item-main}}
-                {{#> menu-item-text}}
-                  Application grouping
-                {{/menu-item-text}}
-              {{/menu-item-main}}
-            {{/menu-item}}
-          {{/menu-list-item}}
-          {{#> menu-list-item}}
-            {{#> menu-item}}
-              {{#> menu-item-main}}
-                {{#> menu-item-text}}
-                  Count
-                {{/menu-item-text}}
-              {{/menu-item-main}}
-            {{/menu-item}}
-          {{/menu-list-item}}
-          {{#> menu-list-item}}
-            {{#> menu-item}}
-              {{#> menu-item-main}}
-                {{#> menu-item-text}}
-                  Labels
-                {{/menu-item-text}}
-              {{/menu-item-main}}
-            {{/menu-item}}
-          {{/menu-list-item}}
-          {{#> menu-list-item}}
-            {{#> menu-item}}
-              {{#> menu-item-main}}
-                {{#> menu-item-text}}
-                  Annotations
-                {{/menu-item-text}}
-              {{/menu-item-main}}
-            {{/menu-item}}
-          {{/menu-list-item}}
-        {{/menu-sublist}}
+        {{#> menu newcontext}}
+          {{#> menu-body}}
+            {{#> menu-list}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Application grouping
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Count
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Labels
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Annotations
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+            {{/menu-list}}
+          {{/menu-body}}
+        {{/menu}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
         {{#> menu-item}}
@@ -797,7 +805,6 @@ import './Menu.css'
 | `.pf-c-menu__header` | `<div>` | Initiates the menu header. Use for filtering and navigation. |
 | `.pf-c-menu__body` | `<div>` | Initiates the menu body. Use for lists. **Required** |
 | `.pf-c-menu__list` | `<ul>` | Initiates the menu list. **Required** |
-| `.pf-c-menu__sublist` | `<ul>` | Initiates the menu sublist. |
 | `.pf-c-menu__list-item` | `<li>` | Initiates the menu list item. **Required** |
 | `.pf-c-menu__item` | `<button>`, `<a>`, `<div>` | Initiates the menu item. **Required** |
 | `.pf-c-menu__item-main` | `<div>` | Initiates the menu item main container. **Required** |
@@ -815,4 +822,4 @@ import './Menu.css'
 | `.pf-m-favorite` | `.pf-c-menu__item-action` | Modifies the menu item action to handle the favorite icon. |
 | `.pf-m-favorited` | `.pf-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |
 | `.pf-m-selected` | `.pf-c-menu__item` | Modifies the menu item to be selected. |
-| `.pf-m-flyout` | `.pf-c-menu` | Modifies the menu so that all instances of `.pf-c-menu__sublist` "flyout" |
+| `.pf-m-flyout` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "flyout" |
