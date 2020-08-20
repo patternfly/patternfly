@@ -130,8 +130,9 @@
 // Item
 .pf-c-menu__item {
   display: flex;
+  flex-basis: 100%;
   flex-direction: column;
-  width: 100%;
+  min-width: 0;
   padding-top: var(--pf-c-menu__item--PaddingTop);
   padding-right: var(--pf-c-menu__item--PaddingRight);
   padding-bottom: var(--pf-c-menu__item--PaddingBottom);
