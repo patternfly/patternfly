@@ -697,7 +697,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-draggable pf-m-dragged" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-draggable pf-m-dragging" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-item-draggable-icon}}
@@ -709,14 +709,14 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> chip chip--type="div" chip--modifier="pf-m-draggable"}}
+    <!-- {{#> chip chip--type="div" chip--modifier="pf-m-draggable"}}
       {{#> chip-icon}}
         <i class="fas fa-grip-vertical" aria-label="Drag"></i>
       {{/chip-icon}}
       {{#> chip-text}}
         Draggable chip
       {{/chip-text}}
-    {{/chip}}
+    {{/chip}} -->
   {{/data-list-item}}
 
 {{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4" tabindex="0"')}}
@@ -744,7 +744,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-draggable` | `.pf-c-data-list__item` | Modifies a data list item so that it is draggable. |
-| `.pf-m-dragged` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the dragged state. |
+| `.pf-m-dragging` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the dragged state. |
 | `.pf-m-disabled` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the disabled state. |
 
 ## Documentation

@@ -82,9 +82,10 @@
   --pf-c-data-list__item--m-expanded__toggle-icon--Rotate: 90deg;
 
   // Draggable icon
-  --pf-c-data-list__item--m-draggable-draggable-icon--Color: var(--pf-global--icon--Color--light);
-  --pf-c-data-list__item--m-draggable--m-disabled-draggable-icon--Color: var(--pf-global--disabled-color--200);
-  --pf-c-data-list__item--m-draggable--hover-draggable-icon--Color: var(--pf-global--icon--Color--dark);
+  --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-global--icon--Color--light);
+  --pf-c-data-list__item--m-draggable--m-disabled__draggable-icon--Color: var(--pf-global--disabled-color--200);
+  --pf-c-data-list__item--m-draggable--hover__draggable-icon--Color: var(--pf-global--icon--Color--dark);
+  --pf-c-data-list__item--m-draggable--m-dragging__item-row--after--BackgroundColor: var(--pf-global--disabled-color--200);
 
   // Controls
   --pf-c-data-list__item-control--PaddingTop: var(--pf-global--spacer--lg);
@@ -248,13 +249,13 @@
   // stylelint-disable
   &.pf-m-draggable {
     position: relative;
-    cursor: pointer;
+    cursor: grab;
 
     .pf-c-data-list__item-draggable-icon {
-      color: var(--pf-c-data-list__item--m-draggable-draggable-icon--Color);
+      color: var(--pf-c-data-list__item--m-draggable__draggable-icon--Color);
     }
 
-    &:hover:not(.pf-m-dragged) {
+    &:hover:not(.pf-m-dragging) {
       z-index: var(--pf-c-data-list__item--m-draggable--hover--ZIndex);
       box-shadow: var(--pf-c-data-list__item--m-draggable--hover--BoxShadow);
 
@@ -267,7 +268,7 @@
       }
 
       .pf-c-data-list__item-draggable-icon {
-        --pf-c-data-list__item--m-draggable-draggable-icon--Color: var(--pf-c-data-list__item--m-draggable--hover-draggable-icon--Color);
+        --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-c-data-list__item--m-draggable--hover__draggable-icon--Color);
       }
     }
 
@@ -275,11 +276,11 @@
       pointer-events: none;
 
       .pf-c-data-list__item-draggable-icon {
-        --pf-c-data-list__item--m-draggable-draggable-icon--Color: var(--pf-c-data-list__item--m-draggable--m-disabled-draggable-icon--Color);
+        --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-c-data-list__item--m-draggable--m-disabled__draggable-icon--Color);
       }
     }
 
-    &.pf-m-dragged {
+    &.pf-m-dragging {
       .pf-c-data-list__item-row {
         &::after {
           position: absolute;
@@ -288,18 +289,18 @@
           bottom: 0;
           left: 0;
           content: "";
-          background-color: var(--pf-global--disabled-color--200);
+          background-color: var(--pf-c-data-list__item--m-draggable--m-dragging__item-row--after--BackgroundColor);
           mix-blend-mode: screen;
           opacity: .8;
         }
       }
 
-      .pf-c-chip.pf-m-draggable {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-      }
+      // .pf-c-chip.pf-m-draggable {
+      //   position: absolute;
+      //   top: 0;
+      //   bottom: 0;
+      //   left: 50%;
+      // }
     }
   }
   // stylelint-enable

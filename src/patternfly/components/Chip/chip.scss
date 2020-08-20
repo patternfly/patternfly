@@ -15,7 +15,7 @@
   // draggable chip
   --pf-c-chip--m-draggable--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-chip--m-draggable--BoxShadow: var(--pf-global--BoxShadow--sm);
-  --pf-c-chip__m-draggable--icon--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-chip--m-draggable--icon--FontSize: var(--pf-global--icon--FontSize--sm);
 
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
@@ -36,7 +36,7 @@
   --pf-c-chip__c-badge--MarginLeft: var(--pf-global--spacer--xs);
 
   // icon
-  --pf-c-chip__icon--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-chip__icon--MarginLefts: var(--pf-global--spacer--xs);
 
   @include pf-t-light;  // This component always needs to be light
 
@@ -74,7 +74,7 @@
     box-shadow: var(--pf-c-chip--m-draggable--BoxShadow);
 
     .pf-c-chip__icon {
-      font-size: var(--pf-c-chip__m-draggable--icon--FontSize);
+      font-size: var(--pf-c-chip--m-draggable--icon--FontSize);
     }
   }
 
@@ -107,6 +107,7 @@
   color: var(--pf-c-chip__text--Color);
 }
 
-.pf-c-chip__icon {
-  margin-right: var(--pf-c-chip__icon--MarginRight);
+.pf-c-chip__icon + .pf-c-chip__text,
+.pf-c-chip__text + .pf-c-chip__icon {
+  margin-left: var(--pf-c-chip__icon--MarginLeft);
 }
