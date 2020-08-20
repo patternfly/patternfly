@@ -19,7 +19,7 @@ cssPrefix: pf-c-notification-drawer
     {{#> notification-drawer-header-action}}
       {{#> dropdown id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
       {{/dropdown}}
-      {{> notification-drawer-header-action-button}}
+      {{> notification-drawer-header-action-close}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}
   {{#> notification-drawer-body}}
@@ -40,9 +40,7 @@ cssPrefix: pf-c-notification-drawer
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
       {{#> dropdown id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
+      {{> notification-drawer-header-action-close}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}
   {{#> notification-drawer-body}}
@@ -125,7 +123,7 @@ cssPrefix: pf-c-notification-drawer
 | `.pf-c-notification-drawer__header-title` | `<h1>` | Initiates the notification drawer header title. **Required** |
 | `.pf-c-notification-drawer__header-status` | `<span>` | Initiates the notification drawer header status. |
 | `.pf-c-notification-drawer__header-action` | `<div>` | Initiates the notification drawer header action. |
-| `.pf-c-notification-drawer__header-action-button` | `<div>` | Initiates the notification drawer header action button. |
+| `.pf-c-notification-drawer__header-action-close` | `<div>` | Initiates the notification drawer header action button. |
 | `.pf-c-notification-drawer__body` | `<div>` | Initiates the notification drawer body. **Required** |
 | `.pf-c-notification-drawer__list` | `<ul>` | Initiates a notification list. **Required** |
 | `.pf-c-notification-drawer__list-item` | `<li>` | Initiates a notification list item. **Always use with a state modifier - one of `.pf-m-info`, `.pf-m-warning`, `.pf-m-danger`, `.pf-m-success`.** **Required** |
