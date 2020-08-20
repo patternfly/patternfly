@@ -8,6 +8,7 @@ beta: true
 import './Splitter.css'
 
 ## Examples
+### Default
 ```hbs title=Default
 {{#> splitter}}
   {{#> splitter-handle}}
@@ -15,13 +16,13 @@ import './Splitter.css'
 {{/splitter}}
 ```
 
+### Vertical
 ```hbs title=Vertical
 {{#> splitter splitter--IsVertical="true"}}
   {{#> splitter-handle}}
   {{/splitter-handle}}
 {{/splitter}}
 ```
-
 
 ## Documentation
 ### Overview
@@ -38,5 +39,5 @@ import './Splitter.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-splitter` | `<div>` | Initiates the splitter component. **Required** |
-| `.pf-c-splitter__handle` | `<div>` | Initiates the splitter handle element. |
+| `.pf-c-splitter__handle` | `<div>` | Initiates the splitter handle element. **Required** |
 | `.pf-m-vertical` |  `.pf-c-splitter` | Modifies the splitter component to be vertical. |
