@@ -260,7 +260,7 @@ cssPrefix: pf-c-label-group
       {{/label}}
     {{/label-group-list-item}}
     {{#> label-group-list-item}}
-      {{#> label label--modifier="pf-m-overflow"}}
+      {{#> label label--IsOverflow="true"}}
         3 more
       {{/label}}
     {{/label-group-list-item}}
@@ -313,7 +313,7 @@ cssPrefix: pf-c-label-group
       {{/label}}
     {{/label-group-list-item}}
     {{#> label-group-list-item}}
-      {{#> label label--modifier="pf-m-overflow"}}
+      {{#> label label--IsOverflow="true"}}
         3 less
       {{/label}}
     {{/label-group-list-item}}

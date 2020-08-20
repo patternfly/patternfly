@@ -43,6 +43,9 @@
   }
 
   &.pf-m-vertical {
+    --pf-c-label-group__list--MarginRight: 0;
+    --pf-c-label-group__list--MarginBottom: 0;
+    --pf-c-label-group__list-item--MarginRight: 0;
     --pf-c-label-group__label--MarginRight: 0;
     --pf-c-label-group__label--MarginBottom: var(--pf-c-label-group--m-vertical__label--MarginBottom);
     --pf-c-label-group__close--MarginTop: 0;
@@ -54,6 +57,10 @@
     .pf-c-label-group__list {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    .pf-c-label-group__list-item:last-child {
+      --pf-c-label-group__list-item--MarginBottom: 0;
     }
 
     .pf-c-label-group__close .pf-c-button {
