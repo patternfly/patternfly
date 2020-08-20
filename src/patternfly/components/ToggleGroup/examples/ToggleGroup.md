@@ -1,5 +1,5 @@
 ---
-title: Toggle group
+id: Toggle group
 section: components
 cssPrefix: pf-c-toggle-group
 beta: true
