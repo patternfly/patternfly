@@ -709,14 +709,6 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    <!-- {{#> chip chip--type="div" chip--modifier="pf-m-draggable"}}
-      {{#> chip-icon}}
-        <i class="fas fa-grip-vertical" aria-label="Drag"></i>
-      {{/chip-icon}}
-      {{#> chip-text}}
-        Draggable chip
-      {{/chip-text}}
-    {{/chip}} -->
   {{/data-list-item}}
 
 {{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4" tabindex="0"')}}
