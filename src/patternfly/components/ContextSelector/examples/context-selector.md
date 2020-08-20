@@ -3,7 +3,7 @@ id: Context selector
 section: components
 cssPrefix: pf-c-context-selector
 ---
-import './ContextSelector.css'
+import './context-selector.css'
 
 ## Examples
 ### Basic

@@ -5,7 +5,7 @@ cssPrefix: pf-c-toggle-group
 beta: true
 ---
 
-import './ToggleGroup.css'
+import './toggle-group.css'
 
 ## Examples
 

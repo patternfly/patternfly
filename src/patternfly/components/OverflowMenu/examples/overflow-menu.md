@@ -4,7 +4,7 @@ section: components
 cssPrefix: pf-c-overflow-menu
 ---
 
-import './OverflowMenu.css'
+import './overflow-menu.css'
 
 ## Introduction
 The overflow menu component condenses actions inside `.pf-c-overflow-menu__content` container into a single dropdown button wrapped in `.pf-c-overflow-menu__control`.
