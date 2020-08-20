@@ -11,7 +11,7 @@ import './Menu.css'
 ### Basic
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
         {{#> menu-item}}
@@ -50,14 +50,14 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### With icons
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
         {{#> menu-item}}
@@ -96,14 +96,14 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### With expanded toggle
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
         {{#> menu-item}}
@@ -142,14 +142,14 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### With flyout
 ```hbs
 {{#> menu menu--modifier="pf-m-flyout"}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
         {{#> menu-item}}
@@ -179,7 +179,7 @@ import './Menu.css'
           {{/menu-item-main}}
         {{/menu-item}}
         {{#> menu newcontext menu--attribute="hidden"}}
-          {{#> menu-body}}
+          {{#> menu-content}}
             {{#> menu-list}}
               {{#> menu-list-item}}
                 {{#> menu-item}}
@@ -218,7 +218,7 @@ import './Menu.css'
                 {{/menu-item}}
               {{/menu-list-item}}
             {{/menu-list}}
-          {{/menu-body}}
+          {{/menu-content}}
         {{/menu}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
@@ -234,7 +234,7 @@ import './Menu.css'
           {{/menu-item-description}}
         {{/menu-item}}
         {{#> menu newcontext}}
-          {{#> menu-body}}
+          {{#> menu-content}}
             {{#> menu-list}}
               {{#> menu-list-item}}
                 {{#> menu-item}}
@@ -273,7 +273,7 @@ import './Menu.css'
                 {{/menu-item}}
               {{/menu-list-item}}
             {{/menu-list}}
-          {{/menu-body}}
+          {{/menu-content}}
         {{/menu}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
@@ -286,18 +286,20 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### With filtering
 ```hbs
 {{#> menu}}
-  {{#> menu-header}}
-    {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
-  {{/menu-header}}
+  {{#> menu-search}}
+    {{#> menu-search-input}}
+      {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
+    {{/menu-search-input}}
+  {{/menu-search}}
   {{> divider}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
         {{#> menu-item}}
@@ -327,14 +329,14 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### With links
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
         {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
@@ -366,14 +368,14 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### With separator(s)
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
         {{#> menu-item}}
@@ -404,14 +406,14 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### With titled groups
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list-item}}
       {{#> menu-item menu-item--IsLink="true"}}
         {{#> menu-item-main}}
@@ -473,14 +475,14 @@ import './Menu.css'
         {{/menu-list-item}}
       {{/menu-list}}
     {{/menu-group}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### With description
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
         {{#> menu-item}}
@@ -528,14 +530,14 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### With actions
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-group}}
       {{#> menu-group-title}}
         Actions
@@ -604,14 +606,14 @@ import './Menu.css'
         {{/menu-list-item}}
       {{/menu-list}}
     {{/menu-group}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### With favorites
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-group}}
       {{#> menu-group-title}}
         Favorites
@@ -689,14 +691,14 @@ import './Menu.css'
         {{/menu-list-item}}
       {{/menu-list}}
     {{/menu-group}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### Option single select
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
         {{#> menu-item}}
@@ -733,14 +735,14 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
 ### Option multi-select
 ```hbs
 {{#> menu}}
-  {{#> menu-body}}
+  {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
         {{#> menu-item menu-item--modifier="pf-m-selected"}}
@@ -779,7 +781,7 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
-  {{/menu-body}}
+  {{/menu-content}}
 {{/menu}}
 ```
 
@@ -802,8 +804,9 @@ import './Menu.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-menu` | `<div>` | Initiates the menu. **Required** |
-| `.pf-c-menu__header` | `<div>` | Initiates the menu header. Use for filtering and navigation. |
-| `.pf-c-menu__body` | `<div>` | Initiates the menu body. Use for lists. **Required** |
+| `.pf-c-menu__search` | `<div>` | Initiates the menu search container. Use for filtering. |
+| `.pf-c-menu__search-input` | `<div>` | Initiates the menu search input container. |
+| `.pf-c-menu__content` | `<div>` | Initiates the menu content. Use for lists. **Required** |
 | `.pf-c-menu__list` | `<ul>` | Initiates the menu list. **Required** |
 | `.pf-c-menu__list-item` | `<li>` | Initiates the menu list item. **Required** |
 | `.pf-c-menu__item` | `<button>`, `<a>`, `<div>` | Initiates the menu item. **Required** |
