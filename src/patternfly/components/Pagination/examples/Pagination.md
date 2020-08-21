@@ -26,7 +26,7 @@ cssPrefix: pf-c-pagination
 ### Bottom
 ```hbs isFullscreen
 {{#> pagination pagination--modifier="pf-m-bottom"}}
-  {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true"}}
+  {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true" pagination-options-menu-toggle--modifier="pf-m-top"}}
   {{> pagination-nav-content}}
 {{/pagination}}
 ```
@@ -44,7 +44,7 @@ cssPrefix: pf-c-pagination
 ```hbs isFullscreen
 {{#> pagination pagination--IsCompact="true"}}
   {{> pagination-total-items-content}}
-  {{> pagination-options-menu options-menu id="pagination-options-menu-compact-example" options-menu--IsText="true"}}
+  {{> pagination-options-menu options-menu id="pagination-options-menu-compact-example" options-menu--IsText="true" pagination-options-menu-toggle--modifier="pf-m-top"}}
   {{> pagination-nav-content}}
 {{/pagination}}
 ```
