@@ -1,5 +1,5 @@
 ---
-title: Splitter
+id: Splitter
 section: components
 cssPrefix: pf-c-splitter
 beta: true
@@ -9,7 +9,7 @@ import './Splitter.css'
 
 ## Examples
 ### Default
-```hbs title=Default
+```hbs
 {{#> splitter}}
   {{#> splitter-handle}}
   {{/splitter-handle}}
@@ -17,7 +17,7 @@ import './Splitter.css'
 ```
 
 ### Vertical
-```hbs title=Vertical
+```hbs
 {{#> splitter splitter--IsVertical="true"}}
   {{#> splitter-handle}}
   {{/splitter-handle}}
