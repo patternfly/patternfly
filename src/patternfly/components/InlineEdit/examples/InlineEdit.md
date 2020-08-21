@@ -5,8 +5,6 @@ beta: true
 cssPrefix: pf-c-inline-edit
 ---
 
-import './InlineEdit.css'
-
 ## Introduction
 
 **Inline edit** is a utilitarian component that has two core elements, `.pf-c-inline-edit__value` and `.pf-c-inline-edit__input` and is based on a simple concept. When **value** is visible, **input** is hidden, and vice versa.

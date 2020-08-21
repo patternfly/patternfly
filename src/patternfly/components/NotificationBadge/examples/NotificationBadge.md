@@ -4,8 +4,6 @@ section: components
 cssPrefix: pf-c-notification-badge
 ---
 
-import './NotificationBadge.css'
-
 ## Examples
 
 ### Basic

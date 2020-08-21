@@ -3,7 +3,7 @@ id: Box shadow
 section: utilities
 ---
 
-import './BoxShadow.css'
+import './box-shadow.css'
 
 ## Examples
 ### Small

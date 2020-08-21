@@ -1,5 +1,5 @@
 ---
-title: Skeleton
+id: Skeleton
 section: demos
 ---
 

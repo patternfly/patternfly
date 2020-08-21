@@ -4,7 +4,7 @@ section: components
 cssPrefix: pf-c-options-menu
 ---
 
-import './OptionsMenu.css'
+import './options-menu.css'
 
 ## Examples
 ### Single option

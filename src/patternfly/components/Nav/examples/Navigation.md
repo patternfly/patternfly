@@ -4,7 +4,7 @@ section: components
 cssPrefix: pf-c-nav
 ---
 
-import './Nav.css'
+import './Navigation.css'
 
 ## Examples
 
