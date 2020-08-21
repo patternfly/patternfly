@@ -207,10 +207,10 @@ import './application-launcher.css'
 
 ### Favorites
 ```hbs
-{{#> app-launcher app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
+{{#> app-launcher app-launcher--id="app-launcher-favorites" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-menu-search}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" aria-label="Type to filter" placeholder="Filter by name..." id="' id '-text-input" name="textInput1"')}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" aria-label="Type to filter" placeholder="Filter by name..." id="' app-launcher--id '-text-input" name="textInput1"')}}
         {{/form-control}}
     {{/app-launcher-menu-search}}
     {{#> app-launcher-group}}
