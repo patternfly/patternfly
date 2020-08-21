@@ -6,13 +6,13 @@ releaseNoteTOC: true
 
 ## 2020.11 release notes (2020-08-26)
 Packages released:
-- [@patternfly/patternfly@v4.35.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.35.1)
+- [@patternfly/patternfly@v4.35.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.35.2)
 
 ### Components
 - **Button:** Added warning modifier to buttons ([#3349](https://github.com/patternfly/patternfly/pull/3349))
 - **Drawer:**
-  - Added bottom panel variation ([#3408](https://github.com/patternfly/patternfly/pull/3408))
   - Fixed drawer and notification drawer partial names ([#3370](https://github.com/patternfly/patternfly/pull/3370))
+  - Added bottom panel variation ([#3408](https://github.com/patternfly/patternfly/pull/3408))
 - **Dropdown:** Added border-radius to primary dropdown toggle ([#3377](https://github.com/patternfly/patternfly/pull/3377))
 - **Form:** Hid negative margin overflow from `__actions` ([#3393](https://github.com/patternfly/patternfly/pull/3393))
 - **Label group:** Added label group component, overflow label ([#3396](https://github.com/patternfly/patternfly/pull/3396))
@@ -33,10 +33,11 @@ Packages released:
 
 ### Other
 - **Build:**
-  - Added github plugin ([#3359](https://github.com/patternfly/patternfly/pull/3359))
   - Updated stalebot ignored labels ([#3357](https://github.com/patternfly/patternfly/pull/3357))
+  - Added github plugin ([#3359](https://github.com/patternfly/patternfly/pull/3359))
 - **Workspace:**
   - Updated example titles/metadata ([#3363](https://github.com/patternfly/patternfly/pull/3363))
+  - Updated examples for compatibility with new docs ([#3414](https://github.com/patternfly/patternfly/pull/3414))
 
 ## 2020.10 release notes (2020-08-17)
 Packages released:
