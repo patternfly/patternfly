@@ -1,5 +1,5 @@
 ---
-id: Primary detail
+id: Primary-detail
 section: demos
 wrapperTag: div
 ---
