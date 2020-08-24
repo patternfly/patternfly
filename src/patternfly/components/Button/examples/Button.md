@@ -202,6 +202,10 @@ import './Button.css'
 {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" aria-disabled="true" tabindex="-1"' button-link--modifier="pf-m-tertiary pf-m-disabled"}}
   Tertiary link to W3.org
 {{/button-link}}
+
+{{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-link"}}
+  Link to W3.org
+{{/button-link}}
 ```
 
 ### Block level
