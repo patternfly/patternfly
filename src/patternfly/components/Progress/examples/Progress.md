@@ -7,9 +7,9 @@ cssPrefix: pf-c-progress
 ## Examples
 ### Simple
 ```hbs
-{{#> progress 
-  progress__value="33" 
-  progress__description="Title" 
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
   progress__id="progress-simple-example"
 }}
 {{/progress}}
@@ -17,9 +17,9 @@ cssPrefix: pf-c-progress
 
 ### Small
 ```hbs
-{{#> progress 
-  progress__value="33" 
-  progress__description="Title" 
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
   progress--modifier="pf-m-sm"
   progress__id="progress-sm-example"
 }}
@@ -28,9 +28,9 @@ cssPrefix: pf-c-progress
 
 ### Large
 ```hbs
-{{#> progress 
-  progress__value="33" 
-  progress__description="Title" 
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
   progress--modifier="pf-m-lg"
   progress__id="progress-lg-example"
 }}
@@ -39,9 +39,9 @@ cssPrefix: pf-c-progress
 
 ### Outside
 ```hbs
-{{#> progress 
-  progress__value="33" 
-  progress__description="Title" 
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
   progress--modifier="pf-m-outside pf-m-lg"
   progress__id="progress-outside-example"
 }}
@@ -50,9 +50,9 @@ cssPrefix: pf-c-progress
 
 ### Inside
 ```hbs
-{{#> progress 
-  progress__value="33" 
-  progress__description="Title" 
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
   progress--modifier="pf-m-lg"
   progress--inside="inside"
   progress__id="progress-inside-example"
@@ -62,20 +62,31 @@ cssPrefix: pf-c-progress
 
 ### Success
 ```hbs
-{{#> progress 
-  progress__value="100" 
-  progress__description="Title" 
-  progress--success="success"
+{{#> progress
+  progress__value="100"
+  progress__description="Title"
+  progress--success="true"
   progress__id="progress-success-example"
+}}
+{{/progress}}
+```
+
+### Warning
+```hbs
+{{#> progress
+  progress__value="100"
+  progress__description="Title"
+  progress--warning="true"
+  progress__id="progress-warning-example"
 }}
 {{/progress}}
 ```
 
 ### Failure
 ```hbs
-{{#> progress 
-  progress__value="33" 
-  progress__description="Title" 
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
   progress--danger="true"
   progress__id="progress-failure-example"
 }}
@@ -84,9 +95,9 @@ cssPrefix: pf-c-progress
 
 ### Inside success
 ```hbs
-{{#> progress 
-  progress__value="100" 
-  progress__description="Title" 
+{{#> progress
+  progress__value="100"
+  progress__description="Title"
   progress--modifier="pf-m-lg"
   progress--inside="inside"
   progress--success="success"
@@ -95,11 +106,24 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
+### Inside warning
+```hbs
+{{#> progress
+  progress__value="100"
+  progress__description="Title"
+  progress--modifier="pf-m-lg"
+  progress--inside="inside"
+  progress--warning="warning"
+  progress__id="progress-inside-warning-example"
+}}
+{{/progress}}
+```
+
 ### Outside failure
 ```hbs
-{{#> progress 
-  progress__value="33" 
-  progress__description="Title" 
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
   progress--modifier="pf-m-outside pf-m-lg"
   progress--danger="danger"
   progress__id="progress-outside-failure-example"
@@ -109,7 +133,7 @@ cssPrefix: pf-c-progress
 
 ### On single line
 ```hbs
-{{#> progress 
+{{#> progress
   progress__value="33"
   progress--modifier="pf-m-singleline"
   progress__id="progress-singleline-example"
@@ -119,9 +143,9 @@ cssPrefix: pf-c-progress
 
 ### Without measure
 ```hbs
-{{#> progress 
-  progress__value="33" 
-  progress__description="Title" 
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
   progress--no-measure="true"
   progress__id="progress-no-measure-example"
 }}
@@ -130,10 +154,10 @@ cssPrefix: pf-c-progress
 
 ### Failure without measure
 ```hbs
-{{#> progress 
-  progress__value="33" 
+{{#> progress
+  progress__value="33"
   progress--no-measure="true"
-  progress__description="Title" 
+  progress__description="Title"
   progress--danger="true"
   progress__id="progress-no-measure-failure-example"
 }}
@@ -142,9 +166,9 @@ cssPrefix: pf-c-progress
 
 ### Finite step
 ```hbs
-{{#> progress 
+{{#> progress
   progress__value="2"
-  progress__valuemax="5" 
+  progress__valuemax="5"
   progress__width="40"
   progress__valuetext="2 of 5 units"
   progress__description="Title"
@@ -158,9 +182,9 @@ If the status that displays with the bar is not a percentage, then the ARIA tag 
 
 ### Progress step instruction
 ```hbs
-{{#> progress 
+{{#> progress
   progress__value="2"
-  progress__valuemax="5" 
+  progress__valuemax="5"
   progress__width="40"
   progress__valuetext="Step 2: Copying files"
   progress__description="Title"
@@ -173,7 +197,7 @@ If the status that displays with the bar is not a percentage, then the ARIA tag 
 ## Documentation
 ### Overview
 ### Accessibility
-If this component is describing the loading progress of a particular region of a page, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading. 
+If this component is describing the loading progress of a particular region of a page, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading.
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -200,5 +224,6 @@ If this component is describing the loading progress of a particular region of a
 | `.pf-m-inside` | `.pf-c-progress` |  Shows the measure within the progress indicator. NOTE: This option requires `.pf-m-lg`.|
 | `.pf-m-outside` | `.pf-c-progress` |  Shows the measure and status icon to the right of the progress bar. |
 | `.pf-m-singleline` | `.pf-c-progress` | Modifies the progress component to exist on one row. If a measure is needed, use with `.pf-m-inside` or `.pf-m-outside`|
+| `.pf-m-success` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a success state. |
 | `.pf-m-success` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a success state. |
 | `.pf-m-danger` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a danger (failure) state. |
