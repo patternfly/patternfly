@@ -32,8 +32,9 @@
 
   // Component styles
   display: grid;
+  align-items: end;
   grid-gap: var(--pf-c-progress--GridGap);
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr auto;
 
   // Modifiers
@@ -135,6 +136,7 @@
 
 // the progress__description is displayed above the progress bar on the left
 .pf-c-progress__description {
+  word-break: break-word;
   grid-column: 1 / 2;
 }
 
@@ -142,7 +144,8 @@
 .pf-c-progress__status {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  align-self: end;
+  text-align: right;
+  word-break: break-word;
 }
 
 // the progress__status-icon is an icon displayed always in the upper right
