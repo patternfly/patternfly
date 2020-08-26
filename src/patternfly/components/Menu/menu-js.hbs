@@ -1,0 +1,63 @@
+
+<script type="text/javascript">
+
+  const stripSiblings = (list, item) => {
+    var siblings = list.querySelectorAll('.pf-c-menu__list-item');
+
+    for (var i = 0; i < siblings.length; i++) {
+      if (siblings[i] === item) { continue; }
+      siblings[i].classList.remove('pf-m-current-path');
+    }
+  };
+
+  const drillDown = () => {
+    let currentTarget = event.currentTarget;
+    let root = currentTarget.closest('.pf-c-menu.pf-m-drilldown');
+    let parentMenu = currentTarget.closest('.pf-c-menu');
+    let parentList = currentTarget.closest('.pf-c-menu__list');
+    let parentListItem = currentTarget.closest('li');
+
+    parentListItem.classList.add('pf-m-current-path');
+    parentMenu.classList.add('pf-m-drilled-in');
+    root.setAttribute('style', `--pf-c-menu--m-drilldown--Height: ${parentListItem.querySelector('.pf-c-menu__list').offsetHeight + 16}px`);
+
+    stripSiblings(parentList, parentListItem);
+  };
+
+  const drillUp = () => {
+    let currentTarget = event.currentTarget;
+    let root = currentTarget.closest('.pf-c-menu.pf-m-drilldown');
+    let drillDownHeight = root.querySelector('.pf-c-menu__list').offsetHeight;
+    let grandParentMenu = currentTarget.closest('.pf-c-menu').parentNode.closest('.pf-c-menu');
+    let grandParentList = currentTarget.closest('.pf-c-menu__list').parentNode.closest('.pf-c-menu__list');
+    let grandParentListItem = currentTarget.closest('li').parentNode.closest('li');
+
+    grandParentMenu.classList.remove('pf-m-drilled-in');
+    grandParentListItem.classList.remove('pf-m-current-path');
+    root.setAttribute('style', `--pf-c-menu--m-drilldown--Height: ${grandParentList.offsetHeight + 16}px`);
+  };
+</script>
+
+{{> @partial-block}}
+
+    {{!-- if (currentTarget.hasAttribute('data-target')) {
+      let target = currentTarget.getAttribute('data-target');
+      target = document.getElementById(target);
+
+      target.classList.remove('pf-m-drilled-in');
+      let submenus = target.querySelectorAll('.pf-c-menu');
+      for (let i = 0; i < submenus.length; i++) {
+        submenus[i].classList.remove('pf-m-drilled-in')
+      }
+
+      let listItems = target.querySelectorAll('.pf-c-menu__list-item');
+      for (let i = 0; i < listItems.length; i++) {
+        listItems[i].classList.remove('pf-m-current-path')
+      }
+
+      root.setAttribute('style', `--pf-c-menu--m-drilldown--Height: ${target.querySelector('.pf-c-menu__list').offsetHeight + 16}px`);
+    } else {
+      grandParentMenu.classList.remove('pf-m-drilled-in');
+      grandParentListItem.classList.remove('pf-m-current-path');
+      root.setAttribute('style', `--pf-c-menu--m-drilldown--Height: ${grandParentList.offsetHeight + 16}px`);
+    } --}}
