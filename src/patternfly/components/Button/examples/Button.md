@@ -255,6 +255,25 @@ import './Button.css'
 {{/button}}
 ```
 
+### Progress
+```hbs
+{{#> button button--modifier="pf-m-primary" button--IsProgress="true"}}
+  Primary loader
+{{/button}}
+
+{{#> button button--modifier="pf-m-primary" button--IsProgress="true" button--IsInProgress="true"}}
+  Primary loading
+{{/button}}
+
+{{#> button button--modifier="pf-m-secondary" button--IsProgress="true"}}
+  Secondary loader
+{{/button}}
+
+{{#> button button--modifier="pf-m-secondary" button--IsProgress="true" button--IsInProgress="true"}}
+  Secondary loading
+{{/button}}
+```
+
 ## Documentation
 ### Overview
 Always add a modifier class to add color to the button.
@@ -279,6 +298,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | -- | -- | -- |
 | `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
 | `.pf-c-button__icon` | `<span>` | Initiates a button icon. |
+| `.pf-c-button__loader` | `<span>` | Initiates a button loader container. |
 | `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |
@@ -295,3 +315,5 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-small` | `.pf-c-button` | Modifies the button so that it has small font size. |
 | `.pf-m-aria-disabled` | `.pf-c-button` | Modifies a button to be visually disabled, yet is still focusable. |
 | `.pf-m-display-lg` | `.pf-c-button`, `pf-c-button.pf-m-link` | Modifies the button and link button for large display styling. For example, use this modifier to achieve "call to action" styles. |
+| `.pf-m-loader` | `.pf-c-button` | Indicates that the button supports the loading state. |
+| `.pf-m-loading` | `.pf-c-button` | Indicates that the button is in the loading state. |
