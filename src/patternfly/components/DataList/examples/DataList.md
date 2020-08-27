@@ -669,15 +669,15 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Draggable
 ```hbs
 {{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
-  {{#> data-list-item data-list-item--modifier="pf-m-draggable pf-m-disabled" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-icon}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1" checked disabled')}}{{/data-list-check}}
+        {{> data-list-item-draggable-icon data-list-item-draggable-icon--modifier="pf-m-disabled"}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1" checked')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item1">Disabled</span>
+          <span id="{{data-list--id}}-item1">Draggable icon disabled</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -691,13 +691,13 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item2">Cuisine</span>
+          <span id="{{data-list--id}}-item2">List item</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-draggable pf-m-dragging" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-draggable pf-m-ghost-row" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-item-draggable-icon}}
@@ -705,7 +705,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item3">Draggable</span>
+          <span id="{{data-list--id}}-item3">Ghost row</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -719,7 +719,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item4">Pricing</span>
+          <span id="{{data-list--id}}-item4">List item</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -736,7 +736,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-draggable` | `.pf-c-data-list__item` | Modifies a data list item so that it is draggable. |
-| `.pf-m-dragging` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the dragged state. |
+| `.pf-m-ghost-row` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a draggable data list item to be the ghost row. |
 | `.pf-m-disabled` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the disabled state. |
 
 ## Documentation

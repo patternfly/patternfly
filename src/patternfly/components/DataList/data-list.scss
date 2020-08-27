@@ -84,8 +84,8 @@
 
   // Draggable icon
   --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-global--icon--Color--light);
-  --pf-c-data-list__item--m-draggable--m-disabled__draggable-icon--Color: var(--pf-global--disabled-color--200);
-  --pf-c-data-list__item--m-draggable--hover__draggable-icon--Color: var(--pf-global--icon--Color--dark);
+  --pf-c-data-list__item--m-draggable__draggable-icon--m-disabled--Color: var(--pf-global--disabled-color--200);
+  --pf-c-data-list__item--m-draggable__draggable-icon--hover--Color: var(--pf-global--icon--Color--dark);
   --pf-c-data-list__item--m-draggable--m-dragging__item-row--after--BackgroundColor: var(--pf-global--disabled-color--200);
 
   // Controls
@@ -251,47 +251,25 @@
   &.pf-m-draggable {
     position: relative;
 
-    &::after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: var(--pf-c-data-list__item--m-draggable--after--ZIndex);
-      content: "";
-    }
+    .pf-c-data-list__item-draggable-icon {
+      &:hover {
+        cursor: grab;
 
-    &:hover:not(.pf-m-dragging) {
-      z-index: var(--pf-c-data-list__item--m-draggable--hover--ZIndex);
-      cursor: grab;
-      box-shadow: var(--pf-c-data-list__item--m-draggable--hover--BoxShadow);
-
-      &:not(:last-child) {
-        --pf-c-data-list__item--BorderBottomWidth: 0;
-
-        + .pf-c-data-list__item {
-          border-top: var(--pf-c-data-list__item--m-selectable--hover--item--BorderTopWidth) solid var(--pf-c-data-list__item--m-selectable--hover--item--BorderTopColor);
-        }
+        --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-c-data-list__item--m-draggable__draggable-icon--hover--Color);
       }
 
-      .pf-c-data-list__item-draggable-icon {
-        --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-c-data-list__item--m-draggable--hover__draggable-icon--Color);
+      &:active {
+        cursor: grabbing;
+      }
+
+      &.pf-m-disabled {
+        pointer-events: none;
+
+        --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-c-data-list__item--m-draggable__draggable-icon--m-disabled--Color);
       }
     }
 
-    &:active {
-      cursor: grabbing;
-    }
-
-    &.pf-m-disabled {
-      pointer-events: none;
-
-      .pf-c-data-list__item-draggable-icon {
-        --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-c-data-list__item--m-draggable--m-disabled__draggable-icon--Color);
-      }
-    }
-
-    &.pf-m-dragging {
+    &.pf-m-ghost-row {
       .pf-c-data-list__item-row {
         &::after {
           position: absolute;
