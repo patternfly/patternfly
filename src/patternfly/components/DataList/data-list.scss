@@ -86,7 +86,8 @@
   --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-global--icon--Color--light);
   --pf-c-data-list__item--m-draggable__draggable-icon--m-disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-data-list__item--m-draggable__draggable-icon--hover--Color: var(--pf-global--icon--Color--dark);
-  --pf-c-data-list__item--m-draggable--m-dragging__item-row--after--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-data-list__item--m-draggable--m-ghost-row__item-row--after--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-data-list__item--m-draggable--m-ghost-row__item-row--after--Opacity: .8;
 
   // Controls
   --pf-c-data-list__item-control--PaddingTop: var(--pf-global--spacer--lg);
@@ -278,9 +279,9 @@
           bottom: 0;
           left: 0;
           content: "";
-          background-color: var(--pf-c-data-list__item--m-draggable--m-dragging__item-row--after--BackgroundColor);
+          background-color: var(--pf-c-data-list__item--m-draggable--m-ghost-row__item-row--after--BackgroundColor);
           mix-blend-mode: screen;
-          opacity: .8;
+          opacity: var(--pf-c-data-list__item--m-draggable--m-ghost-row__item-row--after--Opacity);
         }
       }
     }
