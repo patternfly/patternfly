@@ -45,10 +45,10 @@
   --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-app-launcher__menu-item--m-link--PaddingRight: 0;
   --pf-c-app-launcher__menu-item--m-link--hover--BackgroundColor: transparent;
-  --pf-c-app-launcher__menu-item--m-action--hover--BackgroundColor: transparent;
   --pf-c-app-launcher__menu-item--m-action--Color: var(--pf-global--disabled-color--200);
   --pf-c-app-launcher__menu-item--m-action--Width: auto;
   --pf-c-app-launcher__menu-item--m-action--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-app-launcher__menu-item--m-action--hover--BackgroundColor: transparent;
   --pf-c-app-launcher__menu-item--hover__menu-item--m-action--Color: var(--pf-global--Color--200);
   --pf-c-app-launcher__menu-item--m-action--hover--Color: var(--pf-global--Color--100);
   --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--Color: var(--pf-global--palette--gold-400);
@@ -177,12 +177,12 @@
     text-decoration: none;
   }
 
-  @at-root .pf-c-app-launcher__menu-wrapper,
-  & {
-    &:hover,
-    &:focus {
-      background-color: var(--pf-c-app-launcher__menu-item--hover--BackgroundColor);
-    }
+  @at-root .pf-c-app-launcher__menu-wrapper:hover,
+  .pf-c-app-launcher__menu-wrapper:focus-within,
+  .pf-c-app-launcher__menu-wrapper.pf-m-focus,
+  &:hover,
+  &:focus {
+    background-color: var(--pf-c-app-launcher__menu-item--hover--BackgroundColor);
   }
 
   &:disabled,
@@ -219,9 +219,9 @@
   }
 
   &.pf-m-action {
-    --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-c-app-launcher__menu-item--m-action--hover--BackgroundColor);
     --pf-c-app-launcher__menu-item--Color: var(--pf-c-app-launcher__menu-item--m-action--Color);
     --pf-c-app-launcher__menu-item--Width: var(--pf-c-app-launcher__menu-item--m-action--Width);
+    --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-c-app-launcher__menu-item--m-action--hover--BackgroundColor);
 
     font-size: var(--pf-c-app-launcher__menu-item--m-action--FontSize);
 
