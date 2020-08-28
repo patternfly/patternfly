@@ -669,7 +669,7 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Draggable
 ```hbs
 {{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
-  {{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-item-draggable-button data-list-item-draggable-button--modifier="pf-m-disabled" data-list-item-draggable-button--attribute='tabindex="-1"'}}
@@ -683,7 +683,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-item-draggable-button}}
@@ -697,7 +697,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-draggable pf-m-ghost-row" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+  {{#> data-list-item data-list-item--modifier="pf-m-ghost-row" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-item-draggable-button}}
@@ -711,7 +711,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-{{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4"')}}
+{{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-item-draggable-button}}
