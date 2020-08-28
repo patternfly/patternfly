@@ -1,6 +1,7 @@
-<button class="pf-c-tree-view__node-toggle{{#if tree-view-node-toggle--modifier}} {{tree-view-node-toggle--modifier}}{{/if}}"
+<{{# if tree-view-node--HasCheckbox}}button{{else}}span{{/if}} class="pf-c-tree-view__node-toggle{{#if tree-view-node-toggle--modifier}} {{tree-view-node-toggle--modifier}}{{/if}}"
   {{#if tree-view-node-toggle--attribute}}
     {{{tree-view-node-toggle--attribute}}}
   {{/if}}>
   {{> tree-view-node-toggle-icon}}
 </button>
+</{{# if tree-view-node--HasCheckbox}}button{{else}}span{{/if}}>

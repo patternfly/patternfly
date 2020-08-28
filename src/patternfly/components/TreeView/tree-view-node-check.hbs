@@ -2,8 +2,8 @@
   {{#if tree-view-node-check--attribute}}
     {{{tree-view-node-check--attribute}}}
   {{/if}}>
-  {{#if tree-view-node--HasCheckboxSelected}}
-    <input type="checkbox" checked aria-label="Tree view node check checked" />
+  {{#if tree-view-node--IsChecked}}
+    <input type="checkbox" id="check-{{{tree-view-node--id}}}" checked aria-label="Tree view node check checked" />
   {{else}}
     <input type="checkbox" aria-label="Tree view node check" />
   {{/if}}

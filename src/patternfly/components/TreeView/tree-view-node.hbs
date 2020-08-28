@@ -3,10 +3,7 @@
     {{#if tree-view-node--attribute}}
       {{{tree-view-node--attribute}}}
     {{/if}}>
-    {{#if tree-view-node--IsToggle}}
-      {{> tree-view-node-toggle-icon}}
-    {{/if}}
-    {{#if tree-view-node--HasCheckbox}}
+    {{#if tree-view-node--HasToggle}}
       {{> tree-view-node-toggle}}
     {{/if}}
     {{#if tree-view-node--HasFolderIcon}}
@@ -14,19 +11,17 @@
     {{/if}}
     {{#if tree-view-node--HasCheckbox}}
       {{#> tree-view-node-main}}
-        {{> tree-view-node-check}}
-        {{#if tree-view-node--text}}
-          {{#> tree-view-node-text}}
-            {{{tree-view-node--text}}}
-          {{/tree-view-node-text}}
-        {{/if}}
+          {{> tree-view-node-check}}
+          {{#if tree-view-node--text}}
+            {{#> tree-view-node-text tree-view-node-text--type="label"}}
+              {{{tree-view-node--text}}}
+            {{/tree-view-node-text}}
+          {{/if}}
       {{/tree-view-node-main}}
     {{else}}
-      {{#if tree-view-node--text}}
         {{#> tree-view-node-text}}
           {{{tree-view-node--text}}}
         {{/tree-view-node-text}}
-      {{/if}}
     {{/if}}
     {{#if @partial-block}}
       {{> @partial-block}}
