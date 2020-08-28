@@ -672,9 +672,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-item-draggable-button}}
-          {{> data-list-item-draggable-icon data-list-item-draggable-icon--modifier="pf-m-disabled"}}
-        {{/data-list-item-draggable-button}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--modifier="pf-m-disabled" data-list-item-draggable-button--attribute='tabindex="-1"'}}
         {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1" checked')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -688,9 +686,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-item-draggable-button}}
-          {{> data-list-item-draggable-icon}}
-        {{/data-list-item-draggable-button}}
+        {{> data-list-item-draggable-button}}
         {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check2" aria-labelledby="' data-list--id '-item2" checked')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -704,9 +700,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--modifier="pf-m-draggable pf-m-ghost-row" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-item-draggable-button}}
-          {{> data-list-item-draggable-icon}}
-        {{/data-list-item-draggable-button}}
+        {{> data-list-item-draggable-button}}
         {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check3" aria-labelledby="' data-list--id '-item3" checked disabled')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -720,9 +714,7 @@ When a list item includes more than one block of content, it can be difficult fo
 {{#> data-list-item data-list-item--modifier="pf-m-draggable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-item-draggable-button}}
-          {{> data-list-item-draggable-icon}}
-        {{/data-list-item-draggable-button}}
+        {{> data-list-item-draggable-button}}
         {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check4" aria-labelledby="' data-list--id '-item4" checked')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -743,6 +735,8 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
+| `.pf-c-data-list__item-draggable-button` | `<button>` | Initiates the draggable button. Use for drag and drop. |
+| `.pf-c-data-list__item-draggable-icon` | `<span>` | Initiates the draggable button icon. |
 | `.pf-m-draggable` | `.pf-c-data-list__item` | Modifies a data list item so that it is draggable. |
 | `.pf-m-ghost-row` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a draggable data list item to be the ghost row. |
 | `.pf-m-disabled` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the disabled state. |

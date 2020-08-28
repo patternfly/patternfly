@@ -15,7 +15,7 @@
   // draggable chip
   --pf-c-chip--m-draggable--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-chip--m-draggable--BoxShadow: var(--pf-global--BoxShadow--sm);
-  --pf-c-chip--m-draggable--icon--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-chip--m-draggable__icon--FontSize: var(--pf-global--icon--FontSize--sm);
 
   // chip text
   --pf-c-chip__text--FontSize: var(--pf-global--FontSize--xs);
@@ -74,7 +74,7 @@
     box-shadow: var(--pf-c-chip--m-draggable--BoxShadow);
 
     .pf-c-chip__icon {
-      font-size: var(--pf-c-chip--m-draggable--icon--FontSize);
+      font-size: var(--pf-c-chip--m-draggable__icon--FontSize);
     }
   }
 

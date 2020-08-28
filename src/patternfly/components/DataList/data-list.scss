@@ -27,9 +27,6 @@
   --pf-c-data-list__item--m-selectable--hover--item--BorderTopWidth: var(--pf-c-data-list__item--BorderBottomWidth);
   --pf-c-data-list__item--sm--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-data-list__item--sm--BorderBottomColor: var(--pf-global--BorderColor--100);
-  --pf-c-data-list__item--m-draggable--hover--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-data-list__item--m-draggable--hover--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
-  --pf-c-data-list__item--m-draggable--after--ZIndex: var(--pf-global--ZIndex--xs);
 
   @media screen and (min-width: $pf-global--breakpoint--sm) {
     --pf-c-data-list__item--BorderBottomWidth: var(--pf-c-data-list__item--sm--BorderBottomWidth);
@@ -82,10 +79,14 @@
   --pf-c-data-list__toggle-icon--Transition: .2s ease-in 0s;
   --pf-c-data-list__item--m-expanded__toggle-icon--Rotate: 90deg;
 
-  // Draggable icon
-  --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-global--icon--Color--light);
-  --pf-c-data-list__item--m-draggable__draggable-icon--m-disabled--Color: var(--pf-global--disabled-color--200);
-  --pf-c-data-list__item--m-draggable__draggable-icon--hover--Color: var(--pf-global--icon--Color--dark);
+  // Draggable button/icon
+  --pf-c-data-list__item--m-draggable__draggable-button--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-data-list__item--m-draggable__draggable-button--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-data-list__item--m-draggable__draggable-button--MarginTop: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-data-list__item--m-draggable__draggable-button--MarginLeft: calc(var(--pf-global--spacer--md) * -1);
+  --pf-c-data-list__item--m-draggable__draggable-button__draggable-icon--Color: var(--pf-global--icon--Color--light);
+  --pf-c-data-list__item--m-draggable__draggable-button--m-disabled__draggable-icon--Color: var(--pf-global--disabled-color--200);
+  --pf-c-data-list__item--m-draggable__draggable-button--hover__draggable-icon--Color: var(--pf-global--icon--Color--dark);
   --pf-c-data-list__item--m-draggable--m-ghost-row__item-row--after--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-data-list__item--m-draggable--m-ghost-row__item-row--after--Opacity: .8;
 
@@ -252,11 +253,17 @@
   &.pf-m-draggable {
     position: relative;
 
-    .pf-c-data-list__item-draggable-icon {
+    .pf-c-data-list__item-draggable-button {
+      padding-right: var(--pf-c-data-list__item--m-draggable__draggable-button--PaddingRight);
+      padding-left: var(--pf-c-data-list__item--m-draggable__draggable-button--PaddingLeft);
+      margin-top: var(--pf-c-data-list__item--m-draggable__draggable-button--MarginTop);
+      margin-left: var(--pf-c-data-list__item--m-draggable__draggable-button--MarginLeft);
+      border: 0;
+
       &:hover {
         cursor: grab;
 
-        --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-c-data-list__item--m-draggable__draggable-icon--hover--Color);
+        --pf-c-data-list__item--m-draggable__draggable-button__draggable-icon--Color: var(--pf-c-data-list__item--m-draggable__draggable-button--hover__draggable-icon--Color);
       }
 
       &:active {
@@ -265,8 +272,13 @@
 
       &.pf-m-disabled {
         pointer-events: none;
+        cursor: none;
 
-        --pf-c-data-list__item--m-draggable__draggable-icon--Color: var(--pf-c-data-list__item--m-draggable__draggable-icon--m-disabled--Color);
+        --pf-c-data-list__item--m-draggable__draggable-button__draggable-icon--Color: var(--pf-c-data-list__item--m-draggable__draggable-button--m-disabled__draggable-icon--Color);
+      }
+
+      .pf-c-data-list__item-draggable-icon {
+        color: var(--pf-c-data-list__item--m-draggable__draggable-button__draggable-icon--Color);
       }
     }
 
@@ -284,10 +296,6 @@
           opacity: var(--pf-c-data-list__item--m-draggable--m-ghost-row__item-row--after--Opacity);
         }
       }
-    }
-
-    .pf-c-data-list__item-draggable-icon {
-      color: var(--pf-c-data-list__item--m-draggable__draggable-icon--Color);
     }
   }
   // stylelint-enable
