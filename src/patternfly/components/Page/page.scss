@@ -387,11 +387,11 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   &:last-of-type,
   &:only-child,
   &.pf-m-fill {
-    flex: 1;
+    flex-grow: 1;
   }
 
   &.pf-m-no-fill {
-    flex: 0 0 auto;
+    flex-grow: 0;
   }
 
   &.pf-m-light {
@@ -429,7 +429,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 }
 
 .pf-c-page__main-wizard {
-  flex: 1 0 0;
+  flex-grow: 1;
   background-color: var(--pf-c-page__main-wizard--BackgroundColor);
   border-top: var(--pf-c-page__main-wizard--BorderTopWidth) solid var(--pf-c-page__main-wizard--BorderTopColor);
 }
@@ -438,6 +438,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__main-breadcrumb,
 .pf-c-page__main-section,
 .pf-c-page__main-wizard {
+  flex-shrink: 0;
+
   &.pf-m-limit-width {
     display: flex;
     flex-direction: column;
