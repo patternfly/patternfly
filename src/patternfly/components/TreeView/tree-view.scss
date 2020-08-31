@@ -23,9 +23,9 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node--focus--BackgroundColor: var(--pf-global--palette--black-200);
 
   // toggle 90degon
-  --pf-c-tree-view__node-toggle--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-tree-view__node-toggle--MinWidth: var(--pf-global--spacer--lg);
-  --pf-c-tree-view__node-toggle--MinHeight: var(--pf-c-tree-view__node-toggle--icon--MinWidth);
+  --pf-c-tree-view__node-toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__node-toggle-icon--MinWidth: var(--pf-global--spacer--lg);
+  --pf-c-tree-view__node-toggle-icon--MinHeight: var(--pf-c-tree-view__node-toggle--icon--MinWidth);
 
   // check
   --pf-c-tree-view__node-check--MarginRight: var(--pf-global--spacer--sm);
@@ -62,7 +62,7 @@ $pf-c-tree-view--MaxNesting: 10;
 // stylelint-disable
 .pf-c-tree-view__list-item {
   &.pf-m-expanded {
-    > .pf-c-tree-view__content > .pf-c-tree-view__node > .pf-c-tree-view__node-toggle > .pf-c-tree-view__node-toggle-icon > i {
+    > .pf-c-tree-view__content > .pf-c-tree-view__node > .pf-c-tree-view__node-toggle-icon > i {
       transform: rotate(90deg);
     }
   }
@@ -77,6 +77,7 @@ $pf-c-tree-view--MaxNesting: 10;
   padding: var(--pf-c-tree-view__node--PaddingTop) var(--pf-c-tree-view__node--PaddingRight) var(--pf-c-tree-view__node--PaddingBottom) var(--pf-c-tree-view__node--PaddingLeft);
   color: var(--pf-c-tree-view__node--Color);
   text-align: left;
+  cursor: pointer;
   border: 0;
 
   &.pf-m-current {
@@ -102,22 +103,13 @@ $pf-c-tree-view--MaxNesting: 10;
   margin-right: var(--pf-c-tree-view__node-check--MarginRight);
 }
 
-.pf-c-tree-view__node-main {
-  @include pf-text-overflow;
-
-  display: flex;
-  width: 100%;
-  text-align: left;
-  border: 0;
-}
-
-.pf-c-tree-view__node-toggle {
+.pf-c-tree-view__node-toggle-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: var(--pf-c-tree-view__node-toggle--MinWidth);
-  min-height: var(--pf-c-tree-view__node-toggle--MinHeight);
-  padding-right: var(--pf-c-tree-view__node-toggle--PaddingRight);
+  min-width: var(--pf-c-tree-view__node-toggle-icon--MinWidth);
+  min-height: var(--pf-c-tree-view__node-toggle-icon--MinHeight);
+  padding-right: var(--pf-c-tree-view__node-toggle-icon--PaddingRight);
   border: 0;
 }
 
