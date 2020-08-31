@@ -1,4 +1,6 @@
-### PF icons
+---
+id: Icons
+---
 | Icon name | Icon | Code |
 | --- | --- | --- |
 | screen | <i class="pf-icon pf-icon-screen"></i> | &lt;i class=&quot;pf-icon pf-icon-screen&quot;&gt;&lt;/i&gt;
