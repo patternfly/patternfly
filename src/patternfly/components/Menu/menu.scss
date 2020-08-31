@@ -1,4 +1,6 @@
 .pf-c-menu {
+  @include pf-t-light;
+
   // Menu
   --pf-c-menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-menu--BoxShadow: var(--pf-global--BoxShadow--md);
