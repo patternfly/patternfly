@@ -20,9 +20,6 @@ $pf-u-font-weight-options: (
   font-weight-light:              (font-weight var(--pf-global--FontWeight--light)),
   font-weight-normal:             (font-weight var(--pf-global--FontWeight--normal)),
   font-weight-bold:               (font-weight var(--pf-global--FontWeight--bold)),
-  font-weight-semi-bold:          (font-weight var(--pf-global--FontWeight--semi-bold)),
-  font-weight-overpass-semi-bold: (font-weight var(--pf-global--FontWeight--overpass--semi-bold)),
-  font-weight-overpass-bold:      (font-weight var(--pf-global--FontSize--2xl))
 );
 
 @include pf-utility-builder($pf-u-font-weight-options, $pf-global--breakpoint-list);
@@ -39,39 +36,14 @@ $pf-u-font-color-options: (
 @include pf-utility-builder($pf-u-font-color-options, $pf-global--breakpoint-list);
 
 
-// Background color options
-$pf-u-font-background-color-options: (
+// // Font layout options
+// $pf-u-font-alignment-options: (
+//   font-truncate: var(--pf-m-truncate),
+//   font-break-word: var(--pf-m-break-word),
+//   font-nowrap: var(--pf-m-nowrap),
+//   font-wrap: var(--pf-m-wrap)
+// );
 
-  /* Background color */
-  background-color-100:  (background-color var(--pf-global--BackgroundColor--100)),
-  background-color-200:  (background-color var(--pf-global--BackgroundColor--200)),
+// @include pf-utility-builder($pf-u-font-alignment-options, $pf-global--breakpoint-list);
 
-  /*light theme*/
-  background-color-light-100:  (background-color var(--pf-global--BackgroundColor--light-100)),
-  background-color-light-200:  (background-color var(--pf-global--BackgroundColor--light-200)),
-  background-color-light-300:  (background-color var(--pf-global--BackgroundColor--light-300)),
-
-  /*dark theme*/
-  background-color-dark-100:              (background-color var(--pf-global--BackgroundColor--dark-100)),
-  background-color-dark-200:              (background-color var(--pf-global--BackgroundColor--dark-200)),
-  background-color-dark-300:              (background-color var(--pf-global--BackgroundColor--dark-300)),
-  background-color-dark-400:              (background-color var(--pf-global--BackgroundColor--dark-400)),
-  background-color-dark-transparent-100:  (background-color var(--pf-global--BackgroundColor--dark-transparent-100)),
-  background-color-dark-transparent-200:  (background-color var(--pf-global--BackgroundColor--dark-transparent-200))
-);
-
-@include pf-utility-builder($pf-u-font-background-color-options, $pf-global--breakpoint-list);
-
-
-// Font layout options
-$pf-u-font-alignment-options: (
-  font-truncate: var(--pf-m-truncate),
-  font-break-word: var(--pf-m-break-word),
-  font-nowrap: var(--pf-m-nowrap),
-  font-wrap: var(--pf-m-wrap),
-  font-fit-content: var(--pf-m-fit-content)
-);
-
-@include pf-utility-builder($pf-u-font-alignment-options, $pf-global--breakpoint-list);
-
-// stylelint-enable
+// // stylelint-enable

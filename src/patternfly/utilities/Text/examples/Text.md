@@ -17,15 +17,39 @@ import './Text.css'
 {{#> text text--modifier="pf-u-font-size-md"}}
   Medium text
 {{/text}}
-<!-- {{#> text text--modifier="pf-u-w-75"}}
-  .pf-u-w-75
+{{#> text text--modifier="pf-u-font-size-lg"}}
+  Large text
 {{/text}}
-{{#> text text--modifier="pf-u-w-100"}}
-  .pf-u-w-100
+{{#> text text--modifier="pf-u-font-size-xl"}}
+  Extra large text
 {{/text}}
-{{#> text text--modifier="pf-u-w-initial"}}
-  .pf-u-w-initial (auto)
+```
+
+### Font Weight
+```hbs
+{{#> text text--modifier="pf-u-font-weight-light"}}
+  Light
 {{/text}}
-{{#> text text--modifier="pf-u-w-inherit"}}
-  .pf-u-w-inherit
-{{/text}} -->
+{{#> text text--modifier="pf-u-font-weight-normal"}}
+  Normal
+{{/text}}
+{{#> text text--modifier="pf-u-font-weight-bold"}}
+  Bold
+{{/text}}
+```
+
+### Font Color
+```hbs
+{{#> text text--modifier="pf-u-font-color-100"}}
+  Font color 100
+{{/text}}
+{{#> text text--modifier="pf-u-font-color-200"}}
+  Font color 200
+{{/text}}
+{{#> text text--modifier="pf-u-font-color-300"}}
+  Font color 300
+{{/text}}
+{{#> text text--modifier="pf-u-font-color-400"}}
+  Font color 400
+{{/text}}
+```

@@ -1,0 +1,10 @@
+#ws-core-u-backgroundcolor-white {
+  margin-bottom: var(--pf-global--spacer--lg);
+  background-color: var(--pf-global--BackgroundColor--100);
+
+}
+#ws-core-u-backgroundcolor-gray {
+  margin-bottom: var(--pf-global--spacer--lg);
+  background-color: var(--pf-global--BackgroundColor--200);
+
+}

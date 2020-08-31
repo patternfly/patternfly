@@ -1,0 +1,12 @@
+// stylelint-disable
+
+// Background color options
+$pf-u-background-color-options: (
+  /* Background color */
+  background-color-100:  (background-color var(--pf-global--BackgroundColor--100)),
+  background-color-200:  (background-color var(--pf-global--BackgroundColor--200)),
+);
+
+@include pf-utility-builder($pf-u-background-color-options, $pf-global--breakpoint-list);
+
+// stylelint-enable
