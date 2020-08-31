@@ -309,6 +309,36 @@ cssPrefix: pf-c-chip-group
         {{/button}}
       {{/chip}}
     {{/chip-group-list-item}}
+    {{#> chip-group-list-item}}
+      {{#> chip}}
+        {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_toolbar"')}}
+          Chip four
+        {{/chip-text}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_four_toolbar ' chip-group--id 'chip_four_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_four_toolbar"')}}
+          <i class="fas fa-times" aria-hidden="true"></i>
+        {{/button}}
+      {{/chip}}
+    {{/chip-group-list-item}}
+    {{#> chip-group-list-item}}
+      {{#> chip}}
+        {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_toolbar"')}}
+          Chip five
+        {{/chip-text}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_five_toolbar ' chip-group--id 'chip_five_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_five_toolbar"')}}
+          <i class="fas fa-times" aria-hidden="true"></i>
+        {{/button}}
+      {{/chip}}
+    {{/chip-group-list-item}}
+    {{#> chip-group-list-item}}
+      {{#> chip}}
+        {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_six_toolbar"')}}
+          Chip six
+        {{/chip-text}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_six_toolbar ' chip-group--id 'chip_six_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_six_toolbar"')}}
+          <i class="fas fa-times" aria-hidden="true"></i>
+        {{/button}}
+      {{/chip}}
+    {{/chip-group-list-item}}
   {{/chip-group-list}}
   {{> chip-group-close}}
 {{/chip-group}}
