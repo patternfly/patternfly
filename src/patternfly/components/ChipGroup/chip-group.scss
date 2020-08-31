@@ -13,6 +13,9 @@
   --pf-c-chip-group--m-category--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip-group--m-category--BackgroundColor: var(--pf-global--BackgroundColor--200);
 
+  // Removable
+  --pf-c-chip-group--m-category--m-removable--PaddingRight: var(--pf-global--spacer--2xl);
+
   // Label in group
   --pf-c-chip-group__label--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-chip-group__label--FontSize: var(--pf-global--FontSize--sm);
@@ -21,10 +24,13 @@
   // Chip group close
   --pf-c-chip-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-chip-group__close--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
+  --pf-c-chip-group__close--Top: var(--pf-global--spacer--xs);
 
   // Chip
   --pf-c-chip-group__list-item--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group__list-item--MarginBottom: var(--pf-global--spacer--xs);
+
+  position: relative;
 
   &.pf-m-category {
     padding-top: var(--pf-c-chip-group--m-category--PaddingTop);
@@ -33,6 +39,10 @@
     padding-left: var(--pf-c-chip-group--m-category--PaddingLeft);
     background-color: var(--pf-c-chip-group--m-category--BackgroundColor);
     border-radius: var(--pf-c-chip-group--m-category--BorderRadius);
+
+    &.pf-m-removable {
+      --pf-c-chip-group--m-category--PaddingRight: var(--pf-c-chip-group--m-category--m-removable--PaddingRight);
+    }
   }
 }
 
@@ -63,6 +73,9 @@
 }
 
 .pf-c-chip-group__close {
+  position: absolute;
+  top: var(--pf-c-chip-group__close--Top);
+  right: 0;
   margin-top: var(--pf-c-chip-group__close--MarginTop);
   margin-bottom: var(--pf-c-chip-group__close--MarginBottom);
 }

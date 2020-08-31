@@ -274,7 +274,7 @@ cssPrefix: pf-c-chip-group
 
 ### Chip group with categories removable
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="Chip-group-with-categories-removable"}}
+{{#> chip-group chip-group--modifier="pf-m-category pf-m-removable" chip-group--id="Chip-group-with-categories-removable"}}
   {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
     Category one
   {{/chip-group-label}}
@@ -371,3 +371,4 @@ The chip group requires the [chip component](/documentation/core/components/chip
 | `.pf-c-chip-group__close` | `<div>` | Initiates the container used for the button to remove the chip group. |
 | `.pf-c-button` | `.pf-c-chip-group__close <button>` | Initiates the button used to remove the chip group. |
 | `.pf-m-category` | `.pf-c-chip-group` | Modifies the chip group to support category styling. |
+| `.pf-m-removable` | `.pf-c-chip-group.pf-m-category` | Modifies the chip group to support removable element. |
