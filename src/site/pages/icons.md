@@ -1,7 +1,5 @@
----
-id: Icons
----
-| icon name | icon | code |
+### PF icons
+| Icon name | Icon | Code |
 | --- | --- | --- |
 | screen | <i class="pf-icon pf-icon-screen"></i> | &lt;i class=&quot;pf-icon pf-icon-screen&quot;&gt;&lt;/i&gt;
 | save | <i class="pf-icon pf-icon-save"></i> | &lt;i class=&quot;pf-icon pf-icon-save&quot;&gt;&lt;/i&gt;
@@ -111,3 +109,6 @@ id: Icons
 | pficon-sort-common-asc | <i class="pf-icon pf-icon-pficon-sort-common-asc"></i> | &lt;i class=&quot;pf-icon pf-icon-pficon-sort-common-asc&quot;&gt;&lt;/i&gt;
 | pficon-sort-common-desc | <i class="pf-icon pf-icon-pficon-sort-common-desc"></i> | &lt;i class=&quot;pf-icon pf-icon-pficon-sort-common-desc&quot;&gt;&lt;/i&gt;
 | pficon-dragdrop | <i class="pf-icon pf-icon-pficon-dragdrop"></i> | &lt;i class=&quot;pf-icon pf-icon-pficon-dragdrop&quot;&gt;&lt;/i&gt;
+| attention-bell | <i class="pf-icon pf-icon-attention-bell"></i> | &lt;i class=&quot;pf-icon pf-icon-attention-bell&quot;&gt;&lt;/i&gt;
+| bell | <i class="pf-icon pf-icon-bell"></i> | &lt;i class=&quot;pf-icon pf-icon-bell&quot;&gt;&lt;/i&gt;
+| namespaces | <i class="pf-icon pf-icon-namespaces"></i> | &lt;i class=&quot;pf-icon pf-icon-namespaces&quot;&gt;&lt;/i&gt;

@@ -177,185 +177,188 @@
 	@if $filename == monitoring {
 		$char: "\E032";
 	}
-	@if $filename == network {
+	@if $filename == namespaces {
 		$char: "\E033";
 	}
-	@if $filename == off {
+	@if $filename == network {
 		$char: "\E034";
 	}
-	@if $filename == ok {
+	@if $filename == off {
 		$char: "\E035";
 	}
-	@if $filename == on-running {
+	@if $filename == ok {
 		$char: "\E036";
 	}
-	@if $filename == on {
+	@if $filename == on-running {
 		$char: "\E037";
 	}
-	@if $filename == optimize {
+	@if $filename == on {
 		$char: "\E038";
 	}
-	@if $filename == orders {
+	@if $filename == optimize {
 		$char: "\E039";
 	}
-	@if $filename == os-image {
+	@if $filename == orders {
 		$char: "\E03A";
 	}
-	@if $filename == paused {
+	@if $filename == os-image {
 		$char: "\E03B";
 	}
-	@if $filename == pending {
+	@if $filename == paused {
 		$char: "\E03C";
 	}
-	@if $filename == pficon-dragdrop {
+	@if $filename == pending {
 		$char: "\E03D";
 	}
-	@if $filename == pficon-history {
+	@if $filename == pficon-dragdrop {
 		$char: "\E03E";
 	}
-	@if $filename == pficon-network-range {
+	@if $filename == pficon-history {
 		$char: "\E03F";
 	}
-	@if $filename == pficon-satellite {
+	@if $filename == pficon-network-range {
 		$char: "\E040";
 	}
-	@if $filename == pficon-sort-common-asc {
+	@if $filename == pficon-satellite {
 		$char: "\E041";
 	}
-	@if $filename == pficon-sort-common-desc {
+	@if $filename == pficon-sort-common-asc {
 		$char: "\E042";
 	}
-	@if $filename == pficon-template {
+	@if $filename == pficon-sort-common-desc {
 		$char: "\E043";
 	}
-	@if $filename == pficon-vcenter {
+	@if $filename == pficon-template {
 		$char: "\E044";
 	}
-	@if $filename == plugged {
+	@if $filename == pficon-vcenter {
 		$char: "\E045";
 	}
-	@if $filename == port {
+	@if $filename == plugged {
 		$char: "\E046";
 	}
-	@if $filename == print {
+	@if $filename == port {
 		$char: "\E047";
 	}
-	@if $filename == private {
+	@if $filename == print {
 		$char: "\E048";
 	}
-	@if $filename == process-automation {
+	@if $filename == private {
 		$char: "\E049";
 	}
-	@if $filename == project {
+	@if $filename == process-automation {
 		$char: "\E04A";
 	}
-	@if $filename == rebalance {
+	@if $filename == project {
 		$char: "\E04B";
 	}
-	@if $filename == rebooting {
+	@if $filename == rebalance {
 		$char: "\E04C";
 	}
-	@if $filename == regions {
+	@if $filename == rebooting {
 		$char: "\E04D";
 	}
-	@if $filename == registry {
+	@if $filename == regions {
 		$char: "\E04E";
 	}
-	@if $filename == remove2 {
+	@if $filename == registry {
 		$char: "\E04F";
 	}
-	@if $filename == replicator {
+	@if $filename == remove2 {
 		$char: "\E050";
 	}
-	@if $filename == repository {
+	@if $filename == replicator {
 		$char: "\E051";
 	}
-	@if $filename == resource-pool {
+	@if $filename == repository {
 		$char: "\E052";
 	}
-	@if $filename == resources-almost-empty {
+	@if $filename == resource-pool {
 		$char: "\E053";
 	}
-	@if $filename == resources-almost-full {
+	@if $filename == resources-almost-empty {
 		$char: "\E054";
 	}
-	@if $filename == resources-full {
+	@if $filename == resources-almost-full {
 		$char: "\E055";
 	}
-	@if $filename == save {
+	@if $filename == resources-full {
 		$char: "\E056";
 	}
-	@if $filename == screen {
+	@if $filename == save {
 		$char: "\E057";
 	}
-	@if $filename == security {
+	@if $filename == screen {
 		$char: "\E058";
 	}
-	@if $filename == server-group {
+	@if $filename == security {
 		$char: "\E059";
 	}
-	@if $filename == server {
+	@if $filename == server-group {
 		$char: "\E05A";
 	}
-	@if $filename == service-catalog {
+	@if $filename == server {
 		$char: "\E05B";
 	}
-	@if $filename == service {
+	@if $filename == service-catalog {
 		$char: "\E05C";
 	}
-	@if $filename == services {
+	@if $filename == service {
 		$char: "\E05D";
 	}
-	@if $filename == spinner {
+	@if $filename == services {
 		$char: "\E05E";
 	}
-	@if $filename == spinner2 {
+	@if $filename == spinner {
 		$char: "\E05F";
 	}
-	@if $filename == storage-domain {
+	@if $filename == spinner2 {
 		$char: "\E060";
 	}
-	@if $filename == tenant {
+	@if $filename == storage-domain {
 		$char: "\E061";
 	}
-	@if $filename == thumb-tack {
+	@if $filename == tenant {
 		$char: "\E062";
 	}
-	@if $filename == topology {
+	@if $filename == thumb-tack {
 		$char: "\E063";
 	}
-	@if $filename == trend-down {
+	@if $filename == topology {
 		$char: "\E064";
 	}
-	@if $filename == trend-up {
+	@if $filename == trend-down {
 		$char: "\E065";
 	}
-	@if $filename == unknown {
+	@if $filename == trend-up {
 		$char: "\E066";
 	}
-	@if $filename == unlocked {
+	@if $filename == unknown {
 		$char: "\E067";
 	}
-	@if $filename == unplugged {
+	@if $filename == unlocked {
 		$char: "\E068";
 	}
-	@if $filename == user {
+	@if $filename == unplugged {
 		$char: "\E069";
 	}
-	@if $filename == users {
+	@if $filename == user {
 		$char: "\E06A";
 	}
-	@if $filename == virtual-machine {
+	@if $filename == users {
 		$char: "\E06B";
 	}
-	@if $filename == volume {
+	@if $filename == virtual-machine {
 		$char: "\E06C";
 	}
-	@if $filename == warning-triangle {
+	@if $filename == volume {
 		$char: "\E06D";
 	}
-	@if $filename == zone {
+	@if $filename == warning-triangle {
 		$char: "\E06E";
+	}
+	@if $filename == zone {
+		$char: "\E06F";
 	}
 
 	@return $char;
@@ -521,6 +524,9 @@
 }
 .pf-icon-monitoring {
 	@include pf-icon(monitoring);
+}
+.pf-icon-namespaces {
+	@include pf-icon(namespaces);
 }
 .pf-icon-network {
 	@include pf-icon(network);
