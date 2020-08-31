@@ -20,6 +20,8 @@
   --pf-c-chip-group__label--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-chip-group__label--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-chip-group__label--MaxWidth: 18ch;
+  --pf-c-chip-group__label--PaddingTop: #{pf-size-prem(3px)};
+  --pf-c-chip-group__label--PaddingBottom: var(--pf-global--spacer--xs);
 
   // Chip group close
   --pf-c-chip-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
@@ -68,6 +70,8 @@
   @include pf-text-overflow;
 
   max-width: var(--pf-c-chip-group__label--MaxWidth);
+  padding-top: var(--pf-c-chip-group__label--PaddingTop);
+  padding-bottom: var(--pf-c-chip-group__label--PaddingBottom);
   margin-right: var(--pf-c-chip-group__label--MarginRight);
   font-size: var(--pf-c-chip-group__label--FontSize);
 }
