@@ -27,23 +27,21 @@ $pf-u-font-weight-options: (
 
 // Font color options
 $pf-u-font-color-options: (
-  font-color-100: (color var(--pf-global--Color--100)),
-  font-color-200: (color var(--pf-global--Color--200)),
-  font-color-300: (color var(--pf-global--Color--300)),
-  font-color-400: (color var(--pf-global--Color--400)),
+  color-100: (color var(--pf-global--Color--100)),
+  color-200: (color var(--pf-global--Color--200)),
+  color-300: (color var(--pf-global--Color--300)),
+  color-400: (color var(--pf-global--Color--400)),
 );
 
 @include pf-utility-builder($pf-u-font-color-options, $pf-global--breakpoint-list);
 
+// Font layout options
+$pf-u-font-alignment-options: (
+  font-break-word: (word-break break-word),
+  font-nowrap:     (white-space nowrap),
+  font-wrap:       (white-space normal),
+);
 
-// // Font layout options
-// $pf-u-font-alignment-options: (
-//   font-truncate: var(--pf-m-truncate),
-//   font-break-word: var(--pf-m-break-word),
-//   font-nowrap: var(--pf-m-nowrap),
-//   font-wrap: var(--pf-m-wrap)
-// );
+@include pf-utility-builder($pf-u-font-alignment-options, $pf-global--breakpoint-list);
 
-// @include pf-utility-builder($pf-u-font-alignment-options, $pf-global--breakpoint-list);
-
-// // stylelint-enable
+// stylelint-enable
