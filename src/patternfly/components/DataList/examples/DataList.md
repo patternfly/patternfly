@@ -56,6 +56,7 @@ cssPrefix: pf-c-data-list
 | `.pf-c-data-list__item-row` | `<div>` | Initiates a data list item row. **Required** |
 | `.pf-c-data-list__item-content` | `<div>` | Initiates a container for data list content. **Required**|
 | `.pf-c-data-list__cell` | `*` | Initiates a data list content cell. **Required** |
+| `.pf-c-data-list__cell-text` | `<span>` | Initiates a data list content cell text element. | 
 | `.pf-m-align-left` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. |
 | `.pf-m-no-fill` | `.pf-c-data-list__cell` | Modifies a data list cell to not fill the available horizontal space. |
 | `.pf-m-align-right` | `.pf-c-data-list__cell` | Modifies a data list cell to align-right. |
@@ -668,16 +669,21 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ### Draggable
 ```hbs
+<div id="draggable-help">
+  Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
+</div>
 {{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button data-list-item-draggable-button--modifier="pf-m-disabled" data-list-item-draggable-button--attribute='tabindex="-1"'}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--modifier="pf-m-disabled" id="{{data-list--id}}-draggable-button-1" data-list-item-draggable-button--attribute=(concat 'tabindex="-1" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-1 ' data-list--id '-item-1"')}}
         {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1" checked')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item1">Draggable icon disabled</span>
+          {{#> data-list-cell-text id="{{data-list--id}}-item1" data-list-cell-text--attribute='aria-live="assertive"'}}
+            Draggable icon disabled
+          {{/data-list-cell-text}}
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -686,12 +692,14 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button}}
+        {{> data-list-item-draggable-button id="{{data-list--id}}-draggable-button-2" data-list-item-draggable-button--attribute=(concat 'aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-2 ' data-list--id '-item-2"')}}
         {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check2" aria-labelledby="' data-list--id '-item2" checked')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item2">List item</span>
+          {{#> data-list-cell-text id="{{data-list--id}}-item2" data-list-cell-text--attribute='aria-live="assertive"'}}
+            List item
+          {{/data-list-cell-text}}
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -700,12 +708,14 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--modifier="pf-m-ghost-row" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button}}
+         {{> data-list-item-draggable-button id="{{data-list--id}}-draggable-button-3" data-list-item-draggable-button--attribute=(concat 'aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-3 ' data-list--id '-item-3"')}}
         {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check3" aria-labelledby="' data-list--id '-item3" checked disabled')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item3">Ghost row</span>
+          {{#> data-list-cell-text id="{{data-list--id}}-item3" data-list-cell-text--attribute='aria-live="assertive"'}}
+            Ghost row
+          {{/data-list-cell-text}}
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -714,12 +724,14 @@ When a list item includes more than one block of content, it can be difficult fo
 {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button}}
+        {{> data-list-item-draggable-button id="{{data-list--id}}-draggable-button-4" data-list-item-draggable-button--attribute=(concat 'aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-4 ' data-list--id '-item-4"')}}
         {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check4" aria-labelledby="' data-list--id '-item4" checked')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item4">List item</span>
+          {{#> data-list-cell-text id="{{data-list--id}}-item4" data-list-cell-text--attribute='aria-live="assertive"'}}
+            List item
+          {{/data-list-cell-text}}
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -731,6 +743,11 @@ When a list item includes more than one block of content, it can be difficult fo
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `tabindex="0"` | `.pf-c-data-list__item.pf-m-draggable` | Inserts the draggable row into the tab order of the page so that it is focusable. **Required** |
+| `aria-pressed="true or false"` | `.pf-c-data-list__item-draggable-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. |
+| `aria-live` | `.pf-c-data-list__cell-text` | Sets the priority with which the screen reader should treat updates to live regions. |
+| `aria-describedby="[id value of applicable content]"` | `.pf-c-data-list__item-draggable-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. |
+| `aria-labelledby="[id value of .pf-c-data-list__item-draggable-button] [id value of .pf-c-data-list__cell-text]"]"` | `.pf-c-data-list__item-draggable-button` | Provides an accessible name for the draggable button. |
+| `id="[]"` | `.pf-c-data-list__item-draggable-button`, `.pf-c-data-list__cell-text` | Gives the button and the text element accessible IDs |
 
 ### Usage
 | Class | Applied to | Outcome |
