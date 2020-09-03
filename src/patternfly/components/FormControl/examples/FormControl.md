@@ -7,26 +7,25 @@ cssPrefix: pf-c-form-control
 ## Examples
 ### Input
 ```hbs
-{{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="input-readonly" aria-label="Readonly input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="input-readonly" aria-label="Readonly input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-warning" form-control--attribute='type="text" value="Warning" id="input-warning" aria-label="Warning state input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-warning" form-control--attribute='type="text" value="Warning" id="input-warning" aria-label="Warning state input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--attribute='required type="text" value="Error" id="input-error" aria-invalid="true" aria-label="Error state input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--attribute='required type="text" value="Error" id="input-error" aria-invalid="true" aria-label="Error state input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="input-disabled" aria-label="Disabled input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="input-disabled" aria-label="Disabled input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute='type="search" id="input-search" name="search-input" aria-label="Search input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute='type="search" id="input-search" name="search-input" aria-label="Search input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-calendar" form-control--attribute='type="text" id="input-calendar" name="input-calendar" aria-label="Calendar input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-clock" form-control--attribute='type="text" id="input-clock" name="input-clock" aria-label="Clock input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon" form-control--attribute='type="text" id="input-custom-icon" name="custom-icon" aria-label="Custom icon input example" style=\'--pf-c-form-control--m-icon--BackgroundSizeX: var(--pf-global--icon--FontSize--lg); --pf-c-form-control--m-icon--BackgroundSizeY: var(--pf-global--icon--FontSize--lg); --pf-c-form-control--m-icon--BackgroundUrl: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"%3E%3Cpath fill=\"%23999\" d=\"M158.87.15c-16.16-1.52-31.2 8.42-35.33 24.12l-14.81 56.27c187.62 5.49 314.54 130.61 322.48 317l56.94-15.78c15.72-4.36 25.49-19.68 23.62-35.9C490.89 165.08 340.78 17.32 158.87.15zm-58.47 112L.55 491.64a16.21 16.21 0 0 0 20 19.75l379-105.1c-4.27-174.89-123.08-292.14-299.15-294.1zM128 416a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm48-152a32 32 0 1 1 32-32 32 32 0 0 1-32 32zm104 104a32 32 0 1 1 32-32 32 32 0 0 1-32 32z\"/%3E%3C/svg%3E")\''}}
 ```
 
 ### Select
@@ -139,3 +138,6 @@ Resizes horizontally
 | `.pf-m-success` | `.pf-c-form-control` | Modifies a form control for the success state. |
 | `.pf-m-warning` | `.pf-c-form-control` | Modifies a form control for the warning state. |
 | `.pf-m-search` | `.pf-c-form-control` | Modifies a form control for the search input. |
+| `.pf-m-icon` | `input.pf-c-form-control` | Modifies a form control text input to be able to specify a custom SVG background via `--pf-c-form-control--m-icon--BackgroundUrl`, and other optional vars for other background properties.
+| `.pf-m-calendar` | `.pf-c-form-control.pf-m-icon` | Modifies a form control for the search input. |
+| `.pf-m-clock` | `.pf-c-form-control.pf-m-icon` | Modifies a form control for the search input. |
