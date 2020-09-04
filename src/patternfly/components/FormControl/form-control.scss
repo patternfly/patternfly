@@ -292,14 +292,14 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
     background-image: var(--pf-c-form-control--m-icon--BackgroundUrl);
     background-position: var(--pf-c-form-control--m-icon--BackgroundPositionX) var(--pf-c-form-control--m-icon--BackgroundPositionY);
     background-size: var(--pf-c-form-control--m-icon--BackgroundSizeX) var(--pf-c-form-control--m-icon--BackgroundSizeY);
-  }
 
-  &.pf-m-calendar {
-    --pf-c-form-control--m-icon--BackgroundUrl: var(--pf-c-form-control--m-calendar--BackgroundUrl);
-  }
+    &.pf-m-calendar {
+      --pf-c-form-control--m-icon--BackgroundUrl: var(--pf-c-form-control--m-calendar--BackgroundUrl);
+    }
 
-  &.pf-m-clock {
-    --pf-c-form-control--m-icon--BackgroundUrl: var(--pf-c-form-control--m-clock--BackgroundUrl);
+    &.pf-m-clock {
+      --pf-c-form-control--m-icon--BackgroundUrl: var(--pf-c-form-control--m-clock--BackgroundUrl);
+    }
   }
 
   @at-root select#{&} {
