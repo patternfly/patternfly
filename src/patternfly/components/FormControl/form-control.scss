@@ -124,7 +124,15 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   --pf-c-form-control--m-icon--BackgroundSizeY: var(--pf-c-form-control--FontSize);
   --pf-c-form-control--m-icon--icon--spacer: var(--pf-global--spacer--sm);
   --pf-c-form-control--m-icon--icon--PaddingRight: calc(var(--pf-c-form-control--inset--base) + var(--pf-c-form-control--invalid--BackgroundSizeX) + var(--pf-c-form-control--m-icon--icon--spacer) + var(--pf-c-form-control--m-icon--BackgroundSizeX) + var(--pf-c-form-control--m-icon--icon--spacer));
-
+  --pf-c-form-control--m-icon--invalid--BackgroundUrl: var(--pf-c-form-control--invalid--BackgroundUrl), var(--pf-c-form-control--m-icon--BackgroundUrl);
+  --pf-c-form-control--m-icon--invalid--BackgroundPosition: var(--pf-c-form-control--invalid--BackgroundPosition), calc(var(--pf-c-form-control--m-icon--BackgroundPositionX) - var(--pf-c-form-control--m-icon--icon--spacer) - var(--pf-c-form-control--invalid--BackgroundSizeX)) var(--pf-c-form-control--m-icon--BackgroundPositionY);
+  --pf-c-form-control--m-icon--invalid--BackgroundSize: var(--pf-c-form-control--invalid--BackgroundSize), var(--pf-c-form-control--m-icon--BackgroundSizeX) var(--pf-c-form-control--m-icon--BackgroundSizeY);
+  --pf-c-form-control--m-icon--success--BackgroundUrl: var(--pf-c-form-control--success--BackgroundUrl), var(--pf-c-form-control--m-icon--BackgroundUrl);
+  --pf-c-form-control--m-icon--success--BackgroundPosition: var(--pf-c-form-control--success--BackgroundPosition), calc(var(--pf-c-form-control--m-icon--BackgroundPositionX) - var(--pf-c-form-control--m-icon--icon--spacer) - var(--pf-c-form-control--success--BackgroundSizeX)) var(--pf-c-form-control--m-icon--BackgroundPositionY);
+  --pf-c-form-control--m-icon--success--BackgroundSize: var(--pf-c-form-control--success--BackgroundSize), var(--pf-c-form-control--m-icon--BackgroundSizeX) var(--pf-c-form-control--m-icon--BackgroundSizeY);
+  --pf-c-form-control--m-icon--m-warning--BackgroundUrl: var(--pf-c-form-control--m-warning--BackgroundUrl), var(--pf-c-form-control--m-icon--BackgroundUrl);
+  --pf-c-form-control--m-icon--m-warning--BackgroundPosition: var(--pf-c-form-control--m-warning--BackgroundPosition), calc(var(--pf-c-form-control--m-icon--BackgroundPositionX) - var(--pf-c-form-control--m-icon--icon--spacer) - var(--pf-c-form-control--m-warning--BackgroundSizeX)) var(--pf-c-form-control--m-icon--BackgroundPositionY);
+  --pf-c-form-control--m-icon--m-warning--BackgroundSize: var(--pf-c-form-control--m-warning--BackgroundSize), var(--pf-c-form-control--m-icon--BackgroundSizeX) var(--pf-c-form-control--m-icon--BackgroundSizeY);
 
   // Input m-calendar
   --pf-c-form-control--m-calendar--BackgroundUrl: #{pf-bg-svg($pf-c-form-control--m-calendar--Coordinates, $svg-color: $pf-c-form-control--m-calendar--Color)};
@@ -158,6 +166,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   font-size: var(--pf-c-form-control--FontSize);
   line-height: var(--pf-c-form-control--LineHeight);
   background-color: var(--pf-c-form-control--BackgroundColor);
+  background-repeat: no-repeat;
   border: var(--pf-c-form-control--BorderWidth) solid;
   border-color: var(--pf-c-form-control--BorderTopColor) var(--pf-c-form-control--BorderRightColor) var(--pf-c-form-control--BorderBottomColor) var(--pf-c-form-control--BorderLeftColor);
   border-radius: var(--pf-c-form-control--BorderRadius);
@@ -218,7 +227,6 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
 
     padding-bottom: var(--pf-c-form-control--invalid--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
     background-image: var(--pf-c-form-control--invalid--BackgroundUrl);
-    background-repeat: no-repeat;
     background-position: var(--pf-c-form-control--invalid--BackgroundPosition);
     background-size: var(--pf-c-form-control--invalid--BackgroundSize);
     border-bottom-width: var(--pf-c-form-control--invalid--BorderBottomWidth);
@@ -226,10 +234,9 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
     &.pf-m-icon {
       --pf-c-form-control--PaddingRight: var(--pf-c-form-control--m-icon--icon--PaddingRight);
 
-      background-image: var(--pf-c-form-control--invalid--BackgroundUrl), var(--pf-c-form-control--m-icon--BackgroundUrl);
-      background-repeat: no-repeat;
-      background-position: var(--pf-c-form-control--invalid--BackgroundPosition), calc(var(--pf-c-form-control--m-icon--BackgroundPositionX) - var(--pf-c-form-control--m-icon--icon--spacer) - var(--pf-c-form-control--invalid--BackgroundSizeX)) var(--pf-c-form-control--m-icon--BackgroundPositionY);
-      background-size: var(--pf-c-form-control--invalid--BackgroundSize), var(--pf-c-form-control--m-icon--BackgroundSizeX) var(--pf-c-form-control--m-icon--BackgroundSizeY);
+      background-image: var(--pf-c-form-control--m-icon--invalid--BackgroundUrl);
+      background-position: var(--pf-c-form-control--m-icon--invalid--BackgroundPosition);
+      background-size: var(--pf-c-form-control--m-icon--invalid--BackgroundSize);
     }
   }
 
@@ -239,7 +246,6 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
 
     padding-bottom: var(--pf-c-form-control--success--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
     background-image: var(--pf-c-form-control--success--BackgroundUrl);
-    background-repeat: no-repeat;
     background-position: var(--pf-c-form-control--success--BackgroundPosition);
     background-size: var(--pf-c-form-control--success--BackgroundSize);
     border-bottom-width: var(--pf-c-form-control--success--BorderBottomWidth);
@@ -247,10 +253,9 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
     &.pf-m-icon {
       --pf-c-form-control--PaddingRight: var(--pf-c-form-control--m-icon--icon--PaddingRight);
 
-      background-image: var(--pf-c-form-control--success--BackgroundUrl), var(--pf-c-form-control--m-icon--BackgroundUrl);
-      background-repeat: no-repeat;
-      background-position: var(--pf-c-form-control--success--BackgroundPosition), calc(var(--pf-c-form-control--m-icon--BackgroundPositionX) - var(--pf-c-form-control--m-icon--icon--spacer) - var(--pf-c-form-control--success--BackgroundSizeX)) var(--pf-c-form-control--m-icon--BackgroundPositionY);
-      background-size: var(--pf-c-form-control--success--BackgroundSize), var(--pf-c-form-control--m-icon--BackgroundSizeX) var(--pf-c-form-control--m-icon--BackgroundSizeY);
+      background-image: var(--pf-c-form-control--m-icon--success--BackgroundUrl);
+      background-position: var(--pf-c-form-control--m-icon--success--BackgroundPosition);
+      background-size: var(--pf-c-form-control--m-icon--success--BackgroundSize);
     }
   }
 
@@ -260,7 +265,6 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
 
     padding-bottom: var(--pf-c-form-control--m-warning--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
     background-image: var(--pf-c-form-control--m-warning--BackgroundUrl);
-    background-repeat: no-repeat;
     background-position: var(--pf-c-form-control--m-warning--BackgroundPosition);
     background-size: var(--pf-c-form-control--m-warning--BackgroundSize);
     border-bottom-width: var(--pf-c-form-control--m-warning--BorderBottomWidth);
@@ -268,10 +272,9 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
     &.pf-m-icon {
       --pf-c-form-control--PaddingRight: var(--pf-c-form-control--m-icon--icon--PaddingRight);
 
-      background-image: var(--pf-c-form-control--m-warning--BackgroundUrl), var(--pf-c-form-control--m-icon--BackgroundUrl);
-      background-repeat: no-repeat;
-      background-position: var(--pf-c-form-control--m-warning--BackgroundPosition), calc(var(--pf-c-form-control--m-icon--BackgroundPositionX) - var(--pf-c-form-control--m-icon--icon--spacer) - var(--pf-c-form-control--m-warning--BackgroundSizeX)) var(--pf-c-form-control--m-icon--BackgroundPositionY);
-      background-size: var(--pf-c-form-control--m-warning--BackgroundSize), var(--pf-c-form-control--m-icon--BackgroundSizeX) var(--pf-c-form-control--m-icon--BackgroundSizeY);
+      background-image: var(--pf-c-form-control--m-icon--m-warning--BackgroundUrl);
+      background-position: var(--pf-c-form-control--m-icon--m-warning--BackgroundPosition);
+      background-size: var(--pf-c-form-control--m-icon--m-warning--BackgroundSize);
     }
   }
 
@@ -279,7 +282,6 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
     --pf-c-form-control--PaddingLeft: var(--pf-c-form-control--m-search--PaddingLeft);
 
     background-image: var(--pf-c-form-control--m-search--BackgroundUrl);
-    background-repeat: no-repeat;
     background-position: var(--pf-c-form-control--m-search--BackgroundPosition);
     background-size: var(--pf-c-form-control--m-search--BackgroundSize);
   }
@@ -288,7 +290,6 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
     --pf-c-form-control--PaddingRight: var(--pf-c-form-control--m-icon--PaddingRight);
 
     background-image: var(--pf-c-form-control--m-icon--BackgroundUrl);
-    background-repeat: no-repeat;
     background-position: var(--pf-c-form-control--m-icon--BackgroundPositionX) var(--pf-c-form-control--m-icon--BackgroundPositionY);
     background-size: var(--pf-c-form-control--m-icon--BackgroundSizeX) var(--pf-c-form-control--m-icon--BackgroundSizeY);
   }
@@ -305,7 +306,6 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
     --pf-c-form-control--PaddingRight: var(--pf-c-form-control__select--PaddingRight);
 
     background-image: var(--pf-c-form-control__select--BackgroundUrl);
-    background-repeat: no-repeat;
     background-position: var(--pf-c-form-control__select--BackgroundPosition);
     background-size: var(--pf-c-form-control__select--BackgroundSize);
 
