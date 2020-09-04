@@ -142,4 +142,4 @@ Resizes horizontally
 | `.pf-m-search` | `.pf-c-form-control` | Modifies a form control for the search input. |
 | `.pf-m-icon` | `input.pf-c-form-control` | Modifies a form control text input to be able to specify a custom SVG background via `--pf-c-form-control--m-icon--BackgroundUrl`, and other optional vars for other background properties.
 | `.pf-m-calendar` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the calendar icon. |
-| `.pf-m-clock` | `.pf-c-form-control.pf-m-icon` | Modifies a form control for the search input. |
+| `.pf-m-clock` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the clock icon. |
