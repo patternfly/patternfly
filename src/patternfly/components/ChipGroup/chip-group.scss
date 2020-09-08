@@ -13,9 +13,6 @@
   --pf-c-chip-group--m-category--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-chip-group--m-category--BackgroundColor: var(--pf-global--BackgroundColor--200);
 
-  // Removable
-  --pf-c-chip-group--m-category--m-removable--PaddingRight: var(--pf-global--spacer--2xl);
-
   // Label in group
   --pf-c-chip-group__label--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-chip-group__label--FontSize: var(--pf-global--FontSize--sm);
@@ -32,6 +29,9 @@
   --pf-c-chip-group__list-item--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-chip-group__list-item--MarginBottom: var(--pf-global--spacer--xs);
 
+  // Main
+  --pf-c-chip-group__main--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
+
   position: relative;
 
   &.pf-m-category {
@@ -41,11 +41,21 @@
     padding-left: var(--pf-c-chip-group--m-category--PaddingLeft);
     background-color: var(--pf-c-chip-group--m-category--BackgroundColor);
     border-radius: var(--pf-c-chip-group--m-category--BorderRadius);
+  }
 
-    &.pf-m-removable {
-      --pf-c-chip-group--m-category--PaddingRight: var(--pf-c-chip-group--m-category--m-removable--PaddingRight);
+  &.pf-m-main {
+    flex-wrap: nowrap;
+    align-items: start;
+
+    .pf-c-chip-group__list {
+      display: inline;
+      font-size: 0; // fixes extra space added between inline elements
     }
   }
+}
+
+.pf-c-chip-group__main {
+  margin-bottom: var(--pf-c-chip-group__main--MarginBottom);
 }
 
 .pf-c-chip-group__list {
@@ -77,9 +87,7 @@
 }
 
 .pf-c-chip-group__close {
-  position: absolute;
-  top: var(--pf-c-chip-group__close--Top);
-  right: 0;
+  display: flex;
   margin-top: var(--pf-c-chip-group__close--MarginTop);
   margin-bottom: var(--pf-c-chip-group__close--MarginBottom);
 }
