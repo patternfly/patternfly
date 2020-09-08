@@ -57,6 +57,10 @@
         {{> @partial-block}}
       {{/table-text}}
     {{/table-button}}
+  {{else if table-th--IsColumnHelp}}
+    {{#> table-text}}
+      {{> @partial-block}}
+    {{/table-text}}
   {{else}}
     {{> @partial-block}}
   {{/if}}
