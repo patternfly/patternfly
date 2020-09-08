@@ -366,8 +366,6 @@
 }
 
 .pf-c-dropdown__menu-item {
-  @include pf-t-light;
-
   display: block;
   width: 100%;
   padding: var(--pf-c-dropdown__menu-item--PaddingTop) var(--pf-c-dropdown__menu-item--PaddingRight) var(--pf-c-dropdown__menu-item--PaddingBottom) var(--pf-c-dropdown__menu-item--PaddingLeft);
