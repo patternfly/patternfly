@@ -22,7 +22,10 @@
   --pf-c-progress--m-inside__indicator--MinWidth: var(--pf-global--spacer--xl);
   --pf-c-progress--m-inside__measure--Color: var(--pf-global--Color--light-100); // the measure needs to be white when moved inside the progress bar indicator
   --pf-c-progress--m-success--m-inside__measure--Color: var(--pf-global--Color--light-100); // remove at breaking change
+<<<<<<< HEAD
   --pf-c-progress--m-warning--m-inside__measure--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in warning state
+=======
+>>>>>>> fix(progress): added back removed var
   --pf-c-progress--m-inside__measure--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-progress--m-outside__measure--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-progress--m-sm__bar--Height: var(--pf-global--spacer--sm);
@@ -122,6 +125,7 @@
   &.pf-m-success {
     --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-success__bar--BackgroundColor);
     --pf-c-progress__status-icon--Color: var(--pf-c-progress--m-success__status-icon--Color);
+    --pf-c-progress--m-inside__measure--Color: var(--pf-c-progress--m-success--m-inside__measure--Color);
   }
 
   &.pf-m-warning {
