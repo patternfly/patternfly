@@ -15,6 +15,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__panel--FlexBasis: 100%;
   --pf-c-drawer__panel--md--FlexBasis: 50%;
   --pf-c-drawer__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
+  --pf-c-drawer__panel--MaxHeight: auto;
   --pf-c-drawer--m-panel-bottom__panel--md--MinHeight: 50%;
   --pf-c-drawer__panel--xl--MinWidth: #{pf-size-prem(450px)};
   --pf-c-drawer__panel--xl--FlexBasis: #{pf-size-prem(450px)};
@@ -195,6 +196,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   z-index: var(--pf-c-drawer__panel--ZIndex);
   flex-basis: var(--pf-c-drawer__panel--FlexBasis);
   order: 1;
+  max-height: var(--pf-c-drawer__panel--MaxHeight);
   overflow: auto;
   background-color: var(--pf-c-drawer__panel--BackgroundColor);
   box-shadow: var(--pf-c-drawer__panel--BoxShadow);
@@ -315,6 +317,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   .pf-c-drawer.pf-m-panel-bottom {
     --pf-c-drawer--m-expanded__panel--BoxShadow: var(--pf-c-drawer--m-expanded--m-panel-bottom__panel--BoxShadow);
+    --pf-c-drawer__panel--MaxHeight: 100%;
 
     min-width: auto;
     min-height: var(--pf-c-drawer--m-panel-bottom__panel--md--MinHeight);
