@@ -1,0 +1,8 @@
+<div class="pf-c-label-group__close{{#if label-group-close--modifier}} {{label-group-close--modifier}}{{/if}}"
+  {{#if label-group-close--attribute}}
+    {{{label-group-close--attribute}}}
+  {{/if}}>
+  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' label-group--id '-button ' label-group--id '-label" aria-label="Close label group" id="' label-group--id '-button"')}}
+    <i class="fas fa-times-circle" aria-hidden="true"></i>
+  {{/button}}
+</div>

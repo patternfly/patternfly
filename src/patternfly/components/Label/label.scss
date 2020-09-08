@@ -90,6 +90,16 @@
   --pf-c-label--m-outline--m-cyan__content--link--hover--before--BorderColor: var(--pf-global--palette--cyan-100);
   --pf-c-label--m-outline--m-cyan__content--link--focus--before--BorderColor: var(--pf-global--palette--cyan-100);
 
+  // Overflow
+  --pf-c-label--m-overflow__content--Color: var(--pf-global--link--Color);
+  --pf-c-label--m-overflow__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-label--m-overflow__content--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-label--m-overflow__content--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-label--m-overflow__content--link--hover--before--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-label--m-overflow__content--link--hover--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-label--m-overflow__content--link--focus--before--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-label--m-overflow__content--link--focus--before--BorderColor: var(--pf-global--BorderColor--300);
+
   // Content
   --pf-c-label__content--Color: var(--pf-global--Color--100);
 
@@ -117,6 +127,7 @@
   color: var(--pf-c-label--Color);
   white-space: nowrap;
   background-color: var(--pf-c-label--BackgroundColor);
+  border: 0;
   border-radius: var(--pf-c-label--BorderRadius);
 
   &.pf-m-blue {
@@ -190,17 +201,22 @@
     --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-outline__content--before--BorderColor);
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-outline--BackgroundColor);
 
-    // stylelint-disable selector-no-qualifying-type
-    a.pf-c-label__content {
-      // stylelint-enable selector-no-qualifying-type
-      &:hover {
-        --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-outline__content--link--hover--before--BorderWidth);
-        --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-outline__content--link--hover--before--BorderColor);
-      }
+    // stylelint-disable selector-no-qualifying-type, max-nesting-depth
+    a,
+    button {
+      @at-root .pf-c-label.pf-m-overflow,
+      &.pf-c-label__content {
+        // stylelint-enable selector-no-qualifying-type
+        &:hover {
+          --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-outline__content--link--hover--before--BorderWidth);
+          --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-outline__content--link--hover--before--BorderColor);
+        }
 
-      &:focus {
-        --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-outline__content--link--focus--before--BorderWidth);
-        --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-outline__content--link--focus--before--BorderColor);
+        &:focus {
+          --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-outline__content--link--focus--before--BorderWidth);
+          --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-outline__content--link--focus--before--BorderColor);
+        }
+        // stylelint-enable max-nesting-depth
       }
     }
   }
@@ -216,6 +232,17 @@
     margin-right: var(--pf-c-label__c-button--MarginRight);
     margin-bottom: var(--pf-c-label__c-button--MarginBottom);
     margin-left: var(--pf-c-label__c-button--MarginLeft);
+  }
+
+  &.pf-m-overflow {
+    --pf-c-label__content--Color: var(--pf-c-label--m-overflow__content--Color);
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-overflow__content--BackgroundColor);
+    --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-overflow__content--before--BorderWidth);
+    --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-overflow__content--before--BorderColor);
+    --pf-c-label__content--link--hover--before--BorderWidth: var(--pf-c-label--m-overflow__content--link--hover--before--BorderWidth);
+    --pf-c-label__content--link--hover--before--BorderColor: var(--pf-c-label--m-overflow__content--link--hover--before--BorderColor);
+    --pf-c-label__content--link--focus--before--BorderWidth: var(--pf-c-label--m-overflow__content--link--focus--before--BorderWidth);
+    --pf-c-label__content--link--focus--before--BorderColor: var(--pf-c-label--m-overflow__content--link--focus--before--BorderColor);
   }
 }
 
@@ -233,6 +260,7 @@
 
 .pf-c-label__content {
   color: var(--pf-c-label__content--Color);
+  border: 0;
 
   &::before {
     position: absolute;
@@ -246,24 +274,27 @@
   }
 
   // the content element can be used as a link
-  @at-root a#{&} {
-    cursor: pointer;
-    border: none;
+  @at-root {
+    a#{&},
+    button#{&} {
+      cursor: pointer;
+      border: none;
 
-    &,
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
+      &,
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
 
-    &:hover {
-      --pf-c-label__content--before--BorderWidth: var(--pf-c-label__content--link--hover--before--BorderWidth);
-      --pf-c-label__content--before--BorderColor: var(--pf-c-label__content--link--hover--before--BorderColor);
-    }
+      &:hover {
+        --pf-c-label__content--before--BorderWidth: var(--pf-c-label__content--link--hover--before--BorderWidth);
+        --pf-c-label__content--before--BorderColor: var(--pf-c-label__content--link--hover--before--BorderColor);
+      }
 
-    &:focus {
-      --pf-c-label__content--before--BorderWidth: var(--pf-c-label__content--link--focus--before--BorderWidth);
-      --pf-c-label__content--before--BorderColor: var(--pf-c-label__content--link--focus--before--BorderColor);
+      &:focus {
+        --pf-c-label__content--before--BorderWidth: var(--pf-c-label__content--link--focus--before--BorderWidth);
+        --pf-c-label__content--before--BorderColor: var(--pf-c-label__content--link--focus--before--BorderColor);
+      }
     }
   }
 }

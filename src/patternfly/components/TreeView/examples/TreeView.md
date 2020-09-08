@@ -1,5 +1,5 @@
 ---
-title: Tree view
+id: Tree view
 section: components
 cssPrefix: pf-c-tree-view
 beta: true

@@ -1,4 +1,13 @@
 .pf-c-code-editor {
+  // control
+  --pf-c-code-editor__control--Height: calc(var(--pf-global--spacer--form-element) + var(--pf-global--spacer--form-element) + var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md) - var(--pf-global--BorderWidth--sm));
+
+  // action group
+  --pf-c-code-editor__action-group--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-code-editor__action-group--c-button--m-control--Color: var(--pf-global--Color--200);
+  --pf-c-code-editor__action-group--c-button--m-control--hover--Color: var(--pf-global--Color--100);
+  --pf-c-code-editor__action-group--c-button--m-control--focus--Color: var(--pf-global--Color--100);
+
   // code
   --pf-c-code-editor__code--before--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-code-editor__code--before--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -24,15 +33,25 @@
 
 .pf-c-code-editor__control {
   position: relative;
-}
-
-.pf-c-code-editor__action-group-menu {
-  height: 300px;
-  background-color: #fff;
+  height: var(--pf-c-code-editor__control--Height);
 }
 
 .pf-c-code-editor__action-group {
+  position: absolute;
+  z-index: var(--pf-c-code-editor__action-group--ZIndex);
   display: flex;
+
+  .pf-c-button.pf-m-control {
+    --pf-c-button--m-control--Color: var(--pf-c-code-editor__action-group--c-button--m-control--Color);
+
+    &:hover {
+      --pf-c-code-editor__action-group--c-button--m-control--Color: var(--pf-c-code-editor__action-group--c-button--m-control--hover--Color);
+    }
+
+    &:focus {
+      --pf-c-code-editor__action-group--c-button--m-control--Color: var(--pf-c-code-editor__action-group--c-button--m-control--focus--Color);
+    }
+  }
 }
 
 .pf-c-code-editor__code {
@@ -53,7 +72,6 @@
 
 .pf-c-code-editor__tab {
   position: absolute;
-  top: var(--pf-c-code-editor__tab--Top);
   right: 0;
   z-index: var(--pf-c-code-editor__tab--ZIndex);
   padding: var(--pf-c-code-editor__tab--PaddingTop) var(--pf-c-code-editor__tab--PaddingRight) var(--pf-c-code-editor__tab--PaddingBottom) var(--pf-c-code-editor__tab--PaddingLeft);

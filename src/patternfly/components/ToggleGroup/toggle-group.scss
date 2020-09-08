@@ -12,18 +12,21 @@
   --pf-c-toggle-group__button--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-toggle-group__button--disabled--Color: var(--pf-global--disabled-color--100);
 
+  // first-last child
+  --pf-c-toggle-group__item--first-child__button--BorderTopLeftRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-toggle-group__item--first-child__button--BorderBottomLeftRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-toggle-group__item--last-child__button--BorderTopRightRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-toggle-group__item--last-child__button--BorderBottomRightRadius: var(--pf-global--BorderRadius--sm);
+
+  // icon
+  --pf-c-toggle-group__icon--text--MarginLeft: var(--pf-global--spacer--sm);
+
   // Light variation
   --pf-c-toggle-group__button--m-light--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Selected variation
   --pf-c-toggle-group__button--m-selected--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-toggle-group__button--m-selected--Color: var(--pf-global--Color--light-100);
-
-  // first-last child
-  --pf-c-toggle-group__item--first-child__button--BorderTopLeftRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-toggle-group__item--first-child__button--BorderBottomLeftRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-toggle-group__item--last-child__button--BorderTopRightRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-toggle-group__item--last-child__button--BorderBottomRightRadius: var(--pf-global--BorderRadius--sm);
 
   display: flex;
 }
@@ -78,4 +81,9 @@
 
     pointer-events: none;
   }
+}
+
+.pf-c-toggle-group__icon + .pf-c-toggle-group__text,
+.pf-c-toggle-group__text + .pf-c-toggle-group__icon {
+  margin-left: var(--pf-c-toggle-group__icon--text--MarginLeft);
 }

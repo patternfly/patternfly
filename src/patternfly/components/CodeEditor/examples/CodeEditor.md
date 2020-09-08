@@ -52,13 +52,10 @@ cssPrefix: pf-c-code-editor
         {{#> overflow-menu overflow-menu--id="overflow-menu-simple"}}
           {{#> overflow-menu-control overflow-menu-control--IsControl="true" overflow-menu-button--aria-label="Generic options"}}
             {{#> overflow-menu-dropdown-item}}
-              Item 1
+              Action 1
             {{/overflow-menu-dropdown-item}}
             {{#> overflow-menu-dropdown-item}}
-              Item 2
-            {{/overflow-menu-dropdown-item}}
-            {{#> overflow-menu-dropdown-item}}
-              Item 3
+              Action 2
             {{/overflow-menu-dropdown-item}}
           {{/overflow-menu-control}}
         {{/overflow-menu}}
@@ -97,13 +94,10 @@ cssPrefix: pf-c-code-editor
         {{#> overflow-menu overflow-menu--id="overflow-menu-simple"}}
           {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-control--IsControl="true" overflow-menu-button--aria-label="Generic options"}}
             {{#> overflow-menu-dropdown-item}}
-              Item 1
+              Action 1
             {{/overflow-menu-dropdown-item}}
             {{#> overflow-menu-dropdown-item}}
-              Item 2
-            {{/overflow-menu-dropdown-item}}
-            {{#> overflow-menu-dropdown-item}}
-              Item 3
+              Action 2
             {{/overflow-menu-dropdown-item}}
           {{/overflow-menu-control}}
         {{/overflow-menu}}

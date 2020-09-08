@@ -6,5 +6,7 @@
   {{#unless toolbar-expandable-content--IsExpanded}}
     hidden
   {{/unless}}>
-  {{> @partial-block}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>
