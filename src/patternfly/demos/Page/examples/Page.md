@@ -213,8 +213,10 @@ wrapperTag: div
     {{/page-template-breadcrumb}}
     {{#> page-template-title}}
     {{/page-template-title}}
-    {{#> page-template-gallery}}
+    {{#> page-template-gallery page-main-section--modifier="pf-m-fill"}}
     {{/page-template-gallery}}
+    {{#> page-template-footer}}
+    {{/page-template-footer}}
   {{/page-main}}
 {{/page}}
 ```
