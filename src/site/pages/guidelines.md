@@ -353,6 +353,10 @@ There is currently a bug in cssnano ([issue #64 on postcss-calc](https://github.
 
 PatternFly developers should avoid nested `calc()` CSS functions until this bug is resolved and the package is updated in the [patternfly repository](https://github.com/patternfly/patternfly). If you're interested in following this issue, you can do so in [issue #1295 on patternfly](https://github.com/patternfly/patternfly/issues/1295).
 
+#### Hover styles
+
+While the default styles applied to an element might not provide a visual indication of target area, the styles that display on hover should. To ensure that these styles accurately convey the target area of an element where the user can click, `:hover` styles should be applied to the clickable element of a component, and not to a larger wrapping element.
+
 ## References
 
 This guide is inspired by people we follow and respect:
