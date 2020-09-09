@@ -1,0 +1,11 @@
+<div class="ws-chart">
+  {{#if cardview-demo--chart--IsLineChart2}}
+    <img src="/static/assets/images/img_line-chart-2.png" alt="Line chart" />
+  {{else if cardview-demo--chart--IsThresholdChart}}
+    <img src="/static/assets/images/img_chart-threshold.png" alt="Threshold chart" />
+  {{else if cardview-demo--chart--IsStackChart}}
+    <img src="/static/assets/images/img_chart-stack.png" alt="Stack chart" />
+  {{else}}
+    <img src="/static/assets/images/img_line-chart-1.png" alt="Line Chart" />
+  {{/if}}
+</div>

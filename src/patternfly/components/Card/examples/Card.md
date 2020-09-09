@@ -79,6 +79,7 @@ cssPrefix: pf-c-card
   {{/card-body}}
 {{/card}}
 ```
+
 ### With only image in head
 ```hbs
 {{#> card card--id="card-image-head-example"}}
@@ -279,6 +280,21 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
+### No box shadow
+```hbs
+{{#> card card--id="card-no-box-shadow-example" card--modifier="pf-m-no-box-shadow"}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
 ### Expandable
 ```hbs
 {{#> card card--id="card-expandable-example"}}
@@ -333,6 +349,22 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
+### Expandable toggle on right
+```hbs
+{{#> card card--id="card-toggle-on-right-example"}}
+  {{#> card-header card-header--modifier="pf-m-toggle-right"}}
+    {{> card-header-toggle}}
+    {{#> card-actions}}
+      {{> card--dropdown}}
+      {{> card--check}}
+    {{/card-actions}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+      Title
+    {{/card-title}}
+  {{/card-header}}
+{{/card}}
+```
+
 ### Card with dividers between sections
 ```hbs
 {{#> card}}
@@ -384,4 +416,6 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selectable card for the selected state. |
 | `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background. |
 | `.pf-m-rounded` | `.pf-c-card` | Modifies the card to have rounded corners. |
+| `.pf-m-no-box-shadow` | `.pf-c-card` | Modifies the card to have rounded corners. |
 | `.pf-m-expanded` | `.pf-c-card` | Modifies the card for the expanded state. |
+| `.pf-m-toggle-right` | `.pf-c-card__header` | Modifies the card header toggle to be positioned at flex-end. |
