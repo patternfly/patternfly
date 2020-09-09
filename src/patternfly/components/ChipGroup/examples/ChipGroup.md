@@ -117,7 +117,7 @@ cssPrefix: pf-c-chip-group
 
 ### Chip group with categories
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category pf-m-main" chip-group--id="chip-group-with-categories"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories"}}
   {{#> chip-group-main}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
@@ -160,7 +160,7 @@ cssPrefix: pf-c-chip-group
 
 ### Chip group with categories overflow
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category pf-m-main" chip-group--id="chip-group-with-categories-overflow"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow"}}
   {{#> chip-group-main}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
@@ -210,7 +210,7 @@ cssPrefix: pf-c-chip-group
 
 ### Chip group with categories overflow expanded
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category pf-m-main" chip-group--id="chip-group-with-categories-overflow-expanded"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow-expanded"}}
   {{#> chip-group-main}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
@@ -280,7 +280,7 @@ cssPrefix: pf-c-chip-group
 
 ### Chip group with categories removable
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category pf-m-main" chip-group--id="Chip-group-with-categories-removable"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="Chip-group-with-categories-removable"}}
   {{#> chip-group-main}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
@@ -350,6 +350,76 @@ cssPrefix: pf-c-chip-group
   {{/chip-group-main}}
   {{> chip-group-close}}
 {{/chip-group}}
+
+Outdated - used for testing purposes.
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="Chip-group-with-categories-removable"}}
+    {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
+      Category one
+    {{/chip-group-label}}
+    {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
+      {{#> chip-group-list-item}}
+        {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
+            Chip one
+          {{/chip-text}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar ' chip-group--id 'chip_one_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar"')}}
+            <i class="fas fa-times" aria-hidden="true"></i>
+          {{/button}}
+        {{/chip}}
+      {{/chip-group-list-item}}
+      {{#> chip-group-list-item}}
+        {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar"')}}
+            Chip two
+          {{/chip-text}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar ' chip-group--id 'chip_two_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar"')}}
+            <i class="fas fa-times" aria-hidden="true"></i>
+          {{/button}}
+        {{/chip}}
+      {{/chip-group-list-item}}
+      {{#> chip-group-list-item}}
+        {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar"')}}
+            Chip three
+          {{/chip-text}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar ' chip-group--id 'chip_three_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar"')}}
+            <i class="fas fa-times" aria-hidden="true"></i>
+          {{/button}}
+        {{/chip}}
+      {{/chip-group-list-item}}
+      {{#> chip-group-list-item}}
+        {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_toolbar"')}}
+            Chip four
+          {{/chip-text}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_four_toolbar ' chip-group--id 'chip_four_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_four_toolbar"')}}
+            <i class="fas fa-times" aria-hidden="true"></i>
+          {{/button}}
+        {{/chip}}
+      {{/chip-group-list-item}}
+      {{#> chip-group-list-item}}
+        {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_toolbar"')}}
+            Chip five
+          {{/chip-text}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_five_toolbar ' chip-group--id 'chip_five_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_five_toolbar"')}}
+            <i class="fas fa-times" aria-hidden="true"></i>
+          {{/button}}
+        {{/chip}}
+      {{/chip-group-list-item}}
+      {{#> chip-group-list-item}}
+        {{#> chip}}
+          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_six_toolbar"')}}
+            Chip six
+          {{/chip-text}}
+          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_six_toolbar ' chip-group--id 'chip_six_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_six_toolbar"')}}
+            <i class="fas fa-times" aria-hidden="true"></i>
+          {{/button}}
+        {{/chip}}
+      {{/chip-group-list-item}}
+    {{/chip-group-list}}
+  {{> chip-group-close}}
+{{/chip-group}}
 ```
 
 ### Overview
@@ -380,4 +450,3 @@ The chip group requires the [chip component](/documentation/core/components/chip
 | `.pf-c-chip-group__main` | `<div>` | Initiates the container for the label and list elements so that they wrap together. |
 | `.pf-c-button` | `.pf-c-chip-group__close <button>` | Initiates the button used to remove the chip group. |
 | `.pf-m-category` | `.pf-c-chip-group` | Modifies the chip group to support category styling. |
-| `.pf-m-main` | `.pf-c-chip-group` | Modifies the chip group to support the main element. |
