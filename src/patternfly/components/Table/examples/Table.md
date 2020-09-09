@@ -128,7 +128,7 @@ import './Table.css'
 
 ### Sortable
 ```hbs
-{{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
+{{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lgs" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
@@ -236,10 +236,12 @@ import './Table.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__sort` | `<th>` | Initiates a table header sort cell. **Required for sortable table columns** |
+| `.pf-c-table__help` | `<th>` | Initiates a table header with a help tooltip cell. **Required for sortable table columns** |
 | `.pf-c-table__button` | `<button>`, `<a>` | Initiates a table header sort cell button. If sorting a table row generates a unique URL that can be used as the `href` value for this element, use an `<a>`. Otherwise, use a `<button>`. **Required for sortable table columns** |
 | `.pf-c-table__button-content` | `<div>` | Initiates a table header sort cell button content container. **Required for sortable table columns** Note: this is only necessary because `<button>` does not support`display: grid`. |
 | `.pf-c-table__sort-indicator` | `.pf-c-table__sort > .pf-c-table__button > span` | Initiates a sort indicator. **Required for sortable table columns** |
 | `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
+| `.pf-m-help` | `.pf-c-table__sort` | Modifies a sortable table header to accommodate a help tooltip. **Required for sortable table columns with help tooltips** |
 | `.fa-arrows-alt-v` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-up` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-down` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
