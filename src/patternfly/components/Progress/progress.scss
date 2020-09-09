@@ -13,13 +13,16 @@
   --pf-c-progress__indicator--BackgroundColor: var(--pf-c-progress__bar--before--BackgroundColor);
 
   // Modifier variables
-  --pf-c-progress--m-danger__bar--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-progress--m-success__bar--BackgroundColor: var(--pf-global--success-color--100);
-  --pf-c-progress--m-danger__status-icon--Color: var(--pf-global--danger-color--100);
+  --pf-c-progress--m-warning__bar--BackgroundColor: var(--pf-global--warning-color--100);
+  --pf-c-progress--m-danger__bar--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-progress--m-success__status-icon--Color: var(--pf-global--success-color--100);
+  --pf-c-progress--m-warning__status-icon--Color: var(--pf-global--warning-color--100);
+  --pf-c-progress--m-danger__status-icon--Color: var(--pf-global--danger-color--100);
   --pf-c-progress--m-inside__indicator--MinWidth: var(--pf-global--spacer--xl);
   --pf-c-progress--m-inside__measure--Color: var(--pf-global--Color--light-100); // the measure needs to be white when moved inside the progress bar indicator
   --pf-c-progress--m-success--m-inside__measure--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in success state
+  --pf-c-progress--m-warning--m-inside__measure--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in warning state
   --pf-c-progress--m-inside__measure--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-progress--m-outside__measure--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-progress--m-sm__bar--Height: var(--pf-global--spacer--sm);
@@ -110,13 +113,19 @@
   }
 
   // status modifiers
-  &.pf-m-success { // set color variables to the success colors
+  &.pf-m-success {
     --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-success__bar--BackgroundColor);
     --pf-c-progress__status-icon--Color: var(--pf-c-progress--m-success__status-icon--Color);
     --pf-c-progress--m-inside__measure--Color: var(--pf-c-progress--m-success--m-inside__measure--Color);
   }
 
-  &.pf-m-danger { // set color variables to the danger colors
+  &.pf-m-warning {
+    --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-warning__bar--BackgroundColor);
+    --pf-c-progress__status-icon--Color: var(--pf-c-progress--m-warning__status-icon--Color);
+    --pf-c-progress--m-inside__measure--Color: var(--pf-c-progress--m-warning--m-inside__measure--Color);
+  }
+
+  &.pf-m-danger {
     --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-danger__bar--BackgroundColor);
     --pf-c-progress__status-icon--Color: var(--pf-c-progress--m-danger__status-icon--Color);
   }
