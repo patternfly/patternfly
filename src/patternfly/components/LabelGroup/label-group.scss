@@ -8,6 +8,7 @@
   --pf-c-label-group--m-category--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-label-group--m-category--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-label-group--m-category--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-label-group--m-vertical--m-category--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-label-group--m-category--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-label-group--m-category--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-label-group--m-category--BorderColor: var(--pf-global--BorderColor--300);
@@ -52,6 +53,7 @@
     --pf-c-label-group__close--MarginLeft: var(--pf-c-label-group--m-vertical__close--MarginLeft);
     --pf-c-label-group__close--MarginBottom: 0;
     --pf-c-label-group__close--MarginRight: var(--pf-c-label-group--m-vertical__close--MarginRight);
+    --pf-c-label-group--m-category--PaddingRight: var(--pf-c-label-group--m-vertical--m-category--PaddingRight);
 
     &.pf-c-label-group,
     .pf-c-label-group__list {
