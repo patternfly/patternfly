@@ -149,7 +149,7 @@
   --pf-c-table__sort__button--focus__sort-indicator--Color: var(--pf-global--Color--100);
 
   // Help
-  --pf-c-table__help--MinWidth: 11ch;
+  --pf-c-table--th--m-help--MinWidth: 11ch;
 
   // Table header popover
   --pf-c-table__column-help--MarginLeft: var(--pf-global--spacer--xs);
@@ -371,8 +371,8 @@
     min-width: var(--pf-c-table__sort--MinWidth);
   }
 
-  .pf-c-table__help {
-    min-width: var(--pf-c-table__help--MinWidth);
+  .pf-m-help {
+    min-width: var(--pf-c-table--th--m-help--MinWidth);
   }
 
   thead,
@@ -746,7 +746,7 @@
   }
 
   &.pf-m-help {
-    --pf-c-table__sort--MinWidth: var(--pf-c-table__sort--m-help--MinWidth);
+    --pf-c-table--th--m-help--MinWidth: var(--pf-c-table__sort--m-help--MinWidth);
   }
 }
 

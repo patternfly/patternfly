@@ -128,7 +128,7 @@ import './Table.css'
 
 ### Sortable
 ```hbs
-{{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lgs" table--attribute='aria-label="This is a sortable table example"'}}
+{{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
