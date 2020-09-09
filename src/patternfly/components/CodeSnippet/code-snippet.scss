@@ -1,0 +1,69 @@
+.pf-c-code-snippet {
+  // action group
+  --pf-c-code-snippet__controls--c-button--m-control--Color: var(--pf-global--Color--200);
+  --pf-c-code-snippet__controls--c-button--m-control--hover--Color: var(--pf-global--Color--100);
+  --pf-c-code-snippet__controls--c-button--m-control--focus--Color: var(--pf-global--Color--100);
+
+  // code
+  --pf-c-code-snippet__code--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-code-snippet__code--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-code-snippet__code--BackgroundColor: var(--pf-global--BackgroundColor--100);
+
+  // tab
+  --pf-c-code-snippet__tab--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-code-snippet__tab--Color: var(--pf-global--Color--200);
+  --pf-c-code-snippet__tab--Top: var(--pf-c-code-snippet__code--before--BorderWidth);
+  --pf-c-code-snippet__tab--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-code-snippet__tab--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-code-snippet__tab--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-code-snippet__tab--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-code-snippet__tab--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-code-snippet__tab--BorderTopColor: var(--pf-global--BorderColor--100);
+  --pf-c-code-snippet__tab--BorderRightColor: var(--pf-global--BorderColor--100);
+  --pf-c-code-snippet__tab--BorderBottomColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-code-snippet__tab--BorderLeftColor: var(--pf-global--BorderColor--100);
+
+  // control
+  --pf-c-code-snippet__header--Top: var(--pf-c-code-snippet__tab--BorderWidth);
+
+  width: 100%;
+}
+
+.pf-c-code-snippet__header {
+  position: relative;
+  top: var(--pf-c-code-snippet__header--Top);
+  display: flex;
+  align-items: flex-end;
+}
+
+.pf-c-code-snippet__controls {
+  position: relative;
+  display: flex;
+
+  .pf-c-button.pf-m-control {
+    --pf-c-button--m-control--Color: var(--pf-c-code-snippet__controls--c-button--m-control--Color);
+
+    &:hover {
+      --pf-c-code-snippet__controls--c-button--m-control--Color: var(--pf-c-code-snippet__controls--c-button--m-control--hover--Color);
+    }
+
+    &:focus {
+      --pf-c-code-snippet__controls--c-button--m-control--Color: var(--pf-c-code-snippet__controls--c-button--m-control--focus--Color);
+    }
+  }
+}
+
+.pf-c-code-snippet__code {
+  background-color: var(--pf-c-code-snippet__code--BackgroundColor);
+  border: var(--pf-c-code-snippet__code--BorderWidth) solid;
+  border-color: var(--pf-c-code-snippet__code--BorderColor);
+}
+
+.pf-c-code-snippet__tab {
+  padding: var(--pf-c-code-snippet__tab--PaddingTop) var(--pf-c-code-snippet__tab--PaddingRight) var(--pf-c-code-snippet__tab--PaddingBottom) var(--pf-c-code-snippet__tab--PaddingLeft);
+  margin-left: auto;
+  color: var(--pf-c-code-snippet__tab--Color);
+  background-color: var(--pf-c-code-snippet__tab--BackgroundColor);
+  border: var(--pf-c-code-snippet__tab--BorderWidth) solid;
+  border-color: var(--pf-c-code-snippet__tab--BorderTopColor) var(--pf-c-code-snippet__tab--BorderRightColor) var(--pf-c-code-snippet__tab--BorderBottomColor) var(--pf-c-code-snippet__tab--BorderLeftColor);
+}
