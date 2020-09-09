@@ -150,6 +150,19 @@
   --pf-c-button__icon--m-start--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-button__icon--m-end--MarginLeft: var(--pf-global--spacer--xs);
 
+  // Progress
+  --pf-c-button__progress--width: calc(var(--pf-global--icon--FontSize--md) + var(--pf-global--spacer--sm)); // matches medium spinner diameter plus a spacer
+  --pf-c-button__progress--Opacity: 0;
+  --pf-c-button__progress--TranslateY: -50%;
+  --pf-c-button__progress--Top: 50%;
+  --pf-c-button__progress--Left: var(--pf-global--spacer--md);
+  --pf-c-button--m-progress--TransitionProperty: padding;
+  --pf-c-button--m-progress--TransitionDuration: var(--pf-global--TransitionDuration);
+  --pf-c-button--m-progress--PaddingRight: calc(var(--pf-global--spacer--md) + var(--pf-c-button__progress--width) / 2);
+  --pf-c-button--m-progress--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-button__progress--width) / 2);
+  --pf-c-button--m-in-progress--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-button--m-in-progress--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-button__progress--width));
+
   position: relative;
   display: inline-block;
   padding: var(--pf-c-button--PaddingTop) var(--pf-c-button--PaddingRight) var(--pf-c-button--PaddingBottom) var(--pf-c-button--PaddingLeft);
@@ -478,6 +491,18 @@
 
     cursor: default;
   }
+
+  &.pf-m-progress {
+    --pf-c-button--PaddingRight: var(--pf-c-button--m-progress--PaddingRight);
+    --pf-c-button--PaddingLeft: var(--pf-c-button--m-progress--PaddingLeft);
+
+    transition: var(--pf-c-button--m-progress--TransitionProperty) var(--pf-c-button--m-progress--TransitionDuration);
+  }
+
+  &.pf-m-in-progress {
+    --pf-c-button--PaddingRight: var(--pf-c-button--m-in-progress--PaddingRight);
+    --pf-c-button--PaddingLeft: var(--pf-c-button--m-in-progress--PaddingLeft);
+  }
 }
 
 .pf-c-button__icon {
@@ -487,6 +512,18 @@
 
   &.pf-m-end {
     margin-left: var(--pf-c-button__icon--m-end--MarginLeft);
+  }
+}
+
+.pf-c-button__progress {
+  position: absolute;
+  top: var(--pf-c-button__progress--Top);
+  left: var(--pf-c-button__progress--Left);
+  line-height: 1;
+  transform: translateY(var(--pf-c-button__progress--TranslateY));
+
+  .pf-c-spinner {
+    --pf-c-spinner--Color: currentColor;
   }
 }
 
