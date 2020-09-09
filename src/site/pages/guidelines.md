@@ -355,7 +355,7 @@ PatternFly developers should avoid nested `calc()` CSS functions until this bug 
 
 #### Hover styles
 
-While the default styles applied to an element might not provide a visual indication of target area, the styles that display on hover should. To ensure that these styles accurately convey to the target area of an element where the user can click, `:hover` styles should be applied to the clickable element of a component, and not to a larger wrapping element.
+While the default styles applied to an element might not provide a visual indication of target area, the styles that display on hover should. To ensure that these styles accurately convey the target area of an element where the user can click, `:hover` styles should be applied to the clickable element of a component, and not to a larger wrapping element.
 
 ## References
 
