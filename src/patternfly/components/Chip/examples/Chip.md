@@ -41,7 +41,7 @@ cssPrefix: pf-c-chip
 {{/chip}}
 <br>
 <br>
-{{#> chip chip--type="div" chip--modifier="pf-m-read-only"}}
+{{#> chip chip--type="div"}}
   {{#> chip-text}}
     Read-only chip
   {{/chip-text}}
