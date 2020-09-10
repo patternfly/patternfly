@@ -177,6 +177,18 @@ cssPrefix: pf-c-progress
 }}
 {{/progress}}
 ```
+
+### Truncate description
+```hbs
+{{#> progress
+  progress__value="33"
+  progress__description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis ultricies lectus, eu lobortis mauris. Morbi pretium arcu id rhoncus mollis. Donec accumsan tincidunt enim nec varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti."
+  progress__id="progress-truncate-description-example"
+  progress-description--modifier="pf-m-truncate"
+}}
+{{/progress}}
+```
+
 ### Non-percantage progress
 If the status that displays with the bar is not a percentage, then the ARIA tag `aria-valuetext` should be used to provide this status to screen reader users. This is the only case when setting the `aria-valuemax` to a value other than "100" is recommended, given how different screen readers handle these attributes.
 
@@ -227,3 +239,4 @@ If this component is describing the loading progress of a particular region of a
 | `.pf-m-success` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a success state. |
 | `.pf-m-warning` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a warning state. |
 | `.pf-m-danger` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a danger (failure) state. |
+| `.pf-m-truncate` | `.pf-c-progress__description` | Modifies the description to display a single line and truncate any overflow text with ellipses. |

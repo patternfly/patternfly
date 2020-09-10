@@ -143,6 +143,10 @@
 .pf-c-progress__description {
   word-break: break-word;
   grid-column: 1 / 2;
+
+  &.pf-m-truncate {
+    @include pf-text-overflow;
+  }
 }
 
 // the progress__status is displayed in the upper right
