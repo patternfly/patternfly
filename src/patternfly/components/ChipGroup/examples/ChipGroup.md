@@ -280,7 +280,7 @@ cssPrefix: pf-c-chip-group
 
 ### Chip group with categories removable
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="Chip-group-with-categories-removable"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-removable"}}
   {{#> chip-group-main}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
@@ -351,7 +351,9 @@ cssPrefix: pf-c-chip-group
   {{> chip-group-close}}
 {{/chip-group}}
 
-Outdated - used for testing purposes.
+
+<br><br>
+#### Outdated - used for testing purposes.
 {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="Chip-group-with-categories-removable"}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
