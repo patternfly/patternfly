@@ -666,8 +666,8 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-
-```hbs title=Text-modifiers
+### Text-modifiers
+```hbs
 {{#> data-list data-list--id="data-list-with-text-modifiers" data-list--attribute='aria-label="Data list with text modifiers"'}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
@@ -746,7 +746,8 @@ When a list item includes more than one block of content, it can be difficult fo
 {{/data-list}}
 ```
 
-```hbs title=Text-modifiers-data-list-text
+### Text-modifiers-data-list-text
+```hbs
 {{#> data-list data-list--id="data-list-with-text-modifiers-and-text" data-list--attribute='aria-label="Data list with modifiers and text"'}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
@@ -781,9 +782,9 @@ When a list item includes more than one block of content, it can be difficult fo
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-data-list__text` | `*` | Inserts the data list text element. Use this class to modify specific text directly. |
-| `.pf-m-truncate` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list cell so that text is truncated. |
-| `.pf-m-break-word` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list cell so that text breaks to the next line. |
-| `.pf-m-nowrap` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list cell so that text does not wrap to the next line. |
+| `.pf-m-truncate` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list element so that text is truncated. |
+| `.pf-m-break-word` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list element so that text breaks to the next line. |
+| `.pf-m-nowrap` | `.pf-c-data-list`, `.pf-c-data-list__item-row`, `.pf-c-data-list__cell`, `.pf-c-data-list__text` | Modifies the data list element so that text does not wrap to the next line. |
 
 
 ## Documentation
