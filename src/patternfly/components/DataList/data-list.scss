@@ -299,9 +299,9 @@
   border: 0;
 
   &:hover {
-    cursor: grab;
-
     --pf-c-data-list__item-draggable-button-icon--Color: var(--pf-c-data-list__item-draggable-button--hover__draggable-icon--Color);
+
+    cursor: grab;
   }
 
   &:focus {

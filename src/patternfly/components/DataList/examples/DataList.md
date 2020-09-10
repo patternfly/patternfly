@@ -676,7 +676,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button data-list-item-draggable-button--modifier="pf-m-disabled" data-list-item-draggable-button--attribute=(concat 'tabindex="-1" id="' data-list--id '-draggable-button-1" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-1 ' data-list--id '-item-1"')}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--modifier="pf-m-disabled" data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-1" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-1 ' data-list--id '-item-1" disabled')}}
         {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1" checked')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -708,7 +708,7 @@ When a list item includes more than one block of content, it can be difficult fo
   {{#> data-list-item data-list-item--modifier="pf-m-ghost-row" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-         {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-3" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-3 ' data-list--id '-item-3"')}}
+         {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-3" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-3 ' data-list--id '-item-3" disabled')}}
         {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check3" aria-labelledby="' data-list--id '-item3" checked disabled')}}{{/data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -737,16 +737,14 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 {{/data-list}}
-<div class="pf-screen-reader">
+<div class="pf-screen-reader" aria-live="assertive">
   This is the aria-live section that provides real-time feedback to the user.
-  
 </div>
 ```
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `tabindex="0"` | `.pf-c-data-list__item.pf-m-draggable` | Inserts the draggable row into the tab order of the page so that it is focusable. **Required** |
 | `aria-pressed="true or false"` | `.pf-c-data-list__item-draggable-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. |
 | `aria-live` | `.pf-c-data-list__cell-text` | **Highly Recommended** to give screen reader users live feedback about what's happening during interaction with the data list, both during drag and drop interactions and keyboard interactions. |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-data-list__item-draggable-button` | **Highly recommended** Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. The example here uses a `<div id="[]"></div>` |
