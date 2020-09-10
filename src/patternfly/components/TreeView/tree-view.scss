@@ -27,6 +27,9 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node-toggle--MinWidth: var(--pf-global--spacer--lg);
   --pf-c-tree-view__node-toggle--MinHeight: var(--pf-c-tree-view__node-toggle--icon--MinWidth);
 
+  // Toggle icon
+  --pf-c-tree-view__node-toggle--Transition: var(--pf-global--Transition);
+
   // check
   --pf-c-tree-view__node-check--MarginRight: var(--pf-global--spacer--sm);
 
@@ -97,6 +100,10 @@ $pf-c-tree-view--MaxNesting: 10;
       --pf-c-badge--m-read--BackgroundColor: var(--pf-c-tree-view__node-count--c-badge--m-read--BackgroundColor);
     }
   }
+}
+
+.pf-c-tree-view__node-toggle-icon {
+  transition: var(--pf-c-tree-view__node-toggle--Transition);
 }
 
 .pf-c-tree-view__node-check {
