@@ -21,7 +21,7 @@
   --pf-c-progress--m-danger__status-icon--Color: var(--pf-global--danger-color--100);
   --pf-c-progress--m-inside__indicator--MinWidth: var(--pf-global--spacer--xl);
   --pf-c-progress--m-inside__measure--Color: var(--pf-global--Color--light-100); // the measure needs to be white when moved inside the progress bar indicator
-  --pf-c-progress--m-success--m-inside__measure--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in success state
+  --pf-c-progress--m-success--m-inside__measure--Color: var(--pf-global--Color--light-100); // remove at breaking change
   --pf-c-progress--m-warning--m-inside__measure--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in warning state
   --pf-c-progress--m-inside__measure--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-progress--m-outside__measure--FontSize: var(--pf-global--FontSize--sm);
@@ -32,8 +32,9 @@
 
   // Component styles
   display: grid;
+  align-items: end;
   grid-gap: var(--pf-c-progress--GridGap);
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr auto;
 
   // Modifiers
@@ -112,6 +113,11 @@
     }
   }
 
+  &.pf-m-outside,
+  &.pf-m-singleline {
+    grid-template-columns: 1fr fit-content(50%);
+  }
+
   // status modifiers
   &.pf-m-success {
     --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-success__bar--BackgroundColor);
@@ -135,14 +141,20 @@
 
 // the progress__description is displayed above the progress bar on the left
 .pf-c-progress__description {
+  word-break: break-word;
   grid-column: 1 / 2;
+
+  &.pf-m-truncate {
+    @include pf-text-overflow;
+  }
 }
 
 // the progress__status is displayed in the upper right
 .pf-c-progress__status {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  align-self: end;
+  text-align: right;
+  word-break: break-word;
 }
 
 // the progress__status-icon is an icon displayed always in the upper right
