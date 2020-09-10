@@ -20,12 +20,12 @@
   --pf-c-code-editor__main--m-drag-hover--after--Opacity: .1;
 
   // code
-  --pf-c-code-editor__code--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-code-editor__code--FontFamily: var(--pf-global--FontFamily--monospace);
   --pf-c-code-editor__code--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-code-editor__code--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-code-editor__code--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-code-editor__code--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-code-editor__code-pre--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-code-editor__code-pre--FontFamily: var(--pf-global--FontFamily--monospace);
 
   // tab
   --pf-c-code-editor__tab--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -42,8 +42,6 @@
 
   // tab text
   --pf-c-code-editor__tab-icon--text--MarginLeft: var(--pf-global--spacer--sm);
-
-  width: 100%;
 
   &.pf-m-read-only {
     --pf-c-code-editor__main--BackgroundColor: var(--pf-c-code-editor--m-read-only__main--BackgroundColor);
@@ -132,10 +130,10 @@
 .pf-c-code-editor__code {
   position: relative;
   padding: var(--pf-c-code-editor__code--PaddingTop) var(--pf-c-code-editor__code--PaddingRight) var(--pf-c-code-editor__code--PaddingBottom) var(--pf-c-code-editor__code--PaddingLeft);
-  font-family: var(--pf-c-code-editor__code--FontFamily);
-  font-size: var(--pf-c-code-editor__code--FontSize);
 
-  pre {
+  .pf-c-code-editor__code-pre {
+    font-family: var(--pf-c-code-editor__code-pre--FontFamily);
+    font-size: var(--pf-c-code-editor__code-pre--FontSize);
     white-space: pre-wrap;
   }
 }
