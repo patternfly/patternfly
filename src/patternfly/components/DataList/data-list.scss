@@ -67,12 +67,12 @@
   --pf-c-data-list__cell--cell--PaddingTop: 0;
   --pf-c-data-list__cell--cell--md--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-data-list__cell--m-icon--cell--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-data-list__cell--MinWidth: initial;
-  --pf-c-data-list__cell--Overflow: visible;
-  --pf-c-data-list__cell--TextOverflow: clip;
-  --pf-c-data-list__cell--WhiteSpace: normal;
-  --pf-c-data-list__cell--WordBreak: normal;
-  --pf-c-data-list__cell--m-truncate--MinWidth: 5ch;
+  --pf-c-data-list--cell--MinWidth: initial;
+  --pf-c-data-list--cell--Overflow: visible;
+  --pf-c-data-list--cell--TextOverflow: clip;
+  --pf-c-data-list--cell--WhiteSpace: normal;
+  --pf-c-data-list--cell--WordBreak: normal;
+  --pf-c-data-list--cell--m-truncate--MinWidth: 5ch;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-data-list__cell--cell--PaddingTop: var(--pf-c-data-list__cell--cell--md--PaddingTop);
@@ -189,19 +189,19 @@
 .pf-c-data-list__cell,
 .pf-c-data-list__text {
   &.pf-m-truncate {
-    --pf-c-data-list__cell--MinWidth: var(--pf-c-data-list__cell--m-truncate--MinWidth);
-    --pf-c-data-list__cell--Overflow: hidden;
-    --pf-c-data-list__cell--TextOverflow: ellipsis;
-    --pf-c-data-list__cell--WhiteSpace: nowrap;
+    --pf-c-data-list--cell--MinWidth: var(--pf-c-data-list__cell--m-truncate--MinWidth);
+    --pf-c-data-list--cell--Overflow: hidden;
+    --pf-c-data-list--cell--TextOverflow: ellipsis;
+    --pf-c-data-list--cell--WhiteSpace: nowrap;
   }
 
   &.pf-m-break-word {
-    --pf-c-data-list__cell--WordBreak: break-word;
-    --pf-c-data-list__cell--WhiteSpace: normal;
+    --pf-c-data-list--cell--WordBreak: break-word;
+    --pf-c-data-list--cell--WhiteSpace: normal;
   }
 
   &.pf-m-nowrap {
-    --pf-c-data-list__cell--WhiteSpace: nowrap;
+    --pf-c-data-list--cell--WhiteSpace: nowrap;
   }
 }
 
@@ -402,12 +402,12 @@
 
 .pf-c-data-list__text,
 .pf-c-data-list__cell {
-  min-width: var(--pf-c-data-list__cell--MinWidth);
+  min-width: var(--pf-c-data-list--cell--MinWidth);
   max-width: 100%;
-  overflow: var(--pf-c-data-list__cell--Overflow);
-  text-overflow: var(--pf-c-data-list__cell--TextOverflow);
-  word-break: var(--pf-c-data-list__cell--WordBreak);
-  white-space: var(--pf-c-data-list__cell--WhiteSpace);
+  overflow: var(--pf-c-data-list--cell--Overflow);
+  text-overflow: var(--pf-c-data-list--cell--TextOverflow);
+  word-break: var(--pf-c-data-list--cell--WordBreak);
+  white-space: var(--pf-c-data-list--cell--WhiteSpace);
 }
 
 // Expandable content
