@@ -56,6 +56,7 @@ cssPrefix: pf-c-data-list
 | `.pf-c-data-list__item-row` | `<div>` | Initiates a data list item row. **Required** |
 | `.pf-c-data-list__item-content` | `<div>` | Initiates a container for data list content. **Required**|
 | `.pf-c-data-list__cell` | `*` | Initiates a data list content cell. **Required** |
+| `.pf-c-data-list__cell-text` | `<span>` | Initiates a data list content cell text element. | 
 | `.pf-m-align-left` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. |
 | `.pf-m-no-fill` | `.pf-c-data-list__cell` | Modifies a data list cell to not fill the available horizontal space. |
 | `.pf-m-align-right` | `.pf-c-data-list__cell` | Modifies a data list cell to align-right. |
@@ -665,6 +666,99 @@ When a list item includes more than one block of content, it can be difficult fo
   {{/data-list-item}}
 {{/data-list}}
 ```
+
+### Draggable
+```hbs
+<div id="draggable-help">
+  Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
+</div>
+{{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--modifier="pf-m-disabled" data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-1" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-1 ' data-list--id '-item-1" disabled')}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1" checked')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-item1"')}}
+            Draggable icon disabled
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-2" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-2 ' data-list--id '-item-2"')}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check2" aria-labelledby="' data-list--id '-item2" checked')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-item2"')}}
+            List item
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--modifier="pf-m-ghost-row" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+         {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-3" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-3 ' data-list--id '-item-3" disabled')}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check3" aria-labelledby="' data-list--id '-item3" checked disabled')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-item3"')}}
+            Ghost row
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+{{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-4" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-4 ' data-list--id '-item-4"')}}
+        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check4" aria-labelledby="' data-list--id '-item4" checked')}}{{/data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-item4"')}}
+            List item
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+<div class="pf-screen-reader" aria-live="assertive">
+  This is the aria-live section that provides real-time feedback to the user.
+</div>
+```
+
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-pressed="true or false"` | `.pf-c-data-list__item-draggable-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. |
+| `aria-live` | `.pf-c-data-list__cell-text` | **Highly Recommended** to give screen reader users live feedback about what's happening during interaction with the data list, both during drag and drop interactions and keyboard interactions. |
+| `aria-describedby="[id value of applicable content]"` | `.pf-c-data-list__item-draggable-button` | **Highly recommended** Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. The example here uses a `<div id="[]"></div>` |
+| `aria-labelledby="[id value of .pf-c-data-list__item-draggable-button] [id value of .pf-c-data-list__cell-text]"]"` | `.pf-c-data-list__item-draggable-button` | Provides an accessible name for the draggable button. |
+| `id="[]"` | `.pf-c-data-list__item-draggable-button`, `.pf-c-data-list__cell-text` | Gives the button and the text element accessible IDs |
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-data-list__item-draggable-button` | `<button>` | Initiates the draggable button. Use for drag and drop. |
+| `.pf-c-data-list__item-draggable-icon` | `<span>` | Initiates the draggable button icon. |
+| `.pf-m-draggable` | `.pf-c-data-list__item` | Modifies a data list item so that it is draggable. |
+| `.pf-m-ghost-row` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a draggable data list item to be the ghost row. |
+| `.pf-m-disabled` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the disabled state. |
 
 ### Text-modifiers
 ```hbs
