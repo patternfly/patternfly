@@ -11,17 +11,15 @@ cssPrefix: pf-c-code-editor
 {{#> code-editor}}
   {{#> code-editor-header}}
     {{#> code-editor-controls}}
-      {{#> input-group}}
-        {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Copy to clipboard"'}}
-          <i class="fas fa-copy" aria-hidden="true"></i>
-        {{/button}}
-        {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Download code"'}}
-          <i class="fas fa-download"></i>
-        {{/button}}
-        {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Upload code"'}}
-          <i class="fas fa-upload"></i>
-        {{/button}}
-      {{/input-group}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Copy to clipboard"'}}
+        <i class="fas fa-copy" aria-hidden="true"></i>
+      {{/button}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Download code"'}}
+        <i class="fas fa-download"></i>
+      {{/button}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Upload code"'}}
+        <i class="fas fa-upload"></i>
+      {{/button}}
     {{/code-editor-controls}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
@@ -34,7 +32,7 @@ cssPrefix: pf-c-code-editor
   {{/code-editor-header}}
   {{#> code-editor-main}}
     {{#> code-editor-code}}
-      code goes here 
+      code goes here
     {{/code-editor-code}}
   {{/code-editor-main}}
 {{/code-editor}}
@@ -45,17 +43,15 @@ cssPrefix: pf-c-code-editor
 {{#> code-editor code-editor--modifier="pf-m-read-only"}}
   {{#> code-editor-header}}
     {{#> code-editor-controls}}
-      {{#> input-group}}
-        {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Copy to clipboard"'}}
-          <i class="fas fa-copy" aria-hidden="true"></i>
-        {{/button}}
-        {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Download code"'}}
-          <i class="fas fa-download"></i>
-        {{/button}}
-        {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Upload code" disabled'}}
-          <i class="fas fa-upload"></i>
-        {{/button}}
-      {{/input-group}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Copy to clipboard"'}}
+        <i class="fas fa-copy" aria-hidden="true"></i>
+      {{/button}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Download code"'}}
+        <i class="fas fa-download"></i>
+      {{/button}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Upload code" disabled'}}
+        <i class="fas fa-upload"></i>
+      {{/button}}
     {{/code-editor-controls}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
@@ -68,7 +64,7 @@ cssPrefix: pf-c-code-editor
   {{/code-editor-header}}
   {{#> code-editor-main}}
     {{#> code-editor-code}}
-      code goes here 
+      code goes here
     {{/code-editor-code}}
   {{/code-editor-main}}
 {{/code-editor}}

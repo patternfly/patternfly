@@ -1,10 +1,13 @@
 .pf-c-code-editor {
   // controls
-  --pf-c-code-editor__controls--MarginBottom: calc(-1 * var(--pf-c-code-editor__main--BorderWidth));
   --pf-c-code-editor__controls--c-button--m-control--Color: var(--pf-global--Color--200);
   --pf-c-code-editor__controls--c-button--m-control--hover--Color: var(--pf-global--Color--100);
   --pf-c-code-editor__controls--c-button--m-control--focus--Color: var(--pf-global--Color--100);
   --pf-c-code-editor__controls--c-button--m-control--disabled--after--BorderBottomColor: var(--pf-global--BorderColor--100);
+
+  // Header
+  --pf-c-code-editor__header--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-code-editor__header--BorderColor: var(--pf-global--BorderColor--100);
 
   // main
   --pf-c-code-editor__main--BorderColor: var(--pf-global--BorderColor--100);
@@ -27,7 +30,6 @@
   // tab
   --pf-c-code-editor__tab--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-code-editor__tab--Color: var(--pf-global--Color--200);
-  --pf-c-code-editor__tab--MarginBottom: calc(-1 * var(--pf-c-code-editor__main--BorderWidth));
   --pf-c-code-editor__tab--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-code-editor__tab--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-code-editor__tab--PaddingBottom: var(--pf-global--spacer--form-element);
@@ -52,12 +54,20 @@
   position: relative;
   display: flex;
   align-items: flex-end;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border-bottom: var(--pf-c-code-editor__header--BorderWidth) solid var(--pf-c-code-editor__header--BorderColor);
+  }
 }
 
 .pf-c-code-editor__controls {
-  position: relative;
   display: flex;
-  margin-bottom: var(--pf-c-code-editor__controls--MarginBottom);
 
   .pf-c-button.pf-m-control {
     --pf-c-button--m-control--Color: var(--pf-c-code-editor__controls--c-button--m-control--Color);
@@ -114,6 +124,10 @@
   // stylelint-enable selector-class-pattern
 }
 
+.pf-c-code-editor__header + .pf-c-code-editor__main {
+  border-top-width: 0;
+}
+
 .pf-c-code-editor__code {
   position: relative;
   padding: var(--pf-c-code-editor__code--PaddingTop) var(--pf-c-code-editor__code--PaddingRight) var(--pf-c-code-editor__code--PaddingBottom) var(--pf-c-code-editor__code--PaddingLeft);
@@ -130,7 +144,6 @@
   display: flex;
   align-items: center;
   padding: var(--pf-c-code-editor__tab--PaddingTop) var(--pf-c-code-editor__tab--PaddingRight) var(--pf-c-code-editor__tab--PaddingBottom) var(--pf-c-code-editor__tab--PaddingLeft);
-  margin-bottom: var(--pf-c-code-editor__tab--MarginBottom);
   margin-left: auto;
   color: var(--pf-c-code-editor__tab--Color);
   background-color: var(--pf-c-code-editor__tab--BackgroundColor);
