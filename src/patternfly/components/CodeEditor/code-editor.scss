@@ -6,8 +6,8 @@
   --pf-c-code-editor__controls--c-button--m-control--disabled--after--BorderBottomColor: var(--pf-global--BorderColor--100);
 
   // Header
-  --pf-c-code-editor__header--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-code-editor__header--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-code-editor__header--before--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-code-editor__header--before--BorderBottomColor: var(--pf-global--BorderColor--100);
 
   // main
   --pf-c-code-editor__main--BorderColor: var(--pf-global--BorderColor--100);
@@ -62,7 +62,7 @@
     bottom: 0;
     left: 0;
     content: "";
-    border-bottom: var(--pf-c-code-editor__header--BorderWidth) solid var(--pf-c-code-editor__header--BorderColor);
+    border-bottom: var(--pf-c-code-editor__header--before--BorderBottomWidth) solid var(--pf-c-code-editor__header--before--BorderBottomColor);
   }
 }
 

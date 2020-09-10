@@ -32,7 +32,9 @@ cssPrefix: pf-c-code-editor
   {{/code-editor-header}}
   {{#> code-editor-main}}
     {{#> code-editor-code}}
-      code goes here
+      {{#> code-editor-code-pre}}
+        code goes here
+      {{/code-editor-code-pre}}
     {{/code-editor-code}}
   {{/code-editor-main}}
 {{/code-editor}}
@@ -64,7 +66,9 @@ cssPrefix: pf-c-code-editor
   {{/code-editor-header}}
   {{#> code-editor-main}}
     {{#> code-editor-code}}
-      code goes here
+      {{#> code-editor-code-pre}}
+        code goes here
+      {{/code-editor-code-pre}}
     {{/code-editor-code}}
   {{/code-editor-main}}
 {{/code-editor}}
