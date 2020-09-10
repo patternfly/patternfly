@@ -161,9 +161,9 @@ cssPrefix: pf-c-code-editor
 | -- | -- | -- |
 | `.pf-c-code-editor` | `<div>` | Initiates the code editor component. **Required** |
 | `.pf-c-code-editor__header` | `<div>` | Initiates the code editor header used for the controls and tab elements. **Required** |
-| `.pf-c-code-editor__main` | `<div>` | Initiates the main container for the code **Required** |
-| `.pf-c-code-editor__code` | `<div>` | Initiates the container for the code editor e.g. Monaco. **Required** |
-| `.pf-c-code-editor__controls` | `<div>` | Initiates the code editor controls. **Required** |
+| `.pf-c-code-editor__main` | `<div>` | Initiates the main container for a code editor e.g. Monaco **Required** |
+| `.pf-c-code-editor__code` | `<div>` | Initiates the container for code without a JS code editor. Comes with PatternFly styling. |
+| `.pf-c-code-editor__controls` | `<div>` | Initiates the code editor controls. |
 | `.pf-c-code-editor__tab` | `<div>` | Initiates the code editor tab. |
 | `.pf-c-code-editor__tab-text` | `<span>` | Initiates the code editor tab text. |
 | `.pf-c-code-editor__tab-icon` | `<span>` | Initiates the code editor tab icon. |
