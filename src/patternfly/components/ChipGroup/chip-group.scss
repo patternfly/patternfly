@@ -36,6 +36,13 @@
   }
 }
 
+.pf-c-chip-group__main {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
 .pf-c-chip-group__list {
   margin-right: var(--pf-c-chip-group__list--MarginRight);
   margin-bottom: var(--pf-c-chip-group__list--MarginBottom);
@@ -63,6 +70,8 @@
 }
 
 .pf-c-chip-group__close {
+  display: flex;
+  align-self: flex-start;
   margin-top: var(--pf-c-chip-group__close--MarginTop);
   margin-bottom: var(--pf-c-chip-group__close--MarginBottom);
 }
