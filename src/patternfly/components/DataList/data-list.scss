@@ -313,10 +313,10 @@
   }
 
   &.pf-m-disabled {
+    --pf-c-data-list__item-draggable-button-icon--Color: var(--pf-c-data-list__item-draggable-button--m-disabled__draggable-icon--Color);
+
     pointer-events: none;
     cursor: none;
-
-    --pf-c-data-list__item-draggable-button-icon--Color: var(--pf-c-data-list__item-draggable-button--m-disabled__draggable-icon--Color);
   }
 
   .pf-c-data-list__item-draggable-icon {
