@@ -1,10 +1,12 @@
 ---
-title: Skeleton
+id: Skeleton
 section: demos
 ---
 
 ## Demos
-```hbs title=Skeleton-card isFullscreen
+
+### Skeleton card
+```hbs isFullscreen
 {{#> page page--id="skeleton-card-view"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content

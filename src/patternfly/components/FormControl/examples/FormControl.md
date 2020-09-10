@@ -4,29 +4,30 @@ section: components
 cssPrefix: pf-c-form-control
 ---
 
+import './FormControl.css'
+
 ## Examples
 ### Input
 ```hbs
-{{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="input-readonly" aria-label="Readonly input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="input-readonly" aria-label="Readonly input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-warning" form-control--attribute='type="text" value="Warning" id="input-warning" aria-label="Warning state input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-warning" form-control--attribute='type="text" value="Warning" id="input-warning" aria-label="Warning state input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--attribute='required type="text" value="Error" id="input-error" aria-invalid="true" aria-label="Error state input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--attribute='required type="text" value="Error" id="input-error" aria-invalid="true" aria-label="Error state input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="input-disabled" aria-label="Disabled input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="input-disabled" aria-label="Disabled input example"'}}
 <br><br>
-{{#> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute='type="search" id="input-search" name="search-input" aria-label="Search input example"'}}
-{{/form-control}}
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute='type="search" value="Search" id="input-search" name="search-input" aria-label="Search input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-calendar" form-control--attribute='type="text" value="Calendar" id="input-calendar" name="input-calendar" aria-label="Calendar input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-clock" form-control--attribute='type="text" value="Clock" id="input-clock" name="input-clock" aria-label="Clock input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon" form-control--attribute='type="text" value="Custom icon" id="input-custom-icon" name="custom-icon" aria-label="Custom icon input example"'}}
 ```
 
 ### Select
@@ -139,3 +140,6 @@ Resizes horizontally
 | `.pf-m-success` | `.pf-c-form-control` | Modifies a form control for the success state. |
 | `.pf-m-warning` | `.pf-c-form-control` | Modifies a form control for the warning state. |
 | `.pf-m-search` | `.pf-c-form-control` | Modifies a form control for the search input. |
+| `.pf-m-icon` | `input.pf-c-form-control` | Modifies a form control text input to be able to specify a custom SVG background via `--pf-c-form-control--m-icon--BackgroundUrl`, and other optional vars for other background properties.
+| `.pf-m-calendar` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the calendar icon. |
+| `.pf-m-clock` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the clock icon. |

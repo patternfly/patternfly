@@ -15,7 +15,7 @@ wrapperTag: div
       {{#> page-header-brand-toggle}}
         toggle
       {{/page-header-brand-toggle}}
-      {{#> page-header-brand-link}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
         Logo
       {{/page-header-brand-link}}
     {{/page-header-brand}}
@@ -45,7 +45,7 @@ wrapperTag: div
   {{#> page-header}}
     {{!-- Brand --}}
     {{#> page-header-brand}}
-      {{#> page-header-brand-link}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
         Logo
       {{/page-header-brand-link}}
     {{/page-header-brand}}
@@ -77,7 +77,7 @@ wrapperTag: div
   {{#> page-header}}
     {{!-- Brand --}}
     {{#> page-header-brand}}
-      {{#> page-header-brand-link}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
         Logo
       {{/page-header-brand-link}}
     {{/page-header-brand}}
@@ -111,7 +111,7 @@ wrapperTag: div
       {{#> page-header-brand-toggle}}
         toggle
       {{/page-header-brand-toggle}}
-      {{#> page-header-brand-link}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
         Logo
       {{/page-header-brand-link}}
     {{/page-header-brand}}
@@ -136,9 +136,45 @@ wrapperTag: div
 {{/page}}
 ```
 
+### Main section variations
+```hbs
+{{#> page}}
+  {{#> page-header}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-toggle}}
+        toggle
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        Logo
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-header-tools}}
+      header-tools
+    {{/page-header-tools}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    pf-c-nav
+  {{/page-sidebar}}
+  {{#> page-main}}
+    {{#> page-main-nav}}
+      `.pf-c-page__main-nav` for tertiary navigation
+    {{/page-main-nav}}
+    {{#> page-main-breadcrumb}}
+      `.pf-c-page__main-breadcrumb` for breadcrumbs
+    {{/page-main-breadcrumb}}
+    {{#> page-main-section}}
+      `.pf-c-page__main-section` for main sections
+    {{/page-main-section}}
+    {{#> page-main-wizard}}
+      `.pf-c-page__main-wizard` for wizards
+    {{/page-main-wizard}}
+  {{/page-main}}
+{{/page}}
+```
+
 ## Documentation
 ### Overview
-This component provides the basic chrome for a page, including sidebar, header, and main areas.
+This component provides the basic chrome for a page, including sidebar, header, and main areas. To make the page component take up the full height of the viewport, it is recommended to add `height: 100%;` to all ancestor elements of the page component.
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -157,7 +193,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-c-page__header` | `<header>` |   Declares the page header. |
 | `.pf-c-page__header-brand` | `<div>` |   Creates a header container to nest the brand component. |
 | `.pf-c-page__header-brand-toggle` | `<div>` |   Creates a container to nest the sidebar toggle. |
-| `.pf-c-page__header-brand-link` | `<a>` |   Creates a link for the brand logo. |
+| `.pf-c-page__header-brand-link` | `<a>`, `<span>` |   Creates a link for the brand logo. Use a `<span>` if there is no link. |
 | `.pf-c-page__header-selector` | `<div>` |   Creates a header container to nest the context selector component. |
 | `.pf-c-page__header-nav` | `<div>` |   Creates a container to nest the navigation component in the header. |
 | `.pf-c-page__header-tools` | `<div>` |   Creates a container to nest the icons and menus in header. |
@@ -169,6 +205,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-c-page__main-nav` | `<section>` |   Creates a container to nest the navigation component in the main page area. |
 | `.pf-c-page__main-breadcrumb` | `<section>` |   Creates a container to nest the breadcrumb component in the main page area. |
 | `.pf-c-page__main-section` | `<section>` |  Creates a section container in the main page area. **Note: The last/only `.pf-c-page__main-section` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
+| `.pf-c-page__main-wizard` | `<section>` | Creates a container to nest the wizard component in the mian page area. |
 | `.pf-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required when using `.pf-m-limit-width` on `.pf-c-page__main-section`** |
 | `.pf-c-page__drawer` | `<div>` |  Creates a container for the drawer component when placing the main page element in the drawer body. |
 | `.pf-m-selected` | `.pf-c-page__header-tools-item` | Modifies a header tools item to indicate that the button inside is in the selected state. |

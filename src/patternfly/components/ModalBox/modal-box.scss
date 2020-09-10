@@ -8,6 +8,15 @@
   --pf-c-modal-box--m-md--Width: #{pf-size-prem(840px)};
   --pf-c-modal-box--m-lg--lg--MaxWidth: #{pf-size-prem(1120px)};
   --pf-c-modal-box--MaxHeight: calc(100% - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
+  --pf-c-modal-box--m-align-top--spacer: var(--pf-global--spacer--sm);
+  --pf-c-modal-box--m-align-top--xl--spacer: var(--pf-global--spacer--xl);
+  --pf-c-modal-box--m-align-top--MarginTop: var(--pf-c-modal-box--m-align-top--spacer);
+  --pf-c-modal-box--m-align-top--MaxHeight: calc(100% - var(--pf-c-modal-box--m-align-top--spacer) * 2);
+  --pf-c-modal-box--m-align-top--MaxWidth: calc(100% - var(--pf-c-modal-box--m-align-top--spacer) * 2);
+
+  @media (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-modal-box--m-align-top--spacer: var(--pf-c-modal-box--m-align-top--xl--spacer);
+  }
 
   // Header
   --pf-c-modal-box__header--PaddingTop: var(--pf-global--spacer--lg);
@@ -66,6 +75,13 @@
 
   &.pf-m-lg {
     --pf-c-modal-box--Width: var(--pf-c-modal-box--m-lg--lg--MaxWidth);
+  }
+
+  &.pf-m-align-top {
+    align-self: flex-start;
+    max-width: var(--pf-c-modal-box--m-align-top--MaxWidth);
+    max-height: var(--pf-c-modal-box--m-align-top--MaxHeight);
+    margin-top: var(--pf-c-modal-box--m-align-top--MarginTop);
   }
 
   // Close button

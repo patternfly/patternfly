@@ -4,17 +4,52 @@ section: overview
 releaseNoteTOC: true
 ---
 
-## 2020.10 release notes (2020-08-05)
+## 2020.11 release notes (2020-08-26)
 Packages released:
-- [@patternfly/patternfly@v4.31.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.3)
+- [@patternfly/patternfly@v4.35.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.35.2)
+
+### Components
+- **Button:** Added warning modifier to buttons ([#3349](https://github.com/patternfly/patternfly/pull/3349))
+- **Drawer:**
+  - Fixed drawer and notification drawer partial names ([#3370](https://github.com/patternfly/patternfly/pull/3370))
+  - Added bottom panel variation ([#3408](https://github.com/patternfly/patternfly/pull/3408))
+- **Dropdown:** Added border-radius to primary dropdown toggle ([#3377](https://github.com/patternfly/patternfly/pull/3377))
+- **Form:** Hid negative margin overflow from `__actions` ([#3393](https://github.com/patternfly/patternfly/pull/3393))
+- **Label group:** Added label group component, overflow label ([#3396](https://github.com/patternfly/patternfly/pull/3396))
+- **Menu:** Added menu component ([#3397](https://github.com/patternfly/patternfly/pull/3397))
+- **Notification drawer:** Added close button ([#3387](https://github.com/patternfly/patternfly/pull/3387))
+- **Page:**
+  - Added href to page-header-brand-link in examples ([#3383](https://github.com/patternfly/patternfly/pull/3383))
+  - Added main section element examples ([#3390](https://github.com/patternfly/patternfly/pull/3390))
+- **Skeleton:** Added width var, fixed safari bug w/ transparent ([#3385](https://github.com/patternfly/patternfly/pull/3385))
+- **Splitter:** Added splitter component ([#3407](https://github.com/patternfly/patternfly/pull/3407))
+- **Table:**
+  - Added usage for using anchor to sort column headers ([#3386](https://github.com/patternfly/patternfly/pull/3386))
+  - Updated loading demo text ([#3406](https://github.com/patternfly/patternfly/pull/3406))
+- **Toggle group:** Added support for icon + text ([#3373](https://github.com/patternfly/patternfly/pull/3373))
+- **Toolbar:**
+  - Added insets ([#3403](https://github.com/patternfly/patternfly/pull/3403))
+  - Added overflow menu to toolbar demos ([#3404](https://github.com/patternfly/patternfly/pull/3404))
+
+### Other
+- **Build:**
+  - Updated stalebot ignored labels ([#3357](https://github.com/patternfly/patternfly/pull/3357))
+  - Added github plugin ([#3359](https://github.com/patternfly/patternfly/pull/3359))
+- **Workspace:**
+  - Updated example titles/metadata ([#3363](https://github.com/patternfly/patternfly/pull/3363))
+  - Updated examples for compatibility with new docs ([#3414](https://github.com/patternfly/patternfly/pull/3414))
+
+## 2020.10 release notes (2020-08-17)
+Packages released:
+- [@patternfly/patternfly@v4.31.6](https://www.npmjs.com/package/@patternfly/patternfly/v/4.31.6)
 
 ### Components
 - **Alert group:** Removed misformed metastring ([#3324](https://github.com/patternfly/patternfly/pull/3324))
 - **Description list:**
-  - Changeed component to dl ([#3307](https://github.com/patternfly/patternfly/pull/3307))
-  - Changeed spacer width to 24px column gap ([#3327](https://github.com/patternfly/patternfly/pull/3327))
+  - Changed component to dl ([#3307](https://github.com/patternfly/patternfly/pull/3307))
+  - Changed spacer width to 24px column gap ([#3327](https://github.com/patternfly/patternfly/pull/3327))
 - **Drawer:**
-  - Scoped drawer__body >  page__main ([#3268](https://github.com/patternfly/patternfly/pull/3268))
+  - Scoped `drawer__body > page__main` ([#3268](https://github.com/patternfly/patternfly/pull/3268))
   - Scoped drawer styles to improve behavior of nested drawers ([#3328](https://github.com/patternfly/patternfly/pull/3328))
 - **Form control:** Added warning state, updated docs ([#3290](https://github.com/patternfly/patternfly/pull/3290))
 - **Label:** Added support for overflow truncation ([#3339](https://github.com/patternfly/patternfly/pull/3339))
@@ -22,6 +57,7 @@ Packages released:
   - Fixed notification badge alignment ([#3284](https://github.com/patternfly/patternfly/pull/3284))
   - Reverted enhancements in #3231 ([#3294](https://github.com/patternfly/patternfly/pull/3294))
   - Allowed text to display on top of background ([#3365](https://github.com/patternfly/patternfly/pull/3365))
+  - Removed unread state border ([#3389](https://github.com/patternfly/patternfly/pull/3389))
 - **Notification drawer:**
   - Added notification drawer demo ([#3220](https://github.com/patternfly/patternfly/pull/3220))
   - Wrapped long item descriptions, group titles ([#3289](https://github.com/patternfly/patternfly/pull/3289))

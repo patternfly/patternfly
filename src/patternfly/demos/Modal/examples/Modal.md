@@ -141,3 +141,35 @@ section: demos
   {{/backdrop}}
 {{/modal}}
 ```
+
+### Top aligned
+```hbs isFullscreen
+{{#> modal}}
+  {{#> backdrop}}
+    {{#> bullseye}}
+      {{#> modal-box modal-box--modifier="pf-m-sm pf-m-align-top" modal-box--attribute='aria-labelledby="modal-top-aligned-title" aria-describedby="modal-top-aligned-description"'}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
+          <i class="fas fa-times" aria-hidden="true"></i>
+        {{/button}}
+        {{#> modal-box-header}}
+          {{#> modal-box-title modal-box-title--attribute='id="modal-top-aligned-title"'}}
+            Modal header
+          {{/modal-box-title}}
+        {{/modal-box-header}}
+        {{#> modal-box-body}}
+          <p id="modal-top-aligned-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>
+          <p>Form here</p>
+        {{/modal-box-body}}
+        {{#> modal-box-footer}}
+          {{#> button button--modifier="pf-m-primary"}}
+            Save
+          {{/button}}
+          {{#> button button--modifier="pf-m-link"}}
+            Cancel
+          {{/button}}
+        {{/modal-box-footer}}
+      {{/modal-box}}
+    {{/bullseye}}
+  {{/backdrop}}
+{{/modal}}
+```

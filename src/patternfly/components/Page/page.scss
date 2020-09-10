@@ -51,8 +51,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-tools-item--Display: block;
 
   // Header tools notification badge
-  --pf-c-page__header-tools-item--c-notification-badge--BorderColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-page__header-tools-item--c-notification-badge--hover--BorderColor: transparent;
   --pf-c-page__header-tools-item--c-notification-badge--hover--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
   // Header tools group button
@@ -269,11 +267,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   .pf-c-notification-badge {
     &.pf-m-read {
-      --pf-c-notification-badge--after--BorderColor: var(--pf-c-page__header-tools-item--c-notification-badge--BorderColor);
-
       &:hover {
         --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-page__header-tools-item--c-notification-badge--hover--BackgroundColor);
-        --pf-c-notification-badge--after--BorderColor: var(--pf-c-page__header-tools-item--c-notification-badge--hover--BorderColor);
       }
     }
   }
@@ -392,11 +387,11 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   &:last-of-type,
   &:only-child,
   &.pf-m-fill {
-    flex: 1;
+    flex-grow: 1;
   }
 
   &.pf-m-no-fill {
-    flex: 0 0 auto;
+    flex-grow: 0;
   }
 
   &.pf-m-light {
@@ -434,7 +429,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 }
 
 .pf-c-page__main-wizard {
-  flex: 1 0 0;
+  flex-grow: 1;
   background-color: var(--pf-c-page__main-wizard--BackgroundColor);
   border-top: var(--pf-c-page__main-wizard--BorderTopWidth) solid var(--pf-c-page__main-wizard--BorderTopColor);
 }
@@ -443,6 +438,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__main-breadcrumb,
 .pf-c-page__main-section,
 .pf-c-page__main-wizard {
+  flex-shrink: 0;
+
   &.pf-m-limit-width {
     display: flex;
     flex-direction: column;

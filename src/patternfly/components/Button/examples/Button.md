@@ -24,6 +24,11 @@ import './Button.css'
 {{#> button button--modifier="pf-m-danger"}}
   Danger
 {{/button}}
+
+{{#> button button--modifier="pf-m-warning"}}
+  Warning
+{{/button}}
+
 <br>
 <br>
 {{#> button button--modifier="pf-m-link"}}
@@ -77,6 +82,10 @@ import './Button.css'
   Danger
 {{/button}}
 
+{{#> button button--modifier="pf-m-warning pf-m-small"}}
+  Warning
+{{/button}}
+
 {{#> button button--modifier="pf-m-link pf-m-small"}}
   Link
   {{#> button-icon button-icon--modifier="pf-m-end"}}
@@ -109,6 +118,10 @@ import './Button.css'
 
 {{#> button button--modifier="pf-m-danger" button--attribute="disabled"}}
   Danger disabled
+{{/button}}
+
+{{#> button button--modifier="pf-m-warning" button--attribute="disabled"}}
+  Warning disabled
 {{/button}}
 
 {{#> button button--modifier="pf-m-link" button--attribute="disabled"}}
@@ -151,6 +164,10 @@ import './Button.css'
   Danger disabled
 {{/button}}
 
+{{#> button button--modifier="pf-m-warning pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
+  Warning disabled
+{{/button}}
+
 {{#> button button--modifier="pf-m-link pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   {{#> button-icon button-icon--modifier="pf-m-start"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
@@ -185,6 +202,19 @@ import './Button.css'
 {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" aria-disabled="true" tabindex="-1"' button-link--modifier="pf-m-tertiary pf-m-disabled"}}
   Tertiary link to W3.org
 {{/button-link}}
+
+{{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-link"}}
+  Link to W3.org
+{{/button-link}}
+```
+
+### Inline link as span
+```hbs
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+{{#> button button--IsInlineLinkSpan="true" button--attribute='tabindex="0"' button--modifier="pf-m-link pf-m-inline"}}
+  This is long button text that needs to be a span so that it will wrap inline with the text around it.
+{{/button}}
+Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum velit elementum non.
 ```
 
 ### Block level
@@ -238,6 +268,25 @@ import './Button.css'
 {{/button}}
 ```
 
+### Progress
+```hbs
+{{#> button button--modifier="pf-m-primary" button--IsProgress="true"}}
+  Primary loader
+{{/button}}
+
+{{#> button button--modifier="pf-m-primary" button--IsProgress="true" button--IsInProgress="true"}}
+  Primary loading
+{{/button}}
+
+{{#> button button--modifier="pf-m-secondary" button--IsProgress="true"}}
+  Secondary loader
+{{/button}}
+
+{{#> button button--modifier="pf-m-secondary" button--IsProgress="true" button--IsInProgress="true"}}
+  Secondary loading
+{{/button}}
+```
+
 ## Documentation
 ### Overview
 Always add a modifier class to add color to the button.
@@ -250,25 +299,27 @@ Semantic buttons and links are important for usability as well as accessibility.
 | -- | -- | -- |
 | `aria-pressed="true or false"` | `.pf-c-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. **Required when button is a toggle** |
 | `aria-label="[button label text]"` | `.pf-m-plain` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
-| `aria-label="[link description]"` | `a.pf-c-button` | The link text should adequately describe the link's purpose. If it does not, aria-label can provide more detailed interaction information. |
+| `aria-label="[descriptive text]"` | `a.pf-c-button`, `span.pf-c-button.pf-m-link.pf-m-inline` | The button component's text should adequately describe its purpose. If it does not, `aria-label` can provide more detailed interaction information. |
 | `disabled` | `button.pf-c-button` | When a button element is used, indicates that it is unavailable and removes it from keyboard focus. **Required when button is disabled** |
 | `aria-disabled="true"` | `button.pf-c-button` | When a button element is used, indicates that it is unavailable but does not prevent keyboard or hover interactions. Used when a disabled button provides interactive elements like a tooltip. |
-| `aria-disabled="true"` | `a.pf-c-button` | When a link element is used, indicates that it is unavailable. **Required when link is disabled** |
+| `aria-disabled="true"` | `a.pf-c-button.pf-m-disabled`, `span.pf-c-button.pf-m-link.pf-m-inline.pf-m-disabled` | When a non-button element is used, indicates that it is unavailable. **Required when element is disabled** |
 | `aria-expanded="true"` | `.pf-c-button.pf-m-expanded` | Indicates that the expanded content element is visible. **Required** |
-| `tabindex="-1"` | `a.pf-c-button` | When a link element is used, removes it from keyboard focus. **Required when link is disabled** |
+| `tabindex="-1"` | `a.pf-c-button.pf-m-disabled`, `span.pf-c-button.pf-m-link.pf-m-inline.pf-m-disabled` | When a non-button element is used, removes it from keyboard focus. **Required when element is disabled** |
+| `tabindex="0"` | `span.pf-c-button.pf-m-link.pf-m-inline` | Inserts the span into the tab order of the page so that it is focusable. **Required when the element is a span** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
 | `.pf-c-button__icon` | `<span>` | Initiates a button icon. |
+| `.pf-c-button__progress` | `<span>` | Initiates a button progress container. |
 | `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |
 | `.pf-m-danger` | `.pf-c-button` | Modifies for danger styles. |
 | `.pf-m-link` | `.pf-c-button` | Modifies for link styles. This button has no background or border and is styled as a link. This button would commonly appear in a form and may include an icon. |
 | `.pf-m-plain` | `.pf-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for `.pf-m-plain` icon buttons such as close, expand, kebab, etc. |
-| `.pf-m-inline` | `.pf-c-button.pf-m-link` | Modifies for inline styles. This button is presented similar to a normal link, has no padding, and is displayed inline with other inline content. |
+| `.pf-m-inline` | `.pf-c-button.pf-m-link` | Modifies for inline styles. This button is presented similar to a normal link and has no padding and is displayed inline with other inline content. When used as a `<span>`, the text will flow inline with text around it. |
 | `.pf-m-block` | `.pf-c-button` | Creates a block level button. |
 | `.pf-m-control` | `.pf-c-button` | Modifies for control styles. **Note:** This modifier should only be used when using buttons in the Input Group or Clipboard Copy components. |
 | `.pf-m-expanded` | `.pf-c-button.pf-m-control` | Modifies a control button for the expanded state. |
@@ -278,3 +329,5 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-small` | `.pf-c-button` | Modifies the button so that it has small font size. |
 | `.pf-m-aria-disabled` | `.pf-c-button` | Modifies a button to be visually disabled, yet is still focusable. |
 | `.pf-m-display-lg` | `.pf-c-button`, `pf-c-button.pf-m-link` | Modifies the button and link button for large display styling. For example, use this modifier to achieve "call to action" styles. |
+| `.pf-m-progress` | `.pf-c-button` | Indicates that the button supports the progress state. |
+| `.pf-m-in-progress` | `.pf-c-button` | Indicates that the button is in the in progress state. |

@@ -96,10 +96,11 @@
   --pf-c-select__menu-item--m-link--Width: auto;
   --pf-c-select__menu-item--m-link--hover--BackgroundColor: transparent;
   --pf-c-select__menu-item--m-link--focus--BackgroundColor: transparent;
-  --pf-c-select__menu-item--m-action--hover--BackgroundColor: transparent;
   --pf-c-select__menu-item--m-action--Color: var(--pf-global--disabled-color--200);
   --pf-c-select__menu-item--m-action--Width: auto;
   --pf-c-select__menu-item--m-action--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-select__menu-item--m-action--hover--BackgroundColor: transparent;
+  --pf-c-select__menu-item--m-action--focus--BackgroundColor: transparent;
   --pf-c-select__menu-item--hover__menu-item--m-action--Color: var(--pf-global--Color--200);
   --pf-c-select__menu-item--m-action--hover--Color: var(--pf-global--Color--100);
   --pf-c-select__menu-item--m-action--focus--Color: var(--pf-global--Color--100);
@@ -417,6 +418,7 @@
   }
 
   @at-root .pf-c-select__menu-wrapper:focus-within,
+  .pf-c-select__menu-wrapper.pf-m-focus,
   &:focus,
   &.pf-m-focus {
     position: relative;
@@ -435,9 +437,10 @@
   }
 
   &.pf-m-action {
-    --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-c-select__menu-item--m-action--hover--BackgroundColor);
     --pf-c-select__menu-item--Color: var(--pf-c-select__menu-item--m-action--Color);
     --pf-c-select__menu-item--Width: var(--pf-c-select__menu-item--m-action--Width);
+    --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-c-select__menu-item--m-action--hover--BackgroundColor);
+    --pf-c-select__menu-item--focus--BackgroundColor: var(--pf-c-select__menu-item--m-action--focus--BackgroundColor);
 
     display: flex;
     align-items: flex-start;

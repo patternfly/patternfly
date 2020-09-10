@@ -12,7 +12,7 @@ wrapperTag: div
 
 ### Expandable nav
 ```hbs isFullscreen
-{{#> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example"}}{{/page-demo-expandable-nav}}
+{{> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example"}}
 ```
 
 ### Horizontal nav
@@ -213,8 +213,10 @@ wrapperTag: div
     {{/page-template-breadcrumb}}
     {{#> page-template-title}}
     {{/page-template-title}}
-    {{#> page-template-gallery}}
+    {{#> page-template-gallery page-main-section--modifier="pf-m-fill"}}
     {{/page-template-gallery}}
+    {{#> page-template-footer}}
+    {{/page-template-footer}}
   {{/page-main}}
 {{/page}}
 ```
@@ -321,4 +323,4 @@ wrapperTag: div
 ```
 
 ## Documentation
-This demo implements all variations of the nav component in the page component.
+This demo implements all variations of the nav component in the page component. To make the page component take up the full height of the viewport, it is recommended to add `height: 100%;` to all ancestor elements of the page component.

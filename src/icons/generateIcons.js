@@ -17,9 +17,8 @@ module.exports = () =>
 function getPfIcon(iconName) {
   const currentIcon = pfIcons[iconName];
   currentIcon.xOffset = 0;
-  currentIcon.yOffset = 80;
+  currentIcon.yOffset = 0;
   currentIcon.group = 'PfIcons';
-  currentIcon.transform = `rotate(180 0 ${currentIcon.height / 2}) scale(-1 1)`;
   return generateIcon(currentIcon, `${iconName}`);
 }
 

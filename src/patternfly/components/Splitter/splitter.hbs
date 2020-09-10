@@ -1,0 +1,13 @@
+<div class="pf-c-splitter{{#if splitter--modifier}} {{splitter--modifier}}{{/if}}{{#if splitter--IsVertical}} pf-m-vertical{{/if}}"
+  role="separator"
+  tabindex="0"
+  {{#if splitter--IsVertical}}
+    aria-orientation="vertical"
+  {{else}}
+    aria-orientation="horizontal"
+  {{/if}}
+  {{#if splitter--attribute}}
+    {{{splitter--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</div>
