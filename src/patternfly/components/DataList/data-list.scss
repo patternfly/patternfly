@@ -189,7 +189,7 @@
 .pf-c-data-list__cell,
 .pf-c-data-list__text {
   &.pf-m-truncate {
-    --pf-c-data-list--cell--MinWidth: var(--pf-c-data-list__cell--m-truncate--MinWidth);
+    --pf-c-data-list--cell--MinWidth: var(--pf-c-data-list--cell--m-truncate--MinWidth);
     --pf-c-data-list--cell--Overflow: hidden;
     --pf-c-data-list--cell--TextOverflow: ellipsis;
     --pf-c-data-list--cell--WhiteSpace: nowrap;
@@ -197,7 +197,6 @@
 
   &.pf-m-break-word {
     --pf-c-data-list--cell--WordBreak: break-word;
-    --pf-c-data-list--cell--WhiteSpace: normal;
   }
 
   &.pf-m-nowrap {
