@@ -6,7 +6,8 @@
   {{#if table-th--action}} pf-c-table__action{{/if}}
   {{#if table-th--icon}} pf-c-table__icon{{/if}}
   {{#if table-th--sortable-wrap}} pf-m-wrap{{/if}}
-  {{#if table-th--selected}} pf-m-selected{{/if}}"
+  {{#if table-th--selected}} pf-m-selected{{/if}}
+  {{#if table-th--IsColumnHelp}} pf-m-help{{/if}}"
   {{#if table--grid}}
     {{#if table-th--isRowHeader}}
       role="rowheader"
@@ -57,6 +58,10 @@
         {{> @partial-block}}
       {{/table-text}}
     {{/table-button}}
+  {{else if table-th--IsColumnHelp}}
+    {{#> table-text}}
+      {{> @partial-block}}
+    {{/table-text}}
   {{else}}
     {{> @partial-block}}
   {{/if}}

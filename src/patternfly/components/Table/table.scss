@@ -58,6 +58,9 @@
   --pf-c-table--cell--WhiteSpace: normal;
   --pf-c-table--cell--WordBreak: normal;
 
+  // Help
+  --pf-c-table--cell--m-help--MinWidth: 11ch;
+
   // Truncate
   --pf-c-table--m-truncate--cell--MaxWidth: 1px;
   --pf-c-table--m-truncate--cell--MinWidth: calc(5ch + var(--pf-c-table--cell--PaddingRight) + var(--pf-c-table--cell--PaddingLeft));
@@ -135,6 +138,7 @@
   --pf-c-table__sort__button--MarginLeft: calc(var(--pf-c-table__sort__button--PaddingLeft) * -1);
   --pf-c-table__sort__button--Color: var(--pf-global--Color--100);
   --pf-c-table__sort--m-selected__button--Color: var(--pf-global--active-color--100);
+  --pf-c-table__sort--m-help--MinWidth: 15ch;
 
   // Sort indicator
   --pf-c-table__sort-indicator--Color: var(--pf-global--disabled-color--200);
@@ -143,6 +147,9 @@
   --pf-c-table__sort__button--hover__sort-indicator--Color: var(--pf-global--Color--100);
   --pf-c-table__sort__button--active__sort-indicator--Color: var(--pf-global--Color--100);
   --pf-c-table__sort__button--focus__sort-indicator--Color: var(--pf-global--Color--100);
+
+  // Help
+  --pf-c-table--th--m-help--MinWidth: 11ch;
 
   // Table header popover
   --pf-c-table__column-help--MarginLeft: var(--pf-global--spacer--xs);
@@ -284,6 +291,10 @@
       min-width: 0;
       padding: 0;
     }
+
+    &.pf-m-help {
+      --pf-c-table--cell--MinWidth: var(--pf-c-table--cell--m-help--MinWidth);
+    }
   }
 
   // Table caption
@@ -358,6 +369,10 @@
   // set property here to increase specificity
   .pf-c-table__sort {
     min-width: var(--pf-c-table__sort--MinWidth);
+  }
+
+  .pf-m-help {
+    min-width: var(--pf-c-table--th--m-help--MinWidth);
   }
 
   thead,
@@ -486,7 +501,8 @@
 
 // Sort content
 // display grid for buttons is not supported
-.pf-c-table__button-content {
+.pf-c-table__button-content,
+.pf-c-table__column-help {
   display: inline-grid;
   align-items: end;
   justify-content: start;
@@ -679,11 +695,6 @@
   }
 }
 
-.pf-c-table__column-help {
-  display: flex;
-  align-items: flex-end;
-}
-
 .pf-c-table__column-help-action {
   margin-left: var(--pf-c-table__column-help--MarginLeft);
   transform: translateY(var(--pf-c-table__column-help--TranslateY));
@@ -732,6 +743,10 @@
 
     // override state colors on text
     color: var(--pf-c-table__sort--m-selected__button--Color);
+  }
+
+  &.pf-m-help {
+    --pf-c-table--th--m-help--MinWidth: var(--pf-c-table__sort--m-help--MinWidth);
   }
 }
 
