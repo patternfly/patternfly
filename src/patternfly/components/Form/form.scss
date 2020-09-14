@@ -64,6 +64,10 @@
   --pf-c-form__helper-text--m-warning--Color: var(--pf-global--warning-color--200);
   --pf-c-form__helper-text--m-error--Color: var(--pf-global--danger-color--100);
 
+  // Section
+  --pf-c-form__section--MarginBottom: var(--pf-global--spacer--xl);
+  --pf-c-form__section--Gap: var(--pf-global--gutter--md);
+
   display: grid;
   grid-gap: var(--pf-c-form--GridGap);
 
@@ -103,6 +107,15 @@
   &.pf-m-action {
     margin-top: var(--pf-c-form__group--m-action--MarginTop);
     overflow: hidden; // keeps the negative bottom margin bottom on .pf-c-form__actions from triggering overflow
+  }
+}
+
+.pf-c-form__section {
+  display: grid;
+  gap: var(--pf-c-form__section--Gap);
+
+  &:not(:last-child) {
+    margin-bottom: var(--pf-c-form__section--MarginBottom);
   }
 }
 
