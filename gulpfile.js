@@ -1,13 +1,13 @@
 const { removeSync } = require('fs-extra');
-const { series, parallel, src, dest } = require('gulp');
-const browserSync = require('browser-sync').create();
+const { series, parallel } = require('gulp');
 const { copyFA, copySource, copyAssets, copyDocs } = require('./scripts/gulp/copy');
 const { compileSASS, minifyCSS, watchSASS } = require('./scripts/gulp/sass');
 const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
-const { compileHBS, compileMD, watchHBS, watchMD, compileDocs, watchDocs } = require('./scripts/gulp/html');
+const { compileHBS, compileMD, watchHBS, watchMD } = require('./scripts/gulp/html');
 const { lintCSSComments, lintCSSFunctions } = require('./scripts/gulp/lint');
 const { generateSnippets } = require('./scripts/gulp/snippets');
-const theme = require('theme-patternfly-org/scripts/cli/start');
+const { start } = require('theme-patternfly-org/scripts/cli/start');
+const { build } = require('theme-patternfly-org/scripts/cli/build');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
@@ -66,52 +66,38 @@ function watchSrcMD() {
   return watchMD(mdFiles);
 }
 
-function buildMDDocs() {
-  return compileDocs(mdFiles);
-}
-
-function watchMDDocs() {
-  return watchDocs(mdFiles);
-}
-
-function copyWorkspaceAssets() {
-  return src('dist/assets/**/*').pipe(dest('assets'));
-}
-
 function generateWorkspaceSnippets() {
   return generateSnippets('workspace/**/index.html');
 }
 
-function startWorkspaceServer() {
-  browserSync.init({
-    server: {
-      baseDir: './',
-      directory: true
-    },
-    files: ['workspace/**/*.html', 'dist/**/*.css', 'scripts/gulp/ws-lite.css'],
-    startPath: 'workspace'
-  });
+const themeCLIOptions = {
+  parent: {
+    config: './patternfly-docs.config.js',
+    cssconfig: './patternfly-docs.css.js',
+    source: './patternfly-docs.source.js'
+  }
+};
+
+function buildWebpack() {
+  build(['all'], themeCLIOptions);
 }
 
 function startWebpackDevServer() {
-  theme.start({
-    parent: {
-      config: './patternfly-docs.config.js',
-      cssconfig: './patternfly-docs.css.js',
-      source: './patternfly-docs.source.js'
-    }
-  });
+  start(themeCLIOptions);
 }
 
-const buildWorkspace = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD), copyWorkspaceAssets);
-const buildDocs = series(copyAssets, compileSrcHBS, buildMDDocs, copyDocs);
+const buildSrc = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD));
+const buildDocs = series(buildSrc, copyDocs);
+const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWebpackDevServer);
+
+// Builds `dist` folder
+const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
 
 module.exports = {
-  build: series(clean, parallel(series(compileSrcSASS, minifyCSS), pfIcons, copyFA, buildDocs, copySourceFiles)),
-  buildDocs,
-  start: parallel(watchSrcSASS, watchSrcHBS, watchMDDocs, startWebpackDevServer),
-  buildWorkspace,
-  develop: series(buildWorkspace, parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWorkspaceServer)),
+  // Builds `dist` and `public` folders
+  build: series(buildPatternfly, buildWebpack),
+  buildPatternfly,
+  develop: series(buildDocs, watchAll),
   compileSASS: compileSrcSASS,
   minifyCSS,
   watchSASS: watchSrcSASS,

@@ -55,13 +55,7 @@ jobs:
         key: *js_deps_cache_key
     - run:
         name: Build Dist
-        command: npm run build-patternfly
-    - run:
-        name: Build HTML MD
-        command: npm run build:docs
-    - run:
-        name: Build Site
-        command: npm run build:site
+        command: npm run build
     - run:
         name: Upload docs
         command: node .circleci/upload-preview.js public
