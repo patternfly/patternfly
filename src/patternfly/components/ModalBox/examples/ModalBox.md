@@ -157,6 +157,139 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
+### Icon
+```hbs
+{{#> modal-example modal-example--id="icon"}}
+  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"')}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> modal-box-header}}
+      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+        {{> modal-box-title-icon modal-box-title-icon--type="bullhorn"}}
+        Modal with icon title
+      {{/modal-box-title}}
+    {{/modal-box-header}}
+    {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-example--id '-description"')}}
+      Modal description
+    {{/modal-box-body}}
+    {{#> modal-box-footer}}
+      Modal footer
+    {{/modal-box-footer}}
+  {{/modal-box}}
+{{/modal-example}}
+```
+
+### Default alert
+```hbs
+{{#> modal-example modal-example--id="default-alert"}}
+  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsDefaultAlert="true"}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> modal-box-header}}
+      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+        Default alert modal title
+      {{/modal-box-title}}
+    {{/modal-box-header}}
+    {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-example--id '-description"')}}
+      Modal description
+    {{/modal-box-body}}
+    {{#> modal-box-footer}}
+      Modal footer
+    {{/modal-box-footer}}
+  {{/modal-box}}
+{{/modal-example}}
+```
+
+### Info alert
+```hbs
+{{#> modal-example modal-example--id="info-alert"}}
+  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsInfoAlert="true"}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> modal-box-header}}
+      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+        Info alert modal title
+      {{/modal-box-title}}
+    {{/modal-box-header}}
+    {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-example--id '-description"')}}
+      Modal description
+    {{/modal-box-body}}
+    {{#> modal-box-footer}}
+      Modal footer
+    {{/modal-box-footer}}
+  {{/modal-box}}
+{{/modal-example}}
+```
+
+### Success alert
+```hbs
+{{#> modal-example modal-example--id="success-alert"}}
+  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsSuccessAlert="true"}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> modal-box-header}}
+      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+        Success alert modal title
+      {{/modal-box-title}}
+    {{/modal-box-header}}
+    {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-example--id '-description"')}}
+      Modal description
+    {{/modal-box-body}}
+    {{#> modal-box-footer}}
+      Modal footer
+    {{/modal-box-footer}}
+  {{/modal-box}}
+{{/modal-example}}
+```
+
+### Warning alert
+```hbs
+{{#> modal-example modal-example--id="warning-alert"}}
+  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsWarningAlert="true"}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> modal-box-header}}
+      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+        Warning alert modal title
+      {{/modal-box-title}}
+    {{/modal-box-header}}
+    {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-example--id '-description"')}}
+      Modal description
+    {{/modal-box-body}}
+    {{#> modal-box-footer}}
+      Modal footer
+    {{/modal-box-footer}}
+  {{/modal-box}}
+{{/modal-example}}
+```
+
+### Error alert
+```hbs
+{{#> modal-example modal-example--id="error-alert"}}
+  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsErrorAlert="true"}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> modal-box-header}}
+      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+        Modal description
+      {{/modal-box-title}}
+    {{/modal-box-header}}
+    {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-example--id '-description"')}}
+      To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
+    {{/modal-box-body}}
+    {{#> modal-box-footer}}
+      Modal footer
+    {{/modal-box-footer}}
+  {{/modal-box}}
+{{/modal-example}}
+```
+
 ## Documentation
 ### Overview
 A modal box is a generic rectangular container that can be used to build modals. A modal box can have the following sections: header, title, description, body, and footer. With normal use of the modal, a title or body is required. Alternatively, no child elements can be used, and the `.pf-c-modal-box` container will  serve as a generic container with no padding for custom modal content. If no `.pf-c-modal-box__title` is used, `aria-label="[title of modal]"` must be provided for `.pf-c-modal-box`.
@@ -187,3 +320,8 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-m-md` | `.pf-c-modal-box` | Modifies for a medium modal box width. |
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
 | `.pf-m-align-top` | `.pf-c-modal-box` | Modifies for top alignment.  |
+| `.pf-m-default` | `.pf-c-modal-box` | Modifies for the default alert state. |
+| `.pf-m-info` | `.pf-c-modal-box` | Modifies for the info alert state. |
+| `.pf-m-success` | `.pf-c-modal-box` | Modifies for the success alert state. |
+| `.pf-m-warning` | `.pf-c-modal-box` | Modifies for the warning alert state. |
+| `.pf-m-error` | `.pf-c-modal-box` | Modifies for the error alert state. |
