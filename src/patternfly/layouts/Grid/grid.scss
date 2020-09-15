@@ -1,5 +1,3 @@
-$pf-l-grid--breakpoint-map: build-breakpoint-map();
-
 // URL.com/guidelines#layout
 // Generate smart grid layout
 // @parameter {Suffix} xs, sm, md, lg, xl, null
@@ -43,6 +41,7 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map();
   --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
   --pf-l-grid__item--GridColumnStart: auto;
   --pf-l-grid__item--GridColumnEnd: span 12;
+  --pf-l-grid--item--Order: 0;
 
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
@@ -78,14 +77,14 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map();
   }
 
   // Loop through $breakpoints map to generate responsive classes
-  @each $breakpoint, $value in $pf-l-grid--breakpoint-map {
+  @each $breakpoint, $value in $pf-global--breakpoint-map {
     @include pf-media-query($breakpoint) {
       @include pf-smart-grid($value);
     }
   }
 
   // Loop through $breakpoints map to generate responsive classes
-  @each $breakpoint, $value in $pf-l-grid--breakpoint-map {
+  @each $breakpoint, $value in $pf-global--breakpoint-map {
     @include pf-media-query($breakpoint) {
       @include pf-grid-item-modifier($value);
     }

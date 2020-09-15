@@ -9,6 +9,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   --pf-l-flex--AlignItems: baseline;
   --pf-l-flex--m-row--AlignItems: baseline;
   --pf-l-flex--m-row-reverse--AlignItems: baseline;
+  --pf-l-flex--item--Order: 0;
 
   // Default values: these get reset based on modifier usage
   --pf-l-flex--spacer-base: var(--pf-global--spacer--md);

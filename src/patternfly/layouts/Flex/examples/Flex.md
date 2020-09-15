@@ -669,7 +669,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 
 ### Ordering
 
-Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.pf-l-flex__item</code>s. Spacing may need to be managed based on how items are ordered. Because order could apply to an innumerable number of elements, order is set inline as `--pf-l-flex--item--Order{-on-[breakpoint]}: {int}`.
+Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.pf-l-flex__item</code>s. Spacing may need to be managed based on how items are ordered. Because order could apply to an innumerable number of elements, order is set inline as `--pf-l-flex--item--Order{-on-[breakpoint]}: {order}`.
 
 ### First-last-ordering
 ```hbs
