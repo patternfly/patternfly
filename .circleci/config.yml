@@ -37,7 +37,7 @@ workflows:
 jobs:
   build:
     docker:
-    - image: circleci/node:10-browsers
+    - image: circleci/node:12-browsers
     steps:
     - checkout
     - persist_to_workspace:
@@ -65,7 +65,7 @@ jobs:
         paths: *build_cache_paths
   test_a11y:
     docker:
-    - image: circleci/node:10-browsers
+    - image: circleci/node:12-browsers
     steps:
     - *attach_workspace
     - restore_cache:
@@ -90,7 +90,7 @@ jobs:
           - coverage/
   lint:
     docker:
-    - image: circleci/node:10
+    - image: circleci/node:12
     steps:
       - *attach_workspace
       - restore_cache:
@@ -138,7 +138,7 @@ jobs:
           when: always
   deploy:
     docker:
-    - image: circleci/node:10
+    - image: circleci/node:12
     steps:
     - *attach_workspace
     - run:
