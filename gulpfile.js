@@ -95,10 +95,9 @@ const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWebpackDev
 const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
 
 module.exports = {
-  // Builds `dist` and `public` folders
-  build: series(buildPatternfly, buildWebpack),
-  buildPatternfly,
-  buildWebpack,
+  build: series(buildPatternfly, buildWebpack), // Builds `dist` and `public` folders
+  buildPatternfly, // Builds `dist` folder
+  buildWebpack, // Builds `public` folder
   develop: series(buildDocs, watchAll),
   compileSASS: compileSrcSASS,
   minifyCSS,
