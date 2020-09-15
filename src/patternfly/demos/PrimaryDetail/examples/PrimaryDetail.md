@@ -1,6 +1,6 @@
 ---
 id: Primary-detail
-section: components
+section: demos
 wrapperTag: div
 ---
 
