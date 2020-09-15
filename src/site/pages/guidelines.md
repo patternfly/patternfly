@@ -1,6 +1,9 @@
 ---
 id: Guidelines
 ---
+import { PageSection } from '@patternfly/react-core';
+
+<PageSection variant="light">
 
 Please enforce these guidelines at all times. Small or large, call out what's incorrect.
 
@@ -365,3 +368,5 @@ This guide is inspired by people we follow and respect:
 - **[Robert Harris](http://csswizardry.com/):** [CSS Guidelines](http://cssguidelin.es/)
 - **[Gravity Department](http://gravitydept.com/)**: [Style Guide Field Manual](http://manuals.gravitydept.com/code/css/style-guide)
 - **[Hugo Giraudel](http://hugogiraudel.com/):** [SASS Guidelines](https://sass-guidelin.es/)
+
+</PageSection>

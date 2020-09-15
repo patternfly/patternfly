@@ -1,10 +1,10 @@
 const { removeSync } = require('fs-extra');
 const { series, parallel, src, dest } = require('gulp');
 const browserSync = require('browser-sync').create();
-const { copyFA, copySource, copyAssets, copySite, copyDocs } = require('./scripts/gulp/copy');
+const { copyFA, copySource, copyAssets, copyDocs } = require('./scripts/gulp/copy');
 const { compileSASS, minifyCSS, watchSASS } = require('./scripts/gulp/sass');
 const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
-const { compileHBS, compileMD, watchHBS, watchMD, compileDocs } = require('./scripts/gulp/html');
+const { compileHBS, compileMD, watchHBS, watchMD, compileDocs, watchDocs } = require('./scripts/gulp/html');
 const { lintCSSComments, lintCSSFunctions } = require('./scripts/gulp/lint');
 const { generateSnippets } = require('./scripts/gulp/snippets');
 
@@ -36,7 +36,7 @@ function clean(cb) {
 }
 
 function copySourceFiles() {
-  return copySource(sassFiles);
+  return copySource();
 }
 
 function compileSrcSASS() {
@@ -63,8 +63,12 @@ function watchSrcMD() {
   return watchMD(mdFiles);
 }
 
-function buildDocs() {
+function buildMDDocs() {
   return compileDocs(mdFiles);
+}
+
+function watchMDDocs() {
+  return watchDocs(mdFiles);
 }
 
 function copyWorkspaceAssets() {
@@ -87,10 +91,12 @@ function startWorkspaceServer() {
 }
 
 const buildWorkspace = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD), copyWorkspaceAssets);
+const buildDocs = series(copyAssets, compileSrcHBS, buildMDDocs, copyDocs);
 
 module.exports = {
-  build: series(clean, parallel(series(compileSrcSASS, minifyCSS), pfIcons, copyFA, copySite, copySourceFiles)),
-  buildDocs: series(compileSrcHBS, buildDocs, copyDocs),
+  build: series(clean, parallel(series(compileSrcSASS, minifyCSS), pfIcons, copyFA, buildDocs, copySourceFiles)),
+  buildDocs,
+  start: parallel(watchSrcSASS, watchSrcHBS, watchMDDocs),
   buildWorkspace,
   develop: series(buildWorkspace, parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWorkspaceServer)),
   compileSASS: compileSrcSASS,
@@ -104,7 +110,6 @@ module.exports = {
   copyFA,
   copySource: copySourceFiles,
   copyAssets,
-  copySite,
   copyDocs,
   lintCSSFunctions,
   lintCSSComments,

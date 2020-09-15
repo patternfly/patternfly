@@ -1,6 +1,9 @@
 ---
 id: Accessibility guide
 ---
+import { PageSection } from '@patternfly/react-core';
+
+<PageSection variant="light">
 
 <a href="/a11y-report.html">Current a11y status</a>
 
@@ -159,3 +162,5 @@ Many accessibility issues can be found by doing a few simple checks:
     - Text color against background color ([Understanding WCAG 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html))
     - Text color against link color ([Technique G183](https://www.w3.org/TR/WCAG20-TECHS/G183.html))
     - Visible boundaries of buttons and form elements against adjacent background color ([Understanding WCAG 1.4.11](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html))
+
+</PageSection>

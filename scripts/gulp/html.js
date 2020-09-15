@@ -11,7 +11,7 @@ const stringify = require('rehype-stringify');
 const raw = require('rehype-raw');
 const graymatter = require('gray-matter');
 const Handlebars = require('handlebars');
-const { extractExamples } = require('gatsby-theme-patternfly-org/helpers/extractExamples');
+const { extractExamples } = require('theme-patternfly-org/helpers/extractExamples');
 const { codeTransformer, getWrapperDiv } = require('./codeTransformer');
 const visit = require('unist-util-visit');
 const { render } = require('html-formatter');
@@ -48,11 +48,11 @@ function compileHBS(hbsFiles) {
 // Helper
 function getCSSPaths() {
   const res = [];
-  const fileContents = fs.readFileSync('./gatsby-browser.js', 'utf8');
+  const fileContents = fs.readFileSync('./patternfly-docs.css.js', 'utf8');
   const regex = /import ['"](.*)['"];?/g;
   let result;
 
-  // Include styles from gatsby-browser.js
+  // Include styles from patternfly-docs.css.js
   // eslint-disable-next-line no-cond-assign
   while ((result = regex.exec(fileContents))) {
     const srcFile = require.resolve(result[1], { paths: [path.resolve(__dirname, '../..')] });
@@ -109,7 +109,7 @@ function compileMD0(srcFiles) {
         code: unified()
           .use(toMDAST)
           .use(codeTransformer, { examples, section, title })
-          .use(remark2rehype, { allowDangerousHTML: true })
+          .use(remark2rehype, { allowDangerousHtml: true })
           .use(raw)
           .use(stringify)
           .processSync(content).contents
@@ -189,6 +189,11 @@ function onMDChange(file) {
 }
 
 // Helper
+function onDocChange(file) {
+  compileDocs0(src(file));
+}
+
+// Helper
 function onHBSChange(file) {
   hbsInstance.registerPartial(
     path.basename(file, '.hbs'), // Partial name
@@ -215,6 +220,13 @@ function watchMD(mdFiles) {
   watcher.on('unlink', file => fs.removeSync(getExampleDir(file)));
 }
 
+function watchDocs(mdFiles) {
+  const watcher = watch(mdFiles, { delay: 0 });
+
+  watcher.on('change', onDocChange);
+  watcher.on('add', onDocChange);
+}
+
 module.exports = {
   hbsInstance,
   hbsFileMap,
@@ -222,5 +234,6 @@ module.exports = {
   compileMD,
   watchHBS,
   watchMD,
-  compileDocs
+  compileDocs,
+  watchDocs
 };

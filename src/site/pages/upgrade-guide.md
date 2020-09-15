@@ -1,6 +1,10 @@
 ---
-id: Upgrading to PatternFly 4
+id: upgrade-guide
+title: Upgrading to PatternFly 4
 ---
+import { PageSection } from '@patternfly/react-core';
+
+<PageSection variant="light">
 
 Use the following steps to upgrade from PatternFly 3 to PatternFly 4.
 
@@ -34,7 +38,7 @@ npm install @patternfly/patternfly
 2. Copy `patternfly.css` to your project's CSS directory.
 3. In your HTML file, add the following line to the bottom of your list of CSS files to link to your new stylesheet:
 
-```html
+```html noLive
 <link rel="stylesheet" href="css/patternfly.css">
 ```
 
@@ -70,7 +74,7 @@ _Code Snippet_
 
 - Import all modules
 
-```js
+```js noLive
 gulp.task('compile-scss', () =>
   gulp
     .src('./@node_modules/@patternfly/patternfly/**/*.scss')
@@ -84,7 +88,7 @@ gulp.task('compile-scss', () =>
 
 - Import all specific modules
 
-```js
+```js noLive
 gulp.task('compile-scss', () =>
   gulp
     .src('./@node_modules/@patternfly/patternfly/**/*.scss')
@@ -114,7 +118,7 @@ _Code Snippets_
 
 - Import all `.scss` files
 
-```js
+```js noLive
 module.exports = {
   module: {
     rules: [{
@@ -138,7 +142,7 @@ module.exports = {
 
 - Import select modules
 
-```js
+```js noLive
 module.exports = {
   module: {
     rules: [{
@@ -206,7 +210,7 @@ $pf-global--enable-fontawesome-cdn: true !default;
 
 If you are currently using Font Awesome 4 and just want to use Font Awesome 5 immediately, you will need to add the Font Awesome scripts:
 
-```html
+```html noLive
 <script defer src="https://use.fontawesome.com/releases/[VERSION]/js/all.js"></script>
 <script defer src="https://use.fontawesome.com/releases/[VERSION]/js/v4-shims.js"></script>
 ```
@@ -226,3 +230,5 @@ The updated `scss-variables.scss` file should look as follows:
 ```scss
 $pf-global--disable-fontawesome: true !default;
 ```
+
+</PageSection>

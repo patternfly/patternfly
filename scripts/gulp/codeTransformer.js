@@ -1,13 +1,13 @@
 const visit = require('unist-util-visit');
-const { getId } = require('gatsby-theme-patternfly-org/helpers/getId');
-const { getExampleClassName, getExampleId } = require('gatsby-theme-patternfly-org/helpers/extractExamples');
+const { getId } = require('theme-patternfly-org/helpers/getId');
+const { getExampleClassName, getExampleId } = require('theme-patternfly-org/helpers/extractExampleHelpers');
 
 // Helper
 function getWrapperDiv(section, title, exampleName, toWrap, classNames) {
   title = title.replace(/ /g, '-').trim();
   return `<h3 class="ws-lite-example-title">${exampleName}</h3>
-<div id="${getExampleId('core', section, title, exampleName)}" class="${classNames} ${getExampleClassName(
-    'core',
+<div id="${getExampleId('html', section, title, exampleName)}" class="${classNames} ${getExampleClassName(
+    'html',
     section,
     title
   )}">

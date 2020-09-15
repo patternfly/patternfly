@@ -1,6 +1,10 @@
 ---
 id: Modifiers
 ---
+import { PageSection } from '@patternfly/react-core';
+
+<PageSection variant="light">
+
 - pf-m-2xl
 - pf-m-3xl
 - pf-m-4xl
@@ -83,3 +87,5 @@ id: Modifiers
 - pf-m-width-max
 - pf-m-wrap
 - pf-m-xl
+
+</PageSection>
