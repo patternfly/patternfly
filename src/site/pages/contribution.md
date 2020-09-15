@@ -2,9 +2,6 @@
 id: contribution
 title: Contribution guidelines
 ---
-import { PageSection } from '@patternfly/react-core';
-
-<PageSection variant="light">
 
 ## Component, layout, demo creation
 ### Naming blocks
@@ -94,5 +91,3 @@ In order to streamline reviews and set expectations, the following should be exp
     5) Does the responsive behavior work correctly?
     6) Have the accessibility standards been followed?
     7) Is the example resilient - if you put more content in it, do things start to break?
-
-</PageSection>

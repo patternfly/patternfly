@@ -1,9 +1,6 @@
 ---
 id: Icons
 ---
-import { PageSection } from '@patternfly/react-core';
-
-<PageSection variant="light">
 
 | icon name | icon | code |
 | --- | --- | --- |
@@ -124,5 +121,3 @@ import { PageSection } from '@patternfly/react-core';
 | volume | <i class="pf-icon pf-icon-volume"></i> | &lt;i class=&quot;pf-icon pf-icon-volume&quot;&gt;&lt;/i&gt;
 | warning-triangle | <i class="pf-icon pf-icon-warning-triangle"></i> | &lt;i class=&quot;pf-icon pf-icon-warning-triangle&quot;&gt;&lt;/i&gt;
 | zone | <i class="pf-icon pf-icon-zone"></i> | &lt;i class=&quot;pf-icon pf-icon-zone&quot;&gt;&lt;/i&gt;
-
-</PageSection>

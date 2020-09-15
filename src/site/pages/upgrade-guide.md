@@ -2,9 +2,6 @@
 id: upgrade-guide
 title: Upgrading to PatternFly 4
 ---
-import { PageSection } from '@patternfly/react-core';
-
-<PageSection variant="light">
 
 Use the following steps to upgrade from PatternFly 3 to PatternFly 4.
 
@@ -61,52 +58,11 @@ All of PatternFly 4's layouts are kept under `@patternfly/patternfly/layouts/`.
 
 ### Build Examples
 
-#### Gulp
-
-_This example uses the following configuration:_
-
-```json
-  "gulp": "^3.9.1",
-  "gulp-insert": "^0.5.0",
-```
-
-_Code Snippet_
-
-- Import all modules
-
-```js noLive
-gulp.task('compile-scss', () =>
-  gulp
-    .src('./@node_modules/@patternfly/patternfly/**/*.scss')
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/components/**/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/layouts/**/*.scss";\n'))
-    .pipe(sassGlob())
-    .pipe(replace('@import "./@node_modules/@patternfly/patternfly/patternfly-imports";', ''))
-    .pipe(gulp.dest('./css'))
-);
-```
-
-- Import all specific modules
-
-```js noLive
-gulp.task('compile-scss', () =>
-  gulp
-    .src('./@node_modules/@patternfly/patternfly/**/*.scss')
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/layouts/Page/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/layouts/Grid/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/components/Content/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/components/Content/*.scss";\n'))
-    .pipe(sassGlob())
-    .pipe(replace('@import "./@node_modules/@patternfly/patternfly/patternfly-imports";', ''))
-    .pipe(gulp.dest('./css'))
-);
-```
-
 #### Webpack
 
 _This example uses the following configuration:_
 
-```json
+```json noLive
 webpack: "3.8.1",
 sass-loader: "7.0.0",
 css-loader: "^0.28.11",
@@ -230,5 +186,3 @@ The updated `scss-variables.scss` file should look as follows:
 ```scss
 $pf-global--disable-fontawesome: true !default;
 ```
-
-</PageSection>

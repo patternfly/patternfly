@@ -22,6 +22,7 @@
     "lint:js": "eslint .",
     "precommit": "lint-staged",
     "sassdoc": "sassdoc ./src/patternfly/**/*.scss --parse > sassdoc/data.json",
+    "screenshots": "theme-patternfly-org screenshots --urlPrefix http://localhost:5000",
     "serve": "serve public",
     "start": "npm run dev",
     "test": "node test/test.js",
@@ -91,7 +92,7 @@
     "stylelint-scss": "^3.18.0",
     "stylelint-value-no-unknown-custom-properties": "^3.0.0",
     "surge": "^0.21.3",
-    "theme-patternfly-org": "^0.1.8",
+    "theme-patternfly-org": "^0.1.9",
     "unified": "^9.2.0"
   },
   "engines": {
