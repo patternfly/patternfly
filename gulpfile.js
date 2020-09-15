@@ -78,8 +78,8 @@ const themeCLIOptions = {
   }
 };
 
-function buildWebpack() {
-  build(['all'], themeCLIOptions);
+async function buildWebpack() {
+  await build('all', themeCLIOptions);
 }
 
 function startWebpackDevServer() {
@@ -97,6 +97,7 @@ module.exports = {
   // Builds `dist` and `public` folders
   build: series(buildPatternfly, buildWebpack),
   buildPatternfly,
+  buildWebpack,
   develop: series(buildDocs, watchAll),
   compileSASS: compileSrcSASS,
   minifyCSS,
