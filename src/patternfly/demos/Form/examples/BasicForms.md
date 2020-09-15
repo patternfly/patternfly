@@ -1,6 +1,6 @@
 ---
 id: Form
-section: demos
+section: components
 ---
 
 ## Demos

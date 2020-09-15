@@ -1,6 +1,6 @@
 ---
 id: Alert
-section: demos
+section: components
 ---
 
 ## Demos

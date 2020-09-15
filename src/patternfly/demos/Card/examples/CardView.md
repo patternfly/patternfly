@@ -1,6 +1,6 @@
 ---
 id: Card
-section: demos
+section: components
 wrapperTag: div
 ---
 

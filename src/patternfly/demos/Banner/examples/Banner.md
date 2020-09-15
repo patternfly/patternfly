@@ -1,6 +1,6 @@
 ---
 id: 'Banner'
-section: demos
+section: components
 beta: true
 cssPrefix: pf-c-banner
 wrapperTag: div

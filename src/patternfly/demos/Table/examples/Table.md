@@ -1,6 +1,6 @@
 ---
 id: Table
-section: demos
+section: components
 wrapperTag: div
 ---
 

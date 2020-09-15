@@ -1,6 +1,6 @@
 ---
 id: Data list
-section: demos
+section: components
 wrapperTag: div
 ---
 

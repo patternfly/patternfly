@@ -1,6 +1,6 @@
 ---
 id: Modal
-section: demos
+section: components
 ---
 
 ## Demos

@@ -1,6 +1,6 @@
 ---
 id: Page
-section: demos
+section: components
 wrapperTag: div
 ---
 
