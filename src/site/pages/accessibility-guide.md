@@ -115,13 +115,13 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
   - Additionally, for **semantic** icons:
       - Add a label for the icon in tooltip text that displays on hover, and also on focus for focusable elements.
       - For interactive elements like `<a>` and `<button>` where an icon is used as the label instead of text, provide the label on the interactive element using `aria-label`. For example:
-      ```html
+      ```html noLive
       <button class="..." aria-label="Close dialog">
         <i class="..." aria-hidden="true"></i>
       </button>
       ```
       - For non-interactive icons, include `.pf-screen-reader` text near the icon. Depending on the component, the `.pf-screen-reader` text might not be a direct sibling to the icon element. For example, in the alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
-      ```html
+      ```html noLive
       <div class="pf-c-alert pf-m-success" aria-label="Success alert">
         <div aria-hidden="true" class="pf-c-alert__icon">
           <i class="fas fa-check-circle"></i>
