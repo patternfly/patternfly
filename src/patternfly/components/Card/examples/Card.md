@@ -309,6 +309,27 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
+### Card with dividers between sections
+```hbs
+{{#> card}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{> divider}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{> divider}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{> divider}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
 ## Documentation
 ### Overview
 A card is a generic rectangular container that can be used to build other components. Use a default card for regular page content and the compact variation for dashboard or small cards.
