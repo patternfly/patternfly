@@ -7,6 +7,7 @@
   "scripts": {
     "build-patternfly": "gulp buildPatternfly",
     "build": "gulp build",
+    "build:docs": "gulp buildWebpack",
     "build:pficons": "gulp pfIcons",
     "build:pficonfont": "gulp pfIconFont",
     "clean": "gulp clean",
@@ -21,7 +22,7 @@
     "lint:js": "eslint .",
     "precommit": "lint-staged",
     "sassdoc": "sassdoc ./src/patternfly/**/*.scss --parse > sassdoc/data.json",
-    "screenshots": "theme-patternfly-org screenshots --urlPrefix http://localhost:5000",
+    "screenshots": "rimraf src/generated/**/*.png && theme-patternfly-org screenshots --urlPrefix http://localhost:5000",
     "serve": "serve public",
     "start": "gulp develop",
     "test": "node test/test.js",

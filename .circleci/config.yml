@@ -54,8 +54,11 @@ jobs:
         paths: *js_deps_paths
         key: *js_deps_cache_key
     - run:
-        name: Build Dist
-        command: npm run build
+        name: Build dist
+        command: npm run build-patternfly
+    - run:
+        name: Build docs
+        command: npm run build:docs
     - run:
         name: Upload docs
         command: node .circleci/upload-preview.js public
