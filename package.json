@@ -25,7 +25,6 @@
     "serve": "serve public",
     "start": "gulp develop",
     "test": "node test/test.js",
-    "test:a11y": "patternfly-a11y .cache/fullscreenPages.json",
     "update-modifiers": "./scripts/extractModifiers.sh",
     "semantic-release": "semantic-release"
   },
@@ -38,7 +37,6 @@
     "@patternfly/react-core": "^4.47.0",
     "@patternfly/react-styles": "^4.7.3",
     "@patternfly/react-table": "^4.16.7",
-    "@patternfly/patternfly-a11y": "1.0.4",
     "babel-eslint": "^8.2.3",
     "cheerio": "^1.0.0-rc.3",
     "commander": "^5.1.0",
