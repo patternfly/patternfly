@@ -77,6 +77,7 @@
     "react-dom": "^16.8.0",
     "remark-parse": "^8.0.3",
     "remark-stringify": "^8.1.0",
+    "rimraf": "^3.0.2",
     "sass-graph": "^3.0.4",
     "semantic-release": "17.0.4",
     "stylelint": "^13.6.1",

@@ -1,5 +1,5 @@
-const { removeSync } = require('fs-extra');
 const { series, parallel } = require('gulp');
+const rimraf = require('rimraf');
 const { copyFA, copySource, copyAssets, copyDocs } = require('./scripts/gulp/copy');
 const { compileSASS, minifyCSS, watchSASS } = require('./scripts/gulp/sass');
 const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
@@ -19,7 +19,7 @@ const hbsFiles = ['./src/patternfly/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];
 
 function clean(cb) {
-  const cleanDirs = [
+  const cleanGlobs = [
     'dist',
     'src/icons/PfIcons',
     '.circleci/css-size-report/node_modules',
@@ -32,9 +32,10 @@ function clean(cb) {
     'test/results/',
     'test/scenario_tests/',
     '.cache',
-    'public'
+    'public',
+    'src/generated/**/*.js'
   ];
-  cleanDirs.forEach(dir => removeSync(dir));
+  cleanGlobs.forEach(glob => rimraf.sync(glob));
   cb();
 }
 

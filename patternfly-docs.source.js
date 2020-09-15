@@ -10,8 +10,8 @@ module.exports = sourceMD => {
 
   // Core MD
   const coreDocsPath = path.join(__dirname, 'dist/docs');
-  sourceMD(path.join(coreDocsPath, '/**/examples/**/*.md'), 'html');
-  sourceMD(path.join(coreDocsPath, '/**/demos/**/*.md'), 'html-demos');
+  sourceMD(path.join(coreDocsPath, '!(demos)/**/examples/**/*.md'), 'html');
+  sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos');
 
   // Release notes
   sourceMD(require.resolve('./RELEASE-NOTES.md'), 'html');
