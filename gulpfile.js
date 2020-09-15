@@ -7,6 +7,7 @@ const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
 const { compileHBS, compileMD, watchHBS, watchMD, compileDocs, watchDocs } = require('./scripts/gulp/html');
 const { lintCSSComments, lintCSSFunctions } = require('./scripts/gulp/lint');
 const { generateSnippets } = require('./scripts/gulp/snippets');
+const theme = require('theme-patternfly-org/scripts/cli/start');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
@@ -19,8 +20,8 @@ const mdFiles = ['./src/patternfly/**/*.md'];
 
 function clean(cb) {
   const cleanDirs = [
-    './dist',
-    './src/icons/PfIcons',
+    'dist',
+    'src/icons/PfIcons',
     '.circleci/css-size-report/node_modules',
     '.circleci/css-size-report/package-lock.json',
     '.circleci/css-size-report/report.html',
@@ -29,7 +30,9 @@ function clean(cb) {
     'static/assets/fonts/',
     'static/assets/pficon/',
     'test/results/',
-    'test/scenario_tests/'
+    'test/scenario_tests/',
+    '.cache',
+    'public'
   ];
   cleanDirs.forEach(dir => removeSync(dir));
   cb();
@@ -90,13 +93,23 @@ function startWorkspaceServer() {
   });
 }
 
+function startWebpackDevServer() {
+  theme.start({
+    parent: {
+      config: './patternfly-docs.config.js',
+      cssconfig: './patternfly-docs.css.js',
+      source: './patternfly-docs.source.js'
+    }
+  });
+}
+
 const buildWorkspace = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD), copyWorkspaceAssets);
 const buildDocs = series(copyAssets, compileSrcHBS, buildMDDocs, copyDocs);
 
 module.exports = {
   build: series(clean, parallel(series(compileSrcSASS, minifyCSS), pfIcons, copyFA, buildDocs, copySourceFiles)),
   buildDocs,
-  start: parallel(watchSrcSASS, watchSrcHBS, watchMDDocs),
+  start: parallel(watchSrcSASS, watchSrcHBS, watchMDDocs, startWebpackDevServer),
   buildWorkspace,
   develop: series(buildWorkspace, parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWorkspaceServer)),
   compileSASS: compileSrcSASS,
