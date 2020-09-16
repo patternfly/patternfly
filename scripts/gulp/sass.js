@@ -67,7 +67,7 @@ function compileSASS(sassFiles) {
 }
 
 // Helper
-function getGatsbyCSSFiles() {
+function getDocCSSFiles() {
   const res = [];
   const fileContents = fs.readFileSync('./patternfly-docs.css.js', 'utf8');
   const regex = /import ['"](.*\/dist\/.*)['"];?/g;
@@ -86,7 +86,7 @@ function getGatsbyCSSFiles() {
 }
 
 function watchSASS(sassFiles) {
-  const gatsbyCSSFiles = getGatsbyCSSFiles();
+  const docCSSFiles = getDocCSSFiles();
   const graph = sassGraph.parseDir('./src/patternfly').index;
   const watcher = watch(sassFiles, { delay: 0 });
 
@@ -102,18 +102,18 @@ function watchSASS(sassFiles) {
     return acc;
   }
 
-  function compileGatsbySASS(sassFile) {
+  function compileDocSASS(sassFile) {
     // Now find files this file is imported by
     const fullPath = path.join(process.cwd(), sassFile);
     const graphNode = graph[fullPath];
     const dependents = visit(graphNode, [fullPath]);
-    const toCompile = gatsbyCSSFiles.filter(file => dependents.includes(file));
+    const toCompile = docCSSFiles.filter(file => dependents.includes(file));
     compileSASS0(src(toCompile));
     console.log('Compiled', toCompile.map(file => path.relative(process.cwd(), file)).join(' '));
   }
 
-  watcher.on('change', compileGatsbySASS);
-  watcher.on('add', compileGatsbySASS);
+  watcher.on('change', compileDocSASS);
+  watcher.on('add', compileDocSASS);
 }
 
 function minifyCSS() {

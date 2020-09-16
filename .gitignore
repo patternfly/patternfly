@@ -18,4 +18,4 @@ yarn.lock
 /assets/
 /scripts/sizeReport/package-lock.json
 /scripts/sizeReport/report.html
-**/generated/**/*.js
+src/generated/**/*.js

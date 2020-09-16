@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { series, parallel } = require('gulp');
 const rimraf = require('rimraf');
 const { copyFA, copySource, copyAssets, copyDocs } = require('./scripts/gulp/copy');
@@ -94,11 +95,19 @@ const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWebpackDev
 // Builds `dist` folder
 const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
 
+function checkBuildPatternfly(cb) {
+  if (!fs.existsSync('dist')) {
+    buildPatternfly(cb);
+  } else {
+    cb();
+  }
+}
+
 module.exports = {
   build: series(buildPatternfly, buildWebpack), // Builds `dist` and `public` folders
   buildPatternfly, // Builds `dist` folder
   buildWebpack, // Builds `public` folder
-  develop: series(buildDocs, watchAll),
+  develop: series(checkBuildPatternfly, buildDocs, watchAll),
   compileSASS: compileSrcSASS,
   minifyCSS,
   watchSASS: watchSrcSASS,
