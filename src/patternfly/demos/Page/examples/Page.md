@@ -15,6 +15,36 @@ wrapperTag: div
 {{> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example"}}
 ```
 
+### Refactored page header
+```hbs isFullscreen
+{{#> page page--id="refactored-page-header"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header-alt}}
+    {{#> page-header-brand-toggle}}
+      {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-tertiary-nav"')}}
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      {{/button}}
+    {{/page-header-brand-toggle}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        {{> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}
+        <span class="pf-c-brand-text">
+          subtext
+        </span>
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{> page-template-context-selector}}
+
+  {{/page-header-alt}}
+  {{#> page-sidebar}}
+  {{/page-sidebar}}
+  {{#> page-main}}
+  {{/page-main}}
+{{/page}}
+```
+
 ### Horizontal nav
 ```hbs isFullscreen
 {{#> page page--id="page-layout-horizontal-nav"}}

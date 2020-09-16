@@ -180,7 +180,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   }
 }
 
-
 // Header
 .pf-c-page__header {
   @include pf-t-dark; // force the container to follow the dark theme
@@ -201,6 +200,53 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     grid-template-columns: auto 1fr auto;
+  }
+}
+
+.pf-c-page__header-alt {
+  --pf-c-page__header-alt-brand--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-page__header-alt-brand--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-page__header-alt-brand--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-page__header-alt-brand--PaddingLeft: var(--pf-global--spacer--lg);
+
+  @include pf-t-dark; // force the container to follow the dark theme
+
+  display: flex;
+  grid-area: header;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--pf-c-page__header--BackgroundColor);
+
+  .pf-c-page__header-brand {
+    order: -1;
+    // flex: 1 0 100%;
+    flex-basis: 100%;
+    padding: var(--pf-c-page__header-alt-brand--PaddingTop) var(--pf-c-page__header-alt-brand--PaddingRight) var(--pf-c-page__header-alt-brand--PaddingBottom) var(--pf-c-page__header-alt-brand--PaddingLeft);
+    border-bottom: 1px solid #ddd;
+
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      --pf-c-page__header-alt-brand--PaddingLeft: 0;
+
+      order: 0;
+      flex-basis: auto;
+      border: none;
+    }
+  }
+
+  .pf-c-page__header-brand-toggle {
+    margin-top: var(--pf-global--spacer--md);
+    margin-left: var(--pf-global--spacer--lg);
+    margin-bottom: var(--pf-global--spacer--md);
+  }
+
+  .pf-c-page__header-brand-link {
+    flex-wrap: wrap;
+  }
+}
+
+.pf-c-page__header-alt .pf-c-brand-text {
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    display: none;
   }
 }
 
