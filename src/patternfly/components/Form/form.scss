@@ -65,7 +65,7 @@
   --pf-c-form__helper-text--m-error--Color: var(--pf-global--danger-color--100);
 
   // Section
-  --pf-c-form__section--MarginBottom: var(--pf-global--spacer--xl);
+  --pf-c-form__section--MarginTop: var(--pf-global--spacer--xl);
   --pf-c-form__section--Gap: var(--pf-global--gutter--md);
 
   display: grid;
@@ -114,8 +114,8 @@
   display: grid;
   gap: var(--pf-c-form__section--Gap);
 
-  &:not(:last-child) {
-    margin-bottom: var(--pf-c-form__section--MarginBottom);
+  &:not(:first-child) {
+    margin-top: var(--pf-c-form__section--MarginTop);
   }
 }
 
