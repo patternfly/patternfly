@@ -277,7 +277,7 @@ cssPrefix: pf-c-modal-box
     {{/button}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
-        Modal description
+        Error alert modal title
       {{/modal-box-title}}
     {{/modal-box-header}}
     {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-example--id '-description"')}}
