@@ -1,6 +1,6 @@
 ---
 id: Drawer
-section: demos
+section: components
 wrapperTag: div
 ---
 

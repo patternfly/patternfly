@@ -21,23 +21,23 @@ workflows:
   build_test_deploy:
     jobs:
     - build
-    - test_a11y:
-        requires:
-        - build
+    # - test_a11y:
+    #     requires:
+    #     - build
     - lint:
         requires:
         - build
     - deploy:
         requires:
         - build
-        - test_a11y
+        # - test_a11y
         filters:
           branches:
             only: master
 jobs:
   build:
     docker:
-    - image: circleci/node:10-browsers
+    - image: circleci/node:12-browsers
     steps:
     - checkout
     - persist_to_workspace:
@@ -54,14 +54,11 @@ jobs:
         paths: *js_deps_paths
         key: *js_deps_cache_key
     - run:
-        name: Build Dist
+        name: Build dist
         command: npm run build-patternfly
     - run:
-        name: Build HTML MD
+        name: Build docs
         command: npm run build:docs
-    - run:
-        name: Build Site
-        command: npm run build:site
     - run:
         name: Upload docs
         command: node .circleci/upload-preview.js public
@@ -71,7 +68,7 @@ jobs:
         paths: *build_cache_paths
   test_a11y:
     docker:
-    - image: circleci/node:10-browsers
+    - image: circleci/node:12-browsers
     steps:
     - *attach_workspace
     - restore_cache:
@@ -96,7 +93,7 @@ jobs:
           - coverage/
   lint:
     docker:
-    - image: circleci/node:10
+    - image: circleci/node:12
     steps:
       - *attach_workspace
       - restore_cache:
@@ -105,10 +102,6 @@ jobs:
       - run:
           name: Lint SASS
           command: npm run lint:sass
-      - run:
-          name: Lint HBS
-          command: npm run lint:hbs
-          when: always
       - run:
           name: Lint JS
           command: npm run lint:js
@@ -122,13 +115,11 @@ jobs:
           command: yarn run node-sass dist/patternfly.scss
           when: always
       - run:
-          name: Avoid Unknown Host for github.com
-          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-      - run:
           name: Lint CSS Size
           command: |
             if [[ -n $CIRCLE_PULL_REQUEST ]];
             then
+                mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
                 git fetch --tags
                 node scripts/sizeReport/sizeReport --comment
             fi;
@@ -148,7 +139,7 @@ jobs:
           when: always
   deploy:
     docker:
-    - image: circleci/node:10
+    - image: circleci/node:12
     steps:
     - *attach_workspace
     - run:

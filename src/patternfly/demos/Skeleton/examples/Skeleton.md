@@ -1,6 +1,6 @@
 ---
 id: Skeleton
-section: demos
+section: components
 ---
 
 ## Demos

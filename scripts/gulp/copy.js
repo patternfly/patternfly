@@ -11,7 +11,7 @@ function copyAssets() {
   return src('src/patternfly/assets/**').pipe(dest('static/assets'));
 }
 
-function copySource(sassFiles) {
+function copySource() {
   return Promise.all([
     // Copy excluded source files
     src(['src/patternfly/**/_all.scss', 'src/patternfly/{components,layouts,patterns,utilities}/**/*.scss']).pipe(
@@ -34,14 +34,6 @@ function copySource(sassFiles) {
   ]);
 }
 
-function copySite() {
-  return Promise.all([
-    src('src/site/**').pipe(dest('dist/site')),
-    src('src/patternfly/{components,layouts,patterns,utilities,demos}/**/*.{md,hbs,css}').pipe(dest('dist/site/docs')),
-    src('RELEASE-NOTES.md').pipe(dest('dist'))
-  ]);
-}
-
 function copyDocs() {
   return Promise.all([
     src('src/site/**').pipe(dest('dist/docs')),
@@ -53,6 +45,5 @@ module.exports = {
   copyAssets,
   copyFA,
   copySource,
-  copySite,
   copyDocs
 };

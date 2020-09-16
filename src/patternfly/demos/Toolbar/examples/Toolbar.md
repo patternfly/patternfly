@@ -1,6 +1,6 @@
 ---
 id: Toolbar
-section: demos
+section: components
 ---
 
 import './Toolbar.css'

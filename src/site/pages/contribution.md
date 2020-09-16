@@ -1,44 +1,14 @@
 ---
-id: Contribution guidelines
+id: contribution
+title: Contribution guidelines
 ---
+
 ## Component, layout, demo creation
 ### Naming blocks
 
 Components, layouts, and demos (blocks) should be in individual folders named using Pascal case (AaaBbb). This is the name that will appear in the navigation of the workspace.
 Example: `Button`, `SecondaryNav`
 
-### Component example
-
-Examples require a parent javascript class in the component/examples folder (PatternFly uses React for building the example application). These files should be named index.js.
-
-The example component will refer to example handlebars files. These should be named with kebab-case, including the block name plus the example name: `component-name-type-of-example.hbs`
-
-Inside of the React component, we use JavaScript naming standards, naming the imports with Pascal case and properties or constants with camelCase.
-
-For example:
-
-```html
-import BoxBasicExample from "./box-basic-example.hbs";
-...
-const boxBasicExample = BoxBasicExample();
-...
-<Example heading="Box with no footer">{boxNoHeaderExample}</Example>;
-```
-
-There are several properties available on the Example component to help with styling the previews.
-
-| Property | Usage                                                             |
-| ------------------- | ------------------------------------------------------------------- |
-| `heading`   | Sets the text displayed above the example (required) |
-| `minHeight`   | Sets the min-height of the preview box - useful for collapsed items that need space to expand or when a set minimum height would provide value (optional) |
-| `docs`   | Sets a reference to an example-specific markdown (.md) file to describe the functionality displayed |
-| `fullPageOnly`   | Setting to true will only display the preview when full page mode is used (optional) |
-
-```html
-<Example heading="Heading" minHeight="20em" docs={docReference} fullPageOnly="">{example}</Example>;
-```
-
-If an ID is needed for an element, please use the handlebars unique ID helper.  This can be used by appending `{{uniqueId}}` to the ID attribute so it looks like this:  `id="badge-{{uniqueId}}"`.
 ### Handlebars names
 
 The main handlebars file for a block should be named using kebab case. For example, the secondary navigation would be made up of `secondary-nav.hbs` with elements defined in `secondary-nav-item.hbs` and `secondary-nav-link.hbs`.
@@ -46,9 +16,9 @@ The main handlebars file for a block should be named using kebab case. For examp
 ### Handlebars utilities
 | Property | Usage                                                          | Example
 | ------------ | --------------------------------------------------- | -------------
-| `uniqueId`   | Creates a unique id | badge-{{uniqueId}}
-| `concat`   | Join multiple strings or variables together |  {{concat 'Hello' ' world' '!!!'}} results in Hello world!!!
-| `contains` | Tests to see if a string contains another string | {{#contains alert--modifier 'pf-m-amazingmodifier'}}<br />&nbsp;&nbsp;&lt;span&gt;Text&lt;/span&gt;<br />{{else}}<br />&nbsp;&nbsp;&lt;span&gt;Alternate text&lt;/span&gt;<br />{{/contains}}
+| `uniqueId`   | Creates a unique id | badge-&lbrace;&lbrace;uniqueId&rbrace;&rbrace;
+| `concat`   | Join multiple strings or variables together |  &lbrace;&lbrace;concat 'Hello' ' world' '!!!'&rbrace;&rbrace; results in Hello world!!!
+| `contains` | Tests to see if a string contains another string | &lbrace;&lbrace;#contains alert--modifier 'pf-m-amazingmodifier'&rbrace;&rbrace;<br />&nbsp;&nbsp;&lt;span&gt;Text&lt;/span&gt;<br />&lbrace;&lbrace;else&rbrace;&rbrace;<br />&nbsp;&nbsp;&lt;span&gt;Alternate text&lt;/span&gt;<br />&lbrace;&lbrace;/contains&rbrace;&rbrace;
 
 ## Documentation
 For each example you should provide the relevant accessibility and usage guidance as well as any additional notes that could be helpful. Any information that is not specific to an example should be included at the bottom of the page.
@@ -61,7 +31,7 @@ A good example of this approach is the [table component](/documentation/core/com
 Every block and element should have a parameter allowing for modifier classes and attributes to be passed in. These should be named in kebab case with the block/element name plus `--modifier` and `--attribute` respectively.
 For example:
 
-```html
+```html noLive
 <!-- Component definition -->
 <div class="pf-c-grid{{#if grid--modifier}} {{grid--modifier}}{{/if}}"
   {{#if grid--attribute}}
@@ -80,7 +50,7 @@ When including a partial within a partial, by default, handlebars will pass alon
 
 If there is a possibility of a block nested inside another block of the same type and you want to isolate that nested block, add a new context. For example - see how the nested box is defined below with 'newcontext' added as an attribute:
 
-```html
+```html noLive
 {{#> grid grid--modifier="pf-m-gutter" grid--attribute='id="base-grid" aria-label="Base grid"'}}
   {{#> grid-item grid-item--modifier="pf-m-6-col" grid-item--attribute='id="base-grid-item" aria-label="Base grid item"'}}
     {{#> grid newcontext}}

@@ -1,5 +1,6 @@
 ---
-id: Upgrading to PatternFly 4
+id: upgrade-guide
+title: Upgrading to PatternFly 4
 ---
 
 Use the following steps to upgrade from PatternFly 3 to PatternFly 4.
@@ -34,7 +35,7 @@ npm install @patternfly/patternfly
 2. Copy `patternfly.css` to your project's CSS directory.
 3. In your HTML file, add the following line to the bottom of your list of CSS files to link to your new stylesheet:
 
-```html
+```html noLive
 <link rel="stylesheet" href="css/patternfly.css">
 ```
 
@@ -57,52 +58,11 @@ All of PatternFly 4's layouts are kept under `@patternfly/patternfly/layouts/`.
 
 ### Build Examples
 
-#### Gulp
-
-_This example uses the following configuration:_
-
-```json
-  "gulp": "^3.9.1",
-  "gulp-insert": "^0.5.0",
-```
-
-_Code Snippet_
-
-- Import all modules
-
-```js
-gulp.task('compile-scss', () =>
-  gulp
-    .src('./@node_modules/@patternfly/patternfly/**/*.scss')
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/components/**/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/layouts/**/*.scss";\n'))
-    .pipe(sassGlob())
-    .pipe(replace('@import "./@node_modules/@patternfly/patternfly/patternfly-imports";', ''))
-    .pipe(gulp.dest('./css'))
-);
-```
-
-- Import all specific modules
-
-```js
-gulp.task('compile-scss', () =>
-  gulp
-    .src('./@node_modules/@patternfly/patternfly/**/*.scss')
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/layouts/Page/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/layouts/Grid/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/components/Content/*.scss";\n'))
-    .pipe(insert.append('@import "./@node_modules/@patternfly/patternfly/components/Content/*.scss";\n'))
-    .pipe(sassGlob())
-    .pipe(replace('@import "./@node_modules/@patternfly/patternfly/patternfly-imports";', ''))
-    .pipe(gulp.dest('./css'))
-);
-```
-
 #### Webpack
 
 _This example uses the following configuration:_
 
-```json
+```json noLive
 webpack: "3.8.1",
 sass-loader: "7.0.0",
 css-loader: "^0.28.11",
@@ -114,7 +74,7 @@ _Code Snippets_
 
 - Import all `.scss` files
 
-```js
+```js noLive
 module.exports = {
   module: {
     rules: [{
@@ -138,7 +98,7 @@ module.exports = {
 
 - Import select modules
 
-```js
+```js noLive
 module.exports = {
   module: {
     rules: [{
@@ -206,7 +166,7 @@ $pf-global--enable-fontawesome-cdn: true !default;
 
 If you are currently using Font Awesome 4 and just want to use Font Awesome 5 immediately, you will need to add the Font Awesome scripts:
 
-```html
+```html noLive
 <script defer src="https://use.fontawesome.com/releases/[VERSION]/js/all.js"></script>
 <script defer src="https://use.fontawesome.com/releases/[VERSION]/js/v4-shims.js"></script>
 ```

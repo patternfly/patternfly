@@ -1,10 +1,13 @@
 ---
 id: About modal
-section: demos
+section: components
 ---
 
 ## Demos
 ### Basic
+
+This demo implements the about modal, including the backdrop.
+
 ```hbs isFullscreen
 {{#> about-modal}}
   {{#> backdrop}}
@@ -54,6 +57,3 @@ section: demos
   {{/backdrop}}
 {{/about-modal}}
 ```
-
-## Documentation
-This demo implements the about modal, including the backdrop.

@@ -1,6 +1,6 @@
 ---
 id: Wizard
-section: demos
+section: components
 wrapperTag: div
 ---
 

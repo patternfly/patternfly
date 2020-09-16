@@ -1,9 +1,9 @@
-const resolveAliases = require('./scripts/resolveAliases');
-
 module.exports = {
   rules: {
     'import/no-extraneous-dependencies': 'off',
     'import/no-named-default': 'off',
+    'import/no-webpack-loader-syntax': 'off',
+    'import/no-unresolved': 'error',
     'import/prefer-default-export': 'off',
     'jsx-a11y/anchor-is-valid': [
       'error',
@@ -55,9 +55,7 @@ module.exports = {
     'react/forbid-prop-types': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-uses-vars': 'error',
-    'react/no-danger': 'off',
-    'import/no-webpack-loader-syntax': 'off',
-    "import/no-unresolved": "error"
+    'react/no-danger': 'off'
   },
   extends: [
     'standard',
@@ -72,14 +70,6 @@ module.exports = {
     browser: true,
     node: true,
     jest: true
-  },
-  settings: {
-    'import/resolver': {
-      alias: Object.entries(resolveAliases)
-    }
-  },
-  globals: {
-    graphql: true
   },
   plugins: ['prettier', 'react'],
   parser: 'babel-eslint'

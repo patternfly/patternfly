@@ -1,12 +1,14 @@
-const { removeSync } = require('fs-extra');
-const { series, parallel, src, dest } = require('gulp');
-const browserSync = require('browser-sync').create();
-const { copyFA, copySource, copyAssets, copySite, copyDocs } = require('./scripts/gulp/copy');
+const fs = require('fs');
+const { series, parallel } = require('gulp');
+const rimraf = require('rimraf');
+const { copyFA, copySource, copyAssets, copyDocs } = require('./scripts/gulp/copy');
 const { compileSASS, minifyCSS, watchSASS } = require('./scripts/gulp/sass');
 const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
-const { compileHBS, compileMD, watchHBS, watchMD, compileDocs } = require('./scripts/gulp/html');
+const { compileHBS, compileMD, watchHBS, watchMD } = require('./scripts/gulp/html');
 const { lintCSSComments, lintCSSFunctions } = require('./scripts/gulp/lint');
 const { generateSnippets } = require('./scripts/gulp/snippets');
+const { start } = require('theme-patternfly-org/scripts/cli/start');
+const { build } = require('theme-patternfly-org/scripts/cli/build');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
@@ -18,9 +20,9 @@ const hbsFiles = ['./src/patternfly/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];
 
 function clean(cb) {
-  const cleanDirs = [
-    './dist',
-    './src/icons/PfIcons',
+  const cleanGlobs = [
+    'dist',
+    'src/icons/PfIcons',
     '.circleci/css-size-report/node_modules',
     '.circleci/css-size-report/package-lock.json',
     '.circleci/css-size-report/report.html',
@@ -29,14 +31,17 @@ function clean(cb) {
     'static/assets/fonts/',
     'static/assets/pficon/',
     'test/results/',
-    'test/scenario_tests/'
+    'test/scenario_tests/',
+    '.cache',
+    'public',
+    'src/generated/**/*.js'
   ];
-  cleanDirs.forEach(dir => removeSync(dir));
+  cleanGlobs.forEach(glob => rimraf.sync(glob));
   cb();
 }
 
 function copySourceFiles() {
-  return copySource(sassFiles);
+  return copySource();
 }
 
 function compileSrcSASS() {
@@ -63,36 +68,46 @@ function watchSrcMD() {
   return watchMD(mdFiles);
 }
 
-function buildDocs() {
-  return compileDocs(mdFiles);
-}
-
-function copyWorkspaceAssets() {
-  return src('dist/assets/**/*').pipe(dest('assets'));
-}
-
 function generateWorkspaceSnippets() {
   return generateSnippets('workspace/**/index.html');
 }
 
-function startWorkspaceServer() {
-  browserSync.init({
-    server: {
-      baseDir: './',
-      directory: true
-    },
-    files: ['workspace/**/*.html', 'dist/**/*.css', 'scripts/gulp/ws-lite.css'],
-    startPath: 'workspace'
-  });
+const themeCLIOptions = {
+  parent: {
+    config: './patternfly-docs.config.js',
+    cssconfig: './patternfly-docs.css.js',
+    source: './patternfly-docs.source.js'
+  }
+};
+
+async function buildWebpack() {
+  await build('all', themeCLIOptions);
 }
 
-const buildWorkspace = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD), copyWorkspaceAssets);
+function startWebpackDevServer() {
+  start(themeCLIOptions);
+}
+
+const buildSrc = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD));
+const buildDocs = series(buildSrc, copyDocs);
+const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWebpackDevServer);
+
+// Builds `dist` folder
+const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
+
+function checkBuildPatternfly(cb) {
+  if (!fs.existsSync('dist')) {
+    buildPatternfly(cb);
+  } else {
+    cb();
+  }
+}
 
 module.exports = {
-  build: series(clean, parallel(series(compileSrcSASS, minifyCSS), pfIcons, copyFA, copySite, copySourceFiles)),
-  buildDocs: series(compileSrcHBS, buildDocs, copyDocs),
-  buildWorkspace,
-  develop: series(buildWorkspace, parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWorkspaceServer)),
+  build: series(buildPatternfly, buildWebpack), // Builds `dist` and `public` folders
+  buildPatternfly, // Builds `dist` folder
+  buildWebpack, // Builds `public` folder
+  develop: series(checkBuildPatternfly, buildDocs, watchAll),
   compileSASS: compileSrcSASS,
   minifyCSS,
   watchSASS: watchSrcSASS,
@@ -104,7 +119,6 @@ module.exports = {
   copyFA,
   copySource: copySourceFiles,
   copyAssets,
-  copySite,
   copyDocs,
   lintCSSFunctions,
   lintCSSComments,
