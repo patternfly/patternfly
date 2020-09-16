@@ -356,7 +356,7 @@ Ordering - Ordering can be applied to nested <code>.pf-l-grid</code> and <code>.
 {{/grid}}
 ```
 
-### Grouped, esponsive ordering
+### Grouped, responsive ordering
 ```hbs
 {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-gutter"}}
   {{#> grid grid--modifier="pf-m-gutter" grid--attribute='style="--pf-l-grid--item--Order-on-lg: 2;"'}}

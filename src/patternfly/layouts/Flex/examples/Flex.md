@@ -671,7 +671,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 
 Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.pf-l-flex__item</code>s. Spacing may need to be managed based on how items are ordered. Because order could apply to an innumerable number of elements, order is set inline as `--pf-l-flex--item--Order{-on-[breakpoint]}: {order}`.
 
-### First-last-ordering
+### First last ordering
 ```hbs
 {{#> l-flex}}
   {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none" l-flex-item--attribute='style="--pf-l-flex--item--Order: 2;"'}}
@@ -686,7 +686,7 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 {{/l-flex}}
 ```
 
-### Responsive-first-last-ordering
+### Responsive first last ordering
 ```hbs
 {{#> l-flex}}
   {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none-on-lg" l-flex-item--attribute='style="--pf-l-flex--item--Order-on-lg: 2;"'}}
@@ -735,7 +735,7 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 {{/l-flex}}
 ```
 
-### Responsive-ordering
+### Responsive ordering
 ```hbs
 {{#> l-flex}}
   {{#> l-flex l-flex--modifier="pf-m-spacer-none" l-flex--attribute='style="--pf-l-flex--item--Order-on-lg: 1;"'}}
