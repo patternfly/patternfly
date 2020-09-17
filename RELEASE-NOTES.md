@@ -3,6 +3,45 @@ id: Release notes
 section: get-started
 releaseNoteTOC: true
 ---
+## 2020.12 release notes (2020-09-16)
+Packages released:
+- [@patternfly/patternfly@v4.41.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.41.1)
+
+### Components
+- **Button:**
+  - Added progress button ([#3382](https://github.com/patternfly/patternfly/pull/3382))
+  - Added pf-m-link as an anchor example ([#3426](https://github.com/patternfly/patternfly/pull/3426))
+  - Allowed inline link text to wrap and use with span element ([#3470](https://github.com/patternfly/patternfly/pull/3470))
+- **Chipgroup:** Positioned removable button at the top ([#3445](https://github.com/patternfly/patternfly/pull/3445))
+- **Codeeditor:** Added code editor ([#3457](https://github.com/patternfly/patternfly/pull/3457))
+- **Datalist:**
+  - Added draggable variation ([#3401](https://github.com/patternfly/patternfly/pull/3401))
+  - Added text modifiers ([#3463](https://github.com/patternfly/patternfly/pull/3463))
+- **Description list:** Updated term text element to be inline ([#3416](https://github.com/patternfly/patternfly/pull/3416))
+- **Drawer:** Kept drawer panel from extending beyond drawer height ([#3460](https://github.com/patternfly/patternfly/pull/3460))
+- **Dropdown, menu:** Made menu text work in dark theme ([#3446](https://github.com/patternfly/patternfly/pull/3446))
+- **Form control:** Added ability to specify custom icon for text inputs ([#3453](https://github.com/patternfly/patternfly/pull/3453))
+- **Label group:** Made left/right padding match in vertical layout ([#3466](https://github.com/patternfly/patternfly/pull/3466))
+- **Modal:** Added align-top variation ([#3435](https://github.com/patternfly/patternfly/pull/3435))
+- **Page:** Fixed safari bug w/ sections shrinking shorter than content ([#3441](https://github.com/patternfly/patternfly/pull/3441))
+- **Pagination:** Update bottom example options menu to pf-m-top ([#3420](https://github.com/patternfly/patternfly/pull/3420))
+- **Progress:** Added warning state ([#3423](https://github.com/patternfly/patternfly/pull/3423))
+- **Progress:** Improved description/status text/wrapping ([#3436](https://github.com/patternfly/patternfly/pull/3436))
+- **Select:** Added pf-m-focus support for favorite __menu-items ([#3431](https://github.com/patternfly/patternfly/pull/3431))
+- **Table:**
+  - Removed unused example code ([#3424](https://github.com/patternfly/patternfly/pull/3424))
+  - Added help th support ([#3467](https://github.com/patternfly/patternfly/pull/3467))
+- **Treeview:** Addressed follow-up issues from initial implementation ([#3410](https://github.com/patternfly/patternfly/pull/3410))
+
+### Other
+- **Docs:**
+  - Updated form demo id to match component id ([#3428](https://github.com/patternfly/patternfly/pull/3428))
+  - Added section for hover styles ([#3432](https://github.com/patternfly/patternfly/pull/3432))
+- **Build:** Bump stylelint ([#3427](https://github.com/patternfly/patternfly/pull/3427))
+- **Icons:**
+  - Removed transforms from pficons, added namespaces ([#3398](https://github.com/patternfly/patternfly/pull/3398))
+  - Updated pficon data to fix svg rendering issues ([#3469](https://github.com/patternfly/patternfly/pull/3469))
+
 
 ## 2020.11 release notes (2020-08-26)
 Packages released:
