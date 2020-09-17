@@ -50,7 +50,7 @@ import './Text.css'
 {{/text}}
 ```
 
-### Font Color
+### Color
 
 ```hbs
 {{#> text text--modifier="pf-u-color-100"}}
@@ -67,23 +67,23 @@ import './Text.css'
 {{/text}}
 ```
 
-### Font Alignment
+### Controlling text
 
 ```hbs
 {{#> text text--modifier="pf-u-font-break-word"}}
-  <h1><strong>Breakword</strong></h1>
+  <h4><strong>Breakword</strong></h4>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut.</p>
   <br />
 {{/text}}
 {{#> text text--modifier="pf-u-font-nowrap"}}
-<h1><strong>No Wrap</strong></h1>
+<h4><strong>No Wrap</strong></h4>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut.
   </p>
   <br />
 {{/text}}
 {{#> text text--modifier="pf-u-font-wrap"}}
-<h1><strong>Wrap</strong></h1>
+<h4><strong>Wrap</strong></h41>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut.
 {{/text}}
 ```
@@ -107,12 +107,12 @@ Text utility
 | `.pf-u-font-size-3xl`     | `*`        | Sets font-size to 3xl         |
 | `.pf-u-font-size-4xl`     | `*`        | Sets font-size to 4xl         |
 | `.pf-u-font-weight-light` | `*`        | Sets font-weight to light     |
-| `.pf-u-font-size-normal`  | `*`        | Sets font-weight to normal    |
-| `.pf-u-font-size-bold`    | `*`        | Sets font-weight to bold      |
+| `.pf-u-font-weight-normal`  | `*`        | Sets font-weight to normal    |
+| `.pf-u-font-weight-bold`    | `*`        | Sets font-weight to bold      |
 | `.pf-u-color-100`         | `*`        | Sets font-color to Color 100  |
 | `.pf-u-color-200`         | `*`        | Sets font-color to Color 200  |
 | `.pf-u-color-300`         | `*`        | Sets font-color to Color 300  |
 | `.pf-u-color-400`         | `*`        | Sets font-color to Color 400  |
-| `.pf-u-font-break-word`   | `*`        | Sets word-break to break-word |
-| `.pf-u-font-nowrap`       | `*`        | Sets white-space to nowrap    |
-| `.pf-u-font-wrap`         | `*`        | Sets white-space to normal    |
+| `.pf-u-text-break-word`   | `*`        | Sets word-break to break-word |
+| `.pf-u-text-nowrap`       | `*`        | Sets white-space to nowrap    |
+| `.pf-u-text-wrap`         | `*`        | Sets white-space to normal    |
