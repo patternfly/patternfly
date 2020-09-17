@@ -17,9 +17,9 @@ $pf-u-font-size-options: (
 
 // Font weight options
 $pf-u-font-weight-options: (
-  font-weight-light:              (font-weight var(--pf-global--FontWeight--light)),
-  font-weight-normal:             (font-weight var(--pf-global--FontWeight--normal)),
-  font-weight-bold:               (font-weight var(--pf-global--FontWeight--bold)),
+  font-weight-light:  (font-weight var(--pf-global--FontWeight--light)),
+  font-weight-normal: (font-weight var(--pf-global--FontWeight--normal)),
+  font-weight-bold:   (font-weight var(--pf-global--FontWeight--bold)),
 );
 
 @include pf-utility-builder($pf-u-font-weight-options, $pf-global--breakpoint-list);
@@ -27,10 +27,35 @@ $pf-u-font-weight-options: (
 
 // Font color options
 $pf-u-font-color-options: (
-  color-100: (color var(--pf-global--Color--100)),
-  color-200: (color var(--pf-global--Color--200)),
-  color-300: (color var(--pf-global--Color--300)),
-  color-400: (color var(--pf-global--Color--400)),
+  color-100:           (color var(--pf-global--Color--100)),
+  color-200:           (color var(--pf-global--Color--200)),
+  color-300:           (color var(--pf-global--Color--300)),
+  color-400:           (color var(--pf-global--Color--400)),
+  icon-color-light:    (color var(--pf-global--icon--Color--light)),
+  icon-color-dark:     (color var(--pf-global--icon--Color--dark)),
+  link-color:          (color var(--pf-global--link--Color)),
+  active-color-100:    (color var(--pf-global--active-color--100)),
+  active-color-200:    (color var(--pf-global--active-color--200)),
+  active-color-300:    (color var(--pf-global--active-color--300)),
+  active-color-400:    (color var(--pf-global--active-color--400)),
+  disabled-color-100:  (color var(--pf-global--disabled-color--100)),
+  disabled-color-200:  (color var(--pf-global--disabled-color--200)),
+  disabled-color-300:  (color var(--pf-global--disabled-color--300)),
+  primary-color-100:   (color var(--pf-global--primary-color--100)),
+  primary-color-200:   (color var(--pf-global--primary-color--200)),
+  secondary-color-100: (color var(--pf-global--secondary-color--100)),
+  default-color-100:   (color var(--pf-global--default-color--100)),
+  default-color-200:   (color var(--pf-global--default-color--200)),
+  default-color-300:   (color var(--pf-global--default-color--300)),
+  success-color-100:   (color var(--pf-global--success-color--100)),
+  success-color-200:   (color var(--pf-global--success-color--200)),
+  info-color-100:      (color var(--pf-global--info-color--100)),
+  info-color-200:      (color var(--pf-global--info-color--200)),
+  warning-color-100:   (color var(--pf-global--warning-color--100)),
+  warning-color-200:   (color var(--pf-global--warning-color--200)),
+  danger-color-100:    (color var(--pf-global--danger-color--100)),
+  danger-color-200:    (color var(--pf-global--danger-color--200)),
+  danger-color-300:    (color var(--pf-global--danger-color--300)),
 );
 
 @include pf-utility-builder($pf-u-font-color-options, $pf-global--breakpoint-list);
