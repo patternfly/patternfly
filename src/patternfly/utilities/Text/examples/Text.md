@@ -36,7 +36,7 @@ import './Text.css'
 {{/text}}
 ```
 
-### Font Weight
+### Font weight
 
 ```hbs
 {{#> text text--modifier="pf-u-font-weight-light"}}
