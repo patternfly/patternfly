@@ -3,9 +3,9 @@ id: Release notes
 section: get-started
 releaseNoteTOC: true
 ---
-## 2020.12 release notes (2020-09-16)
+## 2020.12 release notes (2020-09-17)
 Packages released:
-- [@patternfly/patternfly@v4.41.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.41.1)
+- [@patternfly/patternfly@v4.42.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.42.2)
 
 ### Components
 - **Button:**
@@ -37,7 +37,10 @@ Packages released:
 - **Docs:**
   - Updated form demo id to match component id ([#3428](https://github.com/patternfly/patternfly/pull/3428))
   - Added section for hover styles ([#3432](https://github.com/patternfly/patternfly/pull/3432))
-- **Build:** Bump stylelint ([#3427](https://github.com/patternfly/patternfly/pull/3427))
+- **Build:**
+  - Bumped stylelint ([#3427](https://github.com/patternfly/patternfly/pull/3427))
+  - Upgraded workspace to use new patternfly.org theme ([#3486](https://github.com/patternfly/patternfly/pull/3486))
+  - Removed required "engines" section from package.json ([#3490](https://github.com/patternfly/patternfly/pull/3490))
 - **Icons:**
   - Removed transforms from pficons, added namespaces ([#3398](https://github.com/patternfly/patternfly/pull/3398))
   - Updated pficon data to fix svg rendering issues ([#3469](https://github.com/patternfly/patternfly/pull/3469))
