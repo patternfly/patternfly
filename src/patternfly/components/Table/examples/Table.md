@@ -385,6 +385,144 @@ import './Table.css'
 {{/table}}
 ```
 
+### Single select radio
+```hbs
+{{#> table table--id="table-single-select-radio" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is single select table with radio inputs"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+      {{> table-td table-td--IsEmpty="true"}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="radio" name="{{table--id}}-radiorow1" aria-labelledby="{{concat table--id '-node1'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div id="{{table--id}}-node1">Node 1</div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="radio" name="{{table--id}}-radiorow2" aria-labelledby="{{concat table--id '-node2'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node2">Node 2</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="radio" name="{{table--id}}-radiorow3" aria-labelledby="{{concat table--id '-node3'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node3">Node 3</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="radio" name="{{table--id}}-radiorow4" aria-labelledby="{{concat table--id '-node4'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <div>
+          <div id="{{table--id}}-node4">Node 4</div>
+          <a href="#">siemur/test-space</a>
+        </div>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
 When including interactive elements in a table, the primary, descriptive cell in the corresponding row is a `<th>`, rather than a `<td>`. In this example, 'Node 1' and 'Node 2 siemur/test-space' are `<th>`s.
 
 When header cells are empty or they contain interactive elements, `<th>` should be replaced with `<td>`.
@@ -393,20 +531,20 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-label="[descriptive text]"` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
+| `aria-label="[descriptive text]"` | `.pf-c-table__check input` | Provides an accessible name for the checkbox or radio input. **Required** |
 
 ### Tbody accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-labelledby="[row_header_id]"` or `aria-label="[descriptive text]` | `.pf-c-table__check input[type="checkbox"]` | Provides an accessible name for the checkbox. **Required** |
-| `id` | row header `<th>` > `*` | Provides an accessible description for the checkbox. **Required if using `aria-labelledby` for `.pf-c-table__check input[type="checkbox"]`** |
+| `aria-labelledby="[row_header_id]"` or `aria-label="[descriptive text]` | `.pf-c-table__check input` | Provides an accessible name for the checkbox or radio input. **Required** |
+| `id` | row header `<th> > *` | Provides an accessible description for the checkbox or radio. **Required if using `aria-labelledby` for `.pf-c-table__check input`** |
 
 ### Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__check` | `<th>`, `<td>` | Initiates a check table cell. |
+| `.pf-c-table__check` | `<th>`, `<td>` | Initiates a checkbox or radio input table cell. |
 | `.pf-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
 | `.pf-c-table__inline-edit-action` | `<th>`, `<td>` | Initiates an inline edit action table cell. |
 
@@ -2058,7 +2196,7 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 ### Implementation support
 
 - One expandable toggle button, positioned in the first cell of a non-expandable row, preceding an expandable row.
-- One checkbox, positioned in the first or second cell of a non-expandable row.
+- One checkbox or radio input, positioned in the first or second cell of a non-expandable row.
 - One action button, positioned in the last cell of a non-expandable row.
 - Tabular data.
 - Compact presentation modifier (not compatible with expandable table).
