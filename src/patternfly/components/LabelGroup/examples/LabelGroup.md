@@ -166,6 +166,68 @@ cssPrefix: pf-c-label-group
 ### Category removable
 ```hbs
 {{#> label-group label-group--id="label-group-category-removable" label-group--modifier="pf-m-category"}}
+  {{#> label-group-main}}
+    {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label"')}}
+      Group label
+    {{/label-group-label}}
+    {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
+      {{#> label-group-list-item}}
+        {{#> label}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-blue"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-green"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 3
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-cyan"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 4
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-orange"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 5
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-red"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 6
+        {{/label}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+  {{> label-group-close}}
+{{/label-group}}
+
+###Outdated
+<br/>
+
+{{#> label-group label-group--id="label-group-category-removable" label-group--modifier="pf-m-category"}}
   {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label"')}}
     Group label
   {{/label-group-label}}
@@ -194,6 +256,30 @@ cssPrefix: pf-c-label-group
         Label 3
       {{/label}}
     {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-cyan"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 4
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-orange"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 5
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-red"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 6
+        {{/label}}
+      {{/label-group-list-item}}
   {{/label-group-list}}
   {{> label-group-close}}
 {{/label-group}}
@@ -358,6 +444,35 @@ cssPrefix: pf-c-label-group
 
 ### Vertical category removable
 ```hbs
+
+{{#> label-group label-group--id="label-group-vertical-category-removable" label-group--modifier="pf-m-vertical pf-m-category"}}
+  {{#> label-group-main}}
+    {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label"')}}
+      Group label
+    {{/label-group-label}}
+    {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
+      {{#> label-group-list-item}}
+        {{#> label}}
+          Label
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-blue"}}
+          Label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-green"}}
+          Label 3
+        {{/label}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+  {{> label-group-close}}
+{{/label-group}}
+
+<br>
+### Outdated
 {{#> label-group label-group--id="label-group-vertical-category-removable" label-group--modifier="pf-m-vertical pf-m-category"}}
   {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label"')}}
     Group label
