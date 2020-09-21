@@ -413,7 +413,7 @@ import './Table.css'
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="radio" name="{{table--id}}-radiorow1" aria-labelledby="{{concat table--id '-node1'}}">
+        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{concat table--id '-node1'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div id="{{table--id}}-node1">Node 1</div>
@@ -438,7 +438,7 @@ import './Table.css'
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="radio" name="{{table--id}}-radiorow2" aria-labelledby="{{concat table--id '-node2'}}">
+        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{concat table--id '-node2'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -466,7 +466,7 @@ import './Table.css'
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="radio" name="{{table--id}}-radiorow3" aria-labelledby="{{concat table--id '-node3'}}">
+        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -494,7 +494,7 @@ import './Table.css'
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="radio" name="{{table--id}}-radiorow4" aria-labelledby="{{concat table--id '-node4'}}">
+        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
