@@ -25,6 +25,29 @@ cssPrefix: pf-c-modal-box
 {{/modal-box}}
 ```
 
+### With help button
+```hbs
+{{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+  {{#> modal-box-header}}
+    {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
+      Modal title
+    {{/modal-box-title}}
+    {{#> modal-box-header-actions}}
+      {{> modal-box-header-actions-help}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/modal-box-header-actions}}
+  {{/modal-box-header}}
+  {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
+    To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
+  {{/modal-box-body}}
+  {{#> modal-box-footer}}
+    Modal footer
+  {{/modal-box-footer}}
+{{/modal-box}}
+```
+
 ### Small
 ```hbs
 {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-sm-title" aria-describedby="modal-sm-description"'}}
@@ -183,6 +206,8 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-c-modal-box__description` | `<div>` | Initiates a modal box description. |
 | `.pf-c-modal-box__body` | `<div>` | Initiates a modal box body. |
 | `.pf-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
+| `.pf-c-modal-box__header-actions` | `<div>` | Initiates a modal box header actions container. |
+| `.pf-c-modal-box__header-help` | `<div>` | Initiates the help button container in the modal box header actions. |
 | `.pf-m-sm` | `.pf-c-modal-box` | Modifies for a small modal box width. |
 | `.pf-m-md` | `.pf-c-modal-box` | Modifies for a medium modal box width. |
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
