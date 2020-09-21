@@ -124,7 +124,6 @@
 .pf-c-modal-box__title {
   @include pf-text-overflow;
 
-  // flex: 0 0 auto;
   font-family: var(--pf-c-modal-box__title--FontFamily);
   font-size: var(--pf-c-modal-box__title--FontSize);
   line-height: var(--pf-c-modal-box__title--LineHeight);
