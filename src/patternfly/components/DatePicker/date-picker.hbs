@@ -6,4 +6,9 @@
   {{#if date-picker-helper-text--text}}
     {{> date-picker-helper-text}}
   {{/if}}
+  {{#if date-picker--IsExpanded}}
+    {{#> date-picker-calendar}}
+      Calendar
+    {{/date-picker-calendar}}
+  {{/if}}
 </div>

@@ -4,6 +4,7 @@
     // calendar
     --pf-c-date-picker__flatpickr__calendar--Background: var(--pf-global--BackgroundColor--light-100);
     --pf-c-date-picker__flatpickr__calendar--Padding: var(--pf-global--spacer--md);
+    --pf-c-date-picker__flatpickr__calendar--open--ZIndex: var(--pf-global--ZIndex--sm);
 
     // month/year section
     --pf-c-date-picker__flatpickr__months--PaddingBottom: var(--pf-global--spacer--md);
@@ -38,6 +39,10 @@
     // flatpickr container
     background: var(--pf-c-date-picker__flatpickr__calendar--Background);
     padding: var(--pf-c-date-picker__flatpickr__calendar--Padding);
+
+    &.open {
+      z-index: var(--pf-c-date-picker__flatpickr__calendar--open--ZIndex);
+    }
   }
 
   .flatpickr-innerContainer {
