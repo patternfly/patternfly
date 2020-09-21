@@ -9,12 +9,21 @@
     // month/year section
     --pf-c-date-picker__flatpickr__months--PaddingBottom: var(--pf-global--spacer--md);
     --pf-c-date-picker__flatpickr__month--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+    --pf-c-date-picker__flatpickr__month--PaddingTop: 10px;
+    --pf-c-date-picker__flatpickr__month--FontSize: var(--pf-global--FontSize--md);
+    --pf-c-date-picker__flatpickr__month-select--PaddingRight: var(--pf-global--spacer--lg);
+    --pf-c-date-picker__flatpickr__month-select--FontWeight: var(--pf-global--FontWeight--normal);
+    --pf-c-date-picker__flatpickr__month-select--BackgroundUrl: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%23urrentColor' d='M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z'/%3E%3C/svg%3E");;
+    --pf-c-date-picker__flatpickr__month-select--BackgroundSize: .625em;
+    --pf-c-date-picker__flatpickr__month-select--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm)) center;
     --pf-c-date-picker__flatpickr__month-select--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-    --pf-c-date-picker__flatpickr__month-select--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+    --pf-c-date-picker__flatpickr__month-select--hover--BackgroundColor: var(--pf-c-date-picker__flatpickr__month-select--BackgroundColor);
     --pf-c-date-picker__flatpickr__month-select--year--MarginLeft: var(--pf-global--spacer--sm);
+    --pf-c-date-picker__flatpickr__month-arrow--Width: 7px;
     --pf-c-date-picker__flatpickr__month-arrow--Color: var(--pf-global--Color--dark-200);
     --pf-c-date-picker__flatpickr__month-arrow--hover--Color: var(--pf-global--Color--dark-100);
     --pf-c-date-picker__flatpickr__year--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+    --pf-c-date-picker__flatpickr__year--FontWeight: var(--pf-global--FontWeight--normal);
 
     // Weekdays section
     --pf-c-date-picker__flatpickr__weekdays--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -50,16 +59,34 @@
   }
 
   // Month/year section
+  .flatpickr-months {
+    position: relative;
+    padding-bottom: var(--pf-c-date-picker__flatpickr__months--PaddingBottom);
+  }
+
   .flatpickr-months .flatpickr-month {
     background: var(--pf-c-date-picker__flatpickr__month--BackgroundColor);
   }
 
+  .flatpickr-current-month {
+    padding-top: var(--pf-c-date-picker__flatpickr__month--PaddingTop);
+    font-size: var(--pf-c-date-picker__flatpickr__month--FontSize);
+  }
+
   .flatpickr-current-month .flatpickr-monthDropdown-months {
-    background: var(--pf-c-date-picker__flatpickr__month-select--BackgroundColor);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: var(--pf-c-date-picker__flatpickr__month-select--BackgroundUrl);
+    background-position: var(--pf-c-date-picker__flatpickr__month-select--BackgroundPosition);
+    background-size: var(--pf-c-date-picker__flatpickr__month-select--BackgroundSize);
+    background-repeat: no-repeat;
+    background-color: var(--pf-c-date-picker__flatpickr__month-select--BackgroundColor);
+    font-weight: var(--pf-c-date-picker__flatpickr__month-select--FontWeight);
+    padding-right: var(--pf-c-date-picker__flatpickr__month-select--PaddingRight);
   }
 
   .flatpickr-current-month .flatpickr-monthDropdown-months:hover {
-    background: var(--pf-c-date-picker__flatpickr__month-select--hover--BackgroundColor);
+    --pf-c-date-picker__flatpickr__month-select--BackgroundColor: var(--pf-c-date-picker__flatpickr__month-select--hover--BackgroundColor);
   }
 
   .numInputWrapper:hover {
@@ -70,6 +97,7 @@
   .flatpickr-months .flatpickr-prev-month {
     color: var(--pf-c-date-picker__flatpickr__month-arrow--Color);
     fill: var(--pf-c-date-picker__flatpickr__month-arrow--Color);
+    width: var(--pf-c-date-picker__flatpickr__month-arrow--Width);
   }
 
   .flatpickr-months .flatpickr-next-month:hover,
@@ -80,13 +108,12 @@
     fill: var(--pf-c-date-picker__flatpickr__month-arrow--hover--Color);
   }
 
-  .flatpickr-months {
-    position: relative;
-    padding-bottom: var(--pf-c-date-picker__flatpickr__months--PaddingBottom);
-  }
-
   .flatpickr-monthDropdown-months + .numInputWrapper {
     margin-left: var(--pf-c-date-picker__flatpickr__month-select--year--MarginLeft);
+  }
+
+  .flatpickr-current-month input.cur-year {
+    font-weight: var(--pf-c-date-picker__flatpickr__year--FontWeight);
   }
 
   // Weekdays section
