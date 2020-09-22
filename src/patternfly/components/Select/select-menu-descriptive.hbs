@@ -1,4 +1,7 @@
 <{{#if select-menu--type}}{{select-menu--type}}{{else}}ul{{/if}} class="pf-c-select__menu{{#if select-menu--modifier}} {{select-menu--modifier}}{{/if}}"
+  {{#unless select-menu--type}}
+    role="listbox"
+  {{/unless}}
   aria-labelledby="{{id}}-label"
   {{#unless select--IsExpanded}}hidden{{/unless}}
   {{#if select--attribute}}

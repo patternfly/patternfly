@@ -9,10 +9,10 @@
   {{/select-menu-search}}
   {{> divider}}
   {{#> select-menu-group}}
-    {{#> select-menu-group-title}}
+    {{#> select-menu-group-title select-menu-group-title--attribute=(concat 'id="' id '-group-title-1"')}}
       Favorites
     {{/select-menu-group-title}}
-    <ul role="listbox">
+    <ul role="listbox" aria-labelledby="{{id}}-group-title-1">
       {{#> select-menu-wrapper select-menu-wrapper--IsFavorite="true"}}
         {{#> select-menu-item select-menu-item--Description="This is a description." select-menu-item--IsLink="true"}}
           Item 1
@@ -33,10 +33,10 @@
   {{/select-menu-group}}
   {{> divider}}
   {{#> select-menu-group}}
-    {{#> select-menu-group-title}}
+    {{#> select-menu-group-title select-menu-group-title--attribute=(concat 'id="' id '-group-title-2"')}}
       Group 1
     {{/select-menu-group-title}}
-    <ul role="listbox">
+    <ul role="listbox" aria-labelledby="{{id}}-group-title-2">
       {{#> select-menu-wrapper select-menu-wrapper--IsFavorite="true"}}
         {{#> select-menu-item select-menu-item--Description="This is a description." select-menu-item--IsLink="true"}}
           Item 1
@@ -65,10 +65,10 @@
   {{/select-menu-group}}
   {{> divider}}
   {{#> select-menu-group}}
-    {{#> select-menu-group-title}}
+    {{#> select-menu-group-title select-menu-group-title--attribute=(concat 'id="' id '-group-title-3"')}}
       Group 2
     {{/select-menu-group-title}}
-    <ul role="listbox">
+    <ul role="listbox" aria-labelledby="{{id}}-group-title-3">
       {{#> select-menu-wrapper select-menu-wrapper--IsFavorite="true"}}
         {{#> select-menu-item select-menu-item--IsLink="true"}}
           Item 4
