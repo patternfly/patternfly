@@ -2,8 +2,10 @@
 .pf-c-date-picker__calendar {
   &.flatpickr-calendar {
     // calendar
-    --pf-c-date-picker__flatpickr__calendar--Background: var(--pf-global--BackgroundColor--light-100);
-    --pf-c-date-picker__flatpickr__calendar--Padding: var(--pf-global--spacer--md);
+    --pf-c-date-picker__flatpickr__calendar--PaddingTop: var(--pf-global--spacer--md);
+    --pf-c-date-picker__flatpickr__calendar--PaddingRight: var(--pf-global--spacer--md);
+    --pf-c-date-picker__flatpickr__calendar--PaddingBottom: var(--pf-global--spacer--md);
+    --pf-c-date-picker__flatpickr__calendar--PaddingLeft: var(--pf-global--spacer--md);
     --pf-c-date-picker__flatpickr__calendar--open--ZIndex: var(--pf-global--ZIndex--sm);
 
     // month/year section
@@ -29,7 +31,8 @@
     --pf-c-date-picker__flatpickr__weekdays--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
     --pf-c-date-picker__flatpickr__weekdays--PaddingBottom: var(--pf-global--spacer--md);
     --pf-c-date-picker__flatpickr__weekdays--MarginBottom: var(--pf-global--spacer--sm);
-    --pf-c-date-picker__flatpickr__weekdays--BorderBottom: var(--pf-global--BorderWidth--sm) solid var(--pf-global--BorderColor--100);
+    --pf-c-date-picker__flatpickr__weekdays--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+    --pf-c-date-picker__flatpickr__weekdays--BorderBottomColor: var(--pf-global--BorderColor--100);
     --pf-c-date-picker__flatpickr__weekday--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
 
     // Calendar days
@@ -46,8 +49,7 @@
     --pf-c-date-picker__flatpickr__calendar__day--today--hover--Color: var(--pf-global--Color--light-100);
 
     // flatpickr container
-    background: var(--pf-c-date-picker__flatpickr__calendar--Background);
-    padding: var(--pf-c-date-picker__flatpickr__calendar--Padding);
+    padding: var(--pf-c-date-picker__flatpickr__calendar--PaddingTop) var(--pf-c-date-picker__flatpickr__calendar--PaddingRight) var(--pf-c-date-picker__flatpickr__calendar--PaddingBottom) var(--pf-c-date-picker__flatpickr__calendar--PaddingLeft);
 
     &.open {
       z-index: var(--pf-c-date-picker__flatpickr__calendar--open--ZIndex);
@@ -128,7 +130,7 @@
   .flatpickr-weekdays {
     padding-bottom: var(--pf-c-date-picker__flatpickr__weekdays--PaddingBottom);
     margin-bottom: var(--pf-c-date-picker__flatpickr__weekdays--MarginBottom);
-    border-bottom: var(--pf-c-date-picker__flatpickr__weekdays--BorderBottom);
+    border-bottom: var(--pf-c-date-picker__flatpickr__weekdays--BorderBottomWidth) solid var(--pf-c-date-picker__flatpickr__weekdays--BorderBottomColor);
   }
 
   // Calendar days
