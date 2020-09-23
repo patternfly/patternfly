@@ -2,6 +2,7 @@
 .pf-c-date-picker__calendar {
   &.flatpickr-calendar {
     // calendar
+    --pf-c-date-picker__flatpickr__calendar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
     --pf-c-date-picker__flatpickr__calendar--PaddingTop: var(--pf-global--spacer--md);
     --pf-c-date-picker__flatpickr__calendar--PaddingRight: var(--pf-global--spacer--md);
     --pf-c-date-picker__flatpickr__calendar--PaddingBottom: var(--pf-global--spacer--md);
@@ -49,6 +50,7 @@
     --pf-c-date-picker__flatpickr__calendar__day--today--hover--Color: var(--pf-global--Color--light-100);
 
     // flatpickr container
+    background: var(--pf-c-date-picker__flatpickr__calendar--BackgroundColor);
     padding: var(--pf-c-date-picker__flatpickr__calendar--PaddingTop) var(--pf-c-date-picker__flatpickr__calendar--PaddingRight) var(--pf-c-date-picker__flatpickr__calendar--PaddingBottom) var(--pf-c-date-picker__flatpickr__calendar--PaddingLeft);
 
     &.open {
