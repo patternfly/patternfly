@@ -422,7 +422,7 @@ import './Toolbar.css'
     <div>
       {{> table-simple-table page--id="toolbar-and-table-static-search-overflow-menu-collapsed"}}
       {{#> pagination pagination--modifier="pf-m-bottom"}}
-        {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
+        {{> pagination-options-menu id="pagination-options-menu-bottom-collapsed-example" options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
         {{> pagination-nav-content}}
       {{/pagination}}
     </div>
