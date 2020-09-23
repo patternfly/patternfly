@@ -21,6 +21,8 @@ import './FormControl.css'
 <br><br>
 {{> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="input-disabled" aria-label="Disabled input example"'}}
 <br><br>
+{{> form-control controlType="input" input="true" form-control--IsExpanded="true" form-control--attribute='type="text" value="Expanded" id="input-expanded" aria-label="Expanded input example"'}}
+<br><br>
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute='type="search" value="Search" id="input-search" name="search-input" aria-label="Search input example"'}}
 <br><br>
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-calendar" form-control--attribute='type="text" value="Calendar" id="input-calendar" name="input-calendar" aria-label="Calendar input example"'}}
@@ -130,6 +132,7 @@ Resizes horizontally
 | `id` | `.pf-c-form-control` | Provides an `id` value that can be used with the `for` attribute on an associated `<label>` element to provide an accessible label for the form control element.
 | `aria-invalid="true"` | `.pf-c-form-control` | Indicates that the form control is in the error state and applies error state styling. |
 | `aria-label="descriptive text"` | `.pf-c-form-control` | Provides an accessible label for assistive technology. |
+| `aria-expanded="true"` | `.pf-c-form-control.pf-m-expanded` | Indicates that clicking in the form control has toggled something else to be expanded. |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -143,3 +146,4 @@ Resizes horizontally
 | `.pf-m-icon` | `input.pf-c-form-control` | Modifies a form control text input to be able to specify a custom SVG background via `--pf-c-form-control--m-icon--BackgroundUrl`, and other optional vars for other background properties.
 | `.pf-m-calendar` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the calendar icon. |
 | `.pf-m-clock` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the clock icon. |
+| `.pf-m-expanded` | `input.pf-c-form-control` | Modifies a form control for the expanded state. This is used when clicking in the text input toggles something open/closed. |
