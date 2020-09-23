@@ -24,8 +24,9 @@
   // label group close
   --pf-c-label-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-label-group__close--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-label-group--m-vertical__close--MarginRight: calc(var(--pf-global--spacer--sm) * -1);
-  --pf-c-label-group--m-vertical__close--MarginLeft: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-label-group--m-vertical__close--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-label-group--m-vertical__close--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-label-group--m-vertical__close--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-label-group--m-vertical__close--c-button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-label-group--m-vertical__close--c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
@@ -34,9 +35,6 @@
   --pf-c-label-group__list-item--MarginBottom: var(--pf-global--spacer--xs);
 
   display: inline-flex;
-
-  // flex-wrap: wrap;
-  // align-items: center;
 
   &.pf-m-category {
     padding-top: var(--pf-c-label-group--m-category--PaddingTop);
@@ -54,20 +52,23 @@
     --pf-c-label-group__list-item--MarginRight: 0;
     --pf-c-label-group__label--MarginRight: 0;
     --pf-c-label-group__label--MarginBottom: var(--pf-c-label-group--m-vertical__label--MarginBottom);
-    --pf-c-label-group__close--MarginTop: 0;
+    --pf-c-label-group__close--MarginTop: var(--pf-c-label-group--m-vertical__close--MarginTop);
     --pf-c-label-group__close--MarginLeft: var(--pf-c-label-group--m-vertical__close--MarginLeft);
     --pf-c-label-group__close--MarginBottom: 0;
     --pf-c-label-group__close--MarginRight: var(--pf-c-label-group--m-vertical__close--MarginRight);
     --pf-c-label-group--m-category--PaddingRight: var(--pf-c-label-group--m-vertical--m-category--PaddingRight);
 
     &.pf-c-label-group {
-      // flex-direction: column;
       align-items: flex-start;
     }
 
     .pf-c-label-group__list {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    .pf-c-label-group__main {
+      flex-direction: column;
     }
 
     .pf-c-label-group__list-item:last-child {
@@ -83,13 +84,14 @@
 
 .pf-c-label-group__main {
   display: flex;
-  flex-direction: column;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 
 .pf-c-label-group__list {
   display: inline-flex;
   flex-wrap: wrap;
-  align-items: center;
   margin-right: var(--pf-c-label-group__list--MarginRight);
   margin-bottom: var(--pf-c-label-group__list--MarginBottom);
 }
