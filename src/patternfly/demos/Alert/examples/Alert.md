@@ -64,3 +64,10 @@ section: components
   {{/alert-item}}
 {{/alert-group}}
 ```
+
+### Inline Alert in Stacked Form
+```hbs isFullscreen
+{{#> page-default}}
+  {{> stacked-form}}
+{{/page-default}}
+```
