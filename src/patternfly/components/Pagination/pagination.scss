@@ -41,6 +41,7 @@
   --pf-c-pagination--m-bottom--md--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-pagination--m-bottom--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-pagination--m-bottom--xl--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-pagination--m-bottom--m-sticky--BoxShadow: var(--pf-global--BoxShadow--sm-top);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingTop);
@@ -110,6 +111,11 @@
 
       position: relative;
       box-shadow: none;
+    }
+
+    &.pf-m-sticky {
+      position: sticky;
+      box-shadow: var(--pf-c-pagination--m-bottom--m-sticky--BoxShadow);
     }
 
     .pf-c-pagination__nav-control.pf-m-first,
