@@ -20,11 +20,7 @@ const uploadFolderName = path.basename(uploadFolder);
 let uploadURL = `${repo}-${prnum ? `pr-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
 
 switch(uploadFolderName) {
-  case 'coverage':
-    fs.copyFileSync(
-      path.join(uploadFolder, 'report.html'),
-      path.join(uploadFolder, 'index.html')
-    );
+  case 'dist':
     uploadURL += '-coverage.surge.sh';
     break;
   case 'public':
