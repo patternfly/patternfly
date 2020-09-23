@@ -185,7 +185,6 @@ import './options-menu.css'
 | -- | -- | -- |
 | `role` or `aria` | `pf-c-options-menu` |  accessibility notes. |
 | `disabled` | `.pf-c-options-menu__toggle`, `.pf-c-options-menu__toggle-button` | Disables the options menu toggle and toggle button and removes it from keyboard focus. |
-*Note:* The attribute `aria-selected="true"` should be set programmatically to the selected item(s).
 
 ### Usage
 | Class | Applied to | Outcome |

@@ -56,7 +56,6 @@ The single select should be used when the user is selecting an option from a lis
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
 | `disabled` | `.pf-c-select__toggle` | Disables the dropdown toggle and removes it from keyboard focus. |
 ### Usage
 | Class | Applied to | Outcome |
@@ -76,7 +75,6 @@ The single select should be used when the user is selecting an option from a lis
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
 | `disabled` | `.pf-c-select__toggle` | Disables the dropdown toggle and removes it from keyboard focus. |
 ### Usage
 | Class | Applied to | Outcome |
@@ -117,10 +115,6 @@ The single select should be used when the user is selecting an option from a lis
 ```
 
 The single select typeahead should be used when the user is selecting one option from a list of items with the option to narrow the list by typing from the keyboard. Selected items are removed from the list. The user can clear the selection and restore the placeholder text.
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -156,10 +150,6 @@ The single select typeahead should be used when the user is selecting one option
 ```
 
 The Dropdown Multi Select should be used when the user is selecting multiple items from a list. The user can narrow the list by typing from the keyboard. The List updates while typing. Selected items create a new chip and are removed from the list. The user may clear selections individually or all at once to restore the placeholder.
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
