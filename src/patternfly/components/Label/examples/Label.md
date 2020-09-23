@@ -285,7 +285,7 @@ import './Label.css'
   Cyan link removable
 {{/label}}
 
-{{#> label label--id="default-grey-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-cyan"}}
+{{#> label label--id="default-cyan-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-cyan"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}

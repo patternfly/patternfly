@@ -19,6 +19,7 @@ hbsInstance.registerHelper('concat', (...params) => {
   }
   return params.join('');
 });
+hbsInstance.registerHelper('echo', v => v.toString());
 
 function compileHBS0(srcFiles) {
   return srcFiles.pipe(
@@ -47,7 +48,7 @@ function separateFrontmatter(mdStr) {
   if (frontmatterStart !== -1 && frontmatterEnd !== -1) {
     return {
       frontmatter: mdStr.substring(frontmatterStart, frontmatterEnd),
-      contents: mdStr.substr(frontmatterEnd)
+      contents: `\n${mdStr.substr(frontmatterEnd)}`
     };
   }
 
