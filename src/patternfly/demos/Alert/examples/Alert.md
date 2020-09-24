@@ -65,6 +65,13 @@ section: components
 {{/alert-group}}
 ```
 
+### Inline Alert in Horizontal Form
+```hbs isFullscreen
+{{#> page-default}}
+  {{> horizontal-form}}
+{{/page-default}}
+```
+
 ### Inline Alert in Stacked Form
 ```hbs isFullscreen
 {{#> page-default}}
