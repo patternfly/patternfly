@@ -54,6 +54,13 @@ To create 3 new demos named "Test demo", "Test demo 2", and "Test demo 3", run:
 
 `node generate TestDemo TestDemo2 TestDemo3 -f demos`
 
+
+#### Update screenshots
+When making visual changes to a full page example, new example preview screenshots must be generated. To update the screenshots:
+
+- open a terminal and run `npm run build` and `npm run serve`
+- in another terminal, run `npm run screenshots`
+
 ## Guidelines for CSS development
 
 - For issues created in Core that will affect a component in PF-React, a follow up issue must be created in PF-React once the Pull Request is merged. The issue should include the Core PR #, the Core Release, a link to the component in https://pf4.patternfly.org, and information detailing the change.
