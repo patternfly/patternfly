@@ -83,6 +83,9 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     --pf-c-page__sidebar--TranslateX: var(--pf-c-page__sidebar--xl--TranslateX);
   }
 
+  // Main
+  --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
+
   // Main section
   --pf-c-page__main-section--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-page__main-section--PaddingRight: var(--pf-global--spacer--md);
@@ -92,12 +95,26 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-section--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--xl--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-page__main-section--xl--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-page__main-breadcrumb--main-section--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-page__main-section--m-dark-100--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
+  --pf-c-page__main-section--m-dark-200--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
 
   // Limit width
   --pf-c-page--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--pf-c-page__sidebar--Width));
+
+  // Sticky
+  --pf-c-page--section--m-sticky--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page--section--m-sticky--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-page--section--m-sticky-bottom--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page--section--m-sticky-bottom--BoxShadow: var(--pf-global--BoxShadow--sm-top);
+
+  // Shadows
+  --pf-c-page--section--m-shadow--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-page--section--m-shadow--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page--section--m-shadow-top--BoxShadow: var(--pf-global--BoxShadow--sm-top);
+  --pf-c-page--section--m-shadow-top--ZIndex: var(--pf-global--ZIndex--xs);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--xl--PaddingTop);
@@ -111,6 +128,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--PaddingRight: 0;
   --pf-c-page__main-nav--PaddingLeft: 0;
+  --pf-c-page__main-nav--m-sticky--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__main-nav--xl--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-page__main-nav--xl--PaddingLeft: var(--pf-global--spacer--sm);
 
@@ -125,6 +143,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-breadcrumb--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-page__main-breadcrumb--PaddingBottom: 0;
   --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-page__main-breadcrumb--m-sticky--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__main-breadcrumb--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-page__main-breadcrumb--xl--PaddingLeft: var(--pf-global--spacer--lg);
 
@@ -133,10 +152,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-c-page__main-breadcrumb--xl--PaddingLeft);
   }
 
-  // Main section modifiers
-  --pf-c-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-page__main-section--m-dark-100--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
-  --pf-c-page__main-section--m-dark-200--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);
 
   // Wizard main section
   --pf-c-page__main-wizard--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -348,13 +363,65 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
 }
 
+.pf-c-page__main-nav,
+.pf-c-page__main-breadcrumb,
+.pf-c-page__main-section,
+.pf-c-page__main-wizard {
+  &.pf-m-limit-width {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    > .pf-c-page__main-body {
+      flex: 1;
+      max-width: var(--pf-c-page--section--m-limit-width--MaxWidth);
+    }
+  }
+}
+
+.pf-c-page__main-nav,
+.pf-c-page__main-breadcrumb,
+.pf-c-page__main-section,
+.pf-c-page__main-wizard,
+.pf-c-page__main-group {
+  flex-shrink: 0;
+
+  &.pf-m-sticky {
+    position: sticky;
+    top: 0;
+    z-index: var(--pf-c-page--section--m-sticky--ZIndex);
+    box-shadow: var(--pf-c-page--section--m-sticky--BoxShadow);
+  }
+
+  &.pf-m-sticky-bottom {
+    position: sticky;
+    bottom: 0;
+    z-index: var(--pf-c-page--section--m-sticky-bottom--ZIndex);
+    box-shadow: var(--pf-c-page--section--m-sticky-bottom--BoxShadow);
+  }
+
+  &.pf-m-overflow-scroll {
+    position: relative;
+    flex-shrink: 1;
+    overflow: auto;
+  }
+
+  &.pf-m-shadow {
+    z-index: var(--pf-c-page--section--m-shadow--ZIndex);
+    box-shadow: var(--pf-c-page--section--m-shadow--BoxShadow);
+  }
+
+  &.pf-m-shadow-top {
+    z-index: var(--pf-c-page--section--m-shadow-top--ZIndex);
+    box-shadow: var(--pf-c-page--section--m-shadow-top--BoxShadow);
+  }
+}
+
 // Main & Drawer
 .pf-c-page__main,
 .pf-c-page__drawer {
   grid-area: main;
   z-index: var(--pf-c-page__main--ZIndex);
-  display: flex;
-  flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -364,11 +431,23 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   }
 }
 
+.pf-c-page__main,
+.pf-c-page__main-drawer,
+.pf-c-page__main-group {
+  display: flex;
+  flex-direction: column;
+}
+
 .pf-c-page__main-nav {
   padding-top: var(--pf-c-page__main-nav--PaddingTop);
   padding-right: var(--pf-c-page__main-nav--PaddingRight);
   padding-left: var(--pf-c-page__main-nav--PaddingLeft);
   background-color: var(--pf-c-page__main-nav--BackgroundColor);
+
+  &.pf-m-sticky,
+  .pf-c-page__main-group.pf-m-sticky &:last-child {
+    padding-bottom: var(--pf-c-page__main-nav--m-sticky--PaddingBottom);
+  }
 }
 
 .pf-c-page__main-breadcrumb {
@@ -378,12 +457,16 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   + .pf-c-page__main-section {
     --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-breadcrumb--main-section--PaddingTop);
   }
+
+  &.pf-m-sticky,
+  .pf-c-page__main-group.pf-m-sticky &:last-child {
+    --pf-c-page__main-breadcrumb--PaddingBottom: var(--pf-c-page__main-breadcrumb--m-sticky--PaddingBottom);
+  }
 }
 
-.pf-c-page__main-section {
-  padding: var(--pf-c-page__main-section--PaddingTop) var(--pf-c-page__main-section--PaddingRight) var(--pf-c-page__main-section--PaddingBottom) var(--pf-c-page__main-section--PaddingLeft);
-  background-color: var(--pf-c-page__main-section--BackgroundColor);
-
+.pf-c-page__main-section,
+.pf-c-page__main-group,
+.pf-c-page__main-wizard {
   &:last-of-type,
   &:only-child,
   &.pf-m-fill {
@@ -393,6 +476,11 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   &.pf-m-no-fill {
     flex-grow: 0;
   }
+}
+
+.pf-c-page__main-section {
+  padding: var(--pf-c-page__main-section--PaddingTop) var(--pf-c-page__main-section--PaddingRight) var(--pf-c-page__main-section--PaddingBottom) var(--pf-c-page__main-section--PaddingLeft);
+  background-color: var(--pf-c-page__main-section--BackgroundColor);
 
   &.pf-m-light {
     --pf-c-page__main-section--BackgroundColor: var(--pf-c-page__main-section--m-light--BackgroundColor);
@@ -434,22 +522,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   border-top: var(--pf-c-page__main-wizard--BorderTopWidth) solid var(--pf-c-page__main-wizard--BorderTopColor);
 }
 
-.pf-c-page__main-nav,
-.pf-c-page__main-breadcrumb,
-.pf-c-page__main-section,
-.pf-c-page__main-wizard {
+.pf-c-page__main-group {
   flex-shrink: 0;
-
-  &.pf-m-limit-width {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-
-    .pf-c-page__main-body {
-      flex: 1;
-      max-width: var(--pf-c-page--section--m-limit-width--MaxWidth);
-    }
-  }
 }
 
 .pf-c-page__main-body {

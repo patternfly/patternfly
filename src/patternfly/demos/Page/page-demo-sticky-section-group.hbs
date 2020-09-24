@@ -1,0 +1,12 @@
+{{#> page page--id=page-demo-default--id}}
+  {{> page-template-header}}
+  {{> page-template-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-group page-main-group--modifier="pf-m-sticky"}}
+      {{> page-template-tertiary-nav}}
+      {{> page-template-breadcrumb}}
+      {{> page-template-title}}
+    {{/page-main-group}}
+    {{> page-template-gallery page-template--gallery--IsLongGallery="true"}}
+  {{/page-main}}
+{{/page}}
