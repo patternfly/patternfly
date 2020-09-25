@@ -24,6 +24,10 @@
   --pf-c-empty-state--m-xs--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-empty-state--m-xs--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-empty-state--m-xs--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs__icon--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs__body--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs__primary--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs__secondary--MarginTop: var(--pf-global--spacer--md);
   --pf-c-empty-state--m-sm__content--MaxWidth: #{pf-size-prem(400px)};
   --pf-c-empty-state--m-lg__content--MaxWidth: #{pf-size-prem(600px)};
   --pf-c-empty-state--m-xl__body--FontSize: var(--pf-global--FontSize--xl);
@@ -44,6 +48,10 @@
     --pf-c-empty-state--PaddingBottom: var(--pf-c-empty-state--m-xs--PaddingBottom);
     --pf-c-empty-state--PaddingLeft: var(--pf-c-empty-state--m-xs--PaddingLeft);
     --pf-c-empty-state__content--MaxWidth: var(--pf-c-empty-state--m-xs__content--MaxWidth);
+    --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xs__icon--MarginBottom);
+    --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xs__body--MarginTop);
+    --pf-c-empty-state__primary--MarginTop: var(--pf-c-empty-state--m-xs__primary--MarginTop);
+    --pf-c-empty-state__secondary--MarginTop: var(--pf-c-empty-state--m-xs__secondary--MarginTop);
 
     .pf-c-empty-state__body {
       font-size: var(--pf-c-empty-state--m-xs__body--FontSize);
