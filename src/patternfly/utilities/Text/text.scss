@@ -69,4 +69,12 @@ $pf-u-font-alignment-options: (
 
 @include pf-utility-builder($pf-u-font-alignment-options, $pf-global--breakpoint-list);
 
+.pf-u-text-truncate {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
 // stylelint-enable
