@@ -22,7 +22,6 @@
     --pf-c-date-picker__flatpickr__month-select--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
     --pf-c-date-picker__flatpickr__month-select--hover--BackgroundColor: var(--pf-c-date-picker__flatpickr__month-select--BackgroundColor);
     --pf-c-date-picker__flatpickr__month-select--year--MarginLeft: var(--pf-global--spacer--sm);
-    --pf-c-date-picker__flatpickr__month-arrow--Width: 7px;
     --pf-c-date-picker__flatpickr__month-arrow--Color: var(--pf-global--Color--dark-200);
     --pf-c-date-picker__flatpickr__month-arrow--hover--Color: var(--pf-global--Color--dark-100);
     --pf-c-date-picker__flatpickr__year--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -50,6 +49,7 @@
     --pf-c-date-picker__flatpickr__calendar__day--today--hover--Color: var(--pf-global--Color--light-100);
 
     // flatpickr container
+    width: auto;
     background: var(--pf-c-date-picker__flatpickr__calendar--BackgroundColor);
     padding: var(--pf-c-date-picker__flatpickr__calendar--PaddingTop) var(--pf-c-date-picker__flatpickr__calendar--PaddingRight) var(--pf-c-date-picker__flatpickr__calendar--PaddingBottom) var(--pf-c-date-picker__flatpickr__calendar--PaddingLeft);
 
@@ -102,7 +102,6 @@
   .flatpickr-months .flatpickr-prev-month {
     color: var(--pf-c-date-picker__flatpickr__month-arrow--Color);
     fill: var(--pf-c-date-picker__flatpickr__month-arrow--Color);
-    width: var(--pf-c-date-picker__flatpickr__month-arrow--Width);
   }
 
   .flatpickr-months .flatpickr-next-month:hover,
