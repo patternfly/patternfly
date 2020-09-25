@@ -45,7 +45,6 @@ cssPrefix: pf-c-empty-state
 ### Extra small
 ```hbs
 {{#> empty-state empty-state--modifier="pf-m-xs"}}
-  {{#> empty-state-icon}}{{/empty-state-icon}}
   {{#> title titleType="h1" title--modifier="pf-m-md"}}
     Empty state
   {{/title}}
