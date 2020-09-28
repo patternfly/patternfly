@@ -235,7 +235,7 @@ import './context-selector.css'
   {{/context-selector-menu}}
 {{/context-selector}}
 
-{{#> context-selector context-selector--id="context-selector-with-footer-example" context-selector--label-text="Selected Project" context-selector--IsExpanded="true"}}
+{{#> context-selector context-selector--id="context-selector-with-footer-example-two" context-selector--label-text="Selected Project" context-selector--IsExpanded="true"}}
   {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
     {{#> context-selector-toggle-text}}
       My project
