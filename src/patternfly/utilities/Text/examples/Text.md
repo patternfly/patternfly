@@ -7,7 +7,7 @@ import './Text.css'
 
 ## Examples
 
-### Sizing
+### Font size
 
 ```hbs
 {{#> text text--modifier="pf-u-font-size-xs"}}
@@ -70,27 +70,27 @@ import './Text.css'
 ### Controlling text
 
 ```hbs
+<h4><strong>Breakword</strong></h4>
 {{#> text text--modifier="pf-u-font-break-word"}}
-  <h4><strong>Breakword</strong></h4>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut.</p>
   <br />
 {{/text}}
-{{#> text text--modifier="pf-u-font-nowrap"}}
 <h4><strong>No Wrap</strong></h4>
+{{#> text text--modifier="pf-u-font-nowrap"}}
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula.
   </p>
   <br />
 {{/text}}
-{{#> text text--modifier="pf-u-font-wrap"}}
 <h4><strong>Wrap</strong></h4>
+{{#> text text--modifier="pf-u-font-wrap"}}
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut.
 </p>
 <br />
 {{/text}}
-{{#> text text--modifier="pf-u-text-truncate"}}
 <h4><strong>Truncate</strong></h4>
+{{#> text text--modifier="pf-u-text-truncate"}}
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut.
 </p>
