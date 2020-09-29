@@ -52,6 +52,10 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   // Header tools notification badge
   --pf-c-page__header-tools-item--c-notification-badge--hover--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__header-tools--c-button--notification-badge--m-unread--after--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-page__header-tools--c-button--notification-badge--m-attention--after--BackgroundColor: var(--pf-global--danger-color--200);
+  --pf-c-page__header-tools--c-button--m-selected--notification-badge--m-unread--after--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-page__header-tools--c-button--m-selected--notification-badge--m-attention--after--BackgroundColor: var(--pf-global--danger-color--200);
 
   // Header tools group button
   --pf-c-page__header-tools--c-button--m-selected--before--Width: auto;
@@ -293,12 +297,30 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
       // stylelint-disable
       .pf-c-notification-badge {
         &.pf-m-unread {
+          --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-page__header-tools--c-button--m-selected--notification-badge--m-unread--after--BackgroundColor);
+
           &::after {
             border-color: var(--pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor);
           }
         }
+
+        &.pf-m-attention {
+          --pf-c-notification-badge--after--BackgroundColor: var(--pf-global--danger-color--200);
+        }
       }
       // stylelint-enable
+    }
+  }
+
+  .pf-c-button:focus {
+    .pf-c-notification-badge {
+      &.pf-m-unread {
+        --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-page__header-tools--c-button--notification-badge--m-unread--after--BackgroundColor);
+      }
+
+      &.pf-m-attention {
+        --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-page__header-tools--c-button--notification-badge--m-attention--after--BackgroundColor);
+      }
     }
   }
 }
