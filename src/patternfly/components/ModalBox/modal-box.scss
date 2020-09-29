@@ -10,7 +10,7 @@
   --pf-c-modal-box--MaxHeight: calc(100% - var(--pf-global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
   --pf-c-modal-box--m-align-top--spacer: var(--pf-global--spacer--sm);
   --pf-c-modal-box--m-align-top--xl--spacer: var(--pf-global--spacer--xl);
-  --pf-c-modal-box--m-align-top--Top: var(--pf-c-modal-box--m-align-top--spacer);
+  --pf-c-modal-box--m-align-top--MarginTop: var(--pf-c-modal-box--m-align-top--spacer); // Rename to --Top at breaking change
   --pf-c-modal-box--m-align-top--MaxHeight: calc(100% - min(var(--pf-c-modal-box--m-align-top--spacer), var(--pf-global--spacer--2xl)) - var(--pf-c-modal-box--m-align-top--spacer));
   --pf-c-modal-box--m-align-top--MaxWidth: calc(100% - min(var(--pf-c-modal-box--m-align-top--spacer) * 2, var(--pf-global--spacer--xl)));
 
@@ -78,7 +78,7 @@
   }
 
   &.pf-m-align-top {
-    top: var(--pf-c-modal-box--m-align-top--Top);
+    top: var(--pf-c-modal-box--m-align-top--MarginTop);
     align-self: flex-start;
     max-width: var(--pf-c-modal-box--m-align-top--MaxWidth);
     max-height: var(--pf-c-modal-box--m-align-top--MaxHeight);
