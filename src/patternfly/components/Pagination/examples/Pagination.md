@@ -23,6 +23,15 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
+### Top sticky
+```hbs isFullscreen
+{{#> pagination pagination--modifier="pf-m-sticky"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-options-menu options-menu id="pagination-options-menu-top-example" options-menu--IsText="true"}}
+  {{> pagination-nav-content}}
+{{/pagination}}
+```
+
 ### Bottom default
 ```hbs isFullscreen
 {{#> pagination pagination--modifier="pf-m-bottom"}}
