@@ -35,8 +35,27 @@ wrapperTag: div
         </span>
       {{/page-header-brand-link}}
     {{/page-header-brand}}
-    {{> page-template-context-selector}}
-
+    {{#> page-header-toolbar}}
+      {{#> toolbar toolbar--id="toolbar-toggle-group-collapsed-example"}}
+        {{#> toolbar-content}}
+          {{#> toolbar-content-section}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
+              {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+            {{/toolbar-group}}
+          {{/toolbar-content-section}}
+          {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
+              {{#> toolbar-item}}
+                {{> page-template-context-selector}}
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                {{> page-template-context-selector}}
+              {{/toolbar-item}}
+            {{/toolbar-group}}
+          {{/toolbar-expandable-content}}
+        {{/toolbar-content}}
+      {{/toolbar}}
+    {{/page-header-toolbar}}
   {{/page-header-alt}}
   {{#> page-sidebar}}
   {{/page-sidebar}}

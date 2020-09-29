@@ -204,10 +204,25 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 }
 
 .pf-c-page__header-alt {
-  --pf-c-page__header-alt-brand--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-page__header-alt-brand--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-page__header-alt-brand--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-page__header-alt-brand--PaddingLeft: var(--pf-global--spacer--lg);
+  // resets
+  --pf-c-page__header-brand--PaddingLeft: 0;
+  --pf-c-page__header-brand--PaddingRight: 0;
+  --pf-c-page__header-brand--xl--PaddingRight: 0;
+  --pf-c-page__header-brand--xl--PaddingLeft: 0;
+
+  // updated vars
+  --pf-c-page__header-alt--ZIndex: var(--pf-global--ZIndex--xl);
+
+  --pf-c-page__header-alt-brand-link--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-page__header-alt-brand-link--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-page__header-alt-brand-link--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-page__header-alt-brand-link--PaddingLeft: var(--pf-global--spacer--lg);
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-page__header-alt-brand-link--PaddingLeft: 0;
+    --pf-c-page__header-alt-brand-link--PaddingRight: 0;
+  }
+
 
   @include pf-t-dark; // force the container to follow the dark theme
 
@@ -215,18 +230,18 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   grid-area: header;
   flex-wrap: wrap;
   align-items: center;
+  position: relative;
+  z-index: var(--pf-c-page__header-alt--ZIndex);
+  min-height: var(--pf-c-page__header--MinHeight);
   background-color: var(--pf-c-page__header--BackgroundColor);
 
   .pf-c-page__header-brand {
     order: -1;
     // flex: 1 0 100%;
     flex-basis: 100%;
-    padding: var(--pf-c-page__header-alt-brand--PaddingTop) var(--pf-c-page__header-alt-brand--PaddingRight) var(--pf-c-page__header-alt-brand--PaddingBottom) var(--pf-c-page__header-alt-brand--PaddingLeft);
     border-bottom: 1px solid #ddd;
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
-      --pf-c-page__header-alt-brand--PaddingLeft: 0;
-
       order: 0;
       flex-basis: auto;
       border: none;
@@ -234,12 +249,18 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   }
 
   .pf-c-page__header-brand-toggle {
-    margin-top: var(--pf-global--spacer--md);
+    margin-top: var(--pf-global--spacer--sm);
     margin-left: var(--pf-global--spacer--lg);
-    margin-bottom: var(--pf-global--spacer--md);
+    margin-bottom: var(--pf-global--spacer--sm);
+
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
   .pf-c-page__header-brand-link {
+    padding: var(--pf-c-page__header-alt-brand-link--PaddingTop) var(--pf-c-page__header-alt-brand-link--PaddingRight) var(--pf-c-page__header-alt-brand-link--PaddingBottom) var(--pf-c-page__header-alt-brand-link--PaddingLeft);
     flex-wrap: wrap;
   }
 }
@@ -249,6 +270,43 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     display: none;
   }
 }
+
+.pf-c-page__header-toolbar {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  align-items: stretch;
+
+  .pf-c-toolbar {
+    --pf-c-toolbar--PaddingTop: 0;
+    --pf-c-toolbar--PaddingBottom: 0;
+
+    align-self: stretch;
+  }
+
+  .pf-c-toolbar,
+  .pf-c-toolbar__content {
+    position: static;
+  }
+
+  // set here so it's persistent
+  .pf-c-toolbar__expandable-content {
+    position: absolute;
+  }
+
+  .pf-c-context-selector {
+    width: 100%;
+    box-shadow: none;
+
+  }
+
+  .pf-c-context-selector__toggle::before {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+  }
+}
+
 
 // Brand
 .pf-c-page__header-brand {
