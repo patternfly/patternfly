@@ -143,7 +143,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-breadcrumb--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-page__main-breadcrumb--PaddingBottom: 0;
   --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-page__main-breadcrumb--m-sticky--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-page__main-breadcrumb--m-sticky-top--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__main-breadcrumb--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-page__main-breadcrumb--xl--PaddingLeft: var(--pf-global--spacer--lg);
 
@@ -406,7 +406,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     overflow: auto;
   }
 
-  &.pf-m-shadow {
+  &.pf-m-shadow-bottom {
     z-index: var(--pf-c-page--section--m-shadow-bottom--ZIndex);
     box-shadow: var(--pf-c-page--section--m-shadow-bottom--BoxShadow);
   }
@@ -458,9 +458,9 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-breadcrumb--main-section--PaddingTop);
   }
 
-  &.pf-m-sticky,
-  .pf-c-page__main-group.pf-m-sticky &:last-child {
-    --pf-c-page__main-breadcrumb--PaddingBottom: var(--pf-c-page__main-breadcrumb--m-sticky--PaddingBottom);
+  &.pf-m-sticky-top,
+  .pf-c-page__main-group.pf-m-sticky-top &:last-child {
+    --pf-c-page__main-breadcrumb--PaddingBottom: var(--pf-c-page__main-breadcrumb--m-sticky-top--PaddingBottom);
   }
 }
 
