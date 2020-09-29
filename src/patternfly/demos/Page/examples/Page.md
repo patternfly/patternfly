@@ -290,17 +290,17 @@ wrapperTag: div
 
 ### Sticky tertiary nav
 ```hbs isFullscreen
-{{> page-demo-sticky-tertiary-nav page-demo-default--id="page-demo-sticky-tertiary-nav"}}
+{{> page-demo-sticky-top-tertiary-nav page-demo-default--id="page-demo-sticky-top-tertiary-nav"}}
 ```
 
 ### Sticky breadcrumb
 ```hbs isFullscreen
-{{> page-demo-sticky-breadcrumb page-demo-default--id="page-demo-sticky-breadcrumb"}}
+{{> page-demo-sticky-top-breadcrumb page-demo-default--id="page-demo-sticky-top-breadcrumb"}}
 ```
 
 ### Sticky section group
 ```hbs isFullscreen
-{{> page-demo-sticky-section-group page-demo-default--id="page-demo-sticky-section-group"}}
+{{> page-demo-sticky-top-section-group page-demo-default--id="page-demo-sticky-top-section-group"}}
 ```
 
 ### Sticky section bottom

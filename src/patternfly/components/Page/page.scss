@@ -111,8 +111,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page--section--m-sticky-bottom--BoxShadow: var(--pf-global--BoxShadow--sm-top);
 
   // Shadows
-  --pf-c-page--section--m-shadow--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
-  --pf-c-page--section--m-shadow--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page--section--m-shadow-bottom--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-page--section--m-shadow-bottom--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-page--section--m-shadow-top--BoxShadow: var(--pf-global--BoxShadow--sm-top);
   --pf-c-page--section--m-shadow-top--ZIndex: var(--pf-global--ZIndex--xs);
 
@@ -386,7 +386,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__main-group {
   flex-shrink: 0;
 
-  &.pf-m-sticky {
+  &.pf-m-sticky-top {
     position: sticky;
     top: 0;
     z-index: var(--pf-c-page--section--m-sticky--ZIndex);
@@ -407,8 +407,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   }
 
   &.pf-m-shadow {
-    z-index: var(--pf-c-page--section--m-shadow--ZIndex);
-    box-shadow: var(--pf-c-page--section--m-shadow--BoxShadow);
+    z-index: var(--pf-c-page--section--m-shadow-bottom--ZIndex);
+    box-shadow: var(--pf-c-page--section--m-shadow-bottom--BoxShadow);
   }
 
   &.pf-m-shadow-top {
@@ -444,8 +444,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   padding-left: var(--pf-c-page__main-nav--PaddingLeft);
   background-color: var(--pf-c-page__main-nav--BackgroundColor);
 
-  &.pf-m-sticky,
-  .pf-c-page__main-group.pf-m-sticky &:last-child {
+  &.pf-m-sticky-top,
+  .pf-c-page__main-group.pf-m-sticky-top &:last-child {
     padding-bottom: var(--pf-c-page__main-nav--m-sticky--PaddingBottom);
   }
 }
