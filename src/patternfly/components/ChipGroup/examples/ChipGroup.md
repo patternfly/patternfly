@@ -356,7 +356,7 @@ cssPrefix: pf-c-chip-group
 {{/chip-group}}
 ```
 
-### Legacy chip group examples without pf-c-chip-group__main
+### Legacy chip group examples without main element
 ```hbs
 {{#> chip-group chip-group--id="legacy-simple"}}
   {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
