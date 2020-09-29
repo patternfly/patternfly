@@ -416,9 +416,11 @@ beta: true
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
       {{#> tree-view-node tree-view-node--type="div" tree-view-node--attribute='tabindex="0"' tree-view-node--HasToggle="true" tree-view-node--type="div" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
         {{#> tree-view-action}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Alert"'}}
+          <!-- {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Alert"'}}
             <i class="fas fa-bell" aria-hidden="true"></i>
-          {{/button}}
+          {{/button}} -->
+          {{#> dropdown id="dropdown-kebab-align-right" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+          {{/dropdown}}
         {{/tree-view-action}}
       {{/tree-view-node}}
     {{/tree-view-list-item}}
