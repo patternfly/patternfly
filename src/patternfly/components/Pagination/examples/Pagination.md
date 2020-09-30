@@ -95,7 +95,7 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | `.pf-m-bottom` | `.pf-c-pagination` | Modifies for bottom pagination component styles. |
 | `.pf-m-compact` | `.pf-c-pagination` | Modifies for compact pagination component styles. |
 | `.pf-m-static` | `.pf-c-pagination.pf-m-bottom` | Modifies bottom pagination to not be positioned sticky on mobile. |
-| `.pf-m-sticky` | `.pf-c-pagination.pf-m-bottom` | Modifies bottom pagination to be positioned sticky at all viewports. |
+| `.pf-m-sticky` | `.pf-c-pagination` | Modifies the pagination to be sticky to its container. It will be sticky to the top of the container by default, and sticky to the bottom of the container when applied to `.pf-c-pagination.pf-m-bottom`. |
 | `.pf-m-first` | `.pf-c-pagination__nav-control` | Indicates the control is for the first page button. |
 | `.pf-m-prev` | `.pf-c-pagination__nav-control` | Indicates the control is for the previous page button. |
 | `.pf-m-next` | `.pf-c-pagination__nav-control` | Indicates the control is for the next page button. |
