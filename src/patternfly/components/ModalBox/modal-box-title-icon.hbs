@@ -3,17 +3,17 @@
     {{{modal-box-title-icon--attribute}}}
   {{/if}}>
   {{#if modal-box--IsDefaultAlert}}
-    <i class="fas fa-bell" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
   {{else if modal-box--IsInfoAlert}}
-    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{else if modal-box--IsSuccessAlert}}
-    <i class="fas fa-check-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
   {{else if modal-box--IsWarningAlert}}
-    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
   {{else if modal-box--IsErrorAlert}}
-    <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
   {{else if modal-box-title-icon--type}}
-    <i class="fas fa-{{modal-box-title-icon--type}}" aria-hidden="true"></i>
+    <i class="fas fa-fw fa-{{modal-box-title-icon--type}}" aria-hidden="true"></i>
   {{else}}
     {{> @partial-block}}
   {{/if}}
