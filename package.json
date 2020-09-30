@@ -25,7 +25,7 @@
     "screenshots": "rimraf src/generated/**/*.png && theme-patternfly-org screenshots --urlPrefix http://localhost:5000",
     "serve": "serve public",
     "start": "gulp develop",
-    "test": "node test/test.js",
+    "test": "patternfly-a11y --config patternfly-a11y.config",
     "update-modifiers": "./scripts/extractModifiers.sh",
     "semantic-release": "semantic-release"
   },
@@ -35,6 +35,7 @@
     "@fortawesome/fontawesome": "^1.1.8",
     "@octokit/rest": "^16.40.1",
     "@mdx-js/util": "^1.6.16",
+    "@patternfly/patternfly-a11y": "^2.0.4",
     "@patternfly/react-core": "^4.47.0",
     "@patternfly/react-styles": "^4.7.3",
     "@patternfly/react-table": "^4.16.7",
@@ -88,7 +89,7 @@
     "stylelint-scss": "^3.18.0",
     "stylelint-value-no-unknown-custom-properties": "^3.0.0",
     "surge": "^0.21.3",
-    "theme-patternfly-org": "^0.1.13",
+    "theme-patternfly-org": "^0.1.20",
     "unified": "^9.2.0",
     "webpack": "^4.43.0"
   },

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { series, parallel } = require('gulp');
 const rimraf = require('rimraf');
-const { copyFA, copySource, copyAssets, copyDocs } = require('./scripts/gulp/copy');
+const { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } = require('./scripts/gulp/copy');
 const { compileSASS, minifyCSS, watchSASS } = require('./scripts/gulp/sass');
 const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
 const { compileHBS, compileMD, watchHBS, watchMD } = require('./scripts/gulp/html');
@@ -90,7 +90,7 @@ function startWebpackDevServer() {
 
 const buildSrc = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD));
 const buildDocs = series(buildSrc, copyDocs);
-const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, startWebpackDevServer);
+const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, startWebpackDevServer);
 
 // Builds `dist` folder
 const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
@@ -113,6 +113,7 @@ module.exports = {
   watchSASS: watchSrcSASS,
   watchHBS: watchSrcHBS,
   watchMD: watchSrcMD,
+  watchCopyDocs,
   clean,
   pfIconFont,
   pfIcons,

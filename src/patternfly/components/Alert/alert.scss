@@ -144,6 +144,7 @@
 .pf-c-alert__description {
   grid-area: description;
   padding-top: var(--pf-c-alert__description--PaddingTop);
+  word-break: break-word;
 
   + .pf-c-alert__action-group {
     --pf-c-alert__action-group--PaddingTop: var(--pf-c-alert__description--action-group--PaddingTop);

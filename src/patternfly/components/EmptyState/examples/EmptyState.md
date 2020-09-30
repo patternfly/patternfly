@@ -42,6 +42,38 @@ cssPrefix: pf-c-empty-state
 {{/empty-state}}
 ```
 
+### Extra small
+```hbs
+{{#> empty-state empty-state--modifier="pf-m-xs"}}
+  {{#> title titleType="h1" title--modifier="pf-m-md"}}
+    Empty state
+  {{/title}}
+  {{#> empty-state-body}}
+    This represents an the empty state pattern in PatternFly 4. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+  {{/empty-state-body}}
+  {{#> empty-state-secondary}}
+    {{#> button button--modifier="pf-m-link"}}
+      Multiple
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action buttons
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Can
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Go here
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      In the secondary
+    {{/button}}
+    {{#> button button--modifier="pf-m-link"}}
+      Action area
+    {{/button}}
+  {{/empty-state-secondary}}
+{{/empty-state}}
+```
+
 ### Small
 ```hbs
 {{#> empty-state empty-state--modifier="pf-m-sm"}}
@@ -165,7 +197,8 @@ cssPrefix: pf-c-empty-state
 | `.pf-c-button.pf-m-primary` | `<button>` |  Creates the primary action button. |
 | `.pf-c-empty-state__primary` | `<div>` |  Container for primary actions. Can be used in lieu of using `.pf-c-button.pf-m-primary`. |
 | `.pf-c-empty-state__secondary` | `<div>` |  Container secondary actions. |
+| `.pf-m-xs` | `.pf-c-empty-state` | Modifies the empty state for a extra small variation and max-width. |
 | `.pf-m-sm` | `.pf-c-empty-state` | Modifies the empty state for a small max-width. |
 | `.pf-m-lg` | `.pf-c-empty-state` | Modifies the empty state for a large max-width. |
-| `.pf-m-xl` | `.pf-c-empty-state` | Modifies the empty state for a x-large max-width. |
+| `.pf-m-xl` | `.pf-c-empty-state` | Modifies the empty state for an x-large variation and max-width. |
 | `.pf-m-full-height` | `.pf-c-empty-state` | Modifies the empty state to be `height: 100%`. If you need the empty state content to be centered vertically, you can use this modifier to make the empty state fill the height of its container, and center `.pf-c-empty-state__content`. **Note:** this modifier requires the parent of `.pf-c-empty-state` have an implicit or explicit `height` defined.  |

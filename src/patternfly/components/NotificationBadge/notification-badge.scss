@@ -35,10 +35,12 @@
   // Unread
   --pf-c-notification-badge--m-unread--Color: var(--pf-global--Color--light-100);
   --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--active-color--100);
+  --pf-c-notification-badge--m-unread--hover--after--BackgroundColor: var(--pf-global--primary-color--200);
 
   // Attention
   --pf-c-notification-badge--m-attention--Color: var(--pf-global--Color--light-100);
   --pf-c-notification-badge--m-attention--after--BackgroundColor: var(--pf-global--danger-color--100);
+  --pf-c-notification-badge--m-attention--hover--after--BackgroundColor: var(--pf-global--danger-color--200);
   --pf-c-notification-badge__count--MarginLeft: var(--pf-global--spacer--xs);
 
   // Attention icon
@@ -94,12 +96,20 @@
     --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-unread--after--BackgroundColor);
 
     color: var(--pf-c-notification-badge--m-unread--Color);
+
+    &:hover {
+      --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-unread--hover--after--BackgroundColor);
+    }
   }
 
   &.pf-m-attention {
     --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-attention--after--BackgroundColor);
 
     color: var(--pf-c-notification-badge--m-attention--Color);
+
+    &:hover {
+      --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-attention--hover--after--BackgroundColor);
+    }
   }
 }
 

@@ -35,7 +35,6 @@ cssPrefix: pf-c-data-list
     {{/data-list-item-row}}
   {{/data-list-item}}
 {{/data-list}}
-
 ```
 
 ### Accessibility
@@ -56,7 +55,7 @@ cssPrefix: pf-c-data-list
 | `.pf-c-data-list__item-row` | `<div>` | Initiates a data list item row. **Required** |
 | `.pf-c-data-list__item-content` | `<div>` | Initiates a container for data list content. **Required**|
 | `.pf-c-data-list__cell` | `*` | Initiates a data list content cell. **Required** |
-| `.pf-c-data-list__cell-text` | `<span>` | Initiates a data list content cell text element. | 
+| `.pf-c-data-list__cell-text` | `<span>` | Initiates a data list content cell text element. |
 | `.pf-m-align-left` | `.pf-c-data-list__cell` | Modifies a data list cell to not grow and align-left when its the first data-list__cell element. |
 | `.pf-m-no-fill` | `.pf-c-data-list__cell` | Modifies a data list cell to not fill the available horizontal space. |
 | `.pf-m-align-right` | `.pf-c-data-list__cell` | Modifies a data list cell to align-right. |
@@ -308,7 +307,7 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ### Compact
 ```hbs
-{{#> data-list data-list--id="data-list-compact" data-list--attribute='aria-label="Compact data list example"' data-list--modifier="pf-m-compact"}}
+{{#> data-list data-list--id="data-list-compact" data-list--attribute='aria-label="Compact data list example"' data-list--modifier="pf-m-compact pf-m-grid-sm"}}
   {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
@@ -469,12 +468,6 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-cell data-list-cell--modifier="pf-m-flex-4"}}
           <div class="Preview__placeholder">
             <b>.pf-m-flex-4</b>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        {{/data-list-cell}}
-        {{#> data-list-cell data-list-cell--modifier="pf-m-flex-6"}}
-          <div class="Preview__placeholder">
-            <b>.pf-m-flex-6</b>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
         {{/data-list-cell}}
@@ -885,3 +878,171 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Overview
 The DataList component provides a flexible alternative to the Table component, wherein individual data points may or may not exist within each row. DataList relies upon PatternFly layouts to achieve desired presentation within `pf-c-data-list__cell`s. DataLists do not have headers. If headers are required, use the [table component](/documentation/core/components/table).
 
+
+### Grid
+```hbs
+{{#> data-list data-list--id="data-list-grid" data-list--attribute='aria-label="Grid data list example"' data-list--modifier="pf-m-grid"}}
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Cell 1
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 2
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 3
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 4
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 5
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 6
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Cell 1
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 2
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 3
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 4
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 5
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 6
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+### Grid (small breakpoint)
+```hbs
+{{#> data-list data-list--id="data-list-grid-small" data-list--attribute='aria-label="Grid small data list example"' data-list--modifier="pf-m-grid-sm"}}
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Cell 1
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 2
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 3
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 4
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 5
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 6
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Cell 1
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 2
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 3
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 4
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 5
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 6
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+### Grid none
+```hbs
+{{#> data-list data-list--id="data-list-grid-none" data-list--attribute='aria-label="Grid none data list example"' data-list--modifier="pf-m-grid-none"}}
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Cell 1
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 2
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 3
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 4
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 5
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 6
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Cell 1
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 2
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 3
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 4
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 5
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Cell 6
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+### Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-grid{-[none, sm, md, lg, xl, 2xl]}` | `.pf-c-data-list` | Modifies the data list to switch to a grid layout at a specified breakpoint. `.pf-m-grid` will display the grid layout at all breakpoints. `.pf-m-grid-none` will display the desktop layout at all breakpoints. **Note:** Without a grid modifier, the data list will display the grid layout by default and switch to the desktop layout at a medium breakpoint. |

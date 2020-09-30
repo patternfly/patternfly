@@ -17,6 +17,17 @@
   --pf-c-empty-state__secondary--child--MarginRight: calc(var(--pf-global--spacer--xs) / 2);
   --pf-c-empty-state__secondary--child--MarginBottom: var(--pf-global--spacer--xs);
   --pf-c-empty-state__secondary--child--MarginLeft: calc(var(--pf-global--spacer--xs) / 2);
+  --pf-c-empty-state--m-xs__content--MaxWidth: #{pf-size-prem(350px)};
+  --pf-c-empty-state--m-xs__body--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-empty-state--m-xs--button--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-empty-state--m-xs--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs__icon--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs__body--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs__primary--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xs__secondary--MarginTop: var(--pf-global--spacer--md);
   --pf-c-empty-state--m-sm__content--MaxWidth: #{pf-size-prem(400px)};
   --pf-c-empty-state--m-lg__content--MaxWidth: #{pf-size-prem(600px)};
   --pf-c-empty-state--m-xl__body--FontSize: var(--pf-global--FontSize--xl);
@@ -30,6 +41,26 @@
   justify-content: center;
   padding: var(--pf-c-empty-state--PaddingTop) var(--pf-c-empty-state--PaddingRight) var(--pf-c-empty-state--PaddingBottom) var(--pf-c-empty-state--PaddingLeft);
   text-align: center;
+
+  &.pf-m-xs {
+    --pf-c-empty-state--PaddingTop: var(--pf-c-empty-state--m-xs--PaddingTop);
+    --pf-c-empty-state--PaddingRight: var(--pf-c-empty-state--m-xs--PaddingRight);
+    --pf-c-empty-state--PaddingBottom: var(--pf-c-empty-state--m-xs--PaddingBottom);
+    --pf-c-empty-state--PaddingLeft: var(--pf-c-empty-state--m-xs--PaddingLeft);
+    --pf-c-empty-state__content--MaxWidth: var(--pf-c-empty-state--m-xs__content--MaxWidth);
+    --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xs__icon--MarginBottom);
+    --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xs__body--MarginTop);
+    --pf-c-empty-state__primary--MarginTop: var(--pf-c-empty-state--m-xs__primary--MarginTop);
+    --pf-c-empty-state__secondary--MarginTop: var(--pf-c-empty-state--m-xs__secondary--MarginTop);
+
+    .pf-c-empty-state__body {
+      font-size: var(--pf-c-empty-state--m-xs__body--FontSize);
+    }
+
+    .pf-c-button {
+      --pf-c-button--FontSize: var(--pf-c-empty-state--m-xs--button--FontSize);
+    }
+  }
 
   &.pf-m-sm {
     --pf-c-empty-state__content--MaxWidth: var(--pf-c-empty-state--m-sm__content--MaxWidth);

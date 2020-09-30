@@ -414,16 +414,20 @@ import './Menu.css'
 ```hbs
 {{#> menu}}
   {{#> menu-content}}
-    {{#> menu-list-item}}
-      {{#> menu-item menu-item--IsLink="true"}}
-        {{#> menu-item-main}}
-          {{#> menu-item-text}}
-            Link not in group
-          {{/menu-item-text}}
-        {{/menu-item-main}}
-      {{/menu-item}}
-    {{/menu-list-item}}
-    {{> divider divider--type="li"}}
+    {{#> menu-group}}
+      {{#> menu-list}}
+        {{#> menu-list-item}}
+          {{#> menu-item menu-item--IsLink="true"}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Link not in group
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+      {{/menu-list}}
+    {{/menu-group}}
+    {{> divider}}
     {{#> menu-group}}
       {{#> menu-group-title}}
         Group 1
@@ -547,7 +551,7 @@ import './Menu.css'
           {{#> menu-item menu-item--modifier="pf-m-selected"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
-                Item 1 
+                Item 1
               {{/menu-item-text}}
               {{> menu-item-select-icon}}
             {{/menu-item-main}}
@@ -555,7 +559,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action}}
+          {{#> menu-item-action menu-item-action--attribute='aria-label="Actions"'}}
             <i class="fas fa-fw fa-ellipsis-v" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -568,7 +572,7 @@ import './Menu.css'
               {{> menu-item-select-icon}}
             {{/menu-item-main}}
           {{/menu-item}}
-          {{#> menu-item-action}}
+          {{#> menu-item-action menu-item-action--attribute='aria-label="Alert"'}}
             <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -584,7 +588,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action}}
+          {{#> menu-item-action menu-item-action--attribute='aria-label="Copy"'}}
             <i class="fas fa-fw fa-clipboard" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -600,7 +604,7 @@ import './Menu.css'
               This is a description
             {{/menu-item-description}}
           {{/menu-item}}
-          {{#> menu-item-action}}
+          {{#> menu-item-action menu-item-action--attribute='aria-label="Expand"'}}
             <i class="fas fa-fw fa-bars" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
@@ -623,7 +627,7 @@ import './Menu.css'
           {{#> menu-item menu-item--IsLink="true"}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
-                Item 1 
+                Item 1
               {{/menu-item-text}}
             {{/menu-item-main}}
             {{#> menu-item-description}}

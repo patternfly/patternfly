@@ -30,7 +30,7 @@ cssPrefix: pf-c-spinner
 
 Note: If the spinner is showing that loading of a particular region of a page is in process, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading.
 
-Note: A live region must be present before changing its status in order for the change to be read. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
+Note: A [live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) must be present before changing its status in order for the change to be read.
 
 ### Usage
 | Class | Applied to | Outcome |

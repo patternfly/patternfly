@@ -1,4 +1,4 @@
-const { src, dest } = require('gulp');
+const { src, watch, dest } = require('gulp');
 const rename = require('gulp-rename');
 
 function copyFA() {
@@ -34,16 +34,22 @@ function copySource() {
   ]);
 }
 
+const docFiles = ['src/site/**', 'src/patternfly/**/examples/*.css'];
+
 function copyDocs() {
-  return Promise.all([
-    src('src/site/**').pipe(dest('dist/docs')),
-    src('src/patternfly/**/examples/*.css').pipe(dest('dist/docs'))
-  ]);
+  return src(docFiles).pipe(dest('dist/docs'));
+}
+
+function watchCopyDocs() {
+  const watcher = watch(docFiles, { delay: 0 });
+  watcher.on('change', copyDocs);
+  watcher.on('add', copyDocs);
 }
 
 module.exports = {
   copyAssets,
   copyFA,
   copySource,
-  copyDocs
+  copyDocs,
+  watchCopyDocs
 };
