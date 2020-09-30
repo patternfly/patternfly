@@ -9,18 +9,16 @@
 {{#> page-main-section page-main-section--modifier="pf-m-light"}}
 
   {{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-1"}}
-    {{#> form-group form-group--modifier="pf-m-width-100"}}
-      {{#> form-group-control}}
-        {{#> alert alert--modifier="pf-m-danger pf-m-inline" alert--attribute='aria-label="Inline danger alert"'}}
-          {{#> alert-icon alert-icon--type="exclamation-circle"}}
-          {{/alert-icon}}
-          {{#> alert-title}}
-            {{#> screen-reader}}Danger alert:{{/screen-reader}}
-            You must fill out all required fields before you can proceed.
-          {{/alert-title}}
-        {{/alert}}
-      {{/form-group-control}}
-    {{/form-group}}
+    {{#> form-alert}}
+      {{#> alert alert--modifier="pf-m-danger pf-m-inline" alert--attribute='aria-label="Inline danger alert"'}}
+        {{#> alert-icon alert-icon--type="exclamation-circle"}}
+        {{/alert-icon}}
+        {{#> alert-title}}
+          {{#> screen-reader}}Danger alert:{{/screen-reader}}
+          You must fill out all required fields before you can proceed.
+        {{/alert-title}}
+      {{/alert}}
+    {{/form-alert}}
     {{#> form-group}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-name"') required='true'}}
