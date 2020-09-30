@@ -77,6 +77,36 @@ cssPrefix: pf-c-form
 {{/form}}
 ```
 
+### Form sections
+```hbs
+{{#> form form--id="form-section-example"}}
+  {{#> form-section}}
+    {{#> form-group}}
+      {{#> form-group-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-section-1-input"')}}
+          Form section 1 inputs
+        {{/form-label}}
+      {{/form-group-label}}
+      {{#> form-group-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-form-section-1-input" name="' form--id '-form-section-1-input" required')}}{{/form-control}}
+      {{/form-group-control}}
+    {{/form-group}}
+  {{/form-section}}
+  {{#> form-section}}
+    {{#> form-group}}
+      {{#> form-group-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-section-2-input"')}}
+          Form section 2 inputs
+        {{/form-label}}
+      {{/form-group-label}}
+      {{#> form-group-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-form-section-2-input" name="' form--id '-form-section-2-input" required')}}{{/form-control}}
+      {{/form-group-control}}
+    {{/form-group}}
+  {{/form-section}}
+{{/form}}
+```
+
 ### Help text
 ```hbs
 {{#> form form--id="help-text"}}
@@ -184,8 +214,9 @@ cssPrefix: pf-c-form
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-form` | `<form>` |  Initiates a standard form. **Required** |
-| `.pf-c-form__group` | `<div>` |  Initiates a form group section. |
-| `.pf-c-form__group-label` | `<div>` |  Initiates a form group label section. |
+| `.pf-c-form__section` | `<div>, <section>` |  Initiates a form section. |
+| `.pf-c-form__group` | `<div>` |  Initiates a form group. |
+| `.pf-c-form__group-label` | `<div>` |  Initiates a form group label. |
 | `.pf-c-form__label` | `<label>` |  Initiates a form label. **Required** |
 | `.pf-c-form__label-text` | `<span>` |  Initiates a form label text. **Required** |
 | `.pf-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |

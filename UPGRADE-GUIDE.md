@@ -707,7 +707,6 @@ Updated markup:
 
 Removed classes:
 - `.pf-m-border`
-- `.pf-c-form__section`
 
 Removed variables:
 - `--pf-c-form__label--Color`
