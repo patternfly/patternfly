@@ -115,7 +115,7 @@
   gap: var(--pf-c-form__section--Gap);
 
   & + .pf-c-form__group:not(.pf-m-action),
-  & ~ & {
+  &:not(:first-child) {
     margin-top: var(--pf-c-form__section--MarginTop);
   }
 }
