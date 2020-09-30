@@ -10,6 +10,6 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "@patternfly/patternfly": "^4.16.11"
+    "@patternfly/patternfly": "^4.0.0"
   }
 }
