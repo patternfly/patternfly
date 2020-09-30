@@ -7,9 +7,7 @@
   {{/content}}
 {{/page-main-section}}
 {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-
   {{#> form form--id="stacked-labels-1" form--modifier="pf-m-limit-width"}}
-
     {{#> form-group}}
       {{#> alert alert--modifier="pf-m-danger pf-m-inline" alert--attribute='aria-label="Inline danger alert"'}}
         {{#> alert-icon alert-icon--type="exclamation-circle"}}
@@ -20,7 +18,6 @@
         {{/alert-title}}
       {{/alert}}
     {{/form-group}}
-
     {{#> form-group}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-name"') required='true'}}
@@ -35,7 +32,6 @@
         {{/form-helper-text}}
       {{/form-group-control}}
     {{/form-group}}
-
     {{#> form-group}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-name"') required="true"}}
@@ -49,7 +45,6 @@
         Please enter a valid email address: example@email.com
       {{/form-helper-text}}
     {{/form-group}}
-
     {{#> form-group}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-state"') required='true'}}
@@ -67,7 +62,6 @@
         This is a required field
       {{/form-helper-text}}
     {{/form-group}}
-
     {{#> form-group}}
       {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-experience"') required='true'}}
@@ -80,7 +74,6 @@
           This is a requied field
         {{/form-helper-text}}
       {{/form-group-label}}
-
       {{#> form-group-control form-group-control--modifier="pf-m-inline"}}
         {{#> check}}
           {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox1" name="alt-form-checkbox1"'}}{{/check-input}}
@@ -96,7 +89,6 @@
         {{/check}}
       {{/form-group-control}}
     {{/form-group}}
-
     {{#> form-group form-group--modifier="pf-m-action"}}
       {{#> form-group-control}}
         {{#> form-actions}}
@@ -110,5 +102,4 @@
       {{/form-group-control}}
     {{/form-group}}
   {{/form}}
-
 {{/page-main-section}}

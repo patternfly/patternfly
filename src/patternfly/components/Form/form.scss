@@ -8,7 +8,7 @@
   --pf-c-form--m-horizontal__group-control--md--GridColumnWidth: 1fr;
 
   // limit width
-  --pf-c-form--m-limit-width--md--Width: #{pf-size-prem(500px)};
+  --pf-c-form--m-limit-width--MaxWidth: #{pf-size-prem(500px)};
 
   // Group label
   --pf-c-form--m-horizontal__group-label--md--PaddingTop: var(--pf-global--spacer--sm);
@@ -41,6 +41,7 @@
 
   // Group control
   --pf-c-form__group-control--m-inline--child--MarginRight: var(--pf-global--spacer--lg);
+  --pf-c-form__group-control__helper-text--MarginBottom: var(--pf-global--spacer--xs);
 
   // Actions
   --pf-c-form__actions--child--MarginTop: var(--pf-global--spacer--sm);
@@ -108,11 +109,7 @@
   }
 
   &.pf-m-limit-width {
-    width: 100%;
-
-    @media (min-width: $pf-global--breakpoint--md) {
-      width: var(--pf-c-form--m-limit-width--md--Width);
-    }
+    max-width: var(--pf-c-form--m-limit-width--MaxWidth);
   }
 }
 
@@ -125,6 +122,10 @@
 
 .pf-c-form__group-label {
   padding-bottom: var(--pf-c-form__group-label--PaddingBottom);
+
+  .pf-c-form__label + .pf-c-form__helper-text {
+    --pf-c-form__helper-text--MarginTop: 0;
+  }
 }
 
 .pf-c-form__label {
@@ -182,6 +183,12 @@
     > * {
       margin-right: var(--pf-c-form__group-control--m-inline--child--MarginRight);
     }
+  }
+
+  .pf-c-form__helper-text:first-child {
+    --pf-c-form__helper-text--MarginTop: 0;
+
+    margin-bottom: var(--pf-c-form__group-control__helper-text--MarginBottom);
   }
 }
 
