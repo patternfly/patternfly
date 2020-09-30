@@ -33,6 +33,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   // reset spacer
   --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
 
+  max-width: 100%;
   margin-right: var(--pf-l-flex--spacer);
 
   &:last-child {

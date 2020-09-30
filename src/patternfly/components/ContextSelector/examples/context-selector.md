@@ -155,6 +155,165 @@ import './context-selector.css'
 {{/context-selector}}
 ```
 
+### With footer
+```hbs
+{{#> context-selector context-selector--id="context-selector-with-footer-example" context-selector--label-text="Selected Project" context-selector--IsExpanded="true"}}
+  {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
+    {{#> context-selector-toggle-text}}
+      My project
+    {{/context-selector-toggle-text}}
+    {{#> context-selector-toggle-icon}}
+    {{/context-selector-toggle-icon}}
+  {{/context-selector-toggle}}
+  {{#> context-selector-menu}}
+    {{#> context-selector-menu-search}}
+      {{#> input-group}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Search" id="' context-selector--id '-textInput3" name="textInput3" aria-labelledby="' context-selector--id '-search-button"')}}
+        {{/form-control}}
+        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' context-selector--id '-search-button"' 'aria-label="Search menu items"')}}
+          <i class="fas fa-search" aria-hidden="true"></i>
+        {{/button}}
+      {{/input-group}}
+    {{/context-selector-menu-search}}
+    {{#> context-selector-menu-menu}}
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          My project
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          OpenShift cluster
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Production Ansible
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          AWS
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Azure
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          My project
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          OpenShift cluster
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Production Ansible
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          AWS
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Azure
+        {{/context-selector-menu-menu-item}}
+      </li>
+    {{/context-selector-menu-menu}}
+    {{#> context-selector-menu-footer}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Manage projects
+      {{/button}}
+    {{/context-selector-menu-footer}}
+  {{/context-selector-menu}}
+{{/context-selector}}
+
+{{#> context-selector context-selector--id="context-selector-with-footer-example-two" context-selector--label-text="Selected Project" context-selector--IsExpanded="true"}}
+  {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
+    {{#> context-selector-toggle-text}}
+      My project
+    {{/context-selector-toggle-text}}
+    {{#> context-selector-toggle-icon}}
+    {{/context-selector-toggle-icon}}
+  {{/context-selector-toggle}}
+  {{#> context-selector-menu}}
+    {{#> context-selector-menu-search}}
+      {{#> input-group}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Search" id="' context-selector--id '-textInput3" name="textInput3" aria-labelledby="' context-selector--id '-search-button"')}}
+        {{/form-control}}
+        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' context-selector--id '-search-button"' 'aria-label="Search menu items"')}}
+          <i class="fas fa-search" aria-hidden="true"></i>
+        {{/button}}
+      {{/input-group}}
+    {{/context-selector-menu-search}}
+    {{#> context-selector-menu-menu}}
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          My project
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          OpenShift cluster
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Production Ansible
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          AWS
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Azure
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          My project
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          OpenShift cluster
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Production Ansible
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          AWS
+        {{/context-selector-menu-menu-item}}
+      </li>
+      <li>
+        {{#> context-selector-menu-menu-item}}
+          Azure
+        {{/context-selector-menu-menu-item}}
+      </li>
+    {{/context-selector-menu-menu}}
+    {{#> context-selector-menu-footer}}
+      {{#> button button--modifier="pf-m-link"}}
+        Manage projects
+      {{/button}}
+    {{/context-selector-menu-footer}}
+  {{/context-selector-menu}}
+{{/context-selector}}
+```
+
 ## Documentation
 ### Accessibility
 Added after React implementation.
@@ -168,6 +327,7 @@ Added after React implementation.
 | `.pf-c-context-selector__menu` | `<div>` | Initiaties a menu. |
 | `.pf-c-context-selector__menu-search` | `<div>` | Initiates a container for the search input group. |
 | `.pf-c-context-selector__menu-list` | `<ul>` | Initiaties an unordered list of menu items that sits under the input container. |
+| `.pf-c-context-selector__menu-footer` | `<div>` | Initiaties a menu footer. |
 | `.pf-c-context-selector__menu-list-item` | `<li>` | Initiaties a menu item. |
 | `.pf-m-expanded` | `.pf-c-context-selector` | Modifies for the expanded state. |
 | `.pf-m-active` | `.pf-c-context-selector__toggle` | Forces display of the active state of the toggle. |

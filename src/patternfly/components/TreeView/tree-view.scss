@@ -51,12 +51,14 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node-text--max-lines: 1;
 
   // action
-  --pf-c-tree-view__action--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tree-view__action--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-tree-view__action--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-tree-view__action--Color: var(--pf-global--icon--Color--light);
   --pf-c-tree-view__action--hover--Color: var(--pf-global--icon--Color--dark);
   --pf-c-tree-view__action--focus--Color: var(--pf-global--icon--Color--dark);
+  --pf-c-tree-view__action--MarginTop: calc(-1 * var(--pf-global--spacer--form-element));
+  --pf-c-tree-view__action--MarginBottom: calc(-1 * var(--pf-global--spacer--form-element));
+  --pf-c-tree-view__action--MarginRight: calc(-1 * var(--pf-global--spacer--form-element));
 
   padding-top: var(--pf-c-tree-view--PaddingTop);
   padding-bottom: var(--pf-c-tree-view--PaddingBottom);
@@ -142,8 +144,10 @@ $pf-c-tree-view--MaxNesting: 10;
 }
 
 .pf-c-tree-view__action {
-  padding-right: var(--pf-c-tree-view__action--PaddingRight);
   padding-left: var(--pf-c-tree-view__action--PaddingLeft);
+  margin-top: var(--pf-c-tree-view__action--MarginTop);
+  margin-right: var(--pf-c-tree-view__action--MarginRight);
+  margin-bottom: var(--pf-c-tree-view__action--MarginBottom);
   margin-left: auto;
   color: var(--pf-c-tree-view__action--Color);
   border: 0;

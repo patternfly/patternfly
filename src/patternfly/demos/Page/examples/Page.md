@@ -178,45 +178,11 @@ wrapperTag: div
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav page-main-nav--IsLimitWidth="true"}}
-      {{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
-        {{#> nav-list}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Tertiary nav item 1
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 2
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 3
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 4
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 5
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav}}
-    {{/page-main-nav}}
-    {{#> page-template-breadcrumb}}
-    {{/page-template-breadcrumb}}
-    {{#> page-template-title}}
-    {{/page-template-title}}
-    {{#> page-template-gallery page-main-section--modifier="pf-m-fill"}}
-    {{/page-template-gallery}}
-    {{#> page-template-footer}}
-    {{/page-template-footer}}
+    {{> page-template-tertiary-nav}}
+    {{> page-template-breadcrumb}}
+    {{> page-template-title}}
+    {{> page-template-gallery page-template-gallery--modifier="pf-m-fill"}}
+    {{> page-template-footer}}
   {{/page-main}}
 {{/page}}
 ```
@@ -320,6 +286,31 @@ wrapperTag: div
 ### Light theme sidebar and nav
 ```hbs isFullscreen
 {{#> page-demo-expandable-nav page-demo-expandable--id="page-light-sidebar-nav-example"  page-sidebar--modifier="pf-m-light" nav--modifier="pf-m-light"}}{{/page-demo-expandable-nav}}
+```
+
+### Sticky tertiary nav
+```hbs isFullscreen
+{{> page-demo-sticky-top-tertiary-nav page-demo-default--id="page-demo-sticky-top-tertiary-nav"}}
+```
+
+### Sticky breadcrumb
+```hbs isFullscreen
+{{> page-demo-sticky-top-breadcrumb page-demo-default--id="page-demo-sticky-top-breadcrumb"}}
+```
+
+### Sticky section group
+```hbs isFullscreen
+{{> page-demo-sticky-top-section-group page-demo-default--id="page-demo-sticky-top-section-group"}}
+```
+
+### Sticky section bottom
+```hbs isFullscreen
+{{> page-demo-sticky-section-bottom page-demo-default--id="page-demo-sticky-section-bottom"}}
+```
+
+### Overflow scroll
+```hbs isFullscreen
+{{> page-demo-overflow-scroll page-demo-default--id="page-demo-overflow-scroll"}}
 ```
 
 ## Documentation

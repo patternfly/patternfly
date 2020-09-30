@@ -106,8 +106,8 @@ function watchSASS(sassFiles) {
     // Now find files this file is imported by
     const fullPath = path.join(process.cwd(), sassFile);
     const graphNode = graph[fullPath];
-    const dependents = visit(graphNode, [fullPath]);
-    const toCompile = docCSSFiles.filter(file => dependents.includes(file));
+    const dependents = visit(graphNode, []);
+    const toCompile = [fullPath, ...docCSSFiles.filter(file => dependents.includes(file))];
     compileSASS0(src(toCompile));
     console.log('Compiled', toCompile.map(file => path.relative(process.cwd(), file)).join(' '));
   }
