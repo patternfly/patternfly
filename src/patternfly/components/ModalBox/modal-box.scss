@@ -50,7 +50,7 @@
   --pf-c-modal-box__actions--m-2-actions--sibling--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-modal-box__actions--Top: var(--pf-c-modal-box--c-button--Top);
   --pf-c-modal-box__actions--Right: var(--pf-c-modal-box--c-button--Right);
-  --pf-c-modal-box__actions-help--c-button--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-modal-box__header-help--c-button--LineHeight: var(--pf-global--LineHeight--sm);
 
   // Footer
   --pf-c-modal-box__footer--PaddingTop: var(--pf-global--spacer--lg);
@@ -116,6 +116,7 @@
 }
 
 .pf-c-modal-box__header {
+  display: flex;
   padding-top: var(--pf-c-modal-box__header--PaddingTop);
   padding-right: var(--pf-c-modal-box__header--PaddingRight);
   padding-left: var(--pf-c-modal-box__header--PaddingLeft);
@@ -136,8 +137,8 @@
   display: flex;
 }
 
-.pf-c-modal-box__actions-help > .pf-c-button {
-  line-height: var(--pf-c-modal-box__actions-help--c-button--LineHeight);
+.pf-c-modal-box__header-help > .pf-c-button {
+  line-height: var(--pf-c-modal-box__header-help--c-button--LineHeight);
 }
 
 .pf-c-modal-box__title {
