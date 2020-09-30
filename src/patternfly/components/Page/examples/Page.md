@@ -207,6 +207,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-c-page__main-section` | `<section>` |  Creates a section container in the main page area. **Note: The last/only `.pf-c-page__main-section` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
 | `.pf-c-page__main-wizard` | `<section>` | Creates a container to nest the wizard component in the mian page area. |
 | `.pf-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required when using `.pf-m-limit-width` on `.pf-c-page__main-section`** |
+| `.pf-c-page__main-group` | `<div>` | Creates the group of `.pf-c-page__main-*` sections. Can be used in combination with `.pf-m-sticky-[top/bottom]` to make multiple sections sticky. |
 | `.pf-c-page__drawer` | `<div>` |  Creates a container for the drawer component when placing the main page element in the drawer body. |
 | `.pf-m-selected` | `.pf-c-page__header-tools-item` | Modifies a header tools item to indicate that the button inside is in the selected state. |
 | `.pf-m-expanded` | `.pf-c-page__sidebar` |  Modifies the sidebar for the expanded state. |
@@ -222,3 +223,8 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-page__header-tools-group`, `.pf-c-page__header-tools-item` | Hides a header tools group or item at a specified breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-page__header-tools-group`, `.pf-c-page__header-tools-item` | Shows a header tools group or item at a specified breakpoint. |
 | `.pf-m-limit-width` | `.pf-c-page__main-section` | Modifies a page section to limit the `max-width` of the content inside. |
+| `.pf-m-sticky-top` | `.pf-c-page__main-*` | Modifies a section/group to be sticky to the top of its container. |
+| `.pf-m-sticky-bottom` | `.pf-c-page__main-*` | Modifies a section/group to be sticky to the bottom of its container. |
+| `.pf-m-shadow-bottom` | `.pf-c-page__main-*` | Modifies a section/group to have a bottom shadow. |
+| `.pf-m-shadow-top` | `.pf-c-page__main-*` | Modifies a section/group to have a top shadow. |
+| `.pf-m-overflow-scroll` | `.pf-c-page__main-*` | Modifies a section/group to show a scrollbar if it has overflow content. |
