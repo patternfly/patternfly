@@ -114,7 +114,8 @@
   display: grid;
   gap: var(--pf-c-form__section--Gap);
 
-  &:not(:first-child) {
+  & + .pf-c-form__group:not(.pf-m-action),
+  & ~ & {
     margin-top: var(--pf-c-form__section--MarginTop);
   }
 }
