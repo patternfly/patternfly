@@ -29,8 +29,9 @@ wrapperTag: div
       {{/content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md pf-m-light" page-main-section--IsLimitWidth="true"}}
+      {{> table-pagination-header-sticky}}
       {{> table-simple-table}}
-      {{> table-pagination-footer}}
+      {{> table-pagination-footer-sticky}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
