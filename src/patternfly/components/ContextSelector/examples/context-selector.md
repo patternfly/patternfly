@@ -168,7 +168,7 @@ import './context-selector.css'
   {{#> context-selector-menu}}
     {{#> context-selector-menu-search}}
       {{#> input-group}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Search" id="textInput3" name="textInput3" aria-labelledby="' context-selector--id '-search-button"')}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Search" id="' context-selector--id '-textInput3" name="textInput3" aria-labelledby="' context-selector--id '-search-button"')}}
         {{/form-control}}
         {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' context-selector--id '-search-button"' 'aria-label="Search menu items"')}}
           <i class="fas fa-search" aria-hidden="true"></i>
@@ -246,7 +246,7 @@ import './context-selector.css'
   {{#> context-selector-menu}}
     {{#> context-selector-menu-search}}
       {{#> input-group}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Search" id="textInput3" name="textInput3" aria-labelledby="' context-selector--id '-search-button"')}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Search" id="' context-selector--id '-textInput3" name="textInput3" aria-labelledby="' context-selector--id '-search-button"')}}
         {{/form-control}}
         {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' context-selector--id '-search-button"' 'aria-label="Search menu items"')}}
           <i class="fas fa-search" aria-hidden="true"></i>
