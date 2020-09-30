@@ -2,5 +2,24 @@
   {{#if modal-box-title--attribute}}
     {{{modal-box-title--attribute}}}
   {{/if}}>
+  {{#if modal-box--IsAlert}}
+    {{> modal-box-title-icon}}
+  {{/if}}
+  {{#if modal-box--IsAlert}}
+    <span class="pf-u-screen-reader">
+      {{#if modal-box--IsDefaultAlert}}
+        Default
+      {{else if modal-box--IsInfoAlert}}
+        Info
+      {{else if modal-box--IsSuccessAlert}}
+        Success
+      {{else if modal-box--IsWarningAlert}}
+        Warning
+      {{else if modal-box--IsErrorAlert}}
+        Error
+      {{/if}}
+      alert:
+    </span>
+  {{/if}}
   {{> @partial-block}}
 </{{#if modal-box-title--type}}{{modal-box-title--type}}{{else}}h1{{/if}}>
