@@ -40,10 +40,12 @@
   --pf-c-pagination--m-sticky--md--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-pagination--m-sticky--md--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-pagination--m-sticky--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-pagination--m-sticky--Top: 0;
 
   // Bottom
   --pf-c-pagination--m-bottom--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-pagination--m-bottom--BoxShadow: var(--pf-global--BoxShadow--sm-top);
+  --pf-c-pagination--m-bottom--Bottom: 0;
   --pf-c-pagination--m-bottom--md--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-pagination--m-bottom--md--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-pagination--m-bottom--md--PaddingBottom: var(--pf-global--spacer--md);
@@ -90,26 +92,12 @@
     }
   }
 
-  &.pf-m-sticky {
-    position: sticky;
-    top: 0;
-    z-index: var(--pf-c-pagination--m-sticky--ZIndex);
-    padding-top: var(--pf-c-pagination--m-sticky--PaddingTop);
-    padding-right: var(--pf-c-pagination--m-sticky--PaddingRight);
-    padding-bottom: var(--pf-c-pagination--m-sticky--PaddingBottom);
-    padding-left: var(--pf-c-pagination--m-sticky--PaddingLeft);
-    background-color: var(--pf-c-pagination--m-sticky--BackgroundColor);
-    box-shadow: var(--pf-c-pagination--m-sticky--BoxShadow);
-
-    @media screen and (min-width: $pf-global--breakpoint--md) {
-      padding: var(--pf-c-pagination--m-sticky--md--PaddingTop) var(--pf-c-pagination--m-sticky--md--PaddingRight) var(--pf-c-pagination--m-sticky--md--PaddingBottom) var(--pf-c-pagination--m-sticky--md--PaddingLeft);
-    }
-  }
-
   &.pf-m-bottom {
     --pf-c-pagination--child--MarginRight: var(--pf-c-pagination--m-bottom--child--MarginRight);
     --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingRight);
     --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-c-pagination--m-bottom__nav-control--c-button--PaddingRight);
+    --pf-c-pagination--m-sticky--BoxShadow: var(--pf-c-pagination--m-bottom--m-sticky--BoxShadow);
+    --pf-c-pagination--m-sticky--Top: auto;
 
     .pf-c-pagination__nav-control {
       .pf-c-button {
@@ -121,7 +109,7 @@
     }
 
     position: sticky;
-    bottom: auto;
+    bottom: var(--pf-c-pagination--m-bottom--Bottom);
     justify-content: center;
     background-color: var(--pf-c-pagination--m-bottom--BackgroundColor);
     box-shadow: var(--pf-c-pagination--m-bottom--BoxShadow);
@@ -132,17 +120,6 @@
 
       position: relative;
       box-shadow: none;
-    }
-
-    &.pf-m-sticky {
-      position: sticky;
-      bottom: 0;
-      box-shadow: var(--pf-c-pagination--m-bottom--m-sticky--BoxShadow);
-
-      // padding-top: 0;
-      // padding-right: 0;
-      // padding-bottom: 0;
-      // padding-left: 0;
     }
 
     .pf-c-pagination__nav-control.pf-m-first,
@@ -165,6 +142,7 @@
     @media screen and (min-width: $pf-global--breakpoint--md) {
       --pf-c-pagination--m-bottom--BorderTopWidth: 0;
       --pf-c-pagination--m-bottom--MarginTop: 0;
+      --pf-c-pagination--m-bottom--Bottom: auto;
 
       position: relative;
       justify-content: flex-end;
@@ -187,6 +165,25 @@
       }
     }
   }
+
+  &.pf-m-sticky {
+    --pf-c-pagination--m-bottom--Bottom: 0;
+
+    position: sticky;
+    top: var(--pf-c-pagination--m-sticky--Top);
+    z-index: var(--pf-c-pagination--m-sticky--ZIndex);
+    padding-top: var(--pf-c-pagination--m-sticky--PaddingTop);
+    padding-right: var(--pf-c-pagination--m-sticky--PaddingRight);
+    padding-bottom: var(--pf-c-pagination--m-sticky--PaddingBottom);
+    padding-left: var(--pf-c-pagination--m-sticky--PaddingLeft);
+    background-color: var(--pf-c-pagination--m-sticky--BackgroundColor);
+    box-shadow: var(--pf-c-pagination--m-sticky--BoxShadow);
+
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      padding: var(--pf-c-pagination--m-sticky--md--PaddingTop) var(--pf-c-pagination--m-sticky--md--PaddingRight) var(--pf-c-pagination--m-sticky--md--PaddingBottom) var(--pf-c-pagination--m-sticky--md--PaddingLeft);
+    }
+  }
+
 
   .pf-c-options-menu__toggle {
     font-size: var(--pf-c-pagination--c-options-menu__toggle--FontSize);
