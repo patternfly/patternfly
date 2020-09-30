@@ -12,6 +12,7 @@ program
   .arguments('[pattern]')
   .option('-c, --comment', 'Whether to leave a github comment on CIRCLE_PR_NUMBER', false)
   .option('-d, --dir <dir>', 'Directory to compare', 'dist')
+  .option('-i, --ignore <ignore>', 'Globs to ignore', '**/docs/**')
   .action(compare);
 
 async function compare(pattern, options) {
@@ -44,8 +45,8 @@ async function compare(pattern, options) {
     process.exit(10);
   }
 
-  const currentSizes = getFileSizes(path.join(process.cwd(), options.dir));
-  const prevSizes = getFileSizes(compareDir);
+  const currentSizes = getFileSizes(path.join(process.cwd(), options.dir), options.ignore);
+  const prevSizes = getFileSizes(compareDir, options.ignore);
   const { exitCode, htmlReport } = getHTMLDiffTable(currentSizes, prevSizes);
 
   fs.writeFileSync(path.join(__dirname, 'report.html'), htmlReport);

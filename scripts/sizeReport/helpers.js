@@ -4,9 +4,9 @@ const glob = require('glob');
 const { Octokit } = require('@octokit/rest');
 
 // {file: size in kb}
-function getFileSizes(dir) {
+function getFileSizes(dir, ignore) {
   const res = {};
-  glob.sync(`${dir}/**/*.css`).forEach(file => {
+  glob.sync(`${dir}/**/*.css`, { ignore }).forEach(file => {
     res[file.replace(dir, '').substr(1)] = fs.statSync(file).size;
   });
 
