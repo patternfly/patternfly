@@ -69,6 +69,12 @@ wrapperTag: div
     {{#> page-main-section}}
       {{> card-view-demo-template-gallery}}
     {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light pf-m-sticky-bottom"}}
+      {{#> pagination pagination--modifier="pf-m-bottom"}}
+        {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
+        {{> pagination-nav-content}}
+      {{/pagination}}
+    {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```

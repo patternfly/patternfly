@@ -23,10 +23,27 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
+### Top sticky
+```hbs isFullscreen
+{{#> pagination pagination--modifier="pf-m-sticky"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-options-menu options-menu id="pagination-options-menu-top-example" options-menu--IsText="true"}}
+  {{> pagination-nav-content}}
+{{/pagination}}
+```
+
 ### Bottom
 ```hbs isFullscreen
 {{#> pagination pagination--modifier="pf-m-bottom"}}
   {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
+  {{> pagination-nav-content}}
+{{/pagination}}
+```
+
+### Bottom sticky
+```hbs isFullscreen
+{{#> pagination pagination--modifier="pf-m-bottom pf-m-sticky"}}
+  {{> pagination-options-menu id="pagination-options-menu-bottom-sticky-example" options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
   {{> pagination-nav-content}}
 {{/pagination}}
 ```
@@ -78,6 +95,7 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | `.pf-m-bottom` | `.pf-c-pagination` | Modifies for bottom pagination component styles. |
 | `.pf-m-compact` | `.pf-c-pagination` | Modifies for compact pagination component styles. |
 | `.pf-m-static` | `.pf-c-pagination.pf-m-bottom` | Modifies bottom pagination to not be positioned sticky on mobile. |
+| `.pf-m-sticky` | `.pf-c-pagination` | Modifies the pagination to be sticky to its container. It will be sticky to the top of the container by default, and sticky to the bottom of the container when applied to `.pf-c-pagination.pf-m-bottom`. |
 | `.pf-m-first` | `.pf-c-pagination__nav-control` | Indicates the control is for the first page button. |
 | `.pf-m-prev` | `.pf-c-pagination__nav-control` | Indicates the control is for the previous page button. |
 | `.pf-m-next` | `.pf-c-pagination__nav-control` | Indicates the control is for the next page button. |
