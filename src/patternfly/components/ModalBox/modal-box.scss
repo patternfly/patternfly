@@ -56,9 +56,6 @@
   --pf-c-modal-box--c-button--Right: var(--pf-global--spacer--md);
   --pf-c-modal-box--c-button--sibling--MarginRight: var(--pf-global--spacer--xl);
 
-  // Help button
-  --pf-c-modal-box__header-help--c-button--LineHeight: var(--pf-global--LineHeight--sm);
-
   // Footer
   --pf-c-modal-box__footer--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-modal-box__footer--PaddingRight: var(--pf-global--spacer--lg);
@@ -153,10 +150,6 @@
 
 .pf-c-modal-box__header-main {
   min-width: 0;
-}
-
-.pf-c-modal-box__header-help > .pf-c-button {
-  line-height: var(--pf-c-modal-box__header-help--c-button--LineHeight);
 }
 
 .pf-c-modal-box__title {
