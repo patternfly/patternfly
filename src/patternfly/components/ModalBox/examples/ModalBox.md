@@ -31,7 +31,7 @@ cssPrefix: pf-c-modal-box
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
-  {{#> modal-box-header modal-box-header--modifier="pf-m-row"}}
+  {{#> modal-box-header modal-box-header--modifier="pf-m-help"}}
     {{#> modal-box-header-main}}
       {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
         Modal title Modal title Modal title Modal title Modal title Modal title Modal title Modal title
@@ -206,13 +206,13 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-c-button.pf-m-plain` | `<button>` | Initiates a modal box close button. |
 | `.pf-c-modal-box__header` | `<header>` | Initiates a modal box header. **Required** if using a `.pf-c-modal-box__title`. |
 | `.pf-c-modal-box__header-main` | `<div>` | Initiates a modal box header main container. **Required** when `pf-c-modal-box__header-help` is used. | 
+| `.pf-c-modal-box__header-help` | `<div>` | Initiates the help button container in the modal box header actions. |
 | `.pf-c-modal-box__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`, `<div>` | Initiates a modal box title. **Required** if using a modal description. |
 | `.pf-c-modal-box__description` | `<div>` | Initiates a modal box description. |
 | `.pf-c-modal-box__body` | `<div>` | Initiates a modal box body. |
 | `.pf-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
-| `.pf-c-modal-box__header-help` | `<div>` | Initiates the help button container in the modal box header actions. |
 | `.pf-m-sm` | `.pf-c-modal-box` | Modifies for a small modal box width. |
 | `.pf-m-md` | `.pf-c-modal-box` | Modifies for a medium modal box width. |
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
 | `.pf-m-align-top` | `.pf-c-modal-box` | Modifies for top alignment.  |
-| `.pf-m-row` | `.pf-c-modal-box__header` | Modifies the modal box header to be set to flex-direction row. |
+| `.pf-m-help` | `.pf-c-modal-box__header` | Modifies the modal box header to support the help action |
