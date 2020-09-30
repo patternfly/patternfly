@@ -14,6 +14,13 @@
   --pf-c-modal-box--m-align-top--MaxHeight: calc(100% - min(var(--pf-c-modal-box--m-align-top--spacer), var(--pf-global--spacer--2xl)) - var(--pf-c-modal-box--m-align-top--spacer));
   --pf-c-modal-box--m-align-top--MaxWidth: calc(100% - min(var(--pf-c-modal-box--m-align-top--spacer) * 2, var(--pf-global--spacer--xl)));
 
+  // States
+  --pf-c-modal-box--m-error__title-icon--Color: var(--pf-global--danger-color--100);
+  --pf-c-modal-box--m-warning__title-icon--Color: var(--pf-global--warning-color--100);
+  --pf-c-modal-box--m-success__title-icon--Color: var(--pf-global--success-color--100);
+  --pf-c-modal-box--m-info__title-icon--Color: var(--pf-global--info-color--100);
+  --pf-c-modal-box--m-default__title-icon--Color: var(--pf-global--default-color--200);
+
   @media (min-width: $pf-global--breakpoint--xl) {
     --pf-c-modal-box--m-align-top--spacer: var(--pf-c-modal-box--m-align-top--xl--spacer);
   }
@@ -28,6 +35,10 @@
   --pf-c-modal-box__title--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-modal-box__title--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
   --pf-c-modal-box__title--FontSize: var(--pf-global--FontSize--2xl);
+
+  // Title icon
+  --pf-c-modal-box__title-icon--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-modal-box__title-icon--Color: var(--pf-global--Color--100);
 
   // Description
   --pf-c-modal-box__description--PaddingTop: var(--pf-global--spacer--xs);
@@ -84,6 +95,26 @@
     max-height: var(--pf-c-modal-box--m-align-top--MaxHeight);
   }
 
+  &.pf-m-error {
+    --pf-c-modal-box__title-icon--Color: var(--pf-c-modal-box--m-error__title-icon--Color);
+  }
+
+  &.pf-m-warning {
+    --pf-c-modal-box__title-icon--Color: var(--pf-c-modal-box--m-warning__title-icon--Color);
+  }
+
+  &.pf-m-success {
+    --pf-c-modal-box__title-icon--Color: var(--pf-c-modal-box--m-success__title-icon--Color);
+  }
+
+  &.pf-m-default {
+    --pf-c-modal-box__title-icon--Color: var(--pf-c-modal-box--m-default__title-icon--Color);
+  }
+
+  &.pf-m-info {
+    --pf-c-modal-box__title-icon--Color: var(--pf-c-modal-box--m-info__title-icon--Color);
+  }
+
   // Close button
   > .pf-c-button {
     position: absolute;
@@ -117,6 +148,11 @@
   font-family: var(--pf-c-modal-box__title--FontFamily);
   font-size: var(--pf-c-modal-box__title--FontSize);
   line-height: var(--pf-c-modal-box__title--LineHeight);
+}
+
+.pf-c-modal-box__title-icon {
+  margin-right: var(--pf-c-modal-box__title-icon--MarginRight);
+  color: var(--pf-c-modal-box__title-icon--Color);
 }
 
 .pf-c-modal-box__description {
