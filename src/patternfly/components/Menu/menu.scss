@@ -84,10 +84,18 @@
 
   // Drilldown
   --pf-c-menu--m-drilldown--Width: 250px;
-  --pf-c-menu--m-drilldown--Transition: var(--pf-global--Transition);
-  --pf-c-menu--m-drilldown__menu--Transition: var(--pf-global--Transition);
-  --pf-c-menu--m-drilldown__list-item--Transition: var(--pf-global--Transition);
-  --pf-c-menu--m-drilled-in__list--Transition: var(--pf-global--Transition);
+  --pf-c-menu--m-drilldown--Transition--transform: var(--pf-global--TransitionDuration);
+  --pf-c-menu--m-drilldown--Transition--height: var(--pf-global--TransitionDuration);
+
+  // Drilldown menu
+  --pf-c-menu--m-drilldown__menu--Transition--transform: var(--pf-global--TransitionDuration);
+  --pf-c-menu--m-drilldown__menu--Transition--visibility: var(--pf-global--TransitionDuration);
+
+  // Drilldown list
+  --pf-c-menu--m-drilled-in__list--Transition--transform: var(--pf-global--TransitionDuration);
+  --pf-c-menu--m-drilldown__list-item--Transition--visibility: var(--pf-global--TransitionDuration);
+
+  // Drilled in
   --pf-c-menu--m-drilled-in__c-menu__list-item--m-current-path__c-menu--ZIndex: var(--pf-global--ZIndex--2xl);
 
   padding-top: var(--pf-c-menu--PaddingTop);
@@ -107,7 +115,7 @@
     width: var(--pf-c-menu--m-drilldown--Width);
     height: var(--pf-c-menu--m-drilldown--Height);
     overflow: hidden;
-    transition: var(--pf-c-menu--m-drilldown--Transition);
+    transition: transform var(--pf-c-menu--m-drilldown--Transition--transform), height var(--pf-c-menu--m-drilldown--Transition--height);
 
     &.pf-m-drilled-in {
       // stylelint-disable selector-max-class
@@ -127,7 +135,7 @@
       top: calc(var(--pf-c-menu--PaddingTop) * -1);
       left: 100%;
       width: 100%;
-      transition: var(--pf-c-menu--m-drilldown__menu--Transition);
+      transition: transform var(--pf-c-menu--m-drilldown__menu--Transition--transform), visibility var(--pf-c-menu--m-drilldown__menu--Transition--visibility);
 
       &.pf-m-drilled-in {
         transform: translateX(-100%);
@@ -136,12 +144,12 @@
 
     .pf-c-menu__list {
       position: relative;
-      transition: var(--pf-c-menu--m-drilled-in__list--Transition);
+      transition: transform var(--pf-c-menu--m-drilled-in__list--Transition--transform);
     }
 
     .pf-c-menu__list-item {
       position: static;
-      transition: var(--pf-c-menu--m-drilldown__list-item--Transition);
+      transition: visibility var(--pf-c-menu--m-drilldown__list-item--Transition--visibility);
 
       // stylelint-disable selector-max-class
       &.pf-m-current-path .pf-c-menu {

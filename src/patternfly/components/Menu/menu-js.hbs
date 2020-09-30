@@ -1,4 +1,3 @@
-
 <script type="text/javascript">
 
   const stripSiblings = (list, item) => {
@@ -39,25 +38,3 @@
 </script>
 
 {{> @partial-block}}
-
-    {{!-- if (currentTarget.hasAttribute('data-target')) {
-      let target = currentTarget.getAttribute('data-target');
-      target = document.getElementById(target);
-
-      target.classList.remove('pf-m-drilled-in');
-      let submenus = target.querySelectorAll('.pf-c-menu');
-      for (let i = 0; i < submenus.length; i++) {
-        submenus[i].classList.remove('pf-m-drilled-in')
-      }
-
-      let listItems = target.querySelectorAll('.pf-c-menu__list-item');
-      for (let i = 0; i < listItems.length; i++) {
-        listItems[i].classList.remove('pf-m-current-path')
-      }
-
-      root.setAttribute('style', `--pf-c-menu--m-drilldown--Height: ${target.querySelector('.pf-c-menu__list').offsetHeight + 16}px`);
-    } else {
-      grandParentMenu.classList.remove('pf-m-drilled-in');
-      grandParentListItem.classList.remove('pf-m-current-path');
-      root.setAttribute('style', `--pf-c-menu--m-drilldown--Height: ${grandParentList.offsetHeight + 16}px`);
-    } --}}

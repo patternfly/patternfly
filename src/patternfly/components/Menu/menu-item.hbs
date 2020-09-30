@@ -7,13 +7,10 @@
   {{#if menu-item--attribute}}
     {{{menu-item--attribute}}}
   {{/if}}
-  {{#if menu-item--data-target}}
-    data-target="{{{menu-item--data-target}}}"
-  {{/if}}
   {{!-- aria-expanded value can still be passed manually --}}
   {{#if menu-list-item--IsExpandable}}
     {{#if menu-item--IsExpanded}}
-      aria-expanded="false"
+      aria-expanded="true"
     {{else}}
       aria-expanded="false"
     {{/if}}
