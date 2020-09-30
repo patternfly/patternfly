@@ -34,8 +34,8 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   // reset spacer
   --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
 
-  max-width: 100%;
   order: var(--pf-l-flex--item--Order);
+  max-width: 100%;
   margin-right: var(--pf-l-flex--spacer);
 
   // don't set base value for --pf-l-flex--item--Order as it defaults to 0
