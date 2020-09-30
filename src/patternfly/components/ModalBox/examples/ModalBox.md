@@ -31,7 +31,7 @@ cssPrefix: pf-c-modal-box
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
-  {{#> modal-box-header}}
+  {{#> modal-box-header modal-box-header--modifier="pf-m-row"}}
     {{#> modal-box-header-main}}
       {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
         Modal title Modal title Modal title Modal title Modal title Modal title Modal title Modal title
@@ -215,3 +215,4 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-m-md` | `.pf-c-modal-box` | Modifies for a medium modal box width. |
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
 | `.pf-m-align-top` | `.pf-c-modal-box` | Modifies for top alignment.  |
+| `.pf-m-row` | `.pf-c-modal-box__header` | Modifies the modal box header to be set to flex-direction row. |

@@ -41,7 +41,7 @@
   --pf-c-modal-box__header--body--PaddingTop: var(--pf-global--spacer--md);
 
   // Close
-  --pf-c-modal-box--c-button--Top: calc(var(--pf-global--spacer--lg) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
+  --pf-c-modal-box--c-button--Top: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--xs) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
   --pf-c-modal-box--c-button--Right: var(--pf-global--spacer--md);
   --pf-c-modal-box--c-button--sibling--MarginRight: var(--pf-global--spacer--xl);
 
@@ -117,9 +117,14 @@
 
 .pf-c-modal-box__header {
   display: flex;
+  flex-direction: column;
   padding-top: var(--pf-c-modal-box__header--PaddingTop);
   padding-right: var(--pf-c-modal-box__header--PaddingRight);
   padding-left: var(--pf-c-modal-box__header--PaddingLeft);
+
+  &.pf-m-row {
+    flex-direction: row;
+  }
 
   &:last-child {
     padding-bottom: var(--pf-c-modal-box__header--last-child--PaddingBottom);
@@ -128,6 +133,10 @@
   + .pf-c-modal-box__body {
     --pf-c-modal-box__body--PaddingTop: var(--pf-c-modal-box__header--body--PaddingTop);
   }
+}
+
+.pf-c-modal-box__header-main {
+  min-width: 0;
 }
 
 .pf-c-modal-box__actions {
