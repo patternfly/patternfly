@@ -225,6 +225,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__actions` | `<div>` | Iniates a row of actions. |
 | `.pf-c-form__helper-text` | `<p>` |  Initiates a form helper text block. |
 | `.pf-c-form__helper-text-icon` | `<span>` |  Initiates a form helper text icon. |
+| `.pf-c-form__alert` | `<div>` | Initiates the form alert container for inline alerts. |
 | `.pf-m-horizontal` | `.pf-c-form` | Modifies form for a horizontal layout. |
 | `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |
 | `.pf-m-success` | `.pf-c-form__helper-text` | Modifies text color of helper text for success state. |
