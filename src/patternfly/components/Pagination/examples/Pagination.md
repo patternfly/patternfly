@@ -32,7 +32,7 @@ cssPrefix: pf-c-pagination
 {{/pagination}}
 ```
 
-### Bottom default
+### Bottom
 ```hbs isFullscreen
 {{#> pagination pagination--modifier="pf-m-bottom"}}
   {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
