@@ -3,6 +3,60 @@ id: Release notes
 section: get-started
 releaseNoteTOC: true
 ---
+## 2020.13 release notes (2020-10-06)
+Packages released:
+- [@patternfly/patternfly@v4.50.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.50.2)
+
+### Components
+- **Alert:**
+  - Allowed long strings in description to wrap ([#3505](https://github.com/patternfly/patternfly/pull/3505))
+  - Added inline variation demo ([#3517](https://github.com/patternfly/patternfly/pull/3517))
+  - Fixed duplicate example IDs ([#3537](https://github.com/patternfly/patternfly/pull/3537))
+- **Chip group:** Updated all examples to use `__main` ([#3530](https://github.com/patternfly/patternfly/pull/3530))
+- **Context selector:**
+  - Added actions footer ([#3494](https://github.com/patternfly/patternfly/pull/3494))
+  - Fixed duplicate ID in examples ([#3533](https://github.com/patternfly/patternfly/pull/3533))
+- **Data list:**
+  - Added grid modifiers ([#3528](https://github.com/patternfly/patternfly/pull/3528))
+  - Made data-list-grid an import in data-list ([#3540](https://github.com/patternfly/patternfly/pull/3540))
+- **Date picker:**
+  - Added date-picker, flatpickr styles ([#3482](https://github.com/patternfly/patternfly/pull/3482))
+  - Added background to flatpickr-calendar wrapper ([#3510](https://github.com/patternfly/patternfly/pull/3510))
+  - Kept text in month select from getting cut off ([#3521](https://github.com/patternfly/patternfly/pull/3521))
+- **Empty state:** Added xs variation ([#3519](https://github.com/patternfly/patternfly/pull/3519))
+- **Form control:** Fixed icon not showing in custom icon example ([#3524](https://github.com/patternfly/patternfly/pull/3524))
+- **Form:** Added form section ([#3483](https://github.com/patternfly/patternfly/pull/3483))
+- **Input group:** Fixed invalid state double border ([#3508](https://github.com/patternfly/patternfly/pull/3508))
+- **Label group:** Positioned close button to the top right ([#3507](https://github.com/patternfly/patternfly/pull/3507))
+- **Menu:** Updated example axe violations ([#3498](https://github.com/patternfly/patternfly/pull/3498))
+- **Modal:**
+  - Refactored the top aligned variation so it works better ([#3481](https://github.com/patternfly/patternfly/pull/3481))
+  - Added support for title icon, modal alert states ([#3487](https://github.com/patternfly/patternfly/pull/3487))
+  - Added help button ([#3495](https://github.com/patternfly/patternfly/pull/3495))
+- **Notification badge:** Added hover/focus styles for unread/attention ([#3488](https://github.com/patternfly/patternfly/pull/3488))
+- **Page:** Added sticky sections, group, overflow scroll, shadows ([#3516](https://github.com/patternfly/patternfly/pull/3516))
+- **Pagination:**
+  - Added sticky position to bottom ([#3509](https://github.com/patternfly/patternfly/pull/3509))
+  - Updated sticky examples with content ([#3538](https://github.com/patternfly/patternfly/pull/3538))
+- **Select:** Fixed axe violations ([#3501](https://github.com/patternfly/patternfly/pull/3501))
+- **Table:** Added support for single row radio select ([#3492](https://github.com/patternfly/patternfly/pull/3492))
+- **Treeview:** Updated node actions to support dropdowns and buttons ([#3522](https://github.com/patternfly/patternfly/pull/3522))
+
+### Layouts
+- **Flex:** Added max-width to flex items ([#3479](https://github.com/patternfly/patternfly/pull/3479))
+- **Flex & grid:** Added ordering to grid and flex layouts ([#3478](https://github.com/patternfly/patternfly/pull/3478))
+
+### Other
+- **Build:**
+  - Updated size report ([#3534](https://github.com/patternfly/patternfly/pull/3534))
+  - Reenable a11y ([#3506](https://github.com/patternfly/patternfly/pull/3506))
+- **Readme:** Added steps to updated screenshots ([#3515](https://github.com/patternfly/patternfly/pull/3515))
+- **Workspace:**
+  - Added hmr for css ([#3499](https://github.com/patternfly/patternfly/pull/3499))
+  - Fixed reloading bugs ([#3497](https://github.com/patternfly/patternfly/pull/3497))
+  - Fixed broken links ([#3504](https://github.com/patternfly/patternfly/pull/3504))
+
+
 ## 2020.12 release notes (2020-09-17)
 Packages released:
 - [@patternfly/patternfly@v4.42.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.42.2)
