@@ -7,7 +7,6 @@
   {{/content}}
 {{/page-main-section}}
 {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-
   {{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-1"}}
     {{#> form-alert}}
       {{#> alert alert--modifier="pf-m-danger pf-m-inline" alert--attribute='aria-label="Inline danger alert"'}}
@@ -35,12 +34,12 @@
     {{/form-group}}
     {{#> form-group}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-name"') required="true"}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-email"') required="true"}}
           Email
         {{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="patternfly@patternfly.com" id="' form--id '-form-name" name="' form--id '-form-name" required')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="patternfly@patternfly.com" id="' form--id '-form-email" name="' form--id '-form-email" required')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group}}
