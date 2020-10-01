@@ -7,7 +7,6 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   --pf-l-flex--Display: flex;
   --pf-l-flex--FlexWrap: wrap;
   --pf-l-flex--AlignItems: baseline;
-  --pf-l-flex--RowGap: var(--pf-global--spacer--sm);
   --pf-l-flex--m-row--AlignItems: baseline;
   --pf-l-flex--m-row-reverse--AlignItems: baseline;
   --pf-l-flex--item--Order: 0;
@@ -22,8 +21,6 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   display: var(--pf-l-flex--Display);
   flex-wrap: var(--pf-l-flex--FlexWrap);
   align-items: var(--pf-l-flex--AlignItems);
-  row-gap: var(--pf-l-flex--RowGap);
-  margin-trim: all;
 
   &:last-child {
     --pf-l-flex--spacer: 0;
@@ -310,19 +307,6 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
           &:last-child {
             --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
           }
-        }
-      }
-    }
-  }
-
-  // .pf-m-row-gap-{size}{-on-breakpoint}
-  @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    @include pf-apply-breakpoint($breakpoint, $pf-l-flex--breakpoint-map) {
-      @each $spacer, $spacer-value in $pf-l-flex--spacer-map {
-        &.pf-m-row-gap-#{$spacer} {
-          --pf-l-flex--RowGap: #{$spacer-value};
         }
       }
     }
