@@ -370,7 +370,6 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--control="true"}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content}}
@@ -398,7 +397,6 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
         {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--control="true"}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
@@ -525,7 +523,6 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
         {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--control="true"}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
@@ -658,6 +655,8 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `aria-label="Collapse all"` | `.pf-c-toolbar__item.pf-m-expand-all.pf-m-expanded` | Provides an accessible label for the expand all item button. **Required** |
 
 ### Toggle group usage
+
+**Note:** Toggle group is set to `flex-wrap: nowrap` by default.
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |

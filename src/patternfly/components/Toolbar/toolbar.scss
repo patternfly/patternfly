@@ -14,6 +14,9 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar__content--PaddingRight: var(--pf-global--spacer--md); // remove at breaking change
   --pf-c-toolbar__content--PaddingLeft: var(--pf-global--spacer--md); // remove at breaking change
 
+  // Content section
+  --pf-c-toolbar__content-section--RowGap: var(--pf-global--spacer--sm);
+
   // Gutters
   --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
   --pf-c-toolbar--m-page-insets--xl--inset: var(--pf-global--spacer--lg); // make this the default inset at breaking change
@@ -43,6 +46,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Spacer values
   --pf-c-toolbar__item--spacer: var(--pf-c-toolbar--spacer--base);
   --pf-c-toolbar__group--spacer: var(--pf-c-toolbar--spacer--base);
+  --pf-c-toolbar__group--RowGap: var(--pf-global--spacer--xs);
 
   // Toggle group
   --pf-c-toolbar__group--m-toggle-group--spacer: var(--pf-global--spacer--sm);
@@ -135,8 +139,10 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--spacer);
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-right: var(--pf-c-toolbar--spacer);
+  row-gap: var(--pf-c-toolbar__group--RowGap);
 
   // Button group
   &.pf-m-button-group {
@@ -172,6 +178,11 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Toggle group
   &.pf-m-toggle-group {
     --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--m-toggle-group--spacer);
+
+    &,
+    .pf-c-toolbar__group {
+      flex-wrap: nowrap;
+    }
 
     .pf-c-toolbar__group,
     .pf-c-toolbar__item {
@@ -267,6 +278,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 // Content section
 .pf-c-toolbar__content-section {
   width: 100%;
+  row-gap: var(--pf-c-toolbar__content-section--RowGap);
 }
 
 // Expandable content
