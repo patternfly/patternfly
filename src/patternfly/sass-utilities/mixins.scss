@@ -218,3 +218,33 @@
     animation-fill-mode: forwards;
   }
 }
+
+// Build variable stack
+@mixin pf-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-global--breakpoint-map) {
+  $list: ();
+
+  @each $breakpoint, $breakpoint-value in $breakpoint-map {
+    $variable-list: ();
+
+    // Build variable list
+    @if $breakpoint != "base" {
+      $list: append($list, $css-var + "-on-" + $breakpoint, "comma");
+    } @else {
+      $list: append($list, $css-var, "comma");
+    }
+
+    // Construct variable stack
+    @each $list-item in $list {
+      @if length($variable-list) == 0 {
+        $variable-list: var(#{$list-item});
+      } @else {
+        $variable-list: var(#{$list-item}, $variable-list);
+      }
+    }
+
+    // Assign variable stack to $prop
+    @include pf-apply-breakpoint($breakpoint) {
+      #{$prop}: #{$variable-list};
+    }
+  }
+}
