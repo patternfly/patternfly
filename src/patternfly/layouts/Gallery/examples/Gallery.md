@@ -29,6 +29,32 @@ import './Gallery.css'
 {{/gallery}}
 ```
 
+### Grid template minmax() min width customization
+
+Grid template columms min value can be applied to <code>.pf-l-gallery</code>.  Min-width is set inline as `--pf-l-gallery--GridTemplateColumns--min{-on-[breakpoint]}: {width}`.
+
+### Min width modified gallery
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 150px;"'}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+{{/gallery}}
+```
+
+### Min width modified gallery, responsive updates
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min-on-md: 100px; --pf-l-gallery--GridTemplateColumns--min-on-lg: 150px; --pf-l-gallery--GridTemplateColumns--min-on-xl: 200px; --pf-l-gallery--GridTemplateColumns--min-on-2xl: 300px;"'}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+{{/gallery}}
+```
+
 ## Documentation
 ### Overview
 The gallery layout is designed so that all of its children are of uniform size, display horizontally, and wrap responsively.
@@ -39,3 +65,4 @@ The gallery layout is designed so that all of its children are of uniform size, 
 | `.pf-l-gallery` |  `<div>` |  Initializes a Gallery layout |
 | `.pf-l-gallery__item` | `<div>` |  Explicitly sets the child for the gallery. This class isn't necessary, but it is included to keep inline with BEM convention, and to provide an entity that will later be used for applying modifiers. |
 | `.pf-m-gutter` | `.pf-l-gallery` | Adds space between children by using the globally defined gutter value. |
+| `--pf-l-gallery--GridTemplateColumns--min{-on-[breakpoint]}: {width}px,rem,em` | `.pf-l-gallery` | Modifies the min value of `grid-template-columns` declaration. |

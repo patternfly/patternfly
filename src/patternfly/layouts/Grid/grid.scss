@@ -54,7 +54,6 @@
     grid-column-start: var(--pf-l-grid__item--GridColumnStart);
     grid-column-end: var(--pf-l-grid__item--GridColumnEnd);
 
-    // don't set base value for --pf-l-grid--item--Order as it defaults to 0
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       order: var(--pf-l-grid--item--Order-on-sm, var(--pf-l-grid--item--Order));
     }
