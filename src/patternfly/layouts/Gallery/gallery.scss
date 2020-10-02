@@ -1,28 +1,28 @@
 .pf-l-gallery {
   --pf-l-gallery--m-gutter--GridGap: var(--pf-global--gutter);
   --pf-l-gallery--GridTemplateColumns--min: 250px;
-  --pf-l-gallery--GridTemplateColumns--min--core: var(--pf-l-gallery--GridTemplateColumns--min);
-  --pf-l-gallery--GridTemplateColumns: repeat(auto-fill, minmax(var(--pf-l-gallery--GridTemplateColumns--min--core), 1fr)); // The 250px value is here just so that the grid has a width to use in the minmax() for laying out the gallery columns.
+  --pf-l-gallery--GridTemplateColumns--minmax--min: var(--pf-l-gallery--GridTemplateColumns--min);
+  --pf-l-gallery--GridTemplateColumns: repeat(auto-fill, minmax(var(--pf-l-gallery--GridTemplateColumns--minmax--min), 1fr)); // The 250px value is here just so that the grid has a width to use in the minmax() for laying out the gallery columns.
   --pf-l-gallery--GridTemplateRows: auto;
 
   @media screen and (min-width: $pf-global--breakpoint--sm) {
-    --pf-l-gallery--GridTemplateColumns--min--core: var(--pf-l-gallery--GridTemplateColumns--min-on-sm, var(--pf-l-gallery--GridTemplateColumns--min));
+    --pf-l-gallery--GridTemplateColumns--minmax--min: var(--pf-l-gallery--GridTemplateColumns--min-on-sm, var(--pf-l-gallery--GridTemplateColumns--min));
   }
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
-    --pf-l-gallery--GridTemplateColumns--min--core: var(--pf-l-gallery--GridTemplateColumns--min-on-md, var(--pf-l-gallery--GridTemplateColumns--min-on-sm, var(--pf-l-gallery--GridTemplateColumns--min)));
+    --pf-l-gallery--GridTemplateColumns--minmax--min: var(--pf-l-gallery--GridTemplateColumns--min-on-md, var(--pf-l-gallery--GridTemplateColumns--min-on-sm, var(--pf-l-gallery--GridTemplateColumns--min)));
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
-    --pf-l-gallery--GridTemplateColumns--min--core: var(--pf-l-gallery--GridTemplateColumns--min-on-lg, var(--pf-l-gallery--GridTemplateColumns--min-on-md, var(--pf-l-gallery--GridTemplateColumns--min-on-sm, var(--pf-l-gallery--GridTemplateColumns--min))));
+    --pf-l-gallery--GridTemplateColumns--minmax--min: var(--pf-l-gallery--GridTemplateColumns--min-on-lg, var(--pf-l-gallery--GridTemplateColumns--min-on-md, var(--pf-l-gallery--GridTemplateColumns--min-on-sm, var(--pf-l-gallery--GridTemplateColumns--min))));
   }
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-l-gallery--GridTemplateColumns--min--core: var(--pf-l-gallery--GridTemplateColumns--min-on-xl, var(--pf-l-gallery--GridTemplateColumns--min-on-lg, var(--pf-l-gallery--GridTemplateColumns--min-on-md, var(--pf-l-gallery--GridTemplateColumns--min-on-sm, var(--pf-l-gallery--GridTemplateColumns--min)))));
+    --pf-l-gallery--GridTemplateColumns--minmax--min: var(--pf-l-gallery--GridTemplateColumns--min-on-xl, var(--pf-l-gallery--GridTemplateColumns--min-on-lg, var(--pf-l-gallery--GridTemplateColumns--min-on-md, var(--pf-l-gallery--GridTemplateColumns--min-on-sm, var(--pf-l-gallery--GridTemplateColumns--min)))));
   }
 
   @media screen and (min-width: $pf-global--breakpoint--2xl) {
-    --pf-l-gallery--GridTemplateColumns--min--core: var(--pf-l-gallery--GridTemplateColumns--min-on-2xl, var(--pf-l-gallery--GridTemplateColumns--min-on-xl, var(--pf-l-gallery--GridTemplateColumns--min-on-lg, var(--pf-l-gallery--GridTemplateColumns--min-on-md, var(--pf-l-gallery--GridTemplateColumns--min-on-sm, var(--pf-l-gallery--GridTemplateColumns--min))))));
+    --pf-l-gallery--GridTemplateColumns--minmax--min: var(--pf-l-gallery--GridTemplateColumns--min-on-2xl, var(--pf-l-gallery--GridTemplateColumns--min-on-xl, var(--pf-l-gallery--GridTemplateColumns--min-on-lg, var(--pf-l-gallery--GridTemplateColumns--min-on-md, var(--pf-l-gallery--GridTemplateColumns--min-on-sm, var(--pf-l-gallery--GridTemplateColumns--min))))));
   }
 
   display: grid;
