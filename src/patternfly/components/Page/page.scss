@@ -223,7 +223,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     --pf-c-page__header-alt-brand-link--PaddingRight: 0;
   }
 
-
   @include pf-t-dark; // force the container to follow the dark theme
 
   display: flex;
@@ -271,17 +270,34 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   }
 }
 
-.pf-c-page__header-toolbar {
+.pf-c-page__header-content {
   display: flex;
   flex: 1;
-  align-self: stretch;
-  align-items: stretch;
+
+  &,
+  .pf-c-toolbar,
+  .pf-c-toolbar__content,
+  .pf-c-toolbar__content-section,
+  .pf-c-toolbar__group,
+  .pf-c-toolbar__toggle-group,
+  .pf-c-toolbar__item {
+    align-self: stretch;
+  }
+
+  .pf-c-toolbar__toggle-group,
+  .pf-c-toolbar__item {
+    align-items: stretch;
+  }
 
   .pf-c-toolbar {
     --pf-c-toolbar--PaddingTop: 0;
     --pf-c-toolbar--PaddingBottom: 0;
 
-    align-self: stretch;
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      --pf-c-toolbar__expandable-content--lg--PaddingRight: var(--pf-global--spacer--md);
+      --pf-c-toolbar__expandable-content--lg--PaddingBottom: var(--pf-global--spacer--md);
+      --pf-c-toolbar__expandable-content--lg--PaddingLeft: var(--pf-global--spacer--md);
+    }
   }
 
   .pf-c-toolbar,
@@ -297,7 +313,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   .pf-c-context-selector {
     width: 100%;
     box-shadow: none;
-
   }
 
   .pf-c-context-selector__toggle::before {
@@ -306,7 +321,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     border-left: 0;
   }
 }
-
 
 // Brand
 .pf-c-page__header-brand {

@@ -4,7 +4,7 @@ section: components
 wrapperTag: div
 ---
 
-## Demos
+<!-- ## Demos
 ### Default nav
 ```hbs isFullscreen
 {{> page-demo-default page-demo-default--id="page-default-nav-example"}}
@@ -13,7 +13,7 @@ wrapperTag: div
 ### Expandable nav
 ```hbs isFullscreen
 {{> page-demo-expandable-nav page-demo-expandable--id="page-expandable-nav-example"}}
-```
+``` -->
 
 ### Refactored page header
 ```hbs isFullscreen
@@ -35,15 +35,58 @@ wrapperTag: div
         </span>
       {{/page-header-brand-link}}
     {{/page-header-brand}}
-    {{#> page-header-toolbar}}
-      {{#> toolbar toolbar--id="toolbar-toggle-group-collapsed-example"}}
+    {{#> page-header-content}}
+      {{#> toolbar toolbar--id="toolbar-toggle-group-collapsed-example" toolbar--modifier="pf-m-show-on-lg"}}
         {{#> toolbar-content}}
           {{#> toolbar-content-section}}
-            {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
               {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+              {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
+                {{#> toolbar-item}}
+                  {{> page-template-context-selector}}
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  {{> page-template-context-selector}}
+                {{/toolbar-item}}
+              {{/toolbar-group}}
+            {{/toolbar-group}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
+
+{{#> page-header-tools}}
+  {{#> page-header-tools-group}}
+    {{> page-template-header-tools-notification-badge page-template-header-tools-notification-badge--item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+    {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Settings"'}}
+        <i class="fas fa-cog" aria-hidden="true"></i>
+      {{/button}}
+    {{/page-header-tools-item}}
+    {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Help"'}}
+        <i class="pf-icon pf-icon-help" aria-hidden="true"></i>
+      {{/button}}
+    {{/page-header-tools-item}}
+  {{/page-header-tools-group}}
+  {{#> page-header-tools-group}}
+    {{> page-template-header-tools-notification-badge page-template-header-tools-notification-badge--item--modifier="pf-m-hidden-on-lg"}}
+    {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-hidden-on-lg"}}
+      {{#> dropdown id=(concat page--id '-dropdown-kebab-right-aligned-1') dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+      {{/dropdown}}
+    {{/page-header-tools-item}}
+    {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-hidden pf-m-visible-on-md"}}
+      {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}
+        {{#> dropdown-toggle-text}}
+          John Smith
+        {{/dropdown-toggle-text}}
+      {{/dropdown}}
+    {{/page-header-tools-item}}
+  {{/page-header-tools-group}}
+  {{#> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}{{/avatar}}
+{{/page-header-tools}}
+
+
             {{/toolbar-group}}
           {{/toolbar-content-section}}
-          {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
+          {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded}}
             {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
               {{#> toolbar-item}}
                 {{> page-template-context-selector}}
@@ -55,7 +98,7 @@ wrapperTag: div
           {{/toolbar-expandable-content}}
         {{/toolbar-content}}
       {{/toolbar}}
-    {{/page-header-toolbar}}
+    {{/page-header-content}}
   {{/page-header-alt}}
   {{#> page-sidebar}}
   {{/page-sidebar}}
