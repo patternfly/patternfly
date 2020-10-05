@@ -152,9 +152,12 @@
   min-width: 0;
 }
 
-.pf-c-modal-box__title {
+.pf-c-modal-box__title,
+.pf-c-modal-box__title-text {
   @include pf-text-overflow;
+}
 
+.pf-c-modal-box__title {
   flex: 0 0 auto;
   font-family: var(--pf-c-modal-box__title--FontFamily);
   font-size: var(--pf-c-modal-box__title--FontSize);

@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2020.13 release notes (2020-10-06)
 Packages released:
-- [@patternfly/patternfly@v4.50.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.50.2)
+- [@patternfly/patternfly@v4.50.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.50.4)
 
 ### Components
 - **Alert:**
@@ -33,6 +33,7 @@ Packages released:
   - Refactored the top aligned variation so it works better ([#3481](https://github.com/patternfly/patternfly/pull/3481))
   - Added support for title icon, modal alert states ([#3487](https://github.com/patternfly/patternfly/pull/3487))
   - Added help button ([#3495](https://github.com/patternfly/patternfly/pull/3495))
+  - Added icon variant, renamed pf-m-error to pf-m-danger ([#3563](https://github.com/patternfly/patternfly/pull/3563))
 - **Notification badge:** Added hover/focus styles for unread/attention ([#3488](https://github.com/patternfly/patternfly/pull/3488))
 - **Page:** Added sticky sections, group, overflow scroll, shadows ([#3516](https://github.com/patternfly/patternfly/pull/3516))
 - **Pagination:**
