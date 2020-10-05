@@ -1,8 +1,8 @@
-<{{#if modal-box-title--type}}{{modal-box-title--type}}{{else}}h1{{/if}} class="pf-c-modal-box__title{{#if modal-box-title--modifier}} {{modal-box-title--modifier}}{{/if}}"
+<{{#if modal-box-title--type}}{{modal-box-title--type}}{{else}}h1{{/if}} class="pf-c-modal-box__title{{#if modal-box-title--IsIcon}} pf-m-icon{{/if}}{{#if modal-box-title--modifier}} {{modal-box-title--modifier}}{{/if}}"
   {{#if modal-box-title--attribute}}
     {{{modal-box-title--attribute}}}
   {{/if}}>
-  {{#if modal-box--IsAlert}}
+  {{#if modal-box-title--IsIcon}}
     {{> modal-box-title-icon}}
   {{/if}}
   {{#if modal-box--IsAlert}}
@@ -15,11 +15,17 @@
         Success
       {{else if modal-box--IsWarningAlert}}
         Warning
-      {{else if modal-box--IsErrorAlert}}
-        Error
+      {{else if modal-box--IsDangerAlert}}
+        Danger
       {{/if}}
       alert:
     </span>
   {{/if}}
-  {{> @partial-block}}
+  {{#if modal-box-title--IsIcon}}
+    {{#> modal-box-title-text}}
+      {{> @partial-block}}
+    {{/modal-box-title-text}}
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
 </{{#if modal-box-title--type}}{{modal-box-title--type}}{{else}}h1{{/if}}>

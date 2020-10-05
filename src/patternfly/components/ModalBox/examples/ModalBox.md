@@ -191,8 +191,7 @@ cssPrefix: pf-c-modal-box
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> modal-box-header}}
-      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
-        {{> modal-box-title-icon modal-box-title-icon--type="bullhorn"}}
+      {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"') modal-box-title-icon--type="bullhorn"}}
         Modal with icon title
       {{/modal-box-title}}
     {{/modal-box-header}}
@@ -214,7 +213,7 @@ cssPrefix: pf-c-modal-box
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> modal-box-header}}
-      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+      {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
         Default alert modal title
       {{/modal-box-title}}
     {{/modal-box-header}}
@@ -236,7 +235,7 @@ cssPrefix: pf-c-modal-box
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> modal-box-header}}
-      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+      {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
         Info alert modal title
       {{/modal-box-title}}
     {{/modal-box-header}}
@@ -258,7 +257,7 @@ cssPrefix: pf-c-modal-box
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> modal-box-header}}
-      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+      {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
         Success alert modal title
       {{/modal-box-title}}
     {{/modal-box-header}}
@@ -280,7 +279,7 @@ cssPrefix: pf-c-modal-box
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> modal-box-header}}
-      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+      {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
         Warning alert modal title
       {{/modal-box-title}}
     {{/modal-box-header}}
@@ -294,16 +293,16 @@ cssPrefix: pf-c-modal-box
 {{/modal-example}}
 ```
 
-### Error alert
+### Danger alert
 ```hbs
-{{#> modal-example modal-example--id="error-alert"}}
-  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsErrorAlert="true"}}
+{{#> modal-example modal-example--id="danger-alert"}}
+  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsDangerAlert="true"}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> modal-box-header}}
-      {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
-        Error alert modal title
+      {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
+        Danger alert modal title
       {{/modal-box-title}}
     {{/modal-box-header}}
     {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-example--id '-description"')}}
@@ -338,9 +337,11 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-c-modal-box` | `<div>` | Initiates a modal box. **Required** |
 | `.pf-c-button.pf-m-plain` | `<button>` | Initiates a modal box close button. |
 | `.pf-c-modal-box__header` | `<header>` | Initiates a modal box header. **Required** if using a `.pf-c-modal-box__title`. |
-| `.pf-c-modal-box__header-main` | `<div>` | Initiates a modal box header main container. **Required** when `pf-c-modal-box__header-help` is used. | 
+| `.pf-c-modal-box__header-main` | `<div>` | Initiates a modal box header main container. **Required** when `pf-c-modal-box__header-help` is used. |
 | `.pf-c-modal-box__header-help` | `<div>` | Initiates the help button container in the modal box header actions. |
 | `.pf-c-modal-box__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`, `<div>` | Initiates a modal box title. **Required** if using a modal description. |
+| `.pf-c-modal-box__title-icon` | `<span>` | Initiates a container for the modal box title icon. |
+| `.pf-c-modal-box__title-text` | `<span>` | Initiates a container for the modal box title text. |
 | `.pf-c-modal-box__description` | `<div>` | Initiates a modal box description. |
 | `.pf-c-modal-box__body` | `<div>` | Initiates a modal box body. |
 | `.pf-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
@@ -348,9 +349,10 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-m-md` | `.pf-c-modal-box` | Modifies for a medium modal box width. |
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
 | `.pf-m-align-top` | `.pf-c-modal-box` | Modifies for top alignment.  |
+| `.pf-m-icon` | `.pf-c-modal-box__title` | Modifies the title layout to accommodate an icon. |
 | `.pf-m-default` | `.pf-c-modal-box` | Modifies for the default alert state. |
 | `.pf-m-info` | `.pf-c-modal-box` | Modifies for the info alert state. |
 | `.pf-m-success` | `.pf-c-modal-box` | Modifies for the success alert state. |
 | `.pf-m-warning` | `.pf-c-modal-box` | Modifies for the warning alert state. |
-| `.pf-m-error` | `.pf-c-modal-box` | Modifies for the error alert state. |
+| `.pf-m-danger` | `.pf-c-modal-box` | Modifies for the danger alert state. |
 | `.pf-m-help` | `.pf-c-modal-box__header` | Modifies the modal box header to support the help action |
