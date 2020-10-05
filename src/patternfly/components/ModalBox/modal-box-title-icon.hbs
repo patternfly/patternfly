@@ -10,11 +10,9 @@
     <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
   {{else if modal-box--IsWarningAlert}}
     <i class="fas fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
-  {{else if modal-box--IsErrorAlert}}
+  {{else if modal-box--IsDangerAlert}}
     <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
-  {{else if modal-box-title-icon--type}}
-    <i class="fas fa-fw fa-{{modal-box-title-icon--type}}" aria-hidden="true"></i>
   {{else}}
-    {{> @partial-block}}
+    <i class="fas fa-fw fa-{{modal-box-title-icon--type}}" aria-hidden="true"></i>
   {{/if}}
 </span>
