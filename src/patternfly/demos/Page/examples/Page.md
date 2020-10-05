@@ -50,40 +50,45 @@ wrapperTag: div
                 {{/toolbar-item}}
               {{/toolbar-group}}
             {{/toolbar-group}}
-            {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
-
-{{#> page-header-tools}}
-  {{#> page-header-tools-group}}
-    {{> page-template-header-tools-notification-badge page-template-header-tools-notification-badge--item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-    {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Settings"'}}
-        <i class="fas fa-cog" aria-hidden="true"></i>
-      {{/button}}
-    {{/page-header-tools-item}}
-    {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Help"'}}
-        <i class="pf-icon pf-icon-help" aria-hidden="true"></i>
-      {{/button}}
-    {{/page-header-tools-item}}
-  {{/page-header-tools-group}}
-  {{#> page-header-tools-group}}
-    {{> page-template-header-tools-notification-badge page-template-header-tools-notification-badge--item--modifier="pf-m-hidden-on-lg"}}
-    {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-hidden-on-lg"}}
-      {{#> dropdown id=(concat page--id '-dropdown-kebab-right-aligned-1') dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
-    {{/page-header-tools-item}}
-    {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-hidden pf-m-visible-on-md"}}
-      {{#> dropdown id=(concat page--id '-dropdown') dropdown-toggle--modifier="pf-m-plain" dropdown--HasToggleIcon="true"}}
-        {{#> dropdown-toggle-text}}
-          John Smith
-        {{/dropdown-toggle-text}}
-      {{/dropdown}}
-    {{/page-header-tools-item}}
-  {{/page-header-tools-group}}
-  {{#> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}{{/avatar}}
-{{/page-header-tools}}
-
-
+            {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+              {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group"}}
+                {{#> toolbar-item}}
+                  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Settings"'}}
+                    <i class="fas fa-cog" aria-hidden="true"></i>
+                  {{/button}}
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Help"'}}
+                    <i class="pf-icon pf-icon-help" aria-hidden="true"></i>
+                  {{/button}}
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications" aria-expanded="false"'}}
+                    {{#> notification-badge notification-badge--modifier="pf-m-read"}}
+                      {{#if page-header-tools--IsAttention}}
+                        <i class="pf-icon-attention-bell" aria-hidden="true"></i>
+                      {{else}}
+                        <i class="pf-icon-bell" aria-hidden="true"></i>
+                      {{/if}}
+                    {{/notification-badge}}
+                  {{/button}}
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  {{#> dropdown id=(concat page--id '-dropdown-kebab-right-aligned-1') dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+                  {{/dropdown}}
+                {{/toolbar-item}}
+              {{/toolbar-group}}
+              {{#> toolbar-item}}
+                {{#> dropdown id=(concat page--id '-dropdown') dropdown--IsMenuToggleImageText="true" dropdown--IsExpanded=""}}
+                  {{#> dropdown-toggle-image}}
+                    {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+                  {{/dropdown-toggle-image}}
+                  {{#> dropdown-toggle-text}}
+                    John Smith
+                  {{/dropdown-toggle-text}}
+                  {{> dropdown-toggle-icon}}
+                {{/dropdown}}
+              {{/toolbar-item}}
             {{/toolbar-group}}
           {{/toolbar-content-section}}
           {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded}}

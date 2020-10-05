@@ -218,14 +218,17 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__header-alt-brand-link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-page__header-alt-brand-link--PaddingLeft: var(--pf-global--spacer--lg);
 
+  // header sidebar toggle
+  --pf-c-page__header-sidebar-toggle__c-button--MarginRight: 0;
+
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-alt-brand-link--PaddingLeft: 0;
     --pf-c-page__header-alt-brand-link--PaddingRight: 0;
+    --pf-c-page__header-sidebar-toggle__c-button--MarginRight: var(--pf-global--spacer--md);
   }
 
   @include pf-t-dark; // force the container to follow the dark theme
 
-  display: flex;
   grid-area: header;
   flex-wrap: wrap;
   align-items: center;
@@ -234,9 +237,17 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   min-height: var(--pf-c-page__header--MinHeight);
   background-color: var(--pf-c-page__header--BackgroundColor);
 
+  display: grid;
+  grid-template-columns: max-content auto;
+
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    display: flex;
+  }
+
   .pf-c-page__header-brand {
     order: -1;
-    // flex: 1 0 100%;
+    grid-column: span 2;
     flex-basis: 100%;
     border-bottom: 1px solid #ddd;
 
@@ -251,6 +262,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     margin-top: var(--pf-global--spacer--sm);
     margin-left: var(--pf-global--spacer--lg);
     margin-bottom: var(--pf-global--spacer--sm);
+    grid-row: 2;
+    grid-column: 1;
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
       margin-top: 0;
@@ -262,6 +275,14 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     padding: var(--pf-c-page__header-alt-brand-link--PaddingTop) var(--pf-c-page__header-alt-brand-link--PaddingRight) var(--pf-c-page__header-alt-brand-link--PaddingBottom) var(--pf-c-page__header-alt-brand-link--PaddingLeft);
     flex-wrap: wrap;
   }
+
+  // .pf-c-toolbar__content-section {
+  //   flex-wrap: nowrap;
+  // }
+
+  // .pf-c-toolbar__group {
+  //   flex-wrap: wrap;
+  // }
 }
 
 .pf-c-page__header-alt .pf-c-brand-text {
@@ -273,6 +294,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__header-content {
   display: flex;
   flex: 1;
+  grid-row: 2;
+  grid-column: 2;
 
   &,
   .pf-c-toolbar,
@@ -298,11 +321,34 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
       --pf-c-toolbar__expandable-content--lg--PaddingBottom: var(--pf-global--spacer--md);
       --pf-c-toolbar__expandable-content--lg--PaddingLeft: var(--pf-global--spacer--md);
     }
+
+    flex-basis: 100%;
   }
 
   .pf-c-toolbar,
   .pf-c-toolbar__content {
     position: static;
+  }
+
+  .pf-c-toolbar__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .pf-c-toolbar__content {
+    .pf-c-context-selector,
+    .pf-c-dropdown,
+    .pf-c-select {
+      align-self: stretch;
+
+      button {
+        height: 100%;
+      }
+    }
+  }
+
+  .pf-c-toolbar__content-section {
+    flex-wrap: nowrap;
   }
 
   // set here so it's persistent
@@ -317,8 +363,26 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   .pf-c-context-selector__toggle::before {
     border-top: 0;
-    border-right: 0;
-    border-left: 0;
+    // border-right: 0;
+    // border-left: 0;
+  }
+
+  .pf-c-context-selector {
+    --pf-c-context-selector__toggle--PaddingRight: var(--pf-global--spacer--lg);
+    --pf-c-context-selector__toggle--PaddingLeft: var(--pf-global--spacer--lg);
+    --pf-c-context-selector__toggle--BorderRightColor: var(--pf-global--palette--black-700);
+    --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-global--palette--black-700);
+  }
+
+  .pf-c-context-selector:hover .pf-c-context-selector__toggle::before,
+  .pf-c-dropdown:hover .pf-c-dropdown__toggle::before {
+    border-bottom-width: 4px;
+  }
+
+  .pf-c-dropdown {
+    --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--md);
+    --pf-c-dropdown__toggle--PaddingLeft: var(--pf-global--spacer--md);
+    --pf-c-dropdown__toggle--before--BorderWidth: 0;
   }
 }
 
