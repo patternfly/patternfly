@@ -1458,6 +1458,153 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node6 ' table--id '-expandable-toggle6" id="' table--id '-expandable-toggle6" aria-label="Details" aria-controls="' table--id '-content6"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="{{table--id}}-checkrow6" aria-labelledby="{{concat table--id '-node6'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <p id="{{table--id}}-node6">Node 6</p>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-6") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="'table--id '-content6"')}}
+      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{#> table-td table-td--attribute='colspan="2"'}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+
+      {{#> table-td table-td--attribute='colspan="2"'}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node7 ' table--id '-expandable-toggle7" id="' table--id '-expandable-toggle7" aria-label="Details" aria-controls="' table--id '-content7"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="{{table--id}}-checkrow7" aria-labelledby="{{concat table--id '-node7'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <p id="{{table--id}}-node7">Node 7</p>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-7") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content7"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node8 ' table--id '-expandable-toggle8" id="' table--id '-expandable-toggle8" aria-label="Details" aria-controls="' table--id '-content8"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="{{table--id}}-checkrow8" aria-labelledby="{{concat table--id '-node8'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <p id="{{table--id}}-node8">Node 8</p>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-8") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="'table--id '-content8"')}}
+      {{#> table-td table-td--attribute='colspan="4"'}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+
+      {{#> table-td table-td--attribute='colspan="3"'}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node9 ' table--id '-expandable-toggle9" id="' table--id '-expandable-toggle9" aria-label="Details" aria-controls="' table--id '-content9"')}}{{/table-td}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="{{table--id}}-checkrow9" aria-labelledby="{{concat table--id '-node9'}}">
+      {{/table-td}}
+      {{#> table-th table-th--data-label="Repository name"}}
+        <p id="{{table--id}}-node9">Node 9</p>
+      {{/table-th}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-9") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content9"')}}
+        {{#> table-expandable-row-content}}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
 {{/table}}
 ```
 
