@@ -752,6 +752,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-draggable` | `.pf-c-data-list__item` | Modifies a data list item so that it is draggable. |
 | `.pf-m-ghost-row` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a draggable data list item to be the ghost row. |
 | `.pf-m-disabled` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the disabled state. |
+| `.pf-m-drag-over` | `.pf-c-data-list` | Modifies the data list to indicate that a draggable item is being dragged over the data list. |
 
 ### Text-modifiers
 ```hbs
