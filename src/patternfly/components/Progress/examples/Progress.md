@@ -152,7 +152,7 @@ cssPrefix: pf-c-progress
 {{#> progress
   progress__value="100"
   progress--modifier="pf-m-outside pf-m-lg"
-  progress__id="progress-outside-fixed-width-2-example"
+  progress__id="progress-outside-fixed-width-3-example"
   progress-measure--modifier="pf-m-fixed-width"
 }}
 {{/progress}}
