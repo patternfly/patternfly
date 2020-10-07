@@ -3,7 +3,7 @@ id: Form
 section: components
 ---
 
-import './basic-forms.css';
+import './basic-forms.css'
 
 ## Demos
 ### default
