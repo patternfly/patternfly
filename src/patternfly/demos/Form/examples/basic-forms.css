@@ -1,4 +1,4 @@
 #ws-html-demos-c-form-modified select:invalid,
-#ws-html-demos-c-form-modified .pf-c-select__toggle {
+#ws-html-demos-c-form-modified .pf-c-select__toggle-text {
   color: var(--pf-global--Color--dark-200);
 }

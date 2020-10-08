@@ -28,6 +28,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   // Component
   --pf-c-form-control--FontSize: var(--pf-global--FontSize--md);
   --pf-c-form-control--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-form-control--Color: var(--pf-glocal--Color--100);
   --pf-c-form-control--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-form-control--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-form-control--BorderRightColor: var(--pf-global--BorderColor--300);
@@ -180,6 +181,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
   font-size: var(--pf-c-form-control--FontSize);
   line-height: var(--pf-c-form-control--LineHeight);
+  color: var(--pf-c-form-control--Color);
   background-color: var(--pf-c-form-control--BackgroundColor);
   background-repeat: no-repeat;
   border: var(--pf-c-form-control--BorderWidth) solid;
@@ -191,7 +193,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   // stylelint-enable
 
   &::placeholder {
-    --pf-c-form-control--Color: var(--pf-c-form-control--placeholder--Color);
+    color: var(--pf-c-form-control--placeholder--Color);
   }
 
   &:not(textarea) {
