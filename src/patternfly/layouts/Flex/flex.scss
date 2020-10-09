@@ -44,26 +44,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   max-width: 100%;
   margin-right: var(--pf-l-flex--spacer);
 
-  // don't set base value for --pf-l-flex--item--Order as it defaults to 0
-  @media screen and (min-width: $pf-global--breakpoint--sm) {
-    order: var(--pf-l-flex--item--Order-on-sm, var(--pf-l-flex--item--Order));
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    order: var(--pf-l-flex--item--Order-on-md, var(--pf-l-flex--item--Order-on-sm, var(--pf-l-flex--item--Order)));
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--lg) {
-    order: var(--pf-l-flex--item--Order-on-lg, var(--pf-l-flex--item--Order-on-md, var(--pf-l-flex--item--Order-on-sm, var(--pf-l-flex--item--Order))));
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    order: var(--pf-l-flex--item--Order-on-xl, var(--pf-l-flex--item--Order-on-lg, var(--pf-l-flex--item--Order-on-md, var(--pf-l-flex--item--Order-on-sm, var(--pf-l-flex--item--Order)))));
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--2xl) {
-    order: var(--pf-l-flex--item--Order-on-2xl, var(--pf-l-flex--item--Order-on-xl, var(--pf-l-flex--item--Order-on-lg, var(--pf-l-flex--item--Order-on-md, var(--pf-l-flex--item--Order-on-sm, var(--pf-l-flex--item--Order))))));
-  }
+  @include pf-build-css-variable-stack("order", "--pf-l-flex--item--Order", $pf-l-flex--breakpoint-map);
 
   &:last-child {
     --pf-l-flex--spacer: 0;
