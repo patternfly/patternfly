@@ -1,0 +1,8 @@
+<div class="pf-c-card__header-toggle{{#if card-header-toggle--modifier}} {{card-header-toggle--modifier}}{{/if}}"
+  {{#if card-header-toggle--attribute}}
+    {{{card-header-toggle--attribute}}}
+  {{/if}}>
+  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Details" id="' card--id '-toggle" aria-labelledby="' card--id '-title ' card--id '-toggle"')}}
+    {{> card-header-toggle-icon}}
+  {{/button}}
+</div>
