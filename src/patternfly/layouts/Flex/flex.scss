@@ -37,7 +37,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   max-width: 100%;
   margin-right: var(--pf-l-flex--spacer);
 
-  @include pf-build-css-variable-stack("order", "--pf-l-flex--item--Order", $pf-l-gallery--breakpoint-map);
+  @include pf-build-css-variable-stack("order", "--pf-l-flex--item--Order", $pf-l-flex--breakpoint-map);
 
   &:last-child {
     --pf-l-flex--spacer: 0;
