@@ -228,9 +228,9 @@
 
     // Build variable list
     @if $breakpoint != "base" {
-      $list: append($list, $css-var + "-on-" + $breakpoint, "comma");
+      $list: append($list, $css-var + "-on-" + $breakpoint);
     } @else {
-      $list: append($list, $css-var, "comma");
+      $list: append($list, $css-var);
     }
 
     // Construct variable stack
