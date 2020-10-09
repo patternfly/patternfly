@@ -29,6 +29,7 @@
   --pf-c-menu__item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-menu__item--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-menu__item--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-menu__item--OutlineOffset: -2px;
   --pf-c-menu__item--FontSize: var(--pf-global--FontSize--md);
   --pf-c-menu__item--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-menu__item--LineHeight: var(--pf-global--LineHeight--md);
@@ -83,7 +84,7 @@
   --pf-c-menu__item-action--m-favorite--m-favorited__icon--Color: var(--pf-global--palette--gold-400);
 
   // Drilldown
-  --pf-c-menu--m-drilldown--Width: 250px;
+  --pf-c-menu--m-drilldown--Width: auto;
   --pf-c-menu--m-drilldown--Transition--transform: var(--pf-global--TransitionDuration);
   --pf-c-menu--m-drilldown--Transition--height: var(--pf-global--TransitionDuration);
 
@@ -108,6 +109,10 @@
       position: absolute;
       top: var(--pf-c-menu--m-flyout__menu--Top);
       left: 100%;
+    }
+
+    .pf-c-menu__list-item {
+      position: relative;
     }
   }
 
@@ -163,7 +168,7 @@
     }
 
     .pf-c-menu__item {
-      outline-offset: -2px;
+      outline-offset: var(--pf-c-menu__item--OutlineOffset);
     }
   }
 
