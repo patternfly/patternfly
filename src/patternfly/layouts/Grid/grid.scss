@@ -1,3 +1,5 @@
+$pf-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for css variable stack
+
 // URL.com/guidelines#layout
 // Generate smart grid layout
 // @parameter {Suffix} xs, sm, md, lg, xl, null
@@ -48,32 +50,12 @@
 
   > *,
   .pf-l-grid__item {
-    order: var(--pf-l-grid--item--Order);
     min-width: 0;
     min-height: 0;
     grid-column-start: var(--pf-l-grid__item--GridColumnStart);
     grid-column-end: var(--pf-l-grid__item--GridColumnEnd);
 
-    // don't set base value for --pf-l-grid--item--Order as it defaults to 0
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
-      order: var(--pf-l-grid--item--Order-on-sm, var(--pf-l-grid--item--Order));
-    }
-
-    @media screen and (min-width: $pf-global--breakpoint--md) {
-      order: var(--pf-l-grid--item--Order-on-md, var(--pf-l-grid--item--Order-on-sm, var(--pf-l-grid--item--Order)));
-    }
-
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
-      order: var(--pf-l-grid--item--Order-on-lg, var(--pf-l-grid--item--Order-on-md, var(--pf-l-grid--item--Order-on-sm, var(--pf-l-grid--item--Order))));
-    }
-
-    @media screen and (min-width: $pf-global--breakpoint--xl) {
-      order: var(--pf-l-grid--item--Order-on-xl, var(--pf-l-grid--item--Order-on-lg, var(--pf-l-grid--item--Order-on-md, var(--pf-l-grid--item--Order-on-sm, var(--pf-l-grid--item--Order)))));
-    }
-
-    @media screen and (min-width: $pf-global--breakpoint--2xl) {
-      order: var(--pf-l-grid--item--Order-on-2xl, var(--pf-l-grid--item--Order-on-xl, var(--pf-l-grid--item--Order-on-lg, var(--pf-l-grid--item--Order-on-md, var(--pf-l-grid--item--Order-on-sm, var(--pf-l-grid--item--Order))))));
-    }
+    @include pf-build-css-variable-stack("order", "--pf-l-grid--item--Order", $pf-l-grid--breakpoint-map);
   }
 
   // Loop through $breakpoints map to generate responsive classes
