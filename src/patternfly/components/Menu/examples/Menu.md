@@ -859,5 +859,5 @@ import './Menu.css'
 | `.pf-m-drilldown` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "drill down". |
 | `.pf-m-current-path` | `.pf-c-menu.pf-m-drilldown .pf-c-menu__list-item` | Modifies the menu list item for current path state. |
 | `.pf-m-drilled-in` | `.pf-c-menu.pf-m-drilldown, .pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled in state. |
-| `--pf-c-menu--m-drilldown--Width: {width}px,rem,em` | `.pf-c-menu.pf-m-drilldown` | Modifies the width of the drilldown menu. The default value is `auto`. |
-| `--pf-c-menu--m-drilldown--Height: {width}px,rem,em` | `.pf-c-menu.pf-m-drilldown` | Modifies the height of the drilldown menu. The default value is `auto`. |
+| `--pf-c-menu--m-drilldown--Width: {width}` | `.pf-c-menu.pf-m-drilldown` | Modifies the width of the drilldown menu. The default value is `auto`. |
+| `--pf-c-menu--m-drilldown--Height: {height}` | `.pf-c-menu.pf-m-drilldown` | Modifies the height of the drilldown menu. The default value is `auto`. |
