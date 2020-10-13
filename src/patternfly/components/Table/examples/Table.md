@@ -2168,12 +2168,260 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 {{/table}}
 ```
 
-### Usage
+### Favorites
+```hbs
+{{#> table table--id="table-favorites" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a favorites table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
+      {{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+      {{> table-td table-td--IsEmpty="true"}}
+    {{/table-tr}}
+  {{/table-thead}}
 
+  {{#> table-tbody}}
+    {{#> table-tr table-tr--id="1"}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{concat table--id '-node' table-tr--id}}">
+      {{/table-td}}
+      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-" table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--id="2"}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{concat table--id '-node' table-tr--id}}">
+      {{/table-td}}
+      {{> table-td table-td--favorite="true" table-favorite-button--IsFavorited="true"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-" table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--id="3"}}
+    {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{concat table--id '-node' table-tr--id}}">
+      {{/table-td}}
+      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-" table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--id="4"}}
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{concat table--id '-node' table-tr--id}}">
+      {{/table-td}}
+      {{> table-td table-td--favorite="true"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-" table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+        {{/dropdown}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+### Favorites sortable
+```hbs
+{{#> table table--id="table-favorites-sortable" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a sortable with favorites table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--sortable="true" table-th--selected="true"}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 3
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{> table-td table-td--favorite="true"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{> table-td table-td--favorite="true"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 4
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `role="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required** |
+| `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
+| `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
+
+
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-wrap` | `<th>`, `<td>` | Modifies content to wrap. |
-
+| `.pf-c-table__favorite` | `td` | Initiates a favorite table body cell. |
+| `.pf-m-favorited` | `.pf-c-table__favorite` | Modifies a favorite cell for the favorited state. |
+| `.pf-m-favorite` | `.pf-c-table__sort` | Modifies a sortable table header cell for use with a favorites column. |
 
 ## Documentation
 

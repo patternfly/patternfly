@@ -95,6 +95,16 @@
   --pf-c-table__check--input--MarginTop: #{pf-size-prem(4px)};
   --pf-c-table__check--input--FontSize: var(--pf-global--FontSize--md);
 
+  // Favorite
+  --pf-c-table--cell--m-favorite--Color: var(--pf-global--Color--light-300);
+  --pf-c-table__favorite--c-button--Color: var(--pf-global--Color--light-300);
+  --pf-c-table__favorite--c-button--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-table__favorite--c-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-table__favorite--c-button--MarginRight: calc(var(--pf-global--spacer--md) * -1);
+  --pf-c-table__favorite--c-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-table__favorite--c-button--MarginLeft: calc(var(--pf-global--spacer--md) * -1);
+  --pf-c-table__favorite--m-favorited--c-button--Color: var(--pf-global--palette--gold-400);
+
   // Action
   --pf-c-table__action--PaddingTop: 0;
   --pf-c-table__action--PaddingRight: 0;
@@ -294,6 +304,13 @@
 
     &.pf-m-help {
       --pf-c-table--cell--MinWidth: var(--pf-c-table--cell--m-help--MinWidth);
+    }
+
+    &.pf-m-favorite {
+      --pf-c-table__button--Color: var(--pf-c-table--cell--m-favorite--Color);
+      --pf-c-table__sort--MinWidth: fit-content;
+      --pf-c-table--cell--MaxWidth: fit-content;
+      --pf-c-table--cell--Overflow: visible;
     }
   }
 
@@ -536,21 +553,25 @@
   // stylelint-enable
 }
 
-// Toggle, check, action - minimize padding.
+// Minimize padding
 .pf-c-table .pf-c-table__toggle,
 .pf-c-table .pf-c-table__action,
 .pf-c-table .pf-c-table__inline-edit-action {
   --pf-c-table--cell--PaddingBottom: 0;
 }
 
-// Toggle, check, action - minimize width.
+// stylelint-disable
+// Minimize width
 .pf-c-table .pf-c-table__check,
 .pf-c-table .pf-c-table__toggle,
 .pf-c-table .pf-c-table__action,
+.pf-c-table .pf-c-table__favorite,
+.pf-c-table th.pf-m-favorite,
 .pf-c-table .pf-c-table__inline-edit-action {
   --pf-c-table--cell--MinWidth: 0;
   --pf-c-table--cell--Width: 1%;
 }
+// stylelint-enable
 
 // Toggle table cell
 .pf-c-table__toggle {
@@ -582,6 +603,20 @@
 // Check table cell
 .pf-c-table__check {
   --pf-c-table--cell--FontSize: var(--pf-c-table__check--input--FontSize);
+}
+
+// Favorite body cell
+.pf-c-table__favorite {
+  .pf-c-button {
+    --pf-c-button--m-plain--Color: var(--pf-c-table__favorite--c-button--Color);
+    --pf-c-button--FontSize: var(--pf-c-table__favorite--c-button--FontSize);
+
+    margin: var(--pf-c-table__favorite--c-button--MarginTop) var(--pf-c-table__favorite--c-button--MarginRight) var(--pf-c-table__favorite--c-button--MarginBottom) var(--pf-c-table__favorite--c-button--MarginLeft);
+
+    @at-root .pf-m-favorited#{&} {
+      --pf-c-button--m-plain--Color: var(--pf-c-table__favorite--m-favorited--c-button--Color);
+    }
+  }
 }
 
 // Table action cell

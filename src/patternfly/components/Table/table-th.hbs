@@ -7,7 +7,8 @@
   {{#if table-th--icon}} pf-c-table__icon{{/if}}
   {{#if table-th--sortable-wrap}} pf-m-wrap{{/if}}
   {{#if table-th--selected}} pf-m-selected{{/if}}
-  {{#if table-th--IsColumnHelp}} pf-m-help{{/if}}"
+  {{#if table-th--IsColumnHelp}} pf-m-help{{/if}}
+  {{#if table-th--IsFavorite}} pf-m-favorite{{/if}}"
   {{#if table--grid}}
     {{#if table-th--isRowHeader}}
       role="rowheader"
@@ -37,7 +38,11 @@
     {{#> table-button}}
       {{#> table-button-content}}
         {{#> table-text}}
-          {{> @partial-block}}
+          {{#if table-th--IsFavorite}}
+            <i class="fas fa-star" aria-label="Favorite"></i>
+          {{else}}
+            {{> @partial-block}}
+          {{/if}}
         {{/table-text}}
         {{#> table-sort-indicator}}
           {{#if table-th--selected}}

@@ -77,6 +77,12 @@
   --pf-c-table--m-grid--cell--PaddingBottom: 0;
   --pf-c-table--m-grid--cell--PaddingLeft: 0;
 
+  // Favorite
+  --pf-c-table__favorite--c-button--MarginTop: auto;
+  --pf-c-table__favorite--c-button--MarginRight: auto;
+  --pf-c-table__favorite--c-button--MarginBottom: auto;
+  --pf-c-table__favorite--c-button--MarginLeft: auto;
+
   // Td
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table--cell--responsive--PaddingTop: var(--pf-global--spacer--md);
@@ -106,19 +112,23 @@
     --pf-c-table__expandable-row-content--responsive--PaddingLeft: var(--pf-c-table__expandable-row-content--responsive--xl--PaddingLeft);
   }
 
-  // Table check
+  // Check
   --pf-c-table__check--responsive--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-table__check--responsive--MarginTop: #{pf-size-prem(6px)};
 
-  // Table action
-  --pf-c-table__action--responsive--MarginLeft: var(--pf-global--spacer--xl);
+  // Favorite
+  --pf-c-table--m-grid__check--favorite--MarginLeft: var(--pf-global--spacer--xl);
 
-  // Table toggle icons
+  // Action
+  --pf-c-table__action--responsive--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-table--m-grid__favorite--action--MarginLeft: var(--pf-global--spacer--2xl);
+  --pf-c-table--m-grid__check--favorite--action--MarginLeft: calc(var(--pf-c-table--m-grid__check--favorite--MarginLeft) + var(--pf-c-table--m-grid__favorite--action--MarginLeft));
+
+  // Toggle icons
   --pf-c-table__toggle__icon--Transition: .2s ease-in 0s;
   --pf-c-table__toggle--m-expanded__icon--Rotate: 180deg;
 }
 
-// Check table cell
 @include pf-mobile-layout {
   --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-grid--cell--PaddingTop);
   --pf-c-table--cell--PaddingRight: var(--pf-c-table--m-grid--cell--PaddingRight);
@@ -380,7 +390,9 @@
   tr:not(.pf-c-table__expandable-row) {
     .pf-c-table__toggle,
     .pf-c-table__check,
+    .pf-c-table__favorite,
     .pf-c-table__action {
+      align-self: center;
       width: auto;
       padding: 0;
     }
@@ -404,23 +416,39 @@
     --pf-c-table--cell--PaddingLeft: var(--pf-c-table--m-grid--cell--PaddingLeft);
   }
 
+  .pf-c-table__check,
+  .pf-c-table__favorite,
+  .pf-c-table__action {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
   // Check table cell
   .pf-c-table__check {
     margin-top: var(--pf-c-table__check--responsive--MarginTop);
     margin-left: var(--pf-c-table__check--responsive--MarginLeft);
-    grid-row-start: 1;
-    grid-column-start: 2;
 
-    // if action is present, add margin left to accommodate checkbox
-    & ~ .pf-c-table__action {
+    ~ .pf-c-table__favorite {
+      margin-left: var(--pf-c-table--m-grid__check--favorite--MarginLeft);
+
+      ~ .pf-c-table__action {
+        margin-left: var(--pf-c-table--m-grid__check--favorite--action--MarginLeft);
+      }
+    }
+
+    ~ .pf-c-table__action {
       margin-left: var(--pf-c-table__action--responsive--MarginLeft);
+    }
+  }
+
+  .pf-c-table__favorite {
+    ~ .pf-c-table__action {
+      margin-left: var(--pf-c-table--m-grid__favorite--action--MarginLeft);
     }
   }
 
   // Action cell
   .pf-c-table__action {
-    grid-row-start: 1;
-    grid-column-start: 2;
     text-align: right;
 
     // @smallest breakpoint
