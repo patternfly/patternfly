@@ -23,10 +23,13 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   display: var(--pf-l-flex--Display);
   flex-wrap: var(--pf-l-flex--FlexWrap);
   align-items: var(--pf-l-flex--AlignItems);
-  row-gap: var(--pf-l-flex--RowGap);
 
   &:last-child {
     --pf-l-flex--spacer: 0;
+  }
+
+  &.pf-m-row-gap {
+    @include pf-build-css-variable-stack("row-gap", "--pf-l-flex--RowGap", $pf-l-flex--breakpoint-map); // make this default at breaking change
   }
 }
 
