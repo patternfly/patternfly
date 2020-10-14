@@ -278,7 +278,7 @@ cssPrefix: pf-c-card
     {{#> card-actions}}
       {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
       {{/dropdown}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-title">
+      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-label="Select patternfly card">
     {{/card-actions}}
   {{/card-header}}
 {{/card}}
