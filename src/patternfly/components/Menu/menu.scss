@@ -154,7 +154,6 @@
     }
 
     .pf-c-menu__list-item {
-      position: static;
       transition: visibility var(--pf-c-menu--m-drilldown__list-item--Transition--visibility);
 
       // stylelint-disable selector-max-class
@@ -189,7 +188,6 @@
 
 // List item
 .pf-c-menu__list-item {
-  position: relative;
   display: flex;
   color: var(--pf-c-menu__list-item--Color);
   background-color: var(--pf-c-menu__list-item--BackgroundColor);
