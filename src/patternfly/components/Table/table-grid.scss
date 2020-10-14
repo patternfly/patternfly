@@ -77,12 +77,6 @@
   --pf-c-table--m-grid--cell--PaddingBottom: 0;
   --pf-c-table--m-grid--cell--PaddingLeft: 0;
 
-  // Favorite
-  --pf-c-table__favorite--c-button--MarginTop: auto;
-  --pf-c-table__favorite--c-button--MarginRight: auto;
-  --pf-c-table__favorite--c-button--MarginBottom: auto;
-  --pf-c-table__favorite--c-button--MarginLeft: auto;
-
   // Td
   --pf-c-table-td--responsive--GridColumnGap: var(--pf-global--spacer--md);
   --pf-c-table--cell--responsive--PaddingTop: var(--pf-global--spacer--md);
@@ -134,6 +128,12 @@
   --pf-c-table--cell--PaddingRight: var(--pf-c-table--m-grid--cell--PaddingRight);
   --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-grid--cell--PaddingBottom);
   --pf-c-table--cell--PaddingLeft: var(--pf-c-table--m-grid--cell--PaddingLeft);
+
+  // Favorite
+  --pf-c-table__favorite--c-button--MarginTop: auto;
+  --pf-c-table__favorite--c-button--MarginRight: auto;
+  --pf-c-table__favorite--c-button--MarginBottom: auto;
+  --pf-c-table__favorite--c-button--MarginLeft: auto;
 
   display: grid;
   border: none;
