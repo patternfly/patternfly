@@ -20,9 +20,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "md", "lg",
   // Horizontal
   --pf-c-description-list--m-horizontal__term--width: 12ch;
   --pf-c-description-list--m-horizontal__description--width: minmax(10ch, auto);
-
-  // use --pf-c-description-list__term--width here as it is re-defined on line 45
-  --pf-c-description-list--m-horizontal__group--GridTemplateColumns: var(--pf-c-description-list__term--width) var(--pf-c-description-list--m-horizontal__description--width);
+  --pf-c-description-list--m-horizontal__group--GridTemplateColumns: var(--pf-c-description-list__term--width) var(--pf-c-description-list--m-horizontal__description--width); // use --pf-c-description-list__term--width here as it is re-defined on line 45
   --pf-c-description-list--m-1-col--GridTemplateColumns--count: 1;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
