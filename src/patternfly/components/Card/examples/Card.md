@@ -254,7 +254,7 @@ cssPrefix: pf-c-card
 
 ### Expandable (collapsed)
 ```hbs
-{{#> card card--id="card-expandable-example"}}
+{{#> card card--id="card-expandable-collapsed-example"}}
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
