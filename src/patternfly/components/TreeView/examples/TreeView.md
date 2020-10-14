@@ -13,36 +13,56 @@ beta: true
 {{#> tree-view}}
   {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application launcher"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application launcher"}}
+      {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 1"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 1"}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--text="Settings"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--text="Current" tree-view-node--modifier="pf-m-current"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Current" tree-view-node--modifier="pf-m-current"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 2"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 2"}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-              {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Settings"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-              {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader"}}
+              {{/tree-view-content}}
               {{#> tree-view-list newcontext}}
                 {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-                  {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader app 1"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader app 1"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--text="Loader app 2"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 2"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--text="Loader app 3"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 3"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
               {{/tree-view-list}}
             {{/tree-view-list-item}}
@@ -51,13 +71,19 @@ beta: true
       {{/tree-view-list}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Cost management"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Cost management"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Sources"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Sources"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
   {{/tree-view-list}}
 {{/tree-view}}
@@ -74,36 +100,56 @@ beta: true
   {{> divider}}
   {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application launcher"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application launcher"}}
+      {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 1"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 1"}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--text="Settings"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 2"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 2"}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-              {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Settings"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-              {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader"}}
+              {{/tree-view-content}}
               {{#> tree-view-list newcontext}}
                 {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-                  {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader app 1"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader app 1"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--text="Loader app 2"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 2"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--text="Loader app 3"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 3"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
               {{/tree-view-list}}
             {{/tree-view-list-item}}
@@ -112,13 +158,19 @@ beta: true
       {{/tree-view-list}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Cost management"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Cost management"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Sources"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Sources"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
   {{/tree-view-list}}
 {{/tree-view}}
@@ -130,36 +182,56 @@ beta: true
 {{#> tree-view}}
   {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Application launcher" tree-view-node-text--type="label" tree-view-node--id="1"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Application launcher" tree-view-node-text--type="label" tree-view-node--id="1"}}
+      {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Application 1" tree-view-node-text--type="label" tree-view-node--id="2"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Application 1" tree-view-node-text--type="label" tree-view-node--id="2"}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Settings" tree-view-node-text--type="label" tree-view-node--id="3"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Settings" tree-view-node-text--type="label" tree-view-node--id="3"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Loader" tree-view-node-text--type="label" tree-view-node--id="4"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Loader" tree-view-node-text--type="label" tree-view-node--id="4"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Application 2" tree-view-node-text--type="label" tree-view-node--id="5"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Application 2" tree-view-node-text--type="label" tree-view-node--id="5"}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-              {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Settings" tree-view-node-text--type="label" tree-view-node--id="6"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Settings" tree-view-node-text--type="label" tree-view-node--id="6"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-node--text="Current" tree-view-node-text--type="label"}}
-              {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--id="7"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--id="7"}}
+              {{/tree-view-content}}
               {{#> tree-view-list newcontext}}
                 {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-                  {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--HasCheckboxSelected="true" tree-view-node--text="Loader app 1" tree-view-node-text--type="label" tree-view-node--id="8"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--HasCheckboxSelected="true" tree-view-node--text="Loader app 1" tree-view-node-text--type="label" tree-view-node--id="8"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Loader app 2" tree-view-node-text--type="label" tree-view-node--id="9"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Loader app 2" tree-view-node-text--type="label" tree-view-node--id="9"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Loader app 3" tree-view-node-text--type="label" tree-view-node--id="10"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Loader app 3" tree-view-node-text--type="label" tree-view-node--id="10"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
               {{/tree-view-list}}
             {{/tree-view-list-item}}
@@ -168,13 +240,19 @@ beta: true
       {{/tree-view-list}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Cost management" tree-view-node-text--type="label" tree-view-node--id="11"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Cost management" tree-view-node-text--type="label" tree-view-node--id="11"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Sources" tree-view-node-text--type="label" tree-view-node--id="12"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Sources" tree-view-node-text--type="label" tree-view-node--id="12"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container." tree-view-node-text--type="label" tree-view-node--id="13"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container." tree-view-node-text--type="label" tree-view-node--id="13"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
   {{/tree-view-list}}
 {{/tree-view}}
@@ -186,36 +264,56 @@ beta: true
 {{#> tree-view}}
   {{#> tree-view-list tree-view-node--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Application launcher"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Application launcher"}}
+      {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Application 1"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Application 1"}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Settings"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Application 2"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Application 2"}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-              {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Settings"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-              {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Loader"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Loader"}}
+              {{/tree-view-content}}
               {{#> tree-view-list newcontext}}
                 {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-                  {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Loader app 1"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Loader app 1"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Loader app 2"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Loader app 2"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Loader app 3"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Loader app 3"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
               {{/tree-view-list}}
             {{/tree-view-list-item}}
@@ -224,13 +322,19 @@ beta: true
       {{/tree-view-list}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Cost management"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Cost management"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Sources"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="Sources"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--HasFolderIcon="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
   {{/tree-view-list}}
 {{/tree-view}}
@@ -242,72 +346,92 @@ beta: true
 {{#> tree-view}}
   {{#> tree-view-list tree-view-node--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-      {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application launcher"}}
-        {{#> tree-view-node-count}}
-          {{#> badge badge--modifier="pf-m-read"}}
-            2
-          {{/badge}}
-        {{/tree-view-node-count}}
-      {{/tree-view-node}}
+      {{#> tree-view-content}}
+        {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application launcher"}}
+          {{#> tree-view-node-count}}
+            {{#> badge badge--modifier="pf-m-read"}}
+              2
+            {{/badge}}
+          {{/tree-view-node-count}}
+        {{/tree-view-node}}
+      {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 1"}}
-            {{#> tree-view-node-count}}
-              {{#> badge badge--modifier="pf-m-read"}}
-                2
-              {{/badge}}
-            {{/tree-view-node-count}}
-          {{/tree-view-node}}
+          {{#> tree-view-content}}
+            {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 1"}}
+              {{#> tree-view-node-count}}
+                {{#> badge badge--modifier="pf-m-read"}}
+                  2
+                {{/badge}}
+              {{/tree-view-node-count}}
+            {{/tree-view-node}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--text="Settings"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 2"}}
-            {{#> tree-view-node-count}}
-              {{#> badge badge--modifier="pf-m-read"}}
-                2
-              {{/badge}}
-            {{/tree-view-node-count}}
-          {{/tree-view-node}}
+          {{#> tree-view-content}}
+            {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 2"}}
+              {{#> tree-view-node-count}}
+                {{#> badge badge--modifier="pf-m-read"}}
+                  2
+                {{/badge}}
+              {{/tree-view-node-count}}
+            {{/tree-view-node}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-              {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Settings"}}
-                {{#> tree-view-node-count}}
-                  {{#> badge badge--modifier="pf-m-read"}}
-                    2
-                  {{/badge}}
-                {{/tree-view-node-count}}
-              {{/tree-view-node}}
+              {{#> tree-view-content}}
+                {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Settings"}}
+                  {{#> tree-view-node-count}}
+                    {{#> badge badge--modifier="pf-m-read"}}
+                      2
+                    {{/badge}}
+                  {{/tree-view-node-count}}
+                {{/tree-view-node}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-              {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader"}}
-                {{#> tree-view-node-count}}
-                  {{#> badge badge--modifier="pf-m-read"}}
-                    2
-                  {{/badge}}
-                {{/tree-view-node-count}}
-              {{/tree-view-node}}
+              {{#> tree-view-content}}
+                {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader"}}
+                  {{#> tree-view-node-count}}
+                    {{#> badge badge--modifier="pf-m-read"}}
+                      2
+                    {{/badge}}
+                  {{/tree-view-node-count}}
+                {{/tree-view-node}}
+              {{/tree-view-content}}
               {{#> tree-view-list newcontext}}
                 {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-                  {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader app 1"}}
-                    {{#> tree-view-node-count}}
-                      {{#> badge badge--modifier="pf-m-read"}}
-                        2
-                      {{/badge}}
-                    {{/tree-view-node-count}}
-                  {{/tree-view-node}}
+                  {{#> tree-view-content}}
+                    {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader app 1"}}
+                      {{#> tree-view-node-count}}
+                        {{#> badge badge--modifier="pf-m-read"}}
+                          2
+                        {{/badge}}
+                      {{/tree-view-node-count}}
+                    {{/tree-view-node}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--text="Loader app 2"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 2"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--text="Loader app 3"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 3"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
               {{/tree-view-list}}
             {{/tree-view-list-item}}
@@ -316,31 +440,37 @@ beta: true
       {{/tree-view-list}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Cost management"}}
-        {{#> tree-view-node-count}}
-          {{#> badge badge--modifier="pf-m-read"}}
-            2
-          {{/badge}}
-        {{/tree-view-node-count}}
-      {{/tree-view-node}}
+      {{#> tree-view-content}}
+        {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Cost management"}}
+          {{#> tree-view-node-count}}
+            {{#> badge badge--modifier="pf-m-read"}}
+              2
+            {{/badge}}
+          {{/tree-view-node-count}}
+        {{/tree-view-node}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Sources"}}
-        {{#> tree-view-node-count}}
-          {{#> badge badge--modifier="pf-m-read"}}
-            2
-          {{/badge}}
-        {{/tree-view-node-count}}
-      {{/tree-view-node}}
+      {{#> tree-view-content}}
+        {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Sources"}}
+          {{#> tree-view-node-count}}
+            {{#> badge badge--modifier="pf-m-read"}}
+              2
+            {{/badge}}
+          {{/tree-view-node-count}}
+        {{/tree-view-node}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
-        {{#> tree-view-node-count}}
-          {{#> badge badge--modifier="pf-m-read"}}
-            2
-          {{/badge}}
-        {{/tree-view-node-count}}
-      {{/tree-view-node}}
+      {{#> tree-view-content}}
+        {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
+          {{#> tree-view-node-count}}
+            {{#> badge badge--modifier="pf-m-read"}}
+              2
+            {{/badge}}
+          {{/tree-view-node-count}}
+        {{/tree-view-node}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
   {{/tree-view-list}}
 {{/tree-view}}
@@ -352,54 +482,71 @@ beta: true
 {{#> tree-view}}
   {{#> tree-view-list tree-view-node--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-      {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--text="Application launcher"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application launcher"}}
         {{#> tree-view-action}}
           {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Actions"'}}
             <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
           {{/button}}
         {{/tree-view-action}}
-      {{/tree-view-node}}
+      {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{#> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--text="Application 1"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 1"}}
             {{#> tree-view-action}}
               {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy"'}}
                 <i class="fas fa-clipboard" aria-hidden="true"></i>
               {{/button}}
             {{/tree-view-action}}
-          {{/tree-view-node}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--text="Settings"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
-              {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--modifier="pf-m-current" tree-view-node--text="Current"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-          {{#> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasToggle="true" tree-view-node--text="Application 2"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 2"}}
             {{#> tree-view-action}}
               {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Action"'}}
                 <i class="fas fa-bars" aria-hidden="true"></i>
               {{/button}}
             {{/tree-view-action}}
-          {{/tree-view-node}}
+          {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-              {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--text="Settings"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
-              {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--text="Loader"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader"}}
+              {{/tree-view-content}}
               {{#> tree-view-list newcontext}}
                 {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-                  {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasToggle="true" tree-view-node--text="Loader app 1"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader app 1"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--text="Loader app 2"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 2"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
                 {{#> tree-view-list-item}}
-                  {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--text="Loader app 3"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node  tree-view-node--text="Loader app 3"}}
+                  {{/tree-view-content}}
                 {{/tree-view-list-item}}
               {{/tree-view-list}}
             {{/tree-view-list-item}}
@@ -408,18 +555,23 @@ beta: true
       {{/tree-view-list}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasToggle="true"  tree-view-node--text="Cost management"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true"  tree-view-node--text="Cost management"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasToggle="true" tree-view-node--text="Sources"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Sources"}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
-      {{#> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasToggle="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
         {{#> tree-view-action}}
           {{#> dropdown id="dropdown-kebab-align-right" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
           {{/dropdown}}
         {{/tree-view-action}}
-      {{/tree-view-node}}
+      {{/tree-view-content}}
     {{/tree-view-list-item}}
   {{/tree-view-list}}
 {{/tree-view}}
