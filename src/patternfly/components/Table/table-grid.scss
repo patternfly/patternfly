@@ -108,12 +108,14 @@
 
   // Check
   --pf-c-table__check--responsive--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-table__check--responsive--MarginTop: #{pf-size-prem(6px)};
+  --pf-c-table__check--responsive--MarginTop: #{pf-size-prem(14px)};
 
   // Favorite
+  --pf-c-table--m-grid__favorite--MarginTop: #{pf-size-prem(8px)};
   --pf-c-table--m-grid__check--favorite--MarginLeft: var(--pf-global--spacer--xl);
 
   // Action
+  --pf-c-table--m-grid__action--MarginTop: #{pf-size-prem(6px)};
   --pf-c-table__action--responsive--MarginLeft: var(--pf-global--spacer--xl);
   --pf-c-table--m-grid__favorite--action--MarginLeft: var(--pf-global--spacer--2xl);
   --pf-c-table--m-grid__check--favorite--action--MarginLeft: calc(var(--pf-c-table--m-grid__check--favorite--MarginLeft) + var(--pf-c-table--m-grid__favorite--action--MarginLeft));
@@ -392,7 +394,6 @@
     .pf-c-table__check,
     .pf-c-table__favorite,
     .pf-c-table__action {
-      align-self: center;
       width: auto;
       padding: 0;
     }
@@ -442,6 +443,8 @@
   }
 
   .pf-c-table__favorite {
+    margin-top: var(--pf-c-table--m-grid__favorite--MarginTop);
+
     ~ .pf-c-table__action {
       margin-left: var(--pf-c-table--m-grid__favorite--action--MarginLeft);
     }
@@ -449,6 +452,7 @@
 
   // Action cell
   .pf-c-table__action {
+    margin-top: var(--pf-c-table--m-grid__action--MarginTop);
     text-align: right;
 
     // @smallest breakpoint
