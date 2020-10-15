@@ -1,0 +1,168 @@
+.pf-c-scrollspy {
+  --pf-c-scrollspy--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-scrollspy--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-scrollspy--PaddingLeft: var(--pf-global--spacer--lg);
+
+  // list
+  --pf-c-scrollspy__list--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-scrollspy__list--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-scrollspy__list--before--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-scrollspy__list--before--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-scrollspy__list--before--BorderRightWidth: 0;
+  --pf-c-scrollspy__list--before--BorderBottomWidth: 0;
+  --pf-c-scrollspy__list--before--BorderLeftWidth: 0;
+  --pf-c-scrollspy--m-vertical__list--before--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-scrollspy--m-vertical__list--before--BorderTopWidth: 0;
+
+  // with background
+  --pf-c-scrollspy--m-background--BackgroundColor: var(--pf-global--BackgroundColor--200);
+
+  // link
+  --pf-c-scrollspy__link--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-scrollspy__link--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-scrollspy__link--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-scrollspy__link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-scrollspy__link--link--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-scrollspy__link--OutlineOffset: calc(-1 * var(--pf-global--spacer--sm));
+
+  // before
+  --pf-c-scrollspy__link--before--BorderTopWidth: 0;
+  --pf-c-scrollspy__link--before--BorderRightWidth: 0;
+  --pf-c-scrollspy__link--before--BorderBottomWidth: 0;
+  --pf-c-scrollspy__link--before--BorderLeftWidth: 0;
+  --pf-c-scrollspy__link--before--BorderColor: transparent;
+  --pf-c-scrollspy__link--focus--before--BorderTopWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-scrollspy__link--focus--before--BorderLeftWidth: 0;
+  --pf-c-scrollspy__link--focus--before--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-scrollspy__item--m-current__link--before--BorderTopWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-scrollspy__item--m-current__link--before--BorderLeftWidth: 0;
+  --pf-c-scrollspy__item--m-current__link--before--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-scrollspy--m-vertical__link--focus--before--BorderTopWidth: 0;
+  --pf-c-scrollspy--m-vertical__link--focus--before--BorderLeftWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-scrollspy--m-vertical__item--m-current__link--before--BorderTopWidth: 0;
+  --pf-c-scrollspy--m-vertical__item--m-current__link--before--BorderLeftWidth: var(--pf-global--BorderWidth--lg);
+
+  // text
+  --pf-c-scrollspy__item-text--Color: var(--pf-global--Color--200);
+  --pf-c-scrollspy__link--hover__item-text--Color: var(--pf-global--Color--100);
+  --pf-c-scrollspy__link--focus__item-text--Color: var(--pf-global--Color--100);
+  --pf-c-scrollspy__item--m-current__item-text--Color: var(--pf-global--Color--100);
+
+  // label
+  --pf-c-scrollspy__label--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-scrollspy__label--PaddingBottom: var(--pf-global--spacer--md);
+
+  padding-right: var(--pf-c-scrollspy--PaddingRight);
+  padding-left: var(--pf-c-scrollspy--PaddingLeft);
+  background-color: var(--pf-c-scrollspy--BackgroundColor);
+
+  &.pf-m-background {
+    --pf-c-scrollspy--BackgroundColor: var(--pf-c-scrollspy--m-background--BackgroundColor);
+  }
+
+  &.pf-m-center {
+    text-align: center;
+  }
+
+  &.pf-m-vertical {
+    --pf-c-scrollspy__list--PaddingRight: 0;
+    --pf-c-scrollspy__list--PaddingLeft: 0;
+    --pf-c-scrollspy__list--before--BorderTopWidth: var(--pf-c-scrollspy--m-vertical__list--before--BorderTopWidth);
+    --pf-c-scrollspy__list--before--BorderLeftWidth: var(--pf-c-scrollspy--m-vertical__list--before--BorderLeftWidth);
+    --pf-c-scrollspy__link--focus--before--BorderTopWidth: var(--pf-c-scrollspy--m-vertical__link--focus--before--BorderTopWidth);
+    --pf-c-scrollspy__link--focus--before--BorderLeftWidth: var(--pf-c-scrollspy--m-vertical__link--focus--before--BorderLeftWidth);
+    --pf-c-scrollspy__item--m-current__link--before--BorderTopWidth: var(--pf-c-scrollspy--m-vertical__item--m-current__link--before--BorderTopWidth);
+    --pf-c-scrollspy__item--m-current__link--before--BorderLeftWidth: var(--pf-c-scrollspy--m-vertical__item--m-current__link--before--BorderLeftWidth);
+
+    .pf-c-scrollspy__list {
+      flex-direction: column;
+    }
+  }
+}
+
+.pf-c-scrollspy__list {
+  position: relative;
+  display: inline-flex;
+  padding-right: var(--pf-c-scrollspy__list--PaddingRight);
+  padding-left: var(--pf-c-scrollspy__list--PaddingLeft);
+  margin: 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border-color: var(--pf-c-scrollspy__list--before--BorderColor);
+    border-style: solid;
+    border-width: var(--pf-c-scrollspy__list--before--BorderTopWidth) var(--pf-c-scrollspy__list--before--BorderRightWidth) var(--pf-c-scrollspy__list--before--BorderBottomWidth) var(--pf-c-scrollspy__list--before--BorderLeftWidth);
+  }
+}
+
+.pf-c-scrollspy__link {
+  position: relative;
+  padding-top: var(--pf-c-scrollspy__link--PaddingTop);
+  padding-right: var(--pf-c-scrollspy__link--PaddingRight);
+  padding-bottom: var(--pf-c-scrollspy__link--PaddingBottom);
+  padding-left: var(--pf-c-scrollspy__link--PaddingLeft);
+  border: 0;
+  outline-offset: var(--pf-c-scrollspy__link--OutlineOffset);
+
+  &:hover {
+    --pf-c-scrollspy__item-text--Color: var(--pf-c-scrollspy__link--hover__item-text--Color);
+  }
+
+  &:focus {
+    --pf-c-scrollspy__item-text--Color: var(--pf-c-scrollspy__link--focus__item-text--Color);
+    --pf-c-scrollspy__link--before--BorderTopWidth: var(--pf-c-scrollspy__link--focus--before--BorderTopWidth);
+    --pf-c-scrollspy__link--before--BorderLeftWidth: var(--pf-c-scrollspy__link--focus--before--BorderLeftWidth);
+    --pf-c-scrollspy__link--before--BorderColor: var(--pf-c-scrollspy__link--focus--before--BorderColor);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border-color: var(--pf-c-scrollspy__link--before--BorderColor);
+    border-style: solid;
+    border-width: var(--pf-c-scrollspy__link--before--BorderTopWidth) var(--pf-c-scrollspy__link--before--BorderRightWidth) var(--pf-c-scrollspy__link--before--BorderBottomWidth) var(--pf-c-scrollspy__link--before--BorderLeftWidth);
+  }
+
+  + .pf-c-scrollspy__link {
+    --pf-c-scrollspy__link--PaddingLeft: var(--pf-c-scrollspy__link--link--PaddingLeft);
+  }
+}
+
+// stylelint-disable
+.pf-c-scrollspy__item {
+  &.pf-m-current {
+    display: flex;
+    flex-direction: column;
+
+    .pf-c-scrollspy__link {
+      --pf-c-scrollspy__link--before--BorderTopWidth: var(--pf-c-scrollspy__item--m-current__link--before--BorderTopWidth);
+      --pf-c-scrollspy__link--before--BorderLeftWidth: var(--pf-c-scrollspy__item--m-current__link--before--BorderLeftWidth);
+      --pf-c-scrollspy__link--before--BorderColor: var(--pf-c-scrollspy__item--m-current__link--before--BorderColor);
+
+      &:not(.pf-m-subsection),
+      &.pf-m-subsection.pf-m-current {
+        --pf-c-scrollspy__item-text--Color: var(--pf-c-scrollspy__item--m-current__item-text--Color);
+      }
+    }
+  }
+}
+// stylelint-enable
+
+.pf-c-scrollspy__item-text {
+  color: var(--pf-c-scrollspy__item-text--Color);
+  text-align: left;
+}
+
+.pf-c-scrollspy__label {
+  padding-top: var(--pf-c-scrollspy__label--PaddingTop);
+  padding-bottom: var(--pf-c-scrollspy__label--PaddingBottom);
+}
