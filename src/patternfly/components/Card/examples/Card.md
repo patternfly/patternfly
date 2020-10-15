@@ -7,7 +7,7 @@ cssPrefix: pf-c-card
 ## Examples
 ### Basic
 ```hbs
-{{#> card}}
+{{#> card card--id="card-basic-example"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -84,7 +84,7 @@ cssPrefix: pf-c-card
 ```
 ### With only image in head
 ```hbs
-{{#> card}}
+{{#> card card--id="card-image-head-example"}}
   {{#> card-header}}
     {{#> card-header-main}}
       <img src="/assets/images/pf_logo.svg" width="300px" alt="Logo">
@@ -104,7 +104,7 @@ cssPrefix: pf-c-card
 
 ### With no footer
 ```hbs
-{{#> card}}
+{{#> card card--id="card-no-footer-example"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -116,7 +116,7 @@ cssPrefix: pf-c-card
 
 ### With no title
 ```hbs
-{{#> card}}
+{{#> card card--id="card-no-title-example"}}
   {{#> card-body}}
     This card has no title
   {{/card-body}}
@@ -128,7 +128,7 @@ cssPrefix: pf-c-card
 
 ### With only a content section
 ```hbs
-{{#> card}}
+{{#> card card--id="card-body-example"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -137,7 +137,7 @@ cssPrefix: pf-c-card
 
 ### With multiple body sections
 ```hbs
-{{#> card}}
+{{#> card card--id="card-multiple-body-example"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -158,7 +158,7 @@ cssPrefix: pf-c-card
 
 ### With only one body that fills
 ```hbs
-{{#> card}}
+{{#> card card--id="card-body-fill-example"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -179,7 +179,7 @@ cssPrefix: pf-c-card
 
 ### Compact
 ```hbs
-{{#> card card--modifier="pf-m-compact"}}
+{{#> card card--id="card-compact-example" card--modifier="pf-m-compact"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -194,7 +194,7 @@ cssPrefix: pf-c-card
 
 ### Hover
 ```hbs
-{{#> card card--modifier="pf-m-hoverable"}}
+{{#> card card--id="card-hover-example" card--modifier="pf-m-hoverable"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -209,7 +209,7 @@ cssPrefix: pf-c-card
 
 ### Selectable
 ```hbs
-{{#> card card--modifier="pf-m-selectable" card--attribute='tabindex="0"'}}
+{{#> card card--id="card-selectable-example" card--modifier="pf-m-selectable" card--attribute='tabindex="0"'}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -224,7 +224,7 @@ cssPrefix: pf-c-card
 
 ### Selected
 ```hbs
-{{#> card card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
+{{#> card card--id="card-selected-example" card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -239,7 +239,7 @@ cssPrefix: pf-c-card
 
 ### Flat
 ```hbs
-{{#> card card--modifier="pf-m-flat"}}
+{{#> card card--id="card-flat-example" card--modifier="pf-m-flat"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -249,6 +249,63 @@ cssPrefix: pf-c-card
   {{#> card-footer}}
     Footer
   {{/card-footer}}
+{{/card}}
+```
+
+### Expandable
+```hbs
+{{#> card card--id="card-expandable-example"}}
+  {{#> card-header}}
+    {{> card-header-toggle}}
+    {{#> card-actions}}
+      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+      {{/dropdown}}
+      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-title">
+    {{/card-actions}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+      Title
+    {{/card-title}}
+  {{/card-header}}
+{{/card}}
+```
+
+### Expandable with image
+```hbs
+{{#> card card--id="card-expandable-image-example"}}
+  {{#> card-header}}
+    {{> card-header-toggle}}
+    <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo" width="27px">
+    {{#> card-actions}}
+      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+      {{/dropdown}}
+      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-label="Select patternfly card">
+    {{/card-actions}}
+  {{/card-header}}
+{{/card}}
+```
+
+### Expanded
+```hbs
+{{#> card card--id="card-expanded-example" card--modifier="pf-m-expanded"}}
+  {{#> card-header}}
+    {{> card-header-toggle}}
+    {{#> card-actions}}
+      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
+      {{/dropdown}}
+      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-title">
+    {{/card-actions}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+      Title
+    {{/card-title}}
+  {{/card-header}}
+  {{#> card-expandable-content}}
+    {{#> card-body}}
+      Body
+    {{/card-body}}
+    {{#> card-footer}}
+      Footer
+    {{/card-footer}}
+  {{/card-expandable-content}}
 {{/card}}
 ```
 
@@ -269,11 +326,15 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-c-card__body` | `<div>` | Creates the body of a card. By default, the body element fills the available space in the card. You can use multiple `.pf-c-card__body` elements. |
 | `.pf-c-card__footer` | `<div>` | Creates the footer of a card. |
 | `.pf-c-card__header` | `<div>` | Creates the header of the card where images, actions, and/or the card title can go. |
+| `.pf-c-card__header-toggle` | `<div>` | Creates the expandable card toggle. |
+| `.pf-c-card__header-toggle-icon` | `<span>` | Creates the expandable card toggle icon. |
 | `.pf-c-card__actions` | `<div>` | Creates an actions element to be used in the card header. |
 | `.pf-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. |
+| `.pf-c-card__expandable-content` | `<div>` | Creates the expandable card's expandable content. |
 | `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` to not fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
 | `.pf-m-hoverable` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
 | `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
 | `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selectable card for the selected state. |
 | `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background.
+| `.pf-m-expanded` | `.pf-c-card` | Modifies the card for the expanded state. |
