@@ -56,10 +56,10 @@
   --pf-c-menu__item-toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Text + toggle
-  --pf-c-menu__item-text__item-toggle-icon--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-menu__item-text--item-toggle-icon--MarginLeft: var(--pf-global--spacer--sm);
 
   // Toggle + text
-  --pf-c-menu__item-toggle-icon__item-text--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-menu__item-toggle-icon--item-text--MarginLeft: var(--pf-global--spacer--sm);
 
   // Select icon
   --pf-c-menu__item-select-icon--MarginLeft: var(--pf-global--spacer--sm);
@@ -297,11 +297,11 @@
 }
 
 .pf-c-menu__item-text + .pf-c-menu__item-toggle-icon {
-  margin-left: var(--pf-c-menu__item-text__item-toggle-icon--MarginLeft);
+  margin-left: var(--pf-c-menu__item-text--item-toggle-icon--MarginLeft);
 }
 
 .pf-c-menu__item-toggle-icon + .pf-c-menu__item-text {
-  margin-left: var(--pf-c-menu__item-toggle-icon__item-text--MarginLeft);
+  margin-left: var(--pf-c-menu__item-toggle-icon--item-text--MarginLeft);
 }
 
 // Select icon
