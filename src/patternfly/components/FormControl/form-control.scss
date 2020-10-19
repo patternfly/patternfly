@@ -191,7 +191,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   // stylelint-enable
 
   &::placeholder {
-    --pf-c-form-control--Color: var(--pf-c-form-control--placeholder--Color);
+    color: var(--pf-c-form-control--placeholder--Color);
   }
 
   &:not(textarea) {
