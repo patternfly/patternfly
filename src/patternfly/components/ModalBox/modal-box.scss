@@ -52,7 +52,7 @@
   --pf-c-modal-box__header--body--PaddingTop: var(--pf-global--spacer--md);
 
   // Close
-  --pf-c-modal-box--c-button--Top: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--xs) - var(--pf-global--spacer--form-element) + #{pf-size-prem(1px)}); // align top of button with top of text
+  --pf-c-modal-box--c-button--Top: calc(var(--pf-global--spacer--lg));
   --pf-c-modal-box--c-button--Right: var(--pf-global--spacer--md);
   --pf-c-modal-box--c-button--sibling--MarginRight: var(--pf-global--spacer--xl);
 
@@ -149,6 +149,7 @@
 }
 
 .pf-c-modal-box__header-main {
+  flex-grow: 1;
   min-width: 0;
 }
 
