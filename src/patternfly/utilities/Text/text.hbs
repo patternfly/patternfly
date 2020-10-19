@@ -1,6 +1,3 @@
-<div class="{{#if text--modifier}} {{text--modifier}}{{/if}}"
-  {{#if text--attribute}}
-    {{{text--attribute}}}
-  {{/if}}>
+<div {{#if text--modifier}}class="{{text--modifier}}" {{/if}} {{#if text--attribute}} {{{text--attribute}}} {{/if}}>
   {{> @partial-block}}
 </div>

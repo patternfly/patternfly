@@ -140,20 +140,20 @@ $pf-u-font-color-options: (
 
 // Font layout options
 $pf-u-font-alignment-options: (
-  font-break-word: (
+  text-break-word: (
     word-break break-word
   ),
-  font-nowrap: (
+  text-nowrap: (
     white-space nowrap
   ),
-  font-wrap: (
+  text-wrap: (
     white-space normal
   )
 );
 
 @include pf-utility-builder($pf-u-font-alignment-options, $pf-global--breakpoint-list);
 
-.pf-u-text-truncate > * {
+.pf-u-text-truncate {
   min-width: 0 !important;
   max-width: 100% !important;
   overflow: hidden !important;
