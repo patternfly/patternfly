@@ -71,7 +71,7 @@ import './Text.css'
 
 ```hbs
 <h4><strong>Breakword</strong></h4>
-{{#> text text--modifier="pf-u-font-break-word"}}
+{{#> text text--modifier="pf-u-text-break-word"}}
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut.</p>
   <br />
 {{/text}}
@@ -147,7 +147,7 @@ Text utility
 | `.pf-u-danger-color-100`    | `*`        | Sets font-color to Danger Color 100    |
 | `.pf-u-danger-color-200`    | `*`        | Sets font-color to Danger Color 200    |
 | `.pf-u-danger-color-300`    | `*`        | Sets font-color to Danger Color 300    |
-| `.pf-u-font-break-word`     | `*`        | Sets word-break to break-word          |
-| `.pf-u-font-nowrap`         | `*`        | Sets white-space to nowrap             |
-| `.pf-u-font-wrap`           | `*`        | Sets white-space to normal             |
+| `.pf-u-text-break-word`     | `*`        | Sets word-break to break-word          |
+| `.pf-u-text-nowrap`         | `*`        | Sets white-space to nowrap             |
+| `.pf-u-text-wrap`           | `*`        | Sets white-space to normal             |
 | `.pf-u-text-truncate`       | `*`        | Truncates text field                   |
