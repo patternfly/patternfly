@@ -630,6 +630,8 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-pagination` | `.pf-c-toolbar__item` | Initiates pagination spacing and margin. |
 | `.pf-m-search-filter` | `.pf-c-toolbar__item` | Initiates search filter spacing. |
 | `.pf-m-chip-group` | `.pf-c-toolbar__item` | Initiates chip group spacing. |
+| `.pf-m-expand-all` | `.pf-c-toolbar__item` | Initiates an item for an expand all button. |
+| `.pf-m-expanded` | `.pf-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
 | `.pf-m-button-group` | `.pf-c-toolbar__group` | Initiates button group spacing. |
 | `.pf-m-icon-button-group` | `.pf-c-toolbar__group` | Initiates icon button group spacing. |
 | `.pf-m-filter-group` | `.pf-c-toolbar__group` | Initiates filter group spacing. |
@@ -652,6 +654,8 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `aria-expanded="false"` | `.pf-c-toolbar__toggle > .pf-c-button` |  Indicates the the expandable content is hidden. **Required** |
 | `aria-controls="[id of expandable content]"` | `.pf-c-toolbar__toggle > .pf-c-button` |  Identifies the expanded content controlled by the toggle button. **Required** |
 | `id="[expandable-content_id]"` | `.pf-c-toolbar__expandable-content` | Provides a reference for toggle button description. **Required** |
+| `aria-label="Expand all"` | `.pf-c-toolbar__item.pf-m-expand-all` | Provides an accessible label for the expand all item button. **Required** |
+| `aria-label="Collapse all"` | `.pf-c-toolbar__item.pf-m-expand-all.pf-m-expanded` | Provides an accessible label for the expand all item button. **Required** |
 
 ### Toggle group usage
 
