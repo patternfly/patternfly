@@ -1,34 +1,28 @@
 .pf-c-action-list {
-  --pf-c-action-list--Gap: var(--pf-global--spacer--2xl);
-  --pf-c-action-list--m-vertical--Display: inline-flex;
-  --pf-c-action-list--m-vertical--Gap: var(--pf-global--spacer--lg);
+  --pf-c-action-list--Gap: var(--pf-global--spacer--md);
+  --pf-c-action-list--m-group--Gap: var(--pf-global--spacer--2xl);
+  --pf-c-action-list--m-group--m-vertical--Gap: var(--pf-global--spacer--lg);
+  --pf-c-action-list--m-vertical--Gap: var(--pf-global--spacer--sm);
 
-  // Group
-  --pf-c-action-list__group--Gap: var(--pf-global--spacer--md);
-  --pf-c-action-list__group--m-vertical--Gap: var(--pf-global--spacer--sm);
-
-  display: flex;
-  gap: var(--pf-c-action-list--Gap);
-
-  &.pf-m-icons {
-    --pf-c-action-list__group--Gap: 0;
+  &.pf-m-group {
+    gap: var(--pf-c-action-list--m-group--Gap);
   }
 
-  &.pf-m-vertical {
-    --pf-c-action-list--Gap: var(--pf-c-action-list--m-vertical--Gap);
-
-    display: inline-flex;
-    flex-direction: column;
+  &.pf-m-icons {
+    --pf-c-action-list--Gap: 0;
   }
 }
 
+.pf-c-action-list,
 .pf-c-action-list__group {
   display: flex;
-  gap: var(--pf-c-action-list__group--Gap);
+  gap: var(--pf-c-action-list--Gap);
 
   &.pf-m-vertical {
-    --pf-c-action-list__group--Gap: var(--pf-c-action-list__group--m-vertical--Gap);
+    --pf-c-action-list--Gap: var(--pf-c-action-list--m-vertical--Gap);
+    --pf-c-action-list--m-group--Gap: var(--pf-c-action-list--m-group--m-vertical--Gap);
 
+    display: inline-flex;
     flex-direction: column;
   }
 }
