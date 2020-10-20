@@ -9,7 +9,7 @@ cssPrefix: pf-c-dual-list-selector
 ### Basic
 ```hbs
 {{#> dual-list-selector dual-list-selector--id="basic"}}
-  {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-available"}}
+  {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
         {{#> dual-list-selector-title-text}}
@@ -19,7 +19,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector--id '-filter" aria-label="Filter options"')}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -28,7 +28,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -99,7 +99,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/button}}
     {{/dual-list-selector-controls-item}}
   {{/dual-list-selector-controls}}
-  {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-selected"}}
+  {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-selected') dual-list-selector-pane--modifier="pf-m-selected"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
         {{#> dual-list-selector-title-text}}
@@ -109,7 +109,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector--id '-filter" aria-label="Filter options"')}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -118,7 +118,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -138,7 +138,7 @@ cssPrefix: pf-c-dual-list-selector
 ### Item selected
 ```hbs
 {{#> dual-list-selector dual-list-selector--id="item-selected"}}
-  {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-available"}}
+  {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
         {{#> dual-list-selector-title-text}}
@@ -148,7 +148,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector--id '-filter" aria-label="Filter options"')}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -157,7 +157,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -228,7 +228,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/button}}
     {{/dual-list-selector-controls-item}}
   {{/dual-list-selector-controls}}
-  {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-selected"}}
+  {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-selected') dual-list-selector-pane--modifier="pf-m-selected"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
         {{#> dual-list-selector-title-text}}
@@ -238,7 +238,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector--id '-filter" aria-label="Filter options"')}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -247,7 +247,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -267,7 +267,7 @@ cssPrefix: pf-c-dual-list-selector
 ### Item moved
 ```hbs
 {{#> dual-list-selector dual-list-selector--id="item-moved"}}
-  {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-available"}}
+  {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
         {{#> dual-list-selector-title-text}}
@@ -277,7 +277,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector--id '-filter" aria-label="Filter options"')}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -286,7 +286,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -350,7 +350,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/button}}
     {{/dual-list-selector-controls-item}}
   {{/dual-list-selector-controls}}
-  {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-selected"}}
+  {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-selected') dual-list-selector-pane--modifier="pf-m-selected"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
         {{#> dual-list-selector-title-text}}
@@ -360,7 +360,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector--id '-filter" aria-label="Filter options"')}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -369,7 +369,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -396,7 +396,7 @@ cssPrefix: pf-c-dual-list-selector
 ### Moved item selected
 ```hbs
 {{#> dual-list-selector dual-list-selector--id="moved-item-selected"}}
-  {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-available"}}
+  {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
         {{#> dual-list-selector-title-text}}
@@ -406,7 +406,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector--id '-filter" aria-label="Filter options"')}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -415,7 +415,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -479,7 +479,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/button}}
     {{/dual-list-selector-controls-item}}
   {{/dual-list-selector-controls}}
-  {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-selected"}}
+  {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-selected') dual-list-selector-pane--modifier="pf-m-selected"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
         {{#> dual-list-selector-title-text}}
@@ -489,7 +489,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector--id '-filter" aria-label="Filter options"')}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -498,7 +498,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
