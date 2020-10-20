@@ -667,6 +667,7 @@ cssPrefix: pf-c-dual-list-selector
 | `.pf-c-dual-list-selector__actions` | `<div>` | Initiates a dual list selector pane actions. |
 | `.pf-c-dual-list-selector__actions-item` | `<div>` | Initiates a dual list selector pane actions item. |
 | `.pf-c-dual-list-selector__status` | `<div>` | Initiates a dual list selector pane selected status. **Required** |
+| `.pf-c-dual-list-selector__status-text` | `<span>` | Initiates a dual list selector pane selected status text. **Required** |
 | `.pf-c-dual-list-selector__menu` | `<div>` | Initiates a dual list selector pane menu container. **Required** |
 | `.pf-c-dual-list-selector__list` | `<ul>` | Initiates a dual list selector pane menu list. **Required** |
 | `.pf-c-dual-list-selector__list-item` | `<li>` | Initiates a dual list selector pane menu list item. **Required** |

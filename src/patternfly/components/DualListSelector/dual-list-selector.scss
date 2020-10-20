@@ -104,11 +104,13 @@
 }
 
 .pf-c-dual-list-selector__status {
+  display: flex;
   grid-area: var(--pf-c-dual-list-selector__status--GridArea);
   margin-bottom: var(--pf-c-dual-list-selector__status--MarginBottom);
 }
 
 .pf-c-dual-list-selector__status-text {
+  flex-grow: 1;
   font-size: var(--pf-c-dual-list-selector__status-text--FontSize);
   color: var(--pf-c-dual-list-selector__status-text--Color);
 }
