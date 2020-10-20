@@ -137,7 +137,7 @@ cssPrefix: pf-c-dual-list-selector
 
 ### Item selected
 ```hbs
-{{#> dual-list-selector dual-list-selector--id="basic"}}
+{{#> dual-list-selector dual-list-selector--id="item-selected"}}
   {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
@@ -266,7 +266,7 @@ cssPrefix: pf-c-dual-list-selector
 
 ### Item moved
 ```hbs
-{{#> dual-list-selector dual-list-selector--id="basic"}}
+{{#> dual-list-selector dual-list-selector--id="item-moved"}}
   {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
@@ -395,7 +395,7 @@ cssPrefix: pf-c-dual-list-selector
 
 ### Moved item selected
 ```hbs
-{{#> dual-list-selector dual-list-selector--id="basic"}}
+{{#> dual-list-selector dual-list-selector--id="moved-item-selected"}}
   {{#> dual-list-selector-pane dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
