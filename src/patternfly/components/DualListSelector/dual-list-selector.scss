@@ -5,10 +5,10 @@
   --pf-c-dual-list-selector__status--GridArea: pane-status;
   --pf-c-dual-list-selector__menu--GridArea: pane-menu;
   --pf-c-dual-list-selector__controls--GridArea: controls;
-  --pf-c-dual-list-selector--m-selected__header--GridArea: pane-header-s;
-  --pf-c-dual-list-selector--m-selected__tools--GridArea: pane-tools-s;
-  --pf-c-dual-list-selector--m-selected__status--GridArea: pane-status-s;
-  --pf-c-dual-list-selector--m-selected__menu--GridArea: pane-menu-s;
+  --pf-c-dual-list-selector--m-chosen__header--GridArea: pane-header-c;
+  --pf-c-dual-list-selector--m-chosen__tools--GridArea: pane-tools-c;
+  --pf-c-dual-list-selector--m-chosen__status--GridArea: pane-status-c;
+  --pf-c-dual-list-selector--m-chosen__menu--GridArea: pane-menu-c;
   --pf-c-dual-list-selector--GridTemplateColumns--pane--MinMax--min: #{pf-size-prem(200px)};
   --pf-c-dual-list-selector--GridTemplateColumns--pane--MinMax--max: #{pf-size-prem(450px)};
 
@@ -54,10 +54,10 @@
 
   display: grid;
   grid-template-areas:
-    "pane-header . pane-header-s"
-    "pane-tools . pane-tools-s"
-    "pane-status . pane-status-s"
-    "pane-menu controls pane-menu-s";
+    "pane-header . pane-header-c"
+    "pane-tools . pane-tools-c"
+    "pane-status . pane-status-c"
+    "pane-menu controls pane-menu-c";
   grid-template-columns:
     minmax(var(--pf-c-dual-list-selector--GridTemplateColumns--pane--MinMax--min), var(--pf-c-dual-list-selector--GridTemplateColumns--pane--MinMax--max))
     min-content
@@ -68,11 +68,11 @@
 .pf-c-dual-list-selector__pane {
   display: contents;
 
-  &.pf-m-selected {
-    --pf-c-dual-list-selector__header--GridArea: var(--pf-c-dual-list-selector--m-selected__header--GridArea);
-    --pf-c-dual-list-selector__tools--GridArea: var(--pf-c-dual-list-selector--m-selected__tools--GridArea);
-    --pf-c-dual-list-selector__status--GridArea: var(--pf-c-dual-list-selector--m-selected__status--GridArea);
-    --pf-c-dual-list-selector__menu--GridArea: var(--pf-c-dual-list-selector--m-selected__menu--GridArea);
+  &.pf-m-chosen {
+    --pf-c-dual-list-selector__header--GridArea: var(--pf-c-dual-list-selector--m-chosen__header--GridArea);
+    --pf-c-dual-list-selector__tools--GridArea: var(--pf-c-dual-list-selector--m-chosen__tools--GridArea);
+    --pf-c-dual-list-selector__status--GridArea: var(--pf-c-dual-list-selector--m-chosen__status--GridArea);
+    --pf-c-dual-list-selector__menu--GridArea: var(--pf-c-dual-list-selector--m-chosen__menu--GridArea);
   }
 }
 
