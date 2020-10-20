@@ -2203,7 +2203,9 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-td}}
       {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
-        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.
+        <div>
+          <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.
+        </div>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2332,7 +2334,9 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{#> table-tr table-tr--id="1"}}
       {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
-        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.
+        <div>
+          <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.
+        </div>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
