@@ -150,19 +150,21 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   --pf-c-form-control__select--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-form-control__select--BackgroundUrl: #{pf-bg-svg($pf-c-form-control__select--Coordinates, $pf-c-form-control__select--ViewBox)};
   --pf-c-form-control__select--BackgroundSize: .625em; // Calculated from react-icon SVG viewbox
-  --pf-c-form-control__select--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm)) center;
+  --pf-c-form-control__select--BackgroundPositionX: calc(100% - var(--pf-global--spacer--md) + 1px);
+  --pf-c-form-control__select--BackgroundPositionY: center;
+  --pf-c-form-control__select--BackgroundPosition: var(--pf-c-form-control__select--BackgroundPositionX) var(--pf-c-form-control__select--BackgroundPositionY);
 
   // Select success
-  --pf-c-form-control__select--success--PaddingRight: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--2xl));
-  --pf-c-form-control__select--success--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm) - var(--pf-global--spacer--lg));
+  --pf-c-form-control__select--success--PaddingRight: var(--pf-global--spacer--3xl);
+  --pf-c-form-control__select--success--BackgroundPosition: calc(var(--pf-c-form-control__select--BackgroundPositionX) - var(--pf-global--spacer--lg));
 
   // Select warning
-  --pf-c-form-control__select--m-warning--PaddingRight: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--2xl));
-  --pf-c-form-control__select--m-warning--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm) - var(--pf-global--spacer--lg) + #{pf-size-prem(1px)});
+  --pf-c-form-control__select--m-warning--PaddingRight: var(--pf-global--spacer--3xl);
+  --pf-c-form-control__select--m-warning--BackgroundPosition: calc(var(--pf-c-form-control__select--BackgroundPositionX) - var(--pf-global--spacer--lg) + #{pf-size-prem(1px)});
 
   // Select invalid
-  --pf-c-form-control__select--invalid--PaddingRight: calc(var(--pf-global--spacer--sm) + var(--pf-global--spacer--2xl));
-  --pf-c-form-control__select--invalid--BackgroundPosition: calc(100% - var(--pf-global--spacer--sm) - var(--pf-global--spacer--lg));
+  --pf-c-form-control__select--invalid--PaddingRight: var(--pf-global--spacer--3xl);
+  --pf-c-form-control__select--invalid--BackgroundPosition: calc(var(--pf-c-form-control__select--BackgroundPositionX) - var(--pf-global--spacer--lg));
 
   // Textarea success
   --pf-c-form-control--textarea--success--BackgroundPositionY: var(--pf-c-form-control--PaddingLeft); // update to use --pf-c-form-control--inset--base at breaking change
