@@ -59,7 +59,7 @@ With kebab
 
 ### Action list multiple groups
 ```hbs
-{{#> action-list action-list--modifier="pf-m-group"}}
+{{#> action-list}}
   {{#> action-list-group}}
     {{#> action-list-item}}
       {{#> button button--modifier="pf-m-primary"}}
@@ -104,7 +104,7 @@ In modals, forms, data lists
 {{/action-list}}
 <br/>
 In wizards
-{{#> action-list action-list--modifier="pf-m-group"}}
+{{#> action-list}}
   {{#> action-list-group}}
     {{#> action-list-item}}
       {{#> button button--modifier="pf-m-primary"}}
@@ -145,7 +145,7 @@ In wizards
 
 ### Action list vertical multiple groups
 ```hbs
-{{#> action-list action-list--modifier="pf-m-group pf-m-vertical"}}
+{{#> action-list action-list--modifier="pf-m-vertical"}}
   {{#> action-list-group action-list-group--modifier="pf-m-vertical"}}
     {{#> action-list-item}}
       {{#> button button--modifier="pf-m-primary"}}
@@ -176,7 +176,7 @@ In wizards
 ### Action list vertical in wizard
 ```hbs
 2 stacked 1 below
-{{#> action-list action-list--modifier="pf-m-group pf-m-vertical"}}
+{{#> action-list action-list--modifier="pf-m-vertical"}}
   {{#> action-list-group}}
     {{#> action-list-item}}
       {{#> button button--modifier="pf-m-primary"}}
@@ -200,7 +200,7 @@ In wizards
 <br/>
 <br/>
 3 stacked
-{{#> action-list action-list--modifier="pf-m-group pf-m-vertical"}}
+{{#> action-list action-list--modifier="pf-m-vertical"}}
   {{#> action-list-group action-list-group--modifier="pf-m-vertical"}}
     {{#> action-list-item}}
       {{#> button button--modifier="pf-m-primary"}}
@@ -233,4 +233,3 @@ In wizards
 | `.pf-c-action-list__group` | `<div>` | Initiates the action list group container. |
 | `.pf-m-vertical` | `.pf-c-action-list`, `.pf-c-action-list__group` | Modifies the action list and action list group to be vertical. |
 | `.pf-m-icons` | `.pf-c-action-list` | Modifies the action list to support button icons. |
-| `.pf-m-group` | `.pf-c-action-list` | Modifies the action list to support multiple groups. |
