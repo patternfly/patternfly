@@ -2203,7 +2203,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-td}}
       {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
-        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.</span>
+        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2227,7 +2227,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{concat table--id '-node' table-tr--id}}">
       {{/table-td}}
-      {{> table-td table-td--favorite="true" table-favorite-button--IsFavorited="true"}}
+      {{> table-td table-td--favorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -2308,7 +2308,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 ```hbs
 {{#> table table--id="table-favorites-sortable" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a sortable with favorites table example"'}}
   {{#> table-thead}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--id="1"}}
       {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--sortable="true" table-th--selected="true"}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
@@ -2329,10 +2329,10 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
   {{/table-thead}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--id="1"}}
       {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
-        Repository 1
+        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2348,10 +2348,10 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr}}
+    {{#> table-tr table-tr--id="3"}}
       {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
-        Repository 3
+        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2367,10 +2367,10 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr}}
+    {{#> table-tr table-tr--id="2"}}
       {{> table-td table-td--favorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
-        Repository 2
+        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -2386,10 +2386,29 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr}}
+    {{#> table-tr table-tr--id="4"}}
       {{> table-td table-td--favorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
-        Repository 4
+        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--id="5"}}
+      {{> table-td table-td--favorite="true"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
