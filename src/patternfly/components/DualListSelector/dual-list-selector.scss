@@ -23,7 +23,8 @@
   --pf-c-dual-list-selector__tools-filter--tools-actions--MarginLeft: var(--pf-global--spacer--sm);
 
   // Menu
-  --pf-c-dual-list-selector__menu--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-dual-list-selector__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-dual-list-selector__menu--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-dual-list-selector__menu--MinHeight: #{pf-size-prem(200px)};
   --pf-c-dual-list-selector__menu--MaxHeight: #{pf-size-prem(320px)};
 
@@ -120,7 +121,7 @@
   min-height: var(--pf-c-dual-list-selector__menu--MinHeight);
   max-height: var(--pf-c-dual-list-selector__menu--MaxHeight);
   overflow: auto;
-  box-shadow: var(--pf-c-dual-list-selector__menu--BoxShadow);
+  border: var(--pf-c-dual-list-selector__menu--BorderWidth) solid var(--pf-c-dual-list-selector__menu--BorderColor);
 }
 
 .pf-c-dual-list-selector__list {
