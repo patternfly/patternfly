@@ -676,6 +676,6 @@ cssPrefix: pf-c-dual-list-selector
 | `.pf-c-dual-list-selector__item-text` | `<span>` | Initiates a dual list selector pane menu item text. **Required** |
 | `.pf-c-dual-list-selector__controls` | `<div>` | Initiates the dual list selector controls. **Required** |
 | `.pf-c-dual-list-selector__controls-item` | `<div>` | Initiates the dual list selector controls item. **Required** |
-| `.pf-m-available` | `.pf-c-dual-list-selector__pane` | Defines a pain as the available list. |
+| `.pf-m-available` | `.pf-c-dual-list-selector__pane` | Defines a pane as the available list. |
 | `.pf-m-chosen` | `.pf-c-dual-list-selector__pane` | Defines a pain as the chosen list. |
 | `.pf-m-selected` | `.pf-c-dual-list-selector__list-item` | Modifies the menu list item for the selected state. |
