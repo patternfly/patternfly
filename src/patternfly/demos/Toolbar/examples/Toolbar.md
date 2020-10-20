@@ -445,8 +445,11 @@ import './Toolbar.css'
         {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
             {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
-            {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group"}}
               {{> toolbar-item-expand-all}}
+              {{> toolbar-item-bulk-select}}
+            {{/toolbar-group}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
               {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter"}}
                 {{#> input-group}}
                   {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
@@ -488,8 +491,8 @@ import './Toolbar.css'
         {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
             {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
+            {{> toolbar-item-expand-all toolbar-item-expand-all--IsExpanded="true"}}
             {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-              {{> toolbar-item-expand-all toolbar-item-expand-all--IsExpanded="true"}}
               {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter"}}
                 {{#> input-group}}
                   {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
