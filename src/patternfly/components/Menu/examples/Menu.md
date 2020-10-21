@@ -8,6 +8,7 @@ cssPrefix: pf-c-menu
 import './Menu.css'
 
 ## Examples
+
 ### Basic
 ```hbs
 {{#> menu}}
@@ -290,6 +291,31 @@ import './Menu.css'
 {{/menu}}
 ```
 
+### Drilldown
+```hbs
+{{> menu-drilldown-example menu-drilldown-example--id="drilldown-default"}}
+```
+
+### Drilldown level two
+```hbs
+{{> menu-drilldown-example menu-drilldown-example--id="drilldown-level-2" menu-drilldown-example--IsDrilledIn--list-1="true" menu-drilldown-example--attribute='style="--pf-c-menu--m-drilldown--Height: 193px"'}}
+```
+
+### Drilldown level three
+```hbs
+{{> menu-drilldown-example menu-drilldown-example--id="drilldown-level-3" menu-drilldown-example--IsDrilledIn--list-1="true" menu-drilldown-example--IsDrilledIn--list-2="true" menu-drilldown-example--attribute='style="--pf-c-menu--m-drilldown--Height: 233px"'}}
+```
+
+### Drilldown level four
+```hbs
+{{> menu-drilldown-example menu-drilldown-example--id="drilldown-level-4" menu-drilldown-example--IsDrilledIn--list-1="true" menu-drilldown-example--IsDrilledIn--list-2="true" menu-drilldown-example--IsDrilledIn--list-3="true" menu-drilldown-example--attribute='style="--pf-c-menu--m-drilldown--Height: 193px"'}}
+```
+
+### Width modified drilldown
+```hbs
+{{> menu-drilldown-example menu-drilldown-example--attribute='style="--pf-c-menu--m-drilldown--Width: 350px;"'}}
+```
+
 ### With filtering
 ```hbs
 {{#> menu}}
@@ -529,7 +555,7 @@ import './Menu.css'
             {{/menu-item-text}}
           {{/menu-item-main}}
           {{#> menu-item-description}}
-            Nunc non ornare ex, et pretium dui. Duis nec augue at urna elementum blandit tincidunt eget metus. Aenean sed metus id urna dignissim interdum. Aenean vel nisl vitae arcu vehicula pulvinar eget nec turpis. Cras sit amet est est. 
+            Nunc non ornare ex, et pretium dui. Duis nec augue at urna elementum blandit tincidunt eget metus. Aenean sed metus id urna dignissim interdum. Aenean vel nisl vitae arcu vehicula pulvinar eget nec turpis. Cras sit amet est est.
           {{/menu-item-description}}
         {{/menu-item}}
       {{/menu-list-item}}
@@ -803,7 +829,6 @@ import './Menu.css'
 | `aria-label="Not starred"` | `.pf-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
 | `aria-label="Starred"` | `.pf-c-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |
 
-
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -825,8 +850,12 @@ import './Menu.css'
 | `.pf-c-menu__item-action` | `<button>` | Initiates the menu item action. |
 | `.pf-c-menu__item-action-icon` | `<span>` | Initiates the menu item action icon. |
 | `.pf-c-menu__item-external-icon` | `<span>` | Initiates the menu item external icon. |
-| `.pf-m-submenu` | `.pf-c-menu` | Modifies the menu to be the submenu. |
 | `.pf-m-favorite` | `.pf-c-menu__item-action` | Modifies the menu item action to handle the favorite icon. |
 | `.pf-m-favorited` | `.pf-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |
 | `.pf-m-selected` | `.pf-c-menu__item` | Modifies the menu item to be selected. |
-| `.pf-m-flyout` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "flyout" |
+| `.pf-m-flyout` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "flyout". |
+| `.pf-m-drilldown` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "drill down". |
+| `.pf-m-current-path` | `.pf-c-menu.pf-m-drilldown .pf-c-menu__list-item` | Modifies the menu list item for current path state. |
+| `.pf-m-drilled-in` | `.pf-c-menu.pf-m-drilldown, .pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled in state. |
+| `--pf-c-menu--m-drilldown--Width: {width}` | `.pf-c-menu.pf-m-drilldown` | Modifies the width of the drilldown menu. The default value is `auto`. |
+| `--pf-c-menu--m-drilldown--Height: {height}` | `.pf-c-menu.pf-m-drilldown` | Modifies the height of the drilldown menu. The default value is `auto`. |

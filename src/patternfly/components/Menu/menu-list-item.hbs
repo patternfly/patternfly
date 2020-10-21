@@ -1,6 +1,45 @@
-<li class="pf-c-menu__list-item{{#if menu-list-item--modifier}} {{menu-list-item--modifier}}{{/if}}"
+<li class="pf-c-menu__list-item{{#if menu-list-item--modifier}} {{menu-list-item--modifier}}{{/if}}{{#unless menu-list-item--IsCurrentReset}}{{#if menu-list-item--IsCurrentPath}} pf-m-current-path{{/if}}{{/unless}}"
   {{#if menu-list-item--attribute}}
     {{{menu-list-item--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if menu-list-item--IsExpandable}}
+    {{#if menu-list-item--IsExpandableReset}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            {{{menu-list-item--text}}}
+          {{/menu-item-text}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{else}}
+      {{#> menu-item}}
+        {{#> menu-item-main}}
+          {{#> menu-item-text}}
+            {{{menu-list-item--text}}}
+          {{/menu-item-text}}
+          {{> menu-item-toggle-icon}}
+        {{/menu-item-main}}
+      {{/menu-item}}
+    {{/if}}
+  {{else if menu-list-item--IsDrillUp}}
+    {{#> menu-item}}
+      {{#> menu-item-main}}
+        {{> menu-item-toggle-icon menu-item-toggle-icon--IsDrillup="true"}}
+        {{#> menu-item-text}}
+          {{{menu-list-item--text}}}
+        {{/menu-item-text}}
+      {{/menu-item-main}}
+    {{/menu-item}}
+  {{else if menu-list-item--text}}
+    {{#> menu-item}}
+      {{#> menu-item-main}}
+        {{#> menu-item-text}}
+          {{{menu-list-item--text}}}
+        {{/menu-item-text}}
+      {{/menu-item-main}}
+    {{/menu-item}}
+  {{/if}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </li>

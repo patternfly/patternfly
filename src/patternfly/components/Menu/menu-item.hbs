@@ -6,6 +6,14 @@
   {{/if}}
   {{#if menu-item--attribute}}
     {{{menu-item--attribute}}}
+  {{/if}}
+  {{!-- aria-expanded value can still be passed manually --}}
+  {{#if menu-list-item--IsExpandable}}
+    {{#if menu-item--IsExpanded}}
+      aria-expanded="true"
+    {{else}}
+      aria-expanded="false"
+    {{/if}}
   {{/if}}>
   {{> @partial-block}}
 </{{# if menu-item--IsLink}}a{{else}}button{{/if}}>
