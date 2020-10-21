@@ -135,4 +135,4 @@ In wizards
 | `.pf-c-action-list` | `<div>` | Initiates the action list container. |
 | `.pf-c-action-list__item` | `<div>` | Initiates the action list item container. |
 | `.pf-c-action-list__group` | `<div>` | Initiates the action list group container. |
-| `.pf-m-icons` | `.pf-c-action-list` | Modifies the action list to support button icons. |
+| `.pf-m-icons` | `.pf-c-action-list`, `.pf-c-action-list__group` | Modifies the action list to support button icons. |
