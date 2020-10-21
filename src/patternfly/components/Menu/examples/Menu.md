@@ -293,9 +293,7 @@ import './Menu.css'
 
 ### Drilldown
 ```hbs
-{{#> menu-js}}
-  {{> menu-drilldown-example menu-drilldown-example--id="drilldown-default"}}
-{{/menu-js}}
+{{> menu-drilldown-example menu-drilldown-example--id="drilldown-default"}}
 ```
 
 ### Drilldown level two

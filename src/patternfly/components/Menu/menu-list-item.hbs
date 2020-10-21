@@ -12,7 +12,7 @@
         {{/menu-item-main}}
       {{/menu-item}}
     {{else}}
-      {{#> menu-item menu-item--attribute='drill-down onClick="drillDown()"'}}
+      {{#> menu-item}}
         {{#> menu-item-main}}
           {{#> menu-item-text}}
             {{{menu-list-item--text}}}
@@ -22,7 +22,7 @@
       {{/menu-item}}
     {{/if}}
   {{else if menu-list-item--IsDrillUp}}
-    {{#> menu-item menu-item--attribute='drill-up onClick="drillUp()"'}}
+    {{#> menu-item}}
       {{#> menu-item-main}}
         {{> menu-item-toggle-icon menu-item-toggle-icon--IsDrillup="true"}}
         {{#> menu-item-text}}
