@@ -127,102 +127,6 @@ In wizards
 {{/action-list}}
 ```
 
-### Action list vertical
-```hbs
-{{#> action-list action-list--modifier="pf-m-vertical"}}
-  {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-primary"}}
-      Next
-    {{/button}}
-  {{/action-list-item}}
-  {{#> action-list-item}}
-    {{#> button button--modifier="pf-m-secondary"}}
-      Back
-    {{/button}}
-  {{/action-list-item}}
-{{/action-list}}
-```
-
-### Action list vertical multiple groups
-```hbs
-{{#> action-list action-list--modifier="pf-m-vertical"}}
-  {{#> action-list-group action-list-group--modifier="pf-m-vertical"}}
-    {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-primary"}}
-        Next
-      {{/button}}
-    {{/action-list-item}}
-    {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-secondary"}}
-        Back
-      {{/button}}
-    {{/action-list-item}}
-  {{/action-list-group}}
-  {{#> action-list-group action-list-group--modifier="pf-m-vertical"}}
-    {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-primary"}}
-        Submit
-      {{/button}}
-    {{/action-list-item}}
-    {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-link"}}
-        Cancel
-      {{/button}}
-    {{/action-list-item}}
-  {{/action-list-group}}
-{{/action-list}}
-```
-
-### Action list vertical in wizard
-```hbs
-2 stacked 1 below
-{{#> action-list action-list--modifier="pf-m-vertical"}}
-  {{#> action-list-group}}
-    {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-primary"}}
-        Next
-      {{/button}}
-    {{/action-list-item}}
-    {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-secondary"}}
-        Back
-      {{/button}}
-    {{/action-list-item}}
-  {{/action-list-group}}
-  {{#> action-list-group action-list-group--modifier="pf-m-vertical"}}
-    {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-link"}}
-        Cancel
-      {{/button}}
-    {{/action-list-item}}
-  {{/action-list-group}}
-{{/action-list}}
-<br/>
-<br/>
-3 stacked
-{{#> action-list action-list--modifier="pf-m-vertical"}}
-  {{#> action-list-group action-list-group--modifier="pf-m-vertical"}}
-    {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-primary"}}
-        Next
-      {{/button}}
-    {{/action-list-item}}
-    {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-secondary"}}
-        Back
-      {{/button}}
-    {{/action-list-item}}
-  {{/action-list-group}}
-  {{#> action-list-group}}
-    {{#> action-list-item}}
-      {{#> button button--modifier="pf-m-link"}}
-        Cancel
-      {{/button}}
-    {{/action-list-item}}
-  {{/action-list-group}}
-{{/action-list}}
-```
-
 ### Overview
 
 ### Usage
@@ -231,5 +135,4 @@ In wizards
 | `.pf-c-action-list` | `<div>` | Initiates the action list container. |
 | `.pf-c-action-list__item` | `<div>` | Initiates the action list item container. |
 | `.pf-c-action-list__group` | `<div>` | Initiates the action list group container. |
-| `.pf-m-vertical` | `.pf-c-action-list`, `.pf-c-action-list__group` | Modifies the action list and action list group to be vertical. |
 | `.pf-m-icons` | `.pf-c-action-list` | Modifies the action list to support button icons. |
