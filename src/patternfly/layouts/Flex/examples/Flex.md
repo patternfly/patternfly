@@ -771,8 +771,8 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 
 ### Row gap
 ```hbs
-{{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--lg);"'}}
-  {{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--sm);"'}}
+{{#> l-flex l-flex--modifier="pf-m-row-gap"}}
+  {{#> l-flex l-flex--modifier="pf-m-row-gap"}}
     {{#> l-flex-item}}
       Set 1, Item A
     {{/l-flex-item}}
@@ -792,7 +792,7 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
       Set 1, Item F
     {{/l-flex-item}}
   {{/l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--lg); --pf-l-flex--RowGap-on-xl: var(--pf-global--spacer--2xl);"'}}
+  {{#> l-flex l-flex--modifier="pf-m-row-gap"}}
     {{#> l-flex-item}}
       Set 2, Item A
     {{/l-flex-item}}
@@ -818,7 +818,7 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 ### Responsive row gap
 ```hbs
 {{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--lg); --pf-l-flex--RowGap-on-xl: var(--pf-global--spacer--2xl);"'}}
-  {{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--sm); --pf-l-flex--RowGap-on-xl: var(--pf-global--spacer--xl);"'}}
+  {{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--lg); --pf-l-flex--RowGap-on-xl: var(--pf-global--spacer--2xl);"'}}
     {{#> l-flex-item}}
       Set 1, Item A
     {{/l-flex-item}}
@@ -838,7 +838,7 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
       Set 1, Item F
     {{/l-flex-item}}
   {{/l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--sm); --pf-l-flex--RowGap-on-xl: var(--pf-global--spacer--lg);"'}}
+  {{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--lg); --pf-l-flex--RowGap-on-xl: var(--pf-global--spacer--2xl);"'}}
     {{#> l-flex-item}}
       Set 2, Item A
     {{/l-flex-item}}
