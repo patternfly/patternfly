@@ -15,7 +15,7 @@ beta: true
         <i class="fas fa-minus" aria-hidden="true"></i>
       {{/touchspin-icon}}
     {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="90"  name="textInput1" aria-label="Input touchspin" size="5"'}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="90"  name="textInput1" aria-label="Input touchspin" size="3"'}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
       {{#> touchspin-icon}}
@@ -35,7 +35,7 @@ beta: true
         <i class="fas fa-minus" aria-hidden="true"></i>
       {{/touchspin-icon}}
     {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="90"  name="textInput3" aria-label="Input touchspin" size="5"'}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="90"  name="textInput3" aria-label="Input touchspin" size="3"'}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
       {{#> touchspin-icon}}
@@ -55,7 +55,7 @@ beta: true
         <i class="fas fa-minus" aria-hidden="true"></i>
       {{/touchspin-icon}}
     {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="1.00" name="textInput5" aria-label="Input touchspin" size="5"'}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="1.00" name="textInput5" aria-label="Input touchspin" size="3"'}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
       {{#> touchspin-icon}}
@@ -75,7 +75,7 @@ beta: true
         <i class="fas fa-minus" aria-hidden="true"></i>
       {{/touchspin-icon}}
     {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="0" name="textInput7" aria-label="Input touchspin" size="5"'}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="0" name="textInput7" aria-label="Input touchspin" size="3"'}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
       {{#> touchspin-icon}}
@@ -96,7 +96,7 @@ beta: true
         <i class="fas fa-minus" aria-hidden="true"></i>
       {{/touchspin-icon}}
     {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="100" name="textInput9" aria-label="Input touchspin" size="5"'}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="100" name="textInput9" aria-label="Input touchspin" size="3"'}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus" disabled'}}
       {{#> touchspin-icon}}
@@ -117,7 +117,7 @@ beta: true
         <i class="fas fa-minus" aria-hidden="true"></i>
       {{/touchspin-icon}}
     {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="100" name="textInput9" aria-label="Input touchspin" disabled size="5"'}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="100" name="textInput9" aria-label="Input touchspin" disabled size="3"'}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus" disabled'}}
       {{#> touchspin-icon}}
@@ -138,7 +138,7 @@ beta: true
         <i class="fas fa-minus" aria-hidden="true"></i>
       {{/touchspin-icon}}
     {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="1234567"  name="textInput1" aria-label="Input touchspin" size="9"'}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="1234567"  name="textInput1" aria-label="Input touchspin" size="7"'}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
       {{#> touchspin-icon}}
@@ -156,7 +156,43 @@ beta: true
         <i class="fas fa-minus" aria-hidden="true"></i>
       {{/touchspin-icon}}
     {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="1234567890"  name="textInput1" aria-label="Input touchspin" size="13"'}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="1234567890"  name="textInput1" aria-label="Input touchspin" size="10"'}}
+    {{/form-control}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+      {{#> touchspin-icon}}
+        <i class="fas fa-plus" aria-hidden="true"></i>
+      {{/touchspin-icon}}
+    {{/button}}
+  {{/input-group}}
+{{/touchspin}}
+<br/>
+<br/>
+{{#> touchspin}}
+  {{#> input-group}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+      {{#> touchspin-icon}}
+        <i class="fas fa-minus" aria-hidden="true"></i>
+      {{/touchspin-icon}}
+    {{/button}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="5"  name="textInput1" aria-label="Input touchspin" size="5"'}}
+    {{/form-control}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+      {{#> touchspin-icon}}
+        <i class="fas fa-plus" aria-hidden="true"></i>
+      {{/touchspin-icon}}
+    {{/button}}
+  {{/input-group}}
+{{/touchspin}}
+<br/>
+<br/>
+{{#> touchspin}}
+  {{#> input-group}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+      {{#> touchspin-icon}}
+        <i class="fas fa-minus" aria-hidden="true"></i>
+      {{/touchspin-icon}}
+    {{/button}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="12345"  name="textInput1" aria-label="Input touchspin" size="5"'}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
       {{#> touchspin-icon}}
