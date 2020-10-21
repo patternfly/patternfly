@@ -128,6 +128,31 @@ beta: true
 {{/touchspin}}
 ```
 
+### Disabled
+```hbs
+{{#> touchspin}}
+  {{#> input-group}}
+    {{#> touchspin-control}}
+      {{#> button button--modifier="pf-m-control" button--attribute='id="controlButton17" aria-label="Minus" disabled'}}
+        {{#> touchspin-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/touchspin-icon}}
+      {{/button}}
+    {{/touchspin-control}}
+    {{#> form-control controlType="input" input="true" form-control--attribute='type="text" value="100" id="textInput9" name="textInput9" aria-label="Input touchspin" disabled'}}
+    {{/form-control}}
+    {{#> touchspin-control}}
+      {{#> button button--modifier="pf-m-control" button--attribute='id="controlButton18" aria-label="Plus" disabled'}}
+        {{#> touchspin-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/touchspin-icon}}
+      {{/button}}
+    {{/touchspin-control}}
+  {{/input-group}}
+  {{#> touchspin-units}}%{{/touchspin-units}}
+{{/touchspin}}
+```
+
 ## Documentation
 ### Overview
 
