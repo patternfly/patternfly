@@ -64,35 +64,6 @@ beta: true
 {{/jump-links}}
 ```
 
-### Horizontal with background
-```hbs
-{{#> jump-links jump-links--modifier="pf-m-background pf-m-center" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-list}}
-    {{#> jump-links-item}}
-      {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
-          Inactive section
-        {{/jump-links-item-text}}
-      {{/jump-links-link}}
-    {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
-      {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
-          Active section
-        {{/jump-links-item-text}}
-      {{/jump-links-link}}
-    {{/jump-links-item}}
-    {{#> jump-links-item}}
-      {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
-          Inactive section
-        {{/jump-links-item-text}}
-      {{/jump-links-link}}
-    {{/jump-links-item}}
-  {{/jump-links-list}}
-{{/jump-links}}
-```
-
 ### Horizontal with label
 ```hbs
 {{#> jump-links jump-links--attribute='aria-label="Local"'}}
@@ -126,69 +97,7 @@ beta: true
   {{/jump-links-main}}
 {{/jump-links}}
 <br/>
-{{#> jump-links jump-links--modifier="pf-m-background" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-main}}
-    {{#> jump-links-label}}
-      Jump to section
-    {{/jump-links-label}}
-    {{#> jump-links-list}}
-      {{#> jump-links-item}}
-        {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
-            Inactive section
-          {{/jump-links-item-text}}
-        {{/jump-links-link}}
-      {{/jump-links-item}}
-      {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
-        {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
-            Active section
-          {{/jump-links-item-text}}
-        {{/jump-links-link}}
-      {{/jump-links-item}}
-      {{#> jump-links-item}}
-        {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
-            Inactive section
-          {{/jump-links-item-text}}
-        {{/jump-links-link}}
-      {{/jump-links-item}}
-    {{/jump-links-list}}
-  {{/jump-links-main}}
-{{/jump-links}}
-<br/>
 {{#> jump-links jump-links--modifier="pf-m-center" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-main}}
-    {{#> jump-links-label}}
-      Jump to section
-    {{/jump-links-label}}
-    {{#> jump-links-list}}
-      {{#> jump-links-item}}
-        {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
-            Inactive section
-          {{/jump-links-item-text}}
-        {{/jump-links-link}}
-      {{/jump-links-item}}
-      {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
-        {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
-            Active section
-          {{/jump-links-item-text}}
-        {{/jump-links-link}}
-      {{/jump-links-item}}
-      {{#> jump-links-item}}
-        {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
-            Inactive section
-          {{/jump-links-item-text}}
-        {{/jump-links-link}}
-      {{/jump-links-item}}
-    {{/jump-links-list}}
-  {{/jump-links-main}}
-{{/jump-links}}
-<br/>
-{{#> jump-links jump-links--modifier="pf-m-background pf-m-center" jump-links--attribute='aria-label="Local"'}}
   {{#> jump-links-main}}
     {{#> jump-links-label}}
       Jump to section
@@ -328,17 +237,23 @@ beta: true
         {{#> jump-links-item-text}}
           Active expandable section
         {{/jump-links-item-text}}
-        {{#> jump-links-link jump-links-link--modifier="pf-m-subsection"}}
-          {{#> jump-links-item-text}}
-            Inactive subsection
-          {{/jump-links-item-text}}
-        {{/jump-links-link}}
-        {{#> jump-links-link jump-links-link--modifier="pf-m-subsection pf-m-current"}}
-          {{#> jump-links-item-text}}
-            Active subsection
-          {{/jump-links-item-text}}
-        {{/jump-links-link}}
       {{/jump-links-link}}
+        {{#> jump-links-list newcontext}}
+          {{#> jump-links-item}}
+            {{#> jump-links-link jump-links-link--modifier="pf-m-subsection"}}
+              {{#> jump-links-item-text}}
+                Inactive subsection
+              {{/jump-links-item-text}}
+            {{/jump-links-link}}
+          {{/jump-links-item}}
+          {{#> jump-links-item}}
+            {{#> jump-links-link jump-links-link--modifier="pf-m-subsection pf-m-current"}}
+              {{#> jump-links-item-text}}
+                Active subsection
+              {{/jump-links-item-text}}
+            {{/jump-links-link}}
+          {{/jump-links-item}}
+        {{/jump-links-list}}
     {{/jump-links-item}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
