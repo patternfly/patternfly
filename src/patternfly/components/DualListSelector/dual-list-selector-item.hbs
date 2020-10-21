@@ -1,0 +1,11 @@
+<{{#if dual-list-selector-item--type}}{{dual-list-selector-item--type}}{{else}}button{{/if}} class="pf-c-dual-list-selector__item{{#if dual-list-selector-item--modifier}} {{dual-list-selector-item--modifier}}{{/if}}"
+  {{#unless dual-list-selector-item--type}}
+    type="button"
+  {{/unless}}
+  {{#if dual-list-selector-item--attribute}}
+    {{dual-list-selector-item--attribute}}
+  {{/if}}>
+  {{#> dual-list-selector-item-main}}
+    {{>@partial-block}}
+  {{/dual-list-selector-item-main}}
+</{{#if dual-list-selector-item--type}}{{dual-list-selector-item--type}}{{else}}button{{/if}}>
