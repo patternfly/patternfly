@@ -1,7 +1,4 @@
 .pf-c-jump-links {
-  --pf-c-jump-links--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-jump-links--PaddingLeft: var(--pf-global--spacer--lg);
-
   // list
   --pf-c-jump-links__list--PaddingTop: 0;
   --pf-c-jump-links__list--PaddingRight: var(--pf-global--spacer--md);
@@ -53,7 +50,7 @@
   --pf-c-jump-links__item--m-current__link-text--Color: var(--pf-global--Color--100);
 
   // label
-  --pf-c-jump-links__label--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-jump-links__label--MarginBottom: var(--pf-global--spacer--md);
 
   display: flex;
 
@@ -141,8 +138,6 @@
 
 // stylelint-disable
 .pf-c-jump-links__item {
-  list-style: none;
-
   &.pf-m-current {
     .pf-c-jump-links__link {
       --pf-c-jump-links__link--before--BorderTopWidth: var(--pf-c-jump-links__item--m-current__link--before--BorderTopWidth);
@@ -156,11 +151,10 @@
 
 .pf-c-jump-links__link-text {
   color: var(--pf-c-jump-links__link-text--Color);
-  text-align: left;
 }
 
 .pf-c-jump-links__label {
-  padding-bottom: var(--pf-c-jump-links__label--PaddingBottom);
+  margin-bottom: var(--pf-c-jump-links__label--MarginBottom);
 }
 
 .pf-c-jump-links__main {
