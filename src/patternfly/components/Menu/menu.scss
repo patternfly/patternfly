@@ -97,7 +97,7 @@
   --pf-c-menu--m-drilldown--c-menu--Transition: transform var(--pf-c-menu--m-drilldown--c-menu--TransitionDuration--transform), visibility var(--pf-c-menu--m-drilldown--c-menu--TransitionDuration--visibility);
 
   // Drilldown list
-  --pf-c-menu--m-drilldown__list--TransitionDuration--transform: transform var(--pf-global--TransitionDuration);
+  --pf-c-menu--m-drilldown__list--TransitionDuration--transform: var(--pf-global--TransitionDuration);
   --pf-c-menu--m-drilldown__list--Transition: transform var(--pf-c-menu--m-drilldown__list--TransitionDuration--transform);
 
   // Drilled in
