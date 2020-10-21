@@ -5,12 +5,17 @@
   // icon
   --pf-c-touchspin__icon--FontSize: var(--pf-global--FontSize--xs);
 
+  // form control
+  --pf-c-touchspin--c-form-control--width-base: calc(var(--pf-global--spacer--sm) * 2); // element's padding
+  --pf-c-touchspin--c-form-control--width-chars: 4;
+  --pf-c-touchspin--c-form-control--Width: calc(var(--pf-c-touchspin--c-form-control--width-base) + var(--pf-c-touchspin--c-form-control--width-chars) * 1ch);
+
   display: inline-flex;
   align-items: center;
 
   .pf-c-form-control {
     display: inline-flex;
-    width: auto;
+    width: var(--pf-c-touchspin--c-form-control--Width);
     text-align: right;
   }
 }
