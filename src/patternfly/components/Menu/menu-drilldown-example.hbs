@@ -7,18 +7,18 @@
       {{#> menu-list-item menu-list-item--IsCurrentPath=menu-drilldown-example--IsDrilledIn--list-1 menu-list-item--IsExpandable="true" menu-item--IsExpanded=menu-drilldown-example--IsDrilledIn--list-1 menu-list-item--text="Edit" menu-list-item--IsDrillDown="true"}}
         {{#> menu menu--IsSubmenu="true" menu--IsDrilledIn=menu-drilldown-example--IsDrilledIn--list-2 menu--modifier="" menu--id=(concat menu-drilldown-example--id  '-list-1') menu--attribute=''}}
           {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Edit" menu-item--attribute='tabindex="0"'}}
-          {{> divider type="li"}}
+          {{> divider divider--type="li"}}
           {{#> menu-list-item menu-list-item--IsCurrentPath=menu-drilldown-example--IsDrilledIn--list-2 menu-list-item--IsExpandable="true" menu-item--IsExpanded=menu-drilldown-example--IsDrilledIn--list-2 menu-list-item--text="Deployment" menu-list-item--IsDrillDown="true"}}
             {{#> menu menu--id=(concat menu-drilldown-example--id  '-list-1-1') menu--IsSubmenu="true" menu--IsDrilledIn=menu-drilldown-example--IsDrilledIn--list-3 menu-item--IsExpanded=menu-drilldown-example--IsDrilledIn--list-3}}
               {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Deployment" menu-item--attribute='tabindex="0"'}}
-              {{> divider type="li"}}
+              {{> divider divider--type="li"}}
               {{> menu-list-item newcontext menu-list-item--text="Routes"}}
               {{> menu-list-item newcontext menu-list-item--text="Nodes"}}
               {{> menu-list-item newcontext menu-list-item--text="URLs"}}
               {{#> menu-list-item menu-list-item--IsExpandable="true" menu-list-item--IsCurrentPath=menu-drilldown-example--IsDrilledIn--list-3 menu-list-item--IsExpandable="true" menu-list-item--text="Advanced settings" menu-list-item--IsDrillDown="true"}}
                 {{#> menu menu--id=(concat menu-drilldown-example--id  '-list-1-1-1') menu--IsSubmenu="true" menu--IsDrilledInReset="true"}}
                   {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Advanced settings" menu-item--attribute='tabindex="0"'}}
-                  {{> divider type="li"}}
+                  {{> divider divider--type="li"}}
                   {{> menu-list-item newcontext menu-list-item--text="Reports"}}
                   {{> menu-list-item newcontext menu-list-item--text="Policies"}}
                   {{> menu-list-item newcontext menu-list-item--text="Systems"}}
@@ -29,7 +29,7 @@
           {{#> menu-list-item menu-list-item--IsCurrentReset="true" menu-list-item--IsExpandable="true" menu-item--IsExpanded="" menu-list-item--text="RBAC" menu-list-item--IsDrillDown="true"}}
             {{#> menu menu--id=(concat menu-drilldown-example--id  '-list-1-2') menu--IsSubmenu="true" menu--IsDrilledInReset="true"}}
               {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="RBAC"}}
-              {{> divider type="li"}}
+              {{> divider divider--type="li"}}
               {{> menu-list-item newcontext menu-list-item--text="Reports"}}
               {{> menu-list-item newcontext menu-list-item--text="Policies"}}
               {{> menu-list-item newcontext menu-list-item--text="Systems"}}
@@ -41,11 +41,11 @@
       {{#> menu-list-item menu--IsDrilledInReset="true" menu-list-item--IsExpandable="true" menu-list-item--text="Configuration" menu-list-item--IsDrillDown="true"}}
         {{#> menu menu--IsSubmenu="true" menu--modifier="" menu--id=(concat menu-drilldown-example--id  '-list-2') menu--attribute=''}}
           {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Configuration"}}
-          {{> divider type="li"}}
+          {{> divider divider--type="li"}}
           {{#> menu-list-item menu-list-item--IsExpandable="true" menu-list-item--text="Profile" menu-list-item--IsDrillDown="true"}}
             {{#> menu menu--IsSubmenu="true" menu--modifier="" menu--id=(concat menu-drilldown-example--id  '-list-2-1') menu--attribute=''}}
               {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Profile"}}
-              {{> divider type="li"}}
+              {{> divider divider--type="li"}}
               {{> menu-list-item newcontext menu-list-item--text="Avatar"}}
               {{> menu-list-item newcontext menu-list-item--text="Name"}}
               {{> menu-list-item newcontext menu-list-item--text="Title"}}
@@ -57,7 +57,7 @@
           {{#> menu-list-item menu-list-item--IsExpandable="true" menu-list-item--text="Edit access settings" menu-list-item--IsDrillDown="true"}}
             {{#> menu menu--IsSubmenu="true" menu--modifier="" menu--id=(concat menu-drilldown-example--id  '-list-2-2') menu--attribute=''}}
               {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Edit access settings"}}
-              {{> divider type="li"}}
+              {{> divider divider--type="li"}}
               {{> menu-list-item newcontext menu-list-item--text="Global access"}}
               {{> menu-list-item newcontext menu-list-item--text="Account access"}}
             {{/menu}}
