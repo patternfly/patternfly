@@ -1,0 +1,27 @@
+.pf-c-action-list {
+  --pf-c-action-list--spacer: var(--pf-global--spacer--md);
+  --pf-c-action-list__group--group--spacer: calc(var(--pf-global--spacer--2xl) - var(--pf-global--spacer--md));
+  --pf-c-action-list__group--item--spacer: calc(var(--pf-global--spacer--2xl) - var(--pf-global--spacer--md));
+}
+
+.pf-c-action-list,
+.pf-c-action-list__group {
+  display: flex;
+
+  > *:not(:last-child) {
+    margin-right: var(--pf-c-action-list--spacer);
+  }
+
+  &.pf-m-icons {
+    --pf-c-action-list--spacer: 0;
+  }
+
+  + .pf-c-action-list__group {
+    margin-left: var(--pf-c-action-list__group--group--spacer);
+  }
+
+  + .pf-c-action-list__item {
+    margin-left: var(--pf-c-action-list__group--item--spacer);
+  }
+}
+
