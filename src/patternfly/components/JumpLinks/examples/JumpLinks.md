@@ -12,23 +12,23 @@ beta: true
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Active section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
   {{/jump-links-list}}
@@ -41,23 +41,23 @@ beta: true
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Active section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
   {{/jump-links-list}}
@@ -74,23 +74,23 @@ beta: true
     {{#> jump-links-list}}
       {{#> jump-links-item}}
         {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
+          {{#> jump-links-link-text}}
             Inactive section
-          {{/jump-links-item-text}}
+          {{/jump-links-link-text}}
         {{/jump-links-link}}
       {{/jump-links-item}}
       {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
         {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
+          {{#> jump-links-link-text}}
             Active section
-          {{/jump-links-item-text}}
+          {{/jump-links-link-text}}
         {{/jump-links-link}}
       {{/jump-links-item}}
       {{#> jump-links-item}}
         {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
+          {{#> jump-links-link-text}}
             Inactive section
-          {{/jump-links-item-text}}
+          {{/jump-links-link-text}}
         {{/jump-links-link}}
       {{/jump-links-item}}
     {{/jump-links-list}}
@@ -105,23 +105,23 @@ beta: true
     {{#> jump-links-list}}
       {{#> jump-links-item}}
         {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
+          {{#> jump-links-link-text}}
             Inactive section
-          {{/jump-links-item-text}}
+          {{/jump-links-link-text}}
         {{/jump-links-link}}
       {{/jump-links-item}}
       {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
         {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
+          {{#> jump-links-link-text}}
             Active section
-          {{/jump-links-item-text}}
+          {{/jump-links-link-text}}
         {{/jump-links-link}}
       {{/jump-links-item}}
       {{#> jump-links-item}}
         {{#> jump-links-link}}
-          {{#> jump-links-item-text}}
+          {{#> jump-links-link-text}}
             Inactive section
-          {{/jump-links-item-text}}
+          {{/jump-links-link-text}}
         {{/jump-links-link}}
       {{/jump-links-item}}
     {{/jump-links-list}}
@@ -135,37 +135,37 @@ beta: true
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Active section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
   {{/jump-links-list}}
@@ -181,99 +181,37 @@ beta: true
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Active section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
+        {{#> jump-links-link-text}}
           Inactive section
-        {{/jump-links-item-text}}
-      {{/jump-links-link}}
-    {{/jump-links-item}}
-  {{/jump-links-list}}
-{{/jump-links}}
-```
-
-### Vertical with subsections
-```hbs
-{{#> jump-links jump-links--modifier="pf-m-vertical" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-label}}
-    Jump to section
-  {{/jump-links-label}}
-  {{#> jump-links-list}}
-    {{#> jump-links-item}}
-      {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
-          Inactive section
-        {{/jump-links-item-text}}
-      {{/jump-links-link}}
-    {{/jump-links-item}}
-    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
-      {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
-          Active expandable section
-        {{/jump-links-item-text}}
-      {{/jump-links-link}}
-        {{#> jump-links-list newcontext}}
-          {{#> jump-links-item}}
-            {{#> jump-links-link jump-links-link--modifier="pf-m-subsection"}}
-              {{#> jump-links-item-text}}
-                Inactive subsection
-              {{/jump-links-item-text}}
-            {{/jump-links-link}}
-          {{/jump-links-item}}
-          {{#> jump-links-item}}
-            {{#> jump-links-link jump-links-link--modifier="pf-m-subsection pf-m-current"}}
-              {{#> jump-links-item-text}}
-                Active subsection
-              {{/jump-links-item-text}}
-            {{/jump-links-link}}
-          {{/jump-links-item}}
-        {{/jump-links-list}}
-    {{/jump-links-item}}
-    {{#> jump-links-item}}
-      {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
-          Inactive section
-        {{/jump-links-item-text}}
-      {{/jump-links-link}}
-    {{/jump-links-item}}
-    {{#> jump-links-item}}
-      {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
-          Inactive section
-        {{/jump-links-item-text}}
-      {{/jump-links-link}}
-    {{/jump-links-item}}
-    {{#> jump-links-item}}
-      {{#> jump-links-link}}
-        {{#> jump-links-item-text}}
-          Inactive section
-        {{/jump-links-item-text}}
+        {{/jump-links-link-text}}
       {{/jump-links-link}}
     {{/jump-links-item}}
   {{/jump-links-list}}
@@ -297,10 +235,8 @@ beta: true
 | `.pf-c-jump-links__item` | `<li>` | Initiates the jump links list item. |
 | `.pf-c-jump-links__link` | `<button>` | Initiates the jump links link. |
 | `.pf-c-jump-links__label` | `<div>` | Initiates the jump links label. |
-| `.pf-c-jump-links__item-text` | `<div>` | Initiates the jump links item text. |
+| `.pf-c-jump-links__link-text` | `<div>` | Initiates the jump links link text. |
 | `.pf-m-vertical` | `.pf-c-jump-links` | Modifies the jump links component to be vertical. |
-| `.pf-m-current` | `.pf-c-jump-links__item`, `.pf-c-jump-links__link.pf-m-subsection` | Modifies the jump links item to be current. |
-| `.pf-m-subsection` | `.pf-c-jump-links__link` | Modifies the jump links link to be a subsection. |
-| `.pf-m-background` | `.pf-c-jump-links` | Modifies the jump links component to have a background. |
+| `.pf-m-current` | `.pf-c-jump-links__item`| Modifies the jump links item to be current. |
 | `.pf-m-center` | `.pf-c-jump-links` | Modifies the jump links component to center its list and label. |
 
