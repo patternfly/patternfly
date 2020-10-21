@@ -39,6 +39,7 @@
   --pf-c-dual-list-selector__item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-dual-list-selector__item--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-dual-list-selector__item--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-dual-list-selector__item--FontSize: var(--pf-global--FontSize--sm);
 
   // Item text
   --pf-c-dual-list-selector__item-text--Color: var(--pf-global--Color--100);
@@ -159,6 +160,7 @@
 
 .pf-c-dual-list-selector__item {
   padding: var(--pf-c-dual-list-selector__item--PaddingTop) var(--pf-c-dual-list-selector__item--PaddingRight) var(--pf-c-dual-list-selector__item--PaddingBottom) var(--pf-c-dual-list-selector__item--PaddingLeft);
+  font-size: var(--pf-c-dual-list-selector__item--FontSize);
   text-align: left;
   border: 0;
 }
