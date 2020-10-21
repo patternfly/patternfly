@@ -1,7 +1,7 @@
 .pf-c-action-list {
   --pf-c-action-list--spacer: var(--pf-global--spacer--md);
   --pf-c-action-list__group-group--spacer: calc(var(--pf-global--spacer--2xl) - var(--pf-global--spacer--md));
-  --pf-c-action-list__group-group--m-vertical--Gap: var(--pf-global--spacer--lg);
+  --pf-c-action-list__group-group--m-vertical--spacer: var(--pf-global--spacer--lg);
   --pf-c-action-list--m-vertical--spacer: var(--pf-global--spacer--sm);
 
   &.pf-m-icons {
@@ -35,7 +35,7 @@
     + .pf-c-action-list__item {
       --pf-c-action-list__group-group--spacer: 0;
 
-      margin-top: var(--pf-c-action-list__group-group--m-vertical--Gap);
+      margin-top: var(--pf-c-action-list__group-group--m-vertical--spacer);
       margin-left: 0;
     }
   }
