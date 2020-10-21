@@ -1,12 +1,6 @@
 .pf-c-touchspin {
-  // main
-  --pf-c-touchspin__main--m-active--c-form-control--Color: var(--pf-global--Color--100);
-
-  // units
-  --pf-c-touchspin__main--c-input-group--MarginLeft: var(--pf-global--spacer--sm);
-
-  // control
-  --pf-c-touchspin__control--m-threshold--c-button--Color: var(--pf-global--disabled-color--100);
+  // unit
+  --pf-c-touchspin__unit--c-input-group--MarginLeft: var(--pf-global--spacer--sm);
 
   // icon
   --pf-c-touchspin__icon--FontSize: var(--pf-global--FontSize--xs);
@@ -18,24 +12,14 @@
   align-items: center;
 
   .pf-c-form-control {
-    display: inline;
     max-width: var(--pf-c-touchspin--c-form-control--MaxWidth);
     text-align: right;
   }
 }
 
-.pf-c-input-group + .pf-c-touchspin__units,
-.pf-c-touchspin__units + .pf-c-input-group {
-  margin-left: var(--pf-c-touchspin__main--c-input-group--MarginLeft);
-}
-
-.pf-c-touchspin__control {
-  .pf-c-button {
-    &:disabled {
-      color: var(--pf-c-touchspin__control--m-threshold--c-button--Color);
-      pointer-events: none;
-    }
-  }
+.pf-c-input-group + .pf-c-touchspin__unit,
+.pf-c-touchspin__unit + .pf-c-input-group {
+  margin-left: var(--pf-c-touchspin__unit--c-input-group--MarginLeft);
 }
 
 .pf-c-touchspin__icon {
