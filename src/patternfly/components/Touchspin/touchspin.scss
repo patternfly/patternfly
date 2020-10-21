@@ -5,14 +5,12 @@
   // icon
   --pf-c-touchspin__icon--FontSize: var(--pf-global--FontSize--xs);
 
-  // form control
-  --pf-c-touchspin--c-form-control--MaxWidth: #{pf-size-prem(70px)};
-
   display: inline-flex;
   align-items: center;
 
   .pf-c-form-control {
-    max-width: var(--pf-c-touchspin--c-form-control--MaxWidth);
+    display: inline-flex;
+    width: auto;
     text-align: right;
   }
 }
