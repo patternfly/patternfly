@@ -166,6 +166,10 @@
       font-size: var(--pf-c-data-list--m-compact__check--FontSize);
     }
   }
+
+  &.pf-m-drag-over {
+    overflow-anchor: none;
+  }
 }
 
 .pf-c-data-list,
