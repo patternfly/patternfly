@@ -489,7 +489,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__main-section,
 .pf-c-page__main-group,
 .pf-c-page__main-wizard {
-  &:last-of-type,
+  &:last-child,
   &:only-child,
   &.pf-m-fill {
     flex-grow: 1;
