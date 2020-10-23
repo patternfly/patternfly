@@ -22,7 +22,7 @@ section: components
 
 ### Expanded attention
 ```hbs isFullscreen
-{{> notification-drawer-demo id="drawer-expanded-attention" page-template-header-tools-notification-badge--badge--modifier="pf-m-attention" drawer-panel--IsOpen="true"}}
+{{> notification-drawer-demo id="drawer-expanded-attention" page-template-header-tools-notification-badge--badge--modifier="pf-m-attention" page-header-tools--IsAttention="true" drawer-panel--IsOpen="true"}}
 ```
 
 ### Expanded with groups
