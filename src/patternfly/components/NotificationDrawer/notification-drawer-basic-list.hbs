@@ -1,5 +1,5 @@
 {{#> notification-drawer-list}}
-  {{#> notification-drawer-list-item notification-drawer-list-item--IsInfo="true"}}
+  {{#> notification-drawer-list-item notification-drawer-list-item--IsInfo="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
     {{#> notification-drawer-list-item-header}}
       {{> notification-drawer-list-item-header-icon}}
       {{#> notification-drawer-list-item-header-title}}
@@ -16,7 +16,7 @@
       5 minutes ago
     {{/notification-drawer-list-item-timestamp}}
   {{/notification-drawer-list-item}}
-  {{#> notification-drawer-list-item notification-drawer-list-item--IsDanger="true"}}
+  {{#> notification-drawer-list-item notification-drawer-list-item--IsDanger="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
     {{#> notification-drawer-list-item-header}}
       {{> notification-drawer-list-item-header-icon}}
       {{#> notification-drawer-list-item-header-title}}
@@ -33,7 +33,7 @@
       10 minutes ago
     {{/notification-drawer-list-item-timestamp}}
   {{/notification-drawer-list-item}}
-  {{#> notification-drawer-list-item notification-drawer-list-item--IsDefault="true"}}
+  {{#> notification-drawer-list-item notification-drawer-list-item--IsDefault="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
     {{#> notification-drawer-list-item-header}}
       {{> notification-drawer-list-item-header-icon}}
       {{#> notification-drawer-list-item-header-title}}
