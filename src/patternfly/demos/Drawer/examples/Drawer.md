@@ -8,37 +8,22 @@ wrapperTag: div
 
 ### Collapsed
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-default" notification-badge--modifier="pf-m-read"}}
+{{> drawer-demo-default id="drawer-collapsed"}}
 ```
 
 ### Expanded
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-default-expanded" notification-badge--modifier="pf-m-read" drawer-panel--IsOpen="true"}}
+{{> drawer-demo-default id="drawer-expanded" drawer-panel--IsOpen="true"}}
 ```
 
 ### Expanded bottom
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-default-expanded" notification-badge--modifier="pf-m-read" drawer-panel--IsOpen="true" drawer-demo-content-drawer--modifier="pf-m-panel-bottom"}}
+{{> drawer-demo-default id="drawer-expanded-bottom" drawer-panel--IsOpen="true" drawer-demo-content-drawer--modifier="pf-m-panel-bottom"}}
 ```
 
-### Unread
+### Expanded left
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-unread" notification-badge--modifier="pf-m-unread"}}
-```
-
-### Unread expanded
-```hbs isFullscreen
-{{> drawer-demo-default id="drawer-unread-expanded" notification-badge--modifier="pf-m-unread" drawer-panel--IsOpen="true"}}
-```
-
-### Attention
-```hbs isFullscreen
-{{> drawer-demo-default id="drawer-attention" notification-badge--modifier="pf-m-attention" page-header-tools--IsAttention="true"}}
-```
-
-### Attention expanded
-```hbs isFullscreen
-{{> drawer-demo-default id="drawer-attention-expanded" notification-badge--modifier="pf-m-attention pf-m-unread" drawer-panel--IsOpen="true" page-header-tools--IsAttention="true"}}
+{{> drawer-demo-default id="drawer-expanded-left" drawer-panel--IsOpen="true" drawer-demo-content-drawer--modifier="pf-m-panel-left"}}
 ```
 
 ## Documentation
