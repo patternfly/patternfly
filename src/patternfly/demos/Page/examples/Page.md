@@ -30,7 +30,7 @@ wrapperTag: div
     {{#> page-header-brand}}
       {{#> page-header-brand-link page-header-brand-link--href="#"}}
         {{> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}
-        <span class="pf-c-brand-text">
+        <span class="pf-c-brand__text" style='--pf-c-page__header-brand-link--c-brand__text--MarginTop: -10px; --pf-c-page__header-brand-link--c-brand__text--MarginLeft: 50px;'>
           subtext
         </span>
       {{/page-header-brand-link}}
