@@ -3,6 +3,46 @@ id: Release notes
 section: get-started
 releaseNoteTOC: true
 ---
+## 2020.14 release notes (2020-10-27)
+Packages released:
+- [@patternfly/patternfly@v4.59.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.59.1)
+
+### Components
+- **Action list:** Added action list component ([#3598](https://github.com/patternfly/patternfly/pull/3598))
+- **Card:** Added expandable variation ([#3586](https://github.com/patternfly/patternfly/pull/3586))
+- **Data list:**
+  - Added variation to avoid shift when item is dragged over ([#3574](https://github.com/patternfly/patternfly/pull/3574))
+- **Dual list selector:** Added dual list selector component ([#3605](https://github.com/patternfly/patternfly/pull/3605))
+- **Expandable section:** Fixed nested component icon transform ([#3545](https://github.com/patternfly/patternfly/pull/3545))
+- **Form control:**
+  - Updated placeholder block so the color change applies ([#3579](https://github.com/patternfly/patternfly/pull/3579))
+  - Updated select arrow to align with other menu toggles ([#3581](https://github.com/patternfly/patternfly/pull/3581))
+- **Gallery:** Added width variable ([#3549](https://github.com/patternfly/patternfly/pull/3549))
+- **Grid:** Updated order CSS to use mixin ([#3584](https://github.com/patternfly/patternfly/pull/3584))
+- **Jump links:** Added jump links component ([#3596](https://github.com/patternfly/patternfly/pull/3596))
+- **Menu:** Added drilldown menu ([#3438](https://github.com/patternfly/patternfly/pull/3438))
+- **Modal:**
+  - Right aligned help button, aligned with close button ([#3603](https://github.com/patternfly/patternfly/pull/3603))
+  - Increased space between close button and what preceedes it ([#3588](https://github.com/patternfly/patternfly/pull/3588))
+- **Page:** Made last child fill available space, not last-of-type ([#3609](https://github.com/patternfly/patternfly/pull/3609))
+- **Pagination:** Updated sticky examples with content ([#3538](https://github.com/patternfly/patternfly/pull/3538))
+- **Table:**
+  - Removed compound expansion active border ([#3421](https://github.com/patternfly/patternfly/pull/3421))
+  - Added examples with multiple expandable cells ([#3573](https://github.com/patternfly/patternfly/pull/3573))
+  - Added favorites ([#3594](https://github.com/patternfly/patternfly/pull/3594))
+- **Toggle group:** Updated button height to match other form elements ([#3576](https://github.com/patternfly/patternfly/pull/3576))
+- **Toolbar:** Added support for expand all button ([#3601](https://github.com/patternfly/patternfly/pull/3601))
+- **Touchspin:** Added touchspin component ([#3604](https://github.com/patternfly/patternfly/pull/3604))
+- **Tree view:** Moved actions element out of node ([#3593](https://github.com/patternfly/patternfly/pull/3593))
+- **Description list:** Added auto-fit varition ([#3553](https://github.com/patternfly/patternfly/pull/3553))
+
+### Other
+- **Build:** Stopped uploading artifacts ([#3542](https://github.com/patternfly/patternfly/pull/3542))
+- **SCSS:**
+  - Added quotes around sass vars to retain quotes when compiled ([#3582](https://github.com/patternfly/patternfly/pull/3582))
+  - Added css var stack responsive mixin ([#3583](https://github.com/patternfly/patternfly/pull/3583))
+
+
 ## 2020.13 release notes (2020-10-06)
 Packages released:
 - [@patternfly/patternfly@v4.50.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.50.4)
