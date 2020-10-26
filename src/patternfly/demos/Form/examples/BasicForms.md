@@ -18,7 +18,7 @@ section: components
   {{/form-group}}
   {{#> form-group form-group--id="-email"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id) required="true"}}Email{{/form-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Email{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
