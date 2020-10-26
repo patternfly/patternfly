@@ -1,7 +1,7 @@
 {{#> page-header-tools}}
   {{#> page-header-tools-group}}
     {{> page-template-header-tools-notification-badge page-template-header-tools-notification-badge--item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-    {{#> page-header-tools-item page-header-tools-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
+    {{#> page-header-tools-item page-header-tools-item--modifier=(concat "pf-m-hidden pf-m-visible-on-lg " page-template-header-tools-elements--item-settings--modifier)}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Settings"'}}
         <i class="fas fa-cog" aria-hidden="true"></i>
       {{/button}}
