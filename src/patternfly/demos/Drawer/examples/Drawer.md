@@ -21,10 +21,5 @@ wrapperTag: div
 {{> drawer-demo-default id="drawer-expanded-bottom" drawer-panel--IsOpen="true" drawer-demo-content-drawer--modifier="pf-m-panel-bottom"}}
 ```
 
-### Expanded left
-```hbs isFullscreen
-{{> drawer-demo-default id="drawer-expanded-left" drawer-panel--IsOpen="true" drawer-demo-content-drawer--modifier="pf-m-panel-left"}}
-```
-
 ## Documentation
 This demo implements the drawer in context of the page component.
