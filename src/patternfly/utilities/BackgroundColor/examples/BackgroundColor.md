@@ -1,6 +1,7 @@
 ---
 id: Background color
 section: utilities
+beta: true
 ---
 
 ## Examples
