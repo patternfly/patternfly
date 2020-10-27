@@ -3,8 +3,6 @@ id: Background color
 section: utilities
 ---
 
-import './BackgroundColor.css'
-
 ## Examples
 
 ### White
