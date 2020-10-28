@@ -7,16 +7,16 @@ cssPrefix: pf-c-form
 ## Examples
 ### Vertically aligned labels
 ```hbs
-{{#> form form--id="vertical-align-labels"}}
-  {{#> form-group}}
+{{#> form form--id="form-vertical"}}
+  {{#> form-group form-group--id="-name"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-name"') required="true"}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
         Name
       {{/form-label}}
       {{> form-group-label-help}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-form-name" name="' form--id '-form-name" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
 {{/form}}
@@ -24,53 +24,43 @@ cssPrefix: pf-c-form
 
 ### Horizontally aligned labels
 ```hbs
-{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-1"}}
-  {{#> form-group}}
+{{#> form form--modifier="pf-m-horizontal" form--id="form-horizontal"}}
+  {{#> form-group form-group--id="-name"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-name"') required="true"}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
         Name
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-form-name" name="' form--id '-form-name" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-{{/form}}
-
-<br>
-
-{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-2"}}
-  {{#> form-group}}
+  {{#> form-group form-group--id="-info"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-name"')}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
         Information
       {{/form-label}}
       {{> form-group-label-help}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="textarea" form-control--attribute=(concat 'type="text" id="' form--id '-form-name-2" name="' form--id '-form-name-2" aria-label="textarea example"')}}{{/form-control}}
+      {{#> form-control controlType="textarea" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Textarea example"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-{{/form}}
-
-<br />
-
-{{#> form form--modifier="pf-m-horizontal" form--id="horizontal-align-labels-top"}}
-  {{#> form-group}}
+  {{#> form-group form-group--id="-checkbox"}}
     {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-name"')}}
+      {{#> form-label}}
         Label (no top padding)
       {{/form-label}}
       {{> form-group-label-help}}
     {{/form-group-label}}
     {{#> form-group-control}}
       {{#> check}}
-        {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox1" name="alt-form-checkbox1"'}}{{/check-input}}
-        {{#> check-label check-label--attribute='for="alt-form-checkbox1"'}}Option 1{{/check-label}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '"')}}Option 1{{/check-label}}
       {{/check}}
       {{#> check}}
-        {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox2" name="alt-form-checkbox2"'}}{{/check-input}}
-        {{#> check-label check-label--attribute='for="alt-form-checkbox2"'}}Option 2{{/check-label}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '2" name="' form--id form-group--id '2"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '2"')}}Option 2{{/check-label}}
       {{/check}}
     {{/form-group-control}}
   {{/form-group}}
@@ -109,70 +99,70 @@ cssPrefix: pf-c-form
 
 ### Help text
 ```hbs
-{{#> form form--id="help-text"}}
-  {{#> form-group}}
+{{#> form form--id="form-help-text"}}
+  {{#> form-group form-group--id="-name"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-name"') required='true'}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
         Name
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-form-name" name="' form--id '-form-name" aria-describedby="' form--id '-form-name-helper"')}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
-      {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id '-form-name-helper" aria-live="polite"')}}
+      {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
         This is helper text
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group}}
+  {{#> form-group form-group--id="-email"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-email"') required='true'}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
         E-mail
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control form-control--modifier="pf-m-warning" controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-form-email" name="' form--id '-form-email" aria-describedby="' form--id '-form-email-helper"')}}
+      {{#> form-control form-control--modifier="pf-m-warning" controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
-      {{#> form-helper-text  form-helper-text--modifier="pf-m-warning" form-helper-text--attribute=(concat 'id="' form--id '-form-email-helper" aria-live="polite"')}}
+      {{#> form-helper-text  form-helper-text--modifier="pf-m-warning" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
         This is helper text for a warning input
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group}}
+  {{#> form-group form-group--id="-address"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-address"') required='true'}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
         Address
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-form-address" name="' form--id '-form-address" aria-invalid="true" aria-describedby="' form--id '-form-address-helper"')}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-invalid="true" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
-      {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-form-address-helper" aria-live="polite"')}}
+      {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
         This is helper text for an invalid input
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group}}
+  {{#> form-group form-group--id="-comment"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-comment"')}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
         Comment
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form--id '-form-comment" name="' form--id '-form-comment" aria-describedby="' form--id '-form-comment-help"')}}
+      {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
-      {{#> form-helper-text form-helper-text--modifier="pf-m-success" form-helper-text--attribute=(concat 'id="' form--id '-form-comment-help" aria-live="polite"')}}
+      {{#> form-helper-text form-helper-text--modifier="pf-m-success" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
         This is helper text for success input
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group}}
-    {{#> form-label form-label--attribute=(concat 'for="' form--id '-simple-form-info"')}}
+  {{#> form-group form-group--id="info"}}
+    {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
       Information
     {{/form-label}}
-    {{#> form-control controlType="textarea" form-control--attribute=(concat 'id="' form--id '-simple-form-info" name="' form--id '-simple-form-info" aria-invalid="true" aria-describedby="' form--id '-simple-form-info-helper"')}}
+    {{#> form-control controlType="textarea" form-control--attribute=(concat 'id="' form--id form-group--id '" name="' form--id form-group--id '" aria-invalid="true" aria-describedby="' form--id form-group--id '-helper"')}}
     {{/form-control}}
-    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-simple-form-info-helper" aria-live="polite"')}}
+    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
       {{#> form-helper-text-icon}}
         <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
       {{/form-helper-text-icon}}
@@ -190,7 +180,7 @@ cssPrefix: pf-c-form
       {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
         Submit form
       {{/button}}
-      {{#> button button--modifier="pf-m-secondary" button--IsReset="true"}}
+      {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
         Reset form
       {{/button}}
     {{/form-actions}}
