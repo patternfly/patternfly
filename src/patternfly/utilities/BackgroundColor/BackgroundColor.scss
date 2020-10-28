@@ -1,0 +1,27 @@
+// stylelint-disable
+
+// Background color options
+$pf-u-background-color-options: (
+  background-color-100: (
+    background-color var(--pf-global--BackgroundColor--100)
+  ),
+  background-color-200: (
+    background-color var(--pf-global--BackgroundColor--200)
+  ),
+  background-color-dark-100: (
+    background-color var(--pf-global--BackgroundColor--dark-100)
+  ),
+  background-color-dark-200: (
+    background-color var(--pf-global--BackgroundColor--dark-200)
+  ),
+  background-color-dark-300: (
+    background-color var(--pf-global--BackgroundColor--dark-300)
+  ),
+  background-color-dark-400: (
+    background-color var(--pf-global--BackgroundColor--dark-400)
+  )
+);
+
+@include pf-utility-builder($pf-u-background-color-options, $pf-global--breakpoint-list);
+
+// stylelint-enable
