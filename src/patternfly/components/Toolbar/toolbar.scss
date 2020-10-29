@@ -178,11 +178,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   &.pf-m-toggle-group {
     --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--m-toggle-group--spacer);
 
-    &,
-    .pf-c-toolbar__group {
-      flex-wrap: nowrap;
-    }
-
     .pf-c-toolbar__group,
     .pf-c-toolbar__item {
       display: none;
