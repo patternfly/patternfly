@@ -8,6 +8,8 @@ $pf-l-flex--gap--variable-map: build-variable-map("pf-global--spacer", $pf-l-fle
   --pf-l-flex--Display: flex;
   --pf-l-flex--FlexWrap: wrap;
   --pf-l-flex--AlignItems: baseline;
+  --pf-l-flex--RowGap--base: 0;
+  --pf-l-flex--RowGap: var(--pf-l-flex--RowGap--base);
   --pf-l-flex--m-row--AlignItems: baseline;
   --pf-l-flex--m-row-reverse--AlignItems: baseline;
   --pf-l-flex--item--Order: 0;
@@ -23,9 +25,7 @@ $pf-l-flex--gap--variable-map: build-variable-map("pf-global--spacer", $pf-l-fle
   flex-wrap: var(--pf-l-flex--FlexWrap);
   align-items: var(--pf-l-flex--AlignItems);
 
-  // --pf-l-flex--RowGap--base: var(--pf-global--spacer--sm); add during breaking change
-  // --pf-l-flex--RowGap: var(--pf-l-flex--RowGap--base); add during breaking change
-  // @include pf-build-css-variable-stack("row-gap", "--pf-l-flex--RowGap", $pf-l-flex--breakpoint-map); // make this default at breaking change
+  @include pf-build-css-variable-stack("row-gap", "--pf-l-flex--RowGap", $pf-l-flex--breakpoint-map);
 
   &:last-child {
     --pf-l-flex--spacer: 0;
@@ -40,7 +40,7 @@ $pf-l-flex--gap--variable-map: build-variable-map("pf-global--spacer", $pf-l-fle
   --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
 
   // reset row gap
-  // --pf-l-flex--RowGap: var(--pf-l-flex--RowGap--base); add during breaking change
+  --pf-l-flex--RowGap: var(--pf-l-flex--RowGap--base);
 
   order: var(--pf-l-flex--item--Order);
   max-width: 100%;
@@ -70,7 +70,7 @@ $pf-l-flex--gap--variable-map: build-variable-map("pf-global--spacer", $pf-l-fle
 
       // flex-direction
       &.pf-m-column#{$breakpoint-name} {
-        // --pf-l-flex--RowGap: 0; add during breaking change
+        --pf-l-flex--RowGap: 0;
 
         flex-direction: column;
         align-items: normal;
@@ -92,7 +92,7 @@ $pf-l-flex--gap--variable-map: build-variable-map("pf-global--spacer", $pf-l-fle
 
       // flex-direction row
       &.pf-m-row#{$breakpoint-name} {
-        // --pf-l-flex--RowGap: var(--pf-l-flex--RowGap--base); add during breaking change
+        --pf-l-flex--RowGap: var(--pf-l-flex--RowGap--base);
 
         flex-direction: row;
         align-items: var(--pf-l-flex--m-row--AlignItems);
@@ -288,7 +288,7 @@ $pf-l-flex--gap--variable-map: build-variable-map("pf-global--spacer", $pf-l-fle
 
       @each $spacer, $spacer-value in $pf-l-flex--spacer-map {
         &.pf-m-row-gap-#{$spacer}#{$breakpoint-name} {
-          row-gap: var(#{map-get($pf-l-flex--gap--variable-map, $spacer-value)});
+          --pf-l-flex--RowGap#{$breakpoint-name}: var(#{map-get($pf-l-flex--gap--variable-map, $spacer-value)});
         }
       }
     }
