@@ -139,7 +139,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--spacer);
 
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   margin-right: var(--pf-c-toolbar--spacer);
   row-gap: var(--pf-c-toolbar__group--RowGap);
