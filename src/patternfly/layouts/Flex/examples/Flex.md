@@ -771,8 +771,8 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 
 ### Row gap
 ```hbs
-{{#> l-flex l-flex--modifier="pf-m-row-gap"}}
-  {{#> l-flex l-flex--modifier="pf-m-row-gap"}}
+{{#> l-flex l-flex--modifier="pf-m-row-gap-sm"}}
+  {{#> l-flex l-flex--modifier="pf-m-row-gap-sm"}}
     {{#> l-flex-item}}
       Set 1, Item A
     {{/l-flex-item}}
@@ -792,7 +792,7 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
       Set 1, Item F
     {{/l-flex-item}}
   {{/l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-row-gap"}}
+  {{#> l-flex l-flex--modifier="pf-m-row-gap-sm"}}
     {{#> l-flex-item}}
       Set 2, Item A
     {{/l-flex-item}}
@@ -817,8 +817,8 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 
 ### Responsive row gap
 ```hbs
-{{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--lg); --pf-l-flex--RowGap-on-xl: var(--pf-global--spacer--2xl);"'}}
-  {{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--lg); --pf-l-flex--RowGap-on-xl: var(--pf-global--spacer--2xl);"'}}
+{{#> l-flex l-flex--modifier="pf-m-row-gap-lg pf-m-row-gap-2xl-on-xl"}}
+  {{#> l-flex l-flex--modifier="pf-m-row-gap-lg pf-m-row-gap-xl-on-xl"}}
     {{#> l-flex-item}}
       Set 1, Item A
     {{/l-flex-item}}
@@ -838,7 +838,7 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
       Set 1, Item F
     {{/l-flex-item}}
   {{/l-flex}}
-  {{#> l-flex l-flex--modifier="pf-m-row-gap" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--lg); --pf-l-flex--RowGap-on-xl: var(--pf-global--spacer--2xl);"'}}
+  {{#> l-flex l-flex--modifier="pf-m-row-gap-lg pf-m-row-gap-" l-flex--attribute='style="--pf-l-flex--RowGap: var(--pf-global--spacer--lg); --pf-l-flex--RowGap-on-xl: var(--pf-global--spacer--2xl);"'}}
     {{#> l-flex-item}}
       Set 2, Item A
     {{/l-flex-item}}
@@ -877,7 +877,6 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 | -- | -- | -- |
 | `.pf-l-flex` | `*` | Initiates the flex layout. **Required** |
 | `.pf-l-flex__item` | `.pf-l-flex > *` | Initiates a flex item. **Required** |
-| `.pf-m-row-gap` | `.pf-l-flex` | Modifies the flex layout to add `row-gap`. |
 | `.pf-m-flex{-on-[breakpoint]}` | `.pf-l-flex` | Initializes or resets the flex layout display property to flex. |
 | `.pf-m-inline-flex{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout display property to inline-flex. |
 | `.pf-m-grow{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies a nested flex layout or flex item flex-grow property to 1. |
@@ -913,7 +912,6 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 | `.pf-m-align-content-space-around{-on-[breakpoint]}` | `.pf-l-flex` | Modifies the flex layout align-content property to space-around. |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Resets the flex layout element margin-left property to 0. |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the flex layout element margin-left property to auto. |
-| `--pf-l-flex--RowGap{-on-[breakpoint]}: {height}` | `.pf-l-flex` | Modifies the flex layout `row-gap` value. |
 | `--pf-l-flex--item--Order{-on-[breakpoint]}: {order}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the flex layout element order value. |
 
 ### Spacer system
@@ -922,3 +920,4 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 | -- | -- | -- |
 | `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex`, `.pf-l-flex > .pf-l-flex__item` |  Modifies a nested flex layout or a flex item spacing. |
 | `.pf-m-item-space-items-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies the flex layout direct descendant spacing. |
+| `.pf-m-row-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies the flex layout row gap. |
