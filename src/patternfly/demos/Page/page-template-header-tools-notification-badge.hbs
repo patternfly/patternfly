@@ -2,7 +2,7 @@
   {{#if page-header-tools--IsNotificationSelected}}
     {{#> page-header-tools-item page-header-tools-item--modifier=(concat 'pf-m-selected ' page-template-header-tools-notification-badge--item--modifier)}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications" aria-expanded="true"'}}
-        {{#> notification-badge notification-badge--modifier="pf-m-read"}}
+        {{#> notification-badge notification-badge--modifier=(concat 'pf-m-read ' page-template-header-tools-notification-badge--badge--modifier)}}
           {{#if page-header-tools--IsAttention}}
             <i class="pf-icon-attention-bell" aria-hidden="true"></i>
           {{else}}
@@ -14,7 +14,7 @@
   {{else}}
     {{#> page-header-tools-item page-header-tools-item--modifier=page-template-header-tools-notification-badge--item--modifier}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications" aria-expanded="false"'}}
-        {{#> notification-badge notification-badge--modifier="pf-m-read"}}
+        {{#> notification-badge notification-badge--modifier=(concat 'pf-m-read ' page-template-header-tools-notification-badge--badge--modifier)}}
           {{#if page-header-tools--IsAttention}}
             <i class="pf-icon-attention-bell" aria-hidden="true"></i>
           {{else}}
