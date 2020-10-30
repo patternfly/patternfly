@@ -245,9 +245,7 @@ beta: true
           Active section
         {{/jump-links-link-text}}
       {{/jump-links-link}}
-
         {{#> jump-links-list newcontext}}
-
           {{#> jump-links-item}}
             {{#> jump-links-link}}
               {{#> jump-links-link-text}}
@@ -255,7 +253,6 @@ beta: true
               {{/jump-links-link-text}}
             {{/jump-links-link}}
           {{/jump-links-item}}
-
           {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
             {{#> jump-links-link}}
               {{#> jump-links-link-text}}
@@ -263,9 +260,7 @@ beta: true
               {{/jump-links-link-text}}
             {{/jump-links-link}}
           {{/jump-links-item}}
-
         {{/jump-links-list}}
-
     {{/jump-links-item}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}

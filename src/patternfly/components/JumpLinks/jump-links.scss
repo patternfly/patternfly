@@ -23,7 +23,7 @@
   --pf-c-jump-links__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-jump-links__link--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-jump-links__link--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-jump-links--c-jump-links--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-jump-links__list--list__link--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-jump-links__link--OutlineOffset: calc(-1 * var(--pf-global--spacer--sm));
 
   // before
@@ -107,7 +107,7 @@
   .pf-c-jump-links__list {
     --pf-c-jump-links__list--PaddingTop: 0;
     --pf-c-jump-links__list--PaddingBottom: 0;
-    --pf-c-jump-links__link--PaddingLeft: var(--pf-c-jump-links--c-jump-links--PaddingLeft);
+    --pf-c-jump-links__link--PaddingLeft: var(--pf-c-jump-links__list--list__link--PaddingLeft);
 
     .pf-c-jump-links__link-text {
       color: var(--pf-c-jump-links__list--list-link-text--Color);
