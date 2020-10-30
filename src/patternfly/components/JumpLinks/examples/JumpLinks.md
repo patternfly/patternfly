@@ -218,6 +218,73 @@ beta: true
 {{/jump-links}}
 ```
 
+### Vertical with subsections
+```hbs
+{{#> jump-links jump-links--modifier="pf-m-vertical" jump-links--attribute='aria-label="Local"'}}
+  {{#> jump-links-label}}
+    Jump to section
+  {{/jump-links-label}}
+  {{#> jump-links-list}}
+    {{#> jump-links-item}}
+      {{#> jump-links-link}}
+        {{#> jump-links-link-text}}
+          Inactive section
+        {{/jump-links-link-text}}
+      {{/jump-links-link}}
+    {{/jump-links-item}}
+    {{#> jump-links-item}}
+      {{#> jump-links-link}}
+        {{#> jump-links-link-text}}
+          Active section
+        {{/jump-links-link-text}}
+      {{/jump-links-link}}
+    {{/jump-links-item}}
+    {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+      {{#> jump-links-link}}
+        {{#> jump-links-link-text}}
+          Active section
+        {{/jump-links-link-text}}
+      {{/jump-links-link}}
+
+        {{#> jump-links-list newcontext}}
+
+          {{#> jump-links-item}}
+            {{#> jump-links-link}}
+              {{#> jump-links-link-text}}
+                Inactive section
+              {{/jump-links-link-text}}
+            {{/jump-links-link}}
+          {{/jump-links-item}}
+
+          {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
+            {{#> jump-links-link}}
+              {{#> jump-links-link-text}}
+                Active section
+              {{/jump-links-link-text}}
+            {{/jump-links-link}}
+          {{/jump-links-item}}
+
+        {{/jump-links-list}}
+
+    {{/jump-links-item}}
+    {{#> jump-links-item}}
+      {{#> jump-links-link}}
+        {{#> jump-links-link-text}}
+          Inactive section
+        {{/jump-links-link-text}}
+      {{/jump-links-link}}
+    {{/jump-links-item}}
+    {{#> jump-links-item}}
+      {{#> jump-links-link}}
+        {{#> jump-links-link-text}}
+          Inactive section
+        {{/jump-links-link-text}}
+      {{/jump-links-link}}
+    {{/jump-links-item}}
+  {{/jump-links-list}}
+{{/jump-links}}
+```
+
 ## Documentation
 ### Overview
 
