@@ -115,7 +115,8 @@
     --pf-c-jump-links__link-text--Color: var(--pf-c-jump-links__link--hover__link-text--Color);
   }
 
-  &:focus {
+  &:focus-visible,
+  &:focus:not(:-moz-focusring) {
     --pf-c-jump-links__link-text--Color: var(--pf-c-jump-links__link--focus__link-text--Color);
     --pf-c-jump-links__link--before--BorderTopWidth: var(--pf-c-jump-links__link--focus--before--BorderTopWidth);
     --pf-c-jump-links__link--before--BorderLeftWidth: var(--pf-c-jump-links__link--focus--before--BorderLeftWidth);
