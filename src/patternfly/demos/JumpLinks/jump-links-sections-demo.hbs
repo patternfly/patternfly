@@ -1,0 +1,120 @@
+{{#> content}}
+  <h2>Core configuration</h2>
+  <p>
+    We recommend you fill out and evaluate these details at a minimum before deploying your topic 
+  </p>
+  <h3>Name</h3>
+  <p>
+    sample topic
+  </p>
+  <h3>Partitions</h3>
+  <p>
+    1
+  </p>
+  <h3>Replicas</h3>
+  <p>
+    3
+  </p>
+  <h3>Minimum in-sync replicas</h3>
+  <p>
+    1
+  </p>
+  <h3>Retention time</h3>
+  <p>
+    7 days
+  </p>
+
+  <h2>Messages</h2>
+  <p>
+    These details control how your messages will be handled in the cluster.
+  </p>
+  <h3>Maximum message size</h3>
+  <p>
+    1000 bytes
+  </p>
+  <h3>Message timestamp type</h3>
+  <p>
+    CreateTime
+  </p>
+
+  <h2>Log</h2>
+  <p>
+    Messages are continually appended to the partition’s log. This is when they are assigned their offset. These details define how your log is handled.
+  </p>
+  <h3>Cleanup policy</h3>
+  <p>
+    delete
+  </p>
+  <h3>Retention bytes</h3>
+  <p>
+    -1 byte
+  </p>
+  <h3>Log segment types</h3>
+  <p>
+    1200034 bytes
+  </p>
+
+  <h2>Replication</h2>
+  <p>
+These details control the behavior of your replicas. Each of these parameters has an impact on every replica created in this topic.
+  </p>
+  <h3>Follower replication throttled replicas</h3>
+  <p>
+    3
+  </p>
+  <h3>Leader replication throttled replicas</h3>
+  <p>
+    5
+  </p>
+
+  <h2>Cleanup</h2>
+  <p>
+    These details control the cleanup processing of the log.
+  </p>
+  <h3>Minimum cleanable dirty ratio</h3>
+  <p>
+    9018238642754
+  </p>
+  <h3>Minimum compaction lag time</h3>
+  <p>
+    0
+  </p>
+  <h3>Segment time</h3>
+  <p>
+    6045987
+  </p>
+  <h3>Segment jitter time</h3>
+  <p>
+    0 milliseconds
+  </p>
+  <h3>File delete delay</h3>
+  <p>
+    6000 milliseconds
+  </p>
+
+  <h2>Index</h2>
+  <p>
+    These details control the indexing of the log.
+  </p>
+  <h3>Index interval bytes</h3>
+  <p>
+    4096 bytes
+  </p>
+  <h3>Segment index bytes</h3>
+  <p>
+    10467567 bytes
+  </p>
+
+  <h2>Flush</h2>
+  <p>
+    These details control the frequency of the flushing of the log.
+  </p>
+  <h3>Flush interval messages</h3>
+  <p>
+    9923744273041 milliseconds
+  </p>
+  <h3>Flush interval time</h3>
+  <p>
+    9923744273041 milliseconds
+  </p>
+{{/content}}
