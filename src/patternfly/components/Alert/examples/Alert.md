@@ -291,6 +291,27 @@ cssPrefix: pf-c-alert
 {{/alert}}
 ```
 
+### Custom icon
+```hbs
+{{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="cog"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success alert title
+  {{/alert-title}}
+{{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="cog"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+      Success alert title
+  {{/alert-title}}
+{{/alert}}
+```
+
 ## Documentation
 ### Overview
 Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.
