@@ -1,0 +1,23 @@
+<{{#if calendar-month-grid-cell--IsTh}}th{{else}}td{{/if}} class="pf-c-calendar-month__grid-cell
+  {{~#if calendar-month-grid-cell--IsCurrent}} pf-m-current{{/if}}
+  {{~#if calendar-month-grid-cell--IsSelected}} pf-m-selected{{/if}}
+  {{~#if calendar-month-grid-cell--IsStartRange}} pf-m-start-range{{/if}}
+  {{~#if calendar-month-grid-cell--IsInRange}} pf-m-in-range{{/if}}
+  {{~#if calendar-month-grid-cell--IsEndRange}} pf-m-end-range{{/if}}
+  {{~#if calendar-month-grid-cell--IsAdjacentMonth}} pf-m-adjacent-month{{/if}}
+  {{~#if calendar-month-grid-cell--IsDisabled}} pf-m-disabled{{/if}}
+  {{~#if calendar-month-grid-cell--modifier}} {{calendar-month-grid-cell--modifier}}{{/if}}"
+  {{#if calendar-month-grid-cell--IsTh}}
+    scope="col"
+  {{/if}}
+  {{#if calendar-month-grid-cell--attribute}}
+    {{calendar-month-grid-cell--attribute}}
+  {{/if}}>
+  {{#unless calendar-month-grid-cell--IsTh}}
+    {{#> calendar-month-date}}
+      {{>@partial-block}}
+    {{/calendar-month-date}}
+  {{else}}
+    {{>@partial-block}}
+  {{/unless}}
+</{{#if calendar-month-grid-cell--IsTh}}th{{else}}td{{/if}}>

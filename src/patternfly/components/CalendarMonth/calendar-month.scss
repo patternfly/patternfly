@@ -1,0 +1,226 @@
+.pf-c-calendar-month {
+  --pf-c-calendar-month--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-calendar-month--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-calendar-month--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-calendar-month--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-calendar-month--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-calendar-month--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-calendar-month--FontSize: var(--pf-global--FontSize--sm);
+
+  // header
+  --pf-c-calendar-month__header--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-calendar-month__header-year--Width: 8ch;
+  --pf-c-calendar-month__header-nav--MarginRight: 0;
+  --pf-c-calendar-month__header-nav--MarginLeft: 0;
+  --pf-c-calendar-month__header-nav--m-prev-month--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-calendar-month__header-nav--m-prev-month--MarginLeft: calc(var(--pf-global--spacer--md) * -1);
+  --pf-c-calendar-month__header-nav--m-next-month--MarginRight: calc(var(--pf-global--spacer--md) * -1);
+  --pf-c-calendar-month__header-nav--m-next-month--MarginLeft: var(--pf-global--spacer--sm);
+
+  // thead
+  --pf-c-calendar-month__grid-head--BorderBottomSize: var(--pf-global--BorderWidth--sm);
+  --pf-c-calendar-month__grid-head--BorderBottomColor: var(--pf-global--BorderColor--100);
+
+  // grid-cell
+  --pf-c-calendar-month__grid-cell--PaddingTop: 0;
+  --pf-c-calendar-month__grid-cell--PaddingBottom: 0;
+  --pf-c-calendar-month__grid-cell--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-calendar-month__grid-body__grid-cell--PaddingTop: #{pf-size-prem(2px)};
+  --pf-c-calendar-month__grid-body__grid-cell--PaddingRight: #{pf-size-prem(2px)};
+  --pf-c-calendar-month__grid-body__grid-cell--PaddingBottom: #{pf-size-prem(2px)};
+  --pf-c-calendar-month__grid-body__grid-cell--PaddingLeft: #{pf-size-prem(2px)};
+  --pf-c-calendar-month__grid-head__grid-cell--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-calendar-month__grid-body__grid-row--first-child__grid-cell--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-calendar-month__grid-cell--m-current__date--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-calendar-month__grid-cell--m-selected__date--BackgroundColor: var(--pf-global--active-color--100);
+  --pf-c-calendar-month__grid-cell--m-selected__date--Color: var(--pf-global--Color--light-100);
+  --pf-c-calendar-month__grid-cell--before--BackgroundColor: transparent;
+  --pf-c-calendar-month__grid-cell--before--Top: var(--pf-c-calendar-month__grid-body__grid-cell--PaddingTop);
+  --pf-c-calendar-month__grid-cell--before--Right: 0;
+  --pf-c-calendar-month__grid-cell--before--Bottom: var(--pf-c-calendar-month__grid-body__grid-cell--PaddingBottom);
+  --pf-c-calendar-month__grid-cell--before--Left: 0;
+  --pf-c-calendar-month__grid-cell--m-in-range--before--BackgroundColor: var(--pf-global--palette--blue-50);
+  --pf-c-calendar-month__grid-cell--m-in-range--m-start-range--before--Left: 50%;
+  --pf-c-calendar-month__grid-cell--m-in-range--m-end-range--before--Right: 50%;
+  --pf-c-calendar-month__grid-cell--m-adjacent-month__date--Color: var(--pf-global--disabled-color--100);
+
+  // date
+  --pf-c-calendar-month__date--Width: 4ch;
+  --pf-c-calendar-month__date--Height: 4ch;
+  --pf-c-calendar-month__date--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-calendar-month__date--Color: var(--pf-global--Color--100);
+  --pf-c-calendar-month__date--BackgroundColor: transparent;
+  --pf-c-calendar-month__date--disabled--Color: var(--pf-global--disabled-color--200);
+  --pf-c-calendar-month__date--after--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-calendar-month__date--after--BorderColor: transparent;
+  --pf-c-calendar-month__date--hover--after--BorderColor: var(--pf-global--active-color--100);
+  --pf-c-calendar-month__date--focus--after--BorderColor: var(--pf-global--active-color--100);
+  --pf-c-calendar-month__grid-cell--m-start-end-range__date--hover--BackgroundColor: var(--pf-c-calendar-month--BackgroundColor);
+  --pf-c-calendar-month__grid-cell--m-start-end-range__date--focus--BackgroundColor: var(--pf-c-calendar-month--BackgroundColor);
+
+  display: inline-flex;
+  flex-direction: column;
+  padding: var(--pf-c-calendar-month--PaddingTop) var(--pf-c-calendar-month--PaddingRight) var(--pf-c-calendar-month--PaddingBottom) var(--pf-c-calendar-month--PaddingLeft);
+  font-size: var(--pf-c-calendar-month--FontSize);
+  background-color: var(--pf-c-calendar-month--BackgroundColor);
+  box-shadow: var(--pf-c-calendar-month--BoxShadow);
+}
+
+.pf-c-calendar-month__header {
+  display: flex;
+  margin-bottom: var(--pf-c-calendar-month__header--MarginBottom);
+}
+
+.pf-c-calendar-month__header-nav {
+  margin-right: var(--pf-c-calendar-month__header-nav--MarginRight);
+  margin-left: var(--pf-c-calendar-month__header-nav--MarginLeft);
+
+  &.pf-m-prev-month {
+    --pf-c-calendar-month__header-nav--MarginRight: var(--pf-c-calendar-month__header-nav--m-prev-month--MarginRight);
+    --pf-c-calendar-month__header-nav--MarginLeft: var(--pf-c-calendar-month__header-nav--m-prev-month--MarginLeft);
+  }
+
+  &.pf-m-next-month {
+    --pf-c-calendar-month__header-nav--MarginRight: var(--pf-c-calendar-month__header-nav--m-next-month--MarginRight);
+    --pf-c-calendar-month__header-nav--MarginLeft: var(--pf-c-calendar-month__header-nav--m-next-month--MarginLeft);
+  }
+}
+
+.pf-c-calendar-month__header-month {
+  flex-grow: 1;
+}
+
+.pf-c-calendar-month__header-year {
+  width: var(--pf-c-calendar-month__header-year--Width);
+}
+
+.pf-c-calendar-month__body {
+  display: flex;
+  justify-content: center;
+}
+
+.pf-c-calendar-month__grid {
+  table-layout: fixed;
+}
+
+.pf-c-calendar-month__grid-head {
+  --pf-c-calendar-month__grid-cell--PaddingBottom: var(--pf-c-calendar-month__grid-head__grid-cell--PaddingBottom);
+
+  border-bottom: var(--pf-c-calendar-month__grid-head--BorderBottomSize) solid var(--pf-c-calendar-month__grid-head--BorderBottomColor);
+}
+
+.pf-c-calendar-month__grid-body {
+  --pf-c-calendar-month__grid-cell--PaddingTop: var(--pf-c-calendar-month__grid-body__grid-cell--PaddingTop);
+  --pf-c-calendar-month__grid-cell--PaddingRight: var(--pf-c-calendar-month__grid-body__grid-cell--PaddingRight);
+  --pf-c-calendar-month__grid-cell--PaddingBottom: var(--pf-c-calendar-month__grid-body__grid-cell--PaddingBottom);
+  --pf-c-calendar-month__grid-cell--PaddingLeft: var(--pf-c-calendar-month__grid-body__grid-cell--PaddingLeft);
+
+  .pf-c-calendar-month__grid-row:first-child {
+    --pf-c-calendar-month__grid-cell--PaddingTop: var(--pf-c-calendar-month__grid-body__grid-row--first-child__grid-cell--PaddingTop);
+  }
+}
+
+.pf-c-calendar-month__grid-cell {
+  position: relative;
+  padding-top: var(--pf-c-calendar-month__grid-cell--PaddingTop);
+  padding-right: var(--pf-c-calendar-month__grid-cell--PaddingRight);
+  padding-bottom: var(--pf-c-calendar-month__grid-cell--PaddingBottom);
+  padding-left: var(--pf-c-calendar-month__grid-cell--PaddingLeft);
+  font-weight: var(--pf-c-calendar-month__grid-cell--FontWeight);
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: var(--pf-c-calendar-month__grid-cell--before--Top);
+    right: var(--pf-c-calendar-month__grid-cell--before--Right);
+    bottom: var(--pf-c-calendar-month__grid-cell--before--Bottom);
+    left: var(--pf-c-calendar-month__grid-cell--before--Left);
+    content: "";
+    background-color: var(--pf-c-calendar-month__grid-cell--before--BackgroundColor);
+  }
+
+  &.pf-m-current {
+    --pf-c-calendar-month__date--BackgroundColor: var(--pf-c-calendar-month__grid-cell--m-current__date--BackgroundColor);
+  }
+
+  &.pf-m-in-range {
+    --pf-c-calendar-month__grid-cell--before--BackgroundColor: var(--pf-c-calendar-month__grid-cell--m-in-range--before--BackgroundColor);
+
+    &:not(.pf-m-start-range):not(.pf-m-end-range) {
+      --pf-c-calendar-month__date--hover--after--BorderColor: transparent;
+      --pf-c-calendar-month__date--focus--after--BorderColor: transparent;
+    }
+  }
+
+  &.pf-m-start-range {
+    --pf-c-calendar-month__grid-cell--before--Left: var(--pf-c-calendar-month__grid-cell--m-in-range--m-start-range--before--Left);
+  }
+
+  &.pf-m-end-range {
+    --pf-c-calendar-month__grid-cell--before--Right: var(--pf-c-calendar-month__grid-cell--m-in-range--m-end-range--before--Right);
+  }
+
+  &.pf-m-selected {
+    --pf-c-calendar-month__date--BackgroundColor: var(--pf-c-calendar-month__grid-cell--m-selected__date--BackgroundColor);
+    --pf-c-calendar-month__date--Color: var(--pf-c-calendar-month__grid-cell--m-selected__date--Color);
+  }
+
+  &.pf-m-adjacent-month {
+    --pf-c-calendar-month__date--Color: var(--pf-c-calendar-month__grid-cell--m-adjacent-month__date--Color);
+  }
+}
+
+.pf-c-calendar-month__date {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--pf-c-calendar-month__date--Width);
+  height: var(--pf-c-calendar-month__date--Height);
+  line-height: 1;
+  color: var(--pf-c-calendar-month__date--Color);
+  background-color: var(--pf-c-calendar-month__date--BackgroundColor);
+  border: 0;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border: var(--pf-c-calendar-month__date--after--BorderWidth) solid var(--pf-c-calendar-month__date--after--BorderColor);
+  }
+
+  &,
+  &::after {
+    border-radius: var(--pf-c-calendar-month__date--BorderRadius);
+  }
+
+  &:hover {
+    --pf-c-calendar-month__date--after--BorderColor: var(--pf-c-calendar-month__date--hover--after--BorderColor);
+
+    .pf-c-calendar-month__grid-cell.pf-m-start-range:not(.pf-m-selected) &,
+    .pf-c-calendar-month__grid-cell.pf-m-end-range:not(.pf-m-selected) & {
+      --pf-c-calendar-month__date--BackgroundColor: var(--pf-c-calendar-month__grid-cell--m-start-end-range__date--hover--BackgroundColor);
+    }
+  }
+
+  &:focus,
+  &.pf-m-focus {
+    --pf-c-calendar-month__date--after--BorderColor: var(--pf-c-calendar-month__date--focus--after--BorderColor);
+
+    .pf-c-calendar-month__grid-cell.pf-m-start-range:not(.pf-m-selected) &,
+    .pf-c-calendar-month__grid-cell.pf-m-end-range:not(.pf-m-selected) & {
+      --pf-c-calendar-month__date--BackgroundColor: var(--pf-c-calendar-month__grid-cell--m-start-end-range__date--focus--BackgroundColor);
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    --pf-c-calendar-month__date--Color: var(--pf-c-calendar-month__date--disabled--Color);
+    --pf-c-calendar-month__date--hover--after--BorderColor: transparent;
+    --pf-c-calendar-month__date--hover--focus--BorderColor: transparent;
+  }
+}
