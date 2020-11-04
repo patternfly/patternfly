@@ -108,14 +108,6 @@
     --pf-c-jump-links__list--PaddingTop: 0;
     --pf-c-jump-links__list--PaddingBottom: 0;
     --pf-c-jump-links__link--PaddingLeft: var(--pf-c-jump-links__list--list__link--PaddingLeft);
-
-    .pf-c-jump-links__link-text {
-      color: var(--pf-c-jump-links__list--list-link-text--Color);
-    }
-
-    .pf-c-jump-links__item.pf-m-current {
-      --pf-c-jump-links__list--list-link-text--Color: var(--pf-c-jump-links__list--list-item--m-current__link-text--Color);
-    }
   }
 }
 
@@ -132,12 +124,10 @@
 
   &:hover {
     --pf-c-jump-links__link-text--Color: var(--pf-c-jump-links__link--hover__link-text--Color);
-    --pf-c-jump-links__list--list-link-text--Color: var(--pf-c-jump-links__list--list-link--hover__link-text--Color);
   }
 
   &:focus {
     --pf-c-jump-links__link-text--Color: var(--pf-c-jump-links__link--focus__link-text--Color);
-    --pf-c-jump-links__list--list-link-text--Color: var(--pf-c-jump-links__list--list-link--focus__link-text--Color);
     --pf-c-jump-links__link--before--BorderTopWidth: var(--pf-c-jump-links__link--focus--before--BorderTopWidth);
     --pf-c-jump-links__link--before--BorderLeftWidth: var(--pf-c-jump-links__link--focus--before--BorderLeftWidth);
     --pf-c-jump-links__link--before--BorderColor: var(--pf-c-jump-links__link--focus--before--BorderColor);
