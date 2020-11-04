@@ -48,6 +48,21 @@
   font-size: var(--pf-c-popover--FontSize);
   box-shadow: var(--pf-c-popover--BoxShadow);
 
+  &.pf-m-no-padding {
+    // Use px values below so the min/max-width calc() doesn't break
+    // stylelint-disable length-zero-no-unit
+    --pf-c-popover__content--PaddingTop: 0px;
+    --pf-c-popover__content--PaddingRight: 0px;
+    --pf-c-popover__content--PaddingBottom: 0px;
+    --pf-c-popover__content--PaddingLeft: 0px;
+    // stylelint-enable
+  }
+
+  &.pf-m-width-auto {
+    --pf-c-popover--MinWidth: auto;
+    --pf-c-popover--MaxWidth: calc(100% - var(--pf-global--spacer--xl));
+  }
+
   &.pf-m-top {
     .pf-c-popover__arrow {
       bottom: 0;
