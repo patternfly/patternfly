@@ -213,6 +213,11 @@ beta: true
                 {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Settings" tree-view-node-text--type="label" tree-view-node--id="6"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
+            {{#> tree-view-list-item}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--text="Settings" tree-view-node-text--type="label" tree-view-node--id="6"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true" tree-view-node--text="Current" tree-view-node-text--type="label"}}
               {{#> tree-view-content}}
                 {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node--id="7"}}
