@@ -1,10 +1,10 @@
 <button class="pf-c-calendar-month__date{{#if calendar-month-date--modifier}} {{calendar-month-date--modifier}}{{/if}}"
   type="button"
-  {{#if calendar-month-grid-cell--IsDisabled}}
+  {{#if calendar-month-dates-cell--IsDisabled}}
     disabled
   {{/if}}
   {{#if calendar-month-date--attribute}}
-    {{calendar-month-date--attribute}}
+    {{{calendar-month-date--attribute}}}
   {{/if}}>
-  {{>@partial-block}}
+  {{> @partial-block}}
 </button>

@@ -139,15 +139,15 @@ cssPrefix: pf-c-calendar-month
         {{#> calendar-month-dates-cell}}8{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsCurrent="true"}}9{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell}}10{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}11{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}12{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsSelected="true" calendar-month-dates-cell--IsStartRange="true" calendar-month-dates-cell--IsInRange="true"}}11{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}12{{/calendar-month-dates-cell}}
       {{/calendar-month-dates-row}}
       {{#> calendar-month-dates-row}}
-        {{#> calendar-month-dates-cell}}13{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}14{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}15{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}16{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsSelected="true" calendar-month-dates-cell--IsStartRange="true" calendar-month-dates-cell--IsInRange="true"}}17{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}13{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}14{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}15{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}16{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}17{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}18{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}19{{/calendar-month-dates-cell}}
       {{/calendar-month-dates-row}}
@@ -223,15 +223,15 @@ cssPrefix: pf-c-calendar-month
         {{#> calendar-month-dates-cell}}8{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsCurrent="true"}}9{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell}}10{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}11{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}12{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsStartRange="true" calendar-month-dates-cell--IsInRange="true" calendar-month-date--modifier="pf-m-focus"}}11{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}12{{/calendar-month-dates-cell}}
       {{/calendar-month-dates-row}}
       {{#> calendar-month-dates-row}}
-        {{#> calendar-month-dates-cell}}13{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}14{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}15{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}16{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsStartRange="true" calendar-month-dates-cell--IsInRange="true" calendar-month-date--modifier="pf-m-focus"}}17{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}13{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}14{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}15{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}16{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}17{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}18{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}19{{/calendar-month-dates-cell}}
       {{/calendar-month-dates-row}}
@@ -307,31 +307,31 @@ cssPrefix: pf-c-calendar-month
         {{#> calendar-month-dates-cell}}8{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsCurrent="true"}}9{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell}}10{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}11{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}12{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsSelected="true" calendar-month-dates-cell--IsStartRange="true" calendar-month-dates-cell--IsInRange="true"}}11{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}12{{/calendar-month-dates-cell}}
       {{/calendar-month-dates-row}}
       {{#> calendar-month-dates-row}}
-        {{#> calendar-month-dates-cell}}13{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}14{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}15{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}16{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsSelected="true" calendar-month-dates-cell--IsStartRange="true" calendar-month-dates-cell--IsInRange="true"}}17{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}13{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}14{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}15{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}16{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}17{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}18{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}19{{/calendar-month-dates-cell}}
       {{/calendar-month-dates-row}}
       {{#> calendar-month-dates-row}}
-        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}20{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsSelected="true" calendar-month-dates-cell--IsEndRange="true" calendar-month-dates-cell--IsInRange="true"}}21{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}22{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}23{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}24{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}25{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}26{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsDisabled="true"}}20{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsDisabled="true"}}21{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsDisabled="true"}}22{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsDisabled="true"}}23{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsDisabled="true"}}24{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsDisabled="true"}}25{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsDisabled="true"}}26{{/calendar-month-dates-cell}}
       {{/calendar-month-dates-row}}
       {{#> calendar-month-dates-row}}
-        {{#> calendar-month-dates-cell}}27{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}28{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell}}29{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}27{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}28{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsSelected="true" calendar-month-dates-cell--IsEndRange="true" calendar-month-dates-cell--IsInRange="true"}}29{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell}}30{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell}}31{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsAdjacentMonth="true"}}1{{/calendar-month-dates-cell}}
