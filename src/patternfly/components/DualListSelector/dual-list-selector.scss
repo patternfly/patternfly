@@ -1,3 +1,5 @@
+$pf-c-dual-list-selector--MaxNesting: 3;
+
 .pf-c-dual-list-selector {
   // Grid
   --pf-c-dual-list-selector__header--GridArea: pane-header;
@@ -40,6 +42,9 @@
   --pf-c-dual-list-selector__item--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-dual-list-selector__item--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-dual-list-selector__item--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-dual-list-selector__item--indent--base: var(--pf-global--spacer--sm);
+  --pf-c-dual-list-selector__item--nested-indent--base: var(--pf-global--spacer--lg);
+  --pf-c-dual-list-selector__item--m-expandable__node--nested-indent--base: var(--pf-global--spacer--lg);
 
   // Item text
   --pf-c-dual-list-selector__item-text--Color: var(--pf-global--Color--100);
@@ -53,6 +58,13 @@
   // Controls
   --pf-c-dual-list-selector__controls--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-dual-list-selector__controls--PaddingLeft: var(--pf-global--spacer--md);
+
+  // Toggle
+  --pf-c-dual-list-selector__item-toggle--PaddingRight: var(--pf-global--spacer--sm);
+
+  // Check
+  --pf-c-dual-list-selector__item-check--MarginRight: var(--pf-global--spacer--sm);
+
 
   display: grid;
   grid-template-areas:
@@ -145,9 +157,16 @@
     --pf-c-dual-list-selector__list-item--BackgroundColor: var(--pf-c-dual-list-selector__list-item--m-selected--BackgroundColor);
     --pf-c-dual-list-selector__item-text--Color: var(--pf-c-dual-list-selector__list-item--m-selected__item-text--Color);
   }
+
+  // stylelint-disable
+  &.pf-m-expanded {
+    .pf-c-dual-list-selector__item > .pf-c-dual-list-selector__item-main > .pf-c-dual-list-selector__item-toggle > .pf-c-dual-list-selector__item-toggle-icon > i {
+      transform: rotate(90deg);
+    }
+  }
+  // stylelint-enable
 }
 
-.pf-c-dual-list-selector__list-item,
 .pf-c-dual-list-selector__item,
 .pf-c-dual-list-selector__main {
   display: flex;
@@ -162,6 +181,7 @@
   padding: var(--pf-c-dual-list-selector__item--PaddingTop) var(--pf-c-dual-list-selector__item--PaddingRight) var(--pf-c-dual-list-selector__item--PaddingBottom) var(--pf-c-dual-list-selector__item--PaddingLeft);
   font-size: var(--pf-c-dual-list-selector__item--FontSize);
   text-align: left;
+  cursor: pointer;
   border: 0;
 }
 
@@ -176,3 +196,36 @@
   padding-right: var(--pf-c-dual-list-selector__controls--PaddingRight);
   padding-left: var(--pf-c-dual-list-selector__controls--PaddingLeft);
 }
+
+.pf-c-dual-list-selector__item-main {
+  display: flex;
+}
+
+.pf-c-dual-list-selector__item-toggle {
+  padding-right: var(--pf-c-dual-list-selector__item-toggle--PaddingRight);
+}
+
+.pf-c-dual-list-selector__item-check {
+  display: flex;
+  align-items: center;
+  margin-right: var(--pf-c-dual-list-selector__item-check--MarginRight);
+}
+
+// stylelint-disable no-duplicate-selectors
+.pf-c-dual-list-selector__item {
+  $root: &;
+  $nested-item: &;
+
+  @for $i from 1 through $pf-c-dual-list-selector--MaxNesting {
+    #{$nested-item} {
+      --pf-c-dual-list-selector__item--PaddingLeft: calc(var(--pf-c-dual-list-selector__item--indent--base) + (var(--pf-c-dual-list-selector__item--nested-indent--base) * #{$i}));
+    }
+
+    #{$nested-item}.pf-m-expandable {
+      --pf-c-dual-list-selector__item--PaddingLeft: calc(var(--pf-c-dual-list-selector__item--indent--base) + (var(--pf-c-dual-list-selector__item--m-expandable__node--nested-indent--base) * #{$i}));
+    }
+
+    $nested-item: $nested-item + " " + $root;
+  }
+}
+// stylelint-enable
