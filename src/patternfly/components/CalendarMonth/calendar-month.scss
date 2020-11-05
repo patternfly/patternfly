@@ -156,6 +156,11 @@
   &.pf-m-adjacent-month {
     --pf-c-calendar-month__date--Color: var(--pf-c-calendar-month__dates-cell--m-adjacent-month__date--Color);
   }
+
+  &.pf-m-disabled {
+    --pf-c-calendar-month__dates-cell--before--BackgroundColor: transparent;
+    --pf-c-calendar-month__date--BackgroundColor: transparent;
+  }
 }
 
 .pf-c-calendar-month__date {
