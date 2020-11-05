@@ -60,7 +60,7 @@
 
   &.pf-m-width-auto {
     --pf-c-popover--MinWidth: auto;
-    --pf-c-popover--MaxWidth: calc(100% - var(--pf-global--spacer--xl));
+    --pf-c-popover--MaxWidth: none;
   }
 
   &.pf-m-top {
