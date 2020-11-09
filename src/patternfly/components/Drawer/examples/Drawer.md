@@ -209,6 +209,27 @@ import './Drawer.css'
 {{/drawer}}
 ```
 
+<!--
+### Splitter
+```hbs
+```
+
+### Accessibility
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `role="separator"` | `.pf-c-drawer__splitter` | Indicates that the splitter is a separator. **Required** |
+| `tabindex="0"` | `.pf-c-drawer__splitter` | Inserts the splitter into the tab order of the page so that it is focusable. **Required** |
+| `aria-orientation="horizontal"` | `.pf-c-drawer__splitter` | Indicates that the splitter is oriented horizontally. |
+| `aria-orientation="vertical"` | `.pf-c-drawer__splitter.pf-m-vertical` | Indicates that the splitter is oriented vertically. |
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-drawer__splitter` | `<div>` | Initiates the splitter. |
+| `.pf-c-drawer__splitter-handle` | `<div>` | Initiates the splitter handle element. |
+| `.pf-m-vertical` |  `.pf-c-drawer__splitter` | Modifies the splitter to be vertical. |
+-->
+
 ## Documentation
 
 ### Accessibility

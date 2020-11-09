@@ -56,6 +56,35 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__content--child--PaddingBottom: 0;
   --pf-c-drawer__content--child--PaddingLeft: 0;
 
+  // Splitter
+  --pf-c-drawer__splitter--Height: #{pf-size-prem(8px)};
+  --pf-c-drawer__splitter--Width: 100%;
+  --pf-c-drawer__splitter--BackgroundColor: var(--pf-global--BorderColor--100);
+  --pf-c-drawer__splitter--Cursor: row-resize;
+  --pf-c-drawer__splitter--m-vertical--Height: 100%;
+  --pf-c-drawer__splitter--m-vertical--Width: #{pf-size-prem(8px)};
+  --pf-c-drawer__splitter--m-vertical--Cursor: col-resize;
+
+  // Splitter handle
+  --pf-c-drawer__splitter-handle--Top: 50%;
+  --pf-c-drawer__splitter-handle--Left: 50%;
+
+  // Splitter handle line
+  --pf-c-drawer__splitter-handle--after--BorderColor: var(--pf-global--Color--100);
+  --pf-c-drawer__splitter-handle--after--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-drawer__splitter-handle--after--BorderRightWidth: 0;
+  --pf-c-drawer__splitter-handle--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-drawer__splitter-handle--after--BorderLeftWidth: 0;
+  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderTopWidth: 0;
+  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderBottomWidth: 0;
+  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-drawer__splitter-handle--after--Width: #{pf-size-prem(12px)};
+  --pf-c-drawer__splitter-handle--after--Height: #{pf-size-prem(4px)};
+  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--Width: #{pf-size-prem(4px)};
+  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--Height: #{pf-size-prem(12px)};
+
+
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--md--FlexBasis);
 
@@ -276,6 +305,43 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 // Page level drawer
 .pf-c-drawer__body > .pf-c-page__main {
   min-height: 100%;
+}
+
+.pf-c-drawer__splitter {
+  position: relative;
+  width: var(--pf-c-drawer__splitter--Width);
+  height: var(--pf-c-drawer__splitter--Height);
+  cursor: var(--pf-c-drawer__splitter--Cursor);
+  background-color: var(--pf-c-drawer__splitter--BackgroundColor);
+
+  &.pf-m-vertical {
+    --pf-c-drawer__splitter--Height: var(--pf-c-drawer__splitter--m-vertical--Height);
+    --pf-c-drawer__splitter--Width: var(--pf-c-drawer__splitter--m-vertical--Width);
+    --pf-c-drawer__splitter--Cursor: var(--pf-c-drawer__splitter--m-vertical--Cursor);
+    --pf-c-drawer__splitter-handle--after--Width: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--Width);
+    --pf-c-drawer__splitter-handle--after--Height: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--Height);
+    --pf-c-drawer__splitter-handle--after--BorderTopWidth: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderTopWidth);
+    --pf-c-drawer__splitter-handle--after--BorderRightWidth: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderRightWidth);
+    --pf-c-drawer__splitter-handle--after--BorderBottomWidth: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderBottomWidth);
+    --pf-c-drawer__splitter-handle--after--BorderLeftWidth: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderLeftWidth);
+  }
+}
+
+.pf-c-drawer__splitter-handle {
+  position: absolute;
+  top: var(--pf-c-drawer__splitter-handle--Top);
+  left: var(--pf-c-drawer__splitter-handle--Left);
+  transform: translate(-50%, -50%);
+
+  &::after {
+    display: block;
+    width: var(--pf-c-drawer__splitter-handle--after--Width);
+    height: var(--pf-c-drawer__splitter-handle--after--Height);
+    content: "";
+    border-color: var(--pf-c-drawer__splitter-handle--after--BorderColor);
+    border-style: solid;
+    border-width: var(--pf-c-drawer__splitter-handle--after--BorderTopWidth) var(--pf-c-drawer__splitter-handle--after--BorderRightWidth) var(--pf-c-drawer__splitter-handle--after--BorderBottomWidth) var(--pf-c-drawer__splitter-handle--after--BorderLeftWidth);
+  }
 }
 
 // Layout modifications happen after md breakpoint
