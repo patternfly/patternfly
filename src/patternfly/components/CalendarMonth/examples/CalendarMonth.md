@@ -346,6 +346,7 @@ cssPrefix: pf-c-calendar-month
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
+| `aria-hidden="true"` | `.pf-c-calendar-month__header-nav-control > button > [icon]` | Hides the nav control icon from assistive technologies. **Required** |
 | `aria-label="[Prev/Next] month"` | `.pf-c-calendar-month__header-nav-control` | Provides an accessible label for the nav controls. **Required** |
 | `disabled` | `.pf-c-calendar-month__date` | Indicates that a date is selected. **Required when the parent is `.pf-c-calendar-month__dates-cell.pf-m-disabled`** |
 
