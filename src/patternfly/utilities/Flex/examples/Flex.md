@@ -1,6 +1,6 @@
 ---
-id: Flex
-section: utilities
+id: CSS utility classes
+section: developer-resources
 ---
 
 import './Flex.css'

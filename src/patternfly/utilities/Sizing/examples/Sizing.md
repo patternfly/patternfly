@@ -1,6 +1,6 @@
 ---
-id: Sizing
-section: utilities
+id: CSS utility classes
+section: developer-resources
 ---
 
 import './Sizing.css'
