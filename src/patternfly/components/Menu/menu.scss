@@ -177,6 +177,10 @@
     margin-top: var(--pf-c-menu--c-divider--MarginTop);
     margin-bottom: var(--pf-c-menu--c-divider--MarginBottom);
   }
+
+  &.pf-m-right {
+    right: 0;
+  }
 }
 
 // Header

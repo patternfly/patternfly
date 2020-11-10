@@ -1,0 +1,82 @@
+{{#> menu menu--IsDrilledIn=menu-drilldown-example--IsDrilledIn--list-1 menu--modifier="pf-m-drilldown pf-m-right" menu--id=menu-drilldown-example--id menu--attribute=menu-drilldown-example--attribute}}
+  {{#> menu-content}}
+    {{!-- {{> page-demo-menu-user-dropdown page-demo-menu-user-dropdown--IsGroup="true"}} --}}
+    {{#> menu-list}}
+      {{#> menu-list-item menu-list-item--modifier="pf-m-text"}}
+        <span class="pf-c-menu__item">
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Username:
+              <br>
+              johnsmith@redhat.com
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        </span>
+      {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--modifier="pf-m-text"}}
+        <span class="pf-c-menu__item">
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Account number:
+              <br>
+              123456789
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        </span>
+      {{/menu-list-item}}
+      {{> divider divider--type="li"}}
+      {{#> menu-list-item}}
+        {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              My profile
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              User management
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Logout
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{> divider}}
+      {{#> menu-list-item menu-list-item--IsExpanded=menu-drilldown-example--IsDrilledIn--list-1 menu-list-item--IsCurrentPath=menu-drilldown-example--IsDrilledIn--list-1 menu-list-item--IsExpandable="true" menu-list-item--text="Settings" menu-list-item--IsDrillDown="true"}}
+        {{#> menu menu--IsSubmenu="true" menu--id=(concat menu-drilldown-example--id  '-list-1') menu--attribute=''}}
+          {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Settings" menu-list-item--attribute='tabindex="0"'}}
+          {{> divider divider--type="li"}}
+          {{> menu-list-item newcontext menu-list-item--text="Setting 1"}}
+          {{> menu-list-item newcontext menu-list-item--text="Setting 2"}}
+        {{/menu}}
+      {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--IsExpanded=menu-drilldown-example--IsDrilledIn--list-1 menu-list-item--IsCurrentPath=menu-drilldown-example--IsDrilledIn--list-1 menu-list-item--IsExpandable="true" menu-list-item--text="Help" menu-list-item--IsDrillDown="true"}}
+        {{#> menu menu--IsSubmenu="true" menu--id=(concat menu-drilldown-example--id  '-list-2') menu--attribute=''}}
+          {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Help" menu-list-item--attribute='tabindex="0"'}}
+          {{> divider divider--type="li"}}
+          {{> menu-list-item newcontext menu-list-item--text="Help"}}
+          {{> menu-list-item newcontext menu-list-item--text="Contact us"}}
+        {{/menu}}
+      {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--IsExpanded=menu-drilldown-example--IsDrilledIn--list-1 menu-list-item--IsCurrentPath=menu-drilldown-example--IsDrilledIn--list-1 menu-list-item--IsExpandable="true" menu-list-item--text="Application launcher" menu-list-item--IsDrillDown="true"}}
+        {{#> menu menu--IsSubmenu="true" menu--id=(concat menu-drilldown-example--id  '-list-3') menu--attribute=''}}
+          {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Application launcher" menu-list-item--attribute='tabindex="0"'}}
+          {{> divider divider--type="li"}}
+          {{> menu-list-item newcontext menu-list-item--text="Reports"}}
+          {{> menu-list-item newcontext menu-list-item--text="Reports"}}
+        {{/menu}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+{{/menu}}

@@ -405,12 +405,16 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
       // Hidden modifier
       .pf-m-hidden#{$breakpoint-name} {
+        --pf-c-page__header-content--c-toolbar__item--Display: none;
+
         display: none;
         visibility: hidden;
       }
 
       // Visible modifier
       .pf-m-visible#{$breakpoint-name} {
+        --pf-c-page__header-content--c-toolbar__item--Display: flex;
+
         display: flex;
         visibility: visible;
       }

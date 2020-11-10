@@ -68,6 +68,8 @@
   --pf-c-dropdown--m-top__menu--Top: 0;
   --pf-c-dropdown--m-top__menu--TranslateY: calc(-100% - var(--pf-global--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
+  --pf-c-dropdown--c-menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
+
   // Menu Item
   --pf-c-dropdown__menu-item--BackgroundColor: transparent;
   --pf-c-dropdown__menu-item--PaddingTop: var(--pf-global--spacer--sm);
@@ -124,6 +126,11 @@
     &:last-child {
       --pf-c-dropdown--c-divider--MarginBottom: 0;
     }
+  }
+
+  .pf-c-menu {
+    position: absolute;
+    top: var(--pf-c-dropdown--c-menu--Top);
   }
 }
 

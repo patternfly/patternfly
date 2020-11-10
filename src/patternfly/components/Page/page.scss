@@ -162,6 +162,9 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-wizard--BorderTopColor: var(--pf-global--BorderColor--100);
   --pf-c-page__main-wizard--BorderTopWidth: var(--pf-global--BorderWidth--sm);
 
+
+  --pf-c-page__header-content--c-toolbar__item--Display: flex;
+
   // Base
   display: grid;
   height: 100%;
@@ -222,6 +225,10 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   // Header sidebar toggle
   --pf-c-page__header-sidebar-toggle__c-button--MarginRight: 0;
 
+  // content
+  --pf-c-page__header-alt--c-toolbar__content--PaddingRight: 0;
+  --pf-c-page__header-alt--c-toolbar__content--PaddingLeft: 0;
+
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-page__header-alt-brand-link--PaddingLeft: 0;
     --pf-c-page__header-alt-brand-link--PaddingRight: 0;
@@ -233,7 +240,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   position: relative;
   z-index: var(--pf-c-page__header--ZIndex);
   display: grid;
-  grid-template-columns: max-content auto;
+  grid-template-columns: min-content auto;
   grid-area: header;
   align-items: center;
   min-width: 0;
@@ -301,14 +308,18 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     align-self: stretch;
   }
 
-  .pf-c-toolbar__toggle-group,
-  .pf-c-toolbar__item {
-    align-items: stretch;
-  }
+  // .pf-c-toolbar__toggle-group,
+  // .pf-c-toolbar__item {
+  //   align-items: stretch;
+  // }
 
   .pf-c-toolbar {
     --pf-c-toolbar--PaddingTop: 0;
     --pf-c-toolbar--PaddingBottom: 0;
+
+    // content
+    // --pf-c-toolbar__content--PaddingRight: var(--pf-c-page__header-alt--c-toolbar__content--PaddingRight);
+    // --pf-c-toolbar__content--PaddingLeft: var(--pf-c-page__header-alt--c-toolbar__content--PaddingLeft);
 
     @media screen and (min-width: $pf-global--breakpoint--lg) {
       --pf-c-toolbar__expandable-content--lg--PaddingRight: var(--pf-global--spacer--md);
@@ -325,17 +336,24 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   }
 
   .pf-c-toolbar__item {
-    display: flex;
+    display: var(--pf-c-page__header-content--c-toolbar__item--Display);
     align-items: center;
   }
 
   .pf-c-toolbar__content {
-    .pf-c-context-selector,
-    .pf-c-dropdown,
-    .pf-c-select {
+    .pf-c-context-selector {
       align-self: stretch;
 
-      button {
+      .pf-c-context-selector__toggle {
+        height: 100%;
+      }
+    }
+
+    .pf-c-dropdown {
+      display: flex;
+      align-self: stretch;
+
+      .pf-c-dropdown__toggle:not(.pf-m-plain) {
         height: 100%;
       }
     }
