@@ -1,7 +1,7 @@
 <{{#if dual-list-selector-item--type}}{{dual-list-selector-item--type}}{{else}}button{{/if}} class="pf-c-dual-list-selector__item{{#if dual-list-selector-item--modifier}} {{dual-list-selector-item--modifier}}{{/if}}"
-  {{#if dual-list-selector-item--type}}
+  {{!-- {{#if dual-list-selector-item--type}}
     tabindex="0"
-  {{/if}}
+  {{/if}} --}}
   {{#unless dual-list-selector-item--type}}
     type="button"
   {{/unless}}
@@ -20,18 +20,24 @@
       {{> dual-list-selector-item-check}}
     {{/if}}
 
+  {{#> dual-list-selector-item-text}}
     {{#> dual-list-selector-item--text}}
-      {{dual-list-selector-item--text}}
+      {{{dual-list-selector-item--text}}}
     {{/dual-list-selector-item--text}}
+  {{/dual-list-selector-item-text}}
 
   {{/dual-list-selector-item-main}}
-{{!-- 
-  {{#if dual-list-selector-item-count}}
-    {{#> badge badge--modifier="pf-m-read"}}
-      {{dual-list-selector-item-count}}
-    {{/badge}}
-  {{/dual-list-selector-item-count}}
-  {{/if}} --}}
+
+
+  {{#> dual-list-selector-item--count}}
+    {{#> dual-list-selector-item-count}}
+      {{#> badge badge--modifier="pf-m-read"}}
+        {{dual-list-selector-item--count}}
+      {{/badge}}
+    {{/dual-list-selector-item-count}}
+  {{/dual-list-selector-item--count}}
+
+
 
 </{{#if dual-list-selector-item--type}}{{dual-list-selector-item--type}}{{else}}button{{/if}}>
 
