@@ -1,6 +1,6 @@
 ---
-id: CSS utility classes
-section: developer-resources
+id: Background color
+section: utilities
 beta: true
 ---
 

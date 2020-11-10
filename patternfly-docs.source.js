@@ -10,18 +10,8 @@ module.exports = sourceMD => {
 
   // Core MD
   const coreDocsPath = path.join(__dirname, 'dist/docs');
-  const coreDocsIgnore = path.join(coreDocsPath, '/utilities/**');
-  sourceMD(path.join(coreDocsPath, '!(demos)/**/examples/**/*.md'), 'html', coreDocsIgnore);
-  sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos', coreDocsIgnore);
-  // Core CSS utilities
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Accessibility.md'), 'Accessibility');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Alignment.md'), 'Alignment');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/box-shadow.md'), 'box-shadow');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Display.md'), 'Display');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Flex.md'), 'Flex');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Float.md'), 'Float');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Sizing.md'), 'Sizing');
-  sourceMD(path.join(coreDocsPath, 'utilities/**/Spacing.md'), 'Spacing');
+  sourceMD(path.join(coreDocsPath, '!(demos)/**/examples/**/*.md'), 'html');
+  sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos');
 
   // Release notes
   sourceMD(require.resolve('./RELEASE-NOTES.md'), 'html');

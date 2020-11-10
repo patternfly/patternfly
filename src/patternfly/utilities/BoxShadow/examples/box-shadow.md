@@ -1,6 +1,6 @@
 ---
-id: CSS utility classes
-section: developer-resources
+id: Box shadow
+section: utilities
 ---
 
 import './box-shadow.css'

@@ -1,6 +1,6 @@
 ---
-id: CSS utility classes
-section: developer-resources
+id: Display
+section: utilities
 ---
 
 import './Display.css'

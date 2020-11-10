@@ -1,6 +1,6 @@
 ---
-id: CSS utility classes
-section: developer-resources
+id: Text
+section: utilities
 beta: true
 ---
 

@@ -1,6 +1,6 @@
 ---
-id: CSS utility classes
-section: developer-resources
+id: Accessibility
+section: utilities
 ---
 
 ## Examples
