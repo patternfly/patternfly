@@ -1,8 +1,7 @@
 ---
 id: Icons
 ---
-
-| icon name | icon | code |
+| Icon name | Icon | Code |
 | --- | --- | --- |
 | add-circle-o | <i class="pf-icon pf-icon-add-circle-o"></i> | &lt;i class=&quot;pf-icon pf-icon-add-circle-o&quot;&gt;&lt;/i&gt;
 | ansible-tower | <i class="pf-icon pf-icon-ansible-tower"></i> | &lt;i class=&quot;pf-icon pf-icon-ansible-tower&quot;&gt;&lt;/i&gt;
@@ -57,7 +56,9 @@ id: Icons
 | module | <i class="pf-icon pf-icon-module"></i> | &lt;i class=&quot;pf-icon pf-icon-module&quot;&gt;&lt;/i&gt;
 | monitoring | <i class="pf-icon pf-icon-monitoring"></i> | &lt;i class=&quot;pf-icon pf-icon-monitoring&quot;&gt;&lt;/i&gt;
 | namespaces | <i class="pf-icon pf-icon-namespaces"></i> | &lt;i class=&quot;pf-icon pf-icon-namespaces&quot;&gt;&lt;/i&gt;
+| not-started | <i class="pf-icon pf-icon-not-started"></i> | &lt;i class=&quot;pf-icon pf-icon-not-started&quot;&gt;&lt;/i&gt;
 | network | <i class="pf-icon pf-icon-network"></i> | &lt;i class=&quot;pf-icon pf-icon-network&quot;&gt;&lt;/i&gt;
+| new-process | <i class="pf-icon pf-icon-new-process"></i> | &lt;i class=&quot;pf-icon pf-icon-new-process&quot;&gt;&lt;/i&gt;
 | off | <i class="pf-icon pf-icon-off"></i> | &lt;i class=&quot;pf-icon pf-icon-off&quot;&gt;&lt;/i&gt;
 | ok | <i class="pf-icon pf-icon-ok"></i> | &lt;i class=&quot;pf-icon pf-icon-ok&quot;&gt;&lt;/i&gt;
 | on-running | <i class="pf-icon pf-icon-on-running"></i> | &lt;i class=&quot;pf-icon pf-icon-on-running&quot;&gt;&lt;/i&gt;
@@ -94,6 +95,7 @@ id: Icons
 | resource-pool | <i class="pf-icon pf-icon-resource-pool"></i> | &lt;i class=&quot;pf-icon pf-icon-resource-pool&quot;&gt;&lt;/i&gt;
 | resources-almost-empty | <i class="pf-icon pf-icon-resources-almost-empty"></i> | &lt;i class=&quot;pf-icon pf-icon-resources-almost-empty&quot;&gt;&lt;/i&gt;
 | resources-almost-full | <i class="pf-icon pf-icon-resources-almost-full"></i> | &lt;i class=&quot;pf-icon pf-icon-resources-almost-full&quot;&gt;&lt;/i&gt;
+| resources-empty | <i class="pf-icon pf-icon-resources-empty"></i> | &lt;i class=&quot;pf-icon pf-icon-resources-empty&quot;&gt;&lt;/i&gt;
 | resources-full | <i class="pf-icon pf-icon-resources-full"></i> | &lt;i class=&quot;pf-icon pf-icon-resources-full&quot;&gt;&lt;/i&gt;
 | running | <i class="pf-icon pf-icon-running"></i> | &lt;i class=&quot;pf-icon pf-icon-running&quot;&gt;&lt;/i&gt;
 | save | <i class="pf-icon pf-icon-save"></i> | &lt;i class=&quot;pf-icon pf-icon-save&quot;&gt;&lt;/i&gt;
