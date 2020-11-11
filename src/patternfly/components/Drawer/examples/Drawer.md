@@ -35,7 +35,7 @@ import './Drawer.css'
 
 ### Closed panel on left
 ```hbs
-{{#> drawer drawer--id="closed-panel-left-example" drawer--modifier="pf-m-panel-left"}}
+{{#> drawer drawer--id="closed-panel-left-example"  drawer--IsPanelLeft="true"}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -47,7 +47,7 @@ import './Drawer.css'
 
 ### Expanded panel on left
 ```hbs
-{{#> drawer drawer--id="expanded-panel-left-example" drawer-panel--IsOpen="true" drawer--modifier="pf-m-panel-left"}}
+{{#> drawer drawer--id="expanded-panel-left-example" drawer-panel--IsOpen="true" drawer--IsPanelLeft="true"}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -59,7 +59,7 @@ import './Drawer.css'
 
 ### Closed panel on bottom
 ```hbs
-{{#> drawer drawer--id="closed-panel-bottom-example" drawer--modifier="pf-m-panel-bottom"}}
+{{#> drawer drawer--id="closed-panel-bottom-example" drawer--IsPanelBottom="true"}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -73,12 +73,12 @@ import './Drawer.css'
 
 ### Expanded panel on bottom
 ```hbs
-{{#> drawer drawer--id="expanded-panel-bottom-example" drawer-panel--IsOpen="true" drawer--modifier="pf-m-panel-bottom"}}
+{{#> drawer drawer--id="expanded-panel-bottom-example" drawer-panel--IsOpen="true" drawer--IsPanelBottom="true"}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
       <br><br>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.    {{/drawer-content}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.{{/drawer-content}}
     {{> drawer-example-panel}}
   {{/drawer-main}}
 {{/drawer}}
@@ -86,7 +86,7 @@ import './Drawer.css'
 
 ### Expanded inline panel
 ```hbs
-{{#> drawer drawer--id="expanded-inline-panel-example" drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline"}}
+{{#> drawer drawer--id="expanded-inline-panel-example" drawer-panel--IsOpen="true" drawer--IsInline="true"}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -98,7 +98,7 @@ import './Drawer.css'
 
 ### Expanded inline panel on left
 ```hbs
-{{#> drawer drawer--id="expanded-inline-panel-left-example" drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline pf-m-panel-left"}}
+{{#> drawer drawer--id="expanded-inline-panel-left-example" drawer-panel--IsOpen="true" drawer--IsInline="true" drawer--IsPanelLeft="true"}}
   {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -209,6 +209,70 @@ import './Drawer.css'
 {{/drawer}}
 ```
 
+### Resizable panel
+```hbs
+{{#> drawer drawer--id="resizable-panel-example" drawer-panel--IsOpen="true" drawer-panel--IsResizable="true"}}
+  {{#> drawer-main}}
+    {{#> drawer-content}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
+    {{/drawer-content}}
+    {{> drawer-example-panel}}
+  {{/drawer-main}}
+{{/drawer}}
+```
+
+### Resizable left panel
+```hbs
+{{#> drawer drawer--id="resizable-left-panel-example" drawer--IsPanelLeft="true" drawer-panel--IsOpen="true" drawer-panel--IsResizable="true"}}
+  {{#> drawer-main}}
+    {{#> drawer-content}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
+    {{/drawer-content}}
+    {{> drawer-example-panel}}
+  {{/drawer-main}}
+{{/drawer}}
+```
+
+### Resizable bottom panel
+```hbs
+{{#> drawer drawer--id="resizable-bottom-panel-example" drawer-panel--IsOpen="true" drawer--IsPanelBottom="true" drawer-panel--IsResizable="true"}}
+  {{#> drawer-main}}
+    {{#> drawer-content}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
+      <br><br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.{{/drawer-content}}
+    {{> drawer-example-panel}}
+  {{/drawer-main}}
+{{/drawer}}
+```
+
+### Resizable inline panel
+```hbs
+{{#> drawer drawer--id="expanded-inline-panel-example" drawer-panel--IsOpen="true" drawer--IsInline="true" drawer-panel--IsResizable="true"}}
+  {{#> drawer-main}}
+    {{#> drawer-content}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
+    {{/drawer-content}}
+    {{> drawer-example-panel}}
+  {{/drawer-main}}
+{{/drawer}}
+```
+
+### Accessibility
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `role="separator"` | `.pf-c-drawer__splitter` | Indicates that the splitter is a separator. **Required** |
+| `tabindex="0"` | `.pf-c-drawer__splitter` | Inserts the splitter into the tab order of the page so that it is focusable. **Required** |
+| `aria-orientation="horizontal"` | `.pf-c-drawer__splitter` | Indicates that the splitter is oriented horizontally. |
+| `aria-orientation="vertical"` | `.pf-c-drawer__splitter.pf-m-vertical` | Indicates that the splitter is oriented vertically. |
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-drawer__splitter` | `<div>` | Initiates the splitter. |
+| `.pf-c-drawer__splitter-handle` | `<div>` | Initiates the splitter handle element. |
+| `.pf-m-vertical` |  `.pf-c-drawer__splitter` | Modifies the splitter to be vertical. |
+
 ## Documentation
 
 ### Accessibility
@@ -242,3 +306,4 @@ import './Drawer.css'
 | `.pf-m-no-padding` | `.pf-c-drawer__body` | Modifies the element to remove padding. |
 | `.pf-m-no-background` | `.pf-c-drawer__section`, `.pf-c-drawer__content`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to transparent. |
 | `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-drawer__panel` | Modifies the drawer panel width. |
+| `.pf-m-resizable` | `.pf-c-drawer__panel` | Modifies the drawer panel to be resizable. |
