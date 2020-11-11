@@ -2,7 +2,6 @@
   --pf-c-action-list--m-icon--spacer: 0;
   --pf-c-action-list--child--spacer-base: var(--pf-global--spacer--md);
   --pf-c-action-list--group--spacer-base: var(--pf-global--spacer--2xl);
-  --pf-c-action-list--child--spacer: var(--pf-c-action-list--child--spacer-base);
 }
 
 .pf-c-action-list,
@@ -17,12 +16,8 @@
     margin-left: var(--pf-c-action-list--child--spacer);
   }
 
-  > .pf-c-action-list__group + .pf-c-action-list__item,
-  > .pf-c-action-list__item + .pf-c-action-list__group {
-    margin-left: var(--pf-c-action-list--group--spacer);
-  }
-
-  + .pf-c-action-list__group {
+  > * + .pf-c-action-list__group,
+  .pf-c-action-list__group + * {
     margin-left: var(--pf-c-action-list--group--spacer);
   }
 
