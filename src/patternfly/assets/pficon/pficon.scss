@@ -27,356 +27,368 @@
 @function pf-icon-char($filename) {
 	$char: "";
 
-	@if $filename == add-circle-o {
+	@if $filename == aa-circle-o {
 		$char: "\E001";
 	}
-	@if $filename == ansible-tower {
+	@if $filename == add-circle-o {
 		$char: "\E002";
 	}
-	@if $filename == applications {
+	@if $filename == ansible-tower {
 		$char: "\E003";
 	}
-	@if $filename == arrow {
+	@if $filename == applications {
 		$char: "\E004";
 	}
-	@if $filename == asleep {
+	@if $filename == arrow {
 		$char: "\E005";
 	}
-	@if $filename == attention-bell {
+	@if $filename == asleep {
 		$char: "\E006";
 	}
-	@if $filename == automation {
+	@if $filename == attention-bell {
 		$char: "\E007";
 	}
-	@if $filename == bell {
+	@if $filename == automation {
 		$char: "\E008";
 	}
-	@if $filename == blueprint {
+	@if $filename == bell {
 		$char: "\E009";
 	}
-	@if $filename == build {
+	@if $filename == blueprint {
 		$char: "\E00A";
 	}
-	@if $filename == builder-image {
+	@if $filename == build {
 		$char: "\E00B";
 	}
-	@if $filename == bundle {
+	@if $filename == builder-image {
 		$char: "\E00C";
 	}
-	@if $filename == catalog {
+	@if $filename == bundle {
 		$char: "\E00D";
 	}
-	@if $filename == chat {
+	@if $filename == catalog {
 		$char: "\E00E";
 	}
-	@if $filename == close {
+	@if $filename == chat {
 		$char: "\E00F";
 	}
-	@if $filename == cloud-security {
+	@if $filename == close {
 		$char: "\E010";
 	}
-	@if $filename == cloud-tenant {
+	@if $filename == cloud-security {
 		$char: "\E011";
 	}
-	@if $filename == cluster {
+	@if $filename == cloud-tenant {
 		$char: "\E012";
 	}
-	@if $filename == connected {
+	@if $filename == cluster {
 		$char: "\E013";
 	}
-	@if $filename == container-node {
+	@if $filename == connected {
 		$char: "\E014";
 	}
-	@if $filename == cpu {
+	@if $filename == container-node {
 		$char: "\E015";
 	}
-	@if $filename == degraded {
+	@if $filename == cpu {
 		$char: "\E016";
 	}
-	@if $filename == disconnected {
+	@if $filename == degraded {
 		$char: "\E017";
 	}
-	@if $filename == domain {
+	@if $filename == disconnected {
 		$char: "\E018";
 	}
-	@if $filename == edit {
+	@if $filename == domain {
 		$char: "\E019";
 	}
-	@if $filename == enhancement {
+	@if $filename == edit {
 		$char: "\E01A";
 	}
-	@if $filename == enterprise {
+	@if $filename == enhancement {
 		$char: "\E01B";
 	}
-	@if $filename == equalizer {
+	@if $filename == enterprise {
 		$char: "\E01C";
 	}
-	@if $filename == error-circle-o {
+	@if $filename == equalizer {
 		$char: "\E01D";
 	}
-	@if $filename == export {
+	@if $filename == error-circle-o {
 		$char: "\E01E";
 	}
-	@if $filename == filter {
+	@if $filename == export {
 		$char: "\E01F";
 	}
-	@if $filename == flavor {
+	@if $filename == filter {
 		$char: "\E020";
 	}
-	@if $filename == folder-close {
+	@if $filename == flavor {
 		$char: "\E021";
 	}
-	@if $filename == folder-open {
+	@if $filename == folder-close {
 		$char: "\E022";
 	}
-	@if $filename == globe-route {
+	@if $filename == folder-open {
 		$char: "\E023";
 	}
-	@if $filename == help {
+	@if $filename == globe-route {
 		$char: "\E024";
 	}
-	@if $filename == history {
+	@if $filename == help {
 		$char: "\E025";
 	}
-	@if $filename == home {
+	@if $filename == history {
 		$char: "\E026";
 	}
-	@if $filename == import {
+	@if $filename == home {
 		$char: "\E027";
 	}
-	@if $filename == in-progress {
+	@if $filename == import {
 		$char: "\E028";
 	}
-	@if $filename == info {
+	@if $filename == in-progress {
 		$char: "\E029";
 	}
-	@if $filename == infrastructure {
+	@if $filename == info {
 		$char: "\E02A";
 	}
-	@if $filename == integration {
+	@if $filename == infrastructure {
 		$char: "\E02B";
 	}
-	@if $filename == key {
+	@if $filename == integration {
 		$char: "\E02C";
 	}
-	@if $filename == locked {
+	@if $filename == key {
 		$char: "\E02D";
 	}
-	@if $filename == maintenance {
+	@if $filename == locked {
 		$char: "\E02E";
 	}
-	@if $filename == memory {
+	@if $filename == maintenance {
 		$char: "\E02F";
 	}
-	@if $filename == messages {
+	@if $filename == memory {
 		$char: "\E030";
 	}
-	@if $filename == middleware {
+	@if $filename == messages {
 		$char: "\E031";
 	}
-	@if $filename == migration {
+	@if $filename == middleware {
 		$char: "\E032";
 	}
-	@if $filename == module {
+	@if $filename == migration {
 		$char: "\E033";
 	}
-	@if $filename == monitoring {
+	@if $filename == module {
 		$char: "\E034";
 	}
-	@if $filename == namespaces {
+	@if $filename == monitoring {
 		$char: "\E035";
 	}
-	@if $filename == network {
+	@if $filename == namespaces {
 		$char: "\E036";
 	}
-	@if $filename == off {
+	@if $filename == network {
 		$char: "\E037";
 	}
-	@if $filename == ok {
+	@if $filename == new-process {
 		$char: "\E038";
 	}
-	@if $filename == on-running {
+	@if $filename == not-started {
 		$char: "\E039";
 	}
-	@if $filename == on {
+	@if $filename == off {
 		$char: "\E03A";
 	}
-	@if $filename == openshift {
+	@if $filename == ok {
 		$char: "\E03B";
 	}
-	@if $filename == openstack {
+	@if $filename == on-running {
 		$char: "\E03C";
 	}
-	@if $filename == optimize {
+	@if $filename == on {
 		$char: "\E03D";
 	}
-	@if $filename == orders {
+	@if $filename == openshift {
 		$char: "\E03E";
 	}
-	@if $filename == os-image {
+	@if $filename == openstack {
 		$char: "\E03F";
 	}
-	@if $filename == package {
+	@if $filename == optimize {
 		$char: "\E040";
 	}
-	@if $filename == paused {
+	@if $filename == orders {
 		$char: "\E041";
 	}
-	@if $filename == pending {
+	@if $filename == os-image {
 		$char: "\E042";
 	}
-	@if $filename == pficon-dragdrop {
+	@if $filename == package {
 		$char: "\E043";
 	}
-	@if $filename == pficon-history {
+	@if $filename == paused {
 		$char: "\E044";
 	}
-	@if $filename == pficon-network-range {
+	@if $filename == pending {
 		$char: "\E045";
 	}
-	@if $filename == pficon-satellite {
+	@if $filename == pficon-dragdrop {
 		$char: "\E046";
 	}
-	@if $filename == pficon-sort-common-asc {
+	@if $filename == pficon-history {
 		$char: "\E047";
 	}
-	@if $filename == pficon-sort-common-desc {
+	@if $filename == pficon-network-range {
 		$char: "\E048";
 	}
-	@if $filename == pficon-template {
+	@if $filename == pficon-satellite {
 		$char: "\E049";
 	}
-	@if $filename == pficon-vcenter {
+	@if $filename == pficon-sort-common-asc {
 		$char: "\E04A";
 	}
-	@if $filename == plugged {
+	@if $filename == pficon-sort-common-desc {
 		$char: "\E04B";
 	}
-	@if $filename == port {
+	@if $filename == pficon-template {
 		$char: "\E04C";
 	}
-	@if $filename == print {
+	@if $filename == pficon-vcenter {
 		$char: "\E04D";
 	}
-	@if $filename == private {
+	@if $filename == plugged {
 		$char: "\E04E";
 	}
-	@if $filename == process-automation {
+	@if $filename == port {
 		$char: "\E04F";
 	}
-	@if $filename == project {
+	@if $filename == print {
 		$char: "\E050";
 	}
-	@if $filename == rebalance {
+	@if $filename == private {
 		$char: "\E051";
 	}
-	@if $filename == rebooting {
+	@if $filename == process-automation {
 		$char: "\E052";
 	}
-	@if $filename == regions {
+	@if $filename == project {
 		$char: "\E053";
 	}
-	@if $filename == registry {
+	@if $filename == rebalance {
 		$char: "\E054";
 	}
-	@if $filename == remove2 {
+	@if $filename == rebooting {
 		$char: "\E055";
 	}
-	@if $filename == replicator {
+	@if $filename == regions {
 		$char: "\E056";
 	}
-	@if $filename == repository {
+	@if $filename == registry {
 		$char: "\E057";
 	}
-	@if $filename == resource-pool {
+	@if $filename == remove2 {
 		$char: "\E058";
 	}
-	@if $filename == resources-almost-empty {
+	@if $filename == replicator {
 		$char: "\E059";
 	}
-	@if $filename == resources-almost-full {
+	@if $filename == repository {
 		$char: "\E05A";
 	}
-	@if $filename == resources-full {
+	@if $filename == resource-pool {
 		$char: "\E05B";
 	}
-	@if $filename == running {
+	@if $filename == resources-almost-empty {
 		$char: "\E05C";
 	}
-	@if $filename == save {
+	@if $filename == resources-almost-full {
 		$char: "\E05D";
 	}
-	@if $filename == screen {
+	@if $filename == resources-empty {
 		$char: "\E05E";
 	}
-	@if $filename == security {
+	@if $filename == resources-full {
 		$char: "\E05F";
 	}
-	@if $filename == server-group {
+	@if $filename == running {
 		$char: "\E060";
 	}
-	@if $filename == server {
+	@if $filename == save {
 		$char: "\E061";
 	}
-	@if $filename == service-catalog {
+	@if $filename == screen {
 		$char: "\E062";
 	}
-	@if $filename == service {
+	@if $filename == security {
 		$char: "\E063";
 	}
-	@if $filename == services {
+	@if $filename == server-group {
 		$char: "\E064";
 	}
-	@if $filename == spinner {
+	@if $filename == server {
 		$char: "\E065";
 	}
-	@if $filename == spinner2 {
+	@if $filename == service-catalog {
 		$char: "\E066";
 	}
-	@if $filename == storage-domain {
+	@if $filename == service {
 		$char: "\E067";
 	}
-	@if $filename == tenant {
+	@if $filename == services {
 		$char: "\E068";
 	}
-	@if $filename == thumb-tack {
+	@if $filename == spinner {
 		$char: "\E069";
 	}
-	@if $filename == topology {
+	@if $filename == spinner2 {
 		$char: "\E06A";
 	}
-	@if $filename == trend-down {
+	@if $filename == storage-domain {
 		$char: "\E06B";
 	}
-	@if $filename == trend-up {
+	@if $filename == tenant {
 		$char: "\E06C";
 	}
-	@if $filename == unknown {
+	@if $filename == thumb-tack {
 		$char: "\E06D";
 	}
-	@if $filename == unlocked {
+	@if $filename == topology {
 		$char: "\E06E";
 	}
-	@if $filename == unplugged {
+	@if $filename == trend-down {
 		$char: "\E06F";
 	}
-	@if $filename == user {
+	@if $filename == trend-up {
 		$char: "\E070";
 	}
-	@if $filename == users {
+	@if $filename == unknown {
 		$char: "\E071";
 	}
-	@if $filename == virtual-machine {
+	@if $filename == unlocked {
 		$char: "\E072";
 	}
-	@if $filename == volume {
+	@if $filename == unplugged {
 		$char: "\E073";
 	}
-	@if $filename == warning-triangle {
+	@if $filename == user {
 		$char: "\E074";
 	}
-	@if $filename == zone {
+	@if $filename == users {
 		$char: "\E075";
+	}
+	@if $filename == virtual-machine {
+		$char: "\E076";
+	}
+	@if $filename == volume {
+		$char: "\E077";
+	}
+	@if $filename == warning-triangle {
+		$char: "\E078";
+	}
+	@if $filename == zone {
+		$char: "\E079";
 	}
 
 	@return $char;
@@ -393,6 +405,9 @@
 	}
 }
 
+.pf-icon-aa-circle-o {
+	@include pf-icon(aa-circle-o);
+}
 .pf-icon-add-circle-o {
 	@include pf-icon(add-circle-o);
 }
@@ -555,6 +570,12 @@
 .pf-icon-network {
 	@include pf-icon(network);
 }
+.pf-icon-new-process {
+	@include pf-icon(new-process);
+}
+.pf-icon-not-started {
+	@include pf-icon(not-started);
+}
 .pf-icon-off {
 	@include pf-icon(off);
 }
@@ -662,6 +683,9 @@
 }
 .pf-icon-resources-almost-full {
 	@include pf-icon(resources-almost-full);
+}
+.pf-icon-resources-empty {
+	@include pf-icon(resources-empty);
 }
 .pf-icon-resources-full {
 	@include pf-icon(resources-full);
