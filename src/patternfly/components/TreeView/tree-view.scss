@@ -5,9 +5,8 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view--PaddingBottom: var(--pf-global--spacer--sm);
 
   // Link base
-  --pf-c-tree-view__node--indent--base: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__node--indent--base: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--sm));
   --pf-c-tree-view__node--nested-indent--base: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--sm));
-  --pf-c-tree-view__item--m-expandable__node--nested-indent--base: var(--pf-global--spacer--lg);
 
   // Link
   --pf-c-tree-view__node--PaddingTop: var(--pf-global--spacer--sm);
@@ -72,6 +71,7 @@ $pf-c-tree-view--MaxNesting: 10;
 // stylelint-enable
 
 .pf-c-tree-view__node {
+  position: relative;
   display: flex;
   flex: 1 1;
   align-items: center;
@@ -110,12 +110,15 @@ $pf-c-tree-view--MaxNesting: 10;
 }
 
 .pf-c-tree-view__node-toggle {
+  position: absolute;
+  left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-global--spacer--lg) - var(--pf-global--spacer--lg));
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: var(--pf-c-tree-view__node-toggle--MinWidth);
   min-height: var(--pf-c-tree-view__node-toggle--MinHeight);
   padding-right: var(--pf-c-tree-view__node-toggle--PaddingRight);
+  transform: translateX(100%);
 }
 
 .pf-c-tree-view__node-text {
@@ -165,10 +168,6 @@ $pf-c-tree-view--MaxNesting: 10;
   @for $i from 1 through $pf-c-tree-view--MaxNesting {
     #{$nested-item} {
       --pf-c-tree-view__node--PaddingLeft: calc(var(--pf-c-tree-view__node--indent--base) + (var(--pf-c-tree-view__node--nested-indent--base) * #{$i}));
-    }
-
-    #{$nested-item}.pf-m-expandable {
-      --pf-c-tree-view__node--PaddingLeft: calc(var(--pf-c-tree-view__node--indent--base) + (var(--pf-c-tree-view__item--m-expandable__node--nested-indent--base) * #{$i}));
     }
 
     $nested-item: $nested-item + " " + $root;

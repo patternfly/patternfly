@@ -32,6 +32,11 @@ beta: true
                 {{> tree-view-node tree-view-node--text="Current" tree-view-node--modifier="pf-m-current"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
@@ -39,6 +44,11 @@ beta: true
             {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 2"}}
           {{/tree-view-content}}
           {{#> tree-view-list newcontext}}
+            {{#> tree-view-list-item}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
               {{#> tree-view-content}}
                 {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Settings"}}
@@ -199,6 +209,11 @@ beta: true
             {{#> tree-view-list-item}}
               {{#> tree-view-content}}
                 {{> tree-view-node tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Loader" tree-view-node-text--type="label" tree-view-node--id="4"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--type--IsDiv="true" tree-view-node--HasCheckbox="true" tree-view-node-check--IsChecked="true" tree-view-node--text="Loader" tree-view-node-text--type="label" tree-view-node--id="4"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
