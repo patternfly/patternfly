@@ -560,7 +560,7 @@ cssPrefix: pf-c-dual-list-selector
 
 ### Tree view
 ```hbs
-{{#> dual-list-selector dual-list-selector--id="basic" dual-list-selector--IsTreeview="true"}}
+{{#> dual-list-selector dual-list-selector--id="basic"}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
@@ -696,7 +696,7 @@ cssPrefix: pf-c-dual-list-selector
 
 ### Tree view chosen options
 ```hbs
-{{#> dual-list-selector dual-list-selector--id="basic" dual-list-selector--IsTreeview="true"}}
+{{#> dual-list-selector dual-list-selector--id="basic"}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
