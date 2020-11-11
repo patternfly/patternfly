@@ -4,7 +4,7 @@ module.exports = {
   hasFooter: false,
   hasVersionSwitcher: false,
   sideNavItems: [
-    { section: 'get-started' },
+    { section: 'developer-resources' },
     { section: 'components' },
     { section: 'layouts' },
     { section: 'utilities' },
