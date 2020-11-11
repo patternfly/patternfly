@@ -29,6 +29,13 @@ $pf-c-tree-view--MaxNesting: 10;
 
   // Toggle icon
   --pf-c-tree-view__node-toggle--Transition: var(--pf-global--Transition);
+  --pf-c-tree-view__node-toggle-button--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-tree-view__node-toggle-button--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-tree-view__node-toggle-button--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-tree-view__node-toggle-button--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-tree-view__node-toggle-button--MarginLeft: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-tree-view__node-toggle-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-tree-view__node-toggle-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
 
   // check
   --pf-c-tree-view__node-check--MarginRight: var(--pf-global--spacer--sm);
@@ -56,6 +63,14 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__action--Color: var(--pf-global--icon--Color--light);
   --pf-c-tree-view__action--hover--Color: var(--pf-global--icon--Color--dark);
   --pf-c-tree-view__action--focus--Color: var(--pf-global--icon--Color--dark);
+
+  // main
+  --pf-c-tree-view__node-main--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__node-main--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__node-main--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__node-main--MarginTop: calc(-1 * var(--pf-global--spacer--sm));
+  --pf-c-tree-view__node-main--MarginRight: calc(-1 * var(--pf-global--spacer--sm));
+  --pf-c-tree-view__node-main--MarginBottom: calc(-1 * var(--pf-global--spacer--sm));
 
   padding-top: var(--pf-c-tree-view--PaddingTop);
   padding-bottom: var(--pf-c-tree-view--PaddingBottom);
@@ -118,6 +133,14 @@ $pf-c-tree-view--MaxNesting: 10;
   padding-right: var(--pf-c-tree-view__node-toggle--PaddingRight);
 }
 
+.pf-c-tree-view__node-toggle-button {
+  padding: var(--pf-c-tree-view__node-toggle-button--PaddingTop) var(--pf-c-tree-view__node-toggle-button--PaddingRight) var(--pf-c-tree-view__node-toggle-button--PaddingBottom) var(--pf-c-tree-view__node-toggle-button--PaddingLeft);
+  margin-top: var(--pf-c-tree-view__node-toggle-button--MarginTop);
+  margin-bottom: var(--pf-c-tree-view__node-toggle-button--MarginBottom);
+  margin-left: var(--pf-c-tree-view__node-toggle-button--MarginLeft);
+  border: 0;
+}
+
 .pf-c-tree-view__node-text {
   @include pf-text-overflow;
 }
@@ -129,6 +152,18 @@ $pf-c-tree-view--MaxNesting: 10;
 .pf-c-tree-view__node-icon {
   padding-right: var(--pf-c-tree-view__node-icon--PaddingRight);
   color: var(--pf-c-tree-view__node-icon--Color);
+}
+
+.pf-c-tree-view__node-main {
+  width: 100%;
+  padding-top: var(--pf-c-tree-view__node-main--PaddingTop);
+  padding-right: var(--pf-c-tree-view__node-main--PaddingRight);
+  padding-bottom: var(--pf-c-tree-view__node-main--PaddingBottom);
+  margin-top: var(--pf-c-tree-view__node-main--MarginTop);
+  margin-right: var(--pf-c-tree-view__node-main--MarginRight);
+  margin-bottom: var(--pf-c-tree-view__node-main--MarginBottom);
+  text-align: left;
+  border: 0;
 }
 
 .pf-c-tree-view__content {
