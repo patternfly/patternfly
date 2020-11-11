@@ -71,6 +71,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__splitter--m-vertical--Height: 100%;
   --pf-c-drawer__splitter--m-vertical--Width: #{pf-size-prem(9px)};
   --pf-c-drawer__splitter--m-vertical--Cursor: col-resize;
+  --pf-c-drawer--m-inline__splitter--focus--OutlineOffset: #{pf-size-prem(-1px)};
 
   // Splitter border
   --pf-c-drawer__splitter--after--BorderColor: var(--pf-global--BorderColor--100);
@@ -499,6 +500,8 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         --pf-c-drawer__splitter-handle--Left: var(--pf-c-drawer--m-inline__splitter-handle--Left);
         --pf-c-drawer__splitter--after--BorderRightWidth: var(--pf-c-drawer--m-inline__splitter--after--BorderRightWidth);
         --pf-c-drawer__splitter--after--BorderLeftWidth: var(--pf-c-drawer--m-inline__splitter--after--BorderLeftWidth);
+
+        outline-offset: var(--pf-c-drawer--m-inline__splitter--focus--OutlineOffset);
       }
     }
 
