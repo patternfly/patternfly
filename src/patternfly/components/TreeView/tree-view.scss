@@ -25,6 +25,7 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node-toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tree-view__node-toggle--MinWidth: var(--pf-global--spacer--lg);
   --pf-c-tree-view__node-toggle--MinHeight: var(--pf-c-tree-view__node-toggle--icon--MinWidth);
+  --pf-c-tree-view__node-toggle--TranslateX: -100%;
 
   // Toggle icon
   --pf-c-tree-view__node-toggle--Transition: var(--pf-global--Transition);
@@ -111,14 +112,15 @@ $pf-c-tree-view--MaxNesting: 10;
 
 .pf-c-tree-view__node-toggle {
   position: absolute;
-  left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-global--spacer--lg) - var(--pf-global--spacer--lg));
+  top: var(--pf-c-tree-view__node--PaddingTop);
+  left: calc(var(--pf-c-tree-view__node--PaddingLeft));
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: var(--pf-c-tree-view__node-toggle--MinWidth);
   min-height: var(--pf-c-tree-view__node-toggle--MinHeight);
   padding-right: var(--pf-c-tree-view__node-toggle--PaddingRight);
-  transform: translateX(100%);
+  transform: translateX(var(--pf-c-tree-view__node-toggle--TranslateX));
 }
 
 .pf-c-tree-view__node-text {
