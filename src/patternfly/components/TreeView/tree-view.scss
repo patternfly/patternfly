@@ -25,6 +25,8 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node-toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tree-view__node-toggle--MinWidth: var(--pf-global--spacer--lg);
   --pf-c-tree-view__node-toggle--MinHeight: var(--pf-c-tree-view__node-toggle--icon--MinWidth);
+  --pf-c-tree-view__node-toggle--Top: var(--pf-c-tree-view__node--PaddingTop);
+  --pf-c-tree-view__node-toggle--Left: var(--pf-c-tree-view__node--PaddingLeft);
   --pf-c-tree-view__node-toggle--TranslateX: -100%;
 
   // Toggle icon
@@ -112,8 +114,8 @@ $pf-c-tree-view--MaxNesting: 10;
 
 .pf-c-tree-view__node-toggle {
   position: absolute;
-  top: var(--pf-c-tree-view__node--PaddingTop);
-  left: calc(var(--pf-c-tree-view__node--PaddingLeft));
+  top: var(--pf-c-tree-view__node-toggle--Top);
+  left: var(--pf-c-tree-view__node-toggle--Left);
   display: inline-flex;
   align-items: center;
   justify-content: center;
