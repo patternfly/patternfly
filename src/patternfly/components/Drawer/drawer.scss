@@ -81,6 +81,13 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__splitter--after--BorderLeftWidth: 0;
   --pf-c-drawer--m-panel-left__splitter--after--BorderLeftWidth: var(--pf-c-drawer__splitter--after--border-width--base);
   --pf-c-drawer--m-panel-bottom__splitter--after--BorderBottomWidth: var(--pf-c-drawer__splitter--after--border-width--base);
+  --pf-c-drawer--m-inline__splitter--m-vertical--Width: #{pf-size-prem(10px)};
+  --pf-c-drawer--m-inline__splitter-handle--Left: 50%;
+  --pf-c-drawer--m-inline__splitter--after--BorderRightWidth: var(--pf-c-drawer__splitter--after--border-width--base);
+  --pf-c-drawer--m-inline__splitter--after--BorderLeftWidth: var(--pf-c-drawer__splitter--after--border-width--base);
+  --pf-c-drawer--m-inline--m-panel-bottom__splitter--Height: #{pf-size-prem(10px)};
+  --pf-c-drawer--m-inline--m-panel-bottom__splitter-handle--Top: 50%;
+  --pf-c-drawer--m-inline--m-panel-bottom__splitter--after--BorderTopWidth: var(--pf-c-drawer__splitter--after--border-width--base);
 
   // Splitter handle
   --pf-c-drawer__splitter-handle--Top: 50%;
@@ -404,7 +411,10 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
-      --pf-c-drawer__panel--after--Width: 0;
+      &::after {
+        width: 0;
+        height: 0;
+      }
 
       padding-left: var(--pf-c-drawer__panel--m-resizable--PaddingLeft);
     }
@@ -478,6 +488,29 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         --pf-c-drawer__splitter-handle--Top: var(--pf-c-drawer--m-panel-bottom__splitter-handle--Top);
         --pf-c-drawer__splitter--after--BorderRightWidth: 0;
         --pf-c-drawer__splitter--after--BorderBottomWidth: var(--pf-c-drawer--m-panel-bottom__splitter--after--BorderBottomWidth);
+      }
+    }
+  }
+
+  .pf-c-drawer.pf-m-inline {
+    > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
+      > .pf-c-drawer__splitter {
+        --pf-c-drawer__splitter--m-vertical--Width: var(--pf-c-drawer--m-inline__splitter--m-vertical--Width);
+        --pf-c-drawer__splitter-handle--Left: var(--pf-c-drawer--m-inline__splitter-handle--Left);
+        --pf-c-drawer__splitter--after--BorderRightWidth: var(--pf-c-drawer--m-inline__splitter--after--BorderRightWidth);
+        --pf-c-drawer__splitter--after--BorderLeftWidth: var(--pf-c-drawer--m-inline__splitter--after--BorderLeftWidth);
+      }
+    }
+
+    &.pf-m-panel-bottom {
+      > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
+        > .pf-c-drawer__splitter {
+          --pf-c-drawer__splitter--Height: var(--pf-c-drawer--m-inline--m-panel-bottom__splitter--Height);
+          --pf-c-drawer__splitter-handle--Top: var(--pf-c-drawer--m-inline--m-panel-bottom__splitter-handle--Top);
+          --pf-c-drawer__splitter--after--BorderTopWidth: var(--pf-c-drawer--m-inline--m-panel-bottom__splitter--after--BorderTopWidth);
+          --pf-c-drawer__splitter--after--BorderRightWidth: 0;
+          --pf-c-drawer__splitter--after--BorderLeftWidth: 0;
+        }
       }
     }
   }
