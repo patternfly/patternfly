@@ -64,14 +64,6 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__action--hover--Color: var(--pf-global--icon--Color--dark);
   --pf-c-tree-view__action--focus--Color: var(--pf-global--icon--Color--dark);
 
-  // main
-  --pf-c-tree-view__node-main--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-tree-view__node-main--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-tree-view__node-main--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-tree-view__node-main--MarginTop: calc(-1 * var(--pf-global--spacer--sm));
-  --pf-c-tree-view__node-main--MarginRight: calc(-1 * var(--pf-global--spacer--sm));
-  --pf-c-tree-view__node-main--MarginBottom: calc(-1 * var(--pf-global--spacer--sm));
-
   padding-top: var(--pf-c-tree-view--PaddingTop);
   padding-bottom: var(--pf-c-tree-view--PaddingBottom);
 }
@@ -152,18 +144,6 @@ $pf-c-tree-view--MaxNesting: 10;
 .pf-c-tree-view__node-icon {
   padding-right: var(--pf-c-tree-view__node-icon--PaddingRight);
   color: var(--pf-c-tree-view__node-icon--Color);
-}
-
-.pf-c-tree-view__node-main {
-  width: 100%;
-  padding-top: var(--pf-c-tree-view__node-main--PaddingTop);
-  padding-right: var(--pf-c-tree-view__node-main--PaddingRight);
-  padding-bottom: var(--pf-c-tree-view__node-main--PaddingBottom);
-  margin-top: var(--pf-c-tree-view__node-main--MarginTop);
-  margin-right: var(--pf-c-tree-view__node-main--MarginRight);
-  margin-bottom: var(--pf-c-tree-view__node-main--MarginBottom);
-  text-align: left;
-  border: 0;
 }
 
 .pf-c-tree-view__content {
