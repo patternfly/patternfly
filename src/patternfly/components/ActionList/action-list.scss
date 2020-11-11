@@ -3,7 +3,6 @@
   --pf-c-action-list--child--spacer-base: var(--pf-global--spacer--md);
   --pf-c-action-list--group--spacer-base: var(--pf-global--spacer--2xl);
   --pf-c-action-list--child--spacer: var(--pf-c-action-list--child--spacer-base);
-  --pf-c-action-list--group--spacer: var(--pf-c-action-list--group--spacer-base);
 }
 
 .pf-c-action-list,
@@ -28,6 +27,6 @@
   }
 
   &.pf-m-icons {
-    --pf-c-action-list--child--spacer: 0;
+    --pf-c-action-list--child--spacer: var(--pf-c-action-list--m-icon--spacer);
   }
 }
