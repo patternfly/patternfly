@@ -852,14 +852,13 @@ cssPrefix: pf-c-dual-list-selector
 | `.pf-c-dual-list-selector__list-item` | `<li>` | Initiates a dual list selector pane menu list item. **Required** |
 | `.pf-c-dual-list-selector__item` | `<button>`, `<div>` | Initiates a dual list selector pane menu item. **Required** |
 | `.pf-c-dual-list-selector__item-main` | `<span>` | Initiates a dual list selector pane menu item main container. **Required** |
-| `.pf-c-dual-list-selector__item-text` | `<span>` | Initiates a dual list selector pane menu item text. **Required** |
-| `.pf-c-dual-list-selector__controls` | `<div>` | Initiates the dual list selector controls. **Required** |
-| `.pf-c-dual-list-selector__controls-item` | `<div>` | Initiates the dual list selector controls item. **Required** |
 | `.pf-c-dual-list-selector__item-check` | `<span>` | Initiates the dual list selector item check. |
 | `.pf-c-dual-list-selector__item-count` | `<span>` | Initiates the dual list selector item count. |
 | `.pf-c-dual-list-selector__item-toggle-icon` | `<span>` | Initiates the dual list selector item toggle icon. |
 | `.pf-c-dual-list-selector__item-toggle` | `<button>` | Initiates the dual list selector item toggle. |
-
+| `.pf-c-dual-list-selector__item-text` | `<span>` | Initiates a dual list selector pane menu item text. **Required** |
+| `.pf-c-dual-list-selector__controls` | `<div>` | Initiates the dual list selector controls. **Required** |
+| `.pf-c-dual-list-selector__controls-item` | `<div>` | Initiates the dual list selector controls item. **Required** |
 | `.pf-m-available` | `.pf-c-dual-list-selector__pane` | Defines a pane as the available list. |
 | `.pf-m-chosen` | `.pf-c-dual-list-selector__pane` | Defines a pane as the chosen list. |
 | `.pf-m-selected` | `.pf-c-dual-list-selector__list-item` | Modifies the menu list item for the selected state. |
