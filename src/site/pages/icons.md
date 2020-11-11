@@ -1,4 +1,6 @@
-### PF icons
+---
+id: Icons
+---
 | Icon name | Icon | Code |
 | --- | --- | --- |
 | add-circle-o | <i class="pf-icon pf-icon-add-circle-o"></i> | &lt;i class=&quot;pf-icon pf-icon-add-circle-o&quot;&gt;&lt;/i&gt;
