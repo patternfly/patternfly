@@ -306,4 +306,4 @@ import './Drawer.css'
 | `.pf-m-no-padding` | `.pf-c-drawer__body` | Modifies the element to remove padding. |
 | `.pf-m-no-background` | `.pf-c-drawer__section`, `.pf-c-drawer__content`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to transparent. |
 | `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-drawer__panel` | Modifies the drawer panel width. |
-| `.pf-m-resizable` | `.pf-c-drawer__panel` | Modifies the drawer panel to be resizable. |
+| `.pf-m-resizable` | `.pf-c-drawer__panel` | Modifies the drawer panel to be resizable. Intended for use with the `.pf-c-drawer__splitter` element. |

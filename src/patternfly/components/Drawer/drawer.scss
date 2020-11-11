@@ -344,7 +344,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   width: var(--pf-c-drawer__splitter--Width);
   height: var(--pf-c-drawer__splitter--Height);
   cursor: var(--pf-c-drawer__splitter--Cursor);
-  visibility: visible;
+  visibility: hidden;
   background-color: var(--pf-c-drawer__splitter--BackgroundColor);
 
   &.pf-m-vertical {
