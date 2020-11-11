@@ -6,7 +6,7 @@ $pf-c-tree-view--MaxNesting: 10;
 
   // Link base
   --pf-c-tree-view__node--indent--base: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--sm));
-  --pf-c-tree-view__node--nested-indent--base: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--sm));
+  --pf-c-tree-view__node--nested-indent--base: var(--pf-global--spacer--lg);
 
   // Link
   --pf-c-tree-view__node--PaddingTop: var(--pf-global--spacer--sm);
