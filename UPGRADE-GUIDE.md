@@ -1,6 +1,6 @@
 ---
 id: Upgrade guide
-section: get-started
+section: developer-resources
 ---
 
 Hey, Flyers! We've been busy for the past 12 weeks working on significant changes to PatternFly's HTML and CSS. We made our components mobile-first and changed colors and the default font. This upgrade guide details **what** was broken and **how** to fix it. To learn **why** a change was made, check out the linked pull requests.

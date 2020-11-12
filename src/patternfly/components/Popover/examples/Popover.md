@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-c-popover
 ---
 
+import './Popover.css'
+
 ## Examples
 ### Top
 ```hbs
@@ -99,6 +101,37 @@ cssPrefix: pf-c-popover
 {{/popover}}
 ```
 
+### No padding
+```hbs
+{{#> popover popover--modifier="pf-m-right pf-m-no-padding" popover--attribute='aria-label="Popover with no padding example" aria-describedby="popover-no-padding-body"'}}
+  {{#> popover-content}}
+    {{#> popover-body popover-body--attribute='id="popover-no-padding-body"'}}
+      This popover has no padding and is intended for use with content that has its own spacing and should touch the edges of the popover container.
+    {{/popover-body}}
+  {{/popover-content}}
+{{/popover}}
+```
+
+### Width auto
+```hbs
+{{#> popover popover--modifier="pf-m-right pf-m-width-auto" popover--attribute='aria-labelledby="popover-width-auto-header" aria-describedby="popover-width-auto-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-width-auto-header"'}}
+      Popover header
+    {{/title}}
+    {{#> popover-body popover-body--attribute='id="popover-width-auto-body"'}}
+      Popovers body
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
 ## Documentation
 ### Overview
 A popover is used to provide contextual information for another component on click.  The popover itself is made up of two main elements: arrow and content. The content element follows the pattern of the popover box component, with a close icon in the top right corner, as well as a header and body.  One of the directional modifiers (`.pf-m-left`, `.pf-m-top`, etc.) is required on the popover component
@@ -128,3 +161,5 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-m-right` | `.pf-c-popover` | Positions the popover to the right of the element. |
 | `.pf-m-top` | `.pf-c-popover` | Positions the popover to the top of the element. |
 | `.pf-m-bottom` | `.pf-c-popover` | Positions the popover to the bottom of the element. |
+| `.pf-m-no-padding` | `.pf-c-popover` | Removes the outer padding from the popover content. |
+| `.pf-m-width-auto` | `.pf-c-popover` | Allows popover width to be defined by the popover content. |
