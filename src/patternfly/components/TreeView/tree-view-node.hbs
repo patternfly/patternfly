@@ -6,11 +6,7 @@
     {{{tree-view-node--attribute}}}
   {{/if}}>
   {{#if tree-view-node--HasToggle}}
-    {{#if tree-view-node--HasCheckbox}}
-      {{> tree-view-node-toggle-button}}
-    {{else}}
-      {{> tree-view-node-toggle}}
-    {{/if}}
+    {{> tree-view-node-toggle}}
   {{/if}}
   {{#if tree-view-node--HasFolderIcon}}
     {{> tree-view-node-icon tree-view-node-icon--IsFolder="true"}}

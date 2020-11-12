@@ -12,7 +12,7 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-tree-view__node--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tree-view__node--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-tree-view__node--PaddingLeft: var(--pf-c-tree-view__node--indent--base);
+  --pf-c-tree-view__node--PaddingLeft: 0;
   --pf-c-tree-view__node--Color: var(--pf-global--Color--100);
   --pf-c-tree-view__node--m-current--Color: var(--pf-global--link--Color);
   --pf-c-tree-view__node--m-current--FontWeight: var(--pf-global--FontWeight--bold);
@@ -21,21 +21,17 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-tree-view__node--focus--BackgroundColor: var(--pf-global--palette--black-200);
 
-  // toggle 90degon
-  --pf-c-tree-view__node-toggle--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-tree-view__node-toggle--MinWidth: var(--pf-global--spacer--lg);
-  --pf-c-tree-view__node-toggle--MinHeight: var(--pf-c-tree-view__node-toggle--icon--MinWidth);
-  --pf-c-tree-view__node-toggle--Top: var(--pf-c-tree-view__node--PaddingTop);
-  --pf-c-tree-view__node-toggle--Left: var(--pf-c-tree-view__node--PaddingLeft);
-  --pf-c-tree-view__node-toggle--TranslateX: -100%;
+  // nested toggle
+  --pf-c-tree-view__list-item__list-item__node-toggle--Top: var(--pf-c-tree-view__node--PaddingTop);
+  --pf-c-tree-view__list-item__list-item__node-toggle--Left: var(--pf-c-tree-view__node--PaddingLeft);
+  --pf-c-tree-view__list-item__list-item__node-toggle--TranslateX: -100%;
 
-  // Toggle icon
+  // Toggle
   --pf-c-tree-view__node-toggle--Transition: var(--pf-global--Transition);
   --pf-c-tree-view__node-toggle-button--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-tree-view__node-toggle-button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tree-view__node-toggle-button--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-tree-view__node-toggle-button--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-tree-view__node-toggle-button--MarginLeft: calc(var(--pf-global--spacer--sm) * -1);
   --pf-c-tree-view__node-toggle-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-tree-view__node-toggle-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
 
@@ -120,24 +116,20 @@ $pf-c-tree-view--MaxNesting: 10;
 }
 
 .pf-c-tree-view__node-toggle {
-  position: absolute;
-  top: var(--pf-c-tree-view__node-toggle--Top);
-  left: var(--pf-c-tree-view__node-toggle--Left);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: var(--pf-c-tree-view__node-toggle--MinWidth);
-  min-height: var(--pf-c-tree-view__node-toggle--MinHeight);
-  padding-right: var(--pf-c-tree-view__node-toggle--PaddingRight);
-  transform: translateX(var(--pf-c-tree-view__node-toggle--TranslateX));
-}
-
-.pf-c-tree-view__node-toggle-button {
   padding: var(--pf-c-tree-view__node-toggle-button--PaddingTop) var(--pf-c-tree-view__node-toggle-button--PaddingRight) var(--pf-c-tree-view__node-toggle-button--PaddingBottom) var(--pf-c-tree-view__node-toggle-button--PaddingLeft);
   margin-top: var(--pf-c-tree-view__node-toggle-button--MarginTop);
   margin-bottom: var(--pf-c-tree-view__node-toggle-button--MarginBottom);
-  margin-left: var(--pf-c-tree-view__node-toggle-button--MarginLeft);
   border: 0;
+}
+
+.pf-c-tree-view__list-item .pf-c-tree-view__list-item .pf-c-tree-view__node-toggle {
+  position: absolute;
+  top: var(--pf-c-tree-view__list-item__list-item__node-toggle--Top);
+  left: var(--pf-c-tree-view__list-item__list-item__node-toggle--Left);
+  transform: translateX(var(--pf-c-tree-view__list-item__list-item__node-toggle--TranslateX));
 }
 
 .pf-c-tree-view__node-text {
@@ -187,7 +179,7 @@ $pf-c-tree-view--MaxNesting: 10;
   @for $i from 1 through $pf-c-tree-view--MaxNesting {
     #{$nested-item} {
       --pf-c-tree-view__node--PaddingLeft: calc(var(--pf-c-tree-view__node--indent--base) + (var(--pf-c-tree-view__node--nested-indent--base) * #{$i}));
-      --pf-c-tree-view__node-toggle--Left: var(--pf-c-tree-view__node--PaddingLeft);
+      --pf-c-tree-view__list-item__list-item__node-toggle--Left: var(--pf-c-tree-view__node--PaddingLeft);
     }
 
     $nested-item: $nested-item + " " + $root;
