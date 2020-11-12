@@ -623,6 +623,8 @@ beta: true
 | `.pf-c-tree-view__content` | `<div>` | Initiates a tree view node. **Required** |
 | `.pf-c-tree-view__node` | `<button>`, `<a>` | Initiates a tree view node. **Required** |
 | `.pf-c-tree-view__node-count` | `<span>` | Initiates a tree view node count. |
+| `.pf-c-tree-view__node-toggle` | `<div>` | Initiates a tree view toggle. |
+| `.pf-c-tree-view__node-toggle-button` | `<button>` | Initiates a tree view toggle button. |
 | `.pf-c-tree-view__node-toggle-icon` | `<span>` | Initiates a tree view toggle icon. |
 | `.pf-c-tree-view__node-text` | `<span>` | Initiates tree view text. |
 | `.pf-c-tree-view__node-icon` | `<span>` | Initiates a tree view icon. |
