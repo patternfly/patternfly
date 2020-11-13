@@ -3,6 +3,37 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2020.15 release notes (2020-11-17)
+Packages released:
+- [@patternfly/patternfly@v4.65.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.65.4)
+
+### Components
+- **Action list:** Refactored css ([#3662](https://github.com/patternfly/patternfly/pull/3662))
+- **Alert:** Added examples to support custom alert icon ([#3641](https://github.com/patternfly/patternfly/pull/3641))
+- **Calendar month:**
+  - Added calendar month component ([#3633](https://github.com/patternfly/patternfly/pull/3633))
+  - Removed focus outline, fixed selected styling ([#3669](https://github.com/patternfly/patternfly/pull/3669))
+  - Differentiated hover/focus styles ([#3671](https://github.com/patternfly/patternfly/pull/3671))
+- **Description list:** Updated auto-fit var names ([#3613](https://github.com/patternfly/patternfly/pull/3613))
+- **Drawer:**
+  - Added resizable drawer, moved splitter ([#3659](https://github.com/patternfly/patternfly/pull/3659))
+  - Updated demos, remove notification drawer demos ([#3621](https://github.com/patternfly/patternfly/pull/3621))
+- **Dual list selector:** Add tree view feat ([#3656](https://github.com/patternfly/patternfly/pull/3656))
+- **Form:** Added grid example, tidy hbs, change 2nd action to link ([#3422](https://github.com/patternfly/patternfly/pull/3422))
+- **Jump links:** Added subsections ([#3632](https://github.com/patternfly/patternfly/pull/3632))
+- **Notification drawer:** Updated demos so badge reflects drawer items ([#3622](https://github.com/patternfly/patternfly/pull/3622))
+- **Popover:** Added variations for no-padding, auto-width ([#3646](https://github.com/patternfly/patternfly/pull/3646))
+- **Tree view:**
+  - Fixed indentation ([#3661](https://github.com/patternfly/patternfly/pull/3661))
+  - Added toggle button for expandable with checkbox ([#3665](https://github.com/patternfly/patternfly/pull/3665))
+
+### Other
+- **Docs:** Moved get started content to new developer resources section ([#3649](https://github.com/patternfly/patternfly/pull/3649))
+- **Global vars:** Updated active-color--300 and 400 ([#3619](https://github.com/patternfly/patternfly/pull/3619))
+- **Pficons:** Added new-process, not-started, resources-empty icons ([#3663](https://github.com/patternfly/patternfly/pull/3663))
+- **Utilities:** Added text and background color utility classes ([#3439](https://github.com/patternfly/patternfly/pull/3439))
+
+
 ## 2020.14 release notes (2020-10-27)
 Packages released:
 - [@patternfly/patternfly@v4.59.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.59.1)
