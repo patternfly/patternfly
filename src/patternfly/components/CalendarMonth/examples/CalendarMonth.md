@@ -90,7 +90,7 @@ cssPrefix: pf-c-calendar-month
 {{/calendar-month}}
 ```
 
-### Range start date selected
+### Range start date selected, end date hovered
 ```hbs
 {{#> calendar-month calendar-month--id="calendar-month-range-start-date-selected"}}
   {{#> calendar-month-header}}
@@ -163,7 +163,7 @@ cssPrefix: pf-c-calendar-month
       {{#> calendar-month-dates-row}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}27{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsInRange="true"}}28{{/calendar-month-dates-cell}}
-        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsEndRange="true" calendar-month-dates-cell--IsInRange="true" calendar-month-date--modifier="pf-m-focus"}}29{{/calendar-month-dates-cell}}
+        {{#> calendar-month-dates-cell calendar-month-dates-cell--IsEndRange="true" calendar-month-dates-cell--IsInRange="true" calendar-month-date--modifier="pf-m-hover"}}29{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell}}30{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell}}31{{/calendar-month-dates-cell}}
         {{#> calendar-month-dates-cell calendar-month-dates-cell--IsAdjacentMonth="true"}}1{{/calendar-month-dates-cell}}
@@ -174,7 +174,7 @@ cssPrefix: pf-c-calendar-month
 {{/calendar-month}}
 ```
 
-### Range end date selected
+### Range end date selected, start date focused
 ```hbs
 {{#> calendar-month calendar-month--id="calendar-month-range-end-date-selected"}}
   {{#> calendar-month-header}}
