@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2020.15 release notes (2020-11-17)
 Packages released:
-- [@patternfly/patternfly@v4.65.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.65.4)
+- [@patternfly/patternfly@v4.65.5](https://www.npmjs.com/package/@patternfly/patternfly/v/4.65.5)
 
 ### Components
 - **Action list:** Refactored css ([#3662](https://github.com/patternfly/patternfly/pull/3662))
@@ -26,6 +26,7 @@ Packages released:
 - **Tree view:**
   - Fixed indentation ([#3661](https://github.com/patternfly/patternfly/pull/3661))
   - Added toggle button for expandable with checkbox ([#3665](https://github.com/patternfly/patternfly/pull/3665))
+- **Page:** Move nav specific page demos into nav demos ([#3681](https://github.com/patternfly/patternfly/pull/3681))
 
 ### Other
 - **Docs:** Moved get started content to new developer resources section ([#3649](https://github.com/patternfly/patternfly/pull/3649))
