@@ -3,7 +3,6 @@
   --pf-c-popover--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-popover--MinWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--MaxWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
-  --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
 
   // Content
   --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -46,7 +45,7 @@
   min-width: var(--pf-c-popover--MinWidth);
   max-width: var(--pf-c-popover--MaxWidth);
   font-size: var(--pf-c-popover--FontSize);
-  box-shadow: var(--pf-c-popover--BoxShadow);
+  border: 1px solid var(--pf-global--palette--black-400);
 
   &.pf-m-no-padding {
     // Use px values below so the min/max-width calc() doesn't break
