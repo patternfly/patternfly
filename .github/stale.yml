@@ -11,6 +11,7 @@ exemptLabels:
   - accessibility
   - breaking change
   - design approved
+  - pinned
 
 # Label to use when marking as stale
 staleLabel: wontfix
