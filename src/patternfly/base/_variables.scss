@@ -303,7 +303,7 @@
 
 .ws-preview,
 #main-content {
-  background-color: #222 !important;
+  background-color: var(--pf-global--palette--black-800) !important;
 }
 
 .ws-page-sidebar.pf-c-page__sidebar {

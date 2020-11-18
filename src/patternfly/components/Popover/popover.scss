@@ -95,6 +95,11 @@
   }
 }
 
+.pf-c-popover,
+.pf-c-popover__arrow {
+  border: 1px solid var(--pf-global--palette--black-400);
+}
+
 .pf-c-popover__content {
   position: relative;
   padding: var(--pf-c-popover__content--PaddingTop) var(--pf-c-popover__content--PaddingRight) var(--pf-c-popover__content--PaddingBottom) var(--pf-c-popover__content--PaddingLeft);
