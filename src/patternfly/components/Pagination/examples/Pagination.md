@@ -89,27 +89,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a
 {{/pagination}}
 ```
 
-### Top with display navigation modifier
+### Top with display full modifier
 ```hbs
-{{#> pagination pagination--id="pagination-top-with-navigation-modifier" pagination--modifier="pf-m-display-navigation"}}
+{{#> pagination pagination--id="pagination-top-with-full-modifier" pagination--modifier="pf-m-display-full"}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu id=(concat pagination--id '-options-menu') options-menu--IsText="true"}}
   {{> pagination-nav-content}}
 {{/pagination}}
 ```
 
-### Top with responsive display summary and display navigation modifiers
+### Top with responsive display summary and display full modifiers
 ```hbs
-{{#> pagination pagination--id="pagination-top-with-responsive-summary-navigation-modifiers" pagination--modifier="pf-m-display-summary pf-m-display-navigation-on-lg pf-m-display-summary-on-xl pf-m-display-navigation-on-2xl"}}
+{{#> pagination pagination--id="pagination-top-with-responsive-summary-navigation-modifiers" pagination--modifier="pf-m-display-summary pf-m-display-full-on-lg pf-m-display-summary-on-xl pf-m-display-full-on-2xl"}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu id=(concat pagination--id '-options-menu') options-menu--IsText="true"}}
   {{> pagination-nav-content}}
 {{/pagination}}
 ```
 
-### Compact display navigation modifier
+### Compact display full modifier
 ```hbs
-{{#> pagination pagination--id="pagination-compact-with-navigation-modifier" pagination--IsCompact="true" pagination--modifier="pf-m-display-navigation"}}
+{{#> pagination pagination--id="pagination-compact-with-full-modifier" pagination--IsCompact="true" pagination--modifier="pf-m-display-full"}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu id=(concat pagination--id '-options-menu') options-menu--IsText="true"}}
   {{> pagination-nav-content}}
@@ -142,8 +142,8 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | `.pf-c-pagination__nav` | `<nav>` |  Initiates pagination nav. |
 | `.pf-c-pagination__nav-control` | `<div>` |  Initiates pagination nav control. |
 | `.pf-c-pagination__nav-page-select` | `<div>` |  Initiates pagination nav page select. |
-| `.pf-m-display-summary{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies for summary pagination component styles. |
-| `.pf-m-display-navigation{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies for navigation pagination component styles. |
+| `.pf-m-display-summary{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies for summary display pagination component styles. |
+| `.pf-m-display-full{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies for full display pagination component styles. |
 | `.pf-m-bottom` | `.pf-c-pagination` | Modifies for bottom pagination component styles. |
 | `.pf-m-compact` | `.pf-c-pagination` | Modifies for compact pagination component styles. |
 | `.pf-m-static` | `.pf-c-pagination.pf-m-bottom` | Modifies bottom pagination to not be positioned sticky on summary. |
