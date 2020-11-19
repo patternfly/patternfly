@@ -770,7 +770,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-thead}}
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
-    {{#> table-tr table-tr--expanded="true"}}
+    {{#> table-tr table-tr--IsControlRow="true" table-tr--expanded="true"}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--modifier="pf-m-expanded" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-1"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;10
       {{/table-td}}
@@ -820,7 +820,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-4"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
         2
@@ -871,7 +871,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{/table-tbody}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--IsControlRow="true"}}
       {{#> table-td table-td--compound-expansion-toggle="true" table-td--data-label="Repositories" table-td--button--attribute=(concat 'aria-expanded="true" aria-controls="' table--id '-nested-table-7"')}}
         <i class="fas fa-code-branch" aria-hidden="true"></i>&nbsp;
         4
@@ -935,6 +935,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
+| `.pf-c-table__control-row` | `.pf-c-table__expandable > <tr>` | Modifies a compound expandable table control row. |
 | `.pf-m-expanded` | `<tbody>`, `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Modifies a tbody with a row and an expandable row. |
 | `.pf-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
 
@@ -1266,7 +1267,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-no-border-rows` | `.pf-c-table.pf-m-compact` | Modifies to remove borders between rows. **Note: Can not be used with `.pf-m-expandable`.** |
+| `.pf-m-no-border-rows` | `.pf-c-table.pf-m-compact` | Modifies to remove borders between rows. **Note: Does not affect `.pf-c-table__control-row`.** |
 
 ### Compact expandable
 ```hbs
