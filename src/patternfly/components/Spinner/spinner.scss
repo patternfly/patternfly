@@ -3,14 +3,14 @@
   --pf-c-spinner--Width: var(--pf-c-spinner--diameter);
   --pf-c-spinner--Height: var(--pf-c-spinner--diameter);
   --pf-c-spinner--Color: var(--pf-global--primary-color--100);
-  --pf-c-spinner--AnimationDuration: 1.35s;
-  --pf-c-spinner--AnimationTimingFunction: ease;
-  --pf-c-spinner--stroke-width: 8;
+  --pf-c-spinner--AnimationDuration: 1.4s;
+  --pf-c-spinner--AnimationTimingFunction: linear;
+  --pf-c-spinner--stroke-width: 10;
 
   // path
   --pf-c-spinner__path--Stroke: var(--pf-c-spinner--Color);
   --pf-c-spinner__path--StrokeWidth: var(--pf-c-spinner--stroke-width);
-  --pf-c-spinner__path--AnimationTimingFunction: linear;
+  --pf-c-spinner__path--AnimationTimingFunction: ease-in-out;
 
   // size modifiers
   --pf-c-spinner--m-sm--diameter: var(--pf-global--icon--FontSize--sm);
@@ -43,9 +43,13 @@
 .pf-c-spinner__path {
   width: 100%;
   height: 100%;
-  animation: pf-c-spinner-animation-dash calc(var(--pf-c-spinner--AnimationDuration) * 1) var(--pf-c-spinner__path--AnimationTimingFunction) infinite;
+  transform-origin: 50% 50%;
+  animation: pf-c-spinner-animation-dash var(--pf-c-spinner--AnimationDuration) var(--pf-c-spinner__path--AnimationTimingFunction) infinite;
   stroke: var(--pf-c-spinner--Color);
   stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 280;
+  stroke-width: var(--pf-c-spinner--stroke-width);
 }
 
 @keyframes pf-c-spinner-animation-rotate {
@@ -53,38 +57,29 @@
     transform: rotate(0deg);
   }
 
-  50% {
-    transform: rotate(540deg);
-  }
-
   100% {
-    transform: rotate(1080deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes pf-c-spinner-animation-dash {
   0% {
-    stroke-dasharray: 1, 150;
-    stroke-dashoffset: 0;
-    stroke-width: var(--pf-c-spinner__path--StrokeWidth);
+    stroke-dashoffset: 280;
+    transform: rotate(0);
   }
 
   15% {
-    stroke-dashoffset: 0;
-    stroke-width: var(--pf-c-spinner__path--StrokeWidth) - 2;
+    stroke-width: calc(var(--pf-c-spinner__path--StrokeWidth) - 4);
   }
 
-  35% {
-    stroke-dasharray: 45, 150;
-  }
-
-  85% {
-    stroke-dasharray: 45, 150;
+  40% {
+    stroke-dashoffset: 150;
+    stroke-dasharray: 220;
   }
 
   100% {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: -124;
-    stroke-width: var(--pf-c-spinner__path--StrokeWidth);
+    stroke-dashoffset: 280;
+    transform: rotate(720deg);
   }
 }
+
