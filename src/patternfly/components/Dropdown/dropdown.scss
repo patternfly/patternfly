@@ -26,7 +26,7 @@
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-dropdown__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
-  --pf-c-dropdown__toggle--m-plain--child--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-dropdown__toggle--m-plain--child--LineHeight: normal; // remove at breaking change
   --pf-c-dropdown__toggle--m-primary--Color: var(--pf-global--Color--light-100);
   --pf-c-dropdown__toggle--m-primary--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-dropdown__toggle--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
@@ -262,9 +262,10 @@
   }
 
   &.pf-m-plain {
-    justify-content: center;
+    display: inline-block;
     color: var(--pf-c-dropdown__toggle--m-plain--Color);
 
+    // remove at breaking change
     > * {
       line-height: var(--pf-c-dropdown__toggle--m-plain--child--LineHeight);
     }
