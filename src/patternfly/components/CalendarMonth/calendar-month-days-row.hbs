@@ -2,5 +2,11 @@
   {{#if calendar-month-days-row--attribute}}
     {{{calendar-month-days-row--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{> calendar-month-day calendar-month-day--day="Sunday" calendar-month-day--label="S"}}
+  {{> calendar-month-day calendar-month-day--day="Monday" calendar-month-day--label="M"}}
+  {{> calendar-month-day calendar-month-day--day="Tuesday" calendar-month-day--label="T"}}
+  {{> calendar-month-day calendar-month-day--day="Wednesday" calendar-month-day--label="W"}}
+  {{> calendar-month-day calendar-month-day--day="Thursday" calendar-month-day--label="T"}}
+  {{> calendar-month-day calendar-month-day--day="Friday" calendar-month-day--label="F"}}
+  {{> calendar-month-day calendar-month-day--day="Saturday" calendar-month-day--label="S"}}
 </tr>

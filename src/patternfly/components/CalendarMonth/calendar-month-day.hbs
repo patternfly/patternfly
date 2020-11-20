@@ -2,5 +2,6 @@
   {{#if calendar-month-day--attribute}}
     {{{calendar-month-day--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  <span class="pf-screen-reader">{{calendar-month-day--day}}</span>
+  <span aria-hidden="true">{{calendar-month-day--label}}</span>
 </th>

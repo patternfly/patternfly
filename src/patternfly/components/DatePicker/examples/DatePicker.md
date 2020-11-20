@@ -12,7 +12,12 @@ import './DatePicker.css'
 ### Basic
 ```hbs
 {{#> date-picker date-picker--id="basic"}}
-  {{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-calendar" form-control--attribute=(concat 'type="text" value="03/05/2020" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Basic date picker example"')}}
+  {{#> input-group}}
+    {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="03/05/2020" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
+      <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group}}
 {{/date-picker}}
 ```
 
