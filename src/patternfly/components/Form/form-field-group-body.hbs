@@ -1,0 +1,9 @@
+<div class="pf-c-form__field-group-body{{#if form-field-group-body--modifier}} {{form-field-group-body--modifier}}{{/if}}"
+  {{#unless form-field-group--IsExpanded}}
+    hidden
+  {{/unless}}
+  {{#if form-field-group-body--attribute}}
+    {{{form-field-group-body--attribute}}}
+  {{/if}}>
+  {{>@partial-block}}
+</div>
