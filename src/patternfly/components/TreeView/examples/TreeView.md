@@ -607,8 +607,8 @@ beta: true
 | `role="tree"` | `.pf-c-tree-view__list` | Identifies the `ul` as a tree widget. **Place on the outermost `ul` only** |
 | `role="group"` | `.pf-c-tree-view__list` | Identifies the `ul` element as a container of treeitem elements that form a branch of the tree. **Place on all `ul`s except the first `ul`** |
 | `role="treeitem"` | `.pf-c-tree-view__list-item` | Hides the implicit listitem role of the li element from assistive technologies. |
-| `aria-expanded="false"` | `.pf-c-tree-view__list-item.pf-m-expandable` | Indicates the parent node is closed, i.e., the descendant elements are not visible. |
-| `aria-expanded="true"` | `.pf-c-tree-view__list-item.pf-m-expandable.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
+| `aria-expanded="false"` | `.pf-c-tree-view__list-item` | For an expandable item, indicates the parent node is closed, i.e., the descendant elements are not visible. |
+| `aria-expanded="true"` | `.pf-c-tree-view__list-item.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
 | `tabindex="-1"` | `.pf-c-tree-view__list-item` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
 | `tabindex="0"` | `.pf-c-tree-view__list-item` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
 | `aria-label="[button label text]"` | `.pf-c-tree-view__action` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
