@@ -6,7 +6,7 @@ cssPrefix: pf-c-pagination
 
 ## Examples
 ### Top
-```hbs isFullscreen
+```hbs
 {{#> pagination}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu options-menu id="pagination-options-menu-top-example" options-menu--IsText="true"}}
@@ -15,7 +15,7 @@ cssPrefix: pf-c-pagination
 ```
 
 ### Top expanded
-```hbs isFullscreen
+```hbs
 {{#> pagination}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu options-menu--IsExpanded="true" id="pagination-options-menu-top-expanded-example" options-menu--IsText="true"}}
@@ -24,7 +24,7 @@ cssPrefix: pf-c-pagination
 ```
 
 ### Top sticky
-```hbs isFullscreen
+```hbs
 {{#> pagination pagination--modifier="pf-m-sticky"}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu options-menu id="pagination-options-menu-top-example" options-menu--IsText="true"}}
@@ -40,7 +40,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a
 ```
 
 ### Bottom
-```hbs isFullscreen
+```hbs
 {{#> pagination pagination--modifier="pf-m-bottom"}}
   {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
   {{> pagination-nav-content}}
@@ -48,7 +48,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a
 ```
 
 ### Bottom sticky
-```hbs isFullscreen
+```hbs
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
 <br><br>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
@@ -63,7 +63,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a
 ```
 
 ### Top disabled
-```hbs isFullscreen
+```hbs
 {{#> pagination}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu id="pagination-options-menu-top-disabled-example" options-menu--IsText="true" options-menu-toggle--IsDisabled="true"}}
@@ -72,10 +72,46 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a
 ```
 
 ### Compact
-```hbs isFullscreen
+```hbs
 {{#> pagination pagination--IsCompact="true"}}
   {{> pagination-total-items-content}}
   {{> pagination-options-menu options-menu id="pagination-options-menu-compact-example" options-menu--IsText="true"}}
+  {{> pagination-nav-content}}
+{{/pagination}}
+```
+
+### Top with display summary modifier
+```hbs
+{{#> pagination pagination--id="pagination-top-with-summary-modifier" pagination--modifier="pf-m-display-summary"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-options-menu id=(concat pagination--id '-options-menu') options-menu--IsText="true"}}
+  {{> pagination-nav-content}}
+{{/pagination}}
+```
+
+### Top with display full modifier
+```hbs
+{{#> pagination pagination--id="pagination-top-with-full-modifier" pagination--modifier="pf-m-display-full"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-options-menu id=(concat pagination--id '-options-menu') options-menu--IsText="true"}}
+  {{> pagination-nav-content}}
+{{/pagination}}
+```
+
+### Top with responsive display summary and display full modifiers
+```hbs
+{{#> pagination pagination--id="pagination-top-with-responsive-summary-navigation-modifiers" pagination--modifier="pf-m-display-summary pf-m-display-full-on-lg pf-m-display-summary-on-xl pf-m-display-full-on-2xl"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-options-menu id=(concat pagination--id '-options-menu') options-menu--IsText="true"}}
+  {{> pagination-nav-content}}
+{{/pagination}}
+```
+
+### Compact display full modifier
+```hbs
+{{#> pagination pagination--id="pagination-compact-with-full-modifier" pagination--IsCompact="true" pagination--modifier="pf-m-display-full"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-options-menu id=(concat pagination--id '-options-menu') options-menu--IsText="true"}}
   {{> pagination-nav-content}}
 {{/pagination}}
 ```
@@ -102,13 +138,15 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | -- | -- | -- |
 | `.pf-c-pagination` | `<div>` |  Initiates pagination. |
 | `.pf-c-pagination__current` | `<div>` |  Initiates element to display currently displayed items for use in responsive view. Only needed for default pagination, not `.pf-m-bottom`. |
-| `.pf-c-pagination__total-items` | `<div>` | Initiates element to replace the options menu on mobile. |
+| `.pf-c-pagination__total-items` | `<div>` | Initiates element to replace the options menu on summary. |
 | `.pf-c-pagination__nav` | `<nav>` |  Initiates pagination nav. |
 | `.pf-c-pagination__nav-control` | `<div>` |  Initiates pagination nav control. |
 | `.pf-c-pagination__nav-page-select` | `<div>` |  Initiates pagination nav page select. |
+| `.pf-m-display-summary{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies for summary display pagination component styles. |
+| `.pf-m-display-full{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies for full display pagination component styles. |
 | `.pf-m-bottom` | `.pf-c-pagination` | Modifies for bottom pagination component styles. |
 | `.pf-m-compact` | `.pf-c-pagination` | Modifies for compact pagination component styles. |
-| `.pf-m-static` | `.pf-c-pagination.pf-m-bottom` | Modifies bottom pagination to not be positioned sticky on mobile. |
+| `.pf-m-static` | `.pf-c-pagination.pf-m-bottom` | Modifies bottom pagination to not be positioned sticky on summary. |
 | `.pf-m-sticky` | `.pf-c-pagination` | Modifies the pagination to be sticky to its container. It will be sticky to the top of the container by default, and sticky to the bottom of the container when applied to `.pf-c-pagination.pf-m-bottom`. |
 | `.pf-m-first` | `.pf-c-pagination__nav-control` | Indicates the control is for the first page button. |
 | `.pf-m-prev` | `.pf-c-pagination__nav-control` | Indicates the control is for the previous page button. |

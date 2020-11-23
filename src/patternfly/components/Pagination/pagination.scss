@@ -1,14 +1,24 @@
+$pf-c-pagination--breakpoint-map: build-breakpoint-map();
+
 .pf-c-pagination {
-  // Base
+  // children
   --pf-c-pagination--child--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-pagination--m-bottom--child--MarginRight: 0;
   --pf-c-pagination--m-bottom--child--md--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-pagination--m-compact--child--MarginRight: var(--pf-global--spacer--sm);
 
-  // Dropdown
+  // dropdown
   --pf-c-pagination--c-options-menu__toggle--FontSize: var(--pf-global--FontSize--sm);
 
-  // Nav
+  // nav
+  --pf-c-pagination__nav--Display: none;
+  --pf-c-pagination__nav--Visibility: hidden;
+  --pf-c-pagination--m-display-summary__nav--Display: none;
+  --pf-c-pagination--m-display-summary__nav--Visibility: hidden;
+  --pf-c-pagination--m-display-full__nav--Display: inline-flex;
+  --pf-c-pagination--m-display-full__nav--Visibility: visible;
+
+  // nav control
   --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-pagination__nav-control--c-button--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-pagination__nav-control--c-button--FontSize: var(--pf-global--FontSize--md);
@@ -23,7 +33,7 @@
   --pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-pagination--m-compact__nav-control--nav-control--MarginLeft: var(--pf-global--spacer--md);
 
-  // Nav page select
+  // nav page select
   --pf-c-pagination__nav-page-select--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-pagination__nav-page-select--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-pagination__nav-page-select--PaddingRight: var(--pf-global--spacer--md);
@@ -32,7 +42,15 @@
   --pf-c-pagination__nav-page-select--c-form-control--width-chars: 2;
   --pf-c-pagination__nav-page-select--c-form-control--Width: calc(var(--pf-c-pagination__nav-page-select--c-form-control--width-base) + (var(--pf-c-pagination__nav-page-select--c-form-control--width-chars) * 1ch));
 
-  // Top
+  // total items
+  --pf-c-pagination__total-items--Display: block;
+  --pf-c-pagination__total-items--Visibility: visible;
+  --pf-c-pagination--m-display-summary__total-items--Display: block;
+  --pf-c-pagination--m-display-summary__total-items--Visibility: visible;
+  --pf-c-pagination--m-display-full__total-items--Display: none;
+  --pf-c-pagination--m-display-full__total-items--Visibility: hidden;
+
+  // top
   --pf-c-pagination--m-sticky--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-pagination--m-sticky--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
   --pf-c-pagination--m-sticky--md--PaddingTop: var(--pf-global--spacer--md);
@@ -42,7 +60,7 @@
   --pf-c-pagination--m-sticky--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-pagination--m-sticky--Top: 0;
 
-  // Bottom
+  // bottom
   --pf-c-pagination--m-bottom--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-pagination--m-bottom--BoxShadow: var(--pf-global--BoxShadow--sm-top);
   --pf-c-pagination--m-bottom--Bottom: 0;
@@ -54,6 +72,14 @@
   --pf-c-pagination--m-bottom--xl--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-pagination--m-bottom--m-sticky--BoxShadow: var(--pf-global--BoxShadow--sm-top);
 
+  // options menu
+  --pf-c-pagination--c-options-menu--Display: none;
+  --pf-c-pagination--c-options-menu--Visibility: hidden;
+  --pf-c-pagination--m-display-summary--c-options-menu--Display: none;
+  --pf-c-pagination--m-display-summary--c-options-menu--Visibility: hidden;
+  --pf-c-pagination--m-display-full--c-options-menu--Display: inline-flex;
+  --pf-c-pagination--m-display-full--c-options-menu--Visibility: visible;
+
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingTop);
     --pf-c-pagination--m-bottom__nav-control--c-button--PaddingRight: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingRight);
@@ -62,6 +88,12 @@
     --pf-c-pagination--m-bottom--child--MarginRight: var(--pf-c-pagination--m-bottom--child--md--MarginRight);
     --pf-c-pagination--m-bottom__nav-control--c-button--OutlineOffset: 0;
     --pf-c-pagination--m-bottom--BoxShadow: none;
+    --pf-c-pagination--c-options-menu--Display: inline-flex;
+    --pf-c-pagination--c-options-menu--Visibility: visible;
+    --pf-c-pagination__nav--Display: inline-flex;
+    --pf-c-pagination__nav--Visibility: visible;
+    --pf-c-pagination__total-items--Display: none;
+    --pf-c-pagination__total-items--Visibility: hidden;
   }
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
@@ -78,18 +110,9 @@
     margin-right: var(--pf-c-pagination--child--MarginRight);
   }
 
-  // Top pagination
-  &:not(.pf-m-bottom) {
-    .pf-c-options-menu,
-    .pf-c-pagination__nav {
-      display: none;
-      visibility: hidden;
-
-      @media screen and (min-width: $pf-global--breakpoint--md) {
-        display: flex;
-        visibility: visible;
-      }
-    }
+  .pf-c-options-menu {
+    display: var(--pf-c-pagination--c-options-menu--Display);
+    visibility: var(--pf-c-pagination--c-options-menu--Visibility);
   }
 
   &.pf-m-bottom {
@@ -131,12 +154,15 @@
 
     .pf-c-options-menu {
       position: absolute;
+      display: block;
+      visibility: visible;
     }
 
     .pf-c-pagination__nav {
       display: flex;
       flex-basis: 100%;
       justify-content: space-between;
+      visibility: visible;
     }
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
@@ -194,12 +220,14 @@
   }
 }
 
-// Nav
+// nav
 .pf-c-pagination__nav {
-  display: inline-flex;
+  display: var(--pf-c-pagination__nav--Display);
   justify-content: flex-end;
+  visibility: var(--pf-c-pagination__nav--Visibility);
 }
 
+// nav control
 .pf-c-pagination__nav-control {
   .pf-c-button {
     padding-right: var(--pf-c-pagination__nav-control--c-button--PaddingRight);
@@ -212,7 +240,7 @@
   }
 }
 
-// Nav page element
+// nav page element
 .pf-c-pagination__nav-page-select {
   display: flex;
   align-items: center;
@@ -233,10 +261,36 @@
   }
 }
 
-// Mobile element for total-items items
+// display-summary element for total-items items
 .pf-c-pagination__total-items {
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    display: none;
-    visibility: hidden;
+  display: var(--pf-c-pagination__total-items--Display);
+  visibility: var(--pf-c-pagination__total-items--Visibility);
+}
+
+// stylelint-disable no-duplicate-selectors
+.pf-c-pagination {
+  @each $breakpoint, $breakpoint-value in $pf-c-pagination--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint, $pf-c-pagination--breakpoint-map) {
+      &.pf-m-display-summary#{$breakpoint-name} {
+        --pf-c-pagination__nav--Display: var(--pf-c-pagination--m-display-summary__nav--Display);
+        --pf-c-pagination__nav--Visibility: var(--pf-c-pagination--m-display-summary__nav--Visibility);
+        --pf-c-pagination--c-options-menu--Display: var(--pf-c-pagination--m-display-summary--c-options-menu--Display);
+        --pf-c-pagination--c-options-menu--Visibility: var(--pf-c-pagination--m-display-summary--c-options-menu--Visibility);
+        --pf-c-pagination__total-items--Display: var(--pf-c-pagination--m-display-summary__total-items--Display);
+        --pf-c-pagination__total-items--Visibility: var(--pf-c-pagination--m-display-summary__total-items--Visibility);
+      }
+
+      &.pf-m-display-full#{$breakpoint-name} {
+        --pf-c-pagination__nav--Display: var(--pf-c-pagination--m-display-full__nav--Display);
+        --pf-c-pagination__nav--Visibility: var(--pf-c-pagination--m-display-full__nav--Visibility);
+        --pf-c-pagination--c-options-menu--Display: var(--pf-c-pagination--m-display-full--c-options-menu--Display);
+        --pf-c-pagination--c-options-menu--Visibility: var(--pf-c-pagination--m-display-full--c-options-menu--Visibility);
+        --pf-c-pagination__total-items--Display: var(--pf-c-pagination--m-display-full__total-items--Display);
+        --pf-c-pagination__total-items--Visibility: var(--pf-c-pagination--m-display-full__total-items--Visibility);
+      }
+    }
   }
 }
+// stylelint-enable
