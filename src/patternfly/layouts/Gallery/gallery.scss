@@ -4,7 +4,9 @@ $pf-l-gallery--breakpoint-map: build-breakpoint-map();
   --pf-l-gallery--m-gutter--GridGap: var(--pf-global--gutter);
   --pf-l-gallery--GridTemplateColumns--min: 250px;
   --pf-l-gallery--GridTemplateColumns--minmax--min: var(--pf-l-gallery--GridTemplateColumns--min);
-  --pf-l-gallery--GridTemplateColumns: repeat(auto-fill, minmax(var(--pf-l-gallery--GridTemplateColumns--minmax--min), 1fr));
+  --pf-l-gallery--GridTemplateColumns--max: 1fr;
+  --pf-l-gallery--GridTemplateColumns--minmax--max: var(--pf-l-gallery--GridTemplateColumns--max);
+  --pf-l-gallery--GridTemplateColumns: repeat(auto-fill, minmax(var(--pf-l-gallery--GridTemplateColumns--minmax--min), var(--pf-l-gallery--GridTemplateColumns--minmax--max)));
   --pf-l-gallery--GridTemplateRows: auto;
 
   display: grid;
@@ -16,4 +18,5 @@ $pf-l-gallery--breakpoint-map: build-breakpoint-map();
   }
 
   @include pf-build-css-variable-stack("--pf-l-gallery--GridTemplateColumns--minmax--min", "--pf-l-gallery--GridTemplateColumns--min", $pf-l-gallery--breakpoint-map);
+  @include pf-build-css-variable-stack("--pf-l-gallery--GridTemplateColumns--minmax--max", "--pf-l-gallery--GridTemplateColumns--max", $pf-l-gallery--breakpoint-map);
 }
