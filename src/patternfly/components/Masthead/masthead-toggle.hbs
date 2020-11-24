@@ -1,0 +1,16 @@
+<div class="pf-c-masthead__toggle{{#if masthead-toggle--modifier}} {{masthead-toggle--modifier}}{{/if}}"
+  {{#if masthead-toggle--attribute}}
+    {{masthead-toggle--attribute}}
+  {{/if}}>
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' masthead--id '-toggle" aria-label="' masthead--id ' navigation" aria-expanded="true" aria-controls="' page--id '-primary-nav"')}}
+      {{#if masthead-toggle--icon}}
+        <i class="fas fa-{{masthead-toggle--icon}}" aria-hidden="true"></i>
+      {{else}}
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      {{/if}}
+    {{/button}}
+  {{/if}}
+</div>

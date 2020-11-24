@@ -1,0 +1,12 @@
+<div class="pf-c-masthead__brand{{#if masthead-brand--modifier}} {{masthead-brand--modifier}}{{/if}}"
+  {{#if masthead-brand--attribute}}
+    {{masthead-brand--attribute}}
+  {{/if}}>
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    {{#> masthead-brand-link masthead-brand-link--href="#"}}
+      {{> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}
+    {{/masthead-brand-link}}
+  {{/if}}
+</div>
