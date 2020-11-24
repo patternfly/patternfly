@@ -1,0 +1,10 @@
+{{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+  Skip to content
+{{/skip-to-content}}
+{{#> masthead masthead--id=(concat page--id '-masthead')}}
+  {{> masthead-toggle}}
+  {{> masthead-brand}}
+  {{#> masthead-content}}
+    Basic example content
+  {{/masthead-content}}
+{{/masthead}}

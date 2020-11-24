@@ -154,12 +154,20 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__main-breadcrumb--PaddingRight: var(--pf-c-page__main-breadcrumb--xl--PaddingRight);
     --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-c-page__main-breadcrumb--xl--PaddingLeft);
+    --pf-c-page__header--c-masthead--inset: var(--pf-c-page__header--c-masthead--xl--inset);
   }
 
   // Wizard main section
   --pf-c-page__main-wizard--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__main-wizard--BorderTopColor: var(--pf-global--BorderColor--100);
   --pf-c-page__main-wizard--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+
+  // masthead
+  --pf-c-page__header--c-masthead-toggle--c-button--FontSize: var(--pf-global--FontSize--2xl);
+
+  // masthead
+  --pf-c-page__header--c-masthead--inset: var(--pf-global--spacer--md);
+  --pf-c-page__header--c-masthead--xl--inset: var(--pf-global--spacer--lg);
 
   // Base
   display: grid;
@@ -193,13 +201,27 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   min-height: var(--pf-c-page__header--MinHeight);
   background-color: var(--pf-c-page__header--BackgroundColor);
 
-  > * {
+  > :not(.pf-c-masthead) {
     display: flex;
+  }
+
+  > * {
     align-items: center;
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     grid-template-columns: auto 1fr auto;
+  }
+
+  .pf-c-masthead {
+    --pf-c-masthead--inset: var(--pf-c-page__header--c-masthead--inset);
+
+    grid-column: span 2;
+    align-self: stretch;
+  }
+
+  .pf-c-masthead__toggle .pf-c-button {
+    --pf-c-button--FontSize: var(--pf-c-page__header--c-masthead-toggle--c-button--FontSize);
   }
 }
 
