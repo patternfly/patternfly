@@ -24,21 +24,59 @@ import './DatePicker.css'
 ### Helper text
 ```hbs
 {{#> date-picker date-picker--id="helper-text" date-picker-helper-text--text="Select a date."}}
-  {{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-calendar" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Basic date picker example"')}}
+  {{#> input-group}}
+    {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
+      <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group}}
 {{/date-picker}}
 ```
 
 ### Invalid
 ```hbs
 {{#> date-picker date-picker--id="invalid" date-picker-helper-text--text="Invalid date selected." date-picker-helper-text--IsError="true"}}
-  {{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-calendar" form-control--attribute=(concat 'aria-invalid="true" type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Basic date picker example"')}}
+  {{#> input-group}}
+    {{> form-control controlType="input" input="true" form-control--attribute=(concat 'aria-invalid="true" type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
+      <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group}}
 {{/date-picker}}
 ```
 
 ### Expanded
 ```hbs
 {{#> date-picker date-picker--id="expanded" date-picker--IsExpanded="true"}}
-  {{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-calendar pf-m-expanded" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Expanded date picker example"')}}
+  {{#> input-group}}
+    {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
+      <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group}}{{/date-picker}}
+```
+
+### Custom width input
+```hbs
+{{#> date-picker date-picker--id="basic" date-picker--attribute='style="--pf-c-date-picker__input--c-form-control--Width: 220px;"'}}
+  {{#> input-group}}
+    {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="November 20, 2020" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
+      <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group}}
+{{/date-picker}}
+```
+
+### Custom width input based on number of characters
+```hbs
+{{#> date-picker date-picker--id="basic" date-picker--attribute='style="--pf-c-date-picker__input--c-form-control--width-chars: 17;"'}}
+  {{#> input-group}}
+    {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="November 20, 2020" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
+      <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group}}
 {{/date-picker}}
 ```
 
