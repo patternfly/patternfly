@@ -79,7 +79,7 @@ Grid template columms min value can be applied to <code>.pf-l-gallery</code>.  M
 
 ### Min and max width modified gallery, responsive updates
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 100%; --pf-l-gallery--GridTemplateColumns--min-on-md: 100px; --pf-l-gallery--GridTemplateColumns--max-on-md: 200px; --pf-l-gallery--GridTemplateColumns--min: 100%; --pf-l-gallery--GridTemplateColumns--min-on-xl: 300px; --pf-l-gallery--GridTemplateColumns--max-on-xl: 1fr;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 100%; --pf-l-gallery--GridTemplateColumns--min-on-md: 100px; --pf-l-gallery--GridTemplateColumns--max-on-md: 200px; --pf-l-gallery--GridTemplateColumns--min-on-xl: 300px; --pf-l-gallery--GridTemplateColumns--max-on-xl: 1fr;"'}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
   {{#> gallery-item}}content{{/gallery-item}}
