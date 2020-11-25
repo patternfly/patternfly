@@ -649,7 +649,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 expandable-toggle3" id="expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 ' table--id '-expandable-toggle3" id="' table--id '-expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
@@ -685,7 +685,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 expandable-toggle4" id="expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 ' table--id '-expandable-toggle4" id="' table--id '-expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
@@ -1764,7 +1764,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 ### Borderless expandable
 ```hbs
-{{#> table table--id="borderless-expandable-table" table--grid="true" table--modifier=" pf-m-no-border-rows pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Borderless expandable table example"'}}
+{{#> table table--id="borderless-table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{> table-td table-td--IsEmpty="true"}}
@@ -1863,7 +1863,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 expandable-toggle3" id="expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 ' table--id '-expandable-toggle3" id="' table--id '-expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
       {{/table-td}}
@@ -1899,7 +1899,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
   {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
     {{#> table-tr table-tr--expanded="true"}}
-      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 expandable-toggle4" id="expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 ' table--id '-expandable-toggle4" id="' table--id '-expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
       {{/table-td}}
