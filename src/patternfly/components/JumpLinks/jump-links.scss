@@ -158,8 +158,8 @@
     --pf-c-jump-links__link--before--BorderColor: var(--pf-c-jump-links__item--m-current__link--before--BorderColor);
     --pf-c-jump-links__link-text--Color: var(--pf-c-jump-links__item--m-current__link-text--Color);
   }
-  &.pf-m-current > .pf-c-jump-links__list {
-    margin-top: 0;
+  &.pf-m-current > .pf-c-jump-links__list::before {
+    border-color: transparent;
   }
 }
 // stylelint-enable
