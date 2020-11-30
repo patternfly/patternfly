@@ -152,7 +152,9 @@
 
 // stylelint-disable
 .pf-c-jump-links__item {
-  &.pf-m-current {
+  --pf-c-jump-links__list--before--BorderColor: transparent;
+
+  &.pf-m-current > .pf-c-jump-links__link {
     --pf-c-jump-links__link--before--BorderTopWidth: var(--pf-c-jump-links__item--m-current__link--before--BorderTopWidth);
     --pf-c-jump-links__link--before--BorderLeftWidth: var(--pf-c-jump-links__item--m-current__link--before--BorderLeftWidth);
     --pf-c-jump-links__link--before--BorderColor: var(--pf-c-jump-links__item--m-current__link--before--BorderColor);
