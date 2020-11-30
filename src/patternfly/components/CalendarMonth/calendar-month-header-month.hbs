@@ -2,5 +2,7 @@
   {{#if calendar-month-header-month--attribute}}
     {{{calendar-month-header-month--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#> select select-typeahead--Placeholder="Month" id=(concat calendar-month--id '-month-select')}}
+    {{calendar-month--month}}
+  {{/select}}
 </div>
