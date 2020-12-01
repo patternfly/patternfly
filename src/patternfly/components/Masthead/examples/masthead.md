@@ -138,9 +138,3 @@ cssPrefix: pf-c-masthead
 | `.pf-m-light-200` | `.pf-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-global--BackgroundColor--200`. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-masthead` | Modifies masthead horizontal padding. |
 | `.pf-m-page-insets` | `.pf-c-masthead` | Modifies masthead insets to match page section, table, page header or any other component whose inset shifts from `--pf-global--spacer--md` to `--pf-global--spacer--lg` at the `xl` breakpoint. |
-
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-<!-- | `hidden` | `.pf-c-masthead__item`, `.pf-c-masthead__group`, `.pf-c-masthead__toggle`, `.pf-c-masthead__expandable-content` |  Indicates that the masthead element is hidden. **Required** | -->
