@@ -1764,7 +1764,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 ### Borderless expandable
 ```hbs
-{{#> table table--id="borderless-table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
+{{#> table table--id="borderless-table-expandable" table--grid="true" table--modifier="pf-m-grid-lg pf-m-no-border-rows" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{> table-td table-td--IsEmpty="true"}}
