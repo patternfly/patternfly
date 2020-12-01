@@ -133,9 +133,16 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 // toggle
-.pf-c-masthead__toggle .pf-c-button {
-  margin-left: calc(var(--pf-c-button--PaddingLeft) * -1);
+.pf-c-masthead__toggle {
+  .pf-c-button {
+    margin-left: calc(var(--pf-c-button--PaddingLeft) * -1);
+  }
 }
+
+.pf-c-masthead__toggle ~ .pf-c-masthead__content {
+  padding-left: var(--pf-c-masthead--m-display-inline__main--PaddingLeft);
+}
+
 
 // content
 .pf-c-masthead__content {
