@@ -10,12 +10,12 @@ cssPrefix: pf-c-masthead
 ```hbs
 {{#> masthead masthead--id="basic-masthead"}}
   {{> masthead-toggle}}
-  {{#> masthead-brand}}
-    Logo
-  {{/masthead-brand}}
-  {{#> masthead-content}}
-    Example content
-  {{/masthead-content}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
 {{/masthead}}
 ```
 
@@ -23,12 +23,12 @@ cssPrefix: pf-c-masthead
 ```hbs
 {{#> masthead masthead--id="inline-masthead" masthead--modifier="pf-m-display-inline"}}
   {{> masthead-toggle}}
-  {{#> masthead-brand}}
-    Logo
-  {{/masthead-brand}}
-  {{#> masthead-content}}
-    Example content
-  {{/masthead-content}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
 {{/masthead}}
 ```
 
@@ -36,12 +36,12 @@ cssPrefix: pf-c-masthead
 ```hbs
 {{#> masthead masthead--id="stack-masthead" masthead--modifier="pf-m-display-stack"}}
   {{> masthead-toggle}}
-  {{#> masthead-brand}}
-    Logo
-  {{/masthead-brand}}
-  {{#> masthead-content}}
-    Example content
-  {{/masthead-content}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
 {{/masthead}}
 ```
 
@@ -49,12 +49,12 @@ cssPrefix: pf-c-masthead
 ```hbs
 {{#> masthead masthead--id="stack-inline-masthead" masthead--modifier="pf-m-display-inline pf-m-display-stack-on-lg pf-m-display-inline-on-2xl"}}
   {{> masthead-toggle}}
-  {{#> masthead-brand}}
-    Logo
-  {{/masthead-brand}}
-  {{#> masthead-content}}
-    Example content
-  {{/masthead-content}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
 {{/masthead}}
 ```
 
@@ -62,12 +62,12 @@ cssPrefix: pf-c-masthead
 ```hbs
 {{#> masthead masthead--id="light-masthead" masthead--modifier="pf-m-light-100"}}
   {{> masthead-toggle}}
-  {{#> masthead-brand}}
-    Logo
-  {{/masthead-brand}}
-  {{#> masthead-content}}
-    Example content
-  {{/masthead-content}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
 {{/masthead}}
 ```
 
@@ -75,12 +75,12 @@ cssPrefix: pf-c-masthead
 ```hbs
 {{#> masthead masthead--id="light-masthead" masthead--modifier="pf-m-light-200"}}
   {{> masthead-toggle}}
-  {{#> masthead-brand}}
-    Logo
-  {{/masthead-brand}}
-  {{#> masthead-content}}
-    Example content
-  {{/masthead-content}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
 {{/masthead}}
 ```
 
@@ -88,12 +88,12 @@ cssPrefix: pf-c-masthead
 ```hbs
 {{#> masthead masthead--id="inset-masthead" masthead--modifier="pf-m-inset-sm"}}
   {{> masthead-toggle}}
-  {{#> masthead-brand}}
-    Logo
-  {{/masthead-brand}}
-  {{#> masthead-content}}
-    Example content
-  {{/masthead-content}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
 {{/masthead}}
 ```
 
@@ -101,12 +101,12 @@ cssPrefix: pf-c-masthead
 ```hbs
 {{#> masthead masthead--id="responsive-insets-masthead" masthead--modifier="pf-m-inset-xl pf-m-inset-sm-on-lg pf-m-inset-xl-on-2xl"}}
   {{> masthead-toggle}}
-  {{#> masthead-brand}}
-    Logo
-  {{/masthead-brand}}
-  {{#> masthead-content}}
-    Example content
-  {{/masthead-content}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
 {{/masthead}}
 ```
 
@@ -114,12 +114,12 @@ cssPrefix: pf-c-masthead
 ```hbs
 {{#> masthead masthead--id="responsive-insets-masthead" masthead--modifier="pf-m-page-insets"}}
   {{> masthead-toggle}}
-  {{#> masthead-brand}}
-    Logo
-  {{/masthead-brand}}
-  {{#> masthead-content}}
-    Example content
-  {{/masthead-content}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
 {{/masthead}}
 ```
 
@@ -130,6 +130,7 @@ cssPrefix: pf-c-masthead
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-masthead` | `<header>` | Initiates the masthead component. **Required** |
+| `.pf-c-masthead__main` | `<div>` | Initiates the masthead main component. **Required** |
 | `.pf-c-masthead__toggle` | `<span>` | Initiates the masthead toggle component. |
 | `.pf-c-masthead__brand` | `<a>, <div>` | Initiates the masthead content component. |
 | `.pf-c-masthead__content` | `<div>` | Initiates the masthead content component. |

@@ -187,7 +187,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   }
 }
 
-
 // Header
 .pf-c-page__header {
   @include pf-t-dark; // force the container to follow the dark theme
@@ -201,11 +200,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   min-height: var(--pf-c-page__header--MinHeight);
   background-color: var(--pf-c-page__header--BackgroundColor);
 
-  > :not(.pf-c-masthead) {
-    display: flex;
-  }
-
   > * {
+    display: flex;
     align-items: center;
   }
 

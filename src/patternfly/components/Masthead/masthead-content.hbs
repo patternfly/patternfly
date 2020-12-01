@@ -2,5 +2,10 @@
   {{#if masthead-content--attribute}}
     {{masthead-content--attribute}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    <span>Start content</span>
+    <span class="pf-u-ml-auto">End content</span>
+  {{/if}}
 </div>
