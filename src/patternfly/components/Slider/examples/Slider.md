@@ -30,27 +30,6 @@ cssPrefix: pf-c-slider
     {{> slider-thumb}}
   {{/slider-main}}
 {{/slider}}
-
-<br>
-
-{{#> slider
-  slider--value-min="0"
-  slider--value-max="100"
-  slider--value-now="50"
-  slider--attribute='style="--pf-c-slider--value: 50%;"'
-  }}
-  {{#> slider-main}}
-    {{> slider-rail}}
-    {{#> slider-steps}}
-      {{> slider-step slider-step--Left="0%" slider-step--label="0%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="25%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="50%" slider-step--label="50%" slider-step--IsActive="true"}}
-      {{> slider-step slider-step--Left="75%"}}
-      {{> slider-step slider-step--Left="100%" slider-step--label="100%"}}
-    {{/slider-steps}}
-    {{> slider-thumb}}
-  {{/slider-main}}
-{{/slider}}
 ```
 
 ### Continuous
@@ -63,6 +42,22 @@ cssPrefix: pf-c-slider
   }}
   {{#> slider-main}}
     {{> slider-rail}}
+    {{> slider-thumb}}
+  {{/slider-main}}
+{{/slider}}
+
+{{#> slider
+  slider--value-min="0"
+  slider--value-max="100"
+  slider--value-now="50"
+  slider--attribute='style="--pf-c-slider--value: 50%;"'
+  }}
+  {{#> slider-main}}
+    {{> slider-rail}}
+    {{#> slider-steps}}
+      {{> slider-step slider-step--Left="0%" slider-step--label="0%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--Left="100%" slider-step--label="100%"}}
+    {{/slider-steps}}
     {{> slider-thumb}}
   {{/slider-main}}
 {{/slider}}
