@@ -6,7 +6,7 @@ cssPrefix: pf-c-slider
 ---
 
 ## Examples
-### Basic
+### Discrete
 ```hbs
 {{#> slider
   slider--value-min="0"
@@ -264,3 +264,4 @@ cssPrefix: pf-c-slider
 | `.pf-c-slider__value` | `<div>` | Initiates the slider value. |
 | `.pf-c-slider__actions` | `<div>` | Initiates the slider actions. |
 | `.pf-m-floating` | `.pf-c-slider__thumb` | Modifies the slider value to float above the thumb. |
+| `--pf-c-slider--value` | `.pf-c-slider` | Applies appropriate slider styles based on the current value. **Required** |

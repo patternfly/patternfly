@@ -6,6 +6,7 @@
   --pf-c-slider__rail-track--before--base--BackgroundColor: var(--pf-global--BorderColor--100);
   --pf-c-slider__rail-track--before--fill--BackgroundColor: var(--pf-global--active-color--300);
   --pf-c-slider__rail-track--before--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-slider__rail-track--before--fill--BackgroundColor--gradient-stop: var(--pf-c-slider--value);
 
   // steps
   --pf-c-slider__steps--FontSize: var(--pf-global--FontSize--sm);
@@ -55,9 +56,9 @@
   --pf-c-slider__value--m-floating--Left: var(--pf-c-slider--value);
   --pf-c-slider__value--m-floating--ZIndex: var(--pf-global--ZIndex--sm);
 
-  // controls
-  --pf-c-slider__controls--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-slider__controls--main--MarginLeft: var(--pf-global--spacer--sm);
+  // actions
+  --pf-c-slider__actions--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-slider__main--actions--MarginLeft: var(--pf-global--spacer--sm);
 
   display: flex;
 }
@@ -87,8 +88,8 @@
       linear-gradient(
         to right,
         var(--pf-c-slider__rail-track--before--fill--BackgroundColor),
-        var(--pf-c-slider__rail-track--before--fill--BackgroundColor) var(--pf-c-slider--value),
-        var(--pf-c-slider__rail-track--before--base--BackgroundColor) var(--pf-c-slider--value)
+        var(--pf-c-slider__rail-track--before--fill--BackgroundColor) var(--pf-c-slider__rail-track--before--fill--BackgroundColor--gradient-stop),
+        var(--pf-c-slider__rail-track--before--base--BackgroundColor) var(--pf-c-slider__rail-track--before--fill--BackgroundColor--gradient-stop)
       );
     border-radius: var(--pf-c-slider__rail-track--before--BorderRadius);
   }
@@ -193,11 +194,11 @@
 
 .pf-c-slider__actions {
   display: flex;
-  margin-left: var(--pf-c-slider__controls--MarginLeft);
+  margin-right: var(--pf-c-slider__actions--MarginRight);
 
-  + .pf-c-slider__main {
-    --pf-c-slider__controls--MarginLeft: 0;
+  .pf-c-slider__main ~ & {
+    --pf-c-slider__actions--MarginRight: 0;
 
-    margin-left: var(--pf-c-slider__controls--main--MarginLeft);
+    margin-left: var(--pf-c-slider__main--actions--MarginLeft);
   }
 }
