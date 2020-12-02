@@ -299,7 +299,6 @@
 .pf-c-form__field-group {
   display: grid;
   grid-template-columns: minmax(var(--pf-c-form__field-group--GridTemplateColumns--toggle), max-content) 1fr;
-  grid-template-rows: auto auto;
 
   & + & {
     margin-top: var(--pf-c-form__field-group--field-group--MarginTop);
@@ -421,7 +420,6 @@
 
 .pf-c-form__field-group-body {
   grid-column: var(--pf-c-form__field-group-body--GridColumn);
-  grid-row: 2 / 3;
   display: grid;
   gap: var(--pf-c-form__field-group-body--Gap);
   padding-top: var(--pf-c-form__field-group-body--PaddingTop);
