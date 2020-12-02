@@ -131,6 +131,69 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
+### Outside static width measure
+```hbs
+{{#> progress
+  progress__value="1"
+  progress--modifier="pf-m-outside pf-m-lg"
+  progress__id="progress-outside-static-width-example"
+  progress-measure--modifier="pf-m-static-width"
+}}
+{{/progress}}
+<br>
+{{#> progress
+  progress__value="50"
+  progress--modifier="pf-m-outside pf-m-lg"
+  progress__id="progress-outside-static-width-2-example"
+  progress-measure--modifier="pf-m-static-width"
+}}
+{{/progress}}
+<br>
+{{#> progress
+  progress__value="100"
+  progress--modifier="pf-m-outside pf-m-lg"
+  progress__id="progress-outside-static-width-3-example"
+  progress-measure--modifier="pf-m-static-width"
+}}
+{{/progress}}
+<br><br>
+{{#> progress
+  progress__value="1000"
+  progress__valuetext="1,000"
+  progress__valuemax="100000"
+  progress__width="1"
+  progress--modifier="pf-m-outside pf-m-lg"
+  progress__id="progress-outside-static-width-4-example"
+  progress-measure--modifier="pf-m-static-width"
+  progress--attribute='style="--pf-c-progress__measure--m-static-width--MinWidth: 6ch;"'
+}}
+{{/progress}}
+<br>
+{{#> progress
+  progress__value="50000"
+  progress__valuetext="50,000"
+  progress__valuemax="100000"
+  progress__width="50"
+  progress--modifier="pf-m-outside pf-m-lg"
+  progress__id="progress-outside-static-width-5-example"
+  progress-measure--modifier="pf-m-static-width"
+  progress--attribute='style="--pf-c-progress__measure--m-static-width--MinWidth: 6ch;"'
+}}
+{{/progress}}
+<br>
+{{#> progress
+  progress__value="100000"
+  progress__valuetext="100,000"
+  progress__valuemax="100000"
+  progress__width="100"
+  progress--modifier="pf-m-outside pf-m-lg"
+  progress__id="progress-outside-static-width-6-example"
+  progress-measure--modifier="pf-m-static-width"
+  progress--attribute='style="--pf-c-progress__measure--m-static-width--MinWidth: 6ch;"'
+}}
+{{/progress}}
+```
+
 ### On single line
 ```hbs
 {{#> progress
@@ -240,3 +303,4 @@ If this component is describing the loading progress of a particular region of a
 | `.pf-m-warning` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a warning state. |
 | `.pf-m-danger` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a danger (failure) state. |
 | `.pf-m-truncate` | `.pf-c-progress__description` | Modifies the description to display a single line and truncate any overflow text with ellipses. |
+| `.pf-m-static-width` | `.pf-c-progress.pf-m-outside .pf-c-progress__measure` | Modifies the measure element to have a static `min-width` that will hold 0-100%. Overridable by setting `--pf-c-progress__measure--m-static-width--MinWidth`. |
