@@ -67,4 +67,10 @@
   @at-root label#{&} {
     cursor: pointer;
   }
+
+  &.pf-m-plain {
+    --pf-c-input-group__text--BorderWidth: 0;
+
+    margin-left: 0;
+  }
 }
