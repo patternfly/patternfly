@@ -1,0 +1,10 @@
+<div class="pf-c-slider__step{{#if slider-step--IsActive}} pf-m-active{{/if}}{{#if slider-step--modifier}} {{slider-step--modifier}}{{/if}}"
+  style="--pf-c-slider__step--Left: {{slider-step--Left}};{{#if slider-step--styles}} {{slider-step--styles}}{{/if}}"
+  {{#if slider-step--attribute}}
+    {{{slider-step--attribute}}}
+  {{/if}}>
+  {{> slider-step-tick}}
+  {{#if slider-step--label}}
+    {{#> slider-step-label}}{{slider-step--label}}{{/slider-step-label}}
+  {{/if}}
+</div>

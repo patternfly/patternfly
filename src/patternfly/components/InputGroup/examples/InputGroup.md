@@ -52,32 +52,32 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
- {{#> input-group-text inputGroupTextType="span" input-group-text--HasDollarSignIcon="true"}}
+ {{#> input-group-text input-group-text--HasDollarSignIcon="true"}}
  {{/input-group-text}}
  {{#> form-control controlType="input" input="true" form-control--attribute='type="number" id="textInput5" name="textInput5" aria-label=" Dollar amount input example"'}}
  {{/form-control}}
-{{#> input-group-text inputGroupTextType="span"}}
-   .00
- {{/input-group-text}}
+  {{#> input-group-text}}
+    .00
+  {{/input-group-text}}
 {{/input-group}}
 <br>
 {{#> input-group}}
   {{#> form-control controlType="input" input="true" form-control--attribute='type="email" id="textInput6" name="textInput6" aria-label="Email input field" aria-describedby="email-example"'}}
   {{/form-control}}
- {{#> input-group-text inputGroupTextType="span" input-group-text--attribute='id="email-example"'}}
+ {{#> input-group-text input-group-text--attribute='id="email-example"'}}
    @example.com
  {{/input-group-text}}
 {{/input-group}}
 <br>
 {{#> input-group}}
- {{#> input-group-text inputGroupTextType="span" input-group-text--HasAtIcon="true"  input-group-text--attribute='id="username"' aria-label="@"}}
+ {{#> input-group-text input-group-text--HasAtIcon="true"  input-group-text--attribute='id="username"' aria-label="@"}}
  {{/input-group-text}}
  {{#> form-control controlType="input" input="true" form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example" aria-describedby="username"'}}
 {{/form-control}}
 {{/input-group}}
 <br>
 {{#> input-group}}
- {{#> input-group-text inputGroupTextType="label" input-group-text--HasCalendarIcon="true" input-group-text--attribute='for="textInput9"'}}
+ {{#> input-group-text input-group-text--type="label" input-group-text--HasCalendarIcon="true" input-group-text--attribute='for="textInput9"'}}
  {{/input-group-text}}
  {{#> form-control controlType="input" input="true" form-control--attribute='type="date" id="textInput9" name="textInput9" aria-label="Date input example"'}}
 {{/form-control}}
@@ -106,6 +106,14 @@ cssPrefix: pf-c-input-group
     <i class="fas fa-question-circle" aria-hidden="true"></i>
   {{/button}}
 {{/input-group}}
+<br>
+{{#> input-group}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput14" name="textInput14" aria-label="Input example with plain unit"'}}
+  {{/form-control}}
+  {{#> input-group-text input-group-text--modifier="pf-m-plain"}}
+   %
+  {{/input-group-text}}
+{{/input-group}}
 ```
 
 ## Documentation
@@ -124,3 +132,4 @@ When using the `.pf-c-input-group` always ensure labels are used outside the inp
 | -- | -- | -- |
 | `.pf-c-input-group` | `<div>` |  Initiates the input group. **Required** |
 | `.pf-c-input-group__text` | `<span>` |  Initiates the input group text. This can be used to show text, radio, icons, or check boxes. |
+| `.pf-m-plain` | `.pf-c-input-group__text` | Removes the border from the text element. |
