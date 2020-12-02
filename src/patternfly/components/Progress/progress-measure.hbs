@@ -5,6 +5,8 @@
     {{/if}}>
     {{~#if progress--dynamic}}
       {{progress__valuetext}}
+    {{else if progress__valuetext}}
+      {{progress__valuetext}}
     {{else}}
       {{progress__value}}%
     {{/if}}
