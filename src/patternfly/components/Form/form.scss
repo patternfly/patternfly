@@ -72,6 +72,47 @@
   --pf-c-form__section--MarginTop: var(--pf-global--spacer--xl);
   --pf-c-form__section--Gap: var(--pf-global--gutter--md);
 
+  // Field groups
+  --pf-c-form__field-group--border-width-base: var(--pf-global--BorderWidth--sm);
+  --pf-c-form__field-group--BorderTopWidth: var(--pf-c-form__field-group--border-width-base);
+  --pf-c-form__field-group--BorderTopColor: var(--pf-global--BorderColor--100);
+  --pf-c-form__field-group--BorderBottomWidth: var(--pf-c-form__field-group--border-width-base);
+  --pf-c-form__field-group--BorderBottomColor: var(--pf-global--BorderColor--100);
+  --pf-c-form__field-group--field-group--MarginTop: calc(var(--pf-c-form--GridGap) * -1);
+  --pf-c-form__field-group--GridTemplateColumns--toggle: calc(var(--pf-global--spacer--md) * 2 + var(--pf-c-form__field-group-toggle-icon--MinWidth) + var(--pf-global--spacer--xs)); // based off of the expected width of the group toggle, for use to define a column when the toggle is not present
+  --pf-c-form__field-group-toggle--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-form__field-group-toggle--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-form__field-group__field-group__field-group-toggle--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-form__field-group-header-toggle--BorderWidth--base: var(--pf-global--BorderWidth--sm);
+  --pf-c-form__field-group__field-group--field-group__field-group-toggle--after--BorderTopWidth: var(--pf-c-form__field-group-header-toggle--BorderWidth--base);
+  --pf-c-form__field-group-toggle-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-form__field-group-toggle-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-form__field-group-toggle-icon--Transition: var(--pf-global--Transition);
+  --pf-c-form__field-group-toggle-icon--MinWidth: var(--pf-global--FontSize--md);
+  --pf-c-form__field-group-toggle-icon--Rotate: 0;
+  --pf-c-form__field-group--m-expanded__toggle-icon--Rotate: 90deg;
+  --pf-c-form__field-group-header--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-form__field-group-header--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-form__field-group-header--GridColumn: 1 / 3;
+  --pf-c-form__field-group__field-group__field-group-header--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-form__field-group__field-group__field-group-header--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-form__field-group-toggle--field-group-header--GridColumn: 2 / 3;
+  --pf-c-form__field-group__field-group--field-group__field-group-header--after--BorderTopWidth: var(--pf-c-form__field-group-header-toggle--BorderWidth--base);
+  --pf-c-form__field-group-header-description--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-form__field-group-header-description--Color: var(--pf-global--Color--200);
+  --pf-c-form__field-group-header-actions--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-form__field-group-header-actions--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-form__field-group-header-actions--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-form__field-group-body--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-form__field-group-body--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-form__field-group-body--Gap: var(--pf-c-form--GridGap);
+  --pf-c-form__field-group-body--GridColumn: 2 / 3;
+  --pf-c-form__field-group__field-group__field-group-body--GridColumn: 1 / 3;
+  --pf-c-form__field-group__field-group__field-group-toggle--field-group-body--GridColumn: 2 / 3;
+  --pf-c-form__field-group__field-group--not--m-expandable__field-group--not-m-expandable__field-group-header--GridColumn: 2 / 3;
+  --pf-c-form__field-group__field-group--not--m-expandable__field-group--not-m-expandable__field-group-body--GridColumn: 2 / 3;
+  --pf-c-form__field-group-body__field-group--last-child--MarginBottom: calc(var(--pf-c-form__field-group-body--PaddingBottom) * -1);
+
   display: grid;
   grid-gap: var(--pf-c-form--GridGap);
 
@@ -249,5 +290,125 @@
     margin-right: var(--pf-c-form__actions--child--MarginRight);
     margin-bottom: var(--pf-c-form__actions--child--MarginBottom);
     margin-left: var(--pf-c-form__actions--child--MarginLeft);
+  }
+}
+
+.pf-c-form__field-group {
+  --pf-c-form__field-group--BorderTopWidth: var(--pf-c-form__field-group--border-width-base);
+  --pf-c-form__field-group--BorderTopWidth: var(--pf-c-form__field-group--border-width-base);
+
+  display: grid;
+  grid-template-columns: minmax(var(--pf-c-form__field-group--GridTemplateColumns--toggle), max-content) 1fr;
+  border-top: var(--pf-c-form__field-group--BorderTopWidth) solid var(--pf-c-form__field-group--BorderTopColor);
+  border-bottom: var(--pf-c-form__field-group--BorderBottomWidth) solid var(--pf-c-form__field-group--BorderBottomColor);
+
+  &:last-child {
+    --pf-c-form__field-group--BorderBottomWidth: 0;
+  }
+
+  & + &,
+  &:first-child {
+    --pf-c-form__field-group--BorderTopWidth: 0;
+  }
+
+  & + & {
+    margin-top: var(--pf-c-form__field-group--field-group--MarginTop);
+  }
+
+  // nested
+  & & {
+    --pf-c-form__field-group-body--GridColumn: var(--pf-c-form__field-group__field-group__field-group-body--GridColumn);
+    --pf-c-form__field-group-toggle--PaddingTop: var(--pf-c-form__field-group__field-group__field-group-toggle--PaddingTop);
+    --pf-c-form__field-group-header--PaddingTop: var(--pf-c-form__field-group__field-group__field-group-header--PaddingTop);
+    --pf-c-form__field-group-header--PaddingBottom: var(--pf-c-form__field-group__field-group__field-group-header--PaddingBottom);
+    --pf-c-form__field-group-body--PaddingTop: 0;
+
+    .pf-c-form__field-group-toggle ~ .pf-c-form__field-group-body {
+      --pf-c-form__field-group-body--GridColumn: var(--pf-c-form__field-group__field-group__field-group-toggle--field-group-body--GridColumn);
+    }
+  }
+
+  &.pf-m-expanded {
+    > .pf-c-form__field-group-toggle {
+      --pf-c-form__field-group-toggle-icon--Rotate: var(--pf-c-form__field-group--m-expanded__toggle-icon--Rotate);
+    }
+  }
+}
+
+.pf-c-form__field-group-toggle {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  padding-top: var(--pf-c-form__field-group-toggle--PaddingTop);
+  padding-right: var(--pf-c-form__field-group-toggle--PaddingRight);
+
+  + .pf-c-form__field-group-header {
+    --pf-c-form__field-group-header--GridColumn: var(--pf-c-form__field-group-toggle--field-group-header--GridColumn);
+  }
+}
+
+.pf-c-form__field-group-toggle-button {
+  margin-top: var(--pf-c-form__field-group-toggle-button--MarginTop);
+  margin-bottom: var(--pf-c-form__field-group-toggle-button--MarginBottom);
+}
+
+.pf-c-form__field-group-toggle-icon {
+  display: inline-block;
+  min-width: var(--pf-c-form__field-group-toggle-icon--MinWidth);
+  text-align: center;
+  transition: var(--pf-c-form__field-group-toggle-icon--Transition);
+  transform: rotate(var(--pf-c-form__field-group-toggle-icon--Rotate));
+}
+
+.pf-c-form__field-group-header {
+  grid-column: var(--pf-c-form__field-group-header--GridColumn);
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--pf-c-form__field-group-header--PaddingTop);
+  padding-bottom: var(--pf-c-form__field-group-header--PaddingBottom);
+}
+
+.pf-c-form__field-group-header-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pf-c-form__field-group-header-title {
+  display: flex;
+}
+
+.pf-c-form__field-group-header-title-text {
+  flex-grow: 1;
+}
+
+.pf-c-form__field-group-header-description {
+  margin-top: var(--pf-c-form__field-group-header-description--MarginTop);
+  color: var(--pf-c-form__field-group-header-description--Color);
+}
+
+.pf-c-form__field-group-header-actions {
+  margin-top: var(--pf-c-form__field-group-header-actions--MarginTop);
+  margin-bottom: var(--pf-c-form__field-group-header-actions--MarginBottom);
+  margin-left: var(--pf-c-form__field-group-header-actions--MarginLeft);
+  white-space: nowrap;
+}
+
+.pf-c-form__field-group-body {
+  grid-column: var(--pf-c-form__field-group-body--GridColumn);
+  display: grid;
+  gap: var(--pf-c-form__field-group-body--Gap);
+  padding-top: var(--pf-c-form__field-group-body--PaddingTop);
+  padding-bottom: var(--pf-c-form__field-group-body--PaddingBottom);
+
+  > .pf-c-form__field-group {
+    &:first-child {
+      --pf-c-form__field-group-toggle--PaddingTop: 0;
+      --pf-c-form__field-group-header--PaddingTop: 0;
+    }
+
+    &:last-child {
+      margin-bottom: var(--pf-c-form__field-group-body__field-group--last-child--MarginBottom);
+    }
   }
 }
