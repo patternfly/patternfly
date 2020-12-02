@@ -39,7 +39,7 @@
   --pf-c-slider__thumb--TranslateY: -50%;
   --pf-c-slider__thumb--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-slider__thumb--BoxShadow--base:
-    0 0 0 2px #fff,
+    0 0 0 2px var(--pf-global--BackgroundColor--100),
     0 0 0 3px var(--pf-global--primary-color--100);
   --pf-c-slider__thumb--hover--BoxShadow: var(--pf-c-slider__thumb--BoxShadow--base);
   --pf-c-slider__thumb--focus--BoxShadow: var(--pf-c-slider__thumb--BoxShadow--base);

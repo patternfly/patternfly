@@ -254,6 +254,7 @@ cssPrefix: pf-c-slider
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-slider` | `<div>` | Initiates the slider component. **Required** |
+| `.pf-c-slider__main` | `<div>` | Initiates the slider main element. **Required** |
 | `.pf-c-slider__rail` | `<div>` | Initiates the slider rail. **Required** |
 | `.pf-c-slider__rail-track` | `<div>` | Initiates the slider rail track. **Required** |
 | `.pf-c-slider__steps` | `<div>` | Initiates the slider steps. |
