@@ -297,9 +297,6 @@
 }
 
 .pf-c-form__field-group {
-  --pf-c-form__field-group-header--GridColumn: 1 / 3;
-  --pf-c-form__field-group-body--GridColumn: 1 / 3;
-
   display: grid;
   grid-template-columns: minmax(var(--pf-c-form__field-group--GridTemplateColumns--toggle), max-content) 1fr;
   grid-template-rows: auto auto;
@@ -330,19 +327,6 @@
     --pf-c-form__field-group-toggle--after--BorderTopWidth: var(--pf-c-form__field-group__field-group--field-group__field-group-toggle--after--BorderTopWidth);
     --pf-c-form__field-group-header--after--BorderTopWidth: var(--pf-c-form__field-group__field-group--field-group__field-group-header--after--BorderTopWidth);
   }
-
-  // nested non-expandable group with a nested non-expandable group
-  // stylelint-disable
-  & &:not(.pf-m-expandable) > .pf-c-form__field-group-body > &:not(.pf-m-expandable) {
-    > .pf-c-form__field-group-header {
-      grid-column: var(--pf-c-form__field-group__field-group--not--m-expandable__field-group--not-m-expandable__field-group-header--GridColumn);
-    }
-
-    > .pf-c-form__field-group-body {
-      grid-column: var(--pf-c-form__field-group__field-group--not--m-expandable__field-group--not-m-expandable__field-group-body--GridColumn);
-    }
-  }
-  // stylelint-enable
 
   &.pf-m-expanded {
     > .pf-c-form__field-group-toggle {

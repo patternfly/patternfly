@@ -394,38 +394,6 @@ cssPrefix: pf-c-form
               {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
             {{/form-group-control}}
           {{/form-group}}
-          {{#> form-field-group newcontext form-field-group--id=(concat form--id '-field-group8')}}
-            {{#> form-field-group-header}}
-              {{#> form-field-group-header-main}}
-                {{#> form-field-group-title}}
-                  {{#> form-field-group-title-text}}Nested nested field group 1 (non-expandable){{/form-field-group-title-text}}
-                {{/form-field-group-title}}
-                {{#> form-field-group-header-description}}
-                  Field group 1 description text.
-                {{/form-field-group-header-description}}
-              {{/form-field-group-header-main}}
-            {{/form-field-group-header}}
-            {{#> form-field-group-body}}
-              {{#> form-group form-group--id=(concat form-field-group--id "-label1")}}
-                {{#> form-group-label}}
-                  {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 1{{/form-label}}
-                  {{> form-group-label-help}}
-                {{/form-group-label}}
-                {{#> form-group-control}}
-                  {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
-                {{/form-group-control}}
-              {{/form-group}}
-              {{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
-                {{#> form-group-label}}
-                  {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 2{{/form-label}}
-                  {{> form-group-label-help}}
-                {{/form-group-label}}
-                {{#> form-group-control}}
-                  {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
-                {{/form-group-control}}
-              {{/form-group}}
-            {{/form-field-group-body}}
-          {{/form-field-group}}
         {{/form-field-group-body}}
       {{/form-field-group}}
       {{#> form-field-group newcontext form-field-group--id=(concat form--id '-field-group9')}}
