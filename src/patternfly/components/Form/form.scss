@@ -74,7 +74,7 @@
 
   // Field groups
   --pf-c-form__field-group--field-group--MarginTop: calc(var(--pf-c-form--GridGap) * -1);
-  --pf-c-form__field-group--GridTemplateColumns--toggle: calc(var(--pf-global--spacer--md) * 2 + var(--pf-c-form__field-group-toggle-icon--MinWidth) + var(--pf-global--spacer--xs));
+  --pf-c-form__field-group--GridTemplateColumns--toggle: calc(var(--pf-global--spacer--md) * 2 + var(--pf-c-form__field-group-toggle-icon--MinWidth) + var(--pf-global--spacer--xs)); // based off of the expected width of the group toggle, for use to define a column when the toggle is not present
   --pf-c-form__field-group-toggle--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-form__field-group-toggle--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-form__field-group__field-group__field-group-toggle--PaddingTop: var(--pf-global--spacer--lg);
