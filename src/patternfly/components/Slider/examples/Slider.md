@@ -175,7 +175,7 @@ cssPrefix: pf-c-slider
   }}
   {{#> slider-actions}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Minus"'}}
-      <i class="fas fa-minus" aria-hidden="true"></i>
+      <i class="fas fa-fw fa-minus" aria-hidden="true"></i>
     {{/button}}
   {{/slider-actions}}
   {{#> slider-main}}
@@ -184,7 +184,7 @@ cssPrefix: pf-c-slider
   {{/slider-main}}
   {{#> slider-actions}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Plus"'}}
-      <i class="fas fa-plus" aria-hidden="true"></i>
+      <i class="fas fa-fw fa-plus" aria-hidden="true"></i>
     {{/button}}
   {{/slider-actions}}
 {{/slider}}
@@ -209,7 +209,7 @@ cssPrefix: pf-c-slider
   {{/slider-main}}
   {{#> slider-actions}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Locked"'}}
-      <i class="fas fa-lock" aria-hidden="true"></i>
+      <i class="fas fa-fw fa-lock" aria-hidden="true"></i>
     {{/button}}
   {{/slider-actions}}
 {{/slider}}
@@ -234,7 +234,7 @@ cssPrefix: pf-c-slider
   {{/slider-main}}
   {{#> slider-actions}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Lock"'}}
-      <i class="fas fa-lock-open" aria-hidden="true"></i>
+      <i class="fas fa-fw fa-lock-open" aria-hidden="true"></i>
     {{/button}}
   {{/slider-actions}}
 {{/slider}}
