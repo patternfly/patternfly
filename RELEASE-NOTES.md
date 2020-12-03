@@ -3,6 +3,33 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2020.16 release notes (2020-12-08)
+Packages released:
+- [@patternfly/patternfly@v4.69.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.69.2)
+
+### Components
+- **Calendar month:**
+  - Updated a11y per the react component ([#3696](https://github.com/patternfly/patternfly/pull/3696))
+  - Updated in-range bg to stay within cell padding ([#3705](https://github.com/patternfly/patternfly/pull/3705))
+- **Card:** Added support for dividers between sections ([#3485](https://github.com/patternfly/patternfly/pull/3485))
+- **Drawer:** Kept content from shifting when panel resizes ([#3719](https://github.com/patternfly/patternfly/pull/3719))
+- **Form:** Added field groups ([#3654](https://github.com/patternfly/patternfly/pull/3654))
+- **Jump links:** Kept sublists from inheriting current styles from parent ([#3707](https://github.com/patternfly/patternfly/pull/3707))
+- **Page:** Moved nav specific demos into nav demos ([#3681](https://github.com/patternfly/patternfly/pull/3681))
+- **Pagination:** Added modifers to switch between full and summary layouts ([#3684](https://github.com/patternfly/patternfly/pull/3684))
+- **Dropdown:** Fixed plain toggle height inconsistency ([#3689](https://github.com/patternfly/patternfly/pull/3689))
+- **Progress:** Enabled static width for measure value ([#3567](https://github.com/patternfly/patternfly/pull/3567))
+- **Slider:** Added slider component ([#3711](https://github.com/patternfly/patternfly/pull/3711))
+- **Table:** Enabled borderless variation on all tables ([#3691](https://github.com/patternfly/patternfly/pull/3691))
+- **Tree view:** Removed references to pf-m-expandable ([#3676](https://github.com/patternfly/patternfly/pull/3676))
+
+### Layouts
+- **Gallery:** Added support for custom item max-width ([#3703](https://github.com/patternfly/patternfly/pull/3703))
+
+### Other
+- **Stalebot:** Added pinned to exemptLabels ([#3685](https://github.com/patternfly/patternfly/pull/3685))
+
+
 ## 2020.15 release notes (2020-11-17)
 Packages released:
 - [@patternfly/patternfly@v4.65.5](https://www.npmjs.com/package/@patternfly/patternfly/v/4.65.5)
