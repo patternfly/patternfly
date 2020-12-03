@@ -5,8 +5,8 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view--PaddingBottom: var(--pf-global--spacer--sm);
 
   // Link base
-  --pf-c-tree-view__node--indent--base: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--md));
-  --pf-c-tree-view__node--nested-indent--base: var(--pf-global--spacer--lg);
+  --pf-c-tree-view__node--indent--base: calc(var(--pf-global--spacer--md) * 2 + var(--pf-c-tree-view__node-toggle-icon--MinWidth)); // based off of the expected width of the toggle button
+  --pf-c-tree-view__node--nested-indent--base: calc(var(--pf-c-tree-view__node--indent--base) - var(--pf-global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
 
   // Link
   --pf-c-tree-view__node--PaddingTop: var(--pf-global--spacer--sm);
@@ -27,7 +27,8 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__list-item__list-item__node-toggle--TranslateX: -100%;
 
   // Toggle
-  --pf-c-tree-view__node-toggle--Transition: var(--pf-global--Transition);
+  --pf-c-tree-view__node-toggle-icon--MinWidth: var(--pf-global--FontSize--md);
+  --pf-c-tree-view__node-toggle-icon--Transition: var(--pf-global--Transition);
   --pf-c-tree-view__node-toggle-button--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-tree-view__node-toggle-button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tree-view__node-toggle-button--PaddingBottom: var(--pf-global--spacer--form-element);
@@ -108,7 +109,11 @@ $pf-c-tree-view--MaxNesting: 10;
 }
 
 .pf-c-tree-view__node-toggle-icon {
-  transition: var(--pf-c-tree-view__node-toggle--Transition);
+  display: inline-block;
+  justify-content: center;
+  min-width: var(--pf-c-tree-view__node-toggle-icon--MinWidth);
+  text-align: center;
+  transition: var(--pf-c-tree-view__node-toggle-icon--Transition);
 }
 
 .pf-c-tree-view__node-check {
@@ -178,7 +183,7 @@ $pf-c-tree-view--MaxNesting: 10;
 
   @for $i from 1 through $pf-c-tree-view--MaxNesting {
     #{$nested-item} {
-      --pf-c-tree-view__node--PaddingLeft: calc(var(--pf-c-tree-view__node--indent--base) + (var(--pf-c-tree-view__node--nested-indent--base) * #{$i}));
+      --pf-c-tree-view__node--PaddingLeft: calc(var(--pf-c-tree-view__node--nested-indent--base) * #{$i} + var(--pf-c-tree-view__node--indent--base));
       --pf-c-tree-view__list-item__list-item__node-toggle--Left: var(--pf-c-tree-view__node--PaddingLeft);
     }
 
