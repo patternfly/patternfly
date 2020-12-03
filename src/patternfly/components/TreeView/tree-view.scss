@@ -52,6 +52,7 @@ $pf-c-tree-view--MaxNesting: 10;
   // icon
   --pf-c-tree-view__node-icon--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tree-view__node-icon--Color: var(--pf-global--icon--Color--light);
+  --pf-c-tree-view__list-item--m-expanded__node-toggle-icon--Rotate: 90deg;
 
   // text
   --pf-c-tree-view__node-text--max-lines: 1;
@@ -71,7 +72,8 @@ $pf-c-tree-view--MaxNesting: 10;
 .pf-c-tree-view__list-item {
   &.pf-m-expanded {
     > .pf-c-tree-view__content > .pf-c-tree-view__node > .pf-c-tree-view__node-toggle > .pf-c-tree-view__node-toggle-icon {
-      transform: rotate(90deg);
+      transform: rotate(var(--pf-c-tree-view__list-item--m-expanded__node-toggle-icon--Rotate));
+      text-align: center;
     }
   }
 }
@@ -110,9 +112,7 @@ $pf-c-tree-view--MaxNesting: 10;
 
 .pf-c-tree-view__node-toggle-icon {
   display: inline-block;
-  justify-content: center;
   min-width: var(--pf-c-tree-view__node-toggle-icon--MinWidth);
-  text-align: center;
   transition: var(--pf-c-tree-view__node-toggle-icon--Transition);
 }
 
