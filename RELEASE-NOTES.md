@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2020.16 release notes (2020-12-08)
 Packages released:
-- [@patternfly/patternfly@v4.69.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.69.4)
+- [@patternfly/patternfly@v4.69.5](https://www.npmjs.com/package/@patternfly/patternfly/v/4.69.5)
 
 ### Components
 - **Calendar month:**
@@ -21,7 +21,9 @@ Packages released:
 - **Dropdown:** Fixed plain toggle height inconsistency ([#3689](https://github.com/patternfly/patternfly/pull/3689))
 - **Progress:** Enabled static width for measure value ([#3567](https://github.com/patternfly/patternfly/pull/3567))
 - **Slider:** Added slider component ([#3711](https://github.com/patternfly/patternfly/pull/3711))
-- **Table:** Enabled borderless variation on all tables ([#3691](https://github.com/patternfly/patternfly/pull/3691))
+- **Table:**
+  - Enabled borderless variation on all tables ([#3691](https://github.com/patternfly/patternfly/pull/3691))
+  - Added var for sortable text, updated sortable favorite color ([#3732](https://github.com/patternfly/patternfly/pull/3732))
 - **Tree view:**
   - Removed references to pf-m-expandable ([#3676](https://github.com/patternfly/patternfly/pull/3676))
   - Made toggle size/indentation same between core and react ([#3728](https://github.com/patternfly/patternfly/pull/3728))
