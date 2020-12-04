@@ -81,7 +81,7 @@ $pf-c-dual-list-selector__item--m-check--MaxNesting: 10;
   --pf-c-dual-list-selector__item--c-badge--m-read--BackgroundColor: var(--pf-global--disabled-color--200);
 
   // Icon
-  --pf-c-dual-list-selector__item-toggle-icon--Transform: 0;
+  --pf-c-dual-list-selector__item-toggle-icon--Rotate: 0;
   --pf-c-dual-list-selector__list-item--m-expanded__item-toggle-icon--Rotate: 90deg;
   --pf-c-dual-list-selector__item-toggle-icon--Transition: var(--pf-global--Transition);
   --pf-c-dual-list-selector__item-toggle-icon--MinWidth: var(--pf-c-dual-list-selector__item--FontSize);
@@ -177,7 +177,7 @@ $pf-c-dual-list-selector__item--m-check--MaxNesting: 10;
 .pf-c-dual-list-selector__list-item {
   &.pf-m-expanded {
     > .pf-c-dual-list-selector__item {
-      --pf-c-dual-list-selector__item-toggle-icon--Transform: rotate(--pf-c-dual-list-selector__list-item--m-expanded__item-toggle-icon--rotate);
+      --pf-c-dual-list-selector__item-toggle-icon--Rotate: var(--pf-c-dual-list-selector__list-item--m-expanded__item-toggle-icon--Rotate);
     }
   }
 }
@@ -268,7 +268,9 @@ $pf-c-dual-list-selector__item--m-check--MaxNesting: 10;
 .pf-c-dual-list-selector__item-toggle-icon {
   display: inline-block;
   min-width: var(--pf-c-dual-list-selector__item-toggle-icon--MinWidth);
+  text-align: center;
   transition: var(--pf-c-dual-list-selector__item-toggle-icon--Transition);
+  transform: rotate(var(--pf-c-dual-list-selector__item-toggle-icon--Rotate));
 }
 
 // stylelint-disable no-duplicate-selectors
