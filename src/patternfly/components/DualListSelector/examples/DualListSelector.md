@@ -152,7 +152,7 @@ cssPrefix: pf-c-dual-list-selector
           {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--modifier="pf-m-selected" dual-list-selector-item--text="Item2"}}
+          {{> dual-list-selector-item dual-list-selector-item--IsSelected="true" dual-list-selector-item--text="Item2"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item3"}}
@@ -261,16 +261,16 @@ cssPrefix: pf-c-dual-list-selector
           {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--modifier="pf-m-selected" dual-list-selector-item--text="Item2"}}
+          {{> dual-list-selector-item dual-list-selector-item--IsSelected="true" dual-list-selector-item--text="Item2"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--modifier="pf-m-selected" dual-list-selector-item--text="Item3"}}
+          {{> dual-list-selector-item dual-list-selector-item--IsSelected="true" dual-list-selector-item--text="Item3"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item4"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--modifier="pf-m-selected" dual-list-selector-item--text="Item5"}}
+          {{> dual-list-selector-item dual-list-selector-item--IsSelected="true" dual-list-selector-item--text="Item5"}}
         {{/dual-list-selector-list-item}}
       {{/dual-list-selector-list}}
     {{/dual-list-selector-menu}}
@@ -549,7 +549,7 @@ cssPrefix: pf-c-dual-list-selector
     {{#> dual-list-selector-menu}}
       {{#> dual-list-selector-list}}
         {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--modifier="pf-m-selected" dual-list-selector-item--text="Item5"}}
+          {{> dual-list-selector-item dual-list-selector-item--IsSelected="true" dual-list-selector-item--text="Item5"}}
         {{/dual-list-selector-list-item}}
       {{/dual-list-selector-list}}
     {{/dual-list-selector-menu}}
@@ -592,13 +592,13 @@ cssPrefix: pf-c-dual-list-selector
     {{#> dual-list-selector-menu}}
       {{#> dual-list-selector-list}}
         {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="0" dual-list-selector-item--count="00" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="0" dual-list-selector-item--count="6" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
             {{#> dual-list-selector-list newcontext}}
               {{#> dual-list-selector-list-item}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Red" dual-list-selector-item--HasCheck="true" dual-list-selector-item-check--IsChecked="true" dual-list-selector-item--id="1" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Red" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="1" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
               {{#> dual-list-selector-list-item}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--modifier="pf-m-selected" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="2" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--IsSelected="true" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="2" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
               {{#> dual-list-selector-list-item}}
                 {{#> dual-list-selector-item dual-list-selector-item--text="Yellow" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="3" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
@@ -610,7 +610,7 @@ cssPrefix: pf-c-dual-list-selector
                     {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="5" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
                   {{#> dual-list-selector-list-item}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="medium green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="6" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                    {{#> dual-list-selector-item dual-list-selector-item--text="Medium green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="6" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
                   {{#> dual-list-selector-list-item}}
                     {{#> dual-list-selector-item dual-list-selector-item--text="Dark green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="7" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
@@ -731,7 +731,7 @@ cssPrefix: pf-c-dual-list-selector
           {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="11" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
             {{#> dual-list-selector-list newcontext}}
               {{#> dual-list-selector-list-item}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--modifier="pf-m-selected" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="12" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--IsSelected="true" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="12" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
               {{#> dual-list-selector-list-item}}
                 {{#> dual-list-selector-item dual-list-selector-item--text="Yellow" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="13" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
@@ -743,7 +743,7 @@ cssPrefix: pf-c-dual-list-selector
                     {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="15" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
                   {{#> dual-list-selector-list-item}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="medium green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="16" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                    {{#> dual-list-selector-item dual-list-selector-item--text="Medium green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="16" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
                   {{#> dual-list-selector-list-item}}
                     {{#> dual-list-selector-item dual-list-selector-item--text="Dark green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="17" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
@@ -820,7 +820,7 @@ cssPrefix: pf-c-dual-list-selector
           {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="21" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
             {{#> dual-list-selector-list newcontext}}
               {{#> dual-list-selector-list-item}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--modifier="pf-m-selected" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="22" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--IsSelected="true" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="22" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
             {{/dual-list-selector-list}}
         {{/dual-list-selector-list-item}}
@@ -861,4 +861,5 @@ cssPrefix: pf-c-dual-list-selector
 | `.pf-c-dual-list-selector__controls-item` | `<div>` | Initiates the dual list selector controls item. **Required** |
 | `.pf-m-available` | `.pf-c-dual-list-selector__pane` | Defines a pane as the available list. |
 | `.pf-m-chosen` | `.pf-c-dual-list-selector__pane` | Defines a pane as the chosen list. |
-| `.pf-m-selected` | `.pf-c-dual-list-selector__list-item` | Modifies the menu list item for the selected state. |
+| `.pf-m-selected` | `.pf-c-dual-list-selector__item` | Modifies the menu item for the selected state. |
+| `.pf-m-check` | `.pf-c-dual-list-selector__item` | Indicates that an item is selectable with a checkbox. |

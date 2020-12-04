@@ -1,3 +1,5 @@
+$pf-c-dual-list-selector__item--m-check--MaxNesting: 10;
+
 .pf-c-dual-list-selector {
   // Grid
   --pf-c-dual-list-selector__header--GridArea: pane-header;
@@ -38,7 +40,9 @@
   --pf-c-dual-list-selector__item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-dual-list-selector__item--focus-within--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-dual-list-selector__item--m-selected--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-
+  --pf-c-dual-list-selector__item--m-check--PaddingLeft: 0;
+  --pf-c-dual-list-selector__item--m-check--indent--base: calc(var(--pf-global--spacer--md) + var(--pf-global--spacer--sm) + var(--pf-c-dual-list-selector__item--FontSize));
+  --pf-c-dual-list-selector__item--m-check--nested-indent--base: calc(var(--pf-c-dual-list-selector__item--m-check--indent--base) - var(--pf-global--spacer--md));
 
   // Nested items
   --pf-c-dual-list-selector__item--list__item--PaddingLeft: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--xl));
@@ -60,7 +64,14 @@
   --pf-c-dual-list-selector__controls--PaddingLeft: var(--pf-global--spacer--md);
 
   // Toggle
+  --pf-c-dual-list-selector__item-toggle--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-dual-list-selector__item-toggle--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-dual-list-selector__item-toggle--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-dual-list-selector__item-toggle--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-dual-list-selector__item-toggle--MarginTop: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-dual-list-selector__item-toggle--MarginBottom: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-dual-list-selector__list__list__item-toggle--Left: 0;
+  --pf-c-dual-list-selector__list__list__item-toggle--TranslateX: -100%;
 
   // Check
   --pf-c-dual-list-selector__item-check--MarginRight: var(--pf-global--spacer--sm);
@@ -73,7 +84,7 @@
   --pf-c-dual-list-selector__item-toggle-icon--Transform: 0;
   --pf-c-dual-list-selector__list-item--m-expanded__item-toggle-icon--Rotate: 90deg;
   --pf-c-dual-list-selector__item-toggle-icon--Transition: var(--pf-global--Transition);
-
+  --pf-c-dual-list-selector__item-toggle-icon--MinWidth: var(--pf-c-dual-list-selector__item--FontSize);
 
   display: grid;
   grid-template-areas:
@@ -147,20 +158,20 @@
 }
 
 .pf-c-dual-list-selector__list {
-  display: flex;
-  flex-direction: column;
+  & & {
+    --pf-c-dual-list-selector__item-toggle--MarginTop: 0;
+    --pf-c-dual-list-selector__item-toggle--MarginBottom: 0;
 
-  .pf-c-dual-list-selector__list {
-    --pf-c-dual-list-selector__item--PaddingLeft: var(--pf-c-dual-list-selector__item--list__item--PaddingLeft);
-
-    .pf-c-dual-list-selector__list-item.pf-m-expandable {
-      --pf-c-dual-list-selector__item--PaddingLeft: var(--pf-c-dual-list-selector__item--list__item--m-expandable--PaddingLeft);
-    }
-
-    .pf-c-dual-list-selector__list {
-      --pf-c-dual-list-selector__item--PaddingLeft: var(--pf-c-dual-list-selector__item--list--list__item--PaddingLeft);
+    .pf-c-dual-list-selector__item-toggle {
+      position: absolute;
+      top: 0;
+      left: var(--pf-c-dual-list-selector__list__list__item-toggle--Left);
+      transform: translateX(var(--pf-c-dual-list-selector__list__list__item-toggle--TranslateX));
     }
   }
+
+  display: flex;
+  flex-direction: column;
 }
 
 .pf-c-dual-list-selector__list-item {
@@ -182,6 +193,7 @@
 }
 
 .pf-c-dual-list-selector__item {
+  position: relative;
   width: 100%;
   padding: var(--pf-c-dual-list-selector__item--PaddingTop) var(--pf-c-dual-list-selector__item--PaddingRight) var(--pf-c-dual-list-selector__item--PaddingBottom) var(--pf-c-dual-list-selector__item--PaddingLeft);
   font-size: var(--pf-c-dual-list-selector__item--FontSize);
@@ -206,6 +218,11 @@
 
       font-weight: var(--pf-c-dual-list-selector__item--m-selected__text--FontWeight);
     }
+  }
+
+  &.pf-m-check {
+    --pf-c-dual-list-selector__item--PaddingLeft: var(--pf-c-dual-list-selector__item--m-check--PaddingLeft);
+    --pf-c-dual-list-selector__item--m-selected--BackgroundColor: transparent;
   }
 
   .pf-c-dual-list-selector__item-count {
@@ -237,7 +254,9 @@
 }
 
 .pf-c-dual-list-selector__item-toggle {
-  padding-right: var(--pf-c-dual-list-selector__item-toggle--PaddingRight);
+  padding: var(--pf-c-dual-list-selector__item-toggle--PaddingTop) var(--pf-c-dual-list-selector__item-toggle--PaddingRight) var(--pf-c-dual-list-selector__item-toggle--PaddingBottom) var(--pf-c-dual-list-selector__item-toggle--PaddingLeft);
+  margin-top: var(--pf-c-dual-list-selector__item-toggle--MarginTop);
+  margin-bottom: var(--pf-c-dual-list-selector__item-toggle--MarginBottom);
 }
 
 .pf-c-dual-list-selector__item-check {
@@ -248,5 +267,22 @@
 
 .pf-c-dual-list-selector__item-toggle-icon {
   display: inline-block;
+  min-width: var(--pf-c-dual-list-selector__item-toggle-icon--MinWidth);
   transition: var(--pf-c-dual-list-selector__item-toggle-icon--Transition);
 }
+
+// stylelint-disable no-duplicate-selectors
+.pf-c-dual-list-selector__list-item {
+  $root: &;
+  $nested-item: &;
+
+  @for $i from 1 through $pf-c-dual-list-selector__item--m-check--MaxNesting {
+    #{$nested-item} {
+      --pf-c-dual-list-selector__item--m-check--PaddingLeft: calc(var(--pf-c-dual-list-selector__item--m-check--nested-indent--base) * #{$i} + var(--pf-c-dual-list-selector__item--m-check--indent--base));
+      --pf-c-dual-list-selector__list__list__item-toggle--Left: var(--pf-c-dual-list-selector__item--m-check--PaddingLeft);
+    }
+
+    $nested-item: $nested-item + " " + $root;
+  }
+}
+// stylelint-enable
