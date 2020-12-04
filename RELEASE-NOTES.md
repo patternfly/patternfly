@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2020.16 release notes (2020-12-08)
 Packages released:
-- [@patternfly/patternfly@v4.69.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.69.3)
+- [@patternfly/patternfly@v4.69.5](https://www.npmjs.com/package/@patternfly/patternfly/v/4.69.5)
 
 ### Components
 - **Calendar month:**
@@ -13,6 +13,7 @@ Packages released:
   - Updated in-range bg to stay within cell padding ([#3705](https://github.com/patternfly/patternfly/pull/3705))
 - **Card:** Added support for dividers between sections ([#3485](https://github.com/patternfly/patternfly/pull/3485))
 - **Drawer:** Kept content from shifting when panel resizes ([#3719](https://github.com/patternfly/patternfly/pull/3719))
+- **Dual list selector:** Fixed alignment, check selected style, examples ([#3730](https://github.com/patternfly/patternfly/pull/3730))
 - **Form:** Added field groups ([#3654](https://github.com/patternfly/patternfly/pull/3654))
 - **Jump links:** Kept sublists from inheriting current styles from parent ([#3707](https://github.com/patternfly/patternfly/pull/3707))
 - **Page:** Moved nav specific demos into nav demos ([#3681](https://github.com/patternfly/patternfly/pull/3681))
@@ -20,7 +21,9 @@ Packages released:
 - **Dropdown:** Fixed plain toggle height inconsistency ([#3689](https://github.com/patternfly/patternfly/pull/3689))
 - **Progress:** Enabled static width for measure value ([#3567](https://github.com/patternfly/patternfly/pull/3567))
 - **Slider:** Added slider component ([#3711](https://github.com/patternfly/patternfly/pull/3711))
-- **Table:** Enabled borderless variation on all tables ([#3691](https://github.com/patternfly/patternfly/pull/3691))
+- **Table:**
+  - Enabled borderless variation on all tables ([#3691](https://github.com/patternfly/patternfly/pull/3691))
+  - Added var for sortable text, updated sortable favorite color ([#3732](https://github.com/patternfly/patternfly/pull/3732))
 - **Tree view:**
   - Removed references to pf-m-expandable ([#3676](https://github.com/patternfly/patternfly/pull/3676))
   - Made toggle size/indentation same between core and react ([#3728](https://github.com/patternfly/patternfly/pull/3728))
