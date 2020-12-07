@@ -624,7 +624,7 @@ cssPrefix: pf-c-dual-list-selector
           {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="8" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
         {{/dual-list-selector-list-item}}
 
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true"}}
+        {{#> dual-list-selector-list-item}}
           {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="9" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
         {{/dual-list-selector-list-item}}
 
@@ -755,7 +755,7 @@ cssPrefix: pf-c-dual-list-selector
         {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true"}}
           {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="18" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
         {{/dual-list-selector-list-item}}
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true"}}
+        {{#> dual-list-selector-list-item}}
           {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="19" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true"}}
@@ -863,3 +863,5 @@ cssPrefix: pf-c-dual-list-selector
 | `.pf-m-chosen` | `.pf-c-dual-list-selector__pane` | Defines a pane as the chosen list. |
 | `.pf-m-selected` | `.pf-c-dual-list-selector__item` | Modifies the menu item for the selected state. |
 | `.pf-m-check` | `.pf-c-dual-list-selector__item` | Indicates that an item is selectable with a checkbox. |
+| `.pf-m-expandable` | `.pf-c-dual-list-selector__list-item` | Indicates that an item is expandable. |
+| `.pf-m-expanded` | `.pf-c-dual-list-selector__list-item` | Indicates that an item is expanded. |
