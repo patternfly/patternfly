@@ -1,4 +1,4 @@
-$pf-c-dual-list-selector__item--m-check--MaxNesting: 10;
+$pf-c-dual-list-selector__item--MaxNesting: 10;
 
 .pf-c-dual-list-selector {
   // Grid
@@ -40,14 +40,9 @@ $pf-c-dual-list-selector__item--m-check--MaxNesting: 10;
   --pf-c-dual-list-selector__item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-dual-list-selector__item--focus-within--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-dual-list-selector__item--m-selected--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-dual-list-selector__item--m-check--PaddingLeft: 0;
-  --pf-c-dual-list-selector__item--m-check--indent--base: calc(var(--pf-global--spacer--md) + var(--pf-global--spacer--sm) + var(--pf-c-dual-list-selector__item--FontSize));
-  --pf-c-dual-list-selector__item--m-check--nested-indent--base: calc(var(--pf-c-dual-list-selector__item--m-check--indent--base) - var(--pf-global--spacer--md));
-
-  // Nested items
-  --pf-c-dual-list-selector__item--list__item--PaddingLeft: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--xl));
-  --pf-c-dual-list-selector__item--list__item--m-expandable--PaddingLeft: calc(var(--pf-global--spacer--lg) + var(--pf-global--spacer--md));
-  --pf-c-dual-list-selector__item--list--list__item--PaddingLeft: calc(var(--pf-global--spacer--2xl) + var(--pf-global--spacer--xl));
+  --pf-c-dual-list-selector__item--m-expandable--PaddingLeft: 0;
+  --pf-c-dual-list-selector__item--indent--base: calc(var(--pf-global--spacer--md) + var(--pf-global--spacer--sm) + var(--pf-c-dual-list-selector__item--FontSize));
+  --pf-c-dual-list-selector__item--nested-indent--base: calc(var(--pf-c-dual-list-selector__item--indent--base) - var(--pf-global--spacer--md));
 
   // Item text
   --pf-c-dual-list-selector__item-text--Color: var(--pf-global--Color--100);
@@ -175,6 +170,10 @@ $pf-c-dual-list-selector__item--m-check--MaxNesting: 10;
 }
 
 .pf-c-dual-list-selector__list-item {
+  &.pf-m-expandable {
+    --pf-c-dual-list-selector__item--PaddingLeft: var(--pf-c-dual-list-selector__item--m-expandable--PaddingLeft);
+  }
+
   &.pf-m-expanded {
     > .pf-c-dual-list-selector__item {
       --pf-c-dual-list-selector__item-toggle-icon--Rotate: var(--pf-c-dual-list-selector__list-item--m-expanded__item-toggle-icon--Rotate);
@@ -221,7 +220,6 @@ $pf-c-dual-list-selector__item--m-check--MaxNesting: 10;
   }
 
   &.pf-m-check {
-    --pf-c-dual-list-selector__item--PaddingLeft: var(--pf-c-dual-list-selector__item--m-check--PaddingLeft);
     --pf-c-dual-list-selector__item--m-selected--BackgroundColor: transparent;
   }
 
@@ -278,10 +276,10 @@ $pf-c-dual-list-selector__item--m-check--MaxNesting: 10;
   $root: &;
   $nested-item: &;
 
-  @for $i from 1 through $pf-c-dual-list-selector__item--m-check--MaxNesting {
+  @for $i from 1 through $pf-c-dual-list-selector__item--MaxNesting {
     #{$nested-item} {
-      --pf-c-dual-list-selector__item--m-check--PaddingLeft: calc(var(--pf-c-dual-list-selector__item--m-check--nested-indent--base) * #{$i} + var(--pf-c-dual-list-selector__item--m-check--indent--base));
-      --pf-c-dual-list-selector__list__list__item-toggle--Left: var(--pf-c-dual-list-selector__item--m-check--PaddingLeft);
+      --pf-c-dual-list-selector__item--PaddingLeft: calc(var(--pf-c-dual-list-selector__item--nested-indent--base) * #{$i} + var(--pf-c-dual-list-selector__item--indent--base));
+      --pf-c-dual-list-selector__list__list__item-toggle--Left: var(--pf-c-dual-list-selector__item--PaddingLeft);
     }
 
     $nested-item: $nested-item + " " + $root;
