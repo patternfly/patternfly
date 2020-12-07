@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2020.16 release notes (2020-12-08)
 Packages released:
-- [@patternfly/patternfly@v4.69.6](https://www.npmjs.com/package/@patternfly/patternfly/v/4.69.6)
+- [@patternfly/patternfly@v4.70.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.70.1)
 
 ### Components
 - **Calendar month:**
@@ -35,6 +35,7 @@ Packages released:
 
 ### Other
 - **Stalebot:** Added pinned to exemptLabels ([#3685](https://github.com/patternfly/patternfly/pull/3685))
+- **Global**: Added patternfly-base-no-reset.css ([#3736](https://github.com/patternfly/patternfly/pull/3736))
 
 
 ## 2020.15 release notes (2020-11-17)
