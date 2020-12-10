@@ -1,3 +1,6 @@
+
+$pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+
 .pf-c-dropdown {
   // Toggle
   --pf-c-dropdown__toggle--PaddingTop: var(--pf-global--spacer--form-element);
@@ -355,8 +358,19 @@
   background-clip: padding-box;
   box-shadow: var(--pf-c-dropdown__menu--BoxShadow);
 
-  &.pf-m-align-right {
-    right: 0;
+  @each $breakpoint, $breakpoint-value in $pf-c-dropdown--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint, $pf-c-dropdown--breakpoint-map) {
+      &.pf-m-align-right#{$breakpoint-name} {
+        right: 0;
+      }
+
+      // unset alignment set for .pf-m-align-right
+      &.pf-m-align-left#{$breakpoint-name} {
+        right: unset;
+      }
+    }
   }
 
   .pf-c-dropdown.pf-m-top & {
