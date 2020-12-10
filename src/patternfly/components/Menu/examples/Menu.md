@@ -32,8 +32,8 @@ import './Menu.css'
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--modifier="pf-m-disabled"}}
-        {{#> menu-item menu-item--attribute="disabled"}}
+      {{#> menu-list-item menu-list-item--IsDisabled="true"}}
+        {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
             Disabled action
@@ -41,8 +41,8 @@ import './Menu.css'
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--modifier="pf-m-disabled"}}
-        {{#> menu-item menu-item--IsLink="true" menu-item--modifier='aria-disabled="true" tabindex="-1"'}}
+      {{#> menu-list-item menu-list-item--IsDisabled="true"}}
+        {{#> menu-item menu-item--IsLink="true"}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
             Disabled link
@@ -116,7 +116,7 @@ import './Menu.css'
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
-      {{#> menu-list-item}}
+      {{#> menu-list-item menu-list-item--IsDisabled="true"}}
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
@@ -529,7 +529,7 @@ import './Menu.css'
           {{/menu-item-description}}
         {{/menu-item}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--modifier="pf-m-disabled"}}
+      {{#> menu-list-item menu-list-item--IsDisabled="true"}}
         {{#> menu-item}}
           {{#> menu-item-main}}
             {{#> menu-item-icon}}
@@ -595,18 +595,17 @@ import './Menu.css'
               {{#> menu-item-text}}
                 Item 2
               {{/menu-item-text}}
-              {{> menu-item-select-icon}}
             {{/menu-item-main}}
           {{/menu-item}}
           {{#> menu-item-action menu-item-action--attribute='aria-label="Alert"'}}
             <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
-        {{#> menu-list-item}}
-          {{#> menu-item menu-item--modifier="pf-m-selected"}}
+        {{#> menu-list-item menu-list-item--IsDisabled="true"}}
+          {{#> menu-item}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
-                Item 3
+                Item 3 disabled
               {{/menu-item-text}}
               {{> menu-item-select-icon}}
             {{/menu-item-main}}
@@ -694,11 +693,11 @@ import './Menu.css'
           {{/menu-item}}
           {{> menu-item-action menu-item-action--IsFavorite="true"}}
         {{/menu-list-item}}
-        {{#> menu-list-item}}
+        {{#> menu-list-item menu-list-item--IsDisabled="true"}}
           {{#> menu-item menu-item--IsLink="true" menu-item--attribute='target="_blank"'}}
             {{#> menu-item-main}}
               {{#> menu-item-text}}
-                Item 2
+                Item 2 disabled
               {{/menu-item-text}}
               {{> menu-item-external-icon}}
             {{/menu-item-main}}
@@ -839,9 +838,9 @@ import './Menu.css'
 | `.pf-c-menu__list` | `<ul>` | Initiates the menu list. **Required** |
 | `.pf-c-menu__list-item` | `<li>` | Initiates the menu list item. **Required** |
 | `.pf-c-menu__item` | `<button>`, `<a>`, `<div>` | Initiates the menu item. **Required** |
-| `.pf-c-menu__item-main` | `<div>` | Initiates the menu item main container. **Required** |
+| `.pf-c-menu__item-main` | `<span>` | Initiates the menu item main container. **Required** |
 | `.pf-c-menu__item-text` | `<span>` | Initiates the menu item text. **Required** |
-| `.pf-c-menu__item-description` | `<div>` | Initiates the menu item description. |
+| `.pf-c-menu__item-description` | `<span>` | Initiates the menu item description. |
 | `.pf-c-menu__item-group` | `<section>` | Initiates the menu item group. |
 | `.pf-c-menu__item-group-title` | `<h1>` | Initiates the menu item group title. |
 | `.pf-c-menu__item-icon` | `<span>` | Initiates the menu item icon. |
