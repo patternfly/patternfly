@@ -5,6 +5,7 @@ cssPrefix: pf-c-spinner
 ---
 
 ## Examples
+
 ### Basic
 ```hbs
 {{#> spinner}}Loading...{{/spinner}}
@@ -20,10 +21,30 @@ cssPrefix: pf-c-spinner
 
 {{#> spinner spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
 ```
+<br />
+<br />
+<br />
+## SVG spinner
 
-### Custom size
+### SVG spinner basic
 ```hbs
-{{#> spinner spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
+{{#> spinner spinner--IsSvg="true"}}Loading...{{/spinner}}
+```
+
+### SVG spinner, multiple sizes
+```hbs
+{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
+
+{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
+
+{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
+
+{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
+```
+
+### SVG spinner, custom size
+```hbs
+{{#> spinner spinner--IsSvg="true" spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
 ```
 
 ## Documentation
@@ -32,7 +53,6 @@ cssPrefix: pf-c-spinner
 | -- | -- | -- |
 | `role="progressbar"` | `.pf-c-spinner` |  Indicates to assistive technologies that this is an indeterminate progress indicator. |
 | `aria-valuetext="Loading..."` | `.pf-c-spinner` |  Describes content that is being loaded, while it is loading. |
-| `--pf-c-spinner--diameter` | `.pf-c-spinner` | Modifies the value for `--pf-c-spinner--diameter` declaration. | |
 
 Note: If the spinner is showing that loading of a particular region of a page is in process, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading.
 
@@ -41,9 +61,21 @@ Note: A [live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
+| `.pf-c-spinner` | `<span>` |  Creates a spinner component. The default is an extra large spinner. **Required**|
+| `.pf-c-spinner__clipper` | `<span>` |  Creates the spinning line. **Required**|
+| `.pf-c-spinner__lead-ball` | `<span>` |  Rounds out the beginning of the spinning line. **Required**|
+| `.pf-c-spinner__tail-ball` | `<span>` |  Rounds out the end of the spinning line. **Required**|
+
+### SVG variant
+| Class | Applied to | Outcome |
+| -- | -- | -- |
 | `.pf-c-spinner` | `<svg>` |  Creates a spinner component. The default is an extra large spinner. **Required**|
 | `.pf-c-spinner__path` | `<circle>` |  Creates a spinner circle component. **Required**|
+| `--pf-c-spinner--diameter` | `.pf-c-spinner` | Modifies the value for `--pf-c-spinner--diameter` declaration. |
 
+### Modifiers
+| Class | Applied to | Outcome |
+| -- | -- | -- |
 | `.pf-m-sm` | `.pf-c-spinner` |  Creates a small spinner. |
 | `.pf-m-md` | `.pf-c-spinner` |  Creates a medium spinner. |
 | `.pf-m-lg` | `.pf-c-spinner` |  Creates a large spinner. |
