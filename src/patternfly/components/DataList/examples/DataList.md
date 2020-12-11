@@ -4,7 +4,175 @@ section: components
 cssPrefix: pf-c-data-list
 ---
 
+import './data-list.css'
+
 ## Examples
+
+### Testing alignment
+```hbs
+{{#> grid grid--modifier="demo-template pf-m-gutter"}}
+
+{{#> check-input check-input--attribute='id="enable-highlight" name="enable-highlight"'}}{{/check-input}}
+{{#> check-label check-label--attribute='for="enable-highlight"'}}Enable highlight{{/check-label}}
+
+{{#> check-input check-input--attribute='id="enable-toggle" name="enable-toggle"'}}{{/check-input}}
+{{#> check-label check-label--attribute='for="enable-toggle"'}}Enable toggle{{/check-label}}
+
+{{#> check-input check-input--attribute='id="enable-draggable" name="enable-draggable"'}}{{/check-input}}
+{{#> check-label check-label--attribute='for="enable-draggable"'}}Enable draggable{{/check-label}}
+
+{{#> check-input check-input--attribute='id="enable-check" name="enable-check"'}}{{/check-input}}
+{{#> check-label check-label--attribute='for="enable-check"'}}Enable check{{/check-label}}
+
+{{#> check-input check-input--attribute='id="enable-overflow-menu" name="enable-overflow-menu"'}}{{/check-input}}
+{{#> check-label check-label--attribute='for="enable-overflow-menu"'}}Enable overflow menu{{/check-label}}
+
+{{#> check-input check-input--attribute='id="enable-overflow-menu-dropdown" name="enable-overflow-menu-dropdown"'}}{{/check-input}}
+{{#> check-label check-label--attribute='for="enable-overflow-menu-dropdown"'}}Enable overflow menu dropdown{{/check-label}}
+
+<br>
+<br>
+
+<!-- Will remover these examples after review -->
+{{#> data-list data-list--modifier="highlight interactive-example" data-list--id="data-list-testing-alignment" data-list--attribute='aria-label="Checkbox and action data list example"'}}
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-toggle}}
+        {{> data-list-item-draggable-button}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Primary content  Dolor sit amet.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{> data-list--overflow-menu
+          overflow-menu-control-dropdown--IsExpanded
+          overflow-menu--id=(concat data-list--id '-overflow-1')
+          overflow-menu-content--modifier="pf-u-hidden pf-u-display-flex-on-md"
+          overflow-menu-control--modifier="pf-u-hidden-on-mdss"
+        }}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-toggle}}
+        {{> data-list-item-draggable-button}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Primary content  Dolor sit amet.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{> data-list--overflow-menu
+          overflow-menu--id=(concat data-list--id '-overflow-2')
+          overflow-menu-content--modifier="pf-u-hidden pf-u-display-flex-on-md"
+          overflow-menu-control--modifier="pf-u-hidden-on-mdss"
+        }}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-toggle}}
+        {{> data-list-item-draggable-button}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Primary content  Dolor sit amet, consectetur adipisicing elit. Primary content  Dolor sit amet, consectetur adipisicing elit.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{> data-list--overflow-menu
+          overflow-menu--id=(concat data-list--id '-overflow-3')
+          overflow-menu-content--modifier="pf-u-hidden pf-u-display-flex-on-md"
+          overflow-menu-control--modifier="pf-u-hidden-on-mdss"
+        }}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+<br>
+<br>
+{{#> data-list data-list--id="data-list-testing-alignment-compact" data-list--modifier="pf-m-compact highlight interactive-example" data-list--attribute='aria-label="Checkbox and action data list example"'}}
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-toggle}}
+        {{> data-list-item-draggable-button}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Primary content  Dolor sit amet.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{> data-list--overflow-menu
+          overflow-menu--id=(concat data-list--id '-overflow-1')
+          overflow-menu-content--modifier="pf-u-hidden pf-u-display-flex-on-md"
+          overflow-menu-control--modifier="pf-u-hidden-on-mdss"
+        }}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-toggle}}
+        {{> data-list-item-draggable-button}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Primary content  Dolor sit amet.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{> data-list--overflow-menu
+          overflow-menu--id=(concat data-list--id '-overflow-2')
+          overflow-menu-content--modifier="pf-u-hidden pf-u-display-flex-on-md"
+          overflow-menu-control--modifier="pf-u-hidden-on-mdss"
+        }}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-toggle}}
+        {{> data-list-item-draggable-button}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Primary content  Dolor sit amet, consectetur adipisicing elit. Primary content  Dolor sit amet, consectetur adipisicing elit.
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{> data-list--overflow-menu
+          overflow-menu--id=(concat data-list--id '-overflow-3')
+          overflow-menu-content--modifier="pf-u-hidden pf-u-display-flex-on-md"
+          overflow-menu-control--modifier="pf-u-hidden-on-mdss"
+        }}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+{{/grid}}
+```
 
 ### Basic
 ```hbs
@@ -212,6 +380,99 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Expandable
 ```hbs
 {{#> data-list data-list--id="data-list-expandable" data-list--attribute='aria-label="Expandable data list example"'}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <div id="{{data-list--id}}-item1">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <a href="#">link</a>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <div id="{{data-list--id}}-item2">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Secondary content details"')}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <div id="{{data-list--id}}-item3">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Tertiary content details"')}}
+      {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
+        This expanded section has no padding.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+### Expandable compact
+```hbs
+{{#> data-list data-list--id="data-list-expandable-compact" data-list--modifier="pf-m-compact" data-list--attribute='aria-label="Expandable data list example"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
@@ -714,7 +975,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-{{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4"')}}
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4"')}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-4" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-4 ' data-list--id '-item-4"')}}

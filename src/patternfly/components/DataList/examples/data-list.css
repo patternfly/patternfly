@@ -1,0 +1,79 @@
+#main-content {
+  max-width: 100vw;
+}
+
+.ws-mdx-content {
+  max-width: 100%;
+}
+
+.demo-template {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.pf-c-check__input {
+  grid-column: 1;
+}
+
+.pf-c-check__label {
+  grid-column: 2;
+}
+
+.pf-c-data-list {
+  grid-column: span 2;
+}
+
+.highlight {
+  --highlight--Height: 28px;
+  --highlight--before--after--BackgroundColor: transparent;
+
+  position: relative;
+}
+
+.highlight > ::before,
+.highlight > ::after {
+  content: '';
+  position: absolute;
+  height: var(--highlight--Height);
+  width: 100%;
+  background-color: var(--highlight--before--after--BackgroundColor);
+}
+
+.highlight > ::before {
+  top: 0;
+}
+
+.highlight > ::after {
+  bottom: 1px;
+}
+
+/* .highlight > :nth-child(odd) {
+  --highlight--before--after--BackgroundColor: rgba(0, 136, 121, .15);
+} */
+
+.pf-m-compact.highlight {
+  --highlight--Height: 11px;
+}
+
+#enable-highlight:checked ~ .highlight {
+  --highlight--before--after--BackgroundColor: rgba(162, 50, 160, .15);
+}
+
+#enable-highlight:checked ~ .highlight > :nth-child(odd) {
+  --highlight--before--after--BackgroundColor: rgba(0, 136, 121, .15);
+}
+
+.interactive-example .pf-c-data-list__item-control,
+#enable-toggle:not(:checked) ~ .interactive-example .pf-c-data-list__toggle,
+#enable-draggable:not(:checked) ~ .interactive-example .pf-c-data-list__item-draggable-button,
+#enable-check:not(:checked) ~ .interactive-example .pf-c-data-list__check,
+#enable-overflow-menu:not(:checked) ~ .interactive-example .pf-c-overflow-menu,
+#enable-overflow-menu-dropdown:not(:checked) ~ .interactive-example .pf-c-overflow-menu__control {
+  display: none;
+}
+
+#enable-toggle:checked ~ .interactive-example .pf-c-data-list__item-control,
+#enable-draggable:checked ~ .interactive-example .pf-c-data-list__item-control,
+#enable-check:checked ~ .interactive-example .pf-c-data-list__item-control {
+  display: flex;
+}
