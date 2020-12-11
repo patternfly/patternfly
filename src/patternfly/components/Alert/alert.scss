@@ -1,5 +1,6 @@
 .pf-c-alert {
   // Component variables
+  --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-alert--BackgroundColor: var(--pf-global--palette--black-600);
   --pf-c-alert--GridTemplateColumns: max-content 1fr max-content;
   --pf-c-alert--BorderTopWidth: var(--pf-global--BorderWidth--md);
@@ -61,6 +62,7 @@
   font-size: var(--pf-c-alert__FontSize);
   background-color: var(--pf-c-alert--BackgroundColor);
   border-top: var(--pf-c-alert--BorderTopWidth) solid var(--pf-c-alert--BorderTopColor);
+  box-shadow: var(--pf-c-alert--BoxShadow);
   grid-template-columns: var(--pf-c-alert--GridTemplateColumns);
   grid-template-areas:
     "icon title action"
@@ -93,6 +95,10 @@
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-info__icon--Color);
     --pf-c-alert__title--Color: var(--pf-c-alert--m-info__title--Color);
     --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-info--BackgroundColor);
+  }
+
+  &.pf-m-inline {
+    --pf-c-alert--BoxShadow: none;
   }
 }
 
