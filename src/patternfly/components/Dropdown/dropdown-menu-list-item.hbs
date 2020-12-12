@@ -1,0 +1,11 @@
+<li class="{{#if dropdown-menu-list-item--modifier}} {{dropdown-menu-list-item--modifier}}{{/if}}"
+  {{#if dropdown-menu-list-item--attribute}}
+    {{{dropdown-menu-list-item--attribute}}}
+  {{/if}}>
+  {{#if dropdown-menu-item--text}}
+    {{> dropdown-menu-item}}
+  {{/if}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</li>

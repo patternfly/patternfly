@@ -588,8 +588,7 @@ beta: true
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
         {{#> tree-view-action}}
-          {{#> dropdown id="dropdown-kebab-align-right" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-          {{/dropdown}}
+          {{> dropdown dropdown--id="dropdown-kebab-align-right" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
         {{/tree-view-action}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}

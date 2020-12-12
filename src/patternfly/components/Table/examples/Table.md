@@ -275,7 +275,7 @@ import './Table.css'
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{table--id}}-node1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div id="{{table--id}}-node1">Node 1</div>
@@ -293,14 +293,13 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -321,14 +320,13 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -349,14 +347,13 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -377,8 +374,7 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -413,7 +409,7 @@ import './Table.css'
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{concat table--id '-node1'}}">
+        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{table--id}}-node1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div id="{{table--id}}-node1">Node 1</div>
@@ -431,14 +427,13 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{concat table--id '-node2'}}">
+        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -459,14 +454,13 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-2') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{concat table--id '-node3'}}">
+        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -487,14 +481,13 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{concat table--id '-node4'}}">
+        <input type="radio" name="{{table--id}}-radio" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -515,8 +508,7 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -575,7 +567,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 ' table--id '-expandable-toggle1" id="' table--id '-expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{table--id}}-node1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -593,8 +585,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <a href="#">Link 1</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -614,7 +605,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 ' table--id '-expandable-toggle2" id="' table--id '-expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -632,8 +623,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <a href="#">Link 2</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -651,7 +641,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 ' table--id '-expandable-toggle3" id="' table--id '-expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -669,8 +659,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <a href="#">Link 3</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -687,7 +676,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 ' table--id '-expandable-toggle4" id="' table--id '-expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -705,8 +694,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <a href="#">Link 4</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -792,8 +780,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -843,8 +830,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -894,8 +880,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -973,10 +958,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{table--id}}-name1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name1"}}">Sam Jones</span>
+        <span id="{{table--id}}-name1">Sam Jones</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         CSS guru
@@ -997,14 +982,13 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-name2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
         <span id="{{concat table--id "-name2"}}">Amy Miller</span>
@@ -1028,17 +1012,16 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-name3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name3"}}">Steve Wilson</span>
+        <span id="{{table--id}}-name3">Steve Wilson</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design lead
@@ -1059,17 +1042,16 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-name4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor name"}}
-        <span id="{{concat table--id "-name4"}}">Emma Jackson</span>
+        <span id="{{table--id}}-name4">Emma Jackson</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Interaction design
@@ -1090,8 +1072,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -1125,7 +1106,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 ' table--id '-expandable-toggle1" id="' table--id '-expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{table--id}}-node1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node1">Node 1</p>
@@ -1140,14 +1121,13 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
-      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
         <div class="pf-c-table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -1161,7 +1141,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 ' table--id '-expandable-toggle2" id="' table--id '-expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node2">Node 2</p>
@@ -1176,8 +1156,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-2') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1194,7 +1173,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 ' table--id '-expandable-toggle3" id="' table--id '-expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node3">Node 3</p>
@@ -1209,8 +1188,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1227,7 +1205,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 ' table--id '-expandable-toggle4" id="' table--id '-expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node4">Node 4</p>
@@ -1242,8 +1220,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1260,7 +1237,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node5 ' table--id '-expandable-toggle5" id="' table--id '-expandable-toggle5" aria-label="Details" aria-controls="' table--id '-content5"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow5" aria-labelledby="{{concat table--id '-node5'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow5" aria-labelledby="{{table--id}}-node5">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node5">Node 5</p>
@@ -1275,8 +1252,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-5") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-5') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1293,7 +1269,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node6 ' table--id '-expandable-toggle6" id="' table--id '-expandable-toggle6" aria-label="Details" aria-controls="' table--id '-content6"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow6" aria-labelledby="{{concat table--id '-node6'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow6" aria-labelledby="{{table--id}}-node6">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node6">Node 6</p>
@@ -1308,14 +1284,13 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-6") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-6') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="'table--id '-content6"')}}
-      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
-      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
       {{#> table-td table-td--attribute='colspan="2"'}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -1327,7 +1302,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         {{/table-expandable-row-content}}
       {{/table-td}}
-      {{#> table-td table-td table-td--IsEmpty="true"}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-tbody}}
 
@@ -1335,7 +1310,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node7 ' table--id '-expandable-toggle7" id="' table--id '-expandable-toggle7" aria-label="Details" aria-controls="' table--id '-content7"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow7" aria-labelledby="{{concat table--id '-node7'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow7" aria-labelledby="{{table--id}}-node7">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node7">Node 7</p>
@@ -1350,8 +1325,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-7") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-7') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1368,7 +1342,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node8 ' table--id '-expandable-toggle8" id="' table--id '-expandable-toggle8" aria-label="Details" aria-controls="' table--id '-content8"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow8" aria-labelledby="{{concat table--id '-node8'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow8" aria-labelledby="{{table--id}}-node8">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node8">Node 8</p>
@@ -1383,8 +1357,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-8") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-8') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1407,7 +1380,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node9 ' table--id '-expandable-toggle9" id="' table--id '-expandable-toggle9" aria-label="Details" aria-controls="' table--id '-content9"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow9" aria-labelledby="{{concat table--id '-node9'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow9" aria-labelledby="{{table--id}}-node9">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <p id="{{table--id}}-node9">Node 9</p>
@@ -1422,8 +1395,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-9") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-9') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1478,10 +1450,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{table--id}}-name1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name1"}}">Sam Jones</span>
+        <span id="{{table--id}}-name1">Sam Jones</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         CSS guru
@@ -1502,17 +1474,16 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-name2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name2"}}">Amy Miller</span>
+        <span id="{{table--id}}-name2">Amy Miller</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design
@@ -1533,17 +1504,16 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-name3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name3"}}">Steve Wilson</span>
+        <span id="{{table--id}}-name3">Steve Wilson</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design lead
@@ -1564,17 +1534,16 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-name4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor name"}}
-        <span id="{{concat table--id "-name4"}}">Emma Jackson</span>
+        <span id="{{table--id}}-name4">Emma Jackson</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Interaction design
@@ -1595,8 +1564,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -1637,10 +1605,10 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id "-name1"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{table--id}}-name1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name1"}}">Sam Jones</span>
+        <span id="{{table--id}}-name1">Sam Jones</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         CSS guru
@@ -1661,17 +1629,16 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id "-name2"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-name2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name2"}}">Amy Miller</span>
+        <span id="{{table--id}}-name2">Amy Miller</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design
@@ -1692,17 +1659,16 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id "-name3"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-name3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
-        <span id="{{concat table--id "-name3"}}">Steve Wilson</span>
+        <span id="{{table--id}}-name3">Steve Wilson</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design lead
@@ -1723,17 +1689,16 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id "-name4"}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-name4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor name"}}
-        <span id="{{concat table--id "-name4"}}">Emma Jackson</span>
+        <span id="{{table--id}}-name4">Emma Jackson</span>
       {{/table-th}}
       {{#> table-td table-td--data-label="Position"}}
         Interaction design
@@ -1754,8 +1719,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -1789,7 +1753,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 ' table--id '-expandable-toggle1" id="' table--id '-expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{concat table--id '-node1'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow1" aria-labelledby="{{table--id}}-node1">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -1807,8 +1771,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link 1</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1828,7 +1791,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node2 ' table--id '-expandable-toggle2" id="' table--id '-expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{concat table--id '-node2'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow2" aria-labelledby="{{table--id}}-node2">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -1846,8 +1809,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link 2</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1865,7 +1827,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node3 ' table--id '-expandable-toggle3" id="' table--id '-expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{concat table--id '-node3'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow3" aria-labelledby="{{table--id}}-node3">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -1883,8 +1845,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link 3</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1901,7 +1862,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{#> table-tr table-tr--expanded="true"}}
       {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node4 ' table--id '-expandable-toggle4" id="' table--id '-expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{concat table--id '-node4'}}">
+        <input type="checkbox" name="{{table--id}}-checkrow4" aria-labelledby="{{table--id}}-node4">
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -1919,8 +1880,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link 4</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1983,8 +1943,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-1") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2031,8 +1990,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-2") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2082,8 +2040,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-3") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2133,8 +2090,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-4") dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2906,7 +2862,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
   {{#> table-tbody}}
     {{#> table-tr table-tr--id="1"}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{concat table--id '-node' table-tr--id}}">
+        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
       {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
@@ -2927,14 +2883,13 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-" table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-1' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="2"}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{concat table--id '-node' table-tr--id}}">
+        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
       {{> table-td table-td--favorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
@@ -2953,14 +2908,13 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-" table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-2' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="3"}}
-    {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{concat table--id '-node' table-tr--id}}">
+      {{#> table-td table-td--check="true"}}
+        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
       {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
@@ -2979,14 +2933,13 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-" table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-3' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="4"}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{concat table--id '-node' table-tr--id}}">
+        <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
       {{> table-td table-td--favorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
@@ -3005,8 +2958,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{#> dropdown id=(concat table--id "-dropdown-kebab-right-aligned-" table-tr--id) dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-        {{/dropdown}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-4' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}

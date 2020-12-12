@@ -28,9 +28,8 @@ cssPrefix: pf-c-card
       <img src="/assets/images/pf_logo.svg" width="300px" alt="Logo">
     {{/card-header-main}}
     {{#> card-actions}}
-      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+      {{> card--dropdown}}
+      {{> card--check}}
     {{/card-actions}}
   {{/card-header}}
   {{#> card-title card-title--attribute=(concat 'id="' card--id '-check-label"')}}
@@ -50,9 +49,8 @@ cssPrefix: pf-c-card
 {{#> card card--id="card-action-example-2"}}
   {{#> card-header}}
     {{#> card-actions}}
-      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+      {{> card--dropdown}}
+      {{> card--check}}
     {{/card-actions}}
     {{#> card-title card-title--attribute=(concat 'id="' card--id '-check-label"')}}
       This is a really really really really really really really really really really long title
@@ -72,9 +70,8 @@ cssPrefix: pf-c-card
 {{#> card card--id="card-action-example-3"}}
   {{#> card-header}}
     {{#> card-actions}}
-      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-check-label">
+      {{> card--dropdown}}
+      {{> card--check}}
     {{/card-actions}}
   {{/card-header}}
   {{#> card-body card-body--attribute=(concat 'id="' card--id '-check-label"')}}
@@ -258,9 +255,8 @@ cssPrefix: pf-c-card
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
-      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-title">
+      {{> card--dropdown}}
+      {{> card--check}}
     {{/card-actions}}
     {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
       Title
@@ -276,9 +272,8 @@ cssPrefix: pf-c-card
     {{> card-header-toggle}}
     <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo" width="27px">
     {{#> card-actions}}
-      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-label="Select patternfly card">
+      {{> card--dropdown}}
+      {{> card--check}}
     {{/card-actions}}
   {{/card-header}}
 {{/card}}
@@ -290,9 +285,8 @@ cssPrefix: pf-c-card
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
-      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
-      <input type="checkbox" id="{{card--id}}-check" name="{{card--id}}-check" aria-labelledby="{{card--id}}-title">
+      {{> card--dropdown}}
+      {{> card--check}}
     {{/card-actions}}
     {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
       Title

@@ -10,7 +10,7 @@ cssPrefix: pf-c-hint
 ```hbs
 {{#> hint}}
   {{#> hint-actions}}
-    {{#> dropdown id="hint-with-title-dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{> dropdown dropdown--id="hint-with-title-dropdown-kebab" dropdown-toggle--IsPlain="true"}}
   {{/hint-actions}}
   {{#> hint-title}}
     Do more with Find it Fix it capabilities
@@ -24,7 +24,7 @@ cssPrefix: pf-c-hint
 
 {{#> hint}}
   {{#> hint-actions}}
-    {{#> dropdown id="hint-with-title-with-footer-dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{> dropdown dropdown--id="hint-with-title-with-footer-dropdown-kebab" dropdown-toggle--IsPlain="true"}}
   {{/hint-actions}}
   {{#> hint-title}}
     Do more with Find it Fix it capabilities
@@ -52,7 +52,7 @@ cssPrefix: pf-c-hint
 
 {{#> hint}}
   {{#> hint-actions}}
-    {{#> dropdown id="hint-with-no-title-dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+    {{> dropdown dropdown--id="hint-with-no-title-dropdown-kebab" dropdown-toggle--IsPlain="true"}}
   {{/hint-actions}}
   {{#> hint-body}}
     Upgrade to Red Hat Smart Management to remediate all your systems across regions and geographies.

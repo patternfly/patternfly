@@ -392,7 +392,7 @@ import './Toolbar.css'
 ```hbs isFullscreen
 {{#> page-demo-default page-demo-default--id="toolbar-pagination-management"}}
   {{#> page-main-section}}
-    {{#> toolbar toolbar--id=(concat page-demo-default--id ' mobile-example') toolbar--modifier="pf-m-nowrap"}}
+    {{#> toolbar toolbar--id=(concat page-demo-default--id 'mobile-example') toolbar--modifier="pf-m-nowrap"}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
@@ -440,7 +440,7 @@ import './Toolbar.css'
 ```hbs isFullscreen
 {{#> page-demo-default page-demo-default--id="toolbar-expand-all-collapsed"}}
   {{#> page-main-section}}
-    {{#> toolbar toolbar--id=(concat page-demo-default--id ' mobile-example') toolbar--modifier="pf-m-nowrap pf-m-page-insets"}}
+    {{#> toolbar toolbar--id=(concat page-demo-default--id 'mobile-example') toolbar--modifier="pf-m-nowrap pf-m-page-insets"}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
@@ -486,7 +486,7 @@ import './Toolbar.css'
 ```hbs isFullscreen
 {{#> page-demo-default page-demo-default--id="toolbar-expand-all-expanded"}}
   {{#> page-main-section}}
-    {{#> toolbar toolbar--id=(concat page-demo-default--id ' mobile-example') toolbar--modifier="pf-m-nowrap pf-m-page-insets"}}
+    {{#> toolbar toolbar--id=(concat page-demo-default--id 'mobile-example') toolbar--modifier="pf-m-nowrap pf-m-page-insets"}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}

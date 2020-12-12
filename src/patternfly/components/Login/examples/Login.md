@@ -22,10 +22,11 @@ wrapperTag: div
         {{#> login-main-header-desc}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         {{/login-main-header-desc}}
-        {{#> dropdown id="login-demo-dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
-          {{#> dropdown-toggle-text}}
-            English
-          {{/dropdown-toggle-text}}
+        {{#> dropdown dropdown--id="login-demo-dropdown-select"}}
+          {{> dropdown-toggle dropdown-toggle--text="English"}}
+          {{#> dropdown-menu}}
+            [Panel contents here]
+          {{/dropdown-menu}}
         {{/dropdown}}
       {{/login-main-header}}
       {{#> login-main-body}}
@@ -135,10 +136,11 @@ wrapperTag: div
         {{#> login-main-header-desc}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         {{/login-main-header-desc}}
-        {{#> dropdown id="invalid-login-demo-dropdown-select" dropdown--IsSelect="true" dropdown--ItemIsSelected="true" dropdown--HasToggleIcon="true"}}
-          {{#> dropdown-toggle-text}}
-            English
-          {{/dropdown-toggle-text}}
+        {{#> dropdown dropdown--id="invalid-login-demo-dropdown-select"}}
+          {{> dropdown-toggle dropdown-toggle--text="English"}}
+          {{#> dropdown-menu}}
+            [Panel contents here]
+          {{/dropdown-menu}}
         {{/dropdown}}
       {{/login-main-header}}
       {{#> login-main-body}}

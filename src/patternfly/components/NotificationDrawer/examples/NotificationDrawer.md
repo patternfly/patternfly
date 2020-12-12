@@ -17,8 +17,7 @@ cssPrefix: pf-c-notification-drawer
       2 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
       {{> notification-drawer-header-action-close}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}
@@ -39,7 +38,7 @@ cssPrefix: pf-c-notification-drawer
       2 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
       {{> notification-drawer-header-action-close}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}

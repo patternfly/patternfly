@@ -28,7 +28,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -98,7 +98,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -137,7 +137,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -207,7 +207,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -246,7 +246,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -316,7 +316,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -355,7 +355,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -425,7 +425,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -467,7 +467,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -537,7 +537,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -580,7 +580,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -676,7 +676,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -716,7 +716,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
@@ -805,7 +805,7 @@ cssPrefix: pf-c-dual-list-selector
           {{/button}}
         {{/dual-list-selector-tools-actions-item}}
         {{#> dual-list-selector-tools-actions-item}}
-          {{#> dropdown id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
         {{/dual-list-selector-tools-actions-item}}
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}

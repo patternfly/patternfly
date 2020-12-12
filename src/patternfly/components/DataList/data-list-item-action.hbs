@@ -2,5 +2,9 @@
   {{#if data-list-item-action--attribute}}
     {{{data-list-item-action--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    {{> data-list-action}}
+  {{/if}}
 </div>

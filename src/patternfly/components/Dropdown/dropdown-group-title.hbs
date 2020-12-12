@@ -1,0 +1,10 @@
+<{{#if dropdown-group-title--type}}{{dropdown-group-title--type}}{{else}}h2{{/if}} class="pf-c-dropdown__group-title{{#if dropdown-group-title--modifier}} {{dropdown-group-title--modifier}}{{/if}}"
+  {{#if dropdown-group-title--attribute}}
+    {{{dropdown-group-title--attribute}}}
+  {{/if}}>
+  {{#if dropdown-group-title--text}}
+    {{dropdown-group-title--text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</{{#if dropdown-group-title--type}}{{dropdown-group-title--type}}{{else}}h2{{/if}}>
