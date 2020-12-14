@@ -1,5 +1,9 @@
 <nav class="pf-c-pagination__nav{{#if pagination-nav--modifier}} {{pagination-nav--modifier}}{{/if}}"
-  aria-label="Pagination"
+  {{#if pagination-nav--aria-label}}
+    aria-label="{{pagination-nav--aria-label}}"
+  {{else}}
+    aria-label="Pagination"
+  {{/if}}
   {{#if pagination-nav--attribute}}
     {{{pagination-nav--attribute}}}
   {{/if}}>

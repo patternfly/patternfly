@@ -1,23 +1,18 @@
-<div>
-  <div>
-    <p id='{{data-list--id}}-{{data-list-item--id}}'>patternfly</p>
-    <small>Working repo for PatternFly 4 <a href="">https://pf4.patternfly.org/</a></small>
-  </div>
-  <div class="pf-l-flex pf-m-wrap">
-    <div>
-      <i class="fas fa-code-branch" aria-hidden="true"></i>
-      10
-    </div>
-    <div>
-      <i class="fas fa-code" aria-hidden="true"></i>
-      4
-    </div>
-    <div>
-      <i class="fas fa-cube" aria-hidden="true"></i>
-      5
-    </div>
-    <div>
+{{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-md"}}
+  {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+    {{#> l-flex-item}}
+      <p id='{{data-list--id}}-{{data-list-item--id}}'>patternfly</p>
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      <small>Working repo for PatternFly 4 <a href="">https://pf4.patternfly.org/</a></small>
+    {{/l-flex-item}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-wrap"}}
+    {{> data-list--icon-text data-list--icon-text--icon="code-branch" data-list--icon-text--text="10"}}
+    {{> data-list--icon-text data-list--icon-text--icon="code" data-list--icon-text--text="4"}}
+    {{> data-list--icon-text data-list--icon-text--icon="cube" data-list--icon-text--text="5"}}
+    {{#> l-flex-item}}
       Updated 2 days ago
-    </div>
-  </div>
-</div>
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/l-flex}}

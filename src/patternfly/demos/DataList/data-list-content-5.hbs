@@ -1,35 +1,21 @@
-<div>
-  <div>
-    <p id='{{data-list--id}}-{{data-list-item--id}}'>patternfly-elements</p>
-    <small>PatternFly elements</small>
-  </div>
-  <div class="pf-l-flex pf-m-wrap">
-    <div>
-      <i class="fas fa-code-branch" aria-hidden="true"></i>
-      5
-    </div>
-    <div>
-      <i class="fas fa-code" aria-hidden="true"></i>
-      9
-    </div>
-    <div>
-      <i class="fas fa-cube" aria-hidden="true"></i>
-      2
-    </div>
-    <div>
-      <i class="fas fa-check-circle" aria-hidden="true"></i>
-      11
-    </div>
-    <div>
-      <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
-      4
-    </div>
-    <div>
-      <i class="fas fa-times-circle" aria-hidden="true"></i>
-      1
-    </div>
-    <div>
+{{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-md"}}
+  {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+    {{#> l-flex-item}}
+      <p id='{{data-list--id}}-{{data-list-item--id}}'>patternfly-elements</p>
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      <small>PatternFly elements</small>
+    {{/l-flex-item}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-wrap"}}
+    {{> data-list--icon-text data-list--icon-text--icon="code-branch" data-list--icon-text--text="5"}}
+    {{> data-list--icon-text data-list--icon-text--icon="code" data-list--icon-text--text="9"}}
+    {{> data-list--icon-text data-list--icon-text--icon="cube" data-list--icon-text--text="2"}}
+    {{> data-list--icon-text data-list--icon-text--icon="check-circle" data-list--icon-text--text="11"}}
+    {{> data-list--icon-text data-list--icon-text--icon="exclamation-triangle" data-list--icon-text--text="4"}}
+    {{> data-list--icon-text data-list--icon-text--icon="times-circle" data-list--icon-text--text="1"}}
+    {{#> l-flex-item}}
       Updated 2 days ago
-    </div>
-  </div>
-</div>
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/l-flex}}

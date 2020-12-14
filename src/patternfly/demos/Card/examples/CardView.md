@@ -66,6 +66,9 @@ wrapperTag: div
         <p>This is a demo that showcases Patternfly Cards. </p>
       {{/content}}
     {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light pf-m-no-padding"}}
+      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasBulkSelect="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasFilter="true" toolbar--template--HasToggleGroup="true" pagination--modifier="pf-m-hidden pf-m-visible-on-sm"}}
+    {{/page-main-section}}
     {{#> page-main-section}}
       {{> card-view-demo-template-gallery}}
     {{/page-main-section}}

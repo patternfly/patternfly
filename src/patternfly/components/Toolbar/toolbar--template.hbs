@@ -1,0 +1,126 @@
+{{!--
+Options: [
+  toolbar--template--HasToggleGroup
+  toolbar--template--HasBulkSelect
+  toolbar--template--HasContextSelector
+  toolbar--template--HasSearchFilter
+  toolbar--template--HasFilterGroup
+  toolbar--template--HasDropdown0
+  toolbar--template--HasSortButton
+  toolbar--template--HasOverflowMenu
+  toolbar--template--HasOverflowMenuSecondButton
+  toolbar--template--HasIconButtonGroup
+  toolbar--template--HasViewToggle
+  toolbar--template--HasNoPagination
+] --}}
+
+{{#> toolbar}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
+
+      {{!-- partial --}}
+      {{#if @partial-block}}
+        {{> @partial-block}}
+      {{/if}}
+
+      {{!-- toggle group --}}
+      {{#if toolbar--template--HasToggleGroup}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
+          {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
+          {{> toolbar--template--content}}
+        {{/toolbar-group}}
+      {{else}}
+        {{> toolbar--template--content}}
+      {{/if}}
+
+      {{!-- sort --}}
+      {{#if toolbar--template--HasSortButton}}
+        {{#> toolbar-item}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
+            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+          {{/button}}
+        {{/toolbar-item}}
+      {{/if}}
+
+      {{!-- overflow menu --}}
+      {{#if toolbar--template--HasOverflowMenu}}
+        {{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-visible"}}
+          {{#> overflow-menu-content overflow-menu-content--modifier="pf-u-display-none pf-u-display-flex-on-lg"}}
+            {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+              {{#> overflow-menu-item}}
+                {{#> button button--modifier="pf-m-primary"}}
+                  Create instance
+                {{/button}}
+              {{/overflow-menu-item}}
+
+              {{!-- second button --}}
+              {{#if toolbar--template--HasOverflowMenuSecondButton}}
+                {{#> overflow-menu-item}}
+                  {{#> button button--modifier="pf-m-secondary"}}
+                    Action
+                  {{/button}}
+                {{/overflow-menu-item}}
+              {{/if}}
+
+            {{/overflow-menu-group}}
+          {{/overflow-menu-content}}
+          {{#> overflow-menu-control overflow-menu-button--aria-label="Dropdown with additional options"}}
+            {{#> overflow-menu-dropdown-item}}
+              Action 7
+            {{/overflow-menu-dropdown-item}}
+          {{/overflow-menu-control}}
+        {{/overflow-menu}}
+      {{/if}}
+
+      {{!-- icon button group --}}
+      {{#if toolbar--template--HasIconButtonGroup}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group"}}
+          {{#> toolbar-item}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
+              <i class="fas fa-edit" aria-hidden="true"></i>
+            {{/button}}
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clone"'}}
+              <i class="fas fa-clone" aria-hidden="true"></i>
+            {{/button}}
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sync"'}}
+              <i class="fas fa-sync" aria-hidden="true"></i>
+            {{/button}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+      {{/if}}
+
+      {{!-- view toggle --}}
+      {{#if toolbar--template--HasViewToggle}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-right"}}
+          {{#> toolbar-item}}
+            {{#> button button--modifier="pf-m-plain pf-m-active" button--attribute='aria-label="Grid view"'}}
+              <i class="fas fa-th" aria-hidden="true"></i>
+            {{/button}}
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="List view"'}}
+              <i class="fas fa-list-ul" aria-hidden="true"></i>
+            {{/button}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+      {{/if}}
+
+      {{!-- pagination --}}
+      {{#unless toolbar--template--HasNoPagination}}
+        {{#> toolbar-item toolbar-item--modifier='pf-m-pagination'}}
+          {{#> pagination pagination--IsCompact="true"}}
+            {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true"}}
+            {{> pagination-nav-content pagination-nav--aria-label="Toolbar pagination"}}
+          {{/pagination}}
+        {{/toolbar-item}}
+      {{/unless}}
+    {{/toolbar-content-section}}
+
+    {{!-- expandable content --}}
+    {{> toolbar-expandable-content}}
+  {{/toolbar-content}}
+{{/toolbar}}
