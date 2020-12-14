@@ -1,7 +1,8 @@
 .pf-c-switch {
   // Switch - the vars for this file don't follow our normal order so that the IE11 script can convert the vars correctly
   --pf-c-switch--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-switch--ColumnGap: var(--pf-global--spacer--md);
+  --pf-c-switch__label--PaddingLeft: var(--pf-global--spacer--md); // remove at breaking change
+  --pf-c-switch--ColumnGap: var(--pf-c-switch__label--PaddingLeft); // update at breaking change
 
   // Switch icon
   --pf-c-switch__toggle-icon--FontSize: calc(var(--pf-c-switch--FontSize) * .625); // We don't use an icon font-size here because this value allows the icon to scale relative to the switch's font-size.
@@ -40,7 +41,6 @@
   --pf-c-switch__toggle--Width: calc(var(--pf-c-switch__toggle--Height) + var(--pf-c-switch__toggle-icon--Offset) + var(--pf-c-switch__toggle--before--Width));
 
   // Switch label
-  --pf-c-switch__label--PaddingLeft: 0;
   --pf-c-switch__label--Color: var(--pf-global--Color--dark-100);
 
   position: relative;
