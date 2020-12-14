@@ -326,6 +326,54 @@ import './Navigation.css'
 {{/nav}}
 ```
 
+### Horizontal overflow with scroll snap
+```hbs
+{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
+  {{#> nav-list nav-list--IsScrollSnap="true"}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 3
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 4
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Horizontal nav item 5
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 6
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 7
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 8
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
 ### Tertiary
 ```hbs
 {{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--attribute='aria-label="Local"'}}

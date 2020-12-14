@@ -254,6 +254,16 @@
       -webkit-overflow-scrolling: touch;
 
       @include pf-overflow-hide-scroll;
+
+      &.pf-m-scroll-snap {
+        scroll-snap-type: x mandatory;
+
+        // stylelint-disable
+        > .pf-c-nav__item {
+          scroll-snap-align: start;
+        }
+        // stylelint-enable
+      }
     }
 
     .pf-c-nav__item {
