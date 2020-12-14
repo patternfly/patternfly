@@ -251,19 +251,14 @@
       max-width: 100%;
       overflow-x: auto;
       white-space: nowrap;
+      scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
 
-      @include pf-overflow-hide-scroll;
-
-      &.pf-m-scroll-snap {
-        scroll-snap-type: x mandatory;
-
-        // stylelint-disable
-        > .pf-c-nav__item {
-          scroll-snap-align: start;
-        }
-        // stylelint-enable
+      > .pf-c-nav__item {
+        scroll-snap-align: start;
       }
+
+      @include pf-overflow-hide-scroll;
     }
 
     .pf-c-nav__item {

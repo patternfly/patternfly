@@ -6,8 +6,7 @@
 #ws-core-c-navigation-expanded-with-subnav-titles,
 #ws-core-c-navigation-mixed,
 #ws-core-c-navigation-horizontal,
-#ws-core-c-navigation-horizontal-overflow,
-#ws-core-c-navigation-horizontal-overflow-with-scroll-snap {
+#ws-core-c-navigation-horizontal-overflow {
   background-color: var(--pf-global--BackgroundColor--dark-300);
 }
 
