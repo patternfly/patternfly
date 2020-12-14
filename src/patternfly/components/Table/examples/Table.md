@@ -293,7 +293,7 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -320,7 +320,7 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -347,7 +347,7 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -374,7 +374,7 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -427,7 +427,7 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -454,7 +454,7 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-2') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-2') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -481,7 +481,7 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -508,7 +508,7 @@ import './Table.css'
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -585,7 +585,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <a href="#">Link 1</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -623,7 +623,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <a href="#">Link 2</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -659,7 +659,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <a href="#">Link 3</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -694,7 +694,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
         <a href="#">Link 4</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -780,7 +780,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -830,7 +830,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -880,7 +880,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -982,7 +982,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1012,7 +1012,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1042,7 +1042,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1072,7 +1072,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -1121,7 +1121,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1156,7 +1156,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-2') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-2') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1188,7 +1188,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-3') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1220,7 +1220,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-4') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1252,7 +1252,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-5') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-5') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1284,7 +1284,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-6') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-6') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1325,7 +1325,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-7') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-7') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1357,7 +1357,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-8') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-8') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1395,7 +1395,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-9') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-9') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1474,7 +1474,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1504,7 +1504,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1534,7 +1534,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1564,7 +1564,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -1629,7 +1629,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1659,7 +1659,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1689,7 +1689,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1719,7 +1719,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Action link</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
@@ -1771,7 +1771,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link 1</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1809,7 +1809,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link 2</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1845,7 +1845,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link 3</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1880,7 +1880,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Link 4</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1943,7 +1943,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-1") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -1990,7 +1990,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-2") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2040,7 +2040,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-3") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2090,7 +2090,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
         <a href="#">Open in Github</a>
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id "-dropdown-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id "-dropdown-kebab-4") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2883,7 +2883,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-1' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-1' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2908,7 +2908,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-2' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-2' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2933,7 +2933,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-3' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-3' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -2958,7 +2958,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
         2 days ago
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> dropdown dropdown--id=(concat table--id '-dropdown-4' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-4' table-tr--id) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}

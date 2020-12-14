@@ -305,7 +305,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{/inline-edit-action}}
         {{/table-td}}
         {{#> table-td table-td--action="true"}}
-          {{> dropdown dropdown--id=(concat table--id inline-edit--row '-dropdown') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
+          {{> dropdown dropdown--id=(concat table--id inline-edit--row '-dropdown-kebab') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
         {{/table-td}}
       {{/table-tr}}
 
@@ -384,7 +384,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{/inline-edit-action}}
         {{/table-td}}
         {{#> table-td table-td--action="true"}}
-          {{> dropdown dropdown--id=(concat table--id inline-edit--row '-dropdown') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
+          {{> dropdown dropdown--id=(concat table--id inline-edit--row '-dropdown-kebab') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
         {{/table-td}}
       {{/table-tr}}
     {{/table-tbody}}

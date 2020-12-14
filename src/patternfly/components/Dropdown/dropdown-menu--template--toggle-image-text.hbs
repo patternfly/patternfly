@@ -5,10 +5,10 @@
   {{/dropdown-group}}
   {{> divider}}
   {{#> dropdown-group}}
-    <ul>
+    {{#> dropdown-menu-list}}
       {{> dropdown-menu-list-item dropdown-menu-item--text="My profile" dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
       {{> dropdown-menu-list-item dropdown-menu-item--text="User management" dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
       {{> dropdown-menu-list-item dropdown-menu-item--text="Logout" dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
-    </ul>
+    {{/dropdown-menu-list}}
   {{/dropdown-group}}
 {{/dropdown-menu}}
