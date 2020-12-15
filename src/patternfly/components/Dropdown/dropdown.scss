@@ -367,7 +367,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
       // unset alignment set for .pf-m-align-right
       &.pf-m-align-left#{$breakpoint-name} {
-        right: unset;
+        right: auto;
       }
     }
   }
