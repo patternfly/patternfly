@@ -1,31 +1,46 @@
 // Spinner Component
 
 .pf-c-spinner {
-  --pf-c-spinner--AnimationDuration: 1.5s;
-  --pf-c-spinner--AnimationTimingFunction: cubic-bezier(.77, .005, .315, 1);
-
-  // This conceptual variable is used to set other values all based on the diameter of the spinner.
-  // The default is the -xl modifier size.
   --pf-c-spinner--diameter: var(--pf-global--icon--FontSize--xl);
-
-  // These conceptual variables are used to size the stroke width, which is accomplished using various properties in the clipper:after and the ball animations
-  --pf-c-spinner--stroke-width-multiplier: .1;
-  --pf-c-spinner--stroke-width: calc(var(--pf-c-spinner--diameter) * var(--pf-c-spinner--stroke-width-multiplier));
-
-  // Set the overall width and height of the spinner to be consistent with the icon size
-  // Width and Height must be the same
   --pf-c-spinner--Width: var(--pf-c-spinner--diameter);
   --pf-c-spinner--Height: var(--pf-c-spinner--diameter);
-
-  // This variable is used to set the color for all the parts of the spinner
   --pf-c-spinner--Color: var(--pf-global--primary-color--100);
 
-  // Modifier variables for main spinner
-  // Width and Height must be the same
+  // sizes
   --pf-c-spinner--m-sm--diameter: var(--pf-global--icon--FontSize--sm);
   --pf-c-spinner--m-md--diameter: var(--pf-global--icon--FontSize--md);
   --pf-c-spinner--m-lg--diameter: var(--pf-global--icon--FontSize--lg);
   --pf-c-spinner--m-xl--diameter: var(--pf-global--icon--FontSize--xl);
+
+  width: var(--pf-c-spinner--Width);
+  height: var(--pf-c-spinner--Height);
+
+  // Modifiers change the variables for size variations
+  &.pf-m-sm {
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-sm--diameter);
+  }
+
+  &.pf-m-md {
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-md--diameter);
+  }
+
+  &.pf-m-lg {
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-lg--diameter);
+  }
+
+  &.pf-m-xl {
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-xl--diameter);
+  }
+}
+
+// stylelint-disable selector-no-qualifying-type
+span.pf-c-spinner {
+  --pf-c-spinner--AnimationDuration: 1.5s;
+  --pf-c-spinner--AnimationTimingFunction: cubic-bezier(.77, .005, .315, 1);
+
+  // These conceptual variables are used to size the stroke width, which is accomplished using various properties in the clipper:after and the ball animations
+  --pf-c-spinner--stroke-width-multiplier: .1;
+  --pf-c-spinner--stroke-width: calc(var(--pf-c-spinner--diameter) * var(--pf-c-spinner--stroke-width-multiplier));
 
   // Clipper variables
   --pf-c-spinner__clipper--Width: var(--pf-c-spinner--diameter);
@@ -51,28 +66,10 @@
 
   position: relative;
   display: inline-block;
-  width: var(--pf-c-spinner--Width);
-  height: var(--pf-c-spinner--Height);
   text-align: left;
   animation: pf-animation-spinner-parent calc(var(--pf-c-spinner--AnimationDuration) * 2) var(--pf-c-spinner--AnimationTimingFunction) infinite;
-
-  // Modifiers change the variables for size variations
-  &.pf-m-sm {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-sm--diameter);
-  }
-
-  &.pf-m-md {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-md--diameter);
-  }
-
-  &.pf-m-lg {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-lg--diameter);
-  }
-
-  &.pf-m-xl {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-xl--diameter);
-  }
 }
+// stylelint-enable
 
 // Rotate the parent 360deg as the basic line animation happens, repeat that twice, and another rotation overall. This adds up to 3 complete rotations.
 @keyframes pf-animation-spinner-parent {
@@ -88,9 +85,6 @@
     transform: rotate(-1080deg);
   }
 }
-
-
-// Elements
 
 // Clipper is a rotating rectangle clipped to one quarter the size of the spinner, starting in the upper right
 .pf-c-spinner__clipper {
@@ -205,5 +199,87 @@
 
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+// stylelint-disable selector-no-qualifying-type
+svg.pf-c-spinner {
+  --pf-c-spinner--diameter: var(--pf-global--icon--FontSize--xl);
+  --pf-c-spinner--AnimationDuration: 1.4s;
+  --pf-c-spinner--AnimationTimingFunction: linear;
+  --pf-c-spinner--stroke-width: 10;
+
+  // path
+  --pf-c-spinner__path--Stroke: var(--pf-c-spinner--Color);
+  --pf-c-spinner__path--StrokeWidth: var(--pf-c-spinner--stroke-width);
+  --pf-c-spinner__path--AnimationTimingFunction: ease-in-out;
+
+  // size modifiers
+  --pf-c-spinner--m-sm--diameter: var(--pf-global--icon--FontSize--sm);
+  --pf-c-spinner--m-md--diameter: var(--pf-global--icon--FontSize--md);
+  --pf-c-spinner--m-lg--diameter: var(--pf-global--icon--FontSize--lg);
+  --pf-c-spinner--m-xl--diameter: var(--pf-global--icon--FontSize--xl);
+
+  animation: pf-c-spinner-animation-rotate calc(var(--pf-c-spinner--AnimationDuration) * 2) var(--pf-c-spinner--AnimationTimingFunction) infinite;
+
+  // Modifiers change the variables for size variations
+  &.pf-m-sm {
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-sm--diameter);
+  }
+
+  &.pf-m-md {
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-md--diameter);
+  }
+
+  &.pf-m-lg {
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-lg--diameter);
+  }
+
+  &.pf-m-xl {
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-xl--diameter);
+  }
+}
+// stylelint-enable
+
+.pf-c-spinner__path {
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+  animation: pf-c-spinner-animation-dash var(--pf-c-spinner--AnimationDuration) var(--pf-c-spinner__path--AnimationTimingFunction) infinite;
+  stroke: var(--pf-c-spinner--Color);
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 280;
+  stroke-width: var(--pf-c-spinner--stroke-width);
+}
+
+@keyframes pf-c-spinner-animation-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pf-c-spinner-animation-dash {
+  0% {
+    stroke-dashoffset: 280;
+    transform: rotate(0);
+  }
+
+  15% {
+    stroke-width: calc(var(--pf-c-spinner__path--StrokeWidth) - 4);
+  }
+
+  40% {
+    stroke-dashoffset: 150;
+    stroke-dasharray: 220;
+  }
+
+  100% {
+    stroke-dashoffset: 280;
+    transform: rotate(720deg);
   }
 }

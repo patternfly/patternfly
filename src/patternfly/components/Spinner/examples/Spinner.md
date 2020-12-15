@@ -5,6 +5,7 @@ cssPrefix: pf-c-spinner
 ---
 
 ## Examples
+
 ### Basic
 ```hbs
 {{#> spinner}}Loading...{{/spinner}}
@@ -19,6 +20,31 @@ cssPrefix: pf-c-spinner
 {{#> spinner spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
 
 {{#> spinner spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
+```
+<br />
+<br />
+<br />
+## SVG spinner
+
+### SVG spinner basic
+```hbs
+{{#> spinner spinner--IsSvg="true"}}Loading...{{/spinner}}
+```
+
+### SVG spinner, multiple sizes
+```hbs
+{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
+
+{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
+
+{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
+
+{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
+```
+
+### SVG spinner, custom size
+```hbs
+{{#> spinner spinner--IsSvg="true" spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
 ```
 
 ## Documentation
@@ -39,8 +65,18 @@ Note: A [live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility
 | `.pf-c-spinner__clipper` | `<span>` |  Creates the spinning line. **Required**|
 | `.pf-c-spinner__lead-ball` | `<span>` |  Rounds out the beginning of the spinning line. **Required**|
 | `.pf-c-spinner__tail-ball` | `<span>` |  Rounds out the end of the spinning line. **Required**|
+
+### SVG variant
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-spinner` | `<svg>` |  Creates a spinner component. The default is an extra large spinner. **Required**|
+| `.pf-c-spinner__path` | `<circle>` |  Creates a spinner circle component. **Required**|
+| `--pf-c-spinner--diameter` | `.pf-c-spinner` | Modifies the value for `--pf-c-spinner--diameter` declaration. |
+
+### Modifiers
+| Class | Applied to | Outcome |
+| -- | -- | -- |
 | `.pf-m-sm` | `.pf-c-spinner` |  Creates a small spinner. |
 | `.pf-m-md` | `.pf-c-spinner` |  Creates a medium spinner. |
 | `.pf-m-lg` | `.pf-c-spinner` |  Creates a large spinner. |
 | `.pf-m-xl` | `.pf-c-spinner` |  Creates an extra-large spinner. |
-
