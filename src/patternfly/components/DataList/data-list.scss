@@ -58,7 +58,7 @@
   --pf-c-data-list__item-content--md--PaddingBottom: var(--pf-global--spacer--lg);
 
   // cell
-  --pf-c-data-list__cell--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-data-list__cell--PaddingTop: calc(var(--pf-global--spacer--lg) + 1px);
   --pf-c-data-list__cell--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-data-list__cell--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-data-list__cell--md--PaddingBottom: 0;
@@ -82,7 +82,10 @@
   // draggable button/icon
   --pf-c-data-list__item-draggable-button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-data-list__item-draggable-button--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-data-list__item-draggable-button--MarginTop: 0;
+  --pf-c-data-list__item-draggable-button--MarginTop: calc(var(--pf-global--spacer--lg) * -1);
+  --pf-c-data-list__item-draggable-button--MarginBottom: calc(var(--pf-global--spacer--lg) * -1);
+  --pf-c-data-list__item-draggable-button--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-data-list__item-draggable-button--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-data-list__item-draggable-button--MarginLeft: calc(var(--pf-global--spacer--md) * -1);
   --pf-c-data-list__item-draggable-button-icon--Height: calc(var(--pf-c-data-list--FontSize) * var(--pf-c-data-list--LineHeight));
   --pf-c-data-list__item-draggable-button-icon--Color: var(--pf-global--icon--Color--light);
@@ -147,8 +150,13 @@
   --pf-c-data-list--m-compact__item-action--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-data-list--m-compact__item-action--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-data-list--m-compact__item-action__action--MarginTop: calc(var(--pf-c-data-list--m-compact__item-action--PaddingTop) * -1);
+  --pf-c-data-list--m-compact__action--MarginTop: var(--pf-c-data-list--m-compact__item-action__action--MarginTop);
   --pf-c-data-list--m-compact__item-action__action--MarginBottom: calc(var(--pf-c-data-list--m-compact__item-action--PaddingBottom) * -1);
   --pf-c-data-list--m-compact__item-content--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-data-list--m-compact__item-draggable-button--MarginTop: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-data-list--m-compact__item-draggable-button--MarginBottom: calc(var(--pf-global--spacer--sm) * -1);
+  --pf-c-data-list--m-compact__item-draggable-button--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-data-list--m-compact__item-draggable-button--PaddingBottom: var(--pf-global--spacer--sm);
 
   @include pf-t-light;
 
@@ -171,7 +179,10 @@
     --pf-c-data-list__item-control--PaddingTop: var(--pf-c-data-list--m-compact__item-control--PaddingTop);
     --pf-c-data-list__item-control--PaddingBottom: var(--pf-c-data-list--m-compact__item-control--PaddingBottom);
     --pf-c-data-list__item-content--md--PaddingBottom: var(--pf-c-data-list--m-compact__item-content--PaddingBottom);
-
+    --pf-c-data-list__item-draggable-button--MarginTop: var(--pf-c-data-list--m-compact__item-draggable-button--MarginTop);
+    --pf-c-data-list__item-draggable-button--MarginBottom: var(--pf-c-data-list--m-compact__item-draggable-button--MarginBottom);
+    --pf-c-data-list__item-draggable-button--PaddingTop: var(--pf-c-data-list--m-compact__item-draggable-button--PaddingTop);
+    --pf-c-data-list__item-draggable-button--PaddingBottom: var(--pf-c-data-list--m-compact__item-draggable-button--PaddingBottom);
 
     font-size: var(--pf-c-data-list--m-compact--FontSize);
 
@@ -322,12 +333,10 @@
 
 .pf-c-data-list__item-draggable-button {
   display: flex;
-  align-items: center;
-  align-self: flex-start;
-  padding-right: var(--pf-c-data-list__item-draggable-button--PaddingRight);
-  padding-left: var(--pf-c-data-list__item-draggable-button--PaddingLeft);
-  margin-top: var(--pf-c-data-list__item-draggable-button--MarginTop);
-  margin-left: var(--pf-c-data-list__item-draggable-button--MarginLeft);
+  align-items: flex-start;
+  align-self: stretch;
+  padding: var(--pf-c-data-list__item-draggable-button--PaddingTop) var(--pf-c-data-list__item-draggable-button--PaddingRight) var(--pf-c-data-list__item-draggable-button--PaddingBottom) var(--pf-c-data-list__item-draggable-button--PaddingLeft);
+  margin-top: var(--pf-c-data-list__item-draggable-button--MarginTop) 0 var(--pf-c-data-list__item-draggable-button--MarginBottom) var(--pf-c-data-list__item-draggable-button--MarginLeft);
   border: 0;
 
   &:hover {
@@ -372,7 +381,7 @@
 
   // offset action button
   .pf-c-data-list__action {
-    margin-top: var(--pf-c-data-list__item-action__action--MarginTop);
+    margin-top: var(--pf-c-data-list__action--MarginTop);
     margin-bottom: var(--pf-c-data-list__item-action__action--MarginBottom);
   }
 }
