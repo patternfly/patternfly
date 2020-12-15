@@ -254,15 +254,12 @@
       scroll-snap-type: x proximity;
       -webkit-overflow-scrolling: touch;
 
-      > .pf-c-nav__item {
-        scroll-snap-align: end;
-      }
-
       @include pf-overflow-hide-scroll;
     }
 
     .pf-c-nav__item {
       display: flex;
+      scroll-snap-align: end;
     }
 
     .pf-c-nav__link {

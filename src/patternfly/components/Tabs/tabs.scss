@@ -148,10 +148,10 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
     .pf-c-tabs__list {
       scroll-snap-type: x proximity;
+    }
 
-      > .pf-c-tabs__item {
-        scroll-snap-align: end;
-      }
+    .pf-c-tabs__item {
+      scroll-snap-align: end;
     }
   }
 
