@@ -2,6 +2,7 @@
 #ws-core-c-dropdown-kebab,
 #ws-core-c-dropdown-kebab-align-right,
 #ws-core-c-dropdown-align-right,
+#ws-core-c-dropdown-align-on-different-breakpoint,
 #ws-core-c-dropdown-align-top,
 #ws-core-c-dropdown-primary-toggle,
 #ws-core-c-dropdown-menu-item-icons {
@@ -12,6 +13,11 @@
 #ws-core-c-dropdown-align-right {
   display: flex;
   justify-content: flex-end;
+}
+
+#ws-core-c-dropdown-align-on-different-breakpoint {
+  display: flex;
+  justify-content: center;
 }
 
 #ws-core-c-dropdown-align-top {
