@@ -18,7 +18,7 @@ import './Tabs.css'
 ### Default overflow beginning of list
 ```hbs
 {{#> tabs tabs--id="default-overflow-beginning-of-list-example" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--DisabledFirstScrollButton="true" __tabs-list--IsScrollable="true"}}
+  {{> __tabs-list __tabs-list--DisabledFirstScrollButton="true" __tabs-list--IsScrollable="true" __tabs-list--IsLong="true"}}
 {{/tabs}}
 ```
 
@@ -53,7 +53,7 @@ import './Tabs.css'
 ### Box overflow
 ```hbs
 {{#> tabs tabs--id="box-overflow-example" tabs--modifier="pf-m-box pf-m-scrollable" __tabs-list--DisabledFirstScrollButton="true"}}
-  {{> __tabs-list __tabs-list--IsScrollable="true"}}
+  {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsLong="true"}}
 {{/tabs}}
 ```
 

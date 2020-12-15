@@ -145,6 +145,14 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       margin-left: 0;
       transform: translateX(0);
     }
+
+    .pf-c-tabs__list {
+      scroll-snap-type: x proximity;
+
+      > .pf-c-tabs__item {
+        scroll-snap-align: end;
+      }
+    }
   }
 
   &.pf-m-secondary,

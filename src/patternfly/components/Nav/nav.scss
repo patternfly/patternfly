@@ -251,11 +251,11 @@
       max-width: 100%;
       overflow-x: auto;
       white-space: nowrap;
-      scroll-snap-type: x mandatory;
+      scroll-snap-type: x proximity;
       -webkit-overflow-scrolling: touch;
 
       > .pf-c-nav__item {
-        scroll-snap-align: start;
+        scroll-snap-align: end;
       }
 
       @include pf-overflow-hide-scroll;
