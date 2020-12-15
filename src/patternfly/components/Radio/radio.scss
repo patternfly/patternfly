@@ -5,7 +5,8 @@
   --pf-c-radio__label--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-radio__label--FontSize: var(--pf-global--FontSize--md);
   --pf-c-radio__label--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-radio__input--MarginTop: #{pf-size-prem(-3px)};
+  --pf-c-radio__input--Height: calc(var(--pf-c-radio__label--FontSize) * var(--pf-c-radio__label--LineHeight));
+  --pf-c-radio__input--MarginTop: calc(-1px * (var(--pf-c-radio__label--LineHeight) * 1.25));
   --pf-c-radio__input--first-child--MarginLeft: #{pf-size-prem(1px)};
   --pf-c-radio__input--last-child--MarginRight: #{pf-size-prem(1px)};
   --pf-c-radio__description--FontSize: var(--pf-global--FontSize--sm);
@@ -14,7 +15,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--pf-c-radio--GridGap);
-  align-items: center;
+  align-items: start;
   justify-items: start;
 }
 
@@ -26,6 +27,7 @@
 }
 
 .pf-c-radio__input {
+  height: var(--pf-c-radio__input--Height);
   margin-top: var(--pf-c-radio__input--MarginTop);
 
   // fixes a chrome issue where the left edge is cut off in a container with overflow hidden
