@@ -58,7 +58,7 @@
   --pf-c-data-list__item-content--md--PaddingBottom: var(--pf-global--spacer--lg);
 
   // cell
-  --pf-c-data-list__cell--PaddingTop: calc(var(--pf-global--spacer--lg) + 1px);
+  --pf-c-data-list__cell--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-data-list__cell--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-data-list__cell--MarginRight: var(--pf-global--spacer--xl);
   --pf-c-data-list__cell--md--PaddingBottom: 0;
@@ -104,6 +104,7 @@
 
   // check
   --pf-c-data-list__check--Height: calc(var(--pf-c-data-list--FontSize) * var(--pf-c-data-list--LineHeight));
+  --pf-c-data-list__check--MarginTop: -1px; // slightly offset input
 
   // actions
   --pf-c-data-list__item-action--Display: flex;
@@ -329,12 +330,12 @@
   align-items: center;
   align-self: flex-start;
   height: var(--pf-c-data-list__check--Height);
+  margin-top: var(--pf-c-data-list__check--MarginTop);
 }
 
 .pf-c-data-list__item-draggable-button {
   display: flex;
-  align-items: flex-start;
-  align-self: stretch;
+  flex-direction: column;
   padding: var(--pf-c-data-list__item-draggable-button--PaddingTop) var(--pf-c-data-list__item-draggable-button--PaddingRight) var(--pf-c-data-list__item-draggable-button--PaddingBottom) var(--pf-c-data-list__item-draggable-button--PaddingLeft);
   margin: var(--pf-c-data-list__item-draggable-button--MarginTop) 0 var(--pf-c-data-list__item-draggable-button--MarginBottom) var(--pf-c-data-list__item-draggable-button--MarginLeft);
   border: 0;
