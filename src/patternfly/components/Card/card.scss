@@ -119,6 +119,9 @@
   align-items: center;
 
   .pf-c-card__title {
+    --pf-c-card--first-child--PaddingTop: 0;
+    --pf-c-card__title--not--last-child--PaddingBottom: 0;
+
     padding: 0;
   }
 }

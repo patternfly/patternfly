@@ -60,6 +60,23 @@ cssPrefix: pf-c-list
 {{/list}}
 ```
 
+### Plain
+```hbs
+{{#> list list--type="ul" list--modifier="pf-m-plain"}}
+  <li>Donec blandit a lorem id convallis.</li>
+  <li>Integer in volutpat libero.</li>
+  <li>Donec a diam tellus.
+    {{#> list newcontext}}
+      <li>Donec blandit a lorem id convallis.</li>
+      <li>Cras gravida arcu at diam gravida gravida.</li>
+      <li>Integer in volutpat libero.</li>
+    {{/list}}
+  </li>
+  <li>Aenean nec tortor orci.</li>
+  <li>Vivamus maximus ultricies pulvinar.</li>
+{{/list}}
+```
+
 ## Documentation
 ### Overview
 Non-inline lists can be nested up to any level.
@@ -68,4 +85,5 @@ Non-inline lists can be nested up to any level.
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-list` | `<ul>, <ol>` | Initiates a list. **Required**  |
-| `.pf-m-inline` | `.pf-c-list` |  Modifies for inline list style. |
+| `.pf-m-inline` | `.pf-c-list` | Displays list items inline. |
+| `.pf-m-plain` | `.pf-c-list` |  Removes the list marker and base indentation. |
