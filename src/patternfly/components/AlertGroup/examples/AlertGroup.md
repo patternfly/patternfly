@@ -98,7 +98,7 @@ cssPrefix: pf-c-alert-group
         Info toast alert title
       {{/alert-title}}
       {{#> alert-description}}
-        Info toast alert description. From the settings tab, click <a href="#">View logs</a>&nbsp;to review the details
+        Info toast alert description. From the settings tab, click <a href="#">View logs</a>&nbsp;to review the details.
       {{/alert-description}}
       {{#> alert-action}}
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close success alert: Success alert title"'}}
