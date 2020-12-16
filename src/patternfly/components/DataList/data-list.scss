@@ -106,7 +106,8 @@
 
   // check
   --pf-c-data-list__check--Height: calc(var(--pf-c-data-list--FontSize) * var(--pf-c-data-list--LineHeight));
-  --pf-c-data-list__check--MarginTop: -1px; // slightly offset input
+  --pf-c-data-list__check--MarginTop: #{pf-size-prem(-1px)}; // slightly offset input
+
 
   // actions
   --pf-c-data-list__item-action--Display: flex;
@@ -153,8 +154,8 @@
   --pf-c-data-list--m-compact__item-action--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-data-list--m-compact__item-action--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-data-list--m-compact__item-action__action--MarginTop: calc(var(--pf-c-data-list--m-compact__item-action--PaddingTop) * -1);
-  --pf-c-data-list--m-compact__action--MarginTop: var(--pf-c-data-list--m-compact__item-action__action--MarginTop);
   --pf-c-data-list--m-compact__item-action__action--MarginBottom: calc(var(--pf-c-data-list--m-compact__item-action--PaddingBottom) * -1);
+  --pf-c-data-list--m-compact__action--MarginTop: var(--pf-c-data-list--m-compact__item-action__action--MarginTop);
   --pf-c-data-list--m-compact__item-content--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-data-list--m-compact__item-draggable-button--MarginTop: calc(var(--pf-global--spacer--sm) * -1);
   --pf-c-data-list--m-compact__item-draggable-button--MarginBottom: calc(var(--pf-global--spacer--sm) * -1);
