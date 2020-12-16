@@ -87,9 +87,11 @@ import './Wizard.css'
       {{#> button button--modifier="pf-m-secondary"}}
         Back
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
-        Cancel
-      {{/button}}
+      {{#> wizard-footer-cancel}}
+        {{#> button button--modifier="pf-m-link"}}
+          Cancel
+        {{/button}}
+      {{/wizard-footer-cancel}}
     {{/wizard-footer}}
   {{/wizard-outer-wrap}}
 {{/wizard}}
@@ -174,9 +176,11 @@ import './Wizard.css'
       {{#> button button--modifier="pf-m-secondary"}}
         Back
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
-        Cancel
-      {{/button}}
+      {{#> wizard-footer-cancel}}
+        {{#> button button--modifier="pf-m-link"}}
+          Cancel
+        {{/button}}
+      {{/wizard-footer-cancel}}
     {{/wizard-footer}}
   {{/wizard-outer-wrap}}
 {{/wizard}}
@@ -279,9 +283,11 @@ import './Wizard.css'
       {{#> button button--modifier="pf-m-secondary"}}
         Back
       {{/button}}
-      {{#> button button--modifier="pf-m-link"}}
-        Cancel
-      {{/button}}
+      {{#> wizard-footer-cancel}}
+        {{#> button button--modifier="pf-m-link"}}
+          Cancel
+        {{/button}}
+      {{/wizard-footer-cancel}}
     {{/wizard-footer}}
   {{/wizard-outer-wrap}}
 {{/wizard}}
@@ -324,6 +330,7 @@ import './Wizard.css'
 | `.pf-c-wizard__main` | `<main>`, `<div>` | Initiates the main container. **Required** Note: use the `<main>` element when when there are no other `<main>` elements on the page.|
 | `.pf-c-wizard__main-body` | `<div>` | Initiates the main container body section. **Required** |
 | `.pf-c-wizard__footer` | `<footer>` | Initiates the footer. **Required** |
+| `.pf-c-wizard__footer-cancel` | `<div>` | Initiates the cancel button. **Required** |
 | `.pf-m-expanded` | `.pf-c-wizard__toggle`, `.pf-c-wizard__nav` | Modifies the mobile steps toggle and steps menu for the expanded state. |
 | `.pf-m-finished` | `.pf-c-wizard` | Modifies the wizard for the finished state. |
 | `.pf-m-current` | `.pf-c-wizard__nav-link` | Modifies a step link for the current state. **Required** |

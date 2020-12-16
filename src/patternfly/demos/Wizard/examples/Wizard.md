@@ -87,9 +87,11 @@ wrapperTag: div
             {{#> button button--modifier="pf-m-secondary"}}
               Back
             {{/button}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
+            {{#> wizard-footer-cancel}}
+              {{#> button button--modifier="pf-m-link"}}
+                Cancel
+              {{/button}}
+            {{/wizard-footer-cancel}}
           {{/wizard-footer}}
         {{/wizard-outer-wrap}}
       {{/wizard}}
@@ -180,9 +182,11 @@ wrapperTag: div
             {{#> button button--modifier="pf-m-secondary"}}
               Back
             {{/button}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
+            {{#> wizard-footer-cancel}}
+              {{#> button button--modifier="pf-m-link"}}
+                Cancel
+              {{/button}}
+            {{/wizard-footer-cancel}}
           {{/wizard-footer}}
         {{/wizard-outer-wrap}}
       {{/wizard}}
@@ -319,9 +323,11 @@ wrapperTag: div
             {{#> button button--modifier="pf-m-secondary"}}
               Back
             {{/button}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
+            {{#> wizard-footer-cancel}}
+              {{#> button button--modifier="pf-m-link"}}
+                Cancel
+              {{/button}}
+            {{/wizard-footer-cancel}}
           {{/wizard-footer}}
         {{/wizard-outer-wrap}}
       {{/wizard}}
@@ -458,9 +464,11 @@ wrapperTag: div
             {{#> button button--modifier="pf-m-secondary"}}
               Back
             {{/button}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
+            {{#> wizard-footer-cancel}}
+              {{#> button button--modifier="pf-m-link"}}
+                Cancel
+              {{/button}}
+            {{/wizard-footer-cancel}}
           {{/wizard-footer}}
         {{/wizard-outer-wrap}}
       {{/wizard}}
