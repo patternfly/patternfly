@@ -249,6 +249,99 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          <div id="{{data-list--id}}-item2">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Secondary content details"')}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <div id="{{data-list--id}}-item3">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Tertiary content details"')}}
+      {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
+        This expanded section has no padding.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+{{/data-list}}
+```
+
+### Expandable compact
+```hbs
+{{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-expandable" data-list--attribute='aria-label="Expandable data list example"'}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
+          <i class="fas fa-code-branch" aria-hidden="true"></i>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <div id="{{data-list--id}}-item1">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <a href="#">link</a>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+      {{#> data-list-item-action}}
+        {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
+      {{/data-list-item-action}}
+    {{/data-list-item-row}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
+      {{#> data-list-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/data-list-expandable-content-body}}
+    {{/data-list-expandable-content}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
           <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}

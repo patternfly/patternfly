@@ -76,6 +76,8 @@
   // toggle
   --pf-c-data-list__toggle--MarginLeft: calc(var(--pf-global--spacer--sm) * -1); // offset toggle to align left
   --pf-c-data-list__toggle--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-data-list__toggle--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-data-list__toggle-icon--Height: calc(var(--pf-c-data-list--FontSize) * var(--pf-c-data-list--LineHeight));
   --pf-c-data-list__toggle-icon--Transition: .2s ease-in 0s;
   --pf-c-data-list__item--m-expanded__toggle-icon--Rotate: 90deg;
 
@@ -158,6 +160,7 @@
   --pf-c-data-list--m-compact__item-draggable-button--MarginBottom: calc(var(--pf-global--spacer--sm) * -1);
   --pf-c-data-list--m-compact__item-draggable-button--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-data-list--m-compact__item-draggable-button--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-data-list--m-compact__cell--m-icon--cell--PaddingTop: var(--pf-global--spacer--sm);
 
   @include pf-t-light;
 
@@ -184,6 +187,7 @@
     --pf-c-data-list__item-draggable-button--MarginBottom: var(--pf-c-data-list--m-compact__item-draggable-button--MarginBottom);
     --pf-c-data-list__item-draggable-button--PaddingTop: var(--pf-c-data-list--m-compact__item-draggable-button--PaddingTop);
     --pf-c-data-list__item-draggable-button--PaddingBottom: var(--pf-c-data-list--m-compact__item-draggable-button--PaddingBottom);
+    --pf-c-data-list__cell--m-icon--cell--PaddingTop: var(--pf-c-data-list--m-compact__cell--m-icon--cell--PaddingTop);
 
     font-size: var(--pf-c-data-list--m-compact--FontSize);
 
@@ -335,6 +339,7 @@
 
 .pf-c-data-list__item-draggable-button {
   display: flex;
+  flex-direction: column; // fixes safari alignment
   padding: var(--pf-c-data-list__item-draggable-button--PaddingTop) var(--pf-c-data-list__item-draggable-button--PaddingRight) var(--pf-c-data-list__item-draggable-button--PaddingBottom) var(--pf-c-data-list__item-draggable-button--PaddingLeft);
   margin: var(--pf-c-data-list__item-draggable-button--MarginTop) 0 var(--pf-c-data-list__item-draggable-button--MarginBottom) var(--pf-c-data-list__item-draggable-button--MarginLeft);
   border: 0;
@@ -388,12 +393,12 @@
 
 // toggle
 .pf-c-data-list__toggle {
-  margin-top: var(--pf-c-data-list__toggle--MarginTop);
-  margin-left: var(--pf-c-data-list__toggle--MarginLeft);
+  margin: var(--pf-c-data-list__toggle--MarginTop) 0 var(--pf-c-data-list__toggle--MarginBottom) var(--pf-c-data-list__toggle--MarginLeft);
 }
 
 // toggle icon rotate
 .pf-c-data-list__toggle-icon {
+  height: var(--pf-c-data-list__toggle-icon--Height);
   pointer-events: none;
   transition: var(--pf-c-data-list__toggle-icon--Transition);
 
