@@ -75,7 +75,7 @@ beta: true
         <i class="fas fa-minus" aria-hidden="true"></i>
       {{/number-input-icon}}
     {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="0" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="0" min="0" name="' number-input--id '-name" aria-label="Number input"')}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
       {{#> number-input-icon}}
@@ -96,7 +96,7 @@ beta: true
         <i class="fas fa-minus" aria-hidden="true"></i>
       {{/number-input-icon}}
     {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="100" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="100" max="100" name="' number-input--id '-name" aria-label="Number input"')}}
     {{/form-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus" disabled'}}
       {{#> number-input-icon}}
@@ -203,7 +203,12 @@ beta: true
 ```
 
 ## Documentation
-### Overview
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-label="Plus"`, `aria-label="Minus"` | `.pf-c-button.pf-m-control` | Provides an accessible name for the outer plus/minus buttons. **Required** |
+| `min` | `input[type="number"].pf-c-form-control` | Provides an optional minimum value for the input. |
+| `max` | `input[type="number"].pf-c-form-control` | Provides an optional maximum value for the input. |
 
 ### Usage
 | Class | Applied | Outcome |
