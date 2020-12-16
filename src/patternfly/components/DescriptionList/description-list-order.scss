@@ -6,7 +6,7 @@ $pf-c-description-list-order--limit: 12;
   @each $breakpoint, $breakpoint-value in $pf-c-description-list-order--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-description-list-order--breakpoint-map) {
+    @include pf-apply-breakpoint($breakpoint) {
       @for $i from 0 through $pf-c-description-list-order--limit {
         .pf-m-order-#{$i}#{$breakpoint-name} {
           order: #{$i};

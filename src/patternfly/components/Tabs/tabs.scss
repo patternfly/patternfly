@@ -471,7 +471,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   @each $breakpoint, $breakpoint-value in $pf-c-tabs--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-tabs--breakpoint-map) {
+    @include pf-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-c-tabs--spacer-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           --pf-c-tabs--inset: #{$spacer-value};

@@ -539,7 +539,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     $breakpoint: "md";
   }
 
-  @include pf-apply-breakpoint($breakpoint, $pf-c-drawer--breakpoint-map--width) {
+  @include pf-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-c-drawer__panel--list--width {
       .pf-c-drawer__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
         --pf-c-drawer__panel--FlexBasis: #{percentage($width-value / 100)};
@@ -556,7 +556,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     $breakpoint: "md";
   }
 
-  @include pf-apply-breakpoint($breakpoint, $pf-c-drawer--breakpoint-map) {
+  @include pf-apply-breakpoint($breakpoint) {
     // Drawer and inline
     .pf-c-drawer.pf-m-inline#{$breakpoint-name},
     .pf-c-drawer.pf-m-static#{$breakpoint-name} {

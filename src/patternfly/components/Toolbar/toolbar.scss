@@ -356,7 +356,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-  @include pf-apply-breakpoint($breakpoint, $pf-c-toolbar--breakpoint-map) {
+  @include pf-apply-breakpoint($breakpoint) {
     .pf-m-toggle-group.pf-m-show#{$breakpoint-name} {
       --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--m-toggle-group--m-show--spacer);
 
@@ -382,7 +382,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-toolbar--breakpoint-map) {
+    @include pf-apply-breakpoint($breakpoint) {
       // Align right
       .pf-c-toolbar__item.pf-m-align-right#{$breakpoint-name},
       .pf-c-toolbar__group.pf-m-align-right#{$breakpoint-name} {
@@ -432,7 +432,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-toolbar--breakpoint-map) {
+    @include pf-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
         .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
           > * {
@@ -451,7 +451,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-toolbar--breakpoint-map) {
+    @include pf-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
         .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
           --pf-c-toolbar--spacer: #{$spacer-value};
@@ -467,7 +467,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-toolbar--breakpoint-map) {
+    @include pf-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-c-toolbar--inset-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           --pf-c-toolbar--inset: #{$spacer-value};

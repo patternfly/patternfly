@@ -272,7 +272,7 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
   @each $breakpoint, $breakpoint-value in $pf-c-pagination--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-pagination--breakpoint-map) {
+    @include pf-apply-breakpoint($breakpoint) {
       &.pf-m-display-summary#{$breakpoint-name} {
         --pf-c-pagination__nav--Display: var(--pf-c-pagination--m-display-summary__nav--Display);
         --pf-c-pagination__nav--Visibility: var(--pf-c-pagination--m-display-summary__nav--Visibility);
