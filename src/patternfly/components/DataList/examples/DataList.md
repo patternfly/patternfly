@@ -56,6 +56,24 @@ import './data-list.css'
         }}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          Primary content. Dolor sit amet, consectetur adipisicing elit. Primary content  Dolor sit amet, consectetur adipisicing elit.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          Primary content. Dolor sit amet, consectetur adipisicing elit. Primary content  Dolor sit amet, consectetur adipisicing elit.
+        {{/data-list-cell}}
+        {{#> data-list-cell}}
+          {{#> button button--modifier="pf-m-primary"}}
+              Primary
+          {{/button}}
+          {{#> button button--modifier="pf-m-secondary"}}
+              Secondary
+          {{/button}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
   {{/data-list-item}}
 
   {{#> data-list-item}}
@@ -89,7 +107,7 @@ import './data-list.css'
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          Primary content  Dolor sit amet, consectetur adipisicing elit. Primary content  Dolor sit amet, consectetur adipisicing elit.
+          Primary content. Dolor sit amet, consectetur adipisicing elit. Primary content  Dolor sit amet, consectetur adipisicing elit.
         {{/data-list-cell}}
       {{/data-list-item-content}}
       {{#> data-list-item-action}}
