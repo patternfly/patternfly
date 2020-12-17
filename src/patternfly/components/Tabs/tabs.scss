@@ -86,6 +86,13 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__scroll-button--before--BorderBottomWidth: var(--pf-c-tabs__scroll-button--before--border-width--base);
   --pf-c-tabs__scroll-button--before--BorderLeftWidth: 0;
 
+  // Scroll snap
+  --pf-c-tabs__list--ScrollSnapTypeAxis: x;
+  --pf-c-tabs__list--ScrollSnapTypeStrictness: proximity;
+  --pf-c-tabs__list--ScrollSnapType: var(--pf-c-tabs__list--ScrollSnapTypeAxis) var(--pf-c-tabs__list--ScrollSnapTypeStrictness);
+  --pf-c-tabs__item--ScrollSnapAlign: end;
+  --pf-c-tabs--m-vertical__list--ScrollSnapTypeAxis: y;
+
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-tabs__scroll-button--Width: var(--pf-c-tabs__scroll-button--xl--Width);
   }
@@ -229,6 +236,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs__link--after--Top: 0;
     --pf-c-tabs__link--after--Bottom: 0;
     --pf-c-tabs__link--after--Right: auto;
+    --pf-c-tabs__list--ScrollSnapTypeAxis: var(--pf-c-tabs--m-vertical__list--ScrollSnapTypeAxis);
 
     display: inline-flex;
     flex-direction: column;
@@ -330,6 +338,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   max-width: 100%;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: var(--pf-c-tabs__list--ScrollSnapType);
   -webkit-overflow-scrolling: touch;
 }
 
@@ -337,6 +346,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 .pf-c-tabs__item {
   display: flex;
   flex: none;
+  scroll-snap-align: var(--pf-c-tabs__item--ScrollSnapAlign);
 
   // Current
   &.pf-m-current {
