@@ -314,7 +314,7 @@ section: components
     {{/form-group}}
     {{#> form-group form-group--id="-uris"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'id="' form--id form-group--id '"') required="true"}}Valid Redirect URIs{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Valid redirect URIs{{/form-label}}
         {{> form-group-label-help}}
       {{/form-group-label}}
       {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
