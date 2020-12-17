@@ -319,7 +319,7 @@ section: components
       {{/form-group-label}}
       {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-1" name="' form--id form-group--id '-1"')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-1"')}}{{/form-control}}
           {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
             <i class="fas fa-minus-circle" aria-hidden="true"></i>
           {{/button}}
