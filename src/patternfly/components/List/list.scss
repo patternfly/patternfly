@@ -18,8 +18,14 @@
     margin-top: var(--pf-c-list--li--MarginTop);
   }
 
-  @at-root ul#{&}:not(.pf-m-inline) { // targets ul.pf-c-list that is not .pf-m-inline
+  @at-root ul#{&} {
     list-style: var(--pf-c-list--ul--ListStyle);
+  }
+
+  &.pf-m-plain {
+    --pf-c-list--PaddingLeft: 0;
+
+    list-style: none;
   }
 
   &.pf-m-inline {
@@ -27,6 +33,7 @@
 
     display: flex;
     flex-wrap: wrap;
+    list-style: none;
 
     li {
       --pf-c-list--li--MarginTop: 0;
