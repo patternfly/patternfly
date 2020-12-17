@@ -53,7 +53,7 @@ cssPrefix: pf-c-form
       {{/form-label}}
       {{> form-group-label-help}}
     {{/form-group-label}}
-    {{#> form-group-control}}
+    {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
       {{#> check}}
         {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/check-input}}
         {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '"')}}Option 1{{/check-label}}
