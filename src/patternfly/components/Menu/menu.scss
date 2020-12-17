@@ -80,7 +80,6 @@
   --pf-c-menu__item-action--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-menu__item-action--Color: var(--pf-global--Color--200);
   --pf-c-menu__item-action--hover--Color: var(--pf-global--Color--100);
-  --pf-c-menu__item-action--m-favorite--Color: var(--pf-global--disabled-color--200);
   --pf-c-menu__item-action--m-favorited--Color: var(--pf-global--palette--gold-400);
   --pf-c-menu__item-action--m-favorited--hover--Color: var(--pf-global--palette--gold-500);
   --pf-c-menu__list-item--m-disabled__item-action--Color: var(--pf-global--disabled-color--200);
@@ -333,8 +332,6 @@
   border: none;
 
   &.pf-m-favorite {
-    --pf-c-menu__item-action--Color: var(--pf-c-menu__item-action--m-favorite--Color);
-
     .pf-c-menu__item-action-icon {
       font-size: var(--pf-c-menu__item-action--m-favorite__icon--FontSize);
     }
