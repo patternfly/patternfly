@@ -1,10 +1,6 @@
 $pf-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-.ws-mdx-content {
-  max-width: 100%;
-}
-
 @mixin pf-c-masthead--m-display-stack {
   --pf-c-masthead--FlexWrap: var(--pf-c-masthead--m-display-stack--FlexWrap);
   --pf-c-masthead__main--Order: var(--pf-c-masthead--m-display-stack__main--Order);
@@ -138,10 +134,11 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 // main
 .pf-c-masthead__main {
-  display: flex;
   position: relative;
-  align-items: center;
+  display: flex;
   flex-basis: var(--pf-c-masthead__main--FlexBasis);
+  align-items: center;
+  align-self: stretch;
   order: var(--pf-c-masthead__main--Order);
   padding-top: var(--pf-c-masthead__main--PaddingTop);
   padding-bottom: var(--pf-c-masthead__main--PaddingBottom);
@@ -152,7 +149,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     right: var(--pf-c-masthead__main--before--Right);
     bottom: 0;
     left: var(--pf-c-masthead__main--before--Left);
-    content: '';
+    content: "";
     border-bottom: var(--pf-c-masthead__main--before--BorderBottom);
   }
 
@@ -165,8 +162,8 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 .pf-c-masthead__content {
   display: flex;
   flex: 1 1 0;
-  align-self: stretch;
   align-items: center;
+  align-self: stretch;
   order: var(--pf-c-masthead__content--Order);
   padding-top: var(--pf-c-masthead__content--PaddingTop);
   padding-bottom: var(--pf-c-masthead__content--PaddingBottom);
@@ -179,7 +176,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   .pf-c-nav.pf-m-horizontal {
     margin-right: var(--pf-c-masthead__content--c-nav--m-horizontal--MarginRight);
     margin-left: var(--pf-c-masthead__content--c-nav--m-horizontal--MarginLeft);
-
   }
 
   .pf-c-masthead__toggle ~ & {
@@ -201,8 +197,8 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 // toggle
 .pf-c-masthead__toggle {
-  order: 0;
   align-self: center;
+  order: 0;
   margin-right: var(--pf-c-masthead__toggle--MarginRight);
 
   .pf-c-button {
