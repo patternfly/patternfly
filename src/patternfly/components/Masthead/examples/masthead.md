@@ -19,6 +19,70 @@ cssPrefix: pf-c-masthead
 {{/masthead}}
 ```
 
+### Basic with mixed content
+```hbs
+{{#> masthead masthead--id="basic-masthead-with-mixed-content"}}
+  {{> masthead-toggle}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{#> masthead-content}}
+    {{#> l-flex}}
+      <span>Testing text color</span>
+      {{#> button button--modifier="pf-m-primary"}}
+        testing
+      {{/button}}
+      {{#> l-flex-item l-flex-item--modifier="pf-m-align-flex-end"}}
+        {{#> button button--modifier="pf-m-primary"}}
+          testing
+        {{/button}}
+      {{/l-flex-item}}
+    {{/l-flex}}
+  {{/masthead-content}}
+{{/masthead}}
+```
+
+### Basic with horizontal nav
+```hbs
+{{#> masthead masthead--id="basic-masthead-with-horizontal-nav"}}
+  {{> masthead-toggle}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{#> masthead-content}}
+    <nav class="pf-c-nav pf-m-horizontal pf-m-scrollable" aria-label="Global">
+      <button class="pf-c-nav__scroll-button" disabled aria-label="Scroll left">
+        <i class="fas fa-angle-left" aria-hidden="true"></i>
+      </button>
+      <ul class="pf-c-nav__list">
+        <li class="pf-c-nav__item">
+          <a href="#" class="pf-c-nav__link">Horizontal nav item 1</a>
+        </li>
+        <li class="pf-c-nav__item">
+          <a href="#" class="pf-c-nav__link">Horizontal nav item 2</a>
+        </li>
+        <li class="pf-c-nav__item">
+          <a href="#" class="pf-c-nav__link">Horizontal nav item 3</a>
+        </li>
+        <li class="pf-c-nav__item">
+          <a href="#" class="pf-c-nav__link">Horizontal nav item 4</a>
+        </li>
+        <li class="pf-c-nav__item">
+          <a href="#" class="pf-c-nav__link pf-m-current" aria-current="page">Horizontal nav item 5</a>
+        </li>
+      </ul>
+      <button class="pf-c-nav__scroll-button" aria-label="Scroll right">
+        <i class="fas fa-angle-right" aria-hidden="true"></i>
+      </button>
+    </nav>
+  {{/masthead-content}}
+{{/masthead}}
+```
+
 ### Display inline
 ```hbs
 {{#> masthead masthead--id="inline-masthead" masthead--modifier="pf-m-display-inline"}}
@@ -58,7 +122,7 @@ cssPrefix: pf-c-masthead
 {{/masthead}}
 ```
 
-### Light variant
+### Light 100 variant
 ```hbs
 {{#> masthead masthead--id="light-masthead" masthead--modifier="pf-m-light-100"}}
   {{> masthead-toggle}}
