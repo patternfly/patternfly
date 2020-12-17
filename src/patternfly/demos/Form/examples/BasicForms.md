@@ -18,23 +18,24 @@ section: components
   {{/form-group}}
   {{#> form-group form-group--id="-email"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Email{{/form-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Email{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-phone"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Phone number{{/form-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Phone number{{/form-label}}
+      {{> form-group-label-help}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="tel" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-contact"}}
     {{#> form-group-label}}
-      {{#> form-label required="true"}}How can we contact you?{{/form-label}}
+      {{#> form-label}}How can we contact you?{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control form-group-control--modifier="pf-m-inline"}}
       {{#> check}}
@@ -47,15 +48,7 @@ section: components
       {{/check}}
       {{#> check}}
         {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '3" name="' form--id form-group--id '3"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '3"')}}Please don't contact me{{/check-label}}
-      {{/check}}
-  {{/form-group-control}}
-  {{/form-group}}
-  {{#> form-group form-group--id="-updates"}}
-    {{#> form-group-control}}
-      {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '"')}}I'd like updates via email{{/check-label}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '3"')}}Mail{{/check-label}}
       {{/check}}
     {{/form-group-control}}
   {{/form-group}}
@@ -96,43 +89,32 @@ section: components
       {{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--id="-title"}}
+  {{#> form-group form-group--id="-phone"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Your title{{/form-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Phone number{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="select" form-control--attribute=(concat 'id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
-        <option value="" selected>Please choose</option>
-        <option value="Mr">Mr</option>
-        <option value="Miss">Miss</option>
-        <option value="Mrs">Mrs</option>
-        <option value="Ms">Ms</option>
-        <option value="Dr">Dr</option>
-        <option value="Other">Other</option>
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
       {{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--id="-exp"}}
-    {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Your experience{{/form-label}}
+   {{#> form-group form-group--id="-contact"}}
+    {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
+      {{#> form-label }}How can we contact you?{{/form-label}}
+      {{> form-group-label-help}}
     {{/form-group-label}}
-    {{#> form-group-control}}
-      {{#> form-control controlType="textarea" form-control--attribute=(concat 'name="' form--id form-group--id '" id="' form--id form-group--id '"')}}{{/form-control}}
-    {{/form-group-control}}
-  {{/form-group}}
-  {{#> form-group form-group--id="-follow-up"}}
-    {{#> form-group-control}}
+    {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '"')}}Follow up via email{{/check-label}}
+        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '1" name="' form--id form-group--id '1"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '1"')}}Email{{/check-label}}
       {{/check}}
-    {{/form-group-control}}
-  {{/form-group}}
-  {{#> form-group form-group--id="-remember"}}
-    {{#> form-group-control}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '"')}}Remember my password for 30 days{{/check-label}}
+        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '2" name="' form--id form-group--id '2"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '2"')}}Phone{{/check-label}}
+      {{/check}}
+      {{#> check}}
+        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '3" name="' form--id form-group--id '3"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '3"')}}Mail{{/check-label}}
       {{/check}}
     {{/form-group-control}}
   {{/form-group}}
@@ -279,5 +261,98 @@ section: components
       {{/form-group-control}}
     {{/form-group}}
   {{/grid}}
+{{/form}}
+```
+
+### Sections with repeatable fields
+```hbs
+{{#> form form--id="form-demo-sections-repeatable-fields"}}
+  {{#> form-section}}
+    {{#> form-section-title}}
+      General settings
+    {{/form-section-title}}
+    {{#> form-group form-group--id="-clientid"}}
+      {{#> form-group-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Client ID{{/form-label}}
+        {{> form-group-label-help}}
+      {{/form-group-label}}
+      {{#> form-group-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+      {{/form-group-control}}
+    {{/form-group}}
+    {{#> form-group form-group--id="-name"}}
+      {{#> form-group-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Name{{/form-label}}
+        {{> form-group-label-help}}
+      {{/form-group-label}}
+      {{#> form-group-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+      {{/form-group-control}}
+    {{/form-group}}
+    {{#> form-group form-group--id="-description"}}
+      {{#> form-group-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Description{{/form-label}}
+        {{> form-group-label-help}}
+      {{/form-group-label}}
+      {{#> form-group-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+      {{/form-group-control}}
+    {{/form-group}}
+  {{/form-section}}
+  {{#> form-section}}
+    {{#> form-section-title}}
+      Access settings
+    {{/form-section-title}}
+    {{#> form-group form-group--id="-rooturl"}}
+      {{#> form-group-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Root URL{{/form-label}}
+        {{> form-group-label-help}}
+      {{/form-group-label}}
+      {{#> form-group-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+      {{/form-group-control}}
+    {{/form-group}}
+    {{#> form-group form-group--id="-uris"}}
+      {{#> form-group-label}}
+        {{#> form-label form-label--attribute=(concat 'id="' form--id form-group--id '"') required="true"}}Valid redirect URIs{{/form-label}}
+        {{> form-group-label-help}}
+      {{/form-group-label}}
+      {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
+        {{#> input-group}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-1"')}}{{/form-control}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+            <i class="fas fa-minus-circle" aria-hidden="true"></i>
+          {{/button}}
+        {{/input-group}}
+        {{#> input-group}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-2" name="' form--id form-group--id '-input-2" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-2"')}}{{/form-control}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+            <i class="fas fa-minus-circle" aria-hidden="true"></i>
+          {{/button}}
+        {{/input-group}}
+        {{#> input-group}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-3" name="' form--id form-group--id '-input-3" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-3"')}}{{/form-control}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+            <i class="fas fa-minus-circle" aria-hidden="true"></i>
+          {{/button}}
+        {{/input-group}}
+        {{#> button button--modifier="pf-m-link pf-m-inline"}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
+            <i class="fas fa-plus-circle" aria-hidden="true"></i>
+          {{/button-icon}}
+          Add valid redirect URI
+        {{/button}}
+      {{/form-group-control}}
+    {{/form-group}}
+    {{#> form-group form-group--id="-home-url"}}
+      {{#> form-group-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Home URL{{/form-label}}
+        {{> form-group-label-help}}
+      {{/form-group-label}}
+      {{#> form-group-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+      {{/form-group-control}}
+    {{/form-group}}
+  {{/form-section}}
 {{/form}}
 ```

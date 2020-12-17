@@ -53,7 +53,7 @@ cssPrefix: pf-c-form
       {{/form-label}}
       {{> form-group-label-help}}
     {{/form-group-label}}
-    {{#> form-group-control}}
+    {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
       {{#> check}}
         {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/check-input}}
         {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '"')}}Option 1{{/check-label}}
@@ -81,8 +81,21 @@ cssPrefix: pf-c-form
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-form-section-1-input" name="' form--id '-form-section-1-input" required')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
+    {{#> form-group}}
+      {{#> form-group-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-section-1-input-2"')}}
+          Form section 1 inputs
+        {{/form-label}}
+      {{/form-group-label}}
+      {{#> form-group-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-form-section-1-input-2" name="' form--id '-form-section-1-input-2" required')}}{{/form-control}}
+      {{/form-group-control}}
+    {{/form-group}}
   {{/form-section}}
   {{#> form-section}}
+    {{#> form-section-title}}
+      Section 2 title (optional)
+    {{/form-section-title}}
     {{#> form-group}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-section-2-input"')}}
@@ -91,6 +104,16 @@ cssPrefix: pf-c-form
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-form-section-2-input" name="' form--id '-form-section-2-input" required')}}{{/form-control}}
+      {{/form-group-control}}
+    {{/form-group}}
+    {{#> form-group}}
+      {{#> form-group-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-section-2-input-2"')}}
+          Form section 2 inputs
+        {{/form-label}}
+      {{/form-group-label}}
+      {{#> form-group-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id '-form-section-2-input-2" name="' form--id '-form-section-2-input-2" required')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
   {{/form-section}}
@@ -513,6 +536,7 @@ cssPrefix: pf-c-form
 | -- | -- | -- |
 | `.pf-c-form` | `<form>` |  Initiates a standard form. **Required** |
 | `.pf-c-form__section` | `<div>, <section>` |  Initiates a form section. |
+| `.pf-c-form__section-title` | `<div>` |  Initiates a form section title. |
 | `.pf-c-form__group` | `<div>` |  Initiates a form group. |
 | `.pf-c-form__group-label` | `<div>` |  Initiates a form group label. |
 | `.pf-c-form__label` | `<label>` |  Initiates a form label. **Required** |
@@ -544,4 +568,5 @@ cssPrefix: pf-c-form
 | `.pf-m-disabled` | `.pf-c-form__label` | Modifies form label to show disabled state. |
 | `.pf-m-no-padding-top` | `.pf-c-form__group-label` | Removes top padding from the label element for labels adjacent to an element that isn't a form control. |
 | `.pf-m-inline` | `.pf-c-form__group-control` | Modifies form group children to be inline (this is primarily for radio buttons and checkboxes). |
+| `.pf-m-stack` | `.pf-c-form__group-control` | Modifies form group children to be stacked with space between children. |
 | `.pf-m-expanded` | `.pf-c-form__field-group` | Modifies an expandable field group for the expanded state. |
