@@ -1,7 +1,7 @@
 @import "./data-list-grid.scss";
 
 .pf-c-data-list {
-  --pf-c-data-list--FontSize: 1em; // inherit font-size
+  --pf-c-data-list--FontSize: 1em; // inherit font-size, update this to global variable at breaking change
   --pf-c-data-list--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-data-list--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-data-list--BorderTopWidth: var(--pf-global--spacer--sm);
