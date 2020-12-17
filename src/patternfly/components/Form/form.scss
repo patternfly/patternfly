@@ -45,7 +45,8 @@
   // Group control
   --pf-c-form__group-control--m-inline--child--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-form__group-control__helper-text--MarginBottom: var(--pf-global--spacer--xs);
-  --pf-c-form__group-control--m-stack--child--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-grid__group-control--m-stack--Gap: var(--pf-global--spacer--sm);
+  --pf-c-grid__group-control--m-stack__helper-text--MarginTop: calc(var(--pf-c-grid__group-control--m-stack--Gap) * -1 + var(--pf-c-form__helper-text--MarginTop--base));
 
   // Actions
   --pf-c-form__actions--child--MarginTop: var(--pf-global--spacer--sm);
@@ -58,7 +59,8 @@
   --pf-c-form__actions--MarginLeft: calc(var(--pf-c-form__actions--child--MarginLeft) * -1);
 
   // Helper text
-  --pf-c-form__helper-text--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-form__helper-text--MarginTop--base: var(--pf-global--spacer--xs);
+  --pf-c-form__helper-text--MarginTop: var(--pf-c-form__helper-text--MarginTop--base);
   --pf-c-form__helper-text--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-form__helper-text--Color: var(--pf-global--Color--100);
 
@@ -123,7 +125,7 @@
   --pf-c-form__field-group-body__field-group--last-child--MarginBottom: calc(var(--pf-c-form__field-group-body--PaddingBottom) * -1);
 
   display: grid;
-  grid-gap: var(--pf-c-form--GridGap);
+  gap: var(--pf-c-form--GridGap);
 
   &.pf-m-horizontal {
     --pf-c-form__group-label--PaddingBottom: 0;
@@ -261,12 +263,10 @@
   }
 
   &.pf-m-stack {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: var(--pf-c-grid__group-control--m-stack--Gap);
 
-    > * + *:not(.pf-c-form__helper-text) {
-      margin-top: var(--pf-c-form__group-control--m-stack--child--MarginTop);
-    }
+    --pf-c-form__helper-text--MarginTop: var(--pf-c-grid__group-control--m-stack__helper-text--MarginTop);
   }
 
   .pf-c-form__helper-text:first-child {
