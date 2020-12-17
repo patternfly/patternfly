@@ -87,7 +87,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "md", "lg",
   @each $breakpoint, $breakpoint-value in $pf-c-description-list--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-description-list--breakpoint-map) {
+    @include pf-apply-breakpoint($breakpoint) {
       &.pf-m-1-col#{$breakpoint-name} {
         --pf-c-description-list--GridTemplateColumns--count: var(--pf-c-description-list--m-1-col--GridTemplateColumns--count);
       }

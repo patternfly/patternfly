@@ -53,7 +53,7 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
   @each $breakpoint, $breakpoint-value in $pf-c-divider--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-divider--breakpoint-map) {
+    @include pf-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-c-divider--spacer-map {
         @if $spacer == none {
           $spacer-value: 0%;

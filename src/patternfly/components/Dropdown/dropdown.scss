@@ -360,7 +360,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   @each $breakpoint, $breakpoint-value in $pf-c-dropdown--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint, $pf-c-dropdown--breakpoint-map) {
+    @include pf-apply-breakpoint($breakpoint) {
       &.pf-m-align-right#{$breakpoint-name} {
         right: 0;
       }
