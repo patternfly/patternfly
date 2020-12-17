@@ -112,13 +112,14 @@ cssPrefix: pf-c-alert-group
 ### Overview
 An alert group that includes the `.pf-m-toast` modifier becomes a toast alert group with unique positioning in the top-right corner of the window. `.pf-c-alert-group` is required to create a toast alert group.
 
-Every toast alert must include a close button to dismiss the alert.  
-Dynamic alerts could include a link or action, as long as it's incorporated into the message in a way that users would know how to access that link/action when the dynamic alert disappears. This is to accommodate users who will not be able to access the actions in a dynamic alert. 
+Every toast alert must include a close button to dismiss the alert.
 
-For example:
-- "The build is complete. Go to the Builds page to `<button class="pf-c-button pf-m-link pf-m-inline>download</button>.`"
+When toast alerts include a link or action, these elements are not announced as interactive elements by screen readers. Whenever you include a link or button, incorporate it into the message so that it’s clear to the user how to access the same contents or action without clicking the link or button directly in the toast. For example, if your toast alert displays a message “The build is complete. Go to the Builds page to download,” the screen reader user is given instructions on how to find their build for download.
 
-- "The build is complete. Go to the `<a href="url">Builds</a>` page to download."
+For sighted users, interactive elements can be included in this message in one of the following ways:
+
+- Using a link to the Builds page: “The build is complete. Go to the [Builds]() page to download” using `<a href="url">Builds</a>`
+- Using a button to download: “The build is complete. Go to the Builds page to [download]()" using `<button class="pf-c-button pf-m-link pf-m-inline>download</button>`
 
 ### Modifiers
 | Class | Applied to | Outcome |
