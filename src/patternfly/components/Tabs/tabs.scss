@@ -23,11 +23,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-color-scheme--light-300__link--BackgroundColor: transparent;
   --pf-c-tabs--m-color-scheme--light-300__item--m-current__link--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
 
-  // Tab list
-  --pf-c-tabs__list--ScrollSnapTypeAxis: x;
-  --pf-c-tabs__list--ScrollSnapTypeBehavior: proximity;
-  --pf-c-tabs__list--ScrollSnapType: var(--pf-c-tabs__list--ScrollSnapTypeAxis) var(--pf-c-tabs__list--ScrollSnapTypeBehavior);
-
   // Tab link
   --pf-c-tabs__link--Color: var(--pf-global--Color--200);
   --pf-c-tabs__link--FontSize: var(--pf-global--FontSize--md);
@@ -90,6 +85,12 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__scroll-button--before--BorderRightWidth: 0;
   --pf-c-tabs__scroll-button--before--BorderBottomWidth: var(--pf-c-tabs__scroll-button--before--border-width--base);
   --pf-c-tabs__scroll-button--before--BorderLeftWidth: 0;
+
+  // Scroll snap
+  --pf-c-tabs__list--ScrollSnapTypeAxis: x;
+  --pf-c-tabs__list--ScrollSnapTypeStrictness: proximity;
+  --pf-c-tabs__list--ScrollSnapType: var(--pf-c-tabs__list--ScrollSnapTypeAxis) var(--pf-c-tabs__list--ScrollSnapTypeStrictness);
+  --pf-c-tabs__item--ScrollSnapAlign: end;
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-tabs__scroll-button--Width: var(--pf-c-tabs__scroll-button--xl--Width);
@@ -344,7 +345,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 .pf-c-tabs__item {
   display: flex;
   flex: none;
-  scroll-snap-align: end;
+  scroll-snap-align: var(--pf-c-tabs__item--ScrollSnapAlign);
 
   // Current
   &.pf-m-current {

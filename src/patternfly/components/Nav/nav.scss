@@ -226,6 +226,12 @@
   --pf-c-nav--c-divider--PaddingLeft: 0;
   --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
+  // Scroll snap
+  --pf-c-nav__list--ScrollSnapTypeAxis: x;
+  --pf-c-nav__list--ScrollSnapTypeStrictness: proximity;
+  --pf-c-nav__list--ScrollSnapType: var(--pf-c-nav__list--ScrollSnapTypeAxis) var(--pf-c-nav__list--ScrollSnapTypeStrictness);
+  --pf-c-nav__item--ScrollSnapAlign: end;
+
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav__link--xl--PaddingRight);
     --pf-c-nav__link--PaddingLeft: var(--pf-c-nav__link--xl--PaddingLeft);
@@ -251,7 +257,7 @@
       max-width: 100%;
       overflow-x: auto;
       white-space: nowrap;
-      scroll-snap-type: x proximity;
+      scroll-snap-type: var(--pf-c-nav__list--ScrollSnapType);
       -webkit-overflow-scrolling: touch;
 
       @include pf-overflow-hide-scroll;
@@ -259,7 +265,7 @@
 
     .pf-c-nav__item {
       display: flex;
-      scroll-snap-align: end;
+      scroll-snap-align: var(--pf-c-nav__item--ScrollSnapAlign);
     }
 
     .pf-c-nav__link {
