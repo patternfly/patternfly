@@ -2,16 +2,16 @@
 :root {
   // Colors
   // Global palette
-  --pf-global--palette--black-50: #e7ebeb;
-  --pf-global--palette--black-100: #d3d6d7;
-  --pf-global--palette--black-200: #a9adaf;
-  --pf-global--palette--black-300: #808487;
-  --pf-global--palette--black-400: #565b5f;
-  --pf-global--palette--black-500: #42474b;
-  --pf-global--palette--black-600: #292d32;
-  --pf-global--palette--black-700: #1b1e24;
-  --pf-global--palette--black-800: #12141a;
-  --pf-global--palette--black-900: #05050c;
+  --pf-global--palette--black-50: #E0E0E0;
+  --pf-global--palette--black-100: #C6C7C8;
+  --pf-global--palette--black-200: #AAABAC;
+  --pf-global--palette--black-300: #868789;
+  --pf-global--palette--black-400: #57585A;
+  --pf-global--palette--black-500: #444548;
+  --pf-global--palette--black-600: #36373A;
+  --pf-global--palette--black-700: #26292D;
+  --pf-global--palette--black-800: #1B1D21;
+  --pf-global--palette--black-900: #0F1214;
   --pf-global--palette--red-9999: #fe5142;
   --pf-global--palette--black-1000: #{$pf-color-black-1000};
   --pf-global--palette--blue-50: #{$pf-color-blue-50};
@@ -114,7 +114,7 @@
   --pf-global--active-color--300: #{$pf-global--active-color--300};
   --pf-global--active-color--400: #{$pf-global--active-color--400};
   --pf-global--disabled-color--100: #{$pf-global--disabled-color--100};
-  --pf-global--disabled-color--200: #{$pf-global--disabled-color--200};
+  --pf-global--disabled-color--200: var(--pf-global--palette--blue-500);
   --pf-global--disabled-color--300: #{$pf-global--disabled-color--300};
 
   // Theme color
@@ -213,7 +213,7 @@
   --pf-global--BorderWidth--md: #{$pf-global--BorderWidth--md};
   --pf-global--BorderWidth--lg: #{$pf-global--BorderWidth--lg};
   --pf-global--BorderWidth--xl: #{$pf-global--BorderWidth--xl};
-  --pf-global--BorderColor--100: var(--pf-global--palette--black-600);
+  --pf-global--BorderColor--100: var(--pf-global--palette--black-500);
   --pf-global--BorderColor--200: #{$pf-global--BorderColor--200};
   --pf-global--BorderColor--300: #{$pf-global--BorderColor--300};
   --pf-global--BorderColor--dark-100: #{$pf-global--BorderColor--dark-100};
