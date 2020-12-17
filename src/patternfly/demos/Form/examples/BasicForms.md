@@ -325,7 +325,7 @@ section: components
           {{/button}}
         {{/input-group}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-2" name="' form--id form-group--id '-2"')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-2" name="' form--id form-group--id '-input-2" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-2"')}}{{/form-control}}
           {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
             <i class="fas fa-minus-circle" aria-hidden="true"></i>
           {{/button}}
