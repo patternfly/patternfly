@@ -524,16 +524,26 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-apply-breakpoint($breakpoint) {
+      // stylelint-disable max-nesting-depth
       &.pf-m-padding#{$breakpoint-name} {
         padding: var(--pf-c-page__main-section--PaddingTop) var(--pf-c-page__main-section--PaddingRight) var(--pf-c-page__main-section--PaddingBottom) var(--pf-c-page__main-section--PaddingLeft);
+
+        &.pf-m-limit-width {
+          padding: 0;
+
+          .pf-c-page__main-body {
+            padding: var(--pf-c-page__main-section--PaddingTop) var(--pf-c-page__main-section--PaddingRight) var(--pf-c-page__main-section--PaddingBottom) var(--pf-c-page__main-section--PaddingLeft);
+          }
+        }
       }
 
       &.pf-m-no-padding#{$breakpoint-name} {
-        --pf-c-page__main-section--PaddingTop: 0;
-        --pf-c-page__main-section--PaddingRight: 0;
-        --pf-c-page__main-section--PaddingBottom: 0;
-        --pf-c-page__main-section--PaddingLeft: 0;
+        &,
+        &.pf-m-limit-width .pf-c-page__main-body {
+          padding: 0;
+        }
       }
+      // stylelint-enable
     }
   }
 }
