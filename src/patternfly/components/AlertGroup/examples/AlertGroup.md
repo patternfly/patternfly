@@ -119,7 +119,7 @@ When toast alerts include a link or action, these elements are not announced as 
 For sighted users, interactive elements can be included in this message in one of the following ways:
 
 - Using a link to the Builds page: “The build is complete. Go to the [Builds]() page to download” using `<a href="url">Builds</a>`
-- Using a button to download: “The build is complete. Go to the Builds page to [download]()" using `<button class="pf-c-button pf-m-link pf-m-inline>download</button>`
+- Using a button to download: “The build is complete. Go to the Builds page to [download]()" using `<button class="pf-c-button pf-m-link pf-m-inline type="button">download</button>`
 
 ### Modifiers
 | Class | Applied to | Outcome |
