@@ -27,6 +27,7 @@ wrapperTag: div
     {{#> page-main-section}}
       {{#> card}}
         {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasContextSelector="true" toolbar--template--HasOverflowMenu="true"}}
+        {{> divider divider--type="div" divider--modifier="pf-u-hidden pf-u-display-flex-on-lg"}}
         {{> data-list-simple-data-list}}
         {{> data-list-pagination-footer}}
       {{/card}}

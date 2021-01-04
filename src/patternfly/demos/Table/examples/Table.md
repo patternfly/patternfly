@@ -28,8 +28,9 @@ wrapperTag: div
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit venenatis enim, ut ultrices metus ornare at. Curabitur vel nibh id leo finibus suscipit. Curabitur eu tellus lectus. Vivamus lacus leo, lobortis ac convallis ac, dapibus vel ligula. Suspendisse vitae felis at augue blandit sollicitudin. Sed erat metus, pellentesque vel accumsan vitae, tincidunt id erat. Mauris et pharetra felis. Duis at nisi leo. Nam blandit dui dui, in euismod est dapibus sed. Vivamus sed dolor ullamcorper, euismod orci efficitur, ornare leo. Sed sit amet sollicitudin nulla. Nunc tristique sem ut est laoreet efficitur. Cras tristique finibus risus, eget fringilla tellus porta vitae. Duis id nunc ultricies, ultrices nibh vel, sollicitudin tellus.</p>
       {{/content}}
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--IsLimitWidth="true"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth="true"}}
       {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+      {{> divider divider--type="div" divider--modifier="pf-u-hidden pf-u-display-flex-on-md"}}
       {{> table-simple-table}}
       {{> table-pagination-footer}}
     {{/page-main-section}}
@@ -56,9 +57,10 @@ wrapperTag: div
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
         {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true" toolbar--template--HasIconButtonGroup="true"}}
+        {{> divider divider--type="div" divider--modifier="pf-u-hidden pf-u-display-flex-on-xl"}}
         {{> table-sortable-table}}
         {{> table-pagination-footer}}
       {{/card}}
@@ -86,9 +88,10 @@ wrapperTag: div
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
         {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasExpandAll="true"}}
+        {{> divider divider--type="div" divider--modifier="pf-u-hidden pf-u-display-flex-on-md"}}
         {{> table-expandable-table}}
         {{> table-pagination-footer}}
       {{/card}}
@@ -116,9 +119,10 @@ wrapperTag: div
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
         {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+        {{> divider divider--type="div" divider--modifier="pf-u-hidden pf-u-display-flex-on-lg"}}
         {{> table-compact-table}}
         {{> table-pagination-footer}}
       {{/card}}
@@ -146,9 +150,10 @@ wrapperTag: div
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
         {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+        {{> divider divider--type="div" divider--modifier="pf-u-hidden pf-u-display-flex-on-md"}}
         {{> table-compound-expansion-table}}
         {{> table-pagination-footer}}
       {{/card}}
@@ -176,7 +181,7 @@ wrapperTag: div
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
         {{> table-loading-table}}
       {{/card}}
@@ -204,7 +209,7 @@ wrapperTag: div
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
         {{> table-empty-state-table}}
       {{/card}}
@@ -232,9 +237,10 @@ wrapperTag: div
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
         {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+        {{> divider divider--type="div" divider--modifier="pf-u-hidden pf-u-display-flex-on-md"}}
         {{> table-simple-table}}
         {{> table-pagination-footer-static}}
       {{/card}}
@@ -242,7 +248,6 @@ wrapperTag: div
   {{/page-main}}
 {{/page}}
 ```
-
 
 ### Column management modal
 ```hbs isFullscreen
@@ -263,9 +268,10 @@ wrapperTag: div
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
         {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+        {{> divider divider--type="div" divider--modifier="pf-u-hidden pf-u-display-flex-on-md"}}
         {{> table-simple-table}}
       {{/card}}
     {{/page-main-section}}
@@ -324,9 +330,10 @@ wrapperTag: div
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
-    {{#> page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
         {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+        {{> divider divider--type="div" divider--modifier="pf-u-hidden pf-u-display-flex-on-md"}}
         {{> table-simple-table table-simple-table--modifier="pf-m-sticky-header"}}
         {{> table-pagination-footer}}
       {{/card}}
