@@ -163,11 +163,9 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__main-wizard--BorderTopWidth: var(--pf-global--BorderWidth--sm);
 
   // masthead
-  --pf-c-page__header--c-masthead-toggle--c-button--FontSize: var(--pf-global--FontSize--2xl);
-
-  // masthead
   --pf-c-page__header--c-masthead--inset: var(--pf-global--spacer--md);
   --pf-c-page__header--c-masthead--xl--inset: var(--pf-global--spacer--lg);
+  --pf-c-page__header--c-masthead-toggle--c-button--FontSize: var(--pf-global--FontSize--2xl);
 
   // Base
   display: grid;
