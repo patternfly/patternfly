@@ -17,7 +17,7 @@ cssPrefix: pf-c-notification-drawer
       2 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
-      {{> dropdown dropdown--id=(concat notification-drawer--id "-header-action") dropdown-toggle--IsPlain="true"}}
+      {{> dropdown dropdown-menu--modifier="pf-m-align-right" dropdown--id=(concat notification-drawer--id "-header-action") dropdown-toggle--IsPlain="true"}}
       {{> notification-drawer-header-action-close}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}
@@ -38,7 +38,7 @@ cssPrefix: pf-c-notification-drawer
       2 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
-      {{> dropdown dropdown--id=(concat notification-drawer--id "-header-action") dropdown-toggle--IsPlain="true"}}
+      {{> dropdown dropdown-menu--modifier="pf-m-align-right" dropdown--id=(concat notification-drawer--id "-header-action") dropdown-toggle--IsPlain="true"}}
       {{> notification-drawer-header-action-close}}
     {{/notification-drawer-header-action}}
   {{/notification-drawer-header}}
