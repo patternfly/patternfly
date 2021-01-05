@@ -161,7 +161,8 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 // content
 .pf-c-masthead__content {
   display: flex;
-  flex: 1 1 0;
+  flex-grow: 1;
+  flex-shrink: 1;
   align-items: center;
   align-self: stretch;
   order: var(--pf-c-masthead__content--Order);
