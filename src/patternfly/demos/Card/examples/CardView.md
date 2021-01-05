@@ -85,8 +85,7 @@ wrapperTag: div
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
-      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
+      {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain="true"}}
     {{/card-actions}}
     {{#> level level--modifier="pf-m-gutter"}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
@@ -138,8 +137,7 @@ wrapperTag: div
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
-      {{#> dropdown id=(concat card--id "-dropdown-kebab-right-aligned") dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-      {{/dropdown}}
+      {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain="true"}}
     {{/card-actions}}
     {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
       Getting started

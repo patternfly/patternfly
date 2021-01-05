@@ -242,7 +242,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <div id="{{data-list--id}}-item2">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <div id="{{data-list--id}}-{{data-list-item--id}}">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span>Lorem ipsum dolor sit amet.</span>
@@ -262,7 +262,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-3"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
@@ -272,7 +272,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}
         {{#> data-list-cell}}
-          <div id="{{data-list--id}}-item3">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <div id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span>Lorem ipsum dolor sit amet.</span>
@@ -297,7 +297,7 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Expandable compact
 ```hbs
 {{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-expandable" data-list--attribute='aria-label="Expandable data list example"'}}
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
@@ -307,7 +307,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}
         {{#> data-list-cell}}
-          <div id="{{data-list--id}}-item1">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <div id="{{data-list--id}}-{{data-list-item--id}}">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           <a href="#">link</a>
         {{/data-list-cell}}
         {{#> data-list-cell}}
@@ -328,7 +328,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}

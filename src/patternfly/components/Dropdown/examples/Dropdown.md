@@ -56,7 +56,7 @@ import './Dropdown.css'
 
 ### Menu item icons
 ```hbs
-{{> dropdown dropdown--id="dropdown-menu-item-icons" dropdown--HasItemIcons="true" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown"}}
+{{> dropdown dropdown--id="dropdown-menu-item-icons" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown" dropdown-menu--HasIcons="true"}}
 ```
 
 ### Split button (checkbox)
@@ -111,8 +111,7 @@ The dropdown panel is provided for flexibility in allowing various content withi
 ### Primary toggle
 ```hbs
 {{> dropdown dropdown--id="dropdown-primary-toggle" dropdown-toggle--modifier="pf-m-primary" dropdown-toggle--text="Collapsed dropdown"}}
-{{> dropdown dropdown--id="dropdown-primary-toggle-expanded" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-primary" dropdown-toggle--text="Expanded dropdown"
-}}
+{{> dropdown dropdown--id="dropdown-primary-toggle-expanded" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-primary" dropdown-toggle--text="Expanded dropdown"}}
 ```
 
 ### Dropdown with image and text

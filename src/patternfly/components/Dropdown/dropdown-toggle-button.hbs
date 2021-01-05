@@ -4,11 +4,11 @@
     aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"
     id="{{dropdown--id}}-toggle-button"
   {{/if}}
-  aria-label="{{#if dropdown-toggle-button--aria-label}}
-    {{dropdown-toggle-button--aria-label}}
+  {{#if dropdown-toggle-button--aria-label}}
+    aria-label="{{dropdown-toggle-button--aria-label}}"
   {{else}}
-    Dropdown toggle
-  {{/if}}"
+    aria-label="Dropdown toggle"
+  {{/if}}
   {{#if dropdown-toggle--IsDisabled}}
     disabled
   {{/if}}

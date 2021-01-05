@@ -7,16 +7,16 @@
     {{#if dropdown-toggle--IsDisabled}}
       disabled
     {{/if}}
-    aria-label="{{#if dropdown-toggle-check--aria-label}}
-      {{dropdown-toggle-check--aria-label}}
+    {{#if dropdown-toggle-check--aria-label}}
+      aria-label="{{dropdown-toggle-check--aria-label}}"
     {{else}}
-      Check
-    {{/if}}"
+      aria-label="Check"
+    {{/if}}
     {{#if dropdown-toggle-check--CheckboxIsChecked}}
       checked
     {{/if}}
     {{#if dropdown-toggle--split-button--text}}
-      aria-labelledby="{{dropdown--id}}-toggle-check"
+      aria-labelledby="{{dropdown--id}}-toggle-check {{dropdown--id}}-toggle-check-text"
     {{/if}}>
   {{#if dropdown-toggle--split-button--text}}
     {{#> dropdown-toggle-text dropdown-toggle-text--attribute=(concat 'aria-hidden="true" id="' dropdown--id '-toggle-check-text"')}}
