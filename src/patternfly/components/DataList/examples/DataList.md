@@ -9,11 +9,11 @@ cssPrefix: pf-c-data-list
 ### Basic
 ```hbs
 {{#> data-list data-list--id="data-list-basic" data-list--attribute='aria-label="Basic data list example"'}}
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item1">Primary content</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Secondary content
@@ -22,11 +22,11 @@ cssPrefix: pf-c-data-list
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill"}}
-          <span id="{{data-list--id}}-item2">Secondary content (pf-m-no-fill)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Secondary content (pf-m-no-fill)</span>
         {{/data-list-cell}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
           Secondary content (pf-m-align-right pf-m-no-fill)
@@ -63,11 +63,11 @@ cssPrefix: pf-c-data-list
 ### With headings
 ```hbs
 {{#> data-list data-list--id="data-list-with-headings" data-list--attribute='aria-label="With headings data list example"'}}
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <h2 id="{{data-list--id}}-item1">Primary content</h2>
+          <h2 id="{{data-list--id}}-{{data-list-item--id}}">Primary content</h2>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Secondary content
@@ -76,11 +76,11 @@ cssPrefix: pf-c-data-list
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill"}}
-          <h2 id="{{data-list--id}}-item2">Secondary content (pf-m-no-fill)</h2>
+          <h2 id="{{data-list--id}}-{{data-list-item--id}}">Secondary content (pf-m-no-fill)</h2>
         {{/data-list-cell}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
           Secondary content (pf-m-align-right pf-m-no-fill)
@@ -99,14 +99,14 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Checkboxes, actions, and additional cells
 ```hbs
 {{#> data-list data-list--id="data-list-checkboxes-actions-addl-cells" data-list--attribute='aria-label="Checkbox and action data list example"'}}
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1"')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item1">Primary content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
@@ -121,28 +121,24 @@ When a list item includes more than one block of content, it can be difficult fo
           <span>More Content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check2" aria-labelledby="' data-list--id '-item2"')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item2">Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
-        {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
       {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-lg"}}
         {{#> button button--modifier="pf-m-primary"}}
             Primary
@@ -154,22 +150,20 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+  {{#> data-list-item data-list-item--id="item-3"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check3" aria-labelledby="' data-list--id '-item3"')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item3">Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-xl"}}
-        {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
       {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-xl"}}
         {{#> button button--modifier="pf-m-primary"}}
             Primary
@@ -212,7 +206,7 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Expandable
 ```hbs
 {{#> data-list data-list--id="data-list-expandable" data-list--attribute='aria-label="Expandable data list example"'}}
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
@@ -222,7 +216,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}
         {{#> data-list-cell}}
-          <div id="{{data-list--id}}-item1">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           <a href="#">link</a>
         {{/data-list-cell}}
         {{#> data-list-cell}}
@@ -232,9 +226,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
       {{#> data-list-expandable-content-body}}
@@ -243,14 +235,14 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <div id="{{data-list--id}}-item2">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <div id="{{data-list--id}}-{{data-list-item--id}}">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span>Lorem ipsum dolor sit amet.</span>
@@ -270,7 +262,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-3"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
@@ -280,7 +272,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}
         {{#> data-list-cell}}
-          <div id="{{data-list--id}}-item3">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <div id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span>Lorem ipsum dolor sit amet.</span>
@@ -305,7 +297,7 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Expandable compact
 ```hbs
 {{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-expandable" data-list--attribute='aria-label="Expandable data list example"'}}
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
@@ -315,7 +307,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}
         {{#> data-list-cell}}
-          <div id="{{data-list--id}}-item1">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <div id="{{data-list--id}}-{{data-list-item--id}}">Primary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
           <a href="#">link</a>
         {{/data-list-cell}}
         {{#> data-list-cell}}
@@ -336,7 +328,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
@@ -346,7 +338,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}
         {{#> data-list-cell}}
-          <div id="{{data-list--id}}-item2">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Secondary content</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span>Lorem ipsum dolor sit amet.</span>
@@ -355,9 +347,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Secondary content details"')}}
       {{#> data-list-expandable-content-body}}
@@ -366,7 +356,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+  {{#> data-list-item data-list-item--id="item-3" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
@@ -376,7 +366,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <i class="fas fa-code-branch" aria-hidden="true"></i>
         {{/data-list-cell}}
         {{#> data-list-cell}}
-          <div id="{{data-list--id}}-item3">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           <span>Lorem ipsum dolor sit amet.</span>
@@ -385,9 +375,7 @@ When a list item includes more than one block of content, it can be difficult fo
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Tertiary content details"')}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
@@ -401,14 +389,14 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Compact
 ```hbs
 {{#> data-list data-list--id="data-list-compact" data-list--attribute='aria-label="Compact data list example"' data-list--modifier="pf-m-compact pf-m-grid-sm"}}
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1"')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item1">Primary content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
@@ -423,28 +411,24 @@ When a list item includes more than one block of content, it can be difficult fo
           <span>More Content</span> Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check2" aria-labelledby="' data-list--id '-item2"')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item2">Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
-        {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-lg"}}
       {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-lg"}}
         {{#> button button--modifier="pf-m-primary"}}
             Primary
@@ -456,22 +440,20 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+  {{#> data-list-item data-list-item--id="item-3"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check3" aria-labelledby="' data-list--id '-item3"')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item3">Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content - lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Secondary content. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-xl"}}
-        {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action data-list-item-action--modifier="pf-m-hidden-on-xl"}}
       {{#> data-list-item-action data-list-item-action--modifier="pf-m-hidden pf-m-visible-on-xl"}}
         {{#> button button--modifier="pf-m-primary"}}
             Primary
@@ -520,15 +502,15 @@ When a list item includes more than one block of content, it can be difficult fo
 {{!-- Example 1 --}}
 <h2 class="Preview__section-title">Default fitting - example 1</h2>
 {{#> data-list data-list--id="data-list-default-fitting" data-list--attribute='aria-label="Width modifier data list example 1"'}}
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id 'check-action-check1" aria-labelledby="' data-list--id '-item1"')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
           <div class="Preview__placeholder">
-            <b id="{{data-list--id}}-item1">default</b>
+            <b id="{{data-list--id}}-{{data-list-item--id}}">default</b>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
         {{/data-list-cell}}
@@ -546,15 +528,15 @@ When a list item includes more than one block of content, it can be difficult fo
 {{!-- Example 2 --}}
 <h2 class="Preview__section-title">Flex modifiers - example 2</h2>
 {{#> data-list data-list--id="data-list-flex-modifiers" data-list--attribute='aria-label="Width modifier data list example 2"'}}
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id 'check-action-check1" aria-labelledby="' data-list--id '-item1"')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-flex-2"}}
           <div class="Preview__placeholder">
-            <b id="{{data-list--id}}-item1">.pf-m-flex-2</b>
+            <b id="{{data-list--id}}-{{data-list-item--id}}">.pf-m-flex-2</b>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
           </div>
         {{/data-list-cell}}
@@ -565,9 +547,7 @@ When a list item includes more than one block of content, it can be difficult fo
           </div>
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
   {{/data-list-item}}
 {{/data-list}}
@@ -575,16 +555,16 @@ When a list item includes more than one block of content, it can be difficult fo
 {{!-- Example 3 --}}
 <h2 class="Preview__section-title">Flex modifiers - example 3</h2>
 {{#> data-list data-list--id="data-list-flex-modifiers-2" data-list--attribute='aria-label="Width modifier data list example 3"'}}
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id 'check-action-check1" aria-labelledby="' data-list--id '-item1"')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell data-list-cell--modifier="pf-m-flex-5"}}
           <div class="Preview__placeholder">
-            <b id="{{data-list--id}}-item1">.pf-m-flex-5</b>
+            <b id="{{data-list--id}}-{{data-list-item--id}}">.pf-m-flex-5</b>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
         {{/data-list-cell}}
@@ -607,9 +587,7 @@ When a list item includes more than one block of content, it can be difficult fo
           </div>
         {{/data-list-cell}}
       {{/data-list-item-content}}
-      {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
-      {{/data-list-item-action}}
+      {{> data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
       {{#> data-list-expandable-content-body}}
@@ -633,31 +611,31 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Selectable rows
 ```hbs
 {{#> data-list data-list--id="data-list-selectable-rows" data-list--attribute='aria-label="Selectable rows data list example"'}}
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1" tabindex="0"')}}
+  {{#> data-list-item data-list-item--id="item-1" data-list-item--IsSelectable="true" data-list-item--IsSelected="true" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item1">Primary content</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2" tabindex="0"')}}
+  {{#> data-list-item data-list-item--id="item-2" data-list-item--IsSelectable="true" data-list-item--IsSelected="true" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item2">Secondary content (selected)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Secondary content (selected)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3" tabindex="0"')}}
+  {{#> data-list-item data-list-item--id="item-3" data-list-item--IsSelectable="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item3">Tertiary content</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -677,15 +655,15 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ### Selectable expandable rows
 ```hbs
-{{#> data-list data-list--id="data-list-selectable-expandable-rows" data-list--attribute='aria-label="Selectable, expandable data list example"'}}
-  {{#> data-list-item data-list-item--expanded="true" data-list-item--modifier="pf-m-selectable pf-m-selected" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1" tabindex="0"')}}
+{{#> data-list data-list--id="data-list-selectable-expandable-rows" data-list-item--IsSelectable="true" data-list--attribute='aria-label="Selectable, expandable data list example"'}}
+  {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item1">Primary content (selected, expanded)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content (selected, expanded)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -696,14 +674,14 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2" tabindex="0"')}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item2">Secondary content</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Secondary content</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -714,14 +692,14 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--expanded="true" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3" tabindex="0"')}}
+  {{#> data-list-item data-list-item--id="item-3" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item3">Tertiary content (not selected, expanded)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content (not selected, expanded)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -732,14 +710,14 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-expandable-content}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-selectable" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4" tabindex="0"')}}
+  {{#> data-list-item data-list-item--id="item-4"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle4 ' data-list--id '-item4" id="' data-list--id '-toggle4" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content4"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item4">Quaternary content (selected)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Quaternary content (selected)</span>
         {{/data-list-cell}}
 
       {{/data-list-item-content}}
@@ -759,15 +737,15 @@ When a list item includes more than one block of content, it can be difficult fo
   Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
 </div>
 {{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-item-draggable-button data-list-item-draggable-button--modifier="pf-m-disabled" data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-1" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-1 ' data-list--id '-item-1" disabled')}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check1" aria-labelledby="' data-list--id '-item1" checked')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-item1"')}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
             Draggable icon disabled
           {{/data-list-cell-text}}
         {{/data-list-cell}}
@@ -775,15 +753,15 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item2"')}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-2" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-2 ' data-list--id '-item-2"')}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check2" aria-labelledby="' data-list--id '-item2" checked')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-item2"')}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
             List item
           {{/data-list-cell-text}}
         {{/data-list-cell}}
@@ -791,15 +769,15 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--modifier="pf-m-ghost-row" data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item3"')}}
+  {{#> data-list-item data-list-item--id="item-3" data-list-item--modifier="pf-m-ghost-row"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
          {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-3" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-3 ' data-list--id '-item-3" disabled')}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check3" aria-labelledby="' data-list--id '-item3" checked disabled')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-item3"')}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
             Ghost row
           {{/data-list-cell-text}}
         {{/data-list-cell}}
@@ -807,15 +785,15 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item4"')}}
+  {{#> data-list-item data-list-item--id="item-4"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-4" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-4 ' data-list--id '-item-4"')}}
-        {{#> data-list-check checkbox--attribute=(concat 'name="' data-list--id '-check-action-check4" aria-labelledby="' data-list--id '-item4" checked')}}{{/data-list-check}}
+        {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-item4"')}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
             List item
           {{/data-list-cell-text}}
         {{/data-list-cell}}
@@ -847,14 +825,14 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-disabled` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the disabled state. |
 | `.pf-m-drag-over` | `.pf-c-data-list` | Modifies the data list to indicate that a draggable item is being dragged over the data list. |
 
-### Text-modifiers
+### Text modifiers
 ```hbs
 {{#> data-list data-list--id="data-list-with-text-modifiers" data-list--attribute='aria-label="Data list with text modifiers"'}}
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item1">
+          <span id="{{data-list--id}}-{{data-list-item--id}}">
             This text will wrap to the next line because it has the default behavior of the data list cell.
           </span>
         {{/data-list-cell}}
@@ -872,9 +850,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{#> data-list-item-row data-list-item-row--modifier="pf-m-truncate"}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item2">
            This text will truncate because it is very very long. This text will truncate because it is very very long.
-          </span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           This text will truncate because it is very very long. This text will truncate because it is very very long.
@@ -890,9 +866,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{#> data-list-item-row data-list-item-row--modifier="pf-m-break-word"}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item3">
            http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
-          </span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           http://thisisaverylongurlthatneedstobreakusethebreakwordmodifier.org
@@ -908,9 +882,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{#> data-list-item-row data-list-item-row--modifier="pf-m-nowrap"}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item4">
            This text will not break or wrap.
-          </span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           This text will not break or wrap.
@@ -930,11 +902,11 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Text-modifiers-data-list-text
 ```hbs
 {{#> data-list data-list--id="data-list-with-text-modifiers-and-text" data-list--attribute='aria-label="Data list with modifiers and text"'}}
-  {{#> data-list-item data-list-item--attribute=(concat 'aria-labelledby="' data-list--id '-item1"')}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-item1">
+          <span id="{{data-list--id}}-{{data-list-item--id}}">
             This text will wrap to the next line because it has the default behavior of the data list cell.
           </span>
           {{#> data-list-text data-list-text--modifier="pf-m-truncate"}}
@@ -976,11 +948,13 @@ The DataList component provides a flexible alternative to the Table component, w
 ### Grid
 ```hbs
 {{#> data-list data-list--id="data-list-grid" data-list--attribute='aria-label="Grid data list example"' data-list--modifier="pf-m-grid"}}
-  {{#> data-list-item}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          Cell 1
+          <span id="{{data-list--id}}-{{data-list-item--id}}">
+            Cell 1
+          </span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Cell 2
@@ -1000,11 +974,13 @@ The DataList component provides a flexible alternative to the Table component, w
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
-  {{#> data-list-item}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          Cell 1
+          <span id="{{data-list--id}}-{{data-list-item--id}}">
+            Cell 1
+          </span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Cell 2
@@ -1030,11 +1006,13 @@ The DataList component provides a flexible alternative to the Table component, w
 ### Grid (small breakpoint)
 ```hbs
 {{#> data-list data-list--id="data-list-grid-small" data-list--attribute='aria-label="Grid small data list example"' data-list--modifier="pf-m-grid-sm"}}
-  {{#> data-list-item}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          Cell 1
+          <span id="{{data-list--id}}-{{data-list-item--id}}">
+            Cell 1
+          </span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Cell 2
@@ -1054,11 +1032,13 @@ The DataList component provides a flexible alternative to the Table component, w
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
-  {{#> data-list-item}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          Cell 1
+          <span id="{{data-list--id}}-{{data-list-item--id}}">
+            Cell 1
+          </span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Cell 2
@@ -1084,11 +1064,13 @@ The DataList component provides a flexible alternative to the Table component, w
 ### Grid none
 ```hbs
 {{#> data-list data-list--id="data-list-grid-none" data-list--attribute='aria-label="Grid none data list example"' data-list--modifier="pf-m-grid-none"}}
-  {{#> data-list-item}}
+  {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          Cell 1
+          <span id="{{data-list--id}}-{{data-list-item--id}}">
+            Cell 1
+          </span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Cell 2
@@ -1108,11 +1090,13 @@ The DataList component provides a flexible alternative to the Table component, w
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
-  {{#> data-list-item}}
+  {{#> data-list-item data-list-item--id="item-2"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          Cell 1
+          <span id="{{data-list--id}}-{{data-list-item--id}}">
+            Cell 1
+          </span>
         {{/data-list-cell}}
         {{#> data-list-cell}}
           Cell 2

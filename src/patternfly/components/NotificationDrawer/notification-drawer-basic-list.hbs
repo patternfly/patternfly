@@ -7,7 +7,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action1") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-1') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This is an info notification description.
@@ -24,7 +24,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action2") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-2') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This is a danger notification description. This is a long description to show how the title will wrap if it is long and wraps to multiple lines.
@@ -41,7 +41,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action3") dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-3') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This is a recommendation notification description. This is a long description to show how the title will wrap if it is long and wraps to multiple lines.
@@ -58,7 +58,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action4") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-4') dropdown--modifier="pf-m-top" dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This is a warning notification description.
@@ -75,7 +75,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action5") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-5') dropdown--modifier="pf-m-top" dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This is a success notification description.
@@ -92,7 +92,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action6") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-6') dropdown--modifier="pf-m-top" dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This example uses ".pf-m-truncate" to limit the title to a single line and truncate any overflow text with ellipses.
@@ -109,7 +109,7 @@
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
-      {{#> dropdown id=(concat notification-drawer--id "-action7") dropdown--modifier="pf-m-top" dropdown-menu--modifier="pf-m-align-right" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-7') dropdown--modifier="pf-m-top" dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
     {{/notification-drawer-list-item-action}}
     {{#> notification-drawer-list-item-description}}
       This example uses ".pf-m-truncate" and sets "--pf-c-notification-drawer__list-item-header-title--max-lines: 2" to limit title to two lines and truncate any overflow text with ellipses.

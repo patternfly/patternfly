@@ -7,54 +7,36 @@ cssPrefix: pf-c-dropdown
 import './Dropdown.css'
 
 ## Examples
-
 ### Expanded
 ```hbs
-{{#> dropdown id="dropdown-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
-  {{#> dropdown-toggle-text}}
-    Expanded dropdown
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-expanded" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown"}}
 ```
 
 ### Collapsed
 ```hbs
-{{#> dropdown id="dropdown-collapsed" dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true"}}
-  {{#> dropdown-toggle-text}}
-    Collapsed dropdown
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-collapsed" dropdown-toggle--text="Collapsed dropdown"}}
 ```
 
 ### Disabled
 ```hbs
-{{#> dropdown id="dropdown-disabled" dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true" dropdown-toggle--IsDisabled="true"}}
-  {{#> dropdown-toggle-text}}
-    Disabled dropdown
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-disabled" dropdown-toggle--IsDisabled="true" dropdown-toggle--text="Disabled dropdown"}}
 ```
 
 ### Kebab
 ```hbs
-{{#> dropdown id="dropdown-kebab-disabled" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions" dropdown-toggle--IsDisabled="true"}}{{/dropdown}}
-{{#> dropdown id="dropdown-kebab" dropdown--IsActionMenu="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
-{{#> dropdown id="dropdown-kebab-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-kebab-disabled" dropdown-toggle--IsPlain="true" dropdown-toggle--IsDisabled="true"}}
+{{> dropdown dropdown--id="dropdown-kebab" dropdown-toggle--IsPlain="true"}}
+{{> dropdown dropdown--id="dropdown-kebab-expanded" dropdown--IsExpanded="true" dropdown-toggle--IsPlain="true"}}
 ```
 
 ### Kebab align right
 ```hbs
-{{#> dropdown id="dropdown-kebab-align-right" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-kebab-align-right" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
 ```
 
 ### Align right
 ```hbs
-{{#> dropdown id="dropdown-align-right" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown-menu--modifier="pf-m-align-right"}}
-  {{#> dropdown-toggle-text}}
-    Right
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-align-right" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--text="Right"}}
 ```
 
 ### Align on different breakpoint
@@ -68,117 +50,59 @@ import './Dropdown.css'
 
 ### Align top
 ```hbs
-{{#> dropdown id="dropdown-align-top" dropdown--IsActionMenu="true" dropdown--modifier="pf-m-top" dropdown--HasToggleIcon="true"}}
-  {{#> dropdown-toggle-text}}
-    Top
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
-{{#> dropdown id="dropdown-align-top-expanded" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--modifier="pf-m-top" dropdown--HasToggleIcon="true"}}
-  {{#> dropdown-toggle-text}}
-    Top
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-align-top" dropdown--modifier="pf-m-top" dropdown-toggle--text="Top"}}
+{{> dropdown dropdown--id="dropdown-align-top-expanded" dropdown--modifier="pf-m-top" dropdown--IsExpanded="true" dropdown-toggle--text="Top"}}
 ```
 
 ### Menu item icons
 ```hbs
-{{#> dropdown id="dropdown-menu-item-icons" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasItemIcons="true" dropdown--HasToggleIcon="true"}}
-  {{#> dropdown-toggle-text}}
-    Expanded dropdown
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-menu-item-icons" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown" dropdown-menu--HasIcons="true"}}
 ```
 
 ### Split button (checkbox)
 ```hbs
-{{#> dropdown id="dropdown-split-button-disabled" dropdown--IsSplitButton="true" dropdown-toggle--IsDisabled="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
-  {{> dropdown-toggle-check aria-label="Select all"}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-split-button-disabled" dropdown--template--SplitButton="true" dropdown-toggle--HasCheckBox="true" dropdown-toggle--IsDisabled="true"}}
 
-{{#> dropdown id="dropdown-split-button" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
-  {{> dropdown-toggle-check aria-label="Select all"}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
 
-{{#> dropdown id="dropdown-split-button-expanded" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
-  {{> dropdown-toggle-check aria-label="Select all"}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-split-button-expanded" dropdown--template--SplitButton="true" dropdown--IsExpanded="true" dropdown-toggle--HasCheckBox="true"}}
 ```
 
 ### Split button (checkbox with toggle text)
 ```hbs
-{{#> dropdown id="dropdown-split-button-text" dropdown--IsSplitButton="true" dropdown--IsSplitButtonText="10 selected" dropdown--CheckboxIsChecked="true" dropdown--IsBulkSelect="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
-  {{> dropdown-toggle-check aria-label="Unselect all"}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
 ```
 
 ### Split button (action)
 ```hbs
-{{#> dropdown id="dropdown-split-button-action" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
-  {{#> dropdown-toggle-button}}
-    Action
-  {{/dropdown-toggle-button}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-{{/dropdown}}
-
-{{#> dropdown id="dropdown-split-button-action-expanded" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
-  {{#> dropdown-toggle-button}}
-    Action
-  {{/dropdown-toggle-button}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-{{/dropdown}}
-
-{{#> dropdown id="dropdown-split-button-action-icon" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
-  {{#> dropdown-toggle-button aria-label="Settings"}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
-  {{/dropdown-toggle-button}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-{{/dropdown}}
-
-{{#> dropdown id="dropdown-split-button-action-icon-expanded" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown--HasItemIcons="true" dropdown-toggle--modifier="pf-m-split-button pf-m-action"}}
-  {{#> dropdown-toggle-button aria-label="Settings"}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
-  {{/dropdown-toggle-button}}
-  {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-{{/dropdown}}
+{{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
+{{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-expanded" dropdown--IsActionButton="true" dropdown--IsExpanded="true" dropdown-toggle--HasActionButton="true"}}
+{{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+{{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-icon-expanded" dropdown--IsActionButton="true" dropdown--IsExpanded="true" dropdown-menu--HasIcons="true" dropdown-toggle--HasIconButton="true"}}
 ```
 
 ### With groups
 ```hbs
-{{#> dropdown id="dropdown-groups" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown--IsGroupsMenu="true"}}
-  {{#> dropdown-toggle-text}}
-    Groups
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--template--Groups="true" dropdown--id="dropdown-groups" dropdown--IsExpanded="true" dropdown-toggle--text="Groups"}}
 ```
 
 ### With groups and dividers between groups
 ```hbs
-{{#> dropdown id="dropdown-groups-and-dividers-between-groups" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown--IsGroupsMenu="true" dropdown--HasDividersGroups="true"}}
-  {{#> dropdown-toggle-text}}
-    Groups
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--template--Groups="true" dropdown--id="dropdown-groups-and-dividers-between-groups" dropdown--IsExpanded="true" dropdown--HasGroupDividers="true" dropdown-menu--HasIcons="true" dropdown-toggle--text="Groups"}}
 ```
 
 ### With groups and dividers between items
 ```hbs
-{{#> dropdown id="dropdown-groups-and-dividers-between-items" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown--IsGroupsMenu="true" dropdown--HasDividersItems="true"}}
-  {{#> dropdown-toggle-text}}
-    Groups
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-groups-and-dividers-between-items" dropdown--template--Groups="true" dropdown--IsExpanded="true" dropdown--HasItemDividers="true" dropdown-toggle--text="Groups"}}
 ```
 
 ### Panel
 ```hbs
-{{#> dropdown id="dropdown-panel" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
-  {{#> dropdown-toggle-text}}
-    Expanded dropdown
-  {{/dropdown-toggle-text}}
+{{#> dropdown dropdown--id="dropdown-panel" dropdown--IsExpanded="true"}}
+  {{> dropdown-toggle dropdown-toggle--text="Expanded dropdown"}}
+  {{#> dropdown-menu dropdown-menu--type="div"}}
+    [Panel contents here]
+  {{/dropdown-menu}}
 {{/dropdown}}
 ```
 
@@ -186,39 +110,18 @@ The dropdown panel is provided for flexibility in allowing various content withi
 
 ### Primary toggle
 ```hbs
-{{#> dropdown id="dropdown-primary-toggle" dropdown-toggle--modifier="pf-m-primary" dropdown--IsActionMenu="true" dropdown--HasToggleIcon="true"}}
-  {{#> dropdown-toggle-text}}
-    Collapsed dropdown
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
-&nbsp;
-{{#> dropdown id="dropdown-primary-toggle-expanded" dropdown-toggle--modifier="pf-m-primary" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
-  {{#> dropdown-toggle-text}}
-    Expanded dropdown
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-primary-toggle" dropdown-toggle--modifier="pf-m-primary" dropdown-toggle--text="Collapsed dropdown"}}
+{{> dropdown dropdown--id="dropdown-primary-toggle-expanded" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-primary" dropdown-toggle--text="Expanded dropdown"}}
 ```
 
 ### Dropdown with image and text
 ```hbs
-{{#> dropdown id="dropdown-with-image-and-text-example" dropdown--IsMenuToggleImageText="true" dropdown--IsExpanded="true"}}
-  {{#> dropdown-toggle-image}}
-    {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
-  {{/dropdown-toggle-image}}
-  {{#> dropdown-toggle-text}}
-    Ned Username
-  {{/dropdown-toggle-text}}
-  {{> dropdown-toggle-icon}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-with-image-and-text-example" dropdown--template--MenuToggleImageText="true" dropdown--IsExpanded="true"}}
 ```
 
 ### Dropdown with description
 ```hbs
-{{#> dropdown id="dropdown-with-description" dropdown--IsDescriptionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true"}}
-  {{#> dropdown-toggle-text}}
-    Expanded dropdown
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown dropdown--id="dropdown-with-description" dropdown--template--DescriptionMenu="true" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown"}}
 ```
 
 ## Documentation

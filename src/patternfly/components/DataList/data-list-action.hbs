@@ -2,7 +2,9 @@
   {{#if data-list-action--attribute}}
     {{{data-list-action--attribute}}}
   {{/if}}>
-  {{#> dropdown dropdown--IsActionMenu="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--modifier="pf-m-plain" dropdown--HasKebabIcon="true" aria-label="Actions"}}
-  {{/dropdown}}
-  {{> @partial-block}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    {{> dropdown dropdown--id=(concat data-list--id '-' data-list-item--id '-dropdown-kebab') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
+  {{/if}}
 </div>

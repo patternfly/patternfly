@@ -155,7 +155,7 @@ import './options-menu.css'
 
 ### With groups and dividers between groups
 ```hbs
-{{#> options-menu id="options-menu-groups-and-dividers-between-groups" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasDividersGroups="true"}}
+{{#> options-menu id="options-menu-groups-and-dividers-between-groups" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasGroupDividers="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Options menu

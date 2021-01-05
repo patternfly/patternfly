@@ -578,12 +578,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 {{#> toolbar toolbar--id="toolbar-expanded-elements-example"}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
-      {{#> toolbar-item toolbar-item--modifier="pf-m-bulk-select"}}
-        {{#> dropdown id=(concat toolbar--id '-dropdown') dropdown--IsBulkSelect="true" dropdown--IsExpanded="true" dropdown--IsSplitButton="true" dropdown-toggle--type="div" dropdown-toggle--modifier="pf-m-split-button"}}
-          {{> dropdown-toggle-check aria-label="Select all"}}
-          {{> dropdown-toggle-button dropdown--IsToggleButton="true" aria-label="Select"}}
-        {{/dropdown}}
-      {{/toolbar-item}}
+      {{> toolbar-item-bulk-select}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
         {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
         {{> toolbar-item-search-filter button--id="content"}}
