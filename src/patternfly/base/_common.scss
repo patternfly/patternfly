@@ -23,3 +23,7 @@
   @include pf-u-screen-reader; // for use with assistive technologies
 }
 // stylelint-enable
+
+.pf-svg-vertical-align { // this is for patternfly-react proper SVG image alignment
+  vertical-align: -.125em;
+}
