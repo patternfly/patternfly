@@ -293,7 +293,7 @@ import './Menu.css'
 
 ### Drilldown
 ```hbs
-{{> menu-drilldown-example menu-drilldown-example--id="drilldown-default"}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-default"}}
 ```
 
 ### Drilldown level two
@@ -314,6 +314,37 @@ import './Menu.css'
 ### Width modified drilldown
 ```hbs
 {{> menu-drilldown-example menu-drilldown-example--menu__content--attribute='style="--pf-c-menu--m-drilldown--Width: 350px;"'}}
+```
+
+### Drilldown with breadcrumbs - level 1
+```hbs
+{{#> menu menu--id="drilldown-with-breadcrumbs-level-1" menu--modifier="pf-m-drilldown"}}
+  {{> menu-content--Breadcrumbs}}
+{{/menu}}
+```
+
+### Drilldown with breadcrumbs - level 2
+```hbs
+{{#> menu menu--id="drilldown-with-breadcrumbs-level-2" menu--modifier="pf-m-drilldown pf-m-drilled-in"}}
+  {{> menu-breadcrumbs--Drilldown menu-breadcrumbs--Drilldown--IsLevel2="true"}}
+  {{> menu-content--Breadcrumbs menu-content--Breadcrumbs--level2="true" menu-content--attribute='style="--pf-c-menu__content--Height: 80px"'}}
+{{/menu}}
+```
+
+### Drilldown with breadcrumbs - level 3
+```hbs
+{{#> menu menu--id="drilldown-with-breadcrumbs-level-3" menu--modifier="pf-m-drilldown pf-m-drilled-in"}}
+  {{> menu-breadcrumbs--Drilldown menu-breadcrumbs--Drilldown--IsLevel3="true"}}
+  {{> menu-content--Breadcrumbs menu-content--Breadcrumbs--level2="true" menu-content--Breadcrumbs--level3="true" menu-content--attribute='style="--pf-c-menu__content--Height: 120px"'}}
+{{/menu}}
+```
+
+### Drilldown with breadcrumbs - level 4
+```hbs
+{{#> menu menu--id="drilldown-with-breadcrumbs-level-4" menu--modifier="pf-m-drilldown pf-m-drilled-in"}}
+  {{> menu-breadcrumbs--Drilldown breadcrumb--id="drilldown-with-breadcrumbs-level-4" menu-breadcrumbs--Drilldown--IsLevel4="true"}}
+  {{> menu-content--Breadcrumbs menu-content--Breadcrumbs--level2="true" menu-content--Breadcrumbs--level3="true" menu-content--Breadcrumbs--level4="true" menu-content--attribute='style="--pf-c-menu__content--Height: 200px"'}}
+{{/menu}}
 ```
 
 ### With filtering

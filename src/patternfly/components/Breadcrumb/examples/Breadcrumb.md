@@ -119,6 +119,40 @@ cssPrefix: pf-c-breadcrumb
 {{/breadcrumb}}
 ```
 
+### With dropdown
+```hbs
+{{#> breadcrumb breadcrumb--id="breadcrumb-with-dropdown-example"}}
+  {{#> breadcrumb-list}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-link}}
+        Section home
+      {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-dropdown}}
+        {{> dropdown dropdown--id="dropdown-badge-toggle" dropdown--template--Breadcrumb="true" dropdown--IsExpanded="true" menu-list-item--IsDrillUp="true"}}
+      {{/breadcrumb-dropdown}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-heading}}
+        {{#> breadcrumb-link breadcrumb-link--current="true"}}
+          Section title
+        {{/breadcrumb-link}}
+      {{/breadcrumb-heading}}
+    {{/breadcrumb-item}}
+  {{/breadcrumb-list}}
+{{/breadcrumb}}
+```
+
 ## Documentation
 ### Overview
 A breadcrumb is a list of links to display a user's navigational hierarchy. The last item of the breadcrumb list indicates the current page's location.

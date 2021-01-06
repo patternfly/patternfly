@@ -10,6 +10,10 @@
   --pf-c-breadcrumb__item-divider--FontSize: var(--pf-global--FontSize--sm);
 
   // Breadcrumb link
+  --pf-c-breadcrumb__link--Color: var(--pf-global--link--Color);
+  --pf-c-breadcrumb__link--TextDecoration: var(--pf-global--link--TextDecoration);
+  --pf-c-breadcrumb__link--hover--Color: var(--pf-global--link--Color--hover);
+  --pf-c-breadcrumb__link--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
   --pf-c-breadcrumb__link--m-current--Color: var(--pf-global--Color--100);
 
   // Heading
@@ -53,7 +57,15 @@
   font-size: inherit;
   font-weight: var(--pf-c-breadcrumb__link--FontWeight);
   line-height: inherit;
+  color: var(--pf-c-breadcrumb__link--Color);
+  text-decoration: var(--pf-c-breadcrumb__link--TextDecoration);
   word-break: break-word;
+
+  &:hover {
+    --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__link--hover--Color);
+    --pf-c-breadcrumb__link--TextDecoration: var(--pf-c-breadcrumb__link--hover--TextDecoration);
+  }
+
 
   // current item
   &.pf-m-current {
@@ -64,6 +76,11 @@
       color: var(--pf-c-breadcrumb__link--m-current--Color);
       text-decoration: none;
     }
+  }
+
+  // update at breaking change
+  @at-root button#{&} {
+    border: none;
   }
 }
 
