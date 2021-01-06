@@ -1,0 +1,12 @@
+{{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+  {{#> l-flex-item}}
+    {{#if data-list--icon-text--icon}}
+      <i class="fas fa-{{data-list--icon-text--icon}}" aria-hidden="true"></i>
+    {{else}}
+      <i class="fas fa-code-branch" aria-hidden="true"></i>
+    {{/if}}
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    <span>{{data-list--icon-text--text}}</span>
+  {{/l-flex-item}}
+{{/l-flex}}

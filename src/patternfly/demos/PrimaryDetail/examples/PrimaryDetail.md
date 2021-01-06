@@ -29,8 +29,8 @@ wrapperTag: div
 
         <!-- Content -->
         {{#> drawer-content}}
-          {{> primary-detail-toolbar}}
-          {{> primary-detail-data-list}}
+          {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+          {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
         <!-- Panel -->
@@ -83,8 +83,8 @@ wrapperTag: div
 
         <!-- Content -->
         {{#> drawer-content}}
-          {{> primary-detail-toolbar}}
-          {{> primary-detail-data-list}}
+          {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+          {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
 
@@ -138,8 +138,8 @@ wrapperTag: div
 
         <!-- Content -->
         {{#> drawer-content drawer-content--modifier="pf-m-no-background" drawer-body--modifier="pf-m-padding"}}
-          {{> primary-detail-toolbar}}
-          {{> primary-detail-data-list}}
+          {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+          {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
         <!-- Panel -->
@@ -184,7 +184,7 @@ wrapperTag: div
       }}
 
       {{#> drawer-section}}
-        {{> primary-detail-toolbar primary-detail-toolbar--HasViewToggle="true"}}
+        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasBulkSelect="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true" toolbar--template--HasViewToggle="true"}}
         {{#> divider divider--type="div"}}{{/divider}}
       {{/drawer-section}}
 
@@ -290,10 +290,8 @@ wrapperTag: div
 
           <!-- Content -->
           {{#> drawer-content}}
-            {{#> drawer-body}}
-              {{> primary-detail-card-toolbar}}
-              {{> primary-detail-card-data-list}}
-            {{/drawer-body}}
+            {{> primary-detail-card-toolbar}}
+            {{> primary-detail-card-data-list}}
           {{/drawer-content}}
 
           <!-- Panel -->
@@ -340,10 +338,8 @@ wrapperTag: div
 
       <!-- Content -->
       {{#> drawer-content}}
-        {{#> drawer-body}}
-          {{> primary-detail-toolbar}}
-          {{> primary-detail-data-list}}
-        {{/drawer-body}}
+        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasDropdown="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true"}}
+        {{> data-list-simple-data-list}}
       {{/drawer-content}}
 
       <!-- Panel -->

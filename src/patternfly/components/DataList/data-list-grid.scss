@@ -62,7 +62,7 @@
     }
 
     &.pf-m-no-fill {
-      flex-grow: 0;
+      flex: none;
     }
 
     &.pf-m-flex-2 { flex-grow: 2; }
