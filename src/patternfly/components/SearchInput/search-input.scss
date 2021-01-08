@@ -30,12 +30,28 @@
   --pf-c-search-input__utilities--c-button--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-search-input__utilities--c-button--PaddingLeft: var(--pf-global--spacer--xs);
 
+  // Menu
+  --pf-c-search-input__menu--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-search-input__menu--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-search-input__menu--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-search-input__menu--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-search-input__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-search-input__menu--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-search-input__menu--Top: calc(100% + var(--pf-global--spacer--xs));
+  --pf-c-search-input__menu--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-search-input--m-top__menu--Top: 0;
+  --pf-c-search-input--m-top__menu--TranslateY: calc(-100% - var(--pf-global--spacer--xs));
+
+  position: relative;
+}
+
+.pf-c-search-input__bar {
   position: relative;
   display: flex;
-  padding: var(--pf-c-search-input--PaddingTop) var(--pf-c-search-input--PaddingRight) var(--pf-c-search-input--PaddingBottom) var(--pf-c-search-input--PaddingLeft);
+  width: 100%;
 
   &:hover {
-    --pf-c-search-input__text--after--BorderBottomColor: var(--pf-c-search-input--hover__text--after--BorderBottomColor);
+    --pf-c-search-input__text--after--BorderBottomColor: var(--pf-c-search-input__bar--hover__text--after--BorderBottomColor);
   }
 }
 
@@ -112,4 +128,21 @@
 .pf-c-search-input__count {
   display: flex;
   align-items: center;
+}
+
+.pf-c-search-input__menu {
+  position: absolute;
+  top: var(--pf-c-search-input__menu--Top);
+  z-index: var(--pf-c-search-input__menu--ZIndex);
+  min-width: 100%;
+  padding: var(--pf-c-search-input__menu--PaddingTop) var(--pf-c-search-input__menu--PaddingRight) var(--pf-c-search-input__menu--PaddingBottom) var(--pf-c-search-input__menu--PaddingLeft);
+  background-color: var(--pf-c-search-input__menu--BackgroundColor);
+  background-clip: padding-box;
+  box-shadow: var(--pf-c-search-input__menu--BoxShadow);
+
+  .pf-c-search-input.pf-m-top & {
+    --pf-c-search-input__menu--Top: var(--pf-c-search-input--m-top__menu--Top);
+
+    transform: translateY(var(--pf-c-search-input--m-top__menu--TranslateY));
+  }
 }
