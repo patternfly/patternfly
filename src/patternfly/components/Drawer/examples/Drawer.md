@@ -216,7 +216,7 @@ import './Drawer.css'
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
     {{/drawer-content}}
-    {{> drawer-example-panel}}
+    {{> drawer-example-resizable-panel}}
   {{/drawer-main}}
 {{/drawer}}
 ```
@@ -228,7 +228,7 @@ import './Drawer.css'
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
     {{/drawer-content}}
-    {{> drawer-example-panel}}
+    {{> drawer-example-resizable-panel}}
   {{/drawer-main}}
 {{/drawer}}
 ```
@@ -241,7 +241,7 @@ import './Drawer.css'
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
       <br><br>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.{{/drawer-content}}
-    {{> drawer-example-panel}}
+    {{> drawer-example-resizable-panel}}
   {{/drawer-main}}
 {{/drawer}}
 ```
@@ -253,7 +253,7 @@ import './Drawer.css'
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
     {{/drawer-content}}
-    {{> drawer-example-panel}}
+    {{> drawer-example-resizable-panel}}
   {{/drawer-main}}
 {{/drawer}}
 ```
@@ -292,7 +292,8 @@ import './Drawer.css'
 | `.pf-c-drawer__main` | `<div>` | Initiates the drawer main area. **Required** |
 | `.pf-c-drawer__content` | `<div>` | Initiates the drawer content container. **Required** |
 | `.pf-c-drawer__panel` | `<aside>` | Initiates the drawer panel container. **Required** |
-| `.pf-c-drawer__body` | `<div>` | Initiates a drawer body container and is the child of `.pf-c-drawer__content` and `.pf-c-drawer__panel`. **Required** |
+| `.pf-c-drawer__panel-main` | `<div>` | Initiates the drawer panel main container for resizable drawers only. |
+| `.pf-c-drawer__body` | `<div>` | Initiates a drawer body container and is the child of `.pf-c-drawer__content`, `.pf-c-drawer__panel` and `.pf-c-drawer__panel-main`. **Required** |
 | `.pf-c-drawer__head` | `<div>` | Initiates a drawer head container. This container positions `.pf-c-drawer__actions`, if present. |
 | `.pf-c-drawer__actions` | `<div>` | Identifies the drawer close button. |
 | `.pf-c-drawer__close` | `<div>` | Identifies the drawer close button. |

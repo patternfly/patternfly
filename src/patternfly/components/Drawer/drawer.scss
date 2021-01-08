@@ -25,9 +25,11 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-drawer__panel--TransitionDuration: var(--pf-global--TransitionDuration);
   --pf-c-drawer__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
+  --pf-c-drawer__panel--m-resizable--FlexDirection: row;
   --pf-c-drawer__panel--m-resizable--PaddingLeft: var(--pf-c-drawer__splitter--m-vertical--Width);
   --pf-c-drawer--m-panel-left__panel--m-resizable--PaddingRight: var(--pf-c-drawer__splitter--m-vertical--Width);
   --pf-c-drawer--m-panel-bottom__panel--m-resizable--PaddingTop: var(--pf-c-drawer__splitter--Height);
+  --pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection: column;
 
   // Child padding
   --pf-c-drawer--child--PaddingTop: var(--pf-global--spacer--md);
@@ -231,6 +233,13 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   overflow: auto;
 }
 
+.pf-c-drawer__panel-main {
+  @extend .pf-c-drawer__panel;
+
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
 // Content
 .pf-c-drawer__content {
   > .pf-c-drawer__body {
@@ -304,7 +313,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 .pf-c-drawer__body {
   min-height: 0;
   padding: var(--pf-c-drawer--child--PaddingTop) var(--pf-c-drawer--child--PaddingRight) var(--pf-c-drawer--child--PaddingBottom) var(--pf-c-drawer--child--PaddingLeft);
-  overflow: auto;
 
   // No padding
   &.pf-m-no-padding {
@@ -337,11 +345,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 .pf-c-drawer__splitter {
-  position: absolute;
-  top: var(--pf-c-drawer__splitter--Top);
-  right: var(--pf-c-drawer__splitter--Right);
-  bottom: var(--pf-c-drawer__splitter--Bottom);
-  left: var(--pf-c-drawer__splitter--Left);
+  position: relative;
   display: none;
   width: var(--pf-c-drawer__splitter--Width);
   height: var(--pf-c-drawer__splitter--Height);
@@ -418,7 +422,18 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         height: 0;
       }
 
+      flex-direction: var(--pf-c-drawer__panel--m-resizable--FlexDirection);
       padding-left: var(--pf-c-drawer__panel--m-resizable--PaddingLeft);
+
+      > .pf-c-drawer__splitter {
+        right: var(--pf-c-drawer__panel--m-resizable--PaddingLeft);
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+
+      > .pf-c-drawer__panel-main {
+        margin-left: calc(var(--pf-c-drawer__panel--m-resizable--PaddingLeft) * -1);
+      }
     }
   }
 
@@ -448,11 +463,18 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       padding-left: 0;
 
       > .pf-c-drawer__splitter {
-        --pf-c-drawer__splitter--Right: 0;
-        --pf-c-drawer__splitter--Left: auto;
+        right: unset;
+        left: var(--pf-c-drawer--m-panel-left__panel--m-resizable--PaddingRight);
+        order: 2;
+
         --pf-c-drawer__splitter-handle--Left: var(--pf-c-drawer--m-panel-left__splitter-handle--Left);
         --pf-c-drawer__splitter--after--BorderRightWidth: 0;
         --pf-c-drawer__splitter--after--BorderLeftWidth: var(--pf-c-drawer--m-panel-left__splitter--after--BorderLeftWidth);
+      }
+
+      > .pf-c-drawer__panel-main {
+        margin-right: calc(var(--pf-c-drawer--m-panel-left__panel--m-resizable--PaddingRight) * -1);
+        margin-left: unset;
       }
     }
   }
@@ -480,16 +502,22 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
+      flex-direction: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection);
       padding-top: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--PaddingTop);
       padding-left: 0;
 
       > .pf-c-drawer__splitter {
-        --pf-c-drawer__splitter--Top: 0;
-        --pf-c-drawer__splitter--Right: 0;
-        --pf-c-drawer__splitter--Bottom: auto;
+        right: unset;
+        bottom: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--PaddingTop);
+
         --pf-c-drawer__splitter-handle--Top: var(--pf-c-drawer--m-panel-bottom__splitter-handle--Top);
         --pf-c-drawer__splitter--after--BorderRightWidth: 0;
         --pf-c-drawer__splitter--after--BorderBottomWidth: var(--pf-c-drawer--m-panel-bottom__splitter--after--BorderBottomWidth);
+      }
+
+      > .pf-c-drawer__panel-main {
+        margin-top: calc(var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--PaddingTop) * -1);
+        margin-left: unset;
       }
     }
   }
