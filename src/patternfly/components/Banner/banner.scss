@@ -21,7 +21,6 @@
   --pf-c-banner--m-sticky--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-banner--m-sticky--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
 
-  @include pf-t-dark;
   @include pf-text-overflow;
 
   padding: var(--pf-c-banner--PaddingTop) var(--pf-c-banner--PaddingRight) var(--pf-c-banner--PaddingBottom) var(--pf-c-banner--PaddingLeft);
@@ -32,22 +31,22 @@
   background-color: var(--pf-c-banner--BackgroundColor);
 
   &.pf-m-info {
-    @include pf-t-light;
-
+    --pf-c-banner--Color: var(--pf-global--palette--black-900);
     --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-info--BackgroundColor);
   }
 
   &.pf-m-danger {
+    --pf-c-banner--Color: var(--pf-global--palette--black-900);
     --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-danger--BackgroundColor);
   }
 
   &.pf-m-success {
+    --pf-c-banner--Color: var(--pf-global--palette--black-900);
     --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-success--BackgroundColor);
   }
 
   &.pf-m-warning {
-    @include pf-t-light;
-
+    --pf-c-banner--Color: var(--pf-global--palette--black-900);
     --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-warning--BackgroundColor);
   }
 

@@ -30,7 +30,7 @@
   --pf-c-calendar-month__dates-cell--PaddingBottom: #{pf-size-prem(2px)};
   --pf-c-calendar-month__dates-cell--PaddingLeft: #{pf-size-prem(2px)};
   --pf-c-calendar-month__dates-row--first-child__dates-cell--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-calendar-month__dates-cell--m-current__date--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-calendar-month__dates-cell--m-current__date--BackgroundColor: var(--pf-global--palette--black-500);
   --pf-c-calendar-month__dates-cell--m-selected__date--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-calendar-month__dates-cell--m-selected__date--hover--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-calendar-month__dates-cell--m-selected__date--focus--BackgroundColor: var(--pf-global--primary-color--200);
@@ -58,12 +58,10 @@
   --pf-c-calendar-month__date--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-calendar-month__date--after--BorderWidth: var(--pf-global--BorderWidth--md);
   --pf-c-calendar-month__date--after--BorderColor: transparent;
-  --pf-c-calendar-month__date--hover--BackgroundColor: var(--pf-global--palette--blue-50);
-  --pf-c-calendar-month__date--focus--BackgroundColor: var(--pf-global--palette--blue-50);
+  --pf-c-calendar-month__date--hover--BackgroundColor: var(--pf-global--palette--white);
+  --pf-c-calendar-month__date--focus--BackgroundColor: var(--pf-global--palette--white);
   --pf-c-calendar-month__date--focus--after--BorderColor: var(--pf-global--active-color--100);
   --pf-c-calendar-month__date--focus--BoxShadow: none;
-
-  @include pf-t-light;
 
   display: inline-flex;
   flex-direction: column;
@@ -202,12 +200,14 @@
   &:hover,
   &.pf-m-hover {
     --pf-c-calendar-month__date--BackgroundColor: var(--pf-c-calendar-month__date--hover--BackgroundColor);
+    --pf-c-calendar-month__date--Color: var(--pf-global--palette--black-900);
   }
 
   &:focus,
   &.pf-m-focus {
     --pf-c-calendar-month__date--BackgroundColor: var(--pf-c-calendar-month__date--focus--BackgroundColor);
     --pf-c-calendar-month__date--after--BorderColor: var(--pf-c-calendar-month__date--focus--after--BorderColor);
+    --pf-c-calendar-month__date--Color: var(--pf-global--palette--black-900);
 
     outline: 0;
     box-shadow: var(--pf-c-calendar-month__date--focus--BoxShadow);
