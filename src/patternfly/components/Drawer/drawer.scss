@@ -614,8 +614,22 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
           display: unset;
           visibility: visible;
         }
-        // stylelint-enable
       }
+
+      // Panel bottom
+      &.pf-m-panel-bottom {
+        > .pf-c-drawer__main > .pf-c-drawer__panel {
+          margin-bottom: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
+          transform: translateY(100%);
+        }
+
+        // Inline, expanded, panel left
+        &.pf-m-expanded > .pf-c-drawer__main > .pf-c-drawer__panel {
+          margin-bottom: 0;
+          transform: translateY(0);
+        }
+      }
+      // stylelint-enable
     }
 
     // Static
