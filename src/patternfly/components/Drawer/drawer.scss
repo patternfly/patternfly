@@ -26,6 +26,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__panel--TransitionDuration: var(--pf-global--TransitionDuration);
   --pf-c-drawer__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
   --pf-c-drawer__panel--m-resizable--PaddingLeft: var(--pf-c-drawer__splitter--m-vertical--Width);
+  --pf-c-drawer__panel--m-resizable--FlexBasis: initial;
   --pf-c-drawer--m-panel-left__panel--m-resizable--PaddingRight: var(--pf-c-drawer__splitter--m-vertical--Width);
   --pf-c-drawer--m-panel-bottom__panel--m-resizable--PaddingTop: var(--pf-c-drawer__splitter--Height);
 
@@ -114,7 +115,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__splitter--m-vertical__splitter-handle--after--Height: #{pf-size-prem(12px)};
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
-    --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--md--FlexBasis);
+    --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--m-resizable--FlexBasis, var(--pf-c-drawer__panel--md--FlexBasis));
 
     // Responsive child padding
     --pf-c-drawer--child--PaddingTop: var(--pf-c-drawer--child--md--PaddingTop);
@@ -130,12 +131,12 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--xl--FlexBasis);
+    --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--m-resizable--FlexBasis, var(--pf-c-drawer__panel--xl--FlexBasis));
     --pf-c-drawer__panel--MinWidth: var(--pf-c-drawer__panel--xl--MinWidth);
 
     &.pf-m-panel-bottom {
       --pf-c-drawer__panel--MinWidth: auto;
-      --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis);
+      --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--m-resizable--FlexBasis, var(--pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis));
       --pf-c-drawer__panel--MinHeight: var(--pf-c-drawer--m-panel-bottom__panel--xl--MinHeight);
     }
   }
