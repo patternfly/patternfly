@@ -5,6 +5,8 @@ section: components
 cssPrefix: pf-c-search-input
 ---
 
+import './SearchInput.css'
+
 ## Examples
 ### Basic
 ```hbs
