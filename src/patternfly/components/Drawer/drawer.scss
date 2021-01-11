@@ -25,10 +25,8 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-drawer__panel--TransitionDuration: var(--pf-global--TransitionDuration);
   --pf-c-drawer__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
+  --pf-c-drawer__panel--MinFlexBasis: var(--pf-c-drawer__splitter--m-vertical--Width);
   --pf-c-drawer__panel--m-resizable--FlexDirection: row;
-  --pf-c-drawer__panel--m-resizable--PaddingLeft: var(--pf-c-drawer__splitter--m-vertical--Width);
-  --pf-c-drawer--m-panel-left__panel--m-resizable--PaddingRight: var(--pf-c-drawer__splitter--m-vertical--Width);
-  --pf-c-drawer--m-panel-bottom__panel--m-resizable--PaddingTop: var(--pf-c-drawer__splitter--Height);
   --pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection: column;
 
   // Child padding
@@ -250,7 +248,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 .pf-c-drawer__panel {
   position: relative;
   z-index: var(--pf-c-drawer__panel--ZIndex);
-  flex-basis: var(--pf-c-drawer__panel--FlexBasis);
+  // stylelint-disable
+  flex-basis: MAX(var(--pf-c-drawer__panel--MinFlexBasis), var(--pf-c-drawer__panel--FlexBasis));
+  // stylelint-enable
   order: 1;
   max-height: var(--pf-c-drawer__panel--MaxHeight);
   overflow: auto;
@@ -413,18 +413,14 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       }
 
       flex-direction: var(--pf-c-drawer__panel--m-resizable--FlexDirection);
-      padding-left: var(--pf-c-drawer__panel--m-resizable--PaddingLeft);
 
       > .pf-c-drawer__splitter {
-        right: var(--pf-c-drawer__panel--m-resizable--PaddingLeft);
-        flex-grow: 0;
         flex-shrink: 0;
       }
 
       > .pf-c-drawer__panel-main {
         flex-shrink: 1;
         flex-grow: 1;
-        margin-left: calc(var(--pf-c-drawer__panel--m-resizable--PaddingLeft) * -1);
       }
     }
   }
@@ -451,22 +447,12 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
-      padding-right: var(--pf-c-drawer--m-panel-left__panel--m-resizable--PaddingRight);
-      padding-left: 0;
-
       > .pf-c-drawer__splitter {
-        right: unset;
-        left: var(--pf-c-drawer--m-panel-left__panel--m-resizable--PaddingRight);
         order: 2;
 
         --pf-c-drawer__splitter-handle--Left: var(--pf-c-drawer--m-panel-left__splitter-handle--Left);
         --pf-c-drawer__splitter--after--BorderRightWidth: 0;
         --pf-c-drawer__splitter--after--BorderLeftWidth: var(--pf-c-drawer--m-panel-left__splitter--after--BorderLeftWidth);
-      }
-
-      > .pf-c-drawer__panel-main {
-        margin-right: calc(var(--pf-c-drawer--m-panel-left__panel--m-resizable--PaddingRight) * -1);
-        margin-left: unset;
       }
     }
   }
@@ -474,6 +460,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   .pf-c-drawer.pf-m-panel-bottom {
     --pf-c-drawer--m-expanded__panel--BoxShadow: var(--pf-c-drawer--m-expanded--m-panel-bottom__panel--BoxShadow);
     --pf-c-drawer__panel--MaxHeight: 100%;
+    --pf-c-drawer__panel--MinFlexBasis: var(--pf-c-drawer__splitter--Height);
 
     min-width: auto;
     min-height: var(--pf-c-drawer--m-panel-bottom__panel--md--MinHeight);
@@ -495,21 +482,11 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
     > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
       flex-direction: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection);
-      padding-top: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--PaddingTop);
-      padding-left: 0;
 
       > .pf-c-drawer__splitter {
-        right: unset;
-        bottom: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--PaddingTop);
-
         --pf-c-drawer__splitter-handle--Top: var(--pf-c-drawer--m-panel-bottom__splitter-handle--Top);
         --pf-c-drawer__splitter--after--BorderRightWidth: 0;
         --pf-c-drawer__splitter--after--BorderBottomWidth: var(--pf-c-drawer--m-panel-bottom__splitter--after--BorderBottomWidth);
-      }
-
-      > .pf-c-drawer__panel-main {
-        margin-top: calc(var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--PaddingTop) * -1);
-        margin-left: unset;
       }
     }
   }
