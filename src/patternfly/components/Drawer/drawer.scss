@@ -62,10 +62,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__content--child--PaddingLeft: 0;
 
   // Splitter
-  --pf-c-drawer__splitter--Top: 0;
-  --pf-c-drawer__splitter--Right: auto;
-  --pf-c-drawer__splitter--Bottom: 0;
-  --pf-c-drawer__splitter--Left: 0;
   --pf-c-drawer__splitter--Height: #{pf-size-prem(9px)};
   --pf-c-drawer__splitter--Width: 100%;
   --pf-c-drawer__splitter--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -226,18 +222,12 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Content / panel
 .pf-c-drawer__content,
-.pf-c-drawer__panel {
+.pf-c-drawer__panel,
+.pf-c-drawer__panel-main {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   overflow: auto;
-}
-
-.pf-c-drawer__panel-main {
-  @extend .pf-c-drawer__panel;
-
-  flex-shrink: 1;
-  flex-grow: 1;
 }
 
 // Content
@@ -432,6 +422,8 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       }
 
       > .pf-c-drawer__panel-main {
+        flex-shrink: 1;
+        flex-grow: 1;
         margin-left: calc(var(--pf-c-drawer__panel--m-resizable--PaddingLeft) * -1);
       }
     }
