@@ -28,12 +28,12 @@ cssPrefix: pf-c-search-input
 
 ### Advanced search
 ```hbs
-{{> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:admin firstname:joe" search-input--IsAdvancedSearch="true"}}
+{{> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:ned" search-input--IsAdvancedSearch="true"}}
 ```
 
 ### Advanced search expanded
 ```hbs
-{{#> search-input search-input--placeholder="username:admin firstname:joe" search-input--IsAdvancedSearch="true" search-input--IsExpanded="true"}}
+{{#> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:ned" search-input--IsAdvancedSearch="true" search-input--IsExpanded="true"}}
   {{#> search-input-menu}}
     {{#> form form--id="advanced-search-input-form"}}
       {{#> form-group form-group--id="-username"}}
@@ -43,7 +43,7 @@ cssPrefix: pf-c-search-input
           {{/form-label}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="username" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="root" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
         {{/form-group-control}}
       {{/form-group}}
       {{#> form-group form-group--id="-firstname"}}
@@ -53,7 +53,7 @@ cssPrefix: pf-c-search-input
           {{/form-label}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="joe" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="ned" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
         {{/form-group-control}}
       {{/form-group}}
       {{#> form-group form-group--id="-group"}}
