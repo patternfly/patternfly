@@ -1,4 +1,19 @@
 {{#> gallery gallery--modifier="pf-m-gutter"}}
+    {{#> card card--id="card-empty-state" card--modifier="pf-m-hoverable pf-m-compact"}}
+      {{#> bullseye}}
+        {{#> empty-state empty-state--modifier="pf-m-xs"}}
+          <i class="fas fa-plus-circle pf-c-empty-state__icon"></i>
+          {{#> card-title}}
+            <p id="{{card--id}}-check-label">To get started, add a new group to your page.</p>
+          {{/card-title}}
+          {{#> empty-state-secondary}}
+            {{#> button button--modifier="pf-m-link"}}
+              Add group
+            {{/button}}
+          {{/empty-state-secondary}}
+        {{/empty-state}}
+      {{/bullseye}}
+    {{/card}}
     {{#> card card--id="card-1" card--modifier="pf-m-hoverable pf-m-compact"}}
       {{#> card-header}}
         <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
@@ -179,18 +194,5 @@
       {{#> card-body}}
         Expose REST services and their APIs using Swagger specification.
       {{/card-body}}
-    {{/card}}
-    {{#> card card--id="card-11" card--modifier="pf-m-compact pf-l-bullseye"}}
-      {{#> empty-state empty-state--modifier="pf-m-xs"}}
-        <i class="fas fa-plus-circle pf-c-empty-state__icon"></i>
-        {{#> title titleType="h1" title--modifier="pf-m-md"}}
-          To get started, add a new group to your page.
-        {{/title}}
-        {{#> empty-state-secondary}}
-          {{#> button button--modifier="pf-m-link"}}
-            Add group
-          {{/button}}
-        {{/empty-state-secondary}}
-      {{/empty-state}}
     {{/card}}
 {{/gallery}}
