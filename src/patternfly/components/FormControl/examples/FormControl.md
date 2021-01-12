@@ -34,7 +34,7 @@ import './FormControl.css'
 
 ### Select
 ```hbs
-{{#> form-control controlType="select" form-control--attribute='id="select-standard" name="select-standard" aria-label="Standard select example"'}}
+{{#> form-control controlType="select" form-control--modifier="pf-m-placeholder" form-control--attribute='id="select-standard" name="select-standard" aria-label="Standard select example"'}}
   <option value="" selected>Please choose</option>
   <option value="Mr">Mr</option>
   <option value="Miss">Miss</option>
@@ -147,3 +147,4 @@ Resizes horizontally
 | `.pf-m-calendar` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the calendar icon. |
 | `.pf-m-clock` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the clock icon. |
 | `.pf-m-expanded` | `input.pf-c-form-control` | Modifies a form control for the expanded state. This is used when clicking in the text input toggles something open/closed. |
+| `.pf-m-placeholder` | `select.pf-c-form-control` | Modifies a form select for placeholder styles. This modifier is set programatically based on the chosen option. |
