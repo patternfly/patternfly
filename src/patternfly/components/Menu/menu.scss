@@ -90,7 +90,7 @@
 
   // Drilldown
   --pf-c-menu--m-drilldown--Width: auto;
-  --pf-c-menu--m-drilldown--Height: auto;
+  --pf-c-menu--m-drilldown__content--Height: auto;
   --pf-c-menu--m-drilldown--TransitionDuration--transform: var(--pf-global--TransitionDuration);
   --pf-c-menu--m-drilldown--TransitionDuration--height: var(--pf-global--TransitionDuration);
   --pf-c-menu--m-drilldown--Transition: transform var(--pf-c-menu--m-drilldown--TransitionDuration--transform), height var(--pf-c-menu--m-drilldown--TransitionDuration--height);
@@ -127,7 +127,6 @@
 
   &.pf-m-drilldown {
     width: var(--pf-c-menu--m-drilldown--Width);
-    height: var(--pf-c-menu--m-drilldown--Height);
     overflow: hidden;
     transition: var(--pf-c-menu--m-drilldown--Transition);
 
@@ -175,6 +174,10 @@
 
     .pf-c-menu__item {
       outline-offset: var(--pf-c-menu__item--OutlineOffset);
+    }
+
+    > .pf-c-menu__content {
+      height: var(--pf-c-menu--m-drilldown__content--Height);
     }
   }
 
