@@ -13,12 +13,10 @@
     {{else}}
       {{> drawer-splitter drawer-splitter--IsVertical="true"}}
     {{/if}}
-  {{/if}}
-  {{#if drawer-panel--NoBody}}
-    {{> @partial-block}}
-  {{else}}
-    {{#> drawer-body}}
+    {{#> drawer-panel-main}}
       {{> @partial-block}}
-    {{/drawer-body}}
+    {{/drawer-panel-main}}
+  {{else}}
+    {{> @partial-block}}
   {{/if}}
 </{{#if drawer-panel--type}}{{{drawer-panel--type}}}{{else}}div{{/if}}>

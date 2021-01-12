@@ -11,7 +11,9 @@
       {{/page-main}}
     {{/drawer-content}}
     {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
-      <p>drawer panel</p>
+      {{#> drawer-body}}
+        <p>drawer panel</p>
+      {{/drawer-body}}
     {{/drawer-panel}}
   {{/drawer-main}}
 {{/drawer}}

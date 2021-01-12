@@ -446,7 +446,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
     > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
       > .pf-c-drawer__splitter {
-        order: 2;
+        order: 1;
 
         --pf-c-drawer__splitter-handle--Left: var(--pf-c-drawer--m-panel-left__splitter-handle--Left);
         --pf-c-drawer__splitter--after--BorderRightWidth: 0;
@@ -479,7 +479,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
-      flex-direction: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection);
+      --pf-c-drawer__panel--m-resizable--FlexDirection: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection);
 
       > .pf-c-drawer__splitter {
         --pf-c-drawer__splitter-handle--Top: var(--pf-c-drawer--m-panel-bottom__splitter-handle--Top);
