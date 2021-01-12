@@ -383,5 +383,5 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
 | `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selectable card for the selected state. |
 | `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background. |
-| `.pf-m-rounded` | `.pf-c-card` | Modifies the card to for the rounded corner. |
+| `.pf-m-rounded` | `.pf-c-card` | Modifies the card to have rounded corners. |
 | `.pf-m-expanded` | `.pf-c-card` | Modifies the card for the expanded state. |
