@@ -298,22 +298,22 @@ import './Menu.css'
 
 ### Drilldown level two
 ```hbs
-{{> menu-drilldown-example menu-drilldown-example--id="drilldown-level-2" menu-drilldown-example--IsDrilledIn--list-1="true" menu-drilldown-example--attribute='style="--pf-c-menu--m-drilldown--Height: 193px"'}}
+{{> menu-drilldown-example menu-drilldown-example--id="drilldown-level-2" menu-drilldown-example--IsDrilledIn--list-1="true" menu-drilldown-example--menu__content--attribute='style="--pf-c-menu--m-drilldown__content--Height: 177px"'}}
 ```
 
 ### Drilldown level three
 ```hbs
-{{> menu-drilldown-example menu-drilldown-example--id="drilldown-level-3" menu-drilldown-example--IsDrilledIn--list-1="true" menu-drilldown-example--IsDrilledIn--list-2="true" menu-drilldown-example--attribute='style="--pf-c-menu--m-drilldown--Height: 233px"'}}
+{{> menu-drilldown-example menu-drilldown-example--id="drilldown-level-3" menu-drilldown-example--IsDrilledIn--list-1="true" menu-drilldown-example--IsDrilledIn--list-2="true" menu-drilldown-example--menu__content--attribute='style="--pf-c-menu--m-drilldown__content--Height: 217px"'}}
 ```
 
 ### Drilldown level four
 ```hbs
-{{> menu-drilldown-example menu-drilldown-example--id="drilldown-level-4" menu-drilldown-example--IsDrilledIn--list-1="true" menu-drilldown-example--IsDrilledIn--list-2="true" menu-drilldown-example--IsDrilledIn--list-3="true" menu-drilldown-example--attribute='style="--pf-c-menu--m-drilldown--Height: 193px"'}}
+{{> menu-drilldown-example menu-drilldown-example--id="drilldown-level-4" menu-drilldown-example--IsDrilledIn--list-1="true" menu-drilldown-example--IsDrilledIn--list-2="true" menu-drilldown-example--IsDrilledIn--list-3="true" menu-drilldown-example--menu__content--attribute='style="--pf-c-menu--m-drilldown__content--Height: 177px"'}}
 ```
 
 ### Width modified drilldown
 ```hbs
-{{> menu-drilldown-example menu-drilldown-example--attribute='style="--pf-c-menu--m-drilldown--Width: 350px;"'}}
+{{> menu-drilldown-example menu-drilldown-example--menu__content--attribute='style="--pf-c-menu--m-drilldown--Width: 350px;"'}}
 ```
 
 ### With filtering
@@ -857,4 +857,4 @@ import './Menu.css'
 | `.pf-m-current-path` | `.pf-c-menu.pf-m-drilldown .pf-c-menu__list-item` | Modifies the menu list item for current path state. |
 | `.pf-m-drilled-in` | `.pf-c-menu.pf-m-drilldown, .pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled in state. |
 | `--pf-c-menu--m-drilldown--Width: {width}` | `.pf-c-menu.pf-m-drilldown` | Modifies the width of the drilldown menu. The default value is `auto`. |
-| `--pf-c-menu--m-drilldown--Height: {height}` | `.pf-c-menu.pf-m-drilldown` | Modifies the height of the drilldown menu. The default value is `auto`. |
+| `--pf-c-menu--m-drilldown__content--Height: {height}` | `.pf-c-menu.pf-m-drilldown` | Modifies the height of the drilldown menu content. The default value is `auto`. |
