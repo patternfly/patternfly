@@ -264,6 +264,21 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
+### Rounded
+```hbs
+{{#> card card--id="card-rounded-example" card--modifier="pf-m-rounded"}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
 ### Expandable
 ```hbs
 {{#> card card--id="card-expandable-example"}}
@@ -367,5 +382,6 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-hoverable` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
 | `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
 | `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selectable card for the selected state. |
-| `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background.
+| `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background. |
+| `.pf-m-rounded` | `.pf-c-card` | Modifies the card to for the rounded corner. |
 | `.pf-m-expanded` | `.pf-c-card` | Modifies the card for the expanded state. |
