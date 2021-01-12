@@ -2,6 +2,16 @@
   {{#if search-input--attribute}}
     {{search-input--attribute}}
   {{/if}}>
-  {{> search-input-text}}
-  {{> search-input-utilities}}
+  {{#if search-input--IsAdvancedSearch}}
+    {{#> input-group}}
+      {{> search-input-bar}}
+      {{> search-input-toggle}}
+      {{> search-input-search-button}}
+    {{/input-group}}
+  {{else}}
+    {{> search-input-bar}}
+  {{/if}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>
