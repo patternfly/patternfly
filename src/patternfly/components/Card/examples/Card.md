@@ -191,7 +191,7 @@ cssPrefix: pf-c-card
 
 ### Large
 ```hbs
-{{#> card card--id="card-large-example" card--modifier="pf-m-large"}}
+{{#> card card--id="card-display-lg-example" card--modifier="pf-m-display-lg"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -377,7 +377,7 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. |
 | `.pf-c-card__expandable-content` | `<div>` | Creates the expandable card's expandable content. |
 | `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
-| `.pf-m-large` | `.pf-c-card` | Creates a large variation of the card component that involves larger font sizes and spacing. This variation is for marketing use cases. |
+| `.pf-m-display-lg` | `.pf-c-card` | Creates a large variation of the card component that involves larger font sizes and spacing. This variation is for marketing use cases. |
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` to not fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
 | `.pf-m-hoverable` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
 | `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
