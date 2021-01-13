@@ -48,7 +48,10 @@ const validCSSFunctions = [
   'counter',
   'repeat',
   'minmax',
-  'url'
+  'url',
+  'min',
+  'max',
+  'clamp'
 ];
 const functionRegex = /:\s+(\w[\w\d]+)\(.*\)/gi;
 

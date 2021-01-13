@@ -35,7 +35,6 @@ wrapperTag: div
 
         <!-- Panel -->
         {{#> drawer-panel
-          drawer-panel--NoBody="true"
           progress--modifier="pf-m-sm"
           }}
 
@@ -90,7 +89,6 @@ wrapperTag: div
 
         <!-- Panel -->
         {{#> drawer-panel
-          drawer-panel--NoBody="true"
           progress--modifier="pf-m-sm"
           }}
 
@@ -144,7 +142,6 @@ wrapperTag: div
 
         <!-- Panel -->
         {{#> drawer-panel
-          drawer-panel--NoBody="true"
           progress--modifier="pf-m-sm"
           }}
 
@@ -198,7 +195,6 @@ wrapperTag: div
         <!-- Panel -->
         {{#> drawer-panel
           drawer-panel--modifier=""
-          drawer-panel--NoBody="true"
           }}
 
           <!-- Panel header -->
@@ -249,7 +245,6 @@ wrapperTag: div
             drawer-panel--type="div"
             drawer-panel--attribute=(concat 'id="' primary-detail-template--id '-panel" aria-label="Panel"')
             drawer-panel--modifier="pf-m-width-75-on-xl"
-            drawer-panel--NoBody="true"
             }}
 
             <!-- Panel header -->
@@ -299,7 +294,6 @@ wrapperTag: div
             drawer-panel--type="div"
             drawer-panel--attribute=(concat 'id="' primary-detail-template--id '-panel" aria-label="Panel"')
             drawer-panel--modifier="pf-m-width-75-on-2xl"
-            drawer-panel--NoBody="true"
             }}
 
             <!-- Panel header -->
@@ -345,7 +339,6 @@ wrapperTag: div
       <!-- Panel -->
       {{#> drawer-panel
         drawer-panel--type="div"
-        drawer-panel--NoBody="true"
         progress--modifier="pf-m-sm"
         }}
 

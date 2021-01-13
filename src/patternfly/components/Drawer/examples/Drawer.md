@@ -136,7 +136,7 @@ import './Drawer.css'
       {{/drawer-body}}
     {{/drawer-content}}
 
-    {{#> drawer-panel drawer-panel--NoBody="true"}}
+    {{#> drawer-panel}}
       {{#> drawer-body}}
         {{#> drawer-head}}
           {{#> drawer-actions}}
@@ -292,7 +292,8 @@ import './Drawer.css'
 | `.pf-c-drawer__main` | `<div>` | Initiates the drawer main area. **Required** |
 | `.pf-c-drawer__content` | `<div>` | Initiates the drawer content container. **Required** |
 | `.pf-c-drawer__panel` | `<aside>` | Initiates the drawer panel container. **Required** |
-| `.pf-c-drawer__body` | `<div>` | Initiates a drawer body container and is the child of `.pf-c-drawer__content` and `.pf-c-drawer__panel`. **Required** |
+| `.pf-c-drawer__panel-main` | `<div>` | Initiates the drawer panel main container for resizable drawers only. |
+| `.pf-c-drawer__body` | `<div>` | Initiates a drawer body container and is the child of `.pf-c-drawer__content`, `.pf-c-drawer__panel` and `.pf-c-drawer__panel-main`. **Required** |
 | `.pf-c-drawer__head` | `<div>` | Initiates a drawer head container. This container positions `.pf-c-drawer__actions`, if present. |
 | `.pf-c-drawer__actions` | `<div>` | Identifies the drawer close button. |
 | `.pf-c-drawer__close` | `<div>` | Identifies the drawer close button. |
