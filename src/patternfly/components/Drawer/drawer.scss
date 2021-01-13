@@ -31,6 +31,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer--m-panel-left__panel--m-resizable--PaddingRight: var(--pf-c-drawer__splitter--m-vertical--Width);
   --pf-c-drawer--m-panel-bottom__panel--m-resizable--PaddingTop: var(--pf-c-drawer__splitter--Height);
   --pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection: column;
+  --pf-c-drawer--m-panel-bottom__panel--FlexBasis--min: var(--pf-c-drawer__splitter--Height);
 
   // Child padding
   --pf-c-drawer--child--PaddingTop: var(--pf-global--spacer--md);
