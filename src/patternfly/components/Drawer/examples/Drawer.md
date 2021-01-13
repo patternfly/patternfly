@@ -136,7 +136,7 @@ import './Drawer.css'
       {{/drawer-body}}
     {{/drawer-content}}
 
-    {{#> drawer-panel drawer-panel--NoBody="true"}}
+    {{#> drawer-panel}}
       {{#> drawer-body}}
         {{#> drawer-head}}
           {{#> drawer-actions}}
