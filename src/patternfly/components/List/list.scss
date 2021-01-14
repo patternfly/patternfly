@@ -1,10 +1,25 @@
 .pf-c-list {
+  // list
   --pf-c-list--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-list--nested--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-list--nested--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-list--ul--ListStyle: var(--pf-global--ListStyle);
   --pf-c-list--li--MarginTop: var(--pf-global--spacer--sm);
+
+  // inline
   --pf-c-list--m-inline--li--MarginRight: var(--pf-global--spacer--lg);
+
+  // bordered
+  --pf-c-list--m-bordered--li--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-list--m-bordered--li--BorderBottomColor: var(--pf-global--BorderColor--100);
+  --pf-c-list--m-bordered--li--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+
+  // icon
+  --pf-c-list__item-icon--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-list__item-icon--Color: var(--pf-global--icon--Color--light);
+  --pf-c-list__item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-list__item-icon--m-display-lg--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-list__item-icon--m-display-lg--FontSize: var(--pf-global--icon--FontSize--lg);
 
   padding-left: var(--pf-c-list--PaddingLeft);
 
@@ -20,6 +35,23 @@
 
   @at-root ul#{&} {
     list-style: var(--pf-c-list--ul--ListStyle);
+  }
+
+  .pf-c-list__item-main {
+    display: flex;
+    align-items: center;
+  }
+
+  .pf-c-list__item-icon {
+    display: flex;
+    margin-right: var(--pf-c-list__item-icon--MarginRight);
+    font-size: var(--pf-c-list__item-icon--FontSize);
+    color: var(--pf-c-list__item-icon--Color);
+
+    &.pf-m-display-lg {
+      --pf-c-list__item-icon--MarginRight: var(--pf-c-list__item-icon--m-display-lg--MarginRight);
+      --pf-c-list__item-icon--FontSize: var(--pf-c-list__item-icon--m-display-lg--FontSize);
+    }
   }
 
   &.pf-m-plain {
@@ -41,6 +73,13 @@
       &:not(:last-child) {
         margin-right: var(--pf-c-list--m-inline--li--MarginRight);
       }
+    }
+  }
+
+  &.pf-m-bordered {
+    > li:not(:last-child) {
+      padding-bottom: var(--pf-c-list--m-bordered--li--PaddingBottom);
+      border-bottom: var(--pf-c-list--m-bordered--li--BorderBottomWidth) solid var(--pf-c-list--m-bordered--li--BorderBottomColor);
     }
   }
 }
