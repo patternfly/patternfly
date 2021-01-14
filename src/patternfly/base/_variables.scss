@@ -13,6 +13,7 @@
   --pf-global--palette--black-800: #1B1D21;
   --pf-global--palette--black-900: #0F1214;
   --pf-global--palette--red-9999: #fe5142;
+  --pf-global--palette--red-8888: #fe8b81;
   --pf-global--palette--black-1000: #{$pf-color-black-1000};
   --pf-global--palette--blue-50: #{$pf-color-blue-50};
   --pf-global--palette--blue-100: #{$pf-color-blue-100};
@@ -130,10 +131,10 @@
   --pf-global--success-color--200: #{$pf-global--success-color--200};
   --pf-global--info-color--100: #{$pf-global--info-color--100};
   --pf-global--info-color--200: #{$pf-global--info-color--200};
-  --pf-global--warning-color--100: var(--pf-global--palette--gold-300);
+  --pf-global--warning-color--100: var(--pf-global--palette--gold-400);
   --pf-global--warning-color--200: #{$pf-global--warning-color--200};
   --pf-global--danger-color--100: var(--pf-global--palette--red-9999);
-  --pf-global--danger-color--200: #{$pf-global--danger-color--200};
+  --pf-global--danger-color--200: var(--pf-global--palette--red-8888);
   --pf-global--danger-color--300: #{$pf-global--danger-color--300};
 
   // Shadows
