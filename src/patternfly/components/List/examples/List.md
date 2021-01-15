@@ -91,72 +91,60 @@ cssPrefix: pf-c-list
 ### With small icons
 ```hbs
 {{#> list list--type="ul" list--modifier="pf-m-plain"}}
-  <li>
-    {{#> list-item-main}}
-      {{#> list-item-icon}}
-        <i class="pf-icon pf-icon-catalog" aria-hidden="true"></i>
-      {{/list-item-icon}}
-      {{#> list-item-text}}
-        List item one
-      {{/list-item-text}}
-    {{/list-item-main}}
-  </li>
-  <li>
-    {{#> list-item-main}}
-      {{#> list-item-icon}}
-        <i class="fas fa-key" aria-hidden="true"></i>
-      {{/list-item-icon}}
-      {{#> list-item-text}}
-        List item two
-      {{/list-item-text}}
-    {{/list-item-main}}
-  </li>
-  <li>
-    {{#> list-item-main}}
-      {{#> list-item-icon}}
-        <i class="pf-icon pf-icon-monitoring" aria-hidden="true"></i>
-      {{/list-item-icon}}
-      {{#> list-item-text}}
-        List item three
-      {{/list-item-text}}
-    {{/list-item-main}}
-  </li>
+  {{#> list-item list-item--modifier="pf-m-icon"}}
+    {{#> list-item-icon}}
+      <i class="fas fa-book-open" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item one
+    {{/list-item-text}}
+  {{/list-item}}
+  {{#> list-item list-item--modifier="pf-m-icon"}}
+    {{#> list-item-icon}}
+      <i class="fas fa-key" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item two
+    {{/list-item-text}}
+  {{/list-item}}
+  {{#> list-item list-item--modifier="pf-m-icon"}}
+    {{#> list-item-icon}}
+      <i class="fas fa-desktop" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item three
+    {{/list-item-text}}
+  {{/list-item}}
 {{/list}}
 ```
 
 ### With large icons
 ```hbs
-{{#> list list--type="ul" list--modifier="pf-m-plain"}}
-  <li>
-    {{#> list-item-main}}
-      {{#> list-item-icon list-item-icon--modifier="pf-m-display-lg"}}
-        <i class="pf-icon pf-icon-catalog" aria-hidden="true"></i>
-      {{/list-item-icon}}
-      {{#> list-item-text}}
-        List item one
-      {{/list-item-text}}
-    {{/list-item-main}}
-  </li>
-  <li>
-    {{#> list-item-main}}
-      {{#> list-item-icon list-item-icon--modifier="pf-m-display-lg"}}
-        <i class="fas fa-key" aria-hidden="true"></i>
-      {{/list-item-icon}}
-      {{#> list-item-text}}
-        List item two
-      {{/list-item-text}}
-    {{/list-item-main}}
-  </li>
-  <li>
-    {{#> list-item-main}}
-      {{#> list-item-icon list-item-icon--modifier="pf-m-display-lg"}}
-        <i class="pf-icon pf-icon-monitoring" aria-hidden="true"></i>
-      {{/list-item-icon}}
-      {{#> list-item-text}}
-        List item three
-      {{/list-item-text}}
-    {{/list-item-main}}
-  </li>
+{{#> list list--type="ul" list--modifier="pf-m-plain pf-m-lg"}}
+  {{#> list-item list-item--modifier="pf-m-icon"}}
+    {{#> list-item-icon}}
+      <i class="fas fa-book-open" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item one
+    {{/list-item-text}}
+  {{/list-item}}
+  {{#> list-item list-item--modifier="pf-m-icon"}}
+    {{#> list-item-icon}}
+      <i class="fas fa-key" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item two
+    {{/list-item-text}}
+  {{/list-item}}
+  {{#> list-item list-item--modifier="pf-m-icon"}}
+    {{#> list-item-icon}}
+      <i class="fas fa-desktop" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item three
+    {{/list-item-text}}
+  {{/list-item}}
 {{/list}}
 ```
 
@@ -171,4 +159,5 @@ Non-inline lists can be nested up to any level.
 | `.pf-m-inline` | `.pf-c-list` | Displays list items inline. |
 | `.pf-m-plain` | `.pf-c-list` |  Removes the list marker and base indentation. |
 | `.pf-m-bordered` | `pf-c-list` | Add horizontal divider between items in a list. |
-| `.pf-m-display-lg` | `pf-c-list-item-icon` | Show large icons or logos. |
+| `.pf-m-lg` | `pf-c-list` | Show all the icons or logos in the list large. |
+| `.pf-m-icon` | `pf-c-list__item` | Display list items with icon. |
