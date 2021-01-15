@@ -554,7 +554,7 @@
 // display grid for buttons is not supported
 .pf-c-table__button-content,
 .pf-c-table__column-help {
-  display: inline-grid;
+  display: grid;
   align-items: end;
   justify-content: start;
   grid-template-columns: auto max-content;
