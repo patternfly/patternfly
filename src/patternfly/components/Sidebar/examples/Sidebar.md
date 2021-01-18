@@ -80,10 +80,10 @@ import './Sidebar.css'
 {{/sidebar}}
 ```
 
-### Sticky panel
+### Responsive panel width
 ```hbs
 {{#> sidebar}}
-  {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky"}}
+  {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-width-50 pf-m-width-33-on-lg pf-m-width-75-on-xl"}}
     Sidebar panel
   {{/sidebar-panel}}
   {{#> sidebar-content}}
