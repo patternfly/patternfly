@@ -79,7 +79,7 @@ cssPrefix: pf-c-list
 
 ### With horizontal rules
 ```hbs
-{{#> list list--type="ul" list--modifier="pf-m-plain pf-m-bordered"}}
+{{#> list list--modifier="pf-m-plain pf-m-bordered"}}
   <li>Donec blandit a lorem id convallis.</li>
   <li>Integer in volutpat libero.</li>
   <li>Donec a diam tellus.</li>
@@ -90,10 +90,10 @@ cssPrefix: pf-c-list
 
 ### With small icons
 ```hbs
-{{#> list list--type="ul" list--modifier="pf-m-plain"}}
+{{#> list list--modifier="pf-m-plain"}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      <i class="fas fa-book-open" aria-hidden="true"></i>
+      <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item one
@@ -101,7 +101,7 @@ cssPrefix: pf-c-list
   {{/list-item}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      <i class="fas fa-key" aria-hidden="true"></i>
+      <i class="fas fa-key fa-fw" aria-hidden="true"></i>
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item two
@@ -109,7 +109,7 @@ cssPrefix: pf-c-list
   {{/list-item}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      <i class="fas fa-desktop" aria-hidden="true"></i>
+      <i class="fas fa-desktop fa-fw" aria-hidden="true"></i>
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item three
@@ -120,10 +120,10 @@ cssPrefix: pf-c-list
 
 ### With large icons
 ```hbs
-{{#> list list--type="ul" list--modifier="pf-m-plain pf-m-lg"}}
+{{#> list list--modifier="pf-m-plain pf-m-lg"}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      <i class="fas fa-book-open" aria-hidden="true"></i>
+      <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item one
@@ -131,7 +131,7 @@ cssPrefix: pf-c-list
   {{/list-item}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      <i class="fas fa-key" aria-hidden="true"></i>
+      <i class="fas fa-key fa-fw" aria-hidden="true"></i>
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item two
@@ -139,7 +139,7 @@ cssPrefix: pf-c-list
   {{/list-item}}
   {{#> list-item}}
     {{#> list-item-icon}}
-      <i class="fas fa-desktop" aria-hidden="true"></i>
+      <i class="fas fa-desktop fa-fw" aria-hidden="true"></i>
     {{/list-item-icon}}
     {{#> list-item-text}}
       List item three
