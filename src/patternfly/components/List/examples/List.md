@@ -91,7 +91,7 @@ cssPrefix: pf-c-list
 ### With small icons
 ```hbs
 {{#> list list--type="ul" list--modifier="pf-m-plain"}}
-  {{#> list-item list-item--modifier="pf-m-icon"}}
+  {{#> list-item}}
     {{#> list-item-icon}}
       <i class="fas fa-book-open" aria-hidden="true"></i>
     {{/list-item-icon}}
@@ -99,7 +99,7 @@ cssPrefix: pf-c-list
       List item one
     {{/list-item-text}}
   {{/list-item}}
-  {{#> list-item list-item--modifier="pf-m-icon"}}
+  {{#> list-item}}
     {{#> list-item-icon}}
       <i class="fas fa-key" aria-hidden="true"></i>
     {{/list-item-icon}}
@@ -107,7 +107,7 @@ cssPrefix: pf-c-list
       List item two
     {{/list-item-text}}
   {{/list-item}}
-  {{#> list-item list-item--modifier="pf-m-icon"}}
+  {{#> list-item}}
     {{#> list-item-icon}}
       <i class="fas fa-desktop" aria-hidden="true"></i>
     {{/list-item-icon}}
@@ -121,7 +121,7 @@ cssPrefix: pf-c-list
 ### With large icons
 ```hbs
 {{#> list list--type="ul" list--modifier="pf-m-plain pf-m-lg"}}
-  {{#> list-item list-item--modifier="pf-m-icon"}}
+  {{#> list-item}}
     {{#> list-item-icon}}
       <i class="fas fa-book-open" aria-hidden="true"></i>
     {{/list-item-icon}}
@@ -129,7 +129,7 @@ cssPrefix: pf-c-list
       List item one
     {{/list-item-text}}
   {{/list-item}}
-  {{#> list-item list-item--modifier="pf-m-icon"}}
+  {{#> list-item}}
     {{#> list-item-icon}}
       <i class="fas fa-key" aria-hidden="true"></i>
     {{/list-item-icon}}
@@ -137,7 +137,7 @@ cssPrefix: pf-c-list
       List item two
     {{/list-item-text}}
   {{/list-item}}
-  {{#> list-item list-item--modifier="pf-m-icon"}}
+  {{#> list-item}}
     {{#> list-item-icon}}
       <i class="fas fa-desktop" aria-hidden="true"></i>
     {{/list-item-icon}}
@@ -160,4 +160,3 @@ Non-inline lists can be nested up to any level.
 | `.pf-m-plain` | `.pf-c-list` |  Removes the list marker and base indentation. |
 | `.pf-m-bordered` | `pf-c-list` | Add horizontal divider between items in a list. |
 | `.pf-m-lg` | `pf-c-list` | Show all the icons or logos in the list large. |
-| `.pf-m-icon` | `pf-c-list__item` | Display list items with icon. |
