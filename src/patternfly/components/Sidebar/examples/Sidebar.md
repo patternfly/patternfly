@@ -28,7 +28,7 @@ import './Sidebar.css'
 ```hbs
 {{#> sidebar sidebar--modifier="pf-m-gutter"}}
   {{#> sidebar-panel}}
-    Sidebar panel
+    Sidebar panel. Adding some extra content so that the gap between the panel and content area is better illustrated in this example.
   {{/sidebar-panel}}
   {{#> sidebar-content}}
     {{#> content}}
