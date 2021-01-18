@@ -75,9 +75,6 @@ import './Sidebar.css'
 ### Panel right (HTML)
 ```hbs
 {{#> sidebar}}
-  {{#> sidebar-panel}}
-    Sidebar panel
-  {{/sidebar-panel}}
   {{#> sidebar-content}}
     {{#> content}}
       <p>Moves the panel to the right by placing the panel after the content in the HTML.</p>
@@ -85,6 +82,9 @@ import './Sidebar.css'
       <p>Praesent at odio nec sapien ultrices tincidunt in non mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis consectetur nisl quis facilisis faucibus. Sed eu bibendum risus. Suspendisse porta euismod tortor, at elementum odio suscipit sed. Cras eget ultrices urna, ac feugiat lectus. Integer a pharetra velit, in imperdiet mi. Phasellus vel hendrerit velit. Vestibulum ut augue vitae erat vulputate bibendum a ut magna.</p>
     {{/content}}
   {{/sidebar-content}}
+  {{#> sidebar-panel}}
+    Sidebar panel
+  {{/sidebar-panel}}
 {{/sidebar}}
 ```
 
