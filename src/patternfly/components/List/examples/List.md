@@ -158,5 +158,5 @@ Non-inline lists can be nested up to any level.
 | `.pf-c-list` | `<ul>, <ol>` | Initiates a list. **Required**  |
 | `.pf-m-inline` | `.pf-c-list` | Displays list items inline. |
 | `.pf-m-plain` | `.pf-c-list` |  Removes the list marker and base indentation. |
-| `.pf-m-bordered` | `pf-c-list` | Add horizontal divider between items in a list. |
-| `.pf-m-icon-lg` | `pf-c-list` | Show all the icons or logos in the list large. |
+| `.pf-m-bordered` | `.pf-c-list` | Add horizontal divider between items in a list. |
+| `.pf-m-icon-lg` | `.pf-c-list` | Show all the icons or logos in the list large. |
