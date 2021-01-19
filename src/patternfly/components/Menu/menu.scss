@@ -207,11 +207,8 @@
   padding-right: var(--pf-c-menu__breadcrumb--PaddingRight);
   padding-left: var(--pf-c-menu__breadcrumb--PaddingLeft);
 
-  .pf-c-breadcrumb__item {
-    font-size: var(--pf-c-menu__breadcrumb--c-breadcrumb__item--FontSize);
-  }
-
-  .pf-c-breadcrumb__heading {
+  .pf-c-breadcrumb {
+    --pf-c-breadcrumb__item--FontSize: var(--pf-c-menu__breadcrumb--c-breadcrumb__item--FontSize);
     --pf-c-breadcrumb__heading--FontSize: var(--pf-c-menu__breadcrumb--c-breadcrumb__heading--FontSize);
   }
 }
