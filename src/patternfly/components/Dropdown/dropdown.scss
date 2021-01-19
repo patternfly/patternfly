@@ -114,19 +114,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown--c-divider--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown--c-divider--MarginBottom: var(--pf-global--spacer--sm);
 
-  // badge
-  --pf-c-dropdown__toggle-badge--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-dropdown__toggle-badge--BorderRadius: var(--pf-global--BorderRadius--lg);
-  --pf-c-dropdown__toggle-badge--FontSize: var(--pf-global--FontSize--xs);
-  --pf-c-dropdown__toggle-badge--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-dropdown__toggle-badge--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__toggle-badge--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__toggle-badge--Color: var(--pf-global--Color--dark-100);
-  --pf-c-dropdown__toggle-badge--MinWidth: var(--pf-global--spacer--xl);
-
   // badge toggle icon
-  --pf-c-dropdown__toggle-badge__toggle-icon--MarginLeft: var(--pf-global--spacer--xs);
-  --pf-c-dropdown__toggle-badge__toggle-icon--MarginRight: 0;
+  --pf-c-dropdown__toggle--c-badge__toggle-icon--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-dropdown__toggle-c--badge__toggle-icon--MarginRight: 0;
 
   // menu
   --pf-c-dropdown--c-menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
@@ -344,6 +334,11 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     }
   }
 
+  > .pf-c-badge {
+    --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-c-dropdown__toggle--c-badge__toggle-icon--MarginLeft);
+    --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-c-dropdown__toggle-c--badge__toggle-icon--MarginRight);
+  }
+
   .pf-c-dropdown__toggle-text {
     @include pf-text-overflow;
   }
@@ -370,22 +365,6 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   &:last-child {
     --pf-c-dropdown__toggle-image--MarginRight: 0;
   }
-}
-
-.pf-c-dropdown__toggle-badge {
-  --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-c-dropdown__toggle-badge__toggle-icon--MarginLeft);
-  --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-c-dropdown__toggle-badge__toggle-icon--MarginRight);
-
-  display: inline-block;
-  min-width: var(--pf-c-dropdown__toggle-badge--MinWidth);
-  padding-right: var(--pf-c-dropdown__toggle-badge--PaddingRight);
-  padding-left: var(--pf-c-dropdown__toggle-badge--PaddingLeft);
-  font-size: var(--pf-c-dropdown__toggle-badge--FontSize);
-  font-weight: var(--pf-c-dropdown__toggle-badge--FontWeight);
-  color: var(--pf-c-dropdown__toggle-badge--Color);
-  text-align: center;
-  background-color: var(--pf-c-dropdown__toggle-badge--BackgroundColor);
-  border-radius: var(--pf-c-dropdown__toggle-badge--BorderRadius);
 }
 
 .pf-c-dropdown__menu {
