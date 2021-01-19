@@ -116,7 +116,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   // badge toggle icon
   --pf-c-dropdown__toggle--c-badge__toggle-icon--MarginLeft: var(--pf-global--spacer--xs);
-  --pf-c-dropdown__toggle-c--badge__toggle-icon--MarginRight: 0;
+  --pf-c-dropdown__toggle--c-badge__toggle-icon--MarginRight: 0;
 
   // menu
   --pf-c-dropdown--c-menu--Top: calc(100% + var(--pf-global--spacer--xs)); // The top of the menu must be pushed down to create space between the toggle and menu
@@ -336,7 +336,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   > .pf-c-badge {
     --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-c-dropdown__toggle--c-badge__toggle-icon--MarginLeft);
-    --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-c-dropdown__toggle-c--badge__toggle-icon--MarginRight);
+    --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-c-dropdown__toggle--c-badge__toggle-icon--MarginRight);
   }
 
   .pf-c-dropdown__toggle-text {
