@@ -1,0 +1,70 @@
+{{#> menu-breadcrumb}}
+  {{#> breadcrumb breadcrumb--id=(concat menu--id '-breadcrumb')}}
+    {{#> breadcrumb-list}}
+
+      {{!-- level 2 --}}
+      {{#if menu-breadcrumbs--Drilldown--IsLevel2}}
+        {{#> breadcrumb-item}}
+          {{> breadcrumb-item-divider}}
+          {{#> breadcrumb-link breadcrumb-link--IsButton="true"}}
+            All
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+        {{#> breadcrumb-item}}
+          {{> breadcrumb-item-divider}}
+          {{#> breadcrumb-heading}}
+            {{#> breadcrumb-link breadcrumb-link--current="true"}}
+              Edit
+            {{/breadcrumb-link}}
+          {{/breadcrumb-heading}}
+        {{/breadcrumb-item}}
+
+      {{!-- level 3 --}}
+      {{else if menu-breadcrumbs--Drilldown--IsLevel3}}
+        {{#> breadcrumb-item}}
+          {{> breadcrumb-item-divider}}
+          {{#> breadcrumb-link breadcrumb-link--IsButton="true"}}
+            All
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+
+        {{#> menu-breadcrumbs--Drilldown--dropdown dropdown-toggle--Badge--text="1"}}
+          {{> menu-list-item menu-list-item--text="Edit" menu-list-item-button--attribute=(concat 'aria-label="Back to edit menu"')}}
+        {{/menu-breadcrumbs--Drilldown--dropdown}}
+
+        {{#> breadcrumb-item}}
+          {{> breadcrumb-item-divider}}
+          {{#> breadcrumb-heading}}
+            {{#> breadcrumb-link breadcrumb-link--current="true"}}
+              Deployment
+            {{/breadcrumb-link}}
+          {{/breadcrumb-heading}}
+        {{/breadcrumb-item}}
+
+      {{!-- level 4 --}}
+      {{else if menu-breadcrumbs--Drilldown--IsLevel4}}
+        {{#> breadcrumb-item}}
+          {{> breadcrumb-item-divider}}
+          {{#> breadcrumb-link breadcrumb-link--IsButton="true"}}
+            All
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+
+        {{#> menu-breadcrumbs--Drilldown--dropdown dropdown-toggle--Badge--text="2" menu--attribute='style="--pf-c-menu--m-drilldown--Width: 200px;"'}}
+          {{> menu-list-item menu-list-item--text="Edit" menu-list-item-button--attribute=(concat 'aria-label="Back to edit menu"')}}
+          {{> menu-list-item menu-list-item--text="Deployment" menu-list-item-button--attribute=(concat 'aria-label="Back to deployment menu"')}}
+        {{/menu-breadcrumbs--Drilldown--dropdown}}
+
+        {{#> breadcrumb-item}}
+          {{> breadcrumb-item-divider}}
+          {{#> breadcrumb-heading}}
+            {{#> breadcrumb-link breadcrumb-link--current="true"}}
+              Labels
+            {{/breadcrumb-link}}
+          {{/breadcrumb-heading}}
+        {{/breadcrumb-item}}
+      {{/if}}
+    {{/breadcrumb-list}}
+  {{/breadcrumb}}
+{{/menu-breadcrumb}}
+{{> divider}}

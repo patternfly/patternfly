@@ -7,6 +7,7 @@ cssPrefix: pf-c-dropdown
 import './Dropdown.css'
 
 ## Examples
+
 ### Expanded
 ```hbs
 {{> dropdown dropdown--id="dropdown-expanded" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown"}}
@@ -41,17 +42,18 @@ import './Dropdown.css'
 
 ### Align on different breakpoint
 ```hbs
-{{#> dropdown id="dropdown-align-on-different-breakpoint" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown--HasToggleIcon="true" dropdown-menu--modifier="pf-m-align-right-on-lg pf-m-align-left-on-2xl"}}
-  {{#> dropdown-toggle-text}}
-    Dropdown
-  {{/dropdown-toggle-text}}
-{{/dropdown}}
+{{> dropdown id="dropdown-align-on-different-breakpoint" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right-on-lg pf-m-align-left-on-2xl" dropdown-toggle--text="Dropdown"}}
 ```
 
 ### Align top
 ```hbs
 {{> dropdown dropdown--id="dropdown-align-top" dropdown--modifier="pf-m-top" dropdown-toggle--text="Top"}}
 {{> dropdown dropdown--id="dropdown-align-top-expanded" dropdown--modifier="pf-m-top" dropdown--IsExpanded="true" dropdown-toggle--text="Top"}}
+```
+
+### Badge toggle
+```hbs
+{{> dropdown dropdown--id="dropdown-badge-toggle" dropdown--template--Badge="true" dropdown--IsExpanded="true" menu-list-item--IsDrillUp="true"}}
 ```
 
 ### Menu item icons

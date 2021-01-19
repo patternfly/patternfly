@@ -1,4 +1,4 @@
-<a href="#" class="pf-c-breadcrumb__link{{#if breadcrumb-link--modifier}} {{breadcrumb-link--modifier}}{{/if}}{{#if breadcrumb-link--current}} pf-m-current{{/if}}"
+<{{#if breadcrumb-link--IsButton}}button{{else}}a href="#"{{/if}} class="pf-c-breadcrumb__link{{#if breadcrumb-link--modifier}} {{breadcrumb-link--modifier}}{{/if}}{{#if breadcrumb-link--current}} pf-m-current{{/if}}"
   {{#if breadcrumb-link--attribute}}
     {{{breadcrumb-link--attribute}}}
   {{/if}}
@@ -6,4 +6,4 @@
     aria-current="page"
   {{/if}}>
   {{> @partial-block}}
-</a>
+</{{#if breadcrumb-link--IsButton}}button{{else}}a{{/if}}>

@@ -1,0 +1,15 @@
+{{#> breadcrumb-item}}
+  {{> breadcrumb-item-divider}}
+  {{#> breadcrumb-dropdown}}
+    {{#> dropdown dropdown--id=(concat breadcrumb--id '-breadcrumb-dropdown')}}
+      {{> dropdown-toggle dropdown-toggle--IsBadge="true"}}
+      {{#> menu menu--modifier=""}}
+        {{#> menu-content}}
+          {{#> menu-list menu-list--modifier="" menu-list-item--IsDrillUp="true"}}
+            {{> @partial-block}}
+          {{/menu-list}}
+        {{/menu-content}}
+      {{/menu}}
+    {{/dropdown}}
+  {{/breadcrumb-dropdown}}
+{{/breadcrumb-item}}

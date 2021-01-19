@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-c-breadcrumb
 ---
 
+import './Breadcrumb.css'
+
 ## Examples
 ### Basic
 ```hbs
@@ -106,6 +108,40 @@ cssPrefix: pf-c-breadcrumb
       {{#> breadcrumb-link}}
         Section title
       {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-heading}}
+        {{#> breadcrumb-link breadcrumb-link--current="true"}}
+          Section title
+        {{/breadcrumb-link}}
+      {{/breadcrumb-heading}}
+    {{/breadcrumb-item}}
+  {{/breadcrumb-list}}
+{{/breadcrumb}}
+```
+
+### With dropdown
+```hbs
+{{#> breadcrumb breadcrumb--id="breadcrumb-with-dropdown-example"}}
+  {{#> breadcrumb-list}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-link}}
+        Section home
+      {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-dropdown}}
+        {{> dropdown dropdown--id="dropdown-badge-toggle" dropdown--template--Breadcrumb="true" dropdown--IsExpanded="true" menu-list-item--IsDrillUp="true"}}
+      {{/breadcrumb-dropdown}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}
       {{> breadcrumb-item-divider}}

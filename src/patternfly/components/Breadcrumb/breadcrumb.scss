@@ -10,10 +10,23 @@
   --pf-c-breadcrumb__item-divider--FontSize: var(--pf-global--FontSize--sm);
 
   // Breadcrumb link
+  --pf-c-breadcrumb__link--Color: var(--pf-global--link--Color);
+  --pf-c-breadcrumb__link--TextDecoration: var(--pf-global--link--TextDecoration);
+  --pf-c-breadcrumb__link--hover--Color: var(--pf-global--link--Color--hover);
+  --pf-c-breadcrumb__link--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
   --pf-c-breadcrumb__link--m-current--Color: var(--pf-global--Color--100);
 
   // Heading
   --pf-c-breadcrumb__heading--FontSize: var(--pf-global--FontSize--sm);
+
+  // breadcrumb dropdown
+  --pf-c-breadcrumb__dropdown--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-breadcrumb__dropdown--MarginRight: calc(var(--pf-c-breadcrumb__item--MarginRight) * -1);
+  --pf-c-breadcrumb__dropdown--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-breadcrumb__dropdown--MarginLeft: calc(var(--pf-c-breadcrumb__item-divider--MarginRight) * -1);
+
+  // breadcrumb toggle
+  --pf-c-breadcrumb__dropdown--c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--sm);
 
   display: inline-flex;
 }
@@ -53,7 +66,15 @@
   font-size: inherit;
   font-weight: var(--pf-c-breadcrumb__link--FontWeight);
   line-height: inherit;
+  color: var(--pf-c-breadcrumb__link--Color);
+  text-decoration: var(--pf-c-breadcrumb__link--TextDecoration);
   word-break: break-word;
+
+  &:hover {
+    --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__link--hover--Color);
+    --pf-c-breadcrumb__link--TextDecoration: var(--pf-c-breadcrumb__link--hover--TextDecoration);
+  }
+
 
   // current item
   &.pf-m-current {
@@ -64,6 +85,19 @@
       color: var(--pf-c-breadcrumb__link--m-current--Color);
       text-decoration: none;
     }
+  }
+
+  // update at breaking change
+  @at-root button#{&} {
+    border: none;
+  }
+}
+
+.pf-c-breadcrumb__dropdown {
+  margin: var(--pf-c-breadcrumb__dropdown--MarginTop) var(--pf-c-breadcrumb__dropdown--MarginRight) var(--pf-c-breadcrumb__dropdown--MarginBottom) var(--pf-c-breadcrumb__dropdown--MarginLeft);
+
+  .pf-c-dropdown__toggle {
+    line-height: var(--pf-c-breadcrumb__dropdown--c-dropdown__toggle--LineHeight);
   }
 }
 

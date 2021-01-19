@@ -1,0 +1,25 @@
+{{#> menu-content}}
+  {{#> menu-list menu-content--attribute=''}}
+    {{#> menu-list-item menu-list-item--IsExpandable="true" menu-list-item--IsDrillDown="true" menu-list-item--text="Edit" menu-list-item--IsCurrentPath=menu-content--Breadcrumbs--level2}}
+      {{#> menu menu--IsSubmenu="true" menu--modifier="" menu--attribute='' menu--IsDrilledIn=menu-content--Breadcrumbs--level3}}
+        {{#> menu-list-item menu-list-item--IsExpandable="true" menu-list-item--IsDrillDown="true" menu-list-item--text="Deployment" menu-list-item--IsCurrentPath=menu-content--Breadcrumbs--level3}}
+          {{#> menu menu--IsSubmenu="true" menu--attribute='' menu--IsDrilledIn=menu-content--Breadcrumbs--level4}}
+            {{#> menu-list-item menu-list-item--IsExpandable="true" menu-list-item--IsDrillDown="true" menu-list-item--text="Labels" menu-list-item--IsCurrentPath=menu-content--Breadcrumbs--level4}}
+              {{#> menu menu--IsSubmenu="true" menu--IsDrilledInReset="true"}}
+                {{> menu-list-item newcontext menu-list-item--text="Label 1"}}
+                {{> menu-list-item newcontext menu-list-item--text="Label 2"}}
+                {{> menu-list-item newcontext menu-list-item--text="Label 3"}}
+                {{> menu-list-item newcontext menu-list-item--text="Label 4"}}
+                {{> menu-list-item newcontext menu-list-item--text="Label 5"}}
+              {{/menu}}
+            {{/menu-list-item}}
+            {{> menu-list-item newcontext menu-list-item--text="URLs"}}
+            {{> menu-list-item newcontext menu-list-item--text="APIs"}}
+          {{/menu}}
+        {{/menu-list-item}}
+        {{> menu-list-item newcontext menu-list-item--text="Config"}}
+      {{/menu}}
+    {{/menu-list-item}}
+    {{> menu-list-item menu-list-item--text="Start rollout"}}
+  {{/menu-list}}
+{{/menu-content}}
