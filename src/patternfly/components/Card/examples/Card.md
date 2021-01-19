@@ -189,6 +189,21 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
+### Large
+```hbs
+{{#> card card--id="card-display-lg-example" card--modifier="pf-m-display-lg"}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
 ### Hover
 ```hbs
 {{#> card card--id="card-hover-example" card--modifier="pf-m-hoverable"}}
@@ -237,6 +252,21 @@ cssPrefix: pf-c-card
 ### Flat
 ```hbs
 {{#> card card--id="card-flat-example" card--modifier="pf-m-flat"}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
+### Rounded
+```hbs
+{{#> card card--id="card-rounded-example" card--modifier="pf-m-rounded"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -347,9 +377,11 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. |
 | `.pf-c-card__expandable-content` | `<div>` | Creates the expandable card's expandable content. |
 | `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
+| `.pf-m-display-lg` | `.pf-c-card` | Creates a large variation of the card component that involves larger font sizes and spacing. This variation is for marketing use cases. |
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` to not fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
 | `.pf-m-hoverable` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
 | `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
 | `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selectable card for the selected state. |
-| `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background.
+| `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background. |
+| `.pf-m-rounded` | `.pf-c-card` | Modifies the card to have rounded corners. |
 | `.pf-m-expanded` | `.pf-c-card` | Modifies the card for the expanded state. |
