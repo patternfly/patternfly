@@ -436,7 +436,7 @@ beta: true
 
 ### Expandable (responsive)
 ```hbs
-{{#> jump-links jump-links--id="jump-links-expandable-responsive" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-expandable pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl" jump-links--attribute='aria-label="Local"'}}
+{{#> jump-links jump-links--id="jump-links-expandable-responsive" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl" jump-links--attribute='aria-label="Local"'}}
   {{#> jump-links-label}}
     Jump to section
   {{/jump-links-label}}
