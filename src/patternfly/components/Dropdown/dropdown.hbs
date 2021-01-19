@@ -28,7 +28,7 @@
 
   {{!-- breadcrumb template --}}
   {{else if dropdown--template--Breadcrumb}}
-    {{> dropdown-toggle dropdown-toggle--IsBadge="true"}}
+    {{> dropdown-toggle dropdown-toggle--IsBadge="true" dropdown-toggle--modifier="pf-m-read"}}
     {{#if dropdown--IsExpanded}}
       {{> menu--Breadcrumbs menu-list--aria-labelledby=(concat dropdown--id '-button')}}
     {{else}}

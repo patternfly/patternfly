@@ -91,9 +91,10 @@
   --pf-c-menu__item-action--m-favorite__icon--FontSize: var(--pf-global--icon--FontSize--sm);
 
   // breadcrumb
+  --pf-c-menu__breadcrumb--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-menu__breadcrumb--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-menu__breadcrumb--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-menu__breadcrumb--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-menu__breadcrumb--MinHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md) + var(--pf-global--spacer--form-element) * 2); // height of dropdown__toggle
   --pf-c-menu__breadcrumb--c-breadcrumb__item--FontSize: var(--pf-global--FontSize--md);
   --pf-c-menu__breadcrumb--c-breadcrumb__heading--FontSize: var(--pf-global--FontSize--md);
 
@@ -204,8 +205,7 @@
   display: flex;
   align-items: center;
   min-height: var(--pf-c-menu__breadcrumb--MinHeight);
-  padding-right: var(--pf-c-menu__breadcrumb--PaddingRight);
-  padding-left: var(--pf-c-menu__breadcrumb--PaddingLeft);
+  padding: var(--pf-c-menu__breadcrumb--PaddingTop) var(--pf-c-menu__breadcrumb--PaddingRight) var(--pf-c-menu__breadcrumb--PaddingBottom) var(--pf-c-menu__breadcrumb--PaddingLeft);
 
   .pf-c-breadcrumb {
     --pf-c-breadcrumb__item--FontSize: var(--pf-c-menu__breadcrumb--c-breadcrumb__item--FontSize);

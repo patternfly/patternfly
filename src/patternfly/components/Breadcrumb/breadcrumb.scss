@@ -19,6 +19,13 @@
   // Heading
   --pf-c-breadcrumb__heading--FontSize: var(--pf-global--FontSize--sm);
 
+  // breadcrumb dropdown
+  --pf-c-breadcrumb__dropdown--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-breadcrumb__dropdown--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+
+  // breadcrumb toggle
+  --pf-c-breadcrumb__dropdown--c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--sm);
+
   display: inline-flex;
 }
 
@@ -81,6 +88,15 @@
   // update at breaking change
   @at-root button#{&} {
     border: none;
+  }
+}
+
+.pf-c-breadcrumb__dropdown {
+  margin-top: var(--pf-c-breadcrumb__dropdown--MarginTop);
+  margin-bottom: var(--pf-c-breadcrumb__dropdown--MarginBottom);
+
+  .pf-c-dropdown__toggle {
+    line-height: var(--pf-c-breadcrumb__dropdown--c-dropdown__toggle--LineHeight);
   }
 }
 
