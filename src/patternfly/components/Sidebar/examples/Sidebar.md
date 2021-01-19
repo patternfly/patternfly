@@ -158,9 +158,9 @@ import './Sidebar.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-sidebar` | `<div>` | Initiates the sidebar component. **Required** |
-| `.pf-c-simple-list__main` | `<div>` | Initiates the sidebar main element. **Required** |
-| `.pf-c-simple-list__panel` | `<div>` | Initiates the sidebar panel element. **Required** |
-| `.pf-c-simple-list__content` | `<div>` | Initiates the sidebar content element. **Required** |
+| `.pf-c-sidebar__main` | `<div>` | Initiates the sidebar main element. **Required** |
+| `.pf-c-sidebar__panel` | `<div>` | Initiates the sidebar panel element. **Required** |
+| `.pf-c-sidebar__content` | `<div>` | Initiates the sidebar content element. **Required** |
 | `.pf-m-gutter` | `.pf-c-sidebar` | Modifies the sidebar component to add a gutter between the panel and content. |
 | `.pf-m-stack` | `.pf-c-sidebar` | Modifies the sidebar to stack the panel on top of the content. |
 | `.pf-m-split` | `.pf-c-sidebar` | Modifies the sidebar to position the panel and content side by side. |
