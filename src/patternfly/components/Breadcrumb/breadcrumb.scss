@@ -21,7 +21,9 @@
 
   // breadcrumb dropdown
   --pf-c-breadcrumb__dropdown--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-breadcrumb__dropdown--MarginRight: calc(var(--pf-c-breadcrumb__item--MarginRight) * -1);
   --pf-c-breadcrumb__dropdown--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-breadcrumb__dropdown--MarginLeft: calc(var(--pf-c-breadcrumb__item-divider--MarginRight) * -1);
 
   // breadcrumb toggle
   --pf-c-breadcrumb__dropdown--c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--sm);
@@ -92,8 +94,7 @@
 }
 
 .pf-c-breadcrumb__dropdown {
-  margin-top: var(--pf-c-breadcrumb__dropdown--MarginTop);
-  margin-bottom: var(--pf-c-breadcrumb__dropdown--MarginBottom);
+  margin: var(--pf-c-breadcrumb__dropdown--MarginTop) var(--pf-c-breadcrumb__dropdown--MarginRight) var(--pf-c-breadcrumb__dropdown--MarginBottom) var(--pf-c-breadcrumb__dropdown--MarginLeft);
 
   .pf-c-dropdown__toggle {
     line-height: var(--pf-c-breadcrumb__dropdown--c-dropdown__toggle--LineHeight);
