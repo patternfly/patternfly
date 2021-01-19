@@ -120,7 +120,7 @@ cssPrefix: pf-c-list
 
 ### With large icons
 ```hbs
-{{#> list list--modifier="pf-m-plain pf-m-lg"}}
+{{#> list list--modifier="pf-m-plain pf-m-icon-lg"}}
   {{#> list-item}}
     {{#> list-item-icon}}
       <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
@@ -159,4 +159,4 @@ Non-inline lists can be nested up to any level.
 | `.pf-m-inline` | `.pf-c-list` | Displays list items inline. |
 | `.pf-m-plain` | `.pf-c-list` |  Removes the list marker and base indentation. |
 | `.pf-m-bordered` | `pf-c-list` | Add horizontal divider between items in a list. |
-| `.pf-m-lg` | `pf-c-list` | Show all the icons or logos in the list large. |
+| `.pf-m-icon-lg` | `pf-c-list` | Show all the icons or logos in the list large. |
