@@ -3,6 +3,52 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2021.01 release notes (2021-01-26)
+Packages released:
+- [@patternfly/patternfly@v4.80.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.80.2)
+
+### Components
+- **Accordion:** Updated expanded content color to use correct global var ([#3723](https://github.com/patternfly/patternfly/pull/3723))
+- **Alert group:** Updated examples and documentation ([#3757](https://github.com/patternfly/patternfly/pull/3757))
+- **Card:**
+  - Added demos for horizontal cards ([#3758](https://github.com/patternfly/patternfly/pull/3758))
+  - Introduced large card variant ([#3793](https://github.com/patternfly/patternfly/pull/3793))
+  - Added empty state card into the demo ([#3794](https://github.com/patternfly/patternfly/pull/3794))
+- **Data list:** Updated alignment settings ([#3750](https://github.com/patternfly/patternfly/pull/3750))
+- **Drawer:**
+  - Fixed splitter scroll off when scroll the panel ([#3778](https://github.com/patternfly/patternfly/pull/3778))
+  - Fixed inline bottom panel layout issues ([#3785](https://github.com/patternfly/patternfly/pull/3785))
+  - Limited drawer resize to desktop breakpoint ([#3788](https://github.com/patternfly/patternfly/pull/3788))
+- **Dropdown:** Added support for menu alignement at different breakpoints ([#3746](https://github.com/patternfly/patternfly/pull/3746))
+- **Dropdown, breadcrumbs, menu:** Added badge to dropdown, badge dropdown to breadcrumbs, breadcrumbs to menu ([#3797](https://github.com/patternfly/patternfly/pull/3797))
+- **Form:** Added demos, section title, stack control group mod ([#3767](https://github.com/patternfly/patternfly/pull/3767))
+- **Form control:** Added placeholder variation for form select ([#3790](https://github.com/patternfly/patternfly/pull/3790))
+- **Jump links:**
+  - Updated focus styles to match hover ([#3786](https://github.com/patternfly/patternfly/pull/3786))
+  - Added expandable variation ([#3802](https://github.com/patternfly/patternfly/pull/3802))
+- **List:** Added bordered, image variants ([#3798](https://github.com/patternfly/patternfly/pull/3798))
+- **Menu:** Updated __content height ([#3792](https://github.com/patternfly/patternfly/pull/3792))
+- **Nav, tabs:** Added scroll-snapping ([#3754](https://github.com/patternfly/patternfly/pull/3754))
+- **Number input:** Renamed touchspin to number input, use number type ([#3748](https://github.com/patternfly/patternfly/pull/3748))
+- **Page:** Fixed page section responsive padding ([#3769](https://github.com/patternfly/patternfly/pull/3769))
+- **Search input:** Added advanced search ([#3783](https://github.com/patternfly/patternfly/pull/3783))
+- **Sidebar:** Added sidebar component ([#3801](https://github.com/patternfly/patternfly/pull/3801))
+- **Spinner:** Added svg variation ([#3690](https://github.com/patternfly/patternfly/pull/3690))
+- **Switch, radio, check:** Updated input height and grid ([#3749](https://github.com/patternfly/patternfly/pull/3749))
+- **Table:** Fixed th alignment ([#3799](https://github.com/patternfly/patternfly/pull/3799))
+- **Toggle group:** Added type=button to buttons ([#3760](https://github.com/patternfly/patternfly/pull/3760))
+- **Toolbar:** Added toolbar back to demos ([#3753](https://github.com/patternfly/patternfly/pull/3753))
+- **Wizard:** Added cancel button element to increase cancel spacer ([#3756](https://github.com/patternfly/patternfly/pull/3756))
+
+### Other
+- **Workspace:**
+  - Updated the new component/layout/demo generator template to not escape --attribute ([#3739](https://github.com/patternfly/patternfly/pull/3739))
+  - Cleaned up menu examples, code ([#3744](https://github.com/patternfly/patternfly/pull/3744))
+  - Refactored dropdown example handlebars ([#3752](https://github.com/patternfly/patternfly/pull/3752))
+- **Global CSS:**
+  - Removed breakpoint map in pf-apply-breakpoint function ([#3761](https://github.com/patternfly/patternfly/pull/3761))
+  - Added SVG vertical-align class for patternfly-react ([#3775](https://github.com/patternfly/patternfly/pull/3775))
+
 ## 2020.16 release notes (2020-12-08)
 Packages released:
 - [@patternfly/patternfly@v4.70.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.70.1)
