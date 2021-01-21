@@ -27,7 +27,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer--m-panel-bottom__panel--md--MinHeight: 50%;
   --pf-c-drawer--m-panel-bottom__panel--xl--MinHeight: #{pf-size-prem(300px)};
   --pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis: #{pf-size-prem(300px)};
-  --pf-c-drawer__panel--m-resizable--FlexBasis: initial; // falls back by default
   --pf-c-drawer__panel--m-resizable--FlexDirection: row;
   --pf-c-drawer__panel--m-resizable--md--FlexBasis--min: var(--pf-c-drawer__splitter--m-vertical--Width);
   --pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection: column;
