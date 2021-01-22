@@ -19,7 +19,7 @@ Packages released:
   - Fixed splitter scroll off when scroll the panel ([#3778](https://github.com/patternfly/patternfly/pull/3778))
   - Fixed inline bottom panel layout issues ([#3785](https://github.com/patternfly/patternfly/pull/3785))
   - Limited drawer resize to desktop breakpoint ([#3788](https://github.com/patternfly/patternfly/pull/3788))
-- **Dropdown:** Added support for menu alignement at different breakpoints ([#3746](https://github.com/patternfly/patternfly/pull/3746))
+- **Dropdown:** Added support for menu alignment at different breakpoints ([#3746](https://github.com/patternfly/patternfly/pull/3746))
 - **Dropdown, breadcrumbs, menu:** Added badge to dropdown, badge dropdown to breadcrumbs, breadcrumbs to menu ([#3797](https://github.com/patternfly/patternfly/pull/3797))
 - **Form:** Added demos, section title, stack control group mod ([#3767](https://github.com/patternfly/patternfly/pull/3767))
 - **Form control:** Added placeholder variation for form select ([#3790](https://github.com/patternfly/patternfly/pull/3790))
