@@ -1,6 +1,4 @@
 .pf-c-chip-group {
-  @include pf-t-light; // force the container follow the light theme
-
   // Chip group list
   --pf-c-chip-group__list--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-chip-group__list--MarginRight: calc(var(--pf-global--spacer--xs) * -1);
