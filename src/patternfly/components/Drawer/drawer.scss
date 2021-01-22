@@ -12,24 +12,25 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__content--ZIndex: var(--pf-global--ZIndex--xs);
 
   // Panel
-  --pf-c-drawer__panel--FlexBasis: 100%;
-  --pf-c-drawer__panel--md--FlexBasis: 50%;
   --pf-c-drawer__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
   --pf-c-drawer__panel--MaxHeight: auto;
-  --pf-c-drawer--m-panel-bottom__panel--md--MinHeight: 50%;
-  --pf-c-drawer__panel--xl--MinWidth: #{pf-size-prem(450px)};
-  --pf-c-drawer__panel--xl--FlexBasis: #{pf-size-prem(450px)};
-  --pf-c-drawer--m-panel-bottom__panel--xl--MinHeight: #{pf-size-prem(300px)};
-  --pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis: #{pf-size-prem(300px)};
   --pf-c-drawer__panel--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-drawer__panel--TransitionDuration: var(--pf-global--TransitionDuration);
   --pf-c-drawer__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
-  --pf-c-drawer__panel--m-resizable--FlexBasis: initial;
+  --pf-c-drawer__panel--FlexBasis: 100%;
+  --pf-c-drawer__panel--md--FlexBasis--min: 0%;
+  --pf-c-drawer__panel--md--FlexBasis: 50%;
+  --pf-c-drawer__panel--md--FlexBasis--max: 100%;
+  --pf-c-drawer__panel--xl--MinWidth: #{pf-size-prem(450px)};
+  --pf-c-drawer__panel--xl--FlexBasis: #{pf-size-prem(450px)};
+  --pf-c-drawer--m-panel-bottom__panel--md--MinHeight: 50%;
+  --pf-c-drawer--m-panel-bottom__panel--xl--MinHeight: #{pf-size-prem(300px)};
+  --pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis: #{pf-size-prem(300px)};
   --pf-c-drawer__panel--m-resizable--FlexDirection: row;
-  --pf-c-drawer__panel--FlexBasis--min: var(--pf-c-drawer__splitter--m-vertical--Width);
+  --pf-c-drawer__panel--m-resizable--md--FlexBasis--min: var(--pf-c-drawer__splitter--m-vertical--Width);
   --pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection: column;
-  --pf-c-drawer--m-panel-bottom__panel--FlexBasis--min: var(--pf-c-drawer__splitter--Height);
+  --pf-c-drawer--m-panel-bottom__panel--m-resizable--md--FlexBasis--min: var(--pf-c-drawer__splitter--Height);
 
   // Child padding
   --pf-c-drawer--child--PaddingTop: var(--pf-global--spacer--md);
@@ -112,8 +113,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__splitter--m-vertical__splitter-handle--after--Height: #{pf-size-prem(12px)};
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
-    --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--m-resizable--FlexBasis, var(--pf-c-drawer__panel--md--FlexBasis));
-
     // Responsive child padding
     --pf-c-drawer--child--PaddingTop: var(--pf-c-drawer--child--md--PaddingTop);
     --pf-c-drawer--child--PaddingRight: var(--pf-c-drawer--child--md--PaddingRight);
@@ -128,12 +127,10 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--m-resizable--FlexBasis, var(--pf-c-drawer__panel--xl--FlexBasis));
     --pf-c-drawer__panel--MinWidth: var(--pf-c-drawer__panel--xl--MinWidth);
 
     &.pf-m-panel-bottom {
       --pf-c-drawer__panel--MinWidth: auto;
-      --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--m-resizable--FlexBasis, var(--pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis));
       --pf-c-drawer__panel--MinHeight: var(--pf-c-drawer--m-panel-bottom__panel--xl--MinHeight);
     }
   }
@@ -250,7 +247,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 .pf-c-drawer__panel {
   position: relative;
   z-index: var(--pf-c-drawer__panel--ZIndex);
-  flex-basis: #{"max(var(--pf-c-drawer__panel--FlexBasis--min), var(--pf-c-drawer__panel--FlexBasis))"};
+  flex-basis: var(--pf-c-drawer__panel--FlexBasis);
   order: 1;
   max-height: var(--pf-c-drawer__panel--MaxHeight);
   overflow: auto;
@@ -272,6 +269,23 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   &.pf-m-no-background {
     background-color: transparent;
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    --pf-c-drawer__panel--FlexBasis:
+      clamp(
+        var(--pf-c-drawer__panel--md--FlexBasis--min),
+        var(--pf-c-drawer__panel--md--FlexBasis),
+        var(--pf-c-drawer__panel--md--FlexBasis--max)
+      );
+  }
+
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-drawer__panel--md--FlexBasis: var(--pf-c-drawer__panel--xl--FlexBasis);
+
+    .pf-c-drawer.pf-m-panel-bottom & {
+      --pf-c-drawer__panel--md--FlexBasis: var(--pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis);
+    }
   }
 }
 
@@ -407,6 +421,8 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
+      --pf-c-drawer__panel--md--FlexBasis--min: var(--pf-c-drawer__panel--m-resizable--md--FlexBasis--min);
+
       &::after {
         width: 0;
         height: 0;
@@ -481,6 +497,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
+      --pf-c-drawer__panel--md--FlexBasis--min: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--md--FlexBasis--min);
       --pf-c-drawer__panel--m-resizable--FlexDirection: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection);
 
       > .pf-c-drawer__splitter {
@@ -540,7 +557,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   @include pf-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-c-drawer__panel--list--width {
       .pf-c-drawer__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
-        --pf-c-drawer__panel--FlexBasis: #{percentage($width-value / 100)};
+        --pf-c-drawer__panel--md--FlexBasis: #{percentage($width-value / 100)};
       }
     }
   }

@@ -308,4 +308,6 @@ import './Drawer.css'
 | `.pf-m-no-background` | `.pf-c-drawer__section`, `.pf-c-drawer__content`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to transparent. |
 | `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-drawer__panel` | Modifies the drawer panel width. |
 | `.pf-m-resizable` | `.pf-c-drawer__panel` | Modifies the drawer panel to be resizable. Intended for use with the `.pf-c-drawer__splitter` element. |
-| `--pf-c-drawer__panel--m-resizable--FlexBasis` |  `.pf-c-drawer` | Used to update the panel size on a resizable drawer. |
+| `--pf-c-drawer__panel--md--FlexBasis--min` | `.pf-c-drawer__panel` | Defines the drawer panel minimum size. |
+| `--pf-c-drawer__panel--md--FlexBasis` | `.pf-c-drawer__panel` | Defines the drawer panel size. |
+| `--pf-c-drawer__panel--md--FlexBasis--max` | `.pf-c-drawer__panel` | Defines the drawer panel maximum size. |
