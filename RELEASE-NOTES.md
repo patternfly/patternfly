@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2021.01 release notes (2021-01-26)
 Packages released:
-- [@patternfly/patternfly@v4.80.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.80.2)
+- [@patternfly/patternfly@v4.80.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.80.3)
 
 ### Components
 - **Accordion:** Updated expanded content color to use correct global var ([#3723](https://github.com/patternfly/patternfly/pull/3723))
