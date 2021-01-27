@@ -9,7 +9,12 @@ cssPrefix: pf-c-description-list
 
 ### Default
 ```hbs
-{{> description-list__example description-list--title="Default DL" description-list--header="Test"}}
+{{> description-list__example description-list--title="Default DL"}}
+```
+
+### Clickable term
+```hbs
+{{> description-list__example description-list--title="Clickable term" description-list-term--TextIsClickable="true"}}
 ```
 
 ### Default 2 col
@@ -99,6 +104,7 @@ cssPrefix: pf-c-description-list
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `title` | `.pf-c-description-list` | Provides an accessible title for the description list. **Required** |
+| `tabindex="0"` | `.pf-c-description-list__text.pf-m-clickable` | Inserts the `.pf-c-description-list__text` into the tab order of the page so that it is focusable. **Required when the element is clickable** |
 
 ### Usage
 
@@ -109,6 +115,7 @@ cssPrefix: pf-c-description-list
 | `.pf-c-description-list__term` | `<dt>` | Initiates a description list component term. **Required** |
 | `.pf-c-description-list__description` | `<dd>` | Initiates a description list component description. **Required** |
 | `.pf-c-description-list__text` | `<span>`, `<div>` | Initiates a description list component text element. Use a `<span>` when a child of `.pf-c-description-list__term`. **Required** |
+| `.pf-m-clickable` | `.pf-c-description-list__text` | Modifies the description list component text to be clickable. |
 | `.pf-m-horizontal` | `.pf-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
 | `.pf-m-auto-column-widths` | `.pf-c-description-list` | Modifies the description list to format automatically. |
 | `.pf-m-inline-grid` | `.pf-c-description-list` | Modifies the description list display to inline-grid. |

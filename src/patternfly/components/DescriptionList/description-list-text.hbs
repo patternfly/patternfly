@@ -1,4 +1,9 @@
-<{{#if description-list-text--type}}{{description-list-text--type}}{{else}}div{{/if}} class="pf-c-description-list__text{{#if description-list-text--modifier}} {{description-list-text--modifier}}{{/if}}"
+<{{#if description-list-text--type}}{{description-list-text--type}}{{else}}div{{/if}} class="pf-c-description-list__text{{#if description-list-text--modifier}} {{description-list-text--modifier}}{{/if}}{{#if description-list-text--IsClickable}} pf-m-clickable{{/if}}"
+  {{#if description-list-text--IsClickable}}
+    role="button"
+    type="button"
+    tabindex="0"
+  {{/if}}
   {{#if description-list-text--attribute}}
     {{{description-list-text--attribute}}}
   {{/if}}>
