@@ -31,11 +31,12 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "md", "lg",
   --pf-c-description-list--m-auto-fit--GridTemplateColumns--min: #{pf-size-prem(250px)};
   --pf-c-description-list--m-auto-fit--GridTemplateColumns--minmax--min: var(--pf-c-description-list--m-auto-fit--GridTemplateColumns--min);
 
-  // clickable text
-  --pf-c-description-list__text--m-clickable--TextDecorationColor: var(--pf-global--palette--black-500);
-  --pf-c-description-list__text--m-clickable--hover--TextDecorationColor: var(--pf-global--palette--black-900);
-  --pf-c-description-list__text--m-clickable--TextDecorationThickness: var(--pf-global--BorderWidth--sm);
-  --pf-c-description-list__text--m-clickable--TextDecorationOffset: #{pf-size-prem(4px)};
+  // help text
+  --pf-c-description-list__text--m-help-text--TextDecorationColor: var(--pf-global--BorderColor--200);
+  --pf-c-description-list__text--m-help-text--TextDecorationThickness: var(--pf-global--BorderWidth--sm);
+  --pf-c-description-list__text--m-help-text--TextDecorationOffset: #{pf-size-prem(4px)};
+  --pf-c-description-list__text--m-help-text--hover--TextDecorationColor: var(--pf-global--Color--100);
+  --pf-c-description-list__text--m-help-text--focus--TextDecorationColor: var(--pf-global--Color--100);
 
   display: grid;
   align-items: baseline;
@@ -88,16 +89,20 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "md", "lg",
 }
 
 .pf-c-description-list__text {
-  &.pf-m-clickable {
+  &.pf-m-help-text {
     text-decoration: underline;
     cursor: pointer;
     text-decoration-style: dashed;
-    text-decoration-thickness: var(--pf-c-description-list__text--m-clickable--TextDecorationThickness);
-    text-underline-offset: var(--pf-c-description-list__text--m-clickable--TextDecorationOffset);
-    text-decoration-color: var(--pf-c-description-list__text--m-clickable--TextDecorationColor);
+    text-decoration-thickness: var(--pf-c-description-list__text--m-help-text--TextDecorationThickness);
+    text-underline-offset: var(--pf-c-description-list__text--m-help-text--TextDecorationOffset);
+    text-decoration-color: var(--pf-c-description-list__text--m-help-text--TextDecorationColor);
 
     &:hover {
-      --pf-c-description-list__text--m-clickable--TextDecorationColor: var(--pf-c-description-list__text--m-clickable--hover--TextDecorationColor);
+      --pf-c-description-list__text--m-help-text--TextDecorationColor: var(--pf-c-description-list__text--m-help-text--hover--TextDecorationColor);
+    }
+
+    &:focus {
+      --pf-c-description-list__text--m-help-text--TextDecorationColor: var(--pf-c-description-list__text--m-help-text--focus--TextDecorationColor);
     }
   }
 }
