@@ -10,8 +10,8 @@
   --pf-c-label--FontSize: var(--pf-global--FontSize--sm);
 
   // Border base styles
-  --pf-c-label__content--before--BorderWidth: 0;
-  --pf-c-label__content--before--BorderColor: transparent;
+  --pf-c-label__content--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-label__content--before--BorderColor: var(--pf-global--BorderColor--100);
 
   // Outline
   --pf-c-label--m-outline--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -19,8 +19,8 @@
   --pf-c-label--m-outline__content--before--BorderColor: var(--pf-global--BorderColor--100);
 
   // Content as link
-  --pf-c-label__content--link--hover--before--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-label__content--link--focus--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-label__content--link--hover--before--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-label__content--link--focus--before--BorderWidth: var(--pf-global--BorderWidth--md);
   --pf-c-label__content--link--hover--before--BorderColor: var(--pf-global--BorderColor--200);
   --pf-c-label__content--link--focus--before--BorderColor: var(--pf-global--BorderColor--200);
 
@@ -32,63 +32,69 @@
 
   // Blue
   --pf-c-label--m-blue--BackgroundColor: var(--pf-global--palette--blue-50);
-  --pf-c-label--m-blue__content--Color: var(--pf-global--info-color--200);
   --pf-c-label--m-blue__icon--Color: var(--pf-global--primary-color--100);
+  --pf-c-label--m-blue__content--Color: var(--pf-global--info-color--200);
+  --pf-c-label--m-blue__content--before--BorderColor: var(--pf-global--palette--blue-100);
   --pf-c-label--m-blue__content--link--hover--before--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-label--m-blue__content--link--focus--before--BorderColor: var(--pf-global--primary-color--100);
-  --pf-c-label--m-outline--m-blue__content--before--BorderColor: var(--pf-global--active-color--200);
-  --pf-c-label--m-outline--m-blue__content--link--hover--before--BorderColor: var(--pf-global--active-color--200);
-  --pf-c-label--m-outline--m-blue__content--link--focus--before--BorderColor: var(--pf-global--active-color--200);
+  --pf-c-label--m-outline--m-blue__content--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-blue__content--link--hover--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-blue__content--link--focus--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
 
   // Green
   --pf-c-label--m-green--BackgroundColor: var(--pf-global--palette--green-50);
-  --pf-c-label--m-green__content--Color: var(--pf-global--success-color--200);
   --pf-c-label--m-green__icon--Color: var(--pf-global--success-color--100);
+  --pf-c-label--m-green__content--Color: var(--pf-global--success-color--200);
+  --pf-c-label--m-green__content--before--BorderColor: var(--pf-global--palette--green-100);
   --pf-c-label--m-green__content--link--hover--before--BorderColor: var(--pf-global--success-color--100);
   --pf-c-label--m-green__content--link--focus--before--BorderColor: var(--pf-global--success-color--100);
-  --pf-c-label--m-outline--m-green__content--before--BorderColor: var(--pf-global--palette--green-100);
-  --pf-c-label--m-outline--m-green__content--link--hover--before--BorderColor: var(--pf-global--palette--green-100);
-  --pf-c-label--m-outline--m-green__content--link--focus--before--BorderColor: var(--pf-global--palette--green-100);
+  --pf-c-label--m-outline--m-green__content--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-green__content--link--hover--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-green__content--link--focus--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
 
   // Orange
   --pf-c-label--m-orange--BackgroundColor: var(--pf-global--palette--gold-50);
-  --pf-c-label--m-orange__content--Color: var(--pf-global--palette--gold-700);
   --pf-c-label--m-orange__icon--Color: var(--pf-global--palette--orange-300);
+  --pf-c-label--m-orange__content--Color: var(--pf-global--palette--gold-700);
+  --pf-c-label--m-orange__content--before--BorderColor: var(--pf-global--palette--orange-100);
   --pf-c-label--m-orange__content--link--hover--before--BorderColor: var(--pf-global--palette--orange-300);
   --pf-c-label--m-orange__content--link--focus--before--BorderColor: var(--pf-global--palette--orange-300);
-  --pf-c-label--m-outline--m-orange__content--before--BorderColor: var(--pf-global--palette--gold-100);
-  --pf-c-label--m-outline--m-orange__content--link--hover--before--BorderColor: var(--pf-global--palette--gold-100);
-  --pf-c-label--m-outline--m-orange__content--link--focus--before--BorderColor: var(--pf-global--palette--gold-100);
+  --pf-c-label--m-outline--m-orange__content--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-orange__content--link--hover--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-orange__content--link--focus--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
 
   // Red
   --pf-c-label--m-red--BackgroundColor: var(--pf-global--palette--red-50);
-  --pf-c-label--m-red__content--Color: var(--pf-global--palette--red-300);
   --pf-c-label--m-red__icon--Color: var(--pf-global--danger-color--100);
+  --pf-c-label--m-red__content--Color: var(--pf-global--palette--red-300);
+  --pf-c-label--m-red__content--before--BorderColor: var(--pf-global--palette--red-100);
   --pf-c-label--m-red__content--link--hover--before--BorderColor: var(--pf-global--danger-color--100);
   --pf-c-label--m-red__content--link--focus--before--BorderColor: var(--pf-global--danger-color--100);
-  --pf-c-label--m-outline--m-red__content--before--BorderColor: var(--pf-global--danger-color--100);
-  --pf-c-label--m-outline--m-red__content--link--hover--before--BorderColor: var(--pf-global--danger-color--100);
-  --pf-c-label--m-outline--m-red__content--link--focus--before--BorderColor: var(--pf-global--danger-color--100);
+  --pf-c-label--m-outline--m-red__content--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-red__content--link--hover--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-red__content--link--focus--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
 
   // Purple
   --pf-c-label--m-purple--BackgroundColor: var(--pf-global--palette--purple-50);
-  --pf-c-label--m-purple__content--Color: var(--pf-global--palette--purple-700);
   --pf-c-label--m-purple__icon--Color: var(--pf-global--palette--purple-500);
+  --pf-c-label--m-purple__content--Color: var(--pf-global--palette--purple-700);
+  --pf-c-label--m-purple__content--before--BorderColor: var(--pf-global--palette--purple-100);
   --pf-c-label--m-purple__content--link--hover--before--BorderColor: var(--pf-global--palette--purple-500);
   --pf-c-label--m-purple__content--link--focus--before--BorderColor: var(--pf-global--palette--purple-500);
-  --pf-c-label--m-outline--m-purple__content--before--BorderColor: var(--pf-global--palette--purple-100);
-  --pf-c-label--m-outline--m-purple__content--link--hover--before--BorderColor: var(--pf-global--palette--purple-100);
-  --pf-c-label--m-outline--m-purple__content--link--focus--before--BorderColor: var(--pf-global--palette--purple-100);
+  --pf-c-label--m-outline--m-purple__content--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-purple__content--link--hover--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-purple__content--link--focus--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
 
   // Cyan
   --pf-c-label--m-cyan--BackgroundColor: var(--pf-global--palette--cyan-50);
-  --pf-c-label--m-cyan__content--Color: var(--pf-global--default-color--300);
   --pf-c-label--m-cyan__icon--Color: var(--pf-global--default-color--200);
+  --pf-c-label--m-cyan__content--Color: var(--pf-global--default-color--300);
+  --pf-c-label--m-cyan__content--before--BorderColor: var(--pf-global--palette--cyan-100);
   --pf-c-label--m-cyan__content--link--hover--before--BorderColor: var(--pf-global--default-color--200);
   --pf-c-label--m-cyan__content--link--focus--before--BorderColor: var(--pf-global--default-color--200);
-  --pf-c-label--m-outline--m-cyan__content--before--BorderColor: var(--pf-global--palette--cyan-100);
-  --pf-c-label--m-outline--m-cyan__content--link--hover--before--BorderColor: var(--pf-global--palette--cyan-100);
-  --pf-c-label--m-outline--m-cyan__content--link--focus--before--BorderColor: var(--pf-global--palette--cyan-100);
+  --pf-c-label--m-outline--m-cyan__content--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-cyan__content--link--hover--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
+  --pf-c-label--m-outline--m-cyan__content--link--focus--before--BorderColor: var(--pf-global--BorderColor--100); // remove at breaking change
 
   // Overflow
   --pf-c-label--m-overflow__content--Color: var(--pf-global--link--Color);
@@ -132,66 +138,72 @@
 
   &.pf-m-blue {
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-blue--BackgroundColor);
-    --pf-c-label__content--Color: var(--pf-c-label--m-blue__content--Color);
     --pf-c-label__icon--Color: var(--pf-c-label--m-blue__icon--Color);
-    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-blue__content--before--BorderColor);
+    --pf-c-label__content--Color: var(--pf-c-label--m-blue__content--Color);
+    --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-blue__content--before--BorderColor);
     --pf-c-label__content--link--hover--before--BorderColor: var(--pf-c-label--m-blue__content--link--hover--before--BorderColor);
     --pf-c-label__content--link--focus--before--BorderColor: var(--pf-c-label--m-blue__content--link--focus--before--BorderColor);
+    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-blue__content--before--BorderColor);
     --pf-c-label--m-outline__content--link--hover--before--BorderColor: var(--pf-c-label--m-outline--m-blue__content--link--hover--before--BorderColor);
     --pf-c-label--m-outline__content--link--focus--before--BorderColor: var(--pf-c-label--m-outline--m-blue__content--link--focus--before--BorderColor);
   }
 
   &.pf-m-green {
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-green--BackgroundColor);
-    --pf-c-label__content--Color: var(--pf-c-label--m-green__content--Color);
     --pf-c-label__icon--Color: var(--pf-c-label--m-green__icon--Color);
-    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-green__content--before--BorderColor);
+    --pf-c-label__content--Color: var(--pf-c-label--m-green__content--Color);
+    --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-green__content--before--BorderColor);
     --pf-c-label__content--link--hover--before--BorderColor: var(--pf-c-label--m-green__content--link--hover--before--BorderColor);
     --pf-c-label__content--link--focus--before--BorderColor: var(--pf-c-label--m-green__content--link--focus--before--BorderColor);
+    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-green__content--before--BorderColor);
     --pf-c-label--m-outline__content--link--hover--before--BorderColor: var(--pf-c-label--m-outline--m-green__content--link--hover--before--BorderColor);
     --pf-c-label--m-outline__content--link--focus--before--BorderColor: var(--pf-c-label--m-outline--m-green__content--link--focus--before--BorderColor);
   }
 
   &.pf-m-orange {
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-orange--BackgroundColor);
-    --pf-c-label__content--Color: var(--pf-c-label--m-orange__content--Color);
     --pf-c-label__icon--Color: var(--pf-c-label--m-orange__icon--Color);
-    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-orange__content--before--BorderColor);
+    --pf-c-label__content--Color: var(--pf-c-label--m-orange__content--Color);
+    --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-orange__content--before--BorderColor);
     --pf-c-label__content--link--hover--before--BorderColor: var(--pf-c-label--m-orange__content--link--hover--before--BorderColor);
     --pf-c-label__content--link--focus--before--BorderColor: var(--pf-c-label--m-orange__content--link--focus--before--BorderColor);
+    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-orange__content--before--BorderColor);
     --pf-c-label--m-outline__content--link--hover--before--BorderColor: var(--pf-c-label--m-outline--m-orange__content--link--hover--before--BorderColor);
     --pf-c-label--m-outline__content--link--focus--before--BorderColor: var(--pf-c-label--m-outline--m-orange__content--link--focus--before--BorderColor);
   }
 
   &.pf-m-red {
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-red--BackgroundColor);
-    --pf-c-label__content--Color: var(--pf-c-label--m-red__content--Color);
     --pf-c-label__icon--Color: var(--pf-c-label--m-red__icon--Color);
-    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-red__content--before--BorderColor);
+    --pf-c-label__content--Color: var(--pf-c-label--m-red__content--Color);
+    --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-red__content--before--BorderColor);
     --pf-c-label__content--link--hover--before--BorderColor: var(--pf-c-label--m-red__content--link--hover--before--BorderColor);
     --pf-c-label__content--link--focus--before--BorderColor: var(--pf-c-label--m-red__content--link--focus--before--BorderColor);
+    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-red__content--before--BorderColor);
     --pf-c-label--m-outline__content--link--hover--before--BorderColor: var(--pf-c-label--m-outline--m-red__content--link--hover--before--BorderColor);
     --pf-c-label--m-outline__content--link--focus--before--BorderColor: var(--pf-c-label--m-outline--m-red__content--link--focus--before--BorderColor);
   }
 
   &.pf-m-purple {
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-purple--BackgroundColor);
-    --pf-c-label__content--Color: var(--pf-c-label--m-purple__content--Color);
     --pf-c-label__icon--Color: var(--pf-c-label--m-purple__icon--Color);
-    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-purple__content--before--BorderColor);
+    --pf-c-label__content--Color: var(--pf-c-label--m-purple__content--Color);
+    --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-purple__content--before--BorderColor);
     --pf-c-label__content--link--hover--before--BorderColor: var(--pf-c-label--m-purple__content--link--hover--before--BorderColor);
     --pf-c-label__content--link--focus--before--BorderColor: var(--pf-c-label--m-purple__content--link--focus--before--BorderColor);
+    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-purple__content--before--BorderColor);
     --pf-c-label--m-outline__content--link--hover--before--BorderColor: var(--pf-c-label--m-outline--m-purple__content--link--hover--before--BorderColor);
     --pf-c-label--m-outline__content--link--focus--before--BorderColor: var(--pf-c-label--m-outline--m-purple__content--link--focus--before--BorderColor);
   }
 
   &.pf-m-cyan {
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-cyan--BackgroundColor);
-    --pf-c-label__content--Color: var(--pf-c-label--m-cyan__content--Color);
     --pf-c-label__icon--Color: var(--pf-c-label--m-cyan__icon--Color);
-    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-cyan__content--before--BorderColor);
+    --pf-c-label__content--Color: var(--pf-c-label--m-cyan__content--Color);
+    --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-cyan__content--before--BorderColor);
     --pf-c-label__content--link--hover--before--BorderColor: var(--pf-c-label--m-cyan__content--link--hover--before--BorderColor);
     --pf-c-label__content--link--focus--before--BorderColor: var(--pf-c-label--m-cyan__content--link--focus--before--BorderColor);
+    --pf-c-label--m-outline__content--before--BorderColor: var(--pf-c-label--m-outline--m-cyan__content--before--BorderColor);
     --pf-c-label--m-outline__content--link--hover--before--BorderColor: var(--pf-c-label--m-outline--m-cyan__content--link--hover--before--BorderColor);
     --pf-c-label--m-outline__content--link--focus--before--BorderColor: var(--pf-c-label--m-outline--m-cyan__content--link--focus--before--BorderColor);
   }
