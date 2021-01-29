@@ -94,7 +94,7 @@ wrapperTag: div
 {{/login}}
 ```
 
-### Hide password
+### Show password
 ```hbs isFullscreen
 {{#> background-image}}{{/background-image}}
 {{#> login}}
@@ -143,7 +143,7 @@ wrapperTag: div
 {{/login}}
 ```
 
-### Show password
+### Hide password
 ```hbs isFullscreen
 {{#> background-image}}{{/background-image}}
 {{#> login}}
