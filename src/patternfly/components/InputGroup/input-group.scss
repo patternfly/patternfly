@@ -6,13 +6,13 @@
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
+  --pf-c-input-group__text--Color: var(--pf-global--Color--200);
   --pf-c-input-group__text--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-input-group__text--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-input-group__text--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-input-group__text--BorderLeftColor: var(--pf-global--BorderColor--300);
-  --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-input-group__text--BorderTopColor: transparent;
+  --pf-c-input-group__text--BorderRightColor: transparent;
+  --pf-c-input-group__text--BorderBottomColor: var(--pf-global--palette--black-200);
+  --pf-c-input-group__text--BorderLeftColor: transparent;
+  --pf-c-input-group__text--BackgroundColor: var(--pf-global--palette--black-600);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
 
   // Form control
@@ -26,6 +26,11 @@
   // stylelint-disable
   > * + * {
     margin-left: -1px;
+  }
+
+  > .pf-c-button.pf-m-control + *:not(.pf-c-button.pf-m-control),
+  > *:not(.pf-c-button.pf-m-button) + .pf-c-button.pf-m-control {
+    border-left: 1px solid var(--pf-global--palette--black-200);;
   }
 
   // stylelint-enable

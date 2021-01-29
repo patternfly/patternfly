@@ -8,12 +8,12 @@
   --pf-c-select__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-select__toggle--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-select__toggle--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-select__toggle--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-select__toggle--BackgroundColor: var(--pf-global--palette--black-600);
   --pf-c-select__toggle--before--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-select__toggle--before--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-select__toggle--before--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-select__toggle--before--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-select__toggle--before--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-select__toggle--before--BorderTopColor: transparent;
+  --pf-c-select__toggle--before--BorderRightColor: transparent;
+  --pf-c-select__toggle--before--BorderBottomColor: var(--pf-global--palette--black-200);
+  --pf-c-select__toggle--before--BorderLeftColor: transparent;
   --pf-c-select__toggle--Color: var(--pf-global--Color--100);
   --pf-c-select__toggle--hover--before--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-select__toggle--focus--before--BorderBottomColor: var(--pf-global--active-color--100);
