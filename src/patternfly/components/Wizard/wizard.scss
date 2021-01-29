@@ -174,6 +174,7 @@
   --pf-c-wizard__footer--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-wizard__footer--xl--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-wizard__footer--xl--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-wizard__footer--BoxShadow: var(--pf-global--BoxShadow--sm-top);
   --pf-c-wizard__footer--child--MarginRight: var(--pf-global--spacer--md);
   --pf-c-wizard__footer--child--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-wizard__footer-cancel--MarginLeft: calc(var(--pf-global--spacer--2xl) - var(--pf-c-wizard__footer--child--MarginRight));
@@ -487,6 +488,13 @@
     &:not(:last-child) {
       margin-right: var(--pf-c-wizard__footer--child--MarginRight);
     }
+  }
+
+  // Limit shadow to a child of modal and main-wizard since we can ensure wizard footer is fixed in those usages
+  // Make a regular style in a breaking change release
+  .pf-c-page__main-wizard &,
+  .pf-c-modal-box & {
+    box-shadow: var(--pf-c-wizard__footer--BoxShadow);
   }
 }
 

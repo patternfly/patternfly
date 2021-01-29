@@ -205,7 +205,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-c-page__main-nav` | `<section>` |   Creates a container to nest the navigation component in the main page area. |
 | `.pf-c-page__main-breadcrumb` | `<section>` |   Creates a container to nest the breadcrumb component in the main page area. |
 | `.pf-c-page__main-section` | `<section>` |  Creates a section container in the main page area. **Note: The last/only `.pf-c-page__main-section` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |
-| `.pf-c-page__main-wizard` | `<section>` | Creates a container to nest the wizard component in the mian page area. |
+| `.pf-c-page__main-wizard` | `<section>` | Creates a container to nest the wizard component in the main page area. |
 | `.pf-c-page__main-body` | `<div>` | Creates the body section for a page section. **Required when using `.pf-m-limit-width` on `.pf-c-page__main-section`** |
 | `.pf-c-page__main-group` | `<div>` | Creates the group of `.pf-c-page__main-*` sections. Can be used in combination with `.pf-m-sticky-[top/bottom]` to make multiple sections sticky. |
 | `.pf-c-page__drawer` | `<div>` |  Creates a container for the drawer component when placing the main page element in the drawer body. |
