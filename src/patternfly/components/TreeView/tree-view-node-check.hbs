@@ -3,8 +3,12 @@
     {{{tree-view-node-check--attribute}}}
   {{/if}}>
   {{#if tree-view-node-check--IsChecked}}
-    <input type="checkbox" id="check-{{{tree-view-node--id}}}" checked aria-label="Tree view node check checked">
+    {{#> check check--modifier="pf-m-standalone"}}
+      {{> check-input check-input--attribute=(concat 'id="check-' tree-view-node--id '" checked aria-label="Tree view node check checked"')}}
+    {{/check}}
   {{else}}
-    <input type="checkbox" id="check-{{{tree-view-node--id}}}" aria-label="Tree view node check">
+    {{#> check check--modifier="pf-m-standalone"}}
+      {{> check-input check-input--attribute=(concat 'id="check-' tree-view-node--id '" aria-label="Tree view node check"')}}
+    {{/check}}
   {{/if}}
 </span>

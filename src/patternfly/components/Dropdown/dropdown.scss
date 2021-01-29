@@ -229,7 +229,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
       align-items: center;
       cursor: pointer;
 
-      input {
+      > input,
+      .pf-c-check {
+        cursor: pointer;
         transform: translateY(var(--pf-c-dropdown__toggle--m-split-button__toggle-check__input--TranslateY));
       }
     }

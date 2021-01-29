@@ -3,8 +3,12 @@
     {{{dual-list-selector-item-check--attribute}}}
   {{/if}}>
   {{#if dual-list-selector-item--IsSelected}}
-    <input type="checkbox" id="check-{{{dual-list-selector-item--id}}}" checked aria-label="Dual list selector item check checked">
+    {{#> check check--modifier="pf-m-standalone"}}
+      {{> check-input check-input--attribute=(concat 'id="check-' dual-list-selector-item--id '" checked aria-label="Dual list selector item check checked"')}}
+    {{/check}}
   {{else}}
-    <input type="checkbox" id="check-{{{dual-list-selector-item--id}}}" aria-label="Dual list selector item check">
+    {{#> check check--modifier="pf-m-standalone"}}
+      {{> check-input check-input--attribute=(concat 'id="check-' dual-list-selector-item--id '" aria-label="Dual list selector item check"')}}
+    {{/check}}
   {{/if}}
 </span>

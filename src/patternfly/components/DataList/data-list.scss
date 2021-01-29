@@ -335,6 +335,10 @@
   align-self: flex-start;
   height: var(--pf-c-data-list__check--Height);
   margin-top: var(--pf-c-data-list__check--MarginTop);
+
+  > input {
+    cursor: pointer;
+  }
 }
 
 .pf-c-data-list__item-draggable-button {
