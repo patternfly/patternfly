@@ -63,7 +63,7 @@ cssPrefix: pf-c-check
 ### Standalone input
 ```hbs
 {{#> check check--modifier="pf-m-standalone"}}
-  {{#> check-input check-input--attribute='id="check-standalone-input" name="check-standalone-input"'}}{{/check-input}}
+  {{#> check-input check-input--attribute='id="check-standalone-input" name="check-standalone-input" aria-label="Standalone input"'}}{{/check-input}}
 {{/check}}
 ```
 

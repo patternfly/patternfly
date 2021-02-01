@@ -61,10 +61,10 @@ cssPrefix: pf-c-radio
 {{/radio}}
 ```
 
-### Standalone
+### Standalone input
 ```hbs
 {{#> radio radio--modifier="pf-m-standalone"}}
-  {{#> radio-input radio-input--attribute='id="radio-standalone" name="exampleRadioStandalone"'}}{{/radio-input}}
+  {{#> radio-input radio-input--attribute='id="radio-standalone" name="exampleRadioStandalone" aria-label="Standalone input"'}}{{/radio-input}}
 {{/radio}}
 ```
 
