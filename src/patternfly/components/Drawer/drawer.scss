@@ -198,6 +198,16 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
   }
   // stylelint-enable
+
+  &.pf-m-resizing {
+    --pf-c-drawer__panel--TransitionProperty: none;
+
+    pointer-events: none;
+
+    .pf-c-drawer__splitter {
+      pointer-events: auto;
+    }
+  }
 }
 
 // Header area
