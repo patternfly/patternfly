@@ -77,7 +77,7 @@ wrapperTag: div
                 {{/wizard-nav-list}}
               {{/wizard-nav}}
             {{#> wizard-main}}
-              <p>Wizard content goes here</p>
+              {{> __wizard-form}}
             {{/wizard-main}}
           {{/wizard-inner-wrap}}
           {{#> wizard-footer}}
@@ -172,7 +172,7 @@ wrapperTag: div
               {{/wizard-nav-list}}
             {{/wizard-nav}}
             {{#> wizard-main}}
-              <p>Wizard content goes here</p>
+              {{> __wizard-form}}
             {{/wizard-main}}
           {{/wizard-inner-wrap}}
           {{#> wizard-footer}}
@@ -313,7 +313,7 @@ wrapperTag: div
                 {{/wizard-nav-list}}
               {{/wizard-nav}}
             {{#> wizard-main wizard-main--type="div"}}
-              <p>Wizard content goes here</p>
+              {{> __wizard-form}}
             {{/wizard-main}}
           {{/wizard-inner-wrap}}
           {{#> wizard-footer}}
@@ -454,7 +454,7 @@ wrapperTag: div
                 {{/wizard-nav-list}}
               {{/wizard-nav}}
             {{#> wizard-main wizard-main--type="div"}}
-              <p>Wizard content goes here</p>
+              {{> __wizard-form}}
             {{/wizard-main}}
           {{/wizard-inner-wrap}}
           {{#> wizard-footer}}

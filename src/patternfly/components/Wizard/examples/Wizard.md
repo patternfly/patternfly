@@ -10,7 +10,7 @@ import './Wizard.css'
 ## Examples
 ### Basic
 ```hbs isFullscreen
-{{#> wizard}}
+{{#> wizard wizard--id="wizard-basic"}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
@@ -77,7 +77,7 @@ import './Wizard.css'
           {{/wizard-nav-list}}
         {{/wizard-nav}}
       {{#> wizard-main}}
-        <p>Wizard content goes here</p>
+        {{> __wizard-form}}
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
     {{#> wizard-footer}}
@@ -166,7 +166,7 @@ import './Wizard.css'
         {{/wizard-nav-list}}
       {{/wizard-nav}}
       {{#> wizard-main}}
-        <p>Wizard content goes here</p>
+        {{> __wizard-form}}
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
     {{#> wizard-footer}}
