@@ -1,0 +1,60 @@
+$pf-c-tree-view--MaxDepth: 10;
+
+.pf-c-table {
+  // control
+  --pf-c-table__tree-view-control--GridTemplateColumns: [toggle] var(--pf-c-table--m-tree-view__toggle--Width) [content] auto;
+  --pf-c-table__tree-view-control--indent--base: var(--pf-global--spacer--lg);
+  --pf-c-table__tree-view-control--MarginLeft: calc(var(--pf-global--spacer--md) * -1); // based off of the expected width of the toggle button
+
+  // icon
+  --pf-c-table__tree-view-icon--MinWidth: var(--pf-global--FontSize--md);
+  --pf-c-table__tree-view-icon--MarginRight: var(--pf-global--spacer--sm);
+
+  // tree-view
+  --pf-c-table--m-tree-view__toggle--Width: #{pf-size-prem(42px)};
+  --pf-c-table--m-tree-view__checkbox--Width: #{pf-size-prem(13px)};
+
+  // checkboxes
+  --pf-c-table--m-tree-view-checkboxes__tree-view-control--GridTemplateColumns: [check] var(--pf-c-table--m-tree-view__checkbox--Width) [toggle] var(--pf-c-table--m-tree-view__toggle--Width) [content] 1fr;
+  --pf-c-table--m-tree-view-checkboxes__tree-view-control--MarginLeft: 0;
+
+  &.pf-m-tree-view {
+    @for $i from 2 through $pf-c-tree-view--MaxDepth {
+      tr[aria-level="#{$i}"] {
+        --pf-c-table--cell--first-last-child--PaddingLeft: calc(var(--pf-c-table__tree-view-control--indent--base) * #{$i});
+      }
+    }
+  }
+
+  &.pf-m-tree-view-checkboxes {
+    --pf-c-table__tree-view-control--GridTemplateColumns: var(--pf-c-table--m-tree-view-checkboxes__tree-view-control--GridTemplateColumns);
+    --pf-c-table__tree-view-control--MarginLeft: var(--pf-c-table--m-tree-view-checkboxes__tree-view-control--MarginLeft);
+  }
+}
+
+.pf-c-table__tree-view-control {
+  display: grid;
+  grid-template-columns: var(--pf-c-table__tree-view-control--GridTemplateColumns);
+  margin-left: var(--pf-c-table__tree-view-control--MarginLeft);
+
+  > * {
+    grid-row: 1;
+  }
+
+  > .pf-c-table__check {
+    grid-column: check;
+  }
+
+  > .pf-c-table__toggle {
+    grid-column: toggle;
+  }
+}
+
+.pf-c-table__tree-view-content {
+  grid-column: content;
+}
+
+.pf-c-table__tree-view-icon {
+  min-width: var(--pf-c-table__tree-view-icon--MinWidth);
+  margin-right: var(--pf-c-table__tree-view-icon--MarginRight);
+}

@@ -5,6 +5,26 @@
   {{~#if table-tr--IsHoverable}} pf-m-hoverable{{/if}}
   {{~#if table-tr--IsSelected}} pf-m-selected{{/if}}
   {{#if table-tr--modifier}} {{table-tr--modifier}}{{/if}}"
+  {{#if table--IsTree-view}}
+    aria-level="{{table--IsTree-view--level}}"
+    aria-setsize="{{table--IsTree-view--setsize}}"
+    aria-posinset="{{table--IsTree-view--posinset}}"
+
+    {{!-- if leaf and not expanded, apply hidden --}}
+    {{#if table-tr--tree--IsLeaf}}
+      tabindex="-1"
+    {{else}}
+      tabindex="0"
+      {{#if table-tr--expanded}}
+        aria-expanded="true"
+      {{else}}
+        aria-expanded="false"
+      {{/if}}
+    {{/if}}
+    {{#if table-tr--IsHidden}}
+      hidden
+    {{/if}}
+  {{/if}}
   {{#if table--grid}}
     role="row"
   {{/if}}

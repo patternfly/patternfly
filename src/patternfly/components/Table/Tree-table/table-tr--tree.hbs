@@ -1,0 +1,46 @@
+{{#> table-tr table-tr--attribute='role="row"'}}
+  {{#> table-td table-td--data-label="Tree view control"}}
+    {{#> table-tree-view-control}}
+      {{#unless table-tr--tree--HasNoCheckbox}}
+        {{#if tree-view--HasCheckboxes}}
+          {{#> table-td table-td--type="span" table-td--check="true"}}
+            <input type="checkbox" name="{{table--id}}-checkrow-{{table-tr--tree--index}}" aria-labelledby="{{table--id}}-node-{{table-tr--tree--index}}">
+          {{/table-td}}
+        {{/if}}
+      {{/unless}}
+      {{#unless table-tr--tree--IsLeaf}}
+        {{#> table-td table-td--type="span" table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node-' table-tr--tree--index ' ' table--id '-expandable-toggle-' table-tr--tree--index '" id="' table--id '-expandable-toggle-' table-tr--tree--index '" aria-label="Details"')}}{{/table-td}}
+      {{/unless}}
+      {{#> table-tree-view-content}}
+        {{#> table-text table-text--attribute=(concat 'id="' table--id '-node-' table-tr--tree--index '"')}}
+          {{#if table-tree-view--HasIcons}}
+            {{#> table-tree-view-icon}}
+              {{#if table-tr--tree--IsLeaf}}
+                <i class="fas fa-fw fa-leaf" aria-hidden="true"></i>
+              {{else}}
+                <i class="fas fa-fw fa-folder" aria-hidden="true"></i>
+              {{/if}}
+            {{/table-tree-view-icon}}
+          {{/if}}
+          {{#if table-tr--tree--title}}
+            {{{table-tr--tree--title}}}
+          {{else}}
+            Datacenters
+          {{/if}}
+        {{/table-text}}
+        {{#if @partial-block}}
+          {{> @partial-block}}
+        {{/if}}
+      {{/table-tree-view-content}}
+    {{/table-tree-view-control}}
+  {{/table-td}}
+  {{#> table-td table-td--data-label="Migration assessment" table-td--modifier="pf-m-fit-content"}}
+    10
+  {{/table-td}}
+  {{#> table-td table-td--data-label="Size of VM" table-td--modifier="pf-m-fit-content"}}
+    25
+  {{/table-td}}
+  {{#> table-td table-td--data-label="Number of Data Stores" table-td--modifier="pf-m-fit-content"}}
+    5
+  {{/table-td}}
+{{/table-tr}}

@@ -1416,96 +1416,44 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | -- | -- | -- |
 | `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
 
-### Hoverable and selectable
+### Tree table
 ```hbs
-{{#> table table--id="table-expandable-hoverable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
-  {{#> table-thead}}
-    {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
-      {{/table-td}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
-        State
-      {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-    {{/table-tr}}
-  {{/table-thead}}
-
-  {{#> wrapper table-tr--IsHoverable="true" table-tr--basic--title="Hoverable"}}
-    {{> table-tr--basic table-tr--basic--index="1"}}
-    {{> table-tr--basic table-tr--basic--index="2" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
-    {{> table-tr--basic table-tr--basic--index="3"}}
-    {{> table-tr--basic table-tr--basic--index="4"}}
-    {{> table-tr--basic table-tr--basic--index="5" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
-    {{> table-tr--basic table-tr--basic--index="6" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
-    {{> table-tr--basic table-tr--basic--index="7" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
-    {{> table-tr--basic table-tr--basic--index="8"}}
-    {{> table-tr--basic table-tr--basic--index="9"}}
-    {{> table-tr--basic table-tr--basic--index="10" table-tr--basic--IsExpanded="true" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
-    {{> table-tr--basic table-tr--basic--index="11"}}
-  {{/wrapper}}
-{{/table}}
+{{> table-tree-view--basic table--id="tree-table-basic" table--gridsss="true" table--attribute='aria-label="This is a simple tree table example"'}}
 ```
 
-### Expandable, hoverable and selectable
-```hbs
-{{#> table table--id="table-tbody-expandable-hoverable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
-  {{#> table-thead}}
-    {{#> table-tr}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
-      {{/table-td}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
-        Repositories
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
-        Branches
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
-        Pull requests
-      {{/table-th}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
-    {{/table-tr}}
-  {{/table-thead}}
 
-  {{#> wrapper table-tbody--IsHoverable="true" table-tbody--expandable--title="Hoverable"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="1"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="2" table-tbody--IsSelected="true" table-tbody--expandable--title="<i>Selected and not expanded</i>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="3"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="4"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="5" table-tbody--IsSelected="true" table-tbody--expandable--title="<i>Selected and not expanded</i>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="6" table-tbody--IsSelected="true" table-tbody--expandable--title="<i>Selected and not expanded</i>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="7" table-tbody--IsSelected="true" table-tbody--expandable--title="<i>Selected and not expanded</i>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="8"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="9"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="10"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="11" table-tbody--expandable--IsExpanded="true" table-tbody--IsSelected="true" table-tbody--expandable--title="<b>Expanded and selected</b>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="12"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="13" table-tbody--expandable--IsExpanded="true" table-tbody--IsSelected="true" table-tbody--expandable--title="<b>Expanded and selected</b>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="14" table-tbody--expandable--IsExpanded="true" table-tbody--expandable--title="Expanded and not selected"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="15" table-tbody--expandable--IsExpanded="true" table-tbody--IsSelected="true"  table-tbody--expandable--title="<b>Expanded and selected</b>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="16"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="17" table-tbody--expandable--IsExpanded="true" table-tbody--expandable--title="Expanded and not selected"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="18"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="19"}}
-  {{/wrapper}}
-{{/table}}
+### Tree table with checkboxes
+```hbs
+{{> table-tree-view--basic table--id="tree-table-with-checkboxes" table--gridsss="true" tree-view--HasCheckboxes="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"'}}
+```
+
+### Tree table with checkboxes, icons here
+```hbs
+{{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons" table--gridsss="true" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"'}}
 ```
 
 ### Accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `tabindex="0"` | `.pf-c-table tbody.pf-m-hoverable` | Inserts the hoverable table element into the tab order of the page so that it is focusable. **Required** |
+| `role="treegrid"` | `.pf-c-table.pf-m-tree-view` | Identifies the `table` as a treegrid. **Place on the outermost `table` only** |
+| `role="row"` | `.pf-c-table.pf-m-tree-view tr` | Identifies the `tr` element as a `row`. The row role is not an implicit semantic for the tr element when in a treegrid. |
+| `role="gridcell"` | `.pf-c-table.pf-m-tree-view tr` | Identifies the `td` as a gridcell. The `gridcell` role is not an implicit semantic for the td element when in a treegrid. |
+| `tabindex="-1"` | `.pf-c-table.pf-m-tree-view tr` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
+| `tabindex="0"` | `.pf-c-table.pf-m-tree-view tr` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
+| `aria-expanded="false"` | `.pf-c-table.pf-m-tree-view tr` | For an expandable item, indicates the parent node is closed, i.e., the descendant elements are not visible. |
+| `aria-expanded="true"` | `.pf-c-table.pf-m-tree-view tr.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
+| `aria-level="number"` | `.pf-c-table.pf-m-tree-view tr` | Defines the level of the row in the hierarchical treegrid structure. Counting is one-based. Root rows have aria-level=“1”. |
+| `aria-setsize="number"` | `.pf-c-table.pf-m-tree-view tr` | Defines the number of rows in the set of rows that are in the same branch and at the same level within the hierarchy. |
+| `aria-posinset="number"` | `.pf-c-table.pf-m-tree-view tr` | Defines the position of the row within the set of other rows that are in the same branch and at the same level within the hierarchy. Counting is one-based, not zero-based. |
 
 ### Usage
 
-| Class | Applied to | Outcome |
+| Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-m-hoverable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be hoverable. |
-| `.pf-m-selected` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a selectable tbody or tr table element to be selected. |
+| `.pf-c-table__tree-view-control` | `<div>` | Initiates a tree view table control container. |
+| `.pf-c-table__tree-view-content` | `<div>` | Initiates a tree view table content element. |
+| `.pf-c-table__tree-view-icon` | `<span>` | Initiates a tree view icon wrapper. |
 
 ### Borderless
 ```hbs
