@@ -1,0 +1,14 @@
+<div class="pf-c-tabs__toggle-button{{#if tabs-toggle-button--modifier}} {{tabs-toggle-button--modifier}}{{/if}}"
+  {{#if tabs-toggle-button--attribute}}
+    {{{tabs-toggle-button--attribute}}}
+  {{/if}}>
+  {{#if tabs--IsExpanded}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Details" aria-expanded="true" id="' tabs--id '-toggle-button" aria-labelledby="' tabs--id '-toggle-text ' tabs--id '-toggle-button"')}}
+      {{> tabs-toggle-icon}}
+    {{/button}}
+  {{else}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Details" aria-expanded="false" id="' tabs--id '-toggle-button" aria-labelledby="' tabs--id '-toggle-text ' tabs--id '-toggle-button"')}}
+      {{> tabs-toggle-icon}}
+    {{/button}}
+  {{/if}}
+</div>
