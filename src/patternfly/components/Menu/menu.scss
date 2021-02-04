@@ -1,6 +1,4 @@
 .pf-c-menu {
-  @include pf-t-light;
-
   // Menu
   --pf-c-menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-menu--BoxShadow: var(--pf-global--BoxShadow--md);
@@ -33,7 +31,7 @@
   --pf-c-menu__item--FontSize: var(--pf-global--FontSize--md);
   --pf-c-menu__item--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-menu__item--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-menu__item--disabled--Color: var(--pf-global--Color--dark-200);
+  --pf-c-menu__item--disabled--Color: var(--pf-global--Color--200);
 
   // Group
   --pf-c-menu__group-title--PaddingTop: var(--pf-c-menu__item--PaddingTop);
