@@ -21,16 +21,12 @@
 
   display: flex;
   width: 100%;
-  background-color: var(--pf-c-input-group--BackgroundColor);
+
+  // background-color: var(--pf-c-input-group--BackgroundColor);
 
   // stylelint-disable
   > * + * {
-    margin-left: -1px;
-  }
-
-  > .pf-c-button.pf-m-control + *:not(.pf-c-button.pf-m-control),
-  > *:not(.pf-c-button.pf-m-button) + .pf-c-button.pf-m-control {
-    border-left: 1px solid var(--pf-global--palette--black-200);;
+    border-left: 1px solid var(--pf-global--palette--black-700);
   }
 
   // stylelint-enable
@@ -63,8 +59,10 @@
   color: var(--pf-c-input-group__text--Color);
   text-align: center;
   background-color: var(--pf-c-input-group__text--BackgroundColor);
-  border: var(--pf-c-input-group__text--BorderWidth) solid;
-  border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderRightColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderLeftColor);
+  border-bottom: 1px solid var(--pf-global--palette--black-200);
+
+  // border: var(--pf-c-input-group__text--BorderWidth) solid;
+  // border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderRightColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderLeftColor);
 
   @at-root label#{&} {
     cursor: pointer;
@@ -74,5 +72,7 @@
     --pf-c-input-group__text--BorderWidth: 0;
 
     margin-left: 0;
+    background: transparent;
+    border-bottom: 0;
   }
 }
