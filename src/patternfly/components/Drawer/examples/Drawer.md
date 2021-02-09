@@ -258,6 +258,18 @@ import './Drawer.css'
 {{/drawer}}
 ```
 
+### Panel with light-200 background
+```hbs
+{{#> drawer drawer--id="panel-with-light-200-background" drawer-panel--IsOpen="true"}}
+ {{#> drawer-main}}
+    {{#> drawer-content}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
+    {{/drawer-content}}
+    {{> drawer-example-panel drawer-panel--modifier="pf-m-light-200"}}
+  {{/drawer-main}}
+{{/drawer}}
+```
+
 ### Accessibility
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -306,6 +318,7 @@ import './Drawer.css'
 | `.pf-m-padding` | `.pf-c-drawer__body` | Modifies the element to add padding. |
 | `.pf-m-no-padding` | `.pf-c-drawer__body` | Modifies the element to remove padding. |
 | `.pf-m-no-background` | `.pf-c-drawer__section`, `.pf-c-drawer__content`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to transparent. |
+| `.pf-m-light-200` | `.pf-c-drawer__section`, `.pf-c-drawer__content`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to light grey. |
 | `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-drawer__panel` | Modifies the drawer panel width. |
 | `.pf-m-resizable` | `.pf-c-drawer__panel` | Modifies the drawer panel to be resizable. Intended for use with the `.pf-c-drawer__splitter` element. |
 | `--pf-c-drawer__panel--md--FlexBasis--min` | `.pf-c-drawer__panel` | Defines the drawer panel minimum size. |
