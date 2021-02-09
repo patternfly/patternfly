@@ -1450,7 +1450,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__tree-view-control` | `<div>` | Initiates a tree view table control container. |
+| `.pf-c-table__tree-view-main` | `<div>` | Initiates a tree view table main container. |
 | `.pf-c-table__tree-view-content` | `<div>` | Initiates a tree view table content element. |
 | `.pf-c-table__tree-view-icon` | `<span>` | Initiates a tree view icon wrapper. |
 

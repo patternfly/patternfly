@@ -2,12 +2,12 @@ $pf-c-tree-view--MaxDepth: 10;
 
 .pf-c-table {
   // control
-  --pf-c-table__tree-view-control--GridTemplateColumns: [toggle] var(--pf-c-table--m-tree-view__toggle--Width) [content] auto;
-  --pf-c-table__tree-view-control--indent--base: var(--pf-global--spacer--lg);
-  --pf-c-table__tree-view-control--MarginLeft: calc(var(--pf-global--spacer--md) * -1); // based off of the expected width of the toggle button
+  --pf-c-table__tree-view-main--GridTemplateColumns: var(--pf-c-table--m-tree-view__toggle--Width) max-content 1fr;
+  --pf-c-table__tree-view-main--indent--base: var(--pf-global--spacer--lg);
+  --pf-c-table__tree-view-main--MarginLeft: calc(var(--pf-global--spacer--md) * -1); // based off of the expected width of the toggle button
 
   // content
-  --pf-c-table__tree-view-content--c-table__check--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-table__tree-view-main--c-table__check--MarginRight: var(--pf-global--spacer--md);
 
   // icon
   --pf-c-table__tree-view-icon--MinWidth: var(--pf-global--FontSize--md);
@@ -19,33 +19,31 @@ $pf-c-tree-view--MaxDepth: 10;
   &.pf-m-tree-view {
     @for $i from 2 through $pf-c-tree-view--MaxDepth {
       tr[aria-level="#{$i}"] {
-        --pf-c-table--cell--first-last-child--PaddingLeft: calc(var(--pf-c-table__tree-view-control--indent--base) * #{$i});
+        --pf-c-table--cell--first-last-child--PaddingLeft: calc(var(--pf-c-table__tree-view-main--indent--base) * #{$i});
       }
     }
   }
 }
 
-.pf-c-table__tree-view-control {
+.pf-c-table__tree-view-main {
   display: grid;
-  grid-template-columns: var(--pf-c-table__tree-view-control--GridTemplateColumns);
-  margin-left: var(--pf-c-table__tree-view-control--MarginLeft);
-
-  > * {
-    grid-row: 1;
-  }
+  grid-template-columns: var(--pf-c-table__tree-view-main--GridTemplateColumns);
+  grid-template-areas: "toggle check content";
+  margin-left: var(--pf-c-table__tree-view-main--MarginLeft);
 
   > .pf-c-table__toggle {
     grid-column: toggle;
   }
+
+  > .pf-c-table__check {
+    grid-column: check;
+    margin-right: var(--pf-c-table__tree-view-main--c-table__check--MarginRight);
+  }
 }
 
 .pf-c-table__tree-view-content {
-  grid-column: content;
   display: flex;
-
-  > .pf-c-table__check {
-    margin-right: var(--pf-c-table__tree-view-content--c-table__check--MarginRight);
-  }
+  grid-column: content;
 }
 
 .pf-c-table__tree-view-icon {
