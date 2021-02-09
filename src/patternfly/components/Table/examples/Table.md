@@ -1410,18 +1410,11 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `tabindex="0"` | `.pf-c-table tbody.pf-m-hoverable` | Inserts the hoverable table element into the tab order of the page so that it is focusable. **Required** |
-
 ### Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-hoverable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be hoverable. |
-| `.pf-m-selected` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a selectable tbody or tr table element to be selected. |
+| `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
 
 ### Hoverable and selectable
 ```hbs
@@ -1502,11 +1495,18 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
+### Accessibility
+
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `tabindex="0"` | `.pf-c-table tbody.pf-m-hoverable` | Inserts the hoverable table element into the tab order of the page so that it is focusable. **Required** |
+
 ### Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
+| `.pf-m-hoverable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be hoverable. |
+| `.pf-m-selected` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a selectable tbody or tr table element to be selected. |
 
 ### Borderless
 ```hbs
