@@ -40,8 +40,8 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--inset: var(--pf-global--spacer--lg);
 
   // insets
-  --pf-c-masthead--m-page-insets--inset: var(--pf-global--spacer--md);
-  --pf-c-masthead--m-page-insets--xl--inset: var(--pf-global--spacer--lg);
+  --pf-c-masthead--inset: var(--pf-global--spacer--md); // match page insets
+  --pf-c-masthead--xl--inset: var(--pf-global--spacer--lg); // match page insets
 
   // stack
   --pf-c-masthead--m-display-stack--FlexWrap: wrap;
@@ -80,15 +80,20 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead__main--before--BorderBottomColor: var(--pf-global--palette--black-600);
 
   // toggle
-  --pf-c-masthead__toggle--MarginRight: calc(var(--pf-global--gutter--md) / 2);
+  --pf-c-masthead__toggle--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-masthead__toggle--MarginLeft: calc(var(--pf-global--spacer--md) * -1); // offset by button padding
 
   // light 100
-  --pf-c-masthead--m-light-100--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-masthead--m-light-100__main--BorderBottomColor: var(--pf-global--palette--black-200);
+  --pf-c-masthead--m-light--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-masthead--m-light__main--BorderBottomColor: var(--pf-global--palette--black-200);
 
   // light 200
   --pf-c-masthead--m-light-200--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-masthead--m-light-200__main--BorderBottomColor: var(--pf-global--palette--black-300);
+
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-toolbar--m-page-insets--inset: var(--pf-c-toolbar--m-page-insets--xl--inset);
+  }
 
   // set layout to stack by default
   @include pf-c-masthead--m-display-stack;
@@ -96,10 +101,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // set layout to inline at medium breakpoint
   @media screen and (min-width: $pf-global--breakpoint--md) {
     @include pf-c-masthead--m-display-inline;
-  }
-
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-toolbar--m-page-insets--inset: var(--pf-c-toolbar--m-page-insets--xl--inset);
   }
 
   @include pf-t-dark; // force the container to follow the dark theme
@@ -113,11 +114,11 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   padding-left: var(--pf-c-masthead--PaddingLeft);
   background-color: var(--pf-c-masthead--BackgroundColor);
 
-  &.pf-m-light-100 {
+  &.pf-m-light {
     @include pf-t-light;
 
-    --pf-c-masthead--BackgroundColor: var(--pf-c-masthead--m-light-100--BackgroundColor);
-    --pf-c-masthead__main--BorderBottomColor: var(--pf-c-masthead--m-light-100__main--BorderBottomColor);
+    --pf-c-masthead--BackgroundColor: var(--pf-c-masthead--m-light--BackgroundColor);
+    --pf-c-masthead__main--BorderBottomColor: var(--pf-c-masthead--m-light__main--BorderBottomColor);
   }
 
   &.pf-m-light-200 {
@@ -125,10 +126,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
     --pf-c-masthead--BackgroundColor: var(--pf-c-masthead--m-light-200--BackgroundColor);
     --pf-c-masthead__main--BorderBottomColor: var(--pf-c-masthead--m-light-200__main--BorderBottomColor);
-  }
-
-  &.pf-m-page-insets {
-    --pf-c-masthead--inset: var(--pf-c-masthead--m-page-insets--inset);
   }
 }
 
@@ -201,10 +198,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   align-self: center;
   order: 0;
   margin-right: var(--pf-c-masthead__toggle--MarginRight);
-
-  .pf-c-button {
-    margin-left: calc(var(--pf-c-button--PaddingLeft) * -1);
-  }
+  margin-left: var(--pf-c-masthead__toggle--MarginLeft);
 }
 
 // stylelint-disable no-duplicate-selectors
@@ -219,14 +213,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
       &.pf-m-display-inline#{$breakpoint-name} {
         @include pf-c-masthead--m-display-inline;
-      }
-    }
-
-    @include pf-apply-breakpoint($breakpoint) {
-      @each $spacer, $spacer-value in $pf-c-masthead--inset-map {
-        &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
-          --pf-c-masthead--inset: #{$spacer-value};
-        }
       }
     }
   }

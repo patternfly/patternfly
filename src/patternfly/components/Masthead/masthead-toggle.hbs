@@ -5,7 +5,7 @@
   {{#if @partial-block}}
     {{> @partial-block}}
   {{else}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Masthead toggle"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Global navigation"' button--attribute='aria-expanded="false"'}}
       {{#if masthead-toggle--icon}}
         <i class="fas fa-{{masthead-toggle--icon}}" aria-hidden="true"></i>
       {{else}}

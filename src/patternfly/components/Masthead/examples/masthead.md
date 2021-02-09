@@ -44,45 +44,6 @@ cssPrefix: pf-c-masthead
 {{/masthead}}
 ```
 
-### Basic with horizontal nav
-```hbs
-{{#> masthead masthead--id="basic-masthead-with-horizontal-nav"}}
-  {{> masthead-toggle}}
-  {{#> masthead-main}}
-    {{#> masthead-brand}}
-      Logo
-    {{/masthead-brand}}
-  {{/masthead-main}}
-  {{#> masthead-content}}
-    <nav class="pf-c-nav pf-m-horizontal pf-m-scrollable" aria-label="Global">
-      <button class="pf-c-nav__scroll-button" disabled aria-label="Scroll left">
-        <i class="fas fa-angle-left" aria-hidden="true"></i>
-      </button>
-      <ul class="pf-c-nav__list">
-        <li class="pf-c-nav__item">
-          <a href="#" class="pf-c-nav__link">Horizontal nav item 1</a>
-        </li>
-        <li class="pf-c-nav__item">
-          <a href="#" class="pf-c-nav__link">Horizontal nav item 2</a>
-        </li>
-        <li class="pf-c-nav__item">
-          <a href="#" class="pf-c-nav__link">Horizontal nav item 3</a>
-        </li>
-        <li class="pf-c-nav__item">
-          <a href="#" class="pf-c-nav__link">Horizontal nav item 4</a>
-        </li>
-        <li class="pf-c-nav__item">
-          <a href="#" class="pf-c-nav__link pf-m-current" aria-current="page">Horizontal nav item 5</a>
-        </li>
-      </ul>
-      <button class="pf-c-nav__scroll-button" aria-label="Scroll right">
-        <i class="fas fa-angle-right" aria-hidden="true"></i>
-      </button>
-    </nav>
-  {{/masthead-content}}
-{{/masthead}}
-```
-
 ### Display inline
 ```hbs
 {{#> masthead masthead--id="inline-masthead" masthead--modifier="pf-m-display-inline"}}
@@ -122,9 +83,9 @@ cssPrefix: pf-c-masthead
 {{/masthead}}
 ```
 
-### Light 100 variant
+### Light variant
 ```hbs
-{{#> masthead masthead--id="light-masthead" masthead--modifier="pf-m-light-100"}}
+{{#> masthead masthead--id="light-masthead" masthead--modifier="pf-m-light"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
     {{#> masthead-brand}}
@@ -161,32 +122,6 @@ cssPrefix: pf-c-masthead
 {{/masthead}}
 ```
 
-### Responsive insets
-```hbs
-{{#> masthead masthead--id="responsive-insets-masthead" masthead--modifier="pf-m-inset-xl pf-m-inset-sm-on-lg pf-m-inset-xl-on-2xl"}}
-  {{> masthead-toggle}}
-  {{#> masthead-main}}
-    {{#> masthead-brand}}
-      Logo
-    {{/masthead-brand}}
-  {{/masthead-main}}
-  {{> masthead-content}}
-{{/masthead}}
-```
-
-### Page insets
-```hbs
-{{#> masthead masthead--id="responsive-insets-masthead" masthead--modifier="pf-m-page-insets"}}
-  {{> masthead-toggle}}
-  {{#> masthead-main}}
-    {{#> masthead-brand}}
-      Logo
-    {{/masthead-brand}}
-  {{/masthead-main}}
-  {{> masthead-content}}
-{{/masthead}}
-```
-
 ## Documentation
 
 ### Usage
@@ -198,7 +133,5 @@ cssPrefix: pf-c-masthead
 | `.pf-c-masthead__toggle` | `<span>` | Initiates the masthead toggle component. |
 | `.pf-c-masthead__brand` | `<a>, <div>` | Initiates the masthead content component. |
 | `.pf-c-masthead__content` | `<div>` | Initiates the masthead content component. |
-| `.pf-m-light-100` | `.pf-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-global--BackgroundColor--100`. |
+| `.pf-m-light` | `.pf-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-global--BackgroundColor--100`. |
 | `.pf-m-light-200` | `.pf-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-global--BackgroundColor--200`. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-masthead` | Modifies masthead horizontal padding. |
-| `.pf-m-page-insets` | `.pf-c-masthead` | Modifies masthead insets to match page section, table, page header or any other component whose inset shifts from `--pf-global--spacer--md` to `--pf-global--spacer--lg` at the `xl` breakpoint. |
