@@ -17,6 +17,15 @@
   grid-gap: var(--pf-c-radio--GridGap);
   align-items: start;
   justify-items: start;
+
+  &.pf-m-standalone {
+    --pf-c-radio--GridGap: 0;
+    --pf-c-radio__input--Height: auto;
+    --pf-c-radio__input--MarginTop: 0;
+
+    display: inline-grid;
+    line-height: 1;
+  }
 }
 
 .pf-c-radio__label {

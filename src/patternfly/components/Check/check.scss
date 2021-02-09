@@ -16,6 +16,15 @@
   grid-gap: var(--pf-c-check--GridGap);
   align-items: start;
   justify-items: start;
+
+  &.pf-m-standalone {
+    --pf-c-check--GridGap: 0;
+    --pf-c-check__input--Height: auto;
+    --pf-c-check__input--MarginTop: 0;
+
+    display: inline-grid;
+    line-height: 1;
+  }
 }
 
 .pf-c-check__label {
