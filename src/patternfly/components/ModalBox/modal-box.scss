@@ -130,6 +130,7 @@
 .pf-c-modal-box__header {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   padding-top: var(--pf-c-modal-box__header--PaddingTop);
   padding-right: var(--pf-c-modal-box__header--PaddingRight);
   padding-left: var(--pf-c-modal-box__header--PaddingLeft);
