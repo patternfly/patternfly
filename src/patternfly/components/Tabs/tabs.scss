@@ -104,6 +104,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // Expandable
   --pf-c-tabs__toggle--Display: flex;
   --pf-c-tabs__toggle--Visibility: hidden;
+  --pf-c-tabs__toggle--MarginBottom: 0;
+  --pf-c-tabs--m-expanded__toggle--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-tabs__toggle-icon--Color: currentColor;
   --pf-c-tabs__toggle-icon--Transition: var(--pf-global--Transition);
   --pf-c-tabs__toggle-icon--Rotate: 0;
@@ -262,6 +264,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     flex-direction: column;
     height: 100%; // If not a flex child, set height
     padding: 0; // Because vertical variant has no scroll buttons, reset padding
+    overflow: visible;
 
     .pf-c-tabs__list {
       position: relative;
@@ -324,6 +327,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     &.pf-m-expanded {
       --pf-c-tabs__list--Display: flex;
       --pf-c-tabs__list--Visibility: visible;
+      --pf-c-tabs__toggle--MarginBottom: var(--pf-c-tabs--m-expanded__toggle--MarginBottom);
       --pf-c-tabs__toggle-icon--Color: var(--pf-c-tabs--m-expanded__toggle-icon--Color);
       --pf-c-tabs__toggle-icon--Rotate: var(--pf-c-tabs--m-expanded__toggle-icon--Rotate);
     }
@@ -385,6 +389,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 .pf-c-tabs__toggle {
   display: var(--pf-c-tabs__toggle--Display);
   align-items: center;
+  margin-bottom: var(--pf-c-tabs__toggle--MarginBottom);
   visibility: var(--pf-c-tabs__toggle--Visibility);
 }
 
