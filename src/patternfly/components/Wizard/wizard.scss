@@ -144,6 +144,7 @@
   // Outer wrap
   --pf-c-wizard__outer-wrap--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-wizard__outer-wrap--lg--PaddingLeft: var(--pf-c-wizard__nav--Width);
+  --pf-c-wizard__outer-wrap--MinHeight: #{pf-size-prem(250px)};
 
   // Main
   --pf-c-wizard__main--ZIndex: var(--pf-global--ZIndex--xs);
@@ -314,7 +315,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  min-height: 0;
+  min-height: var(--pf-c-wizard__outer-wrap--MinHeight);
   background-color: var(--pf-c-wizard__outer-wrap--BackgroundColor);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
