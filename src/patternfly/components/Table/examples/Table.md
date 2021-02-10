@@ -1428,7 +1428,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 ### Tree table with checkboxes, icons here
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons" table--gridsss="true" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"'}}
+{{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons" table--gridsss="true" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"'}}
 ```
 
 ### Accessibility

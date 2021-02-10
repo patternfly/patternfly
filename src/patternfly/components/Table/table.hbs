@@ -1,4 +1,8 @@
-<table class="pf-c-table{{#if table--expandable}} pf-m-expandable{{/if}}{{#if table--IsTree-view}} pf-m-tree-view{{/if}}{{#if tree-view--HasCheckboxes}} pf-m-tree-view-checkboxes{{/if}}{{#if table--modifier}} {{table--modifier}}{{/if}}"
+<table class="pf-c-table
+  {{~#if table--expandable}} pf-m-expandable{{/if}}
+  {{~#if table--IsTree-view}} pf-m-tree-view{{/if}}
+  {{~#if tree-view--HasCheckboxes}} pf-m-tree-view-checkboxes{{/if}}
+  {{~#if table--modifier}} {{table--modifier}}{{/if}}"
   {{#if table--grid}}
     role="grid"
   {{/if}}

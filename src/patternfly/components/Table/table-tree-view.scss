@@ -1,19 +1,19 @@
 $pf-c-tree-view--MaxDepth: 10;
 
 .pf-c-table {
-  // control
+  // main
   --pf-c-table__tree-view-main--GridTemplateColumns: var(--pf-c-table--m-tree-view__toggle--Width) max-content 1fr;
   --pf-c-table__tree-view-main--indent--base: var(--pf-global--spacer--lg);
   --pf-c-table__tree-view-main--MarginLeft: calc(var(--pf-global--spacer--md) * -1); // based off of the expected width of the toggle button
 
-  // content
+  // check
   --pf-c-table__tree-view-main--c-table__check--MarginRight: var(--pf-global--spacer--md);
 
   // icon
   --pf-c-table__tree-view-icon--MinWidth: var(--pf-global--FontSize--md);
   --pf-c-table__tree-view-icon--MarginRight: var(--pf-global--spacer--sm);
 
-  // tree-view
+  // toggle
   --pf-c-table--m-tree-view__toggle--Width: #{pf-size-prem(42px)}; // based off of the expected width of the toggle button
 
   &.pf-m-tree-view {
