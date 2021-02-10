@@ -1,0 +1,17 @@
+<{{#if masthead-brand--type}}{{masthead-brand--type}}{{else}}a{{/if}} class="pf-c-masthead__brand{{#if masthead-brand--modifier}} {{masthead-brand--modifier}}{{/if}}"
+  {{#unless masthead-brand--type}}
+    {{#if masthead-brand--href}}
+      href="{{masthead-brand--href}}"
+    {{else}}
+      href="#"
+    {{/if}}
+  {{/unless}}
+  {{#if masthead-brand--attribute}}
+    {{{masthead-brand--attribute}}}
+  {{/if}}>
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    {{> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}
+  {{/if}}
+</{{#if masthead-brand--type}}{{masthead-brand--type}}{{else}}a{{/if}}>

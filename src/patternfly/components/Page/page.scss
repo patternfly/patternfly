@@ -179,7 +179,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   }
 }
 
-
 // Header
 .pf-c-page__header {
   @include pf-t-dark; // force the container to follow the dark theme
@@ -200,6 +199,11 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     grid-template-columns: auto 1fr auto;
+  }
+
+  .pf-c-masthead {
+    grid-column: span 2;
+    align-self: stretch;
   }
 }
 

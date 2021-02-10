@@ -4,6 +4,11 @@ section: components
 wrapperTag: div
 ---
 
+### Masthead component
+```hbs isFullscreen
+{{> page-demo-masthead-component page-demo-default--id="page-demo-masthead-component"}}
+```
+
 ## Demos
 ### Sticky tertiary nav
 ```hbs isFullscreen
