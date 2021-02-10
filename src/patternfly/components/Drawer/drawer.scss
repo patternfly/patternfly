@@ -297,7 +297,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
-    flex-basis: var(--pf-c-drawer__panel--md--FlexBasis);
+    --pf-c-drawer__panel--FlexBasis: var(--pf-c-drawer__panel--md--FlexBasis);
 
     .pf-c-drawer:not(.pf-m-panel-bottom) & {
       min-width: var(--pf-c-drawer__panel--md--FlexBasis--min);
