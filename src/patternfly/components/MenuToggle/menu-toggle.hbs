@@ -1,0 +1,25 @@
+<button class="pf-c-menu-toggle
+  {{~#if menu-toggle--IsPrimary}}
+    pf-m-primary
+  {{/if}}
+  {{~#if menu-toggle--IsPlain}}
+    pf-m-plain
+  {{/if}}
+  {{~#if menu-toggle--IsExpanded}}
+    pf-m-expanded
+  {{/if}}
+  {{#if menu-toggle--modifier}} {{menu-toggle--modifier}}{{/if}}"
+  type="button"
+  {{#if menu-toggle--IsExpanded}}
+    aria-expanded="true"
+  {{else}}
+    aria-expanded="false"
+  {{/if}}
+  {{~#if menu-toggle--IsDisabled}}
+    disabled
+  {{/if}}
+  {{#if menu-toggle--attribute}}
+    {{{menu-toggle--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</button>
