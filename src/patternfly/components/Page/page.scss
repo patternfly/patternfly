@@ -154,7 +154,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__main-breadcrumb--PaddingRight: var(--pf-c-page__main-breadcrumb--xl--PaddingRight);
     --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-c-page__main-breadcrumb--xl--PaddingLeft);
-    --pf-c-page__header--c-masthead--inset: var(--pf-c-page__header--c-masthead--xl--inset);
   }
 
   // Wizard main section
