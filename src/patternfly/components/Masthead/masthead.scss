@@ -81,6 +81,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // toggle
   --pf-c-masthead__toggle--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-masthead__toggle--MarginLeft: calc(var(--pf-global--spacer--md) * -1); // offset by button padding
+  --pf-c-masthead__toggle--c-button--FontSize: var(--pf-global--FontSize--2xl);
 
   // light 100
   --pf-c-masthead--m-light--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -198,6 +199,10 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   order: 0;
   margin-right: var(--pf-c-masthead__toggle--MarginRight);
   margin-left: var(--pf-c-masthead__toggle--MarginLeft);
+
+  .pf-c-button {
+    --pf-c-button--FontSize: var(--pf-c-masthead__toggle--c-button--FontSize);
+  }
 }
 
 // stylelint-disable no-duplicate-selectors
