@@ -37,7 +37,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--PaddingLeft: var(--pf-c-masthead--inset);
   --pf-c-masthead--PaddingRight: var(--pf-c-masthead--inset);
   --pf-c-masthead--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
-  --pf-c-masthead--inset: var(--pf-global--spacer--lg);
 
   // insets
   --pf-c-masthead--inset: var(--pf-global--spacer--md); // match page insets
@@ -64,12 +63,12 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--m-display-inline__main--FlexBasis: auto;
   --pf-c-masthead--m-display-inline__main--PaddingTop: 0;
   --pf-c-masthead--m-display-inline__main--PaddingBottom: 0;
-  --pf-c-masthead--m-display-inline__main--MarginRight: calc(var(--pf-global--gutter--md) / 2); // split gutter
+  --pf-c-masthead--m-display-inline__main--MarginRight: calc(var(--pf-global--spacer--lg) / 2); // split gutter
   --pf-c-masthead--m-display-inline__main--before--BorderBottom: 0;
   --pf-c-masthead--m-display-inline__content--Order: 0;
   --pf-c-masthead--m-display-inline__content--PaddingTop: 0;
   --pf-c-masthead--m-display-inline__content--PaddingBottom: 0;
-  --pf-c-masthead--m-display-inline__content--MarginLeft: calc(var(--pf-global--gutter--md) / 2); // split gutter
+  --pf-c-masthead--m-display-inline__content--MarginLeft: calc(var(--pf-global--spacer--lg) / 2); // split gutter
   --pf-c-masthead--m-display-inline__content--c-nav--m-horizontal--MarginRight: 0;
   --pf-c-masthead--m-display-inline__content--c-nav--m-horizontal--MarginLeft: 0;
 
@@ -85,14 +84,14 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   // light 100
   --pf-c-masthead--m-light--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-masthead--m-light__main--BorderBottomColor: var(--pf-global--palette--black-200);
+  --pf-c-masthead--m-light__main--BorderBottomColor: var(--pf-global--BorderColor--300);
 
   // light 200
   --pf-c-masthead--m-light-200--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-masthead--m-light-200__main--BorderBottomColor: var(--pf-global--palette--black-300);
+  --pf-c-masthead--m-light-200__main--BorderBottomColor: var(--pf-global--BorderColor--100);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-toolbar--m-page-insets--inset: var(--pf-c-toolbar--m-page-insets--xl--inset);
+    --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
   }
 
   // set layout to stack by default
