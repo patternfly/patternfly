@@ -124,7 +124,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   display: flex;
   padding-right: var(--pf-c-tabs--inset);
   padding-left: var(--pf-c-tabs--inset);
-  overflow: hidden;
+  overflow: hidden; // remove in breaking change release
 
   &::before {
     position: absolute;
@@ -264,7 +264,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     flex-direction: column;
     height: 100%; // If not a flex child, set height
     padding: 0; // Because vertical variant has no scroll buttons, reset padding
-    overflow: visible;
+    overflow: visible; // remove in breaking change release
 
     .pf-c-tabs__list {
       position: relative;
