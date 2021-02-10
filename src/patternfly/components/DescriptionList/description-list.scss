@@ -1,4 +1,4 @@
-$pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "md", "lg", "xl", "2xl");
+$pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
 .pf-c-description-list {
   --pf-c-description-list--RowGap: var(--pf-global--gutter--md);
@@ -7,21 +7,28 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "md", "lg",
   --pf-c-description-list--GridTemplateColumns--width: 1fr;
   --pf-c-description-list--GridTemplateColumns: repeat(var(--pf-c-description-list--GridTemplateColumns--count), var(--pf-c-description-list--GridTemplateColumns--width));
 
-  // Group
+  // group
   --pf-c-description-list__group--RowGap: var(--pf-global--spacer--sm);
   --pf-c-description-list__group--ColumnGap: var(--pf-global--spacer--md);
   --pf-c-description-list__group--GridTemplateColumns: auto;
   --pf-c-description-list__group--GridColumn: auto;
 
-  // Term
+  // term
   --pf-c-description-list__term--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-description-list__term--FontSize: var(--pf-global--FontSize--sm);
 
-  // Horizontal
+  // vertical
+  --pf-c-description-list--m-vertical__group--GridTemplateColumns: repeat(var(--pf-c-description-list--GridTemplateColumns--count));
+
+  // horizontal
   --pf-c-description-list--m-horizontal__term--width: 12ch;
   --pf-c-description-list--m-horizontal__description--width: minmax(10ch, auto);
   --pf-c-description-list--m-horizontal__group--GridTemplateColumns: var(--pf-c-description-list__term--width) var(--pf-c-description-list--m-horizontal__description--width); // use --pf-c-description-list__term--width here as it is re-defined on line 45
   --pf-c-description-list--m-1-col--GridTemplateColumns--count: 1;
+
+  // auto-fit
+  --pf-c-description-list--m-auto-fit--GridTemplateColumns--min: #{pf-size-prem(250px)};
+  --pf-c-description-list--m-auto-fit--GridTemplateColumns--minmax--min: var(--pf-c-description-list--m-auto-fit--GridTemplateColumns--min);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-description-list--m-2-col--GridTemplateColumns--count: 2;
@@ -44,9 +51,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "md", "lg",
   column-gap: var(--pf-c-description-list--ColumnGap);
   grid-template-columns: var(--pf-c-description-list--GridTemplateColumns);
 
-  &.pf-m-horizontal {
-    --pf-c-description-list__group--GridTemplateColumns: var(--pf-c-description-list--m-horizontal__group--GridTemplateColumns);
-
+  &[class*="pf-m-horizontal"] {
     @include pf-build-css-variable-stack("--pf-c-description-list__term--width", "--pf-c-description-list--m-horizontal__term--width", $pf-c-description-list--breakpoint-map);
   }
 
@@ -124,6 +129,14 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "md", "lg",
 
       &.pf-m-3-col#{$breakpoint-name} {
         --pf-c-description-list--GridTemplateColumns--count: var(--pf-c-description-list--m-3-col--GridTemplateColumns--count);
+      }
+
+      &.pf-m-horizontal#{$breakpoint-name} {
+        --pf-c-description-list__group--GridTemplateColumns: var(--pf-c-description-list--m-horizontal__group--GridTemplateColumns);
+      }
+
+      &.pf-m-vertical#{$breakpoint-name} {
+        --pf-c-description-list__group--GridTemplateColumns: var(--pf-c-description-list--m-vertical__group--GridTemplateColumns);
       }
     }
   }

@@ -68,7 +68,12 @@ cssPrefix: pf-c-description-list
 
 ### Horizontal responsive columns
 ```hbs
-{{> description-list__example description-list--title="Horizontal responsive DL" description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
+{{> description-list__example description-list--title="Horizontal responsive DL columns" description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
+```
+
+### Responsive horizontal, vertical group layout
+```hbs
+{{> description-list__example description-list--title="Horizontal responsive DL groups" description-list--modifier="pf-m-horizontal pf-m-vertical-on-md pf-m-horizontal-on-lg pf-m-vertical-on-xl pf-m-horizontal-on-2xl"}}
 ```
 
 ## Auto-column-width
@@ -116,10 +121,11 @@ cssPrefix: pf-c-description-list
 | `.pf-c-description-list__description` | `<dd>` | Initiates a description list component description. **Required** |
 | `.pf-c-description-list__text` | `<span>`, `<div>` | Initiates a description list component text element. Use a `<span>` when a child of `.pf-c-description-list__term`. **Required** |
 | `.pf-m-help-text` | `.pf-c-description-list__text` | Indicates there is more information available for the description list component term text. |
-| `.pf-m-horizontal` | `.pf-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
+| `.pf-m-horizontal{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
+| `.pf-m-vertical{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list component term and description pair to a vertical layout. |
 | `.pf-m-auto-column-widths` | `.pf-c-description-list` | Modifies the description list to format automatically. |
 | `.pf-m-inline-grid` | `.pf-c-description-list` | Modifies the description list display to inline-grid. |
-| `.pf-m-{1,2,3}-col{-on-[md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list number of columns. |
+| `.pf-m-{1,2,3}-col{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list number of columns. |
 | `--pf-c-description-list--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-c-description-list` | Modifies the min value of the `grid-template-columns` declaration. |
 | `--pf-c-description-list__term--m-horizontal--width{-on-[breakpoint]}: {width}` | `.pf-c-description-list.pf-m-horizontal` | Modifies the value for `--pf-c-description-list--m-horizontal__term--width` declaration. |
 
