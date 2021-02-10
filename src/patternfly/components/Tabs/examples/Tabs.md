@@ -172,6 +172,30 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
+### Vertical expandable
+```hbs
+{{#> tabs tabs--id="vertical-expandable-example" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expanded
+```hbs
+{{#> tabs tabs--id="vertical-expanded-example" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expandable (responsive)
+```hbs
+{{#> tabs tabs--id="vertical-expandable-responsive-example" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
 The tabs component should only be used to change content views within a page. The similar-looking but semantically different [horizontal nav component](/documentation/core/components/nav) is available for general navigation use cases.
 
 Tabs should be used with the [tab content component](/documentation/core/components/tabcontent).
@@ -197,6 +221,10 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-c-tabs__item-icon` | `<span>` | Initiates a tabs component item text. **Required** |
 | `.pf-c-tabs__link` | `<button>`, `<a>` | Initiates a tabs component link. **Required** |
 | `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
+| `.pf-c-tabs__toggle` | `<div>` | Initiates a tabs expandable toggle. |
+| `.pf-c-tabs__toggle-button` | `<button>` | Initiates a tabs expandable toggle button. |
+| `.pf-c-tabs__toggle-icon` | `<span>` | Initiates a tabs expandable toggle icon. |
+| `.pf-c-tabs__toggle-text` | `<span>` | Initiates a tabs expandable toggle text. |
 | `.pf-m-secondary` | `.pf-c-tabs` | Applies secondary styling to the tab component. |
 | `.pf-m-no-border-bottom` | `.pf-c-tabs` | Removes bottom border from a tab component. |
 | `.pf-m-box` | `.pf-c-tabs` | Applies box styling to the tab component. |
@@ -205,3 +233,6 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-current` | `.pf-c-tabs__item` | Indicates that a tab item is currently selected. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
 | `.pf-m-color-scheme--light-300` | `.pf-c-tabs` | Modifies the tabs component tab background colors. |
+| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-c-tabs` | Modifies the tabs component to be expandable via a toggle. **Note:** works with vertical tabs only. |
+| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-c-tabs` | Modifies the tabs component to be non-expandable. |
+| `.pf-m-expanded` | `.pf-c-tabs` | Modifies the expandable tabs component for the expanded state. |
