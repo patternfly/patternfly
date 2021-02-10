@@ -243,6 +243,9 @@
   --pf-c-table--tr--m-selected--after--BorderLeftWidth: var(--pf-c-table__expandable-row--after--border-width--base);
   --pf-c-table--tr--m-selected--after--BorderLeftColor: var(--pf-global--active-color--100);
   --pf-c-table--tr--m-selected--m-selected--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-table--tr--m-selected--m-selected--m-hoverable--hover--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-table--tr--m-selected--m-hoverable--hover--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-table--tr--m-selected--m-hoverable--hover--m-selected--BoxShadow: var(--pf-global--BoxShadow--sm-bottom) inset, var(--pf-global--BoxShadow--sm-bottom);
 
   // tbody hoverable
   --pf-c-table--tbody--m-hoverable--BoxShadow: none;
@@ -255,14 +258,18 @@
   --pf-c-table--tbody--m-hoverable--active--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
   --pf-c-table--tbody--m-hoverable--active--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-table--tbody--m-hoverable--m-expanded--BorderColor: var(--pf-global--active-color--400);
-  --pf-c-table--tbody--m-hoverable--m-selected--hover--tr--BoxShadow: var(--pf-global--BoxShadow--sm-bottom) inset, var(--pf-global--BoxShadow--md-bottom);
+  --pf-c-table--tbody--m-hoverable--m-selected--hover--tr--BoxShadow: var(--pf-global--BoxShadow--sm-bottom) inset, var(--pf-global--BoxShadow--sm-bottom);
 
-  // tbody expanded, selected
-  --pf-c-table--tbody--m-expanded--m-selected--BorderColor: var(--pf-global--active-color--100);
-  --pf-c-table--tbody--m-expanded--m-selected--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--md-bottom);
-  --pf-c-table--tbody--m-expanded--m-selected--m-selected--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
-  --pf-c-table--tbody--m-expanded--m-selected--tr--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
-  --pf-c-table--tbody--m-expanded--m-selected--BorderLeftWidth: var(--pf-c-table__expandable-row--after--border-width--base);
+  // tbody selected
+  --pf-c-table--tbody--m-selected--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-table--tbody--m-selected--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-table--tbody--m-selected--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
+  --pf-c-table--tbody--m-selected--after--BorderLeftWidth: var(--pf-c-table__expandable-row--after--border-width--base);
+  --pf-c-table--tbody--m-selected--after--BorderLeftColor: var(--pf-global--active-color--100);
+  --pf-c-table--tbody--m-selected--m-selected--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-table--tbody--m-selected--m-selected--m-hoverable--hover--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-table--tbody--m-selected--m-hoverable--hover--BoxShadow: var(--pf-global--BoxShadow--sm-top), var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-table--tbody--m-selected--m-hoverable--hover--m-selected--BoxShadow: var(--pf-global--BoxShadow--sm-bottom) inset, var(--pf-global--BoxShadow--sm-bottom);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-c-table--cell--first-last-child--xl--PaddingRight);
@@ -545,13 +552,20 @@
     outline-offset: var(--pf-c-table--tr--m-selected--OutlineOffset);
     box-shadow: var(--pf-c-table--tr--m-selected--BoxShadow);
 
-    & + tr.pf-m-hoverable.pf-m-selected {
-      // box-shadow: var(--pf-c-table--tr--m-selected--m-selected--BoxShadow);
+    & + tr.pf-m-selected {
+      box-shadow: var(--pf-c-table--tr--m-selected--m-selected--BoxShadow);
     }
 
-    & + tr.pf-m-selected,
-    & + tr.pf-m-selected:hover {
-      // box-shadow: var(--pf-c-table--tr--m-selected--m-selected--BoxShadow);
+    &.pf-m-hoverable:hover {
+      box-shadow: var(--pf-c-table--tr--m-selected--m-hoverable--hover--BoxShadow);
+    }
+
+    &.pf-m-hoverable:hover + tr.pf-m-selected {
+      box-shadow: var(--pf-c-table--tr--m-selected--m-hoverable--hover--m-selected--BoxShadow);
+    }
+
+    & + tr.pf-m-selected.pf-m-hoverable:hover {
+      box-shadow: var(--pf-c-table--tr--m-selected--m-selected--m-hoverable--hover--BoxShadow);
     }
   }
 
@@ -596,20 +610,24 @@
     --pf-c-table__expandable-row--after--BorderLeftWidth: var(--pf-c-table--tbody--m-expanded--m-selected--BorderLeftWidth);
     --pf-c-table__expandable-row--after--BorderColor: var(--pf-c-table--tbody--m-expanded--m-selected--BorderColor);
 
-    box-shadow: var(--pf-c-table--tbody--m-expanded--m-selected--BoxShadow);
+    background-color: var(--pf-c-table--tbody--m-selected--BackgroundColor);
+    outline-offset: var(--pf-c-table--tbody--m-selected--OutlineOffset);
+    box-shadow: var(--pf-c-table--tbody--m-selected--BoxShadow);
 
-    & + tbody.pf-m-selected,
-    & + tbody.pf-m-selected:hover {
-      background-color: #fff;
-      box-shadow: var(--pf-c-table--tbody--m-expanded--m-selected--m-selected--BoxShadow);
+    & + tbody.pf-m-selected {
+      --pf-c-table--tbody--m-selected--BoxShadow: var(--pf-c-table--tbody--m-selected--m-selected--BoxShadow);
     }
 
-    &.pf-m-expanded {
-      box-shadow: var(--pf-c-table--tbody--m-expanded--m-selected--BoxShadow);
+    &.pf-m-hoverable:hover {
+      --pf-c-table--tbody--m-selected--BoxShadow: var(--pf-c-table--tbody--m-selected--m-hoverable--hover--BoxShadow);
+    }
 
-      > tr:not(:last-child) {
-        box-shadow: var(--pf-c-table--tbody--m-expanded--m-selected--tr--BoxShadow);
-      }
+    &.pf-m-hoverable:hover + tbody.pf-m-selected {
+      --pf-c-table--tbody--m-selected--BoxShadow: var(--pf-c-table--tbody--m-selected--m-hoverable--hover--m-selected--BoxShadow);
+    }
+
+    & + tbody.pf-m-selected.pf-m-hoverable:hover {
+      --pf-c-table--tbody--m-selected--BoxShadow: var(--pf-c-table--tbody--m-selected--m-selected--m-hoverable--hover--BoxShadow);
     }
   }
   // stylelint-enable
