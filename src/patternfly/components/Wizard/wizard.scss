@@ -144,6 +144,7 @@
   // Outer wrap
   --pf-c-wizard__outer-wrap--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-wizard__outer-wrap--lg--PaddingLeft: var(--pf-c-wizard__nav--Width);
+  --pf-c-wizard__outer-wrap--MinHeight: #{pf-size-prem(250px)};
 
   // Main
   --pf-c-wizard__main--ZIndex: var(--pf-global--ZIndex--xs);
@@ -166,6 +167,8 @@
   }
 
   // Footer
+  --pf-c-wizard__footer--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-wizard__footer--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-wizard__footer--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-wizard__footer--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-wizard__footer--PaddingBottom: var(--pf-global--spacer--sm);
@@ -174,6 +177,7 @@
   --pf-c-wizard__footer--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-wizard__footer--xl--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-wizard__footer--xl--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-wizard__footer--BoxShadow: var(--pf-global--BoxShadow--sm-top);
   --pf-c-wizard__footer--child--MarginRight: var(--pf-global--spacer--md);
   --pf-c-wizard__footer--child--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-wizard__footer-cancel--MarginLeft: calc(var(--pf-global--spacer--2xl) - var(--pf-c-wizard__footer--child--MarginRight));
@@ -311,7 +315,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  min-height: 0;
+  min-height: var(--pf-c-wizard__outer-wrap--MinHeight);
   background-color: var(--pf-c-wizard__outer-wrap--BackgroundColor);
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
@@ -476,10 +480,12 @@
 }
 
 .pf-c-wizard__footer {
+  z-index: var(--pf-c-wizard__footer--ZIndex);
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
   padding: var(--pf-c-wizard__footer--PaddingTop) var(--pf-c-wizard__footer--PaddingRight) var(--pf-c-wizard__footer--PaddingBottom) var(--pf-c-wizard__footer--PaddingLeft);
+  background-color: var(--pf-c-wizard__footer--BackgroundColor);
 
   > * {
     margin-bottom: var(--pf-c-wizard__footer--child--MarginBottom);
@@ -487,6 +493,13 @@
     &:not(:last-child) {
       margin-right: var(--pf-c-wizard__footer--child--MarginRight);
     }
+  }
+
+  // Limit shadow to a child of modal and main-wizard since we can ensure wizard footer is fixed in those usages
+  // Make a regular style in a breaking change release
+  .pf-c-page__main-wizard &,
+  .pf-c-modal-box & {
+    box-shadow: var(--pf-c-wizard__footer--BoxShadow);
   }
 }
 
