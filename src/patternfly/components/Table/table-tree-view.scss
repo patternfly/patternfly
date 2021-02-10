@@ -1,0 +1,52 @@
+$pf-c-tree-view--MaxDepth: 10;
+
+.pf-c-table {
+  // main
+  --pf-c-table__tree-view-main--GridTemplateColumns: var(--pf-c-table--m-tree-view__toggle--Width) max-content 1fr;
+  --pf-c-table__tree-view-main--indent--base: var(--pf-global--spacer--lg);
+  --pf-c-table__tree-view-main--MarginLeft: calc(var(--pf-global--spacer--md) * -1); // based off of the expected width of the toggle button
+
+  // check
+  --pf-c-table__tree-view-main--c-table__check--MarginRight: var(--pf-global--spacer--md);
+
+  // icon
+  --pf-c-table__tree-view-icon--MinWidth: var(--pf-global--FontSize--md);
+  --pf-c-table__tree-view-icon--MarginRight: var(--pf-global--spacer--sm);
+
+  // toggle
+  --pf-c-table--m-tree-view__toggle--Width: #{pf-size-prem(42px)}; // based off of the expected width of the toggle button
+
+  &.pf-m-tree-view {
+    @for $i from 2 through $pf-c-tree-view--MaxDepth {
+      tr[aria-level="#{$i}"] {
+        --pf-c-table--cell--first-last-child--PaddingLeft: calc(var(--pf-c-table__tree-view-main--indent--base) * #{$i});
+      }
+    }
+  }
+}
+
+.pf-c-table__tree-view-main {
+  display: grid;
+  grid-template-columns: var(--pf-c-table__tree-view-main--GridTemplateColumns);
+  grid-template-areas: "toggle check content";
+  margin-left: var(--pf-c-table__tree-view-main--MarginLeft);
+
+  > .pf-c-table__toggle {
+    grid-column: toggle;
+  }
+
+  > .pf-c-table__check {
+    grid-column: check;
+    margin-right: var(--pf-c-table__tree-view-main--c-table__check--MarginRight);
+  }
+}
+
+.pf-c-table__tree-view-content {
+  display: flex;
+  grid-column: content;
+}
+
+.pf-c-table__tree-view-icon {
+  min-width: var(--pf-c-table__tree-view-icon--MinWidth);
+  margin-right: var(--pf-c-table__tree-view-icon--MarginRight);
+}
