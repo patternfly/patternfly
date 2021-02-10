@@ -1,6 +1,13 @@
-<tbody{{#if table-tbody--modifier}} class="{{table-tbody--modifier}}"{{/if}}
+<tbody class="
+  {{~#if table-tbody--IsHoverable}} pf-m-hoverable{{/if}}
+  {{~#if table-tbody--IsSelected}} pf-m-selected{{/if}}
+  {{~#if table-tbody--IsExpanded}} pf-m-expanded{{/if}}
+  {{#if table-tbody--modifier}} {{table-tbody--modifier}}{{/if}}"
   {{#if table--grid}}
     role="rowgroup"
+  {{/if}}
+  {{#if table-tbody--IsHoverable}}
+    tabindex="0"
   {{/if}}
   {{#if table-tbody--attribute}}
     {{{table-tbody--attribute}}}

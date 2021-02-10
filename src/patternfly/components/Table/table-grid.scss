@@ -204,6 +204,11 @@
     }
   }
 
+  tr.pf-m-selected {
+    --pf-c-table__expandable-row--after--BorderLeftWidth: 0;
+    --pf-c-table__expandable-row--after--BorderColor: transparent;
+  }
+
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
