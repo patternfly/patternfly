@@ -7,7 +7,7 @@ cssPrefix: pf-c-table
 import './Table.css'
 
 ## Examples
-
+<!--
 ### Basic table
 ```hbs
 {{#> table table--id="table-basic" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
@@ -1408,7 +1408,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
-```
+``` -->
 
 ### Usage
 
@@ -1441,12 +1441,11 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{> table-tr--basic table-tr--basic--index="7" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
     {{> table-tr--basic table-tr--basic--index="8"}}
     {{> table-tr--basic table-tr--basic--index="9"}}
-    {{> table-tr--basic table-tr--basic--index="10" table-tr--basic--IsExpanded="true" table-tr--IsSelected="true" table-tr--basic--title="<b>Expanded and selected</b>"}}
+    {{> table-tr--basic table-tr--basic--index="10" table-tr--basic--IsExpanded="true" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
     {{> table-tr--basic table-tr--basic--index="11"}}
   {{/wrapper}}
 {{/table}}
 ```
-
 
 ### Expandable, hoverable and selectable
 ```hbs
