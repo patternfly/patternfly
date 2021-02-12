@@ -85,12 +85,13 @@
   --pf-global--palette--white: #{$pf-color-white};
 
   // Background color
-  --pf-global--BackgroundColor--100: var(--pf-global--palette--black-700);
-  --pf-global--BackgroundColor--light-100: var(--pf-global--palette--black-700);
+  --pf-global--BackgroundColor--100: var(--pf-global--palette--black-800);
+  --pf-global--BackgroundColor--light-100: var(--pf-global--BackgroundColor--100);
   --pf-global--BackgroundColor--200: var(--pf-global--palette--black-900);
-  --pf-global--BackgroundColor--300: var(--pf-global--palette--black-600);
-  --pf-global--BackgroundColor--light-300: var(--pf-global--palette--black-800);
-  --pf-global--BackgroundColor--light-200: #{$pf-global--BackgroundColor--light-200};
+  --pf-global--BackgroundColor--300: var(--pf-global--palette--black-700);
+  --pf-global--BackgroundColor--400: var(--pf-global--palette--black-600);
+  --pf-global--BackgroundColor--light-300: var(--pf-global--BackgroundColor--300);
+  --pf-global--BackgroundColor--light-200: var(--pf-global--BackgroundColor--200);
   --pf-global--BackgroundColor--dark-100: #{$pf-global--BackgroundColor--dark-100};
   --pf-global--BackgroundColor--dark-200: #{$pf-global--BackgroundColor--dark-200};
   --pf-global--BackgroundColor--dark-300: #{$pf-global--BackgroundColor--dark-300};
@@ -294,14 +295,22 @@
 
 .ws-example,
 .ws-lite-example {
-  background: var(--pf-global--palette--black-900) !important;
+  background: var(--pf-global--palette--BackgroundColor--200) !important;
 }
 
 .ws-preview,
 #main-content {
-  background-color: var(--pf-global--palette--black-800) !important;
+  background-color: var(--pf-global--BackgroundColor--200) !important;
 }
 
 .ws-page-sidebar.pf-c-page__sidebar {
   background: white;
+}
+
+.ws-table tr {
+  border-bottom: 1px solid var(--pf-global--BorderColor--300) !important;
+}
+
+.ws-table {
+  display: none !important;
 }
