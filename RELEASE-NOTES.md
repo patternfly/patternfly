@@ -3,6 +3,39 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2021.02 release notes (2021-02-16)
+Packages released:
+- [@patternfly/patternfly@v4.87.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.87.1)
+
+### Components
+- **Calendar month:** Fixed var name ([#3841](https://github.com/patternfly/patternfly/pull/3841))
+- **Description list:**
+  - Added horizontal/vertical responsive mods ([#3815](https://github.com/patternfly/patternfly/pull/3815))
+  - Added help text support ([#3816](https://github.com/patternfly/patternfly/pull/3816))
+- **Drawer:**
+  - Added light-200 variation for grey background ([#3819](https://github.com/patternfly/patternfly/pull/3819))
+  - Disabled drawer transitions, pointer-events while resizing ([#3832](https://github.com/patternfly/patternfly/pull/3832))
+  - Replace clamp in resizable drawer for browser support ([#3850](https://github.com/patternfly/patternfly/pull/3850))
+  - Fixed bottom variant issues in safari ([#3860](https://github.com/patternfly/patternfly/pull/3860))
+- **Jump links:** Added vertical jump links demos ([#3807](https://github.com/patternfly/patternfly/pull/3807))
+- **Label:** Updated colors to work better on a gray background ([#3817](https://github.com/patternfly/patternfly/pull/3817))
+- **Login:** Added support for hide/show password ([#3820](https://github.com/patternfly/patternfly/pull/3820))
+- **Masthead:** Added masthead component ([#3716](https://github.com/patternfly/patternfly/pull/3716))
+- **Menu toggle:** Added menu toggle component ([#3845](https://github.com/patternfly/patternfly/pull/3845))
+- **Modal box:** Updated modal-box__header to not shrink ([#3826](https://github.com/patternfly/patternfly/pull/3826))
+- **Radio, check:** Added standalone variation, cursor styles ([#3821](https://github.com/patternfly/patternfly/pull/3821))
+- **Search input:** Fixed input hover bottom border ([#3843](https://github.com/patternfly/patternfly/pull/3843))
+- **Slider:** Increased thumb target size([#3859](https://github.com/patternfly/patternfly/pull/3859))
+- **Table:**
+  - Added hoverable, selected rows ([#3835](https://github.com/patternfly/patternfly/pull/3835))
+  - Added tree view support ([#3846](https://github.com/patternfly/patternfly/pull/3846))
+- **Tabs:** Added responsive state for vertical tabs ([#3836](https://github.com/patternfly/patternfly/pull/3836))
+- **Wizard:** Set in page wizard page section to shrink so footer/nav are sticky ([#3822](https://github.com/patternfly/patternfly/pull/3822))
+
+### Other
+- **Workspace:** Fixed missing outlines for utilities examples ([#3824](https://github.com/patternfly/patternfly/pull/3824))
+
+
 ## 2021.01 release notes (2021-01-26)
 Packages released:
 - [@patternfly/patternfly@v4.80.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.80.3)
