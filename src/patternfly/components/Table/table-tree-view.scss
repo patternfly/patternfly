@@ -1,49 +1,77 @@
 $pf-c-tree-view--MaxDepth: 10;
 
 .pf-c-table {
+  --pf-c-table__tree-view-main--indent--base: calc(var(--pf-global--spacer--md) * 2 + var(--pf-c-table__tree-view-icon--MinWidth)); // based off of the expected width of the toggle button
+  --pf-c-table__tree-view-main--nested-indent--base: calc(var(--pf-c-table__tree-view-main--indent--base) - var(--pf-global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
+
   // main
-  --pf-c-table__tree-view-main--GridTemplateColumns: var(--pf-c-table--m-tree-view__toggle--Width) max-content 1fr;
-  --pf-c-table__tree-view-main--indent--base: var(--pf-global--spacer--lg);
-  --pf-c-table__tree-view-main--MarginLeft: calc(var(--pf-global--spacer--md) * -1); // based off of the expected width of the toggle button
+  --pf-c-table__tree-view-main--PaddingLeft: 0;
+  --pf-c-table__tree-view-main--MarginLeft: calc(var(--pf-c-table--cell--first-last-child--PaddingLeft) * -1);
 
   // check
-  --pf-c-table__tree-view-main--c-table__check--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-table__tree-view-main--c-table__check--MarginRight: var(--pf-global--spacer--sm);
 
   // icon
   --pf-c-table__tree-view-icon--MinWidth: var(--pf-global--FontSize--md);
   --pf-c-table__tree-view-icon--MarginRight: var(--pf-global--spacer--sm);
 
   // toggle
-  --pf-c-table--m-tree-view__toggle--Width: #{pf-size-prem(42px)}; // based off of the expected width of the toggle button
+  --pf-c-table--m-tree-view__toggle--Position: absolute;
+  --pf-c-table--m-tree-view__toggle--Left: var(--pf-c-table__tree-view-main--PaddingLeft);
+  --pf-c-table--m-tree-view__toggle--TranslateX: -100%;
+  --pf-c-table--m-tree-view--tr--aria-level-1__toggle--Position: static;
+  --pf-c-table--m-tree-view--tr--aria-level-1__toggle--TranslateX: 0;
+
+  // toggle icon
+  --pf-c-table--m-tree-view__toggle__toggle-icon--MinWidth: var(--pf-global--FontSize--md);
 
   &.pf-m-tree-view {
+    // stylelint-disable selector-no-qualifying-type
+    > tbody > tr {
+      --pf-c-table--m-tree-view__toggle--Left: var(--pf-c-table__tree-view-main--PaddingLeft);
+    }
+
+    tr[aria-level="1"] {
+      --pf-c-table--m-tree-view__toggle--Position: var(--pf-c-table--m-tree-view--tr--aria-level-1__toggle--Position);
+      --pf-c-table--m-tree-view__toggle--TranslateX: var(--pf-c-table--m-tree-view--tr--aria-level-1__toggle--TranslateX);
+    }
+    // stylelint-enable
+
     @for $i from 2 through $pf-c-tree-view--MaxDepth {
       tr[aria-level="#{$i}"] {
-        --pf-c-table--cell--first-last-child--PaddingLeft: calc(var(--pf-c-table__tree-view-main--indent--base) * #{$i});
+        --pf-c-table__tree-view-main--PaddingLeft: calc(var(--pf-c-table__tree-view-main--nested-indent--base) * #{$i - 1} + var(--pf-c-table__tree-view-main--indent--base));
       }
     }
   }
 }
 
 .pf-c-table__tree-view-main {
-  display: grid;
-  grid-template-columns: var(--pf-c-table__tree-view-main--GridTemplateColumns);
-  grid-template-areas: "toggle check content";
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  min-width: 0;
+  padding-left: var(--pf-c-table__tree-view-main--PaddingLeft);
   margin-left: var(--pf-c-table__tree-view-main--MarginLeft);
+  text-align: left;
+  cursor: pointer;
 
   > .pf-c-table__toggle {
-    grid-column: toggle;
+    position: var(--pf-c-table--m-tree-view__toggle--Position);
+    left: var(--pf-c-table--m-tree-view__toggle--Left);
+    transform: translateX(var(--pf-c-table--m-tree-view__toggle--TranslateX));
+
+    .pf-c-table__toggle-icon {
+      min-width: var(--pf-c-table--m-tree-view__toggle__toggle-icon--MinWidth);
+    }
   }
 
   > .pf-c-table__check {
-    grid-column: check;
     margin-right: var(--pf-c-table__tree-view-main--c-table__check--MarginRight);
   }
 }
 
 .pf-c-table__tree-view-content {
   display: flex;
-  grid-column: content;
 }
 
 .pf-c-table__tree-view-icon {

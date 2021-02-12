@@ -7,7 +7,7 @@ cssPrefix: pf-c-table
 import './Table.css'
 
 ## Examples
-
+<!--
 ### Basic table
 ```hbs
 {{#> table table--id="table-basic" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
@@ -1408,7 +1408,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
-```
+``` -->
 
 ### Usage
 
@@ -1426,7 +1426,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{> table-tree-view--basic table--id="tree-table-with-checkboxes" table--gridsss="true" tree-view--HasCheckboxes="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"'}}
 ```
 
-### Tree table with checkboxes, icons here
+### Tree table with checkboxes, icons
 ```hbs
 {{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons" table--gridsss="true" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"'}}
 ```
