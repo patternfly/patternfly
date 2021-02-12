@@ -230,7 +230,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 // Main area
 .pf-c-drawer__main {
   display: flex;
-  flex-grow: 1;
+  flex: 1;
   overflow: hidden;
 }
 
