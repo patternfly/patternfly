@@ -298,10 +298,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-drawer__panel--FlexBasis:
-      clamp(
+      max(
         var(--pf-c-drawer__panel--md--FlexBasis--min),
-        var(--pf-c-drawer__panel--md--FlexBasis),
-        var(--pf-c-drawer__panel--md--FlexBasis--max)
+        min(var(--pf-c-drawer__panel--md--FlexBasis), var(--pf-c-drawer__panel--md--FlexBasis--max))
       );
   }
 
