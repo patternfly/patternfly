@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2021.02 release notes (2021-02-16)
 Packages released:
-- [@patternfly/patternfly@v4.86.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.86.1)
+- [@patternfly/patternfly@v4.87.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.87.1)
 
 ### Components
 - **Calendar month:** Fixed var name ([#3841](https://github.com/patternfly/patternfly/pull/3841))
