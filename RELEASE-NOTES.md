@@ -18,7 +18,7 @@ Packages released:
   - Replace clamp in resizable drawer for browser support ([#3850](https://github.com/patternfly/patternfly/pull/3850))
   - Fixed bottom variant issues in safari ([#3860](https://github.com/patternfly/patternfly/pull/3860))
 - **Jump links:** Added vertical jump links demos ([#3807](https://github.com/patternfly/patternfly/pull/3807))
-- **Label:** Updated colors to work better on a gray background ([#3817](https://github.com/patternfly/patternfly/pull/3817))
+- **Label:** Updated colors and add non-transparent border to work better on a gray background ([#3817](https://github.com/patternfly/patternfly/pull/3817))
 - **Login:** Added support for hide/show password ([#3820](https://github.com/patternfly/patternfly/pull/3820))
 - **Masthead:** Added masthead component ([#3716](https://github.com/patternfly/patternfly/pull/3716))
 - **Menu toggle:** Added menu toggle component ([#3845](https://github.com/patternfly/patternfly/pull/3845))
