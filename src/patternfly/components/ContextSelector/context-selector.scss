@@ -155,7 +155,7 @@
 
 .pf-c-context-selector__menu-list {
   max-height: var(--pf-c-context-selector__menu-list--MaxHeight);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .pf-c-context-selector__menu-list-item {
