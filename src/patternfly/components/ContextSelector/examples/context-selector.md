@@ -112,8 +112,10 @@ import './context-selector.css'
 
 ## Documentation
 ### Accessibility
+| Class | Applied to | Outcome |
+| -- | -- | -- |
 | `aria-expanded="false"` | `.pf-c-context-selector__toggle` |  Indicates that the menu is hidden. |
-| `aria-expanded="true"` | `.pf-c-context-selector__toggle`, `.pf-c-context-selector__toggle-check`, `.pf-c-context-selector__toggle-button` |  Indicates that the menu is visible. |
+| `aria-expanded="true"` | `.pf-c-context-selector__toggle` |  Indicates that the menu is visible. |
 | `aria-hidden="true"` | `.pf-c-context-selector__toggle-icon > *` | Hides the icon from assistive technologies. |
 | `disabled` | `button.pf-c-context-selector__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
 | `aria-disabled="true"` | `a.pf-c-context-selector__menu-item` | When the menu item uses a link element, indicates that it is unavailable. |
