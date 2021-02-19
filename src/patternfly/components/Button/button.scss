@@ -484,6 +484,14 @@
 
     color: var(--pf-c-button--disabled--Color);
     background-color: var(--pf-c-button--disabled--BackgroundColor);
+
+    &.pf-m-control {
+      --pf-c-button--after--BorderColor: var(--pf-global--palette--black-700);
+
+      &::after {
+        border-bottom-width: var(--pf-global--BorderWidth--sm);
+      }
+    }
   }
 
   &.pf-m-aria-disabled {
