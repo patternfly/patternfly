@@ -119,7 +119,7 @@ wrapperTag: div
             {{#> input-group}}
               {{#> form-control controlType="input" input="true" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password" value="abcd1234"'}}{{/form-control}}
               {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
-                <i class="fas fa-eye"></i>
+                <i class="fas fa-eye" aria-hidden="true"></i>
               {{/button}}
             {{/input-group}}
           {{/form-group}}
@@ -168,7 +168,7 @@ wrapperTag: div
             {{#> input-group}}
               {{#> form-control controlType="input" input="true" form-control--attribute='required input="true" type="text" id="login-demo-form-password" name="login-demo-form-password" value="abcd1234"'}}{{/form-control}}
               {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Hide password"'}}
-                <i class="fas fa-eye-slash"></i>
+                <i class="fas fa-eye-slash" aria-hidden="true"></i>
               {{/button}}
             {{/input-group}}
           {{/form-group}}
