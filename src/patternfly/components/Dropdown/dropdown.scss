@@ -6,7 +6,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-dropdown__toggle--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__toggle--MinWidth: var(--pf-global--target-size--MinWidth);
+  --pf-c-dropdown__toggle--MinWidth: 0;
   --pf-c-dropdown__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-dropdown__toggle--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-dropdown__toggle--Color: var(--pf-global--Color--100);
@@ -28,6 +28,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-dropdown__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
+  --pf-c-dropdown__toggle--m-plain--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-dropdown__toggle--m-plain--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-dropdown__toggle--m-plain--child--LineHeight: normal; // remove at breaking change
   --pf-c-dropdown__toggle--m-primary--Color: var(--pf-global--Color--light-100);
   --pf-c-dropdown__toggle--m-primary--BorderRadius: var(--pf-global--BorderRadius--sm);
@@ -282,6 +284,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &.pf-m-plain {
+    --pf-c-dropdown__toggle--PaddingRight: var(--pf-c-dropdown__toggle--m-plain--PaddingRight);
+    --pf-c-dropdown__toggle--PaddingLeft: var(--pf-c-dropdown__toggle--m-plain--PaddingLeft);
+
     display: inline-block;
     color: var(--pf-c-dropdown__toggle--m-plain--Color);
 

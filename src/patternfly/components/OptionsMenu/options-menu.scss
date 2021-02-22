@@ -5,7 +5,7 @@
   --pf-c-options-menu__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-options-menu__toggle--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-options-menu__toggle--MinWidth: var(--pf-global--target-size--MinWidth);
+  --pf-c-options-menu__toggle--MinWidth: 0;
   --pf-c-options-menu__toggle--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-options-menu__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-options-menu__toggle--BorderTopColor: var(--pf-global--BorderColor--300);
@@ -24,6 +24,8 @@
   --pf-c-options-menu__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-options-menu__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-options-menu__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
+  --pf-c-options-menu__toggle--m-plain--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-options-menu__toggle--m-plain--PaddingLeft: var(--pf-global--spacer--md);
 
   // Toggle arrow
   --pf-c-options-menu__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
@@ -158,6 +160,11 @@
   }
 
   &.pf-m-plain {
+    --pf-c-options-menu__toggle--PaddingRight: var(--pf-c-options-menu__toggle--m-plain--PaddingRight);
+    --pf-c-options-menu__toggle--PaddingLeft: var(--pf-c-options-menu__toggle--m-plain--PaddingLeft);
+
+    display: inline-block;
+
     &:not(.pf-m-text) {
       justify-content: center;
       color: var(--pf-c-options-menu__toggle--m-plain--Color);
