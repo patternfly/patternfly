@@ -235,12 +235,69 @@ cssPrefix: pf-c-slider
 {{/slider}}
 ```
 
+### Disabled
+```hbs
+{{#> slider
+  slider--IsDisabled="true"
+  slider--value-min="0"
+  slider--value-max="8"
+  slider--value-now="5"
+  slider--attribute='style="--pf-c-slider--value: 62.5%;"'
+  }}
+  {{#> slider-main}}
+    {{> slider-rail}}
+    {{#> slider-steps}}
+      {{> slider-step slider-step--Left="0%" slider-step--label="0" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--Left="12.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--Left="25%" slider-step--label="2" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--Left="37.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--Left="50%" slider-step--label="4" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--Left="62.5%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--Left="75%" slider-step--label="6"}}
+      {{> slider-step slider-step--Left="87.5%"}}
+      {{> slider-step slider-step--Left="100%" slider-step--label="8"}}
+    {{/slider-steps}}
+    {{> slider-thumb}}
+  {{/slider-main}}
+{{/slider}}
+
+<br><br>
+
+{{#> slider
+  slider--IsDisabled="true"
+  slider--value-min="0"
+  slider--value-max="100"
+  slider--value-now="50"
+  slider--attribute='style="--pf-c-slider--value: 50%;"'
+  }}
+  {{#> slider-main}}
+    {{> slider-rail}}
+    {{#> slider-steps}}
+      {{> slider-step slider-step--Left="0%" slider-step--label="0%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--Left="25%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--Left="50%" slider-step--label="50%" slider-step--IsActive="true"}}
+      {{> slider-step slider-step--Left="75%"}}
+      {{> slider-step slider-step--Left="100%" slider-step--label="100%"}}
+    {{/slider-steps}}
+    {{> slider-thumb}}
+  {{/slider-main}}
+  {{#> slider-value}}
+    {{#> input-group}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'disabled type="number" value="' slider--value-now '" aria-label="Slider value input"')}}
+      {{#> input-group-text input-group-text--modifier="pf-m-plain"}}%{{/input-group-text}}
+    {{/input-group}}
+  {{/slider-value}}
+{{/slider}}
+
+```
+
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="slider"` | `.pf-c-slider__thumb` | Identifies the element as a slider. **Required** |
-| `tabindex="0"` | `.pf-c-slider__thumb` | Includes the slider thumb in the page tab sequence. **Required** |
+| `tabindex="0"` | `.pf-c-slider__thumb` | Includes the slider thumb in the page tab sequence. **Note:** only for use with non-disabled slider. **Required** |
+| `aria-disabled="true"` | `.pf-c-slider.pf-m-disabled .pf-c-slider__thumb` | Indicates that the slider thumb is disabled. **Required** |
 | `aria-valuemin="[value]"` | `.pf-c-slider__thumb` | Specifies the minimum value of the slider. **Required** |
 | `aria-valuemax="[value]"` | `.pf-c-slider__thumb` | Specifies the maximum value of the slider. **Required** |
 | `aria-valuenow="[value]"` | `.pf-c-slider__thumb` | Specifies the current value of the slider. **Required** |
@@ -259,5 +316,6 @@ cssPrefix: pf-c-slider
 | `.pf-c-slider__thumb` | `<div>` | Initiates the slider thumb. **Required** |
 | `.pf-c-slider__value` | `<div>` | Initiates the slider value. |
 | `.pf-c-slider__actions` | `<div>` | Initiates the slider actions. |
+| `.pf-m-disabled` | `.pf-c-slider` | Modifies the slider for the disabled state. |
 | `.pf-m-floating` | `.pf-c-slider__thumb` | Modifies the slider value to float above the thumb. |
 | `--pf-c-slider--value` | `.pf-c-slider` | Applies appropriate slider styles based on the current value. **Required** |
