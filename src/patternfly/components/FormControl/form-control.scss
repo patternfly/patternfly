@@ -35,6 +35,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   --pf-c-form-control--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-form-control--BorderRadius: 0;
   --pf-c-form-control--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-form-control--Width: 100%;
   --pf-c-form-control--Height: calc(var(--pf-c-form-control--FontSize) * var(--pf-c-form-control--LineHeight) + var(--pf-c-form-control--BorderWidth) * 2 + var(--pf-c-form-control--PaddingTop) + var(--pf-c-form-control--PaddingBottom)); // Needed for various browsers that compute height of form elements differently
 
   // padding
@@ -166,6 +167,10 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   --pf-c-form-control__select--invalid--PaddingRight: var(--pf-global--spacer--3xl);
   --pf-c-form-control__select--invalid--BackgroundPosition: calc(var(--pf-c-form-control__select--BackgroundPositionX) - var(--pf-global--spacer--lg));
 
+  // Textarea
+  --pf-c-form-control--textarea--Width: var(--pf-c-form-control--Width);
+  --pf-c-form-control--textarea--Height: auto;
+
   // Textarea success
   --pf-c-form-control--textarea--success--BackgroundPositionY: var(--pf-c-form-control--PaddingLeft); // update to use --pf-c-form-control--inset--base at breaking change
 
@@ -178,7 +183,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   // This component always needs to be light
   @include pf-t-light;
 
-  width: 100%;
+  width: var(--pf-c-form-control--Width);
   padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
   font-size: var(--pf-c-form-control--FontSize);
   line-height: var(--pf-c-form-control--LineHeight);
@@ -368,6 +373,9 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
     --pf-c-form-control--success--BackgroundPositionY: var(--pf-c-form-control--textarea--success--BackgroundPositionY);
     --pf-c-form-control--invalid--BackgroundPositionY: var(--pf-c-form-control--textarea--invalid--BackgroundPositionY);
     --pf-c-form-control--m-warning--BackgroundPositionY: var(--pf-c-form-control--textarea--m-warning--BackgroundPositionY);
+
+    width: var(--pf-c-form-control--textarea--Width);
+    height: var(--pf-c-form-control--textarea--Height);
   }
 
   &.pf-m-resize-vertical {
