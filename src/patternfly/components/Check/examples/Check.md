@@ -60,6 +60,31 @@ cssPrefix: pf-c-check
 {{/check}}
 ```
 
+### With body
+```hbs
+{{#> check}}
+  {{#> check-input check-input--attribute='id="check-with-body" name="check-with-body"'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check-with-body"'}}Check with body{{/check-label}}
+  {{#> check-body}}
+    This is where custom content goes.
+  {{/check-body}}
+{{/check}}
+```
+
+### With description and body
+```hbs
+{{#> check}}
+  {{#> check-input check-input--attribute='id="check-with-description-body" name="check-with-description-body"'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check-with-description-body"'}}Check with description and body{{/check-label}}
+  {{#> check-description}}
+    Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
+  {{/check-description}}
+  {{#> check-body}}
+    This is where custom content goes.
+  {{/check-body}}
+{{/check}}
+```
+
 ### Standalone input
 ```hbs
 {{#> check check--modifier="pf-m-standalone"}}
@@ -85,5 +110,6 @@ If you extend this component or modify the styles of this component, then make s
 | `.pf-c-check__input` | `<input type="checkbox">` |  Initiates a check input. **Required**  |
 | `.pf-c-check__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
 | `.pf-c-check__description` | `<div>` |  Initiates a check description. |
+| `.pf-c-check__body` | `<div>` |  Initiates a check body. |
 | `.pf-m-standalone` | `.pf-c-check` |  Modifies the check component for use with a standalone `<input type="checkbox">`. **Required when there is no label** |
 | `.pf-m-disabled` | `.pf-c-check__label` |  Modifies the check component for the disabled state. **Required when input is disabled** |

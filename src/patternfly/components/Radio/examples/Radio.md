@@ -61,6 +61,31 @@ cssPrefix: pf-c-radio
 {{/radio}}
 ```
 
+### With body
+```hbs
+{{#> radio}}
+  {{#> radio-input radio-input--attribute='id="radio-body" name="exampleRadioBody"'}}{{/radio-input}}
+  {{#> radio-label radio-label--attribute='for="radio-body"'}}Radio with body{{/radio-label}}
+  {{#> radio-body}}
+    This is where custom content goes.
+  {{/radio-body}}
+{{/radio}}
+```
+
+### With description and body
+```hbs
+{{#> radio}}
+  {{#> radio-input radio-input--attribute='id="radio-description-body name="exampleRadioDescriptionBody"'}}{{/radio-input}}
+  {{#> radio-label radio-label--attribute='for="radio-description-body"'}}Radio with description and body{{/radio-label}}
+  {{#> radio-description}}
+    Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
+  {{/radio-description}}
+  {{#> radio-body}}
+    This is where custom content goes.
+  {{/radio-body}}
+{{/radio}}
+```
+
 ### Standalone input
 ```hbs
 {{#> radio radio--modifier="pf-m-standalone"}}
@@ -86,5 +111,6 @@ If you extend this component or modify the styles of this component, then make s
 | `.pf-c-radio__input` | `<input type="radio">` |  Initiates a radio input. **Required**  |
 | `.pf-c-radio__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
 | `.pf-c-radio__description` | `<div>` | Initiates a radio description. |
+| `.pf-c-radio__body` | `<div>` | Initiates a radio body. |
 | `.pf-m-standalone` | `.pf-c-radio` |  Modifies the radio component for use with a standalone `<input type="radio">`. **Required when there is no label** |
 | `.pf-m-disabled` | `.pf-c-radio__label` |  Modifies the radio component for the disabled state. **Required when input is disabled** |
