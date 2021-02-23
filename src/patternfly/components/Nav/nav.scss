@@ -190,7 +190,7 @@
   --pf-c-nav__section-title--xl--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__section-title--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-nav__section-title--Color: var(--pf-global--Color--light-100);
-  --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BorderColor--100);
   --pf-c-nav__section-title--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
 
   // Scroll buttons
@@ -205,7 +205,7 @@
   --pf-c-nav__scroll-button--Transition: margin .125s, transform .125s, opacity .125s;
 
   // Scroll buttons before
-  --pf-c-nav__scroll-button--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav__scroll-button--before--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-nav__scroll-button--before--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__scroll-button--before--BorderRightWidth: 0;
   --pf-c-nav__scroll-button--before--BorderLeftWidth: 0;
@@ -224,7 +224,7 @@
   --pf-c-nav--c-divider--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-nav--c-divider--PaddingRight: 0;
   --pf-c-nav--c-divider--PaddingLeft: 0;
-  --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BorderColor--100);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav__link--xl--PaddingRight);
