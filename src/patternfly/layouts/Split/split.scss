@@ -6,7 +6,7 @@
   margin: 0;
 
   &.pf-m-wrap {
-    flex-wrap: wrap;
+    flex-wrap: wrap; // make default in a breaking change release
   }
 }
 
