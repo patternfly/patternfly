@@ -75,7 +75,7 @@ cssPrefix: pf-c-radio
 ### With description and body
 ```hbs
 {{#> radio}}
-  {{#> radio-input radio-input--attribute='id="radio-description-body name="exampleRadioDescriptionBody"'}}{{/radio-input}}
+  {{#> radio-input radio-input--attribute='id="radio-description-body" name="exampleRadioDescriptionBody"'}}{{/radio-input}}
   {{#> radio-label radio-label--attribute='for="radio-description-body"'}}Radio with description and body{{/radio-label}}
   {{#> radio-description}}
     Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
