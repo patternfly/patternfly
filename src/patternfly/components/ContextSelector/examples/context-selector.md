@@ -26,58 +26,7 @@ import './context-selector.css'
         {{/button}}
       {{/input-group}}
     {{/context-selector-menu-search}}
-    {{#> context-selector-menu-menu}}
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          My project
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          OpenShift cluster
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Production Ansible
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          AWS
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Azure
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          My project
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          OpenShift cluster
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Production Ansible
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          AWS
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Azure
-        {{/context-selector-menu-menu-item}}
-      </li>
-    {{/context-selector-menu-menu}}
+    {{> __context-selector-menu-menu}}
   {{/context-selector-menu}}
 {{/context-selector}}
 
@@ -99,58 +48,7 @@ import './context-selector.css'
         {{/button}}
       {{/input-group}}
     {{/context-selector-menu-search}}
-    {{#> context-selector-menu-menu}}
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          My project
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          OpenShift cluster
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Production Ansible
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          AWS
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Azure
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          My project
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          OpenShift cluster
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Production Ansible
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          AWS
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Azure
-        {{/context-selector-menu-menu-item}}
-      </li>
-    {{/context-selector-menu-menu}}
+    {{> __context-selector-menu-menu}}
   {{/context-selector-menu}}
 {{/context-selector}}
 ```
@@ -175,58 +73,7 @@ import './context-selector.css'
         {{/button}}
       {{/input-group}}
     {{/context-selector-menu-search}}
-    {{#> context-selector-menu-menu}}
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          My project
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          OpenShift cluster
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Production Ansible
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          AWS
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Azure
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          My project
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          OpenShift cluster
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Production Ansible
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          AWS
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Azure
-        {{/context-selector-menu-menu-item}}
-      </li>
-    {{/context-selector-menu-menu}}
+    {{> __context-selector-menu-menu}}
     {{#> context-selector-menu-footer}}
       {{#> button button--modifier="pf-m-secondary"}}
         Manage projects
@@ -253,58 +100,7 @@ import './context-selector.css'
         {{/button}}
       {{/input-group}}
     {{/context-selector-menu-search}}
-    {{#> context-selector-menu-menu}}
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          My project
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          OpenShift cluster
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Production Ansible
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          AWS
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Azure
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          My project
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          OpenShift cluster
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Production Ansible
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          AWS
-        {{/context-selector-menu-menu-item}}
-      </li>
-      <li>
-        {{#> context-selector-menu-menu-item}}
-          Azure
-        {{/context-selector-menu-menu-item}}
-      </li>
-    {{/context-selector-menu-menu}}
+    {{> __context-selector-menu-menu}}
     {{#> context-selector-menu-footer}}
       {{#> button button--modifier="pf-m-link"}}
         Manage projects
@@ -316,8 +112,16 @@ import './context-selector.css'
 
 ## Documentation
 ### Accessibility
-Added after React implementation.
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-expanded="false"` | `.pf-c-context-selector__toggle` |  Indicates that the menu is hidden. |
+| `aria-expanded="true"` | `.pf-c-context-selector__toggle` |  Indicates that the menu is visible. |
+| `aria-hidden="true"` | `.pf-c-context-selector__toggle-icon > *` | Hides the icon from assistive technologies. |
+| `disabled` | `button.pf-c-context-selector__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
+| `aria-disabled="true"` | `a.pf-c-context-selector__menu-item` | When the menu item uses a link element, indicates that it is unavailable. |
+| `tabindex="-1"` | `a.pf-c-context-selector__menu-item` | When the menu item uses a link element, removes it from keyboard focus. |
 
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-context-selector` | `<div>` | Initiates a context selector.|
@@ -331,3 +135,4 @@ Added after React implementation.
 | `.pf-c-context-selector__menu-list-item` | `<li>` | Initiaties a menu item. |
 | `.pf-m-expanded` | `.pf-c-context-selector` | Modifies for the expanded state. |
 | `.pf-m-active` | `.pf-c-context-selector__toggle` | Forces display of the active state of the toggle. |
+| `.pf-m-disabled` | `a.pf-c-context-selector__menu-list-item` | Modifies an item for the disabled state.|
