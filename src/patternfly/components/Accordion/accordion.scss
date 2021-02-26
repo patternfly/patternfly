@@ -67,7 +67,8 @@
   --pf-c-accordion--m-display-lg__expanded-content--Color: var(--pf-global--Color--100);
   --pf-c-accordion--m-display-lg__expanded-content-body--PaddingTop: 0;
   --pf-c-accordion--m-display-lg__expanded-content-body--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-accordion--m-display-lg__expanded-content-body--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-accordion--m-display-lg__expanded-content-body--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-accordion--m-display-lg__expanded-content-body--last-child--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-accordion--m-display-lg__expanded-content-body--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-accordion--m-display-lg__expanded-content--m-expanded__expanded-content-body--last-child--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-accordion--m-display-lg__expanded-content--m-expanded__expanded-content-body--last-child--after--BorderBottomColor: var(--pf-global--BorderColor--100);
@@ -121,17 +122,25 @@
     }
 
     // rename --after vars to --before in breaking change release
-    // stylelint-disable selector-max-class
-    .pf-c-accordion__expanded-content.pf-m-expanded .pf-c-accordion__expanded-content-body:last-child {
-      &::before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        content: "";
-        border-bottom: var(--pf-c-accordion--m-display-lg__expanded-content--m-expanded__expanded-content-body--last-child--after--BorderBottomWidth) solid var(--pf-c-accordion--m-display-lg__expanded-content--m-expanded__expanded-content-body--last-child--after--BorderBottomColor);
+    // stylelint-disable selector-max-class, max-nesting-depth
+    .pf-c-accordion__expanded-content {
+      &.pf-m-expanded {
+        .pf-c-accordion__expanded-content-body:last-child {
+          &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: "";
+            border-bottom: var(--pf-c-accordion--m-display-lg__expanded-content--m-expanded__expanded-content-body--last-child--after--BorderBottomWidth) solid var(--pf-c-accordion--m-display-lg__expanded-content--m-expanded__expanded-content-body--last-child--after--BorderBottomColor);
+          }
+        }
       }
+    }
+
+    .pf-c-accordion__expanded-content-body:last-child {
+      --pf-c-accordion__expanded-content-body--PaddingBottom: var(--pf-c-accordion--m-display-lg__expanded-content-body--last-child--PaddingBottom);
     }
     // stylelint-enable
   }
@@ -236,5 +245,9 @@
     width: var(--pf-c-accordion__expanded-content-body--before--Width);
     content: "";
     background-color: var(--pf-c-accordion__expanded-content-body--before--BackgroundColor);
+  }
+
+  & + & {
+    --pf-c-accordion__expanded-content-body--PaddingTop: var(--pf-c-accordion__expanded-content-body--expanded-content-body--PaddingTop);
   }
 }
