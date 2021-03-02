@@ -9,7 +9,7 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --pf-c-sidebar__main--FlexDirection: column;
   --pf-c-sidebar__main--md--FlexDirection: row;
   --pf-c-sidebar__main--AlignItems: stretch;
-  --pf-c-sidebar__main--md--AlignItems: start;
+  --pf-c-sidebar__main--md--AlignItems: stretch; // remove at breaking change
   --pf-c-sidebar__main--child--MarginTop: 0;
   --pf-c-sidebar__main--child--MarginLeft: 0;
 
@@ -125,6 +125,7 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   display: flex;
   flex-direction: var(--pf-c-sidebar__main--FlexDirection);
   align-items: var(--pf-c-sidebar__main--AlignItems);
+  height: 100%;
 }
 
 .pf-c-sidebar__panel {

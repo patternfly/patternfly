@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-c-card
 ---
 
+import './Card.css'
+
 ## Examples
 ### Basic
 ```hbs
@@ -349,6 +351,28 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
+### Full height card
+```hbs
+{{#> card card--id="card-full-height-example" card--modifier="pf-m-full-height"}}
+  {{#> card-header}}
+    {{#> card-actions}}
+      {{> card--dropdown}}
+      {{> card--check}}
+    {{/card-actions}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+      Title
+    {{/card-title}}
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
+
 ### Expandable toggle on right
 ```hbs
 {{#> card card--id="card-toggle-on-right-example"}}
@@ -419,3 +443,4 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-plain` | `.pf-c-card` | Modifies the card to have no box shadow and no background color. |
 | `.pf-m-expanded` | `.pf-c-card` | Modifies the card for the expanded state. |
 | `.pf-m-toggle-right` | `.pf-c-card__header` | Modifies the expandable card header toggle to be positioned at flex-end. |
+| `.pf-m-full-height` | `.pf-c-card` | Modifies the card to full height of its parent. |

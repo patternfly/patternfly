@@ -1,0 +1,24 @@
+{{#> l-flex l-flex--modifier="pf-m-space-items-md pf-m-align-items-flex-start pf-m-nowrap"}}
+  {{#> l-flex-item}}
+    {{#> label label--modifier="pf-m-blue"}}
+      N
+    {{/label}}
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    {{#> title title--modifier="pf-m-2xl"}}
+      {{#if tabs--pods-page-title--text}}
+        {{tabs--pods-page-title--text}}
+      {{else}}
+        3scale-control-fccb6ddb9-phyqv9
+      {{/if}}
+    {{/title}}
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-flex-none"}}
+    {{#> label}}
+      {{#> label-icon}}
+        <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+      {{/label-icon}}
+      Running
+    {{/label}}
+  {{/l-flex-item}}
+{{/l-flex}}

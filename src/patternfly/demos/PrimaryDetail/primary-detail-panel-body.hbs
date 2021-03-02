@@ -4,20 +4,62 @@
   {{/l-flex-item}}
   {{#> l-flex-item}}
     {{#> progress
-      progress__value="33"
-      progress__description="Title"
       progress__id=(concat primary-detail-template--id "-progress-example1")
+      progress__value="33"
+      progress__description="Capacity"
       progress-bar--attribute='aria-label="Progress 1"'
     }}
     {{/progress}}
   {{/l-flex-item}}
   {{#> l-flex-item}}
     {{#> progress
-      progress__value="66"
-      progress__description="Title"
       progress__id=(concat primary-detail-template--id "-progress-example2")
+      progress__value="66"
+      progress__description="Modules"
       progress-bar--attribute='aria-label="Progress 2"'
     }}
     {{/progress}}
   {{/l-flex-item}}
+  {{#if primary-detail-panel-tab-content--HasLabels}}
+    {{#> l-flex l-flex--modifier="pf-m-column"}}
+      {{#> l-flex-item}}
+        {{#> title titleType="h3" title--attribute=(concat 'id="' primary-detail-template--id '-title"')}}
+          Tags
+        {{/title}}
+      {{/l-flex-item}}
+      {{#> l-flex-item}}
+        {{#> label-group label-group--id=(concat primary-detail-template--id '-label-group')}}
+          {{#> label-group-main}}
+            {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+              {{#> label-group-list-item}}
+                {{#> label label--modifier="pf-m-outline"}}
+                  Tag 1
+                {{/label}}
+              {{/label-group-list-item}}
+              {{#> label-group-list-item}}
+                {{#> label label--modifier="pf-m-outline"}}
+                  Different tag 1
+                {{/label}}
+              {{/label-group-list-item}}
+              {{#> label-group-list-item}}
+                {{#> label label--modifier="pf-m-outline"}}
+                  Another different tag 1
+                {{/label}}
+              {{/label-group-list-item}}
+              {{#> label-group-list-item}}
+                {{#> label label--modifier="pf-m-outline"}}
+                  Another different tag 2
+                {{/label}}
+              {{/label-group-list-item}}
+              {{#> label-group-list-item}}
+                {{#> label label--modifier="pf-m-outline"}}
+                  Different than tag 1 or 2
+                {{/label}}
+              {{/label-group-list-item}}
+            {{/label-group-list}}
+          {{/label-group-main}}
+        {{/label-group}}
+      {{/l-flex-item}}
+    {{/l-flex}}
+  {{/if}}
 {{/l-flex}}

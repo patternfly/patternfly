@@ -4,8 +4,13 @@
   {{/if}}
   role="tabpanel"
   tabindex="0"
+  {{!-- set hidden by default --}}
   {{#unless tab-content--IsActive}}
     hidden
-  {{/unless}}>
+  {{/unless}}
+  {{!-- add option to explicitly set hidden for nested tab content --}}
+  {{#if tab-content--IsHidden}}
+    hidden
+  {{/if}}>
   {{> @partial-block}}
 </section>

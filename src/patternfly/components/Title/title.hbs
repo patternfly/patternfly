@@ -2,5 +2,10 @@
 	{{#if title--attribute}}
     {{{title--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if title--text}}
+    {{title--text}}
+  {{/if}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </{{#if titleType}}{{titleType}}{{else}}h1{{/if}}>

@@ -14,7 +14,7 @@ Options: [
   toolbar--template--HasNoPagination
 ] --}}
 
-{{#> toolbar}}
+{{#> toolbar toolbar--id=toolbar--template--id toolbar--modifier=toolbar--template--modifier}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
 
@@ -25,7 +25,7 @@ Options: [
 
       {{!-- toggle group --}}
       {{#if toolbar--template--HasToggleGroup}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
           {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
           {{> toolbar--template--content}}
         {{/toolbar-group}}
@@ -44,12 +44,16 @@ Options: [
 
       {{!-- overflow menu --}}
       {{#if toolbar--template--HasOverflowMenu}}
-        {{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-visible"}}
+        {{#> overflow-menu overflow-menu--id=(concat toolbar--id '-overflow-menu')}}
           {{#> overflow-menu-content overflow-menu-content--modifier="pf-u-display-none pf-u-display-flex-on-lg"}}
             {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
               {{#> overflow-menu-item}}
                 {{#> button button--modifier="pf-m-primary"}}
-                  Create instance
+                  {{#if toolbar--template--OverflowButton1Text}}
+                    {{toolbar--template--OverflowButton1Text}}
+                  {{else}}
+                    Create instance
+                  {{/if}}
                 {{/button}}
               {{/overflow-menu-item}}
 
@@ -57,7 +61,11 @@ Options: [
               {{#if toolbar--template--HasOverflowMenuSecondButton}}
                 {{#> overflow-menu-item}}
                   {{#> button button--modifier="pf-m-secondary"}}
-                    Action
+                    {{#if toolbar--template--OverflowButton2Text}}
+                      {{toolbar--template--OverflowButton2Text}}
+                    {{else}}
+                      Action
+                    {{/if}}
                   {{/button}}
                 {{/overflow-menu-item}}
               {{/if}}

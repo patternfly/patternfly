@@ -3,6 +3,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .pf-c-tabs {
   --pf-c-tabs--inset: 0;
+  --pf-c-tabs--Width: auto;
   --pf-c-tabs--before--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-tabs--before--border-width--base: var(--pf-global--BorderWidth--sm);
   --pf-c-tabs--before--BorderTopWidth: 0;
@@ -12,6 +13,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical--inset: var(--pf-global--spacer--lg);
 
   // Vertical
+  --pf-c-tabs--m-vertical--Width: 100%;
   --pf-c-tabs--m-vertical--MaxWidth: #{pf-size-prem(250px)};
   --pf-c-tabs--m-vertical--m-box--inset: var(--pf-global--spacer--xl);
   --pf-c-tabs--m-vertical__list--before--BorderColor: var(--pf-c-tabs--before--BorderColor);
@@ -122,6 +124,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   position: relative;
   display: flex;
+  width: var(--pf-c-tabs--Width);
   padding-right: var(--pf-c-tabs--inset);
   padding-left: var(--pf-c-tabs--inset);
   overflow: hidden; // remove in breaking change release
@@ -250,6 +253,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // Vertical
   &.pf-m-vertical {
+    --pf-c-tabs--Width: var(--pf-c-tabs--m-vertical--Width);
     --pf-c-tabs--inset: var(--pf-c-tabs--m-vertical--inset);
     --pf-c-tabs--before--BorderBottomWidth: 0;
     --pf-c-tabs__link--PaddingTop: var(--pf-c-tabs--m-vertical__link--PaddingTop);
@@ -262,6 +266,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
     display: inline-flex;
     flex-direction: column;
+    max-width: var(--pf-c-tabs--m-vertical--MaxWidth);
     height: 100%; // If not a flex child, set height
     padding: 0; // Because vertical variant has no scroll buttons, reset padding
     overflow: visible; // remove in breaking change release
@@ -269,7 +274,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     .pf-c-tabs__list {
       position: relative;
       flex-direction: column;
-      max-width: var(--pf-c-tabs--m-vertical--MaxWidth);
+      flex-grow: 1;
+      width: 100%;
 
       &::before {
         position: absolute;

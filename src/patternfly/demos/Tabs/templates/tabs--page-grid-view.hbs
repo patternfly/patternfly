@@ -1,0 +1,84 @@
+{{#> grid grid--modifier="pf-m-gutter pf-u-h-100"}}
+  {{#> grid-item grid-item--modifier="pf-m-6-col-on-md pf-m-8-col-on-xl"}}
+    {{#> card card--modifier="pf-m-fill"}}
+      {{#> card-header}}
+        {{#> title titleType="h2" title--modifier="pf-m-lg pf-u-font-weight-light"}}
+          Status
+        {{/title}}
+      {{/card-header}}
+      {{#> card-body}}
+        {{#> wrapper newcontext tabs--page-grid-view--id=(concat tabs--page-grid-view--id "-subtabs")}}
+          {{#> l-flex l-flex--modifier="pf-m-column"}}
+            {{#> l-flex-item}}
+              {{#> tabs tabs--id=tabs--page-grid-view--id tabs--modifier="pf-m-no-border-bottom"}}
+                {{#> tabs-list}}
+                  {{> __tabs-item
+                    __tabs-item--current="true"
+                    __tabs-item--id="cluster"
+                    __tabs-item--aria-label="Cluster"
+                    __tabs-item--text="Cluster"
+                    __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-cluster-panel"')}}
+                  {{> __tabs-item
+                    __tabs-item--id="control-plane"
+                    __tabs-item--aria-label="control-plane"
+                    __tabs-item--text="Control plane"
+                    __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-control-plane-panel"')}}
+                  {{> __tabs-item
+                    __tabs-item--id="operators"
+                    __tabs-item--aria-label="Operators"
+                    __tabs-item--text="Operators"
+                    __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-operators-panel"')}}
+                  {{> __tabs-item
+                    __tabs-item--id="virtualization"
+                    __tabs-item--aria-label="virtualization"
+                    __tabs-item--text="Virtualization"
+                    __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-virtualization-panel"')}}
+                {{/tabs-list}}
+              {{/tabs}}
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tabs--page-grid-view--id '-cluster-link" id="' tabs--page-grid-view--id '-cluster-panel"')}}
+                {{#> content}}
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in odio porttitor, feugiat risus in, feugiat arcu. Nullam euismod enim eget fringilla condimentum. Maecenas tincidunt et metus id aliquet. Integer et fermentum purus. Nulla tempor velit arcu, vitae semper purus iaculis at. Sed malesuada auctor luctus. Pellentesque et leo urna. Aliquam vitae felis congue lacus mattis fringilla. Nullam et ultricies erat, sed dignissim elit. Cras mattis pulvinar aliquam. In ac est nulla. Pellentesque fermentum nibh ac sapien porta, ut congue orci aliquam. Sed nisl est, tempor eu pharetra eget, ullamcorper ut augue. Vestibulum eleifend libero eu nulla cursus lacinia.
+                  </p>
+                {{/content}}
+              {{/tab-content}}
+              {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tabs--page-grid-view--id '-control-plane-link" id="' tabs--page-grid-view--id '-control-plane-panel"')}}
+                Control plane content
+              {{/tab-content}}
+              {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tabs--page-grid-view--id '-operators-link" id="' tabs--page-grid-view--id '-operators-panel"')}}
+                Operators content
+              {{/tab-content}}
+              {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tabs--page-grid-view--id '-virtualization-link" id="' tabs--page-grid-view--id '-virtualization-panel"')}}
+                Virtualization content
+              {{/tab-content}}
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/wrapper}}
+      {{/card-body}}
+    {{/card}}
+  {{/grid-item}}
+  {{#> grid-item grid-item--modifier="pf-m-6-col-on-md pf-m-4-col-on-xl"}}
+    {{#> l-flex l-flex--modifier="pf-m-column pf-u-h-100"}}
+      {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
+        {{#> card card--modifier="pf-m-fill"}}
+          {{#> card-header}}
+            {{#> title titleType="h3" title--modifier="pf-m-lg pf-u-font-weight-light"}}
+              Title of card
+            {{/title}}
+          {{/card-header}}
+        {{/card}}
+      {{/l-flex-item}}
+      {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
+        {{#> card card--modifier="pf-m-fill"}}
+          {{#> card-header}}
+            {{#> title titleType="h3" title--modifier="pf-m-lg pf-u-font-weight-light"}}
+              Title of card
+            {{/title}}
+          {{/card-header}}
+        {{/card}}
+      {{/l-flex-item}}
+    {{/l-flex}}
+  {{/grid-item}}
+{{/grid}}
