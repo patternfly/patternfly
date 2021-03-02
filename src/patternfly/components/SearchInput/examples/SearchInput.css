@@ -1,3 +1,11 @@
 #ws-core-c-search-input-advanced-search-expanded {
   height: 550px;
 }
+
+#ws-core-c-search-input-autocomplete {
+  height: 250px;
+}
+
+#ws-core-c-search-input-autocomplete-final-option {
+  height: 150px;
+}
