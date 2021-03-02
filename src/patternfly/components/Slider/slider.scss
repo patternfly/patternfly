@@ -66,7 +66,27 @@
   --pf-c-slider__actions--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-slider__main--actions--MarginLeft: var(--pf-global--spacer--sm);
 
+  // disabled
+  --pf-c-slider--m-disabled__rail-track--before--fill--BackgroundColor: var(--pf-global--palette--black-500);
+  --pf-c-slider--m-disabled__step--m-active__slider-tick--BackgroundColor: var(--pf-global--palette--black-700);
+  --pf-c-slider--m-disabled__thumb--BackgroundColor: var(--pf-global--palette--black-700);
+
   display: flex;
+
+  &.pf-m-disabled {
+    --pf-c-slider__rail-track--before--fill--BackgroundColor: var(--pf-c-slider--m-disabled__rail-track--before--fill--BackgroundColor);
+    --pf-c-slider__step--m-active__slider-tick--BackgroundColor: var(--pf-c-slider--m-disabled__step--m-active__slider-tick--BackgroundColor);
+    --pf-c-slider__thumb--BackgroundColor: var(--pf-c-slider--m-disabled__thumb--BackgroundColor);
+
+    .pf-c-slider__rail,
+    .pf-c-slider__thumb {
+      cursor: not-allowed;
+    }
+
+    .pf-c-slider__thumb {
+      --pf-c-slider__thumb--BoxShadow: none;
+    }
+  }
 }
 
 .pf-c-slider__main {
