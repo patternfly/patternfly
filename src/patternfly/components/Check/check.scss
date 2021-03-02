@@ -10,6 +10,7 @@
   --pf-c-check__input--MarginTop: calc(-1px * (var(--pf-c-check__label--LineHeight) * 1.25));
   --pf-c-check__description--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-check__description--Color: var(--pf-global--Color--200);
+  --pf-c-check__body--MarginTop: var(--pf-global--spacer--sm);
 
   display: grid;
   grid-template-columns: auto 1fr;
@@ -43,6 +44,11 @@
   grid-column: 2;
   font-size: var(--pf-c-check__description--FontSize);
   color: var(--pf-c-check__description--Color);
+}
+
+.pf-c-check__body {
+  grid-column: 2;
+  margin-top: var(--pf-c-check__body--MarginTop);
 }
 
 .pf-c-check__label,

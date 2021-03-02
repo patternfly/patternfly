@@ -11,6 +11,7 @@
   --pf-c-radio__input--last-child--MarginRight: #{pf-size-prem(1px)};
   --pf-c-radio__description--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-radio__description--Color: var(--pf-global--Color--200);
+  --pf-c-radio__body--MarginTop: var(--pf-global--spacer--sm);
 
   display: grid;
   grid-template-columns: auto 1fr;
@@ -54,6 +55,11 @@
   grid-column: 2;
   font-size: var(--pf-c-radio__description--FontSize);
   color: var(--pf-c-radio__description--Color);
+}
+
+.pf-c-radio__body {
+  grid-column: 2;
+  margin-top: var(--pf-c-radio__body--MarginTop);
 }
 
 .pf-c-radio__label,
