@@ -78,7 +78,14 @@
     --pf-c-slider__step--m-active__slider-tick--BackgroundColor: var(--pf-c-slider--m-disabled__step--m-active__slider-tick--BackgroundColor);
     --pf-c-slider__thumb--BackgroundColor: var(--pf-c-slider--m-disabled__thumb--BackgroundColor);
 
-    pointer-events: none;
+    .pf-c-slider__rail,
+    .pf-c-slider__thumb {
+      cursor: not-allowed;
+    }
+
+    .pf-c-slider__thumb {
+      --pf-c-slider__thumb--BoxShadow: none;
+    }
   }
 }
 
