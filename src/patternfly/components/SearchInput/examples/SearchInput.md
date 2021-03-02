@@ -109,6 +109,17 @@ import './SearchInput.css'
 {{/search-input}}
 ```
 
+### Autocomplete last option hint
+```hbs
+{{#> search-input search-input--id="search-input-autocomplete-last-option-hint" search-input--IsAutocomplete="true" search-input--placeholder="Keyword search" search-input--value="apples" search-input--hint-text="appleseed"}}
+  {{#> search-input-menu}}
+    {{#> search-input-menu-list}}
+      {{> search-input-menu-list-item search-input-menu-list-item--text="appleseed"}}
+    {{/search-input-menu-list}}
+  {{/search-input-menu}}
+{{/search-input}}
+```
+
 ### Advanced search expanded with autocomplete
 ```hbs
 {{#> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:n" search-input--IsAdvancedSearch="true" search-input--IsExpanded="true"}}
@@ -192,6 +203,8 @@ import './SearchInput.css'
 | `aria-expanded="[true/false]"` | `.pf-c-button` | Indicates whether the advanced search menu is expanded or collapsed. **Required** |
 | `id` | `.pf-c-search-input__text-input` | Assigns an ID that is used with `aria-labelledby` on `.pf-c-search-input__menu-list`. **Required when using autocomplete** |
 | `aria-labelledby="[id of text input]"` | `.pf-c-search-input__menu-list` | Gives the menu list an accessible label. **Required when using autocomplete** |
+| `disabled` | `.pf-c-search-input__text-input.pf-m-hint` | Disables the hint text input from being submitted with the search input. **Required when using hint text** |
+| `aria-hidden="true"` | `.pf-c-search-input__text-input.pf-m-hint` | Hides the hint text input from assistive technology. **Required when using hint text** |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -211,3 +224,4 @@ import './SearchInput.css'
 | `.pf-c-search-input__menu-list-item` | `<div>` | Initiates the search input dropdown menu list item. |
 | `.pf-c-search-input__menu-item` | `<div>` | Initiates the search input dropdown menu item. |
 | `.pf-c-search-input__menu-item-text` | `<span>` | Initiates the search input dropdown menu item text. |
+| `.pf-m-hint` | `.pf-c-search-input__text-input` | Modifies the text input for hint text styles. |

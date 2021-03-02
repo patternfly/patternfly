@@ -6,3 +6,7 @@
 #ws-core-c-search-input-autocomplete {
   height: 250px;
 }
+
+#ws-core-c-search-input-autocomplete-last-option-hint {
+  height: 150px;
+}

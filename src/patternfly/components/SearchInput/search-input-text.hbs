@@ -3,5 +3,8 @@
     {{search-input-text--attribute}}
   {{/if}}>
   {{> search-input-icon}}
+  {{#if search-input--hint-text}}
+    {{> search-input-text-input search-input-text-input--IsHintText="true"}}
+  {{/if}}
   {{> search-input-text-input}}
 </span>
