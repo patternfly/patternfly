@@ -2,9 +2,12 @@
   --pf-l-split--m-gutter--MarginRight: var(--pf-global--gutter);
 
   display: flex;
-  flex-wrap: nowrap;
   padding: 0;
   margin: 0;
+
+  &.pf-m-wrap {
+    flex-wrap: wrap; // make default in a breaking change release
+  }
 }
 
 .pf-l-split__item.pf-m-fill {
