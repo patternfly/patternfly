@@ -6,7 +6,7 @@ $pf-c-tree-view--MaxDepth: 10;
 
   // main
   --pf-c-table__tree-view-main--PaddingLeft: 0;
-  --pf-c-table__tree-view-main--MarginLeft: calc(var(--pf-c-table--cell--first-last-child--PaddingLeft) * -1);
+  --pf-c-table__tree-view-main--MarginLeft: calc(var(--pf-c-table--cell--PaddingLeft) * -1);
 
   // check
   --pf-c-table__tree-view-main--c-table__check--MarginRight: var(--pf-global--spacer--sm);
