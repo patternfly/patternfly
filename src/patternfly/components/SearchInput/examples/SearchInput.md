@@ -109,6 +109,76 @@ import './SearchInput.css'
 {{/search-input}}
 ```
 
+### Advanced search expanded with autocomplete
+```hbs
+{{#> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:n" search-input--IsAdvancedSearch="true" search-input--IsExpanded="true"}}
+  {{#> search-input-menu}}
+    {{#> search-input-menu-body}}
+      {{#> form form--id="advanced-search-input-form"}}
+        {{#> form-group form-group--id="-username"}}
+          {{#> form-group-label}}
+            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
+              Username
+            {{/form-label}}
+          {{/form-group-label}}
+          {{#> form-group-control}}
+            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="root" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+          {{/form-group-control}}
+        {{/form-group}}
+        {{#> form-group form-group--id="-firstname"}}
+          {{#> form-group-label}}
+            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
+              First name
+            {{/form-label}}
+          {{/form-group-label}}
+          {{#> form-group-control}}
+            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="n" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+          {{/form-group-control}}
+        {{/form-group}}
+        {{#> form-group form-group--id="-group"}}
+          {{#> form-group-label}}
+            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
+              Group
+            {{/form-label}}
+          {{/form-group-label}}
+          {{#> form-group-control}}
+            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+          {{/form-group-control}}
+        {{/form-group}}
+        {{#> form-group form-group--id="-email"}}
+          {{#> form-group-label}}
+            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
+              Email
+            {{/form-label}}
+          {{/form-group-label}}
+          {{#> form-group-control}}
+            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+          {{/form-group-control}}
+        {{/form-group}}
+        {{#> form-group form-group--modifier="pf-m-action"}}
+        {{#> form-actions}}
+          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+            Submit
+          {{/button}}
+          {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
+            Reset
+          {{/button}}
+        {{/form-actions}}
+      {{/form-group}}
+      {{/form}}
+    {{/search-input-menu-body}}
+  {{/search-input-menu}}
+  {{#> search-input-menu}}
+    {{#> search-input-menu-list}}
+      {{> search-input-menu-list-item search-input-menu-list-item--text="nancy"}}
+      {{> search-input-menu-list-item search-input-menu-list-item--text="ned"}}
+      {{> search-input-menu-list-item search-input-menu-list-item--text="neil"}}
+      {{> search-input-menu-list-item search-input-menu-list-item--text="nicole"}}
+    {{/search-input-menu-list}}
+  {{/search-input-menu}}
+{{/search-input}}
+```
+
 ### Accessibility
 | Attributes | Applied to | Outcome |
 | -- | -- | -- |
