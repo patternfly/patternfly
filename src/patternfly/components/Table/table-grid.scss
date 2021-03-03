@@ -68,6 +68,16 @@
   --pf-c-table-tr--responsive--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-table-tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--lg);
 
+  // expandable
+  --pf-c-table--tbody--after--tr--BorderLeftWidth: 0;
+  --pf-c-table--tbody--after--tr--BorderLeftColor: transparent;
+  --pf-c-table--tbody--m-expanded--after--tr--BorderLeftWidth: var(--pf-c-table__expandable-row--after--border-width--base);
+  --pf-c-table--tbody--m-expanded--after--tr--BorderLeftColor: var(--pf-global--active-color--400);
+
+  // selected
+  --pf-c-table--tbody--m-selected--after--tr--BorderLeftWidth: var(--pf-c-table__expandable-row--after--border-width--base);
+  --pf-c-table--tbody--m-selected--after--tr--BorderLeftColor: var(--pf-global--active-color--100);
+
   // Cell display
   --pf-c-table--m-grid--cell--hidden-visible--Display: grid;
 
@@ -390,6 +400,51 @@
     .pf-c-table__expandable-row-content {
       padding-right: var(--pf-c-table__expandable-row-content--responsive--PaddingRight);
       padding-left: var(--pf-c-table__expandable-row-content--responsive--PaddingLeft);
+    }
+  }
+
+  // tr selected
+  tbody.pf-m-hoverable {
+    --pf-c-table--tbody--after--BorderLeftWidth: 0;
+    --pf-c-table--tbody--after--BorderLeftColor: transparent;
+
+    &,
+    > tr {
+      position: relative;
+    }
+
+    > tr::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: var(--pf-c-table--tbody--after--tr--BorderLeftWidth);
+      background-color: var(--pf-c-table--tbody--after--tr--BorderLeftColor);
+    }
+
+    &.pf-m-expanded {
+      --pf-c-table--tbody--after--tr--BorderLeftWidth: var(--pf-c-table--tbody--m-expanded--after--tr--BorderLeftWidth);
+      --pf-c-table--tbody--after--tr--BorderLeftColor: var(--pf-c-table--tbody--m-expanded--after--tr--BorderLeftColor);
+    }
+
+    &.pf-m-selected {
+      --pf-c-table--tbody--after--tr--BorderLeftWidth: var(--pf-c-table--tbody--m-selected--after--tr--BorderLeftWidth);
+      --pf-c-table--tbody--after--tr--BorderLeftColor: var(--pf-c-table--tbody--m-selected--after--tr--BorderLeftColor);
+    }
+  }
+
+
+  // tr selected
+  tr.pf-m-selected {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: var(--pf-c-table--tr--m-selected--after--BorderLeftWidth);
+      background-color: var(--pf-c-table--tr--m-selected--after--BorderLeftColor);
     }
   }
 
