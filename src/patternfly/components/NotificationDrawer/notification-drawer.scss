@@ -1,12 +1,12 @@
 .pf-c-notification-drawer {
-  --pf-c-notification-drawer--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-notification-drawer--BackgroundColor: var(--pf-global--BackgroundColor--300);
 
   // Header
   --pf-c-notification-drawer__header--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__header--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__header--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__header--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-notification-drawer__header--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-notification-drawer__header--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-notification-drawer__header--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
   --pf-c-notification-drawer__header--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-notification-drawer__header-title--FontSize: var(--pf-global--FontSize--xl);
@@ -20,7 +20,7 @@
   --pf-c-notification-drawer__list-item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__list-item--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__list-item--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-notification-drawer__list-item--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-notification-drawer__list-item--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-notification-drawer__list-item--BoxShadow: inset var(--pf-global--BoxShadow--sm-bottom);
   --pf-c-notification-drawer__list-item--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-notification-drawer__list-item--BorderBottomColor: transparent;
@@ -40,7 +40,7 @@
   --pf-c-notification-drawer__list-item--m-success__list-item--before--BackgroundColor: var(--pf-global--success-color--100);
   --pf-c-notification-drawer__list-item--m-default__list-item-header-icon--Color: var(--pf-global--default-color--200);
   --pf-c-notification-drawer__list-item--m-default__list-item--before--BackgroundColor: var(--pf-global--default-color--200);
-  --pf-c-notification-drawer__list-item--m-read--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-notification-drawer__list-item--m-read--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-notification-drawer__list-item--m-read--BorderBottomColor: var(--pf-global--BorderColor--100);
   --pf-c-notification-drawer__list-item--m-read--before--Top: calc(var(--pf-c-notification-drawer__list-item--BorderBottomWidth) * -1);
   --pf-c-notification-drawer__list-item--m-read--before--Bottom: 0;
@@ -79,7 +79,7 @@
   --pf-c-notification-drawer__group-toggle--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__group-toggle--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__group-toggle--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-notification-drawer__group-toggle--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-notification-drawer__group-toggle--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-notification-drawer__group-toggle--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-notification-drawer__group-toggle--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-notification-drawer__group-toggle--OutlineOffset: #{pf-size-prem(-4px)};
