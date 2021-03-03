@@ -155,6 +155,38 @@ import './Breadcrumb.css'
 {{/breadcrumb}}
 ```
 
+### With buttons
+```hbs
+{{#> breadcrumb breadcrumb-link--IsButton="true"}}
+  {{#> breadcrumb-list}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-link}}
+        Section home
+      {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-link}}
+        Section title
+      {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+    {{#> breadcrumb-item}}
+      {{> breadcrumb-item-divider}}
+      {{#> breadcrumb-link breadcrumb-link--current="true"}}
+        Section landing
+      {{/breadcrumb-link}}
+    {{/breadcrumb-item}}
+  {{/breadcrumb-list}}
+{{/breadcrumb}}
+```
+
 ## Documentation
 ### Overview
 A breadcrumb is a list of links to display a user's navigational hierarchy. The last item of the breadcrumb list indicates the current page's location.
@@ -173,10 +205,10 @@ In the event that a page does not have a traditional `<h1>` page title, a headin
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-breadcrumb`                | `<nav>`                   | Initiates a primary breadcrumb element. **Required** |
-| `.pf-c-breadcrumb__list`          | `<ol>`                    | Initiates default breadcrumb ordered list. |
-| `.pf-c-breadcrumb__item`          | `<li>`                    | Initiates default breadcrumb list item. |
-| `.pf-c-breadcrumb__item-divider`  | `<span>`                  | Initiates default breadcrumb list item divider. |
-| `.pf-c-breadcrumb__link`          | `<a>`                     | Initiates default breadcrumb list link. |
-| `.pf-c-breadcrumb__title`         | `<h1>`                    | Initiates breadcrumb header. |
-| `.pf-m-current`                   | `.pf-c-breadcrumb__link`  | Modifies to display the list item as the current item. |
+| `.pf-c-breadcrumb` | `<nav>` | Initiates a primary breadcrumb element. **Required** |
+| `.pf-c-breadcrumb__list` | `<ol>` | Initiates default breadcrumb ordered list. |
+| `.pf-c-breadcrumb__item` | `<li>` | Initiates default breadcrumb list item. |
+| `.pf-c-breadcrumb__item-divider` | `<span>` | Initiates default breadcrumb list item divider. |
+| `.pf-c-breadcrumb__link` | `<a>`, `<button>` | Initiates default breadcrumb list link. |
+| `.pf-c-breadcrumb__title` | `<h1>` | Initiates breadcrumb header. |
+| `.pf-m-current` | `.pf-c-breadcrumb__link` | Modifies to display the list item as the current item. |
