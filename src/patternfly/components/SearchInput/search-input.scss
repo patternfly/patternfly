@@ -69,7 +69,9 @@
 }
 
 .pf-c-search-input__text {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "text-input";
   flex: 1;
 
   &::before,
@@ -119,10 +121,12 @@
   padding: var(--pf-c-search-input__text-input--PaddingTop) var(--pf-c-search-input__text-input--PaddingRight) var(--pf-c-search-input__text-input--PaddingBottom) var(--pf-c-search-input__text-input--PaddingLeft);
   border: 0;
 
+  &,
   &.pf-m-hint {
-    position: absolute;
-    top: 0;
-    left: 0;
+    grid-area: text-input;
+  }
+
+  &.pf-m-hint {
     color: var(--pf-c-search-input__text-input--m-hint--Color);
   }
 }
