@@ -1,12 +1,12 @@
 {{#> menu-breadcrumb}}
-  {{#> breadcrumb breadcrumb--id=(concat menu--id '-breadcrumb')}}
+  {{#> breadcrumb breadcrumb--id=(concat menu--id '-breadcrumb') breadcrumb-link--IsButton="true"}}
     {{#> breadcrumb-list}}
 
       {{!-- level 2 --}}
       {{#if menu-breadcrumbs--Drilldown--IsLevel2}}
         {{#> breadcrumb-item}}
           {{> breadcrumb-item-divider}}
-          {{#> breadcrumb-link breadcrumb-link--IsButton="true"}}
+          {{#> breadcrumb-link}}
             All
           {{/breadcrumb-link}}
         {{/breadcrumb-item}}
@@ -23,7 +23,7 @@
       {{else if menu-breadcrumbs--Drilldown--IsLevel3}}
         {{#> breadcrumb-item}}
           {{> breadcrumb-item-divider}}
-          {{#> breadcrumb-link breadcrumb-link--IsButton="true"}}
+          {{#> breadcrumb-link}}
             All
           {{/breadcrumb-link}}
         {{/breadcrumb-item}}
@@ -45,7 +45,7 @@
       {{else if menu-breadcrumbs--Drilldown--IsLevel4}}
         {{#> breadcrumb-item}}
           {{> breadcrumb-item-divider}}
-          {{#> breadcrumb-link breadcrumb-link--IsButton="true"}}
+          {{#> breadcrumb-link}}
             All
           {{/breadcrumb-link}}
         {{/breadcrumb-item}}
