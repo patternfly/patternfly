@@ -115,10 +115,9 @@
   --pf-global--active-color--200: #{$pf-global--active-color--200};
   --pf-global--active-color--300: #{$pf-global--active-color--300};
   --pf-global--active-color--400: #{$pf-global--active-color--400};
-  --pf-global--disabled-color--100: #{$pf-global--disabled-color--100};
+  --pf-global--disabled-color--100: var(--pf-global--palette--black-400); // disabled text color
   --pf-global--disabled-color--200: var(--pf-global--palette--black-500);
-  --pf-global--disabled-color--300: #{$pf-global--disabled-color--300};
-
+  --pf-global--disabled-color--300: var(--pf-global--palette--black-200);
   // Theme color
   --pf-global--primary-color--100: var(--pf-global--palette--blue-300);
   --pf-global--primary-color--200: #{$pf-global--primary-color--200};
@@ -216,8 +215,8 @@
   --pf-global--BorderWidth--lg: #{$pf-global--BorderWidth--lg};
   --pf-global--BorderWidth--xl: #{$pf-global--BorderWidth--xl};
   --pf-global--BorderColor--100: var(--pf-global--palette--black-500);
-  --pf-global--BorderColor--200: #{$pf-global--BorderColor--200};
-  --pf-global--BorderColor--300: #{$pf-global--BorderColor--300};
+  --pf-global--BorderColor--200: var(--pf-global--palette--black-500);
+  --pf-global--BorderColor--300: var(--pf-global--palette--black-500);
   --pf-global--BorderColor--dark-100: #{$pf-global--BorderColor--dark-100};
   --pf-global--BorderColor--light-100: #{$pf-global--BorderColor--light-100};
   --pf-global--BorderRadius--sm: #{$pf-global--BorderRadius--sm};

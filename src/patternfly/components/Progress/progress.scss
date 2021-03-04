@@ -21,7 +21,7 @@
   --pf-c-progress--m-warning__status-icon--Color: var(--pf-global--warning-color--100);
   --pf-c-progress--m-danger__status-icon--Color: var(--pf-global--danger-color--100);
   --pf-c-progress--m-inside__indicator--MinWidth: var(--pf-global--spacer--xl);
-  --pf-c-progress--m-inside__measure--Color: var(--pf-global--Color--light-100); // the measure needs to be white when moved inside the progress bar indicator
+  --pf-c-progress--m-inside__measure--Color: var(--pf-global--palette--black-900); // the measure needs to be white when moved inside the progress bar indicator
   --pf-c-progress--m-success--m-inside__measure--Color: var(--pf-global--Color--light-100); // remove at breaking change
   --pf-c-progress--m-warning--m-inside__measure--Color: var(--pf-global--Color--dark-100); // the measure still needs to be dark when in warning state
   --pf-c-progress--m-inside__measure--FontSize: var(--pf-global--FontSize--sm);
@@ -129,13 +129,11 @@
   &.pf-m-success {
     --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-success__bar--BackgroundColor);
     --pf-c-progress__status-icon--Color: var(--pf-c-progress--m-success__status-icon--Color);
-    --pf-c-progress--m-inside__measure--Color: var(--pf-c-progress--m-success--m-inside__measure--Color);
   }
 
   &.pf-m-warning {
     --pf-c-progress__bar--before--BackgroundColor: var(--pf-c-progress--m-warning__bar--BackgroundColor);
     --pf-c-progress__status-icon--Color: var(--pf-c-progress--m-warning__status-icon--Color);
-    --pf-c-progress--m-inside__measure--Color: var(--pf-c-progress--m-warning--m-inside__measure--Color);
   }
 
   &.pf-m-danger {

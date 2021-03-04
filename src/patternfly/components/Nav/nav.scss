@@ -51,14 +51,14 @@
   --pf-c-nav__link--active--Color: var(--pf-global--Color--light-100);
   --pf-c-nav__link--m-current--Color: var(--pf-global--Color--light-100);
   --pf-c-nav__link--BackgroundColor: transparent;
-  --pf-c-nav__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav__link--active--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--dark-400);
+  --pf-c-nav__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-nav__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-nav__link--active--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-nav__link--OutlineOffset: calc(var(--pf-global--spacer--xs) * -1);
 
   // Link ::before borders
-  --pf-c-nav__link--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav__link--before--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-nav__link--before--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__link--hover--before--BorderBottomWidth: 0;
   --pf-c-nav__link--focus--before--BorderBottomWidth: 0;
@@ -135,7 +135,7 @@
   --pf-c-nav--m-tertiary__scroll-button--disabled--Color: var(--pf-global--disabled-color--200);
 
   // Scroll buttons before
-  --pf-c-nav--m-tertiary__scroll-button--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-nav--m-tertiary__scroll-button--before--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-nav--m-tertiary__scroll-button--disabled--before--BorderColor: var(--pf-global--disabled-color--300);
 
   // Subnav
@@ -189,7 +189,7 @@
   --pf-c-nav__section-title--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-nav__section-title--xl--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-nav__section-title--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-nav__section-title--Color: var(--pf-global--Color--light-100);
+  --pf-c-nav__section-title--Color: var(--pf-global--Color--200);
   --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BorderColor--100);
   --pf-c-nav__section-title--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
 
@@ -474,10 +474,6 @@
     color: var(--pf-c-nav__link--hover--Color);
     background-color: var(--pf-c-nav__link--hover--BackgroundColor);
 
-    &::before {
-      border-bottom-width: var(--pf-c-nav__link--hover--before--BorderBottomWidth);
-    }
-
     &::after {
       border-color: var(--pf-c-nav__link--hover--after--BorderColor);
       border-left-width: var(--pf-c-nav__link--hover--after--BorderLeftWidth);
@@ -488,10 +484,6 @@
     color: var(--pf-c-nav__link--focus--Color);
     background-color: var(--pf-c-nav__link--focus--BackgroundColor);
 
-    &::before {
-      border-bottom-width: var(--pf-c-nav__link--focus--before--BorderBottomWidth);
-    }
-
     &::after {
       border-color: var(--pf-c-nav__link--focus--after--BorderColor);
       border-left-width: var(--pf-c-nav__link--focus--after--BorderLeftWidth);
@@ -501,10 +493,6 @@
   &:active {
     color: var(--pf-c-nav__link--active--Color);
     background-color: var(--pf-c-nav__link--active--BackgroundColor);
-
-    &::before {
-      border-bottom-width: var(--pf-c-nav__link--active--before--BorderBottomWidth);
-    }
 
     &::after {
       border-color: var(--pf-c-nav__link--active--after--BorderColor);
