@@ -1,0 +1,10 @@
+<div class="pf-c-masthead__content{{#if masthead-content--modifier}} {{masthead-content--modifier}}{{/if}}"
+  {{#if masthead-content--attribute}}
+    {{{masthead-content--attribute}}}
+  {{/if}}>
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    <span>Content</span>
+  {{/if}}
+</div>

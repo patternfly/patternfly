@@ -21,9 +21,9 @@
   --pf-c-notification-drawer__list-item--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__list-item--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__list-item--BackgroundColor: var(--pf-global--BackgroundColor--300);
-  --pf-c-notification-drawer__list-item--BoxShadow: inset var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-notification-drawer__list-item--BoxShadow: none;
   --pf-c-notification-drawer__list-item--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-notification-drawer__list-item--BorderBottomColor: transparent;
+  --pf-c-notification-drawer__list-item--BorderBottomColor: var(--pf-global--BorderColor--100);
   --pf-c-notification-drawer__list-item--OutlineOffset: #{pf-size-prem(-4px)};
   --pf-c-notification-drawer__list-item--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-notification-drawer__list-item--before--Top: 0;
@@ -46,7 +46,7 @@
   --pf-c-notification-drawer__list-item--m-read--before--Bottom: 0;
   --pf-c-notification-drawer__list-item--m-read--before--BackgroundColor: transparent;
   --pf-c-notification-drawer__list-item--list-item--m-read--before--Top: 0;
-  --pf-c-notification-drawer__list-item--list-item--m-read--BoxShadow: inset var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-notification-drawer__list-item--list-item--m-read--BoxShadow: none;
   --pf-c-notification-drawer__list-item--m-hoverable--hover--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-notification-drawer__list-item--m-hoverable--hover--BoxShadow: var(--pf-global--BoxShadow--md-top), var(--pf-global--BoxShadow--md-bottom);
 
