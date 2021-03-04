@@ -3,6 +3,31 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2021.03 release notes (2021-03-09)
+Packages released:
+- [@patternfly/patternfly@v4.90.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.90.4)
+
+### Components
+- **Accordion:** Added display-lg, bordered, support multiple bodies ([#3888](https://github.com/patternfly/patternfly/pull/3888))
+- **Breadcrumb:** Added docs, example for items as buttons ([#3901](https://github.com/patternfly/patternfly/pull/3901))
+- **Check/radio:** Added support for custom body content ([#3884](https://github.com/patternfly/patternfly/pull/3884))
+- **Context selector:**
+  - Hid menu scroll unless there is overflow ([#3873](https://github.com/patternfly/patternfly/pull/3873))
+  - Added suppport for items as links ([#3875](https://github.com/patternfly/patternfly/pull/3875))
+- **Form control:** Added vars for textarea width/height for resizing ([#3883](https://github.com/patternfly/patternfly/pull/3883))
+- **Login:** Added aria-hidden to hide/show password example fa icons ([#3877](https://github.com/patternfly/patternfly/pull/3877))
+- **Options menu, dropdown:** Normalized plain toggle size ([#3878](https://github.com/patternfly/patternfly/pull/3878))
+- **Search input:**
+  - Added autocomplete ([#3892](https://github.com/patternfly/patternfly/pull/3892))
+  - Fixed underline bug ([#3905](https://github.com/patternfly/patternfly/pull/3905))
+- **Slider:** Added support for disabled ([#3879](https://github.com/patternfly/patternfly/pull/3879))
+- **Split:** Added variation to allow children to wrap ([#3887](https://github.com/patternfly/patternfly/pull/3887))
+- **Switch:** Adjusted space between switch and label ([#3882](https://github.com/patternfly/patternfly/pull/3882))
+- **Table:**
+  - Fixed treeview alignment ([#3890](https://github.com/patternfly/patternfly/pull/3890))
+  - Fixed hoverable, selectable table ([#3893](https://github.com/patternfly/patternfly/pull/3893))
+
+
 ## 2021.02 release notes (2021-02-17)
 Packages released:
 - [@patternfly/patternfly@v4.87.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.87.3)
