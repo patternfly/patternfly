@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2021.03 release notes (2021-03-09)
 Packages released:
-- [@patternfly/patternfly@v4.90.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.90.4)
+- [@patternfly/patternfly@v4.90.5](https://www.npmjs.com/package/@patternfly/patternfly/v/4.90.5)
 
 ### Components
 - **Accordion:** Added display-lg, bordered, support multiple bodies ([#3888](https://github.com/patternfly/patternfly/pull/3888))
@@ -17,6 +17,7 @@ Packages released:
 - **Form control:** Added vars for textarea width/height for resizing ([#3883](https://github.com/patternfly/patternfly/pull/3883))
 - **Login:** Added aria-hidden to hide/show password example fa icons ([#3877](https://github.com/patternfly/patternfly/pull/3877))
 - **Options menu, dropdown:** Normalized plain toggle size ([#3878](https://github.com/patternfly/patternfly/pull/3878))
+- **Page:** Fixed missing masthead demo screenshot ([#3917](https://github.com/patternfly/patternfly/pull/3917))
 - **Search input:**
   - Added autocomplete ([#3892](https://github.com/patternfly/patternfly/pull/3892))
   - Fixed underline bug ([#3905](https://github.com/patternfly/patternfly/pull/3905))
