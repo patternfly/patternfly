@@ -4,12 +4,13 @@ section: components
 wrapperTag: div
 ---
 
+## Demos
+
 ### Masthead component
 ```hbs isFullscreen
 {{> page-demo-masthead-component page-demo-default--id="page-demo-masthead-component"}}
 ```
 
-## Demos
 ### Sticky tertiary nav
 ```hbs isFullscreen
 {{> page-demo-sticky-top-tertiary-nav page-demo-default--id="page-demo-sticky-top-tertiary-nav"}}
@@ -36,4 +37,4 @@ wrapperTag: div
 ```
 
 ## Documentation
-This demo implements all variations of the nav component in the page component. To make the page component take up the full height of the viewport, it is recommended to add `height: 100%;` to all ancestor elements of the page component.
+To make the page component take up the full height of the viewport, it is recommended to add `height: 100%;` to all ancestor elements of the page component.
