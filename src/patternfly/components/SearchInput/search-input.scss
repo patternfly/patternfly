@@ -1,11 +1,11 @@
 .pf-c-search-input {
   // Base border
   --pf-c-search-input__text--before--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-search-input__text--before--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-search-input__text--before--BorderColor: transparent;
 
   // Bottom border
   --pf-c-search-input__text--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-search-input__text--after--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-search-input__text--after--BorderBottomColor: var(--pf-global--palette--black-200);
   --pf-c-search-input--hover__text--after--BorderBottomColor: var(--pf-global--primary-color--100);
   --pf-c-search-input__text--focus-within--after--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-search-input__text--focus-within--after--BorderBottomColor: var(--pf-global--primary-color--100);
@@ -33,6 +33,7 @@
   position: relative;
   display: flex;
   padding: var(--pf-c-search-input--PaddingTop) var(--pf-c-search-input--PaddingRight) var(--pf-c-search-input--PaddingBottom) var(--pf-c-search-input--PaddingLeft);
+  background-color: var(--pf-global--palette--black-600);
 
   &:hover {
     --pf-c-search-input__text--after--BorderBottomColor: var(--pf-c-search-input--hover__text--after--BorderBottomColor);
@@ -55,6 +56,7 @@
 
   &::before {
     border: var(--pf-c-search-input__text--before--BorderWidth) solid var(--pf-c-search-input__text--before--BorderColor);
+    border-bottom-color: var(--pf-global--palette--black-200);
   }
 
   &::after {

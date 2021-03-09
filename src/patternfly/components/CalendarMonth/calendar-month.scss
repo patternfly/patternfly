@@ -157,7 +157,7 @@
 
   &.pf-m-selected {
     --pf-c-calendar-month__date--BackgroundColor: var(--pf-c-calendar-month__dates-cell--m-selected__date--BackgroundColor);
-    --pf-c-calendar-month__date--hover--BackgroundColor: var(--pf-global--palette--blue-900);
+    --pf-c-calendar-month__date--hover--BackgroundColor: var(--pf-global--palette--blue-500);
     --pf-c-calendar-month__date--focus--BackgroundColor: var(--pf-global--palette--blue-400);
     --pf-c-calendar-month__date--focus--BoxShadow: var(--pf-c-calendar-month__date-cell--m-selected__date--focus--BoxShadow);
     --pf-c-calendar-month__date--Color: var(--pf-c-calendar-month__dates-cell--m-selected__date--Color);

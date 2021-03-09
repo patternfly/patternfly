@@ -12,7 +12,7 @@
   // After
   --pf-c-skeleton--after--LinearGradientAngle: 90deg;
   --pf-c-skeleton--after--LinearGradientColorStop1: rgba(237, 237, 237, 0); // Safari needs the RGB to be --pf-c-skeleton--after--LinearGradientColorStop2
-  --pf-c-skeleton--after--LinearGradientColorStop2: #ededed;
+  --pf-c-skeleton--after--LinearGradientColorStop2: var(--pf-global--palette--black-600);
   --pf-c-skeleton--after--LinearGradientColorStop3: rgba(237, 237, 237, 0);
   --pf-c-skeleton--after--TranslateX: -100%;
   --pf-c-skeleton--after--AnimationName: pf-c-skeleton-loading;

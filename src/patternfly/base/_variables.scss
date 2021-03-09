@@ -89,7 +89,7 @@
   --pf-global--BackgroundColor--light-100: var(--pf-global--BackgroundColor--100);
   --pf-global--BackgroundColor--200: var(--pf-global--palette--black-900);
   --pf-global--BackgroundColor--300: var(--pf-global--palette--black-700); // floaty
-  --pf-global--BackgroundColor--400: var(--pf-global--palette--black-600); // form control
+  --pf-global--BackgroundColor--400: var(--pf-global--palette--black-600); // form control & menu hover
   --pf-global--BackgroundColor--light-300: var(--pf-global--BackgroundColor--300);
   --pf-global--BackgroundColor--light-200: var(--pf-global--BackgroundColor--200);
   --pf-global--BackgroundColor--dark-100: #{$pf-global--BackgroundColor--dark-100};
@@ -216,7 +216,7 @@
   --pf-global--BorderWidth--xl: #{$pf-global--BorderWidth--xl};
   --pf-global--BorderColor--100: var(--pf-global--palette--black-500);
   --pf-global--BorderColor--200: var(--pf-global--palette--black-500);
-  --pf-global--BorderColor--300: var(--pf-global--palette--black-500);
+  --pf-global--BorderColor--300: var(--pf-global--palette--black-400);
   --pf-global--BorderColor--dark-100: #{$pf-global--BorderColor--dark-100};
   --pf-global--BorderColor--light-100: #{$pf-global--BorderColor--light-100};
   --pf-global--BorderRadius--sm: #{$pf-global--BorderRadius--sm};
