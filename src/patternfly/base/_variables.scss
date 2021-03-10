@@ -89,7 +89,7 @@
   --pf-global--BackgroundColor--light-100: var(--pf-global--BackgroundColor--100);
   --pf-global--BackgroundColor--200: var(--pf-global--palette--black-900);
   --pf-global--BackgroundColor--300: var(--pf-global--palette--black-700); // floaty
-  --pf-global--BackgroundColor--400: var(--pf-global--palette--black-600); // form control & menu hover
+  --pf-global--BackgroundColor--400: var(--pf-global--palette--black-600); // form control & menu item hover (on floaty bg)
   --pf-global--BackgroundColor--light-300: var(--pf-global--BackgroundColor--300);
   --pf-global--BackgroundColor--light-200: var(--pf-global--BackgroundColor--200);
   --pf-global--BackgroundColor--dark-100: #{$pf-global--BackgroundColor--dark-100};
@@ -115,9 +115,10 @@
   --pf-global--active-color--200: #{$pf-global--active-color--200};
   --pf-global--active-color--300: #{$pf-global--active-color--300};
   --pf-global--active-color--400: #{$pf-global--active-color--400};
-  --pf-global--disabled-color--100: var(--pf-global--palette--black-400); // disabled text color
-  --pf-global--disabled-color--200: var(--pf-global--palette--black-500);
-  --pf-global--disabled-color--300: var(--pf-global--palette--black-200);
+  --pf-global--disabled-color--100: var(--pf-global--palette--black-400); // disabled text on regular background color
+  --pf-global--disabled-color--200: var(--pf-global--palette--black-500); // disabled background color
+  --pf-global--disabled-color--300: var(--pf-global--palette--black-200); // disabled text on regular background color
+
   // Theme color
   --pf-global--primary-color--100: var(--pf-global--palette--blue-300);
   --pf-global--primary-color--200: #{$pf-global--primary-color--200};

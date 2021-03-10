@@ -60,6 +60,94 @@ cssPrefix: pf-c-list
 {{/list}}
 ```
 
+### Plain
+```hbs
+{{#> list list--type="ul" list--modifier="pf-m-plain"}}
+  <li>Donec blandit a lorem id convallis.</li>
+  <li>Integer in volutpat libero.</li>
+  <li>Donec a diam tellus.
+    {{#> list newcontext}}
+      <li>Donec blandit a lorem id convallis.</li>
+      <li>Cras gravida arcu at diam gravida gravida.</li>
+      <li>Integer in volutpat libero.</li>
+    {{/list}}
+  </li>
+  <li>Aenean nec tortor orci.</li>
+  <li>Vivamus maximus ultricies pulvinar.</li>
+{{/list}}
+```
+
+### With horizontal rules
+```hbs
+{{#> list list--modifier="pf-m-plain pf-m-bordered"}}
+  <li>Donec blandit a lorem id convallis.</li>
+  <li>Integer in volutpat libero.</li>
+  <li>Donec a diam tellus.</li>
+  <li>Aenean nec tortor orci.</li>
+  <li>Vivamus maximus ultricies pulvinar.</li>
+{{/list}}
+```
+
+### With small icons
+```hbs
+{{#> list list--modifier="pf-m-plain"}}
+  {{#> list-item}}
+    {{#> list-item-icon}}
+      <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item one
+    {{/list-item-text}}
+  {{/list-item}}
+  {{#> list-item}}
+    {{#> list-item-icon}}
+      <i class="fas fa-key fa-fw" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item two
+    {{/list-item-text}}
+  {{/list-item}}
+  {{#> list-item}}
+    {{#> list-item-icon}}
+      <i class="fas fa-desktop fa-fw" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item three
+    {{/list-item-text}}
+  {{/list-item}}
+{{/list}}
+```
+
+### With large icons
+```hbs
+{{#> list list--modifier="pf-m-plain pf-m-icon-lg"}}
+  {{#> list-item}}
+    {{#> list-item-icon}}
+      <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item one
+    {{/list-item-text}}
+  {{/list-item}}
+  {{#> list-item}}
+    {{#> list-item-icon}}
+      <i class="fas fa-key fa-fw" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item two
+    {{/list-item-text}}
+  {{/list-item}}
+  {{#> list-item}}
+    {{#> list-item-icon}}
+      <i class="fas fa-desktop fa-fw" aria-hidden="true"></i>
+    {{/list-item-icon}}
+    {{#> list-item-text}}
+      List item three
+    {{/list-item-text}}
+  {{/list-item}}
+{{/list}}
+```
+
 ## Documentation
 ### Overview
 Non-inline lists can be nested up to any level.
@@ -68,4 +156,7 @@ Non-inline lists can be nested up to any level.
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-list` | `<ul>, <ol>` | Initiates a list. **Required**  |
-| `.pf-m-inline` | `.pf-c-list` |  Modifies for inline list style. |
+| `.pf-m-inline` | `.pf-c-list` | Displays list items inline. |
+| `.pf-m-plain` | `.pf-c-list` |  Removes the list marker and base indentation. |
+| `.pf-m-bordered` | `.pf-c-list` | Add horizontal divider between items in a list. |
+| `.pf-m-icon-lg` | `.pf-c-list` | Show all the icons or logos in the list large. |

@@ -22,7 +22,7 @@
   --pf-c-dropdown__toggle--focus--before--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown--m-expanded__toggle--before--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-dropdown__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-dropdown__toggle--disabled--BackgroundColor: var(--pf-global--palette--black-500);
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-dropdown__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
@@ -160,6 +160,8 @@
 
     &:not(.pf-m-plain) {
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--disabled--BackgroundColor);
+
+      color: var(--pf-global--palette--black-100);
 
       &::before {
         border: 0;

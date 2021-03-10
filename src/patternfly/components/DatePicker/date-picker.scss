@@ -8,10 +8,10 @@
   --pf-c-date-picker__input--c-form-control--Width: calc(var(--pf-c-date-picker__input--c-form-control--width-chars) * 1ch + var(--pf-c-date-picker__input--c-form-control--width-base));
   --pf-c-date-picker__input--c-form-control--width-base: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--sm)); // form control left/right padding + status icon width and spacer
   --pf-c-date-picker__input--c-form-control--width-chars: 10;
-  --pf-c-date-picker__calendar--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-date-picker__calendar--BackgroundColor: var(--pf-global--BackgroundColor--300);
   --pf-c-date-picker__calendar--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-date-picker__calendar--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-c-date-picker__calendar--Top: calc(100% + var(--pf-global--spacer--xs));
+  --pf-c-date-picker__calendar--Top: 100%;
   --pf-c-date-picker__calendar--Right: auto;
   --pf-c-date-picker__calendar--Left: 0;
   --pf-c-date-picker__calendar--m-align-right--Right: 0;
