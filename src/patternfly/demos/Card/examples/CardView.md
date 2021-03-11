@@ -464,10 +464,10 @@ import './CardView.css'
         {{/card-body}}
       {{/card}}
       {{#> card card--modifier="pf-u-text-align-center"}}
-        {{#> card-title card-title--modifier="pf-u-text-align-center"}}
+        {{#> card-title}}
             50 Hosts
         {{/card-title}}
-        {{#> card-body card-body--modifier="pf-u-text-align-center"}}
+        {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
@@ -489,11 +489,11 @@ import './CardView.css'
           {{/l-flex}}
         {{/card-body}}
       {{/card}}
-      {{#> card}}
-        {{#> card-title card-title--modifier="pf-u-text-align-center"}}
+      {{#> card card--modifier="pf-u-text-align-center"}}
+        {{#> card-title}}
             12 Hosts
         {{/card-title}}
-        {{#> card-body card-body--modifier="pf-u-text-align-center"}}
+        {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
