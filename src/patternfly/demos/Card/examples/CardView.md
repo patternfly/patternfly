@@ -1133,7 +1133,7 @@ import './CardView.css'
           {{/l-flex}}
         {{/l-flex-item}}
         {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-          {{> cardview-demo--line-chart}}
+          {{> cardview-demo--chart}}
         {{/l-flex-item}}
       {{/l-flex}}
     {{/card-header}}
