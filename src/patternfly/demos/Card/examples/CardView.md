@@ -5,8 +5,9 @@ wrapperTag: div
 ---
 
 import './CardView.css'
-<!--
+
 ## Demos
+
 ### Card view
 ```hbs isFullscreen
 {{#> page page--id="card-view-example"}}
@@ -424,7 +425,7 @@ import './CardView.css'
           <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
         {{/card-body}}
       {{/card}}
-      {{#> card}}
+      {{#> card card--modifier="pf-u-text-align-center"}}
         {{#> card-title}}
           3 Clusters
         {{/card-title}}
@@ -755,7 +756,7 @@ import './CardView.css'
   {{/card-body}}
 {{/card}}
 ```
--->
+
 ### Status card
 ```hbs
 {{> cardview-demo--status-card card--id="status-card-default-example"}}
