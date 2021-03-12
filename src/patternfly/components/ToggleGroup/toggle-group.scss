@@ -8,10 +8,10 @@
   --pf-c-toggle-group__button--LineHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md));
   --pf-c-toggle-group__button--Color: var(--pf-global--Color--100);
   --pf-c-toggle-group__button--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-toggle-group__button--hover--BackgroundColor: var(--pf-global--disabled-color--200);
-  --pf-c-toggle-group__button--focus--BackgroundColor: var(--pf-global--disabled-color--200);
-  --pf-c-toggle-group__button--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
-  --pf-c-toggle-group__button--disabled--Color: var(--pf-global--disabled-color--100);
+  --pf-c-toggle-group__button--hover--BackgroundColor: var(--pf-global--palette--black-700);
+  --pf-c-toggle-group__button--focus--BackgroundColor: var(--pf-c-toggle-group__button--hover--BackgroundColor);
+  --pf-c-toggle-group__button--disabled--BackgroundColor: var(--pf-global--palette--black-600);
+  --pf-c-toggle-group__button--disabled--Color: var(--pf-global--palette--black-100);
 
   // first-last child
   --pf-c-toggle-group__item--first-child__button--BorderTopLeftRadius: var(--pf-global--BorderRadius--sm);
@@ -26,7 +26,7 @@
   --pf-c-toggle-group__button--m-light--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Selected variation
-  --pf-c-toggle-group__button--m-selected--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-toggle-group__button--m-selected--BackgroundColor: var(--pf-global--palette--blue-400);
   --pf-c-toggle-group__button--m-selected--Color: var(--pf-global--Color--light-100);
 
   display: flex;

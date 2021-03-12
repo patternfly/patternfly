@@ -1,5 +1,5 @@
 .pf-c-skeleton {
-  --pf-c-skeleton--BackgroundColor: var(--pf-global--palette--black-150);
+  --pf-c-skeleton--BackgroundColor: var(--pf-global--palette--black-600);
   --pf-c-skeleton--Width: auto;
   --pf-c-skeleton--Height: auto;
   --pf-c-skeleton--BorderRadius: var(--pf-global--BorderRadius--sm);
@@ -11,9 +11,9 @@
 
   // After
   --pf-c-skeleton--after--LinearGradientAngle: 90deg;
-  --pf-c-skeleton--after--LinearGradientColorStop1: rgba(237, 237, 237, 0); // Safari needs the RGB to be --pf-c-skeleton--after--LinearGradientColorStop2
-  --pf-c-skeleton--after--LinearGradientColorStop2: var(--pf-global--palette--black-600);
-  --pf-c-skeleton--after--LinearGradientColorStop3: rgba(237, 237, 237, 0);
+  --pf-c-skeleton--after--LinearGradientColorStop1: var(--pf-global--palette--black-600); // Safari needs the RGB to be --pf-c-skeleton--after--LinearGradientColorStop2
+  --pf-c-skeleton--after--LinearGradientColorStop2: var(--pf-global--palette--black-500);
+  --pf-c-skeleton--after--LinearGradientColorStop3: var(--pf-global--palette--black-600);
   --pf-c-skeleton--after--TranslateX: -100%;
   --pf-c-skeleton--after--AnimationName: pf-c-skeleton-loading;
   --pf-c-skeleton--after--AnimationDuration: 2s;

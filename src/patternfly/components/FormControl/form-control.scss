@@ -67,8 +67,8 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   --pf-c-form-control--placeholder--Color: var(--pf-global--Color--dark-200);
 
   // input disabled style
-  --pf-c-form-control--disabled--Color: var(--pf-global--palette--black-100);
-  --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--palette--black-500);
+  --pf-c-form-control--disabled--Color: var(--pf-global--disabled-color--300);
+  --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-form-control--disabled--BorderColor: transparent;
 
   // input readonly style
@@ -251,7 +251,6 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
     cursor: not-allowed;
     border-color: var(--pf-c-form-control--disabled--BorderColor);
     color: var(--pf-global--palette--black-100);
-    border-bottom: var(--pf-global--BorderWidth--sm) solid var(--pf-global--palette--black-700);
   }
 
   &[aria-invalid="true"] {

@@ -22,8 +22,8 @@
   --pf-c-button--active--after--BorderWidth: var(--pf-global--BorderWidth--md);
 
   // Disabled state variables
-  --pf-c-button--disabled--Color: var(--pf-global--palette--black-100);
-  --pf-c-button--disabled--BackgroundColor: var(--pf-global--palette--black-600);
+  --pf-c-button--disabled--Color: var(--pf-global--disabled-color--300);
+  --pf-c-button--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-button--disabled--after--BorderColor: transparent;
 
   // Primary btn
@@ -413,6 +413,13 @@
       }
     }
 
+    &:disabled {
+      &::after {
+        border: 0;
+        border-bottom: var(--pf-global--BorderWidth--sm) solid var(--pf-global--palette--black-700);
+      }
+    }
+
     &:active,
     &.pf-m-active {
       --pf-c-button--m-control--Color: var(--pf-c-button--m-control--active--Color);
@@ -487,10 +494,6 @@
 
     &.pf-m-control {
       --pf-c-button--after--BorderColor: var(--pf-global--palette--black-700);
-
-      &::after {
-        border-bottom-width: var(--pf-global--BorderWidth--sm);
-      }
     }
   }
 

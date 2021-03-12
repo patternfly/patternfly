@@ -647,6 +647,11 @@
 
     @at-root .pf-m-favorited#{&} {
       --pf-c-button--m-plain--Color: var(--pf-c-table__favorite--m-favorited--c-button--Color);
+
+      &:hover,
+      &:focus {
+        --pf-c-button--m-plain--Color: var(--pf-global--palette--gold-100);
+      }
     }
   }
 }
