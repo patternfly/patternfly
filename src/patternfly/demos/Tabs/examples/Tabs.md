@@ -6,15 +6,16 @@ section: demos
 ## Examples
 
 ### Open tabs
+
 ```hbs isFullscreen
 {{#> tabs--page-wrapper tabs--page-wrapper--id="open-tabs-example"}}
   {{> page-template-breadcrumb page-template-breadcrumbs--IsPods="true"}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
     {{> tabs--pod-page-title}}
   {{/page-main-section}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
-    {{> tabs--pod-tab-list tabs--pod-tab-list--id=(concat tabs--page-wrapper--id '-tabs-list') tabs--pod-tab-list--modifier="pf-m-inset-none pf-m-inset-lg-on-xl"}}
-  {{/page-main-section}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
+    {{> tabs--pod-tab-list tabs--pod-tab-list--id=(concat tabs--page-wrapper--id '-tabs-list') tabs--pod-tab-list--modifier="pf-m-page-insets"}}
+  {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
     {{#> tabs--pod-tab-content tabs--pod-tab-content--id=(concat tabs--page-wrapper--id '-tabs-list')}}
       {{#> l-flex l-flex--modifier="pf-m-column"}}
@@ -159,16 +160,16 @@ section: demos
 {{/tabs--page-wrapper}}
 ```
 
-### Open tabs with secondary
+### Open tabs with secondary tabs
 ```hbs isFullscreen
 {{#> tabs--page-wrapper tabs--page-wrapper--id="open-with-secondary-tabs-example"}}
   {{> page-template-breadcrumb page-template-breadcrumbs--IsPods="true"}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
     {{> tabs--pod-page-title}}
   {{/page-main-section}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
-    {{> tabs--pod-tab-list tabs--pod-tab-list--id=(concat tabs--page-wrapper--id '-tabs-list')  tabs--pod-tab-list--modifier="pf-m-inset-md pf-m-inset-lg-on-xl"}}
-  {{/page-main-section}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
+    {{> tabs--pod-tab-list tabs--pod-tab-list--id=(concat tabs--page-wrapper--id '-tabs-list') tabs--pod-tab-list--modifier="pf-m-page-insets"}}
+  {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
     {{#> l-flex l-flex--modifier="pf-m-column"}}
       {{#> l-flex-item}}
@@ -288,8 +289,8 @@ section: demos
       Overview
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding pf-u-pt-sm"}}
-    {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-inset-md pf-m-inset-lg-on-xl"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-no-padding"}}
+    {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-page-insets"}}
       {{#> tabs-list}}
         {{> __tabs-item
           __tabs-item--current="true"
@@ -304,7 +305,7 @@ section: demos
           __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-cluster-2-panel"')}}
       {{/tabs-list}}
     {{/tabs}}
-  {{/page-main-section}}
+  {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" tab-content--id=(concat tabs--page-wrapper--id '-tabs')}}
     {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-cluster-1-link" id="' tab-content--id '-cluster-1-panel"')}}
       {{> tabs--page-grid-view tabs--page-grid-view--id=(concat tabs--page-wrapper--id '-tabs')}}
@@ -326,8 +327,8 @@ section: demos
       Nodes
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
-    {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-inset-md pf-m-inset-lg-on-xl"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
+    {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-page-insets"}}
       {{#> tabs-list}}
         {{> __tabs-item
           __tabs-item--current="true"
@@ -342,7 +343,7 @@ section: demos
           __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-node-connectors-panel"')}}
       {{/tabs-list}}
     {{/tabs}}
-  {{/page-main-section}}
+  {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-no-padding pf-m-light" tab-content--id=(concat tabs--page-wrapper--id '-tabs')}}
     {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-nodes-link" id="' tab-content--id '-nodes-panel"')}}
       {{#> drawer drawer--id=(concat tabs--page-wrapper--id '-tabs') primary-detail-template--id=(concat tabs--page-wrapper--id '-tabs') drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline-on-2xlsss pf-m-inline"}}
@@ -351,7 +352,7 @@ section: demos
           {{#> drawer-content}}
            {{> toolbar--template
               toolbar--template--id=(concat tabs--page-wrapper--id '-toolbar')
-              toolbar--modifier="pf-m-page-insets"
+              toolbar--template--modifier="pf-m-page-insets"
               toolbar--template--HasToggleGroup="true"
               toolbar--template--HasFilter="true"
               toolbar--template--HasSortButton="true"
@@ -398,7 +399,7 @@ section: demos
       Nodes
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
     {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-inset-md pf-m-inset-lg-on-xl"}}
       {{#> tabs-list}}
         {{> __tabs-item
@@ -414,7 +415,7 @@ section: demos
           __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-node-connectors-panel"')}}
       {{/tabs-list}}
     {{/tabs}}
-  {{/page-main-section}}
+  {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-no-padding pf-m-light" tab-content--id=(concat tabs--page-wrapper--id '-tabs')}}
     {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-nodes-link" id="' tab-content--id '-nodes-panel"')}}
       {{#> drawer drawer--id=(concat tabs--page-wrapper--id '-tabs') primary-detail-template--id=(concat tabs--page-wrapper--id '-tabs') drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline-on-2xlsss pf-m-inline"}}
@@ -423,7 +424,7 @@ section: demos
           {{#> drawer-content}}
            {{> toolbar--template
               toolbar--template--id=(concat tabs--page-wrapper--id '-toolbar')
-              toolbar--modifier="pf-m-page-insets"
+              toolbar--template--modifier="pf-m-page-insets"
               toolbar--template--HasToggleGroup="true"
               toolbar--template--HasFilter="true"
               toolbar--template--HasSortButton="true"
@@ -549,8 +550,8 @@ section: demos
       Overview
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
-    {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-box pf-m-inset-md pf-m-inset-lg-on-xl pf-m-color-scheme--light-300"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
+    {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-box pf-m-page-insets pf-m-color-scheme--light-300"}}
       {{#> tabs-list}}
         {{> __tabs-item
           __tabs-item--id="cluster-1"
@@ -570,7 +571,7 @@ section: demos
           __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-cluster-3-panel"')}}
       {{/tabs-list}}
     {{/tabs}}
-  {{/page-main-section}}
+  {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" tab-content--id=(concat tabs--page-wrapper--id '-tabs')}}
     {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-cluster-1-link" id="' tab-content--id '-cluster-1-panel"')}}
       {{#> content}}
@@ -597,7 +598,7 @@ section: demos
       Red Hat Enterprise Linux
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
     {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-box pf-m-inset-md pf-m-inset-lg-on-xl"}}
       {{#> tabs-list}}
         {{> __tabs-item
@@ -623,7 +624,7 @@ section: demos
           __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-support-panel"')}}
       {{/tabs-list}}
     {{/tabs}}
-  {{/page-main-section}}
+  {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" tab-content--id=(concat tabs--page-wrapper--id '-tabs') page-main-section--modifier="pf-m-light"}}
     {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-new-link" id="' tab-content--id '-new-panel"')}}
       What's new content
@@ -736,7 +737,7 @@ section: demos
     {{/title}}
   {{/page-main-section}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" tabs--id=(concat tabs--page-wrapper--id '-tabs') tab-content--id=(concat tabs--page-wrapper--id '-tabs')}}
-    {{#> card card--modifier="pf-m-fill"}}
+    {{#> card card--modifier="pf-m-full-height"}}
       {{#> sidebar}}
         {{#> sidebar-panel}}
           {{#> tabs tabs--modifier="pf-m-inset-md pf-m-inset-lg-on-xl pf-m-vertical pf-m-box" }}
@@ -765,11 +766,11 @@ section: demos
             {{/tabs-list}}
           {{/tabs}}
         {{/sidebar-panel}}
-        {{#> sidebar-content sidebar-content--modifier="pf-u-p-lg"}}
-          {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-installation-link" id="' tab-content--id '-installation-panel"')}}
+        {{#> sidebar-content}}
+          {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-installation-link" id="' tab-content--id '-installation-panel"') tab-content-body--modifier="pf-m-padding"}}
             {{#> content}}
               <h2>Installation content</h2>
-              <p>This document is a guide for preparing a new AWS account for use with OpenShift. It will help prepare an account tot crea a single cluster and provide insight for adjustments which may be needed for additional cluster.</p>
+              <p>This document is a guide for preparing a new AWS account for use with OpenShift. It will help prepare an account to create a single cluster and provide insight for adjustments which may be needed for additional cluster.</p>
               <p>Follow along with these steps and the links below to configure your AWS account and provision on OpenShift cluster.</p>
               <ol>
                 <li>
@@ -790,17 +791,17 @@ section: demos
               </ol>
             {{/content}}
           {{/tab-content}}
-          {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-limits-link" id="' tab-content--id '-limits-panel"')}}
+          {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-limits-link" id="' tab-content--id '-limits-panel"') tab-content-body--modifier="pf-m-padding"}}
             {{#> content}}
               <p>Limits content</p>
             {{/content}}
           {{/tab-content}}
-          {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-cluster-installation-link" id="' tab-content--id '-cluster-installation-panel"')}}
+          {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-cluster-installation-link" id="' tab-content--id '-cluster-installation-panel"') tab-content-body--modifier="pf-m-padding"}}
             {{#> content}}
               <p>Cluster installation content</p>
             {{/content}}
           {{/tab-content}}
-          {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-subscription-support-link" id="' tab-content--id '-subscription-support-panel"')}}
+          {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-subscription-support-link" id="' tab-content--id '-subscription-support-panel"') tab-content-body--modifier="pf-m-padding"}}
             {{#> content}}
               <p>Subscription and support content</p>
             {{/content}}

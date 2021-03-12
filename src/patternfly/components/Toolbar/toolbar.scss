@@ -14,7 +14,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar__content--PaddingRight: var(--pf-global--spacer--md); // remove at breaking change
   --pf-c-toolbar__content--PaddingLeft: var(--pf-global--spacer--md); // remove at breaking change
 
-  // Gutters
+  // Insets
   --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
   --pf-c-toolbar--m-page-insets--xl--inset: var(--pf-global--spacer--lg); // make this the default inset at breaking change
 

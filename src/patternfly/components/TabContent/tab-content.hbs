@@ -12,5 +12,7 @@
   {{#if tab-content--IsHidden}}
     hidden
   {{/if}}>
-  {{> @partial-block}}
+  {{#> tab-content-body}}
+    {{> @partial-block}}
+  {{/tab-content-body}}
 </section>
