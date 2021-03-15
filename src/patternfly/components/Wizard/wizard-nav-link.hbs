@@ -10,8 +10,22 @@
       disabled
     {{/if}}
   {{/if}}
+  {{#if wizard-nav-item--IsExpandable}}
+    {{#if wizard-nav-item--IsExpanded}}
+      aria-expanded="true"
+    {{else}}
+      aria-expanded="false"
+    {{/if}}
+  {{/if}}
   {{#if wizard-nav-link--attribute}}
     {{{wizard-nav-link--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if wizard-nav-item--IsExpandable}}
+    {{#> wizard-nav-link-text}}
+      {{> @partial-block}}
+    {{/wizard-nav-link-text}}
+    {{> wizard-nav-link-toggle-icon}}
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
 </{{#if wizard-nav-link--IsLink}}a{{else}}button{{/if}}>
