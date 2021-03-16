@@ -34,7 +34,7 @@
   --pf-c-button--m-primary--hover--Color: var(--pf-global--Color--light-100);
   --pf-c-button--m-primary--focus--BackgroundColor: var(--pf-global--primary-color--200);
   --pf-c-button--m-primary--focus--Color: var(--pf-global--Color--light-100);
-  --pf-c-button--m-primary--active--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-button--m-primary--active--BackgroundColor: var(--pf-global--palette--blue-600);
   --pf-c-button--m-primary--active--Color: var(--pf-global--Color--light-100);
 
   // Secondary btn
@@ -48,7 +48,7 @@
   --pf-c-button--m-secondary--focus--after--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-button--m-secondary--focus--Color: var(--pf-global--primary-color--100);
   --pf-c-button--m-secondary--active--BackgroundColor: transparent;
-  --pf-c-button--m-secondary--active--after--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-button--m-secondary--active--after--BorderColor: var(--pf-global--primary-color--200);
   --pf-c-button--m-secondary--active--Color: var(--pf-global--primary-color--100);
 
   // Secondary danger
@@ -75,7 +75,7 @@
   --pf-c-button--m-tertiary--focus--BackgroundColor: transparent;
   --pf-c-button--m-tertiary--focus--after--BorderColor: var(--pf-global--Color--100);
   --pf-c-button--m-tertiary--focus--Color: var(--pf-global--Color--100);
-  --pf-c-button--m-tertiary--active--BackgroundColor: transparent;
+  --pf-c-button--m-tertiary--active--BackgroundColor: var(--pf-global--palette--black-150);
   --pf-c-button--m-tertiary--active--after--BorderColor: var(--pf-global--Color--100);
   --pf-c-button--m-tertiary--active--Color: var(--pf-global--Color--100);
 
@@ -86,8 +86,8 @@
   --pf-c-button--m-warning--hover--Color: var(--pf-global--Color--dark-100);
   --pf-c-button--m-warning--focus--BackgroundColor: var(--pf-global--palette--gold-500);
   --pf-c-button--m-warning--focus--Color: var(--pf-global--Color--dark-100);
-  --pf-c-button--m-warning--active--BackgroundColor: var(--pf-global--palette--gold-500);
-  --pf-c-button--m-warning--active--Color: var(--pf-global--Color--dark-100);
+  --pf-c-button--m-warning--active--BackgroundColor: var(--pf-global--warning-color--200);
+  --pf-c-button--m-warning--active--Color: var(--pf-global--Color--light-100);
 
   // Danger btn
   --pf-c-button--m-danger--BackgroundColor: var(--pf-global--danger-color--100);
@@ -96,7 +96,7 @@
   --pf-c-button--m-danger--hover--Color: var(--pf-global--Color--light-100);
   --pf-c-button--m-danger--focus--BackgroundColor: var(--pf-global--danger-color--200);
   --pf-c-button--m-danger--focus--Color: var(--pf-global--Color--light-100);
-  --pf-c-button--m-danger--active--BackgroundColor: var(--pf-global--danger-color--200);
+  --pf-c-button--m-danger--active--BackgroundColor: var(--pf-global--danger-color--300);
   --pf-c-button--m-danger--active--Color: var(--pf-global--Color--light-100);
 
   // Link btn
@@ -110,8 +110,9 @@
   --pf-c-button--m-link--active--Color: var(--pf-global--link--Color--hover);
   --pf-c-button--m-link--disabled--BackgroundColor: transparent;
   --pf-c-button--m-link--m-inline--FontSize: inherit;
-  --pf-c-button--m-link--m-inline--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
   --pf-c-button--m-link--m-inline--hover--Color: var(--pf-global--link--Color--hover);
+  --pf-c-button--m-link--m-inline--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
+  --pf-c-button--m-link--m-inline--active--TextDecoration: var(--pf-global--link--TextDecoration--active);
 
   // Link danger
   --pf-c-button--m-link--m-danger--BackgroundColor: transparent;
@@ -433,6 +434,10 @@
         --pf-c-button--m-link--Color: var(--pf-c-button--m-link--m-inline--hover--Color);
 
         text-decoration: var(--pf-c-button--m-link--m-inline--hover--TextDecoration);
+      }
+
+      &:active {
+        text-decoration: var(--pf-c-button--m-link--m-inline--active--TextDecoration);
       }
     }
 

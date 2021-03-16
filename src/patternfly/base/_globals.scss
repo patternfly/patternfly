@@ -120,6 +120,10 @@
       --pf-global--link--Color: var(--pf-global--link--Color--hover);
       --pf-global--link--TextDecoration: var(--pf-global--link--TextDecoration--hover);
     }
+
+    &:active {
+      --pf-global--link--TextDecoration: var(--pf-global--link--TextDecoration--active);
+    }
   }
 
   button,
