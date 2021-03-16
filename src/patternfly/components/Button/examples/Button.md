@@ -17,6 +17,10 @@ import './Button.css'
   Secondary
 {{/button}}
 
+{{#> button button--modifier="pf-m-secondary pf-m-danger"}}
+  Secondary danger
+{{/button}}
+
 {{#> button button--modifier="pf-m-tertiary"}}
   Tertiary
 {{/button}}
@@ -43,6 +47,13 @@ import './Button.css'
   {{#> button-icon button-icon--modifier="pf-m-end"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-link pf-m-danger"}}
+  {{#> button-icon button-icon--modifier="pf-m-start"}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+  Link danger
 {{/button}}
 
 {{#> button button--modifier="pf-m-inline pf-m-link"}}
