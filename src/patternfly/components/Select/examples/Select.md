@@ -297,7 +297,7 @@ The plain select variation should be used when you do not want a border applied 
 
 ### With description
 ```hbs
-{{#> select id="select-with-description" select--IsDescriptive="true" select--IsExpanded="true" select-menu--modifier="pf-m-wrap"}}
+{{#> select id="select-with-description" select--IsDescriptive="true" select--IsExpanded="true"}}
   Select with description
 {{/select}}
 ```
@@ -338,6 +338,20 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-m-favorite-action` | `.pf-c-select__menu-item` | Modifies an item for favorite styles. |
 | `.pf-m-link` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item for link styles. |
 | `.pf-m-action` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item to for action styles. |
+
+### Counts
+```hbs
+{{#> select id="select-counts" select--IsCounts="true" select--IsExpanded="true"}}
+  Select with counts
+{{/select}}
+```
+
+## Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-select__item-row` | `<span>` | Initiates a menu item row for use with positioning other elements before/after the item text. |
+| `.pf-c-select__item-text` | `<span>` | Initiates the menu item row text. |
+| `.pf-c-select__item-count` | `<span>` | Initiates the menu item row count. |
 
 ## Documentation
 ### Overview

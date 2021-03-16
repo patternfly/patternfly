@@ -35,6 +35,8 @@
     {{> select-menu-descriptive}}
   {{else if select--IsFavorites}}
     {{> select-menu-favorites}}
+  {{else if select--IsCounts}}
+    {{> select-menu-counts}}
   {{else}}
     {{> select-single}}
   {{/if}}
