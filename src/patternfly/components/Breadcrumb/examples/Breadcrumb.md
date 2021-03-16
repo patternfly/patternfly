@@ -140,7 +140,7 @@ import './Breadcrumb.css'
     {{#> breadcrumb-item}}
       {{> breadcrumb-item-divider}}
       {{#> breadcrumb-dropdown}}
-        {{> dropdown dropdown--id="dropdown-badge-toggle" dropdown--template--Breadcrumb="true" dropdown--IsExpanded="true" menu-list-item--IsDrillUp="true"}}
+        {{> dropdown dropdown--id="dropdown-badge-toggle" dropdown--template--Breadcrumb="true" dropdown--IsExpanded="true"}}
       {{/breadcrumb-dropdown}}
     {{/breadcrumb-item}}
     {{#> breadcrumb-item}}

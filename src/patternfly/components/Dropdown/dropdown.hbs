@@ -20,20 +20,12 @@
   {{!-- badge template --}}
   {{else if dropdown--template--Badge}}
     {{> dropdown-toggle dropdown-toggle--IsBadge="true"}}
-    {{#if dropdown--IsExpanded}}
-      {{> menu--Badge menu-list--aria-labelledby=(concat dropdown--id '-button')}}
-    {{else}}
-      {{> menu--Badge menu--attribute="hidden" menu-list--aria-labelledby=(concat dropdown--id '-button')}}
-    {{/if}}
+    {{> dropdown-menu--template--Badge}}
 
   {{!-- breadcrumb template --}}
   {{else if dropdown--template--Breadcrumb}}
     {{> dropdown-toggle dropdown-toggle--IsBadge="true"}}
-    {{#if dropdown--IsExpanded}}
-      {{> menu--Breadcrumbs menu-list--aria-labelledby=(concat dropdown--id '-button')}}
-    {{else}}
-      {{> menu--Breadcrumbs menu--attribute="hidden" menu-list--aria-labelledby=(concat dropdown--id '-button')}}
-    {{/if}}
+    {{> dropdown-menu--template--Breadcrumb}}
 
   {{!-- image and text template --}}
   {{else if dropdown--template--MenuToggleImageText}}
