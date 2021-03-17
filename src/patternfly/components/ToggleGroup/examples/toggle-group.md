@@ -100,7 +100,7 @@ import './toggle-group.css'
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Copy button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"/>
+        <i class="fas fa-copy" aria-hidden="true"></i>
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
@@ -128,7 +128,7 @@ import './toggle-group.css'
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--modifier="pf-m-selected" toggle-group-button--attribute='aria-label="Copy button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"/>
+        <i class="fas fa-copy" aria-hidden="true"></i>
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
@@ -156,7 +156,7 @@ import './toggle-group.css'
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--attribute='aria-label="Copy button"'}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"/>
+        <i class="fas fa-copy" aria-hidden="true"></i>
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
@@ -185,7 +185,7 @@ import './toggle-group.css'
   {{#> toggle-group-item}}
     {{#> toggle-group-button}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"/>
+        <i class="fas fa-copy" aria-hidden="true"></i>
       {{/toggle-group-icon}}
       {{#> toggle-group-text}}
         Copy
@@ -225,7 +225,7 @@ import './toggle-group.css'
         Copy
       {{/toggle-group-text}}
       {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"/>
+        <i class="fas fa-copy" aria-hidden="true"></i>
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}
@@ -288,7 +288,7 @@ import './toggle-group.css'
   {{#> toggle-group-item}}
     {{#> toggle-group-button toggle-group-button--modifier="pf-m-light" toggle-group-button--attribute='aria-label="Copy button"'}}
     {{#> toggle-group-icon}}
-        <i class="fas fa-copy" aria-hidden="true"/>
+        <i class="fas fa-copy" aria-hidden="true"></i>
       {{/toggle-group-icon}}
     {{/toggle-group-button}}
   {{/toggle-group-item}}

@@ -90,7 +90,7 @@ cssPrefix: pf-c-code-editor
   {{#> code-editor-main}}
     {{#> empty-state empty-state--modifier="pf-m-lg"}}
       {{#> empty-state-icon}}
-        <i class="fas fa-code"/>
+        <i class="fas fa-code"></i>
       {{/empty-state-icon}}
       {{#> title titleType="h1" title--modifier="pf-m-lg"}}
         Start editing
@@ -128,7 +128,7 @@ cssPrefix: pf-c-code-editor
   {{#> code-editor-main code-editor-main--modifier="pf-m-drag-hover"}}
     {{#> empty-state empty-state--modifier="pf-m-lg"}}
       {{#> empty-state-icon}}
-        <i class="fas fa-code"/>
+        <i class="fas fa-code"></i>
       {{/empty-state-icon}}
       {{#> title titleType="h1" title--modifier="pf-m-lg"}}
         Start editing

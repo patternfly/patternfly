@@ -62,7 +62,7 @@ All of PatternFly 4's layouts are kept under `@patternfly/patternfly/layouts/`.
 
 _This example uses the following configuration:_
 
-```json noLive
+```json
 webpack: "3.8.1",
 sass-loader: "7.0.0",
 css-loader: "^0.28.11",

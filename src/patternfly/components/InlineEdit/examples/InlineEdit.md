@@ -26,7 +26,7 @@ Inline edit **toggle** can be placed anywhere within `.pf-c-inline-edit`. It ini
 {{#> inline-edit inline-edit--id="inline-edit-toggle-example"}}
   {{#> inline-edit-toggle}}
     {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
-      <i class="fas fa-pencil-alt" aria-hidden="true" />
+      <i class="fas fa-pencil-alt" aria-hidden="true"></i>
     {{/button}}
   {{/inline-edit-toggle}}
 {{/inline-edit}}
@@ -74,7 +74,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
     {{/inline-edit-value}}
     {{#> inline-edit-toggle}}
       {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true" />
+        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
       {{/button}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
@@ -99,7 +99,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
     {{/inline-edit-value}}
     {{#> inline-edit-toggle}}
       {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button ' inline-edit--id '-label"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true" />
+        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
       {{/button}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
@@ -124,7 +124,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
     {{/inline-edit-label}}
     {{#> inline-edit-toggle}}
       {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true" />
+        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
       {{/button}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
@@ -152,7 +152,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
     {{/inline-edit-label}}
     {{#> inline-edit-toggle}}
       {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true" />
+        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
       {{/button}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
@@ -180,7 +180,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
     {{/inline-edit-label}}
     {{#> inline-edit-toggle}}
       {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-        <i class="fas fa-pencil-alt" aria-hidden="true" />
+        <i class="fas fa-pencil-alt" aria-hidden="true"></i>
       {{/button}}
     {{/inline-edit-toggle}}
   {{/inline-edit-group}}
@@ -300,7 +300,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{/inline-edit-group}}
           {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable-editable"}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
-              <i class="fas fa-pencil-alt" aria-hidden="true" />
+              <i class="fas fa-pencil-alt" aria-hidden="true"></i>
             {{/button}}
           {{/inline-edit-action}}
         {{/table-td}}
@@ -379,7 +379,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
           {{/inline-edit-group}}
           {{#> inline-edit-action inline-edit-action--modifier="pf-m-enable-editable"}}
             {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id inline-edit--row 'edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id inline-edit--row 'edit-button"')}}
-              <i class="fas fa-pencil-alt" aria-hidden="true" />
+              <i class="fas fa-pencil-alt" aria-hidden="true"></i>
             {{/button}}
           {{/inline-edit-action}}
         {{/table-td}}
@@ -453,7 +453,7 @@ All accessibility requirements for inputs apply to elements within inline edit.
         {{/inline-edit-label}}
         {{#> inline-edit-toggle}}
           {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button"')}}
-            <i class="fas fa-pencil-alt" aria-hidden="true" />
+            <i class="fas fa-pencil-alt" aria-hidden="true"></i>
           {{/button}}
         {{/inline-edit-toggle}}
       {{/inline-edit-group}}
@@ -476,7 +476,7 @@ All accessibility requirements for inputs apply to elements within inline edit.
         {{/inline-edit-label}}
         {{#> inline-edit-toggle}}
           {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-            <i class="fas fa-pencil-alt" aria-hidden="true" />
+            <i class="fas fa-pencil-alt" aria-hidden="true"></i>
           {{/button}}
         {{/inline-edit-toggle}}
       {{/inline-edit-group}}
@@ -510,7 +510,7 @@ All accessibility requirements for inputs apply to elements within inline edit.
         {{/inline-edit-label}}
         {{#> inline-edit-toggle}}
           {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-            <i class="fas fa-pencil-alt" aria-hidden="true" />
+            <i class="fas fa-pencil-alt" aria-hidden="true"></i>
           {{/button}}
         {{/inline-edit-toggle}}
       {{/inline-edit-group}}
@@ -544,7 +544,7 @@ All accessibility requirements for inputs apply to elements within inline edit.
         {{/inline-edit-label}}
         {{#> inline-edit-toggle}}
           {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-            <i class="fas fa-pencil-alt" aria-hidden="true" />
+            <i class="fas fa-pencil-alt" aria-hidden="true"></i>
           {{/button}}
         {{/inline-edit-toggle}}
       {{/inline-edit-group}}
