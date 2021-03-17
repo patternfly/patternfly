@@ -85,6 +85,10 @@ import './Button.css'
   Secondary
 {{/button}}
 
+{{#> button button--modifier="pf-m-secondary pf-m-danger pf-m-small"}}
+  Secondary danger
+{{/button}}
+
 {{#> button button--modifier="pf-m-tertiary pf-m-small"}}
   Tertiary
 {{/button}}
@@ -99,6 +103,13 @@ import './Button.css'
 
 {{#> button button--modifier="pf-m-link pf-m-small"}}
   Link
+  {{#> button-icon button-icon--modifier="pf-m-end"}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-link pf-m-danger pf-m-small"}}
+  Link danger
   {{#> button-icon button-icon--modifier="pf-m-end"}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
@@ -123,6 +134,10 @@ import './Button.css'
   Secondary disabled
 {{/button}}
 
+{{#> button button--modifier="pf-m-secondary pf-m-danger" button--attribute="disabled"}}
+  Secondary danger disabled
+{{/button}}
+
 {{#> button button--modifier="pf-m-tertiary" button--attribute="disabled"}}
   Tertiary disabled
 {{/button}}
@@ -142,6 +157,12 @@ import './Button.css'
   Link disabled
 {{/button}}
 
+{{#> button button--modifier="pf-m-link pf-m-danger" button--attribute="disabled"}}
+  {{#> button-icon button-icon--modifier="pf-m-start"}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+  Link danger disabled
+{{/button}}
 
 {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
   Inline link disabled
@@ -150,7 +171,6 @@ import './Button.css'
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove" disabled'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
-
 
 {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
   Control disabled
@@ -165,6 +185,10 @@ import './Button.css'
 
 {{#> button button--modifier="pf-m-secondary pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Secondary disabled
+{{/button}}
+
+{{#> button button--modifier="pf-m-secondary pf-m-danger pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
+  Secondary danger disabled
 {{/button}}
 
 {{#> button button--modifier="pf-m-tertiary pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
@@ -186,6 +210,13 @@ import './Button.css'
   Link disabled
 {{/button}}
 
+{{#> button button--modifier="pf-m-link pf-m-danger pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
+  {{#> button-icon button-icon--modifier="pf-m-start"}}
+    <i class="fas fa-plus-circle" aria-hidden="true"></i>
+  {{/button-icon}}
+  Link danger disabled
+{{/button}}
+
 {{#> button button--modifier="pf-m-link pf-m-inline pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Inline link disabled
 {{/button}}
@@ -193,7 +224,6 @@ import './Button.css'
 {{#> button button--modifier="pf-m-plain pf-m-aria-disabled" button--attribute='aria-label="Remove" aria-disabled="true"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
-
 
 {{#> button button--modifier="pf-m-control pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
   Control disabled
@@ -210,12 +240,20 @@ import './Button.css'
   Secondary link to anchor
 {{/button-link}}
 
+{{#> button-link button-link--attribute='href="#overview" aria-label="Read more about button documentation"' button-link--modifier="pf-m-secondary pf-m-danger"}}
+  Secondary danger link to anchor
+{{/button-link}}
+
 {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" aria-disabled="true" tabindex="-1"' button-link--modifier="pf-m-tertiary pf-m-disabled"}}
   Tertiary link to W3.org
 {{/button-link}}
 
 {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-link"}}
   Link to W3.org
+{{/button-link}}
+
+{{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-link pf-m-danger"}}
+  Link danger to W3.org
 {{/button-link}}
 ```
 
