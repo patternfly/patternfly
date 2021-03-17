@@ -7,7 +7,7 @@ const cheerio = require('cheerio');
 const { hbsInstance, hbsFileMap } = require('./html');
 
 function prettyHTML(html) {
-  return prettify(html);
+  return prettify(html).replace(/ {4}/g, '  ');
 }
 
 function generateSnippets(htmlIndexFiles) {
