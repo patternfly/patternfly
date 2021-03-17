@@ -54,7 +54,9 @@
   // Nav link toggle icon
   --pf-c-wizard__nav-link-toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-wizard__nav-link-toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-wizard__nav-link-toggle-icon--Color: var(--pf-global--Color--100);
+  --pf-c-wizard__nav-link-toggle-icon--Color: var(--pf-global--Color--200);
+  --pf-c-wizard__nav-link--hover__nav-link-toggle-icon--Color: var(--pf-global--Color--100);
+  --pf-c-wizard__nav-link--focus__nav-link-toggle-icon--Color: var(--pf-global--Color--100);
   --pf-c-wizard__nav-link-toggle-icon--Transition: var(--pf-global--Transition);
   --pf-c-wizard__nav-link-toggle-icon--Rotate: 0;
   --pf-c-wizard__nav-item--m-expanded__link-toggle-icon--Rotate: 90deg;
@@ -463,10 +465,12 @@
 
   &:hover {
     --pf-c-wizard__nav-link--Color: var(--pf-c-wizard__nav-link--hover--Color);
+    --pf-c-wizard__nav-link-toggle-icon--Color: var(--pf-c-wizard__nav-link--hover__nav-link-toggle-icon--Color);
   }
 
   &:focus {
     --pf-c-wizard__nav-link--Color: var(--pf-c-wizard__nav-link--focus--Color);
+    --pf-c-wizard__nav-link-toggle-icon--Color: var(--pf-c-wizard__nav-link--focus__nav-link-toggle-icon--Color);
   }
 
   &.pf-m-current {
