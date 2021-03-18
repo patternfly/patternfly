@@ -211,6 +211,13 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 {{/select}}
 ```
 
+### Checkbox with counts
+```hbs
+{{#> select id="select-checkbox-counts" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--HasCounts="true"}}
+  Filter
+{{/select}}
+```
+
 The checkbox select can select multiple items using checkboxes. The number of items selected is reflected in an optional badge in the dropdown toggle. The user may clear items by unchecking or using the clear button. Optionally, items may be grouped.
 ## Usage
 | Class | Applied to | Outcome |
@@ -225,6 +232,9 @@ The checkbox select can select multiple items using checkboxes. The number of it
 | `.pf-c-select__toggle-arrow` | `<span>` | Initiates the caret to toggle the dropdown. |
 | `.pf-c-select__menu` | `<div>` | Initiates the select dropdown menu. |
 | `.pf-c-select__menu-item` | `div.pf-c-check` | Initiates the items in the select dropdown menu. |
+| `.pf-c-select__menu-item-row` | `<span>` | Initiates a menu item row for use with positioning other elements before/after the item text. |
+| `.pf-c-select__menu-item-text` | `<span>` | Initiates the menu item row text. |
+| `.pf-c-select__menu-item-count` | `<span>` | Initiates the menu item row count. |
 | `.pf-c-select__menu-fieldset` | `<fieldset>` | Initiates a fieldset for the items in a checkbox select. |
 | `.pf-c-select__menu-group` | `<div>` | Initiates a group within a select menu. |
 | `.pf-c-select__menu-group-title` | `<div>` | Initiates a title for a group with a select menu. |
@@ -339,19 +349,6 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-m-link` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item for link styles. |
 | `.pf-m-action` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item to for action styles. |
 
-### Counts
-```hbs
-{{#> select id="select-counts" select--IsCounts="true" select--IsExpanded="true"}}
-  Select with counts
-{{/select}}
-```
-
-## Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-select__item-row` | `<span>` | Initiates a menu item row for use with positioning other elements before/after the item text. |
-| `.pf-c-select__item-text` | `<span>` | Initiates the menu item row text. |
-| `.pf-c-select__item-count` | `<span>` | Initiates the menu item row count. |
 
 ## Documentation
 ### Overview

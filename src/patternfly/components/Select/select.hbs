@@ -24,6 +24,8 @@
       {{else}}
         {{> select-checkbox-groups}}
       {{/if}}
+    {{else if select--HasCounts}}
+      {{> select-checkbox-counts}}
     {{else}}
       {{#if select--IsChecked}}
         {{> select-checkbox-checked}}
