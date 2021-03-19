@@ -2,12 +2,12 @@ const path = require('path');
 const fs = require('fs');
 const { src } = require('gulp');
 const through2 = require('through2');
-const prettify = require('html-prettify');
+const { render } = require('html-formatter');
 const cheerio = require('cheerio');
 const { hbsInstance, hbsFileMap } = require('./html');
 
 function prettyHTML(html) {
-  return prettify(html).replace(/ {4}/g, '  ');
+  return render(` ${html} `).replace(/\t/g, '  ');
 }
 
 function generateSnippets(htmlIndexFiles) {
