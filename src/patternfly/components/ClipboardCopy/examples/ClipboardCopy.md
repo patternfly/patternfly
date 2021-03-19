@@ -97,6 +97,113 @@ cssPrefix: pf-c-clipboard-copy
 {{/clipboard-copy}}
 ```
 
+### Inline
+```hbs
+<h4><strong>Basic</strong></h4>
+{{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-basic"}}
+  {{#> clipboard-copy-text}}
+    2.3.4-2-redhat
+  {{/clipboard-copy-text}}
+  {{#> clipboard-copy-actions}}
+    {{#> clipboard-copy-actions-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+        <i class="fas fa-copy" aria-hidden="true"></i>
+      {{/button}}
+    {{/clipboard-copy-actions-item}}
+  {{/clipboard-copy-actions}}
+{{/clipboard-copy}}
+
+<br><br>
+
+<h4><strong>Code variant</strong></h4>
+{{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-code" clipboard-copy-text--IsCode="true"}}
+  {{#> clipboard-copy-text}}
+    2.3.4-2-redhat
+  {{/clipboard-copy-text}}
+  {{#> clipboard-copy-actions}}
+    {{#> clipboard-copy-actions-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+        <i class="fas fa-copy" aria-hidden="true"></i>
+      {{/button}}
+    {{/clipboard-copy-actions-item}}
+  {{/clipboard-copy-actions}}
+{{/clipboard-copy}}
+<br><br>
+
+<h4><strong>Additional action</strong></h4>
+{{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-addl-action"}}
+  {{#> clipboard-copy-text}}
+    2.3.4-2-redhat
+  {{/clipboard-copy-text}}
+  {{#> clipboard-copy-actions}}
+    {{#> clipboard-copy-actions-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+        <i class="fas fa-copy" aria-hidden="true"></i>
+      {{/button}}
+    {{/clipboard-copy-actions-item}}
+    {{#> clipboard-copy-actions-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Run in web terminal"'}}
+        <i class="fas fa-play" aria-hidden="true"></i>
+      {{/button}}
+    {{/clipboard-copy-actions-item}}
+  {{/clipboard-copy-actions}}
+{{/clipboard-copy}}
+
+<br><br>
+
+<h4><strong>In a sentence</strong></h4>
+Lorem ipsum&nbsp;
+{{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-sentence"}}
+  {{#> clipboard-copy-text}}
+    2.3.4-2-redhat
+  {{/clipboard-copy-text}}
+  {{#> clipboard-copy-actions}}
+    {{#> clipboard-copy-actions-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+        <i class="fas fa-copy" aria-hidden="true"></i>
+      {{/button}}
+    {{/clipboard-copy-actions-item}}
+  {{/clipboard-copy-actions}}
+{{/clipboard-copy}}
+&nbsp;dolor sit amet.
+
+<br><br>
+
+<h4><strong>Long string that wraps</strong></h4>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
+{{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-long-wrap"}}
+  {{#> clipboard-copy-text}}
+    https://app.openshift.io/path/sub-path/sub-sub-path/?runtime=quarkus/12345678901234567890/abcdefghijklmnopqrstuvwxyz1234567890
+  {{/clipboard-copy-text}}
+  {{#> clipboard-copy-actions}}
+    {{#> clipboard-copy-actions-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+        <i class="fas fa-copy" aria-hidden="true"></i>
+      {{/button}}
+    {{/clipboard-copy-actions-item}}
+  {{/clipboard-copy-actions}}
+{{/clipboard-copy}}
+&nbsp;Mauris luctus, libero nec dapibus ultricies, urna purus pretium mauris, ullamcorper pharetra lacus nibh vitae enim.
+
+<br><br>
+
+<h4><strong>Block variant</strong></h4>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
+{{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-block" clipboard-copy--IsBlock="true"}}
+  {{#> clipboard-copy-text}}
+    https://app.openshift.io/path/sub-path/sub-sub-path/?runtime=quarkus/12345678901234567890/abcdefghijklmnopqrstuvwxyz1234567890
+  {{/clipboard-copy-text}}
+  {{#> clipboard-copy-actions}}
+    {{#> clipboard-copy-actions-item}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Copy to clipboard"'}}
+        <i class="fas fa-copy" aria-hidden="true"></i>
+      {{/button}}
+    {{/clipboard-copy-actions-item}}
+  {{/clipboard-copy-actions}}
+{{/clipboard-copy}}
+&nbsp;Mauris luctus, libero nec dapibus ultricies, urna purus pretium mauris, ullamcorper pharetra lacus nibh vitae enim.
+```
+
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -115,5 +222,11 @@ cssPrefix: pf-c-clipboard-copy
 | `.pf-c-clipboard-copy__group` | `<div>` | Initiates a wrapper for the clipboard copy group. **Required** |
 | `.pf-c-clipboard-copy__toggle-icon` | `<div>` | Initiates a toggle button icon. |
 | `.pf-c-clipboard-copy__expandable-content` | `<div>` | Initiates an expandable element. |
+| `.pf-c-clipboard-copy__text` | `<span>` | Initiates the inline copy clipboard text element. **Required** |
+| `.pf-c-clipboard-copy__actions` | `<span>` | Initiates the inline copy clipboard actions element. **Required** |
+| `.pf-c-clipboard-copy__actions-item` | `<span>` | Initiates the inline copy clipboard actions item element. **Required** |
+| `.pf-m-inline` | `.pf-c-clipboard-copy` | Modifies the clipboard copy component for inline styles. |
+| `.pf-m-block` | `.pf-c-clipboard-copy.pf-m-inline` | Modifies the inline copy clipboard component to have block formatting. |
 | `.pf-m-expanded` | `.pf-c-clipboard-copy` | Modifies the clipboard copy component for the expanded state. |
 | `.pf-m-expanded` | `.pf-c-button.pf-m-control` | Modifies the control toggle button for the expanded state. |
+| `.pf-m-code` | `code.pf-c-clipboard-copy__text` | Modifies the inline copy clipboard text styles for use with the `<code>` element. |
