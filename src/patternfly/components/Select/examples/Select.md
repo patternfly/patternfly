@@ -19,6 +19,13 @@ import './Select.css'
 {{/select}}
 ```
 
+### Invalid
+```hbs
+{{#> select id="select-invalid" select--IsInvalid="true"}}
+  Filter by birth month
+{{/select}}
+```
+
 ### Single expanded
 ```hbs
 {{#> select id="select-single-expanded" select--IsExpanded="true"}}
