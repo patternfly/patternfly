@@ -1504,17 +1504,17 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 ### Tree table
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-basic" table--gridsss="true" table--attribute='aria-label="This is a simple tree table example"'}}
+{{> table-tree-view--basic table--id="tree-table-basic" table--modifier="pf-m-tree-view-grid-md" table--attribute='aria-label="This is a simple tree table example"'}}
 ```
 
 ### Tree table with checkboxes
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-with-checkboxes" table--gridsss="true" tree-view--HasCheckboxes="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"'}}
+{{> table-tree-view--basic table--id="tree-table-with-checkboxes" table--modifier="pf-m-tree-view-grid-md" tree-view--HasCheckboxes="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"'}}
 ```
 
 ### Tree table with checkboxes, icons
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons" table--gridsss="true" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"'}}
+{{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons" table--modifier="pf-m-tree-view-grid-md" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"'}}
 ```
 
 ### Accessibility
@@ -1536,9 +1536,13 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__tree-view-main` | `<div>` | Initiates a tree view table main container. |
-| `.pf-c-table__tree-view-content` | `<div>` | Initiates a tree view table content element. |
-| `.pf-c-table__tree-view-icon` | `<span>` | Initiates a tree view icon wrapper. |
+| `.pf-c-table__tree-view-main` | `<div>` | Initiates a tree view table main container. **Required with tree view** |
+| `.pf-c-table__tree-view-content` | `<div>` | Initiates a tree view table content element. **Required with tree view** |
+| `.pf-c-table__tree-view-icon` | `<span>` | Initiates a tree view icon wrapper. **Required with tree view** |
+| `.pf-c-table__tree-view-title-header-cell` | `<th>` | Initiates a tree view title header cell. **Required with tree view** |
+| `.pf-c-table__tree-view-details-toggle` | `<span>` | Initiates a tree view details toggle container. |
+| `.pf-c-table__tree-view-details-toggle-icon` | `<span>` | Initiates a tree view details toggle icon. |
+| `.pf-m-treeview-details-expanded` | `<tr>` | Modifies a tbody with a row and an expandable row. |
 
 ### Borderless
 ```hbs

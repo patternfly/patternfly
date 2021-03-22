@@ -1,8 +1,8 @@
 {{#> table-tr table-tr--attribute='role="row"'}}
-  {{#> table-td table-td--data-label="Tree view content"}}
+  {{#> table-th table-th--modifier="pf-c-table__tree-view-title-cell"}}
     {{#> table-tree-view-main}}
       {{#unless table-tr--tree--IsLeaf}}
-        {{#> table-td table-td--type="span" table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node-' table-tr--tree--index ' ' table--id '-expandable-toggle-' table-tr--tree--index '" id="' table--id '-expandable-toggle-' table-tr--tree--index '" aria-label="Details"')}}{{/table-td}}
+        {{> table-td table-td--type="span" table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node-' table-tr--tree--index ' ' table--id '-expandable-toggle-' table-tr--tree--index '" id="' table--id '-expandable-toggle-' table-tr--tree--index '" aria-label="Details"')}}
       {{/unless}}
       {{#unless table-tr--tree--HasNoCheckbox}}
         {{#if tree-view--HasCheckboxes}}
@@ -29,11 +29,12 @@
           {{/if}}
         {{/table-text}}
       {{/table-tree-view-content}}
+      {{> table-tree-view-details-toggle}}
       {{#if @partial-block}}
         {{> @partial-block}}
       {{/if}}
     {{/table-tree-view-main}}
-  {{/table-td}}
+  {{/table-th}}
   {{#> table-td table-td--data-label="Migration assessment"}}
     10
   {{/table-td}}
