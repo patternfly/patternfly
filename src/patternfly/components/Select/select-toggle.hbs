@@ -10,6 +10,9 @@
     {{#if aria-label}}
       aria-label="{{aria-label}}"
     {{/if}}
+    {{#if select--IsInvalid}}
+      aria-invalid="true"
+    {{/if}}
     {{/unless}}
   {{#if select-toggle--attribute}}
     {{{select-toggle--attribute}}}
@@ -58,6 +61,11 @@
       {{/if}}
     {{/if}}
   {{/select-toggle-wrapper}}
+  {{#if select--IsInvalid}}
+    {{#> select-toggle-status-icon}}
+      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+    {{/select-toggle-status-icon}}
+  {{/if}}
   {{!-- Clear button if it's typeahead and something has been typed --}}
   {{#if select--IsTypeahead}}
     {{#if select--ItemIsSelected}}

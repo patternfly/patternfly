@@ -11,7 +11,11 @@
   --pf-c-select__toggle--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-select__toggle--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-select__toggle--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-select__toggle--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-select__toggle--before--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-select__toggle--before--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-select__toggle--before--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-select__toggle--before--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-select__toggle--before--BorderWidth: var(--pf-c-select__toggle--before--BorderTopWidth) var(--pf-c-select__toggle--before--BorderRightWidth) var(--pf-c-select__toggle--before--BorderBottomWidth) var(--pf-c-select__toggle--before--BorderLeftWidth); // remove at breaking change
   --pf-c-select__toggle--before--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-select__toggle--before--BorderRightColor: var(--pf-global--BorderColor--300);
   --pf-c-select__toggle--before--BorderBottomColor: var(--pf-global--BorderColor--200);
@@ -19,13 +23,19 @@
   --pf-c-select__toggle--Color: var(--pf-global--Color--100);
   --pf-c-select__toggle--hover--before--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-select__toggle--focus--before--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-select__toggle--active--before--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-select__toggle--m-expanded--before--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-select__toggle--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select__toggle--active--before--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-select__toggle--active--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-select__toggle--m-expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select__toggle--m-expanded--before--BorderBottomColor: var(--pf-global--active-color--100); // rename to c-select--m-expanded at breaking change
+  --pf-c-select__toggle--m-expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--md); // rename to c-select--m-expanded at breaking change
   --pf-c-select__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-select__toggle--m-plain--before--BorderColor: transparent;
+  --pf-c-select--m-invalid__toggle--before--BorderBottomColor: var(--pf-global--danger-color--100);
+  --pf-c-select--m-invalid__toggle--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-select--m-invalid__toggle--hover--before--BorderBottomColor: var(--pf-global--danger-color--100);
+  --pf-c-select--m-invalid__toggle--focus--before--BorderBottomColor: var(--pf-global--danger-color--100);
+  --pf-c-select--m-invalid__toggle--active--before--BorderBottomColor: var(--pf-global--danger-color--100);
+  --pf-c-select--m-invalid__toggle--m-expanded--before--BorderBottomColor: var(--pf-global--danger-color--100);
 
   // Space for the children of the toggle
   --pf-c-select__toggle-wrapper--not-last-child--MarginRight: var(--pf-global--spacer--xs);
@@ -56,6 +66,11 @@
 
   // Select toggle badge
   --pf-c-select__toggle-badge--PaddingLeft: var(--pf-global--spacer--sm);
+
+  // Select toggle status icon
+  --pf-c-select__toggle-status-icon--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-select__toggle-status-icon--Color: var(--pf-global--Color--100);
+  --pf-c-select--m-invalid__toggle-status-icon--Color: var(--pf-global--danger-color--100);
 
   // Toggle arrow
   --pf-c-select__toggle-arrow--MarginLeft: var(--pf-global--spacer--md);
@@ -165,6 +180,16 @@
       --pf-c-select-menu--c-divider--MarginBottom: 0;
     }
   }
+
+  &.pf-m-invalid {
+    --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select--m-invalid__toggle--before--BorderBottomColor);
+    --pf-c-select__toggle--before--BorderBottomWidth: var(--pf-c-select--m-invalid__toggle--before--BorderBottomWidth);
+    --pf-c-select__toggle--hover--before--BorderBottomColor: var(--pf-c-select--m-invalid__toggle--hover--before--BorderBottomColor);
+    --pf-c-select__toggle--focus--before--BorderBottomColor: var(--pf-c-select--m-invalid__toggle--focus--before--BorderBottomColor);
+    --pf-c-select__toggle--active--before--BorderBottomColor: var(--pf-c-select--m-invalid__toggle--active--before--BorderBottomColor);
+    --pf-c-select__toggle--m-expanded--before--BorderBottomColor: var(--pf-c-select--m-invalid__toggle--m-expanded--before--BorderBottomColor);
+    --pf-c-select__toggle-status-icon--Color: var(--pf-c-select--m-invalid__toggle-status-icon--Color);
+  }
 }
 
 .pf-c-select__menu-search + .pf-c-divider {
@@ -206,40 +231,30 @@
     bottom: 0;
     left: 0;
     content: "";
-    border: var(--pf-c-select__toggle--before--BorderWidth) solid;
     border-color: var(--pf-c-select__toggle--before--BorderTopColor) var(--pf-c-select__toggle--before--BorderRightColor) var(--pf-c-select__toggle--before--BorderBottomColor) var(--pf-c-select__toggle--before--BorderLeftColor);
+    border-style: solid;
+    border-width: var(--pf-c-select__toggle--before--BorderWidth);
   }
 
   &:hover {
-    &::before {
-      --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--hover--before--BorderBottomColor);
-    }
+    --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--hover--before--BorderBottomColor);
   }
 
   &:focus,
   &:focus-within {
-    &::before {
-      --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--focus--before--BorderBottomColor);
-
-      border-bottom-width: var(--pf-c-select__toggle--focus--before--BorderBottomWidth);
-    }
+    --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--focus--before--BorderBottomColor);
+    --pf-c-select__toggle--before--BorderBottomWidth: var(--pf-c-select__toggle--focus--before--BorderBottomWidth);
   }
 
   &:active,
   &.pf-m-active {
-    &::before {
-      --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--active--before--BorderBottomColor);
-
-      border-bottom-width: var(--pf-c-select__toggle--active--before--BorderBottomWidth);
-    }
+    --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--active--before--BorderBottomColor);
+    --pf-c-select__toggle--before--BorderBottomWidth: var(--pf-c-select__toggle--active--before--BorderBottomWidth);
   }
 
   .pf-m-expanded > & {
-    &::before {
-      --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--m-expanded--before--BorderBottomColor);
-
-      border-bottom-width: var(--pf-c-select__toggle--m-expanded--before--BorderBottomWidth);
-    }
+    --pf-c-select__toggle--before--BorderBottomColor: var(--pf-c-select__toggle--m-expanded--before--BorderBottomColor);
+    --pf-c-select__toggle--before--BorderBottomWidth: var(--pf-c-select__toggle--m-expanded--before--BorderBottomWidth);
   }
 
   &.pf-m-plain {
@@ -329,6 +344,11 @@
 
 .pf-c-select__toggle-icon + .pf-c-select__toggle-text {
   margin-left: var(--pf-c-select__toggle-icon--toggle-text--MarginLeft);
+}
+
+.pf-c-select__toggle-status-icon {
+  margin-left: var(--pf-c-select__toggle-status-icon--MarginLeft);
+  color: var(--pf-c-select__toggle-status-icon--Color);
 }
 
 .pf-c-select__toggle-badge {
