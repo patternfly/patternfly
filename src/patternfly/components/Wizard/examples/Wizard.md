@@ -188,7 +188,7 @@ import './Wizard.css'
 
 ### Expandable collapsed
 ```hbs isFullscreen
-{{#> wizard wizard--id="wizard-basic"}}
+{{#> wizard wizard--id="wizard-expandable-collapsed"}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
@@ -277,7 +277,7 @@ import './Wizard.css'
 
 ### Expandable expanded
 ```hbs isFullscreen
-{{#> wizard wizard--id="wizard-basic"}}
+{{#> wizard wizard--id="wizard-expandable-expanded"}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
