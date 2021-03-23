@@ -8,7 +8,7 @@ import './CardView.css'
 
 ## Demos
 
-### Card view
+<!-- ### Card view
 ```hbs isFullscreen
 {{#> page page--id="card-view-example"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -439,7 +439,7 @@ import './CardView.css'
     {{#> gallery gallery--modifier="pf-m-gutter"}}
       {{#> card card--modifier="pf-u-text-align-center"}}
         {{#> card-title}}
-            10 Hosts
+          10 Hosts
         {{/card-title}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
@@ -465,7 +465,7 @@ import './CardView.css'
       {{/card}}
       {{#> card card--modifier="pf-u-text-align-center"}}
         {{#> card-title}}
-            50 Hosts
+          50 Hosts
         {{/card-title}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
@@ -491,7 +491,7 @@ import './CardView.css'
       {{/card}}
       {{#> card card--modifier="pf-u-text-align-center"}}
         {{#> card-title}}
-            12 Hosts
+          12 Hosts
         {{/card-title}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
@@ -521,7 +521,7 @@ import './CardView.css'
     {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 260px;"'}}
       {{#> card}}
         {{#> card-title card-title--modifier="pf-u-text-align-center"}}
-            13 Hosts
+          13 Hosts
         {{/card-title}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
@@ -529,27 +529,19 @@ import './CardView.css'
               {{#> l-flex-item}}
                 <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
-              {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
-                {{#> l-flex-item}}
-                  <a href="#">2 errors</a>
-                {{/l-flex-item}}
-                {{#> l-flex-item}}
-                  <span>subtitle</span>
-                {{/l-flex-item}}
-              {{/l-flex}}
+              {{#> stack}}
+                <a href="#">2 errors</a>
+                <span>subtitle</span>
+              {{/stack}}
             {{/l-flex}}
             {{#> l-flex}}
               {{#> l-flex-item}}
                 <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
-              {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
-                {{#> l-flex-item}}
-                  <a href="#">1 warnings</a>
-                {{/l-flex-item}}
-                {{#> l-flex-item}}
-                  <span>subtitle</span>
-                {{/l-flex-item}}
-              {{/l-flex}}
+              {{#> stack}}
+                <a href="#">1 warnings</a>
+                <span>subtitle</span>
+              {{/stack}}
             {{/l-flex}}
           {{/l-flex}}
         {{/card-body}}
@@ -564,27 +556,19 @@ import './CardView.css'
               {{#> l-flex-item}}
                 <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
-              {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
-                {{#> l-flex-item}}
-                  <a href="#">2 successes</a>
-                {{/l-flex-item}}
-                {{#> l-flex-item}}
-                  <span>subtitle</span>
-                {{/l-flex-item}}
-              {{/l-flex}}
+              {{#> stack}}
+                <a href="#">2 successes</a>
+                <span>subtitle</span>
+              {{/stack}}
             {{/l-flex}}
             {{#> l-flex}}
               {{#> l-flex-item}}
                 <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
-              {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
-                {{#> l-flex-item}}
-                  <a href="#">3 warnings</a>
-                {{/l-flex-item}}
-                {{#> l-flex-item}}
-                  <span>subtitle</span>
-                {{/l-flex-item}}
-              {{/l-flex}}
+              {{#> stack}}
+                <a href="#">3 warnings</a>
+                <span>subtitle</span>
+              {{/stack}}
             {{/l-flex}}
           {{/l-flex}}
         {{/card-body}}
@@ -599,27 +583,19 @@ import './CardView.css'
               {{#> l-flex-item}}
                 <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
-              {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
-                {{#> l-flex-item}}
-                  <a href="#">7 warnings</a>
-                {{/l-flex-item}}
-                {{#> l-flex-item}}
-                  <span>subtitle</span>
-                {{/l-flex-item}}
-              {{/l-flex}}
+              {{#> stack}}
+                <a href="#">7 warnings</a>
+                <span>subtitle</span>
+              {{/stack}}
             {{/l-flex}}
             {{#> l-flex}}
               {{#> l-flex-item}}
                 <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
-              {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
-                {{#> l-flex-item}}
-                  <a href="#">1 error</a>
-                {{/l-flex-item}}
-                {{#> l-flex-item}}
-                  <span>subtitle</span>
-                {{/l-flex-item}}
-              {{/l-flex}}
+              {{#> stack}}
+                <a href="#">1 error</a>
+                <span>subtitle</span>
+              {{/stack}}
             {{/l-flex}}
           {{/l-flex}}
         {{/card-body}}
@@ -771,7 +747,7 @@ import './CardView.css'
 ```hbs
 {{> cardview-demo--status-card card--id="status-card-expanded-with-popover-example" cardview-demo--popover--IsOpen="true" cardview-demo--notication-drawer--IsOpen="true"}}
 ```
-
+-->
 ### Utilization card 1
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
@@ -782,43 +758,23 @@ import './CardView.css'
       {{/title}}
     {{/card-title}}
     {{#> card-body}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs"}}
-        {{#> l-flex-item}}
-          {{#> stack}}
-            {{#> stack-item}}
-              <b>Cluster-1204</b>
-            {{/stack-item}}
-            {{#> stack-item}}
-              <span>27.3 cores available</span>
-            {{/stack-item}}
-          {{/stack}}
-        {{/l-flex-item}}
-        {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
-          {{> cardview-demo--chart}}
-        {{/l-flex-item}}
-        {{#> l-flex-item}}
-          <a href="#">View details</a>
-        {{/l-flex-item}}
+      {{#> l-flex l-flex--modifier="pf-m-column"}}
+        {{#> stack}}
+          <b>Cluster-1204</b>
+          <span>27.3 cores available</span>
+        {{/stack}}
+        {{> cardview-demo--chart}}
+        <a href="#">View details</a>
       {{/l-flex}}
     {{/card-body}}
     {{#> card-body}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
-        {{#> l-flex-item}}
-          {{#> stack}}
-            {{#> stack-item}}
-              <b>Abcdef-1204</b>
-            {{/stack-item}}
-            {{#> stack-item}}
-              <span>50.6 cores available</span>
-            {{/stack-item}}
-          {{/stack}}
-        {{/l-flex-item}}
-        {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
-          {{> cardview-demo--chart}}
-        {{/l-flex-item}}
-        {{#> l-flex-item}}
-          <a href="#">View details</a>
-        {{/l-flex-item}}
+      {{#> l-flex l-flex--modifier="pf-m-column"}}
+        {{#> stack}}
+          <b>Abcdef-1204</b>
+          <span>50.6 cores available</span>
+        {{/stack}}
+        {{> cardview-demo--chart}}
+        <a href="#">View details</a>
       {{/l-flex}}
     {{/card-body}}
     {{> divider}}
@@ -839,37 +795,21 @@ import './CardView.css'
       {{/title}}
     {{/card-title}}
     {{#> card-body}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs"}}
-        {{#> l-flex-item}}
-          {{#> stack}}
-            {{#> stack-item}}
-              <a href="#">Cluster-1204</a>
-            {{/stack-item}}
-            {{#> stack-item}}
-              <span>27.3 cores available</span>
-            {{/stack-item}}
-          {{/stack}}
-        {{/l-flex-item}}
-        {{#> l-flex-item}}
-          {{> cardview-demo--chart}}
-        {{/l-flex-item}}
+      {{#> l-flex l-flex--modifier="pf-m-column"}}
+        {{#> stack}}
+          <a href="#">Cluster-1204</a>
+          <span>27.3 cores available</span>
+        {{/stack}}
+        {{> cardview-demo--chart}}
       {{/l-flex}}
     {{/card-body}}
     {{#> card-body}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
-        {{#> l-flex-item}}
-          {{#> stack}}
-            {{#> stack-item}}
-              <a href="#">Abcdef-1204</a>
-            {{/stack-item}}
-            {{#> stack-item}}
-              <span>50.6 cores available</span>
-            {{/stack-item}}
-          {{/stack}}
-        {{/l-flex-item}}
-        {{#> l-flex-item}}
-          {{> cardview-demo--chart}}
-        {{/l-flex-item}}
+      {{#> l-flex l-flex--modifier="pf-m-column"}}
+        {{#> stack}}
+          <a href="#">Abcdef-1204</a>
+          <span>50.6 cores available</span>
+        {{/stack}}
+        {{> cardview-demo--chart}}
       {{/l-flex}}
     {{/card-body}}
     {{> divider}}
@@ -895,21 +835,13 @@ import './CardView.css'
       {{/card-actions}}
     {{/card-header}}
     {{#> card-body}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs"}}
-        {{#> l-flex-item}}
-          <span>System</span>
-        {{/l-flex-item}}
+      {{#> l-flex l-flex--modifier="pf-m-column"}}
+        <span>System</span>
         {{#> l-flex newcontext}}
-          {{#> l-flex-item}}
-            <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
-          {{/l-flex-item}}
-          {{#> l-flex-item}}
-            <a hfer="#">25 incidents detected</a>
-          {{/l-flex-item}}
+          <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+          <a hfer="#">25 incidents detected</a>
         {{/l-flex}}
-        {{#> l-flex-item}}
-          {{> cardview-demo--chart cardview-demo--chart--IsStackChart="true"}}
-        {{/l-flex-item}}
+        {{> cardview-demo--chart cardview-demo--chart--IsStackChart="true"}}
       {{/l-flex}}
     {{/card-body}}
     {{#> card-footer}}
@@ -948,7 +880,7 @@ import './CardView.css'
       {{/title}}
     {{/card-title}}
   {{/card-header}}
-  {{#> card card--id=(concat card--id '-group-1') card--modifier="pf-m-no-box-shadow pf-m-expanded"}}
+  {{#> card card--id=(concat card--id '-group-1') card--modifier="pf-m-plain pf-m-expanded"}}
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
@@ -963,7 +895,7 @@ import './CardView.css'
       {{/card-body}}
     {{/card-expandable-content}}
   {{/card}}
-  {{#> card card--id=(concat card--id '-group-2') card--modifier="pf-m-no-box-shadow"}}
+  {{#> card card--id=(concat card--id '-group-2') card--modifier="pf-m-plain"}}
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
@@ -973,7 +905,7 @@ import './CardView.css'
       {{/card-title}}
     {{/card-header}}
   {{/card}}
-  {{#> card card--id=(concat card--id '-group-3') card--modifier="pf-m-no-box-shadow"}}
+  {{#> card card--id=(concat card--id '-group-3') card--modifier="pf-m-plain"}}
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
@@ -996,7 +928,7 @@ import './CardView.css'
       {{/title}}
     {{/card-title}}
   {{/card-header}}
-  {{#> card card--id=(concat card--id '-group-1') card--modifier="pf-m-no-box-shadow pf-m-expanded"}}
+  {{#> card card--id=(concat card--id '-group-1') card--modifier="pf-m-plain pf-m-expanded"}}
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
@@ -1011,7 +943,7 @@ import './CardView.css'
       {{/card-body}}
     {{/card-expandable-content}}
   {{/card}}
-  {{#> card card--id=(concat card--id '-group-2') card--modifier="pf-m-no-box-shadow"}}
+  {{#> card card--id=(concat card--id '-group-2') card--modifier="pf-m-plain"}}
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
@@ -1021,7 +953,7 @@ import './CardView.css'
       {{/card-title}}
     {{/card-header}}
   {{/card}}
-  {{#> card card--id=(concat card--id '-group-3') card--modifier="pf-m-no-box-shadow"}}
+  {{#> card card--id=(concat card--id '-group-3') card--modifier="pf-m-plain"}}
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}

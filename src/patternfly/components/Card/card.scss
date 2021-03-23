@@ -47,7 +47,8 @@
   --pf-c-card__actions--child--MarginLeft: var(--pf-global--spacer--sm);
 
   // No box shadow
-  --pf-c-card--m-no-box-shadow--BoxShadow: none;
+  --pf-c-card--m-plain--BoxShadow: none;
+  --pf-c-card--m-plain--BackgroundColor: transparent;
 
   // Toggle right
   --pf-c-card__header--m-toggle-right--toggle--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
@@ -122,8 +123,9 @@
     border: var(--pf-c-card--m-flat--BorderWidth) solid var(--pf-c-card--m-flat--BorderColor);
   }
 
-  &.pf-m-no-box-shadow {
-    --pf-c-card--BoxShadow: var(--pf-c-card--m-no-box-shadow--BoxShadow);
+  &.pf-m-plain {
+    --pf-c-card--BoxShadow: var(--pf-c-card--m-plain--BoxShadow);
+    --pf-c-card--BackgroundColor: var(--pf-c-card--m-plain--BackgroundColor);
   }
 
   &.pf-m-rounded {

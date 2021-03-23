@@ -280,9 +280,9 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
-### No box shadow
+### Plain
 ```hbs
-{{#> card card--id="card-no-box-shadow-example" card--modifier="pf-m-no-box-shadow"}}
+{{#> card card--id="card-plain-example" card--modifier="pf-m-plain"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -413,9 +413,9 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` to not fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
 | `.pf-m-hoverable` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
 | `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
-| `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selectable card for the selected state. |
-| `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background. |
+| `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selePlain
+| `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-plain` is for use in layouts where cards are against a white background. |
 | `.pf-m-rounded` | `.pf-c-card` | Modifies the card to have rounded corners. |
-| `.pf-m-no-box-shadow` | `.pf-c-card` | Modifies the card to have rounded corners. |
+| `.pf-m-plain` | `.pf-c-card` | Modifies the card to have no box shadow and no background color. |
 | `.pf-m-expanded` | `.pf-c-card` | Modifies the card for the expanded state. |
-| `.pf-m-toggle-right` | `.pf-c-card__header` | Modifies the card header toggle to be positioned at flex-end. |
+| `.pf-m-toggle-right` | `.pf-c-card__header` | Modifies the expandable card header toggle to be positioned at flex-end. |
