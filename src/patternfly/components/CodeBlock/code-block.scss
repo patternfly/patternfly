@@ -30,6 +30,8 @@
 .pf-c-code-block__pre {
   font-family: var(--pf-c-code-block__pre--FontFamily);
   font-size: var(--pf-c-code-block__pre--FontSize);
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .pf-c-code-block__code {

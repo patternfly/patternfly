@@ -24,17 +24,17 @@ cssPrefix: pf-c-code-block
     {{/code-block-actions}}
   {{/code-block-header}}
   {{#> code-block-content}}
-    {{#> code-block-pre}}
-      {{#> code-block-code}}
+    {{#> code-block-pre~}}
+      {{~#> code-block-code~}}
 apiVersion: helm.openshift.io/v1beta1/<br>
-{{~#> foo}}{{/foo}}kind: HelmChartRepository<br>
-{{~#> foo}}{{/foo}}metadata:<br>
-{{~#> foo}}{{/foo}}name: azure-sample-repo<br>
-{{~#> foo}}{{/foo}}spec:<br>
-{{~#> foo}}{{/foo}}connectionConfig:<br>
-{{~#> foo}}{{/foo}}url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
-      {{/code-block-code}}
-    {{/code-block-pre}}
+kind: HelmChartRepository<br>
+metadata:<br>
+name: azure-sample-repo<br>
+spec:<br>
+connectionConfig:<br>
+url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
+      {{~/code-block-code~}}
+    {{~/code-block-pre}}
   {{/code-block-content}}
 {{/code-block}}
 ```
