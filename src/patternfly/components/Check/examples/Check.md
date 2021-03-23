@@ -109,7 +109,7 @@ If you extend this component or modify the styles of this component, then make s
 | `.pf-c-check` | `<div>`, `<label>` |  Initiates the check component. **Required**  |
 | `.pf-c-check__input` | `<input type="checkbox">` |  Initiates a check input. **Required**  |
 | `.pf-c-check__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
-| `.pf-c-check__description` | `<div>` |  Initiates a check description. |
-| `.pf-c-check__body` | `<div>` |  Initiates a check body. |
+| `.pf-c-check__description` | `<span>` |  Initiates a check description. |
+| `.pf-c-check__body` | `<span>` |  Initiates a check body. |
 | `.pf-m-standalone` | `.pf-c-check` |  Modifies the check component for use with a standalone `<input type="checkbox">`. **Required when there is no label** |
 | `.pf-m-disabled` | `.pf-c-check__label` |  Modifies the check component for the disabled state. **Required when input is disabled** |
