@@ -79,6 +79,7 @@ cssPrefix: pf-c-card
   {{/card-body}}
 {{/card}}
 ```
+
 ### With only image in head
 ```hbs
 {{#> card card--id="card-image-head-example"}}
@@ -279,6 +280,21 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
+### Plain
+```hbs
+{{#> card card--id="card-plain-example" card--modifier="pf-m-plain"}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
 ### Expandable
 ```hbs
 {{#> card card--id="card-expandable-example"}}
@@ -333,6 +349,22 @@ cssPrefix: pf-c-card
 {{/card}}
 ```
 
+### Expandable toggle on right
+```hbs
+{{#> card card--id="card-toggle-on-right-example"}}
+  {{#> card-header card-header--modifier="pf-m-toggle-right"}}
+    {{> card-header-toggle}}
+    {{#> card-actions}}
+      {{> card--dropdown}}
+      {{> card--check}}
+    {{/card-actions}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+      Title
+    {{/card-title}}
+  {{/card-header}}
+{{/card}}
+```
+
 ### Card with dividers between sections
 ```hbs
 {{#> card}}
@@ -381,7 +413,9 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` to not fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
 | `.pf-m-hoverable` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
 | `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
-| `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selectable card for the selected state. |
+| `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selectable card for the selected state.
 | `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background. |
 | `.pf-m-rounded` | `.pf-c-card` | Modifies the card to have rounded corners. |
+| `.pf-m-plain` | `.pf-c-card` | Modifies the card to have no box shadow and no background color. |
 | `.pf-m-expanded` | `.pf-c-card` | Modifies the card for the expanded state. |
+| `.pf-m-toggle-right` | `.pf-c-card__header` | Modifies the expandable card header toggle to be positioned at flex-end. |

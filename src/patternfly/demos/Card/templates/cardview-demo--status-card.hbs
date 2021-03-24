@@ -1,0 +1,66 @@
+{{#> card}}
+  {{#> card-header}}
+    {{#> title titleType="h2" title--modifier="pf-m-lg"}}
+      Status
+    {{/title}}
+  {{/card-header}}
+  {{#> card-body}}
+    {{#> grid grid--modifier="pf-m-all-6-col-on-sm pf-m-all-3-col-on-lg pf-m-gutter"}}
+      {{#> grid-item}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+          {{#> l-flex-item}}
+            <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex-item}}
+            <span>Cluster</span>
+          {{/l-flex-item}}
+        {{/l-flex}}
+      {{/grid-item}}
+      {{#> grid-item}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+          {{#> l-flex-item}}
+            <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex-item}}
+            <span class="popover-parent">
+              <a href="#">Control Panel</a>
+              {{> cardview-demo--popover popover--id=(concat card--id '-popover')}}
+            </span>
+          {{/l-flex-item}}
+        {{/l-flex}}
+      {{/grid-item}}
+      {{#> grid-item}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+          {{#> l-flex-item}}
+            <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> l-flex-item}}
+              <a href="#">Operators</a>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <span class="pf-u-color-400">1 degraged</span>
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/l-flex}}
+      {{/grid-item}}
+      {{#> grid-item}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+          {{#> l-flex-item}}
+            <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> l-flex-item}}
+              <a href="#">Image Vulnerabilities</a>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <span class="pf-u-color-400">0 vulnerable images</span>
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/l-flex}}
+      {{/grid-item}}
+    {{/grid}}
+  {{/card-body}}
+  {{> divider}}
+  {{> cardview-demo--notification-drawer notification-drawer--id=(concat card--id '-notification-drawer')}}
+{{/card}}

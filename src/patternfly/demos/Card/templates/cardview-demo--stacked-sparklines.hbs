@@ -1,0 +1,69 @@
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid grid--modifier="pf-m-gutter"}}
+    {{#> grid-item grid-item--modifier="pf-m-4-col-on-md"}}
+      {{#> l-flex l-flex--modifier="pf-m-column-on-md pf-m-space-items-none-on-md pf-m-justify-content-center-on-md pf-u-h-100-on-md"}}
+        {{#> l-flex-item}}
+          <b>Temperature</b>
+        {{/l-flex-item}}
+        {{> divider divider--modifier="pf-m-vertical pf-m-inset-sm pf-u-hidden-on-md"}}
+        {{#> l-flex-item}}
+          <span>64C</span>
+        {{/l-flex-item}}
+      {{/l-flex}}
+    {{/grid-item}}
+    {{#> grid-item grid-item--modifier="pf-m-8-col-on-md"}}
+      {{#> grid grid--modifier="pf-m-gutter"}}
+        {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none pf-m-align-items-flex-end-on-md"}}
+            {{#> l-flex-item}}
+              100C
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              50C
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              0C
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/grid-item}}
+        {{#> grid-item grid-item--modifier="pf-m-10-col"}}
+          {{> cardview-demo--chart cardview-demo--chart--IsLineChart2="true"}}
+        {{/grid-item}}
+      {{/grid}}
+    {{/grid-item}}
+  {{/grid}}
+  {{> divider divider--modifier="pf-u-hidden-on-md"}}
+  {{#> grid grid--modifier="pf-m-gutter"}}
+    {{#> grid-item grid-item--modifier="pf-m-4-col-on-md"}}
+      {{#> l-flex l-flex--modifier="pf-m-column-on-md pf-m-space-items-none-on-md pf-m-justify-content-center-on-md pf-u-h-100-on-md"}}
+        {{#> l-flex-item}}
+          <b>Speed</b>
+        {{/l-flex-item}}
+        {{> divider divider--modifier="pf-m-vertical pf-m-inset-sm pf-u-hidden-on-md"}}
+        {{#> l-flex-item}}
+          <span>2.3Ghz</span>
+        {{/l-flex-item}}
+      {{/l-flex}}
+    {{/grid-item}}
+    {{#> grid-item grid-item--modifier="pf-m-8-col-on-md"}}
+      {{#> grid grid--modifier="pf-m-gutter"}}
+        {{#> grid-item grid-item--modifier="pf-m-2-col"}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none pf-m-align-items-flex-end-on-md"}}
+            {{#> l-flex-item}}
+              36hz
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              1.5Ghz
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              0Ghz
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/grid-item}}
+        {{#> grid-item grid-item--modifier="pf-m-10-col"}}
+          {{> cardview-demo--chart cardview-demo--chart--IsLineChart2="true"}}
+        {{/grid-item}}
+      {{/grid}}
+    {{/grid-item}}
+  {{/grid}}
+{{/grid}}

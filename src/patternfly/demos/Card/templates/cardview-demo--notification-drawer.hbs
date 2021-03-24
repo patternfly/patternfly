@@ -1,0 +1,51 @@
+{{#> notification-drawer}}
+  {{#> notification-drawer-body}}
+    {{#> notification-drawer-group notification-drawer-group--IsExpanded=cardview-demo--notication-drawer--IsOpen}}
+      {{#> notification-drawer-group-toggle}}
+        {{#> notification-drawer-group-toggle-title}}
+          {{#> l-flex}}
+            {{#> notification-drawer-group-toggle-title}}
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
+                  <span>Notifications</span>
+                {{/l-flex-item}}
+                {{#> label label--id="default-red-icon" label--modifier="pf-m-red"}}
+                  {{#> label-icon}}
+                    <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
+                  {{/label-icon}}
+                  1
+                {{/label}}
+                {{#> label label--id="default-orange-icon" label--modifier="pf-m-orange pf-m-default"}}
+                  {{#> label-icon}}
+                    <i class="fas fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
+                  {{/label-icon}}
+                  3
+                {{/label}}
+                {{#> label label--id="default-green-icon" label--modifier="pf-m-green"}}
+                  {{#> label-icon}}
+                    <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
+                  {{/label-icon}}
+                  3
+                {{/label}}
+                {{#> label label--id="default-blue-icon" label--modifier="pf-m-blue"}}
+                  {{#> label-icon}}
+                    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+                  {{/label-icon}}
+                  3
+                {{/label}}
+                {{#> label label--id="default-cyan-icon" label--modifier="pf-m-cyan"}}
+                  {{#> label-icon}}
+                    <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
+                  {{/label-icon}}
+                  3
+                {{/label}}
+              {{/l-flex}}
+            {{/notification-drawer-group-toggle-title}}
+          {{/l-flex}}
+        {{/notification-drawer-group-toggle-title}}
+        {{> notification-drawer-group-toggle-icon}}
+      {{/notification-drawer-group-toggle}}
+      {{> cardview-demo--notification-list}}
+    {{/notification-drawer-group}}
+  {{/notification-drawer-body}}
+{{/notification-drawer}}

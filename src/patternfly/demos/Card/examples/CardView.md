@@ -4,10 +4,13 @@ section: components
 wrapperTag: div
 ---
 
+import './CardView.css'
+
 ## Demos
+
 ### Card view
 ```hbs isFullscreen
-{{#> page page--id="card-view"}}
+{{#> page page--id="card-view-example"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}
@@ -70,7 +73,7 @@ wrapperTag: div
       {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasBulkSelect="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasFilter="true" toolbar--template--HasToggleGroup="true"}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
-      {{> card-view-demo-template-gallery}}
+      {{> cardview-demo--template-gallery}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light pf-m-sticky-bottom pf-m-no-fill"}}
       {{#> pagination pagination--modifier="pf-m-bottom"}}
@@ -84,7 +87,7 @@ wrapperTag: div
 
 ### Horizontal grid collapsed
 ```hbs
-{{#> card card--id="card-demo-horizontal-grid-collapsed"}}
+{{#> card card--id="card-demo-horizontal-grid-collapsed-example"}}
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
@@ -136,7 +139,7 @@ wrapperTag: div
 
 ### Horizontal grid expanded
 ```hbs
-{{#> card card--id="card-demo-horizontal-grid-expanded" card--modifier="pf-m-expanded"}}
+{{#> card card--id="card-demo-horizontal-grid-expanded-example" card--modifier="pf-m-expanded"}}
   {{#> card-header}}
     {{> card-header-toggle}}
     {{#> card-actions}}
@@ -266,7 +269,7 @@ wrapperTag: div
 
 ### Horizontal split
 ```hbs
-{{#> card card--id="card-demo-horizontal-split" card--modifier="pf-m-flat"}}
+{{#> card card--id="card-demo-horizontal-split-example" card--modifier="pf-m-flat"}}
   {{#> grid grid--modifier="pf-m-all-6-col-on-md"}}
     {{#> grid-item grid-item--modifier="pf-d-card__media-item" grid-item--attribute='style="min-height: 200px; background: center / cover url(\'/assets/images/pfbg_992@2x.jpg\'); "'}}
     {{/grid-item}}
@@ -283,4 +286,961 @@ wrapperTag: div
     {{/grid-item}}
   {{/grid}}
 {{/card}}
+```
+
+### Details card
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 260px;"'}}
+  {{#> card}}
+    {{#> card-title}}
+      {{#> title titleType="h2" title--modifier="pf-m-xl"}}
+        Details
+      {{/title}}
+    {{/card-title}}
+    {{#> card-body}}
+      {{#> description-list}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Cluster API Address
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            <a href="#">https://api1.devcluster.openshift.com</a>
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Cluster ID
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            63b97ac1-b850-41d9-8820-239becde9e86
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Provider
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            AWS
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            OpenShift Version
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            4.5.0.ci-2020-06-16-015028
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Update Channel
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            stable-4.5
+          {{/description-list-description}}
+        {{/description-list-group}}
+      {{/description-list}}
+    {{/card-body}}
+    {{> divider}}
+    {{#> card-footer}}
+      <a href="#">View Settings</a>
+    {{/card-footer}}
+  {{/card}}
+  {{#> card}}
+    {{#> card-title}}
+      {{#> title titleType="h2" title--modifier="pf-m-xl"}}
+        Details
+      {{/title}}
+    {{/card-title}}
+    {{#> card-body}}
+      {{#> description-list}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Cluster API Address
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            https://api2.devcluster.openshift.com
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Cluster ID
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            08908908-b850-41d9-8820-239becde9e86
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Provider
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            Azure
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            OpenShift Version
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            4.5.0.ci-2020-06-16-015026
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Update Channel
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            stable-4.4
+          {{/description-list-description}}
+        {{/description-list-group}}
+      {{/description-list}}
+    {{/card-body}}
+    {{> divider}}
+    {{#> card-footer}}
+      <a href="#">View Settings</a>
+    {{/card-footer}}
+  {{/card}}
+{{/gallery}}
+```
+
+### Aggregiate status card
+```hbs
+{{#> grid grid--modifier="pf-m-gutter"}}
+  {{#> grid-item}}
+    {{#> gallery gallery--modifier="pf-m-gutter"}}
+      {{#> card card--modifier="pf-u-text-align-center"}}
+        {{#> card-title}}
+          5 Clusters
+        {{/card-title}}
+        {{#> card-body}}
+          <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+        {{/card-body}}
+      {{/card}}
+      {{#> card card--modifier="pf-u-text-align-center"}}
+        {{#> card-title}}
+          15 Clusters
+        {{/card-title}}
+        {{#> card-body}}
+          <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+        {{/card-body}}
+      {{/card}}
+      {{#> card card--modifier="pf-u-text-align-center"}}
+        {{#> card-title}}
+          3 Clusters
+        {{/card-title}}
+        {{#> card-body}}
+          <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
+        {{/card-body}}
+      {{/card}}
+    {{/gallery}}
+  {{/grid-item}}
+  {{#> grid-item}}
+    {{#> gallery gallery--modifier="pf-m-gutter"}}
+      {{#> card card--modifier="pf-u-text-align-center"}}
+        {{#> card-title}}
+          10 Hosts
+        {{/card-title}}
+        {{#> card-body}}
+          {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+              {{#> l-flex-item}}
+                <i class="fas fa-exclamation-circle pf-u-success-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <a href="#">2</a>
+              {{/l-flex-item}}
+            {{/l-flex}}
+            {{> divider divider--modifier="pf-m-vertical"}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+              {{#> l-flex-item}}
+                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <a href="#">1</a>
+              {{/l-flex-item}}
+            {{/l-flex}}
+          {{/l-flex}}
+        {{/card-body}}
+      {{/card}}
+      {{#> card card--modifier="pf-u-text-align-center"}}
+        {{#> card-title}}
+          50 Hosts
+        {{/card-title}}
+        {{#> card-body}}
+          {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+              {{#> l-flex-item}}
+                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <a href="#">5</a>
+              {{/l-flex-item}}
+            {{/l-flex}}
+            {{> divider divider--modifier="pf-m-vertical"}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+              {{#> l-flex-item}}
+                <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <a href="#">12</a>
+              {{/l-flex-item}}
+            {{/l-flex}}
+          {{/l-flex}}
+        {{/card-body}}
+      {{/card}}
+      {{#> card card--modifier="pf-u-text-align-center"}}
+        {{#> card-title}}
+          12 Hosts
+        {{/card-title}}
+        {{#> card-body}}
+          {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+              {{#> l-flex-item}}
+                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <a href="#">2</a>
+              {{/l-flex-item}}
+            {{/l-flex}}
+            {{> divider divider--modifier="pf-m-vertical"}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+              {{#> l-flex-item}}
+                <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <a href="#">7</a>
+              {{/l-flex-item}}
+            {{/l-flex}}
+          {{/l-flex}}
+        {{/card-body}}
+      {{/card}}
+    {{/gallery}}
+  {{/grid-item}}
+  {{#> grid-item}}
+    {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 260px;"'}}
+      {{#> card}}
+        {{#> card-title card-title--modifier="pf-u-text-align-center"}}
+          13 Hosts
+        {{/card-title}}
+        {{#> card-body}}
+          {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
+            {{#> l-flex newcontext}}
+              {{#> l-flex-item}}
+                <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> stack}}
+                <a href="#">2 errors</a>
+                <span>subtitle</span>
+              {{/stack}}
+            {{/l-flex}}
+            {{#> l-flex}}
+              {{#> l-flex-item}}
+                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> stack}}
+                <a href="#">1 warnings</a>
+                <span>subtitle</span>
+              {{/stack}}
+            {{/l-flex}}
+          {{/l-flex}}
+        {{/card-body}}
+      {{/card}}
+      {{#> card}}
+        {{#> card-title card-title--modifier="pf-u-text-align-center"}}
+            3 Hosts
+        {{/card-title}}
+        {{#> card-body}}
+          {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
+            {{#> l-flex newcontext}}
+              {{#> l-flex-item}}
+                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> stack}}
+                <a href="#">2 successes</a>
+                <span>subtitle</span>
+              {{/stack}}
+            {{/l-flex}}
+            {{#> l-flex}}
+              {{#> l-flex-item}}
+                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> stack}}
+                <a href="#">3 warnings</a>
+                <span>subtitle</span>
+              {{/stack}}
+            {{/l-flex}}
+          {{/l-flex}}
+        {{/card-body}}
+      {{/card}}
+      {{#> card}}
+        {{#> card-title card-title--modifier="pf-u-text-align-center"}}
+            50 Hosts
+        {{/card-title}}
+        {{#> card-body}}
+          {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
+            {{#> l-flex newcontext}}
+              {{#> l-flex-item}}
+                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> stack}}
+                <a href="#">7 warnings</a>
+                <span>subtitle</span>
+              {{/stack}}
+            {{/l-flex}}
+            {{#> l-flex}}
+              {{#> l-flex-item}}
+                <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> stack}}
+                <a href="#">1 error</a>
+                <span>subtitle</span>
+              {{/stack}}
+            {{/l-flex}}
+          {{/l-flex}}
+        {{/card-body}}
+      {{/card}}
+    {{/gallery}}
+  {{/grid-item}}
+{{/grid}}
+```
+
+### Status, tabbed card
+```hbs
+{{#> card}}
+  {{#> card-header}}
+    {{#> title titleType="h2" title--modifier="pf-m-lg"}}
+      Status
+    {{/title}}
+  {{/card-header}}
+  {{#> card-body}}
+    {{#> tabs tabs--id="status-tabs" tabs--modifier="pf-m-fill"}}
+      {{#> tabs-list}}
+        {{> __tabs-item __tabs-item--id="object-1" __tabs-item--aria-label="Object 1" __tabs-item--text="Object 1" __tabs-item--current="true"}}
+        {{> __tabs-item __tabs-item--id="object-2" __tabs-item--aria-label="Object 2" __tabs-item--text="Object 2"}}
+        {{> __tabs-item __tabs-item--id="object-3" __tabs-item--aria-label="Object 3" __tabs-item--text="Object 3"}}
+      {{/tabs-list}}
+    {{/tabs}}
+  {{/card-body}}
+  {{#> card-body}}
+    {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'id="' primary-detail-template--id '-tab1-panel"')}}
+      {{#> description-list description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg"}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            {{#> description-list-text}}
+              {{#> grid}}
+                {{#> grid-item grid-item--modifier="pf-m-3-col"}}
+                  {{#> spinner spinner--modifier="pf-m-md" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
+                {{/grid-item}}
+                {{#> grid-item grid-item--modifier="pf-m-9-col"}}
+                  {{#> title titleType="h3" title--modifier="pf-m-md"}}
+                    Running
+                  {{/title}}
+                {{/grid-item}}
+              {{/grid}}
+            {{/description-list-text}}
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            {{#> description-list-text}}
+              <a href="#">Resource name that is long and can wrap</a>
+            {{/description-list-text}}
+            {{#> description-list-text}}
+              121 systems
+            {{/description-list-text}}
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            {{#> description-list-text}}
+              {{#> l-flex}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  {{#> title titleType="h3" title--modifier="pf-m-md"}}
+                    Ready
+                  {{/title}}
+                {{/l-flex-item}}
+              {{/l-flex}}
+            {{/description-list-text}}
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            {{#> description-list-text}}
+              <a href="#">Resource name</a>
+            {{/description-list-text}}
+            {{#> description-list-text}}
+              121 systems
+            {{/description-list-text}}
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            {{#> description-list-text}}
+              {{#> grid}}
+                {{#> grid-item grid-item--modifier="pf-m-3-col"}}
+                  {{#> spinner spinner--modifier="pf-m-md" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
+                {{/grid-item}}
+                {{#> grid-item grid-item--modifier="pf-m-9-col"}}
+                  {{#> title titleType="h3" title--modifier="pf-m-md"}}
+                    Running
+                  {{/title}}
+                {{/grid-item}}
+              {{/grid}}
+            {{/description-list-text}}
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            {{#> description-list-text}}
+              <a href="#">Resource name that is long and can wrap</a>
+            {{/description-list-text}}
+            {{#> description-list-text}}
+              121 systems
+            {{/description-list-text}}
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            {{#> description-list-text}}
+              {{#> l-flex}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  {{#> title titleType="h3" title--modifier="pf-m-md"}}
+                    Ready
+                  {{/title}}
+                {{/l-flex-item}}
+              {{/l-flex}}
+            {{/description-list-text}}
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            {{#> description-list-text}}
+              <a href="#">Resource name that is long and can wrap</a>
+            {{/description-list-text}}
+            {{#> description-list-text}}
+              121 systems
+            {{/description-list-text}}
+          {{/description-list-description}}
+        {{/description-list-group}}
+      {{/description-list}}
+    {{/tab-content}}
+    {{#> tab-content tab-content--attribute=(concat 'id="' primary-detail-template--id '-tab2-panel"')}}
+      Panel 2
+    {{/tab-content}}
+    {{#> tab-content tab-content--attribute=(concat 'id="' primary-detail-template--id '-tab3-panel"')}}
+      Panel 3
+    {{/tab-content}}
+  {{/card-body}}
+{{/card}}
+```
+
+### Status card
+```hbs
+{{> cardview-demo--status-card card--id="status-card-default-example"}}
+```
+
+### Status card expanded notifications
+```hbs
+{{> cardview-demo--status-card card--id="status-card-expanded-example" cardview-demo--notication-drawer--IsOpen="true"}}
+```
+
+### Status card expanded with popover
+```hbs
+{{> cardview-demo--status-card card--id="status-card-expanded-with-popover-example" cardview-demo--popover--IsOpen="true" cardview-demo--notication-drawer--IsOpen="true"}}
+```
+
+### Utilization card 1
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+  {{#> card card--id="utilization-card-1-example"}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+      {{#> title title--modifier="pf-m-lg" titleType="h2"}}
+        Top Utilized Clusters
+      {{/title}}
+    {{/card-title}}
+    {{#> card-body}}
+      {{#> l-flex l-flex--modifier="pf-m-column"}}
+        {{#> stack}}
+          <b>Cluster-1204</b>
+          <span>27.3 cores available</span>
+        {{/stack}}
+        {{> cardview-demo--chart}}
+        <a href="#">View details</a>
+      {{/l-flex}}
+    {{/card-body}}
+    {{#> card-body}}
+      {{#> l-flex l-flex--modifier="pf-m-column"}}
+        {{#> stack}}
+          <b>Abcdef-1204</b>
+          <span>50.6 cores available</span>
+        {{/stack}}
+        {{> cardview-demo--chart}}
+        <a href="#">View details</a>
+      {{/l-flex}}
+    {{/card-body}}
+    {{> divider}}
+    {{#> card-footer}}
+      <a href="#">View all clusters</a>
+    {{/card-footer}}
+  {{/card}}
+{{/gallery}}
+```
+
+### Utilization card 2
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+  {{#> card card--id="utilization-card-2-example"}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+      {{#> title title--modifier="pf-m-lg" titleType="h2"}}
+        Top Utilized Clusters
+      {{/title}}
+    {{/card-title}}
+    {{#> card-body}}
+      {{#> l-flex l-flex--modifier="pf-m-column"}}
+        {{#> stack}}
+          <a href="#">Cluster-1204</a>
+          <span>27.3 cores available</span>
+        {{/stack}}
+        {{> cardview-demo--chart}}
+      {{/l-flex}}
+    {{/card-body}}
+    {{#> card-body}}
+      {{#> l-flex l-flex--modifier="pf-m-column"}}
+        {{#> stack}}
+          <a href="#">Abcdef-1204</a>
+          <span>50.6 cores available</span>
+        {{/stack}}
+        {{> cardview-demo--chart}}
+      {{/l-flex}}
+    {{/card-body}}
+    {{> divider}}
+    {{#> card-footer}}
+      <a href="#">View all clusters</a>
+    {{/card-footer}}
+  {{/card}}
+{{/gallery}}
+```
+
+### Utilization card 3
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+  {{#> card card--id="utilization-card-3-example"}}
+    {{#> card-header}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+        {{#> title title--modifier="pf-m-lg" titleType="h2"}}
+          Recommendations
+        {{/title}}
+      {{/card-title}}
+      {{#> card-actions}}
+        {{> dropdown dropdown--id=(concat card--id '-dropdown') dropdown-toggle--text="Filter" dropdown-menu--modifier="pf-m-align-right"}}
+      {{/card-actions}}
+    {{/card-header}}
+    {{#> card-body}}
+      {{#> l-flex l-flex--modifier="pf-m-column"}}
+        <span>System</span>
+        {{#> l-flex newcontext}}
+          <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+          <a hfer="#">25 incidents detected</a>
+        {{/l-flex}}
+        {{> cardview-demo--chart cardview-demo--chart--IsStackChart="true"}}
+      {{/l-flex}}
+    {{/card-body}}
+    {{#> card-footer}}
+      <a href="#">See details</a>
+    {{/card-footer}}
+  {{/card}}
+{{/gallery}}
+```
+
+### Utilization card 4
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+  {{#> card card--id="utilization-card-4-example"}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+      {{#> title title--modifier="pf-m-lg" titleType="h2"}}
+        CPU Usage
+      {{/title}}
+    {{/card-title}}
+    {{#> card-body}}
+      {{> cardview-demo--chart cardview-demo--chart--IsThresholdChart="true"}}
+    {{/card-body}}
+    {{#> card-footer}}
+      <a href="#">See details</a>
+    {{/card-footer}}
+  {{/card}}
+{{/gallery}}
+```
+
+### Nested cards with expand toggle on the right
+```hbs
+{{#> card card--id="nested-cards-toggle-right-example"}}
+  {{#> card-header}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+      {{#> title title--modifier="pf-m-lg" titleType="h2"}}
+        Hardware Monitor
+      {{/title}}
+    {{/card-title}}
+  {{/card-header}}
+  {{#> card card--id=(concat card--id '-group-1') card--modifier="pf-m-plain pf-m-expanded"}}
+    {{#> card-header card-header--modifier="pf-m-toggle-right"}}
+      {{> card-header-toggle}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        <span class="pf-u-font-weight-light">
+          CPU 1
+        </span>
+      {{/card-title}}
+    {{/card-header}}
+    {{#> card-expandable-content}}
+      {{#> card-body}}
+        {{> cardview-demo--stacked-sparklines}}
+      {{/card-body}}
+    {{/card-expandable-content}}
+  {{/card}}
+  {{#> card card--id=(concat card--id '-group-2') card--modifier="pf-m-plain"}}
+    {{#> card-header card-header--modifier="pf-m-toggle-right"}}
+      {{> card-header-toggle}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        <span class="pf-u-font-weight-light">
+          CPU 2
+        </span>
+      {{/card-title}}
+    {{/card-header}}
+  {{/card}}
+  {{#> card card--id=(concat card--id '-group-3') card--modifier="pf-m-plain"}}
+    {{#> card-header card-header--modifier="pf-m-toggle-right"}}
+      {{> card-header-toggle}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        <span class="pf-u-font-weight-light">
+          CPU 3
+        </span>
+      {{/card-title}}
+    {{/card-header}}
+  {{/card}}
+{{/card}}
+```
+
+### Nested cards with expand toggle
+```hbs
+{{#> card card--id="nested-cards-example"}}
+  {{#> card-header}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+      {{#> title title--modifier="pf-m-lg" titleType="h2"}}
+        Hardware Monitor
+      {{/title}}
+    {{/card-title}}
+  {{/card-header}}
+  {{#> card card--id=(concat card--id '-group-1') card--modifier="pf-m-plain pf-m-expanded"}}
+    {{#> card-header}}
+      {{> card-header-toggle}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        <span class="pf-u-font-weight-light">
+          CPU 1
+        </span>
+      {{/card-title}}
+    {{/card-header}}
+    {{#> card-expandable-content}}
+      {{#> card-body}}
+        {{> cardview-demo--stacked-sparklines}}
+      {{/card-body}}
+    {{/card-expandable-content}}
+  {{/card}}
+  {{#> card card--id=(concat card--id '-group-2') card--modifier="pf-m-plain"}}
+    {{#> card-header}}
+      {{> card-header-toggle}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        <span class="pf-u-font-weight-light">
+          CPU 2
+        </span>
+      {{/card-title}}
+    {{/card-header}}
+  {{/card}}
+  {{#> card card--id=(concat card--id '-group-3') card--modifier="pf-m-plain"}}
+    {{#> card-header}}
+      {{> card-header-toggle}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        <span class="pf-u-font-weight-light">
+          CPU 3
+        </span>
+      {{/card-title}}
+    {{/card-header}}
+  {{/card}}
+{{/card}}
+```
+
+### With accordion
+```hbs
+{{#> card card--id="with-accordion-example"}}
+  {{#> card-header}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+      {{#> title title--modifier="pf-m-lg" titleType="h2"}}
+        Hardware Monitor
+      {{/title}}
+    {{/card-title}}
+  {{/card-header}}
+  {{#> card-body}}
+    {{#> accordion}}
+      {{#> accordion-toggle accordion-toggle--IsExpanded="true" accordion-toggle--attribute='aria-expanded="true"'}}
+        {{#> accordion-toggle-text}}
+          <span class="pf-u-font-weight-light">
+            CPU 1
+          </span>
+        {{/accordion-toggle-text}}
+        {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+      {{/accordion-toggle}}
+      {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true"}}
+        {{#> accordion-expanded-content-body}}
+          {{> cardview-demo--stacked-sparklines}}
+        {{/accordion-expanded-content-body}}
+      {{/accordion-expanded-content}}
+
+      {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+        {{#> accordion-toggle-text}}
+          <span class="pf-u-font-weight-light">
+            CPU 2
+          </span>
+        {{/accordion-toggle-text}}
+        {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+      {{/accordion-toggle}}
+      {{#> accordion-expanded-content}}
+        {{> cardview-demo--stacked-sparklines}}
+      {{/accordion-expanded-content}}
+
+      {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
+        {{#> accordion-toggle-text}}
+          <span class="pf-u-font-weight-light">
+            CPU 3
+          </span>
+        {{/accordion-toggle-text}}
+        {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+      {{/accordion-toggle}}
+      {{#> accordion-expanded-content}}
+        {{> cardview-demo--stacked-sparklines}}
+      {{/accordion-expanded-content}}
+    {{/accordion}}
+  {{/card-body}}
+{{/card}}
+```
+
+### Trend card 1
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+  {{#> card card--id="trend-card-1-example"}}
+    {{#> card-header}}
+      {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+          {{#> title title--modifier="pf-m-2xl"}}
+            1,050,765 IOPS
+          {{/title}}
+        {{/card-title}}
+        <span class="pf-u-color-200">
+          Workload
+        </span>
+      {{/l-flex}}
+      {{#> card-actions}}
+        {{> dropdown dropdown--id=(concat card--id '-dropdown') dropdown-toggle--text="Filter" dropdown-menu--modifier="pf-m-align-right"}}
+      {{/card-actions}}
+    {{/card-header}}
+    {{#> card-body}}
+      {{> cardview-demo--chart cardview-demo--chart--IsChart2="true"}}
+    {{/card-body}}
+  {{/card}}
+{{/gallery}}
+```
+
+### Trend card 2
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+  {{#> card card--id="trend-card-2-example"}}
+    {{#> card-header}}
+      {{#> l-flex l-flex--modifier="pf-m-align-items-center"}}
+        {{#> l-flex-item l-flex-item--modifier="pf-m-flex-none"}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+              {{#> title title--modifier="pf-m-2xl"}}
+                842 TB
+              {{/title}}
+            {{/card-title}}
+            <span class="pf-u-color-200">
+              Storage capacity
+            </span>
+          {{/l-flex}}
+        {{/l-flex-item}}
+        {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
+          {{> cardview-demo--chart}}
+        {{/l-flex-item}}
+      {{/l-flex}}
+    {{/card-header}}
+    {{#> card-footer}}
+      {{#> l-flex}}
+        <a href="#">Action 1</a>
+        <a href="#">Action 2</a>
+      {{/l-flex}}
+    {{/card-footer}}
+  {{/card}}
+{{/gallery}}
+```
+
+### Log view
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+  {{#> card card--id="card-log-view-example"}}
+    {{#> card-header}}
+      {{#> card-actions}}
+        {{> dropdown dropdown--id=(concat card--id '-dropdown') dropdown-toggle--text="Most recent" dropdown-menu--modifier="pf-m-align-right"}}
+      {{/card-actions}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+        {{#> title title--modifier="pf-m-lg" titleType="h2"}}
+          Activity
+        {{/title}}
+      {{/card-title}}
+    {{/card-header}}
+    {{#> card-body}}
+      {{#> description-list}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            <span class="pf-u-font-size-lg">Readiness probe failed</span>
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
+          {{/description-list-description}}
+          {{#> description-list-description}}
+            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:02 am</date>
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            <span class="pf-u-font-size-lg">Successful assignment</span>
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            Successfully assigned default/example to ip-10-0-130-149.ec2.internal
+          {{/description-list-description}}
+          {{#> description-list-description}}
+            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:13 am</date>
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            <span class="pf-u-font-size-lg">Pulling image</span>
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            Pulling image "openshift/hello-openshift"
+          {{/description-list-description}}
+          {{#> description-list-description}}
+            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:59 am</date>
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            <span class="pf-u-font-size-lg">Created container</span>
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            Created container hello-openshift
+          {{/description-list-description}}
+          {{#> description-list-description}}
+            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:45 am</date>
+          {{/description-list-description}}
+        {{/description-list-group}}
+      {{/description-list}}
+    {{/card-body}}
+    {{#> card-footer}}
+      <a href="#">View all activity</a>
+    {{/card-footer}}
+  {{/card}}
+{{/gallery}}
+```
+
+### Events view
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+  {{#> card card--id="card-events-view-example"}}
+    {{#> card-header}}
+      {{#> card-actions}}
+        {{> dropdown dropdown--id=(concat card--id '-dropdown') dropdown-toggle--text="Status" dropdown-menu--modifier="pf-m-align-right"}}
+      {{/card-actions}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+        {{#> title title--modifier="pf-m-lg" titleType="h2"}}
+          Events
+        {{/title}}
+      {{/card-title}}
+    {{/card-header}}
+    {{#> card-body}}
+      {{#> description-list}}
+        {{#> description-list-group}}
+          {{#> description-list-term description-list-term--modifier="pf-u-font-size-lg"}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
+              {{#> l-flex-item}}
+                <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <span>Readiness probe failed</span>
+              {{/l-flex-item}}
+            {{/l-flex}}
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
+          {{/description-list-description}}
+          {{#> description-list-description}}
+            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:02 am</date>
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term description-list-term--modifier="pf-u-font-size-lg"}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
+              {{#> l-flex-item}}
+                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <span>Successful assignment</span>
+              {{/l-flex-item}}
+            {{/l-flex}}
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            Successfully assigned default/example to ip-10-0-130-149.ec2.internal
+          {{/description-list-description}}
+          {{#> description-list-description}}
+            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:13 am</date>
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term description-list-term--modifier="pf-u-font-size-lg"}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
+              {{#> l-flex-item}}
+                {{#> spinner spinner--modifier="pf-m-md" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <span>Pulling image</span>
+              {{/l-flex-item}}
+            {{/l-flex}}
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            Pulling image "openshift/hello-openshift"
+          {{/description-list-description}}
+          {{#> description-list-description}}
+            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:59 am</date>
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term description-list-term--modifier="pf-u-font-size-lg"}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
+              {{#> l-flex-item}}
+                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+              {{/l-flex-item}}
+              {{#> l-flex-item}}
+                <span>Created container</span>
+              {{/l-flex-item}}
+            {{/l-flex}}
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            Created container hello-openshift
+          {{/description-list-description}}
+          {{#> description-list-description}}
+            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:45 am</date>
+          {{/description-list-description}}
+        {{/description-list-group}}
+      {{/description-list}}
+    {{/card-body}}
+    {{#> card-footer}}
+      <a href="#">View all events</a>
+    {{/card-footer}}
+  {{/card}}
+{{/gallery}}
 ```

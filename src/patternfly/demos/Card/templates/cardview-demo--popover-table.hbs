@@ -1,0 +1,117 @@
+{{#> table table--id=(concat card--id '-popover-table') table--modifier="pf-m-compact" table--expandable="true" table--attribute='aria-label="Control panel table"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-td}}{{/table-td}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Components
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-fit-content"}}
+        Response rate
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle1" id="expandable-toggle1" aria-label="Details" aria-controls="' table--id '-content1"')}}{{/table-td}}
+      {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node1"'}}
+        {{#> table-text}}
+          API Servers
+        {{/table-text}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        {{#> table-text}}
+          20%&nbsp;<i class="fas fa-exclamation-circle pf-u-danger-color-200" aria-hidden="true"></i>
+        {{/table-text}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="3" id="' table--id '-content1"')}}
+        <div class="pf-c-table__expandable-row-content">
+          {{#> alert alert--modifier="pf-m-danger pf-m-inline" alert--attribute='aria-label="Inline danger alert"'}}
+            {{#> alert-icon alert-icon--type="exclamation-circle"}}
+            {{/alert-icon}}
+            {{#> alert-title}}
+              {{#> screen-reader}}Danger alert:{{/screen-reader}}
+              This is a critical alert that can be associated with the control panel.
+            {{/alert-title}}
+          {{/alert}}
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle2" id="expandable-toggle2" aria-label="Details" aria-controls="' table--id '-content2"')}}{{/table-td}}
+      {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node2"'}}
+        {{#> table-text}}
+          Controller Managers
+        {{/table-text}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        {{#> table-text}}
+          100%&nbsp;<i class="fas fa-check-circle pf-u-success-color-200" aria-hidden="true"></i>
+        {{/table-text}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="3" id="' table--id '-content2"')}}
+        <div class="pf-c-table__expandable-row-content">
+          This is message
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle3" id="expandable-toggle3" aria-label="Details" aria-controls="' table--id '-content3"')}}{{/table-td}}
+      {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node3"'}}
+        {{#> table-text}}
+          Schedulers
+        {{/table-text}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        {{#> table-text}}
+          100%&nbsp;<i class="fas fa-check-circle pf-u-success-color-200" aria-hidden="true"></i>
+        {{/table-text}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="3" id="' table--id '-content3"')}}
+        <div class="pf-c-table__expandable-row-content">
+          This is the message
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node1 expandable-toggle4" id="expandable-toggle4" aria-label="Details" aria-controls="' table--id '-content4"')}}{{/table-td}}
+      {{#> table-td table-td--data-label="Branches" table-td--attribute='id="{{table--id}}-node4"'}}
+        {{#> table-text}}
+          etcd
+        {{/table-text}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        {{#> table-text}}
+          91%&nbsp;<i class="fas fa-check-circle pf-u-success-color-200" aria-hidden="true"></i>
+        {{/table-text}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true"}}
+      {{#> table-td table-td--attribute=(concat 'colspan="3" id="' table--id '-content4"')}}
+        <div class="pf-c-table__expandable-row-content">
+          This is the message
+        </div>
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+{{/table}}

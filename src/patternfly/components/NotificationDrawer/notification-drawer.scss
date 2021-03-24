@@ -283,6 +283,7 @@
 .pf-c-notification-drawer__group-toggle-title {
   @include pf-line-clamp("var(--pf-c-notification-drawer__group-toggle-title--max-lines)");
 
+  flex: 1;
   margin-right: var(--pf-c-notification-drawer__group-toggle-title--MarginRight);
   text-align: left;
   word-break: break-word;
