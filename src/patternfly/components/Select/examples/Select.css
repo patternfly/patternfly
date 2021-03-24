@@ -18,7 +18,8 @@
 }
 
 #ws-core-c-select-checkbox-expanded,
-#ws-core-c-select-checkbox-expanded-without-badge {
+#ws-core-c-select-checkbox-expanded-without-badge,
+#ws-core-c-select-checkbox-with-counts {
   min-height: 270px;
 }
 

@@ -154,6 +154,12 @@
   --pf-c-select__menu-group-title--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-select__menu-group-title--Color: var(--pf-global--Color--dark-200);
 
+  // Menu item count
+  --pf-c-select__menu-item-count--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-select__menu-item-count--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-select__menu-item-count--Color: var(--pf-global--Color--200);
+  --pf-c-select__menu-item--disabled__menu-item-count--Color: var(--pf-global--Color--dark-200);
+
   // Menu item description
   --pf-c-select__menu-item-description--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-select__menu-item-description--Color: var(--pf-global--Color--200);
@@ -495,9 +501,15 @@
   @at-root .pf-c-select__menu-wrapper.pf-m-disabled,
   &:disabled,
   &.pf-m-disabled {
+    --pf-c-select__menu-item-count--Color: var(--pf-c-select__menu-item--disabled__menu-item-count--Color);
+
     color: var(--pf-c-select__menu-item--disabled--Color);
     pointer-events: none;
     background-color: var(--pf-c-select__menu-item--disabled--BackgroundColor);
+  }
+
+  &.pf-c-check .pf-c-check__label {
+    width: 100%;
   }
 }
 
@@ -506,6 +518,21 @@
   display: block;
   padding-right: var(--pf-c-select__menu-item-main--PaddingRight);
   white-space: nowrap;
+}
+
+.pf-c-select__menu-item-row {
+  display: flex;
+}
+
+.pf-c-select__menu-item-text {
+  flex-grow: 1;
+}
+
+.pf-c-select__menu-item-count {
+  align-self: center;
+  margin-left: var(--pf-c-select__menu-item-count--MarginLeft);
+  font-size: var(--pf-c-select__menu-item-count--FontSize);
+  color: var(--pf-c-select__menu-item-count--Color);
 }
 
 .pf-c-select__menu-item-description {

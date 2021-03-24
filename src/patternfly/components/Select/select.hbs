@@ -27,6 +27,8 @@
       {{else}}
         {{> select-checkbox-groups}}
       {{/if}}
+    {{else if select--HasCounts}}
+      {{> select-checkbox-counts}}
     {{else}}
       {{#if select--IsChecked}}
         {{> select-checkbox-checked}}
@@ -38,6 +40,8 @@
     {{> select-menu-descriptive}}
   {{else if select--IsFavorites}}
     {{> select-menu-favorites}}
+  {{else if select--IsCounts}}
+    {{> select-menu-counts}}
   {{else}}
     {{> select-single}}
   {{/if}}
