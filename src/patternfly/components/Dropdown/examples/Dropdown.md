@@ -53,7 +53,7 @@ import './Dropdown.css'
 
 ### Badge toggle
 ```hbs
-{{> dropdown dropdown--id="dropdown-badge-toggle" dropdown--template--Badge="true" dropdown--IsExpanded="true" menu-list-item--IsDrillUp="true"}}
+{{> dropdown dropdown--id="dropdown-badge-toggle" dropdown--template--Badge="true" dropdown--IsExpanded="true"}}
 ```
 
 ### Menu item icons
