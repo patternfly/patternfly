@@ -8,7 +8,7 @@ import './CardView.css'
 
 ## Demos
 
-<!-- ### Card view
+### Card view
 ```hbs isFullscreen
 {{#> page page--id="card-view-example"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
@@ -747,7 +747,7 @@ import './CardView.css'
 ```hbs
 {{> cardview-demo--status-card card--id="status-card-expanded-with-popover-example" cardview-demo--popover--IsOpen="true" cardview-demo--notication-drawer--IsOpen="true"}}
 ```
--->
+
 ### Utilization card 1
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
