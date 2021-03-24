@@ -9,6 +9,7 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --pf-c-sidebar__main--FlexDirection: column;
   --pf-c-sidebar__main--md--FlexDirection: row;
   --pf-c-sidebar__main--AlignItems: stretch;
+  --pf-c-sidebar__main--md--AlignItems: start;
   --pf-c-sidebar__main--child--MarginTop: 0;
   --pf-c-sidebar__main--child--MarginLeft: 0;
 
@@ -61,6 +62,7 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --pf-c-sidebar__main--FlexDirection: var(--pf-c-sidebar__main--md--FlexDirection);
     --pf-c-sidebar__panel--BoxShadow: none;
     --pf-c-sidebar__panel--FlexBasis: var(--pf-c-sidebar__panel--md--FlexBasis);
+    --pf-c-sidebar__main--AlignItems: var(--pf-c-sidebar__main--md--AlignItems);
     --pf-c-sidebar__panel--Top: var(--pf-c-sidebar__panel--md--Top);
     --pf-c-sidebar__panel--Position: var(--pf-c-sidebar__panel--md--Position);
   }
@@ -123,7 +125,6 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   display: flex;
   flex-direction: var(--pf-c-sidebar__main--FlexDirection);
   align-items: var(--pf-c-sidebar__main--AlignItems);
-  height: 100%;
 }
 
 .pf-c-sidebar__panel {

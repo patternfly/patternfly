@@ -13,7 +13,7 @@ section: components
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
     {{> tabs--pod-page-title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-tabs"}}
     {{> tabs--pod-tab-list tabs--pod-tab-list--id=(concat tabs--page-wrapper--id '-tabs-list') tabs--pod-tab-list--modifier="pf-m-page-insets"}}
   {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
@@ -167,7 +167,7 @@ section: components
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
     {{> tabs--pod-page-title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-tabs"}}
     {{> tabs--pod-tab-list tabs--pod-tab-list--id=(concat tabs--page-wrapper--id '-tabs-list') tabs--pod-tab-list--modifier="pf-m-page-insets"}}
   {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
@@ -550,7 +550,7 @@ section: components
       Overview
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-tabs"}}
     {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-box pf-m-page-insets pf-m-color-scheme--light-300"}}
       {{#> tabs-list}}
         {{> __tabs-item
@@ -598,7 +598,7 @@ section: components
       Red Hat Enterprise Linux
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-tabs"}}
     {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-box pf-m-inset-md pf-m-inset-lg-on-xl"}}
       {{#> tabs-list}}
         {{> __tabs-item
@@ -727,7 +727,7 @@ section: components
 {{/tabs--page-wrapper}}
 ```
 
-### Vertical tabs
+<!-- ### Vertical tabs
 ```hbs isFullscreen
 {{#> tabs--page-wrapper tabs--page-wrapper--id="vertical-tabs-example"}}
   {{> page-template-breadcrumb page-template-breadcrumbs--IsOS="true"}}
@@ -811,4 +811,4 @@ section: components
     {{/card}}
   {{/page-main-section}}
 {{/tabs--page-wrapper}}
-```
+``` -->
