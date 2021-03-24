@@ -86,7 +86,7 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
 
 ### Expandable expanded
 ```hbs
-{{#> code-block expandable-section--id="code-block-expandable" expandable-section--IsDetached="true" expandable-section--IsExpanded="true"}}
+{{#> code-block expandable-section--id="code-block-expandable-expanded" expandable-section--IsDetached="true" expandable-section--IsExpanded="true"}}
   {{#> code-block-header}}
     {{#> code-block-actions}}
       {{#> code-block-actions-item}}
