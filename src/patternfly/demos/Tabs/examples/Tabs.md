@@ -1,6 +1,6 @@
 ---
 id: 'Tabs'
-section: demos
+section: components
 ---
 
 ## Examples
@@ -327,7 +327,7 @@ section: demos
       Nodes
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
+  {{#> page-main-tabs page-main-tabs--modifier="pf-m-tabs"}}
     {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-page-insets"}}
       {{#> tabs-list}}
         {{> __tabs-item
@@ -394,12 +394,12 @@ section: demos
 ### Tables and tabs, auto width tabs
 ```hbs isFullscreen
 {{#> tabs--page-wrapper tabs--page-wrapper--id="table-tabs-w-secondary-example"}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
+  {{#> page-main-section page-main-section--modifier="pf-m-light"}}
     {{#> title title--modifier="pf-m-2xl pf-u-mt-md"}}
       Nodes
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-tabs"}}
+  {{#> page-main-tabs page-main-tabs--modifier="pf-m-tabs"}}
     {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-inset-md pf-m-inset-lg-on-xl"}}
       {{#> tabs-list}}
         {{> __tabs-item
@@ -416,7 +416,7 @@ section: demos
       {{/tabs-list}}
     {{/tabs}}
   {{/page-main-tabs}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-no-padding pf-m-light" tab-content--id=(concat tabs--page-wrapper--id '-tabs')}}
+  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light" tab-content--id=(concat tabs--page-wrapper--id '-tabs')}}
     {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-nodes-link" id="' tab-content--id '-nodes-panel"')}}
       {{#> drawer drawer--id=(concat tabs--page-wrapper--id '-tabs') primary-detail-template--id=(concat tabs--page-wrapper--id '-tabs') drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline-on-2xlsss pf-m-inline"}}
         {{#> drawer-main}}
