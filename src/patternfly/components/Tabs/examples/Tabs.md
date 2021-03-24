@@ -86,11 +86,19 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
+### Page insets
+```hbs
+{{#> tabs tabs--id="page-insets-example" tabs--modifier="pf-m-page-insets"}}
+  {{> __tabs-list}}
+{{/tabs}}
+```
+
 ### Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
+| `.pf-m-page-insets` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
 
 ### Icons and text
 ```hbs

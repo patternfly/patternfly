@@ -15,7 +15,7 @@ wrapperTag: div
   primary-detail-template--modifier="pf-m-light"
   }}
 
-  {{#> divider divider--type="div"}}{{/divider}}
+  {{> divider divider--type="div"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
@@ -29,7 +29,7 @@ wrapperTag: div
 
         <!-- Content -->
         {{#> drawer-content}}
-          {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+          {{> toolbar--template toolbar--template--id=(concat primary-detail-template--id '-toolbar') toolbar--template--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
           {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
@@ -46,7 +46,7 @@ wrapperTag: div
 
           <!-- Tabs -->
           {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
-            {{> primary-detail-panel-tabs}}
+            {{> primary-detail-panel-tabs primary-detail-panel-tabs--modifier="pf-m-box pf-m-fill"}}
           {{/drawer-body}}
 
           <!-- Tab content -->
@@ -69,7 +69,7 @@ wrapperTag: div
   primary-detail-template--modifier="pf-m-light"
   }}
 
-  {{#> divider divider--type="div"}}{{/divider}}
+  {{> divider divider--type="div"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
@@ -82,7 +82,7 @@ wrapperTag: div
 
         <!-- Content -->
         {{#> drawer-content}}
-          {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+          {{> toolbar--template toolbar--template--id=(concat primary-detail-template--id '-toolbar') toolbar--template--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
           {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
@@ -100,7 +100,7 @@ wrapperTag: div
 
           <!-- Tabs -->
           {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
-            {{> primary-detail-panel-tabs}}
+            {{> primary-detail-panel-tabs primary-detail-panel-tabs--modifier="pf-m-box pf-m-fill"}}
           {{/drawer-body}}
 
           <!-- Tab content -->
@@ -122,7 +122,7 @@ wrapperTag: div
   primary-detail-template--description="Body text should be Red Hat Text Regular at 16px. It should have leading of 24px because of its relative line height of 1.5"
   }}
 
-  {{#> divider divider--type="div"}}{{/divider}}
+  {{> divider divider--type="div"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
@@ -136,7 +136,7 @@ wrapperTag: div
 
         <!-- Content -->
         {{#> drawer-content drawer-content--modifier="pf-m-no-background" drawer-body--modifier="pf-m-padding"}}
-          {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+          {{> toolbar--template toolbar--template--id=(concat primary-detail-template--id '-toolbar') toolbar--template--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
           {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
@@ -181,8 +181,9 @@ wrapperTag: div
       }}
 
       {{#> drawer-section}}
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasBulkSelect="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true" toolbar--template--HasViewToggle="true"}}
-        {{#> divider divider--type="div"}}{{/divider}}
+        {{> toolbar--template toolbar--template--id=(concat primary-detail-template--id '-toolbar') toolbar--template--modifier="pf-m-page-insets" toolbar--template--HasToggleGroup="true" toolbar--template--HasBulkSelect="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true" toolbar--template--HasViewToggle=
+      "true"}}
+        {{> divider divider--type="div"}}
       {{/drawer-section}}
 
       {{#> drawer-main}}
@@ -320,7 +321,7 @@ wrapperTag: div
   primary-detail-template--description="Body text should be Red Hat Text Regular at 16px. It should have leading of 24px because of its relative line height of 1.5"
   primary-detail-template--modifier="pf-m-light pf-m-inline"
   }}
-  {{#> divider divider--type="div"}}{{/divider}}
+  {{> divider divider--type="div"}}
   <!-- Drawer -->
   {{#> drawer
     drawer--id=(concat primary-detail-template--id '-drawer')
@@ -332,7 +333,7 @@ wrapperTag: div
 
       <!-- Content -->
       {{#> drawer-content}}
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasDropdown="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true"}}
+        {{> toolbar--template toolbar--template--id=(concat primary-detail-template--id '-toolbar') toolbar--template--modifier="pf-m-page-insets" toolbar--template--HasDropdown="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true"}}
         {{> data-list-simple-data-list}}
       {{/drawer-content}}
 
@@ -350,7 +351,7 @@ wrapperTag: div
 
         <!-- Tabs -->
         {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
-          {{> primary-detail-panel-tabs}}
+          {{> primary-detail-panel-tabs primary-detail-panel-tabs--modifier="pf-m-box pf-m-fill"}}
         {{/drawer-body}}
 
         <!-- Tab content -->

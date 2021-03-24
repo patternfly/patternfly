@@ -1,5 +1,5 @@
 {{#> tabs-item tabs-item--IsCurrent=__tabs-item--current}}
-  {{#> tabs-link tabs-link--attribute=(concat 'id="' tabs--id '-' __tabs-item--id '-link"')}}
+  {{#> tabs-link tabs-link--attribute=(concat __tabs-item--attribute ' id="' tabs--id '-' __tabs-item--id '-link"')}}
     {{#if __tabs-list--HasIcons}}
       {{#if __tabs-item--NoText}}
         {{> tabs-item-icon

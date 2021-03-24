@@ -1,29 +1,68 @@
 {{#> page-main-breadcrumb page-main-breadcrumb--IsLimitWidth="true" page-main-breadcrumb--modifier=page-template-breadcrumb--modifier}}
   {{#> breadcrumb}}
     {{#> breadcrumb-list}}
-      {{#> breadcrumb-item}}
-        {{#> breadcrumb-link}}
-          Section home
-        {{/breadcrumb-link}}
-      {{/breadcrumb-item}}
-      {{#> breadcrumb-item}}
-        {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
-        {{#> breadcrumb-link}}
-          Section title
-        {{/breadcrumb-link}}
-      {{/breadcrumb-item}}
-      {{#> breadcrumb-item}}
-        {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
-        {{#> breadcrumb-link}}
-          Section title
-        {{/breadcrumb-link}}
-      {{/breadcrumb-item}}
-      {{#> breadcrumb-item}}
-        {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
-        {{#> breadcrumb-link breadcrumb-link--current="true"}}
-          Section landing
-        {{/breadcrumb-link}}
-      {{/breadcrumb-item}}
+      {{#if page-template-breadcrumbs--IsPods}}
+        {{!-- Pods --}}
+        {{#> breadcrumb-item}}
+          {{#> breadcrumb-link}}
+            Overview
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+        {{#> breadcrumb-item}}
+          {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+          {{#> breadcrumb-link}}
+            Pods
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+        {{#> breadcrumb-item}}
+          {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+          {{#> breadcrumb-link breadcrumb-link--current="true"}}
+            Pod details
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+      {{else if page-template-breadcrumbs--IsOS}}
+        {{#> breadcrumb-item}}
+          {{#> breadcrumb-link}}
+            Clusters
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+        {{#> breadcrumb-item}}
+          {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+          {{#> breadcrumb-link}}
+            Create
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+        {{#> breadcrumb-item}}
+          {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+          {{#> breadcrumb-link breadcrumb-link--current="true"}}
+            AWS
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+      {{else}}
+        {{#> breadcrumb-item}}
+          {{#> breadcrumb-link}}
+            Section home
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+        {{#> breadcrumb-item}}
+          {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+          {{#> breadcrumb-link}}
+            Section title
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+        {{#> breadcrumb-item}}
+          {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+          {{#> breadcrumb-link}}
+            Section title
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+        {{#> breadcrumb-item}}
+          {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
+          {{#> breadcrumb-link breadcrumb-link--current="true"}}
+            Section landing
+          {{/breadcrumb-link}}
+        {{/breadcrumb-item}}
+      {{/if}}
     {{/breadcrumb-list}}
   {{/breadcrumb}}
 {{/page-main-breadcrumb}}

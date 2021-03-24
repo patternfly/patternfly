@@ -33,7 +33,11 @@
 {{#if toolbar--template--HasFilter}}
   {{#> toolbar-item}}
     {{#> select id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
-      Status
+      {{#if toolbar--template--filterText}}
+        {{toolbar--template--filterText}}
+      {{else}}
+        Status
+      {{/if}}
     {{/select}}
   {{/toolbar-item}}
 {{/if}}

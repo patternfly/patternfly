@@ -37,7 +37,7 @@
   --pf-c-card__header-toggle--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-card__header-toggle--MarginLeft: calc(var(--pf-global--spacer--md) * -1);
   --pf-c-card__header-toggle-icon--Transition: var(--pf-global--Transition);
-  --pf-c-card--m-expanded__header-toggle-icon--Rotate: 90deg;
+  --pf-c-card--m-full-height--Height: 100%;
   --pf-c-card__title--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__title--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-card__title--not--last-child--PaddingBottom: var(--pf-global--spacer--md);
@@ -136,6 +136,10 @@
     .pf-c-card__header-toggle-icon {
       transform: rotate(var(--pf-c-card--m-expanded__header-toggle-icon--Rotate));
     }
+  }
+
+  &.pf-m-full-height {
+    height: var(--pf-c-card--m-full-height--Height);
   }
 
   > .pf-c-divider {
