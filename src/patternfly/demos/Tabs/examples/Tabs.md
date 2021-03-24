@@ -13,7 +13,7 @@ section: components
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
     {{> tabs--pod-page-title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-tabs"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
     {{> tabs--pod-tab-list tabs--pod-tab-list--id=(concat tabs--page-wrapper--id '-tabs-list') tabs--pod-tab-list--modifier="pf-m-page-insets"}}
   {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
@@ -167,7 +167,7 @@ section: components
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
     {{> tabs--pod-page-title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-tabs"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
     {{> tabs--pod-tab-list tabs--pod-tab-list--id=(concat tabs--page-wrapper--id '-tabs-list') tabs--pod-tab-list--modifier="pf-m-page-insets"}}
   {{/page-main-tabs}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
@@ -289,7 +289,7 @@ section: components
       Overview
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-light pf-m-no-padding"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
     {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-page-insets"}}
       {{#> tabs-list}}
         {{> __tabs-item
@@ -327,7 +327,7 @@ section: components
       Nodes
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--modifier="pf-m-tabs"}}
+  {{#> page-main-tabs}}
     {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-page-insets"}}
       {{#> tabs-list}}
         {{> __tabs-item
@@ -399,8 +399,8 @@ section: components
       Nodes
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--modifier="pf-m-tabs"}}
-    {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-inset-md pf-m-inset-lg-on-xl"}}
+  {{#> page-main-tabs}}
+    {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-page-insets"}}
       {{#> tabs-list}}
         {{> __tabs-item
           __tabs-item--current="true"
@@ -530,7 +530,7 @@ section: components
       {{> toolbar--template toolbar--id=(concat example-wrapper--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasBulkSelect="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasFilter="true" toolbar--template--HasToggleGroup="true"}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
-      {{> card-view-demo-template-gallery}}
+      {{> cardview-demo--template-gallery}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light pf-m-sticky-bottom pf-m-no-fill"}}
       {{#> pagination pagination--modifier="pf-m-bottom"}}
@@ -550,7 +550,7 @@ section: components
       Overview
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-tabs"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
     {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-box pf-m-page-insets pf-m-color-scheme--light-300"}}
       {{#> tabs-list}}
         {{> __tabs-item
@@ -598,8 +598,8 @@ section: components
       Red Hat Enterprise Linux
     {{/title}}
   {{/page-main-section}}
-  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true" page-main-tabs--modifier="pf-m-tabs"}}
-    {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-box pf-m-inset-md pf-m-inset-lg-on-xl"}}
+  {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
+    {{#> tabs tabs--id=(concat tabs--page-wrapper--id '-tabs') tabs--modifier="pf-m-box pf-m-page-insets"}}
       {{#> tabs-list}}
         {{> __tabs-item
           __tabs-item--id="new"
@@ -740,7 +740,7 @@ section: components
     {{#> card card--modifier="pf-m-full-height"}}
       {{#> sidebar}}
         {{#> sidebar-panel}}
-          {{#> tabs tabs--modifier="pf-m-inset-md pf-m-inset-lg-on-xl pf-m-vertical pf-m-box" }}
+          {{#> tabs tabs--modifier="pf-m-page-insets pf-m-vertical pf-m-box" }}
             {{#> tabs-list}}
               {{> __tabs-item
                 __tabs-item--current="true"
