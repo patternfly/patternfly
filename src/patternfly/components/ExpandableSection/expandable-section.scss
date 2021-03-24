@@ -14,7 +14,9 @@
   --pf-c-expandable-section__toggle-icon--Color: var(--pf-global--Color--100);
   --pf-c-expandable-section__toggle-icon--Transition: .2s ease-in 0s;
   --pf-c-expandable-section__toggle-icon--Rotate: 0;
+  --pf-c-expandable-section__toggle-icon--m-expand-top--Rotate: 0;
   --pf-c-expandable-section--m-expanded__toggle-icon--Rotate: 90deg;
+  --pf-c-expandable-section--m-expanded__toggle-icon--m-expand-top--Rotate: -90deg;
 
   // Toggle text
   --pf-c-expandable-section__toggle-text--MarginLeft: calc(var(--pf-global--spacer--xs) + var(--pf-global--spacer--sm));
@@ -25,6 +27,11 @@
   &.pf-m-expanded {
     --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--m-expanded--Color);
     --pf-c-expandable-section__toggle-icon--Rotate: var(--pf-c-expandable-section--m-expanded__toggle-icon--Rotate);
+    --pf-c-expandable-section__toggle-icon--m-expand-top--Rotate: var(--pf-c-expandable-section--m-expanded__toggle-icon--m-expand-top--Rotate);
+  }
+
+  &.pf-m-detached {
+    --pf-c-expandable-section__content--MarginTop: 0;
   }
 }
 
@@ -52,6 +59,10 @@
   color: var(--pf-c-expandable-section__toggle-icon--Color);
   transition: var(--pf-c-expandable-section__toggle-icon--Transition);
   transform: rotate(var(--pf-c-expandable-section__toggle-icon--Rotate));
+
+  &.pf-m-expand-top {
+    --pf-c-expandable-section__toggle-icon--Rotate: var(--pf-c-expandable-section__toggle-icon--m-expand-top--Rotate);
+  }
 }
 
 .pf-c-expandable-section__toggle-text {
