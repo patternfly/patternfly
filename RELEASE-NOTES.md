@@ -3,6 +3,34 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2021.04 release notes (2021-03-30)
+Packages released:
+- [@patternfly/patternfly@v4.96.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.96.2)
+
+### Components
+- **Brand:** Added picture + srcset ([#3922](https://github.com/patternfly/patternfly/pull/3922))
+- **Button:**
+  - Added secondary/link danger variations ([#3932](https://github.com/patternfly/patternfly/pull/3932))
+  - Reverted active state styling with new danger variations ([#3949](https://github.com/patternfly/patternfly/pull/3949))
+- **Card:** Added card demos ([#3848](https://github.com/patternfly/patternfly/pull/3848))
+- **Check/radio:** Updated body/description elements to be spans ([#3945](https://github.com/patternfly/patternfly/pull/3945))
+- **Clipboard copy:** Added inline variant ([#3933](https://github.com/patternfly/patternfly/pull/3933))
+- **Code block:** Added code block component ([#3937](https://github.com/patternfly/patternfly/pull/3937))
+- **Dropdown:** Reverted badge menu to dropdown menu ([#3929](https://github.com/patternfly/patternfly/pull/3929))
+- **Form:** Removed used of pf-m-expandable from field groups ([#3942](https://github.com/patternfly/patternfly/pull/3942))
+- **Select:**
+  - Added support for item count ([#3931](https://github.com/patternfly/patternfly/pull/3931))
+  - Added invalid state ([#3940](https://github.com/patternfly/patternfly/pull/3940))
+- **Tabs:** Added tabs demos ([#3914](https://github.com/patternfly/patternfly/pull/3914))
+- **Wizard:** Added expandable subsections ([#3927](https://github.com/patternfly/patternfly/pull/3927))
+
+### Other
+- **Workspace:**
+  - Added images for card demos ([#3925](https://github.com/patternfly/patternfly/pull/3925))
+  - Updated example HBS spacing ([#3934](https://github.com/patternfly/patternfly/pull/3934))
+  - Reverted to old html-formatter ([#3939](https://github.com/patternfly/patternfly/pull/3939))
+
+
 ## 2021.03 release notes (2021-03-09)
 Packages released:
 - [@patternfly/patternfly@v4.90.5](https://www.npmjs.com/package/@patternfly/patternfly/v/4.90.5)
