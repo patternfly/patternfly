@@ -24,17 +24,13 @@ cssPrefix: pf-c-code-block
     {{/code-block-actions}}
   {{/code-block-header}}
   {{#> code-block-content}}
-    {{#> code-block-pre~}}
-      {{~#> code-block-code~}}
-apiVersion: helm.openshift.io/v1beta1/<br>
-kind: HelmChartRepository<br>
-metadata:<br>
-name: azure-sample-repo<br>
-spec:<br>
-connectionConfig:<br>
-url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
-      {{~/code-block-code~}}
-    {{~/code-block-pre}}
+    {{#> code-block-pre~}}{{~#> code-block-code~}}apiVersion: helm.openshift.io/v1beta1/
+kind: HelmChartRepository
+metadata:
+name: azure-sample-repo
+spec:
+connectionConfig:
+url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs{{~/code-block-code~}}{{~/code-block-pre}}
   {{/code-block-content}}
 {{/code-block}}
 ```
@@ -59,15 +55,15 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
   {{#> code-block-content}}
     {{#> code-block-pre~}}
       {{~#> code-block-code~}}
-apiVersion: helm.openshift.io/v1beta1/<br>
-kind: HelmChartRepository<br>
-metadata:<br>
-name: azure-sample-repo<br>
+apiVersion: helm.openshift.io/v1beta1/
+kind: HelmChartRepository
+metadata:
+name: azure-sample-repo
 {{~#> code-block-expandable-content~}}
     {{~#> expandable-section~}}
       {{~#> expandable-section-content~}}
-spec:<br>
-connectionConfig:<br>
+spec:
+connectionConfig:
 url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
       {{~/expandable-section-content~}}
     {{~/expandable-section~}}
@@ -104,15 +100,15 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
   {{#> code-block-content}}
     {{#> code-block-pre~}}
       {{~#> code-block-code~}}
-apiVersion: helm.openshift.io/v1beta1/<br>
-kind: HelmChartRepository<br>
-metadata:<br>
-name: azure-sample-repo<br>
+apiVersion: helm.openshift.io/v1beta1/
+kind: HelmChartRepository
+metadata:
+name: azure-sample-repo
 {{~#> code-block-expandable-content~}}
     {{~#> expandable-section~}}
       {{~#> expandable-section-content~}}
-spec:<br>
-connectionConfig:<br>
+spec:
+connectionConfig:
 url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
       {{~/expandable-section-content~}}
     {{~/expandable-section~}}
