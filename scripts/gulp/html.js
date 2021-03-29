@@ -68,7 +68,9 @@ function compileMD0(srcFiles) {
             if (node.lang === 'hbs') {
               try {
                 let html = hbsInstance.compile(node.value)({});
-                html = prettyhtml(html).contents;
+                html = prettyhtml(html)
+                  .contents.replace(/class /g, '')
+                  .replace(/ class>/g, '>');
                 node.lang = 'html';
                 node.value = html;
               } catch (error) {

@@ -1239,9 +1239,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow5" aria-labelledby="{{table--id}}-node5">
       {{/table-td}}
-      {{#> table-th table-th--data-label="Repository name"}}
+      {{#> table-td table-td--data-label="Repository name"}}
         <p id="{{table--id}}-node5">Node 5</p>
-      {{/table-th}}
+      {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
       {{/table-td}}
