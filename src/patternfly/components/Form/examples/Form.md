@@ -536,7 +536,7 @@ cssPrefix: pf-c-form
 | -- | -- | -- |
 | `.pf-c-form` | `<form>` |  Initiates a standard form. **Required** |
 | `.pf-c-form__section` | `<div>, <section>` |  Initiates a form section. |
-| `.pf-c-form__section-title` | `<div>` |  Initiates a form section title. |
+| `.pf-c-form__section-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`, `<div>` |  Initiates a form section title. |
 | `.pf-c-form__group` | `<div>` |  Initiates a form group. |
 | `.pf-c-form__group-label` | `<div>` |  Initiates a form group label. |
 | `.pf-c-form__label` | `<label>` |  Initiates a form label. **Required** |
