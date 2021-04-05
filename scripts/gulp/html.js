@@ -8,7 +8,7 @@ const toMDAST = require('remark-parse');
 const stringifyMDAST = require('remark-stringify');
 const Handlebars = require('handlebars');
 const visit = require('unist-util-visit');
-const { render } = require('html-formatter');
+const prettyhtml = require('@starptech/prettyhtml');
 
 const hbsFileMap = {};
 const hbsInstance = Handlebars.create();
@@ -68,7 +68,9 @@ function compileMD0(srcFiles) {
             if (node.lang === 'hbs') {
               try {
                 let html = hbsInstance.compile(node.value)({});
-                html = render(` ${html} `).replace(/\t/g, '  ');
+                html = prettyhtml(html)
+                  .contents.replace(/class /g, '')
+                  .replace(/ class>/g, '>');
                 node.lang = 'html';
                 node.value = html;
               } catch (error) {
