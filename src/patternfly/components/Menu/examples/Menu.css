@@ -1,4 +1,9 @@
-#ws-core-c-menu-with-flyout {
+#ws-core-c-menu-with-flyout,
+#ws-core-c-menu-with-flyout-menu-left {
   display: flex;
   height: 400px;
+}
+
+#ws-core-c-menu-with-flyout-menu-left {
+  justify-content: flex-end;
 }
