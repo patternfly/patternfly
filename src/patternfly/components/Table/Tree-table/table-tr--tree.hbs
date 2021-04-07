@@ -11,7 +11,7 @@
           {{/table-td}}
         {{/if}}
       {{/unless}}
-      {{#> table-tree-view-content}}
+      {{#> table-tree-view-text}}
         {{#if table-tree-view--HasIcons}}
           {{#> table-tree-view-icon}}
             {{#if table-tr--tree--IsLeaf}}
@@ -28,7 +28,7 @@
             Datacenters
           {{/if}}
         {{/table-text}}
-      {{/table-tree-view-content}}
+      {{/table-tree-view-text}}
       {{> table-tree-view-details-toggle}}
       {{#if @partial-block}}
         {{> @partial-block}}
