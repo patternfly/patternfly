@@ -10,6 +10,7 @@
   --pf-c-menu--Width: auto;
   --pf-c-menu--m-flyout__menu--Top: calc(var(--pf-c-menu--PaddingTop) * -1);
   --pf-c-menu--m-flyout__menu--Left: 100%;
+  --pf-c-menu--m-flyout__list-item--m-menu-top__menu--Bottom: calc(var(--pf-c-menu--PaddingTop) * -1);
   --pf-c-menu--m-flyout__list-item--m-menu-left__menu--Right: 100%;
 
   // Divider
@@ -137,6 +138,11 @@
       position: relative;
 
       // stylelint-disable selector-max-class
+      &.pf-m-menu-top > .pf-c-menu {
+        top: auto;
+        bottom: var(--pf-c-menu--m-flyout__list-item--m-menu-top__menu--Bottom);
+      }
+
       &.pf-m-menu-left > .pf-c-menu {
         right: var(--pf-c-menu--m-flyout__list-item--m-menu-left__menu--Right);
         left: auto;
