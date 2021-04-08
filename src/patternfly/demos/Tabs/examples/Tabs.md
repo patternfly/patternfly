@@ -530,7 +530,7 @@ section: components
       {{> toolbar--template toolbar--id=(concat example-wrapper--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasBulkSelect="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasFilter="true" toolbar--template--HasToggleGroup="true"}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
-      {{> cardview-demo--template-gallery}}
+      {{> card-demo--template-gallery}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light pf-m-sticky-bottom pf-m-no-fill"}}
       {{#> pagination pagination--modifier="pf-m-bottom"}}

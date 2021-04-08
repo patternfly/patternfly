@@ -4,87 +4,9 @@ section: components
 wrapperTag: div
 ---
 
-import './CardView.css'
+import './Card.css'
 
 ## Demos
-
-### Card view
-```hbs isFullscreen
-{{#> page page--id="card-view-example"}}
-  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
-    Skip to content
-  {{/skip-to-content}}
-  {{#> page-header}}
-    {{!-- Brand --}}
-    {{#> page-header-brand}}
-      {{#> page-header-brand-toggle}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-primary-nav"')}}
-          <i class="fas fa-bars" aria-hidden="true"></i>
-        {{/button}}
-      {{/page-header-brand-toggle}}
-      {{#> page-header-brand-link page-header-brand-link--href="#"}}
-        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="Patternfly Logo"'}}{{/brand}}
-      {{/page-header-brand-link}}
-    {{/page-header-brand}}
-
-    {{#> page-template-header-tools-elements}}
-    {{/page-template-header-tools-elements}}
-  {{/page-header}}
-  {{!-- Nav --}}
-  {{#> page-sidebar}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"')}}
-      {{#> nav-list}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-            System Panel
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Policy
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Authentication
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Network Services
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Server
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-list}}
-    {{/nav}}
-  {{/page-sidebar}}
-  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-      {{#> content}}
-        <h1>Projects</h1>
-        <p>This is a demo that showcases Patternfly Cards. </p>
-      {{/content}}
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light pf-m-no-padding"}}
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--modifier="pf-m-page-insets" toolbar--template--HasBulkSelect="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasFilter="true" toolbar--template--HasToggleGroup="true"}}
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
-      {{> cardview-demo--template-gallery}}
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light pf-m-sticky-bottom pf-m-no-fill"}}
-      {{#> pagination pagination--modifier="pf-m-bottom"}}
-        {{> pagination-options-menu id="pagination-options-menu-bottom-example" options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
-        {{> pagination-nav-content}}
-      {{/pagination}}
-    {{/page-main-section}}
-  {{/page-main}}
-{{/page}}
-```
-
 ### Horizontal grid collapsed
 ```hbs
 {{#> card card--id="card-demo-horizontal-grid-collapsed-example"}}
@@ -735,17 +657,17 @@ import './CardView.css'
 
 ### Status card
 ```hbs
-{{> cardview-demo--status-card card--id="status-card-default-example"}}
+{{> card-demo--status-card card--id="status-card-default-example"}}
 ```
 
 ### Status card expanded notifications
 ```hbs
-{{> cardview-demo--status-card card--id="status-card-expanded-example" cardview-demo--notication-drawer--IsOpen="true"}}
+{{> card-demo--status-card card--id="status-card-expanded-example" card-demo--notication-drawer--IsOpen="true"}}
 ```
 
 ### Status card expanded with popover
 ```hbs
-{{> cardview-demo--status-card card--id="status-card-expanded-with-popover-example" cardview-demo--popover--IsOpen="true" cardview-demo--notication-drawer--IsOpen="true"}}
+{{> card-demo--status-card card--id="status-card-expanded-with-popover-example" card-demo--popover--IsOpen="true" card-demo--notication-drawer--IsOpen="true"}}
 ```
 
 ### Utilization card 1
@@ -763,7 +685,7 @@ import './CardView.css'
           <b>Cluster-1204</b>
           <span>27.3 cores available</span>
         {{/stack}}
-        {{> cardview-demo--chart}}
+        {{> card-demo--chart}}
         <a href="#">View details</a>
       {{/l-flex}}
     {{/card-body}}
@@ -773,7 +695,7 @@ import './CardView.css'
           <b>Abcdef-1204</b>
           <span>50.6 cores available</span>
         {{/stack}}
-        {{> cardview-demo--chart}}
+        {{> card-demo--chart}}
         <a href="#">View details</a>
       {{/l-flex}}
     {{/card-body}}
@@ -800,7 +722,7 @@ import './CardView.css'
           <a href="#">Cluster-1204</a>
           <span>27.3 cores available</span>
         {{/stack}}
-        {{> cardview-demo--chart}}
+        {{> card-demo--chart}}
       {{/l-flex}}
     {{/card-body}}
     {{#> card-body}}
@@ -809,7 +731,7 @@ import './CardView.css'
           <a href="#">Abcdef-1204</a>
           <span>50.6 cores available</span>
         {{/stack}}
-        {{> cardview-demo--chart}}
+        {{> card-demo--chart}}
       {{/l-flex}}
     {{/card-body}}
     {{> divider}}
@@ -841,7 +763,7 @@ import './CardView.css'
           <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
           <a hfer="#">25 incidents detected</a>
         {{/l-flex}}
-        {{> cardview-demo--chart cardview-demo--chart--IsStackChart="true"}}
+        {{> card-demo--chart card-demo--chart--IsStackChart="true"}}
       {{/l-flex}}
     {{/card-body}}
     {{#> card-footer}}
@@ -861,7 +783,7 @@ import './CardView.css'
       {{/title}}
     {{/card-title}}
     {{#> card-body}}
-      {{> cardview-demo--chart cardview-demo--chart--IsThresholdChart="true"}}
+      {{> card-demo--chart card-demo--chart--IsThresholdChart="true"}}
     {{/card-body}}
     {{#> card-footer}}
       <a href="#">See details</a>
@@ -891,7 +813,7 @@ import './CardView.css'
     {{/card-header}}
     {{#> card-expandable-content}}
       {{#> card-body}}
-        {{> cardview-demo--stacked-sparklines}}
+        {{> card-demo--stacked-sparklines}}
       {{/card-body}}
     {{/card-expandable-content}}
   {{/card}}
@@ -939,7 +861,7 @@ import './CardView.css'
     {{/card-header}}
     {{#> card-expandable-content}}
       {{#> card-body}}
-        {{> cardview-demo--stacked-sparklines}}
+        {{> card-demo--stacked-sparklines}}
       {{/card-body}}
     {{/card-expandable-content}}
   {{/card}}
@@ -988,7 +910,7 @@ import './CardView.css'
       {{/accordion-toggle}}
       {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true"}}
         {{#> accordion-expanded-content-body}}
-          {{> cardview-demo--stacked-sparklines}}
+          {{> card-demo--stacked-sparklines}}
         {{/accordion-expanded-content-body}}
       {{/accordion-expanded-content}}
 
@@ -1001,7 +923,7 @@ import './CardView.css'
         {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
       {{/accordion-toggle}}
       {{#> accordion-expanded-content}}
-        {{> cardview-demo--stacked-sparklines}}
+        {{> card-demo--stacked-sparklines}}
       {{/accordion-expanded-content}}
 
       {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
@@ -1013,7 +935,7 @@ import './CardView.css'
         {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
       {{/accordion-toggle}}
       {{#> accordion-expanded-content}}
-        {{> cardview-demo--stacked-sparklines}}
+        {{> card-demo--stacked-sparklines}}
       {{/accordion-expanded-content}}
     {{/accordion}}
   {{/card-body}}
@@ -1040,7 +962,7 @@ import './CardView.css'
       {{/card-actions}}
     {{/card-header}}
     {{#> card-body}}
-      {{> cardview-demo--chart cardview-demo--chart--IsChart2="true"}}
+      {{> card-demo--chart card-demo--chart--IsChart2="true"}}
     {{/card-body}}
   {{/card}}
 {{/gallery}}
@@ -1065,7 +987,7 @@ import './CardView.css'
           {{/l-flex}}
         {{/l-flex-item}}
         {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-          {{> cardview-demo--chart}}
+          {{> card-demo--chart}}
         {{/l-flex-item}}
       {{/l-flex}}
     {{/card-header}}
