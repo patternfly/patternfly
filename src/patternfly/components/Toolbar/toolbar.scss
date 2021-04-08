@@ -26,7 +26,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar__expandable-content--lg--PaddingRight: 0;
   --pf-c-toolbar__expandable-content--lg--PaddingBottom: 0;
   --pf-c-toolbar__expandable-content--lg--PaddingLeft: 0;
-  --pf-c-toolbar__expandable-content--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-toolbar__expandable-content--ZIndex: var(--pf-global--ZIndex--sm);
   --pf-c-toolbar__expandable-content--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
   --pf-c-toolbar__expandable-content--BackgroundColor: var(--pf-c-toolbar--BackgroundColor);
 
