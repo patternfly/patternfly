@@ -9,6 +9,9 @@
   --pf-c-menu--MinWidth: 100%;
   --pf-c-menu--Width: auto;
   --pf-c-menu--m-flyout__menu--Top: calc(var(--pf-c-menu--PaddingTop) * -1);
+  --pf-c-menu--m-flyout__menu--Left: 100%;
+  --pf-c-menu--m-flyout__list-item--m-menu-top__menu--Bottom: calc(var(--pf-c-menu--PaddingTop) * -1);
+  --pf-c-menu--m-flyout__list-item--m-menu-left__menu--Right: 100%;
 
   // Divider
   --pf-c-menu--c-divider--MarginTop: var(--pf-global--spacer--sm);
@@ -127,11 +130,24 @@
     .pf-c-menu {
       position: absolute;
       top: var(--pf-c-menu--m-flyout__menu--Top);
-      left: 100%;
+      right: auto;
+      left: var(--pf-c-menu--m-flyout__menu--Left);
     }
 
     .pf-c-menu__list-item {
       position: relative;
+
+      // stylelint-disable selector-max-class
+      &.pf-m-menu-top > .pf-c-menu {
+        top: auto;
+        bottom: var(--pf-c-menu--m-flyout__list-item--m-menu-top__menu--Bottom);
+      }
+
+      &.pf-m-menu-left > .pf-c-menu {
+        right: var(--pf-c-menu--m-flyout__list-item--m-menu-left__menu--Right);
+        left: auto;
+      }
+      // stylelint-enable
     }
   }
 
