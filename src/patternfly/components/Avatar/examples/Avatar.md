@@ -7,8 +7,17 @@ cssPrefix: pf-c-avatar
 ## Examples
 ### Basic
 ```hbs
-{{#> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
-{{/avatar}}
+{{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+```
+
+### Light
+```hbs
+{{> avatar avatar--modifier="pf-m-light" avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image light"'}}
+```
+
+### Dark
+```hbs
+{{> avatar avatar--modifier="pf-m-dark" avatar--attribute='src="/assets/images/img_avatar-dark.svg" alt="Avatar image dark"'}}
 ```
 
 ## Documentation
@@ -24,3 +33,5 @@ The avatar component provides a default SVG icon. If an image is used it should 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-avatar` | `<img>` |  Initiates an avatar image. **Required** |
+| `.pf-m-light` | `.pf-c-avatar` | Modifies an avatar to have a light theme. |
+| `.pf-m-dark` | `.pf-c-avatar` | Modifies an avatar to have a dark theme. |
