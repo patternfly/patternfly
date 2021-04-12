@@ -22,5 +22,8 @@ markComment: >
   activity in the last 60 days. It will be closed in 30 days if no further
   activity occurs.
 
+# Comment to post when closing a stale issue. Set to `false` to disable
+closeComment: false
+
 # Limit the number of actions per hour, from 1-30. Default is 30
 limitPerRun: 30
