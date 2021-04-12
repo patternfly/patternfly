@@ -116,6 +116,21 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 ```
 
+### Width control
+
+```hbs
+{{#> input-group input-group--attribute='style="--pf-c-input-group--Width: 280px; --pf-c-input-group--Width-on-xl: 340px;"'}}
+  {{#> select id="select-example-collapsed1" select--attribute='style="width: 100px;"'}}
+    Select
+  {{/select}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput4" name="textInput4" aria-label="Input with select and button" aria-describedby="inputSelectButton1"'}}
+  {{/form-control}}
+  {{#> button button--modifier="pf-m-control" button--attribute='id="inputSelectButton1"'}}
+    Button
+  {{/button}}
+{{/input-group}}
+```
+
 ## Documentation
 ### Overview
 Use the input group to extend form controls by adding text, buttons, selects, etc.
@@ -133,3 +148,4 @@ When using the `.pf-c-input-group` always ensure labels are used outside the inp
 | `.pf-c-input-group` | `<div>` |  Initiates the input group. **Required** |
 | `.pf-c-input-group__text` | `<span>` |  Initiates the input group text. This can be used to show text, radio, icons, or check boxes. |
 | `.pf-m-plain` | `.pf-c-input-group__text` | Removes the border from the text element. |
+| `--pf-c-input-group--Width{-on-[breakpoint]}: {width}` | `.pf-c-input-group` |  Modifies the width value of an `input group`. |

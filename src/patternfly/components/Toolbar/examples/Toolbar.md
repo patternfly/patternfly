@@ -210,6 +210,37 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | `.pf-m-space-items-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-toolbar__group` | Modifies toolbar group child spacing. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-toolbar` | Modifies toolbar horizontal padding. |
 
+### Width control
+```hbs
+{{#> toolbar toolbar--id="toolbar-width-control"}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-group}}
+        {{#> toolbar-item toolbar-item--attribute='style="--pf-c-toolbar__item--Width: 80px; --pf-c-toolbar__item--Width-on-xl: 5rem"'}}
+          Item
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          Item
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+      {{> divider divider--modifier="pf-m-vertical"}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        Item
+      {{/toolbar-item}}
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
+### Width control
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `--pf-c-toolbar__item--Width{-on-[breakpoint]}: {width}` | `.pf-c-toolbar__item` |  Modifies the width value of a `toolbar item`. |
+
 ### Group types
 ```hbs
 {{#> toolbar toolbar--id="toolbar-group-types-example"}}
