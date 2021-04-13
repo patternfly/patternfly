@@ -216,7 +216,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--attribute='style="--pf-c-toolbar__item--Width: 80px; --pf-c-toolbar__item--Width-on-xl: 5rem"'}}
+        {{#> toolbar-item toolbar-item--attribute='style="--pf-c-toolbar__item--Width: 80px; --pf-c-toolbar__item--Width-on-xl: 10rem"'}}
           Item
         {{/toolbar-item}}
         {{#> toolbar-item}}
