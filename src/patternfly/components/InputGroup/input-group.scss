@@ -1,9 +1,6 @@
-$pf-c-input-group--breakpoint-map: build-breakpoint-map();
-
 .pf-c-input-group {
   // Input group
   --pf-c-input-group--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-input-group--Width--base: 100%;
 
   // Input group text
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
@@ -24,10 +21,9 @@ $pf-c-input-group--breakpoint-map: build-breakpoint-map();
 
   // This component always needs to be light
   @include pf-t-light;
-  @include pf-build-css-variable-stack("--pf-c-input-group--Width--base", "--pf-c-input-group--Width", $pf-c-input-group--breakpoint-map);
 
   display: flex;
-  width: var(--pf-c-input-group--Width--base);
+  width: 100%;
   background-color: var(--pf-c-input-group--BackgroundColor);
 
   // stylelint-disable
