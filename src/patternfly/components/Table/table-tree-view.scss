@@ -70,6 +70,10 @@ $pf-c-tree-view--MaxDepth: 10;
   }
 }
 
+.pf-c-table__tree-view-text {
+  display: flex;
+}
+
 .pf-c-table__tree-view-icon {
   min-width: var(--pf-c-table__tree-view-icon--MinWidth);
   margin-right: var(--pf-c-table__tree-view-icon--MarginRight);
