@@ -43,6 +43,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Spacer values
   --pf-c-toolbar__item--spacer: var(--pf-c-toolbar--spacer--base);
   --pf-c-toolbar__group--spacer: var(--pf-c-toolbar--spacer--base);
+  --pf-c-toolbar__item--Width--base: auto;
 
   // Toggle group
   --pf-c-toolbar__group--m-toggle-group--spacer: var(--pf-global--spacer--sm);
@@ -193,8 +194,11 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
 // Item
 .pf-c-toolbar__item {
+  @include pf-build-css-variable-stack("--pf-c-toolbar__item--Width--base", "--pf-c-toolbar__item--Width", $pf-c-toolbar--breakpoint-map);
+
   --pf-c-toolbar--spacer: var(--pf-c-toolbar__item--spacer);
 
+  width: var(--pf-c-toolbar__item--Width--base);
   margin-right: var(--pf-c-toolbar--spacer);
 
   // Overflow menu

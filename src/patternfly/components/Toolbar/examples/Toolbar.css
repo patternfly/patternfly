@@ -35,7 +35,9 @@
 #ws-core-c-toolbar-insets .pf-c-toolbar,
 #ws-core-c-toolbar-insets .pf-c-toolbar__item,
 #ws-core-c-toolbar-page-insets .pf-c-toolbar,
-#ws-core-c-toolbar-page-insets .pf-c-toolbar__item {
+#ws-core-c-toolbar-page-insets .pf-c-toolbar__item,
+#ws-core-c-toolbar-width-control .pf-c-toolbar,
+#ws-core-c-toolbar-width-control .pf-c-toolbar__item {
   border: 2px dashed #393f44;
 }
 
@@ -53,7 +55,8 @@
 #ws-core-c-toolbar-insets .pf-c-toolbar,
 #ws-core-c-toolbar-insets .pf-c-toolbar__item,
 #ws-core-c-toolbar-page-insets .pf-c-toolbar,
-#ws-core-c-toolbar-page-insets .pf-c-toolbar__item {
-
+#ws-core-c-toolbar-page-insets .pf-c-toolbar__item,
+#ws-core-c-toolbar-width-control .pf-c-toolbar,
+#ws-core-c-toolbar-width-control .pf-c-toolbar__item {
   padding: .5rem;
 }
