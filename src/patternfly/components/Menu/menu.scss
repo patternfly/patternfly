@@ -8,6 +8,7 @@
   --pf-c-menu--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-menu--MinWidth: 100%;
   --pf-c-menu--Width: auto;
+  --pf-c-menu--MaxHeight: auto;
   --pf-c-menu--m-flyout__menu--Top: calc(var(--pf-c-menu--PaddingTop) * -1);
   --pf-c-menu--m-flyout__menu--Left: 100%;
   --pf-c-menu--m-flyout__list-item--m-menu-top__menu--Bottom: calc(var(--pf-c-menu--PaddingTop) * -1);
@@ -121,12 +122,20 @@
   --pf-c-menu--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex: var(--pf-global--ZIndex--2xl);
 
   width: var(--pf-c-menu--Width);
+  max-height: var(--pf-c-menu--MaxHeight);
   padding-top: var(--pf-c-menu--PaddingTop);
   padding-bottom: var(--pf-c-menu--PaddingBottom);
+  overflow: auto;
   background-color: var(--pf-c-menu--BackgroundColor);
   box-shadow: var(--pf-c-menu--BoxShadow);
 
+  & & {
+    --pf-c-menu--MaxHeight: none; // ignore setting max-height on any nested menu
+  }
+
   &.pf-m-flyout {
+    overflow: visible;
+
     .pf-c-menu {
       position: absolute;
       top: var(--pf-c-menu--m-flyout__menu--Top);
@@ -158,7 +167,7 @@
 
     > .pf-c-menu__content {
       flex-grow: 1;
-      overflow: hidden;
+      overflow: visible;
     }
 
     &.pf-m-drilled-in {
@@ -190,6 +199,7 @@
 
     .pf-c-menu__list {
       position: relative;
+      overflow: hidden;
       transition: var(--pf-c-menu--m-drilldown__list--Transition);
     }
 
@@ -197,6 +207,10 @@
       // stylelint-disable selector-max-class
       &.pf-m-current-path .pf-c-menu {
         z-index: var(--pf-c-menu--m-drilled-in--c-menu__list-item--m-current-path--c-menu--ZIndex);
+      }
+
+      &.pf-m-current-path > .pf-c-menu {
+        overflow: visible;
       }
       // stylelint-enable
 
@@ -209,6 +223,17 @@
       outline-offset: var(--pf-c-menu__item--OutlineOffset);
     }
   }
+
+  // stylelint-disable selector-max-class
+  &.pf-m-drilled-in > .pf-c-menu__content > .pf-c-menu__list {
+    overflow: visible;
+
+    > .pf-c-divider,
+    > .pf-c-menu__list-item:not(.pf-m-current-path) {
+      display: none; // hide all siblings of current path to maintain proper menu height
+    }
+  }
+  // stylelint-enable
 
   .pf-c-divider {
     margin-top: var(--pf-c-menu--c-divider--MarginTop);
@@ -232,6 +257,10 @@
 // content
 .pf-c-menu__content {
   height: var(--pf-c-menu__content--Height);
+
+  & & {
+    --pf-c-menu__content--Height: auto;
+  }
 }
 
 // Header
