@@ -1432,5 +1432,5 @@ import './Menu.css'
 | `.pf-m-current-path` | `.pf-c-menu.pf-m-drilldown .pf-c-menu__list-item` | Modifies the menu list item for current path state. |
 | `.pf-m-drilled-in` | `.pf-c-menu.pf-m-drilldown, .pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled in state. |
 | `--pf-c-menu--Width: {width}` | `.pf-c-menu` | Modifies the width of the menu. The default value is `auto`. |
-| `--pf-c-menu--MaxHeight: {height}` | `.pf-c-menu` | Modifies the max height of the menu. The default value is `800px`. |
+| `--pf-c-menu--MaxHeight: {height}` | `.pf-c-menu` | Modifies the max height of the menu. The default value is `auto`. |
 | `--pf-c-menu__content--Height: {height}` | `.pf-c-menu.pf-m-drilldown` | Modifies the height of the drilldown menu content. The default value is `auto`. |
