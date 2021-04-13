@@ -235,7 +235,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 {{/toolbar}}
 ```
 
-### Width control
+### Width control usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
