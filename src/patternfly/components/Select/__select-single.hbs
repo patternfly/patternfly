@@ -25,5 +25,15 @@
     <li role="presentation">
       {{#> select-menu-item}}Needs Maintenance{{/select-menu-item}}
     </li>
+    {{#if select--IsLoad}}
+      <li role="presentation">
+        {{#> select-menu-item select-menu-item--modifier="pf-m-load"}}View more{{/select-menu-item}}
+      </li>
+    {{/if}}
+    {{#if select--IsLoading}}
+      <li role="presentation" class="pf-c-select__list-item pf-m-loading">
+        {{#> spinner spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
+      </li>
+    {{/if}}
   {{/if}}
 </{{#if select-menu--type}}{{select-menu--type}}{{else}}ul{{/if}}>

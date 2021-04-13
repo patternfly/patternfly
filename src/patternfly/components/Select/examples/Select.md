@@ -39,7 +39,9 @@ import './Select.css'
   Filter by birth month
 {{/select}}
 ```
+
 The top select variation should be used when you want the menu to display above the toggle.
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -59,12 +61,15 @@ The top select variation should be used when you want the menu to display above 
   April
 {{/select}}
 ```
+
 The single select should be used when the user is selecting an option from a list of items. Although the presentation is similar to the basic dropdown, the underlying HTML and ARIA tag structure is specific to a select list. The selection will replace the default text in the toggle. The selection is highlighted with the list is opened. If the selection is cleared elsewhere (i.e. from the filter bar), the default text is restored.
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
 | `disabled` | `.pf-c-select__toggle` | Disables the dropdown toggle and removes it from keyboard focus. |
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -75,26 +80,6 @@ The single select should be used when the user is selecting an option from a lis
 | `.pf-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
 | `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
 | `.pf-c-select__menu-item-icon` | `<span>` |  Initiates the selected item icon wrapper. |
-| `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
-| `.pf-m-selected` | `.pf-c-select__menu-item` |  Indicates the menu item is selected. |
-| `.pf-m-disabled` | `div.pf-c-select__toggle` | Modifies to display the select toggle as disabled. This applies to `div.pf-c-select__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-select__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-select__toggle`|
-
-## Documentation
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
-| `disabled` | `.pf-c-select__toggle` | Disables the dropdown toggle and removes it from keyboard focus. |
-### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-select` | `<div>` |  Initiates the select component. |
-| `.pf-c-select__toggle` | `<button>` |  Initiates the select toggle. |
-| `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
-| `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
-| `.pf-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
-| `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
-| `.pf-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
 | `.pf-m-selected` | `.pf-c-select__menu-item` |  Indicates the menu item is selected. |
 | `.pf-m-disabled` | `div.pf-c-select__toggle` | Modifies to display the select toggle as disabled. This applies to `div.pf-c-select__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-select__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-select__toggle`|
@@ -124,10 +109,12 @@ The single select should be used when the user is selecting an option from a lis
 ```
 
 The single select typeahead should be used when the user is selecting one option from a list of items with the option to narrow the list by typing from the keyboard. Selected items are removed from the list. The user can clear the selection and restore the placeholder text.
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -163,10 +150,12 @@ The single select typeahead should be used when the user is selecting one option
 ```
 
 The Dropdown Multi Select should be used when the user is selecting multiple items from a list. The user can narrow the list by typing from the keyboard. The List updates while typing. Selected items create a new chip and are removed from the list. The user may clear selections individually or all at once to restore the placeholder.
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -226,7 +215,8 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 ```
 
 The checkbox select can select multiple items using checkboxes. The number of items selected is reflected in an optional badge in the dropdown toggle. The user may clear items by unchecking or using the clear button. Optionally, items may be grouped.
-## Usage
+
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-select` | `<div>` | Initiates the select component. |
@@ -262,7 +252,9 @@ The checkbox select can select multiple items using checkboxes. The number of it
   Filter by birth month
 {{/select}}
 ```
+
 The plain select variation should be used when you do not want a border applied to the select toggle.
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -287,6 +279,7 @@ The plain select variation should be used when you do not want a border applied 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-hidden="true"` | `.pf-c-select__toggle-icon` | Hides the icon from assistive technologies.
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -303,7 +296,7 @@ The plain select variation should be used when you do not want a border applied 
 {{/select}}
 ```
 
-## Usage
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-select` | `<div>` |  Initiates the select component. |
@@ -326,13 +319,12 @@ The plain select variation should be used when you do not want a border applied 
 {{/select}}
 ```
 
-## Usage
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-select__menu-item-description` | `<span>` |  Initiates the select menu item description element. |
 | `.pf-c-select__menu-item-main` | `<span>` | Initiates the select menu item main element. Used when the description element is present. |
 | `.pf-m-description` | `.pf-c-select__menu-item` | Modifies the select menu item when selected to accommodate the description element. |
-
 
 ### Favorites
 ```hbs
@@ -347,7 +339,7 @@ The plain select variation should be used when you do not want a border applied 
 | `aria-label="Not starred"` | `.pf-c-select__menu-wrapper > .pf-c-select__menu-item.pf-m-action` | Provides an accessible label indicating that the favorite action is not selected. |
 | `aria-label="Starred"` | `.pf-c-select__menu-wrapper.pf-m-favorite > .pf-c-select__menu-item.pf-m-action` | Provides an accessible label indicating that the favorite action is selected. |
 
-## Usage
+### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-select__menu-wrapper` | `<li>` | Defines a menu wrapper for use with multiple actionable items in a single item row. |
@@ -356,6 +348,43 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-m-link` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item for link styles. |
 | `.pf-m-action` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item to for action styles. |
 
+### View more
+```hbs
+{{#> select id="select-single-view-more" select--IsExpanded="true" select--IsLoad="true"}}
+  Filter by birth month
+{{/select}}
+```
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-load` | `.pf-c-select__menu-item` | Modifies a menu item for load styles. |
+
+### Loading
+```hbs
+{{#> select id="select-single-loading" select--IsExpanded="true" select--IsLoading="true"}}
+  Filter by birth month
+{{/select}}
+```
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-select__list-item` | `<li>` | Defines a list item element in the select menu. |
+| `.pf-m-loading` | `.pf-c-select__list-item` | Modifies a list item for loading styles. |
+
+### Footer
+```hbs
+{{#> select id="select-single-footer" select--IsExpanded="true" select--IsLoading="true" select--HasFooter="true" select-menu--type="div"}}
+  Filter by birth month
+{{/select}}
+```
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-select__menu-footer` | `<div>` | Defines a menu footer. |
+| `.pf-c-select__menu-list` | `<ul>` | Defines the menu list when the list is placed in `div.pf-c-select__menu`. |
 
 ## Documentation
 ### Overview

@@ -19,30 +19,30 @@
 
   {{!-- create the dropdown menu part --}}
   {{#if select--IsTypeahead}}
-    {{> select-typeahead}}
+    {{> __select-typeahead}}
   {{else if select--IsCheckboxSelect}}
     {{#if select--HasGroups}}
       {{#if select--IsChecked}}
-        {{> select-checkbox-groups-checked}}
+        {{> __select-checkbox-groups-checked}}
       {{else}}
-        {{> select-checkbox-groups}}
+        {{> __select-checkbox-groups}}
       {{/if}}
     {{else if select--HasCounts}}
-      {{> select-checkbox-counts}}
+      {{> __select-checkbox-counts}}
     {{else}}
       {{#if select--IsChecked}}
-        {{> select-checkbox-checked}}
+        {{> __select-checkbox-checked}}
       {{else}}
-        {{> select-checkbox}}
+        {{> __select-checkbox}}
       {{/if}}
     {{/if}}
   {{else if select--IsDescriptive}}
-    {{> select-menu-descriptive}}
+    {{> __select-menu-descriptive}}
   {{else if select--IsFavorites}}
-    {{> select-menu-favorites}}
-  {{else if select--IsCounts}}
-    {{> select-menu-counts}}
+    {{> __select-menu-favorites}}
+  {{else if select--HasFooter}}
+    {{> __select-menu-footer}}
   {{else}}
-    {{> select-single}}
+    {{> __select-single}}
   {{/if}}
 </div>
