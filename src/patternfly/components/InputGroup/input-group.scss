@@ -33,7 +33,8 @@
   }
   // stylelint-enable
 
-  > :focus {
+  > :focus,
+  > :focus-within {
     z-index: var(--pf-c-input-group--child--ZIndex);
   }
 
