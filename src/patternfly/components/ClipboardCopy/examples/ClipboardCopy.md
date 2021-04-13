@@ -97,9 +97,8 @@ cssPrefix: pf-c-clipboard-copy
 {{/clipboard-copy}}
 ```
 
-### Inline
+### Compact inline
 ```hbs
-<h4><strong>Basic</strong></h4>
 {{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-basic"}}
   {{#> clipboard-copy-text}}
     2.3.4-2-redhat
@@ -112,10 +111,10 @@ cssPrefix: pf-c-clipboard-copy
     {{/clipboard-copy-actions-item}}
   {{/clipboard-copy-actions}}
 {{/clipboard-copy}}
+```
 
-<br><br>
-
-<h4><strong>Code variant</strong></h4>
+### Compact inline code
+```hbs
 {{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-code" clipboard-copy-text--IsCode="true"}}
   {{#> clipboard-copy-text}}
     2.3.4-2-redhat
@@ -128,9 +127,10 @@ cssPrefix: pf-c-clipboard-copy
     {{/clipboard-copy-actions-item}}
   {{/clipboard-copy-actions}}
 {{/clipboard-copy}}
-<br><br>
+```
 
-<h4><strong>Additional action</strong></h4>
+### Compact inline with additional action
+```hbs
 {{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-addl-action"}}
   {{#> clipboard-copy-text}}
     2.3.4-2-redhat
@@ -148,10 +148,11 @@ cssPrefix: pf-c-clipboard-copy
     {{/clipboard-copy-actions-item}}
   {{/clipboard-copy-actions}}
 {{/clipboard-copy}}
+```
 
-<br><br>
-
-<h4><strong>In a sentence</strong></h4>
+### Compact inline in sentence
+```hbs
+<h4><strong>Basic</strong></h4>
 Lorem ipsum&nbsp;
 {{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-sentence"}}
   {{#> clipboard-copy-text}}
@@ -169,7 +170,7 @@ Lorem ipsum&nbsp;
 
 <br><br>
 
-<h4><strong>Long string that wraps</strong></h4>
+<h4><strong>Long copy string</strong></h4>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
 {{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-long-wrap"}}
   {{#> clipboard-copy-text}}
@@ -184,10 +185,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
   {{/clipboard-copy-actions}}
 {{/clipboard-copy}}
 &nbsp;Mauris luctus, libero nec dapibus ultricies, urna purus pretium mauris, ullamcorper pharetra lacus nibh vitae enim.
-
 <br><br>
 
-<h4><strong>Block variant</strong></h4>
+<h4><strong>Long copy string in block</strong></h4>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;
 {{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-block" clipboard-copy--IsBlock="true"}}
   {{#> clipboard-copy-text}}
