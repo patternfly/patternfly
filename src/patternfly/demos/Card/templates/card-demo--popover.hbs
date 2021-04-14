@@ -1,4 +1,4 @@
-{{#if cardview-demo--popover--IsOpen}}
+{{#if card-demo--popover--IsOpen}}
   {{#> popover popover--modifier="pf-m-right" popover--attribute=(concat 'aria-labelledby="' popover--id '-popover-right-header" aria-describedby="' popover--id '-popover-right-body" style="--pf-c-popover--MinWidth: 400px;"')}}
     {{#> popover-content}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -11,7 +11,7 @@
         Components of the Control Panel are responsible for maintaining and reconciling the state of the cluster.
       {{/popover-body}}
       {{#> popover-body}}
-        {{> cardview-demo--popover-table}}
+        {{> card-demo--popover-table}}
       {{/popover-body}}
     {{/popover-content}}
   {{/popover}}
