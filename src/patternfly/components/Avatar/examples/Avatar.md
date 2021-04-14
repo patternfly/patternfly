@@ -12,12 +12,12 @@ import './Avatar.css'
 {{> avatar avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image"'}}
 ```
 
-### Light
+### Bordered - light
 ```hbs
 {{> avatar avatar--modifier="pf-m-light" avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image light"'}}
 ```
 
-### Dark
+### Bordered - dark
 ```hbs
 {{> avatar avatar--modifier="pf-m-dark" avatar--attribute='src="/assets/images/img_avatar-dark.svg" alt="Avatar image dark"'}}
 ```
