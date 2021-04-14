@@ -130,7 +130,6 @@
   --pf-c-menu__footer--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-menu__footer--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-menu__footer--BoxShadow: var(--pf-global--BoxShadow--sm-top);
-  --pf-c-menu__footer--MarginBottom: calc(var(--pf-global--spacer--sm) * -1);
 
   width: var(--pf-c-menu--Width);
   max-height: var(--pf-c-menu--MaxHeight);
@@ -464,6 +463,5 @@
 
 .pf-c-menu__footer {
   padding: var(--pf-c-menu__footer--PaddingTop) var(--pf-c-menu__footer--PaddingRight) var(--pf-c-menu__footer--PaddingBottom) var(--pf-c-menu__footer--PaddingLeft);
-  margin-bottom: var(--pf-c-menu__footer--MarginBottom);
   box-shadow: var(--pf-c-menu__footer--BoxShadow);
 }
