@@ -102,7 +102,7 @@ import './context-selector.css'
     {{/context-selector-menu-search}}
     {{> __context-selector-menu-menu}}
     {{#> context-selector-menu-footer}}
-      {{#> button button--modifier="pf-m-link"}}
+      {{#> button button--modifier="pf-m-link pf-m-inline"}}
         Manage projects
       {{/button}}
     {{/context-selector-menu-footer}}
