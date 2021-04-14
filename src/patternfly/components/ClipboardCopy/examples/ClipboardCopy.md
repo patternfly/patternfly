@@ -97,7 +97,7 @@ cssPrefix: pf-c-clipboard-copy
 {{/clipboard-copy}}
 ```
 
-### Compact inline
+### Inline compact
 ```hbs
 {{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-basic"}}
   {{#> clipboard-copy-text}}
@@ -113,7 +113,7 @@ cssPrefix: pf-c-clipboard-copy
 {{/clipboard-copy}}
 ```
 
-### Compact inline code
+### Inline compact code
 ```hbs
 {{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-code" clipboard-copy-text--IsCode="true"}}
   {{#> clipboard-copy-text}}
@@ -129,7 +129,7 @@ cssPrefix: pf-c-clipboard-copy
 {{/clipboard-copy}}
 ```
 
-### Compact inline with additional action
+### Inline compact with additional action
 ```hbs
 {{#> clipboard-copy clipboard-copy--IsInline="true" clipboard-copy--id="inline-addl-action"}}
   {{#> clipboard-copy-text}}
@@ -150,7 +150,7 @@ cssPrefix: pf-c-clipboard-copy
 {{/clipboard-copy}}
 ```
 
-### Compact inline in sentence
+### Inline compact in sentence
 ```hbs
 <h4><strong>Basic</strong></h4>
 Lorem ipsum&nbsp;
