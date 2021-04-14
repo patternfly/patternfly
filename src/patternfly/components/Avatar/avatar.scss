@@ -6,11 +6,11 @@
   --pf-c-avatar--Height: #{pf-size-prem(36px)};
 
   // Light
-  --pf-c-avatar--m-light--BorderColor: var(--pf-global--BorderColor--light-100);
+  --pf-c-avatar--m-light--BorderColor: var(--pf-global--BorderColor--dark-100);
   --pf-c-avatar--m-light--BorderWidth: var(--pf-global--BorderWidth--sm);
 
   // Dark
-  --pf-c-avatar--m-dark--BorderColor: var(--pf-global--palette--black-400);
+  --pf-c-avatar--m-dark--BorderColor: var(--pf-global--palette--black-700);
   --pf-c-avatar--m-dark--BorderWidth: var(--pf-global--BorderWidth--sm);
 
   width: var(--pf-c-avatar--Width);
