@@ -1581,12 +1581,15 @@ import './Menu.css'
 | `.pf-c-menu__item-action` | `<button>` | Initiates the menu item action. |
 | `.pf-c-menu__item-action-icon` | `<span>` | Initiates the menu item action icon. |
 | `.pf-c-menu__item-external-icon` | `<span>` | Initiates the menu item external icon. |
+| `.pf-c-menu__footer` | `<div>` | Initiates the menu footer. |
 | `.pf-m-favorite` | `.pf-c-menu__item-action` | Modifies the menu item action to handle the favorite icon. |
 | `.pf-m-favorited` | `.pf-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |
 | `.pf-m-selected` | `.pf-c-menu__item` | Modifies the menu item to be selected. |
 | `.pf-m-flyout` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "flyout". |
 | `.pf-m-menu-top` | `.pf-c-menu__list-item` | Modifies a flyout menu to expand to the top. |
 | `.pf-m-menu-left` | `.pf-c-menu__list-item` | Modifies a flyout menu to expand to the left. |
+| `.pf-m-load` | `.pf-c-menu__list-item` | Modifies a list item for "load more" styles. |
+| `.pf-m-loading` | `.pf-c-menu__list-item` | Modifies a list item for loading styles. |
 | `.pf-m-drilldown` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "drill down". |
 | `.pf-m-current-path` | `.pf-c-menu.pf-m-drilldown .pf-c-menu__list-item` | Modifies the menu list item for current path state. |
 | `.pf-m-drilled-in` | `.pf-c-menu.pf-m-drilldown, .pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled in state. |
