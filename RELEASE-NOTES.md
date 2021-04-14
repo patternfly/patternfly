@@ -3,6 +3,41 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2021.05 release notes (2021-04-20)
+Packages released:
+- [@patternfly/patternfly@v4.101.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.101.1)
+
+### Components
+- **Avatar:** Added dark and light variants ([#3990](https://github.com/patternfly/patternfly/pull/3990))
+- **Button:** Reverted variations to regular property declarations ([#3997](https://github.com/patternfly/patternfly/pull/3997))
+- **Card:**
+  - Added empty state card back into demo ([#3961](https://github.com/patternfly/patternfly/pull/3961))
+  - Fixed expandable toggle rotation ([#3981](https://github.com/patternfly/patternfly/pull/3981))
+  - Added card demo images ([#3985](https://github.com/patternfly/patternfly/pull/3985))
+  - Moved card view demo to demos, renamed card demo files ([#3989](https://github.com/patternfly/patternfly/pull/3989))
+  - Updated empty state text in card view demo ([#4001](https://github.com/patternfly/patternfly/pull/4001))
+- **Context selector:** Left aligned footer ([#3978](https://github.com/patternfly/patternfly/pull/3978))
+- **Copy clipboard:** Renamed inline examples to inline compact ([#3998](https://github.com/patternfly/patternfly/pull/3998))
+- **Form:** Updated element list for section title ([#3973](https://github.com/patternfly/patternfly/pull/3973))
+- **Input group:** Fixed focus ring z-index issue ([#3991](https://github.com/patternfly/patternfly/pull/3991))
+- **Menu:**
+  - Added variation for top and left flyout menus ([#3977](https://github.com/patternfly/patternfly/pull/3977))
+  - Added scrollable support ([#3999](https://github.com/patternfly/patternfly/pull/3999))
+- **Select:**
+  - Added view more and loading support to select and menu ([#3968](https://github.com/patternfly/patternfly/pull/3968))
+  - Updated typeahead text input height to match form control ([#3988](https://github.com/patternfly/patternfly/pull/3988))
+- **Table:**
+  - Added tree table responsiveness ([#3943](https://github.com/patternfly/patternfly/pull/3943))
+  - Fixed tree text display ([#4000](https://github.com/patternfly/patternfly/pull/4000))
+- **Toolbar:**
+  - Changed expanded content z-index to sm to match other menus ([#3986](https://github.com/patternfly/patternfly/pull/3986))
+  - Added item width control ([#3994](https://github.com/patternfly/patternfly/pull/3994))
+
+### Other
+- **Workspace:** Fixed whitespace and code block ([#3956](https://github.com/patternfly/patternfly/pull/3956))
+- **Stalebot:** Added closeComment to fix stalebot not running ([#3992](https://github.com/patternfly/patternfly/pull/3992))
+
+
 ## 2021.04 release notes (2021-03-30)
 Packages released:
 - [@patternfly/patternfly@v4.96.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.96.2)
