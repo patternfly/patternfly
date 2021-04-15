@@ -23,6 +23,7 @@ Packages released:
 - **Menu:**
   - Added variation for top and left flyout menus ([#3977](https://github.com/patternfly/patternfly/pull/3977))
   - Added scrollable support ([#3999](https://github.com/patternfly/patternfly/pull/3999))
+  - Added docs for load, loading, footer ([#4006](https://github.com/patternfly/patternfly/pull/4006))
 - **Select:**
   - Added view more and loading support to select and menu ([#3968](https://github.com/patternfly/patternfly/pull/3968))
   - Updated typeahead text input height to match form control ([#3988](https://github.com/patternfly/patternfly/pull/3988))
