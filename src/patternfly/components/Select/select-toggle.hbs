@@ -61,7 +61,15 @@
       {{/if}}
     {{/if}}
   {{/select-toggle-wrapper}}
-  {{#if select--IsInvalid}}
+  {{#if select--IsSuccess}}
+    {{#> select-toggle-status-icon}}
+      <i class="fas fa-check-circle" aria-hidden="true"></i>
+    {{/select-toggle-status-icon}}
+  {{else if select--IsWarning}}
+    {{#> select-toggle-status-icon}}
+      <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+    {{/select-toggle-status-icon}}
+  {{else if select--IsInvalid}}
     {{#> select-toggle-status-icon}}
       <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
     {{/select-toggle-status-icon}}

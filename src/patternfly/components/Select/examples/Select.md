@@ -19,6 +19,20 @@ import './Select.css'
 {{/select}}
 ```
 
+### Success
+```hbs
+{{#> select id="select-success" select--IsSuccess="true"}}
+  Filter by birth month
+{{/select}}
+```
+
+### Warning
+```hbs
+{{#> select id="select-warning" select--IsWarning="true"}}
+  Filter by birth month
+{{/select}}
+```
+
 ### Invalid
 ```hbs
 {{#> select id="select-invalid" select--IsInvalid="true"}}
@@ -53,7 +67,7 @@ The top select variation should be used when you want the menu to display above 
 | `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the custom select dropdown menu. |
 | `.pf-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
 | `.pf-m-top` | `.pf-c-select` |  Modifies the select menu to display above the toggle. |
-| `.pf-m-active` | `.pf-c-select__toggle` | Forces display of the active state of the toggle. |
+| `.pf-m-active` | `.pf-c-select` | Forces display of the active state of the toggle. |
 
 ### Single expanded and selected
 ```hbs
@@ -67,6 +81,7 @@ The single select should be used when the user is selecting an option from a lis
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
+| `aria-invalid="true"` | `.pf-c-select__toggle` | Indicates that the select is in the invalid state. |
 | `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
 | `disabled` | `.pf-c-select__toggle` | Disables the dropdown toggle and removes it from keyboard focus. |
 
@@ -81,6 +96,9 @@ The single select should be used when the user is selecting an option from a lis
 | `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
 | `.pf-c-select__menu-item-icon` | `<span>` |  Initiates the selected item icon wrapper. |
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
+| `.pf-m-success` | `.pf-c-select` | Modifies select component for the success state. |
+| `.pf-m-warning` | `.pf-c-select` | Modifies select component for the warning state. |
+| `.pf-m-invalid` | `.pf-c-select` | Modifies select component for the invalid state. |
 | `.pf-m-selected` | `.pf-c-select__menu-item` |  Indicates the menu item is selected. |
 | `.pf-m-disabled` | `div.pf-c-select__toggle` | Modifies to display the select toggle as disabled. This applies to `div.pf-c-select__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-select__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-select__toggle`|
 
