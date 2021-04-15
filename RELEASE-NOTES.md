@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2021.05 release notes (2021-04-20)
 Packages released:
-- [@patternfly/patternfly@v4.101.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.101.1)
+- [@patternfly/patternfly@v4.102.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.102.1)
 
 ### Components
 - **Avatar:** Added dark and light variants ([#3990](https://github.com/patternfly/patternfly/pull/3990))
@@ -27,6 +27,7 @@ Packages released:
 - **Select:**
   - Added view more and loading support to select and menu ([#3968](https://github.com/patternfly/patternfly/pull/3968))
   - Updated typeahead text input height to match form control ([#3988](https://github.com/patternfly/patternfly/pull/3988))
+  - Added warning and success states ([#4008](https://github.com/patternfly/patternfly/pull/4008))
 - **Table:**
   - Added tree table responsiveness ([#3943](https://github.com/patternfly/patternfly/pull/3943))
   - Fixed tree text display ([#4000](https://github.com/patternfly/patternfly/pull/4000))
