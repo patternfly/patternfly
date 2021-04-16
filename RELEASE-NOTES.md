@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2021.05 release notes (2021-04-20)
 Packages released:
-- [@patternfly/patternfly@v4.102.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.102.1)
+- [@patternfly/patternfly@v4.102.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.102.2)
 
 ### Components
 - **Avatar:** Added dark and light variants ([#3990](https://github.com/patternfly/patternfly/pull/3990))
@@ -31,6 +31,7 @@ Packages released:
 - **Table:**
   - Added tree table responsiveness ([#3943](https://github.com/patternfly/patternfly/pull/3943))
   - Fixed tree text display ([#4000](https://github.com/patternfly/patternfly/pull/4000))
+  - Fixed indendation for non-expandable tree table rows ([#4015](https://github.com/patternfly/patternfly/pull/4015))
 - **Toolbar:**
   - Changed expanded content z-index to sm to match other menus ([#3986](https://github.com/patternfly/patternfly/pull/3986))
   - Added item width control ([#3994](https://github.com/patternfly/patternfly/pull/3994))
