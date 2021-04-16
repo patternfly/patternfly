@@ -5,7 +5,7 @@ $pf-c-tree-view--MaxDepth: 10;
   --pf-c-table__tree-view-main--nested-indent--base: calc(var(--pf-c-table__tree-view-main--indent--base) - var(--pf-global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
 
   // main
-  --pf-c-table__tree-view-main--PaddingLeft: 0;
+  --pf-c-table__tree-view-main--PaddingLeft: var(--pf-c-table__tree-view-main--indent--base);
   --pf-c-table__tree-view-main--MarginLeft: calc(var(--pf-c-table--cell--PaddingLeft) * -1);
 
   // check
@@ -19,8 +19,6 @@ $pf-c-tree-view--MaxDepth: 10;
   --pf-c-table--m-tree-view__toggle--Position: absolute;
   --pf-c-table--m-tree-view__toggle--Left: var(--pf-c-table__tree-view-main--PaddingLeft);
   --pf-c-table--m-tree-view__toggle--TranslateX: -100%;
-  --pf-c-table--m-tree-view--tr--aria-level-1__toggle--Position: static;
-  --pf-c-table--m-tree-view--tr--aria-level-1__toggle--TranslateX: 0;
 
   // toggle icon
   --pf-c-table--m-tree-view__toggle__toggle-icon--MinWidth: var(--pf-global--FontSize--md);
@@ -29,11 +27,6 @@ $pf-c-tree-view--MaxDepth: 10;
     // stylelint-disable selector-no-qualifying-type
     > tbody > tr {
       --pf-c-table--m-tree-view__toggle--Left: var(--pf-c-table__tree-view-main--PaddingLeft);
-    }
-
-    tr[aria-level="1"] {
-      --pf-c-table--m-tree-view__toggle--Position: var(--pf-c-table--m-tree-view--tr--aria-level-1__toggle--Position);
-      --pf-c-table--m-tree-view__toggle--TranslateX: var(--pf-c-table--m-tree-view--tr--aria-level-1__toggle--TranslateX);
     }
     // stylelint-enable
 
