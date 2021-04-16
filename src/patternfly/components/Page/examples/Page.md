@@ -227,6 +227,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-page__header-tools-group`, `.pf-c-page__header-tools-item` | Hides a header tools group or item at a specified breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-page__header-tools-group`, `.pf-c-page__header-tools-item` | Shows a header tools group or item at a specified breakpoint. |
 | `.pf-m-limit-width` | `.pf-c-page__main-section` | Modifies a page section to limit the `max-width` of the content inside. |
+| `.pf-m-center` | `.pf-c-page__main-section.pf-m-limit-width` | Modifies a page section body to align center. |
 | `.pf-m-sticky-top` | `.pf-c-page__main-*` | Modifies a section/group to be sticky to the top of its container. |
 | `.pf-m-sticky-bottom` | `.pf-c-page__main-*` | Modifies a section/group to be sticky to the bottom of its container. |
 | `.pf-m-shadow-bottom` | `.pf-c-page__main-*` | Modifies a section/group to have a bottom shadow. |
