@@ -1,0 +1,20 @@
+$pf-c-width-limiter--breakpoint-map: build-breakpoint-map();
+
+// width limiter
+.pf-c-width-limiter {
+  --pf-c-width-limiter--MaxWidth: auto;
+  --pf-c-width-limiter--MinWidth: 0;
+
+  width: 100%;
+
+  @include pf-build-css-variable-stack(
+    "min-width",
+    "--pf-c-width-limiter--MinWidth",
+    $pf-c-width-limiter--breakpoint-map
+  );
+  @include pf-build-css-variable-stack(
+    "max-width",
+    "--pf-c-width-limiter--MaxWidth",
+    $pf-c-width-limiter--breakpoint-map
+  );
+}
