@@ -21,6 +21,7 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
   display: flex;
   align-items: center;
   align-self: stretch;
+  flex-shrink: 0;
   justify-content: center;
   width: 100%;
   border: 0; // removes the default border styling on an hr
