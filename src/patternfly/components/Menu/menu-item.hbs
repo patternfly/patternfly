@@ -1,4 +1,4 @@
-<{{# if menu-item--IsLink}}a{{else}}button{{/if}} class="pf-c-menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}"
+<{{# if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else}}button{{/if}} class="pf-c-menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}"
   {{#if menu-item--IsLink}}
     href="#"
     {{#if menu-list-item--IsDisabled}}
@@ -23,4 +23,4 @@
     {{/if}}
   {{/if}}>
   {{> @partial-block}}
-</{{# if menu-item--IsLink}}a{{else}}button{{/if}}>
+</{{# if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else}}button{{/if}}>

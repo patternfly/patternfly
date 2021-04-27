@@ -1,0 +1,25 @@
+#ws-core-c-log-viewer-responsive {
+  height: 400px;
+}
+
+#ws-core-c-log-viewer-responsive .ws-preview-html {
+  height: 100%;
+}
+
+#ws-core-c-log-viewer-with-popover-open .ws-preview-html {
+  position: relative;
+}
+
+#ws-core-c-log-viewer-with-popover-open .pf-c-popover {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 52px;
+  right: 78px;
+}
+
+@media screen and (min-width: 992px) {
+  #ws-core-c-log-viewer-with-popover-open .pf-c-popover {
+    display: block;
+  }
+}
