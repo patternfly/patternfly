@@ -9,6 +9,91 @@ import './Menu.css'
 
 ## Examples
 
+### Delete this before merge -- Checkbox expanded and selected with groups and filter
+```hbs
+{{#> wrapper id="checkbox-expanded-selected-groups-filter"}}
+<div class="pf-c-select pf-m-expanded">
+  <span id="{{id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose one{{/if}}</span>
+  {{> select-toggle}}
+  {{#> menu menu--attribute='style="--pf-c-menu__content--MaxHeight: 200px;"'}}
+    {{#> menu-search}}
+      {{#> menu-search-input}}
+        {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
+      {{/menu-search-input}}
+    {{/menu-search}}
+    {{> divider}}
+    {{#> menu-content}}
+      {{#> menu-list}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Action
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Action
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Action
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Action
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Action
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Action
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Action
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+      {{/menu-list}}
+    {{/menu-content}}
+  {{/menu}}
+</div>
+{{/wrapper}}
+```
+
 ### Basic
 ```hbs
 {{#> menu}}
@@ -150,7 +235,7 @@ import './Menu.css'
 <!--
 ### Menu with managed height
 ```hbs
-{{#> menu menu--attribute='style="--pf-c-menu--MaxHeight: 120px"'}}
+{{#> menu menu--attribute='style="--pf-c-menu__content--MaxHeight: 120px"'}}
   {{#> menu-content}}
     {{#> menu-list}}
       {{#> menu-list-item}}
@@ -1594,6 +1679,7 @@ import './Menu.css'
 | `.pf-m-current-path` | `.pf-c-menu.pf-m-drilldown .pf-c-menu__list-item` | Modifies the menu list item for current path state. |
 | `.pf-m-drilled-in` | `.pf-c-menu.pf-m-drilldown, .pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled in state. |
 | `--pf-c-menu--Width: {width}` | `.pf-c-menu` | Modifies the width of the menu. The default value is `auto`. |
+| `--pf-c-menu__content--MaxHeight: {height}` | `.pf-c-menu__content` | Modifies the height of the menu content. Update this value when header and/or footer elements are intended to be fixed. |
 | `--pf-c-menu__content--Height: {height}` | `.pf-c-menu.pf-m-drilldown` | Modifies the height of the drilldown menu content. The default value is `auto`. |
 <!--
 | `--pf-c-menu--MaxHeight: {height}` | `.pf-c-menu` | Modifies the max height of the menu. The default value is `auto`. |
