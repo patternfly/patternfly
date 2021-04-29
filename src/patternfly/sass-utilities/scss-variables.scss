@@ -308,3 +308,8 @@ $pf-global--spacer-map: (
   "3xl": "var(--pf-global--spacer--3xl)",
   "4xl": "var(--pf-global--spacer--4xl)"
 );
+
+// Marketing globals
+$pf-global--m-marketing--link--Color--visited:         $pf-color-purple-600 !default;
+$pf-global--m-marketing--link--Color--light--visited:  $pf-color-purple-600 !default;
+$pf-global--m-marketing--link--Color--dark--visited:   $pf-color-purple-300 !default;
