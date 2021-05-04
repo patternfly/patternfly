@@ -145,6 +145,12 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     top: var(--pf-c-dropdown--c-menu--Top);
     z-index: var(--pf-c-dropdown--c-menu--ZIndex);
   }
+
+  &.pf-m-full-height {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
 }
 
 .pf-c-dropdown__toggle {

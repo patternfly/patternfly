@@ -81,6 +81,16 @@
   display: inline-block;
   width: var(--pf-c-context-selector--Width);
   max-width: 100%;
+
+  &.pf-m-full-height {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    .pf-c-context-selector__toggle {
+      align-self: stretch;
+    }
+  }
 }
 
 .pf-c-context-selector__toggle {
