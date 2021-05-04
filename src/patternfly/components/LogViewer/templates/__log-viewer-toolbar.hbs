@@ -1,4 +1,4 @@
-{{#> log-viewer-header}}
+{{#> log-viewer-header __log-viewer-toolbar--IsMatch=log-viewer--IsMatch}}
   {{#> toolbar toolbar--id=(concat log-viewer--id '-toolbar') toolbar--attribute='role="toolbar"'}}
     {{#> toolbar-content}}
       {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
@@ -8,7 +8,11 @@
         {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
           {{> toolbar-toggle toolbar-toggle--icon="fa-search" toolbar-toggle--IsExpanded="false"}}
           {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter" toolbar-item--attribute='style="--pf-c-toolbar__item--Width: 268px"'}}
-            {{> search-input search-input--placeholder="Find" search-input--value="Find" search-input--count="1 / 3" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
+            {{#if __log-viewer-toolbar--IsMatch}}
+              {{> search-input search-input--placeholder="Find" search-input--value=" " search-input--count="1 / 3" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
+            {{else}}
+              {{> search-input search-input--placeholder="Find"}}
+            {{/if}}
           {{/toolbar-item}}
         {{/toolbar-group}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-spacer-none"}}
@@ -80,7 +84,11 @@
       {{/toolbar-content-section}}
       {{#> toolbar-expandable-content}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter" toolbar-item--attribute='style="--pf-c-toolbar__item--Width: 24ch"'}}
-          {{> search-input search-input--placeholder="Find" search-input--value="" search-input--count="1 / 3" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
+          {{#if __log-viewer-toolbar--IsMatch}}
+            {{> search-input search-input--placeholder="Find" search-input--value=" " search-input--count="1 / 3" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
+          {{else}}
+            {{> search-input search-input--placeholder="Find"}}
+          {{/if}}
         {{/toolbar-item}}
       {{/toolbar-expandable-content}}
     {{/toolbar-content}}

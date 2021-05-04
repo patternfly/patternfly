@@ -36,10 +36,10 @@ import './LogViewer.css';
 {{/log-viewer}}
 ```
 
-### With highlighted and selected text
+### With search results
 
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-highlighted-example" log-viewer--HasLineNumbers="true" log-viewer--IsMatch="true" log-viewer--IsCurrent="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px;"'}}
+{{#> log-viewer log-viewer--id="log-viewer-search-results-example" log-viewer--HasLineNumbers="true" log-viewer--IsMatch="true" log-viewer--IsCurrent="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px;"'}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
@@ -59,15 +59,6 @@ import './LogViewer.css';
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-dropdowns-expanded-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"'}}
   {{> __log-viewer-toolbar dropdown--IsExpanded="true"}}
-  {{> __log-viewer-main}}
-{{/log-viewer}}
-```
-
-### With search expanded (mobile)
-
-```hbs
-{{#> log-viewer log-viewer--id="log-viewer-search-expanded-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"'}}
-  {{> __log-viewer-toolbar menu--IsHidden="true" toolbar-expandable-content--IsExpanded="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
 ```
@@ -112,7 +103,7 @@ import './LogViewer.css';
 | `role="log"` | `.pf-c-log-viewer__main` | Identifies an element that creates a live region where new information is added in a meaningful order and old information may disappear. **Required** |
 | `aria-live="polite"` | `.pf-c-log-viewer__list` | Allows assistive technologies to automatically read new content within the aria-live region on the place where the text is displayed. |
 | `aria-atomic="true"` | `.pf-c-log-viewer__list` | Allows assistive technologies to notify a user when log messages are added. |
-| `tabindex="0"` | `.pf-c-log-viewer`, `.pf-c-log-viewer__list`, `.pf-c-log-viewer__list-item` | Inserts the element into the tab order of the page so that it is focusable. **Required** |
+| `tabindex="0"` | `.pf-c-log-viewer`, `.pf-c-log-viewer__list` | Inserts the element into the tab order of the page so that it is focusable. **Required** |
 | `aria-hidden="true"` | `.pf-c-log-viewer__index` | Hides an index from assistive technologies. |
 
 ### Usage
