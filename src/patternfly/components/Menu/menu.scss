@@ -173,6 +173,10 @@
     flex-direction: column;
     transition: var(--pf-c-menu--m-drilldown--Transition);
 
+    &[hidden] {
+      display: none;
+    }
+
     > .pf-c-menu__content {
       flex-grow: 1;
       overflow: visible;

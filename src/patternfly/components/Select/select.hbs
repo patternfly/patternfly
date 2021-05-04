@@ -16,35 +16,40 @@
     {{/if}}
   {{/unless}}
 
-  {{!-- create the toggle and all its components --}}
-  {{> select-toggle}}
-
-  {{!-- create the dropdown menu part --}}
-  {{#if select--IsTypeahead}}
-    {{> __select-typeahead}}
-  {{else if select--IsCheckboxSelect}}
-    {{#if select--HasGroups}}
-      {{#if select--IsChecked}}
-        {{> __select-checkbox-groups-checked}}
-      {{else}}
-        {{> __select-checkbox-groups}}
-      {{/if}}
-    {{else if select--HasCounts}}
-      {{> __select-checkbox-counts}}
-    {{else}}
-      {{#if select--IsChecked}}
-        {{> __select-checkbox-checked}}
-      {{else}}
-        {{> __select-checkbox}}
-      {{/if}}
-    {{/if}}
-  {{else if select--IsDescriptive}}
-    {{> __select-menu-descriptive}}
-  {{else if select--IsFavorites}}
-    {{> __select-menu-favorites}}
-  {{else if select--HasFooter}}
-    {{> __select-menu-footer}}
+  {{#if select--IsCustom}}
+    {{>@partial-block}}
   {{else}}
-    {{> __select-single}}
+
+    {{!-- create the toggle and all its components --}}
+    {{> select-toggle}}
+
+    {{!-- create the dropdown menu part --}}
+    {{#if select--IsTypeahead}}
+      {{> __select-typeahead}}
+    {{else if select--IsCheckboxSelect}}
+      {{#if select--HasGroups}}
+        {{#if select--IsChecked}}
+          {{> __select-checkbox-groups-checked}}
+        {{else}}
+          {{> __select-checkbox-groups}}
+        {{/if}}
+      {{else if select--HasCounts}}
+        {{> __select-checkbox-counts}}
+      {{else}}
+        {{#if select--IsChecked}}
+          {{> __select-checkbox-checked}}
+        {{else}}
+          {{> __select-checkbox}}
+        {{/if}}
+      {{/if}}
+    {{else if select--IsDescriptive}}
+      {{> __select-menu-descriptive}}
+    {{else if select--IsFavorites}}
+      {{> __select-menu-favorites}}
+    {{else if select--HasFooter}}
+      {{> __select-menu-footer}}
+    {{else}}
+      {{> __select-single}}
+    {{/if}}
   {{/if}}
 </div>
