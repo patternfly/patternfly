@@ -158,32 +158,20 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --pf-c-masthead__main--BorderBottomColor: var(--pf-c-masthead--m-light-200__main--BorderBottomColor);
   }
 
-  .pf-c-toolbar {
-    --pf-c-toolbar--PaddingTop: var(--pf-c-masthead--c-toolbar--PaddingTop);
-    --pf-c-toolbar--PaddingBottom: var(--pf-c-masthead--c-toolbar--PaddingBottom);
-
-    width: 100%;
+  .pf-c-dropdown__toggle {
+    --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--c-dropdown__toggle--BorderTopColor);
+    --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown__toggle--BorderRightColor);
+    --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown__toggle--BorderLeftColor);
+    --pf-c-dropdown--m-expanded__toggle--before--BorderBottomColor: var(--pf-c-masthead--c-dropdown__toggle--expanded--before--BorderBottomColor);
+    --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: var(--pf-c-masthead--c-dropdown__toggle--expanded--before--BorderBottomWidth);
   }
 
-  .pf-c-toolbar__content-section {
-    flex-wrap: nowrap;
-    min-width: 0;
-  }
-
-  .pf-c-toolbar__group,
-  .pf-c-toolbar__item {
-    min-width: 0;
-  }
-
-  .pf-c-toolbar,
-  .pf-c-toolbar__group,
-  .pf-c-toolbar__item {
-    align-self: stretch;
-  }
-
-  .pf-c-toolbar__item {
-    display: flex;
-    align-items: center;
+  .pf-c-context-selector__toggle {
+    --pf-c-context-selector__toggle--BorderTopColor: var(--pf-c-masthead--c-context-selector__toggle--BorderTopColor);
+    --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector__toggle--BorderRightColor);
+    --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--c-context-selector__toggle--BorderLeftColor);
+    --pf-c-context-selector__toggle--expanded--BorderBottomColor: var(--pf-c-masthead--c-context-selector__toggle--expanded--before--BorderBottomColor);
+    --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-c-masthead--c-context-selector__toggle--expanded--before--BorderBottomWidth);
   }
 
   .pf-c-dropdown__toggle {
