@@ -414,7 +414,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
     &.pf-m-center {
       > .pf-c-page__main-body {
-        margin: 0 auto;
+        margin: auto;
       }
     }
   }
