@@ -425,7 +425,7 @@ When a list item includes more than one block of content, it can be difficult fo
                 {{/data-list-cell}}
               {{/data-list-item-content}}
             {{/data-list-item-row}}
-            {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Nested row 2 details"')}}
+            {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Nested row 1 details"')}}
               {{#> data-list-expandable-content-body}}
                 Nested row 1 expanded content.
               {{/data-list-expandable-content-body}}
