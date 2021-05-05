@@ -420,25 +420,14 @@ When a list item includes more than one block of content, it can be difficult fo
                 {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
               {{/data-list-item-control}}
               {{#> data-list-item-content}}
-                {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-                  <i class="fas fa-code-branch" aria-hidden="true"></i>
-                {{/data-list-cell}}
                 {{#> data-list-cell}}
-                  <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                  <a href="#">link</a>
-                {{/data-list-cell}}
-                {{#> data-list-cell}}
-                  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                {{/data-list-cell}}
-                {{#> data-list-cell}}
-                  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                  <span id="{{data-list--id}}-{{data-list-item--id}}">Nested row 1</span>
                 {{/data-list-cell}}
               {{/data-list-item-content}}
-              {{> data-list-item-action}}
             {{/data-list-item-row}}
-            {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
+            {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Nested row 2 details"')}}
               {{#> data-list-expandable-content-body}}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Nested row 1 expanded content
               {{/data-list-expandable-content-body}}
             {{/data-list-expandable-content}}
           {{/data-list-item}}
@@ -450,22 +439,13 @@ When a list item includes more than one block of content, it can be difficult fo
               {{/data-list-item-control}}
               {{#> data-list-item-content}}
                 {{#> data-list-cell}}
-                  <div id="{{data-list--id}}-{{data-list-item--id}}">Secondary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                {{/data-list-cell}}
-                {{#> data-list-cell}}
-                  <span>Lorem ipsum dolor sit amet.</span>
-                {{/data-list-cell}}
-                {{#> data-list-cell}}
-                  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                  <div id="{{data-list--id}}-{{data-list-item--id}}">Nested row 2</div>
                 {{/data-list-cell}}
               {{/data-list-item-content}}
-              {{#> data-list-item-action}}
-                {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
-              {{/data-list-item-action}}
             {{/data-list-item-row}}
-            {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Secondary content details"')}}
+            {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Nested row 2 details"')}}
               {{#> data-list-expandable-content-body}}
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Nested row 2 expanded content
               {{/data-list-expandable-content-body}}
             {{/data-list-expandable-content}}
           {{/data-list-item}}
@@ -480,22 +460,13 @@ When a list item includes more than one block of content, it can be difficult fo
                   <i class="fas fa-code-branch" aria-hidden="true"></i>
                 {{/data-list-cell}}
                 {{#> data-list-cell}}
-                  <div id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content</div><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                {{/data-list-cell}}
-                {{#> data-list-cell}}
-                  <span>Lorem ipsum dolor sit amet.</span>
-                {{/data-list-cell}}
-                {{#> data-list-cell}}
-                  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                  <div id="{{data-list--id}}-{{data-list-item--id}}">Nested row 3</div>
                 {{/data-list-cell}}
               {{/data-list-item-content}}
-              {{#> data-list-item-action}}
-                {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
-              {{/data-list-item-action}}
             {{/data-list-item-row}}
-            {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Tertiary content details"')}}
-              {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
-                This expanded section has no padding.
+            {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Nested row 3 details"')}}
+              {{#> data-list-expandable-content-body}}
+                Nested row 3 expanded content
               {{/data-list-expandable-content-body}}
             {{/data-list-expandable-content}}
           {{/data-list-item}}
