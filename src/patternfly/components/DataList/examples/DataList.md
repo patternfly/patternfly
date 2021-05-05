@@ -414,7 +414,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
       {{#> data-list-expandable-content-body}}
         {{#> data-list data-list--id="data-list-expandable-nested-nested" data-list--attribute='aria-label="Expandable nested nested data list example"'}}
-          {{#> data-list-item newcontext data-list-item--id="item-1" data-list-item--expanded="true"}}
+          {{#> data-list-item newcontext data-list--id=data-list--id data-list-item--id="item-1" data-list-item--expanded="true"}}
             {{#> data-list-item-row}}
               {{#> data-list-item-control}}
                 {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
@@ -427,12 +427,12 @@ When a list item includes more than one block of content, it can be difficult fo
             {{/data-list-item-row}}
             {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Nested row 2 details"')}}
               {{#> data-list-expandable-content-body}}
-                Nested row 1 expanded content
+                Nested row 1 expanded content.
               {{/data-list-expandable-content-body}}
             {{/data-list-expandable-content}}
           {{/data-list-item}}
 
-          {{#> data-list-item newcontext data-list-item--id="item-2"}}
+          {{#> data-list-item newcontext data-list--id=data-list--id data-list-item--id="item-2"}}
             {{#> data-list-item-row}}
               {{#> data-list-item-control}}
                 {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle2 ' data-list--id '-item2" id="' data-list--id '-toggle2" aria-label="Toggle details for" aria-expanded="false" aria-controls="' data-list--id '-content2"')}}{{/data-list-toggle}}
@@ -445,12 +445,12 @@ When a list item includes more than one block of content, it can be difficult fo
             {{/data-list-item-row}}
             {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Nested row 2 details"')}}
               {{#> data-list-expandable-content-body}}
-                Nested row 2 expanded content
+                Nested row 2 expanded content.
               {{/data-list-expandable-content-body}}
             {{/data-list-expandable-content}}
           {{/data-list-item}}
 
-          {{#> data-list-item newcontext data-list-item--expanded="true" data-list-item--id="item-3"}}
+          {{#> data-list-item newcontext data-list--id=data-list--id data-list-item--expanded="true" data-list-item--id="item-3"}}
             {{#> data-list-item-row}}
               {{#> data-list-item-control}}
                 {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
@@ -463,7 +463,7 @@ When a list item includes more than one block of content, it can be difficult fo
             {{/data-list-item-row}}
             {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Nested row 3 details"')}}
               {{#> data-list-expandable-content-body}}
-                Nested row 3 expanded content
+                Nested row 3 expanded content.
               {{/data-list-expandable-content-body}}
             {{/data-list-expandable-content}}
           {{/data-list-item}}
