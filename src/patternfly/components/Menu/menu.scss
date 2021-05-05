@@ -6,8 +6,11 @@
   --pf-c-menu--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-menu--MinWidth: 100%;
   --pf-c-menu--Width: auto;
+<<<<<<< HEAD
   --pf-c-menu--MaxHeight: auto;
   --pf-c-menu--ZIndex: var(--pf-global--ZIndex--sm);
+=======
+>>>>>>> ce577d64 (refactor(menu): removed maxheight)
   --pf-c-menu--m-flyout__menu--Top: calc(var(--pf-c-menu__list--PaddingTop) * -1);
   --pf-c-menu--m-flyout__menu--Left: 100%;
   --pf-c-menu--m-flyout__list-item--m-menu-top__menu--Bottom: calc(var(--pf-c-menu__list--PaddingTop) * -1);
@@ -135,13 +138,8 @@
 
   z-index: var(--pf-c-menu--ZIndex);
   width: var(--pf-c-menu--Width);
-  max-height: var(--pf-c-menu--MaxHeight);
   background-color: var(--pf-c-menu--BackgroundColor);
   box-shadow: var(--pf-c-menu--BoxShadow);
-
-  & & {
-    --pf-c-menu--MaxHeight: none; // ignore setting max-height on any nested menu
-  }
 
   .pf-c-menu__content {
     overflow-y: auto;
