@@ -456,9 +456,6 @@ When a list item includes more than one block of content, it can be difficult fo
                 {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle3 ' data-list--id '-item3" id="' data-list--id '-toggle3" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content3"')}}{{/data-list-toggle}}
               {{/data-list-item-control}}
               {{#> data-list-item-content}}
-                {{#> data-list-cell data-list-cell--modifier="pf-m-icon"}}
-                  <i class="fas fa-code-branch" aria-hidden="true"></i>
-                {{/data-list-cell}}
                 {{#> data-list-cell}}
                   <div id="{{data-list--id}}-{{data-list-item--id}}">Nested row 3</div>
                 {{/data-list-cell}}
