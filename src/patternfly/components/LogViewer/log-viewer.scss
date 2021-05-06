@@ -10,15 +10,21 @@
   --pf-c-log-viewer__main--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-log-viewer__main--BorderColor: var(--pf-global--BorderColor--100);
 
+  // Scroll container
+  --pf-c-log-viewer__scroll-container--Height: #{pf-size-prem(600px)};
+
   // Main ::after
   --pf-c-log-viewer--m-line-numbers__main--before--Top: var(--pf-global--spacer--sm);
   --pf-c-log-viewer--m-line-numbers__main--before--Bottom: var(--pf-global--spacer--sm);
   --pf-c-log-viewer--m-line-numbers__main--before--Width: var(--pf-global--BorderWidth--sm);
   --pf-c-log-viewer--m-line-numbers__main--before--BackgroundColor: var(--pf-global--BorderColor--100);
 
-  // Body
-  --pf-c-log-viewer__list--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-log-viewer__list--PaddingBottom: var(--pf-global--spacer--sm);
+  // List
+  // --pf-c-log-viewer__list--PaddingTop: var(--pf-global--spacer--sm);
+  // --pf-c-log-viewer__list--PaddingBottom: var(--pf-global--spacer--sm);
+
+  --pf-c-log-viewer__scroll-container--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-log-viewer__scroll-container--PaddingBottom: var(--pf-global--spacer--md);
 
   // Index
   --pf-c-log-viewer__index--Display: none;
@@ -35,7 +41,6 @@
   --pf-c-log-viewer__text--FontFamily: var(--pf-global--FontFamily--monospace);
   --pf-c-log-viewer__text--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-log-viewer__text--Color: var(--pf-global--Color--100);
-  --pf-c-log-viewer__list-item--hover--BackgroundColor: var(--pf-global--palette--gold-50);
   --pf-c-log-viewer__list-item--m-match--BackgroundColor: var(--pf-global--palette--gold-50);
   --pf-c-log-viewer__list-item--m-current--BackgroundColor: var(--pf-global--palette--gold-100);
 
@@ -113,13 +118,22 @@
   // stylelint-enable
 }
 
+.pf-c-log-viewer__scroll-container {
+  height: var(--pf-c-log-viewer__scroll-container--Height);
+  padding-top: var(--pf-c-log-viewer__scroll-container--PaddingTop);
+  padding-bottom: var(--pf-c-log-viewer__scroll-container--PaddingBottom);
+  overflow: auto;
+}
+
 // List
 .pf-c-log-viewer__list {
-  flex: 1 1;
-  min-height: 0;
-  padding-top: var(--pf-c-log-viewer__list--PaddingTop);
-  padding-bottom: var(--pf-c-log-viewer__list--PaddingBottom);
-  overflow: auto;
+  // flex: 1 1;
+  // min-height: 0;
+  // overflow: auto;
+  // padding-top: var(--pf-c-log-viewer__list--PaddingTop);
+  // padding-bottom: var(--pf-c-log-viewer__list--PaddingBottom);
+
+  position: relative;
 }
 
 .pf-c-log-viewer__list-item {
@@ -129,10 +143,6 @@
     grid-template-columns: max-content 1fr;
   }
   // stylelint-enable
-
-  &:hover {
-    background-color: var(--pf-c-log-viewer__list-item--hover--BackgroundColor);
-  }
 
   &.pf-m-match {
     background-color: var(--pf-c-log-viewer__list-item--m-match--BackgroundColor);
@@ -156,11 +166,13 @@
 
 // Text
 .pf-c-log-viewer__text {
+  display: block;
   padding-right: var(--pf-c-log-viewer__text--PaddingRight);
   padding-left: var(--pf-c-log-viewer__text--PaddingLeft);
   font-family: var(--pf-c-log-viewer__text--FontFamily);
   font-size: var(--pf-c-log-viewer__text--FontSize);
   color: var(--pf-c-log-viewer__text--Color);
+  word-break: break-all;
 }
 
 // Timestamp

@@ -112,6 +112,7 @@ import './LogViewer.css';
 | `.pf-c-log-viewer` | `<div>` | Initiates a log viewer. **Required** |
 | `.pf-c-log-viewer__header` | `<div>` | Initiates the header container for a log viewer. **Required** |
 | `.pf-c-log-viewer__main` | `<div>` | Initiates the main container for a log viewer. **Required** |
+| `.pf-c-log-viewer__scroll-container` | `<div>` | Initiates the scroll container for a log viewer. **Required** |
 | `.pf-c-log-viewer__list` | `<ul>` | Initiates the log viewer list. **Required** |
 | `.pf-c-log-viewer__list-item` | `<li>` | Initiates a log viewer list item. **Required** |
 | `.pf-c-log-viewer__index` | `<span>` | Initiates a log viewer index element. **Required for numbered list** |
