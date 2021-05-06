@@ -54,6 +54,7 @@
   // Toggle right
   --pf-c-card__header--m-toggle-right--toggle--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-card__header--m-toggle-right--toggle--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-card__header--m-toggle-right--actions--MarginRight: 0;
 
   display: flex;
   flex-direction: column;
@@ -170,7 +171,7 @@
     --pf-c-card__header-toggle--MarginLeft: var(--pf-c-card__header--m-toggle-right--toggle--MarginLeft);
 
     .pf-c-card__actions {
-      --pf-c-card__header-toggle--MarginRight: 0;
+      --pf-c-card__header-toggle--MarginRight: var(--pf-c-card__header--m-toggle-right--actions--MarginRight);
     }
 
     .pf-c-card__header-toggle {
