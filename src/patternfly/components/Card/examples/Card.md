@@ -372,12 +372,10 @@ import './Card.css'
 {{/card}}
 ```
 
-
 ### Expandable toggle on right
 ```hbs
 {{#> card card--id="card-toggle-on-right-example"}}
   {{#> card-header card-header--modifier="pf-m-toggle-right"}}
-    {{> card-header-toggle}}
     {{#> card-actions}}
       {{> card--dropdown}}
       {{> card--check}}
@@ -385,6 +383,7 @@ import './Card.css'
     {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
       Title
     {{/card-title}}
+    {{> card-header-toggle}}
   {{/card-header}}
 {{/card}}
 ```
