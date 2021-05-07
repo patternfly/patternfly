@@ -313,6 +313,10 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 }
 
+.pf-c-drawer__panel-main {
+  flex-grow: 1;
+}
+
 // Remove tab focus
 @include pf-animate-remove-tab-focus(".pf-c-drawer__panel", var(--pf-c-drawer__panel--TransitionDuration));
 
@@ -460,7 +464,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
       > .pf-c-drawer__panel-main {
         flex-shrink: 1;
-        flex-grow: 1;
       }
     }
   }
