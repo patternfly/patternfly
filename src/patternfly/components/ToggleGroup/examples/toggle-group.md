@@ -238,6 +238,85 @@ import './toggle-group.css'
 {{/toggle-group}}
 ```
 
+### Compact
+```hbs
+{{#> toggle-group toggle-group--modifier="pf-m-compact"}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button}}
+      {{#> toggle-group-text}}
+        Option 1
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button}}
+      {{#> toggle-group-text}}
+        Option 2
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button}}
+      {{#> toggle-group-text}}
+        Option 3
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+{{/toggle-group}}
+
+<br/>
+
+{{#> toggle-group toggle-group--modifier="pf-m-compact"}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button toggle-group-button--modifier="pf-m-selected"}}
+      {{#> toggle-group-text}}
+        Option 1
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button toggle-group-button--modifier="pf-m-selected"}}
+      {{#> toggle-group-text}}
+        Option 2
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button}}
+      {{#> toggle-group-text}}
+        Option 3
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+{{/toggle-group}}
+
+<br/>
+
+{{#> toggle-group toggle-group--modifier="pf-m-compact"}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button}}
+      {{#> toggle-group-text}}
+        Option 1
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button}}
+      {{#> toggle-group-text}}
+        Option 2
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+  {{#> toggle-group-item}}
+    {{#> toggle-group-button toggle-group-button--attribute="disabled"}}
+      {{#> toggle-group-text}}
+        Option 3
+      {{/toggle-group-text}}
+    {{/toggle-group-button}}
+  {{/toggle-group-item}}
+{{/toggle-group}}
+```
+
 ## Documentation
 
 ### Accessibility
@@ -254,4 +333,5 @@ import './toggle-group.css'
 | `.pf-c-toggle-group__item` | `<div>` | Initiates the toggle group item wrapper. **Required** |
 | `.pf-c-toggle-group__text` | `<span>` | Initiates the toggle button text element. |
 | `.pf-c-toggle-group__icon` | `<span>` | Initiates the toggle button icon element. |
+| `.pf-m-compact` | `.pf-c-toggle-group` | Modifies the toggle group for compact styles. |
 | `.pf-m-selected` | `.pf-c-toggle-group__button` | Modifies the toggle button group button for the selected state. |
