@@ -1,8 +1,8 @@
 .pf-c-toggle-group {
   // button
-  --pf-c-toggle-group__button--PaddingTop: var(--pf-global--spacer--form-element);
+  --pf-c-toggle-group__button--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-toggle-group__button--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-toggle-group__button--PaddingBottom: var(--pf-global--spacer--form-element);
+  --pf-c-toggle-group__button--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-toggle-group__button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-toggle-group__button--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-toggle-group__button--LineHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md));
