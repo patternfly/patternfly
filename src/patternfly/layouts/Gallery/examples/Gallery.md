@@ -90,14 +90,12 @@ Grid template columms min value can be applied to <code>.pf-l-gallery</code>.  M
 
 ### List type
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--type="ul"}}
-  {{#> wrapper gallery-item--type="li"}}
-    {{#> gallery-item}}content{{/gallery-item}}
-    {{#> gallery-item}}content{{/gallery-item}}
-    {{#> gallery-item}}content{{/gallery-item}}
-    {{#> gallery-item}}content{{/gallery-item}}
-    {{#> gallery-item}}content{{/gallery-item}}
-  {{/wrapper}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--type="ul" gallery-item--type="li"}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
 {{/gallery}}
 ```
 

@@ -771,21 +771,19 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 
 ### List type
 ```hbs
-{{#> l-flex l-flex--type="ul"}}
-  {{#> wrapper l-flex-item--type="li"}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-  {{/wrapper}}
+{{#> l-flex l-flex--type="ul" l-flex-item--type="li"}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
 {{/l-flex}}
 ```
 
