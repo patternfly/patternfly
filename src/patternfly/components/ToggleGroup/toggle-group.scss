@@ -11,14 +11,14 @@
   --pf-c-toggle-group__button--ZIndex: auto;
   --pf-c-toggle-group__button--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-toggle-group__button--hover--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-toggle-group__button--hover--after--BorderColor: var(--pf-global--BorderColor--200);
+  --pf-c-toggle-group__button--hover--before--BorderColor: var(--pf-global--BorderColor--200);
   --pf-c-toggle-group__button--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-toggle-group__button--focus--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-toggle-group__button--focus--after--BorderColor: var(--pf-global--BorderColor--200);
+  --pf-c-toggle-group__button--focus--before--BorderColor: var(--pf-global--BorderColor--200);
   --pf-c-toggle-group__button--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-toggle-group__button--disabled--Color: var(--pf-global--disabled-color--100);
-  --pf-c-toggle-group__button--after--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-toggle-group__button--after--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-toggle-group__button--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-toggle-group__button--before--BorderColor: var(--pf-global--BorderColor--100);
 
   // item
   --pf-c-toggle-group__item--item--MarginLeft: calc(-1 * var(--pf-global--BorderWidth--sm));
@@ -32,7 +32,7 @@
 
   // Selected
   --pf-c-toggle-group__button--m-selected--BackgroundColor: var(--pf-global--palette--blue-50);
-  --pf-c-toggle-group__button--m-selected--after--BorderColor: var(--pf-global--primary-color--100);
+  --pf-c-toggle-group__button--m-selected--before--BorderColor: var(--pf-global--primary-color--100);
   --pf-c-toggle-group__button--m-selected--ZIndex: var(--pf-global--ZIndex--xs);
 
   // Compact
@@ -61,7 +61,7 @@
   &:first-child {
     .pf-c-toggle-group__button {
       &,
-      &::after {
+      &::before {
         border-top-left-radius: var(--pf-c-toggle-group__item--first-child__button--BorderTopLeftRadius);
         border-bottom-left-radius: var(--pf-c-toggle-group__item--first-child__button--BorderBottomLeftRadius);
       }
@@ -71,7 +71,7 @@
   &:last-child {
     .pf-c-toggle-group__button {
       &,
-      &::after {
+      &::before {
         border-top-right-radius: var(--pf-c-toggle-group__item--last-child__button--BorderTopRightRadius);
         border-bottom-right-radius: var(--pf-c-toggle-group__item--last-child__button--BorderBottomRightRadius);
       }
@@ -90,7 +90,7 @@
   background-color: var(--pf-c-toggle-group__button--BackgroundColor);
   border: 0;
 
-  &::after {
+  &::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -98,13 +98,13 @@
     left: 0;
     pointer-events: none;
     content: "";
-    border: var(--pf-c-toggle-group__button--after--BorderWidth) solid var(--pf-c-toggle-group__button--after--BorderColor);
+    border: var(--pf-c-toggle-group__button--before--BorderWidth) solid var(--pf-c-toggle-group__button--before--BorderColor);
   }
 
   &:hover {
     --pf-c-toggle-group__button--BackgroundColor: var(--pf-c-toggle-group__button--hover--BackgroundColor);
     --pf-c-toggle-group__button--ZIndex: var(--pf-c-toggle-group__button--hover--ZIndex);
-    --pf-c-toggle-group__button--after--BorderColor: var(--pf-c-toggle-group__button--hover--after--BorderColor);
+    --pf-c-toggle-group__button--before--BorderColor: var(--pf-c-toggle-group__button--hover--before--BorderColor);
 
     text-decoration: none;
   }
@@ -112,13 +112,13 @@
   &:focus {
     --pf-c-toggle-group__button--BackgroundColor: var(--pf-c-toggle-group__button--focus--BackgroundColor);
     --pf-c-toggle-group__button--ZIndex: var(--pf-c-toggle-group__button--focus--ZIndex);
-    --pf-c-toggle-group__button--after--BorderColor: var(--pf-c-toggle-group__button--focus--after--BorderColor);
+    --pf-c-toggle-group__button--before--BorderColor: var(--pf-c-toggle-group__button--focus--before--BorderColor);
   }
 
   &.pf-m-selected {
     --pf-c-toggle-group__button--BackgroundColor: var(--pf-c-toggle-group__button--m-selected--BackgroundColor);
     --pf-c-toggle-group__button--ZIndex: var(--pf-c-toggle-group__button--m-selected--ZIndex);
-    --pf-c-toggle-group__button--after--BorderColor: var(--pf-c-toggle-group__button--m-selected--after--BorderColor);
+    --pf-c-toggle-group__button--before--BorderColor: var(--pf-c-toggle-group__button--m-selected--before--BorderColor);
   }
 
   &:disabled,
