@@ -412,9 +412,11 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
       max-width: var(--pf-c-page--section--m-limit-width--MaxWidth);
     }
 
-    &.pf-m-center {
+    &.pf-m-align-center {
+      align-items: center;
+
       > .pf-c-page__main-body {
-        margin: auto;
+        width: 100%;
       }
     }
   }
