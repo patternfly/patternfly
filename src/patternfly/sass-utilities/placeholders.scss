@@ -6,7 +6,6 @@
   --pf-global--link--Color: var(--pf-global--link--Color--dark);
   --pf-global--link--Color--hover: var(--pf-global--link--Color--dark--hover);
   --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--light-100);
-  --pf-global--m-marketing--link--Color--visited: var(--pf-global--m-marketing--link--Color--light--visited);
 }
 
 %pf-t-dark {
@@ -17,7 +16,6 @@
   --pf-global--link--Color: var(--pf-global--link--Color--light);
   --pf-global--link--Color--hover: var(--pf-global--link--Color--light);
   --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--dark-100);
-  --pf-global--m-marketing--link--Color--visited: var(--pf-global--m-marketing--link--Color--dark--visited);
 
   .pf-c-card {
     --pf-c-card--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-200);

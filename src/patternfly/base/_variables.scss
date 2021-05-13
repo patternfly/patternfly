@@ -203,6 +203,7 @@
   --pf-global--link--Color--light--hover: #{$pf-global--link--Color--light--hover};
   --pf-global--link--Color--dark: #{$pf-global--link--Color--dark};
   --pf-global--link--Color--dark--hover: #{$pf-global--link--Color--dark--hover};
+  --pf-global--link--Color--visited: #{$pf-global--link--Color--visited};
   --pf-global--link--TextDecoration: #{$pf-global--link--TextDecoration};
   --pf-global--link--TextDecoration--hover: #{$pf-global--link--TextDecoration--hover};
 
@@ -280,11 +281,4 @@
   --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--overpass--monospace);
   --pf-global--FontWeight--semi-bold: var(--pf-global--FontWeight--overpass--semi-bold);
   --pf-global--FontWeight--bold: var(--pf-global--FontWeight--overpass--bold);
-}
-
-.pf-m-marketing {
-  // Global marketing settings
-  --pf-global--m-marketing--link--Color--visited: #{$pf-global--m-marketing--link--Color--visited};
-  --pf-global--m-marketing--link--Color--light--visited: #{$pf-global--m-marketing--link--Color--light--visited};
-  --pf-global--m-marketing--link--Color--cark--visited: #{$pf-global--m-marketing--link--Color--dark--visited};
 }

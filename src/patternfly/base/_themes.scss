@@ -1,11 +1,3 @@
-.pf-m-marketing {
-  a {
-    &:visited {
-      color: var(--pf-global--m-marketing--link--Color--visited);
-    }
-  }
-}
-
 .pf-t-dark {
   @extend %pf-t-dark;
 

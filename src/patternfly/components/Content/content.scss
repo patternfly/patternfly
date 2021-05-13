@@ -64,6 +64,7 @@
   --pf-c-content--a--TextDecoration: var(--pf-global--link--TextDecoration);
   --pf-c-content--a--hover--Color: var(--pf-global--link--Color--hover);
   --pf-c-content--a--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
+  --pf-c-content--a--visited--Color: var(--pf-global--link--Color--visited);
 
   // Blockquote
   --pf-c-content--blockquote--PaddingTop: var(--pf-global--spacer--md);
@@ -106,6 +107,13 @@
     &:hover {
       --pf-c-content--a--Color: var(--pf-c-content--a--hover--Color);
       --pf-c-content--a--TextDecoration: var(--pf-c-content--a--hover--TextDecoration);
+    }
+  }
+
+  &.pf-m-visited,
+  .pf-m-visited {
+    &:visited {
+      color: var(--pf-c-content--a--visited--Color);
     }
   }
 
