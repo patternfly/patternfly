@@ -3,6 +3,25 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2021.06 release notes (2021-05-14)
+Packages released:
+- [@patternfly/patternfly@v4.103.6](https://www.npmjs.com/package/@patternfly/patternfly/v/4.103.6)
+
+### Components
+- **Card:**
+  - Put expandable right aligned toggle in regular DOM order ([#4045](https://github.com/patternfly/patternfly/pull/4045))
+  - Updated right aligned expandable toggle spacing ([#4050](https://github.com/patternfly/patternfly/pull/4050))
+- **Data list:** Fixed toggle icon bug with nested data lists ([#4041](https://github.com/patternfly/patternfly/pull/4041))
+- **Divider:** Updated to not shrink in flex layouts ([#4016](https://github.com/patternfly/patternfly/pull/4016))
+- **Drawer:** Made panel main/body elements fill height on mobile ([#4052](https://github.com/patternfly/patternfly/pull/4052))
+- **Log viewer:**
+  - Added log viewer ([#4029](https://github.com/patternfly/patternfly/pull/4029))
+  - Removed hover, added scroller ([#4042](https://github.com/patternfly/patternfly/pull/4042))
+- **Toggle group:**
+  - Updated colors, borders, removed light, added compact ([#4054](https://github.com/patternfly/patternfly/pull/4054))
+  - Moved borders to before pseudo element ([#4059](https://github.com/patternfly/patternfly/pull/4059))
+
+
 ## 2021.05 release notes (2021-04-20)
 Packages released:
 - [@patternfly/patternfly@v4.102.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.102.2)
