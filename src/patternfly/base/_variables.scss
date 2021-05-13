@@ -281,10 +281,3 @@
   --pf-global--FontWeight--semi-bold: var(--pf-global--FontWeight--overpass--semi-bold);
   --pf-global--FontWeight--bold: var(--pf-global--FontWeight--overpass--bold);
 }
-
-.pf-m-marketing {
-  // Global marketing settings
-  --pf-global--m-marketing--link--Color--visited: #{$pf-global--m-marketing--link--Color--visited};
-  --pf-global--m-marketing--link--Color--light--visited: #{$pf-global--m-marketing--link--Color--light--visited};
-  --pf-global--m-marketing--link--Color--cark--visited: #{$pf-global--m-marketing--link--Color--dark--visited};
-}
