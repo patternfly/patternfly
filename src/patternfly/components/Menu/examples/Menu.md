@@ -9,91 +9,6 @@ import './Menu.css'
 
 ## Examples
 
-### Delete this before merge -- Checkbox expanded and selected with groups and filter
-```hbs
-{{#> wrapper id="checkbox-expanded-selected-groups-filter"}}
-<div class="pf-c-select pf-m-expanded">
-  <span id="{{id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose one{{/if}}</span>
-  {{> select-toggle}}
-  {{#> menu menu--attribute='style="--pf-c-menu__content--MaxHeight: 200px;"'}}
-    {{#> menu-search}}
-      {{#> menu-search-input}}
-        {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
-      {{/menu-search-input}}
-    {{/menu-search}}
-    {{> divider}}
-    {{#> menu-content}}
-      {{#> menu-list}}
-        {{#> menu-list-item}}
-          {{#> menu-item}}
-            {{#> menu-item-main}}
-              {{#> menu-item-text}}
-                Action
-              {{/menu-item-text}}
-            {{/menu-item-main}}
-          {{/menu-item}}
-        {{/menu-list-item}}
-        {{#> menu-list-item}}
-          {{#> menu-item}}
-            {{#> menu-item-main}}
-              {{#> menu-item-text}}
-                Action
-              {{/menu-item-text}}
-            {{/menu-item-main}}
-          {{/menu-item}}
-        {{/menu-list-item}}
-        {{#> menu-list-item}}
-          {{#> menu-item}}
-            {{#> menu-item-main}}
-              {{#> menu-item-text}}
-                Action
-              {{/menu-item-text}}
-            {{/menu-item-main}}
-          {{/menu-item}}
-        {{/menu-list-item}}
-        {{#> menu-list-item}}
-          {{#> menu-item}}
-            {{#> menu-item-main}}
-              {{#> menu-item-text}}
-                Action
-              {{/menu-item-text}}
-            {{/menu-item-main}}
-          {{/menu-item}}
-        {{/menu-list-item}}
-        {{#> menu-list-item}}
-          {{#> menu-item}}
-            {{#> menu-item-main}}
-              {{#> menu-item-text}}
-                Action
-              {{/menu-item-text}}
-            {{/menu-item-main}}
-          {{/menu-item}}
-        {{/menu-list-item}}
-        {{#> menu-list-item}}
-          {{#> menu-item}}
-            {{#> menu-item-main}}
-              {{#> menu-item-text}}
-                Action
-              {{/menu-item-text}}
-            {{/menu-item-main}}
-          {{/menu-item}}
-        {{/menu-list-item}}
-        {{#> menu-list-item}}
-          {{#> menu-item}}
-            {{#> menu-item-main}}
-              {{#> menu-item-text}}
-                Action
-              {{/menu-item-text}}
-            {{/menu-item-main}}
-          {{/menu-item}}
-        {{/menu-list-item}}
-      {{/menu-list}}
-    {{/menu-content}}
-  {{/menu}}
-</div>
-{{/wrapper}}
-```
-
 ### Basic
 ```hbs
 {{#> menu}}
@@ -231,90 +146,6 @@ import './Menu.css'
   {{/menu-content}}
 {{/menu}}
 ```
-
-<!--
-### Menu with managed height
-```hbs
-{{#> menu menu--attribute='style="--pf-c-menu__content--MaxHeight: 120px"'}}
-  {{#> menu-content}}
-    {{#> menu-list}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Action
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Action
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Action
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Action
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Action
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Action
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Action
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              Action
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-    {{/menu-list}}
-  {{/menu-content}}
-{{/menu}}
-```
--->
 
 ### With flyout
 ```hbs
@@ -977,6 +808,172 @@ import './Menu.css'
 {{/menu}}
 ```
 -->
+
+### Scrollable menu with header and footer
+```hbs
+{{#> menu menu--id="scrollable-menu-header-footer-example" menu--attribute='style="--pf-c-menu__content--MaxHeight: 200px;"'}}
+  {{#> menu-header}}
+    Header
+  {{/menu-header}}
+  {{> divider}}
+  {{#> menu-content}}
+    {{#> menu-list}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 1
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 2
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 3
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 4
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 5
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 6
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 7
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+  {{#> menu-footer}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      Footer
+    {{/button}}
+  {{/menu-footer}}
+{{/menu}}
+```
+
+### Scrollable menu with search and footer
+```hbs
+{{#> menu menu--id="scrollable-menu-search-footer-example" menu--attribute='style="--pf-c-menu__content--MaxHeight: 200px;"'}}
+  {{#> menu-search}}
+    {{#> menu-search-input}}
+      {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
+    {{/menu-search-input}}
+  {{/menu-search}}
+  {{> divider}}
+  {{#> menu-content}}
+    {{#> menu-list}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 1
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 2
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 3
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 4
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 5
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 6
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 7
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+  {{#> menu-footer}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      Footer
+    {{/button}}
+  {{/menu-footer}}
+{{/menu}}
+```
 
 ### With filtering
 ```hbs
@@ -1649,6 +1646,7 @@ import './Menu.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-menu` | `<div>` | Initiates the menu. **Required** |
+| `.pf-c-menu__header` | `<div>` | Initiates the menu header container. |
 | `.pf-c-menu__search` | `<div>` | Initiates the menu search container. Use for filtering. |
 | `.pf-c-menu__search-input` | `<div>` | Initiates the menu search input container. |
 | `.pf-c-menu__content` | `<div>` | Initiates the menu content. Use for lists. **Required** |
