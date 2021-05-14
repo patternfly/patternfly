@@ -440,11 +440,19 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &:disabled,
-  &.pf-m-disabled {
+  &.pf-m-disabled,
+  &.pf-m-aria-disabled {
     --pf-c-dropdown__menu-item--Color: var(--pf-c-dropdown__menu-item--disabled--Color);
     --pf-c-dropdown__menu-item--BackgroundColor: var(--pf-c-dropdown__menu-item--disabled--BackgroundColor);
+  }
 
+  &:disabled,
+  &.pf-m-disabled {
     pointer-events: none;
+  }
+
+  &.pf-m-aria-disabled {
+    cursor: default;
   }
 
   &.pf-m-icon {

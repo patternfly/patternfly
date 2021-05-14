@@ -23,6 +23,11 @@ import './Dropdown.css'
 {{> dropdown dropdown--id="dropdown-disabled" dropdown-toggle--IsDisabled="true" dropdown-toggle--text="Disabled dropdown"}}
 ```
 
+### Aria disabled items
+```hbs
+{{> dropdown dropdown--id="dropdown-aria-disabled-items" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown" dropdown--IsAriaDisabled="true"}}
+```
+
 ### Kebab
 ```hbs
 {{> dropdown dropdown--id="dropdown-kebab-disabled" dropdown-toggle--IsPlain="true" dropdown-toggle--IsDisabled="true"}}
