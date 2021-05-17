@@ -69,6 +69,8 @@ id: Icons
 | orders | <i class="pf-icon pf-icon-orders"></i> | &lt;i class=&quot;pf-icon pf-icon-orders&quot;&gt;&lt;/i&gt;
 | os-image | <i class="pf-icon pf-icon-os-image"></i> | &lt;i class=&quot;pf-icon pf-icon-os-image&quot;&gt;&lt;/i&gt;
 | package | <i class="pf-icon pf-icon-package"></i> | &lt;i class=&quot;pf-icon pf-icon-package&quot;&gt;&lt;/i&gt;
+| panel-open | <i class="pf-icon pf-icon-panel-open"></i> | &lt;i class=&quot;pf-icon pf-icon-panel-open&quot;&gt;&lt;/i&gt;
+| panel-close | <i class="pf-icon pf-icon-panel-close"></i> | &lt;i class=&quot;pf-icon pf-icon-panel-close&quot;&gt;&lt;/i&gt;
 | paused | <i class="pf-icon pf-icon-paused"></i> | &lt;i class=&quot;pf-icon pf-icon-paused&quot;&gt;&lt;/i&gt;
 | pending | <i class="pf-icon pf-icon-pending"></i> | &lt;i class=&quot;pf-icon pf-icon-pending&quot;&gt;&lt;/i&gt;
 | pficon-dragdrop | <i class="pf-icon pf-icon-pficon-dragdrop"></i> | &lt;i class=&quot;pf-icon pf-icon-pficon-dragdrop&quot;&gt;&lt;/i&gt;
