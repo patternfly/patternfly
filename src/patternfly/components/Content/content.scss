@@ -110,12 +110,14 @@
     }
   }
 
-  &.pf-m-visited,
-  .pf-m-visited {
+  // stylelint-disable selector-no-qualifying-type
+  &.pf-m-visited a,
+  a.pf-m-visited {
     &:visited {
-      color: var(--pf-c-content--a--visited--Color);
+      --pf-c-content--a--Color: var(--pf-c-content--a--visited--Color);
     }
   }
+  // stylelint-enable
 
   li + li {
     margin-top: var(--pf-c-content--li--MarginTop);

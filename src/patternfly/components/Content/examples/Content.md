@@ -120,4 +120,4 @@ This component is an exception to the variable system since we style type select
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-content` | `<div>`, `<section>`, or `<article>` | Generates vertical rythm and typographic treatment to html elements. |
-| `.pf-m-visited-link` | `.pf-c-content`, `<a>` | Modifies a visited link styling to `--pf-color-purple-600`. |
+| `.pf-m-visited` | `.pf-c-content`, `<a>` | Modifies all links in a content block to include visited styles. Can also be applied to a single link in a content block. |
