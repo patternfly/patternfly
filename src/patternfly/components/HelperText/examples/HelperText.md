@@ -6,7 +6,7 @@ cssPrefix: pf-c-helper-text
 ---
 
 ## Examples
-### Basic
+### Static
 ```hbs
 {{#> helper-text}}
   {{#> helper-text-item}}
@@ -77,6 +77,21 @@ cssPrefix: pf-c-helper-text
 {{/helper-text}}
 ```
 
+### Multiple static
+```hbs
+{{#> helper-text}}
+  {{#> helper-text-item}}
+    {{#> helper-text-item-text}}This is default helper text{{/helper-text-item-text}}
+  {{/helper-text-item}}
+  {{#> helper-text-item}}
+    {{#> helper-text-item-text}}This is another default helper text in the same block{{/helper-text-item-text}}
+  {{/helper-text-item}}
+  {{#> helper-text-item}}
+    {{#> helper-text-item-text}}And this is more default text in the same block{{/helper-text-item-text}}
+  {{/helper-text-item}}
+{{/helper-text}}
+```
+
 ### Dynamic
 ```hbs
 {{#> helper-text}}
@@ -117,21 +132,6 @@ cssPrefix: pf-c-helper-text
 
 ### Dynamic list
 ```hbs
-{{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-indeterminate"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-    {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
-  {{/helper-text-item}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-indeterminate"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-    {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
-  {{/helper-text-item}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-indeterminate"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-    {{#> helper-text-item-text}}Must include at least 3 of the following: lowercase letter, uppercase letters, numbers, symbols{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-<br>
 {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
   {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
     {{> helper-text-item-icon helper-text-item-icon--type="check"}}
