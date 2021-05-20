@@ -208,7 +208,6 @@
   padding-left: var(--pf-c-card__actions--PaddingLeft);
   margin: var(--pf-c-card__header-toggle--MarginTop) var(--pf-c-card__header-toggle--MarginRight) var(--pf-c-card__header-toggle--MarginBottom) auto;
 
-
   > * + * {
     margin-left: var(--pf-c-card__actions--child--MarginLeft);
   }
@@ -217,6 +216,11 @@
   + .pf-c-card__body,
   + .pf-c-card__footer {
     padding: 0;
+  }
+
+  &.pf-m-no-offset {
+    --pf-c-card__header-toggle--MarginTop: 0;
+    --pf-c-card__header-toggle--MarginBottom: 0;
   }
 }
 
