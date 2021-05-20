@@ -47,9 +47,9 @@
   --pf-c-wizard__nav-link--hover--Color: var(--pf-global--link--Color);
   --pf-c-wizard__nav-link--focus--Color: var(--pf-global--link--Color);
   --pf-c-wizard__nav-link--m-current--Color: var(--pf-global--link--Color);
-  --pf-c-wizard__nav-link--m-current--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-wizard__nav-link--m-current--FontWeight: var(--pf-global--FontWeight--normal); // remove at breaking change
   --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--Color--dark-200);
-  --pf-c-wizard__nav-list__nav-list__nav-link--m-current--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-wizard__nav-list__nav-list__nav-link--m-current--FontWeight: var(--pf-global--FontWeight--normal); // remove at breaking change
 
   // Nav link toggle icon
   --pf-c-wizard__nav-link-toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
