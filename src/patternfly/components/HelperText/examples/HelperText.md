@@ -148,4 +148,15 @@ cssPrefix: pf-c-helper-text
 {{/helper-text}}
 ```
 
-## Documentation
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-helper-text` | `<div>`, `<ul>` |  Initiates the helper text component. **Required**  |
+| `.pf-c-helper-text__item` | `<div>`, `<li>` |  Initiates a helper text item. **Required**  |
+| `.pf-c-helper-text__item-icon` | `<span>` |  Initiates a helper text item icon.  |
+| `.pf-c-helper-text__item-text` | `<span>` |  Initiates a helper text item text. **Required**  |
+| `.pf-m-dynamic` | `.pf-c-helper-text__item` |  Modifies a helper text item to be dynamic. For use when the item changes state as the form field the text is associated with is updated. |
+| `.pf-m-indeterminate` | `.pf-c-helper-text__item` |  Modifies a helper text item for indeterminate state styles. |
+| `.pf-m-warning` | `.pf-c-helper-text__item` |  Modifies a helper text item for warning state styles. |
+| `.pf-m-success` | `.pf-c-helper-text__item` |  Modifies a helper text item for success state styles. |
+| `.pf-m-invalid` | `.pf-c-helper-text__item` |  Modifies a helper text item for invalid state styles. |
