@@ -109,10 +109,6 @@
   --pf-c-menu__breadcrumb--c-breadcrumb__item--FontSize: var(--pf-global--FontSize--md);
   --pf-c-menu__breadcrumb--c-breadcrumb__heading--FontSize: var(--pf-global--FontSize--md);
 
-  // Drilldown
-  --pf-c-menu--m-drilldown--TransitionDuration--left: var(--pf-global--TransitionDuration);
-  --pf-c-menu--m-drilldown--Transition: left var(--pf-c-menu--m-drilldown--TransitionDuration--left);
-
   // Nested menu
   --pf-c-menu--m-drilldown--c-menu--Top: 0;
   --pf-c-menu--m-drilldown--c-menu--TransitionDuration--transform: var(--pf-global--TransitionDuration);
@@ -178,7 +174,6 @@
   &.pf-m-drilldown {
     display: flex;
     flex-direction: column;
-    transition: var(--pf-c-menu--m-drilldown--Transition);
 
     &[hidden] {
       display: none;
