@@ -5,5 +5,13 @@
   {{#if label-content--attribute}}
     {{{label-content--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if label--IsEditable}}
+    {{#> inline-edit}}
+      {{#> inline-edit-editable-text}}
+        {{> @partial-block}}
+      {{/inline-edit-editable-text}}
+    {{/inline-edit}}
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
 </{{# if label-content--IsLink}}a{{else}}span{{/if}}>

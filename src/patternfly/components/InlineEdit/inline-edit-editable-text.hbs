@@ -1,0 +1,13 @@
+<{{#if inline-edit-editable-text--type}}{{inline-edit-editable-text--type}}{{else}}div{{/if}} class="pf-c-inline-edit__editable-text{{#if inline-edit-editable-text--modifier}} {{inline-edit-editable-text--modifier}}{{/if}}"
+  contenteditable="true"
+  role="textbox"
+  {{#if inline-edit-editable-text--aria-label}}
+    aria-label="{{inline-edit-editable-text--aria-label}}"
+  {{else}}
+    aria-label="Editable text"
+  {{/if}}
+  {{#if inline-edit-editable-text--attribute}}
+    {{{inline-edit-editable-text--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</{{#if inline-edit-editable-text--type}}{{inline-edit-editable-text--type}}{{else}}div{{/if}}>
