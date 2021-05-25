@@ -1,3 +1,4 @@
+@use "../../sass-utilities/all" as *;
 @use "sass:math";
 
 $pf-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl");

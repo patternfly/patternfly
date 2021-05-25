@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-code-block {
   --pf-c-code-block--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-code-block__header--BorderBottomWidth: var(--pf-global--BorderWidth--sm);

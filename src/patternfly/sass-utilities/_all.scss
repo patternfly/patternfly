@@ -1,6 +1,6 @@
 // These imports must not contain any rendered output
-@use "./functions";
-@use "./colors";
-@use "./scss-variables";
-@use "./mixins";
-@use "./placeholders";
+@forward "./functions";
+@forward "./colors";
+@forward "./scss-variables";
+@forward "./mixins";
+@forward "./placeholders";

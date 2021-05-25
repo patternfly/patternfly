@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-chip {
   --pf-c-chip--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-chip--PaddingRight: var(--pf-global--spacer--sm);

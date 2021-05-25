@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 $pf-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 

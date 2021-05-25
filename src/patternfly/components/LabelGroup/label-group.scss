@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-label-group {
   // label group list
   --pf-c-label-group__list--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);

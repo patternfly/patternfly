@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-log-viewer {
   --pf-c-log-viewer--Height: 100%;
   --pf-c-log-viewer--MaxHeight: auto;

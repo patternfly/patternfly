@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-progress {
   // Component variables
   --pf-c-progress--GridGap: var(--pf-global--spacer--md);

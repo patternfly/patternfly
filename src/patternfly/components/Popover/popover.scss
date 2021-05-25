@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-popover {
   // Component
   --pf-c-popover--FontSize: var(--pf-global--FontSize--sm);

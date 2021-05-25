@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-badge {
   // Component
   --pf-c-badge--BorderRadius: var(--pf-global--BorderRadius--lg);

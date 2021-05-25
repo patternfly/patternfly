@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-banner {
   --pf-c-banner--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-banner--PaddingRight: var(--pf-global--spacer--md);

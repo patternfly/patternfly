@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-about-modal-box {
   // Component variables
   --pf-c-about-modal-box--BackgroundColor: var(--pf-global--palette--black-1000); // Modal uses a non-standard background color

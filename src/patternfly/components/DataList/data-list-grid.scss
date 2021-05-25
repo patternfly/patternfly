@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 @mixin pf-c-data-list-responsive-block() {
   // base responsive styles
   @at-root .pf-c-data-list:not([class*="pf-m-grid"]) {

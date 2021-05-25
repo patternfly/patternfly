@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 $pf-c-dual-list-selector__item--MaxNesting: 10;
 
 .pf-c-dual-list-selector {

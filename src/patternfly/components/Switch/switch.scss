@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-switch {
   // Switch - the vars for this file don't follow our normal order so that the IE11 script can convert the vars correctly
   --pf-c-switch--FontSize: var(--pf-global--FontSize--md);

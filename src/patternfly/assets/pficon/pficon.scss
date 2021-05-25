@@ -1,3 +1,5 @@
+@use "../../sass-utilities/_all" as *;
+
 @font-face {
 	font-family: "pficon";
 	src: url('#{$pf-global--fonticon-path}/pficon.eot');

@@ -1,3 +1,4 @@
+@use "../../sass-utilities/all" as *;
 @use "sass:math";
 
 $pf-c-sidebar--breakpoint-map--width: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");

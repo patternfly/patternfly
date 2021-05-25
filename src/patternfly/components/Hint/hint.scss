@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-hint {
   --pf-c-hint--GridRowGap: var(--pf-global--spacer--md);
   --pf-c-hint--PaddingTop: var(--pf-global--spacer--lg);

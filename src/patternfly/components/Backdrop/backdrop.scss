@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-backdrop {
   --pf-c-backdrop--ZIndex: var(--pf-global--ZIndex--lg);
   --pf-c-backdrop--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);

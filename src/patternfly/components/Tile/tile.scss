@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-tile {
   --pf-c-tile--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-tile--PaddingRight: var(--pf-global--spacer--lg);

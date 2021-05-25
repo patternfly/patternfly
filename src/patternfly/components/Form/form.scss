@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-form {
   --pf-c-form--GridGap: var(--pf-global--gutter--md);
 

@@ -1,6 +1,7 @@
 // This file is for initial variable values.
 // All variables should have a valid css value,
 // and use !default so they can be overwritten.
+@use "./colors.scss" as *;
 
 // `$pf-global--concept--PropiertyCamelCase--modifier--state`
 

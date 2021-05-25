@@ -1,5 +1,6 @@
 @use "sass:list";
 @use "sass:meta";
+@use "./scss-variables" as *;
 
 // Media query used to create responsive classes
 @mixin pf-media-query($point) {

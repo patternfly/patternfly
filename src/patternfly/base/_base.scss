@@ -1,4 +1,5 @@
 @use "sass:meta";
+@use "../sass-utilities/scss-variables" as *;
 
 @if $pf-global--load-pf-3 {
   @import url("https://fonts.googleapis.com/css?family=Open+Sans");

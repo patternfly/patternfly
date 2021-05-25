@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-list {
   // list
   --pf-c-list--PaddingLeft: var(--pf-global--spacer--lg);

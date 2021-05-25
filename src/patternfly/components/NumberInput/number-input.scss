@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-number-input {
   // unit
   --pf-c-number-input__unit--c-input-group--MarginLeft: var(--pf-global--spacer--sm);

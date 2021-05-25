@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-calendar-month {
   --pf-c-calendar-month--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-calendar-month--PaddingTop: var(--pf-global--spacer--lg);

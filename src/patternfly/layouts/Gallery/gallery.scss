@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 $pf-l-gallery--breakpoint-map: build-breakpoint-map();
 
 .pf-l-gallery {

@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 $pf-c-description-list-order--breakpoint-map: build-breakpoint-map();
 $pf-c-description-list-order--limit: 12;
 

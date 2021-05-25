@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-empty-state {
   --pf-c-empty-state--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-empty-state--PaddingRight: var(--pf-global--spacer--xl);

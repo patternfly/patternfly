@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-notification-badge {
   --pf-c-notification-badge--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-notification-badge--PaddingRight: var(--pf-global--spacer--md);

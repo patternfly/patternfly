@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-search-input {
   // Base border
   --pf-c-search-input__text--before--BorderWidth: var(--pf-global--BorderWidth--sm);

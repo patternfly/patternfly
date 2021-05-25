@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-code-editor {
   // controls
   --pf-c-code-editor__controls--c-button--m-control--Color: var(--pf-global--Color--200);

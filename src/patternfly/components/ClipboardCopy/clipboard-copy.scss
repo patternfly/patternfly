@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-clipboard-copy {
   // Toggle icon
   --pf-c-clipboard-copy__toggle-icon--Transition: .2s ease-in 0s;

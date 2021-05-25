@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 // Don't remove this magic comment. See gulpfile.js.
 // @import "../../sass-utilities/all";
 $pf-c-toolbar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");

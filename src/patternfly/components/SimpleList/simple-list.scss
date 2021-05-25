@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-simple-list {
   // Simple list item link
   --pf-c-simple-list__item-link--PaddingTop: var(--pf-global--spacer--xs);

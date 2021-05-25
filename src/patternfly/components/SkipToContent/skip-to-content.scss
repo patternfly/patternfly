@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-skip-to-content {
   --pf-c-skip-to-content--Top: var(--pf-global--spacer--md);
   --pf-c-skip-to-content--ZIndex: var(--pf-global--ZIndex--2xl);

@@ -1,3 +1,5 @@
+@use "../../sass-utilities/all" as *;
+
 .pf-c-expandable-section {
   // Toggle
   --pf-c-expandable-section__toggle--PaddingTop: var(--pf-global--spacer--form-element);
