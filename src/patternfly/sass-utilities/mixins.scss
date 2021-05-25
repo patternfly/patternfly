@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "sass:meta";
+
 // Media query used to create responsive classes
 @mixin pf-media-query($point) {
   @if $point == "" or $point == null or $point == "base" {
@@ -63,10 +66,10 @@
   // if $class-name is a map
 
   // stylelint-disable
-  @if type-of($props) == map {
+  @if meta.type-of($props) == map {
     @each $class, $val in $props {
-      $property: nth($val, 1);
-      $value: #{nth($val, 2) !important};
+      $property: list.nth($val, 1);
+      $value: #{list.nth($val, 2) !important};
 
       .pf-u-#{$class} {
         #{$property}: #{$value};
@@ -80,8 +83,8 @@
 
         @include pf-media-query($breakpoint) {
           @each $class, $val in $props {
-            $property: nth($val, 1);
-            $value: #{nth($val, 2) !important};
+            $property: list.nth($val, 1);
+            $value: #{list.nth($val, 2) !important};
 
             .pf-u-#{$class}#{$suffix} {
               #{$property}: #{$value};
@@ -92,10 +95,10 @@
     }
   }
 
-  @else if type-of($props) == list {
-    $class: nth($props, 1);
-    $property: nth($props, 2);
-    $value: nth($props, 3) !important;
+  @else if meta.type-of($props) == list {
+    $class: list.nth($props, 1);
+    $property: list.nth($props, 2);
+    $value: list.nth($props, 3) !important;
 
     .pf-u-#{$class} {
       #{$property}: #{$value};
@@ -228,14 +231,14 @@
 
     // Build variable list
     @if $breakpoint != "base" {
-      $list: append($list, $css-var + "-on-" + $breakpoint);
+      $list: list.append($list, $css-var + "-on-" + $breakpoint);
     } @else {
-      $list: append($list, $css-var);
+      $list: list.append($list, $css-var);
     }
 
     // Construct variable stack
     @each $list-item in $list {
-      @if length($variable-list) == 0 {
+      @if list.length($variable-list) == 0 {
         $variable-list: var(#{$list-item});
       } @else {
         $variable-list: var(#{$list-item}, $variable-list);

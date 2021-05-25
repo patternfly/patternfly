@@ -1,4 +1,4 @@
-@import "../sass-utilities/all";
-@import "shield-noninheritable";
+@use "../sass-utilities/all";
+@use "shield-noninheritable";
 
-@include shield-noninheritable;
+@include shield-noninheritable.shield-noninheritable;

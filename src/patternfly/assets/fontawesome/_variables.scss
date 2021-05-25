@@ -1,3 +1,4 @@
+@use "sass:string";
 @use "sass:math";
 
 // Variables
@@ -14,7 +15,7 @@ $fa-fw-width:                 math.div(20em, 16);
 
 // Convenience function used to set content property
 @function fa-content($fa-var) {
-  @return unquote("\"#{ $fa-var }\"");
+  @return string.unquote("\"#{ $fa-var }\"");
 }
 
 $fa-var-500px: \f26e;
