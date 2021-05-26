@@ -1,10 +1,6 @@
 {{#> page-main-section page-main-section--modifier=(concat 'pf-m-light ' page-template-title--modifier) page-main-section--IsLimitWidth="true"}}
-  {{#if @partial-block}}
-    {{> @partial-block}}
-  {{else}}
-    {{#> content}}
-      <h1>Main title</h1>
-      <p>This is a demo of the Page component.</p>
-    {{/content}}
-  {{/if}}
+  {{#> content}}
+    <h1>Main title</h1>
+    <p>This is a demo of the Page component.</p>
+  {{/content}}
 {{/page-main-section}}

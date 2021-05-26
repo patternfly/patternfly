@@ -42,14 +42,14 @@ wrapperTag: div
   {{> page-template-header}}
   {{> page-template-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-template-title page-template-title--modifier="pf-m-align-center pf-m-fill"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-align-center pf-m-fill"}}
       {{#> bullseye}}
         {{#> content content--modifier="pf-u-text-align-center"}}
           <h1>Centered title</h1>
           <p>Page section width limited, filled, centered.</p>
         {{/content}}
       {{/bullseye}}
-    {{/page-template-title}}
+    {{/page-main-section}}
     {{> divider}}
     {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-m-light"}}
       {{#> bullseye}}
