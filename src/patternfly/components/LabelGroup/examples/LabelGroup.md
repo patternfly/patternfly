@@ -429,24 +429,122 @@ cssPrefix: pf-c-label-group
 {{/label-group}}
 ```
 
-### Editable
+In addition to [label documentation](../label#editable), dynamic label groups should be managed with JavaScript
+* `.pf-c-label-group.pf-m-editable` onClick event should (excluding labels within):
+  * Set focus on `.pf-c-label-group__textarea`
+
+### Editable labels, dynamic label group
 ``` hbs
-{{#> label-group label-group--id="label-group-editable-example" label-group--IsEditable="true"}}
+{{#> label-group label-group--id="editable-labels-editable-group-example" label-group--IsEditable="true"}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label label--modifier="pf-m-blue" label--id="editable-label-default" label--isRemovable="true" label--IsEditable="true"}}
-          Editable label
+        {{#> label label--modifier="pf-m-blue" label--id=(concat label-group--id '-editable-label-editable-1') label--isRemovable="true" label--IsEditable="true"}}
+          Editable label 1
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--modifier="pf-m-blue pf-m-active" label--id="editable-label-active" label--isRemovable="true" label--IsEditable="true"}}
-          Editable label active
+        {{#> label label--modifier="pf-m-blue" label--id=(concat label-group--id '-editable-label-editable-2') label--isRemovable="true" label--IsEditable="true"}}
+          Editable label 2
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--modifier="pf-m-green" label--id="editable-label-static" label--isRemovable="true"}}
-          Static label
+        {{#> label label--modifier="pf-m-blue" label--id=(concat label-group--id '-editable-label-editable-3') label--isRemovable="true" label--IsEditable="true"}}
+          Editable label 3
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
+        {{> label-group-textarea}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+```
+
+### Editable labels, label active, dynamic label group
+``` hbs
+{{#> label-group label-group--id="editable-labels-label-active-editable-group-example" label-group--IsEditable="true"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-blue" label--id=(concat label-group--id '-editable-label-default-1') label--isRemovable="true" label--IsEditable="true"}}
+          Editable label 1
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-blue" label--id=(concat label-group--id '-editable-label-default-2') label--isRemovable="true" label--IsEditable="true"}}
+          Editable label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-blue pf-m-active" label--id=(concat label-group--id '-editable-label-active') label--isRemovable="true" label--IsEditable="true" label--IsEditableActive="true"}}
+          Editable label 3, active
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
+        {{> label-group-textarea}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+```
+
+### Static labels, dynamic label group
+``` hbs
+{{#> label-group label-group--id="static-labels-editable-group-example" label-group--IsEditable="true"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-green" label--id=(concat label-group--id '-editable-label-static-1') label--isRemovable="true"}}
+          Static label 1
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-green" label--id=(concat label-group--id '-editable-label-static-2') label--isRemovable="true"}}
+          Static label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-green" label--id=(concat label-group--id '-editable-label-static-3') label--isRemovable="true"}}
+          Static label 3
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
+        {{> label-group-textarea}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+```
+
+### Mixed labels, dynamic label group
+``` hbs
+{{#> label-group label-group--id="static-labels-editable-group-example" label-group--IsEditable="true"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-green" label--id=(concat label-group--id '-editable-label-static-1') label--isRemovable="true"}}
+          Static label 1
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-green" label--id=(concat label-group--id '-editable-label-static-2') label--isRemovable="true"}}
+          Static label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-blue" label--id=(concat label-group--id '-editable-label-dynamic-1') label--isRemovable="true" label--IsEditable="true"}}
+          Dynamic, editable label 1
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-blue" label--id=(concat label-group--id '-editable-label-dynamic-2') label--isRemovable="true" label--IsEditable="true"}}
+          Dynamic, editable label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-blue pf-m-active" label--id=(concat label-group--id '-editable-label-dynamic-3') label--isRemovable="true" label--IsEditable="true"}}
+          Dynamic, editable label 3
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}

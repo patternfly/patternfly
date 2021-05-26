@@ -253,7 +253,7 @@
   }
 
   &.pf-m-editable {
-    &.pf-m-active {
+    &.pf-m-editable-active {
       --pf-c-label--BackgroundColor: var(--pf-c-label--m-editable--m-active--BackgroundColor);
       --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-editable--m-active__content--before--BorderWidth);
       --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-editable--m-active__content--before--BorderColor);

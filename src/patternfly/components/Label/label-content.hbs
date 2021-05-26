@@ -7,7 +7,7 @@
   {{/if}}>
   {{#if label--IsEditable}}
     {{#> inline-edit}}
-      {{#> inline-edit-editable-text}}
+      {{#> inline-edit-editable-text inline-edit-editable-text--IsActive=label--IsEditableActive inline-edit--id=label--id}}
         {{> @partial-block}}
       {{/inline-edit-editable-text}}
     {{/inline-edit}}
