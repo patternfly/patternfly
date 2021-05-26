@@ -150,6 +150,10 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     display: flex;
     align-items: center;
     height: 100%;
+
+    .pf-c-dropdown__toggle {
+      align-self: stretch;
+    }
   }
 }
 
