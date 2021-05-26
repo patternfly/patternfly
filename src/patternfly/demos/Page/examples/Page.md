@@ -71,7 +71,7 @@ wrapperTag: div
       {{/card}}
     {{/page-main-section}}
     {{> divider}}
-    {{#> page-main-section page-main-section--modifier="pf-m-align-center"}}
+    {{#> page-main-section}}
       {{#> grid grid--modifier="pf-m-gutter pf-m-all-6-col-on-md pf-m-all-3-col-on-xl"}}
         {{#> grid-item grid-item--modifier="pf-m-12-col"}}
           <h2 class="pf-u-text-align-center">(Centered page section)</h2>
