@@ -390,6 +390,24 @@ Ordering - Ordering can be applied to nested <code>.pf-l-grid</code> and <code>.
 {{/grid}}
 ```
 
+### List type
+```hbs
+{{#> grid grid--modifier="pf-m-all-6-col-on-sm" grid--type="ul" grid-item--type="li"}}
+  {{#> grid-item}}
+    item 1
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 2
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 3
+  {{/grid-item}}
+  {{#> grid-item}}
+    item 4
+  {{/grid-item}}
+{{/grid}}
+```
+
 ## Documentation
 
 ### Overview

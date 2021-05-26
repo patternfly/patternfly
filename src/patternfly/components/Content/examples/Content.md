@@ -63,6 +63,9 @@ cssPrefix: pf-c-content
 <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et
   <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
 <hr>
+<h3>Visited link example</h3>
+<a class="pf-m-visited" href="#">Visited link</a>
+<hr>
 <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum
   commodo.
 </p>
@@ -116,4 +119,5 @@ This component is an exception to the variable system since we style type select
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-content` | `<div>`, `<section>`, or `<article>` | Generates vertical rythm and typographic treatment to html elements |
+| `.pf-c-content` | `<div>`, `<section>`, or `<article>` | Generates vertical rhythm and typographic treatment to html elements. |
+| `.pf-m-visited` | `.pf-c-content`, `<a>` | Modifies all links in a content block to include visited styles. Can also be applied to a single link in a content block. |
