@@ -22,7 +22,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer__panel--TransitionDuration: var(--pf-global--TransitionDuration);
   --pf-c-drawer__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
   --pf-c-drawer__panel--FlexBasis: 100%;
-  --pf-c-drawer__panel--md--FlexBasis--min: 0%;
+  --pf-c-drawer__panel--md--FlexBasis--min: #{pf-size-prem(24px)};
   --pf-c-drawer__panel--md--FlexBasis: 50%;
   --pf-c-drawer__panel--md--FlexBasis--max: 100%;
   --pf-c-drawer__panel--xl--MinWidth: #{pf-size-prem(450px)};
@@ -32,8 +32,10 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   --pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis: #{pf-size-prem(300px)};
   --pf-c-drawer__panel--m-resizable--FlexDirection: row;
   --pf-c-drawer__panel--m-resizable--md--FlexBasis--min: var(--pf-c-drawer__splitter--m-vertical--Width);
+  --pf-c-drawer__panel--m-resizable--MinWidth: #{pf-size-prem(24px)};
   --pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection: column;
-  --pf-c-drawer--m-panel-bottom__panel--m-resizable--md--FlexBasis--min: var(--pf-c-drawer__splitter--Height);
+  --pf-c-drawer--m-panel-bottom__panel--m-resizable--md--FlexBasis--min: #{pf-size-prem(24px)};
+  --pf-c-drawer--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
 
   // Child padding
   --pf-c-drawer--child--PaddingTop: var(--pf-global--spacer--md);
@@ -451,12 +453,13 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
       --pf-c-drawer__panel--md--FlexBasis--min: var(--pf-c-drawer__panel--m-resizable--md--FlexBasis--min);
 
+      flex-direction: var(--pf-c-drawer__panel--m-resizable--FlexDirection);
+      min-width: var(--pf-c-drawer__panel--m-resizable--MinWidth);
+
       &::after {
         width: 0;
         height: 0;
       }
-
-      flex-direction: var(--pf-c-drawer__panel--m-resizable--FlexDirection);
 
       > .pf-c-drawer__splitter {
         flex-shrink: 0;
@@ -526,6 +529,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
       --pf-c-drawer__panel--md--FlexBasis--min: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--md--FlexBasis--min);
       --pf-c-drawer__panel--m-resizable--FlexDirection: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection);
+      --pf-c-drawer__panel--m-resizable--MinWidth: 0;
+
+      min-height: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--MinHeight);
 
       > .pf-c-drawer__splitter {
         --pf-c-drawer__splitter-handle--Top: var(--pf-c-drawer--m-panel-bottom__splitter-handle--Top);
