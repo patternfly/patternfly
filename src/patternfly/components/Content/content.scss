@@ -64,6 +64,7 @@
   --pf-c-content--a--TextDecoration: var(--pf-global--link--TextDecoration);
   --pf-c-content--a--hover--Color: var(--pf-global--link--Color--hover);
   --pf-c-content--a--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
+  --pf-c-content--a--visited--Color: var(--pf-global--link--Color--visited);
 
   // Blockquote
   --pf-c-content--blockquote--PaddingTop: var(--pf-global--spacer--md);
@@ -108,6 +109,15 @@
       --pf-c-content--a--TextDecoration: var(--pf-c-content--a--hover--TextDecoration);
     }
   }
+
+  // stylelint-disable selector-no-qualifying-type
+  &.pf-m-visited a,
+  a.pf-m-visited {
+    &:visited {
+      --pf-c-content--a--Color: var(--pf-c-content--a--visited--Color);
+    }
+  }
+  // stylelint-enable
 
   li + li {
     margin-top: var(--pf-c-content--li--MarginTop);
