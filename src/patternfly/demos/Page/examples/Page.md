@@ -46,7 +46,7 @@ wrapperTag: div
       {{#> bullseye}}
         {{#> content content--modifier="pf-u-text-align-center"}}
           <h1>Centered title</h1>
-          <p>Page section width limited, filled, centered.</p>
+          <p>Page section filled, centered.</p>
         {{/content}}
       {{/bullseye}}
     {{/page-main-section}}
@@ -66,7 +66,7 @@ wrapperTag: div
           <h2>Card title</h2>
         {{/card-title}}
         {{#> card-body}}
-          <p>Page section width limited, filled, centered. Full width card.</p>
+          <p>Page section width limited, centered. Full width card.</p>
         {{/card-body}}
       {{/card}}
     {{/page-main-section}}
@@ -74,7 +74,7 @@ wrapperTag: div
     {{#> page-main-section}}
       {{#> grid grid--modifier="pf-m-gutter pf-m-all-6-col-on-md pf-m-all-3-col-on-xl"}}
         {{#> grid-item grid-item--modifier="pf-m-12-col"}}
-          <h2 class="pf-u-text-align-center">(Centered page section)</h2>
+          <h2 class="pf-u-text-align-center">(Default page section)</h2>
         {{/grid-item}}
         {{#> card}}
           {{#> card-header}}
