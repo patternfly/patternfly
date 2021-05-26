@@ -8,7 +8,6 @@ beta: true
 ## Examples
 
 ### Default
-
 ```hbs
 {{#> tree-view}}
   {{#> tree-view-list tree-view-list--IsRoot="true"}}
@@ -595,6 +594,98 @@ beta: true
   {{/tree-view-list}}
 {{/tree-view}}
 ```
+
+### With non-expandable top level nodes
+```hbs
+{{#> tree-view}}
+  {{#> tree-view-list tree-view-list--IsRoot="true"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application launcher"}}
+      {{/tree-view-content}}
+      {{#> tree-view-list newcontext}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 1"}}
+          {{/tree-view-content}}
+          {{#> tree-view-list newcontext}}
+            {{#> tree-view-list-item}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+            {{#> tree-view-list-item}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Current" tree-view-node--modifier="pf-m-current"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+          {{/tree-view-list}}
+        {{/tree-view-list-item}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+          {{#> tree-view-content}}
+            {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Application 2"}}
+          {{/tree-view-content}}
+          {{#> tree-view-list newcontext}}
+            {{#> tree-view-list-item}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Settings"}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+              {{#> tree-view-content}}
+                {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader"}}
+              {{/tree-view-content}}
+              {{#> tree-view-list newcontext}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Loader app 1"}}
+                  {{/tree-view-content}}
+                {{/tree-view-list-item}}
+                {{#> tree-view-list-item}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 2"}}
+                  {{/tree-view-content}}
+                {{/tree-view-list-item}}
+                {{#> tree-view-list-item}}
+                  {{#> tree-view-content}}
+                    {{> tree-view-node tree-view-node--text="Loader app 3"}}
+                  {{/tree-view-content}}
+                {{/tree-view-list-item}}
+              {{/tree-view-list}}
+            {{/tree-view-list-item}}
+          {{/tree-view-list}}
+        {{/tree-view-list-item}}
+      {{/tree-view-list}}
+    {{/tree-view-list-item}}
+    {{#> tree-view-list-item}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--text="Cost management"}}
+      {{/tree-view-content}}
+    {{/tree-view-list-item}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true"}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--HasToggle="true" tree-view-node--text="Sources"}}
+      {{/tree-view-content}}
+    {{/tree-view-list-item}}
+    {{#> tree-view-list-item}}
+      {{#> tree-view-content}}
+        {{> tree-view-node tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
+      {{/tree-view-content}}
+    {{/tree-view-list-item}}
+  {{/tree-view-list}}
+{{/tree-view}}
+```
+
 ## Documentation
 
 ### Overview
