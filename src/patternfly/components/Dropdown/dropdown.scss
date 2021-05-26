@@ -148,8 +148,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   &.pf-m-full-height {
     display: flex;
-    height: 100%;
     align-items: center;
+    height: 100%;
   }
 }
 
