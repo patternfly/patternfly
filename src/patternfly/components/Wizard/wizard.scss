@@ -52,9 +52,9 @@
   --pf-c-wizard__nav-list__nav-list__nav-link--m-current--FontWeight: var(--pf-global--FontWeight--normal); // remove at breaking change
 
   // Nav link toggle icon
-  --pf-c-wizard__nav-link-toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-wizard__nav-link-toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-wizard__nav-link-toggle-icon--Color: var(--pf-global--Color--200);
+  --pf-c-wizard__nav-link-toggle--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-wizard__nav-link-toggle--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-wizard__nav-link-toggle--Color: var(--pf-global--Color--200);
   --pf-c-wizard__nav-link--hover__nav-link-toggle-icon--Color: var(--pf-global--Color--100);
   --pf-c-wizard__nav-link--focus__nav-link-toggle-icon--Color: var(--pf-global--Color--100);
   --pf-c-wizard__nav-link-toggle-icon--Transition: var(--pf-global--Transition);
@@ -465,12 +465,12 @@
 
   &:hover {
     --pf-c-wizard__nav-link--Color: var(--pf-c-wizard__nav-link--hover--Color);
-    --pf-c-wizard__nav-link-toggle-icon--Color: var(--pf-c-wizard__nav-link--hover__nav-link-toggle-icon--Color);
+    --pf-c-wizard__nav-link-toggle--Color: var(--pf-c-wizard__nav-link--hover__nav-link-toggle-icon--Color);
   }
 
   &:focus {
     --pf-c-wizard__nav-link--Color: var(--pf-c-wizard__nav-link--focus--Color);
-    --pf-c-wizard__nav-link-toggle-icon--Color: var(--pf-c-wizard__nav-link--focus__nav-link-toggle-icon--Color);
+    --pf-c-wizard__nav-link-toggle--Color: var(--pf-c-wizard__nav-link--focus__nav-link-toggle-icon--Color);
   }
 
   &.pf-m-current {
@@ -502,10 +502,14 @@
   flex-grow: 1;
 }
 
+.pf-c-wizard__nav-link-toggle {
+  padding-right: var(--pf-c-wizard__nav-link-toggle--PaddingRight);
+  padding-left: var(--pf-c-wizard__nav-link-toggle--PaddingLeft);
+  color: var(--pf-c-wizard__nav-link-toggle--Color);
+}
+
 .pf-c-wizard__nav-link-toggle-icon {
-  padding-right: var(--pf-c-wizard__nav-link-toggle-icon--PaddingRight);
-  padding-left: var(--pf-c-wizard__nav-link-toggle-icon--PaddingLeft);
-  color: var(--pf-c-wizard__nav-link-toggle-icon--Color);
+  display: inline-block;
   transition: var(--pf-c-wizard__nav-link-toggle-icon--Transition);
   transform: rotate(var(--pf-c-wizard__nav-link-toggle-icon--Rotate));
 }

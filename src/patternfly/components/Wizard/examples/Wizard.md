@@ -508,6 +508,7 @@ import './Wizard.css'
 | `.pf-c-wizard__nav-item` | `<li>` | Initiates a step list item. **Required** |
 | `.pf-c-wizard__nav-link` | `<a>` | Initiates a step link. **Required** |
 | `.pf-c-wizard__nav-link-text` | `<span>` | Initiates the link text container. **Required when nav item is expandable** |
+| `.pf-c-wizard__nav-link-toggle` | `<span>` | Initiates the toggle container. **Required when nav item is expandable** |
 | `.pf-c-wizard__nav-link-toggle-icon` | `<span>` | Initiates the toggle icon container. **Required when nav item is expandable** |
 | `.pf-c-wizard__main` | `<main>`, `<div>` | Initiates the main container. **Required** Note: use the `<main>` element when when there are no other `<main>` elements on the page.|
 | `.pf-c-wizard__main-body` | `<div>` | Initiates the main container body section. **Required** |

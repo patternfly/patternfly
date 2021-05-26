@@ -1,8 +1,6 @@
 ---
 id: 'Card view'
-beta: true
 section: demos
-cssPrefix: pf-d-card-view
 ---
 
 ## Examples

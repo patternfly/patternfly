@@ -24,7 +24,9 @@
     {{#> wizard-nav-link-text}}
       {{> @partial-block}}
     {{/wizard-nav-link-text}}
-    {{> wizard-nav-link-toggle-icon}}
+    {{#> wizard-nav-link-toggle}}
+      {{> wizard-nav-link-toggle-icon}}
+    {{/wizard-nav-link-toggle}}
   {{else}}
     {{> @partial-block}}
   {{/if}}
