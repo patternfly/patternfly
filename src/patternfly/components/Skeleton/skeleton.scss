@@ -79,7 +79,7 @@
     display: block;
     content: "";
     background: linear-gradient(var(--pf-c-skeleton--after--LinearGradientAngle), var(--pf-c-skeleton--after--LinearGradientColorStop1), var(--pf-c-skeleton--after--LinearGradientColorStop2), var(--pf-c-skeleton--after--LinearGradientColorStop3));
-    transform: translate(var(--pf-c-skeleton--after--TranslateX), 0, 0); // translateZ() to force GPU acceleration
+    transform: translate3d(var(--pf-c-skeleton--after--TranslateX), 0, 0); // translateZ() to force GPU acceleration
     animation: var(--pf-c-skeleton--after--AnimationName) var(--pf-c-skeleton--after--AnimationDuration) var(--pf-c-skeleton--after--AnimationTimingFunction) var(--pf-c-skeleton--after--AnimationDelay) var(--pf-c-skeleton--after--AnimationIterationCount);
   }
 
