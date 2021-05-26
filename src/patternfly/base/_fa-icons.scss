@@ -1,6 +1,5 @@
 @use "sass:meta";
-@use "../sass-utilities/_all" as *;
-@use "./_variables" as *;
+@use "../sass-utilities/scss-variables" as *;
 
 // Font Awesome 5 icons https://fontawesome.com
 %pf-fa-local {
