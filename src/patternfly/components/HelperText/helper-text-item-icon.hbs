@@ -1,0 +1,10 @@
+<span class="pf-c-helper-text__item-icon{{#if helper-text-item-icon--modifier}} {{helper-text-item-icon--modifier}}{{/if}}"
+  {{#if helper-text-item-icon--attribute}}
+    {{{helper-text-item-icon--attribute}}}
+  {{/if}}>
+  {{#if @partial-block}}
+    {{>@partial-block}}
+  {{else}}
+    <i class="fas fa-fw fa-{{helper-text-item-icon--type}}" aria-hidden="true"></i>
+  {{/if}}
+</span>
