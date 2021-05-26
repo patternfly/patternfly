@@ -313,10 +313,7 @@
     --pf-c-menu__item-action--Color: var(--pf-c-menu__list-item--m-disabled__item-action--Color);
     --pf-c-menu__item-toggle-icon: var(--pf-c-menu__list-item--m-disabled__item-toggle-icon--Color);
 
-    .pf-c-menu__item,
-    .pf-c-menu__item-action {
-      pointer-events: none;
-    }
+    pointer-events: none;
   }
 
   &.pf-m-load {
