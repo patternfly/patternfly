@@ -88,6 +88,17 @@ Grid template columms min value can be applied to <code>.pf-l-gallery</code>.  M
 {{/gallery}}
 ```
 
+### List type
+```hbs
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--type="ul" gallery-item--type="li"}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+  {{#> gallery-item}}content{{/gallery-item}}
+{{/gallery}}
+```
+
 ## Documentation
 ### Overview
 The gallery layout is designed so that all of its children are of uniform size, display horizontally, and wrap responsively.

@@ -1,6 +1,6 @@
-<div class="pf-l-grid{{#if grid--modifier}} {{grid--modifier}}{{/if}}"
+<{{#if grid--type}}{{grid--type}}{{else}}div{{/if}} class="pf-l-grid{{#if grid--modifier}} {{grid--modifier}}{{/if}}"
   {{#if grid--attribute}}
     {{{grid--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</div>
+</{{#if grid--type}}{{grid--type}}{{else}}div{{/if}}>
