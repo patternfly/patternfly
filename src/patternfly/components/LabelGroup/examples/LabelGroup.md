@@ -572,8 +572,10 @@ In addition to [label documentation](../label#editable), dynamic label groups sh
 | `.pf-c-label-group__list` | `<ul>` | Initiates the container for a list of labels. **Required.** |
 | `.pf-c-label-group__list-item` | `<li>` | Initiates the list item inside of the label group. **Required.** |
 | `.pf-c-label-group__main` | `<div>` | Initiates the main element in the label group. **Required when label and list are present** |
+| `.pf-c-label-group__textarea` | `<textarea>` | Initiates the textarea element in the label group. **Required when label group is editable** |
 | `.pf-c-label-group__label` | `<span>` | Initiates the label to be used in the label group. |
 | `.pf-c-label-group__close` | `<div>` | Initiates the container used for the button to remove the label group. |
+| `.pf-m-editable` | `.pf-c-label-group` | Modifies the label group to support editable styling. |
 | `.pf-c-button` | `.pf-c-label-group__close <button>` | Initiates the button used to remove the label group. |
 | `.pf-m-category` | `.pf-c-label-group` | Modifies the label group to support category styling. |
-| `.pf-m-textarea` | `.pf-c-label-group__list-item` | Modifies the label list item to support textarea. |
+| `.pf-m-textarea` | `.pf-c-label-group__list-item` | Modifies the label group list item to support textarea. |

@@ -570,4 +570,4 @@ import './Label.css'
 | `.pf-m-purple` | `.pf-c-label` | Modifies the label to have purple colored styling. |
 | `.pf-m-cyan` | `.pf-c-label` | Modifies the label to have cyan colored styling. |
 | `.pf-m-editable` | `.pf-c-label` | Modifies label for editable styles. |
-| `.pf-m-editable-active` | `.pf-c-editable` | Modifies editable label for active styles. |
+| `.pf-m-editable-active` | `.pf-c-label.pf-m-editable` | Modifies editable label for active styles. |
