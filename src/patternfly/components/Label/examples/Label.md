@@ -528,6 +528,30 @@ import './Label.css'
 {{/label}}
 ```
 
+### Editable label behavior must be handled with JavaScript.
+* `.pf-c-inline-edit__editable-text` onClick event should:
+  * Set `.pf-m-editable-active` on `.pf-c-label`
+  * Set `contenteditable="true"` on `.pf-c-inline-edit__editable-text`
+* Return keypress, when content is editable, should:
+  * Be captured to prevent line wrapping and save updates to label text
+  * Remove `.pf-m-editable-active` from `.pf-c-label`
+  * Remove `contenteditable="true"` from `.pf-c-inline-edit__editable-text`
+* Esc keypress, when content is editable, should:
+  * Undo any update to label text
+  * Remove `.pf-m-editable-active` from `.pf-c-label`
+  * Remove `contenteditable="true"` from `.pf-c-inline-edit__editable-text`
+
+### Editable
+``` hbs
+{{#> label label--id="editable-label" label--IsEditable="true" label--isRemovable="true" label--modifier="pf-m-blue"}}
+  Editable label
+{{/label}}
+
+{{#> label label--id="editable-label-active" label--IsEditable="true" label--IsEditableActive="true" label--modifier="pf-m-blue"}}
+  Editable active
+{{/label}}
+```
+
 ## Documentation
 
 ### Usage
@@ -545,3 +569,5 @@ import './Label.css'
 | `.pf-m-red` | `.pf-c-label` | Modifies the label to have red colored styling. |
 | `.pf-m-purple` | `.pf-c-label` | Modifies the label to have purple colored styling. |
 | `.pf-m-cyan` | `.pf-c-label` | Modifies the label to have cyan colored styling. |
+| `.pf-m-editable` | `.pf-c-label` | Modifies label for editable styles. |
+| `.pf-m-editable-active` | `.pf-c-label.pf-m-editable` | Modifies editable label for active styles. |
