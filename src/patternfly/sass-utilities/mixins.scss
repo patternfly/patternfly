@@ -220,7 +220,7 @@
 }
 
 // Build variable stack
-@mixin pf-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-global--breakpoint-map) {
+@mixin pf-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-global--breakpoint-map, $important: false) {
   $list: ();
 
   @each $breakpoint, $breakpoint-value in $breakpoint-map {
@@ -244,7 +244,13 @@
 
     // Assign variable stack to $prop
     @include pf-apply-breakpoint($breakpoint) {
-      #{$prop}: #{$variable-list};
+      @if $important == true {
+        // stylelint-disable declaration-no-important
+        #{$prop}: #{$variable-list} !important;
+        // stylelint-enable
+      } @else {
+        #{$prop}: #{$variable-list};
+      }
     }
   }
 }
