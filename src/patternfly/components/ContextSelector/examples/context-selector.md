@@ -53,9 +53,9 @@ import './context-selector.css'
 {{/context-selector}}
 ```
 
-### Plain
+### Plain with text
 ```hbs
-{{#> context-selector context-selector--id="context-selector-plain-collapsed-example" context-selector--label-text="Selected project" context-selector-toggle--IsPlain="true"}}
+{{#> context-selector context-selector--id="context-selector-plain-with-text-collapsed-example" context-selector--label-text="Selected project" context-selector-toggle--IsPlain="true" context-selector-toggle--IsText="true"}}
   {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
     {{#> context-selector-toggle-text}}
       My project
@@ -77,7 +77,7 @@ import './context-selector.css'
   {{/context-selector-menu}}
 {{/context-selector}}
 
-{{#> context-selector context-selector--id="context-selector-plain-expanded-example" context-selector--label-text="Selected Project" context-selector--IsExpanded="true" context-selector-toggle--IsPlain="true"}}
+{{#> context-selector context-selector--id="context-selector-plain-with-text-expanded-example" context-selector--label-text="Selected Project" context-selector--IsExpanded="true" context-selector-toggle--IsPlain="true" context-selector-toggle--IsText="true"}}
   {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
     {{#> context-selector-toggle-text}}
       My project

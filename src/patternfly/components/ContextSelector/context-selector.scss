@@ -18,7 +18,7 @@
   --pf-c-context-selector__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-context-selector__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-context-selector__toggle--m-plain--Color: var(--pf-global--Color--100);
+  --pf-c-context-selector__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-context-selector__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-context-selector__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-context-selector__toggle--m-plain--PaddingRight: var(--pf-global--spacer--sm);
@@ -69,6 +69,11 @@
   --pf-c-context-selector__menu-list-item--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-context-selector__menu-list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-context-selector__menu-list-item--disabled--Color: var(--pf-global--Color--dark-200);
+
+  // Menu item icon
+  --pf-c-context-selector__menu-item-icon--Color: var(--pf-global--active-color--100);
+  --pf-c-context-selector__menu-item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-context-selector__menu-item-icon--PaddingLeft: var(--pf-global--spacer--lg);
 
   position: relative;
   display: inline-block;
@@ -127,16 +132,31 @@
     --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--PaddingRight);
     --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector__toggle--m-plain--PaddingLeft);
 
-    // display: inline-block;
-    color: var(--pf-c-context-selector__toggle--m-plain--Color);
-
-    // remove at breaking change
-    > * {
-      line-height: var(--pf-c-context-selector__toggle--m-plain--child--LineHeight);
+    &:not(.pf-m-text) {
+      justify-content: center;
+      width: auto;
+      color: var(--pf-c-context-selector__toggle--m-plain--Color);
     }
 
     &::before {
       border: 0;
+    }
+
+    .pf-c-context-selector__toggle-button-icon {
+      line-height: var(--pf-c-context-selector__toggle--LineHeight);
+    }
+
+    &:hover,
+    &:active,
+    &.pf-m-active,
+    &:focus,
+    .pf-c-context-selector.pf-m-expanded > & {
+      --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--hover--Color);
+    }
+
+    &.pf-m-disabled,
+    &:disabled {
+      --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--disabled--Color);
     }
   }
 
@@ -154,6 +174,19 @@
   }
 }
 
+.pf-c-context-selector__toggle-button-icon {
+  position: relative;
+}
+
+.pf-c-context-selector__toggle-icon {
+  margin-right: var(--pf-c-context-selector__toggle-icon--MarginRight);
+  margin-left: var(--pf-c-context-selector__toggle-icon--MarginLeft);
+
+  .pf-c-context-selector.pf-m-top.pf-m-expanded & {
+    transform: rotate(var(--pf-c-context-selector--m-top--m-expanded__toggle-icon--Rotate));
+  }
+}
+
 .pf-c-context-selector__menu {
   @include pf-t-light;
 
@@ -164,6 +197,15 @@
   background-color: var(--pf-c-context-selector__menu--BackgroundColor);
   background-clip: padding-box;
   box-shadow: var(--pf-c-context-selector__menu--BoxShadow);
+}
+
+.pf-c-context-selector__menu-item-icon {
+  align-self: center;
+  width: auto; // this allows the padding to apply when this class is used with an svg element
+  padding-left: var(--pf-c-context-selector__menu-item-icon--PaddingLeft);
+  margin-left: auto;
+  font-size: var(--pf-c-context-selector__menu-item-icon--FontSize);
+  color: var(--pf-c-context-selector__menu-item-icon--Color);
 }
 
 .pf-c-context-selector__menu-search {
