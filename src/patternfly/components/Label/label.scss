@@ -135,9 +135,9 @@
   --pf-c-label__c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Editable
-  --pf-c-label--m-editable--m-active--BackgroundColor: transparent;
-  --pf-c-label--m-editable--m-active__content--before--BorderWidth: 0;
-  --pf-c-label--m-editable--m-active__content--before--BorderColor: transparent;
+  --pf-c-label--m-editable--m-editable-active--BackgroundColor: transparent;
+  --pf-c-label--m-editable--m-editable-active__content--before--BorderWidth: 0;
+  --pf-c-label--m-editable--m-editable-active__content--before--BorderColor: transparent;
 
   position: relative;
   padding: var(--pf-c-label--PaddingTop) var(--pf-c-label--PaddingRight) var(--pf-c-label--PaddingBottom) var(--pf-c-label--PaddingLeft);
@@ -252,15 +252,13 @@
     }
   }
 
-  &.pf-m-editable {
-    &.pf-m-editable-active {
-      --pf-c-label--BackgroundColor: var(--pf-c-label--m-editable--m-active--BackgroundColor);
-      --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-editable--m-active__content--before--BorderWidth);
-      --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-editable--m-active__content--before--BorderColor);
+  &.pf-m-editable-active {
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-editable--m-editable-active--BackgroundColor);
+    --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-editable--m-editable-active__content--before--BorderWidth);
+    --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-editable--m-editable-active__content--before--BorderColor);
 
-      .pf-c-button {
-        visibility: hidden; // use visibility hidden to retain positioning
-      }
+    .pf-c-button {
+      visibility: hidden; // use visibility hidden to retain positioning
     }
   }
 
