@@ -275,6 +275,8 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-c-popover__content` | `<div>` | Creates the content area of the popover. **Required** |
 | `.pf-c-button` | `<button>` | Positions the close icon in the top-right corner of the popover. **Required** |
 | `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` | Initiates a title. Always use it with a modifier class. See [title component](/documentation/core/components/title) for more info. |
+| `.pf-c-popover__title-icon` | `<span>` | Initiates a container for the popover title icon. |
+| `.pf-c-popover__title-text` | `<span>` | Initiates a container for the popover title text. |
 | `.pf-c-popover__body` | `<div>` | The popover's body text. **Required** |
 | `.pf-c-popover__footer` | `<footer>` | Initiates a popover footer. |
 | `.pf-m-left` | `.pf-c-popover` | Positions the popover to the left of the element. |
