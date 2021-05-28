@@ -275,19 +275,19 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-c-popover__content` | `<div>` | Creates the content area of the popover. **Required** |
 | `.pf-c-button` | `<button>` | Positions the close icon in the top-right corner of the popover. **Required** |
 | `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` | Initiates a title. Always use it with a modifier class. See [title component](/documentation/core/components/title) for more info. |
-| `.pf-c-popover__body` | `<div>` | The popover's body text. **Required**  |
-| `.pf-c-popover__footer`  | `<footer>`                                | Initiates a popover footer.                                                                                                               |
-| `.pf-m-left`             | `.pf-c-popover`                           | Positions the popover to the left of the element.                                                                                         |
-| `.pf-m-right`            | `.pf-c-popover`                           | Positions the popover to the right of the element.                                                                                        |
-| `.pf-m-top`              | `.pf-c-popover`                           | Positions the popover to the top of the element.                                                                                          |
-| `.pf-m-bottom`           | `.pf-c-popover`                           | Positions the popover to the bottom of the element.                                                                                       |
-| `.pf-m-no-padding`       | `.pf-c-popover`                           | Removes the outer padding from the popover content.                                                                                       |
-| `.pf-m-width-auto`       | `.pf-c-popover`                           | Allows popover width to be defined by the popover content.                                                                                |
-| `.pf-m-default`          | `.pf-c-popover`                           | Applies default styling.                                                                                                                  |
-| `.pf-m-success`          | `.pf-c-popover`                           | Applies success styling.                                                                                                                  |
-| `.pf-m-danger`            | `.pf-c-popover`                           | Applies danger styling.                                                                                                                    |
-| `.pf-m-warning`          | `.pf-c-popover`                           | Applies warning styling.                                                                                                                  |
-| `.pf-m-info`             | `.pf-c-popover`                           | Applies info styling.                                                                                                                     |
+| `.pf-c-popover__body` | `<div>` | The popover's body text. **Required** |
+| `.pf-c-popover__footer` | `<footer>` | Initiates a popover footer. |
+| `.pf-m-left` | `.pf-c-popover` | Positions the popover to the left of the element. |
+| `.pf-m-right` | `.pf-c-popover` | Positions the popover to the right of the element. |
+| `.pf-m-top` | `.pf-c-popover` | Positions the popover to the top of the element. |
+| `.pf-m-bottom` | `.pf-c-popover` | Positions the popover to the bottom of the element. |
+| `.pf-m-no-padding` | `.pf-c-popover` | Removes the outer padding from the popover content. |
+| `.pf-m-width-auto` | `.pf-c-popover` | Allows popover width to be defined by the popover content. |
+| `.pf-m-default` | `.pf-c-popover` | Applies default styling. |
+| `.pf-m-success` | `.pf-c-popover` | Applies success styling. |
+| `.pf-m-danger` | `.pf-c-popover` | Applies danger styling. |
+| `.pf-m-warning` | `.pf-c-popover` | Applies warning styling. |
+| `.pf-m-info` | `.pf-c-popover` | Applies info styling. |
 
 ```
 
