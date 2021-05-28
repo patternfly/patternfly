@@ -1,15 +1,20 @@
 .pf-c-popover {
   // Component
   --pf-c-popover--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-popover--MinWidth:
-    calc(
-      var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)}
-    );
-  --pf-c-popover--MaxWidth:
-    calc(
-      var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)}
-    );
+  --pf-c-popover--MinWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
+  --pf-c-popover--MaxWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
+
+  // States
+  --pf-c-popover--m-danger__title-icon--Color: var(--pf-global--danger-color--100);
+  --pf-c-popover--m-warning__title-icon--Color: var(--pf-global--warning-color--100);
+  --pf-c-popover--m-success__title-icon--Color: var(--pf-global--success-color--100);
+  --pf-c-popover--m-info__title-icon--Color: var(--pf-global--info-color--100);
+  --pf-c-popover--m-default__title-icon--Color: var(--pf-global--default-color--200);
+
+  @media (min-width: $pf-global--breakpoint--xl) {
+    --pf-c-popover--m-align-top--spacer: var(--pf-c-popover--m-align-top--xl--spacer);
+  }
 
   // Content
   --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -18,22 +23,29 @@
   --pf-c-popover__content--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-popover__content--PaddingLeft: var(--pf-global--spacer--md);
 
-  // Icon
-  --pf-c-popover__icon--Color: var(--pf-global--default-color--200);
-  --pf-c-popover__icon--MarginTop: #{pf-size-prem(1px)};
-  --pf-c-popover__icon--FontSize: var(--pf-global--icon--FontSize--md);
+  // Title
+  --pf-c-popover__title--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-popover__title--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
+  --pf-c-popover__title--FontSize: var(--pf-global--FontSize--md);
 
-  // Success
-  --pf-c-popover--m-success__icon--Color: var(--pf-global--success-color--100);
+  // Title Default
+  --pf-c-title--m-default__title--Color: var(--pf-global--default-color--200);
 
-  // Error
-  --pf-c-popover--m-error__icon--Color: var(--pf-global--danger-color--100);
+  // Title Success
+  --pf-c-title--m-success__title--Color: var(--pf-global--success-color--200);
 
-  // Warning
-  --pf-c-popover--m-warning__icon--Color: var(--pf-global--warning-color--100);
+  // Title Danger
+  --pf-c-title--m-danger__title--Color: var(--pf-global--danger-color--200);
 
-  // Info
-  --pf-c-popover--m-info__icon--Color: var(--pf-global--info-color--100);
+  // Title Warning
+  --pf-c-title--m-warning__title--Color: var(--pf-global--warning-color--200);
+
+  // Title Info
+  --pf-c-title--m-info__title--Color: var(--pf-global--info-color--200);
+
+  // Title icon
+  --pf-c-popover__title-icon--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-popover__title-icon--Color: var(--pf-global--Color--100);
 
   // Arrow
   --pf-c-popover__arrow--Width: var(--pf-global--arrow--width-lg);
@@ -55,11 +67,7 @@
 
   // Close
   --pf-c-popover--c-button--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-popover--c-button--Top:
-    calc(
-      var(--pf-c-popover__content--PaddingTop) - var(--pf-global--spacer--form-element)
-    ); // align top of button with top of text
-
+  --pf-c-popover--c-button--Top: calc(var(--pf-c-popover__content--PaddingTop) - var(--pf-global--spacer--form-element)); // align top of button with top of text
   --pf-c-popover--c-button--Right: var(--pf-global--spacer--md);
   --pf-c-popover--c-button--sibling--PaddingRight: var(--pf-global--spacer--2xl);
 
@@ -94,9 +102,7 @@
     .pf-c-popover__arrow {
       bottom: 0;
       left: 50%;
-      transform:
-        translateX(var(--pf-c-popover__arrow--m-top--TranslateX))
-        translateY(var(--pf-c-popover__arrow--m-top--TranslateY)) rotate(var(--pf-c-popover__arrow--m-top--Rotate));
+      transform: translateX(var(--pf-c-popover__arrow--m-top--TranslateX)) translateY(var(--pf-c-popover__arrow--m-top--TranslateY)) rotate(var(--pf-c-popover__arrow--m-top--Rotate));
     }
   }
 
@@ -104,10 +110,7 @@
     .pf-c-popover__arrow {
       top: 0;
       left: 50%;
-      transform:
-        translateX(var(--pf-c-popover__arrow--m-bottom--TranslateX))
-        translateY(var(--pf-c-popover__arrow--m-bottom--TranslateY))
-        rotate(var(--pf-c-popover__arrow--m-bottom--Rotate));
+      transform: translateX(var(--pf-c-popover__arrow--m-bottom--TranslateX)) translateY(var(--pf-c-popover__arrow--m-bottom--TranslateY)) rotate(var(--pf-c-popover__arrow--m-bottom--Rotate));
     }
   }
 
@@ -115,9 +118,7 @@
     .pf-c-popover__arrow {
       top: 50%;
       right: 0;
-      transform:
-        translateX(var(--pf-c-popover__arrow--m-left--TranslateX))
-        translateY(var(--pf-c-popover__arrow--m-left--TranslateY)) rotate(var(--pf-c-popover__arrow--m-left--Rotate));
+      transform: translateX(var(--pf-c-popover__arrow--m-left--TranslateX)) translateY(var(--pf-c-popover__arrow--m-left--TranslateY)) rotate(var(--pf-c-popover__arrow--m-left--Rotate));
     }
   }
 
@@ -125,52 +126,74 @@
     .pf-c-popover__arrow {
       top: 50%;
       left: 0;
-      transform:
-        translateX(var(--pf-c-popover__arrow--m-right--TranslateX))
-        translateY(var(--pf-c-popover__arrow--m-right--TranslateY)) rotate(var(--pf-c-popover__arrow--m-right--Rotate));
+      transform: translateX(var(--pf-c-popover__arrow--m-right--TranslateX)) translateY(var(--pf-c-popover__arrow--m-right--TranslateY)) rotate(var(--pf-c-popover__arrow--m-right--Rotate));
     }
   }
 
-  &.pf-m-success {
-    --pf-c-popover__icon--Color: var(--pf-c-popover--m-success__icon--Color);
-
-    .pf-c-title {
-      margin-left: var(--pf-global--spacer--xl);
-    }
+  &.pf-m-icon {
+    display: flex;
   }
 
-  &.pf-m-error {
-    --pf-c-popover__icon--Color: var(--pf-c-popover--m-error__icon--Color);
+  &.pf-m-default {
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-default__title-icon--Color);
+  }
 
-    .pf-c-title {
-      margin-left: var(--pf-global--spacer--xl);
-    }
+  &.pf-m-danger {
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-danger__title-icon--Color);
   }
 
   &.pf-m-warning {
-    --pf-c-popover__icon--Color: var(--pf-c-popover--m-warning__icon--Color);
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-warning__title-icon--Color);
+  }
 
-    .pf-c-title {
-      margin-left: var(--pf-global--spacer--xl);
-    }
+  &.pf-m-success {
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-success__title-icon--Color);
   }
 
   &.pf-m-info {
-    --pf-c-popover__icon--Color: var(--pf-c-popover--m-info__icon--Color);
-
-    .pf-c-title {
-      margin-left: var(--pf-global--spacer--xl);
-    }
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-info__title-icon--Color);
   }
+}
 
-  .pf-c-popover__icon {
-    position: absolute;
-    right: var(--pf-c-popover--c-button--Left);
+.pf-c-popover__title,
+.pf-c-popover__title-text {
+  @include pf-text-overflow;
+}
+
+.pf-c-popover__title {
+  flex: 0 0 auto;
+  font-family: var(--pf-c-popover__title--FontFamily);
+  font-size: var(--pf-c-popover__title--FontSize);
+  line-height: var(--pf-c-popover__title--LineHeight);
+
+  &.pf-m-icon {
     display: flex;
-    margin-top: var(--pf-c-popover__icon--MarginTop);
-    font-size: var(--pf-c-popover__icon--FontSize);
-    color: var(--pf-c-popover__icon--Color);
   }
+
+  &.pf-m-default {
+    color: var(--pf-c-title--m-default__title--Color);
+  }
+
+  &.pf-m-danger {
+    color: var(--pf-c-title--m-danger__title--Color);
+  }
+
+  &.pf-m-warning {
+    color: var(--pf-c-title--m-warning__title--Color);
+  }
+
+  &.pf-m-success {
+    color: var(--pf-c-title--m-success__title--Color);
+  }
+
+  &.pf-m-info {
+    color: var(--pf-c-title--m-info__title--Color);
+  }
+}
+
+.pf-c-popover__title-icon {
+  margin-right: var(--pf-c-popover__title-icon--MarginRight);
+  color: var(--pf-c-popover__title-icon--Color);
 }
 
 .pf-c-popover__content {
