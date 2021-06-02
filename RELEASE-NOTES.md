@@ -3,7 +3,7 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
-## 2021.07 release notes (2021-06-02)
+## 2021.07 release notes (2021-06-04)
 Packages released:
 - [@patternfly/patternfly@v4.108.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.108.1)
 
