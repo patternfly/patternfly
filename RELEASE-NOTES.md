@@ -3,6 +3,40 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2021.07 release notes (2021-06-04)
+Packages released:
+- [@patternfly/patternfly@v4.108.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.108.1)
+
+### Components
+- **Card:** Added variation to remove actions negative margin offset ([#4071](https://github.com/patternfly/patternfly/pull/4071))
+- **Content:** Added support for visited link styling ([#4067](https://github.com/patternfly/patternfly/pull/4067))
+- **Description list:** Removed two duplicate variables ([#4088](https://github.com/patternfly/patternfly/pull/4088))
+- **Drawer:** Added panel min-width/height ([#4091](https://github.com/patternfly/patternfly/pull/4091))
+- **Dropdown:** Added support for aria-disabled items ([#4072](https://github.com/patternfly/patternfly/pull/4072))
+- **Helper text:** Added helper text component ([#4089](https://github.com/patternfly/patternfly/pull/4089))
+- **Label:** Added editable label ([#4097](https://github.com/patternfly/patternfly/pull/4097))
+- **Masthead:** Updated responsive behavior ([#4107](https://github.com/patternfly/patternfly/pull/4107))
+- **Menu:**
+  - Modified scroll behavior ([#4033](https://github.com/patternfly/patternfly/pull/4033))
+  - Added z-index ([#4078](https://github.com/patternfly/patternfly/pull/4078))
+  - Hid scroll on transition ([#4087](https://github.com/patternfly/patternfly/pull/4087))
+  - Removed pf-m-drilldown transition, fixed content height transition ([#4090](https://github.com/patternfly/patternfly/pull/4090))
+  - Disabled pointer events on disabled list item ([#4102](https://github.com/patternfly/patternfly/pull/4102))
+- **Page:**
+  - Added center aligned variation ([#4011](https://github.com/patternfly/patternfly/pull/4011))
+- **Simple list:** Removed bold, removed blue color on hover/focus/active ([#4099](https://github.com/patternfly/patternfly/pull/4099))
+- **Skeleton:** Improved animation performance ([#3967](https://github.com/patternfly/patternfly/pull/3967))
+- **Tree view:** Added support for non-expandable top level nodes ([#4104](https://github.com/patternfly/patternfly/pull/4104))
+- **Wizard:**
+  - Unbolded current wizard nav item ([#4068](https://github.com/patternfly/patternfly/pull/4068))
+  - Fixed expandable nav item toggle rotation/padding issue ([#4112](https://github.com/patternfly/patternfly/pull/4112))
+
+### Other
+- **Layouts:** Added examples using lists ([#4010](https://github.com/patternfly/patternfly/pull/4010))
+- **Demos:** Updated user dropdown in page demos to use plain toggle ([#4070](https://github.com/patternfly/patternfly/pull/4070))
+- **Icons:** Added panel-close and panel-open ([#4074](https://github.com/patternfly/patternfly/pull/4074))
+
+
 ## 2021.06 release notes (2021-05-14)
 Packages released:
 - [@patternfly/patternfly@v4.103.6](https://www.npmjs.com/package/@patternfly/patternfly/v/4.103.6)
