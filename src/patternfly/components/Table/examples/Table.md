@@ -2992,7 +2992,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
-      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{> table-td table-td--IsFavorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <div>
           <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.
@@ -3019,7 +3019,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
-      {{> table-td table-td--favorite="true"}}
+      {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3044,7 +3044,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
-      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{> table-td table-td--IsFavorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3069,7 +3069,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
-      {{> table-td table-td--favorite="true"}}
+      {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3119,7 +3119,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--id="1"}}
-      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{> table-td table-td--IsFavorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <div>
           <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.
@@ -3140,7 +3140,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="3"}}
-      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{> table-td table-td--IsFavorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3159,7 +3159,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="2"}}
-      {{> table-td table-td--favorite="true"}}
+      {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3178,7 +3178,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="4"}}
-      {{> table-td table-td--favorite="true"}}
+      {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3197,7 +3197,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="5"}}
-      {{> table-td table-td--favorite="true"}}
+      {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3232,6 +3232,137 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 | `.pf-c-table__favorite` | `td` | Initiates a favorite table body cell. |
 | `.pf-m-favorited` | `.pf-c-table__favorite` | Modifies a favorite cell for the favorited state. |
 | `.pf-m-favorite` | `.pf-c-table__sort` | Modifies a sortable table header cell for use with a favorites column. |
+
+
+### Draggable rows
+```hbs
+{{#> wrapper table--id="table-draggable-rows"}}
+  <div id="{{table--id}}-help">
+    Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
+  </div>
+  {{#> table table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a table with draggable rows example"'}}
+    {{#> table-caption}}
+      This is the table caption
+    {{/table-caption}}
+    {{#> table-thead}}
+      {{#> table-tr}}
+        {{> table-td table-td--IsEmpty="true"}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Repositories
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Branches
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Pull requests
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Workspaces
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Last commit
+        {{/table-th}}
+      {{/table-tr}}
+    {{/table-thead}}
+
+    {{#> table-tbody}}
+      {{#> table-tr table-tr--id="row-1"}}
+        {{> table-td table-td--IsDraggable="true" table-td--IsDraggableDisabled="true"}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <span id="{{table--id}}-{{table-tr--id}}-node">Draggable icon disabled</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--id="row-2"}}
+        {{> table-td table-td--IsDraggable="true"}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <span id="{{table--id}}-{{table-tr--id}}-node">Table cell</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--id="row-3" table-tr--modifier="pf-m-ghost-row"}}
+        {{> table-td table-td--IsDraggable="true" table-td--IsDraggableDisabled="true"}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <span id="{{table--id}}-{{table-tr--id}}-node">Ghost row</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--id="row-4"}}
+        {{> table-td table-td--IsDraggable="true"}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <span id="{{table--id}}-{{table-tr--id}}-node">Table cell</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
+    {{/table-tbody}}
+  {{/table}}
+  <div class="pf-screen-reader" aria-live="assertive">
+    This is the aria-live section that provides real-time feedback to the user.
+  </div>
+{{/wrapper}}
+```
+
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-pressed="true or false"` | `.pf-c-table__draggable .pf-c-button` | Indicates whether the button is currently pressed or not.  |
+| `aria-live` | `[element with live text]` | To give screen reader users live feedback about what's happening during interaction with the data list, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
+| `aria-describedby="[id value of applicable content]"` | `.pf-c-table__draggable .pf-c-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. The example here uses a `<div id="table-draggable-rows-help"></div>`. **Highly recommended** |
+| `aria-labelledby="[id of .pf-c-table__draggable .pf-c-button] [id of row title text]"` | `.pf-c-table__draggable .pf-c-button` | Provides an accessible name for the draggable button. |
+| `id="[]"` | `.pf-c-data-list__item-draggable-button`, `[element with row title text]` | Gives the button and the text element accessible IDs |
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
+| `.pf-c-table__draggable` | `<caption>` | Initiates a table caption. |
 
 ## Documentation
 
