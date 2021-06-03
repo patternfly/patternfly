@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2021.07 release notes (2021-06-04)
 Packages released:
-- [@patternfly/patternfly@v4.108.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.108.1)
+- [@patternfly/patternfly@v4.108.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.108.2)
 
 ### Components
 - **Card:** Added variation to remove actions negative margin offset ([#4071](https://github.com/patternfly/patternfly/pull/4071))
@@ -24,6 +24,7 @@ Packages released:
   - Disabled pointer events on disabled list item ([#4102](https://github.com/patternfly/patternfly/pull/4102))
 - **Page:**
   - Added center aligned variation ([#4011](https://github.com/patternfly/patternfly/pull/4011))
+- **Select:** Fixed specificity issue with toggle typeahead ([#4126](https://github.com/patternfly/patternfly/pull/4126))
 - **Simple list:** Removed bold, removed blue color on hover/focus/active ([#4099](https://github.com/patternfly/patternfly/pull/4099))
 - **Skeleton:** Improved animation performance ([#3967](https://github.com/patternfly/patternfly/pull/3967))
 - **Tree view:** Added support for non-expandable top level nodes ([#4104](https://github.com/patternfly/patternfly/pull/4104))
