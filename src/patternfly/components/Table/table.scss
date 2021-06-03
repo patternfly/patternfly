@@ -120,8 +120,7 @@
   --pf-c-table__draggable--c-button--MarginLeft: calc(var(--pf-global--spacer--md) * -1);
 
   // Ghost row
-  --pf-c-table__tr--m-ghost-row--before--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-table__tr--m-ghost-row--before--Opacity: .6;
+  --pf-c-table__tr--m-ghost-row--Opacity: .4;
 
   // Action
   --pf-c-table__action--PaddingTop: 0;
@@ -336,17 +335,8 @@
     border-bottom: var(--pf-c-table--border-width--base) solid var(--pf-c-table--BorderColor);
 
     // stylelint-disable-next-line
-    &.pf-m-ghost-row > * {
-      &::before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        content: "";
-        background-color: var(--pf-c-table__tr--m-ghost-row--before--BackgroundColor);
-        opacity: var(--pf-c-table__tr--m-ghost-row--before--Opacity);
-      }
+    &.pf-m-ghost-row {
+      opacity: var(--pf-c-table__tr--m-ghost-row--Opacity);
     }
   }
 
