@@ -111,9 +111,9 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--pf-c-page__sidebar--Width));
 
   // Sticky
-  --pf-c-page--section--m-sticky-top--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page--section--m-sticky-top--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-page--section--m-sticky-top--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
-  --pf-c-page--section--m-sticky-bottom--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page--section--m-sticky-bottom--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-page--section--m-sticky-bottom--BoxShadow: var(--pf-global--BoxShadow--sm-top);
 
   // Shadows
