@@ -21,8 +21,10 @@
   --pf-c-context-selector__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-context-selector__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-context-selector__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
-  --pf-c-context-selector__toggle--m-plain--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__toggle--m-plain--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__toggle--m-plain--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-context-selector__toggle--m-plain--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-context-selector__toggle--m-plain--m-text--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__toggle--m-plain--m-text--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Toggle text
   --pf-c-context-selector__toggle-text--FontSize: var(--pf-global--FontSize--md);
@@ -132,8 +134,9 @@
     --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--PaddingRight);
     --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector__toggle--m-plain--PaddingLeft);
 
+    display: inline-block;
+
     &:not(.pf-m-text) {
-      justify-content: center;
       width: auto;
       color: var(--pf-c-context-selector__toggle--m-plain--Color);
     }
@@ -142,21 +145,12 @@
       border: 0;
     }
 
-    .pf-c-context-selector__toggle-button-icon {
-      line-height: var(--pf-c-context-selector__toggle--LineHeight);
-    }
-
     &:hover,
     &:active,
     &.pf-m-active,
     &:focus,
     .pf-c-context-selector.pf-m-expanded > & {
       --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--hover--Color);
-    }
-
-    &.pf-m-disabled,
-    &:disabled {
-      --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--disabled--Color);
     }
   }
 
