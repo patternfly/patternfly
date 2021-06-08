@@ -10,6 +10,10 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
 
+  // Sticky
+  --pf-c-toolbar--m-sticky-top--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-toolbar--m-sticky-top--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
+
   // Content
   --pf-c-toolbar__content--PaddingRight: var(--pf-global--spacer--md); // remove at breaking change
   --pf-c-toolbar__content--PaddingLeft: var(--pf-global--spacer--md); // remove at breaking change
@@ -111,6 +115,13 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   &.pf-m-page-insets {
     --pf-c-toolbar__content--PaddingRight: var(--pf-c-toolbar--m-page-insets--inset);
     --pf-c-toolbar__content--PaddingLeft: var(--pf-c-toolbar--m-page-insets--inset);
+  }
+
+  &.pf-m-sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: var(--pf-c-toolbar--m-sticky-top--ZIndex);
+    box-shadow: var(--pf-c-toolbar--m-sticky-top--BoxShadow);
   }
 }
 
