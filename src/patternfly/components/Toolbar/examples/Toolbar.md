@@ -647,7 +647,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-c-toolbar__content` | `<div>` | Initiates a toolbar content container. **Required** |
 | `.pf-c-toolbar__content-section` | `<div>` | Initiates a toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-c-toolbar__content-section` per `.pf-c-toolbar__content` **Required** |
 | `.pf-c-toolbar__expandable-content` | `<div>` | Initiates a toolbar expandable content section. |
-| `.pf-m-sticky-top` | `.pf-c-toolbar` | Modifies toolbar element to be sticky to the top of its container. |
+| `.pf-m-sticky-top` | `.pf-c-toolbar` | Modifies toolbar component to be sticky to the top of its container. |
 | `.pf-m-expanded` | `.pf-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-bulk-select` | `.pf-c-toolbar__item` | Initiates bulk select spacing. |
 | `.pf-m-overflow-menu` | `.pf-c-toolbar__item` | Initiates overflow menu spacing. |
