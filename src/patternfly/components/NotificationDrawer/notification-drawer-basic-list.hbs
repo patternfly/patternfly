@@ -3,7 +3,12 @@
     {{#> notification-drawer-list-item-header}}
       {{> notification-drawer-list-item-header-icon}}
       {{#> notification-drawer-list-item-header-title}}
-        Unread info notification title
+        {{#if notification-drawer-basic-list--AllRead}}
+          Read
+        {{else}}
+          Unread
+        {{/if}}
+         info notification title
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}
@@ -16,28 +21,60 @@
       5 minutes ago
     {{/notification-drawer-list-item-timestamp}}
   {{/notification-drawer-list-item}}
-  {{#> notification-drawer-list-item notification-drawer-list-item--IsDanger="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
-    {{#> notification-drawer-list-item-header}}
-      {{> notification-drawer-list-item-header-icon}}
-      {{#> notification-drawer-list-item-header-title}}
-        Unread danger notification title. This is a long title to show how the title will wrap if it is long and wraps to multiple lines.
-      {{/notification-drawer-list-item-header-title}}
-    {{/notification-drawer-list-item-header}}
-    {{#> notification-drawer-list-item-action}}
-      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-2') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
-    {{/notification-drawer-list-item-action}}
-    {{#> notification-drawer-list-item-description}}
-      This is a danger notification description. This is a long description to show how the title will wrap if it is long and wraps to multiple lines.
-    {{/notification-drawer-list-item-description}}
-    {{#> notification-drawer-list-item-timestamp}}
-      10 minutes ago
-    {{/notification-drawer-list-item-timestamp}}
-  {{/notification-drawer-list-item}}
+
+  {{#if notification-drawer-basic-list--IsAttention}}
+    {{#> notification-drawer-list-item notification-drawer-list-item--IsDanger="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
+      {{#> notification-drawer-list-item-header}}
+        {{> notification-drawer-list-item-header-icon}}
+        {{#> notification-drawer-list-item-header-title}}
+          Unread danger notification title. This is a long title to show how the title will wrap if it is long and wraps to multiple lines.
+        {{/notification-drawer-list-item-header-title}}
+      {{/notification-drawer-list-item-header}}
+      {{#> notification-drawer-list-item-action}}
+        {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-2') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
+      {{/notification-drawer-list-item-action}}
+      {{#> notification-drawer-list-item-description}}
+        This is a danger notification description. This is a long description to show how the title will wrap if it is long and wraps to multiple lines.
+      {{/notification-drawer-list-item-description}}
+      {{#> notification-drawer-list-item-timestamp}}
+        10 minutes ago
+      {{/notification-drawer-list-item-timestamp}}
+    {{/notification-drawer-list-item}}
+  {{else}}
+    {{#> notification-drawer-list-item notification-drawer-list-item--IsDefault="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
+      {{#> notification-drawer-list-item-header}}
+        {{> notification-drawer-list-item-header-icon}}
+        {{#> notification-drawer-list-item-header-title}}
+          {{#if notification-drawer-basic-list--AllRead}}
+            Read
+          {{else}}
+            Unread
+          {{/if}}
+          recommendation notification title. This is a long title to show how the title will wrap if it is long and wraps to multiple lines.
+        {{/notification-drawer-list-item-header-title}}
+      {{/notification-drawer-list-item-header}}
+      {{#> notification-drawer-list-item-action}}
+        {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-2') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
+      {{/notification-drawer-list-item-action}}
+      {{#> notification-drawer-list-item-description}}
+        This is a recommendation notification description. This is a long description to show how the title will wrap if it is long and wraps to multiple lines.
+      {{/notification-drawer-list-item-description}}
+      {{#> notification-drawer-list-item-timestamp}}
+        10 minutes ago
+      {{/notification-drawer-list-item-timestamp}}
+    {{/notification-drawer-list-item}}
+  {{/if}}
+
   {{#> notification-drawer-list-item notification-drawer-list-item--IsDefault="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
     {{#> notification-drawer-list-item-header}}
       {{> notification-drawer-list-item-header-icon}}
       {{#> notification-drawer-list-item-header-title}}
-        Unread recommendation notification title. This is a long title to show how the title will wrap if it is long and wraps to multiple lines.
+        {{#if notification-drawer-basic-list--AllRead}}
+          Read
+        {{else}}
+          Unread
+        {{/if}}
+         recommendation notification title. This is a long title to show how the title will wrap if it is long and wraps to multiple lines.
       {{/notification-drawer-list-item-header-title}}
     {{/notification-drawer-list-item-header}}
     {{#> notification-drawer-list-item-action}}

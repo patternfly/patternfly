@@ -4,7 +4,11 @@
       Notifications
     {{/notification-drawer-header-title}}
     {{#> notification-drawer-header-status}}
-      2 unread
+      {{#if notification-drawer-basic-list--AllRead}}
+        0 unread
+      {{else}}
+        3 unread
+    {{/if}}
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
       {{> dropdown dropdown--id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
