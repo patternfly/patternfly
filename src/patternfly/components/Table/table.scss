@@ -842,6 +842,12 @@
 .pf-c-table__draggable {
   .pf-c-button {
     margin: var(--pf-c-table__draggable--c-button--MarginTop) var(--pf-c-table__draggable--c-button--MarginRight) var(--pf-c-table__draggable--c-button--MarginBottom) var(--pf-c-table__draggable--c-button--MarginLeft);
+    cursor: grab;        
+    
+    &:active {      
+      cursor: grabbing;    
+    }  
+  }    
   }
 }
 
