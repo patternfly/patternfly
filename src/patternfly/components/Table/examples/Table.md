@@ -3361,8 +3361,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
-| `.pf-c-table__draggable` | `<caption>` | Initiates a table caption. |
+| `.pf-c-table__draggable` | `<td>` | Initiates a draggable table cell. |
 
 ## Documentation
 
