@@ -131,14 +131,21 @@
   }
 
   &.pf-m-plain {
-    --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--PaddingRight);
-    --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector__toggle--m-plain--PaddingLeft);
-
-    display: inline-block;
+    --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--m-text--PaddingRight);
+    --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector__toggle--m-plain--m-text--PaddingLeft);
 
     &:not(.pf-m-text) {
+      --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--PaddingRight);
+      --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector__toggle--m-plain--PaddingLeft);
+
+      display: inline-block;
       width: auto;
       color: var(--pf-c-context-selector__toggle--m-plain--Color);
+
+      &.pf-m-disabled,
+      &:disabled {
+        --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--disabled--Color);
+      }
     }
 
     &::before {
@@ -152,11 +159,6 @@
     .pf-c-context-selector.pf-m-expanded > & {
       --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--hover--Color);
     }
-  }
-
-  .pf-c-context-selector__toggle-icon {
-    margin-right: var(--pf-c-context-selector__toggle-icon--MarginRight);
-    margin-left: var(--pf-c-context-selector__toggle-icon--MarginLeft);
   }
 
   .pf-c-context-selector__toggle-text {
@@ -175,10 +177,6 @@
 .pf-c-context-selector__toggle-icon {
   margin-right: var(--pf-c-context-selector__toggle-icon--MarginRight);
   margin-left: var(--pf-c-context-selector__toggle-icon--MarginLeft);
-
-  .pf-c-context-selector.pf-m-top.pf-m-expanded & {
-    transform: rotate(var(--pf-c-context-selector--m-top--m-expanded__toggle-icon--Rotate));
-  }
 }
 
 .pf-c-context-selector__menu {
@@ -191,15 +189,6 @@
   background-color: var(--pf-c-context-selector__menu--BackgroundColor);
   background-clip: padding-box;
   box-shadow: var(--pf-c-context-selector__menu--BoxShadow);
-}
-
-.pf-c-context-selector__menu-item-icon {
-  align-self: center;
-  width: auto; // this allows the padding to apply when this class is used with an svg element
-  padding-left: var(--pf-c-context-selector__menu-item-icon--PaddingLeft);
-  margin-left: auto;
-  font-size: var(--pf-c-context-selector__menu-item-icon--FontSize);
-  color: var(--pf-c-context-selector__menu-item-icon--Color);
 }
 
 .pf-c-context-selector__menu-search {
