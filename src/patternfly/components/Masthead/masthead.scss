@@ -158,6 +158,34 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --pf-c-masthead__main--BorderBottomColor: var(--pf-c-masthead--m-light-200__main--BorderBottomColor);
   }
 
+  .pf-c-toolbar {
+    --pf-c-toolbar--PaddingTop: var(--pf-c-masthead--c-toolbar--PaddingTop);
+    --pf-c-toolbar--PaddingBottom: var(--pf-c-masthead--c-toolbar--PaddingBottom);
+
+    width: 100%;
+  }
+
+  .pf-c-toolbar__content-section {
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  .pf-c-toolbar__group,
+  .pf-c-toolbar__item {
+    min-width: 0;
+  }
+
+  .pf-c-toolbar,
+  .pf-c-toolbar__group,
+  .pf-c-toolbar__item {
+    align-self: stretch;
+  }
+
+  .pf-c-toolbar__item {
+    display: flex;
+    align-items: center;
+  }
+
   .pf-c-dropdown__toggle {
     --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--c-dropdown__toggle--BorderTopColor);
     --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown__toggle--BorderRightColor);
