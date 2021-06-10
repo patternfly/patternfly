@@ -77,18 +77,28 @@
   --pf-c-context-selector__menu-item-icon--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-context-selector__menu-item-icon--PaddingLeft: var(--pf-global--spacer--lg);
 
+  // Full height
+  --pf-c-context-selector--m-full-height__toggle--before--BorderTopWidth: 0;
+  --pf-c-context-selector--m-full-height__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+
   position: relative;
   display: inline-block;
   width: var(--pf-c-context-selector--Width);
   max-width: 100%;
 
   &.pf-m-full-height {
+    --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-c-context-selector--m-full-height__toggle--expanded--BorderBottomWidth);
+
     display: flex;
     align-items: center;
     height: 100%;
 
     .pf-c-context-selector__toggle {
       align-self: stretch;
+
+      &::before {
+        border-top-width: var(--pf-c-context-selector--m-full-height__toggle--before--BorderTopWidth);
+      }
     }
   }
 }

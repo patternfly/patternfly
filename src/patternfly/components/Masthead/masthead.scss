@@ -109,6 +109,14 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--m-light-200--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-masthead--m-light-200__main--BorderBottomColor: var(--pf-global--BorderColor--100);
 
+  // Context selector
+  --pf-c-masthead--c-context-selector__toggle--BorderRightColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-context-selector__toggle--BorderLeftColor: var(--pf-global--palette--black-700);
+
+  // Dropdown
+  --pf-c-masthead--c-context-selector__toggle--BorderRightColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-context-selector__toggle--BorderLeftColor: var(--pf-global--palette--black-700);
+
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
   }

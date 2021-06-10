@@ -184,5 +184,4 @@ import './context-selector.css'
 | `.pf-m-active` | `.pf-c-context-selector__toggle` | Forces display of the active state of the toggle. |
 | `.pf-m-plain.pf-m-text` | `.pf-c-context-selector__toggle` | Modifies the context selector toggle for plain text styles. |
 | `.pf-m-disabled` | `a.pf-c-context-selector__menu-list-item` | Modifies an item for the disabled state.|
-| `.pf-m-full-height` | `.pf-c-context-selector` | Modifies a context selector to full height of parent. See toolbar for use. |
-
+| `.pf-m-full-height` | `.pf-c-context-selector` | Modifies a context selector to full height of parent. See masthead for use. |

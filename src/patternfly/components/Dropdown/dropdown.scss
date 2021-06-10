@@ -126,6 +126,10 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown--m-top--c-menu--Top: 0;
   --pf-c-dropdown--m-top--c-menu--TranslateY: calc(-100% - var(--pf-global--spacer--xs)); // The "dropup" menu must be transformed up and this calculates how much to create space between the toggle and menu
 
+  // Dropdown
+  --pf-c-dropdown--m-full-height__toggle--before--BorderTopWidth: 0;
+  --pf-c-dropdown--m-full-height__toggle--expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -147,12 +151,18 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &.pf-m-full-height {
+    --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: var(--pf-c-dropdown--m-full-height__toggle--expanded--before--BorderBottomWidth);
+
     display: flex;
     align-items: center;
     height: 100%;
 
     .pf-c-dropdown__toggle {
       align-self: stretch;
+
+      &::before {
+        border-top: var(--pf-c-dropdown--m-full-height__toggle--before--BorderTopWidth);
+      }
     }
   }
 }
