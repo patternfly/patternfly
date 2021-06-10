@@ -27,6 +27,64 @@ cssPrefix: pf-c-expandable-section
 {{/expandable-section}}
 ```
 
+### Disclosure variation (hidden)
+
+```hbs
+{{#> expandable-section expandable-section--IsDisplayLg="true"}}
+  {{#> expandable-section-toggle}}
+  {{/expandable-section-toggle}}
+  {{#> expandable-section-content}}
+    {{#> stack stack--modifier="pf-m-gutter"}}
+      {{#> stack-item}}
+        {{#> title titleType="h1" title--modifier="pf-m-xl"}}
+          Heading
+        {{/title}}
+      {{/stack-item}}
+      {{#> stack-item}}
+        Content
+      {{/stack-item}}
+      {{#> stack-item}}
+        {{#> button button--modifier="pf-m-link pf-m-inline pf-m-display-lg"}}
+          Call to action
+          {{#> button-icon button-icon--modifier="pf-m-end"}}
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          {{/button-icon}}
+        {{/button}}
+      {{/stack-item}}
+    {{/stack}}
+  {{/expandable-section-content}}
+{{/expandable-section}}
+```
+
+### Disclosure variation (expanded)
+
+```hbs
+{{#> expandable-section expandable-section--IsDisplayLg="true" expandable-section--IsExpanded="true"}}
+  {{#> expandable-section-toggle}}
+  {{/expandable-section-toggle}}
+  {{#> expandable-section-content}}
+    {{#> stack stack--modifier="pf-m-gutter"}}
+      {{#> stack-item}}
+        {{#> title titleType="h1" title--modifier="pf-m-xl"}}
+          Heading
+        {{/title}}
+      {{/stack-item}}
+      {{#> stack-item}}
+        Content
+      {{/stack-item}}
+      {{#> stack-item}}
+        {{#> button button--modifier="pf-m-link pf-m-inline pf-m-display-lg"}}
+          Call to action
+          {{#> button-icon button-icon--modifier="pf-m-end"}}
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          {{/button-icon}}
+        {{/button}}
+      {{/stack-item}}
+    {{/stack}}
+  {{/expandable-section-content}}
+{{/expandable-section}}
+```
+
 ### Detached toggle
 ```hbs
 {{#> stack stack--modifier="pf-m-gutter" expandable-section--id="detached-toggle" expandable-section--IsDetached="true" expandable-section--IsExpanded="true"}}
@@ -67,6 +125,7 @@ cssPrefix: pf-c-expandable-section
 | `.pf-c-expandable-section__toggle-icon` | `<span>` | Initiates the expandable toggle icon. **Required** |
 | `.pf-c-expandable-section__content` | `<div>` | Initiates the expandable section content. **Required** |
 | `.pf-m-expanded` | `.pf-c-expandable-section` | Modifies the component for the expanded state. |
+| `.pf-m-display-lg` | `.pf-c-expandable-section` | Modifies the styling of the component to have large display styling. |
 | `.pf-m-detached` | `.pf-c-expandable-section` | Indicates that the expandable section toggle and content are detached from one another, so you can move them around independently in the markup. |
 | `.pf-m-active` | `.pf-c-expandable-section__toggle` | Forces display of the active state of the toggle. |
 | `.pf-m-expand-top` | `.pf-c-expandable-section__toggle-icon` | Modifies the toggle icon to point up when expanded. |
