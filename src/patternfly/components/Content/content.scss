@@ -114,7 +114,7 @@
   &.pf-m-visited a,
   a.pf-m-visited {
     &:visited {
-      --pf-c-content--a--Color: var(--pf-c-content--a--visited--Color);
+      color: var(--pf-c-content--a--visited--Color);
     }
   }
   // stylelint-enable

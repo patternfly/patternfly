@@ -64,7 +64,9 @@ cssPrefix: pf-c-content
   <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
 <hr>
 <h3>Visited link example</h3>
-<a class="pf-m-visited" href="#">Visited link</a>
+<p>
+  <a class="pf-m-visited" href>Visited link</a>
+</p>
 <hr>
 <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum
   commodo.
