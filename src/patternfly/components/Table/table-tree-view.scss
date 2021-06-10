@@ -127,7 +127,7 @@ $pf-c-tree-view--MaxDepth: 10;
   --pf-c-table--m-tree-view-grid--m-tree-view-details-expanded--PaddingBottom: var(--pf-global--spacer--xl);
 
   // node cells
-  --pf-c-table--m-tree-view-grid--tbody--node--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-table--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-table--m-tree-view-grid--td--data-label--GridTemplateColumns: repeat(auto-fit, minmax(150px, 1fr));
   --pf-c-table--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-table--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom: var(--pf-global--spacer--xs);
@@ -175,7 +175,7 @@ $pf-c-tree-view--MaxDepth: 10;
   // target node rows
   tr[aria-expanded] {
     .pf-c-table__tree-view-title-cell {
-      --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-tree-view-grid--tbody--node--PaddingTop);
+      --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingTop);
     }
 
     .pf-c-table__tree-view-title-cell ~ .pf-c-table__action {
