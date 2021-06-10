@@ -131,13 +131,15 @@
   }
 
   &.pf-m-plain {
-    --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--m-text--PaddingRight);
-    --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector__toggle--m-plain--m-text--PaddingLeft);
+    --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--PaddingRight);
+    --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector__toggle--m-plain--PaddingLeft);
+
+    &.pf-m-text {
+      --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--m-text--PaddingRight);
+      --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector__toggle--m-plain--m-text--PaddingLeft);
+    }
 
     &:not(.pf-m-text) {
-      --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--PaddingRight);
-      --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector__toggle--m-plain--PaddingLeft);
-
       display: inline-block;
       width: auto;
       color: var(--pf-c-context-selector__toggle--m-plain--Color);
@@ -146,18 +148,18 @@
       &:disabled {
         --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--disabled--Color);
       }
+
+      &:hover,
+      &:active,
+      &.pf-m-active,
+      &:focus,
+      .pf-c-context-selector.pf-m-expanded > & {
+        --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--hover--Color);
+      }
     }
 
     &::before {
       border: 0;
-    }
-
-    &:hover,
-    &:active,
-    &.pf-m-active,
-    &:focus,
-    .pf-c-context-selector.pf-m-expanded > & {
-      --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--hover--Color);
     }
   }
 
@@ -168,10 +170,6 @@
     font-weight: var(--pf-c-context-selector__toggle-text--FontWeight);
     line-height: var(--pf-c-context-selector__toggle-text--LineHeight);
   }
-}
-
-.pf-c-context-selector__toggle-button-icon {
-  position: relative;
 }
 
 .pf-c-context-selector__toggle-icon {
