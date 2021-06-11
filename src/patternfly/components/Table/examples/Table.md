@@ -1504,17 +1504,17 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 ### Tree table
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-basic" table--modifier="pf-m-tree-view-grid-lg" table--attribute='aria-label="This is a simple tree table example"'}}
+{{> table-tree-view--basic table--id="tree-table-basic-example" table--modifier="pf-m-tree-view-grid-lg" table--attribute='aria-label="This is a simple tree table example"' table-tree-view--basic--HasActions="true"}}
 ```
 
 ### Tree table with checkboxes
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-with-checkboxes" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"'}}
+{{> table-tree-view--basic table--id="tree-table-with-checkboxes-example" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"' table-tr--tree--HasActions="true"}}
 ```
 
 ### Tree table with checkboxes, icons
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"'}}
+{{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons-example" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"' table-tr--tree--HasActions="true"}}
 ```
 
 ### Accessibility
@@ -3361,8 +3361,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
-| `.pf-c-table__draggable` | `<caption>` | Initiates a table caption. |
+| `.pf-c-table__draggable` | `<td>` | Initiates a draggable table cell. |
 
 ## Documentation
 
