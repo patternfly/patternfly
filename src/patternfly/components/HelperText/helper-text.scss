@@ -11,8 +11,8 @@
   --pf-c-helper-text__item-text--m-warning--Color: var(--pf-global--warning-color--200);
   --pf-c-helper-text__item-icon--m-success--Color: var(--pf-global--success-color--100);
   --pf-c-helper-text__item-text--m-success--Color: var(--pf-global--success-color--200);
-  --pf-c-helper-text__item-icon--m-invalid--Color: var(--pf-global--danger-color--100);
-  --pf-c-helper-text__item-text--m-invalid--Color: var(--pf-global--danger-color--200);
+  --pf-c-helper-text__item-icon--m-error--Color: var(--pf-global--danger-color--100);
+  --pf-c-helper-text__item-text--m-error--Color: var(--pf-global--danger-color--200);
 
   // dynamic
   --pf-c-helper-text--m-dynamic__item-icon--Color: var(--pf-global--Color--100);
@@ -23,8 +23,8 @@
   --pf-c-helper-text--m-dynamic--m-warning__item-text--Color: var(--pf-global--Color--200);
   --pf-c-helper-text--m-dynamic--m-success__item-icon--Color: var(--pf-global--success-color--100);
   --pf-c-helper-text--m-dynamic--m-success__item-text--Color: var(--pf-global--Color--200);
-  --pf-c-helper-text--m-dynamic--m-invalid__item-icon--Color: var(--pf-global--danger-color--100);
-  --pf-c-helper-text--m-dynamic--m-invalid__item-text--Color: var(--pf-global--Color--100);
+  --pf-c-helper-text--m-dynamic--m-error__item-icon--Color: var(--pf-global--danger-color--100);
+  --pf-c-helper-text--m-dynamic--m-error__item-text--Color: var(--pf-global--Color--100);
 
   // icon
   --pf-c-helper-text__item-icon--MarginRight: var(--pf-global--spacer--xs);
@@ -60,11 +60,11 @@
     --pf-c-helper-text--m-dynamic__item-text--Color: var(--pf-c-helper-text--m-dynamic--m-success__item-text--Color);
   }
 
-  &.pf-m-invalid {
-    --pf-c-helper-text__item-icon--Color: var(--pf-c-helper-text__item-icon--m-invalid--Color);
-    --pf-c-helper-text__item-text--Color: var(--pf-c-helper-text__item-text--m-invalid--Color);
-    --pf-c-helper-text--m-dynamic__item-icon--Color: var(--pf-c-helper-text--m-dynamic--m-invalid__item-icon--Color);
-    --pf-c-helper-text--m-dynamic__item-text--Color: var(--pf-c-helper-text--m-dynamic--m-invalid__item-text--Color);
+  &.pf-m-error {
+    --pf-c-helper-text__item-icon--Color: var(--pf-c-helper-text__item-icon--m-error--Color);
+    --pf-c-helper-text__item-text--Color: var(--pf-c-helper-text__item-text--m-error--Color);
+    --pf-c-helper-text--m-dynamic__item-icon--Color: var(--pf-c-helper-text--m-dynamic--m-error__item-icon--Color);
+    --pf-c-helper-text--m-dynamic__item-text--Color: var(--pf-c-helper-text--m-dynamic--m-error__item-text--Color);
   }
 
   &.pf-m-dynamic {

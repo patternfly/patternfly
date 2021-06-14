@@ -33,8 +33,8 @@ cssPrefix: pf-c-helper-text
 {{/helper-text}}
 
 {{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-invalid"}}
-    {{#> helper-text-item-text}}This is invalid helper text{{/helper-text-item-text}}
+  {{#> helper-text-item helper-text-item--modifier="pf-m-error"}}
+    {{#> helper-text-item-text}}This is error helper text{{/helper-text-item-text}}
   {{/helper-text-item}}
 {{/helper-text}}
 ```
@@ -70,9 +70,9 @@ cssPrefix: pf-c-helper-text
 {{/helper-text}}
 
 {{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-invalid"}}
+  {{#> helper-text-item helper-text-item--modifier="pf-m-error"}}
     {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
-    {{#> helper-text-item-text}}This is invalid helper text{{/helper-text-item-text}}
+    {{#> helper-text-item-text}}This is error helper text{{/helper-text-item-text}}
   {{/helper-text-item}}
 {{/helper-text}}
 ```
@@ -123,9 +123,9 @@ cssPrefix: pf-c-helper-text
 {{/helper-text}}
 
 {{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-invalid"}}
+  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-error"}}
     {{> helper-text-item-icon helper-text-item-icon--type="times"}}
-    {{#> helper-text-item-text}}This is invalid helper text{{/helper-text-item-text}}
+    {{#> helper-text-item-text}}This is error helper text{{/helper-text-item-text}}
   {{/helper-text-item}}
 {{/helper-text}}
 ```
@@ -137,7 +137,7 @@ cssPrefix: pf-c-helper-text
     {{> helper-text-item-icon helper-text-item-icon--type="check"}}
     {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
   {{/helper-text-item}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-invalid"}}
+  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-error"}}
     {{> helper-text-item-icon helper-text-item-icon--type="times"}}
     {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
   {{/helper-text-item}}
@@ -159,4 +159,4 @@ cssPrefix: pf-c-helper-text
 | `.pf-m-indeterminate` | `.pf-c-helper-text__item` |  Modifies a helper text item for indeterminate state styles. |
 | `.pf-m-warning` | `.pf-c-helper-text__item` |  Modifies a helper text item for warning state styles. |
 | `.pf-m-success` | `.pf-c-helper-text__item` |  Modifies a helper text item for success state styles. |
-| `.pf-m-invalid` | `.pf-c-helper-text__item` |  Modifies a helper text item for invalid state styles. |
+| `.pf-m-error` | `.pf-c-helper-text__item` |  Modifies a helper text item for error state styles. |
