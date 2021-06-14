@@ -10,7 +10,6 @@ import './LogViewer.css';
 ## Examples
 
 ### Basic
-
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-basic-example" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"'}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
@@ -19,7 +18,6 @@ import './LogViewer.css';
 ```
 
 ### With line numbers
-
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-line-number-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"'}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
@@ -28,7 +26,6 @@ import './LogViewer.css';
 ```
 
 ### With text wrapping
-
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-text-wrap-example" log-viewer--HasLineNumbers="true" log-viewer--TextWraps="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"'}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
@@ -37,7 +34,6 @@ import './LogViewer.css';
 ```
 
 ### With search results
-
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-search-results-example" log-viewer--HasLineNumbers="true" log-viewer--IsMatch="true" log-viewer--IsCurrent="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px;"'}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
@@ -46,7 +42,6 @@ import './LogViewer.css';
 ```
 
 ### With max height
-
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-max-height-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px; --pf-c-log-viewer--MaxHeight: 300px;"'}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
@@ -55,7 +50,6 @@ import './LogViewer.css';
 ```
 
 ### With dropdown, drilldown, search expanded
-
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-dropdowns-expanded-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"'}}
   {{> __log-viewer-toolbar dropdown--IsExpanded="true"}}
@@ -64,7 +58,6 @@ import './LogViewer.css';
 ```
 
 ### With popover open
-
 ```hbs
 {{#> log-viewer log-viewer--id="log-viewer-popover-expanded-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"'}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
@@ -91,6 +84,14 @@ import './LogViewer.css';
     {{/popover-footer}}
   {{/popover-content}}
 {{/popover}}
+```
+
+### Dark
+```hbs
+{{#> log-viewer log-viewer--id="log-viewer-line-number-example" log-viewer--modifier="pf-m-dark" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"'}}
+  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-main}}
+{{/log-viewer}}
 ```
 
 ## Documentation
@@ -120,6 +121,7 @@ import './LogViewer.css';
 | `.pf-c-log-viewer__timestamp` | `<div>` | Initiates a log viewer text element. **Required** |
 | `.pf-m-wrap-text` | `.pf-c-log-viewer` | Modifies the log viewer text to wrap. |
 | `.pf-m-line-numbers` | `.pf-c-log-viewer` | Modifies the log viewer to display line numbers. |
+| `.pf-m-dark` | `.pf-c-log-viewer` | Modifies the log viewer content for dark theme. |
 | `.pf-m-match` | `.pf-c-log-viewer__list-item` | Indicates a list item is a search result. |
 | `.pf-m-current` | `.pf-c-log-viewer__list-item` | Indicates a list item is the current search result. |
 | `--pf-c-log-viewer--MaxHeight{-on-[breakpoint]}: {height}` | `.pf-c-log-viewer` |  Modifies the height value of a log viewer. |
