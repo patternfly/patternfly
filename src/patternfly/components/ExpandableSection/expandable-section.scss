@@ -23,7 +23,7 @@
 
   // Content
   --pf-c-expandable-section__content--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-expandable-section__content--MaxWidth: inherit;
+  --pf-c-expandable-section__content--MaxWidth: auto;
 
   // Large
   --pf-c-expandable-section--m-display-lg--BoxShadow: var(--pf-global--BoxShadow--md);
@@ -37,7 +37,6 @@
   --pf-c-expandable-section--m-display-lg__content--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-expandable-section--m-display-lg__content--MaxWidth: var(--pf-global--breakpoint--md);
   --pf-c-expandable-section--m-display-lg--after--BackgroundColor: transparent;
-  --pf-c-expandable-section--m-display-lg--after--Top: 0;
   --pf-c-expandable-section--m-display-lg--after--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-expandable-section--m-display-lg--m-expanded--after--BackgroundColor: var(--pf-global--primary-color--100);
 
@@ -115,7 +114,6 @@
 
 .pf-c-expandable-section__content {
   max-width: var(--pf-c-expandable-section__content--MaxWidth);
-  padding-top: var(--pf-c-expandable-section__content--PaddingTop);
   padding-right: var(--pf-c-expandable-section__content--PaddingRight);
   padding-bottom: var(--pf-c-expandable-section__content--PaddingBottom);
   padding-left: var(--pf-c-expandable-section__content--PaddingLeft);
