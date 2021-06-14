@@ -145,3 +145,70 @@ import './Sizing.css'
 ## Documentation
 ### Usage
 These utilities are not recommended for general layout purposes. They should primarily be used to enable responsive behaviors of certain components through breakpoints.
+
+### Min width
+```hbs
+{{#> sizing-min-max sizing-min-max--modifier="pf-u-min-width" sizing-min-max--attribute='style="--pf-u-min-width--MinWidth: 50ch;"'}}
+    Min-width 50ch example
+{{/sizing-min-max}}
+```
+
+### Max width
+```hbs
+{{#> sizing-min-max sizing-min-max--modifier="pf-u-max-width" sizing-min-max--attribute='style="--pf-u-max-width--MaxWidth: 50ch;"'}}
+  Max-width 50ch example
+{{/sizing-min-max}}
+```
+
+### Min and max width
+```hbs
+{{#> sizing-min-max sizing-min-max--modifier="pf-u-min-width pf-u-max-width" sizing-min-max--attribute='style="--pf-u-min-width--MinWidth: 30ch; --pf-u-max-width--MaxWidth: 50ch;"'}}
+  Min-width 30ch, max-width 50ch example
+{{/sizing-min-max}}
+```
+
+### Responsive width control
+```hbs
+{{#> sizing-min-max sizing-min-max--modifier="pf-u-min-width pf-u-max-width" sizing-min-max--attribute='style="--pf-u-min-width--MinWidth: 20ch; --pf-u-max-width--MaxWidth: 30ch; --pf-u-max-width--MaxWidth-on-md: 50ch; --pf-u-max-width--MaxWidth-on-xl: 70ch;"'}}
+  Min-width 20ch, max-width 30ch, max-width-on-md 50ch, max-width-on-xl 70ch example
+{{/sizing-min-max}}
+```
+
+### Min height
+```hbs
+{{#> sizing-min-max sizing-min-max--modifier="pf-u-min-height" sizing-min-max--attribute='style="--pf-u-min-height--MinHeight: 50ch;"'}}
+  Min-height 50ch example
+{{/sizing-min-max}}
+```
+
+### Max height
+```hbs
+{{#> sizing-min-max sizing-min-max--modifier="pf-u-max-height" sizing-min-max--attribute='style="--pf-u-max-height--MaxHeight: 50ch;"'}}
+  Max-height 50ch example
+{{/sizing-min-max}}
+```
+
+### Min and max height
+```hbs
+{{#> sizing-min-max sizing-min-max--modifier="pf-u-min-height pf-u-max-height" sizing-min-max--attribute='style="--pf-u-min-height--MinHeight: 30ch; --pf-u-max-height--MaxHeight: 50ch;"'}}
+  Min-height 30ch, max-height 50ch example
+{{/sizing-min-max}}
+```
+
+### Responsive height control
+```hbs
+{{#> sizing-min-max sizing-min-max--modifier="pf-u-min-height pf-u-max-height" sizing-min-max--attribute='style="--pf-u-min-height--MinHeight: 20ch; --pf-u-max-height--MaxHeight: 30ch; --pf-u-max-height--MaxHeight-on-md: 50ch; --pf-u-max-height--MaxHeight-on-xl: 70ch;"'}}
+  Min-height 20ch, max-height 30ch, max-height-on-md 50ch, max-height-on-xl 70ch example
+{{/sizing-min-max}}
+```
+
+## Documentation
+
+### Usage
+
+| Class                                                       | Applied to            | Outcome                       |
+| ----------------------------------------------------------- | --------------------- | ----------------------------- |
+| `--pf-u-min-width--MinWidth{-on-[breakpoint]}: {width}` | `.pf-u-min-width` | Modifies the min width value. |
+| `--pf-u-max-width--MaxWidth{-on-[breakpoint]}: {width}` | `.pf-u-max-width` | Modifies the max width value. |
+| `--pf-u-min-height--MinHeight{-on-[breakpoint]}: {height}` | `.pf-u-min-height` | Modifies the min height value. |
+| `--pf-u-max-height--MaxHeight{-on-[breakpoint]}: {height}` | `.pf-u-max-height` | Modifies the max height value. |
