@@ -53,6 +53,53 @@ import './context-selector.css'
 {{/context-selector}}
 ```
 
+### Plain with text
+```hbs
+{{#> context-selector context-selector--id="context-selector-plain-with-text-collapsed-example" context-selector--label-text="Selected project" context-selector-toggle--IsPlain="true" context-selector-toggle--IsText="true"}}
+  {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
+    {{#> context-selector-toggle-text}}
+      My project
+    {{/context-selector-toggle-text}}
+    {{#> context-selector-toggle-icon}}
+    {{/context-selector-toggle-icon}}
+  {{/context-selector-toggle}}
+  {{#> context-selector-menu}}
+    {{#> context-selector-menu-search}}
+      {{#> input-group}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search"' 'placeholder="Search"' 'id="textInput1"' 'name="textInput1"' 'aria-labelledby="' context-selector--id '-search-button"')}}
+        {{/form-control}}
+        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' context-selector--id '-search-button"' 'aria-label="Search menu items"')}}
+          <i class="fas fa-search" aria-hidden="true"></i>
+        {{/button}}
+      {{/input-group}}
+    {{/context-selector-menu-search}}
+    {{> __context-selector-menu-menu}}
+  {{/context-selector-menu}}
+{{/context-selector}}
+
+{{#> context-selector context-selector--id="context-selector-plain-with-text-expanded-example" context-selector--label-text="Selected Project" context-selector--IsExpanded="true" context-selector-toggle--IsPlain="true" context-selector-toggle--IsText="true"}}
+  {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
+    {{#> context-selector-toggle-text}}
+      My project
+    {{/context-selector-toggle-text}}
+    {{#> context-selector-toggle-icon}}
+    {{/context-selector-toggle-icon}}
+  {{/context-selector-toggle}}
+  {{#> context-selector-menu}}
+    {{#> context-selector-menu-search}}
+      {{#> input-group}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" placeholder="Search" id="textInput2" name="textInput2" aria-labelledby="' context-selector--id '-search-button"')}}
+        {{/form-control}}
+        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' context-selector--id '-search-button"' 'aria-label="Search menu items"')}}
+          <i class="fas fa-search" aria-hidden="true"></i>
+        {{/button}}
+      {{/input-group}}
+    {{/context-selector-menu-search}}
+    {{> __context-selector-menu-menu}}
+  {{/context-selector-menu}}
+{{/context-selector}}
+```
+
 ### With footer
 ```hbs
 {{#> context-selector context-selector--id="context-selector-with-footer-example" context-selector--label-text="Selected Project" context-selector--IsExpanded="true"}}
@@ -135,4 +182,5 @@ import './context-selector.css'
 | `.pf-c-context-selector__menu-list-item` | `<li>` | Initiaties a menu item. |
 | `.pf-m-expanded` | `.pf-c-context-selector` | Modifies for the expanded state. |
 | `.pf-m-active` | `.pf-c-context-selector__toggle` | Forces display of the active state of the toggle. |
+| `.pf-m-plain.pf-m-text` | `.pf-c-context-selector__toggle` | Modifies the context selector toggle for plain text styles. |
 | `.pf-m-disabled` | `a.pf-c-context-selector__menu-list-item` | Modifies an item for the disabled state.|
