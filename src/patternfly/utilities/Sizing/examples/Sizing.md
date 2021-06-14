@@ -30,6 +30,7 @@ import './Sizing.css'
   .pf-u-w-inherit
 {{/sizing}}
 ```
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -64,6 +65,7 @@ import './Sizing.css'
   .pf-u-w-100vw
 {{/sizing}}
 ```
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -98,6 +100,7 @@ import './Sizing.css'
   .pf-u-h-inherit
 {{/sizing}}
 ```
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -132,6 +135,7 @@ import './Sizing.css'
   .pf-u-h-100vh
 {{/sizing}}
 ```
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -141,10 +145,6 @@ import './Sizing.css'
 | `.pf-u-h-66vh{-on-[breakpoint]}` | `*` | Sets height: calc(100vh / 3 * 2) |
 | `.pf-u-h-75vh{-on-[breakpoint]}` | `*` | Sets height: 75vh |
 | `.pf-u-h-100vh{-on-[breakpoint]}` | `*` | Sets height: 100vh |
-
-## Documentation
-### Usage
-These utilities are not recommended for general layout purposes. They should primarily be used to enable responsive behaviors of certain components through breakpoints.
 
 ### Min width
 ```hbs
@@ -174,6 +174,12 @@ These utilities are not recommended for general layout purposes. They should pri
 {{/sizing-min-max}}
 ```
 
+### Usage
+| Class                                                       | Applied to            | Outcome                       |
+| ----------------------------------------------------------- | --------------------- | ----------------------------- |
+| `--pf-u-min-width--MinWidth{-on-[breakpoint]}: {width}` | `.pf-u-min-width` | Modifies the min width value. |
+| `--pf-u-max-width--MaxWidth{-on-[breakpoint]}: {width}` | `.pf-u-max-width` | Modifies the max width value. |
+
 ### Min height
 ```hbs
 {{#> sizing-min-max sizing-min-max--modifier="pf-u-min-height" sizing-min-max--attribute='style="--pf-u-min-height--MinHeight: 50ch;"'}}
@@ -202,13 +208,8 @@ These utilities are not recommended for general layout purposes. They should pri
 {{/sizing-min-max}}
 ```
 
-## Documentation
-
 ### Usage
-
 | Class                                                       | Applied to            | Outcome                       |
 | ----------------------------------------------------------- | --------------------- | ----------------------------- |
-| `--pf-u-min-width--MinWidth{-on-[breakpoint]}: {width}` | `.pf-u-min-width` | Modifies the min width value. |
-| `--pf-u-max-width--MaxWidth{-on-[breakpoint]}: {width}` | `.pf-u-max-width` | Modifies the max width value. |
 | `--pf-u-min-height--MinHeight{-on-[breakpoint]}: {height}` | `.pf-u-min-height` | Modifies the min height value. |
 | `--pf-u-max-height--MaxHeight{-on-[breakpoint]}: {height}` | `.pf-u-max-height` | Modifies the max height value. |
