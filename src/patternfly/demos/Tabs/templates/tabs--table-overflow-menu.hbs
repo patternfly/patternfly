@@ -1,7 +1,15 @@
 {{#> overflow-menu dropdown-menu--modifier="pf-m-align-right" overflow-menu--id=tabs--table-overflow-menu--id}}
-  {{#> overflow-menu-control overflow-menu-button--aria-label="Dropdown for tabs table" overflow-menu-dropdown-button-aria-expanded="true"}}
-    {{#> overflow-menu-dropdown-item}}
-      Action Link
-    {{/overflow-menu-dropdown-item}}
-  {{/overflow-menu-control}}
+  {{#if dropdown--IsExpanded}}
+    {{#> overflow-menu-control overflow-menu-button--aria-label="Dropdown for tabs table" overflow-menu-button--aria-expanded="true"}}
+      {{#> overflow-menu-dropdown-item}}
+        Action Link
+      {{/overflow-menu-dropdown-item}}
+    {{/overflow-menu-control}}
+  {{else}}
+    {{#> overflow-menu-control overflow-menu-button--aria-label="Dropdown for tabs table" overflow-menu-button--aria-expanded="false"}}
+      {{#> overflow-menu-dropdown-item}}
+        Action Link
+      {{/overflow-menu-dropdown-item}}
+    {{/overflow-menu-control}}
+  {{/if}}
 {{/overflow-menu}}

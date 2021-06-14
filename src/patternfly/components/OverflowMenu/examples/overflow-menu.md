@@ -14,7 +14,7 @@ The overflow menu relies on groups (`.pf-c-overflow-menu__group`) and items (`.p
 ### Simple collapsed
 ```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple"}}
-  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Generic options" overflow-menu-dropdown-button-aria-expanded="true"}}
+  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Generic options"}}
     {{#> overflow-menu-dropdown-item}}
       Item 1
     {{/overflow-menu-dropdown-item}}
@@ -143,7 +143,7 @@ The action group consists of a primary and secondary action. Any additional acti
 ### Additional options in dropdown (hidden)
 ```hbs
 {{#> overflow-menu overflow-menu--id="overflow-menu-simple-additional-options-hidden"}}
-  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown with additional options" overflow-menu-dropdown-button-aria-expanded="true"}}
+  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown with additional options"}}
     {{#> overflow-menu-dropdown-item}}
       Primary
     {{/overflow-menu-dropdown-item}}
@@ -208,7 +208,7 @@ The action group consists of a primary and secondary action. Any additional acti
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
-  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown with additional options" overflow-menu-dropdown-button-aria-expanded="true"}}
+  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown with additional options"}}
     {{#> overflow-menu-dropdown-item}}
       Action 7
     {{/overflow-menu-dropdown-item}}
@@ -230,7 +230,7 @@ The action group consists of a primary and secondary action. Any additional acti
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
-  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown for persistent example" overflow-menu-dropdown-button-aria-expanded="true"}}
+  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown for persistent example"}}
     {{#> overflow-menu-dropdown-item}}
       Secondary
     {{/overflow-menu-dropdown-item}}
@@ -266,7 +266,7 @@ The action group consists of a primary and secondary action. Any additional acti
       {{/overflow-menu-item}}
     {{/overflow-menu-group}}
   {{/overflow-menu-content}}
-  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown for persistent example" overflow-menu-dropdown-button-aria-expanded="true"}}
+  {{#> overflow-menu-control dropdown--IsExpanded="true" overflow-menu-button--aria-label="Dropdown for persistent example"}}
     {{#> overflow-menu-dropdown-item}}
       Action 4
     {{/overflow-menu-dropdown-item}}

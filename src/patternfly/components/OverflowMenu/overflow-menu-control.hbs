@@ -8,21 +8,25 @@
       {{{dropdown--attribute}}}
     {{/if}}>
     {{#if overflow-menu-control--IsControl}}
-      {{#> button button--modifier="pf-c-dropdown__toggle pf-m-plain pf-m-control" button--attribute=(concat 'id="' overflow-menu--id '-dropdown-toggle" aria-label="' overflow-menu-button--aria-label '" aria-expanded="' overflow-menu-dropdown-button-aria-expanded '"')}}
-        {{#if dropdown--icon}}
-          <i class="fas {{dropdown--icon}}" aria-hidden="true"></i>
-        {{else}}
-          {{> dropdown-kebab-icon}}
-        {{/if}}
-      {{/button}}
+      {{#> wrapper overflow-menu-button--aria-expanded="true"}}
+        {{#> button button--modifier="pf-c-dropdown__toggle pf-m-plain pf-m-control" button--attribute=(concat 'id="' overflow-menu--id '-dropdown-toggle" aria-label="' overflow-menu-button--aria-label '" aria-expanded="' overflow-menu-button--aria-expanded '"')}}
+          {{#if dropdown--icon}}
+            <i class="fas {{dropdown--icon}}" aria-hidden="true"></i>
+          {{else}}
+            {{> dropdown-kebab-icon}}
+          {{/if}}
+        {{/button}}
+      {{/wrapper}}
     {{else}}
-      {{#> button button--modifier="pf-c-dropdown__toggle pf-m-plain" button--attribute=(concat 'id="' overflow-menu--id '-dropdown-toggle" aria-label="' overflow-menu-button--aria-label '" aria-expanded="' overflow-menu-dropdown-button-aria-expanded '"')}}
-        {{#if dropdown-icon}}
-          <i class="fas {{dropdown--icon}}" aria-hidden="true"></i>
-        {{else}}
-          {{> dropdown-kebab-icon}}
-        {{/if}}
-      {{/button}}
+      {{#> wrapper overflow-menu-button--aria-expanded="true"}}
+        {{#> button button--modifier="pf-c-dropdown__toggle pf-m-plain" button--attribute=(concat 'id="' overflow-menu--id '-dropdown-toggle" aria-label="' overflow-menu-button--aria-label '" aria-expanded="' overflow-menu-button--aria-expanded '"')}}
+          {{#if dropdown-icon}}
+            <i class="fas {{dropdown--icon}}" aria-hidden="true"></i>
+          {{else}}
+            {{> dropdown-kebab-icon}}
+          {{/if}}
+        {{/button}}
+      {{/wrapper}}
     {{/if}}
     {{#if overflow-menu--UsesMenu}}
       {{> @partial-block}}
