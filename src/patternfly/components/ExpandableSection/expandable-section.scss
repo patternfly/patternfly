@@ -25,6 +25,9 @@
   --pf-c-expandable-section__content--MarginTop: var(--pf-global--spacer--md);
   --pf-c-expandable-section__content--MaxWidth: auto;
 
+  // Limit Width
+  --pf-c-expandable-section--m-limit-width__content--MaxWidth: #{pf-size-prem(700px)};
+
   // Large
   --pf-c-expandable-section--m-display-lg--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-expandable-section--m-display-lg__toggle--PaddingTop: var(--pf-global--spacer--md);
@@ -35,7 +38,6 @@
   --pf-c-expandable-section--m-display-lg__content--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-expandable-section--m-display-lg__content--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-expandable-section--m-display-lg__content--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-expandable-section--m-display-lg__content--MaxWidth: var(--pf-global--breakpoint--md);
   --pf-c-expandable-section--m-display-lg--after--BackgroundColor: transparent;
   --pf-c-expandable-section--m-display-lg--after--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-expandable-section--m-display-lg--m-expanded--after--BackgroundColor: var(--pf-global--primary-color--100);
@@ -52,6 +54,10 @@
     --pf-c-expandable-section__content--MarginTop: 0;
   }
 
+  &.pf-m-limit-width {
+    --pf-c-expandable-section__content--MaxWidth: var(--pf-c-expandable-section--m-limit-width__content--MaxWidth);
+  }
+
   &.pf-m-display-lg {
     --pf-c-expandable-section__toggle--PaddingTop: var(--pf-c-expandable-section--m-display-lg__toggle--PaddingTop);
     --pf-c-expandable-section__toggle--PaddingRight: var(--pf-c-expandable-section--m-display-lg__toggle--PaddingRight);
@@ -61,7 +67,6 @@
     --pf-c-expandable-section__content--PaddingBottom: var(--pf-c-expandable-section--m-display-lg__content--PaddingBottom);
     --pf-c-expandable-section__content--PaddingLeft: var(--pf-c-expandable-section--m-display-lg__content--PaddingLeft);
     --pf-c-expandable-section__content--MarginTop: var(--pf-c-expandable-section--m-display-lg__content--MarginTop);
-    --pf-c-expandable-section__content--MaxWidth: var(--pf-c-expandable-section--m-display-lg__content--MaxWidth);
 
     position: relative;
     box-shadow: var(--pf-c-expandable-section--m-display-lg--BoxShadow);
