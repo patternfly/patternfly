@@ -1,9 +1,11 @@
-<div class="pf-c-overflow-menu{{#if overflow-menu--modifier}} {{overflow-menu--modifier}}{{/if}}"
-  {{#if overflow-menu--attribute}}
-    {{{overflow-menu--attribute}}}
-  {{/if}}
-  {{#if overflow-menu--id}}
-    id="{{overflow-menu--id}}"
-  {{/if}}>
+{{#> wrapper overflow-menu-button--aria-expanded="true"}}
+  <div class="pf-c-overflow-menu{{#if overflow-menu--modifier}} {{overflow-menu--modifier}}{{/if}}"  
+    {{#if overflow-menu--attribute}}
+      {{{overflow-menu--attribute}}}
+    {{/if}}
+    {{#if overflow-menu--id}}
+      id="{{overflow-menu--id}}"
+    {{/if}}>
   {{> @partial-block}}
-</div>
+  </div>
+{{/wrapper}}
