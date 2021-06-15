@@ -51,14 +51,7 @@ wrapperTag: div
             {{> dropdown dropdown--modifier="pf-m-full-height" dropdown--id="dropdown-expanded" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown"}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-{{#> menu-toggle}}
-  {{#> menu-toggle-text}}
-    Collapsed
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
+            {{> dropdown dropdown--id=(concat masthead--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
           {{/toolbar-item}}
         {{/toolbar-group}}
         <!-- {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
