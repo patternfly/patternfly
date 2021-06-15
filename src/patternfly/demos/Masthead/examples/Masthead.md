@@ -24,7 +24,7 @@ wrapperTag: div
     {{#> toolbar}}
       {{#> toolbar-content-section}}
         {{#> toolbar-item}}
-          {{#> context-selector context-selector--id="context-selector-collapsed-example" context-selector--label-text="Selected project" context-selector--IsExpanded="true"}}
+          {{#> context-selector context-selector--modifier="pf-m-full-height" context-selector--id="context-selector-collapsed-example" context-selector--label-text="Selected project" context-selector--IsExpanded="true"}}
             {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
               {{#> context-selector-toggle-text}}
                 Context selector
@@ -48,7 +48,7 @@ wrapperTag: div
         {{/toolbar-item}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
           {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-            {{> dropdown dropdown--id="dropdown-expanded" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown"}}
+            {{> dropdown dropdown--modifier="pf-m-full-height" dropdown--id="dropdown-expanded" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown"}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
             {{> dropdown dropdown--id=(concat masthead--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
