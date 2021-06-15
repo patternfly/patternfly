@@ -44,11 +44,6 @@ $pf-u-height-options: (
 @include pf-utility-builder($pf-u-width-options, $pf-global--breakpoint-list);
 @include pf-utility-builder($pf-u-height-options, $pf-global--breakpoint-list);
 
-.pf-u-min-width,
-.pf-u-max-width {
-  width: 100% !important;
-}
-
 .pf-u-min-width {
   --pf-u-min-width--MinWidth: 0;
 
