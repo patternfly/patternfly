@@ -5,8 +5,6 @@ section: components
 wrapperTag: div
 ---
 
-import './Masthead.css'
-
 ## Examples
 ### Basic
 ```hbs
