@@ -1,4 +1,7 @@
-<div class="{{#if sizing-min-max--modifier}} {{sizing-min-max--modifier}}{{/if}}"{{#if sizing-min-max--attribute}} {{{sizing-min-max--attribute}}}{{/if}}>
+<div class="{{#if sizing-min-max--modifier}} {{sizing-min-max--modifier}}{{/if}}"
+  {{#if sizing-min-max--attribute}}
+    {{{sizing-min-max--attribute}}}
+  {{/if}}>
   {{#if @partial-block}}
     {{> @partial-block}}
   {{else}}
