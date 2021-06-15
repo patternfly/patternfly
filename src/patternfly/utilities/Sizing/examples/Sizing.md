@@ -175,10 +175,15 @@ import './Sizing.css'
 ```
 
 ### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-u-min-width` | `*` | Sets min-width: var(--pf-u-min-width--MinWidth{-on-[breakpoint]}). |
+| `.pf-u-max-width` | `*` | Sets min-width: var(--pf-u-max-width--MaxWidth{-on-[breakpoint]}). |
+
 | Custom property | Applied to | Outcome |
 | -- | -- | -- |
-| `--pf-u-min-width--MinWidth{-on-[breakpoint]}: {width}` | `.pf-u-min-width` | Modifies the min width value. |
-| `--pf-u-max-width--MaxWidth{-on-[breakpoint]}: {width}` | `.pf-u-max-width` | Modifies the max width value. |
+| `--pf-u-min-width--MinWidth{-on-[breakpoint]}: {width}` | `.pf-u-min-width` | Modifies the min width custom property. |
+| `--pf-u-max-width--MaxWidth{-on-[breakpoint]}: {width}` | `.pf-u-max-width` | Modifies the max width custom property. |
 
 ### Min height
 ```hbs
@@ -209,7 +214,12 @@ import './Sizing.css'
 ```
 
 ### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-u-min-height` | `*` | Sets min-height: var(--pf-u-min-height--MinHeight{-on-[breakpoint]}). |
+| `.pf-u-max-height` | `*` | Sets max-height: var(--pf-u-max-height--MaxHeight{-on-[breakpoint]}). |
+
 | Custom property | Applied to | Outcome |
 | -- | -- | -- |
-| `--pf-u-min-height--MinHeight{-on-[breakpoint]}: {height}` | `.pf-u-min-height` | Modifies the min height value. |
-| `--pf-u-max-height--MaxHeight{-on-[breakpoint]}: {height}` | `.pf-u-max-height` | Modifies the max height value. |
+| `--pf-u-min-height--MinHeight{-on-[breakpoint]}: {height}` | `.pf-u-min-height` | Modifies the min height custom property. |
+| `--pf-u-max-height--MaxHeight{-on-[breakpoint]}: {height}` | `.pf-u-max-height` | Modifies the max height custom property. |
