@@ -110,16 +110,19 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--m-light-200__main--BorderBottomColor: var(--pf-global--BorderColor--100);
 
   // Dropdown
-  --pf-c-masthead--c-dropdown__toggle--BorderTopColor: transparent;
-  --pf-c-masthead--c-dropdown__toggle--BorderRightColor: transparent;
-  --pf-c-masthead--c-dropdown__toggle--BorderLeftColor: transparent;
-  --pf-c-masthead--c-dropdown__toggle--expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-masthead--c-dropdown__toggle--BorderTopColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-dropdown__toggle--BorderRightColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-dropdown__toggle--BorderLeftColor: var(--pf-global--palette--black-700);
 
   // Context selector
   --pf-c-masthead--c-context-selector__toggle--BorderTopColor: var(--pf-global--palette--black-700);
   --pf-c-masthead--c-context-selector__toggle--BorderRightColor: var(--pf-global--palette--black-700);
   --pf-c-masthead--c-context-selector__toggle--BorderLeftColor: var(--pf-global--palette--black-700);
-  --pf-c-masthead--c-context-selector__toggle--expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
+
+  // Menu toggle
+  --pf-c-masthead--c-menu-toggle--before--BorderTopColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-menu-toggle--before--BorderRightColor: var(--pf-global--palette--black-700);
+  --pf-c-masthead--c-menu-toggle--before--BorderLeftColor: var(--pf-global--palette--black-700);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
@@ -190,32 +193,18 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--c-dropdown__toggle--BorderTopColor);
     --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown__toggle--BorderRightColor);
     --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown__toggle--BorderLeftColor);
-    --pf-c-dropdown--m-expanded__toggle--before--BorderBottomColor: var(--pf-c-masthead--c-dropdown__toggle--expanded--before--BorderBottomColor);
-    --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: var(--pf-c-masthead--c-dropdown__toggle--expanded--before--BorderBottomWidth);
   }
 
   .pf-c-context-selector__toggle {
     --pf-c-context-selector__toggle--BorderTopColor: var(--pf-c-masthead--c-context-selector__toggle--BorderTopColor);
     --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector__toggle--BorderRightColor);
     --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--c-context-selector__toggle--BorderLeftColor);
-    --pf-c-context-selector__toggle--expanded--BorderBottomColor: var(--pf-c-masthead--c-context-selector__toggle--expanded--before--BorderBottomColor);
-    --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-c-masthead--c-context-selector__toggle--expanded--before--BorderBottomWidth);
   }
 
-  .pf-c-dropdown__toggle {
-    --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--c-dropdown__toggle--BorderTopColor);
-    --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown__toggle--BorderRightColor);
-    --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown__toggle--BorderLeftColor);
-    --pf-c-dropdown--m-expanded__toggle--before--BorderBottomColor: var(--pf-c-masthead--c-dropdown__toggle--expanded--before--BorderBottomColor);
-    --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: var(--pf-c-masthead--c-dropdown__toggle--expanded--before--BorderBottomWidth);
-  }
-
-  .pf-c-context-selector__toggle {
-    --pf-c-context-selector__toggle--BorderTopColor: var(--pf-c-masthead--c-context-selector__toggle--BorderTopColor);
-    --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector__toggle--BorderRightColor);
-    --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--c-context-selector__toggle--BorderLeftColor);
-    --pf-c-context-selector__toggle--expanded--BorderBottomColor: var(--pf-c-masthead--c-context-selector__toggle--expanded--before--BorderBottomColor);
-    --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-c-masthead--c-context-selector__toggle--expanded--before--BorderBottomWidth);
+  .pf-c-menu-toggle {
+    --pf-c-menu-toggle--before--BorderTopColor: var(--pf-c-masthead--c-menu-toggle--before--BorderTopColor);
+    --pf-c-menu-toggle--before--BorderRightColor: var(--pf-c-masthead--c-menu-toggle--before--BorderRightColor);
+    --pf-c-menu-toggle--before--BorderLeftColor: var(--pf-c-masthead--c-menu-toggle--before--BorderLeftColor);
   }
 }
 
