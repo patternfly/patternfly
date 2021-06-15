@@ -34,24 +34,7 @@ cssPrefix: pf-c-expandable-section
   {{#> expandable-section-toggle}}
   {{/expandable-section-toggle}}
   {{#> expandable-section-content}}
-    {{#> stack stack--modifier="pf-m-gutter"}}
-      {{#> stack-item}}
-        {{#> title titleType="h1" title--modifier="pf-m-xl"}}
-          Heading
-        {{/title}}
-      {{/stack-item}}
-      {{#> stack-item}}
-        Content
-      {{/stack-item}}
-      {{#> stack-item}}
-        {{#> button button--modifier="pf-m-link pf-m-inline pf-m-display-lg"}}
-          Call to action
-          {{#> button-icon button-icon--modifier="pf-m-end"}}
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          {{/button-icon}}
-        {{/button}}
-      {{/stack-item}}
-    {{/stack}}
+    This content is visible only when the component is expanded.
   {{/expandable-section-content}}
 {{/expandable-section}}
 ```
@@ -63,24 +46,7 @@ cssPrefix: pf-c-expandable-section
   {{#> expandable-section-toggle}}
   {{/expandable-section-toggle}}
   {{#> expandable-section-content}}
-    {{#> stack stack--modifier="pf-m-gutter"}}
-      {{#> stack-item}}
-        {{#> title titleType="h1" title--modifier="pf-m-xl"}}
-          Heading
-        {{/title}}
-      {{/stack-item}}
-      {{#> stack-item}}
-        Content
-      {{/stack-item}}
-      {{#> stack-item}}
-        {{#> button button--modifier="pf-m-link pf-m-inline pf-m-display-lg"}}
-          Call to action
-          {{#> button-icon button-icon--modifier="pf-m-end"}}
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          {{/button-icon}}
-        {{/button}}
-      {{/stack-item}}
-    {{/stack}}
+    This content is visible only when the component is expanded.
   {{/expandable-section-content}}
 {{/expandable-section}}
 ```
