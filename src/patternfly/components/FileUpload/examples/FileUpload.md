@@ -2,7 +2,6 @@
 id: File upload
 section: components
 cssPrefix: pf-c-file-upload
-beta: true
 ---
 
 ## Examples
