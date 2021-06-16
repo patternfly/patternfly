@@ -26,6 +26,23 @@
   --pf-c-context-selector__toggle--m-plain--m-text--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle--m-plain--m-text--PaddingLeft: var(--pf-global--spacer--sm);
 
+  // ::before
+  --pf-c-context-selector__toggle--before--BorderBottomColor: var(--pf-global--BorderColor--300); // change to --pf-c-context-selector__toggle--before--BorderColor at breaking change
+  --pf-c-context-selector__toggle--before--BorderWidth: var(--pf-c-context-selector__toggle--BorderWidth); // remove at breaking change
+  --pf-c-context-selector__toggle--before--BorderTopColor: var(--pf-c-context-selector__toggle--BorderTopColor); // remove at breaking change
+  --pf-c-context-selector__toggle--before--BorderRightColor: var(--pf-c-context-selector__toggle--BorderRightColor); // remove at breaking change
+  --pf-c-context-selector__toggle--before--BorderLeftColor: var(--pf-c-context-selector__toggle--BorderLeftColor); // remove at breaking change
+
+  // ::after
+  --pf-c-context-selector__toggle--after--BorderBottomColor: var(--pf-c-context-selector__toggle--BorderBottomColor); // remove at breaking change
+  --pf-c-context-selector__toggle--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--BorderWidth); // remove at breaking change
+  --pf-c-context-selector__toggle--hover--after--BorderBottomColor: var(--pf-c-context-selector__toggle--hover--BorderBottomColor); // remove at breaking change
+  --pf-c-context-selector__toggle--hover--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--hover--BorderBottomWidth); // remove at breaking change
+  --pf-c-context-selector__toggle--active--after--BorderBottomColor: var(--pf-c-context-selector__toggle--active--BorderBottomColor); // remove at breaking change
+  --pf-c-context-selector__toggle--active--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--active--BorderBottomWidth); // remove at breaking change
+  --pf-c-context-selector__toggle--m-expanded--after--BorderBottomColor: var(--pf-c-context-selector__toggle--expanded--BorderBottomColor); // remove at breaking change
+  --pf-c-context-selector__toggle--m-expanded--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--expanded--BorderBottomWidth); // remove at breaking change
+
   // Toggle text
   --pf-c-context-selector__toggle-text--FontSize: var(--pf-global--FontSize--md);
   --pf-c-context-selector__toggle-text--FontWeight: var(--pf-global--FontWeight--normal);
@@ -117,39 +134,41 @@
   cursor: pointer;
   border: none;
 
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    pointer-events: none;
     content: "";
-    border: var(--pf-c-context-selector__toggle--BorderWidth) solid;
-    border-color: var(--pf-c-context-selector__toggle--BorderTopColor) var(--pf-c-context-selector__toggle--BorderRightColor) var(--pf-c-context-selector__toggle--BorderBottomColor) var(--pf-c-context-selector__toggle--BorderLeftColor);
+  }
+
+  &::before {
+    border-color: var(--pf-c-context-selector__toggle--before--BorderTopColor) var(--pf-c-context-selector__toggle--before--BorderRightColor) var(--pf-c-context-selector__toggle--before--BorderBottomColor) var(--pf-c-context-selector__toggle--before--BorderLeftColor);
+    border-style: solid;
+    border-width: var(--pf-c-context-selector__toggle--before--BorderWidth);
+  }
+
+  &::after {
+    border-bottom: var(--pf-c-context-selector__toggle--after--BorderBottomWidth) solid var(--pf-c-context-selector__toggle--after--BorderBottomColor);
   }
 
   &:hover {
-    &::before {
-      --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--hover--BorderBottomColor);
-    }
+    --pf-c-context-selector__toggle--after--BorderBottomColor: var(--pf-c-context-selector__toggle--hover--after--BorderBottomColor);
   }
 
   &:active,
   &.pf-m-active,
   &:focus-within {
-    &::before {
-      --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--active--BorderBottomColor);
-
-      border-bottom-width: var(--pf-c-context-selector__toggle--active--BorderBottomWidth);
-    }
+    --pf-c-context-selector__toggle--after--BorderBottomColor: var(--pf-c-context-selector__toggle--active--after--BorderBottomColor);
+    --pf-c-context-selector__toggle--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--active--after--BorderBottomWidth);
   }
 
   .pf-m-expanded > & {
-    &::before {
-      --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--expanded--BorderBottomColor);
-
-      border-bottom-width: var(--pf-c-context-selector__toggle--expanded--BorderBottomWidth);
-    }
+    --pf-c-context-selector__toggle--after--BorderBottomColor: var(--pf-c-context-selector__toggle--m-expanded--after--BorderBottomColor);
+    --pf-c-context-selector__toggle--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--m-expanded--after--BorderBottomWidth);
   }
 
   &.pf-m-plain {
