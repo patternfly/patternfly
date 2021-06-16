@@ -191,7 +191,6 @@ wrapperTag: div
   {{/login-container}}
 {{/login}}
 ```
-
 ## Documentation
 ### Usage
 | Class | Applied to | Outcome |
