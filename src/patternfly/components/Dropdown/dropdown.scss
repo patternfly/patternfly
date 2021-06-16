@@ -129,6 +129,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   // Dropdown
   --pf-c-dropdown--m-full-height__toggle--before--BorderTopWidth: 0;
   --pf-c-dropdown--m-full-height__toggle--expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-dropdown--m-full-height__toggle--active--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-dropdown--m-full-height__toggle--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
 
   position: relative;
   display: inline-block;
@@ -151,6 +153,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &.pf-m-full-height {
+    --pf-c-dropdown__toggle--active--before--BorderBottomWidth: var(--pf-c-dropdown--m-full-height__toggle--active--before--BorderBottomWidth);
+    --pf-c-dropdown__toggle--focus--before--BorderBottomWidth: var(--pf-c-dropdown--m-full-height__toggle--focus--before--BorderBottomWidth);
     --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: var(--pf-c-dropdown--m-full-height__toggle--expanded--before--BorderBottomWidth);
 
     display: flex;
