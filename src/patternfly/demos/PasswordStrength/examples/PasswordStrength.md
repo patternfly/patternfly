@@ -10,13 +10,15 @@ section: demos
 ```hbs
   {{#> form form--id="password-strength-demo--initial"}}
     {{#> form-group}}
-      {{#> split split--modifier="pf-m-gutter"}}
-        {{#> split-item split-item--modifier="pf-m-fill"}}
-          {{#> form-label form-label--attribute=(concat 'for="' form--id '-password"') required="true"}}Password{{/form-label}}
-        {{/split-item}}
-        {{#> split-item}}
-        {{/split-item}}
-      {{/split}}
+      {{#> form-group-label}}
+        {{#> split split--modifier="pf-m-gutter"}}
+          {{#> split-item split-item--modifier="pf-m-fill"}}
+            {{#> form-label form-label--attribute=(concat 'for="' form--id '-password"') required="true"}}Password{{/form-label}}
+          {{/split-item}}
+          {{#> split-item}}
+          {{/split-item}}
+        {{/split}}
+      {{/form-group-label}}
       {{#> input-group}}
           {{#> form-control controlType="input" input="true"  form-control--attribute=(concat 'type="text" id="' form--id '-password" name="' form--id '-password" aria-label="Password input" value="" placeholder="Password"')}}
         {{/form-control}}
