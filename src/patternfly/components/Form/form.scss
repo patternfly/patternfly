@@ -126,8 +126,6 @@
   gap: var(--pf-c-form--GridGap);
 
   &.pf-m-horizontal {
-    --pf-c-form__group-label--PaddingBottom: 0;
-
     &.pf-m-align-right {
       .pf-c-form__label {
         text-align: right;
@@ -135,6 +133,8 @@
     }
 
     @media (min-width: $pf-global--breakpoint--md) {
+      --pf-c-form__group-label--PaddingBottom: 0;
+
       .pf-c-form__group {
         display: grid;
         grid-column-gap: var(--pf-c-form--m-horizontal__group-label--md--GridColumnGap);
