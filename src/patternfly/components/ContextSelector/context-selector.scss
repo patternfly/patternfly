@@ -80,6 +80,7 @@
   // Full height
   --pf-c-context-selector--m-full-height__toggle--before--BorderTopWidth: 0;
   --pf-c-context-selector--m-full-height__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-context-selector--m-full-height__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
 
   position: relative;
   display: inline-block;
@@ -87,6 +88,7 @@
   max-width: 100%;
 
   &.pf-m-full-height {
+    --pf-c-context-selector__toggle--active--BorderBottomWidth: var(--pf-c-context-selector--m-full-height__toggle--active--BorderBottomWidth);
     --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-c-context-selector--m-full-height__toggle--expanded--BorderBottomWidth);
 
     display: flex;
