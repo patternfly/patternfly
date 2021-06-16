@@ -730,7 +730,7 @@ import './Menu.css'
 
 ### Drilldown level two
 ```hbs
-{{> menu--Drilldown menu--Drilldown--id="drilldown-level-2" menu--Drilldown--IsDrilledIn--list-1="true"menu--Drilldown--menu__content--attribute='style="--pf-c-menu__content--Height: 193px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-level-2" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu__content--attribute='style="--pf-c-menu__content--Height: 193px;"'}}
 ```
 
 ### Drilldown level three
@@ -741,6 +741,11 @@ import './Menu.css'
 ### Drilldown level four
 ```hbs
 {{> menu--Drilldown menu--Drilldown--id="drilldown-level-4" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--IsDrilledIn--list-3="true" menu--Drilldown--menu__content--attribute='style="--pf-c-menu__content--Height: 193px;"'}}
+```
+
+### Scrollable drilldown
+```hbs
+{{> menu--Drilldown menu--Drilldown--id="drilldown-default" menu--Drilldown--menu--attribute='style="--pf-c-menu__content--MaxHeight: 100px;"'}}
 ```
 
 ### Width modified drilldown
