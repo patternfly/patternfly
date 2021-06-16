@@ -3,9 +3,4 @@
     {{{form-helper-text--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</{{#if form-helper-text--type}}
-    {{form-helper-text--type}}
-  {{else}}
-    p
-  {{/if}}
->
+</{{#if form-helper-text--type}}{{form-helper-text--type}}{{else}}p{{/if}}>
