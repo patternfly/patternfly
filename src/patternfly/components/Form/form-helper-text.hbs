@@ -1,8 +1,4 @@
-<{{#if form-helper-text--type}}{{form-helper-text--type}}{{else}}p{{/if}} 
-  class="pf-c-form__helper-text
-    {{#if form-helper-text--modifier}} 
-      {{form-helper-text--modifier}}
-    {{/if}}"
+<{{#if form-helper-text--type}}{{form-helper-text--type}}{{else}}p{{/if}} class="pf-c-form__helper-text {{#if form-helper-text--modifier}} {{form-helper-text--modifier}}{{/if}}"
   {{#if form-helper-text--attribute}}
     {{{form-helper-text--attribute}}}
   {{/if}}>
