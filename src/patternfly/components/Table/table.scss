@@ -121,6 +121,7 @@
 
   // Ghost row
   --pf-c-table__tr--m-ghost-row--Opacity: .4;
+  --pf-c-table__tr--m-ghost-row--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Action
   --pf-c-table__action--PaddingTop: 0;
@@ -336,6 +337,7 @@
 
     // stylelint-disable-next-line
     &.pf-m-ghost-row {
+      background-color: var(--pf-c-table__tr--m-ghost-row--BackgroundColor);
       opacity: var(--pf-c-table__tr--m-ghost-row--Opacity);
     }
   }
