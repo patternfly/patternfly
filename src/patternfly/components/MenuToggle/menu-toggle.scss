@@ -180,6 +180,7 @@
   }
 
   &.pf-m-full-height {
+    --pf-c-menu-toggle--before--BorderTopWidth: var(--pf-c-menu-toggle--m-full-height__toggle--before--BorderTopWidth);
     --pf-c-menu-toggle--m-expanded--after--BorderBottomWidth: var(--pf-c-menu-toggle--m-full-height--m-expanded--after--BorderBottomWidth);
     --pf-c-menu-toggle--focus--after--BorderBottomWidth: var(--pf-c-menu-toggle--m-full-height--focus--after--BorderBottomWidth);
     --pf-c-menu-toggle--active--after--BorderBottomWidth: var(--pf-c-menu-toggle--m-full-height--active--after--BorderBottomWidth);
