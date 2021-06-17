@@ -176,7 +176,7 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
         @if $width-value == "default" {
           --pf-c-sidebar__panel--FlexBasis: var(--pf-c-sidebar__panel--FlexBasis--base);
         } @else {
-          --pf-c-sidebar__panel--FlexBasis: #{percentage($width-value / 100)};
+          --pf-c-sidebar__panel--FlexBasis: #{percentage(div($width-value, 100))};
         }
       }
     }
