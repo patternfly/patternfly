@@ -53,7 +53,7 @@ section: components
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-invalid="true" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
-      {{#> form-helper-text form-helper-text--type="div" form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
+      {{#> form-helper-text form-helper-text--type="div"form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
           {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
               {{> helper-text-item-icon helper-text-item-icon--type="check"}}
