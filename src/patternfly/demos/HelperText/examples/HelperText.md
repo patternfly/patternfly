@@ -19,7 +19,7 @@ section: components
       {{/form-control}}
       {{#> form-helper-text form-helper-text--type="div" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
           {{#> helper-text}}
-            {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-indeterminate"}}
+            {{#> helper-text-item}}
               {{#> helper-text-item-text}}This is helper text on a form field.{{/helper-text-item-text}}
             {{/helper-text-item}}
           {{/helper-text}}
