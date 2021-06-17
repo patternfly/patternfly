@@ -18,11 +18,11 @@ section: components
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
       {{#> form-helper-text form-helper-text--type="div" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
-          {{#> helper-text}}
-            {{#> helper-text-item}}
-              {{#> helper-text-item-text}}This is helper text on a form field.{{/helper-text-item-text}}
-            {{/helper-text-item}}
-          {{/helper-text}}
+        {{#> helper-text}}
+          {{#> helper-text-item}}
+            {{#> helper-text-item-text}}This is helper text on a form field.{{/helper-text-item-text}}
+          {{/helper-text-item}}
+        {{/helper-text}}
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -93,4 +93,4 @@ section: components
 {{/form}}
 ```
 ## Documentation
-When adding helper text to a form field, place it within the form control and form helper text to ensure proper spacing.
+When adding helper text to a form field, place it within the form helper text element.
