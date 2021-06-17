@@ -7,17 +7,10 @@
     <span class="pf-c-log-viewer__index">2</span>
     <span class="pf-c-log-viewer__text">    Waiting for port :6443 to be released.</span>
   </div>
-  {{#if log-viewer--IsMatch}}
-    <div class="pf-c-log-viewer__list-item pf-m-match pf-m-current" style="position: absolute; left: 0px; top: 120px; height: 21px; width: 100%;">
-      <span class="pf-c-log-viewer__index">3</span>
-      <span class="pf-c-log-viewer__text">    I0223 20:04:25.084507       1 loader.go:379] Config loaded from file:  /etc/kubernetes/static-pod-resources/configmaps/kube-apiserver-cert-syncer-kubeconfig/kubeconfig</span>
-    </div>
-  {{else}}
-    <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 120px; height: 21px; width: 100%;">
-      <span class="pf-c-log-viewer__index">3</span>
-      <span class="pf-c-log-viewer__text">    I0223 20:04:25.084507       1 loader.go:379] Config loaded from file:  /etc/kubernetes/static-pod-resources/configmaps/kube-apiserver-cert-syncer-kubeconfig/kubeconfig</span>
-    </div>
-  {{/if}}
+  <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 120px; height: 21px; width: 100%;">
+    <span class="pf-c-log-viewer__index">3</span>
+    <span class="pf-c-log-viewer__text">    I0223 20:04:25.084507       1 loader.go:379] Config loaded from file:  /etc/kubernetes/static-pod-resources/configmaps/kube-apiserver-cert-syncer-kubeconfig/kubeconfig</span>
+  </div>
   <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 180px; height: 21px; width: 100%;">
     <span class="pf-c-log-viewer__index">4</span>
     <span class="pf-c-log-viewer__text">    Copying termination logs to "/var/log/kube-apiserver/termination.log"</span>
@@ -26,58 +19,44 @@
     <span class="pf-c-log-viewer__index">5</span>
     <span class="pf-c-log-viewer__text">    I0223 20:04:25.087543       1 main.go:124] Touching termination lock file "/var/log/kube-apiserver/.terminating"</span>
   </div>
-  {{#if log-viewer--IsMatch}}
-    <div class="pf-c-log-viewer__list-item pf-m-match" style="position: absolute; left: 0px; top: 300px; height: 21px; width: 100%;">
-      <span class="pf-c-log-viewer__index">6</span>
-      <span class="pf-c-log-viewer__text">    I0223 20:04:25.088797       1 main.go:182] Launching sub-process "/usr/bin/hyperkube kube-apiserver --openshift-config=/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml --advertise-address=10.0.171.12 -v=2 --permit-address-sharing"</span>
-    </div>
-  {{else}}
-    <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 300px; height: 21px; width: 100%;">
-      <span class="pf-c-log-viewer__index">6</span>
-      <span class="pf-c-log-viewer__text">    I0223 20:04:25.088797       1 main.go:182] Launching sub-process "/usr/bin/hyperkube kube-apiserver --openshift-config=/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml --advertise-address=10.0.171.12 -v=2 --permit-address-sharing"</span>
-    </div>
-  {{/if}}
+  <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 300px; height: 21px; width: 100%;">
+    <span class="pf-c-log-viewer__index">6</span>
+    <span class="pf-c-log-viewer__text">    I0223 20:04:25.088797       1 main.go:182] Launching sub-process "/usr/bin/hyperkube kube-apiserver --{{#if log-viewer--IsMatch}}{{#> log-viewer-string log-viewer-string--modifier="pf-m-current"}}openshift{{/log-viewer-string}}{{else}}openshift{{/if}}-config=/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml --advertise-address=10.0.171.12 -v=2 --permit-address-sharing"</span>
+  </div>
   <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 360px; height: 21px; width: 100%;">
     <span class="pf-c-log-viewer__index">7</span>
-    <span class="pf-c-log-viewer__text">    Flag --openshift-config has been deprecated, to be removed</span>
+    <span class="pf-c-log-viewer__text">    Flag --{{#if log-viewer--IsMatch}}{{#> log-viewer-string log-viewer-string--modifier="pf-m-match"}}openshift{{/log-viewer-string}}{{else}}openshift{{/if}}-config has been deprecated, to be removed</span>
   </div>
   <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 420px; height: 21px; width: 100%;">
     <span class="pf-c-log-viewer__index">8</span>
-    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238681      17 plugins.go:84] Registered admission plugin "authorization.openshift.io/RestrictSubjectBindings"</span>
+    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238681      17 plugins.go:84] Registered admission plugin "authorization.{{#if log-viewer--IsMatch}}{{#> log-viewer-string log-viewer-string--modifier="pf-m-match"}}openshift{{/log-viewer-string}}{{else}}openshift{{/if}}.io/RestrictSubjectBindings"</span>
   </div>
   <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 480px; height: 21px; width: 100%;">
     <span class="pf-c-log-viewer__index">9</span>
-    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238763      17 plugins.go:84] Registered admission plugin "image.openshift.io/ImagePolicy"</span>
+    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238763      17 plugins.go:84] Registered admission plugin "image.{{#if log-viewer--IsMatch}}{{#> log-viewer-string log-viewer-string--modifier="pf-m-match"}}openshift{{/log-viewer-string}}{{else}}openshift{{/if}}.io/ImagePolicy"</span>
   </div>
-  {{#if log-viewer--IsMatch}}
-    <div class="pf-c-log-viewer__list-item pf-m-match" style="position: absolute; left: 0px; top: 540px; height: 21px; width: 100%;">
-      <span class="pf-c-log-viewer__index">10</span>
-      <span class="pf-c-log-viewer__text">    I0223 20:04:25.238775      17 plugins.go:84] Registered admission plugin "route.openshift.io/IngressAdmission"</span>
-    </div>
-  {{else}}
-    <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 540px; height: 21px; width: 100%;">
-      <span class="pf-c-log-viewer__index">10</span>
-      <span class="pf-c-log-viewer__text">    I0223 20:04:25.238775      17 plugins.go:84] Registered admission plugin "route.openshift.io/IngressAdmission"</span>
-    </div>
-  {{/if}}
+  <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 540px; height: 21px; width: 100%;">
+    <span class="pf-c-log-viewer__index">10</span>
+    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238775      17 plugins.go:84] Registered admission plugin "route.{{#if log-viewer--IsMatch}}{{#> log-viewer-string log-viewer-string--modifier="pf-m-match"}}openshift{{/log-viewer-string}}{{else}}openshift{{/if}}.io/IngressAdmission"</span>
+  </div>
   <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 600px; height: 21px; width: 100%;">
     <span class="pf-c-log-viewer__index">11</span>
-    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238783      17 plugins.go:84] Registered admission plugin "scheduling.openshift.io/OriginPodNodeEnvironment"</span>
+    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238783      17 plugins.go:84] Registered admission plugin "scheduling.{{#if log-viewer--IsMatch}}{{#> log-viewer-string log-viewer-string--modifier="pf-m-match"}}openshift{{/log-viewer-string}}{{else}}openshift{{/if}}.io/OriginPodNodeEnvironment"</span>
   </div>
   <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 660px; height: 21px; width: 100%;">
     <span class="pf-c-log-viewer__index">12</span>
-    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238792      17 plugins.go:84] Registered admission plugin "autoscaling.openshift.io/ClusterResourceOverride"</span>
+    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238792      17 plugins.go:84] Registered admission plugin "autoscaling.{{#if log-viewer--IsMatch}}{{#> log-viewer-string log-viewer-string--modifier="pf-m-match"}}openshift{{/log-viewer-string}}{{else}}openshift{{/if}}.io/ClusterResourceOverride"</span>
   </div>
   <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 720px; height: 21px; width: 100%;">
     <span class="pf-c-log-viewer__index">13</span>
-    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238801      17 plugins.go:84] Registered admission plugin "quota.openshift.io/ClusterResourceQuota"</span>
+    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238801      17 plugins.go:84] Registered admission plugin "quota.{{#if log-viewer--IsMatch}}{{#> log-viewer-string log-viewer-string--modifier="pf-m-match"}}openshift{{/log-viewer-string}}{{else}}openshift{{/if}}.io/ClusterResourceQuota"</span>
   </div>
   <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 780px; height: 21px; width: 100%;">
     <span class="pf-c-log-viewer__index">14</span>
-    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238810      17 plugins.go:84] Registered admission plugin "autoscaling.openshift.io/RunOnceDuration"</span>
+    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238810      17 plugins.go:84] Registered admission plugin "autoscaling.{{#if log-viewer--IsMatch}}{{#> log-viewer-string log-viewer-string--modifier="pf-m-match"}}openshift{{/log-viewer-string}}{{else}}openshift{{/if}}.io/RunOnceDuration"</span>
   </div>
   <div class="pf-c-log-viewer__list-item" style="position: absolute; left: 0px; top: 840px; height: 21px; width: 100%;">
     <span class="pf-c-log-viewer__index">15</span>
-    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238819      17 plugins.go:84] Registered admission plugin "scheduling.openshift.io/PodNodeConstraints"</span>
+    <span class="pf-c-log-viewer__text">    I0223 20:04:25.238819      17 plugins.go:84] Registered admission plugin "scheduling.{{#if log-viewer--IsMatch}}{{#> log-viewer-string log-viewer-string--modifier="pf-m-match"}}openshift{{/log-viewer-string}}{{else}}openshift{{/if}}.io/PodNodeConstraints"</span>
   </div>
 </div>

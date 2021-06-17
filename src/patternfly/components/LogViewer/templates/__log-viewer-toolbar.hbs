@@ -9,7 +9,7 @@
           {{> toolbar-toggle toolbar-toggle--icon="fa-search" toolbar-toggle--IsExpanded="false"}}
           {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter" toolbar-item--attribute='style="--pf-c-toolbar__item--Width: 268px"'}}
             {{#if __log-viewer-toolbar--IsMatch}}
-              {{> search-input search-input--placeholder="Find" search-input--value=" " search-input--count="1 / 3" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
+              {{> search-input search-input--placeholder="Find" search-input--value=" " search-input--count="1 / 10" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
             {{else}}
               {{> search-input search-input--placeholder="Find"}}
             {{/if}}
@@ -85,7 +85,7 @@
       {{#> toolbar-expandable-content}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter" toolbar-item--attribute='style="--pf-c-toolbar__item--Width: 24ch"'}}
           {{#if __log-viewer-toolbar--IsMatch}}
-            {{> search-input search-input--placeholder="Find" search-input--value=" " search-input--count="1 / 3" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
+            {{> search-input search-input--placeholder="Find" search-input--value=" " search-input--count="1 / 10" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
           {{else}}
             {{> search-input search-input--placeholder="Find"}}
           {{/if}}
