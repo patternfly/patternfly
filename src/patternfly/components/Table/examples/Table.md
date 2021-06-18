@@ -3362,6 +3362,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__draggable` | `<td>` | Initiates a draggable table cell. |
+| `.pf-m-drag-over` | `.pf-c-table` | Modifies the table to indicate that a draggable item is being dragged over the table. |
 
 ## Documentation
 
