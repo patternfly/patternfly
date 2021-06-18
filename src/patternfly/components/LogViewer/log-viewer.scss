@@ -42,8 +42,10 @@
   --pf-c-log-viewer__text--FontFamily: var(--pf-global--FontFamily--monospace);
   --pf-c-log-viewer__text--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-log-viewer__text--Color: var(--pf-global--Color--100);
-  --pf-c-log-viewer__string--m-match--BackgroundColor: var(--pf-global--palette--gold-50);
-  --pf-c-log-viewer__string--m-current--BackgroundColor: var(--pf-global--palette--gold-100);
+  --pf-c-log-viewer__string--m-match--Color: var(--pf-global--palette--gold-700);
+  --pf-c-log-viewer__string--m-match--BackgroundColor: var(--pf-global--palette--gold-100);
+  --pf-c-log-viewer__string--m-current--Color: var(--pf-global--palette--gold-700);
+  --pf-c-log-viewer__string--m-current--BackgroundColor: var(--pf-global--palette--gold-400);
 
   // Timestamp
   --pf-c-log-viewer__timestamp--FontWeight: var(--pf-global--FontWeight--bold);
@@ -162,10 +164,12 @@
 
 .pf-c-log-viewer__string {
   &.pf-m-match {
+    color: var(--pf-c-log-viewer__string--m-match--Color, inherit);
     background-color: var(--pf-c-log-viewer__string--m-match--BackgroundColor);
   }
 
   &.pf-m-current {
+    color: var(--pf-c-log-viewer__string--m-current--Color, inherit);
     background-color: var(--pf-c-log-viewer__string--m-current--BackgroundColor);
   }
 }
