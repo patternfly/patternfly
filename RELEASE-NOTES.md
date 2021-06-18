@@ -3,6 +3,40 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2021.08 release notes (2021-06-22)
+Packages released:
+- [@patternfly/patternfly@v4.115.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.115.2)
+
+### Components
+- **Content:** Changed visited to declare color property ([#4132](https://github.com/patternfly/patternfly/pull/4132))
+- **Context selector:** Added plain text variant and example ([#4095](https://github.com/patternfly/patternfly/pull/4095))
+- **Context selector and dropdown:**
+  - Added dropdown, context selector full height mods ([#4108](https://github.com/patternfly/patternfly/pull/4108))
+  - Fixed full height border active, focus ([#4154](https://github.com/patternfly/patternfly/pull/4154))
+- **Expandable section:** Added large variation ([#4143](https://github.com/patternfly/patternfly/pull/4143))
+- **Form:** Added missing padding to labels in collapsed horizontal mode ([#4152](https://github.com/patternfly/patternfly/pull/4152))
+- **Helper text:**
+  - Renamed invalid state to error ([#4140](https://github.com/patternfly/patternfly/pull/4140))
+  - Added demo ([#4162](https://github.com/patternfly/patternfly/pull/4162))
+- **Label:** Replaced "overflow" text with "truncate" in truncation examples ([#4136](https://github.com/patternfly/patternfly/pull/4136))
+- **Log viewer:**
+  - Added dark variation ([#4133](https://github.com/patternfly/patternfly/pull/4133))
+  - Added string element with current/match support ([#4166](https://github.com/patternfly/patternfly/pull/4166))
+- **Menu:** Updated content overflow ([#4157](https://github.com/patternfly/patternfly/pull/4157))
+- **Notification drawer:** Updated demo notification text to reflect demo state ([#4117](https://github.com/patternfly/patternfly/pull/4117))
+- **Overflow menu:** Added aria-expanded to examples ([#4137](https://github.com/patternfly/patternfly/pull/4137))
+- **Page:** Increased sticky page section z-index ([#4128](https://github.com/patternfly/patternfly/pull/4128))
+- **Table:**
+  - Added draggable variant ([#4120](https://github.com/patternfly/patternfly/pull/4120))
+  - Added background color to draggable ghost row ([#4159](https://github.com/patternfly/patternfly/pull/4159))
+- **Toolbar:** Added sticky variation ([#4134](https://github.com/patternfly/patternfly/pull/4134))
+- **Tree table:** Added actions support ([#4135](https://github.com/patternfly/patternfly/pull/4135))
+
+### Other
+- **Global:** Promoted beta components ([#4122](https://github.com/patternfly/patternfly/pull/4122))
+- **Build:** Updated to use dart sass ([#4164](https://github.com/patternfly/patternfly/pull/4164))
+
+
 ## 2021.07 release notes (2021-06-04)
 Packages released:
 - [@patternfly/patternfly@v4.108.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.108.2)
