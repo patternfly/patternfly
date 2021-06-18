@@ -123,6 +123,6 @@ import './LogViewer.css';
 | `.pf-m-wrap-text` | `.pf-c-log-viewer` | Modifies the log viewer text to wrap. |
 | `.pf-m-line-numbers` | `.pf-c-log-viewer` | Modifies the log viewer to display line numbers. |
 | `.pf-m-dark` | `.pf-c-log-viewer` | Modifies the log viewer content for dark theme. |
-| `.pf-m-match` | `.pf-c-log-viewer__string` | Indicates a list item is a search result. |
-| `.pf-m-current` | `.pf-c-log-viewer__string` | Indicates a list item is the current search result. |
+| `.pf-m-match` | `.pf-c-log-viewer__string` | Indicates a string is a search result. |
+| `.pf-m-current` | `.pf-c-log-viewer__string` | Indicates a string is the current search result. |
 | `--pf-c-log-viewer--MaxHeight{-on-[breakpoint]}: {height}` | `.pf-c-log-viewer` |  Modifies the height value of a log viewer. |
