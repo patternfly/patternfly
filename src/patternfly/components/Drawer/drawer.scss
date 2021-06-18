@@ -590,7 +590,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   @include pf-apply-breakpoint($breakpoint) {
     @each $width-value in $pf-c-drawer__panel--list--width {
       .pf-c-drawer__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
-        --pf-c-drawer__panel--md--FlexBasis: #{percentage($width-value / 100)};
+        --pf-c-drawer__panel--md--FlexBasis: #{percentage(div($width-value, 100))};
       }
     }
   }
