@@ -646,6 +646,10 @@
     }
   }
   // stylelint-enable
+
+  &.pf-m-drag-over {
+    overflow-anchor: none;
+  }
 }
 
 // Text
