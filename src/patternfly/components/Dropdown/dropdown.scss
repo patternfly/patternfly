@@ -157,7 +157,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     --pf-c-dropdown__toggle--focus--before--BorderBottomWidth: var(--pf-c-dropdown--m-full-height__toggle--focus--before--BorderBottomWidth);
     --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: var(--pf-c-dropdown--m-full-height__toggle--expanded--before--BorderBottomWidth);
 
-    display: flex;
+    display: inline-flex;
     align-items: center;
     height: 100%;
 
