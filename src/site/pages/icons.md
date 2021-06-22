@@ -111,6 +111,7 @@ id: Icons
 | spinner | <i class="pf-icon pf-icon-spinner"></i> | &lt;i class=&quot;pf-icon pf-icon-spinner&quot;&gt;&lt;/i&gt;
 | spinner2 | <i class="pf-icon pf-icon-spinner2"></i> | &lt;i class=&quot;pf-icon pf-icon-spinner2&quot;&gt;&lt;/i&gt;
 | storage-domain | <i class="pf-icon pf-icon-storage-domain"></i> | &lt;i class=&quot;pf-icon pf-icon-storage-domain&quot;&gt;&lt;/i&gt;
+| task | <i class="pf-icon pf-icon-task"></i> | &lt;i class=&quot;pf-icon pf-icon-task&quot;&gt;&lt;/i&gt;
 | tenant | <i class="pf-icon pf-icon-tenant"></i> | &lt;i class=&quot;pf-icon pf-icon-tenant&quot;&gt;&lt;/i&gt;
 | thumb-tack | <i class="pf-icon pf-icon-thumb-tack"></i> | &lt;i class=&quot;pf-icon pf-icon-thumb-tack&quot;&gt;&lt;/i&gt;
 | topology | <i class="pf-icon pf-icon-topology"></i> | &lt;i class=&quot;pf-icon pf-icon-topology&quot;&gt;&lt;/i&gt;
