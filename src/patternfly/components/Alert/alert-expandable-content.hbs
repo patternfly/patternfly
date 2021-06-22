@@ -1,0 +1,9 @@
+<section class="pf-c-alert__expandable-content{{#if alert-expandable-content--modifier}} {{alert-expandable-content--modifier}}{{/if}}"
+  {{#if alert-expandable-content--attribute}}
+    {{{alert-expandable-content--attribute}}}
+  {{/if}}
+  {{#unless alert--expanded}}
+    hidden
+  {{/unless}}>
+    {{> @partial-block}}
+</section>

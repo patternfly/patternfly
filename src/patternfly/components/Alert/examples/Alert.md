@@ -5,7 +5,9 @@ cssPrefix: pf-c-alert
 ---
 
 ## Examples
+
 ### Types
+
 ```hbs
 {{#> alert alert--attribute='aria-label="Default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
@@ -54,7 +56,56 @@ cssPrefix: pf-c-alert
 ```
 
 ### Variations
+
 ```hbs
+<br>
+{{#> alert alert--modifier="pf-m-expandable" alert--attribute='aria-label="Expandable alert"'}}
+          {{#> alert-toggle button--attribute=(concat 'aria-labelledby="' alert--id '-toggle1 ' data-list--id '-item1" id="' alert--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}
+        {{/alert-toggle}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+ Success alert title
+  {{/alert-title}}
+  {{#> alert-description}}
+     Success alert description. This should tell the user more information about the alert.
+  {{/alert-description}}
+{{/alert}}
+<br>
+
+<br>
+{{#> alert alert--modifier="pf-m-expanded" alert--attribute='aria-label="Expandable alert"' alert--IsExpanded="true"
+}}
+
+        {{#> alert-toggle button--attribute=(concat 'aria-labelledby="' alert--id '-toggle1 ' data-list--id '-item1" id="' alert--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}
+        {{/alert-toggle}}
+
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+ {{#> alert-action-group}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      View details
+    {{/button}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      Ignore
+    {{/button}}
+  {{/alert-action-group}}
+
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+ Success alert title
+  {{/alert-title}}
+  {{#> alert-description}}
+        This is some description for this alert that is super long. This is some description for this alert that is super long. This is some description for this alert that is long.
+        Some additional information:
+        - maybe it’s a list
+        - not really sure
+        - maybe it’s code
+  {{/alert-description}}
+{{/alert}}
+<br>
+
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
   {{/alert-icon}}
@@ -168,6 +219,7 @@ cssPrefix: pf-c-alert
 ```
 
 ### Inline types
+
 ```hbs
 {{#> alert alert--modifier="pf-m-inline" alert--attribute='aria-label="Inline default alert"'}}
   {{#> alert-icon alert-icon--type="bell"}}
@@ -216,6 +268,7 @@ cssPrefix: pf-c-alert
 ```
 
 ### Inline variations
+
 ```hbs
 {{#> alert alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="check-circle"}}
@@ -292,6 +345,7 @@ cssPrefix: pf-c-alert
 ```
 
 ### Custom icon
+
 ```hbs
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{#> alert-icon alert-icon--type="cog"}}
@@ -313,36 +367,40 @@ cssPrefix: pf-c-alert
 ```
 
 ## Documentation
+
 ### Overview
+
 Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.
 
 ### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-label="Default alert"` | `.pf-c-alert` |  Indicates the default alert. |
-| `aria-label="Success alert"` | `.pf-c-alert` |  Indicates the success alert. |
-| `aria-label="Danger alert"` | `.pf-c-alert` |  Indicates the danger alert. |
-| `aria-label="Warning alert"` | `.pf-c-alert` |  Indicates the warning alert. |
-| `aria-label="Information alert"` | `.pf-c-alert` |  Indicates the information alert. |
-| `aria-label="Close success alert: Success alert title"` | `.pf-c-button.pf-m-plain` | Indicates the close button. Please provide descriptive text to ensure assistive technologies clearly state which alert is being closed.|
-| `aria-hidden="true"` | `.pf-c-alert__icon <i>` |  Hides icon for assistive technologies. ** Required **|
 
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-screen-reader` | `.pf-c-alert__title <span>` | Content that is visually hidden but accessible to assistive technologies. This should state the type of alert.  ** Required**|
+| Attribute                                               | Applied to                | Outcome                                                                                                                                 |
+| ------------------------------------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `aria-label="Default alert"`                            | `.pf-c-alert`             | Indicates the default alert.                                                                                                            |
+| `aria-label="Success alert"`                            | `.pf-c-alert`             | Indicates the success alert.                                                                                                            |
+| `aria-label="Danger alert"`                             | `.pf-c-alert`             | Indicates the danger alert.                                                                                                             |
+| `aria-label="Warning alert"`                            | `.pf-c-alert`             | Indicates the warning alert.                                                                                                            |
+| `aria-label="Information alert"`                        | `.pf-c-alert`             | Indicates the information alert.                                                                                                        |
+| `aria-label="Close success alert: Success alert title"` | `.pf-c-button.pf-m-plain` | Indicates the close button. Please provide descriptive text to ensure assistive technologies clearly state which alert is being closed. |
+| `aria-hidden="true"`                                    | `.pf-c-alert__icon <i>`   | Hides icon for assistive technologies. ** Required **                                                                                   |
+
+| Class               | Applied to                  | Outcome                                                                                                                      |
+| ------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `.pf-screen-reader` | `.pf-c-alert__title <span>` | Content that is visually hidden but accessible to assistive technologies. This should state the type of alert. ** Required** |
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-alert` | `<div>` |  Applies default alert styling. Always use with a modifier class. ** Required**|
-| `.pf-c-alert__icon` | `<div>` |  	Defines the alert icon. ** Required **|
-| `.pf-c-alert__title` | `<p>, <h1-h6>` |  Defines the alert title. ** Required **|
-| `.pf-c-alert__description` | `<div>` |  Defines the alert description area. |
-| `.pf-c-alert__action` | `<div>` |  Defines the action button wrapper. Should contain `.pf-c-button.pf-m-plain` for close action or `.pf-c-button.pf-m-link` for link text. It should only include one action. |
-| `.pf-c-alert__action-group` | `<div>` |  Defines the action button group. Should contain `.pf-c-button.pf-m-link.pf-m-inline` for inline link text. **Note: ** only inline link buttons are supported in the alert action group. |
-| `.pf-m-success` | `.pf-c-alert` |  Applies success styling. |
-| `.pf-m-danger` | `.pf-c-alert` |  Applies danger styling. |
-| `.pf-m-warning` | `.pf-c-alert` |  Applies warning styling. |
-| `.pf-m-info` | `.pf-c-alert` |  Applies info styling. |
-| `.pf-m-inline` | `.pf-c-alert` |  Applies inline styling. |
-| `.pf-m-truncate` | `.pf-c-alert__title` |  Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-c-alert__title--max-lines` (the default value is `1`). |
+
+| Class                       | Applied to           | Outcome                                                                                                                                                                                                                         |
+| --------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.pf-c-alert`               | `<div>`              | Applies default alert styling. Always use with a modifier class. ** Required**                                                                                                                                                  |
+| `.pf-c-alert__icon`         | `<div>`              | Defines the alert icon. ** Required **                                                                                                                                                                                          |
+| `.pf-c-alert__title`        | `<p>, <h1-h6>`       | Defines the alert title. ** Required **                                                                                                                                                                                         |
+| `.pf-c-alert__description`  | `<div>`              | Defines the alert description area.                                                                                                                                                                                             |
+| `.pf-c-alert__action`       | `<div>`              | Defines the action button wrapper. Should contain `.pf-c-button.pf-m-plain` for close action or `.pf-c-button.pf-m-link` for link text. It should only include one action.                                                      |
+| `.pf-c-alert__action-group` | `<div>`              | Defines the action button group. Should contain `.pf-c-button.pf-m-link.pf-m-inline` for inline link text. **Note: ** only inline link buttons are supported in the alert action group.                                         |
+| `.pf-m-success`             | `.pf-c-alert`        | Applies success styling.                                                                                                                                                                                                        |
+| `.pf-m-danger`              | `.pf-c-alert`        | Applies danger styling.                                                                                                                                                                                                         |
+| `.pf-m-warning`             | `.pf-c-alert`        | Applies warning styling.                                                                                                                                                                                                        |
+| `.pf-m-info`                | `.pf-c-alert`        | Applies info styling.                                                                                                                                                                                                           |
+| `.pf-m-inline`              | `.pf-c-alert`        | Applies inline styling.                                                                                                                                                                                                         |
+| `.pf-m-truncate`            | `.pf-c-alert__title` | Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-c-alert__title--max-lines` (the default value is `1`). |
