@@ -1,3 +1,11 @@
 // This will only be imported by dart-sass thanks to the `.import` extension.
 // See https://github.com/patternfly/patternfly/issues/4096#issuecomment-859055362
-@forward "sass:math" show div;
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+
+$-use-math-div: map.has-key(meta.module-functions("math"), "div");
+
+@function div($number1, $number2) {
+  @return if($-use-math-div, math.div($number1, $number2), $number1 / $number2);
+}
