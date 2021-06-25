@@ -1683,7 +1683,7 @@ import './Menu.css'
 | `.pf-m-drilled-in` | `.pf-c-menu.pf-m-drilldown, .pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled in state. |
 | `--pf-c-menu--Width: {width}` | `.pf-c-menu` | Modifies the width of the menu. The default value is `auto`. |
 | `--pf-c-menu__content--MaxHeight: {height}` | `.pf-c-menu__content` | Modifies the height of the menu content. Update this value when header and/or footer elements are intended to be fixed. |
-| `--pf-c-menu__content--Height: {height}` | `.pf-c-menu.pf-m-drilldown` | Modifies the height of the drilldown menu content. The default value is `auto`. |
-<!--
-| `--pf-c-menu--MaxHeight: {height}` | `.pf-c-menu` | Modifies the max height of the menu. The default value is `auto`. |
--->
+| `--pf-c-menu__content--Height: {height}` | `.pf-c-menu` | Modifies the height of the drilldown menu content. The default value is `auto`. |
+| `--pf-c-menu--m-flyout__menu--top-offset` | `.pf-c-menu` | Modifies the menu to allow for an offset to the top positioning. |
+| `--pf-c-menu--m-flyout__menu--left-offset` | `.pf-c-menu` | Modifies the menu to allow for an offset to the left positioning. |
+| `--pf-c-menu--m-flyout__list-item--m-menu-left__menu--right-offset` | `.pf-c-menu__list-item.pf-m-menu-left > .pf-c-menu` | Modifies the menu to allow for an offset to the right positioning. |
