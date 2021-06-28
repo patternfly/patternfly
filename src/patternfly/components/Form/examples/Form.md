@@ -196,7 +196,7 @@ cssPrefix: pf-c-form
 ```
 ### Label with additional info
 ```hbs
-{{#> form form--id="form-vertical"}}
+{{#> form form--id="form-additional-info"}}
   {{#> form-group form-group--id="-name"}}
     {{#> form-group-label form-group-label-info="true"}}
       {{#> form-group-label-main}}
@@ -561,7 +561,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__label` | `<label>` |  Initiates a form label. **Required** |
 | `.pf-c-form__label-text` | `<span>` |  Initiates a form label text. **Required** |
 | `.pf-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
-| `.pf-c-form__group-label-main` | `<div>` |  Initiates a form group main label container. |
+| `.pf-c-form__group-label-main` | `<div>` |  Initiates a form group label main container. |
 | `.pf-c-form__group-label-info` | `<div>` |  Initiates a form group info label. |
 | `.pf-c-form__group-label-help` | `<button>` | Initiates a field level help button. |
 | `.pf-c-form__group-control` | `<div>` |  Initiates a form group control section. |

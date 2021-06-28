@@ -44,6 +44,7 @@
 
   // Form group label info
   --pf-c-form__group-label-info--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-form__group-label-info--FontSize: var(--pf-global--FontSize--sm);
 
   // Group control
   --pf-c-form__group-control--m-inline--child--MarginRight: var(--pf-global--spacer--lg);
@@ -194,6 +195,7 @@
 
   &.pf-m-info {
     display: flex;
+    align-items: flex-end;
   }
 }
 
@@ -203,6 +205,7 @@
 
 .pf-c-form__group-label-info {
   margin-left: var(--pf-c-form__group-label-info--MarginLeft);
+  font-size: var(--pf-c-form__group-label-info--FontSize);
 }
 
 .pf-c-form__label {
