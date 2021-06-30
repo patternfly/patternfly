@@ -659,8 +659,8 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-button-group` | `.pf-c-toolbar__group` | Initiates button group spacing. |
 | `.pf-m-icon-button-group` | `.pf-c-toolbar__group` | Initiates icon button group spacing. |
 | `.pf-m-filter-group` | `.pf-c-toolbar__group` | Initiates filter group spacing. |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to be hidden, at optional breakpoint. |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to be shown, at optional breakpoint. |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-toolbar__content`, `.pf-c-toolbar__content-section`, `.pf-c-toolbar__item`, `.pf-c-toolbar__group` | Modifies toolbar element to be hidden, at optional breakpoint. |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-toolbar__content`, `.pf-c-toolbar__content-section`, `.pf-c-toolbar__item`, `.pf-c-toolbar__group` | Modifies toolbar element to be shown, at optional breakpoint. |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align right, at optional breakpoint. |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align left, at optional breakpoint. |
 | `.pf-m-label` | `.pf-c-toolbar__item` | Modifies toolbar item to label. |
