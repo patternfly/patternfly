@@ -44,10 +44,11 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   // ::after
   --pf-c-dropdown__toggle--after--BorderBottomColor: var(--pf-c-dropdown__toggle--before--BorderBottomColor); // update value at breaking change
+  --pf-c-dropdown__toggle--after--BorderBottomWidth: var(--pf-c-dropdown__toggle--before--BorderWidth); // update value at breaking change
   --pf-c-dropdown__toggle--hover--after--BorderBottomColor: var(--pf-c-dropdown__toggle--hover--before--BorderBottomColor); // update value at breaking change
   --pf-c-dropdown__toggle--active--after--BorderBottomWidth: var(--pf-c-dropdown__toggle--active--before--BorderBottomWidth); // update value at breaking change
   --pf-c-dropdown__toggle--active--after--BorderBottomColor: var(--pf-c-dropdown__toggle--active--before--BorderBottomColor); // update value at breaking change
-  --pf-c-dropdown__toggle--focus--after--BorderBottomWidth: var(--pf-global--BorderWidth--md); // update value at breaking change
+  --pf-c-dropdown__toggle--focus--after--BorderBottomWidth: var(--pf-c-dropdown__toggle--focus--before--BorderBottomWidth); // update value at breaking change
   --pf-c-dropdown__toggle--focus--after--BorderBottomColor: var(--pf-c-dropdown__toggle--focus--before--BorderBottomColor); // update value at breaking change
   --pf-c-dropdown--m-expanded__toggle--after--BorderBottomWidth: var(--pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth); // update value at breaking change
   --pf-c-dropdown--m-expanded__toggle--after--BorderBottomColor: var(--pf-c-dropdown--m-expanded__toggle--before--BorderBottomColor); // update value at breaking change

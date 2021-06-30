@@ -28,13 +28,13 @@
 
   // ::before
   --pf-c-context-selector__toggle--before--BorderWidth: var(--pf-c-context-selector__toggle--BorderWidth); // update value at breaking change
-  --pf-c-context-selector__toggle--before--temp--BorderBottomColor: var(--pf-global--BorderColor--300); // change to --pf-c-context-selector__toggle--before--BorderColor at breaking change
   --pf-c-context-selector__toggle--before--BorderTopColor: var(--pf-c-context-selector__toggle--BorderTopColor); // remove at breaking change
   --pf-c-context-selector__toggle--before--BorderRightColor: var(--pf-c-context-selector__toggle--BorderRightColor); // remove at breaking change
+  --pf-c-context-selector__toggle--before--BorderBottomColor: var(--pf-c-context-selector__toggle--BorderBottomColor); // remove at breaking change
   --pf-c-context-selector__toggle--before--BorderLeftColor: var(--pf-c-context-selector__toggle--BorderLeftColor); // remove at breaking change
 
   // ::after
-  --pf-c-context-selector__toggle--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-context-selector__toggle--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--BorderWidth);
   --pf-c-context-selector__toggle--after--BorderBottomColor: var(--pf-c-context-selector__toggle--BorderBottomColor); // update value at breaking change
   --pf-c-context-selector__toggle--hover--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--hover--BorderBottomWidth); // update value at breaking change
   --pf-c-context-selector__toggle--hover--after--BorderBottomColor: var(--pf-c-context-selector__toggle--hover--BorderBottomColor); // update value at breaking change
@@ -147,7 +147,7 @@
 
   &::before {
     border: var(--pf-c-context-selector__toggle--before--BorderWidth) solid;
-    border-color: var(--pf-c-context-selector__toggle--before--BorderTopColor) var(--pf-c-context-selector__toggle--before--BorderRightColor) var(--pf-c-context-selector__toggle--before--temp--BorderBottomColor) var(--pf-c-context-selector__toggle--before--BorderLeftColor);
+    border-color: var(--pf-c-context-selector__toggle--before--BorderTopColor) var(--pf-c-context-selector__toggle--before--BorderRightColor) var(--pf-c-context-selector__toggle--before--BorderBottomColor) var(--pf-c-context-selector__toggle--before--BorderLeftColor);
   }
 
   &::after {
