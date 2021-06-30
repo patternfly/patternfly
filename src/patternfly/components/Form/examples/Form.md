@@ -194,7 +194,27 @@ cssPrefix: pf-c-form
   {{/form-group}}
 {{/form}}
 ```
-
+### Label with additional info
+```hbs
+{{#> form form--id="form-additional-info"}}
+  {{#> form-group form-group--id="-name"}}
+    {{#> form-group-label form-group-label-info="true"}}
+      {{#> form-group-label-main}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
+          Name
+        {{/form-label}}
+        {{> form-group-label-help}}
+      {{/form-group-label-main}}
+      {{#> form-group-label-info}}
+        info
+      {{/form-group-label-info}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+    {{/form-group-control}}
+  {{/form-group}}
+{{/form}}
+```
 ### Action group
 ```hbs
 {{#> form}}
@@ -210,7 +230,6 @@ cssPrefix: pf-c-form
   {{/form-group}}
 {{/form}}
 ```
-
 ### Field groups
 ```hbs
 {{#> form form--id="form-expandable-field-groups"}}
@@ -542,6 +561,8 @@ cssPrefix: pf-c-form
 | `.pf-c-form__label` | `<label>` |  Initiates a form label. **Required** |
 | `.pf-c-form__label-text` | `<span>` |  Initiates a form label text. **Required** |
 | `.pf-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
+| `.pf-c-form__group-label-main` | `<div>` |  Initiates a form group label main container. |
+| `.pf-c-form__group-label-info` | `<div>` |  Initiates a form group info label. |
 | `.pf-c-form__group-label-help` | `<button>` | Initiates a field level help button. |
 | `.pf-c-form__group-control` | `<div>` |  Initiates a form group control section. |
 | `.pf-c-form__actions` | `<div>` | Iniates a row of actions. |
@@ -560,6 +581,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__field-group-header-actions` | `<div>` | Initiates the form field group actions container. |
 | `.pf-c-form__field-group-body` | `<div>` | Initiates the form field group body. |
 | `.pf-m-horizontal` | `.pf-c-form` | Modifies form for a horizontal layout. |
+| `.pf-m-info` | `.pf-c-form__group-label` | Modifies the form group label to contain form group label info. |
 | `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |
 | `.pf-m-success` | `.pf-c-form__helper-text` | Modifies text color of helper text for success state. |
 | `.pf-m-warning` | `.pf-c-form__helper-text` | Modifies text color of helper text for warning state. |

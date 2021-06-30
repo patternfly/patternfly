@@ -42,6 +42,10 @@
   --pf-c-form__group-label-help--hover--Color: var(--pf-global--Color--100);
   --pf-c-form__group-label-help--focus--Color: var(--pf-global--Color--100);
 
+  // Form group label info
+  --pf-c-form__group-label-info--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-form__group-label-info--FontSize: var(--pf-global--FontSize--sm);
+
   // Group control
   --pf-c-form__group-control--m-inline--child--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-form__group-control__helper-text--MarginBottom: var(--pf-global--spacer--xs);
@@ -188,6 +192,20 @@
   --pf-c-form__helper-text--MarginTop: 0;
 
   padding-bottom: var(--pf-c-form__group-label--PaddingBottom);
+
+  &.pf-m-info {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.pf-c-form__group-label-main {
+  flex-grow: 1;
+}
+
+.pf-c-form__group-label-info {
+  margin-left: var(--pf-c-form__group-label-info--MarginLeft);
+  font-size: var(--pf-c-form__group-label-info--FontSize);
 }
 
 .pf-c-form__label {
