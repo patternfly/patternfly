@@ -366,7 +366,7 @@ import './Menu.css'
           {{/menu-content}}
         {{/menu}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--modifier="pf-m-menu-top"}}
+      {{#> menu-list-item}}
         {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
@@ -378,7 +378,7 @@ import './Menu.css'
             Description
           {{/menu-item-description}}
         {{/menu-item}}
-        {{#> menu newcontext}}
+        {{#> menu newcontext menu--modifier="pf-m-top"}}
           {{#> menu-content}}
             {{#> menu-list}}
               {{#> menu-list-item}}
@@ -510,7 +510,7 @@ import './Menu.css'
           {{/menu-content}}
         {{/menu}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--modifier="pf-m-menu-left"}}
+      {{#> menu-list-item}}
         {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
@@ -522,7 +522,7 @@ import './Menu.css'
             Description
           {{/menu-item-description}}
         {{/menu-item}}
-        {{#> menu newcontext}}
+        {{#> menu newcontext menu--modifier="pf-m-left"}}
           {{#> menu-content}}
             {{#> menu-list}}
               {{#> menu-list-item}}
@@ -654,7 +654,7 @@ import './Menu.css'
           {{/menu-content}}
         {{/menu}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--modifier="pf-m-menu-left pf-m-menu-top"}}
+      {{#> menu-list-item}}
         {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
@@ -666,7 +666,7 @@ import './Menu.css'
             Description
           {{/menu-item-description}}
         {{/menu-item}}
-        {{#> menu newcontext}}
+        {{#> menu newcontext  menu--modifier="pf-m-left pf-m-top"}}
           {{#> menu-content}}
             {{#> menu-list}}
               {{#> menu-list-item}}
@@ -1674,8 +1674,8 @@ import './Menu.css'
 | `.pf-m-favorited` | `.pf-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |
 | `.pf-m-selected` | `.pf-c-menu__item` | Modifies the menu item to be selected. |
 | `.pf-m-flyout` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "flyout". |
-| `.pf-m-menu-top` | `.pf-c-menu__list-item` | Modifies a flyout menu to expand to the top. |
-| `.pf-m-menu-left` | `.pf-c-menu__list-item` | Modifies a flyout menu to expand to the left. |
+| `.pf-m-top` | `.pf-c-menu` | Modifies a flyout menu to expand to the top. |
+| `.pf-m-left` | `.pf-c-menu` | Modifies a flyout menu to expand to the left. |
 | `.pf-m-load` | `.pf-c-menu__list-item` | Modifies a list item for "load more" styles. |
 | `.pf-m-loading` | `.pf-c-menu__list-item` | Modifies a list item for loading styles. |
 | `.pf-m-drilldown` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "drill down". |
@@ -1686,4 +1686,4 @@ import './Menu.css'
 | `--pf-c-menu__content--Height: {height}` | `.pf-c-menu` | Modifies the height of the drilldown menu content. The default value is `auto`. |
 | `--pf-c-menu--m-flyout__menu--top-offset` | `.pf-c-menu` | Modifies the menu to allow for an offset to the top positioning. |
 | `--pf-c-menu--m-flyout__menu--left-offset` | `.pf-c-menu` | Modifies the menu to allow for an offset to the left positioning. |
-| `--pf-c-menu--m-flyout__list-item--m-menu-left__menu--right-offset` | `.pf-c-menu__list-item.pf-m-menu-left > .pf-c-menu` | Modifies the menu to allow for an offset to the right positioning. |
+| `--pf-c-menu--m-flyout__menu--m-left--right-offset` | `.pf-c-menu.pf-m-flyout > .pf-c-menu` | Modifies the menu to allow for an offset to the right positioning. |
