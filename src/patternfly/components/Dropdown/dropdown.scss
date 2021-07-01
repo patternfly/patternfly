@@ -231,6 +231,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     &:not(.pf-m-plain) {
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--disabled--BackgroundColor);
 
+      &::after,
       &::before {
         border: 0;
       }
@@ -359,7 +360,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
     border-radius: var(--pf-c-dropdown__toggle--m-primary--BorderRadius);
 
-    &::before {
+    &::before,
+    &::after {
       border: 0;
     }
 
