@@ -334,7 +334,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
       line-height: var(--pf-c-dropdown__toggle--m-plain--child--LineHeight);
     }
 
-    &::before {
+    &::before,
+    &::after {
       border: 0;
     }
 

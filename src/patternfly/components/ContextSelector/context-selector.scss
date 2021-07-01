@@ -198,7 +198,8 @@
       }
     }
 
-    &::before {
+    &::before,
+    &::after {
       border: 0;
     }
   }
