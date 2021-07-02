@@ -169,7 +169,7 @@ section: demos
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
               {{> helper-text-item-icon helper-text-item-icon--type="check"}}
-              {{#> helper-text-item-text}}Cannot contain any variation of the work "redhat"{{/helper-text-item-text}}
+              {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
               {{> helper-text-item-icon helper-text-item-icon--type="check"}}
