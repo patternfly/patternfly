@@ -10,14 +10,13 @@ section: demos
 ```hbs
   {{#> form form--id="password-strength-demo--initial"}}
     {{#> form-group}}
-      {{#> form-group-label}}
-        {{#> split split--modifier="pf-m-gutter"}}
-          {{#> split-item split-item--modifier="pf-m-fill"}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id '-password"') required="true"}}Password{{/form-label}}
-          {{/split-item}}
-          {{#> split-item}}
-          {{/split-item}}
-        {{/split}}
+      {{#> form-group-label form-group-label-info="true"}}
+        {{#> form-group-label-main}}
+              {{#> form-label form-label--attribute=(concat 'for="' form--id '-password"') required="true"}}Password{{/form-label}}
+          {{> form-group-label-help}}
+        {{/form-group-label-main}}
+        {{#> form-group-label-info}}
+        {{/form-group-label-info}}
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> input-group}}
@@ -52,14 +51,13 @@ section: demos
 ```hbs
   {{#> form  form--id="password-strength-demo--invalid"}}
     {{#> form-group}}
-      {{#> form-group-label}}
-        {{#> split split--modifier="pf-m-gutter"}}
-          {{#> split-item split-item--modifier="pf-m-fill"}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id '-password"') required="true"}} Password{{/form-label}}
-          {{/split-item}}
-          {{#> split-item}}
-          {{/split-item}}
-        {{/split}}
+      {{#> form-group-label form-group-label-info="true"}}
+        {{#> form-group-label-main}}
+              {{#> form-label form-label--attribute=(concat 'for="' form--id '-password"') required="true"}}Password{{/form-label}}
+          {{> form-group-label-help}}
+        {{/form-group-label-main}}
+        {{#> form-group-label-info}}
+        {{/form-group-label-info}}
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> input-group}}
@@ -94,20 +92,19 @@ section: demos
 ```hbs
   {{#> form  form--id="password-strength-demo--weak"}}
     {{#> form-group}}
-      {{#> form-group-label}}
-        {{#> split split--modifier="pf-m-gutter"}}
-          {{#> split-item split-item--modifier="pf-m-fill"}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id '-password"') required="true"}} Password{{/form-label}}
-          {{/split-item}}
-          {{#> split-item}}
-            {{#> helper-text}}
-              {{#> helper-text-item helper-text-item--modifier="pf-m-error"}}
-                {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
-                {{#> helper-text-item-text}}Weak{{/helper-text-item-text}}
-              {{/helper-text-item}}
-            {{/helper-text}}
-          {{/split-item}}
-        {{/split}}
+      {{#> form-group-label form-group-label-info="true"}}
+        {{#> form-group-label-main}}
+              {{#> form-label form-label--attribute=(concat 'for="' form--id '-password"') required="true"}}Password{{/form-label}}
+          {{> form-group-label-help}}
+        {{/form-group-label-main}}
+        {{#> form-group-label-info}}
+          {{#> helper-text}}
+            {{#> helper-text-item helper-text-item--modifier="pf-m-error"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
+              {{#> helper-text-item-text}}Weak{{/helper-text-item-text}}
+            {{/helper-text-item}}
+          {{/helper-text}}
+        {{/form-group-label-info}}
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> input-group}}
@@ -142,20 +139,19 @@ section: demos
 ```hbs
   {{#> form  form--id="password-strength-demo--strong"}}
     {{#> form-group}}
-      {{#> form-group-label}}
-        {{#> split split--modifier="pf-m-gutter"}}
-          {{#> split-item split-item--modifier="pf-m-fill"}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id '-password"') required="true"}} Password{{/form-label}}
-          {{/split-item}}
-          {{#> split-item}}
-            {{#> helper-text}}
-              {{#> helper-text-item helper-text-item--modifier="pf-m-success"}}
-                {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-                {{#> helper-text-item-text}}Strong{{/helper-text-item-text}}
-              {{/helper-text-item}}
-            {{/helper-text}}
-          {{/split-item}}
-        {{/split}}
+      {{#> form-group-label form-group-label-info="true"}}
+        {{#> form-group-label-main}}
+          {{#> form-label form-label--attribute=(concat 'for="' form--id '-password"') required="true"}}Password{{/form-label}}
+          {{> form-group-label-help}}
+        {{/form-group-label-main}}
+        {{#> form-group-label-info}}
+          {{#> helper-text}}
+            {{#> helper-text-item helper-text-item--modifier="pf-m-success"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
+              {{#> helper-text-item-text}}Strong{{/helper-text-item-text}}
+            {{/helper-text-item}}
+          {{/helper-text}}
+        {{/form-group-label-info}}
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> input-group}}
@@ -188,4 +184,4 @@ section: demos
 
 ## Documentation
 
-This demo implements a password strength meter. It uses multiple helper text items in the form helper text area below the input field to indicate whether the password meets validity criteria. Once the validity criteria are met, it also places helper text above the input field to indicate the strength of the password.
+This demo implements a password strength meter. It uses multiple helper text items in the form helper text area below the input field to indicate whether the password meets validity criteria. Once the validity criteria are met, it also places helper text in the info area above the input field to indicate the strength of the password.
