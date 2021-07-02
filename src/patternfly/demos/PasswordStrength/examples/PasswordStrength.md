@@ -61,7 +61,7 @@ section: demos
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input="true"  form-control--attribute=(concat 'type="text" id="' form--id '-password" name="' form--id '-password" aria-label="Password input" value="Marie$RedHat78" placeholder="Password"')}}
+          {{#> form-control controlType="input" input="true"  form-control--attribute=(concat 'required type="text" id="' form--id '-password" name="' form--id '-password" aria-label="Password input" value="Marie$RedHat78" placeholder="Password"')}}
           {{/form-control}}
           {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password button for password input"'}}
             <i class="fas fa-eye-slash" aria-hidden="true"></i>
