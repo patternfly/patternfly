@@ -566,7 +566,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__group-label-help` | `<button>` | Initiates a field level help button. |
 | `.pf-c-form__group-control` | `<div>` |  Initiates a form group control section. |
 | `.pf-c-form__actions` | `<div>` | Iniates a row of actions. |
-| `.pf-c-form__helper-text` | `<p>` |  Initiates a form helper text block. |
+| `.pf-c-form__helper-text` | `<p>`, `<div>` |  Initiates a form helper text block. |
 | `.pf-c-form__helper-text-icon` | `<span>` |  Initiates a form helper text icon. |
 | `.pf-c-form__alert` | `<div>` | Initiates the form alert container for inline alerts. |
 | `.pf-c-form__field-group` | `<div>` | Initiates a form field group. |
