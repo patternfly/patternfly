@@ -8,16 +8,16 @@
   --pf-c-context-selector__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-context-selector__toggle--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-context-selector__toggle--BorderTopColor: var(--pf-global--BorderColor--300); // remove at breaking change
-  --pf-c-context-selector__toggle--BorderRightColor: var(--pf-global--BorderColor--300); // remove at breaking change
-  --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-global--BorderColor--200); // remove at breaking change
-  --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-global--BorderColor--300); // remove at breaking change
+  --pf-c-context-selector__toggle--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-context-selector__toggle--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-context-selector__toggle--Color: var(--pf-global--Color--100);
-  --pf-c-context-selector__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100); // remove at breaking change
-  --pf-c-context-selector__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md); // remove at breaking change
-  --pf-c-context-selector__toggle--active--BorderBottomColor: var(--pf-global--active-color--100); // remove at breaking change
-  --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md); // remove at breaking change
-  --pf-c-context-selector__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100); // remove at breaking change
+  --pf-c-context-selector__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-context-selector__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-context-selector__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-context-selector__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-context-selector__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-context-selector__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-context-selector__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
@@ -25,23 +25,6 @@
   --pf-c-context-selector__toggle--m-plain--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-context-selector__toggle--m-plain--m-text--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle--m-plain--m-text--PaddingLeft: var(--pf-global--spacer--sm);
-
-  // ::before
-  --pf-c-context-selector__toggle--before--BorderWidth: var(--pf-c-context-selector__toggle--BorderWidth); // update value at breaking change
-  --pf-c-context-selector__toggle--before--BorderTopColor: var(--pf-c-context-selector__toggle--BorderTopColor); // remove at breaking change
-  --pf-c-context-selector__toggle--before--BorderRightColor: var(--pf-c-context-selector__toggle--BorderRightColor); // remove at breaking change
-  --pf-c-context-selector__toggle--before--BorderBottomColor: var(--pf-c-context-selector__toggle--BorderBottomColor); // remove at breaking change
-  --pf-c-context-selector__toggle--before--BorderLeftColor: var(--pf-c-context-selector__toggle--BorderLeftColor); // remove at breaking change
-
-  // ::after
-  --pf-c-context-selector__toggle--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--BorderWidth);
-  --pf-c-context-selector__toggle--after--BorderBottomColor: var(--pf-c-context-selector__toggle--BorderBottomColor); // update value at breaking change
-  --pf-c-context-selector__toggle--hover--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--hover--BorderBottomWidth); // update value at breaking change
-  --pf-c-context-selector__toggle--hover--after--BorderBottomColor: var(--pf-c-context-selector__toggle--hover--BorderBottomColor); // update value at breaking change
-  --pf-c-context-selector__toggle--active--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--active--BorderBottomWidth); // update value at breaking change
-  --pf-c-context-selector__toggle--active--after--BorderBottomColor: var(--pf-c-context-selector__toggle--active--BorderBottomColor); // update value at breaking change
-  --pf-c-context-selector__toggle--m-expanded--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--expanded--BorderBottomWidth); // update value at breaking change
-  --pf-c-context-selector__toggle--m-expanded--after--BorderBottomColor: var(--pf-c-context-selector__toggle--expanded--BorderBottomColor); // update value at breaking change
 
   // Toggle text
   --pf-c-context-selector__toggle-text--FontSize: var(--pf-global--FontSize--md);
@@ -134,40 +117,39 @@
   cursor: pointer;
   border: none;
 
-  &::before,
-  &::after {
+  &::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    pointer-events: none;
     content: "";
-  }
-
-  &::before {
-    border: var(--pf-c-context-selector__toggle--before--BorderWidth) solid;
-    border-color: var(--pf-c-context-selector__toggle--before--BorderTopColor) var(--pf-c-context-selector__toggle--before--BorderRightColor) var(--pf-c-context-selector__toggle--before--BorderBottomColor) var(--pf-c-context-selector__toggle--before--BorderLeftColor);
-  }
-
-  &::after {
-    border-bottom: var(--pf-c-context-selector__toggle--after--BorderBottomWidth) solid var(--pf-c-context-selector__toggle--after--BorderBottomColor);
+    border: var(--pf-c-context-selector__toggle--BorderWidth) solid;
+    border-color: var(--pf-c-context-selector__toggle--BorderTopColor) var(--pf-c-context-selector__toggle--BorderRightColor) var(--pf-c-context-selector__toggle--BorderBottomColor) var(--pf-c-context-selector__toggle--BorderLeftColor);
   }
 
   &:hover {
-    --pf-c-context-selector__toggle--after--BorderBottomColor: var(--pf-c-context-selector__toggle--hover--after--BorderBottomColor);
+    &::before {
+      --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--hover--BorderBottomColor);
+    }
   }
 
   &:active,
   &.pf-m-active,
   &:focus-within {
-    --pf-c-context-selector__toggle--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--active--after--BorderBottomWidth);
-    --pf-c-context-selector__toggle--after--BorderBottomColor: var(--pf-c-context-selector__toggle--active--after--BorderBottomColor);
+    &::before {
+      --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--active--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-context-selector__toggle--active--BorderBottomWidth);
+    }
   }
 
   .pf-m-expanded > & {
-    --pf-c-context-selector__toggle--after--BorderBottomWidth: var(--pf-c-context-selector__toggle--m-expanded--after--BorderBottomWidth);
-    --pf-c-context-selector__toggle--after--BorderBottomColor: var(--pf-c-context-selector__toggle--m-expanded--after--BorderBottomColor);
+    &::before {
+      --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--expanded--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-context-selector__toggle--expanded--BorderBottomWidth);
+    }
   }
 
   &.pf-m-plain {
@@ -198,8 +180,7 @@
       }
     }
 
-    &::before,
-    &::after {
+    &::before {
       border: 0;
     }
   }
