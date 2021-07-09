@@ -23,7 +23,7 @@ function pfIconFont() {
     .pipe(
       iconfont({
         fontName: pficonFontName,
-        formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+        formats: ['woff', 'woff2'],
         timestamp: Math.round(Date.now() / 1000)
       })
     )

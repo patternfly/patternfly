@@ -1,11 +1,7 @@
 @font-face {
 	font-family: "pficon";
-	src: url('#{$pf-global--fonticon-path}/pficon.eot');
-	src: url('#{$pf-global--fonticon-path}/pficon.eot') format('eot'),
-		url('#{$pf-global--fonticon-path}/pficon.woff2') format('woff2'),
-		url('#{$pf-global--fonticon-path}/pficon.woff') format('woff'),
-		url('#{$pf-global--fonticon-path}/pficon.ttf') format('truetype'),
-		url('#{$pf-global--fonticon-path}/pficon.svg#pficon') format('svg');
+	src: url('#{$pf-global--fonticon-path}/pficon.woff2') format('woff2'),
+		url('#{$pf-global--fonticon-path}/pficon.woff') format('woff');
 }
 
 @mixin pf-icon-styles {
