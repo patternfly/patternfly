@@ -1456,7 +1456,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Expandable, hoverable, and checkbox selectable example
+### Expandable, hoverable, and selectable example
 ```hbs
 {{#> table table--id="table-tbody-expandable-hoverable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
@@ -1507,7 +1507,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | -- | -- | -- |
 | `tabindex="0"` | `.pf-c-table tbody.pf-m-hoverable` | Inserts the hoverable table element into the tab order of the page so that it is focusable. **Required** |
 
-### Hoverable and selected usage
+### Hoverable and selectable usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-hoverable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be hoverable. |
