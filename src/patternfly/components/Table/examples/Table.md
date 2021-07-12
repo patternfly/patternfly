@@ -527,20 +527,14 @@ When including interactive elements in a table, the primary, descriptive cell in
 
 When header cells are empty or they contain interactive elements, `<th>` should be replaced with `<td>`.
 
-### Thead accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-label="[descriptive text]"` | `.pf-c-table__check input` | Provides an accessible name for the checkbox or radio input. **Required** |
-
-### Tbody accessibility
+### Checkboxes, radio select, and actions accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-labelledby="[row_header_id]"` or `aria-label="[descriptive text]` | `.pf-c-table__check input` | Provides an accessible name for the checkbox or radio input. **Required** |
 | `id` | row header `<th> > *` | Provides an accessible description for the checkbox or radio. **Required if using `aria-labelledby` for `.pf-c-table__check input`** |
 
-### Checkboxes, radio buttions, and actions usage
+### Checkboxes, radio select, and actions usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -1462,7 +1456,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Expandable, hoverable, and selectable example
+### Expandable, hoverable, and checkbox selectable example
 ```hbs
 {{#> table table--id="table-tbody-expandable-hoverable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
@@ -1515,6 +1509,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 ### Hoverable and selected usage
 | Class | Applied to | Outcome |
+| -- | -- | -- |
 | `.pf-m-hoverable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be hoverable. |
 | `.pf-m-selected` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a selectable tbody or tr table element to be selected. |
 
@@ -1530,7 +1525,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{> table-tree-view--basic table--id="tree-table-with-checkboxes-example" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"' table-tr--tree--HasActions="true"}}
 ```
 
-### Tree table with checkboxes, icons example
+### Tree table with checkboxes and icons example
 ```hbs
 {{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons-example" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"' table-tr--tree--HasActions="true"}}
 ```
@@ -2526,7 +2521,7 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 | `.pf-m-fit-content` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Fit column width to cell content.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 | `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Breaks long strings wherever necessary as defined by the table layout. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 
-### Modifiers without text wrapper
+### Controlling text example
 ```hbs
 {{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
@@ -2569,11 +2564,9 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 {{/table}}
 ```
 
-## The table-text element
-
 By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-c-table__text` wrapper on table cell content. In addition to `.pf-c-table__text`, all PatternFly layouts can be used in table cells and contain table text elements.
 
-### Table text element
+### Controlling text using the table text element example
 ```hbs
 {{#> table table--grid="true" table--modifier="pf-m-grid-md" table--id="table-text-element-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
@@ -3373,7 +3366,7 @@ Long strings in table cells will push content. Add a width modifier to `thead th
 {{/wrapper}}
 ```
 
-### Draggable rows ccessibility
+### Draggable rows accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-pressed="true or false"` | `.pf-c-table__draggable .pf-c-button` | Indicates whether the button is currently pressed or not.  |
