@@ -14,6 +14,7 @@
 
   width: var(--pf-c-spinner--Width);
   height: var(--pf-c-spinner--Height);
+  overflow: hidden;
 
   // Modifiers change the variables for size variations
   &.pf-m-sm {
