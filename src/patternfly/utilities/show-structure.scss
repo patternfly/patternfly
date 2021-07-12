@@ -1,25 +1,16 @@
 // stylelint-disable
-//Add .pf-u-show-structure to any element to turn on annotations for it and its contents
+// Currently showing annotations for all previews
 .ws-preview-html *,
+// But instead, a button could add .pf-u-show-structure to any element to turn on annotations for it and its contents
 .pf-u-show-structure,
 .pf-u-show-structure * {
-  border: 1px solid darkmagenta !important;
+  border: 1px solid var(--pf-global--Color--light-300) !important;
   padding: var(--pf-global--spacer--md) var(--pf-global--spacer--xs) var(--pf-global--spacer--xs) var(--pf-global--spacer--xs) !important;
   margin: var(--pf-global--spacer--xs) var(--pf-global--spacer--sm) var(--pf-global--spacer--sm) var(--pf-global--spacer--sm) !important;
   position: relative !important;
   overflow-x: visible !important;
   width: auto !important;
 
-  &:hover {
-    &:before {
-      width: fit-content;
-      height: fit-content;
-      font-size: var(--pf-global--FontSize--sm);
-      background: darkmagenta;
-      color: var(--pf-global--Color--light-100);
-      z-index: 10000;
-    }
-  }
   &:before {
     transition: .3s all ease-in-out;
     transform-style: preserve-3d;
@@ -36,7 +27,22 @@
     white-space: nowrap;
     font-family: sans-serif;
   }
+  
+  &:hover {
+    &:before {
+      width: fit-content;
+      height: fit-content;
+      font-size: var(--pf-global--FontSize--sm);
+      background: darkmagenta;
+      color: var(--pf-global--Color--light-100);
+      z-index: 10000;
+    }
+    border-color: darkmagenta !important;
+  }
+}
 
+.ws-preview-html,
+.pf-u-show-structure {
   // Add the element name for common elements
   @each $element in a,
   abbr,
@@ -189,4 +195,5 @@
       }
     }
   }
-}// stylelint-enable
+}
+// stylelint-enable
