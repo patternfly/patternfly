@@ -12,6 +12,18 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__toggle--Color: var(--pf-global--Color--100);
   --pf-c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-dropdown__toggle--BackgroundColor: transparent;
+  --pf-c-dropdown__toggle--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-global--BorderColor--300);
+  --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-global--BorderColor--300);
+  --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-dropdown__toggle--hover--before--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-dropdown__toggle--active--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--active--before--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-dropdown__toggle--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--focus--before--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown--m-expanded__toggle--before--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-dropdown__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-dropdown__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
@@ -26,32 +38,6 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__toggle--m-primary--active--BackgroundColor: var(--pf-global--primary-color--200);
   --pf-c-dropdown__toggle--m-primary--focus--BackgroundColor: var(--pf-global--primary-color--200);
   --pf-c-dropdown--m-expanded__toggle--m-primary--BackgroundColor: var(--pf-global--primary-color--200);
-
-  // ::before
-  --pf-c-dropdown__toggle--before--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-global--BorderColor--300); // remove at breaking change
-  --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-global--BorderColor--300); // remove at breaking change
-  --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-global--BorderColor--200); // remove at breaking change
-  --pf-c-dropdown__toggle--before--temp--BorderBottomColor: var(--pf-global--BorderColor--300); // change to --pf-c-dropdown__toggle--before--BorderColor at breaking change
-  --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-global--BorderColor--300); // remove at breaking change
-  --pf-c-dropdown__toggle--hover--before--BorderBottomColor: var(--pf-global--active-color--100); // remove at breaking change
-  --pf-c-dropdown__toggle--active--before--BorderBottomWidth: var(--pf-global--BorderWidth--md); // remove at breaking change
-  --pf-c-dropdown__toggle--active--before--BorderBottomColor: var(--pf-global--active-color--100); // remove at breaking change
-  --pf-c-dropdown__toggle--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--md); // remove at breaking change
-  --pf-c-dropdown__toggle--focus--before--BorderBottomColor: var(--pf-global--active-color--100); // remove at breaking change
-  --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: var(--pf-global--BorderWidth--md); // remove at breaking change
-  --pf-c-dropdown--m-expanded__toggle--before--BorderBottomColor: var(--pf-global--active-color--100); // remove at breaking change
-
-  // ::after
-  --pf-c-dropdown__toggle--after--BorderBottomColor: var(--pf-c-dropdown__toggle--before--BorderBottomColor); // update value at breaking change
-  --pf-c-dropdown__toggle--after--BorderBottomWidth: var(--pf-c-dropdown__toggle--before--BorderWidth); // update value at breaking change
-  --pf-c-dropdown__toggle--hover--after--BorderBottomColor: var(--pf-c-dropdown__toggle--hover--before--BorderBottomColor); // update value at breaking change
-  --pf-c-dropdown__toggle--active--after--BorderBottomWidth: var(--pf-c-dropdown__toggle--active--before--BorderBottomWidth); // update value at breaking change
-  --pf-c-dropdown__toggle--active--after--BorderBottomColor: var(--pf-c-dropdown__toggle--active--before--BorderBottomColor); // update value at breaking change
-  --pf-c-dropdown__toggle--focus--after--BorderBottomWidth: var(--pf-c-dropdown__toggle--focus--before--BorderBottomWidth); // update value at breaking change
-  --pf-c-dropdown__toggle--focus--after--BorderBottomColor: var(--pf-c-dropdown__toggle--focus--before--BorderBottomColor); // update value at breaking change
-  --pf-c-dropdown--m-expanded__toggle--after--BorderBottomWidth: var(--pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth); // update value at breaking change
-  --pf-c-dropdown--m-expanded__toggle--after--BorderBottomColor: var(--pf-c-dropdown--m-expanded__toggle--before--BorderBottomColor); // update value at breaking change
 
   // toggle button
   --pf-c-dropdown__toggle-button--Color: var(--pf-global--Color--100);
@@ -201,27 +187,15 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   border: none;
 
   &::before,
-  &::after,
-  &.pf-m-action .pf-c-dropdown__toggle-button::before,
-  &.pf-m-action .pf-c-dropdown__toggle-button::after {
+  &.pf-m-action .pf-c-dropdown__toggle-button::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    pointer-events: none;
     content: "";
-  }
-
-  &::before,
-  &.pf-m-action .pf-c-dropdown__toggle-button::before {
     border: var(--pf-c-dropdown__toggle--before--BorderWidth) solid;
-    border-color: var(--pf-c-dropdown__toggle--before--BorderTopColor) var(--pf-c-dropdown__toggle--before--BorderRightColor) var(--pf-c-dropdown__toggle--before--temp--BorderBottomColor) var(--pf-c-dropdown__toggle--before--BorderLeftColor);
-  }
-
-  &::after,
-  &.pf-m-action .pf-c-dropdown__toggle-button::after {
-    border-bottom: var(--pf-c-dropdown__toggle--after--BorderBottomWidth) solid var(--pf-c-dropdown__toggle--after--BorderBottomColor);
+    border-color: var(--pf-c-dropdown__toggle--before--BorderTopColor) var(--pf-c-dropdown__toggle--before--BorderRightColor) var(--pf-c-dropdown__toggle--before--BorderBottomColor) var(--pf-c-dropdown__toggle--before--BorderLeftColor);
   }
 
   &.pf-m-disabled,
@@ -231,7 +205,6 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     &:not(.pf-m-plain) {
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--disabled--BackgroundColor);
 
-      &::after,
       &::before {
         border: 0;
       }
@@ -301,26 +274,37 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   &:not(.pf-m-action):hover,
   &.pf-m-action .pf-c-dropdown__toggle-button:hover {
-    --pf-c-dropdown__toggle--after--BorderBottomColor: var(--pf-c-dropdown__toggle--hover--after--BorderBottomColor);
+    &::before {
+      --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-dropdown__toggle--hover--before--BorderBottomColor);
+    }
   }
 
   &:not(.pf-m-action):active,
   &:not(.pf-m-action).pf-m-active,
   &.pf-m-action .pf-c-dropdown__toggle-button:active {
-    --pf-c-dropdown__toggle--after--BorderBottomWidth: var(--pf-c-dropdown__toggle--active--after--BorderBottomWidth);
-    --pf-c-dropdown__toggle--after--BorderBottomColor: var(--pf-c-dropdown__toggle--active--after--BorderBottomColor);
+    &::before {
+      --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-dropdown__toggle--active--before--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-dropdown__toggle--active--before--BorderBottomWidth);
+    }
   }
 
   &:not(.pf-m-action):focus,
   &.pf-m-action .pf-c-dropdown__toggle-button:focus {
-    --pf-c-dropdown__toggle--after--BorderBottomWidth: var(--pf-c-dropdown__toggle--focus--after--BorderBottomWidth);
-    --pf-c-dropdown__toggle--after--BorderBottomColor: var(--pf-c-dropdown__toggle--focus--after--BorderBottomColor);
+    &::before {
+      --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-dropdown__toggle--focus--before--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-dropdown__toggle--focus--before--BorderBottomWidth);
+    }
   }
 
   .pf-m-expanded > &:not(.pf-m-action),
   .pf-m-expanded > &.pf-m-action .pf-c-dropdown__toggle-button {
-    --pf-c-dropdown__toggle--after--BorderBottomWidth: var(--pf-c-dropdown--m-expanded__toggle--after--BorderBottomWidth);
-    --pf-c-dropdown__toggle--after--BorderBottomColor: var(--pf-c-dropdown--m-expanded__toggle--after--BorderBottomColor);
+    &::before {
+      --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-dropdown--m-expanded__toggle--before--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth);
+    }
   }
 
   &.pf-m-plain {
@@ -335,8 +319,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
       line-height: var(--pf-c-dropdown__toggle--m-plain--child--LineHeight);
     }
 
-    &::before,
-    &::after {
+    &::before {
       border: 0;
     }
 
@@ -360,8 +343,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
     border-radius: var(--pf-c-dropdown__toggle--m-primary--BorderRadius);
 
-    &::before,
-    &::after {
+    &::before {
       border: 0;
     }
 
