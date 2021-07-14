@@ -1424,9 +1424,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | -- | -- | -- |
 | `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
 
-## Hoverable and selectable
+## Hoverable and selected
 
-### Hoverable and selectable example
+### Hoverable and selected example
 ```hbs
 {{#> table table--id="table-expandable-hoverable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
@@ -1456,7 +1456,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Expandable, hoverable, and selectable example
+### Expandable, hoverable, and selected example
 ```hbs
 {{#> table table--id="table-tbody-expandable-hoverable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
@@ -1507,7 +1507,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | -- | -- | -- |
 | `tabindex="0"` | `.pf-c-table tbody.pf-m-hoverable` | Inserts the hoverable table element into the tab order of the page so that it is focusable. **Required** |
 
-### Hoverable and selectable usage
+### Hoverable and selected usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-hoverable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be hoverable. |
