@@ -184,9 +184,11 @@
 }
 
 @mixin pf-m-theme-dark {
-  .pf-m-theme-dark {
+  // stylelint-disable selector-pseudo-class-no-unknown
+  :where(.pf-m-theme-dark) {
     @content;
   }
+  // stylelint-enable
 }
 
 // Apply media query if value is passed
