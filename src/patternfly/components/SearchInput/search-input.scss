@@ -207,10 +207,12 @@
 }
 
 @include pf-m-theme-dark {
-  --pf-c-search-input__text--before--BorderColor: transparent;
-  --pf-c-search-input__text--after--BorderBottomColor: var(--pf-global--BorderColor--400);
+  .pf-c-search-input {
+    --pf-c-search-input__text--before--BorderColor: transparent;
+    --pf-c-search-input__text--after--BorderBottomColor: var(--pf-global--BorderColor--400);
 
-  background-color: var(--pf-global--BackgroundColor--400);
+    background-color: var(--pf-global--BackgroundColor--400);
+  }
 
   .pf-c-search-input__text {
     &::before {

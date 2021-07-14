@@ -1152,22 +1152,24 @@
 }
 
 @include pf-m-theme-dark {
-  --pf-c-nav__item--item__link--after--Top: -1px;
-  --pf-c-nav__item--before--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-nav__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--300);
-  --pf-c-nav__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--300);
-  --pf-c-nav__link--active--BackgroundColor: var(--pf-global--BackgroundColor--300);
-  --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--300);
-  --pf-c-nav__link--before--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-nav--m-tertiary__scroll-button--before--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-nav__section-title--Color: var(--pf-global--Color--200);
-  --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BorderColor--100);
-  --pf-c-nav__scroll-button--before--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BorderColor--100);
-  --pf-c-nav__link--hover--before--BorderBottomWidth: 0;
-  --pf-c-nav__link--focus--before--BorderBottomWidth: 0;
-  --pf-c-nav__link--active--before--BorderBottomWidth: 0;
-  --pf-c-nav__link--m-current--before--BorderBottomWidth: 0;
+  .pf-c-nav {
+    --pf-c-nav__item--item__link--after--Top: -1px;
+    --pf-c-nav__item--before--BorderColor: var(--pf-global--BorderColor--100);
+    --pf-c-nav__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--300);
+    --pf-c-nav__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--300);
+    --pf-c-nav__link--active--BackgroundColor: var(--pf-global--BackgroundColor--300);
+    --pf-c-nav__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--300);
+    --pf-c-nav__link--before--BorderColor: var(--pf-global--BorderColor--100);
+    --pf-c-nav--m-tertiary__scroll-button--before--BorderColor: var(--pf-global--BorderColor--100);
+    --pf-c-nav__section-title--Color: var(--pf-global--Color--200);
+    --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BorderColor--100);
+    --pf-c-nav__scroll-button--before--BorderColor: var(--pf-global--BorderColor--100);
+    --pf-c-nav--c-divider--BackgroundColor: var(--pf-global--BorderColor--100);
+    --pf-c-nav__link--hover--before--BorderBottomWidth: 0;
+    --pf-c-nav__link--focus--before--BorderBottomWidth: 0;
+    --pf-c-nav__link--active--before--BorderBottomWidth: 0;
+    --pf-c-nav__link--m-current--before--BorderBottomWidth: 0;
+  }
 
   .pf-c-nav__link {
     &::before {
