@@ -631,9 +631,11 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 }
 
 @include pf-m-theme-dark {
-  --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--300);
-  --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-page__header--BackgroundColor: var(--pf-global--palette--black-1000);
+  .pf-c-page {
+    --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--300);
+    --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--100);
+    --pf-c-page__header--BackgroundColor: var(--pf-global--palette--black-1000);
+  }
 
   .pf-c-page__header-tools-item {
     &.pf-m-selected {
