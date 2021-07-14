@@ -217,3 +217,8 @@
   }
 }
 
+@include pf-m-theme-dark {
+  .pf-c-modal-box {
+    --pf-c-modal-box--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  }
+}

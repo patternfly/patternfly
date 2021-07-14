@@ -125,3 +125,9 @@
   display: none;
   visibility: hidden;
 }
+
+@include pf-m-theme-dark {
+  .pf-c-breadcrumb {
+    --pf-c-breadcrumb__item-divider--Color: var(--pf-global--BorderColor--100);
+  }
+}
