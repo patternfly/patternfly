@@ -29,23 +29,6 @@ cssPrefix: pf-c-title
 {{/title}}
 ```
 
-### Variations
-
-```hbs
-{{#> title titleType="h1" title--modifier="pf-m-4xl pf-m-success"}}
-    Success 4xl title
-{{/title}}
-{{#> title titleType="h1" title--modifier="pf-m-3xl pf-m-error"}}
-    Error 3xl title
-{{/title}}
-{{#> title titleType="h1" title--modifier="pf-m-2xl pf-m-warning"}}
-    Warning 2xl title
-{{/title}}
-{{#> title titleType="h1" title--modifier="pf-m-xl pf-m-info"}}
-    Info xl title
-{{/title}}
-```
-
 ## Documentation
 
 ### Overview
@@ -76,7 +59,3 @@ To change the color of the header add a modifier: `.pf-m-success`, `.pf-m-error`
 | `.pf-m-xl`      | `.pf-c-title` | Modifies for xl size                                    |
 | `.pf-m-lg`      | `.pf-c-title` | Modifies for lg size                                    |
 | `.pf-m-md`      | `.pf-c-title` | Modifies for md size                                    |
-| `.pf-m-success` | `.pf-c-title` | Modifies for success colour                             |
-| `.pf-m-error`   | `.pf-c-title` | Modifies for error colour                               |
-| `.pf-m-warning` | `.pf-c-title` | Modifies for warning colour                             |
-| `.pf-m-info`    | `.pf-c-title` | Modifies for info                                       |

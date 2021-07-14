@@ -138,8 +138,8 @@ import './Popover.css'
   {{/popover-content}}
 {{/popover}}
 ```
-### Default alert
 
+### Default alert
 ```hbs
 {{#> popover popover--modifier="pf-m-top pf-m-default" popover--attribute='aria-labelledby="popover-default-alert-header" aria-describedby="popover-default-alert-body"' popover--IsAlert="true" popover--IsDefaultAlert="true"}}
   {{#> popover-content}}
@@ -160,8 +160,8 @@ import './Popover.css'
   {{/popover-content}}
 {{/popover}}
 ```
-### Success alert
 
+### Success alert
 ```hbs
 {{#> popover popover--modifier="pf-m-top pf-m-success" popover--attribute='aria-labelledby="popover-success-alert-header" aria-describedby="popover-success-alert-body"' popover--IsAlert="true" popover--IsSuccessAlert="true"}}
   {{#> popover-content}}
@@ -182,8 +182,8 @@ import './Popover.css'
   {{/popover-content}}
 {{/popover}}
 ```
-### Danger alert
 
+### Danger alert
 ```hbs
 {{#> popover popover--modifier="pf-m-top pf-m-danger" popover--attribute='aria-labelledby="popover-danger-alert-header" aria-describedby="popover-danger-alert-body"' popover--IsAlert="true" popover--IsDangerAlert="true"}}
   {{#> popover-content}}
@@ -206,7 +206,6 @@ import './Popover.css'
 ```
 
 ### Warning alert
-
 ```hbs
 {{#> popover popover--modifier="pf-m-top pf-m-warning" popover--attribute='aria-labelledby="popover-warning-alert-header" aria-describedby="popover-warning-alert-body"' popover--IsAlert="true" popover--IsWarningAlert="true"}}
   {{#> popover-content}}
@@ -229,7 +228,6 @@ import './Popover.css'
 ```
 
 ### Info alert
-
 ```hbs
 {{#> popover popover--modifier="pf-m-top pf-m-info" popover--attribute='aria-labelledby="popover-info-alert-header" aria-describedby="popover-info-alert-body"' popover--IsAlert="true" popover--IsInfoAlert="true"}}
   {{#> popover-content}}
@@ -259,8 +257,7 @@ A popover is used to provide contextual information for another component on cli
 ### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
-| `role="dialog"` | `.pf-c-popover` | Identifies the element that serves as the popover container **Required** |
-| `aria-labelledby="[id value of .pf-c-title]"` | `.pf-c-popover` | Gives the popover an accessible name by referring to the element that provides the dialog title **Required when .pf-c-title is present** |
+| `role="dialog"` | `.pf-c-popover` | Identifies the element that serves as the popover container. **Required** |
 | `aria-label="[title of popover]"` | `.pf-c-popover` | Gives the popover an accessible name. **Required when .pf-c-title is _not_ present** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-popover` | Gives the popover an accessible description by referring to the popover content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
 | `aria-modal="true"` | `.pf-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction **Required** |
