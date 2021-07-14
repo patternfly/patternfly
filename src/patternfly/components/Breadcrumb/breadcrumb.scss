@@ -127,5 +127,7 @@
 }
 
 @include pf-m-theme-dark {
-  --pf-c-breadcrumb__item-divider--Color: var(--pf-global--BorderColor--100);
+  .pf-c-breadcrumb {
+    --pf-c-breadcrumb__item-divider--Color: var(--pf-global--BorderColor--100);
+  }
 }
