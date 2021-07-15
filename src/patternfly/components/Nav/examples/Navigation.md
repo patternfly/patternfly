@@ -13,22 +13,22 @@ import './Navigation.css'
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="default-nav-link"'}}
         Link 1
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="default-nav-link"'}}
         Current link
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="default-nav-link"'}}
         Link 3
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="default-nav-link"'}}
         Link 4
       {{/nav-link}}
     {{/nav-item}}
@@ -45,17 +45,17 @@ import './Navigation.css'
     {{/nav-section-title}}
     {{#> nav-list}}
       {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
+        {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="grouped-nav-link"'}}
           Link 1
         {{/nav-link}}
       {{/nav-item}}
       {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
+        {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="grouped-nav-link"'}}
           Link 2
         {{/nav-link}}
       {{/nav-item}}
       {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
+        {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="grouped-nav-link"'}}
           Link 3
         {{/nav-link}}
       {{/nav-item}}
@@ -67,17 +67,17 @@ import './Navigation.css'
     {{/nav-section-title}}
     {{#> nav-list}}
       {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
+        {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="grouped-nav-link"'}}
           Link 1
         {{/nav-link}}
       {{/nav-item}}
       {{#> nav-item}}
-        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="grouped-nav-link"'}}
           Current link
         {{/nav-link}}
       {{/nav-item}}
       {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
+        {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="grouped-nav-link"'}}
           Link 3
         {{/nav-link}}
       {{/nav-item}}
@@ -91,24 +91,24 @@ import './Navigation.css'
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1" aria-label="expandable-nav-link-example1"'}}
         Link 1 (current and expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-nav-link-example1"'}}
               Current link
             {{/nav-link}}
           {{/nav-item}}
           {{> divider divider--type="li"}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-nav-link-example1"'}}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="expandable-nav-link-example1"'}}
               Subnav link 3
             {{/nav-link}}
           {{/nav-item}}
@@ -116,18 +116,18 @@ import './Navigation.css'
       {{/nav-subnav}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example2"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example2" aria-label="expandable-nav-link-example2"'}}
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-nav-link-example2"'}}}
               Subnav link 1
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-nav-link-example2"'}}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
@@ -135,18 +135,18 @@ import './Navigation.css'
       {{/nav-subnav}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example3"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example3" aria-label="expandable-nav-link-example3"'}}
         Link 3
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example3"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-nav-link-example3"'}}
               Subnav link 1
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-nav-link-example3"'}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
@@ -162,7 +162,7 @@ import './Navigation.css'
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-sub-nav-link1"'}}
         Link 1
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title1"'}}
@@ -171,17 +171,17 @@ import './Navigation.css'
         {{/nav-subnav-title}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-sub-nav-link-current"'}}
               Current link
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="expandable-sub-nav-link2"'}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-sub-nav-link3"'}}
               Subnav link 3
             {{/nav-link}}
           {{/nav-item}}
@@ -189,7 +189,7 @@ import './Navigation.css'
       {{/nav-subnav}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-sub-nav-link2"'}}
         Link 2
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="subnav-title2"'}}
@@ -198,12 +198,12 @@ import './Navigation.css'
         {{/nav-subnav-title}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-sub-nav-link1"'}}
               Subnav link 1
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-sub-nav-link2"'}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
@@ -219,23 +219,23 @@ import './Navigation.css'
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="mixed-nav-link1"'}}
         Link 1 (not expandable)
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link2"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link2" aria-label="mixed-nav-link2"'}}
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link2"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link2" aria-label="mixed-nav-link1"'}}
               Subnav link 1
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link2" aria-label="mixed-nav-link2"'}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
@@ -243,23 +243,23 @@ import './Navigation.css'
       {{/nav-subnav}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--current="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link4"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link4" aria-label="mixed-nav-link4"'}}
         Link 3 (current, but not expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link4"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="mixed-nav-link1"'}}
               Subnav link 1
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="mixed-nav-link2"'}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="mixed-nav-link3"'}}
               Subnav link 3
             {{/nav-link}}
           {{/nav-item}}
@@ -275,17 +275,17 @@ import './Navigation.css'
 {{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="horizontal-nav-link1"'}}
         Item 1
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="horizontal-nav-link2"'}}
         Item 2
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="horizontal-nav-link3"'}}
         Item 3
       {{/nav-link}}
     {{/nav-item}}
@@ -298,27 +298,27 @@ import './Navigation.css'
 {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="horizontal-overflow-nav-link1"'}}
         Horizontal nav item 1
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="horizontal-overflow-nav-link2"'}}
         Horizontal nav item 2
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="horizontal-overflow-nav-link3"'}}
         Horizontal nav item 3
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="horizontal-overflow-nav-link4"'}}
         Horizontal nav item 4
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="horizontal-overflow-nav-link5"'}}
         Horizontal nav item 5
       {{/nav-link}}
     {{/nav-item}}
@@ -331,17 +331,17 @@ import './Navigation.css'
 {{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="tertiary-nav-link1"'}}
         Item 1
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="tertiary-nav-link2"'}}
         Item 2
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="tertiary-nav-link3"'}}
         Item 3
       {{/nav-link}}
     {{/nav-item}}
@@ -354,27 +354,27 @@ import './Navigation.css'
 {{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="tertiary-overflow-nav-link1"'}}
         Tertiary nav item 1
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="tertiary-overflow-nav-link2"'}}
         Tertiary nav item 2
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="tertiary-overflow-nav-link3"'}}
         Tertiary nav item 3
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="tertiary-overflow-nav-link4"'}}
         Tertiary nav item 4
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="tertiary-overflow-nav-link5"'}}
         Tertiary nav item 5
       {{/nav-link}}
     {{/nav-item}}
@@ -387,22 +387,22 @@ import './Navigation.css'
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="default-light-nav-link1"'}}
         Current link
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="default-light-nav-link2"'}}
         Link 2
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="default-light-nav-link3"'}}
         Link 3
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="default-light-nav-link4"'}}
         Link 4
       {{/nav-link}}
     {{/nav-item}}
@@ -415,24 +415,24 @@ import './Navigation.css'
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1" aria-label="expandable-light-nav-link1"'}}
         Link 1 (current and expanded example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-light-nav-link-current"'}}
               Current link
             {{/nav-link}}
           {{/nav-item}}
           {{> divider divider--type="li"}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-light-nav-sub-link2"'}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true" nav-link--attribute='aria-label="expandable-light-nav-sub-link3"'}}
               Subnav link 3
             {{/nav-link}}
           {{/nav-item}}
@@ -440,18 +440,18 @@ import './Navigation.css'
       {{/nav-subnav}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example2"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example2" aria-label="expandable-nav-link2"'}}
         Link 2 (expanded, but not current example)
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-sub-nav-link1"'}}
               Subnav link 1
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-sub-nav-link2"'}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
@@ -459,18 +459,18 @@ import './Navigation.css'
       {{/nav-subnav}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example3"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example3" aria-label="expandable-nav-link3"'}}
         Link 3
       {{/nav-link}}
       {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example3"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-sub-nav-link1"'}}
               Subnav link 1
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item newcontent}}
-            {{#> nav-link nav-link--href="#"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute='aria-label="expandable-sub-nav-link2"'}}
               Subnav link 2
             {{/nav-link}}
           {{/nav-item}}
