@@ -40,7 +40,7 @@ import './Navigation.css'
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
   {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
-    {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title1" aria-label="grouped-title1"'}}
       Section title 1
     {{/nav-section-title}}
     {{#> nav-list}}
@@ -62,7 +62,7 @@ import './Navigation.css'
     {{/nav-list}}
   {{/nav-section}}
   {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
-    {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title2" aria-label="grouped-title2"'}}
       Section title 2
     {{/nav-section-title}}
     {{#> nav-list}}
