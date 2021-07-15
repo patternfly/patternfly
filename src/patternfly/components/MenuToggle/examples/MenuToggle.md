@@ -5,6 +5,8 @@ section: components
 cssPrefix: pf-c-menu-toggle
 ---
 
+import './MenuToggle.css'
+
 ## Examples
 ### Collapsed
 ```hbs
@@ -141,6 +143,18 @@ cssPrefix: pf-c-menu-toggle
 {{/menu-toggle}}
 ```
 
+### Full height
+```hbs
+{{#> menu-toggle menu-toggle--modifier="pf-m-full-height"}}
+  {{#> menu-toggle-text}}
+    Full height
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
 ### Accessibility
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -162,3 +176,4 @@ cssPrefix: pf-c-menu-toggle
 | `.pf-m-primary` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the primary variation. |
 | `.pf-m-plain` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the plain variation. |
 | `.pf-m-expanded` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
+| `.pf-m-full-height` | `.pf-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |

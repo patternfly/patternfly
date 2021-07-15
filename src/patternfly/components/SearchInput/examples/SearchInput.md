@@ -28,6 +28,11 @@ import './SearchInput.css'
 {{> search-input search-input--placeholder="Find by name" search-input--value="John Doe" search-input--count="1 / 3" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
 ```
 
+### With submit button
+```hbs
+{{> search-input search-input--placeholder="Find by name" search-input--HasSubmitButton="true"}}
+```
+
 ### Advanced search
 ```hbs
 {{> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:ned" search-input--IsAdvancedSearch="true"}}

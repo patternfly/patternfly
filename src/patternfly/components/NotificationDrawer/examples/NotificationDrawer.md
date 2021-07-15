@@ -14,7 +14,7 @@ cssPrefix: pf-c-notification-drawer
       Notifications
     {{/notification-drawer-header-title}}
     {{#> notification-drawer-header-status}}
-      2 unread
+      3 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
       {{> dropdown dropdown-menu--modifier="pf-m-align-right" dropdown--id=(concat notification-drawer--id "-header-action") dropdown-toggle--IsPlain="true"}}
@@ -35,7 +35,7 @@ cssPrefix: pf-c-notification-drawer
       Notifications
     {{/notification-drawer-header-title}}
     {{#> notification-drawer-header-status}}
-      2 unread
+      9 unread
     {{/notification-drawer-header-status}}
     {{#> notification-drawer-header-action}}
       {{> dropdown dropdown-menu--modifier="pf-m-align-right" dropdown--id=(concat notification-drawer--id "-header-action") dropdown-toggle--IsPlain="true"}}
@@ -79,7 +79,7 @@ cssPrefix: pf-c-notification-drawer
               Third notification group
             {{/notification-drawer-group-toggle-title}}
             {{#> notification-drawer-group-toggle-count}}
-              {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+              {{#> badge badge--modifier="pf-m-unread"}}3{{/badge}}
             {{/notification-drawer-group-toggle-count}}
             {{> notification-drawer-group-toggle-icon}}
           {{/notification-drawer-group-toggle}}

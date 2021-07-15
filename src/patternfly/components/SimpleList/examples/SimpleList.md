@@ -1,7 +1,6 @@
 ---
 id: Simple list
 section: components
-beta: true
 cssPrefix: pf-c-simple-list
 ---
 

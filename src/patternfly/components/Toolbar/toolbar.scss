@@ -10,15 +10,30 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
 
+  // Item
+  --pf-c-toolbar__item--Display: block;
+
+  // Group
+  --pf-c-toolbar__group--Display: flex;
+
+  // Sticky
+  --pf-c-toolbar--m-sticky-top--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-toolbar--m-sticky-top--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
+
   // Content
+  --pf-c-toolbar__content--Display: flex;
   --pf-c-toolbar__content--PaddingRight: var(--pf-global--spacer--md); // remove at breaking change
   --pf-c-toolbar__content--PaddingLeft: var(--pf-global--spacer--md); // remove at breaking change
+
+  // Content section
+  --pf-c-toolbar__content-section--Display: flex;
 
   // Insets
   --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
   --pf-c-toolbar--m-page-insets--xl--inset: var(--pf-global--spacer--lg); // make this the default inset at breaking change
 
   // Expandable content
+  --pf-c-toolbar__expandable-content--Display: grid;
   --pf-c-toolbar__expandable-content--PaddingTop: var(--pf-c-toolbar--RowGap);
   --pf-c-toolbar__expandable-content--PaddingRight: var(--pf-c-toolbar__content--PaddingRight);
   --pf-c-toolbar__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
@@ -112,6 +127,13 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
     --pf-c-toolbar__content--PaddingRight: var(--pf-c-toolbar--m-page-insets--inset);
     --pf-c-toolbar__content--PaddingLeft: var(--pf-c-toolbar--m-page-insets--inset);
   }
+
+  &.pf-m-sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: var(--pf-c-toolbar--m-sticky-top--ZIndex);
+    box-shadow: var(--pf-c-toolbar--m-sticky-top--BoxShadow);
+  }
 }
 
 // Divider
@@ -135,7 +157,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 .pf-c-toolbar__group {
   --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--spacer);
 
-  display: flex;
+  @include pf-hidden-visible(var(--pf-c-toolbar__group--Display));
+
   align-items: center;
   margin-right: var(--pf-c-toolbar--spacer);
 
@@ -194,9 +217,10 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
 // Item
 .pf-c-toolbar__item {
-  @include pf-build-css-variable-stack("--pf-c-toolbar__item--Width--base", "--pf-c-toolbar__item--Width", $pf-c-toolbar--breakpoint-map);
-
   --pf-c-toolbar--spacer: var(--pf-c-toolbar__item--spacer);
+
+  @include pf-build-css-variable-stack("--pf-c-toolbar__item--Width--base", "--pf-c-toolbar__item--Width", $pf-c-toolbar--breakpoint-map);
+  @include pf-hidden-visible(var(--pf-c-toolbar__item--Display));
 
   width: var(--pf-c-toolbar__item--Width--base);
   margin-right: var(--pf-c-toolbar--spacer);
@@ -256,13 +280,14 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
 .pf-c-toolbar__content,
 .pf-c-toolbar__content-section {
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
 // Content
 .pf-c-toolbar__content {
+  @include pf-hidden-visible(var(--pf-c-toolbar__content--Display));
+
   position: relative;
   padding-right: var(--pf-c-toolbar__content--PaddingRight);
   padding-left: var(--pf-c-toolbar__content--PaddingLeft);
@@ -270,6 +295,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
 // Content section
 .pf-c-toolbar__content-section {
+  @include pf-hidden-visible(var(--pf-c-toolbar__content-section--Display));
+
   width: 100%;
 }
 
@@ -405,20 +432,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
         & ~ .pf-m-pagination {
           margin-left: auto;
         }
-      }
-
-      // Hidden modifier
-      .pf-c-toolbar__item.pf-m-hidden#{$breakpoint-name},
-      .pf-c-toolbar__group.pf-m-hidden#{$breakpoint-name} {
-        display: none;
-        visibility: hidden;
-      }
-
-      // Visible modifier
-      .pf-c-toolbar__item.pf-m-visible#{$breakpoint-name},
-      .pf-c-toolbar__group.pf-m-visible#{$breakpoint-name} {
-        display: flex;
-        visibility: visible;
       }
 
       .pf-c-toolbar__content-section,

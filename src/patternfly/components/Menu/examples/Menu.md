@@ -366,7 +366,7 @@ import './Menu.css'
           {{/menu-content}}
         {{/menu}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--modifier="pf-m-menu-top"}}
+      {{#> menu-list-item}}
         {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
@@ -378,7 +378,7 @@ import './Menu.css'
             Description
           {{/menu-item-description}}
         {{/menu-item}}
-        {{#> menu newcontext}}
+        {{#> menu newcontext menu--modifier="pf-m-top"}}
           {{#> menu-content}}
             {{#> menu-list}}
               {{#> menu-list-item}}
@@ -510,7 +510,7 @@ import './Menu.css'
           {{/menu-content}}
         {{/menu}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--modifier="pf-m-menu-left"}}
+      {{#> menu-list-item}}
         {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
@@ -522,7 +522,7 @@ import './Menu.css'
             Description
           {{/menu-item-description}}
         {{/menu-item}}
-        {{#> menu newcontext}}
+        {{#> menu newcontext menu--modifier="pf-m-left"}}
           {{#> menu-content}}
             {{#> menu-list}}
               {{#> menu-list-item}}
@@ -654,7 +654,7 @@ import './Menu.css'
           {{/menu-content}}
         {{/menu}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--modifier="pf-m-menu-left pf-m-menu-top"}}
+      {{#> menu-list-item}}
         {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
@@ -666,7 +666,7 @@ import './Menu.css'
             Description
           {{/menu-item-description}}
         {{/menu-item}}
-        {{#> menu newcontext}}
+        {{#> menu newcontext  menu--modifier="pf-m-left pf-m-top"}}
           {{#> menu-content}}
             {{#> menu-list}}
               {{#> menu-list-item}}
@@ -730,7 +730,7 @@ import './Menu.css'
 
 ### Drilldown level two
 ```hbs
-{{> menu--Drilldown menu--Drilldown--id="drilldown-level-2" menu--Drilldown--IsDrilledIn--list-1="true"menu--Drilldown--menu__content--attribute='style="--pf-c-menu__content--Height: 193px;"'}}
+{{> menu--Drilldown menu--Drilldown--id="drilldown-level-2" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu__content--attribute='style="--pf-c-menu__content--Height: 193px;"'}}
 ```
 
 ### Drilldown level three
@@ -741,6 +741,11 @@ import './Menu.css'
 ### Drilldown level four
 ```hbs
 {{> menu--Drilldown menu--Drilldown--id="drilldown-level-4" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--IsDrilledIn--list-3="true" menu--Drilldown--menu__content--attribute='style="--pf-c-menu__content--Height: 193px;"'}}
+```
+
+### Scrollable drilldown
+```hbs
+{{> menu--Drilldown menu--Drilldown--id="drilldown-default" menu--Drilldown--menu--attribute='style="--pf-c-menu__content--MaxHeight: 100px;"'}}
 ```
 
 ### Width modified drilldown
@@ -1669,8 +1674,8 @@ import './Menu.css'
 | `.pf-m-favorited` | `.pf-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |
 | `.pf-m-selected` | `.pf-c-menu__item` | Modifies the menu item to be selected. |
 | `.pf-m-flyout` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "flyout". |
-| `.pf-m-menu-top` | `.pf-c-menu__list-item` | Modifies a flyout menu to expand to the top. |
-| `.pf-m-menu-left` | `.pf-c-menu__list-item` | Modifies a flyout menu to expand to the left. |
+| `.pf-m-top` | `.pf-c-menu` | Modifies a flyout menu to expand to the top. |
+| `.pf-m-left` | `.pf-c-menu` | Modifies a flyout menu to expand to the left. |
 | `.pf-m-load` | `.pf-c-menu__list-item` | Modifies a list item for "load more" styles. |
 | `.pf-m-loading` | `.pf-c-menu__list-item` | Modifies a list item for loading styles. |
 | `.pf-m-drilldown` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "drill down". |
@@ -1678,7 +1683,7 @@ import './Menu.css'
 | `.pf-m-drilled-in` | `.pf-c-menu.pf-m-drilldown, .pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled in state. |
 | `--pf-c-menu--Width: {width}` | `.pf-c-menu` | Modifies the width of the menu. The default value is `auto`. |
 | `--pf-c-menu__content--MaxHeight: {height}` | `.pf-c-menu__content` | Modifies the height of the menu content. Update this value when header and/or footer elements are intended to be fixed. |
-| `--pf-c-menu__content--Height: {height}` | `.pf-c-menu.pf-m-drilldown` | Modifies the height of the drilldown menu content. The default value is `auto`. |
-<!--
-| `--pf-c-menu--MaxHeight: {height}` | `.pf-c-menu` | Modifies the max height of the menu. The default value is `auto`. |
--->
+| `--pf-c-menu__content--Height: {height}` | `.pf-c-menu` | Modifies the height of the drilldown menu content. The default value is `auto`. |
+| `--pf-c-menu--m-flyout__menu--top-offset` | `.pf-c-menu` | Modifies the menu to allow for an offset to the top positioning. |
+| `--pf-c-menu--m-flyout__menu--left-offset` | `.pf-c-menu` | Modifies the menu to allow for an offset to the left positioning. |
+| `--pf-c-menu--m-flyout__menu--m-left--right-offset` | `.pf-c-menu.pf-m-flyout > .pf-c-menu` | Modifies the menu to allow for an offset to the right positioning. |

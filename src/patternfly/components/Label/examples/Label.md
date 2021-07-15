@@ -39,12 +39,12 @@ import './Label.css'
   Grey link removable
 {{/label}}
 
-{{#> label label--id="default-grey-icon-close-overflow" label--isRemovable="true"}}
+{{#> label label--id="default-grey-icon-close-truncate" label--isRemovable="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    Grey label with icon that overflows
+    Grey label with icon that truncates
   {{/label-text}}
 {{/label}}
 
@@ -80,12 +80,12 @@ import './Label.css'
   Blue link removable
 {{/label}}
 
-{{#> label label--id="default-blue-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-blue"}}
+{{#> label label--id="default-blue-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-blue"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    Blue label with icon that overflows
+    Blue label with icon that truncates
   {{/label-text}}
 {{/label}}
 
@@ -121,12 +121,12 @@ import './Label.css'
   Green link removable
 {{/label}}
 
-{{#> label label--id="default-green-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-green"}}
+{{#> label label--id="default-green-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-green"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    Green label with icon that overflows
+    Green label with icon that truncates
   {{/label-text}}
 {{/label}}
 
@@ -162,12 +162,12 @@ import './Label.css'
   Orange link removable
 {{/label}}
 
-{{#> label label--id="default-orange-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-orange"}}
+{{#> label label--id="default-orange-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-orange"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    Orange label with icon that overflows
+    Orange label with icon that truncates
   {{/label-text}}
 {{/label}}
 
@@ -203,12 +203,12 @@ import './Label.css'
   Red link removable
 {{/label}}
 
-{{#> label label--id="default-red-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-red"}}
+{{#> label label--id="default-red-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-red"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    Red label with icon that overflows
+    Red label with icon that truncates
   {{/label-text}}
 {{/label}}
 
@@ -244,12 +244,12 @@ import './Label.css'
   Purple link removable
 {{/label}}
 
-{{#> label label--id="default-purple-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-purple"}}
+{{#> label label--id="default-purple-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-purple"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    Purple label with icon that overflows
+    Purple label with icon that truncates
   {{/label-text}}
 {{/label}}
 
@@ -285,12 +285,12 @@ import './Label.css'
   Cyan link removable
 {{/label}}
 
-{{#> label label--id="default-cyan-icon-close-overflow" label--isRemovable="true" label--modifier="pf-m-cyan"}}
+{{#> label label--id="default-cyan-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-cyan"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
   {{#> label-text}}
-    Cyan label with icon that overflows
+    Cyan label with icon that truncates
   {{/label-text}}
 {{/label}}
 ```

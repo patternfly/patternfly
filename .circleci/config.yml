@@ -34,7 +34,7 @@ workflows:
         - test_a11y
         filters:
           branches:
-            only: master
+            only: main
 jobs:
   build:
     docker:
@@ -111,7 +111,7 @@ jobs:
           when: always
       - run:
           name: Confirm consumers can compile SASS
-          command: yarn run node-sass dist/patternfly.scss
+          command: npx node-sass dist/patternfly.scss
           when: always
       - run:
           name: Lint CSS Size
@@ -130,7 +130,7 @@ jobs:
           name: Breaking Change Lint
           # https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
           command: |
-            if git log origin/master..HEAD --format="%b" | grep -i "breaking change";
+            if git log origin/main..HEAD --format="%b" | grep -i "breaking change";
             then
                 echo "Breaking change above detected"
                 exit 1
@@ -146,4 +146,4 @@ jobs:
         command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
     - run:
         name: Release to NPM
-        command: if [[ -z $CIRCLE_PULL_REQUEST ]]; then npx semantic-release@17.0.4; fi;
+        command: if [[ -z $CIRCLE_PULL_REQUEST ]]; then npx semantic-release@17.4.3; fi;

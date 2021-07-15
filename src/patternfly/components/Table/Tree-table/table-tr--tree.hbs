@@ -1,4 +1,4 @@
-{{#> table-tr table-tr--attribute='role="row"'}}
+{{#> table-tr table-tr--attribute='role="row"' table-tr--tree--HasActions=table-tr--HasActions}}
   {{#> table-th table-th--modifier="pf-c-table__tree-view-title-cell"}}
     {{#> table-tree-view-main}}
       {{#unless table-tr--tree--IsLeaf}}
@@ -11,6 +11,11 @@
           {{/table-td}}
         {{/if}}
       {{/unless}}
+      {{#if table-tr--tree--HasActions}}
+        {{#> table-td table-td--action="true"}}
+          {{> dropdown dropdown--id=(concat table--id '-actions-main') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{/table-td}}
+      {{/if}}
       {{#> table-tree-view-text}}
         {{#if table-tree-view--HasIcons}}
           {{#> table-tree-view-icon}}
@@ -43,5 +48,8 @@
   {{/table-td}}
   {{#> table-td table-td--data-label="Number of Data Stores"}}
     5
+  {{/table-td}}
+  {{#> table-td table-td--action="true"}}
+    {{> dropdown dropdown--id=(concat table--id '-' table-tr--tree--index '-actions') dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
   {{/table-td}}
 {{/table-tr}}
