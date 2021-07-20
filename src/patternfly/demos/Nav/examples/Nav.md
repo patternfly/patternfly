@@ -27,7 +27,7 @@ section: components
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-header-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
+      {{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
         {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
@@ -67,6 +67,61 @@ section: components
     {{/page-template-title}}
     {{#> page-template-gallery}}
     {{/page-template-gallery}}
+  {{/page-main}}
+{{/page}}
+```
+
+### Horizontal subnav nav
+```hbs isFullscreen
+{{#> page page--id="page-layout-horizontal-subnav-nav"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-header-nav}}
+      {{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
+        {{#> nav-list}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Horizontal nav item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-header-nav}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{> page-template-horizontal-subnav-nav}}
+    {{> page-template-breadcrumb}}
+    {{> page-template-title}}
+    {{> page-template-gallery}}
   {{/page-main}}
 {{/page}}
 ```
