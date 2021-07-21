@@ -142,8 +142,6 @@
   --pf-c-nav--m-tertiary__scroll-button--disabled--before--BorderColor: var(--pf-global--disabled-color--300);
 
   // Horizontal subnav list
-  --pf-c-nav--m-horizontal-subnav--BorderTopWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-nav--m-horizontal-subnav--BorderTopColor: var(--pf-global--palette--black-800);
   --pf-c-nav--m-horizontal-subnav__link--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-nav--m-horizontal-subnav__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-nav--m-horizontal-subnav__link--PaddingBottom: var(--pf-global--spacer--sm);
@@ -455,8 +453,6 @@
     --pf-c-nav__link--hover--after--BorderLeftWidth: var(--pf-c-nav--m-horizontal-subnav__link--hover--after--BorderLeftWidth);
     --pf-c-nav__link--active--after--BorderLeftWidth: var(--pf-c-nav--m-horizontal-subnav__link--active--after--BorderLeftWidth);
     --pf-c-nav__link--m-current--after--BorderLeftWidth: var(--pf-c-nav--m-horizontal-subnav__link--m-current--after--BorderLeftWidth);
-
-    border-top: var(--pf-c-nav--m-horizontal-subnav--BorderTopWidth) solid var(--pf-c-nav--m-horizontal-subnav--BorderTopColor);
 
     &.pf-m-scrollable {
       .pf-c-nav__item:first-child {

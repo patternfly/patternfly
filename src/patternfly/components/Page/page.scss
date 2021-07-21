@@ -145,6 +145,13 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   // Main section horizontal subnav
   --pf-c-page__main-subnav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
+  --pf-c-page__main-subnav--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-page__main-subnav--BorderTopColor: var(--pf-global--palette--black-800);
+  --pf-c-page__main-subnav--BorderLeftWidth: 0;
+  --pf-c-page__main-subnav--BorderLeftColor: var(--pf-global--palette--black-800);
+  --pf-c-page__sidebar--main__main-subnav--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-page__sidebar--m-collapsed--main__main-subnav--BorderLeftWidth: 0;
+
 
   // Main section breadcrumb
   --pf-c-page__main-breadcrumb--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -500,6 +507,20 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
 .pf-c-page__main-subnav {
   background-color: var(--pf-c-page__main-subnav--BackgroundColor);
+  border-top: var(--pf-c-page__main-subnav--BorderTopWidth) solid var(--pf-c-page__main-subnav--BorderTopColor);
+  border-left: var(--pf-c-page__main-subnav--BorderLeftWidth) solid var(--pf-c-page__main-subnav--BorderLeftColor);
+
+  @at-root .pf-c-page__sidebar {
+    ~ .pf-c-page__main {
+      @media screen and (min-width: $pf-global--breakpoint--xl) {
+        --pf-c-page__main-subnav--BorderLeftWidth: var(--pf-c-page__sidebar--main__main-subnav--BorderLeftWidth);
+      }
+    }
+
+    &.pf-m-collapsed ~ .pf-c-page__main {
+      --pf-c-page__main-subnav--BorderLeftWidth: var(--pf-c-page__sidebar--m-collapsed--main__main-subnav--BorderLeftWidth);
+    }
+  }
 }
 
 .pf-c-page__main-breadcrumb {
