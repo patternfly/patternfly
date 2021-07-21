@@ -83,7 +83,8 @@ $pf-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm
     }
   }
 
-  &.pf-m-vertical {
+  &.pf-m-vertical,
+  &.pf-m-expandable {
     --pf-c-jump-links__list--PaddingTop: var(--pf-c-jump-links--m-vertical__list--PaddingTop);
     --pf-c-jump-links__list--PaddingRight: var(--pf-c-jump-links--m-vertical__list--PaddingRight);
     --pf-c-jump-links__list--PaddingBottom: var(--pf-c-jump-links--m-vertical__list--PaddingBottom);
