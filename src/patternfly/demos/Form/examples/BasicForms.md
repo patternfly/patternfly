@@ -33,7 +33,7 @@ section: components
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--id="-contact"}}
+  {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
     {{#> form-group-label}}
       {{#> form-label}}How can we contact you?{{/form-label}}
     {{/form-group-label}}
@@ -98,7 +98,7 @@ section: components
       {{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-   {{#> form-group form-group--id="-contact"}}
+   {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
     {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
       {{#> form-label }}How can we contact you?{{/form-label}}
       {{> form-group-label-help}}

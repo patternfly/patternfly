@@ -62,7 +62,7 @@
         This is a required field
       {{/form-helper-text}}
     {{/form-group}}
-    {{#> form-group}}
+    {{#> form-group form-group--IsCheckGroup="true" form-group--id="-check-group"}}
       {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-experience"') required='true'}}
           How can we contact you?

@@ -85,15 +85,15 @@ import './SearchInput.css'
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
-        {{#> form-actions}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Submit
-          {{/button}}
-          {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
-            Reset
-          {{/button}}
-        {{/form-actions}}
-      {{/form-group}}
+          {{#> form-actions}}
+            {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+              Submit
+            {{/button}}
+            {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
+              Reset
+            {{/button}}
+          {{/form-actions}}
+        {{/form-group}}
       {{/form}}
     {{/search-input-menu-body}}
   {{/search-input-menu}}
