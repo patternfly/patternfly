@@ -54,15 +54,14 @@
   vertical-align: middle;
   cursor: pointer;
 
-  .pf-c-switch__label {
-    grid-row: 1;
-  }
+  &.pf-m-reverse {
+    .pf-c-switch__label,
+    .pf-c-switch__toggle {
+      grid-row: 1;
+    }
 
-  .pf-c-switch__toggle {
-    grid-row: 1;
-
-    &.pf-m-reverse {
-      grid-column: 2;
+    .pf-c-switch__label {
+      grid-column: 1;
     }
   }
 }
@@ -167,6 +166,7 @@
 
 .pf-c-switch__label {
   display: inline-block;
+  grid-column: 2;
   color: var(--pf-c-switch__label--Color);
   vertical-align: top;
 }
