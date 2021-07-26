@@ -23,7 +23,7 @@ cssPrefix: pf-c-switch
 {{/switch}}
 ```
 
-### Reverse (Toggle on right)
+### Reverse (toggle on right)
 ```hbs
 {{#> switch switch--attribute='for="switch-reverse-1"' switch--modifier="pf-m-reverse"}}
   {{#> switch-input id="switch-reverse-1" aria-labelledby="switch-reverse-1-on" switch-input--attribute='name="switchExample1" checked'}}{{/switch-input}}
