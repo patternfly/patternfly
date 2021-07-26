@@ -66,7 +66,6 @@
   --pf-c-nav__link--m-current--before--BorderBottomWidth: 0;
 
   // Link ::after borders
-  --pf-c-nav__link--after--Content: "";
   --pf-c-nav__link--after--BorderColor: var(--pf-global--active-color--400);
   --pf-c-nav__link--hover--after--BorderColor: var(--pf-global--active-color--400);
   --pf-c-nav__link--focus--after--BorderColor: var(--pf-global--active-color--400);
@@ -103,7 +102,6 @@
   --pf-c-nav--m-horizontal__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav--m-horizontal__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav--m-horizontal__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav--m-horizontal__link--after--Content: none;
 
   // Tertiary list
   --pf-c-nav--m-tertiary__link--PaddingTop: var(--pf-global--spacer--sm);
@@ -128,7 +126,6 @@
   --pf-c-nav--m-tertiary__link--focus--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav--m-tertiary__link--active--before--BorderWidth: var(--pf-global--BorderWidth--lg);
   --pf-c-nav--m-tertiary__link--m-current--before--BorderWidth: var(--pf-global--BorderWidth--lg);
-  --pf-c-nav--m-tertiary__link--after--Content: none;
 
   // Tertiary scroll buttons
   --pf-c-nav--m-tertiary__scroll-button--Color: var(--pf-global--Color--dark-100);
@@ -280,6 +277,13 @@
   }
 
   &.pf-m-horizontal,
+  &.pf-m-tertiary {
+    .pf-c-nav__link::after {
+      content: none;
+    }
+  }
+
+  &.pf-m-horizontal,
   &.pf-m-tertiary,
   &.pf-m-horizontal-subnav {
     &,
@@ -381,7 +385,6 @@
     --pf-c-nav__link--focus--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--focus--before--BorderWidth);
     --pf-c-nav__link--active--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--active--before--BorderWidth);
     --pf-c-nav__link--m-current--before--BorderBottomWidth: var(--pf-c-nav--m-horizontal__link--m-current--before--BorderWidth);
-    --pf-c-nav__link--after--Content: var(--pf-c-nav--m-horizontal__link--after--Content);
   }
 
   // Tertiary list
@@ -410,7 +413,6 @@
     --pf-c-nav__link--focus--before--BorderBottomWidth: var(--pf-c-nav--m-tertiary__link--focus--before--BorderWidth);
     --pf-c-nav__link--active--before--BorderBottomWidth: var(--pf-c-nav--m-tertiary__link--active--before--BorderWidth);
     --pf-c-nav__link--m-current--before--BorderBottomWidth: var(--pf-c-nav--m-tertiary__link--m-current--before--BorderWidth);
-    --pf-c-nav__link--after--Content: var(--pf-c-nav--m-tertiary__link--after--Content);
 
     // Scroll buttons
     --pf-c-nav__scroll-button--Color: var(--pf-c-nav--m-tertiary__scroll-button--Color);
@@ -531,6 +533,7 @@
   &::after,
   &::before {
     position: absolute;
+    content: "";
     border: 0 solid;
   }
 
@@ -538,7 +541,6 @@
     right: 0;
     bottom: calc(var(--pf-c-nav__link--before--BorderBottomWidth) * -1);
     left: 0;
-    content: "";
     border-color: var(--pf-c-nav__link--before--BorderColor);
     border-bottom-width: var(--pf-c-nav__link--before--BorderBottomWidth);
   }
@@ -547,7 +549,6 @@
     top: 0;
     bottom: 0;
     left: 0;
-    content: var(--pf-c-nav__link--after--Content);
     border: 0 solid;
     border-color: var(--pf-c-nav__link--after--BorderColor);
     border-left-width: var(--pf-c-nav__link--after--BorderLeftWidth);
