@@ -106,4 +106,4 @@ Use checkbox if your user has to perform additional steps for changes to become 
 | `.pf-c-switch__label` | `<span>` |  Initiates a label inside the switch. |
 | `.pf-m-on` | `.pf-c-switch__label` | Modifies the switch label to display the on message. |
 | `.pf-m-off` | `.pf-c-switch__label` | Modifies the switch label to display the off message. |
-| `.pf-m-reverse` | `.pf-c-switch` | Modifies the switch toggle show it to the right of the label. |
+| `.pf-m-reverse` | `.pf-c-switch` | Modifies the switch toggle to show it to the right of the label. |
