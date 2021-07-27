@@ -26,6 +26,26 @@ cssPrefix: pf-c-notification-badge
     <i class="pf-icon-attention-bell" aria-hidden="true"></i>
   {{/notification-badge}}
 {{/button}}
+
+<br><br>
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Tasks"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-read"}}
+    <i class="pf-icon-task" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread tasks"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
+    <i class="pf-icon-task" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention tasks"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-attention"}}
+    <i class="pf-icon-task" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
 ```
 
 ### With count
@@ -46,6 +66,26 @@ cssPrefix: pf-c-notification-badge
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention notifications"'}}
   {{#> notification-badge notification-badge--modifier="pf-m-attention" notification-badge--count="26"}}
     <i class="pf-icon-attention-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+<br><br>
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Tasks"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-read" notification-badge--count="24"}}
+    <i class="pf-icon-task" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread tasks"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-unread" notification-badge--count="25"}}
+    <i class="pf-icon-task" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention tasks"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-attention" notification-badge--count="26"}}
+    <i class="pf-icon-task" aria-hidden="true"></i>
   {{/notification-badge}}
 {{/button}}
 ```
