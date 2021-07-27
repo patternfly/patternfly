@@ -18,9 +18,9 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav page-main-nav--IsLimitWidth="true"}}
+    {{#> page-main-subnav page-main-subnav--IsLimitWidth="true"}}
       {{> table-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light" page-main-section--IsLimitWidth="true"}}
       {{#> content}}
         <h1>Table demos</h1>
@@ -50,9 +50,9 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-subnav}}
       {{> table-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
@@ -80,9 +80,9 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-subnav}}
       {{> table-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
@@ -110,9 +110,9 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-subnav}}
       {{> table-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
@@ -140,9 +140,9 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-subnav}}
       {{> table-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
@@ -170,9 +170,9 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-subnav}}
       {{> table-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
@@ -198,9 +198,9 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-subnav}}
       {{> table-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
@@ -226,9 +226,9 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-subnav}}
       {{> table-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
@@ -256,9 +256,9 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-subnav}}
       {{> table-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}
@@ -317,9 +317,9 @@ wrapperTag: div
     {{> table-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav}}
+    {{#> page-main-subnav}}
       {{> table-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> table-main-section-content}}
     {{/page-main-section}}

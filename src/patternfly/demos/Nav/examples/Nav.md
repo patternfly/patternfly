@@ -241,9 +241,9 @@ section: components
 {{/page}}
 ```
 
-### Tertiary nav
+### Legacy tertiary nav
 ```hbs isFullscreen
-{{#> page page--id="page-layout-tertiary-nav"}}
+{{#> page page--id="page-layout-legacy-tertiary-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}
