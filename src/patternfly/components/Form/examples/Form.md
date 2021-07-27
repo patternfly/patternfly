@@ -544,6 +544,8 @@ cssPrefix: pf-c-form
 | `aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<input aria-describedby="{helper_text_id}">`.  |
 | `aria-invalid="true" aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` |  When form validation fails `aria-describedby` is used to communicate the error to the user. These attributes need to be handled with Javascript so that `aria-describedby` only references help text that explains the error, and so that `aria-invalid="true"` is only present when validation fails. For proper styling of errors `aria-invalid="true"` is required. |
 | `aria-hidden="true"` | `.pf-c-form__label-required` |  Hides the required indicator from assistive technologies. |
+| `role="group"` | `.pf-c-form__group` | Provides group role for checkbox groups. **Required for checkbox groups** |
+| `role="radiogroup"` | `.pf-c-form__group` | Provides group role for radio input groups. **Required for radio input groups** |
 | `id` | `.pf-c-form__group-label` | Generates an `id` for use in the `aria-labelledby` attribute in a checkbox or radio form group. |
 | `id` | `.pf-c-form__field-group-title-text` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
 | `id` | `.pf-c-form__field-group-toggle-button > button` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
