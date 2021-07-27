@@ -23,6 +23,24 @@ cssPrefix: pf-c-switch
 {{/switch}}
 ```
 
+### Reverse (toggle on right)
+```hbs
+{{#> switch switch--attribute='for="switch-reverse-1"' switch--modifier="pf-m-reverse"}}
+  {{#> switch-input id="switch-reverse-1" aria-labelledby="switch-reverse-1-on" switch-input--attribute='name="switchExample1" checked'}}{{/switch-input}}
+  {{#> switch-toggle}}{{/switch-toggle}}
+  {{#> switch-label id="switch-reverse-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label id="switch-reverse-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+{{/switch}}
+<br/>
+<br/>
+{{#> switch switch--attribute='for="switch-reverse-2"' switch--modifier="pf-m-reverse"}}
+  {{#> switch-input id="switch-reverse-2" aria-labelledby="switch-reverse-2-on" switch-input--attribute='name="switchExample2"'}}{{/switch-input}}
+  {{#> switch-toggle}}{{/switch-toggle}}
+  {{#> switch-label id="switch-reverse-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label id="switch-reverse-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+{{/switch}}
+```
+
 ### Without label
 ```hbs
 {{#> switch switch--attribute='for="switch-with-icon-1"'}}
@@ -88,3 +106,4 @@ Use checkbox if your user has to perform additional steps for changes to become 
 | `.pf-c-switch__label` | `<span>` |  Initiates a label inside the switch. |
 | `.pf-m-on` | `.pf-c-switch__label` | Modifies the switch label to display the on message. |
 | `.pf-m-off` | `.pf-c-switch__label` | Modifies the switch label to display the off message. |
+| `.pf-m-reverse` | `.pf-c-switch` | Positions the switch toggle to the right of the label. |

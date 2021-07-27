@@ -53,6 +53,17 @@
   line-height: var(--pf-c-switch--LineHeight);
   vertical-align: middle;
   cursor: pointer;
+
+  &.pf-m-reverse {
+    .pf-c-switch__label,
+    .pf-c-switch__toggle {
+      grid-row: 1;
+    }
+
+    .pf-c-switch__label {
+      grid-column: 1;
+    }
+  }
 }
 
 .pf-c-switch__input {
