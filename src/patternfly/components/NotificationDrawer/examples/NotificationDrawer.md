@@ -105,6 +105,102 @@ cssPrefix: pf-c-notification-drawer
 {{/notification-drawer}}
 ```
 
+### With tabs and tasks
+```hbs
+{{#> notification-drawer notification-drawer--id="notification-drawer-task-groups"}}
+  {{#> notification-drawer-header}}
+    {{#> notification-drawer-header-title}}
+      Notifications
+    {{/notification-drawer-header-title}}
+    {{#> notification-drawer-header-status}}
+      9 unread
+    {{/notification-drawer-header-status}}
+    {{#> notification-drawer-header-action}}
+      {{> dropdown dropdown-menu--modifier="pf-m-align-right" dropdown--id=(concat notification-drawer--id "-header-action") dropdown-toggle--IsPlain="true"}}
+      {{> notification-drawer-header-action-close}}
+    {{/notification-drawer-header-action}}
+  {{/notification-drawer-header}}
+
+<!-- TODO: Straighten out tabs, replace the alerts in hidden tab -->
+  {{> notification-drawer-tabs}}
+
+  {{#> notification-drawer-body}}
+
+    {{#> tab-content tab-content--attribute='id="alert-panel"'}}
+      {{!-- TODO: put back the notification list --}}
+      put the alerts back here
+    {{/tab-content}}
+
+    {{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="tasks-panel"'}}
+
+      <!-- new task group 1 -->
+      {{#> notification-drawer-task-list-group notification-drawer-group-toggle-list--modifier="pf-m-danger"}}
+        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsExpanded="true"}}
+          <h1>
+            {{#> notification-drawer-task-group-toggle}}
+              {{#> notification-drawer-task-group-toggle-header}}
+                {{#> notification-drawer-task-group-toggle-title}}
+                  Deleting pods
+                {{/notification-drawer-task-group-toggle-title}}
+                {{#> notification-drawer-task-group-toggle-status}}
+                  <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                {{/notification-drawer-task-group-toggle-status}}
+                {{#> notification-drawer-task-group-toggle-action}}
+                  {{#> button-link button--modifier="pf-m-inline pf-m-link"}}
+                    Cancel all
+                  {{/button-link}}
+                {{/notification-drawer-task-group-toggle-action}}
+              {{/notification-drawer-task-group-toggle-header}}
+              {{#> notification-drawer-task-group-toggle-count}}
+                {{#> badge badge--modifier="pf-m-read"}}4{{/badge}}
+              {{/notification-drawer-task-group-toggle-count}}
+              {{#> notification-drawer-task-group-toggle-timestamp}}
+                4 days ago
+              {{/notification-drawer-task-group-toggle-timestamp}}
+              {{> notification-drawer-task-group-toggle-icon}}
+            {{/notification-drawer-task-group-toggle}}
+          </h1>
+          {{> notification-drawer-basic-task-list-hoverable}}
+        {{/notification-drawer-task-group}}
+      <!-- end new task group 1 -->
+
+      <!-- new task group 2 -->
+        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-list-group2') notification-drawer-task-group--IsExpanded="false"}}
+          <h1>
+            {{#> notification-drawer-task-group-toggle}}
+              {{#> notification-drawer-task-group-toggle-header}}
+                {{#> notification-drawer-task-group-toggle-title}}
+                  Deleting pods
+                {{/notification-drawer-task-group-toggle-title}}
+                {{#> notification-drawer-task-group-toggle-status}}
+                  {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
+                {{/notification-drawer-task-group-toggle-status}}
+                {{#> notification-drawer-task-group-toggle-action}}
+                  {{#> button-link button--modifier="pf-m-inline pf-m-link"}}
+                    Cancel all
+                  {{/button-link}}
+                {{/notification-drawer-task-group-toggle-action}}
+              {{/notification-drawer-task-group-toggle-header}}
+              {{#> notification-drawer-task-group-toggle-count}}
+                {{#> badge badge--modifier="pf-m-read"}}6{{/badge}}
+              {{/notification-drawer-task-group-toggle-count}}
+              {{#> notification-drawer-task-group-toggle-timestamp}}
+                4 days ago
+              {{/notification-drawer-task-group-toggle-timestamp}}
+              {{> notification-drawer-task-group-toggle-icon}}
+            {{/notification-drawer-task-group-toggle}}
+          </h1>
+          {{> notification-drawer-basic-task-list}}
+        {{/notification-drawer-task-group}}
+        <!-- end new task group 2 -->
+
+      {{/notification-drawer-task-list-group}}
+    {{/tab-content}}
+
+  {{/notification-drawer-body}}
+{{/notification-drawer}}
+```
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |

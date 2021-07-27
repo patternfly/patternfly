@@ -1,0 +1,27 @@
+{{!--
+------------------------------------
+From Tabs list, content options:
+------------------------------------
+__tabs-list--HasIcons: bool
+__tabs-list--IsScrollable: bool
+__tabs-list--IsShort: bool
+__tabs-list--IsLong: bool
+__tabs-item--NoText: bool
+------------------------------------
+--}}
+
+{{#> tabs-list}}
+  {{> __tabs-item
+    __tabs-item--id="alerts"
+    __tabs-item--aria-label="Alerts"
+    __tabs-item--text="Alerts"
+    __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-alerts-panel"')
+  }}
+  {{> __tabs-item
+    __tabs-item--current="true"
+    __tabs-item--id="tasks"
+    __tabs-item--aria-label="Tasks"
+    __tabs-item--text="Tasks"
+    __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-tasks-panel"')
+    }}
+{{/tabs-list}}

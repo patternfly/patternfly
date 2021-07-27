@@ -1,0 +1,11 @@
+<button class="pf-c-notification-drawer__task-group-toggle{{#if notification-drawer-task-group-toggle--modifier}} {{notification-drawer-task-group-toggle--modifier}}{{/if}}"
+  {{#if notification-drawer-group--IsExpanded}}
+    aria-expanded="true"
+  {{else}}
+    aria-expanded="false"
+  {{/if}}
+  {{#if notification-drawer-task-group-toggle--attribute}}
+    {{{notification-drawer-task-group-toggle--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</button>

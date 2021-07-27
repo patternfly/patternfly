@@ -1,0 +1,10 @@
+<div class="pf-c-notification-drawer__tabs{{#if notification-drawer-tabs--modifier}} {{notification-drawer-tabs--modifier}}{{/if}}"
+  {{#if notification-drawer-list--attribute}}
+    {{{notification-drawer-list--attribute}}}
+  {{/if}}>
+
+{{#> tabs tabs--id="notification-drawer-tabs"}}
+  {{> notification-drawer-tabs-list}}
+{{/tabs}}
+  
+</div>

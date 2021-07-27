@@ -12,6 +12,9 @@
   --pf-c-notification-drawer__header-title--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-notification-drawer__header-status--MarginLeft: var(--pf-global--spacer--md);
 
+  // Tabs
+  --pf-c-notification-drawer__tabs--BackgroundColor: var(--pf-global--BackgroundColor--100);
+
   // Body
   --pf-c-notification-drawer__body--ZIndex: var(--pf-global--ZIndex--xs);
 
@@ -69,6 +72,15 @@
   --pf-c-notification-drawer__list-item-timestamp--Color: var(--pf-global--Color--200);
   --pf-c-notification-drawer__list-item-timestamp--FontSize: var(--pf-global--FontSize--sm);
 
+  // Task list item modifiers
+  --pf-c-notification-drawer__task-list-item--m-info__task-list-item-status--Color: var(--pf-global--info-color--100);
+  --pf-c-notification-drawer__task-list-item--m-warning__task-list-item-status--Color: var(--pf-global--warning-color--100);
+  --pf-c-notification-drawer__task-list-item--m-danger__task-list-item-status--Color: var(--pf-global--danger-color--100);
+  --pf-c-notification-drawer__task-list-item--m-success__task-list-item-status--Color: var(--pf-global--success-color--100);
+  --pf-c-notification-drawer__task-list-item--m-default__task-list-item-status--Color: var(--pf-global--default-color--200);
+  --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-default__task-list-item-status--Color);
+  --pf-c-notification-drawer__task-list-item-hover-action--Display: none;
+
   // Group
   --pf-c-notification-drawer__group--m-expanded--group--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-notification-drawer__group--m-expanded--group--BorderTopColor: var(--pf-global--BorderColor--100);
@@ -96,6 +108,14 @@
   --pf-c-notification-drawer__group-toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-notification-drawer__group-toggle-icon--Transition: .2s ease-in 0s;
   --pf-c-notification-drawer__group--m-expanded__group-toggle-icon--Rotate: 90deg;
+
+  // Group toggle status
+  --pf-c-notification-drawer__task-list-group--m-info__group-toggle-status--Color: var(--pf-global--info-color--100);
+  --pf-c-notification-drawer__task-list-group--m-warning__group-toggle-status--Color: var(--pf-global--warning-color--100);
+  --pf-c-notification-drawer__task-list-group--m-danger__group-toggle-status--Color: var(--pf-global--danger-color--100);
+  --pf-c-notification-drawer__task-list-group--m-success__group-toggle-status--Color: var(--pf-global--success-color--100);
+  --pf-c-notification-drawer__task-list-group--m-default__group-toggle-status--Color: var(--pf-global--default-color--200);
+  --pf-c-notification-drawer__group-toggle-status--Color: var(--pf-c-notification-drawer__task-list-group--m-default__group-toggle-status--Color);
 
   display: flex;
   flex-direction: column;
@@ -128,11 +148,18 @@
   margin-left: auto;
 }
 
+.pf-c-notification-drawer__tabs {
+  background-color: var(--pf-c-notification-drawer__header--BackgroundColor);
+
+  // TODO: fix height
+}
+
 .pf-c-notification-drawer__body {
   overflow-y: auto;
   box-shadow: var(--pf-c-notification-drawer__body--ZIndex);
 }
 
+// list item
 .pf-c-notification-drawer__list-item {
   position: relative;
   display: grid;
@@ -165,26 +192,31 @@
   &.pf-m-info {
     --pf-c-notification-drawer__list-item--before--BackgroundColor: var(--pf-c-notification-drawer__list-item--m-info__list-item--before--BackgroundColor);
     --pf-c-notification-drawer__list-item-header-icon--Color: var(--pf-c-notification-drawer__list-item--m-info__list-item-header-icon--Color);
+    --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-info__task-list-item-status--Color);
   }
 
   &.pf-m-warning {
     --pf-c-notification-drawer__list-item--before--BackgroundColor: var(--pf-c-notification-drawer__list-item--m-warning__list-item--before--BackgroundColor);
     --pf-c-notification-drawer__list-item-header-icon--Color: var(--pf-c-notification-drawer__list-item--m-warning__list-item-header-icon--Color);
+    --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-warning__task-list-item-status--Color);
   }
 
   &.pf-m-danger {
     --pf-c-notification-drawer__list-item--before--BackgroundColor: var(--pf-c-notification-drawer__list-item--m-danger__list-item--before--BackgroundColor);
     --pf-c-notification-drawer__list-item-header-icon--Color: var(--pf-c-notification-drawer__list-item--m-danger__list-item-header-icon--Color);
+    --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-danger__task-list-item-status--Color);
   }
 
   &.pf-m-success {
     --pf-c-notification-drawer__list-item--before--BackgroundColor: var(--pf-c-notification-drawer__list-item--m-success__list-item--before--BackgroundColor);
     --pf-c-notification-drawer__list-item-header-icon--Color: var(--pf-c-notification-drawer__list-item--m-success__list-item-header-icon--Color);
+    --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-success__task-list-item-status--Color);
   }
 
   &.pf-m-default {
     --pf-c-notification-drawer__list-item--before--BackgroundColor: var(--pf-c-notification-drawer__list-item--m-default__list-item--before--BackgroundColor);
     --pf-c-notification-drawer__list-item-header-icon--Color: var(--pf-c-notification-drawer__list-item--m-default__list-item-header-icon--Color);
+    --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-default__task-list-item-status--Color);
   }
 
   &.pf-m-read {
@@ -208,6 +240,68 @@
   }
 }
 
+// task list item
+.pf-c-notification-drawer__task-list-item {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  padding: var(--pf-c-notification-drawer__list-item--PaddingTop) var(--pf-c-notification-drawer__list-item--PaddingRight) var(--pf-c-notification-drawer__list-item--PaddingBottom) var(--pf-c-notification-drawer__list-item--PaddingLeft);
+  background-color: var(--pf-c-notification-drawer__list-item--BackgroundColor);
+  border-bottom: var(--pf-c-notification-drawer__list-item--BorderBottomWidth) solid var(--pf-c-notification-drawer__list-item--BorderBottomColor);
+  outline-offset: var(--pf-c-notification-drawer__list-item--OutlineOffset);
+  box-shadow: var(--pf-c-notification-drawer__list-item--BoxShadow);
+
+  &.pf-m-info {
+    --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-info__task-list-item-status--Color);
+  }
+
+  &.pf-m-warning {
+    --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-warning__task-list-item-status--Color);
+  }
+
+  &.pf-m-danger {
+    --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-danger__task-list-item-status--Color);
+  }
+
+  &.pf-m-success {
+    --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-success__task-list-item-status--Color);
+  }
+
+  &.pf-m-default {
+    --pf-c-notification-drawer__task-list-item-status--Color: var(--pf-c-notification-drawer__task-list-item--m-default__task-list-item-status--Color);
+  }
+
+  &.pf-m-hoverable {
+    cursor: pointer;
+
+    &:hover {
+      z-index: var(--pf-c-notification-drawer__list-item--m-hoverable--hover--ZIndex);
+      box-shadow: var(--pf-c-notification-drawer__list-item--m-hoverable--hover--BoxShadow);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      --pf-c-notification-drawer__task-list-item-hover-action--Display: block;
+    }
+  }
+}
+
+// Task list item pieces
+.pf-c-notification-drawer__task-list-item-hover-action {
+  display: var(--pf-c-notification-drawer__task-list-item-hover-action--Display);
+  margin-left: var(--pf-global--spacer--xl);
+}
+
+.pf-c-notification-drawer__task-list-item-status {
+  // TODO: variables
+  flex-basis: var(--pf-global--spacer--3xl);
+  margin-left: auto;
+  color: var(--pf-c-notification-drawer__task-list-item-status--Color);
+  text-align: end;
+}
+
+// List item pieces
 .pf-c-notification-drawer__list-item-header {
   display: flex;
   align-items: baseline;
@@ -249,27 +343,57 @@
   color: var(--pf-c-notification-drawer__list-item-timestamp--Color);
 }
 
-.pf-c-notification-drawer__group-list {
+// Group and task group
+.pf-c-notification-drawer__group-list,
+.pf-c-notification-drawer__task-list-group {
   display: flex;
   flex-direction: column;
 }
 
-.pf-c-notification-drawer__group {
+.pf-c-notification-drawer__task-list-group {
+  &.pf-m-info {
+    --pf-c-notification-drawer__group-toggle-status--Color: var(--pf-c-notification-drawer__task-list-group--m-info__group-toggle-status--Color);
+  }
+
+  &.pf-m-warning {
+    --pf-c-notification-drawer__group-toggle-status--Color: var(--pf-c-notification-drawer__task-list-group--m-warning__group-toggle-status--Color);
+  }
+
+  &.pf-m-danger {
+    --pf-c-notification-drawer__group-toggle-status--Color: var(--pf-c-notification-drawer__task-list-group--m-danger__group-toggle-status--Color);
+  }
+
+  &.pf-m-success {
+    --pf-c-notification-drawer__group-toggle-status--Color: var(--pf-c-notification-drawer__task-list-group--m-success__group-toggle-status--Color);
+  }
+
+  &.pf-m-default {
+    --pf-c-notification-drawer__group-toggle-status--Color: var(--pf-c-notification-drawer__task-list-group--m-default__group-toggle-status--Color);
+  }
+}
+
+// TODO: probably messed this up, causing the expansion problem
+.pf-c-notification-drawer__group,
+.pf-c-notification-drawer__task-group {
   &.pf-m-expanded {
     min-height: var(--pf-c-notification-drawer__group--m-expanded--MinHeight);
 
-    + .pf-c-notification-drawer__group {
+    + .pf-c-notification-drawer__group,
+    + .pf-c-notification-drawer__task-group {
       border-top: var(--pf-c-notification-drawer__group--m-expanded--group--BorderTopWidth) solid var(--pf-c-notification-drawer__group--m-expanded--group--BorderTopColor);
     }
   }
 
-  .pf-c-notification-drawer__list-item:last-child {
+  .pf-c-notification-drawer__list-item:last-child,
+  .pf-c-notification-drawer__task-list-item:last-child {
     --pf-c-notification-drawer__list-item--BorderBottomWidth: 0;
     --pf-c-notification-drawer__list-item--before--Bottom: 0;
   }
 }
 
-.pf-c-notification-drawer__group-toggle {
+// Group toggle and task group toggle pieces
+.pf-c-notification-drawer__group-toggle,
+.pf-c-notification-drawer__task-group-toggle {
   display: flex;
   align-items: baseline;
   width: 100%;
@@ -278,6 +402,16 @@
   border: solid var(--pf-c-notification-drawer__group-toggle--BorderColor);
   border-width: 0 0 var(--pf-c-notification-drawer__group-toggle--BorderBottomWidth) 0;
   outline-offset: var(--pf-c-notification-drawer__group-toggle--OutlineOffset);
+}
+
+.pf-c-notification-drawer__task-group-toggle {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+}
+
+.pf-c-notification-drawer__task-group-header {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .pf-c-notification-drawer__group-toggle-title {
@@ -289,17 +423,66 @@
   word-break: break-word;
 }
 
-.pf-c-notification-drawer__group-toggle-count {
+.pf-c-notification-drawer__group-toggle-count,
+.pf-c-notification-drawer__task-group-toggle-count {
   margin-right: var(--pf-c-notification-drawer__group-toggle-count--MarginRight);
   margin-left: auto;
 }
 
-.pf-c-notification-drawer__group-toggle-icon {
+.pf-c-notification-drawer__group-toggle-icon,
+.pf-c-notification-drawer__task-group-toggle-icon {
   margin-right: var(--pf-c-notification-drawer__group-toggle-icon--MarginRight);
   color: var(--pf-c-notification-drawer__group-toggle-icon--Color);
   transition: var(--pf-c-notification-drawer__group-toggle-icon--Transition);
 
-  .pf-c-notification-drawer__group.pf-m-expanded & {
+  .pf-c-notification-drawer__group.pf-m-expanded &,
+  .pf-c-notification-drawer__task-group.pf-m-expanded & {
     transform: rotate(var(--pf-c-notification-drawer__group--m-expanded__group-toggle-icon--Rotate));
   }
+}
+
+.pf-c-notification-drawer__task-group-toggle-header {
+  display: flex;
+  align-items: baseline;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.pf-c-notification-drawer__task-group-toggle-title {
+  @include pf-line-clamp("var(--pf-c-notification-drawer__group-toggle-title--max-lines)");
+
+  margin-right: var(--pf-c-notification-drawer__group-toggle-title--MarginRight);
+  text-align: left;
+  word-break: break-word;
+}
+
+.pf-c-notification-drawer__task-group-toggle-count {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.pf-c-notification-drawer__task-group-toggle-status {
+  // TODO: use variable
+  margin-right: 5px;
+  color: var(--pf-c-notification-drawer__group-toggle-status--Color);
+}
+
+.pf-c-notification-drawer__task-group-toggle-action {
+  margin-left: var(--pf-global--spacer--xl);
+
+  // flex-grow: 1;
+}
+
+.pf-c-notification-drawer__task-group-toggle-icon {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+
+.pf-c-notification-drawer__task-group-toggle-timestamp {
+  // TODO: fix
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  font-size: var(--pf-global--FontSize--sm);
+  color: var(--pf-global--Color--200);
+  text-align: left;
 }
