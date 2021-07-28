@@ -496,8 +496,8 @@ import './Wizard.css'
 | `.pf-c-wizard__title` | `.pf-c-title.pf-m-3xl` | Initiates the title. **Required** |
 | `.pf-c-wizard__description` | `<p>` | Initiates the description. |
 | `.pf-c-wizard__toggle` | `<button>` | Initiates the mobile steps menu toggle button. **Required** |
-| `.pf-c-wizard__toggle-list` | `<ol>` | Initiates the toggle list. **Required** |
-| `.pf-c-wizard__toggle-list-item` | `<li>` | Initiates a toggle list item. **Required** |
+| `.pf-c-wizard__toggle-list` | `<span>` | Initiates the toggle list. **Required** |
+| `.pf-c-wizard__toggle-list-item` | `<span>` | Initiates a toggle list item. **Required** |
 | `.pf-c-wizard__toggle-num` | `<span>` | Initiates the step number. **Required** |
 | `.pf-c-wizard__toggle-separator` | `<i>` | Initiates the separator between steps. |
 | `.pf-c-wizard__toggle-icon` | `<span>` | Initiates the toggle icon wrapper. **Required** |
