@@ -152,6 +152,8 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--c-toolbar__expandable-content--PaddingRight: var(--pf-c-masthead--inset);
   --pf-c-masthead--c-toolbar__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-masthead--c-toolbar__expandable-content--PaddingLeft: var(--pf-c-masthead--inset);
+  --pf-c-masthead--c-toolbar__expandable-content--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-masthead--c-toolbar__expandable-content--BorderTopColor: var(--pf-global--palette--black-800);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
@@ -222,7 +224,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   .pf-c-toolbar__expandable-content {
     position: absolute;
-    border-top: 1px solid #464646;
+    border-top: var(--pf-c-masthead--c-toolbar__expandable-content--BorderTopWidth) solid var(--pf-c-masthead--c-toolbar__expandable-content--BorderTopColor);
   }
 
   .pf-c-toolbar,
