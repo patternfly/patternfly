@@ -5,19 +5,23 @@
   {{#if tree-view-node--attribute}}
     {{{tree-view-node--attribute}}}
   {{/if}}>
-  {{#if tree-view-node--HasToggle}}
-    {{> tree-view-node-toggle}}
-  {{/if}}
-  {{#if tree-view-node--HasFolderIcon}}
-    {{> tree-view-node-icon tree-view-node-icon--IsFolder="true"}}
-  {{/if}}
-  {{#if tree-view-node--HasCheckbox}}
-    {{> tree-view-node-check}}
-  {{/if}}
-  {{#> tree-view-node-text}}
-    {{{tree-view-node--text}}}
-  {{/tree-view-node-text}}
-  {{#if @partial-block}}
-    {{> @partial-block}}
-  {{/if}}
+  {{#> tree-view-node-container}}
+    {{#if tree-view-list-item--IsExpandable}}
+      {{> tree-view-node-toggle}}
+    {{/if}}
+    {{#if tree-view-node--HasFolderIcon}}
+      {{> tree-view-node-icon tree-view-node-icon--IsFolder="true"}}
+    {{/if}}
+    {{#if tree-view-node--HasCheckbox}}
+      {{> tree-view-node-check}}
+    {{/if}}
+    {{#if tree-view-node--text}}
+      {{#> tree-view-node-text}}
+        {{{tree-view-node--text}}}
+      {{/tree-view-node-text}}
+    {{/if}}
+    {{#if @partial-block}}
+      {{> @partial-block}}
+    {{/if}}
+  {{/tree-view-node-container}}
 </{{# if tree-view-node--type--IsDiv}}div{{else}}button{{/if}}>
