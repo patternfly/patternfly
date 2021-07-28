@@ -56,7 +56,7 @@
         {{/form-helper-text}}
       {{/form-group-control}}
     {{/form-group}}
-    {{#> form-group}}
+    {{#> form-group form-group--IsCheckGroup="true" form-group--id="-check-group"}}
       {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-experience"') required='true'}}
           Your experience
@@ -69,7 +69,7 @@
             <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
           {{/form-helper-text-icon}}
             This is a requied field
-          {{/form-helper-text}}
+        {{/form-helper-text}}
         {{#> check}}
           {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox1" name="alt-form-checkbox1"'}}{{/check-input}}
           {{#> check-label check-label--attribute='for="alt-form-checkbox1"'}}Follow up via email{{/check-label}}

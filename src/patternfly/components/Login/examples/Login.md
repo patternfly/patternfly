@@ -31,7 +31,7 @@ wrapperTag: div
             {{#> form-control controlType="input" input="true" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group}}
-          {{#> check}}
+            {{#> check}}
               {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
               {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
             {{/check}}
@@ -75,7 +75,7 @@ wrapperTag: div
             {{#> form-control controlType="input" input="true" form-control--attribute='required type="password" id="invalid-login-demo-form-password" name="invalid-login-demo-form-password" aria-invalid="true"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group}}
-          {{#> check}}
+            {{#> check}}
               {{#> check-input check-input--attribute='type="checkbox" id="invalid-login-demo-checkbox" name="invalid-login-demo-checkbox"'}}{{/check-input}}
               {{#> check-label check-label--attribute='for="invalid-login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
             {{/check}}
@@ -124,7 +124,7 @@ wrapperTag: div
             {{/input-group}}
           {{/form-group}}
           {{#> form-group}}
-          {{#> check}}
+            {{#> check}}
               {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
               {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
             {{/check}}
@@ -173,7 +173,7 @@ wrapperTag: div
             {{/input-group}}
           {{/form-group}}
           {{#> form-group}}
-          {{#> check}}
+            {{#> check}}
               {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
               {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
             {{/check}}

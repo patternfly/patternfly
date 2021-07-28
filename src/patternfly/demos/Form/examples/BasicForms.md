@@ -33,23 +33,42 @@ section: components
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--id="-contact"}}
+  {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
     {{#> form-group-label}}
       {{#> form-label}}How can we contact you?{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control form-group-control--modifier="pf-m-inline"}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '1" name="' form--id form-group--id '1"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '1"')}}Email{{/check-label}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '-check-1" name="' form--id form-group--id '-check-1"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '-check-1"')}}Email{{/check-label}}
       {{/check}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '2" name="' form--id form-group--id '2"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '2"')}}Phone{{/check-label}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '-check-2" name="' form--id form-group--id '-check-2"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '-check-2"')}}Phone{{/check-label}}
       {{/check}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '3" name="' form--id form-group--id '3"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '3"')}}Mail{{/check-label}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '-check-3" name="' form--id form-group--id '-check-3"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '-check-3"')}}Mail{{/check-label}}
       {{/check}}
+    {{/form-group-control}}
+  {{/form-group}}
+  {{#> form-group form-group--IsCheckGroup="true" form-group--IsRadioGroup="true" form-group--id="-time-zone"}}
+    {{#> form-group-label}}
+      {{#> form-label}}Time zone{{/form-label}}
+    {{/form-group-label}}
+    {{#> form-group-control form-group-control--modifier="pf-m-inline"}}
+      {{#> radio}}
+        {{#> radio-input radio-input--attribute=(concat 'id="' form--id form-group--id '-radio-1" name="' form--id form-group--id '-radio"')}}{{/radio-input}}
+        {{#> radio-label radio-label--attribute=(concat 'for="' form--id form-group--id '-radio-1"')}}Eastern{{/radio-label}}
+      {{/radio}}
+      {{#> radio}}
+        {{#> radio-input radio-input--attribute=(concat 'id="' form--id form-group--id '-radio-2" name="' form--id form-group--id '-radio"')}}{{/radio-input}}
+        {{#> radio-label radio-label--attribute=(concat 'for="' form--id form-group--id '-radio-2"')}}Central{{/radio-label}}
+      {{/radio}}
+      {{#> radio}}
+        {{#> radio-input radio-input--attribute=(concat 'id="' form--id form-group--id '-radio-3" name="' form--id form-group--id '-radio"')}}{{/radio-input}}
+        {{#> radio-label radio-label--attribute=(concat 'for="' form--id form-group--id '-radio-3"')}}Pacific{{/radio-label}}
+      {{/radio}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--modifier="pf-m-action"}}
@@ -98,22 +117,22 @@ section: components
       {{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-   {{#> form-group form-group--id="-contact"}}
+   {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
     {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
       {{#> form-label }}How can we contact you?{{/form-label}}
       {{> form-group-label-help}}
     {{/form-group-label}}
     {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '1" name="' form--id form-group--id '1"')}}{{/check-input}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '1" name="' form--id form-group--id '1"')}}{{/check-input}}
         {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '1"')}}Email{{/check-label}}
       {{/check}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '2" name="' form--id form-group--id '2"')}}{{/check-input}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '2" name="' form--id form-group--id '2"')}}{{/check-input}}
         {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '2"')}}Phone{{/check-label}}
       {{/check}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '3" name="' form--id form-group--id '3"')}}{{/check-input}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '3" name="' form--id form-group--id '3"')}}{{/check-input}}
         {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '3"')}}Mail{{/check-label}}
       {{/check}}
     {{/form-group-control}}
