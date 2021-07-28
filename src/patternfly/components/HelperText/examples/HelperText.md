@@ -43,14 +43,14 @@ cssPrefix: pf-c-helper-text
 ```hbs
 {{#> helper-text}}
   {{#> helper-text-item}}
-    {{> helper-text-item-icon helper-text-item-icon--type="info"}}
+    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
     {{#> helper-text-item-text}}This is default helper text{{/helper-text-item-text}}
   {{/helper-text-item}}
 {{/helper-text}}
 
 {{#> helper-text}}
   {{#> helper-text-item helper-text-item--modifier="pf-m-indeterminate"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="question"}}
+    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
     {{#> helper-text-item-text}}This is indeterminate helper text{{/helper-text-item-text}}
   {{/helper-text-item}}
 {{/helper-text}}
