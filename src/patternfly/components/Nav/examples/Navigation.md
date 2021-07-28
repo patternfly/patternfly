@@ -272,7 +272,7 @@ import './Navigation.css'
 
 ### Horizontal
 ```hbs
-{{#> nav nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
+{{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -295,7 +295,7 @@ import './Navigation.css'
 
 ### Horizontal overflow
 ```hbs
-{{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
+{{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
@@ -326,9 +326,9 @@ import './Navigation.css'
 {{/nav}}
 ```
 
-### Tertiary
+### Horizontal subnav
 ```hbs
-{{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--attribute='aria-label="Local"'}}
+{{#> nav nav--IsHorizontalSubnav="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -349,9 +349,65 @@ import './Navigation.css'
 {{/nav}}
 ```
 
-### Tertiary overflow
+### Horizontal subnav overflow
 ```hbs
-{{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+{{#> nav nav--HasScroll="true" nav--IsHorizontalSubnav="true" nav--IsScrollable="true" nav--attribute='aria-label="Global"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 3
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Horizontal nav item 4
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Horizontal nav item 5
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
+### Legacy tertiary
+```hbs
+{{#> nav nav--HasScroll="true" nav--IsTertiary="true" nav--attribute='aria-label="Local"'}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+        Item 1
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Item 2
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Item 3
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
+### Legacy tertiary overflow
+```hbs
+{{#> nav nav--HasScroll="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#" nav-link--current="true"}}
@@ -516,6 +572,7 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon wrapper. |
 | `.pf-c-nav__scroll-button` | `<button>` | Initiates a nav scroll button. **Required for horizontal navs** |
 | `.pf-m-horizontal` | `.pf-c-nav` | Modifies nav for the horizontal variation. |
+| `.pf-m-horizontal-subnav` | `.pf-c-nav` | Modifies nav for the horizontal subnav variation. |
 | `.pf-m-tertiary` | `.pf-c-nav` | Modifies nav for the tertiary variation. |
 | `.pf-m-light` | `.pf-c-nav` | Modifies nav for the light variation. **Note: only for use with vertical navs, and requires `.pf-m-light` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
 | `.pf-m-scrollable` | `.pf-c-nav` | Modifies nav for the scrollable state. |

@@ -50,37 +50,27 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-      {{#> page-main-nav page-main-nav--IsLimitWidth="true"}}
-      {{#> nav nav--IsHorizontal="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
+    {{#> page-main-subnav page-main-subnav--IsLimitWidth="true"}}
+      {{#> nav nav--IsHorizontalSubnav="true" nav--attribute='aria-label="Local"'}}
         {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Tertiary nav item 1
+              Item 1
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 2
+              Item 2
             {{/nav-link}}
           {{/nav-item}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 3
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 4
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Tertiary nav item 5
+              Item 3
             {{/nav-link}}
           {{/nav-item}}
         {{/nav-list}}
       {{/nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{> @partial-block}}
   {{/page-main}}
 {{/page}}

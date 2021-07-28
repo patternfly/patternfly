@@ -1,0 +1,12 @@
+<section class="pf-c-page__main-subnav{{#if page-main-subnav--IsLimitWidth}} pf-m-limit-width{{/if}}{{#if page-main-subnav--modifier}} {{page-main-subnav--modifier}}{{/if}}"
+  {{#if page-main-subnav--attribute}}
+    {{{page-main-subnav--attribute}}}
+  {{/if}}>
+  {{#if page-main-subnav--IsLimitWidth}}
+    {{#> page-main-body}}
+      {{> @partial-block}}
+    {{/page-main-body}}
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
+</section>
