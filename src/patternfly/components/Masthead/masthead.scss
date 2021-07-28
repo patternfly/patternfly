@@ -144,8 +144,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderLeftColor: var(--pf-global--palette--black-600);
 
   // Toolbar
-  --pf-c-masthead--c-toolbar--PaddingTop: 0;
-  --pf-c-masthead--c-toolbar--PaddingBottom: 0;
   --pf-c-masthead--c-toolbar__content--PaddingRight: 0;
   --pf-c-masthead--c-toolbar__content--PaddingLeft: 0;
   --pf-c-masthead--c-toolbar__expandable-content--PaddingTop: var(--pf-global--spacer--md);
@@ -193,8 +191,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 
   .pf-c-toolbar {
-    --pf-c-toolbar--PaddingTop: var(--pf-c-masthead--c-toolbar--PaddingTop);
-    --pf-c-toolbar--PaddingBottom: var(--pf-c-masthead--c-toolbar--PaddingTop);
     --pf-c-toolbar__content--PaddingRight: var(--pf-c-masthead--c-toolbar__content--PaddingRight);
     --pf-c-toolbar__content--PaddingLeft: var(--pf-c-masthead--c-toolbar__content--PaddingLeft);
     --pf-c-toolbar__expandable-content--PaddingTop: var(--pf-c-masthead--c-toolbar__expandable-content--PaddingTop);
@@ -205,40 +201,12 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     width: 100%;
   }
 
-  .pf-c-toolbar,
-  .pf-c-toolbar__content,
-  .pf-c-toolbar__content-section,
-  .pf-c-toolbar__expandable-content,
-  .pf-c-toolbar__group {
-    min-width: 0;
-  }
-
-  .pf-c-toolbar,
-  .pf-c-toolbar__content {
-    position: static;
-  }
-
   .pf-c-toolbar__content-section {
     flex-wrap: nowrap;
   }
 
   .pf-c-toolbar__expandable-content {
-    position: absolute;
     border-top: var(--pf-c-masthead--c-toolbar__expandable-content--BorderTopWidth) solid var(--pf-c-masthead--c-toolbar__expandable-content--BorderTopColor);
-  }
-
-  .pf-c-toolbar,
-  .pf-c-toolbar__content,
-  .pf-c-toolbar__content-section,
-  .pf-c-toolbar__group,
-  .pf-c-toolbar__item {
-    align-self: stretch;
-  }
-
-  .pf-c-toolbar__item {
-    --pf-c-toolbar__item--Display: var(--pf-c-masthead--c-toolbar__item--Display);
-
-    align-items: center;
   }
 
   .pf-c-menu-toggle {

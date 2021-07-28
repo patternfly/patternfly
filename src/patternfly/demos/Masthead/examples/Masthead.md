@@ -21,7 +21,7 @@ wrapperTag: div
     {{/masthead-brand}}
   {{/masthead-main}}
   {{#> masthead-content}}
-    {{#> toolbar toolbar--id=(concat masthead--id '-toolbar')}}
+    {{#> toolbar toolbar--modifier="pf-m-full-height pf-m-static" toolbar--id=(concat masthead--id '-toolbar')}}
       {{#> toolbar-content-section}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
           {{#> toolbar-item}}
@@ -49,7 +49,7 @@ wrapperTag: div
     {{/masthead-brand}}
   {{/masthead-main}}
   {{#> masthead-content}}
-    {{#> toolbar toolbar--id=(concat masthead--id '-toolbar')}}
+    {{#> toolbar toolbar--modifier="pf-m-full-height pf-m-static" toolbar--id=(concat masthead--id '-toolbar')}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
@@ -85,7 +85,7 @@ wrapperTag: div
     {{/masthead-brand}}
   {{/masthead-main}}
   {{#> masthead-content}}
-    {{#> toolbar}}
+    {{#> toolbar toolbar--modifier="pf-m-full-height pf-m-static"}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show pf-m-align-right"}}
@@ -118,7 +118,7 @@ wrapperTag: div
     {{/masthead-brand}}
   {{/masthead-main}}
   {{#> masthead-content}}
-    {{#> toolbar toolbar--id=(concat masthead--id '-toolbar')}}
+    {{#> toolbar toolbar--modifier="pf-m-full-height pf-m-static" toolbar--id=(concat masthead--id '-toolbar')}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg pf-m-align-right"}}
@@ -152,7 +152,7 @@ wrapperTag: div
       {{/masthead-brand}}
     {{/masthead-main}}
     {{#> masthead-content}}
-      {{#> toolbar toolbar--id=(concat masthead--id '-toolbar')}}
+      {{#> toolbar toolbar--modifier="pf-m-full-height pf-m-static" toolbar--id=(concat masthead--id '-toolbar')}}
         {{#> toolbar-content}}
           {{#> toolbar-content-section}}
             {{#> toolbar-item toolbar-item--attribute='style="--pf-c-toolbar__item--MinWidth: 140px"'}}
@@ -254,7 +254,7 @@ wrapperTag: div
     {{/masthead-brand}}
   {{/masthead-main}}
   {{#> masthead-content}}
-    {{#> toolbar toolbar--id=(concat masthead--id '-toolbar')}}
+    {{#> toolbar toolbar--modifier="pf-m-full-height pf-m-static" toolbar--id=(concat masthead--id '-toolbar')}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show pf-m-align-right"}}

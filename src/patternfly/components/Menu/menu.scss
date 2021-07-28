@@ -50,7 +50,7 @@
   --pf-c-menu__search--PaddingLeft: var(--pf-global--spacer--md);
 
   // Header + search
-  --pf-c-menu__header--c-menu__search--PaddingTop: 0;
+  --pf-c-menu__header__search--PaddingTop: 0;
 
   // List
   --pf-c-menu__list--Display: block;
@@ -358,7 +358,7 @@
   }
 
   + .pf-c-menu__search {
-    --pf-c-menu__search--PaddingTop: var(--pf-c-menu__header--c-menu__search--PaddingTop);
+    --pf-c-menu__search--PaddingTop: var(--pf-c-menu__header__search--PaddingTop);
   }
 }
 
