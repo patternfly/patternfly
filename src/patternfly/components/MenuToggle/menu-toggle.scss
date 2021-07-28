@@ -86,6 +86,7 @@
   position: relative;
   display: inline-flex;
   align-items: center;
+  max-width: 100%;
   padding: var(--pf-c-menu-toggle--PaddingTop) var(--pf-c-menu-toggle--PaddingRight) var(--pf-c-menu-toggle--PaddingBottom) var(--pf-c-menu-toggle--PaddingLeft);
   font-size: var(--pf-c-menu-toggle--FontSize);
   line-height: var(--pf-c-menu-toggle--LineHeight);
@@ -191,6 +192,12 @@
 
 .pf-c-menu-toggle__icon {
   margin-right: var(--pf-c-menu-toggle__icon--MarginRight);
+}
+
+.pf-c-menu-toggle__text {
+  @include pf-text-overflow;
+
+  min-width: 0;
 }
 
 .pf-c-menu-toggle__count {
