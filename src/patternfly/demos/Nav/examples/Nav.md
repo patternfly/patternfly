@@ -177,7 +177,7 @@ section: components
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{> page-template-horizontal-subnav-nav}}
+    {{> page-template-horizontal-subnav}}
     {{> page-template-breadcrumb}}
     {{> page-template-title}}
     {{> page-template-gallery page-template-gallery--modifier="pf-m-fill"}}
@@ -233,7 +233,7 @@ section: components
     {{/page-template-header-tools-elements}}
   {{/page-header}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{> page-template-horizontal-subnav-nav}}
+    {{> page-template-horizontal-subnav}}
     {{> page-template-breadcrumb}}
     {{> page-template-title}}
     {{> page-template-gallery}}
