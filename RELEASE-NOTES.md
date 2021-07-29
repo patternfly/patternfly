@@ -3,6 +3,52 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2021.10 release notes (2021-08-03)
+Packages released:
+- [@patternfly/patternfly@v4.125.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.125.2)
+
+### Components
+- **Button:** Updated accessibility table ([#4200](https://github.com/patternfly/patternfly/pull/4200))
+- **Context selector/dropdown:**
+  * Changed full height toggle display type ([#4179](https://github.com/patternfly/patternfly/pull/4179))
+  * Moved `::before` values to `::after` ([#4182](https://github.com/patternfly/patternfly/pull/4182))
+  * Reverted move `::before` values to `::after` ([#4213](https://github.com/patternfly/patternfly/pull/4213))
+- **Form:** Added info text to group label ([#4172](https://github.com/patternfly/patternfly/pull/4172))
+- **Form group:** Updated form group roles to support checkbox/radio groups ([#4240](https://github.com/patternfly/patternfly/pull/4240))
+- **Helper text:** Updated static and dynamic to use same icons ([#4246](https://github.com/patternfly/patternfly/pull/4246))
+- **Jump links:** Forced vertical layout with expandable ([#4230](https://github.com/patternfly/patternfly/pull/4230))
+- **Login:** Added a password strength demo ([#4145](https://github.com/patternfly/patternfly/pull/4145))
+- **Menu:**
+  * Added vars for menu top, left, and right position offset ([#4192](https://github.com/patternfly/patternfly/pull/4192))
+  * Moved menu position modifers to menu element ([#4199](https://github.com/patternfly/patternfly/pull/4199))
+- **Menu toggle:**
+  * Added full height variant ([#4153](https://github.com/patternfly/patternfly/pull/4153))
+  * Truncated overflow text ([#4236](https://github.com/patternfly/patternfly/pull/4236))
+- **Nav:** Added horizontal subnav ([#4229](https://github.com/patternfly/patternfly/pull/4229))
+- **Notification badge:** Updated examples to show tasks icon ([#4241](https://github.com/patternfly/patternfly/pull/4241))
+- **Popover:** Added more position options to position arrow ([#4226](https://github.com/patternfly/patternfly/pull/4226))
+- **Search input:** Added variant with submit button ([#4180](https://github.com/patternfly/patternfly/pull/4180))
+- **Spinner:** Hid overflow from rotating elements ([#4208](https://github.com/patternfly/patternfly/pull/4208))
+- **Switch:** Added reverse layout ([#4235](https://github.com/patternfly/patternfly/pull/4235))
+- **Table:** Cleaned up docs structure ([#4215](https://github.com/patternfly/patternfly/pull/4215))
+- **Toolbar:** Fixed hidden/visible mods ([#4197](https://github.com/patternfly/patternfly/pull/4197))
+- **Wizard:** Switched ol to span in wizard toggle ([#4237](https://github.com/patternfly/patternfly/pull/4237))
+
+### Other
+- **Ci:**
+  * Renamed master to main ([#4194](https://github.com/patternfly/patternfly/pull/4194))
+  * Updated scripts to use main instead of master ([#4195](https://github.com/patternfly/patternfly/pull/4195))
+- **Icons:**
+  * Added styles to represent different SVG icon sizes and alignment for patternfly-react ([#3871](https://github.com/patternfly/patternfly/pull/3871))
+  * Added task icon to pficons ([#4184](https://github.com/patternfly/patternfly/pull/4184))
+  * Added instructions to add icon to pficon font ([#4221](https://github.com/patternfly/patternfly/pull/4221))
+- **Utilities:** Added min/max height and width to sizing utility ([#4009](https://github.com/patternfly/patternfly/pull/4009))
+- **Fonts:**
+  * Dropped '?#iefix' for font face definitions ([#4209](https://github.com/patternfly/patternfly/pull/4209))
+  * Dropped support for legacy fonts ([#4210](https://github.com/patternfly/patternfly/pull/4210))
+- **Docs:** Updated references to Kitty Giraudel's deadname ([#4239](https://github.com/patternfly/patternfly/pull/4239))
+
+
 ## 2021.08 release notes (2021-06-22)
 Packages released:
 - [@patternfly/patternfly@v4.115.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.115.2)
