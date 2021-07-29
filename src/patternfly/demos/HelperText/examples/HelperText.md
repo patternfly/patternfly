@@ -56,15 +56,15 @@ section: components
       {{#> form-helper-text form-helper-text--type="div"form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
           {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}This criteria has been met.{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-error"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="times"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
               {{#> helper-text-item-text}}This criteria has not been met.{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}This criteria has been met.{{/helper-text-item-text}}
             {{/helper-text-item}}
           {{/helper-text}}
@@ -83,7 +83,7 @@ section: components
       {{#> form-helper-text form-helper-text--type="div" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
           {{#> helper-text}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}This is dynamic helper text with an icon showing success.{{/helper-text-item-text}}
             {{/helper-text-item}}
           {{/helper-text}}
