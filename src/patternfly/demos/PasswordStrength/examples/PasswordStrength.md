@@ -70,15 +70,15 @@ section: demos
         {{#> form-helper-text form-helper-text--type="div"}}
           {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-error"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="times"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
               {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols{{/helper-text-item-text}}
             {{/helper-text-item}}
           {{/helper-text}}
@@ -117,15 +117,15 @@ section: demos
         {{#> form-helper-text form-helper-text--type="div"}}
           {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols{{/helper-text-item-text}}
             {{/helper-text-item}}
           {{/helper-text}}
@@ -164,15 +164,15 @@ section: demos
         {{#> form-helper-text form-helper-text--type="div"}}
           {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-              {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+              {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
               {{#> helper-text-item-text}}Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols{{/helper-text-item-text}}
             {{/helper-text-item}}
           {{/helper-text}}

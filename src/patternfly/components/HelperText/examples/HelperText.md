@@ -43,14 +43,14 @@ cssPrefix: pf-c-helper-text
 ```hbs
 {{#> helper-text}}
   {{#> helper-text-item}}
-    {{> helper-text-item-icon helper-text-item-icon--type="info"}}
+    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
     {{#> helper-text-item-text}}This is default helper text{{/helper-text-item-text}}
   {{/helper-text-item}}
 {{/helper-text}}
 
 {{#> helper-text}}
   {{#> helper-text-item helper-text-item--modifier="pf-m-indeterminate"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="question"}}
+    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
     {{#> helper-text-item-text}}This is indeterminate helper text{{/helper-text-item-text}}
   {{/helper-text-item}}
 {{/helper-text}}
@@ -117,14 +117,14 @@ cssPrefix: pf-c-helper-text
 
 {{#> helper-text}}
   {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+    {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
     {{#> helper-text-item-text}}This is success helper text{{/helper-text-item-text}}
   {{/helper-text-item}}
 {{/helper-text}}
 
 {{#> helper-text}}
   {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-error"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="times"}}
+    {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
     {{#> helper-text-item-text}}This is error helper text{{/helper-text-item-text}}
   {{/helper-text-item}}
 {{/helper-text}}
@@ -134,15 +134,15 @@ cssPrefix: pf-c-helper-text
 ```hbs
 {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
   {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+    {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
     {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
   {{/helper-text-item}}
   {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-error"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="times"}}
+    {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
     {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
   {{/helper-text-item}}
   {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="check"}}
+    {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
     {{#> helper-text-item-text}}Must include at least 3 of the following: lowercase letter, uppercase letters, numbers, symbols{{/helper-text-item-text}}
   {{/helper-text-item}}
 {{/helper-text}}
