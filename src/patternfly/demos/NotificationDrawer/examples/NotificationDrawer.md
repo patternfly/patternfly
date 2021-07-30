@@ -30,6 +30,16 @@ section: components
 {{> notification-drawer-demo id="drawer-expanded-with-groups" page-template-header-tools-notification-badge--badge--modifier="pf-m-unread" drawer-demo--IsGroup="true" drawer-panel--IsOpen="true"}}
 ```
 
+### Expanded with task list with hover actions
+```hbs isFullscreen
+{{> notification-drawer-demo id="drawer-expanded-with-groups" page-template-header-tools-notification-badge--badge--modifier="pf-m-unread" drawer-demo--IsTasksHoverActions="true" drawer-panel--IsOpen="true"}}
+```
+
+### Expanded with task list with multiple actions
+```hbs isFullscreen
+{{> notification-drawer-demo id="drawer-expanded-with-groups" page-template-header-tools-notification-badge--badge--modifier="pf-m-unread" drawer-demo--IsTasks="true" drawer-panel--IsOpen="true"}}
+```
+
 ## Documentation
 
 This demo implements the notification drawer in context of the page component.

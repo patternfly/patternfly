@@ -53,7 +53,47 @@
     {{/nav}}
   {{/page-sidebar}}
   {{#> page-drawer}}
-  {{#if drawer-demo--IsGroup}}
+  {{#if drawer-demo--IsTasks}}
+    {{#> drawer}}
+      {{#> drawer-main}}
+        {{#> drawer-content}}
+          {{#> page-main}}
+            {{#> page-template-breadcrumb}}
+            {{/page-template-breadcrumb}}
+            {{#> page-template-title}}
+            {{/page-template-title}}
+            {{#> page-template-gallery}}
+            {{/page-template-gallery}}
+          {{/page-main}}
+        {{/drawer-content}}
+        {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
+          {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+            {{> notification-drawer-demo-tasks}}
+          {{/drawer-body}}
+        {{/drawer-panel}}
+      {{/drawer-main}}
+    {{/drawer}}
+  {{else if drawer-demo--IsTasksHoverActions}}
+    {{#> drawer}}
+      {{#> drawer-main}}
+        {{#> drawer-content}}
+          {{#> page-main}}
+            {{#> page-template-breadcrumb}}
+            {{/page-template-breadcrumb}}
+            {{#> page-template-title}}
+            {{/page-template-title}}
+            {{#> page-template-gallery}}
+            {{/page-template-gallery}}
+          {{/page-main}}
+        {{/drawer-content}}
+        {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
+          {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+            {{> notification-drawer-demo-tasks-hover-actions}}
+          {{/drawer-body}}
+        {{/drawer-panel}}
+      {{/drawer-main}}
+    {{/drawer}}
+  {{else if drawer-demo--IsGroup}}
     {{#> drawer}}
       {{#> drawer-main}}
         {{#> drawer-content}}

@@ -1,0 +1,159 @@
+{{#> notification-drawer notification-drawer--id="notification-drawer-action-task-groups"}}
+  {{#> notification-drawer-header}}
+    {{#> notification-drawer-header-title}}
+      Notifications
+    {{/notification-drawer-header-title}}
+    {{#> notification-drawer-header-action}}
+      {{> dropdown dropdown-menu--modifier="pf-m-align-right" dropdown--id=(concat notification-drawer--id "-header-action") dropdown-toggle--IsPlain="true"}}
+      {{> notification-drawer-header-action-close}}
+    {{/notification-drawer-header-action}}
+  {{/notification-drawer-header}}
+
+  {{> notification-drawer-tabs}}
+
+  {{#> notification-drawer-body}}
+
+    {{#> tab-content tab-content--attribute='id="alert-panel"'}}
+      {{#> notification-drawer-group-list}}
+        {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group1')}}
+          <h1>
+            {{#> notification-drawer-group-toggle}}
+              {{#> notification-drawer-group-toggle-title}}
+                First notification group
+              {{/notification-drawer-group-toggle-title}}
+              {{#> notification-drawer-group-toggle-count}}
+                {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+              {{/notification-drawer-group-toggle-count}}
+              {{> notification-drawer-group-toggle-icon}}
+            {{/notification-drawer-group-toggle}}
+          </h1>
+          {{> notification-drawer-basic-list}}
+        {{/notification-drawer-group}}
+        {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group2') notification-drawer-group--IsExpanded="true"}}
+          <h1>
+            {{#> notification-drawer-group-toggle}}
+              {{#> notification-drawer-group-toggle-title}}
+                Second notification group
+              {{/notification-drawer-group-toggle-title}}
+              {{#> notification-drawer-group-toggle-count}}
+                {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+              {{/notification-drawer-group-toggle-count}}
+              {{> notification-drawer-group-toggle-icon}}
+            {{/notification-drawer-group-toggle}}
+          </h1>
+          {{> notification-drawer-basic-list}}
+        {{/notification-drawer-group}}
+        {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group3')}}
+          <h1>
+            {{#> notification-drawer-group-toggle}}
+              {{#> notification-drawer-group-toggle-title}}
+                Third notification group
+              {{/notification-drawer-group-toggle-title}}
+              {{#> notification-drawer-group-toggle-count}}
+                {{#> badge badge--modifier="pf-m-unread"}}3{{/badge}}
+              {{/notification-drawer-group-toggle-count}}
+              {{> notification-drawer-group-toggle-icon}}
+            {{/notification-drawer-group-toggle}}
+          </h1>
+          {{> notification-drawer-basic-list}}
+        {{/notification-drawer-group}}
+        {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group4')}}
+          <h1>
+            {{#> notification-drawer-group-toggle}}
+              {{#> notification-drawer-group-toggle-title}}
+                Fourth notification group
+              {{/notification-drawer-group-toggle-title}}
+              {{#> notification-drawer-group-toggle-count}}
+                {{#> badge badge--modifier="pf-m-unread"}}2{{/badge}}
+              {{/notification-drawer-group-toggle-count}}
+              {{> notification-drawer-group-toggle-icon}}
+            {{/notification-drawer-group-toggle}}
+          </h1>
+          {{> notification-drawer-basic-list}}
+        {{/notification-drawer-group}}
+      {{/notification-drawer-group-list}}
+    {{/tab-content}}
+
+    {{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="tasks-panel"'}}
+
+      <!--  task group 1 -->
+      {{#> notification-drawer-task-list-group }}
+        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsExpanded="true"}}
+          <h1>
+            {{#> notification-drawer-task-group-toggle}}
+              {{#> notification-drawer-task-group-toggle-header}}
+                {{#> notification-drawer-task-group-toggle-title}}
+                  Task group updating
+                {{/notification-drawer-task-group-toggle-title}}
+                {{#> notification-drawer-task-group-toggle-status}}
+                  {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
+                {{/notification-drawer-task-group-toggle-status}}
+                {{#> notification-drawer-task-group-toggle-action}}
+                  Action
+                {{/notification-drawer-task-group-toggle-action}}
+              {{/notification-drawer-task-group-toggle-header}}
+              {{#> notification-drawer-task-group-toggle-count}}
+                {{#> badge badge--modifier="pf-m-read"}}3{{/badge}}
+              {{/notification-drawer-task-group-toggle-count}}
+              {{> notification-drawer-task-group-toggle-icon}}
+            {{/notification-drawer-task-group-toggle}}
+          </h1>
+          {{> notification-drawer-basic-task-list}}
+        {{/notification-drawer-task-group}}
+      <!-- end task group 1 -->
+
+      <!--  task group 2 -->
+        {{#> notification-drawer-task-group notification-drawer-task-group--IsSuccess="true" notification-drawer--id=(concat notification-drawer--id '-task-list-group2') notification-drawer-task-group--IsExpanded="true"}}
+          <h1>
+            {{#> notification-drawer-task-group-toggle}}
+              {{#> notification-drawer-task-group-toggle-header}}
+                {{#> notification-drawer-task-group-toggle-title}}
+                  Task group with success status
+                {{/notification-drawer-task-group-toggle-title}}
+                {{#> notification-drawer-task-group-toggle-status}}
+                  <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                {{/notification-drawer-task-group-toggle-status}}
+              {{/notification-drawer-task-group-toggle-header}}
+              {{#> notification-drawer-task-group-toggle-count}}
+                {{#> badge badge--modifier="pf-m-read"}}3{{/badge}}
+              {{/notification-drawer-task-group-toggle-count}}
+              {{#> notification-drawer-task-group-toggle-timestamp}}
+                4 days ago
+              {{/notification-drawer-task-group-toggle-timestamp}}
+              {{> notification-drawer-task-group-toggle-icon}}
+            {{/notification-drawer-task-group-toggle}}
+          </h1>
+          {{> notification-drawer-basic-task-list}}
+        {{/notification-drawer-task-group}}
+        <!-- end task group 2 -->
+
+      <!--  task group 2 -->
+        {{#> notification-drawer-task-group notification-drawer-task-group--IsSuccess="true" notification-drawer--id=(concat notification-drawer--id '-task-list-group3')}}
+          <h1>
+            {{#> notification-drawer-task-group-toggle}}
+              {{#> notification-drawer-task-group-toggle-header}}
+                {{#> notification-drawer-task-group-toggle-title}}
+                  Collapsed task group with success status
+                {{/notification-drawer-task-group-toggle-title}}
+                {{#> notification-drawer-task-group-toggle-status}}
+                  <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                {{/notification-drawer-task-group-toggle-status}}
+              {{/notification-drawer-task-group-toggle-header}}
+              {{#> notification-drawer-task-group-toggle-count}}
+                {{#> badge badge--modifier="pf-m-read"}}3{{/badge}}
+              {{/notification-drawer-task-group-toggle-count}}
+              {{#> notification-drawer-task-group-toggle-timestamp}}
+                4 days ago
+              {{/notification-drawer-task-group-toggle-timestamp}}
+              {{> notification-drawer-task-group-toggle-icon}}
+            {{/notification-drawer-task-group-toggle}}
+          </h1>
+          {{> notification-drawer-basic-task-list}}
+        {{/notification-drawer-task-group}}
+        <!-- end task group 2 -->
+
+      {{/notification-drawer-task-list-group}}
+    {{/tab-content}}
+
+  {{/notification-drawer-body}}
+{{/notification-drawer}}

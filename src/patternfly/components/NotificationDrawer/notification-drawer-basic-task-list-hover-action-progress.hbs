@@ -1,7 +1,7 @@
 {{#> notification-drawer-task-list}}
 
   {{#> notification-drawer-task-list-item notification-drawer-task-list-item--IsHoverable="true"}}
-    {{#> notification-drawer-task-list-item-title notification-drawer-task-list-item-title--attribute='id="foo"'}}
+    {{#> notification-drawer-task-list-item-title}}
       hover action with progress bar status
     {{/notification-drawer-task-list-item-title}}
     {{#> notification-drawer-task-list-item-hover-action}}
@@ -12,7 +12,7 @@
         progress__value="10"
         progress--modifier="pf-m-sm pf-m-singleline"
         progress--no-measure="true"
-        progress__id="progress-task-1"
+        progress__id=(concat notification-drawer-task-group--id '-progress-task-1')
         progress--attribute='style="min-width: 80px;"'
         progress-bar--attribute='aria-label="progress bar for the first task"'
       }}
@@ -32,7 +32,7 @@
         progress__value="80"
         progress--modifier="pf-m-sm pf-m-singleline pf-m-inside"
         progress--no-measure="true"
-        progress__id="progress-task-2"
+        progress__id=(concat notification-drawer-task-group--id '-progress-task-2')
         progress--attribute='style="min-width: 80px;"'
         progress-bar--attribute='aria-label="progress bar for the second task"'
       }}
