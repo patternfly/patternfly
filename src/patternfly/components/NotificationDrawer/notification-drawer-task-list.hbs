@@ -1,6 +1,11 @@
-<div class="pf-c-notification-drawer__task-list{{#if notification-drawer-task-list--modifier}} {{notification-drawer-task-list--modifier}}{{/if}}"
+<ul class="pf-c-notification-drawer__task-list{{#if notification-drawer-task-list--modifier}} {{notification-drawer-task-list--modifier}}{{/if}}"
+  {{#if notification-drawer-task-group--IsGroup}}
+    {{#unless notification-drawer-task-group--IsExpanded}}
+      hidden
+    {{/unless}}
+  {{/if}}
   {{#if notification-drawer-task-list--attribute}}
     {{{notification-drawer-task-list--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</div>
+</ul>

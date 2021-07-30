@@ -1,0 +1,18 @@
+<section class="pf-c-notification-drawer__task-group{{#if notification-drawer-task-group--IsExpanded}} pf-m-expanded{{/if}}{{#if notification-drawer-group--modifier}} {{notification-drawer-group--modifier}}{{/if}}
+  {{#if notification-drawer-task-group--attribute}}
+    {{{notification-drawer-task-group--attribute}}}
+  {{/if}}
+  {{#if notification-drawer-task-group--IsInfo}}
+    pf-m-info
+  {{else if notification-drawer-task-group--IsWarning}}
+    pf-m-warning
+  {{else if notification-drawer-task-group--IsDanger}}
+    pf-m-danger
+  {{else if notification-drawer-task-group--IsSuccess}}
+    pf-m-success
+  {{else if notification-drawer-task-group--IsDefault}}
+    pf-m-default
+  {{/if}}"
+>
+  {{> @partial-block notification-drawer-task-group--IsGroup="true"}}
+</section>

@@ -1,18 +1,6 @@
 {{#> notification-drawer-task-list}}
 
-  {{#> notification-drawer-task-list-item}}
-    {{#> notification-drawer-task-list-item-title}}
-      icon status with dropdown actions
-    {{/notification-drawer-task-list-item-title}}
-    {{#> notification-drawer-task-list-item-status}}
-      <i class="fas fa-check-circle" aria-hidden="true"></i>
-    {{/notification-drawer-task-list-item-status}}
-    {{#> notification-drawer-task-list-item-action}}
-      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-2') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
-    {{/notification-drawer-task-list-item-action}}
-  {{/notification-drawer-task-list-item}}
-
-  {{#> notification-drawer-task-list-item}}
+  {{#> notification-drawer-task-list-item notification-drawer-task-list-item--IsHoverable="true"}}
     {{#> notification-drawer-task-list-item-title}}
       progress bar status with dropdown actions
     {{/notification-drawer-task-list-item-title}}
@@ -22,11 +10,38 @@
         progress--modifier="pf-m-sm pf-m-singleline"
         progress--no-measure="true"
         progress__id="progress-task-1"
+        progress--attribute='style="min-width: 80px;"'
+        progress-bar--attribute='aria-label="progress bar for the second task"'
+
       }}
       {{/progress}}
     {{/notification-drawer-task-list-item-status}}
     {{#> notification-drawer-task-list-item-action}}
       {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-1') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
+    {{/notification-drawer-task-list-item-action}}
+  {{/notification-drawer-task-list-item}}
+
+  {{#> notification-drawer-task-list-item notification-drawer-task-list-item--IsHoverable="true" notification-drawer-task-list-item--modifier="pf-m-danger"}}
+    {{#> notification-drawer-task-list-item-title}}
+      icon status with dropdown actions
+    {{/notification-drawer-task-list-item-title}}
+    {{#> notification-drawer-task-list-item-status}}
+      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+    {{/notification-drawer-task-list-item-status}}
+    {{#> notification-drawer-task-list-item-action}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-2') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
+    {{/notification-drawer-task-list-item-action}}
+  {{/notification-drawer-task-list-item}}
+
+  {{#> notification-drawer-task-list-item notification-drawer-task-list-item--IsHoverable="true" notification-drawer-task-list-item--modifier="pf-m-success"}}
+    {{#> notification-drawer-task-list-item-title}}
+      icon status with dropdown actions
+    {{/notification-drawer-task-list-item-title}}
+    {{#> notification-drawer-task-list-item-status}}
+      <i class="fas fa-check-circle" aria-hidden="true"></i>
+    {{/notification-drawer-task-list-item-status}}
+    {{#> notification-drawer-task-list-item-action}}
+      {{> dropdown dropdown--id=(concat notification-drawer--id 'dropdown-kebab-3') dropdown-toggle--IsPlain="true" dropdown-menu--modifier="pf-m-align-right"}}
     {{/notification-drawer-task-list-item-action}}
   {{/notification-drawer-task-list-item}}
 
