@@ -79,7 +79,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--m-display-inline__main--PaddingTop: 0;
   --pf-c-masthead--m-display-inline__main--PaddingBottom: 0;
   --pf-c-masthead--m-display-inline__main--MarginRight: calc(var(--pf-global--spacer--lg) / 2); // split gutter
-  --pf-c-masthead--m-display-inline__main--before--BorderBottom: 0;
+  --pf-c-masthead--m-display-inline__main--BorderBottom: 0;
   --pf-c-masthead--m-display-inline__toggle--GridColumn: 1;
   --pf-c-masthead--m-display-inline__content--GridColumn: 3;
   --pf-c-masthead--m-display-inline__content--MinHeight: #{pf-size-prem(70px)};

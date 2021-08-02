@@ -58,7 +58,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Spacer values
   --pf-c-toolbar__item--spacer: var(--pf-c-toolbar--spacer--base);
   --pf-c-toolbar__group--spacer: var(--pf-c-toolbar--spacer--base);
-  --pf-c-toolbar__item--Width--base: auto;
+  --pf-c-toolbar__item--Width: auto;
 
   // Toggle group
   --pf-c-toolbar__group--m-toggle-group--spacer: var(--pf-global--spacer--sm);

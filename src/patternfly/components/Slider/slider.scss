@@ -1,4 +1,7 @@
 .pf-c-slider {
+  // should always be set inline
+  --pf-c-slider--value: 0;
+
   // rail
   --pf-c-slider__rail--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-slider__rail--PaddingBottom: var(--pf-global--spacer--md);
