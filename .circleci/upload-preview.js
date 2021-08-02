@@ -24,7 +24,7 @@ switch(uploadFolderName) {
     uploadURL += '-coverage.surge.sh';
     break;
   case 'public':
-    if (!prnum && prbranch === 'master') {
+    if (!prnum && prbranch === 'main') {
       uploadURL = 'pf4.patternfly.org';
       fs.writeFileSync(path.join(__dirname, '../public/CNAME'), uploadURL);
     }
