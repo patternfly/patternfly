@@ -13,7 +13,7 @@
 
   {{#> notification-drawer-body}}
 
-    {{#> tab-content tab-content--attribute='id="alert-panel"'}}
+    {{#> tab-content tab-content--attribute='id="notification-drawer-tabs-alerts-panel"'}}
       {{#> notification-drawer-group-list}}
         {{#> notification-drawer-group notification-drawer--id=(concat notification-drawer--id '-group1')}}
           <h1>
@@ -74,11 +74,11 @@
       {{/notification-drawer-group-list}}
     {{/tab-content}}
 
-    {{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="tasks-panel"'}}
+    {{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="notification-drawer-tabs-tasks-panel"'}}
 
       <!--  task group 1 -->
       {{#> notification-drawer-task-list-group }}
-        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsExpanded="true"}}
+        {{#> notification-drawer-task-group notification-drawer-task-group--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsExpanded="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -103,7 +103,7 @@
       <!-- end task group 1 -->
 
       <!--  task group 2 -->
-        {{#> notification-drawer-task-group notification-drawer-task-group--IsSuccess="true" notification-drawer--id=(concat notification-drawer--id '-task-list-group2') notification-drawer-task-group--IsExpanded="true"}}
+        {{#> notification-drawer-task-group notification-drawer-task-group--IsSuccess="true" notification-drawer-task-group--id=(concat notification-drawer--id '-task-list-group2') notification-drawer-task-group--IsExpanded="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
