@@ -129,8 +129,7 @@
   }
 
   &.pf-m-plain {
-    border-top-width: var(--pf-c-alert--m-inline--m-plain--BorderTopWidth);
-
+    --pf-c-alert--BorderTopWidth: var(--pf-c-alert--m-inline--m-plain--BorderTopWidth);
     --pf-c-alert--BackgroundColor: var(--pf-c-alert--m-inline--m-plain--BackgroundColor);
     --pf-c-alert--PaddingTop: var(--pf-c-alert--m-inline--m-plain--PaddingTop);
     --pf-c-alert--PaddingRight: var(--pf-c-alert--m-inline--m-plain--PaddingRight);
