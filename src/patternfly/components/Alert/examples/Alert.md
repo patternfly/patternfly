@@ -213,6 +213,15 @@ cssPrefix: pf-c-alert
     Danger inline alert title
   {{/alert-title}}
 {{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-info pf-m-plain pf-m-inline" alert--attribute='aria-label="Inline plain alert"'}}
+  {{#> alert-icon alert-icon--type="info-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Info alert:{{/screen-reader}}
+    Plain inline info alert title
+  {{/alert-title}}
+{{/alert}}
 ```
 
 ### Inline variations
@@ -345,4 +354,5 @@ Add a modifier class to the default alert to change the color: `.pf-m-success`, 
 | `.pf-m-warning` | `.pf-c-alert` |  Applies warning styling. |
 | `.pf-m-info` | `.pf-c-alert` |  Applies info styling. |
 | `.pf-m-inline` | `.pf-c-alert` |  Applies inline styling. |
+| `.pf-m-plain` | `.pf-c-alert.pf-m-inline` |  Applies plain styling to an inline alert. |
 | `.pf-m-truncate` | `.pf-c-alert__title` |  Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-c-alert__title--max-lines` (the default value is `1`). |
