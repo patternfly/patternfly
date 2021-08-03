@@ -213,6 +213,15 @@ cssPrefix: pf-c-alert
     Danger inline alert title
   {{/alert-title}}
 {{/alert}}
+<br>
+{{#> alert alert--modifier="pf-m-info pf-m-plain pf-m-inline" alert--attribute='aria-label="Inline plain alert"'}}
+  {{#> alert-icon alert-icon--type="info-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Info alert:{{/screen-reader}}
+    Plain inline info alert title
+  {{/alert-title}}
+{{/alert}}
 ```
 
 ### Inline variations
