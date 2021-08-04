@@ -213,15 +213,6 @@ cssPrefix: pf-c-alert
     Danger inline alert title
   {{/alert-title}}
 {{/alert}}
-<br>
-{{#> alert alert--modifier="pf-m-info pf-m-plain pf-m-inline" alert--attribute='aria-label="Inline plain alert"'}}
-  {{#> alert-icon alert-icon--type="info-circle"}}
-  {{/alert-icon}}
-  {{#> alert-title}}
-    {{#> screen-reader}}Info alert:{{/screen-reader}}
-    Plain inline info alert title
-  {{/alert-title}}
-{{/alert}}
 ```
 
 ### Inline variations
@@ -317,6 +308,18 @@ cssPrefix: pf-c-alert
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Success alert title
+  {{/alert-title}}
+{{/alert}}
+```
+
+### Inline plain
+```hbs
+{{#> alert alert--modifier="pf-m-success pf-m-plain pf-m-inline" alert--attribute='aria-label="Success alert"'}}
+  {{#> alert-icon alert-icon--type="check-circle"}}
+  {{/alert-icon}}
+  {{#> alert-title}}
+    {{#> screen-reader}}Success alert:{{/screen-reader}}
+    Success alert title
   {{/alert-title}}
 {{/alert}}
 ```
