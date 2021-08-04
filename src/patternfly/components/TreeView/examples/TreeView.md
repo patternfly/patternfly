@@ -783,9 +783,9 @@ beta: true
 {{> tree-view--base tree-view--base--modifier="pf-m-compact"}}
 ```
 
-### Compact, background transparent
+### Compact, no background
 ```hbs
-{{> tree-view--base tree-view--base--modifier="pf-m-compact pf-m-background-transparent"}}
+{{> tree-view--base tree-view--base--modifier="pf-m-compact pf-m-no-background"}}
 ```
 
 ## Documentation
@@ -826,7 +826,6 @@ beta: true
 | `.pf-c-tree-view__search` | `<div>` | Initiates a tree view search wrapper. |
 | `.pf-m-bordered` | `.pf-c-tree-view` | Modifies the tree view to the bordered presentation. |
 | `.pf-m-compact` | `.pf-c-tree-view` | Modifies the tree view to the compact presentation. |
-| `.pf-m-background-transparent` | `.pf-c-tree-view.pf-m-compact` | Modifies the tree view compact variant node containers to have a transparent background. |
+| `.pf-m-no-background` | `.pf-c-tree-view.pf-m-compact` | Modifies the tree view compact variant node containers to have a transparent background. |
 | `.pf-m-current` | `.pf-c-tree-view__node` | Modifies the tree view node to be current. |
-| `.pf-m-truncate-text` | `.pf-c-tree-view` | Modifies the tree view text to truncate. |
-| `.pf-m-truncate` | `.pf-c-tree-view__node-title`, `.pf-c-tree-view__node-text` | Modifies the tree view title or text to truncate. |
+| `.pf-m-truncate` | `.pf-c-tree-view`, `.pf-c-tree-view__node-title`, `.pf-c-tree-view__node-text` | Modifies the tree view title or text to truncate. |

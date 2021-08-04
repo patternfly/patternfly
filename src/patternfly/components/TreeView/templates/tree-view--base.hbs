@@ -8,7 +8,7 @@
               apiVersion
             {{/tree-view-node-title}}
             {{#> tree-view-node-text}}
-              APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to teh latest internal value, and my reject unrecognized values.
+              APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and my reject unrecognized values.
             {{/tree-view-node-text}}
           {{/tree-view-node-content}}
         {{/tree-view-node}}
@@ -44,7 +44,7 @@
     {{/tree-view-list-item}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
-        {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+        {{#> tree-view-node}}
           {{#> tree-view-node-content}}
             {{#> tree-view-node-title}}
               spec
@@ -156,7 +156,7 @@
               {{#> tree-view-list newcontext}}
                 {{#> tree-view-list-item}}
                   {{#> tree-view-content}}
-                    {{#> tree-view-node}}
+                    {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
                       {{#> tree-view-node-content}}
                         {{#> tree-view-node-title}}
                           matchLabels
@@ -172,7 +172,7 @@
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
               {{#> tree-view-content}}
-                {{#> tree-view-node}}
+                {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
                   {{#> tree-view-node-content}}
                     {{#> tree-view-node-title}}
                       matchLabels
@@ -188,7 +188,7 @@
         {{/tree-view-list-item}}
         {{#> tree-view-list-item}}
           {{#> tree-view-content}}
-            {{#> tree-view-node}}
+            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
               {{#> tree-view-node-content}}
                 {{#> tree-view-node-title}}
                   matchLabels
