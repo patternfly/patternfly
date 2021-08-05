@@ -72,6 +72,14 @@
   // Inline info
   --pf-c-alert--m-inline--m-info--BackgroundColor: var(--pf-global--palette--blue-50);
 
+  // Inline plain
+  --pf-c-alert--m-inline--m-plain--BorderTopWidth: 0;
+  --pf-c-alert--m-inline--m-plain--BackgroundColor: transparent;
+  --pf-c-alert--m-inline--m-plain--PaddingTop: 0;
+  --pf-c-alert--m-inline--m-plain--PaddingRight: 0;
+  --pf-c-alert--m-inline--m-plain--PaddingBottom: 0;
+  --pf-c-alert--m-inline--m-plain--PaddingLeft: 0;
+
   @include pf-t-light; // This component always needs to be light
 
   position: relative;
@@ -118,6 +126,15 @@
   &.pf-m-inline {
     --pf-c-alert--BoxShadow: var(--pf-c-alert--m-inline--BoxShadow);
     --pf-c-alert--BackgroundColor: var(--pf-c-alert--m-inline--BackgroundColor);
+  }
+
+  &.pf-m-plain {
+    --pf-c-alert--BorderTopWidth: var(--pf-c-alert--m-inline--m-plain--BorderTopWidth);
+    --pf-c-alert--BackgroundColor: var(--pf-c-alert--m-inline--m-plain--BackgroundColor);
+    --pf-c-alert--PaddingTop: var(--pf-c-alert--m-inline--m-plain--PaddingTop);
+    --pf-c-alert--PaddingRight: var(--pf-c-alert--m-inline--m-plain--PaddingRight);
+    --pf-c-alert--PaddingBottom: var(--pf-c-alert--m-inline--m-plain--PaddingBottom);
+    --pf-c-alert--PaddingLeft: var(--pf-c-alert--m-inline--m-plain--PaddingLeft);
   }
 }
 
