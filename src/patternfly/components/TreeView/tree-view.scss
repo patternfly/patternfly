@@ -192,7 +192,7 @@ $pf-c-tree-view--MaxNesting: 10;
       }
 
       &:last-child {
-        border-bottom: 0; // hide border for last child
+        --pf-c-tree-view--m-compact__list-item--BorderBottomWidth: 0; // hide nested list item bottom borders
       }
     }
   }
@@ -211,8 +211,7 @@ $pf-c-tree-view--MaxNesting: 10;
         --pf-c-tree-view__node-toggle--Position: static;
         --pf-c-tree-view__list-item__list-item__node-toggle--TranslateX: 0;
         --pf-c-tree-view__node--PaddingLeft: var(--pf-c-tree-view--m-compact__node--level-2--PaddingLeft); // second+ nested child padding left
-
-        border-bottom: 0; // hide nested list item bottom borders
+        --pf-c-tree-view--m-compact__list-item--BorderBottomWidth: 0; // hide nested list item bottom borders
 
         // stylelint-disable max-nesting-depth, selector-max-class
         &::before,
