@@ -9,7 +9,8 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node--nested-indent--base: calc(var(--pf-c-tree-view__node--indent--base) - var(--pf-global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
 
   // Node
-  --pf-c-tree-view__node--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__node--PaddingTop--base: var(--pf-global--spacer--sm);
+  --pf-c-tree-view__node--PaddingTop: var(--pf-c-tree-view__node--PaddingTop--base);
   --pf-c-tree-view__node--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tree-view__node--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-tree-view__node--PaddingLeft: var(--pf-c-tree-view__node--indent--base);
@@ -29,7 +30,7 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node--focus--BackgroundColor: var(--pf-global--palette--black-200);
 
   // Nested toggle
-  --pf-c-tree-view__list-item__list-item__node-toggle--Top: var(--pf-c-tree-view__node--PaddingTop);
+  --pf-c-tree-view__list-item__list-item__node-toggle--Top: var(--pf-c-tree-view__node--PaddingTop--base);
   --pf-c-tree-view__list-item__list-item__node-toggle--Left: var(--pf-c-tree-view__node--PaddingLeft);
   --pf-c-tree-view__list-item__list-item__node-toggle--TranslateX: -100%;
 
@@ -79,37 +80,49 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__action--hover--Color: var(--pf-global--icon--Color--dark);
   --pf-c-tree-view__action--focus--Color: var(--pf-global--icon--Color--dark);
 
-  // Bordered
+  // Guides
   // ================================================================== //
-  --pf-c-tree-view--m-bordered--border--Left: var(--pf-c-tree-view--m-bordered--base-border--Left); // starting value, this gets updated for each nesting level
-  --pf-c-tree-view--m-bordered--border--ZIndex: var(--pf-c-tree-view--m-bordered--base-border--ZIndex);
+  --pf-c-tree-view--m-guides--border--Left: var(--pf-c-tree-view--m-guides--base-border--Left); // starting value, this gets updated for each nesting level
+  --pf-c-tree-view--m-guides--border--ZIndex: var(--pf-c-tree-view--m-guides--base-border--ZIndex);
 
   // Base
-  --pf-c-tree-view--m-bordered--base-border--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-tree-view--m-bordered--base-border--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-tree-view--m-bordered--base-border--Left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-bordered__list-node--base--BorderWidth));
-  --pf-c-tree-view--m-bordered--base-border--Left--offset: calc(var(--pf-c-tree-view__list-item__list-item__node-toggle--Left) + var(--pf-c-tree-view__node-toggle-icon--MinWidth) / 2); // based on toggle positioning
-  --pf-c-tree-view--m-bordered--base-border--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-c-tree-view--m-bordered__list-node--base--BorderWidth: var(--pf-global--spacer--lg);
+  --pf-c-tree-view--m-guides--base-border--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-tree-view--m-guides--base-border--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-tree-view--m-guides--base-border--Left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-guides__list-node--base--BorderWidth));
+  --pf-c-tree-view--m-guides--base-border--Left--offset: calc(var(--pf-c-tree-view__list-item__list-item__node-toggle--Left) + var(--pf-c-tree-view__node-toggle-icon--MinWidth) / 2); // based on toggle positioning
+  --pf-c-tree-view--m-guides--base-border--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-tree-view--m-guides__list-node--base--BorderWidth: var(--pf-global--spacer--lg);
 
   // List item
-  --pf-c-tree-view--m-bordered__list-item--before--Top: 0;
-  --pf-c-tree-view--m-bordered__list-item--before--Width: var(--pf-c-tree-view--m-bordered--base-border--BorderWidth);
-  --pf-c-tree-view--m-bordered__list-item--before--Height: 100%;
-  --pf-c-tree-view--m-bordered__list-item--before--BackgroundColor: var(--pf-c-tree-view--m-bordered--base-border--BorderColor);
-  --pf-c-tree-view--m-bordered__list-item--last-child--before--Top: var(--pf-c-tree-view--m-bordered__node--before--Top);
-  --pf-c-tree-view--m-bordered__list-item--last-child--before--Height: var(--pf-c-tree-view--m-bordered__list-item--last-child--before--Top);
+  --pf-c-tree-view--m-guides__list-item--before--Top: 0;
+  --pf-c-tree-view--m-guides__list-item--before--Width: var(--pf-c-tree-view--m-guides--base-border--BorderWidth);
+  --pf-c-tree-view--m-guides__list-item--before--Height: 100%;
+  --pf-c-tree-view--m-guides__list-item--before--BackgroundColor: var(--pf-c-tree-view--m-guides--base-border--BorderColor);
+  --pf-c-tree-view--m-guides__list-item--last-child--before--Top: var(--pf-c-tree-view--m-guides__node--before--Top);
+  --pf-c-tree-view--m-guides__list-item--last-child--before--Height: var(--pf-c-tree-view--m-guides__list-item--last-child--before--Top);
 
   // Node
-  --pf-c-tree-view--m-bordered__node--before--Width: #{pf-size-prem(16px)};
-  --pf-c-tree-view--m-bordered__node--before--Height: var(--pf-c-tree-view--m-bordered--base-border--BorderWidth);
-  --pf-c-tree-view--m-bordered__node--before--Top: #{pf-size-prem(18px)};
-  --pf-c-tree-view--m-bordered__node--before--BackgroundColor: var(--pf-c-tree-view--m-bordered--base-border--BorderColor);
+  --pf-c-tree-view--m-guides__node--before--Width: #{pf-size-prem(16px)};
+  --pf-c-tree-view--m-guides__node--before--Height: var(--pf-c-tree-view--m-guides--base-border--BorderWidth);
+  --pf-c-tree-view--m-guides__node--before--Top: #{pf-size-prem(18px)};
+  --pf-c-tree-view--m-guides__node--before--BackgroundColor: var(--pf-c-tree-view--m-guides--base-border--BorderColor);
 
   // Compact
   // ================================================================== //
   --pf-c-tree-view--m-compact--border--Left: var(--pf-c-tree-view--m-compact--base-border--Left);
   --pf-c-tree-view--m-compact--border--nested--Left--offset: calc(var(--pf-c-tree-view--m-compact__node--nested-indent--base) / 1.5);
+
+  // Node
+  --pf-c-tree-view--m-compact__node--PaddingTop: 0;
+  --pf-c-tree-view--m-compact__node--PaddingRight: 0;
+  --pf-c-tree-view--m-compact__node--PaddingBottom: 0;
+  --pf-c-tree-view--m-compact__node--PaddingLeft: 0;
+  --pf-c-tree-view--m-compact__node--nested--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-tree-view--m-compact__node--nested--PaddingBottom: var(--pf-global--spacer--sm);
+
+  // Node toggle
+  --pf-c-tree-view--m-compact__list-item__list-item__node-toggle--Top: calc(var(--pf-c-tree-view--m-compact__node-container--PaddingTop) + 82px);
+  --pf-c-tree-view--m-compact__list-item__list-item__node-toggle--Top: calc(var(--pf-c-tree-view--m-compact__node-container--PaddingTop) + var(--pf-c-tree-view__node--PaddingTop--base));
 
   // Base
   --pf-c-tree-view--m-compact--base-border--Left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-compact--base-border--Left--offset));
@@ -122,13 +135,13 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view--m-compact__list-item--BorderBottomColor: var(--pf-global--BorderColor--100);
   --pf-c-tree-view--m-compact__list-item--before--Top: 0;
   --pf-c-tree-view--m-compact__list-item--last-child--before--Height: var(--pf-c-tree-view--m-compact__node--before--Top);
-  --pf-c-tree-view--m-compact__list-item--nested--before--Top: calc(var(--pf-c-tree-view__node--PaddingTop) * -1);
-  --pf-c-tree-view--m-compact__list-item--nested--last-child--before--Height: calc(var(--pf-c-tree-view--m-compact__node--before--Top) + var(--pf-c-tree-view__node--PaddingTop));
+  --pf-c-tree-view--m-compact__list-item--nested--before--Top: calc(var(--pf-c-tree-view__node--PaddingTop--base) * -1);
+  --pf-c-tree-view--m-compact__list-item--nested--last-child--before--Height: calc(var(--pf-c-tree-view--m-compact__node--before--Top) + var(--pf-c-tree-view__node--PaddingTop--base));
   --pf-c-tree-view--m-compact__list-item--nested--last-child--before--Top: calc(var(--pf-c-tree-view__node--Padding) * -2);
 
   // Node
   --pf-c-tree-view--m-compact__node--PaddingLeft: var(--pf-c-tree-view--m-compact__node--indent--base);
-  --pf-c-tree-view--m-compact__node--before--Top: calc(var(--pf-c-tree-view__node--PaddingTop) + var(--pf-global--spacer--lg) + #{pf-size-prem(4px)});
+  --pf-c-tree-view--m-compact__node--before--Top: calc(var(--pf-c-tree-view__node--PaddingTop--base) + var(--pf-global--spacer--lg) + #{pf-size-prem(4px)});
   --pf-c-tree-view--m-compact__node--level-2--PaddingLeft: var(--pf-c-tree-view--m-compact__node--indent--base);
 
 
@@ -138,11 +151,20 @@ $pf-c-tree-view--MaxNesting: 10;
 
   // Node container
   --pf-c-tree-view--m-compact__node-container--Display: flex;
+  --pf-c-tree-view--m-compact__node-container--PaddingBottom--base: var(--pf-global--spacer--lg);
+  --pf-c-tree-view--m-compact__node-container--PaddingTop: var(--pf-global--spacer--lg);
+  --pf-c-tree-view--m-compact__node-container--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-tree-view--m-compact__node-container--PaddingBottom: var(--pf-c-tree-view--m-compact__node-container--PaddingBottom--base);
+  --pf-c-tree-view--m-compact__node-container--PaddingLeft: var(--pf-global--spacer--xs);
   --pf-c-tree-view--m-compact__node-container--nested--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-tree-view--m-compact__node-container--nested--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-tree-view--m-compact__node-container--nested--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-tree-view--m-compact__node-container--nested--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-tree-view--m-compact__node-container--nested--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-tree-view--m-compact__list-item--m-expanded__node-container--PaddingBottom: 0;
+
+  // Compact background
+  --pf-c-tree-view--m-compact--m-no-background__node-container--nested--PaddingLeft: var(--pf-global--spacer--md);
 
   // Background transparent
   --pf-c-tree-view--m-no-background__node-container--BackgroundColor: transparent;
@@ -151,7 +173,7 @@ $pf-c-tree-view--MaxNesting: 10;
   padding-bottom: var(--pf-c-tree-view--PaddingBottom);
 
   &.pf-m-compact,
-  &.pf-m-bordered {
+  &.pf-m-guides {
     .pf-c-tree-view__list-item {
       position: relative;
 
@@ -160,33 +182,33 @@ $pf-c-tree-view--MaxNesting: 10;
         &::before,
         .pf-c-tree-view__node::before {
           position: absolute;
-          left: var(--pf-c-tree-view--m-bordered--border--Left);
-          z-index: var(--pf-c-tree-view--m-bordered--border--ZIndex);
+          left: var(--pf-c-tree-view--m-guides--border--Left);
+          z-index: var(--pf-c-tree-view--m-guides--border--ZIndex);
           content: "";
         }
 
         // vertical border
         &::before {
-          top: var(--pf-c-tree-view--m-bordered__list-item--before--Top);
-          width: var(--pf-c-tree-view--m-bordered__list-item--before--Width);
-          height: var(--pf-c-tree-view--m-bordered__list-item--before--Height);
-          background-color: var(--pf-c-tree-view--m-bordered__list-item--before--BackgroundColor);
+          top: var(--pf-c-tree-view--m-guides__list-item--before--Top);
+          width: var(--pf-c-tree-view--m-guides__list-item--before--Width);
+          height: var(--pf-c-tree-view--m-guides__list-item--before--Height);
+          background-color: var(--pf-c-tree-view--m-guides__list-item--before--BackgroundColor);
         }
 
         // horizontal border
         .pf-c-tree-view__node::before {
-          top: var(--pf-c-tree-view--m-bordered__node--before--Top);
-          width: var(--pf-c-tree-view--m-bordered__node--before--Width);
-          height: var(--pf-c-tree-view--m-bordered__node--before--Height);
-          background-color: var(--pf-c-tree-view--m-bordered__node--before--BackgroundColor);
+          top: var(--pf-c-tree-view--m-guides__node--before--Top);
+          width: var(--pf-c-tree-view--m-guides__node--before--Width);
+          height: var(--pf-c-tree-view--m-guides__node--before--Height);
+          background-color: var(--pf-c-tree-view--m-guides__node--before--BackgroundColor);
         }
 
         &:last-child::before {
-          height: var(--pf-c-tree-view--m-bordered__list-item--last-child--before--Height);
+          height: var(--pf-c-tree-view--m-guides__list-item--last-child--before--Height);
         }
 
         .pf-c-tree-view__list-item {
-          --pf-c-tree-view--m-bordered--border--Left: var(--pf-c-tree-view--m-bordered--border--nested--Left); // swap with nested value
+          --pf-c-tree-view--m-guides--border--Left: var(--pf-c-tree-view--m-guides--border--nested--Left); // swap with nested value
         }
         // stylelint-enable
       }
@@ -198,20 +220,31 @@ $pf-c-tree-view--MaxNesting: 10;
   }
 
   &.pf-m-compact {
+    --pf-c-tree-view__node--PaddingTop: var(--pf-c-tree-view--m-compact__node--PaddingTop);
+    --pf-c-tree-view__node--PaddingBottom: var(--pf-c-tree-view--m-compact__node--PaddingBottom);
     --pf-c-tree-view__node-container--Display: var(--pf-c-tree-view--m-compact__node-container--Display);
     --pf-c-tree-view__node--hover--BackgroundColor: transparent;
     --pf-c-tree-view__node--focus--BackgroundColor: transparent;
+    --pf-c-tree-view__list-item__list-item__node-toggle--Top: var(--pf-c-tree-view--m-compact__list-item__list-item__node-toggle--Top);
 
     // Level 1
     .pf-c-tree-view__list-item {
+      --pf-c-tree-view__node--PaddingTop: var(--pf-c-tree-view--m-compact__node--nested--PaddingTop);
+      --pf-c-tree-view__node--PaddingBottom: var(--pf-c-tree-view--m-compact__node--nested--PaddingBottom);
+
       border-bottom: var(--pf-c-tree-view--m-compact__list-item--BorderBottomWidth) solid var(--pf-c-tree-view--m-compact__list-item--BorderBottomColor);
+
+      &.pf-m-expanded {
+        --pf-c-tree-view--m-compact__node-container--PaddingBottom: var(--pf-c-tree-view--m-compact__list-item--m-expanded__node-container--PaddingBottom);
+      }
 
       // Level 2
       .pf-c-tree-view__list-item {
         --pf-c-tree-view__node-toggle--Position: static;
-        --pf-c-tree-view__list-item__list-item__node-toggle--TranslateX: 0;
         --pf-c-tree-view__node--PaddingLeft: var(--pf-c-tree-view--m-compact__node--level-2--PaddingLeft); // second+ nested child padding left
+        --pf-c-tree-view__list-item__list-item__node-toggle--TranslateX: 0;
         --pf-c-tree-view--m-compact__list-item--BorderBottomWidth: 0; // hide nested list item bottom borders
+        --pf-c-tree-view--m-compact__node-container--PaddingBottom: var(--pf-c-tree-view--m-compact__node-container--PaddingBottom--base); // reset expanded node container padding
 
         // stylelint-disable max-nesting-depth, selector-max-class
         &::before,
@@ -253,6 +286,10 @@ $pf-c-tree-view--MaxNesting: 10;
       }
     }
 
+    .pf-c-tree-view__node-container {
+      padding: var(--pf-c-tree-view--m-compact__node-container--PaddingTop) var(--pf-c-tree-view--m-compact__node-container--PaddingRight) var(--pf-c-tree-view--m-compact__node-container--PaddingBottom) var(--pf-c-tree-view--m-compact__node-container--PaddingLeft);
+    }
+
     // stylelint-disable selector-max-class, selector-max-compound-selectors
     .pf-c-tree-view__list-item:not([aria-expanded]) > .pf-c-tree-view__content {
       > .pf-c-tree-view__node,
@@ -261,6 +298,20 @@ $pf-c-tree-view--MaxNesting: 10;
       }
     }
     // stylelint-enable
+
+    &.pf-m-no-background {
+
+      .pf-c-tree-view__list-item {
+
+        .pf-c-tree-view__list-item {
+
+          .pf-c-tree-view__list-item {
+            // --pf-c-tree-view--m-compact__node--PaddingLeft: var(--pf-c-tree-view--m-compact--m-no-background__node--PaddingLeft); // second+ nested child padding left
+            // --pf-c-tree-view--m-compact--border--Left: var(--pf-c-tree-view--m-compact--m-no-background--border--Left);
+          }
+        }
+      }
+    }
   }
 
   &.pf-m-no-background {
@@ -420,11 +471,16 @@ $pf-c-tree-view--MaxNesting: 10;
     #{$nested-item} {
       --pf-c-tree-view__list-item__list-item__node-toggle--Left: var(--pf-c-tree-view__node--PaddingLeft);
       --pf-c-tree-view__node--PaddingLeft: calc(var(--pf-c-tree-view__node--nested-indent--base) * #{$i} + var(--pf-c-tree-view__node--indent--base));
-      --pf-c-tree-view--m-bordered--border--nested--Left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-bordered--base-border--Left--offset));
+      --pf-c-tree-view--m-guides--border--nested--Left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-guides--base-border--Left--offset));
 
       @if $i > 1 {
         --pf-c-tree-view--m-compact__node--PaddingLeft: calc(var(--pf-c-tree-view--m-compact__node--nested-indent--base) * #{$i - 1} + var(--pf-c-tree-view--m-compact__node--indent--base));
         --pf-c-tree-view--m-compact--border--nested--Left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-compact--base-border--Left--offset));
+      }
+
+      @if $i > 2 {
+        --pf-c-tree-view--m-compact--m-no-background__node--PaddingLeft: calc(var(--pf-c-tree-view--m-compact__node--nested-indent--base) * #{$i - 1} + var(--pf-c-tree-view--m-compact__node--indent--base) + var(--pf-global--spacer--xl));
+        --pf-c-tree-view--m-compact--m-no-background--border--Left: calc(var(--pf-c-tree-view--m-compact--m-no-background__node--PaddingLeft) - var(--pf-c-tree-view--m-compact--base-border--Left--offset) - var(--pf-global--spacer--sm));
       }
     }
 

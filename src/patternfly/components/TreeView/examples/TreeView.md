@@ -687,9 +687,9 @@ beta: true
 {{/tree-view}}
 ```
 
-### Bordered
+### Guides
 ```hbs
-{{#> tree-view tree-view--modifier="pf-m-bordered"}}
+{{#> tree-view tree-view--modifier="pf-m-guides"}}
   {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
@@ -824,7 +824,7 @@ beta: true
 | `.pf-c-tree-view__node-check` | `<span>` | Initiates a tree view check. |
 | `.pf-c-tree-view__action` | `<div>` | Initiates a tree view action wrapper. |
 | `.pf-c-tree-view__search` | `<div>` | Initiates a tree view search wrapper. |
-| `.pf-m-bordered` | `.pf-c-tree-view` | Modifies the tree view to the bordered presentation. |
+| `.pf-m-guides` | `.pf-c-tree-view` | Modifies the tree view to the guides presentation. |
 | `.pf-m-compact` | `.pf-c-tree-view` | Modifies the tree view to the compact presentation. |
 | `.pf-m-no-background` | `.pf-c-tree-view.pf-m-compact` | Modifies the tree view compact variant node containers to have a transparent background. |
 | `.pf-m-current` | `.pf-c-tree-view__node` | Modifies the tree view node to be current. |
