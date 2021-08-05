@@ -1,0 +1,14 @@
+<div class="pf-c-alert__toggle{{#if alert-toggle--modifier}} {{alert-toggle--modifier}}{{/if}}"
+  {{#if alert-toggle--attribute}}
+    {{{alert-toggle--attribute}}}
+  {{/if}}>
+  {{#if alert--IsExpanded}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-expanded="true"'}}
+      {{> alert-toggle-icon}}
+    {{/button}}
+  {{else}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-expanded="false"'}}
+      {{> alert-toggle-icon}}
+    {{/button}}
+  {{/if}}
+</div>
