@@ -8,6 +8,9 @@
       "packagePatterns": ["*"],
       "excludePackagePatterns": [
         "@patternfly/patternfly-a11y",
+        "@patternfly/react-code-editor",
+        "@patternfly/react-core",
+        "@patternfly/react-table",
         "theme-patternfly-org"
       ],
       "enabled": false
@@ -16,6 +19,9 @@
       "datasources": ["npm"],
       "packageNames": [
         "@patternfly/patternfly-a11y",
+        "@patternfly/react-code-editor",
+        "@patternfly/react-core",
+        "@patternfly/react-table",
         "theme-patternfly-org"
       ]
     }
