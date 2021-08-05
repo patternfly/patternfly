@@ -103,7 +103,7 @@
       <!-- end task group 1 -->
 
       <!--  task group 2 -->
-        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsExpanded="true" notification-drawer-task-group--IsSuccess="true"}}
+        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-list-group2') notification-drawer-task-group--IsExpanded="true" notification-drawer-task-group--IsSuccess="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -128,7 +128,7 @@
       <!-- end task group 2 -->
 
       <!--  task group 3 -->
-        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsSuccess="true"}}
+        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-list-group3') notification-drawer-task-group--IsSuccess="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -148,7 +148,7 @@
               {{> notification-drawer-task-group-toggle-icon}}
             {{/notification-drawer-task-group-toggle}}
           </h1>
-          {{> notification-drawer-basic-task-list-hoverable}}
+          {{> notification-drawer-basic-task-list-hover-action}}
         {{/notification-drawer-task-group}}
       <!-- end task group 3 -->
 

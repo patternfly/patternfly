@@ -257,7 +257,7 @@ cssPrefix: pf-c-notification-drawer
               {{> notification-drawer-task-group-toggle-icon}}
             {{/notification-drawer-task-group-toggle}}
           </h1>
-          {{> notification-drawer-basic-task-list-hoverable}}
+          {{> notification-drawer-basic-task-list-hover-action}}
         {{/notification-drawer-task-group}}
       <!-- end task group 3 -->
 
