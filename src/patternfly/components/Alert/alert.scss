@@ -101,14 +101,10 @@
     "toggle icon title action"
     ". . description description"
     ". . actiongroup actiongroup";
-  --pf-c-alert--m-expandable__description--Display: none;
-  --pf-c-alert--m-expandable__description--Visibility: hidden;
   --pf-c-alert--m-expandable__description--action-group--PaddingTop: var(--pf-c-alert__action-group--PaddingTop-base);
 
   // Expanded
   --pf-c-alert--m-expanded__toggle-icon--Rotate: 90deg;
-  --pf-c-alert--m-expanded__description--Display: block;
-  --pf-c-alert--m-expanded__description--Visibility: visible;
   --pf-c-alert--m-expanded__description--action-group--PaddingTop: var(--pf-c-alert__description--action-group--PaddingTop-base);
 
   @include pf-t-light; // This component always needs to be light
