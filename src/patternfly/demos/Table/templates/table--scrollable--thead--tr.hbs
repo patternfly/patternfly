@@ -1,0 +1,28 @@
+{{#> table-tr}}
+  {{#if table--scrollable--Column1IsStickyColumn}}
+    {{#> table-th table-th--attribute='scope="col" style="--pf-c-table__sticky-column--MinWidth: 120px; --pf-c-table__sticky-column--Left: 0"' table-th--sortable="true" table-th--IsStickyColumn="true"}}
+      Fact
+    {{/table-th}}
+  {{else}}
+    {{#> table-th table-th--sortable="true"}}
+      Fact
+    {{/table-th}}
+  {{/if}}
+  {{#if table--scrollable--Column2IsStickyColumn}}
+    {{#> table-th table-th--attribute='scope="col" style="--pf-c-table__sticky-column--MinWidth: 200px; --pf-c-table__sticky-column--Left: 200px;"' table-th--sortable="true" table-th--IsStickyColumn="true"}}
+      State
+    {{/table-th}}
+  {{else}}
+    {{#> table-th table-th--sortable="true"}}
+      State
+    {{/table-th}}
+  {{/if}}
+  {{> table--scrollable--th table--scrollable--th--text="testing the header 3" table--scrollable--th--icon="pf-icon-blueprint"}}
+  {{> table--scrollable--th table--scrollable--th--text="testing the header 4" table--scrollable--th--icon="fa-code-branch"}}
+  {{> table--scrollable--th table--scrollable--th--text="testing the header 5" table--scrollable--th--icon="fa-code-branch"}}
+  {{> table--scrollable--th table--scrollable--th--text="testing the header 6" table--scrollable--th--icon="fa-code-branch"}}
+  {{> table--scrollable--th table--scrollable--th--text="testing the header 7" table--scrollable--th--icon="fa-code-branch"}}
+  {{> table--scrollable--th table--scrollable--th--text="testing the header 8" table--scrollable--th--icon="fa-code-branch"}}
+  {{> table--scrollable--th table--scrollable--th--text="testing the header 9" table--scrollable--th--icon="fa-code-branch"}}
+  {{> table--scrollable--th table--scrollable--th--text="testing the header 10" table--scrollable--th--icon="fa-code-branch"}}
+{{/table-tr}}
