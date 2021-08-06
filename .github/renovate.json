@@ -8,6 +8,7 @@
       "packagePatterns": ["*"],
       "excludePackagePatterns": [
         "@patternfly/patternfly-a11y",
+        "@patternfly/react-charts",
         "@patternfly/react-code-editor",
         "@patternfly/react-core",
         "@patternfly/react-table",
@@ -19,6 +20,7 @@
       "datasources": ["npm"],
       "packageNames": [
         "@patternfly/patternfly-a11y",
+        "@patternfly/react-charts",
         "@patternfly/react-code-editor",
         "@patternfly/react-core",
         "@patternfly/react-table",
