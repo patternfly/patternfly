@@ -302,7 +302,7 @@ cssPrefix: pf-c-alert
 
 ### Expandable
 ```hbs
-{{#> alert alert--IsExpandable="true" alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+{{#> alert alert--id="alert-expandable-example-1" alert--IsExpandable="true" alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{> alert-toggle}}
   {{> alert-icon alert-icon--type="check-circle"}}
   {{#> alert-title}}
@@ -327,7 +327,7 @@ cssPrefix: pf-c-alert
   {{/alert-action-group}}
 {{/alert}}
 <br>
-{{#> alert alert--IsExpandable="true" alert--IsExpanded="true" alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
+{{#> alert alert--id="alert-expandable-example-2" alert--IsExpandable="true" alert--IsExpanded="true" alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
   {{> alert-toggle}}
   {{> alert-icon alert-icon--type="check-circle"}}
   {{#> alert-title}}
@@ -352,7 +352,7 @@ cssPrefix: pf-c-alert
   {{/alert-action-group}}
 {{/alert}}
 <br>
-{{#> alert alert--IsExpandable="true" alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
+{{#> alert alert--id="alert-expandable-example-3" alert--IsExpandable="true" alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{> alert-toggle}}
   {{> alert-icon alert-icon--type="check-circle"}}
   {{#> alert-title}}
@@ -377,7 +377,7 @@ cssPrefix: pf-c-alert
   {{/alert-action-group}}
 {{/alert}}
 <br>
-{{#> alert alert--IsExpandable="true" alert--IsExpanded="true" alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
+{{#> alert alert--id="alert-expandable-example-4" alert--IsExpandable="true" alert--IsExpanded="true" alert--modifier="pf-m-success pf-m-inline" alert--attribute='aria-label="Success alert"'}}
   {{> alert-toggle}}
   {{> alert-icon alert-icon--type="check-circle"}}
   {{#> alert-title}}
