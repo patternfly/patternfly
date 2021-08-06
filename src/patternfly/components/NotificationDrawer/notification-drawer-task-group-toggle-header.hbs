@@ -1,3 +1,6 @@
-<div class="pf-c-notification-drawer__task-group-toggle-header{{#if notification-drawer-task-group-toggle-header--modifier}} {{notification-drawer-task-group-toggle-header--modifier}}{{/if}}">
+<div class="pf-c-notification-drawer__task-group-toggle-header{{#if notification-drawer-task-group-toggle-header--modifier}} {{notification-drawer-task-group-toggle-header--modifier}}{{/if}}"
+  {{#if notification-drawer-task-group-toggle-header--attribute}}
+    {{{notification-drawer-task-group-toggle-header--attribute}}}
+  {{/if}}>
   {{> @partial-block}}
 </div>

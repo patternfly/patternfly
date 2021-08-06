@@ -131,7 +131,7 @@
   // Group toggle icon
   --pf-c-notification-drawer__group-toggle-icon--MarginRight: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__group-toggle-icon--Color: var(--pf-global--Color--200);
-  --pf-c-notification-drawer__group-toggle-icon--Transition: .2s ease-in 0s;
+  --pf-c-notification-drawer__group-toggle-icon--Transition: var(--pf-global--Transition);
   --pf-c-notification-drawer__group--m-expanded__group-toggle-icon--Rotate: 90deg;
 
   // Task group toggle
@@ -146,9 +146,9 @@
 
   // Task group toggle header
   --pf-c-notification-drawer__task-group-toggle-header--AlignItems: baseline;
+  --pf-c-notification-drawer__task-group-toggle-header--MarginRight: var(--pf-global--spacer--md);
 
   // Task group toggle title
-  --pf-c-notification-drawer__task-group-toggle-title--MarginRight: var(--pf-global--spacer--md);
   --pf-c-notification-drawer__task-group-toggle-title--max-lines: 1;
 
   // Task group toggle status
@@ -158,19 +158,13 @@
   --pf-c-notification-drawer__task-list-group--m-success__task-group-toggle-status--Color: var(--pf-global--success-color--100);
   --pf-c-notification-drawer__task-list-group--m-default__task-group-toggle-status--Color: var(--pf-global--default-color--200);
   --pf-c-notification-drawer__task-group-toggle-status--Color: var(--pf-c-notification-drawer__task-list-group--m-default__task-group-toggle-status--Color);
-  --pf-c-notification-drawer__task-group-toggle-status--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-notification-drawer__task-group-toggle-status--MarginLeft: var(--pf-global--spacer--md);
 
   // Task group toggle action
-  --pf-c-notification-drawer__task-group-toggle-action--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-notification-drawer__task-group-toggle-action--MarginLeft: var(--pf-global--spacer--md);
 
   // Task group toggle count
   --pf-c-notification-drawer__task-group-toggle-count--MarginRight: var(--pf-global--spacer--md);
-
-  // Task group toggle icon
-  --pf-c-notification-drawer__task-group-toggle-icon--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-notification-drawer__task-group-toggle-icon--Color: var(--pf-global--Color--200);
-  --pf-c-notification-drawer__task-group-toggle-icon--Transition: .2s ease-in 0s;
-  --pf-c-notification-drawer__task-group--m-expanded__task-group-toggle-icon--Rotate: 90deg;
 
   // Task group toggle timestamp
   --pf-c-notification-drawer__task-group-toggle-timestamp--FontSize: var(--pf-global--FontSize--sm);
@@ -209,9 +203,7 @@
 }
 
 .pf-c-notification-drawer__tabs {
-  background-color: var(--pf-c-notification-drawer__header--BackgroundColor);
-
-  // TODO: fix height
+  background-color: var(--pf-c-notification-drawer__tabs--BackgroundColor);
 }
 
 .pf-c-notification-drawer__body {
@@ -359,7 +351,6 @@
 .pf-c-notification-drawer__task-list-item-status {
   margin-left: auto;
   color: var(--pf-c-notification-drawer__task-list-item-status--Color);
-  text-align: end;
 }
 
 .pf-c-notification-drawer__task-list-item-action {
@@ -479,7 +470,8 @@
 // Task group toggle
 .pf-c-notification-drawer__task-group-toggle {
   display: grid;
-  align-items: center;
+
+  // align-items: center;
   width: 100%;
   grid-template-columns: 1fr auto auto;
   padding: var(--pf-c-notification-drawer__task-group-toggle--PaddingTop) var(--pf-c-notification-drawer__task-group-toggle--PaddingRight) var(--pf-c-notification-drawer__task-group-toggle--PaddingBottom) var(--pf-c-notification-drawer__task-group-toggle--PaddingLeft);
@@ -501,13 +493,13 @@
 
 .pf-c-notification-drawer__group-toggle-icon,
 .pf-c-notification-drawer__task-group-toggle-icon {
-  margin-right: var(--pf-c-notification-drawer__task-group-toggle-icon--MarginRight);
-  color: var(--pf-c-notification-drawer__task-group-toggle-icon--Color);
-  transition: var(--pf-c-notification-drawer__task-group-toggle-icon--Transition);
+  margin-right: var(--pf-c-notification-drawer__group-toggle-icon--MarginRight);
+  color: var(--pf-c-notification-drawer__group-toggle-icon--Color);
+  transition: var(--pf-c-notification-drawer__group-toggle-icon--Transition);
 
   .pf-c-notification-drawer__group.pf-m-expanded &,
   .pf-c-notification-drawer__task-group.pf-m-expanded & {
-    transform: rotate(var(--pf-c-notification-drawer__task-group--m-expanded__task-group-toggle-icon--Rotate));
+    transform: rotate(var(--pf-c-notification-drawer__group--m-expanded__group-toggle-icon--Rotate));
   }
 }
 
@@ -516,18 +508,18 @@
   align-items: var(--pf-c-notification-drawer__task-group-toggle-header--AlignItems);
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  margin-right: var(--pf-c-notification-drawer__task-group-toggle-header--MarginRight);
 }
 
 .pf-c-notification-drawer__task-group-toggle-title {
   @include pf-line-clamp("var(--pf-c-notification-drawer__task-group-toggle-title--max-lines)");
 
-  margin-right: var(--pf-c-notification-drawer__task-group-toggle-title--MarginRight);
   text-align: left;
   word-break: break-word;
 }
 
 .pf-c-notification-drawer__task-group-toggle-status {
-  margin-right: var(--pf-c-notification-drawer__task-group-toggle-status--MarginRight);
+  margin-left: var(--pf-c-notification-drawer__task-group-toggle-status--MarginLeft);
   color: var(--pf-c-notification-drawer__task-group-toggle-status--Color);
 }
 
@@ -537,7 +529,7 @@
 }
 
 .pf-c-notification-drawer__task-group-toggle-action {
-  margin-right: var(--pf-c-notification-drawer__task-group-toggle-action--MarginRight);
+  margin-left: var(--pf-c-notification-drawer__task-group-toggle-action--MarginLeft);
 }
 
 .pf-c-notification-drawer__task-group-toggle-icon {

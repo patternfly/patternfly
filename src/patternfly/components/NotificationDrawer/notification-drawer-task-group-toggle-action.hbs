@@ -2,5 +2,5 @@
   {{#if notification-drawer-task-group-toggle-action--attribute}}
     {{{notification-drawer-task-group-toggle-action--attribute}}}
   {{/if}}>
-  <a class="pf-c-button pf-m-inline pf-m-link">{{> @partial-block}}</a>
+  {{#> button-link button-link--modifier="pf-m-inline pf-m-link pf-m-plain"}}{{> @partial-block}}{{/button-link}}
 </div>

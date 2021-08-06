@@ -76,9 +76,10 @@
 
     {{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="notification-drawer-tabs-tasks-panel"'}}
 
-      <!--  task group 1 -->
-      {{#> notification-drawer-task-list-group}}
-        {{#> notification-drawer-task-group notification-drawer-task-group--IsDanger="true" notification-drawer--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsExpanded="true"}}
+    {{#> notification-drawer-task-group-list}}
+
+      <!-- task group 1 -->
+        {{#> notification-drawer-task-group notification-drawer-task-group--IsDanger="true" notification-drawer--id=(concat notification-drawer--id '-task-group1') notification-drawer-task-group--IsExpanded="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -102,8 +103,8 @@
         {{/notification-drawer-task-group}}
       <!-- end task group 1 -->
 
-      <!--  task group 2 -->
-        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-list-group2') notification-drawer-task-group--IsExpanded="true" notification-drawer-task-group--IsSuccess="true"}}
+      <!-- task group 2 -->
+        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-group2') notification-drawer-task-group--IsExpanded="true" notification-drawer-task-group--IsSuccess="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -127,8 +128,8 @@
         {{/notification-drawer-task-group}}
       <!-- end task group 2 -->
 
-      <!--  task group 3 -->
-        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-list-group3') notification-drawer-task-group--IsSuccess="true"}}
+      <!-- task group 3 -->
+        {{#> notification-drawer-task-group notification-drawer--id=(concat notification-drawer--id '-task-group3') notification-drawer-task-group--IsSuccess="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -152,7 +153,7 @@
         {{/notification-drawer-task-group}}
       <!-- end task group 3 -->
 
-      {{/notification-drawer-task-list-group}}
+      {{/notification-drawer-task-group-list}}
     {{/tab-content}}
 
   {{/notification-drawer-body}}

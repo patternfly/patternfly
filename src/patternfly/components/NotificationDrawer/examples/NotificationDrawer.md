@@ -185,9 +185,10 @@ cssPrefix: pf-c-notification-drawer
 
     {{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="notification-drawer-tabs-tasks-panel"'}}
 
+      {{#> notification-drawer-task-group-list}}
+  
       <!--  task group 1 -->
-      {{#> notification-drawer-task-list-group}}
-        {{#> notification-drawer-task-group notification-drawer-task-group--IsDanger="true" notification-drawer-task-group--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsExpanded="true"}}
+        {{#> notification-drawer-task-group notification-drawer-task-group--id=(concat notification-drawer--id '-task-group1') notification-drawer-task-group--IsExpanded="true" notification-drawer-task-group--IsDanger="true" }}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -212,7 +213,7 @@ cssPrefix: pf-c-notification-drawer
       <!-- end task group 1 -->
 
       <!--  task group 2 -->
-        {{#> notification-drawer-task-group notification-drawer-task-list-group--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsExpanded="true" notification-drawer-task-group--IsSuccess="true"}}
+        {{#> notification-drawer-task-group notification-drawer-task-group--id=(concat notification-drawer--id '-task-group2') notification-drawer-task-group--IsExpanded="true" notification-drawer-task-group--IsSuccess="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -237,7 +238,7 @@ cssPrefix: pf-c-notification-drawer
       <!-- end task group 2 -->
 
       <!--  task group 3 -->
-        {{#> notification-drawer-task-group notification-drawer-task-list-group--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsSuccess="true"}}
+        {{#> notification-drawer-task-group notification-drawer-task-group--id=(concat notification-drawer--id '-task-group3') notification-drawer-task-group--IsSuccess="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -261,7 +262,7 @@ cssPrefix: pf-c-notification-drawer
         {{/notification-drawer-task-group}}
       <!-- end task group 3 -->
 
-      {{/notification-drawer-task-list-group}}
+      {{/notification-drawer-task-group-list}}
     {{/tab-content}}
 
   {{/notification-drawer-body}}
@@ -348,9 +349,10 @@ cssPrefix: pf-c-notification-drawer
 
     {{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="notification-drawer-tabs-tasks-panel"'}}
 
-      <!--  task group 1 -->
-      {{#> notification-drawer-task-list-group }}
-        {{#> notification-drawer-task-group notification-drawer-task-group--id=(concat notification-drawer--id '-task-list-group1') notification-drawer-task-group--IsExpanded="true"}}
+    {{#> notification-drawer-task-group-list }}
+
+      <!-- task group 1 -->
+        {{#> notification-drawer-task-group notification-drawer-task-group--id=(concat notification-drawer--id '-task-group1') notification-drawer-task-group--IsExpanded="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -374,8 +376,8 @@ cssPrefix: pf-c-notification-drawer
         {{/notification-drawer-task-group}}
       <!-- end task group 1 -->
 
-      <!--  task group 2 -->
-        {{#> notification-drawer-task-group notification-drawer-task-group--IsSuccess="true" notification-drawer-task-group--id=(concat notification-drawer--id '-task-list-group2') notification-drawer-task-group--IsExpanded="true"}}
+      <!-- task group 2 -->
+        {{#> notification-drawer-task-group notification-drawer-task-group--IsSuccess="true" notification-drawer-task-group--id=(concat notification-drawer--id '-task-group2') notification-drawer-task-group--IsExpanded="true"}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -397,10 +399,10 @@ cssPrefix: pf-c-notification-drawer
           </h1>
           {{> notification-drawer-basic-task-list}}
         {{/notification-drawer-task-group}}
-        <!-- end task group 2 -->
+      <!-- end task group 2 -->
 
-      <!--  task group 2 -->
-        {{#> notification-drawer-task-group notification-drawer-task-group--IsSuccess="true" notification-drawer--id=(concat notification-drawer--id '-task-list-group3')}}
+      <!-- task group 3 -->
+        {{#> notification-drawer-task-group notification-drawer-task-group--IsSuccess="true" notification-drawer--id=(concat notification-drawer--id '-task-group3')}}
           <h1>
             {{#> notification-drawer-task-group-toggle}}
               {{#> notification-drawer-task-group-toggle-header}}
@@ -422,9 +424,9 @@ cssPrefix: pf-c-notification-drawer
           </h1>
           {{> notification-drawer-basic-task-list}}
         {{/notification-drawer-task-group}}
-        <!-- end task group 2 -->
+      <!-- end task group 3 -->
 
-      {{/notification-drawer-task-list-group}}
+      {{/notification-drawer-task-group-list}}
     {{/tab-content}}
 
   {{/notification-drawer-body}}
