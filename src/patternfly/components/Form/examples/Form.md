@@ -133,7 +133,7 @@ cssPrefix: pf-c-form
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
       {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
-        This is helper text
+        This is helper text.
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -147,7 +147,7 @@ cssPrefix: pf-c-form
       {{#> form-control form-control--modifier="pf-m-warning" controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
       {{#> form-helper-text  form-helper-text--modifier="pf-m-warning" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
-        This is helper text for a warning input
+        This is helper text for a warning input.
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -161,7 +161,7 @@ cssPrefix: pf-c-form
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-invalid="true" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
       {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
-        This is helper text for an invalid input
+        This is helper text for an invalid input.
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -175,7 +175,7 @@ cssPrefix: pf-c-form
       {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
       {{#> form-helper-text form-helper-text--modifier="pf-m-success" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
-        This is helper text for success input
+        This is helper text for success input.
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}

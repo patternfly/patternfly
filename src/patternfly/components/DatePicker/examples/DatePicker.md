@@ -35,7 +35,7 @@ import './DatePicker.css'
 
 ### Invalid
 ```hbs
-{{#> date-picker date-picker--id="invalid" date-picker-helper-text--text="Invalid date selected." date-picker-helper-text--IsError="true"}}
+{{#> date-picker date-picker--id="invalid" date-picker-helper-text--text="Invalid date" date-picker-helper-text--IsError="true"}}
   {{#> input-group}}
     {{> form-control controlType="input" input="true" form-control--attribute=(concat 'aria-invalid="true" type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
