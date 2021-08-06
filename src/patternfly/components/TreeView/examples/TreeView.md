@@ -14,7 +14,6 @@ beta: true
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
-        <!-- remove --HasToggle in cleanup commit  -->
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
