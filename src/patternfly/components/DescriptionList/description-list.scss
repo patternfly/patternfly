@@ -5,6 +5,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
   --pf-c-description-list--ColumnGap: var(--pf-global--spacer--lg);
   --pf-c-description-list--GridTemplateColumns--count: 1;
   --pf-c-description-list--GridTemplateColumns--width: 1fr;
+  --pf-c-description-list--GridTemplateColumns--min: 0;
   --pf-c-description-list--GridTemplateColumns: repeat(var(--pf-c-description-list--GridTemplateColumns--count), var(--pf-c-description-list--GridTemplateColumns--width));
 
   // group
