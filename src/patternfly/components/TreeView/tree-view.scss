@@ -82,30 +82,30 @@ $pf-c-tree-view--MaxNesting: 10;
 
   // Guides
   // ================================================================== //
-  --pf-c-tree-view--m-guides--border--Left: var(--pf-c-tree-view--m-guides--base-border--Left); // starting value, this gets updated for each nesting level
-  --pf-c-tree-view--m-guides--border--ZIndex: var(--pf-c-tree-view--m-guides--base-border--ZIndex);
+  --pf-c-tree-view--m-guides--guide--Left: var(--pf-c-tree-view--m-guides--guide-left--base); // starting value, this gets updated for each nesting level
+  --pf-c-tree-view--m-guides--guide--ZIndex: var(--pf-c-tree-view--m-guides--guide-zindex--base);
 
   // Base
-  --pf-c-tree-view--m-guides--base-border--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-tree-view--m-guides--base-border--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-tree-view--m-guides--base-border--Left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-guides__list-node--base--BorderWidth));
-  --pf-c-tree-view--m-guides--base-border--Left--offset: calc(var(--pf-c-tree-view__list-item__list-item__node-toggle--Left) + var(--pf-c-tree-view__node-toggle-icon--MinWidth) / 2); // based on toggle positioning
-  --pf-c-tree-view--m-guides--base-border--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-c-tree-view--m-guides__list-node--base--BorderWidth: var(--pf-global--spacer--lg);
+  --pf-c-tree-view--m-guides--guide-color--base: var(--pf-global--BorderColor--100);
+  --pf-c-tree-view--m-guides--guide-width--base: var(--pf-global--BorderWidth--sm);
+  --pf-c-tree-view--m-guides--guide-left--base: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-guides__list-node--guide-width--base));
+  --pf-c-tree-view--m-guides--guide-left--base--offset: calc(var(--pf-c-tree-view__list-item__list-item__node-toggle--Left) + var(--pf-c-tree-view__node-toggle-icon--MinWidth) / 2); // based on toggle positioning
+  --pf-c-tree-view--m-guides--guide-zindex--base: var(--pf-global--ZIndex--sm);
+  --pf-c-tree-view--m-guides__list-node--guide-width--base: var(--pf-global--spacer--lg);
 
   // List item
   --pf-c-tree-view--m-guides__list-item--before--Top: 0;
-  --pf-c-tree-view--m-guides__list-item--before--Width: var(--pf-c-tree-view--m-guides--base-border--BorderWidth);
+  --pf-c-tree-view--m-guides__list-item--before--Width: var(--pf-c-tree-view--m-guides--guide-width--base);
   --pf-c-tree-view--m-guides__list-item--before--Height: 100%;
-  --pf-c-tree-view--m-guides__list-item--before--BackgroundColor: var(--pf-c-tree-view--m-guides--base-border--BorderColor);
+  --pf-c-tree-view--m-guides__list-item--before--BackgroundColor: var(--pf-c-tree-view--m-guides--guide-color--base);
   --pf-c-tree-view--m-guides__list-item--last-child--before--Top: var(--pf-c-tree-view--m-guides__node--before--Top);
   --pf-c-tree-view--m-guides__list-item--last-child--before--Height: var(--pf-c-tree-view--m-guides__list-item--last-child--before--Top);
 
   // Node
   --pf-c-tree-view--m-guides__node--before--Width: #{pf-size-prem(16px)};
-  --pf-c-tree-view--m-guides__node--before--Height: var(--pf-c-tree-view--m-guides--base-border--BorderWidth);
+  --pf-c-tree-view--m-guides__node--before--Height: var(--pf-c-tree-view--m-guides--guide-width--base);
   --pf-c-tree-view--m-guides__node--before--Top: #{pf-size-prem(18px)};
-  --pf-c-tree-view--m-guides__node--before--BackgroundColor: var(--pf-c-tree-view--m-guides--base-border--BorderColor);
+  --pf-c-tree-view--m-guides__node--before--BackgroundColor: var(--pf-c-tree-view--m-guides--guide-color--base);
 
   // Compact
   // ================================================================== //
@@ -183,8 +183,8 @@ $pf-c-tree-view--MaxNesting: 10;
         &::before,
         .pf-c-tree-view__node::before {
           position: absolute;
-          left: var(--pf-c-tree-view--m-guides--border--Left);
-          z-index: var(--pf-c-tree-view--m-guides--border--ZIndex);
+          left: var(--pf-c-tree-view--m-guides--guide--Left);
+          z-index: var(--pf-c-tree-view--m-guides--guide--ZIndex);
           content: "";
         }
 
@@ -209,7 +209,7 @@ $pf-c-tree-view--MaxNesting: 10;
         }
 
         .pf-c-tree-view__list-item {
-          --pf-c-tree-view--m-guides--border--Left: var(--pf-c-tree-view--m-guides--border--nested--Left); // swap with nested value
+          --pf-c-tree-view--m-guides--guide--Left: var(--pf-c-tree-view--m-guides--border--nested--Left); // swap with nested value
         }
         // stylelint-enable
       }
@@ -474,7 +474,7 @@ $pf-c-tree-view--MaxNesting: 10;
     #{$nested-item} {
       --pf-c-tree-view__list-item__list-item__node-toggle--Left: var(--pf-c-tree-view__node--PaddingLeft);
       --pf-c-tree-view__node--PaddingLeft: calc(var(--pf-c-tree-view__node--nested-indent--base) * #{$i} + var(--pf-c-tree-view__node--indent--base));
-      --pf-c-tree-view--m-guides--border--nested--Left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-guides--base-border--Left--offset));
+      --pf-c-tree-view--m-guides--border--nested--Left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-guides--guide-left--base--offset));
 
       @if $i > 1 {
         --pf-c-tree-view--m-compact__node--PaddingLeft: calc(var(--pf-c-tree-view--m-compact__node--nested-indent--base) * #{$i - 1} + var(--pf-c-tree-view--m-compact__node--indent--base));
