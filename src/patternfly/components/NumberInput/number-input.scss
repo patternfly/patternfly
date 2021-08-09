@@ -36,5 +36,6 @@
 }
 
 .pf-c-number-input__icon {
+  display: flex;
   font-size: var(--pf-c-number-input__icon--FontSize);
 }
