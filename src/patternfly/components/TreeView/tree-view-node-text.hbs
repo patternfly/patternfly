@@ -1,9 +1,9 @@
-<{{# if tree-view-node-text--type}}{{tree-view-node-text--type}}{{else}}span{{/if}} class="pf-c-tree-view__node-text{{#if tree-view-node-text--modifier}} {{tree-view-node-text--modifier}}{{/if}}"
-  {{#if tree-view-node-text--type}}
+<{{#if tree-view-node-text--type}}{{tree-view-node-text--type}}{{else}}span{{/if}} class="pf-c-tree-view__node-text{{#if tree-view-node-text--modifier}} {{tree-view-node-text--modifier}}{{/if}}"
+  {{#if tree-view-node--HasCheckbox}}
     for="check-{{{tree-view-node--id}}}"
   {{/if}}
   {{#if tree-view-node-text--attribute}}
     {{{tree-view-node-text--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</{{# if tree-view-node-text--type}}{{tree-view-node-text--type}}{{else}}span{{/if}}>
+</{{#if tree-view-node-text--type}}{{tree-view-node-text--type}}{{else}}span{{/if}}>

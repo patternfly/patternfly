@@ -1,0 +1,206 @@
+{{#> tree-view tree-view--modifier=tree-view--base--modifier tree-view-node-text--type="div" tree-view--IsCompact="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true"}}
+    {{#> tree-view-list-item}}
+      {{#> tree-view-content}}
+        {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+          {{#> tree-view-node-content}}
+            {{#> tree-view-node-title}}
+              apiVersion
+            {{/tree-view-node-title}}
+            {{#> tree-view-node-text}}
+              APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value and may reject unrecognized values.
+            {{/tree-view-node-text}}
+          {{/tree-view-node-content}}
+        {{/tree-view-node}}
+      {{/tree-view-content}}
+    {{/tree-view-list-item}}
+    {{#> tree-view-list-item}}
+      {{#> tree-view-content}}
+        {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+          {{#> tree-view-node-content}}
+            {{#> tree-view-node-title}}
+              kind
+            {{/tree-view-node-title}}
+            {{#> tree-view-node-text}}
+              Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated is CamelCase. More info:
+            {{/tree-view-node-text}}
+          {{/tree-view-node-content}}
+        {{/tree-view-node}}
+      {{/tree-view-content}}
+    {{/tree-view-list-item}}
+    {{#> tree-view-list-item}}
+      {{#> tree-view-content}}
+        {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+          {{#> tree-view-node-content}}
+            {{#> tree-view-node-title}}
+              metadata
+            {{/tree-view-node-title}}
+            {{#> tree-view-node-text}}
+              Standard object metadata
+            {{/tree-view-node-text}}
+          {{/tree-view-node-content}}
+        {{/tree-view-node}}
+      {{/tree-view-content}}
+    {{/tree-view-list-item}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+      {{#> tree-view-content}}
+        {{#> tree-view-node}}
+          {{#> tree-view-node-content}}
+            {{#> tree-view-node-title}}
+              spec
+            {{/tree-view-node-title}}
+            {{#> tree-view-node-text}}
+              Specification of the desired behavior of deployment.
+            {{/tree-view-node-text}}
+          {{/tree-view-node-content}}
+        {{/tree-view-node}}
+      {{/tree-view-content}}
+      {{#> tree-view-list newcontext}}
+        {{#> tree-view-list-item}}
+          {{#> tree-view-content}}
+            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+              {{#> tree-view-node-content}}
+                {{#> tree-view-node-title}}
+                  minReadySeconds
+                {{/tree-view-node-title}}
+                {{#> tree-view-node-text}}
+                  Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Default to 0 (pod will be considered available as soon as it is ready).
+                {{/tree-view-node-text}}
+              {{/tree-view-node-content}}
+            {{/tree-view-node}}
+          {{/tree-view-content}}
+        {{/tree-view-list-item}}
+        {{#> tree-view-list-item}}
+          {{#> tree-view-content}}
+            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+              {{#> tree-view-node-content}}
+                {{#> tree-view-node-title}}
+                  paused
+                {{/tree-view-node-title}}
+                {{#> tree-view-node-text}}
+                  Indicates that the deployment is paused
+                {{/tree-view-node-text}}
+              {{/tree-view-node-content}}
+            {{/tree-view-node}}
+          {{/tree-view-content}}
+        {{/tree-view-list-item}}
+        {{#> tree-view-list-item}}
+          {{#> tree-view-content}}
+            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+              {{#> tree-view-node-content}}
+                {{#> tree-view-node-title}}
+                  progressDeadlineSeconds
+                {{/tree-view-node-title}}
+                {{#> tree-view-node-text}}
+                  The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that the progress will not de estimated during the time a deployment is paused. Defaults to 600s.
+                {{/tree-view-node-text}}
+              {{/tree-view-node-content}}
+            {{/tree-view-node}}
+          {{/tree-view-content}}
+        {{/tree-view-list-item}}
+        {{#> tree-view-list-item}}
+          {{#> tree-view-content}}
+            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+              {{#> tree-view-node-content}}
+                {{#> tree-view-node-title}}
+                  replicas
+                {{/tree-view-node-title}}
+                {{#> tree-view-node-text}}
+                  Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
+                {{/tree-view-node-text}}
+              {{/tree-view-node-content}}
+            {{/tree-view-node}}
+          {{/tree-view-content}}
+        {{/tree-view-list-item}}
+        {{#> tree-view-list-item}}
+          {{#> tree-view-content}}
+            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+              {{#> tree-view-node-content}}
+                {{#> tree-view-node-title}}
+                  revisionHistoryLimit
+                {{/tree-view-node-title}}
+                {{#> tree-view-node-text}}
+                  The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. Defaults to 10.
+                {{/tree-view-node-text}}
+              {{/tree-view-node-content}}
+            {{/tree-view-node}}
+          {{/tree-view-content}}
+        {{/tree-view-list-item}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+          {{#> tree-view-content}}
+            {{#> tree-view-node}}
+              {{#> tree-view-node-content}}
+                {{#> tree-view-node-title}}
+                  Selector
+                {{/tree-view-node-title}}
+                {{#> tree-view-node-text}}
+                  Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment
+                {{/tree-view-node-text}}
+              {{/tree-view-node-content}}
+            {{/tree-view-node}}
+          {{/tree-view-content}}
+          {{#> tree-view-list newcontext}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
+              {{#> tree-view-content}}
+                {{#> tree-view-node}}
+                  {{#> tree-view-node-content}}
+                    {{#> tree-view-node-title}}
+                      matchExpressions
+                    {{/tree-view-node-title}}
+                    {{#> tree-view-node-text}}
+                      matchExpressions is a list of the label selector requirements. The requirements and ANDed.
+                    {{/tree-view-node-text}}
+                  {{/tree-view-node-content}}
+                {{/tree-view-node}}
+              {{/tree-view-content}}
+              {{#> tree-view-list newcontext}}
+                {{#> tree-view-list-item}}
+                  {{#> tree-view-content}}
+                    {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+                      {{#> tree-view-node-content}}
+                        {{#> tree-view-node-title}}
+                          matchLabels
+                        {{/tree-view-node-title}}
+                        {{#> tree-view-node-text}}
+                          matchExpressions is a list of the label selector requirements. The requirements and ANDed.
+                        {{/tree-view-node-text}}
+                      {{/tree-view-node-content}}
+                    {{/tree-view-node}}
+                  {{/tree-view-content}}
+                {{/tree-view-list-item}}
+              {{/tree-view-list}}
+            {{/tree-view-list-item}}
+            {{#> tree-view-list-item}}
+              {{#> tree-view-content}}
+                {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+                  {{#> tree-view-node-content}}
+                    {{#> tree-view-node-title}}
+                      matchLabels
+                    {{/tree-view-node-title}}
+                    {{#> tree-view-node-text}}
+                      Map of {key.value} pairs. A single {key.value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In" and the values array contains only "value". The requirements are ANDed.
+                    {{/tree-view-node-text}}
+                  {{/tree-view-node-content}}
+                {{/tree-view-node}}
+              {{/tree-view-content}}
+            {{/tree-view-list-item}}
+          {{/tree-view-list}}
+        {{/tree-view-list-item}}
+        {{#> tree-view-list-item}}
+          {{#> tree-view-content}}
+            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+              {{#> tree-view-node-content}}
+                {{#> tree-view-node-title}}
+                  matchLabels
+                {{/tree-view-node-title}}
+                {{#> tree-view-node-text}}
+                  Map of {key.value} pairs. A single {key.value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In" and the values array contains only "value". The requirements are ANDed.
+                {{/tree-view-node-text}}
+              {{/tree-view-node-content}}
+            {{/tree-view-node}}
+          {{/tree-view-content}}
+        {{/tree-view-list-item}}
+      {{/tree-view-list}}
+    {{/tree-view-list-item}}
+  {{/tree-view-list}}
+{{/tree-view}}
