@@ -24,7 +24,7 @@ wrapperTag: div
     {{#> page-main-section page-main-section--modifier="pf-m-light" page-main-section--IsLimitWidth="true"}}
       {{#> content}}
         <h1>Table demos</h1>
-        <p>Below is an example of a Table.</p>
+        <p>Below is an example of a table.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit venenatis enim, ut ultrices metus ornare at. Curabitur vel nibh id leo finibus suscipit. Curabitur eu tellus lectus. Vivamus lacus leo, lobortis ac convallis ac, dapibus vel ligula. Suspendisse vitae felis at augue blandit sollicitudin. Sed erat metus, pellentesque vel accumsan vitae, tincidunt id erat. Mauris et pharetra felis. Duis at nisi leo. Nam blandit dui dui, in euismod est dapibus sed. Vivamus sed dolor ullamcorper, euismod orci efficitur, ornare leo. Sed sit amet sollicitudin nulla. Nunc tristique sem ut est laoreet efficitur. Cras tristique finibus risus, eget fringilla tellus porta vitae. Duis id nunc ultricies, ultrices nibh vel, sollicitudin tellus.</p>
       {{/content}}
     {{/page-main-section}}
