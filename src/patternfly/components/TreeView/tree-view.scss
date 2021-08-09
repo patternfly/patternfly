@@ -115,11 +115,9 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view--m-compact__node--indent--base: var(--pf-c-tree-view__node--indent--base); // based off of the expected width of the toggle button
   --pf-c-tree-view--m-compact__node--nested-indent--base: var(--pf-global--spacer--lg);
   --pf-c-tree-view--m-compact--border--Left: var(--pf-c-tree-view--m-compact--base-border--Left);
-  --pf-c-tree-view--m-compact--border--nested--Left--offset: calc(var(--pf-c-tree-view--m-compact__node--nested-indent--base) / 1.5);
 
   // Node
   --pf-c-tree-view--m-compact__node--PaddingTop: 0;
-  --pf-c-tree-view--m-compact__node--PaddingRight: 0;
   --pf-c-tree-view--m-compact__node--PaddingBottom: 0;
   --pf-c-tree-view--m-compact__node--PaddingLeft: 0;
   --pf-c-tree-view--m-compact__node--nested--PaddingTop: var(--pf-global--spacer--sm);
@@ -135,7 +133,6 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view--m-compact__list-item--last-child--before--Height: var(--pf-c-tree-view--m-compact__node--before--Top);
   --pf-c-tree-view--m-compact__list-item--nested--before--Top: calc(var(--pf-c-tree-view__node--PaddingTop--base) * -1);
   --pf-c-tree-view--m-compact__list-item--nested--last-child--before--Height: calc(var(--pf-c-tree-view--m-compact__node--before--Top) + var(--pf-c-tree-view__node--PaddingTop--base));
-  --pf-c-tree-view--m-compact__list-item--nested--last-child--before--Top: calc(var(--pf-c-tree-view__node--Padding) * -2);
 
   // Node
   --pf-c-tree-view--m-compact__node--PaddingLeft: var(--pf-c-tree-view--m-compact__node--indent--base);
@@ -169,11 +166,8 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view--m-compact--m-no-background--base-border--Left: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-compact--m-no-background--base-border--Left--offset));
   --pf-c-tree-view--m-compact--m-no-background__node--indent--base: var(--pf-c-tree-view__node--indent--base); // based off of the expected width of the toggle button
   --pf-c-tree-view--m-compact--m-no-background__node--nested-indent--base: var(--pf-global--spacer--2xl);
-  --pf-c-tree-view--m-compact--m-no-background--border--Left: var(--pf-c-tree-view--m-compact--m-no-background--base-border--Left);
-  --pf-c-tree-view--m-compact--m-no-background--border--nested--Left--offset: calc(var(--pf-c-tree-view--m-compact--m-no-background__node--nested-indent--base) / 1.5);
   --pf-c-tree-view--m-compact--m-no-background__node--nested--PaddingTop: 0;
   --pf-c-tree-view--m-compact--m-no-background__node--nested--PaddingBottom: 0;
-  --pf-c-tree-view--m-compact--m-no-background__node--before--Top: calc(var(--pf-c-tree-view--m-compact__node-container--PaddingTop) + var(--pf-c-tree-view--m-compact--m-no-background__node--nested--PaddingTop) - #{pf-size-prem(4px)});
   --pf-c-tree-view--m-compact--m-no-background__node--before--Top: calc(var(--pf-c-tree-view--m-compact__node-container--nested--PaddingTop) + var(--pf-c-tree-view--m-compact__node--nested--PaddingTop) + #{pf-size-prem(4px)});
 
   padding-top: var(--pf-c-tree-view--PaddingTop);
