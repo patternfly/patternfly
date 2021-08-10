@@ -179,7 +179,7 @@ import './Tabs.css'
 ### Using the nav element
 ```hbs
 {{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Local"' tabs-link--isLink="true"}}
-  {{> __tabs-list __tabs-list--IsScrollable="true"}}
+  {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
@@ -190,7 +190,7 @@ import './Tabs.css'
 {{/tabs}}
 
 {{#> tabs tabs--id="secondary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local secondary"' tabs-link--isLink="true" tabs--modifier="pf-m-secondary"}}
-  {{> __tabs-list-secondary}}
+  {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
