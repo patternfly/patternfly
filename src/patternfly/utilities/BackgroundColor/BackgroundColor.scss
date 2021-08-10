@@ -19,9 +19,25 @@ $pf-u-background-color-options: (
   ),
   background-color-dark-400: (
     background-color var(--pf-global--BackgroundColor--dark-400)
+  ),
+  background-color-danger: (
+    background-color var(--pf-global--palette--red-50)
+  ),
+  background-color-default: (
+    background-color var(--pf-global--palette--cyan-50)
+  ),
+  background-color-info: (
+    background-color var(--pf-global--palette--blue-50)
+  ),
+  background-color-success: (
+    background-color var(--pf-global--palette--green-50)
+  ),
+  background-color-warning: (
+    background-color var(--pf-global--palette--gold-50)
   )
 );
 
 @include pf-utility-builder($pf-u-background-color-options, $pf-global--breakpoint-list);
 
 // stylelint-enable
+

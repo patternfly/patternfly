@@ -50,9 +50,7 @@ import './Text.css'
   Bold
 {{/text}}
 ```
-
-### Color
-
+### Standard colors
 ```hbs
 {{#> text text--modifier="pf-u-color-100"}}
   Font color 100
@@ -65,6 +63,81 @@ import './Text.css'
 {{/text}}
 {{#> text text--modifier="pf-u-color-400"}}
   Font color 400
+{{/text}}
+<!-- {{#> text text--modifier="pf-u-color-link"}}
+  Link color
+{{/text}} -->
+```
+### Inverse colors
+```hbs
+<div class="pf-u-background-color-dark-400">
+  {{#> text text--modifier="pf-u-color-light-100"}}
+    Font color light 100
+  {{/text}}
+  {{#> text text--modifier="pf-u-color-light-200"}}
+    Font color light 200
+  {{/text}}
+</div>
+```
+### State/status text colors
+```hbs
+{{#> text text--modifier="pf-u-default-color-100"}}
+  Font color default 100
+{{/text}}
+{{#> text text--modifier="pf-u-default-color-200"}}
+  Font color default 200
+{{/text}}
+{{#> text text--modifier="pf-u-default-color-300"}}
+  Font color default 300
+{{/text}}
+{{#> text text--modifier="pf-u-success-color-100"}}
+  Font color success 100
+{{/text}}
+{{#> text text--modifier="pf-u-success-color-200"}}
+  Font color success 200
+{{/text}}
+{{#> text text--modifier="pf-u-info-color-100"}}
+  Font color info 100
+{{/text}}
+{{#> text text--modifier="pf-u-info-color-200"}}
+  Font color info 200
+{{/text}}
+{{#> text text--modifier="pf-u-warning-color-100"}}
+  Font color warning 100
+{{/text}}
+{{#> text text--modifier="pf-u-warning-color-200"}}
+  Font color warning 200
+{{/text}}
+{{#> text text--modifier="pf-u-danger-color-100"}}
+  Font color danger 100
+{{/text}}
+{{#> text text--modifier="pf-u-danger-color-200"}}
+  Font color danger 200
+{{/text}}
+{{#> text text--modifier="pf-u-danger-color-300"}}
+  Font color danger 300
+{{/text}}
+```
+### Disabled text colors
+```hbs
+{{#> text text--modifier="pf-u-disabled-color-100"}}
+  Font color disabled 100
+{{/text}}
+{{#> text text--modifier="pf-u-disabled-color-200"}}
+  Font color disabled 200
+{{/text}}
+{{#> text text--modifier="pf-u-disabled-color-300"}}
+  Font color disabled 300
+{{/text}}
+```
+
+### Icon colors
+```hbs
+{{#> text text--modifier="pf-u-icon-color-dark"}}
+  <i class="fas fa-thumbtack" aria-hidden="true"></i>
+{{/text}}
+{{#> text text--modifier="pf-u-icon-color-light"}}
+  <i class="fas fa-thumbtack" aria-hidden="true"></i> 
 {{/text}}
 ```
 
@@ -102,7 +175,11 @@ import './Text.css'
 
 ### Overview
 
-Text utility
+These text utilities can be used to modify text within the PatternFly framework. In most cases, using the components with available modifiers should be sufficient to implement most designs, and should be preferred over customizations using these utilities.
+
+Care should be taken especially when applying text colors, as this can have a negative affect on the readability and accessibility of text. Refer to [contrast ratios](https://www.patternfly.org/v4/guidelines/colors/#contrast-ratios) for more information.
+
+Note that "inverse" colors are labeled as such to indicate that they best used with the "inverse" background colors. 
 
 ### Usage
 
@@ -132,7 +209,7 @@ Text utility
 | `.pf-u-active-color-400`    | `*`        | Sets font-color to Active Color 400    |
 | `.pf-u-disabled-color-100`  | `*`        | Sets font-color to Disabled Color 100  |
 | `.pf-u-disabled-color-200`  | `*`        | Sets font-color to Disabled Color 200  |
-| `.pf-u-disabled-color-300`  | `*`        | Sets font-color to Disabled Color 200  |
+| `.pf-u-disabled-color-300`  | `*`        | Sets font-color to Disabled Color 300  |
 | `.pf-u-primary-color-100`   | `*`        | Sets font-color to Primary Color 100   |
 | `.pf-u-primary-color-200`   | `*`        | Sets font-color to Primary Color 200   |
 | `.pf-u-secondary-color-100` | `*`        | Sets font-color to Secondary Color 100 |

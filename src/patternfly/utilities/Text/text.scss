@@ -59,14 +59,20 @@ $pf-u-font-color-options: (
   color-400: (
     color var(--pf-global--Color--400)
   ),
+  color-light-100: (
+    color var(--pf-global--Color--light-100)
+  ),
+  color-light-200: (
+    color var(--pf-global--Color--light-200)
+  ),
+  color-link: (
+    color var(--pf-global--link--Color)
+  ),
   icon-color-light: (
     color var(--pf-global--icon--Color--light)
   ),
   icon-color-dark: (
     color var(--pf-global--icon--Color--dark)
-  ),
-  link-color: (
-    color var(--pf-global--link--Color)
   ),
   active-color-100: (
     color var(--pf-global--active-color--100)
