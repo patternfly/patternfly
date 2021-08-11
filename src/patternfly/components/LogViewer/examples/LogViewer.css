@@ -1,11 +1,3 @@
-#ws-core-e-log-viewer-responsive {
-  height: 400px;
-}
-
-#ws-core-e-log-viewer-responsive .ws-preview-html {
-  height: 100%;
-}
-
 #ws-core-e-log-viewer-with-popover-open .ws-preview-html {
   position: relative;
 }
