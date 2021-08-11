@@ -35,6 +35,10 @@
   --pf-c-menu__header--PaddingLeft: var(--pf-global--spacer--md);
 
   // Header > item
+  --pf-c-menu__header--c-menu__item--MarginTop: calc(var(--pf-c-menu__header--PaddingTop) * -1 / 2);
+  --pf-c-menu__header--c-menu__item--MarginRight: calc(var(--pf-c-menu__header--PaddingRight) * -1 / 2);
+  --pf-c-menu__header--c-menu__item--MarginBottom: calc(var(--pf-c-menu__header--PaddingBottom) * -1 / 2);
+  --pf-c-menu__header--c-menu__item--MarginLeft: calc(var(--pf-c-menu__header--PaddingLeft) * -1 / 2);
   --pf-c-menu__header--c-menu__item--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-menu__header--c-menu__item--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-menu__header--c-menu__item--PaddingBottom: var(--pf-global--spacer--sm);
@@ -42,6 +46,7 @@
   --pf-c-menu__header--c-menu__item--BackgroundColor: transparent;
   --pf-c-menu__header--c-menu__item--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-menu__header--c-menu__item--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
+
 
   // Search
   --pf-c-menu__search--PaddingTop: var(--pf-global--spacer--md);
@@ -343,10 +348,10 @@
   > .pf-c-menu__item {
     --pf-c-menu__item--BackgroundColor: var(--pf-c-menu__header--c-menu__item--BackgroundColor);
 
-    margin-top: calc(var(--pf-c-menu__header--PaddingTop) * -1 / 2);
-    margin-right: calc(var(--pf-c-menu__header--PaddingRight) * -1);
-    margin-bottom: calc(var(--pf-c-menu__header--PaddingBottom) * -1 / 2);
-    margin-left: calc(var(--pf-c-menu__header--PaddingLeft) * -1);
+    margin-top: var(--pf-c-menu__header--c-menu__item--MarginTop);
+    margin-right: var(--pf-c-menu__header--c-menu__item--MarginRight);
+    margin-bottom: var(--pf-c-menu__header--c-menu__item--MarginBottom);
+    margin-left: var(--pf-c-menu__header--c-menu__item--MarginLeft);
 
     &:hover {
       --pf-c-menu__item--BackgroundColor: var(--pf-c-menu__header--c-menu__item--hover--BackgroundColor);

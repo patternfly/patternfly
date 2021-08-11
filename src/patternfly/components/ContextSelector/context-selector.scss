@@ -81,8 +81,9 @@
   --pf-c-context-selector--m-full-height__toggle--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-context-selector--m-full-height__toggle--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-context-selector--m-full-height__toggle--before--BorderTopWidth: 0;
-  --pf-c-context-selector--m-full-height__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-context-selector--m-full-height__toggle--hover--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
   --pf-c-context-selector--m-full-height__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-context-selector--m-full-height__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
 
   position: relative;
   display: inline-block;
@@ -104,6 +105,12 @@
 
       &::before {
         border-top-width: var(--pf-c-context-selector--m-full-height__toggle--before--BorderTopWidth);
+      }
+    }
+
+    &:hover {
+      .pf-c-context-selector__toggle::before {
+        border-bottom-width: var(--pf-c-context-selector--m-full-height__toggle--hover--BorderBottomWidth);
       }
     }
   }

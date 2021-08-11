@@ -129,6 +129,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   // Dropdown
   --pf-c-dropdown--m-full-height__toggle--before--BorderTopWidth: 0;
   --pf-c-dropdown--m-full-height__toggle--expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-dropdown--m-full-height__toggle--hover--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
   --pf-c-dropdown--m-full-height__toggle--active--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
   --pf-c-dropdown--m-full-height__toggle--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
   --pf-c-dropdown--m-full-height__toggle--PaddingRight: var(--pf-global--spacer--lg);
@@ -171,6 +172,12 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
       &::before {
         border-top-width: var(--pf-c-dropdown--m-full-height__toggle--before--BorderTopWidth);
+      }
+    }
+
+    &:hover {
+      .pf-c-dropdown__toggle::before {
+        border-bottom-width: var(--pf-c-context-selector--m-full-height__toggle--hover--before--BorderBottomWidth);
       }
     }
   }
