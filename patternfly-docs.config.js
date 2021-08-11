@@ -8,7 +8,8 @@ module.exports = {
     { section: 'components' },
     { section: 'layouts' },
     { section: 'utilities' },
-    { section: 'demos' }
+    { section: 'demos' },
+    { section: 'extensions' }
   ],
   topNavItems: [
     {
