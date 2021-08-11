@@ -105,6 +105,11 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Divider
   --pf-c-toolbar--c-divider--m-vertical--spacer: var(--pf-c-toolbar--spacer--base);
 
+  // Full Height
+  --pf-c-toolbar--m-full-height--PaddingTop: 0;
+  --pf-c-toolbar--m-full-height--PaddingBottom: 0;
+  --pf-c-toolbar--m-full-height__item--Display: flex;
+  --pf-c-toolbar--m-full-height__item--AlignItems: center;
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-toolbar__expandable-content--PaddingRight: var(--pf-c-toolbar__expandable-content--lg--PaddingRight);
@@ -133,6 +138,45 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
     top: 0;
     z-index: var(--pf-c-toolbar--m-sticky-top--ZIndex);
     box-shadow: var(--pf-c-toolbar--m-sticky-top--BoxShadow);
+  }
+
+  &.pf-m-full-height {
+    --pf-c-toolbar--PaddingTop: var(--pf-c-toolbar--m-full-height--PaddingTop);
+    --pf-c-toolbar--PaddingBottom: var(--pf-c-toolbar--m-full-height--PaddingTop);
+    --pf-c-toolbar__item--Display: var(--pf-c-toolbar--m-full-height__item--Display);
+
+    height: 100%;
+
+    &,
+    .pf-c-toolbar__content,
+    .pf-c-toolbar__content-section,
+    .pf-c-toolbar__expandable-content,
+    .pf-c-toolbar__group {
+      min-width: 0;
+    }
+
+    &,
+    .pf-c-toolbar__content,
+    .pf-c-toolbar__content-section,
+    .pf-c-toolbar__group,
+    .pf-c-toolbar__item {
+      align-self: stretch;
+    }
+
+    .pf-c-toolbar__item {
+      align-items: var(--pf-c-toolbar--m-full-height__item--AlignItems);
+    }
+  }
+
+  &.pf-m-static {
+    &,
+    .pf-c-toolbar__content {
+      position: static;
+    }
+
+    .pf-c-toolbar__expandable-content {
+      position: absolute;
+    }
   }
 }
 
@@ -220,9 +264,11 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar--spacer: var(--pf-c-toolbar__item--spacer);
 
   @include pf-build-css-variable-stack("--pf-c-toolbar__item--Width--base", "--pf-c-toolbar__item--Width", $pf-c-toolbar--breakpoint-map);
+  @include pf-build-css-variable-stack("--pf-c-toolbar__item--MinWidth--base", "--pf-c-toolbar__item--MinWidth", $pf-c-toolbar--breakpoint-map);
   @include pf-hidden-visible(var(--pf-c-toolbar__item--Display));
 
   width: var(--pf-c-toolbar__item--Width--base);
+  min-width: var(--pf-c-toolbar__item--MinWidth--base);
   margin-right: var(--pf-c-toolbar--spacer);
 
   // Overflow menu

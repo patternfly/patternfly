@@ -240,6 +240,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `--pf-c-toolbar__item--Width{-on-[breakpoint]}: {width}` | `.pf-c-toolbar__item` |  Modifies the width value of a toolbar item. |
+| `--pf-c-toolbar__item--MinWidth{-on-[breakpoint]}: {width}` | `.pf-c-toolbar__item` |  Modifies the min width value of a toolbar item. |
 
 ### Group types
 ```hbs
@@ -648,6 +649,8 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-c-toolbar__content-section` | `<div>` | Initiates a toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-c-toolbar__content-section` per `.pf-c-toolbar__content` **Required** |
 | `.pf-c-toolbar__expandable-content` | `<div>` | Initiates a toolbar expandable content section. |
 | `.pf-m-sticky-top` | `.pf-c-toolbar` | Modifies toolbar component to be sticky to the top of its container. |
+| `.pf-m-full-height` | `.pf-c-toolbar` | Modifies toolbar component to full height of its container and removes vertical padding. |
+| `.pf-m-static` | `.pf-c-toolbar` | Modifies expandable content section to position itself to the nearest absolutely positioned parent outside of the toolbar component. This is used primarily for masthead toolbar. |
 | `.pf-m-expanded` | `.pf-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-bulk-select` | `.pf-c-toolbar__item` | Initiates bulk select spacing. |
 | `.pf-m-overflow-menu` | `.pf-c-toolbar__item` | Initiates overflow menu spacing. |
