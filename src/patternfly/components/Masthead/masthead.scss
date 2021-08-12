@@ -337,6 +337,14 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
         @include pf-c-masthead--m-display-inline;
       }
     }
+
+    @include pf-apply-breakpoint($breakpoint) {
+      @each $spacer, $spacer-value in $pf-c-masthead--inset-map {
+        &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
+          --pf-c-masthead--inset: #{$spacer-value};
+        }
+      }
+    }
   }
 }
 // stylelint-enable
