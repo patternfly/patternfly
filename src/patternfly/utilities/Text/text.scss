@@ -65,8 +65,26 @@ $pf-u-font-color-options: (
   color-light-200: (
     color var(--pf-global--Color--light-200)
   ),
-  color-link: (
+  link-color: (
     color var(--pf-global--link--Color)
+  ),
+  link-color-hover: (
+    color var(--pf-global--link--Color--hover)
+  ),
+  link-color-light: (
+    color var(--pf-global--link--Color--light)
+  ),
+  link-color-light-hover: (
+    color var(--pf-global--link--Color--light--hover)
+  ),
+  link-color-dark: (
+    color var(--pf-global--link--Color--dark)
+  ),
+  link-color-dark-hover: (
+    color var(--pf-global--link--Color--dark-hover)
+  ),
+  link-color-visited: (
+    color var(--pf-global--link--Color--visited)
   ),
   icon-color-light: (
     color var(--pf-global--icon--Color--light)
@@ -91,9 +109,6 @@ $pf-u-font-color-options: (
   ),
   disabled-color-200: (
     color var(--pf-global--disabled-color--200)
-  ),
-  disabled-color-300: (
-    color var(--pf-global--disabled-color--300)
   ),
   primary-color-100: (
     color var(--pf-global--primary-color--100)

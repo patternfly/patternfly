@@ -64,9 +64,15 @@ import './Text.css'
 {{#> text text--modifier="pf-u-color-400"}}
   Font color 400
 {{/text}}
-<!-- {{#> text text--modifier="pf-u-color-link"}}
-  Link color
-{{/text}} -->
+{{#> text text--modifier="pf-u-active-color-100"}}
+  Active color 100
+{{/text}}
+{{#> text text--modifier="pf-u-active-color-400"}}
+  Active color 400
+{{/text}}
+{{#> text text--modifier="pf-u-primary-color-100"}}
+  Primary color 100
+{{/text}}
 ```
 ### Inverse colors
 ```hbs
@@ -79,7 +85,33 @@ import './Text.css'
   {{/text}}
 </div>
 ```
-### State/status text colors
+### Link colors
+```hbs
+  {{#> text text--modifier="pf-u-link-color"}}
+    Link color
+  {{/text}}
+  {{#> text text--modifier="pf-u-link-color-hover"}}
+    Hover link color
+  {{/text}}
+<div class="pf-u-background-color-dark-400">
+  {{#> text text--modifier="pf-u-link-color-light"}}
+    Light link color
+  {{/text}}
+  {{#> text text--modifier="pf-u-link-color-light-hover"}}
+    Light, hover link color
+  {{/text}}
+</div>
+  {{#> text text--modifier="pf-u-link-color-dark"}}
+    Dark link color
+  {{/text}}
+  {{#> text text--modifier="pf-u-link-color-dark-hover"}}
+    Dark, hover link color
+  {{/text}}
+  {{#> text text--modifier="pf-u-link-color-visited"}}
+    Visited link color
+  {{/text}}
+```
+### Status and state text colors
 ```hbs
 {{#> text text--modifier="pf-u-default-color-100"}}
   Font color default 100
@@ -125,9 +157,6 @@ import './Text.css'
 {{/text}}
 {{#> text text--modifier="pf-u-disabled-color-200"}}
   Font color disabled 200
-{{/text}}
-{{#> text text--modifier="pf-u-disabled-color-300"}}
-  Font color disabled 300
 {{/text}}
 ```
 
@@ -177,9 +206,9 @@ import './Text.css'
 
 These text utilities can be used to modify text within the PatternFly framework. In most cases, using the components with available modifiers should be sufficient to implement most designs, and should be preferred over customizations using these utilities.
 
-Care should be taken especially when applying text colors, as this can have a negative affect on the readability and accessibility of text. Refer to [contrast ratios](https://www.patternfly.org/v4/guidelines/colors/#contrast-ratios) for more information.
+Care should be taken especially when applying text colors, as this can have a negative effect on the readability and accessibility of text. Refer to the information on [contrast ratios](https://www.patternfly.org/v4/guidelines/colors/#contrast-ratios) for more information.
 
-Note that "inverse" colors are labeled as such to indicate that they best used with the "inverse" background colors. 
+Note that "inverse" text colors are labeled as such to indicate that they best used with the ["inverse" background colors](http://localhost:8001/utilities/background-color). 
 
 ### Usage
 
@@ -200,19 +229,18 @@ Note that "inverse" colors are labeled as such to indicate that they best used w
 | `.pf-u-color-200`           | `*`        | Sets font-color to Color 200           |
 | `.pf-u-color-300`           | `*`        | Sets font-color to Color 300           |
 | `.pf-u-color-400`           | `*`        | Sets font-color to Color 400           |
-| `.pf-u-icon-color-light`    | `*`        | Sets font-color to Icon Color Light    |
-| `.pf-u-icon-color-dark`     | `*`        | Sets font-color to Icon Color Dark     |
-| `.pf-u-link-color`          | `*`        | Sets font-color to Link Color          |
 | `.pf-u-active-color-100`    | `*`        | Sets font-color to Active Color 100    |
-| `.pf-u-active-color-200`    | `*`        | Sets font-color to Active Color 200    |
-| `.pf-u-active-color-300`    | `*`        | Sets font-color to Active Color 300    |
 | `.pf-u-active-color-400`    | `*`        | Sets font-color to Active Color 400    |
-| `.pf-u-disabled-color-100`  | `*`        | Sets font-color to Disabled Color 100  |
-| `.pf-u-disabled-color-200`  | `*`        | Sets font-color to Disabled Color 200  |
-| `.pf-u-disabled-color-300`  | `*`        | Sets font-color to Disabled Color 300  |
 | `.pf-u-primary-color-100`   | `*`        | Sets font-color to Primary Color 100   |
-| `.pf-u-primary-color-200`   | `*`        | Sets font-color to Primary Color 200   |
-| `.pf-u-secondary-color-100` | `*`        | Sets font-color to Secondary Color 100 |
+| `.pf-u-color-light-100`     | `*`        | Sets font-color to Light Color 100     |
+| `.pf-u-color-light-200`     | `*`        | Sets font-color to Light Color 200     |
+| `.pf-u-link-color`          | `*`        | Sets font-color to Link Color          |
+| `.pf-u-link-color-hover`    | `*`        | Sets font-color to Hover Link Color    |
+| `.pf-u-link-color-light`    | `*`        | Sets font-color to Light Link Color    |
+| `.pf-u-link-color-light-hover`| `*`      | Sets font-color to Light Hover Link Color|
+| `.pf-u-link-color-dark`     | `*`        | Sets font-color to Dark Link Color     |
+| `.pf-u-link-color-dark-hover`| `*`       | Sets font-color to Dark Hover Link Color|
+| `.pf-u-link-color-visited`  | `*`        | Sets font-color to Visited Link Color  |
 | `.pf-u-default-color-100`   | `*`        | Sets font-color to Default Color 100   |
 | `.pf-u-default-color-200`   | `*`        | Sets font-color to Default Color 200   |
 | `.pf-u-default-color-300`   | `*`        | Sets font-color to Default Color 300   |
@@ -225,6 +253,10 @@ Note that "inverse" colors are labeled as such to indicate that they best used w
 | `.pf-u-danger-color-100`    | `*`        | Sets font-color to Danger Color 100    |
 | `.pf-u-danger-color-200`    | `*`        | Sets font-color to Danger Color 200    |
 | `.pf-u-danger-color-300`    | `*`        | Sets font-color to Danger Color 300    |
+| `.pf-u-disabled-color-100`  | `*`        | Sets font-color to Disabled Color 100  |
+| `.pf-u-disabled-color-200`  | `*`        | Sets font-color to Disabled Color 200  |
+| `.pf-u-icon-color-light`    | `*`        | Sets font-color to Icon Color Light    |
+| `.pf-u-icon-color-dark`     | `*`        | Sets font-color to Icon Color Dark     |
 | `.pf-u-text-break-word`     | `*`        | Sets word-break to break-word          |
 | `.pf-u-text-nowrap`         | `*`        | Sets white-space to nowrap             |
 | `.pf-u-text-wrap`           | `*`        | Sets white-space to normal             |
