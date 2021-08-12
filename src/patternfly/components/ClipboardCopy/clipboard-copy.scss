@@ -17,8 +17,8 @@
   --pf-c-clipboard-copy__expandable-content--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Inline
-  --pf-c-clipboard-copy--m-inline--PaddingTop: #{pf-size-prem(4px)}; // shorter than bottom padding so it doesn't cut off the bottom of trailing characters on a line above
-  --pf-c-clipboard-copy--m-inline--PaddingBottom: #{pf-size-prem(5px)};
+  --pf-c-clipboard-copy--m-inline--PaddingTop: 0; // remove at breaking change
+  --pf-c-clipboard-copy--m-inline--PaddingBottom: 0; // remove at breaking change
   --pf-c-clipboard-copy--m-inline--PaddingLeft: var(--pf-global--spacer--xs);
   --pf-c-clipboard-copy--m-inline--BackgroundColor: var(--pf-global--BackgroundColor--200);
 
