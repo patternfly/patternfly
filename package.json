@@ -38,6 +38,7 @@
     "@patternfly/react-core": "4.147.0",
     "@patternfly/react-table": "4.29.37",
     "@starptech/prettyhtml": "^0.10.0",
+    "@types/react": "^17.0.18",
     "babel-eslint": "^8.2.3",
     "cheerio": "^1.0.0-rc.3",
     "chokidar": "^3.5.1",
