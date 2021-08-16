@@ -1,4 +1,24 @@
-<{{#if tabs-link--isLink}}a{{else}}button{{/if}} class="pf-c-tabs__link{{#if tabs-link--modifier}} {{tabs-link--modifier}}{{/if}}"
+<{{#if tabs-link--isLink}}a{{else}}button{{/if}} class="pf-c-tabs__link
+  {{~#if tabs-link--IsAriaDisabled}}
+    pf-m-aria-disabled
+  {{/if}}
+  {{~#if tabs-link--isLink}}
+    {{~#if tabs-link--IsDisabled}}
+      pf-m-disabled
+    {{/if}}
+  {{/if}}
+  {{~#if tabs-link--modifier}} {{tabs-link--modifier}}{{/if}}"
+  {{#if tabs-link--IsDisabled}}
+    {{#if tabs-link--isLink}}
+      aria-disabled="true"
+      tabindex="-1"
+    {{else}}
+      disabled
+    {{/if}}
+  {{/if}}
+  {{~#if tabs-link--IsAriaDisabled}}
+    aria-disabled="true"
+  {{/if}}
   {{#if tabs-link--isLink}}
     href="#"
   {{/if}}

@@ -42,18 +42,35 @@ __tabs-item--NoText: bool
     }}
 
   {{#unless __tabs-list-secondary--IsShort}}
-    {{> __tabs-item
-      __tabs-item--id="sub-4"
-      __tabs-item--icon-name="balance-scale"
-      __tabs-item--aria-label="Item 4"
-      __tabs-item--text="Item 4"
-      }}
-    {{> __tabs-item
-      __tabs-item--id="sub-5"
-      __tabs-item--icon-name="bell"
-      __tabs-item--aria-label="Item 5"
-      __tabs-item--text="Item 5"
-      }}
+    {{#if __tabs-list--IsDisabled}}
+      {{> __tabs-item
+        __tabs-item--id="sub-disabled"
+        __tabs-item--icon-name="balance-scale"
+        __tabs-item--aria-label="Disabled"
+        __tabs-item--text="Disabled"
+        tabs-link--IsDisabled="true"
+        }}
+      {{> __tabs-item
+        __tabs-item--id="sub-aria-disabled"
+        __tabs-item--icon-name="bell"
+        __tabs-item--aria-label="ARIA disabled"
+        __tabs-item--text="ARIA disabled"
+        tabs-link--IsAriaDisabled="true"
+        }}
+    {{else}}
+      {{> __tabs-item
+        __tabs-item--id="sub-4"
+        __tabs-item--icon-name="balance-scale"
+        __tabs-item--aria-label="Item 4"
+        __tabs-item--text="Item 4"
+        }}
+      {{> __tabs-item
+        __tabs-item--id="sub-5"
+        __tabs-item--icon-name="bell"
+        __tabs-item--aria-label="Item 5"
+        __tabs-item--text="Item 5"
+        }}
+    {{/if}}
     {{> __tabs-item
       __tabs-item--id="sub-6"
       __tabs-item--icon-name="book"
