@@ -34,7 +34,7 @@ section: demos
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-indeterminate"}}
               {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-              {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
+              {{#> helper-text-item-text}}Cannot contain the word "redhat"{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-indeterminate"}}
               {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
@@ -75,7 +75,7 @@ section: demos
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-error"}}
               {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
-              {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
+              {{#> helper-text-item-text}}Cannot contain the word "redhat"{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
               {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
@@ -122,7 +122,7 @@ section: demos
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
               {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-              {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
+              {{#> helper-text-item-text}}Cannot contain the word "redhat"{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
               {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
@@ -169,7 +169,7 @@ section: demos
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
               {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-              {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
+              {{#> helper-text-item-text}}Cannot contain the word "redhat"{{/helper-text-item-text}}
             {{/helper-text-item}}
             {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
               {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
