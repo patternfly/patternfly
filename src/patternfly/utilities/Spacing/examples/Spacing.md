@@ -151,7 +151,17 @@ import './Spacing.css'
 ```
 
 ## Documentation
+
 ### Overview
+Allow setting standard size margin and padding on elements.
+
+Note to use these classes you will need to import `spacing.css` from
+`react-styles`; e.g.
+
+```
+import '@patternfly/react-styles/css/utilities/Spacing/spacing.css'
+```
+
 Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-m-sm-on-lg**
 
 ### Margin properties
