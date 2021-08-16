@@ -1,8 +1,12 @@
 .pf-c-alert {
-  // Component variables
+  // Alert variables
   --pf-c-alert--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-alert--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-alert--GridTemplateColumns: max-content 1fr max-content;
+  --pf-c-alert--GridTemplateAreas:
+    "icon title action"
+    ". description description"
+    ". actiongroup actiongroup";
   --pf-c-alert--BorderTopWidth: var(--pf-global--BorderWidth--md);
   --pf-c-alert--BorderTopColor: var(--pf-global--default-color--200);
   --pf-c-alert--PaddingTop: var(--pf-global--spacer--md);
@@ -10,6 +14,15 @@
   --pf-c-alert--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-alert--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-alert__FontSize: var(--pf-global--FontSize--sm);
+
+  // Toggle
+  --pf-c-alert__toggle--MarginTop: calc(-1 * var(--pf-global--spacer--form-element) - #{pf-size-prem(1px)});
+  --pf-c-alert__toggle--MarginBottom: calc(-1 * var(--pf-global--spacer--form-element));
+  --pf-c-alert__toggle--MarginLeft: calc(-1 * var(--pf-global--spacer--md));
+
+  // Toggle icon
+  --pf-c-alert__toggle-icon--Rotate: 0;
+  --pf-c-alert__toggle-icon--Transition: var(--pf-global--Transition);
 
   // Icon
   --pf-c-alert__icon--Color: var(--pf-global--default-color--200);
@@ -28,12 +41,14 @@
   --pf-c-alert__action--TranslateY: #{pf-size-prem(2px)};
   --pf-c-alert__action--MarginRight: calc(var(--pf-global--spacer--sm) * -1);
 
-  // Action Description
+  // Description
   --pf-c-alert__description--PaddingTop: var(--pf-global--spacer--xs);
 
-  // Alert action group
-  --pf-c-alert__action-group--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-alert__description--action-group--PaddingTop: var(--pf-global--spacer--md);
+  // Action group
+  --pf-c-alert__action-group--PaddingTop-base: var(--pf-global--spacer--xs);
+  --pf-c-alert__action-group--PaddingTop: var(--pf-c-alert__action-group--PaddingTop-base);
+  --pf-c-alert__description--action-group--PaddingTop-base: var(--pf-global--spacer--md);
+  --pf-c-alert__description--action-group--PaddingTop: var(--pf-c-alert__description--action-group--PaddingTop-base);
   --pf-c-alert__action-group__c-button--not-last-child--MarginRight: var(--pf-global--spacer--lg);
 
   // Success
@@ -56,7 +71,7 @@
   --pf-c-alert--m-info__icon--Color: var(--pf-global--info-color--100);
   --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--200);
 
-  // Inline modification
+  // Inline
   --pf-c-alert--m-inline--BoxShadow: none;
   --pf-c-alert--m-inline--BackgroundColor: var(--pf-global--palette--cyan-50);
 
@@ -80,6 +95,18 @@
   --pf-c-alert--m-inline--m-plain--PaddingBottom: 0;
   --pf-c-alert--m-inline--m-plain--PaddingLeft: 0;
 
+  // Expandable
+  --pf-c-alert--m-expandable--GridTemplateColumns: auto max-content 1fr max-content;
+  --pf-c-alert--m-expandable--GridTemplateAreas:
+    "toggle icon title action"
+    ". . description description"
+    ". . actiongroup actiongroup";
+  --pf-c-alert--m-expandable__description--action-group--PaddingTop: var(--pf-c-alert__action-group--PaddingTop-base);
+
+  // Expanded
+  --pf-c-alert--m-expanded__toggle-icon--Rotate: 90deg;
+  --pf-c-alert--m-expanded__description--action-group--PaddingTop: var(--pf-c-alert__description--action-group--PaddingTop-base);
+
   @include pf-t-light; // This component always needs to be light
 
   position: relative;
@@ -90,10 +117,7 @@
   border-top: var(--pf-c-alert--BorderTopWidth) solid var(--pf-c-alert--BorderTopColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
   grid-template-columns: var(--pf-c-alert--GridTemplateColumns);
-  grid-template-areas:
-    "icon title action"
-    ". description description"
-    ". actiongroup actiongroup";
+  grid-template-areas: var(--pf-c-alert--GridTemplateAreas);
 
   &.pf-m-success {
     --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-success--BorderTopColor);
@@ -136,6 +160,29 @@
     --pf-c-alert--PaddingBottom: var(--pf-c-alert--m-inline--m-plain--PaddingBottom);
     --pf-c-alert--PaddingLeft: var(--pf-c-alert--m-inline--m-plain--PaddingLeft);
   }
+
+  &.pf-m-expandable {
+    --pf-c-alert--GridTemplateColumns: var(--pf-c-alert--m-expandable--GridTemplateColumns);
+    --pf-c-alert--GridTemplateAreas: var(--pf-c-alert--m-expandable--GridTemplateAreas);
+    --pf-c-alert__description--action-group--PaddingTop: var(--pf-c-alert--m-expandable__description--action-group--PaddingTop);
+  }
+
+  &.pf-m-expanded {
+    --pf-c-alert__toggle-icon--Rotate: var(--pf-c-alert--m-expanded__toggle-icon--Rotate);
+    --pf-c-alert__description--action-group--PaddingTop: var(--pf-c-alert--m-expanded__description--action-group--PaddingTop);
+  }
+}
+
+.pf-c-alert__toggle {
+  margin-top: var(--pf-c-alert__toggle--MarginTop);
+  margin-bottom: var(--pf-c-alert__toggle--MarginBottom);
+  margin-left: var(--pf-c-alert__toggle--MarginLeft);
+}
+
+.pf-c-alert__toggle-icon {
+  display: inline-block;
+  transition: var(--pf-c-alert__toggle-icon--Transition);
+  transform: rotate(var(--pf-c-alert__toggle-icon--Rotate));
 }
 
 .pf-c-alert__icon {
