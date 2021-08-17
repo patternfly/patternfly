@@ -1,7 +1,7 @@
 ---
 id: 'Log viewer'
 beta: true
-section: components
+section: extensions
 cssPrefix: pf-c-log-viewer
 ---
 
