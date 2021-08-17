@@ -17,6 +17,11 @@
   position: absolute;
   right: var(--pf-c-back-to-top--Right);
   bottom: var(--pf-c-back-to-top--Bottom);
+  display: none;
+
+  &.pf-m-visible {
+    display: block;
+  }
 
   .pf-c-button {
     --pf-c-button--FontSize: var(--pf-c-back-to-top--c-button--FontSize);

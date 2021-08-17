@@ -10,7 +10,7 @@ import './BackToTop.css'
 ## Examples
 ### Basic
 ```hbs
-{{> back-to-top}}
+{{> back-to-top back-to-top--modifier="pf-m-visible"}}
 ```
 
 ## Documentation
@@ -18,3 +18,4 @@ import './BackToTop.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-back-to-top` | `<div>` | Initiates the back to top component. **Required** |
+| `.pf-m-visible` | `.pf-c-back-to-top` | Modifies the component to be visible. |
