@@ -1,7 +1,6 @@
 ---
 id: Text
 section: utilities
-beta: true
 ---
 
 import './Text.css'

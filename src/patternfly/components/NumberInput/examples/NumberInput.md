@@ -2,7 +2,6 @@
 id: Number input
 section: components
 cssPrefix: pf-c-number-input
-beta: true
 ---
 
 ## Examples

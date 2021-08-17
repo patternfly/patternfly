@@ -2,7 +2,6 @@
 id: Skeleton
 section: components
 cssPrefix: pf-c-skeleton
-beta: true
 ---
 
 import './Skeleton.css'
