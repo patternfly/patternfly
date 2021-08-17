@@ -41,6 +41,21 @@ cssPrefix: pf-c-description-list
 {{> description-list__example description-list--title="Horizontal 3 column DL" description-list--modifier="pf-m-horizontal pf-m-3-col-on-lg"}}
 ```
 
+### Compact
+```hbs
+{{> description-list__example description-list--title="Compact DL" description-list--modifier="pf-m-compact"}}
+```
+
+### Compact horizontal
+```hbs
+{{> description-list__example description-list--title="Compact DL" description-list--modifier="pf-m-compact pf-m-horizontal pf-m-2-col"}}
+```
+
+### Fluid horizontal
+```hbs
+{{> description-list__example description-list--title="Fluid DL" description-list--modifier="pf-m-horizontal pf-m-fluid pf-m-2-col"}}
+```
+
 ## Auto fit
 
 ### Auto-fit basic
@@ -119,6 +134,8 @@ cssPrefix: pf-c-description-list
 | `.pf-c-description-list__term` | `<dt>` | Initiates a description list component term. **Required** |
 | `.pf-c-description-list__description` | `<dd>` | Initiates a description list component description. **Required** |
 | `.pf-c-description-list__text` | `<span>`, `<div>` | Initiates a description list component text element. Use a `<span>` when a child of `.pf-c-description-list__term`. **Required** |
+| `.pf-m-compact` | `.pf-c-description-list` | Modifies the description list for compact horizontal and vertical spacing. |
+| `.pf-m-fluid` | `.pf-c-description-list.pf-m-horizontal` | Modifies the description list term width to be fluid. |
 | `.pf-m-help-text` | `.pf-c-description-list__text` | Indicates there is more information available for the description list component term text. |
 | `.pf-m-horizontal{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
 | `.pf-m-vertical{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list component term and description pair to a vertical layout. |
