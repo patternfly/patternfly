@@ -17,9 +17,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
   // compact
   --pf-c-description-list--m-compact--RowGap: var(--pf-global--gutter);
   --pf-c-description-list--m-compact--ColumnGap: var(--pf-global--spacer--sm);
-
-  // description
-  --pf-c-description-list__description--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-description-list--m-compact__description--LineHeight: var(--pf-global--LineHeight--sm);
 
   // term
   --pf-c-description-list__term--FontWeight: var(--pf-global--FontWeight--bold);
@@ -78,6 +76,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
   &.pf-m-compact {
     --pf-c-description-list--RowGap: var(--pf-c-description-list--m-compact--RowGap);
     --pf-c-description-list--ColumnGap: var(--pf-c-description-list--m-compact--ColumnGap);
+    --pf-c-description-list__description--LineHeight: var(--pf-c-description-list--m-compact__description--LineHeight);
   }
 
   &.pf-m-fluid {
@@ -112,7 +111,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
 }
 
 .pf-c-description-list__description {
-  line-height: var(--pf-c-description-list__description--LineHeight);
+  line-height: var(--pf-c-description-list__description--LineHeight, inherit);
 }
 
 .pf-c-description-list__text {
@@ -135,7 +134,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
 }
 
 // Responsive modifiers
-// stylelint-disable no-duplicate-selectors, max-nesting-depth
+// stylelint-disable no-duplicate-selectors
 .pf-c-description-list {
   @each $breakpoint, $breakpoint-value in $pf-c-description-list--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
@@ -164,11 +163,3 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
   }
 }
 // stylelint-enable
-
-// .pf-c-description-list.pf-m-horizontal.pf-m-auto-term-widths {
-//   @supports (grid-template-columns: subgrid) {
-//     --pf-c-description-list--GridTemplateColumns--width: max-content auto;
-//     --pf-c-description-list__group--GridTemplateColumns: subgrid;
-//     --pf-c-description-list__group--GridColumn: auto / span 2;
-//   }
-// }
