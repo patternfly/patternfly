@@ -8,11 +8,15 @@
   --pf-c-back-to-top--c-button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-back-to-top--c-button--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-back-to-top--c-button--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-back-to-top--c-button--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
+  --pf-c-back-to-top--c-button--BoxShadow: var(--pf-global--BoxShadow--lg-bottom);
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-back-to-top--Bottom: var(--pf-c-back-to-top--md--Bottom);
   }
+
+  position: absolute;
+  right: var(--pf-c-back-to-top--Right);
+  bottom: var(--pf-c-back-to-top--Bottom);
 
   .pf-c-button {
     --pf-c-button--FontSize: var(--pf-c-back-to-top--c-button--FontSize);
@@ -24,8 +28,4 @@
 
     box-shadow: var(--pf-c-back-to-top--c-button--BoxShadow);
   }
-
-  position: absolute;
-  right: var(--pf-c-back-to-top--Right);
-  bottom: var(--pf-c-back-to-top--Bottom);
 }

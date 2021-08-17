@@ -10,9 +10,7 @@ import './BackToTop.css'
 ## Examples
 ### Basic
 ```hbs
-{{#> back-to-top}}
-  Basic example content
-{{/back-to-top}}
+{{> back-to-top}}
 ```
 
 ## Documentation
