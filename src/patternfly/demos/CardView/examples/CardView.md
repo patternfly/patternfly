@@ -19,7 +19,7 @@ section: demos
         {{/button}}
       {{/page-header-brand-toggle}}
       {{#> page-header-brand-link page-header-brand-link--href="#"}}
-        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly Logo"'}}{{/brand}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
       {{/page-header-brand-link}}
     {{/page-header-brand}}
 
