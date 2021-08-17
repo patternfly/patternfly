@@ -37,6 +37,54 @@ import './Split.css'
 {{/split}}
 ```
 
+### Wrappable
+```hbs
+{{#> split split--modifier="pf-m-gutter pf-m-wrap"}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+  {{#> split-item}}
+    content
+  {{/split-item}}
+{{/split}}
+```
+
 ## Documentation
 ### Overview
 The split layout is designed to position items horizontally, with one item filling the available horizontal space.
