@@ -59,44 +59,41 @@ $pf-u-font-color-options: (
   color-400: (
     color var(--pf-global--Color--400)
   ),
-  icon-color-light: (
-    color var(--pf-global--icon--Color--light)
-  ),
-  icon-color-dark: (
-    color var(--pf-global--icon--Color--dark)
-  ),
-  link-color: (
-    color var(--pf-global--link--Color)
-  ),
   active-color-100: (
     color var(--pf-global--active-color--100)
-  ),
-  active-color-200: (
-    color var(--pf-global--active-color--200)
-  ),
-  active-color-300: (
-    color var(--pf-global--active-color--300)
   ),
   active-color-400: (
     color var(--pf-global--active-color--400)
   ),
-  disabled-color-100: (
-    color var(--pf-global--disabled-color--100)
-  ),
-  disabled-color-200: (
-    color var(--pf-global--disabled-color--200)
-  ),
-  disabled-color-300: (
-    color var(--pf-global--disabled-color--300)
-  ),
   primary-color-100: (
     color var(--pf-global--primary-color--100)
   ),
-  primary-color-200: (
-    color var(--pf-global--primary-color--200)
+  color-light-100: (
+    color var(--pf-global--Color--light-100)
   ),
-  secondary-color-100: (
-    color var(--pf-global--secondary-color--100)
+  color-light-200: (
+    color var(--pf-global--Color--light-200)
+  ),
+  link-color: (
+    color var(--pf-global--link--Color)
+  ),
+  link-color-hover: (
+    color var(--pf-global--link--Color--hover)
+  ),
+  link-color-light: (
+    color var(--pf-global--link--Color--light)
+  ),
+  link-color-light-hover: (
+    color var(--pf-global--link--Color--light--hover)
+  ),
+  link-color-dark: (
+    color var(--pf-global--link--Color--dark)
+  ),
+  link-color-dark-hover: (
+    color var(--pf-global--link--Color--dark--hover)
+  ),
+  link-color-visited: (
+    color var(--pf-global--link--Color--visited)
   ),
   default-color-100: (
     color var(--pf-global--default-color--100)
@@ -133,6 +130,18 @@ $pf-u-font-color-options: (
   ),
   danger-color-300: (
     color var(--pf-global--danger-color--300)
+  ),
+  disabled-color-100: (
+    color var(--pf-global--disabled-color--100)
+  ),
+  disabled-color-200: (
+    color var(--pf-global--disabled-color--200)
+  ),
+  icon-color-light: (
+    color var(--pf-global--icon--Color--light)
+  ),
+  icon-color-dark: (
+    color var(--pf-global--icon--Color--dark)
   )
 );
 
