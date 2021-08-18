@@ -19,8 +19,8 @@
     {{#if nav--flyout--IsGrouped}}
       {{#> nav-section nav-section--modifier="pf-m-flyout" nav-section--IsListItem="true" nav-section--attribute=(concat 'aria-labelledby="' nav--id '-grouped-title-1"')}}
         {{#> nav-section-title nav-section-title--attribute=(concat 'id="' nav--id '-grouped-title-1"')}}
-          <i class="fas fa-chart-line" aria-hidden="true"></i>
-          <span>Insights</span>
+          {{> nav-icon nav-icon--icon="fas fa-chart-line"}}
+          {{> nav-text nav-text--text="Insights"}}
         {{/nav-section-title}}
         {{#> nav-list}}
           {{#> nav-item nav-item--IsFlyout="true" nav-item--expanded="true"}}

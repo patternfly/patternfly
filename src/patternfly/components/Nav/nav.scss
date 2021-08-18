@@ -223,6 +223,9 @@
   --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav__section-title--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
 
+  // Icon
+  --pf-c-nav__icon--MarginRight: var(--pf-global--spacer--sm);
+
   // Scroll buttons
   --pf-c-nav__scroll-button--Color: var(--pf-global--Color--light-100);
   --pf-c-nav__scroll-button--hover--Color: var(--pf-global--active-color--400);
@@ -263,12 +266,13 @@
   --pf-c-nav__item--ScrollSnapAlign: end;
 
   // Flyout variant ====================================== //
+
   // Item
   --pf-c-nav__item--m-flyout--MarginTop: 0;
   --pf-c-nav__item--m-flyout--hover--BackgroundColor: var(--pf-c-nav__link--hover--BackgroundColor);
   --pf-c-nav__item--m-flyout--focus--BackgroundColor: var(--pf-c-nav__link--focus--BackgroundColor);
   --pf-c-nav__item--m-flyout--active--BackgroundColor: var(--pf-c-nav__link--active--BackgroundColor);
-  --pf-c-nav__item--m-flyout--m-current--BackgroundColor: var(--pf-c-nav__link--m-current--BackgroundColor);
+  --pf-c-nav__item--m-flyout__item--last-child__link--before--BorderWidth: 0;
 
   // Section
   --pf-c-nav__item--m-flyout__section--PaddingBottom: var(--pf-global--spacer--sm);
@@ -283,7 +287,6 @@
   --pf-c-nav__item--m-flyout__subnav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-nav__item--m-flyout__subnav--MaxHeight: none;
   --pf-c-nav__item--m-flyout__subnav--BoxShadow: var(--pf-global--BoxShadow--lg-left);
-  --pf-c-nav__item--m-flyout__subnav--ZIndex: var(--pf-global--ZIndex--xs);
 
   // Subnav link
   --pf-c-nav__item--m-flyout__subnav__link--PaddingTop: var(--pf-global--spacer--sm);
@@ -294,9 +297,7 @@
 
   // Title
   --pf-c-nav__section--m-flyout__section-title--Color: var(--pf-global--Color--400);
-  --pf-c-nav__section--m-flyout__section-title--ColumnGap: var(--pf-global--spacer--sm);
   --pf-c-nav__section--m-flyout__section-title--BorderBottomWidth: 0;
-  --pf-c-nav__section--m-flyout__section-title--BorderBottomColor: transparent;
 
   // end flyout variant ====================================== //
 
@@ -542,6 +543,10 @@
   position: relative;
   margin-top: var(--pf-c-nav__item--MarginTop);
 
+  &:last-child > .pf-c-nav__link {
+    --pf-c-nav__link--before--BorderWidth: var(--pf-c-nav__item--last-child__link--before--BorderColor);
+  }
+
   &.pf-m-expandable {
     --pf-c-nav__link--before--BorderBottomWidth: 0;
 
@@ -557,6 +562,10 @@
 
   &.pf-m-flyout {
     --pf-c-nav__item--MarginTop: var(--pf-c-nav__item--m-flyout--MarginTop);
+
+    .pf-c-nav__item:last-child > .pf-c-nav__link {
+      --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__item--m-flyout__item--last-child__link--before--BorderWidth);
+    }
 
     &:hover {
       background-color: var(--pf-c-nav__item--m-flyout--hover--BackgroundColor);
@@ -583,7 +592,6 @@
       position: absolute;
       top: var(--pf-c-nav__item--m-flyout__subnav--Top);
       left: var(--pf-c-nav__item--m-flyout__subnav--Left);
-      z-index: calc(var(--pf-c-nav__item--m-flyout__subnav--ZIndex) + 1);
       min-width: 100%;
       background-color: var(--pf-c-nav__item--m-flyout__subnav--BackgroundColor);
       box-shadow: var(--pf-c-nav__item--m-flyout__subnav--BoxShadow);
@@ -697,6 +705,11 @@
   }
 }
 
+// Icon
+.pf-c-nav__icon {
+  margin-right: var(--pf-c-nav__icon--MarginRight);
+}
+
 // Subnav
 .pf-c-nav__subnav {
   --pf-c-nav__link--PaddingTop: var(--pf-c-nav__subnav__link--PaddingTop);
@@ -788,8 +801,6 @@
   &.pf-m-flyout {
     --pf-c-nav__section-title--Color: var(--pf-c-nav__section--m-flyout__section-title--Color);
     --pf-c-nav__section-title--BorderBottomWidth: var(--pf-c-nav__section--m-flyout__section-title--BorderBottomWidth);
-    --pf-c-nav__section-title--BorderBottomColor: var(--pf-c-nav__section--m-flyout__section-title--BorderBottomColor);
-
 
     padding-bottom: var(--pf-c-nav__item--m-flyout__section--PaddingBottom);
     border-bottom: var(--pf-c-nav__item--m-flyout__section--BorderBottomWidth) solid var(--pf-c-nav__item--m-flyout__section--BorderBottomColor);
@@ -797,10 +808,6 @@
     .pf-c-nav__section-title {
       display: flex;
       align-items: baseline;
-
-      * + * {
-        margin-left: var(--pf-c-nav__section--m-flyout__section-title--ColumnGap);
-      }
     }
   }
 }
