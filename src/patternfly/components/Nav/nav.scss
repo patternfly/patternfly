@@ -272,7 +272,7 @@
   --pf-c-nav__item--m-flyout--hover--BackgroundColor: var(--pf-c-nav__link--hover--BackgroundColor);
   --pf-c-nav__item--m-flyout--focus--BackgroundColor: var(--pf-c-nav__link--focus--BackgroundColor);
   --pf-c-nav__item--m-flyout--active--BackgroundColor: var(--pf-c-nav__link--active--BackgroundColor);
-  --pf-c-nav__item--m-flyout__item--last-child__link--before--BorderWidth: 0;
+  --pf-c-nav__item--m-flyout__item--last-child__link--before--BorderBottomWidth: 0;
 
   // Section
   --pf-c-nav__item--m-flyout__section--PaddingBottom: var(--pf-global--spacer--sm);
@@ -543,10 +543,6 @@
   position: relative;
   margin-top: var(--pf-c-nav__item--MarginTop);
 
-  &:last-child > .pf-c-nav__link {
-    --pf-c-nav__link--before--BorderWidth: var(--pf-c-nav__item--last-child__link--before--BorderColor);
-  }
-
   &.pf-m-expandable {
     --pf-c-nav__link--before--BorderBottomWidth: 0;
 
@@ -564,7 +560,7 @@
     --pf-c-nav__item--MarginTop: var(--pf-c-nav__item--m-flyout--MarginTop);
 
     .pf-c-nav__item:last-child > .pf-c-nav__link {
-      --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__item--m-flyout__item--last-child__link--before--BorderWidth);
+      --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__item--m-flyout__item--last-child__link--before--BorderBottomWidth);
     }
 
     &:hover {
