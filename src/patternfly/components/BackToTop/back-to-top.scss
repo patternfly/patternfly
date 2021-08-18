@@ -17,10 +17,9 @@
   position: absolute;
   right: var(--pf-c-back-to-top--Right);
   bottom: var(--pf-c-back-to-top--Bottom);
-  display: none;
 
-  &.pf-m-visible {
-    display: block;
+  &.pf-m-hidden {
+    display: none;
   }
 
   .pf-c-button {
