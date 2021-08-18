@@ -58,7 +58,7 @@ wrapperTag: div
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
       {{#> card}}
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true" toolbar--template--HasIconButtonGroup="true"}}
+        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true" toolbar--template--HasIconButtonGroup="true" toolbar--template--HasSortButtonMobile="true"}}
         {{> table-sortable-table}}
         {{> table-pagination-footer}}
       {{/card}}
