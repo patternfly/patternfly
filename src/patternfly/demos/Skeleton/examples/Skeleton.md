@@ -63,7 +63,7 @@ section: components
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{#> content}}
         <h1>Projects</h1>
-        <p>This is a demo that showcases Patternfly Cards. </p>
+        <p>This is a demo that showcases PatternFly cards. </p>
       {{/content}}
     {{/page-main-section}}
     {{#> page-main-section}}

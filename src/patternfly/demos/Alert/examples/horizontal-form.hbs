@@ -14,7 +14,7 @@
         {{/alert-icon}}
         {{#> alert-title}}
           {{#> screen-reader}}Danger alert:{{/screen-reader}}
-          You must fill out all required fields before you can proceed.
+          Fill out all required fields before continuing.
         {{/alert-title}}
       {{/alert}}
     {{/form-alert}}
@@ -28,7 +28,7 @@
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-form-name" name="' form--id '-form-name" aria-invalid="true" aria-describedby="' form--id '-form-name-helper"')}}
         {{/form-control}}
         {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-form-name-helper" aria-live="polite"')}}
-          This is a required field.
+          Required field
         {{/form-helper-text}}
       {{/form-group-control}}
     {{/form-group}}
@@ -52,7 +52,7 @@
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-form-phone" name="' form--id '-form-phone" aria-invalid="true" aria-describedby="' form--id '-form-phone-helper"')}}
         {{/form-control}}
         {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-form-phone-helper" aria-live="polite"')}}
-          This is a required field.
+          Required field
         {{/form-helper-text}}
       {{/form-group-control}}
     {{/form-group}}
@@ -72,11 +72,11 @@
         {{/form-helper-text}}
         {{#> check}}
           {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox1" name="alt-form-checkbox1"'}}{{/check-input}}
-          {{#> check-label check-label--attribute='for="alt-form-checkbox1"'}}Follow up via email{{/check-label}}
+          {{#> check-label check-label--attribute='for="alt-form-checkbox1"'}}Follow up via email.{{/check-label}}
         {{/check}}
         {{#> check}}
           {{#> check-input check-input--attribute='type="checkbox" id="alt-form-checkbox2" name="alt-form-checkbox2"'}}{{/check-input}}
-          {{#> check-label check-label--attribute='for="alt-form-checkbox2"'}}Remember my password for 30 days{{/check-label}}
+          {{#> check-label check-label--attribute='for="alt-form-checkbox2"'}}Remember my password for 30 days.{{/check-label}}
         {{/check}}
       {{/form-group-control}}
     {{/form-group}}
@@ -84,7 +84,7 @@
       {{#> form-group-control}}
         {{#> form-actions}}
           {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Submit form
+            Submit
           {{/button}}
           {{#> button button--modifier="pf-m-secondary" button--IsReset="true"}}
             Cancel

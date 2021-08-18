@@ -14,7 +14,7 @@
         {{/alert-icon}}
         {{#> alert-title}}
           {{#> screen-reader}}Danger alert:{{/screen-reader}}
-          Please address the errors in your form to proceed
+          Fill out all required fields before continuing.
         {{/alert-title}}
       {{/alert}}
     {{/form-alert}}
@@ -28,7 +28,7 @@
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-form-name" name="' form--id '-form-name" aria-invalid="true" aria-describedby="' form--id '-form-name-helper"')}}
         {{/form-control}}
         {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-form-name-helper-name" aria-live="polite"')}}
-          This is a required field.
+          Required field
         {{/form-helper-text}}
       {{/form-group-control}}
     {{/form-group}}
@@ -42,7 +42,7 @@
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="patternfly.com" id="' form--id '-form-email" name="' form--id '-form-email" required')}}{{/form-control}}
       {{/form-group-control}}
       {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-form-email-helper-email" aria-live="polite"')}}
-        Please enter a valid email address: example@email.com
+        Enter a valid email address: example@gmail.com
       {{/form-helper-text}}
     {{/form-group}}
     {{#> form-group}}
@@ -59,7 +59,7 @@
           <option value="Option 4">NY</option>
       {{/form-control}}
       {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-form-email-helper-state" aria-live="polite"')}}
-        This is a required field
+        Required field
       {{/form-helper-text}}
     {{/form-group}}
     {{#> form-group form-group--IsCheckGroup="true" form-group--id="-check-group"}}
@@ -93,7 +93,7 @@
       {{#> form-group-control}}
         {{#> form-actions}}
           {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Submit form
+            Submit
           {{/button}}
           {{#> button button--modifier="pf-m-secondary" button--IsReset="true"}}
             Cancel

@@ -77,13 +77,6 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
- {{#> input-group-text input-group-text--type="label" input-group-text--HasCalendarIcon="true" input-group-text--attribute='for="textInput9"'}}
- {{/input-group-text}}
- {{#> form-control controlType="input" input="true" form-control--attribute='type="date" id="textInput9" name="textInput9" aria-label="Date input example"'}}
-{{/form-control}}
-{{/input-group}}
-<br>
-{{#> input-group}}
   {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput11" name="textInput11" aria-label="Search input example"'}}
   {{/form-control}}
   {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search button for search input"'}}

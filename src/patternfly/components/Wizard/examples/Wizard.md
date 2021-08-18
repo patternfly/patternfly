@@ -437,13 +437,13 @@ import './Wizard.css'
           {{#> empty-state empty-state--modifier="pf-m-lg"}}
             {{#> empty-state-icon empty-state-icon--type="cogs"}}{{/empty-state-icon}}
             {{#> title titleType="h1" title--modifier="pf-m-lg"}}
-              Configuration in progress
+              Validating credentials
             {{/title}}
             {{#> empty-state-body}}
               {{#> progress progress__value="33" progress--modifier="pf-m-singleline" progress__id="progress-singleline-example"}}{{/progress}}
             {{/empty-state-body}}
             {{#> empty-state-body}}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non pulvinar tortor. Maecenas sit amet pellentesque velit, eu eleifend mauris.
+              Description can be used to further elaborate on the validation step, or give the user a better idea of how long the process will take.
             {{/empty-state-body}}
             {{#> empty-state-secondary}}
               {{#> button button--modifier="pf-m-link"}}
