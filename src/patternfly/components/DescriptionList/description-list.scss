@@ -10,13 +10,18 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
 
   // group
   --pf-c-description-list__group--RowGap: var(--pf-global--spacer--sm);
-  --pf-c-description-list__group--ColumnGap: var(--pf-global--spacer--md);
+  --pf-c-description-list__group--ColumnGap: var(--pf-global--spacer--sm);
   --pf-c-description-list__group--GridTemplateColumns: auto;
   --pf-c-description-list__group--GridColumn: auto;
+
+  // compact
+  --pf-c-description-list--m-compact--RowGap: var(--pf-global--gutter);
+  --pf-c-description-list--m-compact--ColumnGap: var(--pf-global--spacer--sm);
 
   // term
   --pf-c-description-list__term--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-description-list__term--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-description-list__term--LineHeight: var(--pf-global--LineHeight--sm);
 
   // vertical
   --pf-c-description-list--m-vertical__group--GridTemplateColumns: repeat(var(--pf-c-description-list--GridTemplateColumns--count));
@@ -66,6 +71,15 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
 
     @include pf-build-css-variable-stack("--pf-c-description-list--GridTemplateColumns--minmax--min", "--pf-c-description-list--GridTemplateColumns--min", $pf-c-description-list--breakpoint-map);
   }
+
+  &.pf-m-compact {
+    --pf-c-description-list--RowGap: var(--pf-c-description-list--m-compact--RowGap);
+    --pf-c-description-list--ColumnGap: var(--pf-c-description-list--m-compact--ColumnGap);
+  }
+
+  &.pf-m-fluid {
+    --pf-c-description-list--m-horizontal__term--width: fit-content(20ch);
+  }
 }
 
 .pf-c-description-list__group {
@@ -87,6 +101,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
 .pf-c-description-list__term {
   font-size: var(--pf-c-description-list__term--FontSize);
   font-weight: var(--pf-c-description-list__term--FontWeight);
+  line-height: var(--pf-c-description-list__term--LineHeight);
 
   .pf-c-description-list__text {
     display: inline;
@@ -113,7 +128,7 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
 }
 
 // Responsive modifiers
-// stylelint-disable no-duplicate-selectors, max-nesting-depth
+// stylelint-disable no-duplicate-selectors
 .pf-c-description-list {
   @each $breakpoint, $breakpoint-value in $pf-c-description-list--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
@@ -142,11 +157,3 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
   }
 }
 // stylelint-enable
-
-// .pf-c-description-list.pf-m-horizontal.pf-m-auto-term-widths {
-//   @supports (grid-template-columns: subgrid) {
-//     --pf-c-description-list--GridTemplateColumns--width: max-content auto;
-//     --pf-c-description-list__group--GridTemplateColumns: subgrid;
-//     --pf-c-description-list__group--GridColumn: auto / span 2;
-//   }
-// }
