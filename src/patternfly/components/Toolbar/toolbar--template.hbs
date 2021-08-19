@@ -36,9 +36,47 @@ Options: [
       {{!-- sort --}}
       {{#if toolbar--template--HasSortButton}}
         {{#> toolbar-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
             <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
           {{/button}}
+        {{/toolbar-item}}
+      {{/if}}
+
+      {{!-- mobile sort dropdown --}}
+      {{#if toolbar--template--HasSortButtonMobile}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
+          {{#> options-menu options-menu--IsExpanded="true" id="{{toolbar--id}}-sort-mobile-menu"}}
+            {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
+              <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+            {{/options-menu-toggle}}
+            {{#> options-menu-menu}}
+              {{#> options-menu-menu-item options-menu-menu-item--IsSelected="true"}}
+                Repository name
+              {{/options-menu-menu-item}}
+              {{#> options-menu-menu-item}}
+                Branches
+              {{/options-menu-menu-item}}
+              {{#> options-menu-menu-item}}
+                Pull requests
+              {{/options-menu-menu-item}}
+              {{#> options-menu-menu-item}}
+                Workspaces
+              {{/options-menu-menu-item}}
+              {{#> options-menu-menu-item}}
+                Last commit
+              {{/options-menu-menu-item}}
+              {{#> options-menu-menu-item}}
+                Actions
+              {{/options-menu-menu-item}}
+              {{> divider divider--type="li"}}
+              {{#> options-menu-menu-item options-menu-menu-item--IsSelected="true"}}
+                Ascending
+              {{/options-menu-menu-item}}
+              {{#> options-menu-menu-item}}
+                Descending
+              {{/options-menu-menu-item}}
+            {{/options-menu-menu}}
+          {{/options-menu}}
         {{/toolbar-item}}
       {{/if}}
 
