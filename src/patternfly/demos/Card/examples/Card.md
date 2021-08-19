@@ -281,7 +281,7 @@ import './Card.css'
             Cluster API Address
           {{/description-list-term}}
           {{#> description-list-description}}
-            https://api2.devcluster.openshift.com
+            <a href="#">https://api2.devcluster.openshift.com</a>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
