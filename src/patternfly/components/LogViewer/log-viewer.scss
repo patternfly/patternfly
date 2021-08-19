@@ -58,8 +58,13 @@
   --pf-c-log-viewer--c-toolbar__group--m-toggle-group--spacer: 0;
   --pf-c-log-viewer--c-toolbar__group--m-toggle-group--m-show--spacer: var(--pf-global--spacer--sm);
 
+  // Dark theme
+  --pf-c-log-viewer--m-dark__main--BorderWidth: 0;
+
 
   &.pf-m-dark {
+    --pf-c-log-viewer__main--BorderWidth: var(--pf-c-log-viewer--m-dark__main--BorderWidth);
+
     .pf-c-log-viewer__main {
       --pf-c-log-viewer__main--BackgroundColor: var(--pf-global--BackgroundColor--100);
       --pf-c-log-viewer__main--BorderColor: var(--pf-global--BorderColor--100);
