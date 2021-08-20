@@ -15,36 +15,12 @@
         Releases
       {{/nav-link}}
     {{/nav-item}}
-
-    {{#if nav--flyout--IsGrouped}}
-      {{#> nav-section nav-section--modifier="pf-m-flyout" nav-section--IsListItem="true" nav-section--attribute=(concat 'aria-labelledby="' nav--id '-grouped-title-1"')}}
-        {{#> nav-section-title nav-section-title--attribute=(concat 'id="' nav--id '-grouped-title-1"')}}
-          {{> nav-icon nav-icon--icon="fas fa-chart-line"}}
-          {{> nav-text nav-text--text="Insights"}}
-        {{/nav-section-title}}
-        {{#> nav-list}}
-          {{#> nav-item nav-item--IsFlyout="true" nav-item--expanded="true"}}
-            {{#> nav-link nav-link--href="#"}}
-              Subscriptions
-            {{/nav-link}}
-            {{> nav--flyout--nav-item-submenu}}
-          {{/nav-item}}
-          {{#> nav-item nav-item--IsFlyout="true"}}
-            {{#> nav-link nav-link--href="#"}}
-              Cost management
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav-section}}
-    {{else}}
-      {{#> nav-item nav-item--IsFlyout="true" nav-item--expanded="true"}}
-        {{#> nav-link nav-link--href="#"}}
-          Subscriptions
-        {{/nav-link}}
-        {{> nav--flyout--nav-item-submenu}}
-      {{/nav-item}}
-    {{/if}}
-
+    {{#> nav-item nav-item--IsFlyout="true" nav-item--expanded="true"}}
+      {{#> nav-link nav-link--href="#"}}
+        Subscriptions
+      {{/nav-link}}
+      {{> nav--flyout--nav-item-submenu}}
+    {{/nav-item}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
         Support cases

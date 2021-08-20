@@ -274,11 +274,6 @@
   --pf-c-nav__item--m-flyout--active--BackgroundColor: var(--pf-c-nav__link--active--BackgroundColor);
   --pf-c-nav__item--m-flyout__item--last-child__link--before--BorderBottomWidth: 0;
 
-  // Section
-  --pf-c-nav__item--m-flyout__section--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-nav__item--m-flyout__section--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-nav__item--m-flyout__section--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
-
   // Subnav
   --pf-c-nav__item--m-flyout__subnav--Top: 0;
   --pf-c-nav__item--m-flyout__subnav--Left: calc(100% - #{pf-size-prem(4px)});
@@ -294,10 +289,6 @@
   --pf-c-nav__item--m-flyout__subnav__link--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-nav__item--m-flyout__subnav__link--before--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__item--m-flyout__subnav__link--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
-
-  // Title
-  --pf-c-nav__section--m-flyout__section-title--Color: var(--pf-global--Color--400);
-  --pf-c-nav__section--m-flyout__section-title--BorderBottomWidth: 0;
 
   // end flyout variant ====================================== //
 
@@ -792,19 +783,6 @@
 
   & + & {
     --pf-c-nav__section--MarginTop: var(--pf-c-nav__section--section--MarginTop);
-  }
-
-  &.pf-m-flyout {
-    --pf-c-nav__section-title--Color: var(--pf-c-nav__section--m-flyout__section-title--Color);
-    --pf-c-nav__section-title--BorderBottomWidth: var(--pf-c-nav__section--m-flyout__section-title--BorderBottomWidth);
-
-    padding-bottom: var(--pf-c-nav__item--m-flyout__section--PaddingBottom);
-    border-bottom: var(--pf-c-nav__item--m-flyout__section--BorderBottomWidth) solid var(--pf-c-nav__item--m-flyout__section--BorderBottomColor);
-
-    .pf-c-nav__section-title {
-      display: flex;
-      align-items: baseline;
-    }
   }
 }
 

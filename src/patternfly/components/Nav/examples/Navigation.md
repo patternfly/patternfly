@@ -542,11 +542,6 @@ import './Navigation.css'
 {{> nav--flyout nav--flyout--id="basic-flyout-example"}}
 ```
 
-### Grouped flyout with title
-```hbs
-{{> nav--flyout nav--flyout--id="grouped-flyout-with-title-example" nav--flyout--IsGrouped="true"}}
-```
-
 ## Documentation
 
 ### Overview
