@@ -223,9 +223,6 @@
   --pf-c-nav__section-title--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav__section-title--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
 
-  // Icon
-  --pf-c-nav__icon--MarginRight: var(--pf-global--spacer--sm);
-
   // Scroll buttons
   --pf-c-nav__scroll-button--Color: var(--pf-global--Color--light-100);
   --pf-c-nav__scroll-button--hover--Color: var(--pf-global--active-color--400);
@@ -690,11 +687,6 @@
     text-decoration: none;
     border: none;
   }
-}
-
-// Icon
-.pf-c-nav__icon {
-  margin-right: var(--pf-c-nav__icon--MarginRight);
 }
 
 // Subnav
