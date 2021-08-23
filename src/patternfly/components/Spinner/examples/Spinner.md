@@ -51,8 +51,10 @@ cssPrefix: pf-c-spinner
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="progressbar"` | `.pf-c-spinner` |  Indicates to assistive technologies that this is an indeterminate progress indicator. |
-| `aria-valuetext="Loading..."` | `.pf-c-spinner` |  Describes content that is being loaded, while it is loading. |
+| `role="progressbar"` | `.pf-c-spinner` | Indicates to assistive technologies that this is an indeterminate progress indicator. |
+| `aria-label="Loading..."` | `.pf-c-spinner` | Provides an accessible name for the spinner. **Note: one of `aria-label` or `aria-labelledby` is required.** |
+| `aria-labelledby="[id of spinner label]"` | `.pf-c-spinner` | Gives the spinner an accessible name by referring to the element that labels the spinner. |
+| `aria-describedby="[id of spinner description]"` | `.pf-c-spinner` | Gives the spinner an accessible description by referring to the element that describes the spinner. |
 
 Note: If the spinner is showing that loading of a particular region of a page is in process, the author should use `aria-describedby` to point to the status, and set the `aria-busy` attribute to `true` on the region until it is finished loading.
 

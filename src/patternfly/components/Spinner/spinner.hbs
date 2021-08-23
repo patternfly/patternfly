@@ -1,5 +1,16 @@
 {{#if spinner--IsSvg}}
-  <svg class="pf-c-spinner{{#if spinner--modifier}} {{spinner--modifier}}{{/if}}" role="progressbar" aria-valuetext="{{> @partial-block}}"  viewBox="0 0 100 100"
+  <svg class="pf-c-spinner{{#if spinner--modifier}} {{spinner--modifier}}{{/if}}"
+    role="progressbar"
+    viewBox="0 0 100 100"
+    {{#if spinner--aria-labelledby}}
+      aria-labelledby="{{aria-labelledby}}"
+    {{/if}}
+    {{#if spinner--aria-describedby}}
+      aria-labelledby="{{aria-describedby}}"
+    {{/if}}
+    {{#if @partial-block}}
+      aria-label="{{> @partial-block}}"
+    {{/if}}
     {{#if spinner--attribute}}
       {{{spinner--attribute}}}
     {{/if}}>
