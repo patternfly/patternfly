@@ -18,7 +18,7 @@ wrapperTag: div
   {{#> page-sidebar}}
     {{> table-page-nav}}
   {{/page-sidebar}}
-  {{#> page-main page-main--modifier="pf-m-limit-heightsss" page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+  {{#> page-main page-main--modifier="" page-main--attribute=(concat 'id="main-content-' page--id '"')}}
     {{#> page-main-subnav page-main-subnav--IsLimitWidth="true"}}
       {{> table-main-section-nav}}
     {{/page-main-subnav}}
@@ -29,14 +29,10 @@ wrapperTag: div
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit venenatis enim, ut ultrices metus ornare at. Curabitur vel nibh id leo finibus suscipit. Curabitur eu tellus lectus. Vivamus lacus leo, lobortis ac convallis ac, dapibus vel ligula. Suspendisse vitae felis at augue blandit sollicitudin. Sed erat metus, pellentesque vel accumsan vitae, tincidunt id erat. Mauris et pharetra felis. Duis at nisi leo. Nam blandit dui dui, in euismod est dapibus sed. Vivamus sed dolor ullamcorper, euismod orci efficitur, ornare leo. Sed sit amet sollicitudin nulla. Nunc tristique sem ut est laoreet efficitur. Cras tristique finibus risus, eget fringilla tellus porta vitae. Duis id nunc ultricies, ultrices nibh vel, sollicitudin tellus.</p>
       {{/content}}
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-limit-height" page-main-section--IsLimitWidth="true"}}
-      <div class="pf-c-sticky-table-container">
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
-        <div class="pf-c-table-scroll-wrapper">
-          {{> table--scrollable table--scrollable--id="sticky-first-column-demo-table" table--scrollable--Column1IsStickyColumn="true"}}
-        </div>
-        {{> table-pagination-footer}}
-      </div>
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth="true"}}
+      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+      {{> table--scrollable table--scrollable--id="sticky-first-column-demo-table" table--scrollable--Column1IsStickyColumn="true"}}
+      {{> table-pagination-footer}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -65,14 +61,10 @@ wrapperTag: div
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit venenatis enim, ut ultrices metus ornare at. Curabitur vel nibh id leo finibus suscipit. Curabitur eu tellus lectus. Vivamus lacus leo, lobortis ac convallis ac, dapibus vel ligula. Suspendisse vitae felis at augue blandit sollicitudin. Sed erat metus, pellentesque vel accumsan vitae, tincidunt id erat. Mauris et pharetra felis. Duis at nisi leo. Nam blandit dui dui, in euismod est dapibus sed. Vivamus sed dolor ullamcorper, euismod orci efficitur, ornare leo. Sed sit amet sollicitudin nulla. Nunc tristique sem ut est laoreet efficitur. Cras tristique finibus risus, eget fringilla tellus porta vitae. Duis id nunc ultricies, ultrices nibh vel, sollicitudin tellus.</p>
       {{/content}}
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-limit-height" page-main-section--IsLimitWidth="true"}}
-      <div class="pf-c-sticky-table-container">
-        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
-        <div class="pf-c-table-scroll-wrapper">
-          {{> table--scrollable table--scrollable--id="sticky-multiple-columns-demo-table" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true"}}
-        </div>
-        {{> table-pagination-footer}}
-      </div>
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth="true"}}
+      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+      {{> table--scrollable table--scrollable--id="sticky-multiple-columns-demo-table" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true"}}
+      {{> table-pagination-footer}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
