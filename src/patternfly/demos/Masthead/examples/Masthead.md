@@ -59,7 +59,7 @@ wrapperTag: div
               {{> masthead-demo--context-selector}}
             {{/toolbar-item}}
             {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-lg"}}
-              {{> dropdown dropdown--modifier="pf-m-full-height" dropdown--id="dropdown-expanded" dropdown--IsExpandedqqq="true" dropdown-toggle--text="Expanded dropdown"}}
+              {{> dropdown dropdown--modifier="pf-m-full-height" dropdown--id="dropdown-expanded" dropdown-toggle--text="Dropdown"}}
             {{/toolbar-item}}
           {{/toolbar-group}}
           {{#> toolbar-item toolbar-item--modifier="pf-m-align-right"}}
