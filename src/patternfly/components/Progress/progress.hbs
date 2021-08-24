@@ -21,14 +21,8 @@
   {{#if progress--attribute}}
     {{{progress--attribute}}}
   {{/if}}>
-  {{#if progress__description}}
-    {{> progress-description}}
-  {{/if}}
-  {{#unless progress--inside}}
-    {{#unless progress--no-measure}}
-      {{> progress-status}}
-    {{/unless}}
-  {{/unless}}
+  {{> progress-description}}
+  {{> progress-status}}
   {{> progress-bar}}
   {{> @partial-block}}
 </div>
