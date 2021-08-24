@@ -3109,12 +3109,12 @@ Long strings in table cells will push content. Add a width modifier to `thead th
 {{/table}}
 ```
 
-### Favorites sortable example 
+### Favorites sortable example
 ```hbs
 {{#> table table--id="table-favorites-sortable" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a sortable with favorites table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--id="1"}}
-      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--sortable="true" table-th--selected="true"}}
+      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--sortable="true" table-th--selected="true" table-button--attribute='aria-label="Favorite"'}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}

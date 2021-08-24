@@ -5,7 +5,9 @@
   {{#if input-group-text--attribute}}
     {{{input-group-text--attribute}}}
   {{/if}}>
-	{{> @partial-block}}
+  {{#if @partial-block}}
+	  {{> @partial-block}}
+  {{/if}}
 	{{#if input-group-text--HasDollarSignIcon}}
     <i class="fas fa-dollar-sign" aria-hidden="true"></i>
 	{{/if}}

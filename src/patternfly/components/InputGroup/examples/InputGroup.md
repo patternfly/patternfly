@@ -52,8 +52,7 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
- {{#> input-group-text input-group-text--HasDollarSignIcon="true"}}
- {{/input-group-text}}
+ {{> input-group-text input-group-text--HasDollarSignIcon="true"}}
  {{#> form-control controlType="input" input="true" form-control--attribute='type="number" id="textInput5" name="textInput5" aria-label=" Dollar amount input example"'}}
  {{/form-control}}
   {{#> input-group-text}}
@@ -70,8 +69,7 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
- {{#> input-group-text input-group-text--HasAtIcon="true"  input-group-text--attribute='id="username"' aria-label="@"}}
- {{/input-group-text}}
+ {{> input-group-text input-group-text--HasAtIcon="true"}}
  {{#> form-control controlType="input" input="true" form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example" aria-describedby="username"'}}
 {{/form-control}}
 {{/input-group}}

@@ -57,7 +57,7 @@ cssPrefix: pf-c-chip
 <br>
 {{#> chip chip--type="div" chip--modifier="pf-m-draggable"}}
   {{#> chip-icon}}
-    <i class="fas fa-grip-vertical" aria-label="Drag"></i>
+    <i class="fas fa-grip-vertical" role="img" aria-label="Drag"></i>
   {{/chip-icon}}
   {{#> chip-text}}
     Draggable chip
