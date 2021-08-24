@@ -70,7 +70,7 @@ cssPrefix: pf-c-input-group
 <br>
 {{#> input-group}}
  {{> input-group-text input-group-text--HasAtIcon="true"}}
- {{#> form-control controlType="input" input="true" form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example" aria-describedby="username"'}}
+ {{#> form-control controlType="input" input="true" form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example"'}}
 {{/form-control}}
 {{/input-group}}
 <br>
