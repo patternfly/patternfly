@@ -22,13 +22,15 @@ wrapperTag: div
   {{/masthead-main}}
   {{#> masthead-content}}
     {{#> toolbar toolbar--modifier="pf-m-full-height pf-m-static" toolbar--id=(concat masthead--id '-toolbar')}}
-      {{#> toolbar-content-section}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
-          {{#> toolbar-item}}
-            {{> dropdown dropdown--id=(concat masthead--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-      {{/toolbar-content-section}}
+      {{#> toolbar-content}}
+        {{#> toolbar-content-section}}
+          {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+            {{#> toolbar-item}}
+              {{> dropdown dropdown--id=(concat masthead--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+            {{/toolbar-item}}
+          {{/toolbar-group}}
+        {{/toolbar-content-section}}
+      {{/toolbar-content}}
     {{/toolbar}}
   {{/masthead-content}}
 {{/masthead}}
