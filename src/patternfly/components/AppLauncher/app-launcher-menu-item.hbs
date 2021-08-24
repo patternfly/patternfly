@@ -2,6 +2,9 @@
   {{#if app-launcher-menu-item--type}}
     type="button"
   {{/if}}
+  {{#if app-launcher-menu-item--IsFavorite}}
+    aria-label="Favorite"
+  {{/if}}
   {{#if app-launcher-menu-item--attribute}}
 	  {{{app-launcher-menu-item--attribute}}}
   {{/if}}>

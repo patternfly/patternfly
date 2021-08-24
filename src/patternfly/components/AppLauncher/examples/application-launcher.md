@@ -226,7 +226,7 @@ import './application-launcher.css'
             Link 2
           {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action" app-launcher-menu-item--IsFavorite="true"}}
             {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-wrapper}}
@@ -238,7 +238,7 @@ import './application-launcher.css'
             Link 3
           {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action" app-launcher-menu-item--IsFavorite="true"}}
             {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-wrapper}}
@@ -258,7 +258,7 @@ import './application-launcher.css'
             Link 1
           {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action" app-launcher-menu-item--IsFavorite="true"}}
             {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-wrapper}}
@@ -270,7 +270,7 @@ import './application-launcher.css'
             Link 2
           {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action" app-launcher-menu-item--IsFavorite="true"}}
             {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-wrapper}}
@@ -290,7 +290,7 @@ import './application-launcher.css'
             Link 3
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action" app-launcher-menu-item--IsFavorite="true"}}
             {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-wrapper}}
@@ -302,7 +302,7 @@ import './application-launcher.css'
             Link 4
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
-          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action"}}
+          {{#> app-launcher-menu-item app-launcher-menu-item--type="button" app-launcher-menu-item--modifier="pf-m-action" app-launcher-menu-item--IsFavorite="true"}}
             {{> app-launcher-favorite-icon}}
           {{/app-launcher-menu-item}}
         {{/app-launcher-menu-wrapper}}
