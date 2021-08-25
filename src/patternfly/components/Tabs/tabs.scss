@@ -431,6 +431,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   margin-top: var(--pf-c-tabs__toggle-button--MarginTop);
   margin-bottom: var(--pf-c-tabs__toggle-button--MarginBottom);
   margin-left: var(--pf-c-tabs__toggle-button--MarginLeft);
+
+  .pf-c-button {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .pf-c-tabs__toggle-icon {
