@@ -3,5 +3,7 @@
     {{{tabs-toggle--attribute}}}
   {{/if}}>
   {{> tabs-toggle-button}}
-  {{> tabs-toggle-text}}
+  {{#if tabs--IsLegacy}}
+    {{> tabs-toggle-text}}
+  {{/if}}
 </div>
