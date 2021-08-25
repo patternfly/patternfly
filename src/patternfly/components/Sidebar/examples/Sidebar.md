@@ -32,7 +32,7 @@ import './Sidebar.css'
   {{/sidebar-panel}}
   {{#> sidebar-content}}
     {{#> content}}
-      <p>Adds a gutter between the panel and content when in the split layout.</p>
+      <p>Adds a gutter between the panel and content when in the horizontal layout.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nulla id augue dictum commodo. Donec mollis arcu massa, sollicitudin venenatis est rutrum vitae. Integer pulvinar ligula at augue mollis, ac pulvinar arcu semper. Maecenas nisi lorem, malesuada ac lectus nec, porta pretium neque. Ut convallis libero sit amet metus mattis, vel facilisis lorem malesuada. Duis consectetur ante sit amet magna efficitur, a interdum leo vulputate.</p>
       <p>Praesent at odio nec sapien ultrices tincidunt in non mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis consectetur nisl quis facilisis faucibus. Sed eu bibendum risus. Suspendisse porta euismod tortor, at elementum odio suscipit sed. Cras eget ultrices urna, ac feugiat lectus. Integer a pharetra velit, in imperdiet mi. Phasellus vel hendrerit velit. Vestibulum ut augue vitae erat vulputate bibendum a ut magna.</p>
     {{/content}}
@@ -40,15 +40,15 @@ import './Sidebar.css'
 {{/sidebar}}
 ```
 
-### Stack
+### Vertical
 ```hbs
-{{#> sidebar sidebar--modifier="pf-m-stack"}}
+{{#> sidebar sidebar--modifier="pf-m-vertical"}}
   {{#> sidebar-panel}}
     Sidebar panel
   {{/sidebar-panel}}
   {{#> sidebar-content}}
     {{#> content}}
-      <p>Forces a stacked layout.</p>
+      <p>Forces a vertical layout.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nulla id augue dictum commodo. Donec mollis arcu massa, sollicitudin venenatis est rutrum vitae. Integer pulvinar ligula at augue mollis, ac pulvinar arcu semper. Maecenas nisi lorem, malesuada ac lectus nec, porta pretium neque. Ut convallis libero sit amet metus mattis, vel facilisis lorem malesuada. Duis consectetur ante sit amet magna efficitur, a interdum leo vulputate.</p>
       <p>Praesent at odio nec sapien ultrices tincidunt in non mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis consectetur nisl quis facilisis faucibus. Sed eu bibendum risus. Suspendisse porta euismod tortor, at elementum odio suscipit sed. Cras eget ultrices urna, ac feugiat lectus. Integer a pharetra velit, in imperdiet mi. Phasellus vel hendrerit velit. Vestibulum ut augue vitae erat vulputate bibendum a ut magna.</p>
     {{/content}}
@@ -56,15 +56,15 @@ import './Sidebar.css'
 {{/sidebar}}
 ```
 
-### Split
+### Horizontal
 ```hbs
-{{#> sidebar sidebar--modifier="pf-m-split"}}
+{{#> sidebar sidebar--modifier="pf-m-horizontal"}}
   {{#> sidebar-panel}}
     Sidebar panel
   {{/sidebar-panel}}
   {{#> sidebar-content}}
     {{#> content}}
-      <p>Forces a split layout.</p>
+      <p>Forces a horizontal layout.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nulla id augue dictum commodo. Donec mollis arcu massa, sollicitudin venenatis est rutrum vitae. Integer pulvinar ligula at augue mollis, ac pulvinar arcu semper. Maecenas nisi lorem, malesuada ac lectus nec, porta pretium neque. Ut convallis libero sit amet metus mattis, vel facilisis lorem malesuada. Duis consectetur ante sit amet magna efficitur, a interdum leo vulputate.</p>
       <p>Praesent at odio nec sapien ultrices tincidunt in non mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis consectetur nisl quis facilisis faucibus. Sed eu bibendum risus. Suspendisse porta euismod tortor, at elementum odio suscipit sed. Cras eget ultrices urna, ac feugiat lectus. Integer a pharetra velit, in imperdiet mi. Phasellus vel hendrerit velit. Vestibulum ut augue vitae erat vulputate bibendum a ut magna.</p>
     {{/content}}
@@ -162,10 +162,10 @@ import './Sidebar.css'
 | `.pf-c-sidebar__panel` | `<div>` | Initiates the sidebar panel element. **Required** |
 | `.pf-c-sidebar__content` | `<div>` | Initiates the sidebar content element. **Required** |
 | `.pf-m-gutter` | `.pf-c-sidebar` | Modifies the sidebar component to add a gutter between the panel and content. |
-| `.pf-m-stack` | `.pf-c-sidebar` | Modifies the sidebar to stack the panel on top of the content. |
-| `.pf-m-split` | `.pf-c-sidebar` | Modifies the sidebar to position the panel and content side by side. |
+| `.pf-m-vertical` | `.pf-c-sidebar` | Modifies the sidebar for a vertical layout. |
+| `.pf-m-horizontal` | `.pf-c-sidebar` | Modifies the sidebar for a horizontal layout. |
 | `.pf-m-panel-right` | `.pf-c-sidebar` | Modifies the sidebar to place the panel to the right of the content. |
 | `.pf-m-sticky` | `.pf-c-sidebar__panel` | Modifies the panel to be sticky to the top of the layout. |
 | `.pf-m-static` | `.pf-c-sidebar__panel` | Modifies the panel to be positioned statically. |
-| `.pf-m-width-{default, 25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-sidebar__panel` | Modifies the panel width. **Note:** does not apply when the panel is stacked on top of the content. |
+| `.pf-m-width-{default, 25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-sidebar__panel` | Modifies the panel width. **Note:** only applies to a horizontal layout. |
 | `.pf-m-no-background` | `.pf-c-sidebar`, `.pf-c-sidebar__panel, .pf-c-sidebar__content` | Modifies the element to have a transparent background. |
