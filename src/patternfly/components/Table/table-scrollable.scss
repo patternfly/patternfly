@@ -7,7 +7,6 @@
   --pf-c-table__sticky-column--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-table__sticky-column--before--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table__sticky-column--before--BorderRightColor: var(--pf-global--BorderColor--100);
-  --pf-c-table--thead__sticky-column--ZIndex: calc(var(--pf-global--ZIndex--sm) + 1);
   --pf-c-table--m-sticky-header--thead__sticky-column--ZIndex: calc(var(--pf-global--ZIndex--sm) + 1);
 
   .pf-c-table__sticky-column {
@@ -16,8 +15,9 @@
     z-index: var(--pf-c-table__sticky-column--ZIndex);
     min-width: var(--pf-c-table__sticky-column--MinWidth);
     background-color: var(--pf-c-table__sticky-column--BackgroundColor);
+    background-clip: padding-box;
 
-    &::before {
+    &.pf-m-border-right::before {
       position: absolute;
       top: 0;
       right: 0;
@@ -40,17 +40,22 @@
   }
 }
 
-.pf-c-sticky-table-container {
-  display: grid;
-  grid-template-rows: max-content [table-scroll-wrapper] auto;
-  height: 100%;
-  grid-auto-rows: max-content;
+.pf-c-scroll-outer-wrapper {
+  max-height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
-  .pf-c-table-scroll-wrapper {
-    grid-row: 2; // set at two allow a toolbar above and footer below
-  }
+  // > * {
+  //   min-height: 0;
+  // }
 }
 
-.pf-c-table-scroll-wrapper {
-  overflow-x: auto;
+.pf-c-scroll-inner-wrapper {
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
