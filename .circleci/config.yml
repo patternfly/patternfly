@@ -12,7 +12,7 @@ references:
   - src/icons/PfIcons/
   - src/generated/
   js_deps_cache_key: &js_deps_cache_key
-    js-deps-14-v{{.Environment.CACHE_VERSION}}-{{checksum "package-lock.json"}}
+    js-deps-14-v{{.Environment.CACHE_VERSION}}-{{checksum "yarn.lock"}}
   attach_workspace: &attach_workspace
     attach_workspace:
       at: ~/project
@@ -50,16 +50,16 @@ jobs:
         - *js_deps_cache_key
     - run:
         name: Conditional install
-        command: if [ ! -d node_modules ]; then npm ci; fi
+        command: if [ ! -d node_modules ]; then yarn install --frozen-lockfile; fi
     - save_cache:
         paths: *js_deps_paths
         key: *js_deps_cache_key
     - run:
         name: Build dist
-        command: npm run build-patternfly
+        command: yarn build-patternfly
     - run:
         name: Build docs
-        command: npm run build:docs
+        command: yarn build:docs
     - run:
         name: Upload docs
         command: node .circleci/upload-preview.js public
@@ -77,11 +77,11 @@ jobs:
         - *js_deps_cache_key
     - run:
         name: Serve docs
-        command: npm run serve
+        command: yarn serve
         background: true
     - run:
         name: a11y Tests
-        command: npm test
+        command: yarn test
     - run:
         name: Upload a11y report
         command: node .circleci/upload-preview.js coverage
@@ -100,14 +100,14 @@ jobs:
           - *js_deps_cache_key
       - run:
           name: Lint SASS
-          command: npm run lint:sass
+          command: yarn lint:sass
       - run:
           name: Lint JS
-          command: npm run lint:js
+          command: yarn lint:js
           when: always
       - run:
           name: Lint CSS
-          command: npm run lint:css
+          command: yarn lint:css
           when: always
       - run:
           name: Confirm consumers can compile SASS
