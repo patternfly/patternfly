@@ -348,7 +348,6 @@
 
 .pf-c-form__field-group {
   --pf-c-form__field-group--BorderTopWidth: var(--pf-c-form__field-group--border-width-base);
-  --pf-c-form__field-group--BorderTopWidth: var(--pf-c-form__field-group--border-width-base);
 
   display: grid;
   grid-template-columns: minmax(var(--pf-c-form__field-group--GridTemplateColumns--toggle), max-content) 1fr;
