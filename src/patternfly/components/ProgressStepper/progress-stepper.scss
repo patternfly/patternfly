@@ -1,0 +1,238 @@
+// Component variables follow this formula:
+// --pf-c-progress-stepper__element--modifier--state--PropertyCamelCase
+
+.pf-c-progress-stepper {
+  // Stepper variables
+  --pf-c-progress-stepper--FlexDirection: row;
+  --pf-c-progress-stepper--JustifyContent: space-between;
+  --pf-c-progress-stepper--m-vertical--FlexDirection: column;
+  --pf-c-progress-stepper--m-compact--JustifyContent: flex-start;
+
+  // Step variables
+  --pf-c-progress-stepper__step--FlexBasis: 100%;
+  --pf-c-progress-stepper__step--FlexDirection: column;
+  --pf-c-progress-stepper__step--FlexGrow: 1;
+  --pf-c-progress-stepper__step--AlignItems: flex-start;
+  --pf-c-progress-stepper--m-center__step--AlignItems: center;
+  --pf-c-progress-stepper--m-vertical__step--FlexDirection: row;
+  --pf-c-progress-stepper--m-compact__step--FlexBasis: 24px;
+  --pf-c-progress-stepper--m-compact__step--FlexGrow: 0;
+
+  // Step icon variables
+  --pf-c-progress-stepper__step-icon--Width: 28px;
+  --pf-c-progress-stepper__step-icon--Height: var(--pf-c-progress-stepper__step-icon--Width);
+  --pf-c-progress-stepper__step-icon--FontSize: var(--pf-global--icon--FontSize--md);
+  --pf-c-progress-stepper__step-icon--Color: var(--pf-global--Color-100);
+  --pf-c-progress-stepper__step-icon--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-progress-stepper__step-icon--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-progress-stepper--m-compact__step-icon--Width: 18px;
+  --pf-c-progress-stepper--m-compact__step-icon--FontSize: var(--pf-global--icon--FontSize--sm);
+
+  // Icon adjustments to fix differences in alignment
+  --pf-c-progress-stepper__pficon--MarginTop: 3px;
+  --pf-c-progress-stepper--m-compact__pficon--MarginTop: 2px;
+  --pf-c-progress-stepper__fa-exclamation-triangle--MarginTop: -5px;
+  --pf-c-progress-stepper--m-compact__fa-exclamation-triangle--MarginTop: -3px;
+
+
+  // Step :before (the connecting line) variables
+  --pf-c-progress-stepper__step--before--Top: calc(var(--pf-c-progress-stepper__step-icon--Height) / 2);
+  --pf-c-progress-stepper__step--before--Left: 0;
+  --pf-c-progress-stepper__step--before--Width: 100%;
+  --pf-c-progress-stepper__step--before--Height: auto;
+  --pf-c-progress-stepper__step--before--BorderRight: none;
+  --pf-c-progress-stepper__step--before--BorderBottom: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--100);
+  --pf-c-progress-stepper--m-center__step--before--Left: 50%;
+  --pf-c-progress-stepper--m-vertical__step--before--Top: 0;
+  --pf-c-progress-stepper--m-vertical__step--before--Left: calc(var(--pf-c-progress-stepper__step-icon--Width) / 2);
+  --pf-c-progress-stepper--m-vertical__step--before--Width: auto;
+  --pf-c-progress-stepper--m-vertical__step--before--Height: 100%;
+  --pf-c-progress-stepper--m-vertical__step--before--BorderRight: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--100);
+  --pf-c-progress-stepper--m-vertical__step--before--BorderBottom: none;
+
+  // Step Main variables
+  --pf-c-progress-stepper__step-main--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-progress-stepper__step-main--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-progress-stepper__step-main--MarginBottom: 0;
+  --pf-c-progress-stepper__step-main--MarginLeft: 0;
+  --pf-c-progress-stepper--m-center__step-main--MarginRight: var(--pf-global--spacer--xs);
+  --pf-c-progress-stepper--m-center__step-main--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-progress-stepper--m-vertical__step-main--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-progress-stepper--m-vertical__step-main--MarginRight: 0;
+  --pf-c-progress-stepper--m-vertical__step-main--MarginBottom: var(--pf-global--spacer--xl);
+  --pf-c-progress-stepper--m-vertical__step-main--MarginLeft: var(--pf-global--spacer--xs);
+
+  // Step Title variables
+  --pf-c-progress-stepper__step-title--Color: var(--pf-global--Color--100);
+  --pf-c-progress-stepper__step-title--TextAlign: left;
+  --pf-c-progress-stepper__step-title--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-progress-stepper__step--m-current__step-title--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-progress-stepper__step--m-current__step-title--Color: var(--pf-global--Color--100);
+  --pf-c-progress-stepper__step--m-pending__step-title--Color: var(--pf-global--Color--200);
+  --pf-c-progress-stepper__step--m-danger__step-description--Color: var(--pf-global--danger-color--100);
+  --pf-c-progress-stepper--m-center__step-title--TextAlign: center;
+
+  // Step Description variables
+  --pf-c-progress-stepper__step-description--MarginTop: var(--pf-global--spacer--xs);
+  --pf-c-progress-stepper__step-description--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-progress-stepper__step-description--Color: var(--pf-global--Color--200);
+  --pf-c-progress-stepper__step-description--TextAlign: left;
+  --pf-c-progress-stepper--m-center__step-description--TextAlign: center;
+
+  position: relative;
+  display: flex;
+  flex-direction: var(--pf-c-progress-stepper--FlexDirection);
+  justify-content: var(--pf-c-progress-stepper--JustifyContent);
+  padding: 0 32px; // TODO: do we really want space here?
+
+  // Progress stepper Modifiers
+  &.pf-m-center {
+    // before gets left 50%
+    // step gets align-items center
+    --pf-c-progress-stepper__step--AlignItems: var(--pf-c-progress-stepper--m-center__step--AlignItems);
+    --pf-c-progress-stepper__step--before--Left: var(--pf-c-progress-stepper--m-center__step--before--Left);
+    --pf-c-progress-stepper__step-main--MarginRight: var(--pf-c-progress-stepper--m-center__step-main--MarginRight);
+    --pf-c-progress-stepper__step-main--MarginLeft: var(--pf-c-progress-stepper--m-center__step-main--MarginLeft);
+    --pf-c-progress-stepper__step-description--MarginRight: var(--pf-c-progress-stepper--m-center__step-description--MarginRight);
+    --pf-c-progress-stepper__step-description--MarginLeft: var(--pf-c-progress-stepper--m-center__step-description--MarginLeft);
+    --pf-c-progress-stepper__step-title--TextAlign: var(--pf-c-progress-stepper--m-center__step-title--TextAlign);
+    --pf-c-progress-stepper__step-description--TextAlign: var(--pf-c-progress-stepper--m-center__step-description--TextAlign);
+  }
+
+  &.pf-m-vertical {
+    --pf-c-progress-stepper--FlexDirection: var(--pf-c-progress-stepper--m-vertical--FlexDirection);
+    --pf-c-progress-stepper__step--FlexDirection: var(--pf-c-progress-stepper--m-vertical__step--FlexDirection);
+    --pf-c-progress-stepper__step--before--Top: var(--pf-c-progress-stepper--m-vertical__step--before--Top);
+    --pf-c-progress-stepper__step--before--Left: var(--pf-c-progress-stepper--m-vertical__step--before--Left);
+    --pf-c-progress-stepper__step--before--Width: var(--pf-c-progress-stepper--m-vertical__step--before--Width);
+    --pf-c-progress-stepper__step--before--Height: var(--pf-c-progress-stepper--m-vertical__step--before--Height);
+    --pf-c-progress-stepper__step--before--BorderRight: var(--pf-c-progress-stepper--m-vertical__step--before--BorderRight);
+    --pf-c-progress-stepper__step--before--BorderBottom: var(--pf-c-progress-stepper--m-vertical__step--before--BorderBottom);
+    --pf-c-progress-stepper__step-main--MarginTop: var(--pf-c-progress-stepper--m-vertical__step-main--MarginTop);
+    --pf-c-progress-stepper__step-main--MarginRight: var(--pf-c-progress-stepper--m-vertical__step-main--MarginRight);
+    --pf-c-progress-stepper__step-main--MarginBottom: var(--pf-c-progress-stepper--m-vertical__step-main--MarginBottom);
+    --pf-c-progress-stepper__step-main--MarginLeft: var(--pf-c-progress-stepper--m-vertical__step-main--MarginLeft);
+  }
+
+  &.pf-m-compact {
+    // TODO: show the current step above the whole thing or add a container for it
+    --pf-c-progress-stepper__step--FlexBasis: var(--pf-c-progress-stepper--m-compact__step--FlexBasis);
+    --pf-c-progress-stepper__step--FlexGrow: var(--pf-c-progress-stepper--m-compact__step--FlexGrow);
+    --pf-c-progress-stepper--JustifyContent: var(--pf-c-progress-stepper--m-compact--JustifyContent);
+    --pf-c-progress-stepper__step-icon--Width: var(--pf-c-progress-stepper--m-compact__step-icon--Width);
+    --pf-c-progress-stepper__step-icon--FontSize: var(--pf-c-progress-stepper--m-compact__step-icon--FontSize);
+    --pf-c-progress-stepper__pficon--MarginTop: var(--pf-c-progress-stepper--m-compact__pficon--MarginTop);
+    --pf-c-progress-stepper__fa-exclamation-triangle--MarginTop: var(--pf-c-progress-stepper--m-compact__fa-exclamation-triangle--MarginTop);
+
+    padding: 0; // TODO: do we really want space here?
+
+    .pf-c-progress-stepper__step-main {
+      @include pf-u-screen-reader;
+    }
+  }
+}
+
+// Step
+.pf-c-progress-stepper__step {
+  position: relative;
+  display: flex;
+  flex-basis: var(--pf-c-progress-stepper__step--FlexBasis);
+  flex-direction: var(--pf-c-progress-stepper__step--FlexDirection);
+  flex-grow: var(--pf-c-progress-stepper__step--FlexGrow);
+  align-items: var(--pf-c-progress-stepper__step--AlignItems);
+  transform: translateX(0);
+
+  &:not(:last-of-type)::before {
+    // create a new stacking context with position, then push it down with z-index -1
+    position: absolute;
+    top: var(--pf-c-progress-stepper__step--before--Top); // half the height
+    left: var(--pf-c-progress-stepper__step--before--Left);
+    z-index: -1;
+    width: var(--pf-c-progress-stepper__step--before--Width);
+    height: var(--pf-c-progress-stepper__step--before--Height);
+    content: "";
+    border-right: var(--pf-c-progress-stepper__step--before--BorderRight);
+    border-bottom: var(--pf-c-progress-stepper__step--before--BorderBottom);
+  }
+
+  // Step Modifiers
+  &.pf-m-current {
+    --pf-c-progress-stepper__step-title--FontWeight: var(--pf-c-progress-stepper__step--m-current__step-title--FontWeight);
+    --pf-c-progress-stepper__step-title--Color: var(--pf-c-progress-stepper__step--m-current__step-title--Color);
+  }
+
+  &.pf-m-pending {
+    --pf-c-progress-stepper__step-title--Color: var(--pf-c-progress-stepper__step--m-pending__step-title--Color);
+  }
+
+  &.pf-m-in-process {
+    --pf-c-progress-stepper__step-icon--Color: var(--pf-global--info-color--100);
+  }
+
+  &.pf-m-success {
+    --pf-c-progress-stepper__step-icon--Color: var(--pf-global--success-color--100);
+  }
+
+  &.pf-m-danger {
+    --pf-c-progress-stepper__step-icon--Color: var(--pf-global--danger-color--100);
+    --pf-c-progress-stepper__step-title--Color: var(--pf-c-progress-stepper__step--m-danger__step-description--Color);
+  }
+
+  &.pf-m-warning {
+    --pf-c-progress-stepper__step-icon--Color: var(--pf-global--warning-color--100);
+  }
+
+  &.pf-m-info {
+    --pf-c-progress-stepper__step-icon--Color: var(--pf-global--info-color--100);
+  }
+}
+
+// Step icon
+.pf-c-progress-stepper__step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--pf-c-progress-stepper__step-icon--Width);
+  height: var(--pf-c-progress-stepper__step-icon--Height);
+  font-size: var(--pf-c-progress-stepper__step-icon--FontSize);
+  color: var(--pf-c-progress-stepper__step-icon--Color);
+  background-color: var(--pf-c-progress-stepper__step-icon--BackgroundColor);
+  border: 2px solid var(--pf-c-progress-stepper__step-icon--BorderColor);
+  border-radius: 50%;
+
+  // Align pficons with the font awesome icons
+  // stylelint-disable
+  & .pficon {
+    margin-top: var(--pf-c-progress-stepper__pficon--MarginTop);
+  }
+
+  // Push the triangle up to fit inside the circle
+  & .fa-exclamation-triangle {
+    margin-top: var(--pf-c-progress-stepper__fa-exclamation-triangle--MarginTop);
+  }
+  // stylelint-enable
+}
+
+// Step main
+.pf-c-progress-stepper__step-main {
+  // TODO: use sr-only instead of hiding so that screen readers can see the steps
+  margin-top: var(--pf-c-progress-stepper__step-main--MarginTop);
+  margin-right: var(--pf-c-progress-stepper__step-main--MarginRight);
+  margin-bottom: var(--pf-c-progress-stepper__step-main--MarginBottom);
+  margin-left: var(--pf-c-progress-stepper__step-main--MarginLeft);
+}
+
+// Step title
+.pf-c-progress-stepper__step-title {
+  font-weight: var(--pf-c-progress-stepper__step-title--FontWeight);
+  color: var(--pf-c-progress-stepper__step-title--Color);
+  text-align: var(--pf-c-progress-stepper__step-title--TextAlign);
+}
+
+// Step description
+.pf-c-progress-stepper__step-description {
+  margin-top: var(--pf-c-progress-stepper__step-description--MarginTop);
+  font-size: var(--pf-c-progress-stepper__step-description--FontSize);
+  color: var(--pf-c-progress-stepper__step-description--Color);
+  text-align: var(--pf-c-progress-stepper__step-description--TextAlign);
+}
