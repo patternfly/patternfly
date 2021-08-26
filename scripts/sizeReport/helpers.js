@@ -37,10 +37,10 @@ function getHTMLDiffTable(curMap, prevMap) {
   let html = '<table id="css-lint-size">';
   html += '<caption>CSS Size Report</caption>';
   html += '<tr>';
-  html += `<th>Name</th>`;
-  html += `<th>Current</th>`;
-  html += `<th>Previous</th>`;
-  html += `<th>Diff %</th>`;
+  html += '<th>Name</th>';
+  html += '<th>Current</th>';
+  html += '<th>Previous</th>';
+  html += '<th>Diff %</th>';
   html += '</tr>';
 
   Object.entries(curMap)
@@ -68,7 +68,7 @@ function getHTMLDiffTable(curMap, prevMap) {
 
   if (differences.length === 0) {
     html += '<tr>';
-    html += `<td>There are no changes in CSS file sizes</td>`;
+    html += '<td>There are no changes in CSS file sizes</td>';
     html += '<tr>';
   } else {
     differences

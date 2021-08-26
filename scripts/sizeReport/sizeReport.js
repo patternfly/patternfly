@@ -28,7 +28,7 @@ async function compare(pattern, options) {
         .replace('refs/tags/', '')
         .replace('prerelease-v', '');
     } else {
-      shaTag = execSync(`git describe --abbrev=0 --tags`)
+      shaTag = execSync('git describe --abbrev=0 --tags')
         .toString()
         .replace('prerelease-v', '');
     }
