@@ -70,7 +70,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   // Sidebar
   --pf-c-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-c-page__sidebar--Width: 80%;
   --pf-c-page__sidebar--Width: #{pf-size-prem(290px)};
   --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__sidebar--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
