@@ -61,11 +61,4 @@ jobs:
 
         name: Breaking change lint
         if: always()
-      - run: |
-          mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
-          git fetch --tags
-          node scripts/sizeReport/sizeReport --comment
-
-        name: Lint CSS size
-        if: always()
 
