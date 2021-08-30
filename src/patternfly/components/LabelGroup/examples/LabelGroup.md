@@ -429,9 +429,8 @@ cssPrefix: pf-c-label-group
 {{/label-group}}
 ```
 
-In addition to [label documentation](../label#editable), dynamic label groups should be managed with JavaScript
-* `.pf-c-label-group.pf-m-editable` onClick event should (excluding labels within):
-  * Set focus on `.pf-c-label-group__textarea`
+In addition to the JavaScript management of [editable labels](/components/label#editable), dynamic label groups also need:
+* `.pf-c-label-group.pf-m-editable` onClick event should (excluding labels within) set focus on `.pf-c-label-group__textarea`
 
 ### Editable labels, dynamic label group
 ``` hbs

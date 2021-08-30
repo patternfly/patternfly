@@ -219,7 +219,7 @@ A popover is used to provide contextual information for another component on cli
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-popover` | Gives the popover an accessible description by referring to the popover content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
 | `aria-modal="true"` | `.pf-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|
 | `aria-label="Close"` | `.pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
-| `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-c-popover` must not be a descendent of the element with `aria-hidden="true"`. For more info see [trapping focus](https://pf4.patternfly.org/accessibility-guide#trapping-focus). **Required** |
+| `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-c-popover` must not be a descendent of the element with `aria-hidden="true"`. For more info, see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -228,7 +228,7 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-c-popover__arrow` | `<div>` |  Creates an arrow pointing towards the element the popover describes. **Required** |
 | `.pf-c-popover__content` | `<div>` |  Creates the content area of the popover. **Required** |
 | `.pf-c-button` | `<button>` |  Positions the close icon in the top-right corner of the popover. **Required** |
-| `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. See [title component](/documentation/core/components/title) for more info.|
+| `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. See the [title component](/components/title) for more info.|
 | `.pf-c-popover__body` | `<div>` |  The popover's body text. **Required** |
 | `.pf-c-popover__footer` | `<footer>` | Initiates a popover footer. |
 | `.pf-m-left{-top/bottom}` | `.pf-c-popover` | Positions the popover to the left (or left top/left bottom) of the element. |

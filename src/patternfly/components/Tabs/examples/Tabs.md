@@ -218,9 +218,9 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
-The tabs component should only be used to change content views within a page. The similar-looking but semantically different [horizontal nav component](/documentation/core/components/nav) is available for general navigation use cases.
+The tabs component should only be used to change content views within a page. The similar-looking but semantically different [horizontal nav component](/components/page/html/#horizontal-nav) is available for general navigation use cases.
 
-Tabs should be used with the [tab content component](/documentation/core/components/tabcontent).
+Tabs should be used with the [tab content component](/components/tab-content).
 
 Whenever a list of tabs is unique on the current page, it can be used in a `<nav>` element. Cases where the same set of tabs are duplicated in multiple regions on a page (e.g. cards on a dashboard) are less likely to benefit from using the `<nav>` element.
 

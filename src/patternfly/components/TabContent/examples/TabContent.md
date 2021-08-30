@@ -55,7 +55,7 @@ cssPrefix: pf-c-tab-content
 
 ## Documentation
 ### Overview
-Tab content should be used with the [tabs component](/documentation/core/components/tabs).
+Tab content should be used with the [tabs component](/components/tabs).
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
