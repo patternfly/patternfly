@@ -14,6 +14,7 @@ jobs:
       - run: |
           git fetch origin pull/$GH_PR_NUM/head:tmp
           git checkout tmp
+
       # Injected by generate-workflows.js
       %build-test%
       - run: |
@@ -22,12 +23,14 @@ jobs:
               echo "Breaking change detected in commit message"
               exit 1
           fi
+
         name: Breaking change lint
         if: always()
       - run: |
           mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
           git fetch --tags
           node scripts/sizeReport/sizeReport --comment
+
         name: Lint CSS size
         if: always()
 

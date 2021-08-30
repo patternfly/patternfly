@@ -24,7 +24,8 @@
     "screenshots": "rimraf src/generated/**/*.png && theme-patternfly-org screenshots --urlPrefix http://localhost:5000",
     "serve": "theme-patternfly-org serve public",
     "start": "gulp develop",
-    "test": "patternfly-a11y --config patternfly-a11y.config"
+    "test": "patternfly-a11y --config patternfly-a11y.config",
+    "workflows": "node .github/generate-workflows"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
