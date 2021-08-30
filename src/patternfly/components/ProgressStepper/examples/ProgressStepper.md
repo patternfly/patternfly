@@ -8,7 +8,7 @@ cssPrefix: pf-c-progress-stepper
 ## Examples
 ### Basic
 ```hbs
-{{#> progress-stepper progress-stepper--IsVertical="true"}}
+{{#> progress-stepper progress-stepper--IsVertical="true" progress-stepper--IsCenter="true" progress-stepper--IsCompact="true"}}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{#> progress-stepper-step-icon}}
       All done
