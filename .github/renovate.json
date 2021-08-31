@@ -10,7 +10,6 @@
         "@patternfly/patternfly-a11y",
         "@patternfly/react-charts",
         "@patternfly/react-code-editor",
-        "@patternfly/react-core",
         "@patternfly/react-table",
         "theme-patternfly-org"
       ],
@@ -22,7 +21,6 @@
         "@patternfly/patternfly-a11y",
         "@patternfly/react-charts",
         "@patternfly/react-code-editor",
-        "@patternfly/react-core",
         "@patternfly/react-table",
         "theme-patternfly-org"
       ]
