@@ -207,7 +207,7 @@ These text utilities can be used to modify text within the PatternFly framework.
 
 Care should be taken especially when applying text colors, as this can have a negative effect on the readability and accessibility of text. Refer to the information on [contrast ratios](/guidelines/colors/#contrast-ratios) for more information.
 
-Note that "inverse" text colors are labeled as such to indicate that they best used with the ["inverse" background colors](/utilities/background-color). 
+Note that "inverse" text colors are labeled as such to indicate that they best used with the ["inverse" background colors](/utilities/background-color#inverse-background-colors). 
 
 ### Usage
 
