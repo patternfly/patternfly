@@ -10,11 +10,6 @@ jobs:
       GH_PR_NUM:   ${{ github.event.number }}
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          git rev-parse origin/main
-          git rev-parse HEAD
-          git rev-parse origin/main..HEAD
-
       # Yes, we really want to checkout the PR
       - run: |
           git fetch origin pull/$GH_PR_NUM/head:tmp
@@ -24,6 +19,7 @@ jobs:
           git rev-parse origin/main
           git rev-parse HEAD
           git rev-parse origin/main..HEAD
+          git log origin/main..HEAD --format="%b"
 
       # Yes, we really want to checkout the PR
       # Injected by generate-workflows.js
