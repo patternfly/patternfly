@@ -205,9 +205,9 @@ import './Text.css'
 
 These text utilities can be used to modify text within the PatternFly framework. In most cases, using the components with available modifiers should be sufficient to implement most designs, and should be preferred over customizations using these utilities.
 
-Care should be taken especially when applying text colors, as this can have a negative effect on the readability and accessibility of text. Refer to the information on [contrast ratios](https://www.patternfly.org/v4/guidelines/colors/#contrast-ratios) for more information.
+Care should be taken especially when applying text colors, as this can have a negative effect on the readability and accessibility of text. Refer to the information on [contrast ratios](/guidelines/colors/#contrast-ratios) for more information.
 
-Note that "inverse" text colors are labeled as such to indicate that they best used with the ["inverse" background colors](https://www.patternfly.org/v4/utilities/background-color). 
+Note that "inverse" text colors are labeled as such to indicate that they best used with the ["inverse" background colors](/utilities/background-color). 
 
 ### Usage
 
