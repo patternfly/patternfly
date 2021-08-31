@@ -281,7 +281,7 @@ beta: true
 
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-node--IsRoot="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--HasFolderIcon="true" tree-view-node--text="Application launcher"}}
@@ -363,7 +363,7 @@ beta: true
 
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-node--IsRoot="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{#> tree-view-node tree-view-node--text="Application launcher"}}
@@ -499,7 +499,7 @@ beta: true
 
 ```hbs
 {{#> tree-view}}
-  {{#> tree-view-list tree-view-node--IsRoot="true"}}
+  {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-list-item--IsExpanded="true"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}

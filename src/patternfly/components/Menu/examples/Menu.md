@@ -1575,7 +1575,7 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item menu-list-item--modifier="pf-m-loading"}}
-        {{#> spinner spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
+        {{#> spinner spinner--modifier="pf-m-lg"}}Loading items{{/spinner}}
       {{/menu-list-item}}
     {{/menu-list}}
   {{/menu-content}}
