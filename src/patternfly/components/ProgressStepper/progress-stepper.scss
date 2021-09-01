@@ -1,22 +1,18 @@
-// Component variables follow this formula:
-// --pf-c-progress-stepper__element--modifier--state--PropertyCamelCase
-
 .pf-c-progress-stepper {
   // Stepper variables
-  --pf-c-progress-stepper--FlexDirection: row;
-  --pf-c-progress-stepper--JustifyContent: space-between;
-  --pf-c-progress-stepper--m-vertical--FlexDirection: column;
-  --pf-c-progress-stepper--m-compact--JustifyContent: flex-start;
+  --pf-c-progress-stepper--GridAutoFlow: column;
+  --pf-c-progress-stepper--GridTemplateRows: auto 1fr;
+  --pf-c-progress-stepper--GridTemplateColumns: initial;
+  --pf-c-progress-stepper--m-vertical--GridAutoFlow: row;
+  --pf-c-progress-stepper--m-vertical--GridTemplateColumns: auto 1fr;
+  --pf-c-progress-stepper--m-compact--GridAutoFlow: row;
+  --pf-c-progress-stepper--m-compact--GridTemplateColumns: repeat(auto-fill, 28px);
 
   // Step variables
-  --pf-c-progress-stepper__step--FlexBasis: 100%;
-  --pf-c-progress-stepper__step--FlexDirection: column;
-  --pf-c-progress-stepper__step--FlexGrow: 1;
-  --pf-c-progress-stepper__step--AlignItems: flex-start;
-  --pf-c-progress-stepper--m-center__step--AlignItems: center;
-  --pf-c-progress-stepper--m-vertical__step--FlexDirection: row;
-  --pf-c-progress-stepper--m-compact__step--FlexBasis: 24px;
-  --pf-c-progress-stepper--m-compact__step--FlexGrow: 0;
+
+  // Step icon-wrapper variables
+  --pf-c-progress-stepper__icon-wrapper--JustifyContent: start;
+  --pf-c-progress-stepper--m-center__icon-wrapper--JustifyContent: center;
 
   // Step icon variables
   --pf-c-progress-stepper__step-icon--Width: 28px;
@@ -30,25 +26,25 @@
 
   // Icon adjustments to fix differences in alignment
   --pf-c-progress-stepper__pficon--MarginTop: 3px;
-  --pf-c-progress-stepper--m-compact__pficon--MarginTop: 2px;
   --pf-c-progress-stepper__fa-exclamation-triangle--MarginTop: -5px;
+  --pf-c-progress-stepper--m-compact__pficon--MarginTop: 2px;
   --pf-c-progress-stepper--m-compact__fa-exclamation-triangle--MarginTop: -3px;
 
 
   // Step :before (the connecting line) variables
-  --pf-c-progress-stepper__step--before--Top: calc(var(--pf-c-progress-stepper__step-icon--Height) / 2);
-  --pf-c-progress-stepper__step--before--Left: 0;
-  --pf-c-progress-stepper__step--before--Width: 100%;
-  --pf-c-progress-stepper__step--before--Height: auto;
-  --pf-c-progress-stepper__step--before--BorderRight: none;
-  --pf-c-progress-stepper__step--before--BorderBottom: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--100);
-  --pf-c-progress-stepper--m-center__step--before--Left: 50%;
-  --pf-c-progress-stepper--m-vertical__step--before--Top: 0;
-  --pf-c-progress-stepper--m-vertical__step--before--Left: calc(var(--pf-c-progress-stepper__step-icon--Width) / 2);
-  --pf-c-progress-stepper--m-vertical__step--before--Width: auto;
-  --pf-c-progress-stepper--m-vertical__step--before--Height: 100%;
-  --pf-c-progress-stepper--m-vertical__step--before--BorderRight: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--100);
-  --pf-c-progress-stepper--m-vertical__step--before--BorderBottom: none;
+  --pf-c-progress-stepper__icon-wrapper--before--Top: calc(var(--pf-c-progress-stepper__step-icon--Height) / 2);
+  --pf-c-progress-stepper__icon-wrapper--before--Left: 0;
+  --pf-c-progress-stepper__icon-wrapper--before--Width: 100%;
+  --pf-c-progress-stepper__icon-wrapper--before--Height: auto;
+  --pf-c-progress-stepper__icon-wrapper--before--BorderRight: none;
+  --pf-c-progress-stepper__icon-wrapper--before--BorderBottom: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--100);
+  --pf-c-progress-stepper--m-center__icon-wrapper--before--Left: 50%;
+  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--Top: 0;
+  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--Left: calc(var(--pf-c-progress-stepper__step-icon--Width) / 2);
+  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--Width: auto;
+  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--Height: 100%;
+  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--BorderRight: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--100);
+  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--BorderBottom: none;
 
   // Step Main variables
   --pf-c-progress-stepper__step-main--MarginTop: var(--pf-global--spacer--sm);
@@ -61,16 +57,21 @@
   --pf-c-progress-stepper--m-vertical__step-main--MarginRight: 0;
   --pf-c-progress-stepper--m-vertical__step-main--MarginBottom: var(--pf-global--spacer--xl);
   --pf-c-progress-stepper--m-vertical__step-main--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-progress-stepper--m-compact__step-main--MarginTop: 0;
+  --pf-c-progress-stepper--m-compact__step-main--MarginBottom: var(--pf-global--spacer--sm);
 
   // Step Title variables
   --pf-c-progress-stepper__step-title--Color: var(--pf-global--Color--100);
   --pf-c-progress-stepper__step-title--TextAlign: left;
+  --pf-c-progress-stepper__step-title--FontSize: var(--pf-global--FontSize--md);
   --pf-c-progress-stepper__step-title--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-progress-stepper__step--m-current__step-title--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-progress-stepper__step--m-current__step-title--Color: var(--pf-global--Color--100);
   --pf-c-progress-stepper__step--m-pending__step-title--Color: var(--pf-global--Color--200);
   --pf-c-progress-stepper__step--m-danger__step-description--Color: var(--pf-global--danger-color--100);
   --pf-c-progress-stepper--m-center__step-title--TextAlign: center;
+  --pf-c-progress-stepper--m-compact__step-title--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-progress-stepper--m-compact__step-title--FontWeight: var(--pf-global--FontWeight--normal);
 
   // Step Description variables
   --pf-c-progress-stepper__step-description--MarginTop: var(--pf-global--spacer--xs);
@@ -80,17 +81,16 @@
   --pf-c-progress-stepper--m-center__step-description--TextAlign: center;
 
   position: relative;
-  display: flex;
-  flex-direction: var(--pf-c-progress-stepper--FlexDirection);
-  justify-content: var(--pf-c-progress-stepper--JustifyContent);
-  padding: 0 32px; // TODO: do we really want space here?
+  display: grid;
+  grid-auto-flow: var(--pf-c-progress-stepper--GridAutoFlow);
+  grid-template-columns: var(--pf-c-progress-stepper--GridTemplateColumns);
+  grid-template-rows: var(--pf-c-progress-stepper--GridTemplateRows);
+  grid-auto-columns: 1fr; // gives even spacing between steps
 
   // Progress stepper Modifiers
   &.pf-m-center {
-    // before gets left 50%
-    // step gets align-items center
-    --pf-c-progress-stepper__step--AlignItems: var(--pf-c-progress-stepper--m-center__step--AlignItems);
-    --pf-c-progress-stepper__step--before--Left: var(--pf-c-progress-stepper--m-center__step--before--Left);
+    --pf-c-progress-stepper__icon-wrapper--before--Left: var(--pf-c-progress-stepper--m-center__icon-wrapper--before--Left);
+    --pf-c-progress-stepper__icon-wrapper--JustifyContent: var(--pf-c-progress-stepper--m-center__icon-wrapper--JustifyContent);
     --pf-c-progress-stepper__step-main--MarginRight: var(--pf-c-progress-stepper--m-center__step-main--MarginRight);
     --pf-c-progress-stepper__step-main--MarginLeft: var(--pf-c-progress-stepper--m-center__step-main--MarginLeft);
     --pf-c-progress-stepper__step-description--MarginRight: var(--pf-c-progress-stepper--m-center__step-description--MarginRight);
@@ -100,14 +100,14 @@
   }
 
   &.pf-m-vertical {
-    --pf-c-progress-stepper--FlexDirection: var(--pf-c-progress-stepper--m-vertical--FlexDirection);
-    --pf-c-progress-stepper__step--FlexDirection: var(--pf-c-progress-stepper--m-vertical__step--FlexDirection);
-    --pf-c-progress-stepper__step--before--Top: var(--pf-c-progress-stepper--m-vertical__step--before--Top);
-    --pf-c-progress-stepper__step--before--Left: var(--pf-c-progress-stepper--m-vertical__step--before--Left);
-    --pf-c-progress-stepper__step--before--Width: var(--pf-c-progress-stepper--m-vertical__step--before--Width);
-    --pf-c-progress-stepper__step--before--Height: var(--pf-c-progress-stepper--m-vertical__step--before--Height);
-    --pf-c-progress-stepper__step--before--BorderRight: var(--pf-c-progress-stepper--m-vertical__step--before--BorderRight);
-    --pf-c-progress-stepper__step--before--BorderBottom: var(--pf-c-progress-stepper--m-vertical__step--before--BorderBottom);
+    --pf-c-progress-stepper--GridAutoFlow: var(--pf-c-progress-stepper--m-vertical--GridAutoFlow);
+    --pf-c-progress-stepper--GridTemplateColumns: var(--pf-c-progress-stepper--m-vertical--GridTemplateColumns);
+    --pf-c-progress-stepper__icon-wrapper--before--Top: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--Top);
+    --pf-c-progress-stepper__icon-wrapper--before--Left: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--Left);
+    --pf-c-progress-stepper__icon-wrapper--before--Width: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--Width);
+    --pf-c-progress-stepper__icon-wrapper--before--Height: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--Height);
+    --pf-c-progress-stepper__icon-wrapper--before--BorderRight: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--BorderRight);
+    --pf-c-progress-stepper__icon-wrapper--before--BorderBottom: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--BorderBottom);
     --pf-c-progress-stepper__step-main--MarginTop: var(--pf-c-progress-stepper--m-vertical__step-main--MarginTop);
     --pf-c-progress-stepper__step-main--MarginRight: var(--pf-c-progress-stepper--m-vertical__step-main--MarginRight);
     --pf-c-progress-stepper__step-main--MarginBottom: var(--pf-c-progress-stepper--m-vertical__step-main--MarginBottom);
@@ -115,45 +115,39 @@
   }
 
   &.pf-m-compact {
-    // TODO: show the current step above the whole thing or add a container for it
-    --pf-c-progress-stepper__step--FlexBasis: var(--pf-c-progress-stepper--m-compact__step--FlexBasis);
-    --pf-c-progress-stepper__step--FlexGrow: var(--pf-c-progress-stepper--m-compact__step--FlexGrow);
-    --pf-c-progress-stepper--JustifyContent: var(--pf-c-progress-stepper--m-compact--JustifyContent);
+    --pf-c-progress-stepper--GridAutoFlow: var(--pf-c-progress-stepper--m-compact--GridAutoFlow);
+    --pf-c-progress-stepper--GridTemplateColumns: var(--pf-c-progress-stepper--m-compact--GridTemplateColumns);
     --pf-c-progress-stepper__step-icon--Width: var(--pf-c-progress-stepper--m-compact__step-icon--Width);
     --pf-c-progress-stepper__step-icon--FontSize: var(--pf-c-progress-stepper--m-compact__step-icon--FontSize);
     --pf-c-progress-stepper__pficon--MarginTop: var(--pf-c-progress-stepper--m-compact__pficon--MarginTop);
     --pf-c-progress-stepper__fa-exclamation-triangle--MarginTop: var(--pf-c-progress-stepper--m-compact__fa-exclamation-triangle--MarginTop);
+    --pf-c-progress-stepper__step-main--MarginTop: var(--pf-c-progress-stepper--m-compact__step-main--MarginTop);
+    --pf-c-progress-stepper__step-main--MarginBottom: var(--pf-c-progress-stepper--m-compact__step-main--MarginBottom);
+    --pf-c-progress-stepper__step-title--FontSize: var(--pf-c-progress-stepper--m-compact__step-title--FontSize);
+    --pf-c-progress-stepper__step--m-current__step-title--FontWeight: var(--pf-c-progress-stepper--m-compact__step-title--FontWeight);
 
-    padding: 0; // TODO: do we really want space here?
-
-    .pf-c-progress-stepper__step-main {
+    // TODO: use sr-only instead of hiding so that screen readers can see the steps? Or when compact is it all hidden but the current one?
+    .pf-c-progress-stepper__step:not(.pf-m-current) .pf-c-progress-stepper__step-main {
       @include pf-u-screen-reader;
     }
+
+    .pf-c-progress-stepper__step-description {
+      display: none;
+    }
+
+    // For this compact variant only, move the main content for the current step to above the icons
+    // stylelint-disable
+    .pf-c-progress-stepper__step.pf-m-current .pf-c-progress-stepper__step-main {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+      }
+    // stylelint-enable
   }
 }
 
 // Step
 .pf-c-progress-stepper__step {
-  position: relative;
-  display: flex;
-  flex-basis: var(--pf-c-progress-stepper__step--FlexBasis);
-  flex-direction: var(--pf-c-progress-stepper__step--FlexDirection);
-  flex-grow: var(--pf-c-progress-stepper__step--FlexGrow);
-  align-items: var(--pf-c-progress-stepper__step--AlignItems);
-  transform: translateX(0);
-
-  &:not(:last-of-type)::before {
-    // create a new stacking context with position, then push it down with z-index -1
-    position: absolute;
-    top: var(--pf-c-progress-stepper__step--before--Top); // half the height
-    left: var(--pf-c-progress-stepper__step--before--Left);
-    z-index: -1;
-    width: var(--pf-c-progress-stepper__step--before--Width);
-    height: var(--pf-c-progress-stepper__step--before--Height);
-    content: "";
-    border-right: var(--pf-c-progress-stepper__step--before--BorderRight);
-    border-bottom: var(--pf-c-progress-stepper__step--before--BorderBottom);
-  }
+  display: contents;
 
   // Step Modifiers
   &.pf-m-current {
@@ -187,6 +181,27 @@
   }
 }
 
+// The step icon wrapper provides a container on which to use the before for the line connecting the steps
+.pf-c-progress-stepper__icon-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: var(--pf-c-progress-stepper__icon-wrapper--JustifyContent);
+  width: 100%;
+  transform: translateX(0);
+
+  .pf-c-progress-stepper__step:not(:last-of-type) > &::before {
+    position: absolute;
+    top: var(--pf-c-progress-stepper__icon-wrapper--before--Top); // half the height
+    left: var(--pf-c-progress-stepper__icon-wrapper--before--Left);
+    z-index: -1;
+    width: var(--pf-c-progress-stepper__icon-wrapper--before--Width);
+    height: var(--pf-c-progress-stepper__icon-wrapper--before--Height);
+    content: "";
+    border-right: var(--pf-c-progress-stepper__icon-wrapper--before--BorderRight);
+    border-bottom: var(--pf-c-progress-stepper__icon-wrapper--before--BorderBottom);
+  }
+}
+
 // Step icon
 .pf-c-progress-stepper__step-icon {
   display: flex;
@@ -215,7 +230,6 @@
 
 // Step main
 .pf-c-progress-stepper__step-main {
-  // TODO: use sr-only instead of hiding so that screen readers can see the steps
   margin-top: var(--pf-c-progress-stepper__step-main--MarginTop);
   margin-right: var(--pf-c-progress-stepper__step-main--MarginRight);
   margin-bottom: var(--pf-c-progress-stepper__step-main--MarginBottom);
@@ -224,6 +238,7 @@
 
 // Step title
 .pf-c-progress-stepper__step-title {
+  font-size: var(--pf-c-progress-stepper__step-title--FontSize);
   font-weight: var(--pf-c-progress-stepper__step-title--FontWeight);
   color: var(--pf-c-progress-stepper__step-title--Color);
   text-align: var(--pf-c-progress-stepper__step-title--TextAlign);
