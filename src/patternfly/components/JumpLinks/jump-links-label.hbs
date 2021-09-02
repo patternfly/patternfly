@@ -1,24 +1,10 @@
-{{#> jump-links-header}}
-  {{#if jump-links--IsExpandable}}
-    {{#> jump-links-toggle}}
-      {{#if jump-links--IsExpanded}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Details" aria-expanded="true" id="' jump-links--id '-toggle" aria-labelledby="' jump-links--id '-label ' jump-links--id '-toggle"')}}
-          {{> jump-links-toggle-icon}}
-        {{/button}}
-      {{else}}
-        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Details" aria-expanded="false" id="' jump-links--id '-toggle" aria-labelledby="' jump-links--id '-label ' jump-links--id '-toggle"')}}
-          {{> jump-links-toggle-icon}}
-        {{/button}}
-      {{/if}}
-    {{/jump-links-toggle}}
-  {{/if}}
-  <div class="pf-c-jump-links__label{{#if jump-links-label--modifier}} {{jump-links-label--modifier}}{{/if}}"
-    {{#if jump-links--IsExpandable}}
-      id="{{jump-links--id}}-label"
-    {{/if}}
-    {{#if jump-links-label--attribute}}
-      {{{jump-links-label--attribute}}}
-    {{/if}}>
+<div class="pf-c-jump-links__label{{#if jump-links-label--modifier}} {{jump-links-label--modifier}}{{/if}}"
+  {{#if jump-links-label--attribute}}
+    {{{jump-links-label--attribute}}}
+  {{/if}}>
+  {{#if @partial-block}}
     {{> @partial-block}}
-  </div>
-{{/jump-links-header}}
+  {{else}}
+    Jump to section
+  {{/if}}
+</div>
