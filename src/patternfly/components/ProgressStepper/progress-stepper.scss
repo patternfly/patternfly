@@ -10,9 +10,9 @@
 
   // Step variables
 
-  // Step icon-wrapper variables
-  --pf-c-progress-stepper__icon-wrapper--JustifyContent: start;
-  --pf-c-progress-stepper--m-center__icon-wrapper--JustifyContent: center;
+  // Ste -connector variables
+  --pf-c-progress-stepper__step-connector--JustifyContent: start;
+  --pf-c-progress-stepper--m-center__step-connector--JustifyContent: center;
 
   // Step icon variables
   --pf-c-progress-stepper__step-icon--Width: 28px;
@@ -32,19 +32,19 @@
 
 
   // Step :before (the connecting line) variables
-  --pf-c-progress-stepper__icon-wrapper--before--Top: calc(var(--pf-c-progress-stepper__step-icon--Height) / 2);
-  --pf-c-progress-stepper__icon-wrapper--before--Left: 0;
-  --pf-c-progress-stepper__icon-wrapper--before--Width: 100%;
-  --pf-c-progress-stepper__icon-wrapper--before--Height: auto;
-  --pf-c-progress-stepper__icon-wrapper--before--BorderRight: none;
-  --pf-c-progress-stepper__icon-wrapper--before--BorderBottom: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--100);
-  --pf-c-progress-stepper--m-center__icon-wrapper--before--Left: 50%;
-  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--Top: 0;
-  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--Left: calc(var(--pf-c-progress-stepper__step-icon--Width) / 2);
-  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--Width: auto;
-  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--Height: 100%;
-  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--BorderRight: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--100);
-  --pf-c-progress-stepper--m-vertical__icon-wrapper--before--BorderBottom: none;
+  --pf-c-progress-stepper__step-connector--before--Top: calc(var(--pf-c-progress-stepper__step-icon--Height) / 2);
+  --pf-c-progress-stepper__step-connector--before--Left: 0;
+  --pf-c-progress-stepper__step-connector--before--Width: 100%;
+  --pf-c-progress-stepper__step-connector--before--Height: auto;
+  --pf-c-progress-stepper__step-connector--before--BorderRight: none;
+  --pf-c-progress-stepper__step-connector--before--BorderBottom: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--100);
+  --pf-c-progress-stepper--m-center__step-connector--before--Left: 50%;
+  --pf-c-progress-stepper--m-vertical__step-connector--before--Top: 0;
+  --pf-c-progress-stepper--m-vertical__step-connector--before--Left: calc(var(--pf-c-progress-stepper__step-icon--Width) / 2);
+  --pf-c-progress-stepper--m-vertical__step-connector--before--Width: auto;
+  --pf-c-progress-stepper--m-vertical__step-connector--before--Height: 100%;
+  --pf-c-progress-stepper--m-vertical__step-connector--before--BorderRight: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--100);
+  --pf-c-progress-stepper--m-vertical__step-connector--before--BorderBottom: none;
 
   // Step Main variables
   --pf-c-progress-stepper__step-main--MarginTop: var(--pf-global--spacer--sm);
@@ -89,8 +89,8 @@
 
   // Progress stepper Modifiers
   &.pf-m-center {
-    --pf-c-progress-stepper__icon-wrapper--before--Left: var(--pf-c-progress-stepper--m-center__icon-wrapper--before--Left);
-    --pf-c-progress-stepper__icon-wrapper--JustifyContent: var(--pf-c-progress-stepper--m-center__icon-wrapper--JustifyContent);
+    --pf-c-progress-stepper__step-connector--before--Left: var(--pf-c-progress-stepper--m-center__step-connector--before--Left);
+    --pf-c-progress-stepper__step-connector--JustifyContent: var(--pf-c-progress-stepper--m-center__step-connector--JustifyContent);
     --pf-c-progress-stepper__step-main--MarginRight: var(--pf-c-progress-stepper--m-center__step-main--MarginRight);
     --pf-c-progress-stepper__step-main--MarginLeft: var(--pf-c-progress-stepper--m-center__step-main--MarginLeft);
     --pf-c-progress-stepper__step-description--MarginRight: var(--pf-c-progress-stepper--m-center__step-description--MarginRight);
@@ -102,12 +102,12 @@
   &.pf-m-vertical {
     --pf-c-progress-stepper--GridAutoFlow: var(--pf-c-progress-stepper--m-vertical--GridAutoFlow);
     --pf-c-progress-stepper--GridTemplateColumns: var(--pf-c-progress-stepper--m-vertical--GridTemplateColumns);
-    --pf-c-progress-stepper__icon-wrapper--before--Top: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--Top);
-    --pf-c-progress-stepper__icon-wrapper--before--Left: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--Left);
-    --pf-c-progress-stepper__icon-wrapper--before--Width: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--Width);
-    --pf-c-progress-stepper__icon-wrapper--before--Height: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--Height);
-    --pf-c-progress-stepper__icon-wrapper--before--BorderRight: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--BorderRight);
-    --pf-c-progress-stepper__icon-wrapper--before--BorderBottom: var(--pf-c-progress-stepper--m-vertical__icon-wrapper--before--BorderBottom);
+    --pf-c-progress-stepper__step-connector--before--Top: var(--pf-c-progress-stepper--m-vertical__step-connector--before--Top);
+    --pf-c-progress-stepper__step-connector--before--Left: var(--pf-c-progress-stepper--m-vertical__step-connector--before--Left);
+    --pf-c-progress-stepper__step-connector--before--Width: var(--pf-c-progress-stepper--m-vertical__step-connector--before--Width);
+    --pf-c-progress-stepper__step-connector--before--Height: var(--pf-c-progress-stepper--m-vertical__step-connector--before--Height);
+    --pf-c-progress-stepper__step-connector--before--BorderRight: var(--pf-c-progress-stepper--m-vertical__step-connector--before--BorderRight);
+    --pf-c-progress-stepper__step-connector--before--BorderBottom: var(--pf-c-progress-stepper--m-vertical__step-connector--before--BorderBottom);
     --pf-c-progress-stepper__step-main--MarginTop: var(--pf-c-progress-stepper--m-vertical__step-main--MarginTop);
     --pf-c-progress-stepper__step-main--MarginRight: var(--pf-c-progress-stepper--m-vertical__step-main--MarginRight);
     --pf-c-progress-stepper__step-main--MarginBottom: var(--pf-c-progress-stepper--m-vertical__step-main--MarginBottom);
@@ -126,7 +126,6 @@
     --pf-c-progress-stepper__step-title--FontSize: var(--pf-c-progress-stepper--m-compact__step-title--FontSize);
     --pf-c-progress-stepper__step--m-current__step-title--FontWeight: var(--pf-c-progress-stepper--m-compact__step-title--FontWeight);
 
-    // TODO: use sr-only instead of hiding so that screen readers can see the steps? Or when compact is it all hidden but the current one?
     .pf-c-progress-stepper__step:not(.pf-m-current) .pf-c-progress-stepper__step-main {
       @include pf-u-screen-reader;
     }
@@ -182,23 +181,23 @@
 }
 
 // The step icon wrapper provides a container on which to use the before for the line connecting the steps
-.pf-c-progress-stepper__icon-wrapper {
+.pf-c-progress-stepper__step-connector {
   position: relative;
   display: flex;
-  justify-content: var(--pf-c-progress-stepper__icon-wrapper--JustifyContent);
+  justify-content: var(--pf-c-progress-stepper__step-connector--JustifyContent);
   width: 100%;
   transform: translateX(0);
 
   .pf-c-progress-stepper__step:not(:last-of-type) > &::before {
     position: absolute;
-    top: var(--pf-c-progress-stepper__icon-wrapper--before--Top); // half the height
-    left: var(--pf-c-progress-stepper__icon-wrapper--before--Left);
+    top: var(--pf-c-progress-stepper__step-connector--before--Top); // half the height
+    left: var(--pf-c-progress-stepper__step-connector--before--Left);
     z-index: -1;
-    width: var(--pf-c-progress-stepper__icon-wrapper--before--Width);
-    height: var(--pf-c-progress-stepper__icon-wrapper--before--Height);
+    width: var(--pf-c-progress-stepper__step-connector--before--Width);
+    height: var(--pf-c-progress-stepper__step-connector--before--Height);
     content: "";
-    border-right: var(--pf-c-progress-stepper__icon-wrapper--before--BorderRight);
-    border-bottom: var(--pf-c-progress-stepper__icon-wrapper--before--BorderBottom);
+    border-right: var(--pf-c-progress-stepper__step-connector--before--BorderRight);
+    border-bottom: var(--pf-c-progress-stepper__step-connector--before--BorderBottom);
   }
 }
 
