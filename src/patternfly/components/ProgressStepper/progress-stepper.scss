@@ -158,10 +158,6 @@
     --pf-c-progress-stepper__step-title--Color: var(--pf-c-progress-stepper__step--m-pending__step-title--Color);
   }
 
-  &.pf-m-in-process {
-    --pf-c-progress-stepper__step-icon--Color: var(--pf-global--info-color--100);
-  }
-
   &.pf-m-success {
     --pf-c-progress-stepper__step-icon--Color: var(--pf-global--success-color--100);
   }
