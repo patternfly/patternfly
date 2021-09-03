@@ -151,8 +151,8 @@ cssPrefix: pf-c-dual-list-selector
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
         {{/dual-list-selector-list-item}}
-        {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--IsSelected="true" dual-list-selector-item--text="Item2"}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true"}}
+          {{> dual-list-selector-item dual-list-selector-item--text="Item2"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item3"}}
@@ -260,17 +260,17 @@ cssPrefix: pf-c-dual-list-selector
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
         {{/dual-list-selector-list-item}}
-        {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--IsSelected="true" dual-list-selector-item--text="Item2"}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true"}}
+          {{> dual-list-selector-item dual-list-selector-item--text="Item2"}}
         {{/dual-list-selector-list-item}}
-        {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--IsSelected="true" dual-list-selector-item--text="Item3"}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true"}}
+          {{> dual-list-selector-item dual-list-selector-item--text="Item3"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item4"}}
         {{/dual-list-selector-list-item}}
-        {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--IsSelected="true" dual-list-selector-item--text="Item5"}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true"}}
+          {{> dual-list-selector-item dual-list-selector-item--text="Item5"}}
         {{/dual-list-selector-list-item}}
       {{/dual-list-selector-list}}
     {{/dual-list-selector-menu}}
@@ -548,8 +548,8 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
       {{#> dual-list-selector-list}}
-        {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--IsSelected="true" dual-list-selector-item--text="Item5"}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true"}}
+          {{> dual-list-selector-item dual-list-selector-item--text="Item5"}}
         {{/dual-list-selector-list-item}}
       {{/dual-list-selector-list}}
     {{/dual-list-selector-menu}}
@@ -591,45 +591,45 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
       {{#> dual-list-selector-list}}
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="0" dual-list-selector-item--count="6" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--id="0" dual-list-selector-item--count="6" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
             {{#> dual-list-selector-list newcontext}}
-              {{#> dual-list-selector-list-item}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Red" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="1" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+              {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Red" dual-list-selector-item--id="1" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
-              {{#> dual-list-selector-list-item}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--IsSelected="true" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="2" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+              {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true" dual-list-selector-list-item-row--HasCheck="true"}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--id="2" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
-              {{#> dual-list-selector-list-item}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Yellow" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="3" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+              {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Yellow" dual-list-selector-item--id="3" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
-              {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true"}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="4" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+              {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Green" dual-list-selector-item--id="4" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                 {{#> dual-list-selector-list newcontext}}
-                  {{#> dual-list-selector-list-item}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="5" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                    {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--id="5" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
-                  {{#> dual-list-selector-list-item}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="Medium green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="6" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                    {{#> dual-list-selector-item dual-list-selector-item--text="Medium green" dual-list-selector-item--id="6" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
-                  {{#> dual-list-selector-list-item}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="Dark green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="7" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                    {{#> dual-list-selector-item dual-list-selector-item--text="Dark green" dual-list-selector-item--id="7" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
                   {{/dual-list-selector-list}}
               {{/dual-list-selector-list-item}}
             {{/dual-list-selector-list}}
         {{/dual-list-selector-list-item}}
 
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="8" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item-row--HasCheck="true"}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--id="8" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
         {{/dual-list-selector-list-item}}
 
-        {{#> dual-list-selector-list-item}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="9" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--id="9" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
         {{/dual-list-selector-list-item}}
 
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="10" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item-row--HasCheck="true"}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--id="10" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
         {{/dual-list-selector-list-item}}
 
       {{/dual-list-selector-list}}
@@ -693,7 +693,6 @@ cssPrefix: pf-c-dual-list-selector
 {{/dual-list-selector}}
 ```
 
-
 ### Tree view chosen options
 ```hbs
 {{#> dual-list-selector dual-list-selector--id="basic"}}
@@ -727,39 +726,39 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
       {{#> dual-list-selector-list}}
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="11" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--id="11" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
             {{#> dual-list-selector-list newcontext}}
-              {{#> dual-list-selector-list-item}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--IsSelected="true" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="12" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+              {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true" dual-list-selector-list-item-row--HasCheck="true"}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--id="12" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
-              {{#> dual-list-selector-list-item}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Yellow" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="13" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+              {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Yellow" dual-list-selector-item--id="13" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
-              {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true"}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="14" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+              {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Green" dual-list-selector-item--id="14" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                 {{#> dual-list-selector-list newcontext}}
-                  {{#> dual-list-selector-list-item}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="15" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                    {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--id="15" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
-                  {{#> dual-list-selector-list-item}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="Medium green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="16" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                    {{#> dual-list-selector-item dual-list-selector-item--text="Medium green" dual-list-selector-item--id="16" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
-                  {{#> dual-list-selector-list-item}}
-                    {{#> dual-list-selector-item dual-list-selector-item--text="Dark green" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="17" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                    {{#> dual-list-selector-item dual-list-selector-item--text="Dark green" dual-list-selector-item--id="17" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
                   {{/dual-list-selector-list}}
               {{/dual-list-selector-list-item}}
             {{/dual-list-selector-list}}
         {{/dual-list-selector-list-item}}
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="18" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item-row--HasCheck="true"}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--id="18" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
         {{/dual-list-selector-list-item}}
-        {{#> dual-list-selector-list-item}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="19" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--id="19" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
         {{/dual-list-selector-list-item}}
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="20" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item-row--HasCheck="true"}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Type something" dual-list-selector-item--id="20" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
         {{/dual-list-selector-list-item}}
       {{/dual-list-selector-list}}
     {{/dual-list-selector-menu}}
@@ -816,11 +815,11 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
       {{#> dual-list-selector-list}}
-        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="21" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--id="21" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
             {{#> dual-list-selector-list newcontext}}
-              {{#> dual-list-selector-list-item}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--IsSelected="true" dual-list-selector-item--HasCheck="true" dual-list-selector-item--id="22" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+              {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true" dual-list-selector-list-item-row--HasCheck="true"}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--id="22" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
             {{/dual-list-selector-list}}
         {{/dual-list-selector-list-item}}
@@ -940,8 +939,8 @@ cssPrefix: pf-c-dual-list-selector
           {{#> dual-list-selector-list-item dual-list-selector-list-item--id=(concat dual-list-selector--id '-list-item-5') dual-list-selector-list-item-row--modifier="pf-m-ghost-row" dual-list-selector-draggable-button--IsDisabled="true"}}
             {{> dual-list-selector-item dual-list-selector-item--text="Item5 - ghost row"}}
           {{/dual-list-selector-list-item}}
-          {{#> dual-list-selector-list-item dual-list-selector-list-item--id=(concat dual-list-selector--id '-list-item-7')}}
-            {{> dual-list-selector-item dual-list-selector-item--text="Item7"}}
+          {{#> dual-list-selector-list-item dual-list-selector-list-item--id=(concat dual-list-selector--id '-list-item-7') dual-list-selector-list-item-row--IsSelected="true"}}
+            {{> dual-list-selector-item dual-list-selector-item--text="Item7 - selected"}}
           {{/dual-list-selector-list-item}}
         {{/dual-list-selector-list}}
       {{/dual-list-selector-menu}}
@@ -997,7 +996,7 @@ cssPrefix: pf-c-dual-list-selector
 | `.pf-m-chosen` | `.pf-c-dual-list-selector__pane` | Defines a pane as the chosen list. |
 | `.pf-m-drag-over` | `.pf-c-dual-list-selector__list` | Modifies the dual list selector list to indicate that a draggable item is being dragged over the list. |
 | `.pf-m-ghost-row` | `.pf-c-dual-list-selector__list-item-row` | Modifies the list item main to be a ghost row. |
-| `.pf-m-selected` | `.pf-c-dual-list-selector__item` | Modifies the menu item for the selected state. |
-| `.pf-m-check` | `.pf-c-dual-list-selector__item` | Indicates that an item is selectable with a checkbox. |
+| `.pf-m-selected` | `.pf-c-dual-list-selector__list-item-row` | Modifies the menu item for the selected state. |
+| `.pf-m-check` | `.pf-c-dual-list-selector__list-item-row` | Indicates that an item is selectable with a checkbox. |
 | `.pf-m-expandable` | `.pf-c-dual-list-selector__list-item` | Indicates that an item is expandable. |
 | `.pf-m-expanded` | `.pf-c-dual-list-selector__list-item` | Indicates that an item is expanded. |
