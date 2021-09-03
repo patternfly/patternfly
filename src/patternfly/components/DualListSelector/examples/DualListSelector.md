@@ -830,7 +830,139 @@ cssPrefix: pf-c-dual-list-selector
 {{/dual-list-selector}}
 ```
 
+### Draggable
+```hbs
+{{#> wrapper dual-list-selector--id="draggable"}}
+  <div id="{{dual-list-selector--id}}-help">
+    Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
+  </div>
+  {{#> dual-list-selector }}
+    {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
+      {{#> dual-list-selector-header}}
+        {{#> dual-list-selector-title}}
+          {{#> dual-list-selector-title-text}}
+            Available options
+          {{/dual-list-selector-title-text}}
+        {{/dual-list-selector-title}}
+      {{/dual-list-selector-header}}
+      {{#> dual-list-selector-tools}}
+        {{#> dual-list-selector-tools-filter}}
+          {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{/dual-list-selector-tools-filter}}
+        {{#> dual-list-selector-tools-actions}}
+          {{#> dual-list-selector-tools-actions-item}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
+              <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+            {{/button}}
+          {{/dual-list-selector-tools-actions-item}}
+          {{#> dual-list-selector-tools-actions-item}}
+            {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
+          {{/dual-list-selector-tools-actions-item}}
+        {{/dual-list-selector-tools-actions}}
+      {{/dual-list-selector-tools}}
+      {{#> dual-list-selector-status}}
+        {{#> dual-list-selector-status-text}}
+          0 of 5 items selected
+        {{/dual-list-selector-status-text}}
+      {{/dual-list-selector-status}}
+      {{#> dual-list-selector-menu}}
+        {{#> dual-list-selector-list}}
+          {{#> dual-list-selector-list-item}}
+            {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
+          {{/dual-list-selector-list-item}}
+          {{#> dual-list-selector-list-item}}
+            {{> dual-list-selector-item dual-list-selector-item--text="Item4"}}
+          {{/dual-list-selector-list-item}}
+          {{#> dual-list-selector-list-item}}
+            {{> dual-list-selector-item dual-list-selector-item--text="Item6"}}
+          {{/dual-list-selector-list-item}}
+        {{/dual-list-selector-list}}
+      {{/dual-list-selector-menu}}
+    {{/dual-list-selector-pane}}
+    {{#> dual-list-selector-controls}}
+      {{#> dual-list-selector-controls-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Add selected"'}}
+          <i class="fas fa-fw fa-angle-right"></i>
+        {{/button}}
+      {{/dual-list-selector-controls-item}}
+      {{#> dual-list-selector-controls-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Add all"'}}
+          <i class="fas fa-fw fa-angle-double-right"></i>
+        {{/button}}
+      {{/dual-list-selector-controls-item}}
+      {{#> dual-list-selector-controls-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove all"'}}
+          <i class="fas fa-fw fa-angle-double-left"></i>
+        {{/button}}
+      {{/dual-list-selector-controls-item}}
+      {{#> dual-list-selector-controls-item}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Remove selected"'}}
+          <i class="fas fa-fw fa-angle-left"></i>
+        {{/button}}
+      {{/dual-list-selector-controls-item}}
+    {{/dual-list-selector-controls}}
+    {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-chosen') dual-list-selector-pane--modifier="pf-m-chosen"}}
+      {{#> dual-list-selector-header}}
+        {{#> dual-list-selector-title}}
+          {{#> dual-list-selector-title-text}}
+            Chosen options
+          {{/dual-list-selector-title-text}}
+        {{/dual-list-selector-title}}
+      {{/dual-list-selector-header}}
+      {{#> dual-list-selector-tools}}
+        {{#> dual-list-selector-tools-filter}}
+          {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{/dual-list-selector-tools-filter}}
+        {{#> dual-list-selector-tools-actions}}
+          {{#> dual-list-selector-tools-actions-item}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
+              <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+            {{/button}}
+          {{/dual-list-selector-tools-actions-item}}
+          {{#> dual-list-selector-tools-actions-item}}
+            {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
+          {{/dual-list-selector-tools-actions-item}}
+        {{/dual-list-selector-tools-actions}}
+      {{/dual-list-selector-tools}}
+      {{#> dual-list-selector-status}}
+        {{#> dual-list-selector-status-text}}
+          0 of 0 items selected
+        {{/dual-list-selector-status-text}}
+      {{/dual-list-selector-status}}
+      {{#> dual-list-selector-menu}}
+        {{#> dual-list-selector-list dual-list-selector-list-item--IsDraggable="true"}}
+          {{#> dual-list-selector-list-item dual-list-selector-list-item--id=(concat dual-list-selector--id '-list-item-2') dual-list-selector-draggable-button--IsDisabled="true"}}
+            {{> dual-list-selector-item dual-list-selector-item--text="Item2 - draggable icon disabled"}}
+          {{/dual-list-selector-list-item}}
+          {{#> dual-list-selector-list-item dual-list-selector-list-item--id=(concat dual-list-selector--id '-list-item-3')}}
+            {{> dual-list-selector-item dual-list-selector-item--text="Item3"}}
+          {{/dual-list-selector-list-item}}
+          {{#> dual-list-selector-list-item dual-list-selector-list-item--id=(concat dual-list-selector--id '-list-item-5') dual-list-selector-list-item-row--modifier="pf-m-ghost-row" dual-list-selector-draggable-button--IsDisabled="true"}}
+            {{> dual-list-selector-item dual-list-selector-item--text="Item5 - ghost row"}}
+          {{/dual-list-selector-list-item}}
+          {{#> dual-list-selector-list-item dual-list-selector-list-item--id=(concat dual-list-selector--id '-list-item-7')}}
+            {{> dual-list-selector-item dual-list-selector-item--text="Item7"}}
+          {{/dual-list-selector-list-item}}
+        {{/dual-list-selector-list}}
+      {{/dual-list-selector-menu}}
+    {{/dual-list-selector-pane}}
+  {{/dual-list-selector}}
+  <div class="pf-screen-reader" aria-live="assertive">
+    This is the aria-live section that provides real-time feedback to the user.
+  </div>
+{{/wrapper}}
+```
+
 ## Documentation
+
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-pressed="true or false"` | `.pf-c-dual-list-selector__draggable .pf-c-button` | Indicates whether the button is currently pressed or not. |
+| `aria-live` | `[element with live text]` | To give screen reader users live feedback about what's happening during interaction with the dual list selector, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
+| `aria-describedby="[id value of applicable content]"` | `.pf-c-dual-list-selector__draggable .pf-c-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. **Highly recommended** |
+| `aria-labelledby="[id of .pf-c-dual-list-selector__draggable .pf-c-button] [id of node title text]"` | `.pf-c-table__dual-list-selector .pf-c-button` | Provides an accessible name for the draggable button. |
+| `id="[]"` | `.pf-c-dual-list-selector__draggable .pf-c-button`, `[element with node title text]` | Gives the button and the text element accessible IDs. |
 
 ### Usage
 
@@ -850,6 +982,7 @@ cssPrefix: pf-c-dual-list-selector
 | `.pf-c-dual-list-selector__menu` | `<div>` | Initiates a dual list selector pane menu container. **Required** |
 | `.pf-c-dual-list-selector__list` | `<ul>` | Initiates a dual list selector pane menu list. **Required** |
 | `.pf-c-dual-list-selector__list-item` | `<li>` | Initiates a dual list selector pane menu list item. **Required** |
+| `.pf-c-dual-list-selector__list-item-row` | `<div>` | Initiates a dual list selector pane menu list item row. **Required** |
 | `.pf-c-dual-list-selector__item` | `<button>`, `<div>` | Initiates a dual list selector pane menu item. **Required** |
 | `.pf-c-dual-list-selector__item-main` | `<span>` | Initiates a dual list selector pane menu item main container. **Required** |
 | `.pf-c-dual-list-selector__item-check` | `<span>` | Initiates the dual list selector item check. |
@@ -861,6 +994,8 @@ cssPrefix: pf-c-dual-list-selector
 | `.pf-c-dual-list-selector__controls-item` | `<div>` | Initiates the dual list selector controls item. **Required** |
 | `.pf-m-available` | `.pf-c-dual-list-selector__pane` | Defines a pane as the available list. |
 | `.pf-m-chosen` | `.pf-c-dual-list-selector__pane` | Defines a pane as the chosen list. |
+| `.pf-m-drag-over` | `.pf-c-dual-list-selector__list` | Modifies the dual list selector list to indicate that a draggable item is being dragged over the list. |
+| `.pf-m-ghost-row` | `.pf-c-dual-list-selector__list-item-row` | Modifies the list item main to be a ghost row. |
 | `.pf-m-selected` | `.pf-c-dual-list-selector__item` | Modifies the menu item for the selected state. |
 | `.pf-m-check` | `.pf-c-dual-list-selector__item` | Indicates that an item is selectable with a checkbox. |
 | `.pf-m-expandable` | `.pf-c-dual-list-selector__list-item` | Indicates that an item is expandable. |
