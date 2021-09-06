@@ -46,7 +46,7 @@ cssPrefix: pf-c-dual-list-selector
           {{> dual-list-selector-item dual-list-selector-item--text="Item2"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--text="Item3"}}
+          {{> dual-list-selector-item dual-list-selector-item--IsDisabled="true" dual-list-selector-item--text="Item3"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item4"}}
@@ -693,7 +693,7 @@ cssPrefix: pf-c-dual-list-selector
 {{/dual-list-selector}}
 ```
 
-### Tree view chosen options
+### Tree view chosen and disabled options
 ```hbs
 {{#> dual-list-selector dual-list-selector--id="basic"}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
@@ -735,16 +735,16 @@ cssPrefix: pf-c-dual-list-selector
               {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
                 {{#> dual-list-selector-item dual-list-selector-item--text="Yellow" dual-list-selector-item--id="13" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
-              {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Green" dual-list-selector-item--id="14" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+              {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-item--IsDisabled="true" dual-list-selector-list-item-row--HasCheck="true"}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Green - disabled colors" dual-list-selector-item--id="14" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                 {{#> dual-list-selector-list newcontext}}
-                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                  {{#> dual-list-selector-list-item dual-list-selector-item--IsDisabled="true" dual-list-selector-list-item-row--HasCheck="true"}}
                     {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--id="15" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
-                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                  {{#> dual-list-selector-list-item dual-list-selector-item--IsDisabled="true" dual-list-selector-list-item-row--HasCheck="true"}}
                     {{#> dual-list-selector-item dual-list-selector-item--text="Medium green" dual-list-selector-item--id="16" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
-                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
+                  {{#> dual-list-selector-list-item dual-list-selector-item--IsDisabled="true" dual-list-selector-list-item-row--HasCheck="true"}}
                     {{#> dual-list-selector-item dual-list-selector-item--text="Dark green" dual-list-selector-item--id="17" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
                   {{/dual-list-selector-list}}
