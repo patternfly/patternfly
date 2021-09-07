@@ -1,3 +1,7 @@
 <span class="pf-c-nav__toggle-icon">
-  <i class="fas fa-angle-right" aria-hidden="true"></i>
+  {{#if nav-item--IsDrillup}}
+    <i class="fas fa-angle-left" aria-hidden="true"></i>
+  {{else}}
+    <i class="fas fa-angle-right" aria-hidden="true"></i>
+  {{/if}}
 </span>
