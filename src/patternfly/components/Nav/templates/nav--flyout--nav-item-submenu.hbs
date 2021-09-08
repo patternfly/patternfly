@@ -1,27 +1,27 @@
-{{#> nav-subnav}}
-  {{#> nav-list newcontent}}
-    {{#> nav-item}}
+{{#> nav-subnav nav-subnav--attribute='style= "--pf-c-nav__item--m-flyout__subnav--Top: 168px"' nav-item--expanded=nav--flyout--submenu--IsExpanded}}
+  {{#> nav-list}}
+    {{#> nav-item nav-item--IsFlyout=reset}}
       {{#> nav-link nav-link--href="#"}}
         Container platform
       {{/nav-link}}
     {{/nav-item}}
-    {{#> nav-item nav-item--IsFlyout="true" nav-item--expanded="true"}}
+    {{#> nav-item nav-item--IsFlyout="true"}}
       {{#> nav-link nav-link--href="#"}}
         Dedicated
       {{/nav-link}}
-      {{#> nav-subnav}}
-        {{#> nav-list}}
-          {{#> nav-item newcontent}}
+      {{#> nav-subnav nav-subnav--attribute=reset}}
+        {{#> nav-list nav-item--IsFlyout=reset}}
+          {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
               Dedicated (Annual)
             {{/nav-link}}
           {{/nav-item}}
-          {{#> nav-item newcontent}}
+          {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
               Dedicated (On-Demand)
             {{/nav-link}}
           {{/nav-item}}
-          {{#> nav-item newcontent}}
+          {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
               Dedicated (On-Demand limits)
             {{/nav-link}}

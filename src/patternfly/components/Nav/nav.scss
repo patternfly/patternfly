@@ -279,6 +279,7 @@
   --pf-c-nav__item--m-flyout__subnav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-nav__item--m-flyout__subnav--MaxHeight: none;
   --pf-c-nav__item--m-flyout__subnav--BoxShadow: var(--pf-global--BoxShadow--lg-left);
+  --pf-c-nav__item--m-flyout__subnav__subnav--Top: 0;
 
   // Subnav link
   --pf-c-nav__item--m-flyout__subnav__link--PaddingTop: var(--pf-global--spacer--sm);
@@ -287,7 +288,27 @@
   --pf-c-nav__item--m-flyout__subnav__link--before--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__item--m-flyout__subnav__link--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
 
+  // List
+  --pf-c-nav__item--m-flyout__list--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
+
   // end flyout variant ====================================== //
+
+  // Drilldown variant ====================================== //
+  --pf-c-nav__item--m-drilldown__subnav--PaddingTop: 0;
+  --pf-c-nav__item--m-drilldown__subnav--PaddingLeft: 0;
+  --pf-c-nav__item--m-drilldown__subnav--PaddingBottom: 0;
+  --pf-c-nav__item--m-drilldown__subnav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
+  --pf-c-nav__item--m-drilldown__subnav--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-nav__item--m-drilldown__link--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-nav__item--m-drilldown__link--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-nav__item--m-drilldown__link--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-nav__item--m-drilldown--m-expanded__toggle-icon--Rotate: 0;
+  --pf-c-nav__item--m-drilldown--m-expanded__subnav--ZIndex: var(--pf-global--ZIndex--xs);
+
+  // Toggle
+  --pf-c-nav__toggle--m-start--MarginRight: var(--pf-global--spacer--sm);
+
+  // end drilldown variant ====================================== //
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav__link--xl--PaddingRight);
@@ -302,6 +323,8 @@
     --pf-c-nav__section-title--PaddingLeft: var(--pf-c-nav__section-title--xl--PaddingLeft);
     --pf-c-nav__subnav--PaddingLeft: var(--pf-c-nav__subnav--xl--PaddingLeft);
   }
+
+  position: relative;
 
   &.pf-m-horizontal,
   &.pf-m-tertiary {
@@ -519,6 +542,10 @@
       transform: translateX(0);
     }
   }
+
+  &.pf-m-overflow-hidden {
+    overflow: hidden;
+  }
 }
 
 // List
@@ -544,6 +571,15 @@
     }
   }
 
+  &.pf-m-flyout,
+  &.pf-m-drilldown {
+    position: static;
+
+    &.pf-m-expanded .pf-c-nav__subnav {
+      overflow: visible;
+    }
+  }
+
   &.pf-m-flyout {
     --pf-c-nav__item--MarginTop: var(--pf-c-nav__item--m-flyout--MarginTop);
 
@@ -563,6 +599,15 @@
       background-color: var(--pf-c-nav__item--m-flyout--active--BackgroundColor);
     }
 
+    .pf-c-nav__list {
+      width: 100%;
+      background-color: var(--pf-c-nav__item--m-flyout__list--BackgroundColor);
+    }
+
+    .pf-c-nav__item.pf-m-flyout {
+      position: relative; // update item to position for nested flyouts to position without the need to update --pf-c-nav__item--m-flyout__subnav--Top at each level
+    }
+
     .pf-c-nav__subnav {
       --pf-c-nav__link--PaddingTop: var(--pf-c-nav__item--m-flyout__subnav__link--PaddingTop);
       --pf-c-nav__link--PaddingBottom: var(--pf-c-nav__item--m-flyout__subnav__link--PaddingBottom);
@@ -574,11 +619,46 @@
       --pf-c-nav__link--before--BorderColor: var(--pf-c-nav__item--m-flyout__subnav__link--before--BorderColor);
 
       position: absolute;
-      top: var(--pf-c-nav__item--m-flyout__subnav--Top);
+      top: var(--pf-c-nav__item--m-flyout__subnav--Top); // top position needs to be set on only the root flyout
       left: var(--pf-c-nav__item--m-flyout__subnav--Left);
       min-width: 100%;
-      background-color: var(--pf-c-nav__item--m-flyout__subnav--BackgroundColor);
+      background-color: var(--pf-c-nav__item--m-flyout__subnav--BackgroundColor); // remove at breaking change
       box-shadow: var(--pf-c-nav__item--m-flyout__subnav--BoxShadow);
+
+      // stylelint-disable selector-max-class
+      & & {
+        --pf-c-nav__item--m-flyout__subnav--Top: var(--pf-c-nav__item--m-flyout__subnav__subnav--Top);
+      }
+      // stylelint-enable
+    }
+  }
+
+  &.pf-m-drilldown {
+    --pf-c-nav__subnav--PaddingTop: var(--pf-c-nav__item--m-drilldown__subnav--PaddingTop);
+    --pf-c-nav__subnav--PaddingBottom: var(--pf-c-nav__item--m-drilldown__subnav--PaddingBottom);
+    --pf-c-nav__subnav--PaddingLeft: var(--pf-c-nav__item--m-drilldown__subnav--PaddingLeft);
+    --pf-c-nav__item--m-expanded__toggle-icon--Rotate: var(--pf-c-nav__item--m-drilldown--m-expanded__toggle-icon--Rotate);
+
+    > .pf-c-nav__subnav {
+      --pf-c-nav__link--PaddingTop: var(--pf-c-nav__item--m-drilldown__link--PaddingTop);
+      --pf-c-nav__link--PaddingBottom: var(--pf-c-nav__item--m-drilldown__link--PaddingBottom);
+      --pf-c-nav__link--FontSize: var(--pf-c-nav__item--m-drilldown__link--FontSize);
+      --pf-c-nav__subnav--MaxHeight: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 100%;
+      z-index: var(--pf-c-nav__item--m-drilldown__subnav--ZIndex);
+      width: 100%;
+      height: 100%;
+      background-color: var(--pf-c-nav__item--m-drilldown__subnav--BackgroundColor);
+    }
+
+    &.pf-m-expanded {
+      > .pf-c-nav__subnav {
+        left: 0;
+        z-index: var(--pf-c-nav__item--m-drilldown--m-expanded__subnav--ZIndex);
+      }
     }
   }
 }
@@ -736,6 +816,11 @@
   margin-left: auto;
   font-size: var(--pf-c-nav__toggle--FontSize);
   line-height: 1;
+
+  &.pf-m-start {
+    margin-right: var(--pf-c-nav__toggle--m-start--MarginRight);
+    margin-left: calc(var(--pf-c-nav__toggle--PaddingRight) * -1);
+  }
 }
 
 // Toggle icon
