@@ -180,9 +180,11 @@ cssPrefix: pf-c-form
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="info"}}
-    {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
-      Information
-    {{/form-label}}
+    {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
+        Information
+      {{/form-label}}
+    {{/form-group-label}}
     {{#> form-control controlType="textarea" form-control--attribute=(concat 'id="' form--id form-group--id '" name="' form--id form-group--id '" aria-invalid="true" aria-describedby="' form--id form-group--id '-helper"')}}
     {{/form-control}}
     {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
