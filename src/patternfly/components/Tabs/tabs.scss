@@ -434,7 +434,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   .pf-c-button {
     display: flex;
-    align-items: center;
+    text-align: left;
+    white-space: normal;
   }
 }
 
