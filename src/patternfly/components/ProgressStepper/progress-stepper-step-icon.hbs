@@ -1,0 +1,27 @@
+<div class="pf-c-progress-stepper__step-connector">
+  <span class="pf-c-progress-stepper__step-icon{{#if progress-stepper-step-icon--modifier}} {{progress-stepper-step-icon--modifier}}{{/if}}"
+    {{#if progress-stepper-step-icon--attribute}}
+      {{{progress-stepper-step-icon--attribute}}}
+    {{/if}}>
+
+    {{#if progress-stepper-step--IsInfo}}
+      <i class="fas fa-info-circle" aria-hidden="true"></i>
+    {{else if progress-stepper-step--IsInProgress}}
+      <i class="pficon pf-icon-resources-full" aria-hidden="true"></i>
+    {{else if progress-stepper-step--IsInProgressAlt}}
+      <i class="pficon pf-icon-in-progress" aria-hidden="true"></i>
+    {{else if progress-stepper-step--IsComplete}}
+      <i class="fas fa-check-circle" aria-hidden="true"></i>
+    {{else if progress-stepper-step--IsFailure}}
+      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+    {{else if progress-stepper-step--IsIssue}}
+      <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+    {{else if progress-stepper-step--IsPending}}
+
+    {{else if progress-stepper-step--IsPendingAlt}}
+      <i class="pficon pf-icon-pending" aria-hidden="true"></i>
+    {{else}}
+      {{>@partial-block}}
+    {{/if}}
+  </span> 
+</div>

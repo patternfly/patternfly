@@ -1,0 +1,22 @@
+<li class="pf-c-progress-stepper__step
+{{~#if progress-stepper-step--modifier}} {{progress-stepper-step--modifier}}{{/if}}
+{{~#if progress-stepper-step--IsCurrent}} pf-m-current{{/if}}
+{{~#if progress-stepper-step--IsComplete}} pf-m-success{{/if}}
+{{~#if progress-stepper-step--IsIssue}} pf-m-warning{{/if}}
+{{~#if progress-stepper-step--IsFailure}} pf-m-danger{{/if}}
+{{~#if progress-stepper-step--IsInProgress}} pf-m-info{{/if}}
+{{~#if progress-stepper-step--IsPending}} pf-m-pending{{/if}}
+{{~#if progress-stepper-step--IsPendingAlt}} pf-m-pending{{/if}}"
+  {{#if progress-stepper-step--attribute}}
+    {{{progress-stepper-step--attribute}}}
+  {{/if}}
+  aria-label="{{#if progress-stepper-step--IsCurrent}}current step,{{/if}}
+  {{~#if progress-stepper-step--IsComplete}}completed step,{{/if}}
+  {{~#if progress-stepper-step--IsIssue}}step with issue,{{/if}}
+  {{~#if progress-stepper-step--IsFailure}}step with failure,{{/if}}
+  {{~#if progress-stepper-step--IsInProgress}}in process step,{{/if}}
+  {{~#if progress-stepper-step--IsInProgressAlt}}in process step,{{/if}}
+  {{~#if progress-stepper-step--IsPending}}pending step,{{/if}}
+  {{~#if progress-stepper-step--IsPendingAlt}}pending step,{{/if}}">
+  {{>@partial-block}}
+</li>
