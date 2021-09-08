@@ -303,7 +303,7 @@
   --pf-c-nav__item--m-drilldown__link--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-nav__item--m-drilldown__link--FontSize: var(--pf-global--FontSize--md);
   --pf-c-nav__item--m-drilldown--m-expanded__toggle-icon--Rotate: 0;
-  --pf-c-nav__item--m-drilldown--m-expanded__subnav--ZIndex: 9999;
+  --pf-c-nav__item--m-drilldown--m-expanded__subnav--ZIndex: var(--pf-global--ZIndex--xs);
 
   // Toggle
   --pf-c-nav__toggle--m-start--MarginRight: var(--pf-global--spacer--sm);
