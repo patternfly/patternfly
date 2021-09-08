@@ -15,7 +15,7 @@
   --pf-c-progress-stepper--m-center__step-connector--JustifyContent: center;
 
   // Step icon variables
-  --pf-c-progress-stepper__step-icon--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-progress-stepper__step-icon--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-progress-stepper__step-icon--Width: #{pf-size-prem(28px)};
   --pf-c-progress-stepper__step-icon--Height: var(--pf-c-progress-stepper__step-icon--Width);
   --pf-c-progress-stepper__step-icon--FontSize: var(--pf-global--icon--FontSize--md);
