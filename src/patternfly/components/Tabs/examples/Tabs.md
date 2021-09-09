@@ -218,6 +218,30 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
+### Vertical expandable (legacy)
+```hbs
+{{#> tabs tabs--id="vertical-expandable-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expanded (legacy)
+```hbs
+{{#> tabs tabs--id="vertical-expanded-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expandable (responsive, legacy)
+```hbs
+{{#> tabs tabs--id="vertical-expandable-responsive-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
 The tabs component should only be used to change content views within a page. The similar-looking but semantically different [horizontal nav component](/components/navigation/#horizontal) is available for general navigation use cases.
 
 Tabs should be used with the [tab content component](/components/tab-content).
