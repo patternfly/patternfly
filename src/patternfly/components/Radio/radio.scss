@@ -5,8 +5,8 @@
   --pf-c-radio__label--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-radio__label--FontSize: var(--pf-global--FontSize--md);
   --pf-c-radio__label--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-radio__input--Height: calc(var(--pf-c-radio__label--FontSize) * var(--pf-c-radio__label--LineHeight));
-  --pf-c-radio__input--MarginTop: calc(-1px * (var(--pf-c-radio__label--LineHeight) * 1.25));
+  --pf-c-radio__input--Height: var(--pf-c-radio__label--FontSize);
+  --pf-c-radio__input--MarginTop: calc(((var(--pf-c-radio__label--FontSize) * var(--pf-c-radio__label--LineHeight)) - var(--pf-c-radio__input--Height)) / 2);
   --pf-c-radio__input--first-child--MarginLeft: #{pf-size-prem(1px)};
   --pf-c-radio__input--last-child--MarginRight: #{pf-size-prem(1px)};
   --pf-c-radio__description--FontSize: var(--pf-global--FontSize--sm);
