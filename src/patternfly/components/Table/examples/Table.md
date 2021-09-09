@@ -3370,10 +3370,10 @@ Long strings in table cells will push content. Add a width modifier to `thead th
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-pressed="true or false"` | `.pf-c-table__draggable .pf-c-button` | Indicates whether the button is currently pressed or not.  |
-| `aria-live` | `[element with live text]` | To give screen reader users live feedback about what's happening during interaction with the data list, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
+| `aria-live` | `[element with live text]` | To give screen reader users live feedback about what's happening during interaction with the table, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-table__draggable .pf-c-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. The example here uses a `<div id="table-draggable-rows-help"></div>`. **Highly recommended** |
 | `aria-labelledby="[id of .pf-c-table__draggable .pf-c-button] [id of row title text]"` | `.pf-c-table__draggable .pf-c-button` | Provides an accessible name for the draggable button. |
-| `id="[]"` | `.pf-c-data-list__item-draggable-button`, `[element with row title text]` | Gives the button and the text element accessible IDs |
+| `id="[]"` | `.pf-c-table__draggable .pf-c-button`, `[element with row title text]` | Gives the button and the text element accessible IDs. |
 
 ### Draggable rows usage
 | Class | Applied to | Outcome |

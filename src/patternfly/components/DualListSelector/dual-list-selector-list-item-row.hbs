@@ -1,0 +1,12 @@
+<div class="pf-c-dual-list-selector__list-item-row
+  {{~#if dual-list-selector-list-item-row--HasCheck}} pf-m-check{{/if}}
+  {{~#if dual-list-selector-list-item-row--IsSelected}} pf-m-selected{{/if}}
+  {{~#if dual-list-selector-list-item-row--modifier}} {{dual-list-selector-list-item-row--modifier}}{{/if}}"
+  {{#if dual-list-selector-list-item-row--attribute}}
+    {{{dual-list-selector-list-item-row--attribute}}}
+  {{/if}}>
+  {{#if dual-list-selector-list-item--IsDraggable}}
+    {{> dual-list-selector-draggable}}
+  {{/if}}
+  {{>@partial-block}}
+</div>

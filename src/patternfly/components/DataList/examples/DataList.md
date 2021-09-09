@@ -955,9 +955,9 @@ When a list item includes more than one block of content, it can be difficult fo
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-pressed="true or false"` | `.pf-c-data-list__item-draggable-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. |
-| `aria-live` | `.pf-c-data-list__cell-text` | **Highly Recommended** to give screen reader users live feedback about what's happening during interaction with the data list, both during drag and drop interactions and keyboard interactions. |
-| `aria-describedby="[id value of applicable content]"` | `.pf-c-data-list__item-draggable-button` | **Highly recommended** Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. The example here uses a `<div id="[]"></div>` |
-| `aria-labelledby="[id value of .pf-c-data-list__item-draggable-button] [id value of .pf-c-data-list__cell-text]"]"` | `.pf-c-data-list__item-draggable-button` | Provides an accessible name for the draggable button. |
+| `aria-live` | `[element with live text]` | Gives screen reader users live feedback about what's happening during interaction with the data list, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
+| `aria-describedby="[id value of applicable content]"` | `.pf-c-data-list__item-draggable-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. The example here uses a `<div id="draggable-help"></div>`. **Highly recommended** |
+| `aria-labelledby="[id value of .pf-c-data-list__item-draggable-button] [id value of .pf-c-data-list__cell-text]"` | `.pf-c-data-list__item-draggable-button` | Provides an accessible name for the draggable button. |
 | `id="[]"` | `.pf-c-data-list__item-draggable-button`, `.pf-c-data-list__cell-text` | Gives the button and the text element accessible IDs |
 
 ### Usage
