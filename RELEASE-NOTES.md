@@ -3,6 +3,39 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2021.12 release notes (2021-09-14)
+Packages released:
+- [@patternfly/patternfly@v4.135.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.135.2)
+
+### Components
+- **Dual list selector:** Added drag/drop ([#4356](https://github.com/patternfly/patternfly/pull/4356))
+- **Form control:** Removed extra space under textarea ([#4329](https://github.com/patternfly/patternfly/pull/4329))
+- **Log viewer:** Updated to support dynamic size list ([#4327](https://github.com/patternfly/patternfly/pull/4327))
+- **Masthead:** Added content wrapper to demo ([#4325](https://github.com/patternfly/patternfly/pull/4325))
+- **Nav:**
+  - Added flyout menus ([#4301](https://github.com/patternfly/patternfly/pull/4301))
+  - Added drilldown variant ([#4364](https://github.com/patternfly/patternfly/pull/4364))
+- **Popover/modal:** Updated dialog role usage/docs ([#4363](https://github.com/patternfly/patternfly/pull/4363))
+- **Progress stepper:**
+  - Added component ([#4357](https://github.com/patternfly/patternfly/pull/4357))
+  - Fixed global color var name ([#4367](https://github.com/patternfly/patternfly/pull/4367))
+- **Tabs:** Moved text into expandable toggle ([#4333](https://github.com/patternfly/patternfly/pull/4333))
+
+### Other
+- **A11y:** Enabled ignored checks, fixed examples ([#4324](https://github.com/patternfly/patternfly/pull/4324))
+- **Build:** Updated to use yarn ([#4334](https://github.com/patternfly/patternfly/pull/4334))
+- **Ci:**
+  - Converted circleci to github actions ([#4342](https://github.com/patternfly/patternfly/pull/4342))
+  - Added actions followup ([#4344](https://github.com/patternfly/patternfly/pull/4344))
+  - Uploaded pf4.patternfly.org ([#4346](https://github.com/patternfly/patternfly/pull/4346))
+  - Tested breaking change lint ([#4348](https://github.com/patternfly/patternfly/pull/4348))
+  - Removed breaking change lint ([#4350](https://github.com/patternfly/patternfly/pull/4350))
+- **Deps:** Updated dependency @patternfly/patternfly-a11y to v4.2.1 ([#4309](https://github.com/patternfly/patternfly/pull/4309))
+- **Docs:**
+  - Fixed broken links ([#4341](https://github.com/patternfly/patternfly/pull/4341))
+  - Update some documentation links to be relative ([#4347](https://github.com/patternfly/patternfly/pull/4347))
+
+
 ## 2021.11 release notes (2021-08-24)
 Packages released:
 - [@patternfly/patternfly@v4.132.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.132.2)
