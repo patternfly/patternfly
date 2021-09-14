@@ -45,8 +45,8 @@ cssPrefix: pf-c-dual-list-selector
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item2"}}
         {{/dual-list-selector-list-item}}
-        {{#> dual-list-selector-list-item}}
-          {{> dual-list-selector-item dual-list-selector-item--IsDisabled="true" dual-list-selector-item--text="Item3"}}
+        {{#> dual-list-selector-list-item dual-list-selector-list-item--IsDisabled="true"}}
+          {{> dual-list-selector-item dual-list-selector-item--text="Item3 (disabled)"}}
         {{/dual-list-selector-list-item}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item4"}}
@@ -735,16 +735,16 @@ cssPrefix: pf-c-dual-list-selector
               {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
                 {{#> dual-list-selector-item dual-list-selector-item--text="Yellow" dual-list-selector-item--id="13" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
-              {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-item--IsDisabled="true" dual-list-selector-list-item-row--HasCheck="true"}}
-                {{#> dual-list-selector-item dual-list-selector-item--text="Green - disabled colors" dual-list-selector-item--id="14" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-                {{#> dual-list-selector-list newcontext}}
-                  {{#> dual-list-selector-list-item dual-list-selector-item--IsDisabled="true" dual-list-selector-list-item-row--HasCheck="true"}}
+              {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item--IsDisabled="true" dual-list-selector-list-item-row--HasCheck="true"}}
+                {{#> dual-list-selector-item dual-list-selector-item--text="Green (disabled)" dual-list-selector-item--id="14" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+                {{#> dual-list-selector-list newcontext dual-list-selector-list-item--IsTopLevelDisabled="true" dual-list-selector-list-item--IsDisabled="true"}}
+                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
                     {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--id="15" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
-                  {{#> dual-list-selector-list-item dual-list-selector-item--IsDisabled="true" dual-list-selector-list-item-row--HasCheck="true"}}
+                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
                     {{#> dual-list-selector-item dual-list-selector-item--text="Medium green" dual-list-selector-item--id="16" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
-                  {{#> dual-list-selector-list-item dual-list-selector-item--IsDisabled="true" dual-list-selector-list-item-row--HasCheck="true"}}
+                  {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
                     {{#> dual-list-selector-item dual-list-selector-item--text="Dark green" dual-list-selector-item--id="17" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
                   {{/dual-list-selector-list}}
@@ -962,6 +962,7 @@ cssPrefix: pf-c-dual-list-selector
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-dual-list-selector__draggable .pf-c-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. **Highly recommended** |
 | `aria-labelledby="[id of .pf-c-dual-list-selector__draggable .pf-c-button] [id of item text]"` | `.pf-c-table__dual-list-selector .pf-c-button` | Provides an accessible name for the draggable button. |
 | `id="[]"` | `.pf-c-dual-list-selector__draggable .pf-c-button`, `[item text]` | Gives the button and the text element accessible IDs. |
+| `disabled` | `.pf-c-dual-list-selector__item [button, check]` | Disables interactive elements in a disabled item. **Required** when an item is disabled. |
 
 ### Usage
 
@@ -1000,3 +1001,4 @@ cssPrefix: pf-c-dual-list-selector
 | `.pf-m-check` | `.pf-c-dual-list-selector__list-item-row` | Indicates that an item is selectable with a checkbox. |
 | `.pf-m-expandable` | `.pf-c-dual-list-selector__list-item` | Indicates that an item is expandable. |
 | `.pf-m-expanded` | `.pf-c-dual-list-selector__list-item` | Indicates that an item is expanded. |
+| `.pf-m-disabled` | `.pf-c-dual-list-selector__list-item` | Indicates that an item is disabled. **Note:** If an item is expandable, only the top level item needs the disabled class. |
