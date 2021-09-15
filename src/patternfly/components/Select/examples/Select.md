@@ -9,48 +9,48 @@ import './Select.css'
 ## Examples
 ### Single
 ```hbs
-{{#> select id="select-single"}}Filter by birth month{{/select}}
+{{#> select id="select-single"}}Filter by status{{/select}}
 ```
 
 ### Disabled
 ```hbs
 {{#> select id="select-disabled" select-toggle--attribute="disabled"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
 ### Success
 ```hbs
 {{#> select id="select-success" select--IsSuccess="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
 ### Warning
 ```hbs
 {{#> select id="select-warning" select--IsWarning="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
 ### Invalid
 ```hbs
 {{#> select id="select-invalid" select--IsInvalid="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
 ### Single expanded
 ```hbs
 {{#> select id="select-single-expanded" select--IsExpanded="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
 ### Single with top expanded
 ```hbs
 {{#> select id="select-single-top-expanded" select--modifier="pf-m-top" select--IsExpanded="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -260,14 +260,14 @@ The checkbox select can select multiple items using checkboxes. The number of it
 ### Plain
 ```hbs
 {{#> select id="select-plain" select-toggle--modifier="pf-m-plain"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
 ### Plain expanded
 ```hbs
 {{#> select id="select-plain-expanded" select--IsExpanded="true" select-toggle--modifier="pf-m-plain"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -310,7 +310,7 @@ The plain select variation should be used when you do not want a border applied 
 ### Panel
 ```hbs
 {{#> select id="select-panel" select--IsExpanded="true" select-menu--type="div" select--IsEmptyMenu="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -369,7 +369,7 @@ The plain select variation should be used when you do not want a border applied 
 ### View more
 ```hbs
 {{#> select id="select-single-view-more" select--IsExpanded="true" select--IsLoad="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -381,7 +381,7 @@ The plain select variation should be used when you do not want a border applied 
 ### Loading
 ```hbs
 {{#> select id="select-single-loading" select--IsExpanded="true" select--IsLoading="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -394,7 +394,7 @@ The plain select variation should be used when you do not want a border applied 
 ### Footer
 ```hbs
 {{#> select id="select-single-footer" select--IsExpanded="true" select--IsLoading="true" select--HasFooter="true" select-menu--type="div"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -403,6 +403,40 @@ The plain select variation should be used when you do not want a border applied 
 | -- | -- | -- |
 | `.pf-c-select__menu-footer` | `<div>` | Defines a menu footer. |
 | `.pf-c-select__menu-list` | `<ul>` | Defines the menu list when the list is placed in `div.pf-c-select__menu`. |
+
+## Placeholder
+### Placeholder collapsed
+```hbs
+{{#> select id="select-placeholder-collapsed" select--IsPlaceholder="true"}}
+  Filter by status
+{{/select}}
+```
+
+### Placeholder expanded
+```hbs
+{{#> select id="select-placeholder-expanded" select--IsExpanded="true" select--IsPlaceholder="true"}}
+  Filter by status
+{{/select}}
+```
+
+### Placeholder item disabled
+```hbs
+{{#> select id="select-placeholder-expanded" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true" select--PlaceholderItemDisabled="true"}}
+  Filter by status
+{{/select}}
+```
+
+### Placeholder item enabled
+```hbs
+{{#> select id="select-placeholder-expanded" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true"}}
+  Filter by status
+{{/select}}
+```
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-placeholder` | `.pf-c-select__toggle` | Modifies the toggle for placeholder styles. |
 
 ## Documentation
 ### Overview

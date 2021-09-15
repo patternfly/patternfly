@@ -1,4 +1,7 @@
-<{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}} class="pf-c-select__toggle{{#if select-toggle--modifier}} {{select-toggle--modifier}}{{/if}}{{#if select--IsTypeahead}} pf-m-typeahead{{/if}}"
+<{{# if select-toggle--type}}{{select-toggle--type}}{{else}}button{{/if}} class="pf-c-select__toggle
+  {{~#if select--IsTypeahead}} pf-m-typeahead{{/if}}
+  {{~#if select--IsPlaceholder}} pf-m-placeholder{{/if}}
+  {{~#if select-toggle--modifier}} {{select-toggle--modifier}}{{/if}}"
   {{#unless select-toggle--type}}
     type="button"
   {{/unless}}

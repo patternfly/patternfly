@@ -4,7 +4,10 @@
 #ws-core-c-select-single-with-typeahead-expanded-and-selected,
 #ws-core-c-select-plain-expanded,
 #ws-core-c-select-view-more,
-#ws-core-c-select-loading {
+#ws-core-c-select-loading,
+#ws-core-c-select-placeholder-expanded,
+#ws-core-c-select-placeholder-item-disabled,
+#ws-core-c-select-placeholder-item-enabled {
   min-height: 330px;
 }
 
