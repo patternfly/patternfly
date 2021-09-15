@@ -11,8 +11,32 @@
   --pf-c-form--m-limit-width--MaxWidth: #{pf-size-prem(500px)};
 
   // Group label
-  --pf-c-form--m-horizontal__group-label--md--PaddingTop: var(--pf-global--spacer--sm);
+
+  // Terminology and a note on vertical alignment of the group labels:
+  // Content area height = Font size
+  // Line Box height = Content area * Line Height
+  // Leading = Line Box - Content Area
+  // Leading is always split evenly above and below the content area (so the content area always sits vertically centered in the line box)
+
+  // So, to align the label's baseline with the text input's baseline, we need to calculate the difference between the (content area + top half of leading) of the label and of the control. We'll use the text input as the default control, and we also need to adjust for the border of the text input.
+
+  // Calculate the distance from top to baseline by (((font size * line height) + border widths - font size) / 2) + font size
+  // group__form-label distance from top to baseline (small font, small line height) is 16.1px
+  // group__form-control text input distance from top to baseline (medium font, medium line height) is 21px
+  // plus the border width used by the text inputs is 1px
+  // So we need to adjust by 21 - 16.1 + 1 = 5.9px
+
+  --pf-c-form--m-horizontal__group-label--md--PaddingTop: calc((((((var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md)) + (2 * var(--pf-global--BorderWidth--sm))) - var(--pf-global--FontSize--md)) / 2) + var(--pf-global--FontSize--md)) - ((((var(--pf-global--FontSize--sm) * var(--pf-global--LineHeight--sm)) - var(--pf-global--FontSize--sm)) / 2) + var(--pf-global--FontSize--sm)) + var(--pf-global--BorderWidth--sm));
   --pf-c-form__group-label--PaddingBottom: var(--pf-global--spacer--sm);
+
+  // Use the no-padding modifier to align form groups that aren't text inputs
+  // Use the formula above, except
+  // - no adjustment for borders needed
+  // - reverse the subtraction so we get a negative number to translate by
+  // - controls like checkboxes use the medium font and small line height
+  // - This comes out to a difference of 2.3px.
+  --pf-c-form--m-horizontal__group-label--m-no-padding--md--PaddingTop: 0;
+  --pf-c-form--m-horizontal__group-label--m-no-padding--md--TranslateY: calc(((((var(--pf-global--FontSize--sm) * var(--pf-global--LineHeight--sm)) - var(--pf-global--FontSize--sm)) / 2) + var(--pf-global--FontSize--sm)) - ((((var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--sm)) - var(--pf-global--FontSize--md)) / 2) + var(--pf-global--FontSize--md)));
 
   // Label
   --pf-c-form__label--FontSize: var(--pf-global--FontSize--sm);
@@ -150,7 +174,9 @@
 
         // stylelint-disable-next-line
         &.pf-m-no-padding-top {
-          --pf-c-form--m-horizontal__group-label--md--PaddingTop: 0;
+          --pf-c-form--m-horizontal__group-label--md--PaddingTop: var(--pf-c-form--m-horizontal__group-label--m-no-padding--md--PaddingTop);
+
+          transform: translateY(var(--pf-c-form--m-horizontal__group-label--m-no-padding--md--TranslateY));
         }
       }
 
