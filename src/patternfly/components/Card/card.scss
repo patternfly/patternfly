@@ -88,7 +88,7 @@
       background-color: var(--pf-c-card--m-selectable--before--BackgroundColor);
       transition: var(--pf-c-card--m-selectable--before--Transition);
       transform: translateY(var(--pf-c-card--m-selectable--before--TranslateY)) scaleY(var(--pf-c-card--m-selectable--before--ScaleY));
-      transform-origin: center bottom;
+      transform-origin: center bottom; // used for scaleY() to make the before scale upward
     }
   }
 
@@ -124,12 +124,12 @@
     &.pf-m-selected {
       --pf-c-card--m-selectable--before--BackgroundColor: var(--pf-c-card--m-selectable--m-selected--before--BackgroundColor);
       --pf-c-card--m-selectable--before--Transition: var(--pf-c-card--m-selectable--m-selected--before--Transition);
-      --pf-c-card--m-selectable--before--TranslateY: var(--pf-c-card--m-selectable--m-selected--before--TranslateY);
-      --pf-c-card--m-selectable--before--ScaleY: var(--pf-c-card--m-selectable--m-selected--before--ScaleY);
+      --pf-c-card--m-selectable--before--TranslateY: var(--pf-c-card--m-selectable--m-selected--before--TranslateY); // moves before down when selected - same amount and speed as the selected card moves up
+      --pf-c-card--m-selectable--before--ScaleY: var(--pf-c-card--m-selectable--m-selected--before--ScaleY); // causes the before to grow in height - more performant than transitioning height
 
       box-shadow: var(--pf-c-card--m-selectable--m-selected--BoxShadow);
       transition: var(--pf-c-card--m-selectable--m-selected--Transition);
-      transform: translateY(var(--pf-c-card--m-selectable--m-selected--TranslateY));
+      transform: translateY(var(--pf-c-card--m-selectable--m-selected--TranslateY)); // moves card up when selected
     }
   }
 
