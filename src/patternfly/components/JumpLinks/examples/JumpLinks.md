@@ -8,7 +8,7 @@ beta: true
 ## Examples
 ### Horizontal default
 ```hbs
-{{#> jump-links jump-links--attribute='aria-label="Local"'}}
+{{#> jump-links}}
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
@@ -37,7 +37,7 @@ beta: true
 
 ### Horizontal with centered list
 ```hbs
-{{#> jump-links jump-links--modifier="pf-m-center" jump-links--attribute='aria-label="Local"'}}
+{{#> jump-links jump-links--modifier="pf-m-center"}}
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
@@ -66,11 +66,9 @@ beta: true
 
 ### Horizontal with label
 ```hbs
-{{#> jump-links jump-links--attribute='aria-label="Local"'}}
+{{#> jump-links jump-links--aria-label="Jump to section"}}
   {{#> jump-links-main}}
-    {{#> jump-links-label}}
-      Jump to section
-    {{/jump-links-label}}
+    {{> jump-links-header}}
     {{#> jump-links-list}}
       {{#> jump-links-item}}
         {{#> jump-links-link}}
@@ -97,11 +95,9 @@ beta: true
   {{/jump-links-main}}
 {{/jump-links}}
 <br/>
-{{#> jump-links jump-links--modifier="pf-m-center" jump-links--attribute='aria-label="Local"'}}
+{{#> jump-links jump-links--aria-label="Jump to section" jump-links--modifier="pf-m-center"}}
   {{#> jump-links-main}}
-    {{#> jump-links-label}}
-      Jump to section
-    {{/jump-links-label}}
+    {{> jump-links-header}}
     {{#> jump-links-list}}
       {{#> jump-links-item}}
         {{#> jump-links-link}}
@@ -131,7 +127,7 @@ beta: true
 
 ### Vertical default
 ```hbs
-{{#> jump-links jump-links--modifier="pf-m-vertical" jump-links--attribute='aria-label="Local"'}}
+{{#> jump-links jump-links--modifier="pf-m-vertical"}}
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
@@ -174,10 +170,8 @@ beta: true
 
 ### Vertical with label
 ```hbs
-{{#> jump-links jump-links--modifier="pf-m-vertical" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-label}}
-    Jump to section
-  {{/jump-links-label}}
+{{#> jump-links jump-links--aria-label="Jump to section" jump-links--modifier="pf-m-vertical"}}
+  {{> jump-links-header}}
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
@@ -220,10 +214,8 @@ beta: true
 
 ### Vertical with inactive subsections
 ```hbs
-{{#> jump-links jump-links--modifier="pf-m-vertical" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-label}}
-    Jump to section
-  {{/jump-links-label}}
+{{#> jump-links jump-links--aria-label="Jump to section" jump-links--modifier="pf-m-vertical"}}
+  {{> jump-links-header}}
   {{#> jump-links-list}}
     {{#> jump-links-item jump-links-item--modifier="pf-m-current"}}
       {{#> jump-links-link}}
@@ -282,10 +274,8 @@ beta: true
 
 ### Vertical with active subsections
 ```hbs
-{{#> jump-links jump-links--modifier="pf-m-vertical" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-label}}
-    Jump to section
-  {{/jump-links-label}}
+{{#> jump-links jump-links--aria-label="Jump to section" jump-links--modifier="pf-m-vertical"}}
+  {{> jump-links-header}}
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
@@ -344,10 +334,8 @@ beta: true
 
 ### Expandable
 ```hbs
-{{#> jump-links jump-links--id="jump-links-expandable" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-label}}
-    Jump to section
-  {{/jump-links-label}}
+{{#> jump-links jump-links--aria-label="Jump to section" jump-links--id="jump-links-expandable" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical"}}
+  {{> jump-links-header}}
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
@@ -390,10 +378,8 @@ beta: true
 
 ### Expanded
 ```hbs
-{{#> jump-links jump-links--id="jump-links-expanded" jump-links--IsExpandable="true" jump-links--IsExpanded="true" jump-links--modifier="pf-m-vertical" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-label}}
-    Jump to section
-  {{/jump-links-label}}
+{{#> jump-links jump-links--aria-label="Jump to section" jump-links--id="jump-links-expanded" jump-links--IsExpandable="true" jump-links--IsExpanded="true" jump-links--modifier="pf-m-vertical"}}
+  {{> jump-links-header}}
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
@@ -436,10 +422,8 @@ beta: true
 
 ### Expandable (responsive)
 ```hbs
-{{#> jump-links jump-links--id="jump-links-expandable-responsive" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-label}}
-    Jump to section
-  {{/jump-links-label}}
+{{#> jump-links jump-links--aria-label="Jump to section" jump-links--id="jump-links-expandable-responsive" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+  {{> jump-links-header}}
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
@@ -480,12 +464,10 @@ beta: true
 {{/jump-links}}
 ```
 
-### Expandable (responsive) with toggle label
+### Expandable (responsive) with no label
 ```hbs
-{{#> jump-links jump-links--id="jump-links-expandable-responsive-with-toggle-label" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl" jump-links--attribute='aria-label="Local"'}}
-  {{#> jump-links-label jump-links-label--modifier="pf-m-toggle"}}
-    Jump to section
-  {{/jump-links-label}}
+{{#> jump-links jump-links--id="jump-links-expandable-responsive-with-no-label" jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl" jump-links--HasNoLabel="true"}}
+  {{> jump-links-header}}
   {{#> jump-links-list}}
     {{#> jump-links-item}}
       {{#> jump-links-link}}
@@ -532,20 +514,21 @@ beta: true
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| | | |
+| `aria-label` | `.pf-c-jump-links` | Provides an accessible name for the jump links. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-jump-links` | `<div>` | Initiates the jump links container. |
+| `.pf-c-jump-links__header` | `<div>` | Initiates the jump links header. |
+| `.pf-c-jump-links__toggle` | `<div>` | Initiates the jump links expandable toggle. |
+| `.pf-c-jump-links__toggle-text` | `<span>` | Initiates the jump links expandable toggle text. |
+| `.pf-c-jump-links__toggle-icon` | `<span>` | Initiates the jump links expandable toggle icon. |
+| `.pf-c-jump-links__label` | `<div>` | Initiates the jump links label. |
 | `.pf-c-jump-links__main` | `<div>` | Initiates the jump links main container for when a label and list is used in the horizontal variation. |
 | `.pf-c-jump-links__list` | `<ul>` | Initiates the jump links list. |
 | `.pf-c-jump-links__item` | `<li>` | Initiates the jump links list item. |
 | `.pf-c-jump-links__link` | `<button>` | Initiates the jump links link. |
-| `.pf-c-jump-links__header` | `<div>` | Initiates the jump links header. |
-| `.pf-c-jump-links__toggle` | `<div>` | Initiates the jump links expandable toggle. |
-| `.pf-c-jump-links__toggle-icon` | `<div>` | Initiates the jump links expandable toggle icon. |
-| `.pf-c-jump-links__label` | `<div>` | Initiates the jump links label. |
 | `.pf-c-jump-links__link-text` | `<div>` | Initiates the jump links link text. |
 | `.pf-m-vertical` | `.pf-c-jump-links` | Modifies the jump links component to be vertical. |
 | `.pf-m-center` | `.pf-c-jump-links` | Modifies the jump links component to center its list and label. |
@@ -553,4 +536,3 @@ beta: true
 | `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-c-jump-links` | Modifies the jump links component to be non-expandable. |
 | `.pf-m-expanded` | `.pf-c-jump-links` | Modifies the expandable jump links component for the expanded state. |
 | `.pf-m-current` | `.pf-c-jump-links__item`| Modifies the jump links item to be current. |
-| `.pf-m-toggle` | `.pf-c-jump-links__label` | Modifies the jump links label to serve as toggle text for when the jump links are expandable. |
