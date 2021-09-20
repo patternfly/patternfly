@@ -57,4 +57,18 @@
     z-index: var(--pf-c-banner--m-sticky--ZIndex);
     box-shadow: var(--pf-c-banner--m-sticky--BoxShadow);
   }
+
+  .pf-c-button.pf-m-link.pf-m-inline {
+    --pf-c-button--FontWeight: var(--pf-global--FontWeight--semi-bold);
+    --pf-c-button--m-link--Color: var(--pf-c-banner--Color);
+    --pf-c-button--m-link--m-inline--hover--Color: var(--pf-c-banner--Color);
+    --pf-c-button--disabled--Color: var(--pf-c-banner--Color);
+
+    &:disabled {
+      --pf-c-button--m-link--m-inline--hover--TextDecoration: none;
+
+      pointer-events: auto;
+      cursor: not-allowed;
+    }
+  }
 }
