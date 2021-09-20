@@ -115,13 +115,16 @@
       box-shadow: var(--pf-c-card--m-selectable--focus--BoxShadow);
     }
 
+    /*
     &:active {
       --pf-c-card--m-selectable--before--BackgroundColor: var(--pf-c-card--m-selectable--active--before--BackgroundColor);
 
       box-shadow: var(--pf-c-card--m-selectable--active--BoxShadow);
     }
+    */
 
-    &.pf-m-selected {
+    &.pf-m-selected,
+    &:active {
       --pf-c-card--m-selectable--before--BackgroundColor: var(--pf-c-card--m-selectable--m-selected--before--BackgroundColor);
       --pf-c-card--m-selectable--before--Transition: var(--pf-c-card--m-selectable--m-selected--before--Transition);
       --pf-c-card--m-selectable--before--TranslateY: var(--pf-c-card--m-selectable--m-selected--before--TranslateY); // moves before down when selected - same amount and speed as the selected card moves up
