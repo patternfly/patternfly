@@ -283,7 +283,7 @@
 
     &:focus {
       --pf-c-progress-stepper__step-title--Color: var(--pf-c-progress-stepper__step-title--m-help-text--focus--Color);
-      --pf-c-progress-stepper__step-title--m-help-text--TextDecorationColor: var(--pf-c-description-list__text--m-help-text--focus--TextDecorationColor);
+      --pf-c-progress-stepper__step-title--m-help-text--TextDecorationColor: var(--pf-c-progress-stepper__step-title--m-help-text--focus--TextDecorationColor);
     }
   }
 }

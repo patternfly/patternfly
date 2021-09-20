@@ -316,7 +316,7 @@ cssPrefix: pf-c-progress-stepper
   {{/progress-stepper-step}}
 {{/progress-stepper}}
 ```
-### With popovers
+### With help text
 ```hbs
 {{#> progress-stepper }}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
@@ -389,5 +389,5 @@ Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, and
 | `.pf-m-info`| `.pf-c-progress-stepper__step` | Modifies for info styling. |
 | `.pf-m-current`| `.pf-c-progress-stepper__step` | Modifies styling for the current step. |
 | `.pf-m-pending`| `.pf-c-progress-stepper__step` | Modifies styling for pending steps. |
-| `.pf-m-help-text`| `.pf-c-progress-stepper__step-title` | Modifies styling for steps that have a popover. |
+| `.pf-m-help-text`| `.pf-c-progress-stepper__step-title` | Modifies styling for steps that have help text. |
  
