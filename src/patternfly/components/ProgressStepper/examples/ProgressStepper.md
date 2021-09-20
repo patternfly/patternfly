@@ -39,7 +39,6 @@ cssPrefix: pf-c-progress-stepper
 
 ### Basic with descriptions
 ```hbs
-<!-- progress-stepper--IsVertical="true" progress-stepper--IsCenter="true" progress-stepper--IsCompact="true" -->
 {{#> progress-stepper }}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
@@ -79,7 +78,6 @@ cssPrefix: pf-c-progress-stepper
 
 ### Center aligned with descriptions
 ```hbs
-<!-- progress-stepper--IsVertical="true" progress-stepper--IsCenter="true" progress-stepper--IsCompact="true" -->
 {{#> progress-stepper  progress-stepper--IsCenter="true"}}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
@@ -119,7 +117,6 @@ cssPrefix: pf-c-progress-stepper
 
 ### Vertical with descriptions
 ```hbs
-<!-- progress-stepper--IsVertical="true" progress-stepper--IsCenter="true" progress-stepper--IsCompact="true" -->
 {{#> progress-stepper progress-stepper--IsVertical="true"}}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
@@ -159,7 +156,6 @@ cssPrefix: pf-c-progress-stepper
 
 ### Compact
 ```hbs
-<!-- progress-stepper--IsVertical="true" progress-stepper--IsCenter="true" progress-stepper--IsCompact="true" -->
 {{#> progress-stepper progress-stepper--IsCompact="true"}}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
@@ -199,7 +195,6 @@ cssPrefix: pf-c-progress-stepper
 
 ### Basic with an issue
 ```hbs
-<!-- progress-stepper--IsVertical="true" progress-stepper--IsCenter="true" progress-stepper--IsCompact="true" -->
 {{#> progress-stepper }}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
@@ -247,7 +242,6 @@ cssPrefix: pf-c-progress-stepper
 
 ### Basic with a failure
 ```hbs
-<!-- progress-stepper--IsVertical="true" progress-stepper--IsCenter="true" progress-stepper--IsCompact="true" -->
 {{#> progress-stepper }}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
@@ -295,7 +289,6 @@ cssPrefix: pf-c-progress-stepper
 
 ### Basic with Patternfly icons
 ```hbs
-<!-- progress-stepper--IsVertical="true" progress-stepper--IsCenter="true" progress-stepper--IsCompact="true" -->
 {{#> progress-stepper }}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
@@ -323,6 +316,44 @@ cssPrefix: pf-c-progress-stepper
   {{/progress-stepper-step}}
 {{/progress-stepper}}
 ```
+### With popovers
+```hbs
+{{#> progress-stepper }}
+  {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title progress-stepper-step-title--type="span" progress-stepper-step-title--IsHelp="true"}}
+        First step
+      {{/progress-stepper-step-title}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsFailure="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title progress-stepper-step-title--type="span" progress-stepper-step-title--IsHelp="true"}}
+        Second step
+      {{/progress-stepper-step-title}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsInProgress="true" progress-stepper-step--IsCurrent="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title progress-stepper-step-title--type="span" progress-stepper-step-title--IsHelp="true"}}
+        Third step
+      {{/progress-stepper-step-title}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsPending="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Fourth step
+      {{/progress-stepper-step-title}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+{{/progress-stepper}}
+```
+
 
 
 ## Documentation
@@ -358,3 +389,5 @@ Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, and
 | `.pf-m-info`| `.pf-c-progress-stepper__step` | Modifies for info styling. |
 | `.pf-m-current`| `.pf-c-progress-stepper__step` | Modifies styling for the current step. |
 | `.pf-m-pending`| `.pf-c-progress-stepper__step` | Modifies styling for pending steps. |
+| `.pf-m-help-text`| `.pf-c-progress-stepper__step-title` | Modifies styling for steps that have a popover. |
+ 
