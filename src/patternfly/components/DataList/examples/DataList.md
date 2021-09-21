@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-c-data-list
 ---
 
+import './DataList.css'
+
 ## Examples
 
 ### Basic
@@ -881,7 +883,7 @@ When a list item includes more than one block of content, it can be difficult fo
 <div id="draggable-help">
   Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
 </div>
-{{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
+{{#> data-list data-list--modifier="pf-m-compact pf-m-drag-over" data-list--id="data-list-draggable" data-list--attribute='aria-label="Draggable data list rows"'}}
   {{#> data-list-item data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
@@ -914,10 +916,26 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--id="item-3" data-list-item--modifier="pf-m-ghost-row"}}
+  {{#> data-list-item data-list-item--id="item-3"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-         {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-3" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-3 ' data-list--id '-item-3" disabled')}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-3" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-3 ' data-list--id '-item-3"')}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+            List item
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--id="item-4" data-list-item--modifier="pf-m-ghost-row"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+         {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-4" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-4 ' data-list--id '-item-4" disabled')}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -930,10 +948,133 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--id="item-4"}}
+  {{#> data-list-item data-list-item--id="item-5"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
-        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-4" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-4 ' data-list--id '-item-4"')}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-5" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-5 ' data-list--id '-item-5"')}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+            List item
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--id="item-6"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-6" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-6 ' data-list--id '-item-6"')}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+            List item
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+{{/data-list}}
+<div class="pf-screen-reader" aria-live="assertive">
+  This is the aria-live section that provides real-time feedback to the user.
+</div>
+```
+
+### Draggable drag outside
+```hbs
+<div id="draggable-help">
+  Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
+</div>
+{{#> data-list data-list--modifier="pf-m-compact pf-m-drag-over pf-m-drag-outside" data-list--id="data-list-draggable-drag-outside" data-list--attribute='aria-label="Draggable data list rows"'}}
+  {{#> data-list-item data-list-item--id="item-1"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--modifier="pf-m-disabled" data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-1" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-1 ' data-list--id '-item-1" disabled')}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+            Draggable icon disabled
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--id="item-2"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-2" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-2 ' data-list--id '-item-2"')}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+            List item
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--id="item-3"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-3" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-3 ' data-list--id '-item-3"')}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+            List item
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--id="item-4" data-list-item--modifier="pf-m-ghost-row"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+         {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-4" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-4 ' data-list--id '-item-4" disabled')}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+            Ghost row
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--id="item-5"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-5" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-5 ' data-list--id '-item-5"')}}
+        {{> data-list-check}}
+      {{/data-list-item-control}}
+      {{#> data-list-item-content}}
+        {{#> data-list-cell}}
+          {{#> data-list-cell-text data-list-cell-text--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+            List item
+          {{/data-list-cell-text}}
+        {{/data-list-cell}}
+      {{/data-list-item-content}}
+    {{/data-list-item-row}}
+  {{/data-list-item}}
+
+  {{#> data-list-item data-list-item--id="item-6"}}
+    {{#> data-list-item-row}}
+      {{#> data-list-item-control}}
+        {{> data-list-item-draggable-button data-list-item-draggable-button--attribute=(concat 'id="' data-list--id '-draggable-button-6" aria-describedby="draggable-help" aria-labelledby="' data-list--id '-draggable-button-6 ' data-list--id '-item-6"')}}
         {{> data-list-check}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
@@ -969,6 +1110,7 @@ When a list item includes more than one block of content, it can be difficult fo
 | `.pf-m-ghost-row` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a draggable data list item to be the ghost row. |
 | `.pf-m-disabled` | `.pf-c-data-list__item.pf-m-draggable` | Modifies a data list draggable item for the disabled state. |
 | `.pf-m-drag-over` | `.pf-c-data-list` | Modifies the data list to indicate that a draggable item is being dragged over the data list. |
+| `.pf-m-drag-outside` | `.pf-c-data-list` | Modifies the data list to indicate that a draggable item is being dragged outside of the allowed drop zone. |
 
 ### Text modifiers
 ```hbs

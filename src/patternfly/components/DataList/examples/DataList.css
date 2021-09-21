@@ -1,0 +1,17 @@
+#ws-core-c-data-list-draggable {
+  --ws-core-c-data-list-draggable--ghost-row--Top: 50%;
+}
+
+[id^="ws-core-c-data-list-draggable"] .pf-m-ghost-row {
+  position: absolute;
+  top: var(--ws-core-c-data-list-draggable--ghost-row--Top);
+  left: 1em;
+  z-index: 9999;
+  width: 100%;
+}
+
+#ws-core-c-data-list-draggable-drag-outside {
+  --ws-core-c-data-list-draggable--ghost-row--Top: calc(100% + .5em);
+
+  padding-bottom: 60px;
+}
