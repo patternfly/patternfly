@@ -1633,11 +1633,139 @@ import './Menu.css'
 {{/menu}}
 ```
 
+### Plain
+```hbs
+{{#> menu menu--modifier="pf-m-plain"}}
+  {{#> menu-content}}
+    {{#> menu-list}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item menu-item--IsLink="true"}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Link
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--IsDisabled="true"}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+            Disabled action
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--IsDisabled="true"}}
+        {{#> menu-item menu-item--IsLink="true"}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+            Disabled link
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+{{/menu}}
+```
+
+### Plain scrollable with search and footer
+```hbs
+{{#> menu menu--id="plain-with-search-and-footer-example" menu--modifier="pf-m-plain" menu--attribute='style="--pf-c-menu__content--MaxHeight: 200px;"'}}
+  {{#> menu-search}}
+    {{#> menu-search-input}}
+      {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
+    {{/menu-search-input}}
+  {{/menu-search}}
+  {{> divider}}
+  {{#> menu-content}}
+    {{#> menu-list}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 1
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 2
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 3
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 4
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 5
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 6
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 7
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+  {{#> menu-footer}}
+    {{#> button button--modifier="pf-m-link pf-m-inline"}}
+      Footer
+    {{/button}}
+  {{/menu-footer}}
+{{/menu}}
+```
+
 ## Documentation
-### Overview
 
 ### Accessibility
-
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
 | `disabled` | `button.pf-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
@@ -1678,6 +1806,7 @@ import './Menu.css'
 | `.pf-m-flyout` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "flyout". |
 | `.pf-m-top` | `.pf-c-menu` | Modifies a flyout menu to expand to the top. |
 | `.pf-m-left` | `.pf-c-menu` | Modifies a flyout menu to expand to the left. |
+| `.pf-m-plain` | `.pf-c-menu` | Modifies the menu component for use in the page instead of as a dropdown. |
 | `.pf-m-load` | `.pf-c-menu__list-item` | Modifies a list item for "load more" styles. |
 | `.pf-m-loading` | `.pf-c-menu__list-item` | Modifies a list item for loading styles. |
 | `.pf-m-drilldown` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "drill down". |
