@@ -814,6 +814,7 @@ beta: true
 | `.pf-c-tree-view__content` | `<div>` | Initiates a tree view node. **Required** |
 | `.pf-c-tree-view__node` | `<button>`, `<a>` | Initiates a tree view node. **Required** |
 | `.pf-c-tree-view__node-container` | `<span>` | Initiates a tree view node container. **Required for compact variant** |
+| `.pf-c-tree-view__node-content` | `<span>` | Initiates a tree view node content container used to stack elements. |
 | `.pf-c-tree-view__node-count` | `<span>` | Initiates a tree view node count. |
 | `.pf-c-tree-view__node-toggle` | `<div>` | Initiates a tree view toggle. |
 | `.pf-c-tree-view__node-toggle-button` | `<button>` | Initiates a tree view toggle button. |

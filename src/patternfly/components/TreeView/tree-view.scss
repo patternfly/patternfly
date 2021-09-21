@@ -83,14 +83,12 @@ $pf-c-tree-view--MaxNesting: 10;
   // Guides
   // ================================================================== //
   --pf-c-tree-view--m-guides--guide--Left: var(--pf-c-tree-view--m-guides--guide-left--base); // starting value, this gets updated for each nesting level
-  --pf-c-tree-view--m-guides--guide--ZIndex: var(--pf-c-tree-view--m-guides--guide-zindex--base);
 
   // Base
   --pf-c-tree-view--m-guides--guide-color--base: var(--pf-global--BorderColor--100);
   --pf-c-tree-view--m-guides--guide-width--base: var(--pf-global--BorderWidth--sm);
   --pf-c-tree-view--m-guides--guide-left--base: calc(var(--pf-c-tree-view__node--PaddingLeft) - var(--pf-c-tree-view--m-guides__list-node--guide-width--base));
   --pf-c-tree-view--m-guides--guide-left--base--offset: calc(var(--pf-c-tree-view__list-item__list-item__node-toggle--Left) + var(--pf-c-tree-view__node-toggle-icon--MinWidth) / 2); // based on toggle positioning
-  --pf-c-tree-view--m-guides--guide-zindex--base: var(--pf-global--ZIndex--sm);
   --pf-c-tree-view--m-guides__list-node--guide-width--base: var(--pf-global--spacer--lg);
 
   // List item
@@ -183,7 +181,6 @@ $pf-c-tree-view--MaxNesting: 10;
         .pf-c-tree-view__node::before {
           position: absolute;
           left: var(--pf-c-tree-view--m-guides--guide--Left);
-          z-index: var(--pf-c-tree-view--m-guides--guide--ZIndex);
           content: "";
         }
 
