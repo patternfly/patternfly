@@ -198,6 +198,7 @@
   font-size: var(--pf-c-log-viewer__text--FontSize);
   color: var(--pf-c-log-viewer__text--Color);
   word-break: break-all;
+  white-space: break-spaces;
 }
 
 // Timestamp
