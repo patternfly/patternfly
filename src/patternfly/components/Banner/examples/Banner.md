@@ -40,6 +40,18 @@ cssPrefix: pf-c-banner
 
 ```hbs
 {{#> banner banner--modifier="pf-m-info"}}
+  Banner with a 
+  <a href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples">
+  link</a>
+{{/banner}}
+<br>
+{{#> banner banner--modifier="pf-m-info"}}
+  Banner with a 
+  <a class="pf-m-disabled" role="link" aria-disabled="true">
+  disabled link</a>
+{{/banner}}
+<br>
+{{#> banner banner--modifier="pf-m-info"}}
   Banner with an 
   {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-inline pf-m-link"}}
   inline link{{/button-link}}
