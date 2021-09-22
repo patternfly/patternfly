@@ -117,7 +117,7 @@
   --pf-c-label--m-compact--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-label--m-compact--PaddingBottom: 0;
   --pf-c-label--m-compact--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-label--m-compact--FontSize: #{pf-font-prem(12px)};
+  --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
 
   // Content
   --pf-c-label__content--Color: var(--pf-global--Color--100);

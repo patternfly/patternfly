@@ -522,9 +522,45 @@ import './Label.css'
 
 ### Compact
 ```hbs
-{{#> label label--id="compact" label--modifier="pf-m-compact"}}
+{{#> label label--id="default-compact" label--modifier="pf-m-compact"}}
   Compact
 {{/label}}
+
+{{#> label label--id="compact-icon" label--modifier="pf-m-compact"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  Compact icon
+{{/label}}
+
+{{#> label label--id="compact-close" label--modifier="pf-m-compact" label--isRemovable="true"}}
+  Compact removable
+{{/label}}
+
+{{#> label label--id="compact-icon-close" label--modifier="pf-m-compact" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  Compact icon removable
+{{/label}}
+
+{{#> label label--id="compact-link" label--modifier="pf-m-compact" label-content--IsLink="true"}}
+  Compact link
+{{/label}}
+
+{{#> label label--id="compact-link-close" label--modifier="pf-m-compact" label-content--IsLink="true" label--isRemovable="true"}}
+  Compact link removable
+{{/label}}
+
+{{#> label label--id="compact-icon-close-truncate" label--modifier="pf-m-compact" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Compact label with icon that truncates
+  {{/label-text}}
+{{/label}}
+
 ```
 
 ### Overflow
