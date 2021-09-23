@@ -33,7 +33,7 @@
     "@fortawesome/fontawesome": "^1.1.8",
     "@octokit/rest": "^16.40.1",
     "@patternfly/patternfly-a11y": "4.2.1",
-    "@patternfly/react-charts": "6.15.14",
+    "@patternfly/react-charts": "6.15.23",
     "@patternfly/react-code-editor": "4.3.22",
     "@patternfly/react-core": "4.147.0",
     "@patternfly/react-table": "4.29.37",
