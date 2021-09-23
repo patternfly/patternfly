@@ -9,6 +9,7 @@ const stringifyMDAST = require('remark-stringify');
 const Handlebars = require('handlebars');
 const visit = require('unist-util-visit');
 const prettyhtml = require('@starptech/prettyhtml');
+const { parseJSXAttributes } = require('theme-patternfly-org/scripts/md/jsxAttributes');
 
 const hbsFileMap = {};
 const hbsInstance = Handlebars.create();
@@ -66,10 +67,14 @@ function compileMD0(srcFiles) {
         .use(() => ast =>
           visit(ast, 'code', node => {
             if (node.lang === 'hbs') {
+              const noFormat = node.meta ? parseJSXAttributes(`<Foo ${node.meta} />`).noFormat : false;
               try {
                 let html = hbsInstance.compile(node.value)({});
-                html = prettyhtml(html)
-                  .contents.replace(/class /g, '')
+                if (!noFormat) {
+                  html = prettyhtml(html).contents;
+                }
+                html = html
+                  .replace(/class /g, '')
                   .replace(/ class>/g, '>');
                 node.lang = 'html';
                 node.value = html;
