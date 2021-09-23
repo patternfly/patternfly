@@ -1,4 +1,4 @@
-<span class="pf-c-menu__item-toggle-icon{{#if menu-item-toggle-icon--modifier}} {{menu-item-toggle-icon--modifier}}{{/if}}"
+<{{#if menu-list-item--IsFlyoutWithLink}}button{{else}}span{{/if}} class="pf-c-menu__item-toggle-icon{{#if menu-item-toggle-icon--modifier}} {{menu-item-toggle-icon--modifier}}{{/if}}"
   {{#if menu-item-toggle-icon--attribute}}
     {{{menu-item-toggle-icon--attribute}}}
   {{/if}}>
@@ -7,4 +7,4 @@
   {{else}}
     <i class="fas fa-angle-right"></i>
   {{/if}}
-</span>
+</{{#if menu-list-item--IsFlyoutWithLink}}button{{else}}span{{/if}}>

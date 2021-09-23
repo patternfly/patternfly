@@ -110,6 +110,7 @@
   // Toggle icon
   --pf-c-menu__item-toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-menu__item-toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-menu__item-toggle-icon--Border: none;
   --pf-c-menu__list-item--m-disabled__item-toggle-icon--Color: var(--pf-global--disabled-color--200);
 
   // Text + toggle
@@ -468,6 +469,7 @@
   line-height: var(--pf-c-menu__item--LineHeight);
   color: var(--pf-c-menu__item--Color);
   text-align: left;
+  cursor: pointer;
   background-color: var(--pf-c-menu__item--BackgroundColor);
   border: none;
 
@@ -505,6 +507,8 @@
   @include pf-text-overflow;
 
   flex-grow: 1;
+  color: inherit;
+  text-decoration: none;
 }
 
 // Group
@@ -539,6 +543,7 @@
   padding-right: var(--pf-c-menu__item-toggle-icon--PaddingRight);
   padding-left: var(--pf-c-menu__item-toggle-icon--PaddingLeft);
   color: var(--pf-c-menu__item-toggle-icon, inherit);
+  border: var(--pf-c-menu__item-toggle-icon--Border);
 }
 
 .pf-c-menu__item-text + .pf-c-menu__item-toggle-icon {

@@ -119,6 +119,150 @@ import './Menu.css'
 {{/menu}}
 ```
 
+### With flyout with link
+```hbs
+{{#> menu menu--modifier="pf-m-flyout"}}
+  {{#> menu-content}}
+    {{#> menu-list menu-item--IsLink="true"}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Example link 1
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Example link 2
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--IsFlyoutWithLink="true"}}
+        {{#> menu-item menu-item--url="#with-flyout-with-link"}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Flyout link 1
+            {{/menu-item-text}}
+            {{> menu-item-toggle-icon}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+        {{#> menu menu--attribute="hidden" menu-item--IsLink="true" menu-list-item--IsFlyoutWithLink=reset}}
+          {{#> menu-content}}
+            {{#> menu-list}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Application grouping
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Count
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Labels
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Annotations
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+            {{/menu-list}}
+          {{/menu-content}}
+        {{/menu}}
+      {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--IsFlyoutWithLink="true" menu-list-item--IsExpanded="true"}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text menu-item-text--url="#with-flyout-with-link"}}
+              Flyout link 2
+            {{/menu-item-text}}
+            {{> menu-item-toggle-icon}}
+          {{/menu-item-main}}
+          {{#> menu-item-description}}
+            Description
+          {{/menu-item-description}}
+        {{/menu-item}}
+        {{#> menu menu-item--IsLink="true" menu-list-item--IsFlyoutWithLink=reset}}
+          {{#> menu-content}}
+            {{#> menu-list}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Submenu Link 1
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Submenu Link 2
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Submenu Link 3
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Submenu Link 4
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+            {{/menu-list}}
+          {{/menu-content}}
+        {{/menu}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Link 5
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+{{/menu}}
+```
+
 ### With flyout
 ```hbs
 {{#> menu menu--modifier="pf-m-flyout"}}
@@ -143,7 +287,7 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item}}
-        {{#> menu-item menu-item--attribute='aria-expanded="false"'}}
+        {{#> menu-item menu-item--attribute='aria-expanded="false"' menu-item--IsFlyout="true"}}
           {{#> menu-item-main}}
             {{#> menu-item-text}}
               Add storage
@@ -1569,7 +1713,8 @@ import './Menu.css'
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
 | `disabled` | `button.pf-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
-| `aria-disabled="true"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `aria-disabled="true"` | `a.pf-c-menu__item` | When the menu item uses a link element (not applicable to flyout), removes it from keyboard focus. |
+| `aria-haspopup="true"` | `a.pf-c-menu__item` | When the menu item is a flyout, indicates that the link has a submenu. |
 | `tabindex="-1"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
 | `aria-hidden="true"` | `.pf-c-menu__item-icon`, `.pf-c-menu__item-action-icon`, `.pf-c-menu__item-external-icon`, `.pf-c-menu__item-toggle-icon`, `.pf-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
 | `aria-label="Not starred"` | `.pf-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |

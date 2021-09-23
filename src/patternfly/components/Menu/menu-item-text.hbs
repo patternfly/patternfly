@@ -1,6 +1,19 @@
-<span class="pf-c-menu__item-text{{#if menu-item-text--modifier}} {{menu-item-text--modifier}}{{/if}}"
+<{{#if menu-list-item--IsFlyoutWithLink}}a{{else}}span{{/if}} class="pf-c-menu__item-text{{#if menu-item-text--modifier}} {{menu-item-text--modifier}}{{/if}}"
+  {{#if menu-list-item--IsFlyoutWithLink}}
+    {{#if menu-item--url}}
+      href="{{menu-item--url}}"
+    {{else}}
+      href="#"
+    {{/if}}
+    aria-haspopup="true"
+    {{#if menu-item--IsExpanded}}
+      aria-expanded="true"
+    {{else}}
+      aria-expanded="false"
+    {{/if}}
+  {{/if}}
   {{#if menu-item-text--attribute}}
     {{{menu-item-text--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</span>
+</{{#if menu-list-item--IsFlyoutWithLink}}a{{else}}span{{/if}}>
