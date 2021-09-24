@@ -8,3 +8,7 @@
   left: 440px;
   top: -18px;
 }
+
+#ws-core-c-table-sticky-columns-and-header .ws-preview-html {
+  height: 600px;
+}

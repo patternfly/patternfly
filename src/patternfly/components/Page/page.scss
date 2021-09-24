@@ -460,7 +460,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   &.pf-m-overflow-scroll {
     position: relative;
-    min-height: 0;
     flex-shrink: 1;
     overflow: auto;
   }
@@ -600,7 +599,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
           padding: 0;
 
           .pf-c-page__main-body {
-            min-height: 0;
             padding: var(--pf-c-page__main-section--PaddingTop) var(--pf-c-page__main-section--PaddingRight) var(--pf-c-page__main-section--PaddingBottom) var(--pf-c-page__main-section--PaddingLeft);
           }
         }
