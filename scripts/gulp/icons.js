@@ -45,7 +45,7 @@ function pfIconFont() {
         iconsObj[name] = codePoint.toString(16).toUpperCase();
         iconsObj.codePoints.push(codePoint);
         return iconsObj;
-      }, {codePoints: []});
+      }, { codePoints: [] });
 
       fs.writeFile(
         path.join(process.cwd(), '/src/icons/existingIconCodes.json'),
