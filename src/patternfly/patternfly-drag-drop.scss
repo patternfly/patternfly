@@ -1,4 +1,5 @@
 .pf-c-draggable {
+  --pf-c-draggable--Cursor: auto;
   --pf-c-draggable--m-dragging--Cursor: grabbing;
   --pf-c-draggable--m-dragging--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-draggable--m-dragging--after--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -6,9 +7,12 @@
   --pf-c-draggable--m-drag-outside--Cursor: not-allowed;
   --pf-c-draggable--m-drag-outside--after--BorderColor: var(--pf-global--danger-color--100);
 
+  cursor: var(--pf-c-draggable--Cursor);
+
   &.pf-m-dragging {
+    --pf-c-draggable--Cursor: var(--pf-c-draggable--m-dragging--Cursor);
+
     position: relative;
-    cursor: var(--pf-c-draggable--m-dragging--Cursor);
     background-color: var(--pf-c-draggable--m-dragging--BackgroundColor); // intentionally empty to be set if doesn't exist
     box-shadow: var(--pf-c-draggable--m-dragging--BoxShadow);
 
