@@ -19,7 +19,7 @@ function pfIconFont() {
     .pipe(
       iconfontCss({
         fontName: pficonFontName,
-        path: 'scss',
+        path: path.join(process.cwd(), '/scripts/gulp/icons_template.scss'),
         targetPath: 'pficon.scss',
         fontPath: './',
         cssClass: 'pf-icon',

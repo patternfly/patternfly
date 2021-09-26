@@ -1,11 +1,7 @@
 @font-face {
 	font-family: "pficon";
-	src: url('./pficon.eot');
-	src: url('./pficon.eot?#iefix') format('eot'),
-		url('./pficon.woff2') format('woff2'),
-		url('./pficon.woff') format('woff'),
-		url('./pficon.ttf') format('truetype'),
-		url('./pficon.svg#pficon') format('svg');
+	src: url('./pficon.woff2') format('woff2'),
+		url('./pficon.woff') format('woff');
 }
 
 @mixin pf-icon-styles {
