@@ -173,6 +173,8 @@
   --pf-c-menu__footer--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-menu__footer--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-menu__footer--BoxShadow: var(--pf-global--BoxShadow--sm-top);
+  --pf-c-menu__footer--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-menu__footer--after--BorderBottomColor: var(--pf-global--BorderColor--100);
 
   z-index: var(--pf-c-menu--ZIndex);
   width: var(--pf-c-menu--Width);
@@ -576,6 +578,16 @@
 }
 
 .pf-c-menu__footer {
+  position: relative;
   padding: var(--pf-c-menu__footer--PaddingTop) var(--pf-c-menu__footer--PaddingRight) var(--pf-c-menu__footer--PaddingBottom) var(--pf-c-menu__footer--PaddingLeft);
   box-shadow: var(--pf-c-menu__footer--BoxShadow);
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    content: "";
+    border-bottom: var(--pf-c-menu__footer--after--BorderBottomWidth) solid var(--pf-c-menu__footer--after--BorderBottomColor);
+  }
 }
