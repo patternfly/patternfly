@@ -26,6 +26,8 @@
 
   // Content
   --pf-c-menu__content--Height: auto;
+  --pf-c-menu__content--MaxHeight: none;
+  --pf-c-menu--m-scrollable__content--MaxHeight: #{pf-size-prem(300px)};
 
   // Divider
   --pf-c-menu--c-divider--MarginTop: 0;
@@ -172,9 +174,14 @@
   --pf-c-menu__footer--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-menu__footer--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-menu__footer--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-menu__footer--BoxShadow: var(--pf-global--BoxShadow--sm-top);
-  --pf-c-menu__footer--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-menu__footer--BoxShadow: none;
+  --pf-c-menu__footer--after--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-menu__footer--after--BorderTopColor: var(--pf-global--BorderColor--100);
+  --pf-c-menu__footer--after--BorderBottomWidth: 0;
   --pf-c-menu__footer--after--BorderBottomColor: var(--pf-global--BorderColor--100);
+  --pf-c-menu--m-scrollable__footer--BoxShadow: var(--pf-global--BoxShadow--sm-top);
+  --pf-c-menu--m-scrollable__footer--after--BorderTopWidth: 0;
+  --pf-c-menu--m-scrollable__footer--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
 
   z-index: var(--pf-c-menu--ZIndex);
   width: var(--pf-c-menu--Width);
@@ -318,6 +325,13 @@
 
   &.pf-m-plain {
     --pf-c-menu--BoxShadow: var(--pf-c-menu--m-plain--BoxShadow);
+  }
+
+  &.pf-m-scrollable {
+    --pf-c-menu__content--MaxHeight: var(--pf-c-menu--m-scrollable__content--MaxHeight);
+    --pf-c-menu__footer--BoxShadow: var(--pf-c-menu--m-scrollable__footer--BoxShadow);
+    --pf-c-menu__footer--after--BorderTopWidth: var(--pf-c-menu--m-scrollable__footer--after--BorderTopWidth);
+    --pf-c-menu__footer--after--BorderBottomWidth: var(--pf-c-menu--m-scrollable__footer--after--BorderBottomWidth);
   }
 }
 
@@ -584,10 +598,13 @@
 
   &::after {
     position: absolute;
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
+    pointer-events: none;
     content: "";
+    border-top: var(--pf-c-menu__footer--after--BorderTopWidth) solid var(--pf-c-menu__footer--after--BorderTopColor);
     border-bottom: var(--pf-c-menu__footer--after--BorderBottomWidth) solid var(--pf-c-menu__footer--after--BorderBottomColor);
   }
 }
