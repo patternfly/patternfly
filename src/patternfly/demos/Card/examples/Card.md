@@ -23,7 +23,7 @@ import './Card.css'
         {{#> label-group-main}}
           {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
             {{#> label-group-list-item}}
-              {{#> label label--modifier="pf-m-blue"}}
+              {{#> label label--modifier="pf-m-blue pf-m-compact"}}
                 {{#> label-icon}}
                   <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
                 {{/label-icon}}
@@ -31,7 +31,7 @@ import './Card.css'
               {{/label}}
             {{/label-group-list-item}}
             {{#> label-group-list-item}}
-              {{#> label label--modifier="pf-m-purple"}}
+              {{#> label label--modifier="pf-m-purple pf-m-compact"}}
                 {{#> label-icon}}
                   <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
                 {{/label-icon}}
@@ -39,7 +39,7 @@ import './Card.css'
               {{/label}}
             {{/label-group-list-item}}
             {{#> label-group-list-item}}
-              {{#> label label--modifier="pf-m-green"}}
+              {{#> label label--modifier="pf-m-green pf-m-compact"}}
                 {{#> label-icon}}
                   <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
                 {{/label-icon}}
@@ -47,7 +47,7 @@ import './Card.css'
               {{/label}}
             {{/label-group-list-item}}
             {{#> label-group-list-item}}
-              {{#> label label--IsOverflow="true"}}
+              {{#> label label--IsOverflow="true" label--modifier="pf-m-compact"}}
                 1 more
               {{/label}}
             {{/label-group-list-item}}

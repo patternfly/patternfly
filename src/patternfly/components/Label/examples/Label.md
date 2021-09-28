@@ -295,7 +295,6 @@ import './Label.css'
 {{/label}}
 ```
 
-
 ### Outline
 ```hbs
 {{#> label label--id="outline-grey" label--modifier="pf-m-outline"}}
@@ -521,6 +520,49 @@ import './Label.css'
 {{/label}}
 ```
 
+### Compact
+```hbs
+{{#> label label--id="default-compact" label--modifier="pf-m-compact"}}
+  Compact
+{{/label}}
+
+{{#> label label--id="compact-icon" label--modifier="pf-m-compact"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  Compact icon
+{{/label}}
+
+{{#> label label--id="compact-close" label--modifier="pf-m-compact" label--isRemovable="true"}}
+  Compact removable
+{{/label}}
+
+{{#> label label--id="compact-icon-close" label--modifier="pf-m-compact" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  Compact icon removable
+{{/label}}
+
+{{#> label label--id="compact-link" label--modifier="pf-m-compact" label-content--IsLink="true"}}
+  Compact link
+{{/label}}
+
+{{#> label label--id="compact-link-close" label--modifier="pf-m-compact" label-content--IsLink="true" label--isRemovable="true"}}
+  Compact link removable
+{{/label}}
+
+{{#> label label--id="compact-icon-close-truncate" label--modifier="pf-m-compact" label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{#> label-text}}
+    Compact label with icon that truncates
+  {{/label-text}}
+{{/label}}
+
+```
+
 ### Overflow
 ```hbs
 {{#> label label--id="overflow" label--IsOverflow="true"}}
@@ -562,6 +604,7 @@ import './Label.css'
 | `.pf-c-label__icon` | `<span>` | Initiates a label icon. |
 | `.pf-c-label__text` | `<span>` | Initiates label text. |
 | `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
+| `.pf-m-compact` | `.pf-c-label` | Modifies label for compact styles. |
 | `.pf-m-overflow` | `.pf-c-label` | Modifies label for overflow styles for use in a label group. |
 | `.pf-m-blue` | `.pf-c-label` | Modifies the label to have blue colored styling. |
 | `.pf-m-green` | `.pf-c-label` | Modifies the label to have green colored styling. |

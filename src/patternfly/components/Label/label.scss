@@ -112,6 +112,13 @@
   --pf-c-label--m-overflow__content--link--focus--before--BorderWidth: var(--pf-global--BorderWidth--md);
   --pf-c-label--m-overflow__content--link--focus--before--BorderColor: var(--pf-global--BorderColor--300);
 
+  // Compact
+  --pf-c-label--m-compact--PaddingTop: 0;
+  --pf-c-label--m-compact--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-label--m-compact--PaddingBottom: 0;
+  --pf-c-label--m-compact--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
+
   // Content
   --pf-c-label__content--Color: var(--pf-global--Color--100);
   --pf-c-label--m-outline__content--Color: var(--pf-global--Color--100);
@@ -147,6 +154,14 @@
   background-color: var(--pf-c-label--BackgroundColor);
   border: 0;
   border-radius: var(--pf-c-label--BorderRadius);
+
+  &.pf-m-compact {
+    --pf-c-label--PaddingTop: var(--pf-c-label--m-compact--PaddingTop);
+    --pf-c-label--PaddingRight: var(--pf-c-label--m-compact--PaddingRight);
+    --pf-c-label--PaddingBottom: var(--pf-c-label--m-compact--PaddingBottom);
+    --pf-c-label--PaddingLeft: var(--pf-c-label--m-compact--PaddingLeft);
+    --pf-c-label--FontSize: var(--pf-c-label--m-compact--FontSize);
+  }
 
   &.pf-m-blue {
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-blue--BackgroundColor);
