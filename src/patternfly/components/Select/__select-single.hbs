@@ -10,6 +10,11 @@
   {{#if select--IsEmptyMenu}}
     [Panel contents here]
   {{else}}
+    {{#if select--HasPlaceholderItem}}
+      <li role="presentation">
+        {{#> select-menu-item select-menu-item--IsDisabled=select--PlaceholderItemDisabled}}{{> @partial-block}}{{/select-menu-item}}
+      </li>
+    {{/if}}
     <li role="presentation">
       {{#> select-menu-item}}Running{{/select-menu-item}}
     </li>

@@ -11,6 +11,8 @@ import './FormControl.css'
 ```hbs
 {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
 <br><br>
+{{> form-control controlType="input" input="true" form-control--attribute='type="text" placeholder="Placeholder" id="input-placeholder" aria-label="Placeholder input example"'}}
+<br><br>
 {{> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="input-readonly" aria-label="Readonly input example"'}}
 <br><br>
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}

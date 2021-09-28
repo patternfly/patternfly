@@ -2,9 +2,12 @@
 #ws-core-c-select-single-expanded,
 #ws-core-c-select-single-expanded-and-selected,
 #ws-core-c-select-single-with-typeahead-expanded-and-selected,
-#ws-core-c-select-plain-expanded,
-#ws-core-c-select-view-more,
-#ws-core-c-select-loading {
+#ws-core-c-select-plain-toggle-expanded,
+#ws-core-c-select-view-more-menu-item,
+#ws-core-c-select-loading-menu-item,
+#ws-core-c-select-placeholder-expanded,
+#ws-core-c-select-placeholder-item-disabled,
+#ws-core-c-select-placeholder-item-enabled {
   min-height: 330px;
 }
 
@@ -26,7 +29,7 @@
 }
 
 #ws-core-c-select-multi-with-typeahead-chip-group-expanded,
-#ws-core-c-select-footer {
+#ws-core-c-select-menu-footer {
   min-height: 365px;
 }
 
@@ -38,15 +41,15 @@
   min-height: 530px;
 }
 
-#ws-core-c-select-panel {
+#ws-core-c-select-panel-menu {
   min-height: 120px;
 }
 
-#ws-core-c-select-with-description,
-#ws-core-c-select-checkbox-with-description {
-  min-height: 350px;
+#ws-core-c-select-item-description,
+#ws-core-c-select-checkbox-item-description {
+  min-height: 400px;
 }
 
-#ws-core-c-select-favorites {
+#ws-core-c-select-menu-item-favorites {
   min-height: 650px;
 }
