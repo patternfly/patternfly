@@ -53,6 +53,7 @@ $pf-c-dual-list-selector__item--MaxNesting: 10;
   --pf-c-dual-list-selector__item-text--Color: var(--pf-global--Color--100);
   --pf-c-dual-list-selector__list-item-row--m-selected__text--Color: var(--pf-global--active-color--100);
   --pf-c-dual-list-selector__list-item-row--m-selected__text--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-dual-list-selector__list-item--m-disabled__item-text--Color: var(--pf-global--disabled-color--100);
 
   // Status
   --pf-c-dual-list-selector__status--MarginBottom: var(--pf-global--spacer--sm);
@@ -85,6 +86,7 @@ $pf-c-dual-list-selector__item--MaxNesting: 10;
   --pf-c-dual-list-selector__list-item--m-expanded__item-toggle-icon--Rotate: 90deg;
   --pf-c-dual-list-selector__item-toggle-icon--Transition: var(--pf-global--Transition);
   --pf-c-dual-list-selector__item-toggle-icon--MinWidth: var(--pf-c-dual-list-selector__list-item-row--FontSize);
+  --pf-c-dual-list-selector__list-item--m-disabled__item-toggle-icon--Color: var(--pf-global--disabled-color--200);
 
   display: grid;
   grid-template-areas:
@@ -187,6 +189,13 @@ $pf-c-dual-list-selector__item--MaxNesting: 10;
 
   &.pf-m-expanded {
     --pf-c-dual-list-selector__item-toggle-icon--Rotate: var(--pf-c-dual-list-selector__list-item--m-expanded__item-toggle-icon--Rotate);
+  }
+
+  &.pf-m-disabled {
+    --pf-c-dual-list-selector__item-text--Color: var(--pf-c-dual-list-selector__list-item--m-disabled__item-text--Color);
+    --pf-c-dual-list-selector__item-toggle-icon--Color: var(--pf-c-dual-list-selector__list-item--m-disabled__item-toggle-icon--Color);
+
+    pointer-events: none;
   }
 }
 
@@ -303,6 +312,7 @@ $pf-c-dual-list-selector__item--MaxNesting: 10;
 .pf-c-dual-list-selector__item-toggle-icon {
   display: inline-block;
   min-width: var(--pf-c-dual-list-selector__item-toggle-icon--MinWidth);
+  color: var(--pf-c-dual-list-selector__item-toggle-icon--Color, inherit);
   text-align: center;
   transition: var(--pf-c-dual-list-selector__item-toggle-icon--Transition);
   transform: rotate(var(--pf-c-dual-list-selector__item-toggle-icon--Rotate));

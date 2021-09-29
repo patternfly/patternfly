@@ -1,7 +1,14 @@
 {{#> dual-list-selector-list-item-row}}
   <{{#if dual-list-selector-item--type}}{{dual-list-selector-item--type}}{{else}}button{{/if}} class="pf-c-dual-list-selector__item{{#if dual-list-selector-item--modifier}} {{dual-list-selector-item--modifier}}{{/if}}"
-    {{#if dual-list-selector-item--type}}
-      tabindex="0"
+    {{#unless dual-list-selector-list-item--IsDisabled}}
+      {{#if dual-list-selector-item--type}}
+        tabindex="0"
+      {{/if}}
+    {{/unless}}
+    {{#if dual-list-selector-list-item--IsDisabled}}
+      {{#unless dual-list-selector-item--type}}
+        disabled
+      {{/unless}}
     {{/if}}
     {{#unless dual-list-selector-item--type}}
       type="button"
