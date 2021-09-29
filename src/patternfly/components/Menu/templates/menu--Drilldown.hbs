@@ -1,4 +1,4 @@
-{{#> menu menu--IsDrilledIn=menu--Drilldown--IsDrilledIn--list-1 menu--modifier="pf-m-drilldown" menu--id=menu-drilldown-example--id menu--attribute=menu--Drilldown--menu--attribute}}
+{{#> menu menu--IsDrilledIn=menu--Drilldown--IsDrilledIn--list-1 menu--modifier=(concat 'pf-m-drilldown ' menu--Drilldown--menu--modifier) menu--id=menu-drilldown-example--id menu--attribute=menu--Drilldown--menu--attribute}}
   {{#> menu-content menu-content--attribute=menu--Drilldown--menu__content--attribute menu--attribute=''}}
     {{#> menu-list menu-content--attribute=''}}
       {{> menu-list-item menu-list-item--text="Start rollout"}}
