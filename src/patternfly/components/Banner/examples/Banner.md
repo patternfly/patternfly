@@ -40,39 +40,45 @@ cssPrefix: pf-c-banner
 
 ```hbs
 {{#> banner banner--modifier="pf-m-info"}}
-  Banner with a 
+  Info banner with a 
   <a href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples">
   link</a>
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-info"}}
-  Banner with a 
-  <a class="pf-m-disabled" role="link" aria-disabled="true">
+  Info banner with a 
+  <a class="pf-m-disabled">
   disabled link</a>
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-info"}}
-  Banner with an 
+  Info banner with a 
+  <a class="pf-m-disabled" role="link" aria-disabled="true">
+  disabled link with aria-disabled</a>
+{{/banner}}
+<br>
+{{#> banner banner--modifier="pf-m-info"}}
+  Info banner with an 
   {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-inline pf-m-link"}}
   inline link{{/button-link}}
 {{/banner}}
 <br>
 {{#> banner }}
-  Banner with an 
+  Default banner with an 
   {{#> button button--modifier="pf-m-inline pf-m-link"}}
     inline link button
   {{/button}}
 {{/banner}}
 <br>
 {{#> banner}}
-  Banner with a 
+  Default banner with a 
   {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
     disabled inline link button
   {{/button}}
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-warning"}}
-  A warning banner with 
+  Warning banner with 
   {{#> button button--modifier="pf-m-link pf-m-inline"}}
     inline link button
   {{/button}}
@@ -81,15 +87,6 @@ cssPrefix: pf-c-banner
 {{#> banner banner--modifier="pf-m-danger"}}
   A long danger banner with both text and {{#> button button--IsInlineLinkSpan="true" button--attribute='tabindex="0"' button--modifier="pf-m-link pf-m-inline"}}
     long button text that needs to be a span so that it will wrap inline with the text around it.
-  {{/button}}
-{{/banner}}
-<br>
-{{#> banner banner--modifier="pf-m-info"}}
-  {{#> button button--modifier="pf-m-link pf-m-inline pf-m-display-lg"}}
-    Call to action in a banner
-    {{#> button-icon button-icon--modifier="pf-m-end"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button-icon}}
   {{/button}}
 {{/banner}}
 ```
