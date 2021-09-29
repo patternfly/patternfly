@@ -1,5 +1,3 @@
-// template copied from https://github.com/backflip/gulp-iconfont-css/blob/master/templates/_icons.scss
-// updated to remove legacy font types
 @font-face {
 	font-family: '<%= fontName %>';
 	src: url('#{$pf-global--fonticon-path}/<%= fontName %>.woff2<%= cacheBusterQueryString %>') format('woff2'),

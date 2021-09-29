@@ -7,7 +7,8 @@ const fs = require('fs');
 const path = require('path');
 
 const pficonFontName = 'pficon';
-const nextCodePoint = Math.max(...existingIconCodes.codePoints) + 1;
+const { lastCodePoint } = existingIconCodes;
+const nextCodePoint = lastCodePoint + 1;
 const nextUnicodeHex = '0x' + nextCodePoint.toString(16).toUpperCase();
 
 function pfIcons() {
@@ -19,7 +20,8 @@ function pfIconFont() {
     .pipe(
       iconfontCss({
         fontName: pficonFontName,
-        path: path.join(process.cwd(), '/scripts/gulp/icons_template.scss'),
+        // template pulled & updated from https://github.com/backflip/gulp-iconfont-css/blob/master/templates/_icons.scss
+        path: path.join(__dirname, 'icons_template.scss'),
         targetPath: 'pficon.scss',
         fontPath: './',
         cssClass: 'pf-icon',
@@ -41,16 +43,17 @@ function pfIconFont() {
     .on('glyphs', function(glyphs, options) {
       const newIconsObj = glyphs.reduce((iconsObj, glyph) => {
         const { name, unicode } = glyph;
-        const codePoint = unicode[0].codePointAt(0);
-        iconsObj[name] = codePoint.toString(16).toUpperCase();
-        iconsObj.codePoints.push(codePoint);
-        return iconsObj;
-      }, { codePoints: [] });
+        const curCodePoint = unicode[0].codePointAt(0);
+        const maxCodePoint = (curCodePoint > iconsObj.lastCodePoint) ? curCodePoint : iconsObj.lastCodePoint;
 
-      fs.writeFile(
-        path.join(process.cwd(), '/src/icons/existingIconCodes.json'),
-        JSON.stringify(newIconsObj),
-        err => err && console.log(err)
+        iconsObj[name] = curCodePoint.toString(16).toUpperCase();
+        iconsObj.lastCodePoint = maxCodePoint;
+        return iconsObj;
+      }, { lastCodePoint });
+
+      fs.writeFileSync(
+        path.join(__dirname, '../../src/icons/existingIconCodes.json'),
+        JSON.stringify(newIconsObj)
       );
     })
     .pipe(dest('./src/patternfly/assets/pficon/'));
