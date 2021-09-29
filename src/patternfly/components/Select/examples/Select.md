@@ -126,6 +126,12 @@ The single select should be used when the user is selecting an option from a lis
 {{/select}}
 ```
 
+### Invalid with typeahead
+```hbs
+{{#> select select-toggle--type="div" id="select-single-typeahead-invalid" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"  select--IsInvalid="true"}}
+{{/select}}
+```
+
 The single select typeahead should be used when the user is selecting one option from a list of items with the option to narrow the list by typing from the keyboard. Selected items are removed from the list. The user can clear the selection and restore the placeholder text.
 
 ### Accessibility
@@ -165,6 +171,12 @@ The single select typeahead should be used when the user is selecting one option
 ### Multi with typeahead (chip group collapsed)
 ```hbs
 {{#> select select-toggle--type="div" id="select-multi-typeahead-expanded-selected" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsCurrentlyTyping="true" select-typeahead--Placeholder="New"}}
+{{/select}}
+```
+
+### Multi with typeahead invalid
+```hbs
+{{#> select select-toggle--type="div" id="select-multi-typeahead-invalid" select--IsExpandedChips="true" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsInvalid="true" select-typeahead--Placeholder="Choose states"}}
 {{/select}}
 ```
 

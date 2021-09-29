@@ -328,6 +328,8 @@
     .pf-c-form-control {
       @include pf-text-overflow;
 
+      --pf-c-form-control--invalid--BackgroundUrl: none;
+
       position: relative;
       height: auto;
     }
