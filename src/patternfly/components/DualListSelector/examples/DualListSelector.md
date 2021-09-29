@@ -693,7 +693,7 @@ cssPrefix: pf-c-dual-list-selector
 {{/dual-list-selector}}
 ```
 
-### Tree view chosen and disabled options
+### Tree view with chosen and disabled options
 ```hbs
 {{#> dual-list-selector dual-list-selector--id="basic"}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
@@ -727,7 +727,7 @@ cssPrefix: pf-c-dual-list-selector
     {{#> dual-list-selector-menu}}
       {{#> dual-list-selector-list}}
         {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
-          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--id="11" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
+          {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--count="6" dual-list-selector-item--id="11" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
             {{#> dual-list-selector-list newcontext}}
               {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true" dual-list-selector-list-item-row--HasCheck="true"}}
                 {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--id="12" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
