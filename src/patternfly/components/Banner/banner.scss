@@ -15,10 +15,12 @@
   }
 
   // banner link variables
-  --pf-c-banner--link--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-banner--link--Color: var(--pf-c-banner--Color);
+  --pf-c-banner--link--TextDecoration: underline;
   --pf-c-banner--link--hover--Color: var(--pf-c-banner--Color);
+  --pf-c-banner--link--hover--FontWeight: var(--pf-global--FontWeight--semi-bold);
   --pf-c-banner--link--disabled--Color: var(--pf-c-banner--Color);
+  --pf-c-banner--link--disabled--TextDecoration: none;
 
   // modifier variables
   --pf-c-banner--m-info--BackgroundColor: var(--pf-global--palette--blue-200);
@@ -66,32 +68,41 @@
   }
 
   a {
-    font-weight: var(--pf-c-banner--link--FontWeight);
     color: var(--pf-c-banner--link--Color);
+    text-decoration: var(--pf-c-banner--link--TextDecoration);
 
-    &:hover {
+    &:hover:not(.pf-m-disabled) {
       --pf-c-banner--link--Color: var(--pf-c-banner--link--hover--Color);
+
+      font-weight: var(--pf-c-banner--link--hover--FontWeight);
     }
 
     // stylelint-disable selector-no-qualifying-type
     &.pf-m-disabled {
       --pf-c-banner--link--Color: var(--pf-c-banner--link--disabled--Color);
+      --pf-c-banner--link--TextDecoration: var(--pf-c-banner--link--disabled--TextDecoration);
 
-      text-decoration: none;
       cursor: not-allowed;
     }
     // stylelint-enable selector-no-qualifying-type
   }
 
   .pf-m-inline {
-    --pf-c-button--FontWeight: var(--pf-c-banner--link--FontWeight);
     --pf-c-button--m-link--Color: var(--pf-c-banner--link--Color);
     --pf-c-button--m-link--m-inline--hover--Color: var(--pf-c-banner--link--hover--Color);
     --pf-c-button--disabled--Color: var(--pf-c-banner--link--disabled--Color);
 
+    text-decoration: var(--pf-c-banner--link--TextDecoration);
+
+    &:hover {
+      --pf-c-banner--link--Color: var(--pf-c-banner--link--hover--Color);
+
+      font-weight: var(--pf-c-banner--link--hover--FontWeight);
+    }
+
     &:disabled,
     &.pf-m-disabled {
-      --pf-c-button--m-link--m-inline--hover--TextDecoration: none;
+      --pf-c-banner--link--TextDecoration: var(--pf-c-banner--link--disabled--TextDecoration);
 
       cursor: not-allowed;
     }

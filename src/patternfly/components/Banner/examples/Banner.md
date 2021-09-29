@@ -39,54 +39,35 @@ cssPrefix: pf-c-banner
 ### Banner with links
 
 ```hbs
-{{#> banner banner--modifier="pf-m-info"}}
-  Info banner with a 
+{{#> banner}}
+  Default banner with a 
   <a href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples">
   link</a>
 {{/banner}}
 <br>
-{{#> banner banner--modifier="pf-m-info"}}
-  Info banner with a 
-  <a class="pf-m-disabled">
+{{#> banner}}
+  Default banner with a 
+  <a class="pf-m-disabled" role="link" aria-disabled="true">
   disabled link</a>
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-info"}}
-  Info banner with a 
-  <a class="pf-m-disabled" role="link" aria-disabled="true">
-  disabled link with aria-disabled</a>
-{{/banner}}
-<br>
-{{#> banner banner--modifier="pf-m-info"}}
   Info banner with an 
-  {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-inline pf-m-link"}}
-  inline link{{/button-link}}
-{{/banner}}
-<br>
-{{#> banner }}
-  Default banner with an 
   {{#> button button--modifier="pf-m-inline pf-m-link"}}
     inline link button
   {{/button}}
 {{/banner}}
 <br>
-{{#> banner}}
-  Default banner with a 
-  {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
-    disabled inline link button
-  {{/button}}
-{{/banner}}
-<br>
 {{#> banner banner--modifier="pf-m-warning"}}
-  Warning banner with 
-  {{#> button button--modifier="pf-m-link pf-m-inline"}}
-    inline link button
-  {{/button}}
+  Warning banner with an 
+  {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-inline pf-m-link"}}
+  inline link button (anchor){{/button-link}}
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-danger"}}
-  A long danger banner with both text and {{#> button button--IsInlineLinkSpan="true" button--attribute='tabindex="0"' button--modifier="pf-m-link pf-m-inline"}}
-    long button text that needs to be a span so that it will wrap inline with the text around it.
+  Danger banner with a 
+  {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
+    disabled inline link button
   {{/button}}
 {{/banner}}
 ```
