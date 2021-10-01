@@ -214,8 +214,8 @@ Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md,
 
 | Class                                                                  | Applied to | Outcome                                             |
 | ---------------------------------------------------------------------- | ---------- | --------------------------------------------------- |
-| `.pf-u-font-size-{xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}`| `*`        | Sets font-size to xs, sm, md, lg, xl, 2xl, 3xl, 4xl |
-| `.pf-u-font-weight-{light, normal, bold}{-on-[breakpoint]}`            | `*`        | Sets font-size to light, normal, bold               |
+| `.pf-u-font-size-{xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}`| `*`        | Sets font-size to xs, sm, md, lg, xl, 2xl, 3xl, or 4xl |
+| `.pf-u-font-weight-{light, normal, bold}{-on-[breakpoint]}`            | `*`        | Sets font-size to light, normal, or bold            |
 | `.pf-u-color-{100, 200, 300, 400}{-on-[breakpoint]}`                   | `*`        | Sets font-color to color 100, 200, 300, or 400      |
 | `.pf-u-active-color-{100, 400}{-on-[breakpoint]}`                      | `*`        | Sets font-color to active color 100 or 400          |
 | `.pf-u-primary-color-100{-on-[breakpoint]}`                            | `*`        | Sets font-color to primary color 100                |
