@@ -537,9 +537,9 @@ import './Navigation.css'
 {{/nav}}
 ```
 
-### Flyout
+### Flyout with menu component
 ```hbs
-{{> nav--flyout nav--flyout--id="basic-flyout-example" nav--flyout--submenu--IsExpanded="true"}}
+{{> nav--flyout nav--flyout--id="menu-flyout-example" nav--flyout--submenu--IsExpanded="true" nav--IsMenuFlyout="true"}}
 ```
 
 ### Drilldown
@@ -555,11 +555,6 @@ import './Navigation.css'
 ### Level 3 drilldown
 ```hbs
 {{> nav--drilldown nav--drilldown--id="level-2-drilldown-example" nav--drilldown--level-2="true" nav--drilldown--level-3="true"}}
-```
-
-### Level 3 with flyout
-```hbs
-{{> nav--drilldown nav--drilldown--id="basic-drilldown-example" nav--drilldown--level-2="true" nav--drilldown--level-3="true" nav--drilldown--HasFlyout="true" nav--flyout--submenu--IsExpanded="true"}}
 ```
 
 ## Documentation

@@ -227,10 +227,6 @@
 
     .pf-c-menu__list-item {
       position: relative;
-
-      // stylelint-disable selector-max-class
-
-      // stylelint-enable
     }
   }
 
@@ -422,10 +418,12 @@
 
   &:hover {
     --pf-c-menu__list-item--BackgroundColor: var(--pf-c-menu__list-item--hover--BackgroundColor);
+    --pf-c-menu__list-item--Color: var(--pf-c-menu__list-item--hover--Color, inherit);
   }
 
   &:focus-within {
     --pf-c-menu__list-item--BackgroundColor: var(--pf-c-menu__list-item--focus-within--BackgroundColor);
+    --pf-c-menu__list-item--Color: var(--pf-c-menu__list-item--focus-within--Color, inherit);
   }
 
   &.pf-m-disabled {

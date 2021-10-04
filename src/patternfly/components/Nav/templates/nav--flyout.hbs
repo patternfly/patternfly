@@ -19,7 +19,11 @@
       {{#> nav-link nav-link--href="#"}}
         Subscriptions
       {{/nav-link}}
-      {{> nav--flyout--nav-item-submenu}}
+      {{#if nav--IsMenuFlyout}}
+        {{> nav--flyout--menu--nav-item-submenu}}
+      {{else}}
+        {{> nav--flyout--nav-item-submenu}}
+      {{/if}}
     {{/nav-item}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}
