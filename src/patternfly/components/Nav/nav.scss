@@ -281,6 +281,7 @@
   --pf-c-nav__item--m-flyout--c-menu__list-item--active--BackgroundColor: var(--pf-c-nav__link--active--BackgroundColor);
   --pf-c-nav__item--m-flyout--c-menu__item-description--Color: var(--pf-global--Color--light-200);
   --pf-c-nav__item--m-flyout--c-menu__item--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-nav__item--m-flyout--c-menu__item--OutlineOffset: var(--pf-c-nav__link--OutlineOffset);
   --pf-c-nav__item--m-flyout--c-menu__item--before--BorderBottomWidth: var(--pf-c-nav__item--before--BorderWidth);
   --pf-c-nav__item--m-flyout--c-menu__item--before--BorderBottomColor: var(--pf-c-nav__item--before--BorderColor);
   --pf-c-nav__item--m-flyout--c-menu__item--hover--after--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
@@ -577,23 +578,25 @@
 
   &.pf-m-flyout {
     .pf-c-menu {
-      --pf-c-menu__item--FontSize: var(--pf-c-nav__item--m-flyout--c-menu__item--FontSize);
+      --pf-c-menu--MinWidth: 100%;
       --pf-c-menu--BoxShadow: var(--pf-c-nav__item--m-flyout--c-menu--BoxShadow);
       --pf-c-menu--BackgroundColor: var(--pf-c-nav__item--m-flyout--c-menu--BackgroundColor);
       --pf-c-menu__list--PaddingTop: 0;
       --pf-c-menu__list--PaddingBottom: 0;
-      --pf-c-menu__item--Color: var(--pf-c-nav__item--m-flyout--c-menu__item--Color);
-      --pf-c-menu__item--PaddingRight: var(--pf-c-nav__item--m-flyout--c-menu__item--PaddingRight);
-      --pf-c-menu__item--PaddingLeft: var(--pf-c-nav__item--m-flyout--c-menu__item--PaddingLeft);
       --pf-c-menu__list-item--hover--BackgroundColor: var(--pf-c-nav__item--m-flyout--c-menu__list-item--hover--BackgroundColor);
       --pf-c-menu__list-item--focus-within--BackgroundColor: var(--pf-c-nav__item--m-flyout--c-menu__list-item--focus-within--BackgroundColor);
       --pf-c-menu__list-item--active--BackgroundColor: var(--pf-c-nav__item--m-flyout--c-menu__list-item--active--BackgroundColor);
+      --pf-c-menu__item--FontSize: var(--pf-c-nav__item--m-flyout--c-menu__item--FontSize);
+      --pf-c-menu__item--Color: var(--pf-c-nav__item--m-flyout--c-menu__item--Color);
+      --pf-c-menu__item--PaddingRight: var(--pf-c-nav__item--m-flyout--c-menu__item--PaddingRight);
+      --pf-c-menu__item--PaddingLeft: var(--pf-c-nav__item--m-flyout--c-menu__item--PaddingLeft);
       --pf-c-menu__item-description--Color: var(--pf-c-nav__item--m-flyout--c-menu__item-description--Color);
 
+      // stylelint-disable max-nesting-depth, selector-max-class
       .pf-c-menu__item {
         position: relative;
+        outline-offset: var(--pf-c-nav__item--m-flyout--c-menu__item--OutlineOffset);
 
-        // stylelint-disable max-nesting-depth
         &::before {
           position: absolute;
           right: 0;
@@ -613,8 +616,8 @@
             border-left: var(--pf-c-nav__item--m-flyout--c-menu__item--hover--after--BorderLeftWidth) solid var(--pf-c-nav__item--m-flyout--c-menu__item--hover--after--BorderLeftColor);
           }
         }
-        // stylelint-enable
       }
+      // stylelint-enable
     }
   }
 
