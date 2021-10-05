@@ -1,13 +1,13 @@
 .pf-c-table {
-  --pf-c-table__sticky-column--cell-min-width--base: 200px;
+  --pf-c-table__sticky-column--cell-min-width--base: #{pf-size-prem(200px)};
   --pf-c-table__sticky-column--MinWidth: var(--pf-c-table__sticky-column--cell-min-width--base);
   --pf-c-table__sticky-column--Left: 0;
-  --pf-c-table__sticky-column--ZIndex: var(--pf-global--ZIndex--sm);
+  --pf-c-table__sticky-column--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-table__sticky-column--Top: 0;
   --pf-c-table__sticky-column--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-table__sticky-column--m-border-right--before--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-table__sticky-column--m-border-right--before--BorderRightColor: var(--pf-global--BorderColor--100);
-  --pf-c-table--m-sticky-header--thead__sticky-column--ZIndex: calc(var(--pf-global--ZIndex--sm) + 1);
+  --pf-c-table--m-sticky-header--thead__sticky-column--ZIndex: calc(var(--pf-c-table__sticky-column--ZIndex) + 1);
 
   .pf-c-table__sticky-column {
     position: sticky;
@@ -41,10 +41,12 @@
 }
 
 .pf-c-scroll-outer-wrapper {
+  --pf-c-scroll-outer-wrapper--MinHeight: #{pf-size-prem(400px)};
+
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  min-height: 400px;
+  min-height: var(--pf-c-scroll-outer-wrapper--MinHeight);
   max-height: 100%;
   overflow: hidden;
 }
