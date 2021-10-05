@@ -2973,6 +2973,43 @@ Long strings in table cells will push content. Add a width modifier to `thead th
 {{/table}}
 ```
 
+### Sticky column
+
+```hbs
+<div class="pf-c-scroll-inner-wrapper">
+  {{> table--scrollable table--scrollable--id="sticky-column-example" table--scrollable--Column1IsStickyColumn="true" table--scrollable--th--modifier--cell-1-modifier="pf-m-border-right"}}
+</div>
+```
+
+### Multiple sticky columns
+
+```hbs
+<div class="pf-c-scroll-inner-wrapper">
+  {{> table--scrollable table--scrollable--id="sticky-multi-column-example" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
+</div>
+```
+
+### Sticky columns and header
+
+```hbs
+<div class="pf-c-scroll-outer-wrapper">
+  <div class="pf-c-scroll-inner-wrapper">
+    {{> table--scrollable table--scrollable--id="sticky-header-columns-example" table--scrollable--modifier="pf-m-sticky-header" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
+  </div>
+</div>
+```
+
+### Sticky column usage
+
+For sticky columns to function correctly, the parent table's width must be controlled with `.pf-c-scroll-inner-wrapper`. For sticky columns and sticky headers to function correctly, the parent table needs an inner and outer wrapper (`.pf-c-scroll-outer-wrapper` and `.pf-c-scroll-inner-wrapper`)
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-scroll-outer-wrapper` | `<div>` | Initiates a table container sticky columns outer wrapper. |
+| `.pf-c-scroll-inner-wrapper` | `<div>` | Initiates a table container sticky columns inner wrapper. |
+| `.pf-c-table__sticky-column` | `<th>`, `<td>` | Initiates a sticky table cell. |
+| `.pf-m-border-right` | `.pf-c-table__sticky-column` | Modifies the sticky column to show a right border. |
+
 ## Favorites
 
 ### Favorites examples

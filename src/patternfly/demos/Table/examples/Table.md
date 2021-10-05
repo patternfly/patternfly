@@ -5,6 +5,115 @@ wrapperTag: div
 ---
 
 ## Demos
+
+### Sticky first column
+```hbs isFullscreen
+{{#> page page--id="sticky-first-column-demo"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{> table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--modifier="" page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-subnav page-main-subnav--IsLimitWidth="true"}}
+      {{> table-main-section-nav}}
+    {{/page-main-subnav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light" page-main-section--IsLimitWidths="true"}}
+      {{#> content}}
+        <h1>Table demos</h1>
+        <p>Below is an example of a Table.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit venenatis enim, ut ultrices metus ornare at. Curabitur vel nibh id leo finibus suscipit. Curabitur eu tellus lectus. Vivamus lacus leo, lobortis ac convallis ac, dapibus vel ligula. Suspendisse vitae felis at augue blandit sollicitudin. Sed erat metus, pellentesque vel accumsan vitae, tincidunt id erat. Mauris et pharetra felis. Duis at nisi leo. Nam blandit dui dui, in euismod est dapibus sed. Vivamus sed dolor ullamcorper, euismod orci efficitur, ornare leo. Sed sit amet sollicitudin nulla. Nunc tristique sem ut est laoreet efficitur. Cras tristique finibus risus, eget fringilla tellus porta vitae. Duis id nunc ultricies, ultrices nibh vel, sollicitudin tellus.</p>
+      {{/content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth="true"}}
+      <div class="pf-c-scroll-outer-wrapper">
+        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+        <div class="pf-c-scroll-inner-wrapper">
+          {{> table--scrollable table--scrollable--id="sticky-first-column-demo-table" table--scrollable--Column1IsStickyColumn="true" table--scrollable--th--modifier--cell-1-modifier="pf-m-border-right"}}
+        </div>
+        {{> table-pagination-footer}}
+      </div>
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+
+### Sticky multiple columns
+```hbs isFullscreen
+{{#> page page--id="sticky-multiple-columns-demo"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{> table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-subnav page-main-subnav--IsLimitWidth="true"}}
+      {{> table-main-section-nav}}
+    {{/page-main-subnav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light" page-main-section--IsLimitWidths="true"}}
+      {{#> content}}
+        <h1>Table demos</h1>
+        <p>Below is an example of a Table.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit venenatis enim, ut ultrices metus ornare at. Curabitur vel nibh id leo finibus suscipit. Curabitur eu tellus lectus. Vivamus lacus leo, lobortis ac convallis ac, dapibus vel ligula. Suspendisse vitae felis at augue blandit sollicitudin. Sed erat metus, pellentesque vel accumsan vitae, tincidunt id erat. Mauris et pharetra felis. Duis at nisi leo. Nam blandit dui dui, in euismod est dapibus sed. Vivamus sed dolor ullamcorper, euismod orci efficitur, ornare leo. Sed sit amet sollicitudin nulla. Nunc tristique sem ut est laoreet efficitur. Cras tristique finibus risus, eget fringilla tellus porta vitae. Duis id nunc ultricies, ultrices nibh vel, sollicitudin tellus.</p>
+      {{/content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidth="true"}}
+      <div class="pf-c-scroll-outer-wrapper">
+        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+        <div class="pf-c-scroll-inner-wrapper">
+          {{> table--scrollable table--scrollable--id="sticky-multiple-columns-demo-table" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
+        </div>
+        {{> table-pagination-footer}}
+      </div>
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+
+### Sticky table header and columns
+```hbs isFullscreen
+{{#> page page--id="sticky-header-and-multiple-columns-demo"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{> table-page-header}}
+  {{/page-header}}
+  {{#> page-sidebar}}
+    {{> table-page-nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{#> page-main-subnav page-main-subnav--IsLimitWidth="true"}}
+      {{> table-main-section-nav}}
+    {{/page-main-subnav}}
+    {{#> page-main-section page-main-section--modifier="pf-m-light" page-main-section--IsLimitWidth="true"}}
+      {{#> content}}
+        <h1>Table demos</h1>
+        <p>Below is an example of a Table.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit venenatis enim, ut ultrices metus ornare at. Curabitur vel nibh id leo finibus suscipit. Curabitur eu tellus lectus. Vivamus lacus leo, lobortis ac convallis ac, dapibus vel ligula. Suspendisse vitae felis at augue blandit sollicitudin. Sed erat metus, pellentesque vel accumsan vitae, tincidunt id erat. Mauris et pharetra felis. Duis at nisi leo. Nam blandit dui dui, in euismod est dapibus sed. Vivamus sed dolor ullamcorper, euismod orci efficitur, ornare leo. Sed sit amet sollicitudin nulla. Nunc tristique sem ut est laoreet efficitur. Cras tristique finibus risus, eget fringilla tellus porta vitae. Duis id nunc ultricies, ultrices nibh vel, sollicitudin tellus.</p>
+      {{/content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidthsss="true"}}
+      <div class="pf-c-scroll-outer-wrapper">
+        {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+        <div class="pf-c-scroll-inner-wrapper">
+          {{> table--scrollable table--scrollable--id="sticky-header-and-multiple-columns-demo-table" table--scrollable--modifier="pf-m-sticky-header" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
+        </div>
+        {{> table-pagination-footer}}
+      </div>
+    {{/page-main-section}}
+  {{/page-main}}
+{{/page}}
+```
+
 ### Basic
 ```hbs isFullscreen
 {{#> page page--id="page-layout-table-simple"}}
