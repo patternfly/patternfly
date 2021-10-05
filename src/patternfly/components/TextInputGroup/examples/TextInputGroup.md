@@ -6,7 +6,7 @@ cssPrefix: pf-c-text-input-group
 ---
 
 ## Examples
-### Basicc
+### Basic
 ```hbs
 {{#> text-input-group text-input-group--id="basic"}}
   {{#> text-input-group-main}}
