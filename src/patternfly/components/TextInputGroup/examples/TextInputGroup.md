@@ -23,7 +23,7 @@ cssPrefix: pf-c-text-input-group
 ```hbs
 {{#> text-input-group text-input-group--modifier="pf-m-icon"}}
   {{#> text-input-group-row}}
-      {{#> text-input-group-main}}
+    {{#> text-input-group-main}}
       {{#> text-input-group-text}}
         {{> text-input-group-icon}}
         {{> text-input-group-text-input}}
