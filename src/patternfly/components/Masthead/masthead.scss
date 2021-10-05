@@ -283,6 +283,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   padding-bottom: var(--pf-c-masthead__content--PaddingBottom);
   margin-left: var(--pf-c-masthead__content--MarginLeft);
   grid-column: var(--pf-c-masthead__content--GridColumn);
+  grid-column-end: -1; // force content to right edge or full available width
   flex-shrink: 1;
 
   &:only-child {
