@@ -6,7 +6,7 @@
   // Bottom border
   --pf-c-text-input-group__text--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-text-input-group__text--after--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-text-input-group__row--hover__text--after--BorderBottomColor: var(--pf-global--primary-color--100);
+  --pf-c-text-input-group--hover__text--after--BorderBottomColor: var(--pf-global--primary-color--100);
   --pf-c-text-input-group__text--focus-within--after--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-text-input-group__text--focus-within--after--BorderBottomColor: var(--pf-global--primary-color--100);
 
@@ -35,18 +35,15 @@
   --pf-c-text-input-group__utilities--c-button--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-text-input-group__utilities--c-button--PaddingLeft: var(--pf-global--spacer--xs);
 
-  &.pf-m-icon {
-    --pf-c-text-input-group__text-input--PaddingLeft: var(--pf-c-text-input-group--m-icon__text-input--PaddingLeft);
-  }
-}
-
-.pf-c-text-input-group__row {
   position: relative;
   display: flex;
-  width: 100%;
 
   &:hover {
-    --pf-c-text-input-group__text--after--BorderBottomColor: var(--pf-c-text-input-group__row--hover__text--after--BorderBottomColor);
+    --pf-c-text-input-group__text--after--BorderBottomColor: var(--pf-c-text-input-group--hover__text--after--BorderBottomColor);
+  }
+
+  &.pf-m-icon {
+    --pf-c-text-input-group__text-input--PaddingLeft: var(--pf-c-text-input-group--m-icon__text-input--PaddingLeft);
   }
 }
 
