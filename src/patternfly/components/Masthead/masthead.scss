@@ -11,7 +11,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead__main--PaddingBottom: var(--pf-c-masthead--m-display-stack__main--PaddingBottom);
   --pf-c-masthead__main--MarginRight: var(--pf-c-masthead--m-display-stack__main--MarginRight);
   --pf-c-masthead__main--before--BorderBottom: var(--pf-c-masthead--m-display-stack__main--before--BorderBottom);
-  --pf-c-masthead__content--GridColumn: var(--pf-c-masthead--m-stack-inline__content--GridColumn);
+  --pf-c-masthead__content--GridColumn: var(--pf-c-masthead--m-display-stack__content--GridColumn);
   --pf-c-masthead__content--MinHeight: var(--pf-c-masthead--m-display-stack__content--MinHeight);
   --pf-c-masthead__content--Order: var(--pf-c-masthead--m-display-stack__content--Order);
   --pf-c-masthead__content--PaddingTop: var(--pf-c-masthead--m-display-stack__content--PaddingTop);
@@ -214,7 +214,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
     &.pf-m-full-height {
       --pf-c-menu-toggle--before--BorderRightColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderRightColor);
-      --pf-c-menu-toggle--before--BorderBottomColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderBottomColor);
+      --pf-c-menu-toggle--before--BorderLeftColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderLeftColor);
     }
   }
 
