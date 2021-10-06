@@ -1,7 +1,6 @@
 ---
 id: Text
 section: utilities
-beta: true
 ---
 
 import './Text.css'
@@ -50,9 +49,7 @@ import './Text.css'
   Bold
 {{/text}}
 ```
-
-### Color
-
+### Standard colors
 ```hbs
 {{#> text text--modifier="pf-u-color-100"}}
   Font color 100
@@ -65,6 +62,111 @@ import './Text.css'
 {{/text}}
 {{#> text text--modifier="pf-u-color-400"}}
   Font color 400
+{{/text}}
+{{#> text text--modifier="pf-u-active-color-100"}}
+  Active color 100
+{{/text}}
+{{#> text text--modifier="pf-u-active-color-400"}}
+  Active color 400
+{{/text}}
+{{#> text text--modifier="pf-u-primary-color-100"}}
+  Primary color 100
+{{/text}}
+```
+### Inverse colors
+These colors are best used with the ["inverse" background colors](/utilities/background-color#inverse-background-colors).
+```hbs
+<div class="pf-u-background-color-dark-400">
+  {{#> text text--modifier="pf-u-color-light-100"}}
+    Font color light 100
+  {{/text}}
+  {{#> text text--modifier="pf-u-color-light-200"}}
+    Font color light 200
+  {{/text}}
+</div>
+```
+### Link colors
+```hbs
+  {{#> text text--modifier="pf-u-link-color"}}
+    Link color
+  {{/text}}
+  {{#> text text--modifier="pf-u-link-color-hover"}}
+    Hover link color
+  {{/text}}
+<div class="pf-u-background-color-dark-400">
+  {{#> text text--modifier="pf-u-link-color-light"}}
+    Light link color
+  {{/text}}
+  {{#> text text--modifier="pf-u-link-color-light-hover"}}
+    Light hover link color
+  {{/text}}
+</div>
+  {{#> text text--modifier="pf-u-link-color-dark"}}
+    Dark link color
+  {{/text}}
+  {{#> text text--modifier="pf-u-link-color-dark-hover"}}
+    Dark hover link color
+  {{/text}}
+  {{#> text text--modifier="pf-u-link-color-visited"}}
+    Visited link color
+  {{/text}}
+```
+### Status and state text colors
+```hbs
+{{#> text text--modifier="pf-u-default-color-100"}}
+  Font color default 100
+{{/text}}
+{{#> text text--modifier="pf-u-default-color-200"}}
+  Font color default 200
+{{/text}}
+{{#> text text--modifier="pf-u-default-color-300"}}
+  Font color default 300
+{{/text}}
+{{#> text text--modifier="pf-u-success-color-100"}}
+  Font color success 100
+{{/text}}
+{{#> text text--modifier="pf-u-success-color-200"}}
+  Font color success 200
+{{/text}}
+{{#> text text--modifier="pf-u-info-color-100"}}
+  Font color info 100
+{{/text}}
+{{#> text text--modifier="pf-u-info-color-200"}}
+  Font color info 200
+{{/text}}
+{{#> text text--modifier="pf-u-warning-color-100"}}
+  Font color warning 100
+{{/text}}
+{{#> text text--modifier="pf-u-warning-color-200"}}
+  Font color warning 200
+{{/text}}
+{{#> text text--modifier="pf-u-danger-color-100"}}
+  Font color danger 100
+{{/text}}
+{{#> text text--modifier="pf-u-danger-color-200"}}
+  Font color danger 200
+{{/text}}
+{{#> text text--modifier="pf-u-danger-color-300"}}
+  Font color danger 300
+{{/text}}
+```
+### Disabled text colors
+```hbs
+{{#> text text--modifier="pf-u-disabled-color-100"}}
+  Font color disabled 100
+{{/text}}
+{{#> text text--modifier="pf-u-disabled-color-200"}}
+  Font color disabled 200
+{{/text}}
+```
+
+### Icon colors
+```hbs
+{{#> text text--modifier="pf-u-icon-color-dark"}}
+  <i class="fas fa-thumbtack" aria-hidden="true"></i>
+{{/text}}
+{{#> text text--modifier="pf-u-icon-color-light"}}
+  <i class="fas fa-thumbtack" aria-hidden="true"></i> 
 {{/text}}
 ```
 
@@ -102,53 +204,37 @@ import './Text.css'
 
 ### Overview
 
-Text utility
+These text utilities can be used to modify text within the PatternFly framework. In most cases, using the components with available modifiers should be sufficient to implement most designs, and should be preferred over customizations using these utilities.
+
+Care should be taken especially when applying text colors, as this can have a negative effect on the readability and accessibility of text. Refer to the information on [contrast ratios](/guidelines/colors/#contrast-ratios) for more information.
+
+Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-font-size-xl-on-lg**
 
 ### Usage
 
-| Class                       | Applied to | Outcome                                |
-| --------------------------- | ---------- | -------------------------------------- |
-| `.pf-u-font-size-xs`        | `*`        | Sets font-size to xs                   |
-| `.pf-u-font-size-sm`        | `*`        | Sets font-size to sm                   |
-| `.pf-u-font-size-md`        | `*`        | Sets font-size to md                   |
-| `.pf-u-font-size-lg`        | `*`        | Sets font-size to lg                   |
-| `.pf-u-font-size-xl`        | `*`        | Sets font-size to xl                   |
-| `.pf-u-font-size-2xl`       | `*`        | Sets font-size to 2xl                  |
-| `.pf-u-font-size-3xl`       | `*`        | Sets font-size to 3xl                  |
-| `.pf-u-font-size-4xl`       | `*`        | Sets font-size to 4xl                  |
-| `.pf-u-font-weight-light`   | `*`        | Sets font-weight to light              |
-| `.pf-u-font-weight-normal`  | `*`        | Sets font-weight to normal             |
-| `.pf-u-font-weight-bold`    | `*`        | Sets font-weight to bold               |
-| `.pf-u-color-100`           | `*`        | Sets font-color to Color 100           |
-| `.pf-u-color-200`           | `*`        | Sets font-color to Color 200           |
-| `.pf-u-color-300`           | `*`        | Sets font-color to Color 300           |
-| `.pf-u-color-400`           | `*`        | Sets font-color to Color 400           |
-| `.pf-u-icon-color-light`    | `*`        | Sets font-color to Icon Color Light    |
-| `.pf-u-icon-color-dark`     | `*`        | Sets font-color to Icon Color Dark     |
-| `.pf-u-link-color`          | `*`        | Sets font-color to Link Color          |
-| `.pf-u-active-color-100`    | `*`        | Sets font-color to Active Color 100    |
-| `.pf-u-active-color-200`    | `*`        | Sets font-color to Active Color 200    |
-| `.pf-u-active-color-300`    | `*`        | Sets font-color to Active Color 300    |
-| `.pf-u-active-color-400`    | `*`        | Sets font-color to Active Color 400    |
-| `.pf-u-disabled-color-100`  | `*`        | Sets font-color to Disabled Color 100  |
-| `.pf-u-disabled-color-200`  | `*`        | Sets font-color to Disabled Color 200  |
-| `.pf-u-disabled-color-300`  | `*`        | Sets font-color to Disabled Color 200  |
-| `.pf-u-primary-color-100`   | `*`        | Sets font-color to Primary Color 100   |
-| `.pf-u-primary-color-200`   | `*`        | Sets font-color to Primary Color 200   |
-| `.pf-u-secondary-color-100` | `*`        | Sets font-color to Secondary Color 100 |
-| `.pf-u-default-color-100`   | `*`        | Sets font-color to Default Color 100   |
-| `.pf-u-default-color-200`   | `*`        | Sets font-color to Default Color 200   |
-| `.pf-u-default-color-300`   | `*`        | Sets font-color to Default Color 300   |
-| `.pf-u-success-color-100`   | `*`        | Sets font-color to Success Color 100   |
-| `.pf-u-success-color-200`   | `*`        | Sets font-color to Success Color 200   |
-| `.pf-u-info-color-100`      | `*`        | Sets font-color to Info Color 100      |
-| `.pf-u-info-color-200`      | `*`        | Sets font-color to Info Color 200      |
-| `.pf-u-warning-color-100`   | `*`        | Sets font-color to Warning Color 100   |
-| `.pf-u-warning-color-200`   | `*`        | Sets font-color to Warning Color 200   |
-| `.pf-u-danger-color-100`    | `*`        | Sets font-color to Danger Color 100    |
-| `.pf-u-danger-color-200`    | `*`        | Sets font-color to Danger Color 200    |
-| `.pf-u-danger-color-300`    | `*`        | Sets font-color to Danger Color 300    |
-| `.pf-u-text-break-word`     | `*`        | Sets word-break to break-word          |
-| `.pf-u-text-nowrap`         | `*`        | Sets white-space to nowrap             |
-| `.pf-u-text-wrap`           | `*`        | Sets white-space to normal             |
-| `.pf-u-text-truncate`       | `*`        | Truncates text field                   |
+| Class                                                                  | Applied to | Outcome                                             |
+| ---------------------------------------------------------------------- | ---------- | --------------------------------------------------- |
+| `.pf-u-font-size-{xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}`| `*`        | Sets font-size to xs, sm, md, lg, xl, 2xl, 3xl, or 4xl |
+| `.pf-u-font-weight-{light, normal, bold}{-on-[breakpoint]}`            | `*`        | Sets font-size to light, normal, or bold            |
+| `.pf-u-color-{100, 200, 300, 400}{-on-[breakpoint]}`                   | `*`        | Sets font-color to color 100, 200, 300, or 400      |
+| `.pf-u-active-color-{100, 400}{-on-[breakpoint]}`                      | `*`        | Sets font-color to active color 100 or 400          |
+| `.pf-u-primary-color-100{-on-[breakpoint]}`                            | `*`        | Sets font-color to primary color 100                |
+| `.pf-u-color-light-{100, 200}{-on-[breakpoint]}`                       | `*`        | Sets font-color to light color 100 or 200           |
+| `.pf-u-link-color{-on-[breakpoint]}`                                   | `*`        | Sets font-color to link color                       |
+| `.pf-u-link-color-hover{-on-[breakpoint]}`                             | `*`        | Sets font-color to hover link color                 |
+| `.pf-u-link-color-light{-on-[breakpoint]}`                             | `*`        | Sets font-color to light link color                 |
+| `.pf-u-link-color-light-hover{-on-[breakpoint]}`                       | `*`        | Sets font-color to light hover link color           |
+| `.pf-u-link-color-dark{-on-[breakpoint]}`                              | `*`        | Sets font-color to dark link color                  |
+| `.pf-u-link-color-dark-hover{-on-[breakpoint]}`                        | `*`        | Sets font-color to dark hover link color            |
+| `.pf-u-link-color-visited{-on-[breakpoint]}`                           | `*`        | Sets font-color to visited link color               |
+| `.pf-u-default-color-{100, 200, 300}{-on-[breakpoint]}`                | `*`        | Sets font-color to default color 100, 200, or 300   |
+| `.pf-u-success-color-{100, 200}{-on-[breakpoint]}`                     | `*`        | Sets font-color to success color 100 or 200         |
+| `.pf-u-info-color-{100, 200}{-on-[breakpoint]}`                        | `*`        | Sets font-color to info color 100 or 200            |
+| `.pf-u-warning-color-{100, 200}{-on-[breakpoint]}`                     | `*`        | Sets font-color to warning color 100 or 200         |
+| `.pf-u-danger-color-{100, 200, 300}{-on-[breakpoint]}`                 | `*`        | Sets font-color to danger color 100, 200, or 300    |
+| `.pf-u-disabled-color-{100, 200}{-on-[breakpoint]}`                    | `*`        | Sets font-color to disabled color 100 or 200        |
+| `.pf-u-icon-color-{light, dark}{-on-[breakpoint]}`                     | `*`        | Sets font-color to light or dark icon color         |
+| `.pf-u-text-break-word{-on-[breakpoint]}`                              | `*`        | Sets word-break to break-word                       |
+| `.pf-u-text-nowrap{-on-[breakpoint]}`                                  | `*`        | Sets white-space to nowrap                          |
+| `.pf-u-text-wrap{-on-[breakpoint]}`                                    | `*`        | Sets white-space to normal                          |
+| `.pf-u-text-truncate`                                                  | `*`        | Truncates text field                                |

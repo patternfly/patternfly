@@ -1,31 +1,40 @@
-<{{#if dual-list-selector-item--type}}{{dual-list-selector-item--type}}{{else}}button{{/if}} class="pf-c-dual-list-selector__item{{#if dual-list-selector-item--HasCheck}} pf-m-check{{/if}}{{#if dual-list-selector-item--IsSelected}} pf-m-selected{{/if}}{{#if dual-list-selector-item--modifier}} {{dual-list-selector-item--modifier}}{{/if}}"
-  {{#if dual-list-selector-item--type}}
-    tabindex="0"
-  {{/if}}
-  {{#unless dual-list-selector-item--type}}
-    type="button"
-  {{/unless}}
-  {{#if dual-list-selector-item--attribute}}
-    {{{dual-list-selector-item--attribute}}}
-  {{/if}}>
-  {{#> dual-list-selector-item-main}}
-    {{#if dual-list-selector-list-item--IsExpandable}}
-      {{> dual-list-selector-item-toggle}}
+{{#> dual-list-selector-list-item-row}}
+  <{{#if dual-list-selector-item--type}}{{dual-list-selector-item--type}}{{else}}button{{/if}} class="pf-c-dual-list-selector__item{{#if dual-list-selector-item--modifier}} {{dual-list-selector-item--modifier}}{{/if}}"
+    {{#unless dual-list-selector-list-item--IsDisabled}}
+      {{#if dual-list-selector-item--type}}
+        tabindex="0"
+      {{/if}}
+    {{/unless}}
+    {{#if dual-list-selector-list-item--IsDisabled}}
+      {{#unless dual-list-selector-item--type}}
+        disabled
+      {{/unless}}
     {{/if}}
-    {{#if dual-list-selector-item--HasCheck}}
-      {{> dual-list-selector-item-check}}
-    {{/if}}
-    {{#> dual-list-selector-item-text}}
-      {{#> dual-list-selector-item--text}}
-        {{{dual-list-selector-item--text}}}
-      {{/dual-list-selector-item--text}}
-    {{/dual-list-selector-item-text}}
-  {{/dual-list-selector-item-main}}
-  {{#> dual-list-selector-item--count}}
-    {{#> dual-list-selector-item-count}}
-      {{#> badge badge--modifier="pf-m-read"}}
-        {{dual-list-selector-item--count}}
-      {{/badge}}
-    {{/dual-list-selector-item-count}}
-  {{/dual-list-selector-item--count}}
-</{{#if dual-list-selector-item--type}}{{dual-list-selector-item--type}}{{else}}button{{/if}}>
+    {{#unless dual-list-selector-item--type}}
+      type="button"
+    {{/unless}}
+    {{#if dual-list-selector-item--attribute}}
+      {{{dual-list-selector-item--attribute}}}
+    {{/if}}>
+    {{#> dual-list-selector-item-main}}
+      {{#if dual-list-selector-list-item--IsExpandable}}
+        {{> dual-list-selector-item-toggle}}
+      {{/if}}
+      {{#if dual-list-selector-list-item-row--HasCheck}}
+        {{> dual-list-selector-item-check}}
+      {{/if}}
+      {{#> dual-list-selector-item-text}}
+        {{#> dual-list-selector-item--text}}
+          {{{dual-list-selector-item--text}}}
+        {{/dual-list-selector-item--text}}
+      {{/dual-list-selector-item-text}}
+    {{/dual-list-selector-item-main}}
+    {{#> dual-list-selector-item--count}}
+      {{#> dual-list-selector-item-count}}
+        {{#> badge badge--modifier="pf-m-read"}}
+          {{dual-list-selector-item--count}}
+        {{/badge}}
+      {{/dual-list-selector-item-count}}
+    {{/dual-list-selector-item--count}}
+  </{{#if dual-list-selector-item--type}}{{dual-list-selector-item--type}}{{else}}button{{/if}}>
+{{/dual-list-selector-list-item-row}}

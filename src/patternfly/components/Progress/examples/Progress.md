@@ -280,7 +280,9 @@ If this component is describing the loading progress of a particular region of a
 | `aria-valuenow=""` | `.pf-c-progress__bar` |  This value needs to be updated as progress continues. |
 | `aria-valuemin="0"` | `.pf-c-progress__bar` |  The minimum value for the progress bar. |
 | `aria-valuemax="100"` | `.pf-c-progress__bar` |  The maximum value for the progress bar. If the progress is only defined using `aria-valuenow` (e.g a percentage), the value should be set to "100". If the progress is defined using `aria-valuetext`, then this value can be a number other than 100. For example, if `aria-valuetext` is "2 of 5 units", then `aria-valuemax` can be "5" and `aria-valuenow` can be "2". |
-| `aria-describedby="[id of .pf-c-progress__description]"` | `.pf-c-progress__bar` |  The description of what progress is being shown. |
+| `aria-label="[id of .pf-c-progress__description]"` | `.pf-c-progress__bar` | Provides an accessible name for the progress component. |
+| `aria-labelledby="[id element that labels the progress]"` | `.pf-c-progress__bar` | Provides an accessible name for the progress component. |
+| `aria-describedby="[id of element that describes the progress]"` | `.pf-c-progress__bar` | Provides an accessible description for the progress component. |
 | `aria-valuetext="[loading state]"` | `.pf-c-progress__bar` |  Provide a text string that communicates current status. Only use if the important information about status is included in the text string. Do not use if percentage is the most important value to communicate. Some screen readers will ignore the percentage value determined from `aria-valuenow` when `aria-valuetext` is used. |
 | `aria-hidden="true"` | `.pf-c-progress__status` |  Hides the visible progress bar status from screen readers. This information is communicated by the aria attributes defined on the `.pf-c-progress__bar` element. |
 

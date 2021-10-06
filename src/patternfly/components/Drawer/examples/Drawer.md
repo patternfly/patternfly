@@ -1,7 +1,6 @@
 ---
 id: Drawer
 section: components
-beta: true
 cssPrefix: pf-c-drawer
 ---
 

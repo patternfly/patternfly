@@ -1,11 +1,7 @@
 @font-face {
 	font-family: "pficon";
-	src: url('#{$pf-global--fonticon-path}/pficon.eot');
-	src: url('#{$pf-global--fonticon-path}/pficon.eot?#iefix') format('eot'),
-		url('#{$pf-global--fonticon-path}/pficon.woff2') format('woff2'),
-		url('#{$pf-global--fonticon-path}/pficon.woff') format('woff'),
-		url('#{$pf-global--fonticon-path}/pficon.ttf') format('truetype'),
-		url('#{$pf-global--fonticon-path}/pficon.svg#pficon') format('svg');
+	src: url('#{$pf-global--fonticon-path}/pficon.woff2') format('woff2'),
+		url('#{$pf-global--fonticon-path}/pficon.woff') format('woff');
 }
 
 @mixin pf-icon-styles {
@@ -351,47 +347,50 @@
 	@if $filename == storage-domain {
 		$char: "\E06C";
 	}
-	@if $filename == tenant {
+	@if $filename == task {
 		$char: "\E06D";
 	}
-	@if $filename == thumb-tack {
+	@if $filename == tenant {
 		$char: "\E06E";
 	}
-	@if $filename == topology {
+	@if $filename == thumb-tack {
 		$char: "\E06F";
 	}
-	@if $filename == trend-down {
+	@if $filename == topology {
 		$char: "\E070";
 	}
-	@if $filename == trend-up {
+	@if $filename == trend-down {
 		$char: "\E071";
 	}
-	@if $filename == unknown {
+	@if $filename == trend-up {
 		$char: "\E072";
 	}
-	@if $filename == unlocked {
+	@if $filename == unknown {
 		$char: "\E073";
 	}
-	@if $filename == unplugged {
+	@if $filename == unlocked {
 		$char: "\E074";
 	}
-	@if $filename == user {
+	@if $filename == unplugged {
 		$char: "\E075";
 	}
-	@if $filename == users {
+	@if $filename == user {
 		$char: "\E076";
 	}
-	@if $filename == virtual-machine {
+	@if $filename == users {
 		$char: "\E077";
 	}
-	@if $filename == volume {
+	@if $filename == virtual-machine {
 		$char: "\E078";
 	}
-	@if $filename == warning-triangle {
+	@if $filename == volume {
 		$char: "\E079";
 	}
-	@if $filename == zone {
+	@if $filename == warning-triangle {
 		$char: "\E07A";
+	}
+	@if $filename == zone {
+		$char: "\E07B";
 	}
 
 	@return $char;
@@ -731,6 +730,9 @@
 }
 .pf-icon-storage-domain {
 	@include pf-icon(storage-domain);
+}
+.pf-icon-task {
+	@include pf-icon(task);
 }
 .pf-icon-tenant {
 	@include pf-icon(tenant);

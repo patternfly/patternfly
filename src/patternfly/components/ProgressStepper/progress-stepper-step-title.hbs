@@ -1,0 +1,11 @@
+<{{#if progress-stepper-step-title--type}}{{progress-stepper-step-title--type}}{{else}}div{{/if}} class="pf-c-progress-stepper__step-title{{#if progress-stepper-step-title--IsHelp}} pf-m-help-text{{/if}}{{#if progress-stepper-step-title--modifier}} {{progress-stepper-step-title--modifier}}{{/if}}"
+  {{#if progress-stepper-step-title--IsHelp}}
+    role="button"
+    type="button"
+    tabindex="0"
+  {{/if}}
+  {{#if progress-stepper-step-title--attribute}}
+    {{{progress-stepper-step-title--attribute}}}
+  {{/if}}>
+  {{>@partial-block}}
+</{{#if progress-stepper-step-title--type}}{{progress-stepper-step-title--type}}{{else}}div{{/if}}>

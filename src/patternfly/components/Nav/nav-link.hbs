@@ -5,6 +5,21 @@
   {{#if nav-link--current}}
     aria-current="page"
   {{/if}}
+  {{#if nav-item--IsFlyout}}
+    aria-haspopup="true"
+    {{#if nav-item--expanded}}
+      aria-expanded="true"
+    {{else}}
+      aria-expanded="false"
+    {{/if}}
+  {{/if}}
+  {{#if nav-item--IsDrilldown}}
+    {{#if nav-item--expanded}}
+      aria-expanded="true"
+    {{else}}
+      aria-expanded="false"
+    {{/if}}
+  {{/if}}
   {{#if nav-item--expandable}}
     {{#if nav-item--expanded}}
       aria-expanded="true"
@@ -12,8 +27,17 @@
       aria-expanded="false"
     {{/if}}
   {{/if}}>
+  {{#if nav-item--IsDrillup}}
+    {{> nav-toggle nav-toggle--modifier="pf-m-start"}}
+  {{/if}}
   {{> @partial-block}}
   {{#if nav-item--expandable}}
+    {{> nav-toggle}}
+  {{/if}}
+  {{#if nav-item--IsFlyout}}
+    {{> nav-toggle}}
+  {{/if}}
+  {{#if nav-item--IsDrilldown}}
     {{> nav-toggle}}
   {{/if}}
 </{{#if nav-item--expandable}}button{{else}}a{{/if}}>

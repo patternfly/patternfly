@@ -1,0 +1,19 @@
+{{#> table-tr}}
+  {{#if table--scrollable--Column1IsStickyColumn}}
+    {{> table--scrollable--th table--scrollable--th--modifier=table--scrollable--th--modifier--cell-1-modifier table--scrollable--th--content=cell-1--content table-th--attribute='scope="col" style="--pf-c-table__sticky-column--MinWidth: 100px;"' table-th--sortable="true" table-th--IsStickyColumn="true" table--scrollable--NoIcon="true"}}
+  {{else}}
+    {{> table--scrollable--th table--scrollable--th--content=cell-1--content table--scrollable--th--icon=cell-1--icon table-th--sortable="true" table--scrollable--NoIcon="true"}}
+  {{/if}}
+  {{#if table--scrollable--Column2IsStickyColumn}}
+    {{> table--scrollable--th table--scrollable--th--modifier=table--scrollable--th--modifier--cell-2-modifier table--scrollable--th--content=cell-2--content table-th--attribute='scope="col" style="--pf-c-table__sticky-column--MinWidth: 80px; --pf-c-table__sticky-column--Left: 100px;"' table-th--sortable="true" table-th--IsStickyColumn="true" table--scrollable--NoIcon="true"}}
+  {{else}}
+    {{> table--scrollable--th table--scrollable--th--content=cell-2--content table-th--sortable="true" table--scrollable--NoIcon="true"}}
+  {{/if}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-3--content table--scrollable--th--icon=cell-3--icon}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-4--content table--scrollable--th--icon=cell-4--icon}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-5--content table--scrollable--th--icon=cell-5--icon}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-6--content table--scrollable--th--icon=cell-6--icon}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-7--content table--scrollable--th--icon=cell-7--icon}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-8--content table--scrollable--th--icon=cell-8--icon}}
+  {{> table--scrollable--th table--scrollable--th--content=cell-9--content table--scrollable--th--icon=cell-9--icon}}
+{{/table-tr}}

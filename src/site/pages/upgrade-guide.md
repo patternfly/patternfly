@@ -67,7 +67,7 @@ webpack: "3.8.1",
 sass-loader: "7.0.0",
 css-loader: "^0.28.11",
 style-loader: "^0.21.0",
-node-sass: "^4.9.0"
+sass: "^1.34.0"
 ```
 
 _Code Snippets_

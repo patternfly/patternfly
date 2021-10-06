@@ -19,7 +19,7 @@ section: demos
         {{/button}}
       {{/page-header-brand-toggle}}
       {{#> page-header-brand-link page-header-brand-link--href="#"}}
-        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="Patternfly Logo"'}}{{/brand}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
       {{/page-header-brand-link}}
     {{/page-header-brand}}
 
@@ -62,7 +62,7 @@ section: demos
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{#> content}}
         <h1>Projects</h1>
-        <p>This is a demo that showcases Patternfly Cards. </p>
+        <p>This is a demo that showcases PatternFly cards. </p>
       {{/content}}
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-light pf-m-no-padding"}}

@@ -1,0 +1,9 @@
+<{{#if tree-view-node-title--type}}{{tree-view-node-title--type}}{{else}}span{{/if}} class="pf-c-tree-view__node-title{{#if tree-view-node-title--modifier}} {{tree-view-node-title--modifier}}{{/if}}"
+  {{#if tree-view-node--HasCheckbox}}
+    for="check-{{tree-view-node--id}}"
+  {{/if}}
+  {{#if tree-view-node-title--attribute}}
+    {{{tree-view-node-title--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</{{#if tree-view-node-title--type}}{{tree-view-node-title--type}}{{else}}span{{/if}}>

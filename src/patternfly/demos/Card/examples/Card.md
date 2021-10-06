@@ -23,7 +23,7 @@ import './Card.css'
         {{#> label-group-main}}
           {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
             {{#> label-group-list-item}}
-              {{#> label label--modifier="pf-m-blue"}}
+              {{#> label label--modifier="pf-m-blue pf-m-compact"}}
                 {{#> label-icon}}
                   <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
                 {{/label-icon}}
@@ -31,7 +31,7 @@ import './Card.css'
               {{/label}}
             {{/label-group-list-item}}
             {{#> label-group-list-item}}
-              {{#> label label--modifier="pf-m-purple"}}
+              {{#> label label--modifier="pf-m-purple pf-m-compact"}}
                 {{#> label-icon}}
                   <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
                 {{/label-icon}}
@@ -39,7 +39,7 @@ import './Card.css'
               {{/label}}
             {{/label-group-list-item}}
             {{#> label-group-list-item}}
-              {{#> label label--modifier="pf-m-green"}}
+              {{#> label label--modifier="pf-m-green pf-m-compact"}}
                 {{#> label-icon}}
                   <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
                 {{/label-icon}}
@@ -47,7 +47,7 @@ import './Card.css'
               {{/label}}
             {{/label-group-list-item}}
             {{#> label-group-list-item}}
-              {{#> label label--IsOverflow="true"}}
+              {{#> label label--IsOverflow="true" label--modifier="pf-m-compact"}}
                 1 more
               {{/label}}
             {{/label-group-list-item}}
@@ -281,7 +281,7 @@ import './Card.css'
             Cluster API Address
           {{/description-list-term}}
           {{#> description-list-description}}
-            https://api2.devcluster.openshift.com
+            <a href="#">https://api2.devcluster.openshift.com</a>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1019,7 +1019,7 @@ import './Card.css'
       {{#> description-list}}
         {{#> description-list-group}}
           {{#> description-list-term}}
-            <span class="pf-u-font-size-lg">Readiness probe failed</span>
+            Readiness probe failed
           {{/description-list-term}}
           {{#> description-list-description}}
             Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
@@ -1030,7 +1030,7 @@ import './Card.css'
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
-            <span class="pf-u-font-size-lg">Successful assignment</span>
+            Successful assignment
           {{/description-list-term}}
           {{#> description-list-description}}
             Successfully assigned default/example to ip-10-0-130-149.ec2.internal
@@ -1041,7 +1041,7 @@ import './Card.css'
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
-            <span class="pf-u-font-size-lg">Pulling image</span>
+            Pulling image
           {{/description-list-term}}
           {{#> description-list-description}}
             Pulling image "openshift/hello-openshift"
@@ -1052,7 +1052,7 @@ import './Card.css'
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
-            <span class="pf-u-font-size-lg">Created container</span>
+            Created container
           {{/description-list-term}}
           {{#> description-list-description}}
             Created container hello-openshift
@@ -1063,6 +1063,7 @@ import './Card.css'
         {{/description-list-group}}
       {{/description-list}}
     {{/card-body}}
+    {{> divider}}
     {{#> card-footer}}
       <a href="#">View all activity</a>
     {{/card-footer}}
@@ -1087,13 +1088,13 @@ import './Card.css'
     {{#> card-body}}
       {{#> description-list}}
         {{#> description-list-group}}
-          {{#> description-list-term description-list-term--modifier="pf-u-font-size-lg"}}
+          {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item}}
                 <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
-                <span>Readiness probe failed</span>
+                Readiness probe failed
               {{/l-flex-item}}
             {{/l-flex}}
           {{/description-list-term}}
@@ -1105,13 +1106,13 @@ import './Card.css'
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
-          {{#> description-list-term description-list-term--modifier="pf-u-font-size-lg"}}
+          {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item}}
                 <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
-                <span>Successful assignment</span>
+                Successful assignment
               {{/l-flex-item}}
             {{/l-flex}}
           {{/description-list-term}}
@@ -1123,13 +1124,13 @@ import './Card.css'
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
-          {{#> description-list-term description-list-term--modifier="pf-u-font-size-lg"}}
+          {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item}}
                 {{#> spinner spinner--modifier="pf-m-md" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
               {{/l-flex-item}}
               {{#> l-flex-item}}
-                <span>Pulling image</span>
+                Pulling image
               {{/l-flex-item}}
             {{/l-flex}}
           {{/description-list-term}}
@@ -1141,13 +1142,13 @@ import './Card.css'
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
-          {{#> description-list-term description-list-term--modifier="pf-u-font-size-lg"}}
+          {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item}}
                 <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
-                <span>Created container</span>
+                Created container
               {{/l-flex-item}}
             {{/l-flex}}
           {{/description-list-term}}
@@ -1160,6 +1161,7 @@ import './Card.css'
         {{/description-list-group}}
       {{/description-list}}
     {{/card-body}}
+    {{> divider}}
     {{#> card-footer}}
       <a href="#">View all events</a>
     {{/card-footer}}

@@ -1,0 +1,45 @@
+{{#> nav nav--attribute='aria-label="Global"' nav--id=nav--drilldown--id}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Clusters
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Overview
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Releases
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--IsDrilldown="true" nav-item--expanded=nav--drilldown--level-2}}
+      {{#> nav-link nav-link--href="#"}}
+        Subscriptions
+      {{/nav-link}}
+      {{> nav--drilldown--nav-item-submenu}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Support cases
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Cluster manager feedback
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Red Hat Marketplace
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Documentation
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}

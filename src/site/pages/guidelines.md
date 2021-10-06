@@ -364,4 +364,4 @@ This guide is inspired by people we follow and respect:
 - **[Mark Otto](http://markdotto.com/):** [Code Guideline](http://codeguide.co/)
 - **[Robert Harris](http://csswizardry.com/):** [CSS Guidelines](http://cssguidelin.es/)
 - **[Gravity Department](http://gravitydept.com/)**: [Style Guide Field Manual](http://manuals.gravitydept.com/code/css/style-guide)
-- **[Hugo Giraudel](http://hugogiraudel.com/):** [SASS Guidelines](https://sass-guidelin.es/)
+- **[Kitty Giraudel](http://kittygiraudel.com/):** [SASS Guidelines](https://sass-guidelin.es/)

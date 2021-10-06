@@ -77,7 +77,7 @@ import './Card.css'
     {{/card-actions}}
   {{/card-header}}
   {{#> card-body card-body--attribute=(concat 'id="' card--id '-check-label"')}}
-    This is the card body, there are only actions in the card head.
+    This is the card body. There are only actions in the card head.
   {{/card-body}}
 {{/card}}
 ```

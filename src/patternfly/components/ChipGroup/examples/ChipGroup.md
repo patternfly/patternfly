@@ -548,7 +548,7 @@ A chip group is constrained to the width of its container and will wrap when it 
 
 If you want to create sub-groupings of chips to represent multiple values applied against the same category, chips can be grouped by category. This can be useful in filtering use cases, for example, where you want all items that match more than one value of the same attribute, e.g., ‘status = down OR needs maintenance’.
 
-The chip group requires the [chip component](/documentation/core/components/chip).
+The chip group requires the [chip component](/components/chip).
 
 ### Accessibility
 

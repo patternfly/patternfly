@@ -18,9 +18,9 @@ wrapperTag: div
     {{> data-list-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
+    {{#> page-main-subnav}}
       {{> data-list-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> data-list-main-section-content}}
     {{/page-main-section}}
@@ -48,9 +48,9 @@ wrapperTag: div
     {{> data-list-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
+    {{#> page-main-subnav}}
       {{> data-list-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> data-list-main-section-content}}
     {{/page-main-section}}
@@ -78,9 +78,9 @@ wrapperTag: div
     {{> data-list-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
+    {{#> page-main-subnav}}
       {{> data-list-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> data-list-main-section-content}}
     {{/page-main-section}}
@@ -108,9 +108,9 @@ wrapperTag: div
     {{> data-list-page-nav}}
   {{/page-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-nav page-main-nav--modifier="pf-m-light"}}
+    {{#> page-main-subnav}}
       {{> data-list-main-section-nav}}
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
       {{> data-list-main-section-content}}
     {{/page-main-section}}

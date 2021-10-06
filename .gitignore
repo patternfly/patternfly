@@ -10,7 +10,7 @@
 .blueprints
 npm-debug.log
 yarn-error.log
-yarn.lock
+package-lock.json
 /.idea
 /coverage/
 *.swp

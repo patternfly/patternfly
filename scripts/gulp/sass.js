@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 const { src, watch, dest } = require('gulp');
-const sass = require('node-sass');
+const sass = require('sass');
 const stylelint = require('stylelint');
 const sassGraph = require('sass-graph');
 const postcss = require('gulp-postcss');

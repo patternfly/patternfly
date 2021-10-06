@@ -33,6 +33,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // Alt color scheme
   --pf-c-tabs--m-color-scheme--light-300__link--BackgroundColor: transparent;
   --pf-c-tabs--m-color-scheme--light-300__item--m-current__link--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-tabs--m-color-scheme--light-300__link--disabled--BackgroundColor: var(--pf-global--palette--black-150);
 
   // List
   --pf-c-tabs__list--Display: flex;
@@ -47,11 +48,13 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tabs__link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-tabs__link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-tabs__link--disabled--BackgroundColor: var(--pf-global--palette--black-150);
   --pf-c-tabs__item--m-current__link--Color: var(--pf-global--Color--100);
   --pf-c-tabs__item--m-current__link--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-tabs--m-vertical__link--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-tabs--m-vertical__link--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-tabs--m-box__link--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-tabs--m-box__link--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-tabs--m-secondary__link--FontSize: var(--pf-global--FontSize--sm);
 
   // Link before
@@ -64,6 +67,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__link--before--BorderBottomWidth: 0;
   --pf-c-tabs__link--before--BorderLeftWidth: 0;
   --pf-c-tabs__link--before--Left: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
+  --pf-c-tabs__link--disabled--before--BorderRightWidth: 0;
+  --pf-c-tabs__link--disabled--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
+  --pf-c-tabs__link--disabled--before--BorderLeftWidth: 0;
 
   // Link after
   --pf-c-tabs__link--after--Top: auto;
@@ -115,6 +121,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__toggle-icon--Color: currentColor;
   --pf-c-tabs__toggle-icon--Transition: var(--pf-global--Transition);
   --pf-c-tabs__toggle-icon--Rotate: 0;
+  --pf-c-tabs__toggle-text--MarginLeft: 0;
+  --pf-c-tabs__toggle-button__toggle-text--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-tabs__toggle-button__toggle-text--Color: var(--pf-global--Color--100);
   --pf-c-tabs__toggle-button--MarginTop: calc(-1 * var(--pf-global--spacer--form-element));
   --pf-c-tabs__toggle-button--MarginBottom: calc(-1 * var(--pf-global--spacer--form-element));
   --pf-c-tabs__toggle-button--MarginLeft: calc(-1 * var(--pf-global--spacer--md));
@@ -187,6 +196,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   &.pf-m-secondary,
   &.pf-m-no-border-bottom {
     --pf-c-tabs--before--BorderBottomWidth: 0;
+    --pf-c-tabs__link--disabled--before--BorderBottomWidth: 0;
   }
 
   // Remove bottom border for variants
@@ -200,8 +210,10 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // Box
   &.pf-m-box {
     --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs--m-box__link--BackgroundColor);
+    --pf-c-tabs__link--disabled--BackgroundColor: var(--pf-c-tabs--m-box__link--disabled--BackgroundColor);
     --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--before--border-width--base);
     --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+    --pf-c-tabs__link--disabled--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
     --pf-c-tabs__link--after--Top: 0;
     --pf-c-tabs__link--after--Bottom: auto;
 
@@ -252,6 +264,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     &.pf-m-color-scheme--light-300 {
       --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs--m-color-scheme--light-300__link--BackgroundColor);
       --pf-c-tabs__item--m-current__link--BackgroundColor: var(--pf-c-tabs--m-color-scheme--light-300__item--m-current__link--BackgroundColor);
+      --pf-c-tabs__link--disabled--BackgroundColor: var(--pf-c-tabs--m-color-scheme--light-300__link--disabled--BackgroundColor);
     }
   }
 
@@ -263,6 +276,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs__link--PaddingTop: var(--pf-c-tabs--m-vertical__link--PaddingTop);
     --pf-c-tabs__link--PaddingBottom: var(--pf-c-tabs--m-vertical__link--PaddingBottom);
     --pf-c-tabs__link--before--Left: 0;
+    --pf-c-tabs__link--disabled--before--BorderBottomWidth: 0;
+    --pf-c-tabs__link--disabled--before--BorderLeftWidth: var(--pf-c-tabs--before--border-width--base);
     --pf-c-tabs__link--after--Top: 0;
     --pf-c-tabs__link--after--Bottom: 0;
     --pf-c-tabs__link--after--Right: auto;
@@ -347,6 +362,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs--inset: var(--pf-c-tabs--m-vertical--m-box--inset);
     --pf-c-tabs--m-vertical__list--before--BorderLeftWidth: 0;
     --pf-c-tabs--m-vertical__list--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
+    --pf-c-tabs__link--disabled--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
+    --pf-c-tabs__link--disabled--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
+    --pf-c-tabs__link--disabled--before--BorderLeftWidth: 0;
 
     .pf-c-tabs__list::before {
       right: 0;
@@ -407,9 +425,18 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 }
 
 .pf-c-tabs__toggle-button {
+  --pf-c-tabs__toggle-text--MarginLeft: var(--pf-c-tabs__toggle-button__toggle-text--MarginLeft);
+  --pf-c-tabs__toggle-text--Color: var(--pf-c-tabs__toggle-button__toggle-text--Color);
+
   margin-top: var(--pf-c-tabs__toggle-button--MarginTop);
   margin-bottom: var(--pf-c-tabs__toggle-button--MarginBottom);
   margin-left: var(--pf-c-tabs__toggle-button--MarginLeft);
+
+  .pf-c-button {
+    display: flex;
+    text-align: left;
+    white-space: normal;
+  }
 }
 
 .pf-c-tabs__toggle-icon {
@@ -417,6 +444,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   color: var(--pf-c-tabs__toggle-icon--Color);
   transition: var(--pf-c-tabs__toggle-icon--Transition);
   transform: rotate(var(--pf-c-tabs__toggle-icon--Rotate));
+}
+
+.pf-c-tabs__toggle-text {
+  margin-left: var(--pf-c-tabs__toggle-text--MarginLeft);
+  color: var(--pf-c-tabs__toggle-text--Color, inherit);
 }
 
 
@@ -516,6 +548,25 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   &:active {
     --pf-c-tabs__link--after--BorderWidth: var(--pf-c-tabs__link--active--after--BorderWidth);
+  }
+
+  &:disabled,
+  &.pf-m-disabled {
+    pointer-events: none;
+  }
+
+  &:disabled,
+  &.pf-m-disabled,
+  &.pf-m-aria-disabled {
+    --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs__link--disabled--BackgroundColor);
+    --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--disabled--before--BorderRightWidth);
+    --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--disabled--before--BorderBottomWidth);
+    --pf-c-tabs__link--before--BorderLeftWidth: var(--pf-c-tabs__link--disabled--before--BorderLeftWidth);
+    --pf-c-tabs__link--after--BorderWidth: 0;
+  }
+
+  &.pf-m-aria-disabled {
+    cursor: default;
   }
 
   .pf-c-tabs__item-icon,

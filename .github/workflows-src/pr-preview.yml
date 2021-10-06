@@ -1,0 +1,27 @@
+name: pr-preview
+on: pull_request_target
+jobs:
+  build-upload:
+    runs-on: ubuntu-latest
+    env:
+      SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+      SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+      GH_PR_TOKEN: ${{ secrets.GH_PR_TOKEN }}
+      GH_PR_NUM:   ${{ github.event.number }}
+    steps:
+      - uses: actions/checkout@v2
+      # Yes, we really want to checkout the PR
+      - run: |
+          git fetch origin pull/$GH_PR_NUM/head:tmp
+          git checkout tmp
+
+      - run: |
+          git rev-parse origin/main
+          git rev-parse HEAD
+          git rev-parse origin/main..HEAD
+          git log origin/main..HEAD --format="%b"
+
+      # Yes, we really want to checkout the PR
+      # Injected by generate-workflows.js
+      %build-test%
+

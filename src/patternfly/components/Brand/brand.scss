@@ -1,8 +1,8 @@
 $pf-c-brand--breakpoint-map: build-breakpoint-map();
 
 .pf-c-brand {
-  --pf-c-brand--Width--base: auto;
-  --pf-c-brand--Height--base: auto;
+  --pf-c-brand--Width: auto;
+  --pf-c-brand--Height: auto;
 
   width: var(--pf-c-brand--Width--base);
   height: var(--pf-c-brand--Height--base);

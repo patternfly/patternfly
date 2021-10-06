@@ -2,7 +2,6 @@
 id: Action list
 section: components
 cssPrefix: pf-c-action-list
-beta: true
 ---
 
 ## Examples

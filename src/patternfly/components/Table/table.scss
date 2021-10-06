@@ -113,6 +113,16 @@
   --pf-c-table__sort--m-favorite__button--focus__text--Color: var(--pf-global--Color--100);
   --pf-c-table__sort--m-favorite__button--active__text--Color: var(--pf-global--Color--100);
 
+  // Draggable
+  --pf-c-table__draggable--c-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-table__draggable--c-button--MarginRight: calc(var(--pf-global--spacer--md) * -1);
+  --pf-c-table__draggable--c-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-table__draggable--c-button--MarginLeft: calc(var(--pf-global--spacer--md) * -1);
+
+  // Ghost row
+  --pf-c-table__tr--m-ghost-row--Opacity: .4;
+  --pf-c-table__tr--m-ghost-row--BackgroundColor: var(--pf-global--BackgroundColor--100);
+
   // Action
   --pf-c-table__action--PaddingTop: 0;
   --pf-c-table__action--PaddingRight: 0;
@@ -324,6 +334,12 @@
   // exclude expandable rows
   tr:not(.pf-c-table__expandable-row) {
     border-bottom: var(--pf-c-table--border-width--base) solid var(--pf-c-table--BorderColor);
+
+    // stylelint-disable-next-line
+    &.pf-m-ghost-row {
+      background-color: var(--pf-c-table__tr--m-ghost-row--BackgroundColor);
+      opacity: var(--pf-c-table__tr--m-ghost-row--Opacity);
+    }
   }
 
   // Table cell
@@ -630,6 +646,10 @@
     }
   }
   // stylelint-enable
+
+  &.pf-m-drag-over {
+    overflow-anchor: none;
+  }
 }
 
 // Text
@@ -766,7 +786,8 @@
 .pf-c-table .pf-c-table__action,
 .pf-c-table .pf-c-table__favorite,
 .pf-c-table th.pf-m-favorite,
-.pf-c-table .pf-c-table__inline-edit-action {
+.pf-c-table .pf-c-table__inline-edit-action,
+.pf-c-table .pf-c-table__draggable {
   --pf-c-table--cell--MinWidth: 0;
   --pf-c-table--cell--Width: 1%;
 }
@@ -819,6 +840,18 @@
 
     @at-root .pf-m-favorited#{&} {
       --pf-c-button--m-plain--Color: var(--pf-c-table__favorite--m-favorited--c-button--Color);
+    }
+  }
+}
+
+// Draggable
+.pf-c-table__draggable {
+  .pf-c-button {
+    margin: var(--pf-c-table__draggable--c-button--MarginTop) var(--pf-c-table__draggable--c-button--MarginRight) var(--pf-c-table__draggable--c-button--MarginBottom) var(--pf-c-table__draggable--c-button--MarginLeft);
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
     }
   }
 }
@@ -1088,7 +1121,6 @@
 .pf-c-table.pf-m-compact {
   --pf-c-table--cell--FontSize: var(--pf-c-table--m-compact--FontSize);
   --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-compact--cell--PaddingTop);
-  --pf-c-table--cell--PaddingRight: var(--pf-c-table--m-compact--cell--PaddingRight);
   --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-compact--cell--PaddingBottom);
   --pf-c-table--cell--PaddingRight: var(--pf-c-table--m-compact--cell--PaddingLeft);
 

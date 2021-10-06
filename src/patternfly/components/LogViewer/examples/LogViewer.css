@@ -1,16 +1,8 @@
-#ws-core-c-log-viewer-responsive {
-  height: 400px;
-}
-
-#ws-core-c-log-viewer-responsive .ws-preview-html {
-  height: 100%;
-}
-
-#ws-core-c-log-viewer-with-popover-open .ws-preview-html {
+#ws-core-e-log-viewer-with-popover-open .ws-preview-html {
   position: relative;
 }
 
-#ws-core-c-log-viewer-with-popover-open .pf-c-popover {
+#ws-core-e-log-viewer-with-popover-open .pf-c-popover {
   display: none;
   position: absolute;
   z-index: 9999;
@@ -19,7 +11,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  #ws-core-c-log-viewer-with-popover-open .pf-c-popover {
+  #ws-core-e-log-viewer-with-popover-open .pf-c-popover {
     display: block;
   }
 }

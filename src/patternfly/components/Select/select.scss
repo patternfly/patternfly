@@ -30,6 +30,7 @@
   --pf-c-select__toggle--m-expanded--before--BorderBottomWidth: var(--pf-global--BorderWidth--md); // rename to c-select--m-expanded at breaking change
   --pf-c-select__toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
   --pf-c-select__toggle--m-plain--before--BorderColor: transparent;
+  --pf-c-select__toggle--m-placeholder--Color: transparent;
   --pf-c-select--m-invalid__toggle--before--BorderBottomColor: var(--pf-global--danger-color--100);
   --pf-c-select--m-invalid__toggle--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-select--m-invalid__toggle--hover--before--BorderBottomColor: var(--pf-global--danger-color--100);
@@ -51,7 +52,6 @@
   --pf-c-select--m-warning__toggle--active--before--BorderBottomColor: var(--pf-global--warning-color--100);
   --pf-c-select--m-warning__toggle--m-expanded--before--BorderBottomColor: var(--pf-global--warning-color--100);
   --pf-c-select--m-warning__toggle-status-icon--Color: var(--pf-global--warning-color--100);
-
 
   // Space for the children of the toggle
   --pf-c-select__toggle-wrapper--not-last-child--MarginRight: var(--pf-global--spacer--xs);
@@ -76,6 +76,9 @@
 
   // This is really var(--pf-c-form-control--PaddingBottom) but has to be recalculated instead of reusing another component's variable
   --pf-c-select__toggle-typeahead--focus--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-global--BorderWidth--md));
+
+  // Toggle text
+  --pf-c-select__toggle--m-placeholder__toggle-text--Color: var(--pf-global--Color--dark-200);
 
   //  Select toggle icon + toggle text
   --pf-c-select__toggle-icon--toggle-text--MarginLeft: var(--pf-global--spacer--xs);
@@ -325,6 +328,8 @@
     .pf-c-form-control {
       @include pf-text-overflow;
 
+      --pf-c-form-control--invalid--BackgroundUrl: none;
+
       position: relative;
       height: auto;
     }
@@ -343,6 +348,10 @@
   .pf-c-select__toggle-clear + .pf-c-select__toggle-button {
     padding-left: var(--pf-c-select__toggle-clear--toggle-button--PaddingLeft);
   }
+
+  &.pf-m-placeholder {
+    --pf-c-select__toggle-text--Color: var(--pf-c-select__toggle--m-placeholder__toggle-text--Color);
+  }
 }
 
 .pf-c-select__toggle-arrow {
@@ -358,6 +367,8 @@
 
 .pf-c-select__toggle-text {
   @include pf-text-overflow;
+
+  color: var(--pf-c-select__toggle-text--Color, inherit);
 }
 
 .pf-c-select__toggle-wrapper {
@@ -414,18 +425,18 @@
   flex-basis: var(--pf-c-select__toggle-typeahead--FlexBasis);
   flex-grow: 1;
   min-width: var(--pf-c-select__toggle-typeahead--MinWidth);
-  background-color: var(--pf-c-select__toggle-typeahead--BackgroundColor);
-  border-top: var(--pf-c-select__toggle-typeahead--BorderTop); // remove and define border-top-color w/ &.pf-c-form-control at breaking change
-  border-right: var(--pf-c-select__toggle-typeahead--BorderRight);
-  border-left: var(--pf-c-select__toggle-typeahead--BorderLeft);
   flex-shrink: 0;
 
   &.pf-c-form-control {
+    background-color: var(--pf-c-select__toggle-typeahead--BackgroundColor);
+    border-top: var(--pf-c-select__toggle-typeahead--BorderTop); // remove and define border-top-color w/ &.pf-c-form-control at breaking change
+    border-right: var(--pf-c-select__toggle-typeahead--BorderRight);
     border-bottom-color: transparent;
-  }
+    border-left: var(--pf-c-select__toggle-typeahead--BorderLeft);
 
-  &:focus {
-    padding-bottom: var(--pf-c-select__toggle-typeahead--focus--PaddingBottom); // remove at breaking change
+    &:focus {
+      padding-bottom: var(--pf-c-select__toggle-typeahead--focus--PaddingBottom); // remove at breaking change
+    }
   }
 }
 

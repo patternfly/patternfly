@@ -116,3 +116,9 @@
 .pf-c-inline-edit__label.pf-m-bold {
   font-weight: var(--pf-c-inline-edit__label--m-bold--FontWeight);
 }
+
+.pf-c-inline-edit__editable-text {
+  br {
+    display: none;
+  }
+}

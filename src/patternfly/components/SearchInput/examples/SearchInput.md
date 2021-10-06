@@ -28,6 +28,11 @@ import './SearchInput.css'
 {{> search-input search-input--placeholder="Find by name" search-input--value="John Doe" search-input--count="1 / 3" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
 ```
 
+### With submit button
+```hbs
+{{> search-input search-input--placeholder="Find by name" search-input--HasSubmitButton="true"}}
+```
+
 ### Advanced search
 ```hbs
 {{> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:ned" search-input--IsAdvancedSearch="true"}}
@@ -80,15 +85,15 @@ import './SearchInput.css'
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
-        {{#> form-actions}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Submit
-          {{/button}}
-          {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
-            Reset
-          {{/button}}
-        {{/form-actions}}
-      {{/form-group}}
+          {{#> form-actions}}
+            {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+              Submit
+            {{/button}}
+            {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
+              Reset
+            {{/button}}
+          {{/form-actions}}
+        {{/form-group}}
       {{/form}}
     {{/search-input-menu-body}}
   {{/search-input-menu}}

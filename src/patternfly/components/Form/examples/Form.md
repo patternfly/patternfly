@@ -46,7 +46,7 @@ cssPrefix: pf-c-form
       {{#> form-control controlType="textarea" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Textarea example"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--id="-checkbox"}}
+  {{#> form-group form-group--IsCheckGroup="true" form-group--id="-checkbox"}}
     {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
       {{#> form-label}}
         Label (no top padding)
@@ -133,7 +133,7 @@ cssPrefix: pf-c-form
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
       {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
-        This is helper text
+        This is helper text.
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -147,7 +147,7 @@ cssPrefix: pf-c-form
       {{#> form-control form-control--modifier="pf-m-warning" controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
       {{#> form-helper-text  form-helper-text--modifier="pf-m-warning" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
-        This is helper text for a warning input
+        This is helper text for a warning input.
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -161,7 +161,7 @@ cssPrefix: pf-c-form
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-invalid="true" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
       {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
-        This is helper text for an invalid input
+        This is helper text for an invalid input.
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -175,14 +175,16 @@ cssPrefix: pf-c-form
       {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
       {{#> form-helper-text form-helper-text--modifier="pf-m-success" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
-        This is helper text for success input
+        This is helper text for success input.
       {{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="info"}}
-    {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
-      Information
-    {{/form-label}}
+    {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
+        Information
+      {{/form-label}}
+    {{/form-group-label}}
     {{#> form-control controlType="textarea" form-control--attribute=(concat 'id="' form--id form-group--id '" name="' form--id form-group--id '" aria-invalid="true" aria-describedby="' form--id form-group--id '-helper"')}}
     {{/form-control}}
     {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
@@ -194,7 +196,27 @@ cssPrefix: pf-c-form
   {{/form-group}}
 {{/form}}
 ```
-
+### Label with additional info
+```hbs
+{{#> form form--id="form-additional-info"}}
+  {{#> form-group form-group--id="-name"}}
+    {{#> form-group-label form-group-label-info="true"}}
+      {{#> form-group-label-main}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
+          Name
+        {{/form-label}}
+        {{> form-group-label-help}}
+      {{/form-group-label-main}}
+      {{#> form-group-label-info}}
+        info
+      {{/form-group-label-info}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+    {{/form-group-control}}
+  {{/form-group}}
+{{/form}}
+```
 ### Action group
 ```hbs
 {{#> form}}
@@ -210,7 +232,6 @@ cssPrefix: pf-c-form
   {{/form-group}}
 {{/form}}
 ```
-
 ### Field groups
 ```hbs
 {{#> form form--id="form-expandable-field-groups"}}
@@ -525,8 +546,12 @@ cssPrefix: pf-c-form
 | `aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` | Form fields with related `.pf-c-form__helper-text` require this attribute. Usage `<input aria-describedby="{helper_text_id}">`.  |
 | `aria-invalid="true" aria-describedby="{helper_text_id}"` | `<input>`, `<select>`, `<textarea>` |  When form validation fails `aria-describedby` is used to communicate the error to the user. These attributes need to be handled with Javascript so that `aria-describedby` only references help text that explains the error, and so that `aria-invalid="true"` is only present when validation fails. For proper styling of errors `aria-invalid="true"` is required. |
 | `aria-hidden="true"` | `.pf-c-form__label-required` |  Hides the required indicator from assistive technologies. |
+| `role="group"` | `.pf-c-form__group` | Provides group role for checkbox groups. **Required for checkbox groups** |
+| `role="radiogroup"` | `.pf-c-form__group` | Provides group role for radio input groups. **Required for radio input groups** |
+| `id` | `.pf-c-form__group-label` | Generates an `id` for use in the `aria-labelledby` attribute in a checkbox or radio form group. |
 | `id` | `.pf-c-form__field-group-title-text` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
 | `id` | `.pf-c-form__field-group-toggle-button > button` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
+| `aria-labelledby="{label id}"` | `.pf-c-form__group` | Provides an accessible label for the checkbox or radio field group. |
 | `aria-label` | `.pf-c-form__field-group-toggle-button > button` | Provides an accessible label for the field group toggle button. |
 | `aria-labelledby="{title id} {toggle button id}"` | `.pf-c-form__field-group-toggle-button > button` | Provides an accessible label for the field group toggle button. |
 | `aria-expanded="true/false"` | `.pf-c-form__field-group-toggle-button > button` | Indicates whether the field group body is visible or hidden. |
@@ -539,13 +564,15 @@ cssPrefix: pf-c-form
 | `.pf-c-form__section-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`, `<div>` |  Initiates a form section title. |
 | `.pf-c-form__group` | `<div>` |  Initiates a form group. |
 | `.pf-c-form__group-label` | `<div>` |  Initiates a form group label. |
-| `.pf-c-form__label` | `<label>` |  Initiates a form label. **Required** |
+| `.pf-c-form__label` | `<label>`, `<span>` |  Initiates a form label. **Required** |
 | `.pf-c-form__label-text` | `<span>` |  Initiates a form label text. **Required** |
 | `.pf-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
+| `.pf-c-form__group-label-main` | `<div>` |  Initiates a form group label main container. |
+| `.pf-c-form__group-label-info` | `<div>` |  Initiates a form group info label. |
 | `.pf-c-form__group-label-help` | `<button>` | Initiates a field level help button. |
 | `.pf-c-form__group-control` | `<div>` |  Initiates a form group control section. |
 | `.pf-c-form__actions` | `<div>` | Iniates a row of actions. |
-| `.pf-c-form__helper-text` | `<p>` |  Initiates a form helper text block. |
+| `.pf-c-form__helper-text` | `<p>`, `<div>` |  Initiates a form helper text block. |
 | `.pf-c-form__helper-text-icon` | `<span>` |  Initiates a form helper text icon. |
 | `.pf-c-form__alert` | `<div>` | Initiates the form alert container for inline alerts. |
 | `.pf-c-form__field-group` | `<div>` | Initiates a form field group. |
@@ -560,6 +587,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__field-group-header-actions` | `<div>` | Initiates the form field group actions container. |
 | `.pf-c-form__field-group-body` | `<div>` | Initiates the form field group body. |
 | `.pf-m-horizontal` | `.pf-c-form` | Modifies form for a horizontal layout. |
+| `.pf-m-info` | `.pf-c-form__group-label` | Modifies the form group label to contain form group label info. |
 | `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |
 | `.pf-m-success` | `.pf-c-form__helper-text` | Modifies text color of helper text for success state. |
 | `.pf-m-warning` | `.pf-c-form__helper-text` | Modifies text color of helper text for warning state. |

@@ -23,7 +23,7 @@ The main handlebars file for a block should be named using kebab case. For examp
 ## Documentation
 For each example you should provide the relevant accessibility and usage guidance as well as any additional notes that could be helpful. Any information that is not specific to an example should be included at the bottom of the page.
 
-A good example of this approach is the [table component](/documentation/core/components/table).
+A good example of this approach is the [table component](/components/table).
 
 ## Modifiers
 ### Modifier parameter
@@ -91,3 +91,19 @@ In order to streamline reviews and set expectations, the following should be exp
     5) Does the responsive behavior work correctly?
     6) Have the accessibility standards been followed?
     7) Is the example resilient - if you put more content in it, do things start to break?
+
+
+## Adding a custom icon
+
+Below are the steps for adding a custom icon to the [pficon icons](/icons) icon font. Adding this icon in core will also add the icon to the [react-icons](https://github.com/patternfly/patternfly-react/tree/main/packages/react-icons) library as an SVG.
+
+- Get the new source SVG from design.
+- Edit `src/icons/definitions/pf-icons.json` to add the new icon.
+  - Add a new entry with a unique name (placed in alphabetical order) and the height, width, and path from the source SVG.
+- Remove the existing pficons SVGs from `src/icons/PfIcons/`. Any files there are just used to build the icon font.
+- Run `npm run build:pficons` to create the SVGs (stored in `src/icons/PfIcons/`) from `pf-icons.json` that will be used to build the icon font.
+- Run `npm run build:pficonfont` to build the icon font files (stored in `src/patternfly/assets/pficon/`) from the SVGs in `src/icons/PfIcons/`.
+- Edit `src/patternfly/assets/pficon/pficon.scss` and prefix the `src: url()` paths for the icon font files with the global icon font path (e.g., `url('#{$pf-global--fonticon-path}/pficon.woff2')`).
+- Run `./scripts/iconList.sh` to update `src/site/pages/icons.md`, which serves the pficon icon preview page on the dev server served at `/icons`.
+- Restart the dev server and verify the icons look correct on `/icons`.
+  - **Note**: This step may require clearing your cache.

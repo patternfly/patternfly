@@ -1,0 +1,14 @@
+<div class="pf-c-alert__toggle{{#if alert-toggle--modifier}} {{alert-toggle--modifier}}{{/if}}"
+  {{#if alert-toggle--attribute}}
+    {{{alert-toggle--attribute}}}
+  {{/if}}>
+  {{#if alert--IsExpanded}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-expanded="true" id="' alert--id '-toggle" aria-label="Details" aria-labelledby="' alert--id '-title ' alert--id '-toggle"')}}
+      {{> alert-toggle-icon}}
+    {{/button}}
+  {{else}}
+    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-expanded="false" id="' alert--id '-toggle" aria-label="Details" aria-labelledby="' alert--id '-title ' alert--id '-toggle"')}}
+      {{> alert-toggle-icon}}
+    {{/button}}
+  {{/if}}
+</div>

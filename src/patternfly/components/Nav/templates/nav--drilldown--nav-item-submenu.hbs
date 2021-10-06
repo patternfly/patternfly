@@ -1,0 +1,51 @@
+{{#> nav-subnav}}
+  {{#> nav-list nav-item--IsDrilldown=reset nav-item--expanded=reset}}
+    {{#> nav-item nav-item--IsDrillup="true"}}
+      {{#> nav-link nav-link--href="#"}}
+        Subscriptions
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Container platform
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--IsDrilldown="true" nav-item--expanded=nav--drilldown--level-3}}
+      {{#> nav-link nav-link--href="#"}}
+        Dedicated
+      {{/nav-link}}
+      {{#> nav-subnav}}
+        {{#> nav-list nav-item--expanded=reset nav-item--IsDrilldown=reset}}
+          {{#> nav-item nav-item--IsDrillup="true"}}
+            {{#> nav-link nav-link--href="#"}}
+              Dedicated
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Dedicated (Annual)
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Overview
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#if nav--drilldown--HasFlyout}}
+            {{#> nav-item nav-item--IsDrilldown=reset nav-item--IsFlyout="true"}}
+              {{#> nav-link nav-link--href="#"}}
+                Subscriptions
+              {{/nav-link}}
+              {{> nav--flyout--nav-item-submenu}}
+            {{/nav-item}}
+          {{/if}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Dedicated (On-Demand limits)
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav-subnav}}

@@ -52,8 +52,7 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
- {{#> input-group-text input-group-text--HasDollarSignIcon="true"}}
- {{/input-group-text}}
+ {{> input-group-text input-group-text--HasDollarSignIcon="true"}}
  {{#> form-control controlType="input" input="true" form-control--attribute='type="number" id="textInput5" name="textInput5" aria-label=" Dollar amount input example"'}}
  {{/form-control}}
   {{#> input-group-text}}
@@ -70,16 +69,8 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
- {{#> input-group-text input-group-text--HasAtIcon="true"  input-group-text--attribute='id="username"' aria-label="@"}}
- {{/input-group-text}}
- {{#> form-control controlType="input" input="true" form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example" aria-describedby="username"'}}
-{{/form-control}}
-{{/input-group}}
-<br>
-{{#> input-group}}
- {{#> input-group-text input-group-text--type="label" input-group-text--HasCalendarIcon="true" input-group-text--attribute='for="textInput9"'}}
- {{/input-group-text}}
- {{#> form-control controlType="input" input="true" form-control--attribute='type="date" id="textInput9" name="textInput9" aria-label="Date input example"'}}
+ {{> input-group-text input-group-text--HasAtIcon="true"}}
+ {{#> form-control controlType="input" input="true" form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example"'}}
 {{/form-control}}
 {{/input-group}}
 <br>
@@ -121,7 +112,7 @@ cssPrefix: pf-c-input-group
 Use the input group to extend form controls by adding text, buttons, selects, etc.
 
 ### Accessibility
-When using the `.pf-c-input-group` always ensure labels are used outside the input group with the `.pf-screen-reader` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributues. For more information on accessibility and forms see the [form component](/documentation/core/components/form).
+When using the `.pf-c-input-group` always ensure labels are used outside the input group with the `.pf-screen-reader` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributes. For more information on accessibility and forms see the [form component](/components/form).
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-describedby` | `.pf-c-form-control` |  When using `.pf-c-input-group__text` or `.pf-c-input-group__action` make use of this on the input field. |

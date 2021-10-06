@@ -9,11 +9,11 @@ section: components
 {{#> form form--id="form-demo-basic"}}
   {{#> form-group form-group--id="-name"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Name{{/form-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}{{/form-control}}
-      {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Please provide your full name{{/form-helper-text}}
+      {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Include your middle name if you have one.{{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-email"}}
@@ -33,30 +33,49 @@ section: components
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--id="-contact"}}
+  {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
     {{#> form-group-label}}
       {{#> form-label}}How can we contact you?{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control form-group-control--modifier="pf-m-inline"}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '1" name="' form--id form-group--id '1"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '1"')}}Email{{/check-label}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '-check-1" name="' form--id form-group--id '-check-1"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '-check-1"')}}Email{{/check-label}}
       {{/check}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '2" name="' form--id form-group--id '2"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '2"')}}Phone{{/check-label}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '-check-2" name="' form--id form-group--id '-check-2"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '-check-2"')}}Phone{{/check-label}}
       {{/check}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '3" name="' form--id form-group--id '3"')}}{{/check-input}}
-        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '3"')}}Mail{{/check-label}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '-check-3" name="' form--id form-group--id '-check-3"')}}{{/check-input}}
+        {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '-check-3"')}}Mail{{/check-label}}
       {{/check}}
+    {{/form-group-control}}
+  {{/form-group}}
+  {{#> form-group form-group--IsCheckGroup="true" form-group--IsRadioGroup="true" form-group--id="-time-zone"}}
+    {{#> form-group-label}}
+      {{#> form-label}}Time zone{{/form-label}}
+    {{/form-group-label}}
+    {{#> form-group-control form-group-control--modifier="pf-m-inline"}}
+      {{#> radio}}
+        {{#> radio-input radio-input--attribute=(concat 'id="' form--id form-group--id '-radio-1" name="' form--id form-group--id '-radio"')}}{{/radio-input}}
+        {{#> radio-label radio-label--attribute=(concat 'for="' form--id form-group--id '-radio-1"')}}Eastern{{/radio-label}}
+      {{/radio}}
+      {{#> radio}}
+        {{#> radio-input radio-input--attribute=(concat 'id="' form--id form-group--id '-radio-2" name="' form--id form-group--id '-radio"')}}{{/radio-input}}
+        {{#> radio-label radio-label--attribute=(concat 'for="' form--id form-group--id '-radio-2"')}}Central{{/radio-label}}
+      {{/radio}}
+      {{#> radio}}
+        {{#> radio-input radio-input--attribute=(concat 'id="' form--id form-group--id '-radio-3" name="' form--id form-group--id '-radio"')}}{{/radio-input}}
+        {{#> radio-label radio-label--attribute=(concat 'for="' form--id form-group--id '-radio-3"')}}Pacific{{/radio-label}}
+      {{/radio}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-group-control}}
       {{#> form-actions}}
         {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-          Submit form
+          Submit
         {{/button}}
         {{#> button button--modifier="pf-m-link"}}
           Cancel
@@ -72,12 +91,12 @@ section: components
 {{#> form form--modifier="pf-m-horizontal" form--id="form-demo-horizontal"}}
   {{#> form-group form-group--modifier="-name"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Name{{/form-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
-      {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Please provide your full name{{/form-helper-text}}
+      {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Include your middle name if you have one.{{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-email"}}
@@ -98,22 +117,22 @@ section: components
       {{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-   {{#> form-group form-group--id="-contact"}}
+   {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
     {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
       {{#> form-label }}How can we contact you?{{/form-label}}
       {{> form-group-label-help}}
     {{/form-group-label}}
     {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '1" name="' form--id form-group--id '1"')}}{{/check-input}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '1" name="' form--id form-group--id '1"')}}{{/check-input}}
         {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '1"')}}Email{{/check-label}}
       {{/check}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '2" name="' form--id form-group--id '2"')}}{{/check-input}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '2" name="' form--id form-group--id '2"')}}{{/check-input}}
         {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '2"')}}Phone{{/check-label}}
       {{/check}}
       {{#> check}}
-        {{#> check-input check-input--attribute=(concat 'type="radio" id="' form--id form-group--id '3" name="' form--id form-group--id '3"')}}{{/check-input}}
+        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '3" name="' form--id form-group--id '3"')}}{{/check-input}}
         {{#> check-label check-label--attribute=(concat 'for="' form--id form-group--id '3"')}}Mail{{/check-label}}
       {{/check}}
     {{/form-group-control}}
@@ -122,7 +141,7 @@ section: components
     {{#> form-group-control}}
       {{#> form-actions}}
         {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-          Submit form
+          Submit
         {{/button}}
         {{#> button button--modifier="pf-m-link"}}
           Cancel
@@ -139,11 +158,11 @@ section: components
   {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-gutter"}}
     {{#> form-group form-group--id="-name"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Name{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}{{/form-control}}
-        {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Please provide your full name{{/form-helper-text}}
+        {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Include your middle name if you have one.{{/form-helper-text}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group form-group--id="-title"}}
@@ -193,7 +212,7 @@ section: components
         {{/form-group-label}}
         {{#> form-group-control}}
           {{#> form-control controlType="select" form-control--attribute=(concat 'id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
-            <option value="" selected>Please choose</option>
+            <option value="" selected>Select one</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -252,7 +271,7 @@ section: components
       {{#> form-group-control}}
         {{#> form-actions}}
           {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Submit form
+            Submit
           {{/button}}
           {{#> button button--modifier="pf-m-link"}}
             Cancel
@@ -282,7 +301,7 @@ section: components
     {{/form-group}}
     {{#> form-group form-group--id="-name"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Name{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
         {{> form-group-label-help}}
       {{/form-group-label}}
       {{#> form-group-control}}

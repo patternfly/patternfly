@@ -1,0 +1,49 @@
+{{#> nav nav--attribute='aria-label="Global"' nav--id=nav--flyout--id}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Clusters
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Overview
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Releases
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--IsFlyout="true" nav-item--expanded="true"}}
+      {{#> nav-link nav-link--href="#"}}
+        Subscriptions
+      {{/nav-link}}
+      {{#if nav--IsMenuFlyout}}
+        {{> nav--flyout--menu--nav-item-submenu}}
+      {{else}}
+        {{> nav--flyout--nav-item-submenu}}
+      {{/if}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Support cases
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Cluster manager feedback
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Red Hat Marketplace
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Documentation
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}

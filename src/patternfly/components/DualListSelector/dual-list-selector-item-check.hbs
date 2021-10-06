@@ -2,13 +2,19 @@
   {{#if dual-list-selector-item-check--attribute}}
     {{{dual-list-selector-item-check--attribute}}}
   {{/if}}>
-  {{#if dual-list-selector-item--IsSelected}}
+  {{#if dual-list-selector-list-item-row--IsSelected}}
     {{#> check check--modifier="pf-m-standalone"}}
       {{> check-input check-input--attribute=(concat 'id="check-' dual-list-selector-item--id '" checked aria-label="Dual list selector item check checked"')}}
     {{/check}}
   {{else}}
-    {{#> check check--modifier="pf-m-standalone"}}
-      {{> check-input check-input--attribute=(concat 'id="check-' dual-list-selector-item--id '" aria-label="Dual list selector item check"')}}
-    {{/check}}
+    {{#if dual-list-selector-list-item--IsDisabled}}
+      {{#> check check--modifier="pf-m-standalone"}}
+        {{> check-input check-input--attribute=(concat 'disabled id="check-' dual-list-selector-item--id '" aria-label="Dual list selector item check"')}}
+      {{/check}}
+    {{else}}
+      {{#> check check--modifier="pf-m-standalone"}}
+        {{> check-input check-input--attribute=(concat ' id="check-' dual-list-selector-item--id '" aria-label="Dual list selector item check"')}}
+      {{/check}}
+    {{/if}}
   {{/if}}
 </span>

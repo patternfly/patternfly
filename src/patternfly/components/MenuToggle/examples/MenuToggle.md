@@ -5,6 +5,8 @@ section: components
 cssPrefix: pf-c-menu-toggle
 ---
 
+import './MenuToggle.css'
+
 ## Examples
 ### Collapsed
 ```hbs
@@ -141,6 +143,31 @@ cssPrefix: pf-c-menu-toggle
 {{/menu-toggle}}
 ```
 
+### With image and text
+```hbs
+{{#> menu-toggle}}
+  {{> menu-toggle-image}}
+  {{#> menu-toggle-text}}
+    Ned Username
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
+### Full height
+```hbs
+{{#> menu-toggle menu-toggle--modifier="pf-m-full-height"}}
+  {{#> menu-toggle-text}}
+    Full height
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
 ### Accessibility
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -155,6 +182,7 @@ cssPrefix: pf-c-menu-toggle
 | -- | -- | -- |
 | `.pf-c-menu-toggle` | `<button>` | Initiates the menu toggle component. |
 | `.pf-c-menu-toggle__icon` | `<span>` | Defines the menu toggle component icon. |
+| `.pf-c-menu-toggle__image` | `<span>` | Defines the menu toggle component image. |
 | `.pf-c-menu-toggle__text` | `<span>` | Defines the menu toggle component text. |
 | `.pf-c-menu-toggle__count` | `<span>` | Defines the menu toggle component count. |
 | `.pf-c-menu-toggle__controls` | `<span>` | Defines the menu toggle component controls. |
@@ -162,3 +190,4 @@ cssPrefix: pf-c-menu-toggle
 | `.pf-m-primary` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the primary variation. |
 | `.pf-m-plain` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the plain variation. |
 | `.pf-m-expanded` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
+| `.pf-m-full-height` | `.pf-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |

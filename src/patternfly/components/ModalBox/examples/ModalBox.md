@@ -27,22 +27,22 @@ cssPrefix: pf-c-modal-box
 
 ### With help button
 ```hbs
-{{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+{{#> modal-box modal-box--attribute='aria-labelledby="modal-help-title" aria-describedby="modal-help-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
   {{#> modal-box-header modal-box-header--modifier="pf-m-help"}}
     {{#> modal-box-header-main}}
-      {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
+      {{#> modal-box-title modal-box-title--attribute='id="modal-help-title"'}}
         Modal title Modal title Modal title Modal title Modal title Modal title Modal title Modal title
       {{/modal-box-title}}
-      {{#> modal-box-description modal-box-description--attribute='id="modal-with-description-description"'}}
+      {{#> modal-box-description modal-box-description--attribute='id="modal-help-description"'}}
         A description is used when you want to provide more info about the modal than the title is able to describe. The content in the description is static and will not scroll with the rest of the modal body.
       {{/modal-box-description}}
     {{/modal-box-header-main}}
     {{> modal-box-header-help}}
   {{/modal-box-header}}
-  {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
+  {{#> modal-box-body}}
     To support screen reader user awareness of the dialog text, the dialog text is wrapped in a div that is referenced by aria-describedby.
   {{/modal-box-body}}
   {{#> modal-box-footer}}
@@ -323,13 +323,13 @@ A modal box is a generic rectangular container that can be used to build modals.
 ### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
-| `role="dialog"` | `.pf-c-modal-box` | Identifies the element that serves as the modal container. **Required**|
+| `role="dialog"` | `.pf-c-modal-box` | Identifies the element that serves as the modal container. **Note:** `role="dialog"` is not included on the static examples on this page as it interferes with VoiceOver. Refer to the react examples to see the role in use. **Required** |
 | `aria-labelledby="[id value of .pf-c-modal-box__title or custom modal title]"` | `.pf-c-modal-box` | Gives the modal an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-title is present** |
 | `aria-label="[title of modal]"` | `.pf-c-modal-box` | Gives the modal an accessible name. **Required when `.pf-c-modal-box__title` is _not_ present** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-modal-box` | Gives the modal an accessible description by referring to the modal content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the modal. |
 | `aria-modal="true"` | `.pf-c-modal-box` | Tells assistive technologies that the windows underneath the current modal are not available for interaction. **Required**|
 | `aria-label="Close"` | `.pf-c-modal-box__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
-| `aria-hidden="true"` | Parent element containing the page contents when modal is open | Hides main contents of the page from screen readers. The element with `.pf-c-modal-box` must not be a descendent of the element with `aria-hidden="true"`. For more info see [trapping focus](https://pf4.patternfly.org/accessibility-guide#trapping-focus). **Required** |
+| `aria-hidden="true"` | Parent element containing the page contents when modal is open | Hides main contents of the page from screen readers. The element with `.pf-c-modal-box` must not be a descendent of the element with `aria-hidden="true"`. For more info see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
 
 ### Usage
 | Class | Applied | Outcome |

@@ -1,0 +1,9 @@
+{{#if dual-list-selector-draggable-button--IsDisabled}}
+  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'disabled aria-pressed="false" aria-label="Reorder" id="' dual-list-selector-list-item--id '-draggable-button" aria-labelledby="' dual-list-selector-list-item--id '-draggable-button ' dual-list-selector-list-item--id '-item-text" aria-describedby="' dual-list-selector--id '-help"')}}
+    <i class="fas fa-grip-vertical" aria-hidden="true"></i>
+  {{/button}}
+{{else}}
+  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-pressed="false" aria-label="Reorder" id="' dual-list-selector-list-item--id '-draggable-button" aria-labelledby="' dual-list-selector-list-item--id '-draggable-button ' dual-list-selector-list-item--id '-item-text" aria-describedby="' dual-list-selector--id '-help"')}}
+    <i class="fas fa-grip-vertical" aria-hidden="true"></i>
+  {{/button}}
+{{/if}}

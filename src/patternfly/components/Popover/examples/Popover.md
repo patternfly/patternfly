@@ -87,6 +87,80 @@ import './Popover.css'
 {{/popover}}
 ```
 
+### Left with top and bottom positions
+```hbs
+{{#> popover popover--modifier="pf-m-left-top" popover--attribute='aria-labelledby="popover-left-start-header" aria-describedby="popover-left-start-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-left-start-header"'}}
+        Popover header
+    {{/title}}
+    {{#> popover-body popover-body--attribute='id="popover-left-start-body"'}}
+      This popover is to the left and at the start position
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+<br />
+{{#> popover popover--modifier="pf-m-left-bottom" popover--attribute='aria-labelledby="popover-left-end-header" aria-describedby="popover-left-end-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-left-end-header"'}}
+        Popover header
+    {{/title}}
+    {{#> popover-body popover-body--attribute='id="popover-left-end-body"'}}
+      This popover is to the left and at the end position
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
+### Bottom with left and right positions
+```hbs
+{{#> popover popover--modifier="pf-m-bottom-left" popover--attribute='aria-labelledby="popover-bottom-start-header" aria-describedby="popover-bottom-start-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-bottom-start-header"'}}
+        Popover header
+    {{/title}}
+    {{#> popover-body popover-body--attribute='id="popover-bottom-start-body"'}}
+      This popover is to the bottom and at the start position
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+<br />
+{{#> popover popover--modifier="pf-m-bottom-right" popover--attribute='aria-labelledby="popover-bottom-end-header" aria-describedby="popover-bottom-end-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-bottom-end-header"'}}
+        Popover header
+    {{/title}}
+    {{#> popover-body popover-body--attribute='id="popover-bottom-end-body"'}}
+      This popover is to the bottom and at the end position
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
 ### Without header/footer
 ```hbs
 {{#> popover popover--modifier="pf-m-right" popover--attribute='aria-label="Popover with no header example" aria-describedby="popover-no-header-body"'}}
@@ -139,13 +213,13 @@ A popover is used to provide contextual information for another component on cli
 ### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
-| `role="dialog"` | `.pf-c-popover` | Identifies the element that serves as the popover container. **Required**|
+| `role="dialog"` | `.pf-c-popover` | Identifies the element that serves as the popover container. **Note:** `role="dialog"` is not included on the static examples on this page as it interferes with VoiceOver. Refer to the react examples to see the role in use. **Required** |
 | `aria-labelledby="[id value of .pf-c-title]"` | `.pf-c-popover` | Gives the popover an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-title is present** |
 | `aria-label="[title of popover]"` | `.pf-c-popover` | Gives the popover an accessible name. **Required when .pf-c-title is _not_ present** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-popover` | Gives the popover an accessible description by referring to the popover content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |
 | `aria-modal="true"` | `.pf-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|
 | `aria-label="Close"` | `.pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
-| `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-c-popover` must not be a descendent of the element with `aria-hidden="true"`. For more info see [trapping focus](https://pf4.patternfly.org/accessibility-guide#trapping-focus). **Required** |
+| `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-c-popover` must not be a descendent of the element with `aria-hidden="true"`. For more info, see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -154,12 +228,12 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-c-popover__arrow` | `<div>` |  Creates an arrow pointing towards the element the popover describes. **Required** |
 | `.pf-c-popover__content` | `<div>` |  Creates the content area of the popover. **Required** |
 | `.pf-c-button` | `<button>` |  Positions the close icon in the top-right corner of the popover. **Required** |
-| `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. See [title component](/documentation/core/components/title) for more info.|
+| `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. See the [title component](/components/title) for more info.|
 | `.pf-c-popover__body` | `<div>` |  The popover's body text. **Required** |
 | `.pf-c-popover__footer` | `<footer>` | Initiates a popover footer. |
-| `.pf-m-left` | `.pf-c-popover` | Positions the popover to the left of the element. |
-| `.pf-m-right` | `.pf-c-popover` | Positions the popover to the right of the element. |
-| `.pf-m-top` | `.pf-c-popover` | Positions the popover to the top of the element. |
-| `.pf-m-bottom` | `.pf-c-popover` | Positions the popover to the bottom of the element. |
+| `.pf-m-left{-top/bottom}` | `.pf-c-popover` | Positions the popover to the left (or left top/left bottom) of the element. |
+| `.pf-m-right{-top/bottom}` | `.pf-c-popover` | Positions the popover to the right (or right top/right bottom) of the element. |
+| `.pf-m-top{-left/right}` | `.pf-c-popover` | Positions the popover to the top (or top left/top right) of the element. |
+| `.pf-m-bottom{-left/right}` | `.pf-c-popover` | Positions the popover to the bottom (or bottom left/bottom right) of the element. |
 | `.pf-m-no-padding` | `.pf-c-popover` | Removes the outer padding from the popover content. |
 | `.pf-m-width-auto` | `.pf-c-popover` | Allows popover width to be defined by the popover content. |

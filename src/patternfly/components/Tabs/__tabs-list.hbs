@@ -42,25 +42,41 @@ __tabs-item--NoText: bool
     }}
 
   {{#unless __tabs-list--IsShort}}
-    {{> __tabs-item
-      __tabs-item--id="server"
-      __tabs-item--icon-name="server"
-      __tabs-item--aria-label="Server"
-      __tabs-item--text="Server"
-      }}
-    {{> __tabs-item
-      __tabs-item--id="system"
-      __tabs-item--icon-name="laptop"
-      __tabs-item--aria-label="System"
-      __tabs-item--text="System"
-      }}
+    {{#if __tabs-list--IsDisabled}}
+      {{> __tabs-item
+        __tabs-item--id="disabled"
+        __tabs-item--icon-name="server"
+        __tabs-item--aria-label="Disabled"
+        __tabs-item--text="Disabled"
+        tabs-link--IsDisabled="true"
+        }}
+      {{> __tabs-item
+        __tabs-item--id="aria-disabled"
+        __tabs-item--icon-name="laptop"
+        __tabs-item--aria-label="ARIA disabled"
+        __tabs-item--text="ARIA disabled"
+        tabs-link--IsAriaDisabled="true"
+        }}
+    {{else}}
+      {{> __tabs-item
+        __tabs-item--id="server"
+        __tabs-item--icon-name="server"
+        __tabs-item--aria-label="Server"
+        __tabs-item--text="Server"
+        }}
+      {{> __tabs-item
+        __tabs-item--id="system"
+        __tabs-item--icon-name="laptop"
+        __tabs-item--aria-label="System"
+        __tabs-item--text="System"
+        }}
+    {{/if}}
     {{> __tabs-item
       __tabs-item--id="network-wired"
       __tabs-item--icon-name="project-diagram"
       __tabs-item--aria-label="Network"
       __tabs-item--text="Network"
       }}
-
     {{#if __tabs-list--IsLong}}
       {{> __tabs-item
         __tabs-item--id="cloud"

@@ -1,4 +1,12 @@
 <div class="pf-c-form__group{{#if form-group--modifier}} {{form-group--modifier}}{{/if}}"
+  {{~#if form-group--IsCheckGroup}}
+    {{#if form-group--IsRadioGroup}}
+      role="radiogroup"
+    {{else}}
+      role="group"
+    {{/if}}
+    aria-labelledby="{{form--id}}{{form-group--id}}-legend"
+  {{/if}}
   {{#if form-group--attribute}}
     {{{form-group--attribute}}}
   {{/if}}>

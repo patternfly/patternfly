@@ -112,6 +112,13 @@
   --pf-c-label--m-overflow__content--link--focus--before--BorderWidth: var(--pf-global--BorderWidth--md);
   --pf-c-label--m-overflow__content--link--focus--before--BorderColor: var(--pf-global--BorderColor--300);
 
+  // Compact
+  --pf-c-label--m-compact--PaddingTop: 0;
+  --pf-c-label--m-compact--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-label--m-compact--PaddingBottom: 0;
+  --pf-c-label--m-compact--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
+
   // Content
   --pf-c-label__content--Color: var(--pf-global--Color--100);
   --pf-c-label--m-outline__content--Color: var(--pf-global--Color--100);
@@ -134,6 +141,11 @@
   --pf-c-label__c-button--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-label__c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
+  // Editable
+  --pf-c-label--m-editable--m-editable-active--BackgroundColor: transparent;
+  --pf-c-label--m-editable--m-editable-active__content--before--BorderWidth: 0;
+  --pf-c-label--m-editable--m-editable-active__content--before--BorderColor: transparent;
+
   position: relative;
   padding: var(--pf-c-label--PaddingTop) var(--pf-c-label--PaddingRight) var(--pf-c-label--PaddingBottom) var(--pf-c-label--PaddingLeft);
   font-size: var(--pf-c-label--FontSize);
@@ -142,6 +154,14 @@
   background-color: var(--pf-c-label--BackgroundColor);
   border: 0;
   border-radius: var(--pf-c-label--BorderRadius);
+
+  &.pf-m-compact {
+    --pf-c-label--PaddingTop: var(--pf-c-label--m-compact--PaddingTop);
+    --pf-c-label--PaddingRight: var(--pf-c-label--m-compact--PaddingRight);
+    --pf-c-label--PaddingBottom: var(--pf-c-label--m-compact--PaddingBottom);
+    --pf-c-label--PaddingLeft: var(--pf-c-label--m-compact--PaddingLeft);
+    --pf-c-label--FontSize: var(--pf-c-label--m-compact--FontSize);
+  }
 
   &.pf-m-blue {
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-blue--BackgroundColor);
@@ -247,6 +267,16 @@
     }
   }
 
+  &.pf-m-editable-active {
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-editable--m-editable-active--BackgroundColor);
+    --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-editable--m-editable-active__content--before--BorderWidth);
+    --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-editable--m-editable-active__content--before--BorderColor);
+
+    .pf-c-button {
+      visibility: hidden; // use visibility hidden to retain positioning
+    }
+  }
+
   .pf-c-button {
     --pf-c-button--FontSize: var(--pf-c-label__c-button--FontSize);
     --pf-c-button--PaddingTop: var(--pf-c-label__c-button--PaddingTop);
@@ -294,6 +324,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    pointer-events: none;
     content: "";
     border: var(--pf-c-label__content--before--BorderWidth) solid var(--pf-c-label__content--before--BorderColor);
     border-radius: var(--pf-c-label--BorderRadius);

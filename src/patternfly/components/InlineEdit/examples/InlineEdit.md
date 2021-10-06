@@ -1,7 +1,6 @@
 ---
 id: Inline edit
 section: components
-beta: true
 cssPrefix: pf-c-inline-edit
 ---
 
@@ -112,6 +111,15 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
       {{> inline-edit-action-cancel inline-edit-action-cancel--IsIcon="true"}}
     {{/inline-edit-group}}
   {{/inline-edit-group}}
+{{/inline-edit}}
+```
+
+### Free form edit
+```hbs
+{{#> inline-edit inline-edit--id="free-form-edit-example"}}
+  {{#> inline-edit-editable-text}}
+    Free form text
+  {{/inline-edit-editable-text}}
 {{/inline-edit}}
 ```
 
@@ -403,6 +411,8 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | `aria-label="descriptive text"` | `.pf-c-inline-edit__toggle > button` | Provides an accessible description for toggle button. **Required** |
 | `aria-labelledby="[labelling element] [toggle button id]"` | `.pf-c-inline-edit__toggle > button` | Provides an accessible description for toggle button. **Required** |
 | `aria-label="descriptive text"` | `[radio button group]` | Provides an accessible description for radio groups. **Required** |
+| `contenteditable="true"` | `.pf-c-inline-edit__editable-text` | Ensures the text node is editable. |
+| `role="textbox"` | `.pf-c-inline-edit__editable-text` | Identifies an element that allows the input of free-form text. |
 | `role="radiogroup"` | `[radio button group]` | Provides an accessible role for radio buttons groups. **Required** |
 
 ### Usage
@@ -411,6 +421,7 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | `.pf-c-inline-edit` | `<form>`, `<div>` | Initiates the inline edit component. **Required** |
 | `.pf-c-inline-edit__value` | `*` | Initiates an inline edit value. **Required** |
 | `.pf-c-inline-edit__input` | `*` | Initiates an inline edit input. **Required** |
+| `.pf-c-inline-edit__editable-text` | `*` | Initiates an inline editable text element. |
 | `.pf-c-inline-edit__label` | `*` | Initiates an inline edit label. |
 | `.pf-c-inline-edit__action` | `*` | Initiates an inline edit action (visible when inline edit region is active). **Required** |
 | `.pf-m-inline-editable` | `.pf-c-inline-edit`, `.pf-c-inline-edit [block level element]` | Modifies an inline edit region for editable state. |

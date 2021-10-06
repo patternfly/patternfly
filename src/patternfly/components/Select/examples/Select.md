@@ -6,55 +6,34 @@ cssPrefix: pf-c-select
 
 import './Select.css'
 
-## Examples
-### Single
+## Single
+### Single select
 ```hbs
-{{#> select id="select-single"}}Filter by birth month{{/select}}
-```
-
-### Disabled
-```hbs
-{{#> select id="select-disabled" select-toggle--attribute="disabled"}}
-  Filter by birth month
-{{/select}}
-```
-
-### Success
-```hbs
-{{#> select id="select-success" select--IsSuccess="true"}}
-  Filter by birth month
-{{/select}}
-```
-
-### Warning
-```hbs
-{{#> select id="select-warning" select--IsWarning="true"}}
-  Filter by birth month
-{{/select}}
-```
-
-### Invalid
-```hbs
-{{#> select id="select-invalid" select--IsInvalid="true"}}
-  Filter by birth month
-{{/select}}
+{{#> select id="select-single"}}Filter by status{{/select}}
 ```
 
 ### Single expanded
 ```hbs
 {{#> select id="select-single-expanded" select--IsExpanded="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
 ### Single with top expanded
 ```hbs
 {{#> select id="select-single-top-expanded" select--modifier="pf-m-top" select--IsExpanded="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
-The top select variation should be used when you want the menu to display above the toggle.
+### Single expanded and selected
+```hbs
+{{#> select id="select-single-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true"}}
+  April
+{{/select}}
+```
+
+The single select should be used when the user is selecting an option from a list of items. Although the presentation is similar to the basic dropdown, the underlying HTML and ARIA tag structure is specific to a select list. The selection will replace the default text in the toggle. The selection is highlighted with the list is opened. If the selection is cleared elsewhere (i.e. from the filter bar), the default text is restored.
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -69,14 +48,34 @@ The top select variation should be used when you want the menu to display above 
 | `.pf-m-top` | `.pf-c-select` |  Modifies the select menu to display above the toggle. |
 | `.pf-m-active` | `.pf-c-select` | Forces display of the active state of the toggle. |
 
-### Single expanded and selected
+## States
+### Disabled
 ```hbs
-{{#> select id="select-single-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true"}}
-  April
+{{#> select id="select-disabled" select-toggle--attribute="disabled"}}
+  Filter by status
 {{/select}}
 ```
 
-The single select should be used when the user is selecting an option from a list of items. Although the presentation is similar to the basic dropdown, the underlying HTML and ARIA tag structure is specific to a select list. The selection will replace the default text in the toggle. The selection is highlighted with the list is opened. If the selection is cleared elsewhere (i.e. from the filter bar), the default text is restored.
+### Success
+```hbs
+{{#> select id="select-success" select--IsSuccess="true"}}
+  Filter by status
+{{/select}}
+```
+
+### Warning
+```hbs
+{{#> select id="select-warning" select--IsWarning="true"}}
+  Filter by status
+{{/select}}
+```
+
+### Invalid
+```hbs
+{{#> select id="select-invalid" select--IsInvalid="true"}}
+  Filter by status
+{{/select}}
+```
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -102,6 +101,7 @@ The single select should be used when the user is selecting an option from a lis
 | `.pf-m-selected` | `.pf-c-select__menu-item` |  Indicates the menu item is selected. |
 | `.pf-m-disabled` | `div.pf-c-select__toggle` | Modifies to display the select toggle as disabled. This applies to `div.pf-c-select__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-select__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-select__toggle`|
 
+## Typeahead
 ### Single with typeahead
 ```hbs
 {{#> select select-toggle--type="div" id="select-single-typeahead" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"}}
@@ -123,6 +123,12 @@ The single select should be used when the user is selecting an option from a lis
 ### Disabled with typeahead
 ```hbs
 {{#> select select-toggle--type="div" id="select-single-typeahead-disabled" select--IsTypeahead="true" select--IsDisabled="true" select-toggle--modifier="pf-m-disabled" select-typeahead--Placeholder="Choose a state"}}
+{{/select}}
+```
+
+### Invalid with typeahead
+```hbs
+{{#> select select-toggle--type="div" id="select-single-typeahead-invalid" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"  select--IsInvalid="true"}}
 {{/select}}
 ```
 
@@ -149,6 +155,7 @@ The single select typeahead should be used when the user is selecting one option
 | `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
 | `.pf-m-focus` | `.pf-c-select__menu-item` |  Modifies the menu item to apply `:focus` styling. For use when navigating the menu items by keyboard when the typeahead input field has browser focus. |
 
+## Typeahead multiselect
 ### Select multi with typeahead
 ```hbs
 {{#> select select-toggle--type="div" id="select-multi-typeahead" select--IsMultiSelect="true" select--IsTypeahead="true" select-typeahead--Placeholder="Choose states"}}
@@ -167,7 +174,13 @@ The single select typeahead should be used when the user is selecting one option
 {{/select}}
 ```
 
-The Dropdown Multi Select should be used when the user is selecting multiple items from a list. The user can narrow the list by typing from the keyboard. The List updates while typing. Selected items create a new chip and are removed from the list. The user may clear selections individually or all at once to restore the placeholder.
+### Multi with typeahead invalid
+```hbs
+{{#> select select-toggle--type="div" id="select-multi-typeahead-invalid" select--IsExpandedChips="true" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsInvalid="true" select-typeahead--Placeholder="Choose states"}}
+{{/select}}
+```
+
+The multiselect should be used when the user is selecting multiple items from a list. The user can narrow the list by typing from the keyboard. The List updates while typing. Selected items create a new chip and are removed from the list. The user may clear selections individually or all at once to restore the placeholder.
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -180,7 +193,7 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 | `.pf-c-select` | `<div>` |  Initiates the select component. |
 | `.pf-c-select__toggle` | `<div>` |  Initiates the select toggle. |
 | `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper so that chips and input field can wrap together. |
-| `.pf-c-chip` | `<div>` |  Initiates a chip. (See [chip component](/documentation/core/components/check) for more details) |
+| `.pf-c-chip` | `<div>` |  Initiates a chip. (See [chip component](/components/chip) for more details) |
 | `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |
 | `.pf-c-select__toggle-clear` | `button.pf-m-plain` |  Initiates a clear button in the toggle. |
 | `.pf-c-select__toggle-button` | `<button>` | Initiates a toggle button. |
@@ -190,7 +203,8 @@ The Dropdown Multi Select should be used when the user is selecting multiple ite
 | `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
 | `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
 
-### Checkbox
+## Checkbox
+### Checkbox select
 ```hbs
 {{#> select id="select-checkbox" select--IsCheckboxSelect="true"}}
   Filter by status
@@ -240,7 +254,7 @@ The checkbox select can select multiple items using checkboxes. The number of it
 | `.pf-c-select` | `<div>` | Initiates the select component. |
 | `.pf-c-select__toggle` | `<button>` | Initiates the select toggle. |
 | `.pf-c-select__toggle-wrapper` | `<div>` | Initiates the select toggle wrapper so that chips and input field can wrap together. |
-| `.pf-c-chip` | `<div>` | Initiates a chip. (See [chip component](/documentation/core/components/chip) for more details) |
+| `.pf-c-chip` | `<div>` | Initiates a chip. (See [chip component](/components/chip) for more details) |
 | `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |
 | `.pf-c-select__toggle-badge` | `<div>` | Initiates a container for a badge to indicate the number of items checked. * note: This should contain an unread badge * |
 | `.pf-c-select__toggle-clear` | `button.pf-m-plain` | Initiates a clear button in the toggle. |
@@ -257,17 +271,18 @@ The checkbox select can select multiple items using checkboxes. The number of it
 | `.pf-m-expanded` | `.pf-c-select` | Indicates the select is expanded. |
 | `.pf-m-typeahead` | `.pf-c-select__toggle` | Indicates the select has a typeahead. |
 
-### Plain
+## Plain
+### Plain toggle
 ```hbs
 {{#> select id="select-plain" select-toggle--modifier="pf-m-plain"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
-### Plain expanded
+### Plain toggle expanded
 ```hbs
 {{#> select id="select-plain-expanded" select--IsExpanded="true" select-toggle--modifier="pf-m-plain"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -287,12 +302,14 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-m-plain` | `.pf-c-select__toggle` |  Modifies to display the toggle with no border. |
 | `.pf-m-selected` | `.pf-c-select__menu-item` |  Indicates the menu item is selected. |
 
-### Icon
+## Icon
+### Toggle icon
 ```hbs
 {{#> select id="select-icon" select-toggle--icon="fas fa-filter"}}
   Filter by status
 {{/select}}
 ```
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -307,10 +324,11 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-c-select__toggle-icon` | `<span>` |  Initiates the icon in the dropdown toggle. |
 | `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
 
-### Panel
+## Panel
+### Panel menu
 ```hbs
 {{#> select id="select-panel" select--IsExpanded="true" select-menu--type="div" select--IsEmptyMenu="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -323,14 +341,15 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
 | `.pf-c-select__menu` | `<div>` |  Initiates the select dropdown menu. |
 
-### With description
+## Description
+### Item description
 ```hbs
 {{#> select id="select-with-description" select--IsDescriptive="true" select--IsExpanded="true"}}
   Select with description
 {{/select}}
 ```
 
-### Checkbox with description
+### Checkbox item description
 ```hbs
 {{#> select id="select-checkbox-description" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
   Filter
@@ -344,7 +363,8 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-c-select__menu-item-main` | `<span>` | Initiates the select menu item main element. Used when the description element is present. |
 | `.pf-m-description` | `.pf-c-select__menu-item` | Modifies the select menu item when selected to accommodate the description element. |
 
-### Favorites
+## Favorites
+### Menu item favorites
 ```hbs
 {{#> select id="select-favorites" select--IsExpanded="true" select--IsFavorites="true"}}
   Favorites
@@ -366,10 +386,11 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-m-link` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item for link styles. |
 | `.pf-m-action` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item to for action styles. |
 
-### View more
+## View more
+### View more menu item
 ```hbs
 {{#> select id="select-single-view-more" select--IsExpanded="true" select--IsLoad="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -378,10 +399,11 @@ The plain select variation should be used when you do not want a border applied 
 | -- | -- | -- |
 | `.pf-m-load` | `.pf-c-select__menu-item` | Modifies a menu item for load styles. |
 
-### Loading
+## Loading
+### Loading menu item
 ```hbs
 {{#> select id="select-single-loading" select--IsExpanded="true" select--IsLoading="true"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -391,10 +413,11 @@ The plain select variation should be used when you do not want a border applied 
 | `.pf-c-select__list-item` | `<li>` | Defines a list item element in the select menu. |
 | `.pf-m-loading` | `.pf-c-select__list-item` | Modifies a list item for loading styles. |
 
-### Footer
+## Footer
+### Menu footer
 ```hbs
 {{#> select id="select-single-footer" select--IsExpanded="true" select--IsLoading="true" select--HasFooter="true" select-menu--type="div"}}
-  Filter by birth month
+  Filter by status
 {{/select}}
 ```
 
@@ -403,6 +426,40 @@ The plain select variation should be used when you do not want a border applied 
 | -- | -- | -- |
 | `.pf-c-select__menu-footer` | `<div>` | Defines a menu footer. |
 | `.pf-c-select__menu-list` | `<ul>` | Defines the menu list when the list is placed in `div.pf-c-select__menu`. |
+
+## Placeholder
+### Placeholder collapsed
+```hbs
+{{#> select id="select-placeholder-collapsed" select--IsPlaceholder="true"}}
+  Filter by status
+{{/select}}
+```
+
+### Placeholder expanded
+```hbs
+{{#> select id="select-placeholder-expanded" select--IsExpanded="true" select--IsPlaceholder="true"}}
+  Filter by status
+{{/select}}
+```
+
+### Placeholder item disabled
+```hbs
+{{#> select id="select-placeholder-expanded" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true" select--PlaceholderItemDisabled="true"}}
+  Filter by status
+{{/select}}
+```
+
+### Placeholder item enabled
+```hbs
+{{#> select id="select-placeholder-expanded" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true"}}
+  Filter by status
+{{/select}}
+```
+
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-placeholder` | `.pf-c-select__toggle` | Modifies the toggle for placeholder styles. |
 
 ## Documentation
 ### Overview

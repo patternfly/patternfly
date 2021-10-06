@@ -366,7 +366,7 @@ import './Wizard.css'
 
 ### Finished
 ```hbs isFullscreen
-{{#> wizard wizard--modifier="pf-m-finished"}}
+{{#> wizard wizard--modifier="pf-m-finished" wizard--id="wizard-finished"}}
   {{#> wizard-header}}
     {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
@@ -436,14 +436,14 @@ import './Wizard.css'
         {{#> bullseye}}
           {{#> empty-state empty-state--modifier="pf-m-lg"}}
             {{#> empty-state-icon empty-state-icon--type="cogs"}}{{/empty-state-icon}}
-            {{#> title titleType="h1" title--modifier="pf-m-lg"}}
-              Configuration in progress
+            {{#> title titleType="h1" title--modifier="pf-m-lg" title--attribute=(concat 'id="' wizard--id '-empty-state-title"')}}
+              Validating credentials
             {{/title}}
             {{#> empty-state-body}}
-              {{#> progress progress__value="33" progress--modifier="pf-m-singleline" progress__id="progress-singleline-example"}}{{/progress}}
+              {{#> progress progress__value="33" progress--modifier="pf-m-singleline" progress__id="progress-singleline-example" progress__aria-labelledby=(concat wizard--id '-empty-state-title')}}{{/progress}}
             {{/empty-state-body}}
             {{#> empty-state-body}}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non pulvinar tortor. Maecenas sit amet pellentesque velit, eu eleifend mauris.
+              Description can be used to further elaborate on the validation step, or give the user a better idea of how long the process will take.
             {{/empty-state-body}}
             {{#> empty-state-secondary}}
               {{#> button button--modifier="pf-m-link"}}
@@ -496,8 +496,8 @@ import './Wizard.css'
 | `.pf-c-wizard__title` | `.pf-c-title.pf-m-3xl` | Initiates the title. **Required** |
 | `.pf-c-wizard__description` | `<p>` | Initiates the description. |
 | `.pf-c-wizard__toggle` | `<button>` | Initiates the mobile steps menu toggle button. **Required** |
-| `.pf-c-wizard__toggle-list` | `<ol>` | Initiates the toggle list. **Required** |
-| `.pf-c-wizard__toggle-list-item` | `<li>` | Initiates a toggle list item. **Required** |
+| `.pf-c-wizard__toggle-list` | `<span>` | Initiates the toggle list. **Required** |
+| `.pf-c-wizard__toggle-list-item` | `<span>` | Initiates a toggle list item. **Required** |
 | `.pf-c-wizard__toggle-num` | `<span>` | Initiates the step number. **Required** |
 | `.pf-c-wizard__toggle-separator` | `<i>` | Initiates the separator between steps. |
 | `.pf-c-wizard__toggle-icon` | `<span>` | Initiates the toggle icon wrapper. **Required** |

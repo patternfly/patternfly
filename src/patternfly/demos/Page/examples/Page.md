@@ -11,9 +11,9 @@ wrapperTag: div
 {{> page-demo-masthead-component page-demo-default--id="page-demo-masthead-component"}}
 ```
 
-### Sticky tertiary nav
+### Sticky horizontal subnav
 ```hbs isFullscreen
-{{> page-demo-sticky-top-tertiary-nav page-demo-default--id="page-demo-sticky-top-tertiary-nav"}}
+{{> page-demo-sticky-top-horizontal-subnav page-demo-default--id="page-demo-sticky-top-horizontal-subnav"}}
 ```
 
 ### Sticky breadcrumb

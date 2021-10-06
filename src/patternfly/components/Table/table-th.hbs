@@ -1,15 +1,17 @@
 <th class="{{#if table-th--modifier}} {{table-th--modifier}}{{/if}}
-  {{#if table-th--compound-expansion-toggle}} pf-c-table__compound-expansion-toggle{{/if}}
-  {{#if table-th--sortable}} pf-c-table__sort{{/if}}
-  {{#if table-th--toggle}} pf-c-table__toggle{{/if}}
-  {{#if table-th--check}} pf-c-table__check{{/if}}
-  {{#if table-th--action}} pf-c-table__action{{/if}}
-  {{#if table-th--icon}} pf-c-table__icon{{/if}}
-  {{#if table-th--sortable-wrap}} pf-m-wrap{{/if}}
-  {{#if table-th--selected}} pf-m-selected{{/if}}
-  {{#if table-th--IsColumnHelp}} pf-m-help{{/if}}
-  {{#if table-th--IsFavorite}} pf-m-favorite{{/if}}"
-  {{#if table--grid}}
+  {{~#if table-th--compound-expansion-toggle}} pf-c-table__compound-expansion-toggle{{/if}}
+  {{~#if table-th--sortable}} pf-c-table__sort{{/if}}
+  {{~#if table-th--IsSortable}} pf-c-table__sort{{/if}}
+  {{~#if table-th--IsStickyColumn}} pf-c-table__sticky-column{{/if}}
+  {{~#if table-th--toggle}} pf-c-table__toggle{{/if}}
+  {{~#if table-th--check}} pf-c-table__check{{/if}}
+  {{~#if table-th--action}} pf-c-table__action{{/if}}
+  {{~#if table-th--icon}} pf-c-table__icon{{/if}}
+  {{~#if table-th--sortable-wrap}} pf-m-wrap{{/if}}
+  {{~#if table-th--selected}} pf-m-selected{{/if}}
+  {{~#if table-th--IsColumnHelp}} pf-m-help{{/if}}
+  {{~#if table-th--IsFavorite}} pf-m-favorite{{/if}}"
+  {{~#if table--grid}}
     {{#if table-th--isRowHeader}}
       role="rowheader"
     {{else}}
@@ -39,7 +41,7 @@
       {{#> table-button-content}}
         {{#> table-text}}
           {{#if table-th--IsFavorite}}
-            <i class="fas fa-star" aria-label="Favorite"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
           {{else}}
             {{> @partial-block}}
           {{/if}}

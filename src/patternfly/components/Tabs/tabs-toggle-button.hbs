@@ -5,10 +5,16 @@
   {{#if tabs--IsExpanded}}
     {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Details" aria-expanded="true" id="' tabs--id '-toggle-button" aria-labelledby="' tabs--id '-toggle-text ' tabs--id '-toggle-button"')}}
       {{> tabs-toggle-icon}}
+      {{#unless tabs--IsLegacy}}
+        {{> tabs-toggle-text}}
+      {{/unless}}
     {{/button}}
   {{else}}
     {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Details" aria-expanded="false" id="' tabs--id '-toggle-button" aria-labelledby="' tabs--id '-toggle-text ' tabs--id '-toggle-button"')}}
       {{> tabs-toggle-icon}}
+      {{#unless tabs--IsLegacy}}
+        {{> tabs-toggle-text}}
+      {{/unless}}
     {{/button}}
   {{/if}}
 </div>

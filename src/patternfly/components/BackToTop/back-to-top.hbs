@@ -1,0 +1,11 @@
+<div class="pf-c-back-to-top{{#if back-to-top--modifier}} {{back-to-top--modifier}}{{/if}}"
+  {{#if back-to-top--attribute}}
+    {{{back-to-top--attribute}}}
+  {{/if}}>
+  {{#> button-link button-link--attribute=(concat 'href="#' back-to-top--target '"') button-link--modifier="pf-m-primary"}}
+    Back to top
+    {{#> button-icon button-icon--modifier="pf-m-end"}}
+      <i class="fas fa-angle-up" aria-hidden="true"></i>
+    {{/button-icon}}
+  {{/button-link}}
+</div>

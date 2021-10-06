@@ -1,13 +1,13 @@
 <div class="pf-c-progress__status{{#if progress-status--modifier}} {{progress-status--modifier}}{{/if}}"
+  aria-hidden="true"
   {{#if progress-status--attribute}}
     {{{progress-status--attribute}}}
-  {{/if}}
-  aria-hidden="true">
+  {{/if}}>
   {{#unless progress--inside}}
     {{#unless progress--no-measure}}
       {{> progress-measure}}
-      {{/unless}}
     {{/unless}}
+  {{/unless}}
   {{!-- This provides the success, warning, or danger icon --}}
   {{#if progress--success}}
     {{#> progress-status-icon progress-status-icon--type="check-circle"}}{{/progress-status-icon}}

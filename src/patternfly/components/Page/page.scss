@@ -70,7 +70,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
   // Sidebar
   --pf-c-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-c-page__sidebar--Width: 80%;
   --pf-c-page__sidebar--Width: #{pf-size-prem(290px)};
   --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__sidebar--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -111,9 +110,9 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--pf-c-page__sidebar--Width));
 
   // Sticky
-  --pf-c-page--section--m-sticky-top--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page--section--m-sticky-top--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-page--section--m-sticky-top--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
-  --pf-c-page--section--m-sticky-bottom--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-page--section--m-sticky-bottom--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-page--section--m-sticky-bottom--BoxShadow: var(--pf-global--BoxShadow--sm-top);
 
   // Shadows
@@ -142,6 +141,16 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     --pf-c-page__main-nav--PaddingRight: var(--pf-c-page__main-nav--xl--PaddingRight);
     --pf-c-page__main-nav--PaddingLeft: var(--pf-c-page__main-nav--xl--PaddingLeft);
   }
+
+  // Main section horizontal subnav
+  --pf-c-page__main-subnav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
+  --pf-c-page__main-subnav--BorderTopWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-page__main-subnav--BorderTopColor: var(--pf-global--palette--black-800);
+  --pf-c-page__main-subnav--BorderLeftWidth: 0;
+  --pf-c-page__main-subnav--BorderLeftColor: var(--pf-global--palette--black-800);
+  --pf-c-page__sidebar--main__main-subnav--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-page__sidebar--m-collapsed--main__main-subnav--BorderLeftWidth: 0;
+
 
   // Main section breadcrumb
   --pf-c-page__main-breadcrumb--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -189,13 +198,17 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 }
 
 // Header
+.pf-c-page__header,
+.pf-c-page > .pf-c-masthead {
+  grid-area: header;
+}
+
 .pf-c-page__header {
   @include pf-t-dark; // force the container to follow the dark theme
 
   z-index: var(--pf-c-page__header--ZIndex);
   grid-template-columns: auto auto;
   display: grid;
-  grid-area: header;
   align-items: center;
   min-width: 0;
   min-height: var(--pf-c-page__header--MinHeight);
@@ -427,7 +440,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__main-tabs,
 .pf-c-page__main-section,
 .pf-c-page__main-wizard,
-.pf-c-page__main-group {
+.pf-c-page__main-group,
+.pf-c-page__main-subnav {
   flex-shrink: 0;
 
   &.pf-m-sticky-top {
@@ -491,6 +505,24 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   &.pf-m-sticky-top,
   .pf-c-page__main-group.pf-m-sticky-top &:last-child {
     padding-bottom: var(--pf-c-page__main-nav--m-sticky-top--PaddingBottom);
+  }
+}
+
+.pf-c-page__main-subnav {
+  background-color: var(--pf-c-page__main-subnav--BackgroundColor);
+  border-top: var(--pf-c-page__main-subnav--BorderTopWidth) solid var(--pf-c-page__main-subnav--BorderTopColor);
+  border-left: var(--pf-c-page__main-subnav--BorderLeftWidth) solid var(--pf-c-page__main-subnav--BorderLeftColor);
+
+  @at-root .pf-c-page__sidebar {
+    ~ .pf-c-page__main {
+      @media screen and (min-width: $pf-global--breakpoint--xl) {
+        --pf-c-page__main-subnav--BorderLeftWidth: var(--pf-c-page__sidebar--main__main-subnav--BorderLeftWidth);
+      }
+    }
+
+    &.pf-m-collapsed ~ .pf-c-page__main {
+      --pf-c-page__main-subnav--BorderLeftWidth: var(--pf-c-page__sidebar--m-collapsed--main__main-subnav--BorderLeftWidth);
+    }
   }
 }
 

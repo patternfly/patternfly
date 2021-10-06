@@ -1,9 +1,9 @@
 .pf-c-label-group {
-  // label group list
+  // List
   --pf-c-label-group__list--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-label-group__list--MarginRight: calc(var(--pf-global--spacer--xs) * -1);
 
-  // category
+  // Category
   --pf-c-label-group--m-category--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-label-group--m-category--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-label-group--m-category--PaddingBottom: var(--pf-global--spacer--xs);
@@ -14,14 +14,14 @@
   --pf-c-label-group--m-category--BorderColor: var(--pf-global--BorderColor--300);
   --pf-c-label-group--m-category--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
-  // Label in group
+  // Label
   --pf-c-label-group__label--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-label-group__label--MarginBottom: 0;
   --pf-c-label-group--m-vertical__label--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-label-group__label--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-label-group__label--MaxWidth: 18ch;
 
-  // label group close
+  // Close
   --pf-c-label-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-label-group__close--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-label-group--m-vertical__close--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
@@ -30,9 +30,16 @@
   --pf-c-label-group--m-vertical__close--c-button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-label-group--m-vertical__close--c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
-  // label
+  // List item
   --pf-c-label-group__list-item--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-label-group__list-item--MarginBottom: var(--pf-global--spacer--xs);
+
+  // Textarea
+  --pf-c-label-group__textarea--MinWidth: #{pf-size-prem(200px)};
+  --pf-c-label-group__textarea--PaddingTop: #{pf-size-prem(2px)};
+  --pf-c-label-group__textarea--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-label-group__textarea--PaddingBottom: 0;
+  --pf-c-label-group__textarea--PaddingLeft: var(--pf-global--spacer--xs);
 
   display: inline-flex;
 
@@ -80,6 +87,21 @@
       --pf-c-button--PaddingRight: var(--pf-c-label-group--m-vertical__close--c-button--PaddingRight);
     }
   }
+
+  &.pf-m-editable {
+    &,
+    .pf-c-label-group__main,
+    .pf-c-label-group__list {
+      display: flex;
+    }
+
+    .pf-c-label-group__main,
+    .pf-c-label-group__list,
+    .pf-c-label-group__list-item.pf-m-textarea,
+    .pf-c-label-group__textarea {
+      flex: 1;
+    }
+  }
 }
 
 .pf-c-label-group__main {
@@ -116,4 +138,21 @@
   margin-right: var(--pf-c-label-group__close--MarginRight);
   margin-bottom: var(--pf-c-label-group__close--MarginBottom);
   margin-left: var(--pf-c-label-group__close--MarginLeft);
+}
+
+.pf-c-label-group__textarea {
+  min-width: var(--pf-c-label-group__textarea--MinWidth);
+  padding: var(--pf-c-label-group__textarea--PaddingTop) var(--pf-c-label-group__textarea--PaddingRight) var(--pf-c-label-group__textarea--PaddingBottom) var(--pf-c-label-group__textarea--PaddingLeft);
+  white-space: nowrap;
+  resize: none;
+  border: 0;
+
+  // Hide scrollbar for IE, Edge and Firefox
+  -ms-overflow-style: none;  // IE and Edge
+  scrollbar-width: none;  // Firefox
+
+  // Hide scrollbar for Chrome, Safari and Opera
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -5,11 +5,13 @@
   {{#if input-group-text--attribute}}
     {{{input-group-text--attribute}}}
   {{/if}}>
-	{{> @partial-block}}
-	{{#if input-group-text--HasDollarSignIcon}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+  {{#if input-group-text--HasDollarSignIcon}}
     <i class="fas fa-dollar-sign" aria-hidden="true"></i>
-	{{/if}}
-	{{#if input-group-text--HasAtIcon}}
+  {{/if}}
+  {{#if input-group-text--HasAtIcon}}
     <i class="fas fa-at" aria-hidden="true"></i>
   {{/if}}
   {{#if input-group-text--HasCalendarIcon}}

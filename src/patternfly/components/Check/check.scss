@@ -5,9 +5,8 @@
   --pf-c-check__label--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-check__label--FontSize: var(--pf-global--FontSize--md);
   --pf-c-check__label--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-check__input--MarginTop: #{pf-size-prem(-3px)};
-  --pf-c-check__input--Height: calc(var(--pf-c-check__label--FontSize) * var(--pf-c-check__label--LineHeight));
-  --pf-c-check__input--MarginTop: calc(-1px * (var(--pf-c-check__label--LineHeight) * 1.25));
+  --pf-c-check__input--Height: var(--pf-c-check__label--FontSize);
+  --pf-c-check__input--MarginTop: calc(((var(--pf-c-check__label--FontSize) * var(--pf-c-check__label--LineHeight)) - var(--pf-c-check__input--Height)) / 2);
   --pf-c-check__description--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-check__description--Color: var(--pf-global--Color--200);
   --pf-c-check__body--MarginTop: var(--pf-global--spacer--sm);

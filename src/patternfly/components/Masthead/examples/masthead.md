@@ -133,5 +133,6 @@ cssPrefix: pf-c-masthead
 | `.pf-c-masthead__toggle` | `<span>` | Initiates the masthead toggle component. |
 | `.pf-c-masthead__brand` | `<a>, <div>` | Initiates the masthead content component. |
 | `.pf-c-masthead__content` | `<div>` | Initiates the masthead content component. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-masthead` | Modifies masthead horizontal padding. |
 | `.pf-m-light` | `.pf-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-global--BackgroundColor--100`. |
 | `.pf-m-light-200` | `.pf-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-global--BackgroundColor--200`. |

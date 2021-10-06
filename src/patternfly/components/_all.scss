@@ -7,6 +7,7 @@
 @import "./Avatar/avatar.scss";
 @import "./Backdrop/backdrop.scss";
 @import "./BackgroundImage/background-image.scss";
+@import "./BackToTop/back-to-top.scss";
 @import "./Badge/badge.scss";
 @import "./Banner/banner.scss";
 @import "./Brand/brand.scss";
@@ -24,6 +25,7 @@
 @import "./ContextSelector/context-selector.scss";
 @import "./DataList/data-list.scss";
 @import "./DescriptionList/description-list.scss";
+@import "./DragDrop/drag-drop.scss";
 @import "./DualListSelector/dual-list-selector.scss";
 @import "./Toolbar/toolbar.scss";
 @import "./DatePicker/date-picker.scss";
@@ -58,6 +60,7 @@
 @import "./Pagination/pagination.scss";
 @import "./Popover/popover.scss";
 @import "./Progress/progress.scss";
+@import "./ProgressStepper/progress-stepper.scss";
 @import "./Radio/radio.scss";
 @import "./SearchInput/search-input.scss";
 @import "./Select/select.scss";
@@ -71,8 +74,10 @@
 @import "./TabContent/tab-content.scss";
 @import "./Table/table-grid.scss";
 @import "./Table/table.scss";
+@import "./Table/table-scrollable.scss";
 @import "./Table/table-tree-view.scss";
 @import "./Tabs/tabs.scss";
+@import "./TextInputGroup/text-input-group.scss";
 @import "./Tile/tile.scss";
 @import "./Title/title.scss";
 @import "./ToggleGroup/toggle-group.scss";

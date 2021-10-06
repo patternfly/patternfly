@@ -27,7 +27,7 @@ section: components
       {{/page-header-brand-link}}
     {{/page-header-brand}}
     {{#> page-header-nav}}
-      {{#> nav nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
+      {{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
         {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
@@ -71,9 +71,179 @@ section: components
 {{/page}}
 ```
 
-### Tertiary nav
+### Horizontal subnav
 ```hbs isFullscreen
-{{#> page page--id="page-layout-tertiary-nav"}}
+{{#> page page--id="page-layout-horizontal-subnav"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{!-- Brand --}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-toggle}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' page--id '-nav-toggle" aria-label="Global navigation" aria-expanded="true" aria-controls="' page--id '-tertiary-nav"')}}
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        {{/button}}
+      {{/page-header-brand-toggle}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
+
+  {{#> page-sidebar}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-tertiary-nav" aria-label="Global"')}}
+      {{#> nav-list}}
+        {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link1"'}}
+            System panel
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link1"'}}
+            {{#> nav-list}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Overview
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+                  Resource usage
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Hypervisors
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Instances
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Volumes
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Networks
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link2"'}}
+            Policy
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link2"'}}
+            {{#> nav-list}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 1
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 2
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+        {{#> nav-item nav-item--expandable="true"}}
+          {{#> nav-link nav-link--href="#" nav-link--attribute='id="tertiary-nav-link3"'}}
+            Authentication
+          {{/nav-link}}
+          {{#> nav-subnav nav-subnav--attribute='aria-labelledby="tertiary-nav-link3"'}}
+            {{#> nav-list}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 1
+                {{/nav-link}}
+              {{/nav-item}}
+              {{#> nav-item newcontent}}
+                {{#> nav-link nav-link--href="#"}}
+                  Subnav link 2
+                {{/nav-link}}
+              {{/nav-item}}
+            {{/nav-list}}
+          {{/nav-subnav}}
+        {{/nav-item}}
+      {{/nav-list}}
+    {{/nav}}
+  {{/page-sidebar}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{> page-template-horizontal-subnav}}
+    {{> page-template-breadcrumb}}
+    {{> page-template-title}}
+    {{> page-template-gallery page-template-gallery--modifier="pf-m-fill"}}
+    {{> page-template-footer}}
+  {{/page-main}}
+{{/page}}
+```
+
+### Horizontal nav with horizontal subnav
+```hbs isFullscreen
+{{#> page page--id="page-layout-horizontal-nav-horizontal-subnav"}}
+  {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
+    Skip to content
+  {{/skip-to-content}}
+  {{#> page-header}}
+    {{#> page-header-brand}}
+      {{#> page-header-brand-link page-header-brand-link--href="#"}}
+        {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
+      {{/page-header-brand-link}}
+    {{/page-header-brand}}
+    {{#> page-header-nav}}
+      {{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' page--id '-horizontal-nav" aria-label="Global"')}}
+        {{#> nav-list}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 2
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 3
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Horizontal nav item 4
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+              Horizontal nav item 5
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav}}
+    {{/page-header-nav}}
+    {{#> page-template-header-tools-elements}}
+    {{/page-template-header-tools-elements}}
+  {{/page-header}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+    {{> page-template-horizontal-subnav}}
+    {{> page-template-breadcrumb}}
+    {{> page-template-title}}
+    {{> page-template-gallery}}
+  {{/page-main}}
+{{/page}}
+```
+
+### Legacy tertiary nav
+```hbs isFullscreen
+{{#> page page--id="page-layout-legacy-tertiary-nav"}}
   {{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
     Skip to content
   {{/skip-to-content}}

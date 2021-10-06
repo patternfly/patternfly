@@ -1,0 +1,36 @@
+- uses: actions/setup-node@v1
+  with:
+    node-version: '14'
+- uses: actions/cache@v2
+  id: yarn-cache
+  name: Load npm deps from cache
+  with:
+    path: '**/node_modules'
+    key: ${{ runner.os }}-yarn-14-${{ hashFiles('yarn.lock') }}
+- run: yarn install --frozen-lockfile
+  if: steps.yarn-cache.outputs.cache-hit != 'true'
+- run: yarn lint:sass
+  name: Lint SASS
+  if: always()
+- run: yarn lint:js
+  name: Lint JS
+  if: always()
+- run: yarn lint:css
+  name: Lint CSS
+  if: always()
+- run: yarn build-patternfly
+  name: Build patternfly
+- uses: actions/cache@v2
+  id: docs-cache
+  name: Load webpack cache
+  with:
+    path: '.cache'
+    key: ${{ runner.os }}-v4-${{ hashFiles('yarn.lock') }}
+- run: yarn build:docs
+  name: Build docs
+- run: yarn serve & yarn test
+  name: a11y tests
+- run: node .github/upload-preview.js public
+  name: Upload docs
+  if: always()
+

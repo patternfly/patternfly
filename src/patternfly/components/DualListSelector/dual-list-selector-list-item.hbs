@@ -1,4 +1,12 @@
-<li class="pf-c-dual-list-selector__list-item{{#if dual-list-selector-list-item--IsExpandable}} pf-m-expandable{{/if}}{{#if dual-list-selector-list-item--IsExpanded}} pf-m-expanded{{/if}}{{#if dual-list-selector-list-item--modifier}} {{dual-list-selector-list-item--modifier}}{{/if}}"
+<li class="pf-c-dual-list-selector__list-item
+  {{~#if dual-list-selector-list-item--IsExpandable}} pf-m-expandable{{/if}}
+  {{~#if dual-list-selector-list-item--IsExpanded}} pf-m-expanded{{/if}}
+  {{~#if dual-list-selector-list-item--IsDisabled}}
+    {{#unless dual-list-selector-list-item--IsTopLevelDisabled}}
+      pf-m-disabled
+    {{/unless}}
+  {{/if}}
+  {{~#if dual-list-selector-list-item--modifier}} {{dual-list-selector-list-item--modifier}}{{/if}}"
   {{#if dual-list-selector-list-item--IsExpandable}}
     aria-expanded="{{#if dual-list-selector-list-item--IsExpanded}}true{{else}}false{{/if}}"
   {{/if}}

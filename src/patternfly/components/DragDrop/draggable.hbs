@@ -1,0 +1,10 @@
+<div class="pf-c-draggable{{#if draggable--modifier}} {{draggable--modifier}}{{/if}}"
+  {{#if draggable--attribute}}
+    {{{draggable--attribute}}}
+  {{/if}}>
+  {{#if @partial-block}}
+    {{>@partial-block}}
+  {{else}}
+    Item
+  {{/if}}
+</div>

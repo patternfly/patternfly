@@ -1,4 +1,4 @@
-<label class="pf-c-form__label{{#if form-label--modifier}} {{form-label--modifier}}{{/if}}"
+<{{#if form-group--IsCheckGroup}}span{{else}}label{{/if}} class="pf-c-form__label{{#if form-label--modifier}} {{form-label--modifier}}{{/if}}"
   {{#if form-label--attribute}}
     {{{form-label--attribute}}}
   {{/if}}>
@@ -8,4 +8,4 @@
   {{#if required}}
     {{> form-label-required}}
   {{/if}}
-</label>
+</{{#if form-group--IsCheckGroup}}span{{else}}label{{/if}}>

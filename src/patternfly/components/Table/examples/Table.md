@@ -6,9 +6,11 @@ cssPrefix: pf-c-table
 
 import './Table.css'
 
-## Examples
+# Examples
 
-### Basic table
+## Basic table
+
+### Basic table example
 ```hbs
 {{#> table table--id="table-basic" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
@@ -110,7 +112,7 @@ import './Table.css'
 {{/table}}
 ```
 
-### Accessibility
+### Basic table accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -118,7 +120,7 @@ import './Table.css'
 | `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
 | `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
 
-### Usage
+### Basic table usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -126,7 +128,10 @@ import './Table.css'
 | `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
-### Sortable
+
+## Sortable
+
+### Sortable example
 ```hbs
 {{#> table table--id="table-sortable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
@@ -225,13 +230,13 @@ import './Table.css'
 {{/table}}
 ```
 
-### Accessibility
+### Sortable accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-sort=[ascending or descending]` | `.pf-c-table__sort` | Indicates if columns in a table are sorted in ascending or descending order. For each table, authors __SHOULD__ apply aria-sort to only one header at a time. **Required** |
 
-### Usage
+### Sortable usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -245,7 +250,10 @@ import './Table.css'
 | `.fa-long-arrow-alt-up` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-down` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
 
-### With checkboxes and actions
+
+## With checkboxes, radio select, and actions
+
+### Checkboxes and actions example
 ```hbs
 {{#> table table--id="table-checkboxes-and-actions" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is a table with checkboxes"'}}
   {{#> table-thead}}
@@ -381,7 +389,7 @@ import './Table.css'
 {{/table}}
 ```
 
-### Single select radio
+### Single select radio example
 ```hbs
 {{#> table table--id="table-single-select-radio" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is single select table with radio inputs"'}}
   {{#> table-thead}}
@@ -519,20 +527,14 @@ When including interactive elements in a table, the primary, descriptive cell in
 
 When header cells are empty or they contain interactive elements, `<th>` should be replaced with `<td>`.
 
-### Thead accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-label="[descriptive text]"` | `.pf-c-table__check input` | Provides an accessible name for the checkbox or radio input. **Required** |
-
-### Tbody accessibility
+### Checkboxes, radio select, and actions accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-labelledby="[row_header_id]"` or `aria-label="[descriptive text]` | `.pf-c-table__check input` | Provides an accessible name for the checkbox or radio input. **Required** |
 | `id` | row header `<th> > *` | Provides an accessible description for the checkbox or radio. **Required if using `aria-labelledby` for `.pf-c-table__check input`** |
 
-### Usage
+### Checkboxes, radio select, and actions usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -540,7 +542,9 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 | `.pf-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
 | `.pf-c-table__inline-edit-action` | `<th>`, `<td>` | Initiates an inline edit action table cell. |
 
-### Expandable
+## Expandable
+
+### Expandable example
 ```hbs
 {{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
@@ -711,7 +715,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
 Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.pf-c-table__expandable-row-content`. For no padding add `.pf-m-no-padding` to `.pf-c-table__expandable-row` > `<td>`
 
-### Accessibility
+### Expandable accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -722,7 +726,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `id="[button_id]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides a reference for toggle button description. **Required** |
 | `aria-controls="[id of element the button controls]"` | `.pf-c-table__toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
 
-### Usage
+### Expandable usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -732,7 +736,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-expanded` | `.pf-c-table__toggle` > `.pf-c-button`, `.pf-c-table__expandable-row` | Modifies for expanded state. |
 | `.pf-m-no-padding` | `.pf-c-table__expandable-row` > `<td>` | Modifies the expandable row to have no padding. |
 
-### With compound expansion
+## Compound expansion
+
+### Compound expansion example
 ```hbs
 {{#> table table--id="table-compound-expansion" table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
   {{#> table-thead}}
@@ -908,7 +914,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Accessibility
+### Compound expansion accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -916,7 +922,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `aria-expanded="true"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
 | `aria-controls="[id of element the button controls]"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
 
-### Usage
+### Compound expansion usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -924,7 +930,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-expanded` | `<tbody>`, `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Modifies a tbody with a row and an expandable row. |
 | `.pf-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
 
-### Compact
+## Compact variant
+
+### Compact example
 ```hbs
 {{#> table table--id="table-compact" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
@@ -1079,7 +1087,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Compact expandable
+### Compact expandable example
 ```hbs
 {{#> table table--id="table-compact-expandable" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
   {{#> table-thead}}
@@ -1410,13 +1418,15 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Usage
+### Compact Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
 
-### Hoverable and selectable
+## Hoverable and selected
+
+### Hoverable and selected example
 ```hbs
 {{#> table table--id="table-expandable-hoverable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
@@ -1446,7 +1456,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Expandable, hoverable, and selectable
+### Expandable, hoverable, and selected example
 ```hbs
 {{#> table table--id="table-tbody-expandable-hoverable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
@@ -1492,32 +1502,35 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Accessibility
+### Hoverable accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `tabindex="0"` | `.pf-c-table tbody.pf-m-hoverable` | Inserts the hoverable table element into the tab order of the page so that it is focusable. **Required** |
 
-### Usage
+### Hoverable and selected usage
 | Class | Applied to | Outcome |
+| -- | -- | -- |
 | `.pf-m-hoverable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be hoverable. |
 | `.pf-m-selected` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a selectable tbody or tr table element to be selected. |
 
-### Tree table
+## Tree table
+
+### Tree table example
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-basic" table--modifier="pf-m-tree-view-grid-lg" table--attribute='aria-label="This is a simple tree table example"'}}
+{{> table-tree-view--basic table--id="tree-table-basic-example" table--modifier="pf-m-tree-view-grid-lg" table--attribute='aria-label="This is a simple tree table example"' table-tree-view--basic--HasActions="true"}}
 ```
 
-### Tree table with checkboxes
+### Tree table with checkboxes example
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-with-checkboxes" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"'}}
+{{> table-tree-view--basic table--id="tree-table-with-checkboxes-example" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table--attribute='aria-label="This is a simple tree table, with checkboxes example"' table-tr--tree--HasActions="true"}}
 ```
 
-### Tree table with checkboxes, icons
+### Tree table with checkboxes and icons example
 ```hbs
-{{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"'}}
+{{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons-example" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"' table-tr--tree--HasActions="true"}}
 ```
 
-### Accessibility
+### Tree table accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -1532,7 +1545,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `aria-setsize="number"` | `.pf-c-table.pf-m-tree-view tr` | Defines the number of rows in the set of rows that are in the same branch and at the same level within the hierarchy. |
 | `aria-posinset="number"` | `.pf-c-table.pf-m-tree-view tr` | Defines the position of the row within the set of other rows that are in the same branch and at the same level within the hierarchy. Counting is one-based, not zero-based. |
 
-### Usage
+### Tree table usage
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
@@ -1544,7 +1557,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-c-table__tree-view-details-toggle-icon` | `<span>` | Initiates a tree view details toggle icon. |
 | `.pf-m-treeview-details-expanded` | `<tr>` | Modifies a tbody with a row and an expandable row. |
 
-### Borderless
+## Borderless variant
+
+### Borderless example
 ```hbs
 {{#> table table--id="borderless-table" table--grid="true" table--modifier="pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
   {{#> table-thead}}
@@ -1699,7 +1714,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Borderless compact
+### Borderless compact example
 ```hbs
 {{#> table table--id="borderless-compact-table" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md pf-m-no-border-rows" table--attribute='aria-label="This is a compact table with border rows example"'}}
   {{#> table-thead}}
@@ -1854,7 +1869,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Borderless expandable
+### Borderless expandable example
 ```hbs
 {{#> table table--id="borderless-table-expandable" table--grid="true" table--modifier="pf-m-grid-lg pf-m-no-border-rows" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
@@ -2023,7 +2038,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Borderless with compound expansion
+### Borderless with compound expansion example
 ```hbs
 {{#> table table--id="borderless-compound-expansion-table" table--grid="true" table--modifier="pf-m-grid-md pf-m-no-border-rows" table--expandable="true" table--attribute='aria-label="Compound expandable table example"'}}
   {{#> table-thead}}
@@ -2246,19 +2261,16 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Usage
+### Borderless usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-no-border-rows` | `.pf-c-table.pf-m-compact` | Modifies to remove borders between rows. **Note: Does not affect `.pf-c-table__control-row`.** |
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
 | `.pf-m-expandable` | `.pf-c-table.pf-m-compact` | Indicates that the table has expandable rows. |
 
-### With width modifiers
+## Width modifiers
+
+### Width modifiers examples
 ```hbs
 {{#> table table--id="table-width-modifiers" table--grid="true" table--modifier="pf-m-grid-md" table--grid="true" table--attribute='aria-label="This is a width modifier expandable"'}}
   {{#> table-thead}}
@@ -2381,7 +2393,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Usage
+### Width modifiers usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -2389,7 +2401,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-width-max` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` maximum width. |
 | `.pf-m-fit-content` | `<th>`, `<td>` | Percentage based modifier for `th` and `td` minimum width with no text wrapping. |
 
-### With hidden/visible breakpoint modifiers
+## Hidden/visible breakpoint modifiers
+
+### Hidden/visible breakpoint modifiers example
 ```hbs
 {{#> table table--id="table-hidden-visible" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Table with hidden and visible modifiers example"'}}
   {{#> table-thead}}
@@ -2488,14 +2502,14 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{/table}}
 ```
 
-### Usage
+### Hidden/visible breakpoint modifiers usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-table tr > *` | Hides a table cell at a given breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-table tr > *` | Shows a table cell at a given breakpoint. |
 
-## Controlling text
+## Controlling text modifiers
 
 To better control table cell behavior, PatternFly provides a series of modifiers to help contextually control layout. By default, `thead` cells are set to truncate, whereas `tbody` cells are set to wrap. Both `th` and `td` cells use a set of shared css properties mapped to customizable css variable values. Because only the shared css variables are changed by the modifier selector and not the properties, the modifier can be applied to any parent element up until `.pf-c-table` itself [`thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text`].
 
@@ -2507,7 +2521,7 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 | `.pf-m-fit-content` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Fit column width to cell content.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 | `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Breaks long strings wherever necessary as defined by the table layout. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 
-### Modifiers without text wrapper
+### Controlling text example
 ```hbs
 {{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
@@ -2550,11 +2564,9 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 {{/table}}
 ```
 
-## The table-text element
-
 By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-c-table__text` wrapper on table cell content. In addition to `.pf-c-table__text`, all PatternFly layouts can be used in table cells and contain table text elements.
 
-### Table text element
+### Controlling text using the table text element example
 ```hbs
 {{#> table table--grid="true" table--modifier="pf-m-grid-md" table--id="table-text-element-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
@@ -2712,7 +2724,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 {{/table}}
 ```
 
-### Usage
+### Controlling text modifiers usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -2723,7 +2735,11 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 | `.pf-m-fit-content` | `thead`, `tr`, `th`, `.pf-c-table__text` | Modifies `th` to fit its contents. |
 | `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text strings to break. |
 
+## Table header modifiers
+
 ### th truncation
+Long strings in table cells will push content. Add a width modifier to `thead th` to limit string length or add `.pf-m-truncate` to `tbody td`.
+
 ```hbs
 {{#> tooltip tooltip--modifier="pf-m-top"}}
   {{#> tooltip-content tooltip-content--attribute='id="tooltip-top-content"'}}
@@ -2792,8 +2808,6 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
   {{/table-tbody}}
 {{/table}}
 ```
-
-## Long strings in table cells will push content. Add a width modifier to `thead th` to limit string length or add `.pf-m-truncate` to `tbody td`.
 
 ### Width constrained
 ```hbs
@@ -2959,7 +2973,46 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 {{/table}}
 ```
 
-### Favorites
+### Sticky column
+
+```hbs
+<div class="pf-c-scroll-inner-wrapper">
+  {{> table--scrollable table--scrollable--id="sticky-column-example" table--scrollable--Column1IsStickyColumn="true" table--scrollable--th--modifier--cell-1-modifier="pf-m-border-right"}}
+</div>
+```
+
+### Multiple sticky columns
+
+```hbs
+<div class="pf-c-scroll-inner-wrapper">
+  {{> table--scrollable table--scrollable--id="sticky-multi-column-example" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
+</div>
+```
+
+### Sticky columns and header
+
+```hbs
+<div class="pf-c-scroll-outer-wrapper">
+  <div class="pf-c-scroll-inner-wrapper">
+    {{> table--scrollable table--scrollable--id="sticky-header-columns-example" table--scrollable--modifier="pf-m-sticky-header" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
+  </div>
+</div>
+```
+
+### Sticky column usage
+
+For sticky columns to function correctly, the parent table's width must be controlled with `.pf-c-scroll-inner-wrapper`. For sticky columns and sticky headers to function correctly, the parent table needs an inner and outer wrapper (`.pf-c-scroll-outer-wrapper` and `.pf-c-scroll-inner-wrapper`)
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-scroll-outer-wrapper` | `<div>` | Initiates a table container sticky columns outer wrapper. |
+| `.pf-c-scroll-inner-wrapper` | `<div>` | Initiates a table container sticky columns inner wrapper. |
+| `.pf-c-table__sticky-column` | `<th>`, `<td>` | Initiates a sticky table cell. |
+| `.pf-m-border-right` | `.pf-c-table__sticky-column` | Modifies the sticky column to show a right border. |
+
+## Favorites
+
+### Favorites examples
 ```hbs
 {{#> table table--id="table-favorites" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a favorites table example"'}}
   {{#> table-thead}}
@@ -2992,7 +3045,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
-      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{> table-td table-td--IsFavorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <div>
           <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.
@@ -3019,7 +3072,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
-      {{> table-td table-td--favorite="true"}}
+      {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3044,7 +3097,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
-      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{> table-td table-td--IsFavorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3069,7 +3122,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--id}}" aria-labelledby="{{table--id}}-node{{table-tr--id}}">
       {{/table-td}}
-      {{> table-td table-td--favorite="true"}}
+      {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3093,12 +3146,12 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 {{/table}}
 ```
 
-### Favorites sortable
+### Favorites sortable example
 ```hbs
 {{#> table table--id="table-favorites-sortable" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a sortable with favorites table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--id="1"}}
-      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--sortable="true" table-th--selected="true"}}
+      {{> table-th table-th--attribute='scope="col"' table-th--IsFavorite="true" table-th--sortable="true" table-th--selected="true" table-button--attribute='aria-label="Favorite"'}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories
       {{/table-th}}
@@ -3119,7 +3172,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 
   {{#> table-tbody}}
     {{#> table-tr table-tr--id="1"}}
-      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{> table-td table-td--IsFavorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <div>
           <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines. This is a long title that will wrap to multiple lines.
@@ -3140,7 +3193,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="3"}}
-      {{> table-td table-td--favorite="true" table-td--IsFavorited="true"}}
+      {{> table-td table-td--IsFavorite="true" table-td--IsFavorited="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3159,7 +3212,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="2"}}
-      {{> table-td table-td--favorite="true"}}
+      {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3178,7 +3231,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="4"}}
-      {{> table-td table-td--favorite="true"}}
+      {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3197,7 +3250,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{/table-tr}}
 
     {{#> table-tr table-tr--id="5"}}
-      {{> table-td table-td--favorite="true"}}
+      {{> table-td table-td--IsFavorite="true"}}
       {{#> table-td table-td--data-label="Repository name"}}
         <span id="{{table--id}}-node{{table-tr--id}}">Repository {{table-tr--id}}</span>
       {{/table-td}}
@@ -3218,7 +3271,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 {{/table}}
 ```
 
-### Accessibility
+### Favorites accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required** |
@@ -3226,12 +3279,144 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 | `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
 
 
-### Usage
+### Favorites usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-table__favorite` | `td` | Initiates a favorite table body cell. |
 | `.pf-m-favorited` | `.pf-c-table__favorite` | Modifies a favorite cell for the favorited state. |
 | `.pf-m-favorite` | `.pf-c-table__sort` | Modifies a sortable table header cell for use with a favorites column. |
+
+## Draggable rows
+
+### Draggable rows example
+```hbs
+{{#> wrapper table--id="table-draggable-rows"}}
+  <div id="{{table--id}}-help">
+    Activate the reorder button and use the arrow keys to reorder the list or use your mouse to drag/reorder. Press escape to cancel the reordering.
+  </div>
+  {{#> table table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a table with draggable rows example"'}}
+    {{#> table-caption}}
+      This is the table caption
+    {{/table-caption}}
+    {{#> table-thead}}
+      {{#> table-tr}}
+        {{> table-td table-td--IsEmpty="true"}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Repositories
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Branches
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Pull requests
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Workspaces
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Last commit
+        {{/table-th}}
+      {{/table-tr}}
+    {{/table-thead}}
+
+    {{#> table-tbody}}
+      {{#> table-tr table-tr--id="row-1"}}
+        {{> table-td table-td--IsDraggable="true" table-td--IsDraggableDisabled="true"}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <span id="{{table--id}}-{{table-tr--id}}-node">Draggable icon disabled</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--id="row-2"}}
+        {{> table-td table-td--IsDraggable="true"}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <span id="{{table--id}}-{{table-tr--id}}-node">Table cell</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--id="row-3" table-tr--modifier="pf-m-ghost-row"}}
+        {{> table-td table-td--IsDraggable="true" table-td--IsDraggableDisabled="true"}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <span id="{{table--id}}-{{table-tr--id}}-node">Ghost row</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--id="row-4"}}
+        {{> table-td table-td--IsDraggable="true"}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          <span id="{{table--id}}-{{table-tr--id}}-node">Table cell</span>
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
+    {{/table-tbody}}
+  {{/table}}
+  <div class="pf-screen-reader" aria-live="assertive">
+    This is the aria-live section that provides real-time feedback to the user.
+  </div>
+{{/wrapper}}
+```
+
+### Draggable rows accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-pressed="true or false"` | `.pf-c-table__draggable .pf-c-button` | Indicates whether the button is currently pressed or not.  |
+| `aria-live` | `[element with live text]` | To give screen reader users live feedback about what's happening during interaction with the table, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
+| `aria-describedby="[id value of applicable content]"` | `.pf-c-table__draggable .pf-c-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. The example here uses a `<div id="table-draggable-rows-help"></div>`. **Highly recommended** |
+| `aria-labelledby="[id of .pf-c-table__draggable .pf-c-button] [id of row title text]"` | `.pf-c-table__draggable .pf-c-button` | Provides an accessible name for the draggable button. |
+| `id="[]"` | `.pf-c-table__draggable .pf-c-button`, `[element with row title text]` | Gives the button and the text element accessible IDs. |
+
+### Draggable rows usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-table__draggable` | `<td>` | Initiates a draggable table cell. |
+| `.pf-m-drag-over` | `.pf-c-table` | Modifies the table to indicate that a draggable item is being dragged over the table. |
 
 ## Documentation
 

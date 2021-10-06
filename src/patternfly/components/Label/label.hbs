@@ -1,4 +1,4 @@
-<{{# if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else}}span{{/if}} class="pf-c-label{{#if label--IsOverflow}} pf-m-overflow{{/if}}{{#if label--modifier}} {{label--modifier}}{{/if}}"
+<{{# if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else}}span{{/if}} class="pf-c-label{{#if label--IsOverflow}} pf-m-overflow{{/if}}{{#if label--modifier}} {{label--modifier}}{{/if}}{{#if label--IsEditable}} pf-m-editable{{/if}}{{#if label--IsEditableActive}} pf-m-editable-active{{/if}}"
   {{#if label--attribute}}
     {{{label--attribute}}}
   {{/if}}>

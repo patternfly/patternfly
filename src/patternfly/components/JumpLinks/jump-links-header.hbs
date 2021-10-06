@@ -2,5 +2,22 @@
   {{#if jump-links-header--attribute}}
     {{{jump-links-header--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if jump-links--IsExpandable}}
+    {{#> jump-links-toggle}}
+      {{#if jump-links--IsExpanded}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Toggle jump links" aria-expanded="true"')}}
+          {{> jump-links-toggle-icon}}
+          {{> jump-links-toggle-text}}
+        {{/button}}
+      {{else}}
+        {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Toggle jump links" aria-expanded="false"')}}
+          {{> jump-links-toggle-icon}}
+          {{> jump-links-toggle-text}}
+        {{/button}}
+      {{/if}}
+    {{/jump-links-toggle}}
+  {{/if}}
+  {{#unless jump-links--HasNoLabel}}
+    {{> jump-links-label}}
+  {{/unless}}
 </div>
