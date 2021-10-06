@@ -149,7 +149,7 @@ section: components
                 Created at
               {{/description-list-term}}
               {{#> description-list-description}}
-                <date>Oct 15, 1:51 pm</date>
+                <time>Oct 15, 1:51 pm</time>
               {{/description-list-description}}
             {{/description-list-group}}
           {{/description-list}}
@@ -250,7 +250,7 @@ section: components
                       Created at
                     {{/description-list-term}}
                     {{#> description-list-description}}
-                      <date>Oct 15, 1:51 pm</date>
+                      <time>Oct 15, 1:51 pm</time>
                     {{/description-list-description}}
                   {{/description-list-group}}
                   {{#> description-list-group}}
