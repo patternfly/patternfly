@@ -286,7 +286,7 @@ section: components
 ### Sections with repeatable fields
 ```hbs
 {{#> form form--id="form-demo-sections-repeatable-fields"}}
-  {{#> form-section}}
+  {{#> form-section form-section--id=(concat form--id '-section1')}}
     {{#> form-section-title}}
       General settings
     {{/form-section-title}}
@@ -318,7 +318,7 @@ section: components
       {{/form-group-control}}
     {{/form-group}}
   {{/form-section}}
-  {{#> form-section}}
+  {{#> form-section form-section--id=(concat form--id '-section2')}}
     {{#> form-section-title}}
       Access settings
     {{/form-section-title}}
