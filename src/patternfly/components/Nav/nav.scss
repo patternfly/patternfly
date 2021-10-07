@@ -272,6 +272,7 @@
   --pf-c-nav__item--m-flyout__item--last-child__link--before--BorderBottomWidth: 0;
 
   // Subnav
+  --pf-c-nav__item--m-flyout--c-menu--Left: calc(100% - #{pf-size-prem(4px)});
   --pf-c-nav__item--m-flyout--c-menu--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-nav__item--m-flyout--c-menu__item--Color: var(--pf-c-nav__link--Color);
   --pf-c-nav__item--m-flyout--c-menu__item--PaddingRight: var(--pf-global--spacer--lg);
@@ -567,16 +568,9 @@
     }
   }
 
-  &.pf-m-flyout,
-  &.pf-m-drilldown {
-    position: static;
-
-    &.pf-m-expanded .pf-c-nav__subnav {
-      overflow: visible;
-    }
-  }
-
   &.pf-m-flyout {
+    position: relative;
+
     .pf-c-menu {
       --pf-c-menu--MinWidth: 100%;
       --pf-c-menu--BoxShadow: var(--pf-c-nav__item--m-flyout--c-menu--BoxShadow);
@@ -591,6 +585,10 @@
       --pf-c-menu__item--PaddingRight: var(--pf-c-nav__item--m-flyout--c-menu__item--PaddingRight);
       --pf-c-menu__item--PaddingLeft: var(--pf-c-nav__item--m-flyout--c-menu__item--PaddingLeft);
       --pf-c-menu__item-description--Color: var(--pf-c-nav__item--m-flyout--c-menu__item-description--Color);
+
+      position: absolute;
+      top: 0;
+      left: var(--pf-c-nav__item--m-flyout--c-menu--Left);
 
       // stylelint-disable max-nesting-depth, selector-max-class
       .pf-c-menu__item {
