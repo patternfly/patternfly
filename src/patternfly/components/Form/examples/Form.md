@@ -310,37 +310,39 @@ cssPrefix: pf-c-form
           {{/form-group}}
         {{/form-field-group-body}}
       {{/form-field-group}}
-      {{#> form-field-group form-field-group--id=(concat form--id '-field-group3') form-field-group--IsExpandable="true"}}
-        {{#> form-field-group-header}}
-          {{#> form-field-group-header-main}}
-            {{#> form-field-group-title}}
-              {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Nested field group 2{{/form-field-group-title-text}}
-            {{/form-field-group-title}}
-          {{/form-field-group-header-main}}
-          {{#> form-field-group-header-actions}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-              <i class="fas fa-trash"></i>
-            {{/button}}
-          {{/form-field-group-header-actions}}
-        {{/form-field-group-header}}
-      {{/form-field-group}}
-      {{#> form-field-group form-field-group--id=(concat form--id '-field-group4') form-field-group--IsExpandable="true"}}
-        {{#> form-field-group-header}}
-          {{#> form-field-group-header-main}}
-            {{#> form-field-group-title}}
-              {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Nested field group 3{{/form-field-group-title-text}}
-            {{/form-field-group-title}}
-            {{#> form-field-group-header-description}}
-              Nested field group 3 description text.
-            {{/form-field-group-header-description}}
-          {{/form-field-group-header-main}}
-          {{#> form-field-group-header-actions}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-              <i class="fas fa-trash"></i>
-            {{/button}}
-          {{/form-field-group-header-actions}}
-        {{/form-field-group-header}}
-      {{/form-field-group}}
+      {{#> reset form-field-group--IsExpanded=reset}}
+        {{#> form-field-group form-field-group--id=(concat form--id '-field-group3') form-field-group--IsExpandable="true"}}
+          {{#> form-field-group-header}}
+            {{#> form-field-group-header-main}}
+              {{#> form-field-group-title}}
+                {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Nested field group 2{{/form-field-group-title-text}}
+              {{/form-field-group-title}}
+            {{/form-field-group-header-main}}
+            {{#> form-field-group-header-actions}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                <i class="fas fa-trash"></i>
+              {{/button}}
+            {{/form-field-group-header-actions}}
+          {{/form-field-group-header}}
+        {{/form-field-group}}
+        {{#> form-field-group form-field-group--id=(concat form--id '-field-group4') form-field-group--IsExpandable="true"}}
+          {{#> form-field-group-header}}
+            {{#> form-field-group-header-main}}
+              {{#> form-field-group-title}}
+                {{#> form-field-group-title-text form-field-group-title-text--attribute=(concat 'id="' form-field-group--id '-title"')}}Nested field group 3{{/form-field-group-title-text}}
+              {{/form-field-group-title}}
+              {{#> form-field-group-header-description}}
+                Nested field group 3 description text.
+              {{/form-field-group-header-description}}
+            {{/form-field-group-header-main}}
+            {{#> form-field-group-header-actions}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                <i class="fas fa-trash"></i>
+              {{/button}}
+            {{/form-field-group-header-actions}}
+          {{/form-field-group-header}}
+        {{/form-field-group}}
+      {{/reset}}
       {{#> form-group form-group--id=(concat form-field-group--id "-label1")}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 1{{/form-label}}
@@ -551,7 +553,7 @@ cssPrefix: pf-c-form
 | `id` | `.pf-c-form__group-label` | Generates an `id` for use in the `aria-labelledby` attribute in a checkbox or radio form group. |
 | `id` | `.pf-c-form__field-group-title-text` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
 | `id` | `.pf-c-form__field-group-toggle-button > button` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
-| `aria-labelledby="{label id}"` | `.pf-c-form__group`, `.pf-c-form__section`, `.pf-c-form__field-group` | Provides an accessible label for form groups, form sections, and form field groups. |**Required for checkbox groups, form groups, form sections, and form field groups.** |
+| `aria-labelledby="{label id}"` | `.pf-c-form__group`, `.pf-c-form__section`, `.pf-c-form__field-group` | Provides an accessible label for form groups, form sections, and form field groups. |**Required for form groups, form sections, and form field groups that contain labels.** |
 | `aria-label` | `.pf-c-form__field-group-toggle-button > button` | Provides an accessible label for the field group toggle button. |
 | `aria-labelledby="{title id} {toggle button id}"` | `.pf-c-form__field-group-toggle-button > button` | Provides an accessible label for the field group toggle button. |
 | `aria-expanded="true/false"` | `.pf-c-form__field-group-toggle-button > button` | Indicates whether the field group body is visible or hidden. |
