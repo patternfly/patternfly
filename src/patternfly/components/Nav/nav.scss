@@ -303,6 +303,8 @@
   --pf-c-nav__item--m-flyout--c-menu__item--before--BorderBottomColor: var(--pf-c-nav__item--before--BorderColor);
   --pf-c-nav__item--m-flyout--c-menu__item--hover--after--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-nav__item--m-flyout--c-menu__item--hover--after--BorderLeftColor: var(--pf-global--BorderColor--200);
+  --pf-c-nav__item--m-flyout--c-menu__item--hover--after--Top: calc(-1 * var(--pf-c-nav__item--m-flyout--c-menu__item--before--BorderBottomColor));
+  --pf-c-nav__item--m-flyout--c-menu__item--first-child--hover--after--Top: 0;
 
   // end flyout variant ====================================== //
 
@@ -635,6 +637,10 @@
         left: auto;
       }
 
+      .pf-c-menu__list-item:first-child {
+        --pf-c-nav__item--m-flyout--c-menu__item--hover--after--Top: var(--pf-c-nav__item--m-flyout--c-menu__item--first-child--hover--after--Top);
+      }
+
       // stylelint-disable max-nesting-depth, selector-max-class
       .pf-c-menu__item {
         position: relative;
@@ -652,7 +658,7 @@
         &:hover {
           &::after {
             position: absolute;
-            top: 0;
+            top: var(--pf-c-nav__item--m-flyout--c-menu__item--hover--after--Top);
             bottom: 0;
             left: 0;
             content: "";
