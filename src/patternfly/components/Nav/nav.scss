@@ -265,6 +265,7 @@
   // Flyout variant ====================================== //
 
   // Needs a unit because of type checking for use in calc()
+  --pf-c-nav__item--m-flyout--c-menu--top-offset: 0;
   --pf-c-nav__item--m-flyout--c-menu--left-offset: #{pf-size-prem(4px)};
   --pf-c-nav__item--m-flyout--c-menu--m-left--right-offset: #{pf-size-prem(4px)};
 
@@ -276,8 +277,10 @@
   --pf-c-nav__item--m-flyout__item--last-child__link--before--BorderBottomWidth: 0;
 
   // Menu
+  --pf-c-nav__item--m-flyout--c-menu--Top: 0;
   --pf-c-nav__item--m-flyout--c-menu--Left: calc(100% - var(--pf-c-nav__item--m-flyout--c-menu--left-offset));
   --pf-c-nav__item--m-flyout--c-menu--m-left--Right: calc(100% - var(--pf-c-nav__item--m-flyout--c-menu--m-left--right-offset));
+  --pf-c-nav__item--m-flyout--c-menu--m-top--Bottom: 0;
   --pf-c-nav__item--m-flyout--c-menu--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-nav__item--m-flyout--c-menu__item--Color: var(--pf-c-nav__link--Color);
   --pf-c-nav__item--m-flyout--c-menu__item--PaddingRight: var(--pf-global--spacer--lg);
@@ -592,8 +595,13 @@
       --pf-c-menu__item-description--Color: var(--pf-c-nav__item--m-flyout--c-menu__item-description--Color);
 
       position: absolute;
-      top: 0;
+      top: var(--pf-c-nav__item--m-flyout--c-menu--Top);
       left: var(--pf-c-nav__item--m-flyout--c-menu--Left);
+
+      &.pf-m-top {
+        top: auto;
+        bottom: var(--pf-c-nav__item--m-flyout--c-menu--m-top--Bottom);
+      }
 
       &.pf-m-left {
         right: var(--pf-c-nav__item--m-flyout--c-menu--m-left--Right);
