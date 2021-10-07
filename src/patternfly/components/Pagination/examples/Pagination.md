@@ -5,6 +5,14 @@ cssPrefix: pf-c-pagination
 ---
 
 ## Examples
+### Indeterminate
+```hbs
+{{#> pagination pagination--IsIndeterminate="true"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-options-menu options-menu id="pagination-options-menu-top-example" options-menu--IsText="true"}}
+  {{> pagination-nav-content}}
+{{/pagination}}
+```
 ### Top
 ```hbs
 {{#> pagination}}

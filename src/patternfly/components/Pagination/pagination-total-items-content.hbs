@@ -1,3 +1,7 @@
 {{#> pagination-total-items}}
-  <b>1 - 10</b>&nbsp;of&nbsp;<b>37</b>
+  {{#if pagination--IsIndeterminate}}
+    <b>1 - 10</b>&nbsp;of&nbsp;<b>many</b>
+  {{else}}
+    <b>1 - 10</b>&nbsp;of&nbsp;<b>36</b>
+  {{/if}}
 {{/pagination-total-items}}
