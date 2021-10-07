@@ -30,6 +30,9 @@
   {{#if table-th--data-label}}
     data-label="{{table-th--data-label}}"
   {{/if}}
+  {{#if table-th--IsNode}}
+    id="{{table--id}}-node{{table-tr--index}}"
+  {{/if}}
   {{#if table-th--attribute}}
     {{{table-th--attribute}}}
   {{/if}}>

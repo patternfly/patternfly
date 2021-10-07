@@ -18,14 +18,13 @@
     background-clip: padding-box;
 
     &.pf-m-border-right::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      pointer-events: none;
-      content: "";
-      border-right: var(--pf-c-table__sticky-column--m-border-right--before--BorderRightWidth) solid var(--pf-c-table__sticky-column--m-border-right--before--BorderRightColor);
+      --pf-c-table--cell--m-border-right--before--BorderRightWidth: var(--pf-c-table__sticky-column--m-border-right--before--BorderRightWidth);
+      --pf-c-table--cell--m-border-right--before--BorderRightColor: var(--pf-c-table__sticky-column--m-border-right--before--BorderRightColor);
+    }
+
+    &.pf-m-border-left::before {
+      --pf-c-table--cell--m-border-left--before--BorderLeftWidth: var(--pf-c-table__sticky-column--m-border-left--before--BorderLeftWidth);
+      --pf-c-table--cell--m-border-left--before--BorderLeftColor: var(--pf-c-table__sticky-column--m-border-left--before--BorderLeftColor);
     }
   }
 
