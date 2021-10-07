@@ -281,6 +281,7 @@
   --pf-c-nav__item--m-flyout--focus__link--before--BorderWidth: 0;
   --pf-c-nav__item--m-flyout--active__link--before--BorderWidth: 0;
   --pf-c-nav__item--m-flyout__item--last-child__link--before--BorderBottomWidth: 0;
+  --pf-c-nav__item--m-flyout--c-menu--BoxShadow: var(--pf-global--BoxShadow--lg);
 
   // Menu
   --pf-c-nav__item--m-flyout--c-menu--Top: calc(0px + var(--pf-c-nav__item--m-flyout--c-menu--top-offset));
@@ -599,7 +600,7 @@
       --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__item--m-flyout--active__link--before--BorderWidth);
     }
 
-    position: relative;
+    // position: relative;
 
     .pf-c-menu {
       --pf-c-menu--MinWidth: 100%;
