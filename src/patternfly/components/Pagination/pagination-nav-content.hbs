@@ -18,11 +18,9 @@
       {{else}}
         {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
       {{/if}}
-      {{#if pagination--IsIndeterminate}}
-        <span aria-hidden="true">of many</span>
-      {{else}}
+      {{#unless pagination--IsIndeterminate}}
         <span aria-hidden="true">of 4</span>
-      {{/if}}
+      {{/unless}}
     {{/pagination-nav-page-select}}
   {{/unless}}
   {{#> pagination-nav-control pagination-nav-control--modifier="pf-m-next"}}
