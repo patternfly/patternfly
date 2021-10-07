@@ -225,9 +225,9 @@ import './Card.css'
 {{/card}}
 ```
 
-### Hover
+### Hoverable
 ```hbs
-{{#> card card--id="card-hover-example" card--modifier="pf-m-hoverable"}}
+{{#> card card--id="card-hoverable-example" card--modifier="pf-m-hoverable-raised"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -242,7 +242,7 @@ import './Card.css'
 
 ### Selectable
 ```hbs
-{{#> card card--id="card-selectable-example" card--modifier="pf-m-selectable" card--attribute='tabindex="0"'}}
+{{#> card card--id="card-selectable-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -257,7 +257,52 @@ import './Card.css'
 
 ### Selected
 ```hbs
-{{#> card card--id="card-selected-example" card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
+{{#> card card--id="card-selected-example" card--modifier="pf-m-selectable-raised pf-m-selected-raised" card--attribute='tabindex="0"'}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
+### Hoverable (legacy)
+```hbs
+{{#> card card--id="card-hoverable-legacy-example" card--modifier="pf-m-hoverable"}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
+### Selectable (legacy)
+```hbs
+{{#> card card--id="card-selectable-legacy-example" card--modifier="pf-m-selectable" card--attribute='tabindex="0"'}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
+### Selected (legacy)
+```hbs
+{{#> card card--id="card-selected-legacy-example" card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -452,9 +497,9 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
 | `.pf-m-display-lg` | `.pf-c-card` | Creates a large variation of the card component that involves larger font sizes and spacing. This variation is for marketing use cases. |
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` to not fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
-| `.pf-m-hoverable` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
-| `.pf-m-selectable` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
-| `.pf-m-selected` | `.pf-c-card.pf-m-selectable` | Modifies a selectable card for the selected state.
+| `.pf-m-hoverable-raised` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
+| `.pf-m-selectable-raised` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
+| `.pf-m-selected-raised` | `.pf-c-card.pf-m-selectable-raised` | Modifies a selectable card for the selected state. |
 | `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background. |
 | `.pf-m-rounded` | `.pf-c-card` | Modifies the card to have rounded corners. |
 | `.pf-m-plain` | `.pf-c-card` | Modifies the card to have no box shadow and no background color. |
