@@ -596,7 +596,7 @@
     }
 
     &:active {
-      --pf-c-nav__link--BackgroundColor: var(--pf-c-nav__item--m-flyout--hover__link--BackgroundColor);
+      --pf-c-nav__link--BackgroundColor: var(--pf-c-nav__item--m-flyout--active__link--BackgroundColor);
       --pf-c-nav__link--before--BorderBottomWidth: var(--pf-c-nav__item--m-flyout--active__link--before--BorderWidth);
     }
 
