@@ -6,7 +6,7 @@ releaseNoteTOC: true
 
 ## 2021.13 release notes (2021-10-08)
 Packages released:
-- [@patternfly/patternfly@v4.144.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.144.2)
+- [@patternfly/patternfly@v4.144.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.144.4)
 
 ### Components
 - **Backdrop:** Added var for position to allow customization ([#4391](https://github.com/patternfly/patternfly/pull/4391))
@@ -26,7 +26,9 @@ Packages released:
 - **Masthead:** Updated column-end ([#4418](https://github.com/patternfly/patternfly/pull/4418))
 - **Masthead, description list**: Fixed undefined vars ([#4421](https://github.com/patternfly/patternfly/pull/4421))
 - **Menu:** Added scrollable and plain modifiers ([#4392](https://github.com/patternfly/patternfly/pull/4392))
-- **Nav:** Added support for menu component as flyout ([#4417](https://github.com/patternfly/patternfly/pull/4417))
+- **Nav:**
+  * Added support for menu component as flyout ([#4417](https://github.com/patternfly/patternfly/pull/4417))
+  * Updated flyout menu positioning ([#4427](https://github.com/patternfly/patternfly/pull/4427))
 - **Progress stepper:** Added help text for popover ([#4381](https://github.com/patternfly/patternfly/pull/4381))
 - **Radio, checkbox, form:** Corrected label alignment ([#4375](https://github.com/patternfly/patternfly/pull/4375))
 - **Select:**
