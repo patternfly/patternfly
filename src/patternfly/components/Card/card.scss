@@ -56,6 +56,7 @@
   --pf-c-card--m-selectable-raised--m-selected-raised--TranslateY--base: #{pf-size-prem(-8px)};
   --pf-c-card--m-selectable-raised--m-selected-raised--TranslateY: var(--pf-c-card--m-selectable-raised--m-selected-raised--TranslateY--base);
   --pf-c-card--m-flat--m-selectable-raised--m-selected-raised--TranslateY: calc(var(--pf-c-card--m-selectable-raised--m-selected-raised--TranslateY--base) + var(--pf-c-card--m-flat--BorderWidth));
+  --pf-c-card--m-rounded--m-selectable-raised--m-selected-raised--TranslateY: calc(var(--pf-c-card--m-selectable-raised--m-selected-raised--TranslateY--base) + var(--pf-c-card--m-rounded--BorderRadius));
   --pf-c-card--m-selectable-raised--m-selected-raised--Transition: transform .25s linear, box-shadow .25s linear;
   --pf-c-card--m-selectable-raised--m-selected-raised--before--Transition: transform .25s linear;
   --pf-c-card--m-selectable-raised--m-selected-raised--before--TranslateY: calc(var(--pf-c-card--m-selectable-raised--m-selected-raised--TranslateY) * -1);
@@ -236,6 +237,8 @@
   }
 
   &.pf-m-rounded {
+    --pf-c-card--m-selectable-raised--m-selected-raised--TranslateY: var(--pf-c-card--m-rounded--m-selectable-raised--m-selected-raised--TranslateY);
+
     border-radius: var(--pf-c-card--m-rounded--BorderRadius);
   }
 
