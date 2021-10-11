@@ -136,9 +136,9 @@
   --pf-c-menu__item-action--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-menu__item-action--Color: var(--pf-global--Color--200);
   --pf-c-menu__item-action--hover--Color: var(--pf-global--Color--100);
+  --pf-c-menu__item-action--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-menu__item-action--m-favorited--Color: var(--pf-global--palette--gold-400);
   --pf-c-menu__item-action--m-favorited--hover--Color: var(--pf-global--palette--gold-500);
-  --pf-c-menu__list-item--m-disabled__item-action--Color: var(--pf-global--disabled-color--200);
 
   // Action icon
   --pf-c-menu__item-action-icon--Height: calc(var(--pf-c-menu__item--FontSize) * var(--pf-c-menu__item--LineHeight));
@@ -431,7 +431,6 @@
     --pf-c-menu__list-item--hover--BackgroundColor: transparent;
     --pf-c-menu__list-item--focus-within--BackgroundColor: transparent;
     --pf-c-menu__item--Color: var(--pf-c-menu__list-item--m-disabled__item--Color);
-    --pf-c-menu__item-action--Color: var(--pf-c-menu__list-item--m-disabled__item-action--Color);
     --pf-c-menu__item-toggle-icon: var(--pf-c-menu__list-item--m-disabled__item-toggle-icon--Color);
 
     pointer-events: none;
@@ -581,6 +580,10 @@
   &:hover,
   &:focus {
     --pf-c-menu__item-action--Color: var(--pf-c-menu__item-action--hover--Color);
+  }
+
+  &:disabled {
+    --pf-c-menu__item-action--Color: var(--pf-c-menu__item-action--disabled--Color);
   }
 }
 
