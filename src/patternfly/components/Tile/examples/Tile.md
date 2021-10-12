@@ -9,7 +9,7 @@ import './Tile.css'
 
 ## Examples
 ### Basic tiles
-```hbs
+```hbs isBeta
 {{#> tile}}
   {{#> tile-header}}
     {{#> tile-title}}
