@@ -10,7 +10,6 @@
   // borders
   --pf-c-tile--before--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-tile--before--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-tile--before--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-tile--after--Height: var(--pf-global--BorderWidth--lg);
   --pf-c-tile--after--BackgroundColor: transparent;
   --pf-c-tile--after--Transition: none;
@@ -85,7 +84,6 @@
     bottom: 0;
     left: 0;
     border: var(--pf-c-tile--before--BorderWidth) solid var(--pf-c-tile--before--BorderColor);
-    border-radius: var(--pf-c-tile--before--BorderRadius);
   }
 
   &::after {
