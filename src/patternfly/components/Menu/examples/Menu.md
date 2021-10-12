@@ -1563,6 +1563,15 @@ import './Menu.css'
 {{/menu}}
 ```
 
+### Panel
+```hbs
+{{#> menu menu--id="panel-example"}}
+  {{#> menu-content}}
+    [Content goes here]
+  {{/menu-content}}
+{{/menu}}
+```
+
 ## Documentation
 
 ### Accessibility
