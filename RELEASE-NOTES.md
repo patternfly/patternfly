@@ -4,9 +4,9 @@ section: developer-resources
 releaseNoteTOC: true
 ---
 
-## 2021.13 release notes (2021-10-08)
+## 2021.13 release notes (2021-10-13)
 Packages released:
-- [@patternfly/patternfly@v4.144.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.144.2)
+- [@patternfly/patternfly@v4.144.5](https://www.npmjs.com/package/@patternfly/patternfly/v/4.144.5)
 
 ### Components
 - **Backdrop:** Added var for position to allow customization ([#4391](https://github.com/patternfly/patternfly/pull/4391))
