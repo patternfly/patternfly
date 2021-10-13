@@ -538,7 +538,7 @@ import './Navigation.css'
 ```
 
 ### Flyout with menu component
-```hbs
+```hbs isBeta
 {{> nav--flyout nav--flyout--id="menu-flyout-example" nav--flyout--submenu--IsExpanded="true" nav--IsMenuFlyout="true"}}
 ```
 
