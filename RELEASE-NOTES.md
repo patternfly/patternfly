@@ -26,7 +26,9 @@ Packages released:
 - **Masthead:** Updated column-end ([#4418](https://github.com/patternfly/patternfly/pull/4418))
 - **Masthead, description list**: Fixed undefined vars ([#4421](https://github.com/patternfly/patternfly/pull/4421))
 - **Menu:** Added scrollable and plain modifiers ([#4392](https://github.com/patternfly/patternfly/pull/4392))
-- **Nav:** Added support for menu component as flyout ([#4417](https://github.com/patternfly/patternfly/pull/4417))
+- **Nav:**
+  - Added support for menu component as flyout ([#4417](https://github.com/patternfly/patternfly/pull/4417))
+  - Marked nav flyout example as beta, updated release notes ([#4444](https://github.com/patternfly/patternfly/pull/4444))
 - **Progress stepper:** Added help text for popover ([#4381](https://github.com/patternfly/patternfly/pull/4381))
 - **Radio, checkbox, form:** Corrected label alignment ([#4375](https://github.com/patternfly/patternfly/pull/4375))
 - **Select:**
