@@ -179,7 +179,7 @@ section: components
 {{#> modal modal--id="modal-with-form"}}
   {{#> backdrop}}
     {{#> bullseye}}
-      {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute=(concat 'aria-labelledby="modal-title-' modal--id '" aria-describedby="modal-description-' modal--id '"')}}
+      {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute=(concat 'aria-labelledby="modal-title-' modal--id '" aria-describedby="modal-description-' modal--id '"') form--id=(concat modal--id '-form')}}
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
           <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
@@ -192,7 +192,7 @@ section: components
           <p>Enter your personal information below to create an account.</p>
         {{/modal-box-body}}
         {{#> modal-box-body}}
-          {{#> form form--id=(concat modal--id '-form')}}
+          {{#> form form--attribute=(concat 'id="' form--id '"')}}
             {{#> form-group form-group--id="-name"}}
               {{#> form-group-label}}
                 {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
