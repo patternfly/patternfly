@@ -1025,7 +1025,7 @@ import './Card.css'
             Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
           {{/description-list-description}}
           {{#> description-list-description}}
-            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:02 am</date>
+            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:02 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1036,7 +1036,7 @@ import './Card.css'
             Successfully assigned default/example to ip-10-0-130-149.ec2.internal
           {{/description-list-description}}
           {{#> description-list-description}}
-            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:13 am</date>
+            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:13 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1047,7 +1047,7 @@ import './Card.css'
             Pulling image "openshift/hello-openshift"
           {{/description-list-description}}
           {{#> description-list-description}}
-            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:59 am</date>
+            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:59 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1058,7 +1058,7 @@ import './Card.css'
             Created container hello-openshift
           {{/description-list-description}}
           {{#> description-list-description}}
-            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:45 am</date>
+            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:45 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
       {{/description-list}}
@@ -1102,7 +1102,7 @@ import './Card.css'
             Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
           {{/description-list-description}}
           {{#> description-list-description}}
-            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:02 am</date>
+            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:02 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1120,7 +1120,7 @@ import './Card.css'
             Successfully assigned default/example to ip-10-0-130-149.ec2.internal
           {{/description-list-description}}
           {{#> description-list-description}}
-            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:13 am</date>
+            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:13 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1138,7 +1138,7 @@ import './Card.css'
             Pulling image "openshift/hello-openshift"
           {{/description-list-description}}
           {{#> description-list-description}}
-            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:59 am</date>
+            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:59 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1156,7 +1156,7 @@ import './Card.css'
             Created container hello-openshift
           {{/description-list-description}}
           {{#> description-list-description}}
-            <date class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:45 am</date>
+            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:45 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
       {{/description-list}}
