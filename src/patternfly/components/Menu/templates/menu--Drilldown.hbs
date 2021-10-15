@@ -3,6 +3,9 @@
     {{#> menu-list menu-content--attribute=''}}
       {{> menu-list-item menu-list-item--text="Start rollout"}}
       {{> menu-list-item menu-list-item--text="Pause rollout"}}
+      {{#if menu--Drilldown--HasCurrentMenuItem}}
+        {{> menu-list-item menu-list-item--IsCurrent="true" menu-list-item--text="Current link"}}
+      {{/if}}
       {{> menu-list-item menu-list-item--text="Add storage"}}
       {{#> menu-list-item menu-list-item--IsCurrentPath=menu--Drilldown--IsDrilledIn--list-1 menu-list-item--IsExpandable="true" menu-item--IsExpanded=menu--Drilldown--IsDrilledIn--list-1 menu-list-item--text="Edit" menu-list-item--IsDrillDown="true"}}
         {{#> menu menu--IsSubmenu="true" menu--IsDrilledIn=menu--Drilldown--IsDrilledIn--list-2 menu--modifier="" menu--id=(concat menu--Drilldown--id  '-list-1') menu--attribute=''}}

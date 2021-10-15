@@ -637,27 +637,30 @@ import './Navigation.css'
 {{/nav}}
 ```
 
-### Flyout with menu component
+### Nav with flyout
 ```hbs isBeta
 {{> nav--flyout nav--flyout--id="menu-flyout-example" nav--flyout--submenu--IsExpanded="true" nav--IsMenuFlyout="true"}}
 ```
 
-<!--
-### Drilldown
-```hbs
-{{> nav--drilldown nav--drilldown--id="basic-drilldown-example"}}
+### Nav with menu and flyout
+```hbs isBeta
+{{> nav--menu nav--menu--id="menu-flyout-with-menu-example" nav--menu--submenu--IsExpanded="true"}}
 ```
 
-### Level 2 drilldown
-```hbs
-{{> nav--drilldown nav--drilldown--id="level-2-drilldown-example" nav--drilldown--level-2="true"}}
+### Nav with drilldown menu
+```hbs isBeta
+{{> nav--drilldown nav--drilldown--id="basic-drilldown-example" menu--Drilldown--HasCurrentMenuItem="true"}}
 ```
 
-### Level 3 drilldown
-```hbs
-{{> nav--drilldown nav--drilldown--id="level-2-drilldown-example" nav--drilldown--level-2="true" nav--drilldown--level-3="true"}}
+### Nav with drilldown menu level two
+```hbs isBeta
+{{> nav--drilldown nav--drilldown--id="level-two-drilldown-example" menu--Drilldown--IsDrilledIn--list-1="true" menu--Drilldown--menu__content--attribute='style="--pf-c-menu__content--Height: 225px;"' menu--Drilldown--HasCurrentMenuItem="true"}}
 ```
--->
+
+### Nav with drilldown menu level three
+```hbs isBeta
+{{> nav--drilldown nav--drilldown--id="level-three-drilldown-example" menu--Drilldown--IsDrilledIn--list-1="true"  menu--Drilldown--IsDrilledIn--list-2="true" menu--Drilldown--menu__content--attribute='style="--pf-c-menu__content--Height: 281px;"' menu--Drilldown--HasCurrentMenuItem="true"}}
+```
 
 ## Documentation
 

@@ -694,6 +694,150 @@ import './Menu.css'
 {{/menu}}
 ```
 
+### Standard menu, flyout child
+```hbs
+{{#> menu}}
+  {{#> menu-content}}
+    {{#> menu-list}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Start rollout
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Pause rollouts
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item menu-item--attribute='aria-expanded="false"'}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Add storage
+            {{/menu-item-text}}
+            {{> menu-item-toggle-icon}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+        {{#> menu menu--attribute="hidden" menu--modifier="pf-m-flyout"}}
+          {{#> menu-content}}
+            {{#> menu-list}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Application grouping
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Count
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Labels
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Annotations
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+            {{/menu-list}}
+          {{/menu-content}}
+        {{/menu}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Edit
+            {{/menu-item-text}}
+            {{> menu-item-toggle-icon}}
+          {{/menu-item-main}}
+          {{#> menu-item-description}}
+            Description
+          {{/menu-item-description}}
+        {{/menu-item}}
+        {{#> menu menu--modifier="pf-m-flyout"}}
+          {{#> menu-content}}
+            {{#> menu-list}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Application grouping
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Count
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Labels
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Annotations
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+            {{/menu-list}}
+          {{/menu-content}}
+        {{/menu}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Delete deployment config
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+{{/menu}}
+```
+
 ### Drilldown
 ```hbs isBeta
 {{> menu--Drilldown menu--Drilldown--id="drilldown-default"}}
@@ -1607,6 +1751,7 @@ import './Menu.css'
 | `.pf-m-left` | `.pf-c-menu` | Modifies a flyout menu to expand to the left. |
 | `.pf-m-plain` | `.pf-c-menu` | Modifies the menu component for use in the page instead of as a dropdown. |
 | `.pf-m-scrollable` | `.pf-c-menu` | Modifies the menu component content for scrollable styles. Scrollable content height can be customized by setting `--pf-c-menu__content--MaxHeight`. |
+| `.pf-m-current` | `.pf-c-menu__list-item` | Modifies a list item for current styles. |
 | `.pf-m-load` | `.pf-c-menu__list-item` | Modifies a list item for "load more" styles. |
 | `.pf-m-loading` | `.pf-c-menu__list-item` | Modifies a list item for loading styles. |
 | `.pf-m-drilldown` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "drill down". |

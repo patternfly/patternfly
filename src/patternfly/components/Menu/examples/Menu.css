@@ -1,4 +1,5 @@
-[id^="ws-core-c-menu-with-flyout"] {
+[id^="ws-core-c-menu-with-flyout"],
+[id^="ws-core-c-menu-standard-menu-flyout-child"] {
   display: flex;
   height: 400px;
 }
