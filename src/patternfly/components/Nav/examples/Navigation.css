@@ -46,13 +46,3 @@
 #ws-core-c-navigation-level-3-drilldown {
   width: 260px;
 }
-
-#ws-core-c-navigation-flyout-with-menu-component .pf-c-nav__item.pf-m-flyout {
-  position: relative;
-}
-
-#ws-core-c-navigation-flyout-with-menu-component .pf-c-menu.pf-m-flyout {
-  position: absolute;
-  top: 0;
-  left: 100%;
-}

@@ -1,5 +1,5 @@
 ---
-id: 'Drag drop'
+id: 'Drag and drop'
 beta: true
 section: components
 cssPrefix: pf-c-drag-drop

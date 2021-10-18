@@ -9,7 +9,7 @@ cssPrefix: pf-c-pagination
 ```hbs
 {{#> pagination}}
   {{> pagination-total-items-content}}
-  {{> pagination-options-menu options-menu id="pagination-options-menu-top-example" options-menu--IsText="true"}}
+  {{> pagination-options-menu id="pagination-options-menu-top-example" options-menu--IsText="true"}}
   {{> pagination-nav-content}}
 {{/pagination}}
 ```
@@ -27,7 +27,7 @@ cssPrefix: pf-c-pagination
 ```hbs
 {{#> pagination pagination--modifier="pf-m-sticky"}}
   {{> pagination-total-items-content}}
-  {{> pagination-options-menu options-menu id="pagination-options-menu-top-example" options-menu--IsText="true"}}
+  {{> pagination-options-menu id="pagination-options-menu-top-example" options-menu--IsText="true"}}
   {{> pagination-nav-content}}
 {{/pagination}}
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
@@ -37,6 +37,15 @@ cssPrefix: pf-c-pagination
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
 <br><br>
 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.</div>
+```
+
+### Indeterminate (item count is not known)
+```hbs
+{{#> pagination pagination--IsIndeterminate="true"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-options-menu id="pagination-options-menu-top-indeterminate-example" options-menu--IsText="true"}}
+  {{> pagination-nav-content}}
+{{/pagination}}
 ```
 
 ### Bottom
@@ -75,7 +84,7 @@ cssPrefix: pf-c-pagination
 ```hbs
 {{#> pagination pagination--IsCompact="true"}}
   {{> pagination-total-items-content}}
-  {{> pagination-options-menu options-menu id="pagination-options-menu-compact-example" options-menu--IsText="true"}}
+  {{> pagination-options-menu id="pagination-options-menu-compact-example" options-menu--IsText="true"}}
   {{> pagination-nav-content}}
 {{/pagination}}
 ```

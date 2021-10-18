@@ -1,6 +1,10 @@
 {{#> options-menu options-menu--modifier=pagination-options-menu--modifier}}
   {{#> options-menu-toggle options-menu-toggle--type="div" options-menu-toggle--modifier="pf-m-plain"}}
-    <span class="pf-c-options-menu__toggle-text"><b>1 - 10</b>&nbsp;of&nbsp;<b>37</b></span>
+    {{#if pagination--IsIndeterminate}}
+      <span class="pf-c-options-menu__toggle-text"><b>1 - 10</b>&nbsp;of&nbsp;<b>many</b></span>
+    {{else}}
+      <span class="pf-c-options-menu__toggle-text"><b>1 - 10</b>&nbsp;of&nbsp;<b>36</b></span>
+    {{/if}}
     {{> options-menu-toggle-button aria-label="Items per page"}}
   {{/options-menu-toggle}}
   {{#> options-menu-menu}}
