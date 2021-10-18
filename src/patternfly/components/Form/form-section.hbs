@@ -1,4 +1,8 @@
 <section class="pf-c-form__section{{#if form-section--modifier}} {{form-section--modifier}}{{/if}}"
+  role="group"
+  {{#unless form-section--HasNoTitle}}
+    aria-labelledby="{{form-section--id}}-title"
+  {{/unless}}
   {{#if form-section--attribute}}
     {{{form-section--attribute}}}
   {{/if}}>
