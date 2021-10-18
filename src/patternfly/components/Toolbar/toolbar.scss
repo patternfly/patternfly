@@ -99,6 +99,10 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar__item--m-label--spacer: var(--pf-c-toolbar__item--spacer);
   --pf-c-toolbar__item--m-label--FontWeight: var(--pf-global--FontWeight--bold);
 
+  // Label in expanded content
+  --pf-c-toolbar__expandable-content__item--m-label--MarginBottom: calc(-1 * var(--pf-c-toolbar__expandable-content--m-expanded--GridRowGap) + var(--pf-global--spacer--sm));
+  --pf-c-toolbar__expandable-content__item--m-label--FontSize: var(--pf-global--FontSize--sm);
+
   // Toggle
   --pf-c-toolbar__toggle--m-expanded__c-button--m-plain--Color: var(--pf-global--Color--100);
 
@@ -382,8 +386,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   }
 
   .pf-m-label {
-    display: none;
-    visibility: hidden;
+    margin-bottom: var(--pf-c-toolbar__expandable-content__item--m-label--MarginBottom);
+    font-size: var(--pf-c-toolbar__expandable-content__item--m-label--FontSize);
   }
 }
 
