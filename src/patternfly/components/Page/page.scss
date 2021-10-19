@@ -430,6 +430,7 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
       --pf-c-context-selector__toggle--BorderRightColor: transparent;
       --pf-c-context-selector__toggle--BorderLeftColor: transparent;
       --pf-c-context-selector__toggle--BorderBottomColor: transparent;
+      --pf-c-context-selector__menu--Top: 100%;
 
       @include pf-t-dark;
 
