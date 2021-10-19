@@ -229,7 +229,7 @@ section: components
           {{/form}}
         {{/modal-box-body}}
         {{#> modal-box-footer}}
-          {{#> button button--modifier="pf-m-primary" button--attribute=(concat 'form="' form--id '-form"')}}
+          {{#> button button--modifier="pf-m-primary" button--attribute=(concat 'form="' form--id '"')}}
             Create
           {{/button}}
           {{#> button button--modifier="pf-m-link"}}
