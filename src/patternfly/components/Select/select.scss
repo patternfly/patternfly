@@ -126,23 +126,29 @@
   --pf-c-select__menu-item--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-select__menu-item--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-select__menu-item--Color: var(--pf-global--Color--dark-100);
-  --pf-c-select__menu-item--Width: 100%;
   --pf-c-select__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
+  --pf-c-select__menu-item--Width: 100%;
   --pf-c-select__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-select__menu-item--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-select__menu-item--disabled--BackgroundColor: transparent;
   --pf-c-select__menu-item--m-link--Width: auto;
   --pf-c-select__menu-item--m-link--hover--BackgroundColor: transparent;
   --pf-c-select__menu-item--m-link--focus--BackgroundColor: transparent;
-  --pf-c-select__menu-item--m-action--Color: var(--pf-global--disabled-color--200);
+  --pf-c-select__menu-item--m-action--Color: var(--pf-global--Color--200);
+  --pf-c-select__menu-item--m-action--hover--Color: var(--pf-global--Color--100);
+  --pf-c-select__menu-item--m-action--focus--Color: var(--pf-global--Color--100);
+  --pf-c-select__menu-item--m-action--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-select__menu-item--m-action--Width: auto;
   --pf-c-select__menu-item--m-action--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-select__menu-item--m-action--hover--BackgroundColor: transparent;
   --pf-c-select__menu-item--m-action--focus--BackgroundColor: transparent;
-  --pf-c-select__menu-item--hover__menu-item--m-action--Color: var(--pf-global--Color--200);
-  --pf-c-select__menu-item--m-action--hover--Color: var(--pf-global--Color--100);
-  --pf-c-select__menu-item--m-action--focus--Color: var(--pf-global--Color--100);
+  --pf-c-select__menu-item--hover__menu-item--m-action--Color: var(--pf-global--Color--200); // remove at breaking change
+  --pf-c-select__menu-item--m-favorite-action--Color: var(--pf-global--Color--200);
+  --pf-c-select__menu-item--m-favorite-action--hover--Color: var(--pf-global--Color--100);
+  --pf-c-select__menu-item--m-favorite-action--focus--Color: var(--pf-global--Color--100);
   --pf-c-select__menu-wrapper--m-favorite__menu-item--m-favorite-action--Color: var(--pf-global--palette--gold-400);
+  --pf-c-select__menu-wrapper--m-favorite__menu-item--m-favorite-action--hover--Color: var(--pf-global--palette--gold-500);
+  --pf-c-select__menu-wrapper--m-favorite__menu-item--m-favorite-action--focus--Color: var(--pf-global--palette--gold-500);
   --pf-c-select__menu-item--m-load--Color: var(--pf-global--link--Color);
 
   // Menu item icon
@@ -472,7 +478,9 @@
   display: flex;
 
   &.pf-m-favorite .pf-c-select__menu-item.pf-m-favorite-action {
-    --pf-c-select__menu-item--Color: var(--pf-c-select__menu-wrapper--m-favorite__menu-item--m-favorite-action--Color);
+    --pf-c-select__menu-item--m-favorite-action--Color: var(--pf-c-select__menu-wrapper--m-favorite__menu-item--m-favorite-action--Color);
+    --pf-c-select__menu-item--m-favorite-action--hover--Color: var(--pf-c-select__menu-wrapper--m-favorite__menu-item--m-favorite-action--hover--Color);
+    --pf-c-select__menu-item--m-favorite-action--focus--Color: var(--pf-c-select__menu-wrapper--m-favorite__menu-item--m-favorite-action--focus--Color);
   }
 }
 
@@ -492,7 +500,7 @@
   &:hover,
   &:focus,
   &.pf-m-focus {
-    --pf-c-select__menu-item--m-action--Color: var(--pf-c-select__menu-item--hover__menu-item--m-action--Color);
+    --pf-c-select__menu-item--m-action--Color: var(--pf-c-select__menu-item--hover__menu-item--m-action--Color); // remove at breaking change
 
     text-decoration: none;
   }
@@ -540,6 +548,16 @@
     &:focus {
       --pf-c-select__menu-item--m-action--Color: var(--pf-c-select__menu-item--m-action--focus--Color);
     }
+
+    &:disabled {
+      --pf-c-select__menu-item--disabled--Color: var(--pf-c-select__menu-item--m-action--disabled--Color);
+    }
+  }
+
+  &.pf-m-favorite-action {
+    --pf-c-select__menu-item--m-action--Color: var(--pf-c-select__menu-item--m-favorite-action--Color);
+    --pf-c-select__menu-item--m-action--hover--Color: var(--pf-c-select__menu-item--m-favorite-action--hover--Color);
+    --pf-c-select__menu-item--m-action--focus--Color: var(--pf-c-select__menu-item--m-favorite-action--focus--Color);
   }
 
   &.pf-m-selected {
