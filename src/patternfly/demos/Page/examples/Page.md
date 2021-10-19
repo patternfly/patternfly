@@ -8,7 +8,7 @@ wrapperTag: div
 
 ### Masthead component
 ```hbs isFullscreen
-{{> page-demo-masthead-component page-demo-default--id="page-demo-masthead-component"}}
+{{> page-demo-masthead-component page-demo-default--id="page-demo-masthead-component" asdf="asdfdffff"}}
 ```
 
 ### Sticky horizontal subnav

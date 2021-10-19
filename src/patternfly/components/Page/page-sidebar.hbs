@@ -2,6 +2,31 @@
   {{#if page-sidebar--attribute}}
     {{{page-sidebar--attribute}}}
   {{/if}}>
+  {{#if page-demo-masthead-component--HasMenu}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-menu"}}
+      {{#> context-selector context-selector--IsExpanded=page-demo-masthead-component--MenuIsExpanded context-selector--modifier="pf-m-page-insets pf-m-large" context-selector--id="context-selector-collapsed-example" context-selector--label-text="Selected project"}}
+        {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
+          {{#> context-selector-toggle-text}}
+            My project
+          {{/context-selector-toggle-text}}
+          {{#> context-selector-toggle-icon}}
+          {{/context-selector-toggle-icon}}
+        {{/context-selector-toggle}}
+        {{#> context-selector-menu}}
+          {{#> context-selector-menu-search}}
+            {{#> input-group}}
+              {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search"' 'placeholder="Search"' 'id="textInput1"' 'name="textInput1"' 'aria-labelledby="' context-selector--id '-search-button"')}}
+              {{/form-control}}
+              {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' context-selector--id '-search-button"' 'aria-label="Search menu items"')}}
+                <i class="fas fa-search" aria-hidden="true"></i>
+              {{/button}}
+            {{/input-group}}
+          {{/context-selector-menu-search}}
+          {{> __context-selector-menu-menu}}
+        {{/context-selector-menu}}
+      {{/context-selector}}
+    {{/page-sidebar-body}}
+  {{/if}}
   {{#> page-sidebar-body}}
     {{> @partial-block}}
   {{/page-sidebar-body}}
