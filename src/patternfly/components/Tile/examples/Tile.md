@@ -9,7 +9,7 @@ import './Tile.css'
 
 ## Examples
 ### Basic tiles
-```hbs
+```hbs isBeta
 {{#> tile}}
   {{#> tile-header}}
     {{#> tile-title}}
@@ -412,7 +412,7 @@ import './Tile.css'
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `tabindex="0"` | `.pf-c-tile` | Inserts the tile into the tab order of the page so that it is focusable. **Required** |
-| `tabindex="-1"` | `pf-c-tile` | Removes the tile from keyboard focus when it is disabled. |
+| `tabindex="-1"` | `.pf-c-tile` | Removes the tile from keyboard focus when it is disabled. |
 
 ### Usage
 | Class | Applied to | Outcome |
