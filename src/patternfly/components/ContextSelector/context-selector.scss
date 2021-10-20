@@ -13,6 +13,7 @@
   --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-global--BorderColor--200);
   --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-context-selector__toggle--Color: var(--pf-global--Color--100);
+  --pf-c-context-selector__toggle--hover--BorderBottomWidth: var(--pf-c-context-selector__toggle--BorderWidth);
   --pf-c-context-selector__toggle--hover--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-context-selector__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-context-selector__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
@@ -85,6 +86,13 @@
   --pf-c-context-selector--m-full-height__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
   --pf-c-context-selector--m-full-height__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
 
+  // Large
+  --pf-c-context-selector--m-large__toggle--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-context-selector--m-large__toggle--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-context-selector--m-large__toggle--hover--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-context-selector--m-large__toggle--active--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+  --pf-c-context-selector--m-large__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--xl);
+
   // Page insets
   --pf-c-context-selector--m-page-insets__toggle--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-context-selector--m-page-insets__toggle--PaddingLeft: var(--pf-global--spacer--md);
@@ -110,11 +118,6 @@
   --pf-c-context-selector--m-page-insets__toggle--m-plain--m-text--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-context-selector--m-page-insets__toggle--m-plain--m-text--xl--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-context-selector--m-page-insets__toggle--m-plain--m-text--xl--PaddingLeft: var(--pf-global--spacer--lg);
-
-  // Large
-  --pf-c-context-selector--m-large__toggle--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-context-selector--m-large__toggle--PaddingBottom: var(--pf-global--spacer--md);
-
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-context-selector--m-page-insets__toggle--PaddingRight: var(--pf-c-context-selector--m-page-insets__toggle--xl--PaddingRight);
@@ -164,6 +167,9 @@
   &.pf-m-large {
     --pf-c-context-selector__toggle--PaddingTop: var(--pf-c-context-selector--m-large__toggle--PaddingTop);
     --pf-c-context-selector__toggle--PaddingBottom: var(--pf-c-context-selector--m-large__toggle--PaddingBottom);
+    --pf-c-context-selector__toggle--hover--BorderBottomWidth: var(--pf-c-context-selector--m-large__toggle--hover--BorderBottomWidth);
+    --pf-c-context-selector__toggle--active--BorderBottomWidth: var(--pf-c-context-selector--m-large__toggle--active--BorderBottomWidth);
+    --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-c-context-selector--m-large__toggle--expanded--BorderBottomWidth);
   }
 
   &.pf-m-page-insets {
@@ -179,10 +185,6 @@
     --pf-c-context-selector__toggle--m-plain--PaddingLeft: var(--pf-c-context-selector--m-page-insets__toggle--m-plain--PaddingLeft);
     --pf-c-context-selector__toggle--m-plain--m-text--PaddingRight: var(--pf-c-context-selector--m-page-insets__toggle--m-plain--m-text--PaddingRight);
     --pf-c-context-selector__toggle--m-plain--m-text--PaddingLeft: var(--pf-c-context-selector--m-page-insets__toggle--m-plain--m-text--PaddingLeft);
-  }
-
-  &.pf-m-width-auto {
-    --pf-c-context-selector--Width: auto;
   }
 }
 
@@ -212,6 +214,8 @@
   &:hover {
     &::before {
       --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--hover--BorderBottomColor);
+
+      border-bottom-width: var(--pf-c-context-selector__toggle--hover--BorderBottomWidth);
     }
   }
 

@@ -85,8 +85,8 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__sidebar-body--m-menu--PaddingTop: 0;
   --pf-c-page__sidebar-body--m-menu--PaddingBottom: 0;
-  --pf-c-page__sidebar-body--m-menu--first-child--BorderTopWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-page__sidebar-body--m-menu--first-child--BorderTopColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__sidebar-body--m-menu--c-context-selector--BorderTopColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-page__sidebar-body--m-menu--c-context-selector--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__sidebar--TranslateX: var(--pf-c-page__sidebar--xl--TranslateX);
@@ -421,15 +421,11 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 
     background-color: var(--pf-global--palette--black-900);
 
-    &:first-child {
-      border-top: var(--pf-c-page__sidebar-body--m-menu--first-child--BorderTopWidth) solid var(--pf-c-page__sidebar-body--m-menu--first-child--BorderTopColor);
-    }
-
     .pf-c-context-selector {
-      --pf-c-context-selector__toggle--BorderTopColor: transparent;
+      --pf-c-context-selector__toggle--BorderTopColor: var(--pf-c-page__sidebar-body--m-menu--c-context-selector--BorderTopColor);
       --pf-c-context-selector__toggle--BorderRightColor: transparent;
+      --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-page__sidebar-body--m-menu--c-context-selector--BorderBottomColor);
       --pf-c-context-selector__toggle--BorderLeftColor: transparent;
-      --pf-c-context-selector__toggle--BorderBottomColor: transparent;
       --pf-c-context-selector__menu--Top: 100%;
 
       @include pf-t-dark;

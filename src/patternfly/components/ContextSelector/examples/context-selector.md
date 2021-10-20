@@ -187,4 +187,3 @@ import './context-selector.css'
 | `.pf-m-full-height` | `.pf-c-context-selector` | Modifies a context selector to full height of parent. See masthead for use. |
 | `.pf-m-large` | `.pf-c-context-selector` | Modifies toggle height to be large. |
 | `.pf-m-page-insets` | `.pf-c-context-selector` | Modifies toggle and menu insets to match the responsive page chrome insets. |
-| `.pf-m-width-auto` | `.pf-c-context-selector` | Modifies component to have auto width instead of default fixed width. |
