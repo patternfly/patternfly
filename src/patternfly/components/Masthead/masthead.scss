@@ -222,6 +222,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --pf-c-context-selector--Width: var(--pf-c-masthead--c-context-selector--Width);
     --pf-c-context-selector__toggle--BorderTopColor: var(--pf-c-masthead--c-context-selector__toggle--BorderTopColor);
     --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector__toggle--BorderRightColor);
+    --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-masthead--c-context-selector__toggle--BorderBottomColor);
     --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--c-context-selector__toggle--BorderLeftColor);
 
     &.pf-m-full-height {

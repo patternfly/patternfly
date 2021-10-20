@@ -177,7 +177,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
     &:hover {
       .pf-c-dropdown__toggle::before {
-        border-bottom-width: var(--pf-c-context-selector--m-full-height__toggle--hover--before--BorderBottomWidth);
+        border-bottom-width: var(--pf-c-dropdown--m-full-height__toggle--hover--before--BorderBottomWidth);
       }
     }
   }
