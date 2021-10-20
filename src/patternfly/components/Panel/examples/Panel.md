@@ -82,6 +82,17 @@ cssPrefix: pf-c-panel
 {{/panel}}
 ```
 
+### Bordered
+```hbs
+{{#> panel panel--modifier="pf-m-bordered"}}
+  {{#> panel-main}}
+    {{#> panel-main-body}}
+      Main content
+    {{/panel-main-body}}
+  {{/panel-main}}
+{{/panel}}
+```
+
 ### Scrollable
 ```hbs
 {{#> panel panel--modifier="pf-m-scrollable"}}
@@ -135,5 +146,6 @@ cssPrefix: pf-c-panel
 | `.pf-c-panel__main` | `<div>` | Initiates the panel main content. |
 | `.pf-c-panel__main-body` | `<div>` | Initiates a panel content body container. |
 | `.pf-c-panel__footer` | `<div>` | Initiates the panel footer. |
+| `.pf-m-bordered` | `.pf-c-panel` | Modifies the panel for bordered styles. |
 | `.pf-m-raised` | `.pf-c-panel` | Modifies the panel for raised styles. |
 | `.pf-m-scrollable` | `.pf-c-panel` | Modifies the panel for scrollable styles. |

@@ -5,6 +5,15 @@
   --pf-c-panel--ZIndex: auto;
   --pf-c-panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-panel--BoxShadow: none;
+
+  // border
+  --pf-c-panel--before--BorderWidth: 0;
+  --pf-c-panel--before--BorderColor: var(--pf-global--BorderColor--100);
+
+  // bordered
+  --pf-c-panel--m-bordered--before--BorderWidth: var(--pf-global--BorderWidth--sm);
+
+  // raised
   --pf-c-panel--m-raised--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-panel--m-raised--ZIndex: var(--pf-global--ZIndex--sm);
 
@@ -36,12 +45,28 @@
   --pf-c-panel--m-scrollable__main--Overflow: auto;
   --pf-c-panel--m-scrollable__footer--BoxShadow: 0 #{pf-size-prem(-5px)} #{pf-size-prem(4px)} #{pf-size-prem(-4px)} #{rgba($pf-color-black-1000, .16)}; // insets the shadow so it doesn't show on left/right sides
 
+  position: relative;
   z-index: var(--pf-c-panel--ZIndex);
   width: var(--pf-c-panel--Width);
   min-width: var(--pf-c-panel--MinWidth);
   max-width: var(--pf-c-panel--MaxWidth);
   background-color: var(--pf-c-panel--BackgroundColor);
   box-shadow: var(--pf-c-panel--BoxShadow);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    content: "";
+    border: var(--pf-c-panel--before--BorderWidth) solid var(--pf-c-panel--before--BorderColor);
+  }
+
+  &.pf-m-bordered {
+    --pf-c-panel--before--BorderWidth: var(--pf-c-panel--m-bordered--before--BorderWidth);
+  }
 
   &.pf-m-raised {
     --pf-c-panel--BoxShadow: var(--pf-c-panel--m-raised--BoxShadow);
