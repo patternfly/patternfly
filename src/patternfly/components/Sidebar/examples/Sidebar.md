@@ -1,6 +1,5 @@
 ---
 id: 'Sidebar'
-beta: true
 section: components
 cssPrefix: pf-c-sidebar
 ---
