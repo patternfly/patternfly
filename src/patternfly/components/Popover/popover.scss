@@ -54,9 +54,10 @@
   --pf-c-popover--c-title--MarginBottom: var(--pf-global--spacer--sm);
 
   // Title
-  --pf-c-popover__title--LineHeight: var(--pf-global--LineHeight--sm);
+  --pf-c-popover__title--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-popover__title--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-popover__title--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
-  --pf-c-popover__title--FontSize: var(--pf-global--FontSize--2xl);
+  --pf-c-popover__title--FontSize: var(--pf-global--FontSize--md);
 
   // Title icon
   --pf-c-popover__title-icon--MarginRight: var(--pf-global--spacer--sm);
@@ -187,7 +188,8 @@
   padding: var(--pf-c-popover__content--PaddingTop) var(--pf-c-popover__content--PaddingRight) var(--pf-c-popover__content--PaddingBottom) var(--pf-c-popover__content--PaddingLeft);
   background-color: var(--pf-c-popover__content--BackgroundColor);
 
-  .pf-c-title {
+  // Remove in breaking change
+  > .pf-c-title {
     margin-bottom: var(--pf-c-popover--c-title--MarginBottom);
   }
 
@@ -213,14 +215,9 @@
   box-shadow: var(--pf-c-popover__arrow--BoxShadow);
 }
 
-// Title and icon
-.pf-c-popover__title,
-.pf-c-popover__title-text {
-  @include pf-text-overflow;
-}
-
 .pf-c-popover__title {
   flex: 0 0 auto;
+  margin-bottom: var(--pf-c-popover__title--MarginBottom);
   font-family: var(--pf-c-popover__title--FontFamily);
   font-size: var(--pf-c-popover__title--FontSize);
   line-height: var(--pf-c-popover__title--LineHeight);
@@ -236,7 +233,7 @@
 }
 
 .pf-c-popover__title-text {
-  color: var(--pf-c-popover__title-text--Color);
+  color: var(--pf-c-popover__title-text--Color, inherit);
 }
 
 // Body
