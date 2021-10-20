@@ -206,6 +206,137 @@ import './Popover.css'
 {{/popover}}
 ```
 
+### Popover with icon in the title
+```hbs
+{{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"' popover-title-icon--type="bullhorn"}}
+        Popover with icon title
+      {{/popover-title}}
+    {{/popover-header}}
+    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+### Default alert popover
+```hbs
+{{#> popover popover--IsAlert="true" popover--IsDefaultAlert="true" popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"'}}
+        Default popover title
+      {{/popover-title}}
+    {{/popover-header}}
+    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
+### Info alert popover
+```hbs
+{{#> popover popover--IsAlert="true" popover--IsInfoAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"'}}
+        Info popover title
+      {{/popover-title}}
+    {{/popover-header}}
+    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
+### Success alert popover
+```hbs
+{{#> popover popover--IsAlert="true" popover--IsSuccessAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"'}}
+        Success popover title
+      {{/popover-title}}
+    {{/popover-header}}
+    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
+### Warning alert popover
+```hbs
+{{#> popover popover--IsAlert="true" popover--IsWarningAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"'}}
+        Warning popover title
+      {{/popover-title}}
+    {{/popover-header}}
+    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
+### Danger alert popover
+```hbs
+{{#> popover popover--IsAlert="true" popover--IsDangerAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+  {{#> popover-content}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"'}}
+        Danger popover title
+      {{/popover-title}}
+    {{/popover-header}}
+    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+      Popovers are triggered by click rather than hover. Click again to close.
+    {{/popover-body}}
+    {{#> popover-footer}}
+      Popover footer
+    {{/popover-footer}}
+  {{/popover-content}}
+{{/popover}}
+```
+
 ## Documentation
 ### Overview
 A popover is used to provide contextual information for another component on click.  The popover itself is made up of two main elements: arrow and content. The content element follows the pattern of the popover box component, with a close icon in the top right corner, as well as a header and body.  One of the directional modifiers (`.pf-m-left`, `.pf-m-top`, etc.) is required on the popover component
@@ -228,7 +359,11 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-c-popover__arrow` | `<div>` |  Creates an arrow pointing towards the element the popover describes. **Required** |
 | `.pf-c-popover__content` | `<div>` |  Creates the content area of the popover. **Required** |
 | `.pf-c-button` | `<button>` |  Positions the close icon in the top-right corner of the popover. **Required** |
+| `.pf-c-popover__header` | `<header>` | Creates the popover header |
+| `.pf-c-popover__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`,`<div>` | Creates the popover title |
 | `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. See the [title component](/components/title) for more info.|
+| `.pf-c-popover__title-icon` | `<span>` | Creates the popover title icon |
+| `.pf-c-popover__title-text` | `<span>` | Creates the popover title text |
 | `.pf-c-popover__body` | `<div>` |  The popover's body text. **Required** |
 | `.pf-c-popover__footer` | `<footer>` | Initiates a popover footer. |
 | `.pf-m-left{-top/bottom}` | `.pf-c-popover` | Positions the popover to the left (or left top/left bottom) of the element. |
@@ -237,3 +372,9 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-m-bottom{-left/right}` | `.pf-c-popover` | Positions the popover to the bottom (or bottom left/bottom right) of the element. |
 | `.pf-m-no-padding` | `.pf-c-popover` | Removes the outer padding from the popover content. |
 | `.pf-m-width-auto` | `.pf-c-popover` | Allows popover width to be defined by the popover content. |
+| `.pf-m-icon` | `.pf-c-popover__title` | Modifies the title layout to accommodate an icon. |
+| `.pf-m-default` | `.pf-c-popover` | Modifies for the default alert state. |
+| `.pf-m-info` | `.pf-c-popover` | Modifies for the info alert state. |
+| `.pf-m-success` | `.pf-c-popover` | Modifies for the success alert state. |
+| `.pf-m-warning` | `.pf-c-popover` | Modifies for the warning alert state. |
+| `.pf-m-danger` | `.pf-c-popover` | Modifies for the danger alert state. |

@@ -5,6 +5,20 @@
   --pf-c-popover--MaxWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
 
+  // Title icon colors for states
+  --pf-c-popover--m-danger__title-icon--Color: var(--pf-global--danger-color--100);
+  --pf-c-popover--m-warning__title-icon--Color: var(--pf-global--warning-color--100);
+  --pf-c-popover--m-success__title-icon--Color: var(--pf-global--success-color--100);
+  --pf-c-popover--m-info__title-icon--Color: var(--pf-global--info-color--100);
+  --pf-c-popover--m-default__title-icon--Color: var(--pf-global--default-color--200);
+
+  // Title text colors for states
+  --pf-c-popover--m-danger__title-text--Color: var(--pf-global--danger-color--200);
+  --pf-c-popover--m-warning__title-text--Color: var(--pf-global--warning-color--200);
+  --pf-c-popover--m-success__title-text--Color: var(--pf-global--success-color--200);
+  --pf-c-popover--m-info__title-text--Color: var(--pf-global--info-color--200);
+  --pf-c-popover--m-default__title-text--Color: var(--pf-global--default-color--300);
+
   // Content
   --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-popover__content--PaddingTop: var(--pf-global--spacer--md);
@@ -38,6 +52,16 @@
 
   // Header
   --pf-c-popover--c-title--MarginBottom: var(--pf-global--spacer--sm);
+
+  // Title
+  --pf-c-popover__title--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-popover__title--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-popover__title--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
+  --pf-c-popover__title--FontSize: var(--pf-global--FontSize--md);
+
+  // Title icon
+  --pf-c-popover__title-icon--MarginRight: var(--pf-global--spacer--sm);
+  --pf-c-popover__title-icon--Color: var(--pf-global--Color--100);
 
   // Footer
   --pf-c-popover__footer--MarginTop: var(--pf-global--spacer--md);
@@ -132,6 +156,31 @@
       left: auto;
     }
   }
+
+  &.pf-m-danger {
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-danger__title-icon--Color);
+    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-danger__title-text--Color);
+  }
+
+  &.pf-m-warning {
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-warning__title-icon--Color);
+    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-warning__title-text--Color);
+  }
+
+  &.pf-m-success {
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-success__title-icon--Color);
+    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-success__title-text--Color);
+  }
+
+  &.pf-m-default {
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-default__title-icon--Color);
+    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-default__title-text--Color);
+  }
+
+  &.pf-m-info {
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-info__title-icon--Color);
+    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-info__title-text--Color);
+  }
 }
 
 .pf-c-popover__content {
@@ -139,6 +188,7 @@
   padding: var(--pf-c-popover__content--PaddingTop) var(--pf-c-popover__content--PaddingRight) var(--pf-c-popover__content--PaddingBottom) var(--pf-c-popover__content--PaddingLeft);
   background-color: var(--pf-c-popover__content--BackgroundColor);
 
+  // Remove in breaking change
   > .pf-c-title {
     margin-bottom: var(--pf-c-popover--c-title--MarginBottom);
   }
@@ -163,6 +213,27 @@
   pointer-events: none;
   background-color: var(--pf-c-popover__arrow--BackgroundColor);
   box-shadow: var(--pf-c-popover__arrow--BoxShadow);
+}
+
+.pf-c-popover__title {
+  flex: 0 0 auto;
+  margin-bottom: var(--pf-c-popover__title--MarginBottom);
+  font-family: var(--pf-c-popover__title--FontFamily);
+  font-size: var(--pf-c-popover__title--FontSize);
+  line-height: var(--pf-c-popover__title--LineHeight);
+
+  &.pf-m-icon {
+    display: flex;
+  }
+}
+
+.pf-c-popover__title-icon {
+  margin-right: var(--pf-c-popover__title-icon--MarginRight);
+  color: var(--pf-c-popover__title-icon--Color);
+}
+
+.pf-c-popover__title-text {
+  color: var(--pf-c-popover__title-text--Color, inherit);
 }
 
 // Body
