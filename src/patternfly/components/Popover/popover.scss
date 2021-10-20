@@ -3,7 +3,7 @@
   --pf-c-popover--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-popover--MinWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
   --pf-c-popover--MaxWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
-  --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--lg);
 
   // Content
   --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -15,7 +15,7 @@
   // Arrow
   --pf-c-popover__arrow--Width: var(--pf-global--arrow--width-lg);
   --pf-c-popover__arrow--Height: var(--pf-global--arrow--width-lg);
-  --pf-c-popover__arrow--BoxShadow: var(--pf-global--BoxShadow--md);
+  --pf-c-popover__arrow--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-popover__arrow--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-popover__arrow--m-top--TranslateX: -50%;
   --pf-c-popover__arrow--m-top--TranslateY: 50%;
