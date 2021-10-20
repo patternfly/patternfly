@@ -422,7 +422,7 @@
     &.pf-m-border-right::before {
       border-right: var(--pf-c-table--cell--m-border-right--before--BorderRightWidth) solid var(--pf-c-table--cell--m-border-right--before--BorderRightColor);
     }
-    
+
     &.pf-m-border-left::before {
       border-left: var(--pf-c-table--cell--m-border-right--before--BorderLeftWidth) solid var(--pf-c-table--cell--m-border-left--before--BorderLeftColor);
     }
@@ -438,7 +438,7 @@
     text-align: left;
     background-color: var(--pf-c-table--BackgroundColor);
   }
-  
+
   // Table header cell
   thead {
     --pf-c-table--cell--FontSize: var(--pf-c-table--thead--cell--FontSize);
@@ -446,12 +446,8 @@
 
     vertical-align: bottom;
 
+    // stylelint-disable
     &.pf-m-nested-column-header {
-
-      tr:not(:last-child) {
-        --pf-c-table--border-width--base: 0; // hard reset tr borders in nested headers
-      }
-
       button {
         outline-offset: var(--pf-c-table--thead--nested-column-header--button--OutlineOffset);
       }
@@ -460,7 +456,7 @@
       td {
         vertical-align: middle;
       }
-      
+
       tr:not(:first-child) {
         th,
         td {
@@ -471,6 +467,8 @@
       }
 
       tr:not(:last-child) {
+        --pf-c-table--border-width--base: 0; // hard reset tr borders in nested headers
+
         th,
         td {
           &:not([rowspan]) {
@@ -479,6 +477,7 @@
         }
       }
     }
+    // stylelint-enable
 
     .pf-c-table__subhead {
       --pf-c-table__sort__button__text--Color: var(--pf-c-table__subhead--Color);
