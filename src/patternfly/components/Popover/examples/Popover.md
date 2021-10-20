@@ -208,7 +208,7 @@ import './Popover.css'
 
 ### Popover with icon in the title
 ```hbs
-{{#> popover popover--IsAlert="true" popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+{{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
@@ -360,7 +360,7 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-c-popover__content` | `<div>` |  Creates the content area of the popover. **Required** |
 | `.pf-c-button` | `<button>` |  Positions the close icon in the top-right corner of the popover. **Required** |
 | `.pf-c-popover__header` | `<header>` | Creates the popover header |
-| `.pf-c-popover__title` | `<header>` | Creates the popover title |
+| `.pf-c-popover__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`,`<div>` | Creates the popover title |
 | `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. See the [title component](/components/title) for more info.|
 | `.pf-c-popover__title-icon` | `<span>` | Creates the popover title icon |
 | `.pf-c-popover__title-text` | `<span>` | Creates the popover title text |
