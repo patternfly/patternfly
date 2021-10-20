@@ -3,7 +3,7 @@ const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
 const generateIcons = require('../../src/icons/generateIcons.js');
 const path = require('path');
-const { readFileSync, writeFileSync } = require('fs');
+const { readFileSync, writeFileSync, mkdirSync } = require('fs');
 
 const pficonFontName = 'pficon';
 let maxCodepoint = 0;
@@ -30,9 +30,10 @@ const buildUnicodesMap = (regexMatchesArr, isPfIcons) => [...regexMatchesArr].re
   }
   return obj;
 }, {});
-const writeUnicodesToJson = (path, obj) => {
+const writeUnicodesToJson = (path, fileName, obj) => {
   const data = JSON.stringify(obj, null, 2);
-  writeFileSync(path, data);
+  mkdirSync(path, { recursive: true });
+  writeFileSync(`${path}/${fileName}`, data);
 }
 
 // parse && write FontAwesome icons/unicode matches
@@ -41,7 +42,7 @@ const faUnicodeMatches = getIconNamesUnicodes(
   /\$(fa-var-[a-zA-Z0-9-]*):\s*\\([a-zA-Z0-9]*);/gm
 );
 const faUnicodesObj = buildUnicodesMap(faUnicodeMatches, false);
-writeUnicodesToJson('dist/assets/icons/fa-unicodes.json', faUnicodesObj);
+writeUnicodesToJson('dist/assets/icons', 'fa-unicodes.json', faUnicodesObj);
 
 // parse existing pf-icon names/unicodes
 const pficonUnicodeMatches = getIconNamesUnicodes(
@@ -86,7 +87,7 @@ function pfIconFont() {
             obj[`pf-icon-${glyph.name}`] = glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase();
             return obj;
           }, {});
-          writeUnicodesToJson('dist/assets/pficon/pf-unicodes.json', pfUnicodesMap);
+          writeUnicodesToJson('dist/assets/pficon', 'pf-unicodes.json', pfUnicodesMap);
         })
     )
     .pipe(dest('./src/patternfly/assets/pficon/'))
