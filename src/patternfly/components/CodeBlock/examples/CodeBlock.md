@@ -1,6 +1,5 @@
 ---
 id: 'Code block'
-beta: true
 section: components
 cssPrefix: pf-c-code-block
 ---
