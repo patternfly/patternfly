@@ -6,19 +6,19 @@ section: components
 ## Demos
 ### Basic
 ```hbs isFullscreen
-{{#> modal}}
+{{#> modal modal--id="modal-basic"}}
   {{#> backdrop}}
     {{#> bullseye}}
-      {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
+      {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute=(concat 'aria-labelledby="modal-title-' modal--id '" aria-describedby="modal-description-' modal--id '"')}}
         {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
           <i class="fas fa-times" aria-hidden="true"></i>
         {{/button}}
         {{#> modal-box-header}}
-          {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
+          {{#> modal-box-title modal-box-title--attribute=(concat 'id="modal-title-' modal--id '"')}}
             Overwrite existing file?
           {{/modal-box-title}}
         {{/modal-box-header}}
-        {{#> modal-box-body modal-box-body--attribute='id="modal-description"'}}
+        {{#> modal-box-body modal-box-body--attribute=(concat 'id="modal-description-' modal--id '"')}}
           <p>general_modal_final_finalfinal_v9_actualfinal.sketch</p>
           <p>A file with this name already exists, would you like to overwrite the existing file or save a new copy?</p>
         {{/modal-box-body}}
@@ -163,6 +163,74 @@ section: components
         {{#> modal-box-footer}}
           {{#> button button--modifier="pf-m-primary"}}
             Save
+          {{/button}}
+          {{#> button button--modifier="pf-m-link"}}
+            Cancel
+          {{/button}}
+        {{/modal-box-footer}}
+      {{/modal-box}}
+    {{/bullseye}}
+  {{/backdrop}}
+{{/modal}}
+```
+
+### Modal with form
+```hbs isFullscreen
+{{#> modal modal--id="modal-with-form"}}
+  {{#> backdrop}}
+    {{#> bullseye}}
+      {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute=(concat 'aria-labelledby="modal-title-' modal--id '" aria-describedby="modal-description-' modal--id '"') form--id=(concat modal--id '-form')}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
+          <i class="fas fa-times" aria-hidden="true"></i>
+        {{/button}}
+        {{#> modal-box-header}}
+          {{#> modal-box-title modal-box-title--attribute=(concat 'id="modal-title-' modal--id '"')}}
+            Create account
+          {{/modal-box-title}}
+        {{/modal-box-header}}
+        {{#> modal-box-body modal-box-body--attribute=(concat 'id="modal-description-' modal--id '"')}}
+          <p>Enter your personal information below to create an account.</p>
+        {{/modal-box-body}}
+        {{#> modal-box-body}}
+          {{#> form form--attribute=(concat 'id="' form--id '"')}}
+            {{#> form-group form-group--id="-name"}}
+              {{#> form-group-label}}
+                {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
+                  Name
+                {{/form-label}}
+                {{> form-group-label-help}}
+              {{/form-group-label}}
+              {{#> form-group-control}}
+                {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+              {{/form-group-control}}
+            {{/form-group}}
+            {{#> form-group form-group--id="-email"}}
+              {{#> form-group-label}}
+                {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
+                  E-mail
+                {{/form-label}}
+                {{> form-group-label-help}}
+              {{/form-group-label}}
+              {{#> form-group-control}}
+                {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+              {{/form-group-control}}
+            {{/form-group}}
+            {{#> form-group form-group--id="-address"}}
+              {{#> form-group-label}}
+                {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
+                  Address
+                {{/form-label}}
+                {{> form-group-label-help}}
+              {{/form-group-label}}
+              {{#> form-group-control}}
+                {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+              {{/form-group-control}}
+            {{/form-group}}
+          {{/form}}
+        {{/modal-box-body}}
+        {{#> modal-box-footer}}
+          {{#> button button--modifier="pf-m-primary" button--attribute=(concat 'form="' form--id '"')}}
+            Create
           {{/button}}
           {{#> button button--modifier="pf-m-link"}}
             Cancel
