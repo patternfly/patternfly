@@ -10,7 +10,8 @@
   "ignoreFiles": [
     "./src/patternfly/assets/fontawesome/*.scss",
     "./src/patternfly/assets/pficon/*.scss",
-    "./scripts/template/**/*.scss"
+    "./scripts/template/**/*.scss",
+    "./scripts/gulp/*.scss"
   ],
   "rules": {
     "at-rule-empty-line-before": [ "always", {

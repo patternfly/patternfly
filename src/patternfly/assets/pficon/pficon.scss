@@ -1,11 +1,11 @@
 @font-face {
-	font-family: "pficon";
+	font-family: 'pficon';
 	src: url('#{$pf-global--fonticon-path}/pficon.woff2') format('woff2'),
 		url('#{$pf-global--fonticon-path}/pficon.woff') format('woff');
 }
 
 @mixin pf-icon-styles {
-	font-family: "pficon";
+	font-family: 'pficon';
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	font-style: normal;
@@ -21,376 +21,376 @@
 }
 
 @function pf-icon-char($filename) {
-	$char: "";
+	$char: '';
 
 	@if $filename == add-circle-o {
-		$char: "\E001";
+		$char: '\E61B';
 	}
 	@if $filename == ansible-tower {
-		$char: "\E002";
+		$char: '\E950';
 	}
 	@if $filename == applications {
-		$char: "\E003";
+		$char: '\E936';
 	}
 	@if $filename == arrow {
-		$char: "\E004";
+		$char: '\E929';
 	}
 	@if $filename == asleep {
-		$char: "\E005";
+		$char: '\E92E';
 	}
 	@if $filename == attention-bell {
-		$char: "\E006";
+		$char: '\E951';
 	}
 	@if $filename == automation {
-		$char: "\E007";
+		$char: '\E937';
 	}
 	@if $filename == bell {
-		$char: "\E008";
+		$char: '\E952';
 	}
 	@if $filename == blueprint {
-		$char: "\E009";
+		$char: '\E915';
 	}
 	@if $filename == build {
-		$char: "\E00A";
+		$char: '\E902';
 	}
 	@if $filename == builder-image {
-		$char: "\E00B";
+		$char: '\E800';
 	}
 	@if $filename == bundle {
-		$char: "\E00C";
+		$char: '\E918';
 	}
 	@if $filename == catalog {
-		$char: "\E00D";
+		$char: '\E953';
 	}
 	@if $filename == chat {
-		$char: "\E00E";
+		$char: '\E954';
 	}
 	@if $filename == close {
-		$char: "\E00F";
+		$char: '\E60B';
 	}
 	@if $filename == cloud-security {
-		$char: "\E010";
+		$char: '\E903';
 	}
 	@if $filename == cloud-tenant {
-		$char: "\E011";
+		$char: '\E904';
 	}
 	@if $filename == cluster {
-		$char: "\E012";
+		$char: '\E620';
 	}
 	@if $filename == connected {
-		$char: "\E013";
+		$char: '\E938';
 	}
 	@if $filename == container-node {
-		$char: "\E014";
+		$char: '\E621';
 	}
 	@if $filename == cpu {
-		$char: "\E015";
+		$char: '\E927';
 	}
 	@if $filename == degraded {
-		$char: "\E016";
+		$char: '\E91B';
 	}
 	@if $filename == disconnected {
-		$char: "\E017";
+		$char: '\E955';
 	}
 	@if $filename == domain {
-		$char: "\E018";
+		$char: '\E919';
 	}
 	@if $filename == edit {
-		$char: "\E019";
+		$char: '\E60A';
 	}
 	@if $filename == enhancement {
-		$char: "\E01A";
+		$char: '\E93A';
 	}
 	@if $filename == enterprise {
-		$char: "\E01B";
+		$char: '\E906';
 	}
 	@if $filename == equalizer {
-		$char: "\E01C";
+		$char: '\E956';
 	}
 	@if $filename == error-circle-o {
-		$char: "\E01D";
+		$char: '\E926';
 	}
 	@if $filename == export {
-		$char: "\E01E";
+		$char: '\E616';
 	}
 	@if $filename == filter {
-		$char: "\E01F";
+		$char: '\E943';
 	}
 	@if $filename == flavor {
-		$char: "\E020";
+		$char: '\E957';
 	}
 	@if $filename == folder-close {
-		$char: "\E021";
+		$char: '\E607';
 	}
 	@if $filename == folder-open {
-		$char: "\E022";
+		$char: '\E606';
 	}
 	@if $filename == globe-route {
-		$char: "\E023";
+		$char: '\E958';
 	}
 	@if $filename == help {
-		$char: "\E024";
+		$char: '\E605';
 	}
 	@if $filename == history {
-		$char: "\E025";
+		$char: '\E617';
 	}
 	@if $filename == home {
-		$char: "\E026";
+		$char: '\E618';
 	}
 	@if $filename == import {
-		$char: "\E027";
+		$char: '\E615';
 	}
 	@if $filename == in-progress {
-		$char: "\E028";
+		$char: '\E933';
 	}
 	@if $filename == info {
-		$char: "\E029";
+		$char: '\E92B';
 	}
 	@if $filename == infrastructure {
-		$char: "\E02A";
+		$char: '\E93D';
 	}
 	@if $filename == integration {
-		$char: "\E02B";
+		$char: '\E948';
 	}
 	@if $filename == key {
-		$char: "\E02C";
+		$char: '\E924';
 	}
 	@if $filename == locked {
-		$char: "\E02D";
+		$char: '\E923';
 	}
 	@if $filename == maintenance {
-		$char: "\E02E";
+		$char: '\E932';
 	}
 	@if $filename == memory {
-		$char: "\E02F";
+		$char: '\E908';
 	}
 	@if $filename == messages {
-		$char: "\E030";
+		$char: '\E603';
 	}
 	@if $filename == middleware {
-		$char: "\E031";
+		$char: '\E917';
 	}
 	@if $filename == migration {
-		$char: "\E032";
+		$char: '\E931';
 	}
 	@if $filename == module {
-		$char: "\E033";
+		$char: '\E959';
 	}
 	@if $filename == monitoring {
-		$char: "\E034";
+		$char: '\E95A';
 	}
 	@if $filename == namespaces {
-		$char: "\E035";
+		$char: '\E95B';
 	}
 	@if $filename == network {
-		$char: "\E036";
+		$char: '\E909';
 	}
 	@if $filename == new-process {
-		$char: "\E037";
+		$char: '\E95C';
 	}
 	@if $filename == not-started {
-		$char: "\E038";
+		$char: '\E95D';
 	}
 	@if $filename == off {
-		$char: "\E039";
+		$char: '\E92D';
 	}
 	@if $filename == ok {
-		$char: "\E03A";
+		$char: '\E602';
 	}
 	@if $filename == on-running {
-		$char: "\E03B";
+		$char: '\E925';
 	}
 	@if $filename == on {
-		$char: "\E03C";
+		$char: '\E92C';
 	}
 	@if $filename == openshift {
-		$char: "\E03D";
+		$char: '\E95E';
 	}
 	@if $filename == openstack {
-		$char: "\E03E";
+		$char: '\E95F';
 	}
 	@if $filename == optimize {
-		$char: "\E03F";
+		$char: '\E93E';
 	}
 	@if $filename == orders {
-		$char: "\E040";
+		$char: '\E93F';
 	}
 	@if $filename == os-image {
-		$char: "\E041";
+		$char: '\E960';
 	}
 	@if $filename == package {
-		$char: "\E042";
+		$char: '\E961';
 	}
 	@if $filename == panel-close {
-		$char: "\E043";
+		$char: '\E962';
 	}
 	@if $filename == panel-open {
-		$char: "\E044";
+		$char: '\E963';
 	}
 	@if $filename == paused {
-		$char: "\E045";
+		$char: '\E92F';
 	}
 	@if $filename == pending {
-		$char: "\E046";
+		$char: '\E964';
 	}
 	@if $filename == pficon-dragdrop {
-		$char: "\E047";
+		$char: '\E965';
 	}
 	@if $filename == pficon-history {
-		$char: "\E048";
+		$char: '\E966';
 	}
 	@if $filename == pficon-network-range {
-		$char: "\E049";
+		$char: '\E967';
 	}
 	@if $filename == pficon-satellite {
-		$char: "\E04A";
+		$char: '\E968';
 	}
 	@if $filename == pficon-sort-common-asc {
-		$char: "\E04B";
+		$char: '\E94E';
 	}
 	@if $filename == pficon-sort-common-desc {
-		$char: "\E04C";
+		$char: '\E94F';
 	}
 	@if $filename == pficon-template {
-		$char: "\E04D";
+		$char: '\E94C';
 	}
 	@if $filename == pficon-vcenter {
-		$char: "\E04E";
+		$char: '\E969';
 	}
 	@if $filename == plugged {
-		$char: "\E04F";
+		$char: '\E96A';
 	}
 	@if $filename == port {
-		$char: "\E050";
+		$char: '\E96B';
 	}
 	@if $filename == print {
-		$char: "\E051";
+		$char: '\E612';
 	}
 	@if $filename == private {
-		$char: "\E052";
+		$char: '\E914';
 	}
 	@if $filename == process-automation {
-		$char: "\E053";
+		$char: '\E949';
 	}
 	@if $filename == project {
-		$char: "\E054";
+		$char: '\E96C';
 	}
 	@if $filename == rebalance {
-		$char: "\E055";
+		$char: '\E91C';
 	}
 	@if $filename == rebooting {
-		$char: "\E056";
+		$char: '\E96D';
 	}
 	@if $filename == regions {
-		$char: "\E057";
+		$char: '\E90A';
 	}
 	@if $filename == registry {
-		$char: "\E058";
+		$char: '\E623';
 	}
 	@if $filename == remove2 {
-		$char: "\E059";
+		$char: '\E96E';
 	}
 	@if $filename == replicator {
-		$char: "\E05A";
+		$char: '\E624';
 	}
 	@if $filename == repository {
-		$char: "\E05B";
+		$char: '\E90B';
 	}
 	@if $filename == resource-pool {
-		$char: "\E05C";
+		$char: '\E90C';
 	}
 	@if $filename == resources-almost-empty {
-		$char: "\E05D";
+		$char: '\E91D';
 	}
 	@if $filename == resources-almost-full {
-		$char: "\E05E";
+		$char: '\E912';
 	}
 	@if $filename == resources-empty {
-		$char: "\E05F";
+		$char: '\E96F';
 	}
 	@if $filename == resources-full {
-		$char: "\E060";
+		$char: '\E913';
 	}
 	@if $filename == running {
-		$char: "\E061";
+		$char: '\E970';
 	}
 	@if $filename == save {
-		$char: "\E062";
+		$char: '\E601';
 	}
 	@if $filename == screen {
-		$char: "\E063";
+		$char: '\E971';
 	}
 	@if $filename == security {
-		$char: "\E064";
+		$char: '\E946';
 	}
 	@if $filename == server-group {
-		$char: "\E065";
+		$char: '\E91A';
 	}
 	@if $filename == server {
-		$char: "\E066";
+		$char: '\E90D';
 	}
 	@if $filename == service-catalog {
-		$char: "\E067";
+		$char: '\E972';
 	}
 	@if $filename == service {
-		$char: "\E068";
+		$char: '\E61E';
 	}
 	@if $filename == services {
-		$char: "\E069";
+		$char: '\E947';
 	}
 	@if $filename == spinner {
-		$char: "\E06A";
+		$char: '\E973';
 	}
 	@if $filename == spinner2 {
-		$char: "\E06B";
+		$char: '\E613';
 	}
 	@if $filename == storage-domain {
-		$char: "\E06C";
+		$char: '\E90E';
 	}
 	@if $filename == task {
-		$char: "\E06D";
+		$char: '\E974';
 	}
 	@if $filename == tenant {
-		$char: "\E06E";
+		$char: '\E916';
 	}
 	@if $filename == thumb-tack {
-		$char: "\E06F";
+		$char: '\E920';
 	}
 	@if $filename == topology {
-		$char: "\E070";
+		$char: '\E608';
 	}
 	@if $filename == trend-down {
-		$char: "\E071";
+		$char: '\E900';
 	}
 	@if $filename == trend-up {
-		$char: "\E072";
+		$char: '\E901';
 	}
 	@if $filename == unknown {
-		$char: "\E073";
+		$char: '\E935';
 	}
 	@if $filename == unlocked {
-		$char: "\E074";
+		$char: '\E922';
 	}
 	@if $filename == unplugged {
-		$char: "\E075";
+		$char: '\E942';
 	}
 	@if $filename == user {
-		$char: "\E076";
+		$char: '\E91E';
 	}
 	@if $filename == users {
-		$char: "\E077";
+		$char: '\E91F';
 	}
 	@if $filename == virtual-machine {
-		$char: "\E078";
+		$char: '\E90F';
 	}
 	@if $filename == volume {
-		$char: "\E079";
+		$char: '\E910';
 	}
 	@if $filename == warning-triangle {
-		$char: "\E07A";
+		$char: '\E975';
 	}
 	@if $filename == zone {
-		$char: "\E07B";
+		$char: '\E911';
 	}
 
 	@return $char;
