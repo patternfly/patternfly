@@ -2,12 +2,16 @@
   {{> page-template-header}}
   {{> page-template-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{> page-template-breadcrumb}}
-    {{> page-template-title}}
-    {{#if @partial-block}}
+    {{#if page-demo-default--HasNoContent}}
       {{> @partial-block}}
     {{else}}
-      {{> page-template-gallery}}
+      {{> page-template-breadcrumb}}
+      {{> page-template-title}}
+      {{#if @partial-block}}
+        {{> @partial-block}}
+      {{else}}
+        {{> page-template-gallery}}
+      {{/if}}
     {{/if}}
   {{/page-main}}
 {{/page}}
