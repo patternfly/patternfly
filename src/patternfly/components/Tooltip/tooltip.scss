@@ -5,16 +5,16 @@
 
   // Content variables
   --pf-c-tooltip__content--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-tooltip__content--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-tooltip__content--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-tooltip__content--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-tooltip__content--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-tooltip__content--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-tooltip__content--Color: var(--pf-global--Color--light-100);
   --pf-c-tooltip__content--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
   --pf-c-tooltip__content--FontSize: var(--pf-global--FontSize--sm);
 
   // Arrow variables
-  --pf-c-tooltip__arrow--Width: var(--pf-global--arrow--width);
-  --pf-c-tooltip__arrow--Height: var(--pf-global--arrow--width);
+  --pf-c-tooltip__arrow--Width: #{pf-size-prem(8px)};
+  --pf-c-tooltip__arrow--Height: #{pf-size-prem(8px)};
   --pf-c-tooltip__arrow--m-top--TranslateX: -50%;
   --pf-c-tooltip__arrow--m-top--TranslateY: 50%;
   --pf-c-tooltip__arrow--m-top--Rotate: 45deg;
