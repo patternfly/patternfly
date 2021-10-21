@@ -1,7 +1,5 @@
 .pf-c-nav {
   --pf-c-nav--Transition: var(--pf-global--Transition);
-  --pf-c-nav__item--m-expanded__toggle-icon--Rotate: 90deg;
-  --pf-c-nav__item--m-expanded--not-expanded__toggle-icon--Rotate: 0deg;
 
   // Light theme
   --pf-c-nav--m-light__item--before--BorderColor: var(--pf-global--BorderColor--300);
@@ -34,6 +32,8 @@
   --pf-c-nav__link--m-current--not--m-expanded__link--after--BorderWidth: var(--pf-global--BorderWidth--xl);
   --pf-c-nav__item__item__link--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-nav__item__item__toggle--FontSize: var(--pf-global--icon--FontSize--xs);
+  --pf-c-nav__item__toggle-icon--Rotate: 0;
+  --pf-c-nav__item--m-expanded__toggle-icon--Rotate: 90deg;
 
   // Item ::before borders
   --pf-c-nav__item--before--BorderColor: var(--pf-global--BackgroundColor--dark-200);
@@ -578,11 +578,14 @@
 
 // Borders
 .pf-c-nav__item {
+  --pf-c-nav__item__toggle-icon--Rotate: 0; // resets it for any inherited items
+
   position: relative;
   margin-top: var(--pf-c-nav__item--MarginTop);
 
   &.pf-m-expandable {
     --pf-c-nav__link--before--BorderBottomWidth: 0;
+    --pf-c-nav__item__toggle-icon--Rotate: var(--pf-c-nav__item--m-expanded__toggle-icon--Rotate);
 
     &::before {
       position: absolute;
@@ -618,6 +621,10 @@
         border-left: var(--pf-c-nav__item--before--BorderWidth) solid var(--pf-c-nav__item--before--BorderColor);
       }
     }
+  }
+
+  .pf-c-nav__toggle-icon {
+    transform: rotate(var(--pf-c-nav__item__toggle-icon--Rotate));
   }
 
   &.pf-m-flyout {
