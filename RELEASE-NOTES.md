@@ -33,7 +33,9 @@ Packages released:
   - Promote beta components ([#4459](https://github.com/patternfly/patternfly/pull/4459))
   - Renamed drag drop to drag and drop in sidebar ([#4450](https://github.com/patternfly/patternfly/pull/4450))
 - **Global:** Updated use of date element in examples (#4412) ([#4423](https://github.com/patternfly/patternfly/pull/4423))
-- **Icons:** Copied unicodes from PF3 icons, make new icon unicodes persist ([#4402](https://github.com/patternfly/patternfly/pull/4402))
+- **Icons:**
+  - Copied unicodes from PF3 icons, make new icon unicodes persist ([#4402](https://github.com/patternfly/patternfly/pull/4402))
+  - Moved unicodes json write to src so it's bundled with build ([#4468](https://github.com/patternfly/patternfly/pull/4468))
 
 
 ## 2021.13 release notes (2021-10-13)
