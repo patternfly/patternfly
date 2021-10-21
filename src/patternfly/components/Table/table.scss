@@ -40,17 +40,19 @@
   --pf-c-table--tr--BoxShadow--top--base: 0 #{pf-size-prem(-3px)} #{pf-size-prem(4px)} #{pf-size-prem(-2px)} rgba(3,3,3,.08);
 
   // Th / td shared variables
+  --pf-c-table--cell--Padding--base: var(--pf-global--spacer--md);
   --pf-c-table--cell--FontSize: var(--pf-global--FontSize--md);
   --pf-c-table--cell--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-table--cell--Color: var(--pf-global--Color--100);
-  --pf-c-table--cell--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--cell--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-table--cell--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table--cell--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-table--cell--PaddingTop: var(--pf-c-table--cell--Padding--base);
+  --pf-c-table--cell--PaddingRight: var(--pf-c-table--cell--Padding--base);
+  --pf-c-table--cell--PaddingBottom: var(--pf-c-table--cell--Padding--base);
+  --pf-c-table--cell--PaddingLeft: var(--pf-c-table--cell--Padding--base);
   --pf-c-table--cell--first-last-child--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-table--cell--first-last-child--xl--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-table--cell--first-last-child--xl--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table--tr--m-first-cell-offset-reset--cell--PaddingLeft: var(--pf-c-table--cell--Padding--base);
 
   // Default cell variables
   --pf-c-table--cell--MinWidth: 0;
@@ -60,6 +62,12 @@
   --pf-c-table--cell--TextOverflow: clip;
   --pf-c-table--cell--WhiteSpace: normal;
   --pf-c-table--cell--WordBreak: normal;
+
+  // Border
+  --pf-c-table--cell--m-border-right--before--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table--cell--m-border-right--before--BorderRightColor: var(--pf-global--BorderColor--100);
+  --pf-c-table--cell--m-border-left--before--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table--cell--m-border-left--before--BorderLeftColor: var(--pf-global--BorderColor--100);
 
   // Help
   --pf-c-table--cell--m-help--MinWidth: 11ch;
@@ -287,6 +295,13 @@
   --pf-c-table--tbody--m-selected--hover--tbody--m-selected--BoxShadow: var(--pf-global--BoxShadow--sm-bottom) inset, var(--pf-global--BoxShadow--sm-bottom);
   --pf-c-table--tbody--m-selected--tbody--m-selected--hover--BoxShadow: var(--pf-c-table--tr--m-selected--BoxShadow--top), var(--pf-global--BoxShadow--sm-bottom);
 
+  // Nested column header
+  --pf-c-table--thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
+  --pf-c-table--thead--m-nested-column-header--tr--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-table--thead--m-nested-column-header--tr--PaddingBottom: var(--pf-global--spacer--xs);
+
+  // Subhead
+  --pf-c-table__subhead--Color: var(--pf-global--Color--200);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-c-table--cell--first-last-child--xl--PaddingRight);
@@ -392,6 +407,25 @@
       --pf-c-table--cell--MaxWidth: fit-content;
       --pf-c-table--cell--Overflow: visible;
     }
+
+    &.pf-m-border-right::before,
+    &.pf-m-border-left::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+      content: "";
+    }
+
+    &.pf-m-border-right::before {
+      border-right: var(--pf-c-table--cell--m-border-right--before--BorderRightWidth) solid var(--pf-c-table--cell--m-border-right--before--BorderRightColor);
+    }
+
+    &.pf-m-border-left::before {
+      border-left: var(--pf-c-table--cell--m-border-right--before--BorderLeftWidth) solid var(--pf-c-table--cell--m-border-left--before--BorderLeftColor);
+    }
   }
 
   // Table caption
@@ -411,6 +445,45 @@
     --pf-c-table--cell--FontWeight: var(--pf-c-table--thead--cell--FontWeight);
 
     vertical-align: bottom;
+
+    // stylelint-disable
+    &.pf-m-nested-column-header {
+      button {
+        outline-offset: var(--pf-c-table--thead--m-nested-column-header--button--OutlineOffset);
+      }
+
+      th,
+      td {
+        vertical-align: middle;
+      }
+
+      tr:not(:first-child) {
+        th,
+        td {
+          &:not([rowspan]) {
+            --pf-c-table--cell--PaddingTop: var(--pf-c-table--thead--m-nested-column-header--tr--PaddingTop);
+          }
+        }
+      }
+
+      tr:not(:last-child) {
+        --pf-c-table--border-width--base: 0; // hard reset tr borders in nested headers
+
+        th,
+        td {
+          &:not([rowspan]) {
+            --pf-c-table--cell--PaddingBottom: var(--pf-c-table--thead--m-nested-column-header--tr--PaddingBottom);
+          }
+        }
+      }
+    }
+    // stylelint-enable
+
+    .pf-c-table__subhead {
+      --pf-c-table__sort__button__text--Color: var(--pf-c-table__subhead--Color);
+
+      color: var(--pf-c-table__subhead--Color);
+    }
   }
 
   // Table body cell
@@ -587,6 +660,10 @@
     &:hover + tr.pf-m-selected {
       box-shadow: var(--pf-c-table--tr--m-selected--hover--m-selected--BoxShadow);
     }
+  }
+
+  tr.pf-m-first-cell-offset-reset {
+    --pf-c-table--cell--first-last-child--PaddingLeft: var(--pf-c-table--tr--m-first-cell-offset-reset--cell--PaddingLeft);
   }
 
   // tbody hoverable

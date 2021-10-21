@@ -2734,6 +2734,8 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 | `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text to wrap. |
 | `.pf-m-fit-content` | `thead`, `tr`, `th`, `.pf-c-table__text` | Modifies `th` to fit its contents. |
 | `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text strings to break. |
+| `.pf-m-border-right` | `<th>`, `<td>` | Modifies a table cell to show a right border. |
+| `.pf-m-border-left` | `<th>`, `<td>` | Modifies a table cell to show a left border. |
 
 ## Table header modifiers
 
@@ -3008,7 +3010,242 @@ For sticky columns to function correctly, the parent table's width must be contr
 | `.pf-c-scroll-outer-wrapper` | `<div>` | Initiates a table container sticky columns outer wrapper. |
 | `.pf-c-scroll-inner-wrapper` | `<div>` | Initiates a table container sticky columns inner wrapper. |
 | `.pf-c-table__sticky-column` | `<th>`, `<td>` | Initiates a sticky table cell. |
-| `.pf-m-border-right` | `.pf-c-table__sticky-column` | Modifies the sticky column to show a right border. |
+
+### Nested column headers and expandable rows
+```hbs
+<div class="pf-c-scroll-inner-wrapper">
+  {{#> table table--id="nested-columns-expandable-example" table--grid="true" table--attribute='aria-label="This is a nested column header table example"' table--HasToggles="true" table--HasChecks="true" table--HasActions="true"}}
+    <col>
+    <col>
+    <col>
+    <colgroup span="3"></colgroup>
+    <col>
+    <col>
+    {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
+      {{#> table-tr}}
+        {{> table-td table-td--IsEmpty="true" table-td--attribute='rowspan="2"'}}
+        {{#> table-td table-td--check="true" table-td--attribute='rowspan="2"'}}
+          <input type="checkbox" name="{{table--id}}-check-all" aria-label="Select all rows">
+        {{/table-td}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right"}}
+          Team
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" colspan="3"' table-th--modifier="pf-m-border-right"}}
+          Members
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"'}}
+          Contact
+        {{/table-th}}
+        {{> table-td table-td--IsEmpty="true" table-td--attribute='rowspan="2"'}}
+      {{/table-tr}}
+
+      {{#> table-tr table-tr--modifier="pf-m-first-cell-offset-reset"}}
+        {{#> table-th table-th--attribute='scope="col"'table-th--modifier="pf-c-table__subhead"}}
+          Design lead
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-c-table__subhead"}}
+          Interaction design
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-c-table__subhead pf-m-border-right"}}
+          Visual designers
+        {{/table-th}}
+      {{/table-tr}}
+    {{/table-thead}}
+
+    {{#> table-tbody table-tbody--modifier="pf-m-expanded" table-tr--index="1"}}
+      {{#> table--tr table-tr--expanded="true"}}
+        {{#> table-th table-th--data-label="Developer program" table-th--IsNode="true" table-th--IsNode="true"}}
+          Developer program
+        {{/table-th}}
+        {{#> table-td table-td--data-label="Branches"}}
+          Stacey Logan
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          Mark Shakshober
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          Kaliq Ray
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          {{#> button button--modifier="pf-m-inline pf-m-link"}}
+            Message us!
+          {{/button}}
+        {{/table-td}}
+      {{/table--tr}}
+      {{#> table--tr table--tr--IsExpandable="true" table-tr--IsExpanded="true" table--tr--content-cols="5"}}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      {{/table--tr}}
+    {{/table-tbody}}
+
+    {{#> table-tbody table-tr--index="2"}}
+      {{#> table--tr}}
+        {{#> table-th table-th--data-label="Developer program" table-th--IsNode="true"}}
+          Developer program
+        {{/table-th}}
+        {{#> table-td table-td--data-label="Branches"}}
+          Stacey Logan
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          Mark Shakshober
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          Kaliq Ray
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          {{#> button button--modifier="pf-m-inline pf-m-link"}}
+            Message us!
+          {{/button}}
+        {{/table-td}}
+      {{/table--tr}}
+      {{#> table--tr table--tr--IsExpandable="true" table--tr--content-cols="5"}}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      {{/table--tr}}
+    {{/table-tbody}}
+
+    {{#> table-tbody table-tr--index="3"}}
+      {{#> table--tr}}
+        {{#> table-th table-th--data-label="Developer program" table-th--IsNode="true"}}
+          Developer program
+        {{/table-th}}
+        {{#> table-td table-td--data-label="Branches"}}
+          Stacey Logan
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          Mark Shakshober
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          Kaliq Ray
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          {{#> button button--modifier="pf-m-inline pf-m-link"}}
+            Message us!
+          {{/button}}
+        {{/table-td}}
+      {{/table--tr}}
+      {{#> table--tr table--tr--IsExpandable="true" table--tr--content-cols="5"}}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      {{/table--tr}}
+    {{/table-tbody}}
+  {{/table}}
+</div>
+```
+
+### Nested column headers
+```hbs
+<div class="pf-c-scroll-inner-wrapper">
+  {{#> table table--id="table-nested-column-headers-example" table--grid="true" table--attribute='aria-label="This is a nested column header table example"'}}
+    <colgroup span="3"></colgroup>
+    <colgroup span="2"></colgroup>
+    <col>
+    <col>
+    <col>
+    <col>
+    {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
+      {{#> table-tr}}
+        {{#> table-th table-th--attribute='scope="col" colspan="3"' table-th--modifier="pf-m-border-right"}}
+          Pods
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" colspan="2"' table-th--modifier="pf-m-border-right"}}
+          Ports
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+          Protocol
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+          Flow rate
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+          Traffic
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-fit-content"}}
+          Packets
+        {{/table-th}}
+      {{/table-tr}}
+
+      {{#> table-tr}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead"}}
+          Source
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead"}}
+          Destination
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+          Date & Time
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content"}}
+          Source
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+          Destination
+        {{/table-th}}
+      {{/table-tr}}
+    {{/table-thead}}
+
+    {{#> table-tbody table-tr--index="1"}}
+      {{#> table--tr table-tr--expanded="true"}}
+        {{#> table-td table-td--data-label="Source"}}
+          {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
+            {{#> l-flex-item}}
+              {{#> label label--modifier="pf-m-cyan"}}
+                P
+              {{/label}}
+            {{/l-flex-item}}
+            {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
+              <span class="pf-c-table__text pf-m-truncate">
+                <a href="#">api-pod-source-name</a>
+              </span>
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Destination"}}
+          {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
+            {{#> l-flex-item}}
+              {{#> label label--modifier="pf-m-cyan"}}
+                P
+              {{/label}}
+            {{/l-flex-item}}
+            {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
+              <span class="pf-c-table__text pf-m-truncate">
+                <a href="#">api-pod-destination-name</a>
+              </span>
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Date & time"}}
+          {{#> stack}}
+            <span>June 22, 2021</span>
+            <span class="pf-u-color-200">3:58:24 PM</span>
+          {{/stack}}
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Source"}}
+          {{#> stack}}
+            <span>443</span>
+            <span class="pf-u-color-200">(HTTPS)</span>
+          {{/stack}}
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Destination"}}
+          {{#> stack}}
+            <span>24</span>
+            <span class="pf-u-color-200">(smtp)</span>
+          {{/stack}}
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Protocol"}}
+          TCP
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Flow rate"}}
+          1.9 Kbps
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Traffic"}}
+          2.1 KB
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Packets"}}
+          3
+        {{/table-td}}
+      {{/table--tr}}
+    {{/table-tbody}}
+  {{/table}}
+</div>
+```
 
 ## Favorites
 

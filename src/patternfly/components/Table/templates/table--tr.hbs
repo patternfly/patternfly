@@ -1,0 +1,31 @@
+{{#if table--tr--IsExpandable}}
+  {{#> table-tr table-tr--expandable="true"}}
+    {{#if table--HasToggles}}
+      {{> table-td table-td--IsEmpty="true"}}
+    {{/if}}
+    {{#if table--HasChecks}}
+      {{> table-td table-td--IsEmpty="true"}}
+    {{/if}}
+    {{#> table-td table-td--attribute=(concat 'colspan="' table--tr--content-cols '" id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-expandable-row-content}}
+        {{> @partial-block}}
+      {{/table-expandable-row-content}}
+    {{/table-td}}
+    {{#if table--HasActions}}
+      {{> table-td table-td--IsEmpty="true"}}
+    {{/if}}
+  {{/table-tr}}
+{{else}}
+  {{#> table-tr}}
+    {{#if table--HasToggles}}
+      {{> table--toggle}}
+    {{/if}}
+    {{#if table--HasChecks}}
+      {{> table--check}}
+    {{/if}}
+    {{> @partial-block}}
+    {{#if table--HasActions}}
+      {{> table--action}}
+    {{/if}}
+  {{/table-tr}}
+{{/if}}

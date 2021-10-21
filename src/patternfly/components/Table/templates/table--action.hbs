@@ -1,0 +1,4 @@
+{{#> table-td table-td--action="true"}}
+  {{!-- Use content of {empty string} to avoid passing @partial-block to dropdown --}}
+  {{#> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}{{/dropdown}}
+{{/table-td}}
