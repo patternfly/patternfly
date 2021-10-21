@@ -36,30 +36,29 @@ const writeUnicodesToJson = (path, fileName, obj) => {
   writeFileSync(`${path}/${fileName}`, data);
 }
 
-// parse && write FontAwesome icons/unicode matches
-const faUnicodeMatches = getIconNamesUnicodes(
-  '../../src/patternfly/assets/fontawesome/_variables.scss',
-  /\$(fa-var-[a-zA-Z0-9-]*):\s*\\([a-zA-Z0-9]*);/gm
-);
-const faUnicodesObj = buildUnicodesMap(faUnicodeMatches, false);
-writeUnicodesToJson('dist/assets/icons', 'fa-unicodes.json', faUnicodesObj);
-
-// parse existing pf-icon names/unicodes
-const pficonUnicodeMatches = getIconNamesUnicodes(
-  '../../src/patternfly/assets/pficon/pficon.scss',
-  /@if\s\$filename\s==\s(\S*)\s\S\n\s*\$char:\s'\\([a-zA-Z0-9]*)'/g
-);
-const pficonUnicodesObj = buildUnicodesMap(pficonUnicodeMatches, true);
-
-// Calculate next available unicode (for any new pf-icons)
-const nextCodepoint = maxCodepoint + 1;
-const nextUnicodeHex = '0x' + nextCodepoint.toString(16).toUpperCase();
-
 function pfIcons() {
   return generateIcons();
 }
 
 function pfIconFont() {
+  // parse FontAwesome icons/unicode matches
+  const faUnicodeMatches = getIconNamesUnicodes(
+    '../../src/patternfly/assets/fontawesome/_variables.scss',
+    /\$(fa-var-[a-zA-Z0-9-]*):\s*\\([a-zA-Z0-9]*);/gm
+  );
+  const faUnicodesObj = buildUnicodesMap(faUnicodeMatches, false);
+
+  // parse existing pf-icon names/unicodes
+  const pficonUnicodeMatches = getIconNamesUnicodes(
+    '../../src/patternfly/assets/pficon/pficon.scss',
+    /@if\s\$filename\s==\s(\S*)\s\S\n\s*\$char:\s'\\([a-zA-Z0-9]*)'/g
+  );
+  const pficonUnicodesObj = buildUnicodesMap(pficonUnicodeMatches, true);
+
+  // Calculate next available unicode (for any new pf-icons)
+  const nextCodepoint = maxCodepoint + 1;
+  const nextUnicodeHex = '0x' + nextCodepoint.toString(16).toUpperCase();
+
   return src('./src/icons/PfIcons/*.svg')
     .pipe(
       iconfontCss({
@@ -81,13 +80,17 @@ function pfIconFont() {
         formats: ['woff', 'woff2'],
         timestamp: Math.round(Date.now() / 1000)
       })
-        // Trigger off emitted 'glyphs' event to write new list of pf-icons to json file
+        // Trigger off emitted 'glyphs' event to generate pficon/unicode matches, combine w/FA & write to JSON file
         .on('glyphs', (glyphs, options) => {
           const pfUnicodesMap = glyphs.reduce((obj, glyph) => {
             obj[`pf-icon-${glyph.name}`] = glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase();
             return obj;
           }, {});
-          writeUnicodesToJson('dist/assets/pficon', 'pf-unicodes.json', pfUnicodesMap);
+          const iconUnicodes = {
+            ...pfUnicodesMap,
+            ...faUnicodesObj
+          };
+          writeUnicodesToJson('src/patternfly/assets/icons', 'iconUnicodes.json', iconUnicodes);
         })
     )
     .pipe(dest('./src/patternfly/assets/pficon/'))
