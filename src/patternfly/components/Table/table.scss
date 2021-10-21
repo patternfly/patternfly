@@ -296,9 +296,9 @@
   --pf-c-table--tbody--m-selected--tbody--m-selected--hover--BoxShadow: var(--pf-c-table--tr--m-selected--BoxShadow--top), var(--pf-global--BoxShadow--sm-bottom);
 
   // Nested column header
-  --pf-c-table--thead--nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
-  --pf-c-table--thead--nested-column-header--tr--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-table--thead--nested-column-header--tr--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-table--thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
+  --pf-c-table--thead--m-nested-column-header--tr--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-table--thead--m-nested-column-header--tr--PaddingBottom: var(--pf-global--spacer--xs);
 
   // Subhead
   --pf-c-table__subhead--Color: var(--pf-global--Color--200);
@@ -449,7 +449,7 @@
     // stylelint-disable
     &.pf-m-nested-column-header {
       button {
-        outline-offset: var(--pf-c-table--thead--nested-column-header--button--OutlineOffset);
+        outline-offset: var(--pf-c-table--thead--m-nested-column-header--button--OutlineOffset);
       }
 
       th,
@@ -461,7 +461,7 @@
         th,
         td {
           &:not([rowspan]) {
-            --pf-c-table--cell--PaddingTop: var(--pf-c-table--thead--nested-column-header--tr--PaddingTop);
+            --pf-c-table--cell--PaddingTop: var(--pf-c-table--thead--m-nested-column-header--tr--PaddingTop);
           }
         }
       }
@@ -472,7 +472,7 @@
         th,
         td {
           &:not([rowspan]) {
-            --pf-c-table--cell--PaddingBottom: var(--pf-c-table--thead--nested-column-header--tr--PaddingBottom);
+            --pf-c-table--cell--PaddingBottom: var(--pf-c-table--thead--m-nested-column-header--tr--PaddingBottom);
           }
         }
       }
