@@ -17,6 +17,10 @@
   background-color: var(--pf-global--BackgroundColor--dark-300);
 }
 
+#ws-core-c-navigation-expandable-third-level .pf-c-nav {
+  background-color: var(--pf-global--BackgroundColor--dark-300);
+}
+
 #ws-core-c-navigation-horizontal-in-masthead,
 #ws-core-c-navigation-horizontal-in-masthead-overflow {
   padding: 0;

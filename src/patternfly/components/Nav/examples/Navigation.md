@@ -270,6 +270,106 @@ import './Navigation.css'
 {{/nav}}
 ```
 
+### Expandable, third level
+```hbs
+{{#> nav nav--attribute='aria-label="Global"' nav--id="expandable-third-level-example"}}
+  {{#> nav-list}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Clusters
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--current="true"}}
+      {{#> nav-link nav-link--href="#"}}
+        Overview
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Releases
+      {{/nav-link}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' nav--id '-example-1"')}}
+        Subscriptions
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' nav--id '-example-1"')}}
+        {{#> nav-list newcontent}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 1
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Subnav link 2
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' nav--id '-example-2"')}}
+        Cost management
+      {{/nav-link}}
+      {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' nav--id '-example-2"')}}
+        {{#> nav-list nav-item--expandable=unset nav-item--expanded=unset}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Overview
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Openshift
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
+            {{#> nav-link nav-link--href="#" nav-link--attribute=(concat 'id="' nav--id '-sub-example-1"')}}
+              Public clouds
+            {{/nav-link}}
+            {{#> nav-subnav nav-subnav--attribute=(concat 'aria-labelledby="' nav--id '-sub-example-1"')}}
+              {{#> nav-list nav-item--expandable=unset nav-item--expanded=unset}}
+                {{#> nav-item}}
+                  {{#> nav-link nav-link--href="#"}}
+                    Amazon Web Services
+                  {{/nav-link}}
+                {{/nav-item}}
+                {{#> nav-item}}
+                  {{#> nav-link nav-link--href="#"}}
+                    Microsoft Azure
+                  {{/nav-link}}
+                {{/nav-item}}
+                {{#> nav-item}}
+                  {{#> nav-link nav-link--href="#"}}
+                    Google Cloud Services
+                  {{/nav-link}}
+                {{/nav-item}}
+              {{/nav-list}}
+            {{/nav-subnav}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Cost Models
+            {{/nav-link}}
+          {{/nav-item}}
+          {{#> nav-item}}
+            {{#> nav-link nav-link--href="#"}}
+              Cost Explorer
+            {{/nav-link}}
+          {{/nav-item}}
+        {{/nav-list}}
+      {{/nav-subnav}}
+    {{/nav-item}}
+    {{#> nav-item}}
+      {{#> nav-link nav-link--href="#"}}
+        Support Cases
+      {{/nav-link}}
+    {{/nav-item}}
+  {{/nav-list}}
+{{/nav}}
+```
+
 ### Horizontal
 ```hbs
 {{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--attribute='aria-label="Global"'}}
