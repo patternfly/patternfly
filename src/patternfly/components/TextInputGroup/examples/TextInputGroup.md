@@ -19,8 +19,8 @@ cssPrefix: pf-c-text-input-group
 
 ### Utilities and icon
 ```hbs
-{{#> text-input-group text-input-group--modifier="pf-m-icon"}}
-  {{#> text-input-group-main}}
+{{#> text-input-group}}
+  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
       {{> text-input-group-text-input}}
