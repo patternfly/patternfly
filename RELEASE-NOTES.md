@@ -6,7 +6,7 @@ releaseNoteTOC: true
 
 ## 2021.14 release notes (2021-10-26)
 Packages released:
-- [@patternfly/patternfly@v4.151.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.151.3)
+- [@patternfly/patternfly@v4.151.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.151.2)
 
 ### Components
 - **App launcher, menu, select:** Fixed favorite colors ([#4437](https://github.com/patternfly/patternfly/pull/4437))
