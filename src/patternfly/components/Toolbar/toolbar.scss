@@ -17,8 +17,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar__group--Display: flex;
 
   // Sticky
-  --pf-c-toolbar--m-sticky-top--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-toolbar--m-sticky-top--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
+  --pf-c-toolbar--m-sticky--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-toolbar--m-sticky--BoxShadow: var(--pf-global--BoxShadow--sm-bottom);
 
   // Content
   --pf-c-toolbar__content--Display: flex;
@@ -133,11 +133,11 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
     --pf-c-toolbar__content--PaddingLeft: var(--pf-c-toolbar--m-page-insets--inset);
   }
 
-  &.pf-m-sticky-top {
+  &.pf-m-sticky {
     position: sticky;
     top: 0;
-    z-index: var(--pf-c-toolbar--m-sticky-top--ZIndex);
-    box-shadow: var(--pf-c-toolbar--m-sticky-top--BoxShadow);
+    z-index: var(--pf-c-toolbar--m-sticky--ZIndex);
+    box-shadow: var(--pf-c-toolbar--m-sticky--BoxShadow);
   }
 
   &.pf-m-full-height {
