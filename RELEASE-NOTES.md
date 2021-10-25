@@ -12,8 +12,8 @@ Packages released:
 - **Backdrop:** Added var for position to allow customization ([#4391](https://github.com/patternfly/patternfly/pull/4391))
 - **Banner:** Added link style ([#4383](https://github.com/patternfly/patternfly/pull/4383))
 - **Card:**
-  * Fixed demo image paths ([#4400](https://github.com/patternfly/patternfly/pull/4400))
   * Updated log view and event view demos ([#4371](https://github.com/patternfly/patternfly/pull/4371))
+  * Fixed demo image paths ([#4400](https://github.com/patternfly/patternfly/pull/4400))
 - **Drag drop:**
   * Added drag drop ([#4398](https://github.com/patternfly/patternfly/pull/4398))
   * Moved drag drop styles into component ([#4404](https://github.com/patternfly/patternfly/pull/4404))
@@ -29,6 +29,7 @@ Packages released:
 - **Nav:**
   - Added support for menu component as flyout ([#4417](https://github.com/patternfly/patternfly/pull/4417))
   - Marked nav flyout example as beta, updated release notes ([#4444](https://github.com/patternfly/patternfly/pull/4444))
+  - Removed broken icon font size var ([#4473](https://github.com/patternfly/patternfly/pull/4473))
 - **Progress stepper:** Added help text for popover ([#4381](https://github.com/patternfly/patternfly/pull/4381))
 - **Radio, checkbox, form:** Corrected label alignment ([#4375](https://github.com/patternfly/patternfly/pull/4375))
 - **Select:**
