@@ -6,7 +6,7 @@ releaseNoteTOC: true
 
 ## 2021.14 release notes (2021-10-26)
 Packages released:
-- [@patternfly/patternfly@v4.151.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.151.3)
+- [@patternfly/patternfly@v4.151.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.151.4)
 
 ### Components
 - **App launcher, menu, select:** Fixed favorite colors ([#4437](https://github.com/patternfly/patternfly/pull/4437))
@@ -14,7 +14,9 @@ Packages released:
 - **Context selector:** Added demos ([#4454](https://github.com/patternfly/patternfly/pull/4454))
 - **Form:** Added group role to section and field group ([#4424](https://github.com/patternfly/patternfly/pull/4424))
 - **Modal:** Added demo to link form to submit button in footer ([#4432](https://github.com/patternfly/patternfly/pull/4432))
-- **Nav:** Added third level expansion ([#4460](https://github.com/patternfly/patternfly/pull/4460))
+- **Nav:**
+  - Added third level expansion ([#4460](https://github.com/patternfly/patternfly/pull/4460))
+  - Removed broken icon font size var ([#4473](https://github.com/patternfly/patternfly/pull/4473))
 - **Pagination:** Added indeterminate count example ([#4428](https://github.com/patternfly/patternfly/pull/4428))
 - **Panel:** Added panel component ([#4456](https://github.com/patternfly/patternfly/pull/4456))
 - **Popover:**
@@ -63,7 +65,6 @@ Packages released:
 - **Nav:**
   - Added support for menu component as flyout ([#4417](https://github.com/patternfly/patternfly/pull/4417))
   - Marked nav flyout example as beta, updated release notes ([#4444](https://github.com/patternfly/patternfly/pull/4444))
-  - Removed broken icon font size var ([#4473](https://github.com/patternfly/patternfly/pull/4473))
 - **Progress stepper:** Added help text for popover ([#4381](https://github.com/patternfly/patternfly/pull/4381))
 - **Radio, checkbox, form:** Corrected label alignment ([#4375](https://github.com/patternfly/patternfly/pull/4375))
 - **Select:**
