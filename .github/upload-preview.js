@@ -23,7 +23,7 @@ const uploadFolderName = path.basename(uploadFolder);
 let uploadURL = `${repo}-${prnum ? `pr-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
 
 switch(uploadFolderName) {
-  case 'dist':
+  case 'coverage':
     uploadURL += '-a11y.surge.sh';
     break;
   case 'public':
@@ -75,7 +75,7 @@ if (prnum) {
       if (uploadFolderName === 'public') {
         commentBody += tryAddComment(`Preview: https://${uploadURL}`, commentBody);
       }
-      else if (uploadFolderName === 'dist') {
+      else if (uploadFolderName === 'coverage') {
         commentBody += tryAddComment(`A11y report: https://${uploadURL}`, commentBody);
       }
 
