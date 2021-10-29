@@ -53,7 +53,7 @@ jobs:
       - run: node .github/upload-preview.js public
         name: Upload docs
         if: always()
-      - run: node .github/upload-preview.js coverage/dist
+      - run: node .github/upload-preview.js "coverage/dist"
         name: Upload a11y report
       - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
         name: Avoid Unknown Host for github.com
