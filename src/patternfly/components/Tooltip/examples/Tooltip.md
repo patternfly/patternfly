@@ -44,13 +44,13 @@ cssPrefix: pf-c-tooltip
 ### Left with top and bottom positions
 ```hbs
 {{#> tooltip tooltip--modifier="pf-m-left-top"}}
-  {{#> tooltip-content tooltip-content--attribute='id="tooltip-left-content"'}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-left-top-content"'}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
   {{/tooltip-content}}
 {{/tooltip}}
 <br />
 {{#> tooltip tooltip--modifier="pf-m-left-bottom"}}
-  {{#> tooltip-content tooltip-content--attribute='id="tooltip-left-content"'}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-left-bottom-content"'}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
   {{/tooltip-content}}
 {{/tooltip}}
@@ -59,13 +59,13 @@ cssPrefix: pf-c-tooltip
 ### Bottom with left and right positions
 ```hbs
 {{#> tooltip tooltip--modifier="pf-m-bottom-left"}}
-  {{#> tooltip-content tooltip-content--attribute='id="tooltip-left-content"'}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-bottom-left-content"'}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
   {{/tooltip-content}}
 {{/tooltip}}
 <br />
 {{#> tooltip tooltip--modifier="pf-m-bottom-right"}}
-  {{#> tooltip-content tooltip-content--attribute='id="tooltip-left-content"'}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-bottom-right-content"'}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
   {{/tooltip-content}}
 {{/tooltip}}
