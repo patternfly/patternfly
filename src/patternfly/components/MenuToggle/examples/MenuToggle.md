@@ -143,6 +143,40 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
+### Plain with text
+```hbs
+{{#> menu-toggle menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-text}}
+    Disabled
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsExpanded="true" menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
+  {{#> menu-toggle-text}}
+    Custom text
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
+  {{#> menu-toggle-text}}
+    Custom text (expanded)
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
 ### With image and text
 ```hbs
 {{#> menu-toggle}}
