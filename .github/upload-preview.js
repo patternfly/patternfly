@@ -19,6 +19,12 @@ if (!uploadFolder) {
   process.exit(1);
 }
 
+console.log('uploadFolder:');
+console.log(uploadFolder);
+
+console.log('process:');
+console.log(process);
+
 const uploadFolderName = path.basename(uploadFolder);
 let uploadURL = `${repo}-${prnum ? `pr-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
 
