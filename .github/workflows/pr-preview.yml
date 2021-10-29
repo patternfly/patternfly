@@ -59,6 +59,3 @@ jobs:
       - run: node .github/upload-preview.js public
         name: Upload docs
         if: always()
-      - run: node .github/upload-preview.js fff
-        name: Upload a11y report
-        if: always()
