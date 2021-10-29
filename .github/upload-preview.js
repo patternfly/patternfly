@@ -23,7 +23,7 @@ const uploadFolderName = path.basename(uploadFolder);
 let uploadURL = `${repo}-${prnum ? `pr-${prnum}` : prbranch}`.replace(/[\/|\.]/g, '-');
 
 switch(uploadFolderName) {
-  case 'coverage':
+  case 'dist':
     uploadURL += '-a11y.surge.sh';
     break;
   case 'public':
