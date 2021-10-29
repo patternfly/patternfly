@@ -35,5 +35,4 @@
   if: always()
 - run: node .github/upload-preview.js coverage/dist
   name: Upload a11y report
-  if: always()
 
