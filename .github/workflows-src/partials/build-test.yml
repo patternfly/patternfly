@@ -33,6 +33,7 @@
 - run: node .github/upload-preview.js public
   name: Upload docs
   if: always()
-- run: node .github/upload-preview.js "coverage/dist"
+- run: node .github/upload-preview.js foo
   name: Upload a11y report
+  if: always()
 
