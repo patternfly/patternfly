@@ -17,6 +17,17 @@ cssPrefix: pf-c-text-input-group
 {{/text-input-group}}
 ```
 
+### Disabled
+```hbs
+{{#> text-input-group text-input-group--id="disabled" text-input-group--modifier='pf-m-disabled'}}
+  {{#> text-input-group-main}}
+    {{#> text-input-group-text}}
+      {{> text-input-group-text-input aria-label="disabled text input group example" text-input-group-text-input--attribute='disabled' text-input-group--value='Disabled'}}
+    {{/text-input-group-text}}
+  {{/text-input-group-main}}
+{{/text-input-group}}
+```
+
 ### Utilities and icon
 ```hbs
 {{#> text-input-group}}
