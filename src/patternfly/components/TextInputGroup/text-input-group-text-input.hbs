@@ -2,6 +2,9 @@
   type="text"
   value="{{text-input-group--value}}"
   aria-label="Type to filter"
+  {{#if text-input-group--IsDisabled}}
+    disabled
+  {{/if}}
   {{#if text-input-group-text-input--attribute}}
     {{text-input-group-text-input--attribute}}
   {{/if}}>
