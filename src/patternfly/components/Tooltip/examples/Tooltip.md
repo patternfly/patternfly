@@ -41,6 +41,36 @@ cssPrefix: pf-c-tooltip
 {{/tooltip}}
 ```
 
+### Left with top and bottom positions
+```hbs
+{{#> tooltip tooltip--modifier="pf-m-left-top"}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-left-top-content"'}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+  {{/tooltip-content}}
+{{/tooltip}}
+<br />
+{{#> tooltip tooltip--modifier="pf-m-left-bottom"}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-left-bottom-content"'}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+  {{/tooltip-content}}
+{{/tooltip}}
+```
+
+### Bottom with left and right positions
+```hbs
+{{#> tooltip tooltip--modifier="pf-m-bottom-left"}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-bottom-left-content"'}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+  {{/tooltip-content}}
+{{/tooltip}}
+<br />
+{{#> tooltip tooltip--modifier="pf-m-bottom-right"}}
+  {{#> tooltip-content tooltip-content--attribute='id="tooltip-bottom-right-content"'}}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id feugiat augue, nec fringilla turpis.
+  {{/tooltip-content}}
+{{/tooltip}}
+```
+
 ### Left aligned text
 ```hbs
 {{#> tooltip tooltip--modifier="pf-m-top"}}
@@ -66,8 +96,8 @@ A tooltip is used to provide contextual information for another component on hov
 | `.pf-c-tooltip` | `<div>` |  Creates a tooltip. Always use with a modifier class that positions the tooltip relative to the element it describes. **Required**|
 | `.pf-c-tooltip__arrow` | `<div>` |  Creates an arrow pointing towards the element the tooltip describes. **Required** |
 | `.pf-c-tooltip__content` | `<div>` |  Creates the body of the tooltip. **Required** |
-| `.pf-m-left` | `.pf-c-tooltip` | Positions the tooltip to the left of the element. |
-| `.pf-m-right` | `.pf-c-tooltip` | Positions the tooltip to the right of the element. |
-| `.pf-m-top` | `.pf-c-tooltip` | Positions the tooltip to the top of the element. |
-| `.pf-m-bottom` | `.pf-c-tooltip` | Positions the tooltip to the bottom of the element. |
+| `.pf-m-left{-top/bottom}` | `.pf-c-tooltip` | Positions the tooltip to the left (or left top/left bottom) of the element. |
+| `.pf-m-right{-top/bottom}` | `.pf-c-tooltip` | Positions the tooltip to the right (or right top/right bottom) of the element. |
+| `.pf-m-top{-left/right}` | `.pf-c-tooltip` | Positions the tooltip to the top (or top left/top right) of the element. |
+| `.pf-m-bottom{-left/right}` | `.pf-c-tooltip` | Positions the tooltip to the bottom (or bottom left/bottom right) of the element. |
 | `.pf-m-text-align-left` | `.pf-c-tooltip__content` | Modifies tooltip content to text align left. |
