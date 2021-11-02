@@ -19,10 +19,10 @@ cssPrefix: pf-c-text-input-group
 
 ### Disabled
 ```hbs
-{{#> text-input-group text-input-group--id="disabled" text-input-group--IsDisabled="true"}}
+{{#> text-input-group text-input-group--id="text-input-group-disabled" text-input-group--IsDisabled="true"}}
   {{#> text-input-group-main}}
     {{#> text-input-group-text}}
-      {{> text-input-group-text-input text-input-group--value='Disabled'}}
+      {{> text-input-group-text-input}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
 {{/text-input-group}}

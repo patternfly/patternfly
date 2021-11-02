@@ -1,16 +1,12 @@
 <div class="pf-c-text-input-group
-  {{#if text-input-group--modifier}}
-    {{text-input-group--modifier}}
-  {{/if}}
-  {{#if text-input-group--IsDisabled}}
+  {{~#if text-input-group--IsDisabled}}
     pf-m-disabled
+  {{/if}}
+  {{~#if text-input-group--modifier}}
+    {{text-input-group--modifier}}
   {{/if}}"
   {{#if text-input-group--attribute}}
     {{{text-input-group--attribute}}}
-  {{/if}}
-  {{#if text-input-group--IsDisabled}}
-    aria-label="Disabled text input group example"
-    tabindex="-1"
   {{/if}}>
   {{> @partial-block}}
 </div>

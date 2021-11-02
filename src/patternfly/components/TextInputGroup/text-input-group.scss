@@ -41,7 +41,6 @@
   // input disabled style
   --pf-c-text-input-group--m-disabled--Color: var(--pf-global--disabled-color--100);
   --pf-c-text-input-group--m-disabled--BackgroundColor: var(--pf-global--disabled-color--300);
-  --pf-c-text-input-group--m-disabled--BorderColor: transparent;
 
   position: relative;
   display: flex;
@@ -58,7 +57,6 @@
     --pf-c-text-input-group--BackgroundColor: var(--pf-c-text-input-group--m-disabled--BackgroundColor);
 
     pointer-events: none;
-    border-color: var(--pf-c-text-input-group--m-disabled--BorderColor);
 
     --pf-c-text-input-group__text--before--BorderWidth: 0;
     --pf-c-text-input-group__text--after--BorderBottomWidth: 0;
