@@ -578,14 +578,11 @@
 
 // Borders
 .pf-c-nav__item {
-  --pf-c-nav__item__toggle-icon--Rotate: 0; // resets it for any inherited items
-
   position: relative;
   margin-top: var(--pf-c-nav__item--MarginTop);
 
   &.pf-m-expandable {
     --pf-c-nav__link--before--BorderBottomWidth: 0;
-    --pf-c-nav__item__toggle-icon--Rotate: var(--pf-c-nav__item--m-expanded__toggle-icon--Rotate);
 
     &::before {
       position: absolute;
@@ -598,6 +595,10 @@
   }
 
   .pf-c-nav__item {
+    &:not(.pf-m-expanded) .pf-c-nav__toggle-icon {
+      transform: rotate(0);
+    }
+
     &.pf-m-expandable {
       --pf-c-nav__toggle--FontSize: var(--pf-c-nav__item__item__toggle--FontSize);
       --pf-c-nav__link--PaddingRight: var(--pf-c-nav__item__item__link--PaddingRight);
@@ -915,12 +916,7 @@
   display: inline-block;
   transition: var(--pf-c-nav__toggle-icon--Transition);
 
-  .pf-c-nav__item.pf-m-expanded .pf-c-nav__item & {
-    transform: rotate(0deg);
-  }
-
-  .pf-c-nav__item.pf-m-expanded &,
-  .pf-c-nav__item .pf-c-nav__item.pf-m-expanded & {
+  .pf-c-nav__item.pf-m-expanded & {
     transform: rotate(var(--pf-c-nav__item--m-expanded__toggle-icon--Rotate));
   }
 }
