@@ -52,14 +52,13 @@
   }
 
   &.pf-m-disabled {
+    --pf-c-text-input-group__text--before--BorderWidth: 0;
+    --pf-c-text-input-group__text--after--BorderBottomWidth: 0;
     --pf-c-text-input-group--Color: var(--pf-c-text-input-group--m-disabled--Color);
     --pf-c-text-input-group__icon--Color: var(--pf-c-text-input-group--m-disabled--Color);
     --pf-c-text-input-group--BackgroundColor: var(--pf-c-text-input-group--m-disabled--BackgroundColor);
 
     pointer-events: none;
-
-    --pf-c-text-input-group__text--before--BorderWidth: 0;
-    --pf-c-text-input-group__text--after--BorderBottomWidth: 0;
   }
 }
 
