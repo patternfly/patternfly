@@ -1,7 +1,11 @@
 <input class="pf-c-text-input-group__text-input{{~#if text-input-group-text-input--modifier}} {{text-input-group-text-input--modifier}}{{/if}}"
   type="text"
-  value="{{text-input-group--value}}"
+  value="{{#if text-input-group--IsDisabled}}Disabled{{else}}{{text-input-group--value}}{{/if}}"
   aria-label="Type to filter"
+  {{#if text-input-group--IsDisabled}}
+    disabled
+    aria-label="Disabled text input group example input"
+  {{/if}}
   {{#if text-input-group-text-input--attribute}}
     {{text-input-group-text-input--attribute}}
   {{/if}}>
