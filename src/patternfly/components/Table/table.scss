@@ -552,6 +552,14 @@
     --pf-c-table--cell--Overflow: hidden;
     --pf-c-table--cell--TextOverflow: ellipsis;
     --pf-c-table--cell--WhiteSpace: nowrap;
+
+    // stylelint-disable selector-class-pattern
+    // align icon middle when truncated
+    > .pficon,
+    > .fas {
+      vertical-align: middle;
+    }
+    // stylelint-enable
   }
 
   .pf-m-wrap {
