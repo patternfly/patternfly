@@ -132,7 +132,7 @@
     --pf-c-menu-toggle--m-expanded--BackgroundColor: var(--pf-c-menu-toggle--m-primary--m-expanded--BackgroundColor);
   }
 
-  &.pf-m-plain {
+  &.pf-m-plain:not(.pf-m-text) {
     --pf-c-menu-toggle--Color: var(--pf-c-menu-toggle--m-plain--Color);
     --pf-c-menu-toggle--hover--Color: var(--pf-c-menu-toggle--m-plain--hover--Color);
     --pf-c-menu-toggle--focus--Color: var(--pf-c-menu-toggle--m-plain--hover--Color);

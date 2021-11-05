@@ -143,6 +143,40 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
+### Plain with text
+```hbs
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true" menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-text}}
+    Disabled
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
+  {{#> menu-toggle-text}}
+    Custom text
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-text}}
+    Custom text (expanded)
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
 ### With image and text
 ```hbs
 {{#> menu-toggle}}
@@ -188,6 +222,7 @@ import './MenuToggle.css'
 | `.pf-c-menu-toggle__controls` | `<span>` | Defines the menu toggle component controls. |
 | `.pf-c-menu-toggle__toggle-icon` | `<span>` | Defines the menu toggle component toggle/arrow icon. |
 | `.pf-m-primary` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the primary variation. |
+| `.pf-m-text` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the text variation. |
 | `.pf-m-plain` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the plain variation. |
 | `.pf-m-expanded` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
 | `.pf-m-full-height` | `.pf-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |
