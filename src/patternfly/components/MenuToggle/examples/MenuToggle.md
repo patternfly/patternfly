@@ -145,7 +145,7 @@ import './MenuToggle.css'
 
 ### Plain with text
 ```hbs
-{{#> menu-toggle menu-toggle--IsDisabled="true"}}
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true" menu-toggle--IsDisabled="true"}}
   {{#> menu-toggle-text}}
     Disabled
   {{/menu-toggle-text}}
@@ -156,7 +156,7 @@ import './MenuToggle.css'
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--IsExpanded="true" menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
   {{#> menu-toggle-text}}
     Custom text
   {{/menu-toggle-text}}
@@ -167,7 +167,7 @@ import './MenuToggle.css'
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true" menu-toggle--IsExpanded="true"}}
   {{#> menu-toggle-text}}
     Custom text (expanded)
   {{/menu-toggle-text}}
