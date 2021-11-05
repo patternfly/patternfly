@@ -222,6 +222,7 @@ import './MenuToggle.css'
 | `.pf-c-menu-toggle__controls` | `<span>` | Defines the menu toggle component controls. |
 | `.pf-c-menu-toggle__toggle-icon` | `<span>` | Defines the menu toggle component toggle/arrow icon. |
 | `.pf-m-primary` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the primary variation. |
+| `.pf-m-text` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the text variation. |
 | `.pf-m-plain` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the plain variation. |
 | `.pf-m-expanded` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
 | `.pf-m-full-height` | `.pf-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |
