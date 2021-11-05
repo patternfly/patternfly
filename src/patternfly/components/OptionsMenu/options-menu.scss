@@ -139,17 +139,11 @@
   justify-content: space-between;
   min-width: var(--pf-c-options-menu__toggle--MinWidth);
   max-width: 100%;
-  padding-left: var(--pf-c-options-menu__toggle--PaddingLeft);
+  padding: var(--pf-c-options-menu__toggle--PaddingTop) var(--pf-c-options-menu__toggle--PaddingRight) var(--pf-c-options-menu__toggle--PaddingBottom) var(--pf-c-options-menu__toggle--PaddingLeft);
   line-height: var(--pf-c-options-menu__toggle--LineHeight);
   color: var(--pf-c-options-menu__toggle--Color);
   background-color: var(--pf-c-options-menu__toggle--BackgroundColor);
   border: none;
-
-  &:not(.pf-m-text) {
-    padding-top: var(--pf-c-options-menu__toggle--PaddingTop);
-    padding-right: var(--pf-c-options-menu__toggle--PaddingRight);
-    padding-bottom: var(--pf-c-options-menu__toggle--PaddingBottom);
-  }
 
   .pf-c-options-menu.pf-m-expanded > & {
     &::before {
@@ -159,16 +153,12 @@
     }
   }
 
-  &.pf-m-plain {
+  &.pf-m-plain:not(.pf-m-text) {
     --pf-c-options-menu__toggle--PaddingRight: var(--pf-c-options-menu__toggle--m-plain--PaddingRight);
     --pf-c-options-menu__toggle--PaddingLeft: var(--pf-c-options-menu__toggle--m-plain--PaddingLeft);
 
     display: inline-block;
-
-    &:not(.pf-m-text) {
-      justify-content: center;
-      color: var(--pf-c-options-menu__toggle--m-plain--Color);
-    }
+    color: var(--pf-c-options-menu__toggle--m-plain--Color);
 
     .pf-c-options-menu__toggle-button-icon {
       line-height: var(--pf-c-options-menu__toggle--LineHeight);
