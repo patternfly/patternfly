@@ -49,6 +49,7 @@
 
   // Primary
   --pf-c-menu-toggle--m-primary--Color: var(--pf-global--Color--light-100);
+  --pf-c-menu-toggle--m-primary--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-menu-toggle--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-menu-toggle--m-primary--hover--BackgroundColor: var(--pf-global--primary-color--200);
   --pf-c-menu-toggle--m-primary--focus--BackgroundColor: var(--pf-global--primary-color--200);
@@ -130,6 +131,8 @@
     --pf-c-menu-toggle--active--BackgroundColor: var(--pf-c-menu-toggle--m-primary--active--BackgroundColor);
     --pf-c-menu-toggle--m-expanded--Color: var(--pf-c-menu-toggle--m-primary--m-expanded--Color);
     --pf-c-menu-toggle--m-expanded--BackgroundColor: var(--pf-c-menu-toggle--m-primary--m-expanded--BackgroundColor);
+
+    border-radius: var(--pf-c-menu-toggle--m-primary--BorderRadius);
   }
 
   &.pf-m-plain:not(.pf-m-text) {
