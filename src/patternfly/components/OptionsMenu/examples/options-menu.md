@@ -110,8 +110,8 @@ import './options-menu.css'
 
 ### Plain with text
 ```hbs
-{{#> options-menu id="options-menu-disabled-text-example" options-menu--IsText="true" options-menu-toggle--IsDisabled="true" options-menu--HasToggleIcon="true"}}
-  {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain"}}
+{{#> options-menu id="options-menu-disabled-text-example" options-menu--IsPlainWithText="true" options-menu-toggle--IsDisabled="true" options-menu--HasToggleIcon="true"}}
+  {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Custom text
     {{/options-menu-toggle-text}}
@@ -119,8 +119,8 @@ import './options-menu.css'
   {{> options-menu-single}}
 {{/options-menu}}
 
-{{#> options-menu id="options-menu-plain-text-example" options-menu--IsText="true" options-menu--HasToggleIcon="true"}}
-  {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain"}}
+{{#> options-menu id="options-menu-plain-text-example" options-menu--IsPlainWithText="true" options-menu--HasToggleIcon="true"}}
+  {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Custom text
     {{/options-menu-toggle-text}}
@@ -128,8 +128,8 @@ import './options-menu.css'
   {{> options-menu-single}}
 {{/options-menu}}
 
-{{#> options-menu id="options-menu-plain-text-expanded-example" options-menu--IsText="true" options-menu--HasToggleIcon="true" options-menu--IsExpanded="true"}}
-  {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain"}}
+{{#> options-menu id="options-menu-plain-text-expanded-example" options-menu--IsPlainWithText="true" options-menu--HasToggleIcon="true" options-menu--IsExpanded="true"}}
+  {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Custom text
     {{/options-menu-toggle-text}}
