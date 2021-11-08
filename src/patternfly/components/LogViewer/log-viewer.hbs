@@ -1,4 +1,8 @@
-<div class="pf-c-log-viewer{{#if log-viewer--HasLineNumbers}} pf-m-line-numbers{{/if}}{{#if log-viewer--TextWraps}} pf-m-wrap-text{{/if}}{{#if log-viewer--modifier}} {{log-viewer--modifier}}{{/if}}"
+<div class="pf-c-log-viewer
+  {{~#if log-viewer--HasLineNumbers}} pf-m-line-numbers{{/if}}
+  {{~#if log-viewer--TextWraps}} pf-m-wrap-text{{/if}}
+  {{~#if log-viewer--NoWrap}} pf-m-nowrap{{/if}}
+  {{~#if log-viewer--modifier}} {{log-viewer--modifier}}{{/if}}"
   {{#if log-viewer--attribute}}
     {{{log-viewer--attribute}}}
   {{/if}}
