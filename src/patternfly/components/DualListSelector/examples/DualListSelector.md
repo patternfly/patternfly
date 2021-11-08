@@ -962,7 +962,7 @@ cssPrefix: pf-c-dual-list-selector
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-dual-list-selector__draggable .pf-c-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. **Highly recommended** |
 | `aria-labelledby="[id of .pf-c-dual-list-selector__draggable .pf-c-button] [id of item text]"` | `.pf-c-table__dual-list-selector .pf-c-button` | Provides an accessible name for the draggable button. |
 | `id="[]"` | `.pf-c-dual-list-selector__draggable .pf-c-button`, `[item text]` | Gives the button and the text element accessible IDs. |
-| `disabled` | `.pf-c-dual-list-selector__item [button, check]` | Disables interactive elements in a disabled item. **Required** when an item is disabled. |
+| `role="option"` | `.pf-c-dual-list-selector__list-item [li]` | not sure |
 
 ### Usage
 
@@ -984,7 +984,7 @@ cssPrefix: pf-c-dual-list-selector
 | `.pf-c-dual-list-selector__list-item` | `<li>` | Initiates a dual list selector pane menu list item. **Required** |
 | `.pf-c-dual-list-selector__list-item-row` | `<div>` | Initiates a dual list selector pane menu list item row. **Required** |
 | `.pf-c-dual-list-selector__draggable` | `<div>` | Initiates a dual list selector pane draggable element. |
-| `.pf-c-dual-list-selector__item` | `<button>`, `<div>` | Initiates a dual list selector pane menu item. **Required** |
+| `.pf-c-dual-list-selector__item` | `<span>`, `<div>` | Initiates a dual list selector pane menu item. **Required** |
 | `.pf-c-dual-list-selector__item-main` | `<span>` | Initiates a dual list selector pane menu item main container. **Required** |
 | `.pf-c-dual-list-selector__item-check` | `<span>` | Initiates the dual list selector item check. |
 | `.pf-c-dual-list-selector__item-count` | `<span>` | Initiates the dual list selector item count. |
