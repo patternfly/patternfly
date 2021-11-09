@@ -38,28 +38,6 @@ The truncate component contains to child elements, `.pf-c-truncate__start` and `
 </div>
 ```
 
-### In text
-```hbs
-<div style="width: 420px">
-  {{#> content}}
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at lacus quis urna auctor sagittis sed vitae tellus. Morbi fringilla purus leo, molestie eleifend enim convallis in. Nam justo justo, interdum at efficitur a, posuere at mauris.
-      {{#> truncate truncate--id="basic-middle-of-line-truncation-example" truncate--modifier="pf-u-default-color-200"}}
-        {{> truncate-start truncate-start--text="Vestibulum interdum risus et enim"}}
-        {{> truncate-end truncate-end--text="faucibus, sit amet molestie est accumsan.&lrm;"}}
-      {{/truncate}} Cras tincidunt rhoncus massa, ac consectetur purus luctus nec. Vestibulum imperdiet turpis sed elit facilisis, at ultrices eros tempor. Curabitur porta dolor malesuada accumsan varius. Quisque ut accumsan nulla. Curabitur ac libero est.
-    </p>
-    <p>
-      Vestibulum efficitur et leo in mollis. Nullam quis enim est. Sed blandit libero et viverra varius. Nulla placerat, nisl vitae interdum aliquam, sem mauris sagittis tellus, varius consectetur ligula sapien id nulla. Donec ultrices sed purus nec interdum. Duis egestas dui quam, nec rutrum nisl varius eu. Integer tempus sem orci, ut mollis leo consequat vel. Mauris euismod nisi nunc, a aliquet ipsum imperdiet at. Ut et nunc dignissim, pulvinar metus nec, volutpat velit. Proin eu ante cursus, blandit ipsum in, cursus erat. Maecenas ornare commodo condimentum. Pellentesque est libero, pulvinar iaculis efficitur quis, cursus et felis. Aliquam erat volutpat. Nulla eu dolor vel dui congue vulputate. Maecenas in ex dui. Nulla in erat pulvinar metus ullamcorper aliquam id non quam.
-    </p>
-
-    <p>
-      Donec bibendum volutpat ex, non ultrices enim tempor ut. Aliquam at metus at lacus sodales pretium interdum quis est. Donec tincidunt elit at cursus finibus. Aenean suscipit cursus justo, id facilisis ex ultrices sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec a orci odio. Nam pharetra felis at ligula ornare, vel pretium elit volutpat. Pellentesque lacinia nisi sit amet ex finibus efficitur. Cras interdum rutrum sem non eleifend. Proin velit nunc, aliquam id nisl vitae, malesuada gravida ante. Vivamus placerat libero sed porttitor consectetur.
-    </p>
-  {{/content}}
-</div>
-```
-
 ## Documentation
 
 ### Usage
