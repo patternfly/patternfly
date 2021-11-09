@@ -814,7 +814,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-list dual-list-selector-list--IsTree="true" dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
           {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--id="21" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
             {{#> dual-list-selector-list newcontext dual-list-selector-list--IsSublist="true"}}
