@@ -56,6 +56,18 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__toggle--m-split-button__toggle-check__input--TranslateY: #{pf-size-prem(-1px)};
   --pf-c-dropdown__toggle--m-split-button__toggle-text--MarginLeft: var(--pf-global--spacer--sm);
 
+  // Split button
+  --pf-c-dropdown__toggle--m-split-button--m-primary--child--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-dropdown__toggle--m-split-button--m-primary--child--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-dropdown__toggle--m-split-button--m-primary--child--hover--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-dropdown__toggle--m-split-button--m-primary--child--focus--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-dropdown__toggle--m-split-button--m-primary--child--active--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-dropdown__toggle--m-split-button--m-primary--child--m-expanded--BackgroundColor: var(--pf-global--primary-color--200);
+
+  // Split button, action, primary
+  --pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftColor: var(--pf-global--primary-color--200);
+  --pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+
   // Toggle Arrow
   --pf-c-dropdown__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
@@ -181,6 +193,10 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
       }
     }
   }
+
+  &.pf-m-expanded {
+    --pf-c-dropdown__toggle--m-split-button--m-primary--child--BackgroundColor: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--m-expanded--BackgroundColor);
+  }
 }
 
 .pf-c-dropdown__toggle {
@@ -260,6 +276,14 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
         }
         // stylelint-enable
       }
+
+      &.pf-m-primary {
+        // stylelint-disable max-nesting-depth
+        > :not(:first-child) {
+          border-left: var(--pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftWidth) solid var(--pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftColor);
+        }
+        // stylelint-enable
+      }
     }
 
     .pf-c-dropdown__toggle-check {
@@ -281,6 +305,39 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
     .pf-c-dropdown__toggle-text {
       margin-left: var(--pf-c-dropdown__toggle--m-split-button__toggle-text--MarginLeft);
+    }
+  }
+
+  &.pf-m-primary.pf-m-split-button:not(.pf-m-disabled) {
+    --pf-c-dropdown__toggle--before--BorderWidth: 0;
+    --pf-c-dropdown--m-expanded__toggle--before--BorderBottomWidth: 0;
+
+    > * {
+      background-color: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--BackgroundColor);
+      border: 0;
+
+      &:hover {
+        --pf-c-dropdown__toggle--m-split-button--m-primary--child--BackgroundColor: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--hover--BackgroundColor);
+      }
+
+      &:focus {
+        --pf-c-dropdown__toggle--m-split-button--m-primary--child--BackgroundColor: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--focus--BackgroundColor);
+      }
+
+      &:active,
+      &.pf-m-active {
+        --pf-c-dropdown__toggle--m-split-button--m-primary--child--BackgroundColor: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--focus--BackgroundColor);
+      }
+    }
+
+    > :first-child {
+      border-top-left-radius: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--BorderRadius);
+      border-bottom-left-radius: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--BorderRadius);
+    }
+
+    > :last-child {
+      border-top-right-radius: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--BorderRadius);
+      border-bottom-right-radius: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--BorderRadius);
     }
   }
 
@@ -350,8 +407,12 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &.pf-m-primary {
-    --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-primary--Color);
     --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-primary--BackgroundColor);
+    --pf-c-dropdown__toggle-button--Color: var(--pf-c-dropdown__toggle--m-primary--Color);
+
+    &:not(.pf-m-disabled) {
+      --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-primary--Color);
+    }
 
     border-radius: var(--pf-c-dropdown__toggle--m-primary--BorderRadius);
 
