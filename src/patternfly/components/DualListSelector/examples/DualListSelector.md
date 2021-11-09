@@ -33,12 +33,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         0 of 5 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
         {{/dual-list-selector-list-item}}
@@ -103,12 +103,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         0 of 0 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
       {{/dual-list-selector-list}}
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
@@ -142,12 +142,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         1 of 5 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
         {{/dual-list-selector-list-item}}
@@ -212,12 +212,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         0 of 0 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
       {{/dual-list-selector-list}}
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
@@ -251,12 +251,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         1 of 5 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
         {{/dual-list-selector-list-item}}
@@ -321,12 +321,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         0 of 0 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
       {{/dual-list-selector-list}}
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
@@ -360,12 +360,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         0 of 4 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
         {{/dual-list-selector-list-item}}
@@ -430,12 +430,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         0 of 1 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
         {{/dual-list-selector-list-item}}
@@ -472,12 +472,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         0 of 4 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
         {{/dual-list-selector-list-item}}
@@ -542,12 +542,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         1 of 1 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true"}}
           {{> dual-list-selector-item dual-list-selector-item--text="Item5"}}
         {{/dual-list-selector-list-item}}
@@ -560,7 +560,7 @@ cssPrefix: pf-c-dual-list-selector
 
 ### Tree view
 ```hbs
-{{#> dual-list-selector dual-list-selector--id="basic"}}
+{{#> dual-list-selector dual-list-selector--id="tree"}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
@@ -585,15 +585,15 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         1 of 11 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--IsTree="true" dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
           {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--id="0" dual-list-selector-item--count="6" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-            {{#> dual-list-selector-list newcontext}}
+            {{#> dual-list-selector-list newcontext dual-list-selector-list--IsSublist="true" dual-list-selector-list--IsSublist="true"}}
               {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
                 {{#> dual-list-selector-item dual-list-selector-item--text="Red" dual-list-selector-item--id="1" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
@@ -605,7 +605,7 @@ cssPrefix: pf-c-dual-list-selector
               {{/dual-list-selector-list-item}}
               {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
                 {{#> dual-list-selector-item dual-list-selector-item--text="Green" dual-list-selector-item--id="4" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-                {{#> dual-list-selector-list newcontext}}
+                {{#> dual-list-selector-list newcontext dual-list-selector-list--IsSublist="true"}}
                   {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
                     {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--id="5" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
@@ -681,12 +681,12 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         0 of 0 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
       {{/dual-list-selector-list}}
     {{/dual-list-selector-menu}}
   {{/dual-list-selector-pane}}
@@ -695,7 +695,7 @@ cssPrefix: pf-c-dual-list-selector
 
 ### Tree view with chosen and disabled options
 ```hbs
-{{#> dual-list-selector dual-list-selector--id="basic"}}
+{{#> dual-list-selector dual-list-selector--id="tree-options"}}
   {{#> dual-list-selector-pane dual-list-selector-pane--id=(concat dual-list-selector--id '-available') dual-list-selector-pane--modifier="pf-m-available"}}
     {{#> dual-list-selector-header}}
       {{#> dual-list-selector-title}}
@@ -720,15 +720,15 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         0 of 10 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--IsTree="true" dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
           {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--count="6" dual-list-selector-item--id="11" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-            {{#> dual-list-selector-list newcontext}}
+            {{#> dual-list-selector-list newcontext dual-list-selector-list--IsSublist="true"}}
               {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true" dual-list-selector-list-item-row--HasCheck="true"}}
                 {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--id="12" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
@@ -737,7 +737,7 @@ cssPrefix: pf-c-dual-list-selector
               {{/dual-list-selector-list-item}}
               {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item--IsDisabled="true" dual-list-selector-list-item-row--HasCheck="true"}}
                 {{#> dual-list-selector-item dual-list-selector-item--text="Green (disabled)" dual-list-selector-item--id="14" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-                {{#> dual-list-selector-list newcontext dual-list-selector-list-item--IsTopLevelDisabled="true" dual-list-selector-list-item--IsDisabled="true"}}
+                {{#> dual-list-selector-list newcontext dual-list-selector-list--IsSublist="true" dual-list-selector-list-item--IsTopLevelDisabled="true" dual-list-selector-list-item--IsDisabled="true"}}
                   {{#> dual-list-selector-list-item dual-list-selector-list-item-row--HasCheck="true"}}
                     {{#> dual-list-selector-item dual-list-selector-item--text="Light green" dual-list-selector-item--id="15" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
                   {{/dual-list-selector-list-item}}
@@ -809,15 +809,15 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text}}
+      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
         0 of 0 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}
-      {{#> dual-list-selector-list}}
+      {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
         {{#> dual-list-selector-list-item dual-list-selector-list-item--IsExpandable="true" dual-list-selector-list-item--IsExpanded="true" dual-list-selector-list-item-row--HasCheck="true"}}
           {{#> dual-list-selector-item dual-list-selector-item--text="Colors" dual-list-selector-item--id="21" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
-            {{#> dual-list-selector-list newcontext}}
+            {{#> dual-list-selector-list newcontext dual-list-selector-list--IsSublist="true"}}
               {{#> dual-list-selector-list-item dual-list-selector-list-item-row--IsSelected="true" dual-list-selector-list-item-row--HasCheck="true"}}
                 {{#> dual-list-selector-item dual-list-selector-item--text="Orange" dual-list-selector-item--id="22" dual-list-selector-item--type="div"}}{{/dual-list-selector-item}}
               {{/dual-list-selector-list-item}}
@@ -860,12 +860,12 @@ cssPrefix: pf-c-dual-list-selector
         {{/dual-list-selector-tools-actions}}
       {{/dual-list-selector-tools}}
       {{#> dual-list-selector-status}}
-        {{#> dual-list-selector-status-text}}
+        {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
           0 of 5 items selected
         {{/dual-list-selector-status-text}}
       {{/dual-list-selector-status}}
       {{#> dual-list-selector-menu}}
-        {{#> dual-list-selector-list}}
+        {{#> dual-list-selector-list dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
           {{#> dual-list-selector-list-item}}
             {{> dual-list-selector-item dual-list-selector-item--text="Item1"}}
           {{/dual-list-selector-list-item}}
@@ -924,12 +924,12 @@ cssPrefix: pf-c-dual-list-selector
         {{/dual-list-selector-tools-actions}}
       {{/dual-list-selector-tools}}
       {{#> dual-list-selector-status}}
-        {{#> dual-list-selector-status-text}}
+        {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
           0 of 0 items selected
         {{/dual-list-selector-status-text}}
       {{/dual-list-selector-status}}
       {{#> dual-list-selector-menu}}
-        {{#> dual-list-selector-list dual-list-selector-list-item--IsDraggable="true"}}
+        {{#> dual-list-selector-list dual-list-selector-list-item--IsDraggable="true" dual-list-selector-list--LabelledBy=(concat dual-list-selector-pane--id '-status-text')}}
           {{#> dual-list-selector-list-item dual-list-selector-list-item--id=(concat dual-list-selector--id '-list-item-2') dual-list-selector-draggable-button--IsDisabled="true"}}
             {{> dual-list-selector-item dual-list-selector-item--text="Item2 - draggable icon disabled"}}
           {{/dual-list-selector-list-item}}
@@ -961,8 +961,13 @@ cssPrefix: pf-c-dual-list-selector
 | `aria-live` | `[element with live text]` | To give screen reader users live feedback about what's happening during interaction with the dual list selector, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-dual-list-selector__draggable .pf-c-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. **Highly recommended** |
 | `aria-labelledby="[id of .pf-c-dual-list-selector__draggable .pf-c-button] [id of item text]"` | `.pf-c-table__dual-list-selector .pf-c-button` | Provides an accessible name for the draggable button. |
-| `id="[]"` | `.pf-c-dual-list-selector__draggable .pf-c-button`, `[item text]` | Gives the button and the text element accessible IDs. |
-| `role="option"` | `.pf-c-dual-list-selector__list-item [li]` | not sure |
+| `id="[]"` | `.pf-c-dual-list-selector__draggable .pf-c-button`, `[item text]`, `.pf-c-dual-list-selector__status-text` | Gives the button and the text element accessible IDs. |
+| `aria-labelledby="[id of .pf-c-dual-list-selector__status-text]` | `.pf-c-dual-list-selector__list [ul]` | Gives the list an accessible name. |
+| `role="listbox or tree or group"` | `.pf-c-dual-list-selector__list [ul]` | Indicates the list is single, a tree, or a subgroup within the tree. |
+| `aria-multiselectable="true"` | `.pf-c-dual-list-selector__list [ul]` | Indicates the list is multiselectable. |
+| `aria-activedescendant=""` | `.pf-c-dual-list-selector__list [ul]` | Indicates the list has clickable children. |
+| `role="option or treeitem"` | `.pf-c-dual-list-selector__list-item [li]` | Indicates whether the item is part of a tree. |
+| `aria-expanded="true"`      | `.pf-c-dual-list-selector__list-item [li]` | Indicates a treeitem is expanded. |
 
 ### Usage
 
