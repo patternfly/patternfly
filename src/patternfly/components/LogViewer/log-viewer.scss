@@ -65,19 +65,10 @@
   // Dark theme
   --pf-c-log-viewer--m-dark__main--BorderWidth: 0;
 
-
   &.pf-m-dark {
+    @include pf-t-dark;
+
     --pf-c-log-viewer__main--BorderWidth: var(--pf-c-log-viewer--m-dark__main--BorderWidth);
-
-    .pf-c-log-viewer__main {
-      --pf-c-log-viewer__main--BackgroundColor: var(--pf-global--BackgroundColor--100);
-      --pf-c-log-viewer__main--BorderColor: var(--pf-global--BorderColor--100);
-      --pf-c-log-viewer__text--Color: var(--pf-global--Color--100);
-      --pf-c-log-viewer__index--Color: var(--pf-global--Color--200);
-      --pf-c-log-viewer--m-line-numbers__main--before--BackgroundColor: var(--pf-global--BorderColor--100);
-
-      @include pf-t-dark;
-    }
   }
 
   display: flex;
@@ -125,6 +116,8 @@
 
 // Header
 .pf-c-log-viewer__header {
+  @include pf-t-light;
+
   margin-bottom: var(--pf-c-log-viewer__header--MarginBottom);
 }
 
