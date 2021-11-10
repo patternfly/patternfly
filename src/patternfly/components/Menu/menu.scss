@@ -203,8 +203,8 @@
   }
 
   // nested flyout menu
-  .pf-c-menu.pf-m-flyout,
-  &.pf-m-flyout .pf-c-menu {
+  &.pf-m-flyout,
+  &.pf-m-flyout & {
     position: absolute;
     top: var(--pf-c-menu--m-flyout__menu--Top);
     right: var(--pf-c-menu--m-flyout__menu--Right);

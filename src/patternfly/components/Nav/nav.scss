@@ -329,7 +329,6 @@
   --pf-c-nav--c-menu__list-item--focus-within--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--c-menu__list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav--c-menu__list-item--focus-within--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-nav--c-menu__list-item--active--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
   // Menu item
   --pf-c-nav--c-menu__item--PaddingTop: var(--pf-global--spacer--md);
@@ -360,13 +359,13 @@
   // stylelint-enable
 
   // Menu flyout
-  --pf-c-nav--c-menu--m-flyout--Top: calc(0px + var(--pf-c-nav--c-menu--m-flyout--top-offset));
+  --pf-c-nav--c-menu--m-flyout--Top: var(--pf-c-nav--c-menu--m-flyout--top-offset);
   --pf-c-nav--c-menu--m-flyout--c-menu--Top: calc(var(--pf-c-nav--c-menu--m-flyout--Top) * -1);
   --pf-c-nav--c-menu--m-flyout--c-menu--Right: auto;
   --pf-c-nav--c-menu--m-flyout--c-menu--Bottom: auto;
   --pf-c-nav--c-menu--m-flyout--c-menu--Left: calc(100% - var(--pf-c-nav--c-menu--m-flyout--left-offset));
   --pf-c-nav--c-menu--m-flyout--m-left--Right: calc(100% - var(--pf-c-nav--c-menu--m-flyout--m-left--right-offset));
-  --pf-c-nav--c-menu--m-flyout--m-top--Bottom: calc(0px + var(--pf-c-nav--c-menu--m-flyout--m-top--bottom-offset));
+  --pf-c-nav--c-menu--m-flyout--m-top--Bottom: var(--pf-c-nav--c-menu--m-flyout--m-top--bottom-offset);
   --pf-c-nav--c-menu--m-flyout--BoxShadow: var(--pf-global--BoxShadow--lg);
 
   // Menu flyout item
@@ -400,7 +399,7 @@
 
   .pf-c-menu {
     --pf-c-menu--MinWidth: 100%;
-    --pf-c-menu--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
+    --pf-c-menu--BackgroundColor: var(--pf-c-nav--c-menu--BackgroundColor);
     --pf-c-menu__list--PaddingTop: var(--pf-c-nav--c-menu__list--PaddingTop);
     --pf-c-menu__list--PaddingBottom: var(--pf-c-nav--c-menu__list--PaddingBottom);
     --pf-c-menu__item--PaddingTop: var(--pf-c-nav--c-menu__item--PaddingTop);
@@ -426,9 +425,9 @@
       --pf-c-menu__list--PaddingBottom: 0;
       --pf-c-menu__item--FontSize: var(--pf-c-nav--c-menu__item--FontSize);
       --pf-c-menu__item--Color: var(--pf-c-nav--c-menu__item--Color);
-      --pf-c-menu__item--PaddingTop: var(--pf-global--spacer--sm);
+      --pf-c-menu__item--PaddingTop: var(--pf-c-nav--c-menu--m-flyout__item--PaddingTop);
       --pf-c-menu__item--PaddingRight: var(--pf-c-nav--c-menu--m-flyout__item--PaddingRight);
-      --pf-c-menu__item--PaddingBottom: var(--pf-global--spacer--sm);
+      --pf-c-menu__item--PaddingBottom: var(--pf-c-nav--c-menu--m-flyout__item--PaddingBottom);
       --pf-c-menu__item--PaddingLeft: var(--pf-c-nav--c-menu--m-flyout__item--PaddingLeft);
 
       top: var(--pf-c-nav--c-menu--m-flyout--c-menu--Top);
@@ -454,8 +453,8 @@
     }
 
     &.pf-m-left {
-      --pf-c-nav--c-menu--m-flyout--c-menu--Left: auto;
       --pf-c-nav--c-menu--m-flyout--c-menu--Right: var(--pf-c-nav--c-menu--m-flyout--m-left--Right);
+      --pf-c-nav--c-menu--m-flyout--c-menu--Left: auto;
     }
 
     .pf-c-divider {
@@ -808,6 +807,8 @@
       --pf-c-menu__item--PaddingBottom: var(--pf-c-nav__item--m-flyout--c-menu__item--PaddingBottom);
       --pf-c-menu__item--PaddingLeft: var(--pf-c-nav__item--m-flyout--c-menu__item--PaddingLeft);
       --pf-c-menu__item-description--Color: var(--pf-c-nav__item--m-flyout--c-menu__item-description--Color);
+      --pf-c-nav--c-menu--m-flyout--c-menu--Bottom: var(--pf-c-nav__item--m-flyout--c-menu--m-top--Bottom);
+      --pf-c-nav--c-menu--m-flyout--c-menu--Right: var(--pf-c-nav__item--m-flyout--c-menu--m-left--Right);
 
       position: absolute;
       top: var(--pf-c-nav__item--m-flyout--c-menu--Top);
@@ -815,16 +816,6 @@
 
       .pf-c-menu {
         top: var(--pf-c-nav__item--m-flyout--c-menu--c-menu--Top);
-      }
-
-      &.pf-m-top {
-        top: auto;
-        bottom: var(--pf-c-nav__item--m-flyout--c-menu--m-top--Bottom);
-      }
-
-      &.pf-m-left {
-        right: var(--pf-c-nav__item--m-flyout--c-menu--m-left--Right);
-        left: auto;
       }
 
       .pf-c-menu__list-item:first-child {
