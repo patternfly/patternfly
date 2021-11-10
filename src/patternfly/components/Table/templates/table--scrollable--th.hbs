@@ -1,16 +1,9 @@
-{{#> table-th table-th--modifier=(concat 'pf-m-nowrap ' table--scrollable--th--modifier) table-th--attribute=(concat 'scope="col" ' table-th--attribute) table-th--data-label="Example th"}}
-  {{#> table-text}}
-    {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
-      {{#unless table--scrollable--NoIcon}}
-        <i class="pficon fas {{#if table--scrollable--th--icon}}{{table--scrollable--th--icon}}{{else}}pf-icon-blueprint{{/if}}" aria-hidden="true"></i>
-      {{/unless}}
-      <span>
-        {{#if table--scrollable--th--content}}
-          {{{table--scrollable--th--content}}}
-        {{else}}
-          Header cell
-        {{/if}}
-      </span>
-    {{/l-flex}}
-  {{/table-text}}
+{{#> table-th table-th--modifier=(concat table--scrollable--th--modifier ' pf-m-truncate') table-th--attribute=(concat 'scope="col" ' table-th--attribute) table-th--data-label="Example th"}}
+  {{#if table--scrollable--th--content}}
+    {{{table--scrollable--th--content}}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    Header cell
+  {{/if}}
 {{/table-th}}
