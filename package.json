@@ -5,6 +5,7 @@
   "keywords": [],
   "license": "MIT",
   "scripts": {
+    "a11y": "patternfly-a11y --config patternfly-a11y.config",
     "build-patternfly": "gulp buildPatternfly",
     "build": "gulp build",
     "build:docs": "gulp buildWebpack",
@@ -24,7 +25,7 @@
     "screenshots": "rimraf src/generated/**/*.png && theme-patternfly-org screenshots --urlPrefix http://localhost:5000",
     "serve": "theme-patternfly-org serve public",
     "start": "gulp develop",
-    "test": "patternfly-a11y --config patternfly-a11y.config",
+    "test": "npm run a11y",
     "workflows": "node .github/generate-workflows"
   },
   "devDependencies": {

@@ -21,8 +21,8 @@ Any of the files above are meant for use in consuming the library. The recommend
 To setup the PatternFly 4 development environment:
 
 - clone the project
-- run `npm install` from the project root
-- run `npm start`
+- run `yarn install` from the project root
+- run `yarn start`
 - open your browser to `http://localhost:8001`
 
 After working on your contribution, check for [accessibility violations](#testing-for-accessibility).
@@ -58,8 +58,8 @@ To create 3 new demos named "Test demo", "Test demo 2", and "Test demo 3", run:
 #### Update screenshots
 When making visual changes to a full page example, new example preview screenshots must be generated. To update the screenshots:
 
-- open a terminal and run `npm run build` and `npm run serve`
-- in another terminal, run `npm run screenshots`
+- open a terminal and run `yarn build && yarn run serve`
+- in another terminal, run `yarn screenshots`
 
 ## Guidelines for CSS development
 
@@ -80,14 +80,15 @@ PatternFly uses [aXe: The Accessibility Engine](https://www.deque.com/axe/) to c
 aXe is available as either a browser extension or npm script.
 
 To run the a11y audit locally:
+
 - install the latest [chromedriver](http://chromedriver.chromium.org/downloads) and ensure its available on your system `$PATH`
   - macOS users can simply `brew cask install chromedriver`
-- run `npm run dev`
-- run `npm run a11y` (in another console)
+- open a terminal and run `yarn build && yarn run serve`
+- in another terminal, run `yarn a11y`
 
 The tool is configured to return WCAG 2.0 AA violations for the full page renderings of all components, layouts, utilities, and demos. The tool will provide feedback about what the violation is and a link to documentation about how to address the violation.
 
-The same tool is also available as a browser extension for [Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
+The same tool is also available as a browser extension for [Chrome](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
 ### Fixing violations
 
@@ -102,11 +103,11 @@ If you have any suggestions about ways that we can improve how we use this tool,
 ## FAQ
 
 #### CSS Variables
-[How do I use CSS variables to customize
-the library?](https://pf4.patternfly.org/guidelines#variables)
+[How do I use CSS variables to customize the library?](https://pf4.patternfly.org/guidelines#variables)
 
 #### Browser support
 PatternFly 4 is supported on the latest two major versions of the following browsers:
+
 - Chrome
 - Firefox
 - Safari
