@@ -350,22 +350,16 @@
   // Menu item description
   --pf-c-nav--c-menu__item-description--Color: var(--pf-global--Color--400);
 
-  // stylelint-disable length-zero-no-unit
-  // Needs a unit because of type checking for use in calc()
-  --pf-c-nav--c-menu--m-flyout--top-offset: 0px;
-  --pf-c-nav--c-menu--m-flyout--left-offset: #{pf-size-prem(4px)};
-  --pf-c-nav--c-menu--m-flyout--m-top--bottom-offset: 0px;
-  --pf-c-nav--c-menu--m-flyout--m-left--right-offset: #{pf-size-prem(4px)};
-  // stylelint-enable
-
   // Menu flyout
-  --pf-c-nav--c-menu--m-flyout--Top: var(--pf-c-nav--c-menu--m-flyout--top-offset);
+  --pf-c-nav--c-menu--m-flyout--left-offset: #{pf-size-prem(4px)};
+  --pf-c-nav--c-menu--m-flyout--m-left--right-offset: #{pf-size-prem(4px)};
+  --pf-c-nav--c-menu--m-flyout--Top: 0;
   --pf-c-nav--c-menu--m-flyout--c-menu--Top: calc(var(--pf-c-nav--c-menu--m-flyout--Top) * -1);
   --pf-c-nav--c-menu--m-flyout--c-menu--Right: auto;
   --pf-c-nav--c-menu--m-flyout--c-menu--Bottom: auto;
   --pf-c-nav--c-menu--m-flyout--c-menu--Left: calc(100% - var(--pf-c-nav--c-menu--m-flyout--left-offset));
   --pf-c-nav--c-menu--m-flyout--m-left--Right: calc(100% - var(--pf-c-nav--c-menu--m-flyout--m-left--right-offset));
-  --pf-c-nav--c-menu--m-flyout--m-top--Bottom: var(--pf-c-nav--c-menu--m-flyout--m-top--bottom-offset);
+  --pf-c-nav--c-menu--m-flyout--m-top--Bottom: 0;
   --pf-c-nav--c-menu--m-flyout--BoxShadow: var(--pf-global--BoxShadow--lg);
 
   // Menu flyout item

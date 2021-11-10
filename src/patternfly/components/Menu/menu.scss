@@ -187,7 +187,6 @@
   z-index: var(--pf-c-menu--ZIndex);
   width: var(--pf-c-menu--Width);
   min-width: var(--pf-c-menu--MinWidth);
-  overflow: visible;
   background-color: var(--pf-c-menu--BackgroundColor);
   box-shadow: var(--pf-c-menu--BoxShadow);
 
@@ -203,7 +202,7 @@
   }
 
   // nested flyout menu
-  &.pf-m-flyout,
+  & &.pf-m-flyout,
   &.pf-m-flyout & {
     position: absolute;
     top: var(--pf-c-menu--m-flyout__menu--Top);
