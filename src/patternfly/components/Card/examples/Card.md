@@ -270,6 +270,21 @@ import './Card.css'
 {{/card}}
 ```
 
+### Non selectable
+```hbs
+{{#> card card--id="card-non-selectable-example" card--modifier="pf-m-non-selectable-raised"}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
 ### Hoverable (legacy)
 ```hbs
 {{#> card card--id="card-hoverable-legacy-example" card--modifier="pf-m-hoverable"}}
@@ -500,6 +515,7 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-hoverable-raised` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
 | `.pf-m-selectable-raised` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
 | `.pf-m-selected-raised` | `.pf-c-card.pf-m-selectable-raised` | Modifies a selectable card for the selected state. |
+| `.pf-m-non-selectable-raised` | `.pf-c-card` | Modifies a selectable card so that it is not selectable. |
 | `.pf-m-flat` | `.pf-c-card` | Modifies the card to have a border instead of a shadow. `.pf-m-flat` is for use in layouts where cards are against a white background. |
 | `.pf-m-rounded` | `.pf-c-card` | Modifies the card to have rounded corners. |
 | `.pf-m-plain` | `.pf-c-card` | Modifies the card to have no box shadow and no background color. |

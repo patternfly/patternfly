@@ -1,5 +1,5 @@
 {{#> gallery gallery--modifier="pf-m-gutter"}}
-    {{#> card card--id="card-empty-state" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-empty-state" card--modifier="pf-m-selectable-raised pf-m-compact"}}
       {{#> bullseye}}
         {{#> empty-state empty-state--modifier="pf-m-xs"}}
           <i class="fas fa-plus-circle pf-c-empty-state__icon"></i>
@@ -14,7 +14,7 @@
         {{/empty-state}}
       {{/bullseye}}
     {{/card}}
-    {{#> card card--id="card-1" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-1" card--modifier="pf-m-selectable-raised pf-m-compact"}}
       {{#> card-header}}
         <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
         {{#> card-actions}}
@@ -34,7 +34,7 @@
           PatternFly is a community project that promotes design commonality and improves user experience.
       {{/card-body}}
     {{/card}}
-    {{#> card card--id="card-2" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-2" card--modifier="pf-m-selectable-raised pf-m-compact"}}
       {{#> card-header}}
         <img src="/assets/images/activemq-core_200x150.png" width="60px" alt="Logo">
         {{#> card-actions}}
@@ -54,7 +54,7 @@
         The ActiveMQ component allows messages to be sent to a JMS Queue or Topic; or messages to be consumed from a JMS Queue or Topic using Apache ActiveMQ.
       {{/card-body}}
     {{/card}}
-    {{#> card card--id="card-3" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-3" card--modifier="pf-m-selectable-raised pf-m-compact"}}
       {{#> card-header}}
         <img src="/assets/images/camel-spark_200x150.png" width="60px" alt="Logo">
         {{#> card-actions}}
@@ -74,7 +74,7 @@
         This documentation page covers the Apache Spark component for the Apache Camel.
       {{/card-body}}
     {{/card}}
-    {{#> card card--id="card-4" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-4" card--modifier="pf-m-selectable-raised pf-m-compact"}}
       {{#> card-header}}
         <img src="/assets/images/camel-avro_200x150.png" width="60px" alt="Logo">
         {{#> card-actions}}
@@ -94,7 +94,7 @@
         This component provides a dataformat for avro, which allows serialization and deserialization of messages using Apache Avro’s binary dataformat. Moreover, it provides support for Apache Avro’s rpc, by providing producers and consumers endpoint for using avro over netty or http.
       {{/card-body}}
     {{/card}}
-    {{#> card card--id="card-5" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-5" card--modifier="pf-m-selectable-raised pf-m-selected-raised pf-m-compact"}}
     {{#> card-header}}
       <img src="/assets/images/FuseConnector_Icons_AzureServices.png" width="60px" alt="Logo">
       {{#> card-actions}}
@@ -114,13 +114,13 @@
       The Camel Components for Windows Azure Services provide connectivity to Azure services from Camel.
     {{/card-body}}
     {{/card}}
-    {{#> card card--id="card-6" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-6" card--modifier="pf-m-non-selectable-raised pf-m-compact"}}
     {{#> card-header}}
         <img src="/assets/images/camel-saxon_200x150.png" width="60px" alt="Logo">
         {{#> card-actions}}
           {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
           {{#> check check--modifier="pf-m-standalone"}}
-            {{#> check-input check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check" aria-labelledby="' card--id '-check-label"')}}{{/check-input}}
+            {{#> check-input check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check" disabled aria-labelledby="' card--id '-check-label"')}}{{/check-input}}
           {{/check}}
         {{/card-actions}}
       {{/card-header}}
@@ -134,7 +134,7 @@
       For providing flexible endpoints to sign and verify exchanges using the Signature Service of the Java Cryptographic Extension.
       {{/card-body}}
     {{/card}}
-    {{#> card card--id="card-7" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-7" card--modifier="pf-m-selectable-raised pf-m-compact"}}
       {{#> card-header}}
         <img src="/assets/images/camel-dropbox_200x150.png" width="60px" alt="Logo">
         {{#> card-actions}}
@@ -154,7 +154,7 @@
         The dropbox: component allows you to treat Dropbox remote folders as a producer or consumer of messages.
       {{/card-body}}
     {{/card}}
-    {{#> card card--id="card-8" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-8" card--modifier="pf-m-selectable-raised pf-m-compact"}}
       {{#> card-header}}
         <img src="/assets/images/camel-infinispan_200x150.png" width="60px" alt="Logo">
         {{#> card-actions}}
@@ -174,7 +174,7 @@
         Read or write to a fully-supported distributed cache and data grid for faster integration services.
       {{/card-body}}
     {{/card}}
-    {{#> card card--id="card-9" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-9" card--modifier="pf-m-selectable-raised pf-m-compact"}}
       {{#> card-header}}
         <img src="/assets/images/FuseConnector_Icons_REST.png" width="60px" alt="Logo">
         {{#> card-actions}}
@@ -195,7 +195,7 @@
         From Camel 2.18 onwards the rest component can also be used as a client (producer) to call REST services.
       {{/card-body}}
     {{/card}}
-    {{#> card card--id="card-10" card--modifier="pf-m-hoverable pf-m-compact"}}
+    {{#> card card--id="card-10" card--modifier="pf-m-selectable-raised pf-m-compact"}}
       {{#> card-header}}
         <img src="/assets/images/camel-swagger-java_200x150.png" width="60px" alt="Logo">
         {{#> card-actions}}
