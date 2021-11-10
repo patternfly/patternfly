@@ -1,5 +1,6 @@
-// Truncate
 .pf-c-truncate {
+  --pf-c-truncate--FontSize: var(--pf-c-truncate--FontSize, 1rem);
+
   display: inline-flex;
   flex-wrap: nowrap;
   max-width: 100%;
@@ -10,18 +11,8 @@
 .pf-c-truncate__end {
   flex-shrink: 1;
   overflow: hidden;
-  white-space: nowrap;
-}
-
-// Start
-.pf-c-truncate__start {
   text-overflow: ellipsis;
-}
-
-// Start + end
-.pf-c-truncate__start + .pf-c-truncate__end {
-  text-overflow: clip;
-  text-overflow: "";
+  white-space: nowrap;
 }
 
 // End
@@ -30,6 +21,21 @@
   text-align: left;
 }
 
-.pf-c-truncate__end:first-child {
-  text-overflow: ellipsis;
+// text-overflow: <string>
+@supports (text-overflow: "") {
+  .pf-c-truncate__start + .pf-c-truncate__end {
+    text-overflow: "";
+  }
+}
+
+// text-overflow: ellipsis
+@supports not (text-overflow: "") {
+  // Start + end = middle truncation
+  .pf-c-truncate__start + .pf-c-truncate__end {
+    font-size: 0; // shrink ellipsis size to zero
+
+    .pf-c-truncate__text {
+      font-size: var(--pf-c-truncate--FontSize);
+    }
+  }
 }

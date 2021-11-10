@@ -2,10 +2,12 @@
   {{#if truncate-end--attribute}}
     {{{truncate-end--attribute}}}
   {{/if}}>
-  {{#if truncate-end--text}}
-    {{{truncate-end--text}}}
-  {{/if}}
-  {{#if @partial-block}}
-    {{> @partial-block}}
-  {{/if}}
+  {{#> truncate-text truncate-text--attribute='style="--pf-c-truncate--FontSize: 1rem"'}}
+    {{#if truncate-end--text}}
+      {{{truncate-end--text}}}
+    {{/if}}
+    {{#if @partial-block}}
+      {{> @partial-block}}
+    {{/if}}
+  {{/truncate-text}}
 </span>
