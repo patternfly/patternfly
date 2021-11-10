@@ -1,4 +1,5 @@
 .pf-c-menu-toggle {
+  --pf-c-menu-toggle--BorderRadius: 0;
   --pf-c-menu-toggle--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-menu-toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-menu-toggle--PaddingBottom: var(--pf-global--spacer--form-element);
@@ -48,6 +49,7 @@
   --pf-c-menu-toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
 
   // Primary
+  --pf-c-menu-toggle--m-primary--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-menu-toggle--m-primary--Color: var(--pf-global--Color--light-100);
   --pf-c-menu-toggle--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-menu-toggle--m-primary--hover--BackgroundColor: var(--pf-global--primary-color--200);
@@ -100,6 +102,7 @@
   color: var(--pf-c-menu-toggle--Color);
   background-color: var(--pf-c-menu-toggle--BackgroundColor);
   border: 0;
+  border-radius: var(--pf-c-menu-toggle--BorderRadius);
 
   &::before,
   &::after {
@@ -123,6 +126,7 @@
   }
 
   &.pf-m-primary {
+    --pf-c-menu-toggle--BorderRadius: var(--pf-c-menu-toggle--m-primary--BorderRadius);
     --pf-c-menu-toggle--Color: var(--pf-c-menu-toggle--m-primary--Color);
     --pf-c-menu-toggle--BackgroundColor: var(--pf-c-menu-toggle--m-primary--BackgroundColor);
     --pf-c-menu-toggle--hover--BackgroundColor: var(--pf-c-menu-toggle--m-primary--hover--BackgroundColor);
