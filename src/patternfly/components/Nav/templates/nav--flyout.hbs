@@ -16,14 +16,9 @@
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item nav-item--IsFlyout="true" nav-item--expanded="true"}}
-      {{#> nav-link nav-link--href="#"}}
+      {{#> nav-link nav-link--href="#" nav-link--modifier="pf-m-hover"}}
         Subscriptions
       {{/nav-link}}
-      {{#if nav--IsMenuFlyout}}
-        {{> nav--flyout--menu--nav-item-submenu}}
-      {{else}}
-        {{> nav--flyout--nav-item-submenu}}
-      {{/if}}
     {{/nav-item}}
     {{#> nav-item}}
       {{#> nav-link nav-link--href="#"}}

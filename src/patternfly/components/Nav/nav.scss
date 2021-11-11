@@ -894,7 +894,8 @@
 
   // States
   // Set states property explicitly to override with modifiers without having to wrap updates with :state { update }
-  &:hover {
+  &:hover,
+  &.pf-m-hover {
     color: var(--pf-c-nav__link--hover--Color);
     background-color: var(--pf-c-nav__link--hover--BackgroundColor);
 

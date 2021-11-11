@@ -13,8 +13,7 @@
 #ws-core-c-navigation-nav-with-drilldown-menu .pf-c-nav,
 #ws-core-c-navigation-level-2-drilldown,
 #ws-core-c-navigation-level-3-drilldown,
-#ws-core-c-navigation-nav-with-flyout .pf-c-nav,
-#ws-core-c-navigation-nav-with-menu-and-flyout .pf-c-nav {
+#ws-core-c-navigation-nav-with-flyout .pf-c-nav {
   padding: 0;
   background-color: var(--pf-global--BackgroundColor--dark-300);
 }
@@ -47,7 +46,13 @@
 }
 
 #ws-core-c-navigation-nav-with-flyout .ws-preview-html,
-[id^="ws-core-c-navigation-nav-with-drilldown-menu"] .ws-preview-html,
-#ws-core-c-navigation-nav-with-menu-and-flyout .ws-preview-html {
+[id^="ws-core-c-navigation-nav-with-drilldown-menu"] .ws-preview-html {
   width: 260px;
+}
+
+
+#ws-core-c-navigation-nav-with-flyout .pf-c-menu.pf-m-flyout.pf-m-nav {
+  position: absolute;
+  top: 168px;
+  left: 256px;
 }
