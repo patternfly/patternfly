@@ -49,7 +49,6 @@
   --pf-c-menu-toggle--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
 
   // Primary
-  --pf-c-menu-toggle--m-primary--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-menu-toggle--m-primary--Color: var(--pf-global--Color--light-100);
   --pf-c-menu-toggle--m-primary--BorderRadius: var(--pf-global--BorderRadius--sm);
   --pf-c-menu-toggle--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
@@ -189,6 +188,10 @@
     &:active {
       --pf-c-menu-toggle--m-secondary--before--BorderColor: var(--pf-c-menu-toggle--m-secondary--active--before--BorderColor);
       --pf-c-menu-toggle--m-secondary--before--BorderWidth: var(--pf-c-menu-toggle--m-secondary--active--before--BorderWidth);
+    }
+
+    &.pf-m-expanded {
+      --pf-c-menu-toggle--m-secondary--before--BorderWidth: var(--pf-c-menu-toggle--m-expanded__toggle--m-secondary--before--BorderWidth);
     }
   }
 

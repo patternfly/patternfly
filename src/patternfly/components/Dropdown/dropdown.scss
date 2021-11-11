@@ -464,7 +464,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     border-radius: var(--pf-c-dropdown__toggle--m-secondary--BorderRadius);
 
     &::before {
-      border: var(--pf-c-dropdown__toggle--m-secondary--before--BorderWidth) solid var(--pf-c-dropdown__toggle--m-secondary--before--BorderColor); // update at breaking change
+      border: var(--pf-c-dropdown__toggle--m-secondary--before--BorderWidth) solid var(--pf-c-dropdown__toggle--m-secondary--before--BorderColor);
       border-radius: var(--pf-c-dropdown__toggle--m-secondary--BorderRadius);
     }
 
