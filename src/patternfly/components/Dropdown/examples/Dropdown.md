@@ -78,11 +78,6 @@ import './Dropdown.css'
 {{> dropdown dropdown--id="dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
 ```
 
-### Split button, primary (checkbox with toggle text)
-```hbs
-{{> dropdown dropdown--id="dropdown-split-button-primary-text" dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
-```
-
 ### Split button (action)
 ```hbs
 {{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
