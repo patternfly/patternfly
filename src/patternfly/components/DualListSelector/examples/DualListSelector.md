@@ -33,7 +33,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         0 of 5 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -103,7 +103,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         0 of 0 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -142,7 +142,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         1 of 5 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -212,7 +212,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         0 of 0 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -251,7 +251,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         1 of 5 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -321,7 +321,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         0 of 0 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -360,7 +360,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         0 of 4 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -430,7 +430,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         0 of 1 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -472,7 +472,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         0 of 4 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -542,7 +542,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         1 of 1 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -585,7 +585,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         1 of 11 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -681,7 +681,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         0 of 0 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -720,7 +720,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         0 of 10 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -809,7 +809,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-tools-actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
-      {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+      {{#> dual-list-selector-status-text}}
         0 of 0 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
@@ -860,7 +860,7 @@ cssPrefix: pf-c-dual-list-selector
         {{/dual-list-selector-tools-actions}}
       {{/dual-list-selector-tools}}
       {{#> dual-list-selector-status}}
-        {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+        {{#> dual-list-selector-status-text}}
           0 of 5 items selected
         {{/dual-list-selector-status-text}}
       {{/dual-list-selector-status}}
@@ -924,7 +924,7 @@ cssPrefix: pf-c-dual-list-selector
         {{/dual-list-selector-tools-actions}}
       {{/dual-list-selector-tools}}
       {{#> dual-list-selector-status}}
-        {{#> dual-list-selector-status-text dual-list-selector-status-text--id=(concat dual-list-selector-pane--id '-status-text')}}
+        {{#> dual-list-selector-status-text}}
           0 of 0 items selected
         {{/dual-list-selector-status-text}}
       {{/dual-list-selector-status}}
