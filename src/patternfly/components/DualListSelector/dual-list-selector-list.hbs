@@ -1,6 +1,18 @@
 <ul class="pf-c-dual-list-selector__list{{#if dual-list-selector-list--modifier}} {{dual-list-selector-list--modifier}}{{/if}}"
   {{#if dual-list-selector-list--attribute}}
     {{{dual-list-selector-list--attribute}}}
-  {{/if}}>
+  {{/if}}
+  {{#if dual-list-selector-list--IsTree}}
+    role="tree"
+  {{else if dual-list-selector-list--IsSublist}}
+    role="group"
+  {{else}}
+    role="listbox"
+  {{/if}}
+  aria-labelledby="{{dual-list-selector-pane--id}}-status-text"
+  {{#unless dual-list-selector-list--IsSublist}}
+    aria-multiselectable="true"
+    aria-activedescendant=""
+  {{/unless}}>
   {{>@partial-block}}
 </ul>

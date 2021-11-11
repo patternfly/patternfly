@@ -8,10 +8,17 @@
   {{/if}}
   {{~#if dual-list-selector-list-item--modifier}} {{dual-list-selector-list-item--modifier}}{{/if}}"
   {{#if dual-list-selector-list-item--IsExpandable}}
-    aria-expanded="{{#if dual-list-selector-list-item--IsExpanded}}true{{else}}false{{/if}}"
+    aria-expanded="true"
   {{/if}}
   {{#if dual-list-selector-list-item--attribute}}
     {{{dual-list-selector-list-item--attribute}}}
+  {{/if}}
+  {{#if dual-list-selector-list--IsTree}}
+    role="treeitem"
+  {{else if dual-list-selector-list--IsSublist}}
+    role="treeitem"
+  {{else}}
+    role="option"
   {{/if}}>
   {{>@partial-block}}
 </li>

@@ -9,6 +9,6 @@ module.exports = {
   waitFor,
   crawl: false,
   urls: Object.keys(fullscreenRoutes),
-  ignoreRules: ['color-contrast', 'page-has-heading-one', 'scrollable-region-focusable', 'bypass'].join(','),
+  ignoreRules: ['color-contrast', 'page-has-heading-one', 'scrollable-region-focusable', 'bypass', 'nested-interactive'].join(','),
   ignoreIncomplete: true
 };

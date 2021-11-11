@@ -183,6 +183,10 @@ $pf-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 .pf-c-dual-list-selector__list-item {
+  &:focus {
+    --pf-c-dual-list-selector__list-item-row--BackgroundColor: var(--pf-c-dual-list-selector__list-item-row--focus-within--BackgroundColor);
+  }
+
   &.pf-m-expandable {
     --pf-c-dual-list-selector__item--PaddingLeft: var(--pf-c-dual-list-selector__item--m-expandable--PaddingLeft);
   }
@@ -206,10 +210,6 @@ $pf-c-dual-list-selector__item--MaxNesting: 10;
 
   &:hover {
     --pf-c-dual-list-selector__list-item-row--BackgroundColor: var(--pf-c-dual-list-selector__list-item-row--hover--BackgroundColor);
-  }
-
-  &:focus-within {
-    --pf-c-dual-list-selector__list-item-row--BackgroundColor: var(--pf-c-dual-list-selector__list-item-row--focus-within--BackgroundColor);
   }
 
   &.pf-m-selected {
@@ -265,9 +265,7 @@ $pf-c-dual-list-selector__item--MaxNesting: 10;
   position: relative;
   width: 100%;
   padding: var(--pf-c-dual-list-selector__item--PaddingTop) var(--pf-c-dual-list-selector__item--PaddingRight) var(--pf-c-dual-list-selector__item--PaddingBottom) var(--pf-c-dual-list-selector__item--PaddingLeft);
-  text-align: left;
   cursor: pointer;
-  border: 0;
 }
 
 .pf-c-dual-list-selector__item-count {
