@@ -50,6 +50,9 @@
   width: 260px;
 }
 
+#ws-core-c-navigation-nav-with-flyout .ws-preview-html {
+  position: relative;
+}
 
 #ws-core-c-navigation-nav-with-flyout .pf-c-menu.pf-m-flyout.pf-m-nav {
   position: absolute;
