@@ -271,6 +271,11 @@
       position: relative;
       overflow: hidden;
       transition: var(--pf-c-menu--m-drilldown__list--Transition);
+
+      & .pf-c-menu__list {
+        --pf-c-menu__list--PaddingTop: 0;
+        --pf-c-menu__list--PaddingBottom: 0;
+      }
     }
 
     // stylelint-disable selector-max-class, max-nesting-depth
