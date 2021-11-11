@@ -124,6 +124,54 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
+### Secondary
+```hbs
+{{#> menu-toggle menu-toggle--IsSecondary="true"}}
+  {{#> menu-toggle-text}}
+    Collapsed
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsSecondary="true"}}
+  {{#> menu-toggle-icon}}
+    <i class="fas fa-cog" aria-hidden="true"></i>
+  {{/menu-toggle-icon}}
+  {{#> menu-toggle-text}}
+    Icon
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-text}}
+    Expanded
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-text}}
+    Disabled
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
 ### Plain
 ```hbs
 {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
@@ -222,6 +270,7 @@ import './MenuToggle.css'
 | `.pf-c-menu-toggle__controls` | `<span>` | Defines the menu toggle component controls. |
 | `.pf-c-menu-toggle__toggle-icon` | `<span>` | Defines the menu toggle component toggle/arrow icon. |
 | `.pf-m-primary` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the primary variation. |
+| `.pf-m-secondary` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the secondary variation. |
 | `.pf-m-text` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the text variation. |
 | `.pf-m-plain` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the plain variation. |
 | `.pf-m-expanded` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |

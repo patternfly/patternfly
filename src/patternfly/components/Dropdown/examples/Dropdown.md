@@ -127,6 +127,12 @@ The dropdown panel is provided for flexibility in allowing various content withi
 {{> dropdown dropdown--id="dropdown-primary-toggle-expanded" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-primary" dropdown-toggle--text="Expanded dropdown"}}
 ```
 
+### Secondary toggle
+```hbs
+{{> dropdown dropdown--id="dropdown-secondary-toggle" dropdown-toggle--modifier="pf-m-secondary" dropdown-toggle--text="Collapsed dropdown"}}
+{{> dropdown dropdown--id="dropdown-secondary-toggle-expanded" dropdown--IsExpanded="true" dropdown-toggle--modifier="pf-m-secondary" dropdown-toggle--text="Expanded dropdown"}}
+```
+
 ### Dropdown with image and text
 ```hbs
 {{> dropdown dropdown--id="dropdown-with-image-and-text-example" dropdown--template--MenuToggleImageText="true" dropdown--IsExpanded="true"}}
@@ -187,6 +193,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-text` | `.pf-c-dropdown__menu-item` | Modifies a menu item to be non-interactive text. |
 | `.pf-m-plain` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with no border. |
 | `.pf-m-primary` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with primary styles. |
+| `.pf-m-secondary` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with secondary styles. |
 | `.pf-m-full-height` | `.pf-c-dropdown` | Modifies a dropdown to full height of parent. See masthead for use. |
 | `.pf-m-disabled` | `a.pf-c-dropdown__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-dropdown__menu-item` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__menu-item`. |
 | `.pf-m-disabled` | `div.pf-c-dropdown__toggle` | Modifies to display the dropdown toggle as disabled. This applies to `div.pf-c-dropdown__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-dropdown__toggle`. |
