@@ -69,9 +69,7 @@ import './Dropdown.css'
 ### Split button (checkbox)
 ```hbs
 {{> dropdown dropdown--id="dropdown-split-button-disabled" dropdown--template--SplitButton="true" dropdown-toggle--HasCheckBox="true" dropdown-toggle--IsDisabled="true"}}
-
 {{> dropdown dropdown--id="dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
-
 {{> dropdown dropdown--id="dropdown-split-button-expanded" dropdown--template--SplitButton="true" dropdown--IsExpanded="true" dropdown-toggle--HasCheckBox="true"}}
 ```
 
@@ -86,6 +84,14 @@ import './Dropdown.css'
 {{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-expanded" dropdown--IsActionButton="true" dropdown--IsExpanded="true" dropdown-toggle--HasActionButton="true"}}
 {{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
 {{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-icon-expanded" dropdown--IsActionButton="true" dropdown--IsExpanded="true" dropdown-menu--HasIcons="true" dropdown-toggle--HasIconButton="true"}}
+```
+
+### Split button, primary (action)
+```hbs
+{{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-primary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-primary-expanded" dropdown--IsActionButton="true" dropdown--IsExpanded="true" dropdown-toggle--HasActionButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-primary-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-primary-icon-expanded" dropdown--IsActionButton="true" dropdown--IsExpanded="true" dropdown-menu--HasIcons="true" dropdown-toggle--HasIconButton="true"}}
 ```
 
 ### With groups
