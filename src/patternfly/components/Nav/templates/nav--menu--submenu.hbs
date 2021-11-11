@@ -1,0 +1,58 @@
+{{#> menu menu--modifier="pf-m-flyout" menu-item--IsLink="true"}}
+  {{#> menu-content}}
+    {{#> menu-list}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Container platform
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item menu-item--attribute='aria-expanded="true"' menu-item--IsLink=unset}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Dedicated
+            {{/menu-item-text}}
+            {{> menu-item-toggle-icon}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+        {{#> menu newcontext menu-item--IsLink="true"}}
+          {{#> menu-content}}
+            {{#> menu-list}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Dedicated (Annual)
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Dedicated (On-Demand)
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+              {{#> menu-list-item}}
+                {{#> menu-item}}
+                  {{#> menu-item-main}}
+                    {{#> menu-item-text}}
+                      Dedicated (On-Demand limits)
+                    {{/menu-item-text}}
+                  {{/menu-item-main}}
+                {{/menu-item}}
+              {{/menu-list-item}}
+            {{/menu-list}}
+          {{/menu-content}}
+        {{/menu}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+{{/menu}}

@@ -1,0 +1,60 @@
+{{#> nav nav--attribute='aria-label="Flyout menu example"' nav--id=nav--menu--id}}
+  {{#> menu}}
+    {{#> menu-content}}
+      {{#> menu-list}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Start rollout
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Pause rollouts
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item menu-item--attribute='aria-expanded="false"'}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Add storage
+              {{/menu-item-text}}
+              {{> menu-item-toggle-icon}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+          {{> nav--menu--submenu menu--IsHidden="true"}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item menu-item--attribute='aria-expanded="true"'}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Edit
+              {{/menu-item-text}}
+              {{> menu-item-toggle-icon}}
+            {{/menu-item-main}}
+            {{#> menu-item-description}}
+              Description
+            {{/menu-item-description}}
+          {{/menu-item}}
+          {{> nav--menu--submenu}}
+        {{/menu-list-item}}
+        {{#> menu-list-item}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Delete deployment config
+              {{/menu-item-text}}
+            {{/menu-item-main}}
+          {{/menu-item}}
+        {{/menu-list-item}}
+      {{/menu-list}}
+    {{/menu-content}}
+  {{/menu}}
+{{/nav}}

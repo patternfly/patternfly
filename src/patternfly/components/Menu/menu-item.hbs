@@ -1,4 +1,4 @@
-<{{# if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else}}button{{/if}} class="pf-c-menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}"
+<{{# if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else}}button{{/if}} class="pf-c-menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}{{#if menu-list-item--IsCurrent}} pf-m-current{{/if}}"
   {{#if menu-item--IsLink}}
     href="#"
     {{#if menu-list-item--IsDisabled}}
