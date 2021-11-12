@@ -4,6 +4,36 @@ section: developer-resources
 releaseNoteTOC: true
 ---
 
+## 2021.15 release notes (2021-11-16)
+Packages released:
+- [@patternfly/patternfly@v4.159.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.159.1)
+
+### Components
+- **Card:** Added non-selectable card, updated card view demo ([#4500](https://github.com/patternfly/patternfly/pull/4500))
+- **Dropdown:**
+  - Added secondary variant to dropdown ([#4498](https://github.com/patternfly/patternfly/pull/4498))
+  - Applied primary styling to split ([#4508](https://github.com/patternfly/patternfly/pull/4508))
+- **Dual list selector:** Aligned html/a11y with react ([#4499](https://github.com/patternfly/patternfly/pull/4499))
+- **Form select:** Matched padding with select ([#4490](https://github.com/patternfly/patternfly/pull/4490))
+- **Log viewer:**
+  - Added nowrap variation ([#4455](https://github.com/patternfly/patternfly/pull/4455))
+  - Updated the way dark theme is applied ([#4506](https://github.com/patternfly/patternfly/pull/4506))
+- **Menu toggle:**
+  - Added plain w/text variant ([#4491](https://github.com/patternfly/patternfly/pull/4491))
+  - Added rounded corners to primary ([#4494](https://github.com/patternfly/patternfly/pull/4494))
+- **Menu:** Added nav variant ([#4513](https://github.com/patternfly/patternfly/pull/4513))
+- **Nav:**
+  - Added drilldown menu to nav ([#4458](https://github.com/patternfly/patternfly/pull/4458))
+  - Fixed toggle icon rotation ([#4486](https://github.com/patternfly/patternfly/pull/4486))
+- **Options menu:** Moved text into button in plain text variant ([#4492](https://github.com/patternfly/patternfly/pull/4492))
+- **Table:** Fixed pf-m-truncate alignment ([#4489](https://github.com/patternfly/patternfly/pull/4489))
+- **TextInputGroup:** Added disabled styling ([#4484](https://github.com/patternfly/patternfly/pull/4484))
+- **Tooltip:** Added support for diagonal positioning ([#4470](https://github.com/patternfly/patternfly/pull/4470))
+
+### Other
+- **README:** Updated a11y docs, s/npm run/yarn ([#4496](https://github.com/patternfly/patternfly/pull/4496))
+
+
 ## 2021.14 release notes (2021-10-26)
 Packages released:
 - [@patternfly/patternfly@v4.151.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.151.4)
