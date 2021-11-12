@@ -193,6 +193,12 @@ $pf-global--icon--FontSize--xl: pf-font-prem(54px) !default;
 $pf-global--FontFamily--sans-serif: '"RedHatText", "Overpass", overpass, helvetica, arial, sans-serif';
 $pf-global--FontFamily--heading--sans-serif: '"RedHatDisplay", "Overpass", overpass, helvetica, arial, sans-serif';
 $pf-global--FontFamily--monospace: '"Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
+$pf-global--FontFamily--redhat-updated--sans-serif: '"RedHatTextUpdated", "Overpass", overpass, helvetica, arial, sans-serif';
+$pf-global--FontFamily--redhat-updated--heading--sans-serif: '"RedHatDisplayUpdated", "Overpass", overpass, helvetica, arial, sans-serif';
+$pf-global--FontFamily--redhat--monospace: '"RedHatMono", "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
+$pf-global--FontFamily--redhatVF--sans-serif: '"RedHatTextVF", "RedHatText", "Overpass", overpass, helvetica, arial, sans-serif';
+$pf-global--FontFamily--redhatVF--heading--sans-serif: '"RedHatDisplayVF", "RedHatDisplay", "Overpass", overpass, helvetica, arial, sans-serif';
+$pf-global--FontFamily--redhatVF--monospace: '"RedHatMonoVF", "RedHatMono", "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
 $pf-global--FontFamily--overpass--sans-serif: '"overpass", overpass, "open sans", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"' !default;
 $pf-global--FontFamily--overpass--monospace: '"overpass-mono", overpass-mono, "SFMono-Regular", menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace' !default;
 // stylelint-enable value-keyword-case
