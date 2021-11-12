@@ -58,7 +58,7 @@ To create 3 new demos named "Test demo", "Test demo 2", and "Test demo 3", run:
 #### Update screenshots
 When making visual changes to a full page example, new example preview screenshots must be generated. To update the screenshots:
 
-- open a terminal and run `yarn build && yarn run serve`
+- open a terminal and run `yarn build && yarn serve`
 - in another terminal, run `yarn screenshots`
 
 ## Guidelines for CSS development
@@ -83,7 +83,7 @@ To run the a11y audit locally:
 
 - install the latest [chromedriver](http://chromedriver.chromium.org/downloads) and ensure its available on your system `$PATH`
   - macOS users can simply `brew cask install chromedriver`
-- open a terminal and run `yarn build && yarn run serve`
+- open a terminal and run `yarn build && yarn serve`
 - in another terminal, run `yarn a11y`
 
 The tool is configured to return WCAG 2.0 AA violations for the full page renderings of all components, layouts, utilities, and demos. The tool will provide feedback about what the violation is and a link to documentation about how to address the violation.
