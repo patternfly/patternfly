@@ -639,12 +639,8 @@ import './Navigation.css'
 
 ### Nav with flyout
 ```hbs isBeta
-{{> nav--flyout nav--flyout--id="menu-flyout-example" nav--flyout--submenu--IsExpanded="true" nav--IsMenuFlyout="true"}}
-```
-
-### Nav with menu and flyout
-```hbs isBeta
-{{> nav--menu nav--menu--id="menu-flyout-with-menu-example" nav--menu--submenu--IsExpanded="true"}}
+{{> nav--flyout nav--flyout--id="nav-flyout-example" nav--flyout--submenu--IsExpanded="true" asdf="asdf"}}
+{{> nav--menu--submenu}}
 ```
 
 ### Nav with drilldown menu
@@ -707,4 +703,5 @@ The navigation system relies on several different sub-components:
 | `.pf-m-expandable` | `.pf-c-nav__item` | Modifies for the expandable state. |
 | `.pf-m-expanded` | `.pf-c-nav__item` | Modifies for the expanded state. |
 | `.pf-m-current` | `.pf-c-nav__link` | Modifies for the current state. |
+| `.pf-m-hover` | `.pf-c-nav__link` | Modifies for the hover state. |
 | `.pf-m-start` | `.pf-c-nav__toggle` | Modifies nav toggle to align left. |
