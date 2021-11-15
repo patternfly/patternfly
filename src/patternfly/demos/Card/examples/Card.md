@@ -753,7 +753,9 @@ import './Card.css'
         {{/title}}
       {{/card-title}}
       {{#> card-actions}}
-        {{> dropdown dropdown--id=(concat card--id '-dropdown') dropdown-toggle--text="Filter" dropdown-menu--modifier="pf-m-align-right"}}
+        {{#> select id=(concat card--id '-select-dropdown')}}
+          Filter
+        {{/select}}
       {{/card-actions}}
     {{/card-header}}
     {{#> card-body}}
@@ -958,7 +960,9 @@ import './Card.css'
         </span>
       {{/l-flex}}
       {{#> card-actions}}
-        {{> dropdown dropdown--id=(concat card--id '-dropdown') dropdown-toggle--text="Filter" dropdown-menu--modifier="pf-m-align-right"}}
+        {{#> select id=(concat card--id '-select-dropdown')}}
+          Filter
+        {{/select}}
       {{/card-actions}}
     {{/card-header}}
     {{#> card-body}}
@@ -1007,7 +1011,9 @@ import './Card.css'
   {{#> card card--id="card-log-view-example"}}
     {{#> card-header}}
       {{#> card-actions}}
-        {{> dropdown dropdown--id=(concat card--id '-dropdown') dropdown-toggle--text="Most recent" dropdown-menu--modifier="pf-m-align-right"}}
+        {{#> select id=(concat card--id '-select-dropdown')}}
+          Most recent
+        {{/select}}
       {{/card-actions}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
@@ -1077,7 +1083,9 @@ import './Card.css'
   {{#> card card--id="card-events-view-example"}}
     {{#> card-header}}
       {{#> card-actions}}
-        {{> dropdown dropdown--id=(concat card--id '-dropdown') dropdown-toggle--text="Status" dropdown-menu--modifier="pf-m-align-right"}}
+        {{#> select id=(concat card--id '-select-dropdown')}}
+          Status
+        {{/select}}
       {{/card-actions}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
