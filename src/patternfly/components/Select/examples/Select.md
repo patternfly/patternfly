@@ -46,6 +46,7 @@ The single select should be used when the user is selecting an option from a lis
 | `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the custom select dropdown menu. |
 | `.pf-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
 | `.pf-m-top` | `.pf-c-select` |  Modifies the select menu to display above the toggle. |
+| `.pf-m-align-right` | `.pf-c-select` |  Modifies the select menu to display right aligned to the toggle. |
 | `.pf-m-active` | `.pf-c-select` | Forces display of the active state of the toggle. |
 
 ## States
