@@ -753,7 +753,7 @@ import './Card.css'
         {{/title}}
       {{/card-title}}
       {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown')}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
           Filter
         {{/select}}
       {{/card-actions}}
@@ -960,7 +960,7 @@ import './Card.css'
         </span>
       {{/l-flex}}
       {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown')}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
           Filter
         {{/select}}
       {{/card-actions}}
@@ -1011,7 +1011,7 @@ import './Card.css'
   {{#> card card--id="card-log-view-example"}}
     {{#> card-header}}
       {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown')}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
           Most recent
         {{/select}}
       {{/card-actions}}
@@ -1083,7 +1083,7 @@ import './Card.css'
   {{#> card card--id="card-events-view-example"}}
     {{#> card-header}}
       {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown')}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
           Status
         {{/select}}
       {{/card-actions}}
