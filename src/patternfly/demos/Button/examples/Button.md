@@ -12,11 +12,11 @@ cssPrefix: pf-d-button
   {{#> form-group form-group--id="-login"}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
-        Red Hat login or email
+        Username
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" readonly name="' form--id form-group--id '" value="allie@acme.com" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" readonly name="' form--id form-group--id '" value="johndoe" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-password"}}
@@ -45,11 +45,11 @@ cssPrefix: pf-d-button
   {{#> form-group form-group--id="-login"}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
-        Red Hat login or email
+        Username
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" readonly name="' form--id form-group--id '" value="allie@acme.com" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" readonly name="' form--id form-group--id '" value="johndoe" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-password"}}
@@ -78,11 +78,11 @@ cssPrefix: pf-d-button
   {{#> form-group form-group--id="-login"}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
-        Red Hat login or email
+        Username
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" readonly name="' form--id form-group--id '" value="allie@acme.com" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" readonly name="' form--id form-group--id '" value="johndoe" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-password"}}
