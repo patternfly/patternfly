@@ -763,9 +763,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
     {{/table-tr}}
 
     {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{> table-td table-td--IsEmpty="true"}}
-      {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content1"')}}
+      {{#> table-td table-td--attribute=(concat 'colspan="7" id="' table--id '-content1"')}}
         {{#> table-expandable-row-content}}
           {{#> table newcontext table--id=(concat table--id "-table-basic") table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--attribute='aria-label="This is a simple table"'}}
             {{#> table-thead}}
@@ -864,7 +862,6 @@ When header cells are empty or they contain interactive elements, `<th>` should 
           {{/table}}
         {{/table-expandable-row-content}}
       {{/table-td}}
-      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-tbody}}
 
