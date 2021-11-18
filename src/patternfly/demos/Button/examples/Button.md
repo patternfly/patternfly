@@ -1,6 +1,5 @@
 ---
 id: 'Button'
-beta: true
 section: components
 cssPrefix: pf-d-button
 ---
@@ -16,7 +15,7 @@ cssPrefix: pf-d-button
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" readonly name="' form--id form-group--id '" value="johndoe" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" value="johndoe" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-password"}}
@@ -26,7 +25,7 @@ cssPrefix: pf-d-button
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="password" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="password" value="p@ssw0rd" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--modifier="pf-m-action"}}
@@ -49,7 +48,7 @@ cssPrefix: pf-d-button
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" readonly name="' form--id form-group--id '" value="johndoe" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" value="johndoe" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-password"}}
@@ -59,7 +58,7 @@ cssPrefix: pf-d-button
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="password" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="password" value="p@ssw0rd" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--modifier="pf-m-action"}}
@@ -82,7 +81,7 @@ cssPrefix: pf-d-button
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" readonly name="' form--id form-group--id '" value="johndoe" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" value="johndoe" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-password"}}
@@ -92,7 +91,7 @@ cssPrefix: pf-d-button
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="password" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="password" value="p@ssw0rd" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--modifier="pf-m-action"}}
