@@ -902,7 +902,7 @@
 .pf-c-table__check {
   --pf-c-table--cell--FontSize: var(--pf-c-table__check--input--FontSize);
 
-  > input {
+  > input:not([disabled]) {
     cursor: pointer;
   }
 }
