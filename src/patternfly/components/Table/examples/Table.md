@@ -715,7 +715,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
 ### Expandable with nested table example
 ```hbs
-{{#> table table--id="table-expandable-nested-table" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable with nested table example"'}}
+{{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable with nested table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{> table-td table-td--IsEmpty="true"}}
