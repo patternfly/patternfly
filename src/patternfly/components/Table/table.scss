@@ -240,8 +240,8 @@
   --pf-c-table--m-compact__expandable-row-content--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Nested table
-  --pf-c-table--nested--first-last-child--PaddingRight: var(--pf-global--spacer--3xl);
-  --pf-c-table--nested--first-last-child--PaddingLeft: var(--pf-global--spacer--3xl);
+  --pf-c-table--nested--first-last-child--PaddingRight: var(--pf-c-table--m-compact--cell--first-last-child--PaddingLeft);
+  --pf-c-table--nested--first-last-child--PaddingLeft: var(--pf-c-table--m-compact--cell--first-last-child--PaddingRight);
 
   // Modifier - expandable row expanded
   --pf-c-table__expandable-row--m-expanded--BorderBottomColor: var(--pf-global--BorderColor--100);
