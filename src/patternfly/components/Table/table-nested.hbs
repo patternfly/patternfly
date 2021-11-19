@@ -1,4 +1,4 @@
-{{#> table newcontext table--id=table--id table--attribute=(concat table-nested--attribute ' id="' table--id '" aria-label="Nested table"') table--modifier="pf-m-compact pf-m-no-border-rows" table--grid="true"}}
+{{#> table newcontext table--id=(concat table--id '-' table-nested--id) table--attribute=(concat table-nested--attribute ' id="' table--id '" aria-label="Nested table"') table--modifier="pf-m-compact pf-m-no-border-rows" table--grid="true"}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}Description{{/table-th}}

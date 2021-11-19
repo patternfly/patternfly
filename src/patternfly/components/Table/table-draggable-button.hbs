@@ -1,9 +1,9 @@
 {{#if table-td--IsDraggableDisabled}}
-  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'disabled aria-pressed="false" aria-label="Reorder" aria-describedby="' table--id '-help" id="' table--id '-' table-tr--id '-draggable-button" aria-labelledby="' table--id '-' table-tr--id '-draggable-button ' table--id '-' table-tr--id '-node"')}}
+  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'disabled aria-pressed="false" aria-label="Reorder" aria-describedby="' table--id '-help" id="' table--id '-' table-tr--index '-draggable-button" aria-labelledby="' table--id '-' table-tr--index '-draggable-button ' table--id '-' table-tr--index '-node"')}}
     <i class="fas fa-grip-vertical" aria-hidden="true"></i>
   {{/button}}
 {{else}}
-  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-pressed="false" aria-label="Reorder" aria-describedby="' table--id '-help" id="' table--id '-' table-tr--id '-draggable-button" aria-labelledby="' table--id '-' table-tr--id '-draggable-button ' table--id '-' table-tr--id '-node"')}}
+  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-pressed="false" aria-label="Reorder" aria-describedby="' table--id '-help" id="' table--id '-' table-tr--index '-draggable-button" aria-labelledby="' table--id '-' table-tr--index '-draggable-button ' table--id '-' table-tr--index '-node"')}}
     <i class="fas fa-grip-vertical" aria-hidden="true"></i>
   {{/button}}
 {{/if}}

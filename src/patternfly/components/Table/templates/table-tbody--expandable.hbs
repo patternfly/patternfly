@@ -1,15 +1,13 @@
 {{#> table-tbody table-tbody--IsExpanded=table-tbody--expandable--IsExpanded}}
-  {{#> table-tr table-tr--IsExpanded="true" table-tr--expanded=table-tbody--expandable--IsExpanded}}
-    {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node-' table-tbody--expandable--index ' ' table--id '-expandable-toggle-' table-tbody--expandable--index '" id="' table--id '-expandable-toggle-' table-tbody--expandable--index '" aria-label="Details" aria-controls="' table--id '-content-' table-tbody--expandable--index '"')}}{{/table-td}}
-    {{#> table-td table-td--check="true"}}
-      <input type="checkbox" name="{{table--id}}-checkrow-{{table-tbody--expandable--index}}" aria-labelledby="{{table--id}}-node-{{table-tbody--expandable--index}}">
-    {{/table-td}}
+  {{#> table-tr table-tr--IsExpanded="true" table-tr--expanded=table-tbody--expandable--IsExpanded table-tr--index=table-tbody--expandable--index}}
+    {{> table--toggle}}
+    {{> table--check}}
     {{#> table-th table-th--data-label="Repository name"}}
       <div>
         {{#if table-tbody--expandable--title}}
-          <div id="{{table--id}}-node-{{table-tbody--expandable--index}}">{{{table-tbody--expandable--title}}}</div>
+          <div id="{{table--id}}-node{{table-tbody--expandable--index}}">{{{table-tbody--expandable--title}}}</div>
         {{else}}
-          <div id="{{table--id}}-node-{{table-tbody--expandable--index}}">Node {{table-tbody--expandable--index}}</div>
+          <div id="{{table--id}}-node{{table-tbody--expandable--index}}">Node {{table-tbody--expandable--index}}</div>
           <a href="#">siemur/test-space</a>
         {{/if}}
       </div>
@@ -31,7 +29,7 @@
   {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded=table-tbody--expandable--IsExpanded}}
     {{> table-td table-td--IsEmpty="true"}}
     {{> table-td table-td--IsEmpty="true"}}
-    {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content-' table-tbody--expandable--index '"')}}
+    {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tbody--expandable--index '"')}}
       {{#> table-expandable-row-content}}
         Expandable content
       {{/table-expandable-row-content}}

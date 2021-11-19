@@ -453,8 +453,14 @@
       }
 
       th,
-      td {
+      td,
+      input {
         vertical-align: middle;
+      }
+
+      .pf-c-table__check label {
+        display: flex;
+        align-items: center;
       }
 
       tr:not(:first-child) {
@@ -515,7 +521,7 @@
 
     // Check table cell
     .pf-c-table__check {
-      > input {
+      input {
         margin-top: var(--pf-c-table__check--input--MarginTop);
         vertical-align: top;
       }
@@ -858,7 +864,11 @@
 
 // stylelint-disable
 // Minimize width
-.pf-c-table .pf-c-table__check,
+.pf-c-table .pf-c-table__check {
+  --pf-c-table--cell--MinWidth: calc(var(--pf-c-table--cell--PaddingRight) + #{pf-size-prem(14px)} + var(--pf-c-table--cell--PaddingLeft)); // set min-width to padding + checkbox width
+  --pf-c-table--cell--Width: 1%;
+}
+
 .pf-c-table .pf-c-table__toggle,
 .pf-c-table .pf-c-table__action,
 .pf-c-table .pf-c-table__favorite,
@@ -902,8 +912,18 @@
 .pf-c-table__check {
   --pf-c-table--cell--FontSize: var(--pf-c-table__check--input--FontSize);
 
-  > input:not([disabled]) {
+  label:not([disabled]),
+  input:not([disabled]) {
     cursor: pointer;
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: inherit;
   }
 }
 

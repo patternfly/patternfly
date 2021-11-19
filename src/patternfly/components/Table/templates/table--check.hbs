@@ -1,3 +1,7 @@
 {{#> table-td table-td--check="true"}}
-  <input type="checkbox" name="{{table--id}}-checkrow{{table-tr--index}}" aria-labelledby="{{table--id}}-node{{table-tr--index}}">
+  {{#if table--check--IsThead}}
+    {{> table-check table-check--name=(concat table--id '-checkrow' table-tr--index) table-check--aria-label="Select all rows"}}
+  {{else}}
+    {{> table-check table-check--name=(concat table--id '-checkrow' table-tr--index) table-check--aria-labelledby=(concat table--id '-node' table-tr--index)}}
+  {{/if}}
 {{/table-td}}
