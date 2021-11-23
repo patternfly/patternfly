@@ -1,0 +1,20 @@
+.pf-c-multiple-file-upload {
+  --pf-c-multiple-file-upload--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-multiple-file-upload--BorderStyle: dashed;
+  --pf-c-multiple-file-upload--BorderColor: var(--pf-global--BorderColor--100);
+
+  // hover
+  --pf-c-multiple-file-upload--m-hover--BorderStyle: solid;
+  --pf-c-multiple-file-upload--m-hover--BorderColor: var(--pf-global--active-color--100);
+
+  // vertical
+}
+
+.pf-c-multiple-file-upload__title {
+  font-size: var(--pf-c-multiple-file-upload__element--FontSize);
+}
+
+.pf-c-multiple-file-upload__info {
+  font-size: var(--pf-c-multiple-file-upload__info--FontSize);
+  color: var(--pf-c-multiple-file-upload__info--Color);
+}
