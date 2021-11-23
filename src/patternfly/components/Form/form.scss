@@ -1,3 +1,28 @@
+$pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg", "xl", "2xl");
+
+@mixin pf-c-form--m-horizontal {
+  // default horizontal styles applied at medium breakpoint
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    @content;
+  }
+
+  // custom xs style since this isn't in our maps - maps are based on mobile first design. This may not even be a valid option based on design but I guess it doesn't hurt to add.
+  &-on-xs {
+    @media screen and (min-width: $pf-global--breakpoint--xs) {
+      @content;
+    }
+  }
+
+  // loop to build the rest of the breakpoints
+  @each $breakpoint, $breakpoint-value in $pf-c-form--m-horizontal--breakpoint-map {
+    &-on-#{$breakpoint} {
+      @include pf-apply-breakpoint($breakpoint) {
+        @content;
+      }
+    }
+  }
+}
+
 .pf-c-form {
   --pf-c-form--GridGap: var(--pf-global--gutter--md);
 
@@ -160,7 +185,7 @@
       }
     }
 
-    @media (min-width: $pf-global--breakpoint--md) {
+    @include pf-c-form--m-horizontal {
       --pf-c-form__group-label--PaddingBottom: 0;
 
       .pf-c-form__group {
