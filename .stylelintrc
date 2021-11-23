@@ -22,6 +22,7 @@
       "ignore": ["after-comment"],
       "ignoreAtRules": "else"
     }],
+    "alpha-value-notation": null,
     "at-rule-name-space-after": "always",
     "at-rule-no-vendor-prefix": true,
     "at-rule-semicolon-space-before": "never",
@@ -32,6 +33,7 @@
         "else"
       ]
     }],
+    "color-function-notation": null,
     "color-named": "never",
     "color-no-invalid-hex": true,
     "comment-empty-line-before": ["always", {
@@ -42,13 +44,16 @@
       ]
     }],
     "custom-property-pattern": "^pf-(global|[lcud])-.+$",
+    "declaration-block-no-redundant-longhand-properties": null,
     "declaration-block-semicolon-newline-before": "never-multi-line",
     "declaration-no-important": true,
     "font-family-name-quotes": "always-where-recommended",
     "font-weight-notation": "numeric",
     "function-comma-newline-before": "never-multi-line",
     "function-url-quotes": "always",
+    "keyframes-name-pattern": null,
     "max-empty-lines": 2,
+    "max-line-length": null,
     "max-nesting-depth": 3,
     "media-feature-name-no-vendor-prefix": true,
     "media-feature-parentheses-space-inside": "never",
@@ -262,6 +267,7 @@
     "scss/operator-no-unspaced": true,
     "scss/dollar-variable-colon-space-after": "at-least-one-space",
     "scss/dollar-variable-colon-space-before": "never",
+    "scss/no-global-function-names": null,
     "selector-attribute-quotes": "always",
     "selector-class-pattern": "pf-",
     "selector-max-attribute": 2,
