@@ -30,7 +30,7 @@ section: demos
           {{#> menu-content}}
               {{#> menu-list}}
                 {{#> menu-list-item}}
-                  {{#> menu-item menu-item--modifier="pf-m-selected"}}
+                  {{#> menu-item}}
                     {{#> menu-item-main}}
                       {{#> menu-item-text}}
                         Use suggested password: fqu9kKe676JmKt2
