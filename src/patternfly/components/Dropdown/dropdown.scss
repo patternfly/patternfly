@@ -249,7 +249,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   &:disabled {
     pointer-events: none;
 
-    &:not(.pf-m-plain) {
+    &:not(.pf-m-plain),
+    &.pf-m-plain.pf-m-text {
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--disabled--BackgroundColor);
 
       &::before {
@@ -396,15 +397,17 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &.pf-m-plain {
-    --pf-c-dropdown__toggle--PaddingRight: var(--pf-c-dropdown__toggle--m-plain--PaddingRight);
-    --pf-c-dropdown__toggle--PaddingLeft: var(--pf-c-dropdown__toggle--m-plain--PaddingLeft);
+    &:not(.pf-m-text) {
+      --pf-c-dropdown__toggle--PaddingRight: var(--pf-c-dropdown__toggle--m-plain--PaddingRight);
+      --pf-c-dropdown__toggle--PaddingLeft: var(--pf-c-dropdown__toggle--m-plain--PaddingLeft);
 
-    display: inline-block;
-    color: var(--pf-c-dropdown__toggle--m-plain--Color);
+      display: inline-block;
+      color: var(--pf-c-dropdown__toggle--m-plain--Color);
 
-    // remove at breaking change
-    > * {
-      line-height: var(--pf-c-dropdown__toggle--m-plain--child--LineHeight);
+      // remove at breaking change
+      > * {
+        line-height: var(--pf-c-dropdown__toggle--m-plain--child--LineHeight);
+      }
     }
 
     &::before {
