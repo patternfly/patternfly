@@ -22,7 +22,7 @@ section: demos
         {{#> input-group}}
             {{#> form-control controlType="input" input="true"  form-control--attribute=(concat 'required type="text" id="' form--id '-password" name="' form--id '-password" aria-label="Password input" value="" placeholder="Password"')}}
           {{/form-control}}
-          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password button for password input"'}}
+          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
             <i class="fas fa-eye-slash" aria-hidden="true"></i>
           {{/button}}
         {{/input-group}}
@@ -63,7 +63,7 @@ section: demos
         {{#> input-group}}
           {{#> form-control controlType="input" input="true"  form-control--attribute=(concat 'required type="text" id="' form--id '-password" name="' form--id '-password" aria-label="Password input" value="Marie$RedHat78" placeholder="Password"')}}
           {{/form-control}}
-          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password button for password input"'}}
+          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
             <i class="fas fa-eye-slash" aria-hidden="true"></i>
           {{/button}}
         {{/input-group}}
@@ -110,7 +110,7 @@ section: demos
         {{#> input-group}}
           {{#> form-control controlType="input" input="true"  form-control--attribute=(concat 'required type="text" id="' form--id '-password" name="' form--id '-password" aria-label="Password input" value="Marie$Can3Read" placeholder="Password"')}}
           {{/form-control}}
-          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password button for password input"'}}
+          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
             <i class="fas fa-eye-slash" aria-hidden="true"></i>
           {{/button}}
         {{/input-group}}
@@ -157,7 +157,7 @@ section: demos
         {{#> input-group}}
           {{#> form-control controlType="input" input="true"  form-control--attribute=(concat 'required type="text" id="' form--id '-password" name="' form--id '-password" aria-label="Password input" value="Marie$Can8Read3Pass@Word" placeholder="Password"')}}
           {{/form-control}}
-          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password button for password input"'}}
+          {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
             <i class="fas fa-eye-slash" aria-hidden="true"></i>
           {{/button}}
         {{/input-group}}
