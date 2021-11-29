@@ -247,6 +247,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   &.pf-m-disabled,
   &:disabled {
+    --pf-c-dropdown__toggle--before--BorderBottomColor: transparent;
+
     pointer-events: none;
 
     &:not(.pf-m-plain) {
@@ -261,13 +263,16 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   &.pf-m-split-button {
     padding: 0;
 
+    &:not(.pf-m-disabled) {
+      background-color: var(--pf-c-dropdown__toggle--m-split-button--child--BackgroundColor);
+    }
+
     > * {
       position: relative;
       padding-top: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingTop);
       padding-right: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingRight);
       padding-bottom: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingBottom);
       padding-left: var(--pf-c-dropdown__toggle--m-split-button--child--PaddingLeft);
-      background-color: var(--pf-c-dropdown__toggle--m-split-button--child--BackgroundColor);
 
       &:first-child {
         --pf-c-dropdown__toggle--m-split-button--child--PaddingLeft: var(--pf-c-dropdown__toggle--m-split-button--first-child--PaddingLeft);
@@ -297,9 +302,14 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
       }
 
       &.pf-m-primary {
-        // stylelint-disable max-nesting-depth
+        // stylelint-disable max-nesting-depth, selector-max-class
         > :not(:first-child) {
           border-left: var(--pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftWidth) solid var(--pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftColor);
+        }
+
+        &.pf-m-disabled,
+        &[disabled] {
+          --pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftWidth: 0;
         }
         // stylelint-enable
       }
@@ -426,11 +436,10 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &.pf-m-primary {
-    --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-primary--BackgroundColor);
-    --pf-c-dropdown__toggle-button--Color: var(--pf-c-dropdown__toggle--m-primary--Color);
-
-    &:not(.pf-m-disabled) {
+    &:not(.pf-m-disabled):not([disabled]) {
       --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-primary--Color);
+      --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-primary--BackgroundColor);
+      --pf-c-dropdown__toggle-button--Color: var(--pf-c-dropdown__toggle--m-primary--Color);
     }
 
     border-radius: var(--pf-c-dropdown__toggle--m-primary--BorderRadius);
@@ -452,20 +461,22 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-primary--active--BackgroundColor);
     }
 
-    .pf-m-expanded > & {
+    .pf-m-expanded > :not(.pf-m-disabled):not([disabled]) {
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown--m-expanded__toggle--m-primary--BackgroundColor);
     }
   }
 
   &.pf-m-secondary {
-    --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-secondary--Color);
-    --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-secondary--BackgroundColor);
-
     border-radius: var(--pf-c-dropdown__toggle--m-secondary--BorderRadius);
 
-    &::before {
-      border: var(--pf-c-dropdown__toggle--m-secondary--before--BorderWidth) solid var(--pf-c-dropdown__toggle--m-secondary--before--BorderColor);
-      border-radius: var(--pf-c-dropdown__toggle--m-secondary--BorderRadius);
+    &:not(.pf-m-disabled):not([disabled]) {
+      --pf-c-dropdown__toggle--Color: var(--pf-c-dropdown__toggle--m-secondary--Color);
+      --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--m-secondary--BackgroundColor);
+
+      &::before {
+        border: var(--pf-c-dropdown__toggle--m-secondary--before--BorderWidth) solid var(--pf-c-dropdown__toggle--m-secondary--before--BorderColor);
+        border-radius: var(--pf-c-dropdown__toggle--m-secondary--BorderRadius);
+      }
     }
 
     &:hover {
