@@ -56,6 +56,21 @@ cssPrefix: pf-c-description-list
 {{> description-list__example description-list--title="Fluid DL" description-list--modifier="pf-m-horizontal pf-m-fluid pf-m-2-col"}}
 ```
 
+### Column fill
+```hbs
+{{> description-list__example description-list--title="Column fill" description-list--modifier="pf-m-fill-columns"}}
+```
+
+### Column fill, horizontal
+```hbs
+{{> description-list__example description-list--title="Column fill, horizontal" description-list--modifier="pf-m-fill-columns pf-m-horizontal"}}
+```
+
+### Column fill, horizontal, multi-column
+```hbs
+{{> description-list__example description-list--title="Column fill, multi-column" description-list--modifier="pf-m-fill-columns pf-m-horizontal pf-m-2-col pf-m-3-col-3"}}
+```
+
 ## Auto fit
 
 ### Auto-fit basic
@@ -139,6 +154,7 @@ cssPrefix: pf-c-description-list
 | `.pf-m-help-text` | `.pf-c-description-list__text` | Indicates there is more information available for the description list component term text. |
 | `.pf-m-horizontal{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
 | `.pf-m-vertical{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list component term and description pair to a vertical layout. |
+| `.pf-m-fill-columns` | `.pf-c-description-list` | Modifies the description list groups to fill columns . |
 | `.pf-m-auto-column-widths` | `.pf-c-description-list` | Modifies the description list to format automatically. |
 | `.pf-m-inline-grid` | `.pf-c-description-list` | Modifies the description list display to inline-grid. |
 | `.pf-m-{1,2,3}-col{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list number of columns. |
