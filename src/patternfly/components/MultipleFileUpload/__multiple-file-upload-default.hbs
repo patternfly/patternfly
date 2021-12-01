@@ -1,0 +1,67 @@
+{{#> multiple-file-upload}}
+  {{#> multiple-file-upload-main}}
+    {{#> multiple-file-upload-title}}
+      {{> multiple-file-upload-title-icon}}
+      {{#> multiple-file-upload-title-text}}
+        Drag and drop files here <span>or</span>
+      {{/multiple-file-upload-title-text}}
+    {{/multiple-file-upload-title}}
+    {{#> multiple-file-upload-upload}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Upload
+      {{/button}}
+    {{/multiple-file-upload-upload}}
+    {{#> multiple-file-upload-info}}
+      Accepted file types: JPEG, Doc, PDF, PNG
+    {{/multiple-file-upload-info}}
+  {{/multiple-file-upload-main}}
+  {{#if multiple-file-upload--HasStatus}}
+    {{#> multiple-file-upload-status}}
+      {{#> expandable-section expandable-section--IsExpanded=multiple-file-upload-status--IsExpanded}}
+        {{#> expandable-section-toggle}}
+          0 of 3 files uploaded
+        {{/expandable-section-toggle}}
+        {{#> expandable-section-content}}
+          {{#> multiple-file-upload-status-list}}
+            {{#> multiple-file-upload-status-item}}
+              {{> multiple-file-upload-status-item-icon}}
+              {{#> multiple-file-upload-status-item-main}}
+                {{#> progress
+                  progress__value="33"
+                  progress__description="Title"
+                  progress__id="progress-simple-example"
+                  }}
+                {{/progress}}
+              {{/multiple-file-upload-status-item-main}}
+              {{> multiple-file-upload-status-item-close}}
+            {{/multiple-file-upload-status-item}}
+            {{#> multiple-file-upload-status-item}}
+              {{> multiple-file-upload-status-item-icon}}
+              {{#> multiple-file-upload-status-item-main}}
+                {{#> progress
+                  progress__value="33"
+                  progress__description="Title"
+                  progress__id="progress-simple-example"
+                  }}
+                {{/progress}}
+              {{/multiple-file-upload-status-item-main}}
+              {{> multiple-file-upload-status-item-close}}
+            {{/multiple-file-upload-status-item}}
+            {{#> multiple-file-upload-status-item}}
+              {{> multiple-file-upload-status-item-icon}}
+              {{#> multiple-file-upload-status-item-main}}
+                {{#> progress
+                  progress__value="33"
+                  progress__description="Title"
+                  progress__id="progress-simple-example"
+                  }}
+                {{/progress}}
+              {{/multiple-file-upload-status-item-main}}
+              {{> multiple-file-upload-status-item-close}}
+            {{/multiple-file-upload-status-item}}
+          {{/multiple-file-upload-status-list}}
+        {{/expandable-section-content}}
+      {{/expandable-section}}
+    {{/multiple-file-upload-status}}
+  {{/if}}
+{{/multiple-file-upload}}

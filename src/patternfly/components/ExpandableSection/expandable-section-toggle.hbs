@@ -3,23 +3,21 @@
     {{{expandable-section-toggle--attribute}}}
   {{/if}}
   {{#if expandable-section--IsExpanded}}
-  aria-expanded="true"
+    aria-expanded="true"
   {{else}}
-  aria-expanded="false"
+    aria-expanded="false"
   {{/if}}
   {{#if expandable-section--IsDetached}}
     aria-controls="{{expandable-section--id}}-content"
-  {{/if}}
-  >
-  {{> @partial-block}}
+  {{/if}}>
   {{> expandable-section-toggle-icon}}
-  {{#if expandable-section--IsExpanded}}
-   {{#> expandable-section-toggle-text}}
+  {{#> expandable-section-toggle-text}}
+    {{#if @partial-block}}
+      {{> @partial-block}}
+    {{else if expandable-section--IsExpanded}}
       Show less
-    {{/expandable-section-toggle-text}}
-  {{else}}
-    {{#> expandable-section-toggle-text}}
+    {{else}}
       Show more
-    {{/expandable-section-toggle-text}}
-  {{/if}}
+    {{/if}}
+  {{/expandable-section-toggle-text}}
 </button>
