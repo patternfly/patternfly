@@ -54,6 +54,10 @@
   --pf-c-multiple-file-upload--m-horizontal__title--Gap: var(--pf-global--spacer--xs);
   --pf-c-multiple-file-upload--m-horizontal__info--MarginTop: 0;
 
+  // status progress
+  --pf-c-multiple-file-upload__status-progress--GridTemplateColumns: auto 1fr;
+  --pf-c-multiple-file-upload__status-progress--Gap: var(--pf-global--spacer--sm);
+
   // status item
   --pf-c-multiple-file-upload__status-item--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-multiple-file-upload__status-item--PaddingBottom: var(--pf-global--spacer--md);
@@ -64,6 +68,9 @@
 
   // status item icon
   --pf-c-multiple-file-upload__status-item-icon--Color: var(--pf-global--Color--200);
+
+  // status progress icon
+  --pf-c-multiple-file-upload__status-progress-icon--Color: var(--pf-global--Color--200);
 
   display: grid;
   gap: var(--pf-c-multiple-file-upload--Gap);
@@ -129,6 +136,16 @@
   margin-top: var(--pf-c-multiple-file-upload__info--MarginTop);
   font-size: var(--pf-c-multiple-file-upload__info--FontSize);
   color: var(--pf-c-multiple-file-upload__info--Color);
+}
+
+.pf-c-multiple-file-upload__status-progress {
+  display: grid;
+  grid-template-columns: var(--pf-c-multiple-file-upload__status-progress--GridTemplateColumns);
+  gap: var(--pf-c-multiple-file-upload__status-progress--Gap);
+}
+
+.pf-c-multiple-file-upload__status-progress-icon {
+  color: var(--pf-c-multiple-file-upload__status-progress-icon--Color);
 }
 
 .pf-c-multiple-file-upload__status-item {

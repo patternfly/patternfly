@@ -19,7 +19,12 @@
     {{#> multiple-file-upload-status}}
       {{#> expandable-section expandable-section--IsExpanded=multiple-file-upload-status--IsExpanded}}
         {{#> expandable-section-toggle}}
-          0 of 3 files uploaded
+          {{#> multiple-file-upload-status-progress}}
+            {{> multiple-file-upload-status-progress-icon}}
+            {{#> multiple-file-upload-status-progress-text}}
+              0 of 3 files uploaded
+            {{/multiple-file-upload-status-progress-text}}
+          {{/multiple-file-upload-status-progress}}
         {{/expandable-section-toggle}}
         {{#> expandable-section-content}}
           {{#> multiple-file-upload-status-list}}
@@ -28,7 +33,7 @@
               {{#> multiple-file-upload-status-item-main}}
                 {{#> progress
                   progress__value="33"
-                  progress__description="Title"
+                  progress__description='Title'
                   progress__id="progress-simple-example"
                   }}
                 {{/progress}}
