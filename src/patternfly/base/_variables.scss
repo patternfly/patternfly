@@ -234,6 +234,12 @@
   --pf-global--FontFamily--sans-serif: #{$pf-global--FontFamily--sans-serif};
   --pf-global--FontFamily--heading--sans-serif: #{$pf-global--FontFamily--heading--sans-serif};
   --pf-global--FontFamily--monospace: #{$pf-global--FontFamily--monospace};
+  --pf-global--FontFamily--redhat-updated--sans-serif: #{$pf-global--FontFamily--redhat-updated--sans-serif};
+  --pf-global--FontFamily--redhat-updated--heading--sans-serif: #{$pf-global--FontFamily--redhat-updated--heading--sans-serif};
+  --pf-global--FontFamily--redhat--monospace: #{$pf-global--FontFamily--redhat--monospace};
+  --pf-global--FontFamily--redhatVF--sans-serif: #{$pf-global--FontFamily--redhatVF--sans-serif};
+  --pf-global--FontFamily--redhatVF--heading--sans-serif: #{$pf-global--FontFamily--redhatVF--heading--sans-serif};
+  --pf-global--FontFamily--redhatVF--monospace: #{$pf-global--FontFamily--redhatVF--monospace};
   --pf-global--FontFamily--overpass--sans-serif: #{$pf-global--FontFamily--overpass--sans-serif};
   --pf-global--FontFamily--overpass--monospace: #{$pf-global--FontFamily--overpass--monospace};
 
@@ -274,11 +280,29 @@
   --pf-global--target-size--MinHeight: #{$pf-global--target-size--MinHeight};
 }
 
-// RedHat Font overrides
+// Overpass font overrides
 @include pf-m-overpass-font {
   --pf-global--FontFamily--sans-serif: var(--pf-global--FontFamily--overpass--sans-serif);
   --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--sans-serif);
   --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--overpass--monospace);
   --pf-global--FontWeight--semi-bold: var(--pf-global--FontWeight--overpass--semi-bold);
   --pf-global--FontWeight--bold: var(--pf-global--FontWeight--overpass--bold);
+}
+
+// RedHatFont updated font overrides
+.pf-m-redhat-updated-font {
+  --pf-global--FontFamily--sans-serif: var(--pf-global--FontFamily--redhat-updated--sans-serif);
+  --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--redhat-updated--heading--sans-serif);
+}
+
+// RedHatMono font overrides
+.pf-m-redhatmono-font {
+  --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--redhat--monospace);
+}
+
+// RedHat variable font overrides
+.pf-m-redhatVF-font {
+  --pf-global--FontFamily--sans-serif: var(--pf-global--FontFamily--redhatVF--sans-serif);
+  --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--redhatVF--heading--sans-serif);
+  --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--redhatVF--monospace);
 }
