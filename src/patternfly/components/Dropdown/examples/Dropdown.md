@@ -57,11 +57,11 @@ import './Dropdown.css'
 
 ### Plain with text
 ```hbs
-{{> dropdown dropdown--id="dropdown-kebab-disabled" dropdown-toggle--IsPlainText="true" dropdown-toggle--IsDisabled="true" dropdown-toggle--text="Custom text"}}
+{{> dropdown dropdown--id="plain-with-text-example-disabled" dropdown-toggle--IsPlainText="true" dropdown-toggle--IsDisabled="true" dropdown-toggle--text="Custom text"}}
 &nbsp;
-{{> dropdown dropdown--id="dropdown-kebab-disabled" dropdown-toggle--IsPlainText="true" dropdown-toggle--text="Custom text"}}
+{{> dropdown dropdown--id="plain-with-text-example" dropdown-toggle--IsPlainText="true" dropdown-toggle--text="Custom text"}}
 &nbsp;
-{{> dropdown dropdown--id="dropdown-kebab-disabled" dropdown-toggle--IsPlainText="true" dropdown-toggle--text="Custom text (expanded)" dropdown--IsExpanded="true"}}
+{{> dropdown dropdown--id="plain-with-text-example-expanded" dropdown-toggle--IsPlainText="true" dropdown-toggle--text="Custom text (expanded)" dropdown--IsExpanded="true"}}
 ```
 
 ### Badge toggle
