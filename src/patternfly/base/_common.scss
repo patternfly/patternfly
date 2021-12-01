@@ -17,9 +17,13 @@
   html {
     font-size: unset !important; // the important is needed because we don't know if pf3 will be loaded after pfnext
   }
+  // stylelint-enable
 }
 
 .pf-screen-reader {
   @include pf-u-screen-reader; // for use with assistive technologies
 }
-// stylelint-enable
+
+.pf-m-tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
