@@ -1109,7 +1109,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
   {{#> table-tbody}}
     {{#> table-tr table-tr--index="1"}}
       {{> table--check}}
-      {{> table--node table--node--HasNoLink="true"}}
+      {{> table--node table--node--content="Sam Jones" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         CSS guru
       {{/table-td}}
@@ -1135,7 +1135,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
     {{#> table-tr table-tr--index="2"}}
       {{> table--check}}
-      {{> table--node table--node--HasNoLink="true"}}
+      {{> table--node table--node--content="Amy Wilson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design
       {{/table-td}}
@@ -1161,7 +1161,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
     {{#> table-tr table-tr--index="3"}}
       {{> table--check}}
-      {{> table--node table--node--HasNoLink="true"}}
+      {{> table--node table--node--content="Steve Wilson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Visual design lead
       {{/table-td}}
@@ -1187,7 +1187,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
     {{#> table-tr table-tr--index="4"}}
       {{> table--check}}
-      {{> table--node table--node--HasNoLink="true"}}
+      {{> table--node table--node--content="Emma Jackson" table--node--HasNoLink="true"}}
       {{#> table-td table-td--data-label="Position"}}
         Interaction design
       {{/table-td}}
