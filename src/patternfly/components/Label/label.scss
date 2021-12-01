@@ -142,6 +142,17 @@
   --pf-c-label__c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Editable
+  --pf-c-label--m-editable--TextDecoration: underline;
+  --pf-c-label--m-editable--TextDecorationStyle: dashed;
+  --pf-c-label--m-editable--TextDecorationThickness: var(--pf-global--BorderWidth--sm);
+  --pf-c-label--m-editable--TextDecorationOffset: #{pf-size-prem(4px)};
+  --pf-c-label--m-editable--TextDecorationColor: var(--pf-global--BorderColor--200);
+  --pf-c-label--m-editable--hover--TextDecorationColor: var(--pf-global--Color--100);
+  --pf-c-label--m-editable--focus--TextDecorationColor: var(--pf-global--Color--100);
+
+
+  // Editable active
+  --pf-c-label--m-editable--m-editable-active--TextDecoration: none;
   --pf-c-label--m-editable--m-editable-active--BackgroundColor: transparent;
   --pf-c-label--m-editable--m-editable-active__content--before--BorderWidth: 0;
   --pf-c-label--m-editable--m-editable-active__content--before--BorderColor: transparent;
@@ -267,7 +278,25 @@
     }
   }
 
+  &.pf-m-editable {
+    text-decoration: var(--pf-c-label--m-editable--TextDecoration);
+    cursor: pointer;
+    text-decoration-style: var(--pf-c-label--m-editable--TextDecorationStyle);
+    text-decoration-thickness: var(--pf-c-label--m-editable--TextDecorationThickness);
+    text-underline-offset: var(--pf-c-label--m-editable--TextDecorationOffset);
+    text-decoration-color: var(--pf-c-label--m-editable--TextDecorationColor);
+
+    &:hover {
+      --pf-c-label--m-editable--TextDecorationColor: var(--pf-c-label--m-editable--hover--TextDecorationColor);
+    }
+
+    &:focus {
+      --pf-c-label--m-editable--TextDecorationColor: var(--pf-c-label--m-editable--focus--TextDecorationColor);
+    }
+  }
+
   &.pf-m-editable-active {
+    --pf-c-label--m-editable--TextDecoration: var(--pf-c-label--m-editable--m-editable-active--TextDecoration);
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-editable--m-editable-active--BackgroundColor);
     --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-editable--m-editable-active__content--before--BorderWidth);
     --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-editable--m-editable-active__content--before--BorderColor);
