@@ -864,11 +864,7 @@
 
 // stylelint-disable
 // Minimize width
-.pf-c-table .pf-c-table__check {
-  --pf-c-table--cell--MinWidth: calc(var(--pf-c-table--cell--PaddingRight) + #{pf-size-prem(14px)} + var(--pf-c-table--cell--PaddingLeft)); // set min-width to padding + checkbox width
-  --pf-c-table--cell--Width: 1%;
-}
-
+.pf-c-table .pf-c-table__check,
 .pf-c-table .pf-c-table__toggle,
 .pf-c-table .pf-c-table__action,
 .pf-c-table .pf-c-table__favorite,
@@ -918,12 +914,9 @@
   }
 
   label {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    display: block;
     padding: inherit;
+    margin: calc(var(--pf-c-table--cell--PaddingTop) * -1) calc(var(--pf-c-table--cell--PaddingRight) * -1) calc(var(--pf-c-table--cell--PaddingBottom) * -1) calc(var(--pf-c-table--cell--PaddingLeft) * -1);
   }
 }
 
