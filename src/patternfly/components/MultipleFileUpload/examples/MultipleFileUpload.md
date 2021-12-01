@@ -1,5 +1,5 @@
 ---
-id: 'Multiple file upload'
+id: 'File upload - multiple'
 beta: true
 section: components
 cssPrefix: pf-c-multiple-file-upload
