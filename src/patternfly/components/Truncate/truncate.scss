@@ -39,3 +39,18 @@
     }
   }
 }
+
+// safari not supported
+@supports (-webkit-hyphens: none) {
+  .pf-c-truncate {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .pf-c-truncate__end {
+    direction: ltr;
+  }
+}
