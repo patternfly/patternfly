@@ -128,6 +128,14 @@ import './Table.css'
 | `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
+## Responsive table behavior
+### Responsive layout modifier usage
+These classes can be used to ensure that the table changes between the tabular and grid-based layout at an appropriate screen width.
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout at suffixed breakpoint. |
+| `.pf-m-grid` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout. This approach requires JavaScript to set this class at some prescribed viewport width value. |
 
 ## Sortable
 
@@ -2654,6 +2662,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 ```
 
 ### Width modifiers usage
+Width modifiers control the width of the columns. To control the responsive behavior of the table at different screen widths, see [responsive table behavior](#responsive-table-behavior).
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -2769,19 +2778,11 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-table tr > *` | Hides a table cell at a given breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-table tr > *` | Shows a table cell at a given breakpoint. |
 
-## Controlling text modifiers
+## Text control modifiers
 
 To better control table cell behavior, PatternFly provides a series of modifiers to help contextually control layout. By default, `thead` cells are set to truncate, whereas `tbody` cells are set to wrap. Both `th` and `td` cells use a set of shared css properties mapped to customizable css variable values. Because only the shared css variables are changed by the modifier selector and not the properties, the modifier can be applied to any parent element up until `.pf-c-table` itself [`thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text`].
 
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Sets table cell content to wrap. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>tbody</code> cells. |
-| `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Sets text to truncate based on a minimum width and available space adjacent table cells.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>thead</code> cells. |
-| `.pf-m-nowrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Unsets min/max width and sets whitespace to nowrap.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is specifically beneficial for cell's whose <code>thead th</code> cells are blank. The following example highlights link text that should display inline. Be careful with this modifier, it will prioritize its cell's content above all other cell's contents. |
-| `.pf-m-fit-content` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Fit column width to cell content.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
-| `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Breaks long strings wherever necessary as defined by the table layout. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
-
-### Controlling text example
+### Text control example
 ```hbs
 {{#> table table--grid="true" table--modifier="pf-m-grid-lg" table--id="modifiers-without-text-wrapper-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
@@ -2826,7 +2827,7 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 
 By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-c-table__text` wrapper on table cell content. In addition to `.pf-c-table__text`, all PatternFly layouts can be used in table cells and contain table text elements.
 
-### Controlling text using the table text element example
+### Text control using the table text element example
 ```hbs
 {{#> table table--grid="true" table--modifier="pf-m-grid-md" table--id="table-text-element-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
@@ -2984,23 +2985,8 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
 {{/table}}
 ```
 
-### Controlling text modifiers usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-table__text` | `th > *`, `td > *` | Initiates a table text element. |
-| `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text to truncate. |
-| `.pf-m-nowrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text to not wrap. |
-| `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text to wrap. |
-| `.pf-m-fit-content` | `thead`, `tr`, `th`, `.pf-c-table__text` | Modifies `th` to fit its contents. |
-| `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Modifies text strings to break. |
-| `.pf-m-border-right` | `<th>`, `<td>` | Modifies a table cell to show a right border. |
-| `.pf-m-border-left` | `<th>`, `<td>` | Modifies a table cell to show a left border. |
-
-## Table header modifiers
-
-### th truncation
-Long strings in table cells will push content. Add a width modifier to `thead th` to limit string length or add `.pf-m-truncate` to `tbody td`.
+### Table with long strings in the content
+Long strings in table cells will push that column wider and possible take from other columns. This can cause content or headers to be truncated.
 
 ```hbs
 {{#> tooltip tooltip--modifier="pf-m-top"}}
@@ -3072,6 +3058,7 @@ Long strings in table cells will push content. Add a width modifier to `thead th
 ```
 
 ### Width constrained
+Add a [width modifier](#width-modifiers) to `thead th` to limit string length or add `.pf-m-truncate` to `tbody td`.
 ```hbs
 {{#> table table--id="width-constrained-example" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
@@ -3135,6 +3122,19 @@ Long strings in table cells will push content. Add a width modifier to `thead th
   {{/table-tbody}}
 {{/table}}
 ```
+
+### Text control modifiers usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-table__text` | `th > *`, `td > *` | Initiates a table text element. |
+| `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Sets table cell content to wrap. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>tbody</code> cells. |
+| `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Sets text to truncate based on a minimum width and available space adjacent table cells.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>thead</code> cells. |
+| `.pf-m-nowrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Unsets min/max width and sets whitespace to nowrap.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is specifically beneficial for cell's whose <code>thead th</code> cells are blank. The following example highlights link text that should display inline. Be careful with this modifier, it will prioritize its cell's content above all other cell's contents. |
+| `.pf-m-fit-content` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Fit column width to cell content.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
+| `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Breaks long strings to break wherever necessary as defined by the table layout. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
+
+## Sticky table modifiers
 
 ### Sticky header
 ```hbs
@@ -3261,16 +3261,19 @@ Long strings in table cells will push content. Add a width modifier to `thead th
 </div>
 ```
 
-### Sticky column usage
+### Sticky table usage
 
 For sticky columns to function correctly, the parent table's width must be controlled with `.pf-c-scroll-inner-wrapper`. For sticky columns and sticky headers to function correctly, the parent table needs an inner and outer wrapper (`.pf-c-scroll-outer-wrapper` and `.pf-c-scroll-inner-wrapper`)
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
+| `.pf-m-sticky-header` | `.pf-c-table` | Makes the table cells in `<thead>` sticky to the top of the table on scroll. |
 | `.pf-c-scroll-outer-wrapper` | `<div>` | Initiates a table container sticky columns outer wrapper. |
 | `.pf-c-scroll-inner-wrapper` | `<div>` | Initiates a table container sticky columns inner wrapper. |
 | `.pf-c-table__sticky-column` | `<th>`, `<td>` | Initiates a sticky table cell. |
 
+
+## Nested column headers
 ### Nested column headers and expandable rows
 ```hbs
 <div class="pf-c-scroll-inner-wrapper">
@@ -3506,6 +3509,14 @@ For sticky columns to function correctly, the parent table's width must be contr
   {{/table}}
 </div>
 ```
+
+### Nested column header modifier usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-nested-column-header` | `<thead>` | Modifies a table header to handle nested header cells. |
+| `.pf-m-border-right` | `<th>`, `<td>` | Modifies a table cell to show a right border. |
+| `.pf-m-border-left` | `<th>`, `<td>` | Modifies a table cell to show a left border. |
 
 ## Favorites
 
@@ -3941,10 +3952,3 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 - Tabular data.
 - Compact presentation modifier (not compatible with expandable table).
 
-### Responsive layout modifiers
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout at suffixed breakpoint. |
-| `.pf-m-grid` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout. This approach requires JavaScript to set this class at some prescribed viewport width value. |
-| `.pf-m-sticky-header` | `.pf-c-table` | Makes the table cells in `<thead>` sticky to the top of the table on scroll. |
