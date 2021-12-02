@@ -1,0 +1,56 @@
+.pf-c-truncate {
+  --pf-c-truncate--FontSize: var(--pf-c-truncate--FontSize, 1rem);
+
+  display: inline-flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+// Start, end
+.pf-c-truncate__start,
+.pf-c-truncate__end {
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// End
+.pf-c-truncate__end {
+  direction: rtl;
+  text-align: left;
+}
+
+// text-overflow: <string>
+@supports (text-overflow: "") {
+  .pf-c-truncate__start + .pf-c-truncate__end {
+    text-overflow: "";
+  }
+}
+
+// text-overflow: ellipsis
+@supports not (text-overflow: "") {
+  // Start + end = middle truncation
+  .pf-c-truncate__start + .pf-c-truncate__end {
+    font-size: 0; // shrink ellipsis size to zero
+
+    .pf-c-truncate__text {
+      font-size: var(--pf-c-truncate--FontSize);
+    }
+  }
+}
+
+// safari not supported
+@supports (-webkit-hyphens: none) {
+  .pf-c-truncate {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .pf-c-truncate__end {
+    direction: ltr;
+  }
+}
