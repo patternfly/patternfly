@@ -4,6 +4,35 @@ section: developer-resources
 releaseNoteTOC: true
 ---
 
+## 2021.16 release notes (2021-12-07)
+Packages released:
+- [@patternfly/patternfly@v4.164.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.164.1)
+
+### Components
+- **Button:** Added demo for progress button completion state ([#4528](https://github.com/patternfly/patternfly/pull/4528))
+- **Card:** Replaced dropdowns with selects in demos ([#4520](https://github.com/patternfly/patternfly/pull/4520))
+- **Description list:** Added columnar layout ([#4544](https://github.com/patternfly/patternfly/pull/4544))
+- **Dropdown:**
+  - Added plain text variant ([#4542](https://github.com/patternfly/patternfly/pull/4542))
+  - Added disabled styles ([#4543](https://github.com/patternfly/patternfly/pull/4543))
+- **Form:** Added support for horizontal layout at various breakpoints ([#4536](https://github.com/patternfly/patternfly/pull/4536))
+- **Multiplefileupload:** Added component ([#4548](https://github.com/patternfly/patternfly/pull/4548))
+- **Table:**
+  - Removed cursor pointer on disabled checkboxes ([#4527](https://github.com/patternfly/patternfly/pull/4527))
+  - Removed extra padding from nested table cells ([#4529](https://github.com/patternfly/patternfly/pull/4529))
+  - Reorganized documentation ([#4539](https://github.com/patternfly/patternfly/pull/4539))
+  - Increased target area of checkboxes/radios ([#4546](https://github.com/patternfly/patternfly/pull/4546))
+- **Toolbar:** Set labels to show in collapsed state ([#4451](https://github.com/patternfly/patternfly/pull/4451))
+- **Truncate:** Added truncate component ([#4502](https://github.com/patternfly/patternfly/pull/4502))
+
+### Other
+- **Build:**
+  - Added a11y coverage report action ([#4530](https://github.com/patternfly/patternfly/pull/4530))
+  - Updated stylelint, deps ([#4537](https://github.com/patternfly/patternfly/pull/4537))
+- **Demos:** Added a password generator demo ([#4531](https://github.com/patternfly/patternfly/pull/4531))
+- **Fonts:** Added opt-ins for new red hat font ([#4476](https://github.com/patternfly/patternfly/pull/4476))
+- **Global:** Removed custom firefox focus styles ([#4533](https://github.com/patternfly/patternfly/pull/4533))
+
 ## 2021.15 release notes (2021-11-16)
 Packages released:
 - [@patternfly/patternfly@v4.159.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.159.1)
