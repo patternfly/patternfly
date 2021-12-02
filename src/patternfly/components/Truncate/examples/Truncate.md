@@ -8,7 +8,7 @@ cssPrefix: pf-c-truncate
 ## Examples
 
 ### Notes
-The truncate component contains to child elements, `.pf-c-truncate__start` and `.pf-c-truncate__end`. If both `start` and `end` are present within `.pf-c-truncate`, trucation will occur in the middle of the string. If only `.pf-c-truncate__start` is present, truncation will occur at the end of the string. If only `.pf-c-truncate__end` is present, truncation will occur at the beginning of the string. A `.pf-c-popover` will be automatically applied to the PatternFly React implementation. `&lrm;` must be included at the end of string to denote the ending punctuation mark. Otherwise it will occur and the beggining of truncation for a `pf-c-truncate__end` element.
+The truncate component contains two child elements, `.pf-c-truncate__start` and `.pf-c-truncate__end`. If both `start` and `end` are present within `.pf-c-truncate`, trucation will occur in the middle of the string. If only `.pf-c-truncate__start` is present, truncation will occur at the end of the string. If only `.pf-c-truncate__end` is present, truncation will occur at the beginning of the string. A `.pf-c-popover` will be automatically applied to the PatternFly React implementation. `&lrm;` must be included at the end of string to denote the ending punctuation mark. Otherwise it will occur and the beggining of truncation for a `pf-c-truncate__end` element.
 
 ### Default
 ```hbs
