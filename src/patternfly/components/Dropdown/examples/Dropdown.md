@@ -34,7 +34,6 @@ import './Dropdown.css'
 {{> dropdown dropdown--id="dropdown-kebab" dropdown-toggle--IsPlain="true"}}
 {{> dropdown dropdown--id="dropdown-kebab-expanded" dropdown--IsExpanded="true" dropdown-toggle--IsPlain="true"}}
 ```
-
 ### Kebab align right
 ```hbs
 {{> dropdown dropdown--id="dropdown-kebab-align-right" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
@@ -54,6 +53,15 @@ import './Dropdown.css'
 ```hbs
 {{> dropdown dropdown--id="dropdown-align-top" dropdown--modifier="pf-m-top" dropdown-toggle--text="Top"}}
 {{> dropdown dropdown--id="dropdown-align-top-expanded" dropdown--modifier="pf-m-top" dropdown--IsExpanded="true" dropdown-toggle--text="Top"}}
+```
+
+### Plain with text
+```hbs
+{{> dropdown dropdown--id="plain-with-text-example-disabled" dropdown-toggle--IsPlainText="true" dropdown-toggle--IsDisabled="true" dropdown-toggle--text="Custom text"}}
+&nbsp;
+{{> dropdown dropdown--id="plain-with-text-example" dropdown-toggle--IsPlainText="true" dropdown-toggle--text="Custom text"}}
+&nbsp;
+{{> dropdown dropdown--id="plain-with-text-example-expanded" dropdown-toggle--IsPlainText="true" dropdown-toggle--text="Custom text (expanded)" dropdown--IsExpanded="true"}}
 ```
 
 ### Badge toggle
@@ -194,6 +202,7 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-action` | `.pf-c-dropdown__toggle.pf-m-split-button` | Modifies the dropdown toggle for when an action is placed beside a toggle button in a split button dropdown. |
 | `.pf-m-text` | `.pf-c-dropdown__menu-item` | Modifies a menu item to be non-interactive text. |
 | `.pf-m-plain` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with no border. |
+| `.pf-m-text` | `.pf-c-dropdown__toggle` | Modifies the dropdown toggle for the text variation. |
 | `.pf-m-primary` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with primary styles. |
 | `.pf-m-secondary` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with secondary styles. |
 | `.pf-m-full-height` | `.pf-c-dropdown` | Modifies a dropdown to full height of parent. See masthead for use. |

@@ -1,4 +1,27 @@
-<{{# if dropdown-toggle--type}}{{dropdown-toggle--type}}{{else}}button{{/if}} class="pf-c-dropdown__toggle{{#if dropdown--IsSplitButton}}{{#if dropdown-toggle--IsDisabled}} pf-m-disabled{{/if}}{{/if}}{{#if dropdown-toggle--modifier}} {{dropdown-toggle--modifier}}{{/if}}{{#if dropdown-toggle--IsPlain}} pf-m-plain{{/if}}{{#if dropdown-toggle--IsBadge}} pf-m-plain{{/if}}{{#if dropdown--IsSplitButton}} pf-m-split-button{{/if}}{{#if dropdown--IsActionButton}} pf-m-action{{/if}}"
+<{{# if dropdown-toggle--type}}{{dropdown-toggle--type}}{{else}}button{{/if}} class="pf-c-dropdown__toggle
+  {{~#if dropdown--IsSplitButton}}
+    {{~#if dropdown-toggle--IsDisabled}}
+      pf-m-disabled
+    {{/if}}
+  {{/if}}
+  {{~#if dropdown-toggle--modifier}}
+    {{dropdown-toggle--modifier}}
+  {{/if}}
+  {{~#if dropdown-toggle--IsPlain}}
+    pf-m-plain
+  {{/if}}
+  {{~#if dropdown-toggle--IsBadge}}
+    pf-m-plain
+  {{/if}}
+  {{~#if dropdown--IsSplitButton}}
+    pf-m-split-button
+  {{/if}}
+  {{~#if dropdown--IsActionButton}}
+    pf-m-action
+  {{/if}}
+  {{~#if dropdown-toggle--IsPlainText}}
+    pf-m-plain pf-m-text
+  {{/if}}"
   {{#unless dropdown--template--SplitButton}}
     id="{{dropdown--id}}-button"
     aria-expanded="{{#if dropdown--IsExpanded}}true{{else}}false{{/if}}"

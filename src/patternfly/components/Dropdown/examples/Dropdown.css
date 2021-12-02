@@ -9,7 +9,8 @@
 #ws-core-c-dropdown-primary-toggle,
 #ws-core-c-dropdown-secondary-toggle,
 #ws-core-c-dropdown-menu-item-icons,
-#ws-core-c-dropdown-aria-disabled-items {
+#ws-core-c-dropdown-aria-disabled-items,
+#ws-core-c-dropdown-plain-with-text {
   min-height: 310px;
 }
 
