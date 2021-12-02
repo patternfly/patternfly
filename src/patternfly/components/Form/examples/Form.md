@@ -67,6 +67,23 @@ cssPrefix: pf-c-form
 {{/form}}
 ```
 
+### Horizontal layout at a custom breakpoint
+```hbs
+{{#> form form--modifier="pf-m-horizontal-on-sm" form--id="form-horizontal"}}
+  {{#> form-group form-group--id="-name"}}
+    {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
+        Name
+      {{/form-label}}
+      {{> form-group-label-help}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+    {{/form-group-control}}
+  {{/form-group}}
+{{/form}}
+```
+
 ### Form sections
 ```hbs
 {{#> form form--id="form-section-example"}}
@@ -588,7 +605,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__field-group-header-description` | `<div>` | Initiates the form field group description. |
 | `.pf-c-form__field-group-header-actions` | `<div>` | Initiates the form field group actions container. |
 | `.pf-c-form__field-group-body` | `<div>` | Initiates the form field group body. |
-| `.pf-m-horizontal` | `.pf-c-form` | Modifies form for a horizontal layout. |
+| `.pf-m-horizontal{-on-[xs, sm, md, lg, xl, 2xl]}` | `.pf-c-form` | Modifies the form for a horizontal layout at an optional breakpoint. The default breakpoint is `-md`. |
 | `.pf-m-info` | `.pf-c-form__group-label` | Modifies the form group label to contain form group label info. |
 | `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |
 | `.pf-m-success` | `.pf-c-form__helper-text` | Modifies text color of helper text for success state. |
