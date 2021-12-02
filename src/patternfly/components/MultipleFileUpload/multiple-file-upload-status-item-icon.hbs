@@ -1,0 +1,10 @@
+<div class="pf-c-multiple-file-upload__status-item-icon{{#if multiple-file-upload-status-item-icon--modifier}} {{multiple-file-upload-status-item-icon--modifier}}{{/if}}"
+  {{#if multiple-file-upload-status-item-icon--attribute}}
+    {{{multiple-file-upload-status-item-icon--attribute}}}
+  {{/if}}>
+  {{#if @partial-block}}
+    {{>@partial-block}}
+  {{else}}
+    <i class="fas fa-file" aria-hidden="true"></i>
+  {{/if}}
+</div>

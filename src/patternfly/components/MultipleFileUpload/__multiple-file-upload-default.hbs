@@ -1,0 +1,75 @@
+{{#> multiple-file-upload}}
+  {{#> multiple-file-upload-main}}
+    {{#> multiple-file-upload-title}}
+      {{> multiple-file-upload-title-icon}}
+      {{#> multiple-file-upload-title-text}}
+        Drag and drop files here
+        {{#> multiple-file-upload-title-text-separator}}
+          or
+        {{/multiple-file-upload-title-text-separator}}
+      {{/multiple-file-upload-title-text}}
+    {{/multiple-file-upload-title}}
+    {{#> multiple-file-upload-upload}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Upload
+      {{/button}}
+    {{/multiple-file-upload-upload}}
+    {{#> multiple-file-upload-info}}
+      Accepted file types: JPEG, Doc, PDF, PNG
+    {{/multiple-file-upload-info}}
+  {{/multiple-file-upload-main}}
+  {{#if multiple-file-upload--HasStatus}}
+    {{#> multiple-file-upload-status}}
+      {{#> expandable-section expandable-section--IsExpanded=multiple-file-upload-status--IsExpanded}}
+        {{#> expandable-section-toggle}}
+          {{#> multiple-file-upload-status-progress}}
+            {{> multiple-file-upload-status-progress-icon}}
+            {{#> multiple-file-upload-status-progress-text}}
+              0 of 3 files uploaded
+            {{/multiple-file-upload-status-progress-text}}
+          {{/multiple-file-upload-status-progress}}
+        {{/expandable-section-toggle}}
+        {{#> expandable-section-content}}
+          {{#> multiple-file-upload-status-list}}
+            {{#> multiple-file-upload-status-item}}
+              {{> multiple-file-upload-status-item-icon}}
+              {{#> multiple-file-upload-status-item-main}}
+                {{#> progress
+                  progress__value="35"
+                  progress__description='<span class="pf-c-multiple-file-upload__status-item-progress"><span class="pf-c-multiple-file-upload__status-item-progress-text">filename.png</span> <span class="pf-c-multiple-file-upload__status-item-progress-size">40 mb</span></span>'
+                  progress__id="multiple-file-upload-progress-png"
+                  }}
+                {{/progress}}
+              {{/multiple-file-upload-status-item-main}}
+              {{> multiple-file-upload-status-item-close}}
+            {{/multiple-file-upload-status-item}}
+            {{#> multiple-file-upload-status-item}}
+              {{> multiple-file-upload-status-item-icon}}
+              {{#> multiple-file-upload-status-item-main}}
+                {{#> progress
+                  progress__value="70"
+                  progress__description='<span class="pf-c-multiple-file-upload__status-item-progress"><span class="pf-c-multiple-file-upload__status-item-progress-text">filename.doc</span> <span class="pf-c-multiple-file-upload__status-item-progress-size">30 mb</span></span>'
+                  progress__id="multiple-file-upload-progress-doc"
+                  }}
+                {{/progress}}
+              {{/multiple-file-upload-status-item-main}}
+              {{> multiple-file-upload-status-item-close}}
+            {{/multiple-file-upload-status-item}}
+            {{#> multiple-file-upload-status-item}}
+              {{> multiple-file-upload-status-item-icon}}
+              {{#> multiple-file-upload-status-item-main}}
+                {{#> progress
+                  progress__value="50"
+                  progress__description='<span class="pf-c-multiple-file-upload__status-item-progress"><span class="pf-c-multiple-file-upload__status-item-progress-text">filename.pdf</span> <span class="pf-c-multiple-file-upload__status-item-progress-size">25 mb</span></span>'
+                  progress__id="multiple-file-upload-progress-pdf"
+                  }}
+                {{/progress}}
+              {{/multiple-file-upload-status-item-main}}
+              {{> multiple-file-upload-status-item-close}}
+            {{/multiple-file-upload-status-item}}
+          {{/multiple-file-upload-status-list}}
+        {{/expandable-section-content}}
+      {{/expandable-section}}
+    {{/multiple-file-upload-status}}
+  {{/if}}
+{{/multiple-file-upload}}
