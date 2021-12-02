@@ -1,0 +1,15 @@
+{{#> table-th table-th--data-label="Data label name"}}
+  <div id="{{table--id}}-node{{table-tr--index}}">
+    {{#if @partial-block}}
+      {{> @partial-block}}
+    {{/if}}
+    {{#if table--node--content}}
+      {{{table--node--content}}}
+    {{else}}
+      Node {{table-tr--index}}
+    {{/if}}
+  </div>
+  {{#unless table--node--HasNoLink}}
+    <a href="#">siemur/test-space</a>
+  {{/unless}}
+{{/table-th}}

@@ -1,14 +1,12 @@
-{{#> table-tr}}
-  {{#> table-td table-td--check="true"}}
-    <input type="checkbox" name="{{table--id}}-checkrow-selectable-{{table-tr--basic--index}}" aria-labelledby="{{table--id}}-node-{{table-tr--basic--index}}">
-  {{/table-td}}
+{{#> table-tr table-tr--index=table-tr--basic--index}}
+  {{> table--check}}
   {{#> table-th table-th--data-label="Repository name"}}
-      {{#if table-tr--basic--title}}
-        <div id="{{table--id}}-node-{{table-tr--basic--index}}">{{{table-tr--basic--title}}}</div>
-      {{else}}
-        <div id="{{table--id}}-node-{{table-tr--basic--index}}">Node {{table-tr--basic--index}}</div>
-        <a href="#">siemur/test-space</a>
-      {{/if}}
+    {{#if table-tr--basic--title}}
+      <div id="{{table--id}}-node{{table-tr--basic--index}}">{{{table-tr--basic--title}}}</div>
+    {{else}}
+      <div id="{{table--id}}-node{{table-tr--basic--index}}">Node {{table-tr--basic--index}}</div>
+      <a href="#">siemur/test-space</a>
+    {{/if}}
   {{/table-th}}
   {{#> table-td table-td--action="true"}}
     {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-selectable-' table-tr--basic--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}

@@ -1,23 +1,23 @@
 <{{#if table-td--type}}{{table-td--type}}{{else}}td{{/if}} class="
-    {{~#if table-td--toggle}} pf-c-table__toggle{{/if}}
-    {{~#if table-td--check}} pf-c-table__check{{/if}}
-    {{~#if table-td--action}} pf-c-table__action{{/if}}
-    {{~#if table-td--icon}} pf-c-table__icon{{/if}}
-    {{~#if table-td--compound-expansion-toggle}} pf-c-table__compound-expansion-toggle{{table-td--modifier}}{{/if}}
-    {{~#if table-td--IsStickyColumn}} pf-c-table__sticky-column{{/if}}
-    {{~#if table-td--IsFavorite}} pf-c-table__favorite{{/if}}
-    {{~#if table-td--IsFavorited}} pf-m-favorited{{/if}}
-    {{~#if table-td--IsDraggable}} pf-c-table__draggable{{/if}}
-    {{~#if table-td--modifier}} {{table-td--modifier}}{{/if}}"
-    {{#unless table-td--IsEmpty}}
-      {{#unless table-td--type}}
-        {{#if table--IsTree-view}}
-          role="gridcell"
-        {{else}}
-          role="cell"
-        {{/if}}
-      {{/unless}}
+  {{~#if table-td--toggle}} pf-c-table__toggle{{/if}}
+  {{~#if table-td--check}} pf-c-table__check{{/if}}
+  {{~#if table-td--action}} pf-c-table__action{{/if}}
+  {{~#if table-td--icon}} pf-c-table__icon{{/if}}
+  {{~#if table-td--compound-expansion-toggle}} pf-c-table__compound-expansion-toggle{{/if}}
+  {{~#if table-td--IsStickyColumn}} pf-c-table__sticky-column{{/if}}
+  {{~#if table-td--IsFavorite}} pf-c-table__favorite{{/if}}
+  {{~#if table-td--IsFavorited}} pf-m-favorited{{/if}}
+  {{~#if table-td--IsDraggable}} pf-c-table__draggable{{/if}}
+  {{~#if table-td--modifier}} {{table-td--modifier}}{{/if}}"
+  {{#unless table-td--IsEmpty}}
+    {{#unless table-td--type}}
+      {{#if table--IsTree-view}}
+        role="gridcell"
+      {{else}}
+        role="cell"
+      {{/if}}
     {{/unless}}
+  {{/unless}}
   {{#if table-td--attribute}}
     {{{table-td--attribute}}}
   {{/if}}
