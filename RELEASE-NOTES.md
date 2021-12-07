@@ -6,7 +6,7 @@ releaseNoteTOC: true
 
 ## 2021.16 release notes (2021-12-07)
 Packages released:
-- [@patternfly/patternfly@v4.164.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.164.1)
+- [@patternfly/patternfly@v4.164.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.164.2)
 
 ### Components
 - **Button:** Added demo for progress button completion state ([#4528](https://github.com/patternfly/patternfly/pull/4528))
@@ -23,7 +23,9 @@ Packages released:
   - Reorganized documentation ([#4539](https://github.com/patternfly/patternfly/pull/4539))
   - Increased target area of checkboxes/radios ([#4546](https://github.com/patternfly/patternfly/pull/4546))
 - **Toolbar:** Set labels to show in collapsed state ([#4451](https://github.com/patternfly/patternfly/pull/4451))
-- **Truncate:** Added truncate component ([#4502](https://github.com/patternfly/patternfly/pull/4502))
+- **Truncate:**
+  - Added truncate component ([#4502](https://github.com/patternfly/patternfly/pull/4502))
+  - Fixed font size var value ([#4560](https://github.com/patternfly/patternfly/pull/4560))
 
 ### Other
 - **Build:**
