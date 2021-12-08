@@ -16,7 +16,7 @@ Packages released:
   - Added plain text variant ([#4542](https://github.com/patternfly/patternfly/pull/4542))
   - Added disabled styles ([#4543](https://github.com/patternfly/patternfly/pull/4543))
 - **Form:** Added support for horizontal layout at various breakpoints ([#4536](https://github.com/patternfly/patternfly/pull/4536))
-- **Multiplefileupload:** Added component ([#4548](https://github.com/patternfly/patternfly/pull/4548))
+- **Multiple file upload:** Added component ([#4548](https://github.com/patternfly/patternfly/pull/4548))
 - **Table:**
   - Removed cursor pointer on disabled checkboxes ([#4527](https://github.com/patternfly/patternfly/pull/4527))
   - Removed extra padding from nested table cells ([#4529](https://github.com/patternfly/patternfly/pull/4529))
