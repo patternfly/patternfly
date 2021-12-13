@@ -118,6 +118,7 @@
   --pf-c-label--m-compact--PaddingBottom: 0;
   --pf-c-label--m-compact--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-label--m-compact--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-label--m-compact--m-editable--TextDecorationOffset: #{pf-size-prem(1px)};
 
   // Content
   --pf-c-label__content--Color: var(--pf-global--Color--100);
@@ -142,6 +143,8 @@
   --pf-c-label__c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Editable
+  --pf-c-label__editable-text--MaxWidth: 16ch;
+  --pf-c-label__editable-text--BorderWidth: 0;
   --pf-c-label--m-editable--Cursor: pointer;
   --pf-c-label--m-editable--TextDecoration: underline;
   --pf-c-label--m-editable--TextDecorationStyle: dashed;
@@ -174,6 +177,7 @@
     --pf-c-label--PaddingBottom: var(--pf-c-label--m-compact--PaddingBottom);
     --pf-c-label--PaddingLeft: var(--pf-c-label--m-compact--PaddingLeft);
     --pf-c-label--FontSize: var(--pf-c-label--m-compact--FontSize);
+    --pf-c-label--m-editable--TextDecorationOffset: var(--pf-c-label--m-compact--m-editable--TextDecorationOffset);
   }
 
   &.pf-m-blue {
@@ -300,14 +304,20 @@
   &.pf-m-editable-active {
     --pf-c-label--m-editable--Cursor: var(--pf-c-label--m-editable--m-editable-active--Cursor);
     --pf-c-label--m-editable--TextDecoration: var(--pf-c-label--m-editable--m-editable-active--TextDecoration);
-
-    // --pf-c-label--BackgroundColor: var(--pf-c-label--m-editable--m-editable-active--BackgroundColor);
-    // --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-editable--m-editable-active__content--before--BorderWidth);
-    // --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-editable--m-editable-active__content--before--BorderColor);
+    --pf-c-label--BackgroundColor: var(--pf-c-label--m-editable--m-editable-active--BackgroundColor);
+    --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-editable--m-editable-active__content--before--BorderWidth);
+    --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-editable--m-editable-active__content--before--BorderColor);
 
     .pf-c-button {
       visibility: hidden; // use visibility hidden to retain positioning
     }
+  }
+
+  .pf-c-label__editable-text {
+    @include pf-text-overflow;
+
+    max-width: var(--pf-c-label__editable-text--MaxWidth);
+    border-width: var(--pf-c-label__editable-text--BorderWidth);
   }
 
   .pf-c-button {

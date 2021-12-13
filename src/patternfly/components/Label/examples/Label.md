@@ -564,13 +564,16 @@ import './Label.css'
 ```
 
 ### Overflow
+This style of label is used to indicate overflow within a label group.
 ```hbs
 {{#> label label--id="overflow" label--IsOverflow="true"}}
   Overflow
 {{/label}}
 ```
 
-### Editable label behavior must be handled with JavaScript.
+
+### Editable
+**Note: Editable label behavior must be handled with JavaScript.**
 * `.pf-c-inline-edit__editable-text` onClick event should:
   * Set `.pf-m-editable-active` on `.pf-c-label`
   * Set `contenteditable="true"` on `.pf-c-inline-edit__editable-text`
@@ -583,15 +586,14 @@ import './Label.css'
   * Remove `.pf-m-editable-active` from `.pf-c-label`
   * Remove `contenteditable="true"` from `.pf-c-inline-edit__editable-text`
 
-### Editable
 ``` hbs
-{{#> label label--id="editable-label" label--IsEditable="true" label--isRemovable="true" label--modifier="pf-m-blue"}}
-  Editable label
-{{/label}}
+{{#> label label--id="editable-label" label--IsEditable="true" label--isRemovable="true" label--modifier="pf-m-blue"}}Editable label{{/label}}
 
-{{#> label label--id="editable-label-active" label--IsEditable="true" label--IsEditableActive="true" label--modifier="pf-m-blue"}}
-  Editable active
-{{/label}}
+{{#> label label--id="editable-label-active" label--IsEditable="true" label--IsEditableActive="true" label--modifier="pf-m-blue"}}Editable active{{/label}}
+
+{{#> label label--id="compact-editable-label" label--modifier="pf-m-compact" label--IsEditable="true" label--isRemovable="true" label--modifier="pf-m-blue"}}Compact editable label{{/label}}
+
+{{#> label label--id="compact-editable-label-active" label--modifier="pf-m-compact" label--IsEditable="true" label--IsEditableActive="true" label--modifier="pf-m-blue"}}Compact editable active{{/label}}
 ```
 
 ## Documentation
