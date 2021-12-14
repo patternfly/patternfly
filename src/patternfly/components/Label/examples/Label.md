@@ -574,17 +574,17 @@ This style of label is used to indicate overflow within a label group.
 
 ### Editable
 **Note: Editable label behavior must be handled with JavaScript.**
-* `.pf-c-inline-edit__editable-text` onClick event should:
+* `.pf-c-label__editable-text` onClick event should:
   * Set `.pf-m-editable-active` on `.pf-c-label`
-  * Set `contenteditable="true"` on `.pf-c-inline-edit__editable-text`
+  * Change `.pf-c-label__editable-text`from a button to an input
 * Return keypress, when content is editable, should:
   * Be captured to prevent line wrapping and save updates to label text
   * Remove `.pf-m-editable-active` from `.pf-c-label`
-  * Remove `contenteditable="true"` from `.pf-c-inline-edit__editable-text`
+  * Change `.pf-c-label__editable-text` back from an input to a button and set the `currvalue` of the button to the contents of the input
 * Esc keypress, when content is editable, should:
   * Undo any update to label text
   * Remove `.pf-m-editable-active` from `.pf-c-label`
-  * Remove `contenteditable="true"` from `.pf-c-inline-edit__editable-text`
+  * Change `.pf-c-label__editable-text` back to a button
 
 ``` hbs
 {{#> label label--id="editable-label" label--IsEditable="true" label--isRemovable="true" label--modifier="pf-m-blue"}}Editable label{{/label}}
@@ -605,6 +605,7 @@ This style of label is used to indicate overflow within a label group.
 | `.pf-c-label__content` | `<span>`, `<a>`, `<button>` | Iniates a label content. Use as an `<a>` element if the label serves as a link. Use a `<button>` if the label serves as an action. **Required** |
 | `.pf-c-label__icon` | `<span>` | Initiates a label icon. |
 | `.pf-c-label__text` | `<span>` | Initiates label text. |
+| `.pf-c-label__editable-text` | `<button>`, `<input>` | Initiates editable label text. See the [editable](#editable) example for details about handling behavior in Javascript.|
 | `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
 | `.pf-m-compact` | `.pf-c-label` | Modifies label for compact styles. |
 | `.pf-m-overflow` | `.pf-c-label` | Modifies label for overflow styles for use in a label group. |
