@@ -1,8 +1,10 @@
 <{{#if label-editable-text--type}}{{label-editable-text--type}}{{else if label--IsEditableActive}}input{{else}}button{{/if}} class="pf-c-label__editable-text{{#if label-editable-text--modifier}} {{label-editable-text--modifier}}{{/if}}"
-  id="{{label--id}}-editable-text"{{#if label--IsEditableActive}} 
-  type="text" 
-  value="{{~> @partial-block}}"{{else}} 
-  currvalue="{{~> @partial-block}}"{{/if}}
+  id="{{label--id}}-editable-text"
+  {{#if label--IsEditableActive}} 
+    type="text" 
+    value="{{~> @partial-block}}"{{else}} 
+    currvalue="{{~> @partial-block}}"
+  {{/if}}
   {{#if label-editable-text--aria-label}}
     aria-label="{{label-editable-text--aria-label}}"
   {{else}}
@@ -14,5 +16,3 @@
 {{#unless label--IsEditableActive}}
   {{> @partial-block}}
 </{{#if label-editable-text--type}}{{label-editable-text--type}}{{else}}button{{/if}}>{{/unless}}
-
-
