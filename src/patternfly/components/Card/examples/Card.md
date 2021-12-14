@@ -468,7 +468,7 @@ import './Card.css'
 
 ### Card with dividers between sections
 ```hbs
-{{#> card}}
+{{#> card card--id="card-dividers-example"}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -481,6 +481,27 @@ import './Card.css'
     Body
   {{/card-body}}
   {{> divider}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
+### Draggable
+```hbs
+{{#> card card--id="card-draggable-example" card--IsDraggable="true"}}
+  {{#> card-header}}
+    {{#> card-actions}}
+      {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+      {{> card--check}}
+    {{/card-actions}}
+    {{#> card-title card-title--attribute=(concat 'id="' card--id '-check-label"')}}
+      Title
+    {{/card-title}}
+  {{/card-header}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
   {{#> card-footer}}
     Footer
   {{/card-footer}}

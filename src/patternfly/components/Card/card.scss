@@ -104,6 +104,14 @@
   --pf-c-card__header--m-toggle-right--toggle--MarginLeft: var(--pf-global--spacer--xs);
   --pf-c-card__header--m-toggle-right--actions--MarginRight: 0;
 
+  // Draggable
+  --pf-c-card__draggable--PaddingTop: var(--pf-c-card--first-child--PaddingTop);
+  --pf-c-card__draggable--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-card__draggable--PaddingLeft: var(--pf-c-card--child--PaddingLeft);
+  --pf-c-card__draggable--c-button--MarginTop: calc(-1 * var(--pf-global--spacer--form-element));
+  --pf-c-card__draggable--c-button--MarginRight: calc(-1 * var(--pf-global--spacer--md));
+  --pf-c-card__draggable--c-button--MarginLeft: calc(-1 * var(--pf-global--spacer--md));
+
   display: flex;
   flex-direction: column;
   background-color: var(--pf-c-card--BackgroundColor);
@@ -269,6 +277,29 @@
     & + .pf-c-card__footer {
       padding-top: var(--pf-c-card--c-divider--child--PaddingTop);
     }
+  }
+
+  &.pf-m-draggable {
+    flex-direction: row;
+  }
+}
+
+.pf-c-card__main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pf-c-card__draggable {
+  align-self: flex-start;
+  padding-top: var(--pf-c-card__draggable--PaddingTop);
+  padding-right: var(--pf-c-card__draggable--PaddingRight);
+  padding-left: var(--pf-c-card__draggable--PaddingLeft);
+
+  > .pf-c-button {
+    margin-top: var(--pf-c-card__draggable--c-button--MarginTop);
+    margin-right: var(--pf-c-card__draggable--c-button--MarginRight);
+    margin-left: var(--pf-c-card__draggable--c-button--MarginLeft);
   }
 }
 
