@@ -1,6 +1,6 @@
 // Media query used to create responsive classes
 @mixin pf-media-query($point) {
-  @if $point == "" or $point == null or $point == "base" {
+  @if $point == "" or not $point or $point == "base" {
     @content;
   }
 
@@ -41,19 +41,19 @@
 // @parameter: {Suffix} xs, sm, md, lg, xl, base or null
 // @usage: @include pf-utility-builder(class-name, base sm md lg xl);
 // ===============================================================================================
-//
+
 // ## Example sass map:
 // this must be used when order matters or a cluster of similar utilties need to overwrite each other
-//
+
 // Justify content options
 // $pf-u-flex-options: (
 //   flex-none:  (flex none),
 //   flex-1:     (flex 1)
 // );
-//
+
 // non-responsive, base only                @include pf-utility-builder($sass-map)
 // responsive, including all breakpoints    @include pf-utility-builder($sass-map, $pf-global--breakpoint-list)
-//
+
 // ## Passing individual utilities values
 // ===============================================================================================
 // Example individual utility:

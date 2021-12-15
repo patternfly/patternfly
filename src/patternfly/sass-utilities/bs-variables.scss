@@ -1,12 +1,11 @@
 @import "./all";
 
-//
+// stylelint-disable
+
 // Bootstrap overwrite
-//
 // Bootstrap overwrites from patternfly variables
 
 // Colors
-// stylelint-disable
 $white:    $pf-color-white !default;
 $gray-100: $pf-color-black-100 !default;
 $gray-200: $pf-color-black-200 !default;
