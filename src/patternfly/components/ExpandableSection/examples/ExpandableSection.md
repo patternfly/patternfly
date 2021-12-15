@@ -71,6 +71,18 @@ cssPrefix: pf-c-expandable-section
 {{/stack}}
 ```
 
+
+### Indented
+```hbs
+{{#> expandable-section expandable-section--IsExpanded="true" expandable-section--IsIndented="true"}}
+  {{#> expandable-section-toggle}}
+  {{/expandable-section-toggle}}
+  {{#> expandable-section-content}}
+    This content is visible only when the component is expanded.
+  {{/expandable-section-content}}
+{{/expandable-section}}
+```
+
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |
