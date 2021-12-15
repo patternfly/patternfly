@@ -6,12 +6,6 @@
     {{{label-content--attribute}}}
   {{/if}}>
   {{#if label--IsEditable}}
-    {{#> inline-edit}}
-      {{#> inline-edit-editable-text inline-edit-editable-text--IsActive=label--IsEditableActive inline-edit--id=label--id}}
-        {{> @partial-block}}
-      {{/inline-edit-editable-text}}
-    {{/inline-edit}}
-  {{else}}
-    {{> @partial-block}}
-  {{/if}}
+    {{#> label-editable-text}}{{> @partial-block}}{{/label-editable-text}}
+  {{else}}{{~> @partial-block}}{{/if}}
 </{{# if label-content--IsLink}}a{{else}}span{{/if}}>
