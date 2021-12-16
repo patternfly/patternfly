@@ -10,7 +10,16 @@ module.exports = sourceMD => {
 
   // Core MD
   const coreDocsPath = path.join(__dirname, 'dist/docs');
-  sourceMD(path.join(coreDocsPath, '!(demos)/**/examples/**/*.md'), 'html');
+  const componentsMdFiles = path.join(coreDocsPath, 'components/**/examples/**/*.md');
+  const pagesMdFiles = path.join(coreDocsPath, 'pages/**/examples/**/*.md');
+  const layoutsMdFiles = path.join(coreDocsPath, 'layouts/**/examples/**/*.md');
+  const utilitiesMdFiles = path.join(coreDocsPath, 'utilities/**/examples/**/*.md');
+
+  sourceMD(componentsMdFiles, 'components-html');
+  sourceMD(pagesMdFiles, 'pages-html');
+  sourceMD(layoutsMdFiles, 'layouts-html');
+  sourceMD(utilitiesMdFiles, 'utilities-html');
+
   sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos');
 
   // Release notes
