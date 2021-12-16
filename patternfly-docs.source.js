@@ -15,10 +15,10 @@ module.exports = sourceMD => {
   const layoutsMdFiles = path.join(coreDocsPath, 'layouts/**/examples/**/*.md');
   const utilitiesMdFiles = path.join(coreDocsPath, 'utilities/**/examples/**/*.md');
 
-  sourceMD(componentsMdFiles, 'components-html');
-  sourceMD(pagesMdFiles, 'pages-html');
-  sourceMD(layoutsMdFiles, 'layouts-html');
-  sourceMD(utilitiesMdFiles, 'utilities-html');
+  sourceMD(componentsMdFiles, 'html');
+  sourceMD(pagesMdFiles, 'page-html');
+  sourceMD(layoutsMdFiles, 'layout-html');
+  sourceMD(utilitiesMdFiles, 'utility-html');
 
   sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos');
 
