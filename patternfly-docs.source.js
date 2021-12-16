@@ -16,9 +16,9 @@ module.exports = sourceMD => {
   const utilitiesMdFiles = path.join(coreDocsPath, 'utilities/**/examples/**/*.md');
 
   sourceMD(componentsMdFiles, 'html');
-  sourceMD(pagesMdFiles, 'page-html');
-  sourceMD(layoutsMdFiles, 'layout-html');
-  sourceMD(utilitiesMdFiles, 'utility-html');
+  sourceMD(pagesMdFiles, 'html');
+  sourceMD(layoutsMdFiles, 'html');
+  sourceMD(utilitiesMdFiles, 'html');
 
   sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos');
 
