@@ -4,11 +4,14 @@ section: components
 cssPrefix: pf-c-notification-badge
 ---
 
+import './NotificationBadge.css'
+
 ## Examples
 
 ### Basic
 
 ```hbs
+<div class="pf-t-dark">
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
   {{#> notification-badge notification-badge--modifier="pf-m-read"}}
     <i class="pf-icon-bell" aria-hidden="true"></i>
@@ -46,11 +49,13 @@ cssPrefix: pf-c-notification-badge
     <i class="pf-icon-task" aria-hidden="true"></i>
   {{/notification-badge}}
 {{/button}}
+</div>
 ```
 
 ### With count
 
 ```hbs
+<div class="pf-t-dark">
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
   {{#> notification-badge notification-badge--modifier="pf-m-read" notification-badge--count="24"}}
     <i class="pf-icon-bell" aria-hidden="true"></i>
@@ -88,13 +93,16 @@ cssPrefix: pf-c-notification-badge
     <i class="pf-icon-task" aria-hidden="true"></i>
   {{/notification-badge}}
 {{/button}}
+</div>
 ```
 
 ## Documentation
 
 ### Overview
 
-Always add a modifier class. Never use the class `.pf-c-notification-badge` on its own.
+Always add a modifier class. Never use the class `.pf-c-notification-badge` on its own. This component is designed to be used within a dark component such as the [masthead](../masthead).
+
+Note: The [page component](../page) currently handles the selected state styling of the notification badge using the page header tools item styling. If this component is used elsewhere, custom styling may be needed to correctly indicate the selected state.
 
 ### Accessibility
 
