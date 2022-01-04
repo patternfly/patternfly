@@ -71,6 +71,18 @@ cssPrefix: pf-c-expandable-section
 {{/stack}}
 ```
 
+
+### Indented
+```hbs
+{{#> expandable-section expandable-section--IsExpanded="true" expandable-section--IsIndented="true"}}
+  {{#> expandable-section-toggle}}
+  {{/expandable-section-toggle}}
+  {{#> expandable-section-content}}
+    This content is visible only when the component is expanded.
+  {{/expandable-section-content}}
+{{/expandable-section}}
+```
+
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -93,5 +105,6 @@ cssPrefix: pf-c-expandable-section
 | `.pf-m-expanded` | `.pf-c-expandable-section` | Modifies the component for the expanded state. |
 | `.pf-m-display-lg` | `.pf-c-expandable-section` | Modifies the styling of the component to have large display styling. |
 | `.pf-m-detached` | `.pf-c-expandable-section` | Indicates that the expandable section toggle and content are detached from one another, so you can move them around independently in the markup. |
+| `.pf-m-indented` | `.pf-c-expandable-section` | Indicates that the expandable section content is indented and is aligned with the start of the title text to provide visual hierarchy. |
 | `.pf-m-active` | `.pf-c-expandable-section__toggle` | Forces display of the active state of the toggle. |
 | `.pf-m-expand-top` | `.pf-c-expandable-section__toggle-icon` | Modifies the toggle icon to point up when expanded. |
