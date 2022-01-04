@@ -56,7 +56,7 @@ function compileSASS0(srcFiles) {
       // Not kosher, but prevents path problems with watchSASS
       const outPath = path.join(chunk._cwd, 'dist', relativePath.replace(/\.scss$/, '.css'));
       fs.ensureFileSync(outPath);
-      fs.writeFileSync(outPath, cssString);
+      if (cssString) fs.writeFileSync(outPath, cssString);
       cb2(null, chunk);
     })
   );
