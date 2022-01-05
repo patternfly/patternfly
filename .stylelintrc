@@ -268,6 +268,9 @@
     "scss/dollar-variable-colon-space-after": "at-least-one-space",
     "scss/dollar-variable-colon-space-before": "never",
     "scss/no-global-function-names": null,
+    "scss/comment-no-empty": null,
+    "scss/at-if-no-null": null,
+    "scss/at-import-partial-extension": null,
     "selector-attribute-quotes": "always",
     "selector-class-pattern": "pf-",
     "selector-max-attribute": 2,
@@ -283,6 +286,7 @@
     "string-quotes": "double",
     "value-keyword-case": "lower",
     "value-list-comma-newline-before": "never-multi-line",
-    "value-no-vendor-prefix": true
+    "value-no-vendor-prefix": true,
+    "no-invalid-position-at-import-rule": null
   }
 }
