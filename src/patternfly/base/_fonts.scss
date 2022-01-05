@@ -1,8 +1,6 @@
-//
 // Fonts
 // --------------------------------------------------
 // PatternFly uses RedHatText - https://github.com/RedHatOfficial/RedHatFont
-//
 
 // stylelint-disable font-family-name-quotes
 
@@ -157,7 +155,9 @@
 
 
 @if $pf-global--enable-font-overpass-cdn {
+  // stylelint-disable no-invalid-position-at-import-rule
   @import url("https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono");
+  // stylelint-enable no-invalid-position-at-import-rule
 } @else {
   @font-face {
     font-family: "overpass";
