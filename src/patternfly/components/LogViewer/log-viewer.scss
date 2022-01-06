@@ -91,7 +91,17 @@
       position: absolute;
       right: 0;
       left: var(--pf-c-log-viewer--m-line-numbers__list--Left);
-      overflow: auto;
+
+      // Divider
+      &::before {
+        position: absolute;
+        top: var(--pf-c-log-viewer--m-line-numbers__main--before--Top); // rename these vars at a breaking change
+        bottom: var(--pf-c-log-viewer--m-line-numbers__main--before--Bottom);
+        left: 0;
+        width: var(--pf-c-log-viewer--m-line-numbers__main--before--Width);
+        content: "";
+        background: var(--pf-c-log-viewer--m-line-numbers__main--before--BackgroundColor);
+      }
     }
   }
 
@@ -116,9 +126,12 @@
 
 // Header
 .pf-c-log-viewer__header {
-  @include pf-t-light;
-
   margin-bottom: var(--pf-c-log-viewer__header--MarginBottom);
+}
+
+.pf-c-log-viewer__header,
+.pf-c-log-viewer__footer {
+  @include pf-t-light;
 }
 
 // Main
@@ -128,23 +141,6 @@
   min-height: 0;
   background-color: var(--pf-c-log-viewer__main--BackgroundColor);
   border: var(--pf-c-log-viewer__main--BorderWidth) solid var(--pf-c-log-viewer__main--BorderColor);
-
-  // stylelint-disable scss/at-rule-no-unknown
-  @at-root.pf-m-line-numbers & {
-    position: relative;
-
-    // Divider
-    &::before {
-      position: absolute;
-      top: var(--pf-c-log-viewer--m-line-numbers__main--before--Top);
-      bottom: var(--pf-c-log-viewer--m-line-numbers__main--before--Bottom);
-      left: var(--pf-c-log-viewer__index--Width); // share this value so JS can update one value rather than two
-      width: var(--pf-c-log-viewer--m-line-numbers__main--before--Width);
-      content: "";
-      background: var(--pf-c-log-viewer--m-line-numbers__main--before--BackgroundColor);
-    }
-  }
-  // stylelint-enable
 }
 
 .pf-c-log-viewer__scroll-container {
@@ -191,6 +187,7 @@
   font-family: var(--pf-c-log-viewer__index--FontFamily);
   font-size: var(--pf-c-log-viewer__index--FontSize);
   color: var(--pf-c-log-viewer__index--Color);
+  user-select: none;
   background-color: var(--pf-c-log-viewer__index--BackgroundColor);
 }
 
