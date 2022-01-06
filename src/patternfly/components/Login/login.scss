@@ -165,6 +165,7 @@
 }
 
 .pf-c-login__main {
+  align-self: start;
   margin-bottom: var(--pf-c-login__main--MarginBottom);
   background-color: var(--pf-c-login__main--BackgroundColor);
   grid-area: main;
