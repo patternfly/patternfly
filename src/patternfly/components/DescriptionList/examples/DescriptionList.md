@@ -58,17 +58,7 @@ cssPrefix: pf-c-description-list
 
 ### Column fill
 ```hbs
-{{> description-list__example description-list--title="Column fill" description-list--modifier="pf-m-fill-columns"}}
-```
-
-### Column fill, horizontal
-```hbs
-{{> description-list__example description-list--title="Column fill, horizontal" description-list--modifier="pf-m-fill-columns pf-m-horizontal"}}
-```
-
-### Column fill, horizontal, multi-column
-```hbs
-{{> description-list__example description-list--title="Column fill, multi-column" description-list--modifier="pf-m-fill-columns pf-m-horizontal pf-m-2-col pf-m-3-col-on-lg"}}
+{{> description-list__example description-list--title="Column fill" description-list--modifier="pf-m-fill-columns pf-m-2-col pf-m-3-col-on-lg"}}
 ```
 
 ## Auto fit
