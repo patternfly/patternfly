@@ -162,8 +162,11 @@
 .pf-c-text-input-group__utilities {
   display: flex;
   align-items: center;
-  margin-right: var(--pf-c-text-input-group__utilities--MarginRight);
-  margin-left: var(--pf-c-text-input-group__utilities--MarginLeft);
+
+  &:not(:empty) {
+    margin-right: var(--pf-c-text-input-group__utilities--MarginRight);
+    margin-left: var(--pf-c-text-input-group__utilities--MarginLeft);
+  }
 
   > * + * {
     margin-left: var(--pf-c-text-input-group__utilities--child--MarginLeft);
