@@ -1,7 +1,7 @@
 {{#> table table--id=(concat page--id '-table') table--grid="true" table--modifier="pf-m-grid-xl" table--expandable="true" table--attribute='aria-label="Expanded table example"'}}
   {{#> table-thead}}
-    {{#> table-tr}}
-      {{#> table-td}}{{/table-td}}
+    {{#> table-tr table-tr--index="thead"}}
+      {{> table--toggle-all table-tr--expanded="true"}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories
       {{/table-th}}

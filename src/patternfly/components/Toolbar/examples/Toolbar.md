@@ -601,8 +601,6 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 ```
 
 ### Expanded elements
-
-### Expanded elements
 ```hbs
 {{#> toolbar toolbar--id="toolbar-expanded-elements-example"}}
   {{#> toolbar-content}}
