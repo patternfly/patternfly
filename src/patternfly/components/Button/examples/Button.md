@@ -334,6 +334,17 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 {{#> button button--modifier="pf-m-secondary" button--IsProgress="true" button--IsInProgress="true"}}
   Secondary loading
 {{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Upload"'}}
+  <i class="fas fa-upload" aria-hidden="true"></i>
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain pf-m-in-progress" button--attribute='aria-label="Upload"'}}
+  <i class="fas fa-upload" aria-hidden="true"></i>
+  {{#> button-progress}}
+    {{#> spinner spinner--modifier="pf-m-md"}}Uploading...{{/spinner}}
+  {{/button-progress}}
+{{/button}}
 ```
 
 ## Documentation
@@ -378,5 +389,5 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-small` | `.pf-c-button` | Modifies the button so that it has small font size. |
 | `.pf-m-aria-disabled` | `.pf-c-button` | Modifies a button to be visually disabled, yet is still focusable. |
 | `.pf-m-display-lg` | `.pf-c-button`, `pf-c-button.pf-m-link` | Modifies the button and link button for large display styling. For example, use this modifier to achieve "call to action" styles. |
-| `.pf-m-progress` | `.pf-c-button` | Indicates that the button supports the progress state. |
+| `.pf-m-progress` | `.pf-c-button` | Indicates that the button supports the progress state. **Note:** Not used with the plain variation. |
 | `.pf-m-in-progress` | `.pf-c-button` | Indicates that the button is in the in progress state. |
