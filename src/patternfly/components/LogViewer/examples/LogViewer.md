@@ -99,6 +99,7 @@ import './LogViewer.css';
 {{#> log-viewer log-viewer--id="log-viewer-line-number-example" log-viewer--IsMatch="true" log-viewer--modifier="pf-m-dark" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"'}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
+  {{#> button button--modifier="pf-m-primary"}}Jump to the bottom{{/button}}
 {{/log-viewer}}
 ```
 
