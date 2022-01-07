@@ -179,6 +179,7 @@
   --pf-c-button__progress--width: calc(var(--pf-global--icon--FontSize--md) + var(--pf-global--spacer--sm)); // matches medium spinner diameter plus a spacer
   --pf-c-button__progress--Opacity: 0;
   --pf-c-button__progress--TranslateY: -50%;
+  --pf-c-button__progress--TranslateX: 0;
   --pf-c-button__progress--Top: 50%;
   --pf-c-button__progress--Left: var(--pf-global--spacer--md);
   --pf-c-button--m-progress--TransitionProperty: padding;
@@ -187,6 +188,9 @@
   --pf-c-button--m-progress--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-button__progress--width) / 2);
   --pf-c-button--m-in-progress--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-button--m-in-progress--PaddingLeft: calc(var(--pf-global--spacer--md) + var(--pf-c-button__progress--width));
+  --pf-c-button--m-in-progress--m-plain--Color: var(--pf-global--primary-color--100);
+  --pf-c-button--m-in-progress--m-plain__progress--Left: 50%;
+  --pf-c-button--m-in-progress--m-plain__progress--TranslateX: -50%;
 
   position: relative;
   display: inline-block;
@@ -577,8 +581,20 @@
   }
 
   &.pf-m-in-progress {
-    --pf-c-button--PaddingRight: var(--pf-c-button--m-in-progress--PaddingRight);
-    --pf-c-button--PaddingLeft: var(--pf-c-button--m-in-progress--PaddingLeft);
+    &:not(.pf-m-plain) {
+      --pf-c-button--PaddingRight: var(--pf-c-button--m-in-progress--PaddingRight);
+      --pf-c-button--PaddingLeft: var(--pf-c-button--m-in-progress--PaddingLeft);
+    }
+
+    &.pf-m-plain {
+      --pf-c-button--m-plain--Color: var(--pf-c-button--m-in-progress--m-plain--Color);
+      --pf-c-button__progress--Left: var(--pf-c-button--m-in-progress--m-plain__progress--Left);
+      --pf-c-button__progress--TranslateX: var(--pf-c-button--m-in-progress--m-plain__progress--TranslateX);
+
+      > :not(.pf-c-button__progress) {
+        opacity: 0;
+      }
+    }
   }
 }
 
@@ -597,7 +613,7 @@
   top: var(--pf-c-button__progress--Top);
   left: var(--pf-c-button__progress--Left);
   line-height: 1;
-  transform: translateY(var(--pf-c-button__progress--TranslateY));
+  transform: translate(var(--pf-c-button__progress--TranslateX), var(--pf-c-button__progress--TranslateY));
 
   .pf-c-spinner {
     --pf-c-spinner--Color: currentColor;
