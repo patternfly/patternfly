@@ -5,6 +5,8 @@ section: components
 cssPrefix: pf-c-truncate
 ---
 
+import './Truncate.css'
+
 ## Examples
 
 ### Notes
@@ -12,7 +14,7 @@ The truncate component contains two child elements, `.pf-c-truncate__start` and 
 
 ### Default
 ```hbs
-<div style="width: 220px; resize: horizontal; overflow: auto;">
+<div class="pf-c-truncate--example">
   {{#> truncate truncate--id="default-truncation-example"}}
     {{> truncate-start truncate-start--text="Vestibulum interdum risus et enim faucibus, sit amet molestie est accumsan."}}
   {{/truncate}}
@@ -21,17 +23,17 @@ The truncate component contains two child elements, `.pf-c-truncate__start` and 
 
 ### Middle
 ```hbs
-<div style="width: 226px; resize: horizontal; overflow: auto;">
+<div class="pf-c-truncate--example">
   {{#> truncate truncate--id="middle-of-line-truncation-example"}}
-    {{> truncate-start truncate-start--text="redhat_logo_black_and_white_reversed_"}}
-    {{> truncate-end truncate-end--text="simple_with_fedora_container.zip"}}
+    {{> truncate-start truncate-start--text="redhat_logo_black_and_white_reversed_simple_with_fedora_con"}}
+    {{> truncate-end truncate-end--text="tainer.zip"}}
   {{/truncate}}
 </div>
 ```
 
 ### Start
 ```hbs
-<div style="width: 220px; resize: horizontal; overflow: auto;">
+<div class="pf-c-truncate--example">
   {{#> truncate truncate--id="start-truncation-example"}}
     {{> truncate-end truncate-end--text="Vestibulum interdum risus et enim faucibus, sit amet molestie est accumsan.&lrm;"}}
   {{/truncate}}
@@ -47,4 +49,3 @@ The truncate component contains two child elements, `.pf-c-truncate__start` and 
 | `.pf-c-truncate` | `<span>` | Initiates the truncate component. |
 | `.pf-c-truncate__start` | `<span>` | Defines the truncate component starting text. |
 | `.pf-c-truncate__end` | `<span>` | Defines the truncate component ending text. |
-| `.pf-c-truncate__text` | `<span>` | Defines the truncate component text. |
