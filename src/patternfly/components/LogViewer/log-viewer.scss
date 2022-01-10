@@ -17,8 +17,8 @@
   --pf-c-log-viewer__scroll-container--PaddingBottom: var(--pf-global--spacer--sm);
 
   // Main ::after
-  --pf-c-log-viewer--m-line-numbers__main--before--Top: var(--pf-global--spacer--sm);
-  --pf-c-log-viewer--m-line-numbers__main--before--Bottom: var(--pf-global--spacer--sm);
+  --pf-c-log-viewer--m-line-numbers__main--before--Top: 0;
+  --pf-c-log-viewer--m-line-numbers__main--before--Bottom: 0;
   --pf-c-log-viewer--m-line-numbers__main--before--Width: var(--pf-global--BorderWidth--sm);
   --pf-c-log-viewer--m-line-numbers__main--before--BackgroundColor: var(--pf-global--BorderColor--100);
 
@@ -34,7 +34,7 @@
   --pf-c-log-viewer__index--FontFamily: var(--pf-global--FontFamily--monospace);
   --pf-c-log-viewer__index--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-log-viewer__index--Color: var(--pf-global--Color--200);
-  --pf-c-log-viewer__index--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-log-viewer__index--BackgroundColor: transparent;
 
   // Text
   --pf-c-log-viewer__text--PaddingRight: var(--pf-global--spacer--md);
@@ -66,9 +66,17 @@
   --pf-c-log-viewer--m-dark__main--BorderWidth: 0;
 
   &.pf-m-dark {
-    @include pf-t-dark;
-
     --pf-c-log-viewer__main--BorderWidth: var(--pf-c-log-viewer--m-dark__main--BorderWidth);
+
+    .pf-c-log-viewer__main {
+      @include pf-t-dark;
+
+      --pf-c-log-viewer__main--BackgroundColor: var(--pf-global--BackgroundColor--100);
+      --pf-c-log-viewer__main--BorderColor: var(--pf-global--BorderColor--100);
+      --pf-c-log-viewer__text--Color: var(--pf-global--Color--100);
+      --pf-c-log-viewer__index--Color: var(--pf-global--Color--200);
+      --pf-c-log-viewer--m-line-numbers__main--before--BackgroundColor: var(--pf-global--BorderColor--100);
+    }
   }
 
   display: flex;
@@ -127,11 +135,6 @@
 // Header
 .pf-c-log-viewer__header {
   margin-bottom: var(--pf-c-log-viewer__header--MarginBottom);
-}
-
-.pf-c-log-viewer__header,
-.pf-c-log-viewer__footer {
-  @include pf-t-light;
 }
 
 // Main
