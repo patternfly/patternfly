@@ -505,7 +505,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 {{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table--toggle-all table-tr--expanded="true"}}
       {{> table--check table--check--IsThead="true"}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
         Repositories
@@ -643,7 +643,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 {{#> table table--id="table-expandable-nested-table" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable with nested table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table--toggle-all}}
       {{> table--check table--check--IsThead="true"}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
         Repositories

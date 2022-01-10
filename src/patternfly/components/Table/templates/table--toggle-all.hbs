@@ -1,0 +1,5 @@
+{{#if table-tr--expanded}}
+    {{#> table-td table-tr--expanded="true" table-td--toggle="true" table-td--button--attribute=(concat 'id="' table--id '-expandable-toggle-' table-tr--index '" aria-label="Collapse all" ')}}{{/table-td}}
+{{else}}
+    {{#> table-td table-td--toggle="true" table-td--button--attribute=(concat 'id="' table--id '-expandable-toggle-' table-tr--index '" aria-label="Expand all" ')}}{{/table-td}}
+{{/if}}

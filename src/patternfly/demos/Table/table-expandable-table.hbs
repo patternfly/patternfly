@@ -1,7 +1,7 @@
 {{#> table table--id=(concat page--id '-table') table--grid="true" table--modifier="pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
-    {{#> table-tr}}
-      {{#> table-td}}{{/table-td}}
+    {{#> table-tr table-tr--index="thead"}}
+      {{> table--toggle-all}}
       {{#> table-td table-td--check="true"}}
         <input type="checkbox" name="check-all" aria-label="Select all rows">
       {{/table-td}}
