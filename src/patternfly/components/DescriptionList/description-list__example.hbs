@@ -4,7 +4,11 @@
       Name
     {{/description-list-term}}
     {{#> description-list-description}}
-      example
+      {{#if description-list--IsLongDescription}}
+        This is a long description that should wrap to multiple lines in a multi-column layout.
+      {{else}}
+        example
+      {{/if}}
     {{/description-list-description}}
   {{/description-list-group}}
   {{#> description-list-group}}
