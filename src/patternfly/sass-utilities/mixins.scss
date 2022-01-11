@@ -254,3 +254,22 @@
     }
   }
 }
+
+@mixin pf-reset-accent-focus-border($namespace, $toggle: $namespace + "__toggle", $root: true, $before: false, $position: "after") {
+  @if $before == true {
+    $position: "before";
+  }
+
+  // construct selector
+  @if $root == false {
+    $namespace: #{$namespace} + ":not(.pf-m-expanded) > ." + #{$toggle} + ":focus:not(:focus-visible):not(:hover):not(:active)::" + #{$position};
+  } @else {
+    $namespace: #{$namespace} + ":not(.pf-m-expanded):focus:not(:focus-visible):not(:hover):not(:active)::" + #{$position};
+  }
+
+  @debug #{$namespace};
+
+  .#{$namespace} {
+    @content;
+  }
+}

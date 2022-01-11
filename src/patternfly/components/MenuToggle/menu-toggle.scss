@@ -1,4 +1,12 @@
 .pf-c-menu-toggle {
+  --pf-c-menu-toggle--after--base--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-menu-toggle--after--base--BorderColor: var(--pf-global--BorderColor--200);
+
+  // access variables for :focus-visible + mouseout
+  --pf-c-menu-toggle--after--reset--BorderWidth: var(--pf-c-menu-toggle--after--base--BorderWidth);
+  --pf-c-menu-toggle--after--reset--BorderColor: var(--pf-c-menu-toggle--after--base--BorderColor);
+
+  // toggle
   --pf-c-menu-toggle--BorderRadius: 0;
   --pf-c-menu-toggle--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-menu-toggle--PaddingRight: var(--pf-global--spacer--sm);
@@ -20,8 +28,8 @@
   --pf-c-menu-toggle--before--BorderLeftColor: var(--pf-global--BorderColor--300);
 
   // Border accent
-  --pf-c-menu-toggle--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-menu-toggle--after--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-menu-toggle--after--BorderBottomWidth: var(--pf-c-menu-toggle--after--base--BorderWidth);
+  --pf-c-menu-toggle--after--BorderBottomColor: var(--pf-c-menu-toggle--after--base--BorderColor);
 
   // Hover
   --pf-c-menu-toggle--hover--BackgroundColor: transparent;
@@ -263,6 +271,12 @@
 
     height: 100%;
   }
+}
+
+// reset :focus-visible + mouseout accent
+@include pf-reset-accent-focus-border("pf-c-menu-toggle") {
+  --pf-c-menu-toggle--after--BorderBottomWidth: var(--pf-c-menu-toggle--after--reset--BorderWidth);
+  --pf-c-menu-toggle--after--BorderBottomColor: var(--pf-c-menu-toggle--after--reset--BorderColor);
 }
 
 .pf-c-menu-toggle__icon {

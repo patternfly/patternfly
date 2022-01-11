@@ -1,4 +1,11 @@
 .pf-c-context-selector {
+  --pf-c-context-selector__toggle--before--base--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-context-selector__toggle--before--base--BorderBottomColor: var(--pf-global--BorderColor--200);
+
+  // access variables for :focus-visible + mouseout
+  --pf-c-context-selector__toggle--before--reset--BorderBottomWidth: var(--pf-c-context-selector__toggle--before--base--BorderBottomWidth);
+  --pf-c-context-selector__toggle--before--reset--BorderBottomColor: var(--pf-c-context-selector__toggle--before--base--BorderBottomColor);
+
   // Context selector
   --pf-c-context-selector--Width: #{pf-size-prem(250px)};
 
@@ -7,10 +14,10 @@
   --pf-c-context-selector__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-context-selector__toggle--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-context-selector__toggle--BorderWidth: var(--pf-c-context-selector__toggle--before--base--BorderBottomWidth);
   --pf-c-context-selector__toggle--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-context-selector__toggle--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-global--BorderColor--200);
+  --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--before--base--BorderBottomColor);
   --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-context-selector__toggle--Color: var(--pf-global--Color--100);
   --pf-c-context-selector__toggle--hover--BorderBottomWidth: var(--pf-c-context-selector__toggle--BorderWidth);
@@ -186,6 +193,12 @@
     --pf-c-context-selector__toggle--m-plain--m-text--PaddingRight: var(--pf-c-context-selector--m-page-insets__toggle--m-plain--m-text--PaddingRight);
     --pf-c-context-selector__toggle--m-plain--m-text--PaddingLeft: var(--pf-c-context-selector--m-page-insets__toggle--m-plain--m-text--PaddingLeft);
   }
+}
+
+// reset :focus-visible + mouseout accent
+@include pf-reset-accent-focus-border("pf-c-context-selector", $before: true, $root: false) {
+  --pf-c-context-selector__toggle--active--BorderBottomWidth: var(--pf-c-context-selector__toggle--before--reset--BorderBottomWidth);
+  --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-context-selector__toggle--before--reset--BorderBottomColor);
 }
 
 .pf-c-context-selector__toggle {
