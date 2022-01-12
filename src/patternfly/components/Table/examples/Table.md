@@ -3000,12 +3000,6 @@ For sticky columns to function correctly, the parent table's width must be contr
 ```hbs
 <div class="pf-c-scroll-inner-wrapper">
   {{#> table table--id="nested-columns-expandable-example" table--grid="true" table--attribute='aria-label="This is a nested column header table example"' table--HasToggles="true" table--HasChecks="true" table--HasActions="true"}}
-    <col>
-    <col>
-    <col>
-    <colgroup span="3"></colgroup>
-    <col>
-    <col>
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
         {{> table-td table-td--IsEmpty="true" table-td--attribute='rowspan="2"'}}
@@ -3117,12 +3111,6 @@ For sticky columns to function correctly, the parent table's width must be contr
 ```hbs
 <div class="pf-c-scroll-inner-wrapper">
   {{#> table table--id="table-nested-column-headers-example" table--grid="true" table--attribute='aria-label="This is a nested column header table example"'}}
-    <colgroup span="3"></colgroup>
-    <colgroup span="2"></colgroup>
-    <col>
-    <col>
-    <col>
-    <col>
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
         {{#> table-th table-th--attribute='scope="col" colspan="3"' table-th--modifier="pf-m-border-right"}}
