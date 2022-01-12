@@ -3865,7 +3865,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 {{/table}}
 ```
 
-### Striped tbody example
+### Striped multiple tbody example
 ```hbs
 {{#> table table--id="table-striped-tbody" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a striped tbody example"'}}
   {{#> table-caption}}
@@ -3894,7 +3894,9 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
   {{#> table-tbody table-tbody--modifier="pf-m-striped"}}
     {{#> table-tr}}
       {{#> table-td table-td--data-label="Repository name"}}
-        Repository 1
+        tbody 1 - Repository 1
+        <br>
+        <small>(odd rows striped)</small>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -3912,7 +3914,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
     {{#> table-tr}}
       {{#> table-td table-td--data-label="Repository name"}}
-        Repository 2
+        tbody 1 - Repository 2
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -3930,7 +3932,9 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
     {{#> table-tr}}
       {{#> table-td table-td--data-label="Repository name"}}
-        Repository 3
+        tbody 1 - Repository 3
+        <br>
+        <small>(odd rows striped)</small>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -3950,7 +3954,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
   {{#> table-tbody table-tbody--modifier="pf-m-striped-even"}}
     {{#> table-tr}}
       {{#> table-td table-td--data-label="Repository name"}}
-        Repository 4
+        tbody 2 - Repository 4
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10
@@ -3968,7 +3972,47 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
     {{#> table-tr}}
       {{#> table-td table-td--data-label="Repository name"}}
-        Repository 5
+        tbody 2 - Repository 5
+        <br>
+        <small>(even rows striped using `.pf-m-striped-even`)</small>
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        tbody 2 - Repository 6
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        tbody 2 - Repository 7
+        <br>
+        <small>(even rows striped using `.pf-m-striped-even`)</small>
       {{/table-td}}
       {{#> table-td table-td--data-label="Branches"}}
         10

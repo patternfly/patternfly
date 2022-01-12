@@ -304,8 +304,6 @@
   --pf-c-table__subhead--Color: var(--pf-global--Color--200);
 
   // Striped
-  --pf-c-table--m-striped--n-child: odd;
-  --pf-c-table--m-striped-even--n-child: even;
   --pf-c-table--m-striped__tr--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
