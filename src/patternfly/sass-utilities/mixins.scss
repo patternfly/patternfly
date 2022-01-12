@@ -267,8 +267,6 @@
     $namespace: #{$namespace} + ":not(.pf-m-expanded):focus:not(:focus-visible):not(:hover):not(:active)::" + #{$position};
   }
 
-  @debug #{$namespace};
-
   .#{$namespace} {
     @content;
   }
