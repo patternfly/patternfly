@@ -124,6 +124,13 @@ Column fill will modify the default placement of description list groups to fill
 {{> description-list__example description-list--title="Horizontal 2 column DL" description-list--modifier="pf-m-horizontal pf-m-auto-term-widths pf-m-2-col"}}
 ``` -->
 
+## With icons
+
+### Icons on terms
+```hbs
+{{> description-list__example-with-icons description-list--title="With icon"}}
+```
+
 ## Documentation
 
 ### Accessibility
@@ -142,6 +149,7 @@ Column fill will modify the default placement of description list groups to fill
 | `.pf-c-description-list__term` | `<dt>` | Initiates a description list component term. **Required** |
 | `.pf-c-description-list__description` | `<dd>` | Initiates a description list component description. **Required** |
 | `.pf-c-description-list__text` | `<span>`, `<div>` | Initiates a description list component text element. Use a `<span>` when a child of `.pf-c-description-list__term`. **Required** |
+| `.pf-c-description-list__term-icon` | `<span>` | Initiates a description list component term icon element. |
 | `.pf-m-compact` | `.pf-c-description-list` | Modifies the description list for compact horizontal and vertical spacing. |
 | `.pf-m-fluid` | `.pf-c-description-list.pf-m-horizontal` | Modifies the description list term width to be fluid. |
 | `.pf-m-help-text` | `.pf-c-description-list__text` | Indicates there is more information available for the description list component term text. |
