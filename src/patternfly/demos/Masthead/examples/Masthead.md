@@ -160,77 +160,67 @@ wrapperTag: div
             {{#> toolbar-item toolbar-item--attribute='style="--pf-c-toolbar__item--MinWidth: 140px"'}}
               {{> masthead-demo--context-selector}}
             {{/toolbar-item}}
-            {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-right pf-m-spacer-none pf-m-spacer-md-on-md"}}
-              {{#> toolbar-item}}
-                {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
-                  {{#> notification-badge notification-badge--modifier=""}}
-                    <i class="pf-icon-attention-bell" aria-hidden="true"></i>
-                  {{/notification-badge}}
-                {{/button}}
-              {{/toolbar-item}}
-              {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-hidden pf-m-visible-on-lg"}}
-                {{#> toolbar-item}}
-                  {{> masthead-demo--application-launcher app-launcher--id=(concat masthead-demo--page--id '-app-launcher')}}
-                {{/toolbar-item}}
-                {{#> toolbar-item}}
-                  {{#> dropdown dropdown--id=(concat masthead--id "-settings")}}
-                    {{#> dropdown-toggle dropdown-toggle--modifier="pf-m-plain" dropdown-toggle--HasNoToggleIcon="true" dropdown-toggle--attribute='aria-label="Settings"'}}
-                      <i class="fas fa-cog" aria-hidden="true"></i>
-                    {{/dropdown-toggle}}
-                    {{#> dropdown-menu dropdown-menu--modifier="pf-m-align-right"}}
-                      {{> dropdown-menu-list-item dropdown-menu-item--text="Settings"}}
-                      {{> dropdown-menu-list-item dropdown-menu-item--text="Use the beta release"}}
-                    {{/dropdown-menu}}
-                  {{/dropdown}}
-                {{/toolbar-item}}
-                {{#> toolbar-item}}
-                  {{#> dropdown dropdown--id=(concat masthead--id "-help")}}
-                    {{#> dropdown-toggle dropdown-toggle--modifier="pf-m-plain" dropdown-toggle--HasNoToggleIcon="true" dropdown-toggle--attribute='aria-label="Help"'}}
-                      <i class="pf-icon pf-icon-help" aria-hidden="true"></i>
-                    {{/dropdown-toggle}}
-                    {{#> dropdown-menu dropdown-menu--modifier="pf-m-align-right"}}
-                      {{> dropdown-menu-list-item dropdown-menu-item--text="Support options"}}
-                      {{> dropdown-menu-list-item dropdown-menu-item--text="Open support case"}}
-                      {{> dropdown-menu-list-item dropdown-menu-item--text="API documentation"}}
-                    {{/dropdown-menu}}
-                  {{/dropdown}}
-                {{/toolbar-item}}
-              {{/toolbar-group}}
-              {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-lg"}}
-                {{#> dropdown dropdown--id=(concat masthead--id "-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-                  {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsExpanded="true" menu-toggle--attribute='aria-label="Actions"'}}
-                    <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-                  {{/menu-toggle}}
-                  {{> masthead-demo--drilldown menu--id=(concat masthead--id '-drilldown-menu')}}
-                {{/dropdown}}
-              {{/toolbar-item}}
-            {{/toolbar-group}}
-            {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-sm"}}
-              {{#> dropdown dropdown--id=(concat masthead--id "-profile") dropdown--IsExpanded="true"}}
-                {{#> dropdown-toggle}}
-                  {{#> dropdown-toggle-image}}
-                    {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
-                  {{/dropdown-toggle-image}}
-                  {{#> dropdown-toggle-text}}
-                    Ned Username
-                  {{/dropdown-toggle-text}}
-                {{/dropdown-toggle}}
-                {{#> dropdown-menu dropdown-menu--type="div"}}
-                  {{#> dropdown-group}}
-                    {{> dropdown-menu-item dropdown-menu-item--text='<div class="pf-u-font-size-sm">Account number:</div><div>123456789</div>' dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
-                    {{> dropdown-menu-item dropdown-menu-item--text='<div class="pf-u-font-size-sm">Username:</div><div>mshaksho@redhat.com</div>' dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
-                  {{/dropdown-group}}
-                  {{> divider}}
-                  {{#> dropdown-group}}
-                    {{#> dropdown-menu-list}}
-                      {{> dropdown-menu-list-item dropdown-menu-item--text="My profile" dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
-                      {{> dropdown-menu-list-item dropdown-menu-item--text="User management" dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
-                      {{> dropdown-menu-list-item dropdown-menu-item--text="Logout" dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
-                    {{/dropdown-menu-list}}
-                  {{/dropdown-group}}
-                {{/dropdown-menu}}
-              {{/dropdown}}
+            {{> masthead-demo--icon-group masthead-demo--icon-group--profile-dropdown--IsExpanded="true" masthead-demo--icon-group--breakpoint="lg"}}
+          {{/toolbar-content-section}}
+        {{/toolbar-content}}
+      {{/toolbar}}
+    {{/masthead-content}}
+  {{/masthead}}
+{{/masthead-demo--page}}
+```
+
+### Horizontal nav
+```hbs isFullscreen
+{{#> masthead-demo--page masthead-demo--page--id="masthead-horizontal-nav"}}
+  {{#> masthead masthead--id=(concat masthead-demo--page--id '-masthead') masthead--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
+    {{> masthead-toggle}}
+    {{#> masthead-main}}
+      {{#> masthead-brand}}
+        {{> brand
+          brand--attribute='style="--pf-c-brand--Width: 180px; --pf-c-brand--Width-on-md: 180px; --pf-c-brand--Width-on-2xl: 220px;"'
+          brand--IsPicture="true"
+          brand--img-url--base='/assets/images/logo__pf--reverse--base.png'
+          brand--img-url='/assets/images/logo__pf--reverse--base.svg'
+          brand--img-url-on-md='/assets/images/logo__pf--reverse-on-md.svg'}}
+      {{/masthead-brand}}
+      {{> masthead-demo--context-selector}}
+    {{/masthead-main}}
+    {{#> masthead-content}}
+      {{#> toolbar toolbar--modifier="pf-m-full-height pf-m-static" toolbar--id=(concat masthead--id '-toolbar')}}
+        {{#> toolbar-content}}
+          {{#> toolbar-content-section}}
+            {{#> toolbar-item toolbar-item--modifier="pf-m-overflow-container" toolbar-item--attribute='style="--pf-c-toolbar__item--MinWidth: 18ch;"'}}
+              {{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' masthead-demo--page--id '-horizontal-nav" aria-label="Global"')}}
+                {{#> nav-list}}
+                  {{#> nav-item}}
+                    {{#> nav-link nav-link--href="#"}}
+                      Horizontal nav item 1
+                    {{/nav-link}}
+                  {{/nav-item}}
+                  {{#> nav-item}}
+                    {{#> nav-link nav-link--href="#"}}
+                      Horizontal nav item 2
+                    {{/nav-link}}
+                  {{/nav-item}}
+                  {{#> nav-item}}
+                    {{#> nav-link nav-link--href="#"}}
+                      Horizontal nav item 3
+                    {{/nav-link}}
+                  {{/nav-item}}
+                  {{#> nav-item}}
+                    {{#> nav-link nav-link--href="#"}}
+                      Horizontal nav item 4
+                    {{/nav-link}}
+                  {{/nav-item}}
+                  {{#> nav-item}}
+                    {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+                      Horizontal nav item 5
+                    {{/nav-link}}
+                  {{/nav-item}}
+                {{/nav-list}}
+              {{/nav}}
             {{/toolbar-item}}
+            {{> masthead-demo--icon-group masthead-demo--icon-group--profile-dropdown--IsExpanded="true" masthead-demo--icon-group--breakpoint="xl"}}
           {{/toolbar-content-section}}
         {{/toolbar-content}}
       {{/toolbar}}

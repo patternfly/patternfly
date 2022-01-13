@@ -322,6 +322,15 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   }
 }
 
+.pf-c-toolbar__group,
+.pf-c-toolbar__item {
+  &.pf-m-overflow-container {
+    flex: 1;
+    overflow: hidden;
+  }
+}
+
+
 .pf-c-toolbar__expand-all-icon {
   display: inline-block;
   transition: var(--pf-c-toolbar__expand-all-icon--Transition);
