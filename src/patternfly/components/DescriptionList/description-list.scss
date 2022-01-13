@@ -19,23 +19,20 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
   --pf-c-description-list--m-compact--ColumnGap: var(--pf-global--spacer--sm);
 
   // term
+  --pf-c-description-list__term--Display: inline;
+  --pf-c-description-list__term--sm--Display: flex;
   --pf-c-description-list__term--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-description-list__term--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-description-list__term--LineHeight: var(--pf-global--LineHeight--sm);
 
+  @media screen and (min-width: $pf-global--breakpoint--sm) {
+    --pf-c-description-list__term--Display: var(--pf-c-description-list__term--sm--Display);
+  }
+
   // icon
   --pf-c-description-list__term-icon--MinWidth: var(--pf-global--icon--FontSize--sm);
   --pf-c-description-list__term-icon--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-description-list__term-icon--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-description-list__term-icon--Color: var(--pf-global--icon--Color--light);
-
-  // term text
-  --pf-c-description-list__term-text--Display: inline;
-  --pf-c-description-list__term-text--sm--Display: flex;
-
-  @media screen and (min-width: $pf-global--breakpoint--sm) {
-    --pf-c-description-list__term-text--Display: var(--pf-c-description-list__term-text--sm--Display);
-  }
 
   // vertical
   --pf-c-description-list--m-vertical__group--GridTemplateColumns: repeat(var(--pf-c-description-list--GridTemplateColumns--count));
@@ -129,13 +126,13 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
 }
 
 .pf-c-description-list__term {
+  display: var(--pf-c-description-list__term--Display);
   font-size: var(--pf-c-description-list__term--FontSize);
   font-weight: var(--pf-c-description-list__term--FontWeight);
   line-height: var(--pf-c-description-list__term--LineHeight);
 
   .pf-c-description-list__text {
-    display: var(--pf-c-description-list__term-text--Display);
-    align-items: baseline;
+    display: inline;
   }
 }
 
@@ -143,7 +140,6 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
   flex-shrink: 0;
   min-width: var(--pf-c-description-list__term-icon--MinWidth);
   margin-right: var(--pf-c-description-list__term-icon--MarginRight);
-  font-size: var(--pf-c-description-list__term-icon--FontSize);
   color: var(--pf-c-description-list__term-icon--Color);
 }
 

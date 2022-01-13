@@ -3,8 +3,10 @@
     {{#> description-list-term}}
       {{#> description-list-icon}}
         <i class="fas fa-cube" aria-hidden="true"></i>
-      {{/description-list-icon}}
-      Name Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      {{/description-list-icon}} 
+      {{#> description-list-text description-list-text--type="span"}}
+        This is a long description that should wrap to multiple lines in cases where the viewport is quite narrow.
+      {{/description-list-text}}
     {{/description-list-term}}
     {{#> description-list-description}}
       example
@@ -15,7 +17,9 @@
       {{#> description-list-icon}}
         <i class="fas fa-book" aria-hidden="true"></i>
       {{/description-list-icon}}
-      Namespace
+      {{#> description-list-text description-list-text--type="span"}}
+        Namespace
+      {{/description-list-text}}
     {{/description-list-term}}
     {{#> description-list-description}}
       <a href="#">mary-test</a>
@@ -26,7 +30,9 @@
       {{#> description-list-icon}}
         <i class="fas fa-key" aria-hidden="true"></i>
       {{/description-list-icon}}
-      Labels
+      {{#> description-list-text description-list-text--type="span"}}
+        Labels
+      {{/description-list-text}}
     {{/description-list-term}}
     {{#> description-list-description}}
       example
@@ -37,7 +43,9 @@
       {{#> description-list-icon}}
         <i class="fas fa-globe" aria-hidden="true"></i>
       {{/description-list-icon}}
-      Pod selector
+      {{#> description-list-text description-list-text--type="span"}}
+        Pod selector
+      {{/description-list-text}}
     {{/description-list-term}}
     {{#> description-list-description}}
       {{#> button button--modifier="pf-m-link pf-m-inline"}}
@@ -53,7 +61,9 @@
       {{#> description-list-icon}}
         <i class="fas fa-flag" aria-hidden="true"></i>
       {{/description-list-icon}}
-      Annotation
+      {{#> description-list-text description-list-text--type="span"}}
+        Annotation
+      {{/description-list-text}}
     {{/description-list-term}}
     {{#> description-list-description}}
       2 Annotations
