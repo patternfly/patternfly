@@ -1,10 +1,24 @@
-<input class="pf-c-text-input-group__text-input{{~#if text-input-group-text-input--modifier}} {{text-input-group-text-input--modifier}}{{/if}}"
+<input class="pf-c-text-input-group__text-input
+  {{~#if text-input-group-text-input--hint-text}} pf-m-hint{{/if}}
+  {{~#if text-input-group-text-input--modifier}}
+    {{text-input-group-text-input--modifier}}
+  {{/if}}"
   type="text"
-  value="{{#if text-input-group--IsDisabled}}Disabled{{else}}{{text-input-group--value}}{{/if}}"
+  {{#if text-input-group--IsDisabled}}
+    value="Disabled"
+  {{else if text-input-group-text-input--hint-text}}
+    value="{{text-input-group-text-input--hint-text}}"
+  {{else}}
+    value="{{text-input-group--value}}"
+  {{/if}}
   aria-label="Type to filter"
   {{#if text-input-group--IsDisabled}}
     disabled
     aria-label="Disabled text input group example input"
+  {{/if}}
+  {{#if text-input-group-text-input--hint-text }}
+    disabled
+    aria-hidden="true"
   {{/if}}
   {{#if text-input-group-text-input--attribute}}
     {{text-input-group-text-input--attribute}}
