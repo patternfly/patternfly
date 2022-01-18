@@ -92,6 +92,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-dropdown--m-top--m-expanded__toggle-icon--Rotate: 180deg;
+  --pf-c-dropdown__toggle-icon--Color: var(--pf-c-dropdown__toggle-button--Color);
+  --pf-c-dropdown--m-plain__toggle-icon--Color: var(--pf-global--Color--200);
+  --pf-c-dropdown--m-plain--hover__toggle-icon--Color: var(--pf-global--Color--100);
 
   // Menu
   --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -407,6 +410,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &.pf-m-plain {
+    --pf-c-dropdown__toggle-icon--Color: var(--pf-c-dropdown--m-plain__toggle-icon--Color);
+
     &:not(.pf-m-text) {
       --pf-c-dropdown__toggle--PaddingRight: var(--pf-c-dropdown__toggle--m-plain--PaddingRight);
       --pf-c-dropdown__toggle--PaddingLeft: var(--pf-c-dropdown__toggle--m-plain--PaddingLeft);
@@ -430,6 +435,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     &.pf-m-active,
     .pf-m-expanded > & {
       --pf-c-dropdown__toggle--m-plain--Color: var(--pf-c-dropdown__toggle--m-plain--hover--Color);
+      --pf-c-dropdown--m-plain__toggle-icon--Color: var(--pf-c-dropdown--m-plain--hover__toggle-icon--Color);
     }
 
     &.pf-m-disabled,
@@ -515,6 +521,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   margin-right: var(--pf-c-dropdown__toggle-icon--MarginRight);
   margin-left: var(--pf-c-dropdown__toggle-icon--MarginLeft);
   line-height: var(--pf-c-dropdown__toggle-icon--LineHeight);
+  color: var(--pf-c-dropdown__toggle-icon--Color);
 
   // stylelint-disable-next-line
   .pf-c-dropdown.pf-m-top.pf-m-expanded & {
