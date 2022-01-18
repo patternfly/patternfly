@@ -360,6 +360,7 @@
 
   // Nested menus
   --pf-c-menu--m-nav--c-menu--left-offset: #{pf-size-prem(4px)};
+  --pf-c-menu--m-nav--c-menu--m-top--bottom-offset: 0;
   --pf-c-menu--m-nav--c-menu--m-left--right-offset: #{pf-size-prem(4px)};
   --pf-c-menu--m-nav--c-menu--Top: calc(var(--pf-c-menu--m-nav__item--before--BorderBottomWidth) * -1);
   --pf-c-menu--m-nav--c-menu--Left: calc(100% - var(--pf-c-menu--m-nav--c-menu--left-offset));
