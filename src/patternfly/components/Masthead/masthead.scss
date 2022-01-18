@@ -11,7 +11,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead__main--PaddingBottom: var(--pf-c-masthead--m-display-stack__main--PaddingBottom);
   --pf-c-masthead__main--MarginRight: var(--pf-c-masthead--m-display-stack__main--MarginRight);
   --pf-c-masthead__main--before--BorderBottom: var(--pf-c-masthead--m-display-stack__main--before--BorderBottom);
-  --pf-c-masthead__main--ColumnGap: var(--pf-global--spacer--md);
   --pf-c-masthead__content--GridColumn: var(--pf-c-masthead--m-display-stack__content--GridColumn);
   --pf-c-masthead__content--MinHeight: var(--pf-c-masthead--m-display-stack__content--MinHeight);
   --pf-c-masthead__content--Order: var(--pf-c-masthead--m-display-stack__content--Order);
@@ -243,6 +242,10 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderLeftColor);
     }
   }
+
+  .pf-c-nav {
+    align-self: stretch;
+  }
 }
 
 // Main
@@ -258,7 +261,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   padding-bottom: var(--pf-c-masthead__main--PaddingBottom);
   margin-right: var(--pf-c-masthead__main--MarginRight);
   grid-column: var(--pf-c-masthead__main--GridColumn);
-  column-gap: var(--pf-c-masthead__main--ColumnGap);
 
   &::before {
     position: absolute;

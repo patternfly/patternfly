@@ -171,9 +171,8 @@ wrapperTag: div
 
 ### Horizontal nav
 ```hbs isFullscreen
-{{#> masthead-demo--page masthead-demo--page--id="masthead-horizontal-nav"}}
+{{#> masthead-demo--page masthead-demo--page--id="masthead-horizontal-nav" isHorizontalNav="true"}}
   {{#> masthead masthead--id=(concat masthead-demo--page--id '-masthead') masthead--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
-    {{> masthead-toggle}}
     {{#> masthead-main}}
       {{#> masthead-brand}}
         {{> brand
@@ -183,7 +182,6 @@ wrapperTag: div
           brand--img-url='/assets/images/logo__pf--reverse--base.svg'
           brand--img-url-on-md='/assets/images/logo__pf--reverse-on-md.svg'}}
       {{/masthead-brand}}
-      {{> masthead-demo--context-selector}}
     {{/masthead-main}}
     {{#> masthead-content}}
       {{#> toolbar toolbar--modifier="pf-m-full-height pf-m-static" toolbar--id=(concat masthead--id '-toolbar')}}
