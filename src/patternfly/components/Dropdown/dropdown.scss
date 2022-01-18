@@ -1,12 +1,12 @@
 $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
 .pf-c-dropdown {
-  --pf-c-dropdown__toggle--before--base--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-dropdown__toggle--before--base--BorderWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-dropdown__toggle--before--BorderBottomColor--base: var(--pf-global--BorderColor--200);
+  --pf-c-dropdown__toggle--before--BorderWidth--base: var(--pf-global--BorderWidth--sm);
 
   // access variables for :focus-visible + mouseout
-  --pf-c-dropdown__toggle--before--reset--BorderBottomWidth: var(--pf-c-dropdown__toggle--before--base--BorderBottomWidth);
-  --pf-c-dropdown__toggle--before--reset--BorderBottomColor: var(--pf-c-dropdown__toggle--before--base--BorderBottomColor);
+  --pf-c-dropdown__toggle--before--BorderBottomWidth--reset: var(--pf-c-dropdown__toggle--before--BorderBottomWidth--base);
+  --pf-c-dropdown__toggle--before--BorderBottomColor--reset: var(--pf-c-dropdown__toggle--before--BorderBottomColor--base);
 
   // Toggle
   --pf-c-dropdown__toggle--PaddingTop: var(--pf-global--spacer--form-element);
@@ -19,10 +19,10 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__toggle--Color: var(--pf-global--Color--100);
   --pf-c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-dropdown__toggle--BackgroundColor: transparent;
-  --pf-c-dropdown__toggle--before--BorderWidth: var(--pf-c-dropdown__toggle--before--base--BorderWidth);
+  --pf-c-dropdown__toggle--before--BorderWidth: var(--pf-c-dropdown__toggle--before--BorderWidth--base);
   --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-dropdown__toggle--before--base--BorderBottomColor);
+  --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-dropdown__toggle--before--BorderBottomColor--base);
   --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-dropdown__toggle--hover--before--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-dropdown__toggle--focus--before--BorderBottomWidth: var(--pf-global--BorderWidth--md);
@@ -227,8 +227,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
 // reset :focus-visible + mouseout accent
 @include pf-reset-accent-focus-border("pf-c-dropdown", $before: true, $root: false) {
-  --pf-c-dropdown__toggle--focus--before--BorderBottomWidth: var(--pf-c-dropdown__toggle--before--reset--BorderBottomWidth);
-  --pf-c-dropdown__toggle--focus--before--BorderBottomColor: var(--pf-c-dropdown__toggle--before--reset--BorderBottomColor);
+  --pf-c-dropdown__toggle--focus--before--BorderBottomWidth: var(--pf-c-dropdown__toggle--before--BorderBottomWidth--reset);
+  --pf-c-dropdown__toggle--focus--before--BorderBottomColor: var(--pf-c-dropdown__toggle--before--BorderBottomColor--reset);
 }
 
 .pf-c-dropdown__toggle {

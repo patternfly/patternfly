@@ -121,7 +121,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--c-context-selector__toggle--BorderRightColor: transparent;
   --pf-c-masthead--c-context-selector__toggle--BorderBottomColor: transparent;
   --pf-c-masthead--c-context-selector__toggle--BorderLeftColor: transparent;
-  --pf-c-masthead--c-context-selector__toggle--before--reset--BorderBottomColor: transparent;
+  --pf-c-masthead--c-context-selector__toggle--before--BorderBottomColor--reset: transparent;
   --pf-c-masthead--c-context-selector--m-full-height__toggle--BorderRightColor: var(--pf-c-masthead--item-border-color--base);
   --pf-c-masthead--c-context-selector--m-full-height__toggle--BorderLeftColor: var(--pf-c-masthead--item-border-color--base);
 
@@ -130,7 +130,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--c-dropdown__toggle--before--BorderRightColor: transparent;
   --pf-c-masthead--c-dropdown__toggle--before--BorderBottomColor: transparent;
   --pf-c-masthead--c-dropdown__toggle--before--BorderLeftColor: transparent;
-  --pf-c-masthead--c-dropdown__toggle--before--reset--BorderBottomColor: transparent;
+  --pf-c-masthead--c-dropdown__toggle--before--BorderBottomColor--reset: transparent;
   --pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderRightColor: var(--pf-c-masthead--item-border-color--base);
   --pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderLeftColor: var(--pf-c-masthead--item-border-color--base);
 
@@ -140,7 +140,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--c-menu-toggle--before--BorderBottomColor: transparent;
   --pf-c-masthead--c-menu-toggle--before--BorderLeftColor: transparent;
   --pf-c-masthead--c-menu-toggle--after--BorderColor: transparent;
-  --pf-c-masthead--c-menu-toggle--after--reset--BorderColor: transparent;
+  --pf-c-masthead--c-menu-toggle--after--BorderColor--reset: transparent;
   --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderRightColor: var(--pf-c-masthead--item-border-color--base);
   --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderLeftColor: var(--pf-c-masthead--item-border-color--base);
 
@@ -217,7 +217,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --pf-c-menu-toggle--before--BorderBottomColor: var(--pf-c-masthead--c-menu-toggle--before--BorderBottomColor);
     --pf-c-menu-toggle--before--BorderLeftColor: var(--pf-c-masthead--c-menu-toggle--before--BorderLeftColor);
     --pf-c-menu-toggle--after--BorderBottomColor: var(--pf-c-masthead--c-menu-toggle--after--BorderBottomColor);
-    --pf-c-menu-toggle--after--reset--BorderColor: var(--pf-c-masthead--c-menu-toggle--after--reset--BorderColor);
+    --pf-c-menu-toggle--after--BorderColor--reset: var(--pf-c-masthead--c-menu-toggle--after--BorderColor--reset);
 
     &.pf-m-full-height {
       --pf-c-menu-toggle--before--BorderRightColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderRightColor);
@@ -231,7 +231,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector__toggle--BorderRightColor);
     --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-masthead--c-context-selector__toggle--BorderBottomColor);
     --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--c-context-selector__toggle--BorderLeftColor);
-    --pf-c-context-selector__toggle--before--reset--BorderBottomColor: var(--pf-c-masthead--c-context-selector__toggle--before--reset--BorderBottomColor);
+    --pf-c-context-selector__toggle--before--BorderBottomColor--reset: var(--pf-c-masthead--c-context-selector__toggle--before--BorderBottomColor--reset);
 
     &.pf-m-full-height {
       --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector--m-full-height__toggle--BorderRightColor);
@@ -244,7 +244,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderRightColor);
     --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderBottomColor);
     --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderLeftColor);
-    --pf-c-dropdown__toggle--before--reset--BorderBottomColor: var(--pf-c-masthead--c-dropdown__toggle--before--reset--BorderBottomColor);
+    --pf-c-dropdown__toggle--before--BorderBottomColor--reset: var(--pf-c-masthead--c-dropdown__toggle--before--BorderBottomColor--reset);
 
     &.pf-m-full-height {
       --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderRightColor);

@@ -260,11 +260,13 @@
     $position: "before";
   }
 
+  $focus-root: ":focus:where(:not(:focus-visible):not(:hover):not(:active))::";
+
   // construct selector
   @if $root == false {
-    $namespace: #{$namespace} + ":not(.pf-m-expanded) > ." + #{$toggle} + ":focus:not(:focus-visible):not(:hover):not(:active)::" + #{$position};
+    $namespace: #{$namespace} + ":not(.pf-m-expanded) > ." + #{$toggle} + #{$focus-root} + #{$position};
   } @else {
-    $namespace: #{$namespace} + ":not(.pf-m-expanded):focus:not(:focus-visible):not(:hover):not(:active)::" + #{$position};
+    $namespace: #{$namespace} + ":not(.pf-m-expanded)" #{$focus-root} + #{$position};
   }
 
   .#{$namespace} {
