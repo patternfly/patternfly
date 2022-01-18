@@ -1,20 +1,22 @@
 {{#> description-list}}
   {{#> description-list-group}}
     {{#> description-list-term}}
+      {{#> description-list-icon}}
+        <i class="fas fa-cube" aria-hidden="true"></i>
+      {{/description-list-icon}} 
       {{#> description-list-text}}
-        Name
+        This is a long description that should wrap to multiple lines in cases where the viewport is quite narrow.
       {{/description-list-text}}
     {{/description-list-term}}
     {{#> description-list-description}}
-      {{#if description-list--IsLongDescription}}
-        This is a long description that should wrap to multiple lines in a multi-column layout.
-      {{else}}
-        example
-      {{/if}}
+      example
     {{/description-list-description}}
   {{/description-list-group}}
   {{#> description-list-group}}
     {{#> description-list-term}}
+      {{#> description-list-icon}}
+        <i class="fas fa-book" aria-hidden="true"></i>
+      {{/description-list-icon}}
       {{#> description-list-text}}
         Namespace
       {{/description-list-text}}
@@ -25,6 +27,9 @@
   {{/description-list-group}}
   {{#> description-list-group}}
     {{#> description-list-term}}
+      {{#> description-list-icon}}
+        <i class="fas fa-key" aria-hidden="true"></i>
+      {{/description-list-icon}}
       {{#> description-list-text}}
         Labels
       {{/description-list-text}}
@@ -35,6 +40,9 @@
   {{/description-list-group}}
   {{#> description-list-group}}
     {{#> description-list-term}}
+      {{#> description-list-icon}}
+        <i class="fas fa-globe" aria-hidden="true"></i>
+      {{/description-list-icon}}
       {{#> description-list-text}}
         Pod selector
       {{/description-list-text}}
@@ -50,6 +58,9 @@
   {{/description-list-group}}
   {{#> description-list-group}}
     {{#> description-list-term}}
+      {{#> description-list-icon}}
+        <i class="fas fa-flag" aria-hidden="true"></i>
+      {{/description-list-icon}}
       {{#> description-list-text}}
         Annotation
       {{/description-list-text}}
