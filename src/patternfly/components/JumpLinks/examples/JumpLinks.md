@@ -2,7 +2,6 @@
 id: Jump links
 section: components
 cssPrefix: pf-c-jump-links
-beta: true
 ---
 
 ## Examples

@@ -1,6 +1,5 @@
 ---
 id: 'Back to top'
-beta: true
 section: components
 cssPrefix: pf-c-back-to-top
 ---

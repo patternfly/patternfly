@@ -1,6 +1,5 @@
 ---
 id: Jump links
-beta: true
 section: components
 ---
 
