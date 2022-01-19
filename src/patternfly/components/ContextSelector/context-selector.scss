@@ -35,7 +35,6 @@
   // Toggle icon arrow
   --pf-c-context-selector__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-context-selector__toggle-icon--Color: var(--pf-c-context-selector__toggle--Color);
   --pf-c-context-selector--m-plain__toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-context-selector--m-plain--hover__toggle-icon--Color: var(--pf-global--Color--100);
 
@@ -287,7 +286,7 @@
 .pf-c-context-selector__toggle-icon {
   margin-right: var(--pf-c-context-selector__toggle-icon--MarginRight);
   margin-left: var(--pf-c-context-selector__toggle-icon--MarginLeft);
-  color: var(--pf-c-context-selector__toggle-icon--Color);
+  color: var(--pf-c-context-selector__toggle-icon--Color, inherit);
 }
 
 .pf-c-context-selector__menu {

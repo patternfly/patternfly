@@ -95,7 +95,6 @@
   --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Rotate: 180deg;
-  --pf-c-select__toggle-arrow--Color: var(--pf-c-select__toggle--Color);
   --pf-c-select--m-plain__toggle-arrow--Color: var(--pf-global--Color--200);
   --pf-c-select--m-plain--hover__toggle-arrow--Color: var(--pf-global--Color--100);
 
@@ -376,7 +375,7 @@
 }
 
 .pf-c-select__toggle-arrow {
-  color: var(--pf-c-select__toggle-arrow--Color);
+  color: var(--pf-c-select__toggle-arrow--Color, inherit);
 
   * + & {
     margin-right: var(--pf-c-select__toggle-arrow--MarginRight);
