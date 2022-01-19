@@ -158,8 +158,10 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   @include pf-c-masthead--m-display-stack;
 
   // Set layout to inline at medium breakpoint
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    @include pf-c-masthead--m-display-inline;
+  .pf-c-page:where(:not(.pf-m-resize-observer)) & {
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      @include pf-c-masthead--m-display-inline;
+    }
   }
 
   @include pf-t-dark; // force the container to follow the dark theme
