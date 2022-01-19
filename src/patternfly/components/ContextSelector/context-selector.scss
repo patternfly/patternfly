@@ -35,6 +35,9 @@
   // Toggle icon arrow
   --pf-c-context-selector__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-context-selector__toggle-icon--Color: var(--pf-c-context-selector__toggle--Color);
+  --pf-c-context-selector--m-plain__toggle-icon--Color: var(--pf-global--Color--200);
+  --pf-c-context-selector--m-plain--hover__toggle-icon--Color: var(--pf-global--Color--100);
 
   // Menu
   --pf-c-context-selector__menu--Top: calc(100% + var(--pf-global--spacer--xs));
@@ -240,6 +243,7 @@
   &.pf-m-plain {
     --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--PaddingRight);
     --pf-c-context-selector__toggle--PaddingLeft: var(--pf-c-context-selector__toggle--m-plain--PaddingLeft);
+    --pf-c-context-selector__toggle-icon--Color: var(--pf-c-context-selector--m-plain__toggle-icon--Color);
 
     &.pf-m-text {
       --pf-c-context-selector__toggle--PaddingRight: var(--pf-c-context-selector__toggle--m-plain--m-text--PaddingRight);
@@ -250,19 +254,20 @@
       display: inline-block;
       width: auto;
       color: var(--pf-c-context-selector__toggle--m-plain--Color);
+    }
 
-      &.pf-m-disabled,
-      &:disabled {
-        --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--disabled--Color);
-      }
+    &.pf-m-disabled,
+    &:disabled {
+      --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--disabled--Color);
+    }
 
-      &:hover,
-      &:active,
-      &.pf-m-active,
-      &:focus,
-      .pf-c-context-selector.pf-m-expanded > & {
-        --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--hover--Color);
-      }
+    &:hover,
+    &:active,
+    &.pf-m-active,
+    &:focus,
+    .pf-c-context-selector.pf-m-expanded > & {
+      --pf-c-context-selector__toggle--m-plain--Color: var(--pf-c-context-selector__toggle--m-plain--hover--Color);
+      --pf-c-context-selector--m-plain__toggle-icon--Color: var(--pf-c-context-selector--m-plain--hover__toggle-icon--Color);
     }
 
     &::before {
@@ -282,6 +287,7 @@
 .pf-c-context-selector__toggle-icon {
   margin-right: var(--pf-c-context-selector__toggle-icon--MarginRight);
   margin-left: var(--pf-c-context-selector__toggle-icon--MarginLeft);
+  color: var(--pf-c-context-selector__toggle-icon--Color);
 }
 
 .pf-c-context-selector__menu {

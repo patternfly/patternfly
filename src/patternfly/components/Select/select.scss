@@ -95,6 +95,9 @@
   --pf-c-select__toggle-arrow--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--with-clear--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-select__toggle-arrow--m-top--m-expanded__toggle-arrow--Rotate: 180deg;
+  --pf-c-select__toggle-arrow--Color: var(--pf-c-select__toggle--Color);
+  --pf-c-select--m-plain__toggle-arrow--Color: var(--pf-global--Color--200);
+  --pf-c-select--m-plain--hover__toggle-arrow--Color: var(--pf-global--Color--100);
 
   // Toggle button
   --pf-c-select__toggle-clear--PaddingRight: var(--pf-global--spacer--sm);
@@ -323,8 +326,18 @@
   }
 
   &.pf-m-plain {
+    --pf-c-select__toggle-arrow--Color: var(--pf-c-select--m-plain__toggle-arrow--Color);
+
     &::before {
       border-color: var(--pf-c-select__toggle--m-plain--before--BorderColor);
+    }
+
+    &:hover,
+    &:active,
+    &.pf-m-active,
+    &:focus,
+    .pf-c-select.pf-m-expanded > & {
+      --pf-c-select--m-plain__toggle-arrow--Color: var(--pf-c-select--m-plain--hover__toggle-arrow--Color);
     }
   }
 
@@ -363,6 +376,8 @@
 }
 
 .pf-c-select__toggle-arrow {
+  color: var(--pf-c-select__toggle-arrow--Color);
+
   * + & {
     margin-right: var(--pf-c-select__toggle-arrow--MarginRight);
     margin-left: var(--pf-c-select__toggle-arrow--MarginLeft);
