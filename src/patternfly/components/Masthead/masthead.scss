@@ -150,16 +150,23 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--c-toolbar__expandable-content--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-masthead--c-toolbar__expandable-content--BorderTopColor: var(--pf-c-masthead--item-border-color--base);
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
-  }
 
   // Set layout to stack by default
   @include pf-c-masthead--m-display-stack;
 
   // Set layout to inline at medium breakpoint
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    @include pf-c-masthead--m-display-inline;
+  .pf-c-page:where(:not(.pf-m-resize-observer)) & {
+    @media screen and (min-width: $pf-global--breakpoint--md) {
+      @include pf-c-masthead--m-display-inline;
+    }
+
+    @media screen and (min-width: $pf-global--breakpoint--xl) {
+      --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
+    }
+  }
+
+  .pf-c-page:where(.pf-m-breakpoint-xl) & {
+    --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
   }
 
   @include pf-t-dark; // force the container to follow the dark theme
