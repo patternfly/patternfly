@@ -25,10 +25,6 @@ module.exports = {
       path: '/guidelines'
     },
     {
-      text: 'Modifiers',
-      path: '/modifiers'
-    },
-    {
       text: 'Upgrade guide',
       path: '/upgrade-guide'
     },
