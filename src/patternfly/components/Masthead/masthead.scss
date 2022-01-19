@@ -165,6 +165,10 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     }
   }
 
+  .pf-c-page:where(.pf-m-breakpoint-xl) & {
+    --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
+  }
+
   @include pf-t-dark; // force the container to follow the dark theme
 
   position: relative;

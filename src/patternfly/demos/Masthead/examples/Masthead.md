@@ -140,7 +140,7 @@ wrapperTag: div
 
 ### Advanced integration with menu options
 ```hbs isFullscreen
-{{#> masthead-demo--page masthead-demo--page--id="masthead-advanced-with-menu-example" page--modifier="pf-m-resize-observer"}}
+{{#> masthead-demo--page masthead-demo--page--id="masthead-advanced-with-menu-example"}}
   {{#> masthead masthead--id=(concat masthead-demo--page--id '-masthead')}}
     {{> masthead-toggle}}
     {{#> masthead-main}}
