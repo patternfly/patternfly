@@ -242,6 +242,10 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderLeftColor);
     }
   }
+
+  .pf-c-nav {
+    align-self: stretch;
+  }
 }
 
 // Main

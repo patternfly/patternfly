@@ -511,6 +511,10 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 }
 
+.pf-c-dropdown__toggle-text {
+  flex: 0 1 auto;
+}
+
 .pf-c-dropdown__toggle-icon {
   margin-right: var(--pf-c-dropdown__toggle-icon--MarginRight);
   margin-left: var(--pf-c-dropdown__toggle-icon--MarginLeft);
@@ -525,6 +529,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 // Toggle image
 .pf-c-dropdown__toggle-image {
   display: inline-flex;
+  flex-shrink: 0;
   margin-top: var(--pf-c-dropdown__toggle-image--MarginTop);
   margin-right: var(--pf-c-dropdown__toggle-image--MarginRight);
   margin-bottom: var(--pf-c-dropdown__toggle-image--MarginBottom);
