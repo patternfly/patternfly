@@ -78,3 +78,15 @@ cssPrefix: pf-c-text-input-group
   {{/text-input-group-utilities}}
 {{/text-input-group}}
 ```
+
+### Autocomplete last option hint
+```hbs
+{{#> text-input-group text-input-group--id="basic" text-input-group--value="apples"}}
+  {{#> text-input-group-main}}
+    {{#> text-input-group-text}}
+      {{> text-input-group-text-input text-input-group-text-input--hint-text="appleseed" }}
+      {{> text-input-group-text-input}}
+    {{/text-input-group-text}}
+  {{/text-input-group-main}}
+{{/text-input-group}}
+```
