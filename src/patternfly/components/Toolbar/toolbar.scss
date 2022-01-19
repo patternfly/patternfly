@@ -12,7 +12,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Item
   --pf-c-toolbar__item--Display: block;
-  --pf-c-toolbar__item--MinWidth--base: 0;
+  --pf-c-toolbar__item--MinWidth--base: auto;
 
   // Group
   --pf-c-toolbar__group--Display: flex;
