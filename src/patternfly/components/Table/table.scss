@@ -303,6 +303,9 @@
   // Subhead
   --pf-c-table__subhead--Color: var(--pf-global--Color--200);
 
+  // Striped
+  --pf-c-table--m-striped__tr--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-table--cell--first-last-child--PaddingRight: var(--pf-c-table--cell--first-last-child--xl--PaddingRight);
     --pf-c-table--cell--first-last-child--PaddingLeft: var(--pf-c-table--cell--first-last-child--xl--PaddingLeft);
@@ -344,6 +347,19 @@
       }
     }
   }
+
+  // For regular and expandable tables
+  // stylelint-disable
+  &.pf-m-striped:not(.pf-m-expandable) > tbody > tr:nth-child(odd), // regular table
+  &.pf-m-striped.pf-m-expandable > tbody:nth-of-type(odd) > tr:not(.pf-c-table__expandable-row), // expandable table
+  > .pf-m-striped > tr:nth-child(odd), // tbody odd
+  > .pf-m-striped-even > tr:nth-child(even), // tbody even
+  tr.pf-m-striped { // tr
+    --pf-c-table__sticky-column--BackgroundColor: var(--pf-c-table--m-striped__tr--BackgroundColor);
+
+    background: var(--pf-c-table--m-striped__tr--BackgroundColor);
+  }
+  // stylelint-enable
 
   // Standard table row (non-expandable)
   // exclude expandable rows
