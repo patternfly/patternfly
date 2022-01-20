@@ -3,6 +3,46 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.01 release notes (2022-01-25)
+Packages released:
+- [@patternfly/patternfly@v4.171.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.171.1)
+
+### Components
+- **Button:** Added progress support with plain variation ([#4594](https://github.com/patternfly/patternfly/pull/4594))
+- **Context selector, dropdown, menu toggle, options menu, select:** Added hover state for all plain variant icons ([#4627](https://github.com/patternfly/patternfly/pull/4627))
+- **Description list:**
+  - Removed unnecessary column fill examples ([#4593](https://github.com/patternfly/patternfly/pull/4593))
+  - Added icon variant ([#4603](https://github.com/patternfly/patternfly/pull/4603))
+- **Expandable section:** Added indented variation ([#4571](https://github.com/patternfly/patternfly/pull/4571))
+- **Label:** Adjusted style of editable label ([#4551](https://github.com/patternfly/patternfly/pull/4551))
+- **Log viewer:**
+  - Updated scroll, added footer ([#4587](https://github.com/patternfly/patternfly/pull/4587))
+  - Updated the way dark theme is applied, adjusted border ([#4597](https://github.com/patternfly/patternfly/pull/4597))
+- **Login page:** Aligned login box to top ([#4591](https://github.com/patternfly/patternfly/pull/4591))
+- **Masthead:**
+  - Added horizontal nav demo ([#4617](https://github.com/patternfly/patternfly/pull/4617))
+  - Added resize observer conditional ([#4625](https://github.com/patternfly/patternfly/pull/4625))
+- **Notification badge:** Changed example to dark ([#4580](https://github.com/patternfly/patternfly/pull/4580))
+- **Table:**
+  - Added striped rows ([#4569](https://github.com/patternfly/patternfly/pull/4569))
+  - Fixed sort/fit-content width ([#4589](https://github.com/patternfly/patternfly/pull/4589))
+  - Moved expand all toggle in demo ([#4595](https://github.com/patternfly/patternfly/pull/4595))
+  - Removed cols/colgroups ([#4600](https://github.com/patternfly/patternfly/pull/4600))
+- **Text input group:** Added autocomplete ghosting ([#4616](https://github.com/patternfly/patternfly/pull/4616))
+- **Truncate:**
+  - Resolved spacing issues ([#4599](https://github.com/patternfly/patternfly/pull/4599))
+  - Fixed font size var value ([#4560](https://github.com/patternfly/patternfly/pull/4560))
+
+### Other
+- **Docs:**
+  - Promoted beta components ([#4613](https://github.com/patternfly/patternfly/pull/4613))
+  - Removed outdated modifiers page ([#4619](https://github.com/patternfly/patternfly/pull/4619))
+- **Global:** Udpated/removed unused/undefined vars ([#4620](https://github.com/patternfly/patternfly/pull/4620))
+- **Build:**
+  - Cleaned up stylelint rules/sass ([#4567](https://github.com/patternfly/patternfly/pull/4567))
+  - Made reloading on change to markdown files work again ([#4574](https://github.com/patternfly/patternfly/pull/4574))
+  - Updated the watcher to handle crashes ([#4583](https://github.com/patternfly/patternfly/pull/4583))
+
 
 ## 2021.16 release notes (2021-12-07)
 Packages released:
