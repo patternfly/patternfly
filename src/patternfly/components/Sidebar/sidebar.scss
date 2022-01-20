@@ -37,6 +37,7 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --pf-c-sidebar--m-split--m-panel-right__panel--Order: 1;
 
   // Panel
+  --pf-c-sidebar__panel--FlexBasis--base: auto;
   --pf-c-sidebar__panel--BoxShadow--base: #{0 pf-size-prem(4px) pf-size-prem(4px) pf-size-prem(-4px) rgba($pf-color-black-1000, .16)}; // modified so the shadow is only visible on the bottom of the element
   --pf-c-sidebar__panel--BoxShadow: var(--pf-c-sidebar__panel--BoxShadow--base);
   --pf-c-sidebar__panel--Top: 0;

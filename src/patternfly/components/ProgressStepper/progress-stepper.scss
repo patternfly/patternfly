@@ -102,6 +102,8 @@
   --pf-c-progress-stepper__step-description--Color: var(--pf-global--Color--200);
   --pf-c-progress-stepper__step-description--TextAlign: left;
   --pf-c-progress-stepper--m-center__step-description--TextAlign: center;
+  --pf-c-progress-stepper--m-center__step-description--MarginRight: 0;
+  --pf-c-progress-stepper--m-center__step-description--MarginLeft: 0;
 
   position: relative;
   display: grid;

@@ -418,7 +418,7 @@
       --pf-c-menu__list--PaddingTop: 0;
       --pf-c-menu__list--PaddingBottom: 0;
       --pf-c-menu__item--FontSize: var(--pf-c-nav--c-menu__item--FontSize);
-      --pf-c-menu__item--Color: var(--pf-c-nav--c-menu__item--Color);
+      --pf-c-menu__item--Color: var(--pf-c-nav--c-menu__item--Color, inherit);
       --pf-c-menu__item--PaddingTop: var(--pf-c-nav--c-menu--m-flyout__item--PaddingTop);
       --pf-c-menu__item--PaddingRight: var(--pf-c-nav--c-menu--m-flyout__item--PaddingRight);
       --pf-c-menu__item--PaddingBottom: var(--pf-c-nav--c-menu--m-flyout__item--PaddingBottom);
@@ -578,8 +578,8 @@
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav--m-horizontal__link--PaddingRight);
     --pf-c-nav__link--PaddingBottom: var(--pf-c-nav--m-horizontal__link--PaddingBottom);
     --pf-c-nav__link--PaddingLeft: var(--pf-c-nav--m-horizontal__link--PaddingLeft);
-    --pf-c-nav__link--Right: var(--pf-c-nav--m-horizontal__link--Right);
-    --pf-c-nav__link--Left: var(--pf-c-nav--m-horizontal__link--Left);
+    --pf-c-nav__link--Right: var(--pf-c-nav--m-horizontal__link--Right); // remove at breaking change
+    --pf-c-nav__link--Left: var(--pf-c-nav--m-horizontal__link--Left); // remove at breaking change
     --pf-c-nav__link--Color: var(--pf-c-nav--m-horizontal__link--Color);
     --pf-c-nav__link--hover--Color: var(--pf-c-nav--m-horizontal__link--hover--Color);
     --pf-c-nav__link--active--Color: var(--pf-c-nav--m-horizontal__link--active--Color);
@@ -645,9 +645,9 @@
     --pf-c-nav__link--PaddingRight: var(--pf-c-nav--m-horizontal-subnav__link--PaddingRight);
     --pf-c-nav__link--PaddingBottom: var(--pf-c-nav--m-horizontal-subnav__link--PaddingBottom);
     --pf-c-nav__link--PaddingLeft: var(--pf-c-nav--m-horizontal-subnav__link--PaddingLeft);
+    --pf-c-nav__link--Color: var(--pf-c-nav--m-horizontal-subnav__link--Color);
     --pf-c-nav__link--Right: var(--pf-c-nav--m-horizontal-subnav__link--Right);
     --pf-c-nav__link--Left: var(--pf-c-nav--m-horizontal-subnav__link--Left);
-    --pf-c-nav__link--Color: var(--pf-c-nav--m-horizontal-subnav__link--Color);
     --pf-c-nav__link--hover--Color: var(--pf-c-nav--m-horizontal-subnav__link--hover--Color);
     --pf-c-nav__link--active--Color: var(--pf-c-nav--m-horizontal-subnav__link--active--Color);
     --pf-c-nav__link--focus--Color: var(--pf-c-nav--m-horizontal-subnav__link--focus--Color);
