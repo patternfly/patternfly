@@ -66,6 +66,7 @@
   --pf-c-progress-stepper--m-vertical__step-main--MarginLeft: var(--pf-global--spacer--xs);
   --pf-c-progress-stepper--m-compact__step-main--MarginTop: 0;
   --pf-c-progress-stepper--m-compact__step-main--MarginBottom: var(--pf-global--spacer--sm);
+  --pf-c-progress-stepper__step--last-child__step-main--MarginBottom: 0;
 
   // Step Title variables
   --pf-c-progress-stepper__step-title--Color: var(--pf-global--Color--100);
@@ -205,6 +206,10 @@
 
   &.pf-m-info {
     --pf-c-progress-stepper__step-icon--Color: var(--pf-global--info-color--100);
+  }
+
+  &:last-child .pf-c-progress-stepper__step-main {
+    margin-bottom: var(--pf-c-progress-stepper__step--last-child__step-main--MarginBottom);
   }
 }
 
