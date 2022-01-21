@@ -37,7 +37,7 @@ Packages released:
 - **Docs:**
   - Promoted beta components ([#4613](https://github.com/patternfly/patternfly/pull/4613))
   - Removed outdated modifiers page ([#4619](https://github.com/patternfly/patternfly/pull/4619))
-- **Global:** Udpated/removed unused/undefined vars ([#4620](https://github.com/patternfly/patternfly/pull/4620))
+- **Global:** Updated/removed unused/undefined vars ([#4620](https://github.com/patternfly/patternfly/pull/4620))
 - **Build:**
   - Cleaned up stylelint rules/sass ([#4567](https://github.com/patternfly/patternfly/pull/4567))
   - Made reloading on change to markdown files work again ([#4574](https://github.com/patternfly/patternfly/pull/4574))
@@ -1208,7 +1208,7 @@ Packages released:
 - **Pagination:** Added compact variation ([#2275](https://github.com/patternfly/patternfly/pull/2275))
 - **Radio:** Updated the radio component example to single components ([#2231](https://github.com/patternfly/patternfly/pull/2231))
 - **Select:**
-  - Added typeahead form wrapper, udpated css ([#2255](https://github.com/patternfly/patternfly/pull/2255))
+  - Added typeahead form wrapper, updated css ([#2255](https://github.com/patternfly/patternfly/pull/2255))
   - Add top expanded example ([#2026](https://github.com/patternfly/patternfly/pull/2026))
 - **Table:**
   - Fixed a11y issues in org documentation/html/table ([#2282](https://github.com/patternfly/patternfly/pull/2282))
