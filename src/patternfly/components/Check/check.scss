@@ -6,7 +6,11 @@
   --pf-c-check__label--FontSize: var(--pf-global--FontSize--md);
   --pf-c-check__label--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-check__input--Height: var(--pf-c-check__label--FontSize);
+  --pf-c-check__input--Width: var(--pf-c-check__input--Height);
   --pf-c-check__input--MarginTop: calc(((var(--pf-c-check__label--FontSize) * var(--pf-c-check__label--LineHeight)) - var(--pf-c-check__input--Height)) / 2);
+  --pf-c-check__input--AccentColor: var(--pf-global--primary-color--100);
+  --pf-c-check__input--TranslateY: 0;
+  --pf-c-check--m-standalone__input--TranslateY: .15em;
   --pf-c-check__description--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-check__description--Color: var(--pf-global--Color--200);
   --pf-c-check__body--MarginTop: var(--pf-global--spacer--sm);
@@ -19,8 +23,8 @@
 
   &.pf-m-standalone {
     --pf-c-check--GridGap: 0;
-    --pf-c-check__input--Height: auto;
     --pf-c-check__input--MarginTop: 0;
+    --pf-c-check__input--TranslateY: var(--pf-c-check--m-standalone__input--TranslateY);
 
     display: inline-grid;
     line-height: 1;
@@ -35,8 +39,11 @@
 }
 
 .pf-c-check__input {
+  width: var(--pf-c-check__input--Width);
   height: var(--pf-c-check__input--Height);
   margin-top: var(--pf-c-check__input--MarginTop);
+  accent-color: var(--pf-c-check__input--AccentColor);
+  transform: translateY(var(--pf-c-check__input--TranslateY));
 }
 
 .pf-c-check__description {
