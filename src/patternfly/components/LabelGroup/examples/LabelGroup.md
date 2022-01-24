@@ -516,7 +516,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 {{/label-group}}
 ```
 
-### Mixed labels, dynamic label group
+### Mixed labels (static / editable), dynamic label group
 ``` hbs
 {{#> label-group label-group--id="static-labels-editable-group-example" label-group--IsEditable="true"}}
   {{#> label-group-main}}
@@ -548,6 +548,147 @@ In addition to the JavaScript management of [editable labels](/components/label#
       {{/label-group-list-item}}
       {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
         {{> label-group-textarea}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+```
+
+### Compact labels
+```hbs
+{{#> label-group label-group--id="label-group-basic"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact pf-m-blue"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact pf-m-green"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 3
+        {{/label}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+```
+
+### Mixed labels (compact / default)
+```hbs
+{{#> label-group label-group--id="label-group-basic"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact pf-m-blue"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-green"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 3
+        {{/label}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+```
+
+### Compact labels, overflow
+```hbs
+{{#> label-group label-group--id="label-group-overflow"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact pf-m-blue"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact pf-m-green"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 3
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--IsOverflow="true" label--modifier="pf-m-compact"}}
+          3 more
+        {{/label}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+```
+
+### Compact labels, vertical
+```hbs
+{{#> label-group label-group--id="label-group-vertical" label-group--modifier="pf-m-vertical"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact pf-m-blue"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-compact pf-m-green"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 3
+        {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
