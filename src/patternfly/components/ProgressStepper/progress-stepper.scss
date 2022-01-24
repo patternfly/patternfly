@@ -207,8 +207,8 @@
     --pf-c-progress-stepper__step-icon--Color: var(--pf-global--info-color--100);
   }
 
-  &:last-child .pf-c-progress-stepper__step-main {
-    margin-bottom: 0;
+  &:last-child {
+    --pf-c-progress-stepper__step-main--MarginBottom: 0;
   }
 }
 
