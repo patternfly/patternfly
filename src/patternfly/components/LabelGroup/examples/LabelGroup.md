@@ -556,7 +556,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 
 ### Compact labels
 ```hbs
-{{#> label-group label-group--id="label-group-basic"}}
+{{#> label-group label-group--id="label-group-compact"}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
