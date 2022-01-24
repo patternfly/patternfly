@@ -663,7 +663,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 
 ### Compact labels, vertical
 ```hbs
-{{#> label-group label-group--id="label-group-vertical" label-group--modifier="pf-m-vertical"}}
+{{#> label-group label-group--id="label-group-compact-vertical" label-group--modifier="pf-m-vertical"}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
