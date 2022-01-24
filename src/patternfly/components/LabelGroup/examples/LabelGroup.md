@@ -554,7 +554,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 {{/label-group}}
 ```
 
-### Accessibility
+## Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="list"` | `.pf-c-label-group__list` | Indicates that the label group list is a list element. This role is redundant since `.pf-c-label-group__list` is a `<ul>` but is required for screen readers to announce the list propertly. **Required** |
@@ -564,7 +564,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 | `row="1"` | `.pf-c-label-group__textarea` | Indicates that the label group textarea is one row. **Required** |
 | `tabindex="0"` | `.pf-c-label-group__textarea` | Inserts the label group textarea into the tab order of the page so that it is focusable. **Required** |
 
-### Usage
+## Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-label-group` | `<div>` | Initiates the label group component. **Required.** |
