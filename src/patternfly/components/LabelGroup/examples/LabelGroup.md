@@ -590,7 +590,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 
 ### Mixed labels (compact / default)
 ```hbs
-{{#> label-group label-group--id="label-group-basic"}}
+{{#> label-group label-group--id="label-group-mixed-compact-default"}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
