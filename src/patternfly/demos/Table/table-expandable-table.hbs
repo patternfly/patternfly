@@ -2,9 +2,7 @@
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
       {{> table--toggle-all}}
-      {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Select all rows">
-      {{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories
       {{/table-th}}
@@ -20,8 +18,8 @@
       {{#> table-th table-th--attribute='scope="col"'}}
         Last commit
       {{/table-th}}
-      {{#> table-td}}{{/table-td}}
-      {{#> table-td}}{{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 
