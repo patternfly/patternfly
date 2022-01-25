@@ -1,5 +1,4 @@
 @import "sass-utilities/colors";
-<<<<<<< HEAD
 
 $pf-color-black-50: #e0e0e0;
 $pf-color-black-100: #c6c7c8;
@@ -22,9 +21,6 @@ $pf-global--danger-color--100: $pf-color-red-9999;
 $pf-global--danger-color--200: $pf-color-red-8888;
 
 @import "patternfly-base";
-=======
-@import "patternfly-base.scss";
->>>>>>> a7bf7a87 (fix(theme): updates)
 @import "components/all";
 @import "layouts/all";
 
