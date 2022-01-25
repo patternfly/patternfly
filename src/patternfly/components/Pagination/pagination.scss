@@ -255,6 +255,19 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
     }
   }
 
+  // hide number input up/down arrow buttons
+  input[type="number"] {
+    // stylelint-disable
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+    // stylelint-enable
+      appearance: none;
+      margin: 0;
+    }
+
+    appearance: textfield;
+  }
+
   .pf-c-form-control {
     width: var(--pf-c-pagination__nav-page-select--c-form-control--Width);
   }
