@@ -6,7 +6,7 @@
   --pf-c-number-input__icon--FontSize: var(--pf-global--FontSize--xs);
 
   // form control
-  --pf-c-number-input--c-form-control--width-base: calc(var(--pf-global--spacer--sm) * 2); // element's padding
+  --pf-c-number-input--c-form-control--width-base: calc(var(--pf-global--spacer--sm) * 2 + var(--pf-global--BorderWidth--sm) * 2); // element's padding
   --pf-c-number-input--c-form-control--width-chars: 4;
   --pf-c-number-input--c-form-control--Width: calc(var(--pf-c-number-input--c-form-control--width-base) + var(--pf-c-number-input--c-form-control--width-chars) * 1ch);
 
