@@ -80,3 +80,15 @@
   }
 }
 // stylelint-enable
+
+%pf-remove-num-arrows {
+  appearance: textfield;
+
+  // stylelint-disable
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+  // stylelint-enable
+    appearance: none;
+    margin: 0;
+  }
+}

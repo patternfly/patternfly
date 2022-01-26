@@ -18,15 +18,7 @@
     width: var(--pf-c-number-input--c-form-control--Width);
     text-align: right;
 
-    // disable default number increment arrows
-    // stylelint-disable
-    -moz-appearance: textfield;
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-    // stylelint-enable
+    @extend %pf-remove-num-arrows;
   }
 }
 
