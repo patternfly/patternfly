@@ -4033,7 +4033,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
 ### Striped tr example
 ```hbs
-{{#> table table--id="table-striped-tr" table--grid="true" table--modifier="pf-m-grid-md pf-m-striped" table--attribute='aria-label="This is a striped tr example"'}}
+{{#> table table--id="table-striped-tr" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a striped tr example"'}}
   {{#> table-caption}}
     This is the table caption
   {{/table-caption}}
