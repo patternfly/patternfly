@@ -1,9 +1,7 @@
 {{#> table table--id=(concat page--id '-table') table--grid="true" table--modifier="pf-m-grid-xl" table--attribute='aria-label="This is a sortable table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Select all rows">
-      {{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
         Repositories
       {{/table-th}}
@@ -19,10 +17,8 @@
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
         Last commit
       {{/table-th}}
-      {{#> table-td}}
-      {{/table-td}}
-      {{#> table-td}}
-      {{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 
