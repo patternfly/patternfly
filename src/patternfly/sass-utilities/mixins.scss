@@ -183,14 +183,6 @@
   }
 }
 
-@mixin pf-m-theme-dark {
-  // stylelint-disable selector-pseudo-class-no-unknown
-  :where(.pf-m-theme-dark) {
-    @content;
-  }
-  // stylelint-enable
-}
-
 // Apply media query if value is passed
 @mixin pf-apply-breakpoint($breakpoint) {
   @if ($breakpoint == "null" or $breakpoint == "base" or $breakpoint == "") {

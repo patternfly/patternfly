@@ -108,14 +108,3 @@
     }
   }
 }
-
-@include pf-m-theme-dark {
-  .pf-c-banner {
-    &.pf-m-info,
-    &.pf-m-danger,
-    &.pf-m-success,
-    &.pf-m-warning {
-      color: var(--pf-global--palette--black-900);
-    }
-  }
-}

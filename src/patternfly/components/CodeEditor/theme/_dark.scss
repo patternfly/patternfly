@@ -1,0 +1,5 @@
+.pf-c-code-editor__controls {
+  > * + * {
+    border-left: 1px solid var(--pf-global--palette--black-700);
+  }
+}
