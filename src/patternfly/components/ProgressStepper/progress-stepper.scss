@@ -208,6 +208,10 @@
   &.pf-m-info {
     --pf-c-progress-stepper__step-icon--Color: var(--pf-global--info-color--100);
   }
+
+  &:last-child {
+    --pf-c-progress-stepper__step-main--MarginBottom: 0;
+  }
 }
 
 // The step icon wrapper provides a container on which to use the before for the line connecting the steps
