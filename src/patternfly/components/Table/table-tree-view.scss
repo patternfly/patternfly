@@ -9,8 +9,8 @@ $pf-c-tree-view--MaxDepth: 10;
   --pf-c-table__tree-view-main--MarginLeft: calc(var(--pf-c-table--cell--PaddingLeft) * -1);
 
   // check
+  --pf-c-table__tree-view-main--c-table__check--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-table__tree-view-main--c-table__check--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-table__tree-view-main--c-table__check--MarginRight: var(--pf-global--spacer--md); // update at breaking change
 
   // icon
   --pf-c-table__tree-view-icon--MinWidth: var(--pf-global--FontSize--md);
@@ -60,13 +60,12 @@ $pf-c-tree-view--MaxDepth: 10;
   }
 
   > .pf-c-table__check {
-    align-self: stretch;
-    margin: calc(var(--pf-c-table--cell--PaddingTop) * -1) 0 calc(var(--pf-c-table--cell--PaddingBottom) * -1) 0;
+    margin-right: var(--pf-c-table__tree-view-main--c-table__check--MarginRight);
   }
 
   > .pf-c-table__check label {
-    height: 100%;
-    padding: var(--pf-c-table--cell--PaddingTop) var(--pf-c-table__tree-view-main--c-table__check--MarginRight) var(--pf-c-table--cell--PaddingBottom) var(--pf-c-table__tree-view-main--c-table__check--PaddingLeft);
+    padding-right: var(--pf-c-table__tree-view-main--c-table__check--PaddingRight);
+    padding-left: var(--pf-c-table__tree-view-main--c-table__check--PaddingLeft);
     margin: 0;
   }
 }
