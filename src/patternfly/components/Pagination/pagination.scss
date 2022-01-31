@@ -37,7 +37,7 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
   --pf-c-pagination__nav-page-select--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-pagination__nav-page-select--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-pagination__nav-page-select--child--MarginRight: var(--pf-global--spacer--xs);
-  --pf-c-pagination__nav-page-select--c-form-control--width-base: 3.5ch;
+  --pf-c-pagination__nav-page-select--c-form-control--width-base: calc(var(--pf-global--spacer--sm) * 2 + var(--pf-global--BorderWidth--sm) * 2);
   --pf-c-pagination__nav-page-select--c-form-control--width-chars: 2;
   --pf-c-pagination__nav-page-select--c-form-control--Width: calc(var(--pf-c-pagination__nav-page-select--c-form-control--width-base) + (var(--pf-c-pagination__nav-page-select--c-form-control--width-chars) * 1ch));
 
@@ -257,6 +257,8 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
 
   .pf-c-form-control {
     width: var(--pf-c-pagination__nav-page-select--c-form-control--Width);
+
+    @extend %pf-remove-num-arrows;
   }
 }
 
