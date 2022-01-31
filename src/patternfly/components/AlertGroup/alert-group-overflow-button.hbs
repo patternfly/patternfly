@@ -1,0 +1,11 @@
+<button class="pf-c-alert-group__overflow-button{{#if alert-group-overflow-button--modifier}} {{alert-group-overflow-button--modifier}}{{/if}}"
+  {{#if alert-group-overflow-button--attribute}}
+    {{{alert-group-overflow-button--attribute}}}
+  {{/if}}>
+  {{#if alert-group-overflow-button--text}}
+    {{{alert-group-overflow-button--text}}}
+  {{/if}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</button>

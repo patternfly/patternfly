@@ -107,6 +107,10 @@ cssPrefix: pf-c-alert-group
       {{/alert-action}}
     {{/alert}}
   {{/alert-item}}
+
+  {{#> alert-item}}
+    {{> alert-group-overflow-button alert-group-overflow-button--text="View 3 more notifications"}}
+  {{/alert-item}}
 {{/alert-group}}
 ```
 ### Overview
@@ -125,7 +129,7 @@ For sighted users, interactive elements can be included in this message in one o
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-toast`| `.pf-c-alert-group` | Applies toast alert styling to an alert group. |
-
+| `.pf-c-alert-group__overflow-button` | `<button>` | Applies overflow button styling to an alert group overflow button. |
 ## Documentation
 ### Overview
 Alert groups are used to contain and align consecutive alerts. Groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
