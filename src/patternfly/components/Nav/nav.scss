@@ -1074,8 +1074,8 @@
   // Divider
   --pf-c-nav--c-divider--MarginBottom: 0;
 
-  & + & {
-    --pf-c-nav__section--MarginTop: var(--pf-c-nav__section--section--MarginTop);
+  & + & .pf-c-nav__section-title {
+    margin-top: var(--pf-c-nav__section--section--MarginTop); // update at breaking change
   }
 }
 

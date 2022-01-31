@@ -86,6 +86,51 @@ import './Navigation.css'
 {{/nav}}
 ```
 
+### Grouped nav, no titles
+```hbs
+{{#> nav nav--attribute='aria-label="Global"'}}
+  {{#> nav-section nav-section--attribute='aria-label="Section one"'}}
+    {{#> nav-list}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 1
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 2
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{> divider}}
+  {{#> nav-section nav-section--attribute='aria-label="Section two"'}}
+    {{#> nav-list}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Section 2, link 1
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          Current link
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+{{/nav}}
+```
+
 ### Expanded
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
@@ -671,6 +716,7 @@ The navigation system relies on several different sub-components:
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label="[landmark description]"` | `.pf-c-nav` |  Describes `<nav>` landmark. |
+| `aria-label="[section title]"` | `.pf-c-nav__section` |  Describes a nav `<section>`, where a `.pf-c-nav__section-title` is not present. |
 | `aria-labelledby="[id value of link describing subnav]"` | `.pf-c-nav__subnav` |  Gives the subnav `<section>` landmark an accessible name by referring to the element that provides the subnav `<section>` landmark title. |
 | `aria-expanded="false"` | `.pf-c-nav__link` |  Indicates that subnav section is hidden. |
 | `aria-expanded="true"` | `.pf-c-nav__link` |  Indicates that subnav section is visible. |
