@@ -1,0 +1,27 @@
+{{#> overflow-menu overflow-menu--id=(concat table--id '-overflow-menu-' table-tr--index) dropdown-menu--modifier="pf-m-align-right"}}
+  {{#if table--overflow-menu--IsExpanded}}
+    {{#> overflow-menu-content}}
+      {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
+        {{#> overflow-menu-item}}
+          {{#> button button--modifier="pf-m-primary"}}
+            Start
+          {{/button}}
+        {{/overflow-menu-item}}
+        {{#> overflow-menu-item}}
+          {{#> button button--modifier="pf-m-secondary"}}
+            Stop
+          {{/button}}
+        {{/overflow-menu-item}}
+      {{/overflow-menu-group}}
+    {{/overflow-menu-content}}
+  {{else}}
+    {{#> overflow-menu-control dropdown--IsExpanded=table--overflow-menu--dropdown--IsExpanded overflow-menu-button--aria-label="Generic options"}}
+      {{#> overflow-menu-dropdown-item}}
+        Start
+      {{/overflow-menu-dropdown-item}}
+      {{#> overflow-menu-dropdown-item}}
+        Stop
+      {{/overflow-menu-dropdown-item}}
+    {{/overflow-menu-control}}
+  {{/if}}
+{{/overflow-menu}}
