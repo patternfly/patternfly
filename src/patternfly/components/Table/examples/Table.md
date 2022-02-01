@@ -282,7 +282,7 @@ These classes can be used to ensure that the table changes between the tabular a
   {{/table-thead}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--index="1"}}
       {{#> table-td table-td--data-label="Repository name"}}
         Repository 1
       {{/table-td}}
@@ -297,7 +297,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr}}
+    {{#> table-tr table-tr--index="2"}}
       {{#> table-td table-td--data-label="Repository name"}}
         Repository 2
       {{/table-td}}
@@ -339,7 +339,7 @@ These classes can be used to ensure that the table changes between the tabular a
   {{/table-thead}}
 
   {{#> table-tbody}}
-    {{#> table-tr}}
+    {{#> table-tr table-tr--index="1"}}
       {{#> table-td table-td--data-label="Repository name"}}
         Repository 1
       {{/table-td}}
@@ -354,7 +354,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr}}
+    {{#> table-tr table-tr--index="2"}}
       {{#> table-td table-td--data-label="Repository name"}}
         Repository 2
       {{/table-td}}
