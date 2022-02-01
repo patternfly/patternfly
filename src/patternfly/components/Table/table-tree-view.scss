@@ -11,6 +11,7 @@ $pf-c-tree-view--MaxDepth: 10;
   // check
   --pf-c-table__tree-view-main--c-table__check--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-table__tree-view-main--c-table__check--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-table__tree-view-main--c-table__check--MarginRight: var(--pf-global--spacer--sm);
 
   // icon
   --pf-c-table__tree-view-icon--MinWidth: var(--pf-global--FontSize--md);
@@ -66,7 +67,7 @@ $pf-c-tree-view--MaxDepth: 10;
   > .pf-c-table__check label {
     padding-right: var(--pf-c-table__tree-view-main--c-table__check--PaddingRight);
     padding-left: var(--pf-c-table__tree-view-main--c-table__check--PaddingLeft);
-    margin: 0;
+    margin: 0 calc(var(--pf-c-table__tree-view-main--c-table__check--MarginRight) * -1) 0 0;
   }
 }
 
