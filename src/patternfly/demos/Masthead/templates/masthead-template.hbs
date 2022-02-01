@@ -1,5 +1,10 @@
-{{> page-template-skip-to-content}}
-{{#> masthead masthead--id=(concat page--id '-masthead')}}
+{{!--
+  Options:
+  masthead-template-content-toolbar-content: set custom toolbar content
+--}}
+
+{{> page-template-skip-to-content}} {{!-- include skip to content --}}
+{{#> masthead masthead--id=masthead-template--id masthead-template-content-icon-group--breakpoint="lg"}} {{!-- set default breakpoint --}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
     {{#> masthead-brand}}
@@ -11,5 +16,5 @@
         brand--img-url-on-md='/assets/images/logo__pf--reverse-on-md.svg'}}
     {{/masthead-brand}}
   {{/masthead-main}}
-  {{> page-template-masthead-content}}
+  {{> masthead-template-content}}
 {{/masthead}}
