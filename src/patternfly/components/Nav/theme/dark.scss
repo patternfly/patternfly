@@ -27,7 +27,7 @@
   }
 }
 
-.pf-c-nav__item + .pf-c-nav__item & {
+.pf-c-nav__item + .pf-c-nav__item {
   --pf-c-nav__link--after--Top: var(--pf-c-nav__item--item__link--after--Top);
 }
 
