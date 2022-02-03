@@ -1,3 +1,5 @@
-.pf-c-form {
-  --pf-c-form__helper-text--m-success--Color: var(--pf-global--success-color--100);
+@mixin form() {
+  .pf-c-form {
+    --pf-c-form__helper-text--m-success--Color: var(--pf-global--success-color--100);
+  }
 }

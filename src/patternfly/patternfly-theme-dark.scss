@@ -1,56 +1,7 @@
-// theme overrides
-@import "themes/dark/globals";
+@import "themes/dark/patternfly-theme-dark";
 
-// sass-utilities
-@import "sass-utilities/colors";
-@import "themes/dark/colors"; // dark colors
-@import "sass-utilities/scss-variables";
-@import "themes/dark/scss-variables"; // dark scss vars
-@import "themes/dark/variables"; // dark css vars
+$pf-theme-dark-class: ".pf-theme-dark" !default;
 
-// component overrides
-@import "components/Accordion/themes/dark/accordion";
-@import "components/Alert/themes/dark/alert";
-@import "components/AppLauncher/themes/dark/app-launcher";
-@import "components/Badge/themes/dark/badge";
-@import "components/Banner/themes/dark/banner";
-@import "components/Breadcrumb/themes/dark/breadcrumb";
-@import "components/Button/themes/dark/button";
-@import "components/CalendarMonth/themes/dark/calendar-month";
-@import "components/Chip/themes/dark/chip";
-@import "components/ClipboardCopy/themes/dark/clipboard-copy";
-@import "components/CodeEditor/themes/dark/code-editor";
-@import "components/ContextSelector/themes/dark/context-selector";
-@import "components/DataList/themes/dark/data-list";
-@import "components/DatePicker/themes/dark/date-picker";
-@import "components/Drawer/themes/dark/drawer";
-@import "components/Dropdown/themes/dark/dropdown";
-@import "components/Form/themes/dark/form";
-@import "components/FormControl/themes/dark/form-control";
-@import "components/HelperText/themes/dark/helper-text";
-@import "components/Hint/themes/dark/hint";
-@import "components/InputGroup/themes/dark/input-group";
-@import "components/Label/themes/dark/label";
-@import "components/Menu/themes/dark/menu";
-@import "components/MenuToggle/themes/dark/menu-toggle";
-@import "components/ModalBox/themes/dark/modal-box";
-@import "components/Nav/themes/dark/nav";
-@import "components/NotificationBadge/themes/dark/notification-badge";
-@import "components/NotificationDrawer/themes/dark/notification-drawer";
-@import "components/OptionsMenu/themes/dark/options-menu";
-@import "components/Page/themes/dark/page";
-@import "components/Pagination/themes/dark/pagination";
-@import "components/Popover/themes/dark/popover";
-@import "components/Progress/themes/dark/progress";
-@import "components/SearchInput/themes/dark/search-input";
-@import "components/Select/themes/dark/select";
-@import "components/SimpleList/themes/dark/simple-list";
-@import "components/Skeleton/themes/dark/skeleton";
-@import "components/Switch/themes/dark/switch";
-@import "components/Table/themes/dark/table";
-@import "components/Tabs/themes/dark/tabs";
-@import "components/Tile/themes/dark/tile";
-@import "components/ToggleGroup/themes/dark/toggle-group";
-@import "components/Tooltip/themes/dark/tooltip";
-@import "components/TreeView/themes/dark/tree-view";
-@import "components/Wizard/themes/dark/wizard";
+:where(#{$pf-theme-dark-class}) {
+  @include pf-theme-dark($pf-theme-dark-class);
+}

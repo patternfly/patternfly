@@ -1,3 +1,5 @@
-.pf-c-breadcrumb {
-  --pf-c-breadcrumb__item-divider--Color: var(--pf-global--BorderColor--100);
+@mixin breadcrumb() {
+  .pf-c-breadcrumb {
+    --pf-c-breadcrumb__item-divider--Color: var(--pf-global--BorderColor--100);
+  }
 }

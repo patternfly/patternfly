@@ -1,8 +1,10 @@
-.pf-c-banner {
-  &.pf-m-info,
-  &.pf-m-danger,
-  &.pf-m-success,
-  &.pf-m-warning {
-    color: var(--pf-global--palette--black-900);
+@mixin banner() {
+  .pf-c-banner {
+    &.pf-m-info,
+    &.pf-m-danger,
+    &.pf-m-success,
+    &.pf-m-warning {
+      color: var(--pf-global--palette--black-900);
+    }
   }
 }
