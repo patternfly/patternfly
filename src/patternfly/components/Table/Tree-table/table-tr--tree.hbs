@@ -7,7 +7,9 @@
       {{#unless table-tr--tree--HasNoCheckbox}}
         {{#if tree-view--HasCheckboxes}}
           {{#> table-td table-td--type="span" table-td--check="true"}}
-            <input type="checkbox" name="{{table--id}}-checkrow-{{table-tr--tree--index}}" aria-labelledby="{{table--id}}-node-{{table-tr--tree--index}}">
+            <label>
+              <input type="checkbox" name="{{table--id}}-checkrow-{{table-tr--tree--index}}" aria-labelledby="{{table--id}}-node-{{table-tr--tree--index}}">
+            </label>
           {{/table-td}}
         {{/if}}
       {{/unless}}
