@@ -122,7 +122,9 @@
 
   // Content
   --pf-c-label__content--Color: var(--pf-global--Color--100);
+  --pf-c-label__content--MaxWidth: initial;
   --pf-c-label--m-outline__content--Color: var(--pf-global--Color--100);
+  --pf-c-label--m-editable__content--MaxWidth: 16ch;
 
   // text
   --pf-c-label__text--MaxWidth: 16ch;
@@ -143,8 +145,6 @@
   --pf-c-label__c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Editable
-  --pf-c-label__editable-text--MaxWidth: 16ch;
-  --pf-c-label__editable-text--BorderWidth: 0;
   --pf-c-label--m-editable--Cursor: pointer;
   --pf-c-label--m-editable--TextDecoration: underline;
   --pf-c-label--m-editable--TextDecorationStyle: dashed;
@@ -318,6 +318,7 @@
     text-underline-offset: var(--pf-c-label--m-editable--TextDecorationOffset);
     text-decoration-color: var(--pf-c-label--m-editable--TextDecorationColor);
 
+    --pf-c-label__content--MaxWidth: var(--pf-c-label--m-editable__content--MaxWidth);
     --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-editable__content--before--BorderWidth);
     --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-editable__content--before--BorderColor);
     --pf-c-label__content--link--hover--before--BorderWidth: var(--pf-c-label--m-editable__content--hover--before--BorderWidth);
@@ -346,13 +347,6 @@
     .pf-c-button {
       visibility: hidden; // use visibility hidden to retain positioning
     }
-  }
-
-  .pf-c-label__editable-text {
-    @include pf-text-overflow;
-
-    max-width: var(--pf-c-label__editable-text--MaxWidth);
-    border-width: var(--pf-c-label__editable-text--BorderWidth);
   }
 
   .pf-c-button {
@@ -393,8 +387,11 @@
 }
 
 .pf-c-label__content {
+  @include pf-text-overflow;
+
+  max-width: var(--pf-c-label__content--MaxWidth);
   color: var(--pf-c-label__content--Color);
-  border: 0;
+  border-width: 0;
 
   &::before {
     position: absolute;

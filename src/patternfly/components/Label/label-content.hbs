@@ -1,5 +1,5 @@
 {{# if label--IsEditable}}
-  {{#> label-editable-text}}{{> @partial-block}}{{/label-editable-text}}
+  {{#> label-editable-content}}{{> @partial-block}}{{/label-editable-content}}
 {{else}}
 <{{# if label-content--IsLink}}a{{else}}span{{/if}} class="pf-c-label__content{{#if label-content--modifier}} {{label-content--modifier}}{{/if}}"
   {{# if label-content--IsLink}}
