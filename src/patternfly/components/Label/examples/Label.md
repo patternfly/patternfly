@@ -586,7 +586,7 @@ This style of label is used to indicate overflow within a label group.
   * Remove `.pf-m-editable-active` from `.pf-c-label`
   * Change `.pf-c-label__editable-text` back to a button
 
-``` hbs
+``` hbs isBeta
 {{#> label label--id="editable-label" label--IsEditable="true" label--isRemovable="true" label--modifier="pf-m-blue"}}Editable label{{/label}}
 
 {{#> label label--id="editable-label-active" label--IsEditable="true" label--IsEditableActive="true" label--modifier="pf-m-blue"}}Editable active{{/label}}
