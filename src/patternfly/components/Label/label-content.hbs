@@ -1,7 +1,7 @@
 {{# if label--IsEditable}}
   {{#> label-editable-text}}{{> @partial-block}}{{/label-editable-text}}
 {{else}}
-<{{# if label-content--IsLink}}a{{else if label--IsEditable}}button{{else}}span{{/if}} class="pf-c-label__content{{#if label-content--modifier}} {{label-content--modifier}}{{/if}}"
+<{{# if label-content--IsLink}}a{{else}}span{{/if}} class="pf-c-label__content{{#if label-content--modifier}} {{label-content--modifier}}{{/if}}"
   {{# if label-content--IsLink}}
     href="#"
   {{/if}}
@@ -9,5 +9,5 @@
     {{{label-content--attribute}}}
   {{/if}}>
   {{~> @partial-block}}
-</{{# if label-content--IsLink}}a{{else if label--IsEditable}}button{{else}}span{{/if}}>
+</{{# if label-content--IsLink}}a{{else}}span{{/if}}>
 {{/if}}
