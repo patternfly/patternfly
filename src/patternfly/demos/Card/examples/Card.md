@@ -746,14 +746,14 @@ import './Card.css'
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-3-example"}}
-    {{#> card-header}}
+    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
           Recommendations
         {{/title}}
       {{/card-title}}
-      {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Filter
         {{/select}}
       {{/card-actions}}
@@ -959,8 +959,8 @@ import './Card.css'
           Workload
         </span>
       {{/l-flex}}
-      {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Filter
         {{/select}}
       {{/card-actions}}
@@ -1009,9 +1009,9 @@ import './Card.css'
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="card-log-view-example"}}
-    {{#> card-header}}
-      {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
+    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Most recent
         {{/select}}
       {{/card-actions}}
@@ -1081,9 +1081,9 @@ import './Card.css'
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="card-events-view-example"}}
-    {{#> card-header}}
-      {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
+    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Status
         {{/select}}
       {{/card-actions}}
