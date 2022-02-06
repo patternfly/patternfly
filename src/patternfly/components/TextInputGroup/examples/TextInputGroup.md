@@ -28,13 +28,13 @@ cssPrefix: pf-c-text-input-group
 {{/text-input-group}}
 ```
 
-### Utilities and icon
+### Utilities and icon with placeholder text
 ```hbs
 {{#> text-input-group}}
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
-      {{> text-input-group-text-input}}
+      {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="placeholder"'}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
