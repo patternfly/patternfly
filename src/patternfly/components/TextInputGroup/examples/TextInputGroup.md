@@ -11,7 +11,7 @@ cssPrefix: pf-c-text-input-group
 {{#> text-input-group text-input-group--id="basic"}}
   {{#> text-input-group-main}}
     {{#> text-input-group-text}}
-      {{> text-input-group-text-input}}
+      {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="placeholder"'}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
 {{/text-input-group}}
