@@ -27,6 +27,10 @@
   --pf-c-code-editor__code-pre--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-code-editor__code-pre--FontFamily: var(--pf-global--FontFamily--monospace);
 
+  // content
+  --pf-c-code-editor__content--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-code-editor__content--PaddingLeft: var(--pf-global--spacer--sm);
+
   // tab
   --pf-c-code-editor__tab--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-code-editor__tab--Color: var(--pf-global--Color--200);
@@ -84,6 +88,12 @@
       }
     }
   }
+}
+
+.pf-c-code-editor__content {
+  flex-grow: 1;
+  padding-right: var(--pf-c-code-editor__content--PaddingRight);
+  padding-left: var(--pf-c-code-editor__content--PaddingLeft);
 }
 
 .pf-c-code-editor__main {
