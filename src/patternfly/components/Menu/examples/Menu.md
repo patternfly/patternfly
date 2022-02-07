@@ -1711,7 +1711,10 @@ import './Menu.css'
 ### Accessibility
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
+| `role="menu"` | `.pf-c-menu__list` | Declares `.pf-c-menu__list` as a menu. |
 | `disabled` | `button.pf-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
+| `role="menuitem"` | `.pf-c-menu__item` | Assigns `.pf-c-menu__item` as an option in a set of choices contained by a menu. |
+| `role="none"` | `.pf-c-menu__list-item` | Removes semantic meaning from `.pf-c-menu__list-item`. |
 | `aria-disabled="true"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
 | `tabindex="-1"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
 | `aria-hidden="true"` | `.pf-c-menu__item-icon`, `.pf-c-menu__item-action-icon`, `.pf-c-menu__item-external-icon`, `.pf-c-menu__item-toggle-icon`, `.pf-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
