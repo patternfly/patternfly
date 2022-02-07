@@ -1746,6 +1746,7 @@ import './Menu.css'
 | `.pf-m-favorite` | `.pf-c-menu__item-action` | Modifies the menu item action to handle the favorite icon. |
 | `.pf-m-favorited` | `.pf-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |
 | `.pf-m-selected` | `.pf-c-menu__item` | Modifies the menu item to be selected. |
+| `.pf-m-drill-up` | `.pf-c-menu__list-item` | Flags the menu item as a drill up button. |
 | `.pf-m-flyout` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "flyout". |
 | `.pf-m-nav` | `.pf-c-menu` | Modifies the menu for nav variant. |
 | `.pf-m-top` | `.pf-c-menu` | Modifies a flyout menu to expand to the top. |
