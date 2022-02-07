@@ -14,19 +14,19 @@ A clear and concise description of the problem. Which components are affected?
 Provide steps to reproduce. A [codepen](http://codepen.io) or [codesandbox](https://codesandbox.io/) demonstrating the problem is appreciated.
 
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+A clear and concise description of the expected behavior.
 
 **Is this issue blocking you?**
 List the workaround if there is one.
 
 **Screenshots**
-If applicable, add screenshots to help explain your problem.
+If applicable, add screenshots to help explain the issue.
 
 **What is your environment?**
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari]
  - Version [e.g. 22]
 
-**What is your product and what release version are you targeting?**
+**What is your product and what release date are you targeting?**
 
 **Any other information?**
