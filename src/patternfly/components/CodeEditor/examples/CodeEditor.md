@@ -164,7 +164,7 @@ cssPrefix: pf-c-code-editor
         <i class="fas fa-upload"></i>
       {{/button}}
     {{/code-editor-controls}}
-    {{#> code-editor-content}}
+    {{#> code-header-main}}
       {{#> l-flex}}
         {{#> l-flex-item l-flex-item--modifier="pf-m-align-right"}}
           {{#> button button--modifier="pf-m-link"}}
@@ -175,7 +175,7 @@ cssPrefix: pf-c-code-editor
           {{/button}}
         {{/l-flex-item}}
       {{/l-flex}}
-    {{/code-editor-content}}
+    {{/code-header-main}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
         <i class="fas fa-code"></i>
@@ -210,7 +210,7 @@ cssPrefix: pf-c-code-editor
 | `.pf-c-code-editor__main` | `<div>` | Initiates the main container for a code editor e.g. Monaco **Required** |
 | `.pf-c-code-editor__code` | `<div>` | Initiates the container for code without a JS code editor. Comes with PatternFly styling. |
 | `.pf-c-code-editor__controls` | `<div>` | Initiates the code editor controls. |
-| `.pf-c-code-editor__content` | `<div>` | Initiates the code editor content. |
+| `.pf-c-code-editor__header-main` | `<div>` | Initiates the code editor header content area. |
 | `.pf-c-code-editor__tab` | `<div>` | Initiates the code editor tab. |
 | `.pf-c-code-editor__tab-text` | `<span>` | Initiates the code editor tab text. |
 | `.pf-c-code-editor__tab-icon` | `<span>` | Initiates the code editor tab icon. |
