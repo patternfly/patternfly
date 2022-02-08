@@ -165,16 +165,7 @@ cssPrefix: pf-c-code-editor
       {{/button}}
     {{/code-editor-controls}}
     {{#> code-editor-header-main}}
-      {{#> l-flex}}
-        {{#> l-flex-item l-flex-item--modifier="pf-m-align-right"}}
-          {{#> button button--modifier="pf-m-link"}}
-            {{#> button-icon button-icon--modifier="pf-m-start"}}
-              <i class="pf-icon pf-icon-help" aria-hidden="true"></i>
-            {{/button-icon}}
-            View shortcuts
-          {{/button}}
-        {{/l-flex-item}}
-      {{/l-flex}}
+      Header main content
     {{/code-editor-header-main}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
