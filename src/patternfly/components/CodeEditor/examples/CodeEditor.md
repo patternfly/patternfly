@@ -164,18 +164,18 @@ cssPrefix: pf-c-code-editor
         <i class="fas fa-upload"></i>
       {{/button}}
     {{/code-editor-controls}}
-    {{#> code-header-main}}
+    {{#> code-editor-header-main}}
       {{#> l-flex}}
         {{#> l-flex-item l-flex-item--modifier="pf-m-align-right"}}
           {{#> button button--modifier="pf-m-link"}}
             {{#> button-icon button-icon--modifier="pf-m-start"}}
-              <i class="fas fa-question-circle" aria-hidden="true"></i>
+              <i class="pf-icon pf-icon-help" aria-hidden="true"></i>
             {{/button-icon}}
-            Link
+            View shortcuts
           {{/button}}
         {{/l-flex-item}}
       {{/l-flex}}
-    {{/code-header-main}}
+    {{/code-editor-header-main}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
         <i class="fas fa-code"></i>
