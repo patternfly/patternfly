@@ -311,14 +311,14 @@ import './Drawer.css'
 | `.pf-m-panel-left` | `.pf-c-drawer` | Modifies the drawer panel to expand from the left. |
 | `.pf-m-panel-bottom` | `.pf-c-drawer` | Modifies the drawer panel to expand from the bottom. **Note:** percentage based panel sizes require the drawer component's parent element have an implicit or explicit height. |
 | `.pf-m-expanded` | `.pf-c-drawer` | Modifies the drawer panel for the expanded state. |
-| `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer panel state to always show both content and panel. |
-| `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a breakpoint will default to the `md` breakpoint. |
+| `.pf-m-static{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer panel state to always show both content and panel at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-inline{-on-[lg, xl, 2xl]}` | `.pf-c-drawer` | Modifies the drawer so the content element and panel element are displayed side by side. `.pf-m-inline` used without a [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) will default to the `md` breakpoint. |
 | `.pf-m-no-border` | `.pf-c-drawer__panel` | Modifies the drawer panel border treatment to disable all border treatment. |
 | `.pf-m-padding` | `.pf-c-drawer__body` | Modifies the element to add padding. |
 | `.pf-m-no-padding` | `.pf-c-drawer__body` | Modifies the element to remove padding. |
 | `.pf-m-no-background` | `.pf-c-drawer__section`, `.pf-c-drawer__content`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to transparent. |
 | `.pf-m-light-200` | `.pf-c-drawer__section`, `.pf-c-drawer__content`, `.pf-c-drawer__panel` | Modifies the drawer body/panel background color to light grey. |
-| `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-drawer__panel` | Modifies the drawer panel width. |
+| `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-drawer__panel` | Modifies the drawer panel width at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-resizable` | `.pf-c-drawer__panel` | Modifies the drawer panel to be resizable. Intended for use with the `.pf-c-drawer__splitter` element. |
 | `--pf-c-drawer__panel--md--FlexBasis--min` | `.pf-c-drawer__panel` | Defines the drawer panel minimum size. |
 | `--pf-c-drawer__panel--md--FlexBasis` | `.pf-c-drawer__panel` | Defines the drawer panel size. |

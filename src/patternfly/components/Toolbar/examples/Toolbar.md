@@ -30,16 +30,16 @@ Toolbar relies on groups (`.pf-c-toolbar__group`) and items (`.pf-c-toolbar__ite
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to be hidden, at optional breakpoint. |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to be shown, at optional breakpoint. |
-| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align right, at optional breakpoint. |
-| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align left, at optional breakpoint. |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to be hidden, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align right, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align left, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
 ### Special notes
 
 Several components in the following examples do not include functional and/or accessibility specifications (for example `.pf-c-select`, `.pf-c-options-menu`). Rather, `.pf-c-toolbar` focuses on functionality and accessibility specifications that apply to it only.
 
-**Available breakpoints are: `-on-sm, -on-md, -on-lg, -on-xl, -on-2xl`.**
+**Available [breakpoints](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) are: `-on-sm`, `-on-md`, `-on-lg`, `-on-xl`, and `-on-2xl`.**
 
 ## Examples
 
@@ -206,9 +206,9 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-page-insets` | `.pf-c-toolbar` | Modifies toolbar insets to match page section, table, page header or any other component whose inset shifts from `--pf-global--spacer--md` to `--pf-global--spacer--lg` at the `xl` breakpoint. |
-| `.pf-m-spacer-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar group or item spacing. |
-| `.pf-m-space-items-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-toolbar__group` | Modifies toolbar group child spacing. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-toolbar` | Modifies toolbar horizontal padding. |
+| `.pf-m-spacer-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-space-items-{none, sm, md, lg}{-on-[breakpoint]}` | `.pf-c-toolbar__group` | Modifies toolbar group child spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-toolbar` | Modifies toolbar horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
 ### Width control
 ```hbs
@@ -374,7 +374,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-show{-on-[breakpoint]}` | `.pf-c-toolbar__group.pf-m-toggle-group`, `.pf-c-toolbar__expandable-content` | Modifies toolbar element visibility at breakpoint. This selector must be applied consistently to toggle group and expandable content. |
+| `.pf-m-show{-on-[breakpoint]}` | `.pf-c-toolbar__group.pf-m-toggle-group`, `.pf-c-toolbar__expandable-content` | Modifies toolbar element visibility at [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). This selector must be applied consistently to toggle group and expandable content. |
 | `.pf-m-chip-container` | `.pf-c-toolbar__content-section`, `.pf-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
 | `.pf-m-expanded` | `.pf-c-toolbar__expandable-content`, `.pf-c-toolbar__toggle` | Modifies the component for the expanded state. |
 
@@ -660,10 +660,10 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-button-group` | `.pf-c-toolbar__group` | Initiates button group spacing. |
 | `.pf-m-icon-button-group` | `.pf-c-toolbar__group` | Initiates icon button group spacing. |
 | `.pf-m-filter-group` | `.pf-c-toolbar__group` | Initiates filter group spacing. |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-toolbar__content`, `.pf-c-toolbar__content-section`, `.pf-c-toolbar__item`, `.pf-c-toolbar__group` | Modifies toolbar element to be hidden, at optional breakpoint. |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-toolbar__content`, `.pf-c-toolbar__content-section`, `.pf-c-toolbar__item`, `.pf-c-toolbar__group` | Modifies toolbar element to be shown, at optional breakpoint. |
-| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align right, at optional breakpoint. |
-| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align left, at optional breakpoint. |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-toolbar__content`, `.pf-c-toolbar__content-section`, `.pf-c-toolbar__item`, `.pf-c-toolbar__group` | Modifies toolbar element to be hidden, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-toolbar__content`, `.pf-c-toolbar__content-section`, `.pf-c-toolbar__item`, `.pf-c-toolbar__group` | Modifies toolbar element to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align right, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align left, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-label` | `.pf-c-toolbar__item` | Modifies toolbar item to label. |
 | `.pf-m-chip-container` | `.pf-c-toolbar__content`, `.pf-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
 | `.pf-m-overflow-container` | `.pf-c-toolbar__item`, `.pf-c-toolbar__group` | Modifies the toolbar element to hide overflow and respond to available space. Used for horizontal navigation. |
@@ -688,11 +688,11 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-toggle-group` | `.pf-c-toolbar__group` | Modifies toolbar group to control when, and at which breakpoint, filters will be hidden/shown. By default, all filters are hidden until the specified breakpoint is reached. |
-| `.pf-m-show{-on-[breakpoint]}` | `.pf-c-toolbar__group.pf-m-toggle-group`, `.pf-c-toolbar__expandable-content` | Modifies toolbar element to hidden at breakpoint. This selector must be applied consistently to toggle group and expandable content. |
+| `.pf-m-show{-on-[breakpoint]}` | `.pf-c-toolbar__group.pf-m-toggle-group`, `.pf-c-toolbar__expandable-content` | Modifies toolbar element to hidden at [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). This selector must be applied consistently to toggle group and expandable content. |
 
 ### Spacer system
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-spacer-{none, sm, md, lg, xl}{-on-[breakpoint]}` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar group or item spacing. |
-| `.pf-m-space-items-{none, sm, md, lg, xl}{-on-[breakpoint]}` | `.pf-c-toolbar__group` | Modifies toolbar group child spacing. |
+| `.pf-m-spacer-{none, sm, md, lg, xl}{-on-[breakpoint]}` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-space-items-{none, sm, md, lg, xl}{-on-[breakpoint]}` | `.pf-c-toolbar__group` | Modifies toolbar group child spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

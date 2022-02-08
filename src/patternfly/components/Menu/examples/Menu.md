@@ -1741,8 +1741,8 @@ import './Menu.css'
 | `.pf-c-menu__item-action-icon` | `<span>` | Initiates the menu item action icon. |
 | `.pf-c-menu__item-external-icon` | `<span>` | Initiates the menu item external icon. |
 | `.pf-c-menu__footer` | `<div>` | Initiates the menu footer. |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-menu__list`, `.pf-c-menu__list-item`, `.pf-c-menu__group` | Modifies a menu element to be hidden, at optional breakpoint. |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-menu__list`, `.pf-c-menu__list-item`, `.pf-c-menu__group` | Modifies a menu element to be shown, at optional breakpoint. |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-menu__list`, `.pf-c-menu__list-item`, `.pf-c-menu__group` | Modifies a menu element to be hidden, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-menu__list`, `.pf-c-menu__list-item`, `.pf-c-menu__group` | Modifies a menu element to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-favorite` | `.pf-c-menu__item-action` | Modifies the menu item action to handle the favorite icon. |
 | `.pf-m-favorited` | `.pf-c-menu__item-action.pf-m-favorite` | Modifies the menu item action icon to be favorited. |
 | `.pf-m-selected` | `.pf-c-menu__item` | Modifies the menu item to be selected. |

@@ -151,8 +151,8 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | `.pf-c-pagination__nav` | `<nav>` |  Initiates pagination nav. |
 | `.pf-c-pagination__nav-control` | `<div>` |  Initiates pagination nav control. |
 | `.pf-c-pagination__nav-page-select` | `<div>` |  Initiates pagination nav page select. |
-| `.pf-m-display-summary{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies for summary display pagination component styles. |
-| `.pf-m-display-full{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies for full display pagination component styles. |
+| `.pf-m-display-summary{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies for summary display pagination component styles at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-display-full{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies for full display pagination component styles at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-bottom` | `.pf-c-pagination` | Modifies for bottom pagination component styles. |
 | `.pf-m-compact` | `.pf-c-pagination` | Modifies for compact pagination component styles. |
 | `.pf-m-static` | `.pf-c-pagination.pf-m-bottom` | Modifies bottom pagination to not be positioned sticky on summary. |

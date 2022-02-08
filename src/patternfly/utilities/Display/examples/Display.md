@@ -85,7 +85,7 @@ import './Display.css'
 
 ## Documentation
 ### Overview
-Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-display-inline-block-on-lg**
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-u-display-inline-block-on-lg**
 
 ### Usage
 | Class | Applied to | Outcome |

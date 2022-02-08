@@ -282,8 +282,8 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
 | `.pf-m-page-insets` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
 | `.pf-m-color-scheme--light-300` | `.pf-c-tabs` | Modifies the tabs component tab background colors. |
-| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-c-tabs` | Modifies the tabs component to be expandable via a toggle. **Note:** works with vertical tabs only. |
-| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-c-tabs` | Modifies the tabs component to be non-expandable. |
+| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-c-tabs` | Modifies the tabs component to be expandable via a toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). **Note:** works with vertical tabs only. |
+| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-c-tabs` | Modifies the tabs component to be non-expandable at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-expanded` | `.pf-c-tabs` | Modifies the expandable tabs component for the expanded state. |
 | `.pf-m-disabled` | `a.pf-c-tabs__link` | Modifies a tabs link for disabled styles. |
 | `.pf-m-aria-disabled` | `.pf-c-tabs__link` | Modifies a tabs link for disabled styles, but is still hoverable/focusable. |
