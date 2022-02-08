@@ -2,7 +2,6 @@
   {{#> breadcrumb}}
     {{#> breadcrumb-list}}
       {{#if page-template-breadcrumbs--IsPods}}
-        {{!-- Pods --}}
         {{#> breadcrumb-item}}
           {{#> breadcrumb-link}}
             Overview
@@ -18,24 +17,6 @@
           {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
           {{#> breadcrumb-link breadcrumb-link--current="true"}}
             Pod details
-          {{/breadcrumb-link}}
-        {{/breadcrumb-item}}
-      {{else if page-template-breadcrumbs--IsOS}}
-        {{#> breadcrumb-item}}
-          {{#> breadcrumb-link}}
-            Clusters
-          {{/breadcrumb-link}}
-        {{/breadcrumb-item}}
-        {{#> breadcrumb-item}}
-          {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
-          {{#> breadcrumb-link}}
-            Create
-          {{/breadcrumb-link}}
-        {{/breadcrumb-item}}
-        {{#> breadcrumb-item}}
-          {{#> breadcrumb-item-divider}}{{/breadcrumb-item-divider}}
-          {{#> breadcrumb-link breadcrumb-link--current="true"}}
-            AWS
           {{/breadcrumb-link}}
         {{/breadcrumb-item}}
       {{else}}
