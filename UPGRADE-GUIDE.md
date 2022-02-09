@@ -3,6 +3,9 @@ id: Upgrade guide
 section: developer-resources
 ---
 
+**Note:** this guide details upgrading from PatternFly v3 to v4, and references [major release 2020.07](/developer-resources/release-notes/html/#2020.07-release-notes-2020-06-05) from 2020-06-05.
+<hr/>
+
 Hey, Flyers! We've been busy for the past 12 weeks working on significant changes to PatternFly's HTML and CSS. We made our components mobile-first and changed colors and the default font. This upgrade guide details **what** was broken and **how** to fix it. To learn **why** a change was made, check out the linked pull requests.
 
 ## Global
