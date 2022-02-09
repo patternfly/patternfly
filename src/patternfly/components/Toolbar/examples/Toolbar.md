@@ -239,8 +239,8 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `--pf-c-toolbar__item--Width{-on-[breakpoint]}: {width}` | `.pf-c-toolbar__item` |  Modifies the width value of a toolbar item. |
-| `--pf-c-toolbar__item--MinWidth{-on-[breakpoint]}: {width}` | `.pf-c-toolbar__item` |  Modifies the min width value of a toolbar item. |
+| `--pf-c-toolbar__item--Width{-on-[breakpoint]}: {width}` | `.pf-c-toolbar__item` |  Modifies the width value of a toolbar item at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `--pf-c-toolbar__item--MinWidth{-on-[breakpoint]}: {width}` | `.pf-c-toolbar__item` |  Modifies the min width value of a toolbar item at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
 ### Group types
 ```hbs
@@ -374,7 +374,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-show{-on-[breakpoint]}` | `.pf-c-toolbar__group.pf-m-toggle-group`, `.pf-c-toolbar__expandable-content` | Modifies toolbar element visibility at [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). This selector must be applied consistently to toggle group and expandable content. |
+| `.pf-m-show{-on-[breakpoint]}` | `.pf-c-toolbar__group.pf-m-toggle-group`, `.pf-c-toolbar__expandable-content` | Modifies toolbar element visibility at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). This selector must be applied consistently to toggle group and expandable content. |
 | `.pf-m-chip-container` | `.pf-c-toolbar__content-section`, `.pf-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
 | `.pf-m-expanded` | `.pf-c-toolbar__expandable-content`, `.pf-c-toolbar__toggle` | Modifies the component for the expanded state. |
 
@@ -688,7 +688,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-toggle-group` | `.pf-c-toolbar__group` | Modifies toolbar group to control when, and at which breakpoint, filters will be hidden/shown. By default, all filters are hidden until the specified breakpoint is reached. |
-| `.pf-m-show{-on-[breakpoint]}` | `.pf-c-toolbar__group.pf-m-toggle-group`, `.pf-c-toolbar__expandable-content` | Modifies toolbar element to hidden at [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). This selector must be applied consistently to toggle group and expandable content. |
+| `.pf-m-show{-on-[breakpoint]}` | `.pf-c-toolbar__group.pf-m-toggle-group`, `.pf-c-toolbar__expandable-content` | Modifies toolbar element to hidden at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). This selector must be applied consistently to toggle group and expandable content. |
 
 ### Spacer system
 
