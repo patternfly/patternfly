@@ -2,5 +2,10 @@
   {{#if code-editor-header-main--attribute}}
     {{{code-editor-header-main--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+  {{#if code-editor-header-main--text}}
+    {{{code-editor-header-main--text}}}
+  {{/if}}
 </div>

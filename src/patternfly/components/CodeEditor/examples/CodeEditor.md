@@ -21,6 +21,7 @@ cssPrefix: pf-c-code-editor
         <i class="fas fa-upload"></i>
       {{/button}}
     {{/code-editor-controls}}
+    {{> code-editor-header-main}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
         <i class="fas fa-code"></i>
@@ -55,6 +56,7 @@ cssPrefix: pf-c-code-editor
         <i class="fas fa-upload"></i>
       {{/button}}
     {{/code-editor-controls}}
+    {{> code-editor-header-main}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
         <i class="fas fa-code"></i>
@@ -78,6 +80,7 @@ cssPrefix: pf-c-code-editor
 ```hbs
 {{#> code-editor}}
   {{#> code-editor-header}}
+    {{> code-editor-header-main}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
         <i class="fas fa-code"></i>
@@ -116,6 +119,7 @@ cssPrefix: pf-c-code-editor
 ```hbs
 {{#> code-editor}}
   {{#> code-editor-header}}
+    {{> code-editor-header-main}}
     {{#> code-editor-tab}}
       {{#> code-editor-tab-icon}}
         <i class="fas fa-code"></i>
@@ -164,9 +168,7 @@ cssPrefix: pf-c-code-editor
         <i class="fas fa-upload"></i>
       {{/button}}
     {{/code-editor-controls}}
-    {{#> code-editor-header-main}}
-      Header main content
-    {{/code-editor-header-main}}
+    {{> code-editor-header-main code-editor-header-main--text="Header main content"}}
     {{#> code-editor-keyboard-shortcuts}}
       {{#> button button--modifier="pf-m-link"}}
         {{#> button-icon button-icon--modifier="pf-m-start"}}

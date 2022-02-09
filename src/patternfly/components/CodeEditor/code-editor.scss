@@ -96,14 +96,6 @@
   padding-left: var(--pf-c-code-editor__header-main--PaddingLeft);
 }
 
-.pf-c-code-editor__keyboard-shortcuts {
-  margin-left: auto;
-
-  & + .pf-c-code-editor__tab {
-    margin-left: 0;
-  }
-}
-
 .pf-c-code-editor__main {
   position: relative;
   background-color: var(--pf-c-code-editor__main--BackgroundColor);
@@ -160,7 +152,7 @@
   display: flex;
   align-items: center;
   padding: var(--pf-c-code-editor__tab--PaddingTop) var(--pf-c-code-editor__tab--PaddingRight) var(--pf-c-code-editor__tab--PaddingBottom) var(--pf-c-code-editor__tab--PaddingLeft);
-  margin-left: auto;
+  margin-left: auto; // remove at breaking change
   color: var(--pf-c-code-editor__tab--Color);
   background-color: var(--pf-c-code-editor__tab--BackgroundColor);
   border-color: var(--pf-c-code-editor__tab--BorderColor);
