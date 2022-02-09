@@ -744,16 +744,18 @@ import './Card.css'
 
 ### Utilization card 3
 ```hbs
+<b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
+<br><br>
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-3-example"}}
-    {{#> card-header}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1" style="padding-top: 3px;"')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
           Recommendations
         {{/title}}
       {{/card-title}}
-      {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Filter
         {{/select}}
       {{/card-actions}}
@@ -946,6 +948,8 @@ import './Card.css'
 
 ### Trend card 1
 ```hbs
+<b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
+<br><br>
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="trend-card-1-example"}}
     {{#> card-header}}
@@ -959,8 +963,8 @@ import './Card.css'
           Workload
         </span>
       {{/l-flex}}
-      {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset" card-actions--attribute='style="padding-top: 1px;"'}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Filter
         {{/select}}
       {{/card-actions}}
@@ -1007,15 +1011,17 @@ import './Card.css'
 
 ### Log view
 ```hbs
+<b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
+<br><br>
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="card-log-view-example"}}
-    {{#> card-header}}
-      {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
+    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Most recent
         {{/select}}
       {{/card-actions}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1" style="padding-top: 3px;"')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
           Activity
         {{/title}}
@@ -1079,15 +1085,17 @@ import './Card.css'
 
 ### Events view
 ```hbs
+<b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
+<br><br>
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="card-events-view-example"}}
-    {{#> card-header}}
-      {{#> card-actions}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right"}}
+    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Status
         {{/select}}
       {{/card-actions}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1" style="padding-top: 3px;"')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
           Events
         {{/title}}
