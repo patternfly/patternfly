@@ -7,7 +7,6 @@ wrapperTag: div
 ## Demos
 ### Basic
 ```hbs isFullscreen
-
 {{> page-template page-template--id="basic-demo"}}
 
 {{#*inline "page-template-section"}}
@@ -21,7 +20,6 @@ wrapperTag: div
 
 ### Sortable
 ```hbs isFullscreen
-
 {{> page-template page-template--id="sortable-demo"}}
 
 {{#*inline "page-template-section"}}
@@ -37,23 +35,11 @@ wrapperTag: div
 
 ### Expandable
 ```hbs isFullscreen
-
 {{> page-template page-template--id="expandable-demo"}}
-
-{{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
-    {{#> card}}
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" }}
-      {{> table-expandable-table}}
-      {{> table-pagination-footer}}
-    {{/card}}
-  {{/page-main-section}}
-{{/inline}}
 ```
 
 ### Compact
 ```hbs isFullscreen
-
 {{> page-template page-template--id="compact-demo"}}
 
 {{#*inline "page-template-section"}}
@@ -69,7 +55,6 @@ wrapperTag: div
 
 ### Compound expansion
 ```hbs isFullscreen
-
 {{> page-template page-template--id="compound-expansion-demo"}}
 
 {{#*inline "page-template-section"}}
@@ -85,7 +70,6 @@ wrapperTag: div
 
 ### Loading state demo
 ```hbs isFullscreen
-
 {{> page-template page-template--id="loading-state-demo"}}
 
 {{#*inline "page-template-section"}}
@@ -113,7 +97,6 @@ wrapperTag: div
 
 ### Static bottom pagination
 ```hbs isFullscreen
-
 {{> page-template page-template--id="static-bottom-pagination-demo"}}
 
 {{#*inline "page-template-section"}}
@@ -129,7 +112,6 @@ wrapperTag: div
 
 ### Column management modal
 ```hbs isFullscreen
-
 {{> page-template page-template--id="column-management-demo"}}
 
 {{#> backdrop}}
@@ -176,7 +158,6 @@ wrapperTag: div
 
 ### Sticky header
 ```hbs isFullscreen
-
 {{> page-template page-template--id="sticky-header-demo"}}
 
 {{#*inline "page-template-section"}}

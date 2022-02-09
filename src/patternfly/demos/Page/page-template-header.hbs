@@ -1,3 +1,4 @@
+{{> page-template-skip-to-content}}
 {{#> page-header}}
   {{!-- Brand --}}
   {{#> page-header-brand}}
@@ -10,10 +11,6 @@
       {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
     {{/page-header-brand-link}}
   {{/page-header-brand}}
-  {{#if page-template-wrapper--HasHorizontalNav}}
-    {{#> page-template-header}}
-      {{> page-template-horizontal-nav}}
-    {{/page-template-header}}
-  {{/if}}
-  {{> page-template-header-tools-elements}}
+  {{#> page-template-header-tools-elements}}
+  {{/page-template-header-tools-elements}}
 {{/page-header}}
