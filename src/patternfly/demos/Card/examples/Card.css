@@ -30,11 +30,3 @@
 .ws-chart img {
   align-self: center;
 }
-
-:is(#ws-html-demos-c-card-utilization-card-3, #ws-html-demos-c-card-log-view, #ws-html-demos-c-card-events-view) .pf-c-card__title {
-  padding-top: 3px;
-}
-
-#ws-html-demos-c-card-trend-card-1 .pf-c-card__actions {
-  padding-top: 1px;
-}

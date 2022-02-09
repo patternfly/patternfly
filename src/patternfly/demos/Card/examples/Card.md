@@ -749,7 +749,7 @@ import './Card.css'
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-3-example"}}
     {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1" style="padding-top: 3px;"')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
           Recommendations
         {{/title}}
@@ -963,7 +963,7 @@ import './Card.css'
           Workload
         </span>
       {{/l-flex}}
-      {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset" card-actions--attribute='style="padding-top: 3px;"'}}
         {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Filter
         {{/select}}
@@ -1021,7 +1021,7 @@ import './Card.css'
           Most recent
         {{/select}}
       {{/card-actions}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1" style="padding-top: 3px;"')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
           Activity
         {{/title}}
@@ -1095,7 +1095,7 @@ import './Card.css'
           Status
         {{/select}}
       {{/card-actions}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1" style="padding-top: 3px;"')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
           Events
         {{/title}}
