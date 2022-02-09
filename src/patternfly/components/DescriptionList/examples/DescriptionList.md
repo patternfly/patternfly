@@ -159,8 +159,8 @@ Column fill will modify the default placement of description list groups to fill
 | `.pf-m-auto-column-widths` | `.pf-c-description-list` | Modifies the description list to format automatically. |
 | `.pf-m-inline-grid` | `.pf-c-description-list` | Modifies the description list display to inline-grid. |
 | `.pf-m-{1,2,3}-col{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list number of columns. |
-| `--pf-c-description-list--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-c-description-list` | Modifies the min value of the `grid-template-columns` declaration. |
-| `--pf-c-description-list__term--m-horizontal--width{-on-[breakpoint]}: {width}` | `.pf-c-description-list.pf-m-horizontal` | Modifies the value for `--pf-c-description-list--m-horizontal__term--width` declaration. |
+| `--pf-c-description-list--GridTemplateColumns--min{-on-[breakpoint]}: {width}` | `.pf-c-description-list` | Modifies the min value of the `grid-template-columns` declaration at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `--pf-c-description-list__term--m-horizontal--width{-on-[breakpoint]}: {width}` | `.pf-c-description-list.pf-m-horizontal` | Modifies the value for `--pf-c-description-list--m-horizontal__term--width` declaration at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
 <!-- | `.pf-m-order[0-12]{-on-[breakpoint]}` | `.pf-c-description-list__group` | Modifies the order of the flex layout element. |
 | `.pf-m-order-first{-on-[breakpoint]}` | `.pf-c-description-list__group` | Modifies the order of the flex layout element to -1. |

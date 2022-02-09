@@ -22,7 +22,7 @@ The flex layout is based on the CSS Flex properties where the layout determines 
 - `.pf-m-space-items-{xs,sm,md,lg,xl,2xl,3xl}` can be applied to `.pf-l-flex` only and changes the spacing of direct children only. Responsive spacers can be used by appending `{-on-[breakpoint]}` to `.pf-m-space-items-{size}`. Example: `.pf-m-space-items-lg-on-xl`.
 
 ### Breakpoints
-  - `-on-sm, -on-md, -on-lg, -on-xl, -on-2xl`.
+  - [Breakpoints](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) `-on-sm`, `-on-md`, `-on-lg`, `-on-xl`, and `-on-2xl` are provided.
 
 ### Usefulness
 - Use when content dictates layout and elements wrap when necessary.

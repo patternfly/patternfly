@@ -196,8 +196,8 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-c-dropdown__group-title` | `<h1>` | Defines the title for a group of items in the dropdown menu. |
 | `.pf-m-expanded` | `.pf-c-dropdown` | Modifies for the expanded state. |
 | `.pf-m-top` | `.pf-c-dropdown` | Modifies to display the menu above the toggle. |
-| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-dropdown__menu` | Modifies to display the menu aligned to the left edge of the toggle. |
-| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-dropdown__menu` | Modifies to display the menu aligned to the right edge of the toggle. |
+| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-dropdown__menu` | Modifies to display the menu aligned to the left edge of the toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-dropdown__menu` | Modifies to display the menu aligned to the right edge of the toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-split-button` | `.pf-c-dropdown__toggle` | Modifies the dropdown toggle area to allow for interactive elements. |
 | `.pf-m-action` | `.pf-c-dropdown__toggle.pf-m-split-button` | Modifies the dropdown toggle for when an action is placed beside a toggle button in a split button dropdown. |
 | `.pf-m-text` | `.pf-c-dropdown__menu-item` | Modifies a menu item to be non-interactive text. |

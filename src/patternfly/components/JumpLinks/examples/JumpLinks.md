@@ -531,7 +531,7 @@ cssPrefix: pf-c-jump-links
 | `.pf-c-jump-links__link-text` | `<div>` | Initiates the jump links link text. |
 | `.pf-m-vertical` | `.pf-c-jump-links` | Modifies the jump links component to be vertical. |
 | `.pf-m-center` | `.pf-c-jump-links` | Modifies the jump links component to center its list and label. |
-| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-c-jump-links` | Modifies the jump links component to be expandable via a toggle. **Note:** works with vertical jump links only. |
-| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-c-jump-links` | Modifies the jump links component to be non-expandable. |
+| `.pf-m-expandable{-on-[breakpoint]}` | `.pf-c-jump-links` | Modifies the jump links component to be expandable via a toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). **Note:** works with vertical jump links only. |
+| `.pf-m-non-expandable{-on-[breakpoint]}` | `.pf-c-jump-links` | Modifies the jump links component to be non-expandable at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-expanded` | `.pf-c-jump-links` | Modifies the expandable jump links component for the expanded state. |
 | `.pf-m-current` | `.pf-c-jump-links__item`| Modifies the jump links item to be current. |
