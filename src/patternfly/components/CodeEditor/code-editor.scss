@@ -27,6 +27,10 @@
   --pf-c-code-editor__code-pre--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-code-editor__code-pre--FontFamily: var(--pf-global--FontFamily--monospace);
 
+  // content
+  --pf-c-code-editor__header-main--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-code-editor__header-main--PaddingLeft: var(--pf-global--spacer--sm);
+
   // tab
   --pf-c-code-editor__tab--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-code-editor__tab--Color: var(--pf-global--Color--200);
@@ -86,6 +90,12 @@
   }
 }
 
+.pf-c-code-editor__header-main {
+  flex-grow: 1;
+  padding-right: var(--pf-c-code-editor__header-main--PaddingRight);
+  padding-left: var(--pf-c-code-editor__header-main--PaddingLeft);
+}
+
 .pf-c-code-editor__main {
   position: relative;
   background-color: var(--pf-c-code-editor__main--BackgroundColor);
@@ -142,7 +152,7 @@
   display: flex;
   align-items: center;
   padding: var(--pf-c-code-editor__tab--PaddingTop) var(--pf-c-code-editor__tab--PaddingRight) var(--pf-c-code-editor__tab--PaddingBottom) var(--pf-c-code-editor__tab--PaddingLeft);
-  margin-left: auto;
+  margin-left: auto; // remove at breaking change
   color: var(--pf-c-code-editor__tab--Color);
   background-color: var(--pf-c-code-editor__tab--BackgroundColor);
   border-color: var(--pf-c-code-editor__tab--BorderColor);
