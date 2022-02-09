@@ -744,6 +744,8 @@ import './Card.css'
 
 ### Utilization card 3
 ```hbs
+<b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
+<br><br>
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-3-example"}}
     {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
@@ -946,6 +948,8 @@ import './Card.css'
 
 ### Trend card 1
 ```hbs
+<b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
+<br><br>
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="trend-card-1-example"}}
     {{#> card-header}}
@@ -1007,6 +1011,8 @@ import './Card.css'
 
 ### Log view
 ```hbs
+<b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
+<br><br>
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="card-log-view-example"}}
     {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
@@ -1079,6 +1085,8 @@ import './Card.css'
 
 ### Events view
 ```hbs
+<b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
+<br><br>
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="card-events-view-example"}}
     {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
