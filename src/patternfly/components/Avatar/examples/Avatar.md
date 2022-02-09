@@ -42,11 +42,6 @@ import './Avatar.css'
 {{> avatar avatar--modifier="pf-m-xl" avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image extra large"'}}
 ```
 
-### Extra extra large
-```hbs
-{{> avatar avatar--modifier="pf-m-2xl" avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image extra extra large"'}}
-```
-
 ## Documentation
 ### Overview
 The avatar component provides a default SVG icon. If an image is used it should be 36px by 36px.
