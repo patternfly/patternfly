@@ -1,5 +1,5 @@
 $pf-c-avatar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$sizes: "md", "lg", "xl", "2xl";
+$sizes: "sm", "md", "lg", "xl";
 
 .pf-c-avatar {
   --pf-c-avatar--BorderColor: transparent;
@@ -7,14 +7,14 @@ $sizes: "md", "lg", "xl", "2xl";
   --pf-c-avatar--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-avatar--Width: #{pf-size-prem(36px)};
   --pf-c-avatar--Height: #{pf-size-prem(36px)};
-  --pf-c-avatar--m-md--Width: #{pf-size-prem(24px)};
-  --pf-c-avatar--m-md--Height: #{pf-size-prem(24px)};
-  --pf-c-avatar--m-lg--Width: #{pf-size-prem(36px)};
-  --pf-c-avatar--m-lg--Height: #{pf-size-prem(36px)};
-  --pf-c-avatar--m-xl--Width: #{pf-size-prem(72px)};
-  --pf-c-avatar--m-xl--Height: #{pf-size-prem(72px)};
-  --pf-c-avatar--m-2xl--Width: #{pf-size-prem(128px)};
-  --pf-c-avatar--m-2xl--Height: #{pf-size-prem(128px)};
+  --pf-c-avatar--m-sm--Width: #{pf-size-prem(24px)};
+  --pf-c-avatar--m-sm--Height: #{pf-size-prem(24px)};
+  --pf-c-avatar--m-md--Width: #{pf-size-prem(36px)};
+  --pf-c-avatar--m-md--Height: #{pf-size-prem(36px)};
+  --pf-c-avatar--m-lg--Width: #{pf-size-prem(72px)};
+  --pf-c-avatar--m-lg--Height: #{pf-size-prem(72px)};
+  --pf-c-avatar--m-xl--Width: #{pf-size-prem(128px)};
+  --pf-c-avatar--m-xl--Height: #{pf-size-prem(128px)};
 
   // Light
   --pf-c-avatar--m-light--BorderColor: var(--pf-global--BorderColor--dark-100);
