@@ -96,6 +96,14 @@
   padding-left: var(--pf-c-code-editor__header-main--PaddingLeft);
 }
 
+.pf-c-code-editor__keyboard-shortcuts {
+  margin-left: auto;
+
+  & + .pf-c-code-editor__tab {
+    margin-left: 0;
+  }
+}
+
 .pf-c-code-editor__main {
   position: relative;
   background-color: var(--pf-c-code-editor__main--BackgroundColor);
