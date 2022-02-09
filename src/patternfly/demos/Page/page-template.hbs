@@ -1,0 +1,9 @@
+{{#> page page--id=page-template--id}}
+  {{#if page-template--IsLegacyHeader}}
+    {{> page-template-header}}
+  {{else}}
+    {{> page-template-masthead}}
+  {{/if}}
+  {{> page-template-sidebar}}
+  {{> page-template-main}}
+{{/page}}
