@@ -1332,7 +1332,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{#> table table--id="table-compact-expandable" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table--toggle-all}}
       {{> table--check table--check--IsThead="true"}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories
