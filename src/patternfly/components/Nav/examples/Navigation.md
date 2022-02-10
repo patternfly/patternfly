@@ -89,7 +89,7 @@ import './Navigation.css'
 ### Grouped nav, no titles
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
-  {{#> nav-section nav-section--attribute='aria-label="Section one"'}}
+  {{#> nav-section nav-section--modifier="pf-m-no-title" nav-section--attribute='aria-label="Section one"'}}
     {{#> nav-list}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
@@ -109,7 +109,7 @@ import './Navigation.css'
     {{/nav-list}}
   {{/nav-section}}
   {{> divider}}
-  {{#> nav-section nav-section--attribute='aria-label="Section two"'}}
+  {{#> nav-section nav-section--modifier="pf-m-no-title" nav-section--attribute='aria-label="Section two"'}}
     {{#> nav-list}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
@@ -134,7 +134,7 @@ import './Navigation.css'
 ### Grouped nav, no titles, no margin top
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
-  {{#> nav-section nav-section--attribute='aria-label="Section one"'}}
+  {{#> nav-section nav-section--modifier="pf-m-no-title" nav-section--attribute='aria-label="Section one"'}}
     {{#> nav-list}}
       {{#> nav-item}}
         {{#> nav-link nav-link--href="#"}}
