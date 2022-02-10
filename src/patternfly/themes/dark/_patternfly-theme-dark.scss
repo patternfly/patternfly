@@ -1,10 +1,10 @@
 // global imports
-@import "globals"; // global CSS
+@import "globals"; // dark global css
 @import "../../sass-utilities/colors"; // base colors
 @import "colors"; // dark colors
 @import "../../sass-utilities/scss-variables"; // base scss vars
 @import "scss-variables"; // dark scss vars
-@import "variables"; // global css vars
+@import "variables"; // dark global css vars
 
 // component imports
 @import "../../components/Accordion/themes/dark/accordion";
