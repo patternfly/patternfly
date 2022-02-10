@@ -14,7 +14,8 @@
 #ws-core-c-navigation-nav-with-drilldown-menu .pf-c-nav,
 #ws-core-c-navigation-level-2-drilldown,
 #ws-core-c-navigation-level-3-drilldown,
-#ws-core-c-navigation-nav-with-flyout .pf-c-nav {
+#ws-core-c-navigation-nav-with-flyout .pf-c-nav,
+#ws-core-c-navigation-grouped-nav-no-titles-no-margin-top {
   padding: 0;
   background-color: var(--pf-global--BackgroundColor--dark-300);
 }

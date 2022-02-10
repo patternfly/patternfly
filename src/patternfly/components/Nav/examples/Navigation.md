@@ -131,6 +131,50 @@ import './Navigation.css'
 {{/nav}}
 ```
 
+### Grouped nav, no titles, no margin top
+```hbs
+{{#> nav nav--attribute='aria-label="Global"'}}
+  {{#> nav-section nav-section--attribute='aria-label="Section one"'}}
+    {{#> nav-list}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 1
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 2
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{#> nav-section nav-section--modifier="pf-m-no-margin-top" nav-section--attribute='aria-label="Section two"'}}
+    {{#> nav-list}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Section 2, link 1
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          Current link
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Link 3
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+{{/nav}}
+```
+
 ### Expanded
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
@@ -741,6 +785,7 @@ The navigation system relies on several different sub-components:
 | `.pf-c-nav__toggle-icon` | `<span>` | Initiates a nav toggle icon wrapper. |
 | `.pf-c-nav__scroll-button` | `<button>` | Initiates a nav scroll button. **Required for horizontal navs** |
 | `.pf-m-horizontal` | `.pf-c-nav` | Modifies nav for the horizontal variation. |
+| `.pf-m-no-margin-top` | `.pf-c-nav__section` | Modifies nav section margin top to 0. |
 | `.pf-m-horizontal-subnav` | `.pf-c-nav` | Modifies nav for the horizontal subnav variation. |
 | `.pf-m-tertiary` | `.pf-c-nav` | Modifies nav for the tertiary variation. |
 | `.pf-m-light` | `.pf-c-nav` | Modifies nav for the light variation. **Note: only for use with vertical navs, and requires `.pf-m-light` on the page component's sidebar element (`.pf-c-page__sidebar`)**. |
