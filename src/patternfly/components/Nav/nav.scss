@@ -1077,6 +1077,10 @@
   & + & {
     --pf-c-nav__section--MarginTop: var(--pf-c-nav__section--section--MarginTop);
   }
+
+  &.pf-m-no-title {
+    --pf-c-nav__section--MarginTop: 0;
+  }
 }
 
 // Section title
