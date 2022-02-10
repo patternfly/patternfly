@@ -85,7 +85,7 @@ wrapperTag: div
 
 ### Horizontal nav
 ```hbs isFullscreen
-{{> page-template page-template--id="masthead-horizontal-nav"}}
+{{> page-template page-template--id="masthead-horizontal-nav" masthead-template--HasNoToggle="true" page-template--HasNoSidebar="true"}}
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}

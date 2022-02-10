@@ -5,7 +5,9 @@
 
 {{> page-template-skip-to-content}} {{!-- include skip to content --}}
 {{#> masthead masthead--id=masthead-template--id masthead-template-content-icon-group--breakpoint="lg"}} {{!-- set default breakpoint --}}
-  {{> masthead-toggle}}
+  {{#unless masthead-template--HasNoToggle}}
+    {{> masthead-toggle}}
+  {{/unless}}
   {{#> masthead-main}}
     {{#> masthead-brand}}
       {{> brand

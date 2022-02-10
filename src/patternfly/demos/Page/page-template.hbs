@@ -4,6 +4,8 @@
   {{else}}
     {{> masthead-template masthead-template--id=(concat page--id '-masthead')}}
   {{/if}}
-  {{> page-template-sidebar}}
+  {{#unless page-template--HasNoSidebar}}
+    {{> page-template-sidebar}}
+  {{/unless}}
   {{> page-template-main}}
 {{/page}}
