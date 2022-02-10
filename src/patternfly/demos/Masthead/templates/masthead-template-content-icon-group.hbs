@@ -1,4 +1,4 @@
-{{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-right pf-m-spacer-none pf-m-spacer-md-on-md"}}
+{{#> toolbar-group toolbar-group--id=(concat masthead-template--id '-icon-group-') toolbar-group--modifier="pf-m-icon-button-group pf-m-align-right pf-m-spacer-none pf-m-spacer-md-on-md"}}
   {{#> toolbar-item}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
       {{#> notification-badge notification-badge--modifier=""}}
@@ -6,7 +6,10 @@
       {{/notification-badge}}
     {{/button}}
   {{/toolbar-item}}
-  {{#> toolbar-group toolbar-group--modifier=(concat 'pf-m-icon-button-group pf-m-hidden pf-m-visible-on-' page-template-masthead-content-icon-group--breakpoint)}}
+  {{#> toolbar-group toolbar-group--modifier=(concat 'pf-m-icon-button-group pf-m-hidden pf-m-visible-on-' masthead-template-content-icon-group--breakpoint)}}
+    {{#> toolbar-item}}
+      {{> masthead-template-application-launcher app-launcher--id=(concat toolbar-group--id '-app-launcher')}}
+    {{/toolbar-item}}
     {{#> toolbar-item}}
       {{#> dropdown dropdown--id=(concat masthead--id "-settings")}}
         {{#> dropdown-toggle dropdown-toggle--modifier="pf-m-plain" dropdown-toggle--HasNoToggleIcon="true" dropdown-toggle--attribute='aria-label="Settings"'}}
@@ -21,7 +24,7 @@
     {{#> toolbar-item}}
       {{#> dropdown dropdown--id=(concat masthead--id "-help")}}
         {{#> dropdown-toggle dropdown-toggle--modifier="pf-m-plain" dropdown-toggle--HasNoToggleIcon="true" dropdown-toggle--attribute='aria-label="Help"'}}
-          <i class="pf-icon pf-icon-help" aria-hidden="true"></i>
+          <i class="fas fa-question-circle" aria-hidden="true"></i>
         {{/dropdown-toggle}}
         {{#> dropdown-menu dropdown-menu--modifier="pf-m-align-right"}}
           {{> dropdown-menu-list-item dropdown-menu-item--text="Support options"}}
@@ -31,17 +34,17 @@
       {{/dropdown}}
     {{/toolbar-item}}
   {{/toolbar-group}}
-  {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-hidden-on-' page-template-masthead-content-icon-group--breakpoint)}}
+  {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-hidden-on-' masthead-template-content-icon-group--breakpoint)}}
     {{#> dropdown dropdown--id=(concat masthead--id "-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
       {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
         <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
       {{/menu-toggle}}
-      {{> page-template-masthead-drilldown menu--id=(concat masthead--id '-drilldown-menu')}}
+      {{> masthead-template-drilldown menu--id=(concat masthead--id '-drilldown-menu')}}
     {{/dropdown}}
   {{/toolbar-item}}
 {{/toolbar-group}}
 {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-sm"}}
-  {{#> dropdown dropdown--id=(concat masthead--id "-profile") dropdown--attribute='style="--pf-c-dropdown--MaxWidth: 20ch;"'}}
+  {{#> dropdown dropdown--id=(concat masthead--id "-profile") dropdown--attribute='style="--pf-c-dropdown--MaxWidth: 20ch;"' dropdown--IsExpanded=masthead-template-content-icon-group--profile-dropdown--IsExpanded}}
     {{#> dropdown-toggle}}
       {{#> dropdown-toggle-image}}
         {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
