@@ -10,17 +10,11 @@ section: components
 {{> page-template page-template--id="context-selector-in-masthead"}}
 
 {{#*inline "masthead-template-content-toolbar-content"}}
-  {{#> masthead-content}}
-    {{#> toolbar toolbar--modifier="pf-m-full-height pf-m-static" toolbar--id=(concat masthead--id '-toolbar')}}
-      {{#> toolbar-content}}
-        {{#> toolbar-content-section}}
-          {{#> toolbar-item}}
-            {{> masthead-template-context-selector}}
-          {{/toolbar-item}}
-        {{/toolbar-content-section}}
-      {{/toolbar-content}}
-    {{/toolbar}}
-  {{/masthead-content}}
+  {{#> toolbar-content-section}}
+    {{#> toolbar-item}}
+      {{> masthead-template-context-selector}}
+    {{/toolbar-item}}
+  {{/toolbar-content-section}}
 {{/inline}}
 ```
 
