@@ -5,3 +5,4 @@
 @import "./scss-variables";
 @import "./mixins";
 @import "./placeholders";
+@import "../themes/dark/placeholders"; // fixes %pf-t-dark styles in dark theme
