@@ -6,6 +6,11 @@
       {{/notification-badge}}
     {{/button}}
   {{/toolbar-item}}
+  {{#> toolbar-item}}
+    {{#> button button--modifier="pf-m-primary" button--attribute='aria-label="Notifications"'}}
+      button
+    {{/button}}
+  {{/toolbar-item}}
   {{#> toolbar-group toolbar-group--modifier=(concat 'pf-m-icon-button-group pf-m-hidden pf-m-visible-on-' masthead-template-content-icon-group--breakpoint)}}
     {{#> toolbar-item}}
       {{> masthead-template-application-launcher app-launcher--id=(concat toolbar-group--id '-app-launcher')}}

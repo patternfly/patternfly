@@ -4,6 +4,7 @@
 @import "colors"; // dark colors
 @import "../../sass-utilities/scss-variables"; // base scss vars
 @import "scss-variables"; // dark scss vars
+@import "placeholders"; // dark global css vars
 @import "variables"; // dark global css vars
 
 // component imports
@@ -55,6 +56,7 @@
 
 @mixin pf-theme-dark($pf-theme-dark-class) {
   // global overrides
+  @include placeholders($pf-theme-dark-class); // dark placeholders overridses
   @include globals($pf-theme-dark-class); // global CSS
   @include _variables($pf-theme-dark-class); // dark css vars
 
