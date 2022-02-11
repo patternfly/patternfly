@@ -9,7 +9,11 @@ $pf-theme-dark-class: ".pf-theme-dark" !default;
 }
 
 /* stylelint-disable */
-.ws-preview,
-.ws-example {
-  background: transparent;
+.pf-theme-dark {
+  .ws-preview,
+  .ws-example,
+  .ws-code {
+    background: var(--pf-global--BackgroundColor--100);
+  }
 }
+
