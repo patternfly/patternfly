@@ -30,8 +30,14 @@ section: components
 
 ### Context selector in page content
 ```hbs isFullscreen
-{{#> page-demo-default page-demo-default--id="context-selector-in-page-content" page-demo-default--HasNoContent="true"}}
-  {{#> page-main-section page-main-section--modifier="pf-m-no-padding" page-main-section--IsLimitWidth="true"}}
+{{> page-template
+  page-template--id="context-selector-in-page-content-demo"
+  page-template--HasNoBreadcrumb="true"
+  page-template--HasNoTitle="true"
+}}
+
+{{#*inline "page-template-section"}}
+  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
     {{#> toolbar toolbar--id="toolbar-simple-example" toolbar--modifier="pf-m-inset-none"}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section}}
@@ -69,5 +75,5 @@ section: components
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
   {{> page-template-gallery}}
-{{/page-demo-default}}
+{{/inline}}
 ```
