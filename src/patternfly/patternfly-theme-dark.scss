@@ -7,13 +7,3 @@ $pf-theme-dark-class: ".pf-theme-dark" !default;
 :where(#{$pf-theme-dark-class}) {
   @include pf-theme-dark($pf-theme-dark-class);
 }
-
-/* stylelint-disable */
-.pf-theme-dark {
-  .ws-preview,
-  .ws-example,
-  .ws-code {
-    background: var(--pf-global--BackgroundColor--100);
-  }
-}
-
