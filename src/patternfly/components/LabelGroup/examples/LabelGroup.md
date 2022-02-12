@@ -588,40 +588,6 @@ In addition to the JavaScript management of [editable labels](/components/label#
 {{/label-group}}
 ```
 
-### Mixed labels (compact / default)
-```hbs
-{{#> label-group label-group--id="label-group-mixed-compact-default"}}
-  {{#> label-group-main}}
-    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
-      {{#> label-group-list-item}}
-        {{#> label label--modifier="pf-m-compact"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          Label
-        {{/label}}
-      {{/label-group-list-item}}
-      {{#> label-group-list-item}}
-        {{#> label label--modifier="pf-m-compact pf-m-blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          Label 2
-        {{/label}}
-      {{/label-group-list-item}}
-      {{#> label-group-list-item}}
-        {{#> label label--modifier="pf-m-green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          Label 3
-        {{/label}}
-      {{/label-group-list-item}}
-    {{/label-group-list}}
-  {{/label-group-main}}
-{{/label-group}}
-```
-
 ### Compact labels, overflow
 ```hbs
 {{#> label-group label-group--id="label-group-compact-overflow"}}
