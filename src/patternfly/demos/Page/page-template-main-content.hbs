@@ -1,0 +1,13 @@
+{{#if page-template--HasHorizontalSubnav}}
+  {{> page-template-horizontal-subnav}}
+{{/if}}
+{{#unless page-template--HasNoBreadcrumb}}
+  {{> page-template-breadcrumb}}
+{{/unless}}
+{{#unless page-template--HasNoTitle}}
+  {{> page-template-title}}
+{{/unless}}
+{{> page-template-section}}
+{{#if page-template--HasFooter}}
+  {{> page-template-footer}}
+{{/if}}

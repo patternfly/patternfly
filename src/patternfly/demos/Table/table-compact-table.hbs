@@ -1,9 +1,7 @@
 {{#> table table--id=(concat page--id '-table') table--grid="true" table--modifier="pf-m-compact pf-m-grid-lg" table--attribute='aria-label="This is a compact table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
-      {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Select all rows">
-      {{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
       {{/table-th}}
@@ -22,8 +20,8 @@
       {{#> table-th table-th--attribute='scope="col"' table-th--icon="true"}}
         Icons
       {{/table-th}}
-      {{#> table-th}}{{/table-th}}
-      {{#> table-th}}{{/table-th}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 

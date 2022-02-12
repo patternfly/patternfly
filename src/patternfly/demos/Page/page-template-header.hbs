@@ -1,6 +1,4 @@
-{{#> skip-to-content skip-to-content--attribute=(concat 'href="#main-content-' page--id '"')}}
-  Skip to content
-{{/skip-to-content}}
+{{> page-template-skip-to-content}}
 {{#> page-header}}
   {{!-- Brand --}}
   {{#> page-header-brand}}
@@ -13,7 +11,6 @@
       {{#> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}{{/brand}}
     {{/page-header-brand-link}}
   {{/page-header-brand}}
-
   {{#> page-template-header-tools-elements}}
   {{/page-template-header-tools-elements}}
 {{/page-header}}

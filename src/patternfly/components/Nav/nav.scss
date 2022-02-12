@@ -329,6 +329,8 @@
   --pf-c-nav--c-menu__list-item--focus-within--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--c-menu__list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-nav--c-menu__list-item--focus-within--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
+  --pf-c-nav--c-menu__list-item--m-drill-up--before--BorderBottomWidth: var(--pf-global--BorderWidth--lg);
+  --pf-c-nav--c-menu__list-item--m-drill-up__item--FontWeight: var(--pf-global--FontWeight--bold);
 
   // Menu item
   --pf-c-nav--c-menu__item--PaddingTop: var(--pf-global--spacer--md);
@@ -487,6 +489,18 @@
 
       background-color: var(--pf-c-nav--c-menu__item--m-current--BackgroundColor);
     }
+  }
+
+  .pf-c-menu__list-item:where(.pf-m-drill-up) {
+    --pf-c-nav--c-menu__item--before--BorderBottomWidth: var(--pf-c-nav--c-menu__list-item--m-drill-up--before--BorderBottomWidth);
+
+    > .pf-c-menu__item {
+      --pf-c-menu__item--FontWeight: var(--pf-c-nav--c-menu__list-item--m-drill-up__item--FontWeight);
+    }
+  }
+
+  .pf-c-menu__item-toggle-icon {
+    margin-left: calc(var(--pf-c-menu__item-toggle-icon--PaddingLeft) * -1);
   }
 
   &.pf-m-horizontal,
@@ -1062,6 +1076,10 @@
 
   & + & {
     --pf-c-nav__section--MarginTop: var(--pf-c-nav__section--section--MarginTop);
+  }
+
+  &.pf-m-no-title {
+    --pf-c-nav__section--MarginTop: 0;
   }
 }
 

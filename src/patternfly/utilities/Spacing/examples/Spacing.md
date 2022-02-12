@@ -152,7 +152,7 @@ import './Spacing.css'
 
 ## Documentation
 ### Overview
-Breakpoint is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-m-sm-on-lg**
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-u-m-sm-on-lg**
 
 ### Margin properties
 | Abbreviation | Property |

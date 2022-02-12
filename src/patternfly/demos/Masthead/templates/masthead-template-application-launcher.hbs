@@ -1,4 +1,4 @@
-{{#> app-launcher id=app-launcher--id app-launcher--IsGrouped="true"}}
+{{#> app-launcher app-launcher--id=(concat masthead--id '-application-launcher') app-launcher--attribute=(concat 'id="' app-launcher--id '"') app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu app-launcher-menu--modifier="pf-m-align-right"}}
     {{#> app-launcher-menu-search}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" aria-label="Type to filter" placeholder="Filter by name..." id="' app-launcher--id '-text-input" name="textInput1"')}}

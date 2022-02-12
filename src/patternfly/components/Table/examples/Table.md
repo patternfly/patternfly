@@ -134,7 +134,7 @@ These classes can be used to ensure that the table changes between the tabular a
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout at suffixed breakpoint. |
+| `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-grid` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout. This approach requires JavaScript to set this class at some prescribed viewport width value. |
 
 ## Sortable
@@ -258,6 +258,119 @@ These classes can be used to ensure that the table changes between the tabular a
 | `.fa-long-arrow-alt-up` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-down` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
 
+### Overflow menu usage, mobile
+```hbs
+{{#> table table--id="table-with-expanded-overflow-menu-mobile" table--grid="true" table--modifier="pf-m-grid" table--attribute='aria-label="This is a simple table example"'}}
+  {{#> table-caption}}
+    This is the table caption
+  {{/table-caption}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--action="true" table-th--modifier="pf-m-action pf-m-fit-content" table-th--attribute='scope="col"'}}
+        Overflow actions
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr table-tr--index="1"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{> table--overflow-menu table--overflow-menu--dropdown--IsExpanded="true"}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--index="2"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{> table--overflow-menu}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+### Overflow menu usage, desktop
+```hbs
+{{#> table table--id="table-with-expanded-overflow-menu-desktop" table--attribute='aria-label="This is a simple table example"'}}
+  {{#> table-caption}}
+    This is the table caption
+  {{/table-caption}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--action="true" table-th--modifier="pf-m-action pf-m-fit-content" table-th--attribute='scope="col"'}}
+        Overflow actions
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr table-tr--index="1"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{> table--overflow-menu table--overflow-menu--IsExpanded="true"}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--index="2"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{> table--overflow-menu table--overflow-menu--IsExpanded="true"}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
 
 ## With checkboxes, radio select, and actions
 
@@ -1219,7 +1332,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{#> table table--id="table-compact-expandable" table--grid="true" table--modifier="pf-m-compact pf-m-grid-md" table--expandable="true" table--attribute='aria-label="Compact expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table-td table-td--IsEmpty="true"}}
+      {{> table--toggle-all}}
       {{> table--check table--check--IsThead="true"}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30"}}
         Repositories
@@ -1598,7 +1711,9 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-m-hoverable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be hoverable. |
 | `.pf-m-selected` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a selectable tbody or tr table element to be selected. |
 
-### Tree table
+## Tree table
+
+### Tree table basic
 ```hbs
 {{> table-tree-view--basic table--id="tree-table-basic-example" table--modifier="pf-m-tree-view-grid-lg" table--attribute='aria-label="This is a simple tree table example"' table-tree-view--basic--HasActions="true"}}
 ```
@@ -2497,8 +2612,8 @@ Width modifiers control the width of the columns. To control the responsive beha
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-table tr > *` | Hides a table cell at a given breakpoint, or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-table tr > *` | Shows a table cell at a given breakpoint. |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-table tr > *` | Hides a table cell at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes), or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-table tr > *` | Shows a table cell at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
 ## Text control modifiers
 
@@ -4033,7 +4148,7 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
 ### Striped tr example
 ```hbs
-{{#> table table--id="table-striped-tr" table--grid="true" table--modifier="pf-m-grid-md pf-m-striped" table--attribute='aria-label="This is a striped tr example"'}}
+{{#> table table--id="table-striped-tr" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a striped tr example"'}}
   {{#> table-caption}}
     This is the table caption
   {{/table-caption}}

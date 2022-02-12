@@ -32,6 +32,8 @@ import './Sizing.css'
 ```
 
 ### Usage
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-u-w-initial-on-lg**
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-w-initial{-on-[breakpoint]}` | `*` | Sets width: initial (auto) |
@@ -67,6 +69,8 @@ import './Sizing.css'
 ```
 
 ### Usage
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-w-25vw-on-lg**
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-w-25vw{-on-[breakpoint]}` | `*` | Sets width: 25vw |
@@ -102,6 +106,8 @@ import './Sizing.css'
 ```
 
 ### Usage
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-h-initial-on-lg**
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-h-initial{-on-[breakpoint]}` | `*` | Sets height: initial (auto) |
@@ -137,6 +143,8 @@ import './Sizing.css'
 ```
 
 ### Usage
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example .pf-u-h-25vh-on-lg**
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-u-h-25vh{-on-[breakpoint]}` | `*` | Sets height: 25vh |
@@ -180,6 +188,8 @@ import './Sizing.css'
 | `.pf-u-min-width` | `*` | Sets min-width: `var(--pf-u-min-width--MinWidth{-on-[breakpoint]})`. |
 | `.pf-u-max-width` | `*` | Sets min-width: `var(--pf-u-max-width--MaxWidth{-on-[breakpoint]})`. |
 
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example --pf-u-min-width--MinWidth-on-lg**
+
 | Custom property | Applied to | Outcome |
 | -- | -- | -- |
 | `--pf-u-min-width--MinWidth{-on-[breakpoint]}: {width}` | `.pf-u-min-width` | Modifies the min width custom property. |
@@ -218,6 +228,8 @@ import './Sizing.css'
 | -- | -- | -- |
 | `.pf-u-min-height` | `*` | Sets min-height: `var(--pf-u-min-height--MinHeight{-on-[breakpoint]})`. |
 | `.pf-u-max-height` | `*` | Sets max-height: `var(--pf-u-max-height--MaxHeight{-on-[breakpoint]})`. |
+
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), -on-sm, -on-md, -on-lg, -on-xl. **Example --pf-u-min-height--MinHeight-on-lg**
 
 | Custom property | Applied to | Outcome |
 | -- | -- | -- |
