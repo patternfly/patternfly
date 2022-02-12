@@ -31,7 +31,6 @@
   --pf-c-label-group--m-vertical__close--c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
   // List item
-  --pf-c-label-group__list-item--AlignItems: center;
   --pf-c-label-group__list-item--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-label-group__list-item--MarginBottom: var(--pf-global--spacer--xs);
 
@@ -121,7 +120,6 @@
 
 .pf-c-label-group__list-item {
   display: inline-flex;
-  align-items: var(--pf-c-label-group__list-item--AlignItems);
   margin-right: var(--pf-c-label-group__list-item--MarginRight);
   margin-bottom: var(--pf-c-label-group__list-item--MarginBottom);
 }
