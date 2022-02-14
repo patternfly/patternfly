@@ -4,10 +4,12 @@
 @import "colors"; // dark colors
 @import "../../sass-utilities/scss-variables"; // base scss vars
 @import "scss-variables"; // dark scss vars
-@import "placeholders"; // dark global css vars
+@import "mixins"; // dark mixins
+@import "placeholders"; // dark placeholders
 @import "variables"; // dark global css vars
 
 // component imports
+@import "../../components/AboutModalBox/themes/dark/about-modal-box";
 @import "../../components/Accordion/themes/dark/accordion";
 @import "../../components/Alert/themes/dark/alert";
 @import "../../components/AppLauncher/themes/dark/app-launcher";
@@ -30,6 +32,9 @@
 @import "../../components/Hint/themes/dark/hint";
 @import "../../components/InputGroup/themes/dark/input-group";
 @import "../../components/Label/themes/dark/label";
+@import "../../components/Login/themes/dark/login";
+@import "../../components/LogViewer/themes/dark/log-viewer";
+@import "../../components/Masthead/themes/dark/masthead";
 @import "../../components/Menu/themes/dark/menu";
 @import "../../components/MenuToggle/themes/dark/menu-toggle";
 @import "../../components/ModalBox/themes/dark/modal-box";
@@ -56,11 +61,12 @@
 
 @mixin pf-theme-dark($pf-theme-dark-class) {
   // global overrides
-  @include placeholders($pf-theme-dark-class); // dark placeholders overridses
+  @include placeholders; // fixes pf-t-dark in dark theme
   @include globals($pf-theme-dark-class); // global CSS
   @include _variables($pf-theme-dark-class); // dark css vars
 
   // component overrides
+  @include about-modal-box;
   @include accordion;
   @include alert;
   @include app-launcher;
@@ -83,6 +89,9 @@
   @include hint;
   @include input-group;
   @include label;
+  @include login;
+  @include log-viewer;
+  @include masthead;
   @include menu;
   @include menu-toggle;
   @include modal-box;

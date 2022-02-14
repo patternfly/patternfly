@@ -5,4 +5,8 @@
     --pf-c-wizard__nav--BackgroundColor: var(--pf-global--BackgroundColor--300);
     --pf-c-wizard__outer-wrap--BackgroundColor: var(--pf-global--BackgroundColor--300);
   }
+
+  .pf-c-wizard__header {
+    @include pf-t-dark;
+  }
 }

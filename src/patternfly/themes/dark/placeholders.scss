@@ -1,4 +1,4 @@
-@mixin placeholders($pf-theme-dark-class) {
+@mixin placeholders() {
   %pf-t-dark {
     // global
     --pf-global--Color--100: #{$pf-global--Color--100};

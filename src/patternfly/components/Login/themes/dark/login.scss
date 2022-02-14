@@ -1,0 +1,6 @@
+@mixin login() {
+  .pf-c-login__header,
+  .pf-c-login__footer {
+    @include pf-t-dark;
+  }
+}
