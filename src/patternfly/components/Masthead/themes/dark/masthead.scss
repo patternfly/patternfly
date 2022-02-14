@@ -2,6 +2,10 @@
   .pf-c-masthead {
     --pf-c-masthead--BackgroundColor: var(--pf-global--palette--black-1000);
 
+    .pf-c-toolbar {
+      --pf-c-toolbar--BackgroundColor: var(--pf-global--palette--black-1000);
+    }
+
     @include pf-t-dark;
   }
 }
