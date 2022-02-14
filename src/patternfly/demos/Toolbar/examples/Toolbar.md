@@ -20,11 +20,7 @@ import './Toolbar.css'
               {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
                 Name
               {{/select}}
-              {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' toolbar--id '-textInput11" name="textInput11" type="search" placeholder="Filter by name..." aria-label="Search input example"')}}
-              {{/form-control}}
-              {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search button for search input"'}}
-                <i class="fas fa-search" aria-hidden="true"></i>
-              {{/button}}
+              {{> search-input search-input--placeholder="Find by name"}}
             {{/input-group}}
           {{/toolbar-item}}
         {{/toolbar-group}}
@@ -66,14 +62,10 @@ import './Toolbar.css'
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
         {{#> toolbar-item}}
           {{#> input-group}}
-            {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
+            {{#> select select--attribute='style="width: 150px"' id=(concat toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
               Name
             {{/select}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' toolbar--id '-textInput12" name="textInput11" type="search" placeholder="Filter by name..." aria-label="Search input example"')}}
-            {{/form-control}}
-            {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search button for search input"'}}
-              <i class="fas fa-search" aria-hidden="true"></i>
-            {{/button}}
+            {{> search-input search-input--placeholder="Find by name" search-input--attribute='style="width: 100%"'}}
           {{/input-group}}
         {{/toolbar-item}}
       {{/toolbar-group}}
@@ -325,11 +317,7 @@ import './Toolbar.css'
                   {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
                     Name
                   {{/select}}
-                  {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' toolbar--id '-textInput11" name="textInput11" type="search" placeholder="Filter by name..." aria-label="Search input example"')}}
-                  {{/form-control}}
-                  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search button for search input"'}}
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                  {{/button}}
+                  {{> search-input search-input--placeholder="Find by name"}}
                 {{/input-group}}
               {{/toolbar-item}}
             {{/toolbar-group}}
