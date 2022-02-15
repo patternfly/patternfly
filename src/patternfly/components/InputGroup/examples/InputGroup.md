@@ -83,7 +83,7 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
-  {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput12" name="textInput12" aria-label="Input example with popover"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput12" name="textInput12" aria-label="Input example with popover"'}}
   {{/form-control}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Popover for input"'}}
     <i class="fas fa-question-circle" aria-hidden="true"></i>
@@ -91,7 +91,7 @@ cssPrefix: pf-c-input-group
 {{/input-group}}
 <br>
 {{#> input-group}}
-  {{#> form-control controlType="input" input="true" form-control--attribute='type="search" id="textInput14" name="textInput14" aria-label="Input example with plain unit"'}}
+  {{#> form-control controlType="input" input="true" form-control--attribute='type="number" id="textInput14" name="textInput14" aria-label="Input example with plain unit"'}}
   {{/form-control}}
   {{#> input-group-text input-group-text--modifier="pf-m-plain"}}
    %
