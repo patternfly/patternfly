@@ -3,9 +3,9 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
-## 2022.02 release notes (2022-02-15)
+## 2022.02 release notes (2022-02-17)
 Packages released:
-- [@patternfly/patternfly@v4.178.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.178.1)
+- [@patternfly/patternfly@v4.179.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.179.1)
 
 ### Components
 - **Alert:** Added overflow alert button ([#4650](https://github.com/patternfly/patternfly/pull/4650))
@@ -36,6 +36,8 @@ Packages released:
   - Added links to new breakpoint section ([#4675](https://github.com/patternfly/patternfly/pull/4675))
   - Added version details to upgrade guide ([#4678](https://github.com/patternfly/patternfly/pull/4678))
 - **Repo:** Added bug and feature issue templates ([#4671](https://github.com/patternfly/patternfly/pull/4671))
+- **Theme:** Added dark theme ([#4654](https://github.com/patternfly/patternfly/pull/4654))
+  - **Note:** This is not production ready and we are not advising products to adopt the dark theme stylesheet at this time. This feature is being released to test in specific use cases to assess the feasibility of adding a dark theme to PatternFly.
 
 
 ## 2022.01 release notes (2022-01-25)
