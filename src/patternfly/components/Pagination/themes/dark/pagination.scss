@@ -1,0 +1,5 @@
+@mixin pagination() {
+  .pf-c-pagination {
+    --pf-c-pagination--m-sticky--BackgroundColor: var(--pf-global--BackgroundColor--300);
+  }
+}

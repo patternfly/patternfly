@@ -1,0 +1,5 @@
+@mixin log-viewer() {
+  .pf-c-log-viewer.pf-m-dark .pf-c-log-viewer__main {
+    @include pf-t-dark;
+  }
+}

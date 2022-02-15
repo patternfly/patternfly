@@ -1,0 +1,7 @@
+@mixin chip() {
+  .pf-c-chip {
+    --pf-c-chip--BackgroundColor: var(--pf-global--BackgroundColor--100);
+    --pf-c-chip--before--BorderColor: var(--pf-global--BorderColor--100);
+    --pf-c-chip--m-draggable--BackgroundColor: var(--pf-global--palette--black-600);
+  }
+}
