@@ -9,11 +9,7 @@
               {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
                 Name
               {{/select}}
-              {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' toolbar--id '-textInput11" name="textInput11" type="search" placeholder="Filter by name..." aria-label="Search input example"')}}
-              {{/form-control}}
-              {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search button for search input"'}}
-                <i class="fas fa-search" aria-hidden="true"></i>
-              {{/button}}
+              {{#> search-input search-input--placeholder="Find by name"}}{{/search-input}}
             {{/input-group}}
           {{/toolbar-item}}
         {{/toolbar-group}}

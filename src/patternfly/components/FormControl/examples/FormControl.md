@@ -25,8 +25,6 @@ import './FormControl.css'
 <br><br>
 {{> form-control controlType="input" input="true" form-control--IsExpanded="true" form-control--attribute='type="text" value="Expanded" id="input-expanded" aria-label="Expanded input example"'}}
 <br><br>
-{{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute='type="search" value="Search" id="input-search" name="search-input" aria-label="Search input example"'}}
-<br><br>
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-calendar" form-control--attribute='type="text" value="Calendar" id="input-calendar" name="input-calendar" aria-label="Calendar input example"'}}
 <br><br>
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-clock" form-control--attribute='type="text" value="Clock" id="input-clock" name="input-clock" aria-label="Clock input example"'}}
