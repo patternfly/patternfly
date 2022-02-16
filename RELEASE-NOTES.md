@@ -3,6 +3,43 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.02 release notes (2022-02-17)
+Packages released:
+- [@patternfly/patternfly@v4.179.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.179.1)
+
+### Components
+- **Alert:** Added overflow alert button ([#4650](https://github.com/patternfly/patternfly/pull/4650))
+- **Avatar:** Added size variations ([#4648](https://github.com/patternfly/patternfly/pull/4648))
+- **Button:** Fixed primary toggle state styles ([#4662](https://github.com/patternfly/patternfly/pull/4662))
+- **Card:** Updated card demo select to be plain, fixed alignment ([#4667](https://github.com/patternfly/patternfly/pull/4667))
+- **Code editor:** Added header content section ([#4669](https://github.com/patternfly/patternfly/pull/4669))
+- **Label:** Improved click area of editable label ([#4653](https://github.com/patternfly/patternfly/pull/4653))
+- **Nav:**
+  - Added variation to fix section spacing ([#4649](https://github.com/patternfly/patternfly/pull/4649))
+  - Updated nav menu styling ([#4672](https://github.com/patternfly/patternfly/pull/4672))
+- **Pagination:** Removed number input arrow visibility ([#4641](https://github.com/patternfly/patternfly/pull/4641))
+- **Progress stepper:** Removed extra space below last step ([#4636](https://github.com/patternfly/patternfly/pull/4636))
+- **Table:**
+  - Updated tree table checkbox padding ([#4642](https://github.com/patternfly/patternfly/pull/4642))
+  - Removed unnecessary class from striped tr example ([#4644](https://github.com/patternfly/patternfly/pull/4644))
+  - Added overflow menu examples ([#4651](https://github.com/patternfly/patternfly/pull/4651))
+  - Fixed expand all button in compact table ([#4681](https://github.com/patternfly/patternfly/pull/4681))
+- **Text input group:** Added placeholder styling ([#4668](https://github.com/patternfly/patternfly/pull/4668))
+
+### Other
+- **Demos:**
+  - Removed bulk selector from demo headers ([#4640](https://github.com/patternfly/patternfly/pull/4640))
+  - Created common template for full page demos ([#4674](https://github.com/patternfly/patternfly/pull/4674))
+  - Added common masthead template ([#4683](https://github.com/patternfly/patternfly/pull/4683))
+  - Fixed context selector include paths ([#4689](https://github.com/patternfly/patternfly/pull/4689))
+- **Docs:**
+  - Added links to new breakpoint section ([#4675](https://github.com/patternfly/patternfly/pull/4675))
+  - Added version details to upgrade guide ([#4678](https://github.com/patternfly/patternfly/pull/4678))
+- **Repo:** Added bug and feature issue templates ([#4671](https://github.com/patternfly/patternfly/pull/4671))
+- **Theme:** Added dark theme ([#4654](https://github.com/patternfly/patternfly/pull/4654))
+  - **Note:** This is not production ready and we are not advising products to adopt the dark theme stylesheet at this time. This feature is being released to test in specific use cases to assess the feasibility of adding a dark theme to PatternFly.
+
+
 ## 2022.01 release notes (2022-01-25)
 Packages released:
 - [@patternfly/patternfly@v4.171.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.171.1)
