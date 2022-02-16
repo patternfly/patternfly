@@ -52,7 +52,7 @@ section: components
               {{/context-selector-toggle}}
               {{#> context-selector-menu}}
                 {{#> context-selector-menu-search}}
-                  {{> search-input search-input--placeholder="Search"}}
+                  {{> search-input}}
                 {{/context-selector-menu-search}}
                 {{> __context-selector-menu-menu}}
               {{/context-selector-menu}}

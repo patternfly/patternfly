@@ -103,7 +103,7 @@ beta: true
 ```hbs
 {{#> tree-view}}
   {{#> tree-view-search}}
-    {{> search-input search-input--placeholder="Search"}}
+    {{> search-input}}
   {{/tree-view-search}}
   {{> divider}}
   {{#> tree-view-list tree-view-list--IsRoot="true"}}

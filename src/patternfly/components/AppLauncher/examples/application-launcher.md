@@ -210,7 +210,7 @@ import './application-launcher.css'
 {{#> app-launcher app-launcher--id="app-launcher-favorites" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-menu-search}}
-      {{> search-input search-input--placeholder="Search"}}
+      {{> search-input}}
     {{/app-launcher-menu-search}}
     {{#> app-launcher-group}}
       {{#> app-launcher-group-title}}

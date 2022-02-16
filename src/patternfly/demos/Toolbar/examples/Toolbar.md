@@ -20,7 +20,7 @@ import './Toolbar.css'
               {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
                 Name
               {{/select}}
-              {{> search-input search-input--placeholder="Find by name"}}
+              {{> search-input search-input--placeholder="Filter by name"}}
             {{/input-group}}
           {{/toolbar-item}}
         {{/toolbar-group}}
@@ -65,7 +65,7 @@ import './Toolbar.css'
             {{#> select select--attribute='style="width: 150px"' id=(concat toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
               Name
             {{/select}}
-            {{> search-input search-input--placeholder="Find by name" search-input--attribute='style="width: 100%"'}}
+            {{> search-input search-input--placeholder="Filter by name"}}
           {{/input-group}}
         {{/toolbar-item}}
       {{/toolbar-group}}
@@ -317,7 +317,7 @@ import './Toolbar.css'
                   {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
                     Name
                   {{/select}}
-                  {{> search-input search-input--placeholder="Find by name"}}
+                  {{> search-input search-input--placeholder="Filter by name"}}
                 {{/input-group}}
               {{/toolbar-item}}
             {{/toolbar-group}}
