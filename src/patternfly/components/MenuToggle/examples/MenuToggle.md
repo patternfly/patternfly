@@ -8,6 +8,140 @@ cssPrefix: pf-c-menu-toggle
 import './MenuToggle.css'
 
 ## Examples
+
+### Split Button (checkbox)
+```hbs
+{{#> menu-toggle menu-toggle--id="split-button-with-checkbox-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsSecondarysss="true" menu-toggle--IsDisabled="true"}}
+  {{> menu-toggle-check menu-toggle-check--aria-label="Split button check"}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--id="split-button-with-checkbox-example" menu-toggle--IsSplitButton="true" menu-toggle--IsSecondarysss="true"}}
+  {{> menu-toggle-check menu-toggle-check--aria-label="Split button check"}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--id="split-button-with-checkbox-expanded-example" menu-toggle--IsSplitButton="true" menu-toggle--IsSecondarysss="true"}}
+  {{> menu-toggle-check menu-toggle-check--aria-label="Split button check"}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+```
+
+### Split Button (action)
+```hbs
+{{#> menu-toggle menu-toggle--IsSplitButton="true" menu-toggle--IsSecondarysss="true"}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-text}}
+      Action
+    {{/menu-toggle-text}}
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsSplitButton="true" menu-toggle--IsSecondarysss="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-text}}
+      Action
+    {{/menu-toggle-text}}
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsSplitButton="true" menu-toggle--IsSecondarysss="true"}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-icon}}
+      <i class="fas fa-cog" aria-hidden="true"></i>
+    {{/menu-toggle-icon}}
+    {{#> menu-toggle-text}}
+      Action
+    {{/menu-toggle-text}}
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsSplitButton="true" menu-toggle--IsSecondarysss="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-icon}}
+      <i class="fas fa-cog" aria-hidden="true"></i>
+    {{/menu-toggle-icon}}
+    {{#> menu-toggle-text}}
+      Action
+    {{/menu-toggle-text}}
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsSplitButton="true" menu-toggle--IsSecondarysss="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-icon}}
+      <i class="fas fa-cog" aria-hidden="true"></i>
+    {{/menu-toggle-icon}}
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsSplitButton="true" menu-toggle--IsSecondarysss="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-icon}}
+      <i class="fas fa-cog" aria-hidden="true"></i>
+    {{/menu-toggle-icon}}
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+```
+
 ### Collapsed
 ```hbs
 {{#> menu-toggle}}

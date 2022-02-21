@@ -1,14 +1,17 @@
-<{{# if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else}}button{{/if}} class="pf-c-menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}{{#if menu-list-item--IsCurrent}} pf-m-current{{/if}}"
-  {{#if menu-item--IsLink}}
-    href="#"
-    {{#if menu-list-item--IsDisabled}}
-      aria-disabled="true"
-      tabindex="-1"
-    {{/if}}
-  {{else}}
-    type="button"
-    {{#if menu-list-item--IsDisabled}}
-      disabled
+<{{#if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else if menu-item--IsCheckbox}}div{{else}}button{{/if}} class="pf-c-menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}
+  {{~#if menu-list-item--IsCurrent}} pf-m-current{{/if}}"
+  {{#unless menu-item--IsCheckbox}}
+    {{#if menu-item--IsLink}}
+      href="#"
+      {{#if menu-list-item--IsDisabled}}
+        aria-disabled="true"
+        tabindex="-1"
+      {{/if}}
+    {{else}}
+      type="button"
+      {{#if menu-list-item--IsDisabled}}
+        disabled
+      {{/if}}
     {{/if}}
   {{/if}}
   role="menuitem"
@@ -24,4 +27,4 @@
     {{/if}}
   {{/if}}>
   {{> @partial-block}}
-</{{# if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else}}button{{/if}}>
+</{{#if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else if menu-item--IsCheckbox}}div{{else}}button{{/if}}>

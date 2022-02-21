@@ -100,6 +100,37 @@ import './Menu.css'
 {{/menu}}
 ```
 
+### With checkbox
+```hbs
+{{#> menu menu--id="with-checkbox-example"}}
+  {{#> menu-content}}
+    {{#> menu-list}}
+      {{#> menu-list-item menu-list-item--id="1"}}
+        {{#> menu-item menu-item--IsCheckbox="true"}}
+          {{#> menu-item-main}}
+            {{> menu-label menu-label--text="Checkbox 1"}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--id="2"}}
+        {{#> menu-item menu-item--IsCheckbox="true"}}
+          {{#> menu-item-main}}
+            {{> menu-label menu-label--text="Checkbox 2"}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--id="3" menu-list-item--IsDisabled="true"}}
+        {{#> menu-item menu-item--IsCheckbox="true"}}
+          {{#> menu-item-main}}
+            {{> menu-label menu-label--text="Checkbox 3"}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+{{/menu}}
+```
+
 ### Scrollable
 ```hbs
 {{#> menu menu--modifier="pf-m-scrollable"}}
@@ -1734,6 +1765,8 @@ import './Menu.css'
 | `.pf-c-menu__item` | `<button>`, `<a>`, `<div>` | Initiates the menu item. **Required** |
 | `.pf-c-menu__item-main` | `<span>` | Initiates the menu item main container. **Required** |
 | `.pf-c-menu__item-text` | `<span>` | Initiates the menu item text. **Required** |
+| `.pf-c-menu__label` | `<label>` | Initiates a menu label. |
+| `.pf-c-menu__check-input` | `<input type="checkbox">` | Initiates a menu check input. |
 | `.pf-c-menu__item-description` | `<span>` | Initiates the menu item description. |
 | `.pf-c-menu__item-group` | `<section>` | Initiates the menu item group. |
 | `.pf-c-menu__item-group-title` | `<h1>` | Initiates the menu item group title. |
