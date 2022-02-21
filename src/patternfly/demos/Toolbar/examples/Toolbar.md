@@ -17,7 +17,7 @@ import './Toolbar.css'
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter"}}
             {{#> input-group}}
-              {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
+              {{#> select select--attribute="style='width: 175px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
                 Name
               {{/select}}
               {{> search-input search-input--placeholder="Filter by name"}}
@@ -62,7 +62,7 @@ import './Toolbar.css'
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
         {{#> toolbar-item}}
           {{#> input-group}}
-            {{#> select select--attribute='style="width: 150px"' id=(concat toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
+            {{#> select select--attribute='style="width: 175px"' id=(concat toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
               Name
             {{/select}}
             {{> search-input search-input--placeholder="Filter by name"}}
@@ -83,7 +83,7 @@ import './Toolbar.css'
         {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
+            {{#> select select--attribute="style='width: 175px'" id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
               Status
             {{/select}}
           {{/toolbar-item}}
@@ -154,7 +154,7 @@ import './Toolbar.css'
         {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
+            {{#> select select--attribute="style='width: 175px'" id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
               Status
             {{/select}}
           {{/toolbar-item}}
@@ -314,7 +314,7 @@ import './Toolbar.css'
             {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
               {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter"}}
                 {{#> input-group}}
-                  {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
+                  {{#> select select--attribute="style='width: 175px'" id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
                     Name
                   {{/select}}
                   {{> search-input search-input--placeholder="Filter by name"}}
