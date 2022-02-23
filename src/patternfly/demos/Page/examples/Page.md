@@ -70,120 +70,31 @@ wrapperTag: div
 }}
 ```
 
-### Centered content
+### Centered section
 ```hbs isFullscreen
 {{> page-template
-      page-template--id="page-demo-centered-contentt"
+      page-template--id="page-demo-centered-section"
 }}
 
 {{#*inline "page-template-main-content"}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-m-fill"}}
-    {{#> bullseye}}
-      {{#> content content--modifier="pf-u-text-align-center"}}
-        <h1>Centered title (content centered)</h1>
-        <p>Page section filled, width limited, centered.</p>
-      {{/content}}
-    {{/bullseye}}
-  {{/page-main-section}}
-  {{> divider}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-m-light"}}
-    {{#> bullseye}}
-      {{#> content content--modifier="pf-u-text-align-center"}}
-        <h2>Centered page section (content centered)</h2>
-        <p>Page section light, width limited, centered.</p>
-      {{/content}}
-    {{/bullseye}}
+    {{#> content}}
+      <h1>Centering page sections</h1>
+      <p>When a width limited page section is wider than <code>--pf-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.</p>
+      <p>All of the page sections on this page are centered.</p>
+    {{/content~}}
   {{/page-main-section}}
   {{> divider}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
+    {{> page-template-gallery-cards}}
+  {{/page-main-section}}
+  {{> divider}}
+  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-u-text-align-center"}}
     {{#> card}}
-      {{#> card-title}}
-        <h2>Card title</h2>
-      {{/card-title}}
       {{#> card-body}}
-        <p>Page section width limited, centered. Full width card.</p>
+        <p>The content in this section is also centered using the <code>.pf-u-text-align-center</code> utility class.</p>
       {{/card-body}}
     {{/card}}
-  {{/page-main-section}}
-  {{> divider}}
-  {{#> page-main-section}}
-    {{#> grid grid--modifier="pf-m-gutter pf-m-all-6-col-on-md pf-m-all-3-col-on-xl"}}
-      {{#> grid-item grid-item--modifier="pf-m-12-col"}}
-        <h2 class="pf-u-text-align-center">(Default page section)</h2>
-      {{/grid-item}}
-      {{#> card}}
-        {{#> card-header}}
-          Card header
-        {{/card-header}}
-        {{#> card-body}}
-          Card body
-        {{/card-body}}
-      {{/card}}
-      {{#> card}}
-        {{#> card-header}}
-          Card header
-        {{/card-header}}
-        {{#> card-body}}
-          Card body
-        {{/card-body}}
-      {{/card}}
-      {{#> card}}
-        {{#> card-header}}
-          Card header
-        {{/card-header}}
-        {{#> card-body}}
-          Card body
-        {{/card-body}}
-      {{/card}}
-      {{#> card}}
-        {{#> card-header}}
-          Card header
-        {{/card-header}}
-        {{#> card-body}}
-          Card body
-        {{/card-body}}
-      {{/card}}
-    {{/grid}}
-  {{/page-main-section}}
-  {{> divider}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
-    {{#> grid grid--modifier="pf-m-gutter pf-m-all-6-col-on-md pf-m-all-3-col-on-xl"}}
-      {{#> grid-item grid-item--modifier="pf-m-12-col"}}
-        <h2 class="pf-u-text-align-center">(Page section width limited, centered.)</h2>
-      {{/grid-item}}
-      {{#> card}}
-        {{#> card-header}}
-          Card header
-        {{/card-header}}
-        {{#> card-body}}
-          Card body
-        {{/card-body}}
-      {{/card}}
-      {{#> card}}
-        {{#> card-header}}
-          Card header
-        {{/card-header}}
-        {{#> card-body}}
-          Card body
-        {{/card-body}}
-      {{/card}}
-      {{#> card}}
-        {{#> card-header}}
-          Card header
-        {{/card-header}}
-        {{#> card-body}}
-          Card body
-        {{/card-body}}
-      {{/card}}
-      {{#> card}}
-        {{#> card-header}}
-          Card header
-        {{/card-header}}
-        {{#> card-body}}
-          Card body
-        {{/card-body}}
-      {{/card}}
-    {{/grid}}
   {{/page-main-section}}
 {{/inline}}
 ```

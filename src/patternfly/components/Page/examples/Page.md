@@ -175,7 +175,7 @@ wrapperTag: div
 {{/page}}
 ```
 
-### Centered content
+### Centered section
 ```hbs
 {{#> page}}
   {{#> page-header}}
@@ -193,7 +193,7 @@ wrapperTag: div
   {{/page-header}}
   {{#> page-main}}
     {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
-      Page section width limited, centered.
+      When a width limited page section is wider than <code>--pf-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
