@@ -193,7 +193,13 @@ wrapperTag: div
   {{/page-header}}
   {{#> page-main}}
     {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
-      When a width limited page section is wider than <code>--pf-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.
+      {{#> card}}
+        {{#> card-body}}
+          When a width limited page section is wider than the value of <code>--pf-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.
+          <br><br>
+          The content in this example is placed in a card to better illustrate how the section behaves when it is centered. A card is not required to center a page section.
+        {{/card-body}}
+      {{/card}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}

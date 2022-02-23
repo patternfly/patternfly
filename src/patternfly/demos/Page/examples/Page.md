@@ -80,7 +80,7 @@ wrapperTag: div
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-m-light"}}
     {{#> content}}
       <h1>Centering page sections</h1>
-      <p>When a width limited page section is wider than <code>--pf-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.</p>
+      <p>When a width limited page section is wider than the value of <code>--pf-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.</p>
       <p>All of the page sections on this page are centered.</p>
     {{/content~}}
   {{/page-main-section}}
