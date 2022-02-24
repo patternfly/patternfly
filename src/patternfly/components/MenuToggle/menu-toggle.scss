@@ -282,6 +282,14 @@
   margin-right: var(--pf-c-menu-toggle__icon--MarginRight);
 }
 
+.pf-c-menu-toggle__image {
+  display: inline-flex;
+  align-self: center;
+  flex-shrink: 0;
+  margin-right: var(--pf-c-menu-toggle__image--MarginRight);
+  line-height: 1;
+}
+
 .pf-c-menu-toggle__text {
   @include pf-text-overflow;
 

@@ -47,9 +47,9 @@ import './MenuToggle.css'
 ### Icon
 ```hbs
 {{#> menu-toggle}}
-  {{#> menu-toggle-icon}}
+  {{#> menu-toggle-image}}
     <i class="fas fa-cog" aria-hidden="true"></i>
-  {{/menu-toggle-icon}}
+  {{/menu-toggle-image}}
   {{#> menu-toggle-text}}
     Icon
   {{/menu-toggle-text}}
@@ -90,9 +90,9 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--IsPrimary="true"}}
-  {{#> menu-toggle-icon}}
+  {{#> menu-toggle-image}}
     <i class="fas fa-cog" aria-hidden="true"></i>
-  {{/menu-toggle-icon}}
+  {{/menu-toggle-image}}
   {{#> menu-toggle-text}}
     Icon
   {{/menu-toggle-text}}
@@ -263,7 +263,6 @@ import './MenuToggle.css'
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-c-menu-toggle` | `<button>` | Initiates the menu toggle component. |
-| `.pf-c-menu-toggle__icon` | `<span>` | Defines the menu toggle component icon. |
 | `.pf-c-menu-toggle__image` | `<span>` | Defines the menu toggle component image. |
 | `.pf-c-menu-toggle__text` | `<span>` | Defines the menu toggle component text. |
 | `.pf-c-menu-toggle__count` | `<span>` | Defines the menu toggle component count. |
