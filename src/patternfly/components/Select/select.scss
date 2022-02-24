@@ -300,7 +300,7 @@
     content: "";
     border-color: var(--pf-c-select__toggle--before--BorderTopColor) var(--pf-c-select__toggle--before--BorderRightColor) var(--pf-c-select__toggle--before--BorderBottomColor) var(--pf-c-select__toggle--before--BorderLeftColor);
     border-style: solid;
-    border-width: var(--pf-c-select__toggle--before--BorderWidth);
+    border-width: var(--pf-c-select__toggle--before--BorderTopWidth) var(--pf-c-select__toggle--before--BorderRightWidth) var(--pf-c-select__toggle--before--BorderBottomWidth) var(--pf-c-select__toggle--before--BorderLeftWidth);
   }
 
   &:hover {
