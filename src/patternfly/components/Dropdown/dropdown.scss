@@ -142,8 +142,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__group-title--Color: var(--pf-global--Color--dark-200);
 
   // Image
-  --pf-c-dropdown__toggle-image--MarginTop: 0; // update at breaking change
-  --pf-c-dropdown__toggle-image--MarginBottom: 0; // update at breaking change
+  --pf-c-dropdown__toggle-image--MarginTop: 0; // remove at breaking change
+  --pf-c-dropdown__toggle-image--MarginBottom: 0; // remove at breaking change
   --pf-c-dropdown__toggle-image--MarginRight: var(--pf-global--spacer--sm);
 
   // Divider

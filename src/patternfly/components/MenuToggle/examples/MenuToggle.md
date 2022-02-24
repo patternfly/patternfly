@@ -47,9 +47,9 @@ import './MenuToggle.css'
 ### Icon
 ```hbs
 {{#> menu-toggle}}
-  {{#> menu-toggle-image}}
+  {{#> menu-toggle-icon}}
     <i class="fas fa-cog" aria-hidden="true"></i>
-  {{/menu-toggle-image}}
+  {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Icon
   {{/menu-toggle-text}}
@@ -90,9 +90,9 @@ import './MenuToggle.css'
 &nbsp;
 
 {{#> menu-toggle menu-toggle--IsPrimary="true"}}
-  {{#> menu-toggle-image}}
+  {{#> menu-toggle-icon}}
     <i class="fas fa-cog" aria-hidden="true"></i>
-  {{/menu-toggle-image}}
+  {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Icon
   {{/menu-toggle-text}}
@@ -228,7 +228,9 @@ import './MenuToggle.css'
 ### With image and text
 ```hbs
 {{#> menu-toggle}}
-  {{> menu-toggle-image}}
+  {{#> menu-toggle-icon}}
+    {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+  {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
   {{/menu-toggle-text}}
@@ -263,7 +265,7 @@ import './MenuToggle.css'
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-c-menu-toggle` | `<button>` | Initiates the menu toggle component. |
-| `.pf-c-menu-toggle__image` | `<span>` | Defines the menu toggle component image. |
+| `.pf-c-menu-toggle__icon` | `<span>` | Defines the menu toggle component image. |
 | `.pf-c-menu-toggle__text` | `<span>` | Defines the menu toggle component text. |
 | `.pf-c-menu-toggle__count` | `<span>` | Defines the menu toggle component count. |
 | `.pf-c-menu-toggle__controls` | `<span>` | Defines the menu toggle component controls. |

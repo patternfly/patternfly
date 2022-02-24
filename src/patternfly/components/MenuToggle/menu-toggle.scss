@@ -279,14 +279,10 @@
 }
 
 .pf-c-menu-toggle__icon {
-  margin-right: var(--pf-c-menu-toggle__icon--MarginRight);
-}
-
-.pf-c-menu-toggle__image {
   display: inline-flex;
   align-self: center;
   flex-shrink: 0;
-  margin-right: var(--pf-c-menu-toggle__image--MarginRight);
+  margin-right: var(--pf-c-menu-toggle__icon--MarginRight);
   line-height: 1;
 }
 
