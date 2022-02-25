@@ -44,21 +44,6 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
-### Icon
-```hbs
-{{#> menu-toggle}}
-  {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
-  {{/menu-toggle-icon}}
-  {{#> menu-toggle-text}}
-    Icon
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-```
-
 ### Count
 ```hbs
 {{#> menu-toggle}}
@@ -137,20 +122,6 @@ import './MenuToggle.css'
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--IsSecondary="true"}}
-  {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
-  {{/menu-toggle-icon}}
-  {{#> menu-toggle-text}}
-    Icon
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-
-&nbsp;
-
 {{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsExpanded="true"}}
   {{#> menu-toggle-text}}
     Expanded
@@ -212,12 +183,30 @@ import './MenuToggle.css'
     {{> menu-toggle-toggle-icon}}
   {{/menu-toggle-controls}}
 {{/menu-toggle}}
+```
+
+### With icon/image and text
+```hbs
+{{#> menu-toggle menu-toggle--IsSecondary="true"}}
+  {{#> menu-toggle-icon}}
+    <i class="fas fa-cog" aria-hidden="true"></i>
+  {{/menu-toggle-icon}}
+  {{#> menu-toggle-text}}
+    Icon
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true" menu-toggle--IsExpanded="true"}}
+{{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-icon}}
+    <i class="fas fa-cog" aria-hidden="true"></i>
+  {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
-    Custom text (expanded)
+    Icon
   {{/menu-toggle-text}}
   {{#> menu-toggle-controls}}
     {{> menu-toggle-toggle-icon}}
@@ -225,11 +214,11 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
-### With image and text
+### With avatar and text
 ```hbs
 {{#> menu-toggle}}
   {{#> menu-toggle-icon}}
-    {{> avatar avatar--attribute='src="/assets/images/img_avatar.svg" alt="Avatar image"'}}
+    {{> avatar avatar--modifier="pf-m-light" avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image light"'}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -238,6 +227,35 @@ import './MenuToggle.css'
     {{> menu-toggle-toggle-icon}}
   {{/menu-toggle-controls}}
 {{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-icon}}
+    {{> avatar avatar--modifier="pf-m-light" avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image light"'}}
+  {{/menu-toggle-icon}}
+  {{#> menu-toggle-text}}
+    Ned Username
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-icon}}
+    {{> avatar avatar--modifier="pf-m-light" avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image light"'}}
+  {{/menu-toggle-icon}}
+  {{#> menu-toggle-text}}
+    Ned Username
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
 ```
 
 ### Full height
@@ -265,7 +283,7 @@ import './MenuToggle.css'
 | Class | Applied | Outcome |
 | -- | -- | -- |
 | `.pf-c-menu-toggle` | `<button>` | Initiates the menu toggle component. |
-| `.pf-c-menu-toggle__icon` | `<span>` | Defines the menu toggle component image. |
+| `.pf-c-menu-toggle__icon` | `<span>` | Defines the menu toggle component icon/image. |
 | `.pf-c-menu-toggle__text` | `<span>` | Defines the menu toggle component text. |
 | `.pf-c-menu-toggle__count` | `<span>` | Defines the menu toggle component count. |
 | `.pf-c-menu-toggle__controls` | `<span>` | Defines the menu toggle component controls. |
