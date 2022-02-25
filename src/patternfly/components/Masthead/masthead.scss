@@ -241,13 +241,16 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   .pf-c-dropdown {
     --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderTopColor);
     --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderRightColor);
-    --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderBottomColor);
     --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderLeftColor);
 
     &.pf-m-full-height {
       --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderRightColor);
       --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderLeftColor);
     }
+  }
+
+  :where(:not(.pf-c-input-group)) > .pf-c-dropdown {
+    --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderBottomColor);
   }
 
   .pf-c-nav {
