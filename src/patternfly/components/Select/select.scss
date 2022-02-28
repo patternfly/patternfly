@@ -15,7 +15,7 @@
   --pf-c-select__toggle--before--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-select__toggle--before--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-select__toggle--before--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-select__toggle--before--BorderWidth: var(--pf-c-select__toggle--before--BorderTopWidth) var(--pf-c-select__toggle--before--BorderRightWidth) var(--pf-c-select__toggle--before--BorderBottomWidth) var(--pf-c-select__toggle--before--BorderLeftWidth); // remove at breaking change
+  --pf-c-select__toggle--before--BorderWidth: initial; // remove at breaking change
   --pf-c-select__toggle--before--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-select__toggle--before--BorderRightColor: var(--pf-global--BorderColor--300);
   --pf-c-select__toggle--before--BorderBottomColor: var(--pf-global--BorderColor--200);
@@ -292,6 +292,8 @@
   }
 
   &::before {
+    --pf-c-select__toggle--before--BorderWidth-base: var(--pf-c-select__toggle--before--BorderTopWidth) var(--pf-c-select__toggle--before--BorderRightWidth) var(--pf-c-select__toggle--before--BorderBottomWidth) var(--pf-c-select__toggle--before--BorderLeftWidth); // remove at breaking change
+
     position: absolute;
     top: 0;
     right: 0;
@@ -300,7 +302,7 @@
     content: "";
     border-color: var(--pf-c-select__toggle--before--BorderTopColor) var(--pf-c-select__toggle--before--BorderRightColor) var(--pf-c-select__toggle--before--BorderBottomColor) var(--pf-c-select__toggle--before--BorderLeftColor);
     border-style: solid;
-    border-width: var(--pf-c-select__toggle--before--BorderTopWidth) var(--pf-c-select__toggle--before--BorderRightWidth) var(--pf-c-select__toggle--before--BorderBottomWidth) var(--pf-c-select__toggle--before--BorderLeftWidth);
+    border-width: var(--pf-c-select__toggle--before--BorderWidth, var(--pf-c-select__toggle--before--BorderWidth-base));
   }
 
   &:hover {
