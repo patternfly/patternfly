@@ -1,0 +1,22 @@
+<button class="pf-c-menu-toggle__button{{#if menu-toggle-button--modifier}} {{menu-toggle-button--modifier}}{{/if}}"
+  type="button"
+  {{#if menu-toggle-button--IsToggle}}
+    aria-expanded="{{#if menu-toggle--IsExpanded}}true{{else}}false{{/if}}"
+    id="{{menu-toggle--id}}-toggle-button"
+    aria-label="Menu toggle"
+  {{/if}}
+  {{#if menu-toggle--IsDisabled}}
+    disabled
+  {{/if}}
+  {{#if menu-toggle-button--IsDisabled}}
+    disabled
+  {{/if}}
+  {{#if menu-toggle-button--attribute}}
+    {{{menu-toggle-button--attribute}}}
+  {{/if}}>
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{else}}
+    <i class="fas fa-caret-down" aria-hidden="true"></i>
+  {{/if}}
+</button>

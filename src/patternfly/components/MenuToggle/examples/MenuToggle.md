@@ -8,6 +8,263 @@ cssPrefix: pf-c-menu-toggle
 import './MenuToggle.css'
 
 ## Examples
+### Split button (checkbox)
+```hbs
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDisabled="true" menu-toggle--IsSplitButton="true"}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-example" menu-toggle--IsSplitButton="true"}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-expanded-example" menu-toggle--IsExpanded="true" menu-toggle--IsSplitButton="true"}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+```
+
+### Split button (checkbox with toggle text)
+```hbs
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-text-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
+  {{> menu-toggle--check menu-toggle--check--text="10 selected" check--IsDisabled="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-text-example" menu-toggle--IsSplitButton="true"}}
+  {{> menu-toggle--check menu-toggle--check--text="10 selected"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-text-expanded-example" menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
+  {{> menu-toggle--check menu-toggle--check--text="10 selected"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+```
+
+
+### Split button, primary
+```hbs
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-primary-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
+  {{> menu-toggle--check menu-toggle--check--text="10 selected" check--IsDisabled="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-primary-example" menu-toggle--IsSplitButton="true"}}
+  {{> menu-toggle--check menu-toggle--check--text="10 selected" check--IsDisabled="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-primary-expanded-example" menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
+  {{> menu-toggle--check menu-toggle--check--text="10 selected" check--IsDisabled="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+```
+
+### Split button, secondary
+```hbs
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-secondary-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
+  {{> menu-toggle--check menu-toggle--check--text="10 selected" check--IsDisabled="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-secondary-example" menu-toggle--IsSplitButton="true"}}
+  {{> menu-toggle--check menu-toggle--check--text="10 selected" check--IsDisabled="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-secondary-expanded-example" menu-toggle--IsSplitButton="true" menu-toggle--IsExpanded="true"}}
+  {{> menu-toggle--check menu-toggle--check--text="10 selected" check--IsDisabled="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+```
+
+### Split button (action)
+```hbs
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-action-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsAction="true" menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-button}}
+    Action
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-action-example" menu-toggle--IsSplitButton="true" menu-toggle--IsAction="true"}}
+  {{#> menu-toggle-button}}
+    Action
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-action-expanded-example" menu-toggle--IsSplitButton="true" menu-toggle--IsAction="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-button}}
+    Action
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+```
+
+### Split button, primary (action)
+```hbs
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-with-toggle-action-primary-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsAction="true" menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-button}}
+    Action
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-with-toggle-action-primary-example" menu-toggle--IsSplitButton="true" menu-toggle--IsAction="true"}}
+  {{#> menu-toggle-button}}
+    Action
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--modifier="pf-m-primary" menu-toggle--id="split-button-checkbox-with-toggle-action-primary-expanded-example" menu-toggle--IsSplitButton="true" menu-toggle--IsAction="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-button}}
+    Action
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+```
+
+### Split button, secondary (action)
+```hbs
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-with-toggle-action-secondary-disabled-example" menu-toggle--IsSplitButton="true" menu-toggle--IsAction="true" menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-button}}
+    Action
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-with-toggle-action-secondary-example" menu-toggle--IsSplitButton="true" menu-toggle--IsAction="true"}}
+  {{#> menu-toggle-button}}
+    Action
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--modifier="pf-m-secondary" menu-toggle--id="split-button-checkbox-with-toggle-action-secondary-expanded-example" menu-toggle--IsSplitButton="true" menu-toggle--IsAction="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-button}}
+    Action
+  {{/menu-toggle-button}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+```
+
 ### Collapsed
 ```hbs
 {{#> menu-toggle}}
@@ -273,10 +530,10 @@ import './MenuToggle.css'
 ### Accessibility
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-expanded="true"` | `.pf-c-menu-toggle` | Indicates that the menu toggle component is in the expanded state. |
-| `aria-expanded="false"` | `.pf-c-menu-toggle` | Indicates that the menu toggle component is in the collapsed state. |
+| `aria-expanded="true"` | `.pf-c-menu-toggle`, `.pf-c-menu-toggle__button` | Indicates that the menu toggle component is in the expanded state. |
+| `aria-expanded="false"` | `.pf-c-menu-toggle`, `.pf-c-menu-toggle__button` | Indicates that the menu toggle component is in the collapsed state. |
 | `aria-label="Descriptive text"` | `.pf-c-menu-toggle.pf-m-plain` | Gives the plain menu toggle component an accessible label. |
-| `disabled` | `.pf-c-menu-toggle` | Indicates that the menu toggle component is disabled. |
+| `disabled` | `.pf-c-menu-toggle`, `.pf-c-menu-toggle__button` | Indicates that the menu toggle component is disabled. |
 
 ### Usage
 
@@ -288,6 +545,10 @@ import './MenuToggle.css'
 | `.pf-c-menu-toggle__count` | `<span>` | Defines the menu toggle component count. |
 | `.pf-c-menu-toggle__controls` | `<span>` | Defines the menu toggle component controls. |
 | `.pf-c-menu-toggle__toggle-icon` | `<span>` | Defines the menu toggle component toggle/arrow icon. |
+| `.pf-c-menu-toggle__button` | `<button>` | Initiates the menu toggle button. |
+| `.pf-m-split-button` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the split button variation. |
+| `.pf-m-action` | `.pf-c-menu-toggle.pf-m-split-button` | Modifies the menu toggle component for the action, split button variation. |
+| `.pf-m-disabled` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the disabled variation. |
 | `.pf-m-primary` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the primary variation. |
 | `.pf-m-secondary` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the secondary variation. |
 | `.pf-m-text` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the text variation. |

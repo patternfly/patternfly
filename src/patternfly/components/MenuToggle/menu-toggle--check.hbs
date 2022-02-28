@@ -1,0 +1,16 @@
+{{#> id-wrapper menu-toggle--check--id=menu-toggle--id}}
+  {{#if menu-toggle--check--IsStandalone}}
+    {{#> check check--type="label" check--modifier="pf-m-standalone" check--IsDisabled=menu-toggle--IsDisabled}}
+      {{> check-input check-input--attribute=(concat 'id="' menu-toggle--check--id '-input" name="' menu-toggle--check--id '-input" aria-label="Standalone input"')}}
+    {{/check}}
+  {{else}}
+    {{#> check check--type="label" check--attribute=(concat 'for="' menu-toggle--check--id '-input"') check--IsDisabled=menu-toggle--IsDisabled}}
+      {{> check-input check-input--attribute=(concat 'id="' menu-toggle--check--id '-input" name="' menu-toggle--check--id '-input"')}}
+      {{#if menu-toggle--check--text}}
+        {{#> check-label check-label--IsDisabled=menu-toggle--IsDisabled check-label--type="span"}}{{menu-toggle--check--text}}{{/check-label}}
+      {{else}}
+        {{#> check-label check-label--IsDisabled=menu-toggle--IsDisabled check-label--type="span"}}Label{{/check-label}}
+      {{/if}}
+    {{/check}}
+  {{/if}}
+{{/id-wrapper}}
