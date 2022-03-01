@@ -2,7 +2,7 @@
   {{#> grid-item grid-item--modifier="pf-m-6-col-on-md pf-m-8-col-on-xl"}}
     {{#> card card--modifier="pf-m-full-height"}}
       {{#> card-header}}
-        {{#> title titleType="h2" title--modifier="pf-m-lg pf-u-font-weight-light"}}
+        {{#> title titleType="h2" title--modifier="pf-m-lg"}}
           Status
         {{/title}}
       {{/card-header}}
@@ -10,7 +10,7 @@
         {{#> wrapper newcontext tabs--page-grid-view--id=(concat tabs--page-grid-view--id "-subtabs")}}
           {{#> l-flex l-flex--modifier="pf-m-column"}}
             {{#> l-flex-item}}
-              {{#> tabs tabs--id=tabs--page-grid-view--id tabs--modifier="pf-m-no-border-bottom"}}
+              {{#> tabs tabs--IsSecondary="true" tabs--id=tabs--page-grid-view--id}}
                 {{#> tabs-list}}
                   {{> __tabs-item
                     __tabs-item--current="true"
@@ -64,7 +64,7 @@
       {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
         {{#> card card--modifier="pf-m-full-height"}}
           {{#> card-header}}
-            {{#> title titleType="h3" title--modifier="pf-m-lg pf-u-font-weight-light"}}
+            {{#> title titleType="h3" title--modifier="pf-m-lg"}}
               Title of card
             {{/title}}
           {{/card-header}}
@@ -73,7 +73,7 @@
       {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
         {{#> card card--modifier="pf-m-full-height"}}
           {{#> card-header}}
-            {{#> title titleType="h3" title--modifier="pf-m-lg pf-u-font-weight-light"}}
+            {{#> title titleType="h3" title--modifier="pf-m-lg"}}
               Title of card
             {{/title}}
           {{/card-header}}

@@ -285,7 +285,7 @@ section: components
 ```hbs isFullscreen
 {{#> tabs--page-wrapper tabs--page-wrapper--id="nested-tabs-example"}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
-    {{#> title title--modifier="pf-m-2xl pf-u-mt-md"}}
+    {{#> title title--modifier="pf-m-2xl"}}
       Overview
     {{/title}}
   {{/page-main-section}}
@@ -481,7 +481,7 @@ section: components
           {{#> modal-box-body modal-box-body--attribute=(concat 'id="' example-wrapper--id '-modal-description"')}}
             {{#> grid grid--modifier="pf-m-gutter"}}
               {{#> grid-item}}
-                {{#> tabs tabs--id=(concat example-wrapper--id '-tabs') tabs--modifier="pf-m-no-border-bottom pf-m-inset-none pf-m-secondary"}}
+                {{#> tabs tabs--id=(concat example-wrapper--id '-tabs') tabs--modifier="pf-m-inset-none pf-m-secondary"}}
                   {{#> tabs-list}}
                     {{> __tabs-item
                       __tabs-item--current="true"
@@ -546,7 +546,7 @@ section: components
 ```hbs isFullscreen
 {{#> tabs--page-wrapper tabs--page-wrapper--id="gray-tabs-example"}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
-    {{#> title title--modifier="pf-m-2xl pf-u-mt-md"}}
+    {{#> title title--modifier="pf-m-2xl"}}
       Overview
     {{/title}}
   {{/page-main-section}}
