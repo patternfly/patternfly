@@ -69,7 +69,7 @@ cssPrefix: pf-c-form
 
 ### Horizontal layout at a custom breakpoint
 ```hbs
-{{#> form form--modifier="pf-m-horizontal-on-sm" form--id="form-horizontal"}}
+{{#> form form--modifier="pf-m-horizontal-on-sm" form--id="form-horizontal-custom-breakpoint"}}
   {{#> form-group form-group--id="-name"}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
@@ -254,8 +254,8 @@ cssPrefix: pf-c-form
 {{#> form form--id="form-expandable-field-groups"}}
   {{#> form-group form-group--id="-label1"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 1{{/form-label}}
-      {{> form-group-label-help form-group-label-help--aria-label="More information for Label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}label 1{{/form-label}}
+      {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -264,7 +264,7 @@ cssPrefix: pf-c-form
   {{#> form-group form-group--id="-label2"}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 2{{/form-label}}
-      {{> form-group-label-help form-group-label-help--aria-label="More information for Label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+      {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -309,8 +309,8 @@ cssPrefix: pf-c-form
         {{#> form-field-group-body}}
           {{#> form-group form-group--id=(concat form-field-group--id "-label1")}}
             {{#> form-group-label}}
-              {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 1{{/form-label}}
-              {{> form-group-label-help form-group-label-help--aria-label="More information for Label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+              {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}label 1{{/form-label}}
+              {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
             {{/form-group-label}}
             {{#> form-group-control}}
               {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -319,7 +319,7 @@ cssPrefix: pf-c-form
           {{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
             {{#> form-group-label}}
               {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 2{{/form-label}}
-              {{> form-group-label-help form-group-label-help--aria-label="More information for Label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+              {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
             {{/form-group-label}}
             {{#> form-group-control}}
               {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -362,8 +362,8 @@ cssPrefix: pf-c-form
       {{/reset}}
       {{#> form-group form-group--id=(concat form-field-group--id "-label1")}}
         {{#> form-group-label}}
-          {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 1{{/form-label}}
-          {{> form-group-label-help form-group-label-help--aria-label="More information for Label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+          {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}label 1{{/form-label}}
+          {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
         {{/form-group-label}}
         {{#> form-group-control}}
           {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -372,7 +372,7 @@ cssPrefix: pf-c-form
       {{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 2{{/form-label}}
-          {{> form-group-label-help form-group-label-help--aria-label="More information for Label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+          {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
         {{/form-group-label}}
         {{#> form-group-control}}
           {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -415,7 +415,7 @@ cssPrefix: pf-c-form
       {{#> form-group form-group--id=(concat form-field-group--id "-label1")}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 1{{/form-label}}
-          {{> form-group-label-help form-group-label-help--aria-label="More information for Label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+          {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
         {{/form-group-label}}
         {{#> form-group-control}}
           {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -424,7 +424,7 @@ cssPrefix: pf-c-form
       {{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 2{{/form-label}}
-          {{> form-group-label-help form-group-label-help--aria-label="More information for Label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+          {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
         {{/form-group-label}}
         {{#> form-group-control}}
           {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -442,7 +442,7 @@ cssPrefix: pf-c-form
           {{#> form-group form-group--id=(concat form-field-group--id "-label1")}}
             {{#> form-group-label}}
               {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 1{{/form-label}}
-              {{> form-group-label-help form-group-label-help--aria-label="More information for Label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+              {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
             {{/form-group-label}}
             {{#> form-group-control}}
               {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -451,7 +451,7 @@ cssPrefix: pf-c-form
           {{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
             {{#> form-group-label}}
               {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 2{{/form-label}}
-              {{> form-group-label-help form-group-label-help--aria-label="More information for Label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+              {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
             {{/form-group-label}}
             {{#> form-group-control}}
               {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -474,7 +474,7 @@ cssPrefix: pf-c-form
           {{#> form-group form-group--id=(concat form-field-group--id "-label1")}}
             {{#> form-group-label}}
               {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 1{{/form-label}}
-              {{> form-group-label-help form-group-label-help--aria-label="More information for Label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+              {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
             {{/form-group-label}}
             {{#> form-group-control}}
               {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -483,7 +483,7 @@ cssPrefix: pf-c-form
           {{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
             {{#> form-group-label}}
               {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 2{{/form-label}}
-              {{> form-group-label-help form-group-label-help--aria-label="More information for Label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+              {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
             {{/form-group-label}}
             {{#> form-group-control}}
               {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -516,7 +516,7 @@ cssPrefix: pf-c-form
       {{#> form-group form-group--id=(concat form-field-group--id "-label1")}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 1{{/form-label}}
-          {{> form-group-label-help form-group-label-help--aria-label="More information for Label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+          {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
         {{/form-group-label}}
         {{#> form-group-control}}
           {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -525,7 +525,7 @@ cssPrefix: pf-c-form
       {{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 2{{/form-label}}
-          {{> form-group-label-help form-group-label-help--aria-label="More information for Label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+          {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
         {{/form-group-label}}
         {{#> form-group-control}}
           {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -536,7 +536,7 @@ cssPrefix: pf-c-form
   {{#> form-group form-group--id="-label3"}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 3{{/form-label}}
-      {{> form-group-label-help form-group-label-help--aria-label="More information for Label 3 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+      {{> form-group-label-help form-group-label-help--aria-label="More information for label 3 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -545,7 +545,7 @@ cssPrefix: pf-c-form
   {{#> form-group form-group--id="-label4"}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Label 4{{/form-label}}
-      {{> form-group-label-help form-group-label-help--aria-label="More information for Label 4 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+      {{> form-group-label-help form-group-label-help--aria-label="More information for label 4 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
