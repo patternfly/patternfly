@@ -494,7 +494,7 @@ import './Wizard.css'
 | `.pf-c-wizard__header` | `<header>` | Initiates the header. **Required** when the wizard is in a modal. Not recommended to use when the wizard is placed on a page. |
 | `.pf-c-wizard__close` | `.pf-c-button.pf-m-plain` | Initiates the close button. **Required** |
 | `.pf-c-wizard__title` | `.pf-c-title.pf-m-3xl` | Initiates the title. **Required** |
-| `.pf-c-wizard__description` | `<p>` | Initiates the description. |
+| `.pf-c-wizard__description` | `<div>`, `<p>` | Initiates the description. |
 | `.pf-c-wizard__toggle` | `<button>` | Initiates the mobile steps menu toggle button. **Required** |
 | `.pf-c-wizard__toggle-list` | `<span>` | Initiates the toggle list. **Required** |
 | `.pf-c-wizard__toggle-list-item` | `<span>` | Initiates a toggle list item. **Required** |
