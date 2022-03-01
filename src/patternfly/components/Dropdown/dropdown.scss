@@ -142,8 +142,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__group-title--Color: var(--pf-global--Color--dark-200);
 
   // Image
-  --pf-c-dropdown__toggle-image--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-dropdown__toggle-image--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-dropdown__toggle-image--MarginTop: 0; // remove at breaking change
+  --pf-c-dropdown__toggle-image--MarginBottom: 0; // remove at breaking change
   --pf-c-dropdown__toggle-image--MarginRight: var(--pf-global--spacer--sm);
 
   // Divider
@@ -537,9 +537,11 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 .pf-c-dropdown__toggle-image {
   display: inline-flex;
   flex-shrink: 0;
+  align-self: center;
   margin-top: var(--pf-c-dropdown__toggle-image--MarginTop);
   margin-right: var(--pf-c-dropdown__toggle-image--MarginRight);
   margin-bottom: var(--pf-c-dropdown__toggle-image--MarginBottom);
+  line-height: 1;
 
   &:last-child {
     --pf-c-dropdown__toggle-image--MarginRight: 0;
