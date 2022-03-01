@@ -1,7 +1,8 @@
 {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-search-filter ' toolbar-item-search-filter--modifier)}}
   {{#> input-group input-group--attribute=(concat 'aria-label="search filter" role="group"')}}
-    {{> dropdown dropdown--id=(concat toolbar--id '-' button--id) dropdown-toggle--text="Name"}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" id="' toolbar--id '-' button--id '-search-filter-input" name="' toolbar--id '-search-filter-input" aria-label="input with dropdown and button" aria-describedby="' toolbar--id '-' button--id '-button"')}}
-    {{/form-control}}
+    {{#> select select--attribute='style="width: 175px"' id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
+      Name
+    {{/select}}
+    {{> search-input search-input--placeholder="Filter by name"}}
   {{/input-group}}
 {{/toolbar-item}}

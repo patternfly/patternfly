@@ -210,8 +210,7 @@ import './application-launcher.css'
 {{#> app-launcher app-launcher--id="app-launcher-favorites" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-menu-search}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="search" aria-label="Type to filter" placeholder="Filter by name..." id="' app-launcher--id '-text-input" name="textInput1"')}}
-        {{/form-control}}
+      {{> search-input}}
     {{/app-launcher-menu-search}}
     {{#> app-launcher-group}}
       {{#> app-launcher-group-title}}

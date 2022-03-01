@@ -14,6 +14,9 @@
   {{#if search-input--placeholder}}
     placeholder="{{search-input--placeholder}}"
     aria-label="{{search-input--placeholder}}"
+  {{else}}
+    placeholder="Search"
+    aria-label="Search"
   {{/if}}
   {{#if search-input-text-input--IsHintText}}
     value="{{search-input--hint-text}}"

@@ -952,7 +952,7 @@ import './Menu.css'
 {{#> menu menu--id="scrollable-menu-search-footer-example" menu--modifier="pf-m-scrollable"}}
   {{#> menu-search}}
     {{#> menu-search-input}}
-      {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
+      {{> search-input}}
     {{/menu-search-input}}
   {{/menu-search}}
   {{> divider}}
@@ -972,7 +972,7 @@ import './Menu.css'
 {{#> menu}}
   {{#> menu-search}}
     {{#> menu-search-input}}
-      {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
+      {{> search-input}}
     {{/menu-search-input}}
   {{/menu-search}}
   {{> divider}}
@@ -1671,7 +1671,7 @@ import './Menu.css'
 {{#> menu menu--id="plain-with-search-and-footer-example" menu--modifier="pf-m-plain"}}
   {{#> menu-search}}
     {{#> menu-search-input}}
-      {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
+      {{> search-input}}
     {{/menu-search-input}}
   {{/menu-search}}
   {{> divider}}
@@ -1691,7 +1691,7 @@ import './Menu.css'
 {{#> menu menu--id="plain-scrollable-with-search-and-footer-example" menu--modifier="pf-m-plain pf-m-scrollable"}}
   {{#> menu-search}}
     {{#> menu-search-input}}
-      {{> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute=(concat 'type="search" id="' id '-search-input" name="' id '-search-input" aria-label="Search"')}}
+      {{> search-input}}
     {{/menu-search-input}}
   {{/menu-search}}
   {{> divider}}

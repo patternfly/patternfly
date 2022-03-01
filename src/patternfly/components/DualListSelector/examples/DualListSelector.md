@@ -19,7 +19,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -89,7 +89,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -128,7 +128,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -198,7 +198,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -237,7 +237,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -307,7 +307,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -346,7 +346,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -416,7 +416,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -458,7 +458,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -528,7 +528,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -571,7 +571,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -667,7 +667,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -706,7 +706,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -795,7 +795,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -847,7 +847,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-header}}
       {{#> dual-list-selector-tools}}
         {{#> dual-list-selector-tools-filter}}
-          {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+        {{> search-input search-input--placeholder="Filter options"}}
         {{/dual-list-selector-tools-filter}}
         {{#> dual-list-selector-tools-actions}}
           {{#> dual-list-selector-tools-actions-item}}
@@ -911,7 +911,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-header}}
       {{#> dual-list-selector-tools}}
         {{#> dual-list-selector-tools-filter}}
-          {{> form-control form-control--modifier="pf-m-search" controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="Filter options" id="' dual-list-selector-pane--id '-filter" aria-label="Filter options"')}}
+          {{> search-input search-input--placeholder="Filter options"}}
         {{/dual-list-selector-tools-filter}}
         {{#> dual-list-selector-tools-actions}}
           {{#> dual-list-selector-tools-actions-item}}

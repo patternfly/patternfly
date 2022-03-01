@@ -103,8 +103,7 @@ beta: true
 ```hbs
 {{#> tree-view}}
   {{#> tree-view-search}}
-    {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-search" form-control--attribute='type="search" id="input-search" name="search-input" aria-label="Search input example"'}}
-    {{/form-control}}
+    {{> search-input}}
   {{/tree-view-search}}
   {{> divider}}
   {{#> tree-view-list tree-view-list--IsRoot="true"}}
