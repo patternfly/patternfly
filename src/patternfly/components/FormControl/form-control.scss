@@ -55,7 +55,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   --pf-c-form-control--focus--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-c-form-control--focus--BorderBottomWidth));
   --pf-c-form-control--focus--BorderBottomColor: var(--pf-global--primary-color--100);
 
-  // focus
+  // expanded
   --pf-c-form-control--m-expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-form-control--m-expanded--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-c-form-control--focus--BorderBottomWidth));
   --pf-c-form-control--m-expanded--BorderBottomColor: var(--pf-global--primary-color--100);
@@ -182,6 +182,20 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
 
   // Textarea invalid
   --pf-c-form-control--textarea--invalid--BackgroundPositionY: var(--pf-c-form-control--PaddingLeft); // update to use --pf-c-form-control--inset--base at breaking change
+
+  // Icon sprite
+  --pf-c-form-control--m-icon-sprite--success--BackgroundUrl: url("#{$pf-global--image-path}/status-icon-sprite.svg#success");
+  --pf-c-form-control--m-icon-sprite--m-warning--BackgroundUrl: url("#{$pf-global--image-path}/status-icon-sprite.svg#warning");
+  --pf-c-form-control--m-icon-sprite--m-invalid--BackgroundUrl: url("#{$pf-global--image-path}/status-icon-sprite.svg#invalid");
+  --pf-c-form-control--m-icon-sprite__select--BackgroundUrl: url("#{$pf-global--image-path}/status-icon-sprite.svg#select");
+  --pf-c-form-control--m-icon-sprite--m-search--BackgroundUrl: url("#{$pf-global--image-path}/status-icon-sprite.svg#search");
+  --pf-c-form-control--m-icon-sprite--m-calendar--BackgroundUrl: url("#{$pf-global--image-path}/status-icon-sprite.svg#calendar");
+  --pf-c-form-control--m-icon-sprite--m-clock--BackgroundUrl: url("#{$pf-global--image-path}/status-icon-sprite.svg#clock");
+  --pf-c-form-control--m-icon-sprite__select--BackgroundSize: var(--pf-c-form-control--FontSize);
+  --pf-c-form-control--m-icon-sprite__select--BackgroundPositionX: calc(100% - var(--pf-global--spacer--md) + 7px);
+  --pf-c-form-control--m-icon-sprite__select--success--BackgroundPosition: calc(100% - var(--pf-global--spacer--md) + 1px - var(--pf-global--spacer--lg));
+  --pf-c-form-control--m-icon-sprite__select--m-warning--BackgroundPosition: calc(100% - var(--pf-global--spacer--md) - var(--pf-global--spacer--lg) + #{pf-size-prem(1px)});
+  --pf-c-form-control--m-icon-sprite__select--invalid--BackgroundPosition: calc(100% - var(--pf-global--spacer--md) - var(--pf-global--spacer--lg));
 
   // This component always needs to be light
   @include pf-t-light;
@@ -333,6 +347,21 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
     &.pf-m-clock {
       --pf-c-form-control--m-icon--BackgroundUrl: var(--pf-c-form-control--m-clock--BackgroundUrl);
     }
+  }
+
+  &.pf-m-icon-sprite {
+    --pf-c-form-control--success--BackgroundUrl: var(--pf-c-form-control--m-icon-sprite--success--BackgroundUrl);
+    --pf-c-form-control--m-warning--BackgroundUrl: var(--pf-c-form-control--m-icon-sprite--m-warning--BackgroundUrl);
+    --pf-c-form-control--m-invalid--BackgroundUrl: var(--pf-c-form-control--m-icon-sprite--m-invalid--BackgroundUrl);
+    --pf-c-form-control__select--BackgroundUrl: var(--pf-c-form-control--m-icon-sprite__select--BackgroundUrl);
+    --pf-c-form-control--m-search--BackgroundUrl: var(--pf-c-form-control--m-icon-sprite--m-search--BackgroundUrl);
+    --pf-c-form-control--m-calendar--BackgroundUrl: var(--pf-c-form-control--m-icon-sprite--m-calendar--BackgroundUrl);
+    --pf-c-form-control--m-clock--BackgroundUrl: var(--pf-c-form-control--m-icon-sprite--m-clock--BackgroundUrl);
+    --pf-c-form-control__select--BackgroundSize: var(--pf-c-form-control--m-icon-sprite__select--BackgroundSize);
+    --pf-c-form-control__select--BackgroundPositionX: var(--pf-c-form-control--m-icon-sprite__select--BackgroundPositionX);
+    --pf-c-form-control__select--success--BackgroundPosition: var(--pf-c-form-control--m-icon-sprite__select--success--BackgroundPosition);
+    --pf-c-form-control__select--m-warning--BackgroundPosition: var(--pf-c-form-control--m-icon-sprite__select--m-warning--BackgroundPosition);
+    --pf-c-form-control__select--invalid--BackgroundPosition: var(--pf-c-form-control--m-icon-sprite__select--invalid--BackgroundPosition);
   }
 
   @at-root select#{&} {
