@@ -26,9 +26,6 @@
   {{#if menu-toggle--modifier}} {{menu-toggle--modifier}}{{/if}}"
   {{#unless menu-toggle--IsSplitButton}}
     type="button"
-    {{#if menu-toggle--IsDisabled}}
-      disabled
-    {{/if}}
     {{#if menu-toggle--IsExpanded}}
       aria-expanded="true"
     {{else}}

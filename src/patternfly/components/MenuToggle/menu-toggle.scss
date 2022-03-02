@@ -118,6 +118,8 @@
   --pf-c-menu-toggle--m-split-button--child--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-menu-toggle--m-split-button--child--disabled--Color: var(--pf-global--Color--dark-200);
   --pf-c-menu-toggle--m-split-button--child--disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-menu-toggle--m-split-button--first-child--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-menu-toggle--m-split-button--last-child--PaddingLeft: 0;
 
   // Split button, action
   --pf-c-menu-toggle--m-split-button--m-action--child--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
@@ -321,14 +323,21 @@
       position: relative;
       padding: var(--pf-c-menu-toggle--PaddingTop) var(--pf-c-menu-toggle--PaddingRight) var(--pf-c-menu-toggle--PaddingBottom) var(--pf-c-menu-toggle--PaddingLeft);
 
-      &.pf-c-check {
-        --pf-c-menu-toggle--PaddingRight: 0;
+      &:first-child {
+        padding-right: var(--pf-c-menu-toggle--m-split-button--first-child--PaddingRight);
+      }
+    }
+
+    &:where(:not(.pf-m-action)) {
+      > :last-child {
+        padding-left: var(--pf-c-menu-toggle--m-split-button--last-child--PaddingLeft);
       }
     }
 
     > .pf-c-check {
+      --pf-c-menu-toggle--PaddingRight: 0;
       --pf-c-check__input--MarginTop: 0;
-      --pf-c-check__label--Color: inherit;
+      --pf-c-check__label--Color: var(--pf-c-check__label--Color, inherit);
 
       align-items: center;
       align-self: stretch;
@@ -433,7 +442,7 @@
 
     // disable accent border
     &.pf-m-disabled,
-    &[disabled] {
+    &:disabled {
       --pf-c-menu-toggle--m-split-button--child--BackgroundColor: var(--pf-c-menu-toggle--m-split-button--child--disabled--BackgroundColor);
       --pf-c-menu-toggle--m-split-button--child--Color: var(--pf-c-menu-toggle--m-split-button--child--disabled--Color);
       --pf-c-menu-toggle--m-split-button--m-action--child--BorderLeftColor: transparent;
@@ -445,8 +454,8 @@
     }
 
     // disabled styles for children
-    > [disabled],
-    > .pf-m-disabled {
+    > .pf-m-disabled,
+    > :disabled {
       --pf-c-menu-toggle--m-split-button--m-action--child--BorderLeftColor: transparent;
 
       color: var(--pf-c-menu-toggle--m-split-button--child--disabled--Color);

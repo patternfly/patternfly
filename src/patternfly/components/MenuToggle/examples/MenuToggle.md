@@ -8,6 +8,184 @@ cssPrefix: pf-c-menu-toggle
 import './MenuToggle.css'
 
 ## Examples
+
+### Collapsed
+```hbs
+{{#> menu-toggle}}
+  {{#> menu-toggle-text}}
+    Collapsed
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
+### Expanded
+```hbs
+{{#> menu-toggle menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-text}}
+    Expanded
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
+### Disabled
+```hbs
+{{#> menu-toggle menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-text}}
+    Disabled
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
+### Count
+```hbs
+{{#> menu-toggle}}
+  {{#> menu-toggle-text}}
+    Count
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-count}}
+    {{#> badge badge--modifier="pf-m-unread"}}
+      4 selected
+    {{/badge}}
+  {{/menu-toggle-count}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
+### Primary
+```hbs
+{{#> menu-toggle menu-toggle--IsPrimary="true"}}
+  {{#> menu-toggle-text}}
+    Collapsed
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsPrimary="true"}}
+  {{#> menu-toggle-icon}}
+    <i class="fas fa-cog" aria-hidden="true"></i>
+  {{/menu-toggle-icon}}
+  {{#> menu-toggle-text}}
+    Icon
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsPrimary="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-text}}
+    Expanded
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsPrimary="true" menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-text}}
+    Disabled
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
+### Secondary
+```hbs
+{{#> menu-toggle menu-toggle--IsSecondary="true"}}
+  {{#> menu-toggle-text}}
+    Collapsed
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsExpanded="true"}}
+  {{#> menu-toggle-text}}
+    Expanded
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-text}}
+    Disabled
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
+### Plain
+```hbs
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
+  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsExpanded="true" menu-toggle--attribute='aria-label="Actions"'}}
+  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"'}}
+  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+{{/menu-toggle}}
+```
+
+### Plain with text
+```hbs
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true" menu-toggle--IsDisabled="true"}}
+  {{#> menu-toggle-text}}
+    Disabled
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
+{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
+  {{#> menu-toggle-text}}
+    Custom text
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+```
+
 ### Split button (checkbox)
 ```hbs
 {{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDisabled="true" menu-toggle--IsSplitButton="true"}}
@@ -262,183 +440,6 @@ import './MenuToggle.css'
       {{> menu-toggle-toggle-icon}}
     {{/menu-toggle-controls}}
   {{/menu-toggle-button}}
-{{/menu-toggle}}
-```
-
-### Collapsed
-```hbs
-{{#> menu-toggle}}
-  {{#> menu-toggle-text}}
-    Collapsed
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-```
-
-### Expanded
-```hbs
-{{#> menu-toggle menu-toggle--IsExpanded="true"}}
-  {{#> menu-toggle-text}}
-    Expanded
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-```
-
-### Disabled
-```hbs
-{{#> menu-toggle menu-toggle--IsDisabled="true"}}
-  {{#> menu-toggle-text}}
-    Disabled
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-```
-
-### Count
-```hbs
-{{#> menu-toggle}}
-  {{#> menu-toggle-text}}
-    Count
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-count}}
-    {{#> badge badge--modifier="pf-m-unread"}}
-      4 selected
-    {{/badge}}
-  {{/menu-toggle-count}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-```
-
-### Primary
-```hbs
-{{#> menu-toggle menu-toggle--IsPrimary="true"}}
-  {{#> menu-toggle-text}}
-    Collapsed
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-
-&nbsp;
-
-{{#> menu-toggle menu-toggle--IsPrimary="true"}}
-  {{#> menu-toggle-icon}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
-  {{/menu-toggle-icon}}
-  {{#> menu-toggle-text}}
-    Icon
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-
-&nbsp;
-
-{{#> menu-toggle menu-toggle--IsPrimary="true" menu-toggle--IsExpanded="true"}}
-  {{#> menu-toggle-text}}
-    Expanded
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-
-&nbsp;
-
-{{#> menu-toggle menu-toggle--IsPrimary="true" menu-toggle--IsDisabled="true"}}
-  {{#> menu-toggle-text}}
-    Disabled
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-```
-
-### Secondary
-```hbs
-{{#> menu-toggle menu-toggle--IsSecondary="true"}}
-  {{#> menu-toggle-text}}
-    Collapsed
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-
-&nbsp;
-
-{{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsExpanded="true"}}
-  {{#> menu-toggle-text}}
-    Expanded
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-
-&nbsp;
-
-{{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsDisabled="true"}}
-  {{#> menu-toggle-text}}
-    Disabled
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-```
-
-### Plain
-```hbs
-{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
-  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-{{/menu-toggle}}
-
-&nbsp;
-
-{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsExpanded="true" menu-toggle--attribute='aria-label="Actions"'}}
-  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-{{/menu-toggle}}
-
-&nbsp;
-
-{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsDisabled="true" menu-toggle--attribute='aria-label="Actions"'}}
-  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-{{/menu-toggle}}
-```
-
-### Plain with text
-```hbs
-{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true" menu-toggle--IsDisabled="true"}}
-  {{#> menu-toggle-text}}
-    Disabled
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-
-&nbsp;
-
-{{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--IsText="true"}}
-  {{#> menu-toggle-text}}
-    Custom text
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
 {{/menu-toggle}}
 ```
 
