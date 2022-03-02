@@ -2970,7 +2970,13 @@ Add a [width modifier](#width-modifiers) to `thead th` to limit string length or
 
 ## Sticky table modifiers
 
-Sticky table headers and columns have a higher z-index than the z-index used for menus (dropdown, select, etc). The intent is that the contents of a scrollable table will scroll under the sticky header/column, including any expanded menus. However, there may be use cases where a menu needs to appear on top of a sticky header/column, such as a menu placed inside of a toolbar above a table with a sticky header. In these cases it's advised to append the menu to an element outside of the table (e.g., the  <code>body</code> element) so that the menu has a higher stacking context than - and can appear on top of - sticky header/columns as well as appear outside of any scrollable content in the table. Typically this is achieved via the <code>menuAppendTo</code> prop in non-composable react components. Another approach may be to manipulate the z-index of the menu manually. In the case where the menu is outside of the table, another approach may be to assign the entire table a z-index lower than the z-index of the menu, creating a lower stacking context for the table compared to the menu outside of the table, preserving the stacking context of the elements inside of the table.
+**Note:** Sticky table headers and columns have a higher `z-index` than the `z-index` used for menus (dropdown, select, etc). The intent is that the contents of a scrollable table will scroll under the sticky header/column, including any expanded menus. However, there may be use cases where a menu needs to appear on top of a sticky header/column, such as an expanded menu in a toolbar above a table with a sticky header.
+
+There are a few ways this can be handled:
+
+- Manipulate the `z-index` of the menu and/or table headers/columns manually.
+- Use the `menuAppendTo` prop in non-composable react components with menus to append the menu to an element outside of the table (e.g., the `<body>` element) so that the menu has a higher stacking context than - and can appear on top of - sticky headers/columns as well as appear outside of any scrollable content in the table.
+- In the case where the menu is outside of the table (e.g., above the table in a toolbar, or below the table and the menu expands up), assign the entire table a lower `z-index`  than the `z-index` of the menu. This creates a lower stacking context for the entire table compared to the menu, while preserving the stacking context of the elements inside of the table.
 
 ### Sticky header
 ```hbs
