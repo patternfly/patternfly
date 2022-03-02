@@ -124,6 +124,72 @@ Resizes horizontally
 {{/form-control}}
 ```
 
+### Icon sprite
+**Note:** The icons for the success, invalid, calendar, etc varations in form control elemements are applied as background images to the form element. By default, the image URLs for these icons are data URIs. However, there may be cases where data URIs are not ideal, such as in an application with a content security policy that disallows data URIs for security reasons. The `.pf-m-icon-sprite` variation changes the icon source to an external SVG file that serves as a sprite for all of the supported icons.
+
+```hbs isBeta
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-success pf-m-icon-sprite" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-warning pf-m-icon-sprite" form-control--attribute='type="text" value="Warning" id="input-warning" aria-label="Warning state input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon-sprite" form-control--attribute='required type="text" value="Error" id="input-error" aria-invalid="true" aria-label="Error state input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-search pf-m-icon-sprite" form-control--attribute='type="search" value="Search" id="input-search" name="search-input" aria-label="Search input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-calendar pf-m-icon-sprite" form-control--attribute='type="text" value="Calendar" id="input-calendar" name="input-calendar" aria-label="Calendar input example"'}}
+<br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-icon pf-m-clock pf-m-icon-sprite" form-control--attribute='type="text" value="Clock" id="input-clock" name="input-clock" aria-label="Clock input example"'}}
+<br><br>
+{{#> form-control controlType="select" form-control--modifier="pf-m-success pf-m-icon-sprite" form-control--attribute='id="select-group-success" name="select-group-success" aria-label="Success state select group example"'}}
+  <option value="">Valid option</option>
+  <optgroup label="Group 1">
+    <option value="Option 1">The first option</option>
+    <option value="Option 2">The second option</option>
+  </optgroup>
+  <optgroup label="Group 2">
+    <option value="Option 3">The third option</option>
+    <option value="Option 4">The fourth option</option>
+  </optgroup>
+{{/form-control}}
+<br><br>
+{{#> form-control controlType="select" form-control--modifier="pf-m-warning pf-m-icon-sprite" form-control--attribute='id="select-group-warning" name="select-group-warning" aria-label="Warning state select group example"'}}
+  <option value="">Warning option</option>
+  <optgroup label="Group 1">
+    <option value="Option 1">The first option</option>
+    <option value="Option 2">The second option</option>
+  </optgroup>
+  <optgroup label="Group 2">
+    <option value="Option 3">The third option</option>
+    <option value="Option 4">The fourth option</option>
+  </optgroup>
+{{/form-control}}
+<br><br>
+{{#> form-control controlType="select" for-control--modifier="pf-m-icon-sprite" form-control--attribute='required aria-invalid="true" id="select-group-error" name="select-group-error" aria-label="Error state select group example"'}}
+  <option value="">Invalid option</option>
+  <optgroup label="Group 1">
+    <option value="Option 1">The first option</option>
+    <option value="Option 2">The second option</option>
+  </optgroup>
+  <optgroup label="Group 2">
+    <option value="Option 3">The third option</option>
+    <option value="Option 4">The fourth option</option>
+  </optgroup>
+{{/form-control}}
+<br><br>
+{{#> form-control controlType="textarea" form-control--modifier="pf-m-success pf-m-icon-sprite" form-control--attribute='name="textarea-success" id="textarea-success" aria-label="Success state textarea example"'}}
+Success
+{{/form-control}}
+<br><br>
+{{#> form-control controlType="textarea" form-control--modifier="pf-m-warning pf-m-icon-sprite" form-control--attribute='name="textarea-warning" id="textarea-warning" aria-label="Warning state textarea example"'}}
+Warning
+{{/form-control}}
+<br><br>
+{{#> form-control controlType="textarea" for-control--modifier="pf-m-icon-sprite" form-control--attribute='required name="textarea-error" id="textarea-error" aria-label="Error state textarea example" aria-invalid="true"'}}
+Error
+{{/form-control}}
+
+```
+
 ## Documentation
 
 ### Accessibility
@@ -142,6 +208,7 @@ Resizes horizontally
 | `.pf-m-resize-horizontal` | `textarea.pf-m-form-control` | Modifies a `textarea.pf-c-form-control` element so it can only be resized horizontally along the x-axis. |
 | `.pf-m-success` | `.pf-c-form-control` | Modifies a form control for the success state. |
 | `.pf-m-warning` | `.pf-c-form-control` | Modifies a form control for the warning state. |
+| `.pf-m-icon-sprite` | `.pf-c-form-control` | Modifies form control element to use an external SVG sprite instead of embedded data URIs for icons. For use with apps whose content security policies disallow the use of data URIs. |
 | `.pf-m-icon` | `input.pf-c-form-control` | Modifies a form control text input to be able to specify a custom SVG background via `--pf-c-form-control--m-icon--BackgroundUrl`, and other optional vars for other background properties.
 | `.pf-m-calendar` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the calendar icon. |
 | `.pf-m-clock` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the clock icon. |
