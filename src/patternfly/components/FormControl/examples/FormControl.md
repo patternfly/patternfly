@@ -125,7 +125,9 @@ Resizes horizontally
 ```
 
 ### Icon sprite
-```hbs
+**Note:** The icons for the success, invalid, calendar, etc varations in form control elemements are applied as background images to the form element. By default, the image URLs for these icons are data URIs. However, there may be cases where data URIs are not ideal, such as in an application with a content security policy that disallows data URIs for security reasons. The `.pf-m-icon-sprite` variation changes the icon source to an external SVG file that serves as a sprite for all of the supported icons.
+
+```hbs isBeta
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-success pf-m-icon-sprite" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}
 <br><br>
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-warning pf-m-icon-sprite" form-control--attribute='type="text" value="Warning" id="input-warning" aria-label="Warning state input example"'}}
