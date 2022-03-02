@@ -102,21 +102,15 @@
   --pf-c-menu__group-title--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-menu__group-title--Color: var(--pf-global--Color--200);
 
-  // Menu label
-  --pf-c-menu__label--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-menu__label--LineHeight: var(--pf-global--LineHeight--sm);
-
-  // Menu check
-  --pf-c-menu__check-input--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-menu__check-input--Height: var(--pf-c-menu__label--FontSize);
-  --pf-c-menu__check-input--MarginTop: calc(((var(--pf-c-menu__label--FontSize) * var(--pf-c-menu__label--LineHeight)) - var(--pf-c-menu__check-input--Height)) / 2);
-
   // Description
   --pf-c-menu__item-description--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-menu__item-description--Color: var(--pf-global--Color--200);
 
   // Icon
   --pf-c-menu__item-icon--MarginRight: var(--pf-global--spacer--sm);
+
+  // Check
+  --pf-c-menu__item-check--MarginRight: var(--pf-global--spacer--sm);
 
   // Toggle icon
   --pf-c-menu__item-toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
@@ -608,26 +602,10 @@
       opacity: 1;
     }
   }
-}
 
-.pf-c-menu__check-input {
-  height: var(--pf-c-menu__check-input--Height);
-  margin-top: var(--pf-c-menu__check-input--MarginTop);
-  margin-right: var(--pf-c-menu__check-input--MarginRight);
-}
-
-.pf-c-menu__label {
-  display: flex;
-  flex-grow: 1;
-  padding-top: var(--pf-c-menu__item--PaddingTop);
-  padding-bottom: var(--pf-c-menu__item--PaddingBottom);
-  margin-top: calc(var(--pf-c-menu__item--PaddingTop) * -1);
-  margin-bottom: calc(var(--pf-c-menu__item--PaddingBottom) * -1);
-  overflow: hidden;
-  font-size: var(--pf-c-menu__label--FontSize);
-  line-height: var(--pf-c-menu__label--LineHeight);
-  text-overflow: ellipsis;
-  cursor: pointer;
+  @at-root label#{&}:where(:not([disabled], .pf-m-disabled)) {
+    cursor: pointer;
+  }
 }
 
 .pf-c-menu__item-main {
@@ -675,6 +653,15 @@
 // General icon
 .pf-c-menu__item-icon {
   margin-right: var(--pf-c-menu__item-icon--MarginRight);
+}
+
+// Check
+.pf-c-menu__item-check {
+  margin-right: var(--pf-c-menu__item-check--MarginRight);
+
+  .pf-c-check {
+    grid-template-columns: auto; // update pf-c-check grid-template-columns to grid-auto-columns: 1fr at breaking change
+  }
 }
 
 // Toggle icon

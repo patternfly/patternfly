@@ -105,26 +105,14 @@ import './Menu.css'
 {{#> menu menu--id="with-checkbox-example"}}
   {{#> menu-content}}
     {{#> menu-list}}
-      {{#> menu-list-item menu-list-item--id="1"}}
-        {{#> menu-item menu-item--IsCheckbox="true"}}
-          {{#> menu-item-main}}
-            {{> menu-label menu-label--text="Checkbox 1"}}
-          {{/menu-item-main}}
-        {{/menu-item}}
+      {{#> menu-list-item menu-list-item--id="1" menu-list-item--IsCheckbox="true"}}
+        {{> menu-item menu-item--text=(concat "Checkbox " menu-list-item--id)}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--id="2"}}
-        {{#> menu-item menu-item--IsCheckbox="true"}}
-          {{#> menu-item-main}}
-            {{> menu-label menu-label--text="Checkbox 2"}}
-          {{/menu-item-main}}
-        {{/menu-item}}
+      {{#> menu-list-item menu-list-item--id="2" menu-list-item--IsCheckbox="true"}}
+        {{> menu-item menu-item--text=(concat "Checkbox " menu-list-item--id)}}
       {{/menu-list-item}}
-      {{#> menu-list-item menu-list-item--id="3" menu-list-item--IsDisabled="true"}}
-        {{#> menu-item menu-item--IsCheckbox="true"}}
-          {{#> menu-item-main}}
-            {{> menu-label menu-label--text="Checkbox 3"}}
-          {{/menu-item-main}}
-        {{/menu-item}}
+      {{#> menu-list-item menu-list-item--id="3" menu-list-item--IsCheckbox="true" menu-list-item--IsDisabled="true"}}
+        {{> menu-item menu-item--text=(concat "Checkbox " menu-list-item--id)}}
       {{/menu-list-item}}
     {{/menu-list}}
   {{/menu-content}}
@@ -1744,7 +1732,7 @@ import './Menu.css'
 | -- | -- | -- |
 | `role="menu"` | `.pf-c-menu__list` | Declares `.pf-c-menu__list` as a menu. |
 | `disabled` | `button.pf-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
-| `role="menuitem"` | `.pf-c-menu__item` | Assigns `.pf-c-menu__item` as an option in a set of choices contained by a menu. |
+| `role="menuitem"` | `.pf-c-menu__item`, `.pf-c-menu__list-item (checkbox)` | Assigns `.pf-c-menu__item` as an option in a set of choices contained by a menu. |
 | `role="none"` | `.pf-c-menu__list-item` | Removes semantic meaning from `.pf-c-menu__list-item`. |
 | `aria-disabled="true"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
 | `tabindex="-1"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
@@ -1762,11 +1750,11 @@ import './Menu.css'
 | `.pf-c-menu__content` | `<div>` | Initiates the menu content. Use for lists. **Required** |
 | `.pf-c-menu__list` | `<ul>` | Initiates the menu list. **Required** |
 | `.pf-c-menu__list-item` | `<li>` | Initiates the menu list item. **Required** |
-| `.pf-c-menu__item` | `<button>`, `<a>`, `<div>` | Initiates the menu item. **Required** |
+| `.pf-c-menu__item` | `<button>`, `<a>`, `<div>`, `<label>` | Initiates the menu item. **Required** |
 | `.pf-c-menu__item-main` | `<span>` | Initiates the menu item main container. **Required** |
 | `.pf-c-menu__item-text` | `<span>` | Initiates the menu item text. **Required** |
-| `.pf-c-menu__label` | `<label>` | Initiates a menu label. |
-| `.pf-c-menu__check-input` | `<input type="checkbox">` | Initiates a menu check input. |
+| `.pf-c-menu__item-text` | `<span>` | Initiates the menu item text. **Required** |
+| `.pf-c-menu__item-check` | `<span>` | Initiates a menu label. |
 | `.pf-c-menu__item-description` | `<span>` | Initiates the menu item description. |
 | `.pf-c-menu__item-group` | `<section>` | Initiates the menu item group. |
 | `.pf-c-menu__item-group-title` | `<h1>` | Initiates the menu item group title. |
