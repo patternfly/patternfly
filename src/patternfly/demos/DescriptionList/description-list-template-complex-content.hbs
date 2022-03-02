@@ -1,0 +1,93 @@
+{{#> description-list}}
+  {{#> description-list-group}}
+    {{#> description-list-term}}
+      {{#> description-list-text}}
+        Name
+      {{/description-list-text}}
+    {{/description-list-term}}
+    {{#> description-list-description}}
+      {{#if description-list--IsLongDescription}}
+        This is a long description that should wrap to multiple lines in a given layout.
+      {{else}}
+        mary-test
+      {{/if}}
+    {{/description-list-description}}
+  {{/description-list-group}}
+  {{#> description-list-group}}
+    {{#> description-list-term}}
+      {{#> description-list-text}}
+        Status
+      {{/description-list-text}}
+    {{/description-list-term}}
+    {{#> description-list-description}}
+      {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+        {{#> l-flex-item}}
+          <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          <span>Active</span>
+        {{/l-flex-item}}
+      {{/l-flex}}
+    {{/description-list-description}}
+  {{/description-list-group}}
+  {{#> description-list-group}}
+    {{#> description-list-term}}
+      {{#> description-list-text}}
+        Default pull secret
+      {{/description-list-text}}
+    {{/description-list-term}}
+    {{#> description-list-description}}
+      <span class="pf-u-color-300">Not configured</span>
+    {{/description-list-description}}
+  {{/description-list-group}}
+  {{#> description-list-group}}
+    {{#> description-list-term}}
+      {{#> description-list-text}}
+        Tolerations
+      {{/description-list-text}}
+    {{/description-list-term}}
+    {{#> description-list-description}}
+      6 Tolerations
+    {{/description-list-description}}
+  {{/description-list-group}}
+  {{#> description-list-group}}
+    {{#> description-list-term}}
+      {{#> description-list-text}}
+        Network Policies
+      {{/description-list-text}}
+    {{/description-list-term}}
+    {{#> description-list-description}}
+      <a href="#">Network Policies</a>
+    {{/description-list-description}}
+  {{/description-list-group}}
+  {{#> description-list-group}}
+    {{#> description-list-term}}
+      {{#> description-list-text}}
+        Display name
+      {{/description-list-text}}
+    {{/description-list-term}}
+    {{#> description-list-description}}
+      mary
+    {{/description-list-description}}
+  {{/description-list-group}}
+  {{#> description-list-group}}
+    {{#> description-list-term}}
+      {{#> description-list-text}}
+        Requester
+      {{/description-list-text}}
+    {{/description-list-term}}
+    {{#> description-list-description}}
+      kube:admin
+    {{/description-list-description}}
+  {{/description-list-group}}
+  {{#> description-list-group}}
+    {{#> description-list-term}}
+      {{#> description-list-text}}
+        Created at:
+      {{/description-list-text}}
+    {{/description-list-term}}
+    {{#> description-list-description}}
+      3 minutes ago
+    {{/description-list-description}}
+  {{/description-list-group}}
+{{/description-list}}
