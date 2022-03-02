@@ -1,4 +1,4 @@
-<button class="pf-c-menu-toggle
+<{{#if menu-toggle--IsSplitButton}}div{{else}}button{{/if}} class="pf-c-menu-toggle
   {{~#if menu-toggle--IsPrimary}}
     pf-m-primary
   {{/if}}
@@ -14,18 +14,29 @@
   {{~#if menu-toggle--IsExpanded}}
     pf-m-expanded
   {{/if}}
+  {{~#if menu-toggle--IsAction}}
+    pf-m-action
+  {{/if}}
+  {{#if menu-toggle--IsSplitButton}}
+    pf-m-split-button
+    {{~#if menu-toggle--IsDisabled}}
+      pf-m-disabled
+    {{/if}}
+  {{/if}}
   {{#if menu-toggle--modifier}} {{menu-toggle--modifier}}{{/if}}"
-  type="button"
-  {{#if menu-toggle--IsExpanded}}
-    aria-expanded="true"
-  {{else}}
-    aria-expanded="false"
-  {{/if}}
-  {{~#if menu-toggle--IsDisabled}}
-    disabled
-  {{/if}}
+  {{#unless menu-toggle--IsSplitButton}}
+    type="button"
+    {{#if menu-toggle--IsExpanded}}
+      aria-expanded="true"
+    {{else}}
+      aria-expanded="false"
+    {{/if}}
+    {{~#if menu-toggle--IsDisabled}}
+      disabled
+    {{/if}}
+  {{/unless}}
   {{#if menu-toggle--attribute}}
     {{{menu-toggle--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</button>
+</{{#if menu-toggle--IsSplitButton}}div{{else}}button{{/if}}>
