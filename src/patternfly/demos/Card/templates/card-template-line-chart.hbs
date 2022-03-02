@@ -1,0 +1,45 @@
+{{#> reset grid--attribute=reset grid-item--attribute=reset grid--modifier=reset grid-item--modifier=reset l-flex--attribute=reset l-flex-item--attribute=reset l-flex--modifier=reset l-flex-item--modifier=reset}}
+  {{#> card card--id=card-template-line-chart--id}}
+    {{#> card-header}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
+          24 hours
+        {{/select}}
+      {{/card-actions}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        {{#> title title--modifier="pf-m-xl" titleType="h2"}}
+          Cluster utilizations
+        {{/title}}
+      {{/card-title}}
+    {{/card-header}}
+    {{#> card card--id=(concat card--id '-group-1') card--modifier="pf-m-plain pf-m-expanded"}}
+      {{#> card-header card-header--modifier="pf-m-toggle-right"}}
+        {{> card-header-toggle}}
+        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+          CPU 1
+        {{/card-title}}
+      {{/card-header}}
+      {{#> card-expandable-content}}
+        {{#> card-body}}
+          {{> card-demo--stacked-sparklines}}
+        {{/card-body}}
+      {{/card-expandable-content}}
+    {{/card}}
+    {{#> card card--id=(concat card--id '-group-2') card--modifier="pf-m-plain"}}
+      {{#> card-header card-header--modifier="pf-m-toggle-right"}}
+        {{> card-header-toggle}}
+        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+          Pod count
+        {{/card-title}}
+      {{/card-header}}
+    {{/card}}
+    {{#> card card--id=(concat card--id '-group-3') card--modifier="pf-m-plain"}}
+      {{#> card-header card-header--modifier="pf-m-toggle-right"}}
+        {{> card-header-toggle}}
+        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+          Memory
+        {{/card-title}}
+      {{/card-header}}
+    {{/card}}
+  {{/card}}
+{{/reset}}

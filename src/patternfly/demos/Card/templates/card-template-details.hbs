@@ -1,0 +1,57 @@
+{{#> reset grid--attribute=reset grid-item--attribute=reset grid--modifier=reset grid-item--modifier=reset l-flex--attribute=reset l-flex-item--attribute=reset l-flex--modifier=reset l-flex-item--modifier=reset}}
+  {{#> card card--id=card-template-details--id}}
+    {{#> card-title}}
+      {{#> title titleType="h2" title--modifier="pf-m-xl"}}
+        Details
+      {{/title}}
+    {{/card-title}}
+    {{#> card-body}}
+      {{#> description-list}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Cluster API Address
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            <a href="#">https://api1.devcluster.openshift.com</a>
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Cluster ID
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            63b97ac1-b850-41d9-8820-239becde9e86
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Provider
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            AWS
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            OpenShift Version
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            4.5.0.ci-2020-06-16-015028
+          {{/description-list-description}}
+        {{/description-list-group}}
+        {{#> description-list-group}}
+          {{#> description-list-term}}
+            Update Channel
+          {{/description-list-term}}
+          {{#> description-list-description}}
+            stable-4.5
+          {{/description-list-description}}
+        {{/description-list-group}}
+      {{/description-list}}
+    {{/card-body}}
+    {{> divider}}
+    {{#> card-footer}}
+      <a href="#">View Settings</a>
+    {{/card-footer}}
+  {{/card}}
+{{/reset}}

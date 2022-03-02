@@ -1,0 +1,42 @@
+{{#> reset grid--attribute=reset grid-item--attribute=reset grid--modifier=reset grid-item--modifier=reset l-flex--attribute=reset l-flex-item--attribute=reset l-flex--modifier=reset l-flex-item--modifier=reset}}
+  {{#> card card--id=card-template-details--id}}
+    {{#> card-title}}
+      {{#> title titleType="h2" title--modifier="pf-m-xl"}}
+        Recomendations by severity
+      {{/title}}
+    {{/card-title}}
+    {{#> card-body}}
+      {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
+        {{#> grid grid--modifier="pf-m-gutter pf-m-all-3-col"}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs pf-m-align-items-center"}}
+            <span class="pf-u-font-size-2xl pf-u-primary-color-100">2</span>
+            <span class="pf-u-font-color-200">Critical</span>
+          {{/l-flex}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs pf-m-align-items-center"}}
+            <span class="pf-u-font-size-2xl pf-u-primary-color-100">5</span>
+            <span class="pf-u-font-color-200">Important</span>
+          {{/l-flex}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs pf-m-align-items-center"}}
+            <span class="pf-u-font-size-2xl pf-u-primary-color-100">7</span>
+            <span class="pf-u-font-color-200">Moderate</span>
+          {{/l-flex}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-xs pf-m-align-items-center"}}
+            <span class="pf-u-font-size-2xl pf-u-primary-color-100">12</span>
+            <span class="pf-u-font-color-200">Low</span>
+          {{/l-flex}}
+        {{/grid}}
+        {{/l-flex}}
+    {{/card-body}}
+    {{#> card-title}}
+      {{#> title titleType="h2" title--modifier="pf-m-xl"}}
+        Recomendations by category
+      {{/title}}
+    {{/card-title}}
+    {{#> card-body}}
+      <img src="/assets/images/img_pie-chart-with-legend.png" alt="Pie chart" width="450" />
+    {{/card-body}}
+    {{#> card-footer}}
+      <a href="#">View more</a>
+    {{/card-footer}}
+  {{/card}}
+{{/reset}}
