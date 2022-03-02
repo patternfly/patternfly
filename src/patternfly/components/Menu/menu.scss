@@ -657,11 +657,9 @@
 
 // Check
 .pf-c-menu__item-check {
+  display: flex;
+  align-items: center;
   margin-right: var(--pf-c-menu__item-check--MarginRight);
-
-  .pf-c-check {
-    grid-template-columns: auto; // update pf-c-check grid-template-columns to grid-auto-columns: 1fr at breaking change
-  }
 }
 
 // Toggle icon

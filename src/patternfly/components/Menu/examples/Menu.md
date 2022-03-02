@@ -1732,7 +1732,7 @@ import './Menu.css'
 | -- | -- | -- |
 | `role="menu"` | `.pf-c-menu__list` | Declares `.pf-c-menu__list` as a menu. |
 | `disabled` | `button.pf-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
-| `role="menuitem"` | `.pf-c-menu__item`, `.pf-c-menu__list-item (checkbox)` | Assigns `.pf-c-menu__item` as an option in a set of choices contained by a menu. |
+| `role="menuitem"` | `.pf-c-menu__item`, `.pf-c-menu__list-item` (checkbox) | Assigns `.pf-c-menu__item` as an option in a set of choices contained by a menu. |
 | `role="none"` | `.pf-c-menu__list-item` | Removes semantic meaning from `.pf-c-menu__list-item`. |
 | `aria-disabled="true"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
 | `tabindex="-1"` | `a.pf-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
@@ -1752,7 +1752,6 @@ import './Menu.css'
 | `.pf-c-menu__list-item` | `<li>` | Initiates the menu list item. **Required** |
 | `.pf-c-menu__item` | `<button>`, `<a>`, `<div>`, `<label>` | Initiates the menu item. **Required** |
 | `.pf-c-menu__item-main` | `<span>` | Initiates the menu item main container. **Required** |
-| `.pf-c-menu__item-text` | `<span>` | Initiates the menu item text. **Required** |
 | `.pf-c-menu__item-text` | `<span>` | Initiates the menu item text. **Required** |
 | `.pf-c-menu__item-check` | `<span>` | Initiates a menu label. |
 | `.pf-c-menu__item-description` | `<span>` | Initiates the menu item description. |

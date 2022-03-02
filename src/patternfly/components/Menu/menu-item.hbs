@@ -1,6 +1,8 @@
 <{{#if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else if menu-list-item--IsCheckbox}}label{{else}}button{{/if}} class="pf-c-menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}
   {{~#if menu-list-item--IsCurrent}} pf-m-current{{/if}}"
-  {{#unless menu-list-item--IsCheckbox}}
+  {{#if menu-list-item--IsCheckbox}}
+    for="{{menu--id}}-check-{{menu-list-item--id}}"
+  {{else}}
     {{#if menu-item--IsLink}}
       href="#"
       {{#if menu-list-item--IsDisabled}}
@@ -14,9 +16,6 @@
       {{/if}}
     {{/if}}
     role="menuitem"
-  {{/unless}}
-  {{#if menu-list-item--IsCheckbox}}
-    for="{{menu--id}}-check-{{menu-list-item--id}}"
   {{/if}}
   {{#if menu-item--attribute}}
     {{{menu-item--attribute}}}
@@ -32,7 +31,7 @@
   {{#if menu-list-item--IsCheckbox}}
     {{#> menu-item-main}}
       {{#> menu-item-check}}
-        {{#> check check--type="span" check--IsDisabled=menu-list-item--IsDisabled}}
+        {{#> check check--type="span" check--modifier="pf-m-standalone" check--IsDisabled=menu-list-item--IsDisabled}}
           {{> check-input check-input--attribute=(concat 'id="' menu--id '-check-' menu-list-item--id '" name="' menu--id '-check-' menu-list-item--id '"')}}
         {{/check}}
       {{/menu-item-check}}
