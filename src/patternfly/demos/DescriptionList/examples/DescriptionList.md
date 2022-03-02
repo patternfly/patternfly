@@ -16,16 +16,17 @@ cssPrefix: pf-d-description-list
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
   {{#> page-main-section page-main-section--IsLimitWidth="true"}}
-    {{#> grid grid--modifier="pf-m-gutter"}}
-      {{#> grid-item}}
+    {{#> card}}
+      {{#> card-header}}
         {{#> title titleType="h2" title--modifier="pf-m-lg"}}
           Details
         {{/title}}
-      {{/grid-item}}
-      {{#> grid-item}}
+      {{/card-header}}
+      {{> divider}}
+      {{#> card-body}}
         {{> description-list-template description-list--modifier="pf-m-auto-fit"}}
-      {{/grid-item}}
-    {{/grid}}
+      {{/card-body}}
+    {{/card}}
   {{/page-main-section}}
 {{/inline}}
 ```
@@ -279,10 +280,11 @@ cssPrefix: pf-d-description-list
 {{#*inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=""}}
-    {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md"}}
-      {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-        {{#> grid grid--modifier="pf-m-gutter" l-flex-item--modifier=reset}}
+  {{> divider}}
+  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
+    {{#> grid grid--modifier="pf-m-gutter" l-flex-item--modifier=reset}}
+      {{#> grid-item grid-item--modifier="pf-m-5-col-on-lg pf-m-4-col-on-xl"}}
+        {{#> grid grid--modifier="pf-m-gutter" grid-item--modifier=reset}}
           {{#> grid-item}}
             {{#> title titleType="h2" title--modifier="pf-m-lg"}}
               Service overview
@@ -385,9 +387,9 @@ cssPrefix: pf-d-description-list
             {{/description-list}}
           {{/grid-item}}
         {{/grid}}
-      {{/l-flex-item}}
-      {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1 pf-m-flex-2-on-2xl"}}
-        {{#> grid grid--modifier="pf-m-gutter" l-flex-item--modifier=reset}}
+      {{/grid-item}}
+      {{#> grid-item grid-item--modifier="pf-m-6-col-on-lg pf-m-4-col-on-xl"}}
+        {{#> grid grid--modifier="pf-m-gutter" grid-item--modifier=reset}}
           {{#> grid-item}}
             {{#> title titleType="h2" title--modifier="pf-m-lg"}}
               Service routing
@@ -498,8 +500,8 @@ cssPrefix: pf-d-description-list
             {{/description-list}}
           {{/grid-item}}
         {{/grid}}
-      {{/l-flex-item}}
-    {{/l-flex}}
+      {{/grid-item}}
+    {{/grid}}
   {{/page-main-section}}
 {{/inline}}
 ```
