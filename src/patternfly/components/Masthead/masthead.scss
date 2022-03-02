@@ -117,28 +117,25 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   // Context selector
   --pf-c-masthead--c-context-selector--Width: auto;
-  --pf-c-masthead--c-context-selector__toggle--BorderTopColor: transparent;
-  --pf-c-masthead--c-context-selector__toggle--BorderRightColor: transparent;
-  --pf-c-masthead--c-context-selector__toggle--BorderBottomColor: transparent;
-  --pf-c-masthead--c-context-selector__toggle--BorderLeftColor: transparent;
-  --pf-c-masthead--c-context-selector--m-full-height__toggle--BorderRightColor: var(--pf-c-masthead--item-border-color--base);
-  --pf-c-masthead--c-context-selector--m-full-height__toggle--BorderLeftColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-context-selector__toggle--BorderTopColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-context-selector--m-full-height__toggle--BorderTopColor: transparent;
+  --pf-c-masthead--c-context-selector--m-full-height__toggle--BorderBottomColor: transparent;
 
   // Dropdown
-  --pf-c-masthead--c-dropdown__toggle--before--BorderTopColor: transparent;
-  --pf-c-masthead--c-dropdown__toggle--before--BorderRightColor: transparent;
-  --pf-c-masthead--c-dropdown__toggle--before--BorderBottomColor: transparent;
-  --pf-c-masthead--c-dropdown__toggle--before--BorderLeftColor: transparent;
-  --pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderRightColor: var(--pf-c-masthead--item-border-color--base);
-  --pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderLeftColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderTopColor: transparent;
+  --pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderBottomColor: transparent;
 
   // Menu toggle
-  --pf-c-masthead--c-menu-toggle--before--BorderTopColor: transparent;
-  --pf-c-masthead--c-menu-toggle--before--BorderRightColor: transparent;
-  --pf-c-masthead--c-menu-toggle--before--BorderBottomColor: transparent;
-  --pf-c-masthead--c-menu-toggle--before--BorderLeftColor: transparent;
-  --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderRightColor: var(--pf-c-masthead--item-border-color--base);
-  --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderLeftColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-menu-toggle--before--BorderTopColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-menu-toggle--before--BorderRightColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-menu-toggle--before--BorderLeftColor: var(--pf-c-masthead--item-border-color--base);
+  --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderTopColor: transparent;
+  --pf-c-masthead--c-menu-toggle--m-full-height--before--BorderBottomColor: transparent;
 
   // Toolbar
   --pf-c-masthead--c-toolbar__content--PaddingRight: 0;
@@ -216,12 +213,11 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   .pf-c-menu-toggle {
     --pf-c-menu-toggle--before--BorderTopColor: var(--pf-c-masthead--c-menu-toggle--before--BorderTopColor);
     --pf-c-menu-toggle--before--BorderRightColor: var(--pf-c-masthead--c-menu-toggle--before--BorderRightColor);
-    --pf-c-menu-toggle--before--BorderBottomColor: var(--pf-c-masthead--c-menu-toggle--before--BorderBottomColor);
     --pf-c-menu-toggle--before--BorderLeftColor: var(--pf-c-masthead--c-menu-toggle--before--BorderLeftColor);
 
     &.pf-m-full-height {
-      --pf-c-menu-toggle--before--BorderRightColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderRightColor);
-      --pf-c-menu-toggle--before--BorderLeftColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderLeftColor);
+      --pf-c-menu-toggle--before--BorderTopColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderTopColor);
+      --pf-c-menu-toggle--before--BorderBottomColor: var(--pf-c-masthead--c-menu-toggle--m-full-height--before--BorderBottomColor);
     }
   }
 
@@ -229,24 +225,22 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --pf-c-context-selector--Width: var(--pf-c-masthead--c-context-selector--Width);
     --pf-c-context-selector__toggle--BorderTopColor: var(--pf-c-masthead--c-context-selector__toggle--BorderTopColor);
     --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector__toggle--BorderRightColor);
-    --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-masthead--c-context-selector__toggle--BorderBottomColor);
     --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--c-context-selector__toggle--BorderLeftColor);
 
     &.pf-m-full-height {
-      --pf-c-context-selector__toggle--BorderRightColor: var(--pf-c-masthead--c-context-selector--m-full-height__toggle--BorderRightColor);
-      --pf-c-context-selector__toggle--BorderLeftColor: var(--pf-c-masthead--c-context-selector--m-full-height__toggle--BorderLeftColor);
+      --pf-c-context-selector__toggle--BorderTopColor: var(--pf-c-masthead--c-context-selector--m-full-height__toggle--BorderTopColor);
+      --pf-c-context-selector__toggle--BorderBottomColor: var(--pf-c-masthead--c-context-selector--m-full-height__toggle--BorderBottomColor);
     }
   }
 
   .pf-c-dropdown {
     --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderTopColor);
     --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderRightColor);
-    --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderBottomColor);
     --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown__toggle--before--BorderLeftColor);
 
     &.pf-m-full-height {
-      --pf-c-dropdown__toggle--before--BorderRightColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderRightColor);
-      --pf-c-dropdown__toggle--before--BorderLeftColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderLeftColor);
+      --pf-c-dropdown__toggle--before--BorderTopColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderTopColor);
+      --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-c-masthead--c-dropdown--m-full-height__toggle--before--BorderBottomColor);
     }
   }
 
