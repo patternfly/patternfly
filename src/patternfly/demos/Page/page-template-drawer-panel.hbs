@@ -1,4 +1,4 @@
-{{#> drawer-panel}}
+{{#> drawer-panel drawer-panel--modifier="pf-m-width-33-on-lg"}}
   {{#> drawer-body}}
     {{#> drawer-head}}
       {{#> drawer-actions}}
@@ -17,7 +17,6 @@
           {{/title}}
         {{/l-flex-item}}
       {{/l-flex}}
-
     {{/drawer-head}}
   {{/drawer-body}}
   {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
@@ -47,6 +46,5 @@
     {{#> tab-content tab-content--IsHidden="true" tab-content--attribute=(concat 'id="' page-template--id '-panel-tabs-tab2-panel" aria-labelledby="' page-template--id '-panel-tabs-tab2-link"')}}
       Panel 2
     {{/tab-content}}
-
   {{/drawer-body}}
 {{/drawer-panel}}
