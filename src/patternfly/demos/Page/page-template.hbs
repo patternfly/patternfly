@@ -7,5 +7,9 @@
   {{#unless page-template--HasNoSidebar}}
     {{> page-template-sidebar}}
   {{/unless}}
-  {{> page-template-main}}
+  {{#if page-template--IsDrawer}}
+    {{> page-template-drawer}}
+  {{else}}
+    {{> page-template-main}}
+  {{/if}}
 {{/page}}

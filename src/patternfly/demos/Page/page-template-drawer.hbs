@@ -1,0 +1,10 @@
+{{#> page-drawer}}
+  {{#> drawer drawer--id=(concat page-template--id '-drawer') drawer-panel--IsOpen="true" drawer--modifier=""}}
+    {{#> drawer-main}}
+      {{#> drawer-content}}
+        {{> page-template-main}}
+      {{/drawer-content}}
+      {{> page-template-drawer-panel}}
+    {{/drawer-main}}
+  {{/drawer}}
+{{/page-drawer}}

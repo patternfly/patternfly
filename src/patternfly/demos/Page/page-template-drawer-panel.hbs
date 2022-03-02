@@ -1,0 +1,50 @@
+{{#> drawer-panel drawer-panel--modifier="pf-m-width-33-on-lg"}}
+  {{#> drawer-body}}
+    {{#> drawer-head}}
+      {{#> drawer-actions}}
+        {{> dropdown dropdown-toggle--IsPlain="true"}}
+        {{> drawer-close}}
+      {{/drawer-actions}}
+      {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+        {{#> l-flex-item}}
+          {{#> label label--id="default-green" label--modifier="pf-m-blue pf-m-compact"}}
+            DC
+          {{/label}}
+        {{/l-flex-item}}
+        {{#> l-flex-item}}
+          {{#> title titleType="h2" title--modifier="pf-m-xl" title--attribute=(concat 'id="' page-template--id '-drawer-label"')}}
+            mary-test
+          {{/title}}
+        {{/l-flex-item}}
+      {{/l-flex}}
+    {{/drawer-head}}
+  {{/drawer-body}}
+  {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+    {{#> tabs tabs--modifier="pf-m-box pf-m-fill"}}
+      {{#> tabs-list}}
+        {{#> tabs-item tabs-item--IsCurrent="true"}}
+          {{#> tabs-link tabs-link--attribute=(concat 'id="' page-template--id '-panel-tabs-tab1-link"')}}
+            {{#> tabs-item-text}}
+              Overview
+            {{/tabs-item-text}}
+          {{/tabs-link}}
+        {{/tabs-item}}
+        {{#> tabs-item}}
+          {{#> tabs-link tabs-link--attribute=(concat 'id="' page-template--id '-panel-tabs-tab2-link"')}}
+            {{#> tabs-item-text}}
+              Activity
+            {{/tabs-item-text}}
+          {{/tabs-link}}
+        {{/tabs-item}}
+      {{/tabs-list}}
+    {{/tabs}}
+  {{/drawer-body}}
+  {{#> drawer-body}}
+    {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'id="' page-template--id '-panel-tabs-tab1-panel" aria-labelledby="' page-template--id '-panel-tabs-tab1-link"')}}
+      {{> page-template-drawer-panel-tab-content}}
+    {{/tab-content}}
+    {{#> tab-content tab-content--IsHidden="true" tab-content--attribute=(concat 'id="' page-template--id '-panel-tabs-tab2-panel" aria-labelledby="' page-template--id '-panel-tabs-tab2-link"')}}
+      Panel 2
+    {{/tab-content}}
+  {{/drawer-body}}
+{{/drawer-panel}}
