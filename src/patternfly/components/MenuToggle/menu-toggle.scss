@@ -84,6 +84,7 @@
   --pf-c-menu-toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-menu-toggle--m-plain--m-expanded--Color: var(--pf-global--Color--100);
 
+
   // Icon
   --pf-c-menu-toggle__icon--MarginRight: var(--pf-global--spacer--sm);
 
@@ -203,17 +204,12 @@
     --pf-c-menu-toggle__toggle-icon--Color: var(--pf-c-menu-toggle--m-plain__toggle-icon--Color);
 
     &:not(.pf-m-text) {
-      --pf-c-menu-toggle--Color: var(--pf-c-menu-toggle--m-plain--Color);
-      --pf-c-menu-toggle--hover--Color: var(--pf-c-menu-toggle--m-plain--hover--Color);
-      --pf-c-menu-toggle--focus--Color: var(--pf-c-menu-toggle--m-plain--hover--Color);
-      --pf-c-menu-toggle--active--Color: var(--pf-c-menu-toggle--m-plain--hover--Color);
-      --pf-c-menu-toggle--disabled--Color: var(--pf-c-menu-toggle--m-plain--disabled--Color);
       --pf-c-menu-toggle--PaddingRight: var(--pf-c-menu-toggle--m-plain--PaddingRight);
       --pf-c-menu-toggle--PaddingLeft: var(--pf-c-menu-toggle--m-plain--PaddingLeft);
       --pf-c-menu-toggle--disabled--BackgroundColor: transparent;
-      --pf-c-menu-toggle--m-expanded--Color: var(--pf-c-menu-toggle--m-plain--m-expanded--Color);
 
       display: inline-block;
+      color: var(--pf-c-menu-toggle--m-plain--Color);
     }
   }
 
@@ -222,6 +218,7 @@
     --pf-c-menu-toggle--after--BorderBottomWidth: var(--pf-c-menu-toggle--hover--after--BorderBottomWidth);
     --pf-c-menu-toggle--after--BorderBottomColor: var(--pf-c-menu-toggle--hover--after--BorderBottomColor);
     --pf-c-menu-toggle--m-plain__toggle-icon--Color: var(--pf-c-menu-toggle--m-plain--hover__toggle-icon--Color);
+    --pf-c-menu-toggle--m-plain--Color: var(--pf-c-menu-toggle--m-plain--hover--Color);
   }
 
   &:focus {
@@ -229,6 +226,7 @@
     --pf-c-menu-toggle--after--BorderBottomWidth: var(--pf-c-menu-toggle--focus--after--BorderBottomWidth);
     --pf-c-menu-toggle--after--BorderBottomColor: var(--pf-c-menu-toggle--focus--after--BorderBottomColor);
     --pf-c-menu-toggle--m-plain__toggle-icon--Color: var(--pf-c-menu-toggle--m-plain--focus__toggle-icon--Color);
+    --pf-c-menu-toggle--m-plain--Color: var(--pf-c-menu-toggle--m-plain--focus--Color);
   }
 
   &:active {
@@ -236,6 +234,7 @@
     --pf-c-menu-toggle--after--BorderBottomWidth: var(--pf-c-menu-toggle--active--after--BorderBottomWidth);
     --pf-c-menu-toggle--after--BorderBottomColor: var(--pf-c-menu-toggle--active--after--BorderBottomColor);
     --pf-c-menu-toggle--m-plain__toggle-icon--Color: var(--pf-c-menu-toggle--m-plain--active__toggle-icon--Color);
+    --pf-c-menu-toggle--m-plain--Color: var(--pf-c-menu-toggle--m-plain--active--Color);
   }
 
   &.pf-m-expanded {
@@ -244,11 +243,13 @@
     --pf-c-menu-toggle--after--BorderBottomWidth: var(--pf-c-menu-toggle--m-expanded--after--BorderBottomWidth);
     --pf-c-menu-toggle--after--BorderBottomColor: var(--pf-c-menu-toggle--m-expanded--after--BorderBottomColor);
     --pf-c-menu-toggle--m-plain__toggle-icon--Color: var(--pf-c-menu-toggle--m-plain--m-expanded__toggle-icon--Color);
+    --pf-c-menu-toggle--m-plain--Color: var(--pf-c-menu-toggle--m-plain--m-expanded--Color);
   }
 
   &:disabled {
     --pf-c-menu-toggle--Color: var(--pf-c-menu-toggle--disabled--Color);
     --pf-c-menu-toggle--BackgroundColor: var(--pf-c-menu-toggle--disabled--BackgroundColor);
+    --pf-c-menu-toggle--m-plain--Color: var(--pf-c-menu-toggle--m-plain--disabled--Color);
 
     pointer-events: none;
   }
