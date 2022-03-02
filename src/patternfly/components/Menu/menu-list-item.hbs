@@ -9,7 +9,11 @@
     pf-m-drill-up
   {{/if}}
   {{~#if menu-list-item--modifier}} {{menu-list-item--modifier}}{{/if}}"
-  role="none"
+  {{#if menu-list-item--IsCheckbox}}
+    role="menuitem"
+  {{else}}
+    role="none"
+  {{/if}}
   {{#if menu-list-item--attribute}}
     {{{menu-list-item--attribute}}}
   {{/if}}>

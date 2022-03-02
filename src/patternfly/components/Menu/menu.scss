@@ -109,6 +109,9 @@
   // Icon
   --pf-c-menu__item-icon--MarginRight: var(--pf-global--spacer--sm);
 
+  // Check
+  --pf-c-menu__item-check--MarginRight: var(--pf-global--spacer--sm);
+
   // Toggle icon
   --pf-c-menu__item-toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-menu__item-toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
@@ -599,6 +602,10 @@
       opacity: 1;
     }
   }
+
+  @at-root label#{&}:where(:not([disabled], .pf-m-disabled)) {
+    cursor: pointer;
+  }
 }
 
 .pf-c-menu__item-main {
@@ -646,6 +653,13 @@
 // General icon
 .pf-c-menu__item-icon {
   margin-right: var(--pf-c-menu__item-icon--MarginRight);
+}
+
+// Check
+.pf-c-menu__item-check {
+  display: flex;
+  align-items: center;
+  margin-right: var(--pf-c-menu__item-check--MarginRight);
 }
 
 // Toggle icon
