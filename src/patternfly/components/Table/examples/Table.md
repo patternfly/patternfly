@@ -258,12 +258,9 @@ These classes can be used to ensure that the table changes between the tabular a
 | `.fa-long-arrow-alt-up` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
 | `.fa-long-arrow-alt-down` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
 
-### Overflow menu usage, mobile
+### Overflow menu usage, desktop
 ```hbs
-{{#> table table--id="table-with-expanded-overflow-menu-mobile" table--grid="true" table--modifier="pf-m-grid" table--attribute='aria-label="This is a simple table example"'}}
-  {{#> table-caption}}
-    This is the table caption
-  {{/table-caption}}
+{{#> table table--id="table-with-expanded-overflow-menu" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -275,9 +272,58 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
       {{/table-th}}
-      {{#> table-th table-th--action="true" table-th--modifier="pf-m-action pf-m-fit-content" table-th--attribute='scope="col"'}}
-        Overflow actions
+      {{> table-td table-td--IsEmpty="true"}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr table-tr--index="1"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 1
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{> table--overflow-menu table--overflow-menu--IsExpanded="true"}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--index="2"}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        Repository 2
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{> table--overflow-menu table--overflow-menu--IsExpanded="true"}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+### Overflow menu usage, overflow menu collapsed
+```hbs
+{{#> table table--id="table-with-overflow-menu-collapsed" table--grid="true" table--attribute='aria-label="This is a simple table example"'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
       {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Pull requests
+      {{/table-th}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -315,12 +361,9 @@ These classes can be used to ensure that the table changes between the tabular a
 {{/table}}
 ```
 
-### Overflow menu usage, desktop
+### Overflow menu usage, mobile
 ```hbs
-{{#> table table--id="table-with-expanded-overflow-menu-desktop" table--attribute='aria-label="This is a simple table example"'}}
-  {{#> table-caption}}
-    This is the table caption
-  {{/table-caption}}
+{{#> table table--id="table-with-overflow-menu-collapsed-mobile" table--grid="true" table--modifier="pf-m-grid" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -332,9 +375,7 @@ These classes can be used to ensure that the table changes between the tabular a
       {{#> table-th table-th--attribute='scope="col"'}}
         Pull requests
       {{/table-th}}
-      {{#> table-th table-th--action="true" table-th--modifier="pf-m-action pf-m-fit-content" table-th--attribute='scope="col"'}}
-        Overflow actions
-      {{/table-th}}
+      {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
 
@@ -350,7 +391,7 @@ These classes can be used to ensure that the table changes between the tabular a
         25
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu table--overflow-menu--IsExpanded="true"}}
+        {{> table--overflow-menu table--overflow-menu--dropdown--IsExpanded="true"}}
       {{/table-td}}
     {{/table-tr}}
 
@@ -365,7 +406,7 @@ These classes can be used to ensure that the table changes between the tabular a
         25
       {{/table-td}}
       {{#> table-td table-td--action="true"}}
-        {{> table--overflow-menu table--overflow-menu--IsExpanded="true"}}
+        {{> table--overflow-menu}}
       {{/table-td}}
     {{/table-tr}}
   {{/table-tbody}}
