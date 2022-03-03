@@ -540,7 +540,8 @@
     --pf-c-menu__list-item--Color: var(--pf-c-menu__list-item--hover--Color, inherit);
   }
 
-  &:focus-within {
+  &:focus-within,
+  &.pf-m-focus {
     --pf-c-menu__list-item--BackgroundColor: var(--pf-c-menu__list-item--focus-within--BackgroundColor);
     --pf-c-menu__list-item--Color: var(--pf-c-menu__list-item--focus-within--Color, inherit);
   }

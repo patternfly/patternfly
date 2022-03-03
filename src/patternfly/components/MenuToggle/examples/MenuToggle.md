@@ -528,6 +528,29 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
+### Typeahead
+```hbs
+{{#> menu-toggle menu-toggle--id="typeahead-example" menu-toggle--IsSplitButton="true" menu-toggle--modifier="pf-m-full-width"}}
+  {{#> text-input-group text-input-group--modifier="pf-m-plain"}}
+    {{#> text-input-group-main}}
+      {{#> text-input-group-text}}
+        {{> text-input-group-text-input}}
+      {{/text-input-group-text}}
+    {{/text-input-group-main}}
+    {{#> text-input-group-utilities}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
+        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+      {{/button}}
+    {{/text-input-group-utilities}}
+  {{/text-input-group}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+```
+
 ### Accessibility
 | Class | Applied to | Outcome |
 | -- | -- | -- |
