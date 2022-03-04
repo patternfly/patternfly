@@ -6,7 +6,7 @@ releaseNoteTOC: true
 
 ## 2022.03 release notes (2022-03-08)
 Packages released:
-- [@patternfly/patternfly@v4.182.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.182.2)
+- [@patternfly/patternfly@v4.182.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.182.3)
 
 ### Components
 - **Description list:** Added description list demo ([#4715](https://github.com/patternfly/patternfly/pull/4715))
@@ -21,6 +21,7 @@ Packages released:
 - **Menu toggle:**
   - Fixed plain menu toggle state ([#4710](https://github.com/patternfly/patternfly/pull/4710))
   - Added split button ([#4713](https://github.com/patternfly/patternfly/pull/4713))
+  - Fixed self referencing var ([#4727](https://github.com/patternfly/patternfly/pull/4727))
 - **Page:** Updated wording in centered examples ([#4698](https://github.com/patternfly/patternfly/pull/4698))
 - **Select:** Fixed active focus states bottom border ([#4702](https://github.com/patternfly/patternfly/pull/4702))
 - **Spinner:** Renamed examples so SVG is default, non-SVG is legacy ([#4697](https://github.com/patternfly/patternfly/pull/4697))
