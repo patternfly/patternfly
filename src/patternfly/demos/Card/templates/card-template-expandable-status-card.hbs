@@ -40,7 +40,7 @@
             {{/if}}
           </a>
         {{/l-flex}}
-        {{#> l-flex-item l-flex-item--modifier=reset}}
+        {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
           <p>
             {{#if card-template-expandable-status-card--body--text}}
               {{{card-template-expandable-status-card--body--text}}}
@@ -49,7 +49,7 @@
             {{/if}}
           </p>
         {{/l-flex-item}}
-        {{#> l-flex l-flex--modifier="pf-m-grow pf-m-column pf-m-row-on-lg pf-u-align-content-flex-end" l-flex--attribute='style="row-gap: var(--pf-global--spacer--sm);"'}}
+        {{#> l-flex l-flex--modifier="pf-m-grow pf-m-column pf-m-row-on-lg pf-m-justify-content-flex-end pf-m-justify-content-flex-start-on-lg pf-m-align-content-flex-end-on-lg" l-flex--attribute='style="row-gap: var(--pf-global--spacer--md);"'}}
           {{#if card-template-expandable-status-card--HasIncident}}
             {{#> l-flex-item l-flex-item--attribute='style="margin-bottom: -.25em"'}}
               {{#> label label--modifier="pf-m-red"}}
