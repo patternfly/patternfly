@@ -1,0 +1,81 @@
+{{#> l-flex l-flex--modifier="pf-m-flex-1 pf-m-align-self-stretch pf-m-align-items-stretch"}}
+  {{#> card card--modifier="pf-m-plain" l-flex--modifier=reset l-flex-item--modifier=reset}}
+    {{#> card-body}}
+      {{#> l-flex l-flex--modifier="pf-m-column pf-u-h-100 pf-m-space-items-sm"}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column-on-md pf-m-row-on-lg pf-m-spacer-md-on-md pf-m-spacer-sm-on-lg"}}
+          {{#> label-group label-group--id="label-group-overflow"}}
+            {{#> label-group-main}}
+              {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+                {{#> label-group-list-item}}
+                  {{#> label label--modifier="pf-m-blue pf-m-outline"}}
+                    {{#> label-icon}}
+                      {{#if card-template-expandable-status-card--label-icon}}
+                        {{{card-template-expandable-status-card--label-icon}}}
+                      {{else}}
+                        <i class="pf-icon pf-icon-port" aria-hidden="true"></i>
+                      {{/if}}
+                    {{/label-icon}}
+                    {{#if card-template-expandable-status-card--label-text}}
+                      {{card-template-expandable-status-card--label-text}}
+                    {{else}}
+                      Performance
+                    {{/if}}
+                  {{/label}}
+                {{/label-group-list-item}}
+                {{#if card-template-expandable-status-card--label--HasOverflowLabel}}
+                  {{#> label-group-list-item}}
+                    {{#> label label--IsOverflow="true"}}
+                      1 more
+                    {{/label}}
+                  {{/label-group-list-item}}
+                {{/if}}
+              {{/label-group-list}}
+            {{/label-group-main}}
+          {{/label-group}}
+          <a href="#">
+            {{#if card-template-expandable-status-card--header-link--text}}
+              {{card-template-expandable-status-card--header-link--text}}
+            {{else}}
+              378 systems
+            {{/if}}
+          </a>
+        {{/l-flex}}
+        {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
+          <p>
+            {{#if card-template-expandable-status-card--body--text}}
+              {{{card-template-expandable-status-card--body--text}}}
+            {{else}}
+              Upgrade your kernel version to remediate ntpd time sync issues, kernel panics, network instabilities and issues with system performance
+            {{/if}}
+          </p>
+        {{/l-flex-item}}
+        {{#> l-flex l-flex--modifier="pf-m-grow pf-m-column pf-m-row-on-lg pf-m-justify-content-flex-end pf-m-justify-content-flex-start-on-lg pf-m-align-content-flex-end-on-lg" l-flex--attribute='style="row-gap: var(--pf-global--spacer--md);"'}}
+          {{#if card-template-expandable-status-card--HasIncident}}
+            {{#> l-flex-item l-flex-item--attribute='style="margin-bottom: -.25em"'}}
+              {{#> label label--modifier="pf-m-red"}}
+                Incident
+              {{/label}}
+            {{/l-flex-item}}
+          {{/if}}
+          {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-align-items-center pf-m-nowrap"}}
+            {{#if card-template-expandable-status-card--RequiresReboot}}
+              <i class="pf-icon pf-icon-on pf-u-danger-color-100" style="line-height: 1" aria-hidden="true"></i>
+              <p class="pf-u-color-200">System reboot <b class="pf-u-color-100">is</b> required</p>
+            {{else}}
+              <i class="pf-icon pf-icon-on pf-u-color-400" style="line-height: 1" aria-hidden="true"></i>
+              <p class="pf-u-color-200">System reboot <b class="pf-u-color-100">is not</b> required</p>
+            {{/if}}
+          {{/l-flex}}
+        {{/l-flex}}
+      {{/l-flex}}
+    {{/card-body}}
+    {{#> card-footer}}
+      {{#> button-link button-link--modifier="pf-m-link pf-m-inline" button-link--attribute='href="#"'}}
+        View pathway
+        {{#> button-icon button-icon--modifier="pf-m-end"}}
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        {{/button-icon}}
+      {{/button-link}}
+    {{/card-footer}}
+  {{/card}}
+{{/l-flex}}

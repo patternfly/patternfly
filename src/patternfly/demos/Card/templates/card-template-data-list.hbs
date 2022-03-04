@@ -1,0 +1,98 @@
+{{#> reset grid--attribute=reset grid-item--attribute=reset grid--modifier=reset grid-item--modifier=reset l-flex--attribute=reset l-flex-item--attribute=reset l-flex--modifier=reset l-flex-item--modifier=reset}}
+  {{#> card card--id=card-template-data-list--id}}
+    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+        {{#> title title--modifier="pf-m-lg" titleType="h2"}}
+          Inventory
+        {{/title}}
+      {{/card-title}}
+    {{/card-header}}
+    {{#> data-list data-list--modifier="pf-m-grid-none" data-list--id=(concat card--id '-data-list') data-list--attribute='aria-label="Simple data list example"'}}
+      {{#> data-list-item data-list-item--id="item-1"}}
+        {{#> data-list-item-row}}
+          {{#> data-list-item-content}}
+            {{#> data-list-cell data-list-cell--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+              3 Nodes
+            {{/data-list-cell}}
+            {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
+              <a href="#">
+                {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                  <span>3</span>
+                  <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                {{/l-flex}}
+              </a>
+            {{/data-list-cell}}
+          {{/data-list-item-content}}
+        {{/data-list-item-row}}
+      {{/data-list-item}}
+      {{#> data-list-item data-list-item--id="item-2"}}
+        {{#> data-list-item-row}}
+          {{#> data-list-item-content}}
+            {{#> data-list-cell data-list-cell--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+              8 Disks
+            {{/data-list-cell}}
+            {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
+              <a href="#">
+                {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                  <span>8</span>
+                  <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                {{/l-flex}}
+              </a>
+            {{/data-list-cell}}
+          {{/data-list-item-content}}
+        {{/data-list-item-row}}
+      {{/data-list-item}}
+      {{#> data-list-item data-list-item--id="item-3"}}
+        {{#> data-list-item-row}}
+          {{#> data-list-item-content}}
+            {{#> data-list-cell data-list-cell--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+              20 Pods
+            {{/data-list-cell}}
+            {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
+              <a href="#">
+                {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                  <span>20</span>
+                  <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                {{/l-flex}}
+              </a>
+            {{/data-list-cell}}
+          {{/data-list-item-content}}
+        {{/data-list-item-row}}
+      {{/data-list-item}}
+      {{#> data-list-item data-list-item--id="item-4"}}
+        {{#> data-list-item-row}}
+          {{#> data-list-item-content}}
+            {{#> data-list-cell data-list-cell--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+              12 PVs
+            {{/data-list-cell}}
+            {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
+              <a href="#">
+                {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                  <span>12</span>
+                  <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                {{/l-flex}}
+              </a>
+            {{/data-list-cell}}
+          {{/data-list-item-content}}
+        {{/data-list-item-row}}
+      {{/data-list-item}}
+      {{#> data-list-item data-list-item--id="item-5"}}
+        {{#> data-list-item-row}}
+          {{#> data-list-item-content}}
+            {{#> data-list-cell data-list-cell--attribute=(concat 'id="' data-list--id '-' data-list-item--id '"')}}
+              18 PVCs
+            {{/data-list-cell}}
+            {{#> data-list-cell data-list-cell--modifier="pf-m-no-fill pf-m-align-right"}}
+              <a href="#">
+                {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                  <span>18</span>
+                  <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                {{/l-flex}}
+              </a>
+            {{/data-list-cell}}
+          {{/data-list-item-content}}
+        {{/data-list-item-row}}
+      {{/data-list-item}}
+    {{/data-list}}
+  {{/card}}
+{{/reset}}

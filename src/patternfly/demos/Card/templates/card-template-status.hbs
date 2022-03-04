@@ -1,0 +1,155 @@
+{{#> reset grid--attribute=reset grid-item--attribute=reset grid--modifier=reset grid-item--modifier=reset l-flex--attribute=reset l-flex-item--attribute=reset l-flex--modifier=reset l-flex-item--modifier=reset}}
+  {{#> card card--id=card-template-status--id card--modifier="pf-m-expanded"}}
+    {{#> card-header}}
+      {{#> title titleType="h2" title--modifier="pf-m-xl"}}
+        Status
+      {{/title}}
+    {{/card-header}}
+    {{#> card-body}}
+      {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 100%; --pf-l-gallery--GridTemplateColumns--min-on-sm: 180px; --pf-l-gallery--GridTemplateColumns--min-on-lg: 150px; --pf-l-gallery--GridTemplateColumns--max-on-sm: 1fr;"'}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
+          {{#> l-flex-item}}
+            <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex-item}}
+            <span>Cluster</span>
+          {{/l-flex-item}}
+        {{/l-flex}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
+          {{#> l-flex-item}}
+            <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex-item l-flex-item--modifier="pf-u-text-nowrap"}}
+            <span class="popover-parent">
+              <a href="#">Control Panel</a>
+              {{> card-demo--popover popover--id=(concat card--id '-popover')}}
+            </span>
+          {{/l-flex-item}}
+        {{/l-flex}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
+          {{#> l-flex-item l-flex-item--modifier="pf-u-text-nowrap"}}
+            <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> l-flex-item}}
+              <a href="#">Operators</a>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <span class="pf-u-color-200">1 degraged</span>
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/l-flex}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
+          {{#> l-flex-item}}
+            <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> l-flex-item}}
+              <a href="#">Image Vulnerabilities</a>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <span class="pf-u-color-200">0 vulnerabilities</span>
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/l-flex}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
+          {{#> l-flex-item}}
+            <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> l-flex-item}}
+              <a href="#">Storage</a>
+            {{/l-flex-item}}
+            {{#> l-flex-item}}
+              <span class="pf-u-color-200">Degraded</span>
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/l-flex}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
+          {{#> l-flex-item}}
+            <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> l-flex-item}}
+              <a href="#">Hardware</a>
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/l-flex}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
+          {{#> l-flex-item}}
+            <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+          {{/l-flex-item}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> l-flex-item}}
+              <a href="#">Insights</a>
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/l-flex}}
+      {{/gallery}}
+    {{/card-body}}
+    {{> divider}}
+    {{#> notification-drawer}}
+      {{#> notification-drawer-body}}
+        {{#> notification-drawer-group notification-drawer-group--IsExpanded=card-demo--notication-drawer--IsOpen}}
+          {{#> notification-drawer-group-toggle}}
+            {{#> notification-drawer-group-toggle-title}}
+              {{#> l-flex}}
+                {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
+                  Notifications
+                {{/l-flex-item}}
+                {{#> label-group label-group--id="label-group-notifications"}}
+                  {{#> label-group-main}}
+                    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+                      {{#> label-group-list-item}}
+                        {{#> label label--id="default-red-icon" label--modifier="pf-m-red"}}
+                          {{#> label-icon}}
+                            <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
+                          {{/label-icon}}
+                          1
+                        {{/label}}
+                      {{/label-group-list-item}}
+                      {{#> label-group-list-item}}
+                        {{#> label label--id="default-orange-icon" label--modifier="pf-m-orange pf-m-default"}}
+                          {{#> label-icon}}
+                            <i class="fas fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
+                          {{/label-icon}}
+                          3
+                        {{/label}}
+                      {{/label-group-list-item}}
+                      {{#> label-group-list-item}}
+                        {{#> label label--id="default-green-icon" label--modifier="pf-m-green"}}
+                          {{#> label-icon}}
+                            <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
+                          {{/label-icon}}
+                          3
+                        {{/label}}
+                      {{/label-group-list-item}}
+                      {{#> label-group-list-item}}
+                        {{#> label label--id="default-blue-icon" label--modifier="pf-m-blue"}}
+                          {{#> label-icon}}
+                            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+                          {{/label-icon}}
+                          3
+                        {{/label}}
+                      {{/label-group-list-item}}
+                      {{#> label-group-list-item}}
+                        {{#> label label--id="default-cyan-icon" label--modifier="pf-m-cyan"}}
+                          {{#> label-icon}}
+                            <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
+                          {{/label-icon}}
+                          3
+                        {{/label}}
+                      {{/label-group-list-item}}
+                    {{/label-group-list}}
+                  {{/label-group-main}}
+                {{/label-group}}
+              {{/l-flex}}
+            {{/notification-drawer-group-toggle-title}}
+            {{> notification-drawer-group-toggle-icon}}
+          {{/notification-drawer-group-toggle}}
+          {{> card-demo--notification-list}}
+        {{/notification-drawer-group}}
+      {{/notification-drawer-body}}
+    {{/notification-drawer}}
+  {{/card}}
+{{/reset}}
