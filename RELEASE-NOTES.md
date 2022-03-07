@@ -3,10 +3,9 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
-
 ## 2022.03 release notes (2022-03-08)
 Packages released:
-- [@patternfly/patternfly@v4.182.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.182.2)
+- [@patternfly/patternfly@v4.183.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.183.1)
 
 ### Components
 - **Description list:** Added description list demo ([#4715](https://github.com/patternfly/patternfly/pull/4715))
@@ -21,6 +20,7 @@ Packages released:
 - **Menu toggle:**
   - Fixed plain menu toggle state ([#4710](https://github.com/patternfly/patternfly/pull/4710))
   - Added split button ([#4713](https://github.com/patternfly/patternfly/pull/4713))
+  - Fixed self referencing var ([#4727](https://github.com/patternfly/patternfly/pull/4727))
 - **Page:** Updated wording in centered examples ([#4698](https://github.com/patternfly/patternfly/pull/4698))
 - **Select:** Fixed active focus states bottom border ([#4702](https://github.com/patternfly/patternfly/pull/4702))
 - **Spinner:** Renamed examples so SVG is default, non-SVG is legacy ([#4697](https://github.com/patternfly/patternfly/pull/4697))
@@ -31,7 +31,9 @@ Packages released:
 - **Wizard:** Updated docs/hbs for description to allow div ([#4708](https://github.com/patternfly/patternfly/pull/4708))
 
 ### Other
-- **Demos:** Used search inputs in demos ([#4691](https://github.com/patternfly/patternfly/pull/4691))
+- **Demos:**
+  - Used search inputs in demos ([#4691](https://github.com/patternfly/patternfly/pull/4691))
+  - Added dashboard demo ([#4721](https://github.com/patternfly/patternfly/pull/4721))
 
 
 ## 2022.02 release notes (2022-02-17)
