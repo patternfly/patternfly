@@ -14,7 +14,7 @@ function copyAssets() {
 function copySource() {
   return Promise.all([
     // Copy excluded source files
-    src(['src/patternfly/**/_all.scss', 'src/patternfly/{components,layouts,patterns,utilities}/**/*.scss']).pipe(
+    src(['src/patternfly/**/_all.scss', 'src/patternfly/{components,layouts,patterns,utilities,themes}/**/*.scss', './src/patternfly/components/**/themes/**/*.scss']).pipe(
       dest('dist')
     ),
     // Copy source files
