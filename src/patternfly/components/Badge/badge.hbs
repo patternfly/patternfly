@@ -2,5 +2,10 @@
   {{#if badge--attribute}}
     {{{badge--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if badge--text}}
+    {{badge--text}}
+  {{/if}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </span>
