@@ -164,7 +164,7 @@ Resizes horizontally
   </optgroup>
 {{/form-control}}
 <br><br>
-{{#> form-control controlType="select" for-control--modifier="pf-m-icon-sprite" form-control--attribute='required aria-invalid="true" id="select-group-error" name="select-group-error" aria-label="Error state select group example"'}}
+{{#> form-control controlType="select" form-control--modifier="pf-m-icon-sprite" form-control--attribute='required aria-invalid="true" id="select-group-error" name="select-group-error" aria-label="Error state select group example"'}}
   <option value="">Invalid option</option>
   <optgroup label="Group 1">
     <option value="Option 1">The first option</option>
@@ -184,7 +184,7 @@ Success
 Warning
 {{/form-control}}
 <br><br>
-{{#> form-control controlType="textarea" for-control--modifier="pf-m-icon-sprite" form-control--attribute='required name="textarea-error" id="textarea-error" aria-label="Error state textarea example" aria-invalid="true"'}}
+{{#> form-control controlType="textarea" form-control--modifier="pf-m-icon-sprite" form-control--attribute='required name="textarea-error" id="textarea-error" aria-label="Error state textarea example" aria-invalid="true"'}}
 Error
 {{/form-control}}
 
