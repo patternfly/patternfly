@@ -1,0 +1,41 @@
+{{> page-template page-template--id=(concat notification-drawer-template--id '-page') page-template-header-tools-notification-badge--badge--modifier="pf-m-unread"}}
+
+{{#* inline "page-template-main"}}
+  {{#> page-drawer}}
+    {{#if notification-drawer-template--IsGroup}}
+      {{#> drawer}}
+        {{#> drawer-main}}
+          {{#> drawer-content}}
+            {{#> page-main}}
+              {{> page-template-breadcrumb}}
+              {{> page-template-title}}
+              {{> page-template-gallery}}
+            {{/page-main}}
+          {{/drawer-content}}
+          {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
+            {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+              {{> notification-drawer-demo-groups}}
+            {{/drawer-body}}
+          {{/drawer-panel}}
+        {{/drawer-main}}
+      {{/drawer}}
+    {{else}}
+      {{#> drawer}}
+        {{#> drawer-main}}
+          {{#> drawer-content}}
+            {{#> page-main}}
+              {{> page-template-breadcrumb}}
+              {{> page-template-title}}
+              {{> page-template-gallery}}
+            {{/page-main}}
+          {{/drawer-content}}
+          {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
+            {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+              {{> notification-drawer-demo-basic}}
+            {{/drawer-body}}
+          {{/drawer-panel}}
+        {{/drawer-main}}
+      {{/drawer}}
+    {{/if}}
+  {{/page-drawer}}
+{{/inline}}

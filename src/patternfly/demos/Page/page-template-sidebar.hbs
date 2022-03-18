@@ -1,32 +1,36 @@
 {{!-- Nav --}}
 {{#> page-sidebar}}
-  {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"')}}
-    {{#> nav-list}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          System panel
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-          Policy
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Authentication
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Network services
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Server
-        {{/nav-link}}
-      {{/nav-item}}
-    {{/nav-list}}
-  {{/nav}}
+  {{#if page-template-sidebar--nav--IsExpandable}}
+    {{> page-template-expandable-nav}}
+  {{else}}
+    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"')}}
+      {{#> nav-list}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            System panel
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+            Policy
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Authentication
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Network services
+          {{/nav-link}}
+        {{/nav-item}}
+        {{#> nav-item}}
+          {{#> nav-link nav-link--href="#"}}
+            Server
+          {{/nav-link}}
+        {{/nav-item}}
+      {{/nav-list}}
+    {{/nav}}
+  {{/if}}
 {{/page-sidebar}}

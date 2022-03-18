@@ -1,11 +1,11 @@
-{{#> wrapper tab-content--id=(concat primary-detail-template--id '-tabs')}}
+{{#> wrapper tab-content--id=(concat primary-detail-template--id '-tabs') }}
   {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'id="' tab-content--id '-tab1-panel" aria-labelledby="' tab-content--id '-tab1-link"')}}
-    {{> primary-detail-panel-body}}
+    {{> primary-detail-template-panel-body}}
   {{/tab-content}}
   {{#> tab-content tab-content--IsHidden="true" tab-content--attribute=(concat 'id="' tab-content--id '-tab2-panel" aria-labelledby="' tab-content--id '-tab2-link"')}}
     Panel 2
   {{/tab-content}}
-  {{#if primary-detail-panel-tab-content--Has3}}
+  {{#if primary-detail-template-panel-tab-content--Has3}}
     {{#> tab-content tab-content--IsHidden="true" tab-content--attribute=(concat 'id="' tab-content--id '-tab3-panel" aria-labelledby="' tab-content--id '-tab3-link"')}}
       Panel 3
     {{/tab-content}}

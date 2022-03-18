@@ -8,16 +8,11 @@ cssPrefix: pf-d-dashboard
 ## Examples
 ### Basic
 ```hbs isFullscreen
-{{> page-template
-  page-template--id="dashboard-demo"
-}}
+{{> page-template page-template--id="dashboard-demo"}}
 
 {{#*inline "page-template-main-content"}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=(concat 'pf-m-light ' page-template-title--modifier)}}
-    {{#> content}}
-      <h1>Dashboard</h1>
-    {{/content}}
-  {{/page-main-section}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
 
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=""}}
     {{#> grid grid--modifier="pf-m-gutter"}}

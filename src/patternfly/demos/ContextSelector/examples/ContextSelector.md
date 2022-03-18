@@ -20,20 +20,24 @@ section: components
 
 ### Context selector in sidebar
 ```hbs isFullscreen
-{{> page-demo-masthead-component page-demo-default--id="context-selector-in-sidebar" page-demo-masthead-component--HasMenu="true"}}
+{{> page-template page-template--id="context-selector-in-sidebar-example" page-sidebar--HasContextSelector="true"}}
 ```
 
 ### Context selector in sidebar expanded
 ```hbs isFullscreen
-{{> page-demo-masthead-component page-demo-default--id="context-selector-in-sidebar-expanded" page-demo-masthead-component--HasMenu="true" page-demo-masthead-component--MenuIsExpanded="true"}}
+{{> page-template
+      page-template--id="context-selector-in-sidebar-expanded-example"
+      page-sidebar--HasContextSelector="true"
+      page-sidebar--ContextSelectorIsExpanded="true"
+}}
 ```
 
 ### Context selector in page content
 ```hbs isFullscreen
 {{> page-template
-  page-template--id="context-selector-in-page-content-demo"
-  page-template--HasNoBreadcrumb="true"
-  page-template--HasNoTitle="true"
+      page-template--id="context-selector-in-page-content-example"
+      page-template--HasNoBreadcrumb="true"
+      page-template--HasNoTitle="true"
 }}
 
 {{#*inline "page-template-section"}}
@@ -42,7 +46,7 @@ section: components
       {{#> toolbar-content}}
         {{#> toolbar-content-section}}
           {{#> toolbar-item}}
-            {{#> context-selector context-selector--id=(concat page-demo-default--id '-context-selector') context-selector--label-text="Selected project" context-selector-toggle--IsPlain="true" context-selector-toggle--IsText="true" context-selector--modifier="pf-m-page-insets pf-m-width-auto" context-selector--attribute='style="--pf-c-context-selector--Width: 270px;"'}}
+            {{#> context-selector context-selector--id=(concat page-template--id '-context-selector') context-selector--label-text="Selected project" context-selector-toggle--IsPlain="true" context-selector-toggle--IsText="true" context-selector--modifier="pf-m-page-insets pf-m-width-auto" context-selector--attribute='style="--pf-c-context-selector--Width: 270px;"'}}
               {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
                 {{#> context-selector-toggle-text}}
                   Project: openshift-apple1
@@ -59,7 +63,7 @@ section: components
             {{/context-selector}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select id=(concat page-demo-default--id '-select') select-toggle--modifier="pf-m-plain"}}All applications{{/select}}
+            {{#> select id=(concat page-template--id '-select') select-toggle--modifier="pf-m-plain"}}All applications{{/select}}
           {{/toolbar-item}}
         {{/toolbar-content-section}}
       {{/toolbar-content}}

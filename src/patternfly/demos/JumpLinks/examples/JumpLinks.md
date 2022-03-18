@@ -4,88 +4,103 @@ section: components
 ---
 
 ## Examples
+
 ### Vertical jump links collapsed on mobile
 ```hbs isFullscreen
-{{#> page-demo-default page-demo-default--id="vertical-collapsed-on-mobile"}}
+{{> page-template page-template--id="jump-links-collapsed-mobile-example"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
-    {{#> sidebar}}
+    {{#> sidebar jump-links-template--id="jump-links-collapsed-mobile-example-jump-links"}}
       {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
-        {{#> page-main-section newcontext page-demo-default--id=page-demo-default--id}}
+        {{#> page-main-section page-main-section--modifier=reset}}
           {{#> jump-links jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md"}}
             {{> jump-links-header}}
-            {{> jump-links-demo--list}}
+            {{> jump-links-template-list}}
           {{/jump-links}}
         {{/page-main-section}}
       {{/sidebar-panel}}
       {{#> sidebar-content}}
-        {{#> page-main-section newcontext page-demo-default--id=page-demo-default--id}}
-          {{> jump-links-demo--content}}
+        {{#> page-main-section page-main-section--modifier=reset}}
+          {{> jump-links-template-content}}
         {{/page-main-section}}
       {{/sidebar-content}}
     {{/sidebar}}
   {{/page-main-section}}
-{{/page-demo-default}}
+{{/inline}}
 ```
 
 ### Vertical jump links expanded on mobile
 ```hbs isFullscreen
-{{#> page-demo-default page-demo-default--id="vertical-expanded-on-mobile"}}
+{{> page-template page-template--id="jump-links-vertical-expanded-mobile-example"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
-    {{#> sidebar}}
+    {{#> sidebar jump-links-template--id="jump-links-vertical-expanded-mobile-example-jump-links"}}
       {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
-        {{#> page-main-section newcontext page-demo-default--id=page-demo-default--id}}
+        {{#> page-main-section page-main-section--modifier=reset}}
           {{#> jump-links jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expanded"}}
             {{> jump-links-header}}
-            {{> jump-links-demo--list}}
+            {{> jump-links-template-list}}
           {{/jump-links}}
         {{/page-main-section}}
       {{/sidebar-panel}}
-     {{#> sidebar-content}}
-        {{#> page-main-section newcontext page-demo-default--id=page-demo-default--id}}
-          {{> jump-links-demo--content}}
+      {{#> sidebar-content}}
+        {{#> page-main-section page-main-section--modifier=reset}}
+          {{> jump-links-template-content}}
         {{/page-main-section}}
       {{/sidebar-content}}
     {{/sidebar}}
   {{/page-main-section}}
-{{/page-demo-default}}
+{{/inline}}
 ```
 
 ### Vertical jump links toggle text on mobile
 ```hbs isFullscreen
-{{#> page-demo-default page-demo-default--id="vertical-toggle-text-on-mobile"}}
+{{> page-template page-template--id="jump-links-vertical-toggle-text-mobile-example"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
-    {{#> sidebar}}
+    {{#> sidebar jump-links-template--id="jump-links-vertical-toggle-text-mobile-example-jump-links"}}
       {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
-        {{#> page-main-section newcontext page-demo-default--id=page-demo-default--id}}
+        {{#> page-main-section page-main-section--modifier=reset}}
           {{#> jump-links jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md"}}
             {{> jump-links-header}}
-            {{> jump-links-demo--list}}
+            {{> jump-links-template-list}}
           {{/jump-links}}
         {{/page-main-section}}
       {{/sidebar-panel}}
-     {{#> sidebar-content}}
-        {{#> page-main-section newcontext page-demo-default--id=page-demo-default--id}}
-          {{> jump-links-demo--content}}
+      {{#> sidebar-content}}
+        {{#> page-main-section page-main-section--modifier=reset}}
+          {{> jump-links-template-content}}
         {{/page-main-section}}
       {{/sidebar-content}}
     {{/sidebar}}
   {{/page-main-section}}
-{{/page-demo-default}}
+{{/inline}}
 ```
 
 ### Horizontal jump links
 ```hbs isFullscreen
-{{#> page-demo-default page-demo-default--id="horizontal"}}
+{{> page-template page-template--id="jump-links-horizontal-example"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
   {{#> page-main-section page-main-section--modifier="pf-m-sticky-top"}}
     {{#> jump-links jump-links--modifier="pf-m-center"}}
-      {{#> jump-links-main}}
-        {{> jump-links-header}}
-        {{> jump-links-demo--list}}
-      {{/jump-links-main}}
+      {{> jump-links-header}}
+      {{> jump-links-template-list}}
     {{/jump-links}}
   {{/page-main-section}}
   {{#> page-main-section}}
-    {{> jump-links-demo--content}}
+    {{> jump-links-template-content}}
   {{/page-main-section}}
-{{/page-demo-default}}
+{{/inline}}
 ```

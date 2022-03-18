@@ -1,0 +1,20 @@
+{{#> notification-drawer}}
+  {{#> notification-drawer-header}}
+    {{#> notification-drawer-header-title}}
+      Notifications
+    {{/notification-drawer-header-title}}
+    {{#> notification-drawer-header-status}}
+      {{#if notification-drawer-basic-list--AllRead}}
+        0 unread
+      {{else}}
+        3 unread
+    {{/if}}
+    {{/notification-drawer-header-status}}
+    {{#> notification-drawer-header-action}}
+      {{#> dropdown dropdown--id=(concat notification-drawer--id "-header-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}{{/dropdown}}
+    {{/notification-drawer-header-action}}
+  {{/notification-drawer-header}}
+  {{#> notification-drawer-body}}
+    {{> notification-drawer-basic-list}}
+  {{/notification-drawer-body}}
+{{/notification-drawer}}

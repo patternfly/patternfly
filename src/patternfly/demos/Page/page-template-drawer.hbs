@@ -1,5 +1,5 @@
 {{#> page-drawer}}
-  {{#> drawer drawer--id=(concat page-template--id '-drawer') drawer-panel--IsOpen="true" drawer--modifier=""}}
+  {{#> drawer drawer--id=(concat page-template--id '-drawer') drawer-panel--IsOpen=page-template--drawer-panel--IsOpen}}
     {{#> drawer-main}}
       {{#> drawer-content}}
         {{> page-template-main}}

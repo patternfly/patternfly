@@ -2,9 +2,9 @@
   {{#if page-sidebar--attribute}}
     {{{page-sidebar--attribute}}}
   {{/if}}>
-  {{#if page-demo-masthead-component--HasMenu}}
+  {{#if page-sidebar--HasContextSelector}}
     {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-menu"}}
-      {{#> context-selector context-selector--IsExpanded=page-demo-masthead-component--MenuIsExpanded context-selector--modifier="pf-m-page-insets pf-m-large" context-selector--id="context-selector-collapsed-example" context-selector--label-text="Selected project"}}
+      {{#> context-selector context-selector--IsExpanded=page-sidebar--ContextSelectorIsExpanded context-selector--modifier="pf-m-page-insets pf-m-large" context-selector--id="context-selector-collapsed-example" context-selector--label-text="Selected project"}}
         {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
           {{#> context-selector-toggle-text}}
             My project

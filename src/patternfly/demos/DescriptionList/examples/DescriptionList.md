@@ -8,9 +8,7 @@ cssPrefix: pf-d-description-list
 ## Examples
 ### Basic
 ```hbs isFullscreen
-{{> page-template
-  page-template--id="description-list-basic-demo"
-}}
+{{> page-template page-template--id="description-list-basic-example"}}
 
 {{#*inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
@@ -33,10 +31,7 @@ cssPrefix: pf-d-description-list
 
 ### In drawer
 ```hbs isFullscreen
-{{> page-template
-  page-template--id="description-list-in-drawer-demo"
-  page-template--IsDrawer="true"
-}}
+{{> page-template page-template--id="description-list-in-drawer-example" page-template--IsDrawer="true"}}
 
 {{#*inline "page-template-drawer-panel-tab-content"}}
   {{#> description-list description-list--modifier="pf-m-fill-columns pf-m-2-col pf-m-compact"}}
@@ -273,9 +268,7 @@ cssPrefix: pf-d-description-list
 
 ### Complex content
 ```hbs isFullscreen
-{{> page-template
-  page-template--id="description-list-complex-content-demo"
-}}
+{{> page-template page-template--id="description-list-complex-content-example"}}
 
 {{#*inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}

@@ -8,13 +8,13 @@
           {{/unless}}
         {{/drawer-actions}}
         {{#> title titleType="h2" title--modifier="pf-m-lg" title--attribute=(concat 'id="' primary-detail-template--id '-drawer-label"')}}
-          {{{primary-detail-panel-header--title}}}
+          {{{primary-detail-template-panel-header--title}}}
         {{/title}}
       {{/drawer-head}}
     {{/l-flex-item}}
-    {{#if primary-detail-panel-header--sub-title}}
+    {{#if primary-detail-template-panel-header--sub-title}}
       {{#> l-flex-item}}
-        {{{primary-detail-panel-header--sub-title}}}
+        {{{primary-detail-template-panel-header--sub-title}}}
       {{/l-flex-item}}
     {{/if}}
   {{/l-flex}}

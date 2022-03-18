@@ -1,40 +1,39 @@
-{{!--
+  {{!--
 Options: [
-  toolbar--template--HasToggleGroup
-  toolbar--template--HasBulkSelect
-  toolbar--template--HasContextSelector
-  toolbar--template--HasSearchFilter
-  toolbar--template--HasFilterGroup
-  toolbar--template--HasDropdown0
-  toolbar--template--HasSortButton
-  toolbar--template--HasOverflowMenu
-  toolbar--template--HasOverflowMenuSecondButton
-  toolbar--template--HasIconButtonGroup
-  toolbar--template--HasViewToggle
-  toolbar--template--HasNoPagination
+  toolbar-template--HasToggleGroup
+  toolbar-template--HasBulkSelect
+  toolbar-template--HasContextSelector
+  toolbar-template--HasSearchFilter
+  toolbar-template--HasFilterGroup
+  toolbar-template--HasDropdown0
+  toolbar-template--HasSortButton
+  toolbar-template--HasOverflowMenu
+  toolbar-template--HasOverflowMenuSecondButton
+  toolbar-template--HasIconButtonGroup
+  toolbar-template--HasViewToggle
+  toolbar-template--HasNoPagination
 ] --}}
 
-{{#> toolbar toolbar--id=toolbar--template--id toolbar--modifier=toolbar--template--modifier}}
+{{#> toolbar toolbar--id=toolbar-template--id toolbar--modifier=toolbar-template--modifier}}
   {{#> toolbar-content}}
     {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
-
       {{!-- partial --}}
       {{#if @partial-block}}
         {{> @partial-block}}
       {{/if}}
 
       {{!-- toggle group --}}
-      {{#if toolbar--template--HasToggleGroup}}
+      {{#if toolbar-template--HasToggleGroup}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
           {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
-          {{> toolbar--template--content}}
+          {{> toolbar-template-content}}
         {{/toolbar-group}}
       {{else}}
-        {{> toolbar--template--content}}
+        {{> toolbar-template-content}}
       {{/if}}
 
       {{!-- sort --}}
-      {{#if toolbar--template--HasSortButton}}
+      {{#if toolbar-template--HasSortButton}}
         {{#> toolbar-item}}
           {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
             <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
@@ -43,7 +42,7 @@ Options: [
       {{/if}}
 
       {{!-- mobile sort dropdown --}}
-      {{#if toolbar--template--HasSortButtonMobile}}
+      {{#if toolbar-template--HasSortButtonMobile}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
           {{#> options-menu options-menu--IsExpanded="true" id="{{toolbar--id}}-sort-mobile-menu"}}
             {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
@@ -81,14 +80,14 @@ Options: [
       {{/if}}
 
       {{!-- overflow menu --}}
-      {{#if toolbar--template--HasOverflowMenu}}
+      {{#if toolbar-template--HasOverflowMenu}}
         {{#> overflow-menu overflow-menu--id=(concat toolbar--id '-overflow-menu')}}
           {{#> overflow-menu-content overflow-menu-content--modifier="pf-u-display-none pf-u-display-flex-on-lg"}}
             {{#> overflow-menu-group overflow-menu-group--modifier="pf-m-button-group"}}
               {{#> overflow-menu-item}}
                 {{#> button button--modifier="pf-m-primary"}}
-                  {{#if toolbar--template--OverflowButton1Text}}
-                    {{toolbar--template--OverflowButton1Text}}
+                  {{#if toolbar-template--OverflowButton1Text}}
+                    {{toolbar-template--OverflowButton1Text}}
                   {{else}}
                     Create instance
                   {{/if}}
@@ -96,11 +95,11 @@ Options: [
               {{/overflow-menu-item}}
 
               {{!-- second button --}}
-              {{#if toolbar--template--HasOverflowMenuSecondButton}}
+              {{#if toolbar-template--HasOverflowMenuSecondButton}}
                 {{#> overflow-menu-item}}
                   {{#> button button--modifier="pf-m-secondary"}}
-                    {{#if toolbar--template--OverflowButton2Text}}
-                      {{toolbar--template--OverflowButton2Text}}
+                    {{#if toolbar-template--OverflowButton2Text}}
+                      {{toolbar-template--OverflowButton2Text}}
                     {{else}}
                       Action
                     {{/if}}
@@ -119,7 +118,7 @@ Options: [
       {{/if}}
 
       {{!-- icon button group --}}
-      {{#if toolbar--template--HasIconButtonGroup}}
+      {{#if toolbar-template--HasIconButtonGroup}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group"}}
           {{#> toolbar-item}}
             {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Edit"'}}
@@ -140,7 +139,7 @@ Options: [
       {{/if}}
 
       {{!-- view toggle --}}
-      {{#if toolbar--template--HasViewToggle}}
+      {{#if toolbar-template--HasViewToggle}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group pf-m-align-right"}}
           {{#> toolbar-item}}
             {{#> button button--modifier="pf-m-plain pf-m-active" button--attribute='aria-label="Grid view"'}}
@@ -156,7 +155,7 @@ Options: [
       {{/if}}
 
       {{!-- pagination --}}
-      {{#unless toolbar--template--HasNoPagination}}
+      {{#unless toolbar-template--HasNoPagination}}
         {{#> toolbar-item toolbar-item--modifier='pf-m-pagination'}}
           {{#> pagination pagination--IsCompact="true"}}
             {{> pagination-options-menu id=(concat toolbar--id '-top-pagination')}}
