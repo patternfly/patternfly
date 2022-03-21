@@ -14,18 +14,16 @@
   {{~#if menu-toggle--IsExpanded}}
     pf-m-expanded
   {{/if}}
-  {{#if menu-toggle--IsDiv}}
-    {{#if menu-toggle--IsTypeahead}}
-      pf-m-typeahead
+  {{#if menu-toggle--IsTypeahead}}
+    pf-m-typeahead
+  {{/if}}
+  {{#if menu-toggle--IsSplitButton}}
+    pf-m-split-button
+    {{~#if menu-toggle--IsAction}}
+      pf-m-action
     {{/if}}
-    {{#if menu-toggle--IsSplitButton}}
-      pf-m-split-button
-      {{~#if menu-toggle--IsAction}}
-        pf-m-action
-      {{/if}}
-      {{~#if menu-toggle--IsDisabled}}
-        pf-m-disabled
-      {{/if}}
+    {{~#if menu-toggle--IsDisabled}}
+      pf-m-disabled
     {{/if}}
   {{/if}}
   {{#if menu-toggle--modifier}} {{menu-toggle--modifier}}{{/if}}"

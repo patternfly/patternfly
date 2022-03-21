@@ -323,8 +323,6 @@
   }
 
   &.pf-m-typeahead {
-    padding: var(--pf-c-menu-toggle--PaddingTop) var(--pf-c-menu-toggle--PaddingRight) var(--pf-c-menu-toggle--PaddingBottom) var(--pf-c-menu-toggle--PaddingLeft);
-
     .pf-c-text-input-group {
       --pf-c-text-input-group__utilities--c-button--PaddingRight: var(--pf-global--spacer--sm);
 
