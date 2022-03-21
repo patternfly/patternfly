@@ -61,6 +61,17 @@
 
     pointer-events: none;
   }
+
+  &.pf-m-plain {
+    --pf-c-text-input-group--BackgroundColor: transparent;
+
+    .pf-c-text-input-group__text {
+      &::before,
+      &::after {
+        border: 0;
+      }
+    }
+  }
 }
 
 .pf-c-text-input-group__main {
