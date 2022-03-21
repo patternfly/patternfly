@@ -123,6 +123,20 @@ import './MenuToggle.css'
 
 &nbsp;
 
+{{#> menu-toggle menu-toggle--IsSecondary="true"}}
+  {{#> menu-toggle-icon}}
+    <i class="fas fa-cog" aria-hidden="true"></i>
+  {{/menu-toggle-icon}}
+  {{#> menu-toggle-text}}
+    Icon
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+&nbsp;
+
 {{#> menu-toggle menu-toggle--IsSecondary="true" menu-toggle--IsExpanded="true"}}
   {{#> menu-toggle-text}}
     Expanded
