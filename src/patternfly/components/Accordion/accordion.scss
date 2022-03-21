@@ -140,6 +140,7 @@
             right: 0;
             bottom: 0;
             left: 0;
+            pointer-events: none;
             content: "";
             border-bottom: var(--pf-c-accordion--m-bordered__expanded-content--m-expanded__expanded-content-body--last-child--after--BorderBottomWidth) solid var(--pf-c-accordion--m-bordered__expanded-content--m-expanded__expanded-content-body--last-child--after--BorderBottomColor);
           }

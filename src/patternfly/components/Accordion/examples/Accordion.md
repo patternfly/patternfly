@@ -195,7 +195,7 @@ cssPrefix: pf-c-accordion
   {{/accordion-toggle}}
   {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true"}}
     {{#> accordion-expanded-content-body}}
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <a href="#">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     {{/accordion-expanded-content-body}}
   {{/accordion-expanded-content}}
 
