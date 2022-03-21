@@ -486,6 +486,7 @@ import './Wizard.css'
 | `aria-expanded="true"` | `.pf-c-wizard__nav-link` | Indicates that the link subnav is visible. **Required** |
 | `aria-expanded="false"` | `.pf-c-wizard__nav-link` | Indicates that the link subnav is hidden. **Required** |
 | `tabindex="-1"` | `a.pf-c-wizard__nav-link` | Removes a link from keyboard focus. **Required for disabled links with `.pf-m-disabled`** |
+| `tabindex="0"` | `.pf-c-wizard__main` | If the wizard main section has overflow content that triggers a scrollbar, to ensure that the content is keyboard accessible, the section must include either a focusable element within the scrollable region or the section itself must be focusable by adding `tabindex="0"`. |
 
 ### Usage
 | Class | Applied to | Outcome |
