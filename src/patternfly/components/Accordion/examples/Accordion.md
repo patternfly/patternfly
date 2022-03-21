@@ -210,6 +210,16 @@ cssPrefix: pf-c-accordion
   {{/accordion-expanded-content}}
 
   {{#> accordion-toggle}}
+    {{#> accordion-toggle-text}}Item four{{/accordion-toggle-text}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+  {{/accordion-toggle}}
+  {{#> accordion-expanded-content}}
+    {{#> accordion-expanded-content-body}}
+      This text is hidden
+    {{/accordion-expanded-content-body}}
+  {{/accordion-expanded-content}}
+
+  {{#> accordion-toggle}}
     {{#> accordion-toggle-text}}Item five{{/accordion-toggle-text}}
     {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
   {{/accordion-toggle}}
