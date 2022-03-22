@@ -364,7 +364,7 @@ section: components
             {{> divider}}
             {{> tabs--table}}
             {{#> pagination pagination--modifier="pf-m-bottom"}}
-              {{> pagination-options-menu id=(concat tabs--page-wrapper--id '-footer-pagination') options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
+              {{> pagination-options-menu id=(concat tabs--page-wrapper--id '-footer-pagination') pagination-options-menu--modifier="pf-m-top"}}
               {{> pagination-nav-content}}
             {{/pagination}}
           {{/drawer-content}}
@@ -436,7 +436,7 @@ section: components
             {{> divider}}
             {{> tabs--table}}
             {{#> pagination pagination--modifier="pf-m-bottom"}}
-              {{> pagination-options-menu id=(concat tabs--page-wrapper--id '-footer-pagination') options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
+              {{> pagination-options-menu id=(concat tabs--page-wrapper--id '-footer-pagination') pagination-options-menu--modifier="pf-m-top"}}
               {{> pagination-nav-content}}
             {{/pagination}}
           {{/drawer-content}}
@@ -534,7 +534,7 @@ section: components
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light pf-m-sticky-bottom pf-m-no-fill"}}
       {{#> pagination pagination--modifier="pf-m-bottom"}}
-        {{> pagination-options-menu id=(concat example-wrapper--id '-bottom-pagination') options-menu--IsText="true" pagination-options-menu--modifier="pf-m-top"}}
+        {{> pagination-options-menu id=(concat example-wrapper--id '-bottom-pagination') pagination-options-menu--modifier="pf-m-top"}}
         {{> pagination-nav-content}}
       {{/pagination}}
     {{/page-main-section}}
