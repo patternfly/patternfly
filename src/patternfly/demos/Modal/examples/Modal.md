@@ -198,7 +198,7 @@ section: components
                 {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
                   Name
                 {{/form-label}}
-                {{> form-group-label-help}}
+                {{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
               {{/form-group-label}}
               {{#> form-group-control}}
                 {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -209,7 +209,7 @@ section: components
                 {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
                   E-mail
                 {{/form-label}}
-                {{> form-group-label-help}}
+                {{> form-group-label-help form-group-label-help--aria-label="More information for email field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
               {{/form-group-label}}
               {{#> form-group-control}}
                 {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
@@ -220,7 +220,7 @@ section: components
                 {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}
                   Address
                 {{/form-label}}
-                {{> form-group-label-help}}
+                {{> form-group-label-help form-group-label-help--aria-label="More information for address field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
               {{/form-group-label}}
               {{#> form-group-control}}
                 {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
