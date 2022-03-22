@@ -393,8 +393,15 @@ $pf-c-tree-view--MaxNesting: 10;
   }
 }
 
-.pf-c-tree-view__node-check + .pf-c-tree-view__node-text {
-  padding-left: var(--pf-c-tree-view__node-check--node-text--PaddingLeft);
+.pf-c-tree-view__node-check {
+  &,
+  & + .pf-c-tree-view__node-text {
+    cursor: pointer;
+  }
+
+  + .pf-c-tree-view__node-text {
+    padding-left: var(--pf-c-tree-view__node-check--node-text--PaddingLeft);
+  }
 }
 
 .pf-c-tree-view__node-toggle {
