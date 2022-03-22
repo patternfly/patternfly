@@ -218,6 +218,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `id="[id]"` | `.pf-c-page__main` | Provides a hook for sending focus to new content. **Required** |
 | `aria-expanded="true/false"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Indicates that the expandable content is visible and the current state of the contents. **Required** |
 | `aria-controls="[id of nav]"` | `.pf-c-page__header-brand-toggle > .pf-c-button` | Identifies the element controlled by the toggle. **Required**
+| `tabindex="0"` | `.pf-c-page__main-section.pf-m-overflow-scroll` | If a page section has overflow content that triggers a scrollbar, to ensure that the content is keyboard accessible, the page section must include either a focusable element within the scrollable region or the page section itself must be focusable by adding `tabindex="0"`. |
 
 ### Usage
 | Class | Applied to | Outcome |

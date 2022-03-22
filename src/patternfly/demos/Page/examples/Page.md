@@ -65,6 +65,7 @@ wrapperTag: div
       page-template--HasFooter="true"
       page-template-gallery--IsLongGallery="true"
       page-template-gallery--modifier="pf-m-overflow-scroll"
+      page-template-gallery--attribute='tabindex="0"'
       page-template-title--modifier="pf-m-shadow-bottom"
       page-template-footer--modifier="pf-m-shadow-top"
 }}

@@ -53,7 +53,7 @@ section: components
             This is a modal description. The description will not scroll with the body contents.
           {{/modal-box-description}}
         {{/modal-box-header}}
-        {{#> modal-box-body}}
+        {{#> modal-box-body modal-box-body--attribute='tabindex="0"'}}
           <p>general_modal_final_finalfinal_v9_actualfinal.sketch</p>
           <p>A file with this name already exists, would you like to overwrite the existing file or save a new copy?</p>
           <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Integer tincidunt. Integer tincidunt. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
