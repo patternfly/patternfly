@@ -1,5 +1,6 @@
 <button class="pf-c-form__group-label-help{{#if form-group-label-help--modifier}} {{form-group-label-help--modifier}}{{/if}}"
-  aria-label="More info"
+  aria-label="{{#if form-group-label-help--aria-label}}{{form-group-label-help--aria-label}}{{else if form-group--id}}More information for {{form-group--id}}{{else}}More information{{/if}}"
+  {{#if form-group-label-help--aria-describedby}} aria-describedby="{{form-group-label-help--aria-describedby}}"{{/if}}
   {{#if form-group-label-help--attribute}}
     {{{form-group-label-help--attribute}}}
   {{/if}}>

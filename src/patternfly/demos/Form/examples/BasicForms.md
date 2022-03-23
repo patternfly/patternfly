@@ -27,7 +27,7 @@ section: components
   {{#> form-group form-group--id="-phone"}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Phone number{{/form-label}}
-      {{> form-group-label-help}}
+      {{> form-group-label-help form-group-label-help--aria-label="More information for phone number field"  form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
@@ -120,7 +120,7 @@ section: components
    {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
     {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
       {{#> form-label }}How can we contact you?{{/form-label}}
-      {{> form-group-label-help}}
+      {{> form-group-label-help form-group-label-help--aria-label="More information for contact field" form-group-label-help--aria-describedby=(concat form--id form-group--id '-legend')}}
     {{/form-group-label}}
     {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
       {{#> check}}
@@ -293,7 +293,7 @@ section: components
     {{#> form-group form-group--id="-clientid"}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Client ID{{/form-label}}
-        {{> form-group-label-help}}
+        {{> form-group-label-help form-group-label-help--aria-label="More information for client id field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
@@ -302,7 +302,7 @@ section: components
     {{#> form-group form-group--id="-name"}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
-        {{> form-group-label-help}}
+        {{> form-group-label-help form-group-label-help--aria-label="More information for full name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
@@ -311,7 +311,7 @@ section: components
     {{#> form-group form-group--id="-description"}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Description{{/form-label}}
-        {{> form-group-label-help}}
+        {{> form-group-label-help form-group-label-help--aria-label="More information for description field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
@@ -325,7 +325,7 @@ section: components
     {{#> form-group form-group--id="-rooturl"}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Root URL{{/form-label}}
-        {{> form-group-label-help}}
+        {{> form-group-label-help form-group-label-help--aria-label="More information for root URL field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
@@ -334,7 +334,7 @@ section: components
     {{#> form-group form-group--id="-uris"}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'id="' form--id form-group--id '"') required="true"}}Valid redirect URIs{{/form-label}}
-        {{> form-group-label-help}}
+        {{> form-group-label-help form-group-label-help--aria-label="More information for valid redirect URIs field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
         {{#> input-group}}
@@ -366,7 +366,7 @@ section: components
     {{#> form-group form-group--id="-home-url"}}
       {{#> form-group-label}}
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Home URL{{/form-label}}
-        {{> form-group-label-help}}
+        {{> form-group-label-help form-group-label-help--aria-label="More information for home URL field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control}}
         {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
