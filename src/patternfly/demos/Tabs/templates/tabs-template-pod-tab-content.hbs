@@ -1,31 +1,27 @@
 {{#if tabs-template-pod-tab-content--IsSecondary}}
-  {{#> wrapper tab-content--id=(concat tabs-template--id '-tabs-secondary')}}
-    {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-pod-info-link" id="' tab-content--id '-pod-info-panel"')}}
-      {{> @partial-block}}
-    {{/tab-content}}
-    {{#> tab-content tab-content--IsHidden="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-editable-aspects-link" id="' tab-content--id '-editable-aspects-panel"')}}
-      Editable aspects panel
-    {{/tab-content}}
-  {{/wrapper}}
+  {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tabs--id '-pod-info-link" id="' tabs--id '-pod-info-panel"')}}
+    {{> @partial-block}}
+  {{/tab-content}}
+  {{#> tab-content tab-content--IsHidden="true" tab-content--attribute=(concat 'aria-labelledby="' tabs--id '-editable-aspects-link" id="' tabs--id '-editable-aspects-panel"')}}
+    Editable aspects panel
+  {{/tab-content}}
 {{else}}
-  {{#> wrapper tab-content--id=(concat tabs-template--id '-tabs')}}
-    {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-details-link" id="' tab-content--id '-details-panel"')}}
-      {{> @partial-block}}
-    {{/tab-content}}
-    {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-yaml-link" id="' tab-content--id '-yaml-panel"')}}
-      YAML panel
-    {{/tab-content}}
-    {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-environment-link" id="' tab-content--id '-environment-panel"')}}
-      Environment panel
-    {{/tab-content}}
-    {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-logs-link" id="' tab-content--id '-logs-panel"')}}
-      Logs panel
-    {{/tab-content}}
-    {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-events-link" id="' tab-content--id '-events-panel"')}}
-      Events panel
-    {{/tab-content}}
-    {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-terminal-link" id="' tab-content--id '-terminal-panel"')}}
-      Terminal panel
-    {{/tab-content}}
-  {{/wrapper}}
+  {{#> tab-content tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tabs--id '-details-link" id="' tabs--id '-details-panel"')}}
+    {{> @partial-block}}
+  {{/tab-content}}
+  {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tabs--id '-yaml-link" id="' tabs--id '-yaml-panel"')}}
+    YAML panel
+  {{/tab-content}}
+  {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tabs--id '-environment-link" id="' tabs--id '-environment-panel"')}}
+    Environment panel
+  {{/tab-content}}
+  {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tabs--id '-logs-link" id="' tabs--id '-logs-panel"')}}
+    Logs panel
+  {{/tab-content}}
+  {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tabs--id '-events-link" id="' tabs--id '-events-panel"')}}
+    Events panel
+  {{/tab-content}}
+  {{#> tab-content tab-content--attribute=(concat 'aria-labelledby="' tabs--id '-terminal-link" id="' tabs--id '-terminal-panel"')}}
+    Terminal panel
+  {{/tab-content}}
 {{/if}}
