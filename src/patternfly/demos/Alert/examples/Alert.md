@@ -69,26 +69,26 @@ section: components
 
 ### Inline Alert in Horizontal Form
 ```hbs isFullscreen
-{{> page-template page-template--id="alert-inline-example"}}
+{{> page-template page-template--id="alert-horizontal-example"}}
 
 {{#* inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
   {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-    {{> alert-template-horizontal-form alert-template-horizontal-form--id="alert-inline-example-form"}}
+    {{> alert-template-horizontal-form alert-template-horizontal-form--id=(concat page-template--id "-form")}}
   {{/page-main-section}}
 {{/inline}}
 ```
 
 ### Inline Alert in Stacked Form
 ```hbs isFullscreen
-{{> page-template page-template--id="alert-inline-example"}}
+{{> page-template page-template--id="alert-stacked-example"}}
 
 {{#* inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
   {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-    {{> alert-template-stacked-form alert-template-stacked-form--id="alert-inline-example-form"}}
+    {{> alert-template-stacked-form alert-template-stacked-form--id=(concat page-template--id "-form")}}
   {{/page-main-section}}
 {{/inline}}
 ```
