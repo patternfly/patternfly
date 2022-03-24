@@ -31,7 +31,7 @@ cssPrefix: pf-d-description-list
 
 ### In drawer
 ```hbs isFullscreen
-{{> page-template page-template--id="description-list-in-drawer-example" page-template--IsDrawer="true"}}
+{{> page-template page-template--id="description-list-in-drawer-example" page-template--IsDrawer="true" page-template--drawer-panel--IsOpen="true"}}
 
 {{#*inline "page-template-drawer-panel-tab-content"}}
   {{#> description-list description-list--modifier="pf-m-fill-columns pf-m-2-col pf-m-compact"}}
