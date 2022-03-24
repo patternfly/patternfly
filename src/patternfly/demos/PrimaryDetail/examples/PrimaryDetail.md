@@ -17,7 +17,7 @@ wrapperTag: div
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id="primary-detail-expanded-example-drawer" primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
 
       {{#> drawer-main}}
 
@@ -68,7 +68,7 @@ wrapperTag: div
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id="primary-detail-collapsed-example-drawer" primary-detail-template--modifier="pf-m-inline-on-2xl"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl"}}
 
       {{#> drawer-main}}
 
@@ -115,7 +115,7 @@ wrapperTag: div
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id="primary-detail-content-body-padding-example-drawer" primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
 
       {{#> drawer-main}}
 
@@ -161,7 +161,7 @@ wrapperTag: div
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
-    {{#> primary-detail-template primary-detail-template--id="primary-detail-card-view-expanded-example-drawer" primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+    {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
 
       {{#> drawer-section}}
         {{> toolbar-template
@@ -216,7 +216,7 @@ wrapperTag: div
     {{#> card}}
 
       <!-- Drawer -->
-      {{#> primary-detail-template primary-detail-template--id="primary-detail-card-simple-list-on-mobile-example-drawer" drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
+      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
 
         {{#> drawer-main}}
           <!-- Content -->
@@ -256,7 +256,7 @@ wrapperTag: div
     {{#> card}}
 
       <!-- Drawer -->
-      {{#> primary-detail-template primary-detail-template--id="primary-detail-card-data-list-example-drawer" drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
+      {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") drawer--IsStatic="true" drawer-panel--IsOpen="true"}}
         {{#> drawer-main}}
 
           <!-- Content -->
@@ -291,7 +291,7 @@ wrapperTag: div
   {{> page-template-title}}
   {{> divider divider--type="div"}}
 
-  {{#> primary-detail-template primary-detail-template--id="primary-detail-inline-modifier-example-drawer" primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
+  {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
 
     {{#> drawer-main}}
 
