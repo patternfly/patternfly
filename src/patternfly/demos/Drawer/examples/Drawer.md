@@ -31,7 +31,7 @@ wrapperTag: div
 ### Expanded bottom
 ```hbs isFullscreen
 {{> page-template
-      page-template--id="drawer-collapsed-bottom-example"
+      page-template--id="drawer-expanded-bottom-example"
       page-template--IsDrawer="true"
       page-template--drawer-panel--IsOpen="true"
       drawer--modifier="pf-m-panel-bottom"
