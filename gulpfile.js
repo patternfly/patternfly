@@ -13,9 +13,10 @@ const { build } = require('theme-patternfly-org/scripts/cli/build');
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
   './src/patternfly/base/patternfly*.scss',
-  './src/patternfly/{components,layouts,patterns,utilities,themes}/**/*.scss',
-  './src/patternfly/components/**/themes/**/*.scss',
-  '!./src/patternfly/**/_all.scss'
+  './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
+  '!./src/patternfly/**/_all.scss',
+  // No need to compile component theme sass files to empty css files
+  '!./src/patternfly/components/**/themes/**/*.scss'
 ];
 const hbsFiles = ['./src/patternfly/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];
