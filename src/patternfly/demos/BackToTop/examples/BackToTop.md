@@ -13,6 +13,6 @@ cssPrefix: pf-d-back-to-top
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
   {{> page-template-gallery page-template-gallery--IsLongGallery="true"}}
-  {{> back-to-top back-to-top--target="main-content-back-to-top-basic"}}
+  {{> back-to-top back-to-top--target=(concat "main-content-" page-template--id)}}
 {{/inline}}
 ```
