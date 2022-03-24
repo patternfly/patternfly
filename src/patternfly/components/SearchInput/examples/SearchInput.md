@@ -110,11 +110,11 @@ import './SearchInput.css'
       {{> text-input-group-text-input text-input-group-text-input--placeholder="Find by name"}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
-  {{#> text-input-group-controls}}
+  {{#> text-input-group-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
       <i class="fas fa-arrow-right" aria-hidden="true"></i>
     {{/button}}
-  {{/text-input-group-controls}}
+  {{/text-input-group-control}}
 {{/text-input-group}}
 ```
 
@@ -136,14 +136,14 @@ import './SearchInput.css'
       <i class="fas fa-times fa-fw" aria-hidden="true"></i>
     {{/button}}
   {{/text-input-group-utilities}}
-  {{#> text-input-group-controls}}
+  {{#> text-input-group-control}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
       <i class="fas fa-caret-down" aria-hidden="true"></i>
     {{/button}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
       <i class="fas fa-arrow-right" aria-hidden="true"></i>
     {{/button}}
-  {{/text-input-group-controls}}
+  {{/text-input-group-control}}
 {{/text-input-group}}
 ```
 
@@ -221,14 +221,14 @@ import './SearchInput.css'
       <i class="fas fa-times fa-fw" aria-hidden="true"></i>
     {{/button}}
   {{/text-input-group-utilities}}
-  {{#> text-input-group-controls}}
+  {{#> text-input-group-control}}
     {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
       <i class="fas fa-caret-down" aria-hidden="true"></i>
     {{/button}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
       <i class="fas fa-arrow-right" aria-hidden="true"></i>
     {{/button}}
-  {{/text-input-group-controls}}
+  {{/text-input-group-control}}
 {{/text-input-group}}
 
 {{#> panel panel--modifier="pf-m-raised"}}
@@ -492,14 +492,14 @@ import './SearchInput.css'
       <i class="fas fa-times fa-fw" aria-hidden="true"></i>
     {{/button}}
   {{/text-input-group-utilities}}
-  {{#> text-input-group-controls}}
+  {{#> text-input-group-control}}
     {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
       <i class="fas fa-caret-down" aria-hidden="true"></i>
     {{/button}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
       <i class="fas fa-arrow-right" aria-hidden="true"></i>
     {{/button}}
-  {{/text-input-group-controls}}
+  {{/text-input-group-control}}
 {{/text-input-group}}
 
 {{#> panel panel--modifier="pf-m-raised"}}

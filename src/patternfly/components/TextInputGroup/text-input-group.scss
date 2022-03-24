@@ -176,7 +176,7 @@
 }
 
 .pf-c-text-input-group__utilities,
-.pf-c-text-input-group__controls,
+.pf-c-text-input-group__control,
 .pf-c-text-input-group__element-group {
   display: flex;
   align-items: center;
@@ -196,7 +196,7 @@
   }
 }
 
-.pf-c-text-input-group__controls {
+.pf-c-text-input-group__control {
 
   // stylelint-disable selector-max-class
   .pf-c-button.pf-m-control + .pf-c-button.pf-m-control {
