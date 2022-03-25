@@ -175,14 +175,9 @@
   }
 }
 
-.pf-c-text-input-group__utilities,
-.pf-c-text-input-group__control,
-.pf-c-text-input-group__element-group {
+.pf-c-text-input-group__utilities {
   display: flex;
   align-items: center;
-}
-
-.pf-c-text-input-group__utilities {
   margin-right: var(--pf-c-text-input-group__utilities--MarginRight);
   margin-left: var(--pf-c-text-input-group__utilities--MarginLeft);
 
@@ -194,13 +189,4 @@
     --pf-c-button--PaddingRight: var(--pf-c-text-input-group__utilities--c-button--PaddingRight);
     --pf-c-button--PaddingLeft: var(--pf-c-text-input-group__utilities--c-button--PaddingLeft);
   }
-}
-
-.pf-c-text-input-group__control {
-
-  // stylelint-disable selector-max-class
-  .pf-c-button.pf-m-control + .pf-c-button.pf-m-control {
-    margin-left: calc(var(--pf-c-button--after--BorderWidth) * -1);
-  }
-  // stylelint-enable
 }

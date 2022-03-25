@@ -82,14 +82,14 @@ import './SearchInput.css'
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
     {{> badge badge--modifier="pf-m-read" badge--text="1 / 3"}}
-    {{#> text-input-group-element-group}}
+    {{#> input-group}}
       {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Next"'}}
         <i class="fas fa-angle-up fa-fw" aria-hidden="true"></i>
       {{/button}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next"'}}
         <i class="fas fa-angle-down fa-fw" aria-hidden="true"></i>
       {{/button}}
-    {{/text-input-group-element-group}}
+    {{/input-group}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
       <i class="fas fa-times fa-fw" aria-hidden="true"></i>
     {{/button}}

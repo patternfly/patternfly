@@ -4,8 +4,7 @@
   {{/if}}>
   {{#if badge--text}}
     {{badge--text}}
-  {{/if}}
-  {{#if @partial-block}}
+  {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}
 </span>
