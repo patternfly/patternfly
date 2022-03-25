@@ -95,8 +95,10 @@ section: components
   {{> page-template-title}}
   {{#> page-main-section page-main-section--modifier="pf-m-sticky-top"}}
     {{#> jump-links jump-links--modifier="pf-m-center"}}
-      {{> jump-links-header}}
-      {{> jump-links-template-list}}
+      {{#> jump-links-main}}
+        {{> jump-links-header}}
+        {{> jump-links-template-list}}
+      {{/jump-links-main}}
     {{/jump-links}}
   {{/page-main-section}}
   {{#> page-main-section}}
