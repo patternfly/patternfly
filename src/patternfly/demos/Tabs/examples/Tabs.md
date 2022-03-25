@@ -13,7 +13,7 @@ section: components
 {{#* inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
-  {{#> tabs-template tabs-template--id="tabs-tables-and-tabs-example-tabs"}}
+  {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
 
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--modifier="pf-m-page-insets"}}
@@ -171,7 +171,7 @@ section: components
 {{#* inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
-  {{#> tabs-template tabs-template--id="tabs-tables-and-tabs-example-tabs"}}
+  {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--modifier="pf-m-page-insets"}}
     {{/page-main-tabs}}
@@ -294,7 +294,7 @@ section: components
 {{#* inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
-  {{#> tabs-template tabs-template--id="nested-tabs-example"}}
+  {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{#> tabs tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-page-insets"}}
         {{#> tabs-list}}
@@ -333,8 +333,7 @@ section: components
 {{#* inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
-  {{#> tabs-template tabs-template--id="table-tabs-example"}}
-
+  {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-tabs}}
       {{#> tabs tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-page-insets"}}
         {{#> tabs-list}}
@@ -407,7 +406,7 @@ section: components
 {{#* inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
-  {{#> tabs-template tabs-template--id="table-tabs-example"}}
+  {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
 
     {{#> page-main-tabs}}
       {{#> tabs tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-page-insets"}}
@@ -487,7 +486,7 @@ section: components
         Modal title
       {{/modal-box-title}}
     {{/modal-box-header}}
-    {{#> tabs-template tabs-template--id="modal-tabs-example"}}
+    {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
       {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-template--id '-modal-description"')}}
         {{#> grid grid--modifier="pf-m-gutter"}}
           {{#> grid-item}}
@@ -563,7 +562,7 @@ section: components
 {{#* inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
-  {{#> tabs-template tabs-template--id="table-tabs-example"}}
+  {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{#> tabs tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-box pf-m-page-insets pf-m-color-scheme--light-300"}}
         {{#> tabs-list}}
@@ -612,7 +611,7 @@ section: components
 {{#* inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
   {{> page-template-title}}
-  {{#> tabs-template tabs-template--id="table-tabs-example"}}
+  {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{#> tabs tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-box pf-m-page-insets"}}
         {{#> tabs-list}}
