@@ -16,11 +16,10 @@ section: components
 
 ### Horizontal nav
 ```hbs isFullscreen
-{{> page-template
-      page-template--id="nav-horizontal-example"
+{{> page-template page-template--id="nav-horizontal-example"
       page-template--HasNoSidebar="true"
-      masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"
       masthead-template--HasHorizontalNav="true"
+      masthead-template--HasNoToggle="true"
 }}
 ```
 
