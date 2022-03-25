@@ -35,7 +35,7 @@ section: components
       notification-drawer-template--id="drawer-expanded-attention-example"
       notification-drawer-basic-list--IsAttention="true"
       notification-badge--modifier="pf-m-attention"
-      page-header-tools--IsAttention="true"
+      masthead-template-content-icon-group--notification-badge--IsAttention="true"
       drawer-panel--IsOpen="true"
 }}
 ```

@@ -2,7 +2,11 @@
   {{#> toolbar-item}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
       {{#> notification-badge}}
-        <i class="pf-icon-attention-bell" aria-hidden="true"></i>
+        {{#if masthead-template-content-icon-group--notification-badge--IsAttention}}
+          <i class="pf-icon-attention-bell" aria-hidden="true"></i>
+        {{else}}
+          <i class="pf-icon-bell" aria-hidden="true"></i>
+        {{/if}}
       {{/notification-badge}}
     {{/button}}
   {{/toolbar-item}}
