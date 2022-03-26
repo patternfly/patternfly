@@ -1,4 +1,4 @@
-{{#> tabs tabs--id=(concat primary-detail-template--id '-tabs') tabs--modifier=primary-detail-panel-tabs--modifier}}
+{{#> tabs tabs--id=(concat primary-detail-template--id '-tabs') tabs--modifier=primary-detail-template-panel-tabs--modifier}}
   {{#> tabs-scroll-button tabs-scroll-button--IsLeft="true"}}{{/tabs-scroll-button}}
   {{#> tabs-list}}
     {{> __tabs-item
@@ -14,7 +14,7 @@
       __tabs-item--text="Activity"
       __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-tab2-panel"')
       }}
-    {{#if primary-detail-panel-tabs--Has3}}
+    {{#if primary-detail-template-panel-tabs--Has3}}
       {{> __tabs-item
         __tabs-item--id="tab3"
         __tabs-item--aria-label="Status"

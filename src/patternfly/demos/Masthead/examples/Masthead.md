@@ -85,44 +85,11 @@ wrapperTag: div
 
 ### Horizontal nav
 ```hbs isFullscreen
-{{> page-template page-template--id="masthead-horizontal-nav" masthead-template--HasNoToggle="true" page-template--HasNoSidebar="true"}}
-
-{{#*inline "masthead-template-content-toolbar-content"}}
-  {{#> toolbar-content-section}}
-    {{#> toolbar-item toolbar-item--modifier="pf-m-overflow-container" toolbar-item--attribute='style="--pf-c-toolbar__item--MinWidth: 18ch;"'}}
-      {{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' masthead-q-id '-horizontal-nav" aria-label="Global"')}}
-        {{#> nav-list}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 1
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 2
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 3
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#"}}
-              Horizontal nav item 4
-            {{/nav-link}}
-          {{/nav-item}}
-          {{#> nav-item}}
-            {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-              Horizontal nav item 5
-            {{/nav-link}}
-          {{/nav-item}}
-        {{/nav-list}}
-      {{/nav}}
-    {{/toolbar-item}}
-    {{> masthead-template-content-icon-group masthead-template-content-icon-group--profile-dropdown--IsExpanded="true" masthead-template-content-icon-group--breakpoint="xl"}}
-  {{/toolbar-content-section}}
-{{/inline}}
+{{> page-template page-template--id="masthead-horizontal-nav"
+      page-template--HasNoSidebar="true"
+      masthead-template--HasHorizontalNav="true"
+      masthead-template--HasNoToggle="true"
+}}
 ```
 
 ## Mobile examples

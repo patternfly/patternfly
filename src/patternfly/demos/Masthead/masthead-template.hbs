@@ -3,8 +3,10 @@
   masthead-template-content-toolbar-content: set custom toolbar content
 --}}
 
-{{> page-template-skip-to-content}} {{!-- include skip to content --}}
-{{#> masthead masthead--id=masthead-template--id masthead-template-content-icon-group--breakpoint="lg"}} {{!-- set default breakpoint --}}
+{{#unless masthead-template--HasNoSkipToContent}}
+  {{> page-template-skip-to-content}}
+{{/unless}}
+{{#> masthead masthead--id=masthead-template--id masthead--modifier=masthead-template--modifier masthead-template-content-icon-group--breakpoint="lg"}} {{!-- set default breakpoint --}}
   {{#unless masthead-template--HasNoToggle}}
     {{> masthead-toggle}}
   {{/unless}}

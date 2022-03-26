@@ -11,7 +11,7 @@ wrapperTag: div
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth="true"}}
-    {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+    {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
     {{> table-simple-table}}
     {{> table-pagination-footer}}
   {{/page-main-section}}
@@ -25,7 +25,7 @@ wrapperTag: div
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasOverflowMenu="true" toolbar--template--HasOverflowMenuSecondButton="true" toolbar--template--HasIconButtonGroup="true" toolbar--template--HasSortButtonMobile="true"}}
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasOverflowMenu="true" toolbar-template--HasOverflowMenuSecondButton="true" toolbar-template--HasIconButtonGroup="true" toolbar-template--HasSortButtonMobile="true"}}
       {{> table-sortable-table}}
       {{> table-pagination-footer}}
     {{/card}}
@@ -40,7 +40,7 @@ wrapperTag: div
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true" }}
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasFilterGroup="true" toolbar-template--HasSortButton="true" }}
       {{> table-expandable-table}}
       {{> table-pagination-footer}}
     {{/card}}
@@ -55,7 +55,7 @@ wrapperTag: div
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasFilterGroup="true" toolbar-template--HasSortButton="true"}}
       {{> table-compact-table}}
       {{> table-pagination-footer}}
     {{/card}}
@@ -70,7 +70,7 @@ wrapperTag: div
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasFilterGroup="true" toolbar-template--HasSortButton="true"}}
       {{> table-compound-expansion-table}}
       {{> table-pagination-footer}}
     {{/card}}
@@ -112,7 +112,7 @@ wrapperTag: div
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasFilterGroup="true" toolbar-template--HasSortButton="true"}}
       {{> table-simple-table}}
       {{> table-pagination-footer-static}}
     {{/card}}
@@ -159,7 +159,7 @@ wrapperTag: div
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasFilterGroup="true" toolbar-template--HasSortButton="true"}}
       {{> table-simple-table}}
     {{/card}}
   {{/page-main-section}}
@@ -173,7 +173,7 @@ wrapperTag: div
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasFilterGroup="true" toolbar--template--HasSortButton="true"}}
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasFilterGroup="true" toolbar-template--HasSortButton="true"}}
       {{> table-simple-table table-simple-table--modifier="pf-m-sticky-header"}}
       {{> table-pagination-footer}}
     {{/card}}
@@ -188,7 +188,7 @@ wrapperTag: div
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth="true"}}
     <div class="pf-c-scroll-outer-wrapper">
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
       <div class="pf-c-scroll-inner-wrapper">
         {{> table--scrollable table--scrollable--id="sticky-first-column-demo-table" table--scrollable--Column1IsStickyColumn="true" table--scrollable--th--modifier--cell-1-modifier="pf-m-border-right"}}
       </div>
@@ -205,7 +205,7 @@ wrapperTag: div
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidth="true"}}
     <div class="pf-c-scroll-outer-wrapper">
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
       <div class="pf-c-scroll-inner-wrapper">
         {{> table--scrollable table--scrollable--id="sticky-multiple-columns-demo-table" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
       </div>
@@ -222,7 +222,7 @@ wrapperTag: div
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidths="true"}}
     <div class="pf-c-scroll-outer-wrapper">
-      {{> toolbar--template toolbar--id=(concat page--id '-toolbar') toolbar--template--HasBulkSelect="true" toolbar--template--HasToggleGroup="true" toolbar--template--HasSearchFilter="true" toolbar--template--HasSortButton="true" toolbar--template--HasOverflowMenu="true"}}
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
       <div class="pf-c-scroll-inner-wrapper">
         {{> table--scrollable table--scrollable--id="sticky-header-and-multiple-columns-demo-table" table--scrollable--modifier="pf-m-sticky-header" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
       </div>

@@ -8,17 +8,42 @@ wrapperTag: div
 
 ### Collapsed
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-collapsed"}}
+{{> page-template page-template--id="drawer-collapsed-example" page-template--IsDrawer="true"}}
 ```
 
 ### Expanded
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-expanded" drawer-panel--IsOpen="true"}}
+{{> page-template
+      page-template--id="drawer-expanded-example"
+      page-template--IsDrawer="true"
+      page-template--drawer-panel--IsOpen="true"
+}}
+
+{{#*inline "page-template-drawer-panel"}}
+  {{#> drawer-panel}}
+    {{#> drawer-body}}
+      drawer panel
+    {{/drawer-body}}
+  {{/drawer-panel}}
+{{/inline}}
 ```
 
 ### Expanded bottom
 ```hbs isFullscreen
-{{> drawer-demo-default id="drawer-expanded-bottom" drawer-panel--IsOpen="true" drawer-demo-content-drawer--modifier="pf-m-panel-bottom"}}
+{{> page-template
+      page-template--id="drawer-expanded-bottom-example"
+      page-template--IsDrawer="true"
+      page-template--drawer-panel--IsOpen="true"
+      drawer--modifier="pf-m-panel-bottom"
+}}
+
+{{#*inline "page-template-drawer-panel"}}
+  {{#> drawer-panel}}
+    {{#> drawer-body}}
+      drawer panel
+    {{/drawer-body}}
+  {{/drawer-panel}}
+{{/inline}}
 ```
 
 ## Documentation

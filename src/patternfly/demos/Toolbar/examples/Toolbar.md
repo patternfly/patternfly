@@ -304,9 +304,13 @@ import './Toolbar.css'
 
 ### Toolbar pagination management on mobile
 ```hbs isFullscreen
-{{#> page-demo-default page-demo-default--id="toolbar-pagination-management"}}
+{{> page-template page-template--id="toolbar-pagination-management-example"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
   {{#> page-main-section}}
-    {{#> toolbar toolbar--id=(concat page-demo-default--id '-mobile-example') toolbar--modifier="pf-m-nowrap"}}
+    {{#> toolbar toolbar--id=(concat page-template--id "-toolbar") toolbar--modifier="pf-m-nowrap"}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
@@ -343,5 +347,5 @@ import './Toolbar.css'
       {{/pagination}}
     </div>
   {{/page-main-section}}
-{{/page-demo-default}}
+{{/inline}}
 ```

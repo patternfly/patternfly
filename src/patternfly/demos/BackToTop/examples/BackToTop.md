@@ -7,8 +7,12 @@ cssPrefix: pf-d-back-to-top
 ## Examples
 ### Basic
 ```hbs isFullscreen
-{{#> page-demo-default page-demo-default--id="back-to-top-basic"}}
+{{> page-template page-template--id="back-to-top-basic-example"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
   {{> page-template-gallery page-template-gallery--IsLongGallery="true"}}
-  {{> back-to-top back-to-top--target="main-content-back-to-top-basic"}}
-{{/page-demo-default}}
+  {{> back-to-top back-to-top--target=(concat "main-content-" page-template--id)}}
+{{/inline}}
 ```

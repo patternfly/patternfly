@@ -4,9 +4,11 @@ section: components
 ---
 
 ## Demos
+
 ### Toast
 ```hbs isFullscreen
-{{> page-demo-default page-demo-default--id="alert-toast-example"}}
+{{> page-template page-template--id="alert-basic-example"}}
+
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
   {{#> alert-item}}
     {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert"'}}
@@ -67,14 +69,26 @@ section: components
 
 ### Inline Alert in Horizontal Form
 ```hbs isFullscreen
-{{#> page-default}}
-  {{> horizontal-form}}
-{{/page-default}}
+{{> page-template page-template--id="alert-horizontal-example"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
+  {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+    {{> alert-template-horizontal-form alert-template-horizontal-form--id=(concat page-template--id "-form")}}
+  {{/page-main-section}}
+{{/inline}}
 ```
 
 ### Inline Alert in Stacked Form
 ```hbs isFullscreen
-{{#> page-default}}
-  {{> stacked-form}}
-{{/page-default}}
+{{> page-template page-template--id="alert-stacked-example"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
+  {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+    {{> alert-template-stacked-form alert-template-stacked-form--id=(concat page-template--id "-form")}}
+  {{/page-main-section}}
+{{/inline}}
 ```

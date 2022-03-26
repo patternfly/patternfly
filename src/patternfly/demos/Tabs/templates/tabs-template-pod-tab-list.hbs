@@ -1,5 +1,5 @@
-{{#if tabs--pod-tab-list--IsSecondary}}
-  {{#> tabs tabs--id=tabs--pod-tab-list--id tabs--modifier="pf-m-secondary pf-m-inset-none" tabs--attribute=tabs--pod-tab-list--attribute}}
+{{#if tabs-template-pod-tab-list--IsSecondary}}
+  {{#> tabs tabs-id=tab-template--id tabs--modifier="pf-m-inset pf-m-secondary" tabs--attribute=tabs-template-pod-tab-list--attribute}}
     {{#> tabs-list}}
       {{> __tabs-item
         __tabs-item--current="true"
@@ -15,7 +15,7 @@
     {{/tabs-list}}
   {{/tabs}}
 {{else}}
-  {{#> tabs tabs--id=tabs--pod-tab-list--id tabs--modifier=tabs--pod-tab-list--modifier}}
+  {{#> tabs tabs-id=tab-template--id tabs--modifier=tabs-template-pod-tab-list--modifier}}
     {{#> tabs-list}}
       {{> __tabs-item
         __tabs-item--current="true"

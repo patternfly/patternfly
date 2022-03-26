@@ -264,6 +264,7 @@
       left: 100%;
       width: 100%;
       transition: var(--pf-c-menu--m-drilldown--c-menu--Transition);
+      transition: 2s;
 
       // stylelint-disable selector-max-class
       &.pf-m-drilled-in {

@@ -62,7 +62,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   --pf-c-masthead--m-display-stack__main--before--BorderBottom: var(--pf-c-masthead__main--before--BorderBottomWidth) solid var(--pf-c-masthead__main--before--BorderBottomColor);
   --pf-c-masthead--m-display-stack__toggle--GridColumn: 1;
   --pf-c-masthead--m-display-stack__content--GridColumn: 2;
-  --pf-c-masthead--m-display-stack__content--MinHeight: #{pf-size-prem(70px)};
+  --pf-c-masthead--m-display-stack__content--MinHeight: auto;
   --pf-c-masthead--m-display-stack__content--Order: 1;
   --pf-c-masthead--m-display-stack__content--PaddingTop: 0;
   --pf-c-masthead--m-display-stack__content--PaddingBottom: 0;
