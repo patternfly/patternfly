@@ -3,6 +3,28 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.04 release notes (2022-03-30)
+Packages released:
+- [@patternfly/patternfly@v4.185.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.185.1)
+
+### Components
+- **Accordion:** Made links at bottom of bordered item clickable ([#4740](https://github.com/patternfly/patternfly/pull/4740))
+- **Description list:** Fixed var typo in docs ([#4739](https://github.com/patternfly/patternfly/pull/4739))
+- **Form:** Improved accessible label on form elements in examples/demos ([#4714](https://github.com/patternfly/patternfly/pull/4714))
+- **Form control:** Updated invalid sprite css, examples ([#4732](https://github.com/patternfly/patternfly/pull/4732))
+- **Menu toggle:**
+  * Added typeahead variation ([#4673](https://github.com/patternfly/patternfly/pull/4673))
+  * Added example of secondary with icon ([#4743](https://github.com/patternfly/patternfly/pull/4743))
+- **Page/modal/wizard:** Made scrollable regions keyboard focusable ([#4736](https://github.com/patternfly/patternfly/pull/4736))
+- **Pagination:** Updated options menu toggle so whole toggle is clickable ([#4723](https://github.com/patternfly/patternfly/pull/4723))
+
+### Other
+- **Build:** Updated build to include themes directory ([#4728](https://github.com/patternfly/patternfly/pull/4728))
+- **Dark theme:** Fixed dark theme shadow pf-size-prem ([#4752](https://github.com/patternfly/patternfly/pull/4752))
+- **Demos:** Added new page template to demos ([#4741](https://github.com/patternfly/patternfly/pull/4741))
+- **Icons:** Added critical-risk pficon ([#4758](https://github.com/patternfly/patternfly/pull/4758))
+
+
 ## 2022.03 release notes (2022-03-08)
 Packages released:
 - [@patternfly/patternfly@v4.183.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.183.1)
