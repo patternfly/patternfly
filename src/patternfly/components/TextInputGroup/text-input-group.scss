@@ -45,6 +45,7 @@
 
   position: relative;
   display: flex;
+  width: 100%; // when child of flex layout, take up space
   color: var(--pf-c-text-input-group--Color, inherit);
   background-color: var(--pf-c-text-input-group--BackgroundColor);
 
@@ -189,4 +190,9 @@
     --pf-c-button--PaddingRight: var(--pf-c-text-input-group__utilities--c-button--PaddingRight);
     --pf-c-button--PaddingLeft: var(--pf-c-text-input-group__utilities--c-button--PaddingLeft);
   }
+}
+
+
+.pf-c-text-input-group__group {
+  display: flex;
 }

@@ -82,14 +82,14 @@ import './SearchInput.css'
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
     {{> badge badge--modifier="pf-m-read" badge--text="1 / 3"}}
-    {{#> input-group}}
+    {{#> text-input-group-group}}
       {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Next"'}}
         <i class="fas fa-angle-up fa-fw" aria-hidden="true"></i>
       {{/button}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next"'}}
         <i class="fas fa-angle-down fa-fw" aria-hidden="true"></i>
       {{/button}}
-    {{/input-group}}
+    {{/text-input-group-group}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
       <i class="fas fa-times fa-fw" aria-hidden="true"></i>
     {{/button}}
@@ -103,19 +103,19 @@ import './SearchInput.css'
 
 &nbsp;
 
-{{#> text-input-group}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group-text-input--placeholder="Find by name"}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-control}}
-{{/text-input-group}}
+{{#> input-group}}
+  {{#> text-input-group}}
+    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+      {{#> text-input-group-text}}
+        {{> text-input-group-icon}}
+        {{> text-input-group-text-input text-input-group-text-input--placeholder="Find by name"}}
+      {{/text-input-group-text}}
+    {{/text-input-group-main}}
+  {{/text-input-group}}
+  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
+    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+  {{/button}}
+{{/input-group}}
 ```
 
 ### Advanced search
@@ -124,27 +124,28 @@ import './SearchInput.css'
 
 &nbsp;
 
-{{#> text-input-group}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="username:root firstname:ned"}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-  {{#> text-input-group-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    {{/button}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-control}}
-{{/text-input-group}}
+{{#> input-group}}
+  {{#> text-input-group}}
+    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+      {{#> text-input-group-text}}
+        {{> text-input-group-icon}}
+        {{> text-input-group-text-input text-input-group--value="username:root firstname:ned"}}
+      {{/text-input-group-text}}
+    {{/text-input-group-main}}
+    {{#> text-input-group-utilities}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
+        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+      {{/button}}
+    {{/text-input-group-utilities}}
+  {{/text-input-group}}
+  {{#> button button--modifier="pf-m-control" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
+    <i class="fas fa-caret-down" aria-hidden="true"></i>
+  {{/button}}
+  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
+    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+  {{/button}}
+{{/input-group}}
+
 ```
 
 ### Advanced search expanded
@@ -209,27 +210,27 @@ import './SearchInput.css'
 {{/search-input}}
 
 <div class="ws-example-wrapper" style="margin-top: 490px;">
-{{#> text-input-group}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="username:root firstname:ned"}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-  {{#> text-input-group-control}}
-    {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    {{/button}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-control}}
-{{/text-input-group}}
+{{#> input-group}}
+  {{#> text-input-group}}
+    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+      {{#> text-input-group-text}}
+        {{> text-input-group-icon}}
+        {{> text-input-group-text-input text-input-group--value="username:root firstname:ned"}}
+      {{/text-input-group-text}}
+    {{/text-input-group-main}}
+    {{#> text-input-group-utilities}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
+        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+      {{/button}}
+    {{/text-input-group-utilities}}
+  {{/text-input-group}}
+  {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
+    <i class="fas fa-caret-down" aria-hidden="true"></i>
+  {{/button}}
+  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
+    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+  {{/button}}
+{{/input-group}}
 
 {{#> panel panel--modifier="pf-m-raised"}}
   {{#> panel-main}}
@@ -480,27 +481,27 @@ import './SearchInput.css'
 {{/search-input}}
 
 <div class="ws-example-wrapper" style="margin-top: 490px;">
-{{#> text-input-group}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="username:root firstname:n"}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-  {{#> text-input-group-control}}
-    {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
-      <i class="fas fa-caret-down" aria-hidden="true"></i>
-    {{/button}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-      <i class="fas fa-arrow-right" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-control}}
-{{/text-input-group}}
+{{#> input-group}}
+  {{#> text-input-group}}
+    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+      {{#> text-input-group-text}}
+        {{> text-input-group-icon}}
+        {{> text-input-group-text-input text-input-group--value="username:root firstname:n"}}
+      {{/text-input-group-text}}
+    {{/text-input-group-main}}
+    {{#> text-input-group-utilities}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
+        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+      {{/button}}
+    {{/text-input-group-utilities}}
+  {{/text-input-group}}
+  {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
+    <i class="fas fa-caret-down" aria-hidden="true"></i>
+  {{/button}}
+  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
+    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+  {{/button}}
+{{/input-group}}
 
 {{#> panel panel--modifier="pf-m-raised"}}
   {{#> panel-main}}

@@ -3,6 +3,8 @@ id: Input group
 section: components
 cssPrefix: pf-c-input-group
 ---
+### Overview
+Use the input group to extend form controls by adding text, buttons, selects, etc. The input group handles border overlap.
 
 ## Examples
 ### Variations
@@ -100,9 +102,6 @@ cssPrefix: pf-c-input-group
 ```
 
 ## Documentation
-### Overview
-Use the input group to extend form controls by adding text, buttons, selects, etc.
-
 ### Accessibility
 When using the `.pf-c-input-group` always ensure labels are used outside the input group with the `.pf-screen-reader` class applied. You can also make use of the `aria-describedby`, `aria-label`, or `aria-labelledby` attributes. For more information on accessibility and forms see the [form component](/components/form).
 
