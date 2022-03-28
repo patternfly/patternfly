@@ -86,6 +86,9 @@
 	@if $filename == cpu {
 		$char: '\E927';
 	}
+	@if $filename == critical-risk {
+		$char: '\E976';
+	}
 	@if $filename == degraded {
 		$char: '\E91B';
 	}
@@ -469,6 +472,9 @@
 }
 .pf-icon-cpu {
 	@include pf-icon(cpu);
+}
+.pf-icon-critical-risk {
+	@include pf-icon(critical-risk);
 }
 .pf-icon-degraded {
 	@include pf-icon(degraded);
