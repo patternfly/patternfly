@@ -60,7 +60,7 @@
 @import "../../components/TreeView/themes/dark/tree-view";
 @import "../../components/Wizard/themes/dark/wizard";
 
-@mixin pf-theme-dark($pf-theme-dark-class) {
+@mixin pf-theme-dark($pf-theme-dark-class: "") {
   // global overrides
   @include placeholders; // fixes pf-t-dark in dark theme
   @include globals($pf-theme-dark-class); // global CSS
