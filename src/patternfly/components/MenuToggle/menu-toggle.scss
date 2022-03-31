@@ -151,10 +151,8 @@
   --pf-c-menu-toggle__button__controls--MarginLeft: var(--pf-global--spacer--sm);
 
   // Typeahead
-  --pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginTop: calc(var(--pf-c-menu-toggle--PaddingTop) * -1);
-  --pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginRight: calc(var(--pf-c-menu-toggle--PaddingRight) * -1);
-  --pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginBottom: calc(var(--pf-c-menu-toggle--PaddingBottom) * -1);
-  --pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginLeft: calc(var(--pf-c-menu-toggle--PaddingLeft) * -1);
+  --pf-c-menu-toggle--m-typeahead--c-menu-toggle__button--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-menu-toggle--m-typeahead--c-menu-toggle__button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-menu-toggle--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight: var(--pf-global--spacer--sm);
 
   position: relative;
@@ -324,17 +322,24 @@
   }
 
   &.pf-m-typeahead {
+    padding: 0;
+
+    .pf-c-menu-toggle__button {
+      height: 100%;
+      padding-right: var(--pf-c-menu-toggle--m-typeahead--c-menu-toggle__button--PaddingLeft);
+      padding-left: var(--pf-c-menu-toggle--m-typeahead--c-menu-toggle__button--PaddingRight);
+      margin-left: 0;
+    }
+
     .pf-c-text-input-group {
       --pf-c-text-input-group__utilities--c-button--PaddingRight: var(--pf-c-menu-toggle--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight);
+      --pf-c-text-input-group__utilities--MarginRight: 0;
 
       flex: 1;
-      margin: var(--pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginTop) var(--pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginRight) var(--pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginBottom) var(--pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginLeft);
     }
   }
 
   &.pf-m-split-button {
-    --pf-c-menu-toggle__toggle-icon--MarginRight: 0;
-
     padding: 0; // pass padding to children
 
     > * {
