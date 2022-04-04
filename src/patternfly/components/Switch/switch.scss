@@ -20,15 +20,15 @@
   --pf-c-switch__input--checked__label--Color: var(--pf-global--Color--dark-100);
   --pf-c-switch__input--not-checked__label--Color: var(--pf-global--disabled-color--100);
   --pf-c-switch__input--disabled__label--Color: var(--pf-global--disabled-color--100);
-  --pf-c-switch__input--disabled__toggle--BackgroundColor: var(--pf-global--Color--dark-200);
-  --pf-c-switch__input--disabled__toggle--before--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-switch__input--disabled__toggle--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-switch__input--disabled__toggle--before--BackgroundColor: var(--pf-global--palette--black-150);
   --pf-c-switch__input--focus__toggle--OutlineWidth: var(--pf-global--BorderWidth--md);
   --pf-c-switch__input--focus__toggle--OutlineOffset: var(--pf-global--spacer--sm);
   --pf-c-switch__input--focus__toggle--OutlineColor: var(--pf-global--primary-color--100);
 
   // Switch toggle
   --pf-c-switch__toggle--Height: calc(var(--pf-c-switch--FontSize) * var(--pf-c-switch--LineHeight));
-  --pf-c-switch__toggle--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-switch__toggle--BackgroundColor: var(--pf-global--palette--black-500);
   --pf-c-switch__toggle--BorderRadius: var(--pf-c-switch__toggle--Height);
   --pf-c-switch__toggle--before--Width: calc(var(--pf-c-switch--FontSize) - var(--pf-c-switch__toggle-icon--Offset));
   --pf-c-switch__toggle--before--Height: var(--pf-c-switch__toggle--before--Width);
