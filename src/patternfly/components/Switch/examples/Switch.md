@@ -41,6 +41,28 @@ cssPrefix: pf-c-switch
 {{/switch}}
 ```
 
+### Label and check
+```hbs
+{{#> switch switch--attribute='for="switch-with-icon-1"'}}
+  {{#> switch-input id="switch-with-icon-1" switch-input--attribute='name="switchExample3" checked'}}{{/switch-input}}
+  {{#> switch-toggle}}
+    {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
+  {{/switch-toggle}}
+  {{#> switch-label id="switch-with-label-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label id="switch-with-label-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+{{/switch}}
+<br/>
+<br/>
+{{#> switch switch--attribute='for="switch-with-icon-2"'}}
+  {{#> switch-input id="switch-with-icon-2" switch-input--attribute='name="switchExample4"'}}{{/switch-input}}
+  {{#> switch-toggle}}
+    {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
+  {{/switch-toggle}}
+  {{#> switch-label id="switch-with-label-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label id="switch-with-label-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+{{/switch}}
+```
+
 ### Without label
 ```hbs
 {{#> switch switch--attribute='for="switch-with-icon-1"'}}
