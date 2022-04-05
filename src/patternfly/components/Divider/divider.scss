@@ -120,6 +120,11 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
           width: var(--pf-c-divider--m-vertical--after--Width);
         }
       }
+
+      &.pf-m-horizontal#{$breakpoint-name} {
+        display: var(--pf-c-divider--Display);
+        flex-direction: row;
+      }
     }
   }
 
