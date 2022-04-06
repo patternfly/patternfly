@@ -44,7 +44,7 @@ import './FormControl.css'
   <option value="Other">Other</option>
 {{/form-control}}
 <br><br>
-{{#> form-control controlType="select" form-control--modifier="pf-m-placeholder" form-control--attribute='id="select-standard" name="select-standard" aria-label="Standard select example"'}}
+{{#> form-control controlType="select" form-control--modifier="pf-m-placeholder" form-control--attribute='id="select-placeholder-enabled" name="select-placeholder-enabled" aria-label="Placeholder enabled select example"'}}
   <option value="" selected>Please choose</option>
   <option value="Mr">Mr</option>
   <option value="Miss">Miss</option>
