@@ -175,14 +175,10 @@ section: components
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--modifier="pf-m-page-insets"}}
     {{/page-main-tabs}}
-    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
-      {{#> l-flex l-flex--modifier="pf-m-column"}}
-        {{#> l-flex-item}}
-          {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--IsSecondary="true" tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-list--modifier=reset}}
-        {{/l-flex-item}}
-        {{#> l-flex-item}}
-          {{#> tabs-template-pod-tab-content}}
-            {{#> tabs-template-pod-tab-content tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-content--IsSecondary="true"}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
+          {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--IsSecondary="true" tabs-template-pod-tab-list--modifier="pf-m-page-insets pf-m-border-bottom" tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-list--modifier=reset}}
+          {{#> tabs-template-pod-tab-content tab-content-body--modifier="pf-m-padding"}}
+            {{#> tabs-template-pod-tab-content tab-content-body--modifier=reset tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-content--IsSecondary="true"}}
               {{#> l-flex l-flex--modifier="pf-m-column"}}
                 {{#> l-flex-item}}
                   {{#> description-list description-list--modifier="pf-m-2-col-on-lg" description-list--attribute='aria-label="Pod information list"'}}
@@ -280,8 +276,6 @@ section: components
               {{/l-flex}}
             {{/tabs-template-pod-tab-content}}
           {{/tabs-template-pod-tab-content}}
-        {{/l-flex-item}}
-      {{/l-flex}}
     {{/page-main-section}}
   {{/tabs-template}}
 {{/inline}}
