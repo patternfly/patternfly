@@ -57,6 +57,7 @@
   --pf-c-card--m-selectable-raised--m-selected-raised--TranslateY: var(--pf-c-card--m-selectable-raised--m-selected-raised--TranslateY--base);
   --pf-c-card--m-flat--m-selectable-raised--m-selected-raised--TranslateY: calc(var(--pf-c-card--m-selectable-raised--m-selected-raised--TranslateY--base) + var(--pf-c-card--m-flat--BorderWidth));
   --pf-c-card--m-rounded--m-selectable-raised--m-selected-raised--TranslateY: calc(var(--pf-c-card--m-selectable-raised--m-selected-raised--TranslateY--base) + var(--pf-c-card--m-rounded--BorderRadius));
+  --pf-c-card--m-selectable-raised--m-selected-raised--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-card--m-selectable-raised--m-selected-raised--Transition: transform .25s linear, box-shadow .25s linear;
   --pf-c-card--m-selectable-raised--m-selected-raised--before--Transition: transform .25s linear;
   --pf-c-card--m-selectable-raised--m-selected-raised--before--TranslateY: calc(var(--pf-c-card--m-selectable-raised--m-selected-raised--TranslateY) * -1);
@@ -196,6 +197,7 @@
       --pf-c-card--m-selectable-raised--before--TranslateY: var(--pf-c-card--m-selectable-raised--m-selected-raised--before--TranslateY); // moves before down when selected - same amount and speed as the selected card moves up
       --pf-c-card--m-selectable-raised--before--ScaleY: var(--pf-c-card--m-selectable-raised--m-selected-raised--before--ScaleY); // causes the before to grow in height - more performant than transitioning height
 
+      z-index: var(--pf-c-card--m-selectable-raised--m-selected-raised--ZIndex); // allows elements (ie, dropdowns) from this card to appear on other cards since the transform creates a new stacking context
       box-shadow: var(--pf-c-card--m-selectable-raised--m-selected-raised--BoxShadow);
       transition: var(--pf-c-card--m-selectable-raised--m-selected-raised--Transition);
       transform: translateY(var(--pf-c-card--m-selectable-raised--m-selected-raised--TranslateY)); // moves card up when selected
