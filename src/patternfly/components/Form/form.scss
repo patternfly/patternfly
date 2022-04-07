@@ -67,6 +67,8 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
   --pf-c-form__label--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-form__label--LineHeight: var(--pf-global--LineHeight--sm);
   --pf-c-form__label--m-disabled--Color: var(--pf-global--disabled-color--100);
+  --pf-c-form__label--Cursor--hover: pointer;
+  --pf-c-form__label--m-disabled--Cursor--hover: not-allowed;
 
   // Label text
   --pf-c-form__label-text--FontWeight: var(--pf-global--FontWeight--bold);
@@ -268,7 +270,7 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
   }
 
   &:not(.pf-m-disabled):hover {
-    cursor: pointer;
+    cursor: var(--pf-c-form__label--Cursor--hover);
   }
 
   &.pf-m-disabled {
@@ -276,7 +278,7 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
   }
 
   &.pf-m-disabled:hover {
-    cursor: not-allowed;
+    cursor: var(--pf-c-form__label--m-disabled--Cursor--hover);
   }
 }
 
