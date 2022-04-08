@@ -108,10 +108,18 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
       }
 
       &.pf-m-vertical#{$breakpoint-name} {
+        // update during breaking change
+        --pf-c-divider--Height: var(--pf-c-divider--Height--base);
+        --pf-c-divider--BackgroundColor: var(--pf-c-divider--BackgroundColor--base);
+        --pf-c-divider--after--Height: var(--pf-c-divider--after--Height--base);
+        --pf-c-divider--after--BackgroundColor: var(--pf-c-divider--after--BackgroundColor--base);
+
+        // end - update during breaking change
+
         display: inline-flex;
         flex-direction: column;
         width: auto;
-        height: inherit;
+        height: 2em;
         min-height: 100%;
         max-height: 100%;
 
@@ -122,6 +130,14 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
       }
 
       &.pf-m-horizontal#{$breakpoint-name} {
+        // update during breaking change
+        --pf-c-divider--Height: var(--pf-c-divider--Height--base);
+        --pf-c-divider--BackgroundColor: var(--pf-c-divider--BackgroundColor--base);
+        --pf-c-divider--after--Height: var(--pf-c-divider--after--Height--base);
+        --pf-c-divider--after--BackgroundColor: var(--pf-c-divider--after--BackgroundColor--base);
+
+        // end - update during breaking change
+
         display: var(--pf-c-divider--Display);
         flex-direction: row;
       }

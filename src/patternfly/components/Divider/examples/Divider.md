@@ -9,31 +9,31 @@ import './Divider.css'
 ## Examples
 ### hr
 ```hbs
-{{> divider}}
+{{> divider divider--modifier="pf-m-horizontal"}}
 ```
 
 ### li
 ```hbs
 <ul>
   <li>List item one</li>
-  {{> divider divider--type="li"}}
+  {{> divider divider--modifier="pf-m-horizontal" divider--type="li"}}
   <li>List item two</li>
 </ul>
 ```
 
 ### div
 ```hbs
-{{> divider divider--type="div"}}
+{{> divider divider--type="div" divider--modifier="pf-m-horizontal"}}
 ```
 
 ### Inset medium
 ```hbs
-{{> divider divider--type="div" divider--modifier="pf-m-inset-md"}}
+{{> divider divider--type="div" divider--modifier="pf-m-horizontal pf-m-inset-md"}}
 ```
 
 ### Md inset, no inset on md, 3xl inset on lg, lg inset on xl
 ```hbs
-{{> divider divider--type="div" divider--modifier="pf-m-inset-md pf-m-inset-none-on-md pf-m-inset-3xl-on-lg pf-m-inset-lg-on-xl"}}
+{{> divider divider--type="div" divider--modifier="pf-m-horizontal pf-m-inset-md pf-m-inset-none-on-md pf-m-inset-3xl-on-lg pf-m-inset-lg-on-xl"}}
 ```
 
 ### Vertical
@@ -53,7 +53,7 @@ import './Divider.css'
 
 ### Vertical on lg
 ```hbs
-{{> divider divider--type="div" divider--modifier="pf-m-vertical-on-lg"}}
+{{> divider divider--type="div" divider--modifier="pf-m-horizontal pf-m-vertical-on-lg"}}
 ```
 
 ### Horizontal on lg
