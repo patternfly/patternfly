@@ -62,6 +62,7 @@ wrapperTag: div
       {{> toolbar-template
             toolbar--id="data-list-expandable-example-toolbar"
             toolbar-template--HasToggleGroup="true"
+            toolbar-template--HasExpandAll="true"
             toolbar-template--HasBulkSelect="true"
             toolbar-template--HasSearchFilter="true"
             toolbar-template--HasOverflowMenu="true"

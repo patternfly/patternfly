@@ -1,6 +1,7 @@
   {{!--
 Options: [
   toolbar-template--HasToggleGroup
+  toolbar-template--HasExpandAll
   toolbar-template--HasBulkSelect
   toolbar-template--HasContextSelector
   toolbar-template--HasSearchFilter
@@ -25,6 +26,13 @@ Options: [
       {{!-- toggle group --}}
       {{#if toolbar-template--HasToggleGroup}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
+          {{#if toolbar-template--HasExpandAll}}
+            {{#> toolbar-item toolbar-item--modifier="pf-m-expand-all"}}
+              {{#> button button--modifier="pf-m-plain" button-attribute='aria-label="Expand all rows"'}}
+                {{> toolbar-expand-all-icon}}
+              {{/button}}
+            {{/toolbar-item}}
+          {{/if}}
           {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
           {{> toolbar-template-content}}
         {{/toolbar-group}}
