@@ -87,6 +87,11 @@
     text-align: left;
   }
 
+  code,
+  pre {
+    font-family: var(--pf-global--FontFamily--monospace);
+  }
+
   // Patternfly base styles
 
   *,
