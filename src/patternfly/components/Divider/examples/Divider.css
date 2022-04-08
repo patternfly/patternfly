@@ -3,7 +3,6 @@
   align-items: center;
 }
 
-<<<<<<< HEAD
 [id*="ws-core-c-divider-vertical"],
 #ws-core-c-divider-horizontal-on-lg {
   height: 4rem;
@@ -12,12 +11,3 @@
 [id*="ws-core-c-divider"] .ws-preview-html {
   height: 100%;
 }
-=======
-[id*="ws-core-c-divider-horizontal"] .ws-preview-html {
-  height: 3rem;
-  align-items: center;
-}
-<<<<<<< HEAD
->>>>>>> feat(divider): add horizontal variant
-=======
->>>>>>> feat(divider): format
