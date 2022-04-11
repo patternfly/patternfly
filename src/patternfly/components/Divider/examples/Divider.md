@@ -74,7 +74,11 @@ The divider renders as an `<hr>` by default. It is possible to make the divider 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-divider` | `<hr>`, `<li>`, `<div>` | Defines the divider component. |
+<<<<<<< HEAD
 | `.pf-m-horizontal{-on-[breakpoint]}` | `.pf-c-divider` | Modifies the divider component to horizontal. When used with pf-m-vertical, modifies the divider back to vertical at an optional breakpoint. |
+=======
+| `.pf-m-horizontal{-on-[breakpoint]}` | `.pf-c-divider` | Modifies the divider component to horizontal. This modifier requires that the parent has an explicit or implicit height, or has a flex or grid based layout parent. When used with pf-m-vertical, modifies the divider back to vertical at an optional breakpoint. |
+>>>>>>> feat(Divider): feedback from Matt
 | `.pf-m-vertical{-on-[breakpoint]}` | `.pf-c-divider` | Modifies the divider component to vertical. This modifier requires that the parent has an explicit or implicit height, or has a flex or grid based layout parent. Modifies the divider back to horizontal at an optional breakpoint. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-divider` | Modifies divider padding/inset to visually match padding of other adjacent components. |
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-divider` | Modifies a divider to be hidden, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

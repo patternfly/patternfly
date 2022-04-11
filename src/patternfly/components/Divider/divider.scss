@@ -2,6 +2,7 @@ $pf-c-divider--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "x
 $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl", "2xl", "3xl");
 
 @mixin pf-c-divider--m-horizontal {
+<<<<<<< HEAD
   --pf-c-divider--Display: var(--pf-c-divider--m-horizontal--Display);
   --pf-c-divider--FlexDirection: var(--pf-c-divider--m-horizontal--FlexDirection);
   --pf-c-divider--Width: var(--pf-c-divider--m-horizontal--Width);
@@ -41,6 +42,43 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
   --pf-c-divider--after--BackgroundColor: var(--pf-c-divider--BorderColor); // remove at breaking change
 
   // Borders
+=======
+  --pf-c-divider--Height: var(--pf-c-divider--Height--base);
+  --pf-c-divider--BackgroundColor: var(--pf-c-divider--BackgroundColor--base);
+  --pf-c-divider--after--Height: var(--pf-c-divider--after--Height--base);
+  --pf-c-divider--after--BackgroundColor: var(--pf-c-divider--BackgroundColor--base);
+
+  display: var(--pf-c-divider--Display--base);
+  flex-direction: var(--pf-c-divider--FlexDirection--base);
+}
+
+@mixin pf-c-divider--m-vertical {
+  display: var(--pf-c-divider--m-vertical--Display);
+  flex-direction: var(--pf-c-divider--m-vertical--FlexDirection);
+  width: var(--pf-c-divider--m-vertical--Width);
+  height: var(--pf-c-divider--m-vertical--Height);
+  min-height: var(--pf-c-divider--m-vertical--MinHeight);
+  max-height: var(--pf-c-divider--m-vertical--MaxHeight);
+
+  &::after {
+    flex-basis: calc(var(--pf-c-divider--m-vertical--after--FlexBasis) - var(--pf-c-divider--after--Inset));
+    width: var(--pf-c-divider--m-vertical--after--Width);
+  }
+}
+
+
+.pf-c-divider {
+  // Base
+  --pf-c-divider--Display--base: flex;
+  --pf-c-divider--Height--base: var(--pf-global--BorderWidth--sm);
+  --pf-c-divider--BackgroundColor--base: var(--pf-global--BorderColor--100);
+  --pf-c-divider--m-horizontal--Display--base: inline-flex;
+  --pf-c-divider--FlexDirection--base: row;
+  --pf-c-divider--after--Height--base: var(--pf-c-divider--Height);
+  --pf-c-divider--after--BackgroundColor--base: var(--pf-c-divider--BackgroundColor);
+
+  // After
+>>>>>>> feat(Divider): feedback from Matt
   --pf-c-divider--after--FlexBasis: 100%;
   --pf-c-divider--after--Inset: 0%;
 
@@ -56,12 +94,24 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
   // Vertical mixin
   --pf-c-divider--m-vertical--Display: inline-flex;
   --pf-c-divider--m-vertical--FlexDirection: column;
+<<<<<<< HEAD
   --pf-c-divider--m-vertical--after--Height: auto;
   --pf-c-divider--m-vertical--after--Width: var(--pf-c-divider--BorderWidth); // remove at breaking change
+=======
+  --pf-c-divider--m-vertical--Display: inline-flex;
+  --pf-c-divider--m-vertical--MinHeight: 100%;
+  --pf-c-divider--m-vertical--MaxHeight: 100%;
+  --pf-c-divider--m-vertical--Width: auto;
+  --pf-c-divider--m-vertical--Height: 3em;
+>>>>>>> feat(Divider): feedback from Matt
 
   // Vertical
   @include pf-hidden-visible(var(--pf-c-divider--Display));
+<<<<<<< HEAD
   @include pf-c-divider--m-horizontal; // set to default to horizontal
+=======
+  @include pf-c-divider--m-horizontal;
+>>>>>>> feat(Divider): feedback from Matt
 
   display: var(--pf-c-divider--Display);
   flex-direction: var(--pf-c-divider--FlexDirection);
@@ -80,7 +130,12 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
     justify-self: center;
   }
 
+
   // stylelint-disable max-nesting-depth
+<<<<<<< HEAD
+=======
+
+>>>>>>> feat(Divider): feedback from Matt
   @each $breakpoint,
     $breakpoint-value in $pf-c-divider--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
@@ -105,41 +160,6 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           --pf-c-divider--after--Inset: #{$spacer-value};
         }
-      }
-
-      &.pf-m-vertical#{$breakpoint-name} {
-        // update during breaking change
-        --pf-c-divider--Height: var(--pf-c-divider--Height--base);
-        --pf-c-divider--BackgroundColor: var(--pf-c-divider--BackgroundColor--base);
-        --pf-c-divider--after--Height: var(--pf-c-divider--after--Height--base);
-        --pf-c-divider--after--BackgroundColor: var(--pf-c-divider--after--BackgroundColor--base);
-
-        // end - update during breaking change
-
-        display: inline-flex;
-        flex-direction: column;
-        width: auto;
-        height: 2em;
-        min-height: 100%;
-        max-height: 100%;
-
-        &::after {
-          flex-basis: calc(var(--pf-c-divider--m-vertical--after--FlexBasis) - var(--pf-c-divider--after--Inset));
-          width: var(--pf-c-divider--m-vertical--after--Width);
-        }
-      }
-
-      &.pf-m-horizontal#{$breakpoint-name} {
-        // update during breaking change
-        --pf-c-divider--Height: var(--pf-c-divider--Height--base);
-        --pf-c-divider--BackgroundColor: var(--pf-c-divider--BackgroundColor--base);
-        --pf-c-divider--after--Height: var(--pf-c-divider--after--Height--base);
-        --pf-c-divider--after--BackgroundColor: var(--pf-c-divider--after--BackgroundColor--base);
-
-        // end - update during breaking change
-
-        display: var(--pf-c-divider--Display);
-        flex-direction: row;
       }
     }
   }
