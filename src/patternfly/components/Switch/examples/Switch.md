@@ -8,7 +8,7 @@ cssPrefix: pf-c-switch
 ### Basic
 ```hbs
 {{#> switch switch--attribute='for="switch-with-label-1"'}}
-  {{#> switch-input id="switch-with-label-1" aria-labelledby="switch-with-label-1-on" switch-input--attribute='name="switchExample1" checked'}}{{/switch-input}}
+  {{#> switch-input id="switch-with-label-1" aria-labelledby="switch-with-label-1-on" switch-input--attribute='checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
   {{#> switch-label id="switch-with-label-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
   {{#> switch-label id="switch-with-label-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
@@ -16,7 +16,8 @@ cssPrefix: pf-c-switch
 <br/>
 <br/>
 {{#> switch switch--attribute='for="switch-with-label-2"'}}
-  {{#> switch-input id="switch-with-label-2" aria-labelledby="switch-with-label-2-on" switch-input--attribute='name="switchExample2"'}}{{/switch-input}}
+  {{#> switch-input id="switch-with-label-2" aria-labelledby="switch-with-label-2-on"}}
+  {{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
   {{#> switch-label id="switch-with-label-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
   {{#> switch-label id="switch-with-label-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
@@ -26,7 +27,7 @@ cssPrefix: pf-c-switch
 ### Reverse (toggle on right)
 ```hbs
 {{#> switch switch--attribute='for="switch-reverse-1"' switch--modifier="pf-m-reverse"}}
-  {{#> switch-input id="switch-reverse-1" aria-labelledby="switch-reverse-1-on" switch-input--attribute='name="switchExample1" checked'}}{{/switch-input}}
+  {{#> switch-input id="switch-reverse-1" aria-labelledby="switch-reverse-1-on" switch-input--attribute='checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
   {{#> switch-label id="switch-reverse-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
   {{#> switch-label id="switch-reverse-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
@@ -34,17 +35,40 @@ cssPrefix: pf-c-switch
 <br/>
 <br/>
 {{#> switch switch--attribute='for="switch-reverse-2"' switch--modifier="pf-m-reverse"}}
-  {{#> switch-input id="switch-reverse-2" aria-labelledby="switch-reverse-2-on" switch-input--attribute='name="switchExample2"'}}{{/switch-input}}
+  {{#> switch-input id="switch-reverse-2" aria-labelledby="switch-reverse-2-on"}}
+  {{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
   {{#> switch-label id="switch-reverse-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
   {{#> switch-label id="switch-reverse-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
 {{/switch}}
 ```
 
+### Label and check
+```hbs
+{{#> switch switch--attribute='for="switch-label-check-1"'}}
+  {{#> switch-input id="switch-label-check-1" aria-labelledby="switch-label-check-1-on" switch-input--attribute='checked'}}{{/switch-input}}
+  {{#> switch-toggle}}
+    {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
+  {{/switch-toggle}}
+  {{#> switch-label id="switch-label-check-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label id="switch-label-check-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+{{/switch}}
+<br/>
+<br/>
+{{#> switch switch--attribute='for="switch-label-check-2"'}}
+  {{#> switch-input id="switch-label-check-2" aria-labelledby="switch-label-check-2-off"}}{{/switch-input}}
+  {{#> switch-toggle}}
+    {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
+  {{/switch-toggle}}
+  {{#> switch-label id="switch-label-check-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
+  {{#> switch-label id="switch-label-check-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
+{{/switch}}
+```
+
 ### Without label
 ```hbs
 {{#> switch switch--attribute='for="switch-with-icon-1"'}}
-  {{#> switch-input id="switch-with-icon-1" switch-input--attribute='name="switchExample3" checked'}}{{/switch-input}}
+  {{#> switch-input id="switch-with-icon-1" switch-input--attribute='checked'}}{{/switch-input}}
   {{#> switch-toggle}}
     {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
   {{/switch-toggle}}
@@ -52,7 +76,8 @@ cssPrefix: pf-c-switch
 <br/>
 <br/>
 {{#> switch switch--attribute='for="switch-with-icon-2"'}}
-  {{#> switch-input id="switch-with-icon-2" switch-input--attribute='name="switchExample4"'}}{{/switch-input}}
+  {{#> switch-input id="switch-with-icon-2"}}
+  {{/switch-input}}
   {{#> switch-toggle}}
     {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
   {{/switch-toggle}}
@@ -62,7 +87,7 @@ cssPrefix: pf-c-switch
 ### Disabled
 ```hbs
 {{#> switch switch--attribute='for="switch-disabled-1"'}}
-  {{#> switch-input id="switch-disabled-1" aria-labelledby="switch-disabled-1-on" switch-input--attribute='name="switchExample5" disabled checked'}}{{/switch-input}}
+  {{#> switch-input id="switch-disabled-1" aria-labelledby="switch-disabled-1-on" switch-input--attribute='disabled checked'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
   {{#> switch-label id="switch-disabled-1-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
   {{#> switch-label id="switch-disabled-1-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
@@ -70,7 +95,7 @@ cssPrefix: pf-c-switch
 <br/>
 <br/>
 {{#> switch switch--attribute='for="switch-disabled-2"'}}
-  {{#> switch-input id="switch-disabled-2" aria-labelledby="switch-disabled-2-on" switch-input--attribute='name="switchExample6" disabled'}}{{/switch-input}}
+  {{#> switch-input id="switch-disabled-2" aria-labelledby="switch-disabled-2-on" switch-input--attribute='disabled'}}{{/switch-input}}
   {{#> switch-toggle}}{{/switch-toggle}}
   {{#> switch-label id="switch-disabled-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
   {{#> switch-label id="switch-disabled-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
