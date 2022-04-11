@@ -124,6 +124,15 @@ import './Button.css'
 {{/button}}
 ```
 
+### Selected
+```hbs
+{{#> button button--modifier="pf-m-plain pf-m-selected" button--attribute='aria-label="Notifications"'}}
+  {{#> notification-badge}}
+    <i class="pf-icon-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+```
+
 ### Disabled
 ```hbs
 {{#> button button--modifier="pf-m-primary" button--attribute="disabled"}}
@@ -383,6 +392,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-block` | `.pf-c-button` | Creates a block level button. |
 | `.pf-m-control` | `.pf-c-button` | Modifies for control styles. **Note:** This modifier should only be used when using buttons in the Input Group or Clipboard Copy components. |
 | `.pf-m-expanded` | `.pf-c-button.pf-m-control` | Modifies a control button for the expanded state. |
+| `.pf-m-selected` | `.pf-c-button` | Modifies a control button for the selected state. |
 | `.pf-m-start` | `.pf-c-button__icon` | Applies right spacing to an icon inside of a button when the icon comes before text. |
 | `.pf-m-end` | `.pf-c-button__icon` | Applies left spacing to an icon inside of a button when the icon comes after text. |
 | `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This modifier should be used when `aria-pressed` is set to true so that the button displays in an active state. |
