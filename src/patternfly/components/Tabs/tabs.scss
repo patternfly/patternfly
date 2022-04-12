@@ -649,12 +649,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .pf-c-tabs__item-close {
   display: flex;
-  align-items: center;
-  justify-content: center;
 
   .pf-c-button {
     --pf-c-button--FontSize: var(--pf-c-tabs__item-close--c-button--FontSize);
-    --pf-c-button--PaddingRight: var(--pf-c-tabs__item-close--c-button--PaddingRight);
     --pf-c-button--PaddingLeft: var(--pf-c-tabs__item-close--c-button--PaddingLeft);
 
     outline-offset: var(--pf-c-tabs__item-close--c-button--OutlineOffset);
