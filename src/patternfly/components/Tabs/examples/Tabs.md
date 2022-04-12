@@ -244,39 +244,63 @@ import './Tabs.css'
 
 ### Close button
 ```hbs
-{{#> tabs tabs--id="close-default-example" tabs--modifier=""}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true"}}
+{{#> tabs tabs--id="close-default-example" tabs--modifier="pf-m-scrollable"}}
+  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
 {{/tabs}}
 
 <br><br>
 
 {{#> tabs tabs--id="close-box-example" tabs--modifier="pf-m-box pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true"}}
+  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
 {{/tabs}}
 
 <br><br>
 
 {{#> tabs tabs--id="close-box-light-300-example" tabs--modifier="pf-m-box pf-m-color-scheme--light-300 pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true"}}
+  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
+{{/tabs}}
+
+<br><br>
+
+{{#> tabs tabs--id="close-icons-text-example" tabs--modifier="pf-m-scrollable"}}
+  {{> __tabs-list __tabs-list--HasIcons="true" __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
+{{/tabs}}
+
+<br><br>
+
+{{#> tabs tabs--id="close-filled-example" tabs--modifier="pf-m-fill pf-m-scrollable"}}
+  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
+{{/tabs}}
+
+<br><br>
+
+{{#> tabs tabs--id="close-secondary-primary-example" tabs--modifier="pf-m-scrollable"}}
+  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
+{{/tabs}}
+{{#> tabs tabs--id="close-secondary-secondary-example" tabs--modifier="pf-m-scrollable" tabs--IsSecondary="true"}}
+  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
 {{/tabs}}
 ```
 
 ### Add tab button
 ```hbs
-{{#> tabs tabs--id="add-tab-default-example"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--HasAddTab="true"}}
+{{#> tabs tabs--id="close-default-example" tabs--modifier="pf-m-scrollable"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
+{{/tabs}}
+{{#> tabs tabs--id="close-secondary-example" tabs--modifier="pf-m-scrollable" tabs--IsSecondary="true"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 
 <br><br>
 
-{{#> tabs tabs--id="add-tab-box-example" tabs--modifier="pf-m-box"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--HasAddTab="true"}}
+{{#> tabs tabs--id="close-box-example" tabs--modifier="pf-m-box pf-m-scrollable"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 
 <br><br>
 
-{{#> tabs tabs--id="add-tab-box-light-300-example" tabs--modifier="pf-m-box pf-m-color-scheme--light-300"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--HasAddTab="true"}}
+{{#> tabs tabs--id="close-box-light-300-example" tabs--modifier="pf-m-box pf-m-color-scheme--light-300 pf-m-scrollable"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 ```
 
@@ -306,6 +330,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-c-tabs__item-text` | `<span>` | Initiates a tabs component item icon. **Required** |
 | `.pf-c-tabs__item-icon` | `<span>` | Initiates a tabs component item text. **Required** |
 | `.pf-c-tabs__item-close` | `<span>` | Initiates a tabs component item close. |
+| `.pf-c-tabs__item-close-icon` | `<span>` | Initiates a tabs component item close icon. |
 | `.pf-c-tabs__link` | `<button>`, `<a>` | Initiates a tabs component link. **Required** |
 | `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
 | `.pf-c-tabs__toggle` | `<div>` | Initiates a tabs expandable toggle. |
