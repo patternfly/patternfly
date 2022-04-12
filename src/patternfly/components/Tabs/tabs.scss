@@ -39,6 +39,10 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__list--Display: flex;
   --pf-c-tabs__list--Visibility: visible;
 
+  // Item
+  --pf-c-tabs__item--m-action--before--ZIndex: var(--pf-global--ZIndex--xs);
+  --pf-c-tabs__item--m-action__link--PaddingRight: var(--pf-global--spacer--sm);
+
   // Tab link
   --pf-c-tabs__link--Color: var(--pf-global--Color--200);
   --pf-c-tabs__link--FontSize: var(--pf-global--FontSize--md);
@@ -55,6 +59,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical__link--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-tabs--m-box__link--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-tabs--m-box__link--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
+  --pf-c-tabs--m-box__item-close--c-button--disabled--BackgroundColor: var(--pf-global--palette--black-400);
   --pf-c-tabs--m-secondary__link--FontSize: var(--pf-global--FontSize--sm);
 
   // Link before
@@ -129,6 +134,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__toggle-button--MarginLeft: calc(-1 * var(--pf-global--spacer--md));
   --pf-c-tabs--m-expanded__toggle-icon--Color: var(--pf-global--Color--100);
   --pf-c-tabs--m-expanded__toggle-icon--Rotate: 90deg;
+
+  // Close button
+  --pf-c-tabs__item-close--c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-tabs__item-close--c-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-tabs__item-close--c-button--OutlineOffset: #{pf-size-prem(-3px)};
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-tabs__scroll-button--Width: var(--pf-c-tabs__scroll-button--xl--Width);
@@ -270,6 +280,10 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs--m-color-scheme--light-300__link--BackgroundColor);
       --pf-c-tabs__item--m-current__link--BackgroundColor: var(--pf-c-tabs--m-color-scheme--light-300__item--m-current__link--BackgroundColor);
       --pf-c-tabs__link--disabled--BackgroundColor: var(--pf-c-tabs--m-color-scheme--light-300__link--disabled--BackgroundColor);
+    }
+
+    .pf-c-tabs__item-close .pf-c-button {
+      --pf-c-button--m-plain--disabled--Color: var(--pf-c-tabs--m-box__item-close--c-button--disabled--BackgroundColor);
     }
   }
 
@@ -483,12 +497,30 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs__link--after--BorderColor: var(--pf-c-tabs__item--m-current__link--after--BorderColor);
     --pf-c-tabs__link--after--BorderWidth: var(--pf-c-tabs__item--m-current__link--after--BorderWidth);
   }
+
+  // Action
+  &.pf-m-action {
+    --pf-c-tabs__link--PaddingRight: var(--pf-c-tabs__item--m-action__link--PaddingRight);
+
+    position: relative;
+
+    &::before {
+      z-index: var(--pf-c-tabs__item--m-action--before--ZIndex);
+    }
+
+    .pf-c-tabs__link::before,
+    .pf-c-tabs__link::after {
+      content: revert;
+    }
+  }
 }
 
 .pf-c-tabs::before,
 .pf-c-tabs__list::before,
 .pf-c-tabs__link::before,
 .pf-c-tabs__link::after,
+.pf-c-tabs__item.pf-m-action::before,
+.pf-c-tabs__item.pf-m-action::after,
 .pf-c-tabs__scroll-button::before {
   position: absolute;
   right: 0;
@@ -501,6 +533,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 .pf-c-tabs__list::before,
 .pf-c-tabs__link::before,
 .pf-c-tabs__link::after,
+.pf-c-tabs__item.pf-m-action::before,
+.pf-c-tabs__item.pf-m-action::after,
 .pf-c-tabs__scroll-button::before {
   top: 0;
 }
@@ -513,7 +547,12 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 // Tab link
 .pf-c-tabs__link {
-  --pf-c-tabs__link--after--BorderBottomWidth: var(--pf-c-tabs__link--after--BorderWidth); // Set default border target
+  @at-root .pf-c-tabs__item.pf-m-action,
+  & {
+    --pf-c-tabs__link--after--BorderBottomWidth: var(--pf-c-tabs__link--after--BorderWidth); // Set default border target
+
+    background-color: var(--pf-c-tabs__link--BackgroundColor);
+  }
 
   position: relative;
   display: flex;
@@ -522,37 +561,49 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   font-size: var(--pf-c-tabs__link--FontSize);
   color: var(--pf-c-tabs__link--Color);
   text-decoration: none;
-  background-color: var(--pf-c-tabs__link--BackgroundColor);
   outline-offset: var(--pf-c-tabs__link--OutlineOffset);
 
-  &::before {
-    pointer-events: none;
-    border-color: var(--pf-c-tabs__link--before--border-color--base);
-    border-width: var(--pf-c-tabs__link--before--BorderTopWidth) var(--pf-c-tabs__link--before--BorderRightWidth) var(--pf-c-tabs__link--before--BorderBottomWidth) var(--pf-c-tabs__link--before--BorderLeftWidth);
-    border-right-color: var(--pf-c-tabs__link--before--BorderRightColor);
-    border-bottom-color: var(--pf-c-tabs__link--before--BorderBottomColor);
+  @at-root .pf-c-tabs__item.pf-m-action,
+  & {
+    &::before {
+      pointer-events: none;
+      border-color: var(--pf-c-tabs__link--before--border-color--base);
+      border-width: var(--pf-c-tabs__link--before--BorderTopWidth) var(--pf-c-tabs__link--before--BorderRightWidth) var(--pf-c-tabs__link--before--BorderBottomWidth) var(--pf-c-tabs__link--before--BorderLeftWidth);
+      border-right-color: var(--pf-c-tabs__link--before--BorderRightColor);
+      border-bottom-color: var(--pf-c-tabs__link--before--BorderBottomColor);
+    }
   }
 
-  &::after {
-    top: var(--pf-c-tabs__link--after--Top);
-    right: var(--pf-c-tabs__link--after--Right);
-    bottom: var(--pf-c-tabs__link--after--Bottom);
-    left: var(--pf-c-tabs__link--before--Left); // use the ::before Left value to offset the top border / overlap left border
-    border-color: var(--pf-c-tabs__link--after--BorderColor);
-    border-width: var(--pf-c-tabs__link--after--BorderTopWidth) var(--pf-c-tabs__link--after--BorderRightWidth) var(--pf-c-tabs__link--after--BorderBottomWidth) var(--pf-c-tabs__link--after--BorderLeftWidth);
+  @at-root .pf-c-tabs__item.pf-m-action,
+  & {
+    &::after {
+      top: var(--pf-c-tabs__link--after--Top);
+      right: var(--pf-c-tabs__link--after--Right);
+      bottom: var(--pf-c-tabs__link--after--Bottom);
+      left: var(--pf-c-tabs__link--before--Left); // use the ::before Left value to offset the top border / overlap left border
+      border-color: var(--pf-c-tabs__link--after--BorderColor);
+      border-width: var(--pf-c-tabs__link--after--BorderTopWidth) var(--pf-c-tabs__link--after--BorderRightWidth) var(--pf-c-tabs__link--after--BorderBottomWidth) var(--pf-c-tabs__link--after--BorderLeftWidth);
+    }
   }
 
   // Tab item hover state
-  &:hover {
-    --pf-c-tabs__link--after--BorderWidth: var(--pf-c-tabs__link--hover--after--BorderWidth);
+  @at-root .pf-c-tabs__item.pf-m-action,
+  & {
+    &:hover {
+      --pf-c-tabs__link--after--BorderWidth: var(--pf-c-tabs__link--hover--after--BorderWidth);
+    }
   }
 
+  @at-root .pf-c-tabs__item.pf-m-action:focus-within,
   &:focus {
     --pf-c-tabs__link--after--BorderWidth: var(--pf-c-tabs__link--focus--after--BorderWidth);
   }
 
-  &:active {
-    --pf-c-tabs__link--after--BorderWidth: var(--pf-c-tabs__link--active--after--BorderWidth);
+  @at-root .pf-c-tabs__item.pf-m-action,
+  & {
+    &:active {
+      --pf-c-tabs__link--after--BorderWidth: var(--pf-c-tabs__link--active--after--BorderWidth);
+    }
   }
 
   &:disabled,
@@ -560,6 +611,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     pointer-events: none;
   }
 
+  @at-root .pf-c-tabs__item.pf-m-action.pf-m-disabled,
   &:disabled,
   &.pf-m-disabled,
   &.pf-m-aria-disabled {
@@ -581,6 +633,19 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     &:last-child {
       --pf-c-tabs__link--child--MarginRight: 0;
     }
+  }
+}
+
+.pf-c-tabs__item-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .pf-c-button {
+    --pf-c-button--PaddingRight: var(--pf-c-tabs__item-close--c-button--PaddingRight);
+    --pf-c-button--PaddingLeft: var(--pf-c-tabs__item-close--c-button--PaddingLeft);
+
+    outline-offset: var(--pf-c-tabs__item-close--c-button--OutlineOffset);
   }
 }
 
