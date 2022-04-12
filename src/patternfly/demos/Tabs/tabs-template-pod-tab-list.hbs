@@ -6,12 +6,12 @@
         __tabs-item--id="pod-info"
         __tabs-item--aria-label="Pod information"
         __tabs-item--text="Pod information"
-        __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-pod-info-panel"')}}
+        __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-pod-info-panel"')}}
       {{> __tabs-item
         __tabs-item--id="editable-aspects"
         __tabs-item--aria-label="editable aspects"
         __tabs-item--text="Editable Aspects"
-        __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-editable-aspects-panel"')}}
+        __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-editable-aspects-panel"')}}
     {{/tabs-list}}
   {{/tabs}}
 {{else}}
@@ -22,32 +22,32 @@
         __tabs-item--id="details"
         __tabs-item--aria-label="Details"
         __tabs-item--text="Details"
-        __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-details-panel"')}}
+        __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-details-panel"')}}
       {{> __tabs-item
         __tabs-item--id="yaml"
         __tabs-item--aria-label="YAML"
         __tabs-item--text="YAML"
-        __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-yaml-panel"')}}
+        __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-yaml-panel"')}}
       {{> __tabs-item
         __tabs-item--id="environment"
         __tabs-item--aria-label="Environment"
         __tabs-item--text="Environment"
-        __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-environment-panel"')}}
+        __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-environment-panel"')}}
       {{> __tabs-item
         __tabs-item--id="logs"
         __tabs-item--aria-label="Logs"
         __tabs-item--text="Logs"
-        __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-logs-panel"')}}
+        __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-logs-panel"')}}
       {{> __tabs-item
         __tabs-item--id="events"
         __tabs-item--aria-label="Events"
         __tabs-item--text="Events"
-        __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-events-panel"')}}
+        __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-events-panel"')}}
       {{> __tabs-item
         __tabs-item--id="terminal"
         __tabs-item--aria-label="Terminal"
         __tabs-item--text="Terminal"
-        __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-terminal-panel"')}}
+        __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-terminal-panel"')}}
     {{/tabs-list}}
   {{/tabs}}
 {{/if}}

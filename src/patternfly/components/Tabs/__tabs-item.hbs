@@ -1,5 +1,5 @@
-{{#> tabs-item tabs-item--IsCurrent=__tabs-item--current}}
-  {{#> tabs-link tabs-link--attribute=(concat __tabs-item--attribute ' id="' tabs--id '-' __tabs-item--id '-link"')}}
+{{#> tabs-item tabs-item--IsCurrent=__tabs-item--current tabs-item--IsAdd=__tabs-item--IsAdd tabs-item--modifier=__tabs-item--modifier tabs-item--attribute=__tabs-item--attribute}}
+  {{#> tabs-link tabs-link--attribute=(concat __tabs-link--attribute ' id="' tabs--id '-' __tabs-item--id '-link"')}}
     {{#if __tabs-list--HasIcons}}
       {{> tabs-item-icon tabs-item-icon--name=__tabs-item--icon-name}}
     {{/if}}
