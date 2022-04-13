@@ -191,6 +191,51 @@ wrapperTag: div
   {{/login-container}}
 {{/login}}
 ```
+
+### With language selector
+```hbs isFullscreen
+{{#> background-image}}{{/background-image}}
+{{#> login}}
+  {{#> login-container}}
+    {{> __login-header}}
+    {{#> login-main}}
+      {{> __login-main-header __login-main-header--HasLangaugeSelector="true"}}
+      {{#> login-main-body}}
+        {{#> form}}
+          {{#> form-helper-text form-helper-text--modifier="pf-m-error pf-m-hidden"}}
+            {{#> form-helper-text-icon}}
+              <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+            {{/form-helper-text-icon}}
+            Invalid login credentials.
+          {{/form-helper-text}}
+          {{#> form-group}}
+            {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
+            {{#> form-control controlType="input" input="true" form-control--attribute='required input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
+          {{/form-group}}
+          {{#> form-group}}
+            {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
+            {{#> form-control controlType="input" input="true" form-control--attribute='required input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
+          {{/form-group}}
+          {{#> form-group}}
+            {{#> check}}
+              {{#> check-input check-input--attribute='type="checkbox" id="login-demo-checkbox" name="login-demo-checkbox"'}}{{/check-input}}
+              {{#> check-label check-label--attribute='for="login-demo-checkbox"'}}Keep me logged in for 30 days.{{/check-label}}
+            {{/check}}
+          {{/form-group}}
+          {{#> form-group form-group--modifier="pf-m-action"}}
+            {{#> button button--modifier="pf-m-primary pf-m-block" button--IsSubmit="true"}}
+              Log in
+            {{/button}}
+          {{/form-group}}
+        {{/form}}
+      {{/login-main-body}}
+      {{> __login-main-footer}}
+    {{/login-main}}
+    {{> __login-footer}}
+  {{/login-container}}
+{{/login}}
+```
+
 ## Documentation
 ### Usage
 | Class | Applied to | Outcome |
