@@ -175,113 +175,107 @@ section: components
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--modifier="pf-m-page-insets"}}
     {{/page-main-tabs}}
-    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
-      {{#> l-flex l-flex--modifier="pf-m-column"}}
-        {{#> l-flex-item}}
-          {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--IsSecondary="true" tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-list--modifier=reset}}
-        {{/l-flex-item}}
-        {{#> l-flex-item}}
-          {{#> tabs-template-pod-tab-content}}
-            {{#> tabs-template-pod-tab-content tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-content--IsSecondary="true"}}
-              {{#> l-flex l-flex--modifier="pf-m-column"}}
-                {{#> l-flex-item}}
-                  {{#> description-list description-list--modifier="pf-m-2-col-on-lg" description-list--attribute='aria-label="Pod information list"'}}
-                    {{#> description-list-group}}
-                      {{#> description-list-term}}
-                        Name
-                      {{/description-list-term}}
-                      {{#> description-list-description}}
-                        3scale-control-fccb6ddb9-phyqv9
-                      {{/description-list-description}}
-                    {{/description-list-group}}
-                    {{#> description-list-group}}
-                      {{#> description-list-term}}
-                        Status
-                      {{/description-list-term}}
-                      {{#> description-list-description}}
-                        {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
-                          {{#> l-flex-item}}
-                            <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
-                          {{/l-flex-item}}
-                          {{#> l-flex-item}}
-                            Running
-                          {{/l-flex-item}}
-                        {{/l-flex}}
-                      {{/description-list-description}}
-                    {{/description-list-group}}
-                    {{#> description-list-group}}
-                      {{#> description-list-term}}
-                        Namespace
-                      {{/description-list-term}}
-                      {{#> description-list-description}}
-                        {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
-                          {{#> l-flex-item}}
-                            {{#> label label--id="gray-icon" label--modifier="pf-m-cyan"}}
-                              NS
-                            {{/label}}
-                          {{/l-flex-item}}
-                          {{#> l-flex-item}}
-                            <a href="#">knative-serving-ingress</a>
-                          {{/l-flex-item}}
-                        {{/l-flex}}
-                      {{/description-list-description}}
-                    {{/description-list-group}}
-                    {{#> description-list-group}}
-                      {{#> description-list-term}}
-                        Restart policy
-                      {{/description-list-term}}
-                      {{#> description-list-description}}
-                        Always restart
-                      {{/description-list-description}}
-                    {{/description-list-group}}
-                    {{#> description-list-group}}
-                      {{#> description-list-term}}
-                        Pod IP
-                      {{/description-list-term}}
-                      {{#> description-list-description}}
-                        10..345.2.197
-                      {{/description-list-description}}
-                    {{/description-list-group}}
-                    {{#> description-list-group}}
-                      {{#> description-list-term}}
-                        Active deadline seconds
-                      {{/description-list-term}}
-                      {{#> description-list-description}}
-                        Not configured
-                      {{/description-list-description}}
-                    {{/description-list-group}}
-                    {{#> description-list-group}}
-                      {{#> description-list-term}}
-                        Created at
-                      {{/description-list-term}}
-                      {{#> description-list-description}}
-                        <time>Oct 15, 1:51 pm</time>
-                      {{/description-list-description}}
-                    {{/description-list-group}}
-                    {{#> description-list-group}}
-                      {{#> description-list-term}}
-                        Node
-                      {{/description-list-term}}
-                      {{#> description-list-description}}
-                        {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
-                          {{#> l-flex-item}}
-                            {{#> label label--id="gray-icon" label--modifier="pf-m-purple"}}
-                              N
-                            {{/label}}
-                          {{/l-flex-item}}
-                          {{#> l-flex-item}}
-                            ip-10-0-233-118.us-east-2.computer.external
-                          {{/l-flex-item}}
-                        {{/l-flex}}
-                      {{/description-list-description}}
-                    {{/description-list-group}}
-                  {{/description-list}}
-                {{/l-flex-item}}
-              {{/l-flex}}
-            {{/tabs-template-pod-tab-content}}
-          {{/tabs-template-pod-tab-content}}
-        {{/l-flex-item}}
-      {{/l-flex}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
+      {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--IsSecondary="true" tabs-template-pod-tab-list--modifier="pf-m-page-insets pf-m-border-bottom" tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-list--modifier=reset}}
+      {{#> tabs-template-pod-tab-content tab-content-body--modifier="pf-m-padding"}}
+        {{#> tabs-template-pod-tab-content tab-content-body--modifier=reset tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-content--IsSecondary="true"}}
+          {{#> l-flex l-flex--modifier="pf-m-column"}}
+            {{#> l-flex-item}}
+              {{#> description-list description-list--modifier="pf-m-2-col-on-lg" description-list--attribute='aria-label="Pod information list"'}}
+                {{#> description-list-group}}
+                  {{#> description-list-term}}
+                    Name
+                  {{/description-list-term}}
+                  {{#> description-list-description}}
+                    3scale-control-fccb6ddb9-phyqv9
+                  {{/description-list-description}}
+                {{/description-list-group}}
+                {{#> description-list-group}}
+                  {{#> description-list-term}}
+                    Status
+                  {{/description-list-term}}
+                  {{#> description-list-description}}
+                    {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                      {{#> l-flex-item}}
+                        <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
+                      {{/l-flex-item}}
+                      {{#> l-flex-item}}
+                        Running
+                      {{/l-flex-item}}
+                    {{/l-flex}}
+                  {{/description-list-description}}
+                {{/description-list-group}}
+                {{#> description-list-group}}
+                  {{#> description-list-term}}
+                    Namespace
+                  {{/description-list-term}}
+                  {{#> description-list-description}}
+                    {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                      {{#> l-flex-item}}
+                        {{#> label label--id="gray-icon" label--modifier="pf-m-cyan"}}
+                          NS
+                        {{/label}}
+                      {{/l-flex-item}}
+                      {{#> l-flex-item}}
+                        <a href="#">knative-serving-ingress</a>
+                      {{/l-flex-item}}
+                    {{/l-flex}}
+                  {{/description-list-description}}
+                {{/description-list-group}}
+                {{#> description-list-group}}
+                  {{#> description-list-term}}
+                    Restart policy
+                  {{/description-list-term}}
+                  {{#> description-list-description}}
+                    Always restart
+                  {{/description-list-description}}
+                {{/description-list-group}}
+                {{#> description-list-group}}
+                  {{#> description-list-term}}
+                    Pod IP
+                  {{/description-list-term}}
+                  {{#> description-list-description}}
+                    10..345.2.197
+                  {{/description-list-description}}
+                {{/description-list-group}}
+                {{#> description-list-group}}
+                  {{#> description-list-term}}
+                    Active deadline seconds
+                  {{/description-list-term}}
+                  {{#> description-list-description}}
+                    Not configured
+                  {{/description-list-description}}
+                {{/description-list-group}}
+                {{#> description-list-group}}
+                  {{#> description-list-term}}
+                    Created at
+                  {{/description-list-term}}
+                  {{#> description-list-description}}
+                    <time>Oct 15, 1:51 pm</time>
+                  {{/description-list-description}}
+                {{/description-list-group}}
+                {{#> description-list-group}}
+                  {{#> description-list-term}}
+                    Node
+                  {{/description-list-term}}
+                  {{#> description-list-description}}
+                    {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                      {{#> l-flex-item}}
+                        {{#> label label--id="gray-icon" label--modifier="pf-m-purple"}}
+                          N
+                        {{/label}}
+                      {{/l-flex-item}}
+                      {{#> l-flex-item}}
+                        ip-10-0-233-118.us-east-2.computer.external
+                      {{/l-flex-item}}
+                    {{/l-flex}}
+                  {{/description-list-description}}
+                {{/description-list-group}}
+              {{/description-list}}
+            {{/l-flex-item}}
+          {{/l-flex}}
+        {{/tabs-template-pod-tab-content}}
+      {{/tabs-template-pod-tab-content}}
     {{/page-main-section}}
   {{/tabs-template}}
 {{/inline}}

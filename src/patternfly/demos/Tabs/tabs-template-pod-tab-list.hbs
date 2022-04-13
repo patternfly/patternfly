@@ -1,5 +1,5 @@
 {{#if tabs-template-pod-tab-list--IsSecondary}}
-  {{#> tabs tabs-id=tab-template--id tabs--modifier="pf-m-inset pf-m-secondary" tabs--attribute=tabs-template-pod-tab-list--attribute}}
+  {{#> tabs tabs-id=tab-template--id tabs--modifier=(concat "pf-m-secondary " tabs-template-pod-tab-list--modifier) tabs--attribute=tabs-template-pod-tab-list--attribute}}
     {{#> tabs-list}}
       {{> __tabs-item
         __tabs-item--current="true"
