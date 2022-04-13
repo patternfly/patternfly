@@ -1,8 +1,8 @@
-{{#> select id=(concat log-viewer--id '-select-menu') select--id=(concat log-viewer--id '-select-menu') select--IsCustom="true"}}
+{{#> select id=(concat log-viewer--id '-select-menu') select--IsCustom="true"}}
   {{#> select-toggle}}
     System log
   {{/select-toggle}}
-  {{#> select-menu aria-labelledby="{{id}}-label"}}
+  {{#> select-menu}}
     <li role="presentation">
       {{#> select-menu-item}}Dataset 1{{/select-menu-item}}
     </li>

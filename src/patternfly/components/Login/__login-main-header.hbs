@@ -8,11 +8,11 @@
   {{#> login-main-header-utilities}}
     {{#> select id="login-select" select--toggle-text="English" select--IsCustom="true"}}
       {{> select-toggle}}
-      {{#> __select-single}}
+      {{#> select-menu}}
         <li role="presentation">{{#> select-menu-item select-menu-item--IsSelected="true"}}English{{/select-menu-item}}</li>
         <li role="presentation">{{#> select-menu-item}}Español{{/select-menu-item}}</li>
         <li role="presentation">{{#> select-menu-item}}Français{{/select-menu-item}}</li>
-      {{/__select-single}}
+      {{/select-menu}}
     {{/select}}
   {{/login-main-header-utilities}}
 {{/login-main-header}}
