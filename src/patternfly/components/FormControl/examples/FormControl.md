@@ -35,6 +35,16 @@ import './FormControl.css'
 ### Select
 ```hbs
 {{#> form-control controlType="select" form-control--modifier="pf-m-placeholder" form-control--attribute='id="select-standard" name="select-standard" aria-label="Standard select example"'}}
+  <option value="" selected disabled>Please choose</option>
+  <option value="Mr">Mr</option>
+  <option value="Miss">Miss</option>
+  <option value="Mrs">Mrs</option>
+  <option value="Ms">Ms</option>
+  <option value="Dr">Dr</option>
+  <option value="Other">Other</option>
+{{/form-control}}
+<br><br>
+{{#> form-control controlType="select" form-control--modifier="pf-m-placeholder" form-control--attribute='id="select-placeholder-enabled" name="select-placeholder-enabled" aria-label="Placeholder enabled select example"'}}
   <option value="" selected>Please choose</option>
   <option value="Mr">Mr</option>
   <option value="Miss">Miss</option>
