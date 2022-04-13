@@ -7,7 +7,9 @@
   {{#if select--attribute}}
     {{{select--attribute}}}
   {{/if}}>
-  {{#if select--IsEmptyMenu}}
+  {{#if @partial-block}}
+    {{{@partial-block}}}
+  {{else if select--IsEmptyMenu}}
     [Panel contents here]
   {{else}}
     {{#if select--HasPlaceholderItem}}

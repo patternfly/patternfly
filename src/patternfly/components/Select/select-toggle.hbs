@@ -44,6 +44,10 @@
         {{!-- default placeholder text --}}
         {{> select-toggle-typeahead select-typeahead--Placeholder="Type to filter" }}
       {{/if}}
+    {{else if select--toggle-text}}
+      {{#> select-toggle-text}}
+        {{select--toggle-text}}
+      {{/select-toggle-text}}
     {{else if @partial-block}}
       {{#> select-toggle-text}}
         {{> @partial-block}}
