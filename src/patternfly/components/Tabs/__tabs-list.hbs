@@ -110,19 +110,6 @@ __tabs-list--IsCloseDisabled: bool
         }}
     {{/if}}
   {{/unless}}
-  {{#if __tabs-list--HasAddTab}}
-    {{> __tabs-item
-      __tabs-list--HasIcons="true"
-      __tabs-item--id="add"
-      __tabs-item--icon-name="plus"
-      __tabs-item--aria-label="Add new tab"
-      __tabs-item--NoText="true"
-      __tabs-link--attribute='aria-label="Add tab"'
-      __tabs-item--IsAdd="true"
-      tabs-item--HasClose=reset
-      tabs-item--IsAction=reset
-      }}
-  {{/if}}
 {{/tabs-list}}
 
 {{#unless __tabs-list--NoScrollButtons}}
@@ -134,3 +121,7 @@ __tabs-list--IsCloseDisabled: bool
     {{> tabs-scroll-button tabs-scroll-button--IsRight="true" tabs-scroll-button--IsDisabled="true" tabs-scroll-button--IsHidden="true"}}
   {{/if}}
 {{/unless}}
+
+{{#if __tabs-list--HasAddTab}}
+  {{> tabs-add}}
+{{/if}}

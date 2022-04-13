@@ -333,6 +333,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-c-tabs__item-close-icon` | `<span>` | Initiates a tabs component item close icon. |
 | `.pf-c-tabs__link` | `<button>`, `<a>` | Initiates a tabs component link. **Required** |
 | `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
+| `.pf-c-tabs__add` | `<span>` | Initiates a tabs component add button. |
 | `.pf-c-tabs__toggle` | `<div>` | Initiates a tabs expandable toggle. |
 | `.pf-c-tabs__toggle-button` | `<button>` | Initiates a tabs expandable toggle button. |
 | `.pf-c-tabs__toggle-icon` | `<span>` | Initiates a tabs expandable toggle icon. |
