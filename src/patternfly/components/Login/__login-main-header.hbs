@@ -5,10 +5,16 @@
   {{#> login-main-header-desc}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   {{/login-main-header-desc}}
-  {{#> dropdown dropdown--id="invalid-login-demo-dropdown-select"}}
-    {{> dropdown-toggle dropdown-toggle--text="English"}}
-    {{#> dropdown-menu}}
-      [Panel contents here]
-    {{/dropdown-menu}}
-  {{/dropdown}}
+  {{#if __login-main-header--HasLangaugeSelector}}
+    {{#> login-main-header-utilities}}
+      {{#> select id="login-select" select--toggle-text="English" select--IsCustom="true"}}
+        {{> select-toggle}}
+        {{#> select-menu}}
+          <li role="presentation">{{#> select-menu-item select-menu-item--IsSelected="true"}}English{{/select-menu-item}}</li>
+          <li role="presentation">{{#> select-menu-item}}Español{{/select-menu-item}}</li>
+          <li role="presentation">{{#> select-menu-item}}Français{{/select-menu-item}}</li>
+        {{/select-menu}}
+      {{/select}}
+    {{/login-main-header-utilities}}
+  {{/if}}
 {{/login-main-header}}

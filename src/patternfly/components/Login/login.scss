@@ -192,15 +192,23 @@
   @media (min-width: $pf-global--breakpoint--md) {
     grid-template-columns: 1fr auto;
   }
+}
 
+.pf-c-login__main-header-utilities,
+.pf-c-login__main-header .pf-c-dropdown {
+  grid-column: auto;
+  grid-row: auto;
+
+  @media (min-width: $pf-global--breakpoint--md) {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+}
+
+.pf-c-login__main-header-utilities {
   .pf-c-dropdown {
     grid-column: auto;
     grid-row: auto;
-
-    @media (min-width: $pf-global--breakpoint--md) {
-      grid-column: 2 / 3;
-      grid-row: 1;
-    }
   }
 }
 
