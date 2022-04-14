@@ -64,9 +64,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // Link before
   --pf-c-tabs__link--before--border-color--base: var(--pf-global--BorderColor--100);
+  --pf-c-tabs__link--before--border-width--base: var(--pf-global--BorderWidth--sm);
+  --pf-c-tabs__link--before--BorderTopColor: var(--pf-c-tabs__link--before--border-color--base);
   --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs__link--before--border-color--base);
   --pf-c-tabs__link--before--BorderBottomColor: var(--pf-c-tabs__link--before--border-color--base);
-  --pf-c-tabs__link--before--border-width--base: var(--pf-global--BorderWidth--sm);
+  --pf-c-tabs__link--before--BorderLeftColor: var(--pf-c-tabs__link--before--border-color--base);
   --pf-c-tabs__link--before--BorderTopWidth: 0;
   --pf-c-tabs__link--before--BorderRightWidth: 0;
   --pf-c-tabs__link--before--BorderBottomWidth: 0;
@@ -584,10 +586,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   & {
     &::before {
       pointer-events: none;
-      border-color: var(--pf-c-tabs__link--before--border-color--base);
       border-width: var(--pf-c-tabs__link--before--BorderTopWidth) var(--pf-c-tabs__link--before--BorderRightWidth) var(--pf-c-tabs__link--before--BorderBottomWidth) var(--pf-c-tabs__link--before--BorderLeftWidth);
+      border-top-color: var(--pf-c-tabs__link--before--BorderTopColor);
       border-right-color: var(--pf-c-tabs__link--before--BorderRightColor);
       border-bottom-color: var(--pf-c-tabs__link--before--BorderBottomColor);
+      border-left-color: var(--pf-c-tabs__link--before--BorderLeftColor);
     }
   }
 
