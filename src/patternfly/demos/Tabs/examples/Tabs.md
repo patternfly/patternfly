@@ -297,12 +297,12 @@ section: components
             __tabs-item--id="cluster-1"
             __tabs-item--aria-label="Cluster 1"
             __tabs-item--text="Cluster 1"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-cluster-1-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-cluster-1-panel"')}}
           {{> __tabs-item
             __tabs-item--id="cluster-2"
             __tabs-item--aria-label="Cluster 2"
             __tabs-item--text="Cluster 2"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-cluster-2-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-cluster-2-panel"')}}
         {{/tabs-list}}
       {{/tabs}}
     {{/page-main-tabs}}
@@ -336,12 +336,12 @@ section: components
             __tabs-item--id="nodes"
             __tabs-item--aria-label="Nodes"
             __tabs-item--text="Nodes"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-nodes-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-nodes-panel"')}}
           {{> __tabs-item
             __tabs-item--id="node-connectors"
             __tabs-item--aria-label="node-connectors"
             __tabs-item--text="Node connectors"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-node-connectors-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-node-connectors-panel"')}}
         {{/tabs-list}}
       {{/tabs}}
     {{/page-main-tabs}}
@@ -410,12 +410,12 @@ section: components
                 __tabs-item--id="nodes"
                 __tabs-item--aria-label="Nodes"
                 __tabs-item--text="Nodes"
-                __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-nodes-panel"')}}
+                __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-nodes-panel"')}}
           {{> __tabs-item
                 __tabs-item--id="node-connectors"
                 __tabs-item--aria-label="node-connectors"
                 __tabs-item--text="Node connectors"
-                __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-node-connectors-panel"')
+                __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-node-connectors-panel"')
           }}
         {{/tabs-list}}
       {{/tabs}}
@@ -491,12 +491,12 @@ section: components
                   __tabs-item--id="details"
                   __tabs-item--aria-label="Details"
                   __tabs-item--text="Details"
-                  __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-details-panel"')}}
+                  __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-details-panel"')}}
                 {{> __tabs-item
                   __tabs-item--id="documentation"
                   __tabs-item--aria-label="documentation"
                   __tabs-item--text="Documentation"
-                  __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-documentation-panel"')}}
+                  __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-documentation-panel"')}}
               {{/tabs-list}}
             {{/tabs}}
           {{/grid-item}}
@@ -564,18 +564,18 @@ section: components
             __tabs-item--id="cluster-1"
             __tabs-item--aria-label="Cluster 1"
             __tabs-item--text="Cluster 1"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-cluster-1-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-cluster-1-panel"')}}
           {{> __tabs-item
             __tabs-item--current="true"
             __tabs-item--id="cluster-2"
             __tabs-item--aria-label="Cluster 2"
             __tabs-item--text="Cluster 2"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-cluster-2-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-cluster-2-panel"')}}
           {{> __tabs-item
             __tabs-item--id="cluster-3"
             __tabs-item--aria-label="Cluster 3"
             __tabs-item--text="Cluster 3"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-cluster-3-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-cluster-3-panel"')}}
         {{/tabs-list}}
       {{/tabs}}
     {{/page-main-tabs}}
@@ -613,23 +613,23 @@ section: components
             __tabs-item--id="new"
             __tabs-item--aria-label="What's new"
             __tabs-item--text="What's new"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-new-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-new-panel"')}}
           {{> __tabs-item
             __tabs-item--current="true"
             __tabs-item--id="get-started"
             __tabs-item--aria-label="Get started"
             __tabs-item--text="Get started"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-get-started-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-get-started-panel"')}}
           {{> __tabs-item
             __tabs-item--id="knowledge"
             __tabs-item--aria-label="Knowledge"
             __tabs-item--text="Knowledge"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-knowledge-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-knowledge-panel"')}}
           {{> __tabs-item
             __tabs-item--id="support"
             __tabs-item--aria-label="Support"
             __tabs-item--text="Support"
-            __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-support-panel"')}}
+            __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-support-panel"')}}
         {{/tabs-list}}
       {{/tabs}}
     {{/page-main-tabs}}
@@ -652,12 +652,12 @@ section: components
                   __tabs-item--id="x86"
                   __tabs-item--aria-label="x86 architecture"
                   __tabs-item--text="x86 architecture"
-                  __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-x86-panel"')}}
+                  __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-x86-panel"')}}
                 {{> __tabs-item
                   __tabs-item--id="additional-architectures"
                   __tabs-item--aria-label="Additional Architectures"
                   __tabs-item--text="Additional Architectures"
-                  __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-additional-architectures-panel"')}}
+                  __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-additional-architectures-panel"')}}
               {{/tabs-list}}
             {{/tabs}}
           {{/grid-item}}

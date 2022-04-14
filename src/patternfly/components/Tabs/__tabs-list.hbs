@@ -7,6 +7,8 @@ __tabs-list--IsScrollable: bool
 __tabs-list--IsShort: bool
 __tabs-list--IsLong: bool
 __tabs-item--NoText: bool
+__tabs-list--HasClose: bool
+__tabs-list--IsCloseDisabled: bool
 ------------------------------------
 --}}
 
@@ -20,7 +22,7 @@ __tabs-item--NoText: bool
   {{/if}}
 {{/unless}}
 
-{{#> tabs-list}}
+{{#> tabs-list tabs-item--IsAction=__tabs-list--IsAction tabs-item--HasClose=__tabs-list--HasClose}}
   {{> __tabs-item
     __tabs-item--id="users"
     __tabs-item--icon-name="fas fa-users"
@@ -57,6 +59,16 @@ __tabs-item--NoText: bool
         __tabs-item--text="ARIA disabled"
         tabs-link--IsAriaDisabled="true"
         }}
+        {{#if __tabs-list--IsCloseDisabled}}
+          {{> __tabs-item
+            __tabs-item--id="close-disabled"
+            __tabs-item--icon-name="laptop"
+            __tabs-item--aria-label="Close disabled"
+            __tabs-item--text="Close disabled"
+            tabs-link--IsDisabled="true"
+            tabs-item-close-button--attribute="disabled"
+            }}
+        {{/if}}
     {{else}}
       {{> __tabs-item
         __tabs-item--id="server"
@@ -109,3 +121,7 @@ __tabs-item--NoText: bool
     {{> tabs-scroll-button tabs-scroll-button--IsRight="true" tabs-scroll-button--IsDisabled="true" tabs-scroll-button--IsHidden="true"}}
   {{/if}}
 {{/unless}}
+
+{{#if __tabs-list--HasAddTab}}
+  {{> tabs-add}}
+{{/if}}

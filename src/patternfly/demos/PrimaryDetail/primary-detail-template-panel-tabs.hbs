@@ -6,20 +6,20 @@
       __tabs-item--id="tab1"
       __tabs-item--aria-label="Overview"
       __tabs-item--text="Overview"
-      __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-tab1-panel"')
+      __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-tab1-panel"')
       }}
     {{> __tabs-item
       __tabs-item--id="tab2"
       __tabs-item--aria-label="Activity"
       __tabs-item--text="Activity"
-      __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-tab2-panel"')
+      __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-tab2-panel"')
       }}
     {{#if primary-detail-template-panel-tabs--Has3}}
       {{> __tabs-item
         __tabs-item--id="tab3"
         __tabs-item--aria-label="Status"
         __tabs-item--text="Status"
-        __tabs-item--attribute=(concat 'aria-controls="' tabs--id '-tab3-panel"')
+        __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-tab3-panel"')
         }}
     {{/if}}
   {{/tabs-list}}

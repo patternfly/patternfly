@@ -1,6 +1,20 @@
-<li class="pf-c-tabs__item{{#if tabs-item--IsCurrent}} pf-m-current{{/if}}{{#if tabs-item--modifier}} {{tabs-item--modifier}}{{/if}}"
+<li class="pf-c-tabs__item
+  {{~#if tabs-item--IsCurrent}} pf-m-current{{/if}}
+  {{~#if tabs-item--IsAction}}
+    pf-m-action
+    {{~#if tabs-link--IsDisabled}}
+      pf-m-disabled
+    {{else if tabs-link--IsAriaDisabled}}
+      pf-m-disabled
+    {{/if}}
+  {{/if}}
+  {{~#if tabs-item--IsAdd}} pf-m-add{{/if}}
+  {{~#if tabs-item--modifier}} {{tabs-item--modifier}}{{/if}}"
   {{#if tabs-item--attribute}}
     {{{tabs-item--attribute}}}
   {{/if}}>
   {{> @partial-block}}
+  {{#if tabs-item--HasClose}}
+    {{> tabs-item-close}}
+  {{/if}}
 </li>

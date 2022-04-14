@@ -1,0 +1,8 @@
+<span class="pf-c-tabs__item-close{{#if tabs-item-close--modifier}} {{tabs-item-close--modifier}}{{/if}}"
+  {{#if tabs-item-close--attribute}}
+    {{{tabs-item-close--attribute}}}
+  {{/if}}>
+  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Close tab" ' tabs-item-close-button--attribute)}}
+    {{> tabs-item-close-icon}}
+  {{/button}}
+</span>

@@ -1,19 +1,9 @@
-{{#> tabs-item tabs-item--IsCurrent=__tabs-item--current}}
-  {{#> tabs-link tabs-link--attribute=(concat __tabs-item--attribute ' id="' tabs--id '-' __tabs-item--id '-link"')}}
+{{#> tabs-item tabs-item--IsCurrent=__tabs-item--current tabs-item--modifier=__tabs-item--modifier tabs-item--attribute=__tabs-item--attribute}}
+  {{#> tabs-link tabs-link--attribute=(concat __tabs-link--attribute ' id="' tabs--id '-' __tabs-item--id '-link"')}}
     {{#if __tabs-list--HasIcons}}
-      {{#if __tabs-item--NoText}}
-        {{> tabs-item-icon
-          tabs-item-icon--name=__tabs-item--icon-name
-          tabs-item-icon--attribute='aria-label="{{__tabs-item--aria-label}}"'
-          }}
-      {{else}}
-        {{> tabs-item-icon
-          tabs-item-icon--name=__tabs-item--icon-name
-          tabs-item-icon--attribute='aria-hidden="true"'
-          }}
-      {{/if}}
+      {{> tabs-item-icon tabs-item-icon--name=__tabs-item--icon-name}}
     {{/if}}
-    {{#unless __tabs-list--NoText}}
+    {{#unless __tabs-item--NoText}}
       {{#> tabs-item-text}}
         {{{__tabs-item--text}}}
       {{/tabs-item-text}}
