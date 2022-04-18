@@ -1,7 +1,13 @@
-#ws-core-c-divider-vertical .ws-preview-html,
-#ws-core-c-divider-vertical-inset-medium .ws-preview-html,
-#ws-core-c-divider-vertical-md-inset-no-inset-on-md-lg-inset-on-lg-sm-inset-on-xl .ws-preview-html {
-  height: 3rem;
-  display: flex;
+[id*="ws-core-c-divider-vertical"],
+[id*="ws-core-c-divider-horizontal"] .ws-preview-html {
   align-items: center;
+}
+
+[id*="ws-core-c-divider-vertical"],
+#ws-core-c-divider-horizontal-on-lg {
+  height: 4rem;
+}
+
+[id*="ws-core-c-divider"] .ws-preview-html {
+  height: 100%;
 }
