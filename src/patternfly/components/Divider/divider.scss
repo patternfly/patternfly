@@ -36,7 +36,7 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
   --pf-c-divider--Height: var(--pf-c-divider--BorderWidth--base); // remove at breaking change
   --pf-c-divider--BackgroundColor: var(--pf-global--BorderColor--100); // remove at breaking change
   --pf-c-divider--after--Height: var(--pf-c-divider--Height);
-  --pf-c-divider--after--BackgroundColor: var(--pf-c-divider--BorderColor); // remove at breaking change
+  --pf-c-divider--after--BackgroundColor: var(--pf-c-divider--BorderColor--base); // remove at breaking change
 
   // Borders
   --pf-c-divider--after--FlexBasis: 100%;
