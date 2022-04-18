@@ -1,0 +1,8 @@
+@import "imports";
+
+:where(#{$pf-theme-dark-class}) {
+  // global overrides
+  @include placeholders; // fixes pf-t-dark in dark theme
+  @include globals($pf-theme-dark-class); // global CSS
+  @include _variables($pf-theme-dark-class); // dark css vars
+}

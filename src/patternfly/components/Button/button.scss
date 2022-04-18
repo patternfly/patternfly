@@ -1,3 +1,6 @@
+@import "../../themes/dark/imports";
+@import "./themes/dark/button";
+
 .pf-c-button {
   // Component
   --pf-c-button--PaddingTop: var(--pf-global--spacer--form-element);
@@ -625,4 +628,8 @@
   .pf-c-button {
     --pf-c-button--FontWeight: var(--pf-global--FontWeight--semi-bold);
   }
+}
+
+:where(#{$pf-theme-dark-class}) {
+  @include button;
 }

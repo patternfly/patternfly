@@ -1,3 +1,6 @@
+@import "../../themes/dark/imports";
+@import "./themes/dark/chip";
+
 .pf-c-chip {
   --pf-c-chip--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-chip--PaddingRight: var(--pf-global--spacer--sm);
@@ -110,4 +113,8 @@
 .pf-c-chip__icon + .pf-c-chip__text,
 .pf-c-chip__text + .pf-c-chip__icon {
   margin-left: var(--pf-c-chip__icon--MarginLeft);
+}
+
+:where(#{$pf-theme-dark-class}) {
+  @include chip;
 }

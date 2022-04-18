@@ -1,0 +1,11 @@
+// global imports
+@import "globals"; // dark global css
+@import "../../sass-utilities/functions"; // functions
+@import "../../sass-utilities/colors"; // base colors
+@import "colors"; // dark colors
+@import "../../sass-utilities/scss-variables"; // base scss vars
+@import "scss-variables"; // dark scss vars
+@import "mixins"; // dark mixins
+@import "placeholders"; // dark placeholders
+@import "variables"; // dark global css vars
+$pf-theme-dark-class: ".pf-theme-dark" !default;
