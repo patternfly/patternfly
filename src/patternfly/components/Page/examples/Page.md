@@ -251,6 +251,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
 | `.pf-m-dark-200` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
 | `.pf-m-dark-100` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |
+| `.pf-m-light-200` | `.pf-c-page__main-wizard` | Modifies a wizard page section to have a light 200 theme. |
 | `.pf-m-no-padding`, `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-padding{-on-[breakpoint]}` | `.pf-c-page__main-section` | Modifies the main page section to add padding back in at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). Should be used with pf-m-no-padding. |
 | `.pf-m-fill` | `.pf-c-page__main-section` | Modifies a main page section to grow to fill the available vertical space. |

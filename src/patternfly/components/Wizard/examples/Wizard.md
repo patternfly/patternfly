@@ -186,6 +186,73 @@ import './Wizard.css'
 {{/wizard}}
 ```
 
+### With drawer
+```hbs isFullscreen
+{{#> wizard wizard--id="wizard-with-drawer-example"}}
+  {{#> wizard-header}}
+    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+      {{#> wizard-toggle-list-item}}
+        {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+        Configuration
+        {{> wizard-toggle-separator}}
+      {{/wizard-toggle-list-item}}
+      {{#> wizard-toggle-list-item}}
+        Substep B
+      {{/wizard-toggle-list-item}}
+    {{/wizard-toggle-list}}
+    {{> wizard-toggle-icon}}
+  {{/wizard-toggle}}
+  {{#> drawer drawer--id="wizard-with-drawer-example-drawer" drawer-panel--IsOpen="true" drawer--IsInline="true"}}
+    {{#> drawer-main}}
+      {{#> drawer-content drawer-content--NoBody="true"}}
+        {{#> wizard-outer-wrap}}
+          {{#> wizard-inner-wrap}}
+            {{#> wizard-main}}
+              {{> wizard-template-nav}}
+              {{> __wizard-form}}
+            {{/wizard-main}}
+          {{/wizard-inner-wrap}}
+          {{#> wizard-footer}}
+            {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+              Next
+            {{/button}}
+            {{#> button button--modifier="pf-m-secondary"}}
+              Back
+            {{/button}}
+            {{#> wizard-footer-cancel}}
+              {{#> button button--modifier="pf-m-link"}}
+                Cancel
+              {{/button}}
+            {{/wizard-footer-cancel}}
+          {{/wizard-footer}}
+        {{/wizard-outer-wrap}}
+      {{/drawer-content}}
+      {{#> drawer-panel drawer-panel--modifier="pf-m-light-200"}}
+        {{#> drawer-body}}
+          {{#> drawer-head}}
+            {{#> drawer-actions}}
+              {{> drawer-close}}
+            {{/drawer-actions}}
+            {{#> drawer-header}}
+              drawer-panel
+            {{/drawer-header}}
+          {{/drawer-head}}
+        {{/drawer-body}}
+      {{/drawer-panel}}
+    {{/drawer-main}}
+  {{/drawer}}
+{{/wizard}}
+```
+
 ### Expandable collapsed
 ```hbs isFullscreen
 {{#> wizard wizard--id="wizard-expandable-collapsed"}}

@@ -210,7 +210,7 @@
     min-height: 0;
   }
 
-  > *:not(.pf-c-wizard__outer-wrap) {
+  > :not(.pf-c-wizard__outer-wrap):not(.pf-c-drawer) {
     flex-shrink: 0;
   }
 
