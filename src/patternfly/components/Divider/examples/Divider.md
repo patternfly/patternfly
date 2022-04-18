@@ -78,17 +78,16 @@ import './Divider.css'
 
 The divider renders as an `<hr>` by default. It is possible to make the divider render as an `li` or a `div` to match the HTML5 specification and context of the divider.
 
-| Attribute          | Applied to                            | Outcome                                      |
-| ------------------ | ------------------------------------- | -------------------------------------------- |
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
 | `role="separator"` | `li.pf-c-divider`, `div.pf-c-divider` | Indicates that the separator is a separator. |
 
 ### Usage
 
-| Class                                                                     | Applied to              | Outcome                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `.pf-c-divider`                                                           | `<hr>`, `<li>`, `<div>` | Defines the divider component.                                                                                                                                                                                                       |
-| `.pf-m-horizontal{-on-[breakpoint]}`                                      | `.pf-c-divider`         | Modifies the divider component to horizontal. When used with pf-m-vertical, modifies the divider back to vertical at an optional breakpoint.                                                                                         |
-| `.pf-m-vertical{-on-[breakpoint]}`                                        | `.pf-c-divider`         | Modifies the divider component to vertical. This modifier requires that the parent has an explicit or implicit height, or has a flex or grid based layout parent. Modifies the divider back to horizontal at an optional breakpoint. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-divider`         | Modifies divider padding/inset to visually match padding of other adjacent components.                                                                                                                                               |
-| `.pf-m-hidden{-on-[breakpoint]}`                                          | `.pf-c-divider`         | Modifies a divider to be hidden, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).                                                                                        |
-| `.pf-m-visible{-on-[breakpoint]}`                                         | `.pf-c-divider`         | Modifies a divider to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes).                                                                                         |
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-divider` | `<hr>`, `<li>`, `<div>` | Defines the divider component. |
+| `.pf-m-vertical` | `.pf-c-divider` | Modifies the divider component from horizontal to vertical. This modifier requires that the parent has an explicit or implicit height, or has a flex or grid based layout parent. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-divider` | Modifies divider padding/inset to visually match padding of other adjacent components. |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-divider` | Modifies a divider to be hidden, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-divider` | Modifies a divider to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

@@ -11,7 +11,10 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
   height: auto; // update to var breaking change
 
   &::after {
-    flex-basis: calc(var(--pf-c-divider--after--FlexBasis) - calc(var(--pf-c-divider--after--Inset) * 2)); // update at breaking change
+    flex-basis:
+      calc(
+        var(--pf-c-divider--after--FlexBasis) - calc(var(--pf-c-divider--after--Inset) * 2)
+      ); // update at breaking change
   }
 }
 
@@ -25,7 +28,10 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
   height: inherit; // update to var at breaking change
 
   &::after {
-    flex-basis: calc(var(--pf-c-divider--m-vertical--after--FlexBasis) - var(--pf-c-divider--after--Inset)); // update at breaking change
+    flex-basis:
+      calc(
+        var(--pf-c-divider--m-vertical--after--FlexBasis) - var(--pf-c-divider--after--Inset)
+      ); // update at breaking change
   }
 }
 
@@ -79,23 +85,25 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
 
   // stylelint-disable max-nesting-depth
 
-  @each $breakpoint,
-    $breakpoint-value in $pf-c-divider--breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-c-divider--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint) {
-      &.pf-m-horizontal#{$breakpoint-name} {
-        @include pf-c-divider--m-horizontal;
+    @if ($breakpoint != "base") {
+      @include pf-apply-breakpoint($breakpoint) {
+        &.pf-m-horizontal#{$breakpoint-name} {
+          @include pf-c-divider--m-horizontal;
+        }
       }
+    }
 
+    @include pf-apply-breakpoint($breakpoint) {
       &.pf-m-vertical#{$breakpoint-name} {
         @include pf-c-divider--m-vertical;
       }
     }
 
     @include pf-apply-breakpoint($breakpoint) {
-      @each $spacer,
-        $spacer-value in $pf-c-divider--spacer-map {
+      @each $spacer, $spacer-value in $pf-c-divider--spacer-map {
         @if $spacer == none {
           $spacer-value: 0%;
         }
