@@ -15,6 +15,7 @@ const sassFiles = [
   './src/patternfly/base/patternfly*.scss',
   './src/patternfly/{components,layouts,patterns,utilities}/**/*.scss',
   '!./src/patternfly/**/_all.scss',
+  './src/patternfly/themes/dark/base.scss',
   // No need to compile component theme sass files to empty css files
   '!./src/patternfly/components/**/themes/**/*.scss'
 ];
