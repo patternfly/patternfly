@@ -3,6 +3,31 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.05 release notes (2022-04-20)
+Packages released:
+- [@patternfly/patternfly@v4.192.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.192.1)
+
+### Components
+- **Card:** Fixed stacking context issue with selectable raised cards ([#4780](https://github.com/patternfly/patternfly/pull/4780))
+- **Data list:** Updated expandable demo to include expand/collapse all in toolbar ([#4784](https://github.com/patternfly/patternfly/pull/4784))
+- **Divider:** Added horizontal/vertical breakpoint support to divider ([#4765](https://github.com/patternfly/patternfly/pull/4765))
+- **Form control:** Fixed placeholder variation menu item color ([#4773](https://github.com/patternfly/patternfly/pull/4773))
+- **Form:**
+  - Added CSS vars for defining label cursor ([#4779](https://github.com/patternfly/patternfly/pull/4779))
+  - Changed width limited form max width from 500 to 800px ([#4782](https://github.com/patternfly/patternfly/pull/4782))
+- **Login:** Added support for any language selector menu ([#4793](https://github.com/patternfly/patternfly/pull/4793))
+- **Page:** Updated dark theme main section bgcolor ([#4791](https://github.com/patternfly/patternfly/pull/4791))
+- **Switch:** Updated to switch state colors, added checked + label example ([#4766](https://github.com/patternfly/patternfly/pull/4766))
+- **Tabs:**
+  - Added secondary border-bottom variation, update demos ([#4774](https://github.com/patternfly/patternfly/pull/4774))
+  - Added close button and add new tab ([#4787](https://github.com/patternfly/patternfly/pull/4787))
+- **Wizard:** Added drawer example ([#4778](https://github.com/patternfly/patternfly/pull/4778))
+
+### Other
+- **Global:** Updated code and pre elements to use PF mono font stack ([#4783](https://github.com/patternfly/patternfly/pull/4783))
+- **Theme:** Added stylesheet for prefers-color-scheme dark ([#4761](https://github.com/patternfly/patternfly/pull/4761))
+
+
 ## 2022.04 release notes (2022-03-30)
 Packages released:
 - [@patternfly/patternfly@v4.185.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.185.1)
