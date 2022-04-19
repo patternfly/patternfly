@@ -10,464 +10,40 @@ import './SearchInput.css'
 ## Examples
 ### Basic
 ```hbs
-{{#> text-input-group}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="Find by name"'}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-{{/text-input-group}}
+{{> search-input search-input--placeholder="Find by name"}}
 ```
 
 ### No match
 ```hbs
-{{#> text-input-group}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="Joh"}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-{{/text-input-group}}
+{{> search-input search-input--placeholder="Find by name" search-input--value="Joh"}}
 ```
+
 ### Match with result count
 ```hbs
-{{#> text-input-group}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="John Doe"}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{> badge badge--modifier="pf-m-read" badge--text="3"}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-{{/text-input-group}}
+{{> search-input search-input--placeholder="Find by name" search-input--value="John Doe" search-input--count="3"}}
 ```
 
 ### Match with navigable options
 ```hbs
-{{#> text-input-group}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="John Doe"}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{> badge badge--modifier="pf-m-read" badge--text="1 / 3"}}
-    {{#> text-input-group-group}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Next"'}}
-        <i class="fas fa-angle-up fa-fw" aria-hidden="true"></i>
-      {{/button}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next"'}}
-        <i class="fas fa-angle-down fa-fw" aria-hidden="true"></i>
-      {{/button}}
-    {{/text-input-group-group}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-{{/text-input-group}}
+{{> search-input search-input--placeholder="Find by name" search-input--value="John Doe" search-input--count="1 / 3" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
 ```
 
 ### With submit button
 ```hbs
-{{#> input-group}}
-  {{#> text-input-group}}
-    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-      {{#> text-input-group-text}}
-        {{> text-input-group-icon}}
-        {{> text-input-group-text-input text-input-group-text-input--placeholder="Find by name"}}
-      {{/text-input-group-text}}
-    {{/text-input-group-main}}
-  {{/text-input-group}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-  {{/button}}
-{{/input-group}}
+{{> search-input search-input--placeholder="Find by name" search-input--HasSubmitButton="true"}}
 ```
 
 ### Advanced search
 ```hbs
-{{#> input-group}}
-  {{#> text-input-group}}
-    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-      {{#> text-input-group-text}}
-        {{> text-input-group-icon}}
-        {{> text-input-group-text-input text-input-group--value="username:root firstname:ned"}}
-      {{/text-input-group-text}}
-    {{/text-input-group-main}}
-    {{#> text-input-group-utilities}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-      {{/button}}
-    {{/text-input-group-utilities}}
-  {{/text-input-group}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
-    <i class="fas fa-caret-down" aria-hidden="true"></i>
-  {{/button}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-  {{/button}}
-{{/input-group}}
-
+{{> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:ned" search-input--IsAdvancedSearch="true"}}
 ```
 
 ### Advanced search expanded
 ```hbs
-<div class="ws-example-wrapper" style="">
-{{#> input-group}}
-  {{#> text-input-group}}
-    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-      {{#> text-input-group-text}}
-        {{> text-input-group-icon}}
-        {{> text-input-group-text-input text-input-group--value="username:root firstname:ned"}}
-      {{/text-input-group-text}}
-    {{/text-input-group-main}}
-    {{#> text-input-group-utilities}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-      {{/button}}
-    {{/text-input-group-utilities}}
-  {{/text-input-group}}
-  {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
-    <i class="fas fa-caret-down" aria-hidden="true"></i>
-  {{/button}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-  {{/button}}
-{{/input-group}}
-
-{{#> panel panel--modifier="pf-m-raised"}}
-  {{#> panel-main}}
-    {{#> panel-main-body}}
-      {{#> form form--id="text-input-group-advanced-search-input-expanded-legacy-form-example"}}
-        {{#> form-group form-group--id="-username"}}
-          {{#> form-group-label}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
-              Username
-            {{/form-label}}
-          {{/form-group-label}}
-          {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="root" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
-          {{/form-group-control}}
-        {{/form-group}}
-        {{#> form-group form-group--id="-firstname"}}
-          {{#> form-group-label}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
-              First name
-            {{/form-label}}
-          {{/form-group-label}}
-          {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="ned" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
-          {{/form-group-control}}
-        {{/form-group}}
-        {{#> form-group form-group--id="-group"}}
-          {{#> form-group-label}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
-              Group
-            {{/form-label}}
-          {{/form-group-label}}
-          {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
-          {{/form-group-control}}
-        {{/form-group}}
-        {{#> form-group form-group--id="-email"}}
-          {{#> form-group-label}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
-              Email
-            {{/form-label}}
-          {{/form-group-label}}
-          {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
-          {{/form-group-control}}
-        {{/form-group}}
-        {{#> form-group form-group--modifier="pf-m-action"}}
-          {{#> form-actions}}
-            {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-              Submit
-            {{/button}}
-            {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
-              Reset
-            {{/button}}
-          {{/form-actions}}
-        {{/form-group}}
-      {{/form}}
-    {{/panel-main-body}}
-  {{/panel-main}}
-{{/panel}}
-</div>
-```
-
-### Autocomplete
-```hbs
-<div class="ws-example-wrapper" style="">
-{{#> text-input-group text-input-group--id="autocomplete" text-input-group--value="app"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-{{/text-input-group}}
-
-{{#> menu}}
-  {{#> menu-content}}
-    {{#> menu-list}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              apple
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              appleby
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              appleseed
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              appleton
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-    {{/menu-list}}
-  {{/menu-content}}
-{{/menu}}
-</div>
-```
-
-### Autocomplete last option hint
-```hbs
-<div class="ws-example-wrapper" style="">
-{{#> text-input-group text-input-group--id="autocomplete-last-option-hint-example" text-input-group--value="apples"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group-text-input--hint-text="appleseed" }}
-      {{> text-input-group-text-input}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-{{/text-input-group}}
-
-{{#> menu}}
-  {{#> menu-content}}
-    {{#> menu-list}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              appleseed
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-    {{/menu-list}}
-  {{/menu-content}}
-{{/menu}}
-</div>
-```
-
-### Advanced search expanded with autocomplete
-```hbs
-<div class="ws-example-wrapper" style="">
-{{#> input-group}}
-  {{#> text-input-group}}
-    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-      {{#> text-input-group-text}}
-        {{> text-input-group-icon}}
-        {{> text-input-group-text-input text-input-group--value="username:root firstname:n"}}
-      {{/text-input-group-text}}
-    {{/text-input-group-main}}
-    {{#> text-input-group-utilities}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-      {{/button}}
-    {{/text-input-group-utilities}}
-  {{/text-input-group}}
-  {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
-    <i class="fas fa-caret-down" aria-hidden="true"></i>
-  {{/button}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-  {{/button}}
-{{/input-group}}
-
-{{#> panel panel--modifier="pf-m-raised"}}
-  {{#> panel-main}}
-    {{#> panel-main-body}}
-      {{#> form form--id="text-input-group-advanced-search-input-form-with-autocomplete-example"}}
-        {{#> form-group form-group--id="-username"}}
-          {{#> form-group-label}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
-              Username
-            {{/form-label}}
-          {{/form-group-label}}
-          {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="root" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
-          {{/form-group-control}}
-        {{/form-group}}
-        {{#> form-group form-group--id="-firstname"}}
-          {{#> form-group-label}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
-              First name
-            {{/form-label}}
-          {{/form-group-label}}
-          {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="ned" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
-          {{/form-group-control}}
-        {{/form-group}}
-        {{#> form-group form-group--id="-group"}}
-          {{#> form-group-label}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
-              Group
-            {{/form-label}}
-          {{/form-group-label}}
-          {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
-          {{/form-group-control}}
-        {{/form-group}}
-        {{#> form-group form-group--id="-email"}}
-          {{#> form-group-label}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
-              Email
-            {{/form-label}}
-          {{/form-group-label}}
-          {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
-          {{/form-group-control}}
-        {{/form-group}}
-        {{#> form-group form-group--modifier="pf-m-action"}}
-          {{#> form-actions}}
-            {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-              Submit
-            {{/button}}
-            {{#> button button--modifier="pf-m-link" button--IsReset="true"}}
-              Reset
-            {{/button}}
-          {{/form-actions}}
-        {{/form-group}}
-      {{/form}}
-    {{/panel-main-body}}
-  {{/panel-main}}
-{{/panel}}
-
-{{#> menu}}
-  {{#> menu-content}}
-    {{#> menu-list}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              nancy
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              ned
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              neil
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-      {{#> menu-list-item}}
-        {{#> menu-item}}
-          {{#> menu-item-main}}
-            {{#> menu-item-text}}
-              nicole
-            {{/menu-item-text}}
-          {{/menu-item-main}}
-        {{/menu-item}}
-      {{/menu-list-item}}
-    {{/menu-list}}
-  {{/menu-content}}
-{{/menu}}
-</div>
-```
-
-### Legacy examples
-```hbs
-<h4>Basic</h4>
-{{> search-input search-input--placeholder="Find by name"}}
-<br>
-<br>
-<h4>No match</h4>
-{{> search-input search-input--placeholder="Find by name" search-input--value="Joh"}}
-<br>
-<br>
-<h4>Match with result count</h4>
-{{> search-input search-input--placeholder="Find by name" search-input--value="John Doe" search-input--count="3"}}
-<br>
-<br>
-<h4>Match with navigable options</h4>
-{{> search-input search-input--placeholder="Find by name" search-input--value="John Doe" search-input--IsNavigable="true" search-input--IsFirstMatch="true" search-input--count="1 / 3"}}
-<br>
-<br>
-<h4>With submit button</h4>
-{{> search-input search-input--placeholder="Find by name" search-input--HasSubmitButton="true"}}
-<br>
-<br>
-<h4>Advanced search</h4>
-{{> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:ned" search-input--IsAdvancedSearch="true"}}
-<br>
-<br>
-<h4>Advanced search expanded</h4>
-<div id="ws-core-c-search-input-advanced-search-expanded-legacy">
-{{#> search-input search-input--attribute='id="advanced-search-expanded-legacy"' search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:ned" search-input--IsAdvancedSearch="true" search-input--IsExpanded="true"}}
+{{#> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:ned" search-input--IsAdvancedSearch="true" search-input--IsExpanded="true"}}
   {{#> search-input-menu}}
     {{#> search-input-menu-body}}
-      {{#> form form--id="advanced-search-expanded-legacy-input-form"}}
+      {{#> form form--id="advanced-search-input-form"}}
         {{#> form-group form-group--id="-username"}}
           {{#> form-group-label}}
             {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
@@ -522,11 +98,10 @@ import './SearchInput.css'
     {{/search-input-menu-body}}
   {{/search-input-menu}}
 {{/search-input}}
-</div>
-<br>
-<br>
-<h4>Autocomplete</h4>
-<div id="ws-core-c-search-input-autocomplete-legacy">
+```
+
+### Autocomplete
+```hbs
 {{#> search-input search-input--id="search-input-autocomplete" search-input--IsAutocomplete="true" search-input--placeholder="Keyword search" search-input--value="app"}}
   {{#> search-input-menu}}
     {{#> search-input-menu-list}}
@@ -537,11 +112,10 @@ import './SearchInput.css'
     {{/search-input-menu-list}}
   {{/search-input-menu}}
 {{/search-input}}
-</div>
-<br>
-<br>
-<h4>Autocomplete last option hint</h4>
-<div id="ws-core-c-search-input-autocomplete-last-hint-legacy">
+```
+
+### Autocomplete last option hint
+```hbs
 {{#> search-input search-input--id="search-input-autocomplete-last-option-hint" search-input--IsAutocomplete="true" search-input--placeholder="Keyword search" search-input--value="apples" search-input--hint-text="appleseed"}}
   {{#> search-input-menu}}
     {{#> search-input-menu-list}}
@@ -549,11 +123,10 @@ import './SearchInput.css'
     {{/search-input-menu-list}}
   {{/search-input-menu}}
 {{/search-input}}
-</div>
-<br>
-<br>
-<h4>Advanced search expanded with autocomplete</h4>
-<div id="ws-core-c-search-input-advanced-search-expanded-with-autocomplete-legacy">
+```
+
+### Advanced search expanded with autocomplete
+```hbs
 {{#> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:n" search-input--IsAdvancedSearch="true" search-input--IsExpanded="true"}}
   {{#> search-input-menu}}
     {{#> search-input-menu-body}}
