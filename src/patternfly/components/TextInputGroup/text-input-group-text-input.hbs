@@ -13,10 +13,13 @@
   {{else}}
     value="{{text-input-group--value}}"
   {{/if}}
+  {{#if text-input-group-text-input--placeholder}}
+    placeholder="{{text-input-group-text-input--placeholder}}"
+  {{/if}}
   {{#unless text-input-group-text-input--hint-text}}
     aria-label="Type to filter"
   {{/unless}}
-  {{#if text-input-group-text-input--hint-text }}
+  {{#if text-input-group-text-input--hint-text}}
     disabled
     aria-hidden="true"
   {{/if}}
