@@ -17,6 +17,7 @@ Packages released:
   - Changed width limited form max width from 500 to 800px ([#4782](https://github.com/patternfly/patternfly/pull/4782))
 - **Login:** Added support for any language selector menu ([#4793](https://github.com/patternfly/patternfly/pull/4793))
 - **Page:** Updated dark theme main section bgcolor ([#4791](https://github.com/patternfly/patternfly/pull/4791))
+- **Search input:** Converted to text-input-group ([#4730](https://github.com/patternfly/patternfly/pull/4730))
 - **Switch:** Updated to switch state colors, added checked + label example ([#4766](https://github.com/patternfly/patternfly/pull/4766))
 - **Tabs:**
   - Added secondary border-bottom variation, update demos ([#4774](https://github.com/patternfly/patternfly/pull/4774))
