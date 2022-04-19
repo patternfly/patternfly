@@ -1,27 +1,3 @@
-#ws-core-c-search-input-advanced-search-expanded,
-#ws-core-c-search-input-advanced-search-expanded-with-autocomplete {
-  height: 540px;
-}
-
-#ws-core-c-search-input-autocomplete {
-  height: 250px;
-}
-
-#ws-core-c-search-input-autocomplete-last-option-hint {
-  height: 130px;
-}
-
-.ws-example-wrapper {
-  position: relative;
-}
-
-.ws-example-wrapper .pf-c-menu,
-.ws-example-wrapper .pf-c-panel {
-  position: absolute;
-  top: 40px;
-  width: 100%;
-}
-
 #ws-core-c-search-input-advanced-search-expanded-legacy {
   height: 510px;
 }
