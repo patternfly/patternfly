@@ -151,7 +151,7 @@ import './SearchInput.css'
 {{#> panel panel--modifier="pf-m-raised"}}
   {{#> panel-main}}
     {{#> panel-main-body}}
-      {{#> form form--id="text-input-group-advanced-search-input-form-example"}}
+      {{#> form form--id="text-input-group-advanced-search-input-expanded-legacy-form-example"}}
         {{#> form-group form-group--id="-username"}}
           {{#> form-group-label}}
             {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
@@ -335,7 +335,7 @@ import './SearchInput.css'
 {{#> panel panel--modifier="pf-m-raised"}}
   {{#> panel-main}}
     {{#> panel-main-body}}
-      {{#> form form--id="text-input-group-advanced-search-input-form-example"}}
+      {{#> form form--id="text-input-group-advanced-search-input-form-with-autocomplete-example"}}
         {{#> form-group form-group--id="-username"}}
           {{#> form-group-label}}
             {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
@@ -467,7 +467,7 @@ import './SearchInput.css'
 {{#> search-input search-input--attribute='id="advanced-search-expanded-legacy"' search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:ned" search-input--IsAdvancedSearch="true" search-input--IsExpanded="true"}}
   {{#> search-input-menu}}
     {{#> search-input-menu-body}}
-      {{#> form form--id="advanced-search-input-form"}}
+      {{#> form form--id="advanced-search-expanded-legacy-input-form"}}
         {{#> form-group form-group--id="-username"}}
           {{#> form-group-label}}
             {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}
