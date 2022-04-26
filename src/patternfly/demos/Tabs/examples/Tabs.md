@@ -119,7 +119,7 @@ section: components
                   Pod IP
                 {{/description-list-term}}
                 {{#> description-list-description}}
-                  10..345.2.197
+                  10.345.2.197
                 {{/description-list-description}}
               {{/description-list-group}}
               {{#> description-list-group}}
@@ -235,7 +235,7 @@ section: components
                     Pod IP
                   {{/description-list-term}}
                   {{#> description-list-description}}
-                    10..345.2.197
+                    10.345.2.197
                   {{/description-list-description}}
                 {{/description-list-group}}
                 {{#> description-list-group}}
