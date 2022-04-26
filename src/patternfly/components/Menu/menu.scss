@@ -196,6 +196,8 @@
   box-shadow: var(--pf-c-menu--BoxShadow);
 
   .pf-c-menu__content {
+    overflow: visible hidden;
+
     & & {
       overflow: visible;
     }
@@ -264,7 +266,6 @@
       left: 100%;
       width: 100%;
       transition: var(--pf-c-menu--m-drilldown--c-menu--Transition);
-      transition: 2s;
 
       // stylelint-disable selector-max-class
       &.pf-m-drilled-in {
