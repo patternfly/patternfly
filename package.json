@@ -79,7 +79,7 @@
     "stylelint-scss": "^4.0.0",
     "stylelint-value-no-unknown-custom-properties": "^3.0.0",
     "surge": "^0.21.3",
-    "theme-patternfly-org": "0.7.3",
+    "theme-patternfly-org": "0.11.32",
     "unified": "^9.2.0",
     "webpack": "^4.43.0"
   },
