@@ -6,6 +6,192 @@ cssPrefix: pf-l-flex
 
 import './Flex.css'
 
+### Gap layout modifiers
+```hbs
+<h3>Gap</h3>
+{{#> l-flex l-flex--modifier="pf-m-gap-sm pf-m-space-items-none"}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+{{/l-flex}}
+
+<h3>Gap</h3>
+{{#> l-flex l-flex--modifier="pf-m-gap pf-m-no-margins"}}
+  {{#> l-flex-item}}
+    Lorem ipsum dolor sit amet
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Consectetur adipiscing elit. Mauris aliquet.
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Mauris aliquet.
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Odio eu consectetur dictum.
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+      Arcu lacus imperdiet odio.
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Vel aliquam augue ante sit amet lacus.
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Fusce sagittis porta elit, laoreet tempus purus iaculis id.
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Aenean et accumsan nisl. Cras malesuada tellus eu vulputate venenatis.
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Donec porttitor tempor nisl. Proin blandit faucibus efficitur.
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Maecenas imperdiet nisi nulla, a lobortis nunc varius vel.
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Praesent diam metus, convallis ut lobortis at, semper a nulla. Etiam id dignissim orci, vitae cursus nibh.
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+{{/l-flex}}
+<br>
+<h3>
+  Stacking <code>.pf-l-flex</code> elements.
+</h3>
+{{#> l-flex l-flex--modifier="pf-m-row-gap"}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+{{/l-flex}}
+<br>
+<h3>
+  column
+</h3>
+{{#> l-flex l-flex--modifier="pf-m-column pf-m-gap pf-m-no-spacer"}}
+  {{#> l-flex newcontext}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+  {{/l-flex}}
+  {{#> l-flex newcontext}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+  {{/l-flex}}
+  {{#> l-flex newcontext}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/l-flex}}
+<br>
+<h3>
+  Nesting <code>.pf-l-flex</code> elements and setting to <code>.pf-m-column</code>.
+</h3>
+{{#> l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+  {{/l-flex}}
+  {{#> l-flex l-flex--modifier="pf-m-column pf-m-gap"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/l-flex}}
+```
+
 ## Introduction
 The flex layout is based on the CSS Flex properties where the layout determines how a flex item will grow or shrink to fit the space available in its container. The system relies on a default spacer value `--pf-l-flex--spacer--base`, whose value is `--pf-global--spacer--md` or `16px` that is applied to flex items. By default, `flex-wrap` is set to `wrap` and `align-items` is set to `baseline`.
 

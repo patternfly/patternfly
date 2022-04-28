@@ -1,0 +1,81 @@
+@import "./flex-maps";
+@import "./flex-mixins";
+
+.pf-l-flex {
+  @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint) {
+      &.pf-m-flex#{$breakpoint-name} { @include pf-l-flex--m-flex; }
+      &.pf-m-inline-flex#{$breakpoint-name} { @include pf-l-flex--m-inline-flex; }
+      &.pf-m-column#{$breakpoint-name} { @include pf-l-flex--m-column; }
+      &.pf-m-column-reverse#{$breakpoint-name} { @include pf-l-flex--m-column-reverse; }
+      &.pf-m-row#{$breakpoint-name} { @include pf-l-flex--m-row; }
+      &.pf-m-wrap#{$breakpoint-name} { @include pf-l-flex--m-wrap; }
+      &.pf-m-wrap-reverse#{$breakpoint-name} { @include pf-l-flex--m-wrap-reverse; }
+      &.pf-m-nowrap#{$breakpoint-name} { @include pf-l-flex--m-nowrap; }
+
+      // Justify content
+      &.pf-m-justify-content-flex-start#{$breakpoint-name} { @include pf-l-flex--m-justify-content-flex-start; }
+      &.pf-m-justify-content-flex-end#{$breakpoint-name} { @include pf-l-flex--m-justify-content-flex-end; }
+      &.pf-m-justify-content-center#{$breakpoint-name} { @include pf-l-flex--m-justify-content-center; }
+      &.pf-m-justify-content-space-between#{$breakpoint-name} { @include pf-l-flex--m-justify-content-space-between; }
+      &.pf-m-justify-content-space-around#{$breakpoint-name} { @include pf-l-flex--m-justify-content-space-around; }
+      &.pf-m-justify-content-space-evenly#{$breakpoint-name} { @include pf-l-flex--m-justify-content-space-evenly; }
+
+      // Align items
+      &.pf-m-align-items-flex-start#{$breakpoint-name} { @include pf-l-flex--m-align-items-flex-start; }
+      &.pf-m-align-items-flex-end#{$breakpoint-name} { @include pf-l-flex--m-align-items-flex-end; }
+      &.pf-m-align-items-center#{$breakpoint-name} { @include pf-l-flex--m-align-items-center; }
+      &.pf-m-align-items-stretch#{$breakpoint-name} { @include pf-l-flex--m-align-items-stretch; }
+      &.pf-m-align-items-baseline#{$breakpoint-name} { @include pf-l-flex--m-align-items-baseline; }
+
+      // Align content
+      &.pf-m-align-content-flex-start#{$breakpoint-name} { @include pf-l-flex--m-align-content-flex-start; }
+      &.pf-m-align-content-flex-end#{$breakpoint-name} { @include pf-l-flex--m-align-content-flex-end; }
+      &.pf-m-align-content-center#{$breakpoint-name} { @include pf-l-flex--m-align-content-center; }
+      &.pf-m-align-content-stretch#{$breakpoint-name} { @include pf-l-flex--m-align-content-stretch; }
+      &.pf-m-align-content-space-between#{$breakpoint-name} { @include pf-l-flex--m-align-content-space-between; }
+      &.pf-m-align-content-space-around#{$breakpoint-name} { @include pf-l-flex--m-align-content-space-around; }
+      &.pf-m-align-content-normal#{$breakpoint-name} { @include pf-l-flex--m-align-content-normal; }
+
+      // Align self
+      @include pf-l-flex--m-align-self-flex-start($breakpoint-name);
+      @include pf-l-flex--m-align-self-flex-end($breakpoint-name);
+      @include pf-l-flex--m-align-self-center($breakpoint-name);
+      @include pf-l-flex--m-align-self-baseline($breakpoint-name);
+      @include pf-l-flex--m-align-self-stretch($breakpoint-name);
+
+      // Alignment
+      @include pf-l-flex--m-align-right($breakpoint-name);
+      @include pf-l-flex--m-align-left($breakpoint-name);
+
+      // Flex fitting
+      @include pf-l-flex--m-grow($breakpoint-name);
+      @include pf-l-flex--m-shrink($breakpoint-name);
+      @include pf-l-flex--m-align($breakpoint-name);
+      @include pf-l-flex--m-full-width($breakpoint-name);
+      @include pf-l-flex--m-flex-1($breakpoint-name);
+      @include pf-l-flex--m-flex-2($breakpoint-name);
+      @include pf-l-flex--m-flex-3($breakpoint-name);
+      @include pf-l-flex--m-flex-4($breakpoint-name);
+      @include pf-l-flex--m-flex-default($breakpoint-name);
+      @include pf-l-flex--m-flex-none($breakpoint-name);
+    }
+  }
+
+  @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    // Spacers
+    // stylelint-disable at-rule-empty-line-before
+    @each $spacer, $spacer-value in $pf-l-flex--spacer-map { &.pf-m-space-items-#{$spacer}#{$breakpoint-name} { @include pf-l-flex--m-space-items($spacer, $spacer-value); } }
+    @each $spacer, $spacer-value in $pf-l-flex--spacer-map { &.pf-m-spacer-#{$spacer}#{$breakpoint-name} { @include pf-l-flex--m-spacer($spacer, $spacer-value); } }
+
+    // Gap
+    @each $spacer, $spacer-value in $pf-l-flex--spacer-map { &.pf-m-gap-#{$spacer}#{$breakpoint-name} { @include pf-l-flex--m-gap($spacer, $spacer-value); } }
+    @each $spacer, $spacer-value in $pf-l-flex--spacer-map { &.pf-m-row-gap-#{$spacer}#{$breakpoint-name} { @include pf-l-flex--m-row-gap($spacer, $spacer-value); } }
+    @each $spacer, $spacer-value in $pf-l-flex--spacer-map { &.pf-m-column-gap-#{$spacer}#{$breakpoint-name} { @include pf-l-flex--m-column-gap($spacer, $spacer-value); } }
+    // stylelint-enable
+  }
+}
