@@ -98,6 +98,7 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view--m-guides__list-item--before--BackgroundColor: var(--pf-c-tree-view--m-guides--guide-color--base);
   --pf-c-tree-view--m-guides__list-item--last-child--before--Top: var(--pf-c-tree-view--m-guides__node--before--Top);
   --pf-c-tree-view--m-guides__list-item--last-child--before--Height: var(--pf-c-tree-view--m-guides__list-item--last-child--before--Top);
+  --pf-c-tree-view--m-guides__list-item--ZIndex: var(--pf-global--ZIndex--xs);
 
   // Node
   --pf-c-tree-view--m-guides__node--before--Width: #{pf-size-prem(16px)};
@@ -187,6 +188,7 @@ $pf-c-tree-view--MaxNesting: 10;
         // vertical border
         &::before {
           top: var(--pf-c-tree-view--m-guides__list-item--before--Top);
+          z-index: var(--pf-c-tree-view--m-guides__list-item--ZIndex);
           width: var(--pf-c-tree-view--m-guides__list-item--before--Width);
           height: var(--pf-c-tree-view--m-guides__list-item--before--Height);
           background-color: var(--pf-c-tree-view--m-guides__list-item--before--BackgroundColor);
