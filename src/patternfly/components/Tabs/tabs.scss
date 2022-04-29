@@ -153,6 +153,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-secondary__add--c-button--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-tabs__add--c-button--PaddingTop: var(--pf-c-tabs__link--PaddingTop);
   --pf-c-tabs__add--c-button--PaddingBottom: var(--pf-c-tabs__link--PaddingBottom);
+  --pf-c-tabs__add--c-button--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-tabs__scroll-button--Width: var(--pf-c-tabs__scroll-button--xl--Width);
@@ -730,6 +731,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-button--FontSize: var(--pf-c-tabs__add--c-button--FontSize);
     --pf-c-button--PaddingTop: var(--pf-c-tabs__add--c-button--PaddingTop);
     --pf-c-button--PaddingBottom: var(--pf-c-tabs__add--c-button--PaddingBottom);
+
+    outline-offset: var(--pf-c-tabs__add--c-button--OutlineOffset);
   }
 }
 
