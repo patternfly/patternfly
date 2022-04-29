@@ -144,6 +144,8 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
 }
 
 .pf-c-description-list__text {
+  min-width: 0; // this allows overflow-wrap to work
+
   &.pf-m-help-text {
     text-decoration: underline;
     cursor: pointer;
