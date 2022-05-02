@@ -251,6 +251,18 @@
     cursor: pointer;
     outline-offset: var(--pf-c-data-list__item--m-selectable--OutlineOffset);
 
+    &.pf-m-selected {
+      --pf-c-data-list__item--before--BackgroundColor: var(--pf-c-data-list__item--m-selected--before--BackgroundColor);
+
+      position: relative;
+      z-index: var(--pf-c-data-list__item--m-selected--ZIndex);
+
+      &:hover {
+        margin-bottom: var(--pf-c-data-list__item--BorderBottomWidth);
+        border-bottom-width: 0;
+      }
+    }
+
     &:hover,
     &:focus {
       position: relative;
@@ -278,14 +290,6 @@
     &:active {
       box-shadow: var(--pf-c-data-list__item--m-selectable--active--BoxShadow);
     }
-  }
-
-  &.pf-m-selected {
-    --pf-c-data-list__item--before--BackgroundColor: var(--pf-c-data-list__item--m-selected--before--BackgroundColor);
-
-    position: relative;
-    z-index: var(--pf-c-data-list__item--m-selected--ZIndex);
-    box-shadow: var(--pf-c-data-list__item--m-selected--BoxShadow);
   }
 
   &.pf-m-ghost-row {
