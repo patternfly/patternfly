@@ -760,7 +760,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content (selected)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
