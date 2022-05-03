@@ -603,7 +603,7 @@ This style of label is used to indicate overflow within a label group.
 {{#> label label--id="compact-editable-label-active" label--modifier="pf-m-compact pf-m-blue" label--IsEditable="true" label--IsEditableActive="true"}}Compact editable active{{/label}}
 ```
 
-### Add
+### Add label
 
 This style of label is used to add new labels to a label group.
 
