@@ -7,7 +7,9 @@ cssPrefix: pf-c-label
 import './Label.css'
 
 ## Examples
+
 ### Filled
+
 ```hbs
 {{#> label label--id="default-grey"}}
   Grey
@@ -296,6 +298,7 @@ import './Label.css'
 ```
 
 ### Outline
+
 ```hbs
 {{#> label label--id="outline-grey" label--modifier="pf-m-outline"}}
   Grey
@@ -521,6 +524,7 @@ import './Label.css'
 ```
 
 ### Compact
+
 ```hbs
 {{#> label label--id="default-compact" label--modifier="pf-m-compact"}}
   Compact
@@ -564,29 +568,32 @@ import './Label.css'
 ```
 
 ### Overflow
+
 This style of label is used to indicate overflow within a label group.
+
 ```hbs
 {{#> label label--id="overflow" label--IsOverflow="true"}}
   Overflow
 {{/label}}
 ```
 
-
 ### Editable
-**Note: Editable label behavior must be handled with JavaScript.**
-* `.pf-c-label__editable-text` onClick event should:
-  * Set `.pf-m-editable-active` on `.pf-c-label`
-  * Change `.pf-c-label__editable-text`from a button to an input
-* Return keypress, when content is editable, should:
-  * Be captured to prevent line wrapping and save updates to label text
-  * Remove `.pf-m-editable-active` from `.pf-c-label`
-  * Change `.pf-c-label__editable-text` back from an input to a button and set the `currvalue` of the button to the contents of the input
-* Esc keypress, when content is editable, should:
-  * Undo any update to label text
-  * Remove `.pf-m-editable-active` from `.pf-c-label`
-  * Change `.pf-c-label__editable-text` back to a button
 
-``` hbs isBeta
+**Note: Editable label behavior must be handled with JavaScript.**
+
+- `.pf-c-label__editable-text` onClick event should:
+  - Set `.pf-m-editable-active` on `.pf-c-label`
+  - Change `.pf-c-label__editable-text`from a button to an input
+- Return keypress, when content is editable, should:
+  - Be captured to prevent line wrapping and save updates to label text
+  - Remove `.pf-m-editable-active` from `.pf-c-label`
+  - Change `.pf-c-label__editable-text` back from an input to a button and set the `currvalue` of the button to the contents of the input
+- Esc keypress, when content is editable, should:
+  - Undo any update to label text
+  - Remove `.pf-m-editable-active` from `.pf-c-label`
+  - Change `.pf-c-label__editable-text` back to a button
+
+```hbs isBeta
 {{#> label label--id="editable-label" label--IsEditable="true" label--isRemovable="true" label--modifier="pf-m-blue"}}Editable label{{/label}}
 
 {{#> label label--id="editable-label-active" label--IsEditable="true" label--IsEditableActive="true" label--modifier="pf-m-blue"}}Editable active{{/label}}
@@ -596,24 +603,35 @@ This style of label is used to indicate overflow within a label group.
 {{#> label label--id="compact-editable-label-active" label--modifier="pf-m-compact pf-m-blue" label--IsEditable="true" label--IsEditableActive="true"}}Compact editable active{{/label}}
 ```
 
+### Add
+
+This style of label is used to add new labels to a label group.
+
+```hbs isBeta
+{{#> label label--id="add" label--IsAdd="true"}}
+  Add Label
+{{/label}}
+```
+
 ## Documentation
 
 ### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-label` | `<span>`, `<button>` | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. Use a `<button>` if the label is an overflow label used in the label group. **Required** |
-| `.pf-c-label__content` | `<span>`, `<a>`, `<button>` | Iniates a label content. Use as an `<a>` element if the label serves as a link. Use a `<button>` if the label serves as an action. **Required** |
-| `.pf-c-label__icon` | `<span>` | Initiates a label icon. |
-| `.pf-c-label__text` | `<span>` | Initiates label text. |
-| `.pf-c-label__editable-text` | `<button>`, `<input>` | Initiates editable label text. See the [editable](#editable) example for details about handling behavior in Javascript.|
-| `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
-| `.pf-m-compact` | `.pf-c-label` | Modifies label for compact styles. |
-| `.pf-m-overflow` | `.pf-c-label` | Modifies label for overflow styles for use in a label group. |
-| `.pf-m-blue` | `.pf-c-label` | Modifies the label to have blue colored styling. |
-| `.pf-m-green` | `.pf-c-label` | Modifies the label to have green colored styling. |
-| `.pf-m-orange` | `.pf-c-label` | Modifies the label to have orange colored styling. |
-| `.pf-m-red` | `.pf-c-label` | Modifies the label to have red colored styling. |
-| `.pf-m-purple` | `.pf-c-label` | Modifies the label to have purple colored styling. |
-| `.pf-m-cyan` | `.pf-c-label` | Modifies the label to have cyan colored styling. |
-| `.pf-m-editable` | `.pf-c-label` | Modifies label for editable styles. |
-| `.pf-m-editable-active` | `.pf-c-label.pf-m-editable` | Modifies editable label for active styles. |
+
+| Class                        | Applied to                  | Outcome                                                                                                                                                                                                                  |
+| ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `.pf-c-label`                | `<span>`, `<button>`        | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. Use a `<button>` if the label is an overflow label used in the label group. **Required** |
+| `.pf-c-label__content`       | `<span>`, `<a>`, `<button>` | Iniates a label content. Use as an `<a>` element if the label serves as a link. Use a `<button>` if the label serves as an action. **Required**                                                                          |
+| `.pf-c-label__icon`          | `<span>`                    | Initiates a label icon.                                                                                                                                                                                                  |
+| `.pf-c-label__text`          | `<span>`                    | Initiates label text.                                                                                                                                                                                                    |
+| `.pf-c-label__editable-text` | `<button>`, `<input>`       | Initiates editable label text. See the [editable](#editable) example for details about handling behavior in Javascript.                                                                                                  |
+| `.pf-m-outline`              | `.pf-c-label`               | Modifies label for outline styles.                                                                                                                                                                                       |
+| `.pf-m-compact`              | `.pf-c-label`               | Modifies label for compact styles.                                                                                                                                                                                       |
+| `.pf-m-overflow`             | `.pf-c-label`               | Modifies label for overflow styles for use in a label group.                                                                                                                                                             |
+| `.pf-m-blue`                 | `.pf-c-label`               | Modifies the label to have blue colored styling.                                                                                                                                                                         |
+| `.pf-m-green`                | `.pf-c-label`               | Modifies the label to have green colored styling.                                                                                                                                                                        |
+| `.pf-m-orange`               | `.pf-c-label`               | Modifies the label to have orange colored styling.                                                                                                                                                                       |
+| `.pf-m-red`                  | `.pf-c-label`               | Modifies the label to have red colored styling.                                                                                                                                                                          |
+| `.pf-m-purple`               | `.pf-c-label`               | Modifies the label to have purple colored styling.                                                                                                                                                                       |
+| `.pf-m-cyan`                 | `.pf-c-label`               | Modifies the label to have cyan colored styling.                                                                                                                                                                         |
+| `.pf-m-editable`             | `.pf-c-label`               | Modifies label for editable styles.                                                                                                                                                                                      |
+| `.pf-m-editable-active`      | `.pf-c-label.pf-m-editable` | Modifies editable label for active styles.                                                                                                                                                                               |

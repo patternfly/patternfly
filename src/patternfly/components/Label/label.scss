@@ -294,6 +294,7 @@
     a,
     button {
       @at-root .pf-c-label.pf-m-overflow,
+      .pf-c-label.pf-m-add,
       &.pf-c-label__content {
         // stylelint-enable selector-no-qualifying-type
         &:hover {
@@ -362,7 +363,8 @@
     margin-left: var(--pf-c-label__c-button--MarginLeft);
   }
 
-  &.pf-m-overflow {
+  &.pf-m-overflow,
+  &.pf-m-add {
     --pf-c-label__content--Color: var(--pf-c-label--m-overflow__content--Color);
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-overflow__content--BackgroundColor);
     --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-overflow__content--before--BorderWidth);
