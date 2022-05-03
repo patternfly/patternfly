@@ -46,5 +46,15 @@ wrapperTag: div
 {{/inline}}
 ```
 
+### Drawer with jump links
+```hbs isFullscreen
+{{> drawer-jump-links drawer-jump-links--id="drawer-jump-links"}}
+```
+
+### Expanded drawer with jump links
+```hbs isFullscreen
+{{> drawer-jump-links drawer-jump-links--id="drawer-expanded-jump-links" drawer-panel--IsOpen="true"}}
+```
+
 ## Documentation
 This demo implements the drawer in context of the page component.
