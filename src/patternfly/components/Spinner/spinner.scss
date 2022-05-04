@@ -79,11 +79,11 @@ span.pf-c-spinner {
   }
 
   50% {
-    transform: rotate(-540deg);
+    transform: rotate(540deg);
   }
 
   100% {
-    transform: rotate(-1080deg);
+    transform: rotate(1080deg);
   }
 }
 
@@ -98,11 +98,11 @@ span.pf-c-spinner {
 
 @keyframes pf-animation-spinner__clipper {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
 
   100% {
-    transform: rotate(-270deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -121,11 +121,11 @@ span.pf-c-spinner {
 // The Clipper:after moves rotates 270deg in relation to its parent (so that it appears to grow and then shrink)
 @keyframes pf-animation-spinner__clipper-after {
   0% {
-    transform: rotate(90deg);
+    transform: rotate(-180deg);
   }
 
   100% {
-    transform: rotate(-180deg);
+    transform: rotate(90deg);
   }
 }
 
@@ -157,12 +157,12 @@ span.pf-c-spinner {
     transform: rotate(0deg);
   }
 
-  34% {
-    transform: rotate(-180deg);
+  33% {
+    transform: rotate(180deg);
   }
 
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -194,12 +194,12 @@ span.pf-c-spinner {
     transform: rotate(0deg);
   }
 
-  67.5% {
-    transform: rotate(-180deg);
+  66% {
+    transform: rotate(180deg);
   }
 
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
 
