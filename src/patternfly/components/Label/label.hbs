@@ -1,4 +1,5 @@
-<{{# if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else}}span{{/if}} class="pf-c-label{{#if label--IsOverflow}} pf-m-overflow{{/if}}{{#if label--modifier}} {{label--modifier}}{{/if}}{{#if label--IsEditable}} pf-m-editable{{/if}}{{#if label--IsEditableActive}} pf-m-editable-active{{/if}}"
+<{{# if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else if label--IsAdd}}button{{else}}span{{/if}} class="pf-c-label{{#if label--IsOverflow}} pf-m-overflow{{/if}}{{#if label--IsAdd}} pf-m-add{{/if}}{{#if label--modifier}} {{label--modifier}}{{/if}}{{#if label--IsEditable}} pf-m-editable{{/if}}{{#if label--IsEditableActive}} pf-m-editable-active{{/if}}"
+  {{#if label--IsOverflow}}type="button"{{else if label--IsAdd}}type="button"{{/if}}
   {{#if label--attribute}}
     {{{label--attribute}}}
   {{/if}}>
@@ -11,4 +12,4 @@
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/if}}
-</{{# if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else}}span{{/if}}>
+</{{# if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else if label--IsAdd}}button{{else}}span{{/if}}>

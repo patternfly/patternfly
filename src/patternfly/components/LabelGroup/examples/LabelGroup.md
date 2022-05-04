@@ -135,6 +135,45 @@ cssPrefix: pf-c-label-group
 {{/label-group}}
 ```
 
+### Add label
+```hbs
+{{#> label-group label-group--id="label-group-add"}}
+  {{#> label-group-main}}
+    {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+      {{#> label-group-list-item}}
+        {{#> label}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-blue"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-green"}}
+          {{#> label-icon}}
+            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+          {{/label-icon}}
+          Label 3
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--IsAdd="true"}}
+          Add Label
+        {{/label}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+```
+
 ### Category
 ```hbs
 {{#> label-group label-group--id="label-group-category" label-group--modifier="pf-m-category"}}
