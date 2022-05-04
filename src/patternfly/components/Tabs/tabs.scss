@@ -52,6 +52,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tabs__link--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-tabs__link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-tabs__link--disabled--Color: var(--pf-global--disabled-color--100);
   --pf-c-tabs__link--disabled--BackgroundColor: var(--pf-global--palette--black-150);
   --pf-c-tabs__item--m-current__link--Color: var(--pf-global--Color--100);
   --pf-c-tabs__item--m-current__link--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -636,6 +637,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   &:disabled,
   &.pf-m-disabled,
   &.pf-m-aria-disabled {
+    --pf-c-tabs__link--Color: var(--pf-c-tabs__link--disabled--Color);
     --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs__link--disabled--BackgroundColor);
     --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--disabled--before--BorderRightWidth);
     --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--disabled--before--BorderBottomWidth);
