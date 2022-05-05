@@ -38,6 +38,7 @@
 
     // globals
     --pf-chart-global--BorderColor: var(--pf-global--BorderColor--100);
+    --pf-chart-global--BorderColor--accent: var(--pf-global--BorderColor--400);
     --pf-chart-global--label--Fill: var(--pf-global--Color--100);
     --pf-chart-global--title--Fill: var(--pf-global--Color--100);
     --pf-chart-global--subtitle--Fill: var(--pf-global--Color--200);
@@ -67,7 +68,7 @@
     --pf-chart-bullet--qualitative-range--ColorScale--500: var(--pf-global--palette--black-200);
 
     // container
-    --pf-chart-container--cursor--line--Fill: var(--pf-global--palette--black-200);
+    --pf-chart-container--cursor--line--Fill: var(--pf-chart-global--BorderColor--accent);
 
     // donut
     --pf-chart-donut--label--title--Fill: var(--pf-chart-global--title--Fill);
