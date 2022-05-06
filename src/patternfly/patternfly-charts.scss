@@ -176,10 +176,22 @@
   --pf-chart-bullet--group-title--divider--stroke--Color: #{$pf-chart-bullet--group-title--divider--stroke--Color};
   --pf-chart-bullet--group-title--divider--stroke--Width: #{$pf-chart-bullet--group-title--divider--stroke--Width};
   --pf-chart-bullet--Height: #{$pf-chart-bullet--Height};
+  --pf-chart-bullet--label--title--Fill: #{$pf-chart-bullet--label--title--Fill};
+  --pf-chart-bullet--label--grouptitle--Fill: #{$pf-chart-bullet--label--grouptitle--Fill};
   --pf-chart-bullet--label--subtitle--Fill: #{$pf-chart-bullet--label--subtitle--Fill};
   --pf-chart-bullet--primary-measure--dot--size: #{$pf-chart-bullet--primary-measure--dot--size};
   --pf-chart-bullet--primary-measure--segmented--Width: #{$pf-chart-bullet--primary-measure--segmented--Width};
+  --pf-chart-bullet--negative-measure--ColorScale--100: #{$pf-chart-color-red-100};
+  --pf-chart-bullet--negative-measure--ColorScale--200: #{$pf-chart-color-red-200};
+  --pf-chart-bullet--negative-measure--ColorScale--300: #{$pf-chart-color-red-300};
+  --pf-chart-bullet--negative-measure--ColorScale--400: #{$pf-chart-color-red-400};
+  --pf-chart-bullet--negative-measure--ColorScale--500: #{$pf-chart-color-red-500};
   --pf-chart-bullet--qualitative-range--Width: #{$pf-chart-bullet--qualitative-range--Width};
+  --pf-chart-bullet--qualitative-range--ColorScale--100: #{$pf-chart-color-black-100};
+  --pf-chart-bullet--qualitative-range--ColorScale--200: #{$pf-chart-color-black-200};
+  --pf-chart-bullet--qualitative-range--ColorScale--300: #{$pf-chart-color-black-300};
+  --pf-chart-bullet--qualitative-range--ColorScale--400: #{$pf-chart-color-black-400};
+  --pf-chart-bullet--qualitative-range--ColorScale--500: #{$pf-chart-color-black-500};
 
   // Candlestick
   --pf-chart-candelstick--data--stroke--Width: #{$pf-chart-candelstick--data--stroke--Width};
@@ -187,7 +199,11 @@
   --pf-chart-candelstick--candle--positive--Color: #{$pf-chart-candelstick--candle--positive--Color};
   --pf-chart-candelstick--candle--negative--Color: #{$pf-chart-candelstick--candle--negative--Color};
 
+  // Container
+  --pf-chart-container--cursor--line--Fill: #{$pf-chart-container--cursor--line--Fill};
+
   // Simple Donut Chart
+  --pf-chart-donut--label--title--Fill: #{$pf-chart-donut--label--title--Fill};
   --pf-chart-donut--label--subtitle--Fill: #{$pf-chart-donut--label--subtitle--Fill};
   --pf-chart-donut--label--subtitle--position: #{$pf-chart-donut--label--subtitle--position};
   --pf-chart-donut--pie--Height: #{$pf-chart-donut--pie--Height};
@@ -287,4 +303,119 @@
   --pf-chart-voronoi--flyout--stroke--Color: #{$pf-chart-voronoi--flyout--stroke--Color};
   --pf-chart-voronoi--flyout--stroke--Fill: #{$pf-chart-voronoi--flyout--stroke--Fill};
   --pf-chart-voronoi--flyout--PointerEvents: #{$pf-chart-voronoi--flyout--PointerEvents};
+
+  // Theme color scales
+
+  // blue
+  --pf-chart-theme--blue--ColorScale--100: #{$pf-chart-theme--blue--ColorScale--100};
+  --pf-chart-theme--blue--ColorScale--200: #{$pf-chart-theme--blue--ColorScale--200};
+  --pf-chart-theme--blue--ColorScale--300: #{$pf-chart-theme--blue--ColorScale--300};
+  --pf-chart-theme--blue--ColorScale--400: #{$pf-chart-theme--blue--ColorScale--400};
+  --pf-chart-theme--blue--ColorScale--500: #{$pf-chart-theme--blue--ColorScale--500};
+
+  // cyan
+  --pf-chart-theme--cyan--ColorScale--100: #{$pf-chart-theme--cyan--ColorScale--100};
+  --pf-chart-theme--cyan--ColorScale--200: #{$pf-chart-theme--cyan--ColorScale--200};
+  --pf-chart-theme--cyan--ColorScale--300: #{$pf-chart-theme--cyan--ColorScale--300};
+  --pf-chart-theme--cyan--ColorScale--400: #{$pf-chart-theme--cyan--ColorScale--400};
+  --pf-chart-theme--cyan--ColorScale--500: #{$pf-chart-theme--cyan--ColorScale--500};
+
+  // gold
+  --pf-chart-theme--gold--ColorScale--100: #{$pf-chart-theme--gold--ColorScale--100};
+  --pf-chart-theme--gold--ColorScale--200: #{$pf-chart-theme--gold--ColorScale--200};
+  --pf-chart-theme--gold--ColorScale--300: #{$pf-chart-theme--gold--ColorScale--300};
+  --pf-chart-theme--gold--ColorScale--400: #{$pf-chart-theme--gold--ColorScale--400};
+  --pf-chart-theme--gold--ColorScale--500: #{$pf-chart-theme--gold--ColorScale--500};
+
+    // gray
+  --pf-chart-theme--gray--ColorScale--100: #{$pf-chart-theme--gray--ColorScale--100};
+  --pf-chart-theme--gray--ColorScale--200: #{$pf-chart-theme--gray--ColorScale--200};
+  --pf-chart-theme--gray--ColorScale--300: #{$pf-chart-theme--gray--ColorScale--300};
+  --pf-chart-theme--gray--ColorScale--400: #{$pf-chart-theme--gray--ColorScale--400};
+  --pf-chart-theme--gray--ColorScale--500: #{$pf-chart-theme--gray--ColorScale--500};
+
+  // green
+  --pf-chart-theme--green--ColorScale--100: #{$pf-chart-theme--green--ColorScale--100};
+  --pf-chart-theme--green--ColorScale--200: #{$pf-chart-theme--green--ColorScale--200};
+  --pf-chart-theme--green--ColorScale--300: #{$pf-chart-theme--green--ColorScale--300};
+  --pf-chart-theme--green--ColorScale--400: #{$pf-chart-theme--green--ColorScale--400};
+  --pf-chart-theme--green--ColorScale--500: #{$pf-chart-theme--green--ColorScale--500};
+
+  // multi ordered
+  --pf-chart-theme--multi-color-ordered--ColorScale--100: #{$pf-chart-theme--multi-color-ordered--ColorScale--100};
+  --pf-chart-theme--multi-color-ordered--ColorScale--200: #{$pf-chart-theme--multi-color-ordered--ColorScale--200};
+  --pf-chart-theme--multi-color-ordered--ColorScale--300: #{$pf-chart-theme--multi-color-ordered--ColorScale--300};
+  --pf-chart-theme--multi-color-ordered--ColorScale--400: #{$pf-chart-theme--multi-color-ordered--ColorScale--400};
+  --pf-chart-theme--multi-color-ordered--ColorScale--500: #{$pf-chart-theme--multi-color-ordered--ColorScale--500};
+  --pf-chart-theme--multi-color-ordered--ColorScale--600: #{$pf-chart-theme--multi-color-ordered--ColorScale--600};
+  --pf-chart-theme--multi-color-ordered--ColorScale--700: #{$pf-chart-theme--multi-color-ordered--ColorScale--700};
+  --pf-chart-theme--multi-color-ordered--ColorScale--800: #{$pf-chart-theme--multi-color-ordered--ColorScale--800};
+  --pf-chart-theme--multi-color-ordered--ColorScale--900: #{$pf-chart-theme--multi-color-ordered--ColorScale--900};
+  --pf-chart-theme--multi-color-ordered--ColorScale--1000: #{$pf-chart-theme--multi-color-ordered--ColorScale--1000};
+  --pf-chart-theme--multi-color-ordered--ColorScale--1100: #{$pf-chart-theme--multi-color-ordered--ColorScale--1100};
+  --pf-chart-theme--multi-color-ordered--ColorScale--1200: #{$pf-chart-theme--multi-color-ordered--ColorScale--1200};
+  --pf-chart-theme--multi-color-ordered--ColorScale--1300: #{$pf-chart-theme--multi-color-ordered--ColorScale--1300};
+  --pf-chart-theme--multi-color-ordered--ColorScale--1400: #{$pf-chart-theme--multi-color-ordered--ColorScale--1400};
+  --pf-chart-theme--multi-color-ordered--ColorScale--1500: #{$pf-chart-theme--multi-color-ordered--ColorScale--1500};
+  --pf-chart-theme--multi-color-ordered--ColorScale--1600: #{$pf-chart-theme--multi-color-ordered--ColorScale--1600};
+  --pf-chart-theme--multi-color-ordered--ColorScale--1700: #{$pf-chart-theme--multi-color-ordered--ColorScale--1700};
+  --pf-chart-theme--multi-color-ordered--ColorScale--1800: #{$pf-chart-theme--multi-color-ordered--ColorScale--1800};
+  --pf-chart-theme--multi-color-ordered--ColorScale--1900: #{$pf-chart-theme--multi-color-ordered--ColorScale--1900};
+  --pf-chart-theme--multi-color-ordered--ColorScale--2000: #{$pf-chart-theme--multi-color-ordered--ColorScale--2000};
+  --pf-chart-theme--multi-color-ordered--ColorScale--2100: #{$pf-chart-theme--multi-color-ordered--ColorScale--2100};
+  --pf-chart-theme--multi-color-ordered--ColorScale--2200: #{$pf-chart-theme--multi-color-ordered--ColorScale--2200};
+  --pf-chart-theme--multi-color-ordered--ColorScale--2300: #{$pf-chart-theme--multi-color-ordered--ColorScale--2300};
+  --pf-chart-theme--multi-color-ordered--ColorScale--2400: #{$pf-chart-theme--multi-color-ordered--ColorScale--2400};
+  --pf-chart-theme--multi-color-ordered--ColorScale--2500: #{$pf-chart-theme--multi-color-ordered--ColorScale--2500};
+
+  // multi unordered
+  --pf-chart-theme--multi-color-unordered--ColorScale--100: #{$pf-chart-theme--multi-color-unordered--ColorScale--100};
+  --pf-chart-theme--multi-color-unordered--ColorScale--200: #{$pf-chart-theme--multi-color-unordered--ColorScale--200};
+  --pf-chart-theme--multi-color-unordered--ColorScale--300: #{$pf-chart-theme--multi-color-unordered--ColorScale--300};
+  --pf-chart-theme--multi-color-unordered--ColorScale--400: #{$pf-chart-theme--multi-color-unordered--ColorScale--400};
+  --pf-chart-theme--multi-color-unordered--ColorScale--500: #{$pf-chart-theme--multi-color-unordered--ColorScale--500};
+  --pf-chart-theme--multi-color-unordered--ColorScale--600: #{$pf-chart-theme--multi-color-unordered--ColorScale--600};
+  --pf-chart-theme--multi-color-unordered--ColorScale--700: #{$pf-chart-theme--multi-color-unordered--ColorScale--700};
+  --pf-chart-theme--multi-color-unordered--ColorScale--800: #{$pf-chart-theme--multi-color-unordered--ColorScale--800};
+  --pf-chart-theme--multi-color-unordered--ColorScale--900: #{$pf-chart-theme--multi-color-unordered--ColorScale--900};
+  --pf-chart-theme--multi-color-unordered--ColorScale--1000: #{$pf-chart-theme--multi-color-unordered--ColorScale--1000};
+  --pf-chart-theme--multi-color-unordered--ColorScale--1100: #{$pf-chart-theme--multi-color-unordered--ColorScale--1100};
+  --pf-chart-theme--multi-color-unordered--ColorScale--1200: #{$pf-chart-theme--multi-color-unordered--ColorScale--1200};
+  --pf-chart-theme--multi-color-unordered--ColorScale--1300: #{$pf-chart-theme--multi-color-unordered--ColorScale--1300};
+  --pf-chart-theme--multi-color-unordered--ColorScale--1400: #{$pf-chart-theme--multi-color-unordered--ColorScale--1400};
+  --pf-chart-theme--multi-color-unordered--ColorScale--1500: #{$pf-chart-theme--multi-color-unordered--ColorScale--1500};
+  --pf-chart-theme--multi-color-unordered--ColorScale--1600: #{$pf-chart-theme--multi-color-unordered--ColorScale--1600};
+  --pf-chart-theme--multi-color-unordered--ColorScale--1700: #{$pf-chart-theme--multi-color-unordered--ColorScale--1700};
+  --pf-chart-theme--multi-color-unordered--ColorScale--1800: #{$pf-chart-theme--multi-color-unordered--ColorScale--1800};
+  --pf-chart-theme--multi-color-unordered--ColorScale--1900: #{$pf-chart-theme--multi-color-unordered--ColorScale--1900};
+  --pf-chart-theme--multi-color-unordered--ColorScale--2000: #{$pf-chart-theme--multi-color-unordered--ColorScale--2000};
+  --pf-chart-theme--multi-color-unordered--ColorScale--2100: #{$pf-chart-theme--multi-color-unordered--ColorScale--2100};
+  --pf-chart-theme--multi-color-unordered--ColorScale--2200: #{$pf-chart-theme--multi-color-unordered--ColorScale--2200};
+  --pf-chart-theme--multi-color-unordered--ColorScale--2300: #{$pf-chart-theme--multi-color-unordered--ColorScale--2300};
+  --pf-chart-theme--multi-color-unordered--ColorScale--2400: #{$pf-chart-theme--multi-color-unordered--ColorScale--2400};
+  --pf-chart-theme--multi-color-unordered--ColorScale--2500: #{$pf-chart-theme--multi-color-unordered--ColorScale--2500};
+  --pf-chart-theme--multi-color-unordered--ColorScale--2600: #{$pf-chart-theme--multi-color-unordered--ColorScale--2600};
+  --pf-chart-theme--multi-color-unordered--ColorScale--2700: #{$pf-chart-theme--multi-color-unordered--ColorScale--2700};
+  --pf-chart-theme--multi-color-unordered--ColorScale--2800: #{$pf-chart-theme--multi-color-unordered--ColorScale--2800};
+  --pf-chart-theme--multi-color-unordered--ColorScale--2900: #{$pf-chart-theme--multi-color-unordered--ColorScale--2900};
+  --pf-chart-theme--multi-color-unordered--ColorScale--3000: #{$pf-chart-theme--multi-color-unordered--ColorScale--3000};
+  --pf-chart-theme--multi-color-unordered--ColorScale--3100: #{$pf-chart-theme--multi-color-unordered--ColorScale--3100};
+  --pf-chart-theme--multi-color-unordered--ColorScale--3200: #{$pf-chart-theme--multi-color-unordered--ColorScale--3200};
+  --pf-chart-theme--multi-color-unordered--ColorScale--3300: #{$pf-chart-theme--multi-color-unordered--ColorScale--3300};
+  --pf-chart-theme--multi-color-unordered--ColorScale--3400: #{$pf-chart-theme--multi-color-unordered--ColorScale--3400};
+  --pf-chart-theme--multi-color-unordered--ColorScale--3500: #{$pf-chart-theme--multi-color-unordered--ColorScale--3500};
+
+  // orange
+  --pf-chart-theme--orange--ColorScale--100: #{$pf-chart-theme--orange--ColorScale--100};
+  --pf-chart-theme--orange--ColorScale--200: #{$pf-chart-theme--orange--ColorScale--200};
+  --pf-chart-theme--orange--ColorScale--300: #{$pf-chart-theme--orange--ColorScale--300};
+  --pf-chart-theme--orange--ColorScale--400: #{$pf-chart-theme--orange--ColorScale--400};
+  --pf-chart-theme--orange--ColorScale--500: #{$pf-chart-theme--orange--ColorScale--500};
+
+  // purple
+  --pf-chart-theme--purple--ColorScale--100: #{$pf-chart-theme--purple--ColorScale--100};
+  --pf-chart-theme--purple--ColorScale--200: #{$pf-chart-theme--purple--ColorScale--200};
+  --pf-chart-theme--purple--ColorScale--300: #{$pf-chart-theme--purple--ColorScale--300};
+  --pf-chart-theme--purple--ColorScale--400: #{$pf-chart-theme--purple--ColorScale--400};
+  --pf-chart-theme--purple--ColorScale--500: #{$pf-chart-theme--purple--ColorScale--500};
 }
