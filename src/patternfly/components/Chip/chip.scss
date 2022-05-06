@@ -43,6 +43,7 @@
   position: relative;
   display: inline-flex;
   align-items: center;
+  min-width: 0;
   padding: var(--pf-c-chip--PaddingTop) var(--pf-c-chip--PaddingRight) var(--pf-c-chip--PaddingBottom) var(--pf-c-chip--PaddingLeft);
   list-style: none;
   background-color: var(--pf-c-chip--BackgroundColor);
