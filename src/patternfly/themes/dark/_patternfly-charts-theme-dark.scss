@@ -89,10 +89,5 @@
     // border
     --pf-chart-voronoi--flyout--stroke--Color: var(--pf-chart-global--tooltip--bg--Fill);;
   }
-
-  // workspace - remove before commit
-  .ws-preview {
-    background: var(--pf-global--BackgroundColor--100);
-  }
   // stylelint-enable
 }
