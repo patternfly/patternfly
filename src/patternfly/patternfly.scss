@@ -1,13 +1,3 @@
 @import "patternfly-base";
 @import "components/all";
 @import "layouts/all";
-
-/* stylelint-disable */
-// remove before merge
-@import "patternfly-theme-dark";
-
-.ws-preview,
-.ws-example {
-  background: none;
-}
-/* stylelint-enable */
