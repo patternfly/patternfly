@@ -3,9 +3,9 @@
 }}
 
 {{#*inline "page-template-main-content"}}
-  {{#> drawer drawer--id=(concat page-template--id '-drawer')}}
+  {{#> drawer drawer--id=(concat page-template--id '-drawer') jump-links-template--id=(concat page-template--id '-jump-links')}}
     {{#> drawer-main}}
-      {{#> drawer-content }}
+      {{#> drawer-content drawer-content--attribute=(concat 'id="' drawer--id '-scrollable-container"')}}
         {{#> drawer-body drawer-body--modifier="pf-m-padding"}}
           {{#> sidebar}}
             {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
