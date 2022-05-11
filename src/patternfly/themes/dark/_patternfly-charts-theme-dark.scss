@@ -44,6 +44,8 @@
     --pf-chart-global--subtitle--Fill: var(--pf-global--Color--200);
     --pf-chart-global--tooltip--Fill: var(--pf-global--Color--100);
     --pf-chart-global--tooltip--bg--Fill: var(--pf-global--BackgroundColor--300);
+    --pf-chart-global--tooltip--BorderWidth: 1;
+    --pf-chart-global--tooltip--BorderColor: var(--pf-global--BorderColor--300);
 
     // axis
     --pf-chart-axis--axis--stroke--Color: var(--pf-chart-global--BorderColor);
@@ -87,7 +89,10 @@
     --pf-chart-tooltip--flyoutStyle--Fill: var(--pf-chart-global--tooltip--bg--Fill);
     --pf-chart-voronoi--flyout--stroke--Fill: var(--pf-chart-global--tooltip--bg--Fill);
     // border
-    --pf-chart-voronoi--flyout--stroke--Color: var(--pf-chart-global--tooltip--bg--Fill);;
+    --pf-chart-tooltip--flyoutStyle--stroke--Width: var(--pf-chart-global--tooltip--BorderWidth);
+    --pf-chart-tooltip--flyoutStyle--stroke--Color: var(--pf-chart-global--tooltip--BorderColor);
+    --pf-chart-voronoi--flyout--stroke--Width: var(--pf-chart-global--tooltip--BorderWidth);
+    --pf-chart-voronoi--flyout--stroke--Color: var(--pf-chart-global--tooltip--BorderColor);
   }
   // stylelint-enable
 }
