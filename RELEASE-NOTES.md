@@ -3,6 +3,31 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.06 release notes (2022-05-13)
+Packages released:
+- [@patternfly/patternfly@v4.194.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.194.4)
+
+### Components
+- **Chip group:** Fixed an overflow problem ([#4836](https://github.com/patternfly/patternfly/pull/4836))
+- **Description list:** Fixed text wrap ([#4809](https://github.com/patternfly/patternfly/pull/4809))
+- **Label:** Added button for adding new labels ([#4828](https://github.com/patternfly/patternfly/pull/4828))
+- **Menu:** Removed phantom scrollbar in drilldown menu ([#4807](https://github.com/patternfly/patternfly/pull/4807))
+- **Spinner:** Reversed the spin of legacy spinner ([#4830](https://github.com/patternfly/patternfly/pull/4830))
+- **Tabs:**
+  - Fixed demo typo ([#4808](https://github.com/patternfly/patternfly/pull/4808))
+  - Fixed add button focus outline ([#4820](https://github.com/patternfly/patternfly/pull/4820))
+  - Set disabled tab text color ([#4829](https://github.com/patternfly/patternfly/pull/4829))
+- **Tooltip:** Added dark theme border ([#4840](https://github.com/patternfly/patternfly/pull/4840))
+- **Tree view:** Added z-index to prevent guide from disappearing on focus ([#4813](https://github.com/patternfly/patternfly/pull/4813))
+
+### Other
+- **Charts:**
+  - Added dark theme support ([#4815](https://github.com/patternfly/patternfly/pull/4815))
+  - Removed workspace style ([#4834](https://github.com/patternfly/patternfly/pull/4834))
+  - Added dark theme tooltip border styles ([#4842](https://github.com/patternfly/patternfly/pull/4842))
+- **Deps:** Updated dependency theme-patternfly-org to v0.11.32 ([#4410](https://github.com/patternfly/patternfly/pull/4410))
+- **Primary detail:** Updated card view demo to use new selectable styles ([#4810](https://github.com/patternfly/patternfly/pull/4810))
+
 ## 2022.05 release notes (2022-04-20)
 Packages released:
 - [@patternfly/patternfly@v4.192.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.192.1)
