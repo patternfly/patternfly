@@ -654,12 +654,14 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
 ## Expandable
 
+Note: Table contents will respond automatically to toggling table content. To retain column width, [column header and/or data cell behavior must be managed](#expandable-with-set-width-columns-example).
+
 ### Expandable example
 ```hbs
 {{#> table table--id="table-expandable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
-      {{> table--toggle-all table-tr--expanded="true"}}
+      {{> table--toggle-all}}
       {{> table--check table--check--IsThead="true"}}
       {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-m-width-30" table-th--selected="true" table-th--asc="true"}}
         Repositories
@@ -785,6 +787,164 @@ When header cells are empty or they contain interactive elements, `<th>` should 
       {{#> table-td table-td--modifier="pf-m-no-padding" table-td--attribute=(concat 'colspan="7" id="' table--id '-content' table-tr--index '"')}}
         {{#> table-expandable-row-content}}
           Expandable row content has no padding.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
+### Expandable, with set width columns example
+```hbs
+{{#> table table--id="expandable-set-width-columns-example" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table, set column widths example"'}}
+  {{#> table-thead}}
+    {{#> table-tr table-tr--index="thead"}}
+      {{> table--toggle-all table-tr--expanded="true"}}
+      {{> table--check table--check--IsThead="true"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-30" table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-20" table-th--sortable="true"}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-20" table-th--sortable="true"}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-m-width-10"}}
+        Links
+      {{/table-th}}
+      {{> table-td table-td--IsEmpty="true"}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody table-tr--index="1" table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{> table--toggle}}
+      {{> table--check}}
+      {{> table--node}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 1</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{#> table-td table-td--attribute='colspan="4"'}}
+        {{#> table-expandable-row-content}}
+          <b>Span four</b>&nbsp;lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tr--index="2" table-tr--IsExpanded="true"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{> table--toggle}}
+      {{> table--check}}
+      {{> table--node}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 2</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{> table-td table-td--IsEmpty="true"}}
+      {{#> table-td table-td--attribute='colspan="2"'}}
+        {{#> table-expandable-row-content}}
+          Span three and four
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+      {{#> table-td table-td--attribute='colspan="2"'}}
+        {{#> table-expandable-row-content}}
+          Span five and six
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+      {{> table-td table-td--IsEmpty="true"}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tr--index="3" table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{> table--toggle}}
+      {{> table--check}}
+      {{> table--node}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 3</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute='colspan="7"'}}
+        {{#> table-expandable-row-content}}
+          <b>Span all</b>&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+
+  {{#> table-tbody table-tr--index="4" table-tbody--modifier="pf-m-expanded"}}
+    {{#> table-tr table-tr--expanded="true"}}
+      {{> table--toggle}}
+      {{> table--check}}
+      {{> table--node}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Action"}}
+        <a href="#">Link 4</a>
+      {{/table-td}}
+      {{#> table-td table-td--action="true"}}
+        {{> dropdown dropdown--id=(concat table--id '-dropdown-kebab-' table-tr--index) dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
+      {{#> table-td table-td--attribute='colspan="3"'}}
+        {{#> table-expandable-row-content}}
+          Span one, two, and three
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+      {{#> table-td table-td--attribute='colspan="2"'}}
+        {{#> table-expandable-row-content}}
+          Span four and five
+        {{/table-expandable-row-content}}
+      {{/table-td}}
+      {{#> table-td table-td--attribute='colspan="2"'}}
+        {{#> table-expandable-row-content}}
+          Span six and seven
         {{/table-expandable-row-content}}
       {{/table-td}}
     {{/table-tr}}
