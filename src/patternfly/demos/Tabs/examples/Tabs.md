@@ -281,6 +281,90 @@ section: components
 {{/inline}}
 ```
 
+### Vertical tabs
+
+```hbs isFullscreen
+{{> page-template page-template--id="vertical-tabs-example"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
+  {{#> page-main-section}}
+    {{#> card card--modifier="pf-m"}}
+      {{#> sidebar sidebar--id="vertical-tabs-example"}}
+        {{#> sidebar-panel}}
+          {{#> tabs tabs--id=(concat sidebar--id "-tabs") tabs--modifier="pf-m-vertical pf-m-box"}}
+            {{#> tabs-list}}
+              {{> __tabs-item
+                __tabs-item--current="true"
+                __tabs-item--id="pod-info"
+                __tabs-item--aria-label="Pod information"
+                __tabs-item--text="Pod information"
+                __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-pod-info-panel"')}}
+              {{> __tabs-item
+                __tabs-item--id="editable-aspects"
+                __tabs-item--aria-label="editable aspects"
+                __tabs-item--text="Editable Aspects"
+                __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-editable-aspects-panel"')}}
+            {{/tabs-list}}
+          {{/tabs}}
+        {{/sidebar-panel}}
+        {{#> sidebar-content tab-content--id=(concat sidebar--id "-tabs")}}
+          {{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-pod-info-link" id="' tab-content--id '-pod-info-panel"')}}
+            <p>Pod information content</p>
+          {{/tab-content}}
+          {{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-editable-aspects-link" id="' tab-content--id '-editable-aspects-panel"')}}
+            <p>Editable aspects content</p>
+          {{/tab-content}}
+        {{/sidebar-content}}
+      {{/sidebar}}
+    {{/card}}
+  {{/page-main-section}}
+{{/inline}}
+```
+
+### Vertical tabs, full height
+
+```hbs isFullscreen
+{{> page-template page-template--id="vertical-tabs-example-full-height"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
+  {{#> page-main-section}}
+    {{#> card card--modifier="pf-m-full-height"}}
+      {{#> sidebar sidebar--id="vertical-tabs-example-full-height" sidebar--modifier="pf-m-full-height"}}
+        {{#> sidebar-panel}}
+          {{#> tabs tabs--id=(concat sidebar--id "-tabs") tabs--modifier="pf-m-vertical pf-m-box"}}
+            {{#> tabs-list}}
+              {{> __tabs-item
+                __tabs-item--current="true"
+                __tabs-item--id="pod-info"
+                __tabs-item--aria-label="Pod information"
+                __tabs-item--text="Pod information"
+                __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-pod-info-panel"')}}
+              {{> __tabs-item
+                __tabs-item--id="editable-aspects"
+                __tabs-item--aria-label="editable aspects"
+                __tabs-item--text="Editable Aspects"
+                __tabs-link--attribute=(concat 'aria-controls="' tabs--id '-editable-aspects-panel"')}}
+            {{/tabs-list}}
+          {{/tabs}}
+        {{/sidebar-panel}}
+        {{#> sidebar-content tab-content--id=(concat sidebar--id "-tabs")}}
+          {{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-pod-info-link" id="' tab-content--id '-pod-info-panel"')}}
+            <p>Pod information content</p>
+          {{/tab-content}}
+          {{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-editable-aspects-link" id="' tab-content--id '-editable-aspects-panel"')}}
+            <p>Editable aspects content</p>
+          {{/tab-content}}
+        {{/sidebar-content}}
+      {{/sidebar}}
+    {{/card}}
+  {{/page-main-section}}
+{{/inline}}
+```
+
 ### Nested tabs
 ```hbs isFullscreen
 {{> page-template page-template--id="nested-tabs-example"}}

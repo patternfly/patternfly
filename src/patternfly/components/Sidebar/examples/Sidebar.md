@@ -161,6 +161,7 @@ import './Sidebar.css'
 | `.pf-c-sidebar__panel` | `<div>` | Initiates the sidebar panel element. **Required** |
 | `.pf-c-sidebar__content` | `<div>` | Initiates the sidebar content element. **Required** |
 | `.pf-m-gutter` | `.pf-c-sidebar` | Modifies the sidebar component to add a gutter between the panel and content. |
+| `.pf-m-full-height` | `.pf-c-sidebar` | Modifies the sidebar and its children to full height of their container. |
 | `.pf-m-stack` | `.pf-c-sidebar` | Modifies the sidebar to stack the panel on top of the content. |
 | `.pf-m-split` | `.pf-c-sidebar` | Modifies the sidebar to position the panel and content side by side. |
 | `.pf-m-panel-right` | `.pf-c-sidebar` | Modifies the sidebar to place the panel to the right of the content. |

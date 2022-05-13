@@ -315,152 +315,156 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 
   // Vertical
-  &.pf-m-vertical {
-    --pf-c-tabs--Width: var(--pf-c-tabs--m-vertical--Width);
-    --pf-c-tabs--inset: var(--pf-c-tabs--m-vertical--inset);
-    --pf-c-tabs--before--BorderBottomWidth: 0;
-    --pf-c-tabs__link--PaddingTop: var(--pf-c-tabs--m-vertical__link--PaddingTop);
-    --pf-c-tabs__link--PaddingBottom: var(--pf-c-tabs--m-vertical__link--PaddingBottom);
-    --pf-c-tabs__link--before--Left: 0;
-    --pf-c-tabs__link--disabled--before--BorderBottomWidth: 0;
-    --pf-c-tabs__link--disabled--before--BorderLeftWidth: var(--pf-c-tabs--before--border-width--base);
-    --pf-c-tabs__link--after--Top: 0;
-    --pf-c-tabs__link--after--Bottom: 0;
-    --pf-c-tabs__link--after--Right: auto;
-    --pf-c-tabs__list--ScrollSnapTypeAxis: var(--pf-c-tabs--m-vertical__list--ScrollSnapTypeAxis);
+  @media screen and (min-width: $pf-global--breakpoint--md) {
+    &.pf-m-vertical {
+      --pf-c-tabs--Width: var(--pf-c-tabs--m-vertical--Width);
+      --pf-c-tabs--inset: var(--pf-c-tabs--m-vertical--inset);
+      --pf-c-tabs--before--BorderBottomWidth: 0;
+      --pf-c-tabs__link--PaddingTop: var(--pf-c-tabs--m-vertical__link--PaddingTop);
+      --pf-c-tabs__link--PaddingBottom: var(--pf-c-tabs--m-vertical__link--PaddingBottom);
+      --pf-c-tabs__link--before--Left: 0;
+      --pf-c-tabs__link--disabled--before--BorderBottomWidth: 0;
+      --pf-c-tabs__link--disabled--before--BorderLeftWidth: var(--pf-c-tabs--before--border-width--base);
+      --pf-c-tabs__link--after--Top: 0;
+      --pf-c-tabs__link--after--Bottom: 0;
+      --pf-c-tabs__link--after--Right: auto;
+      --pf-c-tabs__list--ScrollSnapTypeAxis: var(--pf-c-tabs--m-vertical__list--ScrollSnapTypeAxis);
 
-    display: inline-flex;
-    flex-direction: column;
-    height: 100%; // If not a flex child, set height
-    padding: 0; // Because vertical variant has no scroll buttons, reset padding
-    overflow: visible; // remove in breaking change release
-
-    .pf-c-tabs__list {
-      position: relative;
+      display: inline-flex;
       flex-direction: column;
-      flex-grow: 1;
-      max-width: var(--pf-c-tabs--m-vertical--MaxWidth);
+      height: 100%; // If not a flex child, set height
+      padding: 0; // Because vertical variant has no scroll buttons, reset padding
+      overflow: visible; // remove in breaking change release
 
-      &::before {
-        position: absolute;
-        right: auto;
-        border: solid var(--pf-c-tabs--m-vertical__list--before--BorderColor);
-        border-width: var(--pf-c-tabs--m-vertical__list--before--BorderTopWidth) var(--pf-c-tabs--m-vertical__list--before--BorderRightWidth) var(--pf-c-tabs--m-vertical__list--before--BorderBottomWidth) var(--pf-c-tabs--m-vertical__list--before--BorderLeftWidth);
-      }
-    }
+      .pf-c-tabs__list {
+        position: relative;
+        flex-direction: column;
+        flex-grow: 1;
+        max-width: var(--pf-c-tabs--m-vertical--MaxWidth);
 
-    // Because vertical variant has no scroll buttons, move inset to first/last __item to prevent default scrolling behavior
-    .pf-c-tabs__item:first-child {
-      margin-top: var(--pf-c-tabs--inset);
-    }
-
-    .pf-c-tabs__item:last-child {
-      margin-bottom: var(--pf-c-tabs--inset);
-    }
-
-    // Set hover on left border
-    .pf-c-tabs__link {
-      --pf-c-tabs__link--after--BorderTopWidth: 0;
-      --pf-c-tabs__link--after--BorderLeftWidth: var(--pf-c-tabs__link--after--BorderWidth);
-
-      max-width: 100%;
-      text-align: left;
-    }
-
-    .pf-c-tabs__item-text {
-      max-width: 100%;
-      overflow-wrap: break-word;
-    }
-
-    @each $breakpoint, $breakpoint-value in $pf-c-tabs--breakpoint-map {
-      $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-      @include pf-apply-breakpoint($breakpoint) {
         // stylelint-disable max-nesting-depth
-        &.pf-m-expandable#{$breakpoint-name} {
-          --pf-c-tabs__list--Display: none;
-          --pf-c-tabs__list--Visibility: hidden;
-          --pf-c-tabs__toggle--Display: flex;
-          --pf-c-tabs__toggle--Visibility: visible;
-        }
-
-        &.pf-m-non-expandable#{$breakpoint-name} {
-          --pf-c-tabs__list--Display: flex;
-          --pf-c-tabs__list--Visibility: visible;
-          --pf-c-tabs__toggle--Display: none;
-          --pf-c-tabs__toggle--Visibility: hidden;
+        &::before {
+          position: absolute;
+          right: auto;
+          border: solid var(--pf-c-tabs--m-vertical__list--before--BorderColor);
+          border-width: var(--pf-c-tabs--m-vertical__list--before--BorderTopWidth) var(--pf-c-tabs--m-vertical__list--before--BorderRightWidth) var(--pf-c-tabs--m-vertical__list--before--BorderBottomWidth) var(--pf-c-tabs--m-vertical__list--before--BorderLeftWidth);
         }
         // stylelint-enable
       }
-    }
 
-    &.pf-m-expanded {
-      --pf-c-tabs__list--Display: flex;
-      --pf-c-tabs__list--Visibility: visible;
-      --pf-c-tabs__toggle--MarginBottom: var(--pf-c-tabs--m-expanded__toggle--MarginBottom);
-      --pf-c-tabs__toggle-icon--Color: var(--pf-c-tabs--m-expanded__toggle-icon--Color);
-      --pf-c-tabs__toggle-icon--Rotate: var(--pf-c-tabs--m-expanded__toggle-icon--Rotate);
-    }
-  }
+      // Because vertical variant has no scroll buttons, move inset to first/last __item to prevent default scrolling behavior
+      .pf-c-tabs__item:first-child {
+        margin-top: var(--pf-c-tabs--inset);
+      }
 
-  // Box, vertical
-  &.pf-m-box.pf-m-vertical {
-    --pf-c-tabs--inset: var(--pf-c-tabs--m-vertical--m-box--inset);
-    --pf-c-tabs--m-vertical__list--before--BorderLeftWidth: 0;
-    --pf-c-tabs--m-vertical__list--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
-    --pf-c-tabs__link--disabled--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
-    --pf-c-tabs__link--disabled--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
-    --pf-c-tabs__link--disabled--before--BorderLeftWidth: 0;
+      .pf-c-tabs__item:last-child {
+        margin-bottom: var(--pf-c-tabs--inset);
+      }
 
-    .pf-c-tabs__list::before {
-      right: 0;
-      left: auto;
-    }
+      // Set hover on left border
+      .pf-c-tabs__link {
+        --pf-c-tabs__link--after--BorderTopWidth: 0;
+        --pf-c-tabs__link--after--BorderLeftWidth: var(--pf-c-tabs__link--after--BorderWidth);
 
-    // stylelint-disable selector-max-class
-    // Remove border from last-child
-    .pf-c-tabs__item:last-child {
-      --pf-c-tabs__link--before--BorderBottomWidth: 0;
-      --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
-    }
+        max-width: 100%;
+        text-align: left;
+      }
 
-    // Add border right color and weight
-    .pf-c-tabs__item.pf-m-current {
-      --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs__item--m-current__link--BackgroundColor);
-      --pf-c-tabs__link--before--BorderBottomColor: var(--pf-c-tabs__link--before--border-color--base);
-      --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--before--border-width--base);
+      .pf-c-tabs__item-text {
+        max-width: 100%;
+        overflow-wrap: break-word;
+      }
 
-      &:first-child {
-        --pf-c-tabs__link--before--BorderTopWidth: var(--pf-c-tabs__link--before--border-width--base);
+      @each $breakpoint, $breakpoint-value in $pf-c-tabs--breakpoint-map {
+        $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+        // stylelint-disable max-nesting-depth
+        @include pf-apply-breakpoint($breakpoint) {
+          &.pf-m-expandable#{$breakpoint-name} {
+            --pf-c-tabs__list--Display: none;
+            --pf-c-tabs__list--Visibility: hidden;
+            --pf-c-tabs__toggle--Display: flex;
+            --pf-c-tabs__toggle--Visibility: visible;
+          }
+
+          &.pf-m-non-expandable#{$breakpoint-name} {
+            --pf-c-tabs__list--Display: flex;
+            --pf-c-tabs__list--Visibility: visible;
+            --pf-c-tabs__toggle--Display: none;
+            --pf-c-tabs__toggle--Visibility: hidden;
+          }
+        }
+        // stylelint-enable
+      }
+
+      &.pf-m-expanded {
+        --pf-c-tabs__list--Display: flex;
+        --pf-c-tabs__list--Visibility: visible;
+        --pf-c-tabs__toggle--MarginBottom: var(--pf-c-tabs--m-expanded__toggle--MarginBottom);
+        --pf-c-tabs__toggle-icon--Color: var(--pf-c-tabs--m-expanded__toggle-icon--Color);
+        --pf-c-tabs__toggle-icon--Rotate: var(--pf-c-tabs--m-expanded__toggle-icon--Rotate);
       }
     }
 
-    // Add border right color and weight
-    .pf-c-tabs__item:first-child.pf-m-current {
-      --pf-c-tabs__link--before--BorderTopWidth: var(--pf-c-tabs__link--before--border-width--base);
+    // Box, vertical
+    &.pf-m-box.pf-m-vertical {
+      --pf-c-tabs--inset: var(--pf-c-tabs--m-vertical--m-box--inset);
+      --pf-c-tabs--m-vertical__list--before--BorderLeftWidth: 0;
+      --pf-c-tabs--m-vertical__list--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
+      --pf-c-tabs__link--disabled--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
+      --pf-c-tabs__link--disabled--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
+      --pf-c-tabs__link--disabled--before--BorderLeftWidth: 0;
+
+      .pf-c-tabs__list::before {
+        right: 0;
+        left: auto;
+      }
+
+      // stylelint-disable selector-max-class, max-nesting-depth
+      // Remove border from last-child
+      .pf-c-tabs__item:last-child {
+        --pf-c-tabs__link--before--BorderBottomWidth: 0;
+        --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+      }
+
+      // Add border right color and weight
+      .pf-c-tabs__item.pf-m-current {
+        --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs__item--m-current__link--BackgroundColor);
+        --pf-c-tabs__link--before--BorderBottomColor: var(--pf-c-tabs__link--before--border-color--base);
+        --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--before--border-width--base);
+
+        &:first-child {
+          --pf-c-tabs__link--before--BorderTopWidth: var(--pf-c-tabs__link--before--border-width--base);
+        }
+      }
+
+      // Add border right color and weight
+      .pf-c-tabs__item:first-child.pf-m-current {
+        --pf-c-tabs__link--before--BorderTopWidth: var(--pf-c-tabs__link--before--border-width--base);
+      }
+
+      // Offset vertical border to overlap horizontal border
+      .pf-c-tabs__link::after {
+        top: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
+      }
+
+      // Undo offset to .pf-m-current adjacent item
+      .pf-c-tabs__item:first-child .pf-c-tabs__link::after,
+      .pf-c-tabs__item.pf-m-current + .pf-c-tabs__item .pf-c-tabs__link::after {
+        top: 0;
+      }
+      // stylelint-enable
     }
 
-    // Offset vertical border to overlap horizontal border
-    .pf-c-tabs__link::after {
-      top: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
+    &.pf-m-secondary {
+      --pf-c-tabs__link--FontSize: var(--pf-c-tabs--m-secondary__link--FontSize);
+      --pf-c-tabs__item-close--c-button--FontSize: var(--pf-c-tabs--m-secondary__item-close--c-button--FontSize);
+      --pf-c-tabs__add--c-button--FontSize: var(--pf-c-tabs--m-secondary__add--c-button--FontSize);
     }
 
-    // Undo offset to .pf-m-current adjacent item
-    .pf-c-tabs__item:first-child .pf-c-tabs__link::after,
-    .pf-c-tabs__item.pf-m-current + .pf-c-tabs__item .pf-c-tabs__link::after {
-      top: 0;
+    &.pf-m-page-insets {
+      --pf-c-tabs--inset: var(--pf-c-tabs--m-page-insets--inset);
     }
-    // stylelint-enable
-  }
-
-  &.pf-m-secondary {
-    --pf-c-tabs__link--FontSize: var(--pf-c-tabs--m-secondary__link--FontSize);
-    --pf-c-tabs__item-close--c-button--FontSize: var(--pf-c-tabs--m-secondary__item-close--c-button--FontSize);
-    --pf-c-tabs__add--c-button--FontSize: var(--pf-c-tabs--m-secondary__add--c-button--FontSize);
-  }
-
-  &.pf-m-page-insets {
-    --pf-c-tabs--inset: var(--pf-c-tabs--m-page-insets--inset);
   }
 
   &.pf-m-overflow {
