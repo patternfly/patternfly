@@ -3158,6 +3158,123 @@ Add a [width modifier](#width-modifiers) to `thead th` to limit string length or
 {{/table}}
 ```
 
+### Text and image control
+```hbs
+{{#> table table--id="text-and-image-control-example" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is an example of how to control images in table cells."'}}
+  {{#> table-thead}}
+    {{#> table-tr}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+        Repositories
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--IsColumnHelp="true"}}
+        Branches
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+        Pull requests
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Workspaces
+      {{/table-th}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--IsColumnHelp="true"}}
+        Last commit
+      {{/table-th}}
+    {{/table-tr}}
+  {{/table-thead}}
+
+  {{#> table-tbody}}
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        {{#> l-flex}}
+          {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
+            {{> table--icon-red-hat}}
+          {{/l-flex}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> title title--modifier="pf-m-xl"}}
+              Repository 1
+            {{/title}}
+            <span class="pf-u-font-size-sm">
+              2.6.6 provided by Red Hat Inc
+            </span>
+          {{/l-flex}}
+        {{/l-flex}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        {{#> l-flex}}
+          {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
+            {{> table--icon-github}}
+          {{/l-flex}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> title title--modifier="pf-m-xl"}}
+              Repository 2
+            {{/title}}
+            <span class="pf-u-font-size-sm">
+              2.6.6 provided by Github
+            </span>
+          {{/l-flex}}
+        {{/l-flex}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+
+    {{#> table-tr}}
+      {{#> table-td table-td--data-label="Repository name"}}
+        {{#> l-flex}}
+          {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
+            {{> table--icon-google}}
+          {{/l-flex}}
+          {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+            {{#> title title--modifier="pf-m-xl"}}
+              Repository 3
+            {{/title}}
+            <span class="pf-u-font-size-sm">
+              1.2.3 provided by Google
+            </span>
+          {{/l-flex}}
+        {{/l-flex}}
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Branches"}}
+        10
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Pull requests"}}
+        25
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Workspaces"}}
+        5
+      {{/table-td}}
+      {{#> table-td table-td--data-label="Last commit"}}
+        2 days ago
+      {{/table-td}}
+    {{/table-tr}}
+  {{/table-tbody}}
+{{/table}}
+```
+
 ### Text control modifiers usage
 
 | Class | Applied to | Outcome |
