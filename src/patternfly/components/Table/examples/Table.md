@@ -3473,67 +3473,79 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{/table-tr}}
     {{/table-thead}}
 
-    {{#> table-tbody table-tr--index="1"}}
-      {{#> table--tr table-tr--expanded="true"}}
-        {{#> table-td table-td--data-label="Source"}}
-          {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
-            {{#> l-flex-item}}
-              {{#> label label--modifier="pf-m-cyan"}}
-                P
-              {{/label}}
-            {{/l-flex-item}}
-            {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-              <span class="pf-c-table__text pf-m-truncate">
-                <a href="#">api-pod-source-name</a>
-              </span>
-            {{/l-flex-item}}
-          {{/l-flex}}
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Destination"}}
-          {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
-            {{#> l-flex-item}}
-              {{#> label label--modifier="pf-m-cyan"}}
-                P
-              {{/label}}
-            {{/l-flex-item}}
-            {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-              <span class="pf-c-table__text pf-m-truncate">
-                <a href="#">api-pod-destination-name</a>
-              </span>
-            {{/l-flex-item}}
-          {{/l-flex}}
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Date & time"}}
-          {{#> stack}}
-            <span>June 22, 2021</span>
-            <span class="pf-u-color-200">3:58:24 PM</span>
-          {{/stack}}
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Source"}}
-          {{#> stack}}
-            <span>443</span>
-            <span class="pf-u-color-200">(HTTPS)</span>
-          {{/stack}}
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Destination"}}
-          {{#> stack}}
-            <span>24</span>
-            <span class="pf-u-color-200">(smtp)</span>
-          {{/stack}}
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Protocol"}}
-          TCP
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Flow rate"}}
-          1.9 Kbps
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Traffic"}}
-          2.1 KB
-        {{/table-td}}
-        {{#> table-td table-td--data-label="Packets"}}
-          3
-        {{/table-td}}
-      {{/table--tr}}
+    {{#> table-tbody}}
+      {{> table-tr--nested-column-header table-tr--index="1"}}
+      {{> table-tr--nested-column-header table-tr--index="2"}}
+      {{> table-tr--nested-column-header table-tr--index="3"}}
+      {{> table-tr--nested-column-header table-tr--index="4"}}
+      {{> table-tr--nested-column-header table-tr--index="5"}}
+      {{> table-tr--nested-column-header table-tr--index="6"}}
+      {{> table-tr--nested-column-header table-tr--index="7"}}
+      {{> table-tr--nested-column-header table-tr--index="8"}}
+      {{> table-tr--nested-column-header table-tr--index="9"}}
+      {{> table-tr--nested-column-header table-tr--index="10"}}
+    {{/table-tbody}}
+  {{/table}}
+</div>
+```
+
+### Nested column headers, sticky header
+```hbs
+<div class="pf-c-scroll-inner-wrapper">
+  {{#> table table--id="table-nested-column-headers-sticky-header-example" table--modifier="pf-m-grid-md pf-m-sticky-header" table--grid="true" table--attribute='aria-label="This is a nested column header table example"'}}
+    {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
+      {{#> table-tr}}
+        {{#> table-th table-th--attribute='scope="col" colspan="3"' table-th--modifier="pf-m-border-right"}}
+          Pods
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" colspan="2"' table-th--modifier="pf-m-border-right"}}
+          Ports
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+          Protocol
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+          Flow rate
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-border-right pf-m-fit-content"}}
+          Traffic
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col" rowspan="2"' table-th--sortable="true" table-th--modifier="pf-m-fit-content"}}
+          Packets
+        {{/table-th}}
+      {{/table-tr}}
+
+      {{#> table-tr}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead"}}
+          Source
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead"}}
+          Destination
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+          Date & Time
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content"}}
+          Source
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+          Destination
+        {{/table-th}}
+      {{/table-tr}}
+      {{> table-tr table-tr--IsBorder="true"}}
+    {{/table-thead}}
+
+    {{#> table-tbody}}
+      {{> table-tr--nested-column-header table-tr--index="1"}}
+      {{> table-tr--nested-column-header table-tr--index="2"}}
+      {{> table-tr--nested-column-header table-tr--index="3"}}
+      {{> table-tr--nested-column-header table-tr--index="4"}}
+      {{> table-tr--nested-column-header table-tr--index="5"}}
+      {{> table-tr--nested-column-header table-tr--index="6"}}
+      {{> table-tr--nested-column-header table-tr--index="7"}}
+      {{> table-tr--nested-column-header table-tr--index="8"}}
+      {{> table-tr--nested-column-header table-tr--index="9"}}
+      {{> table-tr--nested-column-header table-tr--index="10"}}
     {{/table-tbody}}
   {{/table}}
 </div>
@@ -3544,6 +3556,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-nested-column-header` | `<thead>` | Modifies a table header to handle nested header cells. |
+| `.pf-m-border` | `.pf-m-sticky-header > .pf-m-nested-column-header > tr` | Modifies the last row in a sticky header with nested column headers to display as a border. |
 | `.pf-m-border-right` | `<th>`, `<td>` | Modifies a table cell to show a right border. |
 | `.pf-m-border-left` | `<th>`, `<td>` | Modifies a table cell to show a left border. |
 

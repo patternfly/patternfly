@@ -5,6 +5,7 @@
   {{~#if table-tr--details--IsExpanded}} pf-m-tree-view-details-expanded{{/if}}
   {{~#if table-tr--IsHoverable}} pf-m-hoverable{{/if}}
   {{~#if table-tr--IsSelected}} pf-m-selected{{/if}}
+  {{~#if table-tr--IsBorder}} pf-m-border{{/if}}
   {{~#if table-tr--modifier}} {{table-tr--modifier}}{{/if}}"
   {{#if table--IsTree-view}}
     aria-level="{{table--IsTree-view--level}}"
@@ -26,14 +27,20 @@
       hidden
     {{/if}}
   {{/if}}
-  {{#if table--grid}}
-    role="row"
-  {{/if}}
+  {{#unless table-tr--IsBorder}}
+    {{#if table--grid}}
+      role="row"
+    {{/if}}
+  {{/unless}}
   {{#if table-tr--IsHoverable}}
     tabindex="0"
   {{/if}}
   {{#if table-tr--attribute}}
     {{{table-tr--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if table-tr--IsBorder}}
+    {{> table-td table-td--IsEmpty="true" table-td--attribute='colspan="100%" aria-hidden="true" tabindex="-1"'}}
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
 </tr>
