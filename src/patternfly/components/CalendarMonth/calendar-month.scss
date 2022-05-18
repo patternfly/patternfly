@@ -80,6 +80,16 @@
 .pf-c-calendar-month__header-nav-control {
   margin-right: var(--pf-c-calendar-month__header-nav-control--MarginRight);
   margin-left: var(--pf-c-calendar-month__header-nav-control--MarginLeft);
+
+  &.pf-m-prev-month {
+    --pf-c-calendar-month__header-nav-control--MarginRight: var(--pf-c-calendar-month__header-nav-control--m-prev-month--MarginRight);
+    --pf-c-calendar-month__header-nav-control--MarginLeft: var(--pf-c-calendar-month__header-nav-control--m-prev-month--MarginLeft);
+  }
+
+  &.pf-m-next-month {
+    --pf-c-calendar-month__header-nav-control--MarginRight: var(--pf-c-calendar-month__header-nav-control--m-next-month--MarginRight);
+    --pf-c-calendar-month__header-nav-control--MarginLeft: var(--pf-c-calendar-month__header-nav-control--m-next-month--MarginLeft);
+  }
 }
 
 .pf-c-calendar-month__header-month {
