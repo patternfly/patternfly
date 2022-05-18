@@ -295,6 +295,49 @@ import './Label.css'
     Cyan label with icon that truncates
   {{/label-text}}
 {{/label}}
+
+<br><br>
+
+{{#> wrapper-label wrapper-label--code="gold" wrapper-label--title="Gold"}}
+  {{#> label label--id=(concat wrapper-label--code '-default') label--modifier=(concat 'pf-m-' wrapper-label--code)}}
+    {{wrapper-label--title}}
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-icon') label--modifier=(concat 'pf-m-' wrapper-label--code)}}
+    {{#> label-icon}}
+      <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+    {{/label-icon}}
+    {{wrapper-label--title}} icon
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-removable') label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code)}}
+      {{wrapper-label--title}} removable
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-icon-removable') label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code)}}
+    {{#> label-icon}}
+      <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+    {{/label-icon}}
+    {{wrapper-label--title}} icon removable
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-link') label-content--IsLink="true" label--modifier=(concat 'pf-m-' wrapper-label--code)}}
+    {{wrapper-label--title}} link
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-link-removable') label-content--IsLink="true" label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code)}}
+    {{wrapper-label--title}} link removable
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-truncate') label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code)}}
+    {{#> label-icon}}
+      <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+    {{/label-icon}}
+    {{#> label-text}}
+      {{wrapper-label--title}} label with icon that truncates
+    {{/label-text}}
+  {{/label}}
+{{/wrapper-label}}
 ```
 
 ### Outline
@@ -521,6 +564,40 @@ import './Label.css'
 {{#> label label--id="outline-cyan-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-cyan" label--isRemovable="true"}}
   Cyan link removable
 {{/label}}
+
+<br><br>
+
+{{#> wrapper-label wrapper-label--code="gold" wrapper-label--title="Gold" wrapper-label--modifier="pf-m-outline" wraper-label--id="outline"}}
+  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+    {{wrapper-label--title}}
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+    {{#> label-icon}}
+      <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+    {{/label-icon}}
+    {{wrapper-label--title}} icon
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+      {{wrapper-label--title}} removable
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+    {{#> label-icon}}
+      <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+    {{/label-icon}}
+    {{wrapper-label--title}} icon removable
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label-content--IsLink="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+    {{wrapper-label--title}} link
+  {{/label}}
+
+  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label-content--IsLink="true" label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+    {{wrapper-label--title}} link removable
+  {{/label}}
+{{/wrapper-label}}
 ```
 
 ### Compact
@@ -634,5 +711,6 @@ This style of label is used to add new labels to a label group.
 | `.pf-m-red` | `.pf-c-label` | Modifies the label to have red colored styling. |
 | `.pf-m-purple` | `.pf-c-label` | Modifies the label to have purple colored styling. |
 | `.pf-m-cyan` | `.pf-c-label` | Modifies the label to have cyan colored styling. |
+| `.pf-m-gold` | `.pf-c-label` | Modifies the label to have gold colored styling. |
 | `.pf-m-editable` | `.pf-c-label` | Modifies label for editable styles. |
 | `.pf-m-editable-active` | `.pf-c-label.pf-m-editable` | Modifies editable label for active styles. |
