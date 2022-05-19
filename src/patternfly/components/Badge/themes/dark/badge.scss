@@ -1,3 +1,5 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
 @mixin badge() {
   .pf-c-badge {
     --pf-c-badge--m-read--BackgroundColor: var(--pf-global--palette--black-500);

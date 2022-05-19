@@ -1,3 +1,5 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
 @mixin data-list() {
   .pf-c-data-list {
     --pf-c-data-list--BorderTopColor: var(--pf-global--BorderColor--100);

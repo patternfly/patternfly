@@ -307,3 +307,10 @@
   --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--redhatVF--heading--sans-serif);
   --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--redhatVF--monospace);
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "./themes/dark/variables";
+
+@include pf-theme-dark($pf-theme-dark-prefix: ":root") {
+  @include _variables;
+}

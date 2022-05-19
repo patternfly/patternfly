@@ -1,3 +1,5 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
 @mixin context-selector() {
   .pf-c-context-selector {
     --pf-c-context-selector__menu--Top: 100%;

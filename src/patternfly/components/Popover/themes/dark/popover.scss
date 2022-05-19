@@ -1,3 +1,5 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
 @mixin popover() {
   .pf-c-popover {
     --pf-c-popover--BoxShadow: none;

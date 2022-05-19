@@ -1,3 +1,5 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
 @mixin hint() {
   .pf-c-hint {
     --pf-c-hint--BackgroundColor: var(--pf-global--BackgroundColor--400);

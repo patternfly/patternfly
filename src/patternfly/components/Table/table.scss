@@ -1366,3 +1366,10 @@
   --pf-c-table--cell--Width: 100%;
 }
 // stylelint-enable
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/table";
+
+@include pf-theme-dark {
+  @include table;
+}

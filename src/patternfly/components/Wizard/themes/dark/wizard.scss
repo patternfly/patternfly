@@ -1,3 +1,5 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
 @mixin wizard() {
   .pf-c-wizard {
     --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--disabled-color--300);
@@ -7,6 +9,6 @@
   }
 
   .pf-c-wizard__header {
-    @include pf-t-dark;
+    @include pf-theme-dark--t-dark;
   }
 }

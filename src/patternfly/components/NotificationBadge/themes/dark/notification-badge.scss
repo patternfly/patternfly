@@ -1,3 +1,5 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
 @mixin notification-badge() {
   .pf-c-notification-badge {
     --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--primary-color--300);

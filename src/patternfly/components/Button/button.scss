@@ -626,3 +626,10 @@
     --pf-c-button--FontWeight: var(--pf-global--FontWeight--semi-bold);
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/button";
+
+@include pf-theme-dark {
+  @include button;
+}

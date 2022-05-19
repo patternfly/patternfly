@@ -1,3 +1,5 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
 @mixin simple-list() {
   .pf-c-simple-list {
     --pf-c-simple-list__item-link--m-current--Color: var(--pf-global--active-color--100);

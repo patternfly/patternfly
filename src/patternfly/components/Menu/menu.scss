@@ -742,3 +742,10 @@
     border-bottom: var(--pf-c-menu__footer--after--BorderBottomWidth) solid var(--pf-c-menu__footer--after--BorderBottomColor);
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/menu";
+
+@include pf-theme-dark {
+  @include menu;
+}

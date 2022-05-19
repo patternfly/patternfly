@@ -1,3 +1,5 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
 @mixin banner() {
   .pf-c-banner {
     &.pf-m-info,
@@ -7,6 +9,6 @@
       color: var(--pf-global--palette--black-900);
     }
 
-    @include pf-t-dark;
+    @include pf-theme-dark--t-dark;
   }
 }

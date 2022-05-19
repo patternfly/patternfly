@@ -1,7 +1,0 @@
-@mixin globals($pf-theme-dark-class) {
-  @at-root :root#{&} {
-    // stylelint-disable property-no-unknown
-    color-scheme: dark;
-    // stylelint-enable
-  }
-}

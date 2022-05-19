@@ -697,3 +697,10 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
     flex: 1 0 auto;
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/page";
+
+@include pf-theme-dark {
+  @include page;
+}

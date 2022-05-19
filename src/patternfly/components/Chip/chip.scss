@@ -112,3 +112,10 @@
 .pf-c-chip__text + .pf-c-chip__icon {
   margin-left: var(--pf-c-chip__icon--MarginLeft);
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/chip";
+
+@include pf-theme-dark {
+  @include chip;
+}

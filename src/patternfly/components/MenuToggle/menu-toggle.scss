@@ -531,3 +531,10 @@
   margin-right: var(--pf-c-menu-toggle__toggle-icon--MarginRight);
   color: var(--pf-c-menu-toggle__toggle-icon--Color, inherit);
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/menu-toggle";
+
+@include pf-theme-dark {
+  @include menu-toggle;
+}

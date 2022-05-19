@@ -1,3 +1,5 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
 @mixin alert() {
   .pf-c-alert {
     --pf-c-alert--BackgroundColor: var(--pf-global--palette--black-600);
