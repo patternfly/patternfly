@@ -7,6 +7,29 @@ import './Text.css'
 
 ## Examples
 
+### Font family
+
+```hbs
+{{#> text text--modifier="pf-u-font-family-sans-serif"}}
+  Sans serif
+{{/text}}
+{{#> text text--modifier="pf-u-font-family-heading-sans-serif"}}
+  Heading sans serif
+{{/text}}
+{{#> text text--modifier="pf-u-font-family-monospace"}}
+  Monospace
+{{/text}}
+{{#> text text--modifier="pf-u-font-family-redhatVF-sans-serif"}}
+  Red Hat variable font sans serif
+{{/text}}
+{{#> text text--modifier="pf-u-font-family-redhatVF-heading-sans-serif"}}
+  Red Hat variable font heading sans serif
+{{/text}}
+{{#> text text--modifier="pf-u-font-family-redhatVF-monospace"}}
+  Red Hat variable font monospace
+{{/text}}
+
+```
 ### Font size
 
 ```hbs
@@ -215,6 +238,7 @@ Care should be taken especially when applying text colors, as this can have a ne
 | Class                                                                  | Applied to | Outcome                                             |
 | ---------------------------------------------------------------------- | ---------- | --------------------------------------------------- |
 | `.pf-u-font-size-{xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}`| `*`        | Sets font-size to xs, sm, md, lg, xl, 2xl, 3xl, or 4xl |
+| `.pf-u-font-family-{sans-serif, heading-sans-serif, monospace, redhatVF-sans-serif, redhatVF-heading-sans-serif, redhatVF-monospace}`            | `*`        | Sets font-family to sans-serif, heading-sans-serif, or monospace; or Red Hat virtual font sans-serif, heading sans-serif, or monospace            |
 | `.pf-u-font-weight-{light, normal, bold}{-on-[breakpoint]}`            | `*`        | Sets font-size to light, normal, or bold            |
 | `.pf-u-color-{100, 200, 300, 400}{-on-[breakpoint]}`                   | `*`        | Sets font-color to color 100, 200, 300, or 400      |
 | `.pf-u-active-color-{100, 400}{-on-[breakpoint]}`                      | `*`        | Sets font-color to active color 100 or 400          |
