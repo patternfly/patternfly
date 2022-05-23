@@ -1,0 +1,29 @@
+{{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
+  {{#> label-group-list-item}}
+    {{#> label}}
+      {{#> label-icon}}
+        <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+      {{/label-icon}}
+      Label
+    {{/label}}
+  {{/label-group-list-item}}
+  {{#> label-group-list-item}}
+    {{#> label label--modifier="pf-m-blue"}}
+      {{#> label-icon}}
+        <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+      {{/label-icon}}
+      Label 2
+    {{/label}}
+  {{/label-group-list-item}}
+  {{#> label-group-list-item}}
+    {{#> label label--modifier="pf-m-green"}}
+      {{#> label-icon}}
+        <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+      {{/label-icon}}
+      Label 3
+    {{/label}}
+  {{/label-group-list-item}}
+{{/label-group-list}}
+{{#if __label-group-list--HasAddLabel}}
+  {{> label-group-add}}
+{{/if}}
