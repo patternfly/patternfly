@@ -9,7 +9,7 @@ import './FormControl.css'
 ## Examples
 ### Input
 
-**Note:** In webkit browsers, inputs with status icons that are autocompleted will have their icons removed by the user agent stylesheet. To ensure that status will still be shown if the input is filled via autocomplete, turn off autocomplete with `autocomplete="off"` or use [dynamic helper text](/components/helper-text/html-demos) instead.
+**Note:** In webkit browsers, inputs with status icons that are autocompleted will have their icons removed by the user agent stylesheet. If the field does not need to use autocomplete, turn it off with `autocomplete="off"` to avoid the problem. Otherwise, use [helper text](/components/helper-text/html-demos)  instead to ensure that the status will remain visible if the field is autocompleted.
 
 ```hbs
 {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
