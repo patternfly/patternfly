@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin app-launcher() {
+@mixin pf-theme-dark-app-launcher() {
   .pf-c-app-launcher {
     --pf-c-app-launcher__menu--BackgroundColor: var(--pf-global--BackgroundColor--300);
     --pf-c-app-launcher__menu--Top: 100%;

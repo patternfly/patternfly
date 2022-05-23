@@ -221,5 +221,5 @@
 @import "themes/dark/modal-box";
 
 @include pf-theme-dark {
-  @include modal-box;
+  @include pf-theme-dark-modal-box;
 }

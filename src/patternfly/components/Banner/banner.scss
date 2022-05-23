@@ -113,5 +113,5 @@
 @import "themes/dark/banner";
 
 @include pf-theme-dark {
-  @include banner;
+  @include pf-theme-dark-banner;
 }

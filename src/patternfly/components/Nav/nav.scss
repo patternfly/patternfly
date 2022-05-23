@@ -1155,5 +1155,5 @@
 @import "themes/dark/nav";
 
 @include pf-theme-dark {
-  @include nav;
+  @include pf-theme-dark-nav;
 }

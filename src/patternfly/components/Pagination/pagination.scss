@@ -300,5 +300,5 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
 @import "themes/dark/pagination";
 
 @include pf-theme-dark {
-  @include pagination;
+  @include pf-theme-dark-pagination;
 }

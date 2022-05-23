@@ -177,5 +177,5 @@
 @import "themes/dark/tile";
 
 @include pf-theme-dark {
-  @include tile;
+  @include pf-theme-dark-tile;
 }

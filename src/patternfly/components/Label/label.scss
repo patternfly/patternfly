@@ -470,5 +470,5 @@
 @import "themes/dark/label";
 
 @include pf-theme-dark {
-  @include label;
+  @include pf-theme-dark-label;
 }

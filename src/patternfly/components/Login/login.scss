@@ -299,5 +299,5 @@
 @import "themes/dark/login";
 
 @include pf-theme-dark {
-  @include login;
+  @include pf-theme-dark-login;
 }

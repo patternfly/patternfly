@@ -211,5 +211,5 @@
 @import "themes/dark/search-input";
 
 @include pf-theme-dark {
-  @include search-input;
+  @include pf-theme-dark-search-input;
 }

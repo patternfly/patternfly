@@ -308,5 +308,5 @@
 @import "themes/dark/notification-drawer";
 
 @include pf-theme-dark {
-  @include notification-drawer;
+  @include pf-theme-dark-notification-drawer;
 }

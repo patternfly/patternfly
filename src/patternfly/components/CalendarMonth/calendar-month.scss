@@ -225,5 +225,5 @@
 @import "themes/dark/calendar-month";
 
 @include pf-theme-dark {
-  @include calendar-month;
+  @include pf-theme-dark-calendar-month;
 }

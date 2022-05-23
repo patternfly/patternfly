@@ -86,5 +86,5 @@
 @import "themes/dark/helper-text";
 
 @include pf-theme-dark {
-  @include helper-text;
+  @include pf-theme-dark-helper-text;
 }

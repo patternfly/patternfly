@@ -117,5 +117,5 @@
 @import "themes/dark/chip";
 
 @include pf-theme-dark {
-  @include chip;
+  @include pf-theme-dark-chip;
 }

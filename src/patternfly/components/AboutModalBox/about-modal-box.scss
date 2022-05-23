@@ -259,5 +259,5 @@
 @import "themes/dark/about-modal-box";
 
 @include pf-theme-dark {
-  @include about-modal-box;
+  @include pf-theme-dark-about-modal-box;
 }

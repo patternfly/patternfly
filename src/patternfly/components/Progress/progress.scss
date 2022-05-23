@@ -205,5 +205,5 @@
 @import "themes/dark/progress";
 
 @include pf-theme-dark {
-  @include progress;
+  @include pf-theme-dark-progress;
 }

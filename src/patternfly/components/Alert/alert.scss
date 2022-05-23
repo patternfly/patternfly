@@ -251,5 +251,5 @@
 @import "themes/dark/alert";
 
 @include pf-theme-dark {
-  @include alert;
+  @include pf-theme-dark-alert;
 }

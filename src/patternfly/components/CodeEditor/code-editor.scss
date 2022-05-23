@@ -168,5 +168,5 @@
 @import "themes/dark/code-editor";
 
 @include pf-theme-dark {
-  @include code-editor;
+  @include pf-theme-dark-code-editor;
 }

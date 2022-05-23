@@ -40,5 +40,5 @@
 @import "themes/dark/badge";
 
 @include pf-theme-dark {
-  @include badge;
+  @include pf-theme-dark-badge;
 }

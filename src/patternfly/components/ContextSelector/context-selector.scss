@@ -347,5 +347,5 @@
 @import "themes/dark/context-selector";
 
 @include pf-theme-dark {
-  @include context-selector;
+  @include pf-theme-dark-context-selector;
 }

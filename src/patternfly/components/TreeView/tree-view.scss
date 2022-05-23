@@ -491,5 +491,5 @@ $pf-c-tree-view--MaxNesting: 10;
 @import "themes/dark/tree-view";
 
 @include pf-theme-dark {
-  @include tree-view;
+  @include pf-theme-dark-tree-view;
 }

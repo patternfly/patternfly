@@ -562,5 +562,5 @@
 @import "themes/dark/wizard";
 
 @include pf-theme-dark {
-  @include wizard;
+  @include pf-theme-dark-wizard;
 }

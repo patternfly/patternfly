@@ -111,5 +111,5 @@
 @import "themes/dark/clipboard-copy";
 
 @include pf-theme-dark {
-  @include clipboard-copy;
+  @include pf-theme-dark-clipboard-copy;
 }

@@ -211,5 +211,5 @@
 @import "themes/dark/skeleton";
 
 @include pf-theme-dark {
-  @include skeleton;
+  @include pf-theme-dark-skeleton;
 }

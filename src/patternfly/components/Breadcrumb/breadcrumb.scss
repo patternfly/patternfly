@@ -130,5 +130,5 @@
 @import "themes/dark/breadcrumb";
 
 @include pf-theme-dark {
-  @include breadcrumb;
+  @include pf-theme-dark-breadcrumb;
 }

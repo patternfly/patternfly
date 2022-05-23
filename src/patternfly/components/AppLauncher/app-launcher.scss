@@ -279,5 +279,5 @@
 @import "themes/dark/app-launcher";
 
 @include pf-theme-dark {
-  @include app-launcher;
+  @include pf-theme-dark-app-launcher;
 }

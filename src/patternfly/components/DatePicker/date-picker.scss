@@ -62,5 +62,5 @@
 @import "themes/dark/date-picker";
 
 @include pf-theme-dark {
-  @include date-picker;
+  @include pf-theme-dark-date-picker;
 }

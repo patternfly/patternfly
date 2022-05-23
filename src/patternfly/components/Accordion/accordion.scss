@@ -261,5 +261,5 @@
 @import "themes/dark/accordion";
 
 @include pf-theme-dark {
-  @include accordion;
+  @include pf-theme-dark-accordion;
 }

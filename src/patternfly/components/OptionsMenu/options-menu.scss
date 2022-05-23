@@ -304,5 +304,5 @@
 @import "themes/dark/options-menu";
 
 @include pf-theme-dark {
-  @include options-menu;
+  @include pf-theme-dark-options-menu;
 }

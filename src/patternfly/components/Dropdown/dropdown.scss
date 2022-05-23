@@ -692,5 +692,5 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 @import "themes/dark/dropdown";
 
 @include pf-theme-dark {
-  @include dropdown;
+  @include pf-theme-dark-dropdown;
 }

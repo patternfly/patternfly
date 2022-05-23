@@ -121,5 +121,5 @@
 @import "themes/dark/notification-badge";
 
 @include pf-theme-dark {
-  @include notification-badge;
+  @include pf-theme-dark-notification-badge;
 }

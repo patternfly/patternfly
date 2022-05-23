@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin code-editor() {
+@mixin pf-theme-dark-code-editor() {
   .pf-c-code-editor__controls {
     > * + * {
       border-left: 1px solid var(--pf-global--palette--black-700);

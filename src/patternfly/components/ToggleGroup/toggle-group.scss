@@ -139,5 +139,5 @@
 @import "themes/dark/toggle-group";
 
 @include pf-theme-dark {
-  @include toggle-group;
+  @include pf-theme-dark-toggle-group;
 }

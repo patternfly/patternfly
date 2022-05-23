@@ -760,5 +760,5 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 @import "themes/dark/tabs";
 
 @include pf-theme-dark {
-  @include tabs;
+  @include pf-theme-dark-tabs;
 }

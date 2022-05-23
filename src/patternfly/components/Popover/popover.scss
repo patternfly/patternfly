@@ -249,5 +249,5 @@
 @import "themes/dark/popover";
 
 @include pf-theme-dark {
-  @include popover;
+  @include pf-theme-dark-popover;
 }

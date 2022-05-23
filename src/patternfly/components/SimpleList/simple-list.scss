@@ -85,5 +85,5 @@
 @import "themes/dark/simple-list";
 
 @include pf-theme-dark {
-  @include simple-list;
+  @include pf-theme-dark-simple-list;
 }

@@ -1371,5 +1371,5 @@
 @import "themes/dark/table";
 
 @include pf-theme-dark {
-  @include table;
+  @include pf-theme-dark-table;
 }

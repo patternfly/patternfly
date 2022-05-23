@@ -360,5 +360,5 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 @import "themes/dark/masthead";
 
 @include pf-theme-dark {
-  @include masthead;
+  @include pf-theme-dark-masthead;
 }

@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin calendar-month() {
+@mixin pf-theme-dark-calendar-month() {
   .pf-c-calendar-month {
     --pf-c-calendar-month__dates-cell--m-current__date--BackgroundColor: var(--pf-global--palette--black-500);
     --pf-c-calendar-month__dates-cell--m-selected__date--BackgroundColor: var(--pf-global--primary-color--300);

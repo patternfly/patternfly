@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin about-modal-box() {
+@mixin pf-theme-dark-about-modal-box() {
   .pf-c-about-modal-box {
     @include pf-theme-dark--t-dark;
   }

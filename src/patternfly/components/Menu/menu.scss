@@ -747,5 +747,5 @@
 @import "themes/dark/menu";
 
 @include pf-theme-dark {
-  @include menu;
+  @include pf-theme-dark-menu;
 }

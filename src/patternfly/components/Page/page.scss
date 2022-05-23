@@ -702,5 +702,5 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 @import "themes/dark/page";
 
 @include pf-theme-dark {
-  @include page;
+  @include pf-theme-dark-page;
 }

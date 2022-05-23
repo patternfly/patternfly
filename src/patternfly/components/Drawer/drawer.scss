@@ -713,5 +713,5 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 @import "themes/dark/drawer";
 
 @include pf-theme-dark {
-  @include drawer;
+  @include pf-theme-dark-drawer;
 }

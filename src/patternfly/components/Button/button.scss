@@ -631,5 +631,5 @@
 @import "themes/dark/button";
 
 @include pf-theme-dark {
-  @include button;
+  @include pf-theme-dark-button;
 }

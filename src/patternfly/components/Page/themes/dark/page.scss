@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin page() {
+@mixin pf-theme-dark-page() {
   .pf-c-page {
     --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--200);
     --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--300);

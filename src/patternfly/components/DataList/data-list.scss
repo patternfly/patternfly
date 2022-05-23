@@ -477,5 +477,5 @@
 @import "themes/dark/data-list";
 
 @include pf-theme-dark {
-  @include data-list;
+  @include pf-theme-dark-data-list;
 }

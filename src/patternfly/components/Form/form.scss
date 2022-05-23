@@ -522,5 +522,5 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
 @import "themes/dark/form";
 
 @include pf-theme-dark {
-  @include form;
+  @include pf-theme-dark-form;
 }

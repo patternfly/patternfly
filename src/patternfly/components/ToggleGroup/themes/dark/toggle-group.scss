@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin toggle-group() {
+@mixin pf-theme-dark-toggle-group() {
   .pf-c-toggle-group {
     --pf-c-toggle-group__button--hover--BackgroundColor: var(--pf-global--palette--black-700);
     --pf-c-toggle-group__button--focus--BackgroundColor: var(--pf-global--palette--black-700);

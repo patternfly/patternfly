@@ -699,5 +699,5 @@
 @import "themes/dark/select";
 
 @include pf-theme-dark {
-  @include select;
+  @include pf-theme-dark-select;
 }

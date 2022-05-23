@@ -129,5 +129,5 @@
 @import "themes/dark/tooltip";
 
 @include pf-theme-dark {
-  @include tooltip;
+  @include pf-theme-dark-tooltip;
 }

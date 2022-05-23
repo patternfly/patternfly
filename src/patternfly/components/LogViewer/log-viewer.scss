@@ -216,5 +216,5 @@
 @import "themes/dark/log-viewer";
 
 @include pf-theme-dark {
-  @include log-viewer;
+  @include pf-theme-dark-log-viewer;
 }

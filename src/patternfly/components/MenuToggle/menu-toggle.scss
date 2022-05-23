@@ -536,5 +536,5 @@
 @import "themes/dark/menu-toggle";
 
 @include pf-theme-dark {
-  @include menu-toggle;
+  @include pf-theme-dark-menu-toggle;
 }

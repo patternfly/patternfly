@@ -84,5 +84,5 @@
 @import "themes/dark/input-group";
 
 @include pf-theme-dark {
-  @include input-group;
+  @include pf-theme-dark-input-group;
 }
