@@ -1,5 +1,29 @@
 // stylelint-disable
 
+// Font family options
+$pf-u-font-family-options: (
+  font-family-sans-serif: (
+    font-family var(--pf-global--FontFamily--sans-serif)
+  ),
+  font-family-heading-sans-serif: (
+    font-family var(--pf-global--FontFamily--sans-serif)
+  ),
+  font-family-monospace: (
+    font-family var(--pf-global--FontFamily--monospace)
+  ),
+  font-family-redhatVF-sans-serif: (
+    font-family var(--pf-global--FontFamily--redhatVF--sans-serif)
+  ),
+  font-family-redhatVF-heading-sans-serif: (
+    font-family var(--pf-global--FontFamily--redhatVF--heading--sans-serif)
+  ),
+  font-family-redhatVF-monospace: (
+    font-family var(--pf-global--FontFamily--redhatVF--monospace)
+  )
+);
+
+@include pf-utility-builder($pf-u-font-family-options);
+
 // Font size options
 $pf-u-font-size-options: (
   font-size-xs: (

@@ -7,6 +7,29 @@ import './Text.css'
 
 ## Examples
 
+### Font family
+
+```hbs
+{{#> text text--modifier="pf-u-font-family-sans-serif"}}
+  Sans serif
+{{/text}}
+{{#> text text--modifier="pf-u-font-family-heading-sans-serif"}}
+  Heading sans serif
+{{/text}}
+{{#> text text--modifier="pf-u-font-family-monospace"}}
+  Monospace
+{{/text}}
+{{#> text text--modifier="pf-u-font-family-redhatVF-sans-serif"}}
+  Red Hat variable font sans serif
+{{/text}}
+{{#> text text--modifier="pf-u-font-family-redhatVF-heading-sans-serif"}}
+  Red Hat variable font heading sans serif
+{{/text}}
+{{#> text text--modifier="pf-u-font-family-redhatVF-monospace"}}
+  Red Hat variable font monospace
+{{/text}}
+
+```
 ### Font size
 
 ```hbs
