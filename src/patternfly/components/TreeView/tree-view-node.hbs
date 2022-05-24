@@ -1,7 +1,5 @@
 {{#if tree-view-node--HasCheckbox}}
   {{> __tree-view-node tree-view-node--type="label"}}
-{{else if tree-view-node--IsSelectable}}
-  {{> __tree-view-node tree-view-node--type="div"}}
 {{else}}
   {{> __tree-view-node}}
 {{/if}}
@@ -13,6 +11,7 @@
     {{/if}}
     {{#if tree-view-node--HasCheckbox}}
       for="check-{{{tree-view-node--id}}}"
+      id="label-{{{tree-view-node--id}}}"
     {{/if}}
     {{#if tree-view-node--attribute}}
       {{{tree-view-node--attribute}}}
