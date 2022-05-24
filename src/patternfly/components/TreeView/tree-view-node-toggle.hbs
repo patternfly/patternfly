@@ -1,14 +1,24 @@
-<{{#if tree-view-node--HasCheckbox}}button{{else}}div{{/if}} class="pf-c-tree-view__node-toggle{{#if tree-view-node-toggle--modifier}} {{tree-view-node-toggle--modifier}}{{/if}}"
-  {{#if tree-view-node--HasCheckbox}}
-    aria-label="Toggle"
-    {{#if tree-view-list-item--IsExpanded}}
-      aria-expanded="true"
-    {{else}}
-      aria-expanded="false"
+{{#if tree-view-node--HasCheckbox}}
+  {{> __tree-view-node-toggle tree-view-node-toggle--IsToggle="true"}}
+{{else if tree-view-node--IsSelectable}}
+  {{> __tree-view-node-toggle tree-view-node-toggle--IsToggle="true"}}
+{{else}}
+  {{> __tree-view-node-toggle}}
+{{/if}}
+
+{{#* inline "__tree-view-node-toggle"}}
+  <{{#if tree-view-node-toggle--IsToggle}}button{{else}}div{{/if}} class="pf-c-tree-view__node-toggle{{#if tree-view-node-toggle--modifier}} {{tree-view-node-toggle--modifier}}{{/if}}"
+    {{#if tree-view-node-toggle--IsToggle}}
+      aria-label="Toggle"
+      {{#if tree-view-list-item--IsExpanded}}
+        aria-expanded="true"
+      {{else}}
+        aria-expanded="false"
+      {{/if}}
     {{/if}}
-  {{/if}}
-  {{#if tree-view-node-toggle--attribute}}
-    {{{tree-view-node-toggle--attribute}}}
-  {{/if}}>
-  {{> tree-view-node-toggle-icon}}
-</{{#if tree-view-node--HasCheckbox}}button{{else}}div{{/if}}>
+    {{#if tree-view-node-toggle--attribute}}
+      {{{tree-view-node-toggle--attribute}}}
+    {{/if}}>
+    {{> tree-view-node-toggle-icon}}
+  </{{#if tree-view-node-toggle--IsToggle}}button{{else}}div{{/if}}>
+{{/inline}}
