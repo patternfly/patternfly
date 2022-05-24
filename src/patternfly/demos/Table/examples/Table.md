@@ -231,3 +231,129 @@ wrapperTag: div
   {{/page-main-section}}
 {{/inline}}
 ```
+
+### Cell with image alignment
+
+By default, table cell alignment is set to baseline. This retains vertical alignment with varying text size, but can cause visual inconsistencies with images. Images within table cells vertical alignment may need to be specified.
+
+```hbs isFullscreen
+{{> page-template page-template--id="image-alignment-demo"}}
+
+{{#*inline "page-template-section"}}
+  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth="true"}}
+    {{#> table table--id="image-alignment-demo-table" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is an example of how to control images in table cells."'}}
+      {{#> table-thead}}
+        {{#> table-tr}}
+          {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+            Repositories
+          {{/table-th}}
+          {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--IsColumnHelp="true"}}
+            Branches
+          {{/table-th}}
+          {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true"}}
+            Pull requests
+          {{/table-th}}
+          {{#> table-th table-th--attribute='scope="col"'}}
+            Workspaces
+          {{/table-th}}
+          {{#> table-th table-th--attribute='scope="col"' table-th--IsColumnHelp="true"}}
+            Last commit
+          {{/table-th}}
+        {{/table-tr}}
+      {{/table-thead}}
+
+      {{#> table-tbody}}
+        {{#> table-tr}}
+          {{#> table-td table-td--data-label="Repository name"}}
+            {{#> l-flex}}
+              {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
+                {{> table--icon-red-hat}}
+              {{/l-flex}}
+              {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+                {{#> title title--modifier="pf-m-xl"}}
+                  Repository 1
+                {{/title}}
+                <span class="pf-u-font-size-sm">
+                  2.6.6 provided by Red Hat Inc
+                </span>
+              {{/l-flex}}
+            {{/l-flex}}
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Branches"}}
+            10
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Pull requests"}}
+            25
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Workspaces"}}
+            5
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Last commit"}}
+            2 days ago
+          {{/table-td}}
+        {{/table-tr}}
+
+        {{#> table-tr}}
+          {{#> table-td table-td--data-label="Repository name"}}
+            {{#> l-flex}}
+              {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
+                {{> table--icon-github}}
+              {{/l-flex}}
+              {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+                {{#> title title--modifier="pf-m-xl"}}
+                  Repository 2
+                {{/title}}
+                <span class="pf-u-font-size-sm">
+                  2.6.6 provided by Github
+                </span>
+              {{/l-flex}}
+            {{/l-flex}}
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Branches"}}
+            10
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Pull requests"}}
+            25
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Workspaces"}}
+            5
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Last commit"}}
+            2 days ago
+          {{/table-td}}
+        {{/table-tr}}
+
+        {{#> table-tr}}
+          {{#> table-td table-td--data-label="Repository name"}}
+            {{#> l-flex}}
+              {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
+                {{> table--icon-google}}
+              {{/l-flex}}
+              {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
+                {{#> title title--modifier="pf-m-xl"}}
+                  Repository 3
+                {{/title}}
+                <span class="pf-u-font-size-sm">
+                  1.2.3 provided by Google
+                </span>
+              {{/l-flex}}
+            {{/l-flex}}
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Branches"}}
+            10
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Pull requests"}}
+            25
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Workspaces"}}
+            5
+          {{/table-td}}
+          {{#> table-td table-td--data-label="Last commit"}}
+            2 days ago
+          {{/table-td}}
+        {{/table-tr}}
+      {{/table-tbody}}
+    {{/table}}
+  {{/page-main-section}}
+{{/inline}}
+```
