@@ -567,34 +567,34 @@ import './Label.css'
 
 <br><br>
 
-{{#> wrapper-label wrapper-label--code="gold" wrapper-label--title="Gold" wrapper-label--modifier="pf-m-outline" wraper-label--id="outline"}}
-  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+{{#> wrapper-label wrapper-label--code="gold" wrapper-label--title="Gold" wrapper-label--modifier="pf-m-outline" wrapper-label--id="outline"}}
+  {{#> label label--id=(concat wrapper-label--code '-' wrapper-label--id '-default') label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
     {{wrapper-label--title}}
   {{/label}}
 
-  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+  {{#> label label--id=(concat wrapper-label--code '-' wrapper-label--id '-icon') label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
     {{#> label-icon}}
       <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
     {{/label-icon}}
     {{wrapper-label--title}} icon
   {{/label}}
 
-  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+  {{#> label label--id=(concat wrapper-label--code '-' wrapper-label--id '-removable') label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
       {{wrapper-label--title}} removable
   {{/label}}
 
-  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+  {{#> label label--id=(concat wrapper-label--code '-' wrapper-label--id '-icon-removable') label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
     {{#> label-icon}}
       <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
     {{/label-icon}}
     {{wrapper-label--title}} icon removable
   {{/label}}
 
-  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label-content--IsLink="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+  {{#> label label--id=(concat wrapper-label--code '-' wrapper-label--id '-link') label-content--IsLink="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
     {{wrapper-label--title}} link
   {{/label}}
 
-  {{#> label label--id=(concat wrapper-label--code '-' wraper-label--id '-default') label-content--IsLink="true" label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
+  {{#> label label--id=(concat wrapper-label--code '-' wrapper-label--id '-link-removable') label-content--IsLink="true" label--isRemovable="true" label--modifier=(concat 'pf-m-' wrapper-label--code ' ' wrapper-label--modifier)}}
     {{wrapper-label--title}} link removable
   {{/label}}
 {{/wrapper-label}}
