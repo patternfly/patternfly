@@ -8,6 +8,9 @@ import './FormControl.css'
 
 ## Examples
 ### Input
+
+**Note:** In webkit browsers, inputs with status icons that are autocompleted will have their icons removed by the user agent stylesheet. If the field does not need to use autocomplete, turn it off with `autocomplete="off"` to avoid the problem. Otherwise, use [helper text](/components/helper-text/html-demos)  instead to ensure that the status will remain visible if the field is autocompleted.
+
 ```hbs
 {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
 <br><br>
@@ -136,6 +139,7 @@ Resizes horizontally
 
 ### Icon sprite
 **Note:** The icons for the success, invalid, calendar, etc varations in form control elemements are applied as background images to the form element. By default, the image URLs for these icons are data URIs. However, there may be cases where data URIs are not ideal, such as in an application with a content security policy that disallows data URIs for security reasons. The `.pf-m-icon-sprite` variation changes the icon source to an external SVG file that serves as a sprite for all of the supported icons.
+
 
 ```hbs isBeta
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-success pf-m-icon-sprite" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}
