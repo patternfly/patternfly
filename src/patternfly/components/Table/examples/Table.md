@@ -654,7 +654,7 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
 ## Expandable
 
-Note: Table contents will respond automatically to toggling table content. To retain column width, [column header and/or data cell behavior must be managed](#expandable-with-set-width-columns-example).
+Note: Table column widths will respond automatically when toggling expanded rows. To retain column widths between expanded and collapsed states, column header and/or data cell widths must be set.
 
 ### Expandable example
 ```hbs
@@ -794,7 +794,7 @@ Note: Table contents will respond automatically to toggling table content. To re
 {{/table}}
 ```
 
-### Expandable, with set width columns example
+### Expandable with set width columns example
 ```hbs
 {{#> table table--id="expandable-set-width-columns-example" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable table, set column widths example"'}}
   {{#> table-thead}}
