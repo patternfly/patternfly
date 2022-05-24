@@ -12,36 +12,48 @@ import './Label.css'
 
 ```hbs
 {{#> label label--id="default-grey"}}
-  Grey
+  {{#> label-text}}
+    Grey
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-grey-icon"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Grey icon
+  {{#> label-text}}
+    Grey icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-grey-close" label--isRemovable="true"}}
-  Grey removable
+  {{#> label-text}}
+    Grey removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-grey-icon-close" label--isRemovable="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Grey icon removable
+  {{#> label-text}}
+    Grey icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-grey-link" label-content--IsLink="true"}}
-  Grey link
+  {{#> label-text}}
+    Grey link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-grey-link-close" label-content--IsLink="true" label--isRemovable="true"}}
-  Grey link removable
+  {{#> label-text}}
+    Grey link removable
+  {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-grey-icon-close-truncate" label--isRemovable="true"}}
+{{#> label label--id="default-grey-icon-close-truncate" label--isRemovable="true" label--IsTruncated="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
@@ -53,36 +65,48 @@ import './Label.css'
 <br><br>
 
 {{#> label label--id="default-blue" label--modifier="pf-m-blue"}}
-  Blue
+  {{#> label-text}}
+    Blue
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-blue-icon" label--modifier="pf-m-blue"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Blue icon
+  {{#> label-text}}
+    Blue icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-blue-close" label--isRemovable="true" label--modifier="pf-m-blue"}}
-  Blue removable
+  {{#> label-text}}
+    Blue removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-blue-icon-close" label--isRemovable="true" label--modifier="pf-m-blue"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Blue icon removable
+  {{#> label-text}}
+    Blue icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-blue-link" label-content--IsLink="true" label--modifier="pf-m-blue"}}
-  Blue link
+  {{#> label-text}}
+    Blue link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-blue-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-blue"}}
-  Blue link removable
+  {{#> label-text}}
+    Blue link removable
+  {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-blue-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-blue"}}
+{{#> label label--id="default-blue-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-blue" label--IsTruncated="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
@@ -94,36 +118,48 @@ import './Label.css'
 <br><br>
 
 {{#> label label--id="default-green" label--modifier="pf-m-green"}}
-  Green
+  {{#> label-text}}
+    Green
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-green-icon" label--modifier="pf-m-green"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Green icon
+  {{#> label-text}}
+    Green icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-green-close" label--isRemovable="true" label--modifier="pf-m-green"}}
-  Green removable
+  {{#> label-text}}
+    Green removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-green-icon-close" label--isRemovable="true" label--modifier="pf-m-green"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Green icon removable
+  {{#> label-text}}
+    Green icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-green-link" label-content--IsLink="true" label--modifier="pf-m-green"}}
-  Green link
+  {{#> label-text}}
+    Green link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-green-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-green"}}
-  Green link removable
+  {{#> label-text}}
+    Green link removable
+  {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-green-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-green"}}
+{{#> label label--id="default-green-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-green" label--IsTruncated="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
@@ -135,36 +171,48 @@ import './Label.css'
 <br><br>
 
 {{#> label label--id="default-orange" label--modifier="pf-m-orange"}}
-  Orange
+  {{#> label-text}}
+    Orange
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-orange-icon" label--modifier="pf-m-orange"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Orange icon
+  {{#> label-text}}
+    Orange icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-orange-close" label--isRemovable="true" label--modifier="pf-m-orange"}}
-  Orange removable
+  {{#> label-text}}
+    Orange removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-orange-icon-close" label--isRemovable="true" label--modifier="pf-m-orange"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Orange icon removable
+  {{#> label-text}}
+    Orange icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-orange-link" label-content--IsLink="true" label--modifier="pf-m-orange"}}
-  Orange link
+  {{#> label-text}}
+    Orange link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-orange-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-orange"}}
-  Orange link removable
+  {{#> label-text}}
+    Orange link removable
+  {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-orange-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-orange"}}
+{{#> label label--id="default-orange-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-orange" label--IsTruncated="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
@@ -176,36 +224,48 @@ import './Label.css'
 <br><br>
 
 {{#> label label--id="default-red" label--modifier="pf-m-red"}}
-  Red
+  {{#> label-text}}
+    Red
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-red-icon" label--modifier="pf-m-red"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Red icon
+  {{#> label-text}}
+    Red icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-red-close" label--isRemovable="true" label--modifier="pf-m-red"}}
-  Red removable
+  {{#> label-text}}
+    Red removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-red-icon-close" label--isRemovable="true" label--modifier="pf-m-red"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Red icon removable
+  {{#> label-text}}
+    Red icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-red-link" label-content--IsLink="true" label--modifier="pf-m-red"}}
-  Red link
+  {{#> label-text}}
+    Red link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-red-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-red"}}
-  Red link removable
+  {{#> label-text}}
+    Red link removable
+  {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-red-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-red"}}
+{{#> label label--id="default-red-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-red" label--IsTruncated="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
@@ -217,36 +277,48 @@ import './Label.css'
 <br><br>
 
 {{#> label label--id="default-purple" label--modifier="pf-m-purple"}}
-  Purple
+  {{#> label-text}}
+    Purple
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-purple-icon" label--modifier="pf-m-purple"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Purple icon
+  {{#> label-text}}
+    Purple icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-purple-close" label--isRemovable="true" label--modifier="pf-m-purple"}}
-  Purple removable
+  {{#> label-text}}
+    Purple removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-purple-icon-close" label--isRemovable="true" label--modifier="pf-m-purple"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Purple icon removable
+  {{#> label-text}}
+    Purple icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-purple-link" label-content--IsLink="true" label--modifier="pf-m-purple"}}
-  Purple link
+  {{#> label-text}}
+    Purple link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-purple-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-purple"}}
-  Purple link removable
+  {{#> label-text}}
+    Purple link removable
+  {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-purple-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-purple"}}
+{{#> label label--id="default-purple-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-purple" label--IsTruncated="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
@@ -258,36 +330,48 @@ import './Label.css'
 <br><br>
 
 {{#> label label--id="default-cyan" label--modifier="pf-m-cyan"}}
-  Cyan
+  {{#> label-text}}
+    Cyan
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-cyan-icon" label--modifier="pf-m-cyan"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Cyan icon
+  {{#> label-text}}
+    Cyan icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-cyan-close" label--isRemovable="true" label--modifier="pf-m-cyan"}}
+  {{#> label-text}}
     Cyan removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-cyan-icon-close" label--isRemovable="true" label--modifier="pf-m-cyan"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Cyan icon removable
+  {{#> label-text}}
+    Cyan icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-cyan-link" label-content--IsLink="true" label--modifier="pf-m-cyan"}}
-  Cyan link
+  {{#> label-text}}
+    Cyan link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="default-cyan-link-close" label-content--IsLink="true" label--isRemovable="true" label--modifier="pf-m-cyan"}}
-  Cyan link removable
+  {{#> label-text}}
+    Cyan link removable
+  {{/label-text}}
 {{/label}}
 
-{{#> label label--id="default-cyan-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-cyan"}}
+{{#> label label--id="default-cyan-icon-close-truncate" label--isRemovable="true" label--modifier="pf-m-cyan" label--IsTruncated="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
@@ -344,225 +428,309 @@ import './Label.css'
 
 ```hbs
 {{#> label label--id="outline-grey" label--modifier="pf-m-outline"}}
-  Grey
+  {{#> label-text}}
+    Grey
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-grey-icon" label--modifier="pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Grey icon
+  {{#> label-text}}
+    Grey icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-grey-close" label--isRemovable="true" label--modifier="pf-m-outline"}}
-  Grey removable
+  {{#> label-text}}
+    Grey removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-grey-icon-close" label--isRemovable="true" label--modifier="pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Grey icon removable
+  {{#> label-text}}
+    Grey icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-grey-link" label-content--IsLink="true" label--modifier="pf-m-outline"}}
-  Grey link
+  {{#> label-text}}
+    Grey link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-grey-link-close" label-content--IsLink="true" label--modifier="pf-m-outline" label--isRemovable="true"}}
-  Grey link removable
+  {{#> label-text}}
+    Grey link removable
+  {{/label-text}}
 {{/label}}
 
 <br><br>
 
 {{#> label label--id="outline-blue" label--modifier="pf-m-blue pf-m-outline"}}
-  Blue
+  {{#> label-text}}
+    Blue
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-blue-icon" label--modifier="pf-m-blue pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Blue icon
+  {{#> label-text}}
+    Blue icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-blue-close" label--isRemovable="true" label--modifier="pf-m-blue pf-m-outline"}}
-  Blue removable
+  {{#> label-text}}
+    Blue removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-blue-icon-close" label--isRemovable="true" label--modifier="pf-m-blue pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Blue icon removable
+  {{#> label-text}}
+    Blue icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-blue-link" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-blue"}}
-  Blue link
+  {{#> label-text}}
+    Blue link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-blue-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-blue" label--isRemovable="true"}}
-  Blue link removable
+  {{#> label-text}}
+    Blue link removable
+  {{/label-text}}
 {{/label}}
 
 <br><br>
 
 {{#> label label--id="outline-green" label--modifier="pf-m-green pf-m-outline"}}
-  Green
+  {{#> label-text}}
+    Green
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-green-icon" label--modifier="pf-m-green pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Green icon
+  {{#> label-text}}
+    Green icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-green-close" label--isRemovable="true" label--modifier="pf-m-green pf-m-outline"}}
-  Green removable
+  {{#> label-text}}
+    Green removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-green-icon-close" label--isRemovable="true" label--modifier="pf-m-green pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Green icon removable
+  {{#> label-text}}
+    Green icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-green-link" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-green"}}
-  Green link
+  {{#> label-text}}
+    Green link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-green-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-green" label--isRemovable="true"}}
-  Green link removable
+  {{#> label-text}}
+    Green link removable
+  {{/label-text}}
 {{/label}}
 
 <br><br>
 
 {{#> label label--id="outline-orange" label--modifier="pf-m-orange pf-m-outline"}}
-  Orange
+  {{#> label-text}}
+    Orange
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-orange-icon" label--modifier="pf-m-orange pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Orange icon
+  {{#> label-text}}
+    Orange icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-orange-close" label--isRemovable="true" label--modifier="pf-m-orange pf-m-outline"}}
-  Orange removable
+  {{#> label-text}}
+    Orange removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-orange-icon-close" label--isRemovable="true" label--modifier="pf-m-orange pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Orange icon removable
+  {{#> label-text}}
+    Orange icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-orange-link" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-orange"}}
-  Orange link
+  {{#> label-text}}
+    Orange link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-orange-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-orange" label--isRemovable="true"}}
-  Orange link removable
+  {{#> label-text}}
+    Orange link removable
+  {{/label-text}}
 {{/label}}
 
 <br><br>
 
 {{#> label label--id="outline-red" label--modifier="pf-m-red pf-m-outline"}}
-  Red
+  {{#> label-text}}
+    Red
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-red-icon" label--modifier="pf-m-red pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Red icon
+  {{#> label-text}}
+    Red icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-red-close" label--isRemovable="true" label--modifier="pf-m-red pf-m-outline"}}
-  Red removable
+  {{#> label-text}}
+    Red removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-red-icon-close" label--isRemovable="true" label--modifier="pf-m-red pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Red icon removable
+  {{#> label-text}}
+    Red icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-red-link" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-red"}}
-  Red link
+  {{#> label-text}}
+    Red link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-red-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-red" label--isRemovable="true"}}
-  Red link removable
+  {{#> label-text}}
+    Red link removable
+  {{/label-text}}
 {{/label}}
 
 <br><br>
 
 {{#> label label--id="outline-purple" label--modifier="pf-m-purple pf-m-outline"}}
-  Purple
+  {{#> label-text}}
+    Purple
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-purple-icon" label--modifier="pf-m-purple pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Purple icon
+  {{#> label-text}}
+    Purple icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-purple-close" label--isRemovable="true" label--modifier="pf-m-purple pf-m-outline"}}
-  Purple removable
+  {{#> label-text}}
+    Purple removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-purple-icon-close" label--isRemovable="true" label--modifier="pf-m-purple pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Purple icon removable
+  {{#> label-text}}
+    Purple icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-purple-link" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-purple"}}
-  Purple link
+  {{#> label-text}}
+    Purple link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-purple-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-purple" label--isRemovable="true"}}
-  Purple link removable
+  {{#> label-text}}
+    Purple link removable
+  {{/label-text}}
 {{/label}}
 
 <br><br>
 
 {{#> label label--id="outline-cyan" label--modifier="pf-m-cyan pf-m-outline"}}
-  Cyan
+  {{#> label-text}}
+    Cyan
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-cyan-icon" label--modifier="pf-m-cyan pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Cyan icon
+  {{#> label-text}}
+    Cyan icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-cyan-close" label--isRemovable="true" label--modifier="pf-m-cyan pf-m-outline"}}
-  Cyan removable
+  {{#> label-text}}
+    Cyan removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-cyan-icon-close" label--isRemovable="true" label--modifier="pf-m-cyan pf-m-outline"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Cyan icon removable
+  {{#> label-text}}
+    Cyan icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-cyan-link" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-cyan"}}
-  Cyan link
+  {{#> label-text}}
+    Cyan link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="outline-cyan-link-close" label-content--IsLink="true" label--modifier="pf-m-outline pf-m-cyan" label--isRemovable="true"}}
-  Cyan link removable
+  {{#> label-text}}
+    Cyan link removable
+  {{/label-text}}
 {{/label}}
 
 <br><br>
@@ -604,36 +772,48 @@ import './Label.css'
 
 ```hbs
 {{#> label label--id="default-compact" label--modifier="pf-m-compact"}}
-  Compact
+  {{#> label-text}}
+    Compact
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="compact-icon" label--modifier="pf-m-compact"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Compact icon
+  {{#> label-text}}
+    Compact icon
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="compact-close" label--modifier="pf-m-compact" label--isRemovable="true"}}
-  Compact removable
+  {{#> label-text}}
+    Compact removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="compact-icon-close" label--modifier="pf-m-compact" label--isRemovable="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
-  Compact icon removable
+  {{#> label-text}}
+    Compact icon removable
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="compact-link" label--modifier="pf-m-compact" label-content--IsLink="true"}}
-  Compact link
+  {{#> label-text}}
+    Compact link
+  {{/label-text}}
 {{/label}}
 
 {{#> label label--id="compact-link-close" label--modifier="pf-m-compact" label-content--IsLink="true" label--isRemovable="true"}}
-  Compact link removable
+  {{#> label-text}}
+    Compact link removable
+  {{/label-text}}
 {{/label}}
 
-{{#> label label--id="compact-icon-close-truncate" label--modifier="pf-m-compact" label--isRemovable="true"}}
+{{#> label label--id="compact-icon-close-truncate" label--modifier="pf-m-compact" label--isRemovable="true" label--IsTruncated="true"}}
   {{#> label-icon}}
     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
   {{/label-icon}}
@@ -650,7 +830,9 @@ This style of label is used to indicate overflow within a label group.
 
 ```hbs
 {{#> label label--id="overflow" label--IsOverflow="true"}}
-  Overflow
+  {{#> label-text}}
+    Overflow
+  {{/label-text}}
 {{/label}}
 ```
 
@@ -712,5 +894,6 @@ This style of label is used to add new labels to a label group.
 | `.pf-m-purple` | `.pf-c-label` | Modifies the label to have purple colored styling. |
 | `.pf-m-cyan` | `.pf-c-label` | Modifies the label to have cyan colored styling. |
 | `.pf-m-gold` | `.pf-c-label` | Modifies the label to have gold colored styling. |
+| `.pf-m-auto-width` | `.pf-c-label` | Modifies label to have max-width to auto. |
 | `.pf-m-editable` | `.pf-c-label` | Modifies label for editable styles. |
 | `.pf-m-editable-active` | `.pf-c-label.pf-m-editable` | Modifies editable label for active styles. |

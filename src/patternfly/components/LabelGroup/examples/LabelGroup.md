@@ -17,7 +17,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label 1
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -25,7 +27,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -33,7 +37,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -51,7 +57,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -59,7 +67,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -67,12 +77,16 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--IsOverflow="true"}}
-          3 more
+          {{#> label-text}}
+            3 more
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -90,7 +104,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -98,7 +114,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -106,7 +124,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -114,7 +134,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -122,12 +144,16 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--IsOverflow="true"}}
-          3 less
+          {{#> label-text}}
+            3 less
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -145,7 +171,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -153,7 +181,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -161,12 +191,16 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--IsAdd="true"}}
-          Add Label
+          {{#> label-text}}
+            Add Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -187,7 +221,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -195,7 +231,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -203,7 +241,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -224,7 +264,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -232,7 +274,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -240,7 +284,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -248,7 +294,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 4
+          {{#> label-text}}
+            Label 4
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -256,7 +304,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 5
+          {{#> label-text}}
+            Label 5
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -264,7 +314,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 6
+          {{#> label-text}}
+            Label 6
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -283,7 +335,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -291,7 +345,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -299,7 +355,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -317,7 +375,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -325,7 +385,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -333,12 +395,16 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--IsOverflow="true"}}
-          3 more
+          {{#> label-text}}
+            3 more
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -356,7 +422,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -364,7 +432,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -372,7 +442,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -380,7 +452,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -388,12 +462,16 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--IsOverflow="true"}}
-          3 less
+          {{#> label-text}}
+            3 less
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -414,7 +492,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -422,7 +502,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -430,7 +512,9 @@ cssPrefix: pf-c-label-group
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -449,17 +533,23 @@ cssPrefix: pf-c-label-group
     {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
       {{#> label-group-list-item}}
         {{#> label}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--modifier="pf-m-blue"}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--modifier="pf-m-green"}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -534,17 +624,23 @@ In addition to the JavaScript management of [editable labels](/components/label#
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
         {{#> label label--modifier="pf-m-green" label--id=(concat label-group--id '-editable-label-static-1') label--isRemovable="true"}}
-          Static label 1
+          {{#> label-text}}
+            Static label 1
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--modifier="pf-m-green" label--id=(concat label-group--id '-editable-label-static-2') label--isRemovable="true"}}
-          Static label 2
+          {{#> label-text}}
+            Static label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--modifier="pf-m-green" label--id=(concat label-group--id '-editable-label-static-3') label--isRemovable="true"}}
-          Static label 3
+          {{#> label-text}}
+            Static label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
@@ -562,12 +658,16 @@ In addition to the JavaScript management of [editable labels](/components/label#
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
         {{#> label label--modifier="pf-m-green" label--id=(concat label-group--id '-editable-label-static-1') label--isRemovable="true"}}
-          Static label 1
+          {{#> label-text}}
+            Static label 1
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--modifier="pf-m-green" label--id=(concat label-group--id '-editable-label-static-2') label--isRemovable="true"}}
-          Static label 2
+          {{#> label-text}}
+            Static label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -603,7 +703,9 @@ In addition to the JavaScript management of [editable labels](/components/label#
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -611,7 +713,9 @@ In addition to the JavaScript management of [editable labels](/components/label#
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -619,7 +723,9 @@ In addition to the JavaScript management of [editable labels](/components/label#
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -637,7 +743,9 @@ In addition to the JavaScript management of [editable labels](/components/label#
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -645,7 +753,9 @@ In addition to the JavaScript management of [editable labels](/components/label#
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -653,12 +763,16 @@ In addition to the JavaScript management of [editable labels](/components/label#
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
         {{#> label label--IsOverflow="true" label--modifier="pf-m-compact"}}
-          3 more
+          {{#> label-text}}
+            3 more
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
@@ -676,7 +790,9 @@ In addition to the JavaScript management of [editable labels](/components/label#
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label
+          {{#> label-text}}
+            Label
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -684,7 +800,9 @@ In addition to the JavaScript management of [editable labels](/components/label#
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 2
+          {{#> label-text}}
+            Label 2
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
@@ -692,7 +810,9 @@ In addition to the JavaScript management of [editable labels](/components/label#
           {{#> label-icon}}
             <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
           {{/label-icon}}
-          Label 3
+          {{#> label-text}}
+            Label 3
+          {{/label-text}}
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}

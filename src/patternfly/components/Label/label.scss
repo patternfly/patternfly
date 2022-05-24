@@ -180,6 +180,7 @@
   --pf-c-label--m-editable--m-editable-active__content--before--BorderColor: transparent;
 
   position: relative;
+  max-width: 100%;
   padding: var(--pf-c-label--PaddingTop) var(--pf-c-label--PaddingRight) var(--pf-c-label--PaddingBottom) var(--pf-c-label--PaddingLeft);
   font-size: var(--pf-c-label--FontSize);
   color: var(--pf-c-label--Color);
@@ -401,6 +402,11 @@
     --pf-c-label__content--link--hover--before--BorderColor: var(--pf-c-label--m-overflow__content--link--hover--before--BorderColor);
     --pf-c-label__content--link--focus--before--BorderWidth: var(--pf-c-label--m-overflow__content--link--focus--before--BorderWidth);
     --pf-c-label__content--link--focus--before--BorderColor: var(--pf-c-label--m-overflow__content--link--focus--before--BorderColor);
+  }
+
+  // remove at breaking change
+  &.pf-m-auto-width {
+    --pf-c-label__text--MaxWidth: 100%;
   }
 }
 
