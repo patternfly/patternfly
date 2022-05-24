@@ -44,7 +44,7 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node-toggle--focus__icon--Color: var(--pf-global--Color--100);
   --pf-c-tree-view__node-toggle--active__icon--Color: var(--pf-global--Color--100);
   --pf-c-tree-view__node-toggle--expanded__icon--Color: var(--pf-global--Color--100);
-  --pf-c-tree-view__node-toggle-icon--Transition: var(--pf-global--Transition);
+  --pf-c-tree-view__node-toggle-icon--Transition: transform var(--pf-global--TransitionDuration) var(--pf-global--TimingFunction);
   --pf-c-tree-view__node-toggle-button--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-tree-view__node-toggle-button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tree-view__node-toggle-button--PaddingBottom: var(--pf-global--spacer--form-element);
