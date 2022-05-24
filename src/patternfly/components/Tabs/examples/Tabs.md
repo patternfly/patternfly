@@ -57,13 +57,6 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
-### Vertical
-```hbs
-{{#> tabs tabs--id="vertical-example" tabs--modifier="pf-m-vertical"}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
-{{/tabs}}
-```
-
 ### Box
 ```hbs
 {{#> tabs tabs--id="box-example" tabs--modifier="pf-m-box"}}
@@ -75,13 +68,6 @@ import './Tabs.css'
 ```hbs
 {{#> tabs tabs--id="box-overflow-example" tabs--modifier="pf-m-box pf-m-scrollable" __tabs-list--DisabledFirstScrollButton="true"}}
   {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsLong="true"}}
-{{/tabs}}
-```
-
-### Box vertical
-```hbs
-{{#> tabs tabs--id="box-vertical-example" tabs--modifier="pf-m-box pf-m-vertical"}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
@@ -201,6 +187,20 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
+### Vertical
+```hbs
+{{#> tabs tabs--id="vertical-example" tabs--modifier="pf-m-vertical"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
+{{/tabs}}
+```
+
+### Box vertical
+```hbs
+{{#> tabs tabs--id="box-vertical-example" tabs--modifier="pf-m-box pf-m-vertical"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
+{{/tabs}}
+```
+
 ### Vertical expandable
 ```hbs
 {{#> tabs tabs--id="vertical-expandable-example" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical"}}
@@ -212,6 +212,14 @@ import './Tabs.css'
 ### Vertical expanded
 ```hbs
 {{#> tabs tabs--id="vertical-expanded-example" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical, box, expanded
+```hbs
+{{#> tabs tabs--id="vertical-box-expanded-example" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical pf-m-box"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
