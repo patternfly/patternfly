@@ -1,11 +1,13 @@
 {{#if tree-view-node--HasCheckbox}}
-  {{> __tree-view-node tree-view-node--type="label"}}
+  {{> __tree-view-node tree-view-node--type="label" tree-view-node--IsSelectable="true"}}
 {{else}}
   {{> __tree-view-node}}
 {{/if}}
 
 {{#* inline "__tree-view-node"}}
-  <{{# if tree-view-node--type}}{{tree-view-node--type}}{{else}}button{{/if}} class="pf-c-tree-view__node{{#if tree-view-node--modifier}} {{tree-view-node--modifier}}{{/if}}"
+  <{{# if tree-view-node--type}}{{tree-view-node--type}}{{else}}button{{/if}} class="pf-c-tree-view__node
+    {{~#if tree-view-node--IsSelectable}} pf-m-selectable
+    {{~else if tree-view-node--modifier}} {{tree-view-node--modifier}}{{/if}}"
     {{#if tree-view-node--type}}
       tabindex="0"
     {{/if}}
