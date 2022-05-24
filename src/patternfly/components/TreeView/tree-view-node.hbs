@@ -1,15 +1,18 @@
 {{#if tree-view-node--HasCheckbox}}
-  {{> __tree-view-node tree-view-node--IsDiv="true"}}
+  {{> __tree-view-node tree-view-node--type="label"}}
 {{else if tree-view-node--IsSelectable}}
-  {{> __tree-view-node tree-view-node--IsDiv="true"}}
+  {{> __tree-view-node tree-view-node--type="div"}}
 {{else}}
   {{> __tree-view-node}}
 {{/if}}
 
 {{#* inline "__tree-view-node"}}
-  <{{# if tree-view-node--IsDiv}}div{{else}}button{{/if}} class="pf-c-tree-view__node{{#if tree-view-node--modifier}} {{tree-view-node--modifier}}{{/if}}"
-    {{#if tree-view-node--IsDiv}}
+  <{{# if tree-view-node--type}}{{tree-view-node--type}}{{else}}button{{/if}} class="pf-c-tree-view__node{{#if tree-view-node--modifier}} {{tree-view-node--modifier}}{{/if}}"
+    {{#if tree-view-node--type}}
       tabindex="0"
+    {{/if}}
+    {{#if tree-view-node--HasCheckbox}}
+      for="check-{{{tree-view-node--id}}}"
     {{/if}}
     {{#if tree-view-node--attribute}}
       {{{tree-view-node--attribute}}}
@@ -33,5 +36,5 @@
         {{> @partial-block}}
       {{/if}}
     {{/tree-view-node-container}}
-  </{{# if tree-view-node--IsDiv}}div{{else}}button{{/if}}>
+  </{{# if tree-view-node--type}}{{tree-view-node--type}}{{else}}button{{/if}}>
 {{/inline}}
