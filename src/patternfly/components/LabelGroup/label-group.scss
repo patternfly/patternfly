@@ -42,7 +42,6 @@
   --pf-c-label-group__textarea--PaddingLeft: var(--pf-global--spacer--xs);
 
   display: inline-flex;
-  max-width: 100%;
 
   &.pf-m-category {
     padding-top: var(--pf-c-label-group--m-category--PaddingTop);
@@ -125,14 +124,12 @@
 .pf-c-label-group__list {
   display: inline-flex;
   flex-wrap: wrap;
-  min-width: 0;
   margin-right: var(--pf-c-label-group__list--MarginRight);
   margin-bottom: var(--pf-c-label-group__list--MarginBottom);
 }
 
 .pf-c-label-group__list-item {
   display: inline-flex;
-  min-width: 0;
   margin-right: var(--pf-c-label-group__list-item--MarginRight);
   margin-bottom: var(--pf-c-label-group__list-item--MarginBottom);
 }
