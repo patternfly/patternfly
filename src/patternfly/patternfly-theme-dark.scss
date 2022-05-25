@@ -1,7 +1,1 @@
-@import "themes/dark/patternfly-theme-dark";
-
-$pf-theme-dark-class: ".pf-theme-dark" !default;
-
-:where(#{$pf-theme-dark-class}) {
-  @include pf-theme-dark($pf-theme-dark-class);
-}
+// intentionally left empty

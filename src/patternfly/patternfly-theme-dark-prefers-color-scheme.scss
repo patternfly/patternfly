@@ -1,5 +1,0 @@
-@import "themes/dark/patternfly-theme-dark";
-
-@media (prefers-color-scheme: dark) {
-  @include pf-theme-dark();
-}

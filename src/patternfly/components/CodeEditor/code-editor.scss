@@ -163,3 +163,10 @@
 .pf-c-code-editor__tab-icon + .pf-c-code-editor__tab-text {
   margin-left: var(--pf-c-code-editor__tab-icon--text--MarginLeft);
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/code-editor";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-code-editor;
+}

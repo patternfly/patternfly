@@ -1,4 +1,6 @@
-@mixin notification-drawer() {
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-notification-drawer() {
   .pf-c-notification-drawer {
     --pf-c-notification-drawer--BackgroundColor: var(--pf-global--BackgroundColor--300);
     --pf-c-notification-drawer__header--BackgroundColor: var(--pf-global--BackgroundColor--300);

@@ -1,4 +1,6 @@
-@mixin menu() {
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-menu() {
   .pf-c-menu {
     --pf-c-menu--BackgroundColor: var(--pf-global--BackgroundColor--300);
     --pf-c-menu__list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);

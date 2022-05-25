@@ -246,3 +246,10 @@
     --pf-c-alert__title--FontWeight: var(--pf-global--FontWeight--normal);
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/alert";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-alert;
+}

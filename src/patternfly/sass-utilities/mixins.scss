@@ -254,3 +254,10 @@
     }
   }
 }
+
+// Dark theme style block
+@mixin pf-theme-dark($pf-theme-dark-class: ".pf-theme-dark", $pf-theme-dark-prefix: "") {
+  #{$pf-theme-dark-prefix}:where(#{$pf-theme-dark-class}) {
+    @content;
+  }
+}

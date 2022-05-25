@@ -1,4 +1,6 @@
-@mixin input-group() {
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-input-group() {
   .pf-c-input-group {
     --pf-c-input-group--BackgroundColor: transparent;
     --pf-c-input-group__text--BorderTopColor: transparent;

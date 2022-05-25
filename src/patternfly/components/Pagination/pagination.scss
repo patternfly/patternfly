@@ -295,3 +295,10 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
   }
 }
 // stylelint-enable
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/pagination";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-pagination;
+}

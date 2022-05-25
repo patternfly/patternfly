@@ -138,3 +138,10 @@
     }
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "./themes/dark/globals";
+
+@include pf-theme-dark($pf-theme-dark-prefix: ":root") {
+  @include globals;
+}

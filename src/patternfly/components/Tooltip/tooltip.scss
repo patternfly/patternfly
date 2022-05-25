@@ -124,3 +124,10 @@
   pointer-events: none;
   background-color: var(--pf-c-tooltip__content--BackgroundColor);
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/tooltip";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-tooltip;
+}

@@ -694,3 +694,10 @@
   margin-bottom: var(--pf-c-select__menu-footer--MarginBottom);
   box-shadow: var(--pf-c-select__menu-footer--BoxShadow);
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/select";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-select;
+}

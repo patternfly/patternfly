@@ -35,3 +35,10 @@
     --pf-c-badge--BackgroundColor: var(--pf-c-badge--m-unread--BackgroundColor);
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/badge";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-badge;
+}

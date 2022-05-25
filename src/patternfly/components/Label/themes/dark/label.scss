@@ -1,4 +1,6 @@
-@mixin label() {
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-label() {
   .pf-c-label {
     --pf-c-label--BackgroundColor: var(--pf-global--BackgroundColor--300);
     --pf-c-label--m-blue--BackgroundColor: var(--pf-global--BackgroundColor--300);

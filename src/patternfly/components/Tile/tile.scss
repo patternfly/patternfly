@@ -172,3 +172,10 @@
   font-size: var(--pf-c-tile__icon--FontSize);
   color: var(--pf-c-tile__icon--Color);
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/tile";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-tile;
+}

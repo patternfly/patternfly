@@ -220,3 +220,10 @@
     --pf-c-calendar-month__date--hover--focus--BorderColor: transparent;
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/calendar-month";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-calendar-month;
+}

@@ -557,3 +557,10 @@
 .pf-c-wizard__footer-cancel {
   margin-left: var(--pf-c-wizard__footer-cancel--MarginLeft);
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/wizard";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-wizard;
+}

@@ -1,4 +1,6 @@
-@mixin menu-toggle() {
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-menu-toggle() {
   .pf-c-menu-toggle {
     --pf-c-menu-toggle--BackgroundColor: var(--pf-global--BackgroundColor--400);
     --pf-c-menu-toggle--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
