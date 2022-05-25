@@ -4,6 +4,8 @@ section: components
 wrapperTag: div
 ---
 
+import './Table.css'
+
 ## Demos
 ### Basic
 ```hbs isFullscreen
@@ -234,7 +236,7 @@ wrapperTag: div
 
 ### Cell with image alignment
 
-By default, table cell alignment is set to baseline. This retains vertical alignment with varying text size, but can cause visual inconsistencies with images. Images within table cells vertical alignment may need to be specified.
+By default, table cell alignment is set to baseline. This retains vertical alignment with varying text size, but can cause visual inconsistencies with images. The vertical alignment of images within table cells may need to be specified to provide proper alignment.
 
 ```hbs isFullscreen
 {{> page-template page-template--id="image-alignment-demo"}}
@@ -243,8 +245,8 @@ By default, table cell alignment is set to baseline. This retains vertical align
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth="true"}}
     {{#> table table--id="image-alignment-demo-table" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="This is an example of how to control images in table cells."'}}
       {{#> table-thead}}
-        {{#> table-tr}}
-          {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
+        {{#> table-tr table-th--modifier="pf-m-fit-content"}}
+          {{#> table-th table-th--modifier="pf-m-nowrap" table-th--attribute='scope="col"' table-th--sortable="true" table-th--selected="true" table-th--asc="true"}}
             Repositories
           {{/table-th}}
           {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--IsColumnHelp="true"}}
@@ -265,9 +267,11 @@ By default, table cell alignment is set to baseline. This retains vertical align
       {{#> table-tbody}}
         {{#> table-tr}}
           {{#> table-td table-td--data-label="Repository name"}}
-            {{#> l-flex}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
-                {{> table--icon-red-hat}}
+                <div class="table-demo-icon">
+                  {{> icon-red-hat class="test"}}
+                </div>
               {{/l-flex}}
               {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
                 {{#> title title--modifier="pf-m-xl"}}
@@ -295,9 +299,11 @@ By default, table cell alignment is set to baseline. This retains vertical align
 
         {{#> table-tr}}
           {{#> table-td table-td--data-label="Repository name"}}
-            {{#> l-flex}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
-                {{> table--icon-github}}
+                <div class="table-demo-icon">
+                  {{> icon-github}}
+                </div>
               {{/l-flex}}
               {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
                 {{#> title title--modifier="pf-m-xl"}}
@@ -325,9 +331,11 @@ By default, table cell alignment is set to baseline. This retains vertical align
 
         {{#> table-tr}}
           {{#> table-td table-td--data-label="Repository name"}}
-            {{#> l-flex}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
-                {{> table--icon-google}}
+                <div class="table-demo-icon">
+                  {{> icon-google}}
+                </div>
               {{/l-flex}}
               {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
                 {{#> title title--modifier="pf-m-xl"}}
