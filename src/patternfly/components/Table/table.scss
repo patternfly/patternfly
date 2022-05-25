@@ -360,7 +360,7 @@
       z-index: var(--pf-global--ZIndex--xs);
       background: var(--pf-c-table--BackgroundColor);
 
-      > .pf-m-border {
+      > .pf-m-border-row {
         height: var(--pf-c-table--border-width--base);
         background-color: var(--pf-c-table--BorderColor);
       }

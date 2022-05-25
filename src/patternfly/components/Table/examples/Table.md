@@ -3556,7 +3556,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-nested-column-header` | `<thead>` | Modifies a table header to handle nested header cells. |
-| `.pf-m-border` | `.pf-m-sticky-header > .pf-m-nested-column-header > tr` | Modifies the last row in a sticky header with nested column headers to display as a border. |
+| `.pf-m-border-row` | `.pf-m-sticky-header > .pf-m-nested-column-header > tr` | Modifies the last row in a sticky header with nested column headers to display as a border. |
 | `.pf-m-border-right` | `<th>`, `<td>` | Modifies a table cell to show a right border. |
 | `.pf-m-border-left` | `<th>`, `<td>` | Modifies a table cell to show a left border. |
 
