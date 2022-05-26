@@ -133,18 +133,6 @@
   position: relative;
   display: inline-flex;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    // This margin-left is not being applied
-    margin-left: var(--pf-c-label-group__add--MarginLeft);
-    content: "";
-  }
-
   .pf-c-label {
     margin-right: var(--pf-c-label-group__add--MarginRight);
     margin-bottom: var(--pf-c-label-group__add--MarginBottom);
