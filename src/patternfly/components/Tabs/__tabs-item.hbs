@@ -1,4 +1,4 @@
-{{#> tabs-item tabs-item--IsCurrent=__tabs-item--current tabs-item--modifier=__tabs-item--modifier tabs-item--attribute=__tabs-item--attribute}}
+{{#> tabs-item tabs-item--IsCurrent=__tabs-item--current tabs-item--modifier=__tabs-item--modifier tabs-item--attribute=__tabs-item--attribute tabs-item--IsOverflow=__tabs-item--IsOverflow tabs-item--IsOverflowExpanded=__tabs-item--IsOverflowExpanded}}
   {{#> tabs-link tabs-link--attribute=(concat __tabs-link--attribute ' id="' tabs--id '-' __tabs-item--id '-link"')}}
     {{#if __tabs-list--HasIcons}}
       {{> tabs-item-icon tabs-item-icon--name=__tabs-item--icon-name}}
@@ -8,5 +8,12 @@
         {{{__tabs-item--text}}}
       {{/tabs-item-text}}
     {{/unless}}
+    {{#if __tabs-item--IsOverflow}}
+      {{#if __tabs-item--IsOverflowExpanded}}
+        {{> tabs-item-toggle-icon tabs-item-toggle-icon--IsExpanded="true"}}
+      {{else}}
+        {{> tabs-item-toggle-icon}}
+      {{/if}}
+    {{/if}}
   {{/tabs-link}}
 {{/tabs-item}}

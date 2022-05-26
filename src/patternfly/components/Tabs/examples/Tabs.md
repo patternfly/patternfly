@@ -36,6 +36,20 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
+### Horizontal overflow
+```hbs
+{{#> tabs tabs--id="horizontal-overflow-example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsOverflow="true"}}
+{{/tabs}}
+```
+
+### Horizontal overflow expanded
+```hbs
+{{#> tabs tabs--id="horizontal-overflow-expanded-example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowExpanded="true"}}
+{{/tabs}}
+```
+
 ### Accessibility
 
 | Attribute | Applied to | Outcome |
