@@ -210,12 +210,12 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__header,
 .pf-c-page > .pf-c-masthead {
   grid-area: header;
+  z-index: var(--pf-c-page__header--ZIndex);
 }
 
 .pf-c-page__header {
   @include pf-t-dark; // force the container to follow the dark theme
 
-  z-index: var(--pf-c-page__header--ZIndex);
   grid-template-columns: auto auto;
   display: grid;
   align-items: center;
