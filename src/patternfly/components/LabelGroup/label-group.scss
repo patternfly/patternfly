@@ -35,9 +35,9 @@
   --pf-c-label-group__list-item--MarginBottom: var(--pf-global--spacer--xs);
 
   // Add label
-  --pf-c-label-group__add--MarginLeft: var(--pf-global--spacer--xs);
   --pf-c-label-group__add--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-label-group__add--MarginBottom: var(--pf-global--spacer--xs);
+  --pf-c-label-group__add--MarginLeft: var(--pf-global--spacer--xs);
 
   // Textarea
   --pf-c-label-group__textarea--MinWidth: #{pf-size-prem(200px)};
