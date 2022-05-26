@@ -15,10 +15,12 @@ cssPrefix: pf-c-calendar-month
         <i class="fas fa-angle-left" aria-hidden="true"></i>
       {{/button}}
     {{/calendar-month-header-nav-control}}
-    {{> calendar-month-header-month}}
-    {{#> calendar-month-header-year}}
-      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' calendar-month--year '" id="' calendar-month--id '-year" aria-label="Select year"')}}
-    {{/calendar-month-header-year}}
+    {{#> input-group}}
+      {{> calendar-month-header-month}}
+      {{#> calendar-month-header-year}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' calendar-month--year '" id="' calendar-month--id '-year" aria-label="Select year"')}}
+      {{/calendar-month-header-year}}
+    {{/input-group}}
     {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-next-month"}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next month"'}}
         <i class="fas fa-angle-right" aria-hidden="true"></i>
@@ -89,12 +91,14 @@ cssPrefix: pf-c-calendar-month
         <i class="fas fa-angle-left" aria-hidden="true"></i>
       {{/button}}
     {{/calendar-month-header-nav-control}}
-    {{#> calendar-month-header-month}}
-      {{#> select select-typeahead--Placeholder="Month" id=(concat calendar-month--id '-month-select')}}{{calendar-month--month}}{{/select}}
-    {{/calendar-month-header-month}}
-    {{#> calendar-month-header-year}}
-      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' calendar-month--year '" id="' calendar-month--id '-year" aria-label="Select year"')}}
-    {{/calendar-month-header-year}}
+    {{#> input-group}}
+      {{#> calendar-month-header-month}}
+        {{#> select select-typeahead--Placeholder="Month" id=(concat calendar-month--id '-month-select')}}{{calendar-month--month}}{{/select}}
+      {{/calendar-month-header-month}}
+      {{#> calendar-month-header-year}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' calendar-month--year '" id="' calendar-month--id '-year" aria-label="Select year"')}}
+      {{/calendar-month-header-year}}
+    {{/input-group}}
     {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-next-month"}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next month"'}}
         <i class="fas fa-angle-right" aria-hidden="true"></i>
@@ -165,12 +169,14 @@ cssPrefix: pf-c-calendar-month
         <i class="fas fa-angle-left" aria-hidden="true"></i>
       {{/button}}
     {{/calendar-month-header-nav-control}}
-    {{#> calendar-month-header-month}}
-      {{#> select select-typeahead--Placeholder="Month" id=(concat calendar-month--id '-month-select')}}{{calendar-month--month}}{{/select}}
-    {{/calendar-month-header-month}}
-    {{#> calendar-month-header-year}}
-      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' calendar-month--year '" id="' calendar-month--id '-year" aria-label="Select year"')}}
-    {{/calendar-month-header-year}}
+    {{#> input-group}}
+      {{#> calendar-month-header-month}}
+        {{#> select select-typeahead--Placeholder="Month" id=(concat calendar-month--id '-month-select')}}{{calendar-month--month}}{{/select}}
+      {{/calendar-month-header-month}}
+      {{#> calendar-month-header-year}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' calendar-month--year '" id="' calendar-month--id '-year" aria-label="Select year"')}}
+      {{/calendar-month-header-year}}
+    {{/input-group}}
     {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-next-month"}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next month"'}}
         <i class="fas fa-angle-right" aria-hidden="true"></i>
@@ -241,12 +247,14 @@ cssPrefix: pf-c-calendar-month
         <i class="fas fa-angle-left" aria-hidden="true"></i>
       {{/button}}
     {{/calendar-month-header-nav-control}}
-    {{#> calendar-month-header-month}}
-      {{#> select select-typeahead--Placeholder="Month" id=(concat calendar-month--id '-month-select')}}{{calendar-month--month}}{{/select}}
-    {{/calendar-month-header-month}}
-    {{#> calendar-month-header-year}}
-      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' calendar-month--year '" id="' calendar-month--id '-year" aria-label="Select year"')}}
-    {{/calendar-month-header-year}}
+    {{#> input-group}}
+      {{#> calendar-month-header-month}}
+        {{#> select select-typeahead--Placeholder="Month" id=(concat calendar-month--id '-month-select')}}{{calendar-month--month}}{{/select}}
+      {{/calendar-month-header-month}}
+      {{#> calendar-month-header-year}}
+        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' calendar-month--year '" id="' calendar-month--id '-year" aria-label="Select year"')}}
+      {{/calendar-month-header-year}}
+    {{/input-group}}
     {{#> calendar-month-header-nav-control calendar-month-header-nav-control--modifier="pf-m-next-month"}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next month"'}}
         <i class="fas fa-angle-right" aria-hidden="true"></i>
