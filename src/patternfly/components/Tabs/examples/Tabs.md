@@ -36,6 +36,20 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
+### Accessibility
+
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
+| `aria-hidden="true"` | `.pf-c-tabs__scroll-button` | Hides the icon from assistive technologies.**Required when not scrollable** |
+
+### Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-scrollable` | `.pf-c-tabs` | Enables the directional scroll buttons. |
+| `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
+
 ### Horizontal overflow
 ```hbs isBeta
 {{#> tabs tabs--id="horizontal-overflow-example"}}
@@ -49,23 +63,6 @@ import './Tabs.css'
   {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowExpanded="true"}}
 {{/tabs}}
 ```
-
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
-| `aria-hidden="true"` | `.pf-c-tabs__scroll-button` | Hides the icon from assistive technologies.**Required when not scrollable** |
-| `aria-expanded="true"` | `.pf-c-tabs__item` | Indicates that the overflow menu tab is expanded. **Required when expanded** |
-
-### Usage
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-scrollable` | `.pf-c-tabs` | Enables the directional scroll buttons. |
-| `.pf-m-overflow` | `.pf-c-tabs__item` | Applies overflow menu styling to a tab. |
-| `.pf-m-expanded` | `.pf-c-tabs__item` | Applies expanded styling to the overflow menu tab. |
-| `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
 
 ### Vertical
 ```hbs
@@ -336,6 +333,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `disabled` | `button.pf-c-tabs__link` | Indicates that a tabs link is disabled. **Required when disabled** |
 | `aria-disabled="true"` | `a.pf-c-tabs__link.pf-m-disabled`, `.pf-c-tabs__link.pf-m-aria-disabled` | Indicates to assistive technology that a tabs link is disabled. **Required when disabled** |
 | `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disable, typically when at the first or last item of a list or scroll buttons are hidden. **Required** |
+| `aria-expanded="true"` | `.pf-c-tabs__item` | Indicates that the overflow menu tab is expanded. **Required when expanded** |
 
 ### Usage
 
@@ -363,6 +361,8 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-fill` | `.pf-c-tabs` | Modifies the tabs to fill the available space. |
 | `.pf-m-current` | `.pf-c-tabs__item` | Indicates that a tab item is currently selected. |
 | `.pf-m-action` | `.pf-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |
+| `.pf-m-overflow` | `.pf-c-tabs__item` | Applies overflow menu styling to a tab item. |
+| `.pf-m-expanded` | `.pf-c-tabs__item` | Applies expanded styling to the overflow menu tab item. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
 | `.pf-m-page-insets` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
 | `.pf-m-color-scheme--light-300` | `.pf-c-tabs` | Modifies the tabs component tab background colors. |
