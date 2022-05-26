@@ -56,12 +56,15 @@ import './Tabs.css'
 | -- | -- | -- |
 | `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
 | `aria-hidden="true"` | `.pf-c-tabs__scroll-button` | Hides the icon from assistive technologies.**Required when not scrollable** |
+| `aria-expanded="true"` | `.pf-c-tabs__item` | Indicates that the overflow menu tab is expanded. **Required when expanded** |
 
 ### Usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-scrollable` | `.pf-c-tabs` | Enables the directional scroll buttons. |
+| `.pf-m-overflow` | `.pf-c-tabs__item` | Applies overflow menu styling to a tab. |
+| `.pf-m-expanded` | `.pf-c-tabs__item` | Applies expanded styling to the overflow menu tab. |
 | `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
 
 ### Vertical
