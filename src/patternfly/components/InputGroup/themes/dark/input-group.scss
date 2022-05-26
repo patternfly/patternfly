@@ -9,8 +9,11 @@
     --pf-c-input-group__text--BorderLeftColor: transparent;
     --pf-c-input-group__text--BackgroundColor: var(--pf-global--palette--black-600);
 
-    > * + * {
+    > * + :not(.pf-c-text-input-group) {
       margin-left: 0;
+    }
+
+    > * + :not(.pf-m-plain) {
       border-left: 1px solid var(--pf-global--palette--black-700); // global var
     }
   }

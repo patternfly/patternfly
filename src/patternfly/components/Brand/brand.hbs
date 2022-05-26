@@ -27,9 +27,11 @@
       <img src="/assets/images/pf-c-brand__logo-base.jpg" alt="Fallback patternFly default logo">
     {{/if}}
   </picture>
-{{else}}
+{{else if brand--IsImg}}
   <img class="pf-c-brand{{#if brand--modifier}} {{brand--modifier}}{{/if}}"
     {{#if brand--attribute}}
       {{{brand--attribute}}}
     {{/if}}>
+{{else}}
+  {{> @partial-block}}
 {{/if}}

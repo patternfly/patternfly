@@ -162,7 +162,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
   }
 
-  @include pf-t-dark; // force the container to follow the dark theme
+  // @include pf-t-dark; // force the container to follow the dark theme
 
   position: relative;
   display: grid;
@@ -188,6 +188,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 
   .pf-c-toolbar {
+    --pf-c-toolbar--BackgroundColor: transparent;
     --pf-c-toolbar__content--PaddingRight: var(--pf-c-masthead--c-toolbar__content--PaddingRight);
     --pf-c-toolbar__content--PaddingLeft: var(--pf-c-masthead--c-toolbar__content--PaddingLeft);
     --pf-c-toolbar__expandable-content--PaddingTop: var(--pf-c-masthead--c-toolbar__expandable-content--PaddingTop);
@@ -357,4 +358,12 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 @include pf-theme-dark {
   @include pf-theme-dark-masthead;
+}
+
+// set masthead to dark theme by default
+// ignore dark theme if light variants are called
+@import "../../base/themes/dark/variables";
+
+.pf-c-masthead:where(:not([class*="pf-m-light"])) {
+  @include _variables;
 }

@@ -3,6 +3,13 @@
     {{#> select select--attribute='style="width: 175px"' id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
       Name
     {{/select}}
-    {{> search-input search-input--placeholder="Filter by name"}}
+    {{#> text-input-group}}
+      {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+        {{#> text-input-group-text}}
+          {{> text-input-group-icon}}
+          {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="Find by name"'}}
+        {{/text-input-group-text}}
+      {{/text-input-group-main}}
+    {{/text-input-group}}
   {{/input-group}}
 {{/toolbar-item}}

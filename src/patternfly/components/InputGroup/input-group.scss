@@ -27,6 +27,18 @@
   width: 100%;
   background-color: var(--pf-c-input-group--BackgroundColor);
 
+  &.pf-m-plain {
+    --pf-c-input-group--BackgroundColor: transparent;
+  }
+
+  [hidden] {
+    display: none;
+  }
+
+  > * {
+    @include pf-hidden-visible;
+  }
+
   // stylelint-disable
   > * + * {
     margin-left: -1px;

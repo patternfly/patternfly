@@ -30,15 +30,16 @@ cssPrefix: pf-c-masthead
   {{/masthead-main}}
   {{#> masthead-content}}
     {{#> l-flex}}
-      <span>Testing text color</span>
+      <span>Content</span>
       {{#> button button--modifier="pf-m-primary"}}
-        testing
+        Primary
       {{/button}}
-      {{#> l-flex-item l-flex-item--modifier="pf-m-align-flex-end"}}
-        {{#> button button--modifier="pf-m-primary"}}
-          testing
-        {{/button}}
-      {{/l-flex-item}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Secondary
+      {{/button}}
+      {{#> button button--modifier="pf-m-tertiary"}}
+        Tertiary
+      {{/button}}
     {{/l-flex}}
   {{/masthead-content}}
 {{/masthead}}

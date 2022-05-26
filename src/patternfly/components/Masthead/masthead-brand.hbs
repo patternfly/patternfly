@@ -12,6 +12,8 @@
   {{#if @partial-block}}
     {{> @partial-block}}
   {{else}}
-    {{> brand brand--attribute='src="/assets/images/PF-Masthead-Logo.svg" alt="PatternFly logo"'}}
+    {{#> brand brand--attribute='alt="PatternFly logo"'}}
+      {{> logo-patternfly}}
+    {{/brand}}
   {{/if}}
 </{{#if masthead-brand--type}}{{masthead-brand--type}}{{else}}a{{/if}}>

@@ -78,6 +78,65 @@ wrapperTag: div
 {{/inline}}
 ```
 
+### With expandable search, collapsed
+ ```hbs isFullscreen
+{{> page-template page-template--id="masthead-expandable-search-example"}}
+
+{{#*inline "masthead-template-content-toolbar-content"}}
+  {{#> toolbar-content-section}}
+    {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+      {{#> toolbar-item}}
+        {{#> input-group input-group--modifier="pf-m-plain"}}
+          {{#> text-input-group text-input-group--modifier="pf-m-plain pf-m-bordered pf-m-hidden"}}
+            {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+              {{#> text-input-group-text}}
+                {{> text-input-group-icon}}
+                {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="Search"'}}
+              {{/text-input-group-text}}
+            {{/text-input-group-main}}
+          {{/text-input-group}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close" hidden'}}
+            <i class="fas fa-times" aria-hidden="true"></i>
+          {{/button}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
+            <i class="fas fa-fw fa-search" aria-hidden="true"></i>
+          {{/button}}
+        {{/input-group}}
+      {{/toolbar-item}}
+    {{/toolbar-group}}
+  {{/toolbar-content-section}}
+{{/inline}}
+```
+### With expandable search, expanded
+ ```hbs isFullscreen
+{{> page-template page-template--id="masthead-expandable-search-expanded-example"}}
+
+{{#*inline "masthead-template-content-toolbar-content"}}
+  {{#> toolbar-content-section}}
+    {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+      {{#> toolbar-item}}
+        {{#> input-group input-group--modifier="pf-m-plain"}}
+          {{#> text-input-group text-input-group--modifier="pf-m-plain pf-m-bordered"}}
+            {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+              {{#> text-input-group-text}}
+                {{> text-input-group-icon}}
+                {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="Search"'}}
+              {{/text-input-group-text}}
+            {{/text-input-group-main}}
+          {{/text-input-group}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+            <i class="fas fa-times" aria-hidden="true"></i>
+          {{/button}}
+          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search" hidden'}}
+            <i class="fas fa-fw fa-search" aria-hidden="true"></i>
+          {{/button}}
+        {{/input-group}}
+      {{/toolbar-item}}
+    {{/toolbar-group}}
+  {{/toolbar-content-section}}
+{{/inline}}
+```
+
 ### Advanced integration with menu options
 ```hbs isFullscreen
 {{> page-template page-template--id="masthead-advanced-with-menu-example"}}
