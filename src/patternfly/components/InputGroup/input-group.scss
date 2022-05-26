@@ -31,14 +31,6 @@
     --pf-c-input-group--BackgroundColor: transparent;
   }
 
-  [hidden] {
-    display: none;
-  }
-
-  > * {
-    @include pf-hidden-visible;
-  }
-
   // stylelint-disable
   > * + * {
     margin-left: -1px;

@@ -1,4 +1,13 @@
-<{{#if masthead--type}}{{masthead--type}}{{else}}header{{/if}} class="pf-c-masthead{{#if masthead--modifier}} {{masthead--modifier}}{{/if}}"
+<{{#if masthead--type}}{{masthead--type}}{{else}}header{{/if}}
+  class="pf-c-masthead
+  {{#ifEquals masthead--ColorVariant "light"}}
+    pf-m-light
+  {{else ifEquals masthead--ColorVariant "light-200"}}
+    pf-m-light-200
+  {{/ifEquals}}
+  {{~#if masthead--modifier}}
+    {{masthead--modifier}}
+  {{/if}}"
   {{#if masthead--id}}
     id="{{masthead--id}}"
   {{/if}}

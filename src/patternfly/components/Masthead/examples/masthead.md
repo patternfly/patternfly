@@ -86,7 +86,7 @@ cssPrefix: pf-c-masthead
 
 ### Light variant
 ```hbs
-{{#> masthead masthead--id="light-masthead" masthead--modifier="pf-m-light"}}
+{{#> masthead masthead--id="light-masthead" masthead--ColorVariant="light"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
     {{#> masthead-brand}}
@@ -99,7 +99,7 @@ cssPrefix: pf-c-masthead
 
 ### Light 200 variant
 ```hbs
-{{#> masthead masthead--id="light-200-masthead" masthead--modifier="pf-m-light-200"}}
+{{#> masthead masthead--id="light-200-masthead" masthead--ColorVariant="light-200"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
     {{#> masthead-brand}}

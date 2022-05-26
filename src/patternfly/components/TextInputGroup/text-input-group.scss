@@ -49,13 +49,6 @@
   color: var(--pf-c-text-input-group--Color, inherit);
   background-color: var(--pf-c-text-input-group--BackgroundColor);
 
-  &.pf-m-hidden,
-  .pf-m-hidden,
-  &[hidden],
-  [hidden] {
-    display: none;
-  }
-
   &:hover {
     --pf-c-text-input-group__text--after--BorderBottomColor: var(--pf-c-text-input-group--hover__text--after--BorderBottomColor);
   }
@@ -75,18 +68,6 @@
 
     .pf-c-text-input-group__text {
       &::before,
-      &::after {
-        border: 0;
-      }
-    }
-  }
-
-  &.pf-m-bordered {
-    .pf-c-text-input-group__text {
-      &::before {
-        border: var(--pf-c-text-input-group__text--before--BorderWidth) solid var(--pf-c-text-input-group__text--before--BorderColor);
-      }
-
       &::after {
         border: 0;
       }
