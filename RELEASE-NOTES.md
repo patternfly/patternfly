@@ -3,6 +3,29 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.07 release notes (2022-06-03)
+Packages released:
+- [@patternfly/patternfly@v4.196.5](https://www.npmjs.com/package/@patternfly/patternfly/v/4.196.5)
+
+### Components
+- **Calendar month:** Improved layout of nav controls ([#4862](https://github.com/patternfly/patternfly/pull/4862))
+- **Chip group:** Fixed premature wrapping ([#4879](https://github.com/patternfly/patternfly/pull/4879))
+- **Drawer:** Added demos with jumplinks ([#4608](https://github.com/patternfly/patternfly/pull/4608))
+- **Form field:** Documented autocomplete limitation ([#4856](https://github.com/patternfly/patternfly/pull/4856))
+- **Form:** Added complex form demo ([#4865](https://github.com/patternfly/patternfly/pull/4865))
+- **Label:** Added gold, updated orange bgcolor ([#4863](https://github.com/patternfly/patternfly/pull/4863))
+- **Page:** Added masthead to header/nav/main stacking context order ([#4839](https://github.com/patternfly/patternfly/pull/4839))
+- **Table:**
+  - Added expanded set column width example ([#4852](https://github.com/patternfly/patternfly/pull/4852))
+  - Added image and text demo ([#4853](https://github.com/patternfly/patternfly/pull/4853))
+
+### Other
+- **Theme:**
+  * Imported dark theme per component, added new global var ([#4864](https://github.com/patternfly/patternfly/pull/4864))
+  * Update ddark theme default text color ([#4875](https://github.com/patternfly/patternfly/pull/4875))
+- **Utilities:** Added font family utilities ([#4868](https://github.com/patternfly/patternfly/pull/4868))
+
+
 ## 2022.06 release notes (2022-05-13)
 Packages released:
 - [@patternfly/patternfly@v4.194.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.194.4)
