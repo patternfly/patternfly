@@ -22,6 +22,9 @@
   {{#if tabs-link--isLink}}
     href="#"
   {{/if}}
+  {{~#if tabs-item--IsOverflowExpanded}}
+    aria-expanded="true"
+  {{/if}}
   {{#if tabs-link--attribute}}
     {{{tabs-link--attribute}}}
   {{/if}}>
