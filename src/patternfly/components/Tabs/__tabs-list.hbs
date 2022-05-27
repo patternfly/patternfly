@@ -112,24 +112,16 @@ __tabs-list--IsCloseDisabled: bool
         }}
     {{/if}}
     {{#if __tabs-list--IsOverflow}}
-      {{#if __tabs-list--IsOverflowExpanded}}
-        {{> __tabs-item
-          __tabs-item--id="more"
-          __tabs-item--icon-name="more"
-          __tabs-item--aria-label="Show more tabs"
-          __tabs-item--text="More"
-          __tabs-item--IsOverflow="true"
-          __tabs-item--IsOverflowExpanded="true"
+      {{#> wrapper
+        __tabs-item--id="more"
+        __tabs-item--icon-name="more"
+        __tabs-item--aria-label="Show more tabs"
+        __tabs-item--text="More"
+        __tabs-item--IsOverflow="true"
+        __tabs-item--IsOverflowExpanded=__tabs-list--IsOverflowExpanded
         }}
-      {{else}}
-        {{> __tabs-item
-          __tabs-item--id="more"
-          __tabs-item--icon-name="more"
-          __tabs-item--aria-label="Show more tabs"
-          __tabs-item--text="More"
-          __tabs-item--IsOverflow="true"
-        }}
-      {{/if}}
+        {{> __tabs-item}}
+      {{/wrapper}}
     {{/if}}
   {{/unless}}
 {{/tabs-list}}
