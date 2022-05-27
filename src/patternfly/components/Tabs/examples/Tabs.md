@@ -64,6 +64,13 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
+### Horizontal overflow selected
+```hbs isBeta
+{{#> tabs tabs--id="horizontal-overflow-selected-example"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowSelected="true"}}
+{{/tabs}}
+```
+
 ### Vertical
 ```hbs
 {{#> tabs tabs--id="vertical-example" tabs--modifier="pf-m-vertical"}}
