@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2022.07 release notes (2022-06-03)
 Packages released:
-- [@patternfly/patternfly@v4.196.5](https://www.npmjs.com/package/@patternfly/patternfly/v/4.196.5)
+- [@patternfly/patternfly@v4.196.6](https://www.npmjs.com/package/@patternfly/patternfly/v/4.196.6)
 
 ### Components
 - **Calendar month:** Improved layout of nav controls ([#4862](https://github.com/patternfly/patternfly/pull/4862))
@@ -22,7 +22,7 @@ Packages released:
 ### Other
 - **Theme:**
   * Imported dark theme per component, added new global var ([#4864](https://github.com/patternfly/patternfly/pull/4864))
-  * Update ddark theme default text color ([#4875](https://github.com/patternfly/patternfly/pull/4875))
+  * Update dark theme default text color ([#4875](https://github.com/patternfly/patternfly/pull/4875))
 - **Utilities:** Added font family utilities ([#4868](https://github.com/patternfly/patternfly/pull/4868))
 
 
