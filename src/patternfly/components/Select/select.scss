@@ -421,6 +421,7 @@
 
   // a chip group needs a bottom margin to make some space between the chip group and typeahead input box if it wraps
   .pf-c-chip-group {
+    flex-grow: 1;
     margin-top: var(--pf-c-select__toggle-wrapper--c-chip-group--MarginTop);
     margin-bottom: var(--pf-c-select__toggle-wrapper--c-chip-group--MarginBottom);
   }
