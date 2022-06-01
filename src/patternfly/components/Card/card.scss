@@ -85,6 +85,10 @@
   --pf-c-card--m-display-lg--child--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-card--m-display-lg--c-divider--child--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-card--m-display-lg__title--not--last-child--PaddingBottom: var(--pf-global--spacer--lg);
+  --pf-c-card--m-description-list-group--PaddingTop: var(--pf-c-card--first-child--PaddingTop);
+  --pf-c-card--m-description-list-group--PaddingRight: var(--pf-c-card--child--PaddingRight);
+  --pf-c-card--m-description-list-group--PaddingBottom: var(--pf-c-card--child--PaddingBottom);
+  --pf-c-card--m-description-list-group--PaddingLeft: var(--pf-c-card--child--PaddingLeft);
 
   // Flat
   --pf-c-card--m-flat--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -113,6 +117,10 @@
   flex-direction: column;
   background-color: var(--pf-c-card--BackgroundColor);
   box-shadow: var(--pf-c-card--BoxShadow);
+
+  &.pf-m-description-list-group {
+    padding: var(--pf-c-card--m-description-list-group--PaddingTop) var(--pf-c-card--m-description-list-group--PaddingRight) var(--pf-c-card--m-description-list-group--PaddingBottom) var(--pf-c-card--m-description-list-group--PaddingLeft);
+  }
 
   &.pf-m-hoverable {
     &:hover {

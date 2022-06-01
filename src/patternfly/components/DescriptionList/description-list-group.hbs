@@ -1,6 +1,12 @@
-<div class="pf-c-description-list__group{{#if description-list-group--modifier}} {{description-list-group--modifier}}{{/if}}"
-  {{#if description-list-group--attribute}}
-    {{{description-list-group--attribute}}}
-  {{/if}}>
-  {{> @partial-block}}
-</div>
+{{#if description-list-group--IsCard}}
+  {{#> card card--modifier=(concat 'pf-m-description-list-group ' description-list-group--modifier) card--attribute=description-list-group--attribute}}
+    {{> @partial-block}}
+  {{/card}}
+{{else}}
+  <div class="pf-c-description-list__group{{#if description-list-group--modifier}} {{description-list-group--modifier}}{{/if}}"
+    {{#if description-list-group--attribute}}
+      {{{description-list-group--attribute}}}
+    {{/if}}>
+    {{> @partial-block}}
+  </div>
+{{/if}}

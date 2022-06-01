@@ -117,6 +117,33 @@ Column fill will modify the default placement of description list groups to fill
 {{> description-list__example description-list--title="Default inline grid" description-list--modifier="pf-m-3-col pf-m-inline-grid"}}
 ```
 
+## Display and card variants
+
+### Display variant
+```hbs
+{{> description-list__example description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg" description-list--title="Card DL"}}
+```
+
+### Group as card
+```hbs
+{{> description-list__example description-list--modifier="pf-m-2-col-on-lg" description-list-group--IsCard="true" description-list--title="Card DL"}}
+```
+
+### Display and card variant
+```hbs
+{{> description-list__example description-list-group--IsCard="true" description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg" description-list--title="Card DL"}}
+```
+
+### Display and card variant, 3 col on lg
+```hbs
+{{> description-list__example description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-3-col-on-lg pf-m-display-lg" description-list--title="Card DL"}}
+```
+
+### Display and card variant, horizontal, modified term width
+```hbs
+{{> description-list__example description-list--attribute='style="--pf-c-description-list__term--width: 10ch;"' description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-2-col-on-lg pf-m-display-lg pf-m-horizontal" description-list--title="Card DL"}}
+```
+
 <!-- ## Auto term with is only supported in FF currently
 
 ### Horizontal 2 col auto term width
@@ -151,6 +178,7 @@ Column fill will modify the default placement of description list groups to fill
 | `.pf-c-description-list__text` | `<span>`, `<div>` | Initiates a description list component text element. Use a `<span>` when a child of `.pf-c-description-list__term`. **Required** |
 | `.pf-c-description-list__term-icon` | `<span>` | Initiates a description list component term icon element. |
 | `.pf-m-compact` | `.pf-c-description-list` | Modifies the description list for compact horizontal and vertical spacing. |
+| `.pf-m-display-lg` | `.pf-c-description-list` | Modifies the description list to have large display styling. |
 | `.pf-m-fluid` | `.pf-c-description-list.pf-m-horizontal` | Modifies the description list term width to be fluid. |
 | `.pf-m-help-text` | `.pf-c-description-list__text` | Indicates there is more information available for the description list component term text. |
 | `.pf-m-horizontal{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |

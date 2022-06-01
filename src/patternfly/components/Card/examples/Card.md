@@ -540,3 +540,4 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-toggle-right` | `.pf-c-card__header` | Modifies the expandable card header toggle to be positioned at flex-end. |
 | `.pf-m-full-height` | `.pf-c-card` | Modifies the card to full height of its parent. |
 | `.pf-m-no-offset` | `.pf-c-card__actions` | Removes the negative vertical margins on the actions element intended to align the action content with the card title. |
+| `.pf-m-description-list-group` | `.pf-c-description-list > .pf-c-card` | Creates a card variation of a description list group. This variation is used for the description list only. |

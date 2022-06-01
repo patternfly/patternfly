@@ -33,29 +33,31 @@
       example
     {{/description-list-description}}
   {{/description-list-group}}
-  {{#> description-list-group}}
-    {{#> description-list-term}}
-      {{#> description-list-text}}
-        Pod selector
-      {{/description-list-text}}
-    {{/description-list-term}}
-    {{#> description-list-description}}
-      {{#> button button--modifier="pf-m-link pf-m-inline"}}
-        {{#> button-icon button-icon--modifier="pf-m-start"}}
-          <i class="fas fa-plus-circle" aria-hidden="true"></i>
-        {{/button-icon}}
-        app=MyApp
-      {{/button}}
-    {{/description-list-description}}
-  {{/description-list-group}}
-  {{#> description-list-group}}
-    {{#> description-list-term}}
-      {{#> description-list-text}}
-        Annotation
-      {{/description-list-text}}
-    {{/description-list-term}}
-    {{#> description-list-description}}
-      2 Annotations
-    {{/description-list-description}}
-  {{/description-list-group}}
+  {{#unless description-list__example--IsShort}}
+    {{#> description-list-group}}
+      {{#> description-list-term}}
+        {{#> description-list-text}}
+          Pod selector
+        {{/description-list-text}}
+      {{/description-list-term}}
+      {{#> description-list-description}}
+        {{#> button button--modifier="pf-m-link pf-m-inline"}}
+          {{#> button-icon button-icon--modifier="pf-m-start"}}
+            <i class="fas fa-plus-circle" aria-hidden="true"></i>
+          {{/button-icon}}
+          app=MyApp
+        {{/button}}
+      {{/description-list-description}}
+    {{/description-list-group}}
+    {{#> description-list-group}}
+      {{#> description-list-term}}
+        {{#> description-list-text}}
+          Annotation
+        {{/description-list-text}}
+      {{/description-list-term}}
+      {{#> description-list-description}}
+        2 Annotations
+      {{/description-list-description}}
+    {{/description-list-group}}
+  {{/unless}}
 {{/description-list}}
