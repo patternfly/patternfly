@@ -157,7 +157,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__add--c-button--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Overflow menu toggle icon
-  --pf-c-tabs__item-toggle-icon--Color: var(--pf-global--disabled-color--100);
+  --pf-c-tabs__item-toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-tabs__item-toggle-icon--Transition: .2s ease-in 0s;
   --pf-c-tabs__item-toggle-icon--Rotate: 0;
   --pf-c-tabs__item--m-expanded__toggle-icon--Rotate: 90deg;
