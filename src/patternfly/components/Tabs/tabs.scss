@@ -546,13 +546,13 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-tabs__link-toggle-icon--Color: var(--pf-c-tabs__item--hover--Color);
   }
 
+  &:focus {
+    --pf-c-tabs__link-toggle-icon--Color: var(--pf-c-tabs__item--focus--Color);
+  }
+
   &:active,
   &.pf-m-active {
     --pf-c-tabs__link-toggle-icon--Color: var(--pf-c-tabs__item--active--Color);
-  }
-
-  &:focus {
-    --pf-c-tabs__link-toggle-icon--Color: var(--pf-c-tabs__item--focus--Color);
   }
 }
 
