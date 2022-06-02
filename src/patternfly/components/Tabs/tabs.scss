@@ -558,6 +558,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 }
 
 .pf-c-tabs__link-toggle-icon {
+  align-self: center;
   font-size: var(--pf-c-tabs__link-toggle-icon--FontSize);
   color: var(--pf-c-tabs__link-toggle-icon--Color);
   transition: var(--pf-c-tabs__link-toggle-icon--Transition);
@@ -609,7 +610,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   position: relative;
   display: flex;
   flex: 1;
-  align-items: center;
   padding: var(--pf-c-tabs__link--PaddingTop) var(--pf-c-tabs__link--PaddingRight) var(--pf-c-tabs__link--PaddingBottom) var(--pf-c-tabs__link--PaddingLeft);
   font-size: var(--pf-c-tabs__link--FontSize);
   color: var(--pf-c-tabs__link--Color);
