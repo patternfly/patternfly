@@ -9,11 +9,7 @@
       {{/tabs-item-text}}
     {{/unless}}
     {{#if __tabs-item--IsOverflow}}
-      {{#if __tabs-item--IsOverflowExpanded}}
-        {{> tabs-item-toggle-icon tabs-item-toggle-icon--IsExpanded="true"}}
-      {{else}}
-        {{> tabs-item-toggle-icon}}
-      {{/if}}
+      {{> tabs-item-toggle-icon}}
     {{/if}}
   {{/tabs-link}}
 {{/tabs-item}}
