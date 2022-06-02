@@ -42,6 +42,7 @@
   --pf-c-label-group__textarea--PaddingLeft: var(--pf-global--spacer--xs);
 
   display: inline-flex;
+  align-items: center;
 
   &.pf-m-category {
     padding-top: var(--pf-c-label-group--m-category--PaddingTop);
