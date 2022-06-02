@@ -160,6 +160,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__link-toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-tabs__link-toggle-icon--Transition: .2s ease-in 0s;
   --pf-c-tabs__link-toggle-icon--Rotate: 0;
+  --pf-c-tabs__link-toggle-icon--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-tabs__link--m-expanded__toggle-icon--Color: var(--pf-global--Color--100);
   --pf-c-tabs__link--m-expanded__toggle-icon--Rotate: 90deg;
   --pf-c-tabs__item--hover--Color: var(--pf-global--link--Color--hover);
@@ -557,7 +558,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 }
 
 .pf-c-tabs__link-toggle-icon {
-  font-size: small;
+  font-size: var(--pf-c-tabs__link-toggle-icon--FontSize);
   color: var(--pf-c-tabs__link-toggle-icon--Color);
   transition: var(--pf-c-tabs__link-toggle-icon--Transition);
   transform: rotate(var(--pf-c-tabs__link-toggle-icon--Rotate));
