@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2022.07 release notes (2022-06-03)
 Packages released:
-- [@patternfly/patternfly@v4.196.7](https://www.npmjs.com/package/@patternfly/patternfly/v/4.196.6)
+- [@patternfly/patternfly@v4.196.7](https://www.npmjs.com/package/@patternfly/patternfly/v/4.196.7)
 
 ### Components
 - **Calendar month:** Improved layout of nav controls ([#4862](https://github.com/patternfly/patternfly/pull/4862))
