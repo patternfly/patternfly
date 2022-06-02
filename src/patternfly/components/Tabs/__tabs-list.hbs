@@ -32,18 +32,13 @@ __tabs-list--IsCloseDisabled: bool
     __tabs-item--aria-label="Users"
     __tabs-item--text="Users"
     }}
-  {{#> wrapper
+  {{> __tabs-item
+    __tabs-item--current=(inverse __tabs-list--IsOverflowSelected)
     __tabs-item--id="containers"
     __tabs-item--icon-name="fas fa-box"
     __tabs-item--aria-label="Containers"
     __tabs-item--text="Containers"
     }}
-    {{#if __tabs-list--IsOverflowSelected}}
-      {{> __tabs-item }}
-    {{else}}
-      {{> __tabs-item __tabs-item--current="true"}}
-    {{/if}}
-  {{/wrapper}}
   {{> __tabs-item
     __tabs-item--id="database"
     __tabs-item--icon-name="database"
