@@ -157,9 +157,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__add--c-button--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
 
   // Overflow menu toggle icon
-  --pf-c-tabs__item-toggle-icon--Color: var(--pf-global--Color--200);
-  --pf-c-tabs__item-toggle-icon--Transition: .2s ease-in 0s;
-  --pf-c-tabs__item-toggle-icon--Rotate: 0;
+  --pf-c-tabs__link-toggle-icon--Color: var(--pf-global--Color--200);
+  --pf-c-tabs__link-toggle-icon--Transition: .2s ease-in 0s;
+  --pf-c-tabs__link-toggle-icon--Rotate: 0;
   --pf-c-tabs__link--m-expanded__toggle-icon--Color: var(--pf-global--Color--100);
   --pf-c-tabs__link--m-expanded__toggle-icon--Rotate: 90deg;
   --pf-c-tabs__item--hover--Color: var(--pf-global--link--Color--hover);
@@ -543,24 +543,24 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 
   &:hover {
-    --pf-c-tabs__item-toggle-icon--Color: var(--pf-c-tabs__item--hover--Color);
+    --pf-c-tabs__link-toggle-icon--Color: var(--pf-c-tabs__item--hover--Color);
   }
 
   &:active,
   &.pf-m-active {
-    --pf-c-tabs__item-toggle-icon--Color: var(--pf-c-tabs__item--active--Color);
+    --pf-c-tabs__link-toggle-icon--Color: var(--pf-c-tabs__item--active--Color);
   }
 
   &:focus {
-    --pf-c-tabs__item-toggle-icon--Color: var(--pf-c-tabs__item--focus--Color);
+    --pf-c-tabs__link-toggle-icon--Color: var(--pf-c-tabs__item--focus--Color);
   }
 }
 
-.pf-c-tabs__item-toggle-icon {
+.pf-c-tabs__link-toggle-icon {
   font-size: small;
-  color: var(--pf-c-tabs__item-toggle-icon--Color);
-  transition: var(--pf-c-tabs__item-toggle-icon--Transition);
-  transform: rotate(var(--pf-c-tabs__item-toggle-icon--Rotate));
+  color: var(--pf-c-tabs__link-toggle-icon--Color);
+  transition: var(--pf-c-tabs__link-toggle-icon--Transition);
+  transform: rotate(var(--pf-c-tabs__link-toggle-icon--Rotate));
 }
 
 .pf-c-tabs::before,
@@ -691,8 +691,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 
   &.pf-m-expanded {
-    --pf-c-tabs__item-toggle-icon--Color: var(--pf-c-tabs__link--m-expanded__toggle-icon--Color);
-    --pf-c-tabs__item-toggle-icon--Rotate: var(--pf-c-tabs__link--m-expanded__toggle-icon--Rotate);
+    --pf-c-tabs__link-toggle-icon--Color: var(--pf-c-tabs__link--m-expanded__toggle-icon--Color);
+    --pf-c-tabs__link-toggle-icon--Rotate: var(--pf-c-tabs__link--m-expanded__toggle-icon--Rotate);
   }
 }
 
