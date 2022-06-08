@@ -234,19 +234,6 @@ wrapperTag: div
                   {{> __wizard-form}}
                 {{/wizard-main}}
               {{/wizard-inner-wrap}}
-              {{#> wizard-footer}}
-                {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-                  Next
-                {{/button}}
-                {{#> button button--modifier="pf-m-secondary"}}
-                  Back
-                {{/button}}
-                {{#> wizard-footer-cancel}}
-                  {{#> button button--modifier="pf-m-link"}}
-                    Cancel
-                  {{/button}}
-                {{/wizard-footer-cancel}}
-              {{/wizard-footer}}
             {{/wizard-outer-wrap}}
           {{/drawer-content}}
           {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
@@ -282,6 +269,19 @@ wrapperTag: div
           {{/drawer-panel}}
         {{/drawer-main}}
       {{/drawer}}
+      {{#> wizard-footer}}
+        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+          Next
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Back
+        {{/button}}
+        {{#> wizard-footer-cancel}}
+          {{#> button button--modifier="pf-m-link"}}
+            Cancel
+          {{/button}}
+        {{/wizard-footer-cancel}}
+      {{/wizard-footer}}
     {{/wizard}}
   {{/modal-box}}
 {{/modal-template}}
@@ -498,28 +498,12 @@ wrapperTag: div
                   {{> __wizard-form}}
                 {{/wizard-main}}
               {{/wizard-inner-wrap}}
-              {{#> wizard-footer}}
-                {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-                  Next
-                {{/button}}
-                {{#> button button--modifier="pf-m-secondary"}}
-                  Back
-                {{/button}}
-                {{#> wizard-footer-cancel}}
-                  {{#> button button--modifier="pf-m-link"}}
-                    Cancel
-                  {{/button}}
-                {{/wizard-footer-cancel}}
-              {{/wizard-footer}}
             {{/wizard-outer-wrap}}
           {{/drawer-content}}
           {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
             {{#> drawer-body}}
               {{#> drawer-head}}
                 {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
-                {{#> drawer-actions}}
-                  {{> drawer-close}}
-                {{/drawer-actions}}
               {{/drawer-head}}
             {{/drawer-body}}
             {{#> drawer-body}}
@@ -546,6 +530,19 @@ wrapperTag: div
           {{/drawer-panel}}
         {{/drawer-main}}
       {{/drawer}}
+      {{#> wizard-footer}}
+        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+          Next
+        {{/button}}
+        {{#> button button--modifier="pf-m-secondary"}}
+          Back
+        {{/button}}
+        {{#> wizard-footer-cancel}}
+          {{#> button button--modifier="pf-m-link"}}
+            Cancel
+          {{/button}}
+        {{/wizard-footer-cancel}}
+      {{/wizard-footer}}
     {{/wizard}}
   {{/page-main-wizard}}
 {{/inline}}

@@ -531,6 +531,7 @@
 }
 
 .pf-c-wizard__footer {
+  position: relative;
   z-index: var(--pf-c-wizard__footer--ZIndex);
   display: flex;
   flex-wrap: wrap;
@@ -549,8 +550,26 @@
   // Limit shadow to a child of modal and main-wizard since we can ensure wizard footer is fixed in those usages
   // Make a regular style in a breaking change release
   .pf-c-page__main-wizard &,
-  .pf-c-modal-box & {
+  .pf-c-modal-box &,
+  .pf-c-drawer + & {
     box-shadow: var(--pf-c-wizard__footer--BoxShadow);
+  }
+
+  .pf-c-drawer + & {
+    @media screen and (min-width: $pf-global--breakpoint--lg) {
+      margin-left: calc(var(--pf-c-wizard__outer-wrap--lg--PaddingLeft) - var(--pf-c-wizard__nav--lg--BorderRightWidth));
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(var(--pf-c-wizard__outer-wrap--lg--PaddingLeft) * -1);
+        padding-left: var(--pf-c-wizard__outer-wrap--lg--PaddingLeft);
+        content: "";
+        background-color: var(--pf-c-wizard__outer-wrap--BackgroundColor);
+        border-right: var(--pf-c-wizard__nav--lg--BorderRightWidth) solid var(--pf-c-wizard__nav--lg--BorderRightColor);
+      }
+    }
   }
 }
 
