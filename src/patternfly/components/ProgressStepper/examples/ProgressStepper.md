@@ -76,6 +76,45 @@ cssPrefix: pf-c-progress-stepper
 {{/progress-stepper}}
 ```
 
+###  Display verical, display horizontal responsive
+```hbs
+{{#> progress-stepper progress-stepper--modifier="pf-m-vertical-on-lg pf-m-horizontal-on-2xl"}}
+  {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        First step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the first thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsInProgress="true" progress-stepper-step--IsCurrent="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Second step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the second thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsPending="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Third step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the last thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+{{/progress-stepper}}
+```
+
 ### Center aligned with descriptions
 ```hbs
 {{#> progress-stepper  progress-stepper--IsCenter="true"}}
@@ -381,7 +420,8 @@ Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, and
 | `.progress-stepper__step-title` | `<div>`, `<button>` | Contains the title of the step. **Note:** the step title is a `<button>` when it has `.pf-m-help-text` and is used to trigger a popover with help text. |
 | `.progress-stepper__step-description` | `<div>` | Contains the description of the step. |
 | `.pf-m-center`| `.pf-c-progress-stepper` | Modifies to center each step. |
-| `.pf-m-vertical`| `.pf-c-progress-stepper` | Modifies for vertical orientation. |
+| `.pf-m-vertical{-on-[breakpoint]}`| `.pf-c-progress-stepper` | Modifies progress stepper vertical layout at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-horizontal{-on-[breakpoint]}`| `.pf-c-progress-stepper` | Modifies progress stepper horizontal layout at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-compact`| `.pf-c-progress-stepper` | Modifies for compact styling. |
 | `.pf-m-success`| `.pf-c-progress-stepper__step` | Modifies for success styling. |
 | `.pf-m-warning`| `.pf-c-progress-stepper__step` | Modifies for warning styling. |
