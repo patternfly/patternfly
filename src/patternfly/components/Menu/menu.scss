@@ -241,8 +241,7 @@
 
     > .pf-c-menu__content {
       flex-grow: 1;
-      overflow: visible hidden;
-      overflow-x: hidden;
+      overflow: hidden;
       transition: var(--pf-c-menu--m-drilldown__content--Transition);
     }
 
