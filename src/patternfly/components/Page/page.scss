@@ -1,4 +1,5 @@
 $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+$pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 
 // URL.com/guidelines#layout
 .pf-c-page {
@@ -477,20 +478,6 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
 .pf-c-page__main-subnav {
   flex-shrink: 0;
 
-  &.pf-m-sticky-top {
-    position: sticky;
-    top: 0;
-    z-index: var(--pf-c-page--section--m-sticky-top--ZIndex);
-    box-shadow: var(--pf-c-page--section--m-sticky-top--BoxShadow);
-  }
-
-  &.pf-m-sticky-bottom {
-    position: sticky;
-    bottom: 0;
-    z-index: var(--pf-c-page--section--m-sticky-bottom--ZIndex);
-    box-shadow: var(--pf-c-page--section--m-sticky-bottom--BoxShadow);
-  }
-
   &.pf-m-overflow-scroll {
     position: relative;
     flex-shrink: 1;
@@ -505,6 +492,28 @@ $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl",
   &.pf-m-shadow-top {
     z-index: var(--pf-c-page--section--m-shadow-top--ZIndex);
     box-shadow: var(--pf-c-page--section--m-shadow-top--BoxShadow);
+  }
+
+  // Responsive height modifiers for sticky top/bottom
+  @each $breakpoint, $breakpoint-value in $pf-c-page--height-breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
+
+    @include pf-apply-height-breakpoint($breakpoint) {
+
+      &.pf-m-sticky-top#{$breakpoint-name} {
+        position: sticky;
+        top: 0;
+        z-index: var(--pf-c-page--section--m-sticky-top--ZIndex);
+        box-shadow: var(--pf-c-page--section--m-sticky-top--BoxShadow);
+      }
+
+      &.pf-m-sticky-bottom#{$breakpoint-name} {
+        position: sticky;
+        bottom: 0;
+        z-index: var(--pf-c-page--section--m-sticky-bottom--ZIndex);
+        box-shadow: var(--pf-c-page--section--m-sticky-bottom--BoxShadow);
+      }
+    }
   }
 }
 
