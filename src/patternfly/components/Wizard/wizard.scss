@@ -176,6 +176,11 @@
     --pf-c-wizard__main-body--PaddingLeft: var(--pf-c-wizard__main-body--xl--PaddingLeft);
   }
 
+  // Drawer toggle
+  --pf-c-wizard__drawer-toggle--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-wizard__drawer-toggle--Display: initial;
+  --pf-c-wizard--c-drawer--m-expanded__drawer-toggle--Display: none;
+
   // Footer
   --pf-c-wizard__footer--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-wizard__footer--ZIndex: var(--pf-global--ZIndex--sm);
@@ -223,6 +228,10 @@
       display: none;
       visibility: hidden;
     }
+  }
+
+  .pf-c-drawer.pf-m-expanded {
+    --pf-c-wizard__drawer-toggle--Display: var(--pf-c-wizard--c-drawer--m-expanded__drawer-toggle--Display);
   }
 }
 
@@ -318,6 +327,12 @@
 
 .pf-c-wizard__toggle-icon {
   line-height: var(--pf-c-wizard__toggle-icon--LineHeight);
+}
+
+.pf-c-wizard__drawer-toggle {
+  display: var(--pf-c-wizard__drawer-toggle--Display);
+  float: right;
+  margin-left: var(--pf-c-wizard__drawer-toggle--MarginLeft);
 }
 
 .pf-c-wizard__outer-wrap {

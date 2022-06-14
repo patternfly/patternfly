@@ -218,12 +218,81 @@ import './Wizard.css'
           {{#> wizard-inner-wrap}}
             {{#> wizard-main}}
               {{> wizard-template-nav}}
+              {{> wizard-drawer-toggle wizard-drawer-toggle--attribute='aria-expanded="false"'}}
               {{> __wizard-form}}
             {{/wizard-main}}
           {{/wizard-inner-wrap}}
         {{/wizard-outer-wrap}}
       {{/drawer-content}}
-      {{#> drawer-panel drawer-panel--modifier="pf-m-light-200"}}
+      {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-25"}}
+        {{#> drawer-body}}
+          {{#> drawer-head}}
+            {{#> drawer-actions}}
+              {{> drawer-close}}
+            {{/drawer-actions}}
+            {{#> drawer-header}}
+              drawer-panel
+            {{/drawer-header}}
+          {{/drawer-head}}
+        {{/drawer-body}}
+      {{/drawer-panel}}
+    {{/drawer-main}}
+  {{/drawer}}
+  {{#> wizard-footer}}
+    {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+      Next
+    {{/button}}
+    {{#> button button--modifier="pf-m-secondary"}}
+      Back
+    {{/button}}
+    {{#> wizard-footer-cancel}}
+      {{#> button button--modifier="pf-m-link"}}
+        Cancel
+      {{/button}}
+    {{/wizard-footer-cancel}}
+  {{/wizard-footer}}
+{{/wizard}}
+```
+
+### With drawer, collapsed
+```hbs isFullscreen
+{{#> wizard wizard--id="wizard-with-drawer-collapsed-example"}}
+  {{#> wizard-header}}
+    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{#> wizard-description}}
+      Here is where the description goes
+    {{/wizard-description}}
+  {{/wizard-header}}
+  {{#> wizard-toggle}}
+    {{#> wizard-toggle-list}}
+      {{#> wizard-toggle-list-item}}
+        {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+        Configuration
+        {{> wizard-toggle-separator}}
+      {{/wizard-toggle-list-item}}
+      {{#> wizard-toggle-list-item}}
+        Substep B
+      {{/wizard-toggle-list-item}}
+    {{/wizard-toggle-list}}
+    {{> wizard-toggle-icon}}
+  {{/wizard-toggle}}
+  {{#> drawer drawer--id="wizard-with-drawer-example-drawer" drawer--IsInline="true"}}
+    {{#> drawer-main}}
+      {{#> drawer-content drawer-content--NoBody="true"}}
+        {{#> wizard-outer-wrap}}
+          {{#> wizard-inner-wrap}}
+            {{#> wizard-main}}
+              {{> wizard-template-nav}}
+              {{> wizard-drawer-toggle wizard-drawer-toggle--attribute='aria-expanded="true"'}}
+              {{> __wizard-form}}
+            {{/wizard-main}}
+          {{/wizard-inner-wrap}}
+        {{/wizard-outer-wrap}}
+      {{/drawer-content}}
+      {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-25"}}
         {{#> drawer-body}}
           {{#> drawer-head}}
             {{#> drawer-actions}}
@@ -542,8 +611,8 @@ import './Wizard.css'
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-expanded="true"` | `.pf-c-wizard__toggle` | Indicates that the steps menu is visible. **Required** |
-| `aria-expanded="false"` | `.pf-c-wizard__toggle` | Indicates that the steps menu is hidden. **Required** |
+| `aria-expanded="true"` | `.pf-c-wizard__toggle`, `.pf-c-wizard__drawer-toggle` | Indicates that the steps menu is visible. **Required** |
+| `aria-expanded="false"` | `.pf-c-wizard__toggle`, `.pf-c-wizard__drawer-toggle` | Indicates that the steps menu is hidden. **Required** |
 | `aria-label="close"` | `.pf-c-wizard__toggle-icon` | Gives the close button an accessible name. **Required** |
 | `aria-hidden="true"` | `.pf-c-wizard__toggle-icon`, `.pf-c-wizard__toggle-divider` | Hides the icon from assistive technologies. **Required** |
 | `aria-label="Steps"` | `.pf-c-wizard__nav` | Gives the steps nav element an accessible name. **Required** |
@@ -569,6 +638,7 @@ import './Wizard.css'
 | `.pf-c-wizard__toggle-num` | `<span>` | Initiates the step number. **Required** |
 | `.pf-c-wizard__toggle-separator` | `<i>` | Initiates the separator between steps. |
 | `.pf-c-wizard__toggle-icon` | `<span>` | Initiates the toggle icon wrapper. **Required** |
+| `.pf-c-wizard__drawer-toggle` | `<button>` | Initiates the drawer toggle. **Required** |
 | `.pf-c-wizard__outer-wrap` | `<div>` | Initiates the outer wrapper. **Required** |
 | `.pf-c-wizard__inner-wrap` | `<div>` | Initiates the inner wrapper. **Required** |
 | `.pf-c-wizard__nav` | `<nav>` | Initiates the steps nav. **Required** |

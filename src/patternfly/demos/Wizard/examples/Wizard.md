@@ -231,6 +231,7 @@ wrapperTag: div
               {{#> wizard-inner-wrap}}
                 {{#> wizard-main}}
                   {{> wizard-template-nav}}
+                  {{> wizard-drawer-toggle wizard-drawer-toggle--attribute='aria-expanded="true"'}}
                   {{> __wizard-form}}
                 {{/wizard-main}}
               {{/wizard-inner-wrap}}
@@ -495,6 +496,7 @@ wrapperTag: div
               {{#> wizard-inner-wrap}}
                 {{#> wizard-main}}
                   {{> wizard-template-nav}}
+                  {{> wizard-drawer-toggle wizard-drawer-toggle--attribute='aria-expanded="true"'}}
                   {{> __wizard-form}}
                 {{/wizard-main}}
               {{/wizard-inner-wrap}}
