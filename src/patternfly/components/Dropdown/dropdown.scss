@@ -90,14 +90,18 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
 
   // Split button
-  --pf-c-dropdown--m-expanded__toggle--m-secondary--m-split-button--button--before--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown--m-expanded__toggle--m-secondary--m-split-button--child--before--BorderWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown__toggle--m-secondary--m-split-button--Color: var(--pf-global--primary-color--100);
   --pf-c-dropdown__toggle--m-secondary--m-split-button--hover--before--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--m-secondary--m-split-button--focus--before--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--m-secondary--m-split-button--active--before--BorderWidth: var(--pf-global--BorderWidth--md);
   --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderWidth--base: var(--pf-global--BorderWidth--sm);
   --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderColor--base: var(--pf-global--primary-color--100);
   --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderColor: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderColor--base);
   --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderWidth: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderWidth--base);
   --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--hover--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--focus--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--active--BorderWidth: var(--pf-global--BorderWidth--md);
 
   // Toggle Arrow
   --pf-c-dropdown__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
@@ -228,8 +232,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &.pf-m-expanded {
-    --pf-c-dropdown__toggle--m-split-button--m-primary--child--BackgroundColor: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--m-expanded--BackgroundColor);
-    --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderWidth: var(--pf-c-dropdown--m-expanded__toggle--m-secondary--m-split-button--button--before--BorderWidth);
+    --pf-c-dropdown__toggle--m-split-button--m-primary--child--BackgroundColor: var(--pf-c-dropdown__toggle--m-split-button--m-primary--child--m-expanded--BackgroundColor); // update to --pf-c-dropdown__toggle--m-primary--m-split-button--child--before--BorderWidth at breaking change
+    --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderWidth: var(--pf-c-dropdown--m-expanded__toggle--m-secondary--m-split-button--child--before--BorderWidth);
   }
 }
 
@@ -522,10 +526,16 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   &.pf-m-secondary.pf-m-split-button:not(.pf-m-disabled) {
     --pf-c-dropdown__toggle-button--Color: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--Color);
 
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover {
       --pf-c-dropdown__toggle--m-secondary--hover--before--BorderWidth: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--hover--before--BorderWidth);
+    }
+
+    &:focus {
+      --pf-c-dropdown__toggle--m-secondary--hover--before--BorderWidth: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--focus--before--BorderWidth);
+    }
+
+    &:active {
+      --pf-c-dropdown__toggle--m-secondary--hover--before--BorderWidth: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--active--before--BorderWidth);
     }
 
     > * {
@@ -533,10 +543,16 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
         border: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderWidth) solid var(--pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderColor);
       }
 
-      &:hover,
-      &:focus,
-      &:active {
+      &:hover {
         --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderWidth: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--hover--BorderWidth);
+      }
+
+      &:focus {
+        --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderWidth: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--focus--BorderWidth);
+      }
+
+      &:active {
+        --pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--BorderWidth: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--child--before--active--BorderWidth);
       }
 
       &:first-child::before {
