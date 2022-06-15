@@ -196,8 +196,6 @@
   box-shadow: var(--pf-c-menu--BoxShadow);
 
   .pf-c-menu__content {
-    overflow: visible hidden;
-
     & & {
       overflow: visible;
     }
@@ -243,7 +241,7 @@
 
     > .pf-c-menu__content {
       flex-grow: 1;
-      overflow-x: hidden;
+      overflow: hidden;
       transition: var(--pf-c-menu--m-drilldown__content--Transition);
     }
 
