@@ -505,7 +505,7 @@ import './Card.css'
 
 ## Description list group wrapper card variant
 
-Cards can be used as description list group wrappers. Using cards in this way applies the card body padding directly to the card and enables the use of card modifiers within description list groups.
+Cards can be used as [description list group wrappers](../description-list#description-list-group-wrapper-as-card). Using cards in this way applies the card body padding directly to the card and enables the use of card modifiers within description list groups.
 
 ```hbs
 {{> description-list__example description-list--modifier="pf-m-2-col-on-lg" description-list-group--IsCard="true" description-list--title="Card DL"}}

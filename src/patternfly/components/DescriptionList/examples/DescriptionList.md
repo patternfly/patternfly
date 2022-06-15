@@ -71,7 +71,7 @@ Column fill will modify the default placement of description list groups to fill
 {{> description-list__example description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit"}}
 ```
 
-### Auto-fit, min width modified grid template columns
+### Auto-fit, min width modified, grid template columns
 ```hbs
 {{> description-list__example description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit" description-list--attribute='style="--pf-c-description-list--GridTemplateColumns--min: 200px;"'}}
 ```
@@ -117,12 +117,14 @@ Column fill will modify the default placement of description list groups to fill
 {{> description-list__example description-list--title="Default inline grid" description-list--modifier="pf-m-3-col pf-m-inline-grid"}}
 ```
 
-## Display and card variants
-
 ### Display variant
 ```hbs
 {{> description-list__example description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg" description-list--title="Card DL"}}
 ```
+
+## Card variants
+
+Cards can be used as [description list group wrappers](../card#description-list-group-wrapper-card-variant). Using cards in this way applies the card body padding directly to the card and enables the use of card modifiers within description list groups.
 
 ### Description list group wrapper as card
 ```hbs
