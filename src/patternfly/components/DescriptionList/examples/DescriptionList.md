@@ -16,12 +16,12 @@ cssPrefix: pf-c-description-list
 {{> description-list__example description-list--title="Term help text" description-list-term--TextIsHelp="true"}}
 ```
 
-### Default 2 col
+### Default, two column
 ```hbs
 {{> description-list__example description-list--title="Default 2 column DL" description-list--modifier="pf-m-2-col" description-list--IsLongDescription="true"}}
 ```
 
-### Default 3 col on lg
+### Default, three column on lg breakpoint
 ```hbs
 {{> description-list__example description-list--title="Default 3 column DL" description-list--modifier="pf-m-3-col-on-lg"}}
 ```
@@ -31,12 +31,12 @@ cssPrefix: pf-c-description-list
 {{> description-list__example description-list--title="Horizontal DL" description-list--modifier="pf-m-horizontal"}}
 ```
 
-### Horizontal 2 col
+### Horizontal, two column
 ```hbs
 {{> description-list__example description-list--title="Horizontal 2 column DL" description-list--modifier="pf-m-horizontal pf-m-2-col"}}
 ```
 
-### Horizontal 3 col on lg
+### Horizontal, three column on lg breakpoint
 ```hbs
 {{> description-list__example description-list--title="Horizontal 3 column DL" description-list--modifier="pf-m-horizontal pf-m-3-col-on-lg"}}
 ```
@@ -83,36 +83,36 @@ Column fill will modify the default placement of description list groups to fill
 
 ## Responsive column definitions
 
-### Default responsive columns
+### Default, responsive columns
 ```hbs
 {{> description-list__example description-list--title="Default responsive DL" description-list--modifier="pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
 ```
 
-### Horizontal responsive columns
+### Horizontal, responsive columns
 ```hbs
 {{> description-list__example description-list--title="Horizontal responsive DL columns" description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
 ```
 
-### Responsive horizontal, vertical group layout
+### Responsive, horizontal, vertical group layout
 ```hbs
 {{> description-list__example description-list--title="Horizontal responsive DL groups" description-list--modifier="pf-m-horizontal pf-m-vertical-on-md pf-m-horizontal-on-lg pf-m-vertical-on-xl pf-m-horizontal-on-2xl"}}
 ```
 
 ## Auto-column-width
 
-### Default auto columns width
+### Default, auto columns width
 ```hbs
 {{> description-list__example description-list--title="Auto column width DL" description-list--modifier="pf-m-auto-column-widths pf-m-3-col"}}
 ```
 
-### Horizontal auto column width
+### Horizontal, auto column width
 ```hbs
 {{> description-list__example description-list--title="Horizontal ato-fit DL" description-list--modifier="pf-m-horizontal pf-m-auto-column-widths pf-m-2-col-on-lg"}}
 ```
 
 ## Inline grid
 
-### Default inline grid
+### Default, inline grid
 ```hbs
 {{> description-list__example description-list--title="Default inline grid" description-list--modifier="pf-m-3-col pf-m-inline-grid"}}
 ```
@@ -124,7 +124,7 @@ Column fill will modify the default placement of description list groups to fill
 {{> description-list__example description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg" description-list--title="Card DL"}}
 ```
 
-### Group as card
+### Description list group wrapper as card
 ```hbs
 {{> description-list__example description-list--modifier="pf-m-2-col-on-lg" description-list-group--IsCard="true" description-list--title="Card DL"}}
 ```
@@ -134,7 +134,7 @@ Column fill will modify the default placement of description list groups to fill
 {{> description-list__example description-list-group--IsCard="true" description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg" description-list--title="Card DL"}}
 ```
 
-### Display and card variant, 3 col on lg
+### Display and card variant, three column on lg breakpoint
 ```hbs
 {{> description-list__example description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-3-col-on-lg pf-m-display-lg" description-list--title="Card DL"}}
 ```

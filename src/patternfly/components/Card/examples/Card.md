@@ -503,6 +503,14 @@ import './Card.css'
 {{/card}}
 ```
 
+## Description list group wrapper card variant
+
+Cards can be used as description list group wrappers. Using cards in this way applies the card body padding directly to the card and enables the use of card modifiers within description list groups.
+
+```hbs
+{{> description-list__example description-list--modifier="pf-m-2-col-on-lg" description-list-group--IsCard="true" description-list--title="Card DL"}}
+```
+
 ## Documentation
 ### Overview
 A card is a generic rectangular container that can be used to build other components. Use a default card for regular page content and the compact variation for dashboard or small cards.
