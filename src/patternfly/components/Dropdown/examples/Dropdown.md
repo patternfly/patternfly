@@ -102,6 +102,14 @@ import './Dropdown.css'
 {{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-primary-icon-expanded" dropdown--IsActionButton="true" dropdown--IsExpanded="true" dropdown-menu--HasIcons="true" dropdown-toggle--HasIconButton="true"}}
 ```
 
+### Split button, secondary (action)
+```hbs
+{{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-secondary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-secondary-expanded" dropdown--IsActionButton="true" dropdown--IsExpanded="true" dropdown-toggle--HasActionButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-secondary-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-secondary-icon-expanded" dropdown--IsActionButton="true" dropdown--IsExpanded="true" dropdown-menu--HasIcons="true" dropdown-toggle--HasIconButton="true"}}
+```
+
 ### With groups
 ```hbs
 {{> dropdown dropdown--template--Groups="true" dropdown--id="dropdown-groups" dropdown--IsExpanded="true" dropdown-toggle--text="Groups"}}

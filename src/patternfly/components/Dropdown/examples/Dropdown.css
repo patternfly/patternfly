@@ -43,7 +43,8 @@
 #ws-core-c-dropdown-split-button-checkbox,
 #ws-core-c-dropdown-split-button-action,
 #ws-core-c-dropdown-split-button-primary-checkbox,
-#ws-core-c-dropdown-split-button-primary-action {
+#ws-core-c-dropdown-split-button-primary-action,
+#ws-core-c-dropdown-split-button-secondary-action {
   min-height: 210px;
 }
 
