@@ -3348,6 +3348,7 @@ For sticky columns to function correctly, the parent table's width must be contr
           Visual designers
         {{/table-th}}
       {{/table-tr}}
+      {{> table-tr table-tr--IsBorderRow="true" table-tr--colspan="9"}}
     {{/table-thead}}
 
     {{#> table-tbody table-tbody--modifier="pf-m-expanded" table-tr--index="1"}}
@@ -3492,7 +3493,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 ### Nested column headers, sticky header
 ```hbs
 <div class="pf-c-scroll-inner-wrapper">
-  {{#> table table--id="table-nested-column-headers-sticky-header-example" table--modifier="pf-m-grid-md pf-m-sticky-header" table--grid="true" table--attribute='aria-label="This is a nested column header table example"'}}
+  {{#> table table--id="table-nested-column-headers-sticky-header-example" table--modifier="pf-m-grid-md pf-m-sticky-header" table--grid="true" table--attribute='aria-label="This is a sticky nested column header table example"'}}
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
         {{#> table-th table-th--attribute='scope="col" colspan="3"' table-th--modifier="pf-m-border-right"}}
@@ -3532,7 +3533,7 @@ For sticky columns to function correctly, the parent table's width must be contr
           Destination
         {{/table-th}}
       {{/table-tr}}
-      {{> table-tr table-tr--IsBorderRow="true"}}
+      {{> table-tr table-tr--IsBorderRow="true" table-tr--colspan="9"}}
     {{/table-thead}}
 
     {{#> table-tbody}}
