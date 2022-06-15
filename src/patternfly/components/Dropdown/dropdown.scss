@@ -535,7 +535,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     }
 
     &:active {
-      --pf-c-dropdown__toggle--m-secondary--hover--before--BorderWidth: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--active--before--BorderWidth);
+      --pf-c-dropdown__toggle--m-secondary--active--before--BorderWidth: var(--pf-c-dropdown__toggle--m-secondary--m-split-button--active--before--BorderWidth);
     }
 
     > * {
