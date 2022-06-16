@@ -22,60 +22,20 @@ import './Wizard.css'
   {{/wizard-header}}
   {{#> wizard-toggle}}
     {{#> wizard-toggle-list}}
-        {{#> wizard-toggle-list-item}}
-          {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
-          Configuration
-          {{> wizard-toggle-separator}}
-        {{/wizard-toggle-list-item}}
-        {{#> wizard-toggle-list-item}}
-          Substep B
-        {{/wizard-toggle-list-item}}
-      {{/wizard-toggle-list}}
-      {{> wizard-toggle-icon}}
-    {{/wizard-toggle}}
-    {{#> wizard-outer-wrap}}
-      {{#> wizard-inner-wrap}}
-        {{#> wizard-nav}}
-          {{#> wizard-nav-list}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link}}
-                Information
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
-                Configuration
-              {{/wizard-nav-link}}
-              {{#> wizard-nav-list}}
-                {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link}}
-                    Substep A
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-                {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
-                    Substep B
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-                {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link}}
-                    Substep C
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-              {{/wizard-nav-list}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link}}
-                Additional
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
-                Review
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-          {{/wizard-nav-list}}
-        {{/wizard-nav}}
+      {{#> wizard-toggle-list-item}}
+        {{#> wizard-toggle-num}}2{{/wizard-toggle-num}}
+        Configuration
+        {{> wizard-toggle-separator}}
+      {{/wizard-toggle-list-item}}
+      {{#> wizard-toggle-list-item}}
+        Substep B
+      {{/wizard-toggle-list-item}}
+    {{/wizard-toggle-list}}
+    {{> wizard-toggle-icon}}
+  {{/wizard-toggle}}
+  {{#> wizard-outer-wrap}}
+    {{#> wizard-inner-wrap}}
+      {{> wizard-template-nav}}
       {{#> wizard-main}}
         {{> __wizard-form}}
       {{/wizard-main}}
@@ -124,47 +84,7 @@ import './Wizard.css'
   {{/wizard-toggle}}
   {{#> wizard-outer-wrap}}
     {{#> wizard-inner-wrap}}
-      {{#> wizard-nav}}
-        {{#> wizard-nav-list}}
-          {{#> wizard-nav-item}}
-            {{#> wizard-nav-link}}
-              Information
-            {{/wizard-nav-link}}
-          {{/wizard-nav-item}}
-          {{#> wizard-nav-item}}
-            {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current"}}
-              Configuration
-            {{/wizard-nav-link}}
-            {{#> wizard-nav-list}}
-              {{#> wizard-nav-item}}
-                {{#> wizard-nav-link}}
-                  Substep A
-                {{/wizard-nav-link}}
-              {{/wizard-nav-item}}
-              {{#> wizard-nav-item}}
-                {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
-                  Substep B
-                {{/wizard-nav-link}}
-              {{/wizard-nav-item}}
-              {{#> wizard-nav-item}}
-                {{#> wizard-nav-link}}
-                  Substep C
-                {{/wizard-nav-link}}
-              {{/wizard-nav-item}}
-            {{/wizard-nav-list}}
-          {{/wizard-nav-item}}
-          {{#> wizard-nav-item}}
-            {{#> wizard-nav-link}}
-              Additional
-            {{/wizard-nav-link}}
-          {{/wizard-nav-item}}
-          {{#> wizard-nav-item}}
-            {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
-              Review
-            {{/wizard-nav-link}}
-          {{/wizard-nav-item}}
-        {{/wizard-nav-list}}
-      {{/wizard-nav}}
+      {{> wizard-template-nav}}
       {{#> wizard-main}}
         {{> __wizard-form}}
       {{/wizard-main}}
@@ -284,8 +204,8 @@ import './Wizard.css'
       {{#> drawer-content drawer-content--NoBody="true"}}
         {{#> wizard-outer-wrap}}
           {{#> wizard-inner-wrap}}
+            {{> wizard-template-nav}}
             {{#> wizard-main}}
-              {{> wizard-template-nav}}
               {{> wizard-drawer-toggle wizard-drawer-toggle--attribute='aria-expanded="true"'}}
               {{> __wizard-form}}
             {{/wizard-main}}
@@ -345,51 +265,51 @@ import './Wizard.css'
           Substep B
         {{/wizard-toggle-list-item}}
       {{/wizard-toggle-list}}
-      {{> wizard-toggle-icon}}
-    {{/wizard-toggle}}
-    {{#> wizard-outer-wrap}}
-      {{#> wizard-inner-wrap}}
-        {{#> wizard-nav}}
-          {{#> wizard-nav-list}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
-                Information
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item wizard-nav-item--IsExpandable="true"}}
-              {{#> wizard-nav-link}}
-                Configuration
-              {{/wizard-nav-link}}
-              {{#> wizard-nav-list}}
-                {{#> wizard-nav-item newcontext}}
-                  {{#> wizard-nav-link}}
-                    Substep A
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-                {{#> wizard-nav-item newcontext}}
-                  {{#> wizard-nav-link}}
-                    Substep B
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-                {{#> wizard-nav-item newcontext}}
-                  {{#> wizard-nav-link}}
-                    Substep C
-                  {{/wizard-nav-link}}
-                {{/wizard-nav-item}}
-              {{/wizard-nav-list}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link}}
-                Additional
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-            {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
-                Review
-              {{/wizard-nav-link}}
-            {{/wizard-nav-item}}
-          {{/wizard-nav-list}}
-        {{/wizard-nav}}
+    {{> wizard-toggle-icon}}
+  {{/wizard-toggle}}
+  {{#> wizard-outer-wrap}}
+    {{#> wizard-inner-wrap}}
+      {{#> wizard-nav}}
+        {{#> wizard-nav-list}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+              Information
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item wizard-nav-item--IsExpandable="true"}}
+            {{#> wizard-nav-link}}
+              Configuration
+            {{/wizard-nav-link}}
+            {{#> wizard-nav-list}}
+              {{#> wizard-nav-item newcontext}}
+                {{#> wizard-nav-link}}
+                  Substep A
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+              {{#> wizard-nav-item newcontext}}
+                {{#> wizard-nav-link}}
+                  Substep B
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+              {{#> wizard-nav-item newcontext}}
+                {{#> wizard-nav-link}}
+                  Substep C
+                {{/wizard-nav-link}}
+              {{/wizard-nav-item}}
+            {{/wizard-nav-list}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link}}
+              Additional
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+          {{#> wizard-nav-item}}
+            {{#> wizard-nav-link wizard-nav-link--IsDisabled="true"}}
+              Review
+            {{/wizard-nav-link}}
+          {{/wizard-nav-item}}
+        {{/wizard-nav-list}}
+      {{/wizard-nav}}
       {{#> wizard-main}}
         {{> __wizard-form}}
       {{/wizard-main}}
@@ -611,8 +531,10 @@ import './Wizard.css'
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-expanded="true"` | `.pf-c-wizard__toggle`, `.pf-c-wizard__drawer-toggle` | Indicates that the steps menu is visible. **Required** |
-| `aria-expanded="false"` | `.pf-c-wizard__toggle`, `.pf-c-wizard__drawer-toggle` | Indicates that the steps menu is hidden. **Required** |
+| `aria-expanded="true"` | `.pf-c-wizard__toggle` | Indicates that the steps menu is visible. **Required** |
+| `aria-expanded="false"` | `.pf-c-wizard__toggle` | Indicates that the steps menu is hidden. **Required** |
+| `aria-expanded="true"` | `.pf-c-wizard__drawer-toggle` | Indicates that the drawer is visible. **Required** |
+| `aria-expanded="false"` | `.pf-c-wizard__drawer-toggle` | Indicates that the drawer is hidden. **Required** |
 | `aria-label="close"` | `.pf-c-wizard__toggle-icon` | Gives the close button an accessible name. **Required** |
 | `aria-hidden="true"` | `.pf-c-wizard__toggle-icon`, `.pf-c-wizard__toggle-divider` | Hides the icon from assistive technologies. **Required** |
 | `aria-label="Steps"` | `.pf-c-wizard__nav` | Gives the steps nav element an accessible name. **Required** |
@@ -632,13 +554,13 @@ import './Wizard.css'
 | `.pf-c-wizard__close` | `.pf-c-button.pf-m-plain` | Initiates the close button. **Required** |
 | `.pf-c-wizard__title` | `.pf-c-title.pf-m-3xl` | Initiates the title. **Required** |
 | `.pf-c-wizard__description` | `<div>`, `<p>` | Initiates the description. |
+| `.pf-c-wizard__drawer-toggle` | `<div>` | Initiates the drawer toggle wrapper. |
 | `.pf-c-wizard__toggle` | `<button>` | Initiates the mobile steps menu toggle button. **Required** |
 | `.pf-c-wizard__toggle-list` | `<span>` | Initiates the toggle list. **Required** |
 | `.pf-c-wizard__toggle-list-item` | `<span>` | Initiates a toggle list item. **Required** |
 | `.pf-c-wizard__toggle-num` | `<span>` | Initiates the step number. **Required** |
 | `.pf-c-wizard__toggle-separator` | `<i>` | Initiates the separator between steps. |
 | `.pf-c-wizard__toggle-icon` | `<span>` | Initiates the toggle icon wrapper. **Required** |
-| `.pf-c-wizard__drawer-toggle` | `<button>` | Initiates the drawer toggle. **Required** |
 | `.pf-c-wizard__outer-wrap` | `<div>` | Initiates the outer wrapper. **Required** |
 | `.pf-c-wizard__inner-wrap` | `<div>` | Initiates the inner wrapper. **Required** |
 | `.pf-c-wizard__nav` | `<nav>` | Initiates the steps nav. **Required** |
