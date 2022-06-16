@@ -8,7 +8,6 @@ cssPrefix: pf-c-progress-stepper
 ## Examples
 ### Basic
 ```hbs
-<!-- progress-stepper--IsVertical="true" progress-stepper--IsCenter="true" progress-stepper--IsCompact="true" -->
 {{#> progress-stepper }}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
@@ -76,7 +75,7 @@ cssPrefix: pf-c-progress-stepper
 {{/progress-stepper}}
 ```
 
-###  Display verical, display horizontal responsive
+### Vertical, horizontal responsive
 ```hbs
 {{#> progress-stepper progress-stepper--modifier="pf-m-vertical-on-lg pf-m-horizontal-on-2xl"}}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
@@ -117,7 +116,46 @@ cssPrefix: pf-c-progress-stepper
 
 ### Center aligned with descriptions
 ```hbs
-{{#> progress-stepper  progress-stepper--IsCenter="true"}}
+{{#> progress-stepper progress-stepper--IsCenter="true"}}
+  {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        First step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the first thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsInProgress="true" progress-stepper-step--IsCurrent="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Second step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the second thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsPending="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Third step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the last thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+{{/progress-stepper}}
+```
+
+### Center aligned, vertical
+```hbs
+{{#> progress-stepper progress-stepper--IsCenter="true" progress-stepper--IsVertical="true"}}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
     {{#> progress-stepper-step-main}}
@@ -196,6 +234,162 @@ cssPrefix: pf-c-progress-stepper
 ### Compact
 ```hbs
 {{#> progress-stepper progress-stepper--IsCompact="true"}}
+  {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        First step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the first thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsInProgress="true" progress-stepper-step--IsCurrent="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Second step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the second thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsPending="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Third step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the last thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+{{/progress-stepper}}
+```
+
+### Compact, vertical
+```hbs
+{{#> progress-stepper progress-stepper--IsCompact="true" progress-stepper--IsVertical="true"}}
+  {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        First step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the first thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsInProgress="true" progress-stepper-step--IsCurrent="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Second step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the second thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsPending="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Third step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the last thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+{{/progress-stepper}}
+```
+
+### Compact, vertical responsive
+```hbs
+{{#> progress-stepper progress-stepper--IsCompact="true" progress-stepper--modifier="pf-m-vertical-on-lg pf-m-horizontal-on-xl"}}
+  {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        First step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the first thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsInProgress="true" progress-stepper-step--IsCurrent="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Second step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the second thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsPending="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Third step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the last thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+{{/progress-stepper}}
+```
+
+### Compact, vertical, centered
+```hbs
+{{#> progress-stepper progress-stepper--IsCompact="true" progress-stepper--IsVertical="true" progress-stepper--IsCenter="true"}}
+  {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        First step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the first thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsInProgress="true" progress-stepper-step--IsCurrent="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Second step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the second thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+  {{#> progress-stepper-step progress-stepper-step--IsPending="true"}}
+    {{> progress-stepper-step-icon}}
+    {{#> progress-stepper-step-main}}
+      {{#> progress-stepper-step-title}}
+        Third step
+      {{/progress-stepper-step-title}}
+      {{#> progress-stepper-step-description}}
+        This is the last thing to happen
+      {{/progress-stepper-step-description}}
+    {{/progress-stepper-step-main}}
+  {{/progress-stepper-step}}
+{{/progress-stepper}}
+```
+
+### Compact, centered
+```hbs
+{{#> progress-stepper progress-stepper--IsCompact="true" progress-stepper--IsCenter="true"}}
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
     {{#> progress-stepper-step-main}}
