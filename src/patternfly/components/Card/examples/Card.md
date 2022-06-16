@@ -272,7 +272,7 @@ import './Card.css'
 
 ### Selectable with a hidden input for improved screen reader accessibility
 ```hbs
-{{> card-sr-input }}
+{{> card-sr-input card-sr-input--attribute="aria-label='Checkbox to improve screen reader accessibility of a selectable card'"}}
 {{#> card card--id="card-selectable-with-input-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
   {{#> card-title}}
     Title
