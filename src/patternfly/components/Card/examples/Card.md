@@ -270,6 +270,22 @@ import './Card.css'
 {{/card}}
 ```
 
+### Selectable with a hidden input for improved screen reader accessibility
+```hbs
+{{> card-sr-input card-sr-input--attribute="aria-label='Checkbox to improve screen reader accessibility of a selectable card'"}}
+{{#> card card--id="card-selectable-with-input-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
+  {{#> card-title}}
+    Title
+  {{/card-title}}
+  {{#> card-body}}
+    Body
+  {{/card-body}}
+  {{#> card-footer}}
+    Footer
+  {{/card-footer}}
+{{/card}}
+```
+
 ### Non selectable
 ```hbs
 {{#> card card--id="card-non-selectable-example" card--modifier="pf-m-non-selectable-raised"}}
@@ -509,6 +525,7 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-c-card__actions` | `<div>` | Creates an actions element to be used in the card header. |
 | `.pf-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. |
 | `.pf-c-card__expandable-content` | `<div>` | Creates the expandable card's expandable content. |
+| `.pf-c-card__sr-input` | `<input>` | Creates an input which, when focused, makes a following `.pf-c-card` appear focused. |
 | `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
 | `.pf-m-display-lg` | `.pf-c-card` | Creates a large variation of the card component that involves larger font sizes and spacing. This variation is for marketing use cases. |
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` to not fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
