@@ -384,7 +384,13 @@
   font-size: var(--pf-c-card__footer--FontSize);
 }
 
-input:focus + .pf-c-card {
+input:focus + .pf-c-card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
   border: var(--pf-c-card__input--focus--BorderWidth) solid var(--pf-c-card__input--focus--BorderColor);
 }
 
