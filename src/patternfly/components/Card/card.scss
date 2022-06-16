@@ -384,7 +384,7 @@
   font-size: var(--pf-c-card__footer--FontSize);
 }
 
-input:focus + .pf-c-card::after {
+.pf-c-card__sr-input:focus + .pf-c-card::after {
   position: absolute;
   top: 0;
   right: 0;
