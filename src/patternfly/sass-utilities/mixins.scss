@@ -126,16 +126,13 @@
   border: 0;
 }
 
-@mixin pf-u-screen-reader-full-size {
-  position: absolute;
-  top: 0;
-  left: 0;
+@mixin pf-u-full-size {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+}
+
+@mixin pf-u-absolute {
+  position: absolute;
 }
 
 @mixin pf-u-visible {
