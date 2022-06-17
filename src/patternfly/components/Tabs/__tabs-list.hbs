@@ -4,6 +4,9 @@ Tabs list content options
 ------------------------------------
 __tabs-list--HasIcons: bool
 __tabs-list--IsScrollable: bool
+__tabs-list--IsOverflow: bool
+__tabs-list--IsOverflowExpanded: bool
+__tabs-list--IsOverflowSelected: bool
 __tabs-list--IsShort: bool
 __tabs-list--IsLong: bool
 __tabs-item--NoText: bool
@@ -30,7 +33,7 @@ __tabs-list--IsCloseDisabled: bool
     __tabs-item--text="Users"
     }}
   {{> __tabs-item
-    __tabs-item--current="true"
+    __tabs-item--current=(inverse __tabs-list--IsOverflowSelected)
     __tabs-item--id="containers"
     __tabs-item--icon-name="fas fa-box"
     __tabs-item--aria-label="Containers"
@@ -108,6 +111,19 @@ __tabs-list--IsCloseDisabled: bool
         __tabs-item--aria-label="files"
         __tabs-item--text="Files"
         }}
+    {{/if}}
+    {{#if __tabs-list--IsOverflow}}
+      {{#> wrapper
+        __tabs-item--current=__tabs-list--IsOverflowSelected
+        __tabs-item--id="more"
+        __tabs-item--icon-name="more"
+        __tabs-item--aria-label="Show more tabs"
+        __tabs-item--text="More"
+        __tabs-item--IsOverflow="true"
+        __tabs-item--IsOverflowExpanded=__tabs-list--IsOverflowExpanded
+        }}
+        {{> __tabs-item}}
+      {{/wrapper}}
     {{/if}}
   {{/unless}}
 {{/tabs-list}}

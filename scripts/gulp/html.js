@@ -124,6 +124,9 @@ function watchMD(mdFiles) {
   watcher.on('add', onMDChange);
 }
 
+// Helper which allows a booleans value to be inversed, similar to how notting a variable with ! works in regular JS
+hbsInstance.registerHelper('inverse', bool => bool ? null : 'true');
+
 module.exports = {
   hbsInstance,
   hbsFileMap,
