@@ -1,7 +1,8 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
 @mixin pf-theme-dark-card() {
-  .pf-c-card {
+  .pf-c-card,
+  .pf-c-card.pf-m-non-selectable-raised {
     --pf-c-card--BoxShadow: var(--pf-global--BoxShadow--md);
 
     // Hoverable/selectable raised
@@ -9,5 +10,9 @@
     --pf-c-card--m-selectable-raised--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
     --pf-c-card--m-selectable-raised--focus--BoxShadow: var(--pf-global--BoxShadow--lg);
     --pf-c-card--m-selectable-raised--active--BoxShadow: var(--pf-global--BoxShadow--lg);
+  }
+
+  .pf-c-page__main-section[class*="pf-m-dark-"] .pf-c-card {
+    --pf-c-card--BackgroundColor: var(--pf-global--BackgroundColor--100);
   }
 }
