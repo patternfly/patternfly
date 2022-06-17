@@ -97,7 +97,7 @@
 // Example individual utility:
 // @include pf-utility-builder(flex-fill flex "1 1 auto", $pf-global--breakpoint-list);
 
-@mixin pf-utility-builder($props, $breakpoints: null, $direction:"width") {
+@mixin pf-utility-builder($props, $breakpoints: null, $direction: "width") {
   // if $class-name is a map
 
   // stylelint-disable
