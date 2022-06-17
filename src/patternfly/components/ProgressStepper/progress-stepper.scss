@@ -211,7 +211,7 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
       left: var(--pf-c-progress-stepper--m-center__step-connector--before--Left);
     }
 
-    // Swap borders
+    // If not compact variant, swap borders from connector to main
     &:not(.pf-m-compact) {
       .pf-c-progress-stepper__step:not(:last-of-type) > .pf-c-progress-stepper__step-main::before {
         content: var(--pf-c-progress-stepper--m-center__step-main--before--Content);
