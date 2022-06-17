@@ -691,8 +691,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 }
 
 .pf-c-tabs__link-toggle-icon {
-  align-self: center;
-  padding-top: var(--pf-c-tabs__link-toggle-icon--PaddingTop);
+  align-self: end;
   font-size: var(--pf-c-tabs__link-toggle-icon--FontSize);
   color: var(--pf-c-tabs__link-toggle-icon--Color);
   transition: var(--pf-c-tabs__link-toggle-icon--Transition);
