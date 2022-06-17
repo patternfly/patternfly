@@ -31,7 +31,7 @@ wrapperTag: div
 ```
 
 ### Sticky breadcrumb on medium
-```hbs isFullscreen
+```hbs isFullscreen isBeta
 {{> page-template
       page-template--id="page-demo-sticky-top-breadcrumb"
       page-template-gallery--IsLongGallery="true"
