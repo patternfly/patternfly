@@ -198,6 +198,13 @@
   --pf-global--breakpoint--xl: #{$pf-global--breakpoint--xl};
   --pf-global--breakpoint--2xl: #{$pf-global--breakpoint--2xl};
 
+  // Vertical breakpoints
+  --pf-global--height-breakpoint--sm: #{$pf-global--height-breakpoint--sm};
+  --pf-global--height-breakpoint--md: #{$pf-global--height-breakpoint--md};
+  --pf-global--height-breakpoint--lg: #{$pf-global--height-breakpoint--lg};
+  --pf-global--height-breakpoint--xl: #{$pf-global--height-breakpoint--xl};
+  --pf-global--height-breakpoint--2xl: #{$pf-global--height-breakpoint--2xl};
+
   // Links
   --pf-global--link--Color: #{$pf-global--link--Color};
   --pf-global--link--Color--hover: #{$pf-global--link--Color--hover};

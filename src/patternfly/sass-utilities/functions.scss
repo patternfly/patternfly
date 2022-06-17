@@ -21,11 +21,18 @@
   @return url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 #{$viewBox} 512'%3E%3Cpath fill='%23#{$color}' d='#{$svg-coordinates}'/%3E%3C/svg%3E");
 }
 
-// Return breakpoint value if it exists
+// Return (width) breakpoint value if it exists
 @function pf-breakpoint-value($breakpoint, $breakpoint-map: $pf-global--breakpoint-name-map) {
   $breakpoint-value: if(map-has-key($breakpoint-map, #{$breakpoint}), map-get($breakpoint-map, #{$breakpoint}), false);
 
   @return #{$breakpoint-value};
+}
+
+// Return height breakpoint value if it exists
+@function pf-height-breakpoint-value($height-breakpoint, $height-breakpoint-map: $pf-global--height-breakpoint-name-map) {
+  $height-breakpoint-value: if(map-has-key($height-breakpoint-map, #{$height-breakpoint}), map-get($height-breakpoint-map, #{$height-breakpoint}), false);
+
+  @return #{$height-breakpoint-value};
 }
 
 // Build breakpoint map
@@ -50,6 +57,35 @@
 
       @else {
         $map: map-merge($map, ($breakpoint: map-get($pf-global--breakpoint-name-map, #{$breakpoint})));
+      }
+    }
+  }
+
+  @return $map;
+}
+
+// Build height breakpoint map
+// Based on $pf-global--height-breakpoint-name-map
+@function build-height-breakpoint-map($map-items...) {
+  $map: ();
+
+  @if length($map-items) == 0 {
+    $map: ("base": null);
+    $map: map-merge($map, $pf-global--height-breakpoint-name-map);
+  }
+
+  @else {
+    @each $breakpoint in $map-items {
+      @if not map-has-key($pf-global--height-breakpoint-name-map, $breakpoint) and $breakpoint != "base" {
+        $map: map-merge($map, ("invalid breakpoint #{$breakpoint}": null));
+      }
+
+      @else if $breakpoint == "base" {
+        $map: map-merge($map, ($breakpoint: null));
+      }
+
+      @else {
+        $map: map-merge($map, ($breakpoint: map-get($pf-global--height-breakpoint-name-map, #{$breakpoint})));
       }
     }
   }
