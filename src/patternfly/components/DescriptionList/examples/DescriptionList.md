@@ -131,9 +131,14 @@ Cards can be used as [description list group wrappers](../card#description-list-
 {{> description-list__example description-list--modifier="pf-m-2-col-on-lg" description-list-group--IsCard="true" description-list--title="Card DL"}}
 ```
 
-### Display and card variant
+### Display lg and card variant
 ```hbs
 {{> description-list__example description-list-group--IsCard="true" description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg" description-list--title="Card DL"}}
+```
+
+### Display 2xl and card variant
+```hbs
+{{> description-list__example description-list-group--IsCard="true" description-list--modifier="pf-m-display-2xl pf-m-2-col-on-lg" description-list--title="Card DL"}}
 ```
 
 ### Display and card variant, three column on lg breakpoint
@@ -181,6 +186,7 @@ Cards can be used as [description list group wrappers](../card#description-list-
 | `.pf-c-description-list__term-icon` | `<span>` | Initiates a description list component term icon element. |
 | `.pf-m-compact` | `.pf-c-description-list` | Modifies the description list for compact horizontal and vertical spacing. |
 | `.pf-m-display-lg` | `.pf-c-description-list` | Modifies the description list to have large display styling. |
+| `.pf-m-display-2xl` | `.pf-c-description-list` | Modifies the description list to have 2xl display styling. |
 | `.pf-m-fluid` | `.pf-c-description-list.pf-m-horizontal` | Modifies the description list term width to be fluid. |
 | `.pf-m-help-text` | `.pf-c-description-list__text` | Indicates there is more information available for the description list component term text. |
 | `.pf-m-horizontal{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
