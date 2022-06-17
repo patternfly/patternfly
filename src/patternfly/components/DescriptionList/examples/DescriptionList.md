@@ -16,12 +16,12 @@ cssPrefix: pf-c-description-list
 {{> description-list__example description-list--title="Term help text" description-list-term--TextIsHelp="true"}}
 ```
 
-### Default 2 col
+### Default, two column
 ```hbs
 {{> description-list__example description-list--title="Default 2 column DL" description-list--modifier="pf-m-2-col" description-list--IsLongDescription="true"}}
 ```
 
-### Default 3 col on lg
+### Default, three column on lg breakpoint
 ```hbs
 {{> description-list__example description-list--title="Default 3 column DL" description-list--modifier="pf-m-3-col-on-lg"}}
 ```
@@ -31,12 +31,12 @@ cssPrefix: pf-c-description-list
 {{> description-list__example description-list--title="Horizontal DL" description-list--modifier="pf-m-horizontal"}}
 ```
 
-### Horizontal 2 col
+### Horizontal, two column
 ```hbs
 {{> description-list__example description-list--title="Horizontal 2 column DL" description-list--modifier="pf-m-horizontal pf-m-2-col"}}
 ```
 
-### Horizontal 3 col on lg
+### Horizontal, three column on lg breakpoint
 ```hbs
 {{> description-list__example description-list--title="Horizontal 3 column DL" description-list--modifier="pf-m-horizontal pf-m-3-col-on-lg"}}
 ```
@@ -71,7 +71,7 @@ Column fill will modify the default placement of description list groups to fill
 {{> description-list__example description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit"}}
 ```
 
-### Auto-fit, min width modified grid template columns
+### Auto-fit, min width modified, grid template columns
 ```hbs
 {{> description-list__example description-list--title="Auto-fit" description-list--header="Auto fit" description-list--modifier="pf-m-auto-fit" description-list--attribute='style="--pf-c-description-list--GridTemplateColumns--min: 200px;"'}}
 ```
@@ -83,38 +83,72 @@ Column fill will modify the default placement of description list groups to fill
 
 ## Responsive column definitions
 
-### Default responsive columns
+### Default, responsive columns
 ```hbs
 {{> description-list__example description-list--title="Default responsive DL" description-list--modifier="pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
 ```
 
-### Horizontal responsive columns
+### Horizontal, responsive columns
 ```hbs
 {{> description-list__example description-list--title="Horizontal responsive DL columns" description-list--modifier="pf-m-horizontal pf-m-2-col-on-lg pf-m-3-col-on-xl"}}
 ```
 
-### Responsive horizontal, vertical group layout
+### Responsive, horizontal, vertical group layout
 ```hbs
 {{> description-list__example description-list--title="Horizontal responsive DL groups" description-list--modifier="pf-m-horizontal pf-m-vertical-on-md pf-m-horizontal-on-lg pf-m-vertical-on-xl pf-m-horizontal-on-2xl"}}
 ```
 
 ## Auto-column-width
 
-### Default auto columns width
+### Default, auto columns width
 ```hbs
 {{> description-list__example description-list--title="Auto column width DL" description-list--modifier="pf-m-auto-column-widths pf-m-3-col"}}
 ```
 
-### Horizontal auto column width
+### Horizontal, auto column width
 ```hbs
 {{> description-list__example description-list--title="Horizontal ato-fit DL" description-list--modifier="pf-m-horizontal pf-m-auto-column-widths pf-m-2-col-on-lg"}}
 ```
 
 ## Inline grid
 
-### Default inline grid
+### Default, inline grid
 ```hbs
 {{> description-list__example description-list--title="Default inline grid" description-list--modifier="pf-m-3-col pf-m-inline-grid"}}
+```
+
+### Display variant
+```hbs
+{{> description-list__example description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg" description-list--title="Card DL"}}
+```
+
+## Card variants
+
+Cards can be used as [description list group wrappers](../card#description-list-group-wrapper-card-variant). Using cards in this way applies the card body padding directly to the card and enables the use of card modifiers within description list groups.
+
+### Description list group wrapper as card
+```hbs
+{{> description-list__example description-list--modifier="pf-m-2-col-on-lg" description-list-group--IsCard="true" description-list--title="Card DL"}}
+```
+
+### Display lg and card variant
+```hbs
+{{> description-list__example description-list-group--IsCard="true" description-list--modifier="pf-m-display-lg pf-m-2-col-on-lg" description-list--title="Card DL"}}
+```
+
+### Display 2xl and card variant
+```hbs
+{{> description-list__example description-list-group--IsCard="true" description-list--modifier="pf-m-display-2xl pf-m-2-col-on-lg" description-list--title="Card DL"}}
+```
+
+### Display and card variant, three column on lg breakpoint
+```hbs
+{{> description-list__example description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-3-col-on-lg pf-m-display-lg" description-list--title="Card DL"}}
+```
+
+### Display and card variant, horizontal, modified term width
+```hbs
+{{> description-list__example description-list--attribute='style="--pf-c-description-list__term--width: 10ch;"' description-list__example--IsShort="true" description-list-group--IsCard="true" description-list--modifier="pf-m-2-col-on-lg pf-m-display-lg pf-m-horizontal" description-list--title="Card DL"}}
 ```
 
 <!-- ## Auto term with is only supported in FF currently
@@ -151,6 +185,8 @@ Column fill will modify the default placement of description list groups to fill
 | `.pf-c-description-list__text` | `<span>`, `<div>` | Initiates a description list component text element. Use a `<span>` when a child of `.pf-c-description-list__term`. **Required** |
 | `.pf-c-description-list__term-icon` | `<span>` | Initiates a description list component term icon element. |
 | `.pf-m-compact` | `.pf-c-description-list` | Modifies the description list for compact horizontal and vertical spacing. |
+| `.pf-m-display-lg` | `.pf-c-description-list` | Modifies the description list to have large display styling. |
+| `.pf-m-display-2xl` | `.pf-c-description-list` | Modifies the description list to have 2xl display styling. |
 | `.pf-m-fluid` | `.pf-c-description-list.pf-m-horizontal` | Modifies the description list term width to be fluid. |
 | `.pf-m-help-text` | `.pf-c-description-list__text` | Indicates there is more information available for the description list component term text. |
 | `.pf-m-horizontal{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-description-list` | Modifies the description list component term and description pair to a horizontal layout. |
