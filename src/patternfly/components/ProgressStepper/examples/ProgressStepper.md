@@ -322,7 +322,7 @@ cssPrefix: pf-c-progress-stepper
   {{#> progress-stepper-step progress-stepper-step--IsComplete="true"}}
     {{> progress-stepper-step-icon}}
     {{#> progress-stepper-step-main}}
-      {{#> progress-stepper-step-title progress-stepper-step-title--type="span" progress-stepper-step-title--IsHelp="true"}}
+      {{#> progress-stepper-step-title progress-stepper-step-title--IsHelp="true"}}
         First step
       {{/progress-stepper-step-title}}
     {{/progress-stepper-step-main}}
@@ -330,7 +330,7 @@ cssPrefix: pf-c-progress-stepper
   {{#> progress-stepper-step progress-stepper-step--IsFailure="true"}}
     {{> progress-stepper-step-icon}}
     {{#> progress-stepper-step-main}}
-      {{#> progress-stepper-step-title progress-stepper-step-title--type="span" progress-stepper-step-title--IsHelp="true"}}
+      {{#> progress-stepper-step-title progress-stepper-step-title--IsHelp="true"}}
         Second step
       {{/progress-stepper-step-title}}
     {{/progress-stepper-step-main}}
@@ -338,7 +338,7 @@ cssPrefix: pf-c-progress-stepper
   {{#> progress-stepper-step progress-stepper-step--IsInProgress="true" progress-stepper-step--IsCurrent="true"}}
     {{> progress-stepper-step-icon}}
     {{#> progress-stepper-step-main}}
-      {{#> progress-stepper-step-title progress-stepper-step-title--type="span" progress-stepper-step-title--IsHelp="true"}}
+      {{#> progress-stepper-step-title progress-stepper-step-title--IsHelp="true"}}
         Third step
       {{/progress-stepper-step-title}}
     {{/progress-stepper-step-main}}
@@ -378,7 +378,7 @@ Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, and
 | `.progress-stepper__step-connector` | `<div>` | Creates the connecting line between steps **Required** |
 | `.progress-stepper__step-icon` | `<span>` | Creates the step node and contains the icon designating the type of step. This element is required, but may be empty if no icon is used for the step. **Required** |
 | `.progress-stepper__step-main` | `<div>` | Contains the main text content of the step. This element is required, but may be empty if title and description are not used. **Required** |
-| `.progress-stepper__step-title` | `<div>` | Contains the title of the step. |
+| `.progress-stepper__step-title` | `<div>`, `<button>` | Contains the title of the step. **Note:** the step title is a `<button>` when it has `.pf-m-help-text` and is used to trigger a popover with help text. |
 | `.progress-stepper__step-description` | `<div>` | Contains the description of the step. |
 | `.pf-m-center`| `.pf-c-progress-stepper` | Modifies to center each step. |
 | `.pf-m-vertical`| `.pf-c-progress-stepper` | Modifies for vertical orientation. |
@@ -390,4 +390,3 @@ Steps can be modified with `.pf-m-success`, `.pf-m-warning`, `.pf-m-danger`, and
 | `.pf-m-current`| `.pf-c-progress-stepper__step` | Modifies styling for the current step. |
 | `.pf-m-pending`| `.pf-c-progress-stepper__step` | Modifies styling for pending steps. |
 | `.pf-m-help-text`| `.pf-c-progress-stepper__step-title` | Modifies styling for steps that have help text. |
- 
