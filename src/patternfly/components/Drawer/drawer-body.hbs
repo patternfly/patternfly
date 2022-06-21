@@ -1,4 +1,10 @@
-<div class="pf-c-drawer__body{{#if drawer-body--modifier}} {{drawer-body--modifier}}{{/if}}"
+<div class="pf-c-drawer__body
+  {{~#if drawer-body--HasPadding}}
+    pf-m-paddinng
+  {{/if}}
+  {{~#if drawer-body--modifier}}
+    {{drawer-body--modifier}}
+  {{/if}}"
   {{#if drawer-body--attribute}}
     {{{drawer-body--attribute}}}
   {{/if}}>

@@ -211,46 +211,48 @@ import './Wizard.css'
     {{/wizard-toggle-list}}
     {{> wizard-toggle-icon}}
   {{/wizard-toggle}}
-  {{#> drawer drawer--id="wizard-with-drawer-example-drawer" drawer-panel--IsOpen="true" drawer--IsInline="true"}}
-    {{#> drawer-main}}
-      {{#> drawer-content drawer-content--NoBody="true"}}
-        {{#> wizard-outer-wrap}}
-          {{#> wizard-inner-wrap}}
-            {{> wizard-template-nav}}
-            {{#> wizard-main}}
-              {{> __wizard-drawer-toggle __wizard-drawer-toggle--modifier="pf-u-hidden"}}
-              {{> __wizard-form}}
-            {{/wizard-main}}
-          {{/wizard-inner-wrap}}
-        {{/wizard-outer-wrap}}
-      {{/drawer-content}}
-      {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-25"}}
-        {{#> drawer-body}}
-          {{#> drawer-head}}
-            {{#> drawer-actions}}
-              {{> drawer-close}}
-            {{/drawer-actions}}
-            {{#> drawer-header}}
-              drawer-panel
-            {{/drawer-header}}
-          {{/drawer-head}}
-        {{/drawer-body}}
-      {{/drawer-panel}}
-    {{/drawer-main}}
-  {{/drawer}}
-  {{#> wizard-footer}}
-    {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-      Next
-    {{/button}}
-    {{#> button button--modifier="pf-m-secondary"}}
-      Back
-    {{/button}}
-    {{#> wizard-footer-cancel}}
-      {{#> button button--modifier="pf-m-link"}}
-        Cancel
-      {{/button}}
-    {{/wizard-footer-cancel}}
-  {{/wizard-footer}}
+  {{#> wizard-outer-wrap}}
+    {{#> wizard-inner-wrap}}
+      {{> wizard-template-nav}}
+      {{#> wizard-main wizard-main--HasNoBody="true"}}
+        {{#> drawer drawer--id="wizard-with-drawer-example-drawer" drawer-panel--IsOpen="true" drawer--IsInline="true"}}
+          {{#> drawer-main}}
+            {{#> drawer-content drawer-content--NoBody="true"}}
+              {{#> wizard-main-body}}
+                {{> __wizard-drawer-toggle __wizard-drawer-toggle--modifier="pf-u-hidden"}}
+                {{> __wizard-form}}
+              {{/wizard-main-body}}
+            {{/drawer-content}}
+            {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
+              {{#> drawer-body}}
+                {{#> drawer-head}}
+                  {{#> drawer-actions}}
+                    {{> drawer-close}}
+                  {{/drawer-actions}}
+                  {{#> drawer-header}}
+                    drawer-panel
+                  {{/drawer-header}}
+                {{/drawer-head}}
+              {{/drawer-body}}
+            {{/drawer-panel}}
+          {{/drawer-main}}
+          {{#> wizard-footer}}
+            {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+              Next
+            {{/button}}
+            {{#> button button--modifier="pf-m-secondary"}}
+              Back
+            {{/button}}
+            {{#> wizard-footer-cancel}}
+              {{#> button button--modifier="pf-m-link"}}
+                Cancel
+              {{/button}}
+            {{/wizard-footer-cancel}}
+          {{/wizard-footer}}
+        {{/drawer}}
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+  {{/wizard-outer-wrap}}
 {{/wizard}}
 ```
 
