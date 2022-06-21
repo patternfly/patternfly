@@ -78,6 +78,11 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --pf-c-progress-stepper--m-vertical--m-compact--GridTemplateColumns: 1fr;
   --pf-c-progress-stepper--m-vertical--m-compact__step-connector--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-progress-stepper--m-vertical--m-compact__step-connector--GridRow: auto;
+  --pf-c-progress-stepper--m-vertical--m-compact__step-main--MarginRight: 0;
+
+  // Center, vertical
+  --pf-c-progress-stepper--m-vertical--m-center__step-main--MarginRight: 0;
+  --pf-c-progress-stepper--m-vertical--m-center__step-main--MarginLeft: 0;
 
   // Horizontal
   --pf-c-progress-stepper--m-horizontal--GridAutoFlow: column;
@@ -200,6 +205,8 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     --pf-c-progress-stepper__step-description--MarginRight: var(--pf-c-progress-stepper--m-center__step-description--MarginRight);
     --pf-c-progress-stepper__step-description--MarginLeft: var(--pf-c-progress-stepper--m-center__step-description--MarginLeft);
     --pf-c-progress-stepper__step-description--TextAlign: var(--pf-c-progress-stepper--m-center__step-description--TextAlign);
+    --pf-c-progress-stepper--m-vertical__step-main--MarginRight: var(--pf-c-progress-stepper--m-vertical--m-center__step-main--MarginRight);
+    --pf-c-progress-stepper--m-vertical__step-main--MarginLeft: var(--pf-c-progress-stepper--m-vertical--m-center__step-main--MarginLeft);
 
     grid-template-columns: var(--pf-c-progress-stepper--m-center--GridTemplateColumns);
 
@@ -232,6 +239,8 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     --pf-c-progress-stepper__step--m-current__step-title--FontWeight: var(--pf-c-progress-stepper--m-compact__step-title--FontWeight);
     --pf-c-progress-stepper__pficon--MarginTop: var(--pf-c-progress-stepper--m-compact__pficon--MarginTop);
     --pf-c-progress-stepper__fa-exclamation-triangle--MarginTop: var(--pf-c-progress-stepper--m-compact__fa-exclamation-triangle--MarginTop);
+    --pf-c-progress-stepper--m-vertical__step-main--MarginLeft: var(--pf-c-progress-stepper--m-vertical--m-compact__step-main--MarginLeft);
+    --pf-c-progress-stepper--m-vertical__step-main--MarginRight: var(--pf-c-progress-stepper--m-vertical--m-compact__step-main--MarginRight);
 
     display: inline-grid;
     grid-template-columns: var(--pf-c-progress-stepper--m-compact--GridTemplateColumns);
@@ -363,7 +372,7 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   .pf-c-progress-stepper__step:not(:last-of-type) > &::before {
     position: absolute;
     top: calc(100% + var(--pf-c-progress-stepper__step-main--MarginTop));
-    left: calc(50% - var(--pf-c-progress-stepper__step-connector--before--BorderRightWidth));
+    left: calc(50% - calc(var(--pf-c-progress-stepper__step-connector--before--BorderRightWidth) / 2));
     width: auto;
     height: calc(var(--pf-c-progress-stepper__step-main--MarginTop) + var(--pf-c-progress-stepper__step-main--MarginBottom));
     border-right: var(--pf-c-progress-stepper__step-connector--before--BorderRightWidth) solid var(--pf-c-progress-stepper__step-connector--before--BorderRightColor);
