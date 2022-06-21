@@ -1,5 +1,16 @@
-<{{#if wizard-nav-link--IsLink}}a href="#"{{else}}button{{/if}} class="pf-c-wizard__nav-link{{#if wizard-nav-link--IsDisabled}}{{#if wizard-nav-link--IsLink}} pf-m-disabled{{/if}}{{/if}}{{#if wizard-nav-link--modifier}} {{wizard-nav-link--modifier}}{{/if}}"
-  {{#if wizard-nav-link--IsCurrent}}
+<{{#if wizard-nav-link--IsLink}}a href="#"{{else}}button{{/if}} class="pf-c-wizard__nav-link
+  {{~#if wizard-nav-link--IsCurrent}}
+    pf-m-current
+  {{/if}}
+  {{~#if wizard-nav-link--IsDisabled}}
+    {{~#if wizard-nav-link--IsLink}}
+      pf-m-disabled
+    {{/if}}
+  {{/if}}
+  {{~#if wizard-nav-link--modifier}}
+    {{wizard-nav-link--modifier}}
+  {{/if}}"
+  {{#if wizard-nav-link--IsCurrentPage}}
     aria-current="page"
   {{/if}}
   {{#if wizard-nav-link--IsDisabled}}
