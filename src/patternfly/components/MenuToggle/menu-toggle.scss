@@ -339,9 +339,6 @@
   }
 
   &.pf-m-split-button {
-    --pf-c-menu-toggle__controls--MarginRight: var(--pf-c-menu-toggle__button__controls--MarginRight);
-    --pf-c-menu-toggle__controls--MarginLeft: var(--pf-c-menu-toggle__button__controls--MarginLeft);
-
     padding: 0; // pass padding to children
 
     > * {
