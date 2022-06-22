@@ -13,7 +13,7 @@ Packages released:
   - Fixed dark theme card, light bg contrast ([#4903](https://github.com/patternfly/patternfly/pull/4903))
   - Forced dark theme dark section card bg color ([#4913](https://github.com/patternfly/patternfly/pull/4913))
 - **Description list:** Added display and card mods ([#4895](https://github.com/patternfly/patternfly/pull/4895))
-- **Drawer:** Removed duplicate body elementr on jumplinks demo ([#4910](https://github.com/patternfly/patternfly/pull/4910))
+- **Drawer:** Removed duplicate body element on jumplinks demo ([#4910](https://github.com/patternfly/patternfly/pull/4910))
 - **Dropdown:** Added secondary split toggle ([#4897](https://github.com/patternfly/patternfly/pull/4897))
 - **Masthead:** Fixed default/dynamic viewport based inset when using resize observer ([#4919](https://github.com/patternfly/patternfly/pull/4919))
 - **Menu:** Fixed scrollbar on flyout variant ([#4892](https://github.com/patternfly/patternfly/pull/4892))
