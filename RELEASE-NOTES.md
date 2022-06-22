@@ -5,7 +5,7 @@ releaseNoteTOC: true
 ---
 ## 2022.08 release notes (2022-06-24)
 Packages released:
-- [@patternfly/patternfly@v4.201.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.201.4)
+- [@patternfly/patternfly@v4.202.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.202.1)
 
 ### Components
 - **Card:**
