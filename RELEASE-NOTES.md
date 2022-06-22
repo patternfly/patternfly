@@ -3,6 +3,33 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.08 release notes (2022-06-24)
+Packages released:
+- [@patternfly/patternfly@v4.201.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.201.4)
+
+### Components
+- **Card:**
+  - Added styling to cards when their hidden input is focused ([#4902](https://github.com/patternfly/patternfly/pull/4902))
+  - Fixed dark theme card, light bg contrast ([#4903](https://github.com/patternfly/patternfly/pull/4903))
+  - Forced dark theme dark section card bg color ([#4913](https://github.com/patternfly/patternfly/pull/4913))
+- **Description list:** Added display and card mods ([#4895](https://github.com/patternfly/patternfly/pull/4895))
+- **Drawer:** Removed duplicate body elementr on jumplinks demo ([#4910](https://github.com/patternfly/patternfly/pull/4910))
+- **Dropdown:** Added secondary split toggle ([#4897](https://github.com/patternfly/patternfly/pull/4897))
+- **Masthead:** Fixed default/dynamic viewport based inset when using resize observer ([#4919](https://github.com/patternfly/patternfly/pull/4919))
+- **Menu:** Fixed scrollbar on flyout variant ([#4892](https://github.com/patternfly/patternfly/pull/4892))
+- **Menu toggle:** Updated typeahead variant layout/spacing ([#4750](https://github.com/patternfly/patternfly/pull/4750))
+- **Notification badge:** Fixed documentation links ([#4891](https://github.com/patternfly/patternfly/pull/4891))
+- **Progress stepper:**
+  - Added horizontal/vertical breakpoint support ([#4901](https://github.com/patternfly/patternfly/pull/4901))
+  - Used button for step title help text ([#4912](https://github.com/patternfly/patternfly/pull/4912))
+- **Table:**
+  - Added tr border to sticky nested table header ([#4857](https://github.com/patternfly/patternfly/pull/4857))
+  - Removed bullseye layout in demos ([#4904](https://github.com/patternfly/patternfly/pull/4904))
+- **Tabs:** Added expandable overflow styling ([#4876](https://github.com/patternfly/patternfly/pull/4876))
+- **Theme:** Copied scss files to dist ([#4878](https://github.com/patternfly/patternfly/pull/4878))
+- **Page:** Added height breakpoints for sticky top and bottom modifiers ([#4905](https://github.com/patternfly/patternfly/pull/4905))
+- **Wizard:** Moved footer to sibling of drawer ([#4896](https://github.com/patternfly/patternfly/pull/4896))
+
 ## 2022.07 release notes (2022-06-03)
 Packages released:
 - [@patternfly/patternfly@v4.196.7](https://www.npmjs.com/package/@patternfly/patternfly/v/4.196.7)
