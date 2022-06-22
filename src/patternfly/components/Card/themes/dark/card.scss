@@ -11,8 +11,4 @@
     --pf-c-card--m-selectable-raised--focus--BoxShadow: var(--pf-global--BoxShadow--lg);
     --pf-c-card--m-selectable-raised--active--BoxShadow: var(--pf-global--BoxShadow--lg);
   }
-
-  .pf-c-page__main-section[class*="pf-m-dark-"] .pf-c-card {
-    --pf-c-card--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  }
 }
