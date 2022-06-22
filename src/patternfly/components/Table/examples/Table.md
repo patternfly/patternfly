@@ -3551,6 +3551,10 @@ For sticky columns to function correctly, the parent table's width must be contr
   {{/table}}
 </div>
 ```
+### Accessibility
+| Attribute | Applied to | Outcome |
+| -- | -- | -- |
+| `aria-hidden="true"` | `.pf-m-border-row` |  Hides table row from assistive technologies. **Required** |
 
 ### Nested column header modifier usage
 
