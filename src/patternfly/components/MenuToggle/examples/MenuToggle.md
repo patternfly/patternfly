@@ -344,7 +344,7 @@ import './MenuToggle.css'
     Action
   {{/menu-toggle-button}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
-     {{#> menu-toggle-controls}}
+    {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
     {{/menu-toggle-controls}}
   {{/menu-toggle-button}}
