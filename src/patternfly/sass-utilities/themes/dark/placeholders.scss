@@ -8,6 +8,10 @@
   --pf-global--link--Color--hover: #{$pf-global--link--Color--hover};
   --pf-global--BackgroundColor--100: #{$pf-global--BackgroundColor--100};
 
+  .pf-c-card {
+    --pf-c-card--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  }
+
   .pf-c-button {
     // primary button
     --pf-c-button--m-primary--Color: var(--pf-global--Color--light-100);

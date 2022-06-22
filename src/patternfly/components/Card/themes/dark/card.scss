@@ -1,7 +1,8 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
 @mixin pf-theme-dark-card() {
-  .pf-c-card {
+  .pf-c-card,
+  .pf-c-card.pf-m-non-selectable-raised {
     --pf-c-card--BoxShadow: var(--pf-global--BoxShadow--md);
 
     // Hoverable/selectable raised
