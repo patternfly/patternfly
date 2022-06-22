@@ -26,9 +26,11 @@ Packages released:
   - Added tr border to sticky nested table header ([#4857](https://github.com/patternfly/patternfly/pull/4857))
   - Removed bullseye layout in demos ([#4904](https://github.com/patternfly/patternfly/pull/4904))
 - **Tabs:** Added expandable overflow styling ([#4876](https://github.com/patternfly/patternfly/pull/4876))
-- **Theme:** Copied scss files to dist ([#4878](https://github.com/patternfly/patternfly/pull/4878))
 - **Page:** Added height breakpoints for sticky top and bottom modifiers ([#4905](https://github.com/patternfly/patternfly/pull/4905))
 - **Wizard:** Moved footer to sibling of drawer ([#4896](https://github.com/patternfly/patternfly/pull/4896))
+
+### Other
+- **Build:** Copied theme scss files to dist ([#4878](https://github.com/patternfly/patternfly/pull/4878))
 
 ## 2022.07 release notes (2022-06-03)
 Packages released:
