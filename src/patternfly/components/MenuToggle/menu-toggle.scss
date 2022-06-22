@@ -322,6 +322,9 @@
   }
 
   &.pf-m-typeahead {
+    --pf-c-menu-toggle__controls--PaddingLeft: 0;
+
+    align-items: stretch;
     padding: 0;
 
     .pf-c-menu-toggle__button {
@@ -499,12 +502,6 @@
 .pf-c-menu-toggle__button {
   color: inherit;
   border: 0;
-
-  .pf-c-menu-toggle__controls {
-    padding-left: 0;
-    margin-right: var(--pf-c-menu-toggle__button__controls--MarginRight);
-    margin-left: var(--pf-c-menu-toggle__button__controls--MarginLeft);
-  }
 }
 
 .pf-c-menu-toggle__icon {
