@@ -29,8 +29,6 @@ Packages released:
 - **Page:** Added height breakpoints for sticky top and bottom modifiers ([#4905](https://github.com/patternfly/patternfly/pull/4905))
 - **Wizard:** Moved footer to sibling of drawer ([#4896](https://github.com/patternfly/patternfly/pull/4896))
 
-### Other
-- **Build:** Copied theme scss files to dist ([#4878](https://github.com/patternfly/patternfly/pull/4878))
 
 ## 2022.07 release notes (2022-06-03)
 Packages released:
@@ -52,7 +50,7 @@ Packages released:
 - **Theme:**
   * Imported dark theme per component, added new global var ([#4864](https://github.com/patternfly/patternfly/pull/4864))
   * Updated dark theme default text color ([#4875](https://github.com/patternfly/patternfly/pull/4875))
-  * Updated build process to copy files from new SCSS location ([#4877](https://github.com/patternfly/patternfly/issues/4877))
+  * Updated build process to copy files from new SCSS location ([#4878](https://github.com/patternfly/patternfly/issues/4878))
 - **Utilities:** Added font family utilities ([#4868](https://github.com/patternfly/patternfly/pull/4868))
 
 
