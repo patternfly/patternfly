@@ -130,7 +130,7 @@ import './SearchInput.css'
 {{#> search-input search-input--placeholder="username:admin firstname:joe" search-input--value="username:root firstname:n" search-input--IsAdvancedSearch="true" search-input--IsExpanded="true"}}
   {{#> search-input-menu}}
     {{#> search-input-menu-body}}
-      {{#> form form--id="advanced-search-input-form"}}
+      {{#> form form--id="advanced-search-autocomplete-input-form"}}
         {{#> form-group form-group--id="-username"}}
           {{#> form-group-label}}
             {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}

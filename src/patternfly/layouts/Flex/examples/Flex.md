@@ -701,7 +701,7 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 {{/l-flex}}
 ```
 
-### Ordering
+### Ordering example
 ```hbs
 {{#> l-flex}}
   {{#> l-flex l-flex--modifier="pf-m-spacer-none" l-flex--attribute='style="--pf-l-flex--item--Order: 1;"'}}

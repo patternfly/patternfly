@@ -58,7 +58,7 @@ import './DatePicker.css'
 
 ### Custom width input
 ```hbs
-{{#> date-picker date-picker--id="basic" date-picker--attribute='style="--pf-c-date-picker__input--c-form-control--Width: 220px;"'}}
+{{#> date-picker date-picker--id="custom-width-input" date-picker--attribute='style="--pf-c-date-picker__input--c-form-control--Width: 220px;"'}}
   {{#> input-group}}
     {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="November 20, 2020" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
@@ -70,7 +70,7 @@ import './DatePicker.css'
 
 ### Custom width input based on number of characters
 ```hbs
-{{#> date-picker date-picker--id="basic" date-picker--attribute='style="--pf-c-date-picker__input--c-form-control--width-chars: 17;"'}}
+{{#> date-picker date-picker--id="custom-width-input-based-on-number-of-characters" date-picker--attribute='style="--pf-c-date-picker__input--c-form-control--width-chars: 17;"'}}
   {{#> input-group}}
     {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="November 20, 2020" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}

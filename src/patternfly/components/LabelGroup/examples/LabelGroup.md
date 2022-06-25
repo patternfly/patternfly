@@ -529,7 +529,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 
 ### Static labels, dynamic label group
 ``` hbs
-{{#> label-group label-group--id="static-labels-editable-group-example" label-group--IsEditable="true"}}
+{{#> label-group label-group--id="static-labels-dynamic-label-group-example" label-group--IsEditable="true"}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
@@ -557,7 +557,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 
 ### Mixed labels (static / editable), dynamic label group
 ``` hbs
-{{#> label-group label-group--id="static-labels-editable-group-example" label-group--IsEditable="true"}}
+{{#> label-group label-group--id="mixed-labels-dynamic-label-group-example" label-group--IsEditable="true"}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}

@@ -296,7 +296,7 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ### Expandable compact
 ```hbs
-{{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-expandable" data-list--attribute='aria-label="Expandable data list example"'}}
+{{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-expandable-compact" data-list--attribute='aria-label="Expandable data list example"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}

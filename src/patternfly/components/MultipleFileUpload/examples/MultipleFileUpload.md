@@ -28,17 +28,17 @@ cssPrefix: pf-c-multiple-file-upload
 
 ### File upload status
 ```hbs
-{{> __multiple-file-upload-default multiple-file-upload--HasStatus="true"}}
+{{> __multiple-file-upload-default multiple-file-upload--HasStatus="true" multiple-file-upload--id="multiple-file-upload-status"}}
 ```
 
 ### File upload status expanded
 ```hbs
-{{> __multiple-file-upload-default multiple-file-upload--HasStatus="true" multiple-file-upload-status--IsExpanded="true"}}
+{{> __multiple-file-upload-default multiple-file-upload--HasStatus="true" multiple-file-upload-status--IsExpanded="true" multiple-file-upload--id="multiple-file-upload-status-expanded"}}
 ```
 
 ### Horizontal file upload status expanded
 ```hbs
-{{> __multiple-file-upload-default multiple-file-upload--modifier="pf-m-horizontal" multiple-file-upload--HasStatus="true" multiple-file-upload-status--IsExpanded="true"}}
+{{> __multiple-file-upload-default multiple-file-upload--modifier="pf-m-horizontal" multiple-file-upload--HasStatus="true" multiple-file-upload-status--IsExpanded="true" multiple-file-upload--id="multiple-file-upload-status-horizontal-expanded"}}
 ```
 
 ## Documentation

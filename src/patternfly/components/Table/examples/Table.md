@@ -3446,7 +3446,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 </div>
 ```
 
-### Nested column headers
+### Nested column headers example
 ```hbs
 <div class="pf-c-scroll-inner-wrapper">
   {{#> table table--id="table-nested-column-headers-example" table--grid="true" table--attribute='aria-label="This is a nested column header table example"'}}
