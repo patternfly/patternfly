@@ -69,7 +69,7 @@ function compileSASS(sassFiles) {
 // Helper
 function getDocCSSFiles() {
   const res = [];
-  const fileContents = fs.readFileSync('./patternfly-docs.css.js', 'utf8');
+  const fileContents = fs.readFileSync('./patternfly-docs/patternfly-docs.css.js', 'utf8');
   const regex = /import ['"](.*\/dist\/.*)['"];?/g;
 
   let result;

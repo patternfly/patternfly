@@ -197,7 +197,7 @@
 .pf-c-alert__title {
   grid-area: title;
   font-weight: var(--pf-c-alert__title--FontWeight);
-  color: var(--pf-c-alert__title--Color);
+  color: var(--pf-global--palette--gold-50);
   word-break: break-word;
 
   &.pf-m-truncate {

@@ -22,8 +22,8 @@
     "lint:sass": "stylelint 'src/**/*.scss'",
     "lint:js": "eslint .",
     "precommit": "lint-staged",
-    "screenshots": "rimraf src/generated/**/*.png && theme-patternfly-org screenshots --urlPrefix http://localhost:5000",
-    "serve": "theme-patternfly-org serve public",
+    "screenshots": "rimraf patternfly-docs/generated/**/*.png && pf-docs-framework screenshots --urlPrefix http://localhost:5000",
+    "serve": "pf-docs-framework serve public",
     "start": "gulp develop",
     "test": "npm run a11y",
     "workflows": "node .github/generate-workflows"
@@ -79,13 +79,14 @@
     "stylelint-scss": "^4.0.0",
     "stylelint-value-no-unknown-custom-properties": "^3.0.0",
     "surge": "^0.21.3",
-    "theme-patternfly-org": "0.11.32",
+    "@breakaway/documentation-framework": "1.0.11",
     "unified": "^9.2.0",
     "webpack": "^4.43.0"
   },
   "resolutions": {
     "@babel/preset-env": "7.6.3",
-    "monaco-editor": "0.21.3"
+    "monaco-editor": "0.21.3",
+    "chromedriver": "101.0.0"
   },
   "repository": {
     "type": "git",
