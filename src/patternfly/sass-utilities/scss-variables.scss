@@ -24,6 +24,7 @@ $pf-global--space-size-root: 16 !default; // for spaces
 // Colors
 // Background color
 $pf-global--BackgroundColor--100: $pf-color-white !default;
+$pf-global--BackgroundColor--150: $pf-color-black-100 !default;
 $pf-global--BackgroundColor--200: $pf-color-black-200 !default;
 
 // do not use - background colors for exceptions and defining theme
@@ -166,6 +167,13 @@ $pf-global--breakpoint--lg: 992px !default;
 $pf-global--breakpoint--xl: 1200px !default;
 $pf-global--breakpoint--2xl: 1450px !default;
 
+// Height breakpoints
+$pf-global--height-breakpoint--sm: 0 !default;
+$pf-global--height-breakpoint--md: 40rem !default; // 640px
+$pf-global--height-breakpoint--lg: 48rem !default; // 768px
+$pf-global--height-breakpoint--xl: 60rem !default; // 960px
+$pf-global--height-breakpoint--2xl: 80rem !default; // 1280px
+
 // Borders
 $pf-global--BorderWidth--sm:     1px !default;
 $pf-global--BorderWidth--md:     2px !default;
@@ -282,6 +290,15 @@ $pf-global--breakpoint-name-map: (
   "lg": $pf-global--breakpoint--lg,
   "xl": $pf-global--breakpoint--xl,
   "2xl": $pf-global--breakpoint--2xl
+);
+
+// Global breakpoint name map - used for %pf-hidden-visible
+$pf-global--height-breakpoint-name-map: (
+  "sm": $pf-global--height-breakpoint--sm,
+  "md": $pf-global--height-breakpoint--md,
+  "lg": $pf-global--height-breakpoint--lg,
+  "xl": $pf-global--height-breakpoint--xl,
+  "2xl": $pf-global--height-breakpoint--2xl
 );
 
 // Spacer properties

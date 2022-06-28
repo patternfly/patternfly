@@ -1150,3 +1150,10 @@
     }
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/nav";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-nav;
+}

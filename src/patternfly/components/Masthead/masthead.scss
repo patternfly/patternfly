@@ -156,13 +156,9 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     @media screen and (min-width: $pf-global--breakpoint--md) {
       @include pf-c-masthead--m-display-inline;
     }
-
-    @media screen and (min-width: $pf-global--breakpoint--xl) {
-      --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
-    }
   }
 
-  .pf-c-page:where(.pf-m-breakpoint-xl) & {
+  @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-masthead--inset: var(--pf-c-masthead--xl--inset);
   }
 
@@ -355,3 +351,10 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 }
 // stylelint-enable
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/masthead";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-masthead;
+}

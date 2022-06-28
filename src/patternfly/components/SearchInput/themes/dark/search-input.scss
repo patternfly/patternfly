@@ -1,4 +1,6 @@
-@mixin search-input() {
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-search-input() {
   .pf-c-search-input {
     --pf-c-search-input__text--before--BorderColor: transparent;
     --pf-c-search-input__text--after--BorderBottomColor: var(--pf-global--BorderColor--400);

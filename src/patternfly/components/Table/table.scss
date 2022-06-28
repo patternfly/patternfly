@@ -330,9 +330,15 @@
       border-bottom: 0;
 
       > * {
+        z-index: var(--pf-global--ZIndex--xs); // set z-index here to allow sticky column to override
+      }
+    }
+
+    // standard sticky headers
+    > thead:not(.pf-m-nested-column-header) {
+      > tr > * {
         position: sticky;
         top: 0;
-        z-index: var(--pf-global--ZIndex--xs);
         background: var(--pf-c-table--BackgroundColor);
 
         // stylelint-disable-next-line
@@ -345,6 +351,45 @@
           border-bottom: var(--pf-c-table--border-width--base) solid var(--pf-c-table--BorderColor);
         }
       }
+    }
+
+    // nested column header
+    > .pf-m-nested-column-header {
+      position: sticky;
+      top: 0;
+      z-index: var(--pf-global--ZIndex--xs);
+      background: var(--pf-c-table--BackgroundColor);
+
+      > .pf-m-border-row {
+        height: var(--pf-c-table--border-width--base);
+        background-color: var(--pf-c-table--BorderColor);
+      }
+
+      tr:not(:nth-last-child(2)) {
+        // stylelint-disable max-nesting-depth
+        th,
+        td {
+          &:not([rowspan]) {
+            --pf-c-table--cell--PaddingBottom: var(--pf-c-table--thead--m-nested-column-header--tr--PaddingBottom);
+          }
+        }
+        // stylelint-enable
+      }
+    }
+  }
+
+  &:not(.pf-m-sticky-header) > .pf-m-nested-column-header {
+    tr:not(:last-child) {
+      border-bottom: 0; // hard reset tr borders in nested headers
+
+      // stylelint-disable max-nesting-depth
+      th,
+      td {
+        &:not([rowspan]) {
+          --pf-c-table--cell--PaddingBottom: var(--pf-c-table--thead--m-nested-column-header--tr--PaddingBottom);
+        }
+      }
+      // stylelint-enable
     }
   }
 
@@ -488,16 +533,6 @@
         }
       }
 
-      tr:not(:last-child) {
-        --pf-c-table--border-width--base: 0; // hard reset tr borders in nested headers
-
-        th,
-        td {
-          &:not([rowspan]) {
-            --pf-c-table--cell--PaddingBottom: var(--pf-c-table--thead--m-nested-column-header--tr--PaddingBottom);
-          }
-        }
-      }
     }
     // stylelint-enable
 
@@ -1366,3 +1401,10 @@
   --pf-c-table--cell--Width: 100%;
 }
 // stylelint-enable
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/table";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-table;
+}

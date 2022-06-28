@@ -35,6 +35,43 @@
   }
 }
 
+// Media query used to create responsive classes
+@mixin pf-height-media-query($point) {
+  @if $point == "" or not $point or $point == "base" {
+    @content;
+  }
+
+  @else if $point == "sm" {
+    @media screen and (min-height: $pf-global--height-breakpoint--sm) {
+      @content;
+    }
+  }
+
+  @else if $point == "md" {
+    @media screen and (min-height: $pf-global--height-breakpoint--md) {
+      @content;
+    }
+  }
+
+  @else if $point == "lg" {
+    @media screen and (min-height: $pf-global--height-breakpoint--lg) {
+      @content;
+    }
+  }
+
+  @else if $point == "xl" {
+    @media screen and (min-height: $pf-global--height-breakpoint--xl) {
+      @content;
+    }
+  }
+
+  @else if $point == "2xl" {
+    @media screen and (min-height: $pf-global--height-breakpoint--2xl) {
+      @content;
+    }
+  }
+}
+
 // Create single prop / value classes, optionally add responsive suffix
 // @group mixins
 // @moduleType mixin
@@ -53,13 +90,14 @@
 
 // non-responsive, base only                @include pf-utility-builder($sass-map)
 // responsive, including all breakpoints    @include pf-utility-builder($sass-map, $pf-global--breakpoint-list)
+// responsive height breakpoints            @include pf-utility-builder($sass-map, $pf-global--height-breakpoint-list, 'height')
 
 // ## Passing individual utilities values
 // ===============================================================================================
 // Example individual utility:
 // @include pf-utility-builder(flex-fill flex "1 1 auto", $pf-global--breakpoint-list);
 
-@mixin pf-utility-builder($props, $breakpoints: null) {
+@mixin pf-utility-builder($props, $breakpoints: null, $direction: "width") {
   // if $class-name is a map
 
   // stylelint-disable
@@ -78,13 +116,27 @@
       @each $breakpoint in $breakpoints {
         $suffix: -on-#{$breakpoint};
 
-        @include pf-media-query($breakpoint) {
-          @each $class, $val in $props {
-            $property: nth($val, 1);
-            $value: #{nth($val, 2) !important};
+        @if $direction == 'height' {
+          @include pf-height-media-query($breakpoint) {
+            @each $class, $val in $props {
+              $property: nth($val, 1);
+              $value: #{nth($val, 2) !important};
 
-            .pf-u-#{$class}#{$suffix} {
-              #{$property}: #{$value};
+              .pf-u-#{$class}#{$suffix}-height {
+                #{$property}: #{$value};
+              }
+            }
+          }
+        }
+        @else if $direction == 'width' {
+          @include pf-media-query($breakpoint) {
+            @each $class, $val in $props {
+              $property: nth($val, 1);
+              $value: #{nth($val, 2) !important};
+
+              .pf-u-#{$class}#{$suffix} {
+                #{$property}: #{$value};
+              }
             }
           }
         }
@@ -114,6 +166,7 @@
     }
   }
 }
+
 // stylelint-enable
 
 @mixin pf-u-screen-reader {
@@ -198,6 +251,21 @@
   }
 }
 
+// Apply height media query if value is passed
+@mixin pf-apply-height-breakpoint($breakpoint) {
+  @if ($breakpoint == "null" or $breakpoint == "base" or $breakpoint == "") {
+    @content;
+  }
+
+  @else {
+    $breakpoint: pf-height-breakpoint-value($breakpoint);
+
+    @media (min-height: $breakpoint) {
+      @content;
+    }
+  }
+}
+
 @mixin pf-emit-properties($map) {
   @each $prop, $value in $map {
     #{$value}: #{$prop};
@@ -252,5 +320,12 @@
         #{$prop}: #{$variable-list};
       }
     }
+  }
+}
+
+// Dark theme style block
+@mixin pf-theme-dark($pf-theme-dark-class: ".pf-theme-dark", $pf-theme-dark-prefix: "") {
+  #{$pf-theme-dark-prefix}:where(#{$pf-theme-dark-class}) {
+    @content;
   }
 }

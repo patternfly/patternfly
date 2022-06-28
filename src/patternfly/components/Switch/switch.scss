@@ -170,3 +170,10 @@
   color: var(--pf-c-switch__label--Color);
   vertical-align: top;
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/switch";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-switch;
+}

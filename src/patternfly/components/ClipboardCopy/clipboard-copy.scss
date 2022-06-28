@@ -106,3 +106,10 @@
     --pf-c-button--PaddingLeft: var(--pf-c-clipboard-copy__actions-item--button--PaddingLeft);
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/clipboard-copy";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-clipboard-copy;
+}

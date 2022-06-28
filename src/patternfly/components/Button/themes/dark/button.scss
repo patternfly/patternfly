@@ -1,4 +1,6 @@
-@mixin button() {
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-button() {
   .pf-c-button {
     --pf-c-button--disabled--Color: var(--pf-global--disabled-color--300);
     --pf-c-button--m-primary--BackgroundColor: var(--pf-global--primary-color--300); // should blue-400 be a primary-color?

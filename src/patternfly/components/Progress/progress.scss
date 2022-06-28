@@ -200,3 +200,10 @@
   height: var(--pf-c-progress__indicator--Height);
   background-color: var(--pf-c-progress__indicator--BackgroundColor);
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/progress";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-progress;
+}

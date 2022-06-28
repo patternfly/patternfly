@@ -3,7 +3,11 @@
   {{#if wizard-main--attribute}}
     {{{wizard-main--attribute}}}
   {{/if}}>
-  {{#> wizard-main-body}}
-    {{> @partial-block}}
-  {{/wizard-main-body}}
+  {{#if wizard-main--HasNoBody}}
+      {{> @partial-block}}
+  {{else}}
+    {{#> wizard-main-body}}
+      {{> @partial-block}}
+    {{/wizard-main-body}}
+  {{/if}}
 </{{#if wizard-main--type}}{{wizard-main--type}}{{else}}main{{/if}}>

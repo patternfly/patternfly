@@ -206,3 +206,10 @@
 .pf-c-search-input__menu-item-text {
   flex-grow: 1;
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/search-input";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-search-input;
+}

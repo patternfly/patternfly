@@ -216,3 +216,10 @@
     }
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/modal-box";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-modal-box;
+}

@@ -57,3 +57,10 @@
     transform: translateY(var(--pf-c-date-picker--m-top__calendar--TranslateY));
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/date-picker";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-date-picker;
+}

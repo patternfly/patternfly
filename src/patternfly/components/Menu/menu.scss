@@ -196,8 +196,6 @@
   box-shadow: var(--pf-c-menu--BoxShadow);
 
   .pf-c-menu__content {
-    overflow: visible hidden;
-
     & & {
       overflow: visible;
     }
@@ -243,7 +241,7 @@
 
     > .pf-c-menu__content {
       flex-grow: 1;
-      overflow-x: hidden;
+      overflow: hidden;
       transition: var(--pf-c-menu--m-drilldown__content--Transition);
     }
 
@@ -741,4 +739,11 @@
     border-top: var(--pf-c-menu__footer--after--BorderTopWidth) solid var(--pf-c-menu__footer--after--BorderTopColor);
     border-bottom: var(--pf-c-menu__footer--after--BorderBottomWidth) solid var(--pf-c-menu__footer--after--BorderBottomColor);
   }
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/menu";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-menu;
 }

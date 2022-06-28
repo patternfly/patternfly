@@ -30,6 +30,15 @@ wrapperTag: div
 }}
 ```
 
+### Sticky breadcrumb on medium
+```hbs isFullscreen isBeta
+{{> page-template
+      page-template--id="page-demo-sticky-top-breadcrumb"
+      page-template-gallery--IsLongGallery="true"
+      page-template-breadcrumb--modifier="pf-m-sticky-top-on-md-height"
+}}
+```
+
 ### Sticky section group
 ```hbs isFullscreen
 {{> page-template

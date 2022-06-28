@@ -100,9 +100,9 @@ import './NotificationBadge.css'
 
 ### Overview
 
-Always add a modifier class. Never use the class `.pf-c-notification-badge` on its own. This component is designed to be used within a dark component such as the [masthead](../masthead).
+Always add a modifier class. Never use the class `.pf-c-notification-badge` on its own. This component is designed to be used within a dark component such as the [masthead](/components/masthead).
 
-Note: The [page component](../page) currently handles the selected state styling of the notification badge using the page header tools item styling. If this component is used elsewhere, custom styling may be needed to correctly indicate the selected state.
+Note: The [page component](/components/page) currently handles the selected state styling of the notification badge using the page header tools item styling. If this component is used elsewhere, custom styling may be needed to correctly indicate the selected state.
 
 ### Accessibility
 

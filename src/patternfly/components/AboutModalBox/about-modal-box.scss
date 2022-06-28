@@ -254,3 +254,10 @@
     grid-area: hero;
   }
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/about-modal-box";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-about-modal-box;
+}

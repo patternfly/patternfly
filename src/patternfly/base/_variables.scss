@@ -85,6 +85,7 @@
 
   // Background color
   --pf-global--BackgroundColor--100: #{$pf-global--BackgroundColor--100};
+  --pf-global--BackgroundColor--150: #{$pf-global--BackgroundColor--150};
   --pf-global--BackgroundColor--200: #{$pf-global--BackgroundColor--200};
   --pf-global--BackgroundColor--light-100: #{$pf-global--BackgroundColor--light-100};
   --pf-global--BackgroundColor--light-200: #{$pf-global--BackgroundColor--light-200};
@@ -197,6 +198,13 @@
   --pf-global--breakpoint--xl: #{$pf-global--breakpoint--xl};
   --pf-global--breakpoint--2xl: #{$pf-global--breakpoint--2xl};
 
+  // Vertical breakpoints
+  --pf-global--height-breakpoint--sm: #{$pf-global--height-breakpoint--sm};
+  --pf-global--height-breakpoint--md: #{$pf-global--height-breakpoint--md};
+  --pf-global--height-breakpoint--lg: #{$pf-global--height-breakpoint--lg};
+  --pf-global--height-breakpoint--xl: #{$pf-global--height-breakpoint--xl};
+  --pf-global--height-breakpoint--2xl: #{$pf-global--height-breakpoint--2xl};
+
   // Links
   --pf-global--link--Color: #{$pf-global--link--Color};
   --pf-global--link--Color--hover: #{$pf-global--link--Color--hover};
@@ -306,4 +314,11 @@
   --pf-global--FontFamily--sans-serif: var(--pf-global--FontFamily--redhatVF--sans-serif);
   --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--redhatVF--heading--sans-serif);
   --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--redhatVF--monospace);
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "./themes/dark/variables";
+
+@include pf-theme-dark($pf-theme-dark-prefix: ":root") {
+  @include _variables;
 }

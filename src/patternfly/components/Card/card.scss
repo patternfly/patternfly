@@ -105,6 +105,10 @@
   --pf-c-card__header--m-toggle-right--toggle--MarginLeft: var(--pf-global--spacer--xs);
   --pf-c-card__header--m-toggle-right--actions--MarginRight: 0;
 
+  // Card input
+  --pf-c-card__input--focus--BorderWidth: var(--pf-global--BorderWidth--md);
+  --pf-c-card__input--focus--BorderColor: var(--pf-global--primary-color--100);
+
   display: flex;
   flex-direction: column;
   background-color: var(--pf-c-card--BackgroundColor);
@@ -380,9 +384,26 @@
   font-size: var(--pf-c-card__footer--FontSize);
 }
 
+.pf-c-card__sr-input:focus + .pf-c-card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  border: var(--pf-c-card__input--focus--BorderWidth) solid var(--pf-c-card__input--focus--BorderColor);
+}
+
 // RedHat Font overrides
 @include pf-m-overpass-font {
   .pf-c-card .pf-c-card__title {
     font-weight: var(--pf-global--FontWeight--normal);
   }
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/card";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-card;
 }

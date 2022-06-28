@@ -11,10 +11,10 @@
   --pf-c-calendar-month__header-year--Width: 8ch;
   --pf-c-calendar-month__header-nav-control--MarginRight: 0;
   --pf-c-calendar-month__header-nav-control--MarginLeft: 0;
-  --pf-c-calendar-month__header-nav-control--m-prev-month--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-calendar-month__header-nav-control--m-prev-month--MarginLeft: calc(var(--pf-global--spacer--md) * -1);
-  --pf-c-calendar-month__header-nav-control--m-next-month--MarginRight: calc(var(--pf-global--spacer--md) * -1);
-  --pf-c-calendar-month__header-nav-control--m-next-month--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-calendar-month__header-nav-control--m-prev-month--MarginRight: 0; // remove in breaking change
+  --pf-c-calendar-month__header-nav-control--m-prev-month--MarginLeft: 0; // remove in breaking change
+  --pf-c-calendar-month__header-nav-control--m-next-month--MarginRight: 0; // remove in breaking change
+  --pf-c-calendar-month__header-nav-control--m-next-month--MarginLeft: 0; // remove in breaking change
 
   // week days thead
   --pf-c-calendar-month__days--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
@@ -219,4 +219,11 @@
     --pf-c-calendar-month__date--Color: var(--pf-c-calendar-month__date--disabled--Color);
     --pf-c-calendar-month__date--hover--focus--BorderColor: transparent;
   }
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/calendar-month";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-calendar-month;
 }

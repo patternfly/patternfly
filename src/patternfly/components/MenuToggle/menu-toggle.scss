@@ -91,8 +91,10 @@
   // Count
   --pf-c-menu-toggle__count--MarginLeft: var(--pf-global--spacer--sm);
 
-  // Controls
+  // Controls -- update element/vars to "control" in breaking change
   --pf-c-menu-toggle__controls--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-menu-toggle__controls--MarginLeft: auto;
+  --pf-c-menu-toggle__controls--MarginRight: 0;
 
   // Toggle icon
   --pf-c-menu-toggle__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
@@ -151,10 +153,8 @@
   --pf-c-menu-toggle__button__controls--MarginLeft: var(--pf-global--spacer--sm);
 
   // Typeahead
-  --pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginTop: calc(var(--pf-c-menu-toggle--PaddingTop) * -1);
-  --pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginRight: calc(var(--pf-c-menu-toggle--PaddingRight) * -1);
-  --pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginBottom: calc(var(--pf-c-menu-toggle--PaddingBottom) * -1);
-  --pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginLeft: calc(var(--pf-c-menu-toggle--PaddingLeft) * -1);
+  --pf-c-menu-toggle--m-typeahead__controls--MarginRight: var(--pf-global--spacer--md);
+  --pf-c-menu-toggle--m-typeahead__controls--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-menu-toggle--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight: var(--pf-global--spacer--sm);
 
   position: relative;
@@ -324,17 +324,21 @@
   }
 
   &.pf-m-typeahead {
+    --pf-c-menu-toggle__button__controls--MarginRight: var(--pf-c-menu-toggle--m-typeahead__controls--MarginRight);
+    --pf-c-menu-toggle__button__controls--MarginLeft: var(--pf-c-menu-toggle--m-typeahead__controls--MarginLeft);
+
+    align-items: stretch;
+    padding: 0;
+
     .pf-c-text-input-group {
       --pf-c-text-input-group__utilities--c-button--PaddingRight: var(--pf-c-menu-toggle--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight);
+      --pf-c-text-input-group__utilities--MarginRight: 0;
 
       flex: 1;
-      margin: var(--pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginTop) var(--pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginRight) var(--pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginBottom) var(--pf-c-menu-toggle--m-typeahead--c-text-input-group--MarginLeft);
     }
   }
 
   &.pf-m-split-button {
-    --pf-c-menu-toggle__toggle-icon--MarginRight: 0;
-
     padding: 0; // pass padding to children
 
     > * {
@@ -492,14 +496,12 @@
 }
 
 .pf-c-menu-toggle__button {
+  --pf-c-menu-toggle__controls--PaddingLeft: 0;
+  --pf-c-menu-toggle__controls--MarginRight: var(--pf-c-menu-toggle__button__controls--MarginRight);
+  --pf-c-menu-toggle__controls--MarginLeft: var(--pf-c-menu-toggle__button__controls--MarginLeft);
+
   color: inherit;
   border: 0;
-
-  .pf-c-menu-toggle__controls {
-    padding-left: 0;
-    margin-right: var(--pf-c-menu-toggle__button__controls--MarginRight);
-    margin-left: var(--pf-c-menu-toggle__button__controls--MarginLeft);
-  }
 }
 
 .pf-c-menu-toggle__icon {
@@ -524,10 +526,18 @@
 
 .pf-c-menu-toggle__controls {
   padding-left: var(--pf-c-menu-toggle__controls--PaddingLeft);
-  margin-left: auto;
+  margin-right: var(--pf-c-menu-toggle__controls--MarginRight);
+  margin-left: var(--pf-c-menu-toggle__controls--MarginLeft);
 }
 
 .pf-c-menu-toggle__toggle-icon {
   margin-right: var(--pf-c-menu-toggle__toggle-icon--MarginRight);
   color: var(--pf-c-menu-toggle__toggle-icon--Color, inherit);
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/menu-toggle";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-menu-toggle;
 }

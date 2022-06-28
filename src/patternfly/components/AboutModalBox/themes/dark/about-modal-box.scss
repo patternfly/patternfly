@@ -1,9 +1,7 @@
-@mixin about-modal-box() {
-  .pf-c-about-modal-box {
-    --pf-c-accordion__toggle--hover--BackgroundColor: var(--pf-global--BackgroundColor--300);
-    --pf-c-accordion__toggle--focus--BackgroundColor: var(--pf-global--BackgroundColor--300);
-    --pf-c-accordion__toggle--active--BackgroundColor: var(--pf-global--BackgroundColor--300);
+@import "../../../../sass-utilities/themes/dark/all";
 
-    @include pf-t-dark();
+@mixin pf-theme-dark-about-modal-box() {
+  .pf-c-about-modal-box {
+    @include pf-theme-dark--t-dark;
   }
 }

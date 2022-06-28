@@ -531,6 +531,7 @@
 }
 
 .pf-c-wizard__footer {
+  position: relative;
   z-index: var(--pf-c-wizard__footer--ZIndex);
   display: flex;
   flex-wrap: wrap;
@@ -549,11 +550,19 @@
   // Limit shadow to a child of modal and main-wizard since we can ensure wizard footer is fixed in those usages
   // Make a regular style in a breaking change release
   .pf-c-page__main-wizard &,
-  .pf-c-modal-box & {
+  .pf-c-modal-box &,
+  .pf-c-drawer > & {
     box-shadow: var(--pf-c-wizard__footer--BoxShadow);
   }
 }
 
 .pf-c-wizard__footer-cancel {
   margin-left: var(--pf-c-wizard__footer-cancel--MarginLeft);
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/wizard";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-wizard;
 }

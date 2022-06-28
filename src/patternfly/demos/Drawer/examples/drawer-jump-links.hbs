@@ -5,22 +5,20 @@
 {{#*inline "page-template-main-content"}}
   {{#> drawer drawer--id=(concat page-template--id '-drawer') jump-links-template--id=(concat page-template--id '-jump-links')}}
     {{#> drawer-main}}
-      {{#> drawer-content drawer-content--attribute=(concat 'id="' drawer--id '-scrollable-container"')}}
-        {{#> drawer-body drawer-body--modifier="pf-m-padding"}}
-          {{#> sidebar}}
-            {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
-              {{#> jump-links jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md"}}
-                {{#> jump-links-label}}
-                  Jump to section
-                {{/jump-links-label}}
-                {{> jump-links-template-list}}
-              {{/jump-links}}
-            {{/sidebar-panel}}
-            {{#> sidebar-content}}
-              {{> jump-links-template-content}}
-            {{/sidebar-content}}
-          {{/sidebar}}
-        {{/drawer-body}}
+      {{#> drawer-content drawer-content--attribute=(concat 'id="' drawer--id '-scrollable-container"') drawer-body--modifier="pf-m-padding"}}
+        {{#> sidebar}}
+          {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
+            {{#> jump-links jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md"}}
+              {{#> jump-links-label}}
+                Jump to section
+              {{/jump-links-label}}
+              {{> jump-links-template-list}}
+            {{/jump-links}}
+          {{/sidebar-panel}}
+          {{#> sidebar-content}}
+            {{> jump-links-template-content}}
+          {{/sidebar-content}}
+        {{/sidebar}}
       {{/drawer-content}}
       {{> drawer-example-panel}}
     {{/drawer-main}}

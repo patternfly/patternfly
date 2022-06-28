@@ -53,7 +53,7 @@ import './Wizard.css'
                   {{/wizard-nav-link}}
                 {{/wizard-nav-item}}
                 {{#> wizard-nav-item}}
-                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
                     Substep B
                   {{/wizard-nav-link}}
                 {{/wizard-nav-item}}
@@ -142,7 +142,7 @@ import './Wizard.css'
                 {{/wizard-nav-link}}
               {{/wizard-nav-item}}
               {{#> wizard-nav-item}}
-                {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+                {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
                   Substep B
                 {{/wizard-nav-link}}
               {{/wizard-nav-item}}
@@ -211,16 +211,31 @@ import './Wizard.css'
     {{/wizard-toggle-list}}
     {{> wizard-toggle-icon}}
   {{/wizard-toggle}}
-  {{#> drawer drawer--id="wizard-with-drawer-example-drawer" drawer-panel--IsOpen="true" drawer--IsInline="true"}}
-    {{#> drawer-main}}
-      {{#> drawer-content drawer-content--NoBody="true"}}
-        {{#> wizard-outer-wrap}}
-          {{#> wizard-inner-wrap}}
-            {{#> wizard-main}}
-              {{> wizard-template-nav}}
-              {{> __wizard-form}}
-            {{/wizard-main}}
-          {{/wizard-inner-wrap}}
+  {{#> wizard-outer-wrap}}
+    {{#> wizard-inner-wrap}}
+      {{> wizard-template-nav}}
+      {{#> wizard-main wizard-main--HasNoBody="true"}}
+        {{#> drawer drawer--id="wizard-with-drawer-example-drawer" drawer-panel--IsOpen="true" drawer--IsInline="true"}}
+          {{#> drawer-main}}
+            {{#> drawer-content drawer-content--NoBody="true"}}
+              {{#> wizard-main-body}}
+                {{> __wizard-drawer-toggle __wizard-drawer-toggle--modifier="pf-u-hidden"}}
+                {{> __wizard-form}}
+              {{/wizard-main-body}}
+            {{/drawer-content}}
+            {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
+              {{#> drawer-body}}
+                {{#> drawer-head}}
+                  {{#> drawer-actions}}
+                    {{> drawer-close}}
+                  {{/drawer-actions}}
+                  {{#> drawer-header}}
+                    drawer-panel
+                  {{/drawer-header}}
+                {{/drawer-head}}
+              {{/drawer-body}}
+            {{/drawer-panel}}
+          {{/drawer-main}}
           {{#> wizard-footer}}
             {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
               Next
@@ -234,22 +249,10 @@ import './Wizard.css'
               {{/button}}
             {{/wizard-footer-cancel}}
           {{/wizard-footer}}
-        {{/wizard-outer-wrap}}
-      {{/drawer-content}}
-      {{#> drawer-panel drawer-panel--modifier="pf-m-light-200"}}
-        {{#> drawer-body}}
-          {{#> drawer-head}}
-            {{#> drawer-actions}}
-              {{> drawer-close}}
-            {{/drawer-actions}}
-            {{#> drawer-header}}
-              drawer-panel
-            {{/drawer-header}}
-          {{/drawer-head}}
-        {{/drawer-body}}
-      {{/drawer-panel}}
-    {{/drawer-main}}
-  {{/drawer}}
+        {{/drawer}}
+      {{/wizard-main}}
+    {{/wizard-inner-wrap}}
+  {{/wizard-outer-wrap}}
 {{/wizard}}
 ```
 
@@ -283,7 +286,7 @@ import './Wizard.css'
         {{#> wizard-nav}}
           {{#> wizard-nav-list}}
             {{#> wizard-nav-item}}
-              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+              {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
                 Information
               {{/wizard-nav-link}}
             {{/wizard-nav-item}}
@@ -387,7 +390,7 @@ import './Wizard.css'
                   {{/wizard-nav-link}}
                 {{/wizard-nav-item}}
                 {{#> wizard-nav-item newcontext}}
-                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrent="true"}}
+                  {{#> wizard-nav-link wizard-nav-link--modifier="pf-m-current" wizard-nav-link--IsCurrentPage="true"}}
                     Substep B
                   {{/wizard-nav-link}}
                 {{/wizard-nav-item}}

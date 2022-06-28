@@ -211,3 +211,10 @@
 .pf-c-log-viewer__timestamp {
   font-weight: var(--pf-c-log-viewer__timestamp--FontWeight);
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/log-viewer";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-log-viewer;
+}

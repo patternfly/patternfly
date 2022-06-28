@@ -1,4 +1,6 @@
-@mixin page() {
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-page() {
   .pf-c-page {
     --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--200);
     --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--300);
@@ -58,6 +60,6 @@
   .pf-c-page__sidebar-body.pf-m-menu .pf-c-context-selector,
   .pf-c-page__main-section[class*="pf-m-dark-"],
   .pf-c-page__header {
-    @include pf-t-dark;
+    @include pf-theme-dark--t-dark;
   }
 }
