@@ -2,301 +2,317 @@ import React from 'react';
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from '@breakaway/documentation-framework/components';
 import '../../../../dist/docs/utilities/Display/examples/./Display.css'
 const pageData = {
-  id: 'Display',
-  section: 'utilities',
-  source: 'html',
-  slug: '/utilities/display/html',
-  sourceLink: 'https://github.com/patternfly/patternfly/blob/main/Code/patternfly/dist/docs/utilities/Display/examples/Display.md',
-  examples: [
-    'Inline block',
-    'Block',
-    'Flex',
-    'Inline flex',
-    'Grid',
-    'Inline',
-    'Table',
-    'None'
+  "id": "Display",
+  "section": "utilities",
+  "source": "html",
+  "slug": "/utilities/display/html",
+  "sourceLink": "https://github.com/patternfly/patternfly/blob/main/Code/patternfly/dist/docs/utilities/Display/examples/Display.md",
+  "examples": [
+    "Inline block",
+    "Block",
+    "Flex",
+    "Inline flex",
+    "Grid",
+    "Inline",
+    "Table",
+    "None"
   ]
 };
 pageData.examples = {
-  'Inline block': props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-u-display-inline-block">.pf-u-display-inline-block</div>', title: 'Inline block', lang: 'html' }} />,
-  Block: props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-u-display-block">.pf-u-display-block</div>', title: 'Block', lang: 'html' }} />,
-  Flex: props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-u-display-flex">.pf-u-display-flex</div>', title: 'Flex', lang: 'html' }} />,
-  'Inline flex': props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-u-display-inline-flex">.pf-u-display-inline-flex</div>', title: 'Inline flex', lang: 'html' }} />,
-  Grid: props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-u-display-grid">.pf-u-display-grid</div>', title: 'Grid', lang: 'html' }} />,
-  Inline: props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-u-display-inline">.pf-u-display-inline</div>', title: 'Inline', lang: 'html' }} />,
-  Table: props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-u-display-table">\n  <div class="pf-u-display-table-row">\n    <div class="pf-u-display-table-cell">table-cell</div>\n    <div class="pf-u-display-table-cell">table-cell</div>\n    <div class="pf-u-display-table-cell">table-cell</div>\n  </div>\n  <div class="pf-u-display-table-row">\n    <div class="pf-u-display-table-cell">table-cell</div>\n    <div class="pf-u-display-table-cell">table-cell</div>\n    <div class="pf-u-display-table-cell">table-cell</div>\n  </div>\n</div>', title: 'Table', lang: 'html' }} />,
-  None: props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-u-display-none-on-sm">Hidden on sm breakpoint</div>', title: 'None', lang: 'html' }} />
+  'Inline block': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-u-display-inline-block\">.pf-u-display-inline-block</div>","title":"Inline block","lang":"html"}}>
+      
+    </Example>,
+  'Block': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-u-display-block\">.pf-u-display-block</div>","title":"Block","lang":"html"}}>
+      
+    </Example>,
+  'Flex': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-u-display-flex\">.pf-u-display-flex</div>","title":"Flex","lang":"html"}}>
+      
+    </Example>,
+  'Inline flex': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-u-display-inline-flex\">.pf-u-display-inline-flex</div>","title":"Inline flex","lang":"html"}}>
+      
+    </Example>,
+  'Grid': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-u-display-grid\">.pf-u-display-grid</div>","title":"Grid","lang":"html"}}>
+      
+    </Example>,
+  'Inline': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-u-display-inline\">.pf-u-display-inline</div>","title":"Inline","lang":"html"}}>
+      
+    </Example>,
+  'Table': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-u-display-table\">\n  <div class=\"pf-u-display-table-row\">\n    <div class=\"pf-u-display-table-cell\">table-cell</div>\n    <div class=\"pf-u-display-table-cell\">table-cell</div>\n    <div class=\"pf-u-display-table-cell\">table-cell</div>\n  </div>\n  <div class=\"pf-u-display-table-row\">\n    <div class=\"pf-u-display-table-cell\">table-cell</div>\n    <div class=\"pf-u-display-table-cell\">table-cell</div>\n    <div class=\"pf-u-display-table-cell\">table-cell</div>\n  </div>\n</div>","title":"Table","lang":"html"}}>
+      
+    </Example>,
+  'None': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-u-display-none-on-sm\">Hidden on sm breakpoint</div>","title":"None","lang":"html"}}>
+      
+    </Example>
 };
 
 const Component = () => (
-  <>
-    <AutoLinkHeader {...{ id: 'examples', size: 'h2', className: 'ws-title ws-h2' }}>
-      Examples
+  <React.Fragment>
+    <AutoLinkHeader {...{"id":"examples","size":"h2","className":"ws-title ws-h2"}}>
+      {`Examples`}
     </AutoLinkHeader>
-    {React.createElement(pageData.examples['Inline block'])}
-    {React.createElement(pageData.examples.Block)}
-    {React.createElement(pageData.examples.Flex)}
-    {React.createElement(pageData.examples['Inline flex'])}
-    {React.createElement(pageData.examples.Grid)}
-    {React.createElement(pageData.examples.Inline)}
-    {React.createElement(pageData.examples.Table)}
-    {React.createElement(pageData.examples.None)}
-    <AutoLinkHeader {...{ id: 'documentation', size: 'h2', className: 'ws-title ws-h2' }}>
-      Documentation
+    {React.createElement(pageData.examples["Inline block"])}
+    {React.createElement(pageData.examples["Block"])}
+    {React.createElement(pageData.examples["Flex"])}
+    {React.createElement(pageData.examples["Inline flex"])}
+    {React.createElement(pageData.examples["Grid"])}
+    {React.createElement(pageData.examples["Inline"])}
+    {React.createElement(pageData.examples["Table"])}
+    {React.createElement(pageData.examples["None"])}
+    <AutoLinkHeader {...{"id":"documentation","size":"h2","className":"ws-title ws-h2"}}>
+      {`Documentation`}
     </AutoLinkHeader>
-    <AutoLinkHeader {...{ id: 'overview', size: 'h3', className: 'ws-title ws-h3' }}>
-      Overview
+    <AutoLinkHeader {...{"id":"overview","size":"h3","className":"ws-title ws-h3"}}>
+      {`Overview`}
     </AutoLinkHeader>
-    <p {...{ className: 'ws-p' }}>
-      <PatternflyThemeLink {...{ to: '/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes' }}>
-        Breakpoint
+    <p {...{"className":"ws-p"}}>
+      <PatternflyThemeLink {...{"to":"/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes"}}>
+        {`Breakpoint`}
       </PatternflyThemeLink>
-      {' is optional. Breakpoints: base (no breakpoint value), '}
-      <code {...{ className: 'ws-code' }}>
-        -on-sm
+      {` is optional. Breakpoints: base (no breakpoint value), `}
+      <code {...{"className":"ws-code"}}>
+        {`-on-sm`}
       </code>
-      {', '}
-      <code {...{ className: 'ws-code' }}>
-        -on-md
+      {`, `}
+      <code {...{"className":"ws-code"}}>
+        {`-on-md`}
       </code>
-      {', '}
-      <code {...{ className: 'ws-code' }}>
-        -on-lg
+      {`, `}
+      <code {...{"className":"ws-code"}}>
+        {`-on-lg`}
       </code>
-      {', and '}
-      <code {...{ className: 'ws-code' }}>
-        -on-xl
+      {`, and `}
+      <code {...{"className":"ws-code"}}>
+        {`-on-xl`}
       </code>
-      {'. '}
+      {`. `}
       <strong>
-        Example .pf-u-display-inline-block-on-lg
+        {`Example .pf-u-display-inline-block-on-lg`}
       </strong>
     </p>
-    <AutoLinkHeader {...{ id: 'usage', size: 'h3', className: 'ws-title ws-h3' }}>
-      Usage
+    <AutoLinkHeader {...{"id":"usage","size":"h3","className":"ws-title ws-h3"}}>
+      {`Usage`}
     </AutoLinkHeader>
-    <table {...{ className: 'ws-table pf-c-table pf-m-grid-lg pf-m-compact', role: 'grid' }}>
+    <table {...{"className":"ws-table pf-c-table pf-m-grid-lg pf-m-compact","role":"grid"}}>
       <thead>
-        <tr {...{ role: 'row' }}>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+        <tr {...{"role":"row"}}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Class
+              {`Class`}
             </div>
           </th>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Applied to
+              {`Applied to`}
             </div>
           </th>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Outcome
+              {`Outcome`}
             </div>
           </th>
         </tr>
       </thead>
-      <tbody {...{ role: 'rowgroup' }}>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+      <tbody {...{"role":"rowgroup"}}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'.pf-u-display-inline-block{-on-[breakpoint]}'}
+              <code {...{"className":"ws-code"}}>
+                {`.pf-u-display-inline-block{-on-[breakpoint]}`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                *
+              <code {...{"className":"ws-code"}}>
+                {`*`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Sets display: inline-block
+              {`Sets display: inline-block`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'.pf-u-display-block{-on-[breakpoint]}'}
+              <code {...{"className":"ws-code"}}>
+                {`.pf-u-display-block{-on-[breakpoint]}`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                *
+              <code {...{"className":"ws-code"}}>
+                {`*`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Sets display: block
+              {`Sets display: block`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'.pf-u-display-inline{-on-[breakpoint]}'}
+              <code {...{"className":"ws-code"}}>
+                {`.pf-u-display-inline{-on-[breakpoint]}`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                *
+              <code {...{"className":"ws-code"}}>
+                {`*`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Sets display: inline
+              {`Sets display: inline`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'.pf-u-display-flex{-on-[breakpoint]}'}
+              <code {...{"className":"ws-code"}}>
+                {`.pf-u-display-flex{-on-[breakpoint]}`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                *
+              <code {...{"className":"ws-code"}}>
+                {`*`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Sets display: flex
+              {`Sets display: flex`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'.pf-u-display-inline-flex{-on-[breakpoint]}'}
+              <code {...{"className":"ws-code"}}>
+                {`.pf-u-display-inline-flex{-on-[breakpoint]}`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                *
+              <code {...{"className":"ws-code"}}>
+                {`*`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Sets display: inline-flex
+              {`Sets display: inline-flex`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'.pf-u-display-table{-on-[breakpoint]}'}
+              <code {...{"className":"ws-code"}}>
+                {`.pf-u-display-table{-on-[breakpoint]}`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                *
+              <code {...{"className":"ws-code"}}>
+                {`*`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Sets display: table
+              {`Sets display: table`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'.pf-u-display-table-row{-on-[breakpoint]}'}
+              <code {...{"className":"ws-code"}}>
+                {`.pf-u-display-table-row{-on-[breakpoint]}`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                *
+              <code {...{"className":"ws-code"}}>
+                {`*`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Sets display: table-row
+              {`Sets display: table-row`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'.pf-u-display-table-cell{-on-[breakpoint]}'}
+              <code {...{"className":"ws-code"}}>
+                {`.pf-u-display-table-cell{-on-[breakpoint]}`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                *
+              <code {...{"className":"ws-code"}}>
+                {`*`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Sets display: table-cell
+              {`Sets display: table-cell`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'.pf-u-display-none{-on-[breakpoint]}'}
+              <code {...{"className":"ws-code"}}>
+                {`.pf-u-display-none{-on-[breakpoint]}`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                *
+              <code {...{"className":"ws-code"}}>
+                {`*`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Sets display: none
+              {`Sets display: none`}
             </div>
           </td>
         </tr>
       </tbody>
     </table>
-  </>
+  </React.Fragment>
 );
 Component.displayName = 'UtilitiesDisplayHtmlDocs';
 Component.pageData = pageData;

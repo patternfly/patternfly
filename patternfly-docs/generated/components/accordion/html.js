@@ -2,513 +2,523 @@ import React from 'react';
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from '@breakaway/documentation-framework/components';
 
 const pageData = {
-  id: 'Accordion',
-  section: 'components',
-  source: 'html',
-  slug: '/components/accordion/html',
-  sourceLink: 'https://github.com/patternfly/patternfly/blob/main/Code/patternfly/dist/docs/components/Accordion/examples/Accordion.md',
-  cssPrefix: [
-    'pf-c-accordion'
+  "id": "Accordion",
+  "section": "components",
+  "source": "html",
+  "slug": "/components/accordion/html",
+  "sourceLink": "https://github.com/patternfly/patternfly/blob/main/Code/patternfly/dist/docs/components/Accordion/examples/Accordion.md",
+  "cssPrefix": [
+    "pf-c-accordion"
   ],
-  examples: [
-    'Fluid',
-    'Fixed',
-    'Definition list',
-    'Bordered',
-    'Large bordered'
+  "examples": [
+    "Fluid",
+    "Fixed",
+    "Definition list",
+    "Bordered",
+    "Large bordered"
   ]
 };
 pageData.examples = {
-  Fluid: props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-c-accordion">\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item one</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item two</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item three</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button\n      class="pf-c-accordion__toggle pf-m-expanded"\n      type="button"\n      aria-expanded="true"\n    >\n      <span class="pf-c-accordion__toggle-text">Item four</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content pf-m-expanded">\n    <div\n      class="pf-c-accordion__expanded-content-body"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item five</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n</div>', title: 'Fluid', lang: 'html' }} />,
-  Fixed: props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-c-accordion">\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item one</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content pf-m-fixed" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button\n      class="pf-c-accordion__toggle pf-m-expanded"\n      type="button"\n      aria-expanded="true"\n    >\n      <span class="pf-c-accordion__toggle-text">Item two</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content pf-m-expanded pf-m-fixed">\n    <div\n      class="pf-c-accordion__expanded-content-body"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n    <div\n      class="pf-c-accordion__expanded-content-body"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n    <div\n      class="pf-c-accordion__expanded-content-body"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item three</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content pf-m-fixed" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item four</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content pf-m-fixed" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item five</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content pf-m-fixed" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n</div>', title: 'Fixed', lang: 'html' }} />,
-  'Definition list': props =>
-    <Example {...pageData} {...props} {...{ code: '<dl class="pf-c-accordion">\n  <dt>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item one</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </dt>\n  <dd class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </dd>\n\n  <dt>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item two</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </dt>\n  <dd class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </dd>\n\n  <dt>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item three</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </dt>\n  <dd class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </dd>\n\n  <dt>\n    <button\n      class="pf-c-accordion__toggle pf-m-expanded"\n      type="button"\n      aria-expanded="true"\n    >\n      <span class="pf-c-accordion__toggle-text">Item four</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </dt>\n  <dd class="pf-c-accordion__expanded-content pf-m-expanded">\n    <div\n      class="pf-c-accordion__expanded-content-body"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n  </dd>\n\n  <dt>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item five</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </dt>\n  <dd class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </dd>\n</dl>', title: 'Definition list', lang: 'html' }} />,
-  Bordered: props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-c-accordion pf-m-bordered">\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item one</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button\n      class="pf-c-accordion__toggle pf-m-expanded"\n      type="button"\n      aria-expanded="true"\n    >\n      <span class="pf-c-accordion__toggle-text">Item two</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content pf-m-expanded">\n    <div class="pf-c-accordion__expanded-content-body">\n      <a href="#">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n    </div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item three</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item four</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item five</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n</div>', title: 'Bordered', lang: 'html' }} />,
-  'Large bordered': props =>
-    <Example {...pageData} {...props} {...{ code: '<div class="pf-c-accordion pf-m-display-lg pf-m-bordered">\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item one</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button\n      class="pf-c-accordion__toggle pf-m-expanded"\n      type="button"\n      aria-expanded="true"\n    >\n      <span class="pf-c-accordion__toggle-text">Item two</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content pf-m-expanded">\n    <div\n      class="pf-c-accordion__expanded-content-body"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item three</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button\n      class="pf-c-accordion__toggle pf-m-expanded"\n      type="button"\n      aria-expanded="true"\n    >\n      <span class="pf-c-accordion__toggle-text">Item four</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content pf-m-expanded">\n    <div\n      class="pf-c-accordion__expanded-content-body"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n    <div class="pf-c-accordion__expanded-content-body">\n      <button\n        class="pf-c-button pf-m-link pf-m-inline pf-m-display-lg"\n        type="button"\n      >\n        Call to action\n        <span class="pf-c-button__icon pf-m-end">\n          <i class="fas fa-arrow-right" aria-hidden="true"></i>\n        </span>\n      </button>\n    </div>\n  </div>\n\n  <h3>\n    <button class="pf-c-accordion__toggle" type="button" aria-expanded="false">\n      <span class="pf-c-accordion__toggle-text">Item five</span>\n\n      <span class="pf-c-accordion__toggle-icon">\n        <i class="fas fa-angle-right" aria-hidden="true"></i>\n      </span>\n    </button>\n  </h3>\n  <div class="pf-c-accordion__expanded-content" hidden>\n    <div class="pf-c-accordion__expanded-content-body">This text is hidden</div>\n  </div>\n</div>', title: 'Large bordered', lang: 'html' }} />
+  'Fluid': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-c-accordion\">\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item one</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item two</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item three</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button\n      class=\"pf-c-accordion__toggle pf-m-expanded\"\n      type=\"button\"\n      aria-expanded=\"true\"\n    >\n      <span class=\"pf-c-accordion__toggle-text\">Item four</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content pf-m-expanded\">\n    <div\n      class=\"pf-c-accordion__expanded-content-body\"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item five</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n</div>","title":"Fluid","lang":"html"}}>
+      
+    </Example>,
+  'Fixed': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-c-accordion\">\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item one</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content pf-m-fixed\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button\n      class=\"pf-c-accordion__toggle pf-m-expanded\"\n      type=\"button\"\n      aria-expanded=\"true\"\n    >\n      <span class=\"pf-c-accordion__toggle-text\">Item two</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content pf-m-expanded pf-m-fixed\">\n    <div\n      class=\"pf-c-accordion__expanded-content-body\"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n    <div\n      class=\"pf-c-accordion__expanded-content-body\"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n    <div\n      class=\"pf-c-accordion__expanded-content-body\"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item three</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content pf-m-fixed\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item four</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content pf-m-fixed\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item five</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content pf-m-fixed\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n</div>","title":"Fixed","lang":"html"}}>
+      
+    </Example>,
+  'Definition list': props => 
+    <Example {...pageData} {...props} {...{"code":"<dl class=\"pf-c-accordion\">\n  <dt>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item one</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </dt>\n  <dd class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </dd>\n\n  <dt>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item two</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </dt>\n  <dd class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </dd>\n\n  <dt>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item three</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </dt>\n  <dd class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </dd>\n\n  <dt>\n    <button\n      class=\"pf-c-accordion__toggle pf-m-expanded\"\n      type=\"button\"\n      aria-expanded=\"true\"\n    >\n      <span class=\"pf-c-accordion__toggle-text\">Item four</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </dt>\n  <dd class=\"pf-c-accordion__expanded-content pf-m-expanded\">\n    <div\n      class=\"pf-c-accordion__expanded-content-body\"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n  </dd>\n\n  <dt>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item five</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </dt>\n  <dd class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </dd>\n</dl>","title":"Definition list","lang":"html"}}>
+      
+    </Example>,
+  'Bordered': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-c-accordion pf-m-bordered\">\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item one</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button\n      class=\"pf-c-accordion__toggle pf-m-expanded\"\n      type=\"button\"\n      aria-expanded=\"true\"\n    >\n      <span class=\"pf-c-accordion__toggle-text\">Item two</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content pf-m-expanded\">\n    <div class=\"pf-c-accordion__expanded-content-body\">\n      <a href=\"#\">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n    </div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item three</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item four</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item five</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n</div>","title":"Bordered","lang":"html"}}>
+      
+    </Example>,
+  'Large bordered': props => 
+    <Example {...pageData} {...props} {...{"code":"<div class=\"pf-c-accordion pf-m-display-lg pf-m-bordered\">\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item one</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button\n      class=\"pf-c-accordion__toggle pf-m-expanded\"\n      type=\"button\"\n      aria-expanded=\"true\"\n    >\n      <span class=\"pf-c-accordion__toggle-text\">Item two</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content pf-m-expanded\">\n    <div\n      class=\"pf-c-accordion__expanded-content-body\"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item three</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n\n  <h3>\n    <button\n      class=\"pf-c-accordion__toggle pf-m-expanded\"\n      type=\"button\"\n      aria-expanded=\"true\"\n    >\n      <span class=\"pf-c-accordion__toggle-text\">Item four</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content pf-m-expanded\">\n    <div\n      class=\"pf-c-accordion__expanded-content-body\"\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>\n    <div class=\"pf-c-accordion__expanded-content-body\">\n      <button\n        class=\"pf-c-button pf-m-link pf-m-inline pf-m-display-lg\"\n        type=\"button\"\n      >\n        Call to action\n        <span class=\"pf-c-button__icon pf-m-end\">\n          <i class=\"fas fa-arrow-right\" aria-hidden=\"true\"></i>\n        </span>\n      </button>\n    </div>\n  </div>\n\n  <h3>\n    <button class=\"pf-c-accordion__toggle\" type=\"button\" aria-expanded=\"false\">\n      <span class=\"pf-c-accordion__toggle-text\">Item five</span>\n\n      <span class=\"pf-c-accordion__toggle-icon\">\n        <i class=\"fas fa-angle-right\" aria-hidden=\"true\"></i>\n      </span>\n    </button>\n  </h3>\n  <div class=\"pf-c-accordion__expanded-content\" hidden>\n    <div class=\"pf-c-accordion__expanded-content-body\">This text is hidden</div>\n  </div>\n</div>","title":"Large bordered","lang":"html"}}>
+      
+    </Example>
 };
 
 const Component = () => (
-  <>
-    <AutoLinkHeader {...{ id: 'examples', size: 'h2', className: 'ws-title ws-h2' }}>
-      Examples
+  <React.Fragment>
+    <AutoLinkHeader {...{"id":"examples","size":"h2","className":"ws-title ws-h2"}}>
+      {`Examples`}
     </AutoLinkHeader>
-    {React.createElement(pageData.examples.Fluid)}
-    {React.createElement(pageData.examples.Fixed)}
-    {React.createElement(pageData.examples['Definition list'])}
-    {React.createElement(pageData.examples.Bordered)}
-    {React.createElement(pageData.examples['Large bordered'])}
-    <AutoLinkHeader {...{ id: 'documentation', size: 'h2', className: 'ws-title ws-h2' }}>
-      Documentation
+    {React.createElement(pageData.examples["Fluid"])}
+    {React.createElement(pageData.examples["Fixed"])}
+    {React.createElement(pageData.examples["Definition list"])}
+    {React.createElement(pageData.examples["Bordered"])}
+    {React.createElement(pageData.examples["Large bordered"])}
+    <AutoLinkHeader {...{"id":"documentation","size":"h2","className":"ws-title ws-h2"}}>
+      {`Documentation`}
     </AutoLinkHeader>
-    <AutoLinkHeader {...{ id: 'overview', size: 'h3', className: 'ws-title ws-h3' }}>
-      Overview
+    <AutoLinkHeader {...{"id":"overview","size":"h3","className":"ws-title ws-h3"}}>
+      {`Overview`}
     </AutoLinkHeader>
-    <p {...{ className: 'ws-p' }}>
+    <p {...{"className":"ws-p"}}>
       {`There are two variations to build the accordion component:
 One way uses `}
-      <code {...{ className: 'ws-code' }}>
-        {'<div>'}
+      <code {...{"className":"ws-code"}}>
+        {`<div>`}
       </code>
-      {' and '}
-      <code {...{ className: 'ws-code' }}>
-        {'<h1 - h6>'}
+      {` and `}
+      <code {...{"className":"ws-code"}}>
+        {`<h1 - h6>`}
       </code>
       {` tags to build the component.
 In these examples `}
-      <code {...{ className: 'ws-code' }}>
-        .pf-c-accordion
+      <code {...{"className":"ws-code"}}>
+        {`.pf-c-accordion`}
       </code>
-      {' uses '}
-      <code {...{ className: 'ws-code' }}>
-        {'<div>'}
+      {` uses `}
+      <code {...{"className":"ws-code"}}>
+        {`<div>`}
       </code>
-      {', '}
-      <code {...{ className: 'ws-code' }}>
-        .pf-c-accordion__toggle
+      {`, `}
+      <code {...{"className":"ws-code"}}>
+        {`.pf-c-accordion__toggle`}
       </code>
-      {' uses '}
-      <code {...{ className: 'ws-code' }}>
-        {'<h3><button>'}
+      {` uses `}
+      <code {...{"className":"ws-code"}}>
+        {`<h3><button>`}
       </code>
-      {', and '}
-      <code {...{ className: 'ws-code' }}>
-        .pf-c-accordion__expanded-content
+      {`, and `}
+      <code {...{"className":"ws-code"}}>
+        {`.pf-c-accordion__expanded-content`}
       </code>
-      {' uses '}
-      <code {...{ className: 'ws-code' }}>
-        {'<div>'}
+      {` uses `}
+      <code {...{"className":"ws-code"}}>
+        {`<div>`}
       </code>
-      . The heading level that you use should fit within the rest of the headings outlined on your page.
+      {`. The heading level that you use should fit within the rest of the headings outlined on your page.`}
     </p>
-    <p {...{ className: 'ws-p' }}>
+    <p {...{"className":"ws-p"}}>
       {`Another variation is using the definition list:
 In these examples `}
-      <code {...{ className: 'ws-code' }}>
-        .pf-c-accordion
+      <code {...{"className":"ws-code"}}>
+        {`.pf-c-accordion`}
       </code>
-      {' uses '}
-      <code {...{ className: 'ws-code' }}>
-        {'<dl>'}
+      {` uses `}
+      <code {...{"className":"ws-code"}}>
+        {`<dl>`}
       </code>
-      {', '}
-      <code {...{ className: 'ws-code' }}>
-        .pf-c-accordion__toggle
+      {`, `}
+      <code {...{"className":"ws-code"}}>
+        {`.pf-c-accordion__toggle`}
       </code>
-      {' uses '}
-      <code {...{ className: 'ws-code' }}>
-        {'<dt><button>'}
+      {` uses `}
+      <code {...{"className":"ws-code"}}>
+        {`<dt><button>`}
       </code>
-      {', and '}
-      <code {...{ className: 'ws-code' }}>
-        .pf-c-accordion__expanded-content
+      {`, and `}
+      <code {...{"className":"ws-code"}}>
+        {`.pf-c-accordion__expanded-content`}
       </code>
-      {' uses '}
-      <code {...{ className: 'ws-code' }}>
-        {'<dd>'}
+      {` uses `}
+      <code {...{"className":"ws-code"}}>
+        {`<dd>`}
       </code>
-      .
+      {`.`}
     </p>
-    <AutoLinkHeader {...{ id: 'accessibility', size: 'h3', className: 'ws-title ws-h3' }}>
-      Accessibility
+    <AutoLinkHeader {...{"id":"accessibility","size":"h3","className":"ws-title ws-h3"}}>
+      {`Accessibility`}
     </AutoLinkHeader>
-    <table {...{ className: 'ws-table pf-c-table pf-m-grid-lg pf-m-compact', role: 'grid' }}>
+    <table {...{"className":"ws-table pf-c-table pf-m-grid-lg pf-m-compact","role":"grid"}}>
       <thead>
-        <tr {...{ role: 'row' }}>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+        <tr {...{"role":"row"}}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Attribute
+              {`Attribute`}
             </div>
           </th>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Applied to
+              {`Applied to`}
             </div>
           </th>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Outcome
+              {`Outcome`}
             </div>
           </th>
         </tr>
       </thead>
-      <tbody {...{ role: 'rowgroup' }}>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Attribute' }}>
+      <tbody {...{"role":"rowgroup"}}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Attribute"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                aria-expanded="false"
+              <code {...{"className":"ws-code"}}>
+                {`aria-expanded="false"`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__toggle
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__toggle`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              {'Indicates that the expanded content element is hidden. '}
+              {`Indicates that the expanded content element is hidden. `}
               <strong>
-                Required
+                {`Required`}
               </strong>
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Attribute' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Attribute"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                aria-expanded="true"
+              <code {...{"className":"ws-code"}}>
+                {`aria-expanded="true"`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__toggle
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__toggle`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              {'Indicates that the expanded content element is visible. '}
+              {`Indicates that the expanded content element is visible. `}
               <strong>
-                Required
+                {`Required`}
               </strong>
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Attribute' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Attribute"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                hidden
+              <code {...{"className":"ws-code"}}>
+                {`hidden`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__expanded-content
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__expanded-content`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              {'Indicates that the expanded content element is hidden. Use with '}
-              <code {...{ className: 'ws-code' }}>
-                aria-expanded="false"
+              {`Indicates that the expanded content element is hidden. Use with `}
+              <code {...{"className":"ws-code"}}>
+                {`aria-expanded="false"`}
               </code>
-              {' '}
+              {` `}
               <strong>
-                Required
+                {`Required`}
               </strong>
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Attribute' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Attribute"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                aria-hidden="true"
+              <code {...{"className":"ws-code"}}>
+                {`aria-hidden="true"`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__toggle-icon
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__toggle-icon`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Hides the icon from assistive technologies.
+              {`Hides the icon from assistive technologies.`}
               <strong>
-                Required
+                {`Required`}
               </strong>
             </div>
           </td>
         </tr>
       </tbody>
     </table>
-    <AutoLinkHeader {...{ id: 'usage', size: 'h3', className: 'ws-title ws-h3' }}>
-      Usage
+    <AutoLinkHeader {...{"id":"usage","size":"h3","className":"ws-title ws-h3"}}>
+      {`Usage`}
     </AutoLinkHeader>
-    <table {...{ className: 'ws-table pf-c-table pf-m-grid-lg pf-m-compact', role: 'grid' }}>
+    <table {...{"className":"ws-table pf-c-table pf-m-grid-lg pf-m-compact","role":"grid"}}>
       <thead>
-        <tr {...{ role: 'row' }}>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+        <tr {...{"role":"row"}}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Class
+              {`Class`}
             </div>
           </th>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Applied to
+              {`Applied to`}
             </div>
           </th>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Outcome
+              {`Outcome`}
             </div>
           </th>
         </tr>
       </thead>
-      <tbody {...{ role: 'rowgroup' }}>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+      <tbody {...{"role":"rowgroup"}}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'<div>'}
+              <code {...{"className":"ws-code"}}>
+                {`<div>`}
               </code>
-              {', '}
-              <code {...{ className: 'ws-code' }}>
-                {'<dl>'}
+              {`, `}
+              <code {...{"className":"ws-code"}}>
+                {`<dl>`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              {'Initiates an accordion component. '}
+              {`Initiates an accordion component. `}
               <strong>
-                Required
+                {`Required`}
               </strong>
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__toggle
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__toggle`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'<h1-h6><button>'}
+              <code {...{"className":"ws-code"}}>
+                {`<h1-h6><button>`}
               </code>
-              {', '}
-              <code {...{ className: 'ws-code' }}>
-                {'<dt><button>'}
+              {`, `}
+              <code {...{"className":"ws-code"}}>
+                {`<dt><button>`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              {'Initiates a toggle in the accordion. '}
+              {`Initiates a toggle in the accordion. `}
               <strong>
-                Required
+                {`Required`}
               </strong>
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__toggle-text
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__toggle-text`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'<span>'}
+              <code {...{"className":"ws-code"}}>
+                {`<span>`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              {'Initiates the text inside the toggle. '}
+              {`Initiates the text inside the toggle. `}
               <strong>
-                Required
+                {`Required`}
               </strong>
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__toggle-icon
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__toggle-icon`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'<span>'}
+              <code {...{"className":"ws-code"}}>
+                {`<span>`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              {'Initiates the toggle icon wrapper. '}
+              {`Initiates the toggle icon wrapper. `}
               <strong>
-                Required
+                {`Required`}
               </strong>
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__expanded-content
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__expanded-content`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'<div>'}
+              <code {...{"className":"ws-code"}}>
+                {`<div>`}
               </code>
-              {', '}
-              <code {...{ className: 'ws-code' }}>
-                {'<dd>'}
+              {`, `}
+              <code {...{"className":"ws-code"}}>
+                {`<dd>`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              {'Initiates expanded content. '}
+              {`Initiates expanded content. `}
               <strong>
-                Must be paired with a button
+                {`Must be paired with a button`}
               </strong>
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__expanded-content-body
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__expanded-content-body`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                {'<div>'}
+              <code {...{"className":"ws-code"}}>
+                {`<div>`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              {'Initiates expanded content body. '}
+              {`Initiates expanded content body. `}
               <strong>
-                Required
+                {`Required`}
               </strong>
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-m-bordered
+              <code {...{"className":"ws-code"}}>
+                {`.pf-m-bordered`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Modifies the accordion to add borders between items.
+              {`Modifies the accordion to add borders between items.`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-m-display-lg
+              <code {...{"className":"ws-code"}}>
+                {`.pf-m-display-lg`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Modifies the accordion for large display styling. This variation is for marketing/web use cases.
+              {`Modifies the accordion for large display styling. This variation is for marketing/web use cases.`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-m-expanded
+              <code {...{"className":"ws-code"}}>
+                {`.pf-m-expanded`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__toggle
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__toggle`}
               </code>
-              {', '}
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__expanded-content
+              {`, `}
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__expanded-content`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Modifies the accordion button and expanded content for the expanded state.
+              {`Modifies the accordion button and expanded content for the expanded state.`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Class' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Class"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-m-fixed
+              <code {...{"className":"ws-code"}}>
+                {`.pf-m-fixed`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Applied to' }}>
+          <td {...{"role":"cell","data-label":"Applied to"}}>
             <div>
-              <code {...{ className: 'ws-code' }}>
-                .pf-c-accordion__expanded-content
+              <code {...{"className":"ws-code"}}>
+                {`.pf-c-accordion__expanded-content`}
               </code>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Outcome' }}>
+          <td {...{"role":"cell","data-label":"Outcome"}}>
             <div>
-              Modifies the expanded content for the fixed state.
+              {`Modifies the expanded content for the fixed state.`}
             </div>
           </td>
         </tr>
       </tbody>
     </table>
-  </>
+  </React.Fragment>
 );
 Component.displayName = 'ComponentsAccordionHtmlDocs';
 Component.pageData = pageData;

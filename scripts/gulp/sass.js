@@ -77,7 +77,7 @@ function getDocCSSFiles() {
   while ((result = regex.exec(fileContents))) {
     // Map CSS require to its SASS source file
     const srcFile = result[1]
-      .replace('./dist/', path.join(process.cwd(), '/src/patternfly/'))
+      .replace('../dist/', path.join(process.cwd(), '/src/patternfly/'))
       .replace(/.css$/, '.scss');
     res.push(srcFile);
   }

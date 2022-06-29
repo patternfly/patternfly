@@ -2,3142 +2,3142 @@ import React from 'react';
 import { AutoLinkHeader, Example, Link as PatternflyThemeLink } from '@breakaway/documentation-framework/components';
 
 const pageData = {
-  id: 'Icons',
-  section: '',
-  source: 'pages-html',
-  slug: '/icons',
-  sourceLink: 'https://github.com/patternfly/patternfly/blob/main/Code/patternfly/src/site/pages/icons.md'
+  "id": "Icons",
+  "section": "",
+  "source": "pages-html",
+  "slug": "/icons",
+  "sourceLink": "https://github.com/patternfly/patternfly/blob/main/Code/patternfly/patternfly-docs/site/pages/icons.md"
 };
 pageData.examples = {
-
+  
 };
 
 const Component = () => (
-  <>
-    <table {...{ className: 'ws-table pf-c-table pf-m-grid-lg pf-m-compact', role: 'grid' }}>
+  <React.Fragment>
+    <table {...{"className":"ws-table pf-c-table pf-m-grid-lg pf-m-compact","role":"grid"}}>
       <thead>
-        <tr {...{ role: 'row' }}>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+        <tr {...{"role":"row"}}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Icon name
+              {`Icon name`}
             </div>
           </th>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Icon
+              {`Icon`}
             </div>
           </th>
-          <th {...{ className: ' pf-m-wrap', role: 'columnheader', scope: 'col' }}>
+          <th {...{"className":" pf-m-wrap","role":"columnheader","scope":"col"}}>
             <div>
-              Code
+              {`Code`}
             </div>
           </th>
         </tr>
       </thead>
-      <tbody {...{ role: 'rowgroup' }}>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+      <tbody {...{"role":"rowgroup"}}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              add-circle-o
+              {`add-circle-o`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-add-circle-o" />
+                            <i className="pf-icon pf-icon-add-circle-o"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-add-circle-o'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-add-circle-o`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              ansible-tower
+              {`ansible-tower`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-ansible-tower" />
+                            <i className="pf-icon pf-icon-ansible-tower"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-ansible-tower'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-ansible-tower`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              applications
+              {`applications`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-applications" />
+                            <i className="pf-icon pf-icon-applications"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-applications'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-applications`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              arrow
+              {`arrow`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-arrow" />
+                            <i className="pf-icon pf-icon-arrow"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-arrow'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-arrow`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              asleep
+              {`asleep`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-asleep" />
+                            <i className="pf-icon pf-icon-asleep"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-asleep'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-asleep`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              attention-bell
+              {`attention-bell`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-attention-bell" />
+                            <i className="pf-icon pf-icon-attention-bell"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-attention-bell'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-attention-bell`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              automation
+              {`automation`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-automation" />
+                            <i className="pf-icon pf-icon-automation"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-automation'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-automation`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              bell
+              {`bell`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-bell" />
+                            <i className="pf-icon pf-icon-bell"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-bell'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-bell`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              blueprint
+              {`blueprint`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-blueprint" />
+                            <i className="pf-icon pf-icon-blueprint"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-blueprint'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-blueprint`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              build
+              {`build`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-build" />
+                            <i className="pf-icon pf-icon-build"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-build'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-build`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              builder-image
+              {`builder-image`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-builder-image" />
+                            <i className="pf-icon pf-icon-builder-image"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-builder-image'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-builder-image`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              bundle
+              {`bundle`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-bundle" />
+                            <i className="pf-icon pf-icon-bundle"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-bundle'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-bundle`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              catalog
+              {`catalog`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-catalog" />
+                            <i className="pf-icon pf-icon-catalog"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-catalog'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-catalog`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              chat
+              {`chat`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-chat" />
+                            <i className="pf-icon pf-icon-chat"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-chat'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-chat`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              close
+              {`close`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-close" />
+                            <i className="pf-icon pf-icon-close"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-close'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-close`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              cloud-security
+              {`cloud-security`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-cloud-security" />
+                            <i className="pf-icon pf-icon-cloud-security"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-cloud-security'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-cloud-security`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              cloud-tenant
+              {`cloud-tenant`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-cloud-tenant" />
+                            <i className="pf-icon pf-icon-cloud-tenant"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-cloud-tenant'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-cloud-tenant`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              cluster
+              {`cluster`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-cluster" />
+                            <i className="pf-icon pf-icon-cluster"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-cluster'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-cluster`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              connected
+              {`connected`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-connected" />
+                            <i className="pf-icon pf-icon-connected"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-connected'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-connected`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              container-node
+              {`container-node`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-container-node" />
+                            <i className="pf-icon pf-icon-container-node"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-container-node'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-container-node`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              cpu
+              {`cpu`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-cpu" />
+                            <i className="pf-icon pf-icon-cpu"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-cpu'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-cpu`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              critical-risk
+              {`critical-risk`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-critical-risk" />
+                            <i className="pf-icon pf-icon-critical-risk"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-critical-risk'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-critical-risk`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              degraded
+              {`degraded`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-degraded" />
+                            <i className="pf-icon pf-icon-degraded"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-degraded'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-degraded`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              disconnected
+              {`disconnected`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-disconnected" />
+                            <i className="pf-icon pf-icon-disconnected"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-disconnected'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-disconnected`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              domain
+              {`domain`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-domain" />
+                            <i className="pf-icon pf-icon-domain"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-domain'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-domain`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              edit
+              {`edit`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-edit" />
+                            <i className="pf-icon pf-icon-edit"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-edit'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-edit`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              enhancement
+              {`enhancement`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-enhancement" />
+                            <i className="pf-icon pf-icon-enhancement"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-enhancement'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-enhancement`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              enterprise
+              {`enterprise`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-enterprise" />
+                            <i className="pf-icon pf-icon-enterprise"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-enterprise'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-enterprise`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              equalizer
+              {`equalizer`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-equalizer" />
+                            <i className="pf-icon pf-icon-equalizer"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-equalizer'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-equalizer`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              error-circle-o
+              {`error-circle-o`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-error-circle-o" />
+                            <i className="pf-icon pf-icon-error-circle-o"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-error-circle-o'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-error-circle-o`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              export
+              {`export`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-export" />
+                            <i className="pf-icon pf-icon-export"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-export'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-export`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              filter
+              {`filter`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-filter" />
+                            <i className="pf-icon pf-icon-filter"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-filter'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-filter`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              flavor
+              {`flavor`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-flavor" />
+                            <i className="pf-icon pf-icon-flavor"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-flavor'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-flavor`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              folder-close
+              {`folder-close`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-folder-close" />
+                            <i className="pf-icon pf-icon-folder-close"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-folder-close'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-folder-close`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              folder-open
+              {`folder-open`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-folder-open" />
+                            <i className="pf-icon pf-icon-folder-open"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-folder-open'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-folder-open`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              globe-route
+              {`globe-route`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-globe-route" />
+                            <i className="pf-icon pf-icon-globe-route"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-globe-route'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-globe-route`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              help
+              {`help`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-help" />
+                            <i className="pf-icon pf-icon-help"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-help'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-help`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              history
+              {`history`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-history" />
+                            <i className="pf-icon pf-icon-history"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-history'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-history`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              home
+              {`home`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-home" />
+                            <i className="pf-icon pf-icon-home"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-home'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-home`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              import
+              {`import`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-import" />
+                            <i className="pf-icon pf-icon-import"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-import'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-import`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              in-progress
+              {`in-progress`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-in-progress" />
+                            <i className="pf-icon pf-icon-in-progress"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-in-progress'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-in-progress`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              info
+              {`info`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-info" />
+                            <i className="pf-icon pf-icon-info"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-info'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-info`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              infrastructure
+              {`infrastructure`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-infrastructure" />
+                            <i className="pf-icon pf-icon-infrastructure"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-infrastructure'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-infrastructure`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              integration
+              {`integration`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-integration" />
+                            <i className="pf-icon pf-icon-integration"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-integration'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-integration`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              key
+              {`key`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-key" />
+                            <i className="pf-icon pf-icon-key"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-key'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-key`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              locked
+              {`locked`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-locked" />
+                            <i className="pf-icon pf-icon-locked"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-locked'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-locked`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              maintenance
+              {`maintenance`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-maintenance" />
+                            <i className="pf-icon pf-icon-maintenance"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-maintenance'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-maintenance`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              memory
+              {`memory`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-memory" />
+                            <i className="pf-icon pf-icon-memory"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-memory'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-memory`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              messages
+              {`messages`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-messages" />
+                            <i className="pf-icon pf-icon-messages"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-messages'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-messages`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              middleware
+              {`middleware`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-middleware" />
+                            <i className="pf-icon pf-icon-middleware"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-middleware'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-middleware`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              migration
+              {`migration`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-migration" />
+                            <i className="pf-icon pf-icon-migration"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-migration'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-migration`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              module
+              {`module`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-module" />
+                            <i className="pf-icon pf-icon-module"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-module'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-module`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              monitoring
+              {`monitoring`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-monitoring" />
+                            <i className="pf-icon pf-icon-monitoring"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-monitoring'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-monitoring`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              namespaces
+              {`namespaces`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-namespaces" />
+                            <i className="pf-icon pf-icon-namespaces"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-namespaces'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-namespaces`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              not-started
+              {`not-started`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-not-started" />
+                            <i className="pf-icon pf-icon-not-started"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-not-started'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-not-started`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              network
+              {`network`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-network" />
+                            <i className="pf-icon pf-icon-network"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-network'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-network`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              new-process
+              {`new-process`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-new-process" />
+                            <i className="pf-icon pf-icon-new-process"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-new-process'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-new-process`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              off
+              {`off`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-off" />
+                            <i className="pf-icon pf-icon-off"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-off'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-off`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              ok
+              {`ok`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-ok" />
+                            <i className="pf-icon pf-icon-ok"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-ok'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-ok`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              on-running
+              {`on-running`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-on-running" />
+                            <i className="pf-icon pf-icon-on-running"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-on-running'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-on-running`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              on
+              {`on`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-on" />
+                            <i className="pf-icon pf-icon-on"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-on'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-on`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              openshift
+              {`openshift`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-openshift" />
+                            <i className="pf-icon pf-icon-openshift"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-openshift'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-openshift`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              openstack
+              {`openstack`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-openstack" />
+                            <i className="pf-icon pf-icon-openstack"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-openstack'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-openstack`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              optimize
+              {`optimize`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-optimize" />
+                            <i className="pf-icon pf-icon-optimize"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-optimize'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-optimize`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              orders
+              {`orders`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-orders" />
+                            <i className="pf-icon pf-icon-orders"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-orders'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-orders`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              os-image
+              {`os-image`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-os-image" />
+                            <i className="pf-icon pf-icon-os-image"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-os-image'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-os-image`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              package
+              {`package`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-package" />
+                            <i className="pf-icon pf-icon-package"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-package'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-package`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              panel-open
+              {`panel-open`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-panel-open" />
+                            <i className="pf-icon pf-icon-panel-open"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-panel-open'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-panel-open`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              panel-close
+              {`panel-close`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-panel-close" />
+                            <i className="pf-icon pf-icon-panel-close"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-panel-close'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-panel-close`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              paused
+              {`paused`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-paused" />
+                            <i className="pf-icon pf-icon-paused"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-paused'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-paused`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              pending
+              {`pending`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-pending" />
+                            <i className="pf-icon pf-icon-pending"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-pending'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-pending`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              pficon-dragdrop
+              {`pficon-dragdrop`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-pficon-dragdrop" />
+                            <i className="pf-icon pf-icon-pficon-dragdrop"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-pficon-dragdrop'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-pficon-dragdrop`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              pficon-history
+              {`pficon-history`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-pficon-history" />
+                            <i className="pf-icon pf-icon-pficon-history"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-pficon-history'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-pficon-history`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              pficon-network-range
+              {`pficon-network-range`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-pficon-network-range" />
+                            <i className="pf-icon pf-icon-pficon-network-range"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-pficon-network-range'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-pficon-network-range`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              pficon-satellite
+              {`pficon-satellite`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-pficon-satellite" />
+                            <i className="pf-icon pf-icon-pficon-satellite"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-pficon-satellite'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-pficon-satellite`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              pficon-sort-common-asc
+              {`pficon-sort-common-asc`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-pficon-sort-common-asc" />
+                            <i className="pf-icon pf-icon-pficon-sort-common-asc"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-pficon-sort-common-asc'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-pficon-sort-common-asc`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              pficon-sort-common-desc
+              {`pficon-sort-common-desc`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-pficon-sort-common-desc" />
+                            <i className="pf-icon pf-icon-pficon-sort-common-desc"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-pficon-sort-common-desc'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-pficon-sort-common-desc`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              pficon-template
+              {`pficon-template`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-pficon-template" />
+                            <i className="pf-icon pf-icon-pficon-template"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-pficon-template'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-pficon-template`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              pficon-vcenter
+              {`pficon-vcenter`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-pficon-vcenter" />
+                            <i className="pf-icon pf-icon-pficon-vcenter"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-pficon-vcenter'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-pficon-vcenter`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              plugged
+              {`plugged`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-plugged" />
+                            <i className="pf-icon pf-icon-plugged"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-plugged'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-plugged`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              port
+              {`port`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-port" />
+                            <i className="pf-icon pf-icon-port"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-port'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-port`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              print
+              {`print`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-print" />
+                            <i className="pf-icon pf-icon-print"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-print'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-print`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              private
+              {`private`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-private" />
+                            <i className="pf-icon pf-icon-private"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-private'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-private`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              process-automation
+              {`process-automation`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-process-automation" />
+                            <i className="pf-icon pf-icon-process-automation"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-process-automation'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-process-automation`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              project
+              {`project`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-project" />
+                            <i className="pf-icon pf-icon-project"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-project'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-project`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              rebalance
+              {`rebalance`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-rebalance" />
+                            <i className="pf-icon pf-icon-rebalance"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-rebalance'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-rebalance`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              rebooting
+              {`rebooting`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-rebooting" />
+                            <i className="pf-icon pf-icon-rebooting"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-rebooting'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-rebooting`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              regions
+              {`regions`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-regions" />
+                            <i className="pf-icon pf-icon-regions"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-regions'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-regions`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              registry
+              {`registry`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-registry" />
+                            <i className="pf-icon pf-icon-registry"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-registry'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-registry`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              remove2
+              {`remove2`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-remove2" />
+                            <i className="pf-icon pf-icon-remove2"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-remove2'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-remove2`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              replicator
+              {`replicator`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-replicator" />
+                            <i className="pf-icon pf-icon-replicator"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-replicator'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-replicator`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              repository
+              {`repository`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-repository" />
+                            <i className="pf-icon pf-icon-repository"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-repository'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-repository`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              resource-pool
+              {`resource-pool`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-resource-pool" />
+                            <i className="pf-icon pf-icon-resource-pool"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-resource-pool'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-resource-pool`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              resources-almost-empty
+              {`resources-almost-empty`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-resources-almost-empty" />
+                            <i className="pf-icon pf-icon-resources-almost-empty"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-resources-almost-empty'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-resources-almost-empty`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              resources-almost-full
+              {`resources-almost-full`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-resources-almost-full" />
+                            <i className="pf-icon pf-icon-resources-almost-full"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-resources-almost-full'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-resources-almost-full`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              resources-empty
+              {`resources-empty`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-resources-empty" />
+                            <i className="pf-icon pf-icon-resources-empty"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-resources-empty'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-resources-empty`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              resources-full
+              {`resources-full`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-resources-full" />
+                            <i className="pf-icon pf-icon-resources-full"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-resources-full'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-resources-full`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              running
+              {`running`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-running" />
+                            <i className="pf-icon pf-icon-running"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-running'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-running`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              save
+              {`save`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-save" />
+                            <i className="pf-icon pf-icon-save"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-save'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-save`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              screen
+              {`screen`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-screen" />
+                            <i className="pf-icon pf-icon-screen"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-screen'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-screen`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              security
+              {`security`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-security" />
+                            <i className="pf-icon pf-icon-security"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-security'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-security`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              server-group
+              {`server-group`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-server-group" />
+                            <i className="pf-icon pf-icon-server-group"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-server-group'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-server-group`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              server
+              {`server`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-server" />
+                            <i className="pf-icon pf-icon-server"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-server'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-server`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              service-catalog
+              {`service-catalog`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-service-catalog" />
+                            <i className="pf-icon pf-icon-service-catalog"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-service-catalog'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-service-catalog`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              service
+              {`service`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-service" />
+                            <i className="pf-icon pf-icon-service"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-service'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-service`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              services
+              {`services`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-services" />
+                            <i className="pf-icon pf-icon-services"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-services'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-services`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              spinner
+              {`spinner`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-spinner" />
+                            <i className="pf-icon pf-icon-spinner"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-spinner'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-spinner`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              spinner2
+              {`spinner2`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-spinner2" />
+                            <i className="pf-icon pf-icon-spinner2"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-spinner2'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-spinner2`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              storage-domain
+              {`storage-domain`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-storage-domain" />
+                            <i className="pf-icon pf-icon-storage-domain"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-storage-domain'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-storage-domain`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              task
+              {`task`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-task" />
+                            <i className="pf-icon pf-icon-task"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-task'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-task`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              tenant
+              {`tenant`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-tenant" />
+                            <i className="pf-icon pf-icon-tenant"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-tenant'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-tenant`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              thumb-tack
+              {`thumb-tack`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-thumb-tack" />
+                            <i className="pf-icon pf-icon-thumb-tack"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-thumb-tack'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-thumb-tack`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              topology
+              {`topology`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-topology" />
+                            <i className="pf-icon pf-icon-topology"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-topology'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-topology`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              trend-down
+              {`trend-down`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-trend-down" />
+                            <i className="pf-icon pf-icon-trend-down"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-trend-down'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-trend-down`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              trend-up
+              {`trend-up`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-trend-up" />
+                            <i className="pf-icon pf-icon-trend-up"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-trend-up'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-trend-up`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              unknown
+              {`unknown`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-unknown" />
+                            <i className="pf-icon pf-icon-unknown"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-unknown'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-unknown`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              unlocked
+              {`unlocked`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-unlocked" />
+                            <i className="pf-icon pf-icon-unlocked"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-unlocked'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-unlocked`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              unplugged
+              {`unplugged`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-unplugged" />
+                            <i className="pf-icon pf-icon-unplugged"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-unplugged'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-unplugged`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              user
+              {`user`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-user" />
+                            <i className="pf-icon pf-icon-user"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-user'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-user`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              users
+              {`users`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-users" />
+                            <i className="pf-icon pf-icon-users"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-users'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-users`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              virtual-machine
+              {`virtual-machine`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-virtual-machine" />
+                            <i className="pf-icon pf-icon-virtual-machine"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-virtual-machine'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-virtual-machine`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              volume
+              {`volume`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-volume" />
+                            <i className="pf-icon pf-icon-volume"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-volume'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-volume`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              warning-triangle
+              {`warning-triangle`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-warning-triangle" />
+                            <i className="pf-icon pf-icon-warning-triangle"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-warning-triangle'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-warning-triangle`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
-        <tr {...{ role: 'row' }}>
-          <td {...{ role: 'cell', 'data-label': 'Icon name' }}>
+        <tr {...{"role":"row"}}>
+          <td {...{"role":"cell","data-label":"Icon name"}}>
             <div>
-              zone
+              {`zone`}
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Icon' }}>
+          <td {...{"role":"cell","data-label":"Icon"}}>
             <div>
-              <i className="pf-icon pf-icon-zone" />
+                            <i className="pf-icon pf-icon-zone"/>
             </div>
           </td>
-          <td {...{ role: 'cell', 'data-label': 'Code' }}>
+          <td {...{"role":"cell","data-label":"Code"}}>
             <div>
-              {'<'}
-              {'i class='}
-              {'"'}
-              {'pf-icon pf-icon-zone'}
-              {'"'}
-              {'>'}
-              {'<'}
-              {'/i'}
-              {'>'}
+              {`<`}
+              {`i class=`}
+              {`"`}
+              {`pf-icon pf-icon-zone`}
+              {`"`}
+              {`>`}
+              {`<`}
+              {`/i`}
+              {`>`}
             </div>
           </td>
         </tr>
       </tbody>
     </table>
-  </>
+  </React.Fragment>
 );
 Component.displayName = 'IconsDocs';
 Component.pageData = pageData;

@@ -6,7 +6,7 @@ module.exports = sourceMD => {
   sourceMD(path.join(themePagesPath, '*.md'), 'pages-overview');
 
   // Core pages
-  sourceMD(path.join(__dirname, '../src/site/pages/*.md'), 'pages-html');
+  sourceMD(path.join(__dirname, './site/pages/*.md'), 'pages-html');
 
   // Core MD
   const coreDocsPath = path.join(__dirname, '../dist/docs');
