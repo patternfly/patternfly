@@ -64,6 +64,6 @@
     font-weight: var(--pf-global--FontWeight--normal);
     line-height: var(--pf-global--LineHeight--md);
     color: var(--pf-global--Color--100); // this color rule is set here to be able to use themes
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizelegibility;
   }
 }

@@ -177,10 +177,10 @@
   --pf-c-table__sort--m-help--MinWidth: 15ch;
 
   // Sort text
-  --pf-c-table__sort__button__text--Color: currentColor;
-  --pf-c-table__sort__button--hover__text--Color: currentColor;
-  --pf-c-table__sort__button--focus__text--Color: currentColor;
-  --pf-c-table__sort__button--active__text--Color: currentColor;
+  --pf-c-table__sort__button__text--Color: currentcolor;
+  --pf-c-table__sort__button--hover__text--Color: currentcolor;
+  --pf-c-table__sort__button--focus__text--Color: currentcolor;
+  --pf-c-table__sort__button--active__text--Color: currentcolor;
 
   // Sort indicator
   --pf-c-table__sort-indicator--Color: var(--pf-global--disabled-color--200);
@@ -1174,7 +1174,7 @@
     --pf-c-table__sort__button--hover__text--Color: var(--pf-c-table__sort--m-favorite__button--hover__text--Color);
     --pf-c-table__sort__button--focus__text--Color: var(--pf-c-table__sort--m-favorite__button--focus__text--Color);
     --pf-c-table__sort__button--active__text--Color: var(--pf-c-table__sort--m-favorite__button--active__text--Color);
-    --pf-c-table__sort--m-selected__button__text--Color: currentColor;
+    --pf-c-table__sort--m-selected__button__text--Color: currentcolor;
   }
 }
 
