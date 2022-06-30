@@ -3,6 +3,7 @@ module.exports = {
   hasGdprBanner: false,
   hasFooter: false,
   hasVersionSwitcher: false,
+  hasDarkThemeSwitcher: true,
   sideNavItems: [
     { section: 'developer-resources' },
     { section: 'components' },
