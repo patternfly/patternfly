@@ -7,8 +7,8 @@ const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
 const { compileHBS, compileMD, watchHBS, watchMD } = require('./scripts/gulp/html');
 const { lintCSSComments, lintCSSFunctions } = require('./scripts/gulp/lint');
 const { generateSnippets } = require('./scripts/gulp/snippets');
-const { start } = require('@breakaway/documentation-framework/scripts/cli/start');
-const { build } = require('@breakaway/documentation-framework/scripts/cli/build');
+const { start } = require('@patternfly/documentation-framework/scripts/cli/start');
+const { build } = require('@patternfly/documentation-framework/scripts/cli/build');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',

@@ -7,7 +7,7 @@ module.exports = {
     SyncComponent: isClient && require('./site/pages/index').default
   },
   '/404': {
-    SyncComponent: isClient && require('@breakaway/documentation-framework/pages/404').default,
+    SyncComponent: isClient && require('@patternfly/documentation-framework/pages/404').default,
     title: '404 Error'
   }
 };

@@ -12,4 +12,4 @@ import '../dist/patternfly.css';
 import '../dist/patternfly-addons.css';
 
 // Global theme CSS
-import '@breakaway/documentation-framework/global.css';
+import '@patternfly/documentation-framework/global.css';
