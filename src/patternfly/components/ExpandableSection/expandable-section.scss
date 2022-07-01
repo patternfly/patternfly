@@ -101,8 +101,9 @@
     --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--hover--Color);
   }
 
-  &:active,
-  &.pf-m-active {
+  &:is(
+  :active,
+  .pf-m-active) {
     --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--active--Color);
   }
 

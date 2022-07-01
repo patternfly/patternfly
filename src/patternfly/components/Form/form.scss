@@ -229,8 +229,9 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
   display: grid;
   gap: var(--pf-c-form__section--Gap);
 
-  & + .pf-c-form__group:not(.pf-m-action),
-  &:not(:first-child) {
+  :is(
+  + .pf-c-form__group:not(.pf-m-action),
+  :not(:first-child)) {
     margin-top: var(--pf-c-form__section--MarginTop);
   }
 }

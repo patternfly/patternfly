@@ -50,15 +50,18 @@
   margin-top: var(--pf-c-check__body--MarginTop);
 }
 
+:is(
 .pf-c-check__label,
-.pf-c-check__input {
+.pf-c-check__input
+) {
   @at-root label.pf-c-check,
   & {
     cursor: pointer;
   }
 
-  &:disabled,
-  &.pf-m-disabled {
+  &:is(
+  :disabled,
+  .pf-m-disabled) {
     --pf-c-check__label--Color: var(--pf-c-check__label--disabled--Color);
 
     cursor: not-allowed;

@@ -252,8 +252,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   background-color: var(--pf-c-dropdown__toggle--BackgroundColor);
   border: none;
 
-  &::before,
-  &.pf-m-action .pf-c-dropdown__toggle-button::before {
+  &:is(
+  ::before,
+  .pf-m-action .pf-c-dropdown__toggle-button::before) {
     position: absolute;
     top: 0;
     right: 0;
@@ -264,15 +265,17 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     border-color: var(--pf-c-dropdown__toggle--before--BorderTopColor) var(--pf-c-dropdown__toggle--before--BorderRightColor) var(--pf-c-dropdown__toggle--before--BorderBottomColor) var(--pf-c-dropdown__toggle--before--BorderLeftColor);
   }
 
-  &.pf-m-disabled,
-  &:disabled {
+  &:is(
+  .pf-m-disabled,
+  :disabled) {
     --pf-c-dropdown__toggle--m-primary--Color: var(--pf-c-dropdown__toggle--m-primary--disabled--Color);
     --pf-c-dropdown__toggle--before--BorderBottomColor: transparent;
 
     pointer-events: none;
 
-    &:not(.pf-m-plain),
-    &.pf-m-plain.pf-m-text {
+    &:is(
+    :not(.pf-m-plain),
+    .pf-m-plain.pf-m-text) {
       --pf-c-dropdown__toggle--BackgroundColor: var(--pf-c-dropdown__toggle--disabled--BackgroundColor);
 
       &::before {
@@ -328,8 +331,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
           border-left: var(--pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftWidth) solid var(--pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftColor);
         }
 
-        &.pf-m-disabled,
-        &[disabled] {
+        &:is(
+        .pf-m-disabled,
+        [disabled]) {
           --pf-c-dropdown__toggle--m-split-button--m-primary--m-action--child--BorderLeftWidth: 0;
         }
         // stylelint-enable
@@ -341,8 +345,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
       align-items: center;
       cursor: pointer;
 
+      &:is(
       > input,
-      .pf-c-check {
+      .pf-c-check) {
         cursor: pointer;
         transform: translateY(var(--pf-c-dropdown__toggle--m-split-button__toggle-check__input--TranslateY));
       }

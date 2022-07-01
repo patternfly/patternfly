@@ -105,8 +105,10 @@
   color: var(--pf-c-empty-state__body--Color);
 }
 
-@at-root .pf-c-empty-state__content > .pf-c-button.pf-m-primary,
-.pf-c-empty-state__primary {
+:is(
+.pf-c-empty-state__content > .pf-c-button.pf-m-primary,
+.pf-c-empty-state__primary
+) {
   margin-top: var(--pf-c-empty-state__primary--MarginTop);
 
   + .pf-c-empty-state__secondary {

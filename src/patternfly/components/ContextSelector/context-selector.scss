@@ -329,14 +329,16 @@
   border: none;
 
 
-  &:hover,
-  &:focus {
+  &:is(
+  :hover,
+  :focus) {
     text-decoration: none;
     background-color: var(--pf-c-context-selector__menu-list-item--hover--BackgroundColor);
   }
 
-  &.pf-m-disabled,
-  &:disabled {
+  &:is(
+  .pf-m-disabled,
+  :disabled) {
     --pf-c-context-selector__menu-list-item--Color: var(--pf-c-context-selector__menu-list-item--disabled--Color);
 
     pointer-events: none;

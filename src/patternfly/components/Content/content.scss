@@ -123,6 +123,7 @@
     margin-top: var(--pf-c-content--li--MarginTop);
   }
 
+  :is(
   p,
   dl,
   ol,
@@ -131,19 +132,20 @@
   small,
   pre,
   table,
-  hr {
+  hr) {
     &:not(:last-child) {
       // This variable name doesn't reflect the selector, it's an excpection to the variable system.
       margin-bottom: var(--pf-c-content--MarginBottom);
     }
   }
 
+  :is(
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6 {
+  h6) {
     margin: 0;
     font-family: var(--pf-c-content--heading--FontFamily);
 

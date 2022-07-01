@@ -208,10 +208,11 @@
   }
 }
 
+:is(
 .pf-c-data-list,
 .pf-c-data-list__item-row,
 .pf-c-data-list__cell,
-.pf-c-data-list__text {
+.pf-c-data-list__text) {
   &.pf-m-truncate {
     --pf-c-data-list--cell--MinWidth: var(--pf-c-data-list--cell--m-truncate--MinWidth);
     --pf-c-data-list--cell--Overflow: hidden;
@@ -251,8 +252,9 @@
     cursor: pointer;
     outline-offset: var(--pf-c-data-list__item--m-selectable--OutlineOffset);
 
-    &:hover,
-    &:focus {
+    &:is(
+    :hover,
+    :focus) {
       position: relative;
       z-index: var(--pf-c-data-list__item--m-selectable--hover--ZIndex);
 

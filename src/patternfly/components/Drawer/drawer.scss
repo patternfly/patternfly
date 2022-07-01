@@ -164,8 +164,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   height: 100%;
   overflow-x: hidden;
 
-  &.pf-m-inline,
-  &.pf-m-static {
+  &:is(
+  .pf-m-inline,
+  .pf-m-static) {
     > .pf-c-drawer__main > .pf-c-drawer__panel:not(.pf-m-no-border, .pf-m-resizable) {
       padding-left: var(--pf-c-drawer--m-inline__panel--PaddingLeft);
     }
@@ -475,8 +476,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   .pf-c-drawer.pf-m-panel-left {
     --pf-c-drawer--m-expanded__panel--BoxShadow: var(--pf-c-drawer--m-expanded--m-panel-left__panel--BoxShadow);
 
-    &.pf-m-inline,
-    &.pf-m-static {
+    &:is(
+    .pf-m-inline,
+    .pf-m-static) {
       > .pf-c-drawer__main > .pf-c-drawer__panel:not(.pf-m-no-border, .pf-m-resizable) {
         padding-right: var(--pf-c-drawer--m-panel-left--m-inline__panel--PaddingRight);
         padding-left: 0;
@@ -511,8 +513,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     min-width: auto;
     min-height: var(--pf-c-drawer--m-panel-bottom__panel--md--MinHeight);
 
-    &.pf-m-inline,
-    &.pf-m-static {
+    &:is(
+    .pf-m-inline,
+    .pf-m-static) {
       > .pf-c-drawer__main > .pf-c-drawer__panel:not(.pf-m-no-border, .pf-m-resizable) {
         padding-top: var(--pf-c-drawer--m-panel-bottom--m-inline__panel--PaddingTop);
         padding-left: 0;
@@ -606,17 +609,21 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   @include pf-apply-breakpoint($breakpoint) {
     // Drawer and inline
-    .pf-c-drawer.pf-m-inline#{$breakpoint-name},
-    .pf-c-drawer.pf-m-static#{$breakpoint-name} {
-      > .pf-c-drawer__main > .pf-c-drawer__content {
-        flex-shrink: 1;
-      }
+    .pf-c-drawer {
+      &:is(
+      .pf-m-inline,
+      .pf-m-static) {
+        > .pf-c-drawer__main > .pf-c-drawer__content {
+          flex-shrink: 1;
+        }
 
-      > .pf-c-drawer__main > .pf-c-drawer__panel {
-        --pf-c-drawer--m-expanded__panel--BoxShadow: none;
+        > .pf-c-drawer__main > .pf-c-drawer__panel {
+          --pf-c-drawer--m-expanded__panel--BoxShadow: none;
 
-        &:not(.pf-m-no-border)::after {
-          background-color: var(--pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor);
+          // stylelint-disable max-nesting-depth
+          &:not(.pf-m-no-border)::after {
+            background-color: var(--pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor);
+          }
         }
       }
     }

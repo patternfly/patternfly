@@ -241,10 +241,11 @@
     --pf-c-button--FontSize: var(--pf-c-button--m-small--FontSize);
   }
 
-  &.pf-m-primary,
-  &.pf-m-secondary,
-  &.pf-m-tertiary,
-  &.pf-m-link {
+  &:is(
+  .pf-m-primary,
+  .pf-m-secondary,
+  .pf-m-tertiary,
+  .pf-m-link) {
     &.pf-m-display-lg {
       --pf-c-button--PaddingTop: var(--pf-c-button--m-display-lg--PaddingTop);
       --pf-c-button--PaddingRight: var(--pf-c-button--m-display-lg--PaddingRight);
@@ -555,9 +556,10 @@
     pointer-events: none;
   }
 
-  &:disabled,
-  &.pf-m-disabled,
-  &.pf-m-aria-disabled {
+  &:is(
+  :disabled,
+  .pf-m-disabled,
+  .pf-m-aria-disabled) {
     &::after {
       border-color: var(--pf-c-button--disabled--after--BorderColor);
     }

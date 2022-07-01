@@ -444,11 +444,13 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   }
 }
 
+:is(
 .pf-c-page__main-nav,
 .pf-c-page__main-breadcrumb,
 .pf-c-page__main-tabs,
 .pf-c-page__main-section,
-.pf-c-page__main-wizard {
+.pf-c-page__main-wizard
+) {
   &.pf-m-limit-width {
     display: flex;
     flex-direction: column;
@@ -469,13 +471,15 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   }
 }
 
+:is(
 .pf-c-page__main-nav,
 .pf-c-page__main-breadcrumb,
 .pf-c-page__main-tabs,
 .pf-c-page__main-section,
 .pf-c-page__main-wizard,
 .pf-c-page__main-group,
-.pf-c-page__main-subnav {
+.pf-c-page__main-subnav
+) {
   flex-shrink: 0;
 
   &.pf-m-overflow-scroll {
@@ -595,9 +599,11 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   }
 }
 
+:is(
 .pf-c-page__main-section,
 .pf-c-page__main-group,
-.pf-c-page__main-wizard {
+.pf-c-page__main-wizard
+) {
   &:last-child,
   &:only-child,
   &.pf-m-fill {

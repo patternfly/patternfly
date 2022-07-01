@@ -113,8 +113,9 @@
 
 // RedHat Font overrides
 @include pf-m-overpass-font {
+  :is(
   .pf-c-breadcrumb__link,
-  .pf-c-breadcrumb__item {
+  .pf-c-breadcrumb__item) {
     font-weight: var(--pf-global--FontWeight--semi-bold);
   }
 }
