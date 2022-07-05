@@ -1,4 +1,10 @@
 .ws-preview-html {
   overflow: auto;
+  padding: 2em;
+  background: var(--pf-global--BackgroundColor--150);
 }
 
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(14, auto);
+}
