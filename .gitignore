@@ -18,4 +18,4 @@ package-lock.json
 /assets/
 /scripts/sizeReport/package-lock.json
 /scripts/sizeReport/report.html
-src/generated/**/*.js
+patternfly-docs/generated/**/*.js

@@ -22,8 +22,8 @@
     "lint:sass": "stylelint 'src/**/*.scss'",
     "lint:js": "eslint .",
     "precommit": "lint-staged",
-    "screenshots": "rimraf src/generated/**/*.png && theme-patternfly-org screenshots --urlPrefix http://localhost:5000",
-    "serve": "theme-patternfly-org serve public",
+    "screenshots": "rimraf patternfly-docs/generated/**/*.png && pf-docs-framework screenshots --urlPrefix http://localhost:5000",
+    "serve": "pf-docs-framework serve public",
     "start": "gulp develop",
     "test": "npm run a11y",
     "workflows": "node .github/generate-workflows"
@@ -33,7 +33,7 @@
     "@commitlint/config-conventional": "^13.1.0",
     "@fortawesome/fontawesome": "^1.1.8",
     "@octokit/rest": "^16.40.1",
-    "@patternfly/patternfly-a11y": "4.2.1",
+    "@patternfly/patternfly-a11y": "4.3.1",
     "@patternfly/react-charts": "6.15.23",
     "@patternfly/react-code-editor": "4.3.61",
     "@patternfly/react-table": "4.30.3",
@@ -79,7 +79,7 @@
     "stylelint-scss": "^4.0.0",
     "stylelint-value-no-unknown-custom-properties": "^3.0.0",
     "surge": "^0.21.3",
-    "theme-patternfly-org": "0.11.32",
+    "@patternfly/documentation-framework": "^1.0.0",
     "unified": "^9.2.0",
     "webpack": "^4.43.0"
   },

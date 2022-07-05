@@ -11,7 +11,7 @@
         "@patternfly/react-charts",
         "@patternfly/react-code-editor",
         "@patternfly/react-table",
-        "theme-patternfly-org"
+        "@patternfly/documentation-framework"
       ],
       "enabled": false
     },
@@ -22,7 +22,7 @@
         "@patternfly/react-charts",
         "@patternfly/react-code-editor",
         "@patternfly/react-table",
-        "theme-patternfly-org"
+        "@patternfly/documentation-framework"
       ]
     }
   ]
