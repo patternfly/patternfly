@@ -1,0 +1,25 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-background-color() {
+  // Background color options to be redefined in theme
+  $pf-u-background-color-options: (
+    // Note that the status backgrounds are not intended to be used in dark theme; instead, a border or other indication would be used.
+    background-color-default: (
+      background-color var(--pf-global--BackgroundColor--100)
+    ),
+    background-color-success: (
+      background-color var(--pf-global--BackgroundColor--100)
+    ),
+    background-color-info: (
+      background-color var(--pf-global--BackgroundColor--100)
+    ),
+    background-color-warning: (
+      background-color var(--pf-global--BackgroundColor--100)
+    ),
+    background-color-danger: (
+      background-color var(--pf-global--BackgroundColor--100)
+    )
+  );
+
+  @include pf-utility-builder($pf-u-background-color-options, $pf-global--breakpoint-list);
+}

@@ -54,5 +54,11 @@ $pf-u-background-color-options: (
 
 @include pf-utility-builder($pf-u-background-color-options, $pf-global--breakpoint-list);
 
+@import "themes/dark/BackgroundColor";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-background-color;
+}
+
 // stylelint-enable
 
