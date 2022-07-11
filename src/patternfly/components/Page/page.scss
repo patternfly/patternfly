@@ -74,6 +74,8 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__sidebar--Width: #{pf-size-prem(290px)};
   --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__sidebar--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
+  --pf-c-page__sidebar--m-light--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-page__sidebar--m-light--BorderRightColor: var(--pf-global--BorderColor--100);
   --pf-c-page__sidebar--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-page__sidebar--Transition: var(--pf-global--Transition);
   --pf-c-page__sidebar--TranslateX: -100%;
@@ -389,16 +391,16 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   transition: var(--pf-c-page__sidebar--Transition);
   transform: translateX(var(--pf-c-page__sidebar--TranslateX)) translateZ(var(--pf-c-page__sidebar--TranslateZ));
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    box-shadow: var(--pf-c-page__sidebar--BoxShadow);
-  }
-
   // Mobile
   // Expanded nav
   &.pf-m-expanded {
     --pf-c-page__sidebar--TranslateX: var(--pf-c-page__sidebar--m-expanded--TranslateX);
 
     box-shadow: var(--pf-c-page__sidebar--BoxShadow);
+
+    @media screen and (min-width: $pf-global--breakpoint--xl) {
+      --pf-c-page__sidebar--BoxShadow: none;
+    }
   }
 
   // Desktop
@@ -412,6 +414,8 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     @include pf-t-light;
 
     --pf-c-page__sidebar--BackgroundColor: var(--pf-c-page__sidebar--m-light--BackgroundColor);
+
+    border-right: var(--pf-c-page__sidebar--m-light--BorderRightWidth) solid var(--pf-c-page__sidebar--m-light--BorderRightColor);
   }
 }
 
