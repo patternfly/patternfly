@@ -59,17 +59,19 @@
   display: var(--pf-hidden-visible--Display);
   visibility: var(--pf-hidden-visible--Visibility);
 
-  @each $breakpoint, $breakpoint-value in $pf-c-masthead--breakpoint-map {
+  @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-name-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    &.pf-m-hidden#{$breakpoint-name} {
-      --pf-hidden-visible--Display: var(--pf-hidden-visible--hidden--Display);
-      --pf-hidden-visible--Visibility: var(--pf-hidden-visible--hidden--Visibility);
-    }
+    @include pf-apply-breakpoint($breakpoint) {
+      &.pf-m-hidden#{$breakpoint-name} {
+        --pf-hidden-visible--Display: var(--pf-hidden-visible--hidden--Display);
+        --pf-hidden-visible--Visibility: var(--pf-hidden-visible--hidden--Visibility);
+      }
 
-    &.pf-m-visible#{$breakpoint-name} {
-      --pf-hidden-visible--Display: var(--pf-hidden-visible--visible--Display);
-      --pf-hidden-visible--Visibility: var(--pf-hidden-visible--visible--Visibility);
+      &.pf-m-visible#{$breakpoint-name} {
+        --pf-hidden-visible--Display: var(--pf-hidden-visible--visible--Display);
+        --pf-hidden-visible--Visibility: var(--pf-hidden-visible--visible--Visibility);
+      }
     }
   }
 }

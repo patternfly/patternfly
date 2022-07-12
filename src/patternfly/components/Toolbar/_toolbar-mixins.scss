@@ -29,7 +29,7 @@
   flex-wrap: wrap;
 }
 
-@mixin pf-toolbar-m-space-items {
+@mixin pf-toolbar-m-space-items($spacer-value) {
   > * {
     --pf-c-toolbar--spacer: #{$spacer-value};
   }
@@ -39,7 +39,7 @@
   }
 }
 
-@mixin pf-toolbar-m-spacer {
+@mixin pf-toolbar-m-spacer($spacer-value) {
   --pf-c-toolbar--spacer: #{$spacer-value};
 
   &:last-child {
@@ -47,7 +47,7 @@
   }
 }
 
-@mixin pf-toolbar-m-inset {
+@mixin pf-toolbar-m-inset($spacer-value) {
   --pf-c-toolbar--inset: #{$spacer-value};
   --pf-c-toolbar__content--PaddingRight: var(--pf-c-toolbar--inset);
   --pf-c-toolbar__content--PaddingLeft: var(--pf-c-toolbar--inset);

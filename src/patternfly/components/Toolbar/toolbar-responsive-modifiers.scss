@@ -1,7 +1,8 @@
+@import "./toolbar-mixins";
 @import "./toolbar-maps";
 
 @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-  $breakpoint-name: "-on-"#{$breakpoint};
+  $breakpoint-name: "-on-" + #{$breakpoint};
 
   @include pf-apply-breakpoint($breakpoint) {
     .pf-m-toggle-group.pf-m-show#{$breakpoint-name} {
@@ -39,7 +40,7 @@
     @include pf-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
         .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
-          @include pf-toolbar-m-space-items;
+          @include pf-toolbar-m-space-items($spacer-value);
         }
       }
     }
@@ -51,7 +52,7 @@
     @include pf-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
         .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
-          @include pf-toolbar-m-spacer;
+          @include pf-toolbar-m-spacer($spacer-value);
         }
       }
     }
@@ -63,7 +64,7 @@
     @include pf-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-c-toolbar--inset-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
-          @include pf-toolbar-m-spacer;
+          @include pf-toolbar-m-spacer($spacer-value);
         }
       }
     }
