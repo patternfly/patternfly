@@ -2,5 +2,7 @@
   {{#if toolbar-content--attribute}}
     {{{toolbar-content--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>

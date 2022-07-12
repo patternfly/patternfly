@@ -1,0 +1,64 @@
+@import "./toolbar-mixins";
+@import "./toolbar-maps";
+
+@each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
+  $breakpoint-name: "-on-" + #{$breakpoint};
+
+  @include pf-apply-breakpoint($breakpoint) {
+    .pf-m-toggle-group.pf-m-show#{$breakpoint-name} {
+      @include pf-toolbar-m-show;
+    }
+
+    .pf-c-toolbar__item.pf-m-align-right#{$breakpoint-name},
+    .pf-c-toolbar__group.pf-m-align-right#{$breakpoint-name} {
+      @include pf-toolbar-m-align-right;
+    }
+
+    // Align left
+    .pf-c-toolbar__item.pf-m-align-left#{$breakpoint-name},
+    .pf-c-toolbar__group.pf-m-align-left#{$breakpoint-name} {
+      @include pf-toolbar-m-align-left;
+    }
+
+    .pf-c-toolbar__content-section,
+    .pf-c-toolbar__group {
+      &.pf-m-nowrap#{$breakpoint-name} {
+        @include pf-toolbar-m-no-wrap;
+      }
+
+      &.pf-m-wrap#{$breakpoint-name} {
+        @include pf-toolbar-m-wrap;
+      }
+    }
+  }
+}
+
+.pf-c-toolbar {
+  @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint) {
+      @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
+        .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
+          @include pf-toolbar-m-space-items($spacer-value);
+        }
+
+        &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
+          @include pf-toolbar-m-spacer($spacer-value);
+        }
+      }
+    }
+  }
+
+  @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+    @include pf-apply-breakpoint($breakpoint) {
+      @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
+        .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
+          @include pf-toolbar-m-spacer($spacer-value);
+        }
+      }
+    }
+  }
+}

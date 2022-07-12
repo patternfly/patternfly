@@ -1,8 +1,8 @@
-<div class="pf-c-toolbar__toggle{{#if toolbar-toggle--modifier}} {{toolbar-toggle--modifier}}{{/if}}"
+<div class="pf-c-toolbar__toggle{{#if toolbar-toggle--modifier}} {{toolbar-toggle--modifier}}{{/if}}{{#ifEquals toolbar-toggle--IsExpanded "true"}} pf-m-expanded{{/ifEquals}}"
   {{#if toolbar-toggle--attribute}}
     {{{toolbar-toggle--attribute}}}
   {{/if}}>
-  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Show filters" aria-expanded="' toolbar-toggle--IsExpanded '" aria-controls="' toolbar--id '-expandable-content"')}}
+  {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-label="Show filters" aria-expanded="' toolbar-toggle--IsExpanded '" aria-controls="' toolbar--id toolbar-toggle--expandable-content--id '-expandable-content"')}}
     {{#if toolbar-toggle--icon}}
       <i class="fas {{toolbar-toggle--icon}}" aria-hidden="true"></i>
     {{else}}

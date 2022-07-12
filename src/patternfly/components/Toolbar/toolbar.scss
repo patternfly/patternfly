@@ -1,8 +1,7 @@
 // Don't remove this magic comment. See gulpfile.js.
 // @import "../../sass-utilities/all";
-$pf-c-toolbar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
-$pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
+@import "./toolbar-mixins";
+@import "./toolbar-maps";
 
 .pf-c-toolbar {
   --pf-c-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -10,12 +9,13 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
 
+  // Group
+  --pf-c-toolbar__group--Display: flex;
+  --pf-c-toolbar__group--RowGap: var(--pf-global--spacer--xs);
+
   // Item
   --pf-c-toolbar__item--Display: block;
   --pf-c-toolbar__item--MinWidth--base: auto;
-
-  // Group
-  --pf-c-toolbar__group--Display: flex;
 
   // Sticky
   --pf-c-toolbar--m-sticky--ZIndex: var(--pf-global--ZIndex--xs);
@@ -28,6 +28,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Content section
   --pf-c-toolbar__content-section--Display: flex;
+  --pf-c-toolbar__content-section--RowGap: var(--pf-global--spacer--xs);
 
   // Insets
   --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
@@ -52,6 +53,14 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Chip container
   --pf-c-toolbar__group--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
   --pf-c-toolbar__group--m-chip-container__item--MarginTop: var(--pf-global--spacer--md);
+
+  // Toggle group
+  --pf-c-toolbar__group--m-toggle-group__group--Display: none;
+  --pf-c-toolbar__group--m-toggle-group__item--Display: none;
+  --pf-c-toolbar__group--m-toggle-group__toggle--Display: inline-block;
+  --pf-c-toolbar__group--m-toggle-group--m-show__group--Display: flex;
+  --pf-c-toolbar__group--m-toggle-group--m-show__item--Display: block;
+  --pf-c-toolbar__group--m-toggle-group--m-show__toggle--Display: none;
 
   // Base spacer - shared value
   --pf-c-toolbar--spacer--base: var(--pf-global--spacer--md);
@@ -200,6 +209,14 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
       --pf-c-toolbar--spacer: 0;
     }
   }
+
+  &.pf-m-nowrap {
+    @include pf-toolbar-m-no-wrap;
+  }
+
+  &.pf-m-wrap {
+    @include pf-toolbar-m-wrap;
+  }
 }
 
 // Group
@@ -208,6 +225,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   @include pf-hidden-visible(var(--pf-c-toolbar__group--Display));
 
+  row-gap: var(--pf-c-toolbar__group--RowGap);
   align-items: center;
   margin-right: var(--pf-c-toolbar--spacer);
 
@@ -246,21 +264,26 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   &.pf-m-toggle-group {
     --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--m-toggle-group--spacer);
 
-    .pf-c-toolbar__group,
+    .pf-c-toolbar__group {
+      --pf-c-toolbar__group--Display: var(--pf-c-toolbar__group--m-toggle-group__group--Display);
+    }
+
     .pf-c-toolbar__item {
-      display: none;
-      visibility: hidden;
+      --pf-c-toolbar__item--Display: var(--pf-c-toolbar__group--m-toggle-group__item--Display);
     }
 
     .pf-c-toolbar__toggle {
-      display: inline-block;
-      visibility: visible;
+      display: var(--pf-c-toolbar__group--m-toggle-group__toggle--Display);
     }
   }
 
   // &:last-child must always come last for spacing system to work properly, as it has the same specificity as the preceding modifiers
   &:last-child {
     --pf-c-toolbar--spacer: 0;
+  }
+
+  &.pf-m-show {
+    @include pf-toolbar-m-show;
   }
 }
 
@@ -325,12 +348,21 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
 .pf-c-toolbar__group,
 .pf-c-toolbar__item {
+  flex: 0 1 auto;
+
   &.pf-m-overflow-container {
     flex: 1;
     overflow: hidden;
   }
-}
 
+  &.pf-m-align-right {
+    @include pf-toolbar-m-align-right;
+  }
+
+  &.pf-m-align-left {
+    @include pf-toolbar-m-align-left;
+  }
+}
 
 .pf-c-toolbar__expand-all-icon {
   display: inline-block;
@@ -358,6 +390,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   @include pf-hidden-visible(var(--pf-c-toolbar__content-section--Display));
 
   width: 100%;
+  row-gap: var(--pf-c-toolbar__content-section--RowGap);
 }
 
 // Expandable content
@@ -443,120 +476,28 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   color: var(--pf-c-toolbar__toggle--m-expanded__c-button--m-plain--Color);
 }
 
-// Toggle group modifiers
-@each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-  @include pf-apply-breakpoint($breakpoint) {
-    .pf-m-toggle-group.pf-m-show#{$breakpoint-name} {
-      --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--m-toggle-group--m-show--spacer);
-
-      .pf-c-toolbar__group,
-      .pf-c-toolbar__item {
-        display: flex;
-        flex: 0 1 auto;
-        visibility: visible;
-      }
-
-      .pf-c-toolbar__toggle {
-        display: none;
-        visibility: hidden;
-      }
-    }
-  }
-}
-
 // stylelint-disable max-nesting-depth, no-duplicate-selectors
 .pf-c-toolbar {
-  // Build spacing modifiers
-  @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+  @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
+    .pf-m-space-items-#{$spacer} {
+      @include pf-toolbar-m-space-items($spacer-value);
+    }
 
-
-    @include pf-apply-breakpoint($breakpoint) {
-      // Align right
-      .pf-c-toolbar__item.pf-m-align-right#{$breakpoint-name},
-      .pf-c-toolbar__group.pf-m-align-right#{$breakpoint-name} {
-        margin-left: auto;
-
-        & ~ .pf-m-pagination {
-          margin-left: 0;
-        }
-      }
-
-      // Align left
-      .pf-c-toolbar__item.pf-m-align-left#{$breakpoint-name},
-      .pf-c-toolbar__group.pf-m-align-left#{$breakpoint-name} {
-        margin-left: 0;
-
-        & ~ .pf-m-pagination {
-          margin-left: auto;
-        }
-      }
-
-      .pf-c-toolbar__content-section,
-      .pf-c-toolbar__group {
-        &.pf-m-nowrap#{$breakpoint-name} {
-          flex-wrap: nowrap;
-        }
-
-        &.pf-m-wrap#{$breakpoint-name} {
-          flex-wrap: wrap;
-        }
-      }
+    &.pf-m-inset-#{$spacer} {
+      @include pf-toolbar-m-spacer($spacer-value);
     }
   }
 
-  // .pf-m-space-items-{size}{-on-breakpoint}
-  @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    @include pf-apply-breakpoint($breakpoint) {
-      @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
-        .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
-          > * {
-            --pf-c-toolbar--spacer: #{$spacer-value};
-          }
-
-          > :last-child {
-            --pf-c-toolbar--spacer: 0;
-          }
-        }
-      }
-    }
-  }
-
-  // .pf-m-spacer-{size}{-on-breakpoint}
-  @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    @include pf-apply-breakpoint($breakpoint) {
-      @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
-        .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
-          --pf-c-toolbar--spacer: #{$spacer-value};
-
-          &:last-child {
-            --pf-c-toolbar--spacer: #{$spacer-value};
-          }
-        }
-      }
-    }
-  }
-
-  @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    @include pf-apply-breakpoint($breakpoint) {
-      @each $spacer, $spacer-value in $pf-c-toolbar--inset-map {
-        &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
-          --pf-c-toolbar--inset: #{$spacer-value};
-          --pf-c-toolbar__content--PaddingRight: var(--pf-c-toolbar--inset);
-          --pf-c-toolbar__content--PaddingLeft: var(--pf-c-toolbar--inset);
-        }
-      }
+  @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
+    .pf-m-spacer-#{$spacer} {
+      @include pf-toolbar-m-spacer($spacer-value);
     }
   }
 }
+// stylelint-enable
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "./toolbar-responsive-modifiers"; // call after all other modifiers
 // stylelint-enable
 
 // Override .pf-m-toggle-group margin modifier

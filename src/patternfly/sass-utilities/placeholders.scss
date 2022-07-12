@@ -59,20 +59,16 @@
   display: var(--pf-hidden-visible--Display);
   visibility: var(--pf-hidden-visible--Visibility);
 
-  // toggle values based on state
-  &.pf-m-hidden {
-    --pf-hidden-visible--Display: var(--pf-hidden-visible--hidden--Display);
-    --pf-hidden-visible--Visibility: var(--pf-hidden-visible--hidden--Visibility);
-  }
+  @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-name-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-  @each $size, $bp in $pf-global--breakpoint-name-map {
-    @media screen and (min-width: $bp) {
-      &.pf-m-hidden-on-#{$size} {
+    @include pf-apply-breakpoint($breakpoint) {
+      &.pf-m-hidden#{$breakpoint-name} {
         --pf-hidden-visible--Display: var(--pf-hidden-visible--hidden--Display);
         --pf-hidden-visible--Visibility: var(--pf-hidden-visible--hidden--Visibility);
       }
 
-      &.pf-m-visible-on-#{$size} {
+      &.pf-m-visible#{$breakpoint-name} {
         --pf-hidden-visible--Display: var(--pf-hidden-visible--visible--Display);
         --pf-hidden-visible--Visibility: var(--pf-hidden-visible--visible--Visibility);
       }
