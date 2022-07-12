@@ -1,8 +1,7 @@
 // Don't remove this magic comment. See gulpfile.js.
 // @import "../../sass-utilities/all";
-$pf-c-toolbar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
-$pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
+@import "./toolbar-mixins";
+@import "./toolbar-maps";
 
 .pf-c-toolbar {
   --pf-c-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -454,105 +453,49 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   color: var(--pf-c-toolbar__toggle--m-expanded__c-button--m-plain--Color);
 }
 
-// Toggle group modifiers
-@each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+.pf-m-toggle-group.pf-m-show {
+  @include pf-toolbar-m-show;
+}
 
-  @include pf-apply-breakpoint($breakpoint) {
-    .pf-m-toggle-group.pf-m-show#{$breakpoint-name} {
-      --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--m-toggle-group--m-show--spacer);
-      --pf-c-toolbar__group--m-toggle-group__group--Display: var(--pf-c-toolbar__group--m-toggle-group--m-show__group--Display);
-      --pf-c-toolbar__group--m-toggle-group__item--Display: var(--pf-c-toolbar__group--m-toggle-group--m-show__item--Display);
-      --pf-c-toolbar__group--m-toggle-group__toggle--Display: var(--pf-c-toolbar__group--m-toggle-group--m-show__toggle--Display);
-    }
+.pf-c-toolbar__item.pf-m-align-right,
+.pf-c-toolbar__group.pf-m-align-right {
+  @include pf-toolbar-m-align-right;
+}
+
+// Align left
+.pf-c-toolbar__item.pf-m-align-left,
+.pf-c-toolbar__group.pf-m-align-left {
+  @include pf-toolbar-m-align-left;
+}
+
+.pf-c-toolbar__content-section,
+.pf-c-toolbar__group {
+  &.pf-m-nowrap {
+    @include pf-toolbar-m-no-wrap;
+  }
+
+  &.pf-m-wrap {
+    @include pf-toolbar-m-wrap;
   }
 }
 
 // stylelint-disable max-nesting-depth, no-duplicate-selectors
 .pf-c-toolbar {
-  // Build spacing modifiers
-  @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    @include pf-apply-breakpoint($breakpoint) {
-      // Align right
-      .pf-c-toolbar__item.pf-m-align-right#{$breakpoint-name},
-      .pf-c-toolbar__group.pf-m-align-right#{$breakpoint-name} {
-        margin-left: auto;
-
-        & ~ .pf-m-pagination {
-          margin-left: 0;
-        }
-      }
-
-      // Align left
-      .pf-c-toolbar__item.pf-m-align-left#{$breakpoint-name},
-      .pf-c-toolbar__group.pf-m-align-left#{$breakpoint-name} {
-        margin-left: 0;
-
-        & ~ .pf-m-pagination {
-          margin-left: auto;
-        }
-      }
-
-      .pf-c-toolbar__content-section,
-      .pf-c-toolbar__group {
-        &.pf-m-nowrap#{$breakpoint-name} {
-          flex-wrap: nowrap;
-        }
-
-        &.pf-m-wrap#{$breakpoint-name} {
-          flex-wrap: wrap;
-        }
-      }
+  @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
+    .pf-m-space-items-#{$spacer} {
+      @include pf-toolbar-m-space-items;
     }
   }
 
-  @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    @include pf-apply-breakpoint($breakpoint) {
-      @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
-        .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
-          > * {
-            --pf-c-toolbar--spacer: #{$spacer-value};
-          }
-
-          > :last-child {
-            --pf-c-toolbar--spacer: 0;
-          }
-        }
-      }
+  @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
+    .pf-m-spacer-#{$spacer} {
+      @include pf-toolbar-m-spacer;
     }
   }
 
-  @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    @include pf-apply-breakpoint($breakpoint) {
-      @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
-        .pf-m-spacer-#{$spacer}#{$breakpoint-name} {
-          --pf-c-toolbar--spacer: #{$spacer-value};
-
-          &:last-child {
-            --pf-c-toolbar--spacer: #{$spacer-value};
-          }
-        }
-      }
-    }
-  }
-
-  @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
-    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
-    @include pf-apply-breakpoint($breakpoint) {
-      @each $spacer, $spacer-value in $pf-c-toolbar--inset-map {
-        &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
-          --pf-c-toolbar--inset: #{$spacer-value};
-          --pf-c-toolbar__content--PaddingRight: var(--pf-c-toolbar--inset);
-          --pf-c-toolbar__content--PaddingLeft: var(--pf-c-toolbar--inset);
-        }
-      }
+  @each $spacer, $spacer-value in $pf-c-toolbar--inset-map {
+    &.pf-m-inset-#{$spacer} {
+      @include pf-toolbar-m-spacer;
     }
   }
 }
@@ -561,12 +504,4 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 // Override .pf-m-toggle-group margin modifier
 .pf-c-toolbar__content-section > :last-child {
   --pf-c-toolbar--spacer: 0;
-}
-
-@mixin pf-c-toolbar--m-space-items {
-
-}
-
-@mixin pf-c-toolbar--m-spacer {
-
 }
