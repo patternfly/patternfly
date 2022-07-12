@@ -6,6 +6,71 @@ cssPrefix: pf-c-toolbar
 
 import './Toolbar.css'
 
+### Multiple toggle groups, mixed state (static example)
+```hbs
+{{#> toolbar toolbar--id="toolbar-multiple-toggle-groups-mixed-state-example"}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{> toolbar-item-bulk-select}}
+      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
+        {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
+          {{#> toolbar-item}}
+            {{#> select id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
+              Status
+            {{/select}}
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            {{#> select id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
+              Risk
+            {{/select}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+      {{/toolbar-group}}
+      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
+        {{> toolbar-toggle toolbar-toggle--icon="fas fa-cog" toolbar-toggle--IsExpanded="true"}}
+        {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
+          {{#> toolbar-item}}
+            {{#> select id=(concat toolbar--id '-toggle-2-select-checkbox-status') select--IsCheckboxSelect="true"}}
+              Status
+            {{/select}}
+          {{/toolbar-item}}
+          {{#> toolbar-item}}
+            {{#> select id=(concat toolbar--id '-toggle-2-select-checkbox-risk') select--IsCheckboxSelect="true"}}
+              Risk
+            {{/select}}
+          {{/toolbar-item}}
+        {{/toolbar-group}}
+      {{/toolbar-group}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true"}}
+      {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content="true" toolbar-overflow-menu-example--control="true"}}
+    {{/toolbar-content-section}}
+    {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
+      {{> toolbar-item-search-filter button--id="expandable-content"}}
+      {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
+        {{#> toolbar-item}}
+          {{#> select id=(concat toolbar--id '-toggle-2-select-checkbox-status-expanded') select--IsCheckboxSelect="true"}}
+            Status
+          {{/select}}
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          {{#> select id=(concat toolbar--id '-toggle-2-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
+            Risk
+          {{/select}}
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+    {{/toolbar-expandable-content}}
+  {{/toolbar-content}}
+  {{#> toolbar-content toolbar-content--modifier="pf-m-chip-container"}}
+    {{#> toolbar-group toolbar-group--modifier=""}}
+      {{> toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat toolbar--id '-chip-group-status')}}
+      {{> toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat toolbar--id '-chip-group-risk')}}
+    {{/toolbar-group}}
+    {{> toolbar-item-clear}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
 ## Introduction
 
 Toolbar relies on groups (`.pf-c-toolbar__group`) and items (`.pf-c-toolbar__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group or item. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-c-toolbar--spacer--base`, whose value is `--pf-global--spacer--md` or 16px.
@@ -328,7 +393,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+        {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
       {{/toolbar-group}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
@@ -427,7 +492,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{#> toolbar-content-section}}
       {{> toolbar-item-bulk-select}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+        {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
       {{/toolbar-group}}
       {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
     {{/toolbar-content-section}}
@@ -492,6 +557,10 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 {{/toolbar}}
 ```
 
+<!-- =============== -->
+<!-- Insert new example here -->
+<!-- =============== -->
+
 ### Stacked
 
 ### Stacked on desktop
@@ -553,7 +622,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+        {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
       {{/toolbar-group}}
       {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
     {{/toolbar-content-section}}
@@ -694,5 +763,5 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-spacer-{none, sm, md, lg, xl}{-on-[breakpoint]}` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-space-items-{none, sm, md, lg, xl}{-on-[breakpoint]}` | `.pf-c-toolbar__group` | Modifies toolbar group child spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-spacer-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar group or item spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-space-items-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-toolbar__group` | Modifies toolbar group child spacing at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

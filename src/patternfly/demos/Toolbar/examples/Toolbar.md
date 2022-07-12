@@ -46,7 +46,7 @@ import './Toolbar.css'
   {{#> toolbar-content toolbar-content--HasToggleGroup="true"}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+        {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
       {{/toolbar-group}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--control="true"}}
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
@@ -115,7 +115,7 @@ import './Toolbar.css'
   {{#> toolbar-content toolbar-content--HasToggleGroup="true"}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+        {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
       {{/toolbar-group}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--control="true"}}
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
@@ -230,7 +230,7 @@ import './Toolbar.css'
   {{#> toolbar-content toolbar-content--HasToggleGroup="true"}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+        {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
       {{/toolbar-group}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--control="true"}}
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}

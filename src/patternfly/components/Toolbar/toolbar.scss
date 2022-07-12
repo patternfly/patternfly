@@ -1,7 +1,7 @@
 // Don't remove this magic comment. See gulpfile.js.
 // @import "../../sass-utilities/all";
 $pf-c-toolbar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
+$pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .pf-c-toolbar {
@@ -71,11 +71,11 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar__group--m-icon-button-group--spacer: var(--pf-c-toolbar__group--spacer);
   --pf-c-toolbar__group--m-icon-button-group--space-items: 0;
 
-  // Button group
-  --pf-c-toolbar__group--m-button-group--spacer: var(--pf-c-toolbar__group--spacer);
-  --pf-c-toolbar__group--m-button-group--space-items: var(--pf-global--spacer--sm);
+  // // Button group
+  // --pf-c-toolbar__group--m-button-group--spacer: var(--pf-c-toolbar__group--spacer);
+  // --pf-c-toolbar__group--m-button-group--space-items: var(--pf-global--spacer--sm);
 
-  // Filter group
+  // // Filter group
   --pf-c-toolbar__group--m-filter-group--spacer: var(--pf-c-toolbar__group--spacer);
   --pf-c-toolbar__group--m-filter-group--space-items: 0;
 
@@ -202,6 +202,15 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   }
 }
 
+.pf-c-toolbar {
+  --pf-c-toolbar__group--m-toggle-group__group--Display: none;
+  --pf-c-toolbar__group--m-toggle-group__item--Display: none;
+  --pf-c-toolbar__group--m-toggle-group__toggle--Display: inline-block;
+  --pf-c-toolbar__group--m-toggle-group--m-show__group--Display: flex;
+  --pf-c-toolbar__group--m-toggle-group--m-show__item--Display: block;
+  --pf-c-toolbar__group--m-toggle-group--m-show__toggle--Display: none;
+}
+
 // Group
 .pf-c-toolbar__group {
   --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--spacer);
@@ -246,15 +255,16 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   &.pf-m-toggle-group {
     --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--m-toggle-group--spacer);
 
-    .pf-c-toolbar__group,
+    .pf-c-toolbar__group {
+      --pf-c-toolbar__group--Display: var(--pf-c-toolbar__group--m-toggle-group__group--Display);
+    }
+
     .pf-c-toolbar__item {
-      display: none;
-      visibility: hidden;
+      --pf-c-toolbar__item--Display: var(--pf-c-toolbar__group--m-toggle-group__item--Display);
     }
 
     .pf-c-toolbar__toggle {
-      display: inline-block;
-      visibility: visible;
+      display: var(--pf-c-toolbar__group--m-toggle-group__toggle--Display);
     }
   }
 
@@ -325,12 +335,13 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
 .pf-c-toolbar__group,
 .pf-c-toolbar__item {
+  flex: 0 1 auto;
+
   &.pf-m-overflow-container {
     flex: 1;
     overflow: hidden;
   }
 }
-
 
 .pf-c-toolbar__expand-all-icon {
   display: inline-block;
@@ -450,18 +461,9 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   @include pf-apply-breakpoint($breakpoint) {
     .pf-m-toggle-group.pf-m-show#{$breakpoint-name} {
       --pf-c-toolbar--spacer: var(--pf-c-toolbar__group--m-toggle-group--m-show--spacer);
-
-      .pf-c-toolbar__group,
-      .pf-c-toolbar__item {
-        display: flex;
-        flex: 0 1 auto;
-        visibility: visible;
-      }
-
-      .pf-c-toolbar__toggle {
-        display: none;
-        visibility: hidden;
-      }
+      --pf-c-toolbar__group--m-toggle-group__group--Display: var(--pf-c-toolbar__group--m-toggle-group--m-show__group--Display);
+      --pf-c-toolbar__group--m-toggle-group__item--Display: var(--pf-c-toolbar__group--m-toggle-group--m-show__item--Display);
+      --pf-c-toolbar__group--m-toggle-group__toggle--Display: var(--pf-c-toolbar__group--m-toggle-group--m-show__toggle--Display);
     }
   }
 }
@@ -471,7 +473,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Build spacing modifiers
   @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
 
     @include pf-apply-breakpoint($breakpoint) {
       // Align right
@@ -507,7 +508,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
     }
   }
 
-  // .pf-m-space-items-{size}{-on-breakpoint}
   @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
@@ -526,7 +526,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
     }
   }
 
-  // .pf-m-spacer-{size}{-on-breakpoint}
   @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
@@ -562,4 +561,12 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 // Override .pf-m-toggle-group margin modifier
 .pf-c-toolbar__content-section > :last-child {
   --pf-c-toolbar--spacer: 0;
+}
+
+@mixin pf-c-toolbar--m-space-items {
+
+}
+
+@mixin pf-c-toolbar--m-spacer {
+
 }

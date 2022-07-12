@@ -1,21 +1,22 @@
-#ws-core-e-toolbar-toggle-group-on-mobile-filters-collapsed-expandable-content-expanded,
-#ws-core-c-toolbar-toggle-group-on-mobile-filters-collapsed-expandable-content-expanded {
-  min-height: 19rem;
+#ws-core-c-toolbar-multiple-toggle-groups-mixed-state-static-example .ws-preview-html,
+#ws-core-e-toolbar-toggle-group-on-mobile-filters-collapsed-expandable-content-expanded .ws-preview-html,
+#ws-core-c-toolbar-toggle-group-on-mobile-filters-collapsed-expandable-content-expanded .ws-preview-html {
+  min-height: 22rem;
 }
 
-#ws-core-e-toolbar-expanded-elements,
-#ws-core-c-toolbar-expanded-elements {
+#ws-core-e-toolbar-expanded-elements .ws-preview-html,
+#ws-core-c-toolbar-expanded-elements .ws-preview-html {
   min-height: 18rem;
 }
 
-#ws-core-e-toolbar-stacked-on-mobile-filters-collapsed-expandable-content-expanded,
-#ws-core-c-toolbar-stacked-on-mobile-filters-collapsed-expandable-content-expanded {
-  min-height: 18rem;
+#ws-core-e-toolbar-stacked-on-mobile-filters-collapsed-expandable-content-expanded .ws-preview-html,
+#ws-core-c-toolbar-stacked-on-mobile-filters-collapsed-expandable-content-expanded .ws-preview-html {
+  min-height: 22rem;
 }
 
-#ws-core-e-toolbar-selected-filters-on-mobile-filters-collapsed-expandable-content-expanded,
-#ws-core-c-toolbar-selected-filters-on-mobile-filters-collapsed-expandable-content-expanded {
-  min-height: 28rem;
+#ws-core-e-toolbar-selected-filters-on-mobile-filters-collapsed-expandable-content-expanded .ws-preview-html,
+#ws-core-c-toolbar-selected-filters-on-mobile-filters-collapsed-expandable-content-expanded .ws-preview-html {
+  min-height: 23rem;
 }
 
 #ws-core-e-toolbar-simple .pf-c-toolbar,
