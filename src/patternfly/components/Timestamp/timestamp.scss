@@ -1,0 +1,22 @@
+.pf-c-timestamp {
+  --pf-c-timestamp--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-timestamp--Color: var(--pf-global--Color--200);
+  --pf-c-timestamp--TextAlign: center;
+  --pf-c-timestamp--Cursor: pointer;
+  --pf-c-timestamp--TextDecorationLine: underline;
+  --pf-c-timestamp--TextDecorationStyle: dashed;
+  --pf-c-timestamp--TextDecorationThickness: var(--pf-global--BorderWidth--sm);
+  --pf-c-timestamp--TextUnderlineOffset: #{pf-size-prem(4px)};
+  --pf-c-timestamp--TextDecorationColor: var(--pf-global--BorderColor--200);
+
+  display: inline-block;
+  font-size: var(--pf-c-timestamp--FontSize);
+  color: var(--pf-c-timestamp--Color);
+  text-align: var(--pf-c-timestamp--TextAlign);
+  cursor: var(--pf-c-timestamp--Cursor);
+  text-decoration-line: var(--pf-c-timestamp--TextDecorationLine);
+  text-decoration-style: var(--pf-c-timestamp--TextDecorationStyle);
+  text-decoration-thickness: var(--pf-c-timestamp--TextDecorationThickness);
+  text-underline-offset: var(--pf-c-timestamp--TextUnderlineOffset);
+  text-decoration-color: var(--pf-c-timestamp--TextDecorationColor);
+}
