@@ -7,8 +7,8 @@ const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
 const { compileHBS, compileMD, watchHBS, watchMD } = require('./scripts/gulp/html');
 const { lintCSSComments, lintCSSFunctions } = require('./scripts/gulp/lint');
 const { generateSnippets } = require('./scripts/gulp/snippets');
-const { start } = require('theme-patternfly-org/scripts/cli/start');
-const { build } = require('theme-patternfly-org/scripts/cli/build');
+const { start } = require('@patternfly/documentation-framework/scripts/cli/start');
+const { build } = require('@patternfly/documentation-framework/scripts/cli/build');
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
@@ -36,7 +36,7 @@ function clean(cb) {
     'test/scenario_tests/',
     '.cache',
     'public',
-    'src/generated/**/*.js'
+    'patternfly-docs/generated/**/*.js'
   ];
   cleanGlobs.forEach(glob => rimraf.sync(glob));
   cb();
@@ -76,9 +76,9 @@ function generateWorkspaceSnippets() {
 
 const themeCLIOptions = {
   parent: {
-    config: './patternfly-docs.config.js',
-    cssconfig: './patternfly-docs.css.js',
-    source: './patternfly-docs.source.js'
+    config: './patternfly-docs/patternfly-docs.config.js',
+    cssconfig: './patternfly-docs/patternfly-docs.css.js',
+    source: './patternfly-docs/patternfly-docs.source.js'
   }
 };
 

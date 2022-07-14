@@ -48,11 +48,11 @@ jobs:
           key: ${{ runner.os }}-v4-${{ hashFiles('yarn.lock') }}
       - run: yarn build:docs
         name: Build docs
-      - run: yarn serve & yarn test
-        name: a11y tests
       - run: node .github/upload-preview.js public
         name: Upload docs
         if: always()
+      - run: yarn serve & yarn test
+        name: a11y tests
       - run: node .github/upload-preview.js coverage
         name: Upload a11y report
         if: always()

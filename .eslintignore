@@ -4,4 +4,4 @@ node_modules/
 static/
 scripts/template/
 .cache/
-src/generated/
+patternfly-docs/generated/

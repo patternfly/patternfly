@@ -1,0 +1,33 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-text() {
+  // Font color options to be redefined in theme
+  $pf-u-font-color-options: (
+    color-300: (
+      color var(--pf-global--Color--100)
+    ),
+    color-light-100: (
+      color var(--pf-global--Color-100)
+    ),
+    color-light-200: (
+      color var(--pf-global--Color-200)
+    ),
+    default-color-300: (
+      color var(--pf-global--default-color--100)
+    ),
+    success-color-200: (
+      color var(--pf-global--success-color--100)
+    ),
+    info-color-200: (
+      color var(--pf-global--info-color--100)
+    ),
+    danger-color-300: (
+      color var(--pf-global--danger-color--100)
+    ),
+    icon-color-dark: (
+      color var(--pf-global--icon--Color--dark)
+    )
+  );
+
+  @include pf-utility-builder($pf-u-font-color-options, $pf-global--breakpoint-list);
+}

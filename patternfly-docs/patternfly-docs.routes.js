@@ -4,10 +4,10 @@ const isClient = Boolean(process.env.NODE_ENV);
 
 module.exports = {
   '/': {
-    SyncComponent: isClient && require('./src/site/pages/index').default
+    SyncComponent: isClient && require('./site/pages/index').default
   },
   '/404': {
-    SyncComponent: isClient && require('theme-patternfly-org/pages/404').default,
+    SyncComponent: isClient && require('@patternfly/documentation-framework/pages/404').default,
     title: '404 Error'
   }
 };

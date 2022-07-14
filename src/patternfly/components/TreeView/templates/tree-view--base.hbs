@@ -1,8 +1,8 @@
-{{#> tree-view tree-view--modifier=tree-view--base--modifier tree-view-node-text--type="div" tree-view--IsCompact="true"}}
+{{#> tree-view tree-view--modifier=tree-view--base--modifier tree-view--IsCompact="true"}}
   {{#> tree-view-list tree-view-list--IsRoot="true"}}
     {{#> tree-view-list-item}}
       {{#> tree-view-content}}
-        {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+        {{#> tree-view-node}}
           {{#> tree-view-node-content}}
             {{#> tree-view-node-title}}
               apiVersion
@@ -16,7 +16,7 @@
     {{/tree-view-list-item}}
     {{#> tree-view-list-item}}
       {{#> tree-view-content}}
-        {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+        {{#> tree-view-node}}
           {{#> tree-view-node-content}}
             {{#> tree-view-node-title}}
               kind
@@ -30,7 +30,7 @@
     {{/tree-view-list-item}}
     {{#> tree-view-list-item}}
       {{#> tree-view-content}}
-        {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+        {{#> tree-view-node}}
           {{#> tree-view-node-content}}
             {{#> tree-view-node-title}}
               metadata
@@ -58,7 +58,7 @@
       {{#> tree-view-list newcontext}}
         {{#> tree-view-list-item}}
           {{#> tree-view-content}}
-            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+            {{#> tree-view-node}}
               {{#> tree-view-node-content}}
                 {{#> tree-view-node-title}}
                   minReadySeconds
@@ -72,7 +72,7 @@
         {{/tree-view-list-item}}
         {{#> tree-view-list-item}}
           {{#> tree-view-content}}
-            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+            {{#> tree-view-node}}
               {{#> tree-view-node-content}}
                 {{#> tree-view-node-title}}
                   paused
@@ -86,7 +86,7 @@
         {{/tree-view-list-item}}
         {{#> tree-view-list-item}}
           {{#> tree-view-content}}
-            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+            {{#> tree-view-node}}
               {{#> tree-view-node-content}}
                 {{#> tree-view-node-title}}
                   progressDeadlineSeconds
@@ -100,7 +100,7 @@
         {{/tree-view-list-item}}
         {{#> tree-view-list-item}}
           {{#> tree-view-content}}
-            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+            {{#> tree-view-node}}
               {{#> tree-view-node-content}}
                 {{#> tree-view-node-title}}
                   replicas
@@ -114,7 +114,7 @@
         {{/tree-view-list-item}}
         {{#> tree-view-list-item}}
           {{#> tree-view-content}}
-            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+            {{#> tree-view-node}}
               {{#> tree-view-node-content}}
                 {{#> tree-view-node-title}}
                   revisionHistoryLimit
@@ -156,7 +156,7 @@
               {{#> tree-view-list newcontext}}
                 {{#> tree-view-list-item}}
                   {{#> tree-view-content}}
-                    {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+                    {{#> tree-view-node}}
                       {{#> tree-view-node-content}}
                         {{#> tree-view-node-title}}
                           matchLabels
@@ -172,7 +172,7 @@
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
               {{#> tree-view-content}}
-                {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+                {{#> tree-view-node}}
                   {{#> tree-view-node-content}}
                     {{#> tree-view-node-title}}
                       matchLabels
@@ -188,7 +188,7 @@
         {{/tree-view-list-item}}
         {{#> tree-view-list-item}}
           {{#> tree-view-content}}
-            {{#> tree-view-node tree-view-node--type--IsDiv="true"}}
+            {{#> tree-view-node}}
               {{#> tree-view-node-content}}
                 {{#> tree-view-node-title}}
                   matchLabels

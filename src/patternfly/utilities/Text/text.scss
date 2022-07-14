@@ -194,4 +194,10 @@ $pf-u-font-alignment-options: (
   white-space: nowrap !important;
 }
 
+@import "themes/dark/text";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-text;
+}
+
 // stylelint-enable

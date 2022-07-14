@@ -141,8 +141,8 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   // Actions
-  --pf-c-drawer__actions--MarginTop: calc(var(pf-global--spacer--form-element) * -1);
-  --pf-c-drawer__actions--MarginRight: calc(var(pf-global--spacer--form-element) * -1);
+  --pf-c-drawer__actions--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-drawer__actions--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
 
   // Box shadow
   --pf-c-drawer__panel--BoxShadow: none;

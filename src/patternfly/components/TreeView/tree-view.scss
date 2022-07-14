@@ -36,10 +36,16 @@ $pf-c-tree-view--MaxNesting: 10;
 
   // Toggle
   --pf-c-tree-view__node-toggle--Position: absolute;
+  --pf-c-tree-view__node-toggle--Color--base: var(--pf-global--Color--200);
+  --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--Color--base);
+  --pf-c-tree-view__node-toggle--hover--Color: var(--pf-global--Color--100);
+  --pf-c-tree-view__node-toggle--focus--Color: var(--pf-global--Color--100);
+  --pf-c-tree-view__node-toggle--active--Color: var(--pf-global--Color--100);
+  --pf-c-tree-view__list-item--m-expanded__node-toggle--Color: var(--pf-global--Color--100);
 
   // Toggle icon
   --pf-c-tree-view__node-toggle-icon--MinWidth: var(--pf-global--FontSize--md);
-  --pf-c-tree-view__node-toggle-icon--Transition: var(--pf-global--Transition);
+  --pf-c-tree-view__node-toggle-icon--Transition: transform var(--pf-global--TransitionDuration) var(--pf-global--TimingFunction);
   --pf-c-tree-view__node-toggle-button--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-tree-view__node-toggle-button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tree-view__node-toggle-button--PaddingBottom: var(--pf-global--spacer--form-element);
@@ -331,10 +337,12 @@ $pf-c-tree-view--MaxNesting: 10;
 // stylelint-disable
 .pf-c-tree-view__list-item {
   .pf-c-tree-view__list-item {
-    --pf-c-tree-view__node-toggle-icon--Rotate: var(--pf-c-tree-view__node-toggle-icon--base--Rotate); // reset nested icons
+    --pf-c-tree-view__node-toggle-icon--Rotate: var(--pf-c-tree-view__node-toggle-icon--base--Rotate); // reset nested toggle icon rotate
+    --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--Color--base); // reset nested toggle color
   }
 
   &.pf-m-expanded {
+    --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__list-item--m-expanded__node-toggle--Color);
     --pf-c-tree-view__node-toggle-icon--Rotate: var(--pf-c-tree-view__list-item--m-expanded__node-toggle-icon--Rotate);
   }
 }
@@ -373,6 +381,25 @@ $pf-c-tree-view--MaxNesting: 10;
       --pf-c-badge--m-read--BackgroundColor: var(--pf-c-tree-view__node-count--c-badge--m-read--BackgroundColor);
     }
   }
+
+  &.pf-m-selectable .pf-c-tree-view__node-toggle {
+    --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--Color--base); // resets hover/focus/active color when node triggers hover/focus/active color change
+  }
+
+  &,
+  .pf-c-tree-view__node-toggle {
+    &:hover {
+      --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--hover__icon--Color);
+    }
+
+    &:focus {
+      --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--focus__icon--Color);
+    }
+
+    &:active {
+      --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--active__icon--Color);
+    }
+  }
 }
 
 .pf-c-tree-view__node-container {
@@ -405,6 +432,7 @@ $pf-c-tree-view--MaxNesting: 10;
   padding: var(--pf-c-tree-view__node-toggle-button--PaddingTop) var(--pf-c-tree-view__node-toggle-button--PaddingRight) var(--pf-c-tree-view__node-toggle-button--PaddingBottom) var(--pf-c-tree-view__node-toggle-button--PaddingLeft);
   margin-top: var(--pf-c-tree-view__node-toggle-button--MarginTop);
   margin-bottom: var(--pf-c-tree-view__node-toggle-button--MarginBottom);
+  color: var(--pf-c-tree-view__node-toggle--Color);
   border: 0;
   transform: translateX(var(--pf-c-tree-view__list-item__list-item__node-toggle--TranslateX));
 }
@@ -421,6 +449,12 @@ $pf-c-tree-view--MaxNesting: 10;
     --pf-c-tree-view__node-content--Overflow: hidden;
 
     @include pf-text-overflow;
+  }
+}
+
+.pf-c-tree-view__node-text {
+  @at-root label#{&} {
+    cursor: pointer;
   }
 }
 
