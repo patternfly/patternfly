@@ -20,6 +20,7 @@
   display: inline-flex;
   align-items: center;
 
+  // This modifier can be removed in a breaking change and the extra space created can always be included.
   &.pf-m-has-icon {
     --pf-c-number-input--c-form-control--width-icon: var(--pf-c-number-input--m-has-icon--c-form-control--width-icon);
   }
