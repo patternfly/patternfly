@@ -1,0 +1,8 @@
+#foo:checked ~ .pf-c-form .not-checked,
+.checked {
+  display: none;
+}
+
+#foo:checked ~ .pf-c-form .checked {
+  display: block;
+}

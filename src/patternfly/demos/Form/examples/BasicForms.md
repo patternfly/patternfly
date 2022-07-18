@@ -3,16 +3,22 @@ id: Form
 section: components
 ---
 
+import './BasicForms.css'
+
 ## Demos
 ### Basic
 ```hbs
+<input type="checkbox" id="foo">
+<label for="foo"> edit form</label>
+<br><br>
 {{#> form form--id="form-demo-basic"}}
   {{#> form-group form-group--id="-name"}}
     {{#> form-group-label}}
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}{{/form-control}}
+      {{> form-control controlType="input" input="true" form-control--modifier="not-checked pf-m-success" form-control--attribute=(concat 'value="John doe" readonly type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"aria-describedby="' form--id form-group--id '-helper"')}}
+      {{> form-control controlType="input" input="true" form-control--modifier="checked pf-m-success" form-control--attribute=(concat 'value="John doe" required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Include your middle name if you have one.{{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -21,7 +27,8 @@ section: components
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Email{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+      {{> form-control controlType="input" input="true" form-control--modifier="not-checked" form-control--attribute=(concat 'value="John@doe.com" readonly type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
+      {{> form-control controlType="input" input="true" form-control--modifier="checked" form-control--attribute=(concat 'value="John@doe.com" type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-phone"}}
@@ -30,7 +37,8 @@ section: components
       {{> form-group-label-help form-group-label-help--aria-label="More information for phone number field"  form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
+      {{> form-control controlType="input" input="true" form-control--modifier="not-checked" form-control--attribute=(concat 'value="555-123-4567" readonly type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}
+      {{> form-control controlType="input" input="true" form-control--modifier="checked" form-control--attribute=(concat 'value="555-123-4567" required type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}

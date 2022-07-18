@@ -227,19 +227,11 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   }
 
   &[readonly] {
-    background-color: var(--pf-c-form-control--readonly--BackgroundColor);
+    --pf-c-form-control--BackgroundColor: transparent;
+    // stylelint-disable-next-line
+    --pf-c-form-control--inset--base: 0px;
 
-    &:not(.pf-m-success):not([aria-invalid="true"]) {
-      &:hover {
-        --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--readonly--hover--BorderBottomColor);
-      }
-
-      &:focus {
-        --pf-c-form-control--focus--PaddingBottom: var(--pf-c-form-control--readonly--focus--PaddingBottom);
-        --pf-c-form-control--focus--BorderBottomWidth: var(--pf-c-form-control--readonly--focus--BorderBottomWidth);
-        --pf-c-form-control--focus--BorderBottomColor: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
-      }
-    }
+    border-color: transparent;
   }
 
   &:hover {
