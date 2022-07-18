@@ -1,3 +1,5 @@
+$pf-c-menu--breakpoint-map: build-breakpoint-map();
+
 .pf-c-menu {
   @include pf-t-light;
 
@@ -72,7 +74,8 @@
   --pf-c-menu__list--PaddingBottom: var(--pf-global--spacer--sm);
 
   // List item
-  --pf-c-menu__list-item--Display: flex;
+  --pf-c-menu__list-item--Display--base: flex;
+  --pf-c-menu__list-item--Display: var(--pf-c-menu__list-item--Display--base);
   --pf-c-menu__list-item--Color: var(--pf-global--Color--100);
   --pf-c-menu__list-item--BackgroundColor: transparent;
   --pf-c-menu__list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
@@ -529,9 +532,8 @@
 
 // List item
 .pf-c-menu__list-item {
-  @include pf-hidden-visible(var(--pf-c-menu__list-item--Display));
-
   position: relative;
+  display: var(--pf-c-menu__list-item--Display);
   color: var(--pf-c-menu__list-item--Color);
   background-color: var(--pf-c-menu__list-item--BackgroundColor);
 
@@ -738,6 +740,22 @@
     content: "";
     border-top: var(--pf-c-menu__footer--after--BorderTopWidth) solid var(--pf-c-menu__footer--after--BorderTopColor);
     border-bottom: var(--pf-c-menu__footer--after--BorderBottomWidth) solid var(--pf-c-menu__footer--after--BorderBottomColor);
+  }
+}
+
+@each $breakpoint, $breakpoint-value in $pf-c-menu--breakpoint-map {
+  $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
+
+  @include pf-apply-breakpoint($breakpoint) {
+    .pf-c-menu__list-item {
+      &.pf-m-hidden#{$breakpoint-name} {
+        --pf-c-menu__list-item--Display: none;
+      }
+
+      &.pf-m-visible#{$breakpoint-name} {
+        --pf-c-menu__list-item--Display: var(--pf-c-menu__list-item--Display--base);
+      }
+    }
   }
 }
 
