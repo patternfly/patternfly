@@ -130,7 +130,7 @@ cssPrefix: pf-c-number-input
 
 ### With status
 ```hbs
-{{#> number-input number-input--id="number-input-default" number-input--modifier="pf-m-has-icon"}}
+{{#> number-input number-input--id="number-input-default" number-input--modifier="pf-m-status"}}
   {{#> input-group}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
       {{#> number-input-icon}}
@@ -147,7 +147,7 @@ cssPrefix: pf-c-number-input
   {{/input-group}}
 {{/number-input}}
 <br/><br/>
-{{#> number-input number-input--id="number-input-default" number-input--modifier="pf-m-has-icon"}}
+{{#> number-input number-input--id="number-input-default" number-input--modifier="pf-m-status"}}
     {{#> input-group}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
       {{#> number-input-icon}}
@@ -247,10 +247,10 @@ cssPrefix: pf-c-number-input
 | `max` | `input[type="number"].pf-c-form-control` | Provides an optional maximum value for the input. |
 
 ### Usage
-| Class | Applied | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-number-input` | `<div>` | Initiates the number input component. |
 | `.pf-c-number-input__icon` | `<span>` | Initiates the number input icon. |
 | `.pf-c-number-input__unit` | `<span>` | Initiates the number input unit. |
-| `.pf-c-number-input` | `.pf-m-has-icon` | Modifies the width to create enough space for a status or other icon to be included in the form control portion of the number input. **Required** if an icon may be shown, even if the icon is not currently shown. |
+| `.pf-m-status` | `.pf-c-number-input` | Modifies the width to create enough space for a status icon to be included in the form control portion of the number input. **Required** if a status icon may be shown, even if the icon is not currently shown. |
 | `--pf-c-number-input--c-form-control--width-chars` | `.pf-c-number-input` | Specifies the number of characters to show in the input. |
