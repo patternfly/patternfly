@@ -465,7 +465,6 @@
 }
 
 .pf-c-select__menu {
-  position: absolute;
   top: var(--pf-c-select__menu--Top);
   z-index: var(--pf-c-select__menu--ZIndex);
   width: var(--pf-c-select__menu--Width);
@@ -483,6 +482,10 @@
   .pf-c-select.pf-m-top & {
     top: 0;
     transform: translateY(var(--pf-c-select__menu--m-top--TranslateY));
+  }
+
+  .pf-c-select__toggle + & {
+    position: absolute;
   }
 }
 
