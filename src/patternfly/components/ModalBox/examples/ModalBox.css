@@ -1,0 +1,10 @@
+.ws-core-c-modal .ws-preview-html {
+ position: relative;
+}
+
+.ws-core-c-modal .pf-c-modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

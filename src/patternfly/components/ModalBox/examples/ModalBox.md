@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-c-modal-box
 ---
 
+import './ModalBox.css'
+
 ## Examples
 ### Basic
 ```hbs isFullscreen

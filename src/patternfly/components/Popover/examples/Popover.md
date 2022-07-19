@@ -87,7 +87,7 @@ import './Popover.css'
 {{/popover}}
 ```
 
-### Left with top and bottom positions
+### Left top
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left-top" popover--attribute='aria-labelledby="popover-left-start-header" aria-describedby="popover-left-start-body"'}}
   {{#> popover-content}}
@@ -105,7 +105,10 @@ import './Popover.css'
     {{/popover-footer}}
   {{/popover-content}}
 {{/popover}}
-<br />
+```
+
+### Left bottom
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left-bottom" popover--attribute='aria-labelledby="popover-left-end-header" aria-describedby="popover-left-end-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -124,7 +127,7 @@ import './Popover.css'
 {{/popover}}
 ```
 
-### Bottom with left and right positions
+### Bottom left
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom-left" popover--attribute='aria-labelledby="popover-bottom-start-header" aria-describedby="popover-bottom-start-body"'}}
   {{#> popover-content}}
@@ -142,7 +145,10 @@ import './Popover.css'
     {{/popover-footer}}
   {{/popover-content}}
 {{/popover}}
-<br />
+```
+
+### Bottom right
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom-right" popover--attribute='aria-labelledby="popover-bottom-end-header" aria-describedby="popover-bottom-end-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
