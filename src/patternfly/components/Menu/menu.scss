@@ -304,6 +304,7 @@
       }
 
       &:not(.pf-m-current-path) .pf-c-menu {
+        display: none;
         visibility: hidden;
       }
     }
