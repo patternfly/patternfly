@@ -373,9 +373,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 }
 
-// Page level drawer
+// Page level drawer - move to page component in breaking change
 .pf-c-drawer__body > .pf-c-page__main {
-  min-height: 100%;
+  height: 100%;
 }
 
 .pf-c-drawer__splitter {
