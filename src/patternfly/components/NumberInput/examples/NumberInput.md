@@ -130,7 +130,7 @@ cssPrefix: pf-c-number-input
 
 ### With status
 ```hbs
-{{#> number-input number-input--id="number-input-default" number-input--modifier="pf-m-status"}}
+{{#> number-input number-input--id="number-input-status" number-input--modifier="pf-m-status"}}
   {{#> input-group}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
       {{#> number-input-icon}}
@@ -147,7 +147,7 @@ cssPrefix: pf-c-number-input
   {{/input-group}}
 {{/number-input}}
 <br/><br/>
-{{#> number-input number-input--id="number-input-default" number-input--modifier="pf-m-status"}}
+{{#> number-input number-input--id="number-input-status-warning" number-input--modifier="pf-m-status"}}
     {{#> input-group}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
       {{#> number-input-icon}}
