@@ -128,6 +128,43 @@ cssPrefix: pf-c-number-input
 {{/number-input}}
 ```
 
+### With status
+```hbs
+{{#> number-input number-input--id="number-input-status" number-input--modifier="pf-m-status"}}
+  {{#> input-group}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+      {{#> number-input-icon}}
+        <i class="fas fa-minus" aria-hidden="true"></i>
+      {{/number-input-icon}}
+    {{/button}}
+    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/form-control}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+      {{#> number-input-icon}}
+        <i class="fas fa-plus" aria-hidden="true"></i>
+      {{/number-input-icon}}
+    {{/button}}
+  {{/input-group}}
+{{/number-input}}
+<br/><br/>
+{{#> number-input number-input--id="number-input-status-warning" number-input--modifier="pf-m-status"}}
+    {{#> input-group}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+      {{#> number-input-icon}}
+        <i class="fas fa-minus" aria-hidden="true"></i>
+      {{/number-input-icon}}
+    {{/button}}
+    {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-warning"  form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/form-control}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+      {{#> number-input-icon}}
+        <i class="fas fa-plus" aria-hidden="true"></i>
+      {{/number-input-icon}}
+    {{/button}}
+  {{/input-group}}
+{{/number-input}}
+```
+
 ### Varying sizes
 ```hbs
 {{#> number-input number-input--id="number-input-sizes" number-input--attribute='style="--pf-c-number-input--c-form-control--width-chars: 1;"'}}
@@ -210,9 +247,10 @@ cssPrefix: pf-c-number-input
 | `max` | `input[type="number"].pf-c-form-control` | Provides an optional maximum value for the input. |
 
 ### Usage
-| Class | Applied | Outcome |
+| Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-number-input` | `<div>` | Initiates the number input component. |
 | `.pf-c-number-input__icon` | `<span>` | Initiates the number input icon. |
 | `.pf-c-number-input__unit` | `<span>` | Initiates the number input unit. |
+| `.pf-m-status` | `.pf-c-number-input` | Modifies the width to create enough space for a status icon to be included in the form control portion of the number input. **Required** if a status icon may be shown, even if the icon is not currently shown. |
 | `--pf-c-number-input--c-form-control--width-chars` | `.pf-c-number-input` | Specifies the number of characters to show in the input. |
