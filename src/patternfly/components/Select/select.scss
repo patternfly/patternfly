@@ -484,8 +484,8 @@
     transform: translateY(var(--pf-c-select__menu--m-top--TranslateY));
   }
 
-  .pf-c-select__toggle + & {
-    position: absolute;
+  &:only-child {
+    position: initial;
   }
 }
 

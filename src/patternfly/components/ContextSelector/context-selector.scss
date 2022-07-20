@@ -291,6 +291,7 @@
 .pf-c-context-selector__menu {
   @include pf-t-light;
 
+  position: absolute;
   top: var(--pf-c-context-selector__menu--Top);
   z-index: var(--pf-c-context-selector__menu--ZIndex);
   min-width: 100%;
@@ -298,8 +299,8 @@
   background-clip: padding-box;
   box-shadow: var(--pf-c-context-selector__menu--BoxShadow);
 
-  .pf-c-context-selector__toggle + & {
-    position: absolute;
+  &:only-child {
+    position: initial;
   }
 }
 
