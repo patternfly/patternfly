@@ -4,9 +4,11 @@ section: components
 cssPrefix: pf-c-modal-box
 ---
 
+import './ModalBox.css'
+
 ## Examples
 ### Basic
-```hbs
+```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
@@ -26,7 +28,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### With help button
-```hbs
+```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-help-title" aria-describedby="modal-help-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -52,7 +54,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Small
-```hbs
+```hbs isFullscreen
 {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-sm-title" aria-describedby="modal-sm-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -75,7 +77,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Medium
-```hbs
+```hbs isFullscreen
 {{#> modal-box modal-box--modifier="pf-m-md" modal-box--attribute='aria-labelledby="modal-md-title" aria-describedby="modal-md-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -98,7 +100,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Large
-```hbs
+```hbs isFullscreen
 {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -121,7 +123,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Without title
-```hbs
+```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-label="Example of a modal without a title" aria-describedby="modal-no-title-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
@@ -136,7 +138,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### With description
-```hbs
+```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-with-description-title" aria-describedby="modal-with-description-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
@@ -159,7 +161,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Custom title
-```hbs
+```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-custom-title" aria-describedby="modal-custom-description"'}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
    <i class="fas fa-times" aria-hidden="true"></i>
@@ -177,14 +179,14 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Modal box as generic container
-```hbs
+```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-generic-container-description"'}}
   <p id="modal-generic-container-description">The modal box children elements can be removed, and the modal serves as a generic modal container. One use case of this is when creating a wizard in a modal.</p>
 {{/modal-box}}
 ```
 
 ### Icon
-```hbs
+```hbs isFullscreen
 {{#> modal-example modal-example--id="icon"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"')}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -206,7 +208,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Default alert
-```hbs
+```hbs isFullscreen
 {{#> modal-example modal-example--id="default-alert"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsDefaultAlert="true"}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -228,7 +230,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Info alert
-```hbs
+```hbs isFullscreen
 {{#> modal-example modal-example--id="info-alert"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsInfoAlert="true"}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -250,7 +252,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Success alert
-```hbs
+```hbs isFullscreen
 {{#> modal-example modal-example--id="success-alert"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsSuccessAlert="true"}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -272,7 +274,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Warning alert
-```hbs
+```hbs isFullscreen
 {{#> modal-example modal-example--id="warning-alert"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsWarningAlert="true"}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -294,7 +296,7 @@ cssPrefix: pf-c-modal-box
 ```
 
 ### Danger alert
-```hbs
+```hbs isFullscreen
 {{#> modal-example modal-example--id="danger-alert"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsDangerAlert="true"}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -323,7 +325,7 @@ A modal box is a generic rectangular container that can be used to build modals.
 ### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
-| `role="dialog"` | `.pf-c-modal-box` | Identifies the element that serves as the modal container. **Note:** `role="dialog"` is not included on the static examples on this page as it interferes with VoiceOver. Refer to the react examples to see the role in use. **Required** |
+| `role="dialog"` | `.pf-c-modal-box` | Identifies the element that serves as the modal container. **Required** |
 | `aria-labelledby="[id value of .pf-c-modal-box__title or custom modal title]"` | `.pf-c-modal-box` | Gives the modal an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-title is present** |
 | `aria-label="[title of modal]"` | `.pf-c-modal-box` | Gives the modal an accessible name. **Required when `.pf-c-modal-box__title` is _not_ present** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-modal-box` | Gives the modal an accessible description by referring to the modal content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the modal. |
