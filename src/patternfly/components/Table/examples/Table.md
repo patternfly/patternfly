@@ -3282,7 +3282,12 @@ There are a few ways this can be handled:
 
 ```hbs
 <div class="pf-c-scroll-inner-wrapper">
-  {{> table--scrollable table--scrollable--id="sticky-column-example" table--scrollable--Column1IsStickyColumn="true" table--scrollable--th--modifier--cell-1-modifier="pf-m-border-right"}}
+  {{> table--scrollable
+      table--scrollable--id="sticky-column-example"
+      table--scrollable--Column1IsStickyColumn="true"
+      table--scrollable--th--modifier--cell-1-modifier="pf-m-truncate pf-m-border-right"
+      table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate"
+      }}
 </div>
 ```
 
@@ -3290,7 +3295,13 @@ There are a few ways this can be handled:
 
 ```hbs
 <div class="pf-c-scroll-inner-wrapper">
-  {{> table--scrollable table--scrollable--id="sticky-multi-column-example" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
+  {{> table--scrollable
+      table--scrollable--id="sticky-multi-column-example"
+      table--scrollable--Column1IsStickyColumn="true"
+      table--scrollable--Column2IsStickyColumn="true"
+      table--scrollable--th--modifier--cell-1-modifier="pf-m-truncate"
+      table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate pf-m-border-right"
+      }}
 </div>
 ```
 
@@ -3299,7 +3310,13 @@ There are a few ways this can be handled:
 ```hbs
 <div class="pf-c-scroll-outer-wrapper">
   <div class="pf-c-scroll-inner-wrapper">
-    {{> table--scrollable table--scrollable--id="sticky-header-columns-example" table--scrollable--modifier="pf-m-sticky-header" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
+    {{> table--scrollable table--scrollable--id="sticky-header-columns-example"
+        table--scrollable--modifier="pf-m-sticky-header"
+        table--scrollable--Column1IsStickyColumn="true"
+        table--scrollable--Column2IsStickyColumn="true"
+        table--scrollable--th--modifier--cell-1-modifier="pf-m-truncate"
+        table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate pf-m-border-right"
+        }}
   </div>
 </div>
 ```
