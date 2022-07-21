@@ -1,9 +1,7 @@
 {{#if tree-view-node--HasCheckbox}}
-  {{#if tree-view-list-item--IsExpandable}}
-    {{> __tree-view-node tree-view-node--type="label" tree-view-node--IsSelectable="true"}}
-  {{else}}
-    {{> __tree-view-node tree-view-node--type="label"}}
-  {{/if}}
+  {{> __tree-view-node tree-view-node--type="label" tree-view-node--IsSelectable=tree-view-list-item--IsExpandable}}
+{{else if tree-view-node--IsSelectable}}
+  {{> __tree-view-node tree-view-node--type="div"}}
 {{else}}
   {{> __tree-view-node}}
 {{/if}}
@@ -16,8 +14,11 @@
       tabindex="0"
     {{/if}}
     {{#if tree-view-node--HasCheckbox}}
-      for="check-{{{tree-view-node--id}}}"
-      id="label-{{{tree-view-node--id}}}"
+      for="check-{{tree-view-node--id}}"
+    {{else if tree-view-node--IsSelectable}}
+      id="node-{{tree-view-node--id}}"
+      aria-label="Select"
+      aria-labelledby="node-{{tree-view-node--id}} text-{{tree-view-node--id}}"
     {{/if}}
     {{#if tree-view-node--attribute}}
       {{{tree-view-node--attribute}}}

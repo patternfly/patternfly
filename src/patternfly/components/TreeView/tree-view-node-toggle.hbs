@@ -1,4 +1,4 @@
-{{#if tree-view-node--HasCheckbox}}
+{{#if tree-view-node--IsSelectable}}
   {{> __tree-view-node-toggle tree-view-node-toggle--IsToggle="true" }}
 {{else}}
   {{> __tree-view-node-toggle}}
@@ -9,7 +9,7 @@
     {{#if tree-view-node-toggle--IsToggle}}
       id="toggle-{{tree-view-node--id}}"
       aria-label="Toggle"
-      aria-labelledby="toggle-{{tree-view-node--id}} label-{{tree-view-node--id}}"
+      aria-labelledby="toggle-{{tree-view-node--id}} text-{{tree-view-node--id}}"
     {{/if}}
     {{#if tree-view-node-toggle--attribute}}
       {{{tree-view-node-toggle--attribute}}}

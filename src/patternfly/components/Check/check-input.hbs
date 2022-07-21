@@ -1,5 +1,8 @@
 <input class="pf-c-check__input{{#if check-input--modifier}} {{check-input--modifier}}{{/if}}"
   type="checkbox"
+  {{#if check-input--IsChecked}}
+    checked
+  {{/if}}
   {{#if check-input--attribute}}
     {{{check-input--attribute}}}
   {{/if}}

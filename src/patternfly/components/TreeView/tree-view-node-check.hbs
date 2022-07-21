@@ -2,13 +2,7 @@
   {{#if tree-view-node-check--attribute}}
     {{{tree-view-node-check--attribute}}}
   {{/if}}>
-  {{#if tree-view-node-check--IsChecked}}
-    {{#> check check--modifier="pf-m-standalone"}}
-      {{> check-input check-input--attribute=(concat 'id="check-' tree-view-node--id '" checked aria-label="Tree view node check checked"')}}
-    {{/check}}
-  {{else}}
-    {{#> check check--modifier="pf-m-standalone"}}
-      {{> check-input check-input--attribute=(concat 'id="check-' tree-view-node--id '" aria-label="Tree view node check"')}}
-    {{/check}}
-  {{/if}}
+  {{#> check check--modifier="pf-m-standalone"}}
+    {{> check-input check-input--IsChecked=tree-view-node-check--IsChecked check-input--attribute=(concat 'id="check-' tree-view-node--id '" aria-label="Select" aria-labelledby="check-' tree-view-node--id ' text-' tree-view-node--id '"')}}
+  {{/check}}
 </span>
