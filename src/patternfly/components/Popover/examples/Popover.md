@@ -8,7 +8,7 @@ import './Popover.css'
 
 ## Examples
 ### Top
-```hbs
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -28,7 +28,7 @@ import './Popover.css'
 ```
 
 ### Right
-```hbs
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-right" popover--attribute='aria-labelledby="popover-right-header" aria-describedby="popover-right-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -48,7 +48,7 @@ import './Popover.css'
 ```
 
 ### Bottom
-```hbs
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom" popover--attribute='aria-labelledby="popover-bottom-header" aria-describedby="popover-bottom-body"'}}
   {{#> popover-content}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -68,7 +68,7 @@ import './Popover.css'
 ```
 
 ### Left
-```hbs
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-left-header" aria-describedby="popover-left-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -87,8 +87,8 @@ import './Popover.css'
 {{/popover}}
 ```
 
-### Left with top and bottom positions
-```hbs
+### Left top
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left-top" popover--attribute='aria-labelledby="popover-left-start-header" aria-describedby="popover-left-start-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -105,7 +105,10 @@ import './Popover.css'
     {{/popover-footer}}
   {{/popover-content}}
 {{/popover}}
-<br />
+```
+
+### Left bottom
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left-bottom" popover--attribute='aria-labelledby="popover-left-end-header" aria-describedby="popover-left-end-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -124,8 +127,8 @@ import './Popover.css'
 {{/popover}}
 ```
 
-### Bottom with left and right positions
-```hbs
+### Bottom left
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom-left" popover--attribute='aria-labelledby="popover-bottom-start-header" aria-describedby="popover-bottom-start-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -142,7 +145,10 @@ import './Popover.css'
     {{/popover-footer}}
   {{/popover-content}}
 {{/popover}}
-<br />
+```
+
+### Bottom right
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom-right" popover--attribute='aria-labelledby="popover-bottom-end-header" aria-describedby="popover-bottom-end-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -162,7 +168,7 @@ import './Popover.css'
 ```
 
 ### Without header/footer
-```hbs
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-right" popover--attribute='aria-label="Popover with no header example" aria-describedby="popover-no-header-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -176,7 +182,7 @@ import './Popover.css'
 ```
 
 ### No padding
-```hbs
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-right pf-m-no-padding" popover--attribute='aria-label="Popover with no padding example" aria-describedby="popover-no-padding-body"'}}
   {{#> popover-content}}
     {{#> popover-body popover-body--attribute='id="popover-no-padding-body"'}}
@@ -187,7 +193,7 @@ import './Popover.css'
 ```
 
 ### Width auto
-```hbs
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-right pf-m-width-auto" popover--attribute='aria-labelledby="popover-width-auto-header" aria-describedby="popover-width-auto-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -207,7 +213,7 @@ import './Popover.css'
 ```
 
 ### Popover with icon in the title
-```hbs
+```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -228,7 +234,7 @@ import './Popover.css'
 {{/popover}}
 ```
 ### Default alert popover
-```hbs
+```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsDefaultAlert="true" popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -250,7 +256,7 @@ import './Popover.css'
 ```
 
 ### Info alert popover
-```hbs
+```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsInfoAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -272,7 +278,7 @@ import './Popover.css'
 ```
 
 ### Success alert popover
-```hbs
+```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsSuccessAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -294,7 +300,7 @@ import './Popover.css'
 ```
 
 ### Warning alert popover
-```hbs
+```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsWarningAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -316,7 +322,7 @@ import './Popover.css'
 ```
 
 ### Danger alert popover
-```hbs
+```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsDangerAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -344,7 +350,7 @@ A popover is used to provide contextual information for another component on cli
 ### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
-| `role="dialog"` | `.pf-c-popover` | Identifies the element that serves as the popover container. **Note:** `role="dialog"` is not included on the static examples on this page as it interferes with VoiceOver. Refer to the react examples to see the role in use. **Required** |
+| `role="dialog"` | `.pf-c-popover` | Identifies the element that serves as the popover container. **Required** |
 | `aria-labelledby="[id value of .pf-c-title]"` | `.pf-c-popover` | Gives the popover an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-title is present** |
 | `aria-label="[title of popover]"` | `.pf-c-popover` | Gives the popover an accessible name. **Required when .pf-c-title is _not_ present** |
 | `aria-describedby="[id value of applicable content]"` | `.pf-c-popover` | Gives the popover an accessible description by referring to the popover content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the popover. |

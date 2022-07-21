@@ -1,10 +1,10 @@
-#ws-core-c-popover-width-auto .ws-preview-html {
+.ws-core-c-popover .ws-preview-html {
   position: relative;
-  height: 125px;
-}
+ }
 
-#ws-core-c-popover-width-auto .pf-c-popover {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+ .ws-core-c-popover .pf-c-popover {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
