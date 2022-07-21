@@ -10,13 +10,15 @@
   --pf-c-timestamp--TextDecorationColor: var(--pf-global--BorderColor--200);
 
   display: inline-block;
-  font-size: var(--pf-c-timestamp--FontSize);
-  color: var(--pf-c-timestamp--Color);
-  text-align: var(--pf-c-timestamp--TextAlign);
   cursor: var(--pf-c-timestamp--Cursor);
-  text-decoration-line: var(--pf-c-timestamp--TextDecorationLine);
-  text-decoration-style: var(--pf-c-timestamp--TextDecorationStyle);
-  text-decoration-thickness: var(--pf-c-timestamp--TextDecorationThickness);
-  text-underline-offset: var(--pf-c-timestamp--TextUnderlineOffset);
-  text-decoration-color: var(--pf-c-timestamp--TextDecorationColor);
+
+  .pf-c-timestamp__text {
+    font-size: var(--pf-c-timestamp--FontSize);
+    color: var(--pf-c-timestamp--Color);
+    text-decoration-line: var(--pf-c-timestamp--TextDecorationLine);
+    text-decoration-style: var(--pf-c-timestamp--TextDecorationStyle);
+    text-decoration-thickness: var(--pf-c-timestamp--TextDecorationThickness);
+    text-underline-offset: var(--pf-c-timestamp--TextUnderlineOffset);
+    text-decoration-color: var(--pf-c-timestamp--TextDecorationColor);
+  }
 }

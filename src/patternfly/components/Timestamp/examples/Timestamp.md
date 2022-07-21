@@ -1,5 +1,5 @@
 ---
-id: 'Timestamp'
+id: Timestamp
 beta: true
 section: components
 cssPrefix: pf-c-timestamp
@@ -7,25 +7,57 @@ cssPrefix: pf-c-timestamp
 
 ## Examples
 
-### Long format
-```hbs
-{{#> timestamp timestamp--attribute='datetime="2022-07-14T13:00"'}}
-  Thursday, 14 July 2022, 1:00 PM EST
-{{/timestamp}}
-```
+### Basic
 
-### Short format
 ```hbs
-{{#> timestamp timestamp--attribute='datetime="2022-07-14T13:00"'}}
-  14 July 2022, 1:00 PM EST
+{{#> timestamp}}
+  {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-21T21:38"'}}
+    Thursday, 21 January 2019, 9:38 PM EST
+  {{/timestamp-text}}
 {{/timestamp}}
-```
 
-### Tiny format
-```hbs
-{{#> timestamp timestamp--attribute='datetime="2022-07-14T13:00"'}}
-  14 Jul 2022, 1:00 PM EST
+<br/>
+<br/>
+
+{{#> timestamp}}
+  {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-21T21:38"'}}
+    21 January 2019, 9:38 PM EST
+  {{/timestamp-text}}
+{{/timestamp}}
+
+<br/>
+<br/>
+
+{{#> timestamp}}
+  {{#> timestamp-text timestamp-text--attribute='datetime="2019-01-21T21:38"'}}
+    21 Jan. 2019, 9:38 PM EST
+  {{/timestamp-text}}
+{{/timestamp}}
+
+<br/>
+<br/>
+
+{{#> timestamp}}
+  {{#> timestamp-text timestamp-text--attribute='datetime="2022-07-15T10:00"'}}
+    1 hour ago 
+  {{/timestamp-text}}
+{{/timestamp}}
+
+<br/>
+<br/>
+
+{{#> timestamp}}
+  {{#> timestamp-text timestamp-text--attribute='datetime="2022-07-21"'}}
+    Tomorrow
+  {{/timestamp-text}}
 {{/timestamp}}
 ```
 
 ## Documentation
+
+### Usage
+
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-timestamp` | `<span>` | Creates a timestamp. **Required** |
+| `.pf-c-timestamp__text` | `<span>` | Create the visual text of the timestamp. **Required** |
