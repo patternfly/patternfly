@@ -701,7 +701,7 @@ beta: true
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--text="Current"}}
+                {{> tree-view-node tree-view-node--text="Options"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
             {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true"}}
