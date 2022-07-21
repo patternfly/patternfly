@@ -103,9 +103,13 @@
     }
   }
 
-  .pf-c-chip-group,
-  .pf-c-chip-group__list {
-    flex-wrap: nowrap;
+  .pf-c-chip-group li,
+  .pf-c-chip-group__list li {
+    min-width: fit-content;
+  }
+
+  .pf-c-chip.pf-m-overflow {
+    min-width: fit-content;
   }
 }
 
