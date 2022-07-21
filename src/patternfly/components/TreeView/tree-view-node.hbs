@@ -1,5 +1,9 @@
 {{#if tree-view-node--HasCheckbox}}
-  {{> __tree-view-node tree-view-node--type="label" tree-view-node--IsSelectable="true"}}
+  {{#if tree-view-list-item--IsExpandable}}
+    {{> __tree-view-node tree-view-node--type="label" tree-view-node--IsSelectable="true"}}
+  {{else}}
+    {{> __tree-view-node tree-view-node--type="label"}}
+  {{/if}}
 {{else}}
   {{> __tree-view-node}}
 {{/if}}
