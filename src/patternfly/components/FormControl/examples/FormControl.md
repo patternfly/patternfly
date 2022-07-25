@@ -18,13 +18,13 @@ import './FormControl.css'
 <br><br>
 {{> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="input-readonly" aria-label="Readonly input example"'}}
 <br><br>
+{{> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="input-disabled" aria-label="Disabled input example"'}}
+<br><br>
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}
 <br><br>
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-warning" form-control--attribute='type="text" value="Warning" id="input-warning" aria-label="Warning state input example"'}}
 <br><br>
 {{> form-control controlType="input" input="true" form-control--attribute='required type="text" value="Error" id="input-error" aria-invalid="true" aria-label="Error state input example"'}}
-<br><br>
-{{> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="input-disabled" aria-label="Disabled input example"'}}
 <br><br>
 {{> form-control controlType="input" input="true" form-control--IsExpanded="true" form-control--attribute='type="text" value="Expanded" id="input-expanded" aria-label="Expanded input example"'}}
 <br><br>
@@ -37,8 +37,8 @@ import './FormControl.css'
 
 ### Select
 ```hbs
-{{#> form-control controlType="select" form-control--modifier="pf-m-placeholder" form-control--attribute='id="select-standard" name="select-standard" aria-label="Standard select example"'}}
-  <option value="" selected disabled>Please choose</option>
+{{#> form-control controlType="select" form-control--modifier="pf-m-placeholder" form-control--attribute='id="select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
+  <option value="" selected>Selectable placeholder</option>
   <option value="Mr">Mr</option>
   <option value="Miss">Miss</option>
   <option value="Mrs">Mrs</option>
@@ -47,8 +47,8 @@ import './FormControl.css'
   <option value="Other">Other</option>
 {{/form-control}}
 <br><br>
-{{#> form-control controlType="select" form-control--modifier="pf-m-placeholder" form-control--attribute='id="select-placeholder-enabled" name="select-placeholder-enabled" aria-label="Placeholder enabled select example"'}}
-  <option value="" selected>Please choose</option>
+{{#> form-control controlType="select" form-control--modifier="pf-m-placeholder" form-control--attribute='id="select-non-selectable-placeholder" name="select-non-selectable-placeholder" aria-label="Non-selectable placeholder select example"'}}
+  <option value="" selected disabled>Non-selectable placeholder</option>
   <option value="Mr">Mr</option>
   <option value="Miss">Miss</option>
   <option value="Mrs">Mrs</option>
@@ -60,7 +60,7 @@ import './FormControl.css'
 {{#> form-control controlType="select" form-control--attribute='id="select-group" name="select-group" aria-label="Select group example"'}}
   <optgroup label="Group 1">
     <option value="Option 1">The first option</option>
-    <option value="Option 2" selected>The second option is selected by default</option>
+    <option value="Option 2" selected>Option groups (second option selected)</option>
   </optgroup>
   <optgroup label="Group 2">
     <option value="Option 3">The third option</option>
@@ -104,6 +104,15 @@ import './FormControl.css'
   </optgroup>
 {{/form-control}}
 <br><br>
+{{#> form-control controlType="select" form-control--modifier="pf-m-placeholder" form-control--attribute='disabled id="select-disabled" name="select-disabled" aria-label="Disabled select example"'}}
+  <option value="" selected>Disabled</option>
+  <option value="Mr">Mr</option>
+  <option value="Miss">Miss</option>
+  <option value="Mrs">Mrs</option>
+  <option value="Ms">Ms</option>
+  <option value="Dr">Dr</option>
+  <option value="Other">Other</option>
+{{/form-control}}
 ```
 
 ### Textarea
@@ -114,6 +123,10 @@ Standard
 <br><br>
 {{#> form-control controlType="textarea" form-control--attribute='readonly name="textarea-readonly" id="textarea-readonly" aria-label="Readonly textarea example"'}}
 Readonly
+{{/form-control}}
+<br><br>
+{{#> form-control controlType="textarea" form-control--attribute='disabled name="textarea-disabled" id="textarea-disabled" aria-label="Disabled textarea example"'}}
+Disabled
 {{/form-control}}
 <br><br>
 {{#> form-control controlType="textarea" form-control--modifier="pf-m-success" form-control--attribute='name="textarea-success" id="textarea-success" aria-label="Success state textarea example"'}}

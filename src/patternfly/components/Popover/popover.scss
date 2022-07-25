@@ -47,7 +47,7 @@
   // Close
   --pf-c-popover--c-button--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-popover--c-button--Top: calc(var(--pf-c-popover__content--PaddingTop) - var(--pf-global--spacer--form-element)); // align top of button with top of text
-  --pf-c-popover--c-button--Right: var(--pf-global--spacer--md);
+  --pf-c-popover--c-button--Right: calc(var(--pf-c-popover__content--PaddingRight) - var(--pf-global--spacer--md)); // align right of content
   --pf-c-popover--c-button--sibling--PaddingRight: var(--pf-global--spacer--2xl);
 
   // Header
