@@ -17,6 +17,11 @@
   --pf-c-text-input-group__main--first-child--not--text-input--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-text-input-group__main--m-icon__text-input--PaddingLeft: var(--pf-global--spacer--xl);
 
+  // Chip group
+  --pf-c-text-input-group__chip-group__main--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-text-input-group__chip-group__main--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-text-input-group__chip-group__main--PaddingBottom: var(--pf-global--spacer--xs);
+
   // Text input
   --pf-c-text-input-group__text-input--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-text-input-group__text-input--PaddingRight: var(--pf-global--spacer--sm);
@@ -103,10 +108,10 @@
     }
   }
 
-  .pf-c-chip-group li,
-  .pf-c-chip-group__list li,
-  .pf-c-chip.pf-m-overflow {
-    min-width: fit-content;
+  .pf-c-chip-group__main {
+    padding-top: var(--pf-c-text-input-group__chip-group__main--PaddingTop);
+    padding-right: var(--pf-c-text-input-group__chip-group__main--PaddingRight);
+    padding-bottom: var(--pf-c-text-input-group__chip-group__main--PaddingBottom);
   }
 }
 
