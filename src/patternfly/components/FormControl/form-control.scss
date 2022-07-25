@@ -27,6 +27,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
 
 .pf-c-form-control {
   // Component
+  --pf-c-form-control--Color: var(--pf-global--Color--100);
   --pf-c-form-control--FontSize: var(--pf-global--FontSize--md);
   --pf-c-form-control--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-form-control--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -199,7 +200,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   --pf-c-form-control--m-icon-sprite__select--invalid--BackgroundPosition: calc(100% - var(--pf-global--spacer--md) - var(--pf-global--spacer--lg));
 
   // This component always needs to be light
-  @include pf-t-light;
+  @include pf-t-light("--pf-c-form-control--Color");
 
   width: var(--pf-c-form-control--Width);
   padding: var(--pf-c-form-control--PaddingTop) var(--pf-c-form-control--PaddingRight) var(--pf-c-form-control--PaddingBottom) var(--pf-c-form-control--PaddingLeft);
@@ -216,7 +217,7 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   // stylelint-enable
 
   &::placeholder {
-    color: var(--pf-c-form-control--placeholder--Color);
+    color: var(--pf-c-form-control--placeholder--Color); // update to set --pf-c-form-control--Color in breaking change - also look for any other place to do that in this component
   }
 
   &:not(textarea) {
@@ -261,9 +262,9 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
   }
 
   &:disabled {
-    --pf-c-form-control--Color: var(--pf-c-form-control--disabled--Color);
     --pf-c-form-control--BackgroundColor: var(--pf-c-form-control--disabled--BackgroundColor);
 
+    color: var(--pf-c-form-control--disabled--Color);
     cursor: not-allowed;
     border-color: var(--pf-c-form-control--disabled--BorderColor);
   }
