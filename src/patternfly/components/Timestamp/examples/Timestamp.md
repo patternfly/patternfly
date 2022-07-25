@@ -60,4 +60,4 @@ cssPrefix: pf-c-timestamp
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-timestamp` | `<span>` | Creates a timestamp. **Required** |
-| `.pf-c-timestamp__text` | `<span>` | Create the visual text of the timestamp. **Required** |
+| `.pf-c-timestamp__text` | `<time>` | Creates the visual text of the timestamp. **Required** |
