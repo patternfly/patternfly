@@ -77,7 +77,7 @@ cssPrefix: pf-c-expandable-section
 {{/expandable-section}}
 ```
 
-### Truncation
+### Truncate expansion
 ```hbs
 {{#> expandable-section expandable-section--IsTruncate="true"}}
   {{#> expandable-section-content}}
@@ -87,7 +87,7 @@ cssPrefix: pf-c-expandable-section
 {{/expandable-section}}
 ```
 
-### Truncation expanded
+### Truncate expansion expanded
 ```hbs
 {{#> expandable-section expandable-section--IsTruncate="true" expandable-section--IsExpanded="true"}}
   {{#> expandable-section-content}}
