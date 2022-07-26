@@ -61,3 +61,4 @@ cssPrefix: pf-c-timestamp
 | -- | -- | -- |
 | `.pf-c-timestamp` | `<span>` | Creates a timestamp. **Required** |
 | `.pf-c-timestamp__text` | `<time>` | Creates the visual text of the timestamp. **Required** |
+| `.pf-m-help-text`| `.pf-c-timestamp` | Modifies styling for a timestamp that has help text. |
