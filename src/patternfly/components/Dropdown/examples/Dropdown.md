@@ -219,3 +219,4 @@ The dropdown menu can contain either links or buttons, depending on the expected
 | `.pf-m-icon` | `.pf-c-dropdown__menu-item` | Modifies an item to support adding an icon. |
 | `.pf-m-active` | `.pf-c-dropdown__toggle` | Modifies the dropdown menu toggle for the active state. |
 | `.pf-m-description` | `.pf-c-dropdown__menu-item` | Modifies an item to support adding a description. |
+| `.pf-m-static` | `.pf-c-dropdown__menu` | Modifies a dropdown menu for popper placement support. |
