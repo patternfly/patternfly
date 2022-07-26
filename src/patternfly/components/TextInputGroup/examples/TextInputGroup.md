@@ -32,7 +32,7 @@ import './TextInputGroup.css'
 
 ### Utilities and icon with placeholder text
 ```hbs
-{{#> text-input-group}}
+{{#> text-input-group text-input-group--id="text-input-group-utilities-and-icon-with-placeholder-text"}}
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
@@ -83,7 +83,7 @@ import './TextInputGroup.css'
 
 ### Autocomplete last option hint
 ```hbs
-{{#> text-input-group text-input-group--value="apples"}}
+{{#> text-input-group text-input-group--id="text-input-group-autocomplete-last-option-hint" text-input-group--value="apples"}}
   {{#> text-input-group-main}}
     {{#> text-input-group-text}}
       {{> text-input-group-text-input text-input-group-text-input--hint-text="appleseed" }}
@@ -95,7 +95,7 @@ import './TextInputGroup.css'
 
 ### Search input group
 ```hbs
-{{#> text-input-group}}
+{{#> text-input-group text-input-group--id="text-input-group-search-input-group"}}
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
@@ -107,7 +107,7 @@ import './TextInputGroup.css'
 
 ### Search input group, no match
 ```hbs
-{{#> text-input-group}}
+{{#> text-input-group text-input-group--id="text-input-group-search-input-group-no-match"}}
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
@@ -123,7 +123,7 @@ import './TextInputGroup.css'
 ```
 ###  Search input group, match with result count
 ```hbs
-{{#> text-input-group}}
+{{#> text-input-group text-input-group--id="text-input-group-search-input-group-match-with-result-count"}}
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
@@ -141,7 +141,7 @@ import './TextInputGroup.css'
 
 ### Search input group, match with navigable options
 ```hbs
-{{#> text-input-group}}
+{{#> text-input-group text-input-group--id="text-input-group-search-input-group-match-with-navigable-options"}}
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
@@ -168,7 +168,7 @@ import './TextInputGroup.css'
 ### Search input group, with submit button
 ```hbs
 {{#> input-group}}
-  {{#> text-input-group}}
+  {{#> text-input-group text-input-group--id="text-input-group-search-input-group-with-submit-button"}}
     {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
       {{#> text-input-group-text}}
         {{> text-input-group-icon}}
@@ -185,7 +185,7 @@ import './TextInputGroup.css'
 ### Search input group, advanced search
 ```hbs
 {{#> input-group}}
-  {{#> text-input-group}}
+  {{#> text-input-group text-input-group--id="text-input-group-search-input-group-advanced-search"}}
     {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
       {{#> text-input-group-text}}
         {{> text-input-group-icon}}
@@ -211,7 +211,7 @@ import './TextInputGroup.css'
 ### Search input group, advanced search expanded
 ```hbs
 {{#> input-group}}
-  {{#> text-input-group}}
+  {{#> text-input-group text-input-group--id="text-input-group-search-input-group-advanced-search-option"}}
     {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
       {{#> text-input-group-text}}
         {{> text-input-group-icon}}
@@ -390,7 +390,7 @@ import './TextInputGroup.css'
 ```hbs
 <div class="ws-example-wrapper">
 {{#> input-group}}
-  {{#> text-input-group}}
+  {{#> text-input-group text-input-group--id="text-input-group-search-input-group-advanced-search-expanded-autocomplete"}}
     {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
       {{#> text-input-group-text}}
         {{> text-input-group-icon}}

@@ -207,7 +207,7 @@ import './application-launcher.css'
 
 ### Favorites
 ```hbs
-{{#> app-launcher app-launcher--id="application-launcher-favorites" app-launcher--id="app-launcher-favorites" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
+{{#> app-launcher app-launcher--id="app-launcher-favorites" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-menu-search}}
       {{> search-input}}
