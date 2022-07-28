@@ -126,15 +126,6 @@
   border: 0;
 }
 
-@mixin pf-u-full-size {
-  width: 100%;
-  height: 100%;
-}
-
-@mixin pf-u-absolute {
-  position: absolute;
-}
-
 @mixin pf-u-visible {
   position: static;
   overflow: visible;
