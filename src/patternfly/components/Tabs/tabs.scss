@@ -177,7 +177,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   width: var(--pf-c-tabs--Width);
   padding-right: var(--pf-c-tabs--inset);
   padding-left: var(--pf-c-tabs--inset);
-  overflow: hidden; // remove in breaking change release
+  overflow: hidden; // needed for scroll button animation. limit to pf-m-scrollable in breaking change. may need new modifier so this is applied to a menu that supports scrolling, regardless of whether the scroll buttons are shown.
 
   &::before {
     position: absolute;
@@ -461,6 +461,13 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   &.pf-m-page-insets {
     --pf-c-tabs--inset: var(--pf-c-tabs--m-page-insets--inset);
+  }
+
+  &.pf-m-overflow {
+    &,
+    .pf-c-tabs__list {
+      overflow: visible;
+    }
   }
 }
 
