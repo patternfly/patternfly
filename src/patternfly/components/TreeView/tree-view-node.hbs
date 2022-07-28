@@ -25,7 +25,7 @@
     {{/if}}>
     {{#> tree-view-node-container}}
       {{#if tree-view-list-item--IsExpandable}}
-        {{> tree-view-node-toggle}}
+        {{> tree-view-node-toggle tree-view-node-toggle--IsToggle=(concat tree-view-node--IsSelectable tree-view-node--HasCheckbox)}}
       {{/if}}
       {{#if tree-view-node--HasFolderIcon}}
         {{> tree-view-node-icon tree-view-node-icon--IsFolder="true"}}
