@@ -445,14 +445,14 @@ The plain select variation should be used when you do not want a border applied 
 
 ### Placeholder item disabled
 ```hbs
-{{#> select id="select-placeholder-expanded" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true" select--PlaceholderItemDisabled="true"}}
+{{#> select id="select-placeholder-item-disabled" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true" select--PlaceholderItemDisabled="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Placeholder item enabled
 ```hbs
-{{#> select id="select-placeholder-expanded" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true"}}
+{{#> select id="select-placeholder-item-enabled" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true"}}
   Filter by status
 {{/select}}
 ```

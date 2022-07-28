@@ -199,18 +199,18 @@ import './Tabs.css'
 
 ### Using the nav element
 ```hbs
-{{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Local"' tabs-link--isLink="true"}}
+{{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Tabs nav"' tabs-link--isLink="true"}}
   {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
 ### Sub nav using the nav element
 ```hbs
-{{#> tabs tabs--id="primary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local"' tabs-link--isLink="true"}}
+{{#> tabs tabs--id="primary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Tabs primary nav"' tabs-link--isLink="true"}}
   {{> __tabs-list}}
 {{/tabs}}
 
-{{#> tabs tabs--id="secondary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Local secondary"' tabs-link--isLink="true" tabs--modifier="pf-m-secondary"}}
+{{#> tabs tabs--id="secondary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Tabs secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-secondary"}}
   {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
@@ -241,7 +241,7 @@ import './Tabs.css'
 
 ### Vertical expandable (legacy)
 ```hbs
-{{#> tabs tabs--id="vertical-expandable-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical"}}
+{{#> tabs tabs--id="vertical-expandable-legacy-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -249,7 +249,7 @@ import './Tabs.css'
 
 ### Vertical expanded (legacy)
 ```hbs
-{{#> tabs tabs--id="vertical-expanded-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
+{{#> tabs tabs--id="vertical-expanded-legacy-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -257,7 +257,7 @@ import './Tabs.css'
 
 ### Vertical expandable (responsive, legacy)
 ```hbs
-{{#> tabs tabs--id="vertical-expandable-responsive-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+{{#> tabs tabs--id="vertical-expandable-responsive-legacy-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -305,22 +305,22 @@ import './Tabs.css'
 
 ### Add tab button
 ```hbs
-{{#> tabs tabs--id="close-default-example" tabs--modifier="pf-m-scrollable"}}
+{{#> tabs tabs--id="add-default-example" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
-{{#> tabs tabs--id="close-secondary-example" tabs--modifier="pf-m-scrollable" tabs--IsSecondary="true"}}
-  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
-{{/tabs}}
-
-<br><br>
-
-{{#> tabs tabs--id="close-box-example" tabs--modifier="pf-m-box pf-m-scrollable"}}
+{{#> tabs tabs--id="add-secondary-example" tabs--modifier="pf-m-scrollable" tabs--IsSecondary="true"}}
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 
 <br><br>
 
-{{#> tabs tabs--id="close-box-light-300-example" tabs--modifier="pf-m-box pf-m-color-scheme--light-300 pf-m-scrollable"}}
+{{#> tabs tabs--id="add-box-example" tabs--modifier="pf-m-box pf-m-scrollable"}}
+  {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
+{{/tabs}}
+
+<br><br>
+
+{{#> tabs tabs--id="add-box-light-300-example" tabs--modifier="pf-m-box pf-m-color-scheme--light-300 pf-m-scrollable"}}
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 ```

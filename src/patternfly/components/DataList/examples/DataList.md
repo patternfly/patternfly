@@ -228,7 +228,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="' data-list--id ' Primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -296,7 +296,7 @@ When a list item includes more than one block of content, it can be difficult fo
 
 ### Expandable compact
 ```hbs
-{{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-expandable" data-list--attribute='aria-label="Expandable data list example"'}}
+{{#> data-list data-list--modifier="pf-m-compact" data-list--id="data-list-expandable-compact" data-list--attribute='aria-label="Expandable data list example"'}}
   {{#> data-list-item data-list-item--expanded="true" data-list-item--id="item-1"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
@@ -321,7 +321,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="' data-list--id ' Primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -411,7 +411,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="' data-list--id ' Primary content details"')}}
       {{#> data-list-expandable-content-body}}
         {{#> data-list data-list--id="data-list-expandable-nested-nested" data-list--attribute='aria-label="Expandable nested nested data list example"'}}
           {{#> data-list-item newcontext data-list--id=data-list--id data-list-item--id="item-1" data-list-item--expanded="true"}}
@@ -734,7 +734,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="' data-list--id ' Primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -812,7 +812,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Primary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="' data-list--id ' Primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}

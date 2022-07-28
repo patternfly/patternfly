@@ -292,7 +292,7 @@ import './Grid.css'
 
 Ordering - Ordering can be applied to nested <code>.pf-l-grid</code> and <code>.pf-l-grid__item</code>s. Spacing may need to be managed based on how items are ordered. Because order could apply to an innumerable number of elements, order is set inline as `--pf-l-grid--item--Order{-on-[breakpoint]}: {order}`.
 
-### Ordering
+### Ordering example
 ```hbs
 {{#> grid grid--modifier="pf-m-all-4-col pf-m-gutter"}}
   {{#> grid-item grid-item--attribute='style="--pf-l-grid--item--Order: 2;"'}}

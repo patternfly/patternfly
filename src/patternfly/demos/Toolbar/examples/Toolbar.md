@@ -29,7 +29,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id="pagination-options-menu-bottom-example"}}
+            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -52,7 +52,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id="pagination-options-menu-bottom-example"}}
+            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -98,7 +98,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id="pagination-options-menu-bottom-example"}}
+            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -121,7 +121,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id="pagination-options-menu-bottom-example"}}
+            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -169,7 +169,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id="pagination-options-menu-bottom-example"}}
+            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -179,15 +179,15 @@ import './Toolbar.css'
   {{/toolbar-content}}
   {{#> toolbar-content toolbar-content--modifier="pf-m-chip-container"}}
     {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
-      {{#> chip-group chip-group--modifier="pf-m-category"}}
+      {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="toolbar-attribute-value-checkbox-select-filter-desktop-example-chip-group"}}
         {{#> chip-group-main}}
-          {{#> chip-group-label chip-group-label--attribute=(concat 'id="' toolbar--id '-chip-group-label"')}}
+          {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-chip-group-label"')}}
             Status
           {{/chip-group-label}}
-          {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' toolbar--id '-chip-group-label"')}}
+          {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-chip-group-label"')}}
             {{#> chip-group-list-item}}
               {{#> chip}}
-                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
+                {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id '-chip-one"')}}
                   Canceled
                 {{/chip-text}}
                 {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove-chip-one ' chip-group--id 'chip-one" aria-label="Remove" id="' chip-group--id 'remove-chip-one"')}}
@@ -236,7 +236,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id="pagination-options-menu-bottom-example"}}
+            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -255,12 +255,12 @@ import './Toolbar.css'
           {{/select}}
         {{/toolbar-item}}
         {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
-          {{#> chip-group chip-group--modifier="pf-m-category"}}
+          {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="toolbar-attribute-value-checkbox-select-filter-mobile-example-chip-group"}}
             {{#> chip-group-main}}
-              {{#> chip-group-label chip-group-label--attribute=(concat 'id="' toolbar--id '-chip-group-label"')}}
+              {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-chip-group-label"')}}
                 Status
               {{/chip-group-label}}
-              {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby=" 'toolbar--id '-chip-group-label"')}}
+              {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby=" 'chip-group--id '-chip-group-label"')}}
                 {{#> chip-group-list-item}}
                   {{#> chip}}
                     {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip-one"')}}
@@ -330,7 +330,7 @@ import './Toolbar.css'
           {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
             {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
               {{#> pagination pagination--IsCompact="true"}}
-                {{> pagination-options-menu id="pagination-options-menu-bottom-example"}}
+                {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
                 {{> pagination-nav-content}}
               {{/pagination}}
             {{/pagination}}

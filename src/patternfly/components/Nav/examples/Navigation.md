@@ -660,10 +660,10 @@ import './Navigation.css'
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example1"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-light-example1"'}}
         Link 1 (current and expanded example)
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example1"'}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-light-example1"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
@@ -685,10 +685,10 @@ import './Navigation.css'
       {{/nav-subnav}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example2"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-light-example2"'}}
         Link 2 (expanded, but not current example)
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example2"'}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-light-example2"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
@@ -704,10 +704,10 @@ import './Navigation.css'
       {{/nav-subnav}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-example3"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="expandable-light-example3"'}}
         Link 3
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-example3"'}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="expandable-light-example3"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}

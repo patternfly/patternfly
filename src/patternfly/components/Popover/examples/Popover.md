@@ -214,17 +214,17 @@ import './Popover.css'
 
 ### Popover with icon in the title
 ```hbs isFullscreen
-{{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+{{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-icon-title-header" aria-describedby="popover-icon-title-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"' popover-title-icon--type="bullhorn"}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-icon-title-header"' popover-title-icon--type="bullhorn"}}
         Popover with icon title
       {{/popover-title}}
     {{/popover-header}}
-    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+    {{#> popover-body popover-body--attribute='id="popover-icon-title-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
     {{#> popover-footer}}
@@ -235,17 +235,17 @@ import './Popover.css'
 ```
 ### Default alert popover
 ```hbs isFullscreen
-{{#> popover popover--IsAlert="true" popover--IsDefaultAlert="true" popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+{{#> popover popover--IsAlert="true" popover--IsDefaultAlert="true" popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-default-alert-header" aria-describedby="popover-default-alert-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"'}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-default-alert-header"'}}
         Default popover title
       {{/popover-title}}
     {{/popover-header}}
-    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+    {{#> popover-body popover-body--attribute='id="popover-default-alert-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
     {{#> popover-footer}}
@@ -257,17 +257,17 @@ import './Popover.css'
 
 ### Info alert popover
 ```hbs isFullscreen
-{{#> popover popover--IsAlert="true" popover--IsInfoAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+{{#> popover popover--IsAlert="true" popover--IsInfoAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-info-alert-header" aria-describedby="popover-info-alert-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"'}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-info-alert-header"'}}
         Info popover title
       {{/popover-title}}
     {{/popover-header}}
-    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+    {{#> popover-body popover-body--attribute='id="popover-info-alert-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
     {{#> popover-footer}}
@@ -279,17 +279,17 @@ import './Popover.css'
 
 ### Success alert popover
 ```hbs isFullscreen
-{{#> popover popover--IsAlert="true" popover--IsSuccessAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+{{#> popover popover--IsAlert="true" popover--IsSuccessAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-success-alert-header" aria-describedby="popover-success-alert-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"'}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-success-alert-header"'}}
         Success popover title
       {{/popover-title}}
     {{/popover-header}}
-    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+    {{#> popover-body popover-body--attribute='id="popover-success-alert-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
     {{#> popover-footer}}
@@ -301,17 +301,17 @@ import './Popover.css'
 
 ### Warning alert popover
 ```hbs isFullscreen
-{{#> popover popover--IsAlert="true" popover--IsWarningAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+{{#> popover popover--IsAlert="true" popover--IsWarningAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-warning-alert-header" aria-describedby="popover-warning-alert-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"'}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-warning-alert-header"'}}
         Warning popover title
       {{/popover-title}}
     {{/popover-header}}
-    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+    {{#> popover-body popover-body--attribute='id="popover-warning-alert-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
     {{#> popover-footer}}
@@ -323,17 +323,17 @@ import './Popover.css'
 
 ### Danger alert popover
 ```hbs isFullscreen
-{{#> popover popover--IsAlert="true" popover--IsDangerAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
+{{#> popover popover--IsAlert="true" popover--IsDangerAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-danger-alert-header" aria-describedby="popover-danger-alert-body"'}}
   {{#> popover-content}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-top-header"'}}
+      {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-danger-alert-header"'}}
         Danger popover title
       {{/popover-title}}
     {{/popover-header}}
-    {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
+    {{#> popover-body popover-body--attribute='id="popover-danger-alert-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
     {{#> popover-footer}}
