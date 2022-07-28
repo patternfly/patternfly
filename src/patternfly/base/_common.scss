@@ -22,6 +22,15 @@
 
 .pf-screen-reader {
   @include pf-u-screen-reader; // for use with assistive technologies
+
+  &.pf-m-full-size {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.pf-m-absolute {
+    position: absolute;
+  }
 }
 
 .pf-m-tabular-nums {
