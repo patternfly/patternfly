@@ -548,9 +548,16 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   padding-left: var(--pf-c-page__main-nav--PaddingLeft);
   background-color: var(--pf-c-page__main-nav--BackgroundColor);
 
-  &.pf-m-sticky-top,
-  .pf-c-page__main-group.pf-m-sticky-top &:last-child {
-    padding-bottom: var(--pf-c-page__main-nav--m-sticky-top--PaddingBottom);
+  // Responsive height modifiers for sticky top/bottom
+  @each $breakpoint, $breakpoint-value in $pf-c-page--height-breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
+
+    @include pf-apply-height-breakpoint($breakpoint) {
+      &.pf-m-sticky-top#{$breakpoint-name},
+      .pf-c-page__main-group.pf-m-sticky-top#{$breakpoint-name} &:last-child {
+        padding-bottom: var(--pf-c-page__main-nav--m-sticky-top--PaddingBottom);
+      }
+    }
   }
 }
 
@@ -580,9 +587,16 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-breadcrumb--main-section--PaddingTop);
   }
 
-  &.pf-m-sticky-top,
-  .pf-c-page__main-group.pf-m-sticky-top &:last-child {
-    --pf-c-page__main-breadcrumb--PaddingBottom: var(--pf-c-page__main-breadcrumb--m-sticky-top--PaddingBottom);
+  // Responsive height modifiers for sticky top/bottom
+  @each $breakpoint, $breakpoint-value in $pf-c-page--height-breakpoint-map {
+    $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}-height, "");
+
+    @include pf-apply-height-breakpoint($breakpoint) {
+      &.pf-m-sticky-top#{$breakpoint-name},
+      .pf-c-page__main-group.pf-m-sticky-top#{$breakpoint-name} &:last-child {
+        --pf-c-page__main-breadcrumb--PaddingBottom: var(--pf-c-page__main-breadcrumb--m-sticky-top--PaddingBottom);
+      }
+    }
   }
 }
 
