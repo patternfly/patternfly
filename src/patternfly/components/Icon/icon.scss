@@ -1,0 +1,135 @@
+// Component variables follow this formula:
+// --pf-c-icon__content--modifier--state--PropertyCamelCase
+
+// The value of component scoped variables is always defined by a global variable:
+.pf-c-icon {
+  // Example block variable
+  --pf-c-icon--Width: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon--Height: var(--pf-global--icon--FontSize--md);
+
+  // Size modifiers
+  --pf-c-icon--m-sm--Width: var(--pf-global--icon--FontSize--sm);
+  --pf-c-icon--m-md--Width: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon--m-lg--Width: var(--pf-global--icon--FontSize--lg);
+  --pf-c-icon--m-xl--Width: var(--pf-global--icon--FontSize--xl);
+  --pf-c-icon--m-sm--Height: var(--pf-global--icon--FontSize--sm);
+  --pf-c-icon--m-md--Height: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon--m-lg--Height: var(--pf-global--icon--FontSize--lg);
+  --pf-c-icon--m-xl--Height: var(--pf-global--icon--FontSize--xl);
+
+  // Content variables
+  --pf-c-icon__content--Color: var(--pf-global--icon--Color--dark);
+
+  // Content status TODO: do we want to do this?
+  --pf-c-icon__content-m-danger--Color: var(--pf-global--danger-color--100);
+  --pf-c-icon__content-m-warning--Color: var(--pf-global--warning-color--100);
+  --pf-c-icon__content-m-success--Color: var(--pf-global--success-color--100);
+  --pf-c-icon__content-m-info--Color: var(--pf-global--info-color--100);
+  --pf-c-icon__content--FontSize: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon__content-svg--VerticalAlign: -.125em;
+  --pf-c-icon--m-sm--content--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-icon--m-md--content--FontSize: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon--m-lg--content--FontSize: var(--pf-global--icon--FontSize--lg);
+  --pf-c-icon--m-xl--content--FontSize: var(--pf-global--icon--FontSize--xl);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--pf-c-icon--Width);
+  height: var(--pf-c-icon--Height);
+  min-height: var(--pf-c-icon--Height);
+
+  // TODO: for debugging
+  // background-color: hotpink;
+
+  // Size modifiers
+  &.pf-m-sm {
+    --pf-c-icon--Width: var(--pf-c-icon--m-sm--Width);
+    --pf-c-icon--Height: var(--pf-c-icon--m-sm--Height);
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-sm--content--FontSize);
+  }
+
+  &.pf-m-md {
+    --pf-c-icon--Width: var(--pf-c-icon--m-md--Width);
+    --pf-c-icon--Height: var(--pf-c-icon--m-md--Height);
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-md--content--FontSize);
+  }
+
+  &.pf-m-lg {
+    --pf-c-icon--Width: var(--pf-c-icon--m-lg--Width);
+    --pf-c-icon--Height: var(--pf-c-icon--m-lg--Height);
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-lg--content--FontSize);
+  }
+
+  &.pf-m-xl {
+    --pf-c-icon--Width: var(--pf-c-icon--m-xl--Width);
+    --pf-c-icon--Height: var(--pf-c-icon--m-xl--Height);
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-xl--content--FontSize);
+  }
+
+  // Inline modifier
+  &.pf-m-inline {
+    vertical-align: middle;
+  }
+
+  &.pf-m-in-progress > .pf-c-icon__progress {
+    opacity: 1;
+  }
+
+  &.pf-m-in-progress > :not(.pf-c-icon__progress) {
+    opacity: 0;
+  }
+}
+
+// TODO Element
+.pf-c-icon__content,
+.pf-c-icon__progress {
+  font-size: var(--pf-c-icon__content--FontSize);
+  color: var(--pf-c-icon__content--Color);
+
+  & > svg {
+    vertical-align: var(--pf-c-icon__content-svg--VerticalAlign);
+  }
+
+  // Size modifiers
+  &.pf-m-sm {
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-sm--content--FontSize);
+  }
+
+  &.pf-m-md {
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-md--content--FontSize);
+  }
+
+  &.pf-m-lg {
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-lg--content--FontSize);
+  }
+
+  &.pf-m-xl {
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-xl--content--FontSize);
+  }
+
+  // Status modifiers
+  &.pf-m-danger {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content-m-danger--Color);
+  }
+
+  &.pf-m-warning {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content-m-warning--Color);
+  }
+
+  &.pf-m-success {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content-m-success--Color);
+  }
+
+  &.pf-m-info {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content-m-info--Color);
+  }
+}
+
+.pf-c-icon__progress {
+  position: absolute;
+  top: calc(50% + calc(.5 * var(--pf-c-icon__content-svg--VerticalAlign)));
+  opacity: 0;
+  transform: translateX(0) translateY(calc(-50% - calc(.5 * var(--pf-c-icon__content-svg--VerticalAlign))));
+}
