@@ -684,12 +684,12 @@ beta: true
 ```hbs
 {{#> tree-view}}
   {{#> tree-view-list tree-view-list--IsRoot="true"}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id="1"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Application launcher"}}
       {{/tree-view-content}}
       {{#> tree-view-list newcontext}}
-        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id="2"}}
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 1"}}
           {{/tree-view-content}}
@@ -701,17 +701,17 @@ beta: true
             {{/tree-view-list-item}}
             {{#> tree-view-list-item}}
               {{#> tree-view-content}}
-                {{> tree-view-node tree-view-node--text="Current"}}
+                {{> tree-view-node tree-view-node--text="Options"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true"}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id="3"}}
               {{#> tree-view-content}}
                 {{> tree-view-node tree-view-node--text="Loader"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
           {{/tree-view-list}}
         {{/tree-view-list-item}}
-        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true"}}
+        {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id="4"}}
           {{#> tree-view-content}}
             {{> tree-view-node tree-view-node--text="Application 2"}}
           {{/tree-view-content}}
@@ -721,17 +721,17 @@ beta: true
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true"}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id="5"}}
               {{#> tree-view-content}}
                 {{> tree-view-node tree-view-node--text="Settings"}}
               {{/tree-view-content}}
             {{/tree-view-list-item}}
-            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true"}}
+            {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-list-item--IsExpanded="true" tree-view-node--id="6"}}
               {{#> tree-view-content}}
                 {{> tree-view-node tree-view-node--text="Loader"}}
               {{/tree-view-content}}
               {{#> tree-view-list newcontext}}
-                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true"}}
+                {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id="7"}}
                   {{#> tree-view-content}}
                     {{> tree-view-node tree-view-node--text="Loader app 1" tree-view-node--modifier="pf-m-current"}}
                   {{/tree-view-content}}
@@ -752,17 +752,17 @@ beta: true
         {{/tree-view-list-item}}
       {{/tree-view-list}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id="8"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Cost management"}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id="9"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="Sources"}}
       {{/tree-view-content}}
     {{/tree-view-list-item}}
-    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true"}}
+    {{#> tree-view-list-item tree-view-list-item--IsExpandable="true" tree-view-node--IsSelectable="true" tree-view-node--id="10"}}
       {{#> tree-view-content}}
         {{> tree-view-node tree-view-node--text="This is a really really really long folder name that overflows from the width of the container."}}
       {{/tree-view-content}}
