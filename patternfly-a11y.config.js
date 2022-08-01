@@ -4,11 +4,56 @@ async function waitFor(page) {
   await page.waitForSelector('#root > *');
 }
 
+const urls = Object.keys(fullscreenRoutes)
+  .map(key => fullscreenRoutes[key].isFullscreenOnly
+    ? key
+    : fullscreenRoutes[key].path.replace(/\/html$/, ''))
+  .reduce((result, item) => (result.includes(item) ? result : [...result, item]), []);
+
 module.exports = {
   prefix: 'http://localhost:5000',
   waitFor,
   crawl: false,
-  urls: Object.keys(fullscreenRoutes),
-  ignoreRules: ['color-contrast', 'page-has-heading-one', 'scrollable-region-focusable', 'bypass', 'nested-interactive'].join(','),
-  ignoreIncomplete: true
+  urls: [
+    {
+      url: '/',
+      label: 'home fullscreen nav expanded',
+      viewportDimensions: { width: 1920, height: 1080 },
+      afterNav: async page => {
+        await page.click('button#nav-toggle');
+      }
+    },
+    {
+      url: '/',
+      label: 'home fullscreen nav collapsed',
+      viewportDimensions: { width: 1920, height: 1080 }
+    },
+    {
+      url: '/',
+      label: 'home mobile nav collapsed',
+      viewportDimensions: { width: 400, height: 900 }
+    },
+    {
+      url: '/',
+      label: 'home mobile nav expanded',
+      viewportDimensions: { width: 400, height: 900 },
+      afterNav: async page => {
+        await page.click('button#nav-toggle');
+      }
+    },
+    {
+      url: '/components/table/html',
+      label: 'html table content on mobile screen',
+      viewportDimensions: { width: 400, height: 900 }
+    },
+    ...urls
+  ],
+  ignoreRules: [
+    'color-contrast',
+    'landmark-no-duplicate-main',
+    'landmark-main-is-top-level',
+    'scrollable-region-focusable'
+  ].join(','),
+  ignoreIncomplete: true,
+  skip: '(mailto)|(/(developer-resources)/.+)'
 };
