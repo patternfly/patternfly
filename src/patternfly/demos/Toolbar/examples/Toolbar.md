@@ -179,7 +179,7 @@ import './Toolbar.css'
   {{/toolbar-content}}
   {{#> toolbar-content toolbar-content--modifier="pf-m-chip-container"}}
     {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
-      {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="toolbar-attribute-value-checkbox-select-filter-desktop-example-chip-group"}}
+      {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id=(concat toolbar--id "-chip-group")}}
         {{#> chip-group-main}}
           {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-chip-group-label"')}}
             Status
@@ -255,7 +255,7 @@ import './Toolbar.css'
           {{/select}}
         {{/toolbar-item}}
         {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-chip-group ' toolbar-item-chip-group--modifier)}}
-          {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="toolbar-attribute-value-checkbox-select-filter-mobile-example-chip-group"}}
+           {{#> chip-group chip-group--modifier="pf-m-category" chip-group--id=(concat toolbar--id "-chip-group")}}
             {{#> chip-group-main}}
               {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-chip-group-label"')}}
                 Status
