@@ -3,6 +3,47 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.10 release notes (2022-08-04)
+Packages released:
+- [@patternfly/patternfly@v4.206.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.206.3)
+
+### Components
+- **Description list:** Removed dl group mod in examples ([#4993](https://github.com/patternfly/patternfly/pull/4993))
+- **Drawer:**
+  - Fixed sticky page sections when in drawer ([#4971](https://github.com/patternfly/patternfly/pull/4971))
+  - Fixed broken var names ([#4950](https://github.com/patternfly/patternfly/pull/4950))
+- **Form control:** Fixed disabled text color ([#4988](https://github.com/patternfly/patternfly/pull/4988))
+- **Menu:**
+  - Adjusted group title text ([#4917](https://github.com/patternfly/patternfly/pull/4917))
+  - Fixed non-visible drilldown submenu VO issue ([#4980](https://github.com/patternfly/patternfly/pull/4980))
+- **Number input:** Added support for status icon ([#4983](https://github.com/patternfly/patternfly/pull/4983))
+- **Page:** Fixed sticky-on section padding ([#5011](https://github.com/patternfly/patternfly/pull/5011))
+- **Popover:** Aligned edge of close button icon with content ([#4998](https://github.com/patternfly/patternfly/pull/4998))
+- **Sidebar:** Added light/dark theme border, remove desktop shadow ([#4938](https://github.com/patternfly/patternfly/pull/4938))
+- **Table:**
+  - Added aria-hidden to table border row ([#4923](https://github.com/patternfly/patternfly/pull/4923))
+  - Removed truncate from sticky hrs ([#4981](https://github.com/patternfly/patternfly/pull/4981))
+- **Tabs:** Added overflow variation for horiz overflow variation ([#5005](https://github.com/patternfly/patternfly/pull/5005))
+- **Timestamp:** Added component ([#4996](https://github.com/patternfly/patternfly/pull/4996))
+- **Tree view:**
+  - Added selectable/expandable, improved click areas ([#4869](https://github.com/patternfly/patternfly/pull/4869))
+  - Fixed selectable/expandable node bugs ([#4991](https://github.com/patternfly/patternfly/pull/4991))
+
+### Other
+- **Build:**
+  - Update docs framework ([#4934](https://github.com/patternfly/patternfly/pull/4934))
+  - Updated github workflow to publish docs before a11y tests ([#4967](https://github.com/patternfly/patternfly/pull/4967))
+  - Enable a11y attr check, update modal and popover docs ([#4977](https://github.com/patternfly/patternfly/pull/4977))
+- **Global:**
+  - Added full height/absolute mods for screen reader class ([#4888](https://github.com/patternfly/patternfly/pull/4888))
+  - Updated dark theme visited link color ([#4964](https://github.com/patternfly/patternfly/pull/4964))
+- **Workspace:**
+  - Fixed duplicate IDs in example docs ([#4928](https://github.com/patternfly/patternfly/pull/4928))
+  - Enabled dark theme switch ([#4937](https://github.com/patternfly/patternfly/pull/4937))
+  - Removed react css imports ([#4953](https://github.com/patternfly/patternfly/pull/4953))
+- **Utilities:** Adjusted utility colors in dark theme ([#4933](https://github.com/patternfly/patternfly/pull/4933))
+
+
 ## 2022.08 release notes (2022-06-24)
 Packages released:
 - [@patternfly/patternfly@v4.202.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.202.1)
