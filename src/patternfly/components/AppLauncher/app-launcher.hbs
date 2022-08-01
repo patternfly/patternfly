@@ -1,5 +1,8 @@
 <nav class="pf-c-app-launcher{{#if app-launcher--IsExpanded}} pf-m-expanded{{/if}}{{#if app-launcher--modifier}} {{app-launcher--modifier}}{{/if}}"
   aria-label="Application launcher"
+  {{#if app-launcher--id}}
+    id="{{app-launcher--id}}"
+  {{/if}}
   {{#if app-launcher--attribute}}
     {{{app-launcher--attribute}}}
   {{/if}}>

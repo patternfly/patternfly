@@ -382,22 +382,18 @@ $pf-c-tree-view--MaxNesting: 10;
     }
   }
 
+  &:not(.pf-m-selectable),
   &.pf-m-selectable .pf-c-tree-view__node-toggle {
-    --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--Color--base); // resets hover/focus/active color when node triggers hover/focus/active color change
-  }
-
-  &,
-  .pf-c-tree-view__node-toggle {
     &:hover {
-      --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--hover__icon--Color);
+      --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--hover--Color);
     }
 
     &:focus {
-      --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--focus__icon--Color);
+      --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--focus--Color);
     }
 
     &:active {
-      --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--active__icon--Color);
+      --pf-c-tree-view__node-toggle--Color: var(--pf-c-tree-view__node-toggle--active--Color);
     }
   }
 }

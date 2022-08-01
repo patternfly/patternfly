@@ -52,22 +52,22 @@ import './Tabs.css'
 
 ### Horizontal overflow
 ```hbs isBeta
-{{#> tabs tabs--id="horizontal-overflow-example"}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsOverflow="true"}}
+{{#> tabs tabs--id="horizontal-overflow-example" __tabs-list--IsOverflow="true"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Horizontal overflow expanded
 ```hbs isBeta
-{{#> tabs tabs--id="horizontal-overflow-expanded-example"}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowExpanded="true"}}
+{{#> tabs tabs--id="horizontal-overflow-expanded-example" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowExpanded="true"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Horizontal overflow selected
 ```hbs isBeta
-{{#> tabs tabs--id="horizontal-overflow-selected-example"}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowSelected="true"}}
+{{#> tabs tabs--id="horizontal-overflow-selected-example" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowSelected="true"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 

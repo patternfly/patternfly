@@ -1,0 +1,37 @@
+.pf-c-timestamp {
+  --pf-c-timestamp--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-timestamp--Color: var(--pf-global--Color--200);
+
+  // Help text variables for the timestamp
+  --pf-c-timestamp--m-help-text--TextDecorationLine: underline;
+  --pf-c-timestamp--m-help-text--TextDecorationStyle: dashed;
+  --pf-c-timestamp--m-help-text--TextDecorationThickness: var(--pf-global--BorderWidth--sm);
+  --pf-c-timestamp--m-help-text--TextUnderlineOffset: #{pf-size-prem(4px)};
+  --pf-c-timestamp--m-help-text--TextDecorationColor: var(--pf-global--BorderColor--200);
+  --pf-c-timestamp--m-help-text--hover--Color: var(--pf-global--Color--100);
+  --pf-c-timestamp--m-help-text--focus--Color: var(--pf-global--Color--100);
+  --pf-c-timestamp--m-help-text--hover--TextDecorationColor: var(--pf-global--Color--100);
+  --pf-c-timestamp--m-help-text--focus--TextDecorationColor: var(--pf-global--Color--100);
+
+  font-size: var(--pf-c-timestamp--FontSize);
+  color: var(--pf-c-timestamp--Color);
+
+  &.pf-m-help-text {
+    cursor: pointer;
+    text-decoration-line: var(--pf-c-timestamp--m-help-text--TextDecorationLine);
+    text-decoration-style: var(--pf-c-timestamp--m-help-text--TextDecorationStyle);
+    text-decoration-thickness: var(--pf-c-timestamp--m-help-text--TextDecorationThickness);
+    text-underline-offset: var(--pf-c-timestamp--m-help-text--TextUnderlineOffset);
+    text-decoration-color: var(--pf-c-timestamp--m-help-text--TextDecorationColor);
+
+    &:hover {
+      --pf-c-timestamp--Color: var(--pf-c-timestamp--m-help-text--hover--Color);
+      --pf-c-timestamp--m-help-text--TextDecorationColor: var(--pf-c-timestamp--m-help-text--hover--TextDecorationColor);
+    }
+
+    &:focus {
+      --pf-c-timestamp--Color: var(--pf-c-timestamp--m-help-text--focus--Color);
+      --pf-c-timestamp--m-help-text--TextDecorationColor: var(--pf-c-timestamp--m-help-text--focus--TextDecorationColor);
+    }
+  }
+}
