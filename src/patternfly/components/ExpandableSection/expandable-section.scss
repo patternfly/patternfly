@@ -50,7 +50,6 @@
   // Truncate
   --pf-c-expandable-section--m-truncate__content--LineClamp: 3;
   --pf-c-expandable-section--m-truncate__toggle--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-expandable-section--m-truncate--m-expanded__toggle-icon--Rotate: -90deg;
 
 
   &.pf-m-expanded {
@@ -99,7 +98,10 @@
 
   &.pf-m-truncate {
     --pf-c-expandable-section__toggle--MarginTop: var(--pf-c-expandable-section--m-truncate__toggle--MarginTop);
-    --pf-c-expandable-section--m-expanded__toggle-icon--Rotate: var(--pf-c-expandable-section--m-truncate--m-expanded__toggle-icon--Rotate);
+    --pf-c-expandable-section__toggle--PaddingTop: 0;
+    --pf-c-expandable-section__toggle--PaddingRight: 0;
+    --pf-c-expandable-section__toggle--PaddingBottom: 0;
+    --pf-c-expandable-section__toggle-text--MarginLeft: 0;
 
     &:not(.pf-m-expanded) .pf-c-expandable-section__content {
       // stylelint-disable

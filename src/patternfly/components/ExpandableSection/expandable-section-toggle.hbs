@@ -10,7 +10,9 @@
   {{#if expandable-section--IsDetached}}
     aria-controls="{{expandable-section--id}}-content"
   {{/if}}>
-  {{> expandable-section-toggle-icon}}
+  {{#unless expandable-section--IsTruncate}}
+    {{> expandable-section-toggle-icon}}
+  {{/unless}}
   {{#> expandable-section-toggle-text}}
     {{#if @partial-block}}
       {{> @partial-block}}
