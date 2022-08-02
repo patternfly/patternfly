@@ -635,6 +635,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   &:only-child,
   &.pf-m-static {
     position: static;
+    top: auto;
+    z-index: auto;
+    min-width: auto;
   }
 }
 

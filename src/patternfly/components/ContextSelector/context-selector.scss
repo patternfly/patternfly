@@ -302,6 +302,9 @@
   &:only-child,
   &.pf-m-static {
     position: static;
+    top: auto;
+    z-index: auto;
+    min-width: auto;
   }
 }
 
