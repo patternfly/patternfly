@@ -11,6 +11,12 @@ wrapperTag: div
 {{> page-template page-template--id="page-demo-basic"}}
 ```
 
+### Full height page
+Using the `pf-m-full-height` modifier on the page component eliminates the need to ensure that the `<html>` and `<body>` tags, and any other tags above `.pf-c-page`, have height set to 100%.
+```hbs isFullscreen
+{{> page-template page-template--id="page-demo-full-height" page-template--modifier="pf-m-full-height"}}
+```
+
 ### Sticky horizontal subnav
 ```hbs isFullscreen
 {{> page-template
