@@ -16,7 +16,13 @@ cssPrefix: pf-c-icon
 
 {{#> icon}}
   {{#> icon-content}}
-    <i class="fas fa-angle-left" aria-hidden="true"></i>
+    <i class="fas fa-angle-right" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+
+{{#> icon}}
+  {{#> icon-content}}
+    <i class="fas fa-angle-down" aria-hidden="true"></i>
   {{/icon-content}}
 {{/icon}}
 
@@ -76,6 +82,11 @@ cssPrefix: pf-c-icon
 {{#> icon}}
   {{#> icon-content icon-content--modifier="pf-m-info"}}
     <i class="fas fa-info-circle" aria-hidden="true"></i>
+  {{/icon-content}}
+{{/icon}}
+{{#> icon}}
+  {{#> icon-content icon-content--modifier="pf-m-default"}}
+    <i class="fas fa-bell" aria-hidden="true"></i>
   {{/icon-content}}
 {{/icon}}
 ```
@@ -166,7 +177,7 @@ Use the inline variation to correctly align the icon with inline text.
 
 {{#> icon icon--modifier="pf-m-md"}}
   {{#> icon-content}}
-    <i class="fas fa-check-circle" aria-hidden="true"></i>
+    <i class="fas fa-cog" aria-hidden="true"></i>
   {{/icon-content}}
   {{#> icon-progress}}
     {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
@@ -188,4 +199,5 @@ The icon element is a container used to hold a stable space for an icon or spinn
 | `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon` | Modifies the icon container to be small, medium, large, or extra large. |
 | `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon__content` | Modifies the contents to be small, medium, large, or extra large. |
 | `.pf-m-in-progress` | `.pf-c-icon` | Shows the progress element in place of the contents.  |
+| `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-default`  | `.pf-c-icon__content` | Modifies the content to use a status color.  |
 

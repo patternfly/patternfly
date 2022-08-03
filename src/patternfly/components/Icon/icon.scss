@@ -1,7 +1,3 @@
-// Component variables follow this formula:
-// --pf-c-icon__content--modifier--state--PropertyCamelCase
-
-// The value of component scoped variables is always defined by a global variable:
 .pf-c-icon {
   // Example block variable
   --pf-c-icon--Width: var(--pf-global--icon--FontSize--md);
@@ -25,6 +21,7 @@
   --pf-c-icon__content-m-warning--Color: var(--pf-global--warning-color--100);
   --pf-c-icon__content-m-success--Color: var(--pf-global--success-color--100);
   --pf-c-icon__content-m-info--Color: var(--pf-global--info-color--100);
+  --pf-c-icon__content-m-default--Color: var(--pf-global--default-color--100);
   --pf-c-icon__content--FontSize: var(--pf-global--icon--FontSize--md);
   --pf-c-icon__content-svg--VerticalAlign: -.125em;
   --pf-c-icon--m-sm--content--FontSize: var(--pf-global--icon--FontSize--sm);
@@ -39,9 +36,6 @@
   width: var(--pf-c-icon--Width);
   height: var(--pf-c-icon--Height);
   min-height: var(--pf-c-icon--Height);
-
-  // TODO: for debugging
-  // background-color: hotpink;
 
   // Size modifiers
   &.pf-m-sm {
@@ -82,7 +76,7 @@
   }
 }
 
-// TODO Element
+// Content
 .pf-c-icon__content,
 .pf-c-icon__progress {
   font-size: var(--pf-c-icon__content--FontSize);
@@ -125,8 +119,13 @@
   &.pf-m-info {
     --pf-c-icon__content--Color: var(--pf-c-icon__content-m-info--Color);
   }
+
+  &.pf-m-default {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content-m-default--Color);
+  }
 }
 
+// Progress element
 .pf-c-icon__progress {
   position: absolute;
   top: calc(50% + calc(.5 * var(--pf-c-icon__content-svg--VerticalAlign)));
