@@ -31,12 +31,6 @@ cssPrefix: pf-c-icon
     <i class="fas fa-cog" aria-hidden="true"></i>
   {{/icon-content}}
 {{/icon}}
-
-{{#> icon}}
-  {{#> icon-content}}
-    {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-md pf-c-icon__element"}}Loading...{{/spinner}}
-  {{/icon-content}}
-{{/icon}}
 ```
 ### Sizes
 ```hbs
@@ -113,34 +107,9 @@ cssPrefix: pf-c-icon
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/icon-content}}
 {{/icon}}
-<br/>
-<br/>
-<br/>
-{{#> icon icon--modifier="pf-m-xl pf-m-inline"}}
-  {{#> icon-content icon-content--modifier="pf-m-sm"}}
-    {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-sm pf-c-icon__element"}}Loading...{{/spinner}}
-  {{/icon-content}}
-{{/icon}}
-{{#> icon icon--modifier="pf-m-xl pf-m-inline"}}
-  {{#> icon-content icon-content--modifier="pf-m-md"}}
-    {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-md pf-c-icon__element"}}Loading...{{/spinner}}
-  {{/icon-content}}
-{{/icon}}
-{{#> icon icon--modifier="pf-m-xl pf-m-inline"}}
-  {{#> icon-content icon-content--modifier="pf-m-lg"}}
-    {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-lg pf-c-icon__element"}}Loading...{{/spinner}}
-  {{/icon-content}}
-{{/icon}}
-{{#> icon icon--modifier="pf-m-xl pf-m-inline"}}
-  {{#> icon-content icon-content--modifier="pf-m-xl"}}
-    {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-xl pf-c-icon__element"}}Loading...{{/spinner}}
-  {{/icon-content}}
-{{/icon}}
-
 ```
 
 ### Inline
-Use the inline variation to correctly align the icon with inline text.
 ```hbs
 {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
   {{#> icon-content}}
@@ -177,7 +146,7 @@ Use the inline variation to correctly align the icon with inline text.
 
 {{#> icon icon--modifier="pf-m-md"}}
   {{#> icon-content}}
-    <i class="fas fa-cog" aria-hidden="true"></i>
+    <i class="fas fa-check-circle" aria-hidden="true"></i>
   {{/icon-content}}
   {{#> icon-progress}}
     {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
@@ -187,17 +156,17 @@ Use the inline variation to correctly align the icon with inline text.
 
 ## Documentation
 ### Overview
-The icon element is a container used to hold a stable space for an icon or spinner, regardless of size or aspect ratio of the contents.
+The icon element is a container used to maintain a stable space for an icon or spinner, regardless of size or aspect ratio of the contents.
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-icon` | `<span>`, `<div>` | Initiates an icon container. **Required**  |
+| `.pf-c-icon` | `<span>`, `<div>` | Initiates an icon component. **Required**  |
 | `.pf-c-icon__content` | `<span>`, `<div>` | Initiates the icon content. **Required**  |
-| `.pf-c-icon__progress` | `<span>`, `<div>` | Contains the spinner for showing progress.  |
-| `.pf-m-inline` | `.pf-c-icon` | Gives proper alignment for a icon inline with text. |
+| `.pf-c-icon__progress` | `<span>`, `<div>` | Initiates a container for a progress spinner.  |
+| `.pf-m-inline` | `.pf-c-icon` | Gives proper alignment for an icon inline with text. |
 | `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon` | Modifies the icon container to be small, medium, large, or extra large. |
-| `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon__content` | Modifies the contents to be small, medium, large, or extra large. |
-| `.pf-m-in-progress` | `.pf-c-icon` | Shows the progress element in place of the contents.  |
-| `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-default`  | `.pf-c-icon__content` | Modifies the content to use a status color.  |
+| `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon__content` | Modifies the icon content to be small, medium, large, or extra large. |
+| `.pf-m-in-progress` | `.pf-c-icon` | Shows the progress element in place of the icon content.  |
+| `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-default`  | `.pf-c-icon__content` | Modifies the icon content to use a status color.  |
 
