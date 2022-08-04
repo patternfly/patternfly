@@ -224,7 +224,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-page` | `<div>` |   Declares the page component. |
-| `.pf-m-full-height` | `.pf-c-page` |   Sets the page to be full height. Eliminates the need to ensure that all tags above the `.pf-c-page` have height of 100% set. |
+| `.pf-m-full-height` | `.pf-c-page` |   Sets the page to be full height. Eliminates the need to ensure that all ancestors of `.pf-c-page` have height of 100% set. |
 | `.pf-c-page__header` | `<header>` |   Declares the page header. |
 | `.pf-c-page__header-brand` | `<div>` |   Creates a header container to nest the brand component. |
 | `.pf-c-page__header-brand-toggle` | `<div>` |   Creates a container to nest the sidebar toggle. |
