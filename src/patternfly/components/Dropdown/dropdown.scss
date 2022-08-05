@@ -632,7 +632,6 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   background-clip: padding-box;
   box-shadow: var(--pf-c-dropdown__menu--BoxShadow);
 
-  &:only-child,
   &.pf-m-static {
     position: static;
     top: auto;

@@ -299,7 +299,6 @@
   background-clip: padding-box;
   box-shadow: var(--pf-c-context-selector__menu--BoxShadow);
 
-  &:only-child,
   &.pf-m-static {
     position: static;
     top: auto;

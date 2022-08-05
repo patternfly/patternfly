@@ -485,7 +485,6 @@
     transform: translateY(var(--pf-c-select__menu--m-top--TranslateY));
   }
 
-  &:only-child,
   &.pf-m-static {
     position: static;
     top: auto;
