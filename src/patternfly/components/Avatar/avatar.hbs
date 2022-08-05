@@ -1,4 +1,12 @@
-<img class="pf-c-avatar{{#if avatar--modifier}} {{avatar--modifier}}{{/if}}"
+<img class="pf-c-avatar
+  {{~#if avatar--IsLight}} pf-m-light
+  {{~else if avatar--IsDark}} pf-m-dark{{/if}}
+  {{~#if avatar--modifier}} {{avatar--modifier}}{{/if}}"
+  alt="{{#if avatar--AltText}}{{avatar--AltText}}{{else}}Avatar image{{/if}}"
+  src="
+    {{~#if avatar--Src}}{{avatar--Src}}
+    {{~else if avatar--IsDark}}/assets/images/img_avatar-dark.svg
+    {{~else}}/assets/images/img_avatar-light.svg{{/if}}"
   {{#if avatar--attribute}}
     {{{avatar--attribute}}}
   {{/if}}> 
