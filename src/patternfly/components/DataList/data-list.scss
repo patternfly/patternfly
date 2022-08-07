@@ -257,7 +257,8 @@
       position: relative;
       z-index: var(--pf-c-data-list__item--m-selected--ZIndex);
 
-      &:hover {
+      &:hover,
+      &:focus {
         margin-bottom: var(--pf-c-data-list__item--BorderBottomWidth);
         border-bottom-width: 0;
       }
