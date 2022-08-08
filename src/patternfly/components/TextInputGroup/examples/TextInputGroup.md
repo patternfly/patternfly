@@ -82,33 +82,6 @@ import './TextInputGroup.css'
 {{/text-input-group}}
 ```
 
-### Search input group, expandable
-```hbs
-<h3>Collapsed</h3>
-<br>
-{{#> input-group input-group--modifier="pf-m-plain"}}
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
-    <i class="fas fa-fw fa-search" aria-hidden="true"></i>
-  {{/button}}
-{{/input-group}}
-<br>
-<br>
-<h3>Expanded</h3>
-<br>
-{{#> input-group input-group--modifier="pf-m-plain"}}
-  {{#> text-input-group}}
-    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-      {{#> text-input-group-text}}
-        {{> text-input-group-icon}}
-        {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="Search"'}}
-      {{/text-input-group-text}}
-    {{/text-input-group-main}}
-  {{/text-input-group}}
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-  {{/button}}
-{{/input-group}}
-```
 ### Autocomplete last option hint
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-autocomplete-last-option-hint" text-input-group--value="apples"}}
@@ -191,6 +164,34 @@ import './TextInputGroup.css'
     {{/button}}
   {{/text-input-group-utilities}}
 {{/text-input-group}}
+```
+
+### Search input group, expandable
+```hbs
+<h3>Collapsed</h3>
+<br>
+{{#> input-group input-group--modifier="pf-m-plain"}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
+    <i class="fas fa-fw fa-search" aria-hidden="true"></i>
+  {{/button}}
+{{/input-group}}
+<br>
+<br>
+<h3>Expanded</h3>
+<br>
+{{#> input-group input-group--modifier="pf-m-plain"}}
+  {{#> text-input-group}}
+    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+      {{#> text-input-group-text}}
+        {{> text-input-group-icon}}
+        {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="Search"'}}
+      {{/text-input-group-text}}
+    {{/text-input-group-main}}
+  {{/text-input-group}}
+  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+    <i class="fas fa-times" aria-hidden="true"></i>
+  {{/button}}
+{{/input-group}}
 ```
 
 ### Search input group, with submit button

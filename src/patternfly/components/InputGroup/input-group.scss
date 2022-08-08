@@ -28,7 +28,7 @@
   background-color: var(--pf-c-input-group--BackgroundColor);
 
   &.pf-m-plain {
-    --pf-c-input-group--BackgroundColor: transparent;
+    --pf-c-input-group--BackgroundColor: transparent; // update at breaking change
   }
 
   // stylelint-disable
