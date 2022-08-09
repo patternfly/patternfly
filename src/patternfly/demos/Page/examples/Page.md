@@ -116,4 +116,4 @@ Using the `.pf-m-full-height` modifier class on the page component eliminates th
 ```
 
 ## Documentation
-To make the page component take up the full height of the viewport, it is recommended to add `height: 100%;` to all ancestor elements of the page component. Alternatively, use the `.pf-m-full-height` modifier class on the page component.
+To make the page component fill the full height of the viewport, it is recommended to add `height: 100%;` to all ancestor elements of the page component. Alternatively, use the `.pf-m-full-height` modifier class on the page component.
