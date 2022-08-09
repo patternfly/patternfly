@@ -15,9 +15,9 @@ cssPrefix: pf-c-check
 
 ### Required
 ```hbs
-{{#> check}}
+{{#> check check--IsRequired="true"}}
   {{#> check-input check-input--attribute='id="check-required" name="check-required"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check-required"' required="true"}}Check{{/check-label}}
+  {{#> check-label check-label--attribute='for="check-required"'}}Check{{/check-label}}
 {{/check}}
 ```
 
@@ -109,8 +109,8 @@ If you extend this component or modify the styles of this component, then make s
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `disabled` | `<input type="checkbox">` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
-| `required` | `<input type="checkbox">` | Indicates that the element is required. |
+| `disabled` | `.pf-c-check__input` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
+| `required` | `.pf-c-check__input` | Indicates that the element is required. |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -123,5 +123,3 @@ If you extend this component or modify the styles of this component, then make s
 | `.pf-c-check__body` | `<span>` |  Initiates a check body. |
 | `.pf-m-standalone` | `.pf-c-check` |  Modifies the check component for use with a standalone `<input type="checkbox">`. **Required when there is no label** |
 | `.pf-m-disabled` | `.pf-c-check__label` |  Modifies the check component for the disabled state. **Required when input is disabled** |
-
-

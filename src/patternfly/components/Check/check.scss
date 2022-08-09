@@ -12,9 +12,9 @@
   --pf-c-check__body--MarginTop: var(--pf-global--spacer--sm);
 
   // Required checkbox
-  --pf-c-form__label-required--MarginLeft: var(--pf-global--spacer--xs);
-  --pf-c-form__label-required--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-form__label-required--Color: var(--pf-global--danger-color--100);
+  --pf-c-check__label-required--MarginLeft: var(--pf-global--spacer--xs);
+  --pf-c-check__label-required--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-check__label-required--Color: var(--pf-global--danger-color--100);
 
   display: grid;
   grid-template-columns: auto 1fr;
@@ -71,7 +71,7 @@
 }
 
 .pf-c-check__label-required {
-  margin-left: var(--pf-c-form__label-required--MarginLeft);
-  font-size: var(--pf-c-form__label-required--FontSize);
-  color: var(--pf-c-form__label-required--Color);
+  margin-left: var(--pf-c-check__label-required--MarginLeft);
+  font-size: var(--pf-c-check__label-required--FontSize);
+  color: var(--pf-c-check__label-required--Color);
 }
