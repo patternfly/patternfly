@@ -192,6 +192,13 @@
   --pf-c-button--m-in-progress--m-plain__progress--Left: 50%;
   --pf-c-button--m-in-progress--m-plain__progress--TranslateX: -50%;
 
+  // Count
+  --pf-c-button__count--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-button--disabled__c-badge--Color: var(--pf-global--Color--dark-100);
+  --pf-c-button--disabled__c-badge--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-button--m-primary__c-badge--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-button--m-primary__c-badge--BorderWidth: var(--pf-global--BorderWidth--sm); // used only for primary, unread, not disabled
+
   position: relative;
   display: inline-block;
   padding: var(--pf-c-button--PaddingTop) var(--pf-c-button--PaddingRight) var(--pf-c-button--PaddingBottom) var(--pf-c-button--PaddingLeft);
@@ -273,6 +280,10 @@
     &.pf-m-active {
       --pf-c-button--m-primary--Color: var(--pf-c-button--m-primary--active--Color);
       --pf-c-button--m-primary--BackgroundColor: var(--pf-c-button--m-primary--active--BackgroundColor);
+    }
+
+    &:not(:disabled):not(.pf-m-disabled) .pf-c-badge.pf-m-unread {
+      border: var(--pf-c-button--m-primary__c-badge--BorderWidth) solid var(--pf-c-button--m-primary__c-badge--BorderColor);
     }
   }
 
@@ -564,6 +575,11 @@
 
     color: var(--pf-c-button--disabled--Color);
     background-color: var(--pf-c-button--disabled--BackgroundColor);
+
+    & .pf-c-badge {
+      --pf-c-badge--m-unread--Color: var(--pf-c-button--disabled__c-badge--Color);
+      --pf-c-badge--m-unread--BackgroundColor: var(--pf-c-button--disabled__c-badge--BackgroundColor);
+    }
   }
 
   &.pf-m-aria-disabled {
@@ -618,6 +634,12 @@
   .pf-c-spinner {
     --pf-c-spinner--Color: currentcolor;
   }
+}
+
+.pf-c-button__count {
+  display: inline-flex;
+  align-items: center;
+  margin-left: var(--pf-c-button__count--MarginLeft);
 }
 
 // RedHat Font overrides
