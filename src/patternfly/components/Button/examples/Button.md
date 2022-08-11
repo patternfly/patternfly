@@ -352,12 +352,19 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 {{#> button button--modifier="pf-m-link" button--attribute='aria-label="View 7 issues"'}}
   View issues
   {{#> button-count}}
+    {{#> badge badge--modifier="pf-m-unread"}}
+      7
+    {{/badge}}
+  {{/button-count}}
+{{/button}}
+{{#> button button--modifier="pf-m-link" button--attribute='aria-label="View 7 issues"'}}
+  View issues
+  {{#> button-count}}
     {{#> badge badge--modifier="pf-m-read"}}
       7
     {{/badge}}
   {{/button-count}}
 {{/button}}
-
 ```
 
 ## Documentation
