@@ -282,7 +282,7 @@
       --pf-c-button--m-primary--BackgroundColor: var(--pf-c-button--m-primary--active--BackgroundColor);
     }
 
-    &:not(:disabled):not(.pf-m-disabled) .pf-c-badge.pf-m-unread {
+    .pf-c-badge.pf-m-unread {
       border: var(--pf-c-button--m-primary__c-badge--BorderWidth) solid var(--pf-c-button--m-primary__c-badge--BorderColor);
     }
   }
@@ -576,9 +576,10 @@
     color: var(--pf-c-button--disabled--Color);
     background-color: var(--pf-c-button--disabled--BackgroundColor);
 
-    & .pf-c-badge {
+    .pf-c-badge {
       --pf-c-badge--m-unread--Color: var(--pf-c-button--disabled__c-badge--Color);
       --pf-c-badge--m-unread--BackgroundColor: var(--pf-c-button--disabled__c-badge--BackgroundColor);
+      --pf-c-button--m-primary__c-badge--BorderWidth: 0;
     }
   }
 

@@ -348,7 +348,7 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 ```
 
 ### Link button with a count
-```hbs
+```hbs isBeta
 {{#> button button--modifier="pf-m-link" button--attribute='aria-label="View 7 issues"'}}
   View issues
   {{#> button-count}}
