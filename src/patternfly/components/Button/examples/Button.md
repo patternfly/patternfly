@@ -386,7 +386,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
 | `.pf-c-button__icon` | `<span>` | Initiates a button icon. |
 | `.pf-c-button__progress` | `<span>` | Initiates a button progress container. |
-| `.pf-c-button__count` | `<span>` | Initiates a button count container. |
+| `.pf-c-button__count` | `<span>` | Initiates a button count container. **Note:** Count should only be used on link buttons.|
 | `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |
