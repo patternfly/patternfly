@@ -158,6 +158,8 @@ cssPrefix: pf-c-icon
 ### Overview
 The icon element is a container used to maintain a stable space for an icon or spinner, regardless of size or aspect ratio of the contents.
 
+Refer to the [Icons](/guidelines/icons) page for information about the Patternfly icon set and guidelines for use.
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
