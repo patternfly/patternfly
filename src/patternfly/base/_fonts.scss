@@ -153,7 +153,7 @@
   font-display: fallback;
 }
 
-
+// remove in breaking change
 @if $pf-global--enable-font-overpass-cdn {
   // stylelint-disable no-invalid-position-at-import-rule
   @import url("https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono");
