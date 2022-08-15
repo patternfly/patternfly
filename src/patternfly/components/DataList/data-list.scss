@@ -27,8 +27,6 @@
   --pf-c-data-list__item--m-expanded--m-selectable--before--BackgroundColor: var(--pf-global--active-color--300);
   --pf-c-data-list__item--BorderBottomColor: var(--pf-global--BorderColor--300);
   --pf-c-data-list__item--BorderBottomWidth: #{pf-size-prem(8px)};
-  --pf-c-data-list__item--m-selectable--hover--item--BorderTopColor: var(--pf-c-data-list__item--BorderBottomColor);
-  --pf-c-data-list__item--m-selectable--hover--item--BorderTopWidth: var(--pf-c-data-list__item--BorderBottomWidth);
   --pf-c-data-list__item--sm--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-data-list__item--sm--BorderBottomColor: var(--pf-global--BorderColor--100);
 
@@ -238,13 +236,21 @@
 
   &::before {
     position: absolute;
-    top: var(--pf-c-data-list__item--before--Top);
+    top: 0;
     bottom: 0;
     left: 0;
     width: var(--pf-c-data-list__item--before--Width);
     content: "";
     background-color: var(--pf-c-data-list__item--before--BackgroundColor);
     transition: var(--pf-c-data-list__item--before--Transition);
+  }
+
+  &:first-of-type::before {
+    top: var(--pf-c-data-list__item--before--Top);
+  }
+
+  &:last-of-type::before {
+    bottom: var(--pf-c-data-list__item--before--Top);
   }
 
   &.pf-m-selectable {
@@ -256,28 +262,12 @@
 
       position: relative;
       z-index: var(--pf-c-data-list__item--m-selected--ZIndex);
-
-      &:hover,
-      &:focus {
-        margin-bottom: var(--pf-c-data-list__item--BorderBottomWidth);
-        border-bottom-width: 0;
-      }
     }
 
     &:hover,
     &:focus {
       position: relative;
       z-index: var(--pf-c-data-list__item--m-selectable--hover--ZIndex);
-
-      &:not(.pf-m-selected):not(:last-child) {
-        --pf-c-data-list__item--BorderBottomWidth: 0;
-
-        // stylelint-disable
-        + .pf-c-data-list__item {
-          border-top: var(--pf-c-data-list__item--m-selectable--hover--item--BorderTopWidth) solid var(--pf-c-data-list__item--m-selectable--hover--item--BorderTopColor);
-        }
-        // stylelint-enable
-      }
     }
 
     &:hover {
