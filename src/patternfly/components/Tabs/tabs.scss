@@ -32,8 +32,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical__item--MarginBottom: var(--pf-c-tabs--inset);
 
   // Vertical, expandable
-  --pf-c-tabs--m-vertical--m-expandable--border--Left: var(--pf-global--spacer--md);
-  --pf-c-tabs--m-vertical--m-expandable--border--Left: var(--pf-global--spacer--md);
+  --pf-c-tabs--m-vertical--m-expandable--before--Left: var(--pf-global--spacer--md);
 
   // Vertical, non-expandable
   --pf-c-tabs--m-vertical--m-non-expandable--border--Left: 0;
@@ -50,6 +49,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // List
   --pf-c-tabs__list--Display: flex;
   --pf-c-tabs__list--Visibility: visible;
+  --pf-c-tabs__list--before--Left: 0;
 
   // Item
   --pf-c-tabs__item--m-action--before--ZIndex: var(--pf-global--ZIndex--xs);
@@ -400,17 +400,18 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   &.pf-m-vertical.pf-m-expandable {
     --pf-c-tabs__link--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--sm));
     --pf-c-tabs__link--before--BorderRightColor: transparent;
+    --pf-c-tabs__list--before--Left: var(--pf-c-tabs--m-vertical--m-expandable--before--Left);
 
     .pf-c-tabs__list::before,
     .pf-c-tabs__link::after,
     .pf-c-tabs__item.pf-m-action .pf-c-tabs__link::after {
-      left: var(--pf-c-tabs--m-vertical--m-expandable--border--Left);
+      left: var(--pf-c-tabs--m-vertical--m-expandable--before--Left);
     }
 
     &.pf-m-box {
       --pf-c-tabs--m-vertical__item--MarginTop: 0;
       --pf-c-tabs--m-vertical__item--MarginBottom: 0;
-      --pf-c-tabs--m-vertical--m-expandable--border--Left: var(--pf-c-tabs__link--before--Left); // reset left border for box variant
+      --pf-c-tabs--m-vertical--m-expandable--before--Left: var(--pf-c-tabs__link--before--Left); // reset left border for box variant
     }
 
     .pf-c-tabs__toggle {
@@ -438,7 +439,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
       &.pf-m-vertical.pf-m-non-expandable#{$breakpoint-name} {
         --pf-c-tabs__link--PaddingLeft: var(--pf-c-tabs__link--PaddingLeft--base);
-        --pf-c-tabs--m-vertical--m-expandable--border--Left: var(--pf-c-tabs--m-vertical--m-non-expandable--border--Left);
+        --pf-c-tabs--m-vertical--m-expandable--before--Left: var(--pf-c-tabs--m-vertical--m-non-expandable--border--Left);
         --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs__link--before--border-color--base);
         --pf-c-tabs--m-expandable__toggle--MarginTop: 0;
 
@@ -631,7 +632,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 }
 
 .pf-c-tabs__list::before {
-  left: var(--pf-c-tabs--m-vertical--m-expandable--border--Left);
+  left: var(--pf-c-tabs__list--before--Left);
 }
 
 // Tab link
