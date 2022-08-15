@@ -32,6 +32,7 @@ cssPrefix: pf-c-icon
   {{/icon-content}}
 {{/icon}}
 ```
+
 ### Sizes
 ```hbs
 {{#> icon icon--modifier="pf-m-sm"}}
@@ -158,7 +159,7 @@ cssPrefix: pf-c-icon
 ### Overview
 The icon element is a container used to maintain a stable space for an icon or spinner, regardless of size or aspect ratio of the contents.
 
-Refer to the [Icons](/guidelines/icons) page for information about the Patternfly icon set and guidelines for use.
+Refer to the [icons](/guidelines/icons) page for information about the PatternFly icon set and guidelines for use.
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -171,4 +172,3 @@ Refer to the [Icons](/guidelines/icons) page for information about the Patternfl
 | `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon__content` | Modifies the icon content to be small, medium, large, or extra large. |
 | `.pf-m-in-progress` | `.pf-c-icon` | Shows the progress element in place of the icon content.  |
 | `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-default`  | `.pf-c-icon__content` | Modifies the icon content to use a status color.  |
-

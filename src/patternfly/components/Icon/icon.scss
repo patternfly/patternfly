@@ -1,5 +1,5 @@
 .pf-c-icon {
-  // Example block variable
+  // Default size
   --pf-c-icon--Width: var(--pf-global--icon--FontSize--md);
   --pf-c-icon--Height: var(--pf-global--icon--FontSize--md);
 
@@ -16,12 +16,12 @@
   // Content variables
   --pf-c-icon__content--Color: var(--pf-global--icon--Color--dark);
 
-  // Content status TODO: do we want to do this?
-  --pf-c-icon__content-m-danger--Color: var(--pf-global--danger-color--100);
-  --pf-c-icon__content-m-warning--Color: var(--pf-global--warning-color--100);
-  --pf-c-icon__content-m-success--Color: var(--pf-global--success-color--100);
-  --pf-c-icon__content-m-info--Color: var(--pf-global--info-color--100);
-  --pf-c-icon__content-m-default--Color: var(--pf-global--default-color--100);
+  // Content status
+  --pf-c-icon__content--m-danger--Color: var(--pf-global--danger-color--100);
+  --pf-c-icon__content--m-warning--Color: var(--pf-global--warning-color--100);
+  --pf-c-icon__content--m-success--Color: var(--pf-global--success-color--100);
+  --pf-c-icon__content--m-info--Color: var(--pf-global--info-color--100);
+  --pf-c-icon__content--m-default--Color: var(--pf-global--default-color--100);
   --pf-c-icon__content--FontSize: var(--pf-global--icon--FontSize--md);
   --pf-c-icon__content-svg--VerticalAlign: -.125em;
   --pf-c-icon--m-sm--content--FontSize: var(--pf-global--icon--FontSize--sm);
@@ -35,7 +35,6 @@
   justify-content: center;
   width: var(--pf-c-icon--Width);
   height: var(--pf-c-icon--Height);
-  min-height: var(--pf-c-icon--Height);
 
   // Size modifiers
   &.pf-m-sm {
@@ -67,12 +66,13 @@
     vertical-align: middle;
   }
 
-  &.pf-m-in-progress > .pf-c-icon__progress {
-    opacity: 1;
+  > * {
+    opacity: var(--pf-c-icon__child--Opacity, 1);
   }
 
-  &.pf-m-in-progress > :not(.pf-c-icon__progress) {
-    opacity: 0;
+  &.pf-m-in-progress {
+    --pf-c-icon__child--Opacity: 0;
+    --pf-c-icon__progress--Opacity: 1;
   }
 }
 
@@ -82,7 +82,7 @@
   font-size: var(--pf-c-icon__content--FontSize);
   color: var(--pf-c-icon__content--Color);
 
-  & > svg {
+  svg {
     vertical-align: var(--pf-c-icon__content-svg--VerticalAlign);
   }
 
@@ -105,23 +105,23 @@
 
   // Status modifiers
   &.pf-m-danger {
-    --pf-c-icon__content--Color: var(--pf-c-icon__content-m-danger--Color);
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-danger--Color);
   }
 
   &.pf-m-warning {
-    --pf-c-icon__content--Color: var(--pf-c-icon__content-m-warning--Color);
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-warning--Color);
   }
 
   &.pf-m-success {
-    --pf-c-icon__content--Color: var(--pf-c-icon__content-m-success--Color);
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-success--Color);
   }
 
   &.pf-m-info {
-    --pf-c-icon__content--Color: var(--pf-c-icon__content-m-info--Color);
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-info--Color);
   }
 
   &.pf-m-default {
-    --pf-c-icon__content--Color: var(--pf-c-icon__content-m-default--Color);
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-default--Color);
   }
 }
 
@@ -129,6 +129,6 @@
 .pf-c-icon__progress {
   position: absolute;
   top: calc(50% + calc(.5 * var(--pf-c-icon__content-svg--VerticalAlign)));
-  opacity: 0;
+  opacity: var(--pf-c-icon__progress--Opacity, 0);
   transform: translateX(0) translateY(calc(-50% - calc(.5 * var(--pf-c-icon__content-svg--VerticalAlign))));
 }
