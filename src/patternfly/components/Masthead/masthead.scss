@@ -243,6 +243,10 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   .pf-c-nav {
     align-self: stretch;
   }
+
+  .pf-c-button.pf-m-plain {
+    @include pf-t-dark(--pf-global--Color--200); // for all plain buttons, especially inside other components (.pf-c-input-group), for dark mode
+  }
 }
 
 // Main

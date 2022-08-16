@@ -20,6 +20,19 @@ hbsInstance.registerHelper('concat', (...params) => {
   return params.join('');
 });
 
+hbsInstance.registerHelper('ifEquals', (arg1, arg2, options) => {
+  return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
+});
+
+// Using ifEquals else if with helpers
+// {{#ifEquals toolbar-toggle--IsExpanded "false"}}
+//   false
+// {{else ifEquals toolbar-toggle--IsExpanded "true"}}
+//   true
+// {{else}}
+//   something else
+// {{/ifEquals}}
+
 function compileHBS0(srcFiles) {
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {

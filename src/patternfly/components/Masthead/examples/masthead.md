@@ -30,15 +30,16 @@ cssPrefix: pf-c-masthead
   {{/masthead-main}}
   {{#> masthead-content}}
     {{#> l-flex}}
-      <span>Testing text color</span>
+      <span>Content</span>
       {{#> button button--modifier="pf-m-primary"}}
-        testing
+        Primary
       {{/button}}
-      {{#> l-flex-item l-flex-item--modifier="pf-m-align-flex-end"}}
-        {{#> button button--modifier="pf-m-primary"}}
-          testing
-        {{/button}}
-      {{/l-flex-item}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Secondary
+      {{/button}}
+      {{#> button button--modifier="pf-m-tertiary"}}
+        Tertiary
+      {{/button}}
     {{/l-flex}}
   {{/masthead-content}}
 {{/masthead}}
@@ -85,7 +86,7 @@ cssPrefix: pf-c-masthead
 
 ### Light variant
 ```hbs
-{{#> masthead masthead--id="light-masthead" masthead--modifier="pf-m-light"}}
+{{#> masthead masthead--id="light-masthead" masthead--ColorVariant="light"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
     {{#> masthead-brand}}
@@ -98,7 +99,7 @@ cssPrefix: pf-c-masthead
 
 ### Light 200 variant
 ```hbs
-{{#> masthead masthead--id="light-200-masthead" masthead--modifier="pf-m-light-200"}}
+{{#> masthead masthead--id="light-200-masthead" masthead--ColorVariant="light-200"}}
   {{> masthead-toggle}}
   {{#> masthead-main}}
     {{#> masthead-brand}}

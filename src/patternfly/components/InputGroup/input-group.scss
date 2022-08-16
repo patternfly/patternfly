@@ -27,6 +27,10 @@
   width: 100%;
   background-color: var(--pf-c-input-group--BackgroundColor);
 
+  &.pf-m-plain {
+    --pf-c-input-group--BackgroundColor: transparent; // make default at breaking change
+  }
+
   // stylelint-disable
   > * + * {
     margin-left: -1px;
