@@ -1441,14 +1441,14 @@
     victory-voronoi-container "^36.2.1"
     victory-zoom-container "^36.2.1"
 
-"@patternfly/react-code-editor@4.65.1":
-  version "4.65.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-4.65.1.tgz#c2b80eceea3935c7137868279e6be620e4ae66cb"
-  integrity sha512-8reey1Bfyt2PVH0GbSBoTCvSpoXGsqqjlQ5b1jUAN0wC7b4sg+D+YyhHs4wS//oUdJovki4Hk1+ujkV6kHfWcQ==
+"@patternfly/react-code-editor@4.72.8":
+  version "4.72.8"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-4.72.8.tgz#1e2c1f80efce8a6f014bd0dfcb108011b10110e8"
+  integrity sha512-kDy3hU4/WyQJ30LRr3MGCrql8wpZN55ZRrjMihjWCpCA37EVjukKB5Jtyi8Ip4DyPuiL1z1j3jrV+Bza1LmxHg==
   dependencies:
-    "@patternfly/react-core" "^4.224.1"
-    "@patternfly/react-icons" "^4.75.1"
-    "@patternfly/react-styles" "^4.74.1"
+    "@patternfly/react-core" "^4.231.8"
+    "@patternfly/react-icons" "^4.82.8"
+    "@patternfly/react-styles" "^4.81.8"
     react-dropzone "9.0.0"
     tslib "^2.0.0"
 
@@ -1465,10 +1465,28 @@
     tippy.js "5.1.2"
     tslib "^2.0.0"
 
+"@patternfly/react-core@^4.231.8":
+  version "4.231.8"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-4.231.8.tgz#2f9de38ecdd2fc53c63aff55433984fcf93a5fe6"
+  integrity sha512-2ClqlYCvSADppMfVfkUGIA/8XlO6jX8batoClXLxZDwqGoOfr61XyUgQ6SSlE4w60czoNeX4Nf6cfQKUH4RIKw==
+  dependencies:
+    "@patternfly/react-icons" "^4.82.8"
+    "@patternfly/react-styles" "^4.81.8"
+    "@patternfly/react-tokens" "^4.83.8"
+    focus-trap "6.9.2"
+    react-dropzone "9.0.0"
+    tippy.js "5.1.2"
+    tslib "^2.0.0"
+
 "@patternfly/react-icons@^4.75.1":
   version "4.75.1"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.75.1.tgz#3567b5a21a7f52c6a272f0330357fac87083867a"
   integrity sha512-1ly8SVi/kcc0zkiViOjUd8D5BEr7GeqWGmDPuDSBtD60l1dYf3hZc44IWFVkRM/oHZML/musdrJkLfh4MDqX9w==
+
+"@patternfly/react-icons@^4.82.8":
+  version "4.82.8"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-4.82.8.tgz#59ab1a139d3fc586fd384a58816e4608a060ee32"
+  integrity sha512-cKixprTiMLZRe/+kmdZ5suvYb9ly9p1f/HjlcNiWBfsiA8ZDEPmxJnVdend/YsafelC8YC9QGcQf97ay5PNhcw==
 
 "@patternfly/react-styles@^4.74.1":
   version "4.74.1"
