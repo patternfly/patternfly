@@ -3,4 +3,7 @@
     {{{check-label--attribute}}}
   {{/if}}>
   {{> @partial-block}}
+  {{#if check--IsRequired}} 
+    {{> check-label-required}}
+  {{/if}}
 </{{#if check-label--type}}{{check-label--type}}{{else}}label{{/if}}>
