@@ -1,8 +1,14 @@
 <div class="pf-c-expandable-section__content{{#if expandable-section-content--modifier}} {{expandable-section-content--modifier}}{{/if}}"
-  {{#unless expandable-section--IsExpanded}}hidden{{/unless}}
+  {{#unless expandable-section--IsTruncate}}
+    {{#unless expandable-section--IsExpanded}}
+      hidden
+    {{/unless}}
+  {{/unless}}
   {{#if expandable-section--IsDetached}}
     id="{{expandable-section--id}}-content"
   {{/if}}
   {{#if expandable-section-content--attribute}}
     {{{expandable-section-content--attribute}}}
-  {{/if}}>{{> @partial-block}}</div>
+  {{/if}}>
+  {{> @partial-block}}
+</div>

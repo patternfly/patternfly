@@ -4,6 +4,7 @@
   --pf-c-expandable-section__toggle--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-expandable-section__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-expandable-section__toggle--PaddingLeft: 0;
+  --pf-c-expandable-section__toggle--MarginTop: 0;
   --pf-c-expandable-section__toggle--Color: var(--pf-global--link--Color);
   --pf-c-expandable-section__toggle--hover--Color: var(--pf-global--link--Color--hover);
   --pf-c-expandable-section__toggle--active--Color: var(--pf-global--link--Color--hover);
@@ -46,6 +47,10 @@
   // Indented
   --pf-c-expandable-section--m-indented__content--PaddingLeft: calc(var(--pf-c-expandable-section__toggle-text--MarginLeft) + var(--pf-c-expandable-section__toggle-icon--MinWidth));
 
+  // Truncate
+  --pf-c-expandable-section--m-truncate__content--LineClamp: 3;
+  --pf-c-expandable-section--m-truncate__toggle--MarginTop: var(--pf-global--spacer--xs);
+
 
   &.pf-m-expanded {
     --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--m-expanded--Color);
@@ -54,7 +59,8 @@
     --pf-c-expandable-section--m-display-lg--after--BackgroundColor: var(--pf-c-expandable-section--m-display-lg--m-expanded--after--BackgroundColor);
   }
 
-  &.pf-m-detached {
+  &.pf-m-detached,
+  &.pf-m-truncate {
     --pf-c-expandable-section__content--MarginTop: 0;
   }
 
@@ -89,11 +95,29 @@
   &.pf-m-indented {
     --pf-c-expandable-section__content--PaddingLeft: var(--pf-c-expandable-section--m-indented__content--PaddingLeft);
   }
+
+  &.pf-m-truncate {
+    --pf-c-expandable-section__toggle--MarginTop: var(--pf-c-expandable-section--m-truncate__toggle--MarginTop);
+    --pf-c-expandable-section__toggle--PaddingTop: 0;
+    --pf-c-expandable-section__toggle--PaddingRight: 0;
+    --pf-c-expandable-section__toggle--PaddingBottom: 0;
+    --pf-c-expandable-section__toggle-text--MarginLeft: 0;
+
+    &:not(.pf-m-expanded) .pf-c-expandable-section__content {
+      // stylelint-disable
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: var(--pf-c-expandable-section--m-truncate__content--LineClamp);
+      // stylelint-enable
+      overflow: hidden;
+    }
+  }
 }
 
 .pf-c-expandable-section__toggle {
   display: flex;
   padding: var(--pf-c-expandable-section__toggle--PaddingTop) var(--pf-c-expandable-section__toggle--PaddingRight) var(--pf-c-expandable-section__toggle--PaddingBottom) var(--pf-c-expandable-section__toggle--PaddingLeft);
+  margin-top: var(--pf-c-expandable-section__toggle--MarginTop);
   color: var(--pf-c-expandable-section__toggle--Color);
   border: none;
 
