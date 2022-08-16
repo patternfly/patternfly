@@ -490,7 +490,7 @@ import './MenuToggle.css'
 ```hbs
 {{#> menu-toggle}}
   {{#> menu-toggle-icon}}
-    {{> avatar avatar--modifier="pf-m-light" avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image light"'}}
+    {{> avatar}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -504,7 +504,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsExpanded="true"}}
   {{#> menu-toggle-icon}}
-    {{> avatar avatar--modifier="pf-m-light" avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image light"'}}
+    {{> avatar}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
@@ -518,7 +518,7 @@ import './MenuToggle.css'
 
 {{#> menu-toggle menu-toggle--IsDisabled="true"}}
   {{#> menu-toggle-icon}}
-    {{> avatar avatar--modifier="pf-m-light" avatar--attribute='src="/assets/images/img_avatar-light.svg" alt="Avatar image light"'}}
+    {{> avatar}}
   {{/menu-toggle-icon}}
   {{#> menu-toggle-text}}
     Ned Username
