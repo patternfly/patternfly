@@ -182,8 +182,6 @@
   --pf-c-menu__footer--BoxShadow: none;
   --pf-c-menu__footer--after--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-menu__footer--after--BorderTopColor: var(--pf-global--BorderColor--100);
-  --pf-c-menu__footer--after--BorderBottomWidth: 0;
-  --pf-c-menu__footer--after--BorderBottomColor: var(--pf-global--BorderColor--100);
   --pf-c-menu--m-scrollable__footer--BoxShadow: var(--pf-global--BoxShadow--sm-top);
   --pf-c-menu--m-scrollable__footer--after--BorderTopWidth: 0;
   --pf-c-menu--m-scrollable__footer--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
@@ -334,7 +332,6 @@
     --pf-c-menu__content--MaxHeight: var(--pf-c-menu--m-scrollable__content--MaxHeight);
     --pf-c-menu__footer--BoxShadow: var(--pf-c-menu--m-scrollable__footer--BoxShadow);
     --pf-c-menu__footer--after--BorderTopWidth: var(--pf-c-menu--m-scrollable__footer--after--BorderTopWidth);
-    --pf-c-menu__footer--after--BorderBottomWidth: var(--pf-c-menu--m-scrollable__footer--after--BorderBottomWidth);
 
     .pf-c-menu__content {
       overflow-y: auto;
@@ -738,7 +735,6 @@
     pointer-events: none;
     content: "";
     border-top: var(--pf-c-menu__footer--after--BorderTopWidth) solid var(--pf-c-menu__footer--after--BorderTopColor);
-    border-bottom: var(--pf-c-menu__footer--after--BorderBottomWidth) solid var(--pf-c-menu__footer--after--BorderBottomColor);
   }
 }
 
