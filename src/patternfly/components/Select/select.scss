@@ -484,6 +484,13 @@
     top: 0;
     transform: translateY(var(--pf-c-select__menu--m-top--TranslateY));
   }
+
+  &.pf-m-static {
+    position: static;
+    top: auto;
+    z-index: auto;
+    min-width: min-content;
+  }
 }
 
 .pf-c-select__menu-fieldset {
