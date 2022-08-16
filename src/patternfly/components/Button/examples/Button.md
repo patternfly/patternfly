@@ -347,6 +347,26 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 {{/button}}
 ```
 
+### Link button with a count
+```hbs isBeta
+{{#> button button--modifier="pf-m-link" button--attribute='aria-label="View 7 issues"'}}
+  View issues
+  {{#> button-count}}
+    {{#> badge badge--modifier="pf-m-unread"}}
+      7
+    {{/badge}}
+  {{/button-count}}
+{{/button}}
+{{#> button button--modifier="pf-m-link" button--attribute='aria-label="View 7 issues"'}}
+  View issues
+  {{#> button-count}}
+    {{#> badge badge--modifier="pf-m-read"}}
+      7
+    {{/badge}}
+  {{/button-count}}
+{{/button}}
+```
+
 ## Documentation
 ### Overview
 Always add a modifier class to add color to the button.
@@ -373,6 +393,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
 | `.pf-c-button__icon` | `<span>` | Initiates a button icon. |
 | `.pf-c-button__progress` | `<span>` | Initiates a button progress container. |
+| `.pf-c-button__count` | `<span>` | Initiates a button count container. **Note:** Count should only be used on link buttons.|
 | `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
 | `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |
