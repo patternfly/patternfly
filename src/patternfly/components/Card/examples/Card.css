@@ -1,7 +1,7 @@
-#ws-core-c-card-full-height-card {
+#ws-core-c-card-full-height-card .ws-preview-html {
   height: 300px;
 }
 
-#ws-core-c-card-full-height-card .ws-preview-html {
-  height: 100%;
+#card-body-fill-example {
+  min-height: 30em;
 }
