@@ -1,4 +1,5 @@
 // Set common reset styles for patternfly components
+// remove in breaking change. this should come from globals, and can be opted out
 [class*="pf-c-"] {
   &,
   &::before,
@@ -9,13 +10,14 @@
   }
 }
 
+// remove in breaking change
 @if $pf-global--unset-root-font-size {
   // Since PF3 sets root font size to 10px, we need to unset it.
   // This doesn't affect PF3.
   // https://github.com/twbs/bootstrap/blob/v3.4.0/less/scaffolding.less#L23
   // stylelint-disable
   html {
-    font-size: unset !important; // the important is needed because we don't know if pf3 will be loaded after pfnext
+    font-size: var(--pf-global--root--FontSize, unset) !important; // the important is needed because we don't know if pf3 will be loaded after pfnext
   }
   // stylelint-enable
 }
