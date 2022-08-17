@@ -228,7 +228,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="' data-list--id '-primary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Expandable primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -255,7 +255,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="' data-list--id '-secondary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Expandable secondary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -285,7 +285,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="' data-list--id '-tertiary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Expandable tertiary content details"')}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
         This expanded section has no padding.
       {{/data-list-expandable-content-body}}
@@ -321,7 +321,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="' data-list--id '-primary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Expandable compact primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -349,7 +349,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="' data-list--id '-secondary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Expandable compact secondary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -377,7 +377,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="' data-list--id '-tertiary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Expandable compact tertiary content details"')}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
         This expanded section has no padding.
       {{/data-list-expandable-content-body}}
@@ -411,7 +411,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="' data-list--id '-primary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Expandable nested primary content details"')}}
       {{#> data-list-expandable-content-body}}
         {{#> data-list data-list--id="data-list-expandable-nested-nested" data-list--attribute='aria-label="Expandable nested nested data list example"'}}
           {{#> data-list-item newcontext data-list--id=data-list--id data-list-item--id="item-1" data-list-item--expanded="true"}}
@@ -492,7 +492,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="' data-list--id '-secondary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Expandable nested secondary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -522,7 +522,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="' data-list--id '-tertiary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Expandable nested tertiary content details"')}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
         This expanded section has no padding.
       {{/data-list-expandable-content-body}}
@@ -734,7 +734,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-content}}
       {{> data-list-item-action}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="' data-list--id '-primary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Flex modifier expandable primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -812,7 +812,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="' data-list--id '-primary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Selectable expandable row primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -830,7 +830,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="' data-list--id '-secondary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Selectable expandable row secondary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -848,7 +848,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="' data-list--id '-tertiary-content-details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Selectable expandable row tertiary content details"')}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
         This expanded section has no padding.
       {{/data-list-expandable-content-body}}
@@ -867,7 +867,7 @@ When a list item includes more than one block of content, it can be difficult fo
 
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content4" aria-label="Quaternary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content4" aria-label="Selectable expandable row quaternary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
