@@ -1,7 +1,11 @@
 .pf-c-icon {
-  // Default size
+  // Size
   --pf-c-icon--Width: var(--pf-global--icon--FontSize--md);
   --pf-c-icon--Height: var(--pf-global--icon--FontSize--md);
+
+  // When inline, use the parent's size
+  --pf-c-icon--m-inline--Width: 1em;
+  --pf-c-icon--m-inline--Height: 1em;
 
   // Size modifiers
   --pf-c-icon--m-sm--Width: var(--pf-global--icon--FontSize--sm);
@@ -23,6 +27,7 @@
   --pf-c-icon__content--m-info--Color: var(--pf-global--info-color--100);
   --pf-c-icon__content--m-default--Color: var(--pf-global--default-color--100);
   --pf-c-icon__content--FontSize: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon--m-inline__content--FontSize: 1em;
   --pf-c-icon__content-svg--VerticalAlign: -.125em;
   --pf-c-icon--m-sm--content--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-icon--m-md--content--FontSize: var(--pf-global--icon--FontSize--md);
@@ -35,6 +40,20 @@
   justify-content: center;
   width: var(--pf-c-icon--Width);
   height: var(--pf-c-icon--Height);
+
+  // Inline modifier
+  &.pf-m-inline {
+    --pf-c-icon--Width: var(--pf-c-icon--m-inline--Width);
+    --pf-c-icon--Height: var(--pf-c-icon--m-inline--Height);
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-inline__content--FontSize);
+    --pf-c-icon__content--Color: inherit;
+
+    line-height: 1;
+
+    .pf-c-spinner {
+      --pf-c-spinner--diameter: 1em;
+    }
+  }
 
   // Size modifiers
   &.pf-m-sm {
@@ -59,11 +78,6 @@
     --pf-c-icon--Width: var(--pf-c-icon--m-xl--Width);
     --pf-c-icon--Height: var(--pf-c-icon--m-xl--Height);
     --pf-c-icon__content--FontSize: var(--pf-c-icon--m-xl--content--FontSize);
-  }
-
-  // Inline modifier
-  &.pf-m-inline {
-    vertical-align: middle;
   }
 
   > * {
