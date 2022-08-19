@@ -28,7 +28,7 @@
   --pf-c-icon__content--m-default--Color: var(--pf-global--default-color--100);
   --pf-c-icon__content--FontSize: var(--pf-global--icon--FontSize--md);
   --pf-c-icon--m-inline__content--FontSize: 1em;
-  --pf-c-icon__content-svg--VerticalAlign: -.125em;
+  --pf-c-icon__content--svg--VerticalAlign: -.125em;
   --pf-c-icon--m-sm--content--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-icon--m-md--content--FontSize: var(--pf-global--icon--FontSize--md);
   --pf-c-icon--m-lg--content--FontSize: var(--pf-global--icon--FontSize--lg);
@@ -97,7 +97,7 @@
   color: var(--pf-c-icon__content--Color);
 
   svg {
-    vertical-align: var(--pf-c-icon__content-svg--VerticalAlign);
+    vertical-align: var(--pf-c-icon__content--svg--VerticalAlign);
   }
 
   // Size modifiers
@@ -142,7 +142,7 @@
 // Progress element
 .pf-c-icon__progress {
   position: absolute;
-  top: calc(50% + calc(.5 * var(--pf-c-icon__content-svg--VerticalAlign)));
+  top: calc(50% + calc(.5 * var(--pf-c-icon__content--svg--VerticalAlign)));
   opacity: var(--pf-c-icon__progress--Opacity, 0);
-  transform: translateX(0) translateY(calc(-50% - calc(.5 * var(--pf-c-icon__content-svg--VerticalAlign))));
+  transform: translateX(0) translateY(calc(-50% - calc(.5 * var(--pf-c-icon__content--svg--VerticalAlign))));
 }
