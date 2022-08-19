@@ -99,13 +99,14 @@ For example a global variable setup would look like:
 
 The second layer is scoped to themeable component custom properties. This setup allows for consistency across components, generates a common language between designers and developers, and gives granular control to authors. The rules are as follows:
 
-- They follow this general formula `--pf-c-block[__element][--modifier][--state][--breakpoint][--pseudo-element]--PropertyCamelCase`.
+- They follow this general formula `--pf-c-block[__element][--modifier][--state][--breakpoint][--pseudo-element][[--child]|[--tag]|[--c-component]]--PropertyCamelCase`.
   - `--pf-c-block` refers to the block, usually the component or layout name (i.e., `--pf-c-alert`).
   - `__element` refers to the element inside of the block (i.e., `__title`).
   - `--modifier` refers to a modifier class such as `.pf-m-danger`, and is prefixed with `m-` in the component variable (i.e., `--m-danger`).
   - `--state` is something like `hover` or `active`.
   - `--breakpoint` is a media query breakpoint such as `sm` for `$pf-global--breakpoint--xs`.
   - `--pseudo-element` is one of either `before` or `after`.
+  - `--child`, `--tag`, or `--c-component` refers to a child element. It could be a tag or component name, like `--c-menu` or `--svg`, or it could use `--child` to refer to any child element. If any modifiers, states, breakpoints, or pseudo-elements are on the child, include those after this portion of the name.
 - The value of a component variable is **always** defined by a global variable.
 - It's possible to include multiple elements, modifiers, states, and breakpoints in a single component variable.
 - The order of elements, modifiers, states, and breakpoints in the variable name should match the selector order.
