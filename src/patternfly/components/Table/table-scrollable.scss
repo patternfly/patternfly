@@ -43,12 +43,13 @@
 
 .pf-c-scroll-outer-wrapper {
   --pf-c-scroll-outer-wrapper--MinHeight: #{pf-size-prem(400px)};
+  --pf-c-scroll-outer-wrapper--MaxHeight: 100%;
 
   display: flex;
   flex-direction: column;
   max-width: 100%;
   min-height: var(--pf-c-scroll-outer-wrapper--MinHeight);
-  max-height: 100%;
+  max-height: var(--pf-c-scroll-outer-wrapper--MaxHeight);
   overflow: hidden;
 }
 
