@@ -1,6 +1,7 @@
 .pf-c-timestamp {
   --pf-c-timestamp--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-timestamp--Color: var(--pf-global--Color--200);
+  --pf-c-timestamp--OutlineOffset: #{pf-size-prem(3px)};
 
   // Help text variables for the timestamp
   --pf-c-timestamp--m-help-text--TextDecorationLine: underline;
@@ -13,8 +14,10 @@
   --pf-c-timestamp--m-help-text--hover--TextDecorationColor: var(--pf-global--Color--100);
   --pf-c-timestamp--m-help-text--focus--TextDecorationColor: var(--pf-global--Color--100);
 
+  display: inline-block;
   font-size: var(--pf-c-timestamp--FontSize);
   color: var(--pf-c-timestamp--Color);
+  outline-offset: var(--pf-c-timestamp--OutlineOffset);
 
   &.pf-m-help-text {
     cursor: pointer;
