@@ -15,7 +15,7 @@ section: components
 {{> notification-drawer-template
       notification-drawer-template--id="drawer-expanded-read-example"
       notification-drawer-basic-list--AllRead="true"
-      notification-badge--modifier="pf-m-read"
+      notification-badge--modifier="pf-m-read pf-m-expanded"
       drawer-panel--IsOpen="true"
 }}
 ```
@@ -24,7 +24,7 @@ section: components
 ```hbs isFullscreen
 {{> notification-drawer-template
       notification-drawer-template--id="drawer-expanded-unread-example"
-      notification-badge--modifier="pf-m-unread"
+      notification-badge--modifier="pf-m-unread pf-m-expanded"
       drawer-panel--IsOpen="true"
 }}
 ```
@@ -34,7 +34,7 @@ section: components
 {{> notification-drawer-template
       notification-drawer-template--id="drawer-expanded-attention-example"
       notification-drawer-basic-list--IsAttention="true"
-      notification-badge--modifier="pf-m-attention"
+      notification-badge--modifier="pf-m-attention pf-m-expanded"
       masthead-template-content-icon-group--notification-badge--IsAttention="true"
       drawer-panel--IsOpen="true"
 }}
@@ -45,7 +45,7 @@ section: components
 {{> notification-drawer-template
       notification-drawer-template--id="drawer-expanded-with-groups-example"
       notification-drawer-template--IsGroup="true"
-      notification-badge--modifier="pf-m-unread"
+      notification-badge--modifier="pf-m-unread pf-m-expanded"
       drawer-panel--IsOpen="true"
 }}
 ```

@@ -52,6 +52,50 @@ import './NotificationBadge.css'
 </div>
 ```
 
+### Expanded
+
+```hbs
+<div class="pf-t-dark">
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications" aria-expanded="true"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-read pf-m-expanded"}}
+    <i class="pf-icon-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications" aria-expanded="true"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-unread pf-m-expanded"}}
+    <i class="pf-icon-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention notifications" aria-expanded="true"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-attention pf-m-expanded"}}
+    <i class="pf-icon-attention-bell" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+<br><br>
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Tasks" aria-expanded="true"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-read pf-m-expanded"}}
+    <i class="pf-icon-task" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread tasks" aria-expanded="true"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-unread pf-m-expanded"}}
+    <i class="pf-icon-task" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+
+{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention tasks" aria-expanded="true"'}}
+  {{#> notification-badge notification-badge--modifier="pf-m-attention pf-m-expanded"}}
+    <i class="pf-icon-task" aria-hidden="true"></i>
+  {{/notification-badge}}
+{{/button}}
+</div>
+```
+
 ### With count
 
 ```hbs
@@ -117,3 +161,4 @@ Be sure that the component associated with this indicator handles screen reader 
 | `.pf-m-read` | `.pf-c-notification-badge` |  Applies read notification badge styling. |
 | `.pf-m-unread` | `.pf-c-notification-badge` |  Applies unread notification badge styling. |
 | `.pf-m-attention` | `.pf-c-notification-badge` |  Applies attention notification badge styling. |
+| `.pf-m-expanded` | `.pf-c-notification-badge` |  Applies expanded notification badge styling. |

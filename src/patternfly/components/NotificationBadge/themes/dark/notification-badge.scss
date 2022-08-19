@@ -2,6 +2,7 @@
 
 @mixin pf-theme-dark-notification-badge() {
   .pf-c-notification-badge {
+    --pf-c-notification-badge--m-read--m-expanded--after--BackgroundColor: var(--pf-global--BackgroundColor--400);
     --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--primary-color--300);
   }
 }
