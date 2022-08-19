@@ -112,6 +112,10 @@
       overflow: hidden;
     }
   }
+
+  &.pf-m-detached .pf-c-expandable-section__toggle {
+    --pf-c-expandable-section__toggle--MarginTop: 0;
+  }
 }
 
 .pf-c-expandable-section__toggle {
