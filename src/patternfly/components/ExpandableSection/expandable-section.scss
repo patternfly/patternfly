@@ -113,8 +113,8 @@
     }
   }
 
-  &.pf-m-detached .pf-c-expandable-section__toggle {
-    --pf-c-expandable-section__toggle--MarginTop: 0;
+  &.pf-m-detached {
+    --pf-c-expandable-section--m-truncate__toggle--MarginTop: 0;
   }
 }
 
