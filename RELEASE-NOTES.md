@@ -3,6 +3,33 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.11 release notes (2022-08-25)
+Packages released:
+- [@patternfly/patternfly@v4.210.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.210.2)
+
+### Components
+- **Avatar:** Updated examples to use correct avatar image, simplified hbs ([#5026](https://github.com/patternfly/patternfly/pull/5026))
+- **Button:** Added a badge count to the link button ([#5029](https://github.com/patternfly/patternfly/pull/5029))
+- **Card:** Updated body fill example to show fill behavior ([#5022](https://github.com/patternfly/patternfly/pull/5022))
+- **Checkbox:** Added support for required indicator ([#5025](https://github.com/patternfly/patternfly/pull/5025))
+- **Dropdown, select, context selector:** Added static variation for menu ([#4986](https://github.com/patternfly/patternfly/pull/4986))
+- **Expandable section:**
+  * Added truncate variant ([#5001](https://github.com/patternfly/patternfly/pull/5001))
+  * Fixed top margin on detached truncate toggle ([#5045](https://github.com/patternfly/patternfly/pull/5045))
+- **Menu:** Removed footer bottom border when scrollable ([#5002](https://github.com/patternfly/patternfly/pull/5002))
+- **Page:** Added full-height modifier ([#5018](https://github.com/patternfly/patternfly/pull/5018))
+- **Search input:** Added collapsible variant ([#4827](https://github.com/patternfly/patternfly/pull/4827))
+- **Table:** Added max-height support to outerscroll container ([#5039](https://github.com/patternfly/patternfly/pull/5039))
+- **Timestamp:** Added outline-offset and fixed trailing whitespace ([#5047](https://github.com/patternfly/patternfly/pull/5047))
+
+### Other
+- **Global:** Added custom property to allow override of root font-size ([#5032](https://github.com/patternfly/patternfly/pull/5032))
+- **Theme:**
+  * Adjusted dark theme colors ([#5020](https://github.com/patternfly/patternfly/pull/5020))
+  * Improved contrast of dark theme red-8888, warning button text ([#5041](https://github.com/patternfly/patternfly/pull/5041))
+- **Workspace:** Fixed a11y violations in data-list and toolbar ([#5015](https://github.com/patternfly/patternfly/pull/5015))
+
+
 ## 2022.10 release notes (2022-08-04)
 Packages released:
 - [@patternfly/patternfly@v4.206.3](https://www.npmjs.com/package/@patternfly/patternfly/v/4.206.3)
