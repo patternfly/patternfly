@@ -18,7 +18,7 @@ import './FormControl.css'
 <br><br>
 {{> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="input-readonly" aria-label="Readonly input example"'}}
 <br><br>
-{{> form-control controlType="input" input="true" form-control--modifier="pf-m-plain" form-control--attribute='readonly type="text" value="Readonly plain" id="input-readonly" aria-label="Readonly input example"'}}
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-plain" form-control--attribute='readonly type="text" value="Readonly plain" id="input-readonly-plain" aria-label="Readonly plain input example"'}}
 <br><br>
 {{> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="input-disabled" aria-label="Disabled input example"'}}
 <br><br>
