@@ -2,7 +2,13 @@
   {{#if tree-view-node-toggle--IsToggle}}
     id="toggle-{{tree-view-node--id}}"
     aria-label="Toggle"
-    aria-labelledby="toggle-{{tree-view-node--id}} text-{{tree-view-node--id}}"
+    {{#if tree-view-node--HasCheckbox}}
+     aria-labelledby="toggle-{{tree-view-node--id}} checktext-{{tree-view-node--id}}"
+    {{else if tree-view-node--IsSelectable}}
+      aria-labelledby="toggle-{{tree-view-node--id}} selecttext-{{tree-view-node--id}}"
+    {{else}}
+      aria-labelledby="toggle-{{tree-view-node--id}} text-{{tree-view-node--id}}"
+    {{/if}}
   {{/if}}
   {{#if tree-view-node-toggle--attribute}}
     {{{tree-view-node-toggle--attribute}}}
