@@ -79,7 +79,6 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
 
   // input readonly plain style
   --pf-c-form-control--readonly--m-plain--BackgroundColor: transparent;
-  --pf-c-form-control--readonly--m-plain--BorderWidth: 0;
   --pf-c-form-control--readonly--m-plain--inset--base: 0;
 
   // Input m-success -- rename vars to m-success in breaking change release
@@ -246,12 +245,17 @@ $pf-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 
         --pf-c-form-control--focus--BorderBottomColor: var(--pf-c-form-control--readonly--focus--BorderBottomColor);
       }
     }
-  }
 
-  &[readonly].pf-m-plain {
-    --pf-c-form-control--readonly--BackgroundColor: var(--pf-c-form-control--readonly--m-plain--BackgroundColor);
-    --pf-c-form-control--BorderWidth: var(--pf-c-form-control--readonly--m-plain--BorderWidth);
-    --pf-c-form-control--inset--base: var(--pf-c-form-control--readonly--m-plain--inset--base);
+    &.pf-m-plain {
+      --pf-c-form-control--readonly--BackgroundColor: var(--pf-c-form-control--readonly--m-plain--BackgroundColor);
+      --pf-c-form-control--inset--base: var(--pf-c-form-control--readonly--m-plain--inset--base);
+
+      border-color: transparent;
+
+      &:focus {
+        --pf-c-form-control--focus--BorderBottomColor: transparent;
+      }
+    }
   }
 
   &:hover {
