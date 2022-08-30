@@ -17,7 +17,7 @@ import './Toolbar.css'
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter"}}
             {{#> input-group}}
-              {{#> select select--attribute='style="width: 175px"' id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
+              {{#> select select--attribute='style="width: 175px"' select--id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
                 Name
               {{/select}}
               {{> search-input search-input--placeholder="Filter by name"}}
@@ -29,7 +29,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -52,7 +52,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -62,7 +62,7 @@ import './Toolbar.css'
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
         {{#> toolbar-item}}
           {{#> input-group}}
-            {{#> select select--attribute='style="width: 175px"' id=(concat toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
+            {{#> select select--attribute='style="width: 175px"' select--id=(concat toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
               Name
             {{/select}}
             {{> search-input search-input--placeholder="Filter by name"}}
@@ -83,12 +83,12 @@ import './Toolbar.css'
         {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{#> select select--attribute='style="width: 175px"' id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
+            {{#> select select--attribute='style="width: 175px"' select--id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
               Status
             {{/select}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select select--attribute='style="width: 200px"' id=(concat toolbar--id '-select-status-two') select--IsExpanded="true"}}
+            {{#> select select--attribute='style="width: 200px"' select--id=(concat toolbar--id '-select-status-two') select--IsExpanded="true"}}
               Stopped
             {{/select}}
           {{/toolbar-item}}
@@ -98,7 +98,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -121,7 +121,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -130,12 +130,12 @@ import './Toolbar.css'
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
       {{#> toolbar-item}}
-        {{#> select id=(concat toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
+        {{#>select select--id=(concat toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
           Status
         {{/select}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{#> select id=(concat toolbar--id '-select-status-two-expanded') select--IsExpanded="true"}}
+        {{#>select select--id=(concat toolbar--id '-select-status-two-expanded') select--IsExpanded="true"}}
           Stopped
         {{/select}}
       {{/toolbar-item}}
@@ -154,12 +154,12 @@ import './Toolbar.css'
         {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{#> select select--attribute='style="width: 175px"' id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
+            {{#> select select--attribute='style="width: 175px"' select--id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-filter"}}
               Status
             {{/select}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select id=(concat toolbar--id '-select-filter-status') select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
+            {{#>select select--id=(concat toolbar--id '-select-filter-status') select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
               Filter by status
             {{/select}}
           {{/toolbar-item}}
@@ -169,7 +169,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -236,7 +236,7 @@ import './Toolbar.css'
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
+            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
             {{> pagination-nav-content}}
           {{/pagination}}
         {{/pagination}}
@@ -245,12 +245,12 @@ import './Toolbar.css'
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
         {{#> toolbar-item}}
-          {{#> select id=(concat toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
+          {{#>select select--id=(concat toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
             Status
           {{/select}}
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#> select id=(concat toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true"}}
+          {{#>select select--id=(concat toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true"}}
             Filter by status
           {{/select}}
         {{/toolbar-item}}
@@ -318,7 +318,7 @@ import './Toolbar.css'
             {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
               {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter"}}
                 {{#> input-group}}
-                  {{#> select select--attribute='style="width: 175px"' id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
+                  {{#> select select--attribute='style="width: 175px"' select--id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
                     Name
                   {{/select}}
                   {{> search-input search-input--placeholder="Filter by name"}}
@@ -330,7 +330,7 @@ import './Toolbar.css'
           {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
             {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
               {{#> pagination pagination--IsCompact="true"}}
-                {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
+                {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
                 {{> pagination-nav-content}}
               {{/pagination}}
             {{/pagination}}
@@ -342,7 +342,7 @@ import './Toolbar.css'
     <div>
       {{> table-simple-table page--id="toolbar-and-table-static-search-overflow-menu-collapsed"}}
       {{#> pagination pagination--modifier="pf-m-bottom"}}
-        {{> pagination-options-menu id="pagination-options-menu-bottom-collapsed-example" pagination-options-menu--modifier="pf-m-top"}}
+        {{> pagination-options-menu pagination-options-menu--id="pagination-options-menu-bottom-collapsed-example" pagination-options-menu--modifier="pf-m-top"}}
         {{> pagination-nav-content}}
       {{/pagination}}
     </div>

@@ -9,7 +9,7 @@ import './options-menu.css'
 ## Examples
 ### Single option
 ```hbs
-{{#> options-menu id="options-menu-single-example" options-menu--HasToggleIcon="true"}}
+{{#> options-menu options-menu--id="options-menu-single-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Options menu
@@ -18,7 +18,7 @@ import './options-menu.css'
   {{> options-menu-single}}
 {{/options-menu}}
 
-{{#> options-menu options-menu--IsExpanded="true" id="options-menu-single-expanded-example" options-menu--HasToggleIcon="true"}}
+{{#> options-menu options-menu--IsExpanded="true" options-menu--id="options-menu-single-expanded-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Options menu
@@ -30,7 +30,7 @@ import './options-menu.css'
 
 ### Disabled
 ```hbs
-{{#> options-menu id="options-menu-single-disabled-example" options-menu--HasToggleIcon="true" options-menu-toggle--IsDisabled="true"}}
+{{#> options-menu options-menu--id="options-menu-single-disabled-example" options-menu--HasToggleIcon="true" options-menu-toggle--IsDisabled="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Disabled options menu
@@ -41,7 +41,7 @@ import './options-menu.css'
 
 ### Multiple options
 ```hbs
-{{#> options-menu id="options-menu-multiple-example" options-menu--HasToggleIcon="true"}}
+{{#> options-menu options-menu--id="options-menu-multiple-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Sort by
@@ -50,7 +50,7 @@ import './options-menu.css'
   {{> options-menu-multiple}}
 {{/options-menu}}
 
-{{#> options-menu options-menu--IsExpanded="true" id="options-menu-multiple-expanded-example" options-menu--HasToggleIcon="true"}}
+{{#> options-menu options-menu--IsExpanded="true" options-menu--id="options-menu-multiple-expanded-example" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Sort by
@@ -62,21 +62,21 @@ import './options-menu.css'
 
 ### Plain
 ```hbs
-{{#> options-menu id="options-menu-plain-disabled-example" options-menu-toggle--IsDisabled="true"}}
+{{#> options-menu options-menu--id="options-menu-plain-disabled-example" options-menu-toggle--IsDisabled="true"}}
   {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
     <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}
 
-{{#> options-menu id="options-menu-plain-example"}}
+{{#> options-menu options-menu--id="options-menu-plain-example"}}
   {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
     <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}
 
-{{#> options-menu options-menu--IsExpanded="true" id="options-menu-plain-expanded-example"}}
+{{#> options-menu options-menu--IsExpanded="true" options-menu--id="options-menu-plain-expanded-example"}}
   {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
     <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
   {{/options-menu-toggle}}
@@ -86,7 +86,7 @@ import './options-menu.css'
 
 ### Align top
 ```hbs
-{{#> options-menu options-menu--IsExpanded="true" options-menu--modifier="pf-m-top" id="options-menu-top-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
+{{#> options-menu options-menu--IsExpanded="true" options-menu--modifier="pf-m-top" options-menu--id="options-menu-top-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Options menu
@@ -98,7 +98,7 @@ import './options-menu.css'
 
 ### Align right
 ```hbs
-{{#> options-menu options-menu--IsExpanded="true" id="options-menu-align-right-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
+{{#> options-menu options-menu--IsExpanded="true" options-menu--id="options-menu-align-right-example" options-menu--HasToggleIcon="true" options-menu--modifier="pf-m-align-right"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Options menu
@@ -110,7 +110,7 @@ import './options-menu.css'
 
 ### Plain with text
 ```hbs
-{{#> options-menu id="options-menu-disabled-text-example" options-menu--IsPlainWithText="true" options-menu-toggle--IsDisabled="true" options-menu--HasToggleIcon="true"}}
+{{#> options-menu options-menu--id="options-menu-disabled-text-example" options-menu--IsPlainWithText="true" options-menu-toggle--IsDisabled="true" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Custom text
@@ -119,7 +119,7 @@ import './options-menu.css'
   {{> options-menu-single}}
 {{/options-menu}}
 
-{{#> options-menu id="options-menu-plain-text-example" options-menu--IsPlainWithText="true" options-menu--HasToggleIcon="true"}}
+{{#> options-menu options-menu--id="options-menu-plain-text-example" options-menu--IsPlainWithText="true" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Custom text
@@ -128,7 +128,7 @@ import './options-menu.css'
   {{> options-menu-single}}
 {{/options-menu}}
 
-{{#> options-menu id="options-menu-plain-text-expanded-example" options-menu--IsPlainWithText="true" options-menu--HasToggleIcon="true" options-menu--IsExpanded="true"}}
+{{#> options-menu options-menu--id="options-menu-plain-text-expanded-example" options-menu--IsPlainWithText="true" options-menu--HasToggleIcon="true" options-menu--IsExpanded="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Custom text
@@ -140,7 +140,7 @@ import './options-menu.css'
 
 ### With groups
 ```hbs
-{{#> options-menu id="options-menu-groups" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true"}}
+{{#> options-menu options-menu--id="options-menu-groups" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Options menu
@@ -152,7 +152,7 @@ import './options-menu.css'
 
 ### With groups and dividers between groups
 ```hbs
-{{#> options-menu id="options-menu-groups-and-dividers-between-groups" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasGroupDividers="true"}}
+{{#> options-menu options-menu--id="options-menu-groups-and-dividers-between-groups" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasGroupDividers="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Options menu
@@ -164,7 +164,7 @@ import './options-menu.css'
 
 ### With groups and dividers between items
 ```hbs
-{{#> options-menu id="options-menu-groups-and-dividers-between-items" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasDividersItems="true"}}
+{{#> options-menu options-menu--id="options-menu-groups-and-dividers-between-items" options-menu--IsExpanded="true" options-menu--HasToggleIcon="true" options-menu--HasDividersItems="true"}}
   {{#> options-menu-toggle}}
     {{#> options-menu-toggle-text}}
       Options menu

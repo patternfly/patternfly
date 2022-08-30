@@ -6,10 +6,10 @@
     type="button"
   {{/unless}}
   {{#unless select--IsTypeahead}}
-    id="{{id}}-toggle"
+    id="{{select--id}}-toggle"
     aria-haspopup="true"
     aria-expanded="{{#if select--IsExpanded}}true{{else}}false{{/if}}"
-    aria-labelledby="{{id}}-label {{id}}-toggle"
+    aria-labelledby="{{select--id}}-label {{select--id}}-toggle"
     {{#if aria-label}}
       aria-label="{{aria-label}}"
     {{/if}}
