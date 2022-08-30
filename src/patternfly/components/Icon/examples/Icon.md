@@ -87,6 +87,7 @@ cssPrefix: pf-c-icon
 ```
 
 ### Sizing content within the icon container
+Use a size modifier on the icon container to maintain a consistent size, even if the contents change in size.
 ```hbs
 {{#> icon icon--modifier="pf-m-xl pf-m-inline"}}
   {{#> icon-content icon-content--modifier="pf-m-sm"}}
