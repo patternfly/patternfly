@@ -7,16 +7,20 @@ section: components
 
 ### Collapsed
 ```hbs isFullscreen
-{{> notification-drawer-template notification-drawer-template--id="drawer-collapsed-example"}}
+{{> notification-drawer-template
+      notification-drawer-template--id="drawer-collapsed-example"
+      notification-drawer--IsRead="true"
+      notification-badge--aria-label="Notifications"
+}}
 ```
 
 ### Expanded read
 ```hbs isFullscreen
 {{> notification-drawer-template
       notification-drawer-template--id="drawer-expanded-read-example"
-      notification-drawer-basic-list--AllRead="true"
-      notification-badge--modifier="pf-m-read pf-m-expanded"
-      drawer-panel--IsOpen="true"
+      notification-drawer--IsExpanded="true"
+      notification-drawer--IsRead="true"
+      notification-badge--aria-label="Notifications"
 }}
 ```
 
@@ -24,8 +28,9 @@ section: components
 ```hbs isFullscreen
 {{> notification-drawer-template
       notification-drawer-template--id="drawer-expanded-unread-example"
-      notification-badge--modifier="pf-m-unread pf-m-expanded"
-      drawer-panel--IsOpen="true"
+      notification-drawer--IsExpanded="true"
+      notification-drawer--IsUnread="true"
+      notification-badge--aria-label="Unread notifications"
 }}
 ```
 
@@ -33,10 +38,9 @@ section: components
 ```hbs isFullscreen
 {{> notification-drawer-template
       notification-drawer-template--id="drawer-expanded-attention-example"
-      notification-drawer-basic-list--IsAttention="true"
-      notification-badge--modifier="pf-m-attention pf-m-expanded"
-      masthead-template-content-icon-group--notification-badge--IsAttention="true"
-      drawer-panel--IsOpen="true"
+      notification-drawer--IsExpanded="true"
+      notification-drawer--IsAttention="true"
+      notification-badge--aria-label="Attention notifications"
 }}
 ```
 
@@ -45,8 +49,9 @@ section: components
 {{> notification-drawer-template
       notification-drawer-template--id="drawer-expanded-with-groups-example"
       notification-drawer-template--IsGroup="true"
-      notification-badge--modifier="pf-m-unread pf-m-expanded"
-      drawer-panel--IsOpen="true"
+      notification-drawer--IsExpanded="true"
+      notification-drawer--IsUnread="true"
+      notification-badge--aria-label="Unread notifications"
 }}
 ```
 
