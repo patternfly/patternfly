@@ -130,12 +130,12 @@ import './Toolbar.css'
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
       {{#> toolbar-item}}
-        {{#>select select--id=(concat toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
+        {{#> select select--id=(concat toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
           Status
         {{/select}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{#>select select--id=(concat toolbar--id '-select-status-two-expanded') select--IsExpanded="true"}}
+        {{#> select select--id=(concat toolbar--id '-select-status-two-expanded') select--IsExpanded="true"}}
           Stopped
         {{/select}}
       {{/toolbar-item}}
@@ -159,7 +159,7 @@ import './Toolbar.css'
             {{/select}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#>select select--id=(concat toolbar--id '-select-filter-status') select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
+            {{#> select select--id=(concat toolbar--id '-select-filter-status') select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
               Filter by status
             {{/select}}
           {{/toolbar-item}}
@@ -245,12 +245,12 @@ import './Toolbar.css'
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
         {{#> toolbar-item}}
-          {{#>select select--id=(concat toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
+          {{#> select select--id=(concat toolbar--id '-select-status-expanded') select-toggle--icon="fas fa-filter"}}
             Status
           {{/select}}
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#>select select--id=(concat toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true"}}
+          {{#> select select--id=(concat toolbar--id '-select-filter-status-expanded') select--IsChecked="true" select--IsCheckboxSelect="true"}}
             Filter by status
           {{/select}}
         {{/toolbar-item}}
