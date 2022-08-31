@@ -212,6 +212,7 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   &.pf-m-full-height {
     height: 100vh;
     height: 100dvh;
+    max-height: 100%;
   }
 }
 
