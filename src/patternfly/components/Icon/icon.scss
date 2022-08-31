@@ -81,7 +81,7 @@
   }
 
   &.pf-m-in-progress {
-    --pf-c-icon__child--Opacity: 0;
+    --pf-c-icon__content--Opacity: 0;
     --pf-c-icon__progress--Opacity: 1;
   }
 }
@@ -116,7 +116,7 @@
 // Content element
 .pf-c-icon__content {
   color: var(--pf-c-icon__content--Color);
-  opacity: var(--pf-c-icon__child--Opacity, 1);
+  opacity: var(--pf-c-icon__content--Opacity, 1);
 
   // Status modifiers
   &.pf-m-danger {
@@ -145,5 +145,5 @@
   position: absolute;
   top: calc(50% + calc(.5 * var(--pf-c-icon__content--svg--VerticalAlign)));
   opacity: var(--pf-c-icon__progress--Opacity, 0);
-  transform: translateX(0) translateY(calc(-50% - calc(.5 * var(--pf-c-icon__content--svg--VerticalAlign))));
+  transform: translateY(calc(-50% - calc(.5 * var(--pf-c-icon__content--svg--VerticalAlign))));
 }
