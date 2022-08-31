@@ -122,14 +122,6 @@ Use a size modifier on the icon container to maintain a consistent size, even if
     {{/icon}}
   </h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  {{#> button button--IsInlineLinkSpan="true" button--attribute='tabindex="0"' button--modifier="pf-m-link pf-m-inline"}} 
-    {{#> icon icon--modifier="pf-m-inline"}}
-      {{#> icon-content}}
-        <i class="fas fa-plus-circle" aria-hidden="true"></i>
-      {{/icon-content}}
-    {{/icon}}
-  inline link.
-  {{/button}}
   Sed hendrerit nisi in cursus maximus.</p>
   <h2>Second level
     {{#> icon icon--modifier="pf-m-inline"}}
@@ -151,22 +143,15 @@ Use a size modifier on the icon container to maintain a consistent size, even if
         <i class="fas fa-plus-circle" aria-hidden="true"></i>
       {{/icon-content}}
     {{/icon}}</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel
-    cursus venenatis. Suspendisse potenti.</p>
-    <small>Sometimes you need small text 
-      {{#> icon icon--modifier="pf-m-inline"}}
-        {{#> icon-content}}
-          <i class="fas fa-plus-circle" aria-hidden="true"></i>
-        {{/icon-content}}
-      {{/icon}}
-    </small>
-    {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-primary"}}
+    cursus venenatis. Suspendisse potenti.
+  </p>
+  <small>Sometimes you need small text 
     {{#> icon icon--modifier="pf-m-inline"}}
       {{#> icon-content}}
         <i class="fas fa-plus-circle" aria-hidden="true"></i>
       {{/icon-content}}
     {{/icon}}
-    Button
-  {{/button-link}}
+  </small>
 {{/content}}
 
 Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
@@ -226,6 +211,6 @@ Refer to the [icons](/guidelines/icons) page for information about the PatternFl
 | `.pf-c-icon__progress` | `<span>`, `<div>` | Initiates a container for a progress spinner.  |
 | `.pf-m-inline` | `.pf-c-icon` | Displays the icon inline with text, and allows the icon to inherit the size and color of the parent. |
 | `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon` | Modifies the icon container to be small, medium, large, or extra large. |
-| `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon__content` | Modifies the icon content to be small, medium, large, or extra large. |
+| `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon__content`, `pf-c-icon__progress` | Modifies the icon content or progress element to be small, medium, large, or extra large. |
 | `.pf-m-in-progress` | `.pf-c-icon` | Shows the progress element in place of the icon content.  |
 | `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-default`  | `.pf-c-icon__content` | Modifies the icon content to use a status color.  |
