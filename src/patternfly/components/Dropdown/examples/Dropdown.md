@@ -46,7 +46,7 @@ import './Dropdown.css'
 
 ### Align on different breakpoint
 ```hbs
-{{> dropdown id="dropdown-align-on-different-breakpoint" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right-on-lg pf-m-align-left-on-2xl" dropdown-toggle--text="Dropdown"}}
+{{> dropdown dropdown--id="dropdown-align-on-different-breakpoint" dropdown--IsActionMenu="true" dropdown--IsExpanded="true" dropdown-menu--modifier="pf-m-align-right-on-lg pf-m-align-left-on-2xl" dropdown-toggle--text="Dropdown"}}
 ```
 
 ### Align top

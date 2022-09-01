@@ -63,7 +63,7 @@ section: components
             {{/context-selector}}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select id=(concat page-template--id '-select') select-toggle--modifier="pf-m-plain"}}All applications{{/select}}
+            {{#> select select--id=(concat page-template--id '-select') select-toggle--modifier="pf-m-plain"}}All applications{{/select}}
           {{/toolbar-item}}
         {{/toolbar-content-section}}
       {{/toolbar-content}}
