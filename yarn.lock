@@ -1415,13 +1415,13 @@
     puppeteer-cluster "^0.23.0"
     xmldoc "^1.1.2"
 
-"@patternfly/react-charts@6.84.8":
-  version "6.84.8"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-charts/-/react-charts-6.84.8.tgz#9d816a8f45426acbf114a4623626688325b95b8b"
-  integrity sha512-TRg0cm1OQFkhaIvoR4tAzMKwqSFU2HeUARagy32NU1xOsjuJHBXcpPdHS/3plZs17Cm6gjg4EgEvrDAPgxWOJw==
+"@patternfly/react-charts@6.88.7":
+  version "6.88.7"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-charts/-/react-charts-6.88.7.tgz#632ea4be6a97e937892a9943373e03f2f6ce95c0"
+  integrity sha512-1SGDHfTmjH3c54ym1i1d1SH1DGArn96Fwkv1woOTpRhNgBoz6TkoDJGHfpX6UUyun1uqDMUdNP8tOnb9SITuvQ==
   dependencies:
-    "@patternfly/react-styles" "^4.81.8"
-    "@patternfly/react-tokens" "^4.83.8"
+    "@patternfly/react-styles" "^4.85.7"
+    "@patternfly/react-tokens" "^4.87.7"
     hoist-non-react-statics "^3.3.0"
     lodash "^4.17.19"
     tslib "^2.0.0"
@@ -1431,6 +1431,7 @@
     victory-chart "^36.2.1"
     victory-core "^36.2.1"
     victory-create-container "^36.2.1"
+    victory-cursor-container "^36.2.1"
     victory-group "^36.2.1"
     victory-legend "^36.2.1"
     victory-line "^36.2.1"
@@ -1475,6 +1476,11 @@
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.81.8.tgz#8d2f103e03a7edd997218600a54bd2cd452d3348"
   integrity sha512-Q5FiureSSCMIuz+KLMcEm1317TzbXcwmg2q5iNDRKyf/K+5CT6tJp0Wbtk3FlfRvzli4u/7YfXipahia5TL+tA==
 
+"@patternfly/react-styles@^4.85.7":
+  version "4.85.7"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-4.85.7.tgz#93afa64c81cf74f7fa050fb787f02348113d62a6"
+  integrity sha512-XSa8Loaouj1XEmbJmEeURXxKu5ub1VCRV0yN5YOnRo7j7XI4Yw9QarSHODzhkquI3AhkD0dPyMOaefz4P6lJKw==
+
 "@patternfly/react-table@4.100.8":
   version "4.100.8"
   resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-4.100.8.tgz#86bce4fc528b87d8136c3b0c13f11c15e1b65cc1"
@@ -1491,6 +1497,11 @@
   version "4.83.8"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.83.8.tgz#3055ea6f4c195d59840d1ce0ceaa59da76104f9a"
   integrity sha512-Z/MHXNY8PQOuBFGUar2yzPVbz3BNJuhB+Dnk5RJcc/iIn3S+VlSru7g6v5jqoV/+a5wLqZtLGEBp8uhCZ7Xkig==
+
+"@patternfly/react-tokens@^4.87.7":
+  version "4.87.7"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-4.87.7.tgz#f96de3d2469b23ba86ead36bf8bac4ae9e7e0559"
+  integrity sha512-07A7Ya4zIAYyYn3mOCG82wMC3/Y8mtTw95a//Onu/H0oDPMJ5oT7Vd14YN7pHexCAtWvc36Mp46iZ1osIQ7yVQ==
 
 "@reach/router@1.3.4":
   version "1.3.4"
@@ -14933,6 +14944,16 @@ victory-core@^36.2.1, victory-core@^36.5.3:
     react-fast-compare "^3.2.0"
     victory-vendor "^36.5.1"
 
+victory-core@^36.6.6:
+  version "36.6.6"
+  resolved "https://registry.yarnpkg.com/victory-core/-/victory-core-36.6.6.tgz#0e9205382ca7b47d504b59a068561f06ef0d9434"
+  integrity sha512-PmQ+7QNlZ1CiPc/2OXMN76UAu9y8gTZXrwh8ZxM+k8G+6qIkWRMIcI8NCrOutDlfvi04HbOLNupzmTazqo61Jw==
+  dependencies:
+    lodash "^4.17.21"
+    prop-types "^15.8.1"
+    react-fast-compare "^3.2.0"
+    victory-vendor "^36.6.6"
+
 victory-create-container@^36.2.1:
   version "36.5.3"
   resolved "https://registry.yarnpkg.com/victory-create-container/-/victory-create-container-36.5.3.tgz#8edef1c00c5d1368bb42912269f1521e551e5185"
@@ -14945,6 +14966,15 @@ victory-create-container@^36.2.1:
     victory-selection-container "^36.5.3"
     victory-voronoi-container "^36.5.3"
     victory-zoom-container "^36.5.3"
+
+victory-cursor-container@^36.2.1:
+  version "36.6.6"
+  resolved "https://registry.yarnpkg.com/victory-cursor-container/-/victory-cursor-container-36.6.6.tgz#0645dc34afd2ef927cb06ee99a25c402fc160a77"
+  integrity sha512-Duw30mFKRoSb2hUJvtnK4iSAob8mdTqY4jczjY4Ny/nwkeIj/oZ8UoF8rZPpqyEitWCo/ZiAkUhjgj6Uju413Q==
+  dependencies:
+    lodash "^4.17.19"
+    prop-types "^15.8.1"
+    victory-core "^36.6.6"
 
 victory-cursor-container@^36.5.3:
   version "36.5.3"
@@ -15057,6 +15087,26 @@ victory-vendor@^36.5.1:
   version "36.5.1"
   resolved "https://registry.yarnpkg.com/victory-vendor/-/victory-vendor-36.5.1.tgz#d1bb55c768f3b3f80e92741f0c7837062c694f25"
   integrity sha512-VMGEnIOs6GWMxdkWeEyc80s9MfI3LN9kIKdUT0bJOmxqh3pRfK7NmpYxq0ARazu0ZfeTW9dYAVuehGYBwgQB/w==
+  dependencies:
+    "@types/d3-array" "^3.0.3"
+    "@types/d3-ease" "^3.0.0"
+    "@types/d3-interpolate" "^3.0.1"
+    "@types/d3-scale" "^4.0.2"
+    "@types/d3-shape" "^3.1.0"
+    "@types/d3-time" "^3.0.0"
+    "@types/d3-timer" "^3.0.0"
+    d3-array "^3.1.6"
+    d3-ease "^3.0.1"
+    d3-interpolate "^3.0.1"
+    d3-scale "^4.0.2"
+    d3-shape "^3.1.0"
+    d3-time "^3.0.0"
+    d3-timer "^3.0.1"
+
+victory-vendor@^36.6.6:
+  version "36.6.6"
+  resolved "https://registry.yarnpkg.com/victory-vendor/-/victory-vendor-36.6.6.tgz#d01e5a5124b7287ac29b66199329c55daff49494"
+  integrity sha512-4qTXOWB0GiBpLFKt3+Ac+WaNeA4zBYJQpy2gqEvf0GcwYGQfAULo5X1Gia51ugnmZHI0uMOBTZRW5DyKp+N3NA==
   dependencies:
     "@types/d3-array" "^3.0.3"
     "@types/d3-ease" "^3.0.0"
