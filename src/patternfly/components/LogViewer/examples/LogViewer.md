@@ -140,7 +140,7 @@ import './LogViewer.css';
 | `.pf-m-wrap-text` | `.pf-c-log-viewer` | Modifies the log viewer text to wrap. |
 | `.pf-m-nowrap` | `.pf-c-log-viewer` | Modifies the log viewer text to not wrap. |
 | `.pf-m-line-numbers` | `.pf-c-log-viewer` | Modifies the log viewer to display line numbers. |
-| `.pf-m-line-number-chars` | `.pf-c-log-viewer` | Modifies the log viewer allow for a custom line number column size. Use with  |
+| `.pf-m-line-number-chars` | `.pf-c-log-viewer` | Modifies the log viewer allow for a custom line number column size. Use with `--pf-c-log-viewer--line-number-chars`. |
 | `.pf-m-dark` | `.pf-c-log-viewer` | Modifies the log viewer content for dark theme. |
 | `.pf-m-match` | `.pf-c-log-viewer__string` | Indicates a string is a search result. |
 | `.pf-m-current` | `.pf-c-log-viewer__string` | Indicates a string is the current search result. |
