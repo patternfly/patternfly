@@ -19,7 +19,15 @@ import './LogViewer.css';
 
 ### With line numbers
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-line-number-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer with line numbers"}}
+{{#> log-viewer log-viewer--id="log-viewer-line-number-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style=""' log-viewer--aria-label="Log viewer with line numbers"}}
+  {{> __log-viewer-toolbar menu--IsHidden="true"}}
+  {{> __log-viewer-main}}
+{{/log-viewer}}
+```
+
+### With line number chars specified
+```hbs
+{{#> log-viewer log-viewer--id="log-viewer-line-number-example" log-viewer--HasLineNumbers="true" log-viewer--modifier="pf-m-line-number-chars" log-viewer--attribute='style="--pf-c-log-viewer--line-number-chars: 6"' log-viewer--aria-label="Log viewer with line numbers"}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
@@ -132,7 +140,9 @@ import './LogViewer.css';
 | `.pf-m-wrap-text` | `.pf-c-log-viewer` | Modifies the log viewer text to wrap. |
 | `.pf-m-nowrap` | `.pf-c-log-viewer` | Modifies the log viewer text to not wrap. |
 | `.pf-m-line-numbers` | `.pf-c-log-viewer` | Modifies the log viewer to display line numbers. |
+| `.pf-m-line-number-chars` | `.pf-c-log-viewer` | Modifies the log viewer allow for a custom line number column size. Use with  |
 | `.pf-m-dark` | `.pf-c-log-viewer` | Modifies the log viewer content for dark theme. |
 | `.pf-m-match` | `.pf-c-log-viewer__string` | Indicates a string is a search result. |
 | `.pf-m-current` | `.pf-c-log-viewer__string` | Indicates a string is the current search result. |
+| `--pf-c-log-viewer--line-number-chars` | `.pf-c-log-viewer` | With a number passed as the value, modifies the width of the line number column to show the specified number of characters. |
 | `--pf-c-log-viewer--MaxHeight{-on-[breakpoint]}: {height}` | `.pf-c-log-viewer` |  Modifies the height value of a log viewer at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
