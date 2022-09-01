@@ -1,10 +1,6 @@
 <{{#if tree-view-node-text--type}}{{tree-view-node-text--type}}{{else}}span{{/if}} class="pf-c-tree-view__node-text{{#if tree-view-node-text--modifier}} {{tree-view-node-text--modifier}}{{/if}}"
   {{#if (concat tree-view-node--IsSelectable tree-view-node--HasCheckbox)}}
-    {{#if tree-view-node--HasCheckbox}}
-     id="checktext-{{{tree-view-node--id}}}"
-    {{else if tree-view-node--IsSelectable}}
-      id="selecttext-{{{tree-view-node--id}}}"
-    {{/if}}
+    id="text-{{{tree-view-node--id}}}"
   {{/if}}
   {{#if tree-view-node-text--attribute}}
     {{{tree-view-node-text--attribute}}}
