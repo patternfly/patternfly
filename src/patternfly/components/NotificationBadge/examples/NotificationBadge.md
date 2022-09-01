@@ -12,43 +12,15 @@ import './NotificationBadge.css'
 
 ```hbs
 <div class="pf-t-dark">
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-read"}}
-    <i class="pf-icon-bell" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
-    <i class="pf-icon-bell" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention notifications"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-attention"}}
-    <i class="pf-icon-attention-bell" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
-
-<br><br>
-
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Tasks"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-read"}}
-    <i class="pf-icon-task" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread tasks"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-unread"}}
-    <i class="pf-icon-task" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention tasks"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-attention"}}
-    <i class="pf-icon-task" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
+  {{> notification-badge notification-badge--aria-label="Notifications"}}
+  {{> notification-badge notification-badge--IsUnread="true" notification-badge--aria-label="Unread notifications"}}
+  {{> notification-badge notification-badge--IsAttention="true" notification-badge--aria-label="Attention notifications"}}
+  <br><br>
+  {{#> wrapper notification-badge--IsTask="true"}}
+    {{> notification-badge notification-badge--aria-label="Tasks"}}
+    {{> notification-badge notification-badge--IsUnread="true" notification-badge--aria-label="Unread tasks"}}
+    {{> notification-badge notification-badge--IsAttention="true" notification-badge--aria-label="Attention tasks"}}
+  {{/wrapper}}
 </div>
 ```
 
@@ -56,60 +28,47 @@ import './NotificationBadge.css'
 
 ```hbs
 <div class="pf-t-dark">
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Notifications"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-read" notification-badge--count="24"}}
-    <i class="pf-icon-bell" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
+  {{#> wrapper notification-badge--count="24"}}
+    {{> notification-badge notification-badge--aria-label=(concat notification-badge--count " notifications")}}
+    {{> notification-badge notification-badge--IsUnread="true" notification-badge--aria-label=(concat notification-badge--count " unread notifications")}}
+    {{> notification-badge notification-badge--IsAttention="true" notification-badge--aria-label=(concat notification-badge--count " attention notifications")}}
+    <br><br>
+    {{#> wrapper notification-badge--IsTask="true"}}
+      {{> notification-badge notification-badge--aria-label=(concat notification-badge--count " tasks")}}
+      {{> notification-badge notification-badge--IsUnread="true" notification-badge--aria-label=(concat notification-badge--count " unread tasks")}}
+      {{> notification-badge notification-badge--IsAttention="true" notification-badge--aria-label=(concat notification-badge--count " attention tasks")}}
+    {{/wrapper}}
+  {{/wrapper}}
+</div>
+```
 
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread notifications"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-unread" notification-badge--count="25"}}
-    <i class="pf-icon-bell" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
+### Expanded
 
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention notifications"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-attention" notification-badge--count="26"}}
-    <i class="pf-icon-attention-bell" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
-
-<br><br>
-
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Tasks"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-read" notification-badge--count="24"}}
-    <i class="pf-icon-task" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Unread tasks"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-unread" notification-badge--count="25"}}
-    <i class="pf-icon-task" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Attention tasks"'}}
-  {{#> notification-badge notification-badge--modifier="pf-m-attention" notification-badge--count="26"}}
-    <i class="pf-icon-task" aria-hidden="true"></i>
-  {{/notification-badge}}
-{{/button}}
+```hbs
+<div class="pf-t-dark">
+  {{#> wrapper notification-badge--IsExpanded="true"}}
+    {{> notification-badge notification-badge--aria-label="Notifications"}}
+    {{> notification-badge notification-badge--IsUnread="true" notification-badge--aria-label="Unread notifications"}}
+    {{> notification-badge notification-badge--IsAttention="true" notification-badge--aria-label="Attention notifications"}}
+    <br><br>
+    {{#> wrapper notification-badge--IsTask="true"}}
+      {{> notification-badge notification-badge--aria-label="Tasks"}}
+      {{> notification-badge notification-badge--IsUnread="true" notification-badge--aria-label="Unread tasks"}}
+      {{> notification-badge notification-badge--IsAttention="true" notification-badge--aria-label="Attention tasks"}}
+    {{/wrapper}}
+  {{/wrapper}}
 </div>
 ```
 
 ## Documentation
 
 ### Overview
-
-Always add a modifier class. Never use the class `.pf-c-notification-badge` on its own. This component is designed to be used within a dark component such as the [masthead](/components/masthead).
-
-Note: The [page component](/components/page) currently handles the selected state styling of the notification badge using the page header tools item styling. If this component is used elsewhere, custom styling may be needed to correctly indicate the selected state.
+Always add a modifier class to indicate read, unread, or attention state. Never use the class `.pf-c-notification-badge` on its own. This component is designed to be used within a dark component such as the [masthead](/components/masthead).
 
 ### Accessibility
-
 Be sure that the component associated with this indicator handles screen reader text indicating read or unread notifications.
 
 ### Usage
-
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-notification-badge` | `<div>` |  Initiates a notification badge. **Always use it with a modifier class.** |
@@ -117,3 +76,4 @@ Be sure that the component associated with this indicator handles screen reader 
 | `.pf-m-read` | `.pf-c-notification-badge` |  Applies read notification badge styling. |
 | `.pf-m-unread` | `.pf-c-notification-badge` |  Applies unread notification badge styling. |
 | `.pf-m-attention` | `.pf-c-notification-badge` |  Applies attention notification badge styling. |
+| `.pf-m-expanded` | `.pf-c-notification-badge` |  Applies expanded notification badge styling. |

@@ -1,5 +1,5 @@
-{{#> check check--type="label" check--attribute=(concat 'for="' id '-' select-menu-item-check--name '"') check--modifier=(concat 'pf-c-select__menu-item' select-menu-item-check--modifier)}}
-  {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' id '-' select-menu-item-check--name '" name="' id '-' select-menu-item-check--name '" ' select-menu-item-check--IsChecked)}}{{/check-input}}
+{{#> check check--type="label" check--attribute=(concat 'for="' select--id '-' select-menu-item-check--name '"') check--modifier=(concat 'pf-c-select__menu-item' select-menu-item-check--modifier)}}
+  {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-' select-menu-item-check--name '" name="' select--id '-' select-menu-item-check--name '" ' select-menu-item-check--IsChecked)}}{{/check-input}}
   {{#> check-label check-label--type="span"}}
     {{>@partial-block}}
   {{/check-label}}

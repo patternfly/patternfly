@@ -9,26 +9,26 @@ import './Select.css'
 ## Single
 ### Single select
 ```hbs
-{{#> select id="select-single"}}Filter by status{{/select}}
+{{#> select select--id="select-single"}}Filter by status{{/select}}
 ```
 
 ### Single expanded
 ```hbs
-{{#> select id="select-single-expanded" select--IsExpanded="true"}}
+{{#> select select--id="select-single-expanded" select--IsExpanded="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Single with top expanded
 ```hbs
-{{#> select id="select-single-top-expanded" select--modifier="pf-m-top" select--IsExpanded="true"}}
+{{#> select select--id="select-single-top-expanded" select--modifier="pf-m-top" select--IsExpanded="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Single expanded and selected
 ```hbs
-{{#> select id="select-single-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true"}}
+{{#> select select--id="select-single-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true"}}
   April
 {{/select}}
 ```
@@ -52,28 +52,28 @@ The single select should be used when the user is selecting an option from a lis
 ## States
 ### Disabled
 ```hbs
-{{#> select id="select-disabled" select-toggle--attribute="disabled"}}
+{{#> select select--id="select-disabled" select-toggle--attribute="disabled"}}
   Filter by status
 {{/select}}
 ```
 
 ### Success
 ```hbs
-{{#> select id="select-success" select--IsSuccess="true"}}
+{{#> select select--id="select-success" select--IsSuccess="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Warning
 ```hbs
-{{#> select id="select-warning" select--IsWarning="true"}}
+{{#> select select--id="select-warning" select--IsWarning="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Invalid
 ```hbs
-{{#> select id="select-invalid" select--IsInvalid="true"}}
+{{#> select select--id="select-invalid" select--IsInvalid="true"}}
   Filter by status
 {{/select}}
 ```
@@ -105,31 +105,31 @@ The single select should be used when the user is selecting an option from a lis
 ## Typeahead
 ### Single with typeahead
 ```hbs
-{{#> select select-toggle--type="div" id="select-single-typeahead" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"}}
+{{#> select select-toggle--type="div" select--id="select-single-typeahead" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"}}
 {{/select}}
 ```
 
 ### Single with typeahead expanded
 ```hbs
-{{#> select select-toggle--type="div" id="select-single-typeahead-expanded" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select--IsCurrentlyTyping="true" select--ItemIsSelected="true" select-typeahead--Placeholder="New"}}
+{{#> select select-toggle--type="div" select--id="select-single-typeahead-expanded" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select--IsCurrentlyTyping="true" select--ItemIsSelected="true" select-typeahead--Placeholder="New"}}
 {{/select}}
 ```
 
 ### Single with typeahead expanded and selected
 ```hbs
-{{#> select select-toggle--type="div" id="select-single-typeahead-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select-typeahead--Placeholder="New Mexico"}}
+{{#> select select-toggle--type="div" select--id="select-single-typeahead-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select-typeahead--Placeholder="New Mexico"}}
 {{/select}}
 ```
 
 ### Disabled with typeahead
 ```hbs
-{{#> select select-toggle--type="div" id="select-single-typeahead-disabled" select--IsTypeahead="true" select--IsDisabled="true" select-toggle--modifier="pf-m-disabled" select-typeahead--Placeholder="Choose a state"}}
+{{#> select select-toggle--type="div" select--id="select-single-typeahead-disabled" select--IsTypeahead="true" select--IsDisabled="true" select-toggle--modifier="pf-m-disabled" select-typeahead--Placeholder="Choose a state"}}
 {{/select}}
 ```
 
 ### Invalid with typeahead
 ```hbs
-{{#> select select-toggle--type="div" id="select-single-typeahead-invalid" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"  select--IsInvalid="true"}}
+{{#> select select-toggle--type="div" select--id="select-single-typeahead-invalid" select--IsTypeahead="true" select-typeahead--Placeholder="Choose a state"  select--IsInvalid="true"}}
 {{/select}}
 ```
 
@@ -159,25 +159,25 @@ The single select typeahead should be used when the user is selecting one option
 ## Typeahead multiselect
 ### Select multi with typeahead
 ```hbs
-{{#> select select-toggle--type="div" id="select-multi-typeahead" select--IsMultiSelect="true" select--IsTypeahead="true" select-typeahead--Placeholder="Choose states"}}
+{{#> select select-toggle--type="div" select--id="select-multi-typeahead" select--IsMultiSelect="true" select--IsTypeahead="true" select-typeahead--Placeholder="Choose states"}}
 {{/select}}
 ```
 
 ### Multi with typeahead (chip group expanded)
 ```hbs
-{{#> select select-toggle--type="div" id="select-multi-typeahead-expanded" select--IsExpandedChips="true" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select-typeahead--Placeholder="Choose states"}}
+{{#> select select-toggle--type="div" select--id="select-multi-typeahead-expanded" select--IsExpandedChips="true" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select-typeahead--Placeholder="Choose states"}}
 {{/select}}
 ```
 
 ### Multi with typeahead (chip group collapsed)
 ```hbs
-{{#> select select-toggle--type="div" id="select-multi-typeahead-expanded-selected" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsCurrentlyTyping="true" select-typeahead--Placeholder="New"}}
+{{#> select select-toggle--type="div" select--id="select-multi-typeahead-expanded-selected" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsCurrentlyTyping="true" select-typeahead--Placeholder="New"}}
 {{/select}}
 ```
 
 ### Multi with typeahead invalid
 ```hbs
-{{#> select select-toggle--type="div" id="select-multi-typeahead-invalid" select--IsExpandedChips="true" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsInvalid="true" select-typeahead--Placeholder="Choose states"}}
+{{#> select select-toggle--type="div" select--id="select-multi-typeahead-invalid" select--IsExpandedChips="true" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsInvalid="true" select-typeahead--Placeholder="Choose states"}}
 {{/select}}
 ```
 
@@ -207,42 +207,42 @@ The multiselect should be used when the user is selecting multiple items from a 
 ## Checkbox
 ### Checkbox select
 ```hbs
-{{#> select id="select-checkbox" select--IsCheckboxSelect="true"}}
+{{#> select select--id="select-checkbox" select--IsCheckboxSelect="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Checkbox expanded
 ```hbs
-{{#> select id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
+{{#> select select--id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
   Filter
 {{/select}}
 ```
 
 ### Checkbox expanded and selected with groups
 ```hbs
-{{#> select id="select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true"}}
+{{#> select select--id="select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Checkbox expanded and selected with groups and filter
 ```hbs
-{{#> select id="select-checkbox-expanded-selected-filter-example" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true" select--IsFilterable="true"}}
+{{#> select select--id="select-checkbox-expanded-selected-filter-example" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true" select--IsFilterable="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Checkbox expanded without badge
 ```hbs
-{{#> select id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--IsNoBadge="true"}}
+{{#> select select--id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--IsNoBadge="true"}}
   Filter
 {{/select}}
 ```
 
 ### Checkbox with counts
 ```hbs
-{{#> select id="select-checkbox-counts" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--HasCounts="true"}}
+{{#> select select--id="select-checkbox-counts" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--HasCounts="true"}}
   Filter
 {{/select}}
 ```
@@ -275,14 +275,14 @@ The checkbox select can select multiple items using checkboxes. The number of it
 ## Plain
 ### Plain toggle
 ```hbs
-{{#> select id="select-plain" select-toggle--modifier="pf-m-plain"}}
+{{#> select select--id="select-plain" select-toggle--modifier="pf-m-plain"}}
   Filter by status
 {{/select}}
 ```
 
 ### Plain toggle expanded
 ```hbs
-{{#> select id="select-plain-expanded" select--IsExpanded="true" select-toggle--modifier="pf-m-plain"}}
+{{#> select select--id="select-plain-expanded" select--IsExpanded="true" select-toggle--modifier="pf-m-plain"}}
   Filter by status
 {{/select}}
 ```
@@ -306,7 +306,7 @@ The plain select variation should be used when you do not want a border applied 
 ## Icon
 ### Toggle icon
 ```hbs
-{{#> select id="select-icon" select-toggle--icon="fas fa-filter"}}
+{{#> select select--id="select-icon" select-toggle--icon="fas fa-filter"}}
   Filter by status
 {{/select}}
 ```
@@ -328,7 +328,7 @@ The plain select variation should be used when you do not want a border applied 
 ## Panel
 ### Panel menu
 ```hbs
-{{#> select id="select-panel" select--IsExpanded="true" select-menu--type="div" select--IsEmptyMenu="true"}}
+{{#> select select--id="select-panel" select--IsExpanded="true" select-menu--type="div" select--IsEmptyMenu="true"}}
   Filter by status
 {{/select}}
 ```
@@ -345,14 +345,14 @@ The plain select variation should be used when you do not want a border applied 
 ## Description
 ### Item description
 ```hbs
-{{#> select id="select-with-description" select--IsDescriptive="true" select--IsExpanded="true"}}
+{{#> select select--id="select-with-description" select--IsDescriptive="true" select--IsExpanded="true"}}
   Select with description
 {{/select}}
 ```
 
 ### Checkbox item description
 ```hbs
-{{#> select id="select-checkbox-description" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
+{{#> select select--id="select-checkbox-description" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
   Filter
 {{/select}}
 ```
@@ -367,7 +367,7 @@ The plain select variation should be used when you do not want a border applied 
 ## Favorites
 ### Menu item favorites
 ```hbs
-{{#> select id="select-favorites" select--IsExpanded="true" select--IsFavorites="true"}}
+{{#> select select--id="select-favorites" select--IsExpanded="true" select--IsFavorites="true"}}
   Favorites
 {{/select}}
 ```
@@ -390,7 +390,7 @@ The plain select variation should be used when you do not want a border applied 
 ## View more
 ### View more menu item
 ```hbs isBeta
-{{#> select id="select-single-view-more" select--IsExpanded="true" select--IsLoad="true"}}
+{{#> select select--id="select-single-view-more" select--IsExpanded="true" select--IsLoad="true"}}
   Filter by status
 {{/select}}
 ```
@@ -403,7 +403,7 @@ The plain select variation should be used when you do not want a border applied 
 ## Loading
 ### Loading menu item
 ```hbs isBeta
-{{#> select id="select-single-loading" select--IsExpanded="true" select--IsLoading="true"}}
+{{#> select select--id="select-single-loading" select--IsExpanded="true" select--IsLoading="true"}}
   Filter by status
 {{/select}}
 ```
@@ -417,7 +417,7 @@ The plain select variation should be used when you do not want a border applied 
 ## Footer
 ### Menu footer
 ```hbs
-{{#> select id="select-single-footer" select--IsExpanded="true" select--IsLoading="true" select--HasFooter="true" select-menu--type="div"}}
+{{#> select select--id="select-single-footer" select--IsExpanded="true" select--IsLoading="true" select--HasFooter="true" select-menu--type="div"}}
   Filter by status
 {{/select}}
 ```
@@ -431,28 +431,28 @@ The plain select variation should be used when you do not want a border applied 
 ## Placeholder
 ### Placeholder collapsed
 ```hbs
-{{#> select id="select-placeholder-collapsed" select--IsPlaceholder="true"}}
+{{#> select select--id="select-placeholder-collapsed" select--IsPlaceholder="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Placeholder expanded
 ```hbs
-{{#> select id="select-placeholder-expanded" select--IsExpanded="true" select--IsPlaceholder="true"}}
+{{#> select select--id="select-placeholder-expanded" select--IsExpanded="true" select--IsPlaceholder="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Placeholder item disabled
 ```hbs
-{{#> select id="select-placeholder-item-disabled" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true" select--PlaceholderItemDisabled="true"}}
+{{#> select select--id="select-placeholder-item-disabled" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true" select--PlaceholderItemDisabled="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Placeholder item enabled
 ```hbs
-{{#> select id="select-placeholder-item-enabled" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true"}}
+{{#> select select--id="select-placeholder-item-enabled" select--IsExpanded="true" select--IsPlaceholder="true" select--HasPlaceholderItem="true"}}
   Filter by status
 {{/select}}
 ```
