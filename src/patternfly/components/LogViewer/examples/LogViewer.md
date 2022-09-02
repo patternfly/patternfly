@@ -27,7 +27,7 @@ import './LogViewer.css';
 
 ### With line number chars specified
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-line-number-example" log-viewer--HasLineNumbers="true" log-viewer--modifier="pf-m-line-number-chars" log-viewer--attribute='style="--pf-c-log-viewer--line-number-chars: 6"' log-viewer--aria-label="Log viewer with line numbers"}}
+{{#> log-viewer log-viewer--id="log-viewer-line-number-chars-example" log-viewer--HasLineNumbers="true" log-viewer--modifier="pf-m-line-number-chars" log-viewer--attribute='style="--pf-c-log-viewer--line-number-chars: 6"' log-viewer--aria-label="Log viewer with line numbers"}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}

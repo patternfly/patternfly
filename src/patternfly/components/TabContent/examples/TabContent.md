@@ -7,32 +7,32 @@ cssPrefix: pf-c-tab-content
 ## Examples
 ### Basic
 ```hbs
-{{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="tab1-panel"'}}
+{{#> tab-content tab-content--IsActive="true" tab-content--attribute='id="basic-tab1-panel"'}}
   Panel 1
 {{/tab-content}}
-{{#> tab-content tab-content--attribute='id="tab2-panel"'}}
+{{#> tab-content tab-content--attribute='id="basic-tab2-panel"'}}
   Panel 2
 {{/tab-content}}
-{{#> tab-content tab-content--attribute='id="tab3-panel"'}}
+{{#> tab-content tab-content--attribute='id="basic-tab3-panel"'}}
   Panel 3
 {{/tab-content}}
-{{#> tab-content tab-content--attribute='id="tab4-panel"'}}
+{{#> tab-content tab-content--attribute='id="basic-tab4-panel"'}}
   Panel 4
 {{/tab-content}}
 ```
 
 ### Padding
 ```hbs
-{{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--IsActive="true" tab-content--attribute='id="tab1-panel"'}}
+{{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--IsActive="true" tab-content--attribute='id="tab1-panel-with-padding"'}}
   Panel 1
 {{/tab-content}}
-{{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--attribute='id="tab2-panel"'}}
+{{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--attribute='id="tab2-panel-with-padding"'}}
   Panel 2
 {{/tab-content}}
-{{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--attribute='id="tab3-panel"'}}
+{{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--attribute='id="tab3-panel-with-padding"'}}
   Panel 3
 {{/tab-content}}
-{{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--attribute='id="tab4-panel"'}}
+{{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--attribute='id="tab4-panel-with-padding"'}}
   Panel 4
 {{/tab-content}}
 ```
@@ -42,13 +42,13 @@ cssPrefix: pf-c-tab-content
 {{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--IsActive="true" tab-content--attribute='id="light-300-tab1-panel"'}}
   Panel 1
 {{/tab-content}}
-{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="tab2-panel"'}}
+{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="light-300-tab2-panel"'}}
   Panel 2
 {{/tab-content}}
-{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="tab3-panel"'}}
+{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="light-300-tab3-panel"'}}
   Panel 3
 {{/tab-content}}
-{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="tab4-panel"'}}
+{{#> tab-content tab-content--modifier="pf-m-light-300" tab-content--attribute='id="light-300-tab4-panel"'}}
   Panel 4
 {{/tab-content}}
 ```
