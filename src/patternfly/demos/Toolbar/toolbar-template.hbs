@@ -54,7 +54,7 @@ Options: [
       {{!-- mobile sort dropdown --}}
       {{#if toolbar-template--HasSortButtonMobile}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
-          {{#> options-menu options-menu--IsExpanded="true" id="{{toolbar--id}}-sort-mobile-menu"}}
+          {{#> options-menu options-menu--IsExpanded="true" options-menu--id="{{toolbar--id}}-sort-mobile-menu"}}
             {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
               <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
             {{/options-menu-toggle}}
@@ -168,7 +168,7 @@ Options: [
       {{#unless toolbar-template--HasNoPagination}}
         {{#> toolbar-item toolbar-item--modifier='pf-m-pagination'}}
           {{#> pagination pagination--IsCompact="true"}}
-            {{> pagination-options-menu id=(concat toolbar--id '-top-pagination')}}
+            {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-top-pagination')}}
             {{> pagination-nav-content pagination-nav--aria-label="Toolbar top pagination"}}
           {{/pagination}}
         {{/toolbar-item}}

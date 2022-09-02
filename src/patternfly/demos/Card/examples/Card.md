@@ -755,7 +755,7 @@ import './Card.css'
         {{/title}}
       {{/card-title}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
+        {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Filter
         {{/select}}
       {{/card-actions}}
@@ -964,7 +964,7 @@ import './Card.css'
         </span>
       {{/l-flex}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset" card-actions--attribute='style="padding-top: 1px;"'}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
+        {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Filter
         {{/select}}
       {{/card-actions}}
@@ -1017,7 +1017,7 @@ import './Card.css'
   {{#> card card--id="card-log-view-example"}}
     {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
+        {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Most recent
         {{/select}}
       {{/card-actions}}
@@ -1091,7 +1091,7 @@ import './Card.css'
   {{#> card card--id="card-events-view-example"}}
     {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
-        {{#> select id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
+        {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Status
         {{/select}}
       {{/card-actions}}
