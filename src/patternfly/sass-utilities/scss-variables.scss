@@ -14,6 +14,7 @@ $pf-global--disable-fontawesome: false !default;
 $pf-global--load-pf-3: false !default;
 $pf-global--enable-shield: false !default;
 $pf-global--unset-root-font-size: true !default;
+$pf-global--exclude-sidebar-in-breakpoints: false !default; // use this variable to enable page breakpoint minus sidebar width. this is for breakpoint within iframe support
 
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
@@ -166,6 +167,16 @@ $pf-global--breakpoint--md: 768px !default;
 $pf-global--breakpoint--lg: 992px !default;
 $pf-global--breakpoint--xl: 1200px !default;
 $pf-global--breakpoint--2xl: 1450px !default;
+
+// Redefine grid breakpoints
+@if $pf-global--exclude-sidebar-in-breakpoints {
+  $pf-global--breakpoint--xs: 0;
+  $pf-global--breakpoint--sm: 236px;
+  $pf-global--breakpoint--md: 428px;
+  $pf-global--breakpoint--lg: 652px;
+  $pf-global--breakpoint--xl: 860px;
+  $pf-global--breakpoint--2xl: 1110px;
+}
 
 // Height breakpoints
 $pf-global--height-breakpoint--sm: 0 !default;
