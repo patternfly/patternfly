@@ -127,6 +127,10 @@ Standard
 Readonly
 {{/form-control}}
 <br><br>
+{{#> form-control controlType="textarea" form-control--modifier='pf-m-plain' form-control--attribute='readonly name="textarea-plain-readonly" id="textarea-plain-readonly" aria-label="Plain readonly textarea example"'}}
+Readonly
+{{/form-control}}
+<br><br>
 {{#> form-control controlType="textarea" form-control--attribute='disabled name="textarea-disabled" id="textarea-disabled" aria-label="Disabled textarea example"'}}
 Disabled
 {{/form-control}}
@@ -243,3 +247,4 @@ Error
 | `.pf-m-clock` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the clock icon. |
 | `.pf-m-expanded` | `input.pf-c-form-control` | Modifies a form control for the expanded state. This is used when clicking in the text input toggles something open/closed. |
 | `.pf-m-placeholder` | `select.pf-c-form-control` | Modifies a form select for placeholder styles. This modifier is set programatically based on the chosen option. |
+| `.pf-m-plain` | `input[readonly].pf-c-form-control`, `textarea[readonly].pf-c-form-control` | Modifies an `<input>` or `<textarea>` with a `readonly` attribute to be presented as normal text. |
