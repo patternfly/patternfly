@@ -127,8 +127,8 @@ Standard
 Readonly
 {{/form-control}}
 <br><br>
-{{#> form-control controlType="textarea" form-control--modifier='pf-m-plain' form-control--attribute='readonly name="textarea-plain-readonly" id="textarea-plain-readonly" aria-label="Plain readonly textarea example"'}}
-Readonly
+{{#> form-control controlType="textarea" form-control--modifier='pf-m-plain' form-control--attribute='readonly name="textarea-readonly-plain" id="textarea-readonly-plain" aria-label="Readonly plain textarea example"'}}
+Readonly plain
 {{/form-control}}
 <br><br>
 {{#> form-control controlType="textarea" form-control--attribute='disabled name="textarea-disabled" id="textarea-disabled" aria-label="Disabled textarea example"'}}
