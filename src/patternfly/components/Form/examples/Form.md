@@ -432,6 +432,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__field-group-header-actions` | `<div>` | Initiates the form field group actions container. |
 | `.pf-c-form__field-group-body` | `<div>` | Initiates the form field group body. |
 | `.pf-m-horizontal{-on-[xs, sm, md, lg, xl, 2xl]}` | `.pf-c-form` | Modifies the form for a horizontal layout at an optional breakpoint. The default breakpoint is `-md`. |
+| `.pf-m-limit-width` | `.pf-c-form` | Limits the overall max-width of the form. Configurable by defining `--pf-c-form--m-limit-width--MaxWidth`. |
 | `.pf-m-info` | `.pf-c-form__group-label` | Modifies the form group label to contain form group label info. |
 | `.pf-m-action` | `.pf-c-form__group` | Modifies form group margin-top. |
 | `.pf-m-success` | `.pf-c-form__helper-text` | Modifies text color of helper text for success state. |
@@ -443,3 +444,4 @@ cssPrefix: pf-c-form
 | `.pf-m-inline` | `.pf-c-form__group-control` | Modifies form group children to be inline (this is primarily for radio buttons and checkboxes). |
 | `.pf-m-stack` | `.pf-c-form__group-control` | Modifies form group children to be stacked with space between children. |
 | `.pf-m-expanded` | `.pf-c-form__field-group` | Modifies an expandable field group for the expanded state. |
+| `--pf-c-form--m-limit-width--MaxWidth` | `.pf-c-form.pf-m-limit-width` | Sets a custom `max-width` for a width limited form. |
