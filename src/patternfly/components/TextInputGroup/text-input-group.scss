@@ -83,6 +83,7 @@
 .pf-c-text-input-group__main {
   display: flex;
   flex: 1;
+  flex-wrap: wrap;
   gap: var(--pf-global--spacer--sm);
   min-width: 0;
 
