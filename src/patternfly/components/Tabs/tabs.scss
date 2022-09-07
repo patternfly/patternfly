@@ -16,12 +16,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
   --pf-c-tabs--m-page-insets--xl--inset: var(--pf-global--spacer--lg); // make this the default inset at breaking change
 
-  // Expandable
-  --pf-c-tabs--m-expandable__toggle--MarginTop: var(--pf-global--spacer--sm);
-
   // Vertical
   --pf-c-tabs--m-vertical--Width: 100%;
-  --pf-c-tabs--m-vertical--MaxWidth: auto;
+  --pf-c-tabs--m-vertical--MaxWidth: #{pf-size-prem(250px)};
   --pf-c-tabs--m-vertical--m-box--inset: var(--pf-global--spacer--xl);
   --pf-c-tabs--m-vertical__list--before--BorderColor: var(--pf-c-tabs--before--BorderColor);
   --pf-c-tabs--m-vertical__list--before--BorderTopWidth: 0;
@@ -349,6 +346,21 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     padding: 0; // Because vertical variant has no scroll buttons, reset padding
     overflow: visible; // remove in breaking change release
 
+    &.pf-m-sticky::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: solid var(--pf-c-tabs--m-vertical__list--before--BorderColor);
+      border-width: var(--pf-c-tabs--m-vertical__list--before--BorderTopWidth) var(--pf-c-tabs--m-vertical__list--before--BorderRightWidth) var(--pf-c-tabs--m-vertical__list--before--BorderBottomWidth) var(--pf-c-tabs--m-vertical__list--before--BorderLeftWidth);
+
+
+      .pf-c-tabs__list::before {
+        display: none; // update at breaking change
+      }
+    }
+
     .pf-c-tabs__list {
       position: relative;
       flex-direction: column;
@@ -414,10 +426,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       --pf-c-tabs--m-vertical__item--MarginTop: 0;
       --pf-c-tabs--m-vertical__item--MarginBottom: 0;
       --pf-c-tabs--m-vertical--m-expandable--before--Left: var(--pf-c-tabs__link--before--Left); // reset left border for box variant
-    }
-
-    .pf-c-tabs__toggle {
-      margin-top: var(--pf-c-tabs--m-expandable__toggle--MarginTop);
     }
   }
 
@@ -521,6 +529,26 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       overflow: visible;
     }
   }
+
+  &.pf-m-sticky .pf-c-tabs__list {
+    position: sticky;
+    top: calc(var(--pf-c-tabs--inset) * -1);
+    flex-grow: 0;
+  }
+
+  &.pf-m-vertical.pf-m-box::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: solid var(--pf-c-tabs--m-vertical__list--before--BorderColor);
+    border-width: var(--pf-c-tabs--m-vertical__list--before--BorderTopWidth) var(--pf-c-tabs--m-vertical__list--before--BorderRightWidth) var(--pf-c-tabs--m-vertical__list--before--BorderBottomWidth) var(--pf-c-tabs--m-vertical__list--before--BorderLeftWidth);
+
+    .pf-c-tabs__list::before {
+      display: contents; // update at breaking change
+    }
+  }
 }
 
 // Expandable toggle
@@ -570,6 +598,10 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   scroll-snap-type: var(--pf-c-tabs__list--ScrollSnapType);
   visibility: var(--pf-c-tabs__list--Visibility);
   -webkit-overflow-scrolling: touch;
+
+  &::before {
+    left: var(--pf-c-tabs__list--before--Left);
+  }
 }
 
 // Tabs item
@@ -635,9 +667,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   border: 0;
 }
 
-.pf-c-tabs__list::before {
-  left: var(--pf-c-tabs__list--before--Left);
-}
 
 // Tab link
 .pf-c-tabs__link {

@@ -194,7 +194,7 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
-### Box vertical
+### Vertical box
 ```hbs
 {{#> tabs tabs--id="box-vertical-example" tabs--modifier="pf-m-box pf-m-vertical"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
@@ -217,7 +217,7 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
-### Vertical, box, expanded
+### Vertical box expanded
 ```hbs
 {{#> tabs tabs--id="vertical-box-expanded-example" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical pf-m-box"}}
   {{> tabs-toggle}}
@@ -348,6 +348,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-border-bottom` | `.pf-c-tabs` | Adds a bottom border to secondary tabs. |
 | `.pf-m-box` | `.pf-c-tabs` | Applies box styling to the tab component. |
 | `.pf-m-vertical` | `.pf-c-tabs` | Applies vertical styling to the tab component. |
+| `.pf-m-sticky` | `.pf-c-tabs.pf-m-vertical` | Modifies tab list to be sticky to the top of its container. |
 | `.pf-m-fill` | `.pf-c-tabs` | Modifies the tabs to fill the available space. |
 | `.pf-m-current` | `.pf-c-tabs__item` | Indicates that a tab item is currently selected. |
 | `.pf-m-action` | `.pf-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |

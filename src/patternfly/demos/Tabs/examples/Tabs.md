@@ -293,7 +293,7 @@ section: components
     {{#> card}}
       {{#> sidebar sidebar--id="vertical-tabs-example"}}
         {{#> sidebar-panel}}
-          {{#> tabs tabs--id=(concat sidebar--id '-tabs') tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-expandable pf-m-non-expandable-on-md pf-m-expanded"}}
+          {{#> tabs tabs--id=(concat sidebar--id '-tabs') tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expanded"}}
             {{> tabs-toggle}}
             {{#> tabs-list}}
               {{> __tabs-item
@@ -336,7 +336,7 @@ section: components
     {{#> card}}
       {{#> sidebar sidebar--id="vertical-tabs-example"}}
         {{#> sidebar-panel}}
-          {{#> tabs tabs--id=(concat sidebar--id '-tabs') tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-box pf-m-expandable pf-m-non-expandable-on-md pf-m-expanded"}}
+          {{#> tabs tabs--id=(concat sidebar--id '-tabs') tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-box pf-m-non-expandable-on-md pf-m-expanded"}}
             {{> tabs-toggle}}
             {{#> tabs-list}}
               {{> __tabs-item
@@ -377,9 +377,9 @@ section: components
   {{> page-template-title}}
   {{#> page-main-section}}
     {{#> card card--modifier="pf-m-full-height"}}
-      {{#> sidebar sidebar--id="vertical-tabs-example-full-height" sidebar--modifier="pf-m-full-height"}}
-        {{#> sidebar-panel}}
-          {{#> tabs tabs--id=(concat sidebar--id '-tabs') tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-box pf-m-expandable pf-m-non-expandable-on-md pf-m-expanded"}}
+      {{#> sidebar sidebar--id="vertical-tabs-example-full-height"}}
+        {{#> sidebar-panel sidebar-panel--modifier="pf-m-full-height"}}
+          {{#> tabs tabs--id=(concat sidebar--id '-tabs') tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-box pf-m-non-expandable-on-md pf-m-expanded pf-m-sticky"}}
             {{> tabs-toggle}}
             {{#> tabs-list}}
               {{> __tabs-item
@@ -398,6 +398,26 @@ section: components
         {{/sidebar-panel}}
         {{#> sidebar-content tab-content--id=(concat sidebar--id "-tabs")}}
           {{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--IsActive="true" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-pod-info-link" id="' tab-content--id '-pod-info-panel"')}}
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
+            <p>Pod information content</p>
             <p>Pod information content</p>
           {{/tab-content}}
           {{#> tab-content tab-content-body--modifier="pf-m-padding" tab-content--attribute=(concat 'aria-labelledby="' tab-content--id '-editable-aspects-link" id="' tab-content--id '-editable-aspects-panel"')}}
