@@ -125,8 +125,6 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --pf-c-progress-stepper--m-center__step-main--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-progress-stepper--m-center__step-main--MarginLeft: var(--pf-global--spacer--xs);
   --pf-c-progress-stepper--m-center__step-main--TextAlign: center;
-  --pf-c-progress-stepper--m-center__step-title--TextAlign: auto;
-  --pf-c-progress-stepper--m-center__step-description--TextAlign: auto;
   --pf-c-progress-stepper--m-center__step-description--MarginRight: 0;
   --pf-c-progress-stepper--m-center__step-description--MarginLeft: 0;
 
@@ -202,11 +200,11 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     --pf-c-progress-stepper__step-connector--JustifyContent: var(--pf-c-progress-stepper--m-center__step-connector--JustifyContent);
     --pf-c-progress-stepper__step-main--MarginRight: var(--pf-c-progress-stepper--m-center__step-main--MarginRight);
     --pf-c-progress-stepper__step-main--MarginLeft: var(--pf-c-progress-stepper--m-center__step-main--MarginLeft);
-    --pf-c-progress-stepper--step-main--TextAlign: var(--pf-c-progress-stepper--m-center__step-main--TextAlign);
-    --pf-c-progress-stepper__step-title--TextAlign: var(--pf-c-progress-stepper--m-center__step-title--TextAlign);
+    --pf-c-progress-stepper--step-main--TextAlign: var(--pf-c-progress-stepper--m-center__step-main--TextAlign, auto);
+    --pf-c-progress-stepper__step-title--TextAlign: var(--pf-c-progress-stepper--m-center__step-title--TextAlign, auto);
     --pf-c-progress-stepper__step-description--MarginRight: var(--pf-c-progress-stepper--m-center__step-description--MarginRight);
     --pf-c-progress-stepper__step-description--MarginLeft: var(--pf-c-progress-stepper--m-center__step-description--MarginLeft);
-    --pf-c-progress-stepper__step-description--TextAlign: var(--pf-c-progress-stepper--m-center__step-description--TextAlign);
+    --pf-c-progress-stepper__step-description--TextAlign: var(--pf-c-progress-stepper--m-center__step-description--TextAlign, auto);
     --pf-c-progress-stepper--m-vertical__step-main--MarginRight: var(--pf-c-progress-stepper--m-vertical--m-center__step-main--MarginRight);
     --pf-c-progress-stepper--m-vertical__step-main--MarginLeft: var(--pf-c-progress-stepper--m-vertical--m-center__step-main--MarginLeft);
 
@@ -371,7 +369,7 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   min-width: 0;
   margin: var(--pf-c-progress-stepper__step-main--MarginTop) var(--pf-c-progress-stepper__step-main--MarginRight) var(--pf-c-progress-stepper__step-main--MarginBottom) var(--pf-c-progress-stepper__step-main--MarginLeft);
   text-align: var(--pf-c-progress-stepper--step-main--TextAlign, auto);
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 
   // Draw a new border for vertical alignment using step main
   .pf-c-progress-stepper__step:not(:last-of-type) > &::before {
@@ -390,7 +388,6 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   font-weight: var(--pf-c-progress-stepper__step-title--FontWeight);
   color: var(--pf-c-progress-stepper__step-title--Color);
   text-align: var(--pf-c-progress-stepper__step-title--TextAlign);
-  overflow-wrap: anywhere;
   border: 0;
 
   &.pf-m-help-text {
@@ -419,7 +416,6 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   font-size: var(--pf-c-progress-stepper__step-description--FontSize);
   color: var(--pf-c-progress-stepper__step-description--Color);
   text-align: var(--pf-c-progress-stepper__step-description--TextAlign);
-  overflow-wrap: anywhere;
 }
 
 // stylelint-disable no-duplicate-selectors
