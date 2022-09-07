@@ -18,6 +18,8 @@ import './FormControl.css'
 <br><br>
 {{> form-control controlType="input" input="true" form-control--attribute='readonly type="text" value="Readonly" id="input-readonly" aria-label="Readonly input example"'}}
 <br><br>
+{{> form-control controlType="input" input="true" form-control--modifier="pf-m-plain" form-control--attribute='readonly type="text" value="Readonly plain" id="input-readonly-plain" aria-label="Readonly plain input example"'}}
+<br><br>
 {{> form-control controlType="input" input="true" form-control--attribute='disabled type="text" value="Disabled" id="input-disabled" aria-label="Disabled input example"'}}
 <br><br>
 {{> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute='type="text" value="Success" id="input-success" aria-label="Success state input example"'}}
@@ -123,6 +125,10 @@ Standard
 <br><br>
 {{#> form-control controlType="textarea" form-control--attribute='readonly name="textarea-readonly" id="textarea-readonly" aria-label="Readonly textarea example"'}}
 Readonly
+{{/form-control}}
+<br><br>
+{{#> form-control controlType="textarea" form-control--modifier='pf-m-plain' form-control--attribute='readonly name="textarea-readonly-plain" id="textarea-readonly-plain" aria-label="Readonly plain textarea example"'}}
+Readonly plain
 {{/form-control}}
 <br><br>
 {{#> form-control controlType="textarea" form-control--attribute='disabled name="textarea-disabled" id="textarea-disabled" aria-label="Disabled textarea example"'}}
@@ -241,3 +247,4 @@ Error
 | `.pf-m-clock` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the clock icon. |
 | `.pf-m-expanded` | `input.pf-c-form-control` | Modifies a form control for the expanded state. This is used when clicking in the text input toggles something open/closed. |
 | `.pf-m-placeholder` | `select.pf-c-form-control` | Modifies a form select for placeholder styles. This modifier is set programatically based on the chosen option. |
+| `.pf-m-plain` | `input[readonly].pf-c-form-control`, `textarea[readonly].pf-c-form-control` | Modifies an `<input>` or `<textarea>` with a `readonly` attribute to be presented as normal text. |
