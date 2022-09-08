@@ -14,7 +14,7 @@ $pf-global--disable-fontawesome: false !default;
 $pf-global--load-pf-3: false !default;
 $pf-global--enable-shield: false !default;
 $pf-global--unset-root-font-size: true !default;
-$pf-global--exclude-sidebar-in-breakpoints: false !default; // use this variable to enable page breakpoint minus sidebar width. this is for breakpoint within iframe support
+$pf-global--page-width-breakpoints: false !default;
 
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
@@ -152,6 +152,10 @@ $pf-global--spacer--form-element: pf-size-prem(6px) !default;
 $pf-global--gutter: $pf-global--spacer--md !default;
 $pf-global--gutter--md: $pf-global--spacer--lg !default;
 
+
+// Pade sidebar width
+$pf-global--sidebar--Width: 290px !default;
+
 // Z-Index
 $pf-global--ZIndex--xs: 100;
 $pf-global--ZIndex--sm: 200;
@@ -167,16 +171,6 @@ $pf-global--breakpoint--md: 768px !default;
 $pf-global--breakpoint--lg: 992px !default;
 $pf-global--breakpoint--xl: 1200px !default;
 $pf-global--breakpoint--2xl: 1450px !default;
-
-// Redefine grid breakpoints
-@if $pf-global--exclude-sidebar-in-breakpoints {
-  $pf-global--breakpoint--xs: 0;
-  $pf-global--breakpoint--sm: 236px;
-  $pf-global--breakpoint--md: 428px;
-  $pf-global--breakpoint--lg: 652px;
-  $pf-global--breakpoint--xl: 860px;
-  $pf-global--breakpoint--2xl: 1110px;
-}
 
 // Height breakpoints
 $pf-global--height-breakpoint--sm: 0 !default;
@@ -343,3 +337,12 @@ $pf-global--spacer-map: (
   "3xl": "var(--pf-global--spacer--3xl)",
   "4xl": "var(--pf-global--spacer--4xl)"
 );
+
+// Modified grid breakpoints
+@if $pf-global--page-width-breakpoints {
+  $pf-global--breakpoint--sm: pf-offset-variable-value($pf-global--breakpoint--sm, $pf-global--sidebar--Width);
+  $pf-global--breakpoint--md: pf-offset-variable-value($pf-global--breakpoint--md, $pf-global--sidebar--Width);
+  $pf-global--breakpoint--lg: pf-offset-variable-value($pf-global--breakpoint--lg, $pf-global--sidebar--Width);
+  $pf-global--breakpoint--xl: pf-offset-variable-value($pf-global--breakpoint--xl, $pf-global--sidebar--Width);
+  $pf-global--breakpoint--2xl: pf-offset-variable-value($pf-global--breakpoint--2xl, $pf-global--sidebar--Width);
+}

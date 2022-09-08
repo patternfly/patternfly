@@ -8,6 +8,7 @@
 When you install PatternFly 4, the package includes:
 
 - a single file for the entire compiled library: `node_modules/@patternfly/patternfly/patternfly.css`
+- a single file for the entire compiled library, with page based breakpoints: `node_modules/@patternfly/patternfly/patternfly-page-width-breakpoints.css`
 - individual files with each component compiled separately: `node_modules/@patternfly/patternfly/<ComponentName>/styles.css`
 - a single file for the entire library's source (SASS): `node_modules/@patternfly/patternfly/patternfly.scss`
 - individual files for each component's source (SASS): `node_modules/@patternfly/patternfly/<ComponentName>/styles.scss`

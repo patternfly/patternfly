@@ -28,6 +28,11 @@
   @return #{$breakpoint-value};
 }
 
+// Return variable value minus offset. Negative values can be used.
+@function pf-offset-variable-value($var, $offset: null) {
+  @return($var - $offset);
+}
+
 // Return height breakpoint value if it exists
 @function pf-height-breakpoint-value($height-breakpoint, $height-breakpoint-map: $pf-global--height-breakpoint-name-map) {
   $height-breakpoint-value: if(map-has-key($height-breakpoint-map, #{$height-breakpoint}), map-get($height-breakpoint-map, #{$height-breakpoint}), false);
