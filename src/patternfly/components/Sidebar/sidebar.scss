@@ -130,15 +130,31 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --pf-c-sidebar--child--Height: var(--pf-c-sidebar--m-split--child--Height);
   }
 
+  // disable borders on default layout switch
+  &:where(:not(.pf-m-split)) .pf-c-tabs {
+    --pf-c-tabs__link--before--BorderRightColor: transparent;
+    --pf-c-tabs--m-vertical__list--before--BorderColor: transparent;
+
+    @media (min-width: $pf-global--breakpoint--md) {
+      --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs--before--BorderColor);
+      --pf-c-tabs--m-vertical__list--before--BorderColor: var(--pf-c-tabs--before--BorderColor);
+    }
+  }
+
   height: 100%;
 }
 
+// Height options apply to the default layout switch (stack to split at $md breakpoint) and the split variant default
 .pf-c-sidebar__content,
 .pf-c-sidebar__panel {
   height: var(--pf-c-sidebar--child--Height);
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-sidebar--child--Height: var(--pf-c-sidebar--child--md--Height);
+  }
+
+  @at-root .pf-c-sidebar.pf-m-split & {
+    --pf-c-sidebar--child--Height: var(--pf-c-sidebar--m-split--child--Height);
   }
 
   &.pf-m-full-height {
@@ -175,17 +191,7 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   }
 
   > .pf-c-tabs {
-    --pf-c-tabs--m-vertical--MaxWidth: auto; // when tabs are part of the sidebar, unset max width
-
-    &.pf-m-vertical.pf-m-box {
-      --pf-c-tabs__link--before--BorderRightColor: transparent;
-      --pf-c-tabs--m-vertical__list--before--BorderColor: transparent;
-
-      @media (min-width: $pf-global--breakpoint--md) {
-        --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs--before--BorderColor);
-        --pf-c-tabs--m-vertical__list--before--BorderColor: var(--pf-c-tabs--before--BorderColor);
-      }
-    }
+    --pf-c-tabs--m-vertical--MaxWidth: auto; // when tabs are part of the sidebar, unset max width allowing them to fill sidebar
   }
 }
 

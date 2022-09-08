@@ -410,8 +410,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 
   &.pf-m-vertical.pf-m-expandable {
-    --pf-c-tabs__link--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--sm));
-    --pf-c-tabs__link--before--BorderRightColor: transparent;
+    --pf-c-tabs__link--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--sm)); // updated vertical expandable padding to match toggle
     --pf-c-tabs__list--before--Left: var(--pf-c-tabs--m-vertical--m-expandable--before--Left);
 
     // stylelint-disable selector-max-class
