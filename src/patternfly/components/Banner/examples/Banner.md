@@ -14,7 +14,7 @@ cssPrefix: pf-c-banner
 <br>
 
 {{#> banner banner--modifier="pf-m-info"}}
-  Info banner
+  Info banner 
 {{/banner}}
 
 <br>
