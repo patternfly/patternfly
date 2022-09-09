@@ -13,26 +13,26 @@ cssPrefix: pf-c-banner
 
 <br>
 
-{{#> banner banner--modifier="pf-m-info"}}
-  Info banner 
+{{#> banner banner--modifier="pf-m-blue"}}
+  Blue banner 
 {{/banner}}
 
 <br>
 
-{{#> banner banner--modifier="pf-m-danger"}}
-  Danger banner
+{{#> banner banner--modifier="pf-m-red"}}
+  Red banner
 {{/banner}}
 
 <br>
 
-{{#> banner banner--modifier="pf-m-success"}}
-  Success banner
+{{#> banner banner--modifier="pf-m-green"}}
+  Green banner
 {{/banner}}
 
 <br>
 
-{{#> banner banner--modifier="pf-m-warning"}}
-  Warning banner
+{{#> banner banner--modifier="pf-m-gold"}}
+  Gold banner
 {{/banner}}
 ```
 
@@ -51,24 +51,97 @@ cssPrefix: pf-c-banner
   disabled link</a>
 {{/banner}}
 <br>
-{{#> banner banner--modifier="pf-m-info"}}
-  Info banner with an 
+{{#> banner banner--modifier="pf-m-blue"}}
+  Blue banner with an 
   {{#> button button--modifier="pf-m-inline pf-m-link"}}
     inline link button
   {{/button}}
 {{/banner}}
 <br>
-{{#> banner banner--modifier="pf-m-warning"}}
-  Warning banner with an 
+{{#> banner banner--modifier="pf-m-gold"}}
+  Gold banner with an 
   {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-inline pf-m-link"}}
   inline link button (anchor){{/button-link}}
 {{/banner}}
 <br>
-{{#> banner banner--modifier="pf-m-danger"}}
-  Danger banner with a 
+{{#> banner banner--modifier="pf-m-red"}}
+  Red banner with a 
   {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
     disabled inline link button
   {{/button}}
+{{/banner}}
+```
+
+### Status
+When a banner is used to convey status, it is advised to add an icon that also conveys status visually, and to provide screen reader text using ` .pf-screen-reader ` or an equivalent.
+
+```hbs
+{{#> banner}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Default banner:{{/screen-reader}}
+      <i class="fas fa-bell" aria-hidden="true"></i>
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Default banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-blue"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Info banner:{{/screen-reader}}
+      <i class="fas fa-info-circle" aria-hidden="true"></i>
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Info banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-red"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Danger banner:{{/screen-reader}}
+      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Danger banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-green"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Success banner:{{/screen-reader}}
+      <i class="fas fa-check-circle" aria-hidden="true"></i>
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Success banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-gold"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Warning banner:{{/screen-reader}}
+      <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Warning banner
+    {{/l-flex-item}}
+  {{/l-flex}}
 {{/banner}}
 ```
 
@@ -79,8 +152,8 @@ Add a modifier class to the default banner to change the presentation: `.pf-m-in
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-banner` | `<div>` |  Initiates a banner. **Required** |
-| `.pf-m-info` | `.pf-c-banner` |  Modifies banner for info styles. |
-| `.pf-m-danger` | `.pf-c-banner` |  Modifies banner for danger styles. |
-| `.pf-m-success` | `.pf-c-banner` |  Modifies banner for success styles. |
-| `.pf-m-warning` | `.pf-c-banner` |  Modifies banner for warning styles. |
+| `.pf-m-blue` | `.pf-c-banner` |  Modifies banner for blue styling. |
+| `.pf-m-red` | `.pf-c-banner` |  Modifies banner for red styling. |
+| `.pf-m-green` | `.pf-c-banner` |  Modifies banner for green styling. |
+| `.pf-m-gold` | `.pf-c-banner` |  Modifies banner for gold styling. |
 | `.pf-m-sticky` | `.pf-c-banner` |  Modifies banner to be sticky to the top of its container. |
