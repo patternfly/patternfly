@@ -71,7 +71,7 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   // Sidebar
   --pf-c-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-c-page__sidebar--Width: #{pf-size-prem($pf-global--sidebar--Width)};
+  --pf-c-page__sidebar--Width: var(--pf-global--sidebar--Width);
   --pf-c-page__sidebar--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__sidebar--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__sidebar--m-light--BorderRightWidth: var(--pf-global--BorderWidth--sm);
