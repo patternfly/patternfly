@@ -346,20 +346,20 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     padding: 0; // Because vertical variant has no scroll buttons, reset padding
     overflow: visible; // remove in breaking change release
 
-    &.pf-m-sticky::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      border: solid var(--pf-c-tabs--m-vertical__list--before--BorderColor);
-      border-width: var(--pf-c-tabs--m-vertical__list--before--BorderTopWidth) var(--pf-c-tabs--m-vertical__list--before--BorderRightWidth) var(--pf-c-tabs--m-vertical__list--before--BorderBottomWidth) var(--pf-c-tabs--m-vertical__list--before--BorderLeftWidth);
+    // &.pf-m-sticky::before {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   border: solid var(--pf-c-tabs--m-vertical__list--before--BorderColor);
+    //   border-width: var(--pf-c-tabs--m-vertical__list--before--BorderTopWidth) var(--pf-c-tabs--m-vertical__list--before--BorderRightWidth) var(--pf-c-tabs--m-vertical__list--before--BorderBottomWidth) var(--pf-c-tabs--m-vertical__list--before--BorderLeftWidth);
 
 
-      .pf-c-tabs__list::before {
-        display: none; // update at breaking change
-      }
-    }
+    //   .pf-c-tabs__list::before {
+    //     display: none; // update at breaking change
+    //   }
+    // }
 
     .pf-c-tabs__list {
       position: relative;
@@ -425,6 +425,20 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       --pf-c-tabs--m-vertical__item--MarginTop: 0;
       --pf-c-tabs--m-vertical__item--MarginBottom: 0;
       --pf-c-tabs--m-vertical--m-expandable--before--Left: var(--pf-c-tabs__link--before--Left); // reset left border for box variant
+    }
+  }
+
+  &.pf-m-vertical::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: solid var(--pf-c-tabs--m-vertical__list--before--BorderColor);
+    border-width: var(--pf-c-tabs--m-vertical__list--before--BorderTopWidth) var(--pf-c-tabs--m-vertical__list--before--BorderRightWidth) var(--pf-c-tabs--m-vertical__list--before--BorderBottomWidth) var(--pf-c-tabs--m-vertical__list--before--BorderLeftWidth);
+
+    .pf-c-tabs__list::before {
+      display: contents; // update at breaking change
     }
   }
 
@@ -533,20 +547,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     position: sticky;
     top: calc(var(--pf-c-tabs--inset) * -1);
     flex-grow: 0;
-  }
-
-  &.pf-m-vertical.pf-m-box::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border: solid var(--pf-c-tabs--m-vertical__list--before--BorderColor);
-    border-width: var(--pf-c-tabs--m-vertical__list--before--BorderTopWidth) var(--pf-c-tabs--m-vertical__list--before--BorderRightWidth) var(--pf-c-tabs--m-vertical__list--before--BorderBottomWidth) var(--pf-c-tabs--m-vertical__list--before--BorderLeftWidth);
-
-    .pf-c-tabs__list::before {
-      display: contents; // update at breaking change
-    }
   }
 }
 

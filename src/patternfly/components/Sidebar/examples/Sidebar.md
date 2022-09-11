@@ -165,7 +165,7 @@ import './Sidebar.css'
 | `.pf-m-split` | `.pf-c-sidebar` | Modifies the sidebar to position the panel and content side by side. |
 | `.pf-m-panel-right` | `.pf-c-sidebar` | Modifies the sidebar to place the panel to the right of the content. |
 | `.pf-m-sticky` | `.pf-c-sidebar__panel` | Modifies the panel to be sticky to the top of the layout. |
-| `.pf-m-full-height` | `.pf-c-sidebar__panel, .pf-c-sidebar__content [@md breakpoint]`, `.pf-c-sidebar.pf-m-split .pf-c-sidebar__panel`, `.pf-c-sidebar.pf-m-split .pf-c-sidebar__content` | Modifies the panel or content elment to be full height of its parent. |
+| `.pf-m-full-height` | `.pf-c-sidebar__panel, .pf-c-sidebar__content [@md breakpoint]`, `.pf-c-sidebar.pf-m-split .pf-c-sidebar__panel`, `.pf-c-sidebar.pf-m-split .pf-c-sidebar__content` | Modifies the panel or content element to be full height of its parent. |
 | `.pf-m-static` | `.pf-c-sidebar__panel` | Modifies the panel to be positioned statically. |
 | `.pf-m-width-{default, 25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-c-sidebar__panel` | Modifies the panel width at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). **Note:** does not apply when the panel is stacked on top of the content. |
 | `.pf-m-no-background` | `.pf-c-sidebar`, `.pf-c-sidebar__panel, .pf-c-sidebar__content` | Modifies the element to have a transparent background. |
