@@ -6,6 +6,8 @@ cssPrefix: pf-c-banner
 
 ## Examples
 ### Basic
+Banners can be styled with one of 5 different colors. A basic banner should only be used when the banner color does not represent status or severity.
+
 ```hbs
 {{#> banner}}
   Default banner
@@ -77,7 +79,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
 
 ```hbs
 {{#> banner}}
-  {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Default banner:{{/screen-reader}}
       <i class="fas fa-bell" aria-hidden="true"></i>
@@ -91,7 +93,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
 <br>
 
 {{#> banner banner--modifier="pf-m-blue"}}
-  {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Info banner:{{/screen-reader}}
       <i class="fas fa-info-circle" aria-hidden="true"></i>
@@ -105,7 +107,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
 <br>
 
 {{#> banner banner--modifier="pf-m-red"}}
-  {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Danger banner:{{/screen-reader}}
       <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
@@ -119,7 +121,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
 <br>
 
 {{#> banner banner--modifier="pf-m-green"}}
-  {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Success banner:{{/screen-reader}}
       <i class="fas fa-check-circle" aria-hidden="true"></i>
@@ -133,7 +135,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
 <br>
 
 {{#> banner banner--modifier="pf-m-gold"}}
-  {{#> l-flex l-flex--modifier="pf-m-space-items-xs"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Warning banner:{{/screen-reader}}
       <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
@@ -146,7 +148,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
 ```
 
 ## Documentation
-Add a modifier class to the default banner to change the presentation: `.pf-m-info`, `.pf-m-danger`, `.pf-m-success`, or `.pf-m-warning`.
+Add a modifier class to the default banner to change the presentation: `.pf-m-blue`, `.pf-m-red`, `.pf-m-green`, or `.pf-m-gold`.
 
 ### Usage
 | Class | Applied to | Outcome |
