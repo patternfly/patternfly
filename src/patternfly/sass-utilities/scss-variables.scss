@@ -14,7 +14,7 @@ $pf-global--disable-fontawesome: false !default;
 $pf-global--load-pf-3: false !default;
 $pf-global--enable-shield: false !default;
 $pf-global--unset-root-font-size: true !default;
-$pf-global--page-width-breakpoints: false !default;
+$pf-global--full-page-breakpoints: false !default;
 
 // Patternfly uses the default root size of the browser, it assumes a 16px base
 // since most browser root size is 16. This variables is just to make the
@@ -338,10 +338,10 @@ $pf-global--spacer-map: (
 );
 
 // Modified grid breakpoints
-@if $pf-global--page-width-breakpoints {
-  $pf-global--breakpoint--sm: pf-offset-variable-value($pf-global--breakpoint--sm, $pf-global--sidebar--Width);
-  $pf-global--breakpoint--md: pf-offset-variable-value($pf-global--breakpoint--md, $pf-global--sidebar--Width);
-  $pf-global--breakpoint--lg: pf-offset-variable-value($pf-global--breakpoint--lg, $pf-global--sidebar--Width);
-  $pf-global--breakpoint--xl: pf-offset-variable-value($pf-global--breakpoint--xl, $pf-global--sidebar--Width);
-  $pf-global--breakpoint--2xl: pf-offset-variable-value($pf-global--breakpoint--2xl, $pf-global--sidebar--Width);
+@if $pf-global--full-page-breakpoints {
+  $pf-global--breakpoint--sm: pf-offset-variable-value($pf-global--breakpoint--sm, pf-size-ppx($pf-global--sidebar--Width));
+  $pf-global--breakpoint--md: pf-offset-variable-value($pf-global--breakpoint--md, pf-size-ppx($pf-global--sidebar--Width));
+  $pf-global--breakpoint--lg: pf-offset-variable-value($pf-global--breakpoint--lg, pf-size-ppx($pf-global--sidebar--Width));
+  $pf-global--breakpoint--xl: pf-offset-variable-value($pf-global--breakpoint--xl, pf-size-ppx($pf-global--sidebar--Width));
+  $pf-global--breakpoint--2xl: pf-offset-variable-value($pf-global--breakpoint--2xl, pf-size-ppx($pf-global--sidebar--Width));
 }

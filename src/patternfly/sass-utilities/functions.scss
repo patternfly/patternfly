@@ -11,6 +11,10 @@
   @return div(pf-strip-unit($pxval), $base) * 1rem;
 }
 
+@function pf-size-ppx($remval, $base: $pf-global--space-size-root) {
+  @return pf-strip-unit($remval) * $base * 1px;
+}
+
 @function pf-font-prem($pxval, $base: $pf-global--font-size-root) {
   @return div(pf-strip-unit($pxval), $base) * 1rem;
 }
