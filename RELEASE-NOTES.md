@@ -3,6 +3,28 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.12 release notes (2022-09-14)
+Packages released:
+- [@patternfly/patternfly@v4.215.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.215.1)
+
+### Components
+- **Banner:** Added support/docs for status icons and text ([#5075](https://github.com/patternfly/patternfly/pull/5075))
+- **Card:** Updated card title to use RHD font ([#5069](https://github.com/patternfly/patternfly/pull/5069))
+- **Form control:** Added plain read only variant ([#5059](https://github.com/patternfly/patternfly/pull/5059))
+- **Icon:** Added icon component ([#5014](https://github.com/patternfly/patternfly/pull/5014))
+- **Log viewer:** Added support for custom line number col size ([#5068](https://github.com/patternfly/patternfly/pull/5068))
+- **Notification badge:** Added expanded state ([#5048](https://github.com/patternfly/patternfly/pull/5048))
+- **Page:** Set max-height on full height variation ([#5066](https://github.com/patternfly/patternfly/pull/5066))
+- **Progress stepper:** Fixed width and long word wrapping ([#5077](https://github.com/patternfly/patternfly/pull/5077))
+- **Tabs:** Fixed button type for tab link ([#5060](https://github.com/patternfly/patternfly/pull/5060))
+- **Tree view:** Fixed dupe id's between checkbox and selectable examples ([#5061](https://github.com/patternfly/patternfly/pull/5061))
+- **Wizard:** Small docs fixes in wizard demos ([#5078](https://github.com/patternfly/patternfly/pull/5078))
+
+### Other
+- **A11y:** Update coverage to include docs ([#5064](https://github.com/patternfly/patternfly/pull/5064))
+- **Docs:** Update hbs id params to be specific to component ([#5062](https://github.com/patternfly/patternfly/pull/5062))
+
+
 ## 2022.11 release notes (2022-08-25)
 Packages released:
 - [@patternfly/patternfly@v4.210.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.210.2)
