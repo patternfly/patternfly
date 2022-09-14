@@ -5,6 +5,23 @@ cssPrefix: pf-c-form
 ---
 
 ## Examples
+### Label updates
+```hbs
+{{#> form form--id="form-vertical"}}
+  {{#> form-group form-group--id="-name"}}
+    {{#> form-group-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true" form-label--HasHelpIcon="true"}}
+        Some label text that will force required and help to wrap. Help icon needs to move inside label.
+      {{/form-label}}
+    {{/form-group-label}}
+    {{#> form-group-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+    {{/form-group-control}}
+  {{/form-group}}
+{{/form}}
+```
+
+## Examples
 ### Vertically aligned labels
 ```hbs
 {{#> form form--id="form-vertical"}}
@@ -391,6 +408,7 @@ cssPrefix: pf-c-form
 | `aria-hidden="true"` | `.pf-c-form__label-required` |  Hides the required indicator from assistive technologies. |
 | `role="group"` | `.pf-c-form__group`, `.pf-c-form__section`, `.pf-c-form__field-group` | Provides group role for form groups, form sections, and form field groups. **Required for checkbox groups, form groups, form sections, and form field groups.** |
 | `role="radiogroup"` | `.pf-c-form__group` | Provides group role for radio input groups. **Required for radio input groups** |
+| `role="button"` | `.pf-c-form__group-label-help` | Provides button role for group label help spans. **Required for group label help.** |
 | `id` | `.pf-c-form__group-label` | Generates an `id` for use in the `aria-labelledby` attribute in a checkbox or radio form group. |
 | `id` | `.pf-c-form__field-group-title-text` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
 | `id` | `.pf-c-form__field-group-toggle-button > button` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
@@ -414,7 +432,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
 | `.pf-c-form__group-label-main` | `<div>` |  Initiates a form group label main container. |
 | `.pf-c-form__group-label-info` | `<div>` |  Initiates a form group info label. |
-| `.pf-c-form__group-label-help` | `<button>` | Initiates a field level help button. |
+| `.pf-c-form__group-label-help` | `<span>` | Initiates a field level help span/button. |
 | `.pf-c-form__group-control` | `<div>` |  Initiates a form group control section. |
 | `.pf-c-form__actions` | `<div>` | Iniates a row of actions. |
 | `.pf-c-form__helper-text` | `<p>`, `<div>` |  Initiates a form helper text block. |

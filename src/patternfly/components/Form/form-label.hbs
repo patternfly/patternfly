@@ -6,6 +6,9 @@
     {{>@partial-block}}
   {{/form-label-text}}
   {{#if required}}
-    {{> form-label-required}}
+    &nbsp;{{> form-label-required}}
+  {{/if}}
+  {{#if form-label--HasHelpIcon}}
+    &nbsp;{{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
   {{/if}}
 </{{#if form-group--IsCheckGroup}}span{{else}}label{{/if}}>
