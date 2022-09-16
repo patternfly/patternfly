@@ -1415,13 +1415,13 @@
     puppeteer-cluster "^0.23.0"
     xmldoc "^1.1.2"
 
-"@patternfly/react-charts@6.88.7":
-  version "6.88.7"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-charts/-/react-charts-6.88.7.tgz#632ea4be6a97e937892a9943373e03f2f6ce95c0"
-  integrity sha512-1SGDHfTmjH3c54ym1i1d1SH1DGArn96Fwkv1woOTpRhNgBoz6TkoDJGHfpX6UUyun1uqDMUdNP8tOnb9SITuvQ==
+"@patternfly/react-charts@6.92.0":
+  version "6.92.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-charts/-/react-charts-6.92.0.tgz#0ba31082dc87b9fa378ac144390c9263beb49c81"
+  integrity sha512-aQl+L7zH/tWX00L2xI6B0414xweaIocR98wbyhXLi6zknkhcAUcE2zITFIW4+EsU+qPvUlptwRiRufoH8/BlEw==
   dependencies:
-    "@patternfly/react-styles" "^4.85.7"
-    "@patternfly/react-tokens" "^4.87.7"
+    "@patternfly/react-styles" "^4.89.0"
+    "@patternfly/react-tokens" "^4.91.0"
     hoist-non-react-statics "^3.3.0"
     lodash "^4.17.19"
     tslib "^2.0.0"
