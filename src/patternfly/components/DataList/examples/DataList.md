@@ -252,7 +252,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
       {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
+        {{#> data-list-action}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Expandable secondary content details"')}}
@@ -282,7 +282,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
       {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
+        {{#> data-list-action}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Expandable tertiary content details"')}}
@@ -318,7 +318,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
       {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action1')}}{{/data-list-action}}
+        {{#> data-list-action}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Expandable compact primary content details"')}}
@@ -489,7 +489,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
       {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action2')}}{{/data-list-action}}
+        {{#> data-list-action}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Expandable nested secondary content details"')}}
@@ -519,7 +519,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
       {{#> data-list-item-action}}
-        {{#> data-list-action id=(concat data-list--id '-action3')}}{{/data-list-action}}
+        {{#> data-list-action}}{{/data-list-action}}
       {{/data-list-item-action}}
     {{/data-list-item-row}}
     {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Expandable nested tertiary content details"')}}

@@ -18,7 +18,7 @@
 {{!-- dropdown --}}
 {{#if toolbar-template--HasDropdown}}
   {{#> toolbar-item}}
-    {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-bookmark"}}
+    {{#> select select--attribute="style='width: 150px'" select--id=(concat toolbar--id '-select-status') select-toggle--icon="fas fa-bookmark"}}
       Status
     {{/select}}
   {{/toolbar-item}}
@@ -27,7 +27,7 @@
 {{!-- filter --}}
 {{#if toolbar-template--HasFilter}}
   {{#> toolbar-item}}
-    {{#> select id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
+    {{#> select select--id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
       {{#if toolbar-template--filterText}}
         {{toolbar-template--filterText}}
       {{else}}
@@ -41,12 +41,12 @@
 {{#if toolbar-template--HasFilterGroup}}
   {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
     {{#> toolbar-item}}
-      {{#> select id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
+      {{#> select select--id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
         Status
       {{/select}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{#> select id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
+      {{#> select select--id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
         Risk
       {{/select}}
     {{/toolbar-item}}

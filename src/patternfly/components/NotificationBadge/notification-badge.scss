@@ -31,16 +31,19 @@
   // Modifiers
   --pf-c-notification-badge--m-read--after--BorderColor: transparent; // remove at breaking change
   --pf-c-notification-badge--m-read--after--BackgroundColor: transparent;
+  --pf-c-notification-badge--m-read--m-expanded--after--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
 
   // Unread
   --pf-c-notification-badge--m-unread--Color: var(--pf-global--Color--light-100);
   --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-global--active-color--100);
   --pf-c-notification-badge--m-unread--hover--after--BackgroundColor: var(--pf-global--primary-color--200);
+  --pf-c-notification-badge--m-unread--m-expanded--after--BackgroundColor: var(--pf-global--primary-color--200);
 
   // Attention
   --pf-c-notification-badge--m-attention--Color: var(--pf-global--Color--light-100);
   --pf-c-notification-badge--m-attention--after--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-notification-badge--m-attention--hover--after--BackgroundColor: var(--pf-global--danger-color--200);
+  --pf-c-notification-badge--m-attention--m-expanded--after--BackgroundColor: var(--pf-global--danger-color--200);
   --pf-c-notification-badge__count--MarginLeft: var(--pf-global--spacer--xs);
 
   // Attention icon
@@ -90,6 +93,8 @@
   &.pf-m-read {
     --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-read--after--BackgroundColor);
     --pf-c-notification-badge--after--BorderColor: var(--pf-c-notification-badge--m-read--after--BorderColor);
+
+    color: var(--pf-c-notification-badge--m-read--Color, inherit);
   }
 
   &.pf-m-unread {
@@ -108,8 +113,15 @@
     color: var(--pf-c-notification-badge--m-attention--Color);
 
     &:hover {
-      --pf-c-notification-badge--after--BackgroundColor: var(--pf-c-notification-badge--m-attention--hover--after--BackgroundColor);
+      --pf-c-notification-badge--m-attention--after--BackgroundColor: var(--pf-c-notification-badge--m-attention--hover--after--BackgroundColor);
     }
+  }
+
+  &.pf-m-expanded {
+    --pf-c-notification-badge--m-read--Color: var(--pf-global--Color--light-100);
+    --pf-c-notification-badge--m-read--after--BackgroundColor: var(--pf-c-notification-badge--m-read--m-expanded--after--BackgroundColor);
+    --pf-c-notification-badge--m-unread--after--BackgroundColor: var(--pf-c-notification-badge--m-unread--m-expanded--after--BackgroundColor);
+    --pf-c-notification-badge--m-attention--after--BackgroundColor: var(--pf-c-notification-badge--m-attention--m-expanded--after--BackgroundColor);
   }
 }
 

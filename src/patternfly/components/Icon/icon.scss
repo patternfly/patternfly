@@ -1,0 +1,149 @@
+.pf-c-icon {
+  // Size
+  --pf-c-icon--Width: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon--Height: var(--pf-global--icon--FontSize--md);
+
+  // When inline, use the parent's size
+  --pf-c-icon--m-inline--Width: 1em;
+  --pf-c-icon--m-inline--Height: 1em;
+
+  // Size modifiers
+  --pf-c-icon--m-sm--Width: var(--pf-global--icon--FontSize--sm);
+  --pf-c-icon--m-md--Width: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon--m-lg--Width: var(--pf-global--icon--FontSize--lg);
+  --pf-c-icon--m-xl--Width: var(--pf-global--icon--FontSize--xl);
+  --pf-c-icon--m-sm--Height: var(--pf-global--icon--FontSize--sm);
+  --pf-c-icon--m-md--Height: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon--m-lg--Height: var(--pf-global--icon--FontSize--lg);
+  --pf-c-icon--m-xl--Height: var(--pf-global--icon--FontSize--xl);
+
+  // Content variables
+  --pf-c-icon__content--Color: var(--pf-global--icon--Color--dark);
+
+  // Content status
+  --pf-c-icon__content--m-danger--Color: var(--pf-global--danger-color--100);
+  --pf-c-icon__content--m-warning--Color: var(--pf-global--warning-color--100);
+  --pf-c-icon__content--m-success--Color: var(--pf-global--success-color--100);
+  --pf-c-icon__content--m-info--Color: var(--pf-global--info-color--100);
+  --pf-c-icon__content--m-default--Color: var(--pf-global--default-color--100);
+  --pf-c-icon__content--FontSize: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon--m-inline__content--FontSize: 1em;
+  --pf-c-icon__content--svg--VerticalAlign: -.125em;
+  --pf-c-icon--m-sm--content--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-icon--m-md--content--FontSize: var(--pf-global--icon--FontSize--md);
+  --pf-c-icon--m-lg--content--FontSize: var(--pf-global--icon--FontSize--lg);
+  --pf-c-icon--m-xl--content--FontSize: var(--pf-global--icon--FontSize--xl);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--pf-c-icon--Width);
+  height: var(--pf-c-icon--Height);
+
+  // Inline modifier
+  &.pf-m-inline {
+    --pf-c-icon--Width: var(--pf-c-icon--m-inline--Width);
+    --pf-c-icon--Height: var(--pf-c-icon--m-inline--Height);
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-inline__content--FontSize);
+    --pf-c-icon__content--Color: currentcolor;
+
+    line-height: 1;
+
+    .pf-c-spinner {
+      --pf-c-spinner--diameter: 1em;
+    }
+  }
+
+  // Size modifiers
+  &.pf-m-sm {
+    --pf-c-icon--Width: var(--pf-c-icon--m-sm--Width);
+    --pf-c-icon--Height: var(--pf-c-icon--m-sm--Height);
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-sm--content--FontSize);
+  }
+
+  &.pf-m-md {
+    --pf-c-icon--Width: var(--pf-c-icon--m-md--Width);
+    --pf-c-icon--Height: var(--pf-c-icon--m-md--Height);
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-md--content--FontSize);
+  }
+
+  &.pf-m-lg {
+    --pf-c-icon--Width: var(--pf-c-icon--m-lg--Width);
+    --pf-c-icon--Height: var(--pf-c-icon--m-lg--Height);
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-lg--content--FontSize);
+  }
+
+  &.pf-m-xl {
+    --pf-c-icon--Width: var(--pf-c-icon--m-xl--Width);
+    --pf-c-icon--Height: var(--pf-c-icon--m-xl--Height);
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-xl--content--FontSize);
+  }
+
+  &.pf-m-in-progress {
+    --pf-c-icon__content--Opacity: 0;
+    --pf-c-icon__progress--Opacity: 1;
+  }
+}
+
+// Content and progress both have size modifiers
+.pf-c-icon__content,
+.pf-c-icon__progress {
+  font-size: var(--pf-c-icon__content--FontSize);
+
+  svg {
+    vertical-align: var(--pf-c-icon__content--svg--VerticalAlign);
+  }
+
+  // Size modifiers
+  &.pf-m-sm {
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-sm--content--FontSize);
+  }
+
+  &.pf-m-md {
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-md--content--FontSize);
+  }
+
+  &.pf-m-lg {
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-lg--content--FontSize);
+  }
+
+  &.pf-m-xl {
+    --pf-c-icon__content--FontSize: var(--pf-c-icon--m-xl--content--FontSize);
+  }
+}
+
+// Content element
+.pf-c-icon__content {
+  color: var(--pf-c-icon__content--Color);
+  opacity: var(--pf-c-icon__content--Opacity, 1);
+
+  // Status modifiers
+  &.pf-m-danger {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-danger--Color);
+  }
+
+  &.pf-m-warning {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-warning--Color);
+  }
+
+  &.pf-m-success {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-success--Color);
+  }
+
+  &.pf-m-info {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-info--Color);
+  }
+
+  &.pf-m-default {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-default--Color);
+  }
+}
+
+// Progress element
+.pf-c-icon__progress {
+  position: absolute;
+  top: calc(50% + calc(.5 * var(--pf-c-icon__content--svg--VerticalAlign)));
+  opacity: var(--pf-c-icon__progress--Opacity, 0);
+  transform: translateY(calc(-50% - calc(.5 * var(--pf-c-icon__content--svg--VerticalAlign))));
+}

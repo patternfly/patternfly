@@ -10,9 +10,9 @@
   {{!-- hidden spans for a11y --}}
   {{#unless select--HasCustomLabel}}
     {{#if select--IsMultiSelect}}
-      <span id="{{id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose many{{/if}}</span>
+      <span id="{{select--id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose many{{/if}}</span>
     {{else}}
-      <span id="{{id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose one{{/if}}</span>
+      <span id="{{select--id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose one{{/if}}</span>
     {{/if}}
   {{/unless}}
 

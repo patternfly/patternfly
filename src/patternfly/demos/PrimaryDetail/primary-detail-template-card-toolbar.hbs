@@ -2,7 +2,7 @@
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-item}}
-        {{#> select select--attribute="style='width: 150px'" id=(concat toolbar--id '-select-dropdown')}}
+        {{#> select select--attribute="style='width: 150px'" select--id=(concat toolbar--id '-select-dropdown')}}
           Dropdown
         {{/select}}
       {{/toolbar-item}}
@@ -11,7 +11,7 @@
           {{#> pagination-total-items}}
             <b>1 - 10</b> of <b>37</b>
           {{/pagination-total-items}}
-          {{> pagination-options-menu id=(concat toolbar--id '-pagination-options-menu')}}
+          {{> pagination-options-menu pagination-options-menu--id=(concat toolbar--id '-pagination-options-menu')}}
         {{/pagination}}
       {{/toolbar-item}}
     {{/toolbar-content-section}}

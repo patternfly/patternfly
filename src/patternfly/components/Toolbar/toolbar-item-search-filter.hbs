@@ -1,6 +1,6 @@
 {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-search-filter ' toolbar-item-search-filter--modifier)}}
   {{#> input-group input-group--attribute=(concat 'aria-label="search filter" role="group"')}}
-    {{#> select select--attribute='style="width: 175px"' id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
+    {{#> select select--attribute='style="width: 175px"' select--id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
       Name
     {{/select}}
     {{> search-input search-input--placeholder="Filter by name"}}

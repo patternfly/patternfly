@@ -1,9 +1,32 @@
-<span class="pf-c-notification-badge{{#if notification-badge--modifier}} {{notification-badge--modifier}}{{/if}}"
-  {{#if notification-badge--attribute}}
-    {{{notification-badge--attribute}}}
-  {{/if}}>
-  {{> @partial-block}}
-  {{#if notification-badge--count}}
-    <span class="pf-c-notification-badge__count">{{{notification-badge--count}}}</span>
-  {{/if}}
-</span>
+{{#> button
+  button--IsAriaExpanded=notification-badge--IsExpanded
+  button--modifier="pf-m-plain"
+  button--attribute=(concat 'aria-label="' notification-badge--aria-label '"')}}
+  <span class="pf-c-notification-badge
+    {{~#if notification-badge--IsUnread}} pf-m-unread
+    {{~else if notification-badge--IsAttention}} pf-m-attention
+    {{~else}} pf-m-read
+    {{~/if}}
+    {{~#if notification-badge--IsExpanded}}
+      pf-m-expanded
+    {{~/if}}
+    {{~#if notification-badge--modifier}} {{notification-badge--modifier}}{{/if}}"
+    {{#if notification-badge--attribute}}
+      {{{notification-badge--attribute}}}
+    {{/if}}>
+    <i class="
+      {{~#if notification-badge--IsTask}}
+        pf-icon-task
+      {{~else if notification-badge--IsAttention}}
+        pf-icon-attention-bell
+      {{~else}}
+        pf-icon-bell
+      {{~/if}}"
+      aria-hidden="true"></i>
+    {{#if notification-badge--count}}
+      <span class="pf-c-notification-badge__count">
+        {{notification-badge--count}}
+      </span>
+    {{/if}}
+  </span>
+{{/button}}

@@ -43,7 +43,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
 {{/input-group}}
 <br>
 {{#> input-group}}
-  {{#> select id="select-example-collapsed1" select--attribute='style="width: 100px;"'}}
+  {{#> select select--id="select-example-collapsed1" select--attribute='style="width: 100px;"'}}
     Select
   {{/select}}
   {{#> form-control controlType="input" input="true" form-control--attribute='type="text" id="textInput4" name="textInput4" aria-label="Input with select and button" aria-describedby="inputSelectButton1"'}}

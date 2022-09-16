@@ -40,21 +40,25 @@
   white-space: nowrap;
   background-color: var(--pf-c-banner--BackgroundColor);
 
-  &.pf-m-info {
+  &.pf-m-info,
+  &.pf-m-blue {
     @include pf-t-light;
 
     --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-info--BackgroundColor);
   }
 
-  &.pf-m-danger {
+  &.pf-m-danger,
+  &.pf-m-red {
     --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-danger--BackgroundColor);
   }
 
-  &.pf-m-success {
+  &.pf-m-success,
+  &.pf-m-green {
     --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-success--BackgroundColor);
   }
 
-  &.pf-m-warning {
+  &.pf-m-warning,
+  &.pf-m-gold {
     @include pf-t-light;
 
     --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-warning--BackgroundColor);

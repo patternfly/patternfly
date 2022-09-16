@@ -6,7 +6,7 @@
   {{else}}
     type="button"
   {{/if}}
-  {{#if button--IsExpanded}}
+  {{#if (concat button--IsExpanded button--IsAriaExpanded)}}
     aria-expanded="true"
   {{/if}}
   {{#if button--IsInlineLinkSpan}}
