@@ -9,3 +9,11 @@
 #ws-core-c-page-with-or-without-fill .ws-preview-html {
   height: 500px;
 }
+
+#ws-core-c-page-multiple-sidebar-body-elements {
+  height: 400px;
+}
+
+#ws-core-c-page-multiple-sidebar-body-elements .ws-preview-html {
+  height: 100%;
+}

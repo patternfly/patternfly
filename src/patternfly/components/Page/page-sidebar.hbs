@@ -21,7 +21,11 @@
       {{/context-selector}}
     {{/page-sidebar-body}}
   {{/if}}
-  {{#> page-sidebar-body}}
+  {{#if page-sidebar--ExcludeSidebarBody}}
     {{> @partial-block}}
-  {{/page-sidebar-body}}
+  {{else}}
+    {{#> page-sidebar-body}}
+      {{> @partial-block}}
+    {{/page-sidebar-body}}
+  {{/if}}
 </{{#if page-sidebar--IsAside}}aside{{else}}div{{/if}}>
