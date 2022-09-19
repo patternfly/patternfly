@@ -53,6 +53,44 @@ import './Menu.css'
   {{/menu-content}}
 {{/menu}}
 ```
+### Danger menu item
+```hbs
+{{#> menu}}
+  {{#> menu-content}}
+    {{#> menu-list}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 1
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> screen-reader}}Danger Item{{/screen-reader}}
+            {{#> menu-item-text menu-item-text--modifier="pf-m-danger"}}
+              Action 2
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{> divider divider--type="li"}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 3
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+{{/menu}}
+```
 
 ### With icons
 ```hbs
