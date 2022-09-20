@@ -345,6 +345,14 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
     {{#> spinner spinner--modifier="pf-m-md"}}Uploading...{{/spinner}}
   {{/button-progress}}
 {{/button}}
+
+{{#> button button--modifier="pf-m-link pf-m-inline" button--IsProgress="true"}}
+  Inline loader
+{{/button}}
+
+{{#> button button--modifier="pf-m-link pf-m-inline" button--IsProgress="true" button--IsInProgress="true"}}
+  Inline loading
+{{/button}}
 ```
 
 ### Link button with a count

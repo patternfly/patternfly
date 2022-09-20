@@ -370,10 +370,13 @@
       --pf-c-button--FontSize: var(--pf-c-button--m-link--m-inline--FontSize);
 
       display: inline;
-      padding: 0;
       text-align: left;
       white-space: normal;
       cursor: pointer;
+
+      &:not(.pf-m-in-progress) {
+        padding: 0;
+      }
 
       &:hover {
         --pf-c-button--m-link--Color: var(--pf-c-button--m-link--m-inline--hover--Color);
