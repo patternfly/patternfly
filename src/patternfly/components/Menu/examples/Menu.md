@@ -70,19 +70,19 @@ import './Menu.css'
       {{#> menu-list-item}}
         {{#> menu-item}}
           {{#> menu-item-main}}
-            {{#> screen-reader}}Danger Item{{/screen-reader}}
-            {{#> menu-item-text menu-item-text--modifier="pf-m-danger"}}
+            {{#> menu-item-text}}
               Action 2
             {{/menu-item-text}}
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
       {{> divider divider--type="li"}}
-      {{#> menu-list-item}}
+      {{#> menu-list-item menu-list-item--modifier="pf-m-danger"}}
         {{#> menu-item}}
           {{#> menu-item-main}}
+            {{#> screen-reader}}Danger Item:{{/screen-reader}}
             {{#> menu-item-text}}
-              Action 3
+              Delete
             {{/menu-item-text}}
           {{/menu-item-main}}
         {{/menu-item}}

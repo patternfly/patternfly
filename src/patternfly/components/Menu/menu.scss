@@ -568,6 +568,10 @@
     padding-top: var(--pf-c-menu__list-item--m-loading--PaddingTop);
     overflow: hidden; // prevents spinner rotation from overflowing
   }
+
+  &.pf-m-danger {
+    --pf-c-menu__list-item--Color: var(--pf-c-menu__list-item--m-danger__item--Color, inherit);
+  }
 }
 
 // Item
@@ -628,9 +632,6 @@
   flex-grow: 1;
 }
 
-.pf-c-menu__item-text.pf-m-danger {
-  color: var(--pf-c-menu__list-item--m-danger__item--Color);
-}
 
 // Group
 .pf-c-menu__group {
