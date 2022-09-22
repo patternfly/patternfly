@@ -570,7 +570,7 @@
   }
 
   &.pf-m-danger {
-    --pf-c-menu__list-item--Color: var(--pf-c-menu__list-item--m-danger__item--Color, inherit);
+    --pf-c-menu__item--Color: var(--pf-c-menu__list-item--m-danger__item--Color, inherit);
   }
 }
 
@@ -631,7 +631,6 @@
 
   flex-grow: 1;
 }
-
 
 // Group
 .pf-c-menu__group {
