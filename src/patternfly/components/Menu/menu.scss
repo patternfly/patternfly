@@ -89,6 +89,7 @@
   --pf-c-menu__item--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-menu__item--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-menu__list-item--m-disabled__item--Color: var(--pf-global--disabled-color--100);
+  --pf-c-menu__list-item--m-danger__item--Color: var(--pf-global--danger-color--100);
   --pf-c-menu__list-item--m-load__item--Color: var(--pf-global--link--Color);
 
   // Group
@@ -566,6 +567,10 @@
     justify-content: center;
     padding-top: var(--pf-c-menu__list-item--m-loading--PaddingTop);
     overflow: hidden; // prevents spinner rotation from overflowing
+  }
+
+  &.pf-m-danger {
+    --pf-c-menu__item--Color: var(--pf-c-menu__list-item--m-danger__item--Color, inherit);
   }
 }
 

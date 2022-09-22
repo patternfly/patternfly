@@ -53,6 +53,44 @@ import './Menu.css'
   {{/menu-content}}
 {{/menu}}
 ```
+### Danger menu item
+```hbs
+{{#> menu}}
+  {{#> menu-content}}
+    {{#> menu-list}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 1
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              Action 2
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{> divider divider--type="li"}}
+      {{#> menu-list-item menu-list-item--modifier="pf-m-danger"}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> screen-reader}}Danger Item:{{/screen-reader}}
+            {{#> menu-item-text}}
+              Delete
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+    {{/menu-list}}
+  {{/menu-content}}
+{{/menu}}
+```
 
 ### With icons
 ```hbs
@@ -1782,7 +1820,8 @@ import './Menu.css'
 | `.pf-m-drilldown` | `.pf-c-menu` | Modifies the menu so that all nested `.pf-c-menu` elements "drill down". |
 | `.pf-m-current-path` | `.pf-c-menu.pf-m-drilldown .pf-c-menu__list-item` | Modifies the menu list item for current path state. |
 | `.pf-m-drilled-in` | `.pf-c-menu.pf-m-drilldown, .pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled in state. |
-| `.pf-m-static` | `.pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled static state. |
+| `.pf-m-static` | `.pf-c-menu.pf-m-drilldown .pf-c-menu` | Modifies the menu list for drilled static state. | 
+| `.pf-m-danger` | `pf-c-menu__item-text` | Modifies a list item for danger styles. |
 | `--pf-c-menu--Width: {width}` | `.pf-c-menu` | Modifies the width of the menu. The default value is `auto`. |
 | `--pf-c-menu__content--MaxHeight: {height}` | `.pf-c-menu__content` | Modifies the height of the menu content. Update this value when header and/or footer elements are intended to be fixed. |
 | `--pf-c-menu__content--Height: {height}` | `.pf-c-menu` | Modifies the height of the drilldown menu content. The default value is `auto`. |
