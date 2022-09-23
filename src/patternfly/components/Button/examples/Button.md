@@ -326,7 +326,7 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 {{#> button button--modifier="pf-m-primary" button--IsProgress="true" button--IsInProgress="true"}}
   Primary loading
 {{/button}}
-
+<br/>
 {{#> button button--modifier="pf-m-secondary" button--IsProgress="true"}}
   Secondary loader
 {{/button}}
@@ -334,23 +334,26 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 {{#> button button--modifier="pf-m-secondary" button--IsProgress="true" button--IsInProgress="true"}}
   Secondary loading
 {{/button}}
-
+<br/>
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Upload"'}}
   <i class="fas fa-upload" aria-hidden="true"></i>
 {{/button}}
 
 {{#> button button--modifier="pf-m-plain pf-m-in-progress" button--attribute='aria-label="Upload"'}}
   <i class="fas fa-upload" aria-hidden="true"></i>
-  {{#> button-progress}}
-    {{#> spinner spinner--modifier="pf-m-md"}}Uploading...{{/spinner}}
+  {{#> button-progress spinner--modifier="pf-m-md"}}
+    {{#> spinner}}Uploading...{{/spinner}}
   {{/button-progress}}
 {{/button}}
-
+<br/>
 {{#> button button--modifier="pf-m-link pf-m-inline" button--IsProgress="true"}}
   Inline loader
 {{/button}}
 
-{{#> button button--modifier="pf-m-link pf-m-inline" button--IsProgress="true" button--IsInProgress="true"}}
+{{#> button button--modifier="pf-m-link pf-m-inline pf-m-in-progress" button--IsProgress="true"}}
+  {{#> button-progress}}
+    {{#> spinner}}Loading...{{/spinner}}
+  {{/button-progress}}
   Inline loading
 {{/button}}
 ```
