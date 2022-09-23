@@ -429,6 +429,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   }
 
   &.pf-m-vertical::before {
+    --pf-c-tabs--m-vertical__list--before--BorderLeftWidth: 0;
+    --pf-c-tabs--m-vertical__list--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
+
     position: absolute;
     top: 0;
     right: 0;
@@ -479,8 +482,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // Box, vertical
   &.pf-m-box.pf-m-vertical {
     --pf-c-tabs--inset: var(--pf-c-tabs--m-vertical--m-box--inset);
-    --pf-c-tabs--m-vertical__list--before--BorderLeftWidth: 0;
-    --pf-c-tabs--m-vertical__list--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
     --pf-c-tabs__link--disabled--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
     --pf-c-tabs__link--disabled--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
     --pf-c-tabs__link--disabled--before--BorderLeftWidth: 0;

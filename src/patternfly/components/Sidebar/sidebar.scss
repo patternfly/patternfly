@@ -69,9 +69,9 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-sidebar__main--FlexDirection: var(--pf-c-sidebar__main--md--FlexDirection);
-    --pf-c-sidebar__main--AlignItems: var(--pf-c-sidebar__main--md--AlignItems);
     --pf-c-sidebar__panel--BoxShadow: none;
     --pf-c-sidebar__panel--FlexBasis: var(--pf-c-sidebar__panel--md--FlexBasis);
+    --pf-c-sidebar__main--AlignItems: var(--pf-c-sidebar__main--md--AlignItems);
     --pf-c-sidebar__panel--Top: var(--pf-c-sidebar__panel--md--Top);
     --pf-c-sidebar__panel--Position: var(--pf-c-sidebar__panel--md--Position);
     --pf-c-sidebar--child--Height: var(--pf-c-sidebar--child--md--Height);
