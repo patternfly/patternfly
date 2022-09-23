@@ -210,6 +210,8 @@
     min-height: 0;
   }
 
+  // stylelint-disable selector-not-notation
+  // update to single :not() in breaking change
   > :not(.pf-c-wizard__outer-wrap):not(.pf-c-drawer) {
     flex-shrink: 0;
   }

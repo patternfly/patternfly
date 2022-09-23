@@ -23,6 +23,12 @@
       "ignoreAtRules": "else"
     }],
     "alpha-value-notation": null,
+    "annotation-no-unknown": [ true, {
+      "ignoreAnnotations": [
+        "=",
+        "default"
+      ]
+    }],
     "at-rule-name-space-after": "always",
     "at-rule-semicolon-space-before": "never",
     "block-closing-brace-newline-after": ["always", {

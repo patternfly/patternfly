@@ -403,7 +403,8 @@
         --pf-c-menu-toggle--m-split-button--m-action--child--BorderLeftColor: var(--pf-c-menu-toggle--m-split-button--m-action--m-primary--child--BorderLeftColor);
         --pf-c-menu-toggle--m-split-button--m-action--child--after--BorderBottomWidth: 0;
 
-        // stylelint-disable max-nesting-depth, selector-max-class
+        // stylelint-disable max-nesting-depth, selector-max-class, selector-not-notation
+        // update to single :not() in breaking change
         > :where(:not(.pf-m-disabled):not([disabled])) {
           background-color: var(--pf-c-menu-toggle--m-split-button--m-action--m-primary--child--BackgroundColor);
 
