@@ -1,4 +1,4 @@
-<{{#if form-group--IsCheckGroup}}span{{else}}label{{/if}} class="pf-c-form__label{{#if form-label--modifier}} {{form-label--modifier}}{{/if}}"
+{{removeWhiteSpaceForPrettier}} <{{#if form-group--IsCheckGroup}}span{{else}}label{{/if}} class="pf-c-form__label{{#if form-label--modifier}} {{form-label--modifier}}{{/if}}"
   {{#if form-label--attribute}}
     {{{form-label--attribute}}}
   {{/if}}>
@@ -6,9 +6,9 @@
     {{>@partial-block}}
   {{/form-label-text}}
   {{#if required}}
-    &nbsp;{{> form-label-required}}
+    {{removeWhiteSpaceForPrettier}} &nbsp; {{removeWhiteSpaceForPrettier}}{{> form-label-required}}
   {{/if}}
-  {{#if form-label--HasHelpIcon}}
-    &nbsp;{{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
-  {{/if}}
-</{{#if form-group--IsCheckGroup}}span{{else}}label{{/if}}>
+{{removeWhiteSpaceForPrettier}} </{{#if form-group--IsCheckGroup}}span{{else}}label{{/if}}>
+{{#if form-label--HasHelpIcon}}
+  {{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
+{{/if}}

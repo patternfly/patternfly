@@ -88,7 +88,6 @@ function compileMD0(srcFiles) {
                 html = prettyhtml(html)
                   .contents.replace(/class /g, '')
                   .replace(/ class>/g, '>')
-                  .replace(/[\n\t\s\r]+&nbsp;[\n\t\s\r]+/g, '&nbsp;')
                   .replace(/[\n\t\s\r]+removeWhiteSpaceForPrettier[\n\t\s\r]+/g, '');
                 node.lang = 'html';
                 node.value = html;
