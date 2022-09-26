@@ -452,6 +452,9 @@ $pf-c-tree-view--MaxNesting: 10;
   @at-root label#{&} {
     cursor: pointer;
   }
+
+  text-align: left;
+  border: 0;
 }
 
 .pf-c-tree-view__node-title {
