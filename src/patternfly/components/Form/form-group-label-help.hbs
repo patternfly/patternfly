@@ -2,6 +2,8 @@
   aria-label="{{#if form-group-label-help--aria-label}}{{form-group-label-help--aria-label}}{{else if form-group--id}}More information for {{form-group--id}}{{else}}More information{{/if}}"
   {{#if form-group-label-help--aria-describedby}} aria-describedby="{{form-group-label-help--aria-describedby}}"{{/if}}
   role="button"
+  type="button"
+  tabindex="0"
   {{#if form-group-label-help--attribute}}
     {{{form-group-label-help--attribute}}}
   {{/if}}>

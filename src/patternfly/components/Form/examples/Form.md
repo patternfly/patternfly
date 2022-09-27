@@ -5,23 +5,6 @@ cssPrefix: pf-c-form
 ---
 
 ## Examples
-### Label updates
-```hbs
-{{#> form form--id="form-vertical"}}
-  {{#> form-group form-group--id="-name"}}
-    {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true" form-label--HasHelpIcon="true"}}
-        Some label text that will force required and help to wrap. Help icon needs to move inside label.
-      {{/form-label}}
-    {{/form-group-label}}
-    {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
-    {{/form-group-control}}
-  {{/form-group}}
-{{/form}}
-```
-
-## Examples
 ### Vertically aligned labels
 ```hbs
 {{#> form form--id="form-vertical"}}
@@ -230,6 +213,7 @@ cssPrefix: pf-c-form
   {{/form-group}}
 {{/form}}
 ```
+
 ### Label with additional info
 ```hbs
 {{#> form form--id="form-additional-info"}}
@@ -251,6 +235,7 @@ cssPrefix: pf-c-form
   {{/form-group}}
 {{/form}}
 ```
+
 ### Action group
 ```hbs
 {{#> form}}
@@ -266,6 +251,7 @@ cssPrefix: pf-c-form
   {{/form-group}}
 {{/form}}
 ```
+
 ### Field group (non-expandable)
 ```hbs
 {{#> form form--id="form-field-group"}}
@@ -391,11 +377,12 @@ cssPrefix: pf-c-form
       {{/form-field-group}}
     {{/form-field-group-body}}
   {{/form-field-group}}
-
 {{/form}}
 ```
 
 ## Documentation
+To avoid the form label's required indicator or help tooltip icon from wrapping separately from the form label text, all whitespace characters between the last word of the label text, the required indicator (`.pf-c-form__label-required`), and help tooltip icon (`.pf-c-form__label-help`) must be removed, and `&nbsp;` characters added in between to maintain spacing. Also the help tooltip icon's `.pf-c-form__label-required` element must be a `<span>` instead of a `<button>` due to layout limitations of the `<button>` element imposed by user agent styles.
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -432,7 +419,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
 | `.pf-c-form__group-label-main` | `<div>` |  Initiates a form group label main container. |
 | `.pf-c-form__group-label-info` | `<div>` |  Initiates a form group info label. |
-| `.pf-c-form__group-label-help` | `<span>` | Initiates a field level help span/button. |
+| `.pf-c-form__group-label-help` | `<button>`, `<span>` | Initiates a field level help span/button. |
 | `.pf-c-form__group-control` | `<div>` |  Initiates a form group control section. |
 | `.pf-c-form__actions` | `<div>` | Iniates a row of actions. |
 | `.pf-c-form__helper-text` | `<p>`, `<div>` |  Initiates a form helper text block. |
