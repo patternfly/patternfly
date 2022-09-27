@@ -84,7 +84,7 @@
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  gap: var(--pf-global--spacer--sm);
+  gap: var(--pf-global--spacer--xs) var(--pf-global--spacer--sm);
   min-width: 0;
 
   &.pf-m-icon {
@@ -93,20 +93,6 @@
 
   > :first-child:not(.pf-c-text-input-group__text) {
     margin-left: var(--pf-c-text-input-group__main--first-child--not--text-input--MarginLeft);
-  }
-
-  // Scroll chip group horizontally if there is overflow
-  .pf-c-chip-group {
-    overflow: auto;
-
-    // Hide scrollbar for IE, Edge and Firefox
-    -ms-overflow-style: none;  // IE and Edge
-    scrollbar-width: none;  // Firefox
-
-    // Hide scrollbar for Chrome, Safari and Opera
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 
   .pf-c-chip-group__main {
