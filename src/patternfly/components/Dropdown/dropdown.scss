@@ -391,6 +391,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     }
   }
 
+  // stylelint-disable selector-not-notation
+  // update to single :not() in breaking change
   &:not(.pf-m-action):not(.pf-m-secondary):hover,
   &.pf-m-action .pf-c-dropdown__toggle-button:hover {
     &::before {

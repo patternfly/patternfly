@@ -256,6 +256,8 @@
       position: relative;
       z-index: var(--pf-c-data-list__item--m-selectable--hover--ZIndex);
 
+      // stylelint-disable selector-not-notation
+      // update to single :not() in breaking change
       &:not(.pf-m-selected):not(:last-child) {
         --pf-c-data-list__item--BorderBottomWidth: 0;
 

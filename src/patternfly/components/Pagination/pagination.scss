@@ -105,6 +105,8 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
   align-items: center;
   justify-content: flex-end;
 
+  // stylelint-disable selector-not-notation
+  // update to single :not() in breaking change
   > *:not(:last-child):not(.pf-c-pagination__total-items) {
     margin-right: var(--pf-c-pagination--child--MarginRight);
   }

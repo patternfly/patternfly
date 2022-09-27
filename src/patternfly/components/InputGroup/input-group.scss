@@ -50,6 +50,8 @@
     }
   }
 
+  // stylelint-disable selector-not-notation
+  // update to single :not() in breaking change
   input:not([type="checkbox"]):not([type="radio"]),
   textarea {
     flex: 2;

@@ -47,6 +47,8 @@
   }
 
   .pf-c-data-list__cell {
+    // stylelint-disable selector-not-notation
+    // update to single :not() in breaking change
     &:not(:last-child):not(.pf-m-icon) {
       margin-right: var(--pf-c-data-list__cell--MarginRight);
     }
