@@ -14,16 +14,7 @@ import './Toolbar.css'
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
         {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter"}}
-            {{#> input-group}}
-              {{#> select select--attribute='style="width: 175px"' select--id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
-                Name
-              {{/select}}
-              {{> search-input search-input--placeholder="Filter by name"}}
-            {{/input-group}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
+        {{> toolbar-item-search-filter}}
       {{/toolbar-group}}
       {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content="true" toolbar-overflow-menu-example--control="true"}}
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
@@ -59,16 +50,7 @@ import './Toolbar.css'
       {{/toolbar-item}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-        {{#> toolbar-item}}
-          {{#> input-group}}
-            {{#> select select--attribute='style="width: 175px"' select--id=(concat toolbar--id '-select-name-expanded') select-toggle--icon="fas fa-filter"}}
-              Name
-            {{/select}}
-            {{> search-input search-input--placeholder="Filter by name"}}
-          {{/input-group}}
-        {{/toolbar-item}}
-      {{/toolbar-group}}
+      {{> toolbar-item-search-filter}}
     {{/toolbar-expandable-content}}
   {{/toolbar-content}}
 {{/toolbar}}
@@ -315,16 +297,7 @@ import './Toolbar.css'
         {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-nowrap"}}
           {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
             {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
-            {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-              {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter"}}
-                {{#> input-group}}
-                  {{#> select select--attribute='style="width: 175px"' select--id=(concat toolbar--id '-select-name') select-toggle--icon="fas fa-filter"}}
-                    Name
-                  {{/select}}
-                  {{> search-input search-input--placeholder="Filter by name"}}
-                {{/input-group}}
-              {{/toolbar-item}}
-            {{/toolbar-group}}
+            {{> toolbar-item-search-filter}}
           {{/toolbar-group}}
           {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--control="true"}}
           {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}

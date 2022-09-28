@@ -302,7 +302,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
         {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
-        {{> toolbar-item-search-filter button--id="content"}}
+        {{> toolbar-item-search-filter}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
             {{#> select select--id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}

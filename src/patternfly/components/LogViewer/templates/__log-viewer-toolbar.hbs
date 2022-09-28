@@ -7,13 +7,7 @@
         {{/toolbar-item}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
           {{> toolbar-toggle toolbar-toggle--icon="fa-search" toolbar-toggle--IsExpanded="false"}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter" toolbar-item--attribute='style="--pf-c-toolbar__item--Width: 268px"'}}
-            {{#if __log-viewer-toolbar--IsMatch}}
-              {{> search-input search-input--placeholder="Find" search-input--value="openshift" search-input--count="1 / 10" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
-            {{else}}
-              {{> search-input search-input--placeholder="Find"}}
-            {{/if}}
-          {{/toolbar-item}}
+          {{> __log-viewer-toolbar-search-filter __log-viewer-toolbar-search-filter--Width="268px"}}
         {{/toolbar-group}}
         {{#> toolbar-item toolbar-item--modifier="pf-m-spacer-none"}}
           {{#> button button--modifier="pf-m-link"}}
@@ -83,13 +77,7 @@
         {{/toolbar-group}}
       {{/toolbar-content-section}}
       {{#> toolbar-expandable-content}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-search-filter" toolbar-item--attribute='style="--pf-c-toolbar__item--Width: 24ch"'}}
-          {{#if __log-viewer-toolbar--IsMatch}}
-            {{> search-input search-input--placeholder="Find" search-input--value="openshift" search-input--count="1 / 10" search-input--IsNavigable="true" search-input--IsFirstMatch="true"}}
-          {{else}}
-            {{> search-input search-input--placeholder="Find"}}
-          {{/if}}
-        {{/toolbar-item}}
+        {{> __log-viewer-toolbar-search-filter __log-viewer-toolbar-search-filter--Width="24ch"}}
       {{/toolbar-expandable-content}}
     {{/toolbar-content}}
   {{/toolbar}}
