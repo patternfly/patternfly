@@ -116,8 +116,8 @@
   --pf-c-button--m-link--m-inline--PaddingRight: 0;
   --pf-c-button--m-link--m-inline--PaddingBottom: 0;
   --pf-c-button--m-link--m-inline--PaddingLeft: 0;
-  --pf-c-button--m-inline--m-link__progress--Left: var(--pf-global--spacer--xs);
-  --pf-c-button--m-link--m-inline--m-in-progress--PaddingLeft: calc(var(--pf-c-button--m-inline--m-link__progress--Left) + 1rem + var(--pf-global--spacer--sm));
+  --pf-c-button--m-link--m-inline__progress--Left: var(--pf-global--spacer--xs);
+  --pf-c-button--m-link--m-inline--m-in-progress--PaddingLeft: calc(var(--pf-c-button--m-link--m-inline__progress--Left) + 1rem + var(--pf-global--spacer--sm));
 
   // Link danger
   --pf-c-button--m-link--m-danger--BackgroundColor: transparent;
@@ -374,7 +374,7 @@
 
     &.pf-m-inline {
       --pf-c-button--FontSize: var(--pf-c-button--m-link--m-inline--FontSize);
-      --pf-c-button__progress--Left: var(--pf-c-button--m-inline--m-link__progress--Left);
+      --pf-c-button__progress--Left: var(--pf-c-button--m-link--m-inline__progress--Left);
 
       display: inline;
       padding: var(--pf-c-button--m-link--m-inline--PaddingTop) var(--pf-c-button--m-link--m-inline--PaddingRight) var(--pf-c-button--m-link--m-inline--PaddingBottom) var(--pf-c-button--m-link--m-inline--PaddingLeft);
