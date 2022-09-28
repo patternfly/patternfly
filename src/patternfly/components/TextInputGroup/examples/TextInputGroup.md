@@ -8,7 +8,6 @@ cssPrefix: pf-c-text-input-group
 import './TextInputGroup.css'
 
 ## Examples
-
 ### Basic
 ```hbs
 {{#> text-input-group text-input-group--id="text-input-group-basic"}}
@@ -96,74 +95,22 @@ import './TextInputGroup.css'
 
 ### Search input group
 ```hbs
-{{#> text-input-group text-input-group--id="text-input-group-search-input-group"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="Find by name"'}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-{{/text-input-group}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group" text-input-group-text-input--placeholder="Find by name"}}
 ```
 
 ### Search input group, no match
 ```hbs
-{{#> text-input-group text-input-group--id="text-input-group-search-input-group-no-match"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="Joh"}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-{{/text-input-group}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-no-match" text-input-group-text-input--placeholder="Find by name" text-input-group--value="Joh"}}
 ```
+
 ###  Search input group, match with result count
 ```hbs
-{{#> text-input-group text-input-group--id="text-input-group-search-input-group-match-with-result-count"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="John Doe"}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{> badge badge--modifier="pf-m-read" badge--text="3"}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-{{/text-input-group}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-result-count" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="3"}}
 ```
 
 ### Search input group, match with navigable options
 ```hbs
-{{#> text-input-group text-input-group--id="text-input-group-search-input-group-match-with-navigable-options"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group--value="John Doe"}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{> badge badge--modifier="pf-m-read" badge--text="1 / 3"}}
-    {{#> text-input-group-group}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Next"'}}
-        <i class="fas fa-angle-up fa-fw" aria-hidden="true"></i>
-      {{/button}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next"'}}
-        <i class="fas fa-angle-down fa-fw" aria-hidden="true"></i>
-      {{/button}}
-    {{/text-input-group-group}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-{{/text-input-group}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-match-with-navigable-options" text-input-group-text-input--placeholder="Find by name" text-input-group--value="John Doe" text-input-group--search-input--count="1 / 3" text-input-group--search-input--IsFirstMatch="true"}}
 ```
 
 ### Search input group, expandable
@@ -180,14 +127,7 @@ import './TextInputGroup.css'
 <h3>Expanded</h3>
 <br>
 {{#> input-group input-group--modifier="pf-m-plain"}}
-  {{#> text-input-group}}
-    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-      {{#> text-input-group-text}}
-        {{> text-input-group-icon}}
-        {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="Search"'}}
-      {{/text-input-group-text}}
-    {{/text-input-group-main}}
-  {{/text-input-group}}
+  {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-expandable" text-input-group-text-input--placeholder="Search"}}
   {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
     <i class="fas fa-times" aria-hidden="true"></i>
   {{/button}}
@@ -197,14 +137,7 @@ import './TextInputGroup.css'
 ### Search input group, with submit button
 ```hbs
 {{#> input-group}}
-  {{#> text-input-group text-input-group--id="text-input-group-search-input-group-with-submit-button"}}
-    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-      {{#> text-input-group-text}}
-        {{> text-input-group-icon}}
-        {{> text-input-group-text-input text-input-group-text-input--placeholder="Find by name"}}
-      {{/text-input-group-text}}
-    {{/text-input-group-main}}
-  {{/text-input-group}}
+  {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-with-submit-button" text-input-group-text-input--placeholder="Find by name"}}
   {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
     <i class="fas fa-arrow-right" aria-hidden="true"></i>
   {{/button}}
@@ -214,19 +147,7 @@ import './TextInputGroup.css'
 ### Search input group, advanced search
 ```hbs
 {{#> input-group}}
-  {{#> text-input-group text-input-group--id="text-input-group-search-input-group-advanced-search"}}
-    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-      {{#> text-input-group-text}}
-        {{> text-input-group-icon}}
-        {{> text-input-group-text-input text-input-group--value="username:root firstname:ned"}}
-      {{/text-input-group-text}}
-    {{/text-input-group-main}}
-    {{#> text-input-group-utilities}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-      {{/button}}
-    {{/text-input-group-utilities}}
-  {{/text-input-group}}
+  {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search" text-input-group--value="username:root firstname:ned"}}
   {{#> button button--modifier="pf-m-control" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
     <i class="fas fa-caret-down" aria-hidden="true"></i>
   {{/button}}
@@ -240,19 +161,7 @@ import './TextInputGroup.css'
 ### Search input group, advanced search expanded
 ```hbs
 {{#> input-group}}
-  {{#> text-input-group text-input-group--id="text-input-group-search-input-group-advanced-search-option"}}
-    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-      {{#> text-input-group-text}}
-        {{> text-input-group-icon}}
-        {{> text-input-group-text-input text-input-group--value="username:root firstname:ned"}}
-      {{/text-input-group-text}}
-    {{/text-input-group-main}}
-    {{#> text-input-group-utilities}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-      {{/button}}
-    {{/text-input-group-utilities}}
-  {{/text-input-group}}
+  {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded" text-input-group--value="username:root firstname:ned"}}
   {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
     <i class="fas fa-caret-down" aria-hidden="true"></i>
   {{/button}}
@@ -323,19 +232,7 @@ import './TextInputGroup.css'
 
 ### Search input group, autocomplete
 ```hbs
-{{#> text-input-group text-input-group--id="autocomplete" text-input-group--value="app"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-{{/text-input-group}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-autocomplete" text-input-group--value="app"}}
 
 {{#> menu}}
   {{#> menu-content}}
@@ -383,20 +280,7 @@ import './TextInputGroup.css'
 
 ### Search input group, autocomplete last option hint
 ```hbs
-{{#> text-input-group text-input-group--id="autocomplete-last-option-hint-example" text-input-group--value="apples"}}
-  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-    {{#> text-input-group-text}}
-      {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group-text-input--hint-text="appleseed" }}
-      {{> text-input-group-text-input}}
-    {{/text-input-group-text}}
-  {{/text-input-group-main}}
-  {{#> text-input-group-utilities}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-    {{/button}}
-  {{/text-input-group-utilities}}
-{{/text-input-group}}
+{{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-autocomplete-last-option-hint" text-input-group--value="app" text-input-group-text-input--hint-text="appleseed"}}
 
 {{#> menu}}
   {{#> menu-content}}
@@ -419,19 +303,7 @@ import './TextInputGroup.css'
 ```hbs
 <div class="ws-example-wrapper">
 {{#> input-group}}
-  {{#> text-input-group text-input-group--id="text-input-group-search-input-group-advanced-search-expanded-autocomplete"}}
-    {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-      {{#> text-input-group-text}}
-        {{> text-input-group-icon}}
-        {{> text-input-group-text-input text-input-group--value="username:root firstname:n"}}
-      {{/text-input-group-text}}
-    {{/text-input-group-main}}
-    {{#> text-input-group-utilities}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
-        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
-      {{/button}}
-    {{/text-input-group-utilities}}
-  {{/text-input-group}}
+  {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded-autocomplete" text-input-group--value="username:root firstname:n"}}
   {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
     <i class="fas fa-caret-down" aria-hidden="true"></i>
   {{/button}}
