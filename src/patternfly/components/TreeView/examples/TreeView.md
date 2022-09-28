@@ -902,7 +902,7 @@ beta: true
 | `.pf-c-tree-view__node-toggle` | `<span>`, `<button>` | Initiates a tree view toggle. |
 | `.pf-c-tree-view__node-toggle-icon` | `<span>` | Initiates a tree view toggle icon. |
 | `.pf-c-tree-view__node-title` | `<span>` | Initiates a tree view node title. |
-| `.pf-c-tree-view__node-text` | `<span>` | Initiates tree view text. |
+| `.pf-c-tree-view__node-text` | `<span>`, `<button>` | Initiates tree view text. **Note:** Use a `<button>` when the node is expandable and selectable. |
 | `.pf-c-tree-view__node-icon` | `<span>` | Initiates a tree view icon. |
 | `.pf-c-tree-view__node-check` | `<span>` | Initiates a tree view check. |
 | `.pf-c-tree-view__action` | `<div>` | Initiates a tree view action wrapper. |
