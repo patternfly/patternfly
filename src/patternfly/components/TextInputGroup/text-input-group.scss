@@ -20,9 +20,9 @@
   --pf-c-text-input-group__main--ColumnGap: var(--pf-global--spacer--sm);
 
   // Chip group
-  --pf-c-text-input-group__c-chip-group__main--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-text-input-group__c-chip-group__main--PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-text-input-group__c-chip-group__main--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-text-input-group--c-chip-group__main--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-text-input-group--c-chip-group__main--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-text-input-group--c-chip-group__main--PaddingBottom: var(--pf-global--spacer--xs);
 
   // Text input
   --pf-c-text-input-group__text-input--PaddingTop: var(--pf-global--spacer--form-element);
@@ -98,9 +98,9 @@
   }
 
   .pf-c-chip-group__main {
-    padding-top: var(--pf-c-text-input-group__c-chip-group__main--PaddingTop);
-    padding-right: var(--pf-c-text-input-group__c-chip-group__main--PaddingRight);
-    padding-bottom: var(--pf-c-text-input-group__c-chip-group__main--PaddingBottom);
+    padding-top: var(--pf-c-text-input-group--c-chip-group__main--PaddingTop);
+    padding-right: var(--pf-c-text-input-group--c-chip-group__main--PaddingRight);
+    padding-bottom: var(--pf-c-text-input-group--c-chip-group__main--PaddingBottom);
   }
 }
 
