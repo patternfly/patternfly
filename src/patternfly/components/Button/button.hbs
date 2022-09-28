@@ -1,4 +1,9 @@
-<{{#if button--IsInlineLinkSpan}}span{{else}}button{{/if}} class="pf-c-button{{#if button--IsExpanded}} pf-m-expanded{{/if}}{{#if button--IsProgress}} pf-m-progress{{/if}}{{#if button--IsInProgress}} pf-m-in-progress{{/if}}{{#if button--modifier}} {{button--modifier}}{{/if}}"
+<{{#if button--IsInlineLinkSpan}}span{{else}}button{{/if}} class="pf-c-button
+  {{~#if button--IsExpanded}} pf-m-expanded{{/if}}
+  {{~#if button--IsProgress}} pf-m-progress{{/if}}
+  {{~#if button--IsInProgress}} pf-m-in-progress{{/if}}
+  {{~#if button--IsInline}} pf-m-inline{{/if}}
+  {{~#if button--modifier}} {{button--modifier}}{{/if}}"
   {{#if button--IsSubmit}}
     type="submit"
   {{else if button--IsReset}}
@@ -16,7 +21,7 @@
     {{{button--attribute}}}
   {{/if}}>
   {{#if button--IsInProgress}}
-    {{> button-progress spinner--modifier="pf-m-md"}}
+    {{> button-progress}}
   {{/if}}
   {{> @partial-block}}
 </{{#if button--IsInlineLinkSpan}}span{{else}}button{{/if}}>

@@ -112,12 +112,12 @@
   --pf-c-button--m-link--m-inline--FontSize: inherit;
   --pf-c-button--m-link--m-inline--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
   --pf-c-button--m-link--m-inline--hover--Color: var(--pf-global--link--Color--hover);
-  --pf-c-button--m-inline--m-link--PaddingTop: 0;
-  --pf-c-button--m-inline--m-link--PaddingRight: 0;
-  --pf-c-button--m-inline--m-link--PaddingBottom: 0;
-  --pf-c-button--m-inline--m-link--PaddingLeft: 0;
-  --pf-c-button--m-inline--m-link--m-in-progress--PaddingLeft: calc(var(--pf-global--spacer--xs) + 1rem + var(--pf-global--spacer--sm));
+  --pf-c-button--m-link--m-inline--PaddingTop: 0;
+  --pf-c-button--m-link--m-inline--PaddingRight: 0;
+  --pf-c-button--m-link--m-inline--PaddingBottom: 0;
+  --pf-c-button--m-link--m-inline--PaddingLeft: 0;
   --pf-c-button--m-inline--m-link__progress--Left: var(--pf-global--spacer--xs);
+  --pf-c-button--m-link--m-inline--m-in-progress--PaddingLeft: calc(var(--pf-c-button--m-inline--m-link__progress--Left) + 1rem + var(--pf-global--spacer--sm));
 
   // Link danger
   --pf-c-button--m-link--m-danger--BackgroundColor: transparent;
@@ -377,7 +377,7 @@
       --pf-c-button__progress--Left: var(--pf-c-button--m-inline--m-link__progress--Left);
 
       display: inline;
-      padding: var(--pf-c-button--m-inline--m-link--PaddingTop) var(--pf-c-button--m-inline--m-link--PaddingRight) var(--pf-c-button--m-inline--m-link--PaddingBottom) var(--pf-c-button--m-inline--m-link--PaddingLeft);
+      padding: var(--pf-c-button--m-link--m-inline--PaddingTop) var(--pf-c-button--m-link--m-inline--PaddingRight) var(--pf-c-button--m-link--m-inline--PaddingBottom) var(--pf-c-button--m-link--m-inline--PaddingLeft);
       text-align: left;
       white-space: normal;
       cursor: pointer;
@@ -386,10 +386,6 @@
         --pf-c-button--m-link--Color: var(--pf-c-button--m-link--m-inline--hover--Color);
 
         text-decoration: var(--pf-c-button--m-link--m-inline--hover--TextDecoration);
-      }
-
-      .pf-c-spinner {
-        --pf-c-spinner--diameter: 1em;
       }
     }
 
@@ -609,7 +605,7 @@
   }
 
   &.pf-m-in-progress {
-    --pf-c-button--m-inline--m-link--PaddingLeft: var(--pf-c-button--m-inline--m-link--m-in-progress--PaddingLeft);
+    --pf-c-button--m-link--m-inline--PaddingLeft: var(--pf-c-button--m-link--m-inline--m-in-progress--PaddingLeft);
 
     &:not(.pf-m-plain) {
       --pf-c-button--PaddingRight: var(--pf-c-button--m-in-progress--PaddingRight);
