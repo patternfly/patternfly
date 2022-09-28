@@ -165,6 +165,7 @@
 .pf-c-slider__step-label {
   position: absolute;
   top: var(--pf-c-slider__step-label--Top);
+  word-break: normal;
   transform: translateX(var(--pf-c-slider__step-label--TranslateX));
 }
 
