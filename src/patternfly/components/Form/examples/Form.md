@@ -213,6 +213,7 @@ cssPrefix: pf-c-form
   {{/form-group}}
 {{/form}}
 ```
+
 ### Label with additional info
 ```hbs
 {{#> form form--id="form-additional-info"}}
@@ -234,6 +235,7 @@ cssPrefix: pf-c-form
   {{/form-group}}
 {{/form}}
 ```
+
 ### Action group
 ```hbs
 {{#> form}}
@@ -249,6 +251,7 @@ cssPrefix: pf-c-form
   {{/form-group}}
 {{/form}}
 ```
+
 ### Field group (non-expandable)
 ```hbs
 {{#> form form--id="form-field-group"}}
@@ -374,11 +377,12 @@ cssPrefix: pf-c-form
       {{/form-field-group}}
     {{/form-field-group-body}}
   {{/form-field-group}}
-
 {{/form}}
 ```
 
 ## Documentation
+To avoid the form label's required indicator or help tooltip icon from wrapping separately from the form label text, all whitespace characters between the last word of the label text, the required indicator (`.pf-c-form__label-required`), and help tooltip icon (`.pf-c-form__label-help`) must be removed, and `&nbsp;` characters added in between to maintain spacing. Also the help tooltip icon's `.pf-c-form__label-required` element must be a `<span>` instead of a `<button>` due to layout limitations of the `<button>` element imposed by user agent styles.
+
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
@@ -391,6 +395,7 @@ cssPrefix: pf-c-form
 | `aria-hidden="true"` | `.pf-c-form__label-required` |  Hides the required indicator from assistive technologies. |
 | `role="group"` | `.pf-c-form__group`, `.pf-c-form__section`, `.pf-c-form__field-group` | Provides group role for form groups, form sections, and form field groups. **Required for checkbox groups, form groups, form sections, and form field groups.** |
 | `role="radiogroup"` | `.pf-c-form__group` | Provides group role for radio input groups. **Required for radio input groups** |
+| `role="button"` | `.pf-c-form__group-label-help` | Provides button role for group label help spans. **Required for group label help.** |
 | `id` | `.pf-c-form__group-label` | Generates an `id` for use in the `aria-labelledby` attribute in a checkbox or radio form group. |
 | `id` | `.pf-c-form__field-group-title-text` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
 | `id` | `.pf-c-form__field-group-toggle-button > button` | Generates an `id` for use in the `aria-labelledby` attribute in an expandable field group's toggle button. |
@@ -414,7 +419,7 @@ cssPrefix: pf-c-form
 | `.pf-c-form__label-required` | `<span>` |  Initiates a form label required indicator. |
 | `.pf-c-form__group-label-main` | `<div>` |  Initiates a form group label main container. |
 | `.pf-c-form__group-label-info` | `<div>` |  Initiates a form group info label. |
-| `.pf-c-form__group-label-help` | `<button>` | Initiates a field level help button. |
+| `.pf-c-form__group-label-help` | `<button>`, `<span>` | Initiates a field level help span/button. |
 | `.pf-c-form__group-control` | `<div>` |  Initiates a form group control section. |
 | `.pf-c-form__actions` | `<div>` | Iniates a row of actions. |
 | `.pf-c-form__helper-text` | `<p>`, `<div>` |  Initiates a form helper text block. |

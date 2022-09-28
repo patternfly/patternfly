@@ -20,6 +20,10 @@ hbsInstance.registerHelper('concat', (...params) => {
   return params.join('');
 });
 
+hbsInstance.registerHelper('removeWhiteSpaceForPrettier', () => {
+  return 'removeWhiteSpaceForPrettier';
+})
+
 hbsInstance.registerHelper('ifEquals', (arg1, arg2, options) => {
   return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
 });
@@ -83,7 +87,8 @@ function compileMD0(srcFiles) {
                 let html = hbsInstance.compile(node.value)({});
                 html = prettyhtml(html)
                   .contents.replace(/class /g, '')
-                  .replace(/ class>/g, '>');
+                  .replace(/ class>/g, '>')
+                  .replace(/[\n\t\s\r]+removeWhiteSpaceForPrettier[\n\t\s\r]+/g, '');
                 node.lang = 'html';
                 node.value = html;
               } catch (error) {
