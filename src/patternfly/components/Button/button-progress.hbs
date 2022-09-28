@@ -3,8 +3,18 @@
     {{{button-progress--attribute}}}
   {{/if}}>
   {{#if button--IsInline}}
-    {{#> spinner spinner--modifier="pf-m-inline"}}Loading...{{/spinner}}
+    {{> button-progress--spinner button-progress--spinner--modifier="pf-m-inline"}}
   {{else}}
-    {{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
+    {{> button-progress--spinner button-progress--spinner--modifier="pf-m-md"}}
   {{/if}}
 </span>
+
+{{#*inline "button-progress--spinner"}}
+  {{#> spinner spinner--modifier=button-progress--spinner--modifier~}}
+    {{~#if button--progress-text~}}
+      {{~button--progress-text~}}
+    {{~else~}}
+      Loading...
+    {{~/if~}}
+  {{~/spinner}}
+{{/inline}}

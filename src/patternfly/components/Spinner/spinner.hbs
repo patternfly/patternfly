@@ -10,6 +10,8 @@
     {{/if}}
     {{#if @partial-block}}
       aria-label="{{> @partial-block}}"
+    {{else if spinner--text}}
+      aria-label="{{spinner--text}}"
     {{/if}}
     {{#if spinner--attribute}}
       {{{spinner--attribute}}}
@@ -27,6 +29,8 @@
     {{/if}}
     {{#if @partial-block}}
       aria-label="{{> @partial-block}}"
+    {{else if spinner--text}}
+      aria-label="{{spinner--text}}"
     {{/if}}
     {{#if spinner--attribute}}
       {{{spinner--attribute}}}
@@ -34,7 +38,6 @@
     {{#if spinner--attribute}}
       {{{spinner--attribute}}}
     {{/if}}>
-
     <span class="pf-c-spinner__clipper"></span>
     <span class="pf-c-spinner__lead-ball"></span>
     <span class="pf-c-spinner__tail-ball"></span>

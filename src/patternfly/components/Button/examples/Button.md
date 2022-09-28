@@ -339,7 +339,7 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
   <i class="fas fa-upload" aria-hidden="true"></i>
 {{/button}}
 
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Upload"' button--IsInProgress="true"}}
+{{#> button button--modifier="pf-m-plain" button--IsInProgress="true" button--progress-text="Uploading..."}}
   <i class="fas fa-upload" aria-hidden="true"></i>
 {{/button}}
 <br/>
