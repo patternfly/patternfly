@@ -423,7 +423,7 @@ section: components
 
 {{#* inline "page-template-main-content"}}
   {{> page-template-breadcrumb}}
-  {{> page-template-title page-template-title--title="Projects" page-template-title--description=""}}
+  {{> page-template-title page-template-title--title="Projects" page-template-title--description="Click any project card to view tabs within modals."}}
   {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
       {{#> card card--id=(concat page-template--id '-card-1') card--modifier="pf-m-selectable-raised pf-m-compact"}}
