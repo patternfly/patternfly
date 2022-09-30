@@ -502,7 +502,7 @@ section: components
             {{/title}}
           {{/grid-item}}
           {{#> grid-item}}
-            {{#> tabs tabs--id=(concat tabs-template--id '-subtabs') tabs--modifier="pf-m-inset-none"}}
+            {{#> tabs tabs--id=(concat tabs-template--id '-subtabs') tabs--IsSecondary="true" tabs--HasBorderBottom="true" tabs--modifier="pf-m-inset-none"}}
               {{#> tabs-list}}
                 {{> __tabs-item
                   __tabs-item--current="true"
