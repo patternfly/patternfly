@@ -73,11 +73,11 @@ cssPrefix: pf-c-accordion
     {{/accordion-expanded-content-body}}
   {{/accordion-expanded-content}}
 
-  {{#> accordion-toggle accordion-toggle--IsExpanded="true"}}
+  {{#> accordion-toggle accordion-toggle--IsExpanded="true" accordion-toggle--attribute="id='accordion-fixed-item-two-toggle'"}}
     {{#> accordion-toggle-text}}Item two{{/accordion-toggle-text}}
     {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
   {{/accordion-toggle}}
-  {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true" accordion-expanded-content--IsFixed="true"}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true" accordion-expanded-content--IsFixed="true" accordion-expanded-content--attribute="aria-labelledby='accordion-fixed-item-two-toggle'"}}
     {{#> accordion-expanded-content-body}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     {{/accordion-expanded-content-body}}
