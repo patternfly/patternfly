@@ -16,6 +16,13 @@
   // Main
   --pf-c-text-input-group__main--first-child--not--text-input--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-text-input-group__main--m-icon__text-input--PaddingLeft: var(--pf-global--spacer--xl);
+  --pf-c-text-input-group__main--RowGap: var(--pf-global--spacer--xs);
+  --pf-c-text-input-group__main--ColumnGap: var(--pf-global--spacer--sm);
+
+  // Chip group
+  --pf-c-text-input-group--c-chip-group__main--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-text-input-group--c-chip-group__main--PaddingRight: var(--pf-global--spacer--xs);
+  --pf-c-text-input-group--c-chip-group__main--PaddingBottom: var(--pf-global--spacer--xs);
 
   // Text input
   --pf-c-text-input-group__text-input--PaddingTop: var(--pf-global--spacer--form-element);
@@ -78,7 +85,8 @@
 .pf-c-text-input-group__main {
   display: flex;
   flex: 1;
-  gap: var(--pf-global--spacer--sm);
+  flex-wrap: wrap;
+  gap: var(--pf-c-text-input-group__main--RowGap) var(--pf-c-text-input-group__main--ColumnGap);
   min-width: 0;
 
   &.pf-m-icon {
@@ -89,23 +97,10 @@
     margin-left: var(--pf-c-text-input-group__main--first-child--not--text-input--MarginLeft);
   }
 
-  // Scroll chip group horizontally if there is overflow
-  .pf-c-chip-group {
-    overflow: auto;
-
-    // Hide scrollbar for IE, Edge and Firefox
-    -ms-overflow-style: none;  // IE and Edge
-    scrollbar-width: none;  // Firefox
-
-    // Hide scrollbar for Chrome, Safari and Opera
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
-  .pf-c-chip-group,
-  .pf-c-chip-group__list {
-    flex-wrap: nowrap;
+  .pf-c-chip-group__main {
+    padding-top: var(--pf-c-text-input-group--c-chip-group__main--PaddingTop);
+    padding-right: var(--pf-c-text-input-group--c-chip-group__main--PaddingRight);
+    padding-bottom: var(--pf-c-text-input-group--c-chip-group__main--PaddingBottom);
   }
 }
 

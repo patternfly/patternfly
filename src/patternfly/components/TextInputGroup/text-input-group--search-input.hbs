@@ -1,0 +1,40 @@
+{{#> text-input-group}}
+  {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+    {{#> text-input-group-text}}
+      {{> text-input-group-icon}}
+      {{> text-input-group-text-input}}
+    {{/text-input-group-text}}
+  {{/text-input-group-main}}
+  {{#if text-input-group--value}}
+    {{#> text-input-group-utilities}}
+      {{#if text-input-group--search-input--count}}
+        {{> badge badge--modifier="pf-m-read" badge--text=text-input-group--search-input--count}}
+        {{#if text-input-group--search-input--IsNavigable}}
+          {{#> text-input-group-group}}
+            {{#if text-input-group--search-input--IsFirstMatch}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Previous"'}}
+                <i class="fas fa-angle-up fa-fw" aria-hidden="true"></i>
+              {{/button}}
+            {{else}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Previous"'}}
+                <i class="fas fa-angle-up fa-fw" aria-hidden="true"></i>
+              {{/button}}
+            {{/if}}
+            {{#if text-input-group--search-input--IsLastMatch}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='disabled aria-label="Next"'}}
+                <i class="fas fa-angle-down fa-fw" aria-hidden="true"></i>
+              {{/button}}
+            {{else}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Next"'}}
+                <i class="fas fa-angle-down fa-fw" aria-hidden="true"></i>
+              {{/button}}
+            {{/if}}
+          {{/text-input-group-group}}
+        {{/if}}
+      {{/if}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Clear input"'}}
+        <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+      {{/button}}
+    {{/text-input-group-utilities}}
+  {{/if}}
+{{/text-input-group}}

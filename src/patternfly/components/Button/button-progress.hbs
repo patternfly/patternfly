@@ -2,5 +2,19 @@
   {{#if button-progress--attribute}}
     {{{button-progress--attribute}}}
   {{/if}}>
-  {{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
+  {{#if button--IsInline}}
+    {{> button-progress--spinner button-progress--spinner--modifier="pf-m-inline"}}
+  {{else}}
+    {{> button-progress--spinner button-progress--spinner--modifier="pf-m-md"}}
+  {{/if}}
 </span>
+
+{{#*inline "button-progress--spinner"}}
+  {{#> spinner spinner--modifier=button-progress--spinner--modifier~}}
+    {{~#if button--progress-text~}}
+      {{~button--progress-text~}}
+    {{~else~}}
+      Loading...
+    {{~/if~}}
+  {{~/spinner}}
+{{/inline}}

@@ -112,6 +112,12 @@
   --pf-c-button--m-link--m-inline--FontSize: inherit;
   --pf-c-button--m-link--m-inline--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
   --pf-c-button--m-link--m-inline--hover--Color: var(--pf-global--link--Color--hover);
+  --pf-c-button--m-link--m-inline--PaddingTop: 0;
+  --pf-c-button--m-link--m-inline--PaddingRight: 0;
+  --pf-c-button--m-link--m-inline--PaddingBottom: 0;
+  --pf-c-button--m-link--m-inline--PaddingLeft: 0;
+  --pf-c-button--m-link--m-inline__progress--Left: var(--pf-global--spacer--xs);
+  --pf-c-button--m-link--m-inline--m-in-progress--PaddingLeft: calc(var(--pf-c-button--m-link--m-inline__progress--Left) + 1rem + var(--pf-global--spacer--sm));
 
   // Link danger
   --pf-c-button--m-link--m-danger--BackgroundColor: transparent;
@@ -368,9 +374,10 @@
 
     &.pf-m-inline {
       --pf-c-button--FontSize: var(--pf-c-button--m-link--m-inline--FontSize);
+      --pf-c-button__progress--Left: var(--pf-c-button--m-link--m-inline__progress--Left);
 
       display: inline;
-      padding: 0;
+      padding: var(--pf-c-button--m-link--m-inline--PaddingTop) var(--pf-c-button--m-link--m-inline--PaddingRight) var(--pf-c-button--m-link--m-inline--PaddingBottom) var(--pf-c-button--m-link--m-inline--PaddingLeft);
       text-align: left;
       white-space: normal;
       cursor: pointer;
@@ -598,6 +605,8 @@
   }
 
   &.pf-m-in-progress {
+    --pf-c-button--m-link--m-inline--PaddingLeft: var(--pf-c-button--m-link--m-inline--m-in-progress--PaddingLeft);
+
     &:not(.pf-m-plain) {
       --pf-c-button--PaddingRight: var(--pf-c-button--m-in-progress--PaddingRight);
       --pf-c-button--PaddingLeft: var(--pf-c-button--m-in-progress--PaddingLeft);

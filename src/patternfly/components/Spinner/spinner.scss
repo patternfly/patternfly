@@ -12,11 +12,18 @@
   --pf-c-spinner--m-lg--diameter: var(--pf-global--icon--FontSize--lg);
   --pf-c-spinner--m-xl--diameter: var(--pf-global--icon--FontSize--xl);
 
+  // inline
+  --pf-c-spinner--m-inline--diameter: 1em;
+
   width: var(--pf-c-spinner--Width);
   height: var(--pf-c-spinner--Height);
   overflow: hidden;
 
   // Modifiers change the variables for size variations
+  &.pf-m-inline {
+    --pf-c-spinner--diameter: var(--pf-c-spinner--m-inline--diameter);
+  }
+
   &.pf-m-sm {
     --pf-c-spinner--diameter: var(--pf-c-spinner--m-sm--diameter);
   }

@@ -304,6 +304,7 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
   font-size: var(--pf-c-form__group-label-help--FontSize);
   line-height: 1;
   color: var(--pf-c-form__group-label-help--Color);
+  cursor: pointer;
   border: 0;
   transform: translateY(var(--pf-c-form__group-label-help--TranslateY));
 

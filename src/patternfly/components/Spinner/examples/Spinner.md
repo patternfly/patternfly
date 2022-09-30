@@ -22,6 +22,13 @@ cssPrefix: pf-c-spinner
 {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
 ```
 
+### Inline
+An inline spinner inherits its font-size, so its size will match the content around it.
+
+```hbs isBeta
+{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-inline"}}Loading...{{/spinner}}
+```
+
 ### Custom size
 ```hbs
 {{#> spinner spinner--IsSvg="true" spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
@@ -57,7 +64,6 @@ Note: If the spinner is showing that loading of a particular region of a page is
 
 Note: A [live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) must be present before changing its status in order for the change to be read.
 
-
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -80,3 +86,4 @@ Note: A [live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility
 | `.pf-m-md` | `.pf-c-spinner` |  Creates a medium spinner. |
 | `.pf-m-lg` | `.pf-c-spinner` |  Creates a large spinner. |
 | `.pf-m-xl` | `.pf-c-spinner` |  Creates an extra-large spinner. |
+| `.pf-m-inline` | `.pf-c-spinner` |  Creates an inline spinner. |

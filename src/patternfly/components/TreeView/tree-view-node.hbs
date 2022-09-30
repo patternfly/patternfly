@@ -1,7 +1,7 @@
 {{#if tree-view-node--HasCheckbox}}
   {{> __tree-view-node tree-view-node--type="label" tree-view-node--IsSelectable=tree-view-list-item--IsExpandable}}
 {{else if tree-view-node--IsSelectable}}
-  {{> __tree-view-node tree-view-node--type="div"}}
+  {{> __tree-view-node tree-view-node--type="div" tree-view-node-text--type="button"}}
 {{else}}
   {{> __tree-view-node}}
 {{/if}}
