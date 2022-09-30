@@ -67,7 +67,7 @@ cssPrefix: pf-c-accordion
     {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
     {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
   {{/accordion-toggle}}
-  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true" accordion-expanded-content--HasNoScrollbar="true"}}
     {{#> accordion-expanded-content-body}}
       This text is hidden
     {{/accordion-expanded-content-body}}
@@ -93,7 +93,7 @@ cssPrefix: pf-c-accordion
     {{#> accordion-toggle-text}}Item three{{/accordion-toggle-text}}
     {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
   {{/accordion-toggle}}
-  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true" accordion-expanded-content--HasNoScrollbar="true"}}
     {{#> accordion-expanded-content-body}}
       This text is hidden
     {{/accordion-expanded-content-body}}
@@ -103,7 +103,7 @@ cssPrefix: pf-c-accordion
     {{#> accordion-toggle-text}}Item four{{/accordion-toggle-text}}
     {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
   {{/accordion-toggle}}
-  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true" accordion-expanded-content--HasNoScrollbar="true"}}
     {{#> accordion-expanded-content-body}}
       This text is hidden
     {{/accordion-expanded-content-body}}
@@ -113,7 +113,7 @@ cssPrefix: pf-c-accordion
     {{#> accordion-toggle-text}}Item five{{/accordion-toggle-text}}
     {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
   {{/accordion-toggle}}
-  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true"}}
+  {{#> accordion-expanded-content accordion-expanded-content--IsFixed="true" accordion-expanded-content--HasNoScrollbar="true"}}
     {{#> accordion-expanded-content-body}}
       This text is hidden
     {{/accordion-expanded-content-body}}
