@@ -1,6 +1,18 @@
 {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=(concat 'pf-m-light ' page-template-title--modifier)}}
   {{#> content}}
-    <h1>Main title</h1>
-    <p>This is a full page demo.</p>
+    <h1>
+      {{~#if page-template-title--title}}
+        {{page-template-title--title}}
+      {{else}}
+        Main title
+      {{/if}}
+    </h1>
+    <p>
+      {{~#if page-template-title--description}}
+        {{page-template-title--description}}
+      {{else}}
+        This is a full page demo.
+      {{/if}}
+    </p>
   {{/content}}
 {{/page-main-section}}
