@@ -3,6 +3,28 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.13 release notes (2022-10-06)
+Packages released:
+- [@patternfly/patternfly@v4.217.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.217.1)
+
+### Components
+- **Accordion:** Gave scrollable region keyboard access in fixed examples ([#5130](https://github.com/patternfly/patternfly/pull/5130))
+- **Button:** Added progress support for inline link ([#5104](https://github.com/patternfly/patternfly/pull/5104))
+- **Form group:** Fixed help/required orphan wrapping ([#5118](https://github.com/patternfly/patternfly/pull/5118))
+- **Menu:** Added danger menu item variation ([#5102](https://github.com/patternfly/patternfly/pull/5102))
+- **Sidebar:** Fixed sticky panel behavior in demo ([#5088](https://github.com/patternfly/patternfly/pull/5088))
+- **Slider:** Fixed excessive wrapping of labels ([#5103](https://github.com/patternfly/patternfly/pull/5103))
+- **Text input group:** Fixed chip/filter wrapping ([#4995](https://github.com/patternfly/patternfly/pull/4995))
+- **Toolbar:** Updated search to text-input-group ([#5087](https://github.com/patternfly/patternfly/pull/5087))
+- **Tree view:** Made selectable node text a button to fix keyboard a11y ([#5107](https://github.com/patternfly/patternfly/pull/5107))
+
+### Other
+- **Build:**
+  - Pinned dependencies ([#5098](https://github.com/patternfly/patternfly/pull/5098))
+  - Updated commitlint, stylelint, prettier ([#5123](https://github.com/patternfly/patternfly/pull/5123))
+  - Added workflow to add new issues to github project ([#5092](https://github.com/patternfly/patternfly/pull/5092))
+
+
 ## 2022.12 release notes (2022-09-14)
 Packages released:
 - [@patternfly/patternfly@v4.215.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.215.1)
@@ -36,8 +58,8 @@ Packages released:
 - **Checkbox:** Added support for required indicator ([#5025](https://github.com/patternfly/patternfly/pull/5025))
 - **Dropdown, select, context selector:** Added static variation for menu ([#4986](https://github.com/patternfly/patternfly/pull/4986))
 - **Expandable section:**
-  * Added truncate variant ([#5001](https://github.com/patternfly/patternfly/pull/5001))
-  * Fixed top margin on detached truncate toggle ([#5045](https://github.com/patternfly/patternfly/pull/5045))
+  - Added truncate variant ([#5001](https://github.com/patternfly/patternfly/pull/5001))
+  - Fixed top margin on detached truncate toggle ([#5045](https://github.com/patternfly/patternfly/pull/5045))
 - **Menu:** Removed footer bottom border when scrollable ([#5002](https://github.com/patternfly/patternfly/pull/5002))
 - **Page:** Added full-height modifier ([#5018](https://github.com/patternfly/patternfly/pull/5018))
 - **Search input:** Added collapsible variant ([#4827](https://github.com/patternfly/patternfly/pull/4827))
@@ -47,8 +69,8 @@ Packages released:
 ### Other
 - **Global:** Added custom property to allow override of root font-size ([#5032](https://github.com/patternfly/patternfly/pull/5032))
 - **Theme:**
-  * Adjusted dark theme colors ([#5020](https://github.com/patternfly/patternfly/pull/5020))
-  * Improved contrast of dark theme red-8888, warning button text ([#5041](https://github.com/patternfly/patternfly/pull/5041))
+  - Adjusted dark theme colors ([#5020](https://github.com/patternfly/patternfly/pull/5020))
+  - Improved contrast of dark theme red-8888, warning button text ([#5041](https://github.com/patternfly/patternfly/pull/5041))
 - **Workspace:** Fixed a11y violations in data-list and toolbar ([#5015](https://github.com/patternfly/patternfly/pull/5015))
 
 
@@ -138,9 +160,9 @@ Packages released:
 
 ### Other
 - **Theme:**
-  * Imported dark theme per component, added new global var ([#4864](https://github.com/patternfly/patternfly/pull/4864))
-  * Updated dark theme default text color ([#4875](https://github.com/patternfly/patternfly/pull/4875))
-  * Updated build process to copy files from new SCSS location ([#4878](https://github.com/patternfly/patternfly/issues/4878))
+  - Imported dark theme per component, added new global var ([#4864](https://github.com/patternfly/patternfly/pull/4864))
+  - Updated dark theme default text color ([#4875](https://github.com/patternfly/patternfly/pull/4875))
+  - Updated build process to copy files from new SCSS location ([#4878](https://github.com/patternfly/patternfly/issues/4878))
 - **Utilities:** Added font family utilities ([#4868](https://github.com/patternfly/patternfly/pull/4868))
 
 
@@ -205,8 +227,8 @@ Packages released:
 - **Form:** Improved accessible label on form elements in examples/demos ([#4714](https://github.com/patternfly/patternfly/pull/4714))
 - **Form control:** Updated invalid sprite css, examples ([#4732](https://github.com/patternfly/patternfly/pull/4732))
 - **Menu toggle:**
-  * Added typeahead variation ([#4673](https://github.com/patternfly/patternfly/pull/4673))
-  * Added example of secondary with icon ([#4743](https://github.com/patternfly/patternfly/pull/4743))
+  - Added typeahead variation ([#4673](https://github.com/patternfly/patternfly/pull/4673))
+  - Added example of secondary with icon ([#4743](https://github.com/patternfly/patternfly/pull/4743))
 - **Page/modal/wizard:** Made scrollable regions keyboard focusable ([#4736](https://github.com/patternfly/patternfly/pull/4736))
 - **Pagination:** Updated options menu toggle so whole toggle is clickable ([#4723](https://github.com/patternfly/patternfly/pull/4723))
 
@@ -433,17 +455,17 @@ Packages released:
 - **Backdrop:** Added var for position to allow customization ([#4391](https://github.com/patternfly/patternfly/pull/4391))
 - **Banner:** Added link style ([#4383](https://github.com/patternfly/patternfly/pull/4383))
 - **Card:**
-  * Updated log view and event view demos ([#4371](https://github.com/patternfly/patternfly/pull/4371))
-  * Fixed demo image paths ([#4400](https://github.com/patternfly/patternfly/pull/4400))
+  - Updated log view and event view demos ([#4371](https://github.com/patternfly/patternfly/pull/4371))
+  - Fixed demo image paths ([#4400](https://github.com/patternfly/patternfly/pull/4400))
 - **Drag drop:**
-  * Added drag drop ([#4398](https://github.com/patternfly/patternfly/pull/4398))
-  * Moved drag drop styles into component ([#4404](https://github.com/patternfly/patternfly/pull/4404))
+  - Added drag drop ([#4398](https://github.com/patternfly/patternfly/pull/4398))
+  - Moved drag drop styles into component ([#4404](https://github.com/patternfly/patternfly/pull/4404))
 - **Dual list selector:** Added support for disabled items ([#4361](https://github.com/patternfly/patternfly/pull/4361))
 - **Jump links:** Moved text into expandable toggle ([#4352](https://github.com/patternfly/patternfly/pull/4352))
 - **Label:** Added compact variant ([#4386](https://github.com/patternfly/patternfly/pull/4386))
 - **Log viewer:**
-  * Preserved white space in log viewer text ([#4397](https://github.com/patternfly/patternfly/pull/4397))
-  * Made text fill available space in container ([#4406](https://github.com/patternfly/patternfly/pull/4406))
+  - Preserved white space in log viewer text ([#4397](https://github.com/patternfly/patternfly/pull/4397))
+  - Made text fill available space in container ([#4406](https://github.com/patternfly/patternfly/pull/4406))
 - **Masthead:** Updated column-end ([#4418](https://github.com/patternfly/patternfly/pull/4418))
 - **Masthead, description list**: Fixed undefined vars ([#4421](https://github.com/patternfly/patternfly/pull/4421))
 - **Menu:** Added scrollable and plain modifiers ([#4392](https://github.com/patternfly/patternfly/pull/4392))
@@ -453,11 +475,11 @@ Packages released:
 - **Progress stepper:** Added help text for popover ([#4381](https://github.com/patternfly/patternfly/pull/4381))
 - **Radio, checkbox, form:** Corrected label alignment ([#4375](https://github.com/patternfly/patternfly/pull/4375))
 - **Select:**
-  * Added support for placeholder in toggle ([#4377](https://github.com/patternfly/patternfly/pull/4377))
-  * Removed double invalid icon on invalid typeahead ([#4385](https://github.com/patternfly/patternfly/pull/4385))
+  - Added support for placeholder in toggle ([#4377](https://github.com/patternfly/patternfly/pull/4377))
+  - Removed double invalid icon on invalid typeahead ([#4385](https://github.com/patternfly/patternfly/pull/4385))
 - **Table:**
-  * Added fixed columns ([#4326](https://github.com/patternfly/patternfly/pull/4326))
-  * Addressed followup compact tree issues ([#4389](https://github.com/patternfly/patternfly/pull/4389))
+  - Added fixed columns ([#4326](https://github.com/patternfly/patternfly/pull/4326))
+  - Addressed followup compact tree issues ([#4389](https://github.com/patternfly/patternfly/pull/4389))
 - **Text input group:** Added component ([#4408](https://github.com/patternfly/patternfly/pull/4408))
 - **Toolbar:** Adjusted demo heights, removed dupe demo ([#4373](https://github.com/patternfly/patternfly/pull/4373))
 
@@ -545,20 +567,20 @@ Packages released:
 ### Components
 - **Button:** Updated accessibility table ([#4200](https://github.com/patternfly/patternfly/pull/4200))
 - **Context selector/dropdown:**
-  * Changed full height toggle display type ([#4179](https://github.com/patternfly/patternfly/pull/4179))
-  * Moved `::before` values to `::after` ([#4182](https://github.com/patternfly/patternfly/pull/4182))
-  * Reverted move `::before` values to `::after` ([#4213](https://github.com/patternfly/patternfly/pull/4213))
+  - Changed full height toggle display type ([#4179](https://github.com/patternfly/patternfly/pull/4179))
+  - Moved `::before` values to `::after` ([#4182](https://github.com/patternfly/patternfly/pull/4182))
+  - Reverted move `::before` values to `::after` ([#4213](https://github.com/patternfly/patternfly/pull/4213))
 - **Form:** Added info text to group label ([#4172](https://github.com/patternfly/patternfly/pull/4172))
 - **Form group:** Updated form group roles to support checkbox/radio groups ([#4240](https://github.com/patternfly/patternfly/pull/4240))
 - **Helper text:** Updated static and dynamic to use same icons ([#4246](https://github.com/patternfly/patternfly/pull/4246))
 - **Jump links:** Forced vertical layout with expandable ([#4230](https://github.com/patternfly/patternfly/pull/4230))
 - **Login:** Added a password strength demo ([#4145](https://github.com/patternfly/patternfly/pull/4145))
 - **Menu:**
-  * Added vars for menu top, left, and right position offset ([#4192](https://github.com/patternfly/patternfly/pull/4192))
-  * Moved menu position modifers to menu element ([#4199](https://github.com/patternfly/patternfly/pull/4199))
+  - Added vars for menu top, left, and right position offset ([#4192](https://github.com/patternfly/patternfly/pull/4192))
+  - Moved menu position modifers to menu element ([#4199](https://github.com/patternfly/patternfly/pull/4199))
 - **Menu toggle:**
-  * Added full height variant ([#4153](https://github.com/patternfly/patternfly/pull/4153))
-  * Truncated overflow text ([#4236](https://github.com/patternfly/patternfly/pull/4236))
+  - Added full height variant ([#4153](https://github.com/patternfly/patternfly/pull/4153))
+  - Truncated overflow text ([#4236](https://github.com/patternfly/patternfly/pull/4236))
 - **Nav:** Added horizontal subnav ([#4229](https://github.com/patternfly/patternfly/pull/4229))
 - **Notification badge:** Updated examples to show tasks icon ([#4241](https://github.com/patternfly/patternfly/pull/4241))
 - **Popover:** Added more position options to position arrow ([#4226](https://github.com/patternfly/patternfly/pull/4226))
@@ -571,16 +593,16 @@ Packages released:
 
 ### Other
 - **Ci:**
-  * Renamed master to main ([#4194](https://github.com/patternfly/patternfly/pull/4194))
-  * Updated scripts to use main instead of master ([#4195](https://github.com/patternfly/patternfly/pull/4195))
+  - Renamed master to main ([#4194](https://github.com/patternfly/patternfly/pull/4194))
+  - Updated scripts to use main instead of master ([#4195](https://github.com/patternfly/patternfly/pull/4195))
 - **Icons:**
-  * Added styles to represent different SVG icon sizes and alignment for patternfly-react ([#3871](https://github.com/patternfly/patternfly/pull/3871))
-  * Added task icon to pficons ([#4184](https://github.com/patternfly/patternfly/pull/4184))
-  * Added instructions to add icon to pficon font ([#4221](https://github.com/patternfly/patternfly/pull/4221))
+  - Added styles to represent different SVG icon sizes and alignment for patternfly-react ([#3871](https://github.com/patternfly/patternfly/pull/3871))
+  - Added task icon to pficons ([#4184](https://github.com/patternfly/patternfly/pull/4184))
+  - Added instructions to add icon to pficon font ([#4221](https://github.com/patternfly/patternfly/pull/4221))
 - **Utilities:** Added min/max height and width to sizing utility ([#4009](https://github.com/patternfly/patternfly/pull/4009))
 - **Fonts:**
-  * Dropped '?#iefix' for font face definitions ([#4209](https://github.com/patternfly/patternfly/pull/4209))
-  * Dropped support for legacy fonts ([#4210](https://github.com/patternfly/patternfly/pull/4210))
+  - Dropped '?#iefix' for font face definitions ([#4209](https://github.com/patternfly/patternfly/pull/4209))
+  - Dropped support for legacy fonts ([#4210](https://github.com/patternfly/patternfly/pull/4210))
 - **Docs:** Updated references to Kitty Giraudel's deadname ([#4239](https://github.com/patternfly/patternfly/pull/4239))
 
 
