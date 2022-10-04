@@ -14,6 +14,7 @@ Packages released:
 - **Menu:** Added danger menu item variation ([#5102](https://github.com/patternfly/patternfly/pull/5102))
 - **Sidebar:** Fixed sticky panel behavior in demo ([#5088](https://github.com/patternfly/patternfly/pull/5088))
 - **Slider:** Fixed excessive wrapping of labels ([#5103](https://github.com/patternfly/patternfly/pull/5103))
+- **Tabs:** Updated demos per design guidance ([#5083](https://github.com/patternfly/patternfly/pull/5083))
 - **Text input group:** Fixed chip/filter wrapping ([#4995](https://github.com/patternfly/patternfly/pull/4995))
 - **Toolbar:** Updated search to text-input-group ([#5087](https://github.com/patternfly/patternfly/pull/5087))
 - **Tree view:** Made selectable node text a button to fix keyboard a11y ([#5107](https://github.com/patternfly/patternfly/pull/5107))
