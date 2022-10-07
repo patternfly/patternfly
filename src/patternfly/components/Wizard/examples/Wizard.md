@@ -81,11 +81,11 @@ import './Wizard.css'
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
     {{#> wizard-footer}}
-      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-        Next
-      {{/button}}
       {{#> button button--modifier="pf-m-secondary"}}
         Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
       {{/button}}
       {{#> wizard-footer-cancel}}
         {{#> button button--modifier="pf-m-link"}}
@@ -170,11 +170,11 @@ import './Wizard.css'
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
     {{#> wizard-footer}}
-      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-        Next
-      {{/button}}
       {{#> button button--modifier="pf-m-secondary"}}
         Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
       {{/button}}
       {{#> wizard-footer-cancel}}
         {{#> button button--modifier="pf-m-link"}}
@@ -237,11 +237,11 @@ import './Wizard.css'
             {{/drawer-panel}}
           {{/drawer-main}}
           {{#> wizard-footer}}
-            {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-              Next
-            {{/button}}
             {{#> button button--modifier="pf-m-secondary"}}
               Back
+            {{/button}}
+            {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+              Next
             {{/button}}
             {{#> wizard-footer-cancel}}
               {{#> button button--modifier="pf-m-link"}}
@@ -329,11 +329,11 @@ import './Wizard.css'
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
     {{#> wizard-footer}}
-      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-        Next
-      {{/button}}
       {{#> button button--modifier="pf-m-secondary"}}
         Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
       {{/button}}
       {{#> wizard-footer-cancel}}
         {{#> button button--modifier="pf-m-link"}}
@@ -418,11 +418,11 @@ import './Wizard.css'
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
     {{#> wizard-footer}}
-      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-        Next
-      {{/button}}
       {{#> button button--modifier="pf-m-secondary"}}
         Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
       {{/button}}
       {{#> wizard-footer-cancel}}
         {{#> button button--modifier="pf-m-link"}}
@@ -525,11 +525,11 @@ import './Wizard.css'
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
     {{#> wizard-footer}}
-      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-        Next
-      {{/button}}
       {{#> button button--modifier="pf-m-secondary"}}
         Back
+      {{/button}}
+      {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
+        Next
       {{/button}}
       {{#> wizard-footer-cancel}}
         {{#> button button--modifier="pf-m-link"}}
