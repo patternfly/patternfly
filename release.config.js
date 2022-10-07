@@ -1,5 +1,5 @@
 module.exports = {
-  branches: ['main', { name: 'main', channel: 'prerelease' }],
+  branches: ['v5', { name: 'v5', channel: 'alpha' }],
   analyzeCommits: {
     preset: 'angular'
   },
@@ -9,5 +9,5 @@ module.exports = {
     '@semantic-release/github',
     ['@semantic-release/npm', { pkgRoot: 'dist' }]
   ],
-  tagFormat: 'prerelease-v${version}'
+  tagFormat: 'alpha-v${version}'
 };
