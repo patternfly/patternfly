@@ -93,7 +93,8 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "tag": "alpha"
+    "tag": "alpha",
+    "access": "public"
   },
   "husky": {
     "hooks": {
