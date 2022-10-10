@@ -64,6 +64,7 @@ id: Icons
 | ok | <i class="pf-icon pf-icon-ok"></i> | &lt;i class=&quot;pf-icon pf-icon-ok&quot;&gt;&lt;/i&gt;
 | on-running | <i class="pf-icon pf-icon-on-running"></i> | &lt;i class=&quot;pf-icon pf-icon-on-running&quot;&gt;&lt;/i&gt;
 | on | <i class="pf-icon pf-icon-on"></i> | &lt;i class=&quot;pf-icon pf-icon-on&quot;&gt;&lt;/i&gt;
+| open-drawer-right | <i class="pf-icon pf-icon-open-drawer-right"></i> | &lt;i class=&quot;pf-icon pf-icon-open-drawer-right&quot;&gt;&lt;/i&gt;
 | openshift | <i class="pf-icon pf-icon-openshift"></i> | &lt;i class=&quot;pf-icon pf-icon-openshift&quot;&gt;&lt;/i&gt;
 | openstack | <i class="pf-icon pf-icon-openstack"></i> | &lt;i class=&quot;pf-icon pf-icon-openstack&quot;&gt;&lt;/i&gt;
 | optimize | <i class="pf-icon pf-icon-optimize"></i> | &lt;i class=&quot;pf-icon pf-icon-optimize&quot;&gt;&lt;/i&gt;

@@ -206,6 +206,9 @@
 	@if $filename == on {
 		$char: '\E92C';
 	}
+	@if $filename == open-drawer-right {
+		$char: '\E977';
+	}
 	@if $filename == openshift {
 		$char: '\E95E';
 	}
@@ -592,6 +595,9 @@
 }
 .pf-icon-on {
 	@include pf-icon(on);
+}
+.pf-icon-open-drawer-right {
+	@include pf-icon(open-drawer-right);
 }
 .pf-icon-openshift {
 	@include pf-icon(openshift);
