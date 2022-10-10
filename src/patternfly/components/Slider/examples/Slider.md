@@ -149,13 +149,13 @@ cssPrefix: pf-c-slider
   }}
   {{#> slider-main}}
     {{> slider-rail}}
-    {{> slider-thumb}}
     {{#> slider-value slider-value--modifier="pf-m-floating"}}
       {{#> input-group}}
         {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' slider--value-now '" aria-label="Slider value input"')}}
         {{#> input-group-text input-group-text--modifier="pf-m-plain"}}%{{/input-group-text}}
       {{/input-group}}
     {{/slider-value}}
+    {{> slider-thumb}}
   {{/slider-main}}
 {{/slider}}
 ```
@@ -194,13 +194,13 @@ cssPrefix: pf-c-slider
   }}
   {{#> slider-main}}
     {{> slider-rail}}
-    {{> slider-thumb}}
     {{#> slider-value slider-value--modifier="pf-m-floating"}}
       {{#> input-group}}
         {{> form-control controlType="input" input="true" form-control--attribute=(concat 'disabled type="number" value="' slider--value-now '" aria-label="Slider value input"')}}
         {{#> input-group-text input-group-text--modifier="pf-m-plain"}}%{{/input-group-text}}
       {{/input-group}}
     {{/slider-value}}
+    {{> slider-thumb}}
   {{/slider-main}}
   {{#> slider-actions}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Locked"'}}
@@ -219,13 +219,13 @@ cssPrefix: pf-c-slider
   }}
   {{#> slider-main}}
     {{> slider-rail}}
-    {{> slider-thumb}}
     {{#> slider-value slider-value--modifier="pf-m-floating"}}
       {{#> input-group}}
         {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' slider--value-now '" aria-label="Slider value input"')}}
         {{#> input-group-text input-group-text--modifier="pf-m-plain"}}%{{/input-group-text}}
       {{/input-group}}
     {{/slider-value}}
+    {{> slider-thumb}}
   {{/slider-main}}
   {{#> slider-actions}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Lock"'}}
