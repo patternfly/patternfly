@@ -1,0 +1,12 @@
+<div class="pf-c-progress__helper-text {{#if progress-helper-text--modifier}} {{progress-helper-text--modifier}}{{/if}}"
+  {{#if progress-helper-text--attribute}}
+    {{{progress-helper-text--attribute}}}
+  {{/if}}>
+  {{#> helper-text}}
+  {{#> helper-text-item}}
+    {{#> helper-text-item-text}}
+      {{{progress__helper-text}}}
+    {{/helper-text-item-text}}
+  {{/helper-text-item}}
+{{/helper-text}}
+</div>
