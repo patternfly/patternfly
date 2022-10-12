@@ -1,8 +1,8 @@
-<div class="pf-c-skip-to-content">
-  <a class="pf-c-button pf-m-primary{{#if skip-to-content--modifier}} {{skip-to-content--modifier}}{{/if}}"
-    {{#if skip-to-content--attribute}}
-      {{{skip-to-content--attribute}}}
-    {{/if}}>
+<div class="pf-c-skip-to-content{{#if skip-to-content--modifier}} {{skip-to-content--modifier}}{{/if}}"
+  {{#if skip-to-content--attribute}}
+    {{{skip-to-content--attribute}}}
+  {{/if}}>
+  {{#> button-link button-link--attribute=(concat 'href="' skip-to-content--href '"') button-link--modifier="pf-m-primary"}}
     {{> @partial-block}}
-  </a>
+  {{/button-link}}
 </div>
