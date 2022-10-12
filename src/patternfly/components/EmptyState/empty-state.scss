@@ -127,12 +127,3 @@
     margin-left: var(--pf-c-empty-state__secondary--child--MarginLeft);
   }
 }
-
-// RedHat Font overrides
-@include pf-m-overpass-font {
-  .pf-c-empty-state {
-    .pf-c-empty-state__content > .pf-c-title.pf-m-lg {
-      font-size: var(--pf-global--FontSize--lg);
-    }
-  }
-}

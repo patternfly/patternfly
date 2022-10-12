@@ -249,8 +249,6 @@
   --pf-global--FontFamily--redhatVF--sans-serif: #{$pf-global--FontFamily--redhatVF--sans-serif};
   --pf-global--FontFamily--redhatVF--heading--sans-serif: #{$pf-global--FontFamily--redhatVF--heading--sans-serif};
   --pf-global--FontFamily--redhatVF--monospace: #{$pf-global--FontFamily--redhatVF--monospace};
-  --pf-global--FontFamily--overpass--sans-serif: #{$pf-global--FontFamily--overpass--sans-serif};
-  --pf-global--FontFamily--overpass--monospace: #{$pf-global--FontFamily--overpass--monospace};
 
   // Font size
   --pf-global--FontSize--4xl: #{$pf-global--FontSize--4xl};
@@ -265,10 +263,7 @@
   // Font weight
   --pf-global--FontWeight--light: #{$pf-global--FontWeight--light};
   --pf-global--FontWeight--normal: #{$pf-global--FontWeight--normal};
-  --pf-global--FontWeight--semi-bold: #{$pf-global--FontWeight--semi-bold};
-  --pf-global--FontWeight--overpass--semi-bold: #{$pf-global--FontWeight--overpass--semi-bold};
   --pf-global--FontWeight--bold: #{$pf-global--FontWeight--bold};
-  --pf-global--FontWeight--overpass--bold: #{$pf-global--FontWeight--overpass--bold};
 
   // Line height
   --pf-global--LineHeight--sm: #{$pf-global--LineHeight--sm};
@@ -287,15 +282,6 @@
   // A11y
   --pf-global--target-size--MinWidth: #{$pf-global--target-size--MinWidth};
   --pf-global--target-size--MinHeight: #{$pf-global--target-size--MinHeight};
-}
-
-// Overpass font overrides
-@include pf-m-overpass-font {
-  --pf-global--FontFamily--sans-serif: var(--pf-global--FontFamily--overpass--sans-serif);
-  --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--sans-serif);
-  --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--overpass--monospace);
-  --pf-global--FontWeight--semi-bold: var(--pf-global--FontWeight--overpass--semi-bold);
-  --pf-global--FontWeight--bold: var(--pf-global--FontWeight--overpass--bold);
 }
 
 // RedHatFont updated font overrides

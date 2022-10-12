@@ -70,11 +70,3 @@
     line-height: var(--pf-c-title--m-md--LineHeight);
   }
 }
-
-// RedHat Font overrides
-@include pf-m-overpass-font {
-  .pf-c-title {
-    --pf-c-title--m-md--FontWeight: var(--pf-global--FontWeight--semi-bold);
-    --pf-c-title--m-lg--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  }
-}

@@ -395,13 +395,6 @@
   border: var(--pf-c-card__input--focus--BorderWidth) solid var(--pf-c-card__input--focus--BorderColor);
 }
 
-// RedHat Font overrides
-@include pf-m-overpass-font {
-  .pf-c-card .pf-c-card__title {
-    font-weight: var(--pf-global--FontWeight--normal);
-  }
-}
-
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/card";
 

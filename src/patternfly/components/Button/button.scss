@@ -652,13 +652,6 @@
   margin-left: var(--pf-c-button__count--MarginLeft);
 }
 
-// RedHat Font overrides
-@include pf-m-overpass-font {
-  .pf-c-button {
-    --pf-c-button--FontWeight: var(--pf-global--FontWeight--semi-bold);
-  }
-}
-
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/button";
 
