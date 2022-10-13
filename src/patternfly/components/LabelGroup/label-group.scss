@@ -141,6 +141,10 @@
   margin-left: var(--pf-c-label-group__close--MarginLeft);
 }
 
+.pf-c-label-group__header {
+  display: flex;
+}
+
 .pf-c-label-group__textarea {
   min-width: var(--pf-c-label-group__textarea--MinWidth);
   padding: var(--pf-c-label-group__textarea--PaddingTop) var(--pf-c-label-group__textarea--PaddingRight) var(--pf-c-label-group__textarea--PaddingBottom) var(--pf-c-label-group__textarea--PaddingLeft);

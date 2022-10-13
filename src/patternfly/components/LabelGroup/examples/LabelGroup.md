@@ -438,13 +438,50 @@ cssPrefix: pf-c-label-group
 {{/label-group}}
 ```
 
-### Vertical category removable
+### Vertical category removable, updated markup
 ```hbs
 
+{{#> label-group label-group--id="label-group-vertical-category-removable-2" label-group--modifier="pf-m-vertical pf-m-category"}}
+  {{#> label-group-main}}
+    {{#> label-group-header}}
+      {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label"  tabindex="0"')}}
+        Group label with really long text
+      {{/label-group-label}}
+      {{> label-group-close}}
+    {{/label-group-header}}
+    {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
+      {{#> label-group-list-item}}
+        {{#> label}}
+          Label
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-blue"}}
+          Label 2
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--modifier="pf-m-green"}}
+          Label 3
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--IsOverflow="true"}}
+          3 more
+        {{/label}}
+      {{/label-group-list-item}}
+    {{/label-group-list}}
+  {{/label-group-main}}
+{{/label-group}}
+```
+
+### Vertical category removable
+
+```hbs
 {{#> label-group label-group--id="label-group-vertical-category-removable" label-group--modifier="pf-m-vertical pf-m-category"}}
   {{#> label-group-main}}
-    {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label"')}}
-      Group label
+    {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label" tabindex="0"')}}
+      Group label with really long text
     {{/label-group-label}}
     {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
       {{#> label-group-list-item}}
@@ -460,6 +497,11 @@ cssPrefix: pf-c-label-group
       {{#> label-group-list-item}}
         {{#> label label--modifier="pf-m-green"}}
           Label 3
+        {{/label}}
+      {{/label-group-list-item}}
+      {{#> label-group-list-item}}
+        {{#> label label--IsOverflow="true"}}
+          3 more
         {{/label}}
       {{/label-group-list-item}}
     {{/label-group-list}}
