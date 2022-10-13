@@ -176,7 +176,7 @@ section: components
       {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--modifier="pf-m-page-insets"}}
     {{/page-main-tabs}}
     {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light pf-m-no-padding"}}
-      {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--IsSecondary="true" tabs-template-pod-tab-list--modifier="pf-m-page-insets pf-m-border-bottom" tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-list--modifier=reset}}
+      {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--IsSecondary="true" tabs-template-pod-tab-list--modifier="pf-m-page-insets" tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-list--modifier=reset}}
       {{#> tabs-template-pod-tab-content tab-content-body--modifier="pf-m-padding"}}
         {{#> tabs-template-pod-tab-content tab-content-body--modifier=reset tabs--id=(concat tabs-template--id '-secondary') tabs-template-pod-tab-content--IsSecondary="true"}}
           {{#> l-flex l-flex--modifier="pf-m-column"}}
@@ -502,7 +502,7 @@ section: components
             {{/title}}
           {{/grid-item}}
           {{#> grid-item}}
-            {{#> tabs tabs--id=(concat tabs-template--id '-subtabs') tabs--IsSecondary="true" tabs--HasBorderBottom="true" tabs--modifier="pf-m-inset-none"}}
+            {{#> tabs tabs--id=(concat tabs-template--id '-subtabs') tabs--IsSecondary="true" tabs--modifier="pf-m-inset-none"}}
               {{#> tabs-list}}
                 {{> __tabs-item
                   __tabs-item--current="true"
