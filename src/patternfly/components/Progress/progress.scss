@@ -12,7 +12,7 @@
   --pf-c-progress__bar--before--Opacity: .2; // one-off change in opacity to allow progress bar to automatically coordinate with the indicator color
   --pf-c-progress__indicator--Height: var(--pf-c-progress__bar--Height);
   --pf-c-progress__indicator--BackgroundColor: var(--pf-c-progress__bar--before--BackgroundColor);
-  --pf-c-progress__helper-text--MarginTop: calc(var(--pf-global--spacer--xs) - var(--pf-global--spacer--md));
+  --pf-c-progress__helper-text--MarginTop: calc(var(--pf-global--helper-text--MarginTop) - var(--pf-c-progress--GridGap)); // offsets margin by grid gap value
 
   // Modifier variables
   --pf-c-progress--m-success__bar--BackgroundColor: var(--pf-global--success-color--100);
