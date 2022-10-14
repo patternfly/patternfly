@@ -200,12 +200,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__main-wizard--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-page__main-wizard--m-light-200--BackgroundColor: var(--pf-global--BackgroundColor--200);
 
-  // Sidebar content
-  --pf-c-page__sidebar--c-content--Color: var(--pf-c-page__sidebar--Color);
-
-  // Sidebar divider
-  --pf-c-page__sidebar--c-divider--after--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-
   // Base
   display: grid;
   grid-template-areas:

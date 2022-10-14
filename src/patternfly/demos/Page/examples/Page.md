@@ -23,19 +23,17 @@ Using the `.pf-m-full-height` modifier class on the page component eliminates th
 
 {{#*inline "page-template-sidebar"}}
   {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true"}}
-    {{#> page-sidebar-body page-sidebar-body--modifier=""}}
-      {{> page-template-sidebar-nav}}
-    {{/page-sidebar-body}}
     {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill"}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-u-h-100 pf-u-px-md pf-u-px-lg-on-xl"}}
+      {{#> l-flex l-flex--modifier="pf-m-column pf-u-h-100"}}
         {{#> l-flex-item}}
+          {{> page-template-sidebar-nav}}
+        {{/l-flex-item}}
+        {{#> l-flex-item l-flex-item--modifier="pf-u-px-md pf-u-px-lg-on-xl"}}
           other content
         {{/l-flex-item}}
-        {{#> l-flex l-flex--modifier="pf-m-column pf-u-mt-auto"}}
-          {{#> l-flex-item}}
-            footer content
-          {{/l-flex-item}}
-        {{/l-flex}}
+        {{#> l-flex-item l-flex-item--modifier="pf-u-px-md pf-u-px-lg-on-xl pf-u-mt-auto"}}
+          footer content
+        {{/l-flex-item}}
       {{/l-flex}}
     {{/page-sidebar-body}}
   {{/page-sidebar}}
@@ -49,7 +47,7 @@ Using the `.pf-m-full-height` modifier class on the page component eliminates th
 {{#*inline "page-template-sidebar"}}
   {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true" page-sidebar--modifier="pf-m-expanded"}}
     {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
-      {{#> content content--modifier="pf-u-py-mdss"}}
+      {{#> content}}
         <p>Custom sidebar content</p>
       {{/content}}
     {{/page-sidebar-body}}

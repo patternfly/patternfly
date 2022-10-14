@@ -95,13 +95,15 @@ import './Page.css'
   {{/page-header}}
   {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true"}}
     {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill"}}
-      pf-c-nav
-      {{#> l-flex l-flex--modifier="pf-m-column"}}
+      {{#> l-flex l-flex--modifier="pf-m-column pf-u-h-100"}}
+        {{#> l-flex-item}}
+          pf-c-nav
+        {{/l-flex-item}}
         {{#> l-flex-item}}
           other content
         {{/l-flex-item}}
-        {{#> l-flex-item}}
-          footer content
+        {{#> l-flex-item l-flex-item--modifier="pf-m-column pf-u-mt-auto"}}
+            footer content
         {{/l-flex-item}}
       {{/l-flex}}
     {{/page-sidebar-body}}
@@ -113,7 +115,7 @@ import './Page.css'
 {{/page}}
 ```
 
-### Multiple sidebar body elements
+### Multiple sidebar body elements and page insets
 ```hbs
 {{#> page}}
   {{#> page-header}}
@@ -142,6 +144,17 @@ import './Page.css'
           footer content
         {{/l-flex-item}}
       {{/l-flex}}
+    {{/page-sidebar-body}}
+  {{/page-sidebar}}
+  {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true"}}
+    {{#> page-sidebar-body}}
+      pf-c-nav
+    {{/page-sidebar-body}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
+      other content
+    {{/page-sidebar-body}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-align-bottom pf-m-page-insets"}}
+      footer content
     {{/page-sidebar-body}}
   {{/page-sidebar}}
   {{#> page-main}}

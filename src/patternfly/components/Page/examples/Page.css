@@ -10,10 +10,12 @@
   height: 500px;
 }
 
-#ws-core-c-page-multiple-sidebar-body-elements {
+#ws-core-c-page-multiple-sidebar-body-elements,
+#ws-core-c-page-using-flex-layout {
   height: 400px;
 }
 
-#ws-core-c-page-multiple-sidebar-body-elements .ws-preview-html {
+#ws-core-c-page-multiple-sidebar-body-elements .ws-preview-html,
+#ws-core-c-page-using-flex-layout .ws-preview-html {
   height: 100%;
 }
