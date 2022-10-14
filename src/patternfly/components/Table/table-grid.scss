@@ -38,35 +38,35 @@
   // ============================================================ //
 
   // Table
-  --pf-c-table--m-grid--responsive--BorderColor: var(--pf-global--BorderColor--300);
+  --pf-c-table--m-grid--BorderColor: var(--pf-global--BorderColor--300);
 
   // Body
-  --pf-c-table--m-grid--tbody--responsive--border-width--base: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--tbody--border-width--base: var(--pf-global--spacer--sm);
   --pf-c-table--m-grid--tbody--after--border-width--base: var(--pf-global--BorderWidth--lg);
   --pf-c-table--m-grid--tbody--after--BorderLeftWidth: 0;
   --pf-c-table--m-grid--tbody--after--BorderColor: var(--pf-global--active-color--100);
 
   // Row
-  --pf-c-table--m-grid--tr--responsive--border-width--base: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--tr--responsive--last-child--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table--m-grid--tr--responsive--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--tr--responsive--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--tr--responsive--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--tr--responsive--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-table--m-grid--tr--responsive--xl--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--tr--responsive--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--tr--responsive--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table--m-grid--tr--responsive--xl--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--tr--border-width--base: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--tr--last-child--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table--m-grid--tr--GridColumnGap: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--tr--MarginTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--tr--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--tr--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table--m-grid--tr--xl--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--tr--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--tr--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table--m-grid--tr--xl--PaddingLeft: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--xl) {
-    --pf-c-table--m-grid--tr--responsive--PaddingRight: var(--pf-c-table-tr--responsive--xl--PaddingRight);
-    --pf-c-table--m-grid--tr--responsive--PaddingLeft: var(--pf-c-table-tr--responsive--xl--PaddingLeft);
+    --pf-c-table--m-grid--tr--PaddingRight: var(--pf-c-table-tr--xl--PaddingRight);
+    --pf-c-table--m-grid--tr--PaddingLeft: var(--pf-c-table-tr--xl--PaddingLeft);
   }
 
-  --pf-c-table--m-grid--tr--responsive--nested-table--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-table--m-grid--tr--responsive--nested-table--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-table--m-grid--tr--responsive--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-table--m-grid--tr--responsive--nested-table--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table--m-grid--tr--nested-table--PaddingTop: var(--pf-global--spacer--xl);
+  --pf-c-table--m-grid--tr--nested-table--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table--m-grid--tr--nested-table--PaddingBottom: var(--pf-global--spacer--xl);
+  --pf-c-table--m-grid--tr--nested-table--PaddingLeft: var(--pf-global--spacer--lg);
 
   // expandable
   --pf-c-table--m-grid--tbody--after--tr--BorderLeftWidth: 0;
@@ -88,37 +88,37 @@
   --pf-c-table--m-grid--cell--PaddingLeft: 0;
 
   // Td
-  --pf-c-table--m-grid--td--responsive--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--cell--responsive--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--cell--responsive--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--cell--first-child--responsive--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--cell--responsive--PaddingRight: 0;
-  --pf-c-table--m-grid--cell--responsive--PaddingLeft: 0;
+  --pf-c-table--m-grid--td--GridColumnGap: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--cell--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--cell--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--cell--first-child--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--cell--PaddingRight: 0;
+  --pf-c-table--m-grid--cell--PaddingLeft: 0;
 
   // Compact table
-  --pf-c-table--m-grid--m-compact-tr--responsive--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--m-compact-tr--responsive--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--m-compact-tr-td--responsive--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-table--m-grid--m-compact-tr-td--responsive--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-table--m-grid--m-compact__action--responsive--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-table--m-grid--m-compact__action--responsive--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-table--m-grid--m-compact__toggle--c-button--responsive--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
+  --pf-c-table--m-grid--m-compact-tr--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--m-compact-tr--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--m-compact-tr-td--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-table--m-grid--m-compact-tr-td--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-table--m-grid--m-compact__action--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
+  --pf-c-table--m-grid--m-compact__action--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
+  --pf-c-table--m-grid--m-compact__toggle--c-button--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
 
   // Expandable row content
-  --pf-c-table__expandable-row-content--responsive--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-table__expandable-row-content--responsive--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-table__expandable-row-content--responsive--xl--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-table__expandable-row-content--responsive--xl--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-table__expandable-row-content--PaddingRight: var(--pf-global--spacer--lg);
+  --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-table__expandable-row-content--xl--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-table__expandable-row-content--xl--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-table__expandable-row-content--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   @media screen and (max-width: $pf-global--breakpoint--xl) {
-    --pf-c-table__expandable-row-content--responsive--PaddingRight: var(--pf-c-table__expandable-row-content--responsive--xl--PaddingRight);
-    --pf-c-table__expandable-row-content--responsive--PaddingLeft: var(--pf-c-table__expandable-row-content--responsive--xl--PaddingLeft);
+    --pf-c-table__expandable-row-content--PaddingRight: var(--pf-c-table__expandable-row-content--xl--PaddingRight);
+    --pf-c-table__expandable-row-content--PaddingLeft: var(--pf-c-table__expandable-row-content--xl--PaddingLeft);
   }
 
   // Check
-  --pf-c-table__check--responsive--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-table__check--responsive--MarginTop: #{pf-size-prem(14px)};
+  --pf-c-table__check--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-table__check--MarginTop: #{pf-size-prem(14px)};
 
   // Favorite
   --pf-c-table--m-grid__favorite--MarginTop: #{pf-size-prem(8px)};
@@ -126,7 +126,7 @@
 
   // Action
   --pf-c-table--m-grid__action--MarginTop: #{pf-size-prem(6px)};
-  --pf-c-table__action--responsive--MarginLeft: var(--pf-global--spacer--xl);
+  --pf-c-table__action--MarginLeft: var(--pf-global--spacer--xl);
   --pf-c-table--m-grid__favorite--action--MarginLeft: var(--pf-global--spacer--2xl);
   --pf-c-table--m-grid__check--favorite--action--MarginLeft: calc(var(--pf-c-table--m-grid__check--favorite--MarginLeft) + var(--pf-c-table--m-grid__favorite--action--MarginLeft));
 
@@ -182,7 +182,7 @@
     display: block;
 
     &:first-of-type {
-      border-top: var(--pf-c-table--m-grid--tbody--responsive--border-width--base) solid var(--pf-c-table--m-grid--responsive--BorderColor);
+      border-top: var(--pf-c-table--m-grid--tbody--border-width--base) solid var(--pf-c-table--m-grid--BorderColor);
     }
   }
 
@@ -193,13 +193,13 @@
 
   // Table row
   tr:not(.pf-c-table__expandable-row) {
-    border-bottom: var(--pf-c-table--m-grid--tr--responsive--border-width--base) solid var(--pf-c-table--m-grid--responsive--BorderColor);
+    border-bottom: var(--pf-c-table--m-grid--tr--border-width--base) solid var(--pf-c-table--m-grid--BorderColor);
   }
 
   // The last tr should always have a border width of 1px
   tr:last-child,
   tbody:last-of-type:not(:only-of-type) > tr {
-    border-bottom-width: var(--pf-c-table--m-grid--tr--responsive--last-child--BorderBottomWidth);
+    border-bottom-width: var(--pf-c-table--m-grid--tr--last-child--BorderBottomWidth);
   }
 
   tbody.pf-m-expanded {
@@ -210,7 +210,7 @@
     }
 
     &:not(:last-of-type) {
-      border-bottom: var(--pf-c-table--m-grid--tbody--responsive--border-width--base) solid var(--pf-c-table--m-grid--responsive--BorderColor);
+      border-bottom: var(--pf-c-table--m-grid--tbody--border-width--base) solid var(--pf-c-table--m-grid--BorderColor);
     }
   }
 
@@ -228,36 +228,36 @@
 
     // set subsequent auto column width to max-content
     grid-auto-columns: max-content;
-    grid-column-gap: var(--pf-c-table--m-grid--tr--responsive--GridColumnGap);
+    grid-column-gap: var(--pf-c-table--m-grid--tr--GridColumnGap);
 
     // set base variables to reset later
-    padding: var(--pf-c-table-tr--responsive--PaddingTop) var(--pf-c-table-tr--responsive--PaddingRight) var(--pf-c-table-tr--responsive--PaddingBottom) var(--pf-c-table-tr--responsive--PaddingLeft);
+    padding: var(--pf-c-table-tr--PaddingTop) var(--pf-c-table-tr--PaddingRight) var(--pf-c-table-tr--PaddingBottom) var(--pf-c-table-tr--PaddingLeft);
 
     // Reset td padding
     & > * {
-      padding: var(--pf-c-table--cell--responsive--PaddingTop) var(--pf-c-table--cell--responsive--PaddingRight) var(--pf-c-table--cell--responsive--PaddingBottom) var(--pf-c-table--cell--responsive--PaddingLeft);
+      padding: var(--pf-c-table--cell--PaddingTop) var(--pf-c-table--cell--PaddingRight) var(--pf-c-table--cell--PaddingBottom) var(--pf-c-table--cell--PaddingLeft);
 
       // remove padding from first child to align with kebab
       &:first-child {
-        --pf-c-table--cell--responsive--PaddingTop: var(--pf-c-table--m-grid--cell--first-child--responsive--PaddingTop);
+        --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-grid--cell--first-child--PaddingTop);
       }
     }
   }
 
   &.pf-m-compact {
-    --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr--responsive--PaddingTop);
-    --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr--responsive--PaddingBottom);
-    --pf-c-table--cell--responsive--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr-td--responsive--PaddingTop);
-    --pf-c-table--cell--responsive--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr-td--responsive--PaddingBottom);
+    --pf-c-table-tr--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr--PaddingTop);
+    --pf-c-table-tr--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr--PaddingBottom);
+    --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr-td--PaddingTop);
+    --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr-td--PaddingBottom);
     --pf-c-table__check--input--MarginTop: 0;
 
     .pf-c-table__action {
-      margin-top: var(--pf-c-table--m-grid--m-compact__action--responsive--MarginTop);
-      margin-bottom: var(--pf-c-table--m-grid--m-compact__action--responsive--MarginTop);
+      margin-top: var(--pf-c-table--m-grid--m-compact__action--MarginTop);
+      margin-bottom: var(--pf-c-table--m-grid--m-compact__action--MarginTop);
     }
 
     .pf-c-table__toggle .pf-c-button {
-      margin-bottom: var(--pf-c-table--m-grid--m-compact__toggle--c-button--responsive--MarginBottom);
+      margin-bottom: var(--pf-c-table--m-grid--m-compact__toggle--c-button--MarginBottom);
     }
   }
 
@@ -271,7 +271,7 @@
     --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table--m-grid--cell--hidden-visible--Display);
 
     grid-column: 1;
-    grid-column-gap: var(--pf-c-table--m-grid--td--responsive--GridColumnGap);
+    grid-column-gap: var(--pf-c-table--m-grid--td--GridColumnGap);
 
     // use minmax func to contain possible text modifier width
     grid-template-columns: 1fr minmax(0, 1.5fr);
@@ -303,15 +303,15 @@
 
   // nested tables
   .pf-c-table {
-    --pf-c-table-tr--responsive--PaddingTop: var(--pf-c-table--m-grid--tr--responsive--nested-table--PaddingTop);
-    --pf-c-table-tr--responsive--PaddingRight: var(--pf-c-table--m-grid--tr--responsive--nested-table--PaddingRight);
-    --pf-c-table-tr--responsive--PaddingBottom: var(--pf-c-table--m-grid--tr--responsive--nested-table--PaddingBottom);
-    --pf-c-table-tr--responsive--PaddingLeft: var(--pf-c-table--m-grid--tr--responsive--nested-table--PaddingLeft);
+    --pf-c-table-tr--PaddingTop: var(--pf-c-table--m-grid--tr--nested-table--PaddingTop);
+    --pf-c-table-tr--PaddingRight: var(--pf-c-table--m-grid--tr--nested-table--PaddingRight);
+    --pf-c-table-tr--PaddingBottom: var(--pf-c-table--m-grid--tr--nested-table--PaddingBottom);
+    --pf-c-table-tr--PaddingLeft: var(--pf-c-table--m-grid--tr--nested-table--PaddingLeft);
 
     border: 0;
 
     tr:not(.pf-c-table__expandable-row) + tr:not(.pf-c-table__expandable-row) {
-      --pf-c-table-tr--responsive--PaddingTop: 0;
+      --pf-c-table-tr--PaddingTop: 0;
     }
   }
 
@@ -355,10 +355,10 @@
 
   // Expandable row
   .pf-c-table__expandable-row {
-    --pf-c-table--cell--responsive--PaddingTop: 0;
-    --pf-c-table--cell--responsive--PaddingRight: 0;
-    --pf-c-table--cell--responsive--PaddingBottom: 0;
-    --pf-c-table--cell--responsive--PaddingLeft: 0;
+    --pf-c-table--cell--PaddingTop: 0;
+    --pf-c-table--cell--PaddingRight: 0;
+    --pf-c-table--cell--PaddingBottom: 0;
+    --pf-c-table--cell--PaddingLeft: 0;
     --pf-c-table--cell--PaddingRight: 0;
     --pf-c-table--cell--PaddingLeft: 0;
 
@@ -398,8 +398,8 @@
     }
 
     .pf-c-table__expandable-row-content {
-      padding-right: var(--pf-c-table__expandable-row-content--responsive--PaddingRight);
-      padding-left: var(--pf-c-table__expandable-row-content--responsive--PaddingLeft);
+      padding-right: var(--pf-c-table__expandable-row-content--PaddingRight);
+      padding-left: var(--pf-c-table__expandable-row-content--PaddingLeft);
     }
   }
 
@@ -486,8 +486,8 @@
 
   // Check table cell
   .pf-c-table__check {
-    margin-top: var(--pf-c-table__check--responsive--MarginTop);
-    margin-left: var(--pf-c-table__check--responsive--MarginLeft);
+    margin-top: var(--pf-c-table__check--MarginTop);
+    margin-left: var(--pf-c-table__check--MarginLeft);
 
     ~ .pf-c-table__favorite {
       margin-left: var(--pf-c-table--m-grid__check--favorite--MarginLeft);
@@ -498,7 +498,7 @@
     }
 
     ~ .pf-c-table__action {
-      margin-left: var(--pf-c-table__action--responsive--MarginLeft);
+      margin-left: var(--pf-c-table__action--MarginLeft);
     }
   }
 
