@@ -1,4 +1,4 @@
-# PatternFly 4
+# PatternFly 5
 
 ## Install
 
