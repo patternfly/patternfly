@@ -1,8 +1,5 @@
 module.exports = {
   branches: ['v5', { name: 'v5', channel: 'alpha' }],
-  analyzeCommits: {
-    preset: 'angular'
-  },
   plugins: [
     ['@semantic-release/commit-analyzer', {
       preset: 'angular',
