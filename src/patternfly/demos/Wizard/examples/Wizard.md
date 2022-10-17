@@ -82,17 +82,6 @@ wrapperTag: div
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
         {{#> wizard-footer}}
-          {{#> button button--modifier="pf-m-secondary"}}
-            Back
-          {{/button}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Next
-          {{/button}}
-          {{#> wizard-footer-cancel}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
-          {{/wizard-footer-cancel}}
         {{/wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
@@ -177,17 +166,6 @@ wrapperTag: div
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
         {{#> wizard-footer}}
-          {{#> button button--modifier="pf-m-secondary"}}
-            Back
-          {{/button}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Next
-          {{/button}}
-          {{#> wizard-footer-cancel}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
-          {{/wizard-footer-cancel}}
         {{/wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
@@ -269,17 +247,6 @@ wrapperTag: div
                 {{/drawer-panel}}
               {{/drawer-main}}
               {{#> wizard-footer}}
-                {{#> button button--modifier="pf-m-secondary"}}
-                  Back
-                {{/button}}
-                {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-                  Next
-                {{/button}}
-                {{#> wizard-footer-cancel}}
-                  {{#> button button--modifier="pf-m-link"}}
-                    Cancel
-                  {{/button}}
-                {{/wizard-footer-cancel}}
               {{/wizard-footer}}
             {{/drawer}}
           {{/wizard-main}}
@@ -364,17 +331,6 @@ wrapperTag: div
                 {{/drawer-panel}}
               {{/drawer-main}}
               {{#> wizard-footer}}
-                {{#> button button--modifier="pf-m-secondary"}}
-                  Back
-                {{/button}}
-                {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-                  Next
-                {{/button}}
-                {{#> wizard-footer-cancel}}
-                  {{#> button button--modifier="pf-m-link"}}
-                    Cancel
-                  {{/button}}
-                {{/wizard-footer-cancel}}
               {{/wizard-footer}}
             {{/drawer}}
           {{/wizard-main}}
@@ -459,17 +415,6 @@ wrapperTag: div
                 {{/drawer-panel}}
               {{/drawer-main}}
               {{#> wizard-footer}}
-                {{#> button button--modifier="pf-m-secondary"}}
-                  Back
-                {{/button}}
-                {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-                  Next
-                {{/button}}
-                {{#> wizard-footer-cancel}}
-                  {{#> button button--modifier="pf-m-link"}}
-                    Cancel
-                  {{/button}}
-                {{/wizard-footer-cancel}}
               {{/wizard-footer}}
             {{/drawer}}
           {{/wizard-main}}
@@ -551,17 +496,6 @@ wrapperTag: div
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
         {{#> wizard-footer}}
-          {{#> button button--modifier="pf-m-secondary"}}
-            Back
-          {{/button}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Next
-          {{/button}}
-          {{#> wizard-footer-cancel}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
-          {{/wizard-footer-cancel}}
         {{/wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
@@ -640,17 +574,6 @@ wrapperTag: div
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
         {{#> wizard-footer}}
-          {{#> button button--modifier="pf-m-secondary"}}
-            Back
-          {{/button}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Next
-          {{/button}}
-          {{#> wizard-footer-cancel}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
-          {{/wizard-footer-cancel}}
         {{/wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
@@ -728,17 +651,6 @@ wrapperTag: div
         {{/drawer-main}}
       {{/drawer}}
       {{#> wizard-footer}}
-        {{#> button button--modifier="pf-m-secondary"}}
-          Back
-        {{/button}}
-        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-          Next
-        {{/button}}
-        {{#> wizard-footer-cancel}}
-          {{#> button button--modifier="pf-m-link"}}
-            Cancel
-          {{/button}}
-        {{/wizard-footer-cancel}}
       {{/wizard-footer}}
     {{/wizard}}
   {{/page-main-wizard}}
@@ -814,17 +726,6 @@ wrapperTag: div
         {{/drawer-main}}
       {{/drawer}}
       {{#> wizard-footer}}
-        {{#> button button--modifier="pf-m-secondary"}}
-          Back
-        {{/button}}
-        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-          Next
-        {{/button}}
-        {{#> wizard-footer-cancel}}
-          {{#> button button--modifier="pf-m-link"}}
-            Cancel
-          {{/button}}
-        {{/wizard-footer-cancel}}
       {{/wizard-footer}}
     {{/wizard}}
   {{/page-main-wizard}}
