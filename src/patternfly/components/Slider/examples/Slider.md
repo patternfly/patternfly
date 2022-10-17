@@ -1,6 +1,5 @@
 ---
 id: 'Slider'
-beta: true
 section: components
 cssPrefix: pf-c-slider
 ---

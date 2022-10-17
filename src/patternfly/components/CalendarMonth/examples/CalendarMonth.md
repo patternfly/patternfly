@@ -1,6 +1,5 @@
 ---
 id: 'Calendar month'
-beta: true
 section: components
 cssPrefix: pf-c-calendar-month
 ---
