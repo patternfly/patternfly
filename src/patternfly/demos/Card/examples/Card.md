@@ -912,11 +912,11 @@ import './Card.css'
         {{/accordion-toggle-text}}
         {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
       {{/accordion-toggle}}
-      {{#> accordion-expanded-content accordion-expanded-content--IsExpanded="true"}}
-        {{#> accordion-expanded-content-body}}
+      {{#> accordion-expandable-content accordion-expandable-content--IsExpanded="true"}}
+        {{#> accordion-expandable-content-body}}
           {{> card-demo--stacked-sparklines}}
-        {{/accordion-expanded-content-body}}
-      {{/accordion-expanded-content}}
+        {{/accordion-expandable-content-body}}
+      {{/accordion-expandable-content}}
 
       {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
         {{#> accordion-toggle-text}}
@@ -926,9 +926,9 @@ import './Card.css'
         {{/accordion-toggle-text}}
         {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
       {{/accordion-toggle}}
-      {{#> accordion-expanded-content}}
+      {{#> accordion-expandable-content}}
         {{> card-demo--stacked-sparklines}}
-      {{/accordion-expanded-content}}
+      {{/accordion-expandable-content}}
 
       {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
         {{#> accordion-toggle-text}}
@@ -938,9 +938,9 @@ import './Card.css'
         {{/accordion-toggle-text}}
         {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
       {{/accordion-toggle}}
-      {{#> accordion-expanded-content}}
+      {{#> accordion-expandable-content}}
         {{> card-demo--stacked-sparklines}}
-      {{/accordion-expanded-content}}
+      {{/accordion-expandable-content}}
     {{/accordion}}
   {{/card-body}}
 {{/card}}
