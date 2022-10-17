@@ -80,8 +80,7 @@ import './Wizard.css'
         {{> __wizard-form}}
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
-    {{#> wizard-footer}}
-    {{/wizard-footer}}
+    {{> wizard-footer}}
   {{/wizard-outer-wrap}}
 {{/wizard}}
 ```
@@ -158,8 +157,7 @@ import './Wizard.css'
         {{> __wizard-form}}
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
-    {{#> wizard-footer}}
-    {{/wizard-footer}}
+    {{> wizard-footer}}
   {{/wizard-outer-wrap}}
 {{/wizard}}
 ```
@@ -214,8 +212,7 @@ import './Wizard.css'
               {{/drawer-body}}
             {{/drawer-panel}}
           {{/drawer-main}}
-          {{#> wizard-footer}}
-          {{/wizard-footer}}
+          {{> wizard-footer}}
         {{/drawer}}
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
@@ -295,8 +292,7 @@ import './Wizard.css'
         {{> __wizard-form}}
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
-    {{#> wizard-footer}}
-    {{/wizard-footer}}
+    {{> wizard-footer}}
   {{/wizard-outer-wrap}}
 {{/wizard}}
 ```
@@ -373,8 +369,7 @@ import './Wizard.css'
         {{> __wizard-form}}
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
-    {{#> wizard-footer}}
-    {{/wizard-footer}}
+    {{> wizard-footer}}
   {{/wizard-outer-wrap}}
 {{/wizard}}
 ```
@@ -469,8 +464,7 @@ import './Wizard.css'
         {{/bullseye}}
       {{/wizard-main}}
     {{/wizard-inner-wrap}}
-    {{#> wizard-footer}}
-    {{/wizard-footer}}
+    {{> wizard-footer}}
   {{/wizard-outer-wrap}}
 {{/wizard}}
 ```

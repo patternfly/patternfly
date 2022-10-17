@@ -81,8 +81,7 @@ wrapperTag: div
             {{> __wizard-form}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
-        {{#> wizard-footer}}
-        {{/wizard-footer}}
+        {{> wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
   {{/modal-box}}
@@ -165,8 +164,7 @@ wrapperTag: div
             {{> __wizard-form}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
-        {{#> wizard-footer}}
-        {{/wizard-footer}}
+        {{> wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
   {{/modal-box}}
@@ -246,8 +244,7 @@ wrapperTag: div
                   {{/drawer-body}}
                 {{/drawer-panel}}
               {{/drawer-main}}
-              {{#> wizard-footer}}
-              {{/wizard-footer}}
+              {{> wizard-footer}}
             {{/drawer}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
@@ -330,8 +327,7 @@ wrapperTag: div
                   {{/drawer-body}}
                 {{/drawer-panel}}
               {{/drawer-main}}
-              {{#> wizard-footer}}
-              {{/wizard-footer}}
+              {{> wizard-footer}}
             {{/drawer}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
@@ -414,8 +410,7 @@ wrapperTag: div
                   {{/drawer-body}}
                 {{/drawer-panel}}
               {{/drawer-main}}
-              {{#> wizard-footer}}
-              {{/wizard-footer}}
+              {{> wizard-footer}}
             {{/drawer}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
@@ -495,8 +490,7 @@ wrapperTag: div
             {{> __wizard-form}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
-        {{#> wizard-footer}}
-        {{/wizard-footer}}
+        {{> wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
   {{/page-main-wizard}}
@@ -573,8 +567,7 @@ wrapperTag: div
             {{> __wizard-form}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
-        {{#> wizard-footer}}
-        {{/wizard-footer}}
+        {{> wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
   {{/page-main-wizard}}
@@ -650,8 +643,7 @@ wrapperTag: div
           {{/drawer-panel}}
         {{/drawer-main}}
       {{/drawer}}
-      {{#> wizard-footer}}
-      {{/wizard-footer}}
+      {{> wizard-footer}}
     {{/wizard}}
   {{/page-main-wizard}}
 {{/inline}}
@@ -725,8 +717,7 @@ wrapperTag: div
           {{/drawer-panel}}
         {{/drawer-main}}
       {{/drawer}}
-      {{#> wizard-footer}}
-      {{/wizard-footer}}
+      {{> wizard-footer}}
     {{/wizard}}
   {{/page-main-wizard}}
 {{/inline}}
