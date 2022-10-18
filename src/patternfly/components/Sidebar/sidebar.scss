@@ -61,6 +61,16 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
   // Full height
   --pf-c-sidebar__main--child--m-full-height--AlignSelf: stretch;
+  --pf-c-tabs--m-vertical__list--before--BorderWidth: 0;
+
+  .pf-c-tabs {
+    --pf-c-tabs--m-vertical__list--before--BorderRightWidth: 0;
+
+    &.pf-m-box {
+      --pf-c-tabs__link--before--BorderRightWidth: 0;
+      --pf-c-tabs--m-box__link--last-child--before--BorderRightWidth: 0;
+    }
+  }
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-sidebar__main--FlexDirection: var(--pf-c-sidebar__main--md--FlexDirection);
@@ -69,6 +79,15 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --pf-c-sidebar__main--AlignItems: var(--pf-c-sidebar__main--md--AlignItems);
     --pf-c-sidebar__panel--Top: var(--pf-c-sidebar__panel--md--Top);
     --pf-c-sidebar__panel--Position: var(--pf-c-sidebar__panel--md--Position);
+
+    .pf-c-tabs {
+      --pf-c-tabs--m-vertical__list--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
+
+      &.pf-m-box {
+        --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+        --pf-c-tabs--m-box__link--last-child--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+      }
+    }
   }
 
   @media (min-width: $pf-global--breakpoint--xl) {
@@ -108,6 +127,15 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --pf-c-sidebar__panel--BoxShadow: var(--pf-c-sidebar--m-stack__panel--BoxShadow);
     --pf-c-sidebar__panel--FlexBasis: var(--pf-c-sidebar__panel--m-stack--FlexBasis);
     --pf-c-sidebar--m-panel-right__panel--Order: var(--pf-c-sidebar--m-stack--m-panel-right__panel--Order);
+
+    .pf-c-tabs {
+      --pf-c-tabs--m-vertical__list--before--BorderRightWidth: 0;
+
+      &.pf-m-box {
+        --pf-c-tabs__link--before--BorderRightWidth: 0;
+        --pf-c-tabs--m-box__link--last-child--before--BorderRightWidth: 0;
+      }
+    }
   }
 
   &.pf-m-split {
@@ -120,16 +148,14 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --pf-c-sidebar__panel--BoxShadow: none;
     --pf-c-sidebar__panel--FlexBasis: var(--pf-c-sidebar__panel--m-split--FlexBasis);
     --pf-c-sidebar--m-panel-right__panel--Order: var(--pf-c-sidebar--m-split--m-panel-right__panel--Order);
-  }
 
-  // disable borders on default layout switch
-  &:where(:not(.pf-m-split)) .pf-c-tabs {
-    --pf-c-tabs__link--before--BorderRightColor: transparent;
-    --pf-c-tabs--m-vertical__list--before--BorderColor: transparent;
+    .pf-c-tabs {
+      --pf-c-tabs--m-vertical__list--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
 
-    @media (min-width: $pf-global--breakpoint--md) {
-      --pf-c-tabs__link--before--BorderRightColor: var(--pf-c-tabs--before--BorderColor);
-      --pf-c-tabs--m-vertical__list--before--BorderColor: var(--pf-c-tabs--before--BorderColor);
+      &.pf-m-box {
+        --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+        --pf-c-tabs--m-box__link--last-child--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+      }
     }
   }
 
