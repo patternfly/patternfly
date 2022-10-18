@@ -507,11 +507,6 @@ import './Card.css'
 ### Overview
 A card is a generic rectangular container that can be used to build other components. Use a default card for regular page content and the compact variation for dashboard or small cards.
 
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `tabindex="0"` | `.pf-c-card.pf-m-selectable` | Inserts the selectable card into the tab order of the page so that it is focusable. **Required** |
-
 ### Usage
 | Class | Applied | Outcome |
 | ---- | ---- | ---- |

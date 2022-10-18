@@ -15,13 +15,6 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `disabled` | `button.pf-c-tabs__link` | Indicates that a tabs link is disabled. **Required when disabled** |
-| `aria-disabled="true"` | `a.pf-c-tabs__link.pf-m-disabled`, `.pf-c-tabs__link.pf-m-aria-disabled` | Indicates to assistive technology that a tabs link is disabled. **Required when disabled** |
-
 ### Usage
 
 | Class | Applied to | Outcome |
@@ -35,13 +28,6 @@ import './Tabs.css'
   {{> __tabs-list __tabs-list--DisabledFirstScrollButton="true" __tabs-list--IsScrollable="true" __tabs-list--IsLong="true"}}
 {{/tabs}}
 ```
-
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
-| `aria-hidden="true"` | `.pf-c-tabs__scroll-button` | Hides the icon from assistive technologies.**Required when not scrollable** |
 
 ### Usage
 
@@ -330,17 +316,6 @@ The tabs component should only be used to change content views within a page. Th
 Tabs should be used with the [tab content component](/components/tab-content).
 
 Whenever a list of tabs is unique on the current page, it can be used in a `<nav>` element. Cases where the same set of tabs are duplicated in multiple regions on a page (e.g. cards on a dashboard) are less likely to benefit from using the `<nav>` element.
-
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-label="Descriptive text"` | `nav.pf-c-tabs`, `nav.pf-c-tabs.pf-m-secondary` | Gives the `<nav>` an accessible label. **Required when `.pf-c-tabs` is used with `<nav>`**
-| `aria-label="Descriptive text"` | `.pf-c-inline-edit__toggle > button` | Provides an accessible description for toggle button. **Required**
-| `disabled` | `button.pf-c-tabs__link` | Indicates that a tabs link is disabled. **Required when disabled** |
-| `aria-disabled="true"` | `a.pf-c-tabs__link.pf-m-disabled`, `.pf-c-tabs__link.pf-m-aria-disabled` | Indicates to assistive technology that a tabs link is disabled. **Required when disabled** |
-| `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disable, typically when at the first or last item of a list or scroll buttons are hidden. **Required** |
-| `aria-expanded="true"` | `.pf-c-tabs__item` | Indicates that the overflow menu tab is expanded. **Required when expanded** |
 
 ### Usage
 

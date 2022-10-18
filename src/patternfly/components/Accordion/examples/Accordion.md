@@ -303,14 +303,6 @@ In these examples `.pf-c-accordion` uses `<div>`, `.pf-c-accordion__toggle` uses
 Another variation is using the definition list:
 In these examples `.pf-c-accordion` uses `<dl>`, `.pf-c-accordion__toggle` uses `<dt><button>`, and `.pf-c-accordion__expanded-content` uses `<dd>`.
 
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-expanded="false"` | `.pf-c-accordion__toggle` | Indicates that the expanded content element is hidden. **Required**|
-| `aria-expanded="true"` | `.pf-c-accordion__toggle` | Indicates that the expanded content element is visible. **Required**|
-| `hidden` | `.pf-c-accordion__expanded-content` | Indicates that the expanded content element is hidden. Use with `aria-expanded="false"` **Required** |
-| `aria-hidden="true"` | `.pf-c-accordion__toggle-icon` | Hides the icon from assistive technologies.**Required** |
-
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
