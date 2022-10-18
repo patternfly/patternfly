@@ -1,11 +1,8 @@
 $pf-c-sidebar--breakpoint-map--width: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
-
 .pf-c-sidebar {
   --pf-c-sidebar--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-sidebar--child--Height: auto;
-  --pf-c-sidebar--child--md--Height: auto;
 
   // Main
   --pf-c-sidebar__main--FlexDirection: column;
@@ -30,7 +27,6 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --pf-c-sidebar--m-stack__panel--Top: 0;
   --pf-c-sidebar--m-stack__panel--BoxShadow: var(--pf-c-sidebar__panel--BoxShadow--base);
   --pf-c-sidebar--m-stack--m-panel-right__panel--Order: 0;
-  --pf-c-sidebar--m-stack--child--Height: auto;
 
   // Split
   --pf-c-sidebar--m-split__main--AlignItems: start;
@@ -38,7 +34,6 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --pf-c-sidebar--m-split__panel--Position: static;
   --pf-c-sidebar--m-split__panel--Top: auto;
   --pf-c-sidebar--m-split--m-panel-right__panel--Order: 1;
-  --pf-c-sidebar--m-split--child--Height: auto;
 
   // Panel
   --pf-c-sidebar__panel--FlexBasis--base: auto;
@@ -65,7 +60,7 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --pf-c-sidebar__panel--m-sticky--Position: sticky;
 
   // Full height
-  --pf-c-sidebar--child--m-full-height--Height: 100%;
+  --pf-c-sidebar__main--child--m-full-height--AlignSelf: stretch;
 
   @media (min-width: $pf-global--breakpoint--md) {
     --pf-c-sidebar__main--FlexDirection: var(--pf-c-sidebar__main--md--FlexDirection);
@@ -74,7 +69,6 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --pf-c-sidebar__main--AlignItems: var(--pf-c-sidebar__main--md--AlignItems);
     --pf-c-sidebar__panel--Top: var(--pf-c-sidebar__panel--md--Top);
     --pf-c-sidebar__panel--Position: var(--pf-c-sidebar__panel--md--Position);
-    --pf-c-sidebar--child--Height: var(--pf-c-sidebar--child--md--Height);
   }
 
   @media (min-width: $pf-global--breakpoint--xl) {
@@ -114,7 +108,6 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --pf-c-sidebar__panel--BoxShadow: var(--pf-c-sidebar--m-stack__panel--BoxShadow);
     --pf-c-sidebar__panel--FlexBasis: var(--pf-c-sidebar__panel--m-stack--FlexBasis);
     --pf-c-sidebar--m-panel-right__panel--Order: var(--pf-c-sidebar--m-stack--m-panel-right__panel--Order);
-    --pf-c-sidebar--child--Height: var(--pf-c-sidebar--m-stack--child--Height);
   }
 
   &.pf-m-split {
@@ -127,7 +120,6 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     --pf-c-sidebar__panel--BoxShadow: none;
     --pf-c-sidebar__panel--FlexBasis: var(--pf-c-sidebar__panel--m-split--FlexBasis);
     --pf-c-sidebar--m-panel-right__panel--Order: var(--pf-c-sidebar--m-split--m-panel-right__panel--Order);
-    --pf-c-sidebar--child--Height: var(--pf-c-sidebar--m-split--child--Height);
   }
 
   // disable borders on default layout switch
@@ -141,25 +133,14 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
     }
   }
 
-  height: 100%;
+  min-height: 100%;
 }
 
 // Height options apply to the default layout switch (stack to split at $md breakpoint) and the split variant default
 .pf-c-sidebar__content,
 .pf-c-sidebar__panel {
-  height: var(--pf-c-sidebar--child--Height);
-
-  @media (min-width: $pf-global--breakpoint--md) {
-    --pf-c-sidebar--child--Height: var(--pf-c-sidebar--child--md--Height);
-  }
-
-  @at-root .pf-c-sidebar.pf-m-split & {
-    --pf-c-sidebar--child--Height: var(--pf-c-sidebar--m-split--child--Height);
-  }
-
   &.pf-m-full-height {
-    --pf-c-sidebar--child--md--Height: var(--pf-c-sidebar--child--m-full-height--Height); // default layout switch height update
-    --pf-c-sidebar--m-split--child--Height: var(--pf-c-sidebar--child--m-full-height--Height); // split child layout update
+    align-self: var(--pf-c-sidebar__main--child--m-full-height--AlignSelf); // split child layout update
   }
 }
 
@@ -167,7 +148,7 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   display: flex;
   flex-direction: var(--pf-c-sidebar__main--FlexDirection);
   align-items: var(--pf-c-sidebar__main--AlignItems);
-  height: 100%;
+  min-height: 100%;
 }
 
 .pf-c-sidebar__panel {
