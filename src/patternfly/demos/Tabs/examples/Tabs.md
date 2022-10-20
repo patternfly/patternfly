@@ -385,7 +385,7 @@ section: components
       {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-template--id '-modal-description"')}}
         {{#> grid grid--modifier="pf-m-gutter"}}
           {{#> grid-item}}
-            {{#> tabs tabs--id=(concat modal-template--id '-tabs') tabs--IsSecondary="true" tabs--HasNoBorderBottom="true" tabs--modifier="pf-m-inset-none"}}
+            {{#> tabs tabs--id=(concat modal-template--id '-tabs') tabs--IsSecondary="true" tabs--modifier="pf-m-inset-none"}}
               {{#> tabs-list}}
                 {{> __tabs-item
                   __tabs-item--current="true"
