@@ -35,7 +35,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical--m-non-expandable--border--Left: 0;
 
   // Box
+  --pf-c-tabs--m-box__link--last-child--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
   --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: var(--pf-c-tabs__link--before--border-width--base);
+  --pf-c-tabs--m-box__item--m-current--last-child__link--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
 
   // Alt color scheme
   --pf-c-tabs--m-color-scheme--light-300__link--BackgroundColor: transparent;
@@ -84,6 +86,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__link--before--BorderBottomWidth: 0;
   --pf-c-tabs__link--before--BorderLeftWidth: 0;
   --pf-c-tabs__link--before--Left: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
+  --pf-c-tabs__link--disabled--before--BorderRightWidth: 0;
   --pf-c-tabs__link--disabled--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
   --pf-c-tabs__link--disabled--before--BorderLeftWidth: 0;
 
@@ -261,7 +264,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   &.pf-m-box {
     --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs--m-box__link--BackgroundColor);
     --pf-c-tabs__link--disabled--BackgroundColor: var(--pf-c-tabs--m-box__link--disabled--BackgroundColor);
+    --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
     --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--before--border-width--base);
+    --pf-c-tabs__link--disabled--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
     --pf-c-tabs__link--after--Top: 0;
     --pf-c-tabs__link--after--Bottom: auto;
 
@@ -462,6 +467,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   // Box, vertical
   &.pf-m-box.pf-m-vertical {
     --pf-c-tabs--inset: var(--pf-c-tabs--m-vertical--m-box--inset);
+    --pf-c-tabs--m-vertical__list--before--BorderLeftWidth: 0;
+    --pf-c-tabs__link--disabled--before--BorderRightWidth: var(--pf-c-tabs--before--border-width--base);
     --pf-c-tabs__link--disabled--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
     --pf-c-tabs__link--disabled--before--BorderLeftWidth: 0;
 
@@ -732,6 +739,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   &.pf-m-aria-disabled {
     --pf-c-tabs__link--Color: var(--pf-c-tabs__link--disabled--Color);
     --pf-c-tabs__link--BackgroundColor: var(--pf-c-tabs__link--disabled--BackgroundColor);
+    --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--disabled--before--BorderRightWidth);
     --pf-c-tabs__link--before--BorderBottomWidth: var(--pf-c-tabs__link--disabled--before--BorderBottomWidth);
     --pf-c-tabs__link--before--BorderLeftWidth: var(--pf-c-tabs__link--disabled--before--BorderLeftWidth);
     --pf-c-tabs__link--after--BorderWidth: 0;
