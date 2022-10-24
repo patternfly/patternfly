@@ -362,7 +362,6 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-c-tabs__toggle-text` | `<span>` | Initiates a tabs expandable toggle text. |
 | `.pf-m-secondary` | `.pf-c-tabs` | Applies secondary styling to the tab component. |
 | `.pf-m-no-border-bottom` | `.pf-c-tabs` | Removes bottom border from a tab component. |
-| `.pf-m-border-bottom` | `.pf-c-tabs` | Adds a bottom border to secondary tabs. |
 | `.pf-m-box` | `.pf-c-tabs` | Applies box styling to the tab component. |
 | `.pf-m-vertical` | `.pf-c-tabs` | Applies vertical styling to the tab component. |
 | `.pf-m-fill` | `.pf-c-tabs` | Modifies the tabs to fill the available space. |

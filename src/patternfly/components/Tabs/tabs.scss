@@ -230,15 +230,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     }
   }
 
-  &.pf-m-secondary,
   &.pf-m-no-border-bottom {
     --pf-c-tabs--before--BorderBottomWidth: 0;
     --pf-c-tabs__link--disabled--before--BorderBottomWidth: 0;
-  }
-
-  &.pf-m-border-bottom {
-    --pf-c-tabs--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
-    --pf-c-tabs__link--disabled--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
   }
 
   // Remove bottom border for variants
