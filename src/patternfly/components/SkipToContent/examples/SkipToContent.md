@@ -7,7 +7,7 @@ cssPrefix: pf-c-skip-to-content
 ## Examples
 ### Basic
 ```hbs isFullscreen
-{{#> skip-to-content skip-to-content--attribute='href="#main-content"'}}
+{{#> skip-to-content skip-to-content--href="#main-content"}}
   Skip to content
 {{/skip-to-content}}
 Press tab to skip to content at the bottom of the page.
