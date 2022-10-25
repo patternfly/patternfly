@@ -92,3 +92,4 @@ import './DatePicker.css'
 | `.pf-m-top` | `.pf-c-date-picker` | Modifies to display the calendar above the date picker. |
 | `.pf-m-error` | `.pf-c-date-picker__helper-text` | Modifies the helper text for the invalid/error state. |
 | `.pf-m-align-right` | `.pf-c-date-picker__calendar` | Modifies the calendar to align the calendar to the right edge of the date picker. |
+| `.pf-m-static` | `.pf-c-date-picker__calendar` | Modifies the calendar to be statically positioned to support custom positioning. |
