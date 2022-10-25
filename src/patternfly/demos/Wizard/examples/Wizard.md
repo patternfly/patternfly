@@ -81,19 +81,7 @@ wrapperTag: div
             {{> __wizard-form}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
-        {{#> wizard-footer}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Next
-          {{/button}}
-          {{#> button button--modifier="pf-m-secondary"}}
-            Back
-          {{/button}}
-          {{#> wizard-footer-cancel}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
-          {{/wizard-footer-cancel}}
-        {{/wizard-footer}}
+        {{> wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
   {{/modal-box}}
@@ -176,19 +164,7 @@ wrapperTag: div
             {{> __wizard-form}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
-        {{#> wizard-footer}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Next
-          {{/button}}
-          {{#> button button--modifier="pf-m-secondary"}}
-            Back
-          {{/button}}
-          {{#> wizard-footer-cancel}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
-          {{/wizard-footer-cancel}}
-        {{/wizard-footer}}
+        {{> wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
   {{/modal-box}}
@@ -268,19 +244,7 @@ wrapperTag: div
                   {{/drawer-body}}
                 {{/drawer-panel}}
               {{/drawer-main}}
-              {{#> wizard-footer}}
-                {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-                  Next
-                {{/button}}
-                {{#> button button--modifier="pf-m-secondary"}}
-                  Back
-                {{/button}}
-                {{#> wizard-footer-cancel}}
-                  {{#> button button--modifier="pf-m-link"}}
-                    Cancel
-                  {{/button}}
-                {{/wizard-footer-cancel}}
-              {{/wizard-footer}}
+              {{> wizard-footer}}
             {{/drawer}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
@@ -363,19 +327,7 @@ wrapperTag: div
                   {{/drawer-body}}
                 {{/drawer-panel}}
               {{/drawer-main}}
-              {{#> wizard-footer}}
-                {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-                  Next
-                {{/button}}
-                {{#> button button--modifier="pf-m-secondary"}}
-                  Back
-                {{/button}}
-                {{#> wizard-footer-cancel}}
-                  {{#> button button--modifier="pf-m-link"}}
-                    Cancel
-                  {{/button}}
-                {{/wizard-footer-cancel}}
-              {{/wizard-footer}}
+              {{> wizard-footer}}
             {{/drawer}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
@@ -458,19 +410,7 @@ wrapperTag: div
                   {{/drawer-body}}
                 {{/drawer-panel}}
               {{/drawer-main}}
-              {{#> wizard-footer}}
-                {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-                  Next
-                {{/button}}
-                {{#> button button--modifier="pf-m-secondary"}}
-                  Back
-                {{/button}}
-                {{#> wizard-footer-cancel}}
-                  {{#> button button--modifier="pf-m-link"}}
-                    Cancel
-                  {{/button}}
-                {{/wizard-footer-cancel}}
-              {{/wizard-footer}}
+              {{> wizard-footer}}
             {{/drawer}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
@@ -550,19 +490,7 @@ wrapperTag: div
             {{> __wizard-form}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
-        {{#> wizard-footer}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Next
-          {{/button}}
-          {{#> button button--modifier="pf-m-secondary"}}
-            Back
-          {{/button}}
-          {{#> wizard-footer-cancel}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
-          {{/wizard-footer-cancel}}
-        {{/wizard-footer}}
+        {{> wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
   {{/page-main-wizard}}
@@ -639,19 +567,7 @@ wrapperTag: div
             {{> __wizard-form}}
           {{/wizard-main}}
         {{/wizard-inner-wrap}}
-        {{#> wizard-footer}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-            Next
-          {{/button}}
-          {{#> button button--modifier="pf-m-secondary"}}
-            Back
-          {{/button}}
-          {{#> wizard-footer-cancel}}
-            {{#> button button--modifier="pf-m-link"}}
-              Cancel
-            {{/button}}
-          {{/wizard-footer-cancel}}
-        {{/wizard-footer}}
+        {{> wizard-footer}}
       {{/wizard-outer-wrap}}
     {{/wizard}}
   {{/page-main-wizard}}
@@ -727,19 +643,7 @@ wrapperTag: div
           {{/drawer-panel}}
         {{/drawer-main}}
       {{/drawer}}
-      {{#> wizard-footer}}
-        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-          Next
-        {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
-          Back
-        {{/button}}
-        {{#> wizard-footer-cancel}}
-          {{#> button button--modifier="pf-m-link"}}
-            Cancel
-          {{/button}}
-        {{/wizard-footer-cancel}}
-      {{/wizard-footer}}
+      {{> wizard-footer}}
     {{/wizard}}
   {{/page-main-wizard}}
 {{/inline}}
@@ -813,19 +717,7 @@ wrapperTag: div
           {{/drawer-panel}}
         {{/drawer-main}}
       {{/drawer}}
-      {{#> wizard-footer}}
-        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
-          Next
-        {{/button}}
-        {{#> button button--modifier="pf-m-secondary"}}
-          Back
-        {{/button}}
-        {{#> wizard-footer-cancel}}
-          {{#> button button--modifier="pf-m-link"}}
-            Cancel
-          {{/button}}
-        {{/wizard-footer-cancel}}
-      {{/wizard-footer}}
+      {{> wizard-footer}}
     {{/wizard}}
   {{/page-main-wizard}}
 {{/inline}}
