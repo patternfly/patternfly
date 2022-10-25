@@ -342,6 +342,7 @@ import './application-launcher.css'
 | `.pf-m-expanded` | `.pf-c-app-launcher` | Modifies for the expanded state. |
 | `.pf-m-top` | `.pf-c-app-launcher` | Modifies to display the menu above the toggle. |
 | `.pf-m-align-right` | `.pf-c-app-launcher__menu` | Modifies to display the menu aligned to the right edge of the toggle. |
+| `.pf-m-static` | `.pf-c-app-launcher__menu` | Modifies to position the menu statically to support custom positioning. |
 | `.pf-m-disabled` | `a.pf-c-app-launcher__menu-item` | Modifies to display the menu item as disabled. |
 | `.pf-m-external` | `.pf-c-app-launcher__menu-item` | Modifies to display the menu item as having an external link icon on hover/focus. |
 | `.pf-m-favorite` | `.pf-c-app-launcher__menu-wrapper` | Modifies wrapper to indicate that the item row has been favorited. |

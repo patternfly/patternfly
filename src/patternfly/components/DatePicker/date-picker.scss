@@ -56,6 +56,18 @@
 
     transform: translateY(var(--pf-c-date-picker--m-top__calendar--TranslateY));
   }
+
+  &.pf-m-static {
+    --pf-c-date-picker--m-top__calendar--TranslateY: 0;
+
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: auto;
+    min-width: min-content;
+  }
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
