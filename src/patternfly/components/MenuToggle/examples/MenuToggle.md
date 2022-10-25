@@ -1,6 +1,5 @@
 ---
 id: 'Menu toggle'
-beta: true
 section: components
 cssPrefix: pf-c-menu-toggle
 ---

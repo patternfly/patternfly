@@ -1,6 +1,5 @@
 ---
 id: 'Dual list selector'
-beta: true
 section: components
 cssPrefix: pf-c-dual-list-selector
 ---

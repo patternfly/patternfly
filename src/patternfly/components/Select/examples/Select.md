@@ -390,7 +390,7 @@ The plain select variation should be used when you do not want a border applied 
 
 ## View more
 ### View more menu item
-```hbs isBeta
+```hbs
 {{#> select select--id="select-single-view-more" select--IsExpanded="true" select--IsLoad="true"}}
   Filter by status
 {{/select}}
@@ -403,7 +403,7 @@ The plain select variation should be used when you do not want a border applied 
 
 ## Loading
 ### Loading menu item
-```hbs isBeta
+```hbs
 {{#> select select--id="select-single-loading" select--IsExpanded="true" select--IsLoading="true"}}
   Filter by status
 {{/select}}

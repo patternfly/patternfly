@@ -1,6 +1,5 @@
 ---
 id: 'Panel'
-beta: true
 section: components
 cssPrefix: pf-c-panel
 ---
