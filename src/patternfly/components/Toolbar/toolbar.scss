@@ -9,13 +9,18 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar--RowGap: var(--pf-global--spacer--lg);
   --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-toolbar--AlignItems--base: baseline;
+  --pf-c-toolbar--AlignSelf--base: auto;
 
   // Item
   --pf-c-toolbar__item--Display: block;
   --pf-c-toolbar__item--MinWidth--base: auto;
+  --pf-c-toolbar__item--AlignSelf: var(--pf-c-toolbar--AlignSelf--base);
 
   // Group
   --pf-c-toolbar__group--Display: flex;
+  --pf-c-toolbar__group--AlignItems: var(--pf-c-toolbar--AlignItems--base);
+  --pf-c-toolbar__group--AlignSelf: var(--pf-c-toolbar--AlignSelf--base);
 
   // Sticky
   --pf-c-toolbar--m-sticky--ZIndex: var(--pf-global--ZIndex--xs);
@@ -28,6 +33,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Content section
   --pf-c-toolbar__content-section--Display: flex;
+  --pf-c-toolbar__content-section--AlignItems: var(--pf-c-toolbar--AlignItems--base);
 
   // Insets
   --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
@@ -208,8 +214,16 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   @include pf-hidden-visible(var(--pf-c-toolbar__group--Display));
 
-  align-items: center;
+  align-items: var(--pf-c-toolbar__group--AlignSelf);
   margin-right: var(--pf-c-toolbar--spacer);
+
+  &.pf-m-align-self-center {
+    --pf-c-toolbar__group--AlignSelf: center;
+  }
+
+  &.pf-m-align-self-baseline {
+    --pf-c-toolbar__group--AlignSelf: baseline;
+  }
 
   // Button group
   &.pf-m-button-group {
@@ -270,9 +284,18 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   @include pf-build-css-variable-stack("--pf-c-toolbar__item--MinWidth--base", "--pf-c-toolbar__item--MinWidth", $pf-c-toolbar--breakpoint-map);
   @include pf-hidden-visible(var(--pf-c-toolbar__item--Display));
 
+  align-self: var(--pf-c-toolbar__item--AlignSelf);
   width: var(--pf-c-toolbar__item--Width--base);
   min-width: var(--pf-c-toolbar__item--MinWidth--base);
   margin-right: var(--pf-c-toolbar--spacer);
+
+  &.pf-m-align-self-center {
+    --pf-c-toolbar__item--AlignSelf: center;
+  }
+
+  &.pf-m-align-self-baseline {
+    --pf-c-toolbar__item--AlignSelf: baseline;
+  }
 
   // Overflow menu
   &.pf-m-overflow-menu {
@@ -329,7 +352,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   }
 }
 
-
 .pf-c-toolbar__expand-all-icon {
   display: inline-block;
   transition: var(--pf-c-toolbar__expand-all-icon--Transition);
@@ -339,7 +361,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 .pf-c-toolbar__content,
 .pf-c-toolbar__content-section {
   flex-wrap: wrap;
-  align-items: center;
 }
 
 // Content
@@ -347,6 +368,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   @include pf-hidden-visible(var(--pf-c-toolbar__content--Display));
 
   position: relative;
+  align-items: center;
   padding-right: var(--pf-c-toolbar__content--PaddingRight);
   padding-left: var(--pf-c-toolbar__content--PaddingLeft);
 }
@@ -355,7 +377,12 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 .pf-c-toolbar__content-section {
   @include pf-hidden-visible(var(--pf-c-toolbar__content-section--Display));
 
+  align-items: var(--pf-c-toolbar__content-section--AlignItems);
   width: 100%;
+
+  &.pf-m-align-items-center {
+    --pf-c-toolbar__content-section--AlignItems: center;
+  }
 }
 
 // Expandable content
