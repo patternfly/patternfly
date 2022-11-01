@@ -223,7 +223,6 @@
     .pf-c-wizard__footer,
     .pf-c-wizard__toggle {
       display: none;
-      visibility: hidden;
     }
   }
 }
@@ -254,11 +253,9 @@
   display: none;
   padding-top: var(--pf-c-wizard__description--PaddingTop);
   color: var(--pf-c-wizard__description--Color);
-  visibility: hidden;
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     display: block;
-    visibility: visible;
   }
 }
 
@@ -275,7 +272,6 @@
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     display: none;
-    visibility: hidden;
   }
 
   &.pf-m-expanded {
@@ -357,19 +353,16 @@
   max-height: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  visibility: hidden;
   background-color: var(--pf-c-wizard__nav--BackgroundColor);
   box-shadow: var(--pf-c-wizard__nav--BoxShadow);
 
   &.pf-m-expanded {
     display: block;
-    visibility: visible;
   }
 
   @media screen and (min-width: $pf-global--breakpoint--lg) {
     display: block;
     height: 100%;
-    visibility: visible;
     border-right: var(--pf-c-wizard__nav--lg--BorderRightWidth) solid var(--pf-c-wizard__nav--lg--BorderRightColor);
   }
 }
@@ -413,14 +406,12 @@
 
     > .pf-c-wizard__nav-list {
       display: none;
-      visibility: hidden;
     }
   }
 
   &.pf-m-expanded {
     > .pf-c-wizard__nav-list {
       display: block;
-      visibility: visible;
     }
 
     > .pf-c-wizard__nav-link {

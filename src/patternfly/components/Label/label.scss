@@ -372,10 +372,6 @@
     --pf-c-label--m-editable--Cursor: var(--pf-c-label--m-editable--m-editable-active--Cursor);
     --pf-c-label--m-editable--TextDecoration: var(--pf-c-label--m-editable--m-editable-active--TextDecoration);
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-editable--m-editable-active--BackgroundColor);
-
-    .pf-c-button {
-      visibility: hidden; // use visibility hidden to retain positioning
-    }
   }
 
   .pf-c-button {
