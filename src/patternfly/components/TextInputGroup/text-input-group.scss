@@ -157,6 +157,13 @@
   padding: var(--pf-c-text-input-group__text-input--PaddingTop) var(--pf-c-text-input-group__text-input--PaddingRight) var(--pf-c-text-input-group__text-input--PaddingBottom) var(--pf-c-text-input-group__text-input--PaddingLeft);
   border: 0;
 
+  &[type="search"]::-webkit-search-decoration,
+  &[type="search"]::-webkit-search-cancel-button,
+  &[type="search"]::-webkit-search-results-button,
+  &[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+
   &,
   &.pf-m-hint {
     grid-area: text-input;
