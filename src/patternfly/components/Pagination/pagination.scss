@@ -310,8 +310,6 @@ $pf-c-pagination--variable-map: build-spacer-map("none", "md", "xl");
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           --pf-c-pagination--inset: #{$spacer-value};
         }
-
-        @debug "pf-m-inset-" $spacer $breakpoint-name;
       }
     }
   }
