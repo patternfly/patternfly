@@ -127,7 +127,19 @@ import './Pagination.css'
 {{/pagination}}
 ```
 
+### Inset
+```hbs
+{{#> pagination pagination--modifier="pf-m-inset-none pf-m-inset-md-on-md pf-m-inset-2xl-on-lg"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-options-menu pagination-options-menu--id="pagination-options-menu-top-example"}}
+  {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top example"}}
+{{/pagination}}
+```
+
 ## Documentation
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies pagination horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-select`.
 
 ### Accessibility

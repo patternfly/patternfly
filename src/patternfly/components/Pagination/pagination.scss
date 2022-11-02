@@ -1,6 +1,11 @@
 $pf-c-pagination--breakpoint-map: build-breakpoint-map();
+$pf-c-pagination--variable-map: build-spacer-map("none", "md", "xl");
 
 .pf-c-pagination {
+  --pf-c-pagination--inset: 0;
+  --pf-c-pagination--PaddingRight: var(--pf-c-pagination--inset);
+  --pf-c-pagination--PaddingLeft: var(--pf-c-pagination--inset);
+
   // children
   --pf-c-pagination--child--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-pagination--m-bottom--child--MarginRight: 0;
@@ -104,6 +109,8 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
+  padding-right: var(--pf-c-pagination--PaddingRight);
+  padding-left: var(--pf-c-pagination--PaddingLeft);
 
   // stylelint-disable selector-not-notation
   // update to single :not() in breaking change
@@ -211,7 +218,6 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
     }
   }
 
-
   .pf-c-options-menu__toggle {
     font-size: var(--pf-c-pagination--c-options-menu__toggle--FontSize);
   }
@@ -220,6 +226,7 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
     --pf-c-pagination--child--MarginRight: var(--pf-c-pagination--m-compact--child--MarginRight);
   }
 }
+
 
 // nav
 .pf-c-pagination__nav {
@@ -292,6 +299,19 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
         --pf-c-pagination--c-options-menu--Visibility: var(--pf-c-pagination--m-display-full--c-options-menu--Visibility);
         --pf-c-pagination__total-items--Display: var(--pf-c-pagination--m-display-full__total-items--Display);
         --pf-c-pagination__total-items--Visibility: var(--pf-c-pagination--m-display-full__total-items--Visibility);
+      }
+
+      /* &.pf-m-inset-md#{$breakpoint-name} {
+        padding-left: var(--pf-global--spacer--md);
+        padding-right: var(--pf-global--spacer--md);
+      } */
+
+      @each $spacer, $spacer-value in $pf-c-pagination--variable-map {
+        &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
+          --pf-c-pagination--inset: #{$spacer-value};
+        }
+
+        @debug "pf-m-inset-" $spacer $breakpoint-name;
       }
     }
   }
