@@ -78,7 +78,54 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
-### Box
+### Vertical box tabs example
+```hbs
+{{#> tabs tabs--id="box-vertical-example" tabs--modifier="pf-m-box pf-m-vertical"}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
+{{/tabs}}
+```
+
+### Vertical expandable example
+```hbs
+{{#> tabs tabs--id="vertical-expandable" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expanded example
+```hbs
+{{#> tabs tabs--id="vertical-expanded" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical box expanded example
+```hbs
+{{#> tabs tabs--id="vertical-box-expanded-example" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical pf-m-box"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expandable responsive example
+```hbs
+{{#> tabs tabs--id="vertical-expandable-responsive" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expandable example (legacy)
+```hbs
+{{#> tabs tabs--id="vertical-expandable-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expanded example (legacy)
 ```hbs
 {{#> tabs tabs--id="box-example" tabs--modifier="pf-m-box"}}
   {{> __tabs-list __tabs-list--IsDisabled="true"}}

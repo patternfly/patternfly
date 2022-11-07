@@ -121,6 +121,10 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   }
 
   height: 100%;
+
+  .pf-c-tabs {
+    --pf-c-tabs--m-vertical--MaxWidth: auto;
+  }
 }
 
 .pf-c-sidebar__main {

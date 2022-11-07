@@ -10,21 +10,28 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--before--BorderRightWidth: 0;
   --pf-c-tabs--before--BorderBottomWidth: var(--pf-c-tabs--before--border-width--base);
   --pf-c-tabs--before--BorderLeftWidth: 0;
-  --pf-c-tabs--m-vertical--inset: var(--pf-global--spacer--lg);
 
   // Page insets
   --pf-c-tabs--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
   --pf-c-tabs--m-page-insets--xl--inset: var(--pf-global--spacer--lg); // make this the default inset at breaking change
 
   // Vertical
+  --pf-c-tabs--m-vertical--inset--base: var(--pf-global--spacer--lg);
+  --pf-c-tabs--m-vertical--inset: var(--pf-c-tabs--m-vertical--inset--base);
   --pf-c-tabs--m-vertical--Width: 100%;
   --pf-c-tabs--m-vertical--MaxWidth: #{pf-size-prem(250px)};
-  --pf-c-tabs--m-vertical--m-box--inset: var(--pf-global--spacer--xl);
   --pf-c-tabs--m-vertical__list--before--BorderColor: var(--pf-c-tabs--before--BorderColor);
   --pf-c-tabs--m-vertical__list--before--BorderTopWidth: 0;
   --pf-c-tabs--m-vertical__list--before--BorderRightWidth: 0;
   --pf-c-tabs--m-vertical__list--before--BorderBottomWidth: 0;
   --pf-c-tabs--m-vertical__list--before--BorderLeftWidth: var(--pf-c-tabs--before--border-width--base);
+
+  // Vertical box
+  --pf-c-tabs--m-vertical--m-box--inset: var(--pf-global--spacer--xl);
+
+  // Vertical box
+  --pf-c-tabs--m-vertical--m-box__list--after--Left: 0;
+  --pf-c-tabs--m-vertical--m-box__link--PaddingLeft: 0;
 
   // Box
   --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: var(--pf-c-tabs__link--before--border-width--base);
@@ -44,6 +51,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__item--m-action__link--PaddingRight: var(--pf-global--spacer--sm);
 
   // Tab link
+  --pf-c-tabs__link--PaddingLeft--base: var(--pf-global--spacer--md);
   --pf-c-tabs__link--Color: var(--pf-global--Color--200);
   --pf-c-tabs__link--FontSize: var(--pf-global--FontSize--md);
   --pf-c-tabs__link--BackgroundColor: transparent;
@@ -51,7 +59,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__link--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-tabs__link--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-tabs__link--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-tabs__link--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-tabs__link--PaddingLeft: var(--pf-c-tabs__link--PaddingLeft--base);
   --pf-c-tabs__link--disabled--Color: var(--pf-global--disabled-color--100);
   --pf-c-tabs__link--disabled--BackgroundColor: var(--pf-global--palette--black-150);
   --pf-c-tabs__item--m-current__link--Color: var(--pf-global--Color--100);
@@ -62,6 +70,22 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-box__link--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-tabs--m-box__item-close--c-button--disabled--BackgroundColor: var(--pf-global--palette--black-400);
   --pf-c-tabs--m-secondary__link--FontSize: var(--pf-global--FontSize--sm);
+
+  // Vertical, expandable
+  --pf-c-tabs--m-vertical--m-expandable__link--before--Left: calc(var(--pf-global--spacer--md) + var(--pf-global--spacer--xs));
+  --pf-c-tabs--m-vertical--m-expandable__list--before--Left: calc(var(--pf-global--spacer--md) + var(--pf-global--spacer--xs));
+  --pf-c-tabs--m-vertical--m-expandable--inset: var(--pf-global--spacer--md);
+  --pf-c-tabs--m-vertical--m-non-expandable--inset: var(--pf-c-tabs--m-vertical--inset--base);
+
+  // Vertical, expandable
+  --pf-c-tabs--m-vertical--m-expanded__list--before--Left: 0;
+  --pf-c-tabs--m-vertical--m-expandable__link--PaddingLeft: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--sm));
+  --pf-c-tabs--m-vertical--m-non-expandable__link--PaddingLeft: var(--pf-c-tabs__link--PaddingLeft--base);
+  --pf-c-tabs--m-vertical--m-non-expandable--m-box__link--PaddingLeft: var(--pf-c-tabs__link--PaddingLeft--base);
+
+  // Expandable box
+  --pf-c-tabs--m-vertical--m-expandable--m-box--inset: 0;
+  --pf-c-tabs--m-vertical--m-non-expandable--m-box--inset: var(--pf-global--spacer--xl);
 
   // Link before
   --pf-c-tabs__link--before--border-color--base: var(--pf-global--BorderColor--100);
@@ -125,16 +149,16 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__toggle--Display: flex;
   --pf-c-tabs__toggle--Visibility: hidden;
   --pf-c-tabs__toggle--MarginBottom: 0;
-  --pf-c-tabs--m-expanded__toggle--MarginBottom: var(--pf-global--spacer--md);
+  --pf-c-tabs--m-expanded__toggle--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-tabs__toggle-icon--Color: currentcolor;
   --pf-c-tabs__toggle-icon--Transition: var(--pf-global--Transition);
   --pf-c-tabs__toggle-icon--Rotate: 0;
   --pf-c-tabs__toggle-text--MarginLeft: 0;
   --pf-c-tabs__toggle-button__toggle-text--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-tabs__toggle-button__toggle-text--Color: var(--pf-global--Color--100);
-  --pf-c-tabs__toggle-button--MarginTop: calc(-1 * var(--pf-global--spacer--form-element));
-  --pf-c-tabs__toggle-button--MarginBottom: calc(-1 * var(--pf-global--spacer--form-element));
-  --pf-c-tabs__toggle-button--MarginLeft: calc(-1 * var(--pf-global--spacer--md));
+  --pf-c-tabs__toggle-button--MarginTop: 0; // update at breaking change
+  --pf-c-tabs__toggle-button--MarginBottom: 0; // update at breaking change
+  --pf-c-tabs__toggle-button--MarginLeft: 0; // update at breaking change
   --pf-c-tabs--m-expanded__toggle-icon--Color: var(--pf-global--Color--100);
   --pf-c-tabs--m-expanded__toggle-icon--Rotate: 90deg;
 
@@ -338,6 +362,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       &::before {
         position: absolute;
         right: auto;
+        left: var(--pf-c-tabs--m-vertical__list--before--Left);
         border: solid var(--pf-c-tabs--m-vertical__list--before--BorderColor);
         border-width: var(--pf-c-tabs--m-vertical__list--before--BorderTopWidth) var(--pf-c-tabs--m-vertical__list--before--BorderRightWidth) var(--pf-c-tabs--m-vertical__list--before--BorderBottomWidth) var(--pf-c-tabs--m-vertical__list--before--BorderLeftWidth);
       }
@@ -345,11 +370,11 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
     // Because vertical variant has no scroll buttons, move inset to first/last __item to prevent default scrolling behavior
     .pf-c-tabs__item:first-child {
-      margin-top: var(--pf-c-tabs--inset);
+      margin-top: var(--pf-c-tabs--m-vertical--inset);
     }
 
     .pf-c-tabs__item:last-child {
-      margin-bottom: var(--pf-c-tabs--inset);
+      margin-bottom: var(--pf-c-tabs--m-vertical--inset);
     }
 
     // Set hover on left border
@@ -376,6 +401,21 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
           --pf-c-tabs__list--Visibility: hidden;
           --pf-c-tabs__toggle--Display: flex;
           --pf-c-tabs__toggle--Visibility: visible;
+
+          // Link
+          --pf-c-tabs__link--PaddingLeft: var(--pf-c-tabs--m-vertical--m-expandable__link--PaddingLeft);
+
+          // Move link and list borders
+          --pf-c-tabs__link--before--Left: var(--pf-c-tabs--m-vertical--m-expandable__link--before--Left);
+          --pf-c-tabs--m-vertical__list--before--Left: var(--pf-c-tabs--m-vertical--m-expandable__list--before--Left);
+
+          // Vertical inset updates
+          --pf-c-tabs--m-vertical--inset: var(--pf-c-tabs--m-vertical--m-expandable--inset);
+          --pf-c-tabs--m-vertical--m-box--inset: var(--pf-c-tabs--m-vertical--m-expandable--m-box--inset);
+
+          &.pf-m-box {
+            --pf-c-tabs__link--before--BorderRightWidth: 0;
+          }
         }
 
         &.pf-m-non-expandable#{$breakpoint-name} {
@@ -383,6 +423,21 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
           --pf-c-tabs__list--Visibility: visible;
           --pf-c-tabs__toggle--Display: none;
           --pf-c-tabs__toggle--Visibility: hidden;
+
+          // Link
+          --pf-c-tabs__link--PaddingLeft: var(--pf-c-tabs--m-vertical--m-non-expandable__link--PaddingLeft);
+
+          // Move link and list borders
+          --pf-c-tabs__link--before--Left: 0;
+          --pf-c-tabs--m-vertical__list--before--Left: 0;
+
+          // Vertical inset updates
+          --pf-c-tabs--m-vertical--inset: var(--pf-c-tabs--m-vertical--m-non-expandable--inset);
+          --pf-c-tabs--m-vertical--m-box--inset: var(--pf-c-tabs--m-vertical--m-non-expandable--m-box--inset);
+
+          &.pf-m-box {
+            --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+          }
         }
         // stylelint-enable
       }
@@ -411,11 +466,17 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       left: auto;
     }
 
+    .pf-c-tabs__item:first-child {
+      margin-top: var(--pf-c-tabs--m-vertical--m-box--inset);
+    }
+
     // stylelint-disable selector-max-class
     // Remove border from last-child
     .pf-c-tabs__item:last-child {
       --pf-c-tabs__link--before--BorderBottomWidth: 0;
       --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+
+      margin-bottom: var(--pf-c-tabs--m-vertical--m-box--inset);
     }
 
     // Add border right color and weight
@@ -437,6 +498,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     // Offset vertical border to overlap horizontal border
     .pf-c-tabs__link::after {
       top: calc(var(--pf-c-tabs__link--before--border-width--base) * -1);
+      left: var(--pf-c-tabs--m-vertical--m-box__list--after--Left);
     }
 
     // Undo offset to .pf-m-current adjacent item
@@ -499,7 +561,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   margin-left: var(--pf-c-tabs__toggle-text--MarginLeft);
   color: var(--pf-c-tabs__toggle-text--Color, inherit);
 }
-
 
 // Tab list
 .pf-c-tabs__list {
