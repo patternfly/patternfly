@@ -41,7 +41,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // Item
   --pf-c-tabs__item--m-action--before--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-tabs__item--m-action__link--PaddingRight: var(--pf-global--spacer--sm);
 
   // Tab link
   --pf-c-tabs__link--Color: var(--pf-global--Color--200);
@@ -60,8 +59,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical__link--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-tabs--m-box__link--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-tabs--m-box__link--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
-  --pf-c-tabs--m-box__item-close--c-button--disabled--BackgroundColor: var(--pf-global--palette--black-400);
+  --pf-c-tabs--m-box__item-action--c-button--disabled--BackgroundColor: var(--pf-global--palette--black-400);
   --pf-c-tabs--m-secondary__link--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-tabs__item--m-action__link--PaddingRight: var(--pf-global--spacer--xs);
 
   // Link before
   --pf-c-tabs__link--before--border-color--base: var(--pf-global--BorderColor--100);
@@ -138,14 +138,19 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-expanded__toggle-icon--Color: var(--pf-global--Color--100);
   --pf-c-tabs--m-expanded__toggle-icon--Rotate: 90deg;
 
-  // Close button
-  --pf-c-tabs__item-close--c-button--FontSize: var(--pf-global--FontSize--xs);
-  --pf-c-tabs--m-secondary__item-close--c-button--FontSize: var(--pf-global--icon--FontSize--sm);
-  --pf-c-tabs__item-close--c-button--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-tabs__item-close--c-button--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-tabs__item-close--c-button--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-tabs__item-close--c-button--OutlineOffset: #{pf-size-prem(-3px)};
-  --pf-c-tabs__item-close-icon--MarginTop: #{pf-size-prem(2px)};
+  // Item action
+  --pf-c-tabs__item-action--c-button--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-tabs--m-secondary__item-action--c-button--FontSize: var(--pf-global--icon--FontSize--sm);
+  --pf-c-tabs__item-action--c-button--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-tabs__item-action--c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-tabs__item-action--c-button--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-tabs__item-action--c-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-tabs__item-action--last-child--c-button--PaddingRight: var(--pf-global--spacer--md);
+  --pf-c-tabs__item-action--c-button--OutlineOffset: #{pf-size-prem(-3px)};
+  --pf-c-tabs__item-action-icon--MarginTop: #{pf-size-prem(2px)};
+
+  // Item help
+  --pf-c-tabs__item-action--m-help--c-button--PaddingLeft: var(--pf-global--spacer--xs);
 
   // Add button
   --pf-c-tabs__add--before--BorderColor: var(--pf-c-tabs__link--before--border-color--base);
@@ -309,8 +314,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
       --pf-c-tabs__link--disabled--BackgroundColor: var(--pf-c-tabs--m-color-scheme--light-300__link--disabled--BackgroundColor);
     }
 
-    .pf-c-tabs__item-close .pf-c-button {
-      --pf-c-button--m-plain--disabled--Color: var(--pf-c-tabs--m-box__item-close--c-button--disabled--BackgroundColor);
+    .pf-c-tabs__item-action .pf-c-button {
+      --pf-c-button--m-plain--disabled--Color: var(--pf-c-tabs--m-box__item-action--c-button--disabled--BackgroundColor);
     }
   }
 
@@ -455,7 +460,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   &.pf-m-secondary {
     --pf-c-tabs__link--FontSize: var(--pf-c-tabs--m-secondary__link--FontSize);
-    --pf-c-tabs__item-close--c-button--FontSize: var(--pf-c-tabs--m-secondary__item-close--c-button--FontSize);
+    --pf-c-tabs__item-action--c-button--FontSize: var(--pf-c-tabs--m-secondary__item-action--c-button--FontSize);
     --pf-c-tabs__add--c-button--FontSize: var(--pf-c-tabs--m-secondary__add--c-button--FontSize);
   }
 
@@ -704,22 +709,31 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   transform: rotate(var(--pf-c-tabs__link-toggle-icon--Rotate));
 }
 
-.pf-c-tabs__item-close {
+.pf-c-tabs__item-action {
   display: flex;
 
   .pf-c-button {
-    --pf-c-button--FontSize: var(--pf-c-tabs__item-close--c-button--FontSize);
-    --pf-c-button--PaddingTop: var(--pf-c-tabs__item-close--c-button--PaddingTop);
-    --pf-c-button--PaddingBottom: var(--pf-c-tabs__item-close--c-button--PaddingBottom);
-    --pf-c-button--PaddingLeft: var(--pf-c-tabs__item-close--c-button--PaddingLeft);
+    --pf-c-button--FontSize: var(--pf-c-tabs__item-action--c-button--FontSize);
+    --pf-c-button--PaddingTop: var(--pf-c-tabs__item-action--c-button--PaddingTop);
+    --pf-c-button--PaddingRight: var(--pf-c-tabs__item-action--c-button--PaddingRight);
+    --pf-c-button--PaddingBottom: var(--pf-c-tabs__item-action--c-button--PaddingBottom);
+    --pf-c-button--PaddingLeft: var(--pf-c-tabs__item-action--c-button--PaddingLeft);
 
-    outline-offset: var(--pf-c-tabs__item-close--c-button--OutlineOffset);
+    outline-offset: var(--pf-c-tabs__item-action--c-button--OutlineOffset);
+  }
+
+  &.pf-m-help {
+    --pf-c-tabs__item-action--c-button--PaddingLeft: var(--pf-c-tabs__item-action--m-help--c-button--PaddingLeft);
+  }
+
+  &:last-child {
+    --pf-c-tabs__item-action--c-button--PaddingRight: var(--pf-c-tabs__item-action--last-child--c-button--PaddingRight);
   }
 }
 
-.pf-c-tabs__item-close-icon {
+.pf-c-tabs__item-action-icon {
   display: inline-block;
-  margin-top: var(--pf-c-tabs__item-close-icon--MarginTop);
+  margin-top: var(--pf-c-tabs__item-action-icon--MarginTop);
 }
 
 // Scroll buttons
