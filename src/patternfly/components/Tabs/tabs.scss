@@ -30,7 +30,9 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs--m-vertical--m-box--inset: var(--pf-global--spacer--xl);
 
   // Vertical box
+  --pf-c-tabs--m-vertical--m-box__link--PaddingLeft: var(--pf-c-tabs__link--PaddingLeft--base);
   --pf-c-tabs--m-vertical--m-box__list--after--Left: 0;
+  --pf-c-tabs--m-vertical--m-box__item--last-child__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
 
   // Box
   --pf-c-tabs--m-box__item--m-current--first-child__link--before--BorderLeftWidth: var(--pf-c-tabs__link--before--border-width--base);
@@ -284,6 +286,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     // Remove border from last-child
     .pf-c-tabs__item:last-child {
       --pf-c-tabs__link--before--BorderRightWidth: 0;
+      --pf-c-tabs__link--before--BorderBottomWidth: 0;
     }
 
     .pf-c-tabs__item.pf-m-current {
@@ -413,6 +416,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
           --pf-c-tabs--m-vertical--m-box--inset: var(--pf-c-tabs--m-vertical--m-expandable--m-box--inset);
 
           &.pf-m-box {
+            --pf-c-tabs--m-vertical__list--before--BorderRightWidth: 0;
+            --pf-c-tabs--m-vertical--m-box__item--last-child__link--before--BorderRightWidth: 0;
             --pf-c-tabs__link--before--BorderRightWidth: 0;
           }
         }
@@ -435,6 +440,8 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
           --pf-c-tabs--m-vertical--m-box--inset: var(--pf-c-tabs--m-vertical--m-non-expandable--m-box--inset);
 
           &.pf-m-box {
+            --pf-c-tabs--m-vertical__list--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+            --pf-c-tabs--m-vertical--m-box__item--last-child__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
             --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
           }
         }
@@ -472,8 +479,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     // stylelint-disable selector-max-class
     // Remove border from last-child
     .pf-c-tabs__item:last-child {
-      --pf-c-tabs__link--before--BorderBottomWidth: 0;
-      --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs__link--before--border-width--base);
+      --pf-c-tabs__link--before--BorderRightWidth: var(--pf-c-tabs--m-vertical--m-box__item--last-child__link--before--BorderRightWidth);
 
       margin-bottom: var(--pf-c-tabs--m-vertical--m-box--inset);
     }
@@ -492,6 +498,10 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     // Add border right color and weight
     .pf-c-tabs__item:first-child.pf-m-current {
       --pf-c-tabs__link--before--BorderTopWidth: var(--pf-c-tabs__link--before--border-width--base);
+    }
+
+    .pf-c-tabs__link {
+      padding-left: var(--pf-c-tabs--m-vertical--m-box__link--PaddingLeft);
     }
 
     // Offset vertical border to overlap horizontal border
