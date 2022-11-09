@@ -384,7 +384,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   width: var(--pf-c-drawer__splitter--Width);
   height: var(--pf-c-drawer__splitter--Height);
   cursor: var(--pf-c-drawer__splitter--Cursor);
-  visibility: hidden;
   background-color: var(--pf-c-drawer__splitter--BackgroundColor);
 
   &.pf-m-vertical {
@@ -575,7 +574,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   .pf-c-drawer__splitter {
     display: block;
-    visibility: visible;
   }
 }
 
@@ -641,7 +639,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
       > .pf-c-drawer__main > .pf-c-drawer__panel > .pf-c-drawer__body > .pf-c-drawer__head .pf-c-drawer__close {
         display: unset;
-        visibility: visible;
       }
 
       // Panel left
@@ -660,7 +657,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
         > .pf-c-drawer__main > .pf-c-drawer__panel > .pf-c-drawer__body > .pf-c-drawer__head .pf-c-drawer__close {
           display: unset;
-          visibility: visible;
         }
       }
 
@@ -702,7 +698,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
       > .pf-c-drawer__main > .pf-c-drawer__panel > .pf-c-drawer__body > .pf-c-drawer__head .pf-c-drawer__close {
         display: none;
-        visibility: hidden;
       }
       // stylelint-enable
     }

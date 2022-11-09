@@ -65,25 +65,17 @@
 .pf-c-inline-edit__action,
 .pf-c-inline-edit__group.pf-m-action-group {
   display: none;
-  visibility: hidden;
 }
 
 // Enable groups
 .pf-c-inline-edit__action.pf-m-enable-editable {
   display: inline-block;
-  visibility: visible;
 }
 
 // Editable
 .pf-c-inline-edit.pf-m-inline-editable,
 .pf-c-inline-edit .pf-m-inline-editable {
   // Expose inputs, input groups, actions and action groups
-  .pf-c-inline-edit__input,
-  .pf-c-inline-edit__action,
-  .pf-c-inline-edit__group.pf-m-action-group {
-    visibility: visible;
-  }
-
   // Input
   .pf-c-inline-edit__input {
     display: block;
@@ -103,7 +95,6 @@
   .pf-c-inline-edit__value,
   .pf-c-inline-edit__action.pf-m-enable-editable {
     display: none;
-    visibility: hidden;
   }
 }
 

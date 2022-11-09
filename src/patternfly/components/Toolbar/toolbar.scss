@@ -249,12 +249,10 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
     .pf-c-toolbar__group,
     .pf-c-toolbar__item {
       display: none;
-      visibility: hidden;
     }
 
     .pf-c-toolbar__toggle {
       display: inline-block;
-      visibility: visible;
     }
   }
 
@@ -370,7 +368,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   display: none;
   width: 100%;
   padding: var(--pf-c-toolbar__expandable-content--PaddingTop) var(--pf-c-toolbar__expandable-content--PaddingRight) var(--pf-c-toolbar__expandable-content--PaddingBottom) var(--pf-c-toolbar__expandable-content--PaddingLeft);
-  visibility: hidden;
   background-color: var(--pf-c-toolbar__expandable-content--BackgroundColor);
   box-shadow: var(--pf-c-toolbar__expandable-content--BoxShadow);
 
@@ -382,7 +379,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   &.pf-m-expanded {
     display: grid;
     grid-row-gap: var(--pf-c-toolbar__expandable-content--m-expanded--GridRowGap);
-    visibility: visible;
   }
 
   .pf-c-toolbar__group,
@@ -455,12 +451,10 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
       .pf-c-toolbar__item {
         display: flex;
         flex: 0 1 auto;
-        visibility: visible;
       }
 
       .pf-c-toolbar__toggle {
         display: none;
-        visibility: hidden;
       }
     }
   }

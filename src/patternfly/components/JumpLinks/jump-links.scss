@@ -3,7 +3,6 @@ $pf-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm
 .pf-c-jump-links {
   // list
   --pf-c-jump-links__list--Display: flex;
-  --pf-c-jump-links__list--Visibility: visible;
   --pf-c-jump-links__list--PaddingTop: 0;
   --pf-c-jump-links__list--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-jump-links__list--PaddingBottom: 0;
@@ -54,7 +53,6 @@ $pf-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm
   // label
   --pf-c-jump-links__label--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-jump-links__label--Display: block;
-  --pf-c-jump-links__label--Visibility: visible;
 
   // toggle
   --pf-c-jump-links__toggle--MarginTop: calc(-1 * var(--pf-global--spacer--form-element));
@@ -63,7 +61,6 @@ $pf-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm
   --pf-c-jump-links--m-expanded__toggle--MarginBottom: calc(var(--pf-c-jump-links__toggle--MarginBottom--base) + var(--pf-global--spacer--md));
   --pf-c-jump-links__toggle--MarginLeft: calc(-1 * var(--pf-global--spacer--md));
   --pf-c-jump-links__toggle--Display: none;
-  --pf-c-jump-links__toggle--Visibility: hidden;
 
   // toggle icon
   --pf-c-jump-links__toggle-icon--Color: currentcolor;
@@ -107,27 +104,20 @@ $pf-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm
     @include pf-apply-breakpoint($breakpoint) {
       &.pf-m-expandable#{$breakpoint-name} {
         --pf-c-jump-links__list--Display: none;
-        --pf-c-jump-links__list--Visibility: hidden;
         --pf-c-jump-links__toggle--Display: block;
-        --pf-c-jump-links__toggle--Visibility: visible;
         --pf-c-jump-links__label--Display: none;
-        --pf-c-jump-links__label--Visibility: hidden;
       }
 
       &.pf-m-non-expandable#{$breakpoint-name} {
         --pf-c-jump-links__list--Display: flex;
-        --pf-c-jump-links__list--Visibility: visible;
         --pf-c-jump-links__toggle--Display: none;
-        --pf-c-jump-links__toggle--Visibility: hidden;
         --pf-c-jump-links__label--Display: block;
-        --pf-c-jump-links__label--Visibility: visible;
       }
     }
   }
 
   &.pf-m-expanded {
     --pf-c-jump-links__list--Display: flex;
-    --pf-c-jump-links__list--Visibility: visible;
     --pf-c-jump-links__toggle--MarginBottom: var(--pf-c-jump-links--m-expanded__toggle--MarginBottom);
     --pf-c-jump-links__toggle-icon--Rotate: var(--pf-c-jump-links--m-expanded__toggle-icon--Rotate);
     --pf-c-jump-links__toggle-icon--Color: var(--pf-c-jump-links--m-expanded__toggle-icon--Color);
@@ -142,7 +132,6 @@ $pf-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm
   padding-right: var(--pf-c-jump-links__list--PaddingRight);
   padding-bottom: var(--pf-c-jump-links__list--PaddingBottom);
   padding-left: var(--pf-c-jump-links__list--PaddingLeft);
-  visibility: var(--pf-c-jump-links__list--Visibility);
 
   &::before {
     position: absolute;
@@ -220,7 +209,6 @@ $pf-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm
 .pf-c-jump-links__label {
   display: var(--pf-c-jump-links__label--Display);
   margin-bottom: var(--pf-c-jump-links__label--MarginBottom);
-  visibility: var(--pf-c-jump-links__label--Visibility);
 }
 
 .pf-c-jump-links__main {
@@ -233,7 +221,6 @@ $pf-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", "sm
   margin-top: var(--pf-c-jump-links__toggle--MarginTop);
   margin-bottom: var(--pf-c-jump-links__toggle--MarginBottom);
   margin-left: var(--pf-c-jump-links__toggle--MarginLeft);
-  visibility: var(--pf-c-jump-links__toggle--Visibility);
 
   .pf-c-button {
     display: flex;

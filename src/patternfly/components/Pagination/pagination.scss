@@ -12,11 +12,8 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
 
   // nav
   --pf-c-pagination__nav--Display: none;
-  --pf-c-pagination__nav--Visibility: hidden;
   --pf-c-pagination--m-display-summary__nav--Display: none;
-  --pf-c-pagination--m-display-summary__nav--Visibility: hidden;
   --pf-c-pagination--m-display-full__nav--Display: inline-flex;
-  --pf-c-pagination--m-display-full__nav--Visibility: visible;
 
   // nav control
   --pf-c-pagination__nav-control--c-button--PaddingRight: var(--pf-global--spacer--sm);
@@ -43,11 +40,8 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
 
   // total items
   --pf-c-pagination__total-items--Display: block;
-  --pf-c-pagination__total-items--Visibility: visible;
   --pf-c-pagination--m-display-summary__total-items--Display: block;
-  --pf-c-pagination--m-display-summary__total-items--Visibility: visible;
   --pf-c-pagination--m-display-full__total-items--Display: none;
-  --pf-c-pagination--m-display-full__total-items--Visibility: hidden;
 
   // top
   --pf-c-pagination--m-sticky--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -73,11 +67,8 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
 
   // options menu
   --pf-c-pagination--c-options-menu--Display: none;
-  --pf-c-pagination--c-options-menu--Visibility: hidden;
   --pf-c-pagination--m-display-summary--c-options-menu--Display: none;
-  --pf-c-pagination--m-display-summary--c-options-menu--Visibility: hidden;
   --pf-c-pagination--m-display-full--c-options-menu--Display: inline-flex;
-  --pf-c-pagination--m-display-full--c-options-menu--Visibility: visible;
 
   @media screen and (min-width: $pf-global--breakpoint--md) {
     --pf-c-pagination--m-bottom__nav-control--c-button--PaddingTop: var(--pf-c-pagination--m-bottom__nav-control--c-button--md--PaddingTop);
@@ -88,11 +79,8 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
     --pf-c-pagination--m-bottom__nav-control--c-button--OutlineOffset: 0;
     --pf-c-pagination--m-bottom--BoxShadow: none;
     --pf-c-pagination--c-options-menu--Display: inline-flex;
-    --pf-c-pagination--c-options-menu--Visibility: visible;
     --pf-c-pagination__nav--Display: inline-flex;
-    --pf-c-pagination__nav--Visibility: visible;
     --pf-c-pagination__total-items--Display: none;
-    --pf-c-pagination__total-items--Visibility: hidden;
   }
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
@@ -113,7 +101,6 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
 
   .pf-c-options-menu {
     display: var(--pf-c-pagination--c-options-menu--Display);
-    visibility: var(--pf-c-pagination--c-options-menu--Visibility);
   }
 
   &.pf-m-bottom {
@@ -150,20 +137,17 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
     .pf-c-pagination__nav-control.pf-m-last,
     .pf-c-pagination__nav-page-select {
       display: none;
-      visibility: hidden;
     }
 
     .pf-c-options-menu {
       position: absolute;
       display: block;
-      visibility: visible;
     }
 
     .pf-c-pagination__nav {
       display: flex;
       flex-basis: 100%;
       justify-content: space-between;
-      visibility: visible;
     }
 
     @media screen and (min-width: $pf-global--breakpoint--md) {
@@ -179,7 +163,6 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
       .pf-c-pagination__nav-control.pf-m-last,
       .pf-c-pagination__nav-page-select {
         display: block;
-        visibility: visible;
       }
 
       .pf-c-options-menu {
@@ -225,7 +208,6 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
 .pf-c-pagination__nav {
   display: var(--pf-c-pagination__nav--Display);
   justify-content: flex-end;
-  visibility: var(--pf-c-pagination__nav--Visibility);
 }
 
 // nav control
@@ -267,7 +249,6 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
 // display-summary element for total-items items
 .pf-c-pagination__total-items {
   display: var(--pf-c-pagination__total-items--Display);
-  visibility: var(--pf-c-pagination__total-items--Visibility);
 }
 
 // stylelint-disable no-duplicate-selectors
@@ -278,20 +259,14 @@ $pf-c-pagination--breakpoint-map: build-breakpoint-map();
     @include pf-apply-breakpoint($breakpoint) {
       &.pf-m-display-summary#{$breakpoint-name} {
         --pf-c-pagination__nav--Display: var(--pf-c-pagination--m-display-summary__nav--Display);
-        --pf-c-pagination__nav--Visibility: var(--pf-c-pagination--m-display-summary__nav--Visibility);
         --pf-c-pagination--c-options-menu--Display: var(--pf-c-pagination--m-display-summary--c-options-menu--Display);
-        --pf-c-pagination--c-options-menu--Visibility: var(--pf-c-pagination--m-display-summary--c-options-menu--Visibility);
         --pf-c-pagination__total-items--Display: var(--pf-c-pagination--m-display-summary__total-items--Display);
-        --pf-c-pagination__total-items--Visibility: var(--pf-c-pagination--m-display-summary__total-items--Visibility);
       }
 
       &.pf-m-display-full#{$breakpoint-name} {
         --pf-c-pagination__nav--Display: var(--pf-c-pagination--m-display-full__nav--Display);
-        --pf-c-pagination__nav--Visibility: var(--pf-c-pagination--m-display-full__nav--Visibility);
         --pf-c-pagination--c-options-menu--Display: var(--pf-c-pagination--m-display-full--c-options-menu--Display);
-        --pf-c-pagination--c-options-menu--Visibility: var(--pf-c-pagination--m-display-full--c-options-menu--Visibility);
         --pf-c-pagination__total-items--Display: var(--pf-c-pagination--m-display-full__total-items--Display);
-        --pf-c-pagination__total-items--Visibility: var(--pf-c-pagination--m-display-full__total-items--Visibility);
       }
     }
   }

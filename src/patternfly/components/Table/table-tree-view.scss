@@ -82,7 +82,6 @@ $pf-c-tree-view--MaxDepth: 10;
 
 .pf-c-table__tree-view-details-toggle {
   display: none;
-  visibility: hidden;
 }
 
 // stylelint-disable
@@ -204,7 +203,6 @@ $pf-c-tree-view--MaxDepth: 10;
 
   thead th {
     display: none;
-    visibility: none;
   }
 
   td {
@@ -242,13 +240,11 @@ $pf-c-tree-view--MaxDepth: 10;
 
   .pf-c-table__tree-view-title-header-cell {
     display: block;
-    visibility: visible;
   }
 
   .pf-c-table__tree-view-details-toggle,
   .pf-c-table__action {
     display: inline-block;
-    visibility: visible;
   }
 
   .pf-c-table__action {

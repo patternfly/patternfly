@@ -37,7 +37,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // List
   --pf-c-tabs__list--Display: flex;
-  --pf-c-tabs__list--Visibility: visible;
 
   // Item
   --pf-c-tabs__item--m-action--before--ZIndex: var(--pf-global--ZIndex--xs);
@@ -123,7 +122,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // Expandable
   --pf-c-tabs__toggle--Display: flex;
-  --pf-c-tabs__toggle--Visibility: hidden;
   --pf-c-tabs__toggle--MarginBottom: 0;
   --pf-c-tabs--m-expanded__toggle--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-tabs__toggle-icon--Color: currentcolor;
@@ -373,16 +371,12 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
         // stylelint-disable max-nesting-depth
         &.pf-m-expandable#{$breakpoint-name} {
           --pf-c-tabs__list--Display: none;
-          --pf-c-tabs__list--Visibility: hidden;
           --pf-c-tabs__toggle--Display: flex;
-          --pf-c-tabs__toggle--Visibility: visible;
         }
 
         &.pf-m-non-expandable#{$breakpoint-name} {
           --pf-c-tabs__list--Display: flex;
-          --pf-c-tabs__list--Visibility: visible;
           --pf-c-tabs__toggle--Display: none;
-          --pf-c-tabs__toggle--Visibility: hidden;
         }
         // stylelint-enable
       }
@@ -390,7 +384,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
     &.pf-m-expanded {
       --pf-c-tabs__list--Display: flex;
-      --pf-c-tabs__list--Visibility: visible;
       --pf-c-tabs__toggle--MarginBottom: var(--pf-c-tabs--m-expanded__toggle--MarginBottom);
       --pf-c-tabs__toggle-icon--Color: var(--pf-c-tabs--m-expanded__toggle-icon--Color);
       --pf-c-tabs__toggle-icon--Rotate: var(--pf-c-tabs--m-expanded__toggle-icon--Rotate);
@@ -470,7 +463,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   display: var(--pf-c-tabs__toggle--Display);
   align-items: center;
   margin-bottom: var(--pf-c-tabs__toggle--MarginBottom);
-  visibility: var(--pf-c-tabs__toggle--Visibility);
 }
 
 .pf-c-tabs__toggle-button {
@@ -511,7 +503,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: var(--pf-c-tabs__list--ScrollSnapType);
-  visibility: var(--pf-c-tabs__list--Visibility);
   -webkit-overflow-scrolling: touch;
 }
 
