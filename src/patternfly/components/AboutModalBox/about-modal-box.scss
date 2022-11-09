@@ -4,7 +4,6 @@
   --pf-c-about-modal-box--Height: 100%;
   --pf-c-about-modal-box--lg--Height: #{pf-size-prem(762px)}; // Height is optimized for the exact height desired
   --pf-c-about-modal-box--Width: 100%;
-  --pf-c-about-modal-box--MaxWidth: #{pf-size-prem(1232px)};
   --pf-c-about-modal-box--sm--grid-template-columns: 5fr 1fr;
   --pf-c-about-modal-box--lg--grid-template-columns: 1fr .6fr;
 
@@ -107,7 +106,6 @@
     "header header"
     "content content";
   width: var(--pf-c-about-modal-box--Width);
-  max-width: var(--pf-c-about-modal-box--MaxWidth);
   height: var(--pf-c-about-modal-box--Height);
   overflow-x: hidden;
   overflow-y: auto;
@@ -127,7 +125,6 @@
 
     grid-template-columns: var(--pf-c-about-modal-box--lg--grid-template-columns);
     grid-template-rows: max-content max-content auto;
-    max-width: var(--pf-c-about-modal-box--lg--MaxWidth);
   }
 }
 
