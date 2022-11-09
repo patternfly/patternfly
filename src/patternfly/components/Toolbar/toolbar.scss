@@ -213,7 +213,16 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   @include pf-hidden-visible(var(--pf-c-toolbar__group--Display));
 
   align-items: var(--pf-c-toolbar__group--AlignItems);
+  align-self: var(--pf-c-toolbar__group--AlignSelf);
   margin-right: var(--pf-c-toolbar--spacer);
+
+  &.pf-m-align-items-center {
+    --pf-c-toolbar__group--AlignItems: center;
+  }
+
+  &.pf-m-align-items-baseline {
+    --pf-c-toolbar__group--AlignItems: baseline;
+  }
 
   &.pf-m-align-self-center {
     --pf-c-toolbar__group--AlignSelf: center;
@@ -380,6 +389,10 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   &.pf-m-align-items-center {
     --pf-c-toolbar__content-section--AlignItems: center;
+  }
+
+  &.pf-m-align-items-baseline {
+    --pf-c-toolbar__content-section--AlignItems: baseline;
   }
 }
 

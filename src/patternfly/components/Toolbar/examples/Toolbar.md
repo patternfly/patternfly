@@ -665,6 +665,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align right, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align left, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-align-items-center` | `.pf-c-toolbar__content-section`, `.pf-c-toolbar__group` | Modifies toolbar element to vertically align children to center. |
+| `.pf-m-align-items-baseline` | `.pf-c-toolbar__content-section`, `.pf-c-toolbar__group` | Modifies toolbar element to vertically align children to center. |
 | `.pf-m-align-self-center` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar element to vertically align self to center. |
 | `.pf-m-align-self-baseline` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar element to vertically align self to baseline. |
 | `.pf-m-label` | `.pf-c-toolbar__item` | Modifies toolbar item to label. |
