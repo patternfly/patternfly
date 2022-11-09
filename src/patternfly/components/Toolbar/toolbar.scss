@@ -9,18 +9,16 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar--RowGap: var(--pf-global--spacer--lg);
   --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-toolbar--AlignItems--base: baseline;
-  --pf-c-toolbar--AlignSelf--base: auto;
 
   // Item
   --pf-c-toolbar__item--Display: block;
   --pf-c-toolbar__item--MinWidth--base: auto;
-  --pf-c-toolbar__item--AlignSelf: var(--pf-c-toolbar--AlignSelf--base);
+  --pf-c-toolbar__item--AlignSelf: baseline;
 
   // Group
   --pf-c-toolbar__group--Display: flex;
-  --pf-c-toolbar__group--AlignItems: var(--pf-c-toolbar--AlignItems--base);
-  --pf-c-toolbar__group--AlignSelf: var(--pf-c-toolbar--AlignSelf--base);
+  --pf-c-toolbar__group--AlignItems: baseline;
+  --pf-c-toolbar__group--AlignSelf: auto;
 
   // Sticky
   --pf-c-toolbar--m-sticky--ZIndex: var(--pf-global--ZIndex--xs);
@@ -33,7 +31,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Content section
   --pf-c-toolbar__content-section--Display: flex;
-  --pf-c-toolbar__content-section--AlignItems: var(--pf-c-toolbar--AlignItems--base);
+  --pf-c-toolbar__content-section--AlignItems: baseline;
 
   // Insets
   --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
@@ -214,7 +212,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   @include pf-hidden-visible(var(--pf-c-toolbar__group--Display));
 
-  align-items: var(--pf-c-toolbar__group--AlignSelf);
+  align-items: var(--pf-c-toolbar__group--AlignItems);
   margin-right: var(--pf-c-toolbar--spacer);
 
   &.pf-m-align-self-center {
