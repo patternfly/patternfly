@@ -129,6 +129,7 @@
 }
 
 .pf-c-notification-drawer__body {
+  flex: 1;
   overflow-y: auto;
   box-shadow: var(--pf-c-notification-drawer__body--ZIndex);
 }
