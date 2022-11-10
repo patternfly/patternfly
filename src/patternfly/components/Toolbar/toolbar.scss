@@ -13,7 +13,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Item
   --pf-c-toolbar__item--Display: block;
   --pf-c-toolbar__item--MinWidth--base: auto;
-  --pf-c-toolbar__item--AlignSelf: baseline;
+  --pf-c-toolbar__item--AlignSelf: auto;
 
   // Group
   --pf-c-toolbar__group--Display: flex;
@@ -220,16 +220,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
     --pf-c-toolbar__group--AlignItems: center;
   }
 
-  &.pf-m-align-items-baseline {
-    --pf-c-toolbar__group--AlignItems: baseline;
-  }
-
   &.pf-m-align-self-center {
     --pf-c-toolbar__group--AlignSelf: center;
-  }
-
-  &.pf-m-align-self-baseline {
-    --pf-c-toolbar__group--AlignSelf: baseline;
   }
 
   // Button group
@@ -298,10 +290,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   &.pf-m-align-self-center {
     --pf-c-toolbar__item--AlignSelf: center;
-  }
-
-  &.pf-m-align-self-baseline {
-    --pf-c-toolbar__item--AlignSelf: baseline;
   }
 
   // Overflow menu
@@ -389,10 +377,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   &.pf-m-align-items-center {
     --pf-c-toolbar__content-section--AlignItems: center;
-  }
-
-  &.pf-m-align-items-baseline {
-    --pf-c-toolbar__content-section--AlignItems: baseline;
   }
 }
 
