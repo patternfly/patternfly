@@ -88,7 +88,7 @@
   --pf-c-content--li--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-content--dl--ColumnGap: var(--pf-global--spacer--2xl);
   --pf-c-content--dl--RowGap: var(--pf-global--spacer--md);
-  --pf-c-content--dt--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-content--dt--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-content--dt--MarginTop: var(--pf-global--spacer--md);
   --pf-c-content--dt--sm--MarginTop: 0;
 
@@ -297,20 +297,6 @@
   dd {
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       grid-column: 2;
-    }
-  }
-}
-
-// RedHat Font overrides
-@include pf-m-overpass-font {
-  .pf-c-content {
-    --pf-c-content--h2--LineHeight: var(--pf-global--LineHeight--sm);
-    --pf-c-content--h4--FontWeight: var(--pf-global--FontWeight--semi-bold);
-    --pf-c-content--h5--FontWeight: var(--pf-global--FontWeight--semi-bold);
-    --pf-c-content--h6--FontWeight: var(--pf-global--FontWeight--semi-bold);
-
-    blockquote {
-      font-weight: var(--pf-global--FontWeight--light);
     }
   }
 }

@@ -240,13 +240,6 @@
   }
 }
 
-// RedHat Font overrides
-@include pf-m-overpass-font {
-  .pf-c-alert__title {
-    --pf-c-alert__title--FontWeight: var(--pf-global--FontWeight--normal);
-  }
-}
-
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/alert";
 

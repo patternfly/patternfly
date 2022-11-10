@@ -19,11 +19,11 @@
   --pf-c-accordion__toggle-text--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
   --pf-c-accordion__toggle--hover__toggle-text--Color: var(--pf-global--link--Color);
   --pf-c-accordion__toggle--active__toggle-text--Color: var(--pf-global--link--Color);
-  --pf-c-accordion__toggle--active__toggle-text--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__toggle--active__toggle-text--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-accordion__toggle--focus__toggle-text--Color: var(--pf-global--link--Color);
-  --pf-c-accordion__toggle--focus__toggle-text--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__toggle--focus__toggle-text--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-accordion__toggle--m-expanded__toggle-text--Color: var(--pf-global--link--Color);
-  --pf-c-accordion__toggle--m-expanded__toggle-text--FontWeight: var(--pf-global--FontWeight--semi-bold);
+  --pf-c-accordion__toggle--m-expanded__toggle-text--FontWeight: var(--pf-global--FontWeight--bold);
 
   // accordion toggle icon
   --pf-c-accordion__toggle-icon--Transition: .2s ease-in 0s;

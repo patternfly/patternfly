@@ -161,10 +161,3 @@
   padding-left: var(--pf-c-expandable-section__content--PaddingLeft);
   margin-top: var(--pf-c-expandable-section__content--MarginTop);
 }
-
-// RedHat Font overrides
-@include pf-m-overpass-font {
-  .pf-c-expandable-section__toggle {
-    font-weight: var(--pf-global--FontWeight--semi-bold);
-  }
-}

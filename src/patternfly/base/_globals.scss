@@ -131,12 +131,6 @@
   a {
     cursor: pointer;
   }
-
-  @include pf-m-overpass-font {
-    a {
-      font-weight: var(--pf-global--FontWeight--semi-bold);
-    }
-  }
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
