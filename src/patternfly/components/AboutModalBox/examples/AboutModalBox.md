@@ -39,7 +39,6 @@ cssPrefix: pf-c-about-modal-box
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `aria-label="Close Dialog"` | `.pf-c-modal-box__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required** |
-| `aria-hidden="true"` | Parent element containing the page contents when the modal is open. | Hides main contents of the page from screen readers. The element with `.pf-c-modal-box` must not be a descendent of the element with `aria-hidden="true"`. For more info, see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
