@@ -89,6 +89,12 @@
 	@if $filename == critical-risk {
 		$char: '\E976';
 	}
+	@if $filename == data-sink {
+		$char: '\E978';
+	}
+	@if $filename == data-source {
+		$char: '\E979';
+	}
 	@if $filename == degraded {
 		$char: '\E91B';
 	}
@@ -478,6 +484,12 @@
 }
 .pf-icon-critical-risk {
 	@include pf-icon(critical-risk);
+}
+.pf-icon-data-sink {
+	@include pf-icon(data-sink);
+}
+.pf-icon-data-source {
+	@include pf-icon(data-source);
 }
 .pf-icon-degraded {
 	@include pf-icon(degraded);
