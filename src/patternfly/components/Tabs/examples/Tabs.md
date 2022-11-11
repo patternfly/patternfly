@@ -345,7 +345,7 @@ Whenever a list of tabs is unique on the current page, it can be used in a `<nav
 | `.pf-m-action` | `.pf-c-tabs__item` | Indicates that a tab item contains actions other than the tab link. |
 | `.pf-m-overflow` | `.pf-c-tabs__item` | Applies overflow menu styling to a tab item. |
 | `.pf-m-expanded` | `.pf-c-tabs__item` | Applies expanded styling to the overflow menu tab item. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[md, lg, xl, 2xl]}` | `.pf-c-tabs` | Modifies tabs horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-page-insets` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
 | `.pf-m-color-scheme--light-300` | `.pf-c-tabs` | Modifies the tabs component tab background colors. |
 | `.pf-m-expandable{-on-[breakpoint]}` | `.pf-c-tabs` | Modifies the tabs component to be expandable via a toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). **Note:** works with vertical tabs only. |
