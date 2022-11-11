@@ -16,8 +16,6 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--pf-c-radio--GridGap);
-  align-items: start;
-  justify-items: start;
 
   &.pf-m-standalone {
     --pf-c-radio--GridGap: 0;
@@ -64,6 +62,8 @@
 
 .pf-c-radio__label,
 .pf-c-radio__input {
+  justify-self: start;
+
   @at-root label.pf-c-radio,
   & {
     cursor: pointer;
