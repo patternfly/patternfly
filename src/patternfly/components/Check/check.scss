@@ -19,8 +19,6 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--pf-c-check--GridGap);
-  align-items: start;
-  justify-items: start;
 
   &.pf-m-standalone {
     --pf-c-check--GridGap: 0;
@@ -57,6 +55,8 @@
 
 .pf-c-check__label,
 .pf-c-check__input {
+  justify-self: start;
+
   @at-root label.pf-c-check,
   & {
     cursor: pointer;
