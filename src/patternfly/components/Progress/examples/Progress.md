@@ -252,6 +252,17 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
+### Helper text
+```hbs
+{{#> progress
+  progress__value="33"
+  progress__description="Title"
+  progress__id="progress-helper-text-example"
+  progress__helper-text="Progress helper text"
+}}
+{{/progress}}
+```
+
 ### Non-percantage progress
 If the status that displays with the bar is not a percentage, then the ARIA tag `aria-valuetext` should be used to provide this status to screen reader users. This is the only case when setting the `aria-valuemax` to a value other than "100" is recommended, given how different screen readers handle these attributes.
 
@@ -296,6 +307,7 @@ If this component is describing the loading progress of a particular region of a
 | `.pf-c-progress__status-icon` | `<span>` |  Displays the status icon. (optional) |
 | `.pf-c-progress__bar` | `<div>` |  Displays across the entire width and represents the completed state. |
 | `.pf-c-progress__indicator` | `<div>` |  Displays with the `.pf-c-progress__bar` to indicate the progress so far. |
+| `.pf-c-progress__helper-text` | `<div>` |  Displays additional text below the progress bar. (optional) |
 | `.pf-m-lg` | `.pf-c-progress` |  Modifies the progress bar to be larger. |
 | `.pf-m-sm` | `.pf-c-progress` |  Modifies the progress bar to be smaller. |
 | `.pf-m-inside` | `.pf-c-progress` |  Shows the measure within the progress indicator. NOTE: This option requires `.pf-m-lg`.|

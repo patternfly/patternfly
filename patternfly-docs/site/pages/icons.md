@@ -25,6 +25,8 @@ id: Icons
 | container-node | <i class="pf-icon pf-icon-container-node"></i> | &lt;i class=&quot;pf-icon pf-icon-container-node&quot;&gt;&lt;/i&gt;
 | cpu | <i class="pf-icon pf-icon-cpu"></i> | &lt;i class=&quot;pf-icon pf-icon-cpu&quot;&gt;&lt;/i&gt;
 | critical-risk | <i class="pf-icon pf-icon-critical-risk"></i> | &lt;i class=&quot;pf-icon pf-icon-critical-risk&quot;&gt;&lt;/i&gt;
+| data-sink | <i class="pf-icon pf-icon-data-sink"></i> | &lt;i class=&quot;pf-icon pf-icon-data-sink&quot;&gt;&lt;/i&gt;
+| data-source | <i class="pf-icon pf-icon-data-source"></i> | &lt;i class=&quot;pf-icon pf-icon-data-source&quot;&gt;&lt;/i&gt;
 | degraded | <i class="pf-icon pf-icon-degraded"></i> | &lt;i class=&quot;pf-icon pf-icon-degraded&quot;&gt;&lt;/i&gt;
 | disconnected | <i class="pf-icon pf-icon-disconnected"></i> | &lt;i class=&quot;pf-icon pf-icon-disconnected&quot;&gt;&lt;/i&gt;
 | domain | <i class="pf-icon pf-icon-domain"></i> | &lt;i class=&quot;pf-icon pf-icon-domain&quot;&gt;&lt;/i&gt;
@@ -64,6 +66,7 @@ id: Icons
 | ok | <i class="pf-icon pf-icon-ok"></i> | &lt;i class=&quot;pf-icon pf-icon-ok&quot;&gt;&lt;/i&gt;
 | on-running | <i class="pf-icon pf-icon-on-running"></i> | &lt;i class=&quot;pf-icon pf-icon-on-running&quot;&gt;&lt;/i&gt;
 | on | <i class="pf-icon pf-icon-on"></i> | &lt;i class=&quot;pf-icon pf-icon-on&quot;&gt;&lt;/i&gt;
+| open-drawer-right | <i class="pf-icon pf-icon-open-drawer-right"></i> | &lt;i class=&quot;pf-icon pf-icon-open-drawer-right&quot;&gt;&lt;/i&gt;
 | openshift | <i class="pf-icon pf-icon-openshift"></i> | &lt;i class=&quot;pf-icon pf-icon-openshift&quot;&gt;&lt;/i&gt;
 | openstack | <i class="pf-icon pf-icon-openstack"></i> | &lt;i class=&quot;pf-icon pf-icon-openstack&quot;&gt;&lt;/i&gt;
 | optimize | <i class="pf-icon pf-icon-optimize"></i> | &lt;i class=&quot;pf-icon pf-icon-optimize&quot;&gt;&lt;/i&gt;

@@ -17,6 +17,12 @@
   {{#if button--IsInlineLinkSpan}}
     role="button"
   {{/if}}
+  {{#if button--aria-label}}
+    aria-label="{{button--aria-label}}"
+  {{/if}}
+  {{#if button--IsDisabled}}
+    disabled
+  {{/if}}
   {{#if button--attribute}}
     {{{button--attribute}}}
   {{/if}}>

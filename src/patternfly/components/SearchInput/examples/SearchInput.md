@@ -229,4 +229,6 @@ import './SearchInput.css'
 | `.pf-c-search-input__menu-list-item` | `<div>` | Initiates the search input dropdown menu list item. |
 | `.pf-c-search-input__menu-item` | `<div>` | Initiates the search input dropdown menu item. |
 | `.pf-c-search-input__menu-item-text` | `<span>` | Initiates the search input dropdown menu item text. |
+| `.pf-m-top` | `.pf-c-search-input__menu` | Modifies the menu to display above the toggle. |
+| `.pf-m-static` | `.pf-c-search-input__menu` | Modifies the menu to be statically positioned to support custom positioning. |
 | `.pf-m-hint` | `.pf-c-search-input__text-input` | Modifies the text input for hint text styles. |

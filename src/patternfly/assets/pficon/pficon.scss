@@ -89,6 +89,12 @@
 	@if $filename == critical-risk {
 		$char: '\E976';
 	}
+	@if $filename == data-sink {
+		$char: '\E978';
+	}
+	@if $filename == data-source {
+		$char: '\E979';
+	}
 	@if $filename == degraded {
 		$char: '\E91B';
 	}
@@ -205,6 +211,9 @@
 	}
 	@if $filename == on {
 		$char: '\E92C';
+	}
+	@if $filename == open-drawer-right {
+		$char: '\E977';
 	}
 	@if $filename == openshift {
 		$char: '\E95E';
@@ -476,6 +485,12 @@
 .pf-icon-critical-risk {
 	@include pf-icon(critical-risk);
 }
+.pf-icon-data-sink {
+	@include pf-icon(data-sink);
+}
+.pf-icon-data-source {
+	@include pf-icon(data-source);
+}
 .pf-icon-degraded {
 	@include pf-icon(degraded);
 }
@@ -592,6 +607,9 @@
 }
 .pf-icon-on {
 	@include pf-icon(on);
+}
+.pf-icon-open-drawer-right {
+	@include pf-icon(open-drawer-right);
 }
 .pf-icon-openshift {
 	@include pf-icon(openshift);

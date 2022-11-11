@@ -5,6 +5,8 @@ cssPrefix: pf-c-page
 wrapperTag: div
 ---
 
+import './Page.css'
+
 ## Examples
 
 ### Vertical nav
@@ -24,16 +26,20 @@ wrapperTag: div
     {{/page-header-tools}}
   {{/page-header}}
   {{#> page-sidebar}}
-    pf-c-nav
+    Navigation
   {{/page-sidebar}}
   {{#> page-main}}
     {{#> page-main-section page-main-section--modifier="pf-m-dark-100"}}
+      This <code>.pf-c-page__main-section</code> uses <code>.pf-m-dark-100</code>.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-dark-200"}}
+      This <code>.pf-c-page__main-section</code> uses <code>.pf-m-dark-200</code>.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      This <code>.pf-c-page__main-section</code> uses <code>.pf-m-light</code>.
     {{/page-main-section}}
     {{#> page-main-section}}
+      This is a default <code>.pf-c-page__main-section</code>.
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -51,7 +57,7 @@ wrapperTag: div
     {{/page-header-brand}}
     {{!-- Horizontal nav --}}
     {{#> page-header-nav}}
-      pf-c-nav
+      Navigation
     {{/page-header-nav}}
     {{!-- Toolbar --}}
     {{#> page-header-tools}}
@@ -83,7 +89,7 @@ wrapperTag: div
     {{/page-header-brand}}
     {{!-- Horizontal nav --}}
     {{#> page-header-nav}}
-      pf-c-nav
+      Navigation
     {{/page-header-nav}}
     {{!-- Toolbar --}}
     {{#> page-header-tools}}
@@ -92,12 +98,13 @@ wrapperTag: div
   {{/page-header}}
   {{#> page-main}}
     {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+      A regular page section.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
-      This section uses pf-m-fill to fill the available space.
+      This section uses <code>.pf-m-fill</code> to fill the available space.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-light pf-m-no-fill"}}
-      This section uses pf-m-no-fill to not fill the available space.
+      This section uses <code>.pf-m-no-fill</code> to not fill the available space.
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -120,17 +127,17 @@ wrapperTag: div
     {{/page-header-tools}}
   {{/page-header}}
   {{#> page-sidebar}}
-    pf-c-nav
+    Navigation
   {{/page-sidebar}}
   {{#> page-main}}
     {{#> page-main-section}}
-      This `.pf-c-page__main-section` has default padding.
+      This <code>.pf-c-page__main-section</code> has default padding.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light"}}
-      This `.pf-c-page__main-section` uses `.pf-m-no-padding` to remove all padding.
+      This <code>.pf-c-page__main-section</code> uses <code>.pf-m-no-padding</code> to remove all padding.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
-      This `.pf-c-page__main-section` uses `.pf-m-no-padding .pf-m-padding-on-md` to remove padding up to the `md` breakpoint.
+      This <code>.pf-c-page__main-section</code> uses <code>.pf-m-no-padding .pf-m-padding-on-md</code> to remove padding up to the <code>md</code> breakpoint.
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -153,23 +160,29 @@ wrapperTag: div
     {{/page-header-tools}}
   {{/page-header}}
   {{#> page-sidebar}}
-    pf-c-nav
+    Navigation
   {{/page-sidebar}}
   {{#> page-main}}
+    {{#> page-main-subnav}}
+      <code>.pf-c-page__main-subnav</code> for horizontal subnav navigation
+    {{/page-main-subnav}}
     {{#> page-main-nav}}
-      `.pf-c-page__main-nav` for tertiary navigation
+      <code>.pf-c-page__main-nav</code> for tertiary navigation
     {{/page-main-nav}}
+    {{#> page-main-tabs}}
+      <code>.pf-c-page__main-tabs</code> for tabs
+    {{/page-main-tabs}}
+    {{#> page-main-group}}
+      <code>.pf-c-page__main-group</code> for a group of page sections
+    {{/page-main-group}}
     {{#> page-main-breadcrumb}}
-      `.pf-c-page__main-breadcrumb` for breadcrumbs
+      <code>.pf-c-page__main-breadcrumb</code> for breadcrumbs
     {{/page-main-breadcrumb}}
     {{#> page-main-section}}
-      `.pf-c-page__main-section` for main sections
+      <code>.pf-c-page__main-section</code> for main sections
     {{/page-main-section}}
-    {{#> page-main-tabs}}
-      `.pf-c-page__main-tabs` for tabs
-    {{/page-main-tabs}}
     {{#> page-main-wizard}}
-      `.pf-c-page__main-wizard` for wizards
+      <code>.pf-c-page__main-wizard</code> for wizards
     {{/page-main-wizard}}
   {{/page-main}}
 {{/page}}

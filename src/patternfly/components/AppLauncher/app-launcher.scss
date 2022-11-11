@@ -146,6 +146,18 @@
 
     transform: translateY(var(--pf-c-app-launcher--m-top__menu--TranslateY));
   }
+
+  &.pf-m-static {
+    --pf-c-app-launcher--m-top__menu--TranslateY: 0;
+
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: auto;
+    min-width: min-content;
+  }
 }
 
 .pf-c-app-launcher__menu-search {

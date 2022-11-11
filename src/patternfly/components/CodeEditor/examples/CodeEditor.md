@@ -1,7 +1,6 @@
 ---
 id: Code editor
 section: components
-beta: true
 cssPrefix: pf-c-code-editor
 ---
 

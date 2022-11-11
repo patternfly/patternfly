@@ -1,6 +1,5 @@
 ---
 id: 'Label group'
-beta: true
 section: components
 cssPrefix: pf-c-label-group
 ---
@@ -472,7 +471,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 * `.pf-c-label-group.pf-m-editable` onClick event should (excluding labels within) set focus on `.pf-c-label-group__textarea`
 
 ### Editable labels, dynamic label group
-``` hbs
+``` hbs isBeta
 {{#> label-group label-group--id="editable-labels-editable-group-example" label-group--IsEditable="true"}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -500,7 +499,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ```
 
 ### Editable labels, label active, dynamic label group
-``` hbs
+``` hbs isBeta
 {{#> label-group label-group--id="editable-labels-label-active-editable-group-example" label-group--IsEditable="true"}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -556,7 +555,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ```
 
 ### Mixed labels (static / editable), dynamic label group
-``` hbs
+``` hbs isBeta
 {{#> label-group label-group--id="mixed-labels-dynamic-label-group-example" label-group--IsEditable="true"}}
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}

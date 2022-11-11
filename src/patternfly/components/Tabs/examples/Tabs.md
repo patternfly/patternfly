@@ -6,344 +6,338 @@ cssPrefix: pf-c-tabs
 
 import './Tabs.css'
 
-## Examples
+# Examples
 
-### Default
+## Default
+
+### Default tabs example
 ```hbs
-{{#> tabs tabs--id="default-example"}}
+{{#> tabs tabs--id="default-tabs"}}
   {{> __tabs-list __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `disabled` | `button.pf-c-tabs__link` | Indicates that a tabs link is disabled. **Required when disabled** |
-| `aria-disabled="true"` | `a.pf-c-tabs__link.pf-m-disabled`, `.pf-c-tabs__link.pf-m-aria-disabled` | Indicates to assistive technology that a tabs link is disabled. **Required when disabled** |
-
-### Usage
-
+### Default tabs usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-disabled` | `a.pf-c-tabs__link` | Modifies a tabs link for disabled styles. |
 | `.pf-m-aria-disabled` | `.pf-c-tabs__link` | Modifies a tabs link for disabled styles, but is still hoverable/focusable. |
 
-### Default overflow beginning of list
+## Overflow
+
+### Overflow beginning of list example
 ```hbs
-{{#> tabs tabs--id="default-overflow-beginning-of-list-example" tabs--modifier="pf-m-scrollable"}}
+{{#> tabs tabs--id="overflow-beginning-of-list" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list __tabs-list--DisabledFirstScrollButton="true" __tabs-list--IsScrollable="true" __tabs-list--IsLong="true"}}
 {{/tabs}}
 ```
 
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disabled, when at the first or last item of a list. **Required when disabled** |
-| `aria-hidden="true"` | `.pf-c-tabs__scroll-button` | Hides the icon from assistive technologies.**Required when not scrollable** |
-
-### Usage
-
+### Overflow beginning of list usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-scrollable` | `.pf-c-tabs` | Enables the directional scroll buttons. |
 | `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
 
-### Horizontal overflow
+### Horizontal overflow example
 ```hbs isBeta
-{{#> tabs tabs--id="horizontal-overflow-example" __tabs-list--IsOverflow="true"}}
+{{#> tabs tabs--id="horizontal-overflow" __tabs-list--IsOverflow="true"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
-### Horizontal overflow expanded
+### Horizontal overflow expanded example
 ```hbs isBeta
-{{#> tabs tabs--id="horizontal-overflow-expanded-example" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowExpanded="true"}}
+{{#> tabs tabs--id="horizontal-overflow-expanded" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowExpanded="true"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
-### Horizontal overflow selected
+### Horizontal overflow selected example
 ```hbs isBeta
-{{#> tabs tabs--id="horizontal-overflow-selected-example" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowSelected="true"}}
+{{#> tabs tabs--id="horizontal-overflow-selected" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowSelected="true"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
-### Vertical
+## Vertical
+
+### Vertical tabs example
 ```hbs
-{{#> tabs tabs--id="vertical-example" tabs--modifier="pf-m-vertical"}}
+{{#> tabs tabs--id="vertical-tabs" tabs--modifier="pf-m-vertical"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
-### Box
+### Vertical expandable example
 ```hbs
-{{#> tabs tabs--id="box-example" tabs--modifier="pf-m-box"}}
+{{#> tabs tabs--id="vertical-expandable" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expanded example
+```hbs
+{{#> tabs tabs--id="vertical-expanded" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expandable responsive example
+```hbs
+{{#> tabs tabs--id="vertical-expandable-responsive" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expandable example (legacy)
+```hbs
+{{#> tabs tabs--id="vertical-expandable-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expanded example (legacy)
+```hbs
+{{#> tabs tabs--id="vertical-expanded-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+### Vertical expandable responsive example (legacy)
+```hbs
+{{#> tabs tabs--id="vertical-expandable-responsive-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
+  {{> tabs-toggle}}
+  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
+{{/tabs}}
+```
+
+## Box
+
+### Box tabs example
+```hbs
+{{#> tabs tabs--id="box-tabs" tabs--modifier="pf-m-box"}}
   {{> __tabs-list __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
-### Box overflow
+### Box overflow example
 ```hbs
-{{#> tabs tabs--id="box-overflow-example" tabs--modifier="pf-m-box pf-m-scrollable" __tabs-list--DisabledFirstScrollButton="true"}}
+{{#> tabs tabs--id="box-overflow" tabs--modifier="pf-m-box pf-m-scrollable" __tabs-list--DisabledFirstScrollButton="true"}}
   {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsLong="true"}}
 {{/tabs}}
 ```
 
-### Box vertical
+### Box vertical example
 ```hbs
-{{#> tabs tabs--id="box-vertical-example" tabs--modifier="pf-m-box pf-m-vertical"}}
+{{#> tabs tabs--id="box-vertical" tabs--modifier="pf-m-box pf-m-vertical"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
-### Box tabs color scheme light 300
+### Box tabs color scheme light 300 example
 ```hbs
-{{#> tabs tabs--modifier="pf-m-box pf-m-color-scheme--light-300" tabs--id="box-tabs-alt-color-scheme"}}
+{{#> tabs tabs--modifier="pf-m-box pf-m-color-scheme--light-300" tabs--id="box-tabs-color-scheme-light-300"}}
   {{> __tabs-list __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 <div className="tabs-example-block tabs-example-block--m-color-scheme--light-300"></div>
 ```
 
-### Inset
+## Tab insets
+
+### Default tab insets example
 ```hbs
-{{#> tabs tabs--id="inset-example" tabs--modifier="pf-m-inset-sm-on-md pf-m-inset-lg-on-lg pf-m-inset-2xl-on-xl"}}
+{{#> tabs tabs--id="default-tab-insets" tabs--modifier="pf-m-inset-sm-on-md pf-m-inset-lg-on-lg pf-m-inset-2xl-on-xl"}}
   {{> __tabs-list}}
 {{/tabs}}
 ```
 
-### Inset box
+### Box tab insets example
 ```hbs
-{{#> tabs tabs--id="inset-box-example" tabs--modifier="pf-m-box pf-m-inset-sm-on-md pf-m-inset-lg-on-lg pf-m-inset-2xl-on-xl"}}
+{{#> tabs tabs--id="box-tab-insets" tabs--modifier="pf-m-box pf-m-inset-sm-on-md pf-m-inset-lg-on-lg pf-m-inset-2xl-on-xl"}}
   {{> __tabs-list}}
 {{/tabs}}
 ```
 
-### Page insets
+### Page insets example
 ```hbs
-{{#> tabs tabs--id="page-insets-example" tabs--modifier="pf-m-page-insets"}}
+{{#> tabs tabs--id="page-insets" tabs--modifier="pf-m-page-insets"}}
   {{> __tabs-list}}
 {{/tabs}}
 ```
 
-### Usage
-
+### Insets usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl, 3xl}{-on-[sm, md, lg, xl, 2xl]}` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of other adjacent components. |
 | `.pf-m-page-insets` | `.pf-c-tabs` | Modifies the tabs component padding/inset to visually match padding of page elements. |
 
-### Icons and text
+## Icons
+
+### Icons and text example
 ```hbs
-{{#> tabs tabs--id="icons-example"}}
+{{#> tabs tabs--id="icons-and-text"}}
   {{> __tabs-list __tabs-list--HasIcons="true"}}
 {{/tabs}}
 ```
 
-### Tabs with sub tabs
+## Sub tabs
+
+### Tabs with sub tabs example
 ```hbs
-{{#> tabs tabs--id="default-parent-example" tabs--modifier="pf-m-scrollable"}}
+{{#> tabs tabs--id="tabs-with-sub-tabs" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 
-{{#> tabs tabs--id="default-child-example" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
+{{#> tabs tabs--id="tabs-with-sub-tabs-secondary" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true"}}
 {{/tabs}}
 ```
 
-### Box tabs with sub tabs
+### Box tabs with sub tabs example
 ```hbs
-{{#> tabs tabs--id="box-parent-example" tabs--modifier="pf-m-box pf-m-scrollable"}}
+{{#> tabs tabs--id="box-tabs-with-sub-tabs" tabs--modifier="pf-m-box pf-m-scrollable"}}
   {{> __tabs-list __tabs-list--IsScrollable="true"}}
 {{/tabs}}
 
-{{#> tabs tabs--id="box-child-example" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
+{{#> tabs tabs--id="box-tabs-with-sub-tabs-secondary" tabs--IsSecondary="true" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list-secondary __tabs-list-secondary--IsScrollable="true"}}
 {{/tabs}}
 ```
 
-### Filled
+## Filled
+
+### Filled tabs example
 ```hbs
-{{#> tabs tabs--id="filled-example" tabs--modifier="pf-m-fill"}}
+{{#> tabs tabs--id="filled-tabs" tabs--modifier="pf-m-fill"}}
   {{> __tabs-list __tabs-list--IsShort="true"}}
 {{/tabs}}
 ```
 
-### Filled with icons
+### Filled with icons example
 ```hbs
-{{#> tabs tabs--id="filled-with-icons-example" tabs--modifier="pf-m-fill"}}
+{{#> tabs tabs--id="filled-with-icons" tabs--modifier="pf-m-fill"}}
   {{> __tabs-list __tabs-list--HasIcons="true" __tabs-list--IsShort="true"}}
 {{/tabs}}
 ```
 
-### Filled box
+### Filled box example
 ```hbs
-{{#> tabs tabs--id="filled-box-example" tabs--modifier="pf-m-fill pf-m-box"}}
+{{#> tabs tabs--id="filled-box" tabs--modifier="pf-m-fill pf-m-box"}}
   {{> __tabs-list __tabs-list--IsShort="true"}}
 {{/tabs}}
 ```
 
-### Filled box with icons
+### Filled box with icons example
 ```hbs
-{{#> tabs tabs--id="filled-box-with-icons-example" tabs--modifier="pf-m-fill pf-m-box"}}
+{{#> tabs tabs--id="filled-box-with-icons" tabs--modifier="pf-m-fill pf-m-box"}}
   {{> __tabs-list __tabs-list--HasIcons="true" __tabs-list--IsShort="true"}}
 {{/tabs}}
 ```
 
-## Usage
+### Filled usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-fill`  | `.pf-c-tabs` | Modifies the tabs to fill the available space. **Required** |
 
-### Using the nav element
+## Tabs as navigation
+
+### Using the nav element example
 ```hbs
-{{#> tabs tabs--id="default-scroll-nav-example" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Tabs nav"' tabs-link--isLink="true"}}
+{{#> tabs tabs--id="using-the-nav-element" tabs--type="nav" tabs--modifier="pf-m-scrollable" tabs--attribute='aria-label="Tabs nav"' tabs-link--isLink="true"}}
   {{> __tabs-list __tabs-list--IsScrollable="true" __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
-### Sub nav using the nav element
+### Sub tabs using the nav element example
 ```hbs
-{{#> tabs tabs--id="primary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Tabs primary nav"' tabs-link--isLink="true"}}
+{{#> tabs tabs--id="sub-tabs-using-the-nav-element" tabs--type="nav" tabs--attribute='aria-label="Tabs primary nav"' tabs-link--isLink="true"}}
   {{> __tabs-list}}
 {{/tabs}}
 
-{{#> tabs tabs--id="secondary-nav-example" tabs--type="nav" tabs--attribute='aria-label="Tabs secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-secondary"}}
+{{#> tabs tabs--id="sub-tabs-using-the-nav-element-secondary" tabs--type="nav" tabs--attribute='aria-label="Tabs secondary nav"' tabs-link--isLink="true" tabs--modifier="pf-m-secondary"}}
   {{> __tabs-list-secondary __tabs-list--IsDisabled="true"}}
 {{/tabs}}
 ```
 
-### Vertical expandable
-```hbs
-{{#> tabs tabs--id="vertical-expandable-example" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical"}}
-  {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
-{{/tabs}}
+## Tab item actions
+
+### Help button example
+```hbs isBeta
+{{> __tabs-all
+      __tabs-all--id="help-button"
+      __tabs-list--IsDisabled="true"
+      __tabs-list--IsAction="true"
+      __tabs-list--IsScrollable="true"
+      __tabs-list--DisabledFirstScrollButton="true"
+      __tabs-list--HasHelp="true" __tabs-list--IsHelpDisabled="true"}}
 ```
 
-### Vertical expanded
-```hbs
-{{#> tabs tabs--id="vertical-expanded-example" tabs--IsExpandable="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
-  {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
-{{/tabs}}
+### Close button example
+```hbs isBeta
+{{> __tabs-all
+      __tabs-all--id="close-button"
+      __tabs-list--IsDisabled="true"
+      __tabs-list--IsAction="true"
+      __tabs-list--HasClose="true"
+      __tabs-list--IsCloseDisabled="true"
+      __tabs-list--IsScrollable="true"
+      __tabs-list--DisabledFirstScrollButton="true"}}
 ```
 
-### Vertical expandable (responsive)
-```hbs
-{{#> tabs tabs--id="vertical-expandable-responsive-example" tabs--IsExpandable="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
-  {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
-{{/tabs}}
+### Help and close button example
+```hbs isBeta
+{{> __tabs-all
+      __tabs-all--id="help-close-button"
+      __tabs-list--IsDisabled="true"
+      __tabs-list--IsAction="true"
+      __tabs-list--IsScrollable="true"
+      __tabs-list--DisabledFirstScrollButton="true"
+      __tabs-list--HasHelp="true"
+      __tabs-list--HasClose="true"
+      __tabs-list--IsHelpDisabled="true"
+      __tabs-list--IsCloseDisabled="true"
+      __tabs-list--IsHelpCloseDisabled="true"}}
 ```
 
-### Vertical expandable (legacy)
+## Add tab button
+
+### Add tab button example
 ```hbs
-{{#> tabs tabs--id="vertical-expandable-legacy-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical"}}
-  {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
-{{/tabs}}
-```
-
-### Vertical expanded (legacy)
-```hbs
-{{#> tabs tabs--id="vertical-expanded-legacy-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
-  {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
-{{/tabs}}
-```
-
-### Vertical expandable (responsive, legacy)
-```hbs
-{{#> tabs tabs--id="vertical-expandable-responsive-legacy-example" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
-  {{> tabs-toggle}}
-  {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
-{{/tabs}}
-```
-
-### Close button
-```hbs
-{{#> tabs tabs--id="close-default-example" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
-{{/tabs}}
-
-<br><br>
-
-{{#> tabs tabs--id="close-box-example" tabs--modifier="pf-m-box pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
-{{/tabs}}
-
-<br><br>
-
-{{#> tabs tabs--id="close-box-light-300-example" tabs--modifier="pf-m-box pf-m-color-scheme--light-300 pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
-{{/tabs}}
-
-<br><br>
-
-{{#> tabs tabs--id="close-icons-text-example" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--HasIcons="true" __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
-{{/tabs}}
-
-<br><br>
-
-{{#> tabs tabs--id="close-filled-example" tabs--modifier="pf-m-fill pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
-{{/tabs}}
-
-<br><br>
-
-{{#> tabs tabs--id="close-secondary-primary-example" tabs--modifier="pf-m-scrollable"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
-{{/tabs}}
-{{#> tabs tabs--id="close-secondary-secondary-example" tabs--modifier="pf-m-scrollable" tabs--IsSecondary="true"}}
-  {{> __tabs-list __tabs-list--IsDisabled="true" __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsCloseDisabled="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true"}}
-{{/tabs}}
-```
-
-### Add tab button
-```hbs
-{{#> tabs tabs--id="add-default-example" tabs--modifier="pf-m-scrollable"}}
+{{#> tabs tabs--id="default-tabs-add-tab-button" tabs--modifier="pf-m-scrollable"}}
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
-{{#> tabs tabs--id="add-secondary-example" tabs--modifier="pf-m-scrollable" tabs--IsSecondary="true"}}
+{{#> tabs tabs--id="default-tabs-add-tab-button-secondary" tabs--modifier="pf-m-scrollable" tabs--IsSecondary="true"}}
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 
 <br><br>
 
-{{#> tabs tabs--id="add-box-example" tabs--modifier="pf-m-box pf-m-scrollable"}}
+{{#> tabs tabs--id="box-tabs-add-tab-button" tabs--modifier="pf-m-box pf-m-scrollable"}}
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 
 <br><br>
 
-{{#> tabs tabs--id="add-box-light-300-example" tabs--modifier="pf-m-box pf-m-color-scheme--light-300 pf-m-scrollable"}}
+{{#> tabs tabs--id="box-tabs-add-tab-button-color-scheme-light-300 " tabs--modifier="pf-m-box pf-m-color-scheme--light-300 pf-m-scrollable"}}
   {{> __tabs-list __tabs-list--IsAction="true" __tabs-list--HasClose="true" __tabs-list--IsScrollable="true" __tabs-list--DisabledFirstScrollButton="true" __tabs-list--HasAddTab="true"}}
 {{/tabs}}
 ```
 
+## Documentation
+
+### Overview
 The tabs component should only be used to change content views within a page. The similar-looking but semantically different [horizontal nav component](/components/navigation/#horizontal) is available for general navigation use cases.
 
 Tabs should be used with the [tab content component](/components/tab-content).
 
 Whenever a list of tabs is unique on the current page, it can be used in a `<nav>` element. Cases where the same set of tabs are duplicated in multiple regions on a page (e.g. cards on a dashboard) are less likely to benefit from using the `<nav>` element.
 
-### Accessibility
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-label="Descriptive text"` | `nav.pf-c-tabs`, `nav.pf-c-tabs.pf-m-secondary` | Gives the `<nav>` an accessible label. **Required when `.pf-c-tabs` is used with `<nav>`**
-| `aria-label="Descriptive text"` | `.pf-c-inline-edit__toggle > button` | Provides an accessible description for toggle button. **Required**
-| `disabled` | `button.pf-c-tabs__link` | Indicates that a tabs link is disabled. **Required when disabled** |
-| `aria-disabled="true"` | `a.pf-c-tabs__link.pf-m-disabled`, `.pf-c-tabs__link.pf-m-aria-disabled` | Indicates to assistive technology that a tabs link is disabled. **Required when disabled** |
-| `disabled` | `.pf-c-tabs__scroll-button` | Indicates that a scroll button is disable, typically when at the first or last item of a list or scroll buttons are hidden. **Required** |
-| `aria-expanded="true"` | `.pf-c-tabs__item` | Indicates that the overflow menu tab is expanded. **Required when expanded** |
-
 ### Usage
-
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-tabs` | `<nav>`, `<div>` | Initiates the tabs component. **Required** |
