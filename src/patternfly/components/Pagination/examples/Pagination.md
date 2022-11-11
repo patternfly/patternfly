@@ -129,10 +129,10 @@ import './Pagination.css'
 
 ### Inset
 ```hbs
-{{#> pagination pagination--modifier="pf-m-inset-none pf-m-inset-md-on-md pf-m-inset-2xl-on-lg"}}
+{{#> pagination pagination--id="pagination-inset" pagination--modifier="pf-m-inset-none pf-m-inset-md-on-md pf-m-inset-2xl-on-lg"}}
   {{> pagination-total-items-content}}
-  {{> pagination-options-menu pagination-options-menu--id="pagination-options-menu-top-example"}}
-  {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top example"}}
+  {{> pagination-options-menu pagination-options-menu--id=(concat pagination--id '-options-menu')}}
+  {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - inset example"}}
 {{/pagination}}
 ```
 
