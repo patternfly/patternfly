@@ -3,6 +3,24 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.14 release notes (2022-10-28)
+Packages released:
+- [@patternfly/patternfly@v4.219.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.219.2)
+
+### Components
+- **Context selector:** Updated static props ([#5191](https://github.com/patternfly/patternfly/pull/5191))
+- **Dropdown:** Disabled top positioning when using static variation ([#5189](https://github.com/patternfly/patternfly/pull/5189))
+- **Progress:** Added helper text ([#5161](https://github.com/patternfly/patternfly/pull/5161))
+
+### Other
+- **Docs:**
+  - Removed a11y section from example pages ([#5167](https://github.com/patternfly/patternfly/pull/5167))
+  - Promoted 2022.14 beta candidates ([#5179](https://github.com/patternfly/patternfly/pull/5179))
+  - Updated page component example content, made text readable ([#5187](https://github.com/patternfly/patternfly/pull/5187))
+- **Icons:** Added open-drawer-right pficon ([#5160](https://github.com/patternfly/patternfly/pull/5160))
+- **Build:** Created new extensions github workflow ([#5186](https://github.com/patternfly/patternfly/pull/5186))
+
+
 ## 2022.13 release notes (2022-10-06)
 Packages released:
 - [@patternfly/patternfly@v4.217.1](https://www.npmjs.com/package/@patternfly/patternfly/v/4.217.1)

@@ -10,6 +10,7 @@ __tabs-list--IsOverflowSelected: bool
 __tabs-list--IsShort: bool
 __tabs-list--IsLong: bool
 __tabs-item--NoText: bool
+__tabs-list--HasHelp: bool
 __tabs-list--HasClose: bool
 __tabs-list--IsCloseDisabled: bool
 ------------------------------------
@@ -25,7 +26,7 @@ __tabs-list--IsCloseDisabled: bool
   {{/if}}
 {{/unless}}
 
-{{#> tabs-list tabs-item--IsAction=__tabs-list--IsAction tabs-item--HasClose=__tabs-list--HasClose}}
+{{#> tabs-list tabs-item--IsAction=__tabs-list--IsAction tabs-item--HasClose=__tabs-list--HasClose tabs-item--HasHelp=__tabs-list--HasHelp}}
   {{> __tabs-item
     __tabs-item--id="users"
     __tabs-item--icon-name="fas fa-users"
@@ -62,14 +63,35 @@ __tabs-list--IsCloseDisabled: bool
         __tabs-item--text="ARIA disabled"
         tabs-link--IsAriaDisabled="true"
         }}
+        {{#if __tabs-list--IsHelpDisabled}}
+          {{> __tabs-item
+            __tabs-item--id="help-disabled"
+            __tabs-item--icon-name="download"
+            __tabs-item--aria-label="Help disabled"
+            __tabs-item--text="Help disabled"
+            tabs-link--IsDisabled="true"
+            tabs-item-action--IsHelpDisabled="true"
+            }}
+        {{/if}}
         {{#if __tabs-list--IsCloseDisabled}}
           {{> __tabs-item
             __tabs-item--id="close-disabled"
-            __tabs-item--icon-name="laptop"
+            __tabs-item--icon-name="code"
             __tabs-item--aria-label="Close disabled"
             __tabs-item--text="Close disabled"
             tabs-link--IsDisabled="true"
-            tabs-item-close-button--attribute="disabled"
+            tabs-item-action--IsCloseDisabled="true"
+            }}
+        {{/if}}
+        {{#if __tabs-list--IsHelpCloseDisabled}}
+          {{> __tabs-item
+            __tabs-item--id="help-close-disabled"
+            __tabs-item--icon-name="folder"
+            __tabs-item--aria-label="Help and disabled"
+            __tabs-item--text="Help and close disabled"
+            tabs-link--IsDisabled="true"
+            tabs-item-action--IsHelpDisabled="true"
+            tabs-item-action--IsCloseDisabled="true"
             }}
         {{/if}}
     {{else}}

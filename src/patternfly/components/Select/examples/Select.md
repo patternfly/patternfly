@@ -47,6 +47,7 @@ The single select should be used when the user is selecting an option from a lis
 | `.pf-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
 | `.pf-m-top` | `.pf-c-select` |  Modifies the select menu to display above the toggle. |
 | `.pf-m-align-right` | `.pf-c-select__menu` |  Modifies the select menu to display right aligned to the toggle. |
+| `.pf-m-static` | `.pf-c-select__menu` |  Modifies the select menu to be statically positioned to support custom positioning. |
 | `.pf-m-active` | `.pf-c-select` | Forces display of the active state of the toggle. |
 
 ## States
@@ -389,7 +390,7 @@ The plain select variation should be used when you do not want a border applied 
 
 ## View more
 ### View more menu item
-```hbs isBeta
+```hbs
 {{#> select select--id="select-single-view-more" select--IsExpanded="true" select--IsLoad="true"}}
   Filter by status
 {{/select}}
@@ -402,7 +403,7 @@ The plain select variation should be used when you do not want a border applied 
 
 ## Loading
 ### Loading menu item
-```hbs isBeta
+```hbs
 {{#> select select--id="select-single-loading" select--IsExpanded="true" select--IsLoading="true"}}
   Filter by status
 {{/select}}

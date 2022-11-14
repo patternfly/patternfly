@@ -407,23 +407,6 @@ cssPrefix: pf-c-alert
 ### Overview
 Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.
 
-### Accessibility
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `aria-label="Default alert"` | `.pf-c-alert` |  Indicates the default alert. |
-| `aria-label="Success alert"` | `.pf-c-alert` |  Indicates the success alert. |
-| `aria-label="Danger alert"` | `.pf-c-alert` |  Indicates the danger alert. |
-| `aria-label="Warning alert"` | `.pf-c-alert` |  Indicates the warning alert. |
-| `aria-label="Information alert"` | `.pf-c-alert` |  Indicates the information alert. |
-| `aria-label="Close success alert: Success alert title"` | `.pf-c-button.pf-m-plain` | Indicates the close button. Please provide descriptive text to ensure assistive technologies clearly state which alert is being closed.|
-| `aria-hidden="true"` | `.pf-c-alert__icon <i>` |  Hides icon for assistive technologies. **Required** |
-| `aria-expanded="true"` | `.pf-c-alert__toggle` |  Indicates that the expandable alert description is visible. **Required for expandable alerts** |
-| `aria-expanded="false"` | `.pf-c-alert__toggle` |  Indicates that the expandable alert description is hidden. **Required for expandable alerts** |
-
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-screen-reader` | `.pf-c-alert__title <span>` | Content that is visually hidden but accessible to assistive technologies. This should state the type of alert. **Required** |
-
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |

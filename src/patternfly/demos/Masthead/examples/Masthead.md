@@ -1,6 +1,5 @@
 ---
 id: Masthead
-beta: true
 section: components
 wrapperTag: div
 ---

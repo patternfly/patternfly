@@ -1,0 +1,11 @@
+.ws-core-c-page :is(.pf-c-page__sidebar, .pf-c-page__main-subnav) {
+  color: var(--pf-global--Color--light-100);
+}
+
+.ws-core-c-page .pf-c-page__main-section.pf-m-dark-200 {
+  color: var(--pf-global--Color--dark-100);
+}
+
+#ws-core-c-page-with-or-without-fill .ws-preview-html {
+  height: 500px;
+}

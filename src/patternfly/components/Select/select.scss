@@ -486,8 +486,13 @@
   }
 
   &.pf-m-static {
+    --pf-c-select__menu--m-top--TranslateY: 0;
+
     position: static;
     top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
     z-index: auto;
     min-width: min-content;
   }

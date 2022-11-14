@@ -1,6 +1,5 @@
 ---
 id: 'Masthead'
-beta: true
 section: components
 cssPrefix: pf-c-masthead
 ---

@@ -302,6 +302,9 @@
   &.pf-m-static {
     position: static;
     top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
     z-index: auto;
     min-width: min-content;
   }
