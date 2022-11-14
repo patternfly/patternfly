@@ -562,6 +562,37 @@
   margin-left: var(--pf-c-wizard__footer-cancel--MarginLeft);
 }
 
+.pf-c-wizard__review-title {
+  margin-bottom: var(--pf-global--spacer--lg);
+}
+
+.pf-c-wizard__review-group {
+  .pf-c-title {
+    margin-left: var(--pf-global--spacer--xl);
+  }
+
+  .pf-c-expandable-section__toggle {
+    padding: 0;
+  }
+
+  .pf-c-expandable-section__toggle-text {
+    color: var(--pf-global--Color--100);
+
+    .pf-c-title {
+      margin-left: 0;
+    }
+  }
+
+  .pf-c-description-list {
+    margin-top: var(--pf-global--spacer--md);
+    margin-left: var(--pf-global--spacer--3xl);
+  }
+
+  .pf-c-description-list__description {
+    color: var(--pf-global--Color--200);
+  }
+}
+
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/wizard";
 
