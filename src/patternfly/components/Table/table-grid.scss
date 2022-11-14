@@ -89,11 +89,11 @@
 
   // Td
   --pf-c-table--m-grid--td--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--cell--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--cell--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--cell--first-child--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--cell--PaddingRight: 0;
-  --pf-c-table--m-grid--cell--PaddingLeft: 0;
+  --pf-c-table--m-grid--td--cell--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--td--cell--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--td--cell--first-child--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--td--cell--PaddingRight: 0;
+  --pf-c-table--m-grid--td--cell--PaddingLeft: 0;
 
   // Compact table
   --pf-c-table--m-grid--m-compact-tr--PaddingTop: var(--pf-global--spacer--sm);
@@ -231,11 +231,11 @@
     grid-column-gap: var(--pf-c-table--m-grid--tr--GridColumnGap);
 
     // set base variables to reset later
-    padding: var(--pf-c-table-tr--PaddingTop) var(--pf-c-table-tr--PaddingRight) var(--pf-c-table-tr--PaddingBottom) var(--pf-c-table-tr--PaddingLeft);
+    padding: var(--pf-c-table--m-grid--tr--PaddingTop) var(--pf-c-table--m-grid--tr--PaddingRight) var(--pf-c-table--m-grid--tr--PaddingBottom) var(--pf-c-table--m-grid--tr--PaddingLeft);
 
     // Reset td padding
     & > * {
-      padding: var(--pf-c-table--cell--PaddingTop) var(--pf-c-table--cell--PaddingRight) var(--pf-c-table--cell--PaddingBottom) var(--pf-c-table--cell--PaddingLeft);
+      padding: var(--pf-c-table--m-grid--td--cell--PaddingTop) var(--pf-c-table--m-grid--td--cell--PaddingRight) var(--pf-c-table--m-grid--td--cell--PaddingBottom) var(--pf-c-table--m-grid--td--cell--PaddingLeft);
 
       // remove padding from first child to align with kebab
       &:first-child {
@@ -333,7 +333,7 @@
       left: 0;
       content: "";
       border: 0;
-      border-left: var(--pf-c-table--tbody--after--BorderLeftWidth) solid var(--pf-c-table--m-grid--tbody--after--BorderColor);
+      border-left: var(--pf-c-table--m-grid--tbody--after--BorderLeftWidth) solid var(--pf-c-table--m-grid--tbody--after--BorderColor);
     }
 
     &.pf-m-expanded {
@@ -419,8 +419,8 @@
       top: 0;
       bottom: 0;
       left: 0;
-      width: var(--pf-c-table--tbody--after--tr--BorderLeftWidth);
-      background-color: var(--pf-c-table--tbody--after--tr--BorderLeftColor);
+      width: var(--pf-c-table--m-grid--tbody--after--tr--BorderLeftWidth);
+      background-color: var(--pf-c-table--m-grid--tbody--after--tr--BorderLeftColor);
     }
 
     &.pf-m-expanded {
