@@ -245,11 +245,11 @@
   }
 
   &.pf-m-compact {
-    --pf-c-table-tr--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr--PaddingTop);
-    --pf-c-table-tr--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr--PaddingBottom);
-    --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr-td--PaddingTop);
-    --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr-td--PaddingBottom);
-    --pf-c-table__check--input--MarginTop: 0;
+    --pf-c-table--m-grid--tr--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr--PaddingTop);
+    --pf-c-table--m-grid--tr--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr--PaddingBottom);
+    --pf-c-table--m-grid--cell--PaddingTop: var(--pf-c-table--m-grid--m-compact-tr-td--PaddingTop);
+    --pf-c-table--m-grid--cell--PaddingBottom: var(--pf-c-table--m-grid--m-compact-tr-td--PaddingBottom);
+    --pf-c-table--m-grid__check--input--MarginTop: 0;
 
     .pf-c-table__action {
       margin-top: var(--pf-c-table--m-grid--m-compact__action--MarginTop);
