@@ -88,12 +88,12 @@
   --pf-c-table--m-grid--cell--PaddingLeft: 0;
 
   // Td
-  --pf-c-table--m-grid--td--GridColumnGap: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--td--cell--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--m-grid--td--cell--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--td--cell--first-child--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-table--m-grid--td--cell--PaddingRight: 0;
-  --pf-c-table--m-grid--td--cell--PaddingLeft: 0;
+  --pf-c-table--m-grid--cell--GridColumnGap: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--cell--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-table--m-grid--cell--PaddingBottom: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--cell--first-child--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-table--m-grid--cell--PaddingRight: 0;
+  --pf-c-table--m-grid--cell--PaddingLeft: 0;
 
   // Compact table
   --pf-c-table--m-grid--m-compact-tr--PaddingTop: var(--pf-global--spacer--sm);
