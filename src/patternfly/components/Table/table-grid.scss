@@ -102,7 +102,7 @@
   --pf-c-table--m-grid--m-compact-tr-td--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-table--m-grid--m-compact__action--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-table--m-grid--m-compact__action--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-table--m-grid--m-compact__toggle--c-button--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
+  --pf-c-table--m-grid--m-compact__toggle--c-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
 
   // Expandable row content
   --pf-c-table--m-grid__expandable-row-content--PaddingRight: var(--pf-global--spacer--lg);
