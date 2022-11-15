@@ -3,6 +3,17 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.15 release notes (2022-11-18)
+Packages released:
+- [@patternfly/patternfly@v4.221.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.221.2)
+
+### Components
+- **Pagination:** Added support for insets ([#5207](https://github.com/patternfly/patternfly/pull/5207))
+- **Tabs:** Added help popover, refactored tab action ([#5213](https://github.com/patternfly/patternfly/pull/5213))
+
+### Other
+- **Icons:** Added data-sink and data-source ([#5228](https://github.com/patternfly/patternfly/pull/5228))
+
 ## 2022.14 release notes (2022-10-28)
 Packages released:
 - [@patternfly/patternfly@v4.219.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.219.2)
