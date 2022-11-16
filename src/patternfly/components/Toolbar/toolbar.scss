@@ -16,6 +16,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Group
   --pf-c-toolbar__group--Display: flex;
+  --pf-c-toolbar__group--RowGap: 0;
+  --pf-c-toolbar__group--ColumnGap: 0;
 
   // Sticky
   --pf-c-toolbar--m-sticky--ZIndex: var(--pf-global--ZIndex--xs);
@@ -210,6 +212,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   align-items: center;
   margin-right: var(--pf-c-toolbar--spacer);
+  row-gap: var(--pf-c-toolbar__group--RowGap);
+  column-gap: var(--pf-c-toolbar__group--ColumnGap);
 
   // Button group
   &.pf-m-button-group {
@@ -508,11 +512,10 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
     @include pf-apply-breakpoint($breakpoint) {
       @each $spacer, $spacer-value in $pf-c-toolbar--spacer-map {
         .pf-m-space-items-#{$spacer}#{$breakpoint-name} {
-          > * {
-            --pf-c-toolbar--spacer: #{$spacer-value};
-          }
+          --pf-c-toolbar__group--RowGap: #{$spacer-value};
+          --pf-c-toolbar__group--ColumnGap: #{$spacer-value};
 
-          > :last-child {
+          > * {
             --pf-c-toolbar--spacer: 0;
           }
         }
