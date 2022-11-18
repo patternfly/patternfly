@@ -6,8 +6,19 @@ cssPrefix: pf-c-backdrop
 
 ## Examples
 ### Basic
+
 ```hbs isFullscreen
 {{#> backdrop}}
+{{/backdrop}}
+```
+
+### With spinner
+
+```hbs isFullscreen
+{{#> backdrop}}
+  {{#> bullseye}}
+    {{#> spinner spinner--IsSvg="true"}}Loading...{{/spinner}}
+  {{/bullseye}}
 {{/backdrop}}
 ```
 
