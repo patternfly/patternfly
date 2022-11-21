@@ -15,6 +15,8 @@
   --pf-c-input-group__text--BorderLeftColor: var(--pf-global--BorderColor--300);
   --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
+  --pf-c-input-group__text--m-disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --pf-c-input-group__text--m-disabled--BorderBottomColor: transparent;
 
   // Form control
   --pf-c-input-group--c-form-control--invalid--ZIndex: var(--pf-global--ZIndex--xs);
@@ -83,6 +85,11 @@
     --pf-c-input-group__text--BorderWidth: 0;
 
     margin-left: 0;
+  }
+
+  &.pf-m-disabled {
+    --pf-c-input-group__text--BackgroundColor: var(--pf-c-input-group__text--m-disabled--BackgroundColor);
+    --pf-c-input-group__text--BorderBottomColor: var(--pf-c-input-group__text--m-disabled--BorderBottomColor);
   }
 }
 

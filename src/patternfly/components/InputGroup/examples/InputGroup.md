@@ -117,3 +117,4 @@ When using the `.pf-c-input-group` always ensure labels are used outside the inp
 | `.pf-c-input-group__text` | `<span>` |  Initiates the input group text. This can be used to show text, radio, icons, or check boxes. |
 | `.pf-m-plain` | `.pf-c-input-group` | Removes the background from the input group. |
 | `.pf-m-plain` | `.pf-c-input-group__text` | Removes the border from the text element. |
+| `.pf-m-disabled` | `.pf-c-input-group__text` | Adds disabled styling to match a disabled input within the input group. |

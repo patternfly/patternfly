@@ -197,7 +197,7 @@ cssPrefix: pf-c-slider
     {{#> slider-value slider-value--modifier="pf-m-floating"}}
       {{#> input-group}}
         {{> form-control controlType="input" input="true" form-control--attribute=(concat 'disabled type="number" value="' slider--value-now '" aria-label="Slider value input"')}}
-        {{#> input-group-text}}%{{/input-group-text}}
+        {{#> input-group-text input-group-text--IsDisabled="true"}}%{{/input-group-text}}
       {{/input-group}}
     {{/slider-value}}
   {{/slider-main}}
@@ -283,7 +283,7 @@ cssPrefix: pf-c-slider
   {{#> slider-value}}
     {{#> input-group}}
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'disabled type="number" value="' slider--value-now '" aria-label="Slider value input"')}}
-      {{#> input-group-text}}%{{/input-group-text}}
+      {{#> input-group-text input-group-text--IsDisabled="true"}}%{{/input-group-text}}
     {{/input-group}}
   {{/slider-value}}
 {{/slider}}
