@@ -212,8 +212,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   align-items: center;
   margin-right: var(--pf-c-toolbar--spacer);
-  row-gap: var(--pf-c-toolbar__group--RowGap);
-  column-gap: var(--pf-c-toolbar__group--ColumnGap);
+  gap: var(--pf-c-toolbar__group--RowGap) var(--pf-c-toolbar__group--ColumnGap);
 
   // Button group
   &.pf-m-button-group {

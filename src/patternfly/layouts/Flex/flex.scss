@@ -23,7 +23,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   display: var(--pf-l-flex--Display);
   flex-wrap: var(--pf-l-flex--FlexWrap);
   align-items: var(--pf-l-flex--AlignItems);
-  gap: var(--pf-l-flex--RowGap, --pf-l-flex--ColumnGap);
+  gap: var(--pf-l-flex--RowGap) var(--pf-l-flex--ColumnGap);
 
   &:last-child {
     --pf-l-flex--spacer: 0;
