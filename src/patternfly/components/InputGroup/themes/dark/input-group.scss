@@ -8,6 +8,7 @@
     --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--400);
     --pf-c-input-group__text--BorderLeftColor: transparent;
     --pf-c-input-group__text--BackgroundColor: var(--pf-global--palette--black-600);
+    --pf-c-input-group__text--m-disabled--BackgroundColor: var(--pf-global--disabled-color--200);
 
     > * + * {
       margin-left: 0;
@@ -23,6 +24,10 @@
 
     &.pf-m-plain {
       --pf-c-input-group__text--BackgroundColor: transparent;
+    }
+
+    &.pf-m-disabled {
+      --pf-c-input-group__text--BackgroundColor: var(--pf-c-input-group__text--m-disabled--BackgroundColor);
     }
   }
 }
