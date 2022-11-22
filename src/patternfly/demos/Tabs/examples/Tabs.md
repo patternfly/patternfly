@@ -10,9 +10,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="tabs-tables-and-tabs-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
 
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
@@ -168,9 +166,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="tabs-tables-and-tabs-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{> tabs-template-pod-tab-list tabs-template-pod-tab-list--modifier="pf-m-page-insets"}}
@@ -285,9 +281,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="nested-tabs-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{#> tabs tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-page-insets"}}
@@ -324,9 +318,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="table-tabs-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light" tab-content--id=(concat tabs-template--id '-tabs')}}
       {{> toolbar-template
@@ -421,10 +413,8 @@ section: components
 
 {{> page-template page-template--id="modal-tabs-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title page-template-title--title="Projects" page-template-title--description="Click any project card to view tabs within modals."}}
-  {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
+{{#* inline "page-template-section"}}
+  {{#> page-main-section}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
       {{#> card card--id=(concat page-template--id '-card-1') card--modifier="pf-m-selectable-raised pf-m-compact"}}
         {{#> card-title}}
@@ -459,9 +449,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="gray-tabs-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-tabs page-main-tabs--IsLimitWidth="true"}}
       {{#> tabs tabs--id=(concat tabs-template--id '-tabs') tabs--modifier="pf-m-page-insets"}}

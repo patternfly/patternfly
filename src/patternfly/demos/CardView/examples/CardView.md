@@ -8,9 +8,7 @@ section: demos
 ```hbs isFullscreen
 {{> page-template page-template--id="card-view-basic-example" page-template-sidebar--nav--IsExpandable="true"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-light pf-m-no-padding"}}
     {{> toolbar-template
           toolbar-template--id=(concat page-template--id '-toolbar')
