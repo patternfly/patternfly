@@ -484,11 +484,8 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-in-page-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
-
-  {{#> page-main-wizard}}
+{{#* inline "page-template-section"}}
+ {{#> page-main-wizard}}
     {{#> wizard wizard--id=(concat page-template--id "-wizard")}}
       {{#> wizard-toggle}}
         {{#> wizard-toggle-list}}
@@ -573,10 +570,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="in-page-nav-expanded-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
-
+{{#* inline "page-template-section"}}
   {{#> page-main-wizard}}
     {{#> wizard wizard--IsExpanded="true"}}
       {{#> wizard-toggle}}
@@ -662,10 +656,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-with-drawer-in-page-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
-
+{{#* inline "page-template-section"}}
   {{#> page-main-wizard page-main-wizard--modifier="pf-m-light-200"}}
     {{#> wizard wizard--id=(concat page-template--id "-wizard")}}
       {{#> wizard-toggle}}
@@ -749,10 +740,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="wizard-with-drawer-in-page-expanded-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
-
+{{#* inline "page-template-section"}}
   {{#> page-main-wizard page-main-wizard--modifier="pf-m-light-200"}}
     {{#> wizard wizard--id=(concat page-template--id "-wizard")}}
       {{#> wizard-toggle}}

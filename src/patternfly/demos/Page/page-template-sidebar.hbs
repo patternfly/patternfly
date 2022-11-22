@@ -2,6 +2,8 @@
 {{#> page-sidebar}}
   {{#if page-template-sidebar--nav--IsExpandable}}
     {{> page-template-expandable-nav}}
+  {{else if page-template-sidebar--nav--IsGrouped}}
+    {{> page-template-grouped-nav}}
   {{else}}
     {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"')}}
       {{#> nav-list}}

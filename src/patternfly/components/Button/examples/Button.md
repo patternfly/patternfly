@@ -33,95 +33,9 @@ import './Button.css'
   Warning
 {{/button}}
 
-<br>
-<br>
-{{#> button button--modifier="pf-m-link"}}
-  {{#> button-icon button-icon--modifier="pf-m-start"}}
-    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-  {{/button-icon}}
-  Link
-{{/button}}
-
-{{#> button button--modifier="pf-m-link"}}
-  Link
-  {{#> button-icon button-icon--modifier="pf-m-end"}}
-    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-  {{/button-icon}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-link pf-m-danger"}}
-  {{#> button-icon button-icon--modifier="pf-m-start"}}
-    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-  {{/button-icon}}
-  Link danger
-{{/button}}
-
-{{#> button button--modifier="pf-m-inline pf-m-link"}}
-  Inline link
-{{/button}}
-<br>
-<br>
-{{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-  <i class="fas fa-times" aria-hidden="true"></i>
-{{/button}}
-<br><br>
-{{#> button button--modifier="pf-m-control"}}
-  Control
-{{/button}}
-
-{{#> button button--modifier="pf-m-control" button--attribute='aria-label="Copy input"'}}
-  <i class="fas fa-copy" aria-hidden="true"></i>
-{{/button}}
-
-<br>
-<br>
-<br>
-
-{{#> button button--modifier="pf-m-primary pf-m-small"}}
-  Primary
-{{/button}}
-
-{{#> button button--modifier="pf-m-secondary pf-m-small"}}
-  Secondary
-{{/button}}
-
-{{#> button button--modifier="pf-m-secondary pf-m-danger pf-m-small"}}
-  Secondary danger
-{{/button}}
-
-{{#> button button--modifier="pf-m-tertiary pf-m-small"}}
-  Tertiary
-{{/button}}
-
-{{#> button button--modifier="pf-m-danger pf-m-small"}}
-  Danger
-{{/button}}
-
-{{#> button button--modifier="pf-m-warning pf-m-small"}}
-  Warning
-{{/button}}
-
-{{#> button button--modifier="pf-m-link pf-m-small"}}
-  Link
-  {{#> button-icon button-icon--modifier="pf-m-end"}}
-    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-  {{/button-icon}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-link pf-m-danger pf-m-small"}}
-  Link danger
-  {{#> button-icon button-icon--modifier="pf-m-end"}}
-    <i class="fas fa-plus-circle" aria-hidden="true"></i>
-  {{/button-icon}}
-{{/button}}
-
-{{#> button button--modifier="pf-m-inline pf-m-link pf-m-small"}}
-  Inline link
-{{/button}}
-
-{{#> button button--modifier="pf-m-control pf-m-small"}}
-  Control
-{{/button}}
+{{> banner-template}}
+{{> components/Button/banner-template}}
+{{> demos/Banner/banner-template}}
 ```
 
 ### Disabled

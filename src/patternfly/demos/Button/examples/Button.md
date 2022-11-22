@@ -9,6 +9,7 @@ cssPrefix: pf-d-button
 
 ```hbs
 {{> button-template-form button-template-form--id="progress-button-example"}}
+{{> demos/Banner/banner-template}}
 ```
 
 ### Progress button - loading
