@@ -1,7 +1,7 @@
 // Don't remove this magic comment. See gulpfile.js.
 // @import "../../sass-utilities/all";
 $pf-c-toolbar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-$pf-c-toolbar--spacer-map: build-spacer-map();
+$pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .pf-c-toolbar {
@@ -217,19 +217,19 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   margin-right: var(--pf-c-toolbar--spacer);
 
   &.pf-m-align-items-center {
-    --pf-c-toolbar__group--AlignItems: center;
+    align-items: center;
   }
 
   &.pf-m-align-items-baseline {
-    --pf-c-toolbar__group--AlignItems: baseline;
+    align-items: baseline;
   }
 
   &.pf-m-align-self-center {
-    --pf-c-toolbar__group--AlignSelf: center;
+    align-self: center;
   }
 
   &.pf-m-align-self-baseline {
-    --pf-c-toolbar__group--AlignSelf: baseline;
+    align-self: baseline;
   }
 
   // Button group
@@ -297,11 +297,11 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   margin-right: var(--pf-c-toolbar--spacer);
 
   &.pf-m-align-self-center {
-    --pf-c-toolbar__item--AlignSelf: center;
+    align-self: center;
   }
 
   &.pf-m-align-self-baseline {
-    --pf-c-toolbar__item--AlignSelf: baseline;
+    align-self: baseline;
   }
 
   // Overflow menu
@@ -388,7 +388,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   width: 100%;
 
   &.pf-m-align-items-center {
-    --pf-c-toolbar__content-section--AlignItems: center;
+    align-items: center;
   }
 }
 
