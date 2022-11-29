@@ -59,8 +59,8 @@
   --pf-c-table--m-grid--tr--xl--PaddingLeft: var(--pf-global--spacer--md);
 
   @media screen and (max-width: $pf-global--breakpoint--xl) {
-    --pf-c-table--m-grid--tr--PaddingRight: var(--pf-c-table-tr--xl--PaddingRight);
-    --pf-c-table--m-grid--tr--PaddingLeft: var(--pf-c-table-tr--xl--PaddingLeft);
+    --pf-c-table--m-grid--tr--PaddingRight: var(--pf-c-table--m-grid--tr--xl--PaddingRight);
+    --pf-c-table--m-grid--tr--PaddingLeft: var(--pf-c-table--m-grid--tr--xl--PaddingLeft);
   }
 
   --pf-c-table--m-grid--tr--nested-table--PaddingTop: var(--pf-global--spacer--xl);
@@ -235,11 +235,11 @@
 
     // Reset td padding
     & > * {
-      padding: var(--pf-c-table--m-grid--td--cell--PaddingTop) var(--pf-c-table--m-grid--td--cell--PaddingRight) var(--pf-c-table--m-grid--td--cell--PaddingBottom) var(--pf-c-table--m-grid--td--cell--PaddingLeft);
+      padding: var(--pf-c-table--m-grid--cell--PaddingTop) var(--pf-c-table--m-grid--cell--PaddingRight) var(--pf-c-table--m-grid--cell--PaddingBottom) var(--pf-c-table--m-grid--cell--PaddingLeft);
 
       // remove padding from first child to align with kebab
       &:first-child {
-        --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-grid--cell--first-child--PaddingTop);
+        --pf-c-table--m-grid--cell--PaddingTop: var(--pf-c-table--m-grid--cell--first-child--PaddingTop);
       }
     }
   }
@@ -271,7 +271,7 @@
     --pf-c-table--cell--hidden-visible--Display: var(--pf-c-table--m-grid--cell--hidden-visible--Display);
 
     grid-column: 1;
-    grid-column-gap: var(--pf-c-table--m-grid--td--GridColumnGap);
+    grid-column-gap: var(--pf-c-table--m-grid--cell--GridColumnGap);
 
     // use minmax func to contain possible text modifier width
     grid-template-columns: 1fr minmax(0, 1.5fr);
