@@ -99,7 +99,7 @@
   $map: ();
 
   @if length($map-items) == 0 {
-    $map: ("none": 0);
+    $map: ("none": "0px");
     $map: map-merge($map, $pf-global--spacer-map);
     $map: map-remove($map, "auto", "0");
   }
