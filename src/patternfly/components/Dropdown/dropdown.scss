@@ -64,7 +64,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   // toggle progress
   --pf-c-dropdown__toggle-progress--Visibility: hidden;
-  --pf-c-dropdown__toggle-progress--c-spinner--diameter: .8em; // one off sizing to roughly match the checkbox size
+  --pf-c-dropdown__toggle-progress--c-spinner--diameter: var(--pf-global--FontSize--sm); // should match the checkbox input size
 
   // split buttons
   --pf-c-dropdown__toggle--m-split-button--child--PaddingTop: var(--pf-global--spacer--form-element);
