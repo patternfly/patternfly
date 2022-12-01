@@ -62,6 +62,10 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   // toggle button
   --pf-c-dropdown__toggle-button--Color: var(--pf-global--Color--100);
 
+  // toggle progress
+  --pf-c-dropdown__toggle-progress--Visibility: hidden;
+  --pf-c-dropdown__toggle-progress--c-spinner--diameter: .8em; // one off sizing to roughly match the checkbox size
+
   // split buttons
   --pf-c-dropdown__toggle--m-split-button--child--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-dropdown__toggle--m-split-button--child--PaddingRight: var(--pf-global--spacer--xs);
@@ -341,9 +345,15 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
       align-items: center;
       cursor: pointer;
 
+      &.pf-m-in-progress {
+        --pf-c-dropdown__toggle--m-split-button__toggle-check__input--Visibility: hidden;
+        --pf-c-dropdown__toggle-progress--Visibility: visible;
+      }
+
       > input,
       .pf-c-check {
         cursor: pointer;
+        visibility: var(--pf-c-dropdown__toggle--m-split-button__toggle-check__input--Visibility, unset);
         transform: translateY(var(--pf-c-dropdown__toggle--m-split-button__toggle-check__input--TranslateY));
       }
     }
@@ -621,6 +631,16 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   &:last-child {
     --pf-c-dropdown__toggle-image--MarginRight: 0;
+  }
+}
+
+// Loading spinner
+.pf-c-dropdown__toggle-progress {
+  position: absolute;
+  visibility: var(--pf-c-dropdown__toggle-progress--Visibility);
+
+  .pf-c-spinner {
+    --pf-c-spinner--diameter: var(--pf-c-dropdown__toggle-progress--c-spinner--diameter);
   }
 }
 
