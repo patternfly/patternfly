@@ -1,10 +1,12 @@
-<label class="pf-c-dropdown__toggle-check{{#if dropdown-toggle-check--modifier}} {{dropdown-toggle-check--modifier}}{{/if}}"
+<label class="pf-c-dropdown__toggle-check
+  {{~#if dropdown-toggle-check--IsInProgress}} pf-m-in-progress{{/if}}
+  {{~#if dropdown-toggle-check--modifier}} {{dropdown-toggle-check--modifier}}{{/if}}"
   for="{{dropdown--id}}-toggle-check"
   {{#if dropdown-toggle-check--attribute}}
     {{{dropdown-toggle-check--attribute}}}
   {{/if}}>
   <input type="checkbox" id="{{dropdown--id}}-toggle-check"
-    {{#if dropdown-toggle--IsDisabled}}
+    {{#if (concat dropdown-toggle--IsDisabled dropdown-toggle-check--IsInProgress)}}
       disabled
     {{/if}}
     {{#if dropdown-toggle-check--aria-label}}
@@ -18,6 +20,9 @@
     {{#if dropdown-toggle--split-button--text}}
       aria-labelledby="{{dropdown--id}}-toggle-check {{dropdown--id}}-toggle-check-text"
     {{/if}}>
+  {{#if dropdown-toggle-check--IsProgress}}
+    {{> dropdown-toggle-progress}}
+  {{/if}}
   {{#if dropdown-toggle--split-button--text}}
     {{#> dropdown-toggle-text dropdown-toggle-text--attribute=(concat 'aria-hidden="true" id="' dropdown--id '-toggle-check-text"')}}
       {{{dropdown-toggle--split-button--text}}}
