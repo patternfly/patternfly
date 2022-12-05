@@ -326,6 +326,7 @@ section: components
         toolbar-template--modifier="pf-m-page-insets"
         toolbar-template--HasToggleGroup="true"
         toolbar-template--HasFilter="true"
+        toolbar-template--HasNoPagination="true"
         toolbar-template--HasSortButton="true"
         toolbar-template--HasOverflowMenu="true"
         toolbar-template--HasOverflowMenuSecondButton="true"
@@ -338,10 +339,6 @@ section: components
           <!-- Content -->
           {{#> drawer-content}}
             {{> tabs--table}}
-            {{#> pagination pagination--modifier="pf-m-bottom"}}
-              {{> pagination-options-menu pagination-options-menu--id=(concat tabs--page-wrapper--id '-footer-pagination') pagination-options-menu--modifier="pf-m-top"}}
-              {{> pagination-nav-content}}
-            {{/pagination}}
           {{/drawer-content}}
 
           <!-- Panel -->
