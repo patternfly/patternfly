@@ -317,10 +317,15 @@
   // stylelint-disable selector-max-class
   &.pf-m-drilled-in > .pf-c-menu__content > .pf-c-menu__list {
     overflow: visible;
+    visibility: hidden;
 
     > .pf-c-divider,
     > .pf-c-menu__list-item:not(.pf-m-current-path) {
       display: none; // hide all siblings of current path to maintain proper menu height
+    }
+
+    > .pf-c-menu__list-item.pf-m-current-path {
+      visibility: hidden;
     }
   }
   // stylelint-enable
