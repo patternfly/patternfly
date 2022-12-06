@@ -3,6 +3,25 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2022.16 release notes (2022-12-09)
+Packages released:
+- [@patternfly/patternfly@v4.222.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.222.4)
+
+### Components
+- **Dropdown:** Added loading state for split button checkbox ([#5269](https://github.com/patternfly/patternfly/pull/5269))
+- **Form control:** Fixed select dark theme icon ([#5242](https://github.com/patternfly/patternfly/pull/5242))
+- **Menu:** Prevented hidden drilldown items from being focusable ([#5271](https://github.com/patternfly/patternfly/pull/5271))
+- **Slider:** Updated value input styling ([#5249](https://github.com/patternfly/patternfly/pull/5249))
+- **Tabs:**
+  - Updated nested demo heading levels ([#5246](https://github.com/patternfly/patternfly/pull/5246))
+  - Removed pagination from demo, exposed tags ([#5259](https://github.com/patternfly/patternfly/pull/5259))
+
+### Other
+- **Workspace:**
+  - Cleaned up demos, added path as way to include partials ([#5135](https://github.com/patternfly/patternfly/pull/5135))
+  - Removed test code from #5135 ([#5255](https://github.com/patternfly/patternfly/pull/5255))
+
+
 ## 2022.15 release notes (2022-11-18)
 Packages released:
 - [@patternfly/patternfly@v4.221.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.221.2)
