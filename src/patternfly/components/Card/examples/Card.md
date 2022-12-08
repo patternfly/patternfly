@@ -54,9 +54,11 @@ import './Card.css'
       {{> card--dropdown}}
       {{> card--check}}
     {{/card-actions}}
-    {{#> card-title card-title--attribute=(concat 'id="' card--id '-check-label"')}}
-      This is a really really really really really really really really really really long title
-    {{/card-title}}
+    {{#> card-header-main}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-check-label"')}}
+        This is a really really really really really really really really really really long title
+      {{/card-title}}
+    {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
     Body
@@ -89,7 +91,9 @@ import './Card.css'
     {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
       {{#> button button--modifier="pf-m-primary"}}Action{{/button}}
     {{/card-actions}}
-    {{#> title title--modifier="pf-m-2xl" title--attribute=(concat 'id="' card--id '-check-label"')}}This is a card title{{/title}}
+    {{#> card-header-main}}
+      {{#> title title--modifier="pf-m-2xl" title--attribute=(concat 'id="' card--id '-check-label"')}}This is a card title{{/title}}
+    {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
     Body
@@ -400,9 +404,11 @@ import './Card.css'
       {{> card--dropdown}}
       {{> card--check}}
     {{/card-actions}}
-    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-      Title
-    {{/card-title}}
+    {{#> card-header-main}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        Title
+      {{/card-title}}
+    {{/card-header-main}}
   {{/card-header}}
 {{/card}}
 ```
@@ -412,7 +418,9 @@ import './Card.css'
 {{#> card card--id="card-expandable-image-example"}}
   {{#> card-header}}
     {{> card-header-toggle}}
-    <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo" width="27px">
+    {{#> card-header-main}}
+      <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo" width="27px">
+    {{/card-header-main}}
     {{#> card-actions}}
       {{> card--dropdown}}
       {{> card--check}}
@@ -430,9 +438,11 @@ import './Card.css'
       {{> card--dropdown}}
       {{> card--check}}
     {{/card-actions}}
+    {{#> card-header-main}}
     {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
       Title
     {{/card-title}}
+    {{/card-header-main}}
   {{/card-header}}
   {{#> card-expandable-content}}
     {{#> card-body}}
@@ -453,9 +463,11 @@ import './Card.css'
       {{> card--dropdown}}
       {{> card--check}}
     {{/card-actions}}
-    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-      Title
-    {{/card-title}}
+    {{#> card-header-main}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        Title
+      {{/card-title}}
+    {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
     Body
@@ -474,9 +486,11 @@ import './Card.css'
       {{> card--dropdown}}
       {{> card--check}}
     {{/card-actions}}
-    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-      Title
-    {{/card-title}}
+    {{#> card-header-main}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        Title
+      {{/card-title}}
+    {{/card-header-main}}
     {{> card-header-toggle}}
   {{/card-header}}
 {{/card}}
@@ -518,7 +532,7 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-c-card__header-toggle` | `<div>` | Creates the expandable card toggle. |
 | `.pf-c-card__header-toggle-icon` | `<span>` | Creates the expandable card toggle icon. |
 | `.pf-c-card__actions` | `<div>` | Creates an actions element to be used in the card header. |
-| `.pf-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. |
+| `.pf-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. **Required if `.pf-c-card__header` has content outside a card header toggle or card header actions** |
 | `.pf-c-card__expandable-content` | `<div>` | Creates the expandable card's expandable content. |
 | `.pf-c-card__sr-input` | `<input>` | Creates an input which, when focused, makes a following `.pf-c-card` appear focused. |
 | `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
