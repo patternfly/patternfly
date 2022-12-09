@@ -6,275 +6,6 @@ cssPrefix: pf-l-flex
 
 import './Flex.css'
 
-### Using gap
-```hbs
-<h3>
-  Gap using <code>.pf-m-gap</code>
-</h3>
-{{#> l-flex l-flex--modifier="pf-m-gap-xs"}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-{{/l-flex}}
-<br/>
-<h3>
-  Row gap using <code>.pf-m-row-gap</code>
-</h3>
-{{#> l-flex l-flex--modifier="pf-m-row-gap-sm"}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-{{/l-flex}}
-<br>
-<h3>
-  Column gap using <code>.pf-m-column-gap</code>
-</h3>
-{{#> l-flex l-flex--modifier="pf-m-column-gap-lg"}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-{{/l-flex}}
-<br>
-<h3>
-  Gap inherits but can be overridden when nested - <code>.pf-l-gap-xl > .pf-l-gap-xs</code>
-</h3>
-{{#> l-flex l-flex--modifier="pf-m-gap-xl"}}
-  {{#> l-flex l-flex--modifier="pf-m-gap-xs"}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-  {{/l-flex}}
-  {{#> l-flex}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-  {{/l-flex}}
-{{/l-flex}}
-<br>
-<h3>
-  REMOVE AFTER TESTING Nested flex and items
-</h3>
-{{#> l-flex l-flex--modifier="pf-m-gap-xs"}}
-  {{#> l-flex l-flex--modifier="pf-m-gap-xl"}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-  {{/l-flex}}
-
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-
-  {{#> l-flex l-flex--modifier="pf-m-gap-xs"}}
-    {{#> l-flex-item}}
-      Flex item
-    {{/l-flex-item}}
-  {{/l-flex}}
-{{/l-flex}}
-<br>
-
-<h3>
-  Gap with individually spaced items - <code>.pf-m-gap-xs > pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>.
-</h3>
-{{#> l-flex l-flex--modifier="pf-m-gap-xs"}}
-  {{#> l-flex-item}}
-    Item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Item
-  {{/l-flex-item}}
-  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none"}}
-    Item - none
-  {{/l-flex-item}}
-  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-xs"}}
-    Item - xs
-  {{/l-flex-item}}
-  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
-    Item - sm
-  {{/l-flex-item}}
-  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
-    Item - md
-  {{/l-flex-item}}
-  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-lg"}}
-    Item - lg
-  {{/l-flex-item}}
-  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-xl"}}
-    Item - xl
-  {{/l-flex-item}}
-  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-2xl"}}
-    Item - 2xl
-  {{/l-flex-item}}
-  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-3xl"}}
-    Item - 3xl
-  {{/l-flex-item}}
-{{/l-flex}}
-<br>
-<h3>
-  Space items will override column gap - <code>.pf-m-gap-xs.pf-m-space-items-xl</code>
-</h3>
-{{#> l-flex l-flex--modifier="pf-m-space-items-xl pf-m-gap-xs"}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-{{/l-flex}}
-<br>
-<h3>
-  REMOVE AFTER TESTING Gap with modified spacing - <code>.pf-m-gap-xl.pf-m-space-items-none</code>.
-</h3>
-{{#> l-flex l-flex--modifier="pf-m-space-items-none pf-m-gap-xl"}}
-  {{#> l-flex-item}}
-    Space items none gap xl
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-  {{#> l-flex-item}}
-    Flex item
-  {{/l-flex-item}}
-{{/l-flex}}
-```
-### Usage
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-row-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-column-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` | Creates a gap, row gap, or column gap. Using the spacer system (`.pf-m-spacer` or `.pf-m-item-space-items`) will override gap. |
-
-<!-- END END END -->
-
 ## Introduction
 The flex layout is based on the CSS Flex properties where the layout determines how a flex item will grow or shrink to fit the space available in its container. The system relies on a default spacer value `--pf-l-flex--spacer--base`, whose value is `--pf-global--spacer--md` or `16px` that is applied to flex items. By default, `flex-wrap` is set to `wrap` and `align-items` is set to `baseline`.
 
@@ -465,6 +196,185 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | -- | -- | -- |
 | `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` |  Modifies a nested flex layout or a flex item spacing. |
 | `.pf-m-space-items-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies the flex layout direct descendant spacing. |
+
+### Using gap
+```hbs
+<h3>
+  Gap using <code>.pf-m-gap</code>
+</h3>
+{{#> l-flex l-flex--modifier="pf-m-gap-xs"}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+{{/l-flex}}
+<br/>
+<h3>
+  Row gap using <code>.pf-m-row-gap</code>
+</h3>
+{{#> l-flex l-flex--modifier="pf-m-row-gap-sm"}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+{{/l-flex}}
+<br>
+<h3>
+  Column gap using <code>.pf-m-column-gap</code>
+</h3>
+{{#> l-flex l-flex--modifier="pf-m-column-gap-lg"}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+{{/l-flex}}
+<br>
+<h3>
+  Gap inherits, but can be overridden when nested - <code>.pf-l-gap-xl > .pf-l-gap-xs</code>
+</h3>
+{{#> l-flex l-flex--modifier="pf-m-gap-xl"}}
+  {{#> l-flex l-flex--modifier="pf-m-gap-xs"}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+  {{/l-flex}}
+  {{#> l-flex}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/l-flex}}
+<br>
+
+<h3>
+  Row gap with individually spaced items - <code>.pf-m-row-gap-xs > pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>. Using `.pf-m-spacer` is not recommended with column gap.
+</h3>
+{{#> l-flex l-flex--modifier="pf-m-row-gap-xs"}}
+  {{#> l-flex-item}}
+    Item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Item
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none"}}
+    Item - none
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-xs"}}
+    Item - xs
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
+    Item - sm
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
+    Item - md
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-lg"}}
+    Item - lg
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-xl"}}
+    Item - xl
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-2xl"}}
+    Item - 2xl
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-3xl"}}
+    Item - 3xl
+  {{/l-flex-item}}
+{{/l-flex}}
+```
+### Usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-m-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-row-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-column-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` | Creates a gap, row gap, or column gap. |
+
+Note: Using the spacer system (`.pf-m-spacer` or `.pf-m-item-space-items`) with gap or column gap is not recommended, as it could cause elements to extend past the parent's boundary in the inline direction.
 
 ### Layout modifiers
 ```hbs
