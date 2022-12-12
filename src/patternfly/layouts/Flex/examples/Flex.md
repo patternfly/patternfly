@@ -370,11 +370,13 @@ The CSS approach, by keeping specificity low on base class properties and resett
 {{/l-flex}}
 ```
 ### Usage
+Use gap modifiers to space flex items evenly. If individual spacing of items along the main axis is needed, the [flex spacer system](#spacer) can be used instead of row gap.
+
+Using the spacer system (`.pf-m-spacer` or `.pf-m-item-space-items`) with gap or column gap is not recommended, as in some cases, it could cause elements to extend past the parent's boundary along the main axis.
+
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-m-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-row-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-column-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` | Creates a gap, row gap, or column gap. |
-
-Note: Using the spacer system (`.pf-m-spacer` or `.pf-m-item-space-items`) with gap or column gap is not recommended, as it could cause elements to extend past the parent's boundary along the main axis.
 
 ### Layout modifiers
 ```hbs
