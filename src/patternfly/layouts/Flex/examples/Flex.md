@@ -374,7 +374,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 | -- | -- | -- |
 | `.pf-m-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-row-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-column-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` | Creates a gap, row gap, or column gap. |
 
-Note: Using the spacer system (`.pf-m-spacer` or `.pf-m-item-space-items`) with gap or column gap is not recommended, as it could cause elements to extend past the parent's boundary in the inline direction.
+Note: Using the spacer system (`.pf-m-spacer` or `.pf-m-item-space-items`) with gap or column gap is not recommended, as it could cause elements to extend past the parent's boundary along the main axis.
 
 ### Layout modifiers
 ```hbs
