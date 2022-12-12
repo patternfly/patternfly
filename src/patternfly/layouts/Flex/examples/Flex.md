@@ -334,7 +334,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 <br>
 
 <h3>
-  Row gap with individually spaced items - <code>.pf-m-row-gap-xs > pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>. Using `.pf-m-spacer` is not recommended with column gap.
+  Row gap with individually spaced items - <code>.pf-m-row-gap-xs > pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>. Using <code>.pf-m-spacer</code> is not recommended with column gap.
 </h3>
 {{#> l-flex l-flex--modifier="pf-m-row-gap-xs"}}
   {{#> l-flex-item}}
