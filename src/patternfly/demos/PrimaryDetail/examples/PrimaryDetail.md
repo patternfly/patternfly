@@ -10,9 +10,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-expanded-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{> divider divider--type="div"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
@@ -61,9 +59,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-collapsed-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{> divider divider--type="div"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
@@ -108,9 +104,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-content-body-padding-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{> divider divider--type="div"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
@@ -154,10 +148,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-card-view-expanded-example" masthead-template--modifier="pf-m-display-stack pf-m-display-inline-on-lg"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
-  {{> divider divider--type="div"}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
 
     <!-- Drawer -->
@@ -208,9 +199,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-card-simple-list-on-mobile-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{> divider divider--type="div"}}
   {{#> page-main-section}}
     {{#> card}}
@@ -247,9 +236,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-card-data-list-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{> divider divider--type="div"}}
   {{#> page-main-section}}
 
@@ -286,11 +273,8 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="primary-detail-inline-modifier-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{> divider divider--type="div"}}
-
   {{#> primary-detail-template primary-detail-template--id=(concat page-template--id "-drawer") primary-detail-template--modifier="pf-m-inline-on-2xl" drawer-panel--IsOpen="true"}}
 
     {{#> drawer-main}}

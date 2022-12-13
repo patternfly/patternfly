@@ -9,9 +9,7 @@ cssPrefix: pf-d-back-to-top
 ```hbs isFullscreen
 {{> page-template page-template--id="back-to-top-basic-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{> page-template-gallery page-template-gallery--IsLongGallery="true"}}
   {{> back-to-top back-to-top--target=(concat "main-content-" page-template--id)}}
 {{/inline}}

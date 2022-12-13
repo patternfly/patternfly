@@ -71,9 +71,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="alert-horizontal-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-light"}}
     {{> alert-template-horizontal-form alert-template-horizontal-form--id=(concat page-template--id "-form")}}
   {{/page-main-section}}
@@ -84,9 +82,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="alert-stacked-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-light"}}
     {{> alert-template-stacked-form alert-template-stacked-form--id=(concat page-template--id "-form")}}
   {{/page-main-section}}

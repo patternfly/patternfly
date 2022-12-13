@@ -9,9 +9,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="skeleton-basic-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
       {{> card-skeleton}}

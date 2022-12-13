@@ -288,9 +288,7 @@ import './Toolbar.css'
 ```hbs isFullscreen
 {{> page-template page-template--id="toolbar-pagination-management-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section}}
     {{#> toolbar toolbar--id=(concat page-template--id "-toolbar") toolbar--modifier="pf-m-nowrap"}}
       {{#> toolbar-content}}
