@@ -1007,7 +1007,7 @@ import './Card.css'
 {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="trend-card-2-example"}}
     {{#> card-header}}
-      {{#> card-header-main card-header-main}}
+      {{#> card-header-main}}
         {{#> l-flex l-flex--modifier="pf-m-align-items-center"}}
           {{#> l-flex-item l-flex-item--modifier="pf-m-flex-none"}}
             {{#> l-flex l-flex--modifier="pf-m-column pf-m-space-items-none"}}
