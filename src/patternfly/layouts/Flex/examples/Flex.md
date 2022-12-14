@@ -200,7 +200,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 ### Using gap
 ```hbs
 <h3>
-  Gap using <code>.pf-m-gap</code>
+  Gap using <code>.pf-m-gap-xs</code>
 </h3>
 {{#> l-flex l-flex--modifier="pf-m-gap-xs"}}
   {{#> l-flex-item}}
@@ -242,7 +242,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 {{/l-flex}}
 <br/>
 <h3>
-  Row gap using <code>.pf-m-row-gap</code>
+  Row gap using <code>.pf-m-row-gap-sm</code>
 </h3>
 {{#> l-flex l-flex--modifier="pf-m-row-gap-sm"}}
   {{#> l-flex-item}}
@@ -286,7 +286,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 <h3>
   Column gap using <code>.pf-m-column-gap</code>
 </h3>
-{{#> l-flex l-flex--modifier="pf-m-column-gap-lg"}}
+{{#> l-flex l-flex--modifier="pf-m-column-gap-sm"}}
   {{#> l-flex-item}}
     Flex item
   {{/l-flex-item}}
