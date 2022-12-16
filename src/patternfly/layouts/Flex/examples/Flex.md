@@ -305,6 +305,24 @@ The CSS approach, by keeping specificity low on base class properties and resett
   {{#> l-flex-item}}
     Flex item
   {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
+  {{#> l-flex-item}}
+    Flex item
+  {{/l-flex-item}}
 {{/l-flex}}
 <br>
 <h3>
@@ -376,7 +394,9 @@ Using the spacer system (`.pf-m-spacer` or `.pf-m-item-space-items`) with gap or
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-row-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-column-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` | Creates a gap, row gap, or column gap. |
+| `.pf-m-gap{-none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` | Creates a gap. |
+| `.pf-m-row-gap{-none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` | Creates a row gap. |
+| `.pf-m-column-gap{-none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` | Creates a column gap. |
 
 ### Layout modifiers
 ```hbs
