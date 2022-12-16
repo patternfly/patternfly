@@ -15,7 +15,6 @@
   --pf-c-card__actions--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-card__actions--child--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-card__actions--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-card__actions--MarginRight: var(--pf-global--spacer--xs);
   --pf-c-card__actions--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
 
   // Expandable
@@ -298,10 +297,6 @@
     --pf-c-card__header-toggle--MarginRight: var(--pf-c-card__header--m-toggle-right--toggle--MarginRight);
     --pf-c-card__header-toggle--MarginLeft: var(--pf-c-card__header--m-toggle-right--toggle--MarginLeft);
 
-    .pf-c-card__actions {
-      --pf-c-card__actions--MarginRight: var(--pf-c-card__header--m-toggle-right--actions--MarginRight);
-    }
-
     .pf-c-card__header-toggle {
       order: 2;
     }
@@ -334,7 +329,7 @@
   align-self: flex-start;
   order: 1;
   padding-left: var(--pf-c-card__actions--PaddingLeft);
-  margin: var(--pf-c-card__actions--MarginTop) var(--pf-c-card__actions--MarginRight) var(--pf-c-card__actions--MarginBottom) auto;
+  margin: var(--pf-c-card__actions--MarginTop) auto var(--pf-c-card__actions--MarginBottom) auto;
 
   > * + * {
     margin-left: var(--pf-c-card__actions--child--MarginLeft);
