@@ -439,9 +439,9 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-    {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-      Title
-    {{/card-title}}
+      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+        Title
+      {{/card-title}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-expandable-content}}
@@ -532,7 +532,7 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-c-card__header-toggle` | `<div>` | Creates the expandable card toggle. |
 | `.pf-c-card__header-toggle-icon` | `<span>` | Creates the expandable card toggle icon. |
 | `.pf-c-card__actions` | `<div>` | Creates an actions element to be used in the card header. |
-| `.pf-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. **Required if `.pf-c-card__header` has content outside a card header toggle or card header actions** |
+| `.pf-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. **Required if `.pf-c-card__header` has content outside of a card header toggle or card header actions** |
 | `.pf-c-card__expandable-content` | `<div>` | Creates the expandable card's expandable content. |
 | `.pf-c-card__sr-input` | `<input>` | Creates an input which, when focused, makes a following `.pf-c-card` appear focused. |
 | `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |

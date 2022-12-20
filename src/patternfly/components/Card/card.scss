@@ -329,7 +329,7 @@
   align-self: flex-start;
   order: 1;
   padding-left: var(--pf-c-card__actions--PaddingLeft);
-  margin: var(--pf-c-card__actions--MarginTop) auto var(--pf-c-card__actions--MarginBottom) auto;
+  margin: var(--pf-c-card__actions--MarginTop) 0 var(--pf-c-card__actions--MarginBottom) auto;
 
   > * + * {
     margin-left: var(--pf-c-card__actions--child--MarginLeft);
