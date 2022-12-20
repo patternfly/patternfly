@@ -13,6 +13,6 @@ module.exports = {
     '@semantic-release/github',
     ['@semantic-release/npm', { pkgRoot: 'dist' }]
   ],
-  tagFormat: 'alpha-v${version}',
+  tagFormat: 'v5-alpha-v${version}',
   dryRun: 'true'
 };
