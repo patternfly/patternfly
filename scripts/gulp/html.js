@@ -40,13 +40,10 @@ hbsInstance.registerHelper('ifEquals', (arg1, arg2, options) => {
 function compileHBS0(srcFiles) {
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {
-      const partialName = path.basename(chunk.history[0], '.hbs');
-      hbsFileMap[partialName] = chunk.history[0];
-      hbsInstance.registerPartial(
-        partialName, // Partial name
-        chunk.contents.toString() // Partial template
-      );
-
+      const file = chunk.history[0];
+      const partialName = path.basename(file, '.hbs');
+      hbsFileMap[partialName] = file;
+      registerHBSPartial(file);
       cb2(null, chunk);
     })
   );
@@ -118,12 +115,24 @@ function onMDChange(file) {
 }
 
 // Helper
-function onHBSChange(file) {
-  hbsInstance.registerPartial(
-    path.basename(file, '.hbs'), // Partial name
-    fs.readFileSync(file, 'utf8') // Partial template
-  );
+function registerHBSPartial(file) {
+  const partialName = path.basename(file, '.hbs'); // partial name
+  const partialNameFull = path.dirname(file.replace(/^.*src\/patternfly\//g, '')) + '/' + partialName; // partial name with path
+  const partialContents = fs.readFileSync(file, 'utf8'); // partial contents
 
+  hbsInstance.registerPartial(
+    partialName,
+    partialContents
+  );
+  hbsInstance.registerPartial(
+    partialNameFull,
+    partialContents
+  );
+}
+
+// Helper
+function onHBSChange(file) {
+  registerHBSPartial(file)
   const mdGlob = path.join(path.dirname(file), '/**/*.md');
   glob.sync(mdGlob).forEach(mdFile => onMDChange(mdFile));
 }

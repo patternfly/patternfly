@@ -127,6 +127,15 @@ import './Pagination.css'
 {{/pagination}}
 ```
 
+### Inset
+```hbs
+{{#> pagination pagination--id="pagination-inset" pagination--modifier="pf-m-inset-none pf-m-inset-md-on-md pf-m-inset-2xl-on-lg"}}
+  {{> pagination-total-items-content}}
+  {{> pagination-options-menu pagination-options-menu--id=(concat pagination--id '-options-menu')}}
+  {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - inset example"}}
+{{/pagination}}
+```
+
 ## Documentation
 Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-select`.
 
@@ -134,12 +143,7 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `aria-label`  | `.pf-c-pagination__nav` |  Provides an accessible name for pagination navigation element. **Required** |
-
-## Pagination nav input
-
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `type="number"` | `.pf-c-pagination` > `.pf-c-form-control` | Defines a field as a number. **Required** |
+| `type="number"` | `.pf-c-pagination__nav-page-select` > `.pf-c-form-control` | Defines a field as a number. **Required** |
 | `value` | `.pf-c-pagination__nav-page-select` > `.pf-c-form-control` | Provides initial integer value. **Required** |
 | `min` | `.pf-c-pagination__nav-page-select` > `.pf-c-form-control` | Provides minimum integer value. **Required** |
 | `max` | `.pf-c-pagination__nav-page-select` > `.pf-c-form-control` | Provides max integer value. **Required** |
@@ -159,6 +163,8 @@ Note: `<button>` or `<a>` elements can be used in `.pf-c-pagination__nav-page-se
 | `.pf-m-compact` | `.pf-c-pagination` | Modifies for compact pagination component styles. |
 | `.pf-m-static` | `.pf-c-pagination.pf-m-bottom` | Modifies bottom pagination to not be positioned sticky on summary. |
 | `.pf-m-sticky` | `.pf-c-pagination` | Modifies the pagination to be sticky to its container. It will be sticky to the top of the container by default, and sticky to the bottom of the container when applied to `.pf-c-pagination.pf-m-bottom`. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-pagination` | Modifies pagination horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-page-insets` | `.pf-c-pagination` |  Modifies the pagination component padding/inset to visually match padding of page elements. |
 | `.pf-m-first` | `.pf-c-pagination__nav-control` | Indicates the control is for the first page button. |
 | `.pf-m-prev` | `.pf-c-pagination__nav-control` | Indicates the control is for the previous page button. |
 | `.pf-m-next` | `.pf-c-pagination__nav-control` | Indicates the control is for the next page button. |

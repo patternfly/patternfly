@@ -9,9 +9,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="data-list-basic-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
       {{> toolbar-template
@@ -31,9 +29,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="data-list-actionable-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
       {{> toolbar-template toolbar--id="data-list-actionable-example-toolbar"
@@ -54,9 +50,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="data-list-expandable-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
       {{> toolbar-template
@@ -78,9 +72,7 @@ wrapperTag: div
 ```hbs isFullscreen
 {{> page-template page-template--id="data-list-static-bottom-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl"}}
     {{#> card}}
       {{> toolbar-template

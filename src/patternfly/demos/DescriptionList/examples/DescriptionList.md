@@ -10,9 +10,7 @@ cssPrefix: pf-d-description-list
 ```hbs isFullscreen
 {{> page-template page-template--id="description-list-basic-example"}}
 
-{{#*inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--IsLimitWidth="true"}}
     {{#> card}}
       {{#> card-header}}
@@ -270,9 +268,7 @@ cssPrefix: pf-d-description-list
 ```hbs isFullscreen
 {{> page-template page-template--id="description-list-complex-content-example"}}
 
-{{#*inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#*inline "page-template-section"}}
   {{> divider}}
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-light"}}
     {{#> grid grid--modifier="pf-m-gutter" l-flex-item--modifier=reset}}

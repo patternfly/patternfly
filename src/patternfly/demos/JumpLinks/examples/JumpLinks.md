@@ -9,9 +9,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="jump-links-collapsed-mobile-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
     {{#> sidebar jump-links-template--id="jump-links-collapsed-mobile-example-jump-links"}}
       {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
@@ -36,9 +34,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="jump-links-vertical-expanded-mobile-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
     {{#> sidebar jump-links-template--id="jump-links-vertical-expanded-mobile-example-jump-links"}}
       {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
@@ -63,9 +59,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="jump-links-vertical-toggle-text-mobile-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
     {{#> sidebar jump-links-template--id="jump-links-vertical-toggle-text-mobile-example-jump-links"}}
       {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
@@ -90,9 +84,7 @@ section: components
 ```hbs isFullscreen
 {{> page-template page-template--id="jump-links-horizontal-example"}}
 
-{{#* inline "page-template-main-content"}}
-  {{> page-template-breadcrumb}}
-  {{> page-template-title}}
+{{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-sticky-top"}}
     {{#> jump-links jump-links--modifier="pf-m-center"}}
       {{#> jump-links-main}}
