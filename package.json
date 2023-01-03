@@ -35,7 +35,7 @@
     "@octokit/rest": "^16.40.1",
     "@patternfly/patternfly-a11y": "4.3.1",
     "@patternfly/react-code-editor": "4.82.82",
-    "@patternfly/react-core": "4.264.0",
+    "@patternfly/react-core": "4.267.6",
     "@patternfly/react-table": "4.112.6",
     "@starptech/prettyhtml": "^0.10.0",
     "babel-eslint": "^8.2.3",
