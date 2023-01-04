@@ -7,7 +7,7 @@ import './Toolbar.css'
 
 ## Demos
 
-### Toolbar attribute value search filter desktop
+### Toolbar attribute value search filter on desktop
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-search-filter-desktop-example"}}
   {{#> toolbar-content}}
@@ -31,7 +31,7 @@ import './Toolbar.css'
 {{/toolbar}}
 ```
 
-### Toolbar with validation desktop
+### Toolbar with validation on desktop
 ```hbs isFullscreen
 {{> page-template page-template--id="toolbar-pagination-management-example"}}
 
@@ -42,7 +42,7 @@ import './Toolbar.css'
     {{#> toolbar toolbar--id="toolbar-with-validation-example"}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section}}
-          {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
+          {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
             {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
             {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
               {{#> toolbar-item}}
@@ -70,10 +70,10 @@ import './Toolbar.css'
                 {{/input-group}}
               {{/toolbar-item}}
             {{/toolbar-group}}
-            {{> toolbar-item-search-filter toolbar-items-search-filter--text="Description" toolbar-items-search-filter--width="300px"}}
+            {{> toolbar-item-search-filter toolbar-items-search-filter--text="Description" toolbar-items-search-filter--width="160px"}}
           {{/toolbar-group}}
           {{#> button button--modifier="pf-m-primary"}}
-            Download history
+            Download
           {{/button}}
         {{/toolbar-content-section}}
         {{> toolbar-expandable-content}}
@@ -111,7 +111,7 @@ import './Toolbar.css'
 {{/toolbar}}
 ```
 
-### Toolbar attribute value single select filter desktop
+### Toolbar attribute value single select filter on desktop
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-single-select-filter-desktop-example"}}
   {{#> toolbar-content}}
@@ -182,7 +182,7 @@ import './Toolbar.css'
 {{/toolbar}}
 ```
 
-### Toolbar attribute value checkbox select filter desktop
+### Toolbar attribute value checkbox select filter on desktop
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-checkbox-select-filter-desktop-example"}}
   {{#> toolbar-content}}
