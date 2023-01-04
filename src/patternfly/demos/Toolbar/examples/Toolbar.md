@@ -31,6 +31,61 @@ import './Toolbar.css'
 {{/toolbar}}
 ```
 
+### Toolbar with validation desktop
+```hbs isFullscreen
+{{> page-template page-template--id="toolbar-pagination-management-example"}}
+
+{{#* inline "page-template-main-content"}}
+  {{> page-template-breadcrumb}}
+  {{> page-template-title}}
+  {{#> page-main-section}}
+    {{#> toolbar toolbar--id="toolbar-with-validation-example"}}
+      {{#> toolbar-content}}
+        {{#> toolbar-content-section}}
+          {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
+            {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
+              {{#> toolbar-item}}
+                {{#> input-group input-group--attribute=(concat 'aria-label="search filter" role="group"')}}
+                  {{#> select select--id=(concat toolbar--id '-select-month') select--width='160px' select-toggle--icon="fas fa-filter"}}
+                    Last month
+                  {{/select}}
+                  {{#> date-picker date-picker--id=(concat toolbar--id "-helper-text") date-picker-helper-text--text="MM/DD/YYYY"}}
+                    {{#> input-group}}
+                      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
+                      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                      {{/button}}
+                    {{/input-group}}
+                  {{/date-picker}}
+                  {{#> date-picker date-picker--id=(concat toolbar--id "-invalid") date-picker-helper-text--text="Max: 08/10/2022" date-picker-helper-text--IsError="true"}}
+                    {{#> input-group}}
+                      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'aria-invalid="true" type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
+                      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
+                        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                      {{/button}}
+                    {{/input-group}}
+                    {{> date-picker-helper-text date-picker-helper-text--text="MM/DD/YYYY" date-picker-helper-text--IsError=false}}
+                  {{/date-picker}}
+                {{/input-group}}
+              {{/toolbar-item}}
+            {{/toolbar-group}}
+            {{> toolbar-item-search-filter toolbar-items-search-filter--text="Description" toolbar-items-search-filter--width="300px"}}
+          {{/toolbar-group}}
+          {{#> button button--modifier="pf-m-primary"}}
+            Download history
+          {{/button}}
+        {{/toolbar-content-section}}
+        {{> toolbar-expandable-content}}
+      {{/toolbar-content}}
+    {{/toolbar}}
+    <div>
+      {{> table-simple-table page--id=(concat toolbar--id '-table')}}
+    </div>
+  {{/page-main-section}}
+{{/inline}}
+```
+
 ### Toolbar attribute value search filter on mobile
 ```hbs
 {{#> toolbar toolbar--id="toolbar-attribute-value-search-filter-mobile-example"}}

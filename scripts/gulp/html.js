@@ -37,6 +37,16 @@ hbsInstance.registerHelper('ifEquals', (arg1, arg2, options) => {
 //   something else
 // {{/ifEquals}}
 
+hbsInstance.registerHelper('ternary', (testValue, trueValue, fallback) => {
+  return testValue ? trueValue : fallback;
+});
+
+// Using ternary
+// if custom value for select--width: {{#> select select--width='160px'}}Filter by name{{/select}}
+// else custom value for select--width: {{#> select)}}Filter by name{{/select}}
+// {{#> select select--id=(concat toolbar--id '-select-name') select--width=(ternary toolbar-items-search-filter--width toolbar-items-search-filter--width '175px') select-toggle--icon="fas fa-filter"}}
+// {{> toolbar-item-search-filter toolbar-items-search-filter--width="300px"}}
+
 function compileHBS0(srcFiles) {
   return srcFiles.pipe(
     through2.obj((chunk, _, cb2) => {

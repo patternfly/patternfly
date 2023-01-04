@@ -34,6 +34,10 @@ Toolbar relies on groups (`.pf-c-toolbar__group`) and items (`.pf-c-toolbar__ite
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align right, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-toolbar > *` | Modifies toolbar element to align left, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-align-items-center` | `.pf-c-toolbar__content-section`, `.pf-c-toolbar__group` | Modifies toolbar element to vertically align children to center. |
+| `.pf-m-align-items-baseline` | `.pf-c-toolbar__group` | Modifies toolbar group to vertically align children to baseline. |
+| `.pf-m-align-self-center` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar element to vertically align self to center. |
+| `.pf-m-align-self-baseline` | `.pf-c-toolbar__group`, `.pf-c-toolbar__item` | Modifies toolbar element to vertically align self to baseline. |
 
 ### Special notes
 
