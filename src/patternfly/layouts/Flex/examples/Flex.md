@@ -284,7 +284,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 {{/l-flex}}
 <br>
 <h3>
-  Column gap using <code>.pf-m-column-gap</code>
+  Column gap using <code>.pf-m-column-gap-sm</code>
 </h3>
 {{#> l-flex l-flex--modifier="pf-m-column-gap-sm"}}
   {{#> l-flex-item}}
@@ -326,7 +326,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 {{/l-flex}}
 <br>
 <h3>
-  Gap inherits, but can be overridden when nested - <code>.pf-l-gap-xl > .pf-l-gap-xs</code>
+  Gap can be overridden when nested - <code>.pf-l-gap-xl > .pf-l-gap-xs</code>
 </h3>
 {{#> l-flex l-flex--modifier="pf-m-gap-xl"}}
   {{#> l-flex l-flex--modifier="pf-m-gap-xs"}}
@@ -352,7 +352,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 <br>
 
 <h3>
-  Row gap with individually spaced items - <code>.pf-m-row-gap-xs > pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>. Using <code>.pf-m-spacer</code> is not recommended with column gap.
+  Row gap with individually spaced items - <code>.pf-m-row-gap-xs > .pf-m-spacer-{xs,sm,md,lg,xl,2xl,3xl}</code>. Using <code>.pf-m-spacer</code> is not recommended on flex layouts that wrap.
 </h3>
 {{#> l-flex l-flex--modifier="pf-m-row-gap-xs"}}
   {{#> l-flex-item}}
@@ -388,9 +388,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 {{/l-flex}}
 ```
 ### Usage
-Use gap modifiers to space flex items evenly. If individual spacing of items along the main axis is needed, the [flex spacer system](#spacer) can be used instead of row gap.
-
-Using the spacer system (`.pf-m-spacer` or `.pf-m-item-space-items`) with gap or column gap is not recommended, as in some cases, it could cause elements to extend past the parent's boundary along the main axis.
+Gap is recommended when there is a consistent gap between items. If individual items need unique gaps, use the [flex spacer system](#spacing) instead. Using the spacer system (<code>.pf-m-spacer</code>) along an axis that uses gap is not recommended, as in some cases, it could cause elements to extend past the boundary of the parent element.
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -1040,11 +1038,11 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Resets the flex layout element margin-left property to 0. |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the flex layout element margin-left property to auto. |
 | `--pf-l-flex--item--Order{-on-[breakpoint]}: {order}` | `.pf-l-flex > .pf-l-flex`, `.pf-l-flex__item` | Modifies the flex layout element order property. |
-| `.pf-m-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-row-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-column-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` | Creates a gap, row gap, or column gap. Using the spacer system (`.pf-m-spacer` or `.pf-m-item-space-items`) will override gap. |
+| `.pf-m-gap{-none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-row-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}`, `.pf-m-column-gap-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` | Creates a gap, row gap, or column gap. Using the spacer system (`.pf-m-spacer` or `.pf-m-item-space-items`) will override gap. |
 
 ### Spacer system
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-spacer-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex`, `.pf-l-flex > .pf-l-flex__item` |  Modifies a nested flex layout or a flex item spacing. |
-| `.pf-m-item-space-items-{none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies the flex layout direct descendant spacing. |
+| `.pf-m-spacer{-none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex`, `.pf-l-flex > .pf-l-flex__item` |  Modifies a nested flex layout or a flex item spacing. |
+| `.pf-m-item-space-items{-none, xs, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-l-flex` |  Modifies the flex layout direct descendant spacing. |
