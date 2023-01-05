@@ -338,8 +338,6 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @debug $pf-l-flex--breakpoint-map;
-
     @include pf-apply-breakpoint($breakpoint) {
       &.pf-m-gap#{$breakpoint-name} {
         --pf-l-flex--spacer-base: 0;
