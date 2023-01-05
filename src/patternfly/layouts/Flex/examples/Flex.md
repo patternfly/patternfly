@@ -326,7 +326,7 @@ The CSS approach, by keeping specificity low on base class properties and resett
 {{/l-flex}}
 <br>
 <h3>
-  Gap can be overridden when nested - <code>.pf-l-gap-xl > .pf-l-gap-xs</code>
+  Gap can be overridden when nested - <code>.pf-m-gap-xl > .pf-m-gap-xs</code>
 </h3>
 {{#> l-flex l-flex--modifier="pf-m-gap-xl"}}
   {{#> l-flex l-flex--modifier="pf-m-gap-xs"}}
