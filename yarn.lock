@@ -1391,10 +1391,10 @@
     acorn-static-class-features "^1.0.0"
     astring "^1.7.5"
 
-"@patternfly/documentation-framework@1.3.5":
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-1.3.5.tgz#617ec85ba080b00516db6244076fa42a94d4e057"
-  integrity sha512-cnZN/TiJjrS6GISJ/7j6UeVkoJpO15Rxdua93Xzpd6vOPTPONBXHVoDUKtFA6CCVGml+oKGCD177TgjlomJkbQ==
+"@patternfly/documentation-framework@1.3.7":
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/@patternfly/documentation-framework/-/documentation-framework-1.3.7.tgz#4b7fdad609b62000a63b52ae112ce8fc66635955"
+  integrity sha512-6ZdN8wGHDhTKfNP4Xr5xRqLyOlJTRW6JpWM1bQO5RczrNUmRDQrAUFuDg8v5+HpLTNFG++Y1Bd2+ILCIWdwBtw==
   dependencies:
     "@babel/core" "7.18.2"
     "@babel/plugin-proposal-class-properties" "7.17.12"
@@ -1427,7 +1427,6 @@
     html-formatter "0.1.9"
     html-webpack-plugin "4.4.1"
     js-yaml "3.14.0"
-    lodash-es "4.17.15"
     mdast-util-to-hast "9.1.1"
     mdurl "1.0.1"
     mini-css-extract-plugin "1.3.9"
@@ -8574,11 +8573,6 @@ locate-path@^6.0.0:
   integrity sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==
   dependencies:
     p-locate "^5.0.0"
-
-lodash-es@4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
-  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
 
 lodash._basecopy@^3.0.0:
   version "3.0.1"
