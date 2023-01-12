@@ -90,6 +90,7 @@ id: Icons
 | print | <i class="pf-icon pf-icon-print"></i> | &lt;i class=&quot;pf-icon pf-icon-print&quot;&gt;&lt;/i&gt;
 | private | <i class="pf-icon pf-icon-private"></i> | &lt;i class=&quot;pf-icon pf-icon-private&quot;&gt;&lt;/i&gt;
 | process-automation | <i class="pf-icon pf-icon-process-automation"></i> | &lt;i class=&quot;pf-icon pf-icon-process-automation&quot;&gt;&lt;/i&gt;
+| processor | <i class="pf-icon pf-icon-processor"></i> | &lt;i class=&quot;pf-icon pf-icon-processor&quot;&gt;&lt;/i&gt;
 | project | <i class="pf-icon pf-icon-project"></i> | &lt;i class=&quot;pf-icon pf-icon-project&quot;&gt;&lt;/i&gt;
 | rebalance | <i class="pf-icon pf-icon-rebalance"></i> | &lt;i class=&quot;pf-icon pf-icon-rebalance&quot;&gt;&lt;/i&gt;
 | rebooting | <i class="pf-icon pf-icon-rebooting"></i> | &lt;i class=&quot;pf-icon pf-icon-rebooting&quot;&gt;&lt;/i&gt;
