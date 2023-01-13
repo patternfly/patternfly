@@ -25,6 +25,7 @@ id: Icons
 | container-node | <i class="pf-icon pf-icon-container-node"></i> | &lt;i class=&quot;pf-icon pf-icon-container-node&quot;&gt;&lt;/i&gt;
 | cpu | <i class="pf-icon pf-icon-cpu"></i> | &lt;i class=&quot;pf-icon pf-icon-cpu&quot;&gt;&lt;/i&gt;
 | critical-risk | <i class="pf-icon pf-icon-critical-risk"></i> | &lt;i class=&quot;pf-icon pf-icon-critical-risk&quot;&gt;&lt;/i&gt;
+| data-processor | <i class="pf-icon pf-icon-data-processor"></i> | &lt;i class=&quot;pf-icon pf-icon-data-processor&quot;&gt;&lt;/i&gt;
 | data-sink | <i class="pf-icon pf-icon-data-sink"></i> | &lt;i class=&quot;pf-icon pf-icon-data-sink&quot;&gt;&lt;/i&gt;
 | data-source | <i class="pf-icon pf-icon-data-source"></i> | &lt;i class=&quot;pf-icon pf-icon-data-source&quot;&gt;&lt;/i&gt;
 | degraded | <i class="pf-icon pf-icon-degraded"></i> | &lt;i class=&quot;pf-icon pf-icon-degraded&quot;&gt;&lt;/i&gt;
@@ -90,7 +91,6 @@ id: Icons
 | print | <i class="pf-icon pf-icon-print"></i> | &lt;i class=&quot;pf-icon pf-icon-print&quot;&gt;&lt;/i&gt;
 | private | <i class="pf-icon pf-icon-private"></i> | &lt;i class=&quot;pf-icon pf-icon-private&quot;&gt;&lt;/i&gt;
 | process-automation | <i class="pf-icon pf-icon-process-automation"></i> | &lt;i class=&quot;pf-icon pf-icon-process-automation&quot;&gt;&lt;/i&gt;
-| processor | <i class="pf-icon pf-icon-processor"></i> | &lt;i class=&quot;pf-icon pf-icon-processor&quot;&gt;&lt;/i&gt;
 | project | <i class="pf-icon pf-icon-project"></i> | &lt;i class=&quot;pf-icon pf-icon-project&quot;&gt;&lt;/i&gt;
 | rebalance | <i class="pf-icon pf-icon-rebalance"></i> | &lt;i class=&quot;pf-icon pf-icon-rebalance&quot;&gt;&lt;/i&gt;
 | rebooting | <i class="pf-icon pf-icon-rebooting"></i> | &lt;i class=&quot;pf-icon pf-icon-rebooting&quot;&gt;&lt;/i&gt;
