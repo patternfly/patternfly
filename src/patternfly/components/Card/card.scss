@@ -13,7 +13,7 @@
   --pf-c-card__body--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__footer--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__actions--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-card__actions--child--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-card__actions--Gap: var(--pf-global--spacer--sm);
   --pf-c-card__actions--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-card__actions--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
 
@@ -329,10 +329,7 @@
   order: 1;
   padding-left: var(--pf-c-card__actions--PaddingLeft);
   margin: var(--pf-c-card__actions--MarginTop) 0 var(--pf-c-card__actions--MarginBottom) auto;
-
-  > * + * {
-    margin-left: var(--pf-c-card__actions--child--MarginLeft);
-  }
+  gap: var(--pf-c-card__actions--Gap);
 
   + .pf-c-card__title,
   + .pf-c-card__body,
