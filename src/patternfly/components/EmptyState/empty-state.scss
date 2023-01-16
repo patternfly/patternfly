@@ -31,19 +31,15 @@
   --pf-c-empty-state--m-xl__body--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-empty-state--m-xl__body--MarginTop: var(--pf-global--spacer--lg);
 
-  // Primary actions
-  --pf-c-empty-state__primary--RowGap: var(--pf-global--spacer--xs);
-  --pf-c-empty-state__primary--ColumnGap: var(--pf-global--spacer--xs);
-  --pf-c-empty-state__primary--MarginTop: var(--pf-global--spacer--xl);
-  --pf-c-empty-state__primary--secondary--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-empty-state--m-xs__primary--MarginTop: var(--pf-global--spacer--md);
+  // Footer
+  --pf-c-empty-state__footer--RowGap: var(--pf-global--spacer--sm);
+  --pf-c-empty-state__footer--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-empty-state--m-xs__footer--MarginTop: var(--pf-global--spacer--md);
 
-  // Secondary actions
-  --pf-c-empty-state__secondary--RowGap: var(--pf-global--spacer--xs);
-  --pf-c-empty-state__secondary--ColumnGap: var(--pf-global--spacer--xs);
-  --pf-c-empty-state__secondary--MarginTop: var(--pf-global--spacer--xl);
-  --pf-c-empty-state--m-xs__secondary--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-empty-state--m-xl__secondary--MarginTop: var(--pf-global--spacer--md);
+  // Actions
+  --pf-c-empty-state__actions--RowGap: var(--pf-global--spacer--xs);
+  --pf-c-empty-state__actions--ColumnGap: var(--pf-global--spacer--xs);
+  --pf-c-empty-state__actions--MarginTop: 0;
 
   display: flex;
   align-items: center;
@@ -60,8 +56,7 @@
     --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xs__icon--MarginBottom);
     --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xs__body--MarginTop);
     --pf-c-empty-state--body--FontSize: var(--pf-c-empty-state--m-xs__body--FontSize);
-    --pf-c-empty-state__primary--MarginTop: var(--pf-c-empty-state--m-xs__primary--MarginTop);
-    --pf-c-empty-state__secondary--MarginTop: var(--pf-c-empty-state--m-xs__secondary--MarginTop);
+    --pf-c-empty-state__footer--MarginTop: var(--pf-c-empty-state--m-xs__footer--MarginTop);
   }
 
   &.pf-m-sm {
@@ -77,7 +72,6 @@
     --pf-c-empty-state--body--FontSize: var(--pf-c-empty-state--m-xl__body--FontSize);
     --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xl__icon--MarginBottom);
     --pf-c-empty-state__icon--FontSize: var(--pf-c-empty-state--m-xl__icon--FontSize);
-    --pf-c-empty-state__secondary--MarginTop: var(--pf-c-empty-state--m-xl__secondary--MarginTop);
   }
 
   &.pf-m-full-height {
@@ -102,22 +96,17 @@
   color: var(--pf-c-empty-state__body--Color);
 }
 
-.pf-c-empty-state__primary {
+.pf-c-empty-state__footer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--pf-c-empty-state__primary--RowGap) var(--pf-c-empty-state__primary--ColumnGap);
-  margin-top: var(--pf-c-empty-state__primary--MarginTop);
-
-  + .pf-c-empty-state__secondary {
-    margin-top: var(--pf-c-empty-state__primary--secondary--MarginTop);
-  }
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--pf-c-empty-state__footer--RowGap);
+  margin-top: var(--pf-c-empty-state__footer--MarginTop);
 }
 
-.pf-c-empty-state__secondary {
+.pf-c-empty-state__actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--pf-c-empty-state__secondary--RowGap) var(--pf-c-empty-state__secondary--ColumnGap);
-  margin-top: var(--pf-c-empty-state__secondary--MarginTop);
+  gap: var(--pf-c-empty-state__actions--RowGap) var(--pf-c-empty-state__actions--ColumnGap);
 }
