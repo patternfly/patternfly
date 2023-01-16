@@ -16,7 +16,7 @@ import './Card.css'
       {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain="true"}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> level level--modifier="pf-m-gutter"}}
+      {{#> split split--modifier="pf-m-gutter pf-m-wrap"}}
         {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
           Getting started
         {{/card-title}}
@@ -55,7 +55,7 @@ import './Card.css'
             {{/label-group-list}}
           {{/label-group-main}}
         {{/label-group}}
-      {{/level}}
+      {{/split}}
     {{/card-header-main}}
   {{/card-header}}
 {{/card}}
