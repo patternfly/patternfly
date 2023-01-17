@@ -103,13 +103,13 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
 
       // flex-direction column-reverse
       &.pf-m-column-reverse#{$breakpoint-name} {
-        flex-direction: column-reverse;
-        align-items: normal;
-
         // stylelint-disable length-zero-no-unit
         --pf-l-flex--RowGap: 0px;
         // stylelint-enable length-zero-no-unit
         --pf-l-flex--ColumnGap: var(--pf-l-flex--ColumnGap-base);
+
+        flex-direction: column-reverse;
+        align-items: normal;
 
         > * {
           margin: calc(var(--pf-l-flex--spacer) - var(--pf-l-flex--RowGap)) 0 0 0;
@@ -118,10 +118,10 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
 
       // flex-direction row
       &.pf-m-row#{$breakpoint-name} {
+        --pf-l-flex--RowGap: var(--pf-l-flex--RowGap-base);
+
         flex-direction: row;
         align-items: var(--pf-l-flex--m-row--AlignItems);
-
-        --pf-l-flex--RowGap: var(--pf-l-flex--RowGap-base);
 
         // unset styling set for .pf-m-column
         > * {
@@ -131,10 +131,10 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
 
       // flex-direction row-reverse
       &.pf-m-row-reverse#{$breakpoint-name} {
+        --pf-l-flex--RowGap: var(--pf-l-flex--RowGap-base);
+
         flex-direction: row-reverse;
         align-items: var(--pf-l-flex--m-row-reverse--AlignItems);
-
-        --pf-l-flex--RowGap: var(--pf-l-flex--RowGap-base);
 
         // unset styling set for .pf-m-column
         > * {
