@@ -159,6 +159,14 @@
   ol,
   ul {
     margin: 0;
+
+    // stylelint-disable selector-no-qualifying-type
+    &.pf-m-plain {
+      padding-left: 0;
+      margin-left: 0;
+      list-style: none;
+    }
+    // stylelint-enable
   }
 
   h1 {
@@ -235,6 +243,7 @@
   ol {
     padding-left: var(--pf-c-content--ol--PaddingLeft);
     margin-left: var(--pf-c-content--ol--MarginLeft);
+    list-style: var(--pf-c-content--ol--ListStyle, auto);
 
     ul {
       margin-top: var(--pf-c-content--ul--nested--MarginTop);
