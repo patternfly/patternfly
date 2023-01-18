@@ -1,6 +1,5 @@
 ---
 id: 'Helper text'
-beta: true
 section: components
 ---
 

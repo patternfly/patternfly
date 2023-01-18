@@ -37,7 +37,7 @@ Using the `.pf-m-full-height` modifier class on the page component eliminates th
 ```
 
 ### Sticky breadcrumb on medium
-```hbs isFullscreen isBeta
+```hbs isFullscreen
 {{> page-template
       page-template--id="page-demo-sticky-top-breadcrumb"
       page-template-gallery--IsLongGallery="true"
