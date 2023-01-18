@@ -368,7 +368,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
 
     @include pf-apply-breakpoint($breakpoint) {
       &.pf-m-column-gap#{$breakpoint-name} {
-        --pf-l-flex--ColumnGap: var(--pf-l-flex--RowGap-base);
+        --pf-l-flex--ColumnGap: var(--pf-l-flex--ColumnGap-base);
 
         > * {
           --pf-l-flex--spacer: 0;
