@@ -22,6 +22,15 @@
   --pf-c-empty-state--m-xl__icon--MarginBottom: var(--pf-global--spacer--xl);
   --pf-c-empty-state--m-xl__icon--FontSize: #{pf-size-prem(100px)};
 
+  // Title text
+  --pf-c-empty-state__title-text--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
+  --pf-c-empty-state__title-text--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-empty-state__title-text--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-empty-state__title-text--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-empty-state--m-xs__title-text--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-empty-state--m-xl__title-text--FontSize: var(--pf-global--FontSize--4xl);
+  --pf-c-empty-state--m-xl__title-text--LineHeight: var(--pf-global--LineHeight--sm);
+
   // Body
   --pf-c-empty-state__body--MarginTop: var(--pf-global--spacer--md);
   --pf-c-empty-state__body--Color: var(--pf-global--Color--200);
@@ -51,6 +60,7 @@
     --pf-c-empty-state--PaddingRight: var(--pf-c-empty-state--m-xs--PaddingRight);
     --pf-c-empty-state--PaddingBottom: var(--pf-c-empty-state--m-xs--PaddingBottom);
     --pf-c-empty-state--PaddingLeft: var(--pf-c-empty-state--m-xs--PaddingLeft);
+    --pf-c-empty-state__title-text--FontSize: var(--pf-c-empty-state--m-xs__title-text--FontSize);
     --pf-c-empty-state__content--MaxWidth: var(--pf-c-empty-state--m-xs__content--MaxWidth);
     --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xs__icon--MarginBottom);
     --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xs__body--MarginTop);
@@ -71,6 +81,8 @@
     --pf-c-empty-state--body--FontSize: var(--pf-c-empty-state--m-xl__body--FontSize);
     --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xl__icon--MarginBottom);
     --pf-c-empty-state__icon--FontSize: var(--pf-c-empty-state--m-xl__icon--FontSize);
+    --pf-c-empty-state__title-text--FontSize: var(--pf-c-empty-state--m-xl__title-text--FontSize);
+    --pf-c-empty-state__title-text--LineHeight: var(--pf-c-empty-state--m-xl__title-text--LineHeight);
   }
 
   &.pf-m-full-height {
@@ -87,6 +99,13 @@
   font-size: var(--pf-c-empty-state__icon--FontSize);
   line-height: 1;
   color: var(--pf-c-empty-state__icon--Color);
+}
+
+.pf-c-empty-state__title-text {
+  font-family: var(--pf-c-empty-state__title-text--FontFamily);
+  font-size: var(--pf-c-empty-state__title-text--FontSize);
+  font-weight: var(--pf-c-empty-state__title-text--FontWeight);
+  line-height: var(--pf-c-empty-state__title-text--LineHeight);
 }
 
 .pf-c-empty-state__body {
