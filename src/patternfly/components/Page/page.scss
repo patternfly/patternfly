@@ -78,8 +78,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__sidebar--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__sidebar--m-light--BorderRightWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-page__sidebar--m-light--BorderRightColor: var(--pf-global--BorderColor--100);
-  --pf-c-page__sidebar--m-light--c-divider--after--BackgroundColor: var(--pf-global--BorderColor--300);
-  --pf-c-page__sidebar--m-light--c-content--Color: var(--pf-global--Color--dark-100);
   --pf-c-page__sidebar--BoxShadow: var(--pf-global--BoxShadow--lg-right);
   --pf-c-page__sidebar--Transition: var(--pf-global--Transition);
   --pf-c-page__sidebar--TranslateX: -100%;
@@ -88,21 +86,20 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__sidebar--xl--TranslateX: 0;
 
   // Sidebar body
-  --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-page__sidebar-body--m-nav--PaddingTop: var(--pf-global--spacer--sm);
+  --pf-c-page__sidebar-body--m-nav--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__sidebar-body--m-menu--PaddingTop: 0;
   --pf-c-page__sidebar-body--m-menu--PaddingBottom: 0;
   --pf-c-page__sidebar-body--m-menu--BorderTopColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-page__sidebar-body--m-menu--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-page__sidebar-body--m-menu--c-context-selector--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-page__sidebar-body--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
-  --pf-c-page__sidebar-body--m-page-insets--xl--inset: var(--pf-global--spacer--lg); // make this the default inset at breaking change
-  --pf-c-page__sidebar-body--m-page-insets--PaddingRight: var(--pf-c-page__sidebar-body--m-page-insets--inset);
-  --pf-c-page__sidebar-body--m-page-insets--PaddingLeft: var(--pf-c-page__sidebar-body--m-page-insets--inset);
+  --pf-c-page__sidebar-body--m-inset--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-page__sidebar-body--m-inset--PaddingRight: var(--pf-global--spacer--lg);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__sidebar--TranslateX: var(--pf-c-page__sidebar--xl--TranslateX);
-    --pf-c-page__sidebar-body--m-page-insets--inset: var(--pf-c-page__sidebar-body--m-page-insets--xl--inset);
   }
 
   // Main
@@ -470,13 +467,29 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     }
   }
 
-  &.pf-m-no-padding {
-    --pf-c-page__sidebar-body--PaddingTop: 0;
-    --pf-c-page__sidebar-body--PaddingBottom: 0;
+  &.pf-m-nav {
+    --pf-c-page__sidebar-body--PaddingTop: var(--pf-c-page__sidebar-body--m-nav--PaddingTop);
+    --pf-c-page__sidebar-body--PaddingBottom: var(--pf-c-page__sidebar-body--m-nav--PaddingBottom);
   }
 
-  &.pf-m-align-bottom {
-    margin-top: auto;
+  &.pf-m-inset {
+    padding-right: var(--pf-c-page__sidebar-body--m-inset--PaddingRight);
+    padding-left: var(--pf-c-page__sidebar-body--m-inset--PaddingLeft);
+  }
+
+  &.pf-m-no-inset {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &.pf-m-no-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.pf-m-padding {
+    padding-top: var(--pf-c-page__sidebar-body--PaddingTop);
+    padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
   }
 
   &.pf-m-fill {

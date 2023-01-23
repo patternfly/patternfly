@@ -17,50 +17,25 @@ Using the `.pf-m-full-height` modifier class on the page component eliminates th
 {{> page-template page-template--id="page-demo-full-height" page-template--modifier="pf-m-full-height"}}
 ```
 
-### Using flex layout instead of multiple body elements
-```hbs isFullscreen
-{{> page-template page-template--id="multiple-body-elements-demo"}}
-
-{{#*inline "page-template-sidebar"}}
-  {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true"}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill"}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-u-h-100"}}
-        {{#> l-flex-item}}
-          {{> page-template-sidebar-nav}}
-        {{/l-flex-item}}
-        {{#> l-flex-item l-flex-item--modifier="pf-u-px-md pf-u-px-lg-on-xl"}}
-          other content
-        {{/l-flex-item}}
-        {{#> l-flex-item l-flex-item--modifier="pf-u-px-md pf-u-px-lg-on-xl pf-u-mt-auto"}}
-          footer content
-        {{/l-flex-item}}
-      {{/l-flex}}
-    {{/page-sidebar-body}}
-  {{/page-sidebar}}
-{{/inline}}
-```
-
 ### Multiple sidebar body elements
 ```hbs isFullscreen
-{{> page-template page-template--id="multiple-body-elements-demo"}}
+{{> page-template page-template--id="multiple-sidebar-body-elements-demo"}}
 
 {{#*inline "page-template-sidebar"}}
   {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true" page-sidebar--modifier="pf-m-expanded"}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-inset"}}
       {{#> content}}
         <p>Custom sidebar content</p>
       {{/content}}
     {{/page-sidebar-body}}
     {{> divider}}
-    {{#> page-sidebar-body}}
-      {{> page-template-sidebar-nav}}
-    {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
+    {{> page-template-sidebar-body--nav}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-inset"}}
       {{#> content}}
         <p>Custom sidebar content</p>
       {{/content}}
     {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-align-bottom pf-m-page-insets"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-inset"}}
       {{#> content}}
         <p>&copy;&nbsp;Copyright</p>
       {{/content}}

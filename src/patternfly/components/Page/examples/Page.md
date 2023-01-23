@@ -25,7 +25,7 @@ import './Page.css'
       header-tools
     {{/page-header-tools}}
   {{/page-header}}
-  {{#> page-sidebar}}
+  {{#> page-sidebar page-sidebar-body--modifier="pf-m-nav"}}
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
@@ -77,7 +77,7 @@ import './Page.css'
 {{/page}}
 ```
 
-### Using flex layout
+### Multiple sidebar body elements, padding, and fill
 ```hbs
 {{#> page}}
   {{#> page-header}}
@@ -94,66 +94,13 @@ import './Page.css'
     {{/page-header-tools}}
   {{/page-header}}
   {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true"}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill"}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-u-h-100"}}
-        {{#> l-flex-item}}
-          pf-c-nav
-        {{/l-flex-item}}
-        {{#> l-flex-item}}
-          other content
-        {{/l-flex-item}}
-        {{#> l-flex-item l-flex-item--modifier="pf-m-column pf-u-mt-auto"}}
-            footer content
-        {{/l-flex-item}}
-      {{/l-flex}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-nav"}}
+      Navigation
     {{/page-sidebar-body}}
-  {{/page-sidebar}}
-  {{#> page-main}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-    {{/page-main-section}}
-  {{/page-main}}
-{{/page}}
-```
-
-### Multiple sidebar body elements and page insets
-```hbs
-{{#> page}}
-  {{#> page-header}}
-    {{#> page-header-brand}}
-      {{#> page-header-brand-toggle}}
-        toggle
-      {{/page-header-brand-toggle}}
-      {{#> page-header-brand-link page-header-brand-link--href="#"}}
-        Logo
-      {{/page-header-brand-link}}
-    {{/page-header-brand}}
-    {{#> page-header-tools}}
-      header-tools
-    {{/page-header-tools}}
-  {{/page-header}}
-  {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true"}}
-    {{#> page-sidebar-body page-sidebar-body--modifier=""}}
-      pf-c-nav
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-inset"}}
+      inset content
     {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill"}}
-      {{#> l-flex l-flex--modifier="pf-m-column"}}
-        {{#> l-flex-item}}
-          other content
-        {{/l-flex-item}}
-        {{#> l-flex-item}}
-          footer content
-        {{/l-flex-item}}
-      {{/l-flex}}
-    {{/page-sidebar-body}}
-  {{/page-sidebar}}
-  {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true"}}
-    {{#> page-sidebar-body}}
-      pf-c-nav
-    {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
-      other content
-    {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-align-bottom pf-m-page-insets"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-inset"}}
       footer content
     {{/page-sidebar-body}}
   {{/page-sidebar}}
@@ -213,7 +160,7 @@ import './Page.css'
       header-tools
     {{/page-header-tools}}
   {{/page-header}}
-  {{#> page-sidebar}}
+  {{#> page-sidebar page-sidebar-body--modifier="pf-m-nav"}}
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
@@ -246,7 +193,7 @@ import './Page.css'
       header-tools
     {{/page-header-tools}}
   {{/page-header}}
-  {{#> page-sidebar}}
+  {{#> page-sidebar page-sidebar-body--modifier="pf-m-nav"}}
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
@@ -348,22 +295,24 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-selected` | `.pf-c-page__header-tools-item` | Modifies a header tools item to indicate that the button inside is in the selected state. |
 | `.pf-m-expanded` | `.pf-c-page__sidebar` |  Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-c-page__sidebar` |  Modifies the sidebar for the collapsed state. |
-| `.pf-m-page-insets` | `.pf-c-page__sidebar-body` | Modifies a sidebar body padding/inset to visually match padding of page elements. |
+| `.pf-m-inset` | `.pf-c-page__sidebar-body` | Modifies a sidebar body left/right inset to visually match padding of page elements. |
+| `.pf-m-no-inset` | `.pf-c-page__sidebar-body` | Removes a sidebar body left/right inset. |
+| `.pf-m-padding` | `.pf-c-page__sidebar-body` | Modifies a sidebar body top/bottom padding. |
+| `.pf-m-no-padding` | `.pf-c-page__sidebar-body` | Removes a sidebar body top/bottom padding. |
+| `.pf-m-nav` | `.pf-c-page__sidebar-body` | Modifies a sidebar body top/bottom padding to accomodate a navigation component. |
 | `.pf-m-light` | `.pf-c-page__sidebar` |  Modifies the sidebar the light variation. **Note: for use with a light themed nav component** |
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
 | `.pf-m-dark-200` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
 | `.pf-m-dark-100` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |
 | `.pf-m-light-200` | `.pf-c-page__main-wizard` | Modifies a wizard page section to have a light 200 theme. |
-| `.pf-m-no-padding`, `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-c-page__main-section`, `.pf-c-page__sidebar-body` | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-no-padding` | `.pf-c-page__sidebar-body` | Removes padding from the main page section body. |
 | `.pf-m-padding{-on-[breakpoint]}` | `.pf-c-page__main-section` | Modifies the main page section to add padding back in at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). Should be used with pf-m-no-padding. |
-| `.pf-m-fill` | `.pf-c-page__main-section`, `.pf-c-page__sidebar-body` | Modifies a main page section to grow to fill the available vertical space. |
+| `.pf-m-no-padding`, `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-fill` | `.pf-c-page__main-section`, `.pf-c-page__sidebar-body` | Modifies the element to grow to fill the available space. |
 | `.pf-m-no-fill` | `.pf-c-page__main-section` | Modifies a main page section to not grow to fill the available vertical space. |
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-page__header-tools-group`, `.pf-c-page__header-tools-item` | Hides a header tools group or item at an optional breakpoint, or hides it at all [breakpoints](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) with `.pf-m-hidden`. |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-page__header-tools-group`, `.pf-c-page__header-tools-item` | Shows a header tools group or item at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-limit-width` | `.pf-c-page__main-section` | Modifies a page section to limit the `max-width` of the content inside. |
 | `.pf-m-align-center` | `.pf-c-page__main-section.pf-m-limit-width` | Modifies a page section body to align center. |
-| `.pf-m-align-bottom` | `.pf-c-page__sidebar-body` | Modifies a page section body to align bottom.
 | `.pf-m-sticky-top{-on-[breakpoint]-height}` | `.pf-c-page__main-*` | Modifies a section/group to be sticky to the top of its container at an optional height breakpoint. |
 | `.pf-m-sticky-bottom{-on-[breakpoint]-height}` | `.pf-c-page__main-*` | Modifies a section/group to be sticky to the bottom of its container at an optional height breakpoint. |
 | `.pf-m-shadow-bottom` | `.pf-c-page__main-*` | Modifies a section/group to have a bottom shadow. |

@@ -1,4 +1,3 @@
-// stylelint-disable
 %pf-t-light {
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
@@ -7,10 +6,6 @@
   --pf-global--link--Color: var(--pf-global--link--Color--dark);
   --pf-global--link--Color--hover: var(--pf-global--link--Color--dark--hover);
   --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--light-100);
-
-  .pf-c-divider {
-    --pf-c-divider--after--BackgroundColor: var(--pf-global--BorderColor--100);
-  }
 }
 
 %pf-t-dark {
@@ -44,12 +39,7 @@
     --pf-c-button--m-secondary--focus--BorderColor: var(--pf-global--Color--light-100);
     --pf-c-button--m-secondary--active--BorderColor: var(--pf-global--Color--light-100);
   }
-
-  .pf-c-divider {
-    --pf-c-divider--after--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  }
 }
-// stylelint-enable
 
 // stylelint-disable
 %pf-hidden-visible {
