@@ -3,38 +3,51 @@
   --pf-c-empty-state--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-empty-state--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-empty-state--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-empty-state__content--MaxWidth: none;
-  --pf-c-empty-state__icon--MarginBottom: var(--pf-global--spacer--lg);
-  --pf-c-empty-state__icon--FontSize: var(--pf-global--icon--FontSize--xl);
-  --pf-c-empty-state__icon--Color: var(--pf-global--icon--Color--light);
-  --pf-c-empty-state__content--c-title--m-lg--FontSize: var(--pf-global--FontSize--xl);
-  --pf-c-empty-state__body--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-empty-state__body--Color: var(--pf-global--Color--200);
-  --pf-c-empty-state__primary--MarginTop: var(--pf-global--spacer--xl);
-  --pf-c-empty-state__primary--secondary--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-empty-state__secondary--MarginTop: var(--pf-global--spacer--xl);
-  --pf-c-empty-state__secondary--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-empty-state__secondary--child--MarginRight: calc(var(--pf-global--spacer--xs) / 2);
-  --pf-c-empty-state__secondary--child--MarginBottom: var(--pf-global--spacer--xs);
-  --pf-c-empty-state__secondary--child--MarginLeft: calc(var(--pf-global--spacer--xs) / 2);
-  --pf-c-empty-state--m-xs__content--MaxWidth: #{pf-size-prem(350px)};
-  --pf-c-empty-state--m-xs__body--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-empty-state--m-xs--button--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-empty-state--m-xs--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-empty-state--m-xs--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-empty-state--m-xs--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-empty-state--m-xs--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-empty-state--m-xs__icon--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-empty-state--m-xs__body--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-empty-state--m-xs__primary--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-empty-state--m-xs__secondary--MarginTop: var(--pf-global--spacer--md);
+
+  // Content
+  --pf-c-empty-state__content--MaxWidth: none;
+  --pf-c-empty-state--m-xs__content--MaxWidth: #{pf-size-prem(350px)};
   --pf-c-empty-state--m-sm__content--MaxWidth: #{pf-size-prem(400px)};
   --pf-c-empty-state--m-lg__content--MaxWidth: #{pf-size-prem(600px)};
-  --pf-c-empty-state--m-xl__body--FontSize: var(--pf-global--FontSize--xl);
-  --pf-c-empty-state--m-xl__body--MarginTop: var(--pf-global--spacer--lg);
+
+  // Icon
+  --pf-c-empty-state__icon--MarginBottom: var(--pf-global--spacer--lg);
+  --pf-c-empty-state__icon--FontSize: var(--pf-global--icon--FontSize--xl);
+  --pf-c-empty-state__icon--Color: var(--pf-global--icon--Color--light);
+  --pf-c-empty-state--m-xs__icon--MarginBottom: var(--pf-global--spacer--md);
   --pf-c-empty-state--m-xl__icon--MarginBottom: var(--pf-global--spacer--xl);
   --pf-c-empty-state--m-xl__icon--FontSize: #{pf-size-prem(100px)};
-  --pf-c-empty-state--m-xl--c-button__secondary--MarginTop: var(--pf-global--spacer--md);
+
+  // Title text
+  --pf-c-empty-state__title-text--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
+  --pf-c-empty-state__title-text--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-empty-state__title-text--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-empty-state__title-text--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-empty-state--m-xs__title-text--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-empty-state--m-xl__title-text--FontSize: var(--pf-global--FontSize--4xl);
+  --pf-c-empty-state--m-xl__title-text--LineHeight: var(--pf-global--LineHeight--sm);
+
+  // Body
+  --pf-c-empty-state__body--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-empty-state__body--Color: var(--pf-global--Color--200);
+  --pf-c-empty-state--body--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-empty-state--m-xs__body--FontSize: var(--pf-global--FontSize--sm);
+  --pf-c-empty-state--m-xs__body--MarginTop: var(--pf-global--spacer--md);
+  --pf-c-empty-state--m-xl__body--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-empty-state--m-xl__body--MarginTop: var(--pf-global--spacer--lg);
+
+  // Footer
+  --pf-c-empty-state__footer--RowGap: var(--pf-global--spacer--sm);
+  --pf-c-empty-state__footer--MarginTop: var(--pf-global--spacer--xl);
+  --pf-c-empty-state--m-xs__footer--MarginTop: var(--pf-global--spacer--md);
+
+  // Actions
+  --pf-c-empty-state__actions--RowGap: var(--pf-global--spacer--xs);
+  --pf-c-empty-state__actions--ColumnGap: var(--pf-global--spacer--xs);
 
   display: flex;
   align-items: center;
@@ -47,19 +60,12 @@
     --pf-c-empty-state--PaddingRight: var(--pf-c-empty-state--m-xs--PaddingRight);
     --pf-c-empty-state--PaddingBottom: var(--pf-c-empty-state--m-xs--PaddingBottom);
     --pf-c-empty-state--PaddingLeft: var(--pf-c-empty-state--m-xs--PaddingLeft);
+    --pf-c-empty-state__title-text--FontSize: var(--pf-c-empty-state--m-xs__title-text--FontSize);
     --pf-c-empty-state__content--MaxWidth: var(--pf-c-empty-state--m-xs__content--MaxWidth);
     --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xs__icon--MarginBottom);
     --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xs__body--MarginTop);
-    --pf-c-empty-state__primary--MarginTop: var(--pf-c-empty-state--m-xs__primary--MarginTop);
-    --pf-c-empty-state__secondary--MarginTop: var(--pf-c-empty-state--m-xs__secondary--MarginTop);
-
-    .pf-c-empty-state__body {
-      font-size: var(--pf-c-empty-state--m-xs__body--FontSize);
-    }
-
-    .pf-c-button {
-      --pf-c-button--FontSize: var(--pf-c-empty-state--m-xs--button--FontSize);
-    }
+    --pf-c-empty-state--body--FontSize: var(--pf-c-empty-state--m-xs__body--FontSize);
+    --pf-c-empty-state__footer--MarginTop: var(--pf-c-empty-state--m-xs__footer--MarginTop);
   }
 
   &.pf-m-sm {
@@ -72,13 +78,11 @@
 
   &.pf-m-xl {
     --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xl__body--MarginTop);
+    --pf-c-empty-state--body--FontSize: var(--pf-c-empty-state--m-xl__body--FontSize);
     --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xl__icon--MarginBottom);
     --pf-c-empty-state__icon--FontSize: var(--pf-c-empty-state--m-xl__icon--FontSize);
-    --pf-c-empty-state--c-button__secondary--MarginTop: var(--pf-c-empty-state--m-xl--c-button__secondary--MarginTop);
-
-    .pf-c-empty-state__body {
-      font-size: var(--pf-c-empty-state--m-xl__body--FontSize);
-    }
+    --pf-c-empty-state__title-text--FontSize: var(--pf-c-empty-state--m-xl__title-text--FontSize);
+    --pf-c-empty-state__title-text--LineHeight: var(--pf-c-empty-state--m-xl__title-text--LineHeight);
   }
 
   &.pf-m-full-height {
@@ -88,42 +92,39 @@
 
 .pf-c-empty-state__content {
   max-width: var(--pf-c-empty-state__content--MaxWidth);
-
-  > .pf-c-title.pf-m-lg {
-    font-size: var(--pf-c-empty-state__content--c-title--m-lg--FontSize);
-  }
 }
 
 .pf-c-empty-state__icon {
   margin-bottom: var(--pf-c-empty-state__icon--MarginBottom);
   font-size: var(--pf-c-empty-state__icon--FontSize);
+  line-height: 1;
   color: var(--pf-c-empty-state__icon--Color);
+}
+
+.pf-c-empty-state__title-text {
+  font-family: var(--pf-c-empty-state__title-text--FontFamily);
+  font-size: var(--pf-c-empty-state__title-text--FontSize);
+  font-weight: var(--pf-c-empty-state__title-text--FontWeight);
+  line-height: var(--pf-c-empty-state__title-text--LineHeight);
 }
 
 .pf-c-empty-state__body {
   margin-top: var(--pf-c-empty-state__body--MarginTop);
+  font-size: var(--pf-c-empty-state--body--FontSize);
   color: var(--pf-c-empty-state__body--Color);
 }
 
-@at-root .pf-c-empty-state__content > .pf-c-button.pf-m-primary,
-.pf-c-empty-state__primary {
-  margin-top: var(--pf-c-empty-state__primary--MarginTop);
-
-  + .pf-c-empty-state__secondary {
-    margin-top: var(--pf-c-empty-state__primary--secondary--MarginTop);
-  }
+.pf-c-empty-state__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--pf-c-empty-state__footer--RowGap);
+  margin-top: var(--pf-c-empty-state__footer--MarginTop);
 }
 
-.pf-c-empty-state__secondary {
+.pf-c-empty-state__actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: var(--pf-c-empty-state__secondary--MarginTop);
-  margin-bottom: var(--pf-c-empty-state__secondary--MarginBottom);
-
-  > * {
-    margin-right: var(--pf-c-empty-state__secondary--child--MarginRight);
-    margin-bottom: var(--pf-c-empty-state__secondary--child--MarginBottom);
-    margin-left: var(--pf-c-empty-state__secondary--child--MarginLeft);
-  }
+  gap: var(--pf-c-empty-state__actions--RowGap) var(--pf-c-empty-state__actions--ColumnGap);
 }
