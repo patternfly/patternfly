@@ -129,9 +129,9 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-code-block` | `<div>` | Initiates the code block component. **Required** |
-| `.pf-c-chip-group__header` | `<div>` | Initiates the code block header. |
-| `.pf-c-chip-group__actions` | `<div>` | Initiates the code block actions. |
-| `.pf-c-chip-group__actions-item` | `<div>` | Initiates a code block action item. |
-| `.pf-c-chip-group__content` | `<div>` | Initiates the code block content. **Required** |
-| `.pf-c-chip-group__pre` | `<pre>` | Initiates the code block `<pre>` element. **Required** |
-| `.pf-c-chip-group__code` | `<code>` | Initiates the code block `<code>` element. **Required** |
+| `.pf-c-code-block__header` | `<div>` | Initiates the code block header. |
+| `.pf-c-code-block__actions` | `<div>` | Initiates the code block actions. |
+| `.pf-c-code-block__actions-item` | `<div>` | Initiates a code block action item. |
+| `.pf-c-code-block__content` | `<div>` | Initiates the code block content. **Required** |
+| `.pf-c-code-block__pre` | `<pre>` | Initiates the code block `<pre>` element. **Required** |
+| `.pf-c-code-block__code` | `<code>` | Initiates the code block `<code>` element. **Required** |
