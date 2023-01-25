@@ -13,7 +13,9 @@
   --pf-c-card__body--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__footer--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__actions--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-card__actions--child--MarginLeft: var(--pf-global--spacer--sm);
+  --pf-c-card__actions--Gap: var(--pf-global--spacer--sm);
+  --pf-c-card__actions--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-card__actions--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
 
   // Expandable
   --pf-c-card__header-toggle--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
@@ -104,7 +106,6 @@
   // Toggle right
   --pf-c-card__header--m-toggle-right--toggle--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-card__header--m-toggle-right--toggle--MarginLeft: var(--pf-global--spacer--xs);
-  --pf-c-card__header--m-toggle-right--actions--MarginRight: 0;
 
   // Card input
   --pf-c-card__input--focus--BorderWidth: var(--pf-global--BorderWidth--md);
@@ -295,18 +296,14 @@
     --pf-c-card__header-toggle--MarginRight: var(--pf-c-card__header--m-toggle-right--toggle--MarginRight);
     --pf-c-card__header-toggle--MarginLeft: var(--pf-c-card__header--m-toggle-right--toggle--MarginLeft);
 
-    .pf-c-card__actions {
-      --pf-c-card__header-toggle--MarginRight: var(--pf-c-card__header--m-toggle-right--actions--MarginRight);
-    }
-
     .pf-c-card__header-toggle {
       order: 2;
     }
-
-    .pf-c-card__title {
-      flex: 1;
-    }
   }
+}
+
+.pf-c-card__header-main {
+  flex: 1;
 }
 
 .pf-c-card__header-toggle {
@@ -331,11 +328,8 @@
   align-self: flex-start;
   order: 1;
   padding-left: var(--pf-c-card__actions--PaddingLeft);
-  margin: var(--pf-c-card__header-toggle--MarginTop) var(--pf-c-card__header-toggle--MarginRight) var(--pf-c-card__header-toggle--MarginBottom) auto;
-
-  > * + * {
-    margin-left: var(--pf-c-card__actions--child--MarginLeft);
-  }
+  margin: var(--pf-c-card__actions--MarginTop) 0 var(--pf-c-card__actions--MarginBottom) auto;
+  gap: var(--pf-c-card__actions--Gap);
 
   + .pf-c-card__title,
   + .pf-c-card__body,
@@ -344,8 +338,8 @@
   }
 
   &.pf-m-no-offset {
-    --pf-c-card__header-toggle--MarginTop: 0;
-    --pf-c-card__header-toggle--MarginBottom: 0;
+    --pf-c-card__actions--MarginTop: 0;
+    --pf-c-card__actions--MarginBottom: 0;
   }
 }
 
