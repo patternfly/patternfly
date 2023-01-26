@@ -8,7 +8,7 @@
   --pf-c-chip-group--PaddingBottom: 0;
   --pf-c-chip-group--PaddingLeft: 0;
   --pf-c-chip-group--RowGap: var(--pf-global--spacer--sm);
-  --pf-c-chip-group--ColumnGap: var(--pf-global--spacer--sm);
+  --pf-c-chip-group--ColumnGap: 0;
 
   // Chip group main - spaces the category label and list
   --pf-c-chip-group__main--RowGap: var(--pf-global--spacer--xs);
@@ -31,10 +31,8 @@
   --pf-c-chip-group__label--MaxWidth: 18ch;
 
   // Chip group close - negative margin stretches height for click area
-  // margin-left supports legacy chip group
   --pf-c-chip-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-chip-group__close--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-chip-group__close--MarginLeft: calc(var(--pf-global--spacer--sm) * -1);
 
   max-width: 100%;
   padding-top: var(--pf-c-chip-group--PaddingTop);
@@ -95,5 +93,4 @@
   align-self: flex-start;
   margin-top: var(--pf-c-chip-group__close--MarginTop);
   margin-bottom: var(--pf-c-chip-group__close--MarginBottom);
-  margin-left: var(--pf-c-chip-group__close--MarginLeft);
 }
