@@ -25,7 +25,9 @@
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow1" aria-labelledby="{{table--id}}-node1">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute=(concat 'name="checkrow1" aria-labelledby="' table--id '-node1"')}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -55,7 +57,9 @@
 
       {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{table--id}}-node2">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute=(concat 'name="checkrow2" aria-labelledby="' table--id '-node2"')}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -85,7 +89,9 @@
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow3" aria-labelledby="{{table--id}}-node3">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute=(concat 'name="checkrow3" aria-labelledby="' table--id '-node3"')}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -115,7 +121,9 @@
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow4" aria-labelledby="{{table--id}}-node4">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute=(concat 'name="checkrow4" aria-labelledby="' table--id '-node4"')}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-th table-th--data-label="Repository name"}}
         <div>
@@ -145,7 +153,9 @@
 
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow4" aria-labelledby="{{table--id}}-node5">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute=(concat 'name="checkrow5" aria-labelledby="' table--id '-node5"')}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Repository name"}}
         <div>
