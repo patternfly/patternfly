@@ -13,8 +13,10 @@
   --pf-c-tooltip__content--FontSize: var(--pf-global--FontSize--sm);
 
   // Arrow variables
-  --pf-c-tooltip__arrow--Width: #{pf-size-prem(8px)};
-  --pf-c-tooltip__arrow--Height: #{pf-size-prem(8px)};
+  --pf-c-tooltip__arrow--Width: #{pf-size-prem(15px)};
+  --pf-c-tooltip__arrow--Height: #{pf-size-prem(15px)};
+  --pf-c-tooltip__arrow--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
+  --pf-c-tooltip__arrow--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-tooltip__arrow--m-top--TranslateX: -50%;
   --pf-c-tooltip__arrow--m-top--TranslateY: 50%;
   --pf-c-tooltip__arrow--m-top--Rotate: 45deg;
@@ -122,7 +124,8 @@
   width: var(--pf-c-tooltip__arrow--Width);
   height: var(--pf-c-tooltip__arrow--Height);
   pointer-events: none;
-  background-color: var(--pf-c-tooltip__content--BackgroundColor);
+  background-color: var(--pf-c-tooltip__arrow--BackgroundColor);
+  box-shadow: var(--pf-c-tooltip__arrow--BoxShadow);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
