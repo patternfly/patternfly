@@ -1,6 +1,7 @@
 <{{#if app-launcher--IsGrouped}}div{{else}}ul{{/if}} class="pf-c-app-launcher__menu{{#if app-launcher-menu--modifier}} {{app-launcher-menu--modifier}}{{/if}}"
   {{#unless app-launcher--IsGrouped}}
     aria-labelledby="{{app-launcher--id}}-button"
+    role="list"
   {{/unless}}
   {{#unless app-launcher--IsExpanded}}hidden{{/unless}}
   {{#if app-launcher-menu--attribute}}
