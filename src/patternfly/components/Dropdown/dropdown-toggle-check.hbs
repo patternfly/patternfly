@@ -8,7 +8,7 @@
   {{#> check check--modifier="pf-m-standalone"}}
     {{#> check-input 
       check-input--IsChecked=(concat dropdown-toggle-check--CheckboxIsChecked)
-      check--IsDisabled=(concat dropdown-toggle--IsDisabled dropdown-toggle-check--IsInProgress)
+      check-input--IsDisabled=(concat dropdown-toggle--IsDisabled dropdown-toggle-check--IsInProgress)
       check-input--attribute=(concat 'id="' dropdown--id '-toggle-check" aria-label="' (ternary dropdown-toggle-check--aria-label dropdown-toggle-check--aria-label 'check')'"' (ternary dropdown-toggle--split-button--text (concat 'aria-labelledby="' dropdown--id '-toggle-check ' dropdown--id '-toggle-check-text"') ''))
     }}{{/check-input}}
   {{/check}}
