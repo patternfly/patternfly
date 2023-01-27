@@ -51,7 +51,7 @@ cssPrefix: pf-c-check
   {{#> check-input check-input--attribute='id="check-disabled" name="check-disabled"'}}{{/check-input}}
   {{#> check-label check-label--attribute='for="check-disabled"'}}Check disabled{{/check-label}}
 {{/check}}
-{{#> check}}
+{{#> check check--IsDisabled="true"}}
   {{#> check-input check-input--attribute='id="check-disabled-2" name="check-disabled-2" checked'}}{{/check-input}}
   {{#> check-label check-label--attribute='for="check-disabled-2"'}}Check disabled checked{{/check-label}}
 {{/check}}
