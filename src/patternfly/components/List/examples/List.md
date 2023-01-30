@@ -62,7 +62,7 @@ cssPrefix: pf-c-list
 
 ### Plain
 ```hbs
-{{#> list list--type="ul" list--modifier="pf-m-plain"}}
+{{#> list list--modifier="pf-m-plain"}}
   <li>Donec blandit a lorem id convallis.</li>
   <li>Integer in volutpat libero.</li>
   <li>Donec a diam tellus.
