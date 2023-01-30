@@ -99,9 +99,11 @@ A Chip is used to display items that have been filtered or selected from a large
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-chip` | `<div>`, `<button>`, | Initiates the chip component. Use a `<button>` with overflow chips **Required** |
-| `.pf-c-chip__text` | `<span>` | Initiates the text inside of the chip. **Required** |
-| `.pf-c-chip__icon` | `<span>` | Initiates the icon inside of the chip. |
-| `.pf-c-button` | `.pf-c-chip <button>` | Initiates the button used to remove the chip. |
-| `.pf-c-badge` | `<span>` | Initiates the badge inside the chip. |
+| `.pf-c-chip__content` | `<span>` | Creates a content wrapper for the chip. **Required** |
+| `.pf-c-chip__text` | `<span>` | Initiates the text inside the chip. **Required** |
+| `.pf-c-chip__icon` | `<span>` | Initiates the icon inside the chip. |
+| `.pf-c-chip__actions` | `<span>` | Creates a wrapper for chip actions. **Required for removeable chips** |
+| `.pf-c-button` | `.pf-c-chip__actions <button>` | Initiates the button used to remove the chip. |
+| `.pf-c-badge` | `.pf-c-chip__content <span>` | Initiates the badge inside the chip. |
 | `.pf-m-overflow` | `button.pf-c-chip` | Applies styling of the overflow chip. |
 | `.pf-m-draggable` | `.pf-c-chip` | Modifies the chip to be in the draggable state. |
