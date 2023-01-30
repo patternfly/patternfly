@@ -9,59 +9,77 @@ cssPrefix: pf-c-chip
 ```hbs
 
 {{#> chip chip--type="div"}}
-  {{#> chip-text chip-text--attribute='id="chip_one"'}}
-    Chip
-  {{/chip-text}}
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-  {{/button}}
+  {{#> chip-content}}
+    {{#> chip-text chip-text--attribute='id="chip_one"'}}
+      Chip
+    {{/chip-text}}
+  {{/chip-content}}
+  {{#> chip-actions}}
+    {{#> button button--modifier="pf-m-plain pf-m-small" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/chip-actions}}
 {{/chip}}
 <br>
 <br>
 {{#> chip chip--type="div"}}
-  {{#> chip-text chip-text--attribute='id="chip_two"'}}
-    Really long chip that goes on and on
-  {{/chip-text}}
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_two chip_two" aria-label="Remove" id="remove_chip_two"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-  {{/button}}
+  {{#> chip-content}}
+    {{#> chip-text chip-text--attribute='id="chip_two"'}}
+      Really long chip that goes on and on
+    {{/chip-text}}
+  {{/chip-content}}
+  {{#> chip-actions}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_two chip_two" aria-label="Remove" id="remove_chip_two"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/chip-actions}}
 {{/chip}}
 <br>
 <br>
 {{#> chip chip--type="div"}}
-  {{#> chip-text chip-text--attribute='id="chip_three"'}}
-    Chip
-  {{/chip-text}}
-  {{#> badge badge--modifier="pf-m-read"}}
-    00
-  {{/badge}}
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_three chip_three" aria-label="Remove" id="remove_chip_three"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-  {{/button}}
+  {{#> chip-content}}
+    {{#> chip-text chip-text--attribute='id="chip_three"'}}
+      Chip
+    {{/chip-text}}
+    {{#> badge badge--modifier="pf-m-read"}}
+      00
+    {{/badge}}
+  {{/chip-content}}
+  {{#> chip-actions}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_three chip_three" aria-label="Remove" id="remove_chip_three"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/chip-actions}}
 {{/chip}}
 <br>
 <br>
 {{#> chip chip--type="div"}}
-  {{#> chip-text}}
-    Read-only chip
-  {{/chip-text}}
+  {{#> chip-content}}
+    {{#> chip-text}}
+      Read-only chip
+    {{/chip-text}}
+  {{/chip-content}}
 {{/chip}}
 <br>
 <br>
 {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-  {{#> chip-text}}
-    Overflow chip
-  {{/chip-text}}
+  {{#> chip-content}}
+    {{#> chip-text}}
+      Overflow chip
+    {{/chip-text}}
+  {{/chip-content}}
 {{/chip}}
 <br>
 <br>
 {{#> chip chip--type="div" chip--modifier="pf-m-draggable"}}
-  {{#> chip-icon}}
-    <i class="fas fa-grip-vertical" role="img" aria-label="Drag"></i>
-  {{/chip-icon}}
-  {{#> chip-text}}
-    Draggable chip
-  {{/chip-text}}
+  {{#> chip-content}}
+    {{#> chip-icon}}
+      <i class="fas fa-grip-vertical" role="img" aria-label="Drag"></i>
+    {{/chip-icon}}
+    {{#> chip-text}}
+      Draggable chip
+    {{/chip-text}}
+  {{/chip-content}}
 {{/chip}}
 ```
 
