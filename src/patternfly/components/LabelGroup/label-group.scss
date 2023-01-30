@@ -1,7 +1,21 @@
 .pf-c-label-group {
-  // List
-  --pf-c-label-group__list--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-label-group__list--MarginRight: calc(var(--pf-global--spacer--xs) * -1);
+  // Label group - spaces main with the close button
+  --pf-c-label-group--RowGap: var(--pf-global--spacer--sm);
+  --pf-c-label-group--ColumnGap: 0;
+  --pf-c-label-group-m-vertical--RowGap: var(--pf-global--spacer--sm);
+  --pf-c-label-group-m-vertical--ColumnGap: var(--pf-global--spacer--sm);
+
+  // Main - spaces the category label with the list
+  --pf-c-label-group__main--RowGap: var(--pf-global--spacer--xs);
+  --pf-c-label-group__main--ColumnGap: var(--pf-global--spacer--sm);
+  --pf-c-label-group-m-vertical__main--RowGap: var(--pf-global--spacer--sm);
+  --pf-c-label-group-m-vertical__main--ColumnGap: var(--pf-global--spacer--xs);
+
+  // List - spaces the items
+  --pf-c-label-group__list--RowGap: var(--pf-global--spacer--xs);
+  --pf-c-label-group__list--ColumnGap: var(--pf-global--spacer--xs);
+  --pf-c-label-group-m-vertical__list--RowGap: var(--pf-global--spacer--xs);
+  --pf-c-label-group-m-vertical__list--ColumnGap: var(--pf-global--spacer--xs);
 
   // Category
   --pf-c-label-group--m-category--PaddingTop: var(--pf-global--spacer--xs);
@@ -15,9 +29,6 @@
   --pf-c-label-group--m-category--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Label
-  --pf-c-label-group__label--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-label-group__label--MarginBottom: 0;
-  --pf-c-label-group--m-vertical__label--MarginBottom: var(--pf-global--spacer--sm);
   --pf-c-label-group__label--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-label-group__label--MaxWidth: 18ch;
 
@@ -26,13 +37,8 @@
   --pf-c-label-group__close--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-label-group--m-vertical__close--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-label-group--m-vertical__close--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-label-group--m-vertical__close--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-label-group--m-vertical__close--c-button--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-label-group--m-vertical__close--c-button--PaddingLeft: var(--pf-global--spacer--sm);
-
-  // List item
-  --pf-c-label-group__list-item--MarginRight: var(--pf-global--spacer--xs);
-  --pf-c-label-group__list-item--MarginBottom: var(--pf-global--spacer--xs);
 
   // Textarea
   --pf-c-label-group__textarea--MinWidth: #{pf-size-prem(200px)};
@@ -43,6 +49,8 @@
 
   display: inline-flex;
   align-items: center;
+  row-gap: var(--pf-c-label-group--RowGap);
+  column-gap: var(--pf-c-label-group--ColumnGap);
 
   &.pf-m-category {
     padding-top: var(--pf-c-label-group--m-category--PaddingTop);
@@ -55,11 +63,12 @@
   }
 
   &.pf-m-vertical {
-    --pf-c-label-group__list--MarginRight: 0;
-    --pf-c-label-group__list--MarginBottom: 0;
-    --pf-c-label-group__list-item--MarginRight: 0;
-    --pf-c-label-group__label--MarginRight: 0;
-    --pf-c-label-group__label--MarginBottom: var(--pf-c-label-group--m-vertical__label--MarginBottom);
+    --pf-c-label-group--RowGap: var(--pf-c-label-group-m-vertical--RowGap);
+    --pf-c-label-group--ColumnGap: var(--pf-c-label-group-m-vertical--ColumnGap);
+    --pf-c-label-group__main--RowGap: var(--pf-c-label-group-m-vertical__main--RowGap);
+    --pf-c-label-group__main--ColumnGap: var(--pf-c-label-group-m-vertical__main--ColumnGap);
+    --pf-c-label-group__list--RowGap: var(--pf-c-label-group-m-vertical__list--RowGap);
+    --pf-c-label-group__list--ColumnGap: var(--pf-c-label-group-m-vertical__list--ColumnGap);
     --pf-c-label-group__close--MarginTop: var(--pf-c-label-group--m-vertical__close--MarginTop);
     --pf-c-label-group__close--MarginLeft: var(--pf-c-label-group--m-vertical__close--MarginLeft);
     --pf-c-label-group__close--MarginBottom: 0;
@@ -77,10 +86,6 @@
 
     .pf-c-label-group__main {
       flex-direction: column;
-    }
-
-    .pf-c-label-group__list-item:last-child {
-      --pf-c-label-group__list-item--MarginBottom: 0;
     }
 
     .pf-c-label-group__close .pf-c-button {
@@ -110,31 +115,31 @@
   flex: 1;
   flex-wrap: wrap;
   align-items: baseline;
+  row-gap: var(--pf-c-label-group__main--RowGap);
+  column-gap: var(--pf-c-label-group__main--ColumnGap);
 }
 
 .pf-c-label-group__list {
   display: inline-flex;
   flex-wrap: wrap;
-  margin-right: var(--pf-c-label-group__list--MarginRight);
-  margin-bottom: var(--pf-c-label-group__list--MarginBottom);
+  row-gap: var(--pf-c-label-group__list--RowGap);
+  column-gap: var(--pf-c-label-group__list--ColumnGap);
 }
 
 .pf-c-label-group__list-item {
   display: inline-flex;
-  margin-right: var(--pf-c-label-group__list-item--MarginRight);
-  margin-bottom: var(--pf-c-label-group__list-item--MarginBottom);
 }
 
 .pf-c-label-group__label {
   @include pf-text-overflow;
 
   max-width: var(--pf-c-label-group__label--MaxWidth);
-  margin-right: var(--pf-c-label-group__label--MarginRight);
-  margin-bottom: var(--pf-c-label-group__label--MarginBottom);
   font-size: var(--pf-c-label-group__label--FontSize);
 }
 
 .pf-c-label-group__close {
+  display: flex;
+  align-self: start;
   margin-top: var(--pf-c-label-group__close--MarginTop);
   margin-right: var(--pf-c-label-group__close--MarginRight);
   margin-bottom: var(--pf-c-label-group__close--MarginBottom);
