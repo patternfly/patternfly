@@ -514,7 +514,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--modifier="pf-m-blue pf-m-active" label--id=(concat label-group--id '-editable-label-active') label--isRemovable="true" label--IsEditable="true" label--IsEditableActive="true"}}
+        {{#> label label--modifier="pf-m-blue" label--id=(concat label-group--id '-editable-label-active') label--IsEditable="true" label--IsEditableActive="true"}}
           Editable label 3, active
         {{/label}}
       {{/label-group-list-item}}
@@ -580,7 +580,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
         {{/label}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--modifier="pf-m-blue pf-m-active" label--id=(concat label-group--id '-editable-label-dynamic-3') label--isRemovable="true" label--IsEditable="true"}}
+        {{#> label label--modifier="pf-m-blue" label--id=(concat label-group--id '-editable-label-dynamic-3') label--isRemovable="true" label--IsEditable="true"}}
           Dynamic, editable label 3
         {{/label}}
       {{/label-group-list-item}}
