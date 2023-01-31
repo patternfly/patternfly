@@ -1,12 +1,7 @@
 <label>
-  <input type="checkbox"
-  {{#if table-check--name}}
-    name="{{table-check--name}}"
-  {{/if}}
-  {{#if table-check--aria-labelledby}}
-    aria-labelledby="{{table-check--aria-labelledby}}"
-  {{/if}}
-  {{#if table-check--aria-label}}
-    aria-label="{{table-check--aria-label}}"
-  {{/if}}>
+  {{#> check check--modifier="pf-m-standalone"}}
+    {{#> check-input 
+      check-input--attribute=(concat (ternary table-check--name (concat 'name="' table-check--name '"') '') (ternary table-check--aria-labelledby (concat ' aria-labelledby="' table-check--aria-labelledby '"') '') (ternary table-check--aria-label (concat ' aria-label="' table-check--aria-label '"') ''))
+    }}{{/check-input}}
+  {{/check}}
 </label>

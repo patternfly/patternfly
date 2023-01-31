@@ -2,7 +2,9 @@
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Select all rows">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute='name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Repositories

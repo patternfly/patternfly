@@ -5,21 +5,13 @@
   {{#if dropdown-toggle-check--attribute}}
     {{{dropdown-toggle-check--attribute}}}
   {{/if}}>
-  <input type="checkbox" id="{{dropdown--id}}-toggle-check"
-    {{#if (concat dropdown-toggle--IsDisabled dropdown-toggle-check--IsInProgress)}}
-      disabled
-    {{/if}}
-    {{#if dropdown-toggle-check--aria-label}}
-      aria-label="{{dropdown-toggle-check--aria-label}}"
-    {{else}}
-      aria-label="Check"
-    {{/if}}
-    {{#if dropdown-toggle-check--CheckboxIsChecked}}
-      checked
-    {{/if}}
-    {{#if dropdown-toggle--split-button--text}}
-      aria-labelledby="{{dropdown--id}}-toggle-check {{dropdown--id}}-toggle-check-text"
-    {{/if}}>
+  {{#> check check--modifier="pf-m-standalone"}}
+    {{#> check-input 
+      check-input--IsChecked=(concat dropdown-toggle-check--CheckboxIsChecked)
+      check-input--IsDisabled=(concat dropdown-toggle--IsDisabled dropdown-toggle-check--IsInProgress)
+      check-input--attribute=(concat 'id="' dropdown--id '-toggle-check" aria-label="' (ternary dropdown-toggle-check--aria-label dropdown-toggle-check--aria-label 'check')'"' (ternary dropdown-toggle--split-button--text (concat 'aria-labelledby="' dropdown--id '-toggle-check ' dropdown--id '-toggle-check-text"') ''))
+    }}{{/check-input}}
+  {{/check}}
   {{#if dropdown-toggle-check--IsProgress}}
     {{> dropdown-toggle-progress}}
   {{/if}}

@@ -8,7 +8,9 @@
         {{#if tree-view--HasCheckboxes}}
           {{#> table-td table-td--type="span" table-td--check="true"}}
             <label>
-              <input type="checkbox" name="{{table--id}}-checkrow-{{table-tr--tree--index}}" aria-labelledby="{{table--id}}-node-{{table-tr--tree--index}}">
+              {{#> check check--modifier="pf-m-standalone"}}
+                {{#> check-input check-input--attribute=(concat 'name="' table--id '-checkrow-' table-tr--tree--index '" aria-labelledby="' table--id '-node-' table-tr--tree--index '"')}}{{/check-input}}
+              {{/check}}
             </label>
           {{/table-td}}
         {{/if}}

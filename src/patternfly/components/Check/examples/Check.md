@@ -47,13 +47,13 @@ cssPrefix: pf-c-check
 
 ### Disabled
 ```hbs
-{{#> check}}
-  {{#> check-input check-input--attribute='id="check-disabled" name="check-disabled" disabled'}}{{/check-input}}
-  {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="check-disabled"'}}Check disabled{{/check-label}}
+{{#> check check--isDisabled="true"}}
+  {{#> check-input check-input--attribute='id="check-disabled" name="check-disabled"'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check-disabled"'}}Check disabled{{/check-label}}
 {{/check}}
-{{#> check}}
-  {{#> check-input check-input--attribute='id="check-disabled-2" name="check-disabled-2" checked disabled'}}{{/check-input}}
-  {{#> check-label check-label--modifier="pf-m-disabled" check-label--attribute='for="check-disabled-2"'}}Check disabled checked{{/check-label}}
+{{#> check check--IsDisabled="true"}}
+  {{#> check-input check-input--attribute='id="check-disabled-2" name="check-disabled-2" checked'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check-disabled-2"'}}Check disabled checked{{/check-label}}
 {{/check}}
 ```
 
