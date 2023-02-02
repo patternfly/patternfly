@@ -7,7 +7,7 @@
             {{#> label-group-main}}
               {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
                 {{#> label-group-list-item}}
-                  {{#> label label--modifier="pf-m-blue pf-m-outline"}}
+                  {{#> label label--color="blue" label--IsOutlined=true}}
                     {{#> label-icon}}
                       {{#if card-template-expandable-status-card--label-icon}}
                         {{{card-template-expandable-status-card--label-icon}}}
@@ -52,7 +52,7 @@
         {{#> l-flex l-flex--modifier="pf-m-grow pf-m-column pf-m-row-on-lg pf-m-justify-content-flex-end pf-m-justify-content-flex-start-on-lg pf-m-align-content-flex-end-on-lg" l-flex--attribute='style="row-gap: var(--pf-global--spacer--md);"'}}
           {{#if card-template-expandable-status-card--HasIncident}}
             {{#> l-flex-item l-flex-item--attribute='style="margin-bottom: -.25em"'}}
-              {{#> label label--modifier="pf-m-red"}}
+              {{#> label label--color="red"}}
                 Incident
               {{/label}}
             {{/l-flex-item}}

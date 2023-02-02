@@ -1,10 +1,46 @@
-<{{# if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else if label--IsAdd}}button{{else}}span{{/if}} class="pf-c-label{{#if label--IsOverflow}} pf-m-overflow{{/if}}{{#if label--IsAdd}} pf-m-add{{/if}}{{#if label--modifier}} {{label--modifier}}{{/if}}{{#if label--IsEditable}} pf-m-editable{{/if}}{{#if label--IsEditableActive}} pf-m-editable-active{{/if}}"
-  {{#if label--IsOverflow}}type="button"{{else if label--IsAdd}}type="button"{{/if}}
+<{{# if label--type}}{{label--type}}{{else if label--IsOverflow}}button{{else if label--IsAdd}}button{{else}}span{{/if}} class="pf-c-label
+  {{#if label--IsOutlined}} pf-m-outline{{/if}}
+  {{#if label--IsCompact}} pf-m-compact{{/if}}
+  {{#if label--IsOverflow}} pf-m-overflow{{/if}}
+  {{#if label--IsAdd}} pf-m-add{{/if}}
+  {{#if label--IsEditable}} pf-m-editable{{/if}}
+  {{#if label--IsEditableActive}} pf-m-editable-active{{/if}}
+  {{#ifEquals label--color "blue"}}
+    pf-m-blue
+  {{/ifEquals}}
+  {{#ifEquals label--color "green"}}
+    pf-m-green
+  {{/ifEquals}}
+  {{#ifEquals label--color "orange"}}
+    pf-m-orange
+  {{/ifEquals}}
+  {{#ifEquals label--color "red"}}
+    pf-m-red
+  {{/ifEquals}}
+  {{#ifEquals label--color "purple"}}
+    pf-m-purple
+  {{/ifEquals}}
+  {{#ifEquals label--color "cyan"}}
+    pf-m-cyan
+  {{/ifEquals}}
+  {{#ifEquals label--color "gold"}}
+    pf-m-gold
+  {{/ifEquals}}
+  {{#if label--modifier}} {{label--modifier}}{{/if}}"
+  {{#if label--IsOverflow}}
+    type="button"
+  {{else if label--IsAdd}}
+    type="button"
+  {{/if}}
   {{#if label--attribute}}
     {{{label--attribute}}}
   {{/if}}>
   {{#> label-content}}
-    {{~> @partial-block}}
+    {{#if label-text--text}}
+      {{> label-text}}
+    {{else if @partial-block}}
+      {{> @partial-block}}
+    {{/if}}
   {{/label-content}}
   {{#if label--isRemovable}}
     {{#> label-actions}}

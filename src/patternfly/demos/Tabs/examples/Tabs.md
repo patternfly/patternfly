@@ -55,7 +55,7 @@ section: components
                 {{#> description-list-description}}
                   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                     {{#> l-flex-item}}
-                      {{#> label label--id="gray-icon" label--modifier="pf-m-cyan"}}
+                      {{#> label label--id="cyan-icon" label--color="cyan"}}
                         NS
                       {{/label}}
                     {{/l-flex-item}}
@@ -82,12 +82,12 @@ section: components
                     {{#> label-group-main}}
                       {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
                         {{#> label-group-list-item}}
-                          {{#> label label--modifier="pf-m-outline"}}
+                          {{#> label label--IsOutlined=true}}
                             app=3scale-gateway
                           {{/label}}
                         {{/label-group-list-item}}
                         {{#> label-group-list-item}}
-                          {{#> label label--modifier="pf-m-outline"}}
+                          {{#> label label--IsOutlined=true}}
                             pod-template-has=6747686899
                           {{/label}}
                         {{/label-group-list-item}}
@@ -135,7 +135,7 @@ section: components
                 {{#> description-list-description}}
                   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                     {{#> l-flex-item}}
-                      {{#> label label--id="gray-icon" label--modifier="pf-m-purple"}}
+                      {{#> label label--id="purple-icon" label--color="purple"}}
                         N
                       {{/label}}
                     {{/l-flex-item}}
@@ -208,7 +208,7 @@ section: components
                   {{#> description-list-description}}
                     {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                       {{#> l-flex-item}}
-                        {{#> label label--id="gray-icon" label--modifier="pf-m-cyan"}}
+                        {{#> label label--id="cyan-icon" label--color="cyan"}}
                           NS
                         {{/label}}
                       {{/l-flex-item}}
@@ -257,7 +257,7 @@ section: components
                   {{#> description-list-description}}
                     {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                       {{#> l-flex-item}}
-                        {{#> label label--id="gray-icon" label--modifier="pf-m-purple"}}
+                        {{#> label label--id="purple-icon" label--color="purple"}}
                           N
                         {{/label}}
                       {{/l-flex-item}}

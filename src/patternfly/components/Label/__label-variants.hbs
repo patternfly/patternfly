@@ -1,0 +1,38 @@
+{{> label label--id=(concat __label-variants--id '-default') label-text--text=__label-variants--title}}
+
+{{#> label label--id=(concat __label-variants--id '-icon')}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{> label-text label-text--text=(concat __label-variants--title ' icon')}}
+{{/label}}
+
+{{#> label label--id=(concat __label-variants--id '-removable') label--isRemovable="true"}}
+  {{> label-text label-text--text=(concat __label-variants--title ' removable')}}
+{{/label}}
+
+{{#> label label--id=(concat __label-variants--id '-icon-removable') label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{> label-text label-text--text=(concat __label-variants--title ' icon removable')}}
+{{/label}}
+
+{{#> label label--id=(concat __label-variants--id '-link') label-content--IsLink="true"}}
+  {{> label-text label-text--text=(concat __label-variants--title ' link')}}
+{{/label}}
+
+{{#> label label--id=(concat __label-variants--id '-link-removable') label-content--IsLink="true" label--isRemovable="true"}}
+  {{> label-text label-text--text=(concat __label-variants--title ' link removable')}}
+{{/label}}
+
+{{#> label label--id=(concat __label-variants--id '-truncate') label--isRemovable="true"}}
+  {{#> label-icon}}
+    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+  {{/label-icon}}
+  {{> label-text label-text--text=(concat __label-variants--title ' label with icon that truncates')}}
+{{/label}}
+
+{{#if @partial-block}}
+  {{> @partial-block}}
+{{/if}}

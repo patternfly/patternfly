@@ -24,7 +24,7 @@ import './Card.css'
           {{#> label-group-main}}
             {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
               {{#> label-group-list-item}}
-                {{#> label label--modifier="pf-m-blue pf-m-compact"}}
+                {{#> label label--color="blue" label--IsCompact=true}}
                   {{#> label-icon}}
                     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
                   {{/label-icon}}
@@ -32,7 +32,7 @@ import './Card.css'
                 {{/label}}
               {{/label-group-list-item}}
               {{#> label-group-list-item}}
-                {{#> label label--modifier="pf-m-purple pf-m-compact"}}
+                {{#> label label--color="purple" label--IsCompact=true}}
                   {{#> label-icon}}
                     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
                   {{/label-icon}}
@@ -40,7 +40,7 @@ import './Card.css'
                 {{/label}}
               {{/label-group-list-item}}
               {{#> label-group-list-item}}
-                {{#> label label--modifier="pf-m-green pf-m-compact"}}
+                {{#> label label--color="green" label--IsCompact=true}}
                   {{#> label-icon}}
                     <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
                   {{/label-icon}}
@@ -48,7 +48,7 @@ import './Card.css'
                 {{/label}}
               {{/label-group-list-item}}
               {{#> label-group-list-item}}
-                {{#> label label--IsOverflow="true" label--modifier="pf-m-compact"}}
+                {{#> label label--IsOverflow="true" label--IsCompact=true}}
                   1 more
                 {{/label}}
               {{/label-group-list-item}}
@@ -80,7 +80,7 @@ import './Card.css'
       {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-all-3-col-on-lg pf-m-gutter"}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{#> label label--modifier="pf-m-blue"}}
+            {{#> label label--color="blue"}}
               {{#> label-icon}}
                 <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
               {{/label-icon}}
@@ -108,7 +108,7 @@ import './Card.css'
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{#> label label--modifier="pf-m-purple"}}
+            {{#> label label--color="purple"}}
               {{#> label-icon}}
                 <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
               {{/label-icon}}
@@ -133,7 +133,7 @@ import './Card.css'
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{#> label label--modifier="pf-m-green"}}
+            {{#> label label--color="green"}}
               {{#> label-icon}}
                 <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
               {{/label-icon}}
@@ -161,7 +161,7 @@ import './Card.css'
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
-            {{#> label label--modifier="pf-m-orange"}}
+            {{#> label label--color="orange"}}
               {{#> label-icon}}
                 <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
               {{/label-icon}}

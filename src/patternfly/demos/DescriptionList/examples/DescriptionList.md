@@ -55,7 +55,7 @@ cssPrefix: pf-d-description-list
       {{#> description-list-description}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
           {{#> l-flex-item}}
-            {{#> label label--id="default-green" label--modifier="pf-m-green"}}
+            {{#> label label--id="default-green" label--color="green"}}
               NS
             {{/label}}
           {{/l-flex-item}}
@@ -305,7 +305,7 @@ cssPrefix: pf-d-description-list
                 {{#> description-list-description}}
                   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                     {{#> l-flex-item}}
-                      {{#> label label--id="default-green" label--modifier="pf-m-green"}}
+                      {{#> label label--id="default-green" label--color="green"}}
                         NS
                       {{/label}}
                     {{/l-flex-item}}
@@ -458,7 +458,7 @@ cssPrefix: pf-d-description-list
                         {{#> table-td table-td--data-label="Port"}}
                           {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                             {{#> l-flex-item}}
-                              {{#> label label--id="default-green" label--modifier="pf-m-green pf-m-compact"}}
+                              {{#> label label--id="default-green" label--color="green" label--IsCompact=true}}
                                 S
                               {{/label}}
                             {{/l-flex-item}}
@@ -473,7 +473,7 @@ cssPrefix: pf-d-description-list
                         {{#> table-td table-td--data-label="Pod port or name"}}
                           {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                             {{#> l-flex-item}}
-                              {{#> label label--id="default-cyan" label--modifier="pf-m-cyan pf-m-compact"}}
+                              {{#> label label--id="default-cyan" label--color="cyan" label--IsCompact=true}}
                                 P
                               {{/label}}
                             {{/l-flex-item}}

@@ -411,7 +411,7 @@ section: components
                   {{/label}}
                 {{/label-group-list-item}}
                 {{#> label-group-list-item}}
-                  {{#> label label--modifier="pf-m-blue" label--isRemovable="true" label--id=(concat label-group--id '-label-2')}}
+                  {{#> label label--id=(concat label-group--id '-label-2') label--color="blue" label--isRemovable="true"}}
                     {{#> label-icon}}
                       <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
                     {{/label-icon}}
@@ -430,7 +430,7 @@ section: components
       {{> text-input-group-text-input}}
     {{/text-input-group-text}}
             {{/text-input-group-main}}
-        {{/text-input-group}} 
+        {{/text-input-group}}
     {{/form-group-control}}
   {{/form-group}}
 
@@ -461,7 +461,7 @@ section: components
       {{/form-field-group-header-main}}
     {{/form-field-group-header}}
   {{/form-field-group}}
-  
+
   {{!-- Affinity field group --}}
   {{#> form-field-group form-field-group--id=(concat form--id '-affinity') form-field-group--IsExpandable="true" }}
     {{#> form-field-group-header}}
@@ -571,7 +571,7 @@ section: components
 
     {{/form-field-group-body}}
   {{/form-field-group}}{{!-- Affinity field group --}}
-  
+
   {{!-- Routing field group --}}
   {{#> form-field-group form-field-group--id=(concat form--id '-routing') form-field-group--IsExpandable="true" form-field-group--IsExpanded="true"}}
     {{#> form-field-group-header}}

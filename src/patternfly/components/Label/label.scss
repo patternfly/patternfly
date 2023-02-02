@@ -4,6 +4,7 @@
   --pf-c-label--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-label--PaddingBottom: var(--pf-global--spacer--xs);
   --pf-c-label--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-label--MaxWidth: 100%;
   --pf-c-label--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-label--BackgroundColor: var(--pf-global--palette--black-150);
   --pf-c-label--Color: var(--pf-global--Color--100);
@@ -139,8 +140,11 @@
   --pf-c-label--m-outline__content--Color: var(--pf-global--Color--100);
   --pf-c-label--m-editable__content--MaxWidth: 16ch;
 
-  // text
-  --pf-c-label__text--MaxWidth: 16ch;
+  // Text
+  --pf-c-label__text--MaxWidth: 100%;
+
+  // Truncate
+  --pf-c-label__text--m-truncate--MaxWidth: 16ch;
 
   // Icon
   --pf-c-label__icon--Color: var(--pf-global--Color--100);
@@ -184,6 +188,7 @@
 
   position: relative;
   display: flex;
+  max-width: var(--pf-c-label--MaxWidth);
   padding: var(--pf-c-label--PaddingTop) var(--pf-c-label--PaddingRight) var(--pf-c-label--PaddingBottom) var(--pf-c-label--PaddingLeft);
   font-size: var(--pf-c-label--FontSize);
   color: var(--pf-c-label--Color);
@@ -401,12 +406,15 @@
   @include pf-text-overflow;
 
   max-width: var(--pf-c-label__text--MaxWidth);
+
+  &.pf-m-truncate {
+    --pf-c-label__text--MaxWidth: var(--pf-c-label__text--m-truncate--MaxWidth);
+  }
 }
 
 .pf-c-label__content {
-  @include pf-text-overflow;
-
   max-width: var(--pf-c-label__content--MaxWidth);
+  overflow: hidden;
   color: var(--pf-c-label__content--Color);
   background-color: var(--pf-c-label__content--BackgroundColor);
   border-width: 0;
@@ -423,11 +431,18 @@
     border-radius: var(--pf-c-label--BorderRadius);
   }
 
+  // truncate input fields
+  @at-root input#{&} {
+    @include pf-text-overflow;
+  }
+
   // the content element can be used as a link
   @at-root {
     a#{&},
     button#{&} {
+      padding: 0;
       cursor: pointer;
+      background-color: transparent;
       border: none;
 
       &,
