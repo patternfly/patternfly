@@ -1,6 +1,5 @@
 ---
 id: 'Description list'
-beta: true
 section: components
 cssPrefix: pf-d-description-list
 ---

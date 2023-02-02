@@ -25,6 +25,7 @@ id: Icons
 | container-node | <i class="pf-icon pf-icon-container-node"></i> | &lt;i class=&quot;pf-icon pf-icon-container-node&quot;&gt;&lt;/i&gt;
 | cpu | <i class="pf-icon pf-icon-cpu"></i> | &lt;i class=&quot;pf-icon pf-icon-cpu&quot;&gt;&lt;/i&gt;
 | critical-risk | <i class="pf-icon pf-icon-critical-risk"></i> | &lt;i class=&quot;pf-icon pf-icon-critical-risk&quot;&gt;&lt;/i&gt;
+| data-processor | <i class="pf-icon pf-icon-data-processor"></i> | &lt;i class=&quot;pf-icon pf-icon-data-processor&quot;&gt;&lt;/i&gt;
 | data-sink | <i class="pf-icon pf-icon-data-sink"></i> | &lt;i class=&quot;pf-icon pf-icon-data-sink&quot;&gt;&lt;/i&gt;
 | data-source | <i class="pf-icon pf-icon-data-source"></i> | &lt;i class=&quot;pf-icon pf-icon-data-source&quot;&gt;&lt;/i&gt;
 | degraded | <i class="pf-icon pf-icon-degraded"></i> | &lt;i class=&quot;pf-icon pf-icon-degraded&quot;&gt;&lt;/i&gt;
