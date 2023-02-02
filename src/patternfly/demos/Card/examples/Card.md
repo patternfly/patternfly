@@ -17,9 +17,7 @@ import './Card.css'
     {{/card-actions}}
     {{#> card-header-main}}
       {{#> split split--modifier="pf-m-gutter pf-m-wrap"}}
-        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-          Getting started
-        {{/card-title}}
+        {{> card-title card-title-text--element="h2" card-title-text--text="Getting started" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
         {{#> label-group label-group--id="label-group-basic"}}
           {{#> label-group-main}}
             {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -61,8 +59,8 @@ import './Card.css'
       {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain="true"}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        Getting started
+      {{#> card-title}}
+        {{> card-title-text card-title-text--text="Getting started" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
       {{/card-title}}
     {{/card-header-main}}
   {{/card-header}}
@@ -171,9 +169,7 @@ import './Card.css'
     {{#> grid-item grid-item--modifier="pf-d-card__media-item" grid-item--attribute='style="min-height: 200px; background: center / cover url(\'/assets/images/pfbg_992@2x.jpg\'); "'}}
     {{/grid-item}}
     {{#> grid-item}}
-      {{#> card-title}}
-        Headline
-      {{/card-title}}
+      {{> card-title card-title-text--text="Headline"}}
       {{#> card-body}}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse arcu purus, lobortis nec euismod eu, tristique ut sapien. Nullam turpis lectus, aliquet sit amet volutpat eu, semper eget quam. Maecenas in tempus diam. Aenean interdum velit sed massa aliquet, sit amet malesuada nulla hendrerit. Aenean non faucibus odio. Etiam non metus turpis. Praesent sollicitudin elit neque, id ullamcorper nibh faucibus eget.
       {{/card-body}}
@@ -307,17 +303,13 @@ import './Card.css'
   {{#> grid-item}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
       {{#> card card--modifier="pf-u-text-align-center"}}
-        {{#> card-title}}
-          5 Clusters
-        {{/card-title}}
+        {{> card-title card-title-text--text="5 Clusters" card-title-text--element="h2"}}
         {{#> card-body}}
           <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
         {{/card-body}}
       {{/card}}
       {{#> card card--modifier="pf-u-text-align-center"}}
-        {{#> card-title}}
-          15 Clusters
-        {{/card-title}}
+        {{> card-title card-title-text--text="15 Clusters" card-title-text--element="h2"}}
         {{#> card-body}}
           <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
         {{/card-body}}

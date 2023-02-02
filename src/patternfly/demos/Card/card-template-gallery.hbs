@@ -3,9 +3,7 @@
     {{#> bullseye}}
       {{#> empty-state empty-state--modifier="pf-m-xs"}}
         <i class="fas fa-plus-circle pf-c-empty-state__icon"></i>
-        {{#> title titleType="h2" title--modifier="pf-m-md"}}
-          Add a new card to your page
-        {{/title}}
+        {{> card-title card-title-text--text="Add a new card to your page" card-title-text--modifier="pf-m-md"}}
         {{#> empty-state-secondary}}
           {{#> button button--modifier="pf-m-link"}}
             Add card
@@ -25,10 +23,13 @@
       {{/card-actions}}
     {{/card-header}}
     {{#> card-title}}
-      <p id="{{card--id}}-check-label">Patternfly</p>
+      {{> card-title-text card-title-text--text="Patternfly" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
+    {{/card-title}}
+    {{#> card-title}}
+      <p id="{{card--id}}-check-label">Patternfly</p>
     {{/card-title}}
     {{#> card-body}}
         PatternFly is a community project that promotes design commonality and improves user experience.
@@ -45,7 +46,7 @@
       {{/card-actions}}
     {{/card-header}}
     {{#> card-title}}
-      <p id="{{card--id}}-check-label">ActiveMQ</p>
+      {{> card-title-text card-title-text--text="ActiveMQ" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -65,7 +66,7 @@
       {{/card-actions}}
     {{/card-header}}
     {{#> card-title}}
-      <p id="{{card--id}}-check-label">Apache Spark</p>
+      {{> card-title-text card-title-text--text="Apache Spark" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -85,7 +86,7 @@
       {{/card-actions}}
     {{/card-header}}
     {{#> card-title}}
-      <p id="{{card--id}}-check-label">Avro</p>
+      {{> card-title-text card-title-text--text="Avro" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -105,7 +106,7 @@
     {{/card-actions}}
   {{/card-header}}
   {{#> card-title}}
-    <p id="{{card--id}}-check-label">Azure Services</p>
+    {{> card-title-text card-title-text--text="Azure Services" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
     {{#> content}}
       <small>Provided by Red Hat</small>
     {{/content}}
@@ -115,7 +116,7 @@
   {{/card-body}}
   {{/card}}
   {{#> card card--id=(concat card-template-gallery--id '-card-6') card--modifier="pf-m-non-selectable-raised pf-m-compact"}}
-  {{#> card-header}}
+    {{#> card-header}}
       <img src="/assets/images/camel-saxon_200x150.png" width="60px" alt="Logo">
       {{#> card-actions}}
         {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
@@ -125,7 +126,7 @@
       {{/card-actions}}
     {{/card-header}}
     {{#> card-title}}
-      <p id="{{card--id}}-check-label">Crypto</p>
+      {{> card-title-text card-title-text--text="Crypto" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -145,7 +146,7 @@
       {{/card-actions}}
     {{/card-header}}
     {{#> card-title}}
-      <p id="{{card--id}}-check-label">DropBox</p>
+      {{> card-title-text card-title-text--text="DropBox" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -165,7 +166,7 @@
       {{/card-actions}}
     {{/card-header}}
     {{#> card-title}}
-      <p id="{{card--id}}-check-label">JBoss Data Grid</p>
+      {{> card-title-text card-title-text--text="JBoss Data Grid" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -185,7 +186,7 @@
       {{/card-actions}}
     {{/card-header}}
     {{#> card-title}}
-      <p id="{{card--id}}-check-label">REST</p>
+      {{> card-title-text card-title-text--text="Rest" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -206,7 +207,7 @@
       {{/card-actions}}
     {{/card-header}}
     {{#> card-title}}
-      <p id="{{card--id}}-check-label">SWAGGER</p>
+      {{> card-title-text card-title-text--text="SWAGGER" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}

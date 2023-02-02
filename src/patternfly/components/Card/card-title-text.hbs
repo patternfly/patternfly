@@ -1,0 +1,10 @@
+<div class="pf-c-card__title-text{{#if card-title-text--modifier}} {{card-title-text--modifier}}{{/if}}"
+  {{#if card-title-text--attribute}}
+    {{{card-title-text--attribute}}}
+  {{/if}}>
+  {{#if card-title-text--text}}
+    {{card-title-text--text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</div>

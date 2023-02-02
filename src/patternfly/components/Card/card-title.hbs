@@ -2,5 +2,9 @@
   {{#if card-title--attribute}}
     {{{card-title--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if card-title-text--text}}
+    {{> card-title-text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>
