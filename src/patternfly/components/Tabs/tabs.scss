@@ -147,9 +147,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
   --pf-c-tabs__item-action--c-button--OutlineOffset: #{pf-size-prem(-3px)};
   --pf-c-tabs__item-action-icon--MarginTop: #{pf-size-prem(2px)};
 
-  // Item help
-  --pf-c-tabs__item-action--m-help--c-button--PaddingLeft: var(--pf-global--spacer--xs);
-
   // Add button
   --pf-c-tabs__add--before--BorderColor: var(--pf-c-tabs__link--before--border-color--base);
   --pf-c-tabs__add--before--BorderLeftWidth: var(--pf-c-tabs__link--before--border-width--base);
@@ -705,10 +702,6 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
     --pf-c-button--PaddingLeft: var(--pf-c-tabs__item-action--c-button--PaddingLeft);
 
     outline-offset: var(--pf-c-tabs__item-action--c-button--OutlineOffset);
-  }
-
-  &.pf-m-help {
-    --pf-c-tabs__item-action--c-button--PaddingLeft: var(--pf-c-tabs__item-action--m-help--c-button--PaddingLeft);
   }
 
   &:last-child {
