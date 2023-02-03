@@ -52,6 +52,7 @@
     "declaration-no-important": true,
     "font-weight-notation": "numeric",
     "function-comma-newline-before": "never-multi-line",
+    "import-notation": "string",
     "keyframes-name-pattern": null,
     "max-empty-lines": 2,
     "max-line-length": null,

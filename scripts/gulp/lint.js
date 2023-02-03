@@ -51,7 +51,8 @@ const validCSSFunctions = [
   'url',
   'min',
   'max',
-  'clamp'
+  'clamp',
+  'invert'
 ];
 const functionRegex = /:\s+(\w[\w\d]+)\(.*\)/gi;
 
