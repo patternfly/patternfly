@@ -67,8 +67,8 @@
     "postcss-css-variables": "^0.18.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.8.3",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "remark-parse": "^8.0.3",
     "remark-stringify": "^8.1.0",
     "rimraf": "*",
@@ -82,7 +82,7 @@
     "stylelint-value-no-unknown-custom-properties": "^4.0.0",
     "surge": "^0.23.1",
     "unified": "^9.2.0",
-    "webpack": "^4.43.0"
+    "webpack": "^5.75.0"
   },
   "resolutions": {
     "@babel/preset-env": "7.6.3",
