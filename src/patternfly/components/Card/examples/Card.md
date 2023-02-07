@@ -476,7 +476,7 @@ A card is a generic rectangular container that can be used to build other compon
 | ---- | ---- | ---- |
 | `.pf-c-card` | `<div>` | Creates a card component.  **Required** |
 | `.pf-c-card__title` | `<div>` | Creates a card title container. |
-| `.pf-c-card__title-text` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`, `<div>` | Creates the title text of a card. |
+| `.pf-c-card__title-text` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`, `<div>` | **Required** if using component native title element. |
 | `.pf-c-card__body` | `<div>` | Creates the body of a card. By default, the body element fills the available space in the card. You can use multiple `.pf-c-card__body` elements. |
 | `.pf-c-card__footer` | `<div>` | Creates the footer of a card. |
 | `.pf-c-card__header` | `<div>` | Creates the header of the card where images, actions, and/or the card title can go. |
