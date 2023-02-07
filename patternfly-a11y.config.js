@@ -10,7 +10,7 @@ const urls = Object.keys(fullscreenRoutes)
       return key;
     } else {
       const path = fullscreenRoutes[key].path
-      if (path.match(/\/demos\/.*\/html-demos$/g)){
+      if (path.match(/\/demos\/.*\/html-demos$/g)) {
         return path.replace(/\/html-demos$/, '');
       } else {
         return path.replace(/\/html$/, '')
