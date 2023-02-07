@@ -1,10 +1,8 @@
-import path from 'path';
-import * as url from 'url';
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+const path = require('path');
 
-export default (sourceMD) => {
+module.exports = sourceMD => {
   // Theme pages
-  const themePagesPath = path.join( __dirname, '@patternfly/documentation-framework/package.json').replace('package.json', 'pages');
+  const themePagesPath = require.resolve('@patternfly/documentation-framework/package.json').replace('package.json', 'pages');
   sourceMD(path.join(themePagesPath, '*.md'), 'pages-overview');
 
   // Core pages
@@ -25,8 +23,8 @@ export default (sourceMD) => {
   sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos');
 
   // Release notes
-  sourceMD(path.join(__dirname, '../RELEASE-NOTES.md'), 'html');
+  sourceMD(require.resolve('../RELEASE-NOTES.md'), 'html');
 
   // Upgrade guides
-  sourceMD(path.join(__dirname, '../UPGRADE-GUIDE.md'), 'html');
+  sourceMD(require.resolve('../UPGRADE-GUIDE.md'), 'html');
 };

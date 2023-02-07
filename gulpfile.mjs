@@ -1,12 +1,12 @@
 import fs from'fs';
 import gulp from'gulp';
 import rimraf from'rimraf';
-import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.js';
-import { compileSASS, minifyCSS, watchSASS } from'./scripts/gulp/sass.js';
-import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from'./scripts/gulp/icons.js';
-import { compileHBS, compileMD, watchHBS, watchMD } from'./scripts/gulp/html.js';
-import { lintCSSComments, lintCSSFunctions } from'./scripts/gulp/lint.js';
-import { generateSnippets } from'./scripts/gulp/snippets.js';
+import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.mjs';
+import { compileSASS, minifyCSS, watchSASS } from'./scripts/gulp/sass.mjs';
+import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from'./scripts/gulp/icons.mjs';
+import { compileHBS, compileMD, watchHBS, watchMD } from'./scripts/gulp/html.mjs';
+import { lintCSSComments, lintCSSFunctions } from'./scripts/gulp/lint.mjs';
+import { generateSnippets } from'./scripts/gulp/snippets.mjs';
 import { start } from '@patternfly/documentation-framework/scripts/cli/start.js';
 import { build as docsFrameworkBuild} from '@patternfly/documentation-framework/scripts/cli/build.js';
 

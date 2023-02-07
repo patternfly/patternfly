@@ -4,9 +4,9 @@ import nodePlop from 'node-plop';
 import * as url from 'url';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-const plop = await nodePlop(path.resolve(__dirname, './generatorConfig.js'));
+const plop = await nodePlop(path.resolve(__dirname, './generatorConfig.mjs'));
 const pascalCase = plop.getHelper('pascalCase');
-import { pfIcons } from './definitions/pf-icons.js';
+import { pfIcons } from './definitions/pf-icons.mjs';
 
 export default () =>
   new Promise((resolve, reject) => {

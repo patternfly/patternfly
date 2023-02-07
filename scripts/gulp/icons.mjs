@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
-import generateIcons from '../../src/icons/generateIcons.js';
+import generateIcons from '../../src/icons/generateIcons.mjs';
 import path from 'path';
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 

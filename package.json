@@ -4,7 +4,6 @@
   "version": "0.0.0-development",
   "keywords": [],
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "a11y": "patternfly-a11y --config patternfly-a11y.config",
     "build-patternfly": "gulp buildPatternfly",
