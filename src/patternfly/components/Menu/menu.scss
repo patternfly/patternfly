@@ -274,6 +274,7 @@
     .pf-c-menu__list {
       position: relative;
       overflow: hidden;
+      visibility: visible;
       transition: var(--pf-c-menu--m-drilldown__list--Transition);
 
       & .pf-c-menu__list {
