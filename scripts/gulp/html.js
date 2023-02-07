@@ -1,17 +1,18 @@
-const path = require('path');
-const fs = require('fs-extra');
-const glob = require('glob');
-const { src, watch } = require('gulp');
-const through2 = require('through2');
-const unified = require('unified');
-const toMDAST = require('remark-parse');
-const stringifyMDAST = require('remark-stringify');
-const Handlebars = require('handlebars');
-const visit = require('unist-util-visit');
-const prettyhtml = require('@starptech/prettyhtml');
+import path from 'path';
+import fs from 'fs-extra';
+import glob from 'glob';
+import gulp from 'gulp';
+import through2 from 'through2';
+import { unified } from 'unified';
+import toMDAST from 'remark-parse';
+import stringifyMDAST from 'remark-stringify';
+import Handlebars from 'handlebars';
+import visit from 'unist-util-visit';
+import prettyhtml from '@starptech/prettyhtml';
 
-const hbsFileMap = {};
-const hbsInstance = Handlebars.create();
+const { src, watch } = gulp;
+export const hbsFileMap = {};
+export const hbsInstance = Handlebars.create();
 hbsInstance.registerHelper('concat', (...params) => {
   // Ignore the object appended by handlebars.
   if (typeof params[params.length - 1] === 'object') {
@@ -59,7 +60,7 @@ function compileHBS0(srcFiles) {
   );
 }
 
-function compileHBS(hbsFiles) {
+export function compileHBS(hbsFiles) {
   return compileHBS0(src(hbsFiles));
 }
 
@@ -115,7 +116,7 @@ function compileMD0(srcFiles) {
   );
 }
 
-function compileMD(mdFiles) {
+export function compileMD(mdFiles) {
   return compileMD0(src(mdFiles));
 }
 
@@ -147,14 +148,14 @@ function onHBSChange(file) {
   glob.sync(mdGlob).forEach(mdFile => onMDChange(mdFile));
 }
 
-function watchHBS(hbsFiles) {
+export function watchHBS(hbsFiles) {
   const watcher = watch(hbsFiles, { delay: 0 });
 
   watcher.on('change', onHBSChange);
   watcher.on('add', onHBSChange);
 }
 
-function watchMD(mdFiles) {
+export function watchMD(mdFiles) {
   const watcher = watch(mdFiles, { delay: 0 });
 
   watcher.on('change', onMDChange);
@@ -164,11 +165,3 @@ function watchMD(mdFiles) {
 // Helper which allows a booleans value to be inversed, similar to how notting a variable with ! works in regular JS
 hbsInstance.registerHelper('inverse', bool => bool ? null : 'true');
 
-module.exports = {
-  hbsInstance,
-  hbsFileMap,
-  compileHBS,
-  compileMD,
-  watchHBS,
-  watchMD
-};

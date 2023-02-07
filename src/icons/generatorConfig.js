@@ -1,6 +1,9 @@
-const { resolve } = require('path');
+import { resolve } from 'path';
 
-module.exports = plop => {
+import * as url from 'url';
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
+export default (plop) => {
   plop.setGenerator('svgs', {
     prompts: [],
     actions: data => [

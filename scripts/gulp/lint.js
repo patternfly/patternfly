@@ -1,6 +1,7 @@
-const path = require('path');
-const { src } = require('gulp');
-const through2 = require('through2');
+import path from 'path';
+import gulp from 'gulp';
+import through2 from 'through2';
+const { src } = gulp;
 
 const validCSSFunctions = [
   // https://www.w3schools.com/cssref/css_functions.asp
@@ -56,7 +57,7 @@ const validCSSFunctions = [
 ];
 const functionRegex = /:\s+(\w[\w\d]+)\(.*\)/gi;
 
-function lintCSSFunctions() {
+export function lintCSSFunctions() {
   let failed = false;
 
   return src('dist/**/*.css')
@@ -83,7 +84,7 @@ function lintCSSFunctions() {
     });
 }
 
-function lintCSSComments() {
+export function lintCSSComments() {
   let failed = false;
 
   return src(['dist/**/*.css', '!dist/site/**', '!dist/docs/**'])
@@ -107,7 +108,3 @@ function lintCSSComments() {
     });
 }
 
-module.exports = {
-  lintCSSComments,
-  lintCSSFunctions
-};
