@@ -148,11 +148,11 @@
 
   // Actions
   --pf-c-label__actions--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-label-actions--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
 
   // Actions button (close)
   --pf-c-label-actions--c-button--FontSize: var(--pf-global--FontSize--xs);
   --pf-c-label-actions--c-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-label-actions--c-button--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-label-actions--c-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-label-actions--c-button--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-label-actions--c-button--PaddingRight: var(--pf-global--spacer--sm);
@@ -455,6 +455,7 @@
 }
 
 .pf-c-label__actions {
+  margin-right: var(--pf-c-label-actions--MarginRight);
   font-size: var(--pf-c-label__actions--FontSize);
 
   & .pf-c-button {
@@ -465,7 +466,6 @@
     --pf-c-button--PaddingLeft: var(--pf-c-label-actions--c-button--PaddingLeft);
 
     margin-top: var(--pf-c-label-actions--c-button--MarginTop);
-    margin-right: var(--pf-c-label-actions--c-button--MarginRight);
     margin-bottom: var(--pf-c-label-actions--c-button--MarginBottom);
   }
 }
