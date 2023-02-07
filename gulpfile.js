@@ -84,7 +84,7 @@ const themeCLIOptions = {
   }
 };
 
-async function buildWebpack() {
+export async function buildWebpack() {
   await docsFrameworkBuild('all', themeCLIOptions);
 }
 
@@ -97,11 +97,7 @@ const buildDocs = series(buildSrc, copyDocs);
 const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, startWebpackDevServer);
 
 // Builds `dist` folder
-export function buildPatternfly(cb) {
-  parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
-  cb();
-}
-
+export const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
 
 function checkBuildPatternfly(cb) {
   if (!fs.existsSync('dist')) {

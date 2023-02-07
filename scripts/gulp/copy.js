@@ -4,7 +4,7 @@ import rename from 'gulp-rename';
 const { src, watch, dest } = gulp;
 
 export function copyFA() {
-  return src(require.resolve('@fortawesome/fontawesome/styles.css'))
+  return src('node_modules/@fortawesome/fontawesome/styles.css')
     .pipe(rename('fontawesome.css'))
     .pipe(dest('dist/assets/icons'));
 }
