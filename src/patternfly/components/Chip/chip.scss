@@ -29,14 +29,14 @@
   --pf-c-chip__actions--FontSize: var(--pf-global--FontSize--xs);
 
   // buttons within chip actions
-  --pf-c-chip-actions__c-button--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-chip-actions__c-button--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-chip-actions__c-button--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-chip-actions__c-button--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-chip-actions__c-button--MarginTop: calc(var(--pf-c-chip--PaddingTop) * -1);
-  --pf-c-chip-actions__c-button--MarginRight: calc(var(--pf-c-chip--PaddingRight) / 2 * -1);
-  --pf-c-chip-actions__c-button--MarginBottom: calc(var(--pf-c-chip--PaddingBottom) * -1);
-  --pf-c-chip-actions__c-button--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-chip-actions--c-button--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-chip-actions--c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-chip-actions--c-button--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-chip-actions--c-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-chip-actions--c-button--MarginTop: calc(var(--pf-c-chip--PaddingTop) * -1);
+  --pf-c-chip-actions--c-button--MarginRight: calc(var(--pf-c-chip--PaddingRight) / 2 * -1);
+  --pf-c-chip-actions--c-button--MarginBottom: calc(var(--pf-c-chip--PaddingBottom) * -1);
+  --pf-c-chip-actions--c-button--FontSize: var(--pf-global--FontSize--xs);
 
   // icon
   --pf-c-chip__icon--MarginLeft: var(--pf-global--spacer--sm);
@@ -81,30 +81,6 @@
       font-size: var(--pf-c-chip--m-draggable__icon--FontSize);
     }
   }
-
-  .pf-c-chip__content {
-    display: flex;
-    column-gap: var(--pf-c-chip__content--ColumnGap);
-    font-size: var(--pf-c-chip__content--FontSize);
-  }
-
-  .pf-c-chip__actions {
-    font-size: var(--pf-c-chip__actions--FontSize);
-  }
-
-  // Actions Button
-  .pf-c-chip__actions .pf-c-button {
-    --pf-c-button--PaddingTop: var(--pf-c-chip-actions__c-button--PaddingTop);
-    --pf-c-button--PaddingRight: var(--pf-c-chip-actions__c-button--PaddingRight);
-    --pf-c-button--PaddingBottom: var(--pf-c-chip-actions__c-button--PaddingBottom);
-    --pf-c-button--PaddingLeft: var(--pf-c-chip-actions__c-button--PaddingLeft);
-    --pf-c-button--FontSize: var(--pf-c-chip-actions__c-button--FontSize);
-
-    margin-top: var(--pf-c-chip-actions__c-button--MarginTop);
-    margin-right: var(--pf-c-chip-actions__c-button--MarginRight);
-    margin-bottom: var(--pf-c-chip-actions__c-button--MarginBottom);
-    line-height: 1;
-  }
 }
 
 // Text element
@@ -119,6 +95,30 @@
 .pf-c-chip__icon + .pf-c-chip__text,
 .pf-c-chip__text + .pf-c-chip__icon {
   margin-left: var(--pf-c-chip__icon--MarginLeft);
+}
+
+.pf-c-chip__content {
+  display: flex;
+  column-gap: var(--pf-c-chip__content--ColumnGap);
+  font-size: var(--pf-c-chip__content--FontSize);
+}
+
+.pf-c-chip__actions {
+  font-size: var(--pf-c-chip__actions--FontSize);
+
+  // Actions Button
+  & .pf-c-button {
+    --pf-c-button--PaddingTop: var(--pf-c-chip-actions--c-button--PaddingTop);
+    --pf-c-button--PaddingRight: var(--pf-c-chip-actions--c-button--PaddingRight);
+    --pf-c-button--PaddingBottom: var(--pf-c-chip-actions--c-button--PaddingBottom);
+    --pf-c-button--PaddingLeft: var(--pf-c-chip-actions--c-button--PaddingLeft);
+    --pf-c-button--FontSize: var(--pf-c-chip-actions--c-button--FontSize);
+
+    margin-top: var(--pf-c-chip-actions--c-button--MarginTop);
+    margin-right: var(--pf-c-chip-actions--c-button--MarginRight);
+    margin-bottom: var(--pf-c-chip-actions--c-button--MarginBottom);
+    line-height: 1;
+  }
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

@@ -150,14 +150,14 @@
   --pf-c-label__actions--FontSize: var(--pf-global--FontSize--xs);
 
   // Actions button (close)
-  --pf-c-label-actions__c-button--FontSize: var(--pf-global--FontSize--xs);
-  --pf-c-label-actions__c-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-label-actions__c-button--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-label-actions__c-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-label-actions__c-button--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-label-actions__c-button--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-label-actions__c-button--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-label-actions__c-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-label-actions--c-button--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-label-actions--c-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-label-actions--c-button--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-label-actions--c-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
+  --pf-c-label-actions--c-button--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-label-actions--c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-label-actions--c-button--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-label-actions--c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Editable
   --pf-c-label--m-editable--Cursor: pointer;
@@ -379,22 +379,6 @@
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-editable--m-editable-active--BackgroundColor);
   }
 
-  .pf-c-label__actions {
-    font-size: var(--pf-c-label__actions--FontSize);
-  }
-
-  .pf-c-label__actions .pf-c-button {
-    --pf-c-button--FontSize: var(--pf-c-label-actions__c-button--FontSize);
-    --pf-c-button--PaddingTop: var(--pf-c-label-actions__c-button--PaddingTop);
-    --pf-c-button--PaddingRight: var(--pf-c-label-actions__c-button--PaddingRight);
-    --pf-c-button--PaddingBottom: var(--pf-c-label-actions__c-button--PaddingBottom);
-    --pf-c-button--PaddingLeft: var(--pf-c-label-actions__c-button--PaddingLeft);
-
-    margin-top: var(--pf-c-label-actions__c-button--MarginTop);
-    margin-right: var(--pf-c-label-actions__c-button--MarginRight);
-    margin-bottom: var(--pf-c-label-actions__c-button--MarginBottom);
-  }
-
   &.pf-m-overflow,
   &.pf-m-add {
     --pf-c-label__content--Color: var(--pf-c-label--m-overflow__content--Color);
@@ -468,6 +452,22 @@
 .pf-c-label__icon {
   margin-right: var(--pf-c-label__icon--MarginRight);
   color: var(--pf-c-label__icon--Color);
+}
+
+.pf-c-label__actions {
+  font-size: var(--pf-c-label__actions--FontSize);
+
+  & .pf-c-button {
+    --pf-c-button--FontSize: var(--pf-c-label-actions--c-button--FontSize);
+    --pf-c-button--PaddingTop: var(--pf-c-label-actions--c-button--PaddingTop);
+    --pf-c-button--PaddingRight: var(--pf-c-label-actions--c-button--PaddingRight);
+    --pf-c-button--PaddingBottom: var(--pf-c-label-actions--c-button--PaddingBottom);
+    --pf-c-button--PaddingLeft: var(--pf-c-label-actions--c-button--PaddingLeft);
+
+    margin-top: var(--pf-c-label-actions--c-button--MarginTop);
+    margin-right: var(--pf-c-label-actions--c-button--MarginRight);
+    margin-bottom: var(--pf-c-label-actions--c-button--MarginBottom);
+  }
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
