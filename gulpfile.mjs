@@ -107,7 +107,7 @@ function checkBuildPatternfly(cb) {
   }
 }
 
-export const build = buildPatternfly; // Builds `dist` and `public` folders
+export const build = series(buildPatternfly, buildWebpack); // Builds `dist` and `public` folders
 
 export function pfIcons() {
   return definedPfIcons();
