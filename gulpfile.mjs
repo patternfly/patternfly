@@ -76,6 +76,8 @@ function generateWorkspaceSnippets() {
   return generateSnippets('workspace/**/index.html');
 }
 
+export const snippets = series(compileSrcHBS, compileSrcMD, generateWorkspaceSnippets);
+
 const themeCLIOptions = {
   parent: {
     config: './patternfly-docs/patternfly-docs.config.js',
@@ -117,7 +119,7 @@ export function pfIconFont() {
   return definedPfIconFont();
 }
 
-export const develop = series(checkBuildPatternfly, buildDocs, watchAll);
+export const develop = series(checkBuildPatternfly, buildWebpack, watchAll);
 
 export const lintCSS = parallel(lintCSSFunctions, lintCSSComments);
 
