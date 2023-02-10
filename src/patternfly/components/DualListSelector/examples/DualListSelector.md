@@ -18,7 +18,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -88,7 +88,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -127,7 +127,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -197,7 +197,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -236,7 +236,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -306,7 +306,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -345,7 +345,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -415,7 +415,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -457,7 +457,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -527,7 +527,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -570,7 +570,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -666,7 +666,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -705,7 +705,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -794,7 +794,7 @@ cssPrefix: pf-c-dual-list-selector
     {{/dual-list-selector-header}}
     {{#> dual-list-selector-tools}}
       {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
       {{#> dual-list-selector-tools-actions}}
         {{#> dual-list-selector-tools-actions-item}}
@@ -846,7 +846,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-header}}
       {{#> dual-list-selector-tools}}
         {{#> dual-list-selector-tools-filter}}
-        {{> search-input search-input--placeholder="Filter options"}}
+        {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
         {{/dual-list-selector-tools-filter}}
         {{#> dual-list-selector-tools-actions}}
           {{#> dual-list-selector-tools-actions-item}}
@@ -910,7 +910,7 @@ cssPrefix: pf-c-dual-list-selector
       {{/dual-list-selector-header}}
       {{#> dual-list-selector-tools}}
         {{#> dual-list-selector-tools-filter}}
-          {{> search-input search-input--placeholder="Filter options"}}
+          {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
         {{/dual-list-selector-tools-filter}}
         {{#> dual-list-selector-tools-actions}}
           {{#> dual-list-selector-tools-actions-item}}

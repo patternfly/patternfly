@@ -61,6 +61,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   // toggle button
   --pf-c-dropdown__toggle-button--Color: var(--pf-global--Color--100);
+  --pf-c-dropdown__toggle-button--BackgroundColor: transparent;
 
   // toggle progress
   --pf-c-dropdown__toggle-progress--Visibility: hidden;
@@ -361,6 +362,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
     .pf-c-dropdown__toggle-button {
       color: var(--pf-c-dropdown__toggle-button--Color);
       border: 0;
+      background-color: var(--pf-c-dropdown__toggle-button--BackgroundColor);
     }
 
     .pf-c-dropdown__toggle-text {

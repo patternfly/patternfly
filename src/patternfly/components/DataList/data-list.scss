@@ -83,6 +83,7 @@
   --pf-c-data-list__item--m-expanded__toggle-icon--Rotate: 90deg;
 
   // draggable button/icon
+  --pf-c-data-list__item-draggable-button--BackgroundColor: transparent;
   --pf-c-data-list__item-draggable-button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-data-list__item-draggable-button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-data-list__item-draggable-button--MarginTop: calc(var(--pf-global--spacer--lg) * -1);
@@ -349,6 +350,7 @@
   padding: var(--pf-c-data-list__item-draggable-button--PaddingTop) var(--pf-c-data-list__item-draggable-button--PaddingRight) var(--pf-c-data-list__item-draggable-button--PaddingBottom) var(--pf-c-data-list__item-draggable-button--PaddingLeft);
   margin: var(--pf-c-data-list__item-draggable-button--MarginTop) 0 var(--pf-c-data-list__item-draggable-button--MarginBottom) var(--pf-c-data-list__item-draggable-button--MarginLeft);
   border: 0;
+  background-color: var(--pf-c-data-list__item-draggable-button--BackgroundColor);
 
   &:hover {
     --pf-c-data-list__item-draggable-button-icon--Color: var(--pf-c-data-list__item-draggable-button--hover__draggable-icon--Color);

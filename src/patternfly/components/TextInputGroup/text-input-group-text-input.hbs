@@ -3,25 +3,35 @@
   {{~#if text-input-group-text-input--modifier}}
     {{text-input-group-text-input--modifier}}
   {{/if}}"
-  type="text"
-  {{#if text-input-group--IsDisabled}}
-    value="Disabled"
-    disabled
-    aria-label="Disabled text input group example input"
-  {{else if text-input-group-text-input--hint-text}}
-    value="{{text-input-group-text-input--hint-text}}"
-  {{else}}
-    value="{{text-input-group--value}}"
-  {{/if}}
-  {{#if text-input-group-text-input--placeholder}}
-    placeholder="{{text-input-group-text-input--placeholder}}"
-  {{/if}}
-  {{#unless text-input-group-text-input--hint-text}}
-    aria-label="Type to filter"
-  {{/unless}}
+  type="{{#if text-input-group-text-input--type}}{{text-input-group-text-input--type}}{{else}}text{{/if}}"
   {{#if text-input-group-text-input--hint-text}}
+    value="{{text-input-group-text-input--hint-text}}"
     disabled
     aria-hidden="true"
+  {{else}}
+    {{#if text-input-group-text-input--placeholder}}
+      placeholder="{{text-input-group-text-input--placeholder}}"
+    {{/if}}
+    {{#if text-input-group-text-input--placeholder}}
+      placeholder="{{text-input-group-text-input--placeholder}}"
+    {{/if}}
+    {{#if text-input-group--IsDisabled}}
+      disabled
+    {{/if}}
+    value="
+      {{~#if text-input-group--IsDisabled~}}
+        Disabled
+      {{~else~}}
+        {{text-input-group--value}}
+      {{~/if}}"
+    aria-label="
+      {{~#if text-input-group-text-input--aria-label~}}
+        {{text-input-group-text-input--aria-label}}
+      {{~else if text-input-group--IsDisabled~}}
+        Disabled text input group example input
+      {{~else~}}
+        Type to filter
+      {{~/if}}"
   {{/if}}
   {{#if text-input-group-text-input--attribute}}
     {{{text-input-group-text-input--attribute}}}

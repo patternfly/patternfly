@@ -77,79 +77,12 @@ cssPrefix: pf-c-code-editor
 
 ### Without actions
 ```hbs
-{{#> code-editor}}
-  {{#> code-editor-header}}
-    {{> code-editor-header-main}}
-    {{#> code-editor-tab}}
-      {{#> code-editor-tab-icon}}
-        <i class="fas fa-code"></i>
-      {{/code-editor-tab-icon}}
-      {{#> code-editor-tab-text}}
-        YAML
-      {{/code-editor-tab-text}}
-    {{/code-editor-tab}}
-  {{/code-editor-header}}
-  {{#> code-editor-main}}
-    {{#> empty-state empty-state--modifier="pf-m-lg"}}
-      {{#> empty-state-icon}}
-        <i class="fas fa-code"></i>
-      {{/empty-state-icon}}
-      {{#> title titleType="h1" title--modifier="pf-m-lg"}}
-        Start editing
-      {{/title}}
-      {{#> empty-state-body}}
-        Drag a file here or browse to upload.
-      {{/empty-state-body}}
-      {{#> button button--modifier="pf-m-primary"}}
-        Browse
-      {{/button}}
-      {{#> empty-state-secondary}}
-        {{#> button button--modifier="pf-m-link"}}
-          Start from scratch
-        {{/button}}
-      {{/empty-state-secondary}}
-    {{/empty-state}}
-  {{/code-editor-main}}
-{{/code-editor}}
+{{> code-editor-template-no-actions}}
 ```
-
 
 ### Drag file and hover over component
 ```hbs
-{{#> code-editor}}
-  {{#> code-editor-header}}
-    {{> code-editor-header-main}}
-    {{#> code-editor-tab}}
-      {{#> code-editor-tab-icon}}
-        <i class="fas fa-code"></i>
-      {{/code-editor-tab-icon}}
-      {{#> code-editor-tab-text}}
-        YAML
-      {{/code-editor-tab-text}}
-    {{/code-editor-tab}}
-  {{/code-editor-header}}
-  {{#> code-editor-main code-editor-main--modifier="pf-m-drag-hover"}}
-    {{#> empty-state empty-state--modifier="pf-m-lg"}}
-      {{#> empty-state-icon}}
-        <i class="fas fa-code"></i>
-      {{/empty-state-icon}}
-      {{#> title titleType="h1" title--modifier="pf-m-lg"}}
-        Start editing
-      {{/title}}
-      {{#> empty-state-body}}
-        Drag a file here or browse to upload.
-      {{/empty-state-body}}
-      {{#> button button--modifier="pf-m-primary"}}
-        Browse
-      {{/button}}
-      {{#> empty-state-secondary}}
-        {{#> button button--modifier="pf-m-link"}}
-          Start from scratch
-        {{/button}}
-      {{/empty-state-secondary}}
-    {{/empty-state}}
-  {{/code-editor-main}}
-{{/code-editor}}
+{{> code-editor-template-no-actions code-editor-main--modifier="pf-m-drag-hover"}}
 ```
 
 ### With optional header content and keyboard shortcuts
@@ -196,12 +129,6 @@ cssPrefix: pf-c-code-editor
 ```
 
 ## Documentation
-### Overview
-
-### Accessibility
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |

@@ -260,7 +260,7 @@ import './Button.css'
 ### Inline link as span
 ```hbs
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-{{#> button button--IsInlineLinkSpan="true" button--attribute='tabindex="0"' button--modifier="pf-m-link pf-m-inline"}}
+{{#> button button--IsInlineLinkSpan="true" button--modifier="pf-m-link pf-m-inline"}}
   This is long button text that needs to be a span so that it will wrap inline with the text around it.
 {{/button}}
 Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum velit elementum non.
