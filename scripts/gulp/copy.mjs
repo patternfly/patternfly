@@ -1,17 +1,19 @@
-const { src, watch, dest } = require('gulp');
-const rename = require('gulp-rename');
+import gulp from 'gulp';
+import rename from 'gulp-rename';
 
-function copyFA() {
-  return src(require.resolve('@fortawesome/fontawesome/styles.css'))
+const { src, watch, dest } = gulp;
+
+export function copyFA() {
+  return src('node_modules/@fortawesome/fontawesome/styles.css')
     .pipe(rename('fontawesome.css'))
     .pipe(dest('dist/assets/icons'));
 }
 
-function copyAssets() {
+export function copyAssets() {
   return src('src/patternfly/assets/**').pipe(dest('static/assets'));
 }
 
-function copySource() {
+export function copySource() {
   return Promise.all([
     // Copy excluded source files
     src(['src/patternfly/**/_all.scss', 'src/patternfly/{components,layouts,patterns,utilities,themes}/**/*.scss', './src/patternfly/components/**/themes/**/*.scss']).pipe(
@@ -36,20 +38,12 @@ function copySource() {
 
 const docFiles = ['src/site/**', 'src/patternfly/**/examples/*.css'];
 
-function copyDocs() {
+export function copyDocs() {
   return src(docFiles).pipe(dest('dist/docs'));
 }
 
-function watchCopyDocs() {
+export function watchCopyDocs() {
   const watcher = watch(docFiles, { delay: 0 });
   watcher.on('change', copyDocs);
   watcher.on('add', copyDocs);
 }
-
-module.exports = {
-  copyAssets,
-  copyFA,
-  copySource,
-  copyDocs,
-  watchCopyDocs
-};

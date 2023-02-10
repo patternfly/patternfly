@@ -1,7 +1,7 @@
-const path = require('path');
-const fs = require('fs');
-const glob = require('glob');
-const { Octokit } = require('@octokit/rest');
+import path from 'path';
+import fs from 'fs';
+import glob from 'glob');
+import { Octokit } from '@octokit/rest';
 
 // {file: size in kb}
 function getFileSizes(dir, ignore) {

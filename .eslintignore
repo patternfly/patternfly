@@ -1,5 +1,6 @@
 dist/
 public/
+coverage/
 node_modules/
 static/
 scripts/template/

@@ -1,9 +1,14 @@
-const { src, dest } = require('gulp');
-const iconfont = require('gulp-iconfont');
-const iconfontCss = require('gulp-iconfont-css');
-const generateIcons = require('../../src/icons/generateIcons.js');
-const path = require('path');
-const { readFileSync, writeFileSync, mkdirSync } = require('fs');
+import gulp from 'gulp';
+import iconfont from 'gulp-iconfont';
+import iconfontCss from 'gulp-iconfont-css';
+import generateIcons from '../../src/icons/generateIcons.mjs';
+import path from 'path';
+import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+
+const { src, dest } = gulp;
+
+import * as url from 'url';
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 const pficonFontName = 'pficon';
 let maxCodepoint = 0;
@@ -36,11 +41,11 @@ const writeUnicodesToJson = (path, fileName, obj) => {
   writeFileSync(`${path}/${fileName}`, data);
 }
 
-function pfIcons() {
+export function pfIcons() {
   return generateIcons();
 }
 
-function pfIconFont() {
+export function pfIconFont() {
   // parse FontAwesome icons/unicode matches
   const faUnicodeMatches = getIconNamesUnicodes(
     '../../src/patternfly/assets/fontawesome/_variables.scss',
@@ -96,7 +101,3 @@ function pfIconFont() {
     .pipe(dest('./src/patternfly/assets/pficon/'))
 }
 
-module.exports = {
-  pfIcons,
-  pfIconFont
-};

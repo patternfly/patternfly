@@ -1,16 +1,18 @@
-const path = require('path');
-const fs = require('fs');
-const { src } = require('gulp');
-const through2 = require('through2');
-const prettyhtml = require('@starptech/prettyhtml');
-const cheerio = require('cheerio');
-const { hbsInstance, hbsFileMap } = require('./html');
+import path from 'path';
+import fs from 'fs';
+import gulp from 'gulp';
+import through2 from 'through2';
+import prettyhtml from '@starptech/prettyhtml';
+import cheerio from 'cheerio';
+import { hbsInstance, hbsFileMap } from './html.mjs';
+
+const { src } = gulp;
 
 function prettyHTML(html) {
   return prettyhtml(html).contents;
 }
 
-function generateSnippets(htmlIndexFiles) {
+export function generateSnippets(htmlIndexFiles) {
   const snippets = {};
   const fragments = {};
   // For mapping { aboutmodalbox: AboutModalBox }
@@ -114,6 +116,4 @@ function generateSnippets(htmlIndexFiles) {
     });
 }
 
-module.exports = {
-  generateSnippets
-};
+

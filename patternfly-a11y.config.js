@@ -5,9 +5,18 @@ async function waitFor(page) {
 }
 
 const urls = Object.keys(fullscreenRoutes)
-  .map(key => fullscreenRoutes[key].isFullscreenOnly
-    ? key
-    : fullscreenRoutes[key].path.replace(/\/html$/, ''))
+  .map(key => {
+    if (fullscreenRoutes[key].isFullscreenOnly) {
+      return key;
+    } else {
+      const path = fullscreenRoutes[key].path
+      if (path.match(/\/demos\/.*\/html-demos$/g)) {
+        return path.replace(/\/html-demos$/, '');
+      } else {
+        return path.replace(/\/html$/, '')
+      }
+    }
+  })
   .reduce((result, item) => (result.includes(item) ? result : [...result, item]), []);
 
 module.exports = {
@@ -42,7 +51,7 @@ module.exports = {
       }
     },
     {
-      url: '/components/table/html',
+      url: '/components/table',
       label: 'html table content on mobile screen',
       viewportDimensions: { width: 400, height: 900 }
     },

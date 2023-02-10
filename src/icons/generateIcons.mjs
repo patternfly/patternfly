@@ -1,11 +1,14 @@
-const path = require('path');
-const nodePlop = require('node-plop');
+import path from 'path';
+import nodePlop from 'node-plop';
 
-const plop = nodePlop(path.resolve(__dirname, './generatorConfig.js'));
+import * as url from 'url';
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
+const plop = await nodePlop(path.resolve(__dirname, './generatorConfig.mjs'));
 const pascalCase = plop.getHelper('pascalCase');
-const pfIcons = require('./definitions/pf-icons.json');
+import { pfIcons } from './definitions/pf-icons.mjs';
 
-module.exports = () =>
+export default () =>
   new Promise((resolve, reject) => {
     plop
       .getGenerator('svgs')
