@@ -1,6 +1,6 @@
-<{{#if helper-text-item--type}}{{helper-text-item--type}}{{else}}div{{/if}} class="pf-c-helper-text__item{{#if helper-text-item--modifier}} {{helper-text-item--modifier}}{{/if}}"
+<{{#if helper-text--IsList}}li{{else}}div{{/if}} class="pf-c-helper-text__item{{#if helper-text-item--modifier}} {{helper-text-item--modifier}}{{/if}}"
   {{#if helper-text-item--attribute}}
     {{{helper-text-item--attribute}}}
   {{/if}}>
   {{>@partial-block}}
-</{{#if helper-text-item--type}}{{helper-text-item--type}}{{else}}div{{/if}}>
+</{{#if helper-text--IsList}}li{{else}}div{{/if}}>

@@ -131,7 +131,7 @@ cssPrefix: pf-c-helper-text
 
 ### Dynamic list
 ```hbs
-{{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
+{{#> helper-text helper-text--IsList="true"}}
   {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
     {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
     {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
