@@ -3,6 +3,11 @@
   {{~#if button--IsProgress}} pf-m-progress{{/if}}
   {{~#if button--IsInProgress}} pf-m-in-progress{{/if}}
   {{~#if button--IsInline}} pf-m-inline{{/if}}
+  {{~#if button--IsDisabled}}
+    {{#if (concat button--type button--IsInlineLinkSpan button--IsAnchor)}}
+      pf-m-disabled
+    {{/if}}
+  {{/if}}
   {{~#if button--modifier}} {{button--modifier}}{{/if}}"
   {{#if button--IsSubmit}}
     type="submit"
@@ -24,7 +29,9 @@
     aria-label="{{button--aria-label}}"
   {{/if}}
   {{#if button--IsDisabled}}
-    disabled
+    {{#unless (concat button--type button--IsInlineLinkSpan button--IsAnchor)}}
+      disabled
+    {{/unless}}
   {{/if}}
   {{#if button--url}}
     href="{{button--url}}"
