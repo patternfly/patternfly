@@ -361,8 +361,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
     .pf-c-dropdown__toggle-button {
       color: var(--pf-c-dropdown__toggle-button--Color);
-      border: 0;
       background-color: var(--pf-c-dropdown__toggle-button--BackgroundColor);
+      border: 0;
     }
 
     .pf-c-dropdown__toggle-text {

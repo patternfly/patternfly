@@ -349,8 +349,8 @@
   flex-direction: column; // fixes safari alignment
   padding: var(--pf-c-data-list__item-draggable-button--PaddingTop) var(--pf-c-data-list__item-draggable-button--PaddingRight) var(--pf-c-data-list__item-draggable-button--PaddingBottom) var(--pf-c-data-list__item-draggable-button--PaddingLeft);
   margin: var(--pf-c-data-list__item-draggable-button--MarginTop) 0 var(--pf-c-data-list__item-draggable-button--MarginBottom) var(--pf-c-data-list__item-draggable-button--MarginLeft);
-  border: 0;
   background-color: var(--pf-c-data-list__item-draggable-button--BackgroundColor);
+  border: 0;
 
   &:hover {
     --pf-c-data-list__item-draggable-button-icon--Color: var(--pf-c-data-list__item-draggable-button--hover__draggable-icon--Color);

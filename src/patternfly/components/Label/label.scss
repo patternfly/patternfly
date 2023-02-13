@@ -134,6 +134,7 @@
 
   // Content
   --pf-c-label__content--Color: var(--pf-global--Color--100);
+  --pf-c-label__content--BackgroundColor: transparent;
   --pf-c-label__content--MaxWidth: 100%;
   --pf-c-label--m-outline__content--Color: var(--pf-global--Color--100);
   --pf-c-label--m-editable__content--MaxWidth: 16ch;
@@ -417,6 +418,7 @@
 
   max-width: var(--pf-c-label__content--MaxWidth);
   color: var(--pf-c-label__content--Color);
+  background-color: var(--pf-c-label__content--BackgroundColor);
   border-width: 0;
 
   &::before {

@@ -43,6 +43,7 @@
 
   // Nav link
   --pf-c-wizard__nav-link--Color: var(--pf-global--Color--100);
+  --pf-c-wizard__nav-link--BackgroundColor: transparent;
   --pf-c-wizard__nav-link--TextDecoration: var(--pf-global--link--TextDecoration);
   --pf-c-wizard__nav-link--hover--Color: var(--pf-global--link--Color);
   --pf-c-wizard__nav-link--focus--Color: var(--pf-global--link--Color);
@@ -428,6 +429,7 @@
   text-align: left; // needed for when the item is a button
   text-decoration: var(--pf-c-wizard__nav-link--TextDecoration);
   word-break: break-word;
+  background-color: var(--pf-c-wizard__nav-link--BackgroundColor);
   border: 0;
 
   // Common step number styles
