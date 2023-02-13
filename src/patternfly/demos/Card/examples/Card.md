@@ -99,12 +99,12 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button-link button-link--modifier="pf-m-link pf-m-inline" button-link--attribute='href="#"'}}
+          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url='href="#"'}}
             View all set up cluster steps
             {{#> button-icon button-icon--modifier="pf-m-end"}}
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
             {{/button-icon}}
-          {{/button-link}}
+          {{/button}}
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
@@ -124,12 +124,12 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button-link button-link--modifier="pf-m-link pf-m-inline" button-link--attribute='href="#"'}}
+         {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url='href="#"'}}
             View all guided tours
             {{#> button-icon button-icon--modifier="pf-m-end"}}
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
             {{/button-icon}}
-          {{/button-link}}
+          {{/button}}
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
@@ -152,12 +152,12 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button-link button-link--modifier="pf-m-link pf-m-inline" button-link--attribute='href="#"'}}
+          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url='href="#"'}}
             View all quick starts
             {{#> button-icon button-icon--modifier="pf-m-end"}}
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
             {{/button-icon}}
-          {{/button-link}}
+          {{/button}}
         {{/l-flex}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
@@ -180,12 +180,12 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button-link button-link--modifier="pf-m-link pf-m-inline" button-link--attribute='href="#"'}}
+          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url='href="#"'}}
             View all learning resources
             {{#> button-icon button-icon--modifier="pf-m-end"}}
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
             {{/button-icon}}
-          {{/button-link}}
+          {{/button}}
         {{/l-flex}}
       {{/grid}}
     {{/card-body}}

@@ -1,4 +1,4 @@
-<{{#if button--IsInlineLinkSpan}}span{{else}}button{{/if}} class="pf-c-button
+<{{#if button--type}}{{button--type}}{{else if button--IsInlineLinkSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}} class="pf-c-button
   {{~#if button--IsExpanded}} pf-m-expanded{{/if}}
   {{~#if button--IsProgress}} pf-m-progress{{/if}}
   {{~#if button--IsInProgress}} pf-m-in-progress{{/if}}
@@ -9,7 +9,9 @@
   {{else if button--IsReset}}
     type="reset"
   {{else}}
-    type="button"
+    {{#unless (concat button--IsAnchor button--type)}}
+      type="button"
+    {{/unless}}
   {{/if}}
   {{#if (concat button--IsExpanded button--IsAriaExpanded)}}
     aria-expanded="true"
@@ -24,6 +26,9 @@
   {{#if button--IsDisabled}}
     disabled
   {{/if}}
+  {{#if button--url}}
+    href="{{button--url}}"
+  {{/if}}
   {{#if button--attribute}}
     {{{button--attribute}}}
   {{/if}}>
@@ -31,4 +36,4 @@
     {{> button-progress}}
   {{/if}}
   {{> @partial-block}}
-</{{#if button--IsInlineLinkSpan}}span{{else}}button{{/if}}>
+</{{#if button--type}}{{button--type}}{{else if button--IsInlineLinkSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}}>

@@ -232,29 +232,29 @@ import './Button.css'
 
 ### Links as buttons
 ```hbs
-{{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-primary"}}
+{{#> button button--IsAnchor="true" button--url='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button--modifier="pf-m-primary"}}
   Primary link to W3.org
-{{/button-link}}
+{{/button}}
 
-{{#> button-link button-link--attribute='href="#overview" aria-label="Read more about button documentation"' button-link--modifier="pf-m-secondary"}}
+{{#> button button--IsAnchor="true" button--url="#overview" button--attribute='aria-label="Read more about button documentation"' button--modifier="pf-m-secondary"}}
   Secondary link to anchor
-{{/button-link}}
+{{/button}}
 
-{{#> button-link button-link--attribute='href="#overview" aria-label="Read more about button documentation"' button-link--modifier="pf-m-secondary pf-m-danger"}}
+{{#> button button--IsAnchor="true" button--url="#overview" button--attribute='aria-label="Read more about button documentation"' button--modifier="pf-m-secondary pf-m-danger"}}
   Secondary danger link to anchor
-{{/button-link}}
+{{/button}}
 
-{{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" aria-disabled="true" tabindex="-1"' button-link--modifier="pf-m-tertiary pf-m-disabled"}}
+{{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--attribute='aria-disabled="true" tabindex="-1"' button--modifier="pf-m-tertiary pf-m-disabled"}}
   Tertiary link to W3.org
-{{/button-link}}
+{{/button}}
 
-{{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-link"}}
+{{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--modifier="pf-m-link"}}
   Link to W3.org
-{{/button-link}}
+{{/button}}
 
-{{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-link pf-m-danger"}}
+{{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--modifier="pf-m-link pf-m-danger"}}
   Link danger to W3.org
-{{/button-link}}
+{{/button}}
 ```
 
 ### Inline link as span
