@@ -10,6 +10,7 @@
   --pf-c-expandable-section__toggle--active--Color: var(--pf-global--link--Color--hover);
   --pf-c-expandable-section__toggle--focus--Color: var(--pf-global--link--Color--hover);
   --pf-c-expandable-section__toggle--m-expanded--Color: var(--pf-global--link--Color--hover);
+  --pf-c-expandable-section__toggle--BackgroundColor: transparent;
 
   // Toggle icon
   --pf-c-expandable-section__toggle-icon--MinWidth: 1em;
@@ -123,6 +124,7 @@
   padding: var(--pf-c-expandable-section__toggle--PaddingTop) var(--pf-c-expandable-section__toggle--PaddingRight) var(--pf-c-expandable-section__toggle--PaddingBottom) var(--pf-c-expandable-section__toggle--PaddingLeft);
   margin-top: var(--pf-c-expandable-section__toggle--MarginTop);
   color: var(--pf-c-expandable-section__toggle--Color);
+  background-color: var(--pf-c-expandable-section__toggle--BackgroundColor);
   border: none;
 
   &:hover {

@@ -1,9 +1,3 @@
-{{#if dual-list-selector-draggable-button--IsDisabled}}
-  {{#> span button--modifier="pf-m-plain" button--attribute=(concat 'disabled aria-pressed="false" aria-label="Reorder" id="' dual-list-selector-list-item--id '-draggable-button" aria-labelledby="' dual-list-selector-list-item--id '-draggable-button ' dual-list-selector-list-item--id '-item-text" aria-describedby="' dual-list-selector--id '-help"')}}
-    <i class="fas fa-grip-vertical" aria-hidden="true"></i>
-  {{/span}}
-{{else}}
-  {{#> span button--modifier="pf-m-plain" button--attribute=(concat 'aria-pressed="false" aria-label="Reorder" id="' dual-list-selector-list-item--id '-draggable-button" aria-labelledby="' dual-list-selector-list-item--id '-draggable-button ' dual-list-selector-list-item--id '-item-text" aria-describedby="' dual-list-selector--id '-help"')}}
-    <i class="fas fa-grip-vertical" aria-hidden="true"></i>
-  {{/span}}
-{{/if}}
+{{#> button button--type="span" button--modifier="pf-m-plain" button--IsDisabled=dual-list-selector-draggable-button--IsDisabled }}
+  <i class="fas fa-grip-vertical" aria-hidden="true"></i>
+{{/button}}

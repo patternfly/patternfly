@@ -16,6 +16,7 @@
   --pf-c-accordion__toggle--before--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-accordion__toggle--after--Width: var(--pf-global--BorderWidth--lg);
   --pf-c-accordion__toggle--m-expanded--after--BackgroundColor: var(--pf-global--primary-color--100);
+  --pf-c-accordion__toggle--BackgroundColor: transparent;
 
   // accordion toggle text
   --pf-c-accordion__toggle-text--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
@@ -160,6 +161,7 @@
   padding: var(--pf-c-accordion__toggle--PaddingTop) var(--pf-c-accordion__toggle--PaddingRight) var(--pf-c-accordion__toggle--PaddingBottom) var(--pf-c-accordion__toggle--PaddingLeft);
   font-family: var(--pf-c-accordion__toggle--FontFamily, inherit);
   font-size: var(--pf-c-accordion__toggle--FontSize, inherit);
+  background-color: var(--pf-c-accordion__toggle--BackgroundColor);
   border: 0;
 
   &::after {

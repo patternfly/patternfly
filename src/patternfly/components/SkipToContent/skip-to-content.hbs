@@ -2,7 +2,7 @@
   {{#if skip-to-content--attribute}}
     {{{skip-to-content--attribute}}}
   {{/if}}>
-  {{#> button-link button-link--attribute=(concat 'href="' skip-to-content--href '"') button-link--modifier="pf-m-primary"}}
+  {{#> button button--IsAnchor="true" button--url=skip-to-content--href button--modifier="pf-m-primary"}}
     {{> @partial-block}}
-  {{/button-link}}
+  {{/button}}
 </div>

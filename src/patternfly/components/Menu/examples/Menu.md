@@ -1009,7 +1009,7 @@ import './Menu.css'
 {{#> menu menu--id="scrollable-menu-search-footer-example" menu--modifier="pf-m-scrollable"}}
   {{#> menu-search}}
     {{#> menu-search-input}}
-      {{> search-input}}
+      {{> menu--search-input}}
     {{/menu-search-input}}
   {{/menu-search}}
   {{> divider}}
@@ -1029,7 +1029,7 @@ import './Menu.css'
 {{#> menu}}
   {{#> menu-search}}
     {{#> menu-search-input}}
-      {{> search-input}}
+      {{> menu--search-input}}
     {{/menu-search-input}}
   {{/menu-search}}
   {{> divider}}

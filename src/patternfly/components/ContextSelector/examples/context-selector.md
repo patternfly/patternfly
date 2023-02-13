@@ -18,7 +18,7 @@ import './context-selector.css'
   {{/context-selector-toggle}}
   {{#> context-selector-menu}}
     {{#> context-selector-menu-search}}
-      {{> search-input}}
+      {{> menu--search-input}}
     {{/context-selector-menu-search}}
     {{> __context-selector-menu-menu}}
   {{/context-selector-menu}}
@@ -34,7 +34,7 @@ import './context-selector.css'
   {{/context-selector-toggle}}
   {{#> context-selector-menu}}
     {{#> context-selector-menu-search}}
-      {{> search-input}}
+      {{> menu--search-input}}
     {{/context-selector-menu-search}}
     {{> __context-selector-menu-menu}}
   {{/context-selector-menu}}
@@ -53,7 +53,7 @@ import './context-selector.css'
   {{/context-selector-toggle}}
   {{#> context-selector-menu}}
     {{#> context-selector-menu-search}}
-      {{> search-input}}
+      {{> menu--search-input}}
     {{/context-selector-menu-search}}
     {{> __context-selector-menu-menu}}
   {{/context-selector-menu}}
@@ -69,7 +69,7 @@ import './context-selector.css'
   {{/context-selector-toggle}}
   {{#> context-selector-menu}}
     {{#> context-selector-menu-search}}
-      {{> search-input}}
+      {{> menu--search-input}}
     {{/context-selector-menu-search}}
     {{> __context-selector-menu-menu}}
   {{/context-selector-menu}}
@@ -88,7 +88,7 @@ import './context-selector.css'
   {{/context-selector-toggle}}
   {{#> context-selector-menu}}
     {{#> context-selector-menu-search}}
-      {{> search-input}}
+      {{> menu--search-input}}
     {{/context-selector-menu-search}}
     {{> __context-selector-menu-menu}}
     {{#> context-selector-menu-footer}}
@@ -109,7 +109,7 @@ import './context-selector.css'
   {{/context-selector-toggle}}
   {{#> context-selector-menu}}
     {{#> context-selector-menu-search}}
-      {{> search-input}}
+      {{> menu--search-input}}
     {{/context-selector-menu-search}}
     {{> __context-selector-menu-menu}}
     {{#> context-selector-menu-footer}}

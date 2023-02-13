@@ -15,6 +15,7 @@
   --pf-c-breadcrumb__link--hover--Color: var(--pf-global--link--Color--hover);
   --pf-c-breadcrumb__link--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
   --pf-c-breadcrumb__link--m-current--Color: var(--pf-global--Color--100);
+  --pf-c-breadcrumb__link--BackgroundColor: transparent;
 
   // Heading
   --pf-c-breadcrumb__heading--FontSize: var(--pf-global--FontSize--sm);
@@ -69,6 +70,7 @@
   color: var(--pf-c-breadcrumb__link--Color);
   text-decoration: var(--pf-c-breadcrumb__link--TextDecoration);
   word-break: break-word;
+  background-color: var(--pf-c-breadcrumb__link--BackgroundColor);
 
   &:hover {
     --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__link--hover--Color);
