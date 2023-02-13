@@ -101,14 +101,6 @@ const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, 
 // Builds `dist` folder
 export const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
 
-function checkBuildPatternfly(cb) {
-  if (!fs.existsSync('dist')) {
-    buildPatternfly(cb);
-  } else {
-    cb();
-  }
-}
-
 export const build = series(buildPatternfly, buildWebpack); // Builds `dist` and `public` folders
 
 export function pfIcons() {
@@ -119,7 +111,7 @@ export function pfIconFont() {
   return definedPfIconFont();
 }
 
-export const develop = series(checkBuildPatternfly, buildWebpack, watchAll);
+export const develop = series(buildPatternfly, buildWebpack, watchAll);
 
 export const lintCSS = parallel(lintCSSFunctions, lintCSSComments);
 
