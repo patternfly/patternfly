@@ -232,7 +232,7 @@ import './Button.css'
 
 ### Links as buttons
 ```hbs
-{{#> button button--IsAnchor="true" button--url='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button--modifier="pf-m-primary"}}
+{{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--modifier="pf-m-primary"}}
   Primary link to W3.org
 {{/button}}
 

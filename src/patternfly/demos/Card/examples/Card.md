@@ -99,7 +99,7 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url='href="#"'}}
+          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all set up cluster steps
             {{#> button-icon button-icon--modifier="pf-m-end"}}
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -124,7 +124,7 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-         {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url='href="#"'}}
+         {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all guided tours
             {{#> button-icon button-icon--modifier="pf-m-end"}}
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -152,7 +152,7 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url='href="#"'}}
+          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all quick starts
             {{#> button-icon button-icon--modifier="pf-m-end"}}
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -180,7 +180,7 @@ import './Card.css'
               </li>
             {{/list}}
           {{/l-flex}}
-          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url='href="#"'}}
+          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all learning resources
             {{#> button-icon button-icon--modifier="pf-m-end"}}
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
