@@ -957,11 +957,7 @@ cssPrefix: pf-c-dual-list-selector
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-pressed="true or false"` | `.pf-c-dual-list-selector__draggable .pf-c-button` | Indicates whether the button is currently pressed or not. |
 | `aria-live` | `[element with live text]` | To give screen reader users live feedback about what's happening during interaction with the dual list selector, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
-| `aria-describedby="[id value of applicable content]"` | `.pf-c-dual-list-selector__draggable .pf-c-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. **Highly recommended** |
-| `aria-labelledby="[id of .pf-c-dual-list-selector__draggable .pf-c-button] [id of item text]"` | `.pf-c-table__dual-list-selector .pf-c-button` | Provides an accessible name for the draggable button. |
-| `id="[]"` | `.pf-c-dual-list-selector__draggable .pf-c-button`, `[item text]`, `.pf-c-dual-list-selector__status-text` | Gives the button and the text element accessible IDs. |
 | `aria-labelledby="[id of .pf-c-dual-list-selector__status-text]` | `.pf-c-dual-list-selector__list [ul]` | Gives the list an accessible name. |
 | `role="listbox or tree or group"` | `.pf-c-dual-list-selector__list [ul]` | Indicates the list is single, a tree, or a subgroup within the tree. |
 | `aria-multiselectable="true"` | `.pf-c-dual-list-selector__list [ul]` | Indicates the list is multiselectable. |
