@@ -13,7 +13,6 @@ jobs:
       SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
       GH_TOKEN: ${{ secrets.GH_TOKEN_REDALLEN }} # needs to be an admin token to get around branch protection
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      HUSKY: 0
     steps:
       - uses: actions/checkout@v2
         with:
@@ -60,5 +59,7 @@ jobs:
       - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
         name: Avoid Unknown Host for github.com
       - run: npx semantic-release@19.0.5
+        env:
+          HUSKY: 0
         name: Release to NPM
 
