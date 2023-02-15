@@ -86,9 +86,11 @@ wrapperTag: div
     {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
       {{#> toolbar-item}}
         {{#> input-group input-group--modifier="pf-m-plain"}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
-            <i class="fas fa-fw fa-search" aria-hidden="true"></i>
-          {{/button}}
+          {{#> input-group-item input-group-item--IsPlain=true}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
+              <i class="fas fa-fw fa-search" aria-hidden="true"></i>
+            {{/button}}
+          {{/input-group-item}}
         {{/input-group}}
       {{/toolbar-item}}
     {{/toolbar-group}}
@@ -104,17 +106,22 @@ wrapperTag: div
     {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
       {{#> toolbar-item}}
         {{#> input-group input-group--modifier="pf-m-plain"}}
-          {{#> text-input-group}}
-            {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
-              {{#> text-input-group-text}}
-                {{> text-input-group-icon}}
-                {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="Search"'}}
-              {{/text-input-group-text}}
-            {{/text-input-group-main}}
-          {{/text-input-group}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> input-group-item input-group-item--IsFill=true}}
+            {{#> text-input-group}}
+              {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
+                {{#> text-input-group-text}}
+                  {{> text-input-group-icon}}
+                  {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="Search"'}}
+                {{/text-input-group-text}}
+              {{/text-input-group-main}}
+            {{/text-input-group}}
+          {{/input-group-item}}
+          {{#> input-group-item input-group-item--IsPlain=true}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/input-group-item}}
+
         {{/input-group}}
       {{/toolbar-item}}
     {{/toolbar-group}}

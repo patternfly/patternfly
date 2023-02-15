@@ -11,16 +11,22 @@ cssPrefix: pf-c-file-upload
 {{#> file-upload file-upload--id="basic-file-upload"}}
   {{#> file-upload-file-select}}
     {{#> input-group}}
-      {{> file-upload-text-input
-        file-upload-text-input--aria-label="Drag and drop a file or upload one"
-        file-upload-text-input--attribute=(concat 'readonly placeholder="Drag and drop a file or upload one" aria-describedby="' file-upload--id '-browse"')
-        }}
-      {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
-        Upload
-      {{/button}}
-      {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
-        Clear
-      {{/button}}
+      {{#> input-group-item input-group-item--IsFill=true}}
+        {{> file-upload-text-input
+          file-upload-text-input--aria-label="Drag and drop a file or upload one"
+          file-upload-text-input--attribute=(concat 'readonly placeholder="Drag and drop a file or upload one" aria-describedby="' file-upload--id '-browse"')
+          }}
+      {{/input-group-item}}
+      {{#> input-group-item}}
+        {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
+          Upload
+        {{/button}}
+      {{/input-group}}
+      {{#> input-group-item}}
+        {{#> button button--modifier="pf-m-control" button--attribute="disabled"}}
+          Clear
+        {{/button}}
+      {{/input-group-item}}
     {{/input-group}}
   {{/file-upload-file-select}}
   {{#> file-upload-file-details file-upload-file-details--aria-label="Empty text area"}}

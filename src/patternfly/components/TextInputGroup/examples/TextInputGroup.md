@@ -118,42 +118,59 @@ import './TextInputGroup.css'
 <h3>Collapsed</h3>
 <br>
 {{#> input-group input-group--modifier="pf-m-plain"}}
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
-    <i class="fas fa-fw fa-search" aria-hidden="true"></i>
-  {{/button}}
+  {{#> input-group-item input-group-item--IsPlain=true}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
+      <i class="fas fa-fw fa-search" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group-item}}
 {{/input-group}}
 <br>
 <br>
 <h3>Expanded</h3>
 <br>
 {{#> input-group input-group--modifier="pf-m-plain"}}
-  {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-expandable" text-input-group-text-input--placeholder="Search"}}
-  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-  {{/button}}
+  {{#> input-group-item input-group-item--IsFill=true}}
+    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-expandable" text-input-group-text-input--placeholder="Search"}}
+  {{/input-group-item}}
+  {{#> input-group-item input-group-item--IsPlain=true}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+      <i class="fas fa-times" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group-item}}
+
 {{/input-group}}
 ```
 
 ### Search input group, with submit button
 ```hbs
 {{#> input-group}}
-  {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-with-submit-button" text-input-group-text-input--placeholder="Find by name"}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-  {{/button}}
+  {{#> input-group-item input-group-item--IsFill=true}}
+    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-with-submit-button" text-input-group-text-input--placeholder="Find by name"}}
+  {{/input-group-item}}
+  {{#> input-group-item}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
+      <i class="fas fa-arrow-right" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group-item}}
 {{/input-group}}
 ```
 
 ### Search input group, advanced search
 ```hbs
 {{#> input-group}}
-  {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search" text-input-group--value="username:root firstname:ned"}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
-    <i class="fas fa-caret-down" aria-hidden="true"></i>
-  {{/button}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-  {{/button}}
+  {{#> input-group-item input-group-item--IsFill=true}}
+    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search" text-input-group--value="username:root firstname:ned"}}
+  {{/input-group-item}}
+  {{#> input-group-item}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-expanded="false" aria-label="Advanced search"'}}
+      <i class="fas fa-caret-down" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group-item}}
+  {{#> input-group-item}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
+      <i class="fas fa-arrow-right" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group-item}}
 {{/input-group}}
 
 ```
@@ -161,13 +178,19 @@ import './TextInputGroup.css'
 ### Search input group, advanced search expanded
 ```hbs
 {{#> input-group}}
-  {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded" text-input-group--value="username:root firstname:ned"}}
-  {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
-    <i class="fas fa-caret-down" aria-hidden="true"></i>
-  {{/button}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-  {{/button}}
+  {{#> input-group-item input-group-item--IsFill=true}}
+    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded" text-input-group--value="username:root firstname:ned"}}
+  {{/input-group-item}}
+  {{#> input-group-item}}
+    {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
+      <i class="fas fa-caret-down" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group-item}}
+  {{#> input-group-item}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
+      <i class="fas fa-arrow-right" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group-item}}
 {{/input-group}}
 
 {{#> panel panel--modifier="pf-m-raised"}}
@@ -303,13 +326,19 @@ import './TextInputGroup.css'
 ```hbs
 <div class="ws-example-wrapper">
 {{#> input-group}}
-  {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded-autocomplete" text-input-group--value="username:root firstname:n"}}
-  {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
-    <i class="fas fa-caret-down" aria-hidden="true"></i>
-  {{/button}}
-  {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
-    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-  {{/button}}
+  {{#> input-group-item input-group-item--IsFill=true}}
+    {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-advanced-search-expanded-autocomplete" text-input-group--value="username:root firstname:n"}}
+  {{/input-group-item}}
+  {{#> input-group-item}}
+    {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute='aria-expanded="true" aria-label="Advanced search"'}}
+      <i class="fas fa-caret-down" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group-item}}
+  {{#> input-group-item}}
+    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Search"' button--IsSubmit="true"}}
+      <i class="fas fa-arrow-right" aria-hidden="true"></i>
+    {{/button}}
+  {{/input-group-item}}
 {{/input-group}}
 
 {{#> panel panel--modifier="pf-m-raised"}}

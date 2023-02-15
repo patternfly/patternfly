@@ -2,4 +2,4 @@
   {{#if form-control--attribute}}
     {{{form-control--attribute}}}
 	{{/if}}
-{{#if input}}>{{else}}>{{> @partial-block}}</{{controlType}}>{{/if}}
+{{#if input}}>{{else}}>{{#if @partial-block}}{{> @partial-block}}{{/if}}</{{controlType}}>{{/if}}

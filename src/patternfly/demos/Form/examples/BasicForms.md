@@ -338,22 +338,34 @@ section: components
       {{/form-group-label}}
       {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-1"')}}{{/form-control}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-            <i class="fas fa-minus-circle" aria-hidden="true"></i>
-          {{/button}}
+          {{#> input-group-item input-group-item--IsFill=true}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-1"')}}
+          {{/input-group-item}}
+          {{#> input-group-item input-group-item--IsPlain=true}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+              <i class="fas fa-minus-circle" aria-hidden="true"></i>
+            {{/button}}
+          {{/input-group-item}}
         {{/input-group}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-2" name="' form--id form-group--id '-input-2" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-2"')}}{{/form-control}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-            <i class="fas fa-minus-circle" aria-hidden="true"></i>
-          {{/button}}
+          {{#> input-group-item input-group-item--IsFill=true}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-2" name="' form--id form-group--id '-input-2" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-2"')}}
+          {{/input-group-item}}
+          {{#> input-group-item input-group-item--IsPlain=true}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+              <i class="fas fa-minus-circle" aria-hidden="true"></i>
+            {{/button}}
+          {{/input-group-item}}
         {{/input-group}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-3" name="' form--id form-group--id '-input-3" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-3"')}}{{/form-control}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-            <i class="fas fa-minus-circle" aria-hidden="true"></i>
-          {{/button}}
+          {{#> input-group-item input-group-item--IsFill=true}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-3" name="' form--id form-group--id '-input-3" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-3"')}}
+          {{/input-group-item}}
+          {{#> input-group-item input-group-item--IsPlain=true}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+              <i class="fas fa-minus-circle" aria-hidden="true"></i>
+            {{/button}}
+          {{/input-group-item}}
         {{/input-group}}
         {{#> button button--modifier="pf-m-link pf-m-inline"}}
           {{#> button-icon button-icon--modifier="pf-m-start"}}
@@ -516,14 +528,17 @@ section: components
                   {{/form-group-label}}
                   {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
                     {{#> input-group}}
-                      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-title"')}}{{/form-control}}
-                      {{!-- {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}} --}}
-                      {{!-- Required. A list of node selector terms. The terms are ORed. --}}
-                      {{!-- {{/form-helper-text}} --}}
-                      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-                        <i class="fas fa-minus-circle" aria-hidden="true"></i>
-                      {{/button}}
-
+                      {{#> input-group-item input-group-item--IsFill=true}}
+                        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-title"')}}
+                        {{!-- {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}} --}}
+                        {{!-- Required. A list of node selector terms. The terms are ORed. --}}
+                        {{!-- {{/form-helper-text}} --}}
+                      {{/input-group-item}}
+                      {{#> input-group-item input-group-item--IsPlain=true}}
+                        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                          <i class="fas fa-minus-circle" aria-hidden="true"></i>
+                        {{/button}}
+                      {{/input-group-item}}
                     {{/input-group}}
                     {{#> button button--modifier="pf-m-link pf-m-inline"}}
                       {{#> button-icon button-icon--modifier="pf-m-start"}}

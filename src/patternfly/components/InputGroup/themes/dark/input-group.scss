@@ -2,35 +2,19 @@
 
 @mixin pf-theme-dark-input-group() {
   .pf-c-input-group {
-    --pf-c-input-group--BackgroundColor: transparent;
-    --pf-c-input-group__text--BorderTopColor: transparent;
-    --pf-c-input-group__text--BorderRightColor: transparent;
-    --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--400);
-    --pf-c-input-group__text--BorderLeftColor: transparent;
-    --pf-c-input-group__text--BackgroundColor: var(--pf-global--palette--black-600);
+    --pf-c-input-group__item--m-box--BackgroundColor: var(--pf-global--BackgroundColor--400);
+    --pf-c-input-group__item--m-box--BorderTopColor: transparent;
+    --pf-c-inpug-group__item--m-box--BorderRightColor: transparent;
+    --pf-c-input-group__item--m-box--BorderBottomColor: var(--pf-global--BorderColor--400);
+    --pf-c-inpug-group__item--m-box--BorderLeftColor: transparent;
+    --pf-c-input-group__item--m-disabled--BackgroundColor: var(--pf-global--disabled-color--200);
+    --pf-c-input-group__item--m-disabled--BorderBottomColor: transparent;
     --pf-c-input-group__text--m-disabled--Color: var(--pf-global--palette--black-100);
-    --pf-c-input-group__text--m-disabled--BackgroundColor: var(--pf-global--disabled-color--200);
 
     > * + * {
-      margin-left: 0;
+      --pf-c-input-group__item--m-box--BorderLeftColor: var(--pf-global--palette--black-700);
+
       border-left: 1px solid var(--pf-global--palette--black-700); // global var
-    }
-  }
-
-  .pf-c-input-group__text {
-    --pf-c-input-group__text--BorderTopColor: transparent;
-    --pf-c-input-group__text--BorderRightColor: transparent;
-    --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--400);
-    --pf-c-input-group__text--BorderLeftColor: transparent;
-
-    &.pf-m-plain {
-      --pf-c-input-group__text--BackgroundColor: transparent;
-    }
-
-    &.pf-m-disabled {
-      --pf-c-input-group__text--BackgroundColor: var(--pf-c-input-group__text--m-disabled--BackgroundColor);
-
-      color: var(--pf-c-input-group__text--m-disabled--Color);
     }
   }
 }
