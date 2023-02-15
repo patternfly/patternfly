@@ -121,7 +121,6 @@ wrapperTag: div
               <i class="fas fa-times" aria-hidden="true"></i>
             {{/button}}
           {{/input-group-item}}
-
         {{/input-group}}
       {{/toolbar-item}}
     {{/toolbar-group}}

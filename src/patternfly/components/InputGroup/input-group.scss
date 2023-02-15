@@ -5,17 +5,20 @@
   // Input group item
   --pf-c-input-group__item--offset: var(--pf-global--BorderWidth--sm);
   --pf-c-input-group__item--MarginLeft: calc(var(--pf-c-input-group__item--offset) * -1);
+  --pf-c-input-group__item--BorderWidth--base: var(--pf-c-input-group__item--offset);
+  --pf-c-input-group__item--BorderColor--base: var(--pf-global--BorderColor--300);
+  --pf-c-input-group__item--BorderColor--accent: var(--pf-global--BorderColor--200);
   --pf-c-input-group__item--BackgroundColor: transparent;
 
   // Input group item, box variant
   --pf-c-input-group__item--m-box--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-input-group__item--m-box--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-input-group__item--m-box--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-input-group__item--m-box--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-input-group__item--m-box--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-input-group__item--m-box--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-input-group__item--m-box--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-input-group__item--m-box--BorderLeftColor: var(--pf-global--BorderColor--300);
+  --pf-c-input-group__item--m-box--BorderWidth: var(--pf-c-input-group__item--offset);
+  --pf-c-input-group__item--m-box--BorderTopColor: var(--pf-c-input-group__item--BorderColor--base);
+  --pf-c-input-group__item--m-box--BorderRightColor: var(--pf-c-input-group__item--BorderColor--base);
+  --pf-c-input-group__item--m-box--BorderBottomColor: var(--pf-c-input-group__item--BorderColor--accent);
+  --pf-c-input-group__item--m-box--BorderLeftColor: var(--pf-c-input-group__item--BorderColor--base);
 
   // Input group item, plain variant
   --pf-c-input-group__item--m-plain--BackgroundColor: transparent;
@@ -38,10 +41,12 @@
 }
 
 .pf-c-input-group__item {
+  position: relative; // stack items without explicit z-index
   display: flex;
   min-width: var(--pf-c-input-group__item--MinWidth, revert);
   max-width: var(--pf-c-input-group__item--MaxWidth, revert);
   background-color: var(--pf-c-input-group__item--BackgroundColor);
+  border-color: var(--pf-c-input-group__item--m-box--BorderTopColor) var(--pf-c-input-group__item--m-box--BorderRightColor) var(--pf-c-input-group__item--m-box--BorderBottomColor) var(--pf-c-input-group__item--m-box--BorderLeftColor);
 
   &:where(:not(:first-child)) {
     margin-left: var(--pf-c-input-group__item--MarginLeft);

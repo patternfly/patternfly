@@ -63,22 +63,25 @@ Use the input group to extend form controls by adding text, buttons, selects, et
       Select
     {{/select}}
   {{/input-group-item}}
-  {{#> form-control controlType="input" input=true form-control--attribute='type="text" id="textInput4" name="textInput4" aria-label="Input with select and button" aria-describedby="inputSelectButton1"'}}
-  {{/form-control}}
-  {{#> button button--modifier="pf-m-control" button--attribute='id="inputSelectButton1"'}}
-    Button
-  {{/button}}
+  {{#> input-group-item input-group-item--IsFill=true}}
+    {{> form-control controlType="input" input=true form-control--attribute='type="text" id="textInput4" name="textInput4" aria-label="Input with select and button" aria-describedby="inputSelectButton1"'}}
+  {{/input-group-item}}
+  {{#> input-group-item}}
+    {{#> button button--modifier="pf-m-control" button--attribute='id="inputSelectButton1"'}}
+      Button
+    {{/button}}
+  {{/input-group-item}}
 {{/input-group}}
 <br>
 {{#> input-group}}
   {{#> input-group-item input-group-item--IsBox=true}}
-    {{> input-group-text input-group-text--HasDollarSignIcon=true input-group-text--IsGray=true}}
+    {{> input-group-text input-group-text--HasDollarSignIcon=true}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsFill=true}}
     {{> form-control controlType="input" input=true form-control--attribute='type="number" id="textInput5" name="textInput5" aria-label=" Dollar amount input example"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsBox=true}}
-    {{> input-group-text input-group-text--value=".00" input-group-text--IsGray=true}}
+    {{> input-group-text input-group-text--value=".00"}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
@@ -87,15 +90,13 @@ Use the input group to extend form controls by adding text, buttons, selects, et
     {{> form-control controlType="input" input=true form-control--attribute='type="email" id="textInput6" name="textInput6" aria-label="Email input field" aria-describedby="email-example"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsBox=true}}
-    {{#> input-group-text input-group-text--attribute='id="email-example"' input-group-text--IsGray=true}}
-      @example.com
-    {{/input-group-text}}
+    {{> input-group-text input-group-text--value="@example.com" input-group-text--attribute='id="email-example"'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>
 {{#> input-group}}
   {{#> input-group-item input-group-item--IsBox=true}}
-    {{> input-group-text input-group-text--HasAtIcon=true input-group-text--IsGray=true}}
+    {{> input-group-text input-group-text--HasAtIcon=true}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsFill=true}}
     {{> form-control controlType="input" input=true form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example"'}}
@@ -106,7 +107,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
   {{#> input-group-item input-group-item--IsFill=true}}
     {{> form-control controlType="input" input=true form-control--attribute='type="text" id="textInput13" name="textInput13" aria-label="Input example with popover"'}}
   {{/input-group-item}}
-  {{#> input-group-item input-group-item--IsPlain=true}}
+  {{#> input-group-item}}
     {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Popover for input"'}}
       <i class="fas fa-question-circle" aria-hidden="true"></i>
     {{/button}}
@@ -129,9 +130,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
     {{> form-control controlType="input" input=true form-control--attribute='type="number" id="textInput14" name="textInput14" aria-label="Input example with plain unit"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsBox=true input-group-item--IsPlain=true}}
-    {{#> input-group-text}}
-    %
-    {{/input-group-text}}
+    {{> input-group-text input-group-text--value="%"}}
   {{/input-group-item}}
 {{/input-group}}
 ```
