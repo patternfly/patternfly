@@ -12,10 +12,12 @@ import './Wizard.css'
 ```hbs isFullscreen
 {{#> wizard wizard--id="wizard-basic"}}
   {{#> wizard-header}}
-    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{> wizard-close}}
+    {{#> wizard-title}}
+      {{#> wizard-title-text}}
+        Wizard title
+      {{/wizard-title-text}}
+    {{/wizard-title}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -89,10 +91,12 @@ import './Wizard.css'
 ```hbs isFullscreen
 {{#> wizard wizard--IsExpanded="true"}}
   {{#> wizard-header}}
-    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{> wizard-close}}
+    {{#> wizard-title}}
+      {{#> wizard-title-text}}
+        Wizard title
+      {{/wizard-title-text}}
+    {{/wizard-title}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -166,10 +170,12 @@ import './Wizard.css'
 ```hbs isFullscreen
 {{#> wizard wizard--id="wizard-with-drawer-example"}}
   {{#> wizard-header}}
-    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{> wizard-close}}
+    {{#> wizard-title}}
+      {{#> wizard-title-text}}
+        Wizard title
+      {{/wizard-title-text}}
+    {{/wizard-title}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -224,10 +230,12 @@ import './Wizard.css'
 ```hbs isFullscreen
 {{#> wizard wizard--id="wizard-expandable-collapsed"}}
   {{#> wizard-header}}
-    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{> wizard-close}}
+    {{#> wizard-title}}
+      {{#> wizard-title-text}}
+        Wizard title
+      {{/wizard-title-text}}
+    {{/wizard-title}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -301,10 +309,12 @@ import './Wizard.css'
 ```hbs isFullscreen
 {{#> wizard wizard--id="wizard-expandable-expanded"}}
   {{#> wizard-header}}
-    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{> wizard-close}}
+    {{#> wizard-title}}
+      {{#> wizard-title-text}}
+        Wizard title
+      {{/wizard-title-text}}
+    {{/wizard-title}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -378,10 +388,12 @@ import './Wizard.css'
 ```hbs isFullscreen
 {{#> wizard wizard--modifier="pf-m-finished" wizard--id="wizard-finished"}}
   {{#> wizard-header}}
-    {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+    {{> wizard-close}}
+    {{#> wizard-title}}
+      {{#> wizard-title-text}}
+        Wizard title
+      {{/wizard-title-text}}
+    {{/wizard-title}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -446,9 +458,11 @@ import './Wizard.css'
         {{#> bullseye}}
           {{#> empty-state empty-state--modifier="pf-m-lg"}}
             {{#> empty-state-icon empty-state-icon--type="cogs"}}{{/empty-state-icon}}
-            {{#> title titleType="h1" title--modifier="pf-m-lg" title--attribute=(concat 'id="' wizard--id '-empty-state-title"')}}
-              Validating credentials
-            {{/title}}
+            {{#> empty-state-title empty-state-title--attribute=(concat 'id="' wizard--id '-empty-state-title"')}}
+              {{#> empty-state-title-text}}
+                Validating credentials
+              {{/empty-state-title-text}}
+            {{/empty-state-title}}
             {{#> empty-state-body}}
               {{#> progress progress__value="33" progress--modifier="pf-m-singleline" progress__id="progress-singleline-example" progress__aria-labelledby=(concat wizard--id '-empty-state-title')}}{{/progress}}
             {{/empty-state-body}}
@@ -491,8 +505,9 @@ import './Wizard.css'
 | -- | -- | -- |
 | `.pf-c-wizard` | `<div>` | Initiates the wizard component. **Required** |
 | `.pf-c-wizard__header` | `<header>` | Initiates the header. **Required** when the wizard is in a modal. Not recommended to use when the wizard is placed on a page. |
-| `.pf-c-wizard__close` | `.pf-c-button.pf-m-plain` | Initiates the close button. **Required** |
-| `.pf-c-wizard__title` | `.pf-c-title.pf-m-3xl` | Initiates the title. **Required** |
+| `.pf-c-wizard__close` | `<div>` | Initiates the close button. **Required** |
+| `.pf-c-wizard__title` | `<div>` | Initiates the title container. **Required** |
+| `.pf-c-wizard__title-text` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`, `<div>` | Initiates the wizard title text. |
 | `.pf-c-wizard__description` | `<div>`, `<p>` | Initiates the description. |
 | `.pf-c-wizard__toggle` | `<button>` | Initiates the mobile steps menu toggle button. **Required** |
 | `.pf-c-wizard__toggle-list` | `<span>` | Initiates the toggle list. **Required** |
