@@ -6,5 +6,7 @@
   {{#if input-group-item--attribute}}
     {{{input-group-item--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>

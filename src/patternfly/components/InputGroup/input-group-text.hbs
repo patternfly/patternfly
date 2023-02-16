@@ -7,8 +7,7 @@
   {{/if}}>
   {{#if input-group-text--value}}
     {{{input-group-text--value}}}
-  {{/if}}
-  {{#if @partial-block}}
+  {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}
   {{#if input-group-text--HasDollarSignIcon}}

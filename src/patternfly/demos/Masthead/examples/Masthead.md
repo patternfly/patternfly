@@ -85,7 +85,7 @@ wrapperTag: div
   {{#> toolbar-content-section}}
     {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
       {{#> toolbar-item}}
-        {{#> input-group input-group--modifier="pf-m-plain"}}
+        {{#> input-group input-group--IsPlain=true}}
           {{#> input-group-item input-group-item--IsPlain=true}}
             {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
               <i class="fas fa-fw fa-search" aria-hidden="true"></i>
@@ -105,7 +105,7 @@ wrapperTag: div
   {{#> toolbar-content-section}}
     {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
       {{#> toolbar-item}}
-        {{#> input-group input-group--modifier="pf-m-plain"}}
+        {{#> input-group input-group--IsPlain=true}}
           {{#> input-group-item input-group-item--IsFill=true}}
             {{#> text-input-group}}
               {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}

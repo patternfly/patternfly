@@ -117,7 +117,7 @@ import './TextInputGroup.css'
 ```hbs
 <h3>Collapsed</h3>
 <br>
-{{#> input-group input-group--modifier="pf-m-plain"}}
+{{#> input-group input-group--IsPlain=true}}
   {{#> input-group-item input-group-item--IsPlain=true}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Open search"'}}
       <i class="fas fa-fw fa-search" aria-hidden="true"></i>
@@ -128,7 +128,7 @@ import './TextInputGroup.css'
 <br>
 <h3>Expanded</h3>
 <br>
-{{#> input-group input-group--modifier="pf-m-plain"}}
+{{#> input-group input-group--IsPlain=true}}
   {{#> input-group-item input-group-item--IsFill=true}}
     {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group-expandable" text-input-group-text-input--placeholder="Search"}}
   {{/input-group-item}}
@@ -204,7 +204,7 @@ import './TextInputGroup.css'
             {{/form-label}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="root" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="root" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--id="-firstname"}}
@@ -214,7 +214,7 @@ import './TextInputGroup.css'
             {{/form-label}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="ned" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="ned" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--id="-group"}}
@@ -224,7 +224,7 @@ import './TextInputGroup.css'
             {{/form-label}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--id="-email"}}
@@ -234,7 +234,7 @@ import './TextInputGroup.css'
             {{/form-label}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
@@ -352,7 +352,7 @@ import './TextInputGroup.css'
             {{/form-label}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="root" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="root" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--id="-firstname"}}
@@ -362,7 +362,7 @@ import './TextInputGroup.css'
             {{/form-label}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="ned" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="ned" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--id="-group"}}
@@ -372,7 +372,7 @@ import './TextInputGroup.css'
             {{/form-label}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--id="-email"}}
@@ -382,7 +382,7 @@ import './TextInputGroup.css'
             {{/form-label}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--modifier="pf-m-action"}}
