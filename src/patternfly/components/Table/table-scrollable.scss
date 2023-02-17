@@ -1,7 +1,6 @@
 .pf-c-table {
   --pf-c-table__sticky-column--cell-min-width--base: #{pf-size-prem(200px)};
   --pf-c-table__sticky-column--MinWidth: var(--pf-c-table__sticky-column--cell-min-width--base);
-  --pf-c-table__sticky-column--Left: 0;
   --pf-c-table__sticky-column--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-table__sticky-column--Top: 0;
   --pf-c-table__sticky-column--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -13,11 +12,20 @@
 
   .pf-c-table__sticky-column {
     position: sticky;
-    left: var(--pf-c-table__sticky-column--Left);
+    right: var(--pf-c-table__sticky-column--Right, revert);
+    left: var(--pf-c-table__sticky-column--Left, revert);
     z-index: var(--pf-c-table__sticky-column--ZIndex);
     min-width: var(--pf-c-table__sticky-column--MinWidth);
     background-color: var(--pf-c-table__sticky-column--BackgroundColor);
     background-clip: padding-box;
+
+    &:where(:first-child) {
+      --pf-c-table__sticky-column--Left: 0;
+    }
+
+    &:where(:last-child) {
+      --pf-c-table__sticky-column--Right: 0;
+    }
 
     &.pf-m-border-right::before {
       --pf-c-table--cell--m-border-right--before--BorderRightWidth: var(--pf-c-table__sticky-column--m-border-right--before--BorderRightWidth);
