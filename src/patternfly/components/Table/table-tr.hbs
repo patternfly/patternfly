@@ -3,7 +3,7 @@
   {{#if table-tr--IsControlRow}} pf-c-table__control-row{{/if}}
   {{#if table-tr--IsExpanded}} pf-m-expanded{{/if}}
   {{#if table-tr--details--IsExpanded}} pf-m-tree-view-details-expanded{{/if}}
-  {{#if table-tr--IsHoverable}} pf-m-hoverable{{/if}}
+  {{~#if table-tr--IsClickable}} pf-m-clickable{{/if}}
   {{#if table-tr--IsSelected}} pf-m-selected{{/if}}
   {{#if table-tr--IsBorderRow}} pf-m-border-row{{/if}}
   {{#if table-tr--HasNoInset}} pf-m-no-inset{{/if}}
@@ -35,7 +35,7 @@
       role="row"
     {{/if}}
   {{/unless}}
-  {{#if table-tr--IsHoverable}}
+  {{#if table-tr--IsClickable}}
     tabindex="0"
   {{/if}}
   {{#if table-tr--IsBorderRow}}
