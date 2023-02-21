@@ -20,12 +20,12 @@
   {{/table-thead}}
 
   {{#if table--HasNoPosinset}}
-    {{> table-tr--tree table-tr--tree--title='Level 1, leaf 1' table-tr--HasNoPosinset=true}}
-    {{> table-tr--tree table-tr--tree--title='Level 1, leaf 2'}}
-    {{> table-tr--tree table-tr--tree--title='Level 1, leaf 3'}}
-    {{> table-tr--tree table-tr--tree--title='Level 1, leaf 4'}}
-    {{> table-tr--tree table-tr--tree--title='Level 1, leaf 5'}}
-    {{> table-tr--tree table-tr--tree--title='Level 1, leaf 6'}}
+    {{> table-tr--tree table-tr--tree--index="1" table-tr--tree--title='Level 1, leaf 1'}}
+    {{> table-tr--tree table-tr--tree--index="2" table-tr--tree--title='Level 1, leaf 2'}}
+    {{> table-tr--tree table-tr--tree--index="3" table-tr--tree--title='Level 1, leaf 3'}}
+    {{> table-tr--tree table-tr--tree--index="4" table-tr--tree--title='Level 1, leaf 4'}}
+    {{> table-tr--tree table-tr--tree--index="5" table-tr--tree--title='Level 1, leaf 5'}}
+    {{> table-tr--tree table-tr--tree--index="6" table-tr--tree--title='Level 1, leaf 6'}}
   {{else}}
     {{#> table-tbody table--IsTree-view--level="1" table--IsTree-view--setsize="1" table--IsTree-view--posinset="1"}}
       {{> table-tr--tree table-tr--tree--index="1" table-tr--expanded="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' all folders')}}
