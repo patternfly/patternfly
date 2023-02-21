@@ -1,7 +1,7 @@
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-recommended-scss"
+    "stylelint-config-standard-scss"
   ],
   "plugins": [
     "stylelint-order",
@@ -243,6 +243,7 @@
         "after-dollar-variable"
       ]
     }],
+    "scss/dollar-variable-pattern": ["^pf-", {"ignore": "local"}],
     "scss/double-slash-comment-empty-line-before": ["always", {
       "except": ["first-nested"],
       "ignore": [
@@ -251,7 +252,9 @@
       ]
     }],
     "scss/double-slash-comment-whitespace-inside": "always",
+    "scss/at-mixin-pattern": "^pf-",
     "scss/no-global-function-names": null,
+    "scss/percent-placeholder-pattern": "^pf-",
     "selector-class-pattern": "pf-",
     "selector-max-attribute": 2,
     "selector-max-class": 4,
@@ -260,6 +263,6 @@
     "selector-max-id": 0,
     "selector-max-type": 2,
     "selector-nested-pattern": "^(?!.*&[-_])",
-    "selector-no-qualifying-type": true,
+    "selector-no-qualifying-type": true
   }
 }

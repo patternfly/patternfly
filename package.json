@@ -69,6 +69,7 @@
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
+    "husky": "^8.0.3",
     "lint-staged": "^13.1.1",
     "node-plop": "^0.31.1",
     "postcss": "^8.4.21",
@@ -80,18 +81,15 @@
     "remark-parse": "^10.0.1",
     "remark-stringify": "^10.0.2",
     "rimraf": "*",
-    "sass": "^1.58.0",
+    "sass": "^1.58.3",
     "sass-graph": "^4.0.1",
-    "stylelint": "^15.0.0",
-    "stylelint-config-recommended-scss": "^8.0.0",
+    "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
     "stylelint-order": "^6.0.2",
-    "stylelint-scss": "^4.3.0",
     "stylelint-value-no-unknown-custom-properties": "^4.0.0",
     "surge": "^0.23.1",
     "unified": "^10.1.2",
-    "webpack": "^5.75.0",
-    "husky": "^8.0.3"
+    "webpack": "^5.75.0"
   },
   "resolutions": {
     "@babel/preset-env": "7.18.2",
@@ -105,5 +103,8 @@
     "registry": "https://registry.npmjs.org/",
     "tag": "alpha",
     "access": "public"
+  },
+  "dependencies": {
+    "stylelint-config-standard-scss": "^7.0.1"
   }
 }

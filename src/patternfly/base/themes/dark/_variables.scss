@@ -1,6 +1,6 @@
 @import "../../../sass-utilities/themes/dark/all";
 
-@mixin _variables() {
+@mixin pf-_variables() {
   // palette changes
   --pf-global--palette--black-50: #{$pf-color-black-50};
   --pf-global--palette--black-100: #{$pf-color-black-100};

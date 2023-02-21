@@ -137,5 +137,5 @@
 @import "./themes/dark/globals";
 
 @include pf-theme-dark($pf-theme-dark-prefix: ":root") {
-  @include globals;
+  @include pf-_globals;
 }

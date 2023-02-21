@@ -1,7 +1,7 @@
 // stylelint-disable
 
 // Build spacing values
-@mixin pf-spacer-builder() {
+@mixin pf-spacer-builder {
 
   // Loop through breakpoints
   @each $breakpoint, $breakpoint-value in $pf-global--breakpoint-map {
@@ -54,4 +54,4 @@
 // stylelint-enable
 
 // Build spacing values
-@include pf-spacer-builder();
+@include pf-spacer-builder;

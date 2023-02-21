@@ -2,33 +2,23 @@
 @mixin pf-media-query($point) {
   @if $point == "" or not $point or $point == "base" {
     @content;
-  }
-
-  @else if $point == "sm" {
+  } @else if $point == "sm" {
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       @content;
     }
-  }
-
-  @else if $point == "md" {
+  } @else if $point == "md" {
     @media screen and (min-width: $pf-global--breakpoint--md) {
       @content;
     }
-  }
-
-  @else if $point == "lg" {
+  } @else if $point == "lg" {
     @media screen and (min-width: $pf-global--breakpoint--lg) {
       @content;
     }
-  }
-
-  @else if $point == "xl" {
+  } @else if $point == "xl" {
     @media screen and (min-width: $pf-global--breakpoint--xl) {
       @content;
     }
-  }
-
-  @else if $point == "2xl" {
+  } @else if $point == "2xl" {
     @media screen and (min-width: $pf-global--breakpoint--2xl) {
       @content;
     }
@@ -39,33 +29,23 @@
 @mixin pf-height-media-query($point) {
   @if $point == "" or not $point or $point == "base" {
     @content;
-  }
-
-  @else if $point == "sm" {
+  } @else if $point == "sm" {
     @media screen and (min-height: $pf-global--height-breakpoint--sm) {
       @content;
     }
-  }
-
-  @else if $point == "md" {
+  } @else if $point == "md" {
     @media screen and (min-height: $pf-global--height-breakpoint--md) {
       @content;
     }
-  }
-
-  @else if $point == "lg" {
+  } @else if $point == "lg" {
     @media screen and (min-height: $pf-global--height-breakpoint--lg) {
       @content;
     }
-  }
-
-  @else if $point == "xl" {
+  } @else if $point == "xl" {
     @media screen and (min-height: $pf-global--height-breakpoint--xl) {
       @content;
     }
-  }
-
-  @else if $point == "2xl" {
+  } @else if $point == "2xl" {
     @media screen and (min-height: $pf-global--height-breakpoint--2xl) {
       @content;
     }
@@ -75,7 +55,7 @@
 // Create single prop / value classes, optionally add responsive suffix
 // @group mixins
 // @moduleType mixin
-// @parameter: {Suffix} xs, sm, md, lg, xl, base or null
+// @parameter: [Suffix] xs, sm, md, lg, xl, base or null
 // @usage: @include pf-utility-builder(class-name, base sm md lg xl);
 // ===============================================================================================
 
@@ -232,11 +212,9 @@
 
 // Apply media query if value is passed
 @mixin pf-apply-breakpoint($breakpoint) {
-  @if ($breakpoint == "null" or $breakpoint == "base" or $breakpoint == "") {
+  @if $breakpoint == "null" or $breakpoint == "base" or $breakpoint == "" {
     @content;
-  }
-
-  @else {
+  } @else {
     $breakpoint: pf-breakpoint-value($breakpoint);
 
     @media (min-width: $breakpoint) {
@@ -247,11 +225,9 @@
 
 // Apply height media query if value is passed
 @mixin pf-apply-height-breakpoint($breakpoint) {
-  @if ($breakpoint == "null" or $breakpoint == "base" or $breakpoint == "") {
+  @if $breakpoint == "null" or $breakpoint == "base" or $breakpoint == "" {
     @content;
-  }
-
-  @else {
+  } @else {
     $breakpoint: pf-height-breakpoint-value($breakpoint);
 
     @media (min-height: $breakpoint) {
