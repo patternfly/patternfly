@@ -2,5 +2,12 @@
   {{#if wizard-title--attribute}}
     {{{wizard-title--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if wizard-title-text--value}}
+    {{#> wizard-title-text}}
+      {{{wizard-title-text--value}}}
+    {{/wizard-title-text}}
+  {{/if}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>

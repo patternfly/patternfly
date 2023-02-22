@@ -13,11 +13,7 @@ import './Wizard.css'
 {{#> wizard wizard--id="wizard-basic"}}
   {{#> wizard-header}}
     {{> wizard-close}}
-    {{#> wizard-title}}
-      {{#> wizard-title-text}}
-        Wizard title
-      {{/wizard-title-text}}
-    {{/wizard-title}}
+    {{> wizard-title wizard-title-text--value="Wizard title"}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -92,11 +88,7 @@ import './Wizard.css'
 {{#> wizard wizard--IsExpanded="true"}}
   {{#> wizard-header}}
     {{> wizard-close}}
-    {{#> wizard-title}}
-      {{#> wizard-title-text}}
-        Wizard title
-      {{/wizard-title-text}}
-    {{/wizard-title}}
+    {{> wizard-title wizard-title-text--value="Wizard title"}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -171,11 +163,7 @@ import './Wizard.css'
 {{#> wizard wizard--id="wizard-with-drawer-example"}}
   {{#> wizard-header}}
     {{> wizard-close}}
-    {{#> wizard-title}}
-      {{#> wizard-title-text}}
-        Wizard title
-      {{/wizard-title-text}}
-    {{/wizard-title}}
+    {{> wizard-title wizard-title-text--value="Wizard title"}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -231,11 +219,7 @@ import './Wizard.css'
 {{#> wizard wizard--id="wizard-expandable-collapsed"}}
   {{#> wizard-header}}
     {{> wizard-close}}
-    {{#> wizard-title}}
-      {{#> wizard-title-text}}
-        Wizard title
-      {{/wizard-title-text}}
-    {{/wizard-title}}
+    {{> wizard-title wizard-title-text--value="Wizard title"}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -310,11 +294,7 @@ import './Wizard.css'
 {{#> wizard wizard--id="wizard-expandable-expanded"}}
   {{#> wizard-header}}
     {{> wizard-close}}
-    {{#> wizard-title}}
-      {{#> wizard-title-text}}
-        Wizard title
-      {{/wizard-title-text}}
-    {{/wizard-title}}
+    {{> wizard-title wizard-title-text--value="Wizard title"}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
@@ -389,11 +369,7 @@ import './Wizard.css'
 {{#> wizard wizard--modifier="pf-m-finished" wizard--id="wizard-finished"}}
   {{#> wizard-header}}
     {{> wizard-close}}
-    {{#> wizard-title}}
-      {{#> wizard-title-text}}
-        Wizard title
-      {{/wizard-title-text}}
-    {{/wizard-title}}
+    {{> wizard-title wizard-title-text--value="Wizard title"}}
     {{#> wizard-description}}
       Here is where the description goes
     {{/wizard-description}}
