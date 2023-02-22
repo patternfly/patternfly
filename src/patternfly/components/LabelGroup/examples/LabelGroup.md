@@ -14,7 +14,7 @@ cssPrefix: pf-c-label-group
       {{#> label-group-list-item}}
         {{#> label}}
           {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+            <i class="fas fa-fw fa-info-circle" aria-hiddent></i>
           {{/label-icon}}
           {{> label-text label-text--text="Label 1"}}
         {{/label}}
