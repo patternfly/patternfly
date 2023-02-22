@@ -21,8 +21,6 @@ cssPrefix: pf-c-about-modal-box
       Product name
     {{/title}}
   {{/about-modal-box-header}}
-  {{#> about-modal-box-hero}}
-  {{/about-modal-box-hero}}
   {{#> about-modal-box-content}}
     {{#> about-modal-box-body}}
       content
@@ -48,7 +46,6 @@ cssPrefix: pf-c-about-modal-box
 | `.pf-c-about-modal-box__brand-image` |  `<img>` |  Initiates a modal box brand image. |
 | `.pf-c-about-modal-box__close` |  `<div>` |  Initiates a modal box close cell. |
 | `.pf-c-about-modal-box__header` |  `<div>`, `<header>` |  Initiates a modal box header cell. |
-| `.pf-c-about-modal-box__hero` |  `<div>` |  Initiates a modal box hero cell. |
 | `.pf-c-about-modal-box__content` |  `<div>` |  Initiates a modal box content cell. |
 | `.pf-c-about-modal-box__body` |  `<div>` |  Initiates a modal box body cell. |
 | `.pf-c-about-modal-box__strapline` |  `<p>` |  Initiates a modal box strapline cell. |

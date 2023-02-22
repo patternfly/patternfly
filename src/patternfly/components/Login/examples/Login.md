@@ -8,7 +8,7 @@ wrapperTag: div
 ## Examples
 ### Basic
 ```hbs isFullscreen
-{{#> background-image}}{{/background-image}}
+{{> background-image}}
 {{#> login}}
   {{#> login-container}}
     {{> __login-header}}
@@ -52,7 +52,7 @@ wrapperTag: div
 
 ### Invalid
 ```hbs isFullscreen
-{{#> background-image}}{{/background-image}}
+{{> background-image}}
 {{#> login}}
   {{#> login-container}}
     {{> __login-header}}
@@ -96,7 +96,7 @@ wrapperTag: div
 
 ### Show password
 ```hbs isFullscreen
-{{#> background-image}}{{/background-image}}
+{{> background-image}}
 {{#> login}}
   {{#> login-container}}
     {{> __login-header}}
@@ -145,7 +145,7 @@ wrapperTag: div
 
 ### Hide password
 ```hbs isFullscreen
-{{#> background-image}}{{/background-image}}
+{{> background-image}}
 {{#> login}}
   {{#> login-container}}
     {{> __login-header}}
@@ -194,7 +194,7 @@ wrapperTag: div
 
 ### With language selector
 ```hbs isFullscreen
-{{#> background-image}}{{/background-image}}
+{{> background-image}}
 {{#> login}}
   {{#> login-container}}
     {{> __login-header}}
