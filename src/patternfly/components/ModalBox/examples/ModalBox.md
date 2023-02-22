@@ -10,11 +10,7 @@ import './ModalBox.css'
 ### Basic
 ```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"'}}
-  {{#> modal-box-close}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-  {{/modal-box-close}}
+  {{> modal-box-close}}
   {{#> modal-box-header}}
     {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
       Modal title
@@ -32,11 +28,7 @@ import './ModalBox.css'
 ### With help button
 ```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-help-title" aria-describedby="modal-help-description"'}}
-  {{#> modal-box-close}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-  {{/modal-box-close}}
+  {{> modal-box-close}}
   {{#> modal-box-header modal-box-header--modifier="pf-m-help"}}
     {{#> modal-box-header-main}}
       {{#> modal-box-title modal-box-title--attribute='id="modal-help-title"'}}
@@ -60,11 +52,7 @@ import './ModalBox.css'
 ### Small
 ```hbs isFullscreen
 {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-sm-title" aria-describedby="modal-sm-description"'}}
-  {{#> modal-box-close}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-  {{/modal-box-close}}
+  {{> modal-box-close}}
   {{#> modal-box-header}}
     {{#> modal-box-title modal-box-title--attribute='id="modal-sm-title"'}}
       Modal title
@@ -85,11 +73,7 @@ import './ModalBox.css'
 ### Medium
 ```hbs isFullscreen
 {{#> modal-box modal-box--modifier="pf-m-md" modal-box--attribute='aria-labelledby="modal-md-title" aria-describedby="modal-md-description"'}}
-  {{#> modal-box-close}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-  {{/modal-box-close}}
+  {{> modal-box-close}}
   {{#> modal-box-header}}
     {{#> modal-box-title modal-box-title--attribute='id="modal-md-title"'}}
       Modal title
@@ -110,11 +94,7 @@ import './ModalBox.css'
 ### Large
 ```hbs isFullscreen
 {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
-  {{#> modal-box-close}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-  {{/modal-box-close}}
+  {{> modal-box-close}}
   {{#> modal-box-header}}
     {{#> modal-box-title modal-box-title--attribute='id="modal-lg-title"'}}
       Modal title
@@ -135,11 +115,7 @@ import './ModalBox.css'
 ### Without title
 ```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-label="Example of a modal without a title" aria-describedby="modal-no-title-description"'}}
-  {{#> modal-box-close}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-  {{/modal-box-close}}
+  {{> modal-box-close}}
   {{#> modal-box-body}}
     <span id="modal-no-title-description">When static text describing the modal is available, it can be wrapped with an ID referring to the modal's aria-describedby value. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   {{/modal-box-body}}
@@ -152,11 +128,7 @@ import './ModalBox.css'
 ### With description
 ```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-with-description-title" aria-describedby="modal-with-description-description"'}}
-  {{#> modal-box-close}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-  {{/modal-box-close}}
+  {{> modal-box-close}}
   {{#> modal-box-header}}
     {{#> modal-box-title modal-box-title--attribute='id="modal-with-description-title"'}}
       Modal title
@@ -177,11 +149,7 @@ import './ModalBox.css'
 ### Custom title
 ```hbs isFullscreen
 {{#> modal-box modal-box--attribute='aria-labelledby="modal-custom-title" aria-describedby="modal-custom-description"'}}
-  {{#> modal-box-close}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-    <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-  {{/modal-box-close}}
+  {{> modal-box-close}}
   {{#> modal-box-header}}
     {{#> title title--modifier="pf-m-4xl" title--attribute='id="modal-custom-title"'}}Custom title{{/title}}
   {{/modal-box-header}}
@@ -205,11 +173,7 @@ import './ModalBox.css'
 ```hbs isFullscreen
 {{#> modal-example modal-example--id="icon"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"')}}
-    {{#> modal-box-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/modal-box-close}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"') modal-box-title-icon--type="bullhorn"}}
         Modal with icon title
@@ -229,11 +193,7 @@ import './ModalBox.css'
 ```hbs isFullscreen
 {{#> modal-example modal-example--id="default-alert"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsDefaultAlert="true"}}
-    {{#> modal-box-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/modal-box-close}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
         Default alert modal title
@@ -253,11 +213,7 @@ import './ModalBox.css'
 ```hbs isFullscreen
 {{#> modal-example modal-example--id="info-alert"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsInfoAlert="true"}}
-    {{#> modal-box-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/modal-box-close}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
         Info alert modal title
@@ -277,11 +233,7 @@ import './ModalBox.css'
 ```hbs isFullscreen
 {{#> modal-example modal-example--id="success-alert"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsSuccessAlert="true"}}
-    {{#> modal-box-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/modal-box-close}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
         Success alert modal title
@@ -301,11 +253,7 @@ import './ModalBox.css'
 ```hbs isFullscreen
 {{#> modal-example modal-example--id="warning-alert"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsWarningAlert="true"}}
-    {{#> modal-box-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/modal-box-close}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
         Warning alert modal title
@@ -325,11 +273,7 @@ import './ModalBox.css'
 ```hbs isFullscreen
 {{#> modal-example modal-example--id="danger-alert"}}
   {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsDangerAlert="true"}}
-    {{#> modal-box-close}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-    {{/modal-box-close}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
         Danger alert modal title

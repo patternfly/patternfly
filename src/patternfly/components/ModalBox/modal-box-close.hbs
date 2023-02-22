@@ -2,5 +2,11 @@
   {{#if modal-box-close--attribute}}
     {{{modal-box-close--attribute}}}
   {{/if}}>
+  {{#if @partial-block}}
   {{> @partial-block}}
+  {{else}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+  {{/if}}
 </div>
