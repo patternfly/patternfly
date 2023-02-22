@@ -166,7 +166,6 @@
   align-self: start;
   margin-bottom: var(--pf-c-login__main--MarginBottom);
   background-color: var(--pf-c-login__main--BackgroundColor);
-  grid-area: main;
   box-shadow: var(--pf-c-login__main--BoxShadow);
 
   // If the first child isn't a header, then we need to put the header's top padding there
