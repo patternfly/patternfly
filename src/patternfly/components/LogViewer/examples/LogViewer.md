@@ -81,12 +81,18 @@ import './LogViewer.css';
 {{/log-viewer}}
 {{#> popover popover--modifier="pf-m-bottom" popover--attribute='aria-labelledby="popover-bottom-header" aria-describedby="popover-bottom-body"'}}
   {{#> popover-content}}
+    {{#> popover-close}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
         <i class="fas fa-times" aria-hidden="true"></i>
       {{/button}}
-      {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-bottom-header"'}}
-        Clear this log?
-      {{/title}}
+    {{/popover-close}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--attribute='id="popover-bottom-header"'}}
+        {{#> popover-title-text}}
+          Clear this log?
+        {{/popover-title-text}}
+      {{/popover-title}}
+    {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-bottom-body"'}}
       Any current log data will be lost.
     {{/popover-body}}
