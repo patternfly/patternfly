@@ -756,21 +756,21 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Clickable rows
 ```hbs
 {{#> data-list data-list--id="data-list-clickable-rows" data-list--attribute='aria-label="Clickable rows data list example"'}}
-  {{#> data-list-item data-list-item--id="item-1" data-list-item--IsClickable="true" data-list-item--IsSelected="true" data-list-item--expanded="true"}}
+  {{#> data-list-item data-list-item--id="item-1" data-list-item--IsClickable="true" data-list-item--IsSelected="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content (clicked)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--id="item-2" data-list-item--IsClickable="true" data-list-item--IsSelected="true" data-list-item--expanded="true"}}
+  {{#> data-list-item data-list-item--id="item-2" data-list-item--IsClickable="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Secondary content (selected)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Secondary content</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -808,7 +808,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content (selected, expanded)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content (clicked and expanded)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -844,7 +844,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content (not selected, expanded)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content (expanded)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
@@ -862,7 +862,7 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Quaternary content (selected)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Quaternary content</span>
         {{/data-list-cell}}
 
       {{/data-list-item-content}}

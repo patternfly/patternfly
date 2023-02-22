@@ -466,6 +466,10 @@
       margin-left: var(--pf-c-data-list--MarginLeft);
     }
 
+    .pf-c-data-list__item:last-child {
+      border-bottom: 0;
+    }
+
     .pf-c-data-list__item-row {
       --pf-c-data-list__item-row--PaddingLeft: 0;
     }
