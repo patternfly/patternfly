@@ -11,12 +11,12 @@
   progress--dynamic If the description is dynamically updated, use aria-valuetext instead of aria-describedby
  --}}
 
-<div class="pf-c-progress{{~#if progress--modifier}} {{progress--modifier}}{{/if}}
-  {{~#if progress--inside}} pf-m-inside{{/if}}
-  {{~#if progress--outside}} pf-m-outside{{/if}}
-  {{~#if progress--success}} pf-m-success{{/if}}
-  {{~#if progress--warning}} pf-m-warning{{/if}}
-  {{~#if progress--danger}} pf-m-danger{{/if}}"
+<div class="pf-c-progress{{#if progress--modifier}} {{progress--modifier}}{{/if}}
+  {{#if progress--inside}} pf-m-inside{{/if}}
+  {{#if progress--outside}} pf-m-outside{{/if}}
+  {{#if progress--success}} pf-m-success{{/if}}
+  {{#if progress--warning}} pf-m-warning{{/if}}
+  {{#if progress--danger}} pf-m-danger{{/if}}"
   {{#if progress__id}}id="{{progress__id}}"{{/if}}
   {{#if progress--attribute}}
     {{{progress--attribute}}}
@@ -28,10 +28,13 @@
     {{#if (concat progress--danger progress--success progress--warning)}}
       {{> progress-status}}
     {{/if}}
-  {{else}} 
+  {{else}}
     {{> progress-status}}
   {{/if}}
   {{> progress-bar}}
-  {{#if progress__helper-text}}{{> progress-helper-text}}{{/if}}
-  {{> @partial-block}}
+  {{#if helper-text--value}}
+    {{> progress-helper-text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>

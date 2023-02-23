@@ -142,8 +142,8 @@ cssPrefix: pf-c-file-upload
       {{/file-upload-file-select}}
       {{#> file-upload-file-details file-upload-file-details--attribute='aria-describedby="textAreaHelperText1" aria-invalid="true"' file-upload-file-details--aria-label="Empty text area"}}{{/file-upload-file-details}}
     {{/file-upload}}
-    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute='id="textAreaHelperText1" aria-live="polite"'}}
-      We don't support this file type. Try again with a different file type.
+    {{#> form-helper-text}}
+      {{> helper-text helper-text--value="We don't support this file type. Try again with a different file type." helper-text-item--id='textAreaHelperText1' helper-text-item--IsError=true}}
     {{/form-helper-text}}
   {{/form-group}}
 {{/form}}

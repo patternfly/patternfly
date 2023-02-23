@@ -2,5 +2,9 @@
   {{#if helper-text-item-text--attribute}}
     {{{helper-text-item-text--attribute}}}
   {{/if}}>
-  {{>@partial-block}}
+  {{#if helper-text--value}}
+    {{{helper-text--value}}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </span>

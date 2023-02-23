@@ -2,9 +2,6 @@
   --pf-c-date-picker--m-top__calendar--Top: 0;
   --pf-c-date-picker--m-top__calendar--TranslateY: calc(-100% - var(--pf-global--spacer--xs));
   --pf-c-date-picker__helper-text--MarginTop: var(--pf-global--spacer--xs);
-  --pf-c-date-picker__helper-text--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-date-picker__helper-text--Color: var(--pf-global--Color--100);
-  --pf-c-date-picker__helper-text--m-error--Color: var(--pf-global--danger-color--100);
   --pf-c-date-picker__input--c-form-control--Width: calc(var(--pf-c-date-picker__input--c-form-control--width-chars) * 1ch + var(--pf-c-date-picker__input--c-form-control--width-base));
   --pf-c-date-picker__input--c-form-control--width-base: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--sm)); // form control left/right padding + status icon width and spacer
   --pf-c-date-picker__input--c-form-control--width-chars: 10;
@@ -23,12 +20,6 @@
 
 .pf-c-date-picker__helper-text {
   margin-top: var(--pf-c-date-picker__helper-text--MarginTop);
-  font-size: var(--pf-c-date-picker__helper-text--FontSize);
-  color: var(--pf-c-date-picker__helper-text--Color);
-
-  &.pf-m-error {
-    --pf-c-date-picker__helper-text--Color: var(--pf-c-date-picker__helper-text--m-error--Color);
-  }
 }
 
 .pf-c-date-picker__input {

@@ -7,143 +7,48 @@ cssPrefix: pf-c-helper-text
 ## Examples
 ### Static
 ```hbs
-{{#> helper-text}}
-  {{#> helper-text-item}}
-    {{#> helper-text-item-text}}This is default helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-indeterminate"}}
-    {{#> helper-text-item-text}}This is indeterminate helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-warning"}}
-    {{#> helper-text-item-text}}This is warning helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-success"}}
-    {{#> helper-text-item-text}}This is success helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-error"}}
-    {{#> helper-text-item-text}}This is error helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
+{{> helper-text helper-text--value="This is default helper text"}}
+{{> helper-text helper-text--value="This is indeterminate helper text" helper-text-item--IsIndeterminate=true}}
+{{> helper-text helper-text--value="This is warning helper text" helper-text-item--IsWarning=true}}
+{{> helper-text helper-text--value="This is success helper text" helper-text-item--IsSuccess=true}}
+{{> helper-text helper-text--value="This is error helper text" helper-text-item--IsError=true}}
 ```
 
 ### Icon
 ```hbs
-{{#> helper-text}}
-  {{#> helper-text-item}}
-    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-    {{#> helper-text-item-text}}This is default helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-indeterminate"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-    {{#> helper-text-item-text}}This is indeterminate helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-warning"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="exclamation-triangle"}}
-    {{#> helper-text-item-text}}This is warning helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-success"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-    {{#> helper-text-item-text}}This is success helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-error"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
-    {{#> helper-text-item-text}}This is error helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
+{{> helper-text helper-text--value="This is default helper text" helper-text-item--HasIcon=true}}
+{{> helper-text helper-text--value="This is indeterminate helper text" helper-text-item--IsIndeterminate=true helper-text-item--HasIcon=true}}
+{{> helper-text helper-text--value="This is warning helper text" helper-text-item--IsWarning=true helper-text-item--HasIcon=true}}
+{{> helper-text helper-text--value="This is success helper text" helper-text-item--IsSuccess=true helper-text-item--HasIcon=true}}
+{{> helper-text helper-text--value="This is error helper text" helper-text-item--IsError=true helper-text-item--HasIcon=true}}
 ```
 
 ### Multiple static
 ```hbs
 {{#> helper-text}}
-  {{#> helper-text-item}}
-    {{#> helper-text-item-text}}This is default helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-  {{#> helper-text-item}}
-    {{#> helper-text-item-text}}This is another default helper text in the same block{{/helper-text-item-text}}
-  {{/helper-text-item}}
-  {{#> helper-text-item}}
-    {{#> helper-text-item-text}}And this is more default text in the same block{{/helper-text-item-text}}
-  {{/helper-text-item}}
+  {{> helper-text-item helper-text--value="This is default helper text"}}
+  {{> helper-text-item helper-text--value="This is another default helper text in the same block"}}
+  {{> helper-text-item helper-text--value="And this is more default text in the same block"}}
 {{/helper-text}}
 ```
 
 ### Dynamic
 ```hbs
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-    {{#> helper-text-item-text}}This is default helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-indeterminate"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-    {{#> helper-text-item-text}}This is indeterminate helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-warning"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="exclamation-triangle"}}
-    {{#> helper-text-item-text}}This is warning helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-    {{#> helper-text-item-text}}This is success helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
-
-{{#> helper-text}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-error"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
-    {{#> helper-text-item-text}}This is error helper text{{/helper-text-item-text}}
-  {{/helper-text-item}}
-{{/helper-text}}
+{{#> helper-text-wrapper helper-text-item--IsDynamic=true helper-text-item--HasIcon=true}}
+  {{> helper-text helper-text--value="This is default helper text"}}
+  {{> helper-text helper-text--value="This is indeterminate helper text" helper-text-item--IsIndeterminate=true}}
+  {{> helper-text helper-text--value="This is warning helper text" helper-text-item--IsWarning=true}}
+  {{> helper-text helper-text--value="This is success helper text" helper-text-item--IsSuccess=true}}
+  {{> helper-text helper-text--value="This is error helper text" helper-text-item--IsError=true}}
+{{/helper-text-wrapper}}
 ```
 
 ### Dynamic list
 ```hbs
-{{#> helper-text helper-text--IsList="true"}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-    {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
-  {{/helper-text-item}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-error"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
-    {{#> helper-text-item-text}}Cannot contain any variation of the word "redhat"{{/helper-text-item-text}}
-  {{/helper-text-item}}
-  {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-    {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-    {{#> helper-text-item-text}}Must include at least 3 of the following: lowercase letter, uppercase letters, numbers, symbols{{/helper-text-item-text}}
-  {{/helper-text-item}}
+{{#> helper-text helper-text-item--IsDynamic=true helper-text-item--HasIcon=true}}
+  {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--IsSuccess=true}}
+  {{> helper-text-item helper-text--value='Cannot contain any variation of the word "redhat"' helper-text-item--IsError=true}}
+  {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letter, uppercase letters, numbers, symbols' helper-text-item--IsSuccess=true}}
 {{/helper-text}}
 ```
 
@@ -159,3 +64,4 @@ cssPrefix: pf-c-helper-text
 | `.pf-m-warning` | `.pf-c-helper-text__item` |  Modifies a helper text item for warning state styles. |
 | `.pf-m-success` | `.pf-c-helper-text__item` |  Modifies a helper text item for success state styles. |
 | `.pf-m-error` | `.pf-c-helper-text__item` |  Modifies a helper text item for error state styles. |
+| `.pf-m-hidden` | `.pf-c-helper-text` | Hides helper text. |
