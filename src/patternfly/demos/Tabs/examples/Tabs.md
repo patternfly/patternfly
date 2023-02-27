@@ -362,9 +362,7 @@ section: components
 ```hbs isFullscreen
 {{#> modal-template modal-template--id="modal-tabs-example"}}
   {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute=(concat 'aria-labelledby="' modal-template--id '-modal-title" aria-describedby="' modal-template--id '-modal-description"')}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--attribute=(concat 'id="' modal-template--id '-modal-title"')}}
         PatternFly
