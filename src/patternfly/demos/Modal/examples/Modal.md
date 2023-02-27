@@ -10,9 +10,7 @@ section: components
 
 {{#> modal-template modal-template--id="modal-basic-example-modal"}}
   {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute=(concat 'aria-labelledby="modal-title-' modal-template--id '" aria-describedby="modal-description-' modal-template--id '"')}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--attribute=(concat 'id="modal-title-' modal-template--id '"')}}
         Overwrite existing file?
@@ -40,9 +38,7 @@ section: components
 
 {{#> modal-template modal-template--id="modal-scrollable-content-example-modal"}}
   {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute='aria-labelledby="modal-scroll-title" aria-describedby="modal-scroll-description"'}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title  modal-box-title--attribute='id="modal-scroll-title"'}}
         This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
@@ -80,9 +76,7 @@ section: components
 
 {{#> modal-template modal-template--id="modal-medium-example-modal"}}
   {{#> modal-box modal-box--modifier="pf-m-md" modal-box--attribute='aria-labelledby="modal-md-title" aria-describedby="modal-md-description"'}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--attribute='id="modal-md-title"'}}
         This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
@@ -110,9 +104,7 @@ section: components
 
 {{#> modal-template modal-template--id="modal-large-example-modal"}}
   {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-labelledby="modal-lg-title" aria-describedby="modal-lg-description"'}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--attribute='id="modal-lg-title"'}}
         This is a long header title that will truncate because modal titles should be very short. Use the modal body to provide more info.
@@ -140,9 +132,7 @@ section: components
 
 {{#> modal-template modal-template--id="modal-large-example-modal"}}
   {{#> modal-box modal-box--modifier="pf-m-sm pf-m-align-top" modal-box--attribute='aria-labelledby="modal-top-aligned-title" aria-describedby="modal-top-aligned-description"'}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--attribute='id="modal-top-aligned-title"'}}
         Modal header
@@ -170,9 +160,7 @@ section: components
 
 {{#> modal-template modal-template--id="modal-with-form-example-modal"}}
   {{#> modal-box modal-box--modifier="pf-m-sm" modal-box--attribute=(concat 'aria-labelledby="modal-title-' modal--id '" aria-describedby="modal-description-' modal--id '"') form--id=(concat modal--id '-form')}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close dialog"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--attribute=(concat 'id="modal-title-' modal--id '"')}}
         Create account

@@ -52,9 +52,9 @@
   --pf-c-modal-box__header--body--PaddingTop: var(--pf-global--spacer--md);
 
   // Close
-  --pf-c-modal-box--c-button--Top: calc(var(--pf-global--spacer--lg));
-  --pf-c-modal-box--c-button--Right: var(--pf-global--spacer--md);
-  --pf-c-modal-box--c-button--sibling--MarginRight: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--sm));
+  --pf-c-modal-box__close--Top: calc(var(--pf-global--spacer--lg));
+  --pf-c-modal-box__close--Right: var(--pf-global--spacer--md);
+  --pf-c-modal-box__close--sibling--MarginRight: calc(var(--pf-global--spacer--xl) + var(--pf-global--spacer--sm));
 
   // Footer
   --pf-c-modal-box__footer--PaddingTop: var(--pf-global--spacer--lg);
@@ -114,16 +114,16 @@
   &.pf-m-info {
     --pf-c-modal-box__title-icon--Color: var(--pf-c-modal-box--m-info__title-icon--Color);
   }
+}
 
-  // Close button
-  > .pf-c-button {
-    position: absolute;
-    top: var(--pf-c-modal-box--c-button--Top);
-    right: var(--pf-c-modal-box--c-button--Right);
+// Close button
+.pf-c-modal-box__close {
+  position: absolute;
+  top: var(--pf-c-modal-box__close--Top);
+  right: var(--pf-c-modal-box__close--Right);
 
-    + * {
-      margin-right: var(--pf-c-modal-box--c-button--sibling--MarginRight); // Create room for the close button
-    }
+  + * {
+    margin-right: var(--pf-c-modal-box__close--sibling--MarginRight); // Create room for the close button
   }
 }
 
