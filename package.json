@@ -105,6 +105,7 @@
     "access": "public"
   },
   "dependencies": {
+    "stylelint-config-recess-order": "^4.0.0",
     "stylelint-config-standard-scss": "^7.0.1"
   }
 }

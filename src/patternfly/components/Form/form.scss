@@ -333,10 +333,10 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
   }
 
   &.pf-m-stack {
+    --pf-c-form__helper-text--MarginTop: var(--pf-c-grid__group-control--m-stack__helper-text--MarginTop);
+
     display: grid;
     gap: var(--pf-c-grid__group-control--m-stack--Gap);
-
-    --pf-c-form__helper-text--MarginTop: var(--pf-c-grid__group-control--m-stack__helper-text--MarginTop);
   }
 
   .pf-c-form__helper-text:first-child {

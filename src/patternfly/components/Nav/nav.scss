@@ -1069,10 +1069,10 @@
   --pf-c-nav__link--active--after--BorderLeftWidth: var(--pf-c-nav__section__link--active--after--BorderWidth);
   --pf-c-nav__link--m-current--after--BorderLeftWidth: var(--pf-c-nav__section__link--m-current--after--BorderWidth);
 
-  margin-top: var(--pf-c-nav__section--MarginTop);
-
   // Divider
   --pf-c-nav--c-divider--MarginBottom: 0;
+
+  margin-top: var(--pf-c-nav__section--MarginTop);
 
   & + & {
     --pf-c-nav__section--MarginTop: var(--pf-c-nav__section--section--MarginTop);

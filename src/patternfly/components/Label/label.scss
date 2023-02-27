@@ -341,13 +341,6 @@
   }
 
   &.pf-m-editable {
-    text-decoration: var(--pf-c-label--m-editable--TextDecoration);
-    cursor: var(--pf-c-label--m-editable--Cursor);
-    text-decoration-style: var(--pf-c-label--m-editable--TextDecorationStyle);
-    text-decoration-thickness: var(--pf-c-label--m-editable--TextDecorationThickness);
-    text-underline-offset: var(--pf-c-label--m-editable--TextDecorationOffset);
-    text-decoration-color: var(--pf-c-label--m-editable--TextDecorationColor);
-
     --pf-c-label__content--MaxWidth: var(--pf-c-label--m-editable__content--MaxWidth);
     --pf-c-label__content--before--BorderWidth: var(--pf-c-label--m-editable__content--before--BorderWidth);
     --pf-c-label__content--before--BorderColor: var(--pf-c-label--m-editable__content--before--BorderColor);
@@ -359,6 +352,13 @@
     // override the outline variant border width
     --pf-c-label--m-outline__content--link--hover--before--BorderWidth: var(--pf-c-label--m-editable__content--before--BorderWidth);
     --pf-c-label--m-outline__content--link--focus--before--BorderWidth: var(--pf-c-label--m-editable__content--before--BorderWidth);
+
+    text-decoration: var(--pf-c-label--m-editable--TextDecoration);
+    cursor: var(--pf-c-label--m-editable--Cursor);
+    text-decoration-style: var(--pf-c-label--m-editable--TextDecorationStyle);
+    text-decoration-thickness: var(--pf-c-label--m-editable--TextDecorationThickness);
+    text-underline-offset: var(--pf-c-label--m-editable--TextDecorationOffset);
+    text-decoration-color: var(--pf-c-label--m-editable--TextDecorationColor);
 
     &:hover {
       --pf-c-label--m-editable--TextDecorationColor: var(--pf-c-label--m-editable--hover--TextDecorationColor);

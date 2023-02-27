@@ -245,15 +245,15 @@
     margin-left: var(--pf-c-content--ol--MarginLeft);
 
     ul {
-      margin-top: var(--pf-c-content--ul--nested--MarginTop);
-
       --pf-c-content--ul--MarginLeft: var(--pf-c-content--ul--nested--MarginLeft);
+
+      margin-top: var(--pf-c-content--ul--nested--MarginTop);
     }
 
     ol {
-      margin-top: var(--pf-c-content--ol--nested--MarginTop);
-
       --pf-c-content--ol--MarginLeft: var(--pf-c-content--ol--nested--MarginLeft);
+
+      margin-top: var(--pf-c-content--ol--nested--MarginTop);
     }
   }
 
@@ -263,15 +263,15 @@
     list-style: var(--pf-c-content--ul--ListStyle);
 
     ul {
-      margin-top: var(--pf-c-content--ul--nested--MarginTop);
-
       --pf-c-content--ul--MarginLeft: var(--pf-c-content--ul--nested--MarginLeft);
+
+      margin-top: var(--pf-c-content--ul--nested--MarginTop);
     }
 
     ol {
-      margin-top: var(--pf-c-content--ol--nested--MarginTop);
-
       --pf-c-content--ol--MarginLeft: var(--pf-c-content--ol--nested--MarginLeft);
+
+      margin-top: var(--pf-c-content--ol--nested--MarginTop);
     }
   }
 
