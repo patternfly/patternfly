@@ -380,8 +380,8 @@
 .pf-c-data-list__item-action {
   @include pf-hidden-visible(var(--pf-c-data-list__item-action--Display));
 
-  align-items: flex-start;
   align-content: flex-start;
+  align-items: flex-start;
   padding-top: var(--pf-c-data-list__item-action--PaddingTop);
   padding-bottom: var(--pf-c-data-list__item-action--PaddingBottom);
   margin-left: var(--pf-c-data-list__item-action--MarginLeft);
@@ -412,8 +412,8 @@
 
 .pf-c-data-list__item-content {
   display: grid;
-  width: 100%;
   grid-template-columns: auto 1fr;
+  width: 100%;
 }
 
 // content cells
@@ -432,8 +432,8 @@
 
   &.pf-m-icon {
     flex-grow: 0;
-    margin-right: var(--pf-c-data-list__cell--m-icon--MarginRight);
     grid-column: 1 / 2;
+    margin-right: var(--pf-c-data-list__cell--m-icon--MarginRight);
   }
 
   &.pf-m-icon + & {

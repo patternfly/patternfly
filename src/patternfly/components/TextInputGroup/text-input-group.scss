@@ -106,9 +106,9 @@
 
 .pf-c-text-input-group__text {
   display: inline-grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "text-input";
   flex: 1;
+  grid-template-areas: "text-input";
+  grid-template-columns: 1fr;
 
   &::before,
   &::after {

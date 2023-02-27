@@ -254,6 +254,7 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   position: relative;
   display: flex;
   flex-basis: var(--pf-c-masthead__main--FlexBasis);
+  grid-column: var(--pf-c-masthead__main--GridColumn);
   align-items: center;
   align-self: stretch;
   order: var(--pf-c-masthead__main--Order);
@@ -261,7 +262,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   padding-top: var(--pf-c-masthead__main--PaddingTop);
   padding-bottom: var(--pf-c-masthead__main--PaddingBottom);
   margin-right: var(--pf-c-masthead__main--MarginRight);
-  grid-column: var(--pf-c-masthead__main--GridColumn);
 
   &::before {
     position: absolute;
@@ -281,6 +281,9 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 .pf-c-masthead__content {
   display: flex;
   flex-grow: 1;
+  flex-shrink: 1;
+  grid-column: var(--pf-c-masthead__content--GridColumn);
+  grid-column-end: -1; // force content to right edge or full available width
   align-items: center;
   align-self: stretch;
   order: var(--pf-c-masthead__content--Order);
@@ -288,9 +291,6 @@ $pf-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   padding-top: var(--pf-c-masthead__content--PaddingTop);
   padding-bottom: var(--pf-c-masthead__content--PaddingBottom);
   margin-left: var(--pf-c-masthead__content--MarginLeft);
-  grid-column: var(--pf-c-masthead__content--GridColumn);
-  grid-column-end: -1; // force content to right edge or full available width
-  flex-shrink: 1;
 
   &:only-child {
     --pf-c-masthead__content--MarginLeft: 0;

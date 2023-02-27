@@ -94,11 +94,11 @@ $pf-c-dual-list-selector__item--MaxNesting: 10;
     "pane-tools . pane-tools-c"
     "pane-status . pane-status-c"
     "pane-menu controls pane-menu-c";
+  grid-template-rows: repeat(3, auto) auto;
   grid-template-columns:
     minmax(var(--pf-c-dual-list-selector--GridTemplateColumns--pane--MinMax--min), var(--pf-c-dual-list-selector--GridTemplateColumns--pane--MinMax--max))
     min-content
     minmax(var(--pf-c-dual-list-selector--GridTemplateColumns--pane--MinMax--min), var(--pf-c-dual-list-selector--GridTemplateColumns--pane--MinMax--max));
-  grid-template-rows: repeat(3, auto) auto;
 }
 
 .pf-c-dual-list-selector__pane {

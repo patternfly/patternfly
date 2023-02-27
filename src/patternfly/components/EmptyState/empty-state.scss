@@ -117,14 +117,14 @@
 .pf-c-empty-state__footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   row-gap: var(--pf-c-empty-state__footer--RowGap);
+  align-items: center;
   margin-top: var(--pf-c-empty-state__footer--MarginTop);
 }
 
 .pf-c-empty-state__actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: var(--pf-c-empty-state__actions--RowGap) var(--pf-c-empty-state__actions--ColumnGap);
+  justify-content: center;
 }

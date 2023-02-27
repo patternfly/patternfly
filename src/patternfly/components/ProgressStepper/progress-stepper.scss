@@ -190,10 +190,10 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
   position: relative;
   display: grid;
-  grid-auto-flow: var(--pf-c-progress-stepper--GridAutoFlow);
-  grid-template-columns: var(--pf-c-progress-stepper--GridTemplateColumns);
   grid-template-rows: var(--pf-c-progress-stepper--GridTemplateRows);
+  grid-template-columns: var(--pf-c-progress-stepper--GridTemplateColumns);
   grid-auto-columns: 1fr; // gives even spacing between steps
+  grid-auto-flow: var(--pf-c-progress-stepper--GridAutoFlow);
 
   // Progress stepper Modifiers
   &.pf-m-center {
@@ -247,8 +247,8 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     grid-auto-flow: var(--pf-c-progress-stepper--m-compact--GridAutoFlow);
 
     .pf-c-progress-stepper__step-connector {
-      min-width: var(--pf-c-progress-stepper--m-compact__step-connector--MinWidth);
       grid-row: var(--pf-c-progress-stepper--m-compact__step-connector--GridRow);
+      min-width: var(--pf-c-progress-stepper--m-compact__step-connector--MinWidth);
       padding-bottom: var(--pf-c-progress-stepper--m-compact__step-connector--PaddingBottom);
     }
 
@@ -392,11 +392,11 @@ $pf-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
   &.pf-m-help-text {
     text-decoration: underline;
-    cursor: pointer;
+    text-decoration-thickness: var(--pf-c-progress-stepper__step-title--m-help-text--TextDecorationThickness);
     text-decoration-style: dashed;
     text-decoration-color: var(--pf-c-progress-stepper__step-title--m-help-text--TextDecorationColor);
-    text-decoration-thickness: var(--pf-c-progress-stepper__step-title--m-help-text--TextDecorationThickness);
     text-underline-offset: var(--pf-c-progress-stepper__step-title--m-help-text--TextUnderlineOffset);
+    cursor: pointer;
 
     &:hover {
       --pf-c-progress-stepper__step-title--Color: var(--pf-c-progress-stepper__step-title--m-help-text--hover--Color);

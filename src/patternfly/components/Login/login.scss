@@ -136,13 +136,13 @@
   // Large viewports
   @media (min-width: $pf-global--breakpoint--xl) {
     display: grid;
-    justify-content: center;
-    grid-column-gap: var(--pf-c-login__container--xl--GridColumnGap);
-    grid-template-columns: var(--pf-c-login__container--xl--GridTemplateColumns);
     grid-template-areas:
       "main header"
       "main footer"
       "main .";
+    grid-template-columns: var(--pf-c-login__container--xl--GridTemplateColumns);
+    grid-column-gap: var(--pf-c-login__container--xl--GridColumnGap);
+    justify-content: center;
     padding-right: var(--pf-c-login__container--PaddingRight);
     padding-left: var(--pf-c-login__container--PaddingLeft);
   }
@@ -165,10 +165,10 @@
 }
 
 .pf-c-login__main {
+  grid-area: main;
   align-self: start;
   margin-bottom: var(--pf-c-login__main--MarginBottom);
   background-color: var(--pf-c-login__main--BackgroundColor);
-  grid-area: main;
 
   // If the first child isn't a header, then we need to put the header's top padding there
   > :first-child:not(.pf-c-login__main-header) {
@@ -184,8 +184,8 @@
 .pf-c-login__main-header {
   display: grid;
   grid-template-columns: 100%;
-  column-gap: var(--pf-c-login__main-header--ColumnGap);
   row-gap: var(--pf-c-login__main-header--RowGap);
+  column-gap: var(--pf-c-login__main-header--ColumnGap);
   align-items: center;
   padding: var(--pf-c-login__main-header--PaddingTop) var(--pf-c-login__main-header--PaddingRight) var(--pf-c-login__main-header--PaddingBottom) var(--pf-c-login__main-header--PaddingLeft);
 
@@ -196,26 +196,26 @@
 
 .pf-c-login__main-header-utilities,
 .pf-c-login__main-header .pf-c-dropdown {
-  grid-column: auto;
   grid-row: auto;
+  grid-column: auto;
 
   @media (min-width: $pf-global--breakpoint--md) {
-    grid-column: 2 / 3;
     grid-row: 1;
+    grid-column: 2 / 3;
   }
 }
 
 .pf-c-login__main-header-utilities {
   .pf-c-dropdown {
-    grid-column: auto;
     grid-row: auto;
+    grid-column: auto;
   }
 }
 
 .pf-c-login__main-header-desc {
+  grid-column: 1 / -1;
   margin-bottom: var(--pf-c-login__main-header-desc--MarginBottom);
   font-size: var(--pf-c-login__main-header-desc--FontSize);
-  grid-column: 1 / -1;
 }
 
 .pf-c-login__main-body {
@@ -253,11 +253,11 @@
 
 .pf-c-login__main-footer-links-item-link {
   svg {
-    fill: var(--pf-c-login__main-footer-links-item-link-svg--Fill);
     width: 100%;
     max-width: var(--pf-c-login__main-footer-links-item-link-svg--Width);
     height: 100%;
     max-height: var(--pf-c-login__main-footer-links-item-link-svg--Height);
+    fill: var(--pf-c-login__main-footer-links-item-link-svg--Fill);
   }
 
   &:hover {

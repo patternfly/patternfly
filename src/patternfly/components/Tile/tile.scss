@@ -63,11 +63,11 @@
 
   position: relative;
   display: inline-grid;
+  grid-template-rows: min-content;
   padding: var(--pf-c-tile--PaddingTop) var(--pf-c-tile--PaddingRight) var(--pf-c-tile--PaddingBottom) var(--pf-c-tile--PaddingLeft);
   text-align: center;
   cursor: pointer;
   background-color: var(--pf-c-tile--BackgroundColor);
-  grid-template-rows: min-content;
   transition: var(--pf-c-tile--Transition);
   transform: translateY(var(--pf-c-tile--TranslateY));
 

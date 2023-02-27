@@ -354,11 +354,11 @@
     --pf-c-label--m-outline__content--link--focus--before--BorderWidth: var(--pf-c-label--m-editable__content--before--BorderWidth);
 
     text-decoration: var(--pf-c-label--m-editable--TextDecoration);
-    cursor: var(--pf-c-label--m-editable--Cursor);
-    text-decoration-style: var(--pf-c-label--m-editable--TextDecorationStyle);
     text-decoration-thickness: var(--pf-c-label--m-editable--TextDecorationThickness);
-    text-underline-offset: var(--pf-c-label--m-editable--TextDecorationOffset);
+    text-decoration-style: var(--pf-c-label--m-editable--TextDecorationStyle);
     text-decoration-color: var(--pf-c-label--m-editable--TextDecorationColor);
+    text-underline-offset: var(--pf-c-label--m-editable--TextDecorationOffset);
+    cursor: var(--pf-c-label--m-editable--Cursor);
 
     &:hover {
       --pf-c-label--m-editable--TextDecorationColor: var(--pf-c-label--m-editable--hover--TextDecorationColor);

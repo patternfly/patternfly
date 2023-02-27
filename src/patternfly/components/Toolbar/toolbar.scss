@@ -131,8 +131,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   }
 
   position: relative;
-  row-gap: var(--pf-c-toolbar--RowGap);
   display: grid;
+  row-gap: var(--pf-c-toolbar--RowGap);
   padding-top: var(--pf-c-toolbar--PaddingTop);
   padding-bottom: var(--pf-c-toolbar--PaddingBottom);
   background-color: var(--pf-c-toolbar--BackgroundColor);
@@ -437,9 +437,9 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 .pf-c-toolbar__group.pf-m-chip-container {
   display: flex;
   flex-wrap: wrap;
+  grid-row-gap: 0;
   align-items: baseline;
   margin-top: var(--pf-c-toolbar__group--m-chip-container--MarginTop);
-  grid-row-gap: 0;
 
   .pf-c-toolbar__item {
     --pf-c-toolbar--spacer: var(--pf-c-toolbar__item--spacer);

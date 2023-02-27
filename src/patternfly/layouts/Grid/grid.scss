@@ -50,10 +50,10 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for c
 
   > *,
   .pf-l-grid__item {
-    min-width: 0;
-    min-height: 0;
     grid-column-start: var(--pf-l-grid__item--GridColumnStart);
     grid-column-end: var(--pf-l-grid__item--GridColumnEnd);
+    min-width: 0;
+    min-height: 0;
 
     @include pf-build-css-variable-stack("order", "--pf-l-grid--item--Order", $pf-l-grid--breakpoint-map);
   }

@@ -281,8 +281,8 @@
 
     @media screen and (min-width: $pf-global--breakpoint--sm) {
       grid-template: auto / auto 1fr;
-      grid-column-gap: var(--pf-c-content--dl--ColumnGap);
       grid-row-gap: var(--pf-c-content--dl--RowGap);
+      grid-column-gap: var(--pf-c-content--dl--ColumnGap);
     }
   }
 

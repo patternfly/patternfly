@@ -48,9 +48,9 @@
   --pf-c-label-group__textarea--PaddingLeft: var(--pf-global--spacer--xs);
 
   display: inline-flex;
-  align-items: center;
   row-gap: var(--pf-c-label-group--RowGap);
   column-gap: var(--pf-c-label-group--ColumnGap);
+  align-items: center;
 
   &.pf-m-category {
     padding-top: var(--pf-c-label-group--m-category--PaddingTop);
@@ -114,9 +114,9 @@
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  align-items: baseline;
   row-gap: var(--pf-c-label-group__main--RowGap);
   column-gap: var(--pf-c-label-group__main--ColumnGap);
+  align-items: baseline;
 }
 
 .pf-c-label-group__list {
