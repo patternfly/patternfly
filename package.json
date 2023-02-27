@@ -84,7 +84,9 @@
     "sass": "^1.58.3",
     "sass-graph": "^4.0.1",
     "stylelint": "^15.2.0",
+    "stylelint-config-recess-order": "^4.0.0",
     "stylelint-config-standard": "^30.0.1",
+    "stylelint-config-standard-scss": "^7.0.1",
     "stylelint-order": "^6.0.2",
     "stylelint-value-no-unknown-custom-properties": "^4.0.0",
     "surge": "^0.23.1",
@@ -103,9 +105,5 @@
     "registry": "https://registry.npmjs.org/",
     "tag": "alpha",
     "access": "public"
-  },
-  "dependencies": {
-    "stylelint-config-recess-order": "^4.0.0",
-    "stylelint-config-standard-scss": "^7.0.1"
   }
 }
