@@ -15,7 +15,7 @@ cssPrefix: pf-c-chip
     {{/chip-text}}
   {{/chip-content}}
   {{#> chip-actions}}
-    {{#> button button--modifier="pf-m-plain pf-m-small" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
       <i class="fas fa-times" aria-hidden="true"></i>
     {{/button}}
   {{/chip-actions}}
@@ -103,7 +103,5 @@ A Chip is used to display items that have been filtered or selected from a large
 | `.pf-c-chip__text` | `<span>` | Initiates the text inside the chip. **Required** |
 | `.pf-c-chip__icon` | `<span>` | Initiates the icon inside the chip. |
 | `.pf-c-chip__actions` | `<span>` | Creates a wrapper for chip actions. **Required for removeable chips** |
-| `.pf-c-button` | `.pf-c-chip__actions <button>` | Initiates the button used to remove the chip. |
-| `.pf-c-badge` | `.pf-c-chip__content <span>` | Initiates the badge inside the chip. |
 | `.pf-m-overflow` | `button.pf-c-chip` | Applies styling of the overflow chip. |
 | `.pf-m-draggable` | `.pf-c-chip` | Modifies the chip to be in the draggable state. |

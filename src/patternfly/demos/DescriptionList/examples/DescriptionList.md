@@ -74,9 +74,11 @@ cssPrefix: pf-d-description-list
       {{/description-list-term}}
       {{#> description-list-description}}
         {{#> chip}}
-          {{#> chip-text}}
-            app=mary-test
-          {{/chip-text}}
+          {{#> chip-content}}
+            {{#> chip-text}}
+              app=mary-test
+            {{/chip-text}}
+          {{/chip-content}}
         {{/chip}}
       {{/description-list-description}}
     {{/description-list-group}}

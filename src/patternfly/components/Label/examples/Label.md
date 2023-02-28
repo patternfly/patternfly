@@ -702,7 +702,6 @@ This style of label is used to add new labels to a label group.
 | `.pf-c-label__text` | `<span>` | Initiates label text. |
 | `.pf-c-label__editable-text` | `<button>`, `<input>` | Initiates editable label text. See the [editable](#editable) example for details about handling behavior in Javascript.|
 | `.pf-c-label__actions` | `<span>` | Creates a wrapper for label actions. **Required for removable labels** |
-| `.pf-c-button` | `.pf-c-label__actions <button>` | Initiates the button used to remove the label. |
 | `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
 | `.pf-m-compact` | `.pf-c-label` | Modifies label for compact styles. |
 | `.pf-m-overflow` | `.pf-c-label` | Modifies label for overflow styles for use in a label group. |

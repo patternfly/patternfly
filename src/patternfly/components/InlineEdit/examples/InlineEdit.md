@@ -506,9 +506,11 @@ All accessibility requirements for inputs apply to elements within inline edit.
     <dt>Tags</dt>
     <dd>
       {{#> chip chip--type="div" chip--modifier="pf-m-read-only"}}
-        {{#> chip-text}}
-          alertmanager=main
-        {{/chip-text}}
+        {{#> chip-content}}
+          {{#> chip-text}}
+            alertmanager=main
+          {{/chip-text}}
+        {{/chip-content}}
       {{/chip}}
     </dd>
   </div>
