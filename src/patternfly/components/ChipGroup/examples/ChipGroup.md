@@ -12,7 +12,7 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select_collapsed"')}}
               Chip one
             {{/chip-text}}
@@ -26,7 +26,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_select_collapsed"')}}
             Chip two
           	{{/chip-text}}
@@ -40,7 +40,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_select_collapsed"')}}
             Chip three
           	{{/chip-text}}
@@ -54,7 +54,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text}}
               2 more
           	{{/chip-text}}
@@ -73,7 +73,7 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select"')}}
               Chip one
           	{{/chip-text}}
@@ -87,7 +87,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_select"')}}
               Chip two
           	{{/chip-text}}
@@ -101,7 +101,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_select"')}}
               Chip three
           	{{/chip-text}}
@@ -115,7 +115,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_select"')}}
               Chip four
           	{{/chip-text}}
@@ -129,7 +129,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_select"')}}
               Chip five
           	{{/chip-text}}
@@ -143,7 +143,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text}}
               Show less
           	{{/chip-text}}
@@ -165,7 +165,7 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar_collapsed"')}}
               Chip one
           	{{/chip-text}}
@@ -179,7 +179,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar_collapsed"')}}
               Chip two
           	{{/chip-text}}
@@ -193,7 +193,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar_collapsed"')}}
               Chip three
           	{{/chip-text}}
@@ -220,7 +220,7 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar_collapsed"')}}
               Chip one
           	{{/chip-text}}
@@ -234,7 +234,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar_collapsed"')}}
               Chip two
           	{{/chip-text}}
@@ -248,7 +248,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar_collapsed"')}}
               Chip three
           	{{/chip-text}}
@@ -262,7 +262,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text}}
               2 more
           	{{/chip-text}}
@@ -284,7 +284,7 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
               Chip one
           	{{/chip-text}}
@@ -298,7 +298,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar"')}}
               Chip two
           	{{/chip-text}}
@@ -312,7 +312,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar"')}}
               Chip three
           	{{/chip-text}}
@@ -326,7 +326,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_toolbar"')}}
               Chip four
           	{{/chip-text}}
@@ -340,7 +340,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_select"')}}
               Chip five
           	{{/chip-text}}
@@ -354,7 +354,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text}}
               Show less
           	{{/chip-text}}
@@ -376,7 +376,7 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
               Chip one
           	{{/chip-text}}
@@ -390,7 +390,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar"')}}
               Chip two
           	{{/chip-text}}
@@ -404,7 +404,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar"')}}
               Chip three
           	{{/chip-text}}
@@ -418,7 +418,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_toolbar"')}}
               Chip four
           	{{/chip-text}}
@@ -432,7 +432,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_toolbar"')}}
               Chip five
           	{{/chip-text}}
@@ -446,7 +446,7 @@ cssPrefix: pf-c-chip-group
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#>chip-content}}
+          {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_six_toolbar"')}}
               Chip six
           	{{/chip-text}}
@@ -470,7 +470,7 @@ cssPrefix: pf-c-chip-group
   {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select_collapsed"')}}
             Chip one
         	{{/chip-text}}
@@ -484,7 +484,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_select_collapsed"')}}
             Chip two
         	{{/chip-text}}
@@ -498,7 +498,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
 						{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_select_collapsed"')}}
             Chip three
         	{{/chip-text}}
@@ -519,7 +519,7 @@ cssPrefix: pf-c-chip-group
   {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
 					{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
             Chip one
         	{{/chip-text}}
@@ -533,7 +533,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar"')}}
             Chip two
         	{{/chip-text}}
@@ -547,7 +547,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
 					{{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar"')}}
             Chip three
         	{{/chip-text}}
@@ -561,7 +561,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_toolbar"')}}
             Chip four
         	{{/chip-text}}
@@ -575,7 +575,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_toolbar"')}}
             Chip five
           {{/chip-text}}
@@ -589,7 +589,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_six_toolbar"')}}
             Chip six
         	{{/chip-text}}
@@ -614,7 +614,7 @@ cssPrefix: pf-c-chip-group
   {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar_collapsed"')}}
             Chip one
         	{{/chip-text}}
@@ -628,7 +628,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar_collapsed"')}}
             Chip two
         	{{/chip-text}}
@@ -642,7 +642,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar_collapsed"')}}
             Chip three
         	{{/chip-text}}
@@ -666,7 +666,7 @@ cssPrefix: pf-c-chip-group
   {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar_collapsed"')}}
             Chip one
         	{{/chip-text}}
@@ -680,7 +680,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar_collapsed"')}}
             Chip two
         	{{/chip-text}}
@@ -694,7 +694,7 @@ cssPrefix: pf-c-chip-group
     {{/chip-group-list-item}}
     {{#> chip-group-list-item}}
       {{#> chip}}
-        {{#>chip-content}}
+        {{#> chip-content}}
           {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar_collapsed"')}}
             Chip three
         	{{/chip-text}}

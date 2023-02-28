@@ -3,52 +3,72 @@
     {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' select--id '-chip_one"')}}
-            Arkansas
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="remove_' select--id '_chip_one ' select--id '-chip_two" aria-label="Remove" id="remove_' select--id '_chip_one"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' select--id '-chip_one"')}}
+              Arkansas
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="remove_' select--id '_chip_one ' select--id '-chip_two" aria-label="Remove" id="remove_' select--id '_chip_one"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' select--id '-chip_two"')}}
-            Massachusetts
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="remove_' select--id '_chip_two ' select--id '-chip_two" aria-label="Remove" id="remove_' select--id '_chip_two"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' select--id '-chip_two"')}}
+              Massachusetts
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="remove_' select--id '_chip_two ' select--id '-chip_two" aria-label="Remove" id="remove_' select--id '_chip_two"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' select--id '-chip_three"')}}
-            New Mexico
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="remove_' select--id '_chip_three ' select--id '-chip_three" aria-label="Remove" id="remove_' select--id '_chip_three"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' select--id '-chip_three"')}}
+              New Mexico
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="remove_' select--id '_chip_three ' select--id '-chip_three" aria-label="Remove" id="remove_' select--id '_chip_three"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' select--id '-chip_four"')}}
-            Ohio
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="remove_' select--id '_chip_four ' select--id '-chip_four" aria-label="Remove" id="remove_' select--id '_chip_four"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' select--id '-chip_four"')}}
+              Ohio
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="remove_' select--id '_chip_four ' select--id '-chip_four" aria-label="Remove" id="remove_' select--id '_chip_four"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' select--id '-chip_five"')}}
-            Washington
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="remove_' select--id '_chip_five ' select--id '-chip_five" aria-label="Remove" id="remove_' select--id '_chip_five"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' select--id '-chip_five"')}}
+              Washington
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="remove_' select--id '_chip_five ' select--id '-chip_five" aria-label="Remove" id="remove_' select--id '_chip_five"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
     {{/chip-group-list}}
