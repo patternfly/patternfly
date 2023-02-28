@@ -3,7 +3,7 @@
     {{#> bullseye}}
       {{#> empty-state empty-state--modifier="pf-m-xs"}}
         <i class="fas fa-plus-circle pf-c-empty-state__icon"></i>
-        {{> card-title card-title-text--text="Add a new card to your page" card-title-text--modifier="pf-m-md"}}
+        {{> card-title card-title-text--value="Add a new card to your page" card-title-text--modifier="pf-m-md"}}
         {{#> empty-state-secondary}}
           {{#> button button--modifier="pf-m-link"}}
             Add card
@@ -22,8 +22,7 @@
         {{/check}}
       {{/card-actions}}
     {{/card-header}}
-    {{#> card-title}}
-      {{> card-title-text card-title-text--text="Patternfly" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+    {{#> card-title card-title-text--value="Patternfly" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -42,8 +41,7 @@
         {{/check}}
       {{/card-actions}}
     {{/card-header}}
-    {{#> card-title}}
-      {{> card-title-text card-title-text--text="ActiveMQ" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+    {{#> card-title card-title-text--value="ActiveMq" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -62,8 +60,7 @@
         {{/check}}
       {{/card-actions}}
     {{/card-header}}
-    {{#> card-title}}
-      {{> card-title-text card-title-text--text="Apache Spark" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+    {{#> card-title card-title-text--value="Apache Spark" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -82,8 +79,7 @@
         {{/check}}
       {{/card-actions}}
     {{/card-header}}
-    {{#> card-title}}
-      {{> card-title-text card-title-text--text="Avro" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+    {{#> card-title card-title-text--value="Avro" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -93,24 +89,23 @@
     {{/card-body}}
   {{/card}}
   {{#> card card--id=(concat card-template-gallery--id '-card-5') card--modifier="pf-m-selectable-raised pf-m-selected-raised pf-m-compact"}}
-  {{#> card-header}}
-    <img src="/assets/images/FuseConnector_Icons_AzureServices.png" width="60px" alt="Logo">
-    {{#> card-actions}}
-      {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{#> check check--modifier="pf-m-standalone"}}
-        {{#> check-input check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check" aria-labelledby="' card--id '-check-label"')}}{{/check-input}}
-      {{/check}}
-    {{/card-actions}}
-  {{/card-header}}
-  {{#> card-title}}
-    {{> card-title-text card-title-text--text="Azure Services" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
-    {{#> content}}
-      <small>Provided by Red Hat</small>
-    {{/content}}
-  {{/card-title}}
-  {{#> card-body}}
-    The Camel Components for Windows Azure Services provide connectivity to Azure services from Camel.
-  {{/card-body}}
+    {{#> card-header}}
+      <img src="/assets/images/FuseConnector_Icons_AzureServices.png" width="60px" alt="Logo">
+      {{#> card-actions}}
+        {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check" aria-labelledby="' card--id '-check-label"')}}{{/check-input}}
+        {{/check}}
+      {{/card-actions}}
+    {{/card-header}}
+    {{#> card-title card-title-text--value="Azure Services" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+      {{#> content}}
+        <small>Provided by Red Hat</small>
+      {{/content}}
+    {{/card-title}}
+    {{#> card-body}}
+      The Camel Components for Windows Azure Services provide connectivity to Azure services from Camel.
+    {{/card-body}}
   {{/card}}
   {{#> card card--id=(concat card-template-gallery--id '-card-6') card--modifier="pf-m-non-selectable-raised pf-m-compact"}}
     {{#> card-header}}
@@ -122,8 +117,7 @@
         {{/check}}
       {{/card-actions}}
     {{/card-header}}
-    {{#> card-title}}
-      {{> card-title-text card-title-text--text="Crypto" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+    {{#> card-title card-title-text--value="Crypto" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -142,8 +136,7 @@
         {{/check}}
       {{/card-actions}}
     {{/card-header}}
-    {{#> card-title}}
-      {{> card-title-text card-title-text--text="DropBox" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+    {{#> card-title card-title-text--value="DropBox" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -162,8 +155,7 @@
         {{/check}}
       {{/card-actions}}
     {{/card-header}}
-    {{#> card-title}}
-      {{> card-title-text card-title-text--text="JBoss Data Grid" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+    {{#> card-title card-title-text--value="JBoss Data Grid" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -182,8 +174,7 @@
         {{/check}}
       {{/card-actions}}
     {{/card-header}}
-    {{#> card-title}}
-      {{> card-title-text card-title-text--text="Rest" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+    {{#> card-title card-title-text--value="Rest" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}
@@ -203,8 +194,7 @@
         {{/check}}
       {{/card-actions}}
     {{/card-header}}
-    {{#> card-title}}
-      {{> card-title-text card-title-text--text="SWAGGER" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+    {{#> card-title card-title-text--value="SWAGGER" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
       {{#> content}}
         <small>Provided by Red Hat</small>
       {{/content}}

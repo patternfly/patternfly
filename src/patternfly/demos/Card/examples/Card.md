@@ -17,7 +17,7 @@ import './Card.css'
     {{/card-actions}}
     {{#> card-header-main}}
       {{#> split split--modifier="pf-m-gutter pf-m-wrap"}}
-        {{> card-title card-title-text--element="h2" card-title-text--text="Getting started" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
+        {{> card-title card-title-text--element="h2" card-title-text--value="Getting started" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
         {{#> label-group label-group--id="label-group-basic"}}
           {{#> label-group-main}}
             {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -59,9 +59,7 @@ import './Card.css'
       {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain="true"}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title}}
-        {{> card-title-text card-title-text--text="Getting started" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
-      {{/card-title}}
+      {{> card-title card-title-text--value="Getting started" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-expandable-content}}
@@ -169,7 +167,7 @@ import './Card.css'
     {{#> grid-item grid-item--modifier="pf-d-card__media-item" grid-item--attribute='style="min-height: 200px; background: center / cover url(\'/assets/images/pfbg_992@2x.jpg\'); "'}}
     {{/grid-item}}
     {{#> grid-item}}
-      {{> card-title card-title-text--text="Headline"}}
+      {{> card-title card-title-text--value="Headline"}}
       {{#> card-body}}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse arcu purus, lobortis nec euismod eu, tristique ut sapien. Nullam turpis lectus, aliquet sit amet volutpat eu, semper eget quam. Maecenas in tempus diam. Aenean interdum velit sed massa aliquet, sit amet malesuada nulla hendrerit. Aenean non faucibus odio. Etiam non metus turpis. Praesent sollicitudin elit neque, id ullamcorper nibh faucibus eget.
       {{/card-body}}
@@ -303,21 +301,19 @@ import './Card.css'
   {{#> grid-item}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
       {{#> card card--modifier="pf-u-text-align-center"}}
-        {{> card-title card-title-text--text="5 Clusters" card-title-text--element="h2"}}
+        {{> card-title card-title-text--value="5 Clusters" card-title-text--element="h2"}}
         {{#> card-body}}
           <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
         {{/card-body}}
       {{/card}}
       {{#> card card--modifier="pf-u-text-align-center"}}
-        {{> card-title card-title-text--text="15 Clusters" card-title-text--element="h2"}}
+        {{> card-title card-title-text--value="15 Clusters" card-title-text--element="h2"}}
         {{#> card-body}}
           <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
         {{/card-body}}
       {{/card}}
       {{#> card card--modifier="pf-u-text-align-center"}}
-        {{#> card-title}}
-          3 Clusters
-        {{/card-title}}
+        {{> card-title card-title-text--value="3 Clusters"}}
         {{#> card-body}}
           <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
         {{/card-body}}
@@ -327,9 +323,7 @@ import './Card.css'
   {{#> grid-item}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
       {{#> card card--modifier="pf-u-text-align-center"}}
-        {{#> card-title}}
-          10 Hosts
-        {{/card-title}}
+        {{> card-title card-title-text--value="10 Hosts"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
@@ -353,9 +347,7 @@ import './Card.css'
         {{/card-body}}
       {{/card}}
       {{#> card card--modifier="pf-u-text-align-center"}}
-        {{#> card-title}}
-          50 Hosts
-        {{/card-title}}
+        {{> card-title card-title-text--value="50 Hosts"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
@@ -379,9 +371,7 @@ import './Card.css'
         {{/card-body}}
       {{/card}}
       {{#> card card--modifier="pf-u-text-align-center"}}
-        {{#> card-title}}
-          12 Hosts
-        {{/card-title}}
+        {{> card-title card-title-text--value="12 Hosts"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
@@ -409,9 +399,7 @@ import './Card.css'
   {{#> grid-item}}
     {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 260px;"'}}
       {{#> card}}
-        {{#> card-title card-title--modifier="pf-u-text-align-center"}}
-          13 Hosts
-        {{/card-title}}
+        {{> card-title card-title-text--value="13 Hosts" card-title-text--modifier="pf-u-text-align-center"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
             {{#> l-flex newcontext}}
@@ -436,9 +424,7 @@ import './Card.css'
         {{/card-body}}
       {{/card}}
       {{#> card}}
-        {{#> card-title card-title--modifier="pf-u-text-align-center"}}
-            3 Hosts
-        {{/card-title}}
+        {{> card-title card-title--modifier="pf-u-text-align-center"card-title-text--value="3 Hosts"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
             {{#> l-flex newcontext}}
@@ -463,9 +449,7 @@ import './Card.css'
         {{/card-body}}
       {{/card}}
       {{#> card}}
-        {{#> card-title card-title--modifier="pf-u-text-align-center"}}
-            50 Hosts
-        {{/card-title}}
+        {{> card-title card-title--modifier="pf-u-text-align-center" card-title-text--value="50 Hosts"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
             {{#> l-flex newcontext}}
@@ -783,11 +767,7 @@ import './Card.css'
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-          <span class="pf-u-font-weight-light">
-            CPU 1
-          </span>
-        {{/card-title}}
+        {{> card-title card-title--attribute=(concat 'id="' card--id '-title"') card-title-text--value="CPU 1" card-title-text--modifier="pf-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
     {{#> card-expandable-content}}
@@ -800,11 +780,7 @@ import './Card.css'
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-          <span class="pf-u-font-weight-light">
-            CPU 2
-          </span>
-        {{/card-title}}
+        {{> card-title card-title--attribute=(concat 'id="' card--id '-title"') card-title-text--value="CPU 2" card-title-text--modifier="pf-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -812,11 +788,7 @@ import './Card.css'
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-          <span class="pf-u-font-weight-light">
-            CPU 3
-          </span>
-        {{/card-title}}
+        {{> card-title card-title--attribute=(concat 'id="' card--id '-title"') card-title-text--value="CPU 3" card-title-text--modifier="pf-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -839,11 +811,7 @@ import './Card.css'
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-          <span class="pf-u-font-weight-light">
-            CPU 1
-          </span>
-        {{/card-title}}
+        {{> card-title card-title--attribute=(concat 'id="' card--id '-title"') card-title-text--value="CPU 1" card-title-text--modifier="pf-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
     {{#> card-expandable-content}}
@@ -856,11 +824,7 @@ import './Card.css'
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-          <span class="pf-u-font-weight-light">
-            CPU 2
-          </span>
-        {{/card-title}}
+        {{> card-title card-title--attribute=(concat 'id="' card--id '-title"') card-title-text--value="CPU 2" card-title-text--modifier="pf-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -868,11 +832,7 @@ import './Card.css'
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-          <span class="pf-u-font-weight-light">
-            CPU 3
-          </span>
-        {{/card-title}}
+        {{> card-title card-title--attribute=(concat 'id="' card--id '-title"') card-title-text--value="CPU 3" card-title-text--modifier="pf-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}

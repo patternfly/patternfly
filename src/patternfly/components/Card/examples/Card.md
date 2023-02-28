@@ -10,7 +10,7 @@ import './Card.css'
 ### Basic
 ```hbs
 {{#> card card--id="card-basic-example"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -32,7 +32,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
   {{/card-header}}
-  {{> card-title card-title-text--text="Title" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+  {{> card-title card-title-text--value="Title" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -51,7 +51,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title card-title-text--text="This is a really really really really really really really really really really long title" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+      {{> card-title card-title-text--value="This is a really really really really really really really really really really long title" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
@@ -106,7 +106,7 @@ import './Card.css'
       <img src="/assets/images/pf_logo.svg" width="300px" alt="Logo">
     {{/card-header-main}}
   {{/card-header}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -119,7 +119,7 @@ import './Card.css'
 ### With no footer
 ```hbs
 {{#> card card--id="card-no-footer-example"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     This card has no footer
   {{/card-body}}
@@ -150,7 +150,7 @@ import './Card.css'
 ### With multiple body sections
 ```hbs
 {{#> card card--id="card-multiple-body-example"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -169,7 +169,7 @@ import './Card.css'
 ### With only one body that fills
 ```hbs
 {{#> card card--id="card-body-fill-example"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body card-body--modifier="pf-m-no-fill"}}
     Body pf-m-no-fill
   {{/card-body}}
@@ -188,7 +188,7 @@ import './Card.css'
 ### Compact
 ```hbs
 {{#> card card--id="card-compact-example" card--modifier="pf-m-compact"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -201,7 +201,7 @@ import './Card.css'
 ### Large
 ```hbs
 {{#> card card--id="card-display-lg-example" card--modifier="pf-m-display-lg"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -214,7 +214,7 @@ import './Card.css'
 ### Hoverable
 ```hbs
 {{#> card card--id="card-hoverable-example" card--modifier="pf-m-hoverable-raised"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -227,7 +227,7 @@ import './Card.css'
 ### Selectable
 ```hbs
 {{#> card card--id="card-selectable-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -240,7 +240,7 @@ import './Card.css'
 ### Selected
 ```hbs
 {{#> card card--id="card-selected-example" card--modifier="pf-m-selectable-raised pf-m-selected-raised" card--attribute='tabindex="0"'}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -254,7 +254,7 @@ import './Card.css'
 ```hbs
 {{> card-sr-input card-sr-input--attribute="aria-label='Checkbox to improve screen reader accessibility of a selectable card'"}}
 {{#> card card--id="card-selectable-with-input-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -267,7 +267,7 @@ import './Card.css'
 ### Non selectable
 ```hbs
 {{#> card card--id="card-non-selectable-example" card--modifier="pf-m-non-selectable-raised"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -280,7 +280,7 @@ import './Card.css'
 ### Hoverable (legacy)
 ```hbs
 {{#> card card--id="card-hoverable-legacy-example" card--modifier="pf-m-hoverable"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -293,7 +293,7 @@ import './Card.css'
 ### Selectable (legacy)
 ```hbs
 {{#> card card--id="card-selectable-legacy-example" card--modifier="pf-m-selectable" card--attribute='tabindex="0"'}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -306,7 +306,7 @@ import './Card.css'
 ### Selected (legacy)
 ```hbs
 {{#> card card--id="card-selected-legacy-example" card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -319,7 +319,7 @@ import './Card.css'
 ### Flat
 ```hbs
 {{#> card card--id="card-flat-example" card--modifier="pf-m-flat"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -332,7 +332,7 @@ import './Card.css'
 ### Rounded
 ```hbs
 {{#> card card--id="card-rounded-example" card--modifier="pf-m-rounded"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -345,7 +345,7 @@ import './Card.css'
 ### Plain
 ```hbs
 {{#> card card--id="card-plain-example" card--modifier="pf-m-plain"}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -365,7 +365,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title card-title-text--text="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
+      {{> card-title card-title-text--value="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}}
   {{/card-header}}
 {{/card}}
@@ -397,7 +397,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title-text card-title-text--text="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
+      {{> card-title-text card-title-text--value="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-expandable-content}}
@@ -420,7 +420,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title card-title-text--text="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
+      {{> card-title card-title-text--value="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
@@ -441,7 +441,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title card-title-text--text="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
+      {{> card-title card-title-text--value="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}}
     {{> card-header-toggle}}
   {{/card-header}}
@@ -451,7 +451,7 @@ import './Card.css'
 ### Card with dividers between sections
 ```hbs
 {{#> card}}
-  {{> card-title card-title-text--text="Title"}}
+  {{> card-title card-title-text--value="Title"}}
   {{> divider}}
   {{#> card-body}}
     Body
@@ -476,7 +476,7 @@ A card is a generic rectangular container that can be used to build other compon
 | ---- | ---- | ---- |
 | `.pf-c-card` | `<div>` | Creates a card component.  **Required** |
 | `.pf-c-card__title` | `<div>` | Creates a card title container. |
-| `.pf-c-card__title-text` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`, `<div>` | **Required** if using component native title element. |
+| `.pf-c-card__title-text` | `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`, `<div>` | Creates a card title text element. |
 | `.pf-c-card__body` | `<div>` | Creates the body of a card. By default, the body element fills the available space in the card. You can use multiple `.pf-c-card__body` elements. |
 | `.pf-c-card__footer` | `<div>` | Creates the footer of a card. |
 | `.pf-c-card__header` | `<div>` | Creates the header of the card where images, actions, and/or the card title can go. |
