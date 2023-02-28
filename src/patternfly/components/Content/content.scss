@@ -159,6 +159,14 @@
   ol,
   ul {
     margin: 0;
+
+    // stylelint-disable selector-no-qualifying-type
+    &.pf-m-plain {
+      padding-left: 0;
+      margin-left: 0;
+      list-style: none;
+    }
+    // stylelint-enable
   }
 
   h1 {

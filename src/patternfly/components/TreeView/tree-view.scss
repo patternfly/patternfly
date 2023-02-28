@@ -17,6 +17,7 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node--Color: var(--pf-global--Color--100);
   --pf-c-tree-view__node--m-current--Color: var(--pf-global--link--Color);
   --pf-c-tree-view__node--m-current--FontWeight: var(--pf-global--FontWeight--bold);
+  --pf-c-tree-view__node--BackgroundColor: transparent;
 
   // Container
   --pf-c-tree-view__node-container--Display: contents;
@@ -27,7 +28,7 @@ $pf-c-tree-view--MaxNesting: 10;
 
   // Link hover/focus
   --pf-c-tree-view__node--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-tree-view__node--focus--BackgroundColor: var(--pf-global--palette--black-200);
+  --pf-c-tree-view__node--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
 
   // Nested toggle
   --pf-c-tree-view__list-item__list-item__node-toggle--Top: var(--pf-c-tree-view__node--PaddingTop--base);
@@ -41,6 +42,7 @@ $pf-c-tree-view--MaxNesting: 10;
   --pf-c-tree-view__node-toggle--hover--Color: var(--pf-global--Color--100);
   --pf-c-tree-view__node-toggle--focus--Color: var(--pf-global--Color--100);
   --pf-c-tree-view__node-toggle--active--Color: var(--pf-global--Color--100);
+  --pf-c-tree-view__node-toggle--BackgroundColor: transparent;
   --pf-c-tree-view__list-item--m-expanded__node-toggle--Color: var(--pf-global--Color--100);
 
   // Toggle icon
@@ -81,10 +83,6 @@ $pf-c-tree-view--MaxNesting: 10;
 
   // Action
   --pf-c-tree-view__action--MarginLeft: var(--pf-global--spacer--md);
-  --pf-c-tree-view__action--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-tree-view__action--Color: var(--pf-global--icon--Color--light);
-  --pf-c-tree-view__action--hover--Color: var(--pf-global--icon--Color--dark);
-  --pf-c-tree-view__action--focus--Color: var(--pf-global--icon--Color--dark);
 
   // Guides
   // ================================================================== //
@@ -363,6 +361,7 @@ $pf-c-tree-view--MaxNesting: 10;
   display: flex;
   padding: var(--pf-c-tree-view__node--PaddingTop) var(--pf-c-tree-view__node--PaddingRight) var(--pf-c-tree-view__node--PaddingBottom) var(--pf-c-tree-view__node--PaddingLeft);
   color: var(--pf-c-tree-view__node--Color);
+  background-color: var(--pf-c-tree-view__node--BackgroundColor);
 
   &.pf-m-current {
     --pf-c-tree-view__node--Color: var(--pf-c-tree-view__node--m-current--Color);
@@ -371,7 +370,7 @@ $pf-c-tree-view--MaxNesting: 10;
   }
 
   &:focus {
-    background-color: var(--pf-c-tree-view__node--focus--BackgroundColor);
+    --pf-c-tree-view__node--BackgroundColor: var(--pf-c-tree-view__node--focus--BackgroundColor);
   }
 
   .pf-c-tree-view__node-count {
@@ -429,6 +428,7 @@ $pf-c-tree-view--MaxNesting: 10;
   margin-top: var(--pf-c-tree-view__node-toggle-button--MarginTop);
   margin-bottom: var(--pf-c-tree-view__node-toggle-button--MarginBottom);
   color: var(--pf-c-tree-view__node-toggle--Color);
+  background-color: var(--pf-c-tree-view__node-toggle--BackgroundColor);
   border: 0;
   transform: translateX(var(--pf-c-tree-view__list-item__list-item__node-toggle--TranslateX));
 }
@@ -456,6 +456,7 @@ $pf-c-tree-view--MaxNesting: 10;
   font-weight: inherit;
   color: inherit;
   text-align: left;
+  background-color: transparent;
   border: 0;
 }
 
@@ -484,18 +485,6 @@ $pf-c-tree-view--MaxNesting: 10;
 
 .pf-c-tree-view__action {
   margin-left: var(--pf-c-tree-view__action--MarginLeft);
-  color: var(--pf-c-tree-view__action--Color);
-  border: 0;
-
-  &:hover {
-    --pf-c-tree-view__action--Color: var(--pf-c-tree-view__action--hover--Color);
-  }
-
-  &:focus {
-    --pf-c-tree-view__action--Color: var(--pf-c-tree-view__action--focus--Color);
-
-    background-color: var(--pf-c-tree-view__action--focus--BackgroundColor);
-  }
 }
 
 // stylelint-disable no-duplicate-selectors

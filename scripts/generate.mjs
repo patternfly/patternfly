@@ -1,9 +1,9 @@
-const { Command } = require('commander');
+import { Command } from 'commander';
 
 const program = new Command();
-const path = require('path');
-const glob = require('glob');
-const fs = require('fs-extra');
+import path from 'path';
+import glob from 'glob';
+import fs from 'fs-extra';
 
 program
   .version('1.0.0')

@@ -588,53 +588,52 @@ wrapperTag: div
         {{/wizard-toggle-list}}
         {{> wizard-toggle-icon}}
       {{/wizard-toggle}}
-      {{#> drawer drawer--id=(concat page-template--id "-drawer") drawer--IsInline="true"}}
-        {{#> drawer-main}}
-          {{#> drawer-content drawer-content--NoBody="true"}}
-            {{#> wizard-outer-wrap}}
-              {{#> wizard-inner-wrap}}
-                {{> wizard-template-nav}}
-                {{#> wizard-main}}
-                  {{> __wizard-drawer-toggle __wizard-drawer-toggle--attribute='aria-expanded="true"'}}
-                  {{> __wizard-form}}
-                {{/wizard-main}}
-              {{/wizard-inner-wrap}}
-            {{/wizard-outer-wrap}}
-          {{/drawer-content}}
-          {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
-            {{#> drawer-body}}
-              {{#> drawer-head}}
-                {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
-                {{#> drawer-actions}}
-                  {{> drawer-close}}
-                {{/drawer-actions}}
-              {{/drawer-head}}
-            {{/drawer-body}}
-            {{#> drawer-body}}
-              {{#> content}}
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta odio non justo cursus, quis placerat lacus mattis. Praesent orci velit, elementum eu tempus ut, posuere vel lorem. Fusce id tempus ex, et tempus nibh. Nullam laoreet odio tellus, id varius ante euismod id. Phasellus maximus lorem risus, eget facilisis urna hendrerit vel. Duis dapibus venenatis orci, id tristique magna hendrerit et. Aliquam eu lectus nec nisl efficitur euismod.
-                </p>
-
-                <p>
-                  Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc auctor tortor eget ex mattis sagittis. Praesent aliquet, sem ut aliquet posuere, ante neque convallis velit, sit amet dictum nisi odio sed purus. Vestibulum congue eros nisl, faucibus sollicitudin nisi rutrum quis. Nam lacus risus, fringilla sed imperdiet sit amet, eleifend id nulla. Pellentesque posuere purus ex, sed ultricies leo vehicula vitae. Pellentesque lacinia, lacus interdum consequat molestie, urna quam rutrum nisi, at rhoncus dolor justo nec ante. Ut semper nisi ipsum, vel varius elit facilisis et. Nulla bibendum elit sed varius suscipit. Curabitur imperdiet ligula at pellentesque pretium. Sed eu porta erat.
-                </p>
-
-                <p>
-                  Aenean hendrerit quam velit, eget euismod ex sagittis a. Fusce a ante ut ante malesuada tincidunt. <a href="#">Vestibulum facilisis ante eros, eget volutpat risus lobortis non.</a>
-                </p>
-                <a href="#">
-                  {{#> l-flex l-flex--type="span" l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
-                    <span>Learn about Red Hat connector</span>
-                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                  {{/l-flex}}
-                </a>
-              {{/content}}
-            {{/drawer-body}}
-          {{/drawer-panel}}
-        {{/drawer-main}}
-      {{/drawer}}
-      {{> wizard-footer}}
+      {{#> wizard-outer-wrap}}
+        {{#> wizard-inner-wrap}}
+          {{> wizard-template-nav}}
+          {{#> wizard-main wizard-main--HasNoBody=true}}
+            {{#> drawer drawer--id=(concat page-template--id "-drawer") drawer--IsInline=true}}
+              {{#> drawer-main}}
+                {{#> drawer-content drawer-content--NoBody=true}}
+                  {{#> wizard-main-body}}
+                    {{> __wizard-form}}
+                  {{/wizard-main-body}}
+                {{/drawer-content}}
+                {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
+                  {{#> drawer-body}}
+                    {{#> drawer-head}}
+                      {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
+                      {{#> drawer-actions}}
+                        {{> drawer-close}}
+                      {{/drawer-actions}}
+                    {{/drawer-head}}
+                  {{/drawer-body}}
+                  {{#> drawer-body}}
+                    {{#> content}}
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta odio non justo cursus, quis placerat lacus mattis. Praesent orci velit, elementum eu tempus ut, posuere vel lorem. Fusce id tempus ex, et tempus nibh. Nullam laoreet odio tellus, id varius ante euismod id. Phasellus maximus lorem risus, eget facilisis urna hendrerit vel. Duis dapibus venenatis orci, id tristique magna hendrerit et. Aliquam eu lectus nec nisl efficitur euismod.
+                      </p>
+                      <p>
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc auctor tortor eget ex mattis sagittis. Praesent aliquet, sem ut aliquet posuere, ante neque convallis velit, sit amet dictum nisi odio sed purus. Vestibulum congue eros nisl, faucibus sollicitudin nisi rutrum quis. Nam lacus risus, fringilla sed imperdiet sit amet, eleifend id nulla. Pellentesque posuere purus ex, sed ultricies leo vehicula vitae. Pellentesque lacinia, lacus interdum consequat molestie, urna quam rutrum nisi, at rhoncus dolor justo nec ante. Ut semper nisi ipsum, vel varius elit facilisis et. Nulla bibendum elit sed varius suscipit. Curabitur imperdiet ligula at pellentesque pretium. Sed eu porta erat.
+                      </p>
+                      <p>
+                        Aenean hendrerit quam velit, eget euismod ex sagittis a. Fusce a ante ut ante malesuada tincidunt. <a href="#">Vestibulum facilisis ante eros, eget volutpat risus lobortis non.</a>
+                      </p>
+                      <a href="#">
+                        {{#> l-flex l-flex--type="span" l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
+                          <span>Learn about Red Hat connector</span>
+                          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        {{/l-flex}}
+                      </a>
+                    {{/content}}
+                  {{/drawer-body}}
+                {{/drawer-panel}}
+              {{/drawer-main}}
+            {{/drawer}}
+          {{/wizard-main}}
+        {{/wizard-inner-wrap}}
+        {{> wizard-footer}}
+      {{/wizard-outer-wrap}}
     {{/wizard}}
   {{/page-main-wizard}}
 {{/inline}}
@@ -660,52 +659,52 @@ wrapperTag: div
         {{/wizard-toggle-list}}
         {{> wizard-toggle-icon}}
       {{/wizard-toggle}}
-      {{#> drawer drawer--id=(concat page-template--id "-drawer") drawer-panel--IsOpen="true" drawer--IsInline="true"}}
-        {{#> drawer-main}}
-          {{#> drawer-content drawer-content--NoBody="true"}}
-            {{#> wizard-outer-wrap}}
-              {{#> wizard-inner-wrap}}
-                {{> wizard-template-nav}}
-                {{#> wizard-main}}
-                  {{> __wizard-form}}
-                {{/wizard-main}}
-              {{/wizard-inner-wrap}}
-            {{/wizard-outer-wrap}}
-          {{/drawer-content}}
-          {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
-            {{#> drawer-body}}
-              {{#> drawer-head}}
-                {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
-                {{#> drawer-actions}}
-                  {{> drawer-close}}
-                {{/drawer-actions}}
-              {{/drawer-head}}
-            {{/drawer-body}}
-            {{#> drawer-body}}
-              {{#> content}}
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta odio non justo cursus, quis placerat lacus mattis. Praesent orci velit, elementum eu tempus ut, posuere vel lorem. Fusce id tempus ex, et tempus nibh. Nullam laoreet odio tellus, id varius ante euismod id. Phasellus maximus lorem risus, eget facilisis urna hendrerit vel. Duis dapibus venenatis orci, id tristique magna hendrerit et. Aliquam eu lectus nec nisl efficitur euismod.
-                </p>
-
-                <p>
-                  Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc auctor tortor eget ex mattis sagittis. Praesent aliquet, sem ut aliquet posuere, ante neque convallis velit, sit amet dictum nisi odio sed purus. Vestibulum congue eros nisl, faucibus sollicitudin nisi rutrum quis. Nam lacus risus, fringilla sed imperdiet sit amet, eleifend id nulla. Pellentesque posuere purus ex, sed ultricies leo vehicula vitae. Pellentesque lacinia, lacus interdum consequat molestie, urna quam rutrum nisi, at rhoncus dolor justo nec ante. Ut semper nisi ipsum, vel varius elit facilisis et. Nulla bibendum elit sed varius suscipit. Curabitur imperdiet ligula at pellentesque pretium. Sed eu porta erat.
-                </p>
-
-                <p>
-                  Aenean hendrerit quam velit, eget euismod ex sagittis a. Fusce a ante ut ante malesuada tincidunt. <a href="#">Vestibulum facilisis ante eros, eget volutpat risus lobortis non.</a>
-                </p>
-                <a href="#">
-                  {{#> l-flex l-flex--type="span" l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
-                    <span>Learn about Red Hat connector</span>
-                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-                  {{/l-flex}}
-                </a>
-              {{/content}}
-            {{/drawer-body}}
-          {{/drawer-panel}}
-        {{/drawer-main}}
-      {{/drawer}}
-      {{> wizard-footer}}
+      {{#> wizard-outer-wrap}}
+        {{#> wizard-inner-wrap}}
+          {{> wizard-template-nav}}
+          {{#> wizard-main wizard-main--HasNoBody=true}}
+            {{#> drawer drawer--id=(concat page-template--id "-drawer") drawer-panel--IsOpen="true" drawer--IsInline="true"}}
+              {{#> drawer-main}}
+                {{#> drawer-content drawer-content--NoBody=true}}
+                  {{#> wizard-main-body}}
+                    {{> __wizard-form}}
+                  {{/wizard-main-body}}
+                {{/drawer-content}}
+                {{#> drawer-panel drawer-panel--modifier="pf-m-light-200 pf-m-width-33"}}
+                  {{#> drawer-body}}
+                    {{#> drawer-head}}
+                      {{> title titleType="h2" title--modifier="pf-m-xl" title--text="Register with Red Hat connector"}}
+                      {{#> drawer-actions}}
+                        {{> drawer-close}}
+                      {{/drawer-actions}}
+                    {{/drawer-head}}
+                  {{/drawer-body}}
+                  {{#> drawer-body}}
+                    {{#> content}}
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta odio non justo cursus, quis placerat lacus mattis. Praesent orci velit, elementum eu tempus ut, posuere vel lorem. Fusce id tempus ex, et tempus nibh. Nullam laoreet odio tellus, id varius ante euismod id. Phasellus maximus lorem risus, eget facilisis urna hendrerit vel. Duis dapibus venenatis orci, id tristique magna hendrerit et. Aliquam eu lectus nec nisl efficitur euismod.
+                      </p>
+                      <p>
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc auctor tortor eget ex mattis sagittis. Praesent aliquet, sem ut aliquet posuere, ante neque convallis velit, sit amet dictum nisi odio sed purus. Vestibulum congue eros nisl, faucibus sollicitudin nisi rutrum quis. Nam lacus risus, fringilla sed imperdiet sit amet, eleifend id nulla. Pellentesque posuere purus ex, sed ultricies leo vehicula vitae. Pellentesque lacinia, lacus interdum consequat molestie, urna quam rutrum nisi, at rhoncus dolor justo nec ante. Ut semper nisi ipsum, vel varius elit facilisis et. Nulla bibendum elit sed varius suscipit. Curabitur imperdiet ligula at pellentesque pretium. Sed eu porta erat.
+                      </p>
+                      <p>
+                        Aenean hendrerit quam velit, eget euismod ex sagittis a. Fusce a ante ut ante malesuada tincidunt. <a href="#">Vestibulum facilisis ante eros, eget volutpat risus lobortis non.</a>
+                      </p>
+                      <a href="#">
+                        {{#> l-flex l-flex--type="span" l-flex--modifier="pf-m-space-items-sm pf-m-nowrap"}}
+                          <span>Learn about Red Hat connector</span>
+                          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                        {{/l-flex}}
+                      </a>
+                    {{/content}}
+                  {{/drawer-body}}
+                {{/drawer-panel}}
+              {{/drawer-main}}
+            {{/drawer}}
+          {{/wizard-main}}
+        {{/wizard-inner-wrap}}
+        {{> wizard-footer}}
+      {{/wizard-outer-wrap}}
     {{/wizard}}
   {{/page-main-wizard}}
 {{/inline}}

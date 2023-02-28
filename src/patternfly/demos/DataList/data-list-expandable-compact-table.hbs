@@ -2,7 +2,9 @@
   {{#> table-thead}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="check-all" aria-label="Select all rows">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute='name="check-all" aria-label="Select all rows"'}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Contributor
@@ -29,7 +31,9 @@
   {{#> table-tbody}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow1" aria-labelledby="{{table--id}}-name1">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute=(concat 'name="checkrow1" aria-labelledby="' table--id '-name1"')}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Contributor"}}
         <span id="{{table--id}}-name1">Sam Jones</span>
@@ -58,7 +62,9 @@
     {{/table-tr}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow2" aria-labelledby="{{table--id}}-name2">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute=(concat 'name="checkrow2" aria-labelledby="' table--id '-name2"')}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
         <span id="{{table--id}}-name2">Amy Miller</span>
@@ -87,7 +93,9 @@
     {{/table-tr}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow3" aria-labelledby="{{table--id}}-name3">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute=(concat 'name="checkrow3" aria-labelledby="' table--id '-name3"')}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-th table-th--data-label="Contributor"}}
         <span id="{{table--id}}-name3">Steve Wilson</span>
@@ -116,7 +124,9 @@
     {{/table-tr}}
     {{#> table-tr}}
       {{#> table-td table-td--check="true"}}
-        <input type="checkbox" name="checkrow4" aria-labelledby="{{table--id}}-name4">
+        {{#> check check--modifier="pf-m-standalone"}}
+          {{#> check-input check-input--attribute=(concat 'name="checkrow4" aria-labelledby="' table--id '-name4"')}}{{/check-input}}
+        {{/check}}
       {{/table-td}}
       {{#> table-td table-td--data-label="Contributor name"}}
         <span id="{{table--id}}-name4">Emma Jackson</span>

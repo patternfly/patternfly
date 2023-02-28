@@ -19,6 +19,7 @@
   --pf-c-context-selector__toggle--active--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-context-selector__toggle--expanded--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-context-selector__toggle--expanded--BorderBottomColor: var(--pf-global--active-color--100);
+  --pf-c-context-selector__toggle--BackgroundColor: transparent;
   --pf-c-context-selector__toggle--m-plain--Color: var(--pf-global--Color--200);
   --pf-c-context-selector__toggle--m-plain--hover--Color: var(--pf-global--Color--100);
   --pf-c-context-selector__toggle--m-plain--disabled--Color: var(--pf-global--disabled-color--200);
@@ -71,6 +72,7 @@
   --pf-c-context-selector__menu-list-item--PaddingRight: var(--pf-global--spacer--lg);
   --pf-c-context-selector__menu-list-item--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-context-selector__menu-list-item--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-context-selector__menu-list-item--BackgroundColor: transparent;
   --pf-c-context-selector__menu-list-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
   --pf-c-context-selector__menu-list-item--disabled--Color: var(--pf-global--Color--dark-200);
 
@@ -199,6 +201,7 @@
   color: var(--pf-c-context-selector__toggle--Color);
   white-space: nowrap;
   cursor: pointer;
+  background-color: var(--pf-c-context-selector__toggle--BackgroundColor);
   border: none;
 
   &::before {
@@ -335,13 +338,14 @@
   padding: var(--pf-c-context-selector__menu-list-item--PaddingTop) var(--pf-c-context-selector__menu-list-item--PaddingRight) var(--pf-c-context-selector__menu-list-item--PaddingBottom) var(--pf-c-context-selector__menu-list-item--PaddingLeft);
   color: var(--pf-c-context-selector__menu-list-item--Color);
   white-space: nowrap;
+  background-color: var(--pf-c-context-selector__menu-list-item--BackgroundColor);
   border: none;
-
 
   &:hover,
   &:focus {
+    --pf-c-context-selector__menu-list-item--BackgroundColor: var(--pf-c-context-selector__menu-list-item--hover--BackgroundColor);
+
     text-decoration: none;
-    background-color: var(--pf-c-context-selector__menu-list-item--hover--BackgroundColor);
   }
 
   &.pf-m-disabled,

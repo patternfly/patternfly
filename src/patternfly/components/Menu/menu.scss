@@ -141,6 +141,7 @@
   --pf-c-menu__item-action--PaddingBottom: var(--pf-global--spacer--sm);
   --pf-c-menu__item-action--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-menu__item-action--Color: var(--pf-global--Color--200);
+  --pf-c-menu__item-action--BackgroundColor: transparent;
   --pf-c-menu__item-action--hover--Color: var(--pf-global--Color--100);
   --pf-c-menu__item-action--disabled--Color: var(--pf-global--disabled-color--200);
   --pf-c-menu__item-action--m-favorited--Color: var(--pf-global--palette--gold-400);
@@ -274,6 +275,7 @@
     .pf-c-menu__list {
       position: relative;
       overflow: hidden;
+      visibility: visible;
       transition: var(--pf-c-menu--m-drilldown__list--Transition);
 
       & .pf-c-menu__list {
@@ -701,6 +703,7 @@
   padding-bottom: var(--pf-c-menu__item-action--PaddingBottom);
   padding-left: var(--pf-c-menu__item-action--PaddingLeft);
   color: var(--pf-c-menu__item-action--Color);
+  background-color: var(--pf-c-menu__item-action--BackgroundColor);
   border: none;
 
   &.pf-m-favorite {

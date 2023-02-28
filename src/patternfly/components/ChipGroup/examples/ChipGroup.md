@@ -489,6 +489,6 @@ The chip group requires the [chip component](/components/chip).
 | `.pf-c-chip-group__list-item` | `<li>` | Initiates the list item inside of the chip group. **Required.** |
 | `.pf-c-chip-group__label` | `<span>` | Initiates the label to be used in the chip group. |
 | `.pf-c-chip-group__close` | `<div>` | Initiates the container used for the button to remove the chip group. |
-| `.pf-c-chip-group__main` | `<div>` | Initiates the container for the label and list elements so that they wrap together. |
+| `.pf-c-chip-group__main` | `<div>` | Initiates the container for the label and list elements so that they wrap together. **Required** |
 | `.pf-c-button` | `.pf-c-chip-group__close <button>` | Initiates the button used to remove the chip group. |
 | `.pf-m-category` | `.pf-c-chip-group` | Modifies the chip group to support category styling. |

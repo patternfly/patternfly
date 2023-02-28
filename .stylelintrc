@@ -29,14 +29,6 @@
         "default"
       ]
     }],
-    "at-rule-name-space-after": "always",
-    "at-rule-semicolon-space-before": "never",
-    "block-closing-brace-newline-after": ["always", {
-      "ignoreAtRules": [
-        "if",
-        "else"
-      ]
-    }],
     "color-function-notation": null,
     "color-named": "never",
     "comment-empty-line-before": ["always", {
@@ -48,18 +40,13 @@
     }],
     "custom-property-pattern": "^pf-(global|[lcud])-.+$",
     "declaration-block-no-redundant-longhand-properties": null,
-    "declaration-block-semicolon-newline-before": "never-multi-line",
     "declaration-no-important": true,
     "font-weight-notation": "numeric",
-    "function-comma-newline-before": "never-multi-line",
+    "import-notation": "string",
     "keyframes-name-pattern": null,
-    "max-empty-lines": 2,
-    "max-line-length": null,
     "max-nesting-depth": 3,
-    "media-query-list-comma-newline-before": "never-multi-line",
     "no-descending-specificity": null,
     "no-unknown-animations": true,
-    "number-leading-zero": "never",
     "order/properties-order": [
       "position",
       "top",
@@ -274,6 +261,5 @@
     "selector-max-type": 2,
     "selector-nested-pattern": "^(?!.*&[-_])",
     "selector-no-qualifying-type": true,
-    "value-list-comma-newline-before": "never-multi-line"
   }
 }

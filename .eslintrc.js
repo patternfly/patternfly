@@ -1,4 +1,10 @@
 module.exports = {
+  parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-react']
+    }
+  },
   rules: {
     semi: 'off',
     'space-before-function-paren': 'off',
@@ -15,6 +21,5 @@ module.exports = {
     browser: true,
     node: true
   },
-  plugins: ['react'],
-  parser: 'babel-eslint'
+  parser: '@babel/eslint-parser'
 };

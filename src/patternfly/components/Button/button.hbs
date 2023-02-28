@@ -1,27 +1,40 @@
-<{{#if button--IsInlineLinkSpan}}span{{else}}button{{/if}} class="pf-c-button
+<{{#if button--type}}{{button--type}}{{else if button--IsInlineLinkSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}} class="pf-c-button
   {{~#if button--IsExpanded}} pf-m-expanded{{/if}}
   {{~#if button--IsProgress}} pf-m-progress{{/if}}
   {{~#if button--IsInProgress}} pf-m-in-progress{{/if}}
   {{~#if button--IsInline}} pf-m-inline{{/if}}
+  {{~#if button--IsDisabled}}
+    {{#if (concat button--type button--IsInlineLinkSpan button--IsAnchor)}}
+      pf-m-disabled
+    {{/if}}
+  {{/if}}
   {{~#if button--modifier}} {{button--modifier}}{{/if}}"
   {{#if button--IsSubmit}}
     type="submit"
   {{else if button--IsReset}}
     type="reset"
   {{else}}
-    type="button"
+    {{#unless (concat button--IsAnchor button--type)}}
+      type="button"
+    {{/unless}}
   {{/if}}
   {{#if (concat button--IsExpanded button--IsAriaExpanded)}}
     aria-expanded="true"
   {{/if}}
   {{#if button--IsInlineLinkSpan}}
     role="button"
+    tabindex="0"
   {{/if}}
   {{#if button--aria-label}}
     aria-label="{{button--aria-label}}"
   {{/if}}
   {{#if button--IsDisabled}}
-    disabled
+    {{#unless (concat button--type button--IsInlineLinkSpan button--IsAnchor)}}
+      disabled
+    {{/unless}}
+  {{/if}}
+  {{#if button--url}}
+    href="{{button--url}}"
   {{/if}}
   {{#if button--attribute}}
     {{{button--attribute}}}
@@ -30,4 +43,4 @@
     {{> button-progress}}
   {{/if}}
   {{> @partial-block}}
-</{{#if button--IsInlineLinkSpan}}span{{else}}button{{/if}}>
+</{{#if button--type}}{{button--type}}{{else if button--IsInlineLinkSpan}}span{{else if button--IsAnchor}}a{{else}}button{{/if}}>

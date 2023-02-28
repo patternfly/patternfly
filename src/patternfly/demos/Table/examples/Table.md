@@ -129,9 +129,7 @@ import './Table.css'
 {{#> backdrop}}
   {{#> bullseye}}
     {{#> modal-box modal-box--attribute='aria-labelledby="modal-title" aria-describedby="modal-description"' modal-box--modifier="pf-m-sm"}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
+      {{> modal-box-close}}
       {{#> modal-box-header}}
         {{#> modal-box-title modal-box-title--attribute='id="modal-title"'}}
           Manage columns

@@ -83,6 +83,7 @@
   --pf-c-data-list__item--m-expanded__toggle-icon--Rotate: 90deg;
 
   // draggable button/icon
+  --pf-c-data-list__item-draggable-button--BackgroundColor: transparent;
   --pf-c-data-list__item-draggable-button--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-data-list__item-draggable-button--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-data-list__item-draggable-button--MarginTop: calc(var(--pf-global--spacer--lg) * -1);
@@ -167,7 +168,6 @@
   font-size: var(--pf-c-data-list--FontSize);
   line-height: var(--pf-c-data-list--LineHeight);
   overflow-wrap: break-word;
-  list-style-type: disc;
   border-top: var(--pf-c-data-list--BorderTopWidth) solid var(--pf-c-data-list--BorderTopColor);
 
   &.pf-m-compact {
@@ -349,6 +349,7 @@
   flex-direction: column; // fixes safari alignment
   padding: var(--pf-c-data-list__item-draggable-button--PaddingTop) var(--pf-c-data-list__item-draggable-button--PaddingRight) var(--pf-c-data-list__item-draggable-button--PaddingBottom) var(--pf-c-data-list__item-draggable-button--PaddingLeft);
   margin: var(--pf-c-data-list__item-draggable-button--MarginTop) 0 var(--pf-c-data-list__item-draggable-button--MarginBottom) var(--pf-c-data-list__item-draggable-button--MarginLeft);
+  background-color: var(--pf-c-data-list__item-draggable-button--BackgroundColor);
   border: 0;
 
   &:hover {

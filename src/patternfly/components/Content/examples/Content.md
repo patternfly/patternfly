@@ -63,6 +63,31 @@ cssPrefix: pf-c-content
 <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et
   <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
 <hr>
+<h3>Plain list example</h3>
+<ol class="pf-m-plain">
+  <li>Donec blandit a lorem id convallis.</li>
+  <li>Cras gravida arcu at diam gravida gravida.</li>
+  <li>Integer in volutpat libero.</li>
+  <li>Donec a diam tellus.</li>
+  <li>Etiam auctor nisl et.
+    <ul>
+      <li>Regular list</li>
+      <li>Donec blandit a lorem id convallis.</li>
+      <li>Cras gravida arcu at diam gravida gravida.</li>
+      <li>Integer in volutpat libero.
+        <ol class="pf-m-plain">
+          <li>Nested plain list</li>
+          <li>Donec blandit a lorem id convallis.</li>
+          <li>Cras gravida arcu at diam gravida gravida.</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Aenean nec tortor orci.</li>
+  <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
+  <li>Vivamus maximus ultricies pulvinar.</li>
+</ol>
+<hr>
 <h3>Visited link example</h3>
 <p>
   <a class="pf-m-visited" href>Visited link</a>
@@ -123,3 +148,4 @@ This component is an exception to the variable system since we style type select
 | -- | -- | -- |
 | `.pf-c-content` | `<div>`, `<section>`, or `<article>` | Generates vertical rhythm and typographic treatment to html elements. |
 | `.pf-m-visited` | `.pf-c-content`, `<a>` | Modifies all links in a content block to include visited styles. Can also be applied to a single link in a content block. |
+| `.pf-m-plain` | `<ul>`, `<ol>` | Removes the list marker and indentation. |

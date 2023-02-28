@@ -1,14 +1,16 @@
-const path = require('path');
-const fs = require('fs-extra');
-const { src, watch, dest } = require('gulp');
-const sass = require('sass');
-const stylelint = require('stylelint');
-const sassGraph = require('sass-graph');
-const postcss = require('gulp-postcss');
-const cssnano = require('cssnano');
-const sourcemaps = require('gulp-sourcemaps');
-const rename = require('gulp-rename');
-const through2 = require('through2');
+import path from 'path';
+import fs from 'fs-extra';
+import gulp from 'gulp';
+import sass from 'sass';
+import stylelint from 'stylelint';
+import sassGraph from 'sass-graph';
+import postcss from 'gulp-postcss';
+import cssnano from 'cssnano';
+import sourcemaps from 'gulp-sourcemaps';
+import rename from 'gulp-rename';
+import through2 from 'through2';
+
+const { src, watch, dest } = gulp;
 
 function compileSASS0(srcFiles) {
   return srcFiles.pipe(
@@ -62,7 +64,7 @@ function compileSASS0(srcFiles) {
   );
 }
 
-function compileSASS(sassFiles) {
+export function compileSASS(sassFiles) {
   return compileSASS0(src(sassFiles));
 }
 
@@ -85,7 +87,7 @@ function getDocCSSFiles() {
   return res;
 }
 
-function watchSASS(sassFiles) {
+export function watchSASS(sassFiles) {
   const docCSSFiles = getDocCSSFiles();
   const graph = sassGraph.parseDir('./src/patternfly').index;
   const watcher = watch(sassFiles, { delay: 0 });
@@ -120,7 +122,7 @@ const postcssOptions = {
   preset: ['default', { mergeLonghand: false }]
 };
 
-function minifyCSS() {
+export function minifyCSS() {
   return src('./dist/patternfly.css')
     .pipe(rename('patternfly.min.css'))
     .pipe(sourcemaps.init())
@@ -129,8 +131,4 @@ function minifyCSS() {
     .pipe(dest('dist'));
 }
 
-module.exports = {
-  compileSASS,
-  minifyCSS,
-  watchSASS
-};
+

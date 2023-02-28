@@ -149,6 +149,7 @@
   --pf-c-menu-toggle--m-split-button--m-action--m-secondary--child--BorderLeftColor: var(--pf-global--primary-color--100);
 
   // Split button, controls, check
+  --pf-c-menu-toggle__button--BackgroundColor: transparent;
   --pf-c-menu-toggle__button__controls--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-menu-toggle__button__controls--MarginLeft: var(--pf-global--spacer--sm);
 
@@ -502,6 +503,7 @@
   --pf-c-menu-toggle__controls--MarginLeft: var(--pf-c-menu-toggle__button__controls--MarginLeft);
 
   color: inherit;
+  background-color: var(--pf-c-menu-toggle__button--BackgroundColor);
   border: 0;
 }
 

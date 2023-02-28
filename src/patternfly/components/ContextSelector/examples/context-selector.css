@@ -1,3 +1,7 @@
-#ws-core-c-context-selector-basic, #ws-core-c-context-selector-with-footer, #ws-core-c-context-selector-plain-with-text {
+#ws-core-c-context-selector-basic, #ws-core-c-context-selector-plain-with-text {
   min-height: 380px;
+}
+
+#ws-core-c-context-selector-with-footer {
+  min-height: 420px;
 }

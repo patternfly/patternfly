@@ -17,6 +17,7 @@
   --pf-c-search-input__text-input--PaddingLeft: var(--pf-global--spacer--xl);
   --pf-c-search-input__text-input--MinWidth: 6ch;
   --pf-c-search-input__text-input--m-hint--Color: var(--pf-global--Color--dark-200); // matches placeholder text color
+  --pf-c-search-input__text-input--BackgroundColor: transparent;
 
   // Icon
   --pf-c-search-input__icon--Left: var(--pf-global--spacer--sm);
@@ -120,6 +121,7 @@
   width: 100%;
   min-width: var(--pf-c-search-input__text-input--MinWidth);
   padding: var(--pf-c-search-input__text-input--PaddingTop) var(--pf-c-search-input__text-input--PaddingRight) var(--pf-c-search-input__text-input--PaddingBottom) var(--pf-c-search-input__text-input--PaddingLeft);
+  background-color: var(--pf-c-search-input__text-input--BackgroundColor);
   border: 0;
 
   &,

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-const { Command } = require('commander');
-const path = require('path');
-const fs = require('fs');
-const { execSync } = require('child_process');
-const { getFileSizes, getHTMLDiffTable, postToPR } = require('./helpers');
+import { Command } from 'commander';
+import path from 'path';
+import fs from 'fs';
+import { execSync } from 'child_process';
+import { getFileSizes, getHTMLDiffTable, postToPR } from './helpers';
 
 const program = new Command();
 program
@@ -34,7 +34,7 @@ async function compare(pattern, options) {
     }
 
     // eslint-disable-next-line
-    const packageName = require(path.join(process.cwd(), 'package.json')).name;
+    const packageName from path.join(process.cwd(), 'package.json')).name;
     const command = `npm i -D ${packageName}@${shaTag}`;
     console.log('>', command);
     execSync(command, { cwd: __dirname });

@@ -1,5 +1,4 @@
 .pf-c-text-input-group {
-  // Component
   --pf-c-text-input-group--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
   // Base border
@@ -31,7 +30,8 @@
   --pf-c-text-input-group__text-input--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-text-input-group__text-input--MinWidth: 12ch;
   --pf-c-text-input-group__text-input--m-hint--Color: var(--pf-global--Color--dark-200); // matches placeholder text color
-  --pf-c-text-input-group--placeholder--Color: var(--pf-global--Color--dark-200);
+  --pf-c-text-input-group__text-input--placeholder--Color: var(--pf-global--Color--dark-200);
+  --pf-c-text-input-group__text-input--BackgroundColor: transparent;
 
   // Icon
   --pf-c-text-input-group__icon--Left: var(--pf-global--spacer--sm);
@@ -155,6 +155,7 @@
   width: 100%;
   min-width: var(--pf-c-text-input-group__text-input--MinWidth);
   padding: var(--pf-c-text-input-group__text-input--PaddingTop) var(--pf-c-text-input-group__text-input--PaddingRight) var(--pf-c-text-input-group__text-input--PaddingBottom) var(--pf-c-text-input-group__text-input--PaddingLeft);
+  background-color: var(--pf-c-text-input-group__text-input--BackgroundColor);
   border: 0;
 
   &,
@@ -167,7 +168,7 @@
   }
 
   &::placeholder {
-    color: var(--pf-c-text-input-group--placeholder--Color);
+    color: var(--pf-c-text-input-group__text-input--placeholder--Color);
   }
 }
 

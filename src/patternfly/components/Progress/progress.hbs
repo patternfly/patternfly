@@ -21,8 +21,16 @@
   {{#if progress--attribute}}
     {{{progress--attribute}}}
   {{/if}}>
-  {{> progress-description}}
-  {{> progress-status}}
+  {{#if progress__description}}
+    {{> progress-description}}
+  {{/if}}
+  {{#if progress--no-measure}}
+    {{#if (concat progress--danger progress--success progress--warning)}}
+      {{> progress-status}}
+    {{/if}}
+  {{else}} 
+    {{> progress-status}}
+  {{/if}}
   {{> progress-bar}}
   {{#if progress__helper-text}}{{> progress-helper-text}}{{/if}}
   {{> @partial-block}}

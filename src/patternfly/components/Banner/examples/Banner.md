@@ -62,8 +62,8 @@ Banners can be styled with one of 5 different colors. A basic banner should only
 <br>
 {{#> banner banner--modifier="pf-m-gold"}}
   Gold banner with an 
-  {{#> button-link button-link--attribute='href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples"' button-link--modifier="pf-m-inline pf-m-link"}}
-  inline link button (anchor){{/button-link}}
+  {{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--modifier="pf-m-inline pf-m-link"}}
+  inline link button (anchor){{/button}}
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-red"}}

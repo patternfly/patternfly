@@ -89,6 +89,9 @@
 	@if $filename == critical-risk {
 		$char: '\E976';
 	}
+	@if $filename == data-processor {
+		$char: '\E97B';
+	}
 	@if $filename == data-sink {
 		$char: '\E978';
 	}
@@ -484,6 +487,9 @@
 }
 .pf-icon-critical-risk {
 	@include pf-icon(critical-risk);
+}
+.pf-icon-data-processor {
+	@include pf-icon(data-processor);
 }
 .pf-icon-data-sink {
 	@include pf-icon(data-sink);

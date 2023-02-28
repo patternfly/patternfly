@@ -1,6 +1,5 @@
 ---
 id: 'Password strength'
-beta: true
 section: demos
 ---
 

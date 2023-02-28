@@ -7,8 +7,8 @@
   --pf-c-progress__bar--Height: var(--pf-global--spacer--md);
   --pf-c-progress__bar--BackgroundColor: var(--pf-global--BackgroundColor--light-100); // the bar always needs white under it so that the semi-transparent color shows correctly
   --pf-c-progress__measure--m-static-width--MinWidth: 4.5ch; // 4.5 because the % character is wider than a 0
+  --pf-c-progress__status--Gap: var(--pf-global--spacer--sm);
   --pf-c-progress__status-icon--Color: var(--pf-global--Color--100); // the status icon default color is the default text color
-  --pf-c-progress__status-icon--MarginLeft: var(--pf-global--spacer--sm);
   --pf-c-progress__bar--before--Opacity: .2; // one-off change in opacity to allow progress bar to automatically coordinate with the indicator color
   --pf-c-progress__indicator--Height: var(--pf-c-progress__bar--Height);
   --pf-c-progress__indicator--BackgroundColor: var(--pf-c-progress__bar--before--BackgroundColor);
@@ -158,15 +158,18 @@
 
 // the progress__status is displayed in the upper right
 .pf-c-progress__status {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   text-align: right;
   word-break: break-word;
+  gap: var(--pf-c-progress__status--Gap);
 }
 
 // the progress__status-icon is an icon displayed always in the upper right
 .pf-c-progress__status-icon {
-  margin-left: var(--pf-c-progress__status-icon--MarginLeft);
   color: var(--pf-c-progress__status-icon--Color);
 }
 

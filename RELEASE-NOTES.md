@@ -3,6 +3,23 @@ id: Release notes
 section: developer-resources
 releaseNoteTOC: true
 ---
+## 2023.01 release notes (2023-01-25)
+Packages released:
+- [@patternfly/patternfly@v4.224.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.224.2)
+
+### Components
+- **Calendar month:** Updated year width to not truncate ([#5316](https://github.com/patternfly/patternfly/pull/5316))
+- **Card:** Removed unnecessary class from labels in demos ([#5306](https://github.com/patternfly/patternfly/pull/5306))
+- **Charts:** Removed dupe vars ([#5312](https://github.com/patternfly/patternfly/pull/5312))
+- **Content:** Added plain list variation ([#5337](https://github.com/patternfly/patternfly/pull/5337))
+- **Tabs:** Removed help action specific styling ([#5330](https://github.com/patternfly/patternfly/pull/5330))
+- **Wizard:** Fixed demo footer layout ([#5317](https://github.com/patternfly/patternfly/pull/5317))
+
+### Other
+- **Icons:** Added data-processor icon ([#5284](https://github.com/patternfly/patternfly/pull/5284))
+- **Workspace:** Cleaned up beta tags for v4 ([#5329](https://github.com/patternfly/patternfly/pull/5329))
+
+
 ## 2022.16 release notes (2022-12-09)
 Packages released:
 - [@patternfly/patternfly@v4.222.4](https://www.npmjs.com/package/@patternfly/patternfly/v/4.222.4)

@@ -3,13 +3,6 @@
 @mixin pf-theme-dark-tooltip() {
   .pf-c-tooltip {
     --pf-c-tooltip__content--BackgroundColor: var(--pf-global--BackgroundColor--300);
-    --pf-c-tooltip__arrow--BoxShadow: var(--pf-global--BoxShadow--lg);
-  }
-
-  .pf-c-tooltip__arrow {
-    --pf-c-tooltip__arrow--Width: #{pf-size-prem(15px)};
-    --pf-c-tooltip__arrow--Height: #{pf-size-prem(15px)};
-
-    box-shadow: var(--pf-c-tooltip__arrow--BoxShadow);
+    --pf-c-tooltip__arrow--BackgroundColor: var(--pf-global--BackgroundColor--300);
   }
 }

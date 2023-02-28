@@ -1,14 +1,16 @@
-const fs = require('fs');
-const { series, parallel } = require('gulp');
-const rimraf = require('rimraf');
-const { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } = require('./scripts/gulp/copy');
-const { compileSASS, minifyCSS, watchSASS } = require('./scripts/gulp/sass');
-const { pfIconFont, pfIcons } = require('./scripts/gulp/icons');
-const { compileHBS, compileMD, watchHBS, watchMD } = require('./scripts/gulp/html');
-const { lintCSSComments, lintCSSFunctions } = require('./scripts/gulp/lint');
-const { generateSnippets } = require('./scripts/gulp/snippets');
-const { start } = require('@patternfly/documentation-framework/scripts/cli/start');
-const { build } = require('@patternfly/documentation-framework/scripts/cli/build');
+import fs from'fs';
+import gulp from'gulp';
+import rimraf from'rimraf';
+import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.mjs';
+import { compileSASS, minifyCSS, watchSASS } from'./scripts/gulp/sass.mjs';
+import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from'./scripts/gulp/icons.mjs';
+import { compileHBS, compileMD, watchHBS, watchMD } from'./scripts/gulp/html.mjs';
+import { lintCSSComments, lintCSSFunctions } from'./scripts/gulp/lint.mjs';
+import { generateSnippets } from'./scripts/gulp/snippets.mjs';
+import { start } from '@patternfly/documentation-framework/scripts/cli/start.js';
+import { build as docsFrameworkBuild} from '@patternfly/documentation-framework/scripts/cli/build.js';
+
+const { series, parallel } = gulp;
 
 const sassFiles = [
   './src/patternfly/patternfly*.scss',
@@ -21,7 +23,7 @@ const sassFiles = [
 const hbsFiles = ['./src/patternfly/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];
 
-function clean(cb) {
+export function clean(cb) {
   const cleanGlobs = [
     'dist',
     'src/icons/PfIcons',
@@ -74,6 +76,8 @@ function generateWorkspaceSnippets() {
   return generateSnippets('workspace/**/index.html');
 }
 
+export const snippets = series(compileSrcHBS, compileSrcMD, generateWorkspaceSnippets);
+
 const themeCLIOptions = {
   parent: {
     config: './patternfly-docs/patternfly-docs.config.js',
@@ -82,8 +86,8 @@ const themeCLIOptions = {
   }
 };
 
-async function buildWebpack() {
-  await build('all', themeCLIOptions);
+export async function buildWebpack() {
+  await docsFrameworkBuild('all', themeCLIOptions);
 }
 
 function startWebpackDevServer() {
@@ -95,37 +99,20 @@ const buildDocs = series(buildSrc, copyDocs);
 const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, startWebpackDevServer);
 
 // Builds `dist` folder
-const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
+export const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
 
-function checkBuildPatternfly(cb) {
-  if (!fs.existsSync('dist')) {
-    buildPatternfly(cb);
-  } else {
-    cb();
-  }
+export const build = series(buildPatternfly, buildWebpack); // Builds `dist` and `public` folders
+
+export function pfIcons() {
+  return definedPfIcons();
 }
 
-module.exports = {
-  build: series(buildPatternfly, buildWebpack), // Builds `dist` and `public` folders
-  buildPatternfly, // Builds `dist` folder
-  buildWebpack, // Builds `public` folder
-  develop: series(checkBuildPatternfly, buildDocs, watchAll),
-  compileSASS: compileSrcSASS,
-  minifyCSS,
-  watchSASS: watchSrcSASS,
-  watchHBS: watchSrcHBS,
-  watchMD: watchSrcMD,
-  watchCopyDocs,
-  clean,
-  pfIconFont,
-  pfIcons,
-  copyFA,
-  copySource: copySourceFiles,
-  copyAssets,
-  copyDocs,
-  lintCSSFunctions,
-  lintCSSComments,
-  lintCSS: parallel(lintCSSFunctions, lintCSSComments),
-  snippets: series(compileSrcHBS, compileSrcMD, generateWorkspaceSnippets),
-  compileSrcSASS
-};
+export function pfIconFont() {
+  return definedPfIconFont();
+}
+
+export const develop = series(buildPatternfly, buildWebpack, watchAll);
+
+export const lintCSS = parallel(lintCSSFunctions, lintCSSComments);
+
+

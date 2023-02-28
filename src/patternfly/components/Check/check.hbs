@@ -2,5 +2,8 @@
   {{#if check--attribute}}
     {{{check--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{> @partial-block
+    check-input--IsDisabled=check--IsDisabled
+    check-label--IsDisabled=check--IsDisabled
+  }}
 </{{#if check--type}}{{check--type}}{{else}}div{{/if}}>
