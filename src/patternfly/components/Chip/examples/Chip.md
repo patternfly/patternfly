@@ -102,6 +102,6 @@ A Chip is used to display items that have been filtered or selected from a large
 | `.pf-c-chip__content` | `<span>` | Creates a content wrapper for the chip. **Required** |
 | `.pf-c-chip__text` | `<span>` | Initiates the text inside the chip. **Required** |
 | `.pf-c-chip__icon` | `<span>` | Initiates the icon inside the chip. |
-| `.pf-c-chip__actions` | `<span>` | Creates a wrapper for chip actions. **Required for removeable chips** |
+| `.pf-c-chip__actions` | `<span>` | Creates a wrapper for chip actions. **Required for removable chips** |
 | `.pf-m-overflow` | `button.pf-c-chip` | Applies styling of the overflow chip. |
 | `.pf-m-draggable` | `.pf-c-chip` | Modifies the chip to be in the draggable state. |
