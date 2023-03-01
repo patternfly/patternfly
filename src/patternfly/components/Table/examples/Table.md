@@ -1929,6 +1929,11 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 {{> table-tree-view--basic table--id="tree-table-with-checkboxes-icons-example" table--modifier="pf-m-tree-view-grid-lg" tree-view--HasCheckboxes="true" table-tree-view--HasIcons="true" table--attribute='aria-label="This is a simple tree table, with checkboxes and icons example"' table-tr--tree--HasActions="true"}}
 ```
 
+### Tree with no children or indentation
+```hbs
+{{> table-tree-view--basic table--id="tree-table-indent-example" table--modifier="pf-m-tree-view-grid-lg" table--attribute='aria-label="This is a simple tree table with no indentation"' table--HasNoPosinset=true}}
+```
+
 ### Tree table accessibility
 
 | Attribute | Applied to | Outcome |
@@ -1955,6 +1960,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | `.pf-c-table__tree-view-details-toggle` | `<span>` | Initiates a tree view details toggle container. |
 | `.pf-c-table__tree-view-details-toggle-icon` | `<span>` | Initiates a tree view details toggle icon. |
 | `.pf-m-treeview-details-expanded` | `<tr>` | Modifies a tbody with a row and an expandable row. |
+| `.pf-m-no-inset` | `.pf-c-table.pf-m-tree-view` , `.pf-c-table.pf-m-tree-view <tr>` | Modifies a tree view `.pf-c-table__tree-view-main` indentation. |
 
 ## Borderless variant
 

@@ -25,12 +25,27 @@ $pf-c-tree-view--MaxDepth: 10;
   // toggle icon
   --pf-c-table--m-tree-view__toggle__toggle-icon--MinWidth: var(--pf-global--FontSize--md);
 
+
+  // no node children
+  --pf-c-table--m-no-inset__tree-view-main--PaddingLeft: 0;
+  --pf-c-table--m-no-inset__tree-view-main--MarginLeft: 0;
+
   &.pf-m-tree-view {
     // stylelint-disable selector-no-qualifying-type
     > tbody > tr {
       --pf-c-table--m-tree-view__toggle--Left: var(--pf-c-table__tree-view-main--PaddingLeft);
+
+      &.pf-m-no-inset {
+        --pf-c-table__tree-view-main--PaddingLeft: var(--pf-c-table--m-no-inset__tree-view-main--PaddingLeft);
+        --pf-c-table__tree-view-main--MarginLeft: var(--pf-c-table--m-no-inset__tree-view-main--MarginLeft);
+      }
     }
     // stylelint-enable
+
+    &.pf-m-no-inset {
+      --pf-c-table__tree-view-main--PaddingLeft: var(--pf-c-table--m-no-inset__tree-view-main--PaddingLeft);
+      --pf-c-table__tree-view-main--MarginLeft: var(--pf-c-table--m-no-inset__tree-view-main--MarginLeft);
+    }
 
     @for $i from 2 through $pf-c-tree-view--MaxDepth {
       tr[aria-level="#{$i}"] {

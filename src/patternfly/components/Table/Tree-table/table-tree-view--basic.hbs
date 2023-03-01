@@ -1,5 +1,5 @@
 {{#> table table--IsTree-view="true"}}
-  {{#> table-thead table-tr--expanded="true" table-tr--tree--HasActions=table-tree-view--basic--HasActions}}
+  {{#> table-thead table-tr--expanded="true"}}
     {{#> table-tr newcontext table-tr--tree--HasActions=table-tr--tree--HasActions}}
       {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-c-table__tree-view-title-header-cell"}}
         Name
@@ -19,40 +19,49 @@
     {{/table-tr}}
   {{/table-thead}}
 
-  {{#> table-tbody table--IsTree-view--level="1" table--IsTree-view--setsize="1" table--IsTree-view--posinset="1"}}
-    {{> table-tr--tree table-tr--tree--index="1" table-tr--expanded="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' all folders')}}
-    {{#> wrapper table--IsTree-view--setsize="5" table--IsTree-view--level="2" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+  {{#if table--HasNoPosinset}}
+    {{> table-tr--tree table-tr--tree--index="1" table-tr--tree--title='Level 1, leaf 1'}}
+    {{> table-tr--tree table-tr--tree--index="2" table-tr--tree--title='Level 1, leaf 2'}}
+    {{> table-tr--tree table-tr--tree--index="3" table-tr--tree--title='Level 1, leaf 3'}}
+    {{> table-tr--tree table-tr--tree--index="4" table-tr--tree--title='Level 1, leaf 4'}}
+    {{> table-tr--tree table-tr--tree--index="5" table-tr--tree--title='Level 1, leaf 5'}}
+    {{> table-tr--tree table-tr--tree--index="6" table-tr--tree--title='Level 1, leaf 6'}}
+  {{else}}
+    {{#> table-tbody table--IsTree-view--level="1" table--IsTree-view--setsize="1" table--IsTree-view--posinset="1"}}
+      {{> table-tr--tree table-tr--tree--index="1" table-tr--expanded="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' all folders')}}
+      {{#> wrapper table--IsTree-view--setsize="5" table--IsTree-view--level="2" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
 
-      {{> table-tr--tree table-tr--details--IsExpanded="true" table-tr--tree--index="2" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' node')}}
-      {{#> wrapper table--IsTree-view--setsize="2" table--IsTree-view--level="3" table-tr--tree--IsLeaf="true" table-tr--IsHidden="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
-        {{> table-tr--tree table-tr--tree--index="3" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
-        {{> table-tr--tree table-tr--tree--index="4" table--IsTree-view--posinset="2" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
-      {{/wrapper}}
+        {{> table-tr--tree table-tr--details--IsExpanded="true" table-tr--tree--index="2" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' node')}}
+        {{#> wrapper table--IsTree-view--setsize="2" table--IsTree-view--level="3" table-tr--tree--IsLeaf="true" table-tr--IsHidden="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+          {{> table-tr--tree table-tr--tree--index="3" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+          {{> table-tr--tree table-tr--tree--index="4" table--IsTree-view--posinset="2" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+        {{/wrapper}}
 
-      {{> table-tr--tree table-tr--tree--index="5" table--IsTree-view--posinset="2" table-tr--tree--IsLeaf="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
-      {{> table-tr--tree table-tr--tree--index="6" table--IsTree-view--posinset="3" table-tr--tree--IsLeaf="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+        {{> table-tr--tree table-tr--tree--index="5" table--IsTree-view--posinset="2" table-tr--tree--IsLeaf="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+        {{> table-tr--tree table-tr--tree--index="6" table--IsTree-view--posinset="3" table-tr--tree--IsLeaf="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
 
-      {{> table-tr--tree table-tr--tree--index="7" table--IsTree-view--posinset="4" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' node') table-tr--expanded="true"}}
-      {{#> wrapper table--IsTree-view--setsize="2" table--IsTree-view--level="3"}}
-        {{> table-tr--tree table-tr--tree--index="8" table--IsTree-view--posinset="3" table-tr--tree--IsLeaf="true" table-tr--expanded="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
-        {{> table-tr--tree table-tr--tree--index="9" table-tr--expanded="true" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' node')}}
+        {{> table-tr--tree table-tr--tree--index="7" table--IsTree-view--posinset="4" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' node') table-tr--expanded="true"}}
+        {{#> wrapper table--IsTree-view--setsize="2" table--IsTree-view--level="3"}}
+          {{> table-tr--tree table-tr--tree--index="8" table--IsTree-view--posinset="3" table-tr--tree--IsLeaf="true" table-tr--expanded="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+          {{> table-tr--tree table-tr--tree--index="9" table-tr--expanded="true" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' node')}}
+            {{#> wrapper table--IsTree-view--setsize="2" table-tr--tree--IsLeaf="true" table--IsTree-view--level="4"}}
+              {{> table-tr--tree table-tr--details--IsExpanded="true" table-tr--tree--index="10" table-tr--tree--IsLeaf="true" table--IsTree-view--setsize="1" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+            {{/wrapper}}
+          {{> table-tr--tree table-tr--tree--index="11" table-tr--tree--IsLeaf="true" table--IsTree-view--posinset="2" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+
+          {{> table-tr--tree table-tr--tree--index="12" table--IsTree-view--posinset="5" table-tr--expanded="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' node')}}
           {{#> wrapper table--IsTree-view--setsize="2" table-tr--tree--IsLeaf="true" table--IsTree-view--level="4"}}
-            {{> table-tr--tree table-tr--details--IsExpanded="true" table-tr--tree--index="10" table-tr--tree--IsLeaf="true" table--IsTree-view--setsize="1" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+            {{> table-tr--tree table-tr--tree--index="13" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+            {{> table-tr--tree table-tr--tree--index="14" table--IsTree-view--posinset="2" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
           {{/wrapper}}
-        {{> table-tr--tree table-tr--tree--index="11" table-tr--tree--IsLeaf="true" table--IsTree-view--posinset="2" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+        {{/wrapper}}
 
-        {{> table-tr--tree table-tr--tree--index="12" table--IsTree-view--posinset="5" table-tr--expanded="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' node')}}
-        {{#> wrapper table--IsTree-view--setsize="2" table-tr--tree--IsLeaf="true" table--IsTree-view--level="4"}}
-          {{> table-tr--tree table-tr--tree--index="13" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
-          {{> table-tr--tree table-tr--tree--index="14" table--IsTree-view--posinset="2" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+        {{> table-tr--tree table-tr--tree--index="15" table--IsTree-view--posinset="6" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' node')}}
+        {{#> wrapper table--IsTree-view--setsize="2" table--IsTree-view--level="3" table-tr--tree--IsLeaf="true" table-tr--IsHidden="true"}}
+          {{> table-tr--tree table-tr--tree--index="16" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
+          {{> table-tr--tree table-tr--tree--index="17" table--IsTree-view--posinset="2" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
         {{/wrapper}}
       {{/wrapper}}
-
-      {{> table-tr--tree table-tr--tree--index="15" table--IsTree-view--posinset="6" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' node')}}
-      {{#> wrapper table--IsTree-view--setsize="2" table--IsTree-view--level="3" table-tr--tree--IsLeaf="true" table-tr--IsHidden="true"}}
-        {{> table-tr--tree table-tr--tree--index="16" table--IsTree-view--posinset="1" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
-        {{> table-tr--tree table-tr--tree--index="17" table--IsTree-view--posinset="2" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' leaf')}}
-      {{/wrapper}}
-    {{/wrapper}}
-  {{/table-tbody}}
+    {{/table-tbody}}
+  {{/if}}
 {{/table}}

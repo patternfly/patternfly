@@ -1,14 +1,17 @@
 <table class="pf-c-table
-  {{~#if table--expandable}} pf-m-expandable{{/if}}
-  {{~#if table--IsTree-view}} pf-m-tree-view{{/if}}
-  {{~#if tree-view--HasCheckboxes}} pf-m-tree-view-checkboxes{{/if}}
-  {{~#if table--modifier}} {{table--modifier}}{{/if}}"
+  {{#if table--expandable}} pf-m-expandable{{/if}}
+  {{#if table--IsTree-view}} pf-m-tree-view{{/if}}
+  {{#if tree-view--HasCheckboxes}} pf-m-tree-view-checkboxes{{/if}}
+  {{#if table--HasNoPosinset}} pf-m-no-inset{{/if}}
+  {{#if table--modifier}} {{table--modifier}}{{/if}}"
   {{#if table--grid}}
     role="grid"
   {{/if}}
-  {{#if table--IsTree-view}}
-    role="treegrid"
-  {{/if}}
+  {{#unless table--HasNoInset}}
+    {{#if table--IsTree-view}}
+      role="treegrid"
+    {{/if}}
+  {{/unless}}
   {{#if table--attribute}}
     {{{table--attribute}}}
   {{/if}}
