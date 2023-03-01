@@ -1,40 +1,33 @@
 .pf-c-table {
-  --pf-c-table__sticky-column--cell-min-width--base: #{pf-size-prem(200px)};
-  --pf-c-table__sticky-column--MinWidth: var(--pf-c-table__sticky-column--cell-min-width--base);
-  --pf-c-table__sticky-column--ZIndex: var(--pf-global--ZIndex--md);
-  --pf-c-table__sticky-column--Top: 0;
-  --pf-c-table__sticky-column--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-table__sticky-column--m-border-right--before--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__sticky-column--m-border-right--before--BorderRightColor: var(--pf-global--BorderColor--100);
-  --pf-c-table__sticky-column--m-border-left--before--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__sticky-column--m-border-left--before--BorderLeftColor: var(--pf-global--BorderColor--100);
-  --pf-c-table--m-sticky-header--thead__sticky-column--ZIndex: calc(var(--pf-c-table__sticky-column--ZIndex) + 1);
+  --pf-c-table__sticky--cell-min-width--base: #{pf-size-prem(200px)};
+  --pf-c-table__sticky--cell--MinWidth: var(--pf-c-table__sticky--cell-min-width--base);
+  --pf-c-table__sticky--cell--ZIndex: var(--pf-global--ZIndex--md);
+  --pf-c-table__sticky--cell--Top: 0;
+  --pf-c-table__sticky--cell--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-table__sticky--cell--m-border-right--before--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table__sticky--cell--m-border-right--before--BorderRightColor: var(--pf-global--BorderColor--100);
+  --pf-c-table__sticky--cell--m-border-left--before--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table__sticky--cell--m-border-left--before--BorderLeftColor: var(--pf-global--BorderColor--100);
+  --pf-c-table--m-sticky-header--thead__sticky--cell--ZIndex: calc(var(--pf-c-table__sticky--cell--ZIndex) + 1);
+  --pf-c-table__sticky-left--Left: 0;
+  --pf-c-table__sticky-right--Right: 0;
 
-  .pf-c-table__sticky-column {
+  .pf-c-table__sticky-left,
+  .pf-c-table__sticky-right {
     position: sticky;
-    right: var(--pf-c-table__sticky-column--Right, revert);
-    left: var(--pf-c-table__sticky-column--Left, revert);
-    z-index: var(--pf-c-table__sticky-column--ZIndex);
-    min-width: var(--pf-c-table__sticky-column--MinWidth);
-    background-color: var(--pf-c-table__sticky-column--BackgroundColor);
+    z-index: var(--pf-c-table__sticky--cell--ZIndex);
+    min-width: var(--pf-c-table__sticky--cell--MinWidth);
+    background-color: var(--pf-c-table__sticky--cell--BackgroundColor);
     background-clip: padding-box;
 
-    &:where(:first-child) {
-      --pf-c-table__sticky-column--Left: 0;
-    }
-
-    &:where(:last-child) {
-      --pf-c-table__sticky-column--Right: 0;
-    }
-
     &.pf-m-border-right::before {
-      --pf-c-table--cell--m-border-right--before--BorderRightWidth: var(--pf-c-table__sticky-column--m-border-right--before--BorderRightWidth);
-      --pf-c-table--cell--m-border-right--before--BorderRightColor: var(--pf-c-table__sticky-column--m-border-right--before--BorderRightColor);
+      --pf-c-table--cell--m-border-right--before--BorderRightWidth: var(--pf-c-table__sticky--cell--m-border-right--before--BorderRightWidth);
+      --pf-c-table--cell--m-border-right--before--BorderRightColor: var(--pf-c-table__sticky--cell--m-border-right--before--BorderRightColor);
     }
 
     &.pf-m-border-left::before {
-      --pf-c-table--cell--m-border-left--before--BorderLeftWidth: var(--pf-c-table__sticky-column--m-border-left--before--BorderLeftWidth);
-      --pf-c-table--cell--m-border-left--before--BorderLeftColor: var(--pf-c-table__sticky-column--m-border-left--before--BorderLeftColor);
+      --pf-c-table--cell--m-border-left--before--BorderLeftWidth: var(--pf-c-table__sticky--cell--m-border-left--before--BorderLeftWidth);
+      --pf-c-table--cell--m-border-left--before--BorderLeftColor: var(--pf-c-table__sticky--cell--m-border-left--before--BorderLeftColor);
     }
   }
 
@@ -42,11 +35,21 @@
     --pf-c-table--cell--Overflow: visible;
 
     thead {
-      .pf-c-table__sticky-column {
-        z-index: var(--pf-c-table--m-sticky-header--thead__sticky-column--ZIndex);
+      .pf-c-table__sticky-left,
+      .pf-c-table__sticky-right {
+        z-index: var(--pf-c-table--m-sticky-header--thead__sticky--cell--ZIndex);
       }
     }
   }
+}
+
+
+.pf-c-table__sticky-left {
+  left: var(--pf-c-table__sticky-left--Left);
+}
+
+.pf-c-table__sticky-right {
+  right: var(--pf-c-table__sticky-right--Right);
 }
 
 .pf-c-scroll-outer-wrapper {
