@@ -55,9 +55,7 @@ cssPrefix: pf-d-description-list
       {{#> description-list-description}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
           {{#> l-flex-item}}
-            {{#> label label--id="default-green" label--color="green"}}
-              NS
-            {{/label}}
+            {{> label label--id="default-green" label--color="green" label-text--value="NS"}}
           {{/l-flex-item}}
           {{#> l-flex-item}}
             <a href="#">mary-test</a>
@@ -305,9 +303,7 @@ cssPrefix: pf-d-description-list
                 {{#> description-list-description}}
                   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                     {{#> l-flex-item}}
-                      {{#> label label--id="default-green" label--color="green"}}
-                        NS
-                      {{/label}}
+                      {{> label label--id="default-green" label--color="green" label-text--value="NS"}}
                     {{/l-flex-item}}
                     {{#> l-flex-item}}
                       <a href="#">mary-test</a>
@@ -458,9 +454,7 @@ cssPrefix: pf-d-description-list
                         {{#> table-td table-td--data-label="Port"}}
                           {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                             {{#> l-flex-item}}
-                              {{#> label label--id="default-green" label--color="green" label--IsCompact=true}}
-                                S
-                              {{/label}}
+                              {{> label label--id="default-green" label--color="green" label-text--value="S" label--IsCompact=true}}
                             {{/l-flex-item}}
                             {{#> l-flex-item}}
                               80
@@ -473,9 +467,7 @@ cssPrefix: pf-d-description-list
                         {{#> table-td table-td--data-label="Pod port or name"}}
                           {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                             {{#> l-flex-item}}
-                              {{#> label label--id="default-cyan" label--color="cyan" label--IsCompact=true}}
-                                P
-                              {{/label}}
+                              {{> label label--id="default-cyan" label--color="cyan" label-text--value="P" label--IsCompact=true}}
                             {{/l-flex-item}}
                             {{#> l-flex-item}}
                               80

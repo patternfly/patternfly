@@ -55,9 +55,7 @@ section: components
                 {{#> description-list-description}}
                   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                     {{#> l-flex-item}}
-                      {{#> label label--id="cyan-icon" label--color="cyan"}}
-                        NS
-                      {{/label}}
+                      {{> label label--id="cyan-icon" label--color="cyan" label-text--value="NS"}}
                     {{/l-flex-item}}
                     {{#> l-flex-item}}
                       <a href="#">knative-serving-ingress</a>
@@ -82,14 +80,10 @@ section: components
                     {{#> label-group-main}}
                       {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
                         {{#> label-group-list-item}}
-                          {{#> label label--IsOutlined=true}}
-                            app=3scale-gateway
-                          {{/label}}
+                          {{> label label--IsOutlined=true label-text--value="app=3scale-gateway"}}
                         {{/label-group-list-item}}
                         {{#> label-group-list-item}}
-                          {{#> label label--IsOutlined=true}}
-                            pod-template-has=6747686899
-                          {{/label}}
+                          {{> label label--IsOutlined=true label-text--value="pod-template-has=6747686899"}}
                         {{/label-group-list-item}}
                       {{/label-group-list}}
                     {{/label-group-main}}
@@ -135,9 +129,7 @@ section: components
                 {{#> description-list-description}}
                   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                     {{#> l-flex-item}}
-                      {{#> label label--id="purple-icon" label--color="purple"}}
-                        N
-                      {{/label}}
+                      {{> label label--id="purple-icon" label--color="purple" label-text--value="N"}}
                     {{/l-flex-item}}
                     {{#> l-flex-item}}
                       ip-10-0-233-118.us-east-2.computer.external
@@ -208,9 +200,7 @@ section: components
                   {{#> description-list-description}}
                     {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                       {{#> l-flex-item}}
-                        {{#> label label--id="cyan-icon" label--color="cyan"}}
-                          NS
-                        {{/label}}
+                        {{> label label--id="cyan-icon" label--color="cyan" label-text--value="NS"}}
                       {{/l-flex-item}}
                       {{#> l-flex-item}}
                         <a href="#">knative-serving-ingress</a>
@@ -257,9 +247,7 @@ section: components
                   {{#> description-list-description}}
                     {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                       {{#> l-flex-item}}
-                        {{#> label label--id="purple-icon" label--color="purple"}}
-                          N
-                        {{/label}}
+                        {{> label label--id="purple-icon" label--color="purple" label-text--value="N"}}
                       {{/l-flex-item}}
                       {{#> l-flex-item}}
                         ip-10-0-233-118.us-east-2.computer.external

@@ -10,61 +10,131 @@ import './Label.css'
 
 ### Filled
 ```hbs
-{{> __label-variants __label-variants--id="default" __label-variants--title="Grey"}}
+{{> label-template-variants
+    label-template-variants--title="Grey"
+    label-template-variants--id="default"}}
 
 <br><br>
-{{> __label-variants __label-variants--id="blue" __label-variants--title="Blue" label--color="blue"}}
+
+{{> label-template-variants
+    label-template-variants--title="Blue"
+    label-template-variants--id="blue"
+    label--color="blue"}}
 
 <br><br>
-{{> __label-variants __label-variants--id="green" __label-variants--title="Green" label--color="green"}}
+
+{{> label-template-variants
+    label-template-variants--title="Green"
+    label-template-variants--id="green"
+    label--color="green"}}
 
 <br><br>
-{{> __label-variants __label-variants--id="orange" __label-variants--title="Orange" label--color="orange"}}
+
+{{> label-template-variants
+    label-template-variants--title="Orange"
+    label-template-variants--id="orange"
+    label--color="orange"}}
 
 <br><br>
-{{> __label-variants __label-variants--id="red" __label-variants--title="Red" label--color="red"}}
+
+{{> label-template-variants
+    label-template-variants--title="Red"
+    label-template-variants--id="red"
+    label--color="red"}}
 
 <br><br>
-{{> __label-variants __label-variants--id="purple" __label-variants--title="Purple" label--color="purple"}}
+
+{{> label-template-variants
+    label-template-variants--title="Purple"
+    label-template-variants--id="purple"
+    label--color="purple"}}
 
 <br><br>
-{{> __label-variants __label-variants--id="cyan" __label-variants--title="Cyan" label--color="cyan"}}
+
+{{> label-template-variants
+    label-template-variants--title="Cyan"
+    label-template-variants--id="cyan"
+    label--color="cyan"}}
 
 <br><br>
-{{> __label-variants __label-variants--id="gold" __label-variants--title="Gold" label--color="gold"}}
+{{> label-template-variants
+    label-template-variants--title="Gold"
+    label-template-variants--id="gold"
+    label--color="gold"}}
 ```
 
 ### Outline
 
 ```hbs
-{{> __label-variants __label-variants--id="grey-outline" __label-variants--title="Grey" label--IsOutlined=true}}
-<br><br>
-
-{{> __label-variants __label-variants--id="blue-outline" __label-variants--title="Blue" label--color="blue" label--IsOutlined=true}}
-
-<br><br>
-{{> __label-variants __label-variants--id="green-outline" __label-variants--title="Green" label--color="green" label--IsOutlined=true}}
+{{> label-template-variants
+    label-template-variants--title="Grey"
+    label-template-variants--id="grey-outline"
+    label--IsOutlined=true}}
 
 <br><br>
-{{> __label-variants __label-variants--id="orange-outline" __label-variants--title="Orange" label--color="orange" label--IsOutlined=true}}
+
+{{> label-template-variants
+    label-template-variants--title="Blue"
+    label-template-variants--id="blue-outline"
+    label--color="blue"
+    label--IsOutlined=true}}
 
 <br><br>
-{{> __label-variants __label-variants--id="red-outline" __label-variants--title="Red" label--color="red" label--IsOutlined=true}}
+
+{{> label-template-variants
+    label-template-variants--title="Green"
+    label-template-variants--id="green-outline"
+    label--color="green"
+    label--IsOutlined=true}}
 
 <br><br>
-{{> __label-variants __label-variants--id="purple-outline" __label-variants--title="Purple" label--color="purple" label--IsOutlined=true}}
+
+{{> label-template-variants
+    label-template-variants--title="Orange"
+    label-template-variants--id="orange-outline"
+    label--IsOutlined=true
+    label--color="orange"}}
 
 <br><br>
-{{> __label-variants __label-variants--id="cyan-outline" __label-variants--title="Cyan" label--color="cyan" label--IsOutlined=true}}
+
+{{> label-template-variants
+    label-template-variants--title="Red"
+    label-template-variants--id="red-outline"
+    label--color="red"
+    label--IsOutlined=true}}
 
 <br><br>
-{{> __label-variants __label-variants--id="gold-outline" __label-variants--title="Gold" label--color="gold" label--IsOutlined=true}}
+
+{{> label-template-variants
+    label-template-variants--title="Purple"
+    label-template-variants--id="purple-outline"
+    label--color="purple"
+    label--IsOutlined=true}}
+
+<br><br>
+
+{{> label-template-variants
+    label-template-variants--title="Cyan"
+    label-template-variants--id="cyan-outline"
+    label--color="cyan"
+    label--IsOutlined=true}}
+
+<br><br>
+
+{{> label-template-variants
+    label-template-variants--title="Gold"
+    label-template-variants--id="gold-outline"
+    label--color="gold"
+    label--IsOutlined=true}}
 ```
 
 ### Compact
 
 ```hbs
-{{> __label-variants __label-variants--id="compact" __label-variants--title="Compact" label--IsCompact=true}}
+{{> label-template-variants
+    label-template-variants--title="Compact"
+    label-template-variants--id="compact"
+    label--IsCompact=true}}
 ```
 
 ### Overflow
@@ -72,7 +142,10 @@ import './Label.css'
 This style of label is used to indicate overflow within a label group.
 
 ```hbs
-{{> label label--id="overflow" label-text--text="Overflow" label--IsOverflow=true}}
+{{> label
+    label--id="overflow"
+    label--IsOverflow=true
+    label-text--value="Overflow"}}
 ```
 
 ### Editable
@@ -86,20 +159,45 @@ This style of label is used to indicate overflow within a label group.
 - Return keypress, when content is editable, should:
   - Be captured to prevent line wrapping and save updates to label text
   - Remove `.pf-m-editable-active` from `.pf-c-label`
-  - Change `.pf-c-label__editable-text` back from an input to a button and set the `currvalue` of the button to the contents of the input
 - Esc keypress, when content is editable, should:
   - Undo any update to label text
   - Remove `.pf-m-editable-active` from `.pf-c-label`
   - Change `.pf-c-label__editable-text` back to a button
 
 ```hbs isBeta
-{{> label label--id="editable-label" label-text--text="Editable label" label-editable-content--value="Editable label" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+{{> label
+    label--id="editable-label"
+    label--color="blue"
+    label--IsEditable=true
+    label--isRemovable=true
+    label-text--value="Editable label"
+    label-editable-content--value="Editable label"}}
 
-{{> label label--id="editable-label-active" label-text--text="Editable active" label-editable-content--value="Editable active" label--color="blue" label--IsEditable=true label--IsEditableActive=true}}
+{{> label
+    label--id="editable-label-active"
+    label--color="blue"
+    label--IsEditable=true
+    label--IsEditableActive=true
+    label-text--value="Editable active"
+    label-editable-content--value="Editable active"}}
 
-{{> label label--id="compact-editable-label" label-text--text="Compact editable label" label-editable-content--value="Compact editable label" label--color="blue" label--IsEditable=true label--isRemovable=true label--IsCompact=true}}
+{{> label
+    label--id="compact-editable-label"
+    label--color="blue"
+    label--IsEditable=true
+    label--isRemovable=true
+    label--IsCompact=true
+    label-text--value="Compact editable label"
+    label-editable-content--value="Compact editable label"}}
 
-{{> label label--id="compact-editable-label-active" label-text--text="Compact editable active" label-editable-content--value="Compact editable active" label--color="blue" label--IsEditable=true label--IsEditableActive=true label--IsCompact=true}}
+{{> label
+    label--id="compact-editable-label-active"
+    label--color="blue"
+    label--IsEditable=true
+    label--IsEditableActive=true
+    label--IsCompact=true
+    label-text--value="Compact editable active"
+    label-editable-content--value="Compact editable active"}}
 ```
 
 ### Add label
@@ -107,11 +205,7 @@ This style of label is used to indicate overflow within a label group.
 This style of label is used to add new labels to a label group.
 
 ```hbs isBeta
-{{#> label label--IsAdd=true}}
-  {{#> label-text}}
-    Add Label
-  {{/label-text}}
-{{/label}}
+{{> label label--IsAdd=true label-text--value="Add Label"}}
 ```
 
 ## Documentation

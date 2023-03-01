@@ -15,18 +15,12 @@
                         <i class="pf-icon pf-icon-port" aria-hidden="true"></i>
                       {{/if}}
                     {{/label-icon}}
-                    {{#if card-template-expandable-status-card--label-text}}
-                      {{card-template-expandable-status-card--label-text}}
-                    {{else}}
-                      Performance
-                    {{/if}}
+                    {{> label-text label-text--value=(ternary card-template-expandable-status-card--label-text card-template-expandable-status-card--label-text 'Performance')}}
                   {{/label}}
                 {{/label-group-list-item}}
                 {{#if card-template-expandable-status-card--label--HasOverflowLabel}}
                   {{#> label-group-list-item}}
-                    {{#> label label--IsOverflow="true"}}
-                      1 more
-                    {{/label}}
+                    {{> label label-text--value="1 more" label--IsOverflow=true}}
                   {{/label-group-list-item}}
                 {{/if}}
               {{/label-group-list}}
@@ -52,9 +46,7 @@
         {{#> l-flex l-flex--modifier="pf-m-grow pf-m-column pf-m-row-on-lg pf-m-justify-content-flex-end pf-m-justify-content-flex-start-on-lg pf-m-align-content-flex-end-on-lg" l-flex--attribute='style="row-gap: var(--pf-global--spacer--md);"'}}
           {{#if card-template-expandable-status-card--HasIncident}}
             {{#> l-flex-item l-flex-item--attribute='style="margin-bottom: -.25em"'}}
-              {{#> label label--color="red"}}
-                Incident
-              {{/label}}
+              {{> label label--color="red" label-text--value="Incident"}}
             {{/l-flex-item}}
           {{/if}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-align-items-center pf-m-nowrap"}}

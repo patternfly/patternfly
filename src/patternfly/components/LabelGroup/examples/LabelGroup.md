@@ -12,28 +12,13 @@ cssPrefix: pf-c-label-group
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hiddent></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -46,31 +31,16 @@ cssPrefix: pf-c-label-group
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--IsOverflow=true label-text--text="3 more"}}
+        {{> label label--color="blue" label--IsOverflow=true label-text--value="3 more"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -83,47 +53,22 @@ cssPrefix: pf-c-label-group
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="cyan"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 4"}}
-        {{/label}}
+        {{> label label--color="cyan" label-text--value="Label 4" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="purple"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 5"}}
-        {{/label}}
+        {{> label label--color="purple" label-text--value="Label 5" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--IsOverflow=true label-text--text="3 less"}}
+        {{> label label--IsOverflow=true label-text--value="3 less"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -136,31 +81,16 @@ cssPrefix: pf-c-label-group
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--IsAdd=true label-text--text="Add label"}}
+        {{> label label--IsAdd=true label-text--value="Add label"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -176,28 +106,13 @@ cssPrefix: pf-c-label-group
     {{/label-group-label}}
     {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
       {{#> label-group-list-item}}
-        {{#> label}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -213,52 +128,22 @@ cssPrefix: pf-c-label-group
     {{/label-group-label}}
     {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
       {{#> label-group-list-item}}
-        {{#> label}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="cyan"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 4"}}
-        {{/label}}
+        {{> label label--color="cyan" label-text--value="Label 4" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="orange"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 5"}}
-        {{/label}}
+        {{> label label--color="orange" label-text--value="Label 5" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="red"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 6"}}
-        {{/label}}
+        {{> label label--color="red" label-text--value="Label 6" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -272,28 +157,13 @@ cssPrefix: pf-c-label-group
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -306,31 +176,16 @@ cssPrefix: pf-c-label-group
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--IsOverflow=true label-text--text="3 more"}}
+        {{> label label--IsOverflow=true label-text--value="3 more"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -343,47 +198,22 @@ cssPrefix: pf-c-label-group
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="cyan"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 4"}}
-        {{/label}}
+        {{> label label--color="cyan" label-text--value="Label 4" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="purple"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 5"}}
-        {{/label}}
+        {{> label label--color="purple" label-text--value="Label 5" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--IsOverflow=true label-text--text="3 less"}}
+        {{> label label--IsOverflow=true label-text--value="3 less"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -399,28 +229,13 @@ cssPrefix: pf-c-label-group
     {{/label-group-label}}
     {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
       {{#> label-group-list-item}}
-        {{#> label}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label label--color="blue" label-text--value="Label 2" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green"}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label label--color="green" label-text--value="Label 3" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -429,7 +244,6 @@ cssPrefix: pf-c-label-group
 
 ### Vertical category removable
 ```hbs
-
 {{#> label-group label-group--id="label-group-vertical-category-removable" label-group--modifier="pf-m-vertical pf-m-category"}}
   {{#> label-group-main}}
     {{#> label-group-label label-group-label--attribute=(concat 'id="' label-group--id '-label"')}}
@@ -437,13 +251,13 @@ cssPrefix: pf-c-label-group
     {{/label-group-label}}
     {{#> label-group-list label-group-list--attribute=(concat 'aria-labelledby="' label-group--id '-label"')}}
       {{#> label-group-list-item}}
-        {{> label label-text--text="Label 1"}}
+        {{> label label-text--value="Label 1"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label-text--text="Label 2" label--color="blue"}}
+        {{> label label--color="blue" label-text--value="Label 2"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label-text--text="Label 3" label--color="green"}}
+        {{> label label--color="green" label-text--value="Label 3"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -460,13 +274,28 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-editable-1') label-text--text="Editable label 1" label--color="blue" label--isRemovable=true label--IsEditable=true}}
+        {{> label
+            label--id=(concat label-group--id '-editable-label-editable-1')
+            label--color="blue"
+            label--IsEditable=true
+            label--isRemovable=true
+            label-text--value="Editable label 1"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-editable-2') label-text--text="Editable label 2" label--color="blue" label--isRemovable=true label--IsEditable=true}}
+        {{> label
+            label--id=(concat label-group--id '-editable-label-editable-2')
+            label--color="blue"
+            label--isRemovable=true
+            label--IsEditable=true
+            label-text--value="Editable label 2"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-editable-3') label-text--text="Editable label 3" label--color="blue" label--isRemovable=true label--IsEditable=true}}
+        {{> label
+            label--id=(concat label-group--id '-editable-label-editable-3')
+            label--color="blue"
+            label--isRemovable=true
+            label--IsEditable=true
+            label-text--value="Editable label 3"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
         {{> label-group-textarea}}
@@ -482,13 +311,13 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-editable-1') label-text--text="Editable label 1" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-editable-1') label-text--value="Editable label 1" label--color="blue" label--IsEditable=true label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-editable-2') label-text--text="Editable label 2" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-editable-2') label-text--value="Editable label 2" label--color="blue" label--IsEditable=true label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-editable-3') label-text--text="Editable label 3, active" label-editable-content--value="Editable label 3, active" label--color="blue" label--IsEditable=true label--IsEditableActive=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-editable-3') label-text--value="Editable label 3, active" label-editable-content--value="Editable label 3, active" label--color="blue" label--IsEditable=true label--IsEditableActive=true label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
         {{> label-group-textarea}}
@@ -504,13 +333,13 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-static-1') label-text--text="Static label 1" label--color="green" label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-static-1') label-text--value="Static label 1" label--color="green" label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-static-2') label-text--text="Static label 2" label--color="green" label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-static-2') label-text--value="Static label 2" label--color="green" label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-static-3') label-text--text="Static label 3" label--color="green" label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-static-3') label-text--value="Static label 3" label--color="green" label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
         {{> label-group-textarea}}
@@ -526,19 +355,19 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-static-1') label-text--text="Static label 1" label--color="green" label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-static-1') label-text--value="Static label 1" label--color="green" label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-static-2') label-text--text="Static label 2" label--color="green" label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-static-2') label-text--value="Static label 2" label--color="green" label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-dynamic-1') label-text--text="Dynamic, editable label 1" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-dynamic-1') label-text--value="Dynamic, editable label 1" label--color="blue" label--IsEditable=true label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-dynamic-2') label-text--text="Dynamic, editable label 2" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-dynamic-2') label-text--value="Dynamic, editable label 2" label--color="blue" label--IsEditable=true label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{> label label--id=(concat label-group--id '-editable-label-dynamic-3') label-text--text="Dynamic, editable label 3" label--color="blue" label--IsEditable=true label--isRemovable=true}}
+        {{> label label--id=(concat label-group--id '-editable-label-dynamic-3') label-text--value="Dynamic, editable label 3" label--color="blue" label--IsEditable=true label--isRemovable=true}}
       {{/label-group-list-item}}
       {{#> label-group-list-item label-group-list-item--modifier="pf-m-textarea"}}
         {{> label-group-textarea}}
@@ -554,28 +383,24 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label label--IsCompact=true}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label
+            label--IsCompact=true
+            label-text--value="Label 1"
+            label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue" label--IsCompact=true}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label
+            label--color="blue"
+            label--IsCompact=true
+            label-text--value="Label 2"
+            label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green" label--IsCompact=true}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label
+            label--color="green"
+            label--IsCompact=true
+            label-text--value="Label 3"
+            label-icon--value="info-circle"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -588,33 +413,24 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label label--IsCompact=true}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 1"}}
-        {{/label}}
+        {{> label label--IsCompact=true label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue" label--IsCompact=true}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 2"}}
-        {{/label}}
+        {{> label
+            label--color="blue"
+            label--IsCompact=true
+            label-text--value="Label 2"
+            label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green" label--IsCompact=true}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          {{> label-text label-text--text="Label 3"}}
-        {{/label}}
+        {{> label
+            label--color="green"
+            label--IsCompact=true
+            label-text--value="Label 3"
+            label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label-text--text="3 more" label--IsOverflow=true label--IsCompact=true}}
-          3 more
-        {{/label}}
+        {{> label label--IsOverflow=true label--IsCompact=true label-text--value="3 more"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}
@@ -627,28 +443,21 @@ In addition to the JavaScript management of [editable labels](/components/label#
   {{#> label-group-main}}
     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
       {{#> label-group-list-item}}
-        {{#> label label--IsCompact=true}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          Label
-        {{/label}}
+        {{> label label--IsCompact=true label-text--value="Label 1" label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="blue" label--IsCompact=true}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          Label 2
-        {{/label}}
+        {{> label
+            label--color="blue"
+            label--IsCompact=true
+            label-text--value="Label 2"
+            label-icon--value="info-circle"}}
       {{/label-group-list-item}}
       {{#> label-group-list-item}}
-        {{#> label label--color="green" label--IsCompact=true}}
-          {{#> label-icon}}
-            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-          {{/label-icon}}
-          Label 3
-        {{/label}}
+        {{> label
+            label--color="green"
+            label--IsCompact=true
+            label-text--value="Label 3"
+            label-icon--value="info-circle"}}
       {{/label-group-list-item}}
     {{/label-group-list}}
   {{/label-group-main}}

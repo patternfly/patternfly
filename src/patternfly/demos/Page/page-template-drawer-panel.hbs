@@ -7,9 +7,7 @@
       {{/drawer-actions}}
       {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
         {{#> l-flex-item}}
-          {{#> label label--id="default-blue" label--color="blue" label--IsCompact=true}}
-            DC
-          {{/label}}
+          {{> label label--id="default-blue" label--color="blue" label-text--value="DC" label--IsCompact=true}}
         {{/l-flex-item}}
         {{#> l-flex-item}}
           {{#> title titleType="h2" title--modifier="pf-m-xl" title--attribute=(concat 'id="' page-template--id '-drawer-label"')}}

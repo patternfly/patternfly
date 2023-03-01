@@ -9,10 +9,10 @@ section: components
 {{#> form form--id="form-demo-basic"}}
   {{#> form-group form-group--id="-name"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Full name{{/form-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}{{/form-control}}
       {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Include your middle name if you have one.{{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -21,19 +21,19 @@ section: components
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Email{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input=true form-control--attribute=(concat 'type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-phone"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Phone number{{/form-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Phone number{{/form-label}}
       {{> form-group-label-help form-group-label-help--aria-label="More information for phone number field"  form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--IsCheckGroup=true form-group--id="-contact"}}
+  {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
     {{#> form-group-label}}
       {{#> form-label}}How can we contact you?{{/form-label}}
     {{/form-group-label}}
@@ -52,7 +52,7 @@ section: components
       {{/check}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group form-group--IsCheckGroup=true form-group--IsRadioGroup=true form-group--id="-time-zone"}}
+  {{#> form-group form-group--IsCheckGroup="true" form-group--IsRadioGroup="true" form-group--id="-time-zone"}}
     {{#> form-group-label}}
       {{#> form-label}}Time zone{{/form-label}}
     {{/form-group-label}}
@@ -74,7 +74,7 @@ section: components
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-group-control}}
       {{#> form-actions}}
-        {{#> button button--modifier="pf-m-primary" button--IsSubmit=true}}
+        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
           Submit
         {{/button}}
         {{#> button button--modifier="pf-m-link"}}
@@ -91,10 +91,10 @@ section: components
 {{#> form form--modifier="pf-m-horizontal" form--id="form-demo-horizontal"}}
   {{#> form-group form-group--modifier="-name"}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Full name{{/form-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
       {{/form-control}}
       {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Include your middle name if you have one.{{/form-helper-text}}
     {{/form-group-control}}
@@ -104,7 +104,7 @@ section: components
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Email{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input=true form-control--attribute=(concat 'type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
       {{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
@@ -113,11 +113,11 @@ section: components
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Phone number{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input=true form-control--attribute=(concat 'type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
       {{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
-   {{#> form-group form-group--IsCheckGroup=true form-group--id="-contact"}}
+   {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
     {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
       {{#> form-label }}How can we contact you?{{/form-label}}
       {{> form-group-label-help form-group-label-help--aria-label="More information for contact field" form-group-label-help--aria-describedby=(concat form--id form-group--id '-legend')}}
@@ -140,7 +140,7 @@ section: components
   {{#> form-group form-group--modifier="pf-m-action"}}
     {{#> form-group-control}}
       {{#> form-actions}}
-        {{#> button button--modifier="pf-m-primary" button--IsSubmit=true}}
+        {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
           Submit
         {{/button}}
         {{#> button button--modifier="pf-m-link"}}
@@ -158,19 +158,19 @@ section: components
   {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-gutter"}}
     {{#> form-group form-group--id="-name"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Full name{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}{{/form-control}}
         {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Include your middle name if you have one.{{/form-helper-text}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group form-group--id="-title"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Job title{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Job title{{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group form-group--id="-phone"}}
@@ -178,7 +178,7 @@ section: components
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Phone number{{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input=true form-control--attribute=(concat 'type="tel" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="tel" id="' form--id form-group--id '" name="' form--id form-group--id '" placeholder="555-555-5555"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group form-group--id="-email"}}
@@ -186,7 +186,7 @@ section: components
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Email{{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input=true form-control--attribute=(concat 'type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group form-group--id="-address"}}
@@ -194,7 +194,7 @@ section: components
         {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Street address{{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input=true form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> grid grid--modifier="pf-m-all-6-col pf-m-gutter"}}
@@ -203,7 +203,7 @@ section: components
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}City{{/form-label}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="input" input=true form-control--attribute=(concat 'id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
         {{/form-group-control}}
       {{/form-group}}
       {{#> form-group form-group--id="-state"}}
@@ -270,7 +270,7 @@ section: components
     {{#> form-group form-group--modifier="pf-m-action"}}
       {{#> form-group-control}}
         {{#> form-actions}}
-          {{#> button button--modifier="pf-m-primary" button--IsSubmit=true}}
+          {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
             Submit
           {{/button}}
           {{#> button button--modifier="pf-m-link"}}
@@ -292,29 +292,29 @@ section: components
     {{/form-section-title}}
     {{#> form-group form-group--id="-clientid"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Client ID{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Client ID{{/form-label}}
         {{> form-group-label-help form-group-label-help--aria-label="More information for client id field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group form-group--id="-name"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Full name{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
         {{> form-group-label-help form-group-label-help--aria-label="More information for full name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group form-group--id="-description"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Description{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Description{{/form-label}}
         {{> form-group-label-help form-group-label-help--aria-label="More information for description field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
   {{/form-section}}
@@ -324,33 +324,33 @@ section: components
     {{/form-section-title}}
     {{#> form-group form-group--id="-rooturl"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Root URL{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Root URL{{/form-label}}
         {{> form-group-label-help form-group-label-help--aria-label="More information for root URL field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group form-group--id="-uris"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'id="' form--id form-group--id '"') required=true}}Valid redirect URIs{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'id="' form--id form-group--id '"') required="true"}}Valid redirect URIs{{/form-label}}
         {{> form-group-label-help form-group-label-help--aria-label="More information for valid redirect URIs field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-1"')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-1"')}}{{/form-control}}
           {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
             <i class="fas fa-minus-circle" aria-hidden="true"></i>
           {{/button}}
         {{/input-group}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-2" name="' form--id form-group--id '-input-2" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-2"')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-2" name="' form--id form-group--id '-input-2" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-2"')}}{{/form-control}}
           {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
             <i class="fas fa-minus-circle" aria-hidden="true"></i>
           {{/button}}
         {{/input-group}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-3" name="' form--id form-group--id '-input-3" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-3"')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-3" name="' form--id form-group--id '-input-3" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-3"')}}{{/form-control}}
           {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
             <i class="fas fa-minus-circle" aria-hidden="true"></i>
           {{/button}}
@@ -365,11 +365,11 @@ section: components
     {{/form-group}}
     {{#> form-group form-group--id="-home-url"}}
       {{#> form-group-label}}
-        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Home URL{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Home URL{{/form-label}}
         {{> form-group-label-help form-group-label-help--aria-label="More information for home URL field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
   {{/form-section}}
@@ -382,11 +382,11 @@ section: components
   {{!-- Name field --}}
   {{#> form-group form-group--id=(concat form--id "-name")}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required=true}}Name{{/form-label}}
+      {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Name{{/form-label}}
       {{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input=true form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
 
@@ -403,39 +403,27 @@ section: components
             {{#> label-group-main}}
               {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
                 {{#> label-group-list-item}}
-                  {{#> label  label--isRemovable=true label--id=(concat label-group--id '-label-1')}}
-                    {{#> label-icon}}
-                      <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-                    {{/label-icon}}
-                    prometheus=k8s
-                  {{/label}}
+                  {{> label label--id=(concat label-group--id '-label-1') label--isRemovable=true label-text--value="prometheus=k8s" label-icon--value="info-circle"}}
                 {{/label-group-list-item}}
                 {{#> label-group-list-item}}
-                  {{#> label label--id=(concat label-group--id '-label-2') label--color="blue" label--isRemovable=true}}
-                    {{#> label-icon}}
-                      <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-                    {{/label-icon}}
-                    new
-                  {{/label}}
+                  {{> label label--id=(concat label-group--id '-label-2') label--isRemovable=true label-text--value="new" label-icon--value="info-circle"}}
                 {{/label-group-list-item}}
                 {{#> label-group-list-item}}
-                  {{#> label label--IsAdd=true}}
-                    Add Label
-                  {{/label}}
+                  {{> label label--IsAdd="true" label-text--value="Add Label"}}
                 {{/label-group-list-item}}
               {{/label-group-list}}
             {{/label-group-main}}
           {{/label-group}}
-              {{#> text-input-group-text}}
-      {{> text-input-group-text-input}}
-    {{/text-input-group-text}}
-            {{/text-input-group-main}}
-        {{/text-input-group}}
+          {{#> text-input-group-text}}
+            {{> text-input-group-text-input}}
+          {{/text-input-group-text}}
+        {{/text-input-group-main}}
+      {{/text-input-group}}
     {{/form-group-control}}
   {{/form-group}}
 
   {{!-- Alerting field group --}}
-  {{#> form-field-group form-field-group--id=(concat form--id '-alerting') form-field-group--IsExpandable=true }}
+  {{#> form-field-group form-field-group--id=(concat form--id '-alerting') form-field-group--IsExpandable="true" }}
     {{#> form-field-group-header}}
       {{#> form-field-group-header-main}}
         {{#> form-field-group-title}}
@@ -449,7 +437,7 @@ section: components
   {{/form-field-group}}
 
   {{!-- Query field group --}}
-  {{#> form-field-group form-field-group--id=(concat form--id '-query') form-field-group--IsExpandable=true }}
+  {{#> form-field-group form-field-group--id=(concat form--id '-query') form-field-group--IsExpandable="true" }}
     {{#> form-field-group-header}}
       {{#> form-field-group-header-main}}
         {{#> form-field-group-title}}
@@ -463,7 +451,7 @@ section: components
   {{/form-field-group}}
 
   {{!-- Affinity field group --}}
-  {{#> form-field-group form-field-group--id=(concat form--id '-affinity') form-field-group--IsExpandable=true }}
+  {{#> form-field-group form-field-group--id=(concat form--id '-affinity') form-field-group--IsExpandable="true" }}
     {{#> form-field-group-header}}
       {{#> form-field-group-header-main}}
         {{#> form-field-group-title}}
@@ -477,7 +465,7 @@ section: components
     {{#> form-field-group-body}}
 
       {{!-- nested Node Affinity field group --}}
-      {{#> form-field-group form-field-group--id=(concat form--id '-node-affinity') form-field-group--IsExpandable=true form-field-group--IsExpanded=true}}
+      {{#> form-field-group form-field-group--id=(concat form--id '-node-affinity') form-field-group--IsExpandable="true" form-field-group--IsExpanded="true"}}
         {{#> form-field-group-header}}
           {{#> form-field-group-header-main}}
             {{#> form-field-group-title}}
@@ -491,7 +479,7 @@ section: components
         {{#> form-field-group-body}}
 
           {{!-- additional level nested field group --}}
-          {{#> form-field-group form-field-group--id=(concat form--id '-node-affinity-required') form-field-group--IsExpandable=true form-field-group--IsExpanded=reset}}
+          {{#> form-field-group form-field-group--id=(concat form--id '-node-affinity-required') form-field-group--IsExpandable="true" form-field-group--IsExpanded=reset}}
             {{#> form-field-group-header}}
               {{#> form-field-group-header-main}}
                 {{#> form-field-group-title}}
@@ -505,7 +493,7 @@ section: components
           {{/form-field-group}}
 
           {{!-- second additional level nested field group --}}
-          {{#> form-field-group form-field-group--id=(concat form--id '-node-affinity-required-2') form-field-group--IsExpandable=true form-field-group--IsExpanded=true}}
+          {{#> form-field-group form-field-group--id=(concat form--id '-node-affinity-required-2') form-field-group--IsExpandable="true" form-field-group--IsExpanded="true"}}
             {{#> form-field-group-header}}
               {{#> form-field-group-header-main}}
                 {{#> form-field-group-title}}
@@ -524,11 +512,11 @@ section: components
                 {{!-- node selector terms multiple inputs --}}
                 {{#> form-group form-group--id="-node-selector-terms"}}
                   {{#> form-group-label}}
-                    {{#> form-label form-label--attribute=(concat 'id="' form--id form-group--id '-title"') required=true}}Node selector terms{{/form-label}}
+                    {{#> form-label form-label--attribute=(concat 'id="' form--id form-group--id '-title"') required="true"}}Node selector terms{{/form-label}}
                   {{/form-group-label}}
                   {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
                     {{#> input-group}}
-                      {{#> form-control controlType="input" input=true form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-title"')}}{{/form-control}}
+                      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-title"')}}{{/form-control}}
                       {{!-- {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}} --}}
                       {{!-- Required. A list of node selector terms. The terms are ORed. --}}
                       {{!-- {{/form-helper-text}} --}}
@@ -555,7 +543,7 @@ section: components
       {{/form-field-group}}{{!-- nested Node Affinity field group --}}
 
       {{!-- nested Node Pod field group --}}
-      {{#> form-field-group form-field-group--id=(concat form--id '-pod-affinity') form-field-group--IsExpandable=true}}
+      {{#> form-field-group form-field-group--id=(concat form--id '-pod-affinity') form-field-group--IsExpandable="true"}}
         {{#> form-field-group-header}}
           {{#> form-field-group-header-main}}
             {{#> form-field-group-title}}
@@ -573,7 +561,7 @@ section: components
   {{/form-field-group}}{{!-- Affinity field group --}}
 
   {{!-- Routing field group --}}
-  {{#> form-field-group form-field-group--id=(concat form--id '-routing') form-field-group--IsExpandable=true form-field-group--IsExpanded=true}}
+  {{#> form-field-group form-field-group--id=(concat form--id '-routing') form-field-group--IsExpandable="true" form-field-group--IsExpanded="true"}}
     {{#> form-field-group-header}}
       {{#> form-field-group-header-main}}
         {{#> form-field-group-title}}
@@ -583,7 +571,7 @@ section: components
     {{/form-field-group-header}}
     {{#> form-field-group-body}}
       {{!-- create route checkbox --}}
-      {{#> form-group form-group--IsCheckGroup=true form-group--id=(concat form-field-group--id "-create-route")}}
+      {{#> form-group form-group--IsCheckGroup="true" form-group--id=(concat form-field-group--id "-create-route")}}
         {{#> form-group-control}}
           {{#> check}}
             {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' form--id form-group--id '-create-route" name="' form--id form-group--id '-create-route"')}}{{/check-input}}
@@ -604,7 +592,7 @@ section: components
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') }}Hostname{{/form-label}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="input" input=true form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" ')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" ')}}{{/form-control}}
           {{#> form-helper-text form-helper-text--type="div" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
             {{#> helper-text}}
               {{#> helper-text-item}}
@@ -620,7 +608,7 @@ section: components
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') }}Path{{/form-label}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="input" input=true form-control--attribute=(concat 'type="text" placeholder="/" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="/" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
           {{#> form-helper-text form-helper-text--type="div" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
             {{#> helper-text}}
               {{#> helper-text-item}}
@@ -631,7 +619,7 @@ section: components
         {{/form-group-control}}
       {{/form-group}}
       {{!-- security checkbox --}}
-      {{#> form-group form-group--IsCheckGroup=true form-group--id=(concat form-field-group--id "-security")}}
+      {{#> form-group form-group--IsCheckGroup="true" form-group--id=(concat form-field-group--id "-security")}}
         {{#> form-group-label}}
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') }}Security{{/form-label}}
         {{/form-group-label}}
@@ -653,7 +641,7 @@ section: components
   {{/form-field-group}}
 
   {{!-- Health checks field group --}}
-  {{#> form-field-group form-field-group--id=(concat form--id '-health-checks') form-field-group--IsExpandable=true form-field-group--IsExpanded=true}}
+  {{#> form-field-group form-field-group--id=(concat form--id '-health-checks') form-field-group--IsExpandable="true" form-field-group--IsExpanded="true"}}
     {{#> form-field-group-header}}
       {{#> form-field-group-header-main}}
         {{#> form-field-group-title}}
@@ -720,7 +708,7 @@ section: components
   {{/form-field-group}}
 
   {{!-- Build configuration --}}
-  {{#> form-field-group form-field-group--id=(concat form--id '-build-configuration') form-field-group--IsExpandable=true}}
+  {{#> form-field-group form-field-group--id=(concat form--id '-build-configuration') form-field-group--IsExpandable="true"}}
     {{#> form-field-group-header}}
       {{#> form-field-group-header-main}}
         {{#> form-field-group-title}}
@@ -736,7 +724,7 @@ section: components
   {{/form-field-group}}
 
   {{!-- Deployment --}}
-  {{#> form-field-group form-field-group--id=(concat form--id '-deployment') form-field-group--IsExpandable=true}}
+  {{#> form-field-group form-field-group--id=(concat form--id '-deployment') form-field-group--IsExpandable="true"}}
     {{#> form-field-group-header}}
       {{#> form-field-group-header-main}}
         {{#> form-field-group-title}}
@@ -748,10 +736,10 @@ section: components
 
   {{!-- Form action buttons --}}
   {{#> form-actions}}
-    {{#> button button--modifier="pf-m-primary" button--IsSubmit=true}}
+    {{#> button button--modifier="pf-m-primary" button--IsSubmit="true"}}
       Save
     {{/button}}
-    {{#> button button--modifier="pf-m-secondary" button--IsReset=true}}
+    {{#> button button--modifier="pf-m-secondary" button--IsReset="true"}}
       Cancel
     {{/button}}
   {{/form-actions}}

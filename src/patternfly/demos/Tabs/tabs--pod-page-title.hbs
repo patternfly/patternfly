@@ -1,8 +1,6 @@
 {{#> l-flex l-flex--modifier="pf-m-space-items-md pf-m-align-items-flex-start pf-m-nowrap"}}
   {{#> l-flex-item}}
-    {{#> label label--color="blue"}}
-      N
-    {{/label}}
+    {{> label label--color="blue" label-text--value="N"}}
   {{/l-flex-item}}
   {{#> l-flex-item}}
     {{#> title title--modifier="pf-m-2xl"}}
@@ -14,11 +12,6 @@
     {{/title}}
   {{/l-flex-item}}
   {{#> l-flex-item l-flex-item--modifier="pf-m-flex-none"}}
-    {{#> label}}
-      {{#> label-icon}}
-        <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-      {{/label-icon}}
-      Running
-    {{/label}}
+    {{> label label-text--value="Running" label-icon--value="info-circle"}}
   {{/l-flex-item}}
 {{/l-flex}}

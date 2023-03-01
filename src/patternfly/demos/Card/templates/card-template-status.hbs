@@ -101,44 +101,39 @@
                   {{#> label-group-main}}
                     {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
                       {{#> label-group-list-item}}
-                        {{#> label label--id="default-red-icon" label--color="red"}}
-                          {{#> label-icon}}
-                            <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
-                          {{/label-icon}}
-                          1
-                        {{/label}}
+                        {{> label
+                            label--id="default-red-icon"
+                            label--color="red"
+                            label-text--value="1"
+                            label-icon--value="exclamation-circle"}}
                       {{/label-group-list-item}}
                       {{#> label-group-list-item}}
-                        {{#> label label--id="default-orange-icon" label--color="orange"}}
-                          {{#> label-icon}}
-                            <i class="fas fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
-                          {{/label-icon}}
-                          3
-                        {{/label}}
+                        {{> label
+                            label--id="default-orange-icon"
+                            label--color="orange"
+                            label-text--value="1"
+                            label-icon--value="exclamation-circle"}}
                       {{/label-group-list-item}}
                       {{#> label-group-list-item}}
-                        {{#> label label--id="default-green-icon" label--color="green"}}
-                          {{#> label-icon}}
-                            <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
-                          {{/label-icon}}
-                          3
-                        {{/label}}
+                        {{> label
+                            label--id="default-green-icon"
+                            label--color="green"
+                            label-text--value="3"
+                            label-icon--value="check-circle"}}
                       {{/label-group-list-item}}
                       {{#> label-group-list-item}}
-                        {{#> label label--id="default-blue-icon" label--color="blue"}}
-                          {{#> label-icon}}
-                            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-                          {{/label-icon}}
-                          3
-                        {{/label}}
+                        {{> label
+                            label--id="default-blue-icon"
+                            label--color="blue"
+                            label-text--value="3"
+                            label-icon--value="info-circle"}}
                       {{/label-group-list-item}}
                       {{#> label-group-list-item}}
-                        {{#> label label--id="default-cyan-icon" label--color="cyan"}}
-                          {{#> label-icon}}
-                            <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
-                          {{/label-icon}}
-                          3
-                        {{/label}}
+                        {{> label
+                            label--id="default-cyan-icon"
+                            label--color="cyan"
+                            label-text--value="3"
+                            label-icon--value="bell"}}
                       {{/label-group-list-item}}
                     {{/label-group-list}}
                   {{/label-group-main}}

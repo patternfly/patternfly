@@ -16,9 +16,13 @@
     {{{label--attribute}}}
   {{/if}}>
   {{#> label-content}}
-    {{#if label-text--text}}
+    {{#if label-icon--value}}
+      {{> label-icon}}
+    {{/if}}
+    {{#if label-text--value}}
       {{> label-text}}
-    {{else if @partial-block}}
+    {{/if}}
+    {{#if @partial-block}}
       {{> @partial-block}}
     {{/if}}
   {{/label-content}}

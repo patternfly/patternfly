@@ -32,24 +32,16 @@
           {{#> label-group-main}}
             {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
               {{#> label-group-list-item}}
-                {{#> label label--IsOutlined=true}}
-                  Tag 1
-                {{/label}}
+                {{> label label--IsOutlined=true label-text--value="Tag 1"}}
               {{/label-group-list-item}}
               {{#> label-group-list-item}}
-                {{#> label label--IsOutlined=true}}
-                  Tag 2
-                {{/label}}
+                {{> label label--IsOutlined=true label-text--value="Tag 2"}}
               {{/label-group-list-item}}
               {{#> label-group-list-item}}
-                {{#> label label--IsOutlined=true}}
-                  Tag 3
-                {{/label}}
+                {{> label label--IsOutlined=true label-text--value="Tag 3"}}
               {{/label-group-list-item}}
               {{#> label-group-list-item}}
-                {{#> label label--IsOverflow=true}}
-                  2 more
-                {{/label}}
+                {{> label label--IsOverflow=true label-text--value="2 more"}}
               {{/label-group-list-item}}
             {{/label-group-list}}
           {{/label-group-main}}
