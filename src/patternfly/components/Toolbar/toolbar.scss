@@ -6,10 +6,11 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
 .pf-c-toolbar {
   --pf-c-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-toolbar--RowGap: var(--pf-global--spacer--lg); // row-gap between toolbar content elements
+  --pf-c-toolbar--RowGap--base: var(--pf-global--spacer--lg); // row-gap between toolbar content elements
+  --pf-c-toolbar--RowGap: var(--pf-c-toolbar__content--RowGap);
   --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-toolbar--RowGap--base: var(--pf-global--spacer--xs); // shared row-gap for items and groups
+  --pf-c-toolbar--item--RowGap--base: var(--pf-global--spacer--xs); // shared row-gap for items and groups
 
   // Item
   --pf-c-toolbar__item--Display: block;
@@ -20,7 +21,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar__group--Display: flex;
   --pf-c-toolbar__group--AlignItems: baseline;
   --pf-c-toolbar__group--AlignSelf: auto;
-  --pf-c-toolbar__group--RowGap: var(--pf-c-toolbar--RowGap--base);
+  --pf-c-toolbar__group--RowGap: var(--pf-c-toolbar--item--RowGap--base);
 
   // Sticky
   --pf-c-toolbar--m-sticky--ZIndex: var(--pf-global--ZIndex--xs);
@@ -28,13 +29,14 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Content
   --pf-c-toolbar__content--Display: flex;
+  --pf-c-toolbar__content--RowGap: var(--pf-c-toolbar--RowGap--base);
   --pf-c-toolbar__content--PaddingRight: var(--pf-global--spacer--md); // remove at breaking change
   --pf-c-toolbar__content--PaddingLeft: var(--pf-global--spacer--md); // remove at breaking change
 
   // Content section
   --pf-c-toolbar__content-section--Display: flex;
   --pf-c-toolbar__content-section--AlignItems: baseline;
-  --pf-c-toolbar__content-section--RowGap: var(--pf-c-toolbar--RowGap--base);
+  --pf-c-toolbar__content-section--RowGap: var(--pf-c-toolbar--item--RowGap--base);
 
   // Insets
   --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
@@ -42,9 +44,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Expandable content
   --pf-c-toolbar__expandable-content--Display: grid;
-  --pf-c-toolbar__expandable-content--PaddingTop: var(--pf-global--spacer--lg);
   --pf-c-toolbar__expandable-content--PaddingRight: var(--pf-c-toolbar__content--PaddingRight);
-  --pf-c-toolbar__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-toolbar__expandable-content--PaddingLeft: var(--pf-c-toolbar__content--PaddingLeft);
   --pf-c-toolbar__expandable-content--lg--PaddingRight: 0;
   --pf-c-toolbar__expandable-content--lg--PaddingBottom: 0;
@@ -380,6 +380,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   position: relative;
   align-items: center;
+  row-gap: var(--pf-c-toolbar__content--RowGap);
   padding-right: var(--pf-c-toolbar__content--PaddingRight);
   padding-left: var(--pf-c-toolbar__content--PaddingLeft);
 }
@@ -406,7 +407,8 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   z-index: var(--pf-c-toolbar__expandable-content--ZIndex);
   display: none;
   width: 100%;
-  padding: var(--pf-c-toolbar__expandable-content--PaddingTop) var(--pf-c-toolbar__expandable-content--PaddingRight) var(--pf-c-toolbar__expandable-content--PaddingBottom) var(--pf-c-toolbar__expandable-content--PaddingLeft);
+  padding-right: var(--pf-c-toolbar__expandable-content--PaddingRight);
+  padding-left: var(--pf-c-toolbar__expandable-content--PaddingLeft);
   background-color: var(--pf-c-toolbar__expandable-content--BackgroundColor);
   box-shadow: var(--pf-c-toolbar__expandable-content--BoxShadow);
 
