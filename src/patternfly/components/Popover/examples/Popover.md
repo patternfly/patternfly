@@ -11,12 +11,18 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-top-header" aria-describedby="popover-top-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-top-header"'}}
-      Popover header
-    {{/title}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--attribute='id="popover-top-header"'}}
+        {{#> popover-title-text}}
+          Popover header
+        {{/popover-title-text}}
+      {{/popover-title}}
+    {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-top-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
@@ -31,12 +37,18 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-right" popover--attribute='aria-labelledby="popover-right-header" aria-describedby="popover-right-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-right-header"'}}
-      Popover header
-    {{/title}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--attribute='id="popover-right-header"'}}
+        {{#> popover-title-text}}
+          Popover header
+        {{/popover-title-text}}
+      {{/popover-title}}
+    {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-right-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
@@ -51,12 +63,18 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom" popover--attribute='aria-labelledby="popover-bottom-header" aria-describedby="popover-bottom-body"'}}
   {{#> popover-content}}
+    {{#> popover-close}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
         <i class="fas fa-times" aria-hidden="true"></i>
       {{/button}}
-      {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-bottom-header"'}}
-        Popover header
-      {{/title}}
+    {{/popover-close}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--attribute='id="popover-bottom-header"'}}
+        {{#> popover-title-text}}
+          Popover header
+        {{/popover-title-text}}
+      {{/popover-title}}
+    {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-bottom-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
@@ -71,12 +89,18 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-left-header" aria-describedby="popover-left-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-left-header"'}}
-        Popover header
-    {{/title}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--attribute='id="popover-left-header"'}}
+        {{#> popover-title-text}}
+          Popover header
+        {{/popover-title-text}}
+      {{/popover-title}}
+    {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-left-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
@@ -91,12 +115,18 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left-top" popover--attribute='aria-labelledby="popover-left-start-header" aria-describedby="popover-left-start-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-left-start-header"'}}
-        Popover header
-    {{/title}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--attribute='id="popover-left-start-header"'}}
+        {{#> popover-title-text}}
+          Popover header
+        {{/popover-title-text}}
+      {{/popover-title}}
+    {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-left-start-body"'}}
       This popover is to the left and at the start position
     {{/popover-body}}
@@ -111,12 +141,18 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left-bottom" popover--attribute='aria-labelledby="popover-left-end-header" aria-describedby="popover-left-end-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-left-end-header"'}}
-        Popover header
-    {{/title}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--attribute='id="popover-left-end-header"'}}
+        {{#> popover-title-text}}
+          Popover header
+        {{/popover-title-text}}
+      {{/popover-title}}
+    {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-left-end-body"'}}
       This popover is to the left and at the end position
     {{/popover-body}}
@@ -131,12 +167,18 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom-left" popover--attribute='aria-labelledby="popover-bottom-start-header" aria-describedby="popover-bottom-start-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-bottom-start-header"'}}
-        Popover header
-    {{/title}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--attribute='id="popover-bottom-start-header"'}}
+        {{#> popover-title-text}}
+          Popover header
+        {{/popover-title-text}}
+      {{/popover-title}}
+    {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-bottom-start-body"'}}
       This popover is to the bottom and at the start position
     {{/popover-body}}
@@ -151,12 +193,18 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-bottom-right" popover--attribute='aria-labelledby="popover-bottom-end-header" aria-describedby="popover-bottom-end-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-bottom-end-header"'}}
-        Popover header
-    {{/title}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--attribute='id="popover-bottom-end-header"'}}
+        {{#> popover-title-text}}
+          Popover header
+        {{/popover-title-text}}
+      {{/popover-title}}
+    {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-bottom-end-body"'}}
       This popover is to the bottom and at the end position
     {{/popover-body}}
@@ -171,9 +219,11 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-right" popover--attribute='aria-label="Popover with no header example" aria-describedby="popover-no-header-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
     {{#> popover-body popover-body--attribute='id="popover-no-header-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
@@ -196,12 +246,18 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-right pf-m-width-auto" popover--attribute='aria-labelledby="popover-width-auto-header" aria-describedby="popover-width-auto-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
-    {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute='id="popover-width-auto-header"'}}
-      Popover header
-    {{/title}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
+    {{#> popover-header}}
+      {{#> popover-title popover-title--attribute='id="popover-width-auto-header"'}}
+        {{#> popover-title-text}}
+          Popover header
+        {{/popover-title-text}}
+      {{/popover-title}}
+    {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-width-auto-body"'}}
       Popovers body
     {{/popover-body}}
@@ -216,12 +272,16 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-icon-title-header" aria-describedby="popover-icon-title-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-icon-title-header"' popover-title-icon--type="bullhorn"}}
-        Popover with icon title
+        {{#> popover-title-text}}
+          Popover with icon title
+        {{/popover-title-text}}
       {{/popover-title}}
     {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-icon-title-body"'}}
@@ -237,12 +297,16 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsDefaultAlert="true" popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-default-alert-header" aria-describedby="popover-default-alert-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-default-alert-header"'}}
-        Default popover title
+        {{#> popover-title-text}}
+          Default popover title
+        {{/popover-title-text}}
       {{/popover-title}}
     {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-default-alert-body"'}}
@@ -259,12 +323,16 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsInfoAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-info-alert-header" aria-describedby="popover-info-alert-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-info-alert-header"'}}
-        Info popover title
+        {{#> popover-title-text}}
+          Info popover title
+        {{/popover-title-text}}
       {{/popover-title}}
     {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-info-alert-body"'}}
@@ -281,12 +349,16 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsSuccessAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-success-alert-header" aria-describedby="popover-success-alert-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-success-alert-header"'}}
-        Success popover title
+        {{#> popover-title-text}}
+          Success popover title
+        {{/popover-title-text}}
       {{/popover-title}}
     {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-success-alert-body"'}}
@@ -303,12 +375,16 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsWarningAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-warning-alert-header" aria-describedby="popover-warning-alert-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{# popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-warning-alert-header"'}}
-        Warning popover title
+        {{#> popover-title-text}}
+          Warning popover title
+        {{/popover-title-text}}
       {{/popover-title}}
     {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-warning-alert-body"'}}
@@ -325,12 +401,16 @@ import './Popover.css'
 ```hbs isFullscreen
 {{#> popover popover--IsAlert="true" popover--IsDangerAlert="true" popover--modifier="pf-m-top" popover--attribute='aria-labelledby="popover-danger-alert-header" aria-describedby="popover-danger-alert-body"'}}
   {{#> popover-content}}
-    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-      <i class="fas fa-times" aria-hidden="true"></i>
-    {{/button}}
+    {{#> popover-close}}
+      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+        <i class="fas fa-times" aria-hidden="true"></i>
+      {{/button}}
+    {{/popover-close}}
     {{#> popover-header}}
       {{#> popover-title popover-title--IsIcon="true" popover-title--attribute='id="popover-danger-alert-header"'}}
-        Danger popover title
+        {{#> popover-title-text}}
+          Danger popover title
+        {{/popover-title-text}}
       {{/popover-title}}
     {{/popover-header}}
     {{#> popover-body popover-body--attribute='id="popover-danger-alert-body"'}}
@@ -357,6 +437,7 @@ A popover is used to provide contextual information for another component on cli
 | `aria-modal="true"` | `.pf-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|
 | `aria-label="Close"` | `.pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
 | `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-c-popover` must not be a descendent of the element with `aria-hidden="true"`. For more info, see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
+| `.pf-screen-reader` | `.pf-c-popover__title-text` | Adds text to be read saying the alert status before the title. If `.pf-c-popover__title-text` is not used to create a title, this must be added within the title. **Required for popovers that are alerts** |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -364,12 +445,12 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-c-popover` | `<div>` |  Creates a popover. Always use it with a modifier class that positions the popover relative to the element that triggered it. **Required** |
 | `.pf-c-popover__arrow` | `<div>` |  Creates an arrow pointing towards the element the popover describes. **Required** |
 | `.pf-c-popover__content` | `<div>` |  Creates the content area of the popover. **Required** |
-| `.pf-c-button` | `<button>` |  Positions the close icon in the top-right corner of the popover. **Required** |
-| `.pf-c-popover__header` | `<header>` | Creates the popover header |
-| `.pf-c-popover__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`,`<div>` | Creates the popover title |
-| `.pf-c-title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>` |  Initiates a title. Always use it with a modifier class. See the [title component](/components/title) for more info.|
-| `.pf-c-popover__title-icon` | `<span>` | Creates the popover title icon |
-| `.pf-c-popover__title-text` | `<span>` | Creates the popover title text |
+| `.pf-c-popover__close` | `<div>` |  Positions the close icon in the top-right corner of the popover. **Required if there is a close button** |
+| `.pf-c-button` | `<button>` |  Creates the close button for the popover. |
+| `.pf-c-popover__header` | `<header>` | Creates the popover header. **Required if there is a title**|
+| `.pf-c-popover__title` | `<div>` | Creates the popover title. |
+| `.pf-c-popover__title-icon` | `<span>` | Creates the popover title icon. |
+| `.pf-c-popover__title-text` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`,`<span>` | Creates the popover title text. |
 | `.pf-c-popover__body` | `<div>` |  The popover's body text. **Required** |
 | `.pf-c-popover__footer` | `<footer>` | Initiates a popover footer. |
 | `.pf-m-left{-top/bottom}` | `.pf-c-popover` | Positions the popover to the left (or left top/left bottom) of the element. |

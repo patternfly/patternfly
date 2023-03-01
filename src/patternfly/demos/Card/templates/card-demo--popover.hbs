@@ -1,12 +1,18 @@
 {{#if card-demo--popover--IsOpen}}
   {{#> popover popover--modifier="pf-m-right" popover--attribute=(concat 'aria-labelledby="' popover--id '-popover-right-header" aria-describedby="' popover--id '-popover-right-body" style="--pf-c-popover--MinWidth: 400px;"')}}
     {{#> popover-content}}
-      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
-        <i class="fas fa-times" aria-hidden="true"></i>
-      {{/button}}
-      {{#> title titleType="h1" title--modifier="pf-m-md" title--attribute=(concat 'id="' popover--id '-popover-right-header"')}}
-        Control Panel Status
-      {{/title}}
+      {{#> popover-close}}
+        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
+          <i class="fas fa-times" aria-hidden="true"></i>
+        {{/button}}
+      {{/popover-close}}
+      {{#> popover-header}}
+        {{#> popover-title popover-title--attribute=(concat 'id="' popover--id '-popover-right-header"')}}
+          {{#> popover-title-text}}
+            Control Panel Status
+          {{/popover-title-text}}
+        {{/popover-title}}
+      {{/popover-header}}
       {{#> popover-body popover-body--attribute=(concat 'id="' popover--id '-popover-right-body"')}}
         Components of the Control Panel are responsible for maintaining and reconciling the state of the cluster.
       {{/popover-body}}
