@@ -32,7 +32,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
   {{/card-header}}
-  {{> card-title card-title-text--value="Title" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+  {{> card-title card-title-text--value="Title" card-title-text--id=(concat card--id '-check-label')}}
   {{#> card-body}}
     Body
   {{/card-body}}
@@ -51,7 +51,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title card-title-text--value="This is a really really really really really really really really really really long title" card-title-text--attribute=(concat 'id="' card--id '-check-label"')}}
+      {{> card-title card-title-text--value="This is a really really really really really really really really really really long title" card-title-text--id=(concat card--id '-check-label')}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
@@ -365,7 +365,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title card-title-text--value="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
+      {{> card-title card-title-text--value="Title" card-title-text--id=(concat card--id '-title')}}
     {{/card-header-main}}
   {{/card-header}}
 {{/card}}
@@ -397,7 +397,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title-text card-title-text--value="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
+      {{> card-title-text card-title-text--value="Title" card-title-text--id=(concat card--id '-title')}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-expandable-content}}
@@ -420,7 +420,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title card-title-text--value="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
+      {{> card-title card-title-text--value="Title" card-title-text--id=(concat card--id '-title"')}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
@@ -441,7 +441,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{> card-title card-title-text--value="Title" card-title-text--attribute=(concat 'id="' card--id '-title"')}}
+      {{> card-title card-title-text--value="Title" card-title-text--id=(concat card--id '-title')}}
     {{/card-header-main}}
     {{> card-header-toggle}}
   {{/card-header}}

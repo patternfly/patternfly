@@ -6,7 +6,7 @@
           Status
         {{/select}}
       {{/card-actions}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1" style="padding-top: 3px;"')}}
+      {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute='style="padding-top: 3px;"'}}
         {{#> title title--modifier="pf-m-xl" titleType="h2"}}
           Events
         {{/title}}

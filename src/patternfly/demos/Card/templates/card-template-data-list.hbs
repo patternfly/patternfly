@@ -1,7 +1,7 @@
 {{#> reset grid--attribute=reset grid-item--attribute=reset grid--modifier=reset grid-item--modifier=reset l-flex--attribute=reset l-flex-item--attribute=reset l-flex--modifier=reset l-flex-item--modifier=reset}}
   {{#> card card--id=card-template-data-list--id}}
     {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title1"')}}
+      {{#> card-title card-title--id=(concat card--id '-title1')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
           Inventory
         {{/title}}

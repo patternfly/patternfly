@@ -6,7 +6,7 @@
           24 hours
         {{/select}}
       {{/card-actions}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+      {{#> card-title card-title--id=(concat card--id '-title')}}
         {{#> title title--modifier="pf-m-xl" titleType="h2"}}
           Cluster utilizations
         {{/title}}
