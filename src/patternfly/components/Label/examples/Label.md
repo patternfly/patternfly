@@ -233,3 +233,4 @@ This style of label is used to add new labels to a label group.
 | `.pf-m-gold` | `.pf-c-label` | Modifies the label to have gold colored styling. |
 | `.pf-m-editable` | `.pf-c-label` | Modifies label for editable styles. |
 | `.pf-m-editable-active` | `.pf-c-label.pf-m-editable` | Modifies editable label for active styles. |
+| `--pf-c-label__text--MaxWidth` | `.pf-c-label` | Modifiex the max width of the text before text will truncate. |
