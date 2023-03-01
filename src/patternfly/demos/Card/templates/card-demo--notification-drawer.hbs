@@ -9,36 +9,31 @@
                 {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
                   <span>Notifications</span>
                 {{/l-flex-item}}
-                {{#> label label--id="default-red-icon" label--modifier="pf-m-red"}}
-                  {{#> label-icon}}
-                    <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
-                  {{/label-icon}}
-                  1
-                {{/label}}
-                {{#> label label--id="default-orange-icon" label--modifier="pf-m-orange"}}
-                  {{#> label-icon}}
-                    <i class="fas fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
-                  {{/label-icon}}
-                  3
-                {{/label}}
-                {{#> label label--id="default-green-icon" label--modifier="pf-m-green"}}
-                  {{#> label-icon}}
-                    <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
-                  {{/label-icon}}
-                  3
-                {{/label}}
-                {{#> label label--id="default-blue-icon" label--modifier="pf-m-blue"}}
-                  {{#> label-icon}}
-                    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-                  {{/label-icon}}
-                  3
-                {{/label}}
-                {{#> label label--id="default-cyan-icon" label--modifier="pf-m-cyan"}}
-                  {{#> label-icon}}
-                    <i class="fas fa-fw fa-bell" aria-hidden="true"></i>
-                  {{/label-icon}}
-                  3
-                {{/label}}
+                {{> label
+                    label--id="default-red-icon"
+                    label--color="red"
+                    label-text--value="1"
+                    label-icon--value="exclamation-circle"}}
+                {{> label
+                    label--id="default-orange-icon"
+                    label--color="orange"
+                    label-text--value="3"
+                    label-icon--value="exclamation-triangle"}}
+                {{> label
+                    label--id="default-green-icon"
+                    label--color="green"
+                    label-text--value="3"
+                    label-icon--value="check-circle"}}
+                {{> label
+                    label--id="default-blue-icon"
+                    label--color="blue"
+                    label-text--value="3"
+                    label-icon--value="info-circle"}}
+                {{> label
+                    label--id="default-blue-icon"
+                    label--color="cyan"
+                    label-text--value="3"
+                    label-icon--value="bell"}}
               {{/l-flex}}
             {{/notification-drawer-group-toggle-title}}
           {{/l-flex}}

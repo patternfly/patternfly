@@ -3,7 +3,7 @@
     {{#> card-header card--id=card-template-expandable-status--id}}
       {{> card-header-toggle}}
       {{#> card-actions}}
-        {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain="true"}}
+        {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain=true}}
       {{/card-actions}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
         {{#> title titleType="h2" title--modifier="pf-m-xl"}}
@@ -13,17 +13,15 @@
     {{/card-header}}
     {{#> card-expandable-content}}
       {{#> l-flex l-flex--modifier="pf-m-column pf-m-row-on-md"}}
-        {{> card-template-expandable-status-card
-            card-template-expandable-status-card--HasIncident="true"
-          }}
+        {{> card-template-expandable-status-card card-template-expandable-status-card--HasIncident=true}}
         {{> divider divider--modifier="pf-m-vertical-on-md pf-m-inset-3xl"}}
         {{> card-template-expandable-status-card
             card-template-expandable-status-card--label-icon='<i class="fas fa-cube" aria-hidden="true"></i>'
             card-template-expandable-status-card--label-text="Stablility"
-            card-template-expandable-status-card--label--HasOverflowLabel="true"
+            card-template-expandable-status-card--label--HasOverflowLabel=true
             card-template-expandable-status-card--header-link--text="211 systems"
             card-template-expandable-status-card--body--text="Adjust your networking configuration to get ahead of network perfomance degradations and packet losses"
-            card-template-expandable-status-card--RequiresReboot="true"
+            card-template-expandable-status-card--RequiresReboot=true
           }}
         {{> divider divider--modifier="pf-m-vertical-on-md pf-m-inset-3xl"}}
         {{> card-template-expandable-status-card
@@ -31,7 +29,7 @@
             card-template-expandable-status-card--label-text="Availability"
             card-template-expandable-status-card--header-link--text="166 systems"
             card-template-expandable-status-card--body--text="Fine tune your Oracle DB configuration to improve database performance and avoid process failure"
-            card-template-expandable-status-card--HasIncident="true"
+            card-template-expandable-status-card--HasIncident=true
           }}
       {{/l-flex}}
     {{/card-expandable-content}}

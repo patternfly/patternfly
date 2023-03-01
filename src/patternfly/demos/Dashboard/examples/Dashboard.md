@@ -11,7 +11,7 @@ cssPrefix: pf-d-dashboard
 {{> page-template page-template--id="dashboard-demo"}}
 
 {{#*inline "page-template-section"}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true"}}
+  {{#> page-main-section page-main-section--IsLimitWidth=true}}
     {{#> grid grid--modifier="pf-m-gutter"}}
       {{> card-template-expandable-status card-template-expandable-status--id=(concat page-template--id '-expandable-status-card-1')}}
       {{#> grid-item grid-item--modifier="pf-m-gutter pf-m-4-col-on-lg pf-m-6-col-on-2xl" grid-item--attribute='style="--pf-l-grid--item--Order-on-lg:3"'}}

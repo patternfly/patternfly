@@ -2,5 +2,9 @@
   {{#if label-icon--attribute}}
     {{{label-icon--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if label-icon--value}}
+    <i class="fas fa-fw fa-{{label-icon--value}}" aria-hidden="true"></i>
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </span>

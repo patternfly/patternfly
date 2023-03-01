@@ -403,34 +403,22 @@ section: components
             {{#> label-group-main}}
               {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
                 {{#> label-group-list-item}}
-                  {{#> label  label--isRemovable="true" label--id=(concat label-group--id '-label-1')}}
-                    {{#> label-icon}}
-                      <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-                    {{/label-icon}}
-                    prometheus=k8s
-                  {{/label}}
+                  {{> label label--id=(concat label-group--id '-label-1') label--isRemovable=true label-text--value="prometheus=k8s" label-icon--value="info-circle"}}
                 {{/label-group-list-item}}
                 {{#> label-group-list-item}}
-                  {{#> label label--modifier="pf-m-blue" label--isRemovable="true" label--id=(concat label-group--id '-label-2')}}
-                    {{#> label-icon}}
-                      <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
-                    {{/label-icon}}
-                    new
-                  {{/label}}
+                  {{> label label--id=(concat label-group--id '-label-2') label--isRemovable=true label-text--value="new" label-icon--value="info-circle"}}
                 {{/label-group-list-item}}
                 {{#> label-group-list-item}}
-                  {{#> label label--IsAdd="true"}}
-                    Add Label
-                  {{/label}}
+                  {{> label label--IsAdd="true" label-text--value="Add Label"}}
                 {{/label-group-list-item}}
               {{/label-group-list}}
             {{/label-group-main}}
           {{/label-group}}
-              {{#> text-input-group-text}}
-      {{> text-input-group-text-input}}
-    {{/text-input-group-text}}
-            {{/text-input-group-main}}
-        {{/text-input-group}} 
+          {{#> text-input-group-text}}
+            {{> text-input-group-text-input}}
+          {{/text-input-group-text}}
+        {{/text-input-group-main}}
+      {{/text-input-group}}
     {{/form-group-control}}
   {{/form-group}}
 
@@ -461,7 +449,7 @@ section: components
       {{/form-field-group-header-main}}
     {{/form-field-group-header}}
   {{/form-field-group}}
-  
+
   {{!-- Affinity field group --}}
   {{#> form-field-group form-field-group--id=(concat form--id '-affinity') form-field-group--IsExpandable="true" }}
     {{#> form-field-group-header}}
@@ -571,7 +559,7 @@ section: components
 
     {{/form-field-group-body}}
   {{/form-field-group}}{{!-- Affinity field group --}}
-  
+
   {{!-- Routing field group --}}
   {{#> form-field-group form-field-group--id=(concat form--id '-routing') form-field-group--IsExpandable="true" form-field-group--IsExpanded="true"}}
     {{#> form-field-group-header}}
