@@ -282,7 +282,7 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-c-page__header-tools-group` | `<div>` |  Creates a container for grouping sets of icons and menus in header. |
 | `.pf-c-page__header-tools-item` | `<div>` |  Creates a container for an item in a header tools group. |
 | `.pf-c-page__sidebar` | `<aside>` |   Declares the page sidebar. |
-| `.pf-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. |
+| `.pf-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-c-page__sidebar-body` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
 | `.pf-c-page__main` | `<main>` |   Declares the main page area. |
 | `.pf-c-page__main-nav` | `<section>` |   Creates a container to nest the navigation component in the main page area. |
 | `.pf-c-page__main-breadcrumb` | `<section>` |   Creates a container to nest the breadcrumb component in the main page area. |
@@ -297,8 +297,8 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-collapsed` | `.pf-c-page__sidebar` |  Modifies the sidebar for the collapsed state. |
 | `.pf-m-inset` | `.pf-c-page__sidebar-body` | Modifies a sidebar body left/right inset to visually match padding of page elements. |
 | `.pf-m-no-inset` | `.pf-c-page__sidebar-body` | Removes a sidebar body left/right inset. |
-| `.pf-m-padding` | `.pf-c-page__sidebar-body` | Modifies a sidebar body top/bottom padding. |
-| `.pf-m-no-padding` | `.pf-c-page__sidebar-body` | Removes a sidebar body top/bottom padding. |
+| `.pf-m-vertical-padding` | `.pf-c-page__sidebar-body` | Modifies a sidebar body top/bottom padding. |
+| `.pf-m-no-vertical-padding` | `.pf-c-page__sidebar-body` | Removes a sidebar body top/bottom padding. |
 | `.pf-m-nav` | `.pf-c-page__sidebar-body` | Modifies a sidebar body top/bottom padding to accomodate a navigation component. |
 | `.pf-m-light` | `.pf-c-page__sidebar` |  Modifies the sidebar the light variation. **Note: for use with a light themed nav component** |
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
@@ -306,9 +306,9 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-dark-100` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a darker transparent background. |
 | `.pf-m-light-200` | `.pf-c-page__main-wizard` | Modifies a wizard page section to have a light 200 theme. |
 | `.pf-m-padding{-on-[breakpoint]}` | `.pf-c-page__main-section` | Modifies the main page section to add padding back in at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). Should be used with pf-m-no-padding. |
-| `.pf-m-no-padding`, `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-no-padding{-on-[breakpoint]}` | `.pf-c-page__main-section` | Removes padding from the main page section at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-fill` | `.pf-c-page__main-section`, `.pf-c-page__sidebar-body` | Modifies the element to grow to fill the available space. |
-| `.pf-m-no-fill` | `.pf-c-page__main-section` | Modifies a main page section to not grow to fill the available vertical space. |
+| `.pf-m-no-fill` | `.pf-c-page__main-section`, `.pf-c-page__sidebar-body` | Modifies the element to not grow to fill the available vertical space. |
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-page__header-tools-group`, `.pf-c-page__header-tools-item` | Hides a header tools group or item at an optional breakpoint, or hides it at all [breakpoints](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) with `.pf-m-hidden`. |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-page__header-tools-group`, `.pf-c-page__header-tools-item` | Shows a header tools group or item at an optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-limit-width` | `.pf-c-page__main-section` | Modifies a page section to limit the `max-width` of the content inside. |

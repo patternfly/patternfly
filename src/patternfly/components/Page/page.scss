@@ -87,7 +87,9 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   // Sidebar body
   --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--md);
+  --pf-c-page__sidebar-body--PaddingRight: 0;
   --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-page__sidebar-body--PaddingLeft: 0;
   --pf-c-page__sidebar-body--m-nav--PaddingTop: var(--pf-global--spacer--sm);
   --pf-c-page__sidebar-body--m-nav--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-page__sidebar-body--m-menu--PaddingTop: 0;
@@ -432,16 +434,10 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
     --pf-c-page__sidebar--BackgroundColor: var(--pf-c-page__sidebar--m-light--BackgroundColor);
   }
-
-  .pf-m-page-insets {
-    padding-right: var(--pf-c-page__sidebar-body--m-page-insets--PaddingRight);
-    padding-left: var(--pf-c-page__sidebar-body--m-page-insets--PaddingLeft);
-  }
 }
 
 .pf-c-page__sidebar-body {
-  padding-top: var(--pf-c-page__sidebar-body--PaddingTop);
-  padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
+  padding: var(--pf-c-page__sidebar-body--PaddingTop) var(--pf-c-page__sidebar-body--PaddingRight) var(--pf-c-page__sidebar-body--PaddingBottom) var(--pf-c-page__sidebar-body--PaddingLeft);
 
   &.pf-m-menu {
     --pf-c-page__sidebar-body--PaddingTop: var(--pf-c-page__sidebar-body--m-menu--PaddingTop);
@@ -473,27 +469,35 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   }
 
   &.pf-m-inset {
-    padding-right: var(--pf-c-page__sidebar-body--m-inset--PaddingRight);
-    padding-left: var(--pf-c-page__sidebar-body--m-inset--PaddingLeft);
+    --pf-c-page__sidebar-body--PaddingRight: var(--pf-c-page__sidebar-body--m-inset--PaddingRight);
+    --pf-c-page__sidebar-body--PaddingLeft: var(--pf-c-page__sidebar-body--m-inset--PaddingLeft);
   }
 
   &.pf-m-no-inset {
-    padding-right: 0;
-    padding-left: 0;
+    --pf-c-page__sidebar-body--PaddingRight: 0;
+    --pf-c-page__sidebar-body--PaddingLeft: 0;
   }
 
-  &.pf-m-no-padding {
-    padding-top: 0;
-    padding-bottom: 0;
+  &.pf-m-no-vertical-padding {
+    --pf-c-page__sidebar-body--PaddingTop: 0;
+    --pf-c-page__sidebar-body--PaddingBottom: 0;
   }
 
-  &.pf-m-padding {
+  &.pf-m-vertical-padding {
     padding-top: var(--pf-c-page__sidebar-body--PaddingTop);
     padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
   }
 
   &.pf-m-fill {
-    flex: 1;
+    flex-grow: 1;
+  }
+
+  &.pf-m-no-fill {
+    flex-grow: 0;
+  }
+
+  &:last-child {
+    flex-grow: 1;
   }
 }
 
