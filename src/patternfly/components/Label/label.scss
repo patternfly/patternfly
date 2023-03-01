@@ -146,16 +146,18 @@
   --pf-c-label__icon--Color: var(--pf-global--Color--100);
   --pf-c-label__icon--MarginRight: var(--pf-global--spacer--xs);
 
-  // Close button
-  --pf-c-label__c-button--FontSize: var(--pf-global--FontSize--xs);
-  --pf-c-label__c-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-label__c-button--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-label__c-button--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-label__c-button--MarginLeft: var(--pf-global--spacer--xs);
-  --pf-c-label__c-button--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-label__c-button--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-label__c-button--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-label__c-button--PaddingLeft: var(--pf-global--spacer--sm);
+  // Actions
+  --pf-c-label__actions--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-label__actions--MarginRight: calc(var(--pf-c-label__actions--c-button--PaddingRight) * -1);
+
+  // Actions button (close)
+  --pf-c-label__actions--c-button--FontSize: var(--pf-global--FontSize--xs);
+  --pf-c-label__actions--c-button--MarginTop: calc(var(--pf-c-label__actions--c-button--PaddingTop) * -1);
+  --pf-c-label__actions--c-button--MarginBottom: calc(var(--pf-c-label__actions--c-button--PaddingBottom) * -1);
+  --pf-c-label__actions--c-button--PaddingTop: var(--pf-global--spacer--xs);
+  --pf-c-label__actions--c-button--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-label__actions--c-button--PaddingBottom: var(--pf-global--spacer--xs);
+  --pf-c-label__actions--c-button--PaddingLeft: var(--pf-global--spacer--sm);
 
   // Editable
   --pf-c-label--m-editable--Cursor: pointer;
@@ -181,6 +183,7 @@
   --pf-c-label--m-editable--m-editable-active__content--before--BorderColor: transparent;
 
   position: relative;
+  display: flex;
   padding: var(--pf-c-label--PaddingTop) var(--pf-c-label--PaddingRight) var(--pf-c-label--PaddingBottom) var(--pf-c-label--PaddingLeft);
   font-size: var(--pf-c-label--FontSize);
   color: var(--pf-c-label--Color);
@@ -375,19 +378,6 @@
     --pf-c-label--BackgroundColor: var(--pf-c-label--m-editable--m-editable-active--BackgroundColor);
   }
 
-  .pf-c-button {
-    --pf-c-button--FontSize: var(--pf-c-label__c-button--FontSize);
-    --pf-c-button--PaddingTop: var(--pf-c-label__c-button--PaddingTop);
-    --pf-c-button--PaddingRight: var(--pf-c-label__c-button--PaddingRight);
-    --pf-c-button--PaddingBottom: var(--pf-c-label__c-button--PaddingBottom);
-    --pf-c-button--PaddingLeft: var(--pf-c-label__c-button--PaddingLeft);
-
-    margin-top: var(--pf-c-label__c-button--MarginTop);
-    margin-right: var(--pf-c-label__c-button--MarginRight);
-    margin-bottom: var(--pf-c-label__c-button--MarginBottom);
-    margin-left: var(--pf-c-label__c-button--MarginLeft);
-  }
-
   &.pf-m-overflow,
   &.pf-m-add {
     --pf-c-label__content--Color: var(--pf-c-label--m-overflow__content--Color);
@@ -462,6 +452,22 @@
 .pf-c-label__icon {
   margin-right: var(--pf-c-label__icon--MarginRight);
   color: var(--pf-c-label__icon--Color);
+}
+
+.pf-c-label__actions {
+  margin-right: var(--pf-c-label__actions--MarginRight);
+  font-size: var(--pf-c-label__actions--FontSize);
+
+  .pf-c-button {
+    --pf-c-button--FontSize: var(--pf-c-label__actions--c-button--FontSize);
+    --pf-c-button--PaddingTop: var(--pf-c-label__actions--c-button--PaddingTop);
+    --pf-c-button--PaddingRight: var(--pf-c-label__actions--c-button--PaddingRight);
+    --pf-c-button--PaddingBottom: var(--pf-c-label__actions--c-button--PaddingBottom);
+    --pf-c-button--PaddingLeft: var(--pf-c-label__actions--c-button--PaddingLeft);
+
+    margin-top: var(--pf-c-label__actions--c-button--MarginTop);
+    margin-bottom: var(--pf-c-label__actions--c-button--MarginBottom);
+  }
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

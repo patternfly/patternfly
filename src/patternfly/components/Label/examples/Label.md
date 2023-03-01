@@ -697,10 +697,11 @@ This style of label is used to add new labels to a label group.
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-label` | `<span>`, `<button>` | Initiates a label. Without a color modifier, the label's default style is grey. Use a color modifier to change the label color. Use a `<button>` if the label is an overflow label used in the label group. **Required** |
-| `.pf-c-label__content` | `<span>`, `<a>`, `<button>` | Iniates a label content. Use as an `<a>` element if the label serves as a link. Use a `<button>` if the label serves as an action. **Required** |
+| `.pf-c-label__content` | `<span>`, `<a>`, `<button>` | Creates a content wrapper. Use as an `<a>` element if the label serves as a link. Use a `<button>` if the label serves as an action. **Required** |
 | `.pf-c-label__icon` | `<span>` | Initiates a label icon. |
 | `.pf-c-label__text` | `<span>` | Initiates label text. |
 | `.pf-c-label__editable-text` | `<button>`, `<input>` | Initiates editable label text. See the [editable](#editable) example for details about handling behavior in Javascript.|
+| `.pf-c-label__actions` | `<span>` | Creates a wrapper for label actions. **Required for removable labels** |
 | `.pf-m-outline` | `.pf-c-label` | Modifies label for outline styles. |
 | `.pf-m-compact` | `.pf-c-label` | Modifies label for compact styles. |
 | `.pf-m-overflow` | `.pf-c-label` | Modifies label for overflow styles for use in a label group. |

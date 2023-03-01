@@ -12,39 +12,53 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select_collapsed"')}}
-            Chip one
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_select_collapsed ' chip-group--id 'chip_one_select_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_one_select_collapsed"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select_collapsed"')}}
+              Chip one
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_select_collapsed ' chip-group--id 'chip_one_select_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_one_select_collapsed"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_select_collapsed"')}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_select_collapsed"')}}
             Chip two
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_select_collapsed ' chip-group--id 'chip_two_select_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_two_select_collapsed"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_select_collapsed ' chip-group--id 'chip_two_select_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_two_select_collapsed"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_select_collapsed"')}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_select_collapsed"')}}
             Chip three
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_select_collapsed ' chip-group--id 'chip_three_select_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_three_select_collapsed"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_select_collapsed ' chip-group--id 'chip_three_select_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_three_select_collapsed"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-          {{#> chip-text}}
-            2 more
-          {{/chip-text}}
+          {{#> chip-content}}
+            {{#> chip-text}}
+              2 more
+            {{/chip-text}}
+          {{/chip-content}}
         {{/chip}}
       {{/chip-group-list-item}}
     {{/chip-group-list}}
@@ -59,59 +73,81 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select"')}}
-            Chip one
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_select ' chip-group--id 'chip_one_select" aria-label="Remove" id="' chip-group--id 'remove_chip_one_select"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select"')}}
+              Chip one
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_select ' chip-group--id 'chip_one_select" aria-label="Remove" id="' chip-group--id 'remove_chip_one_select"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_select"')}}
-            Chip two
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_select ' chip-group--id 'chip_two_select" aria-label="Remove" id="' chip-group--id 'remove_chip_two_select"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_select"')}}
+              Chip two
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_select ' chip-group--id 'chip_two_select" aria-label="Remove" id="' chip-group--id 'remove_chip_two_select"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_select"')}}
-            Chip three
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_select ' chip-group--id 'chip_three_select" aria-label="Remove" id="' chip-group--id 'remove_chip_three_select"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_select"')}}
+              Chip three
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_select ' chip-group--id 'chip_three_select" aria-label="Remove" id="' chip-group--id 'remove_chip_three_select"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_select"')}}
-            Chip four
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_four_select ' chip-group--id 'chip_four_select" aria-label="Remove" id="' chip-group--id 'remove_chip_four_select"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_select"')}}
+              Chip four
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_four_select ' chip-group--id 'chip_four_select" aria-label="Remove" id="' chip-group--id 'remove_chip_four_select"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_select"')}}
-            Chip five
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_five_select ' chip-group--id 'chip_five_select" aria-label="Remove" id="' chip-group--id 'remove_chip_five_select"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_select"')}}
+              Chip five
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_five_select ' chip-group--id 'chip_five_select" aria-label="Remove" id="' chip-group--id 'remove_chip_five_select"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-          {{#> chip-text}}
-            Show less
-          {{/chip-text}}
+          {{#> chip-content}}
+            {{#> chip-text}}
+              Show less
+            {{/chip-text}}
+          {{/chip-content}}
         {{/chip}}
       {{/chip-group-list-item}}
     {{/chip-group-list}}
@@ -129,32 +165,44 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar_collapsed"')}}
-            Chip one
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar_collapsed ' chip-group--id 'chip_one_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar_collapsed"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar_collapsed"')}}
+              Chip one
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar_collapsed ' chip-group--id 'chip_one_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar_collapsed"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar_collapsed"')}}
-            Chip two
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar_collapsed ' chip-group--id 'chip_two_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar_collapsed"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar_collapsed"')}}
+              Chip two
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar_collapsed ' chip-group--id 'chip_two_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar_collapsed"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar_collapsed"')}}
-            Chip three
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar_collapsed ' chip-group--id 'chip_three_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar_collapsed"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar_collapsed"')}}
+              Chip three
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar_collapsed ' chip-group--id 'chip_three_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar_collapsed"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
     {{/chip-group-list}}
@@ -172,39 +220,53 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar_collapsed"')}}
-            Chip one
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar_collapsed ' chip-group--id 'chip_one_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar_collapsed"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar_collapsed"')}}
+              Chip one
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar_collapsed ' chip-group--id 'chip_one_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar_collapsed"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar_collapsed"')}}
-            Chip two
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar_collapsed ' chip-group--id 'chip_two_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar_collapsed"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar_collapsed"')}}
+              Chip two
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar_collapsed ' chip-group--id 'chip_two_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar_collapsed"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar_collapsed"')}}
-            Chip three
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar_collapsed ' chip-group--id 'chip_three_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar_collapsed"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar_collapsed"')}}
+              Chip three
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar_collapsed ' chip-group--id 'chip_three_toolbar_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar_collapsed"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-          {{#> chip-text}}
-            2 more
-          {{/chip-text}}
+          {{#> chip-content}}
+            {{#> chip-text}}
+              2 more
+            {{/chip-text}}
+          {{/chip-content}}
         {{/chip}}
       {{/chip-group-list-item}}
     {{/chip-group-list}}
@@ -222,59 +284,81 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
-            Chip one
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar ' chip-group--id 'chip_one_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
+              Chip one
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar ' chip-group--id 'chip_one_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar"')}}
-            Chip two
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar ' chip-group--id 'chip_two_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar"')}}
+              Chip two
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar ' chip-group--id 'chip_two_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar"')}}
-            Chip three
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar ' chip-group--id 'chip_three_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar"')}}
+              Chip three
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar ' chip-group--id 'chip_three_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_toolbar"')}}
-            Chip four
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_four_toolbar ' chip-group--id 'chip_four_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_four_toolbar"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_toolbar"')}}
+              Chip four
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_four_toolbar ' chip-group--id 'chip_four_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_four_toolbar"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_select"')}}
-            Chip five
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_five_select ' chip-group--id 'chip_five_select" aria-label="Remove" id="' chip-group--id 'remove_chip_five_select"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_select"')}}
+              Chip five
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_five_select ' chip-group--id 'chip_five_select" aria-label="Remove" id="' chip-group--id 'remove_chip_five_select"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
-          {{#> chip-text}}
-            Show less
-          {{/chip-text}}
+          {{#> chip-content}}
+            {{#> chip-text}}
+              Show less
+            {{/chip-text}}
+          {{/chip-content}}
         {{/chip}}
       {{/chip-group-list-item}}
     {{/chip-group-list}}
@@ -292,62 +376,86 @@ cssPrefix: pf-c-chip-group
     {{#> chip-group-list chip-group-list--attribute=(concat 'aria-labelledby="' chip-group--id '-label"')}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
-            Chip one
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar ' chip-group--id 'chip_one_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_toolbar"')}}
+              Chip one
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_toolbar ' chip-group--id 'chip_one_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_one_toolbar"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar"')}}
-            Chip two
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar ' chip-group--id 'chip_two_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_toolbar"')}}
+              Chip two
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_toolbar ' chip-group--id 'chip_two_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_two_toolbar"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar"')}}
-            Chip three
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar ' chip-group--id 'chip_three_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_toolbar"')}}
+              Chip three
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_toolbar ' chip-group--id 'chip_three_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_three_toolbar"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_toolbar"')}}
-            Chip four
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_four_toolbar ' chip-group--id 'chip_four_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_four_toolbar"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_four_toolbar"')}}
+              Chip four
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_four_toolbar ' chip-group--id 'chip_four_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_four_toolbar"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_toolbar"')}}
-            Chip five
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_five_toolbar ' chip-group--id 'chip_five_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_five_toolbar"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_five_toolbar"')}}
+              Chip five
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_five_toolbar ' chip-group--id 'chip_five_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_five_toolbar"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
       {{#> chip-group-list-item}}
         {{#> chip}}
-          {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_six_toolbar"')}}
-            Chip six
-          {{/chip-text}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_six_toolbar ' chip-group--id 'chip_six_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_six_toolbar"')}}
-            <i class="fas fa-times" aria-hidden="true"></i>
-          {{/button}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_six_toolbar"')}}
+              Chip six
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_six_toolbar ' chip-group--id 'chip_six_toolbar" aria-label="Remove" id="' chip-group--id 'remove_chip_six_toolbar"')}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
         {{/chip}}
       {{/chip-group-list-item}}
     {{/chip-group-list}}
@@ -355,6 +463,7 @@ cssPrefix: pf-c-chip-group
   {{> chip-group-close}}
 {{/chip-group}}
 ```
+
 ### Overview
 A chip group is constrained to the width of its container and will wrap when it exceeds that width. An overflow value can be set and when the number of chips exceeds that value, additional chips will be hidden by default. The default overflow value will be set to 3 chips but this can be adjusted per application needs. The toggle button after the last chip allows the group to be expanded (or collapsed).
 
