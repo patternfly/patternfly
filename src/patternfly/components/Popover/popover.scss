@@ -52,10 +52,10 @@
   // Header
   --pf-c-popover__header--MarginBottom: var(--pf-global--spacer--sm);
 
-  // Title
-  --pf-c-popover__title--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-popover__title--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
-  --pf-c-popover__title--FontSize: var(--pf-global--FontSize--md);
+  // Title text
+  --pf-c-popover__title-text--LineHeight: var(--pf-global--LineHeight--md);
+  --pf-c-popover__title-text--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
+  --pf-c-popover__title-text--FontSize: var(--pf-global--FontSize--md);
 
   // Title icon
   --pf-c-popover__title-icon--MarginRight: var(--pf-global--spacer--sm);
@@ -213,14 +213,8 @@
 }
 
 .pf-c-popover__title {
+  display: flex;
   flex: 0 0 auto;
-  font-family: var(--pf-c-popover__title--FontFamily);
-  font-size: var(--pf-c-popover__title--FontSize);
-  line-height: var(--pf-c-popover__title--LineHeight);
-
-  &.pf-m-icon {
-    display: flex;
-  }
 }
 
 .pf-c-popover__title-icon {
@@ -229,6 +223,9 @@
 }
 
 .pf-c-popover__title-text {
+  font-family: var(--pf-c-popover__title-text--FontFamily);
+  font-size: var(--pf-c-popover__title-text--FontSize);
+  line-height: var(--pf-c-popover__title-text--LineHeight);
   color: var(--pf-c-popover__title-text--Color, inherit);
 }
 
