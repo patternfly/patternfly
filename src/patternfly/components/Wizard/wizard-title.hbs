@@ -6,7 +6,7 @@
     {{#> wizard-title-text}}
       {{{wizard-title-text--value}}}
     {{/wizard-title-text}}
-  {{else}}
+  {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}
 </div>
