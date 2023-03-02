@@ -6,9 +6,8 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 // URL.com/guidelines#layout
 .pf-c-page {
   --pf-c-page--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-page--inset: 0;
-  --pf-c-page--m-page-insets--inset: var(--pf-global--spacer--md);
-  --pf-c-page--m-page-insets--xl--inset: var(--pf-global--spacer--lg);
+  --pf-c-page--inset: var(--pf-global--spacer--md);
+  --pf-c-page--xl--inset: var(--pf-global--spacer--lg);
 
   // Header
   --pf-c-page__header--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
@@ -22,7 +21,7 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   @media (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__header-brand--PaddingLeft: var(--pf-c-page__header-brand--xl--PaddingLeft);
-    --pf-c-page--m-page-insets--inset: var(--pf-c-page--m-page-insets--xl--inset);
+    --pf-c-page--inset: var(--pf-c-page--xl--inset);
   }
 
   // Toggle
@@ -90,8 +89,10 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__sidebar--xl--TranslateX: 0;
 
   // Sidebar body
-  --pf-c-page__sidebar-body--PaddingRight: var(--pf-c-page--inset);
-  --pf-c-page__sidebar-body--PaddingLeft: var(--pf-c-page--inset);
+  --pf-c-page__sidebar-body--PaddingRight: 0;
+  --pf-c-page__sidebar-body--PaddingLeft: 0;
+  --pf-c-page__sidebar-body--m-page-insets--PaddingRight: var(--pf-c-page--inset);
+  --pf-c-page__sidebar-body--m-page-insets--PaddingLeft: var(--pf-c-page--inset);
   --pf-c-page__sidebar-body--m-menu--PaddingTop: 0;
   --pf-c-page__sidebar-body--m-menu--PaddingBottom: 0;
   --pf-c-page__sidebar-body--m-menu--BorderTopColor: var(--pf-global--BackgroundColor--dark-200);
@@ -465,8 +466,8 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   }
 
   &.pf-m-page-insets {
-    --pf-c-page__sidebar-body--PaddingRight: var(--pf-c-page--m-page-insets--inset);
-    --pf-c-page__sidebar-body--PaddingLeft: var(--pf-c-page--m-page-insets--inset);
+    --pf-c-page__sidebar-body--PaddingRight: var(--pf-c-page__sidebar-body--m-page-insets--PaddingRight);
+    --pf-c-page__sidebar-body--PaddingLeft: var(--pf-c-page__sidebar-body--m-page-insets--PaddingLeft);
   }
 
   &.pf-m-inset-none {
