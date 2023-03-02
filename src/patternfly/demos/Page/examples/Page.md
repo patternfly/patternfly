@@ -23,19 +23,19 @@ Using the `.pf-m-full-height` modifier class on the page component eliminates th
 
 {{#*inline "page-template-sidebar"}}
   {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true" page-sidebar--modifier="pf-m-expanded"}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-inset"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
       {{#> content}}
         <p>Custom sidebar content</p>
       {{/content}}
     {{/page-sidebar-body}}
     {{> divider}}
     {{> page-template-sidebar-body--nav}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-inset"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-page-insets"}}
       {{#> content}}
         <p>Custom sidebar content</p>
       {{/content}}
     {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-inset"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
       {{#> content}}
         <p>&copy;&nbsp;Copyright</p>
       {{/content}}

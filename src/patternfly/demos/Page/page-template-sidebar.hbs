@@ -1,13 +1,18 @@
 {{#> page-sidebar page-sidebar--ExcludeSidebarBody=true}}
   {{#if page-template-sidebar--nav--IsExpandable}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-nav"}}
+    {{#> page-sidebar-body}}
       {{> page-template-expandable-nav}}
     {{/page-sidebar-body}}
   {{else if page-template-sidebar--nav--IsGrouped}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-nav"}}
+    {{#> page-sidebar-body}}
       {{> page-template-grouped-nav}}
     {{/page-sidebar-body}}
   {{else}}
-    {{> page-template-sidebar-body--nav}}
+    {{#> page-sidebar-body}}
+      {{> page-template-sidebar-nav}}
+    {{/page-sidebar-body}}
+    {{#> page-sidebar-body}}
+      {{> page-template-sidebar-nav}}
+    {{/page-sidebar-body}}
   {{/if}}
 {{/page-sidebar}}

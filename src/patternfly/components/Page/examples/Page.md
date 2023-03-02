@@ -25,7 +25,7 @@ import './Page.css'
       header-tools
     {{/page-header-tools}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar-body--modifier="pf-m-nav"}}
+  {{#> page-sidebar}}
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
@@ -94,13 +94,13 @@ import './Page.css'
     {{/page-header-tools}}
   {{/page-header}}
   {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true"}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-nav"}}
+    {{#> page-sidebar-body}}
       Navigation
     {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-inset"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-page-insets"}}
       inset content
     {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-inset"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
       footer content
     {{/page-sidebar-body}}
   {{/page-sidebar}}
@@ -160,7 +160,7 @@ import './Page.css'
       header-tools
     {{/page-header-tools}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar-body--modifier="pf-m-nav"}}
+  {{#> page-sidebar}}
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
@@ -193,7 +193,7 @@ import './Page.css'
       header-tools
     {{/page-header-tools}}
   {{/page-header}}
-  {{#> page-sidebar page-sidebar-body--modifier="pf-m-nav"}}
+  {{#> page-sidebar}}
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
@@ -295,11 +295,8 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | `.pf-m-selected` | `.pf-c-page__header-tools-item` | Modifies a header tools item to indicate that the button inside is in the selected state. |
 | `.pf-m-expanded` | `.pf-c-page__sidebar` |  Modifies the sidebar for the expanded state. |
 | `.pf-m-collapsed` | `.pf-c-page__sidebar` |  Modifies the sidebar for the collapsed state. |
-| `.pf-m-inset` | `.pf-c-page__sidebar-body` | Modifies a sidebar body left/right inset to visually match padding of page elements. |
-| `.pf-m-no-inset` | `.pf-c-page__sidebar-body` | Removes a sidebar body left/right inset. |
-| `.pf-m-vertical-padding` | `.pf-c-page__sidebar-body` | Modifies a sidebar body top/bottom padding. |
-| `.pf-m-no-vertical-padding` | `.pf-c-page__sidebar-body` | Removes a sidebar body top/bottom padding. |
-| `.pf-m-nav` | `.pf-c-page__sidebar-body` | Modifies a sidebar body top/bottom padding to accomodate a navigation component. |
+| `.pf-m-page-insets` | `.pf-c-page__sidebar-body` |  Modifies a sidebar body padding/inset to visually match padding of page elements. |
+| `.pf-m-inset-none` | `.pf-c-page__sidebar-body` | Removes a sidebar body left/right inset. |
 | `.pf-m-light` | `.pf-c-page__sidebar` |  Modifies the sidebar the light variation. **Note: for use with a light themed nav component** |
 | `.pf-m-light` | `.pf-c-page__main-section` | Modifies a main page section to have a light theme. |
 | `.pf-m-dark-200` | `.pf-c-page__main-section` |  Modifies a main page section to have a dark theme and a dark transparent background. |
