@@ -67,19 +67,19 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
   @include pf-c-divider--m-horizontal; // set to default to horizontal
 
   flex-direction: var(--pf-c-divider--FlexDirection);
+  flex-shrink: 0;
   align-items: center;
   align-self: stretch;
-  flex-shrink: 0;
   justify-content: center;
   border: 0; // removes the default border styling on an hr
 
   &::after {
     align-self: stretch;
+    justify-self: center;
     width: var(--pf-c-divider--after--Width);
     height: var(--pf-c-divider--after--Height);
     content: "";
     background-color: var(--pf-c-divider--after--BackgroundColor);
-    justify-self: center;
   }
 
   // stylelint-disable max-nesting-depth
@@ -87,7 +87,7 @@ $pf-c-divider--spacer-map: build-spacer-map("none", "xs", "sm", "md", "lg", "xl"
   @each $breakpoint, $breakpoint-value in $pf-c-divider--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @if ($breakpoint != "base") {
+    @if $breakpoint != "base" {
       @include pf-apply-breakpoint($breakpoint) {
         &.pf-m-horizontal#{$breakpoint-name} {
           @include pf-c-divider--m-horizontal;

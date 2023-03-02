@@ -335,9 +335,9 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 // Panel actions
 .pf-c-drawer__actions {
-  grid-column: 2;
-  grid-row: 1;
   display: flex;
+  grid-row: 1;
+  grid-column: 2;
   align-self: baseline;
   margin-top: var(--pf-c-drawer__actions--MarginTop);
   margin-right: var(--pf-c-drawer__actions--MarginRight);

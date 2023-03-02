@@ -306,5 +306,5 @@
 @import "./themes/dark/variables";
 
 @include pf-theme-dark($pf-theme-dark-prefix: ":root") {
-  @include _variables;
+  @include pf-theme-dark-variables;
 }

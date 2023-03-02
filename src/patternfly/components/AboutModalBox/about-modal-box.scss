@@ -100,11 +100,11 @@
 
   position: relative;
   display: grid;
-  grid-template-rows: max-content max-content auto;
   grid-template-areas:
     "brand close"
     "header header"
     "content content";
+  grid-template-rows: max-content max-content auto;
   width: var(--pf-c-about-modal-box--Width);
   height: var(--pf-c-about-modal-box--Height);
   overflow-x: hidden;
@@ -112,26 +112,26 @@
   background-color: var(--pf-c-about-modal-box--BackgroundColor); // Because this component is always dark, set the background color
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
-    grid-template-columns: var(--pf-c-about-modal-box--sm--grid-template-columns);
     grid-template-areas:
       "brand          hero"
       "header         hero"
       "content        hero";
+    grid-template-columns: var(--pf-c-about-modal-box--sm--grid-template-columns);
   }
 
   @media only screen and (min-width: $pf-global--breakpoint--lg) {
     --pf-c-about-modal-box--Height: var(--pf-c-about-modal-box--lg--Height);
     --pf-c-about-modal-box--Width: var(--pf-c-about-modal-box--lg--Width);
 
-    grid-template-columns: var(--pf-c-about-modal-box--lg--grid-template-columns);
     grid-template-rows: max-content max-content auto;
+    grid-template-columns: var(--pf-c-about-modal-box--lg--grid-template-columns);
   }
 }
 
 // Brand
 .pf-c-about-modal-box__brand {
-  grid-area: brand;
   display: flex;
+  grid-area: brand;
   padding: var(--pf-c-about-modal-box__brand--PaddingTop) var(--pf-c-about-modal-box__brand--PaddingRight) var(--pf-c-about-modal-box__brand--PaddingBottom) var(--pf-c-about-modal-box__brand--PaddingLeft);
 }
 
@@ -141,9 +141,9 @@
 
 // Header
 .pf-c-about-modal-box__header {
-  grid-area: header;
   display: flex;
   flex-direction: column;
+  grid-area: header;
   padding-right: var(--pf-c-about-modal-box__header--PaddingRight);
   padding-bottom: var(--pf-c-about-modal-box__header--PaddingBottom);
   padding-left: var(--pf-c-about-modal-box__header--PaddingLeft);
@@ -176,10 +176,10 @@
 
 // Close
 .pf-c-about-modal-box__close {
-  grid-area: close;
   position: sticky;
   top: 0;
   display: flex;
+  grid-area: close;
   align-items: flex-start;
   justify-content: flex-end;
   padding-top: var(--pf-c-about-modal-box__close--PaddingTop);
@@ -220,12 +220,12 @@
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
     display: block;
+    grid-area: hero;
     background-image: var(--pf-c-about-modal-box__hero--sm--BackgroundImage);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: var(--pf-c-about-modal-box__hero--sm--BackgroundPosition);
     background-size: var(--pf-c-about-modal-box__hero--sm--BackgroundSize);
-    grid-area: hero;
   }
 }
 

@@ -93,8 +93,8 @@
   --pf-c-multiple-file-upload__status-item-progress-size--Color: var(--pf-global--Color--200);
 
   display: grid;
-  gap: var(--pf-c-multiple-file-upload--Gap);
   grid-template-columns: var(--pf-c-multiple-file-upload--GridTemplateColumns);
+  gap: var(--pf-c-multiple-file-upload--Gap);
 
   &.pf-m-horizontal {
     --pf-c-multiple-file-upload--GridTemplateColumns: var(--pf-c-multiple-file-upload--m-horizontal--GridTemplateColumns);
@@ -122,21 +122,21 @@
 
 .pf-c-multiple-file-upload__main {
   display: grid;
+  grid-template-areas: var(--pf-c-multiple-file-upload__main--GridTemplateAreas);
+  grid-template-rows: var(--pf-c-multiple-file-upload__main--GridTemplateRows);
+  grid-template-columns: var(--pf-c-multiple-file-upload__main--GridTemplateColumns);
+  gap: var(--pf-c-multiple-file-upload__main--Gap);
   padding: var(--pf-c-multiple-file-upload__main--PaddingTop) var(--pf-c-multiple-file-upload__main--PaddingRight) var(--pf-c-multiple-file-upload__main--PaddingBottom) var(--pf-c-multiple-file-upload__main--PaddingLeft);
   text-align: var(--pf-c-multiple-file-upload__main--TextAlign);
   background-color: var(--pf-c-multiple-file-upload__main--BackgroundColor);
   border: var(--pf-c-multiple-file-upload__main--BorderWidth) var(--pf-c-multiple-file-upload__main--BorderStyle) var(--pf-c-multiple-file-upload__main--BorderColor);
-  grid-template-columns: var(--pf-c-multiple-file-upload__main--GridTemplateColumns);
-  grid-template-rows: var(--pf-c-multiple-file-upload__main--GridTemplateRows);
-  grid-template-areas: var(--pf-c-multiple-file-upload__main--GridTemplateAreas);
-  gap: var(--pf-c-multiple-file-upload__main--Gap);
 }
 
 .pf-c-multiple-file-upload__title {
   display: var(--pf-c-multiple-file-upload__title--Display);
+  grid-area: title;
   grid-template-columns: var(--pf-c-multiple-file-upload__title--GridTemplateColumns);
   gap: var(--pf-c-multiple-file-upload__title--Gap);
-  grid-area: title;
 }
 
 .pf-c-multiple-file-upload__title-icon {

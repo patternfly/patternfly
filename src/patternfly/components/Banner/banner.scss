@@ -33,8 +33,8 @@
   @include pf-t-dark;
   @include pf-text-overflow;
 
-  padding: var(--pf-c-banner--PaddingTop) var(--pf-c-banner--PaddingRight) var(--pf-c-banner--PaddingBottom) var(--pf-c-banner--PaddingLeft);
   flex-shrink: 0;
+  padding: var(--pf-c-banner--PaddingTop) var(--pf-c-banner--PaddingRight) var(--pf-c-banner--PaddingBottom) var(--pf-c-banner--PaddingLeft);
   font-size: var(--pf-c-banner--FontSize);
   color: var(--pf-c-banner--Color);
   white-space: nowrap;

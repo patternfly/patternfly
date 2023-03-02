@@ -111,13 +111,13 @@
 
   position: relative;
   display: grid;
+  grid-template-areas: var(--pf-c-alert--GridTemplateAreas);
+  grid-template-columns: var(--pf-c-alert--GridTemplateColumns);
   padding: var(--pf-c-alert--PaddingTop) var(--pf-c-alert--PaddingRight) var(--pf-c-alert--PaddingBottom) var(--pf-c-alert--PaddingLeft);
   font-size: var(--pf-c-alert__FontSize);
   background-color: var(--pf-c-alert--BackgroundColor);
   border-top: var(--pf-c-alert--BorderTopWidth) solid var(--pf-c-alert--BorderTopColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
-  grid-template-columns: var(--pf-c-alert--GridTemplateColumns);
-  grid-template-areas: var(--pf-c-alert--GridTemplateAreas);
 
   &.pf-m-success {
     --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-success--BorderTopColor);
@@ -186,8 +186,8 @@
 }
 
 .pf-c-alert__icon {
-  grid-area: icon;
   display: flex;
+  grid-area: icon;
   margin-top: var(--pf-c-alert__icon--MarginTop);
   margin-right: var(--pf-c-alert__icon--MarginRight);
   font-size: var(--pf-c-alert__icon--FontSize);

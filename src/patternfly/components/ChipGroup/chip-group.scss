@@ -34,13 +34,13 @@
   --pf-c-chip-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
   --pf-c-chip-group__close--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
 
+  row-gap: var(--pf-c-chip-group--RowGap);
+  column-gap: var(--pf-c-chip-group--ColumnGap);
   max-width: 100%;
   padding-top: var(--pf-c-chip-group--PaddingTop);
   padding-right: var(--pf-c-chip-group--PaddingRight);
   padding-bottom: var(--pf-c-chip-group--PaddingBottom);
   padding-left: var(--pf-c-chip-group--PaddingLeft);
-  row-gap: var(--pf-c-chip-group--RowGap);
-  column-gap: var(--pf-c-chip-group--ColumnGap);
 
   &.pf-m-category {
     --pf-c-chip-group--PaddingTop: var(--pf-c-chip-group--m-category--PaddingTop);
@@ -57,10 +57,10 @@
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  align-items: baseline;
-  min-width: 0;
   row-gap: var(--pf-c-chip-group__main--RowGap);
   column-gap: var(--pf-c-chip-group__main--ColumnGap);
+  align-items: baseline;
+  min-width: 0;
 }
 
 .pf-c-chip-group,

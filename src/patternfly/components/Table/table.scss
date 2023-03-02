@@ -874,9 +874,9 @@
 .pf-c-table__button-content,
 .pf-c-table__column-help {
   display: grid;
+  grid-template-columns: auto max-content;
   align-items: end;
   justify-content: start;
-  grid-template-columns: auto max-content;
 
   .pf-c-table__text {
     min-width: auto;

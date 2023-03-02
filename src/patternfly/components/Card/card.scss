@@ -324,12 +324,12 @@
 
 .pf-c-card__actions {
   display: flex;
+  gap: var(--pf-c-card__actions--Gap);
   align-items: center;
   align-self: flex-start;
   order: 1;
   padding-left: var(--pf-c-card__actions--PaddingLeft);
   margin: var(--pf-c-card__actions--MarginTop) 0 var(--pf-c-card__actions--MarginBottom) auto;
-  gap: var(--pf-c-card__actions--Gap);
 
   + .pf-c-card__title,
   + .pf-c-card__body,

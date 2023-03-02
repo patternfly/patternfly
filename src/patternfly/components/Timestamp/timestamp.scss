@@ -20,12 +20,12 @@
   outline-offset: var(--pf-c-timestamp--OutlineOffset);
 
   &.pf-m-help-text {
-    cursor: pointer;
     text-decoration-line: var(--pf-c-timestamp--m-help-text--TextDecorationLine);
-    text-decoration-style: var(--pf-c-timestamp--m-help-text--TextDecorationStyle);
     text-decoration-thickness: var(--pf-c-timestamp--m-help-text--TextDecorationThickness);
-    text-underline-offset: var(--pf-c-timestamp--m-help-text--TextUnderlineOffset);
+    text-decoration-style: var(--pf-c-timestamp--m-help-text--TextDecorationStyle);
     text-decoration-color: var(--pf-c-timestamp--m-help-text--TextDecorationColor);
+    text-underline-offset: var(--pf-c-timestamp--m-help-text--TextUnderlineOffset);
+    cursor: pointer;
 
     &:hover {
       --pf-c-timestamp--Color: var(--pf-c-timestamp--m-help-text--hover--Color);

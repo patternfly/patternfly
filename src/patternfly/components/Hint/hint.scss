@@ -41,11 +41,11 @@
 
 .pf-c-hint__actions {
   display: inline-grid;
+  grid-row: 1;
+  grid-column: 2;
   grid-auto-flow: column;
   margin-left: var(--pf-c-hint__actions--MarginLeft);
   text-align: right;
-  grid-column: 2;
-  grid-row: 1;
 
   // Only applies to the plain dropdown
   .pf-c-dropdown .pf-c-dropdown__toggle.pf-m-plain {

@@ -10,8 +10,8 @@ $pf-l-gallery--breakpoint-map: build-breakpoint-map();
   --pf-l-gallery--GridTemplateRows: auto;
 
   display: grid;
-  grid-template-columns: var(--pf-l-gallery--GridTemplateColumns);
   grid-template-rows: var(--pf-l-gallery--GridTemplateRows);
+  grid-template-columns: var(--pf-l-gallery--GridTemplateColumns);
 
   &.pf-m-gutter {
     grid-gap: var(--pf-l-gallery--m-gutter--GridGap);

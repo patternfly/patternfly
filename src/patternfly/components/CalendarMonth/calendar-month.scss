@@ -214,10 +214,10 @@
   }
 
   &:disabled {
-    pointer-events: none;
-
     --pf-c-calendar-month__date--Color: var(--pf-c-calendar-month__date--disabled--Color);
     --pf-c-calendar-month__date--hover--focus--BorderColor: transparent;
+
+    pointer-events: none;
   }
 }
 

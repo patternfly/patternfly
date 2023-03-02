@@ -72,9 +72,9 @@
 
 .pf-c-search-input__text {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "text-input";
   flex: 1;
+  grid-template-areas: "text-input";
+  grid-template-columns: 1fr;
 
   &::before,
   &::after {

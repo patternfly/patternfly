@@ -43,19 +43,13 @@
   @if length($map-items) == 0 {
     $map: ("base": null);
     $map: map-merge($map, $pf-global--breakpoint-name-map);
-  }
-
-  @else {
+  } @else {
     @each $breakpoint in $map-items {
       @if not map-has-key($pf-global--breakpoint-name-map, $breakpoint) and $breakpoint != "base" {
         $map: map-merge($map, ("invalid breakpoint #{$breakpoint}": null));
-      }
-
-      @else if $breakpoint == "base" {
+      } @else if $breakpoint == "base" {
         $map: map-merge($map, ($breakpoint: null));
-      }
-
-      @else {
+      } @else {
         $map: map-merge($map, ($breakpoint: map-get($pf-global--breakpoint-name-map, #{$breakpoint})));
       }
     }
@@ -72,19 +66,13 @@
   @if length($map-items) == 0 {
     $map: ("base": null);
     $map: map-merge($map, $pf-global--height-breakpoint-name-map);
-  }
-
-  @else {
+  } @else {
     @each $breakpoint in $map-items {
       @if not map-has-key($pf-global--height-breakpoint-name-map, $breakpoint) and $breakpoint != "base" {
         $map: map-merge($map, ("invalid breakpoint #{$breakpoint}": null));
-      }
-
-      @else if $breakpoint == "base" {
+      } @else if $breakpoint == "base" {
         $map: map-merge($map, ($breakpoint: null));
-      }
-
-      @else {
+      } @else {
         $map: map-merge($map, ($breakpoint: map-get($pf-global--height-breakpoint-name-map, #{$breakpoint})));
       }
     }
@@ -107,13 +95,9 @@
   @each $spacer in $map-items {
     @if not map-has-key($pf-global--spacer-map, $spacer) and $spacer != "none" {
       $map: map-merge($map, ("invalid spacer #{$spacer}": null));
-    }
-
-    @else if $spacer == "none" {
+    } @else if $spacer == "none" {
       $map: map-merge($map, ($spacer: 0));
-    }
-
-    @else {
+    } @else {
       $map: map-merge($map, ($spacer: map-get($pf-global--spacer-map, #{$spacer})));
     }
   }

@@ -64,10 +64,10 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
   --pf-c-description-list--m-display-2xl__description--FontSize: var(--pf-global--FontSize--2xl);
 
   display: grid;
-  align-items: baseline;
+  grid-template-columns: var(--pf-c-description-list--GridTemplateColumns);
   row-gap: var(--pf-c-description-list--RowGap);
   column-gap: var(--pf-c-description-list--ColumnGap);
-  grid-template-columns: var(--pf-c-description-list--GridTemplateColumns);
+  align-items: baseline;
 
   &[class*="pf-m-horizontal"] {
     @include pf-build-css-variable-stack("--pf-c-description-list__term--width", "--pf-c-description-list--m-horizontal__term--width", $pf-c-description-list--breakpoint-map);
@@ -133,11 +133,11 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
 .pf-c-description-list__group,
 .pf-c-description-list > .pf-c-card {
   display: grid;
+  grid-template-rows: var(--pf-c-description-list__group--GridTemplateRows);
+  grid-template-columns: var(--pf-c-description-list__group--GridTemplateColumns);
   grid-column: var(--pf-c-description-list__group--GridColumn);
   row-gap: var(--pf-c-description-list__group--RowGap);
   column-gap: var(--pf-c-description-list__group--ColumnGap);
-  grid-template-columns: var(--pf-c-description-list__group--GridTemplateColumns);
-  grid-template-rows: var(--pf-c-description-list__group--GridTemplateRows);
   align-items: baseline;
 }
 
@@ -175,11 +175,11 @@ $pf-c-description-list--breakpoint-map: build-breakpoint-map("base", "sm", "md",
 
   &.pf-m-help-text {
     text-decoration: underline;
-    cursor: pointer;
-    text-decoration-style: dashed;
     text-decoration-thickness: var(--pf-c-description-list__text--m-help-text--TextDecorationThickness);
-    text-underline-offset: var(--pf-c-description-list__text--m-help-text--TextDecorationOffset);
+    text-decoration-style: dashed;
     text-decoration-color: var(--pf-c-description-list__text--m-help-text--TextDecorationColor);
+    text-underline-offset: var(--pf-c-description-list__text--m-help-text--TextDecorationOffset);
+    cursor: pointer;
 
     &:hover {
       --pf-c-description-list__text--m-help-text--TextDecorationColor: var(--pf-c-description-list__text--m-help-text--hover--TextDecorationColor);

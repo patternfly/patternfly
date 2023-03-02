@@ -193,20 +193,20 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   // Base
   display: grid;
-  height: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: max-content 1fr;
   grid-template-areas:
     "header"
     "main";
+  grid-template-rows: max-content 1fr;
+  grid-template-columns: 1fr;
+    height: 100%;
   background-color: var(--pf-c-page--BackgroundColor);
 
   @media (min-width: $pf-global--breakpoint--xl) {
-    grid-template-columns: max-content 1fr;
     grid-template-areas:
       "header header"
       "nav main";
-  }
+    grid-template-columns: max-content 1fr;
+    }
 
   // full height
   &.pf-m-full-height {
@@ -219,15 +219,15 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 // Header
 .pf-c-page__header,
 .pf-c-page > .pf-c-masthead {
-  grid-area: header;
   z-index: var(--pf-c-page__header--ZIndex);
+  grid-area: header;
 }
 
 .pf-c-page__header {
   @include pf-t-dark; // force the container to follow the dark theme
 
-  grid-template-columns: auto auto;
   display: grid;
+  grid-template-columns: auto auto;
   align-items: center;
   min-width: 0;
   min-height: var(--pf-c-page__header--MinHeight);
@@ -282,17 +282,17 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
 // Header navigation
 .pf-c-page__header-nav {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
   align-self: stretch;
   min-width: 0;
   padding-right: var(--pf-c-page__header-nav--PaddingRight);
   padding-left: var(--pf-c-page__header-nav--PaddingLeft);
   background-color: var(--pf-c-page__header-nav--BackgroundColor);
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
-    grid-column: 2 / 3;
     grid-row: 1 / 2;
+    grid-column: 2 / 3;
   }
 
   .pf-c-nav {
@@ -386,10 +386,10 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
 // Sidebar
 .pf-c-page__sidebar {
+  z-index: var(--pf-c-page__sidebar--ZIndex);
   grid-area: nav;
   grid-row-start: 2;
   grid-column-start: 1;
-  z-index: var(--pf-c-page__sidebar--ZIndex);
   width: var(--pf-c-page__sidebar--Width);
   overflow-x: hidden;
   overflow-y: auto;
@@ -531,8 +531,8 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 // Main & Drawer
 .pf-c-page__main,
 .pf-c-page__drawer {
-  grid-area: main;
   z-index: var(--pf-c-page__main--ZIndex);
+  grid-area: main;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
