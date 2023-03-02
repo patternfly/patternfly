@@ -437,7 +437,7 @@ A popover is used to provide contextual information for another component on cli
 | `aria-modal="true"` | `.pf-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|
 | `aria-label="Close"` | `.pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
 | `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-c-popover` must not be a descendent of the element with `aria-hidden="true"`. For more info, see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
-| `.pf-screen-reader` | `.pf-c-popover__title-text` | Adds text to be read saying the alert status before the title. If `.pf-c-popover__title-text` is not used to create a title, this must be added within the title. **Required for popovers that are alerts** |
+| `.pf-screen-reader` | `.pf-c-popover__title-text <span>` | Adds text to be read saying the alert status before the title. If `.pf-c-popover__title-text` is not used to create a title, this must be added within the title. **Required for popovers that are alerts** |
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -446,7 +446,6 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-c-popover__arrow` | `<div>` |  Creates an arrow pointing towards the element the popover describes. **Required** |
 | `.pf-c-popover__content` | `<div>` |  Creates the content area of the popover. **Required** |
 | `.pf-c-popover__close` | `<div>` |  Positions the close icon in the top-right corner of the popover. **Required if there is a close button** |
-| `.pf-c-button` | `<button>` |  Creates the close button for the popover. |
 | `.pf-c-popover__header` | `<header>` | Creates the popover header. **Required if there is a title**|
 | `.pf-c-popover__title` | `<div>` | Creates the popover title. |
 | `.pf-c-popover__title-icon` | `<span>` | Creates the popover title icon. |

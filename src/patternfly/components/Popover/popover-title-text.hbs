@@ -3,7 +3,7 @@
     {{{popover-title-text--attribute}}}
   {{/if}}>
     {{#if popover--IsAlert}}
-    <span class="pf-screen-reader">
+      {{#> screen-reader}}
       {{#if popover--IsDefaultAlert}}
         Default
       {{else if popover--IsInfoAlert}}
@@ -16,7 +16,7 @@
         Danger
       {{/if}}
       alert:
-    </span>
+    {{/screen-reader}}
   {{/if}}
   {{> @partial-block}}
 </{{#if popover-title--type}}{{popover-title--type}}{{else}}h1{{/if}}>
