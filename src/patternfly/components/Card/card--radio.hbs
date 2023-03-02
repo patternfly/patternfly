@@ -1,0 +1,6 @@
+{{#> radio radio--modifier="pf-m-standalone" radio--isDisabled="true"}}
+  {{#> radio-input radio-input--modifier="pf-c-card__input" radio-input--attribute=(concat 'id="' card--id '-radio" name="' card--id '-radio" aria-labelledby="' card--id '" ' card--radio--IsDisabled ' ' card--radio--IsChecked)}}{{/radio-input}}
+  {{#if card--IsSelectable}}
+    {{#> radio-label radio-label--modifier="pf-c-card__label" radio-label--attribute=(concat 'id="' card--id '-radio-label" name="' card--id '-radio" for="' card--id '-radio" name="' card--id '-radio"')}}{{/radio-label}}
+  {{/if}}
+{{/radio}}
