@@ -1,0 +1,12 @@
+<div class="pf-c-wizard__title{{#if wizard-title--modifier}} {{wizard-title--modifier}}{{/if}}"
+  {{#if wizard-title--attribute}}
+    {{{wizard-title--attribute}}}
+  {{/if}}>
+  {{#if wizard-title-text--value}}
+    {{#> wizard-title-text}}
+      {{{wizard-title-text--value}}}
+    {{/wizard-title-text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</div>

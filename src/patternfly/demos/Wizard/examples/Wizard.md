@@ -13,10 +13,8 @@ wrapperTag: div
   {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-label="Basic wizard"'}}
     {{#> wizard wizard--id=(concat page-template--id "-wizard")}}
       {{#> wizard-header}}
-        {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
-        {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+        {{> wizard-close}}
+        {{> wizard-title wizard-title-text--value="Wizard title"}}
         {{#> wizard-description}}
           Here is where the description goes
         {{/wizard-description}}
@@ -96,10 +94,8 @@ wrapperTag: div
   {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-label="Wizard with expanded mobile nav"'}}
     {{#> wizard wizard--IsExpanded="true"}}
       {{#> wizard-header}}
-        {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
-        {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+        {{> wizard-close}}
+        {{> wizard-title wizard-title-text--value="Wizard title"}}
         {{#> wizard-description}}
           Here is where the description goes
         {{/wizard-description}}
@@ -179,10 +175,8 @@ wrapperTag: div
   {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-label="Basic wizard"'}}
     {{#> wizard wizard--id=(concat page-template--id "-wizard")}}
       {{#> wizard-header}}
-        {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
-        {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+        {{> wizard-close}}
+        {{> wizard-title wizard-title-text--value="Wizard title"}}
         {{#> wizard-description}}
           Here is where the description goes
         {{/wizard-description}}
@@ -262,10 +256,8 @@ wrapperTag: div
   {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-label="Basic wizard"'}}
     {{#> wizard wizard--id=(concat page-template--id "-wizard")}}
       {{#> wizard-header}}
-        {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
-        {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+        {{> wizard-close}}
+        {{> wizard-title wizard-title-text--value="Wizard title"}}
         {{#> wizard-description}}
           Here is where the description goes
         {{/wizard-description}}
@@ -345,10 +337,8 @@ wrapperTag: div
   {{#> modal-box modal-box--modifier="pf-m-lg" modal-box--attribute='aria-label="Basic wizard"'}}
     {{#> wizard wizard--id=(concat page-template--id "-wizard")}}
       {{#> wizard-header}}
-        {{#> button button--modifier="pf-m-plain pf-c-wizard__close" button--attribute='aria-label="Close"'}}
-          <i class="fas fa-times" aria-hidden="true"></i>
-        {{/button}}
-        {{#> title title--modifier="pf-m-3xl pf-c-wizard__title"}}Wizard title{{/title}}
+        {{> wizard-close}}
+        {{> wizard-title wizard-title-text--value="Wizard title"}}
         {{#> wizard-description}}
           Here is where the description goes
         {{/wizard-description}}
