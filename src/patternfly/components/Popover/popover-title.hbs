@@ -1,9 +1,6 @@
-<div class="pf-c-popover__title{{#if popover-title--IsIcon}} pf-m-icon{{/if}}{{#if popover-title--modifier}} {{popover-title--modifier}}{{/if}}"
+<div class="pf-c-popover__title{{#if popover-title--modifier}} {{popover-title--modifier}}{{/if}}"
   {{#if popover-title--attribute}}
     {{{popover-title--attribute}}}
   {{/if}}>
-  {{#if popover-title--IsIcon}}
-    {{> popover-title-icon}}
-  {{/if}}
   {{> @partial-block}}
 </div>
