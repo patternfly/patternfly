@@ -99,8 +99,8 @@
 
 .pf-c-chip__content {
   display: flex;
-  align-items: center;
   column-gap: var(--pf-c-chip__content--ColumnGap);
+  align-items: center;
   font-size: var(--pf-c-chip__content--FontSize);
 }
 

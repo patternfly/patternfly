@@ -400,25 +400,19 @@ section: components
   {{#> page-main-section}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
       {{#> card card--id=(concat page-template--id '-card-1') card--modifier="pf-m-selectable-raised pf-m-compact"}}
-        {{#> card-title}}
-          PatternFly
-        {{/card-title}}
+        {{> card-title card-title-text--value="PatternFly"}}
         {{#> card-body}}
           PatternFly is a community project that promotes design commonality and improves user experience.
         {{/card-body}}
       {{/card}}
       {{#> card card--id=(concat page-template--id '-card-2') card--modifier="pf-m-selectable-raised pf-m-compact"}}
-        {{#> card-title}}
-          ActiveMQ
-        {{/card-title}}
+        {{> card-title card-title-text--value="ActiveMQ"}}
         {{#> card-body}}
           The ActiveMQ component allows messages to be sent to a JMS Queue or Topic; or messages to be consumed from a JMS Queue or Topic using Apache ActiveMQ.
         {{/card-body}}
       {{/card}}
       {{#> card card--id=(concat page-template--id '-card-3') card--modifier="pf-m-selectable-raised pf-m-compact"}}
-        {{#> card-title}}
-          Apache Spark
-        {{/card-title}}
+        {{> card-title card-title-text--value="Apache Spark"}}
         {{#> card-body}}
           This documentation page covers the Apache Spark component for the Apache Camel.
         {{/card-body}}
@@ -500,9 +494,7 @@ section: components
                   {{/grid-item}}
                   {{#> grid grid--modifier="pf-m-all-6-col-on-md pf-m-all-3-col-on-2xl pf-m-gutter" card--modifier="pf-m-flat"}}
                     {{#> card}}
-                      {{#> card-title}}
-                        Check system requirements
-                      {{/card-title}}
+                      {{> card-title card-title-text--value="Check system requirements"}}
                       {{#> card-body}}
                         <p>
                           Your physical or virtual machine should meet the <a href="#">system requirement</a>.
@@ -510,9 +502,7 @@ section: components
                       {{/card-body}}
                     {{/card}}
                     {{#> card}}
-                      {{#> card-title}}
-                        Download an installation ISO image
-                      {{/card-title}}
+                      {{> card-title card-title-text--value="Download an installation ISO image"}}
                       {{#> card-body}}
                         <p>
                           <a href="#">Download</a>&nbsp;the binary DVD ISO.
@@ -520,9 +510,7 @@ section: components
                       {{/card-body}}
                     {{/card}}
                     {{#> card}}
-                      {{#> card-title}}
-                        Create a bootable installation media
-                      {{/card-title}}
+                      {{> card-title card-title-text--value="Create a bootable installation media"}}
                       {{#> card-body}}
                         <p>
                           <a href="#">Create</a>&nbsp;a bootable installation media, for example a USB flash drive.

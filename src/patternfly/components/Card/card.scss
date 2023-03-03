@@ -6,10 +6,11 @@
   --pf-c-card--child--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-card--child--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-card--c-divider--child--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-card__title--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
-  --pf-c-card__title--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-card__title--FontWeight: var(--pf-global--FontWeight--bold);
   --pf-c-card__title--not--last-child--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-card__title-text--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
+  --pf-c-card__title-text--FontSize: var(--pf-global--FontSize--md);
+  --pf-c-card__title-text--FontWeight: var(--pf-global--FontWeight--normal);
+  --pf-c-card__title-text--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-card__body--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__footer--FontSize: var(--pf-global--FontSize--md);
   --pf-c-card__actions--PaddingLeft: var(--pf-global--spacer--md);
@@ -81,7 +82,7 @@
   --pf-c-card--m-compact__title--not--last-child--PaddingBottom: var(--pf-global--spacer--sm);
 
   // Display large
-  --pf-c-card--m-display-lg__title--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-card--m-display-lg__title-text--FontSize: var(--pf-global--FontSize--xl);
   --pf-c-card--m-display-lg--first-child--PaddingTop: var(--pf-global--spacer--xl);
   --pf-c-card--m-display-lg--child--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-card--m-display-lg--child--PaddingBottom: var(--pf-global--spacer--xl);
@@ -230,7 +231,7 @@
   }
 
   &.pf-m-display-lg {
-    --pf-c-card__title--FontSize: var(--pf-c-card--m-display-lg__title--FontSize);
+    --pf-c-card__title-text--FontSize: var(--pf-c-card--m-display-lg__title-text--FontSize);
     --pf-c-card--first-child--PaddingTop: var(--pf-c-card--m-display-lg--first-child--PaddingTop);
     --pf-c-card--child--PaddingRight: var(--pf-c-card--m-display-lg--child--PaddingRight);
     --pf-c-card--child--PaddingBottom: var(--pf-c-card--m-display-lg--child--PaddingBottom);
@@ -316,10 +317,11 @@
   transition: var(--pf-c-card__header-toggle-icon--Transition);
 }
 
-.pf-c-card__title {
-  font-family: var(--pf-c-card__title--FontFamily);
-  font-size: var(--pf-c-card__title--FontSize);
-  font-weight: var(--pf-c-card__title--FontWeight);
+.pf-c-card__title-text {
+  font-family: var(--pf-c-card__title-text--FontFamily);
+  font-size: var(--pf-c-card__title-text--FontSize);
+  font-weight: var(--pf-c-card__title-text--FontWeight);
+  line-height: var(--pf-c-card__title-text--LineHeight);
 }
 
 .pf-c-card__actions {

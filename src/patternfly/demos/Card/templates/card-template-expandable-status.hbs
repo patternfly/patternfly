@@ -5,7 +5,7 @@
       {{#> card-actions}}
         {{> dropdown dropdown--id=(concat card--id "-dropdown-kebab-right-aligned") dropdown-toggle--IsPlain=true}}
       {{/card-actions}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
+      {{#> card-title card-title--id=(concat card--id '-title')}}
         {{#> title titleType="h2" title--modifier="pf-m-xl"}}
           Improve recommended pathways
         {{/title}}
