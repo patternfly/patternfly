@@ -23,10 +23,10 @@
   --pf-c-banner--link--disabled--TextDecoration: none;
 
   // modifier variables
-  --pf-c-banner--m-info--BackgroundColor: var(--pf-global--palette--blue-200);
-  --pf-c-banner--m-danger--BackgroundColor: var(--pf-global--danger-color--100);
-  --pf-c-banner--m-success--BackgroundColor: var(--pf-global--success-color--100);
-  --pf-c-banner--m-warning--BackgroundColor: var(--pf-global--warning-color--100);
+  --pf-c-banner--m-blue--BackgroundColor: var(--pf-global--palette--blue-200);
+  --pf-c-banner--m-red--BackgroundColor: var(--pf-global--palette--red-100);
+  --pf-c-banner--m-green--BackgroundColor: var(--pf-global--palette--green-500);
+  --pf-c-banner--m-gold--BackgroundColor: var(--pf-global--palette--gold-400);
   --pf-c-banner--m-sticky--ZIndex: var(--pf-global--ZIndex--md);
   --pf-c-banner--m-sticky--BoxShadow: var(--pf-global--BoxShadow--md-bottom);
 
@@ -40,28 +40,24 @@
   white-space: nowrap;
   background-color: var(--pf-c-banner--BackgroundColor);
 
-  &.pf-m-info,
   &.pf-m-blue {
     @include pf-t-light;
 
-    --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-info--BackgroundColor);
+    --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-blue--BackgroundColor);
   }
 
-  &.pf-m-danger,
   &.pf-m-red {
-    --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-danger--BackgroundColor);
+    --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-red--BackgroundColor);
   }
 
-  &.pf-m-success,
   &.pf-m-green {
-    --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-success--BackgroundColor);
+    --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-green--BackgroundColor);
   }
 
-  &.pf-m-warning,
   &.pf-m-gold {
     @include pf-t-light;
 
-    --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-warning--BackgroundColor);
+    --pf-c-banner--BackgroundColor: var(--pf-c-banner--m-gold--BackgroundColor);
   }
 
   &.pf-m-sticky {
