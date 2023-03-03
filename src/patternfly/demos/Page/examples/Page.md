@@ -28,14 +28,15 @@ Using the `.pf-m-full-height` modifier class on the page component eliminates th
         <p>Custom sidebar content</p>
       {{/content}}
     {{/page-sidebar-body}}
-    {{> divider}}
-    {{> page-template-sidebar-body--nav}}
+    {{#> page-sidebar-body}}
+      {{> page-template-sidebar-nav}}
+    {{/page-sidebar-body}}
     {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-page-insets"}}
       {{#> content}}
         <p>Custom sidebar content</p>
       {{/content}}
     {{/page-sidebar-body}}
-    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-no-fill pf-m-page-insets"}}
       {{#> content}}
         <p>&copy;&nbsp;Copyright</p>
       {{/content}}

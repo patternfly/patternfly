@@ -441,6 +441,10 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   padding-right: var(--pf-c-page__sidebar-body--PaddingRight);
   padding-left: var(--pf-c-page__sidebar-body--PaddingLeft);
 
+  &:last-child {
+    flex-grow: 1;
+  }
+
   &.pf-m-menu {
     --pf-c-page__sidebar-body--PaddingTop: var(--pf-c-page__sidebar-body--m-menu--PaddingTop);
     --pf-c-page__sidebar-body--PaddingBottom: var(--pf-c-page__sidebar-body--m-menu--PaddingBottom);
@@ -481,10 +485,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   &.pf-m-no-fill {
     flex-grow: 0;
-  }
-
-  &:last-child {
-    flex-grow: 1;
   }
 }
 
