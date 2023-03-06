@@ -8,9 +8,9 @@
     --pf-c-form-control--BorderBottomColor: var(--pf-global--BorderColor--400);
     --pf-c-form-control--BorderLeftColor: transparent;
     --pf-c-form-control--BackgroundColor: var(--pf-global--BackgroundColor--400);
-    --pf-c-form-control--disabled--Color: var(--pf-global--disabled-color--300);
+    --pf-c-form-control--disabled--Color: var(--pf-global--palette--black-300);
     --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
-    --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--BackgroundColor--400);
+    --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--disabled-color--200);
 
     color: var(--pf-global--Color--100);
 
@@ -21,10 +21,6 @@
 
     &[readonly] {
       border-bottom-color: var(--pf-global--palette--black-700); // should be a var?
-    }
-
-    &:disabled {
-      color: var(--pf-global--palette--black-100); // global var
     }
   }
 }
