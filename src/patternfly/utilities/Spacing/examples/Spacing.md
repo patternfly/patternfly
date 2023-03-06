@@ -1,6 +1,6 @@
 ---
 id: Spacing
-section: utilities
+section: utility-classes
 ---
 
 import './Spacing.css'

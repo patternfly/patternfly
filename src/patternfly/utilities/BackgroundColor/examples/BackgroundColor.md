@@ -1,6 +1,6 @@
 ---
 id: Background color
-section: utilities
+section: utility-classes
 ---
 
 ## Examples

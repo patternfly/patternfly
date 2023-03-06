@@ -1,6 +1,6 @@
 ---
 id: Alignment
-section: utilities
+section: utility-classes
 ---
 
 import './Alignment.css'

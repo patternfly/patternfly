@@ -1,7 +1,7 @@
 ---
 id: 'Dashboard'
 beta: true
-section: demos
+section: patterns
 cssPrefix: pf-d-dashboard
 ---
 

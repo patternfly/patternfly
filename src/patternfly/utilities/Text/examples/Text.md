@@ -1,6 +1,6 @@
 ---
 id: Text
-section: utilities
+section: utility-classes
 ---
 
 import './Text.css'

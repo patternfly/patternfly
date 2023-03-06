@@ -1,6 +1,6 @@
 ---
 id: Accessibility
-section: utilities
+section: utility-classes
 ---
 
 ## Examples
