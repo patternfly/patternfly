@@ -1,64 +1,64 @@
-.pf-c-table {
-  --pf-c-table__sticky-cell--MinWidth--base: #{pf-size-prem(200px)};
-  --pf-c-table__sticky-cell--MinWidth: var(--pf-c-table__sticky-cell--MinWidth--base);
-  --pf-c-table__sticky-cell--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-table__sticky-cell--Right: auto;
-  --pf-c-table__sticky-cell--Left: auto;
-  --pf-c-table__sticky-cell--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-table__sticky-cell--m-border-right--before--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__sticky-cell--m-border-right--before--BorderRightColor: var(--pf-global--BorderColor--100);
-  --pf-c-table__sticky-cell--m-border-left--before--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__sticky-cell--m-border-left--before--BorderLeftColor: var(--pf-global--BorderColor--100);
-  --pf-c-table__sticky-cell--m-right--Right: 0;
-  --pf-c-table__sticky-cell--m-left--Left: 0;
-  --pf-c-table--m-sticky-header__sticky-cell--ZIndex: calc(var(--pf-c-table__sticky-cell--ZIndex) + 1);
+.#{$table} {
+  --#{$table}__sticky-cell--MinWidth--base: #{pf-size-prem(200px)};
+  --#{$table}__sticky-cell--MinWidth: var(--#{$table}__sticky-cell--MinWidth--base);
+  --#{$table}__sticky-cell--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$table}__sticky-cell--Right: auto;
+  --#{$table}__sticky-cell--Left: auto;
+  --#{$table}__sticky-cell--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$table}__sticky-cell--m-border-right--before--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$table}__sticky-cell--m-border-right--before--BorderRightColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$table}__sticky-cell--m-border-left--before--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$table}__sticky-cell--m-border-left--before--BorderLeftColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$table}__sticky-cell--m-right--Right: 0;
+  --#{$table}__sticky-cell--m-left--Left: 0;
+  --#{$table}--m-sticky-header__sticky-cell--ZIndex: calc(var(--#{$table}__sticky-cell--ZIndex) + 1);
 
-  .pf-c-table__sticky-cell {
-    --pf-c-table--cell--Overflow: visible;
-    --pf-c-table--m-sticky-header--cell--ZIndex: var(--pf-c-table--m-sticky-header__sticky-cell--ZIndex);
+  .#{$table}__sticky-cell {
+    --#{$table}--cell--Overflow: visible;
+    --#{$table}--m-sticky-header--cell--ZIndex: var(--#{$table}--m-sticky-header__sticky-cell--ZIndex);
 
     position: sticky;
-    right: var(--pf-c-table__sticky-cell--Right);
-    left: var(--pf-c-table__sticky-cell--Left);
-    z-index: var(--pf-c-table__sticky-cell--ZIndex);
-    min-width: var(--pf-c-table__sticky-cell--MinWidth);
-    background-color: var(--pf-c-table__sticky-cell--BackgroundColor);
+    right: var(--#{$table}__sticky-cell--Right);
+    left: var(--#{$table}__sticky-cell--Left);
+    z-index: var(--#{$table}__sticky-cell--ZIndex);
+    min-width: var(--#{$table}__sticky-cell--MinWidth);
+    background-color: var(--#{$table}__sticky-cell--BackgroundColor);
     background-clip: padding-box;
 
     &.pf-m-border-right::before {
-      --pf-c-table--cell--m-border-right--before--BorderRightWidth: var(--pf-c-table__sticky-cell--m-border-right--before--BorderRightWidth);
-      --pf-c-table--cell--m-border-right--before--BorderRightColor: var(--pf-c-table__sticky-cell--m-border-right--before--BorderRightColor);
+      --#{$table}--cell--m-border-right--before--BorderRightWidth: var(--#{$table}__sticky-cell--m-border-right--before--BorderRightWidth);
+      --#{$table}--cell--m-border-right--before--BorderRightColor: var(--#{$table}__sticky-cell--m-border-right--before--BorderRightColor);
     }
 
     &.pf-m-border-left::before {
-      --pf-c-table--cell--m-border-left--before--BorderLeftWidth: var(--pf-c-table__sticky-cell--m-border-left--before--BorderLeftWidth);
-      --pf-c-table--cell--m-border-left--before--BorderLeftColor: var(--pf-c-table__sticky-cell--m-border-left--before--BorderLeftColor);
+      --#{$table}--cell--m-border-left--before--BorderLeftWidth: var(--#{$table}__sticky-cell--m-border-left--before--BorderLeftWidth);
+      --#{$table}--cell--m-border-left--before--BorderLeftColor: var(--#{$table}__sticky-cell--m-border-left--before--BorderLeftColor);
     }
 
     &.pf-m-right {
-      --pf-c-table__sticky-cell--Right: var(--pf-c-table__sticky-cell--m-right--Right);
+      --#{$table}__sticky-cell--Right: var(--#{$table}__sticky-cell--m-right--Right);
     }
 
     &.pf-m-left {
-      --pf-c-table__sticky-cell--Left: var(--pf-c-table__sticky-cell--m-left--Left);
+      --#{$table}__sticky-cell--Left: var(--#{$table}__sticky-cell--m-left--Left);
     }
 
   }
 }
 
-.pf-c-scroll-outer-wrapper {
-  --pf-c-scroll-outer-wrapper--MinHeight: #{pf-size-prem(400px)};
-  --pf-c-scroll-outer-wrapper--MaxHeight: 100%;
+.#{$pf-prefix}-scroll-outer-wrapper {
+  --#{$pf-prefix}scroll-outer-wrapper--MinHeight: #{pf-size-prem(400px)};
+  --#{$pf-prefix}scroll-outer-wrapper--MaxHeight: 100%;
 
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  min-height: var(--pf-c-scroll-outer-wrapper--MinHeight);
-  max-height: var(--pf-c-scroll-outer-wrapper--MaxHeight);
+  min-height: var(--#{$pf-prefix}scroll-outer-wrapper--MinHeight);
+  max-height: var(--#{$pf-prefix}scroll-outer-wrapper--MaxHeight);
   overflow: hidden;
 }
 
-.pf-c-scroll-inner-wrapper {
+.#{$pf-prefix}-scroll-inner-wrapper {
   display: flex;
   flex-direction: column;
   max-width: 100%;

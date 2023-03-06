@@ -1,4 +1,4 @@
-{{removeWhiteSpaceForPrettier}} &nbsp; {{removeWhiteSpaceForPrettier}} <span class="pf-c-form__group-label-help{{#if form-group-label-help--modifier}} {{form-group-label-help--modifier}}{{/if}}"
+{{removeWhiteSpaceForPrettier}} &nbsp; {{removeWhiteSpaceForPrettier}} <span class="{{pfv}}form__group-label-help{{#if form-group-label-help--modifier}} {{form-group-label-help--modifier}}{{/if}}"
   aria-label="{{#if form-group-label-help--aria-label}}{{form-group-label-help--aria-label}}{{else if form-group--id}}More information for {{form-group--id}}{{else}}More information{{/if}}"
   {{#if form-group-label-help--aria-describedby}} aria-describedby="{{form-group-label-help--aria-describedby}}"{{/if}}
   role="button"
@@ -8,10 +8,10 @@
     {{{form-group-label-help--attribute}}}
   {{/if}}>
   {{#if form-label--HasHelpIcon}}
-    {{removeWhiteSpaceForPrettier}} <i class="pficon pf-icon-help" aria-hidden="true"></i>
+    {{removeWhiteSpaceForPrettier}} <i class="pficon pf-v5-icon-help" aria-hidden="true"></i>
   {{else if @partial-block}}
     {{> @partial-block}}
   {{else}}
-    {{removeWhiteSpaceForPrettier}} <i class="pficon pf-icon-help" aria-hidden="true"></i>
+    {{removeWhiteSpaceForPrettier}} <i class="pficon pf-v5-icon-help" aria-hidden="true"></i>
   {{/if}}
 {{removeWhiteSpaceForPrettier}} </span>

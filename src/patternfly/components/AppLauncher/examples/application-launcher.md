@@ -2,7 +2,7 @@
 id: Application launcher
 section: components
 subsection: menus
-cssPrefix: pf-c-app-launcher
+cssPrefix: pf-v5-c-app-launcher
 ---
 
 import './application-launcher.css'
@@ -316,37 +316,37 @@ import './application-launcher.css'
 ### Accessibility
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
-| `aria-label="Application launcher"` | `.pf-c-app-launcher` |  Gives the app launcher element an accessible name. **Required** |
-| `aria-expanded="false"` | `.pf-c-button` |  Indicates that the menu is hidden. |
-| `aria-expanded="true"` | `.pf-c-button` |  Indicates that the menu is visible. |
-| `aria-label="Actions"` | `.pf-c-button` | Provides an accessible name for the app launcher when an icon is used. **Required** |
-| `hidden` | `.pf-c-app-launcher__menu` | Indicates that the menu is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
-| `disabled` | `.pf-c-app-launcher__toggle` | Disables the app launcher toggle and removes it from keyboard focus. |
-| `disabled` | `button.pf-c-app-launcher__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
-| `aria-disabled="true"` | `a.pf-c-app-launcher__menu-item` | When the menu item uses a link element, indicates that it is unavailable. |
-| `tabindex="-1"` | `a.pf-c-app-launcher__menu-item` | When the menu item uses a link element, removes it from keyboard focus. |
-| `aria-hidden="true"` | `.pf-c-app-launcher__menu-item-external-icon > *` | Hides the icon from assistive technologies. |
+| `aria-label="Application launcher"` | `.pf-v5-c-app-launcher` |  Gives the app launcher element an accessible name. **Required** |
+| `aria-expanded="false"` | `.pf-v5-c-button` |  Indicates that the menu is hidden. |
+| `aria-expanded="true"` | `.pf-v5-c-button` |  Indicates that the menu is visible. |
+| `aria-label="Actions"` | `.pf-v5-c-button` | Provides an accessible name for the app launcher when an icon is used. **Required** |
+| `hidden` | `.pf-v5-c-app-launcher__menu` | Indicates that the menu is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
+| `disabled` | `.pf-v5-c-app-launcher__toggle` | Disables the app launcher toggle and removes it from keyboard focus. |
+| `disabled` | `button.pf-v5-c-app-launcher__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
+| `aria-disabled="true"` | `a.pf-v5-c-app-launcher__menu-item` | When the menu item uses a link element, indicates that it is unavailable. |
+| `tabindex="-1"` | `a.pf-v5-c-app-launcher__menu-item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `aria-hidden="true"` | `.pf-v5-c-app-launcher__menu-item-external-icon > *` | Hides the icon from assistive technologies. |
 
 ### Usage
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-app-launcher` | `<nav>` | Defines the parent wrapper of the app launcher. |
-| `.pf-c-app-launcher__toggle` | `<button>` | Defines the app launcher toggle. |
-| `.pf-c-app-launcher__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. Use a `<div>` if your app launcher has groups. |
-| `.pf-c-app-launcher__menu-search` | `<div>` | Defines the wrapper for the search input. |
-| `.pf-c-app-launcher__group` | `<section>` | Defines a group of items. Required when there is more than one group. |
-| `.pf-c-app-launcher__group-title` | `<h1>` | Defines a title for a group of items. |
-| `.pf-c-app-launcher__menu-wrapper` | `<li>` | Defines a menu wrapper for use with multiple actionable items in a single item row. |
-| `.pf-c-app-launcher__menu-item` | `<a>`, `<button>` | Defines a menu item. |
-| `.pf-c-app-launcher__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
-| `.pf-c-app-launcher__menu-item-external-icon` | `<span>` | Defines the wrapper for the external link icon that appears on hover/focus. Use with `.pf-m-external`. |
-| `.pf-m-expanded` | `.pf-c-app-launcher` | Modifies for the expanded state. |
-| `.pf-m-top` | `.pf-c-app-launcher` | Modifies to display the menu above the toggle. |
-| `.pf-m-align-right` | `.pf-c-app-launcher__menu` | Modifies to display the menu aligned to the right edge of the toggle. |
-| `.pf-m-static` | `.pf-c-app-launcher__menu` | Modifies to position the menu statically to support custom positioning. |
-| `.pf-m-disabled` | `a.pf-c-app-launcher__menu-item` | Modifies to display the menu item as disabled. |
-| `.pf-m-external` | `.pf-c-app-launcher__menu-item` | Modifies to display the menu item as having an external link icon on hover/focus. |
-| `.pf-m-favorite` | `.pf-c-app-launcher__menu-wrapper` | Modifies wrapper to indicate that the item row has been favorited. |
-| `.pf-m-link` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies item for link styles. |
-| `.pf-m-action` | `.pf-c-app-launcher__menu-item.pf-m-wrapper > .pf-c-app-launcher__menu-item` | Modifies item to for action styles. |
-| `.pf-m-active` | `.pf-c-app-launcher__toggle` | Forces display of the active state of the toggle. |
+| `.pf-v5-c-app-launcher` | `<nav>` | Defines the parent wrapper of the app launcher. |
+| `.pf-v5-c-app-launcher__toggle` | `<button>` | Defines the app launcher toggle. |
+| `.pf-v5-c-app-launcher__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. Use a `<div>` if your app launcher has groups. |
+| `.pf-v5-c-app-launcher__menu-search` | `<div>` | Defines the wrapper for the search input. |
+| `.pf-v5-c-app-launcher__group` | `<section>` | Defines a group of items. Required when there is more than one group. |
+| `.pf-v5-c-app-launcher__group-title` | `<h1>` | Defines a title for a group of items. |
+| `.pf-v5-c-app-launcher__menu-wrapper` | `<li>` | Defines a menu wrapper for use with multiple actionable items in a single item row. |
+| `.pf-v5-c-app-launcher__menu-item` | `<a>`, `<button>` | Defines a menu item. |
+| `.pf-v5-c-app-launcher__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
+| `.pf-v5-c-app-launcher__menu-item-external-icon` | `<span>` | Defines the wrapper for the external link icon that appears on hover/focus. Use with `.pf-m-external`. |
+| `.pf-m-expanded` | `.pf-v5-c-app-launcher` | Modifies for the expanded state. |
+| `.pf-m-top` | `.pf-v5-c-app-launcher` | Modifies to display the menu above the toggle. |
+| `.pf-m-align-right` | `.pf-v5-c-app-launcher__menu` | Modifies to display the menu aligned to the right edge of the toggle. |
+| `.pf-m-static` | `.pf-v5-c-app-launcher__menu` | Modifies to position the menu statically to support custom positioning. |
+| `.pf-m-disabled` | `a.pf-v5-c-app-launcher__menu-item` | Modifies to display the menu item as disabled. |
+| `.pf-m-external` | `.pf-v5-c-app-launcher__menu-item` | Modifies to display the menu item as having an external link icon on hover/focus. |
+| `.pf-m-favorite` | `.pf-v5-c-app-launcher__menu-wrapper` | Modifies wrapper to indicate that the item row has been favorited. |
+| `.pf-m-link` | `.pf-v5-c-app-launcher__menu-item.pf-m-wrapper > .pf-v5-c-app-launcher__menu-item` | Modifies item for link styles. |
+| `.pf-m-action` | `.pf-v5-c-app-launcher__menu-item.pf-m-wrapper > .pf-v5-c-app-launcher__menu-item` | Modifies item to for action styles. |
+| `.pf-m-active` | `.pf-v5-c-app-launcher__toggle` | Forces display of the active state of the toggle. |

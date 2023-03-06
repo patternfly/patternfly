@@ -1,27 +1,29 @@
-.pf-c-action-list {
-  --pf-c-action-list--m-icon--spacer: 0;
-  --pf-c-action-list--child--spacer-base: var(--pf-global--spacer--md);
-  --pf-c-action-list--group--spacer-base: var(--pf-global--spacer--2xl);
+// @debug $action-list; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$action-list} {
+  --#{$action-list}--m-icon--spacer: 0;
+  --#{$action-list}--child--spacer-base: var(--#{$pf-global}--spacer--md);
+  --#{$action-list}--group--spacer-base: var(--#{$pf-global}--spacer--2xl);
 }
 
-.pf-c-action-list,
-.pf-c-action-list__group {
-  --pf-c-action-list--child--spacer: var(--pf-c-action-list--child--spacer-base);
-  --pf-c-action-list--group--spacer: var(--pf-c-action-list--group--spacer-base);
+.#{$action-list},
+.#{$action-list}__group {
+  --#{$action-list}--child--spacer: var(--#{$action-list}--child--spacer-base);
+  --#{$action-list}--group--spacer: var(--#{$action-list}--group--spacer-base);
 
   display: flex;
   align-items: center;
 
   > * + * {
-    margin-left: var(--pf-c-action-list--child--spacer);
+    margin-left: var(--#{$action-list}--child--spacer);
   }
 
-  > * + .pf-c-action-list__group,
-  .pf-c-action-list__group + * {
-    margin-left: var(--pf-c-action-list--group--spacer);
+  > * + .#{$action-list}__group,
+  .#{$action-list}__group + * {
+    margin-left: var(--#{$action-list}--group--spacer);
   }
 
   &.pf-m-icons {
-    --pf-c-action-list--child--spacer: var(--pf-c-action-list--m-icon--spacer);
+    --#{$action-list}--child--spacer: var(--#{$action-list}--m-icon--spacer);
   }
 }

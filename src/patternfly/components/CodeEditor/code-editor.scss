@@ -1,58 +1,60 @@
-.pf-c-code-editor {
+// @debug $code-editor; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$code-editor} {
   // controls
-  --pf-c-code-editor__controls--c-button--m-control--Color: var(--pf-global--Color--200);
-  --pf-c-code-editor__controls--c-button--m-control--hover--Color: var(--pf-global--Color--100);
-  --pf-c-code-editor__controls--c-button--m-control--focus--Color: var(--pf-global--Color--100);
-  --pf-c-code-editor__controls--c-button--m-control--disabled--after--BorderBottomColor: var(--pf-global--BorderColor--100);
+  --#{$code-editor}__controls--c-button--m-control--Color: var(--#{$pf-global}--Color--200);
+  --#{$code-editor}__controls--c-button--m-control--hover--Color: var(--#{$pf-global}--Color--100);
+  --#{$code-editor}__controls--c-button--m-control--focus--Color: var(--#{$pf-global}--Color--100);
+  --#{$code-editor}__controls--c-button--m-control--disabled--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
 
   // Header
-  --pf-c-code-editor__header--before--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-code-editor__header--before--BorderBottomColor: var(--pf-global--BorderColor--100);
+  --#{$code-editor}__header--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$code-editor}__header--before--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
 
   // main
-  --pf-c-code-editor__main--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-code-editor__main--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-code-editor__main--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-code-editor--m-read-only__main--BackgroundColor: var(--pf-global--disabled-color--300);
-  --pf-c-code-editor__main--m-drag-hover--before--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-code-editor__main--m-drag-hover--before--BorderColor: var(--pf-global--primary-color--100);
-  --pf-c-code-editor__main--m-drag-hover--after--BackgroundColor: var(--pf-global--primary-color--100);
-  --pf-c-code-editor__main--m-drag-hover--after--Opacity: .1;
+  --#{$code-editor}__main--BorderColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$code-editor}__main--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$code-editor}__main--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$code-editor}--m-read-only__main--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
+  --#{$code-editor}__main--m-drag-hover--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$code-editor}__main--m-drag-hover--before--BorderColor: var(--#{$pf-global}--primary-color--100);
+  --#{$code-editor}__main--m-drag-hover--after--BackgroundColor: var(--#{$pf-global}--primary-color--100);
+  --#{$code-editor}__main--m-drag-hover--after--Opacity: .1;
 
   // code
-  --pf-c-code-editor__code--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-code-editor__code--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-code-editor__code--PaddingBottom: var(--pf-global--spacer--sm);
-  --pf-c-code-editor__code--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-code-editor__code-pre--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-code-editor__code-pre--FontFamily: var(--pf-global--FontFamily--monospace);
+  --#{$code-editor}__code--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$code-editor}__code--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$code-editor}__code--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$code-editor}__code--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$code-editor}__code-pre--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$code-editor}__code-pre--FontFamily: var(--#{$pf-global}--FontFamily--monospace);
 
   // content
-  --pf-c-code-editor__header-main--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-code-editor__header-main--PaddingLeft: var(--pf-global--spacer--sm);
+  --#{$code-editor}__header-main--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$code-editor}__header-main--PaddingLeft: var(--#{$pf-global}--spacer--sm);
 
   // tab
-  --pf-c-code-editor__tab--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-code-editor__tab--Color: var(--pf-global--Color--200);
-  --pf-c-code-editor__tab--PaddingTop: var(--pf-global--spacer--form-element);
-  --pf-c-code-editor__tab--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-code-editor__tab--PaddingBottom: var(--pf-global--spacer--form-element);
-  --pf-c-code-editor__tab--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-code-editor__tab--BorderTopWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-code-editor__tab--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-code-editor__tab--BorderBottomWidth: 0;
-  --pf-c-code-editor__tab--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-code-editor__tab--BorderColor: var(--pf-global--BorderColor--100);
+  --#{$code-editor}__tab--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$code-editor}__tab--Color: var(--#{$pf-global}--Color--200);
+  --#{$code-editor}__tab--PaddingTop: var(--#{$pf-global}--spacer--form-element);
+  --#{$code-editor}__tab--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$code-editor}__tab--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
+  --#{$code-editor}__tab--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$code-editor}__tab--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$code-editor}__tab--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$code-editor}__tab--BorderBottomWidth: 0;
+  --#{$code-editor}__tab--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$code-editor}__tab--BorderColor: var(--#{$pf-global}--BorderColor--100);
 
   // tab text
-  --pf-c-code-editor__tab-icon--text--MarginLeft: var(--pf-global--spacer--sm);
+  --#{$code-editor}__tab-icon--text--MarginLeft: var(--#{$pf-global}--spacer--sm);
 
   &.pf-m-read-only {
-    --pf-c-code-editor__main--BackgroundColor: var(--pf-c-code-editor--m-read-only__main--BackgroundColor);
+    --#{$code-editor}__main--BackgroundColor: var(--#{$code-editor}--m-read-only__main--BackgroundColor);
   }
 }
 
-.pf-c-code-editor__header {
+.#{$code-editor}__header {
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -64,43 +66,43 @@
     left: 0;
     pointer-events: none;
     content: "";
-    border-bottom: var(--pf-c-code-editor__header--before--BorderBottomWidth) solid var(--pf-c-code-editor__header--before--BorderBottomColor);
+    border-bottom: var(--#{$code-editor}__header--before--BorderBottomWidth) solid var(--#{$code-editor}__header--before--BorderBottomColor);
   }
 }
 
-.pf-c-code-editor__controls {
+.#{$code-editor}__controls {
   display: flex;
 
-  .pf-c-button.pf-m-control {
-    --pf-c-button--m-control--Color: var(--pf-c-code-editor__controls--c-button--m-control--Color);
+  .#{$button}.pf-m-control {
+    --#{$button}--m-control--Color: var(--#{$code-editor}__controls--c-button--m-control--Color);
 
     &:hover {
-      --pf-c-code-editor__controls--c-button--m-control--Color: var(--pf-c-code-editor__controls--c-button--m-control--hover--Color);
+      --#{$code-editor}__controls--c-button--m-control--Color: var(--#{$code-editor}__controls--c-button--m-control--hover--Color);
     }
 
     &:focus {
-      --pf-c-code-editor__controls--c-button--m-control--Color: var(--pf-c-code-editor__controls--c-button--m-control--focus--Color);
+      --#{$code-editor}__controls--c-button--m-control--Color: var(--#{$code-editor}__controls--c-button--m-control--focus--Color);
     }
 
     &:disabled {
       &::after {
-        border-bottom-color: var(--pf-c-code-editor__controls--c-button--m-control--disabled--after--BorderBottomColor);
+        border-bottom-color: var(--#{$code-editor}__controls--c-button--m-control--disabled--after--BorderBottomColor);
       }
     }
   }
 }
 
-.pf-c-code-editor__header-main {
+.#{$code-editor}__header-main {
   flex-grow: 1;
-  padding-right: var(--pf-c-code-editor__header-main--PaddingRight);
-  padding-left: var(--pf-c-code-editor__header-main--PaddingLeft);
+  padding-right: var(--#{$code-editor}__header-main--PaddingRight);
+  padding-left: var(--#{$code-editor}__header-main--PaddingLeft);
 }
 
-.pf-c-code-editor__main {
+.#{$code-editor}__main {
   position: relative;
-  background-color: var(--pf-c-code-editor__main--BackgroundColor);
-  border: var(--pf-c-code-editor__main--BorderWidth) solid;
-  border-color: var(--pf-c-code-editor__main--BorderColor);
+  background-color: var(--#{$code-editor}__main--BackgroundColor);
+  border: var(--#{$code-editor}__main--BorderWidth) solid;
+  border-color: var(--#{$code-editor}__main--BorderColor);
 
   &.pf-m-drag-hover {
     &::after {
@@ -110,8 +112,8 @@
       bottom: 0;
       left: 0;
       content: "";
-      background-color: var(--pf-c-code-editor__main--m-drag-hover--after--BackgroundColor);
-      opacity: var(--pf-c-code-editor__main--m-drag-hover--after--Opacity);
+      background-color: var(--#{$code-editor}__main--m-drag-hover--after--BackgroundColor);
+      opacity: var(--#{$code-editor}__main--m-drag-hover--after--Opacity);
     }
 
     &::before {
@@ -121,52 +123,52 @@
       bottom: 0;
       left: 0;
       content: "";
-      border: var(--pf-c-code-editor__main--m-drag-hover--before--BorderWidth) solid var(--pf-c-code-editor__main--m-drag-hover--before--BorderColor);
+      border: var(--#{$code-editor}__main--m-drag-hover--before--BorderWidth) solid var(--#{$code-editor}__main--m-drag-hover--before--BorderColor);
     }
   }
 
   // stylelint-disable selector-class-pattern
   .monaco-editor {
-    background-color: var(--pf-c-code-editor__main--BackgroundColor);
+    background-color: var(--#{$code-editor}__main--BackgroundColor);
   }
   // stylelint-enable selector-class-pattern
 }
 
-.pf-c-code-editor__header + .pf-c-code-editor__main {
+.#{$code-editor}__header + .#{$code-editor}__main {
   border-top-width: 0;
 }
 
-.pf-c-code-editor__code {
+.#{$code-editor}__code {
   position: relative;
-  padding: var(--pf-c-code-editor__code--PaddingTop) var(--pf-c-code-editor__code--PaddingRight) var(--pf-c-code-editor__code--PaddingBottom) var(--pf-c-code-editor__code--PaddingLeft);
+  padding: var(--#{$code-editor}__code--PaddingTop) var(--#{$code-editor}__code--PaddingRight) var(--#{$code-editor}__code--PaddingBottom) var(--#{$code-editor}__code--PaddingLeft);
 
-  .pf-c-code-editor__code-pre {
-    font-family: var(--pf-c-code-editor__code-pre--FontFamily);
-    font-size: var(--pf-c-code-editor__code-pre--FontSize);
+  .#{$code-editor}__code-pre {
+    font-family: var(--#{$code-editor}__code-pre--FontFamily);
+    font-size: var(--#{$code-editor}__code-pre--FontSize);
     white-space: pre-wrap;
   }
 }
 
-.pf-c-code-editor__tab {
+.#{$code-editor}__tab {
   position: relative;
   display: flex;
   align-items: center;
-  padding: var(--pf-c-code-editor__tab--PaddingTop) var(--pf-c-code-editor__tab--PaddingRight) var(--pf-c-code-editor__tab--PaddingBottom) var(--pf-c-code-editor__tab--PaddingLeft);
+  padding: var(--#{$code-editor}__tab--PaddingTop) var(--#{$code-editor}__tab--PaddingRight) var(--#{$code-editor}__tab--PaddingBottom) var(--#{$code-editor}__tab--PaddingLeft);
   margin-left: auto; // remove at breaking change
-  color: var(--pf-c-code-editor__tab--Color);
-  background-color: var(--pf-c-code-editor__tab--BackgroundColor);
-  border-color: var(--pf-c-code-editor__tab--BorderColor);
+  color: var(--#{$code-editor}__tab--Color);
+  background-color: var(--#{$code-editor}__tab--BackgroundColor);
+  border-color: var(--#{$code-editor}__tab--BorderColor);
   border-style: solid;
-  border-width: var(--pf-c-code-editor__tab--BorderTopWidth) var(--pf-c-code-editor__tab--BorderRightWidth) var(--pf-c-code-editor__tab--BorderBottomWidth) var(--pf-c-code-editor__tab--BorderLeftWidth);
+  border-width: var(--#{$code-editor}__tab--BorderTopWidth) var(--#{$code-editor}__tab--BorderRightWidth) var(--#{$code-editor}__tab--BorderBottomWidth) var(--#{$code-editor}__tab--BorderLeftWidth);
 }
 
-.pf-c-code-editor__tab-icon + .pf-c-code-editor__tab-text {
-  margin-left: var(--pf-c-code-editor__tab-icon--text--MarginLeft);
+.#{$code-editor}__tab-icon + .#{$code-editor}__tab-text {
+  margin-left: var(--#{$code-editor}__tab-icon--text--MarginLeft);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/code-editor";
 
-@include pf-theme-dark {
-  @include pf-theme-dark-code-editor;
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-code-editor;
 }

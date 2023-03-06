@@ -12,6 +12,8 @@ import prettyhtml from '@starptech/prettyhtml';
 const { src, watch } = gulp;
 export const hbsFileMap = {};
 export const hbsInstance = Handlebars.create();
+export const patternflyNS = 'pf';
+export const patternflyVersion = 'v5';
 
 const registeredHelpers = {};
 

@@ -1,9 +1,9 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-code-editor() {
-  .pf-c-code-editor__controls {
+@mixin pf-v5-theme-dark-code-editor() {
+  .#{$code-editor}__controls {
     > * + * {
-      border-left: 1px solid var(--pf-global--palette--black-700);
+      border-left: 1px solid var(--#{$pf-global}--palette--black-700);
     }
   }
 }

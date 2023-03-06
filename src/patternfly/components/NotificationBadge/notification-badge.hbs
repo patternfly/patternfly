@@ -2,7 +2,7 @@
   button--IsAriaExpanded=notification-badge--IsExpanded
   button--modifier="pf-m-plain"
   button--attribute=(concat 'aria-label="' notification-badge--aria-label '"')}}
-  <span class="pf-c-notification-badge
+  <span class="{{pfv}}notification-badge
     {{~#if notification-badge--IsUnread}} pf-m-unread
     {{~else if notification-badge--IsAttention}} pf-m-attention
     {{~else}} pf-m-read
@@ -16,15 +16,15 @@
     {{/if}}>
     <i class="
       {{~#if notification-badge--IsTask}}
-        pf-icon-task
+        pf-v5-icon-task
       {{~else if notification-badge--IsAttention}}
-        pf-icon-attention-bell
+        pf-v5-icon-attention-bell
       {{~else}}
-        pf-icon-bell
+        pf-v5-icon-bell
       {{~/if}}"
       aria-hidden="true"></i>
     {{#if notification-badge--count}}
-      <span class="pf-c-notification-badge__count">
+      <span class="{{pfv}}notification-badge__count">
         {{notification-badge--count}}
       </span>
     {{/if}}

@@ -1,4 +1,4 @@
-<label class="pf-c-dropdown__toggle-check
+<label class="{{pfv}}dropdown__toggle-check
   {{~#if dropdown-toggle-check--IsInProgress}} pf-m-in-progress{{/if}}
   {{~#if dropdown-toggle-check--modifier}} {{dropdown-toggle-check--modifier}}{{/if}}"
   for="{{dropdown--id}}-toggle-check"
@@ -6,7 +6,7 @@
     {{{dropdown-toggle-check--attribute}}}
   {{/if}}>
   {{#> check check--modifier="pf-m-standalone"}}
-    {{#> check-input 
+    {{#> check-input
       check-input--IsChecked=(concat dropdown-toggle-check--CheckboxIsChecked)
       check-input--IsDisabled=(concat dropdown-toggle--IsDisabled dropdown-toggle-check--IsInProgress)
       check-input--attribute=(concat 'id="' dropdown--id '-toggle-check" aria-label="' (ternary dropdown-toggle-check--aria-label dropdown-toggle-check--aria-label 'check')'"' (ternary dropdown-toggle--split-button--text (concat 'aria-labelledby="' dropdown--id '-toggle-check ' dropdown--id '-toggle-check-text"') ''))

@@ -1,4 +1,8 @@
-<li class="pf-c-data-list__item{{#if data-list-item--modifier}} {{data-list-item--modifier}}{{/if}}{{#if data-list-item--expanded}} pf-m-expanded{{/if}}{{#if data-list-item--IsClickable}} pf-m-clickable{{/if}}{{#if data-list-item--IsSelected}} pf-m-selected{{/if}}"
+<li class="{{pfv}}data-list__item
+  {{#if data-list-item--modifier}} {{data-list-item--modifier}}{{/if}}
+  {{#if data-list-item--expanded}} pf-m-expanded{{/if}}
+  {{#if data-list-item--IsClickable}} pf-m-clickable{{/if}}
+  {{#if data-list-item--IsSelected}} pf-m-selected{{/if}}"
   aria-labelledby="{{data-list--id}}-{{data-list-item--id}}"
   {{#if data-list-item--IsClickable}}
     tabindex="0"

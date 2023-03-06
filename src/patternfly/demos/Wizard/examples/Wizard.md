@@ -202,7 +202,7 @@ wrapperTag: div
               {{#> drawer-main}}
                 {{#> drawer-content drawer-content--NoBody="true"}}
                   {{#> wizard-main-body}}
-                    {{> __wizard-drawer-toggle __wizard-drawer-toggle--modifier="pf-u-hidden"}}
+                    {{> __wizard-drawer-toggle __wizard-drawer-toggle--modifier="pf-v5-u-hidden"}}
                     {{> __wizard-form}}
                   {{/wizard-main-body}}
                 {{/drawer-content}}
@@ -283,7 +283,7 @@ wrapperTag: div
               {{#> drawer-main}}
                 {{#> drawer-content drawer-content--NoBody="true"}}
                   {{#> wizard-main-body}}
-                    {{> __wizard-drawer-toggle __wizard-drawer-toggle--modifier="pf-u-hidden"}}
+                    {{> __wizard-drawer-toggle __wizard-drawer-toggle--modifier="pf-v5-u-hidden"}}
                     {{> __wizard-form}}
                   {{/wizard-main-body}}
                 {{/drawer-content}}
@@ -364,7 +364,7 @@ wrapperTag: div
               {{#> drawer-main}}
                 {{#> drawer-content drawer-content--NoBody="true"}}
                   {{#> wizard-main-body}}
-                    {{> __wizard-drawer-toggle __wizard-drawer-toggle--modifier="pf-u-hidden"}}
+                    {{> __wizard-drawer-toggle __wizard-drawer-toggle--modifier="pf-v5-u-hidden"}}
                     {{> __wizard-info}}
                   {{/wizard-main-body}}
                 {{/drawer-content}}

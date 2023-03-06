@@ -120,14 +120,14 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
         <i class="..." aria-hidden="true"></i>
       </button>
       ```
-      - For non-interactive icons, include `.pf-screen-reader` text near the icon. Depending on the component, the `.pf-screen-reader` text might not be a direct sibling to the icon element. For example, in the alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
+      - For non-interactive icons, include `.pf-screen-reader` text near the icon. Depending on the component, the `.pf-screen-reader` text might not be a direct sibling to the icon element. For example, in the alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-v5-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
       ```html noLive
-      <div class="pf-c-alert pf-m-success" aria-label="Success alert">
-        <div aria-hidden="true" class="pf-c-alert__icon">
+      <div class="pf-v5-c-alert pf-m-success" aria-label="Success alert">
+        <div aria-hidden="true" class="pf-v5-c-alert__icon">
           <i class="fas fa-check-circle"></i>
         </div>
-        <div class="pf-c-alert__body">
-          <h4 class="pf-c-alert__title">
+        <div class="pf-v5-c-alert__body">
+          <h4 class="pf-v5-c-alert__title">
             {{#> screen-reader}}Success:{{/screen-reader}} Success alert title
           </h4>
         </div>
@@ -136,7 +136,7 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
 
 
 ### Trapping focus
-The recommended interaction pattern for the modal components like the modal or popover is to trap focus within the modal element of the component when it becomes visible. For keyboard-only users that use the tab key to navigate the interface, this means that focus cannot be shifted outside of the modal when using the tab key. Instead, when focus leaves the last focusable item, it should be placed on the first focusable item of the modal. For screen reader users, the other contents on the page should be hidden from the screen reader. 
+The recommended interaction pattern for the modal components like the modal or popover is to trap focus within the modal element of the component when it becomes visible. For keyboard-only users that use the tab key to navigate the interface, this means that focus cannot be shifted outside of the modal when using the tab key. Instead, when focus leaves the last focusable item, it should be placed on the first focusable item of the modal. For screen reader users, the other contents on the page should be hidden from the screen reader.
 
 The method we recommend <a href="#testing">based on the screen reader / browser combinations we use for testing</a> is to apply `aria-hidden="true"` to the parent wrapping element of the page contents. Note that the modal element of the component must not be a descendent of this element with `aria-hidden="true"` and should be included as a sibling to this element.
 
@@ -150,7 +150,7 @@ Many accessibility issues can be found by doing a few simple checks:
     - All functionality is keyboard accessible
     - Order of elements in the HTML and in the layout follow a logical order
     - Elements with focus are clearly visible
-3. Disable styles, then test the information architecture and presence of adequate text labels. The [WAVE browser extension from WebAIM](https://wave.webaim.org/extension/) provides this feature if it isn't available in the browser you are using. 
+3. Disable styles, then test the information architecture and presence of adequate text labels. The [WAVE browser extension from WebAIM](https://wave.webaim.org/extension/) provides this feature if it isn't available in the browser you are using.
 4. Test with any screen reader available in your operating system. Screen readers that we target for testing PatternFly are:
     - JAWS with Chrome, Windows ([keyboard shortcuts](https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts))
     - Voiceover with Safari, Mac ([keyboard shortcuts](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts))

@@ -1,40 +1,42 @@
-.pf-c-timestamp {
-  --pf-c-timestamp--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-timestamp--Color: var(--pf-global--Color--200);
-  --pf-c-timestamp--OutlineOffset: #{pf-size-prem(3px)};
+// @debug $timestamp; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$timestamp} {
+  --#{$timestamp}--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$timestamp}--Color: var(--#{$pf-global}--Color--200);
+  --#{$timestamp}--OutlineOffset: #{pf-size-prem(3px)};
 
   // Help text variables for the timestamp
-  --pf-c-timestamp--m-help-text--TextDecorationLine: underline;
-  --pf-c-timestamp--m-help-text--TextDecorationStyle: dashed;
-  --pf-c-timestamp--m-help-text--TextDecorationThickness: var(--pf-global--BorderWidth--sm);
-  --pf-c-timestamp--m-help-text--TextUnderlineOffset: #{pf-size-prem(4px)};
-  --pf-c-timestamp--m-help-text--TextDecorationColor: var(--pf-global--BorderColor--200);
-  --pf-c-timestamp--m-help-text--hover--Color: var(--pf-global--Color--100);
-  --pf-c-timestamp--m-help-text--focus--Color: var(--pf-global--Color--100);
-  --pf-c-timestamp--m-help-text--hover--TextDecorationColor: var(--pf-global--Color--100);
-  --pf-c-timestamp--m-help-text--focus--TextDecorationColor: var(--pf-global--Color--100);
+  --#{$timestamp}--m-help-text--TextDecorationLine: underline;
+  --#{$timestamp}--m-help-text--TextDecorationStyle: dashed;
+  --#{$timestamp}--m-help-text--TextDecorationThickness: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$timestamp}--m-help-text--TextUnderlineOffset: #{pf-size-prem(4px)};
+  --#{$timestamp}--m-help-text--TextDecorationColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$timestamp}--m-help-text--hover--Color: var(--#{$pf-global}--Color--100);
+  --#{$timestamp}--m-help-text--focus--Color: var(--#{$pf-global}--Color--100);
+  --#{$timestamp}--m-help-text--hover--TextDecorationColor: var(--#{$pf-global}--Color--100);
+  --#{$timestamp}--m-help-text--focus--TextDecorationColor: var(--#{$pf-global}--Color--100);
 
   display: inline-block;
-  font-size: var(--pf-c-timestamp--FontSize);
-  color: var(--pf-c-timestamp--Color);
-  outline-offset: var(--pf-c-timestamp--OutlineOffset);
+  font-size: var(--#{$timestamp}--FontSize);
+  color: var(--#{$timestamp}--Color);
+  outline-offset: var(--#{$timestamp}--OutlineOffset);
 
   &.pf-m-help-text {
-    text-decoration-line: var(--pf-c-timestamp--m-help-text--TextDecorationLine);
-    text-decoration-thickness: var(--pf-c-timestamp--m-help-text--TextDecorationThickness);
-    text-decoration-style: var(--pf-c-timestamp--m-help-text--TextDecorationStyle);
-    text-decoration-color: var(--pf-c-timestamp--m-help-text--TextDecorationColor);
-    text-underline-offset: var(--pf-c-timestamp--m-help-text--TextUnderlineOffset);
+    text-decoration-line: var(--#{$timestamp}--m-help-text--TextDecorationLine);
+    text-decoration-thickness: var(--#{$timestamp}--m-help-text--TextDecorationThickness);
+    text-decoration-style: var(--#{$timestamp}--m-help-text--TextDecorationStyle);
+    text-decoration-color: var(--#{$timestamp}--m-help-text--TextDecorationColor);
+    text-underline-offset: var(--#{$timestamp}--m-help-text--TextUnderlineOffset);
     cursor: pointer;
 
     &:hover {
-      --pf-c-timestamp--Color: var(--pf-c-timestamp--m-help-text--hover--Color);
-      --pf-c-timestamp--m-help-text--TextDecorationColor: var(--pf-c-timestamp--m-help-text--hover--TextDecorationColor);
+      --#{$timestamp}--Color: var(--#{$timestamp}--m-help-text--hover--Color);
+      --#{$timestamp}--m-help-text--TextDecorationColor: var(--#{$timestamp}--m-help-text--hover--TextDecorationColor);
     }
 
     &:focus {
-      --pf-c-timestamp--Color: var(--pf-c-timestamp--m-help-text--focus--Color);
-      --pf-c-timestamp--m-help-text--TextDecorationColor: var(--pf-c-timestamp--m-help-text--focus--TextDecorationColor);
+      --#{$timestamp}--Color: var(--#{$timestamp}--m-help-text--focus--Color);
+      --#{$timestamp}--m-help-text--TextDecorationColor: var(--#{$timestamp}--m-help-text--focus--TextDecorationColor);
     }
   }
 }

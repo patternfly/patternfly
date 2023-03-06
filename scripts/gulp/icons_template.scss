@@ -1,6 +1,6 @@
 @font-face {
 	font-family: '<%= fontName %>';
-	src: url('#{$pf-global--fonticon-path}/<%= fontName %>.woff2<%= cacheBusterQueryString %>') format('woff2');
+	src: url('#{$pf-v5-global--fonticon-path}/<%= fontName %>.woff2<%= cacheBusterQueryString %>') format('woff2');
 }
 
 @mixin <%= cssClass%>-styles {

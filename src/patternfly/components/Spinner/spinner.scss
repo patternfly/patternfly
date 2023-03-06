@@ -1,43 +1,43 @@
-// Spinner Component
+// @debug $spinner; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.pf-c-spinner {
-  --pf-c-spinner--diameter: var(--pf-global--icon--FontSize--xl);
-  --pf-c-spinner--Width: var(--pf-c-spinner--diameter);
-  --pf-c-spinner--Height: var(--pf-c-spinner--diameter);
-  --pf-c-spinner--Color: var(--pf-global--primary-color--100);
+.#{$spinner} {
+  --#{$spinner}--diameter: var(--#{$pf-global}--icon--FontSize--xl);
+  --#{$spinner}--Width: var(--#{$spinner}--diameter);
+  --#{$spinner}--Height: var(--#{$spinner}--diameter);
+  --#{$spinner}--Color: var(--#{$pf-global}--primary-color--100);
 
   // sizes
-  --pf-c-spinner--m-sm--diameter: var(--pf-global--icon--FontSize--sm);
-  --pf-c-spinner--m-md--diameter: var(--pf-global--icon--FontSize--md);
-  --pf-c-spinner--m-lg--diameter: var(--pf-global--icon--FontSize--lg);
-  --pf-c-spinner--m-xl--diameter: var(--pf-global--icon--FontSize--xl);
+  --#{$spinner}--m-sm--diameter: var(--#{$pf-global}--icon--FontSize--sm);
+  --#{$spinner}--m-md--diameter: var(--#{$pf-global}--icon--FontSize--md);
+  --#{$spinner}--m-lg--diameter: var(--#{$pf-global}--icon--FontSize--lg);
+  --#{$spinner}--m-xl--diameter: var(--#{$pf-global}--icon--FontSize--xl);
 
   // inline
-  --pf-c-spinner--m-inline--diameter: 1em;
+  --#{$spinner}--m-inline--diameter: 1em;
 
-  width: var(--pf-c-spinner--Width);
-  height: var(--pf-c-spinner--Height);
+  width: var(--#{$spinner}--Width);
+  height: var(--#{$spinner}--Height);
   overflow: hidden;
 
   // Modifiers change the variables for size variations
   &.pf-m-inline {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-inline--diameter);
+    --#{$spinner}--diameter: var(--#{$spinner}--m-inline--diameter);
   }
 
   &.pf-m-sm {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-sm--diameter);
+    --#{$spinner}--diameter: var(--#{$spinner}--m-sm--diameter);
   }
 
   &.pf-m-md {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-md--diameter);
+    --#{$spinner}--diameter: var(--#{$spinner}--m-md--diameter);
   }
 
   &.pf-m-lg {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-lg--diameter);
+    --#{$spinner}--diameter: var(--#{$spinner}--m-lg--diameter);
   }
 
   &.pf-m-xl {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-xl--diameter);
+    --#{$spinner}--diameter: var(--#{$spinner}--m-xl--diameter);
   }
 }
 
@@ -49,50 +49,50 @@ svg.pf-c-spinner {
   --pf-c-spinner--stroke-width: 10;
 
   // path
-  --pf-c-spinner__path--Stroke: var(--pf-c-spinner--Color);
-  --pf-c-spinner__path--StrokeWidth: var(--pf-c-spinner--stroke-width);
-  --pf-c-spinner__path--AnimationTimingFunction: ease-in-out;
+  --#{$spinner}__path--Stroke: var(--#{$spinner}--Color);
+  --#{$spinner}__path--StrokeWidth: var(--#{$spinner}--stroke-width);
+  --#{$spinner}__path--AnimationTimingFunction: ease-in-out;
 
   // size modifiers
-  --pf-c-spinner--m-sm--diameter: var(--pf-global--icon--FontSize--sm);
-  --pf-c-spinner--m-md--diameter: var(--pf-global--icon--FontSize--md);
-  --pf-c-spinner--m-lg--diameter: var(--pf-global--icon--FontSize--lg);
-  --pf-c-spinner--m-xl--diameter: var(--pf-global--icon--FontSize--xl);
+  --#{$spinner}--m-sm--diameter: var(--#{$pf-global}--icon--FontSize--sm);
+  --#{$spinner}--m-md--diameter: var(--#{$pf-global}--icon--FontSize--md);
+  --#{$spinner}--m-lg--diameter: var(--#{$pf-global}--icon--FontSize--lg);
+  --#{$spinner}--m-xl--diameter: var(--#{$pf-global}--icon--FontSize--xl);
 
-  animation: pf-c-spinner-animation-rotate calc(var(--pf-c-spinner--AnimationDuration) * 2) var(--pf-c-spinner--AnimationTimingFunction) infinite;
+  animation: #{$spinner}-animation-rotate calc(var(--#{$spinner}--AnimationDuration) * 2) var(--#{$spinner}--AnimationTimingFunction) infinite;
 
   // Modifiers change the variables for size variations
   &.pf-m-sm {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-sm--diameter);
+    --#{$spinner}--diameter: var(--#{$spinner}--m-sm--diameter);
   }
 
   &.pf-m-md {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-md--diameter);
+    --#{$spinner}--diameter: var(--#{$spinner}--m-md--diameter);
   }
 
   &.pf-m-lg {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-lg--diameter);
+    --#{$spinner}--diameter: var(--#{$spinner}--m-lg--diameter);
   }
 
   &.pf-m-xl {
-    --pf-c-spinner--diameter: var(--pf-c-spinner--m-xl--diameter);
+    --#{$spinner}--diameter: var(--#{$spinner}--m-xl--diameter);
   }
 }
 // stylelint-enable
 
-.pf-c-spinner__path {
+.#{$spinner}__path {
   width: 100%;
   height: 100%;
-  stroke: var(--pf-c-spinner--Color);
+  stroke: var(--#{$spinner}--Color);
   stroke-dasharray: 283;
   stroke-dashoffset: 280;
   stroke-linecap: round;
-  stroke-width: var(--pf-c-spinner--stroke-width);
+  stroke-width: var(--#{$spinner}--stroke-width);
   transform-origin: 50% 50%;
-  animation: pf-c-spinner-animation-dash var(--pf-c-spinner--AnimationDuration) var(--pf-c-spinner__path--AnimationTimingFunction) infinite;
+  animation: #{$spinner}-animation-dash var(--#{$spinner}--AnimationDuration) var(--#{$spinner}__path--AnimationTimingFunction) infinite;
 }
 
-@keyframes pf-c-spinner-animation-rotate {
+@keyframes #{$spinner}-animation-rotate {
   0% {
     transform: rotate(0deg);
   }
@@ -102,14 +102,14 @@ svg.pf-c-spinner {
   }
 }
 
-@keyframes pf-c-spinner-animation-dash {
+@keyframes #{$spinner}-animation-dash {
   0% {
     stroke-dashoffset: 280;
     transform: rotate(0);
   }
 
   15% {
-    stroke-width: calc(var(--pf-c-spinner__path--StrokeWidth) - 4);
+    stroke-width: calc(var(--#{$spinner}__path--StrokeWidth) - 4);
   }
 
   40% {

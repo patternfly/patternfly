@@ -1,181 +1,181 @@
-$pf-c-tree-view--MaxDepth: 10;
+$pf-v5-c-tree-view--MaxDepth: 10;
 
-.pf-c-table {
-  --pf-c-table__tree-view-main--indent--base: calc(var(--pf-global--spacer--md) * 2 + var(--pf-c-table__tree-view-icon--MinWidth)); // based off of the expected width of the toggle button
-  --pf-c-table__tree-view-main--nested-indent--base: calc(var(--pf-c-table__tree-view-main--indent--base) - var(--pf-global--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
+.#{$table} {
+  --#{$table}__tree-view-main--indent--base: calc(var(--#{$pf-global}--spacer--md) * 2 + var(--#{$table}__tree-view-icon--MinWidth)); // based off of the expected width of the toggle button
+  --#{$table}__tree-view-main--nested-indent--base: calc(var(--#{$table}__tree-view-main--indent--base) - var(--#{$pf-global}--spacer--md)); // nested spacing that removes the toggle button's left padding, so the icon aligns with text on the node above it
 
   // main
-  --pf-c-table__tree-view-main--PaddingLeft: var(--pf-c-table__tree-view-main--indent--base);
-  --pf-c-table__tree-view-main--MarginLeft: calc(var(--pf-c-table--cell--PaddingLeft) * -1);
+  --#{$table}__tree-view-main--PaddingLeft: var(--#{$table}__tree-view-main--indent--base);
+  --#{$table}__tree-view-main--MarginLeft: calc(var(--#{$table}--cell--PaddingLeft) * -1);
 
   // check
-  --pf-c-table__tree-view-main--c-table__check--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-table__tree-view-main--c-table__check--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-table__tree-view-main--c-table__check--MarginRight: var(--pf-global--spacer--sm);
+  --#{$table}__tree-view-main--c-table__check--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$table}__tree-view-main--c-table__check--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$table}__tree-view-main--c-table__check--MarginRight: var(--#{$pf-global}--spacer--sm);
 
   // icon
-  --pf-c-table__tree-view-icon--MinWidth: var(--pf-global--FontSize--md);
-  --pf-c-table__tree-view-icon--MarginRight: var(--pf-global--spacer--sm);
+  --#{$table}__tree-view-icon--MinWidth: var(--#{$pf-global}--FontSize--md);
+  --#{$table}__tree-view-icon--MarginRight: var(--#{$pf-global}--spacer--sm);
 
   // toggle
-  --pf-c-table--m-tree-view__toggle--Position: absolute;
-  --pf-c-table--m-tree-view__toggle--Left: var(--pf-c-table__tree-view-main--PaddingLeft);
-  --pf-c-table--m-tree-view__toggle--TranslateX: -100%;
+  --#{$table}--m-tree-view__toggle--Position: absolute;
+  --#{$table}--m-tree-view__toggle--Left: var(--#{$table}__tree-view-main--PaddingLeft);
+  --#{$table}--m-tree-view__toggle--TranslateX: -100%;
 
   // toggle icon
-  --pf-c-table--m-tree-view__toggle__toggle-icon--MinWidth: var(--pf-global--FontSize--md);
+  --#{$table}--m-tree-view__toggle__toggle-icon--MinWidth: var(--#{$pf-global}--FontSize--md);
 
 
   // no node children
-  --pf-c-table--m-no-inset__tree-view-main--PaddingLeft: 0;
-  --pf-c-table--m-no-inset__tree-view-main--MarginLeft: 0;
+  --#{$table}--m-no-inset__tree-view-main--PaddingLeft: 0;
+  --#{$table}--m-no-inset__tree-view-main--MarginLeft: 0;
 
   &.pf-m-tree-view {
     // stylelint-disable selector-no-qualifying-type
     > tbody > tr {
-      --pf-c-table--m-tree-view__toggle--Left: var(--pf-c-table__tree-view-main--PaddingLeft);
+      --#{$table}--m-tree-view__toggle--Left: var(--#{$table}__tree-view-main--PaddingLeft);
 
       &.pf-m-no-inset {
-        --pf-c-table__tree-view-main--PaddingLeft: var(--pf-c-table--m-no-inset__tree-view-main--PaddingLeft);
-        --pf-c-table__tree-view-main--MarginLeft: var(--pf-c-table--m-no-inset__tree-view-main--MarginLeft);
+        --#{$table}__tree-view-main--PaddingLeft: var(--#{$table}--m-no-inset__tree-view-main--PaddingLeft);
+        --#{$table}__tree-view-main--MarginLeft: var(--#{$table}--m-no-inset__tree-view-main--MarginLeft);
       }
     }
     // stylelint-enable
 
     &.pf-m-no-inset {
-      --pf-c-table__tree-view-main--PaddingLeft: var(--pf-c-table--m-no-inset__tree-view-main--PaddingLeft);
-      --pf-c-table__tree-view-main--MarginLeft: var(--pf-c-table--m-no-inset__tree-view-main--MarginLeft);
+      --#{$table}__tree-view-main--PaddingLeft: var(--#{$table}--m-no-inset__tree-view-main--PaddingLeft);
+      --#{$table}__tree-view-main--MarginLeft: var(--#{$table}--m-no-inset__tree-view-main--MarginLeft);
     }
 
-    @for $i from 2 through $pf-c-tree-view--MaxDepth {
+    @for $i from 2 through $pf-v5-c-tree-view--MaxDepth {
       tr[aria-level="#{$i}"] {
-        --pf-c-table__tree-view-main--PaddingLeft: calc(var(--pf-c-table__tree-view-main--nested-indent--base) * #{$i - 1} + var(--pf-c-table__tree-view-main--indent--base));
+        --#{$table}__tree-view-main--PaddingLeft: calc(var(--#{$table}__tree-view-main--nested-indent--base) * #{$i - 1} + var(--#{$table}__tree-view-main--indent--base));
       }
     }
   }
 }
 
-.pf-c-table__tree-view-main {
+.#{$table}__tree-view-main {
   position: relative;
   display: flex;
   align-items: baseline;
   min-width: 0;
-  padding-left: var(--pf-c-table__tree-view-main--PaddingLeft);
-  margin-left: var(--pf-c-table__tree-view-main--MarginLeft);
+  padding-left: var(--#{$table}__tree-view-main--PaddingLeft);
+  margin-left: var(--#{$table}__tree-view-main--MarginLeft);
   text-align: left;
   cursor: pointer;
 
-  > .pf-c-table__toggle {
-    position: var(--pf-c-table--m-tree-view__toggle--Position);
-    left: var(--pf-c-table--m-tree-view__toggle--Left);
-    transform: translateX(var(--pf-c-table--m-tree-view__toggle--TranslateX));
+  > .#{$table}__toggle {
+    position: var(--#{$table}--m-tree-view__toggle--Position);
+    left: var(--#{$table}--m-tree-view__toggle--Left);
+    transform: translateX(var(--#{$table}--m-tree-view__toggle--TranslateX));
 
-    .pf-c-table__toggle-icon {
-      min-width: var(--pf-c-table--m-tree-view__toggle__toggle-icon--MinWidth);
+    .#{$table}__toggle-icon {
+      min-width: var(--#{$table}--m-tree-view__toggle__toggle-icon--MinWidth);
     }
   }
 
-  > .pf-c-table__check {
-    margin-right: var(--pf-c-table__tree-view-main--c-table__check--MarginRight);
+  > .#{$table}__check {
+    margin-right: var(--#{$table}__tree-view-main--c-table__check--MarginRight);
   }
 
-  > .pf-c-table__check label {
-    padding-right: var(--pf-c-table__tree-view-main--c-table__check--PaddingRight);
-    padding-left: var(--pf-c-table__tree-view-main--c-table__check--PaddingLeft);
-    margin: 0 calc(var(--pf-c-table__tree-view-main--c-table__check--MarginRight) * -1) 0 0;
+  > .#{$table}__check label {
+    padding-right: var(--#{$table}__tree-view-main--c-table__check--PaddingRight);
+    padding-left: var(--#{$table}__tree-view-main--c-table__check--PaddingLeft);
+    margin: 0 calc(var(--#{$table}__tree-view-main--c-table__check--MarginRight) * -1) 0 0;
   }
 }
 
-.pf-c-table__tree-view-text {
+.#{$table}__tree-view-text {
   display: flex;
 }
 
-.pf-c-table__tree-view-icon {
-  min-width: var(--pf-c-table__tree-view-icon--MinWidth);
-  margin-right: var(--pf-c-table__tree-view-icon--MarginRight);
+.#{$table}__tree-view-icon {
+  min-width: var(--#{$table}__tree-view-icon--MinWidth);
+  margin-right: var(--#{$table}__tree-view-icon--MarginRight);
 }
 
-.pf-c-table__tree-view-details-toggle {
+.#{$table}__tree-view-details-toggle {
   display: none;
 }
 
 // stylelint-disable
 @mixin pf-tree-view-grid {
-  .pf-m-tree-view-grid.pf-c-table {
+  .pf-m-tree-view-grid.#{$table} {
     @content;
   }
 
-  .pf-m-tree-view-grid-md.pf-c-table {
-    @media screen and (max-width: $pf-global--breakpoint--md) {
+  .pf-m-tree-view-grid-md.#{$table} {
+    @media screen and (max-width: $pf-v5-global--breakpoint--md) {
       @content;
     }
   }
 
-  .pf-m-tree-view-grid-lg.pf-c-table {
-    @media screen and (max-width: $pf-global--breakpoint--lg) {
+  .pf-m-tree-view-grid-lg.#{$table} {
+    @media screen and (max-width: $pf-v5-global--breakpoint--lg) {
       @content;
     }
   }
 
-  .pf-m-tree-view-grid-xl.pf-c-table {
-    @media screen and (max-width: $pf-global--breakpoint--xl) {
+  .pf-m-tree-view-grid-xl.#{$table} {
+    @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
       @content;
     }
   }
 
-  .pf-m-tree-view-grid-2xl.pf-c-table {
-    @media screen and (max-width: $pf-global--breakpoint--2xl) {
+  .pf-m-tree-view-grid-2xl.#{$table} {
+    @media screen and (max-width: $pf-v5-global--breakpoint--2xl) {
       @content;
     }
   }
 }
 
 @include pf-tree-view-grid {
-  --pf-c-table--m-tree-view-grid--tr--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
+  --#{$table}--m-tree-view-grid--tr--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
 
   // tbody cells
-  --pf-c-table--m-tree-view-grid--tbody--cell--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--m-tree-view-grid--tbody--cell--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table--m-tree-view-grid--tbody--cell--PaddingLeft: var(--pf-c-table__tree-view-main--indent--base);
-  --pf-c-table--m-tree-view-grid--tbody--cell--GridColumnGap: var(--pf-global--spacer--sm);
+  --#{$table}--m-tree-view-grid--tbody--cell--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$table}--m-tree-view-grid--tbody--cell--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft: var(--#{$table}__tree-view-main--indent--base);
+  --#{$table}--m-tree-view-grid--tbody--cell--GridColumnGap: var(--#{$pf-global}--spacer--sm);
 
   // action
-  --pf-c-table--m-tree-view-grid--c-table__action--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-table--m-tree-view-grid--c-table__action--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-table--m-tree-view-grid--c-table__action--PaddingLeft: 0;
-  --pf-c-table--m-tree-view-grid__tr--expanded__tree-view-title-cell--action--PaddingTop: var(--pf-global--spacer--xl);
+  --#{$table}--m-tree-view-grid--c-table__action--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$table}--m-tree-view-grid--c-table__action--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$table}--m-tree-view-grid--c-table__action--PaddingLeft: 0;
+  --#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--action--PaddingTop: var(--#{$pf-global}--spacer--xl);
 
   // details
-  --pf-c-table--m-tree-view-grid--m-tree-view-details-expanded--PaddingBottom: var(--pf-global--spacer--xl);
+  --#{$table}--m-tree-view-grid--m-tree-view-details-expanded--PaddingBottom: var(--#{$pf-global}--spacer--xl);
 
   // node cells
-  --pf-c-table--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-table--m-tree-view-grid--td--data-label--GridTemplateColumns: repeat(auto-fit, minmax(150px, 1fr));
-  --pf-c-table--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-table--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom: var(--pf-global--spacer--xs);
+  --#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingTop: var(--#{$pf-global}--spacer--xl);
+  --#{$table}--m-tree-view-grid--td--data-label--GridTemplateColumns: repeat(auto-fit, minmax(150px, 1fr));
+  --#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop: var(--#{$pf-global}--spacer--xs);
+  --#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom: var(--#{$pf-global}--spacer--xs);
 
   // main
-  --pf-c-table--m-tree-view-mobile__tree-view-main--c-table__check--MarginRight: 0;
-  --pf-c-table--m-tree-view-mobile__tree-view-main--c-table__check--Order: 4;
+  --#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--MarginRight: 0;
+  --#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--Order: 4;
 
   // text
-  --pf-c-table__tree-view-text--PaddingRight: var(--pf-global--spacer--sm);
+  --#{$table}__tree-view-text--PaddingRight: var(--#{$pf-global}--spacer--sm);
 
   // tbody cells
-  --pf-c-table--tbody--cell--PaddingTop: var(--pf-c-table--m-tree-view-grid--tbody--cell--PaddingTop);
-  --pf-c-table--tbody--cell--PaddingBottom: var(--pf-c-table--m-tree-view-grid--tbody--cell--PaddingBottom);
+  --#{$table}--tbody--cell--PaddingTop: var(--#{$table}--m-tree-view-grid--tbody--cell--PaddingTop);
+  --#{$table}--tbody--cell--PaddingBottom: var(--#{$table}--m-tree-view-grid--tbody--cell--PaddingBottom);
 
   // toggle
-  --pf-c-table__tree-view-details-toggle--MarginTop: calc(#{pf-size-prem(6px)} * -1);
-  --pf-c-table__tree-view-details-toggle--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
+  --#{$table}__tree-view-details-toggle--MarginTop: calc(#{pf-size-prem(6px)} * -1);
+  --#{$table}__tree-view-details-toggle--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
 
   // toggle
-  --pf-c-table--m-tree-view-grid--c-dropdown--MarginTop: calc(#{pf-size-prem(6px)} * -1);
-  --pf-c-table--m-tree-view-grid--c-dropdown--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
+  --#{$table}--m-tree-view-grid--c-dropdown--MarginTop: calc(#{pf-size-prem(6px)} * -1);
+  --#{$table}--m-tree-view-grid--c-dropdown--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
 
   tbody tr {
     position: relative;
-    outline-offset: var(--pf-c-table--m-tree-view-grid--tr--OutlineOffset);
+    outline-offset: var(--#{$table}--m-tree-view-grid--tr--OutlineOffset);
     border: none;
 
     &::before {
@@ -183,8 +183,8 @@ $pf-c-tree-view--MaxDepth: 10;
       top: 0;
       right: 0;
       bottom: 0;
-      left: var(--pf-c-table--m-tree-view-grid--tbody--cell--PaddingLeft);
-      border-bottom: var(--pf-c-table--border-width--base) solid var(--pf-c-table--BorderColor);
+      left: var(--#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft);
+      border-bottom: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
       content: '';
     }
   }
@@ -196,24 +196,24 @@ $pf-c-tree-view--MaxDepth: 10;
 
   // target node rows
   tr[aria-expanded] {
-    .pf-c-table__tree-view-title-cell {
-      --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingTop);
+    .#{$table}__tree-view-title-cell {
+      --#{$table}--cell--PaddingTop: var(--#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingTop);
     }
 
-    .pf-c-table__tree-view-title-cell ~ .pf-c-table__action {
-      --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-tree-view-grid__tr--expanded__tree-view-title-cell--action--PaddingTop);
+    .#{$table}__tree-view-title-cell ~ .#{$table}__action {
+      --#{$table}--cell--PaddingTop: var(--#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--action--PaddingTop);
     }
   }
 
-  td:not(.pf-c-table__tree-view-title-cell) {
-    --pf-c-table--cell--PaddingTop: var(--pf-c-table--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop);
-    --pf-c-table--cell--PaddingBottom: var(--pf-c-table--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom);
+  td:not(.#{$table}__tree-view-title-cell) {
+    --#{$table}--cell--PaddingTop: var(--#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop);
+    --#{$table}--cell--PaddingBottom: var(--#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom);
 
-    padding-left: var(--pf-c-table--m-tree-view-grid--tbody--cell--PaddingLeft);
+    padding-left: var(--#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft);
   }
 
-  .pf-c-table__tree-view-text {
-    padding-right: var(--pf-c-table__tree-view-text--PaddingRight);
+  .#{$table}__tree-view-text {
+    padding-right: var(--#{$table}__tree-view-text--PaddingRight);
   }
 
   thead th {
@@ -227,10 +227,10 @@ $pf-c-tree-view--MaxDepth: 10;
   // Standard td, in standard row (non-expandable)
   td[data-label] {
     grid-column: 1;
-    grid-column-gap: var(--pf-c-table--m-tree-view-grid--tbody--cell--GridColumnGap);
+    grid-column-gap: var(--#{$table}--m-tree-view-grid--tbody--cell--GridColumnGap);
 
     // use minmax func to contain possible text modifier width
-    grid-template-columns: var(--pf-c-table--m-tree-view-grid--td--data-label--GridTemplateColumns);
+    grid-template-columns: var(--#{$table}--m-tree-view-grid--td--data-label--GridTemplateColumns);
     align-items: start;
 
     // set contents of td to start at column two of td grid
@@ -246,51 +246,51 @@ $pf-c-tree-view--MaxDepth: 10;
   }
 
   tr.pf-m-tree-view-details-expanded {
-    padding-bottom: var(--pf-c-table--m-tree-view-grid--m-tree-view-details-expanded--PaddingBottom);
+    padding-bottom: var(--#{$table}--m-tree-view-grid--m-tree-view-details-expanded--PaddingBottom);
 
     td[data-label] {
       display: grid;
     }
   }
 
-  .pf-c-table__tree-view-title-header-cell {
+  .#{$table}__tree-view-title-header-cell {
     display: block;
   }
 
-  .pf-c-table__tree-view-details-toggle,
-  .pf-c-table__action {
+  .#{$table}__tree-view-details-toggle,
+  .#{$table}__action {
     display: inline-block;
   }
 
-  .pf-c-table__action {
-    --pf-c-table--cell--Width: auto;
-    --pf-c-table--m-tree-view-grid--tbody--cell--PaddingLeft: var(--pf-c-table--m-tree-view-grid--c-table__action--PaddingLeft);
-    --pf-c-table--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop: var(--pf-c-table--m-tree-view-grid--c-table__action--PaddingTop);
-    --pf-c-table--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom: var(--pf-c-table--m-tree-view-grid--c-table__action--PaddingBottom);
+  .#{$table}__action {
+    --#{$table}--cell--Width: auto;
+    --#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingLeft);
+    --#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingTop);
+    --#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingBottom);
 
     grid-column: 2;
     grid-row: 1;
 
-    > .pf-c-dropdown {
-      margin-top: var(--pf-c-table--m-tree-view-grid--c-dropdown--MarginTop);
-      margin-bottom: var(--pf-c-table--m-tree-view-grid--c-dropdown--MarginBottom);
+    > .#{$dropdown} {
+      margin-top: var(--#{$table}--m-tree-view-grid--c-dropdown--MarginTop);
+      margin-bottom: var(--#{$table}--m-tree-view-grid--c-dropdown--MarginBottom);
     }
   }
 
-  .pf-c-table__tree-view-main > .pf-c-table__check {
-    margin-right: var(--pf-c-table--m-tree-view-mobile__tree-view-main--c-table__check--MarginRight);
+  .#{$table}__tree-view-main > .#{$table}__check {
+    margin-right: var(--#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--MarginRight);
     margin-left: auto;
-    order: var(--pf-c-table--m-tree-view-mobile__tree-view-main--c-table__check--Order);
+    order: var(--#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--Order);
   }
 
-  .pf-c-table__tree-view-details-toggle {
-    margin-top: var(--pf-c-table__tree-view-details-toggle--MarginTop);
-    margin-bottom: var(--pf-c-table__tree-view-details-toggle--MarginBottom);
+  .#{$table}__tree-view-details-toggle {
+    margin-top: var(--#{$table}__tree-view-details-toggle--MarginTop);
+    margin-bottom: var(--#{$table}__tree-view-details-toggle--MarginBottom);
   }
 
-  @for $i from 2 through $pf-c-tree-view--MaxDepth {
+  @for $i from 2 through $pf-v5-c-tree-view--MaxDepth {
     tr[aria-level="#{$i}"] {
-      --pf-c-table--m-tree-view-grid--tbody--cell--PaddingLeft: calc(var(--pf-c-table__tree-view-main--nested-indent--base) * #{$i - 1} + var(--pf-c-table__tree-view-main--indent--base)); // indent, plus indent level, plus
+      --#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft: calc(var(--#{$table}__tree-view-main--nested-indent--base) * #{$i - 1} + var(--#{$table}__tree-view-main--indent--base)); // indent, plus indent level, plus
     }
   }
 }

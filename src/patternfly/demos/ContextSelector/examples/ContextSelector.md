@@ -47,7 +47,7 @@ subsection: menus
       {{#> toolbar-content}}
         {{#> toolbar-content-section}}
           {{#> toolbar-item}}
-            {{#> context-selector context-selector--id=(concat page-template--id '-context-selector') context-selector--label-text="Selected project" context-selector-toggle--IsPlain="true" context-selector-toggle--IsText="true" context-selector--modifier="pf-m-page-insets pf-m-width-auto" context-selector--attribute='style="--pf-c-context-selector--Width: 270px;"'}}
+            {{#> context-selector context-selector--id=(concat page-template--id '-context-selector') context-selector--label-text="Selected project" context-selector-toggle--IsPlain="true" context-selector-toggle--IsText="true" context-selector--modifier="pf-m-page-insets pf-m-width-auto" context-selector--attribute='style="--pf-v5-c-context-selector--Width: 270px;"'}}
               {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
                 {{#> context-selector-toggle-text}}
                   Project: openshift-apple1

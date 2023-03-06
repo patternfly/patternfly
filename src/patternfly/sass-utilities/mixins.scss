@@ -1,52 +1,52 @@
 // Media query used to create responsive classes
-@mixin pf-media-query($point) {
+@mixin pf-v5-media-query($point) {
   @if $point == "" or not $point or $point == "base" {
     @content;
   } @else if $point == "sm" {
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
       @content;
     }
   } @else if $point == "md" {
-    @media screen and (min-width: $pf-global--breakpoint--md) {
+    @media screen and (min-width: $pf-v5-global--breakpoint--md) {
       @content;
     }
   } @else if $point == "lg" {
-    @media screen and (min-width: $pf-global--breakpoint--lg) {
+    @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
       @content;
     }
   } @else if $point == "xl" {
-    @media screen and (min-width: $pf-global--breakpoint--xl) {
+    @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
       @content;
     }
   } @else if $point == "2xl" {
-    @media screen and (min-width: $pf-global--breakpoint--2xl) {
+    @media screen and (min-width: $pf-v5-global--breakpoint--2xl) {
       @content;
     }
   }
 }
 
 // Media query used to create responsive classes
-@mixin pf-height-media-query($point) {
+@mixin pf-v5-height-media-query($point) {
   @if $point == "" or not $point or $point == "base" {
     @content;
   } @else if $point == "sm" {
-    @media screen and (min-height: $pf-global--height-breakpoint--sm) {
+    @media screen and (min-height: $pf-v5-global--height-breakpoint--sm) {
       @content;
     }
   } @else if $point == "md" {
-    @media screen and (min-height: $pf-global--height-breakpoint--md) {
+    @media screen and (min-height: $pf-v5-global--height-breakpoint--md) {
       @content;
     }
   } @else if $point == "lg" {
-    @media screen and (min-height: $pf-global--height-breakpoint--lg) {
+    @media screen and (min-height: $pf-v5-global--height-breakpoint--lg) {
       @content;
     }
   } @else if $point == "xl" {
-    @media screen and (min-height: $pf-global--height-breakpoint--xl) {
+    @media screen and (min-height: $pf-v5-global--height-breakpoint--xl) {
       @content;
     }
   } @else if $point == "2xl" {
-    @media screen and (min-height: $pf-global--height-breakpoint--2xl) {
+    @media screen and (min-height: $pf-v5-global--height-breakpoint--2xl) {
       @content;
     }
   }
@@ -56,28 +56,28 @@
 // @group mixins
 // @moduleType mixin
 // @parameter: [Suffix] xs, sm, md, lg, xl, base or null
-// @usage: @include pf-utility-builder(class-name, base sm md lg xl);
+// @usage: @include pf-v5-utility-builder(class-name, base sm md lg xl);
 // ===============================================================================================
 
 // ## Example sass map:
 // this must be used when order matters or a cluster of similar utilties need to overwrite each other
 
 // Justify content options
-// $pf-u-flex-options: (
+// $pf-v5-u-flex-options: (
 //   flex-none:  (flex none),
 //   flex-1:     (flex 1)
 // );
 
-// non-responsive, base only                @include pf-utility-builder($sass-map)
-// responsive, including all breakpoints    @include pf-utility-builder($sass-map, $pf-global--breakpoint-list)
-// responsive height breakpoints            @include pf-utility-builder($sass-map, $pf-global--height-breakpoint-list, 'height')
+// non-responsive, base only                @include pf-v5-utility-builder($sass-map)
+// responsive, including all breakpoints    @include pf-v5-utility-builder($sass-map, $pf-v5-global--breakpoint-list)
+// responsive height breakpoints            @include pf-v5-utility-builder($sass-map, $pf-v5-global--height-breakpoint-list, 'height')
 
 // ## Passing individual utilities values
 // ===============================================================================================
 // Example individual utility:
-// @include pf-utility-builder(flex-fill flex "1 1 auto", $pf-global--breakpoint-list);
+// @include pf-v5-utility-builder(flex-fill flex "1 1 auto", $pf-v5-global--breakpoint-list);
 
-@mixin pf-utility-builder($props, $breakpoints: null, $direction: "width") {
+@mixin pf-v5-utility-builder($props, $breakpoints: null, $direction: "width") {
   // if $class-name is a map
 
   // stylelint-disable
@@ -86,7 +86,7 @@
       $property: nth($val, 1);
       $value: #{nth($val, 2) !important};
 
-      .pf-u-#{$class} {
+      .#{$pf-prefix}u-#{$class} {
         #{$property}: #{$value};
       }
     }
@@ -97,24 +97,24 @@
         $suffix: -on-#{$breakpoint};
 
         @if $direction == 'height' {
-          @include pf-height-media-query($breakpoint) {
+          @include pf-v5-height-media-query($breakpoint) {
             @each $class, $val in $props {
               $property: nth($val, 1);
               $value: #{nth($val, 2) !important};
 
-              .pf-u-#{$class}#{$suffix}-height {
+              .#{$pf-prefix}u-#{$class}#{$suffix}-height {
                 #{$property}: #{$value};
               }
             }
           }
         }
         @else if $direction == 'width' {
-          @include pf-media-query($breakpoint) {
+          @include pf-v5-media-query($breakpoint) {
             @each $class, $val in $props {
               $property: nth($val, 1);
               $value: #{nth($val, 2) !important};
 
-              .pf-u-#{$class}#{$suffix} {
+              .#{$pf-prefix}u-#{$class}#{$suffix} {
                 #{$property}: #{$value};
               }
             }
@@ -129,7 +129,7 @@
     $property: nth($props, 2);
     $value: nth($props, 3) !important;
 
-    .pf-u-#{$class} {
+    .#{$pf-prefix}u-#{$class} {
       #{$property}: #{$value};
     }
 
@@ -137,8 +137,8 @@
       @each $breakpoint in $breakpoints {
         $suffix: -on-#{$breakpoint};
 
-        .pf-u-#{$class}#{$suffix} {
-          @include pf-media-query($breakpoint) {
+        .#{$pf-prefix}u-#{$class}#{$suffix} {
+          @include pf-v5-media-query($breakpoint) {
             #{$property}: #{$value};
           }
         }
@@ -149,7 +149,7 @@
 
 // stylelint-enable
 
-@mixin pf-u-screen-reader {
+@mixin pf-v5-u-screen-reader {
   position: fixed;
   top: 0;
   left: 0;
@@ -159,7 +159,7 @@
   border: 0;
 }
 
-@mixin pf-u-visible {
+@mixin pf-v5-u-visible {
   position: static;
   overflow: visible;
   clip: auto;
@@ -167,25 +167,25 @@
   border: inherit;
 }
 
-@mixin pf-t-light($color: "--pf-global--Color--100") {
+@mixin pf-v5-t-light($color: "--#{$pf-global}--Color--100") {
   color: var(#{$color});
 
-  @extend %pf-t-light;
+  @extend %pf-v5-t-light;
 }
 
-@mixin pf-t-dark($color: "--pf-global--Color--100") {
+@mixin pf-v5-t-dark($color: "--#{$pf-global}--Color--100") {
   color: var(#{$color});
 
-  @extend %pf-t-dark;
+  @extend %pf-v5-t-dark;
 }
 
-@mixin pf-text-overflow {
+@mixin pf-v5-text-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-@mixin pf-line-clamp($line-clamp-val: 1) {
+@mixin pf-v5-line-clamp($line-clamp-val: 1) {
   // stylelint-disable
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -194,7 +194,7 @@
   overflow: hidden;
 }
 
-@mixin pf-overflow-hide-scroll {
+@mixin pf-v5-overflow-hide-scroll {
   &::-webkit-scrollbar {
     display: none;
   } // hides scrollbars in Chrome
@@ -203,15 +203,15 @@
   -ms-overflow-style: -ms-autohiding-scrollbar; // auto hides scrollbars in Edge
 }
 
-@mixin pf-hidden-visible($val: "block") {
+@mixin pf-v5-hidden-visible($val: "block") {
   // stylelint-disable-next-line
-  --pf-hidden-visible--visible--Display: #{$val};
+  --pf-v5-hidden-visible--visible--Display: #{$val};
 
-  @extend %pf-hidden-visible;
+  @extend %pf-v5-hidden-visible;
 }
 
 // Apply media query if value is passed
-@mixin pf-apply-breakpoint($breakpoint) {
+@mixin pf-v5-apply-breakpoint($breakpoint) {
   @if $breakpoint == "null" or $breakpoint == "base" or $breakpoint == "" {
     @content;
   } @else {
@@ -224,7 +224,7 @@
 }
 
 // Apply height media query if value is passed
-@mixin pf-apply-height-breakpoint($breakpoint) {
+@mixin pf-v5-apply-height-breakpoint($breakpoint) {
   @if $breakpoint == "null" or $breakpoint == "base" or $breakpoint == "" {
     @content;
   } @else {
@@ -236,14 +236,14 @@
   }
 }
 
-@mixin pf-emit-properties($map) {
+@mixin pf-v5-emit-properties($map) {
   @each $prop, $value in $map {
     #{$value}: #{$prop};
   }
 }
 
 // Animate tab focus removal
-@mixin pf-animate-remove-tab-focus($element, $delay: $pf-global--TransitionDuration) {
+@mixin pf-v5-animate-remove-tab-focus($element, $delay: $pf-v5-global--TransitionDuration) {
   @keyframes pf-remove-tab-focus {
     to {
       visibility: hidden;
@@ -258,7 +258,7 @@
 }
 
 // Build variable stack
-@mixin pf-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-global--breakpoint-map, $important: false) {
+@mixin pf-v5-build-css-variable-stack($prop, $css-var, $breakpoint-map: $pf-v5-global--breakpoint-map, $important: false) {
   $list: ();
 
   @each $breakpoint, $breakpoint-value in $breakpoint-map {
@@ -281,7 +281,7 @@
     }
 
     // Assign variable stack to $prop
-    @include pf-apply-breakpoint($breakpoint) {
+    @include pf-v5-apply-breakpoint($breakpoint) {
       @if $important == true {
         // stylelint-disable declaration-no-important
         #{$prop}: #{$variable-list} !important;
@@ -294,8 +294,16 @@
 }
 
 // Dark theme style block
-@mixin pf-theme-dark($pf-theme-dark-class: ".pf-theme-dark", $pf-theme-dark-prefix: "") {
-  #{$pf-theme-dark-prefix}:where(#{$pf-theme-dark-class}) {
+@mixin pf-v5-theme-dark($pf-v5-theme-dark-class: ".pf-v5-theme-dark", $pf-v5-theme-dark-prefix: "") {
+  #{$pf-v5-theme-dark-prefix}:where(#{$pf-v5-theme-dark-class}) {
     @content;
+  }
+}
+
+@mixin pf-v5-construct-global-vars($prefix: $pf-prefix--version, $maps...) {
+  @each $map in $maps {
+    @each $name, $val in $map {
+      #{$prefix}#{$name}: #{$val};
+    }
   }
 }

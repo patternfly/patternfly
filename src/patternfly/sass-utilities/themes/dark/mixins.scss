@@ -1,5 +1,5 @@
-@mixin pf-theme-dark--t-dark($color: "--pf-global--Color--100") {
+@mixin pf-v5-theme-dark--t-dark($color: "--#{$pf-global}--Color--100") {
   color: var(#{$color});
 
-  @extend %pf-theme-dark--t-dark;
+  @extend %pf-v5-theme-dark--t-dark;
 }

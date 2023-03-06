@@ -1,4 +1,4 @@
-$pf-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for css variable stack
+$pf-v5-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for css variable stack
 
 // URL.com/guidelines#layout
 // Generate smart grid layout
@@ -7,7 +7,7 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for c
   @for $col-num from 1 through 12 {
     &.pf-m-all-#{$col-num}-col#{$suffix} {
       > * {
-        --pf-l-grid__item--GridColumnEnd: span #{$col-num};
+        --#{$grid}__item--GridColumnEnd: span #{$col-num};
       }
     }
   }
@@ -19,14 +19,14 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for c
   // generate column span modifier
   @for $col-num from 1 through 12 {
     > .pf-m-#{$col-num}-col#{$suffix} {
-      --pf-l-grid__item--GridColumnEnd: span #{$col-num};
+      --#{$grid}__item--GridColumnEnd: span #{$col-num};
     }
   }
 
   // generate column offset modfiers
   @for $col-num from 1 through 12 {
     > .pf-m-offset-#{$col-num}-col#{$suffix} {
-      --pf-l-grid__item--GridColumnStart: col-start calc(#{$col-num} + 1);
+      --#{$grid}__item--GridColumnStart: col-start calc(#{$col-num} + 1);
     }
   }
 
@@ -39,40 +39,40 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for c
 }
 
 // Grid base
-.pf-l-grid {
-  --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
-  --pf-l-grid__item--GridColumnStart: auto;
-  --pf-l-grid__item--GridColumnEnd: span 12;
-  --pf-l-grid--item--Order: 0;
+.#{$grid} {
+  --#{$grid}--m-gutter--GridGap: var(--#{$pf-global}--gutter);
+  --#{$grid}__item--GridColumnStart: auto;
+  --#{$grid}__item--GridColumnEnd: span 12;
+  --#{$grid}--item--Order: 0;
 
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
 
   > *,
-  .pf-l-grid__item {
-    grid-column-start: var(--pf-l-grid__item--GridColumnStart);
-    grid-column-end: var(--pf-l-grid__item--GridColumnEnd);
+  .#{$grid}__item {
+    grid-column-start: var(--#{$grid}__item--GridColumnStart);
+    grid-column-end: var(--#{$grid}__item--GridColumnEnd);
     min-width: 0;
     min-height: 0;
 
-    @include pf-build-css-variable-stack("order", "--pf-l-grid--item--Order", $pf-l-grid--breakpoint-map);
+    @include pf-v5-build-css-variable-stack("order", "--#{$grid}--item--Order", $pf-v5-l-grid--breakpoint-map);
   }
 
   // Loop through $breakpoints map to generate responsive classes
-  @each $breakpoint, $value in $pf-global--breakpoint-map {
-    @include pf-media-query($breakpoint) {
+  @each $breakpoint, $value in $pf-v5-global--breakpoint-map {
+    @include pf-v5-media-query($breakpoint) {
       @include pf-smart-grid($value);
     }
   }
 
   // Loop through $breakpoints map to generate responsive classes
-  @each $breakpoint, $value in $pf-global--breakpoint-map {
-    @include pf-media-query($breakpoint) {
+  @each $breakpoint, $value in $pf-v5-global--breakpoint-map {
+    @include pf-v5-media-query($breakpoint) {
       @include pf-grid-item-modifier($value);
     }
   }
 
   &.pf-m-gutter {
-    grid-gap: var(--pf-l-grid--m-gutter--GridGap);
+    grid-gap: var(--#{$grid}--m-gutter--GridGap);
   }
 }

@@ -1,165 +1,167 @@
-.pf-c-expandable-section {
+// @debug $expandable-section; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$expandable-section} {
   // Toggle
-  --pf-c-expandable-section__toggle--PaddingTop: var(--pf-global--spacer--form-element);
-  --pf-c-expandable-section__toggle--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-expandable-section__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
-  --pf-c-expandable-section__toggle--PaddingLeft: 0;
-  --pf-c-expandable-section__toggle--MarginTop: 0;
-  --pf-c-expandable-section__toggle--Color: var(--pf-global--link--Color);
-  --pf-c-expandable-section__toggle--hover--Color: var(--pf-global--link--Color--hover);
-  --pf-c-expandable-section__toggle--active--Color: var(--pf-global--link--Color--hover);
-  --pf-c-expandable-section__toggle--focus--Color: var(--pf-global--link--Color--hover);
-  --pf-c-expandable-section__toggle--m-expanded--Color: var(--pf-global--link--Color--hover);
-  --pf-c-expandable-section__toggle--BackgroundColor: transparent;
+  --#{$expandable-section}__toggle--PaddingTop: var(--#{$pf-global}--spacer--form-element);
+  --#{$expandable-section}__toggle--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$expandable-section}__toggle--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
+  --#{$expandable-section}__toggle--PaddingLeft: 0;
+  --#{$expandable-section}__toggle--MarginTop: 0;
+  --#{$expandable-section}__toggle--Color: var(--#{$pf-global}--link--Color);
+  --#{$expandable-section}__toggle--hover--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$expandable-section}__toggle--active--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$expandable-section}__toggle--focus--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$expandable-section}__toggle--m-expanded--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$expandable-section}__toggle--BackgroundColor: transparent;
 
   // Toggle icon
-  --pf-c-expandable-section__toggle-icon--MinWidth: 1em;
-  --pf-c-expandable-section__toggle-icon--Color: var(--pf-global--Color--100);
-  --pf-c-expandable-section__toggle-icon--Transition: .2s ease-in 0s;
-  --pf-c-expandable-section__toggle-icon--Rotate: 0;
-  --pf-c-expandable-section__toggle-icon--m-expand-top--Rotate: 0;
-  --pf-c-expandable-section--m-expanded__toggle-icon--Rotate: 90deg;
-  --pf-c-expandable-section--m-expanded__toggle-icon--m-expand-top--Rotate: -90deg;
+  --#{$expandable-section}__toggle-icon--MinWidth: 1em;
+  --#{$expandable-section}__toggle-icon--Color: var(--#{$pf-global}--Color--100);
+  --#{$expandable-section}__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$expandable-section}__toggle-icon--Rotate: 0;
+  --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: 0;
+  --#{$expandable-section}--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate: -90deg;
 
   // Toggle text
-  --pf-c-expandable-section__toggle-text--MarginLeft: calc(var(--pf-global--spacer--xs) + var(--pf-global--spacer--sm));
+  --#{$expandable-section}__toggle-text--MarginLeft: calc(var(--#{$pf-global}--spacer--xs) + var(--#{$pf-global}--spacer--sm));
 
   // Content
-  --pf-c-expandable-section__content--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-expandable-section__content--MaxWidth: auto;
+  --#{$expandable-section}__content--MarginTop: var(--#{$pf-global}--spacer--md);
+  --#{$expandable-section}__content--MaxWidth: auto;
 
   // Limit Width
-  --pf-c-expandable-section--m-limit-width__content--MaxWidth: #{pf-size-prem(750px)};
+  --#{$expandable-section}--m-limit-width__content--MaxWidth: #{pf-size-prem(750px)};
 
   // Large
-  --pf-c-expandable-section--m-display-lg--BoxShadow: var(--pf-global--BoxShadow--md);
-  --pf-c-expandable-section--m-display-lg__toggle--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-expandable-section--m-display-lg__toggle--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-expandable-section--m-display-lg__toggle--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-expandable-section--m-display-lg__toggle--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-expandable-section--m-display-lg__content--MarginTop: 0;
-  --pf-c-expandable-section--m-display-lg__content--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-expandable-section--m-display-lg__content--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-expandable-section--m-display-lg__content--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-expandable-section--m-display-lg--after--BackgroundColor: transparent;
-  --pf-c-expandable-section--m-display-lg--after--Width: var(--pf-global--BorderWidth--lg);
-  --pf-c-expandable-section--m-display-lg--m-expanded--after--BackgroundColor: var(--pf-global--primary-color--100);
+  --#{$expandable-section}--m-display-lg--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
+  --#{$expandable-section}--m-display-lg__toggle--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$expandable-section}--m-display-lg__toggle--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$expandable-section}--m-display-lg__toggle--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$expandable-section}--m-display-lg__toggle--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$expandable-section}--m-display-lg__content--MarginTop: 0;
+  --#{$expandable-section}--m-display-lg__content--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$expandable-section}--m-display-lg__content--PaddingBottom: var(--#{$pf-global}--spacer--lg);
+  --#{$expandable-section}--m-display-lg__content--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$expandable-section}--m-display-lg--after--BackgroundColor: transparent;
+  --#{$expandable-section}--m-display-lg--after--Width: var(--#{$pf-global}--BorderWidth--lg);
+  --#{$expandable-section}--m-display-lg--m-expanded--after--BackgroundColor: var(--#{$pf-global}--primary-color--100);
 
   // Indented
-  --pf-c-expandable-section--m-indented__content--PaddingLeft: calc(var(--pf-c-expandable-section__toggle-text--MarginLeft) + var(--pf-c-expandable-section__toggle-icon--MinWidth));
+  --#{$expandable-section}--m-indented__content--PaddingLeft: calc(var(--#{$expandable-section}__toggle-text--MarginLeft) + var(--#{$expandable-section}__toggle-icon--MinWidth));
 
   // Truncate
-  --pf-c-expandable-section--m-truncate__content--LineClamp: 3;
-  --pf-c-expandable-section--m-truncate__toggle--MarginTop: var(--pf-global--spacer--xs);
+  --#{$expandable-section}--m-truncate__content--LineClamp: 3;
+  --#{$expandable-section}--m-truncate__toggle--MarginTop: var(--#{$pf-global}--spacer--xs);
 
 
   &.pf-m-expanded {
-    --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--m-expanded--Color);
-    --pf-c-expandable-section__toggle-icon--Rotate: var(--pf-c-expandable-section--m-expanded__toggle-icon--Rotate);
-    --pf-c-expandable-section__toggle-icon--m-expand-top--Rotate: var(--pf-c-expandable-section--m-expanded__toggle-icon--m-expand-top--Rotate);
-    --pf-c-expandable-section--m-display-lg--after--BackgroundColor: var(--pf-c-expandable-section--m-display-lg--m-expanded--after--BackgroundColor);
+    --#{$expandable-section}__toggle--Color: var(--#{$expandable-section}__toggle--m-expanded--Color);
+    --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--Rotate);
+    --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate);
+    --#{$expandable-section}--m-display-lg--after--BackgroundColor: var(--#{$expandable-section}--m-display-lg--m-expanded--after--BackgroundColor);
   }
 
   &.pf-m-detached,
   &.pf-m-truncate {
-    --pf-c-expandable-section__content--MarginTop: 0;
+    --#{$expandable-section}__content--MarginTop: 0;
   }
 
   &.pf-m-limit-width {
-    --pf-c-expandable-section__content--MaxWidth: var(--pf-c-expandable-section--m-limit-width__content--MaxWidth);
+    --#{$expandable-section}__content--MaxWidth: var(--#{$expandable-section}--m-limit-width__content--MaxWidth);
   }
 
   &.pf-m-display-lg {
-    --pf-c-expandable-section__toggle--PaddingTop: var(--pf-c-expandable-section--m-display-lg__toggle--PaddingTop);
-    --pf-c-expandable-section__toggle--PaddingRight: var(--pf-c-expandable-section--m-display-lg__toggle--PaddingRight);
-    --pf-c-expandable-section__toggle--PaddingBottom: var(--pf-c-expandable-section--m-display-lg__toggle--PaddingBottom);
-    --pf-c-expandable-section__toggle--PaddingLeft: var(--pf-c-expandable-section--m-display-lg__toggle--PaddingLeft);
-    --pf-c-expandable-section__content--PaddingRight: var(--pf-c-expandable-section--m-display-lg__content--PaddingRight);
-    --pf-c-expandable-section__content--PaddingBottom: var(--pf-c-expandable-section--m-display-lg__content--PaddingBottom);
-    --pf-c-expandable-section__content--PaddingLeft: var(--pf-c-expandable-section--m-display-lg__content--PaddingLeft);
-    --pf-c-expandable-section__content--MarginTop: var(--pf-c-expandable-section--m-display-lg__content--MarginTop);
+    --#{$expandable-section}__toggle--PaddingTop: var(--#{$expandable-section}--m-display-lg__toggle--PaddingTop);
+    --#{$expandable-section}__toggle--PaddingRight: var(--#{$expandable-section}--m-display-lg__toggle--PaddingRight);
+    --#{$expandable-section}__toggle--PaddingBottom: var(--#{$expandable-section}--m-display-lg__toggle--PaddingBottom);
+    --#{$expandable-section}__toggle--PaddingLeft: var(--#{$expandable-section}--m-display-lg__toggle--PaddingLeft);
+    --#{$expandable-section}__content--PaddingRight: var(--#{$expandable-section}--m-display-lg__content--PaddingRight);
+    --#{$expandable-section}__content--PaddingBottom: var(--#{$expandable-section}--m-display-lg__content--PaddingBottom);
+    --#{$expandable-section}__content--PaddingLeft: var(--#{$expandable-section}--m-display-lg__content--PaddingLeft);
+    --#{$expandable-section}__content--MarginTop: var(--#{$expandable-section}--m-display-lg__content--MarginTop);
 
     position: relative;
-    box-shadow: var(--pf-c-expandable-section--m-display-lg--BoxShadow);
+    box-shadow: var(--#{$expandable-section}--m-display-lg--BoxShadow);
 
     &::after {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
-      width: var(--pf-c-expandable-section--m-display-lg--after--Width);
+      width: var(--#{$expandable-section}--m-display-lg--after--Width);
       content: "";
-      background-color: var(--pf-c-expandable-section--m-display-lg--after--BackgroundColor);
+      background-color: var(--#{$expandable-section}--m-display-lg--after--BackgroundColor);
     }
   }
 
   &.pf-m-indented {
-    --pf-c-expandable-section__content--PaddingLeft: var(--pf-c-expandable-section--m-indented__content--PaddingLeft);
+    --#{$expandable-section}__content--PaddingLeft: var(--#{$expandable-section}--m-indented__content--PaddingLeft);
   }
 
   &.pf-m-truncate {
-    --pf-c-expandable-section__toggle--MarginTop: var(--pf-c-expandable-section--m-truncate__toggle--MarginTop);
-    --pf-c-expandable-section__toggle--PaddingTop: 0;
-    --pf-c-expandable-section__toggle--PaddingRight: 0;
-    --pf-c-expandable-section__toggle--PaddingBottom: 0;
-    --pf-c-expandable-section__toggle-text--MarginLeft: 0;
+    --#{$expandable-section}__toggle--MarginTop: var(--#{$expandable-section}--m-truncate__toggle--MarginTop);
+    --#{$expandable-section}__toggle--PaddingTop: 0;
+    --#{$expandable-section}__toggle--PaddingRight: 0;
+    --#{$expandable-section}__toggle--PaddingBottom: 0;
+    --#{$expandable-section}__toggle-text--MarginLeft: 0;
 
-    &:not(.pf-m-expanded) .pf-c-expandable-section__content {
+    &:not(.pf-m-expanded) .#{$expandable-section}__content {
       // stylelint-disable
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: var(--pf-c-expandable-section--m-truncate__content--LineClamp);
+      -webkit-line-clamp: var(--#{$expandable-section}--m-truncate__content--LineClamp);
       // stylelint-enable
       overflow: hidden;
     }
   }
 
   &.pf-m-detached {
-    --pf-c-expandable-section--m-truncate__toggle--MarginTop: 0;
+    --#{$expandable-section}--m-truncate__toggle--MarginTop: 0;
   }
 }
 
-.pf-c-expandable-section__toggle {
+.#{$expandable-section}__toggle {
   display: flex;
-  padding: var(--pf-c-expandable-section__toggle--PaddingTop) var(--pf-c-expandable-section__toggle--PaddingRight) var(--pf-c-expandable-section__toggle--PaddingBottom) var(--pf-c-expandable-section__toggle--PaddingLeft);
-  margin-top: var(--pf-c-expandable-section__toggle--MarginTop);
-  color: var(--pf-c-expandable-section__toggle--Color);
-  background-color: var(--pf-c-expandable-section__toggle--BackgroundColor);
+  padding: var(--#{$expandable-section}__toggle--PaddingTop) var(--#{$expandable-section}__toggle--PaddingRight) var(--#{$expandable-section}__toggle--PaddingBottom) var(--#{$expandable-section}__toggle--PaddingLeft);
+  margin-top: var(--#{$expandable-section}__toggle--MarginTop);
+  color: var(--#{$expandable-section}__toggle--Color);
+  background-color: var(--#{$expandable-section}__toggle--BackgroundColor);
   border: none;
 
   &:hover {
-    --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--hover--Color);
+    --#{$expandable-section}__toggle--Color: var(--#{$expandable-section}__toggle--hover--Color);
   }
 
   &:active,
   &.pf-m-active {
-    --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--active--Color);
+    --#{$expandable-section}__toggle--Color: var(--#{$expandable-section}__toggle--active--Color);
   }
 
   &:focus {
-    --pf-c-expandable-section__toggle--Color: var(--pf-c-expandable-section__toggle--focus--Color);
+    --#{$expandable-section}__toggle--Color: var(--#{$expandable-section}__toggle--focus--Color);
   }
 }
 
-.pf-c-expandable-section__toggle-icon {
-  min-width: var(--pf-c-expandable-section__toggle-icon--MinWidth);
-  color: var(--pf-c-expandable-section__toggle-icon--Color);
-  transition: var(--pf-c-expandable-section__toggle-icon--Transition);
-  transform: rotate(var(--pf-c-expandable-section__toggle-icon--Rotate));
+.#{$expandable-section}__toggle-icon {
+  min-width: var(--#{$expandable-section}__toggle-icon--MinWidth);
+  color: var(--#{$expandable-section}__toggle-icon--Color);
+  transition: var(--#{$expandable-section}__toggle-icon--Transition);
+  transform: rotate(var(--#{$expandable-section}__toggle-icon--Rotate));
 
   &.pf-m-expand-top {
-    --pf-c-expandable-section__toggle-icon--Rotate: var(--pf-c-expandable-section__toggle-icon--m-expand-top--Rotate);
+    --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}__toggle-icon--m-expand-top--Rotate);
   }
 }
 
-.pf-c-expandable-section__toggle-text {
-  margin-left: var(--pf-c-expandable-section__toggle-text--MarginLeft);
+.#{$expandable-section}__toggle-text {
+  margin-left: var(--#{$expandable-section}__toggle-text--MarginLeft);
 }
 
-.pf-c-expandable-section__content {
-  max-width: var(--pf-c-expandable-section__content--MaxWidth);
-  padding-right: var(--pf-c-expandable-section__content--PaddingRight);
-  padding-bottom: var(--pf-c-expandable-section__content--PaddingBottom);
-  padding-left: var(--pf-c-expandable-section__content--PaddingLeft);
-  margin-top: var(--pf-c-expandable-section__content--MarginTop);
+.#{$expandable-section}__content {
+  max-width: var(--#{$expandable-section}__content--MaxWidth);
+  padding-right: var(--#{$expandable-section}__content--PaddingRight);
+  padding-bottom: var(--#{$expandable-section}__content--PaddingBottom);
+  padding-left: var(--#{$expandable-section}__content--PaddingLeft);
+  margin-top: var(--#{$expandable-section}__content--MarginTop);
 }

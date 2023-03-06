@@ -2,7 +2,7 @@
 id: Checkbox
 section: components
 subsection: forms
-cssPrefix: pf-c-check
+cssPrefix: pf-v5-c-check
 ---
 
 ## Examples
@@ -110,17 +110,17 @@ If you extend this component or modify the styles of this component, then make s
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `disabled` | `.pf-c-check__input` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
-| `required` | `.pf-c-check__input` | Indicates that the element is required. |
+| `disabled` | `.pf-v5-c-check__input` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
+| `required` | `.pf-v5-c-check__input` | Indicates that the element is required. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-check` | `<div>`, `<label>` |  Initiates the check component. **Required**  |
-| `.pf-c-check__input` | `<input type="checkbox">` |  Initiates a check input. **Required**  |
-| `.pf-c-check__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
-| `.pf-c-check__label-required` | `<span>` |  Initiates a required indicator. |
-| `.pf-c-check__description` | `<span>` |  Initiates a check description. |
-| `.pf-c-check__body` | `<span>` |  Initiates a check body. |
-| `.pf-m-standalone` | `.pf-c-check` |  Modifies the check component for use with a standalone `<input type="checkbox">`. **Required when there is no label** |
-| `.pf-m-disabled` | `.pf-c-check__label` |  Modifies the check component for the disabled state. **Required when input is disabled** |
+| `.pf-v5-c-check` | `<div>`, `<label>` |  Initiates the check component. **Required**  |
+| `.pf-v5-c-check__input` | `<input type="checkbox">` |  Initiates a check input. **Required**  |
+| `.pf-v5-c-check__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
+| `.pf-v5-c-check__label-required` | `<span>` |  Initiates a required indicator. |
+| `.pf-v5-c-check__description` | `<span>` |  Initiates a check description. |
+| `.pf-v5-c-check__body` | `<span>` |  Initiates a check body. |
+| `.pf-m-standalone` | `.pf-v5-c-check` |  Modifies the check component for use with a standalone `<input type="checkbox">`. **Required when there is no label** |
+| `.pf-m-disabled` | `.pf-v5-c-check__label` |  Modifies the check component for the disabled state. **Required when input is disabled** |

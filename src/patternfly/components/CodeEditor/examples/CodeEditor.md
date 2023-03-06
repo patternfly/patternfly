@@ -1,7 +1,7 @@
 ---
 id: Code editor
 section: components
-cssPrefix: pf-c-code-editor
+cssPrefix: pf-v5-c-code-editor
 ---
 
 ## Examples
@@ -104,7 +104,7 @@ cssPrefix: pf-c-code-editor
     {{#> code-editor-keyboard-shortcuts}}
       {{#> button button--modifier="pf-m-link"}}
         {{#> button-icon button-icon--modifier="pf-m-start"}}
-          <i class="pf-icon pf-icon-help" aria-hidden="true"></i>
+          <i class="pf-v5-icon pf-v5-icon-help" aria-hidden="true"></i>
         {{/button-icon}}
         View shortcuts
       {{/button}}
@@ -132,13 +132,13 @@ cssPrefix: pf-c-code-editor
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-code-editor` | `<div>` | Initiates the code editor component. **Required** |
-| `.pf-c-code-editor__header` | `<div>` | Initiates the code editor header used for the controls and tab elements. **Required** |
-| `.pf-c-code-editor__main` | `<div>` | Initiates the main container for a code editor e.g. Monaco **Required** |
-| `.pf-c-code-editor__code` | `<div>` | Initiates the container for code without a JS code editor. Comes with PatternFly styling. |
-| `.pf-c-code-editor__controls` | `<div>` | Initiates the code editor controls. |
-| `.pf-c-code-editor__header-main` | `<div>` | Initiates the code editor header content area. |
-| `.pf-c-code-editor__keyboard-shortcuts` | `<div>` | Initiates the code editor header keyboard shortcuts area. |
-| `.pf-c-code-editor__tab` | `<div>` | Initiates the code editor tab. |
-| `.pf-c-code-editor__tab-text` | `<span>` | Initiates the code editor tab text. |
-| `.pf-c-code-editor__tab-icon` | `<span>` | Initiates the code editor tab icon. |
+| `.pf-v5-c-code-editor` | `<div>` | Initiates the code editor component. **Required** |
+| `.pf-v5-c-code-editor__header` | `<div>` | Initiates the code editor header used for the controls and tab elements. **Required** |
+| `.pf-v5-c-code-editor__main` | `<div>` | Initiates the main container for a code editor e.g. Monaco **Required** |
+| `.pf-v5-c-code-editor__code` | `<div>` | Initiates the container for code without a JS code editor. Comes with PatternFly styling. |
+| `.pf-v5-c-code-editor__controls` | `<div>` | Initiates the code editor controls. |
+| `.pf-v5-c-code-editor__header-main` | `<div>` | Initiates the code editor header content area. |
+| `.pf-v5-c-code-editor__keyboard-shortcuts` | `<div>` | Initiates the code editor header keyboard shortcuts area. |
+| `.pf-v5-c-code-editor__tab` | `<div>` | Initiates the code editor tab. |
+| `.pf-v5-c-code-editor__tab-text` | `<span>` | Initiates the code editor tab text. |
+| `.pf-v5-c-code-editor__tab-icon` | `<span>` | Initiates the code editor tab icon. |

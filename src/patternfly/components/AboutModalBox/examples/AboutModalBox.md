@@ -1,7 +1,7 @@
 ---
 id: About modal
 section: components
-cssPrefix: pf-c-about-modal-box
+cssPrefix: pf-v5-c-about-modal-box
 ---
 
 ## Examples
@@ -36,23 +36,23 @@ cssPrefix: pf-c-about-modal-box
 ### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
-| `aria-label="Close Dialog"` | `.pf-c-modal-box__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required** |
+| `aria-label="Close Dialog"` | `.pf-v5-c-modal-box__close .pf-v5-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required** |
 
 ### Customizing the background image
-In order to use a custom image, pass a new value to the `--pf-c-about-modal-box--BackgroundImage` CSS variable. For example:
+In order to use a custom image, pass a new value to the `--pf-v5-c-about-modal-box--BackgroundImage` CSS variable. For example:
 
 ```css
---pf-c-about-modal-box--BackgroundImage: url("custom/image/path");
+--pf-v5-c-about-modal-box--BackgroundImage: url("custom/image/path");
 ```
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-about-modal-box` |  `<div>`, `<article>`  |  Initiates a modal box. |
-| `.pf-c-about-modal-box__brand` |  `<div>` |  Initiates a modal box brand cell. |
-| `.pf-c-about-modal-box__brand-image` |  `<img>` |  Initiates a modal box brand image. |
-| `.pf-c-about-modal-box__close` |  `<div>` |  Initiates a modal box close cell. |
-| `.pf-c-about-modal-box__header` |  `<div>`, `<header>` |  Initiates a modal box header cell. |
-| `.pf-c-about-modal-box__content` |  `<div>` |  Initiates a modal box content cell. |
-| `.pf-c-about-modal-box__body` |  `<div>` |  Initiates a modal box body cell. |
-| `.pf-c-about-modal-box__strapline` |  `<p>` |  Initiates a modal box strapline cell. |
+| `.pf-v5-c-about-modal-box` |  `<div>`, `<article>`  |  Initiates a modal box. |
+| `.pf-v5-c-about-modal-box__brand` |  `<div>` |  Initiates a modal box brand cell. |
+| `.pf-v5-c-about-modal-box__brand-image` |  `<img>` |  Initiates a modal box brand image. |
+| `.pf-v5-c-about-modal-box__close` |  `<div>` |  Initiates a modal box close cell. |
+| `.pf-v5-c-about-modal-box__header` |  `<div>`, `<header>` |  Initiates a modal box header cell. |
+| `.pf-v5-c-about-modal-box__content` |  `<div>` |  Initiates a modal box content cell. |
+| `.pf-v5-c-about-modal-box__body` |  `<div>` |  Initiates a modal box body cell. |
+| `.pf-v5-c-about-modal-box__strapline` |  `<p>` |  Initiates a modal box strapline cell. |

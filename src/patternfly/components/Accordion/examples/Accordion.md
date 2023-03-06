@@ -1,7 +1,7 @@
 ---
 id: Accordion
 section: components
-cssPrefix: pf-c-accordion
+cssPrefix: pf-v5-c-accordion
 ---
 
 ## Examples
@@ -298,21 +298,21 @@ cssPrefix: pf-c-accordion
 ### Overview
 There are two variations to build the accordion component:
 One way uses `<div>` and `<h1 - h6>` tags to build the component.
-In these examples `.pf-c-accordion` uses `<div>`, `.pf-c-accordion__toggle` uses `<h3><button>`, and `.pf-c-accordion__expandable-content` uses `<div>`. The heading level that you use should fit within the rest of the headings outlined on your page.
+In these examples `.pf-v5-c-accordion` uses `<div>`, `.pf-v5-c-accordion__toggle` uses `<h3><button>`, and `.pf-v5-c-accordion__expandable-content` uses `<div>`. The heading level that you use should fit within the rest of the headings outlined on your page.
 
 Another variation is using the definition list:
-In these examples `.pf-c-accordion` uses `<dl>`, `.pf-c-accordion__toggle` uses `<dt><button>`, and `.pf-c-accordion__expandable-content` uses `<dd>`.
+In these examples `.pf-v5-c-accordion` uses `<dl>`, `.pf-v5-c-accordion__toggle` uses `<dt><button>`, and `.pf-v5-c-accordion__expandable-content` uses `<dd>`.
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-accordion` | `<div>`, `<dl>` | Initiates an accordion component. **Required**|
-| `.pf-c-accordion__toggle` | `<h1-h6><button>`, `<dt><button>` | Initiates a toggle in the accordion. **Required** |
-| `.pf-c-accordion__toggle-text` | `<span>` | Initiates the text inside the toggle. **Required** |
-| `.pf-c-accordion__toggle-icon` | `<span>` | Initiates the toggle icon wrapper. **Required** |
-| `.pf-c-accordion__expandable-content` | `<div>`, `<dd>` | Initiates expandable content. **Must be paired with a button** |
-| `.pf-c-accordion__expandable-content-body` | `<div>` | Initiates expandable content body. **Required** |
-| `.pf-m-bordered` | `.pf-c-accordion` | Modifies the accordion to add borders between items. |
-| `.pf-m-display-lg` | `.pf-c-accordion` | Modifies the accordion for large display styling. This variation is for marketing/web use cases. |
-| `.pf-m-expanded` | `.pf-c-accordion__toggle`, `.pf-c-accordion__expandable-content` | Modifies the accordion button and expandable content for the expanded state. |
-| `.pf-m-fixed` | `.pf-c-accordion__expandable-content` | Modifies the expandable content for the fixed state. |
+| `.pf-v5-c-accordion` | `<div>`, `<dl>` | Initiates an accordion component. **Required**|
+| `.pf-v5-c-accordion__toggle` | `<h1-h6><button>`, `<dt><button>` | Initiates a toggle in the accordion. **Required** |
+| `.pf-v5-c-accordion__toggle-text` | `<span>` | Initiates the text inside the toggle. **Required** |
+| `.pf-v5-c-accordion__toggle-icon` | `<span>` | Initiates the toggle icon wrapper. **Required** |
+| `.pf-v5-c-accordion__expandable-content` | `<div>`, `<dd>` | Initiates expandable content. **Must be paired with a button** |
+| `.pf-v5-c-accordion__expandable-content-body` | `<div>` | Initiates expandable content body. **Required** |
+| `.pf-m-bordered` | `.pf-v5-c-accordion` | Modifies the accordion to add borders between items. |
+| `.pf-m-display-lg` | `.pf-v5-c-accordion` | Modifies the accordion for large display styling. This variation is for marketing/web use cases. |
+| `.pf-m-expanded` | `.pf-v5-c-accordion__toggle`, `.pf-v5-c-accordion__expandable-content` | Modifies the accordion button and expandable content for the expanded state. |
+| `.pf-m-fixed` | `.pf-v5-c-accordion__expandable-content` | Modifies the expandable content for the fixed state. |
