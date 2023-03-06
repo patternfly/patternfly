@@ -3343,8 +3343,9 @@ For sticky columns to function correctly, the parent table's width must be contr
 | `.pf-m-sticky-header` | `.pf-c-table` | Makes the table cells in `<thead>` sticky to the top of the table on scroll. |
 | `.pf-c-scroll-outer-wrapper` | `<div>` | Initiates a table container sticky columns outer wrapper. |
 | `.pf-c-scroll-inner-wrapper` | `<div>` | Initiates a table container sticky columns inner wrapper. |
-| `.pf-c-table__sticky-left` | `<th>`, `<td>` | Initiates a sticky, left-hand table cell. |
-| `.pf-c-table__sticky-right` | `<th>`, `<td>` | Initiates a sticky, right-hand table cell. |
+| `.pf-c-table__sticky-cell` | `<th>`, `<td>` | Initiates a sticky table cell. |
+| `.pf-m-right` | `.pf-c-table__sticky-cell` | Initiates a sticky, right-hand table cell. |
+| `.pf-m-left` | `.pf-c-table__sticky-cell` | Initiates a sticky, left-hand table cell. |
 
 
 ## Nested column headers

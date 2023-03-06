@@ -1,55 +1,50 @@
 .pf-c-table {
-  --pf-c-table__sticky--cell-min-width--base: #{pf-size-prem(200px)};
-  --pf-c-table__sticky--cell--MinWidth: var(--pf-c-table__sticky--cell-min-width--base);
-  --pf-c-table__sticky--cell--ZIndex: var(--pf-global--ZIndex--md);
-  --pf-c-table__sticky--cell--Top: 0;
-  --pf-c-table__sticky--cell--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-table__sticky--cell--m-border-right--before--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__sticky--cell--m-border-right--before--BorderRightColor: var(--pf-global--BorderColor--100);
-  --pf-c-table__sticky--cell--m-border-left--before--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-table__sticky--cell--m-border-left--before--BorderLeftColor: var(--pf-global--BorderColor--100);
-  --pf-c-table--m-sticky-header--thead__sticky--cell--ZIndex: calc(var(--pf-c-table__sticky--cell--ZIndex) + 1);
-  --pf-c-table__sticky-left--Left: 0;
-  --pf-c-table__sticky-right--Right: 0;
+  --pf-c-table__sticky-cell--MinWidth--base: #{pf-size-prem(200px)};
+  --pf-c-table__sticky-cell--MinWidth: var(--pf-c-table__sticky-cell--MinWidth--base);
+  --pf-c-table__sticky-cell--ZIndex: var(--pf-global--ZIndex--md);
+  --pf-c-table__sticky-cell--Top: 0;
+  --pf-c-table__sticky-cell--Right: auto;
+  --pf-c-table__sticky-cell--Left: auto;
+  --pf-c-table__sticky-cell--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-table__sticky-cell--m-border-right--before--BorderRightWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table__sticky-cell--m-border-right--before--BorderRightColor: var(--pf-global--BorderColor--100);
+  --pf-c-table__sticky-cell--m-border-left--before--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
+  --pf-c-table__sticky-cell--m-border-left--before--BorderLeftColor: var(--pf-global--BorderColor--100);
+  --pf-c-table__sticky-cell--m-right--Right: 0;
+  --pf-c-table__sticky-cell--m-left--Left: 0;
+  --pf-c-table--m-sticky-header__sticky-cell--ZIndex: calc(var(--pf-c-table__sticky-cell--ZIndex) + 1);
 
-  .pf-c-table__sticky-left,
-  .pf-c-table__sticky-right {
+  .pf-c-table__sticky-cell {
+    --pf-c-table--cell--Overflow: visible;
+    --pf-c-table--m-sticky-header--cell--ZIndex: var(--pf-c-table--m-sticky-header__sticky-cell--ZIndex);
+
     position: sticky;
-    z-index: var(--pf-c-table__sticky--cell--ZIndex);
-    min-width: var(--pf-c-table__sticky--cell--MinWidth);
-    background-color: var(--pf-c-table__sticky--cell--BackgroundColor);
+    right: var(--pf-c-table__sticky-cell--Right);
+    left: var(--pf-c-table__sticky-cell--Left);
+    z-index: var(--pf-c-table__sticky-cell--ZIndex);
+    min-width: var(--pf-c-table__sticky-cell--MinWidth);
+    background-color: var(--pf-c-table__sticky-cell--BackgroundColor);
     background-clip: padding-box;
 
     &.pf-m-border-right::before {
-      --pf-c-table--cell--m-border-right--before--BorderRightWidth: var(--pf-c-table__sticky--cell--m-border-right--before--BorderRightWidth);
-      --pf-c-table--cell--m-border-right--before--BorderRightColor: var(--pf-c-table__sticky--cell--m-border-right--before--BorderRightColor);
+      --pf-c-table--cell--m-border-right--before--BorderRightWidth: var(--pf-c-table__sticky-cell--m-border-right--before--BorderRightWidth);
+      --pf-c-table--cell--m-border-right--before--BorderRightColor: var(--pf-c-table__sticky-cell--m-border-right--before--BorderRightColor);
     }
 
     &.pf-m-border-left::before {
-      --pf-c-table--cell--m-border-left--before--BorderLeftWidth: var(--pf-c-table__sticky--cell--m-border-left--before--BorderLeftWidth);
-      --pf-c-table--cell--m-border-left--before--BorderLeftColor: var(--pf-c-table__sticky--cell--m-border-left--before--BorderLeftColor);
+      --pf-c-table--cell--m-border-left--before--BorderLeftWidth: var(--pf-c-table__sticky-cell--m-border-left--before--BorderLeftWidth);
+      --pf-c-table--cell--m-border-left--before--BorderLeftColor: var(--pf-c-table__sticky-cell--m-border-left--before--BorderLeftColor);
     }
-  }
 
-  &.pf-m-sticky-header {
-    --pf-c-table--cell--Overflow: visible;
-
-    thead {
-      .pf-c-table__sticky-left,
-      .pf-c-table__sticky-right {
-        z-index: var(--pf-c-table--m-sticky-header--thead__sticky--cell--ZIndex);
-      }
+    &.pf-m-right {
+      --pf-c-table__sticky-cell--Right: var(--pf-c-table__sticky-cell--m-right--Right);
     }
+
+    &.pf-m-left {
+      --pf-c-table__sticky-cell--Left: var(--pf-c-table__sticky-cell--m-left--Left);
+    }
+
   }
-}
-
-
-.pf-c-table__sticky-left {
-  left: var(--pf-c-table__sticky-left--Left);
-}
-
-.pf-c-table__sticky-right {
-  right: var(--pf-c-table__sticky-right--Right);
 }
 
 .pf-c-scroll-outer-wrapper {
