@@ -1,7 +1,7 @@
 .pf-c-table {
   --pf-c-table__sticky-cell--MinWidth--base: #{pf-size-prem(200px)};
   --pf-c-table__sticky-cell--MinWidth: var(--pf-c-table__sticky-cell--MinWidth--base);
-  --pf-c-table__sticky-cell--ZIndex: var(--pf-global--ZIndex--md);
+  --pf-c-table__sticky-cell--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-table__sticky-cell--Top: 0;
   --pf-c-table__sticky-cell--Right: auto;
   --pf-c-table__sticky-cell--Left: auto;
