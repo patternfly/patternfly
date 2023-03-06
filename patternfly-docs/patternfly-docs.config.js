@@ -5,7 +5,7 @@ module.exports = {
   hasVersionSwitcher: false,
   hasDarkThemeSwitcher: true,
   sideNavItems: [
-    { section: 'get-started'},
+    { section: 'get-started' },
     { section: 'developer-resources' },
     { section: 'components' },
     { section: 'layouts' },
