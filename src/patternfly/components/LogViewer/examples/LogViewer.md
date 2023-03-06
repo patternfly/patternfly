@@ -87,7 +87,7 @@ import './LogViewer.css';
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-bottom-header"'}}
+      {{#> popover-title popover-title--id="popover-bottom-header"}}
         {{#> popover-title-text}}
           Clear this log?
         {{/popover-title-text}}

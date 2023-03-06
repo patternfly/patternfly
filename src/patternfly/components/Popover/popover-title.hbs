@@ -5,5 +5,18 @@
   {{#if popover-title--attribute}}
     {{{popover-title--attribute}}}
   {{/if}}>
+  {{#> wrapper popover-title-icon--type=(ternary popover-title-icon--type popover-title-icon--type
+        (ternary popover--IsDefaultAlert "bell"
+        (ternary popover--IsInfoAlert "info-circle"
+        (ternary popover--IsSuccessAlert "info-circle"
+        (ternary popover--IsWarningAlert "info-circle"
+        (ternary popover--IsDangerAlert "info-circle"
+        false
+      ))))))
+  }}
+    {{#if popover-title-icon--type}}
+      {{> popover-title-icon}}
+    {{/if}}
+  {{/wrapper}}
   {{> @partial-block}}
 </div>

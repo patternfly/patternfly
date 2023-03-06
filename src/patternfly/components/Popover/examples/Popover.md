@@ -17,7 +17,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-top-header"'}}
+      {{#> popover-title popover-title--id="popover-top-header"}}
         {{#> popover-title-text}}
           Popover header
         {{/popover-title-text}}
@@ -43,7 +43,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-right-header"'}}
+      {{#> popover-title popover-title--id="popover-right-header"}}
         {{#> popover-title-text}}
           Popover header
         {{/popover-title-text}}
@@ -69,7 +69,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-bottom-header"'}}
+      {{#> popover-title popover-title--id="popover-bottom-header"}}
         {{#> popover-title-text}}
           Popover header
         {{/popover-title-text}}
@@ -95,7 +95,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-left-header"'}}
+      {{#> popover-title popover-title--id="popover-left-header"}}
         {{#> popover-title-text}}
           Popover header
         {{/popover-title-text}}
@@ -121,7 +121,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-left-start-header"'}}
+      {{#> popover-title popover-title--id="popover-left-start-header"}}
         {{#> popover-title-text}}
           Popover header
         {{/popover-title-text}}
@@ -147,7 +147,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-left-end-header"'}}
+      {{#> popover-title popover-title--id="popover-left-end-header"}}
         {{#> popover-title-text}}
           Popover header
         {{/popover-title-text}}
@@ -173,7 +173,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-bottom-start-header"'}}
+      {{#> popover-title popover-title--id="popover-bottom-start-header"}}
         {{#> popover-title-text}}
           Popover header
         {{/popover-title-text}}
@@ -199,7 +199,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-bottom-end-header"'}}
+      {{#> popover-title popover-title--id="popover-bottom-end-header"}}
         {{#> popover-title-text}}
           Popover header
         {{/popover-title-text}}
@@ -252,7 +252,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-width-auto-header"'}}
+      {{#> popover-title popover-title--id="popover-width-auto-header"}}
         {{#> popover-title-text}}
           Popover header
         {{/popover-title-text}}
@@ -303,7 +303,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-default-alert-header"'}}
+      {{#> popover-title popover-title--id="popover-default-alert-header"}}
         {{#> popover-title-text}}
           Default popover title
         {{/popover-title-text}}
@@ -329,7 +329,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-info-alert-header"'}}
+      {{#> popover-title popover-title--id="popover-info-alert-header"}}
         {{#> popover-title-text}}
           Info popover title
         {{/popover-title-text}}
@@ -355,7 +355,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-success-alert-header"'}}
+      {{#> popover-title popover-title--id="popover-success-alert-header"}}
         {{#> popover-title-text}}
           Success popover title
         {{/popover-title-text}}
@@ -381,7 +381,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-warning-alert-header"'}}
+      {{#> popover-title popover-title--id="popover-warning-alert-header"}}
         {{#> popover-title-text}}
           Warning popover title
         {{/popover-title-text}}
@@ -407,7 +407,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-danger-alert-header"'}}
+      {{#> popover-title popover-title--id="popover-danger-alert-header"}}
         {{#> popover-title-text}}
           Danger popover title
         {{/popover-title-text}}
