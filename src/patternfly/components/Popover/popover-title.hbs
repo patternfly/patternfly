@@ -1,9 +1,22 @@
-<div class="pf-c-popover__title{{#if popover-title--IsIcon}} pf-m-icon{{/if}}{{#if popover-title--modifier}} {{popover-title--modifier}}{{/if}}"
+<div class="pf-c-popover__title{{#if popover-title--modifier}} {{popover-title--modifier}}{{/if}}"
+  {{#if popover-title--id}}
+    id="{{popover-title--id}}"
+  {{/if}}
   {{#if popover-title--attribute}}
     {{{popover-title--attribute}}}
   {{/if}}>
-  {{#if popover-title--IsIcon}}
-    {{> popover-title-icon}}
-  {{/if}}
+  {{#> wrapper popover-title-icon--type=(ternary popover-title-icon--type popover-title-icon--type
+        (ternary popover--IsDefaultAlert "bell"
+        (ternary popover--IsInfoAlert "info-circle"
+        (ternary popover--IsSuccessAlert "check-circle"
+        (ternary popover--IsWarningAlert "exclamation-triangle"
+        (ternary popover--IsDangerAlert "exclamation-circle"
+        false
+      ))))))
+  }}
+    {{#if popover-title-icon--type}}
+      {{> popover-title-icon}}
+    {{/if}}
+  {{/wrapper}}
   {{> @partial-block}}
 </div>

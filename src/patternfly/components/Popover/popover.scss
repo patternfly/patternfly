@@ -60,6 +60,7 @@
   // Title icon
   --pf-c-popover__title-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-popover__title-icon--Color: var(--pf-global--Color--100);
+  --pf-c-popover__title-icon--FontSize: var(--pf-global--FontSize--md);
 
   // Footer
   --pf-c-popover__footer--MarginTop: var(--pf-global--spacer--md);
@@ -219,6 +220,7 @@
 
 .pf-c-popover__title-icon {
   margin-right: var(--pf-c-popover__title-icon--MarginRight);
+  font-size: var(--pf-c-popover__title-icon--FontSize);
   color: var(--pf-c-popover__title-icon--Color);
 }
 
