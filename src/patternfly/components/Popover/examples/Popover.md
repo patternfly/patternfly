@@ -278,7 +278,7 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--attribute='id="popover-icon-title-header"' popover-title-icon--type="bullhorn"}}
+      {{#> popover-title popover-title--id='popover-icon-title-header' popover-title-icon--type="bullhorn"}}
         {{#> popover-title-text}}
           Popover with icon title
         {{/popover-title-text}}
