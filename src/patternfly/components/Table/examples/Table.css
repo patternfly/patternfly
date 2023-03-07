@@ -9,6 +9,10 @@
   top: -18px;
 }
 
+#ws-core-c-table-sticky-header .ws-preview-html {
+  height: 300px;
+}
+
 #ws-core-c-table-sticky-columns-and-header .ws-preview-html {
   height: 600px;
 }
