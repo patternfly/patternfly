@@ -90,7 +90,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
     {{> form-control controlType="input" input=true form-control--attribute='type="email" id="textInput6" name="textInput6" aria-label="Email input field" aria-describedby="email-example"'}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsBox=true}}
-    {{> input-group-text input-group-text--value="@example.com" input-group-text--attribute='id="email-example"'}}
+    {{> input-group-text input-group-text--value="@example.com" input-group-text--id='email-example'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>

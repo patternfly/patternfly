@@ -36,7 +36,7 @@ import './TextInputGroup.css'
   {{#> text-input-group-main text-input-group-main--modifier="pf-m-icon"}}
     {{#> text-input-group-text}}
       {{> text-input-group-icon}}
-      {{> text-input-group-text-input text-input-group-text-input--attribute='placeholder="placeholder"'}}
+      {{> text-input-group-text-input text-input-group-text-input--placeholder='placeholder'}}
     {{/text-input-group-text}}
   {{/text-input-group-main}}
   {{#> text-input-group-utilities}}
