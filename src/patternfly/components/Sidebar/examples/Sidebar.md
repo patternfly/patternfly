@@ -208,7 +208,7 @@ import './Sidebar.css'
 | `.pf-c-sidebar__main` | `<div>` | Initiates the sidebar main element. **Required** |
 | `.pf-c-sidebar__panel` | `<div>` | Initiates the sidebar panel element. **Required** |
 | `.pf-c-sidebar__content` | `<div>` | Initiates the sidebar content element. **Required** |
-| `.pf-m-border` | `.pf-c-sidebar__panel`, `.pf-c-sidebar__content` | Modifies the sidebar component to add a border between the panel and content. **Note:** Does not work with `.pf-c-sidebar__panel.pf-m-static`. |
+| `.pf-m-border` | `.pf-c-sidebar__main` | Modifies the sidebar component to add a border between the panel and content. |
 | `.pf-m-padding` | `.pf-c-sidebar__panel`, `.pf-c-sidebar__content` | Modifies the sidebar component to add a padding to panel and/or content. |
 | `.pf-m-gutter` | `.pf-c-sidebar` | Modifies the sidebar component to add a gutter between the panel and content. |
 | `.pf-m-stack` | `.pf-c-sidebar` | Modifies the sidebar to stack the panel on top of the content. |
