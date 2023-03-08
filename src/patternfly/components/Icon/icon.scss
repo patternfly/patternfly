@@ -25,7 +25,7 @@
   --pf-c-icon__content--m-warning--Color: var(--pf-global--warning-color--100);
   --pf-c-icon__content--m-success--Color: var(--pf-global--success-color--100);
   --pf-c-icon__content--m-info--Color: var(--pf-global--info-color--100);
-  --pf-c-icon__content--m-default--Color: var(--pf-global--default-color--100);
+  --pf-c-icon__content--m-custom--Color: var(--pf-global--custom-color--100);
   --pf-c-icon__content--FontSize: var(--pf-global--icon--FontSize--md);
   --pf-c-icon--m-inline__content--FontSize: 1em;
   --pf-c-icon__content--svg--VerticalAlign: -.125em;
@@ -135,8 +135,8 @@
     --pf-c-icon__content--Color: var(--pf-c-icon__content--m-info--Color);
   }
 
-  &.pf-m-default {
-    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-default--Color);
+  &.pf-m-custom {
+    --pf-c-icon__content--Color: var(--pf-c-icon__content--m-custom--Color);
   }
 }
 

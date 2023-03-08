@@ -189,14 +189,14 @@ import './ModalBox.css'
 {{/modal-example}}
 ```
 
-### Default alert
+### Custom alert
 ```hbs isFullscreen
-{{#> modal-example modal-example--id="default-alert"}}
-  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsDefaultAlert="true"}}
+{{#> modal-example modal-example--id="custom-alert"}}
+  {{#> modal-box modal-box--attribute=(concat 'aria-labelledby="' modal-example--id '-title" aria-describedby="' modal-example--id '-description"') modal-box--IsAlert="true" modal-box--IsCustomAlert="true"}}
     {{> modal-box-close}}
     {{#> modal-box-header}}
       {{#> modal-box-title modal-box-title--IsIcon="true" modal-box-title--attribute=(concat 'id="' modal-example--id '-title"')}}
-        Default alert modal title
+        Custom alert modal title
       {{/modal-box-title}}
     {{/modal-box-header}}
     {{#> modal-box-body modal-box-body--attribute=(concat 'id="' modal-example--id '-description"')}}
@@ -327,7 +327,7 @@ A modal box is a generic rectangular container that can be used to build modals.
 | `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
 | `.pf-m-align-top` | `.pf-c-modal-box` | Modifies for top alignment.  |
 | `.pf-m-icon` | `.pf-c-modal-box__title` | Modifies the title layout to accommodate an icon. |
-| `.pf-m-default` | `.pf-c-modal-box` | Modifies for the default alert state. |
+| `.pf-m-custom` | `.pf-c-modal-box` | Modifies for the custom alert state. |
 | `.pf-m-info` | `.pf-c-modal-box` | Modifies for the info alert state. |
 | `.pf-m-success` | `.pf-c-modal-box` | Modifies for the success alert state. |
 | `.pf-m-warning` | `.pf-c-modal-box` | Modifies for the warning alert state. |

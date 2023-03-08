@@ -10,14 +10,14 @@
   --pf-c-popover--m-warning__title-icon--Color: var(--pf-global--warning-color--100);
   --pf-c-popover--m-success__title-icon--Color: var(--pf-global--success-color--100);
   --pf-c-popover--m-info__title-icon--Color: var(--pf-global--info-color--100);
-  --pf-c-popover--m-default__title-icon--Color: var(--pf-global--default-color--200);
+  --pf-c-popover--m-custom__title-icon--Color: var(--pf-global--custom-color--200);
 
   // Title text colors for states
   --pf-c-popover--m-danger__title-text--Color: var(--pf-global--danger-color--200);
   --pf-c-popover--m-warning__title-text--Color: var(--pf-global--warning-color--200);
   --pf-c-popover--m-success__title-text--Color: var(--pf-global--success-color--200);
   --pf-c-popover--m-info__title-text--Color: var(--pf-global--info-color--200);
-  --pf-c-popover--m-default__title-text--Color: var(--pf-global--default-color--300);
+  --pf-c-popover--m-custom__title-text--Color: var(--pf-global--custom-color--300);
 
   // Content
   --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
@@ -171,9 +171,9 @@
     --pf-c-popover__title-text--Color: var(--pf-c-popover--m-success__title-text--Color);
   }
 
-  &.pf-m-default {
-    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-default__title-icon--Color);
-    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-default__title-text--Color);
+  &.pf-m-custom {
+    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-custom__title-icon--Color);
+    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-custom__title-text--Color);
   }
 
   &.pf-m-info {

@@ -38,8 +38,8 @@
   --pf-c-notification-drawer__list-item--m-danger__list-item--before--BackgroundColor: var(--pf-global--danger-color--100);
   --pf-c-notification-drawer__list-item--m-success__list-item-header-icon--Color: var(--pf-global--success-color--100);
   --pf-c-notification-drawer__list-item--m-success__list-item--before--BackgroundColor: var(--pf-global--success-color--100);
-  --pf-c-notification-drawer__list-item--m-default__list-item-header-icon--Color: var(--pf-global--default-color--200);
-  --pf-c-notification-drawer__list-item--m-default__list-item--before--BackgroundColor: var(--pf-global--default-color--200);
+  --pf-c-notification-drawer__list-item--m-custom__list-item-header-icon--Color: var(--pf-global--custom-color--200);
+  --pf-c-notification-drawer__list-item--m-custom__list-item--before--BackgroundColor: var(--pf-global--custom-color--200);
   --pf-c-notification-drawer__list-item--m-read--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-notification-drawer__list-item--m-read--BorderBottomColor: var(--pf-global--BorderColor--100);
   --pf-c-notification-drawer__list-item--m-read--before--Top: calc(var(--pf-c-notification-drawer__list-item--BorderBottomWidth) * -1);
@@ -183,9 +183,9 @@
     --pf-c-notification-drawer__list-item-header-icon--Color: var(--pf-c-notification-drawer__list-item--m-success__list-item-header-icon--Color);
   }
 
-  &.pf-m-default {
-    --pf-c-notification-drawer__list-item--before--BackgroundColor: var(--pf-c-notification-drawer__list-item--m-default__list-item--before--BackgroundColor);
-    --pf-c-notification-drawer__list-item-header-icon--Color: var(--pf-c-notification-drawer__list-item--m-default__list-item-header-icon--Color);
+  &.pf-m-custom {
+    --pf-c-notification-drawer__list-item--before--BackgroundColor: var(--pf-c-notification-drawer__list-item--m-custom__list-item--before--BackgroundColor);
+    --pf-c-notification-drawer__list-item-header-icon--Color: var(--pf-c-notification-drawer__list-item--m-custom__list-item-header-icon--Color);
   }
 
   &.pf-m-read {

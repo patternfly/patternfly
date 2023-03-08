@@ -19,7 +19,7 @@
   --pf-c-modal-box--m-warning__title-icon--Color: var(--pf-global--warning-color--100);
   --pf-c-modal-box--m-success__title-icon--Color: var(--pf-global--success-color--100);
   --pf-c-modal-box--m-info__title-icon--Color: var(--pf-global--info-color--100);
-  --pf-c-modal-box--m-default__title-icon--Color: var(--pf-global--default-color--200);
+  --pf-c-modal-box--m-custom__title-icon--Color: var(--pf-global--custom-color--200);
 
   @media (min-width: $pf-global--breakpoint--xl) {
     --pf-c-modal-box--m-align-top--spacer: var(--pf-c-modal-box--m-align-top--xl--spacer);
@@ -107,8 +107,8 @@
     --pf-c-modal-box__title-icon--Color: var(--pf-c-modal-box--m-success__title-icon--Color);
   }
 
-  &.pf-m-default {
-    --pf-c-modal-box__title-icon--Color: var(--pf-c-modal-box--m-default__title-icon--Color);
+  &.pf-m-custom {
+    --pf-c-modal-box__title-icon--Color: var(--pf-c-modal-box--m-custom__title-icon--Color);
   }
 
   &.pf-m-info {

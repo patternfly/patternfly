@@ -136,13 +136,13 @@ These colors are best used with the ["inverse" background colors](/utilities/bac
 ```
 ### Status and state text colors
 ```hbs
-{{#> text text--modifier="pf-u-default-color-100"}}
+{{#> text text--modifier="pf-u-custom-color-100"}}
   Font color default 100
 {{/text}}
-{{#> text text--modifier="pf-u-default-color-200"}}
+{{#> text text--modifier="pf-u-custom-color-200"}}
   Font color default 200
 {{/text}}
-{{#> text text--modifier="pf-u-default-color-300"}}
+{{#> text text--modifier="pf-u-custom-color-300"}}
   Font color default 300
 {{/text}}
 {{#> text text--modifier="pf-u-success-color-100"}}
@@ -251,7 +251,7 @@ Care should be taken especially when applying text colors, as this can have a ne
 | `.pf-u-link-color-dark{-on-[breakpoint]}`                              | `*`        | Sets font-color to dark link color                  |
 | `.pf-u-link-color-dark-hover{-on-[breakpoint]}`                        | `*`        | Sets font-color to dark hover link color            |
 | `.pf-u-link-color-visited{-on-[breakpoint]}`                           | `*`        | Sets font-color to visited link color               |
-| `.pf-u-default-color-{100, 200, 300}{-on-[breakpoint]}`                | `*`        | Sets font-color to default color 100, 200, or 300   |
+| `.pf-u-custom-color-{100, 200, 300}{-on-[breakpoint]}`                | `*`        | Sets font-color to default color 100, 200, or 300   |
 | `.pf-u-success-color-{100, 200}{-on-[breakpoint]}`                     | `*`        | Sets font-color to success color 100 or 200         |
 | `.pf-u-info-color-{100, 200}{-on-[breakpoint]}`                        | `*`        | Sets font-color to info color 100 or 200            |
 | `.pf-u-warning-color-{100, 200}{-on-[breakpoint]}`                     | `*`        | Sets font-color to warning color 100 or 200         |
