@@ -1,6 +1,7 @@
 ---
 id: Form control
 section: components
+subsection: forms
 cssPrefix: pf-c-form-control
 ---
 
