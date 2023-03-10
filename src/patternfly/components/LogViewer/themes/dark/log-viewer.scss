@@ -2,6 +2,6 @@
 
 @mixin pf-theme-dark-log-viewer() {
   .pf-c-log-viewer.pf-m-dark .pf-c-log-viewer__main {
-    @include pf-theme-dark--t-dark;
+    // @include pf-theme-dark--t-dark;
   }
 }

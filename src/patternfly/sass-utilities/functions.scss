@@ -2,23 +2,39 @@
 // --------------------------------------------------
 @import "./div";
 
+// Create color function
+@function pf-color-function($base, $alpha: 1) {
+  @return rgb(#{$base}, #{$alpha});
+}
+
+// String replace - https://css-tricks.com/snippets/sass/str-replace-function/
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  
+  @return $string;
+}
+
 // Transform px to rems
 @function pf-strip-unit($num) {
   @return div($num, ($num * 0 + 1));
 }
 
-@function pf-size-prem($pxval, $base: $pf-global--space-size-root) {
-  @return div(pf-strip-unit($pxval), $base) * 1rem;
+@function pf-size-prem($pxval, $base: var(--pf-global--space-size-root)) {
+  @return calc(#{pf-strip-unit($pxval)} / #{$base} * 1rem);
 }
 
-@function pf-font-prem($pxval, $base: $pf-global--font-size-root) {
-  @return div(pf-strip-unit($pxval), $base) * 1rem;
+@function pf-font-prem($pxval, $base: var(--pf-global--font-size-root)) {
+  @return calc(#{pf-strip-unit($pxval)} / #{$base} * 1rem);
 }
 
 @function pf-bg-svg($svg-coordinates, $viewBox: "512", $svg-color: "currentColor") {
-  $color: str-slice(#{$svg-color}, 2);
-
-  @return url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 #{$viewBox} 512'%3E%3Cpath fill='%23#{$color}' d='#{$svg-coordinates}'/%3E%3C/svg%3E");
+  $color: str-replace(str-replace(#{$svg-color}, "(", "%28"), ")", "%29");
+  
+  @return url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 #{$viewBox} 512'%3E%3Cpath fill='#{$color}' d='#{$svg-coordinates}'/%3E%3C/svg%3E");
 }
 
 // Return (width) breakpoint value if it exists

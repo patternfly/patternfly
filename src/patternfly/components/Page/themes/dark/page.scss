@@ -64,6 +64,6 @@
   .pf-c-page__sidebar-body.pf-m-menu .pf-c-context-selector,
   .pf-c-page__main-section[class*="pf-m-dark-"],
   .pf-c-page__header {
-    @include pf-theme-dark--t-dark;
+    // @include pf-theme-dark--t-dark;
   }
 }

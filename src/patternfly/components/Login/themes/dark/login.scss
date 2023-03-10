@@ -3,6 +3,6 @@
 @mixin pf-theme-dark-login() {
   .pf-c-login__header,
   .pf-c-login__footer {
-    @include pf-theme-dark--t-dark;
+    // @include pf-theme-dark--t-dark;
   }
 }
