@@ -78,7 +78,9 @@
 
   // Inline
   --pf-c-alert--m-inline--BoxShadow: none;
-  --pf-c-alert--m-inline--BackgroundColor: var(--pf-global--palette--cyan-50);
+
+  // Inline custom
+  --pf-c-alert--m-inline--m-custom--BackgroundColor: var(--pf-global--palette--cyan-50);
 
   // Inline success
   --pf-c-alert--m-inline--m-success--BackgroundColor: var(--pf-global--palette--green-50);
