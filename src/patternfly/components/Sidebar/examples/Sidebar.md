@@ -151,6 +151,54 @@ import './Sidebar.css'
 {{/sidebar}}
 ```
 
+### Border
+```hbs
+{{#> sidebar sidebar--modifier="pf-m-gutter" sidebar--HasBorder=true}}
+  {{#> sidebar-panel}}
+    Sidebar panel
+  {{/sidebar-panel}}
+  {{#> sidebar-content}}
+    {{#> content}}
+      <p>Default layout.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nulla id augue dictum commodo. Donec mollis arcu massa, sollicitudin venenatis est rutrum vitae. Integer pulvinar ligula at augue mollis, ac pulvinar arcu semper. Maecenas nisi lorem, malesuada ac lectus nec, porta pretium neque. Ut convallis libero sit amet metus mattis, vel facilisis lorem malesuada. Duis consectetur ante sit amet magna efficitur, a interdum leo vulputate.</p>
+      <p>Praesent at odio nec sapien ultrices tincidunt in non mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis consectetur nisl quis facilisis faucibus. Sed eu bibendum risus. Suspendisse porta euismod tortor, at elementum odio suscipit sed. Cras eget ultrices urna, ac feugiat lectus. Integer a pharetra velit, in imperdiet mi. Phasellus vel hendrerit velit. Vestibulum ut augue vitae erat vulputate bibendum a ut magna.</p>
+    {{/content}}
+  {{/sidebar-content}}
+{{/sidebar}}
+```
+
+### Padding on panel
+```hbs
+{{#> sidebar}}
+  {{#> sidebar-panel sidebar-panel--modifier="pf-m-padding"}}
+    Sidebar panel, with padding
+  {{/sidebar-panel}}
+  {{#> sidebar-content}}
+    {{#> content}}
+      <p>Default layout.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nulla id augue dictum commodo. Donec mollis arcu massa, sollicitudin venenatis est rutrum vitae. Integer pulvinar ligula at augue mollis, ac pulvinar arcu semper. Maecenas nisi lorem, malesuada ac lectus nec, porta pretium neque. Ut convallis libero sit amet metus mattis, vel facilisis lorem malesuada. Duis consectetur ante sit amet magna efficitur, a interdum leo vulputate.</p>
+      <p>Praesent at odio nec sapien ultrices tincidunt in non mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis consectetur nisl quis facilisis faucibus. Sed eu bibendum risus. Suspendisse porta euismod tortor, at elementum odio suscipit sed. Cras eget ultrices urna, ac feugiat lectus. Integer a pharetra velit, in imperdiet mi. Phasellus vel hendrerit velit. Vestibulum ut augue vitae erat vulputate bibendum a ut magna.</p>
+    {{/content}}
+  {{/sidebar-content}}
+{{/sidebar}}
+```
+
+### Padding on content
+```hbs
+{{#> sidebar}}
+  {{#> sidebar-panel}}
+    Sidebar panel
+  {{/sidebar-panel}}
+  {{#> sidebar-content sidebar-content--modifier="pf-m-padding"}}
+    {{#> content}}
+      <p>Sidebar content, with padding</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus nulla id augue dictum commodo. Donec mollis arcu massa, sollicitudin venenatis est rutrum vitae. Integer pulvinar ligula at augue mollis, ac pulvinar arcu semper. Maecenas nisi lorem, malesuada ac lectus nec, porta pretium neque. Ut convallis libero sit amet metus mattis, vel facilisis lorem malesuada. Duis consectetur ante sit amet magna efficitur, a interdum leo vulputate.</p>
+      <p>Praesent at odio nec sapien ultrices tincidunt in non mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis consectetur nisl quis facilisis faucibus. Sed eu bibendum risus. Suspendisse porta euismod tortor, at elementum odio suscipit sed. Cras eget ultrices urna, ac feugiat lectus. Integer a pharetra velit, in imperdiet mi. Phasellus vel hendrerit velit. Vestibulum ut augue vitae erat vulputate bibendum a ut magna.</p>
+    {{/content}}
+  {{/sidebar-content}}
+{{/sidebar}}
+```
+
 ## Documentation
 
 ### Usage
@@ -160,6 +208,8 @@ import './Sidebar.css'
 | `.pf-c-sidebar__main` | `<div>` | Initiates the sidebar main element. **Required** |
 | `.pf-c-sidebar__panel` | `<div>` | Initiates the sidebar panel element. **Required** |
 | `.pf-c-sidebar__content` | `<div>` | Initiates the sidebar content element. **Required** |
+| `.pf-m-border` | `.pf-c-sidebar__main` | Modifies the sidebar component to add a border between the panel and content. |
+| `.pf-m-padding` | `.pf-c-sidebar__panel`, `.pf-c-sidebar__content` | Modifies the sidebar component to add a padding to panel and/or content. |
 | `.pf-m-gutter` | `.pf-c-sidebar` | Modifies the sidebar component to add a gutter between the panel and content. |
 | `.pf-m-stack` | `.pf-c-sidebar` | Modifies the sidebar to stack the panel on top of the content. |
 | `.pf-m-split` | `.pf-c-sidebar` | Modifies the sidebar to position the panel and content side by side. |

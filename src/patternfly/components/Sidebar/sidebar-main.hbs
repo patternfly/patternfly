@@ -1,4 +1,6 @@
-<div class="pf-c-sidebar__main{{#if sidebar-main--modifier}} {{sidebar-main--modifier}}{{/if}}"
+<div class="pf-c-sidebar__main
+  {{#if sidebar--HasBorder}} pf-m-border{{/if}}
+  {{#if sidebar-main--modifier}} {{sidebar-main--modifier}}{{/if}}"
   {{#if sidebar-main--attribute}}
     {{{sidebar-main--attribute}}}
   {{/if}}>
