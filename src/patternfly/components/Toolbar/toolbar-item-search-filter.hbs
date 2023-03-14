@@ -8,9 +8,9 @@
       {{/if}}
     {{/select}}
     {{#if toolbar-items-search-filter--text}}
-      {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group" text-input-group-text-input--placeholder=(concat "Filter by " toolbar-items-search-filter--text) text-input-group--attribute='style="width: auto"'}}
+      {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group" text-input-group-text-input--placeholder=(concat "Filter by " toolbar-items-search-filter--text)}}
     {{else}}
-      {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group" text-input-group-text-input--placeholder="Filter by name" text-input-group--attribute='style="width: auto"'}}
+      {{> text-input-group--search-input text-input-group--id="text-input-group-search-input-group" text-input-group-text-input--placeholder="Filter by name"}}
     {{/if}}
   {{/input-group}}
 {{/toolbar-item}}
