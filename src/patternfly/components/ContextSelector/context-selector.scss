@@ -35,7 +35,8 @@
 
   // Toggle icon arrow
   --pf-c-context-selector__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-context-selector__toggle-icon--MarginLeft: auto;
+  --pf-c-context-selector__toggle-icon--PaddingLeft: var(--pf-global--spacer--md);
   --pf-c-context-selector--m-plain__toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-context-selector--m-plain--hover__toggle-icon--Color: var(--pf-global--Color--100);
 
@@ -195,7 +196,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   padding: var(--pf-c-context-selector__toggle--PaddingTop) var(--pf-c-context-selector__toggle--PaddingRight) var(--pf-c-context-selector__toggle--PaddingBottom) var(--pf-c-context-selector__toggle--PaddingLeft);
   color: var(--pf-c-context-selector__toggle--Color);
@@ -286,6 +286,7 @@
 }
 
 .pf-c-context-selector__toggle-icon {
+  padding-left: var(--pf-c-context-selector__toggle-icon--PaddingLeft);
   margin-right: var(--pf-c-context-selector__toggle-icon--MarginRight);
   margin-left: var(--pf-c-context-selector__toggle-icon--MarginLeft);
   color: var(--pf-c-context-selector__toggle-icon--Color, inherit);

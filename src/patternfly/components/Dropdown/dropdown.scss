@@ -110,8 +110,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   // Toggle Arrow
   --pf-c-dropdown__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-dropdown__toggle-icon--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-dropdown__toggle-icon--MarginRight: 0;
+  --pf-c-dropdown__toggle-icon--MarginLeft: auto;
   --pf-c-dropdown--m-top--m-expanded__toggle-icon--Rotate: 180deg;
   --pf-c-dropdown--m-plain__toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-dropdown--m-plain--hover__toggle-icon--Color: var(--pf-global--Color--100);
@@ -171,6 +172,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown--c-divider--MarginBottom: var(--pf-global--spacer--sm);
 
   // badge toggle icon
+  --pf-c-dropdown__toggle--c-badge__toggle-icon--PaddingLeft: 0;
   --pf-c-dropdown__toggle--c-badge__toggle-icon--MarginLeft: var(--pf-global--spacer--xs);
   --pf-c-dropdown__toggle--c-badge__toggle-icon--MarginRight: 0;
 
@@ -246,7 +248,6 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   min-width: var(--pf-c-dropdown__toggle--MinWidth);
   max-width: 100%;
   padding: var(--pf-c-dropdown__toggle--PaddingTop) var(--pf-c-dropdown__toggle--PaddingRight) var(--pf-c-dropdown__toggle--PaddingBottom) var(--pf-c-dropdown__toggle--PaddingLeft);
@@ -596,6 +597,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   > .pf-c-badge {
+    --pf-c-dropdown__toggle-icon--PaddingLeft: var(--pf-c-dropdown__toggle--c-badge__toggle-icon--PaddingLeft);
     --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-c-dropdown__toggle--c-badge__toggle-icon--MarginLeft);
     --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-c-dropdown__toggle--c-badge__toggle-icon--MarginRight);
   }
@@ -610,6 +612,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 }
 
 .pf-c-dropdown__toggle-icon {
+  padding-left: var(--pf-c-dropdown__toggle-icon--PaddingLeft);
   margin-right: var(--pf-c-dropdown__toggle-icon--MarginRight);
   margin-left: var(--pf-c-dropdown__toggle-icon--MarginLeft);
   line-height: var(--pf-c-dropdown__toggle-icon--LineHeight);
