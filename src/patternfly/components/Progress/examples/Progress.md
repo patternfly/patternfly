@@ -263,7 +263,7 @@ cssPrefix: pf-c-progress
 {{/progress}}
 ```
 
-### Non-percantage progress
+### Non-percentage progress
 If the status that displays with the bar is not a percentage, then the ARIA tag `aria-valuetext` should be used to provide this status to screen reader users. This is the only case when setting the `aria-valuemax` to a value other than "100" is recommended, given how different screen readers handle these attributes.
 
 ### Progress step instruction
