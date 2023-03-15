@@ -232,7 +232,7 @@ wrapperTag: div
 | `.pf-c-login__main-header-utilities` | `<div>` | Creates a utilities section in the main header area. **Note:** For use with a language selector menu. |
 | `.pf-c-login__main-body` | `<div>` | Creates the body of the main area. **Required** |
 | `.pf-c-login__main-body .pf-c-form` | `<form>` | Creates the login form in the main body area. **Required**|
-| `.pf-c-login__main-body .pf-c-form .pf-c-form-helper-text` | `<form>` | Creates the error messages shown when the form has errors. When not active, apply `.pf-m-hidden.` **Required** |
+| `.pf-c-login__main-body .pf-c-form .pf-c-form-helper-text` | `<form>` | Creates the error messages shown when the form has errors. When not active, apply `.pf-m-hidden`. **Required** |
 | `.pf-c-login__main-footer` | `<footer>` | Creates the footer of the main area. **Required** |
 | `.pf-c-login__main-footer-links` | `<ul>` | Creates a list of links in the main footer. **Required** |
 | `.pf-c-login__main-footer-links-item` | `<li>` | Creates proper spacing for links in the main footer. **Required** |
