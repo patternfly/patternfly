@@ -7,6 +7,7 @@
   --pf-c-context-selector__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-context-selector__toggle--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__toggle--ColumnGap: var(--pf-global--spacer--sm);
   --pf-c-context-selector__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-context-selector__toggle--BorderTopColor: var(--pf-global--BorderColor--300);
   --pf-c-context-selector__toggle--BorderRightColor: var(--pf-global--BorderColor--300);
@@ -34,9 +35,8 @@
   --pf-c-context-selector__toggle-text--LineHeight: var(--pf-global--LineHeight--md);
 
   // Toggle icon arrow
-  --pf-c-context-selector__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-context-selector__toggle-icon--MarginLeft: auto;
-  --pf-c-context-selector__toggle-icon--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-context-selector__toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-context-selector__toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-context-selector--m-plain__toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-context-selector--m-plain--hover__toggle-icon--Color: var(--pf-global--Color--100);
 
@@ -195,6 +195,7 @@
 .pf-c-context-selector__toggle {
   position: relative;
   display: flex;
+  column-gap: var(--pf-c-context-selector__toggle--ColumnGap);
   align-items: center;
   width: 100%;
   padding: var(--pf-c-context-selector__toggle--PaddingTop) var(--pf-c-context-selector__toggle--PaddingRight) var(--pf-c-context-selector__toggle--PaddingBottom) var(--pf-c-context-selector__toggle--PaddingLeft);
@@ -279,16 +280,17 @@
   .pf-c-context-selector__toggle-text {
     @include pf-text-overflow;
 
+    flex: 1 1 auto;
     font-size: var(--pf-c-context-selector__toggle-text--FontSize);
     font-weight: var(--pf-c-context-selector__toggle-text--FontWeight);
     line-height: var(--pf-c-context-selector__toggle-text--LineHeight);
+    text-align: left;
   }
 }
 
 .pf-c-context-selector__toggle-icon {
+  padding-right: var(--pf-c-context-selector__toggle-icon--PaddingRight);
   padding-left: var(--pf-c-context-selector__toggle-icon--PaddingLeft);
-  margin-right: var(--pf-c-context-selector__toggle-icon--MarginRight);
-  margin-left: var(--pf-c-context-selector__toggle-icon--MarginLeft);
   color: var(--pf-c-context-selector__toggle-icon--Color, inherit);
 }
 
