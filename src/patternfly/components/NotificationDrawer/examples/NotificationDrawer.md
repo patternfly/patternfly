@@ -124,7 +124,7 @@ cssPrefix: pf-c-notification-drawer
 | `.pf-c-notification-drawer__header-action-close` | `<div>` | Initiates the notification drawer header action button. |
 | `.pf-c-notification-drawer__body` | `<div>` | Initiates the notification drawer body. **Required** |
 | `.pf-c-notification-drawer__list` | `<ul>` | Initiates a notification list. **Required** |
-| `.pf-c-notification-drawer__list-item` | `<li>` | Initiates a notification list item. **Always use with a state modifier - one of `.pf-m-info`, `.pf-m-warning`, `.pf-m-danger`, `.pf-m-success`.** **Required** |
+| `.pf-c-notification-drawer__list-item` | `<li>` | Initiates a notification list item. Always use with a state modifier class. **Required** |
 | `.pf-c-notification-drawer__list-item-header` | `<div>` | Initiates a notification list item header. **Required** |
 | `.pf-c-notification-drawer__list-item-header-icon` | `<span>` | Initiates a notification list item header icon. **Required** |
 | `.pf-c-notification-drawer__list-item-header-title` | `<h2>` | Initiates a notification list item header title. **Required** |
