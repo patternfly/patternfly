@@ -2,11 +2,9 @@
   {{#if progress-helper-text--attribute}}
     {{{progress-helper-text--attribute}}}
   {{/if}}>
-  {{#> helper-text}}
-    {{#> helper-text-item}}
-      {{#> helper-text-item-text}}
-        {{{progress__helper-text}}}
-      {{/helper-text-item-text}}
-    {{/helper-text-item}}
-  {{/helper-text}}
+  {{#if helper-text--value}}
+    {{> helper-text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>

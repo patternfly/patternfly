@@ -11,7 +11,7 @@ section: demos
   {{#> form-group form-group--id="-password"}}
     {{#> form-group-label form-group-label-info="true"}}
       {{#> form-group-label-main}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Password{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Password{{/form-label}}
         {{> form-group-label-help form-group-label-help--aria-label="More information for password field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
@@ -30,18 +30,9 @@ section: demos
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
         {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-indeterminate"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-            {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
-          {{/helper-text-item}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-indeterminate"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-            {{#> helper-text-item-text}}Cannot contain the word "redhat"{{/helper-text-item-text}}
-          {{/helper-text-item}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-indeterminate"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="minus"}}
-            {{#> helper-text-item-text}}Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols{{/helper-text-item-text}}
-          {{/helper-text-item}}
+          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsIndeterminate=true}}
+          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsIndeterminate=true}}
+          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--HasIcon=true  helper-text-item--IsDynamic=true helper-text-item--IsIndeterminate=true}}
         {{/helper-text}}
       {{/form-helper-text}}
     {{/form-group-control}}
@@ -74,18 +65,9 @@ section: demos
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
         {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-            {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
-          {{/helper-text-item}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-error"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
-            {{#> helper-text-item-text}}Cannot contain the word "redhat"{{/helper-text-item-text}}
-          {{/helper-text-item}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-            {{#> helper-text-item-text}}Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols{{/helper-text-item-text}}
-          {{/helper-text-item}}
+          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsError=true}}
+          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
         {{/helper-text}}
       {{/form-helper-text}}
     {{/form-group-control}}
@@ -103,12 +85,7 @@ section: demos
         {{> form-group-label-help form-group-label-help--aria-label="More information for password field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
-        {{#> helper-text}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-error"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="exclamation-circle"}}
-            {{#> helper-text-item-text}}Weak{{/helper-text-item-text}}
-          {{/helper-text-item}}
-        {{/helper-text}}
+        {{> helper-text helper-text--value='Weak' helper-text-item--HasIcon=true helper-text-item--IsError=true}}
       {{/form-group-label-info}}
     {{/form-group-label}}
     {{#> form-group-control}}
@@ -124,18 +101,9 @@ section: demos
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
         {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-            {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
-          {{/helper-text-item}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-            {{#> helper-text-item-text}}Cannot contain the word "redhat"{{/helper-text-item-text}}
-          {{/helper-text-item}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-            {{#> helper-text-item-text}}Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols{{/helper-text-item-text}}
-          {{/helper-text-item}}
+          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
+          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--HasIcon=true helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true}}
         {{/helper-text}}
       {{/form-helper-text}}
     {{/form-group-control}}
@@ -153,12 +121,7 @@ section: demos
         {{> form-group-label-help form-group-label-help--aria-label="More information for password field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
-        {{#> helper-text}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-success"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-            {{#> helper-text-item-text}}Strong{{/helper-text-item-text}}
-          {{/helper-text-item}}
-        {{/helper-text}}
+        {{> helper-text helper-text--value="Strong" helper-text-item--HasIcon=true helper-text-item--IsSuccess=true}}
       {{/form-group-label-info}}
     {{/form-group-label}}
     {{#> form-group-control}}
@@ -174,18 +137,9 @@ section: demos
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
         {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-            {{#> helper-text-item-text}}Must be at least 14 characters{{/helper-text-item-text}}
-          {{/helper-text-item}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-            {{#> helper-text-item-text}}Cannot contain the word "redhat"{{/helper-text-item-text}}
-          {{/helper-text-item}}
-          {{#> helper-text-item helper-text-item--modifier="pf-m-dynamic pf-m-success"}}
-            {{> helper-text-item-icon helper-text-item-icon--type="check-circle"}}
-            {{#> helper-text-item-text}}Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols{{/helper-text-item-text}}
-          {{/helper-text-item}}
+          {{> helper-text-item helper-text--value='Must be at least 14 characters' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true helper-text-item--HasIcon=true}}
+          {{> helper-text-item helper-text--value='Cannot contain the word "redhat"' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true helper-text-item--HasIcon=true}}
+          {{> helper-text-item helper-text--value='Must include at least 3 of the following: lowercase letters, uppercase letters, numbers, symbols' helper-text-item--IsDynamic=true helper-text-item--IsSuccess=true helper-text-item--HasIcon=true}}
         {{/helper-text}}
       {{/form-helper-text}}
     {{/form-group-control}}

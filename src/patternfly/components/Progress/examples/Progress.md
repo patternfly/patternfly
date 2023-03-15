@@ -258,7 +258,7 @@ cssPrefix: pf-c-progress
   progress__value="33"
   progress__description="Title"
   progress__id="progress-helper-text-example"
-  progress__helper-text="Progress helper text"
+  helper-text--value="Progress helper text"
 }}
 {{/progress}}
 ```

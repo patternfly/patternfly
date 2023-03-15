@@ -34,6 +34,11 @@
   display: grid;
   gap: var(--pf-c-helper-text--Gap);
   font-size: var(--pf-c-helper-text--FontSize);
+
+  &.pf-m-hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 .pf-c-helper-text__item {

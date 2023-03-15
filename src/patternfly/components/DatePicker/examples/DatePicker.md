@@ -27,7 +27,7 @@ import './DatePicker.css'
 
 ### Helper text
 ```hbs
-{{#> date-picker date-picker--id="helper-text" date-picker-helper-text--text="Select a date."}}
+{{#> date-picker date-picker--id="helper-text" helper-text--value="Select a date."}}
   {{#> input-group}}
     {{#> input-group-item input-group-item--IsFill=true}}
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
@@ -43,7 +43,7 @@ import './DatePicker.css'
 
 ### Invalid
 ```hbs
-{{#> date-picker date-picker--id="invalid" date-picker-helper-text--text="Invalid date" date-picker-helper-text--IsError="true"}}
+{{#> date-picker date-picker--id="invalid" helper-text--value="Invalid date" helper-text-item--IsError="true"}}
   {{#> input-group}}
     {{#> input-group-item input-group-item--IsFill=true}}
       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'aria-invalid="true" type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
@@ -115,6 +115,5 @@ import './DatePicker.css'
 | `.pf-c-date-picker__helper-text` | `<div>` | Initiates the date picker helper text. |
 | `.pf-c-date-picker__calendar` | `<div>` | Initiates an optional date picker calendar container. **Note:** Required in the react date picker component. |
 | `.pf-m-top` | `.pf-c-date-picker` | Modifies to display the calendar above the date picker. |
-| `.pf-m-error` | `.pf-c-date-picker__helper-text` | Modifies the helper text for the invalid/error state. |
 | `.pf-m-align-right` | `.pf-c-date-picker__calendar` | Modifies the calendar to align the calendar to the right edge of the date picker. |
 | `.pf-m-static` | `.pf-c-date-picker__calendar` | Modifies the calendar to be statically positioned to support custom positioning. |

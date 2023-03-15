@@ -1,6 +1,18 @@
-<{{#if form-helper-text--type}}{{form-helper-text--type}}{{else}}p{{/if}} class="pf-c-form__helper-text {{#if form-helper-text--modifier}} {{form-helper-text--modifier}}{{/if}}"
+<div class="pf-c-form__helper-text
+  {{#if form-helper-text--IsHidden}} pf-m-hidden{{/if}}
+  {{#if form-helper-text--modifier}} {{form-helper-text--modifier}}{{/if}}"
+  {{#unless form-helper-text--IsHidden}}
+    aria-live="polite"
+  {{/unless}}
+  {{#if form-helper-text--id}}
+    id="{{form-helper-text--id}}"
+  {{/if}}
   {{#if form-helper-text--attribute}}
     {{{form-helper-text--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
-</{{#if form-helper-text--type}}{{form-helper-text--type}}{{else}}p{{/if}}>
+  {{#if helper-text--value}}
+    {{> helper-text helper-text-item--id=(concat form-group--id '-helper')}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</div>

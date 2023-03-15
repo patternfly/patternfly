@@ -9,36 +9,33 @@
       {{/alert-title}}
     {{/alert}}
   {{/form-alert}}
-  {{#> form-group}}
+  {{#> form-group form-group--id=(concat form--id '-name')}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-name"') required='true'}}
+      {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required='true'}}
         Full name
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id '-form-name" name="' form--id '-form-name" aria-invalid="true" aria-describedby="' form--id '-form-name-helper"')}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form--id '-helper"')}}
       {{/form-control}}
-      {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-form-name-helper-name" aria-live="polite"')}}
-        Required field
-      {{/form-helper-text}}
+      {{> form-helper-text helper-text--value='Required field' helper-text-item--IsError=true}}
     {{/form-group-control}}
   {{/form-group}}
-  {{#> form-group}}
+  {{#> form-group form-group--id=(concat form--id '-email')}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-email"') required="true"}}
+      {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required="true"}}
         Email
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="patternfly.com" id="' form--id '-form-email" name="' form--id '-form-email" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="patternfly.com" id="' form-group--id '" name="' form-group--id '" required')}}
+      {{/form-control}}
     {{/form-group-control}}
-    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-form-email-helper-email" aria-live="polite"')}}
-      Enter a valid email address: example@gmail.com
-    {{/form-helper-text}}
+    {{> form-helper-text helper-text--value='Enter a valid email address: example@gmail.com' helper-text-item--IsError=true}}
   {{/form-group}}
-  {{#> form-group}}
+  {{#> form-group form-group--id=(concat form--id '-state')}}
     {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-state"') required='true'}}
+      {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required='true'}}
         State of residence
       {{/form-label}}
     {{/form-group-label}}
@@ -49,21 +46,14 @@
         <option value="Option 3">MA</option>
         <option value="Option 4">NY</option>
     {{/form-control}}
-    {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-form-email-helper-state" aria-live="polite"')}}
-      Required field
-    {{/form-helper-text}}
+    {{> form-helper-text helper-text--value='Required field' helper-text-item--IsError=true form-helper-text--id=(concat form-group--id '-form-email-helper-state')}}
   {{/form-group}}
-  {{#> form-group form-group--IsCheckGroup="true" form-group--id="-check-group"}}
+  {{#> form-group form-group--IsCheckGroup=true form-group--id=(concat form--id '-check-group')}}
     {{#> form-group-label form-group-label--modifier="pf-m-no-padding-top"}}
-      {{#> form-label form-label--attribute=(concat 'for="' form--id '-form-experience"') required='true'}}
+      {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"') required='true'}}
         How can we contact you?
       {{/form-label}}
-      {{#> form-helper-text form-helper-text--modifier="pf-m-error" form-helper-text--attribute=(concat 'id="' form--id '-simple-form-info-helper-contact" aria-live="polite"')}}
-        {{#> form-helper-text-icon}}
-          <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
-        {{/form-helper-text-icon}}
-        This is a requied field
-      {{/form-helper-text}}
+      {{> form-helper-text helper-text--value='This is a required field' helper-text-item--HasIcon=true helper-text-item--IsError=true}}
     {{/form-group-label}}
     {{#> form-group-control form-group-control--modifier="pf-m-inline"}}
       {{#> check}}

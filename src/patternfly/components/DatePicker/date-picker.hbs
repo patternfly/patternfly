@@ -3,8 +3,10 @@
     {{{date-picker--attribute}}}
   {{/if}}>
   {{> date-picker-input}}
-  {{#if date-picker-helper-text--text}}
-    {{> date-picker-helper-text}}
+  {{#if helper-text--value}}
+    {{#> date-picker-helper-text}}
+      {{> helper-text}}
+    {{/date-picker-helper-text}}
   {{/if}}
   {{#if date-picker--IsExpanded}}
     {{#> date-picker-calendar}}

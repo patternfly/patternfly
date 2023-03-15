@@ -1,6 +1,8 @@
-<div class="pf-c-date-picker__helper-text{{#if date-picker-helper-text--IsError}} pf-m-error{{/if}}{{#if date-picker-helper-text--modifier}} {{date-picker-helper-text--modifier}}{{/if}}"
+<div class="pf-c-date-picker__helper-text{{#if date-picker-helper-text--modifier}} {{date-picker-helper-text--modifier}}{{/if}}"
   {{#if date-picker-helper-text--attribute}}
     {{date-picker-helper-text--attribute}}
   {{/if}}>
-  {{date-picker-helper-text--text}}
+  {{#if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </div>
