@@ -3187,143 +3187,150 @@ There are a few ways this can be handled:
 
 ### Sticky header
 ```hbs
-{{#> table table--id="table-sticky-header" table--grid="true" table--modifier="pf-m-grid-md pf-m-sticky-header" table--attribute='aria-label="This is a table with sticky header cells"'}}
-  {{#> table-thead}}
-    {{#> table-tr}}
-      {{#> table-th table-th--attribute='scope="col"'}}
-        Repositories
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
-        Branches
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
-        Pull requests
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
-        Workspaces
-      {{/table-th}}
-      {{#> table-th table-th--attribute='scope="col"'}}
-        Last commit
-      {{/table-th}}
-    {{/table-tr}}
-  {{/table-thead}}
+<div class="pf-c-scroll-inner-wrapper">
+  {{#> table table--id="table-sticky-header" table--grid="true" table--modifier="pf-m-grid-md pf-m-sticky-header" table--attribute='aria-label="This is a table with sticky header cells"'}}
+    {{#> table-thead}}
+      {{#> table-tr}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Repositories
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Branches
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Pull requests
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Workspaces
+        {{/table-th}}
+        {{#> table-th table-th--attribute='scope="col"'}}
+          Last commit
+        {{/table-th}}
+      {{/table-tr}}
+    {{/table-thead}}
 
-  {{#> table-tbody}}
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="Repository name"}}
-        Repository 1
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Branches"}}
-        10
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Pull requests"}}
-        25
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Workspaces"}}
-        5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Last commit"}}
-        2 days ago
-      {{/table-td}}
-    {{/table-tr}}
+    {{#> table-tbody}}
+      {{#> table-tr}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          Repository 1
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
 
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="Repository name"}}
-        Repository 2
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Branches"}}
-        10
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Pull requests"}}
-        25
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Workspaces"}}
-        5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Last commit"}}
-        2 days ago
-      {{/table-td}}
-    {{/table-tr}}
+      {{#> table-tr}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          Repository 2
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
 
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="Repository name"}}
-        Repository 3
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Branches"}}
-        10
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Pull requests"}}
-        25
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Workspaces"}}
-        5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Last commit"}}
-        2 days ago
-      {{/table-td}}
-    {{/table-tr}}
+      {{#> table-tr}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          Repository 3
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
 
-    {{#> table-tr}}
-      {{#> table-td table-td--data-label="Repository name"}}
-        Repository 4
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Branches"}}
-        10
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Pull requests"}}
-        25
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Workspaces"}}
-        5
-      {{/table-td}}
-      {{#> table-td table-td--data-label="Last commit"}}
-        2 days ago
-      {{/table-td}}
-    {{/table-tr}}
-  {{/table-tbody}}
-{{/table}}
+      {{#> table-tr}}
+        {{#> table-td table-td--data-label="Repository name"}}
+          Repository 4
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Branches"}}
+          10
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Pull requests"}}
+          25
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Workspaces"}}
+          5
+        {{/table-td}}
+        {{#> table-td table-td--data-label="Last commit"}}
+          2 days ago
+        {{/table-td}}
+      {{/table-tr}}
+    {{/table-tbody}}
+  {{/table}}
+</div>
 ```
 
 ### Sticky column
-
 ```hbs
 <div class="pf-c-scroll-inner-wrapper">
   {{> table--scrollable
       table--scrollable--id="sticky-column-example"
-      table--scrollable--Column1IsStickyColumn="true"
+      table--scrollable--Column1IsStickyColumn=true
       table--scrollable--th--modifier--cell-1-modifier="pf-m-truncate pf-m-border-right"
-      table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate"
-      }}
+      table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate"}}
 </div>
 ```
 
 ### Multiple sticky columns
-
 ```hbs
 <div class="pf-c-scroll-inner-wrapper">
   {{> table--scrollable
       table--scrollable--id="sticky-multi-column-example"
-      table--scrollable--Column1IsStickyColumn="true"
-      table--scrollable--Column2IsStickyColumn="true"
+      table--scrollable--Column1IsStickyColumn=true
+      table--scrollable--Column2IsStickyColumn=true
       table--scrollable--th--modifier--cell-1-modifier="pf-m-truncate"
-      table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate pf-m-border-right"
-      }}
+      table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate pf-m-border-right"}}
 </div>
 ```
 
 ### Sticky columns and header
-
 ```hbs
 <div class="pf-c-scroll-outer-wrapper">
   <div class="pf-c-scroll-inner-wrapper">
     {{> table--scrollable table--scrollable--id="sticky-header-columns-example"
         table--scrollable--modifier="pf-m-sticky-header"
-        table--scrollable--Column1IsStickyColumn="true"
-        table--scrollable--Column2IsStickyColumn="true"
+        table--scrollable--Column1IsStickyColumn=true
+        table--scrollable--Column2IsStickyColumn=true
         table--scrollable--th--modifier--cell-1-modifier="pf-m-truncate"
-        table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate pf-m-border-right"
-        }}
+        table--scrollable--th--modifier--cell-2-modifier="pf-m-truncate pf-m-border-right"}}
   </div>
+</div>
+```
+
+### Sticky right column
+
+```hbs
+<div class="pf-c-scroll-inner-wrapper">
+  {{> table--scrollable
+      table--scrollable--id="sticky-right-column-example"
+      table--scrollable--ColumnLastIsStickyColumn=true
+      table--scrollable--th--modifier--cell-9-modifier="pf-m-truncate pf-m-border-left"}}
 </div>
 ```
 
@@ -3336,7 +3343,9 @@ For sticky columns to function correctly, the parent table's width must be contr
 | `.pf-m-sticky-header` | `.pf-c-table` | Makes the table cells in `<thead>` sticky to the top of the table on scroll. |
 | `.pf-c-scroll-outer-wrapper` | `<div>` | Initiates a table container sticky columns outer wrapper. |
 | `.pf-c-scroll-inner-wrapper` | `<div>` | Initiates a table container sticky columns inner wrapper. |
-| `.pf-c-table__sticky-column` | `<th>`, `<td>` | Initiates a sticky table cell. |
+| `.pf-c-table__sticky-cell` | `<th>`, `<td>` | Initiates a sticky table cell. |
+| `.pf-m-right` | `.pf-c-table__sticky-cell` | Initiates a sticky, right-hand table cell. |
+| `.pf-m-left` | `.pf-c-table__sticky-cell` | Initiates a sticky, left-hand table cell. |
 
 
 ## Nested column headers

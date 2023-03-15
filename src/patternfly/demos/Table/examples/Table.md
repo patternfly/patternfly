@@ -190,7 +190,10 @@ import './Table.css'
     <div class="pf-c-scroll-outer-wrapper">
       {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
       <div class="pf-c-scroll-inner-wrapper">
-        {{> table--scrollable table--scrollable--id="sticky-first-column-demo-table" table--scrollable--Column1IsStickyColumn="true" table--scrollable--th--modifier--cell-1-modifier="pf-m-border-right"}}
+        {{> table--scrollable
+            table--scrollable--id="sticky-first-column-demo-table"
+            table--scrollable--th--modifier--cell-1-modifier="pf-m-border-right"
+            table--scrollable--Column1IsStickyColumn=true}}
       </div>
       {{> table-pagination-footer}}
     </div>
@@ -207,7 +210,12 @@ import './Table.css'
     <div class="pf-c-scroll-outer-wrapper">
       {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
       <div class="pf-c-scroll-inner-wrapper">
-        {{> table--scrollable table--scrollable--id="sticky-multiple-columns-demo-table" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
+        {{>
+            table--scrollable
+            table--scrollable--id="sticky-multiple-columns-demo-table"
+            table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"
+            table--scrollable--Column1IsStickyColumn=true
+            table--scrollable--Column2IsStickyColumn=true}}
       </div>
       {{> table-pagination-footer}}
     </div>
@@ -224,7 +232,32 @@ import './Table.css'
     <div class="pf-c-scroll-outer-wrapper">
       {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
       <div class="pf-c-scroll-inner-wrapper">
-        {{> table--scrollable table--scrollable--id="sticky-header-and-multiple-columns-demo-table" table--scrollable--modifier="pf-m-sticky-header" table--scrollable--Column1IsStickyColumn="true" table--scrollable--Column2IsStickyColumn="true" table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"}}
+        {{> table--scrollable
+            table--scrollable--id="sticky-header-and-multiple-columns-demo-table"
+            table--scrollable--modifier="pf-m-sticky-header"
+            table--scrollable--th--modifier--cell-2-modifier="pf-m-border-right"
+            table--scrollable--Column1IsStickyColumn=true
+            table--scrollable--Column2IsStickyColumn=true}}
+      </div>
+      {{> table-pagination-footer}}
+    </div>
+  {{/page-main-section}}
+{{/inline}}
+```
+
+### Sticky header and last column
+```hbs isFullscreen
+{{> page-template page-template--id="sticky-header-and-multiple columns-demo"}}
+
+{{#*inline "page-template-section"}}
+  {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidths="true"}}
+    <div class="pf-c-scroll-outer-wrapper">
+      {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
+      <div class="pf-c-scroll-inner-wrapper">
+        {{> table--scrollable
+            table--scrollable--id="sticky-right-column-example"
+            table--scrollable--th--modifier--cell-9-modifier="pf-m-truncate pf-m-border-left"
+            table--scrollable--ColumnLastIsStickyColumn=true}}
       </div>
       {{> table-pagination-footer}}
     </div>

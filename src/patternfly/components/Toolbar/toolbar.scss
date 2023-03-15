@@ -6,9 +6,11 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
 .pf-c-toolbar {
   --pf-c-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-toolbar--RowGap: var(--pf-global--spacer--lg);
+  --pf-c-toolbar--RowGap--base: var(--pf-global--spacer--lg); // row-gap between toolbar content elements
+  --pf-c-toolbar--RowGap: var(--pf-c-toolbar--RowGap--base);
   --pf-c-toolbar--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-toolbar--PaddingBottom: var(--pf-global--spacer--md);
+  --pf-c-toolbar--item--RowGap--base: var(--pf-global--spacer--xs); // shared row-gap for items and groups
 
   // Item
   --pf-c-toolbar__item--Display: block;
@@ -19,6 +21,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar__group--Display: flex;
   --pf-c-toolbar__group--AlignItems: baseline;
   --pf-c-toolbar__group--AlignSelf: auto;
+  --pf-c-toolbar__group--RowGap: var(--pf-c-toolbar--item--RowGap--base);
 
   // Sticky
   --pf-c-toolbar--m-sticky--ZIndex: var(--pf-global--ZIndex--xs);
@@ -26,12 +29,14 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Content
   --pf-c-toolbar__content--Display: flex;
+  --pf-c-toolbar__content--RowGap: var(--pf-c-toolbar--RowGap--base);
   --pf-c-toolbar__content--PaddingRight: var(--pf-global--spacer--md); // remove at breaking change
   --pf-c-toolbar__content--PaddingLeft: var(--pf-global--spacer--md); // remove at breaking change
 
   // Content section
   --pf-c-toolbar__content-section--Display: flex;
   --pf-c-toolbar__content-section--AlignItems: baseline;
+  --pf-c-toolbar__content-section--RowGap: var(--pf-c-toolbar--item--RowGap--base);
 
   // Insets
   --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
@@ -39,7 +44,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   // Expandable content
   --pf-c-toolbar__expandable-content--Display: grid;
-  --pf-c-toolbar__expandable-content--PaddingTop: var(--pf-c-toolbar--RowGap);
   --pf-c-toolbar__expandable-content--PaddingRight: var(--pf-c-toolbar__content--PaddingRight);
   --pf-c-toolbar__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
   --pf-c-toolbar__expandable-content--PaddingLeft: var(--pf-c-toolbar__content--PaddingLeft);
@@ -212,6 +216,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 
   @include pf-hidden-visible(var(--pf-c-toolbar__group--Display));
 
+  row-gap: var(--pf-c-toolbar__group--RowGap);
   align-items: var(--pf-c-toolbar__group--AlignItems);
   align-self: var(--pf-c-toolbar__group--AlignSelf);
   margin-right: var(--pf-c-toolbar--spacer);
@@ -375,6 +380,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   @include pf-hidden-visible(var(--pf-c-toolbar__content--Display));
 
   position: relative;
+  row-gap: var(--pf-c-toolbar__content--RowGap);
   align-items: center;
   padding-right: var(--pf-c-toolbar__content--PaddingRight);
   padding-left: var(--pf-c-toolbar__content--PaddingLeft);
@@ -384,6 +390,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 .pf-c-toolbar__content-section {
   @include pf-hidden-visible(var(--pf-c-toolbar__content-section--Display));
 
+  row-gap: var(--pf-c-toolbar__content-section--RowGap);
   align-items: var(--pf-c-toolbar__content-section--AlignItems);
   width: 100%;
 
@@ -395,13 +402,13 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
 // Expandable content
 .pf-c-toolbar__expandable-content {
   position: absolute;
-  top: 100%;
+  top: calc(100% + var(--pf-c-toolbar__content--RowGap));
   right: 0;
   left: 0;
   z-index: var(--pf-c-toolbar__expandable-content--ZIndex);
   display: none;
   width: 100%;
-  padding: var(--pf-c-toolbar__expandable-content--PaddingTop) var(--pf-c-toolbar__expandable-content--PaddingRight) var(--pf-c-toolbar__expandable-content--PaddingBottom) var(--pf-c-toolbar__expandable-content--PaddingLeft);
+  padding: 0 var(--pf-c-toolbar__expandable-content--PaddingRight) var(--pf-c-toolbar__expandable-content--PaddingBottom) var(--pf-c-toolbar__expandable-content--PaddingLeft);
   background-color: var(--pf-c-toolbar__expandable-content--BackgroundColor);
   box-shadow: var(--pf-c-toolbar__expandable-content--BoxShadow);
 
@@ -499,7 +506,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Build spacing modifiers
   @each $breakpoint, $breakpoint-value in $pf-c-toolbar--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
-
 
     @include pf-apply-breakpoint($breakpoint) {
       // Align right
