@@ -1,4 +1,6 @@
-<div class="pf-c-input-group{{#if input-group--modifier}} {{input-group--modifier}}{{/if}}" 
+<div class="pf-c-input-group
+  {{#if input-group--IsPlain}} pf-m-plain{{/if}}
+  {{#if input-group--modifier}} {{input-group--modifier}}{{/if}}"
   {{#if input-group--attribute}}
     {{{input-group--attribute}}}
   {{/if}}

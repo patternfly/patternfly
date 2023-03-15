@@ -9,18 +9,23 @@ cssPrefix: pf-c-number-input
 ```hbs
 {{#> number-input number-input--id="number-input-default"}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
 {{/number-input}}
 ```
@@ -29,18 +34,23 @@ cssPrefix: pf-c-number-input
 ```hbs
 {{#> number-input number-input--id="number-input-unit"}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
   {{#> number-input-unit}}%{{/number-input-unit}}
 {{/number-input}}
@@ -49,18 +59,23 @@ cssPrefix: pf-c-number-input
 {{#> number-input number-input--id="number-input-unit2"}}
   {{#> number-input-unit}}${{/number-input-unit}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="1.00" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="1.00" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
 {{/number-input}}
 ```
@@ -69,18 +84,23 @@ cssPrefix: pf-c-number-input
 ```hbs
 {{#> number-input number-input--id="number-input-unit-lower-threshold"}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus" disabled'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="0" min="0" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus" disabled'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="0" min="0" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
   {{#> number-input-unit}}%{{/number-input-unit}}
 {{/number-input}}
@@ -90,18 +110,23 @@ cssPrefix: pf-c-number-input
 ```hbs
 {{#> number-input number-input--id="number-input-unit-upper-threshold"}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="100" max="100" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus" disabled'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="100" max="100" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus" disabled'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
   {{#> number-input-unit}}%{{/number-input-unit}}
 {{/number-input}}
@@ -111,18 +136,23 @@ cssPrefix: pf-c-number-input
 ```hbs
 {{#> number-input number-input--id="number-input-disabled"}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus" disabled'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="100" name="' number-input--id '-name" aria-label="Number input" disabled')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus" disabled'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus" disabled'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="100" name="' number-input--id '-name" aria-label="Number input" disabled')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus" disabled'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
   {{#> number-input-unit}}%{{/number-input-unit}}
 {{/number-input}}
@@ -132,35 +162,45 @@ cssPrefix: pf-c-number-input
 ```hbs
 {{#> number-input number-input--id="number-input-status" number-input--modifier="pf-m-status"}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
 {{/number-input}}
 <br/><br/>
 {{#> number-input number-input--id="number-input-status-warning" number-input--modifier="pf-m-status"}}
-    {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-warning"  form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+  {{#> input-group}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--modifier="pf-m-warning"  form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
 {{/number-input}}
 ```
@@ -169,71 +209,91 @@ cssPrefix: pf-c-number-input
 ```hbs
 {{#> number-input number-input--id="number-input-sizes" number-input--attribute='style="--pf-c-number-input--c-form-control--width-chars: 1;"'}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="1" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="1" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
 {{/number-input}}
 <br>
 <br>
 {{#> number-input number-input--id="number-input-sizes2" number-input--attribute='style="--pf-c-number-input--c-form-control--width-chars: 10;"'}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="1234567890" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="1234567890" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
 {{/number-input}}
 <br>
 <br>
 {{#> number-input number-input--id="number-input-sizes3" number-input--attribute='style="--pf-c-number-input--c-form-control--width-chars: 5;"'}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="5" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="5" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
 {{/number-input}}
 <br><br>
 {{#> number-input number-input--id="number-input-sizes4" number-input--attribute='style="--pf-c-number-input--c-form-control--width-chars: 5;"'}}
   {{#> input-group}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-minus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
-    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="12345" name="' number-input--id '-name" aria-label="Number input"')}}
-    {{/form-control}}
-    {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
-      {{#> number-input-icon}}
-        <i class="fas fa-plus" aria-hidden="true"></i>
-      {{/number-input-icon}}
-    {{/button}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Minus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-minus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
+    {{#> input-group-item input-group-item--IsFill=true}}
+      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="12345" name="' number-input--id '-name" aria-label="Number input"')}}
+    {{/input-group-item}}
+    {{#> input-group-item}}
+      {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
+        {{#> number-input-icon}}
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        {{/number-input-icon}}
+      {{/button}}
+    {{/input-group-item}}
   {{/input-group}}
 {{/number-input}}
 ```

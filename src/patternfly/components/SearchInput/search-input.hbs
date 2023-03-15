@@ -4,15 +4,25 @@
   {{/if}}>
   {{#if search-input--IsAdvancedSearch}}
     {{#> input-group}}
-      {{> search-input-bar}}
-      {{> search-input-toggle}}
-      {{> search-input-search-button}}
+      {{#> input-group-item input-group-item--IsFill=true}}
+        {{> search-input-bar}}
+      {{/input-group-item}}
+      {{#> input-group-item}}
+        {{> search-input-toggle}}
+      {{/input-group-item}}
+      {{#> input-group-item}}
+        {{> search-input-search-button}}
+      {{/input-group-item}}
     {{/input-group}}
   {{else}}
     {{#if search-input--HasSubmitButton}}
       {{#>input-group}}
-        {{> search-input-bar}}
-        {{> search-input-search-button}}
+        {{#> input-group-item input-group-item--IsFill=true}}
+          {{> search-input-bar}}
+        {{/input-group-item}}
+        {{#> input-group-item}}
+          {{> search-input-search-button}}
+        {{/input-group-item}}
       {{/input-group}}
     {{else}}
       {{> search-input-bar}}

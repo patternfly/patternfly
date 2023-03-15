@@ -94,8 +94,7 @@ section: components
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Full name{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}
-      {{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-describedby="' form--id form-group--id '-helper"')}}{{/form-control}}
       {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}Include your middle name if you have one.{{/form-helper-text}}
     {{/form-group-control}}
   {{/form-group}}
@@ -104,8 +103,7 @@ section: components
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Email{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
-      {{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="email" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id="-phone"}}
@@ -113,8 +111,7 @@ section: components
       {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"')}}Phone number{{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}
-      {{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="tel" placeholder="Example, (555) 555-5555" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
    {{#> form-group form-group--IsCheckGroup="true" form-group--id="-contact"}}
@@ -338,22 +335,34 @@ section: components
       {{/form-group-label}}
       {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-1"')}}{{/form-control}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-            <i class="fas fa-minus-circle" aria-hidden="true"></i>
-          {{/button}}
+          {{#> input-group-item input-group-item--IsFill=true}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-1"')}}
+          {{/input-group-item}}
+          {{#> input-group-item input-group-item--IsPlain=true}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+              <i class="fas fa-minus-circle" aria-hidden="true"></i>
+            {{/button}}
+          {{/input-group-item}}
         {{/input-group}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-2" name="' form--id form-group--id '-input-2" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-2"')}}{{/form-control}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-            <i class="fas fa-minus-circle" aria-hidden="true"></i>
-          {{/button}}
+          {{#> input-group-item input-group-item--IsFill=true}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-2" name="' form--id form-group--id '-input-2" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-2"')}}
+          {{/input-group-item}}
+          {{#> input-group-item input-group-item--IsPlain=true}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+              <i class="fas fa-minus-circle" aria-hidden="true"></i>
+            {{/button}}
+          {{/input-group-item}}
         {{/input-group}}
         {{#> input-group}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-3" name="' form--id form-group--id '-input-3" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-3"')}}{{/form-control}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-            <i class="fas fa-minus-circle" aria-hidden="true"></i>
-          {{/button}}
+          {{#> input-group-item input-group-item--IsFill=true}}
+            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-3" name="' form--id form-group--id '-input-3" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-input-3"')}}
+          {{/input-group-item}}
+          {{#> input-group-item input-group-item--IsPlain=true}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+              <i class="fas fa-minus-circle" aria-hidden="true"></i>
+            {{/button}}
+          {{/input-group-item}}
         {{/input-group}}
         {{#> button button--modifier="pf-m-link pf-m-inline"}}
           {{#> button-icon button-icon--modifier="pf-m-start"}}
@@ -397,8 +406,8 @@ section: components
       {{> form-group-label-help form-group-label-help--aria-label="More information for labels field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
-        {{#> text-input-group text-input-group--attribute=(concat 'id="' form--id form-group--id '"')}}
-          {{#> text-input-group-main}}
+      {{#> text-input-group text-input-group--attribute=(concat 'id="' form--id form-group--id '"')}}
+        {{#> text-input-group-main}}
           {{#> label-group}}
             {{#> label-group-main}}
               {{#> label-group-list label-group-list--attribute='aria-label="Group of labels"'}}
@@ -516,14 +525,17 @@ section: components
                   {{/form-group-label}}
                   {{#> form-group-control form-group-control--modifier="pf-m-stack"}}
                     {{#> input-group}}
-                      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-title"')}}{{/form-control}}
-                      {{!-- {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}} --}}
-                      {{!-- Required. A list of node selector terms. The terms are ORed. --}}
-                      {{!-- {{/form-helper-text}} --}}
-                      {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
-                        <i class="fas fa-minus-circle" aria-hidden="true"></i>
-                      {{/button}}
-
+                      {{#> input-group-item input-group-item--IsFill=true}}
+                        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form--id form-group--id '-input-1" name="' form--id form-group--id '-input-1" aria-labelledby="' form--id form-group--id ' ' form--id form-group--id '-title"')}}
+                        {{!-- {{#> form-helper-text form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}} --}}
+                        {{!-- Required. A list of node selector terms. The terms are ORed. --}}
+                        {{!-- {{/form-helper-text}} --}}
+                      {{/input-group-item}}
+                      {{#> input-group-item input-group-item--IsPlain=true}}
+                        {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                          <i class="fas fa-minus-circle" aria-hidden="true"></i>
+                        {{/button}}
+                      {{/input-group-item}}
                     {{/input-group}}
                     {{#> button button--modifier="pf-m-link pf-m-inline"}}
                       {{#> button-icon button-icon--modifier="pf-m-start"}}
@@ -608,7 +620,7 @@ section: components
           {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') }}Path{{/form-label}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" placeholder="/" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" ')}}{{/form-control}}
           {{#> form-helper-text form-helper-text--type="div" form-helper-text--attribute=(concat 'id="' form--id form-group--id '-helper" aria-live="polite"')}}
             {{#> helper-text}}
               {{#> helper-text-item}}

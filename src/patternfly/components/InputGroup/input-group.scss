@@ -1,97 +1,91 @@
 .pf-c-input-group {
   // Input group
-  --pf-c-input-group--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-input-group--child--ZIndex: var(--pf-global--ZIndex--xs);
+
+  // Input group item
+  --pf-c-input-group__item--offset: var(--pf-global--BorderWidth--sm);
+  --pf-c-input-group__item--MarginLeft: calc(var(--pf-c-input-group__item--offset) * -1);
+  --pf-c-input-group__item--BorderWidth--base: var(--pf-c-input-group__item--offset);
+  --pf-c-input-group__item--BorderColor--base: var(--pf-global--BorderColor--300);
+  --pf-c-input-group__item--BorderColor--accent: var(--pf-global--BorderColor--200);
+  --pf-c-input-group__item--BackgroundColor: transparent;
+
+  // Input group item, box variant
+  --pf-c-input-group__item--m-box--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-input-group__item--m-box--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-input-group__item--m-box--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-input-group__item--m-box--BorderWidth: var(--pf-c-input-group__item--offset);
+  --pf-c-input-group__item--m-box--BorderTopColor: var(--pf-c-input-group__item--BorderColor--base);
+  --pf-c-input-group__item--m-box--BorderRightColor: var(--pf-c-input-group__item--BorderColor--base);
+  --pf-c-input-group__item--m-box--BorderBottomColor: var(--pf-c-input-group__item--BorderColor--accent);
+  --pf-c-input-group__item--m-box--BorderLeftColor: var(--pf-c-input-group__item--BorderColor--base);
+
+  // Input group item, plain variant
+  --pf-c-input-group__item--m-plain--BackgroundColor: transparent;
 
   // Input group text
   --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-input-group__text--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-input-group__text--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
-  --pf-c-input-group__text--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-input-group__text--BorderTopColor: var(--pf-global--BorderColor--300);
-  --pf-c-input-group__text--BorderRightColor: var(--pf-global--BorderColor--300);
-  --pf-c-input-group__text--BorderBottomColor: var(--pf-global--BorderColor--200);
-  --pf-c-input-group__text--BorderLeftColor: var(--pf-global--BorderColor--300);
-  --pf-c-input-group__text--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-input-group__textarea--MinHeight: var(--pf-global--spacer--xl);
-  --pf-c-input-group__text--m-disabled--Color: var(--pf-global--disabled-color--100);
-  --pf-c-input-group__text--m-disabled--BackgroundColor: var(--pf-global--disabled-color--300);
-  --pf-c-input-group__text--m-disabled--BorderBottomColor: transparent;
+
+  // Input group text, disabled variant
+  --pf-c-input-group__item--m-disabled__text--Color: var(--pf-global--disabled-color--100);
+  --pf-c-input-group__item--m-disabled--BorderBottomColor: transparent;
+  --pf-c-input-group__item--m-disabled--BackgroundColor: var(--pf-global--disabled-color--300);
 
   // Form control
   --pf-c-input-group--c-form-control--invalid--ZIndex: var(--pf-global--ZIndex--xs);
   --pf-c-input-group--c-form-control--MarginRight: 0;
 
-  // This component always needs to be light
-  @include pf-t-light;
-
   display: flex;
   width: 100%;
-  background-color: var(--pf-c-input-group--BackgroundColor);
+}
+
+.pf-c-input-group__item {
+  position: relative; // stack items without explicit z-index
+  display: flex;
+  min-width: var(--pf-c-input-group__item--MinWidth, revert);
+  max-width: var(--pf-c-input-group__item--MaxWidth, revert);
+  background-color: var(--pf-c-input-group__item--BackgroundColor);
+  border-color: var(--pf-c-input-group__item--m-box--BorderTopColor) var(--pf-c-input-group__item--m-box--BorderRightColor) var(--pf-c-input-group__item--m-box--BorderBottomColor) var(--pf-c-input-group__item--m-box--BorderLeftColor);
+
+  &:where(:not(:first-child)) {
+    margin-left: var(--pf-c-input-group__item--MarginLeft);
+  }
+
+  &.pf-m-box {
+    --pf-c-input-group__item--BackgroundColor: var(--pf-c-input-group__item--m-box--BackgroundColor);
+
+    padding-right: var(--pf-c-input-group__item--m-box--PaddingRight);
+    padding-left: var(--pf-c-input-group__item--m-box--PaddingLeft);
+    border: var(--pf-c-input-group__item--m-box--BorderWidth) solid;
+    border-color: var(--pf-c-input-group__item--m-box--BorderTopColor) var(--pf-c-input-group__item--m-box--BorderRightColor) var(--pf-c-input-group__item--m-box--BorderBottomColor) var(--pf-c-input-group__item--m-box--BorderLeftColor);
+  }
 
   &.pf-m-plain {
-    --pf-c-input-group--BackgroundColor: transparent; // make default at breaking change
+    --pf-c-input-group__item--MarginLeft: 0;
+    --pf-c-input-group__item--BackgroundColor: var(--pf-c-input-group__item--m-plain--BackgroundColor);
+
+    border: none;
   }
 
-  // stylelint-disable
-  > * + * {
-    margin-left: -1px;
-  }
-  // stylelint-enable
-
-  > :focus,
-  > :focus-within {
-    z-index: var(--pf-c-input-group--child--ZIndex);
+  &.pf-m-disabled {
+    --pf-c-input-group__item--BackgroundColor: var(--pf-c-input-group__item--m-disabled--BackgroundColor);
+    --pf-c-input-group__item--m-box--BorderBottomColor: var(--pf-c-input-group__item--m-disabled--BorderBottomColor);
+    --pf-c-input-group__text--Color: var(--pf-c-input-group__item--m-disabled__text--Color);
   }
 
-  .pf-c-form-control {
-    &[aria-invalid="true"] {
-      &:not(:last-child) {
-        margin-right: var(--pf-c-input-group--c-form-control--MarginRight);
-      }
-    }
-  }
-
-  // stylelint-disable selector-not-notation
-  // update to single :not() in breaking change
-  input:not([type="checkbox"]):not([type="radio"]),
-  textarea {
-    flex: 2;
-    min-width: 0;
-  }
-
-  textarea {
-    min-height: var(--pf-c-input-group__textarea--MinHeight);
+  &.pf-m-fill {
+    flex-grow: 1;
   }
 }
 
 .pf-c-input-group__text {
-  display: flex;
-  align-items: center;
-  padding-right: var(--pf-c-input-group__text--PaddingRight);
-  padding-left: var(--pf-c-input-group__text--PaddingLeft);
+  align-self: center;
   font-size: var(--pf-c-input-group__text--FontSize);
   color: var(--pf-c-input-group__text--Color);
-  text-align: center;
-  background-color: var(--pf-c-input-group__text--BackgroundColor);
-  border: var(--pf-c-input-group__text--BorderWidth) solid;
-  border-color: var(--pf-c-input-group__text--BorderTopColor) var(--pf-c-input-group__text--BorderRightColor) var(--pf-c-input-group__text--BorderBottomColor) var(--pf-c-input-group__text--BorderLeftColor);
 
   @at-root label#{&} {
     cursor: pointer;
-  }
-
-  &.pf-m-plain {
-    --pf-c-input-group__text--BorderWidth: 0;
-
-    margin-left: 0;
-  }
-
-  &.pf-m-disabled {
-    --pf-c-input-group__text--Color: var(--pf-c-input-group__text--m-disabled--Color);
-    --pf-c-input-group__text--BackgroundColor: var(--pf-c-input-group__text--m-disabled--BackgroundColor);
-    --pf-c-input-group__text--BorderBottomColor: var(--pf-c-input-group__text--m-disabled--BorderBottomColor);
   }
 }
 
