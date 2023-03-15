@@ -55,7 +55,7 @@ section: demos
   {{#> form-group form-group--id="-password"}}
     {{#> form-group-label form-group-label-info="true"}}
       {{#> form-group-label-main}}
-            {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Password{{/form-label}}
+        {{#> form-label form-label--attribute=(concat 'for="' form--id form-group--id '"') required="true"}}Password{{/form-label}}
         {{> form-group-label-help form-group-label-help--aria-label="More information for password field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
       {{/form-group-label-main}}
       {{#> form-group-label-info}}
@@ -68,9 +68,9 @@ section: demos
         {{/input-group-item}}
         {{#> input-group-item}}
           {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
+            <i class="fas fa-eye-slash" aria-hidden="true"></i>
+          {{/button}}
         {{/input-group-item}}
-          <i class="fas fa-eye-slash" aria-hidden="true"></i>
-        {{/button}}
       {{/input-group}}
       {{#> form-helper-text form-helper-text--type="div"}}
         {{#> helper-text helper-text--type="ul" helper-text-item--type="li"}}
