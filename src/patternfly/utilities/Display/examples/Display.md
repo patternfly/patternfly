@@ -1,6 +1,6 @@
 ---
 id: Display
-section: utilities
+section: utility-classes
 ---
 
 import './Display.css'

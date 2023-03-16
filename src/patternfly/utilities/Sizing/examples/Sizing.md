@@ -1,6 +1,6 @@
 ---
 id: Sizing
-section: utilities
+section: utility-classes
 ---
 
 import './Sizing.css'

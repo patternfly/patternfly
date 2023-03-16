@@ -1,6 +1,6 @@
 ---
 id: Float
-section: utilities
+section: utility-classes
 ---
 
 import './Float.css'

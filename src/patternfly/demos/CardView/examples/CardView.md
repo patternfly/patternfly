@@ -1,6 +1,6 @@
 ---
 id: 'Card view'
-section: demos
+section: patterns
 ---
 
 ## Examples

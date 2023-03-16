@@ -1,6 +1,6 @@
 ---
 id: 'Password strength'
-section: demos
+section: components
 ---
 
 ## Examples

@@ -1,6 +1,6 @@
 ---
 id: 'Password generator'
-section: demos
+section: components
 ---
 
 ## Examples
