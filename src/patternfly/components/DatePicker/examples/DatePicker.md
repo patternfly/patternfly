@@ -2,7 +2,7 @@
 id: 'Date picker'
 beta: true
 section: components
-Subsection: date-and-time
+subsection: date-and-time
 cssPrefix: pf-c-date-picker
 ---
 
