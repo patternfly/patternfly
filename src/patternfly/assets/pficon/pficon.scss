@@ -1,7 +1,6 @@
 @font-face {
 	font-family: 'pficon';
-	src: url('#{$pf-global--fonticon-path}/pficon.woff2') format('woff2'),
-		url('#{$pf-global--fonticon-path}/pficon.woff') format('woff');
+	src: url('#{$pf-global--fonticon-path}/pficon.woff2') format('woff2');
 }
 
 @mixin pf-icon-styles {

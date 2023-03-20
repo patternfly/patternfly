@@ -82,7 +82,7 @@ export function pfIconFont() {
     .pipe(
       iconfont({
         fontName: pficonFontName,
-        formats: ['woff', 'woff2'],
+        formats: ['woff2'],
         timestamp: Math.round(Date.now() / 1000)
       })
         // Trigger off emitted 'glyphs' event to generate pficon/unicode matches, combine w/FA & write to JSON file

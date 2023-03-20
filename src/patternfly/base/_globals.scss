@@ -1,60 +1,82 @@
-// Reset
-// Based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
-
+// Reset - based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
 @if $pf-global--enable-reset {
-  // stylelint-disable at-rule-no-vendor-prefix, declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
-
-  html,
-  body,
-  p,
-  ol,
-  ul,
-  li,
-  dl,
-  dt,
-  dd,
-  blockquote,
-  figure,
-  fieldset,
-  legend,
-  textarea,
-  pre,
-  iframe,
-  hr,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  :where(
+    html,
+    body,
+    p,
+    ol,
+    ul,
+    li,
+    dl,
+    dt,
+    dd,
+    blockquote,
+    figure,
+    fieldset,
+    legend,
+    textarea,
+    pre,
+    iframe,
+    hr,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+   ) {
     padding: 0;
     margin: 0;
   }
+}
 
-  html,
-  body {
+// Normalize
+@if $pf-global--enable-normalize {
+  *,
+  :where(
+    *::before,
+    *::after
+  ) {
+    box-sizing: border-box;
+  }
+
+  :where(
+    html,
+    body
+   ) {
     height: 100%;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  :where(body) {
+    font-family: var(--pf-global--FontFamily--sans-serif);
+    font-size: var(--pf-global--FontSize--md);
+    font-weight: var(--pf-global--FontWeight--normal);
+    line-height: var(--pf-global--LineHeight--md);
+  }
+
+  :where(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+   ) {
     font-size: 100%;
     font-weight: var(--pf-global--FontWeight--normal);
   }
 
-  ul {
+  :where(ul) {
     list-style: none;
   }
 
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
+  :where(
+    button,
+    input,
+    optgroup,
+    select,
+    textarea
+   ) {
     margin: 0;
     font-family: inherit;
     font-size: 100%;
@@ -62,73 +84,57 @@
     color: var(--pf-global--Color--100);
   }
 
-  img,
-  embed,
-  iframe,
-  object,
-  audio,
-  video {
+  :where(
+    img,
+    embed,
+    iframe,
+    object,
+    audio,
+    video
+   ) {
     max-width: 100%;
     height: auto;
   }
 
-  iframe {
+  :where(iframe) {
     border: 0;
   }
 
-  table {
+  :where(table) {
     border-spacing: 0;
     border-collapse: collapse;
   }
 
-  td,
-  th {
+  :where(
+    td,
+    th
+  ) {
     padding: 0;
     text-align: left;
   }
 
-  code,
-  pre {
+  :where(
+    code,
+    pre
+  ) {
     font-family: var(--pf-global--FontFamily--monospace);
   }
 
-  // Patternfly base styles
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
-  html {
-    font-family: sans-serif;
-    line-height: 1.15;
-  }
-
-  body {
-    font-family: var(--pf-global--FontFamily--sans-serif);
-    font-size: var(--pf-global--FontSize--md);
-    font-weight: var(--pf-global--FontWeight--normal);
-    line-height: var(--pf-global--LineHeight--md);
-    text-align: left;
-    background-color: var(--pf-global--BackgroundColor--100);
-  }
-
-  // Links styles
-
-  a {
+  :where(a) {
     font-weight: var(--pf-global--link--FontWeight);
     color: var(--pf-global--link--Color);
     text-decoration: var(--pf-global--link--TextDecoration);
-
-    &:hover {
-      --pf-global--link--Color: var(--pf-global--link--Color--hover);
-      --pf-global--link--TextDecoration: var(--pf-global--link--TextDecoration--hover);
-    }
   }
 
-  button,
-  a {
+  :where(a:hover) {
+    --pf-global--link--Color: var(--pf-global--link--Color--hover);
+    --pf-global--link--TextDecoration: var(--pf-global--link--TextDecoration--hover);
+  }
+
+  :where(
+    a,
+    button
+  ) {
     cursor: pointer;
   }
 }
