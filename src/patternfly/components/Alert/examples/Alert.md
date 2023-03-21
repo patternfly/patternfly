@@ -7,11 +7,11 @@ cssPrefix: pf-c-alert
 ## Examples
 ### Types
 ```hbs
-{{#> alert alert--attribute='aria-label="Default alert"'}}
+{{#> alert alert--modifier="pf-m-custom" alert--attribute='aria-label="Custom alert"'}}
   {{> alert-icon alert-icon--type="bell"}}
   {{#> alert-title}}
-    {{#> screen-reader}}Default alert:{{/screen-reader}}
-    Default alert title
+    {{#> screen-reader}}Custom alert:{{/screen-reader}}
+    Custom alert title
   {{/alert-title}}
 {{/alert}}
 <br>
@@ -157,11 +157,11 @@ cssPrefix: pf-c-alert
 
 ### Inline types
 ```hbs
-{{#> alert alert--modifier="pf-m-inline" alert--attribute='aria-label="Inline default alert"'}}
+{{#> alert alert--modifier="pf-m-custom pf-m-inline" alert--attribute='aria-label="Inline custom alert"'}}
   {{> alert-icon alert-icon--type="bell"}}
   {{#> alert-title}}
-    {{#> screen-reader}}Default inline alert:{{/screen-reader}}
-    Default inline alert title
+    {{#> screen-reader}}Custom inline alert:{{/screen-reader}}
+    Custom inline alert title
   {{/alert-title}}
 {{/alert}}
 <br>
@@ -404,13 +404,10 @@ cssPrefix: pf-c-alert
 ```
 
 ## Documentation
-### Overview
-Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.
-
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-alert` | `<div>` | Applies default alert styling. Always use with a modifier class. **Required** |
+| `.pf-c-alert` | `<div>` | Initiates the alert component. Always use with a status modifier class. **Required** |
 | `.pf-c-alert__toggle` | `<div>` | Defines the expandable alert toggle icon. **Required for expandable alerts** |
 | `.pf-c-alert__toggle-icon` | `<span>` | Defines the expandable alert toggle icon. **Required for expandable alerts** |
 | `.pf-c-alert__icon` | `<div>` | Defines the alert icon. **Required** |
@@ -418,10 +415,11 @@ Add a modifier class to the default alert to change the color: `.pf-m-success`, 
 | `.pf-c-alert__description` | `<div>` | Defines the alert description area. |
 | `.pf-c-alert__action` | `<div>` | Defines the action button wrapper. Should contain `.pf-c-button.pf-m-plain` for close action or `.pf-c-button.pf-m-link` for link text. It should only include one action. |
 | `.pf-c-alert__action-group` | `<div>` | Defines the action button group. Should contain `.pf-c-button.pf-m-link.pf-m-inline` for inline link text. **Note:** only inline link buttons are supported in the alert action group. |
-| `.pf-m-success` | `.pf-c-alert` | Applies success styling. |
-| `.pf-m-danger` | `.pf-c-alert` | Applies danger styling. |
-| `.pf-m-warning` | `.pf-c-alert` | Applies warning styling. |
-| `.pf-m-info` | `.pf-c-alert` | Applies info styling. |
+| `.pf-m-custom` | `.pf-c-alert` | Applies custom status styling. |
+| `.pf-m-success` | `.pf-c-alert` | Applies success status styling. |
+| `.pf-m-danger` | `.pf-c-alert` | Applies danger status styling. |
+| `.pf-m-warning` | `.pf-c-alert` | Applies warning status styling. |
+| `.pf-m-info` | `.pf-c-alert` | Applies info status styling. |
 | `.pf-m-inline` | `.pf-c-alert` | Applies inline styling. |
 | `.pf-m-plain` | `.pf-c-alert.pf-m-inline` | Applies plain styling to an inline alert. |
 | `.pf-m-expandable` | `.pf-c-alert` | Applies expandable styles to the alert. |

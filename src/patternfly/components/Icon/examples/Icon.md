@@ -80,7 +80,7 @@ cssPrefix: pf-c-icon
   {{/icon-content}}
 {{/icon}}
 {{#> icon}}
-  {{#> icon-content icon-content--modifier="pf-m-default"}}
+  {{#> icon-content icon-content--modifier="pf-m-custom"}}
     <i class="fas fa-bell" aria-hidden="true"></i>
   {{/icon-content}}
 {{/icon}}
@@ -213,4 +213,4 @@ Refer to the [icons](/guidelines/icons) page for information about the PatternFl
 | `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon` | Modifies the icon container to be small, medium, large, or extra large. |
 | `.pf-m-[sm,md,lg,xl]` | `.pf-c-icon__content`, `pf-c-icon__progress` | Modifies the icon content or progress element to be small, medium, large, or extra large. |
 | `.pf-m-in-progress` | `.pf-c-icon` | Shows the progress element in place of the icon content.  |
-| `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-default`  | `.pf-c-icon__content` | Modifies the icon content to use a status color.  |
+| `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-custom`  | `.pf-c-icon__content` | Modifies the icon content to use a status color.  |

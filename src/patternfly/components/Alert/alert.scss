@@ -8,7 +8,7 @@
     ". description description"
     ". actiongroup actiongroup";
   --pf-c-alert--BorderTopWidth: var(--pf-global--BorderWidth--md);
-  --pf-c-alert--BorderTopColor: var(--pf-global--default-color--200);
+  --pf-c-alert--BorderTopColor: var(--pf-global--BorderColor--100);
   --pf-c-alert--PaddingTop: var(--pf-global--spacer--md);
   --pf-c-alert--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-alert--PaddingBottom: var(--pf-global--spacer--md);
@@ -25,14 +25,14 @@
   --pf-c-alert__toggle-icon--Transition: var(--pf-global--Transition);
 
   // Icon
-  --pf-c-alert__icon--Color: var(--pf-global--default-color--200);
+  --pf-c-alert__icon--Color: var(--pf-global--Color--100);
   --pf-c-alert__icon--MarginTop: #{pf-size-prem(1px)};
   --pf-c-alert__icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-alert__icon--FontSize: var(--pf-global--icon--FontSize--md);
 
   // Title
   --pf-c-alert__title--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-alert__title--Color: var(--pf-global--default-color--300);
+  --pf-c-alert__title--Color: var(--pf-global--Color--100);
   --pf-c-alert__title--max-lines: 1;
 
   // Action
@@ -50,6 +50,11 @@
   --pf-c-alert__description--action-group--PaddingTop-base: var(--pf-global--spacer--md);
   --pf-c-alert__description--action-group--PaddingTop: var(--pf-c-alert__description--action-group--PaddingTop-base);
   --pf-c-alert__action-group__c-button--not-last-child--MarginRight: var(--pf-global--spacer--lg);
+
+  // Custom
+  --pf-c-alert--m-custom--BorderTopColor: var(--pf-global--custom-color--200);
+  --pf-c-alert--m-custom__icon--Color: var(--pf-global--custom-color--200);
+  --pf-c-alert--m-custom__title--Color: var(--pf-global--custom-color--300);
 
   // Success
   --pf-c-alert--m-success--BorderTopColor: var(--pf-global--success-color--100);
@@ -73,7 +78,9 @@
 
   // Inline
   --pf-c-alert--m-inline--BoxShadow: none;
-  --pf-c-alert--m-inline--BackgroundColor: var(--pf-global--palette--cyan-50);
+
+  // Inline custom
+  --pf-c-alert--m-inline--m-custom--BackgroundColor: var(--pf-global--palette--cyan-50);
 
   // Inline success
   --pf-c-alert--m-inline--m-success--BackgroundColor: var(--pf-global--palette--green-50);
@@ -119,6 +126,13 @@
   border-top: var(--pf-c-alert--BorderTopWidth) solid var(--pf-c-alert--BorderTopColor);
   box-shadow: var(--pf-c-alert--BoxShadow);
 
+  &.pf-m-custom {
+    --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-custom--BorderTopColor);
+    --pf-c-alert__icon--Color: var(--pf-c-alert--m-custom__icon--Color);
+    --pf-c-alert__title--Color: var(--pf-c-alert--m-custom__title--Color);
+    --pf-c-alert--m-inline--BackgroundColor: var(--pf-c-alert--m-inline--m-custom--BackgroundColor);
+  }
+  
   &.pf-m-success {
     --pf-c-alert--BorderTopColor: var(--pf-c-alert--m-success--BorderTopColor);
     --pf-c-alert__icon--Color: var(--pf-c-alert--m-success__icon--Color);

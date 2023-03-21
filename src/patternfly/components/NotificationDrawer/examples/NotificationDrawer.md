@@ -124,7 +124,7 @@ cssPrefix: pf-c-notification-drawer
 | `.pf-c-notification-drawer__header-action-close` | `<div>` | Initiates the notification drawer header action button. |
 | `.pf-c-notification-drawer__body` | `<div>` | Initiates the notification drawer body. **Required** |
 | `.pf-c-notification-drawer__list` | `<ul>` | Initiates a notification list. **Required** |
-| `.pf-c-notification-drawer__list-item` | `<li>` | Initiates a notification list item. **Always use with a state modifier - one of `.pf-m-info`, `.pf-m-warning`, `.pf-m-danger`, `.pf-m-success`.** **Required** |
+| `.pf-c-notification-drawer__list-item` | `<li>` | Initiates a notification list item. Always use with a state modifier class. **Required** |
 | `.pf-c-notification-drawer__list-item-header` | `<div>` | Initiates a notification list item header. **Required** |
 | `.pf-c-notification-drawer__list-item-header-icon` | `<span>` | Initiates a notification list item header icon. **Required** |
 | `.pf-c-notification-drawer__list-item-header-title` | `<h2>` | Initiates a notification list item header title. **Required** |
@@ -137,7 +137,7 @@ cssPrefix: pf-c-notification-drawer
 | `.pf-c-notification-drawer__group-title` | `<div>` | Initiates a notification group toggle title. **Required** |
 | `.pf-c-notification-drawer__group-count` | `<div>` | Initiates a notification group toggle count. |
 | `.pf-c-notification-drawer__group-icon` | `<span>` | Initiates a notification group toggle icon. **Required** |
-| `.pf-m-default` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the default state. |
+| `.pf-m-custom` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the custom state. |
 | `.pf-m-info` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the info state. |
 | `.pf-m-warning` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the warning state. |
 | `.pf-m-danger` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the danger state. |

@@ -293,9 +293,9 @@ import './Popover.css'
   {{/popover-content}}
 {{/popover}}
 ```
-### Default alert popover
+### Custom alert popover
 ```hbs isFullscreen
-{{#> popover popover--IsAlert="true" popover--IsDefaultAlert="true" popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-default-alert-header" aria-describedby="popover-default-alert-body"'}}
+{{#> popover popover--IsAlert="true" popover--IsCustomAlert="true" popover--modifier="pf-m-left" popover--attribute='aria-labelledby="popover-custom-alert-header" aria-describedby="popover-custom-alert-body"'}}
   {{#> popover-content}}
     {{#> popover-close}}
       {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Close"'}}
@@ -303,13 +303,13 @@ import './Popover.css'
       {{/button}}
     {{/popover-close}}
     {{#> popover-header}}
-      {{#> popover-title popover-title--id="popover-default-alert-header"}}
+      {{#> popover-title popover-title--id="popover-custom-alert-header"}}
         {{#> popover-title-text}}
-          Default popover title
+          Custom popover title
         {{/popover-title-text}}
       {{/popover-title}}
     {{/popover-header}}
-    {{#> popover-body popover-body--attribute='id="popover-default-alert-body"'}}
+    {{#> popover-body popover-body--attribute='id="popover-custom-alert-body"'}}
       Popovers are triggered by click rather than hover. Click again to close.
     {{/popover-body}}
     {{#> popover-footer}}
@@ -458,7 +458,7 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-m-bottom{-left/right}` | `.pf-c-popover` | Positions the popover to the bottom (or bottom left/bottom right) of the element. |
 | `.pf-m-no-padding` | `.pf-c-popover` | Removes the outer padding from the popover content. |
 | `.pf-m-width-auto` | `.pf-c-popover` | Allows popover width to be defined by the popover content. |
-| `.pf-m-default` | `.pf-c-popover` | Modifies for the default alert state. |
+| `.pf-m-custom` | `.pf-c-popover` | Modifies for the custom alert state. |
 | `.pf-m-info` | `.pf-c-popover` | Modifies for the info alert state. |
 | `.pf-m-success` | `.pf-c-popover` | Modifies for the success alert state. |
 | `.pf-m-warning` | `.pf-c-popover` | Modifies for the warning alert state. |

@@ -41,7 +41,7 @@
       {{/notification-drawer-list-item-timestamp}}
     {{/notification-drawer-list-item}}
   {{else}}
-    {{#> notification-drawer-list-item notification-drawer-list-item--IsDefault="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
+    {{#> notification-drawer-list-item notification-drawer-list-item--IsCustom="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
       {{#> notification-drawer-list-item-header}}
         {{> notification-drawer-list-item-header-icon}}
         {{#> notification-drawer-list-item-header-title}}
@@ -65,7 +65,7 @@
     {{/notification-drawer-list-item}}
   {{/if}}
 
-  {{#> notification-drawer-list-item notification-drawer-list-item--IsDefault="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
+  {{#> notification-drawer-list-item notification-drawer-list-item--IsCustom="true" notification-drawer-list-item--IsRead=notification-drawer-basic-list--AllRead}}
     {{#> notification-drawer-list-item-header}}
       {{> notification-drawer-list-item-header-icon}}
       {{#> notification-drawer-list-item-header-title}}

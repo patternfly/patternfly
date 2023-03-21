@@ -119,14 +119,14 @@ $pf-u-font-color-options: (
   link-color-visited: (
     color var(--pf-global--link--Color--visited)
   ),
-  default-color-100: (
-    color var(--pf-global--default-color--100)
+  custom-color-100: (
+    color var(--pf-global--custom-color--100)
   ),
-  default-color-200: (
-    color var(--pf-global--default-color--200)
+  custom-color-200: (
+    color var(--pf-global--custom-color--200)
   ),
-  default-color-300: (
-    color var(--pf-global--default-color--300)
+  custom-color-300: (
+    color var(--pf-global--custom-color--300)
   ),
   success-color-100: (
     color var(--pf-global--success-color--100)
