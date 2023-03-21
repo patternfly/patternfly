@@ -6,6 +6,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-dropdown__toggle--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__toggle--ColumnGap: var(--pf-global--spacer--sm);
   --pf-c-dropdown__toggle--MinWidth: 0;
   --pf-c-dropdown__toggle--FontSize: var(--pf-global--FontSize--md);
   --pf-c-dropdown__toggle--FontWeight: var(--pf-global--FontWeight--normal);
@@ -110,8 +111,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   // Toggle Arrow
   --pf-c-dropdown__toggle-icon--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-dropdown__toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-dropdown__toggle-icon--MarginLeft: 0;
   --pf-c-dropdown--m-top--m-expanded__toggle-icon--Rotate: 180deg;
   --pf-c-dropdown--m-plain__toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-dropdown--m-plain--hover__toggle-icon--Color: var(--pf-global--Color--100);
@@ -161,16 +163,13 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__group-title--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-dropdown__group-title--Color: var(--pf-global--Color--dark-200);
 
-  // Image
-  --pf-c-dropdown__toggle-image--MarginTop: 0; // remove at breaking change
-  --pf-c-dropdown__toggle-image--MarginBottom: 0; // remove at breaking change
-  --pf-c-dropdown__toggle-image--MarginRight: var(--pf-global--spacer--sm);
-
   // Divider
   --pf-c-dropdown--c-divider--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-dropdown--c-divider--MarginBottom: var(--pf-global--spacer--sm);
 
   // badge toggle icon
+  --pf-c-dropdown__toggle--c-badge__toggle-icon--PaddingRight: 0;
+  --pf-c-dropdown__toggle--c-badge__toggle-icon--PaddingLeft: 0;
   --pf-c-dropdown__toggle--c-badge__toggle-icon--MarginLeft: var(--pf-global--spacer--xs);
   --pf-c-dropdown__toggle--c-badge__toggle-icon--MarginRight: 0;
 
@@ -245,8 +244,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 .pf-c-dropdown__toggle {
   position: relative;
   display: flex;
+  column-gap: var(--pf-c-dropdown__toggle--ColumnGap);
   align-items: center;
-  justify-content: space-between;
   min-width: var(--pf-c-dropdown__toggle--MinWidth);
   max-width: 100%;
   padding: var(--pf-c-dropdown__toggle--PaddingTop) var(--pf-c-dropdown__toggle--PaddingRight) var(--pf-c-dropdown__toggle--PaddingBottom) var(--pf-c-dropdown__toggle--PaddingLeft);
@@ -287,6 +286,8 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   &.pf-m-split-button {
+    --pf-c-dropdown__toggle--ColumnGap: 0;
+
     padding: 0;
 
     &:not(.pf-m-disabled) {
@@ -596,8 +597,9 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   }
 
   > .pf-c-badge {
+    --pf-c-dropdown__toggle-icon--PaddingRight: var(--pf-c-dropdown__toggle--c-badge__toggle-icon--PaddingRight);
+    --pf-c-dropdown__toggle-icon--PaddingLeft: var(--pf-c-dropdown__toggle--c-badge__toggle-icon--PaddingLeft);
     --pf-c-dropdown__toggle-icon--MarginLeft: var(--pf-c-dropdown__toggle--c-badge__toggle-icon--MarginLeft);
-    --pf-c-dropdown__toggle-icon--MarginRight: var(--pf-c-dropdown__toggle--c-badge__toggle-icon--MarginRight);
   }
 
   .pf-c-dropdown__toggle-text {
@@ -606,11 +608,13 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 }
 
 .pf-c-dropdown__toggle-text {
-  flex: 0 1 auto;
+  flex: 1 1 auto;
+  text-align: left;
 }
 
 .pf-c-dropdown__toggle-icon {
-  margin-right: var(--pf-c-dropdown__toggle-icon--MarginRight);
+  padding-right: var(--pf-c-dropdown__toggle-icon--PaddingRight);
+  padding-left: var(--pf-c-dropdown__toggle-icon--PaddingLeft);
   margin-left: var(--pf-c-dropdown__toggle-icon--MarginLeft);
   line-height: var(--pf-c-dropdown__toggle-icon--LineHeight);
   color: var(--pf-c-dropdown__toggle-icon--Color, inherit);
@@ -626,14 +630,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   display: inline-flex;
   flex-shrink: 0;
   align-self: center;
-  margin-top: var(--pf-c-dropdown__toggle-image--MarginTop);
-  margin-right: var(--pf-c-dropdown__toggle-image--MarginRight);
-  margin-bottom: var(--pf-c-dropdown__toggle-image--MarginBottom);
   line-height: 1;
-
-  &:last-child {
-    --pf-c-dropdown__toggle-image--MarginRight: 0;
-  }
 }
 
 // Loading spinner

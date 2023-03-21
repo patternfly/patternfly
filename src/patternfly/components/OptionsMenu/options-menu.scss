@@ -5,6 +5,7 @@
   --pf-c-options-menu__toggle--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle--PaddingBottom: var(--pf-global--spacer--form-element);
   --pf-c-options-menu__toggle--PaddingLeft: var(--pf-global--spacer--sm);
+  --pf-c-options-menu__toggle--ColumnGap: var(--pf-global--spacer--sm);
   --pf-c-options-menu__toggle--MinWidth: 0;
   --pf-c-options-menu__toggle--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-options-menu__toggle--BorderTopColor: var(--pf-global--BorderColor--300);
@@ -27,8 +28,8 @@
   --pf-c-options-menu__toggle--m-plain--PaddingLeft: var(--pf-global--spacer--md);
 
   // Toggle arrow
-  --pf-c-options-menu__toggle-icon--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-options-menu__toggle-icon--MarginLeft: var(--pf-global--spacer--md);
+  --pf-c-options-menu__toggle-icon--PaddingRight: var(--pf-global--spacer--sm);
+  --pf-c-options-menu__toggle-icon--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-options-menu--m-top--m-expanded__toggle-icon--Rotate: 180deg;
   --pf-c-options-menu--m-plain__toggle-icon--Color: var(--pf-global--Color--200);
   --pf-c-options-menu--m-plain--hover__toggle-icon--Color: var(--pf-global--Color--100);
@@ -136,8 +137,8 @@
 .pf-c-options-menu__toggle {
   position: relative;
   display: flex;
+  column-gap: var(--pf-c-options-menu__toggle--ColumnGap);
   align-items: center;
-  justify-content: space-between;
   min-width: var(--pf-c-options-menu__toggle--MinWidth);
   max-width: 100%;
   padding: var(--pf-c-options-menu__toggle--PaddingTop) var(--pf-c-options-menu__toggle--PaddingRight) var(--pf-c-options-menu__toggle--PaddingBottom) var(--pf-c-options-menu__toggle--PaddingLeft);
@@ -206,6 +207,9 @@
 
 .pf-c-options-menu__toggle-text {
   @include pf-text-overflow;
+
+  flex: 1 1 auto;
+  text-align: left;
 }
 
 .pf-c-options-menu__toggle-icon,
@@ -214,8 +218,8 @@
 }
 
 .pf-c-options-menu__toggle-icon {
-  margin-right: var(--pf-c-options-menu__toggle-icon--MarginRight);
-  margin-left: var(--pf-c-options-menu__toggle-icon--MarginLeft);
+  padding-right: var(--pf-c-options-menu__toggle-icon--PaddingRight);
+  padding-left: var(--pf-c-options-menu__toggle-icon--PaddingLeft);
 
   .pf-c-options-menu.pf-m-top.pf-m-expanded & {
     transform: rotate(var(--pf-c-options-menu--m-top--m-expanded__toggle-icon--Rotate));
