@@ -10,7 +10,7 @@ import './FormControl.css'
 ## Examples
 ### Input
 
-**Note:** In webkit browsers, inputs with status icons that are autocompleted will have their icons removed by the user agent stylesheet. If the field does not need to use autocomplete, turn it off with `autocomplete="off"` to avoid the problem. Otherwise, use [helper text](/components/helper-text/html-demos)  instead to ensure that the status will remain visible if the field is autocompleted.
+**Note:** Inputs with a status variant or invalid state should also have [helper text](/components/helper-text/html-demos) to ensure that the status is properly conveyed to the user. See the [form component](/components/forms/form#help-text) for examples.
 
 ```hbs
 {{> form-control controlType="input" input="true" form-control--attribute='type="text" value="Standard" id="input-standard" aria-label="Standard input example"'}}
@@ -230,7 +230,7 @@ Error
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `id` | `.pf-c-form-control` | Provides an `id` value that can be used with the `for` attribute on an associated `<label>` element to provide an accessible label for the form control element.
-| `aria-invalid="true"` | `.pf-c-form-control` | Indicates that the form control is in the error state and applies error state styling. |
+| `aria-invalid="true"` | `.pf-c-form-control` | Indicates that the form control is in the error state and applies error state styling. **Always use [helper text](/components/helper-text/html-demos) this with this.**|
 | `aria-label="descriptive text"` | `.pf-c-form-control` | Provides an accessible label for assistive technology. |
 | `aria-expanded="true"` | `.pf-c-form-control.pf-m-expanded` | Indicates that clicking in the form control has toggled something else to be expanded. |
 
@@ -240,8 +240,8 @@ Error
 | `.pf-c-form-control` | `<input>`,`<textarea>`, `<select>` |  Initiates an input, textarea or select. For styling of checkboxes or radios see the [checkbox component](/components/checkbox) or [radio component](/components/radio). **Required**  |
 | `.pf-m-resize-vertical` | `textarea.pf-m-form-control` | Modifies a `textarea.pf-c-form-control` element so it can only be resized vertically along the y-axis. |
 | `.pf-m-resize-horizontal` | `textarea.pf-m-form-control` | Modifies a `textarea.pf-c-form-control` element so it can only be resized horizontally along the x-axis. |
-| `.pf-m-success` | `.pf-c-form-control` | Modifies a form control for the success state. |
-| `.pf-m-warning` | `.pf-c-form-control` | Modifies a form control for the warning state. |
+| `.pf-m-success` | `.pf-c-form-control` | Modifies a form control for the success state. **Always use [helper text](/components/helper-text/html-demos) this with this.**|
+| `.pf-m-warning` | `.pf-c-form-control` | Modifies a form control for the warning state. **Always use [helper text](/components/helper-text/html-demos) this with this.**|
 | `.pf-m-icon-sprite` | `.pf-c-form-control` | Modifies form control element to use an external SVG sprite instead of embedded data URIs for icons. For use with apps whose content security policies disallow the use of data URIs. |
 | `.pf-m-icon` | `input.pf-c-form-control` | Modifies a form control text input to be able to specify a custom SVG background via `--pf-c-form-control--m-icon--BackgroundUrl`, and other optional vars for other background properties.
 | `.pf-m-calendar` | `.pf-c-form-control.pf-m-icon` | Modifies a form control to support the calendar icon. |

@@ -58,14 +58,14 @@ import './Toolbar.css'
                       {{/button}}
                     {{/input-group}}
                   {{/date-picker}}
-                  {{#> date-picker date-picker--id=(concat toolbar--id "-invalid") helper-text--value="Max: 08/10/2022" helper-text--IsError="true"}}
+                  {{#> date-picker date-picker--id=(concat toolbar--id "-invalid") helper-text--value="Max: 08/10/2022" helper-text-item--IsError="true"}}
                     {{#> input-group}}
                       {{> form-control controlType="input" input="true" form-control--attribute=(concat 'aria-invalid="true" type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
                       {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
                         <i class="fas fa-calendar-alt" aria-hidden="true"></i>
                       {{/button}}
                     {{/input-group}}
-                    {{> date-picker-helper-text helper-text--value="MM/DD/YYYY" helper-text--IsError=false}}
+                    {{> date-picker-helper-text helper-text--value="MM/DD/YYYY" }}
                   {{/date-picker}}
                 {{/input-group}}
               {{/toolbar-item}}

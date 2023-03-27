@@ -18,9 +18,9 @@ cssPrefix: pf-c-helper-text
 ```hbs
 {{> helper-text helper-text--value="This is default helper text" helper-text-item--HasIcon=true}}
 {{> helper-text helper-text--value="This is indeterminate helper text" helper-text-item--IsIndeterminate=true helper-text-item--HasIcon=true}}
-{{> helper-text helper-text--value="This is warning helper text" helper-text-item--IsWarning=true helper-text-item--HasIcon=true}}
-{{> helper-text helper-text--value="This is success helper text" helper-text-item--IsSuccess=true helper-text-item--HasIcon=true}}
-{{> helper-text helper-text--value="This is error helper text" helper-text-item--IsError=true helper-text-item--HasIcon=true}}
+{{> helper-text helper-text--value="This is warning helper text" helper-text-item--IsWarning=true }}
+{{> helper-text helper-text--value="This is success helper text" helper-text-item--IsSuccess=true}}
+{{> helper-text helper-text--value="This is error helper text" helper-text-item--IsError=true }}
 ```
 
 ### Multiple static
@@ -57,7 +57,7 @@ cssPrefix: pf-c-helper-text
 | -- | -- | -- |
 | `.pf-c-helper-text` | `<div>`, `<ul>` |  Initiates the helper text component. **Required** |
 | `.pf-c-helper-text__item` | `<div>`, `<li>` |  Initiates a helper text item. **Required** |
-| `.pf-c-helper-text__item-icon` | `<span>` |  Initiates a helper text item icon. **Required when used in `.pf-c-helper-text__item.pf-m-dynamic`** |
+| `.pf-c-helper-text__item-icon` | `<span>` |  Initiates a helper text item icon. **Required when used in `.pf-c-helper-text__item.pf-m-dynamic`, `.pf-c-helper-text__item.pf-m-warning`, `.pf-c-helper-text__item.pf-m-error`, and `.pf-c-helper-text__item.pf-m-success`** |
 | `.pf-c-helper-text__item-text` | `<span>` |  Initiates a helper text item text. **Required** |
 | `.pf-m-dynamic` | `.pf-c-helper-text__item` |  Modifies a helper text item to be dynamic. For use when the item changes state as the form field the text is associated with is updated. |
 | `.pf-m-indeterminate` | `.pf-c-helper-text__item` |  Modifies a helper text item for indeterminate state styles. |

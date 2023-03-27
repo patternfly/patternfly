@@ -12,7 +12,7 @@
   {{#if helper-text-item--attribute}}
     {{{helper-text-item--attribute}}}
   {{/if}}>
-  {{#if helper-text-item--HasIcon}}
+  {{#if (concat helper-text-item--HasIcon helper-text-item--IsWarning helper-text-item--IsError helper-text-item--IsSuccess helper-text-item--IsDynamic)}}
     {{> helper-text-item-icon}}
   {{/if}}
   {{#if helper-text--value}}

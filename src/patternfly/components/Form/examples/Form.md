@@ -186,19 +186,7 @@ cssPrefix: pf-c-form
     {{#> form-group-control}}
       {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form-group--id '-helper"')}}
       {{/form-control}}
-      {{> form-helper-text helper-text--value='This is helper text for success input.' helper-text-item--IsSuccess=true}}
-    {{/form-group-control}}
-  {{/form-group}}
-  {{#> form-group form-group--id=(concat form--id '-info')}}
-    {{#> form-group-label}}
-      {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"')}}
-        Information
-      {{/form-label}}
-    {{/form-group-label}}
-    {{#> form-group-control}}
-      {{#> form-control controlType="textarea" form-control--attribute=(concat 'id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form-group--id '-helper"')}}
-      {{/form-control}}
-      {{> form-helper-text helper-text--value='This is helper text with an icon.' helper-text-item--IsError=true helper-text-item--HasIcon=true}}
+      {{> form-helper-text helper-text--value='This is helper text for success input.' helper-text-item--IsSuccess="true"}}
     {{/form-group-control}}
   {{/form-group}}
 {{/form}}
