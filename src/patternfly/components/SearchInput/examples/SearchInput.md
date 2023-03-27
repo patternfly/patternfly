@@ -1,6 +1,5 @@
 ---
 id: 'Search input'
-beta: true
 section: components
 cssPrefix: pf-c-search-input
 ---

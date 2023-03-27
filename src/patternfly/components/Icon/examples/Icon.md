@@ -1,6 +1,5 @@
 ---
 id: 'Icon'
-beta: true
 section: components
 cssPrefix: pf-c-icon
 ---
