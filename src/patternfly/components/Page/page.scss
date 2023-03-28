@@ -93,8 +93,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__sidebar-body--PaddingLeft: 0;
   --pf-c-page__sidebar-body--m-page-insets--PaddingRight: var(--pf-c-page--inset);
   --pf-c-page__sidebar-body--m-page-insets--PaddingLeft: var(--pf-c-page--inset);
-  --pf-c-page__sidebar-body--m-menu--PaddingTop: 0;
-  --pf-c-page__sidebar-body--m-menu--PaddingBottom: 0;
   --pf-c-page__sidebar-body--m-menu--BorderTopColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-page__sidebar-body--m-menu--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-page__sidebar-body--m-menu--c-context-selector--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
@@ -446,9 +444,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   }
 
   &.pf-m-menu {
-    --pf-c-page__sidebar-body--PaddingTop: var(--pf-c-page__sidebar-body--m-menu--PaddingTop);
-    --pf-c-page__sidebar-body--PaddingBottom: var(--pf-c-page__sidebar-body--m-menu--PaddingBottom);
-
     background-color: var(--pf-global--palette--black-900);
     border-top: var(--pf-c-page__sidebar-body--m-menu--BorderTopWidth) solid var(--pf-c-page__sidebar-body--m-menu--BorderTopColor);
 
