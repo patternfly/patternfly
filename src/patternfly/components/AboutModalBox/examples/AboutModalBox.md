@@ -38,6 +38,13 @@ cssPrefix: pf-c-about-modal-box
 | -- | -- | -- |
 | `aria-label="Close Dialog"` | `.pf-c-modal-box__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required** |
 
+### Customizing the background image
+In order to use a custom image, pass a new value to the `--pf-c-about-modal-box--BackgroundImage` CSS variable. For example:
+
+```css
+--pf-c-about-modal-box--BackgroundImage: url("custom/image/path");
+```
+
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
