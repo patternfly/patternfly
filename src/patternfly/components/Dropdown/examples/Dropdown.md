@@ -88,7 +88,7 @@ import './Dropdown.css'
 ```
 
 ### Split button (progress checkbox)
-```hbs isBeta
+```hbs 
 {{> dropdown dropdown--id="dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
 {{> dropdown dropdown--id="dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
 {{> dropdown dropdown--id="dropdown-split-button-progress-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected" dropdown-toggle-check--IsProgress="true"}}

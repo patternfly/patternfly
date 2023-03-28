@@ -1,6 +1,5 @@
 ---
 id: 'Text input group'
-beta: true
 section: components
 cssPrefix: pf-c-text-input-group
 ---

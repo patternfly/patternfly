@@ -39,21 +39,21 @@ import './Tabs.css'
 | `.pf-c-tabs__scroll-button` | `<button>` | Initiates a tabs component scroll button. |
 
 ### Horizontal overflow example
-```hbs isBeta
+```hbs 
 {{#> tabs tabs--id="horizontal-overflow" __tabs-list--IsOverflow="true"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Horizontal overflow expanded example
-```hbs isBeta
+```hbs 
 {{#> tabs tabs--id="horizontal-overflow-expanded" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowExpanded="true"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
 ### Horizontal overflow selected example
-```hbs isBeta
+```hbs 
 {{#> tabs tabs--id="horizontal-overflow-selected" __tabs-list--IsOverflow="true" __tabs-list--IsOverflowSelected="true"}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
@@ -267,7 +267,7 @@ import './Tabs.css'
 ## Tab item actions
 
 ### Help button example
-```hbs isBeta
+```hbs 
 {{> __tabs-all
       __tabs-all--id="help-button"
       __tabs-list--IsDisabled="true"
@@ -278,7 +278,7 @@ import './Tabs.css'
 ```
 
 ### Close button example
-```hbs isBeta
+```hbs 
 {{> __tabs-all
       __tabs-all--id="close-button"
       __tabs-list--IsDisabled="true"
@@ -290,7 +290,7 @@ import './Tabs.css'
 ```
 
 ### Help and close button example
-```hbs isBeta
+```hbs 
 {{> __tabs-all
       __tabs-all--id="help-close-button"
       __tabs-list--IsDisabled="true"

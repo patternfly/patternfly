@@ -1,6 +1,5 @@
 ---
 id: 'Truncate'
-beta: true
 section: components
 cssPrefix: pf-c-truncate
 ---

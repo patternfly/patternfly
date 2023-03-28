@@ -1,7 +1,6 @@
 ---
 id: Tile
 section: components
-beta: true
 cssPrefix: pf-c-tile
 ---
 
@@ -9,7 +8,7 @@ import './Tile.css'
 
 ## Examples
 ### Basic tiles
-```hbs isBeta
+```hbs
 {{#> tile}}
   {{#> tile-header}}
     {{#> tile-title}}

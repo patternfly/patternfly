@@ -1,6 +1,5 @@
 ---
 id: 'Progress stepper'
-beta: true
 section: components
 cssPrefix: pf-c-progress-stepper
 ---

@@ -13,7 +13,7 @@ wrapperTag: div
 
 ### Full height page
 Using the `.pf-m-full-height` modifier class on the page component eliminates the need to ensure that the `<html>` and `<body>` tags, and any other ancestors of `.pf-c-page`, have height set to 100%.
-```hbs isFullscreen isBeta
+```hbs isFullscreen
 {{> page-template page-template--id="page-demo-full-height" page-template--modifier="pf-m-full-height"}}
 ```
 
