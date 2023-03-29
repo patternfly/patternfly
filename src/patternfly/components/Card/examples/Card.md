@@ -220,9 +220,7 @@ import './Card.css'
       {{> card--check}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        Title
-      {{/card-title}}
+      {{> card-title card-title-text--value="Title"}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
@@ -239,9 +237,7 @@ import './Card.css'
       {{> card--check check--IsDisabled=true}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        Disabled card
-      {{/card-title}}
+      {{> card-title card-title-text--value="Disabled card" card-title--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
@@ -258,9 +254,7 @@ import './Card.css'
       {{> card--check check-input--IsChecked=true check--IsDisabled=true}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        Selected but disabled card
-      {{/card-title}}
+      {{> card-title card-title-text--value="Selected but disabled card" card-title--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}}
   {{/card-header}}
   {{#> card-body}}
@@ -284,9 +278,7 @@ import './Card.css'
       {{> card--radio}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        Title
-      {{/card-title}}
+      {{> card-title card-title-text--value="Title" card-title--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}} 
   {{/card-header}}
   {{#> card-body}}
@@ -303,9 +295,7 @@ import './Card.css'
       {{> card--radio card--radio--IsDisabled="disabled"}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        Disabled card
-      {{/card-title}}
+      {{> card-title card-title-text--value="Disabled card" card-title--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}} 
   {{/card-header}}
   {{#> card-body}}
@@ -322,9 +312,7 @@ import './Card.css'
       {{> card--radio card--radio--IsChecked="checked" card--radio--IsDisabled="disabled"}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        Title
-      {{/card-title}}
+      {{> card-title card-title-text--value="Selected but disabled card" card-title--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}} 
   {{/card-header}}
   {{#> card-body}}
@@ -347,9 +335,7 @@ import './Card.css'
       {{> card--hidden-input}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        Title
-      {{/card-title}}
+      {{> card-title card-title-text--value="Title" card-title--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}} 
   {{/card-header}}
   {{#> card-body}}
@@ -366,9 +352,7 @@ import './Card.css'
       {{> card--hidden-input card--hidden-input--IsDisabled="disabled "}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        Disabled card
-      {{/card-title}}
+      {{> card-title card-title-text--value="Disabled card" card-title--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}} 
   {{/card-header}}
   {{#> card-body}}
@@ -385,9 +369,7 @@ import './Card.css'
       {{> card--hidden-input card--hidden-input--IsDisabled="disabled "}}
     {{/card-actions}}
     {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        Title
-      {{/card-title}}
+      {{> card-title card-title-text--value="Selected but disabled card" card-title--attribute=(concat 'id="' card--id '-title"')}}
     {{/card-header-main}} 
   {{/card-header}}
   {{#> card-body}}
@@ -431,7 +413,7 @@ import './Card.css'
     {{/card-actions}}
     {{#> card-header-main}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        {{#> button button--modifier="pf-m-link pf-m-inline pf-m-disabled"}}Disabled card{{/button}}
+        {{#> button button--modifier="pf-m-link pf-m-inline pf-m-disabled" button--IsDisabled="true"}}Disabled card{{/button}}
       {{/card-title}}
     {{/card-header-main}}
   {{/card-header}}
@@ -450,7 +432,7 @@ import './Card.css'
     {{/card-actions}}
     {{#> card-header-main}}
       {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        {{#> button button--modifier="pf-m-link pf-m-inline pf-m-disabled"}}Selected but disabled card{{/button}}
+        {{#> button button--modifier="pf-m-link pf-m-inline pf-m-disabled" button--IsDisabled="true"}}Selected but disabled card{{/button}}
       {{/card-title}}
     {{/card-header-main}}
   {{/card-header}}
@@ -531,7 +513,7 @@ import './Card.css'
 {{/card}}
 ```
 
-### Hoverable deprecated (legacy)
+### Hoverable (legacy, deprecated)
 ```hbs
 {{#> card card--id="card-hoverable-deprecated-legacy-example" card--modifier="pf-m-hoverable"}}
   {{> card-title card-title-text--value="Title"}}
@@ -544,7 +526,7 @@ import './Card.css'
 {{/card}}
 ```
 
-### Selectable deprecated (legacy)
+### Selectable (legacy, deprecated)
 ```hbs
 {{#> card card--id="card-selectable-deprecated-legacy-example" card--modifier="pf-m-selectable" card--attribute='tabindex="0"'}}
   {{#> card-title}}
@@ -559,7 +541,7 @@ import './Card.css'
 {{/card}}
 ```
 
-### Selected deprecated (legacy)
+### Selected (legacy, deprecated)
 ```hbs
 {{#> card card--id="card-selected-deprecated-legacy-example" card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}}
