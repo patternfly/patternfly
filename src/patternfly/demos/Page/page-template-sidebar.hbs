@@ -1,38 +1,15 @@
-{{!-- Nav --}}
-{{#> page-sidebar}}
+{{#> page-sidebar page-sidebar--ExcludeSidebarBody=true}}
   {{#if page-template-sidebar--nav--IsExpandable}}
-    {{> page-template-expandable-nav}}
+    {{#> page-sidebar-body}}
+      {{> page-template-expandable-nav}}
+    {{/page-sidebar-body}}
   {{else if page-template-sidebar--nav--IsGrouped}}
-    {{> page-template-grouped-nav}}
+    {{#> page-sidebar-body}}
+      {{> page-template-grouped-nav}}
+    {{/page-sidebar-body}}
   {{else}}
-    {{#> nav nav--attribute=(concat 'id="' page--id '-primary-nav" aria-label="Global"')}}
-      {{#> nav-list}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            System panel
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-            Policy
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Authentication
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Network services
-          {{/nav-link}}
-        {{/nav-item}}
-        {{#> nav-item}}
-          {{#> nav-link nav-link--href="#"}}
-            Server
-          {{/nav-link}}
-        {{/nav-item}}
-      {{/nav-list}}
-    {{/nav}}
+    {{#> page-sidebar-body}}
+      {{> page-template-sidebar-nav}}
+    {{/page-sidebar-body}}
   {{/if}}
 {{/page-sidebar}}

@@ -1,9 +1,13 @@
+// stylelint-disable
 $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
+// stylelint-enable
 
 // URL.com/guidelines#layout
 .pf-c-page {
   --pf-c-page--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-page--inset: var(--pf-global--spacer--md);
+  --pf-c-page--xl--inset: var(--pf-global--spacer--lg);
 
   // Header
   --pf-c-page__header--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
@@ -17,6 +21,7 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   @media (min-width: $pf-global--breakpoint--xl) {
     --pf-c-page__header-brand--PaddingLeft: var(--pf-c-page__header-brand--xl--PaddingLeft);
+    --pf-c-page--inset: var(--pf-c-page--xl--inset);
   }
 
   // Toggle
@@ -84,10 +89,10 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__sidebar--xl--TranslateX: 0;
 
   // Sidebar body
-  --pf-c-page__sidebar-body--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-page__sidebar-body--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-page__sidebar-body--m-menu--PaddingTop: 0;
-  --pf-c-page__sidebar-body--m-menu--PaddingBottom: 0;
+  --pf-c-page__sidebar-body--PaddingRight: 0;
+  --pf-c-page__sidebar-body--PaddingLeft: 0;
+  --pf-c-page__sidebar-body--m-page-insets--PaddingRight: var(--pf-c-page--inset);
+  --pf-c-page__sidebar-body--m-page-insets--PaddingLeft: var(--pf-c-page--inset);
   --pf-c-page__sidebar-body--m-menu--BorderTopColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-page__sidebar-body--m-menu--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-page__sidebar-body--m-menu--c-context-selector--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
@@ -386,7 +391,11 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
 // Sidebar
 .pf-c-page__sidebar {
+  @include pf-t-dark;
+
   z-index: var(--pf-c-page__sidebar--ZIndex);
+  display: flex;
+  flex-direction: column;
   grid-area: nav;
   grid-row-start: 2;
   grid-column-start: 1;
@@ -427,13 +436,14 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 }
 
 .pf-c-page__sidebar-body {
-  padding-top: var(--pf-c-page__sidebar-body--PaddingTop);
-  padding-bottom: var(--pf-c-page__sidebar-body--PaddingBottom);
+  padding-right: var(--pf-c-page__sidebar-body--PaddingRight);
+  padding-left: var(--pf-c-page__sidebar-body--PaddingLeft);
+
+  &:last-child {
+    flex-grow: 1;
+  }
 
   &.pf-m-menu {
-    --pf-c-page__sidebar-body--PaddingTop: var(--pf-c-page__sidebar-body--m-menu--PaddingTop);
-    --pf-c-page__sidebar-body--PaddingBottom: var(--pf-c-page__sidebar-body--m-menu--PaddingBottom);
-
     background-color: var(--pf-global--palette--black-900);
     border-top: var(--pf-c-page__sidebar-body--m-menu--BorderTopWidth) solid var(--pf-c-page__sidebar-body--m-menu--BorderTopColor);
 
@@ -452,6 +462,24 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
       width: 100%;
     }
+  }
+
+  &.pf-m-page-insets {
+    --pf-c-page__sidebar-body--PaddingRight: var(--pf-c-page__sidebar-body--m-page-insets--PaddingRight);
+    --pf-c-page__sidebar-body--PaddingLeft: var(--pf-c-page__sidebar-body--m-page-insets--PaddingLeft);
+  }
+
+  &.pf-m-inset-none {
+    --pf-c-page__sidebar-body--PaddingRight: 0;
+    --pf-c-page__sidebar-body--PaddingLeft: 0;
+  }
+
+  &.pf-m-fill {
+    flex-grow: 1;
+  }
+
+  &.pf-m-no-fill {
+    flex-grow: 0;
   }
 }
 

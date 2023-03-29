@@ -17,6 +17,34 @@ Using the `.pf-m-full-height` modifier class on the page component eliminates th
 {{> page-template page-template--id="page-demo-full-height" page-template--modifier="pf-m-full-height"}}
 ```
 
+### Multiple sidebar body elements
+```hbs isFullscreen
+{{> page-template page-template--id="multiple-sidebar-body-elements-demo"}}
+
+{{#*inline "page-template-sidebar"}}
+  {{#> page-sidebar page-sidebar--ExcludeSidebarBody="true" page-sidebar--modifier="pf-m-expanded"}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-page-insets"}}
+      {{#> content}}
+        <p>Custom sidebar content</p>
+      {{/content}}
+    {{/page-sidebar-body}}
+    {{#> page-sidebar-body}}
+      {{> page-template-sidebar-nav}}
+    {{/page-sidebar-body}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-fill pf-m-page-insets"}}
+      {{#> content}}
+        <p>Custom sidebar content</p>
+      {{/content}}
+    {{/page-sidebar-body}}
+    {{#> page-sidebar-body page-sidebar-body--modifier="pf-m-no-fill pf-m-page-insets"}}
+      {{#> content}}
+        <p>&copy;&nbsp;Copyright</p>
+      {{/content}}
+    {{/page-sidebar-body}}
+  {{/page-sidebar}}
+{{/inline}}
+```
+
 ### Sticky horizontal subnav
 ```hbs isFullscreen
 {{> page-template

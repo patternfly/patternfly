@@ -6,6 +6,12 @@
   color: var(--pf-global--Color--dark-100);
 }
 
-#ws-core-c-page-with-or-without-fill .ws-preview-html {
+#ws-core-c-page-with-or-without-fill .ws-preview-html,
+#ws-core-c-page-multiple-sidebar-body-elements-padding-and-fill .ws-preview-html {
   height: 500px;
+}
+
+#ws-core-c-page-multiple-sidebar-body-elements .ws-preview-html,
+#ws-core-c-page-using-flex-layout .ws-preview-html {
+  height: 100%;
 }
