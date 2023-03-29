@@ -424,25 +424,6 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 
-{{!-- {{#> card card--id="card-clickable-selectable-example-selected" card--modifier="pf-m-clickable pf-m-selectable pf-m-selected" card--IsSelectable="true"}}
-  {{#> card-header}}
-    {{#> card-actions}}
-      {{> card--check check-input--IsChecked="true"}}
-    {{/card-actions}}
-    {{#> card-header-main}}
-      {{#> card-title card-title--attribute=(concat 'id="' card--id '-title"')}}
-        {{#> button button--modifier="pf-m-link pf-m-inline"}}Selected card{{/button}}
-      {{/card-title}}
-    {{/card-header-main}}
-  {{/card-header}}
-  {{#> card-body}}
-    Body
-  {{/card-body}}
-  {{#> card-footer}}
-    Footer
-  {{/card-footer}}
-{{/card}} --}}
-
 {{#> card card--id="card-clickable-selectable-example-disabled" card--modifier="pf-m-clickable pf-m-selectable pf-m-disabled" card--IsSelectable="true"}}
   {{#> card-header}}
     {{#> card-actions}}
@@ -499,7 +480,7 @@ import './Card.css'
 
 ### Selectable raised
 ```hbs
-{{#> card card--id="card-selectable-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
+{{#> card card--id="card-selectable-raised-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}} 
   {{#> card-body}}
     Body
@@ -512,7 +493,7 @@ import './Card.css'
 
 ### Selected raised
 ```hbs
-{{#> card card--id="card-selected-example" card--modifier="pf-m-selectable-raised pf-m-selected-raised" card--attribute='tabindex="0"'}}
+{{#> card card--id="card-selected-raised-example" card--modifier="pf-m-selectable-raised pf-m-selected-raised" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
@@ -526,7 +507,7 @@ import './Card.css'
 ### Selectable raised with a hidden input for improved screen reader accessibility
 ```hbs
 {{> card-sr-input card-sr-input--attribute="aria-label='Checkbox to improve screen reader accessibility of a selectable card'"}}
-{{#> card card--id="card-selectable-with-input-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
+{{#> card card--id="card-selectable-raised-with-input-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
@@ -539,7 +520,7 @@ import './Card.css'
 
 ### Non selectable raised
 ```hbs
-{{#> card card--id="card-non-selectable-example" card--modifier="pf-m-non-selectable-raised"}}
+{{#> card card--id="card-non-selectable-raised-example" card--modifier="pf-m-non-selectable-raised"}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
@@ -552,7 +533,7 @@ import './Card.css'
 
 ### Hoverable deprecated (legacy)
 ```hbs
-{{#> card card--id="card-hoverable-legacy-example" card--modifier="pf-m-hoverable"}}
+{{#> card card--id="card-hoverable-deprecated-legacy-example" card--modifier="pf-m-hoverable"}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
@@ -580,7 +561,7 @@ import './Card.css'
 
 ### Selected deprecated (legacy)
 ```hbs
-{{#> card card--id="card-selected-legacy-example" card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
+{{#> card card--id="card-selected-deprecated-legacy-example" card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
