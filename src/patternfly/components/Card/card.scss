@@ -35,8 +35,7 @@
   --pf-c-card--m-selectable-deprecated--m-selected--before--Height: var(--pf-global--BorderWidth--lg);
   --pf-c-card--m-selectable-deprecated--m-selected--before--BackgroundColor: var(--pf-global--active-color--100);
 
-  ////
-  // Selectable NEW
+  // Selectable/Clickable
   --pf-c-card--m-selectable--BorderWidth: var(--pf-global--BorderWidth--sm);
 
   // Selected state (checked) of selectable card
@@ -59,8 +58,7 @@
   --pf-c-card--m-selectable--m-disabled--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-card--m-selectable--m-disabled--BoxShadow: var(--pf-global--BoxShadow--sm);
 
-  ////
-  // Selectable AND Clickable NEW
+  // Selectable AND Clickable
   // Hover on selectable AND clickable card
   --pf-c-card--m-selectable--m-clickable--hover--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-card--m-selectable--m-clickable--hover--BoxShadow: var(--pf-global--BoxShadow--sm);
@@ -191,58 +189,62 @@
     }
   }
 
+  //////
   // SELECTABLE CARDS, CLICKABLE CARDS
   &.pf-m-selectable,
   &.pf-m-clickable {
     isolation: isolate;
 
-    .pf-c-card__label {
-      position: absolute;
-      inset: 0;
-      cursor: pointer;
-
-      &::before {
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        content: '';
-        background: var(--pf-c-card--BackgroundColor, transparent);
-        border: var(--pf-c-card--m-selectable--BorderWidth) solid var(--pf-c-card--BorderColor, transparent);
-        box-shadow: var(--pf-c-card--BoxShadow, none);
-      }
-    }
-
-    // Hover the card (label)
-    .pf-c-card__label:hover {
-      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--hover--BackgroundColor);
-      --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--hover--BoxShadow);
-    }
-
-    // Selected card
-    .pf-c-card__input:where(:checked) ~ .pf-c-card__label,
-    &.pf-m-selected {
-      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-selected--BorderColor);
-      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-selected--BackgroundColor);
-    }
-
-    // Focus on the card (label)
-    .pf-c-card__input:where(:focus-visible) ~ .pf-c-card__label, {
-      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--focus--BorderColor);
-      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--focus--BackgroundColor);
+    // box-shadow will come from the card__label::before instead of the card so remove this so there's isn't a double shadow
+    box-shadow: none;
   }
 
-    // Focus on a selected card
-    .pf-c-card__input:where(:focus-visible):where(:checked) ~ .pf-c-card__label {
-      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-selected--focus--BorderColor);
-    }
+  .pf-c-card__label {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
 
-    // Disabled card
-    .pf-c-card__input:where(:disabled) ~ .pf-c-card__label,
-    &.pf-m-disabled {
-      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-disabled--BackgroundColor);
-      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-disabled--BorderColor);
-      --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--m-disabled--BoxShadow);
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: '';
+      background: var(--pf-c-card--BackgroundColor, transparent);
+      border: var(--pf-c-card--m-selectable--BorderWidth) solid var(--pf-c-card--BorderColor, transparent);
+      box-shadow: var(--pf-c-card--BoxShadow, none);
     }
+  }
+
+  // Hover the card (label)
+  .pf-c-card__label:hover {
+    --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--hover--BackgroundColor);
+    --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--hover--BoxShadow);
+  }
+
+  // Selected card
+  .pf-c-card__input:where(:checked) ~ .pf-c-card__label,
+  &.pf-m-selected {
+    --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-selected--BorderColor);
+    --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-selected--BackgroundColor);
+  }
+
+  // Focus on the card (label)
+  .pf-c-card__input:where(:focus-visible) ~ .pf-c-card__label {
+    --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--focus--BorderColor);
+    --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--focus--BackgroundColor);
+  }
+
+  // Focus on a selected card
+  .pf-c-card__input:where(:focus-visible):where(:checked) ~ .pf-c-card__label {
+    --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-selected--focus--BorderColor);
+  }
+
+  // Disabled card
+  .pf-c-card__input:where(:disabled) ~ .pf-c-card__label,
+  &.pf-m-disabled {
+    --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-disabled--BackgroundColor);
+    --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-disabled--BorderColor);
+    --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--m-disabled--BoxShadow);
   }
 
   // Cards that are selectable AND clickable
@@ -271,6 +273,9 @@
     // stylelint-enable selector-max-class 
   }
  
+
+  //////
+  // RAISED CARDS
   &.pf-m-hoverable-raised,
   &.pf-m-selectable-raised,
   &.pf-m-non-selectable-raised {
