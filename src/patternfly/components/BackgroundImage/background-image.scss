@@ -1,47 +1,21 @@
 .pf-c-background-image {
   --pf-c-background-image--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
-  --pf-c-background-image--BackgroundImage: url("#{$pf-global--image-path}/pfbg_576.jpg");
-  --pf-c-background-image--BackgroundImage-2x: url("#{$pf-global--image-path}/pfbg_576@2x.jpg");
-  --pf-c-background-image--BackgroundImage--sm: url("#{$pf-global--image-path}/pfbg_768.jpg");
-  --pf-c-background-image--BackgroundImage--sm-2x: url("#{$pf-global--image-path}/pfbg_768@2x.jpg");
-  --pf-c-background-image--BackgroundImage--lg: url("#{$pf-global--image-path}/pfbg_2000.jpg");
-  --pf-c-background-image--Filter: url("#image_overlay");
+  --pf-c-background-image--BackgroundImage: url("#{$pf-global--image-path}/pfbg-icon.svg");
+  --pf-c-background-image--BackgroundPosition: bottom right;
+  --pf-c-background-image--BackgroundSize--min-width: 200px;
+  --pf-c-background-image--BackgroundSize--width: 60%;
+  --pf-c-background-image--BackgroundSize--max-width: 600px;
+  --pf-c-background-image--BackgroundSize: clamp(var(--pf-c-background-image--BackgroundSize--min-width), var(--pf-c-background-image--BackgroundSize--width), var(--pf-c-background-image--BackgroundSize--max-width));
 
-  &::before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    content: "";
-    background-color: var(--pf-c-background-image--BackgroundColor);
-    background-image: var(--pf-c-background-image--BackgroundImage);
-    filter: var(--pf-c-background-image--Filter);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    // stylelint-disable
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      --pf-c-background-image--BackgroundImage: var(--pf-c-background-image--BackgroundImage-2x);
-    }
-
-    @media (min-width: $pf-global--breakpoint--sm) {
-      --pf-c-background-image--BackgroundImage: var(--pf-c-background-image--BackgroundImage--sm);
-    }
-
-    @media (min-width: $pf-global--breakpoint--sm) and (-webkit-min-device-pixel-ratio: 2),
-      (min-width: $pf-global--breakpoint--sm) and (min-resolution: 192dpi) {
-      --pf-c-background-image--BackgroundImage: var(--pf-c-background-image--BackgroundImage--sm-2x);
-    }
-
-    @media (min-width: $pf-global--breakpoint--lg) {
-      --pf-c-background-image--BackgroundImage: var(--pf-c-background-image--BackgroundImage--lg);
-    }
-    // stylelint-enable
-  }
-}
-
-.pf-c-background-image__filter {
-  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pf-c-background-image--BackgroundColor);
+  background-image: var(--pf-c-background-image--BackgroundImage);
+  background-repeat: no-repeat;
+  background-position: var(--pf-c-background-image--BackgroundPosition);
+  background-size: var(--pf-c-background-image--BackgroundSize);
 }

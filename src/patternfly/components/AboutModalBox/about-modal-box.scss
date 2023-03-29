@@ -1,11 +1,17 @@
 .pf-c-about-modal-box {
   // Component variables
   --pf-c-about-modal-box--BackgroundColor: var(--pf-global--palette--black-1000); // Modal uses a non-standard background color
+  --pf-c-about-modal-box--BackgroundImage: url("#{$pf-global--image-path}/pfbg-icon.svg");
+  --pf-c-about-modal-box--BackgroundPosition: bottom right;
+  --pf-c-about-modal-box--BackgroundSize--min-width: 200px;
+  --pf-c-about-modal-box--BackgroundSize--width: 60%;
+  --pf-c-about-modal-box--BackgroundSize--max-width: 600px;
+  --pf-c-about-modal-box--BackgroundSize: clamp(var(--pf-c-about-modal-box--BackgroundSize--min-width), var(--pf-c-about-modal-box--BackgroundSize--width), var(--pf-c-about-modal-box--BackgroundSize--max-width));
   --pf-c-about-modal-box--Height: 100%;
   --pf-c-about-modal-box--lg--Height: #{pf-size-prem(762px)}; // Height is optimized for the exact height desired
   --pf-c-about-modal-box--Width: 100%;
-  --pf-c-about-modal-box--sm--grid-template-columns: 5fr 1fr;
-  --pf-c-about-modal-box--lg--grid-template-columns: 1fr .6fr;
+  --pf-c-about-modal-box--sm--GridTemplateColumns: 5fr 1fr;
+  --pf-c-about-modal-box--lg--GridTemplateColumns: 1fr .6fr;
 
   // Brand
   --pf-c-about-modal-box__brand--PaddingTop: var(--pf-global--spacer--2xl);
@@ -28,11 +34,9 @@
   --pf-c-about-modal-box__close--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box__close--PaddingBottom: var(--pf-global--spacer--xl);
   --pf-c-about-modal-box__close--sm--PaddingBottom: var(--pf-global--spacer--3xl);
-  --pf-c-about-modal-box__close--sm--PaddingRight: 0;
   --pf-c-about-modal-box__close--lg--PaddingRight: var(--pf-global--spacer--3xl);
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
-    --pf-c-about-modal-box__close--PaddingRight: var(--pf-c-about-modal-box__close--sm--PaddingRight);
     --pf-c-about-modal-box__close--PaddingBottom: var(--pf-c-about-modal-box__close--sm--PaddingBottom);
   }
 
@@ -110,13 +114,17 @@
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--pf-c-about-modal-box--BackgroundColor); // Because this component is always dark, set the background color
+  background-image: var(--pf-c-about-modal-box--BackgroundImage);
+  background-repeat: no-repeat;
+  background-position: var(--pf-c-about-modal-box--BackgroundPosition);
+  background-size: var(--pf-c-about-modal-box--BackgroundSize);
 
   @media only screen and (min-width: $pf-global--breakpoint--sm) {
     grid-template-areas:
-      "brand          hero"
-      "header         hero"
-      "content        hero";
-    grid-template-columns: var(--pf-c-about-modal-box--sm--grid-template-columns);
+    "brand          close"
+    "header         close"
+    "content        close";
+    grid-template-columns: var(--pf-c-about-modal-box--sm--GridTemplateColumns);
   }
 
   @media only screen and (min-width: $pf-global--breakpoint--lg) {
@@ -124,7 +132,7 @@
     --pf-c-about-modal-box--Width: var(--pf-c-about-modal-box--lg--Width);
 
     grid-template-rows: max-content max-content auto;
-    grid-template-columns: var(--pf-c-about-modal-box--lg--grid-template-columns);
+    grid-template-columns: var(--pf-c-about-modal-box--lg--GridTemplateColumns);
   }
 }
 
