@@ -67,6 +67,10 @@
   --pf-c-card--m-selectable--m-clickable--m-selected--BorderColor: var(--pf-global--BorderColor--100);
   --pf-c-card--m-selectable--m-clickable--m-selected--BackgroundColor: var(--pf-global--BackgroundColor--100);
 
+  // Clicked (pf-m-current) selectable AND clickable card
+  --pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor: var(--pf-global--palette--black-150);
+  --pf-c-card--m-selectable--m-clickable--m-current--BorderColor: var(--pf-global--active-color--100);
+
   // Hoverable/selectable raised
   --pf-c-card--m-hoverable-raised--hover--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-card--m-hoverable-raised--hover--before--BackgroundColor: var(--pf-global--active-color--400);
@@ -256,6 +260,13 @@
     }
 
     // stylelint-disable selector-max-class
+    // Card is clicked
+    &.pf-m-current,
+    &.pf-m-current .pf-c-card__label:hover {
+      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor);
+      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BorderColor);
+    }
+
     // Card is selected
     .pf-c-card__input:where(:checked) ~ .pf-c-card__label,
     &.pf-m-selected {
