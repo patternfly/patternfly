@@ -739,8 +739,8 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-c-card__header` | `<div>` | Creates the header of the card where images, actions, and/or the card title can go. |
 | `.pf-c-card__header-toggle` | `<div>` | Creates the expandable card toggle. |
 | `.pf-c-card__header-toggle-icon` | `<span>` | Creates the expandable card toggle icon. |
-| `.pf-c-card__input` | `<div>` | NNNNNNNNN |
-| `.pf-c-card__label` | `<div>` | NNNNNNNNN |
+| `.pf-c-card__input` | `<input type="checkbox">` or `<input type="radio">` | Creates a radio or check input for selecting a selectable or clickable card. **Required for selectable/clickable cards** |
+| `.pf-c-card__label` | `<label>` | Creates a label for the radio/check input on a selectable or clickable card. |
 | `.pf-c-card__actions` | `<div>` | Creates an actions element to be used in the card header. |
 | `.pf-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. **Required if `.pf-c-card__header` has content outside of a card header toggle or card header actions** |
 | `.pf-c-card__expandable-content` | `<div>` | Creates the expandable card's expandable content. |
@@ -748,6 +748,8 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-compact` | `.pf-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
 | `.pf-m-display-lg` | `.pf-c-card` | Creates a large variation of the card component that involves larger font sizes and spacing. This variation is for marketing use cases. |
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` not to fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
+| `.pf-m-selectable` | `.pf-c-card` | Modifies a card to be selectable.  |
+| `.pf-m-clickable` | `.pf-c-card` | Modifies a card to be clickable. |
 | `.pf-m-selected` | `.pf-c-card` | Modifies a selectable card for selected state styling. Selectable cards use an input to indicate selection; this is an alternative way to mark a card as selected. |
 | `.pf-m-current` | `.pf-c-card` | Modifies a card that is both clickable and selectable for clicked state styling. |
 | `.pf-m-hoverable-raised` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
