@@ -406,7 +406,7 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 
-{{#> card card--id="card-clickable-selectable-current-example" card--modifier="pf-m-clickable pf-m-selectable pf-m-current" card--IsSelectable="true"}}
+{{#> card card--id="card-clickable-selectable-current-example" card--modifier="pf-m-clickable pf-m-selectable pf-m-current" card--IsSelectable="true" card--attribute='aria-current="location"'}}
   {{#> card-header}}
     {{#> card-actions}}
       {{> card--check}}
