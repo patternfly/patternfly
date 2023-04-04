@@ -253,6 +253,16 @@
 
   // Cards that are selectable AND clickable
   &.pf-m-selectable.pf-m-clickable {
+    .pf-c-card__label {
+      position: unset;
+  
+      &::before {
+        position: absolute;
+        inset: 0;
+        cursor: pointer;
+      }
+    }
+
     // Card (label) is hovered
     .pf-c-card__label:hover {
       --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--hover--BackgroundColor);
@@ -268,14 +278,14 @@
     }
 
     // Card is selected
-    .pf-c-card__input:where(:checked) ~ .pf-c-card__label,
+    .pf-c-card__input:where(:checked),
     &.pf-m-selected {
       --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-selected--BorderColor);
       --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-selected--BackgroundColor);
     }  
 
     // Disabled card
-    .pf-c-card__input:where(:disabled) ~ .pf-c-card__label,
+    .pf-c-card__input:where(:disabled),
     &.pf-m-disabled {
       --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-disabled--BackgroundColor);
       --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-disabled--BorderColor);
