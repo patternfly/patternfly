@@ -406,7 +406,7 @@ import './Card.css'
   {{/card-footer}}
 {{/card}}
 
-{{#> card card--id="card-clickable-selectable-current-example" card--modifier="pf-m-clickable pf-m-selectable pf-m-current" card--IsSelectable="true" card--attribute='aria-current="location"'}}
+{{#> card card--id="card-clickable-selectable-current-example" card--modifier="pf-m-clickable pf-m-selectable pf-m-current" card--IsSelectable="true"}}
   {{#> card-header}}
     {{#> card-actions}}
       {{> card--check}}
@@ -466,7 +466,7 @@ import './Card.css'
 {{/gallery}}
 ```
 
-### Hoverable raised
+### Hoverable raised (deprecated)
 ```hbs
 {{#> card card--id="card-hoverable-example" card--modifier="pf-m-hoverable-raised"}}
   {{> card-title card-title-text--value="Title"}}
@@ -479,7 +479,7 @@ import './Card.css'
 {{/card}}
 ```
 
-### Selectable raised
+### Selectable raised (deprecated)
 ```hbs
 {{#> card card--id="card-selectable-raised-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}} 
@@ -492,7 +492,7 @@ import './Card.css'
 {{/card}}
 ```
 
-### Selected raised
+### Selected raised (deprecated)
 ```hbs
 {{#> card card--id="card-selected-raised-example" card--modifier="pf-m-selectable-raised pf-m-selected-raised" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}}
@@ -505,7 +505,7 @@ import './Card.css'
 {{/card}}
 ```
 
-### Selectable raised with a hidden input for improved screen reader accessibility
+### Selectable raised with a hidden input for improved screen reader accessibility (deprecated)
 ```hbs
 {{> card-sr-input card-sr-input--attribute="aria-label='Checkbox to improve screen reader accessibility of a selectable card'"}}
 {{#> card card--id="card-selectable-raised-with-input-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
@@ -519,50 +519,9 @@ import './Card.css'
 {{/card}}
 ```
 
-### Non selectable raised
+### Non selectable raised (deprecated)
 ```hbs
 {{#> card card--id="card-non-selectable-raised-example" card--modifier="pf-m-non-selectable-raised"}}
-  {{> card-title card-title-text--value="Title"}}
-  {{#> card-body}}
-    Body
-  {{/card-body}}
-  {{#> card-footer}}
-    Footer
-  {{/card-footer}}
-{{/card}}
-```
-
-### Hoverable (legacy, deprecated)
-```hbs
-{{#> card card--id="card-hoverable-deprecated-legacy-example" card--modifier="pf-m-hoverable-deprecated"}}
-  {{> card-title card-title-text--value="Title"}}
-  {{#> card-body}}
-    Body
-  {{/card-body}}
-  {{#> card-footer}}
-    Footer
-  {{/card-footer}}
-{{/card}}
-```
-
-### Selectable (legacy, deprecated)
-```hbs
-{{#> card card--id="card-selectable-deprecated-legacy-example" card--modifier="pf-m-selectable-deprecated" card--attribute='tabindex="0"'}}
-  {{#> card-title}}
-    Title
-  {{/card-title}}
-  {{#> card-body}}
-    Body
-  {{/card-body}}
-  {{#> card-footer}}
-    Footer
-  {{/card-footer}}
-{{/card}}
-```
-
-### Selected (legacy, deprecated)
-```hbs
-{{#> card card--id="card-selected-deprecated-legacy-example" card--modifier="pf-m-selectable-deprecated pf-m-selected" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body

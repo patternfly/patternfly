@@ -26,14 +26,6 @@
   --pf-c-card__header-toggle-icon--Transition: var(--pf-global--Transition);
   --pf-c-card--m-expanded__header-toggle-icon--Rotate: 90deg;
 
-  // DEPRECATED Hoverable/selectable
-  --pf-c-card--m-hoverable-deprecated--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-card--m-selectable-deprecated--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-card--m-selectable-deprecated--focus--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-card--m-selectable-deprecated--active--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-card--m-selectable-deprecated--m-selected--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-card--m-selectable-deprecated--m-selected--before--Height: var(--pf-global--BorderWidth--lg);
-  --pf-c-card--m-selectable-deprecated--m-selected--before--BackgroundColor: var(--pf-global--active-color--100);
 
   // Selectable/Clickable
   --pf-c-card--m-selectable--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -71,7 +63,7 @@
   --pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor: var(--pf-global--palette--black-150);
   --pf-c-card--m-selectable--m-clickable--m-current--BorderColor: var(--pf-global--active-color--100);
 
-  // Hoverable/selectable raised
+  // Hoverable/selectable raised (deprecated)
   --pf-c-card--m-hoverable-raised--hover--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-card--m-hoverable-raised--hover--before--BackgroundColor: var(--pf-global--active-color--400);
   --pf-c-card--m-selectable-raised--before--Right: 0;
@@ -154,45 +146,6 @@
   background-color: var(--pf-c-card--BackgroundColor);
   box-shadow: var(--pf-c-card--BoxShadow);
 
-  // DEPRECATED
-  &.pf-m-hoverable-deprecated {
-    &:hover {
-      --pf-c-card--BoxShadow: var(--pf-c-card--m-hoverable-deprecated--hover--BoxShadow);
-    }
-  }
-
-  // DEPRECATED
-  &.pf-m-selectable-deprecated {
-    position: relative;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: var(--pf-c-card--m-selectable-deprecated--hover--BoxShadow);
-    }
-
-    &:focus {
-      box-shadow: var(--pf-c-card--m-selectable-deprecated--focus--BoxShadow);
-    }
-
-    &:active {
-      box-shadow: var(--pf-c-card--m-selectable-deprecated--active--BoxShadow);
-    }
-
-    &.pf-m-selected {
-      box-shadow: var(--pf-c-card--m-selectable-deprecated--m-selected--BoxShadow);
-
-      &::before {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: var(--pf-c-card--m-selectable-deprecated--m-selected--before--Height);
-        content: "";
-        background-color: var(--pf-c-card--m-selectable-deprecated--m-selected--before--BackgroundColor);
-      }
-    }
-  }
-
   //////
   // SELECTABLE CARDS, CLICKABLE CARDS
   &.pf-m-selectable,
@@ -263,29 +216,34 @@
       }
     }
 
-    // Card (label) is hovered
-    .pf-c-card__label:hover {
-      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--hover--BackgroundColor);
-      --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--m-clickable--hover--BoxShadow);
-    }
-
     // stylelint-disable selector-max-class
-    // Card is clicked
-    &.pf-m-current,
-    &.pf-m-current .pf-c-card__label:hover {
-      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor);
-      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BorderColor);
+    .pf-c-card__input:where(:focus-visible) ~ .pf-c-card__label{
+      --pf-c-card--BackgroundColor: unset;
+      --pf-c-card--BorderColor: unset;
     }
 
     // Card is selected
-    .pf-c-card__input:where(:checked),
+    .pf-c-card__input:where(:checked) ~ .pf-c-card__label,
     &.pf-m-selected {
-      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-selected--BorderColor);
       --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-selected--BackgroundColor);
-    }  
+      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-selected--BorderColor);
+    }
+
+    // Card is clicked
+    &.pf-m-current {
+      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor);
+      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BorderColor);
+
+      // a selected card is clicked
+      &.pf-m-selected,
+      & .pf-c-card__input:where(:checked) ~ .pf-c-card__label {
+        --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor);
+        --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BorderColor);
+      }
+    }
 
     // Disabled card
-    .pf-c-card__input:where(:disabled),
+    .pf-c-card__input:where(:disabled) ~ .pf-c-card__label,
     &.pf-m-disabled {
       --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-disabled--BackgroundColor);
       --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-disabled--BorderColor);
@@ -300,8 +258,6 @@
   &.pf-m-hoverable-raised,
   &.pf-m-selectable-raised,
   &.pf-m-non-selectable-raised {
-    position: relative;
-
     &::before {
       position: absolute;
       right: var(--pf-c-card--m-selectable-raised--before--Right);
