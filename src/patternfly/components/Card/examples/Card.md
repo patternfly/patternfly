@@ -534,7 +534,7 @@ import './Card.css'
 
 ### Hoverable (legacy, deprecated)
 ```hbs
-{{#> card card--id="card-hoverable-deprecated-legacy-example" card--modifier="pf-m-hoverable"}}
+{{#> card card--id="card-hoverable-deprecated-legacy-example" card--modifier="pf-m-hoverable-deprecated"}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
@@ -547,7 +547,7 @@ import './Card.css'
 
 ### Selectable (legacy, deprecated)
 ```hbs
-{{#> card card--id="card-selectable-deprecated-legacy-example" card--modifier="pf-m-selectable" card--attribute='tabindex="0"'}}
+{{#> card card--id="card-selectable-deprecated-legacy-example" card--modifier="pf-m-selectable-deprecated" card--attribute='tabindex="0"'}}
   {{#> card-title}}
     Title
   {{/card-title}}
@@ -562,7 +562,7 @@ import './Card.css'
 
 ### Selected (legacy, deprecated)
 ```hbs
-{{#> card card--id="card-selected-deprecated-legacy-example" card--modifier="pf-m-selectable pf-m-selected" card--attribute='tabindex="0"'}}
+{{#> card card--id="card-selected-deprecated-legacy-example" card--modifier="pf-m-selectable-deprecated pf-m-selected" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
     Body
@@ -750,8 +750,9 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-m-no-fill` | `.pf-c-card__body` | Sets a `.pf-c-card__body` not to fill the available space in `.pf-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
 | `.pf-m-selectable` | `.pf-c-card` | Modifies a card to be selectable.  |
 | `.pf-m-clickable` | `.pf-c-card` | Modifies a card to be clickable. |
-| `.pf-m-selected` | `.pf-c-card` | Modifies a selectable card for selected state styling. Selectable cards use an input to indicate selection; this is an alternative way to mark a card as selected. |
+| `.pf-m-selected` | `.pf-c-card` | Modifies a selectable card for selected state styling. Can be used in addition to indicating selection via the `.pf-c-card__input`. |
 | `.pf-m-current` | `.pf-c-card` | Modifies a card that is both clickable and selectable for clicked state styling. |
+| `.pf-m-disabled` | `.pf-c-card` | Modifies a card so it is not selectable or clickable.  |
 | `.pf-m-hoverable-raised` | `.pf-c-card` | Modifies the card to include hover styles on `:hover`. |
 | `.pf-m-selectable-raised` | `.pf-c-card` | Modifies a selectable card so that it is selectable. |
 | `.pf-m-selected-raised` | `.pf-c-card.pf-m-selectable-raised` | Modifies a selectable card for the selected state. |

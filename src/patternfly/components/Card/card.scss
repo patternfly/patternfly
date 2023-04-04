@@ -213,7 +213,7 @@
       inset: 0;
       z-index: -1;
       content: '';
-      background: var(--pf-c-card--BackgroundColor, transparent);
+      background-color: var(--pf-c-card--BackgroundColor, transparent);
       border: var(--pf-c-card--m-selectable--BorderWidth) solid var(--pf-c-card--BorderColor, transparent);
       box-shadow: var(--pf-c-card--BoxShadow, none);
     }
