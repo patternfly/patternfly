@@ -753,30 +753,30 @@ When a list item includes more than one block of content, it can be difficult fo
 | -- | -- | -- |
 | `.pf-m-flex-{1, 2, 3, 4, 5}` | `.pf-c-data-list__cell` | Percentage based modifier for `.pf-c-data-list__cell` widths. |
 
-### Selectable rows
+### Clickable rows
 ```hbs
-{{#> data-list data-list--id="data-list-selectable-rows" data-list--attribute='aria-label="Selectable rows data list example"'}}
-  {{#> data-list-item data-list-item--id="item-1" data-list-item--IsSelectable="true" data-list-item--IsSelected="true" data-list-item--expanded="true"}}
+{{#> data-list data-list--id="data-list-clickable-rows" data-list--attribute='aria-label="Clickable rows data list example"'}}
+  {{#> data-list-item data-list-item--id="item-1" data-list-item--IsClickable="true" data-list-item--IsSelected="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content (clicked)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--id="item-2" data-list-item--IsSelectable="true" data-list-item--IsSelected="true" data-list-item--expanded="true"}}
+  {{#> data-list-item data-list-item--id="item-2" data-list-item--IsClickable="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Secondary content (selected)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Secondary content</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
   {{/data-list-item}}
 
-  {{#> data-list-item data-list-item--id="item-3" data-list-item--IsSelectable="true"}}
+  {{#> data-list-item data-list-item--id="item-3" data-list-item--IsClickable="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
@@ -791,28 +791,28 @@ When a list item includes more than one block of content, it can be difficult fo
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `tabindex="0"` | `.pf-c-data-list__item.pf-m-selectable` | Inserts the selectable row into the tab order of the page so that it is focusable. **Required** |
+| `tabindex="0"` | `.pf-c-data-list__item.pf-m-clickable` | Inserts the clickable row into the tab order of the page so that it is focusable. **Required** |
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-selectable` | `.pf-c-data-list__item` | Modifies a data list item so that it is selectable. |
+| `.pf-m-clickable` | `.pf-c-data-list__item` | Modifies a data list item so that it is clickable. |
 | `.pf-m-selected` | `.pf-c-data-list__item` | Modifies a data list item for the selected state. |
 
-### Selectable expandable rows
+### Clickable expandable rows
 ```hbs
-{{#> data-list data-list--id="data-list-selectable-expandable-rows" data-list-item--IsSelectable="true" data-list--attribute='aria-label="Selectable, expandable data list example"'}}
-  {{#> data-list-item data-list-item--id="item-1" data-list-item--expanded="true"}}
+{{#> data-list data-list--id="data-list-clickable-expandable-rows" data-list-item--IsClickable="true" data-list--attribute='aria-label="Clickable, expandable data list example"'}}
+  {{#> data-list-item data-list-item--id="item-1" data-list-item--IsSelected="true" data-list-item--expanded="true"}}
     {{#> data-list-item-row}}
       {{#> data-list-item-control}}
         {{#> data-list-toggle button--attribute=(concat 'aria-labelledby="' data-list--id '-toggle1 ' data-list--id '-item1" id="' data-list--id '-toggle1" aria-label="Toggle details for" aria-expanded="true" aria-controls="' data-list--id '-content1"')}}{{/data-list-toggle}}
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content (selected, expanded)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Primary content (clicked and expanded)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Selectable expandable row primary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content1" aria-label="Clickable expandable row primary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -830,7 +830,7 @@ When a list item includes more than one block of content, it can be difficult fo
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Selectable expandable row secondary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content2" aria-label="Clickable expandable row secondary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}
@@ -844,11 +844,11 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content (not selected, expanded)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Tertiary content (expanded)</span>
         {{/data-list-cell}}
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Selectable expandable row tertiary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content3" aria-label="Clickable expandable row tertiary content details"')}}
       {{#> data-list-expandable-content-body data-list-expandable-content-body--modifier="pf-m-no-padding"}}
         This expanded section has no padding.
       {{/data-list-expandable-content-body}}
@@ -862,12 +862,12 @@ When a list item includes more than one block of content, it can be difficult fo
       {{/data-list-item-control}}
       {{#> data-list-item-content}}
         {{#> data-list-cell}}
-          <span id="{{data-list--id}}-{{data-list-item--id}}">Quaternary content (selected)</span>
+          <span id="{{data-list--id}}-{{data-list-item--id}}">Quaternary content</span>
         {{/data-list-cell}}
 
       {{/data-list-item-content}}
     {{/data-list-item-row}}
-    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content4" aria-label="Selectable expandable row quaternary content details"')}}
+    {{#> data-list-expandable-content data-list-expandable-content--attribute=(concat 'id="' data-list--id '-content4" aria-label="Clickable expandable row quaternary content details"')}}
       {{#> data-list-expandable-content-body}}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       {{/data-list-expandable-content-body}}

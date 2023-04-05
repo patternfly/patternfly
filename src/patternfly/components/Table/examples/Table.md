@@ -1827,11 +1827,11 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 | -- | -- | -- |
 | `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
 
-## Hoverable and selected
+## Clickable
 
-### Hoverable and selected example
+### Clickable example
 ```hbs
-{{#> table table--id="table-hoverable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Hoverable and selectable table example"'}}
+{{#> table table--id="table-clickable" table--grid="true" table--modifier="pf-m-grid-lg" table--attribute='aria-label="Clickable and selectable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
       {{> table--check table--check--IsThead="true"}}
@@ -1841,25 +1841,17 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
-  {{#> wrapper table-tr--IsHoverable="true" table-tr--basic--title="Hoverable"}}
+  {{#> wrapper table-tr--IsClickable="true" table-tr--basic--title="Clickable"}}
     {{> table-tr--basic table-tr--basic--index="1"}}
-    {{> table-tr--basic table-tr--basic--index="2" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
+    {{> table-tr--basic table-tr--basic--index="2" table-tr--IsSelected="true" table-tr--basic--title="<b>Clicked</b>"}}
     {{> table-tr--basic table-tr--basic--index="3"}}
-    {{> table-tr--basic table-tr--basic--index="4"}}
-    {{> table-tr--basic table-tr--basic--index="5" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
-    {{> table-tr--basic table-tr--basic--index="6" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
-    {{> table-tr--basic table-tr--basic--index="7" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
-    {{> table-tr--basic table-tr--basic--index="8"}}
-    {{> table-tr--basic table-tr--basic--index="9"}}
-    {{> table-tr--basic table-tr--basic--index="10" table-tr--basic--IsExpanded="true" table-tr--IsSelected="true" table-tr--basic--title="<b>Selected</b>"}}
-    {{> table-tr--basic table-tr--basic--index="11"}}
   {{/wrapper}}
 {{/table}}
 ```
 
-### Expandable, hoverable, and selected example
+### Clickable and expandable example
 ```hbs
-{{#> table table--id="table-expandable-hoverable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable and hoverable table example"'}}
+{{#> table table--id="table-expandable-clickable" table--grid="true" table--modifier="pf-m-grid-lg" table--expandable="true" table--attribute='aria-label="Expandable and clickable table example"'}}
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
       {{> table-td table-td--IsEmpty="true"}}
@@ -1877,39 +1869,24 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
-  {{#> wrapper table-tbody--IsHoverable="true" table-tbody--expandable--title="Hoverable"}}
+  {{#> wrapper table-tbody--IsClickable="true" table-tbody--expandable--title="Clickable and not expanded"}}
     {{> table-tbody--expandable table-tbody--expandable--index="1"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="2" table-tbody--IsSelected="true" table-tbody--expandable--title="<i>Selected and not expanded</i>"}}
+    {{> table-tbody--expandable table-tbody--expandable--index="2" table-tbody--expandable--IsExpanded="true" table-tbody--IsSelected="true" table-tbody--expandable--title="<b>Clicked and expanded</b>"}}
     {{> table-tbody--expandable table-tbody--expandable--index="3"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="4"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="5" table-tbody--IsSelected="true" table-tbody--expandable--title="<i>Selected and not expanded</i>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="6" table-tbody--IsSelected="true" table-tbody--expandable--title="<i>Selected and not expanded</i>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="7" table-tbody--IsSelected="true" table-tbody--expandable--title="<i>Selected and not expanded</i>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="8"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="9"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="10"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="11" table-tbody--expandable--IsExpanded="true" table-tbody--IsSelected="true" table-tbody--expandable--title="<b>Expanded and selected</b>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="12"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="13" table-tbody--expandable--IsExpanded="true" table-tbody--IsSelected="true" table-tbody--expandable--title="<b>Expanded and selected</b>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="15" table-tbody--expandable--IsExpanded="true" table-tbody--IsSelected="true"  table-tbody--expandable--title="<b>Expanded and selected</b>"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="14" table-tbody--expandable--IsExpanded="true" table-tbody--expandable--title="Expanded and not selected"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="16"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="17" table-tbody--expandable--IsExpanded="true" table-tbody--expandable--title="Expanded and not selected"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="18"}}
-    {{> table-tbody--expandable table-tbody--expandable--index="19"}}
+    {{> table-tbody--expandable table-tbody--expandable--index="4" table-tbody--expandable--IsExpanded="true" table-tbody--expandable--title="Clickable and expanded"}}
   {{/wrapper}}
 {{/table}}
 ```
 
-### Hoverable accessibility
+### Clickable accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `tabindex="0"` | `.pf-c-table tbody.pf-m-hoverable` | Inserts the hoverable table element into the tab order of the page so that it is focusable. **Required** |
+| `tabindex="0"` | `.pf-c-table tbody.pf-m-clickable` | Inserts the clickable table element into the tab order of the page so that it is focusable. **Required** |
 
-### Hoverable and selected usage
+### Clickable and selected usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-hoverable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be hoverable. |
+| `.pf-m-clickable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be clickable. |
 | `.pf-m-selected` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a selectable tbody or tr table element to be selected. |
 
 ## Tree table
