@@ -1,6 +1,6 @@
 {{#> check check--modifier="pf-m-standalone"}}
-  {{#> check-input check-input--modifier="pf-c-card__input" check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check" aria-labelledby="' card--id ' "')}}{{/check-input}}
+  {{#> check-input check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check" aria-labelledby="' card--id ' "')}}{{/check-input}}
   {{#if card--IsSelectable}}
-    {{#> check-label check-label--modifier="pf-c-card__label" check-label--attribute=(concat 'id="' card--id '-check-label" name="' card--id '-check" for="' card--id '-check" name="' card--id '-check"')}}{{/check-label}}
+    {{#> check-label check-label--attribute=(concat 'id="' card--id '-check-label" name="' card--id '-check" for="' card--id '-check" name="' card--id '-check"')}}{{/check-label}}
   {{/if}}
 {{/check}}

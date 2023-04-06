@@ -150,10 +150,11 @@
   &.pf-m-selectable,
   &.pf-m-clickable {
     isolation: isolate;
-    box-shadow: none; // box-shadow will come from the card__label::before instead of the card so remove this so there's isn't a double shadow
+    box-shadow: none; // box-shadow will come from the input's ::before instead of the card so remove this so there's isn't a double shadow
   }
 
-  .pf-c-card__label {
+  .pf-c-card__selectable-actions .pf-c-check__label,
+  .pf-c-card__selectable-actions .pf-c-radio__label {
     position: absolute;
     inset: 0;
     cursor: pointer;
@@ -167,43 +168,48 @@
       border: var(--pf-c-card--m-selectable--BorderWidth) solid var(--pf-c-card--BorderColor, transparent);
       box-shadow: var(--pf-c-card--BoxShadow, none);
     }
-  }
 
-  // Hover the card (label)
-  .pf-c-card__label:hover {
-    --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--hover--BackgroundColor);
-    --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--hover--BoxShadow);
+    &:hover {
+      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--hover--BackgroundColor);
+      --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--hover--BoxShadow);
+    }
   }
 
   // Selected card
-  .pf-c-card__input:where(:checked) ~ .pf-c-card__label,
+  .pf-c-card__selectable-actions .pf-c-check__input:where(:checked) ~ .pf-c-check__label,
+  .pf-c-card__selectable-actions .pf-c-radio__input:where(:checked) ~ .pf-c-radio__label,
   &.pf-m-selected {
     --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-selected--BorderColor);
     --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-selected--BackgroundColor);
   }
 
   // Focus on the card (label)
-  .pf-c-card__input:where(:focus-visible) ~ .pf-c-card__label {
+  .pf-c-card__selectable-actions .pf-c-check__input:where(:focus-visible) ~ .pf-c-check__label,
+  .pf-c-card__selectable-actions .pf-c-radio__input:where(:focus-visible) ~ .pf-c-radio__label {
     --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--focus--BorderColor);
     --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--focus--BackgroundColor);
   }
 
   // Focus on a selected card
-  .pf-c-card__input:where(:focus-visible):where(:checked) ~ .pf-c-card__label {
+  .pf-c-card__selectable-actions .pf-c-check__input:where(:focus-visible):where(:checked) ~ .pf-c-check__label,
+  .pf-c-card__selectable-actions .pf-c-radio__input:where(:focus-visible):where(:checked) ~ .pf-c-radio__label {
     --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-selected--focus--BorderColor);
   }
 
   // Disabled card
-  .pf-c-card__input:where(:disabled) ~ .pf-c-card__label,
+  .pf-c-card__selectable-actions .pf-c-check__input:where(:disabled) ~ .pf-c-check__label,
+  .pf-c-card__selectable-actions .pf-c-radio__input:where(:disabled) ~ .pf-c-radio__label,
   &.pf-m-disabled {
     --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-disabled--BackgroundColor);
     --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-disabled--BorderColor);
     --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--m-disabled--BoxShadow);
   }
 
+  // stylelint-disable selector-max-class
   // Cards that are selectable AND clickable
   &.pf-m-selectable.pf-m-clickable {
-    .pf-c-card__label {
+    .pf-c-card__selectable-actions .pf-c-check__label,
+    .pf-c-card__selectable-actions .pf-c-radio__label {
       position: unset;
   
       &::before {
@@ -213,14 +219,15 @@
       }
     }
 
-    // stylelint-disable selector-max-class
-    .pf-c-card__input:where(:focus-visible) ~ .pf-c-card__label{
+    .pf-c-card__selectable-actions .pf-c-check__input:where(:focus-visible) ~ .pf-c-check__label,
+    .pf-c-card__selectable-actions .pf-c-radio__input:where(:focus-visible) ~ .pf-c-radio__label {
       --pf-c-card--BackgroundColor: unset;
       --pf-c-card--BorderColor: unset;
     }
 
     // Card is selected
-    .pf-c-card__input:where(:checked) ~ .pf-c-card__label,
+    .pf-c-card__selectable-actions .pf-c-check__input:where(:checked) ~ .pf-c-check__label,
+    .pf-c-card__selectable-actions .pf-c-radio__input:where(:checked) ~ .pf-c-radio__label,
     &.pf-m-selected {
       --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-selected--BackgroundColor);
       --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-selected--BorderColor);
@@ -233,21 +240,23 @@
 
       // a selected card is clicked
       &.pf-m-selected,
-      & .pf-c-card__input:where(:checked) ~ .pf-c-card__label {
-        --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor);
+      & .pf-c-card__selectable-actions .pf-c-check__input:where(:checked) ~ .pf-c-check__label,
+      & .pf-c-card__selectable-actions .pf-c-radio__input:where(:checked) ~ .pf-c-radio__label {
+          --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor);
         --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BorderColor);
       }
     }
 
     // Disabled card
-    .pf-c-card__input:where(:disabled) ~ .pf-c-card__label,
+    .pf-c-card__selectable-actions .pf-c-check__input:where(:disabled) ~ .pf-c-check__label,
+    .pf-c-card__selectable-actions .pf-c-radio__input:where(:disabled) ~ .pf-c-radio__label,
     &.pf-m-disabled {
       --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-disabled--BackgroundColor);
       --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-disabled--BorderColor);
       --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--m-disabled--BoxShadow);
     }    
-    // stylelint-enable selector-max-class 
   }
+    // stylelint-enable selector-max-class 
  
   // RAISED CARDS
   &.pf-m-hoverable-raised,
