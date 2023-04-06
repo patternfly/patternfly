@@ -724,9 +724,8 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-c-card__header` | `<div>` | Creates the header of the card where images, actions, and/or the card title can go. |
 | `.pf-c-card__header-toggle` | `<div>` | Creates the expandable card toggle. |
 | `.pf-c-card__header-toggle-icon` | `<span>` | Creates the expandable card toggle icon. |
-| `.pf-c-card__input` | `<input type="checkbox">` or `<input type="radio">` | Creates a radio or check input for selecting a selectable or clickable card. **Required for selectable/clickable cards** |
-| `.pf-c-card__label` | `<label>` | Creates a label for the radio/check input on a selectable or clickable card. |
 | `.pf-c-card__actions` | `<div>` | Creates an actions element to be used in the card header. |
+| `.pf-c-card__selectable-actions` | `<div>` | Creates an element to hold a checkbox or radio and the related label used to make a card selectable or clickable. |
 | `.pf-c-card__header-main` | `<div>` | Creates a wrapper element to be used in the card header when using an image, logo, or text. **Required if `.pf-c-card__header` has content outside of a card header toggle or card header actions** |
 | `.pf-c-card__expandable-content` | `<div>` | Creates the expandable card's expandable content. |
 | `.pf-c-card__sr-input` | `<input>` | Creates an input which, when focused, makes a following `.pf-c-card` appear focused. |
