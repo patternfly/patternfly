@@ -26,16 +26,44 @@
   --pf-c-card__header-toggle-icon--Transition: var(--pf-global--Transition);
   --pf-c-card--m-expanded__header-toggle-icon--Rotate: 90deg;
 
-  // Hoverable/selectable
-  --pf-c-card--m-hoverable--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-card--m-selectable--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-card--m-selectable--focus--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-card--m-selectable--active--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-card--m-selectable--m-selected--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-card--m-selectable--m-selected--before--Height: var(--pf-global--BorderWidth--lg);
-  --pf-c-card--m-selectable--m-selected--before--BackgroundColor: var(--pf-global--active-color--100);
 
-  // Hoverable/selectable raised
+  // Selectable/Clickable
+  --pf-c-card--m-selectable--BorderWidth: var(--pf-global--BorderWidth--sm);
+
+  // Selected state (checked) of selectable card
+  --pf-c-card--m-selectable--m-selected--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --pf-c-card--m-selectable--m-selected--BorderColor: var(--pf-global--active-color--100);
+
+  // Hover on selectable card
+  --pf-c-card--m-selectable--hover--BackgroundColor: var(--pf-global--palette--black-150);
+  --pf-c-card--m-selectable--hover--BoxShadow: var(--pf-global--BoxShadow--lg);
+
+  // Focus on selectable card (label)
+  --pf-c-card--m-selectable--focus--BackgroundColor: var(--pf-global--palette--blue-100);
+  --pf-c-card--m-selectable--focus--BorderColor: var(--pf-global--active-color--100);
+
+  // Focus on a selected card (label)
+  --pf-c-card--m-selectable--m-selected--focus--BorderColor: var(--pf-global--active-color--100);
+  
+  // Disabled state
+  --pf-c-card--m-selectable--m-disabled--BackgroundColor: var(--pf-global--palette--black-100);
+  --pf-c-card--m-selectable--m-disabled--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-card--m-selectable--m-disabled--BoxShadow: var(--pf-global--BoxShadow--sm);
+
+  // Selectable AND Clickable
+  // Hover on selectable AND clickable card
+  --pf-c-card--m-selectable--m-clickable--hover--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --pf-c-card--m-selectable--m-clickable--hover--BoxShadow: var(--pf-global--BoxShadow--sm);
+
+  // Selected selectable AND clickable card
+  --pf-c-card--m-selectable--m-clickable--m-selected--BorderColor: var(--pf-global--BorderColor--100);
+  --pf-c-card--m-selectable--m-clickable--m-selected--BackgroundColor: var(--pf-global--BackgroundColor--100);
+
+  // Clicked (pf-m-current) selectable AND clickable card
+  --pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor: var(--pf-global--palette--black-150);
+  --pf-c-card--m-selectable--m-clickable--m-current--BorderColor: var(--pf-global--active-color--100);
+
+  // Hoverable/selectable raised (deprecated)
   --pf-c-card--m-hoverable-raised--hover--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-card--m-hoverable-raised--hover--before--BackgroundColor: var(--pf-global--active-color--400);
   --pf-c-card--m-selectable-raised--before--Right: 0;
@@ -108,57 +136,80 @@
   --pf-c-card__header--m-toggle-right--toggle--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-card__header--m-toggle-right--toggle--MarginLeft: var(--pf-global--spacer--xs);
 
-  // Card input
+  // Card input (selectable raised)
   --pf-c-card__input--focus--BorderWidth: var(--pf-global--BorderWidth--md);
   --pf-c-card__input--focus--BorderColor: var(--pf-global--primary-color--100);
 
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: var(--pf-c-card--BackgroundColor);
   box-shadow: var(--pf-c-card--BoxShadow);
 
-  &.pf-m-hoverable {
-    &:hover {
-      box-shadow: var(--pf-c-card--m-hoverable--hover--BoxShadow);
-    }
+  // SELECTABLE CARDS, CLICKABLE CARDS
+  &.pf-m-selectable,
+  &.pf-m-clickable {
+    isolation: isolate;
+    box-shadow: none; // box-shadow will come from the input's ::before instead of the card so remove this so there's isn't a double shadow
   }
 
-  &.pf-m-selectable {
-    position: relative;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: var(--pf-c-card--m-selectable--hover--BoxShadow);
-    }
-
-    &:focus {
-      box-shadow: var(--pf-c-card--m-selectable--focus--BoxShadow);
-    }
-
-    &:active {
-      box-shadow: var(--pf-c-card--m-selectable--active--BoxShadow);
-    }
-
-    &.pf-m-selected {
-      box-shadow: var(--pf-c-card--m-selectable--m-selected--BoxShadow);
-
+  // stylelint-disable selector-max-class
+  // Cards that are selectable AND clickable
+  &.pf-m-selectable.pf-m-clickable {
+    .pf-c-card__selectable-actions .pf-c-check__label,
+    .pf-c-card__selectable-actions .pf-c-radio__label {
+      position: unset;
+  
       &::before {
         position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: var(--pf-c-card--m-selectable--m-selected--before--Height);
-        content: "";
-        background-color: var(--pf-c-card--m-selectable--m-selected--before--BackgroundColor);
+        inset: 0;
+        cursor: pointer;
       }
     }
-  }
 
+    .pf-c-card__selectable-actions .pf-c-check__input:where(:focus-visible) ~ .pf-c-check__label,
+    .pf-c-card__selectable-actions .pf-c-radio__input:where(:focus-visible) ~ .pf-c-radio__label {
+      --pf-c-card--BackgroundColor: unset;
+      --pf-c-card--BorderColor: unset;
+    }
+
+    // Card is selected
+    .pf-c-card__selectable-actions .pf-c-check__input:where(:checked) ~ .pf-c-check__label,
+    .pf-c-card__selectable-actions .pf-c-radio__input:where(:checked) ~ .pf-c-radio__label,
+    &.pf-m-selected {
+      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-selected--BackgroundColor);
+      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-selected--BorderColor);
+    }
+
+    // Card is clicked
+    &.pf-m-current {
+      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor);
+      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BorderColor);
+
+      // a selected card is clicked
+      &.pf-m-selected,
+      & .pf-c-card__selectable-actions .pf-c-check__input:where(:checked) ~ .pf-c-check__label,
+      & .pf-c-card__selectable-actions .pf-c-radio__input:where(:checked) ~ .pf-c-radio__label {
+          --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BackgroundColor);
+        --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-clickable--m-current--BorderColor);
+      }
+    }
+
+    // Disabled card
+    .pf-c-card__selectable-actions .pf-c-check__input:where(:disabled) ~ .pf-c-check__label,
+    .pf-c-card__selectable-actions .pf-c-radio__input:where(:disabled) ~ .pf-c-radio__label,
+    &.pf-m-disabled {
+      --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-disabled--BackgroundColor);
+      --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-disabled--BorderColor);
+      --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--m-disabled--BoxShadow);
+    }    
+  }
+  // stylelint-enable selector-max-class 
+ 
+  // RAISED CARDS
   &.pf-m-hoverable-raised,
   &.pf-m-selectable-raised,
   &.pf-m-non-selectable-raised {
-    position: relative;
-
     &::before {
       position: absolute;
       right: var(--pf-c-card--m-selectable-raised--before--Right);
@@ -345,6 +396,59 @@
   }
 }
 
+// Labels are used to handle states of selectable and clickable cards
+.pf-c-card__selectable-actions .pf-c-check__label,
+.pf-c-card__selectable-actions .pf-c-radio__label {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: '';
+    background-color: var(--pf-c-card--BackgroundColor, transparent);
+    border: var(--pf-c-card--m-selectable--BorderWidth) solid var(--pf-c-card--BorderColor, transparent);
+    box-shadow: var(--pf-c-card--BoxShadow, none);
+  }
+
+  &:hover {
+    --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--hover--BackgroundColor);
+    --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--hover--BoxShadow);
+  }
+}
+
+// Selected card
+.pf-c-card__selectable-actions .pf-c-check__input:where(:checked) ~ .pf-c-check__label,
+.pf-c-card__selectable-actions .pf-c-radio__input:where(:checked) ~ .pf-c-radio__label,
+.pf-c-card.pf-m-selected {
+  --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-selected--BorderColor);
+  --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-selected--BackgroundColor);
+}
+
+// Focus on the card (label)
+.pf-c-card__selectable-actions .pf-c-check__input:where(:focus-visible) ~ .pf-c-check__label,
+.pf-c-card__selectable-actions .pf-c-radio__input:where(:focus-visible) ~ .pf-c-radio__label {
+  --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--focus--BorderColor);
+  --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--focus--BackgroundColor);
+}
+
+// Focus on a selected card
+.pf-c-card__selectable-actions .pf-c-check__input:where(:focus-visible):where(:checked) ~ .pf-c-check__label,
+.pf-c-card__selectable-actions .pf-c-radio__input:where(:focus-visible):where(:checked) ~ .pf-c-radio__label {
+  --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-selected--focus--BorderColor);
+}
+
+// Disabled card
+.pf-c-card__selectable-actions .pf-c-check__input:where(:disabled) ~ .pf-c-check__label,
+.pf-c-card__selectable-actions .pf-c-radio__input:where(:disabled) ~ .pf-c-radio__label,
+.pf-c-card.pf-m-disabled {
+  --pf-c-card--BackgroundColor: var(--pf-c-card--m-selectable--m-disabled--BackgroundColor);
+  --pf-c-card--BorderColor: var(--pf-c-card--m-selectable--m-disabled--BorderColor);
+  --pf-c-card--BoxShadow: var(--pf-c-card--m-selectable--m-disabled--BoxShadow);
+}
+
 .pf-c-card__header,
 .pf-c-card__title,
 .pf-c-card__body,
@@ -381,6 +485,7 @@
   font-size: var(--pf-c-card__footer--FontSize);
 }
 
+// for the selectable raised
 .pf-c-card__sr-input:focus + .pf-c-card::after {
   position: absolute;
   top: 0;
