@@ -1976,12 +1976,12 @@
     puppeteer-cluster "^0.23.0"
     xmldoc "^1.1.2"
 
-"@patternfly/react-code-editor@4.82.113":
-  version "4.82.113"
-  resolved "https://registry.npmjs.org/@patternfly/react-code-editor/-/react-code-editor-4.82.113.tgz"
-  integrity sha512-iBwDTuUifwUwwL4wAzpI4KkB5fkCxiPVGlUypWumtNXweVf3x6PWpLCJM2H1rhNUddBRWIj5JOL3DYqPqYpbZg==
+"@patternfly/react-code-editor@4.82.115":
+  version "4.82.115"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-4.82.115.tgz#b2bec63173d0bd38eb0b799ff9ed71680628a33c"
+  integrity sha512-mwHj5r+HGEUppFKzw8vKPG140LAZAuyAKmCIjgmtCH2sUWkujtOS2BMId3BZI7mwdYt9vjwdbiUIHls0TP/HhQ==
   dependencies:
-    "@patternfly/react-core" "^4.276.6"
+    "@patternfly/react-core" "^4.276.8"
     "@patternfly/react-icons" "^4.93.6"
     "@patternfly/react-styles" "^4.92.6"
     react-dropzone "9.0.0"
