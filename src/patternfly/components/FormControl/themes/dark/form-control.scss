@@ -2,7 +2,6 @@
 
 @mixin pf-theme-dark-form-control() {
   .pf-c-form-control {
-    --pf-c-form-control__select--BackgroundUrl: #{pf-bg-svg($pf-c-form-control__select--Coordinates, $pf-c-form-control__select--ViewBox, $pf-global--Color--100)};
     --pf-c-form-control--BorderTopColor: transparent;
     --pf-c-form-control--BorderRightColor: transparent;
     --pf-c-form-control--BorderBottomColor: var(--pf-global--BorderColor--400);
