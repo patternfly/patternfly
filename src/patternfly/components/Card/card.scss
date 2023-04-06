@@ -146,14 +146,11 @@
   background-color: var(--pf-c-card--BackgroundColor);
   box-shadow: var(--pf-c-card--BoxShadow);
 
-  //////
   // SELECTABLE CARDS, CLICKABLE CARDS
   &.pf-m-selectable,
   &.pf-m-clickable {
     isolation: isolate;
-
-    // box-shadow will come from the card__label::before instead of the card so remove this so there's isn't a double shadow
-    box-shadow: none;
+    box-shadow: none; // box-shadow will come from the card__label::before instead of the card so remove this so there's isn't a double shadow
   }
 
   .pf-c-card__label {
@@ -252,8 +249,6 @@
     // stylelint-enable selector-max-class 
   }
  
-
-  //////
   // RAISED CARDS
   &.pf-m-hoverable-raised,
   &.pf-m-selectable-raised,
