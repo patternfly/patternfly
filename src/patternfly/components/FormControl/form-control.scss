@@ -179,7 +179,9 @@
     border-bottom-width: var(--pf-c-form-control--m-warning--BorderBottomWidth);
   }
 
-  @at-root select#{&} {
+  // Wrapper to style a select input
+  // Replace with &:has(select) when there is enough support
+  &.pf-c-form-control-select {
     --pf-c-form-control--PaddingRight: var(--pf-c-form-control__select--PaddingRight);
     --pf-c-form-control--PaddingLeft: var(--pf-c-form-control__select--PaddingLeft);
 
@@ -199,7 +201,20 @@
       border-right: 5px solid transparent;
       border-left: 5px solid transparent;
       transform: translate(-100%, -50%);
-   }
+    }
+
+    &.pf-m-disabled {
+      --pf-c-form-control--BackgroundColor: var(--pf-c-form-control--disabled--BackgroundColor);
+      --pf-c-form-control--Color: var(--pf-c-form-control--disabled--Color);
+      --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--disabled--BorderColor);
+    }
+
+    &.pf-m-error {
+      --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--invalid--BorderBottomColor);
+
+      padding-bottom: var(--pf-c-form-control--invalid--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
+      border-bottom-width: var(--pf-c-form-control--invalid--BorderBottomWidth);
+    }
 
     // Firefox's select text has additional padding
     // stylelint-disable-next-line
@@ -208,20 +223,34 @@
       --pf-c-form-control--PaddingLeft: calc(var(--pf-c-form-control__select--PaddingLeft) - 4px);
     }
 
-    &.pf-m-placeholder {
-      color: var(--pf-c-form-control--placeholder--Color);
+    &.pf-m-placeholder select {
+      --pf-c-form-control--Color: var(--pf-c-form-control--placeholder--Color);
 
-      * {
-        color: var(--pf-c-form-control--placeholder--child--Color);
-
-        // stylelint-disable max-nesting-depth
-        &:disabled {
-          color: revert;
-        }
-        // stylelint-enable
+      &:disabled {
+        --pf-c-form-control--BackgroundColor: var(--pf-c-form-control--disabled--BackgroundColor);
+        
+        color: revert;
       }
     }
   }
+
+  & select {
+    width: 100%; 
+    color: var(--pf-c-form-control--Color); 
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    // stylelint-disable
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    // stylelint-enable
+
+    &:active, &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+}
 
   @at-root textarea#{&} {
     width: var(--pf-c-form-control--textarea--Width);
