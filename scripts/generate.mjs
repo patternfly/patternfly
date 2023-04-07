@@ -16,6 +16,9 @@ const dasherize = s => s.replace(/[A-Z]/g, res => `-${res.toLowerCase()}`).repla
 const capitalize = s => s[0].toUpperCase() + s.substring(1);
 const titlize = s => capitalize(s.replace(/[A-Z]/g, res => ` ${res.toLowerCase()}`).trim()); // Remove leading space
 
+import * as url from 'url';
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
 function generateFolders(componentName, otherNames, options) {
   const rootPath = path.join(__dirname, '..');
   const templatePath = path.join(__dirname, 'template');
