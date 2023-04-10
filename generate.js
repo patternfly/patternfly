@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('./scripts/generate');
+import('./scripts/generate.mjs');
