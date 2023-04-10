@@ -33,7 +33,7 @@ import './FormControl.css'
 ```
 
 ### Select
-Note: An HTML `<select>` must be wrapped in `<div class="pf-c-form-control">` in order to display properly with PatternFly styling. In addition, `'pf-m-disabled`/`.pf-m-error` must be added to the wrapper for disabled/invalid select inputs. Using the [PatternFly Select component](/components/menus/select) is preferred.
+Note: An HTML `<select>` must be wrapped in `<div class="pf-c-form-control">` in order to display properly with PatternFly styling. Using the [PatternFly Select component](/components/menus/select) is preferred.
 
 ```hbs
 {{#> form-control-select form-control-select--modifier="pf-m-placeholder" form-control--attribute='id="select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
@@ -91,7 +91,7 @@ Note: An HTML `<select>` must be wrapped in `<div class="pf-c-form-control">` in
   </optgroup>
 {{/form-control-select}}
 <br>
-{{#> form-control-select form-control-select--modifier="pf-m-error" form-control-select--attribute='required aria-invalid="true" id="select-group-error" name="select-group-error" aria-label="Error state select group example"'}}
+{{#> form-control-select form-control-select--attribute='required aria-invalid="true" id="select-group-error" name="select-group-error" aria-label="Error state select group example"'}}
   <option value="">Invalid option</option>
   <optgroup label="Group 1">
     <option value="Option 1">The first option</option>
@@ -103,7 +103,7 @@ Note: An HTML `<select>` must be wrapped in `<div class="pf-c-form-control">` in
   </optgroup>
 {{/form-control-select}}
 <br>
-{{#> form-control-select form-control-select--modifier="pf-m-placeholder pf-m-disabled" form-control-select--attribute='disabled id="select-disabled" name="select-disabled" aria-label="Disabled select example"'}}
+{{#> form-control-select form-control-select--modifier="pf-m-placeholder" form-control-select--attribute='disabled id="select-disabled" name="select-disabled" aria-label="Disabled select example"'}}
   <option value="" selected>Disabled</option>
   <option value="Mr">Mr</option>
   <option value="Miss">Miss</option>
@@ -175,5 +175,3 @@ Resizes horizontally
 | `.pf-m-placeholder` | `select.pf-c-form-control`, `pf-c-form-control-select` | Modifies a form select for placeholder styles. This modifier is set programatically based on the chosen option. |
 | `.pf-m-plain` | `input[readonly].pf-c-form-control`, `textarea[readonly].pf-c-form-control` | Modifies an `<input>` or `<textarea>` with a `readonly` attribute to be presented as normal text. |
 | `.pf-c-form-control-select` | `<div>` |  Wrapper for a select. **Required for select form controls**  |
-| `.pf-m-error` | `.pf-c-form-control-select` | Modifies a form control select for the invalid state. Always use with `aria-invalid="true"` on the `<select>`.|
-| `.pf-m-disabled` | `.pf-c-form-control-select` | Modifies a form control select for the disabled state. Always use with `disabled` on the `<select>`.|

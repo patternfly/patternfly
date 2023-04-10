@@ -212,7 +212,7 @@ subsection: forms
           {{#> form-label form-label--attribute=(concat 'for="' form-group--id '"')}}State{{/form-label}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="select" form-control--attribute=(concat 'id="' form-group--id '" name="' form-group--id '"')}}
+        {{#> form-control-select form-control-select--modifier="pf-m-placeholder" form-control--attribute=(concat 'id="' form-group--id '" name="' form-group--id '"')}}
             <option value="" selected>Select one</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -264,7 +264,7 @@ subsection: forms
             <option value="WV">West Virginia</option>
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
-          {{/form-control}}
+          {{/form-control-select}}
         {{/form-group-control}}
       {{/form-group}}
     {{/grid}}

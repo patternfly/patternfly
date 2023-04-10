@@ -69,11 +69,10 @@
   --pf-c-form-control--invalid--PaddingBottom: calc(var(--pf-global--spacer--form-element) - var(--pf-c-form-control--invalid--BorderBottomWidth));
   --pf-c-form-control--invalid--BorderBottomColor: var(--pf-global--danger-color--100);
 
-  // TODO 
-  // Select -- rename __select to --select in a breaking change release
-  --pf-c-form-control__select--PaddingRight: calc(var(--pf-global--spacer--lg) + var(--pf-c-form-control--BorderWidth) + var(--pf-c-form-control--BorderWidth));
-  --pf-c-form-control__select--PaddingLeft: calc(var(--pf-global--spacer--sm) - var(--pf-c-form-control--BorderWidth));
-  --pf-c-form-control__select--BackgroundPositionX: calc(100% - var(--pf-global--spacer--md) + 1px);
+  // Select
+  --pf-c-form-control--select--PaddingRight: calc(var(--pf-global--spacer--lg) + var(--pf-c-form-control--BorderWidth) + var(--pf-c-form-control--BorderWidth));
+  --pf-c-form-control--select--PaddingLeft: calc(var(--pf-global--spacer--sm) - var(--pf-c-form-control--BorderWidth));
+  --pf-c-form-control--select--BackgroundPositionX: calc(100% - var(--pf-global--spacer--md) + 1px);
 
   // Textarea
   --pf-c-form-control--textarea--Width: var(--pf-c-form-control--Width);
@@ -182,16 +181,13 @@
   // Wrapper to style a select input
   // Replace with &:has(select) when there is enough support
   &.pf-c-form-control-select {
-    --pf-c-form-control--PaddingRight: var(--pf-c-form-control__select--PaddingRight);
-    --pf-c-form-control--PaddingLeft: var(--pf-c-form-control__select--PaddingLeft);
-
     position: relative;
     cursor: pointer;
 
     &::after {
       position: absolute;
       top: 50%;
-      left: var(--pf-c-form-control__select--BackgroundPositionX);
+      left: var(--pf-c-form-control--select--BackgroundPositionX);
       width: 0;
       height: 0;
       margin-top: var(--pf-c-form-control--BorderWidth);
@@ -201,26 +197,6 @@
       border-right: 5px solid transparent;
       border-left: 5px solid transparent;
       transform: translate(-100%, -50%);
-    }
-
-    &.pf-m-disabled {
-      --pf-c-form-control--BackgroundColor: var(--pf-c-form-control--disabled--BackgroundColor);
-      --pf-c-form-control--Color: var(--pf-c-form-control--disabled--Color);
-      --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--disabled--BorderColor);
-    }
-
-    &.pf-m-error {
-      --pf-c-form-control--BorderBottomColor: var(--pf-c-form-control--invalid--BorderBottomColor);
-
-      padding-bottom: var(--pf-c-form-control--invalid--PaddingBottom); // Can't redefine --pf-c-form-control--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
-      border-bottom-width: var(--pf-c-form-control--invalid--BorderBottomWidth);
-    }
-
-    // Firefox's select text has additional padding
-    // stylelint-disable-next-line
-    @-moz-document url-prefix() {
-      --pf-c-form-control--PaddingRight: calc(var(--pf-c-form-control__select--PaddingRight) - 1px);
-      --pf-c-form-control--PaddingLeft: calc(var(--pf-c-form-control__select--PaddingLeft) - 4px);
     }
 
     &.pf-m-placeholder select {
@@ -235,22 +211,18 @@
   }
 
   & select {
-    width: 100%; 
-    color: var(--pf-c-form-control--Color); 
-    background-color: transparent;
-    background-image: none;
-    border: none;
+    --pf-c-form-control--PaddingRight: var(--pf-c-form-control--select--PaddingRight);
+    --pf-c-form-control--PaddingLeft: var(--pf-c-form-control--select--PaddingLeft);
+
+    position: absolute;
+    inset: 0;
+
     // stylelint-disable
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     // stylelint-enable
-
-    &:active, &:focus {
-      outline: none;
-      box-shadow: none;
-    }
-}
+  }
 
   @at-root textarea#{&} {
     width: var(--pf-c-form-control--textarea--Width);

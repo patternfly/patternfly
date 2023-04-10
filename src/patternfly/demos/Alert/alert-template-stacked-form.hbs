@@ -39,13 +39,13 @@
         State of residence
       {{/form-label}}
     {{/form-group-label}}
-    {{#> form-control controlType="select" form-control--attribute='required aria-invalid="true" id="select-group-error" name="select-group-error" aria-label="Error state select group example"'}}
+    {{#> form-control-select form-control-select--attribute='required aria-invalid="true" id="select-group-error" name="select-group-error" aria-label="Error state select group example"'}}
         <option value="">Select a state</option>
         <option value="Option 1">CA</option>
         <option value="Option 2">FL</option>
         <option value="Option 3">MA</option>
         <option value="Option 4">NY</option>
-    {{/form-control}}
+    {{/form-control-select}}
     {{> form-helper-text helper-text--value='Required field' helper-text-item--IsError=true form-helper-text--id=(concat form-group--id '-form-email-helper-state')}}
   {{/form-group}}
   {{#> form-group form-group--IsCheckGroup=true form-group--id=(concat form--id '-check-group')}}
