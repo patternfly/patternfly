@@ -36,7 +36,7 @@ import './FormControl.css'
 Note: An HTML `<select>` must be wrapped in `<div class="pf-c-form-control pf-c-form-control-select">` in order to display properly with PatternFly styling. Using the [PatternFly Select component](/components/menus/select) is preferred.
 
 ```hbs
-{{#> form-control-select form-control-select--modifier="pf-m-placeholder" form-control--attribute='id="select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
+{{#> form-control-select form-control-select--modifier="pf-m-placeholder" form-control-select--attribute='id="select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
   <option value="" selected>Selectable placeholder</option>
   <option value="Mr">Mr</option>
   <option value="Miss">Miss</option>
@@ -46,7 +46,7 @@ Note: An HTML `<select>` must be wrapped in `<div class="pf-c-form-control pf-c-
   <option value="Other">Other</option>
 {{/form-control-select}}
 <br>
-{{#> form-control-select form-control-select--modifier="pf-m-placeholder" form-control--attribute='id="select-non-selectable-placeholder" name="select-non-selectable-placeholder" aria-label="Non-selectable placeholder select example"'}}
+{{#> form-control-select form-control-select--modifier="pf-m-placeholder" form-control-select--attribute='id="select-non-selectable-placeholder" name="select-non-selectable-placeholder" aria-label="Non-selectable placeholder select example"'}}
   <option value="" selected disabled>Non-selectable placeholder</option>
   <option value="Mr">Mr</option>
   <option value="Miss">Miss</option>
