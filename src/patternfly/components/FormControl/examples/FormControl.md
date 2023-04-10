@@ -33,7 +33,7 @@ import './FormControl.css'
 ```
 
 ### Select
-Note: An HTML `<select>` must be wrapped in `<div class="pf-c-form-control">` in order to display properly with PatternFly styling. Using the [PatternFly Select component](/components/menus/select) is preferred.
+Note: An HTML `<select>` must be wrapped in `<div class="pf-c-form-control pf-c-form-control-select">` in order to display properly with PatternFly styling. Using the [PatternFly Select component](/components/menus/select) is preferred.
 
 ```hbs
 {{#> form-control-select form-control-select--modifier="pf-m-placeholder" form-control--attribute='id="select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
@@ -169,9 +169,9 @@ Resizes horizontally
 | `.pf-c-form-control` | `<input>`,`<textarea>`, `<select>` |  Initiates an input or textarea. For styling of checkboxes or radios see the [checkbox component](/components/checkbox) or [radio component](/components/radio). **Required**  |
 | `.pf-m-resize-vertical` | `textarea.pf-m-form-control` | Modifies a `textarea.pf-c-form-control` element so it can only be resized vertically along the y-axis. |
 | `.pf-m-resize-horizontal` | `textarea.pf-m-form-control` | Modifies a `textarea.pf-c-form-control` element so it can only be resized horizontally along the x-axis. |
-| `.pf-m-success` | `.pf-c-form-control`, `pf-c-form-control-select` | Modifies a form control for the success state. |
-| `.pf-m-warning` | `.pf-c-form-control`, `pf-c-form-control-select` | Modifies a form control for the warning state. |
+| `.pf-m-success` | `.pf-c-form-control`, `pf-c-form-control > select` | Modifies a form control for the success state. |
+| `.pf-m-warning` | `.pf-c-form-control`, `pf-c-form-control > select` | Modifies a form control for the warning state. |
 | `.pf-m-expanded` | `input.pf-c-form-control` | Modifies a form control for the expanded state. This is used when clicking in the text input toggles something open/closed. |
-| `.pf-m-placeholder` | `select.pf-c-form-control`, `pf-c-form-control-select` | Modifies a form select for placeholder styles. This modifier is set programatically based on the chosen option. |
+| `.pf-m-placeholder` | `select.pf-c-form-control`, `pf-c-form-control > select` | Modifies a form select for placeholder styles. This modifier is set programatically based on the chosen option. |
 | `.pf-m-plain` | `input[readonly].pf-c-form-control`, `textarea[readonly].pf-c-form-control` | Modifies an `<input>` or `<textarea>` with a `readonly` attribute to be presented as normal text. |
-| `.pf-c-form-control-select` | `<div>` |  Wrapper for a select. **Required for select form controls**  |
+| `.pf-c-form-control.pf-c-form-control-select` | `<div>` |  Wrapper for a select. **Required for select form controls**  |
