@@ -34,23 +34,6 @@ An inline spinner inherits its font-size, so its size will match the content aro
 {{#> spinner spinner--IsSvg="true" spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
 ```
 
-### Basic (legacy)
-```hbs
-{{#> spinner}}Loading...{{/spinner}}
-```
-
-### Sizes (legacy)
-```hbs
-{{#> spinner spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
-
-{{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
-
-{{#> spinner spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
-
-{{#> spinner spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
-```
-
-
 ## Documentation
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -70,14 +53,6 @@ Note: A [live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility
 | `.pf-c-spinner` | `<svg>` |  Creates a spinner component. The default is an extra large spinner. **Required**|
 | `.pf-c-spinner__path` | `<circle>` |  Creates a spinner circle component. **Required**|
 | `--pf-c-spinner--diameter` | `.pf-c-spinner` | Modifies the value for `--pf-c-spinner--diameter` declaration. |
-
-### Usage (legacy)
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-spinner` | `<span>` |  Creates a spinner component. The default is an extra large spinner. **Required**|
-| `.pf-c-spinner__clipper` | `<span>` |  Creates the spinning line. **Required**|
-| `.pf-c-spinner__lead-ball` | `<span>` |  Rounds out the beginning of the spinning line. **Required**|
-| `.pf-c-spinner__tail-ball` | `<span>` |  Rounds out the end of the spinning line. **Required**|
 
 ### Modifiers
 | Class | Applied to | Outcome |
