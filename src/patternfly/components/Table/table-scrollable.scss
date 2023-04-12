@@ -46,7 +46,7 @@
   }
 }
 
-.#{$pf-prefix}-scroll-outer-wrapper {
+.#{$pf-prefix}scroll-outer-wrapper {
   --#{$pf-prefix}scroll-outer-wrapper--MinHeight: #{pf-size-prem(400px)};
   --#{$pf-prefix}scroll-outer-wrapper--MaxHeight: 100%;
 
@@ -58,7 +58,7 @@
   overflow: hidden;
 }
 
-.#{$pf-prefix}-scroll-inner-wrapper {
+.#{$pf-prefix}scroll-inner-wrapper {
   display: flex;
   flex-direction: column;
   max-width: 100%;
