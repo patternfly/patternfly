@@ -1,3 +1,6 @@
+@import './sass-utilities/init'; // initialize versioning
+@import './sass-utilities/component-namespaces';
+
 // stylelint-disable
 .#{$date-picker}__calendar {
   &.flatpickr-calendar {
