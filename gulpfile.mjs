@@ -52,24 +52,24 @@ function compileSrcSASS() {
   return compileSASS(sassFiles);
 }
 
-function watchSrcSASS() {
-  return watchSASS(['./src/patternfly/**/*.scss', '!./src/patternfly/assets/**']);
+function watchSrcSASS(cb) {
+  return watchSASS(['./src/patternfly/**/*.scss', '!./src/patternfly/assets/**'], cb);
 }
 
 function compileSrcHBS() {
   return compileHBS(hbsFiles);
 }
 
-function watchSrcHBS() {
-  return watchHBS(hbsFiles);
+function watchSrcHBS(cb) {
+  return watchHBS(hbsFiles, cb);
 }
 
 function compileSrcMD() {
   return compileMD(mdFiles);
 }
 
-function watchSrcMD() {
-  return watchMD(mdFiles);
+function watchSrcMD(cb) {
+  return watchMD(mdFiles, cb);
 }
 
 function generateWorkspaceSnippets() {
@@ -90,8 +90,9 @@ export async function buildWebpack() {
   await docsFrameworkBuild('all', themeCLIOptions);
 }
 
-function startWebpackDevServer() {
+function startWebpackDevServer(cb) {
   start(themeCLIOptions);
+  cb();
 }
 
 const buildSrc = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD));

@@ -87,7 +87,7 @@ function getDocCSSFiles() {
   return res;
 }
 
-export function watchSASS(sassFiles) {
+export function watchSASS(sassFiles, cb) {
   const docCSSFiles = getDocCSSFiles();
   const graph = sassGraph.parseDir('./src/patternfly').index;
   const watcher = watch(sassFiles, { delay: 0 });
@@ -116,6 +116,8 @@ export function watchSASS(sassFiles) {
 
   watcher.on('change', compileDocSASS);
   watcher.on('add', compileDocSASS);
+
+  cb();
 }
 
 const postcssOptions = {
