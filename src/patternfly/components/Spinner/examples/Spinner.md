@@ -8,30 +8,30 @@ cssPrefix: pf-c-spinner
 
 ### Basic
 ```hbs
-{{#> spinner spinner--IsSvg="true"}}Loading...{{/spinner}}
+{{#> spinner}}Loading...{{/spinner}}
 ```
 
 ### Sizes
 ```hbs
-{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
+{{#> spinner spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
 
-{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
+{{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
 
-{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
+{{#> spinner spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
 
-{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
+{{#> spinner spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
 ```
 
 ### Inline
 An inline spinner inherits its font-size, so its size will match the content around it.
 
 ```hbs isBeta
-{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-inline"}}Loading...{{/spinner}}
+{{#> spinner spinner--modifier="pf-m-inline"}}Loading...{{/spinner}}
 ```
 
 ### Custom size
 ```hbs
-{{#> spinner spinner--IsSvg="true" spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
+{{#> spinner  spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
 ```
 
 ## Documentation
