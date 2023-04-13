@@ -79,6 +79,7 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
   --pf-c-form__label-required--Color: var(--pf-global--danger-color--100);
 
   // Field level help
+  --pf-c-form__group-label-help--BackgroundColor: transparent;
   --pf-c-form__group-label-help--PaddingTop: var(--pf-global--spacer--xs);
   --pf-c-form__group-label-help--PaddingRight: var(--pf-global--spacer--xs);
   --pf-c-form__group-label-help--PaddingBottom: var(--pf-global--spacer--xs);
@@ -305,6 +306,7 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
   line-height: 1;
   color: var(--pf-c-form__group-label-help--Color);
   cursor: pointer;
+  background-color: var(--pf-c-form__group-label-help--BackgroundColor);
   border: 0;
   transform: translateY(var(--pf-c-form__group-label-help--TranslateY));
 
