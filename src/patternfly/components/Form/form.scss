@@ -81,19 +81,19 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   // Field level help
   --#{$form}__group-label-help--BackgroundColor: transparent;
-  --#{$form}__group-label-help--PaddingTop: var(--pf-global--spacer--xs);
-  --#{$form}__group-label-help--PaddingRight: var(--pf-global--spacer--xs);
-  --#{$form}__group-label-help--PaddingBottom: var(--pf-global--spacer--xs);
-  --#{$form}__group-label-help--PaddingLeft: var(--pf-global--spacer--xs);
+  --#{$form}__group-label-help--PaddingTop: var(--#{$pf-global}--spacer--xs);
+  --#{$form}__group-label-help--PaddingRight: var(--#{$pf-global}--spacer--xs);
+  --#{$form}__group-label-help--PaddingBottom: var(--#{$pf-global}--spacer--xs);
+  --#{$form}__group-label-help--PaddingLeft: var(--#{$pf-global}--spacer--xs);
   --#{$form}__group-label-help--MarginTop: calc(var(--#{$form}__group-label-help--PaddingTop) * -1);
   --#{$form}__group-label-help--MarginRight: calc(var(--#{$form}__group-label-help--PaddingRight) * -1);
   --#{$form}__group-label-help--MarginBottom: calc(var(--#{$form}__group-label-help--PaddingBottom) * -1);
-  --#{$form}__group-label-help--MarginLeft: calc(var(--#{$form}__group-label-help--PaddingLeft) * -1 + var(--pf-global--spacer--xs));
-  --#{$form}__group-label-help--FontSize: var(--pf-global--FontSize--sm);
+  --#{$form}__group-label-help--MarginLeft: calc(var(--#{$form}__group-label-help--PaddingLeft) * -1 + var(--#{$pf-global}--spacer--xs));
+  --#{$form}__group-label-help--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$form}__group-label-help--TranslateY: #{pf-size-prem(2px)};
-  --#{$form}__group-label-help--Color: var(--pf-global--Color--200);
-  --#{$form}__group-label-help--hover--Color: var(--pf-global--Color--100);
-  --#{$form}__group-label-help--focus--Color: var(--pf-global--Color--100);
+  --#{$form}__group-label-help--Color: var(--#{$pf-global}--Color--200);
+  --#{$form}__group-label-help--hover--Color: var(--#{$pf-global}--Color--100);
+  --#{$form}__group-label-help--focus--Color: var(--#{$pf-global}--Color--100);
 
   // Form group label info
   --#{$form}__group-label-info--MarginLeft: var(--#{$pf-global}--spacer--sm);
@@ -307,7 +307,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   line-height: 1;
   color: var(--#{$form}__group-label-help--Color);
   cursor: pointer;
-  background-color: var(--pf-c-form__group-label-help--BackgroundColor);
+  background-color: var(--#{$form}__group-label-help--BackgroundColor);
   border: 0;
   transform: translateY(var(--#{$form}__group-label-help--TranslateY));
 
