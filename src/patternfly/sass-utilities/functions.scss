@@ -29,7 +29,7 @@
 }
 
 // Return height breakpoint value if it exists
-@function pf-height-breakpoint-value($height-breakpoint, $height-breakpoint-map: $pf-global--height-breakpoint-name-map) {
+@function pf-height-breakpoint-value($height-breakpoint, $height-breakpoint-map: $pf-global--breakpoint--height-name-map) {
   $height-breakpoint-value: if(map-has-key($height-breakpoint-map, #{$height-breakpoint}), map-get($height-breakpoint-map, #{$height-breakpoint}), false);
 
   @return #{$height-breakpoint-value};
@@ -59,21 +59,21 @@
 }
 
 // Build height breakpoint map
-// Based on $pf-global--height-breakpoint-name-map
+// Based on $pf-global--breakpoint--height-name-map
 @function build-height-breakpoint-map($map-items...) {
   $map: ();
 
   @if length($map-items) == 0 {
     $map: ("base": null);
-    $map: map-merge($map, $pf-global--height-breakpoint-name-map);
+    $map: map-merge($map, $pf-global--breakpoint--height-name-map);
   } @else {
     @each $breakpoint in $map-items {
-      @if not map-has-key($pf-global--height-breakpoint-name-map, $breakpoint) and $breakpoint != "base" {
+      @if not map-has-key($pf-global--breakpoint--height-name-map, $breakpoint) and $breakpoint != "base" {
         $map: map-merge($map, ("invalid breakpoint #{$breakpoint}": null));
       } @else if $breakpoint == "base" {
         $map: map-merge($map, ($breakpoint: null));
       } @else {
-        $map: map-merge($map, ($breakpoint: map-get($pf-global--height-breakpoint-name-map, #{$breakpoint})));
+        $map: map-merge($map, ($breakpoint: map-get($pf-global--breakpoint--height-name-map, #{$breakpoint})));
       }
     }
   }

@@ -20,6 +20,8 @@
 
   // accordion toggle text
   --pf-c-accordion__toggle-text--MaxWidth: calc(100% - var(--pf-global--spacer--lg));
+  --pf-c-accordion__toggle-text--Color: var(--pf-global--Color--100);
+  --pf-c-accordion__toggle-text--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-accordion__toggle--hover__toggle-text--Color: var(--pf-global--link--Color);
   --pf-c-accordion__toggle--active__toggle-text--Color: var(--pf-global--link--Color);
   --pf-c-accordion__toggle--active__toggle-text--FontWeight: var(--pf-global--FontWeight--bold);
@@ -33,7 +35,6 @@
   --pf-c-accordion__toggle--m-expanded__toggle-icon--Rotate: 90deg;
 
   // accordion expanded content
-  --pf-c-accordion__expandable-content--Color: var(--pf-global--Color--200);
   --pf-c-accordion__expandable-content--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-accordion__expandable-content--m-expanded__expandable-content-body--after--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-accordion__expandable-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
@@ -53,6 +54,7 @@
   --pf-c-accordion--m-display-lg__toggle--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-accordion--m-display-lg__toggle--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
   --pf-c-accordion--m-display-lg__toggle--FontSize: var(--pf-global--FontSize--xl);
+  --pf-c-accordion--m-display-lg__toggle-text--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-accordion--m-display-lg__toggle--hover__toggle-text--Color: var(--pf-global--Color--100);
   --pf-c-accordion--m-display-lg__toggle--active__toggle-text--Color: var(--pf-global--Color--100);
   --pf-c-accordion--m-display-lg__toggle--active__toggle-text--FontWeight: var(--pf-global--FontWeight--normal);
@@ -61,7 +63,6 @@
   --pf-c-accordion--m-display-lg__toggle--m-expanded__toggle-text--Color: var(--pf-global--Color--100);
   --pf-c-accordion--m-display-lg__toggle--m-expanded__toggle-text--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-accordion--m-display-lg__expandable-content--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-accordion--m-display-lg__expandable-content--Color: var(--pf-global--Color--100);
   --pf-c-accordion--m-display-lg__expandable-content-body--PaddingTop: 0;
   --pf-c-accordion--m-display-lg__expandable-content-body--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-accordion--m-display-lg__expandable-content-body--PaddingBottom: var(--pf-global--spacer--md);
@@ -90,6 +91,7 @@
     --pf-c-accordion__toggle--PaddingLeft: var(--pf-c-accordion--m-display-lg__toggle--PaddingLeft);
     --pf-c-accordion__toggle--FontFamily: var(--pf-c-accordion--m-display-lg__toggle--FontFamily);
     --pf-c-accordion__toggle--FontSize: var(--pf-c-accordion--m-display-lg__toggle--FontSize);
+    --pf-c-accordion__toggle-text--FontWeight: var(--pf-c-accordion--m-display-lg__toggle-text--FontWeight);
     --pf-c-accordion__toggle--hover__toggle-text--Color: var(--pf-c-accordion--m-display-lg__toggle--hover__toggle-text--Color);
     --pf-c-accordion__toggle--active__toggle-text--Color: var(--pf-c-accordion--m-display-lg__toggle--active__toggle-text--Color);
     --pf-c-accordion__toggle--active__toggle-text--FontWeight: var(--pf-c-accordion--m-display-lg__toggle--active__toggle-text--FontWeight);
@@ -176,11 +178,8 @@
 
   &.pf-m-expanded {
     --pf-c-accordion__toggle--after--BackgroundColor: var(--pf-c-accordion__toggle--m-expanded--after--BackgroundColor);
-
-    .pf-c-accordion__toggle-text {
-      font-weight: var(--pf-c-accordion__toggle--m-expanded__toggle-text--FontWeight);
-      color: var(--pf-c-accordion__toggle--m-expanded__toggle-text--Color);
-    }
+    --pf-c-accordion__toggle-text--FontWeight: var(--pf-c-accordion__toggle--m-expanded__toggle-text--FontWeight);
+    --pf-c-accordion__toggle-text--Color: var(--pf-c-accordion__toggle--m-expanded__toggle-text--Color);
 
     .pf-c-accordion__toggle-icon {
       transform: rotate(var(--pf-c-accordion__toggle--m-expanded__toggle-icon--Rotate));
@@ -188,29 +187,20 @@
   }
 
   &:hover {
-    background-color: var(--pf-c-accordion__toggle--hover--BackgroundColor);
-
-    .pf-c-accordion__toggle-text {
-      color: var(--pf-c-accordion__toggle--hover__toggle-text--Color);
-    }
+    --pf-c-accordion__toggle--BackgroundColor: var(--pf-c-accordion__toggle--hover--BackgroundColor);
+    --pf-c-accordion__toggle-text--Color: var(--pf-c-accordion__toggle--hover__toggle-text--Color);
   }
 
   &:focus {
-    background-color: var(--pf-c-accordion__toggle--focus--BackgroundColor);
-
-    .pf-c-accordion__toggle-text {
-      font-weight: var(--pf-c-accordion__toggle--focus__toggle-text--FontWeight);
-      color: var(--pf-c-accordion__toggle--focus__toggle-text--Color);
-    }
+    --pf-c-accordion__toggle--BackgroundColor: var(--pf-c-accordion__toggle--focus--BackgroundColor);
+    --pf-c-accordion__toggle-text--FontWeight: var(--pf-c-accordion__toggle--focus__toggle-text--FontWeight);
+    --pf-c-accordion__toggle-text--Color: var(--pf-c-accordion__toggle--focus__toggle-text--Color);
   }
 
   &:active {
-    background-color: var(--pf-c-accordion__toggle--active--BackgroundColor);
-
-    .pf-c-accordion__toggle-text {
-      font-weight: var(--pf-c-accordion__toggle--active__toggle-text--FontWeight);
-      color: var(--pf-c-accordion__toggle--active__toggle-text--Color);
-    }
+    --pf-c-accordion__toggle--BackgroundColor: var(--pf-c-accordion__toggle--active--BackgroundColor);
+    --pf-c-accordion__toggle-text--FontWeight: var(--pf-c-accordion__toggle--active__toggle-text--FontWeight);
+    --pf-c-accordion__toggle-text--Color: var(--pf-c-accordion__toggle--active__toggle-text--Color);
   }
 }
 
@@ -218,6 +208,8 @@
   @include pf-text-overflow;
 
   max-width: var(--pf-c-accordion__toggle-text--MaxWidth);
+  font-weight: var(--pf-c-accordion__toggle-text--FontWeight);
+  color: var(--pf-c-accordion__toggle-text--Color);
 }
 
 .pf-c-accordion__toggle-icon {

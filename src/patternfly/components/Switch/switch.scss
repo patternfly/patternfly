@@ -35,7 +35,7 @@
   --pf-c-switch__toggle--before--Top: calc((var(--pf-c-switch__toggle--Height) - var(--pf-c-switch__toggle--before--Height)) / 2);
   --pf-c-switch__toggle--before--Left: var(--pf-c-switch__toggle--before--Top);
   --pf-c-switch__toggle--before--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-switch__toggle--before--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-switch__toggle--before--BorderRadius: var(--pf-global--BorderRadius--circle);
   --pf-c-switch__toggle--before--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-switch__toggle--before--Transition: transform .25s ease 0s;
   --pf-c-switch__toggle--Width: calc(var(--pf-c-switch__toggle--Height) + var(--pf-c-switch__toggle-icon--Offset) + var(--pf-c-switch__toggle--before--Width));

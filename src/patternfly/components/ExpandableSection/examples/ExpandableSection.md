@@ -49,7 +49,7 @@ cssPrefix: pf-c-expandable-section
 
 ### Detached toggle
 ```hbs
-{{#> stack stack--modifier="pf-m-gutter" expandable-section--id="detached-toggle" expandable-section--IsDetached="true" expandable-section--IsExpanded="true"}}
+{{#> stack stack--modifier="pf-m-gap" expandable-section--id="detached-toggle" expandable-section--IsDetached="true" expandable-section--IsExpanded="true"}}
   {{#> stack-item}}
     {{#> expandable-section}}
       {{#> expandable-section-content}}

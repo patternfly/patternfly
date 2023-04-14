@@ -2,7 +2,7 @@
   --pf-c-skeleton--BackgroundColor: var(--pf-global--palette--black-150);
   --pf-c-skeleton--Width: auto;
   --pf-c-skeleton--Height: auto;
-  --pf-c-skeleton--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-skeleton--BorderRadius: var(--pf-global--BorderRadius--normal);
 
   // Before
   --pf-c-skeleton--before--PaddingBottom: 0;
@@ -22,7 +22,7 @@
   --pf-c-skeleton--after--AnimationDelay: .5s;
 
   // Circle
-  --pf-c-skeleton--m-circle--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-skeleton--m-circle--BorderRadius: var(--pf-global--BorderRadius--circle);
   --pf-c-skeleton--m-circle--before--PaddingBottom: 100%;
 
   // Text modifiers

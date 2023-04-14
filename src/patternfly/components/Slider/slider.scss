@@ -8,7 +8,7 @@
   --pf-c-slider__rail-track--Height: #{pf-size-prem(4px)};
   --pf-c-slider__rail-track--before--base--BackgroundColor: var(--pf-global--BorderColor--100);
   --pf-c-slider__rail-track--before--fill--BackgroundColor: var(--pf-global--active-color--300);
-  --pf-c-slider__rail-track--before--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-slider__rail-track--before--BorderRadius: var(--pf-global--BorderRadius--circle);
   --pf-c-slider__rail-track--before--fill--BackgroundColor--gradient-stop: var(--pf-c-slider--value);
 
   // steps
@@ -21,7 +21,7 @@
   --pf-c-slider__step-tick--Height: #{pf-size-prem(4px)};
   --pf-c-slider__step-tick--BackgroundColor: var(--pf-global--BorderColor--200);
   --pf-c-slider__step-tick--TranslateX: -50%;
-  --pf-c-slider__step-tick--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-slider__step-tick--BorderRadius: var(--pf-global--BorderRadius--circle);
   --pf-c-slider__step--m-active__slider-tick--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-slider__step--first-child__step-tick--TranslateX: 0;
   --pf-c-slider__step--last-child__step-tick--TranslateX: -100%;
@@ -40,7 +40,7 @@
   --pf-c-slider__thumb--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-slider__thumb--TranslateX: -50%;
   --pf-c-slider__thumb--TranslateY: -50%;
-  --pf-c-slider__thumb--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-slider__thumb--BorderRadius: var(--pf-global--BorderRadius--circle);
   --pf-c-slider__thumb--BoxShadow--base:
     0 0 0 2px var(--pf-global--BackgroundColor--100),
     0 0 0 3px var(--pf-global--primary-color--100);
@@ -51,7 +51,7 @@
     0 0 2px 5px var(--pf-global--active-color--200);
   --pf-c-slider__thumb--before--Width: var(--pf-global--target-size--MinWidth);
   --pf-c-slider__thumb--before--Height: var(--pf-global--target-size--MinHeight);
-  --pf-c-slider__thumb--before--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-slider__thumb--before--BorderRadius: var(--pf-global--BorderRadius--circle);
   --pf-c-slider__thumb--before--TranslateX: -50%;
   --pf-c-slider__thumb--before--TranslateY: -50%;
 

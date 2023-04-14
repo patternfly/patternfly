@@ -40,7 +40,7 @@
   --pf-c-table--tr--BoxShadow--top--base: 0 #{pf-size-prem(-3px)} #{pf-size-prem(4px)} #{pf-size-prem(-2px)} rgba(3,3,3,.08);
 
   // Th / td shared variables
-  --pf-c-table--cell--Padding--base: var(--pf-global--spacer--md);
+  --pf-c-table--cell--Padding--base: var(--pf-global--inset--page);
   --pf-c-table--cell--FontSize: var(--pf-global--FontSize--md);
   --pf-c-table--cell--FontWeight: var(--pf-global--FontWeight--normal);
   --pf-c-table--cell--Color: var(--pf-global--Color--100);
@@ -108,8 +108,8 @@
   --pf-c-table__check--input--FontSize: var(--pf-global--FontSize--md);
 
   // Favorite
-  --pf-c-table--cell--m-favorite--Color: var(--pf-global--Color--light-300);
-  --pf-c-table__favorite--c-button--Color: var(--pf-global--Color--light-300);
+  --pf-c-table--cell--m-favorite--Color: var(--pf-global--Color--200);
+  --pf-c-table__favorite--c-button--Color: var(--pf-global--Color--200);
   --pf-c-table__favorite--c-button--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-table__favorite--c-button--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
   --pf-c-table__favorite--c-button--MarginRight: calc(var(--pf-global--spacer--md) * -1);
@@ -304,7 +304,7 @@
   --pf-c-table__subhead--Color: var(--pf-global--Color--200);
 
   // Striped
-  --pf-c-table--m-striped__tr--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-table--m-striped__tr--BackgroundColor: var(--pf-global--BackgroundColor--150);
 
   // Sticky
   --pf-c-table--m-sticky-header--cell--ZIndex: var(--pf-global--ZIndex--xs);

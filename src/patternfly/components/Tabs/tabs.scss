@@ -32,7 +32,7 @@ $pf-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
   // Alt color scheme
   --pf-c-tabs--m-color-scheme--light-300__link--BackgroundColor: transparent;
-  --pf-c-tabs--m-color-scheme--light-300__item--m-current__link--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-tabs--m-color-scheme--light-300__item--m-current__link--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
   --pf-c-tabs--m-color-scheme--light-300__link--disabled--BackgroundColor: var(--pf-global--palette--black-150);
 
   // List

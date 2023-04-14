@@ -1,7 +1,7 @@
 $pf-l-gallery--breakpoint-map: build-breakpoint-map();
 
 .pf-l-gallery {
-  --pf-l-gallery--m-gutter--GridGap: var(--pf-global--gutter);
+  --pf-l-gallery--m-gutter--Gap: var(--pf-global--gutter);
   --pf-l-gallery--GridTemplateColumns--min: 250px;
   --pf-l-gallery--GridTemplateColumns--minmax--min: var(--pf-l-gallery--GridTemplateColumns--min);
   --pf-l-gallery--GridTemplateColumns--max: 1fr;
@@ -14,7 +14,7 @@ $pf-l-gallery--breakpoint-map: build-breakpoint-map();
   grid-template-columns: var(--pf-l-gallery--GridTemplateColumns);
 
   &.pf-m-gutter {
-    grid-gap: var(--pf-l-gallery--m-gutter--GridGap);
+    gap: var(--pf-l-gallery--m-gutter--Gap);
   }
 
   @include pf-build-css-variable-stack("--pf-l-gallery--GridTemplateColumns--minmax--min", "--pf-l-gallery--GridTemplateColumns--min", $pf-l-gallery--breakpoint-map);

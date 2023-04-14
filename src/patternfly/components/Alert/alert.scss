@@ -52,29 +52,29 @@
   --pf-c-alert__action-group__c-button--not-last-child--MarginRight: var(--pf-global--spacer--lg);
 
   // Custom
-  --pf-c-alert--m-custom--BorderTopColor: var(--pf-global--custom-color--200);
-  --pf-c-alert--m-custom__icon--Color: var(--pf-global--custom-color--200);
-  --pf-c-alert--m-custom__title--Color: var(--pf-global--custom-color--300);
+  --pf-c-alert--m-custom--BorderTopColor: var(--pf-global--custom-color);
+  --pf-c-alert--m-custom__icon--Color: var(--pf-global--custom-color--icon);
+  --pf-c-alert--m-custom__title--Color: var(--pf-global--custom-color--text);
 
   // Success
-  --pf-c-alert--m-success--BorderTopColor: var(--pf-global--success-color--100);
-  --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--100);
-  --pf-c-alert--m-success__title--Color: var(--pf-global--success-color--200);
+  --pf-c-alert--m-success--BorderTopColor: var(--pf-global--success-color);
+  --pf-c-alert--m-success__icon--Color: var(--pf-global--success-color--icon);
+  --pf-c-alert--m-success__title--Color: var(--pf-global--success-color--text);
 
   // Danger
-  --pf-c-alert--m-danger--BorderTopColor: var(--pf-global--danger-color--100);
-  --pf-c-alert--m-danger__icon--Color: var(--pf-global--danger-color--100);
-  --pf-c-alert--m-danger__title--Color: var(--pf-global--danger-color--200);
+  --pf-c-alert--m-danger--BorderTopColor: var(--pf-global--danger-color);
+  --pf-c-alert--m-danger__icon--Color: var(--pf-global--danger-color--icon);
+  --pf-c-alert--m-danger__title--Color: var(--pf-global--danger-color--text);
 
   // Warning
-  --pf-c-alert--m-warning--BorderTopColor: var(--pf-global--warning-color--100);
-  --pf-c-alert--m-warning__icon--Color: var(--pf-global--warning-color--100);
-  --pf-c-alert--m-warning__title--Color: var(--pf-global--warning-color--200);
+  --pf-c-alert--m-warning--BorderTopColor: var(--pf-global--warning-color);
+  --pf-c-alert--m-warning__icon--Color: var(--pf-global--warning-color--icon);
+  --pf-c-alert--m-warning__title--Color: var(--pf-global--warning-color--text);
 
   // Info
-  --pf-c-alert--m-info--BorderTopColor: var(--pf-global--info-color--100);
-  --pf-c-alert--m-info__icon--Color: var(--pf-global--info-color--100);
-  --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--200);
+  --pf-c-alert--m-info--BorderTopColor: var(--pf-global--info-color);
+  --pf-c-alert--m-info__icon--Color: var(--pf-global--info-color--icon);
+  --pf-c-alert--m-info__title--Color: var(--pf-global--info-color--text);
 
   // Inline
   --pf-c-alert--m-inline--BoxShadow: none;

@@ -4,7 +4,7 @@ $pf-c-avatar--sizes: "sm", "md", "lg", "xl";
 .pf-c-avatar {
   --pf-c-avatar--BorderColor: transparent;
   --pf-c-avatar--BorderWidth: 0;
-  --pf-c-avatar--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-avatar--BorderRadius: var(--pf-global--BorderRadius--circle);
   --pf-c-avatar--Width: #{pf-size-prem(36px)};
   --pf-c-avatar--Height: #{pf-size-prem(36px)};
   --pf-c-avatar--m-sm--Width: #{pf-size-prem(24px)};

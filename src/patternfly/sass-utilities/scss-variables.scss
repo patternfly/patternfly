@@ -19,16 +19,22 @@ $pf-global--font-size-root: 16 !default; // for fonts
 $pf-global--space-size-root: 16 !default; // for spaces
 
 // Colors
-// Background color
+// Base background color
 $pf-global--BackgroundColor--100: $pf-color-white !default;
 $pf-global--BackgroundColor--150: $pf-color-black-100 !default;
 $pf-global--BackgroundColor--200: $pf-color-black-200 !default;
 
+// Semantic background colors
+$pf-global--BackgroundColor--primary: $pf-global--BackgroundColor--100 !default;
+$pf-global--BackgroundColor--secondary: $pf-global--BackgroundColor--200 !default;
+$pf-global--BackgroundColor--subtle: $pf-global--BackgroundColor--150 !default;
+$pf-global--BackgroundColor--floating: $pf-global--BackgroundColor--100 !default;
+
 // do not use - background colors for exceptions and defining theme
 // light theme
 $pf-global--BackgroundColor--light-100:     $pf-color-white !default;
-$pf-global--BackgroundColor--light-200:     $pf-color-black-100 !default;
-$pf-global--BackgroundColor--light-300:     $pf-color-black-200 !default;
+$pf-global--BackgroundColor--light-150:     $pf-color-black-100 !default;
+$pf-global--BackgroundColor--light-200:     $pf-color-black-200 !default;
 
 // dark theme
 $pf-global--BackgroundColor--dark-100:      $pf-color-black-900 !default;
@@ -41,8 +47,6 @@ $pf-global--BackgroundColor--dark-transparent-200:  rgba($pf-color-black-1000, .
 // Text color
 $pf-global--Color--100: $pf-color-black-900 !default;
 $pf-global--Color--200: $pf-color-black-600 !default;
-$pf-global--Color--300: $pf-color-black-800 !default;
-$pf-global--Color--400: $pf-color-black-500 !default;
 
 // do not use - text colors for exceptions and defining theme
 // light theme
@@ -53,6 +57,10 @@ $pf-global--Color--light-300:      $pf-color-black-300 !default;
 // dark theme
 $pf-global--Color--dark-100:      $pf-color-black-900 !default;
 $pf-global--Color--dark-200:      $pf-color-black-600 !default;
+
+// Semantic text
+$pf-global--text--Color: $pf-global--Color--100 !default;
+$pf-global--text--sub--Color: $pf-global--Color--200 !default;
 
 // States color
 // active
@@ -66,10 +74,13 @@ $pf-global--disabled-color--100: $pf-color-black-600 !default;
 $pf-global--disabled-color--200: $pf-color-black-300 !default;
 $pf-global--disabled-color--300: $pf-color-black-200 !default;
 
+// readonly - new
+$pf-global--readonly-color--text: $pf-global--Color--100 !default;
+$pf-global--readonly-color--background: $pf-color-black-300 !default;
+
 // Theme color
 $pf-global--primary-color--100:         $pf-color-blue-400 !default;
 $pf-global--primary-color--200:         $pf-color-blue-500 !default;
-$pf-global--secondary-color--100:       $pf-color-black-600 !default;
 $pf-global--custom-color--100:         $pf-color-cyan-200 !default;
 $pf-global--custom-color--200:         $pf-color-cyan-300 !default;
 $pf-global--custom-color--300:         $pf-color-cyan-500 !default;
@@ -82,6 +93,37 @@ $pf-global--warning-color--200:         $pf-color-gold-600 !default;
 $pf-global--danger-color--100:          $pf-color-red-100 !default;
 $pf-global--danger-color--200:          $pf-color-red-200 !default;
 $pf-global--danger-color--300:          $pf-color-red-400 !default;
+
+// Semantic state colors
+// disabled
+$pf-global--disabled-color--text: $pf-global--disabled-color--100 !default; // disabled text
+$pf-global--disabled-color--background: $pf-global--disabled-color--200 !default; // disabled text
+
+// Theme
+$pf-global--primary-color: $pf-global--primary-color--100 !default; // "primary" primary color - accents, backgrounds specifically with text - needed for buttons in dark theme
+$pf-global--primary-color--text: $pf-global--primary-color--100 !default; // text
+$pf-global--primary-color--icon:  $pf-global--primary-color--100 !default; // icon
+$pf-global--primary-color--active:  $pf-global--primary-color--200 !default; // hover, focus, active, expanded...
+$pf-global--custom-color: $pf-global--custom-color--200 !default; // "primary" custom color
+$pf-global--custom-color--text: $pf-global--custom-color--300 !default; // text
+$pf-global--custom-color--icon: $pf-global--custom-color--200 !default; // icon
+$pf-global--custom-color--active: $pf-global--custom-color--300 !default; // hover, focus, active, expanded
+$pf-global--success-color: $pf-global--success-color--100 !default; // and so on...
+$pf-global--success-color--text: $pf-global--success-color--200 !default;
+$pf-global--success-color--icon: $pf-global--success-color--100 !default;
+$pf-global--success-color--active: $pf-global--success-color--200 !default;
+$pf-global--info-color: $pf-global--info-color--100 !default;
+$pf-global--info-color--text: $pf-global--info-color--200 !default;
+$pf-global--info-color--icon: $pf-global--info-color--100 !default;
+$pf-global--info-color--active: $pf-global--info-color--200 !default;
+$pf-global--warning-color: $pf-global--warning-color--100 !default;
+$pf-global--warning-color--text: $pf-global--warning-color--200 !default;
+$pf-global--warning-color--icon: $pf-global--warning-color--100 !default;
+$pf-global--warning-color--active: $pf-global--warning-color--200 !default;
+$pf-global--danger-color: $pf-global--danger-color--100 !default;
+$pf-global--danger-color--text: $pf-global--danger-color--200 !default;
+$pf-global--danger-color--icon: $pf-global--danger-color--100 !default;
+$pf-global--danger-color--active: $pf-global--danger-color--200 !default;
 
 // do not use - theme colors for exceptions and defining theme
 $pf-global--primary-color--light-100:   $pf-color-blue-200 !default;
@@ -145,9 +187,13 @@ $pf-global--spacer--4xl: pf-size-prem(80px) !default;   // Dark magenta
 // Form spacer - only used in forms
 $pf-global--spacer--form-element: pf-size-prem(6px) !default;
 
-// Gutter
-$pf-global--gutter: $pf-global--spacer--md !default;
-$pf-global--gutter--md: $pf-global--spacer--lg !default;
+// Insets
+$pf-global--inset--page: $pf-global--spacer--lg !default; // page chrome insets
+$pf-global--gutter: $pf-global--spacer--lg !default; // gutter between blocks of items
+$pf-global--gutter--compact: $pf-global--spacer--md !default; // compact gutter
+$pf-global--gutter--grouped: $pf-global--spacer--md !default; // gutter between grouped/related items (eg, table row + the row's expanded content)
+$pf-global--gutter--grouped--compact: $pf-global--spacer--sm !default; // compact gutter between grouped items - for compact layouts, text/value gutter (eg, forms, description list) - should form/dl have its own spacer?
+$pf-global--gutter--icon: $pf-global--spacer--sm !default; // gutter between icon and text
 
 // Z-Index
 $pf-global--ZIndex--xs: 100;
@@ -164,13 +210,14 @@ $pf-global--breakpoint--md: 768px !default;
 $pf-global--breakpoint--lg: 992px !default;
 $pf-global--breakpoint--xl: 1200px !default;
 $pf-global--breakpoint--2xl: 1450px !default;
+$pf-global--breakpoint--desktop: $pf-global--breakpoint--xl !default;
 
 // Height breakpoints
-$pf-global--height-breakpoint--sm: 0 !default;
-$pf-global--height-breakpoint--md: 40rem !default; // 640px
-$pf-global--height-breakpoint--lg: 48rem !default; // 768px
-$pf-global--height-breakpoint--xl: 60rem !default; // 960px
-$pf-global--height-breakpoint--2xl: 80rem !default; // 1280px
+$pf-global--breakpoint--height--sm: 0 !default;
+$pf-global--breakpoint--height--md: 40rem !default; // 640px
+$pf-global--breakpoint--height--lg: 48rem !default; // 768px
+$pf-global--breakpoint--height--xl: 60rem !default; // 960px
+$pf-global--breakpoint--height--2xl: 80rem !default; // 1280px
 
 // Borders
 $pf-global--BorderWidth--sm:     1px !default;
@@ -182,49 +229,95 @@ $pf-global--BorderColor--200:    $pf-color-black-500 !default;
 $pf-global--BorderColor--300:    $pf-color-black-200 !default;
 $pf-global--BorderColor--dark-100:   $pf-color-black-300 !default;
 $pf-global--BorderColor--light-100:  $pf-color-black-400 !default;
-$pf-global--BorderRadius--sm:        3px !default;
-$pf-global--BorderRadius--lg:        30em !default; // This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
+
+// Border radius
+$pf-global--BorderRadius--normal: 3px !default;
+$pf-global--BorderRadius--pill: 30em !default;
+$pf-global--BorderRadius--circle: 50% !default;
 
 // Icons
-$pf-global--icon--Color--light: $pf-color-black-600 !default;
-$pf-global--icon--Color--dark: $pf-color-black-900 !default;
-$pf-global--icon--FontSize--sm: pf-font-prem(10px) !default;
-$pf-global--icon--FontSize--md: pf-font-prem(18px) !default;
+$pf-global--icon--Color: $pf-global--Color--100 !default;
+$pf-global--icon--action--Color: $pf-global--Color--200 !default;
+$pf-global--icon--action--active--Color: $pf-global--Color--100 !default;
+$pf-global--icon--action--disabled--Color: $pf-global--disabled-color--200 !default;
+$pf-global--icon--FontSize--sm: pf-font-prem(12px) !default;
+$pf-global--icon--FontSize--md: pf-font-prem(16px) !default;
 $pf-global--icon--FontSize--lg: pf-font-prem(24px) !default;
 $pf-global--icon--FontSize--xl: pf-font-prem(54px) !default;
 
 // Fonts
 // Font family
 // stylelint-disable value-keyword-case
-$pf-global--FontFamily--sans-serif: '"RedHatText", helvetica, arial, sans-serif';
-$pf-global--FontFamily--heading--sans-serif: '"RedHatDisplay", helvetica, arial, sans-serif';
-$pf-global--FontFamily--monospace: '"Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
-$pf-global--FontFamily--redhat-updated--sans-serif: '"RedHatTextUpdated", helvetica, arial, sans-serif';
-$pf-global--FontFamily--redhat-updated--heading--sans-serif: '"RedHatDisplayUpdated", helvetica, arial, sans-serif';
-$pf-global--FontFamily--redhat--monospace: '"RedHatMono", "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
-$pf-global--FontFamily--redhatVF--sans-serif: '"RedHatTextVF", "RedHatText", helvetica, arial, sans-serif';
-$pf-global--FontFamily--redhatVF--heading--sans-serif: '"RedHatDisplayVF", "RedHatDisplay", helvetica, arial, sans-serif';
-$pf-global--FontFamily--redhatVF--monospace: '"RedHatMonoVF", "RedHatMono", "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
+$pf-global--FontFamily--sans-serif: '"RedHatText", sans-serif'; // TODO - can we reduce this down to RHT, sans-serif - and do the same for the others?
+$pf-global--FontFamily--heading--sans-serif: '"RedHatDisplay", sans-serif';
+$pf-global--FontFamily--monospace: '"RedHatMono", "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace'; // TODO - this stack seems excessive
 // stylelint-enable value-keyword-case
 
 // Font size
-$pf-global--FontSize--4xl: pf-font-prem(36px) !default;
-$pf-global--FontSize--3xl: pf-font-prem(28px) !default;
-$pf-global--FontSize--2xl: pf-font-prem(24px) !default;
-$pf-global--FontSize--xl: pf-font-prem(20px) !default;
-$pf-global--FontSize--lg: pf-font-prem(18px) !default;
-$pf-global--FontSize--md: pf-font-prem(16px) !default;
-$pf-global--FontSize--sm: pf-font-prem(14px) !default;
 $pf-global--FontSize--xs: pf-font-prem(12px) !default;
+$pf-global--FontSize--sm: pf-font-prem(14px) !default;
+$pf-global--FontSize--md: pf-font-prem(16px) !default;
+$pf-global--FontSize--lg: pf-font-prem(18px) !default;
+$pf-global--FontSize--xl: pf-font-prem(20px) !default;
+$pf-global--FontSize--2xl: pf-font-prem(24px) !default;
+$pf-global--FontSize--3xl: pf-font-prem(28px) !default;
+$pf-global--FontSize--4xl: pf-font-prem(36px) !default;
 
 // Font weight
-$pf-global--FontWeight--light: 300 !default;
 $pf-global--FontWeight--normal: 400 !default;
 $pf-global--FontWeight--bold: 700 !default;
 
 // Line height
 $pf-global--LineHeight--sm: 1.3 !default;
 $pf-global--LineHeight--md: 1.5 !default;
+
+// Text
+$pf-global--text--Font--map: (
+  "font-weight": $pf-global--FontWeight--normal,
+  "font-size": $pf-global--FontSize--md,
+  "line-height": $pf-global--LineHeight--md,
+  "font-family": $pf-global--FontFamily--sans-serif
+);
+
+// Headings
+$pf-global--heading--Font--map: (
+  "h1": (
+    "font-weight": $pf-global--FontWeight--normal,
+    "font-size": $pf-global--FontSize--2xl,
+    "line-height": $pf-global--LineHeight--sm,
+    "font-family": $pf-global--FontFamily--heading--sans-serif
+  ),
+  "h2": (
+    "font-weight": $pf-global--FontWeight--normal,
+    "font-size": $pf-global--FontSize--xl,
+    "line-height": $pf-global--LineHeight--md,
+    "font-family": $pf-global--FontFamily--heading--sans-serif
+  ),
+  "h3": (
+    "font-weight": $pf-global--FontWeight--normal,
+    "font-size": $pf-global--FontSize--lg,
+    "line-height": $pf-global--LineHeight--md,
+    "font-family": $pf-global--FontFamily--heading--sans-serif
+  ),
+  "h4": (
+    "font-weight": $pf-global--FontWeight--normal,
+    "font-size": $pf-global--FontSize--md,
+    "line-height": $pf-global--LineHeight--md,
+    "font-family": $pf-global--FontFamily--heading--sans-serif
+  ),
+  "h5": (
+    "font-weight": $pf-global--FontWeight--normal,
+    "font-size": $pf-global--FontSize--md,
+    "line-height": $pf-global--LineHeight--md,
+    "font-family": $pf-global--FontFamily--heading--sans-serif
+  ),
+  "h6": (
+    "font-weight": $pf-global--FontWeight--normal,
+    "font-size": $pf-global--FontSize--md,
+    "line-height": $pf-global--LineHeight--md,
+    "font-family": $pf-global--FontFamily--heading--sans-serif
+  ),
+);
 
 // Links
 $pf-global--link--Color:                  $pf-global--primary-color--100 !default;
@@ -286,12 +379,12 @@ $pf-global--breakpoint-name-map: (
 );
 
 // Global breakpoint name map - used for %pf-hidden-visible
-$pf-global--height-breakpoint-name-map: (
-  "sm": $pf-global--height-breakpoint--sm,
-  "md": $pf-global--height-breakpoint--md,
-  "lg": $pf-global--height-breakpoint--lg,
-  "xl": $pf-global--height-breakpoint--xl,
-  "2xl": $pf-global--height-breakpoint--2xl
+$pf-global--breakpoint--height-name-map: (
+  "sm": $pf-global--breakpoint--height--sm,
+  "md": $pf-global--breakpoint--height--md,
+  "lg": $pf-global--breakpoint--height--lg,
+  "xl": $pf-global--breakpoint--height--xl,
+  "2xl": $pf-global--breakpoint--height--2xl
 );
 
 // Spacer properties

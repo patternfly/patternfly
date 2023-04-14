@@ -94,7 +94,7 @@
   --pf-c-card--m-selectable-raised--m-selected-raised--before--Transition: transform .25s linear;
   --pf-c-card--m-selectable-raised--m-selected-raised--before--TranslateY: calc(var(--pf-c-card--m-selectable-raised--m-selected-raised--TranslateY) * -1);
   --pf-c-card--m-selectable-raised--m-selected-raised--before--ScaleY: 2;
-  --pf-c-card--m-non-selectable-raised--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-card--m-non-selectable-raised--BackgroundColor: var(--pf-global--BackgroundColor--150);
   --pf-c-card--m-non-selectable-raised--before--BackgroundColor: var(--pf-global--disabled-color--200);
   --pf-c-card--m-non-selectable-raised--before--ScaleY: 2;
   --pf-c-card--m-flat--m-non-selectable-raised--before--BorderColor: var(--pf-global--disabled-color--200);
@@ -123,7 +123,7 @@
   --pf-c-card--m-flat--BorderColor: var(--pf-global--BorderColor--100);
 
   // Rounded
-  --pf-c-card--m-rounded--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-card--m-rounded--BorderRadius: var(--pf-global--BorderRadius--normal);
 
   // Full height
   --pf-c-card--m-full-height--Height: 100%;

@@ -47,7 +47,7 @@
   // Close Button
   --pf-c-about-modal-box__close--c-button--Color: var(--pf-global--Color--100);
   --pf-c-about-modal-box__close--c-button--FontSize: var(--pf-global--FontSize--xl);
-  --pf-c-about-modal-box__close--c-button--BorderRadius: var(--pf-global--BorderRadius--lg);
+  --pf-c-about-modal-box__close--c-button--BorderRadius: var(--pf-global--BorderRadius--circle);
   --pf-c-about-modal-box__close--c-button--Width: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2); // Height and width are 2x font-size
   --pf-c-about-modal-box__close--c-button--Height: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2);
   --pf-c-about-modal-box__close--c-button--BackgroundColor: var(--pf-global--palette--black-1000); // Close button uses a non-standard background color
@@ -235,11 +235,4 @@
     background-position: var(--pf-c-about-modal-box__hero--sm--BackgroundPosition);
     background-size: var(--pf-c-about-modal-box__hero--sm--BackgroundSize);
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/about-modal-box";
-
-@include pf-theme-dark {
-  @include pf-theme-dark-about-modal-box;
 }

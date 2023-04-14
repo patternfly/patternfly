@@ -40,7 +40,7 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for c
 
 // Grid base
 .pf-l-grid {
-  --pf-l-grid--m-gutter--GridGap: var(--pf-global--gutter);
+  --pf-l-grid--m-gutter--Gap: var(--pf-global--gutter);
   --pf-l-grid__item--GridColumnStart: auto;
   --pf-l-grid__item--GridColumnEnd: span 12;
   --pf-l-grid--item--Order: 0;
@@ -73,6 +73,6 @@ $pf-l-grid--breakpoint-map: build-breakpoint-map(); // currently only used for c
   }
 
   &.pf-m-gutter {
-    grid-gap: var(--pf-l-grid--m-gutter--GridGap);
+    gap: var(--pf-l-grid--m-gutter--Gap);
   }
 }

@@ -24,7 +24,7 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
 }
 
 .pf-c-form {
-  --pf-c-form--GridGap: var(--pf-global--gutter--md);
+  --pf-c-form--GridGap: var(--pf-global--gutter);
 
   // Group
   --pf-c-form__group--m-action--MarginTop: var(--pf-global--spacer--xl);
@@ -132,7 +132,7 @@ $pf-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "lg",
 
   // Section
   --pf-c-form__section--MarginTop: var(--pf-global--spacer--xl);
-  --pf-c-form__section--Gap: var(--pf-global--gutter--md);
+  --pf-c-form__section--Gap: var(--pf-global--gutter);
 
   // Section title
   --pf-c-form__section-title--FontSize: var(--pf-global--FontSize--lg);

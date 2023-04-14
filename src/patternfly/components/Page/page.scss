@@ -1,13 +1,8 @@
-// stylelint-disable
 $pf-c-page--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-// stylelint-enable
 
-// URL.com/guidelines#layout
 .pf-c-page {
-  --pf-c-page--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-page--inset: var(--pf-global--spacer--md);
-  --pf-c-page--xl--inset: var(--pf-global--spacer--lg);
+  --pf-c-page--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
 
   // Header
   --pf-c-page__header--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
@@ -15,14 +10,8 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
 
   // Header brand
-  --pf-c-page__header-brand--PaddingLeft: var(--pf-global--spacer--md);
+  --pf-c-page__header-brand--PaddingLeft: var(--pf-global--spacer--lg);
   --pf-c-page__header-brand--xl--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-page__header-brand--xl--PaddingLeft: var(--pf-global--spacer--lg);
-
-  @media (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__header-brand--PaddingLeft: var(--pf-c-page__header-brand--xl--PaddingLeft);
-    --pf-c-page--inset: var(--pf-c-page--xl--inset);
-  }
 
   // Toggle
   --pf-c-page__header-sidebar-toggle__c-button--PaddingTop: var(--pf-global--spacer--sm);
@@ -42,15 +31,12 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__header-nav--xl--PaddingRight: var(--pf-global--spacer--xl);
   --pf-c-page__header-nav--xl--PaddingLeft: var(--pf-global--spacer--xl);
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-global--breakpoint--desktop) {
     --pf-c-page__header-nav--BackgroundColor: var(--pf-c-page__header-nav--xl--BackgroundColor);
-    --pf-c-page__header-nav--PaddingRight: var(--pf-c-page__header-nav--xl--PaddingRight);
-    --pf-c-page__header-nav--PaddingLeft: var(--pf-c-page__header-nav--xl--PaddingLeft);
   }
 
   // Header tools
-  --pf-c-page__header-tools--MarginRight: var(--pf-global--spacer--md);
-  --pf-c-page__header-tools--xl--MarginRight: var(--pf-global--spacer--lg);
+  --pf-c-page__header-tools--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-page__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
   --pf-c-page__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
   --pf-c-page__header-tools-group--Display: flex;
@@ -67,12 +53,8 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__header-tools--c-button--m-selected--before--Width: auto;
   --pf-c-page__header-tools--c-button--m-selected--before--Height: auto;
   --pf-c-page__header-tools--c-button--m-selected--before--BackgroundColor: var(--pf-global--BackgroundColor--dark-200);
-  --pf-c-page__header-tools--c-button--m-selected--before--BorderRadius: var(--pf-global--BorderRadius--sm); // remove at breaking change
+  --pf-c-page__header-tools--c-button--m-selected--before--BorderRadius: var(--pf-global--BorderRadius--normal); // remove at breaking change
   --pf-c-page__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor: transparent; // remove at breaking change
-
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__header-tools--MarginRight: var(--pf-c-page__header-tools--xl--MarginRight);
-  }
 
   // Sidebar
   --pf-c-page__sidebar--ZIndex: var(--pf-global--ZIndex--sm);
@@ -91,13 +73,13 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   // Sidebar body
   --pf-c-page__sidebar-body--PaddingRight: 0;
   --pf-c-page__sidebar-body--PaddingLeft: 0;
-  --pf-c-page__sidebar-body--m-page-insets--PaddingRight: var(--pf-c-page--inset);
-  --pf-c-page__sidebar-body--m-page-insets--PaddingLeft: var(--pf-c-page--inset);
+  --pf-c-page__sidebar-body--m-page-insets--PaddingRight: var(--pf-global--inset--page);
+  --pf-c-page__sidebar-body--m-page-insets--PaddingLeft: var(--pf-global--inset--page);
   --pf-c-page__sidebar-body--m-menu--BorderTopColor: var(--pf-global--BackgroundColor--dark-200);
   --pf-c-page__sidebar-body--m-menu--BorderTopWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-page__sidebar-body--m-menu--c-context-selector--BorderBottomColor: var(--pf-global--BackgroundColor--dark-200);
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-global--breakpoint--desktop) {
     --pf-c-page__sidebar--TranslateX: var(--pf-c-page__sidebar--xl--TranslateX);
   }
 
@@ -105,16 +87,12 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__main--ZIndex: var(--pf-global--ZIndex--xs);
 
   // Main section
-  --pf-c-page__main-section--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--xl--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-page__main-section--xl--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-page__main-section--xl--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-page__main-section--xl--PaddingLeft: var(--pf-global--spacer--lg);
+  --pf-c-page__main-section--PaddingTop: var(--pf-global--inset--page);
+  --pf-c-page__main-section--PaddingRight: var(--pf-global--inset--page);
+  --pf-c-page__main-section--PaddingBottom: var(--pf-global--inset--page);
+  --pf-c-page__main-section--PaddingLeft: var(--pf-global--inset--page);
   --pf-c-page__main-breadcrumb--main-section--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-page__main-section--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
   --pf-c-page__main-section--m-light--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__main-section--m-light-100--BackgroundColor: var(--pf-global--BackgroundColor--150);
   --pf-c-page__main-section--m-dark-100--BackgroundColor: var(--pf-global--BackgroundColor--dark-transparent-100);
@@ -137,13 +115,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page--section--m-shadow-top--BoxShadow: var(--pf-global--BoxShadow--sm-top);
   --pf-c-page--section--m-shadow-top--ZIndex: var(--pf-global--ZIndex--xs);
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__main-section--PaddingTop: var(--pf-c-page__main-section--xl--PaddingTop);
-    --pf-c-page__main-section--PaddingRight: var(--pf-c-page__main-section--xl--PaddingRight);
-    --pf-c-page__main-section--PaddingBottom: var(--pf-c-page__main-section--xl--PaddingBottom);
-    --pf-c-page__main-section--PaddingLeft: var(--pf-c-page__main-section--xl--PaddingLeft);
-  }
-
   // Main section horizontal nav
   --pf-c-page__main-nav--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__main-nav--PaddingTop: var(--pf-global--spacer--md);
@@ -153,11 +124,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__main-nav--xl--PaddingRight: var(--pf-global--spacer--sm);
   --pf-c-page__main-nav--xl--PaddingLeft: var(--pf-global--spacer--sm);
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__main-nav--PaddingRight: var(--pf-c-page__main-nav--xl--PaddingRight);
-    --pf-c-page__main-nav--PaddingLeft: var(--pf-c-page__main-nav--xl--PaddingLeft);
-  }
-
   // Main section horizontal subnav
   --pf-c-page__main-subnav--BackgroundColor: var(--pf-global--BackgroundColor--dark-300);
   --pf-c-page__main-subnav--BorderTopWidth: var(--pf-global--BorderWidth--sm);
@@ -166,7 +132,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__main-subnav--BorderLeftColor: var(--pf-global--palette--black-800);
   --pf-c-page__sidebar--main__main-subnav--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-page__sidebar--m-collapsed--main__main-subnav--BorderLeftWidth: 0;
-
 
   // Main section breadcrumb
   --pf-c-page__main-breadcrumb--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
@@ -185,11 +150,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --pf-c-page__main-tabs--PaddingLeft: 0;
   --pf-c-page__main-tabs--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-page__main-breadcrumb--PaddingRight: var(--pf-c-page__main-breadcrumb--xl--PaddingRight);
-    --pf-c-page__main-breadcrumb--PaddingLeft: var(--pf-c-page__main-breadcrumb--xl--PaddingLeft);
-  }
-
   // Wizard main section
   --pf-c-page__main-wizard--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-page__main-wizard--BorderTopColor: var(--pf-global--BorderColor--100);
@@ -203,21 +163,21 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     "main";
   grid-template-rows: max-content 1fr;
   grid-template-columns: 1fr;
-    height: 100%;
+  height: 100vh;  // fallback for browsers that do not support dvh
+  height: 100dvh;
+  max-height: 100%;
   background-color: var(--pf-c-page--BackgroundColor);
 
-  @media (min-width: $pf-global--breakpoint--xl) {
+  @media (min-width: $pf-global--breakpoint--desktop) {
     grid-template-areas:
       "header header"
       "nav main";
     grid-template-columns: max-content 1fr;
-    }
+  }
 
-  // full height
-  &.pf-m-full-height {
-    height: 100vh;
-    height: 100dvh;
-    max-height: 100%;
+  // opt-out for 100vh/dvh. Remove in next breaking change
+  &.pf-m-height-100 {
+    height: 100%;
   }
 }
 
@@ -258,7 +218,7 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   grid-column: 1 / 2;
   padding-left: var(--pf-c-page__header-brand--PaddingLeft);
 
-  @media (min-width: $pf-global--breakpoint--xl) {
+  @media (min-width: $pf-global--breakpoint--desktop) {
     padding-right: var(--pf-c-page__header-brand--xl--PaddingRight); // set padding right here to allow mobile view to accomodate tools
   }
 }
@@ -295,7 +255,7 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   padding-left: var(--pf-c-page__header-nav--PaddingLeft);
   background-color: var(--pf-c-page__header-nav--BackgroundColor);
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
+  @media screen and (min-width: $pf-global--breakpoint--desktop) {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
   }
@@ -414,7 +374,7 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
     box-shadow: var(--pf-c-page__sidebar--BoxShadow);
 
-    @media screen and (min-width: $pf-global--breakpoint--xl) {
+    @media screen and (min-width: $pf-global--breakpoint--desktop) {
       --pf-c-page__sidebar--BoxShadow: none;
     }
   }
@@ -467,11 +427,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   &.pf-m-page-insets {
     --pf-c-page__sidebar-body--PaddingRight: var(--pf-c-page__sidebar-body--m-page-insets--PaddingRight);
     --pf-c-page__sidebar-body--PaddingLeft: var(--pf-c-page__sidebar-body--m-page-insets--PaddingLeft);
-  }
-
-  &.pf-m-inset-none {
-    --pf-c-page__sidebar-body--PaddingRight: 0;
-    --pf-c-page__sidebar-body--PaddingLeft: 0;
   }
 
   &.pf-m-fill {
@@ -603,7 +558,7 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   @at-root .pf-c-page__sidebar {
     ~ .pf-c-page__main {
-      @media screen and (min-width: $pf-global--breakpoint--xl) {
+      @media screen and (min-width: $pf-global--breakpoint--desktop) {
         --pf-c-page__main-subnav--BorderLeftWidth: var(--pf-c-page__sidebar--main__main-subnav--BorderLeftWidth);
       }
     }

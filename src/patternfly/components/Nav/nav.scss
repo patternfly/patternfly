@@ -3,16 +3,16 @@
 
   // Light theme
   --pf-c-nav--m-light__item--before--BorderColor: var(--pf-global--BorderColor--300);
-  --pf-c-nav--m-light__item--m-current--not--m-expanded__link--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-nav--m-light__item--m-current--not--m-expanded__link--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
   --pf-c-nav--m-light__link--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav--m-light__link--hover--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav--m-light__link--focus--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav--m-light__link--active--Color: var(--pf-global--Color--dark-100);
   --pf-c-nav--m-light__link--m-current--Color: var(--pf-global--Color--dark-100);
-  --pf-c-nav--m-light__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-nav--m-light__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-nav--m-light__link--active--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
-  --pf-c-nav--m-light__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-nav--m-light__link--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-nav--m-light__link--focus--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-nav--m-light__link--active--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
+  --pf-c-nav--m-light__link--m-current--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
   --pf-c-nav--m-light__link--before--BorderColor: var(--pf-global--BorderColor--300);
   --pf-c-nav--m-light__link--after--BorderColor: var(--pf-global--active-color--100);
   --pf-c-nav--m-light__link--m-current--after--BorderColor: var(--pf-global--active-color--100);
@@ -89,7 +89,7 @@
   --pf-c-nav--m-horizontal__link--lg--PaddingBottom: var(--pf-global--spacer--lg);
   --pf-c-nav--m-horizontal__link--Right: var(--pf-global--spacer--md);
   --pf-c-nav--m-horizontal__link--Left: var(--pf-global--spacer--md);
-  --pf-c-nav--m-horizontal__link--Color: var(--pf-global--Color--light-300);
+  --pf-c-nav--m-horizontal__link--Color: var(--pf-global--Color--light-100);
   --pf-c-nav--m-horizontal__link--hover--Color: var(--pf-global--active-color--400);
   --pf-c-nav--m-horizontal__link--focus--Color: var(--pf-global--active-color--400);
   --pf-c-nav--m-horizontal__link--active--Color: var(--pf-global--active-color--400);

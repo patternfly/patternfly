@@ -11,7 +11,7 @@
   // update all --after variables to --before at breaking change
   // ::after border treatment
   --pf-c-notification-badge--after--BorderColor: transparent; // remove at breaking change
-  --pf-c-notification-badge--after--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-notification-badge--after--BorderRadius: var(--pf-global--BorderRadius--normal);
   --pf-c-notification-badge--after--BorderWidth: 0; // remove at breaking change
   --pf-c-notification-badge--after--Top: 0; // remove at breaking change
   --pf-c-notification-badge--after--Right: 0; // remove at breaking change

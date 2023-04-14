@@ -4,9 +4,7 @@
   --pf-c-content--LineHeight: var(--pf-global--LineHeight--md);
   --pf-c-content--FontSize: var(--pf-global--FontSize--md);
   --pf-c-content--FontWeight: var(--pf-global--FontWeight--normal);
-
-  // this ensures color is not overridden
-  --pf-c-content--Color: var(--pf-global--Color--100);
+  --pf-c-content--Color: var(--pf-global--Color--100); // this ensures color is not overridden
 
   // Headings
   --pf-c-content--heading--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);

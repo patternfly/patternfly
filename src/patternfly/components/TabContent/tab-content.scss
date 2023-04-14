@@ -18,7 +18,7 @@
   --pf-c-tab-content__body--m-padding--xl--PaddingLeft: var(--pf-global--spacer--lg);
 
   // Light
-  --pf-c-tab-content--m-light-300: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-tab-content--m-light-300: var(--pf-global--BackgroundColor--light-200);
 
   @media screen and (min-width: $pf-global--breakpoint--xl) {
     --pf-c-tab-content__body--m-padding--PaddingTop: var(--pf-c-tab-content__body--m-padding--xl--PaddingTop);

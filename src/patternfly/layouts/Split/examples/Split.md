@@ -94,6 +94,5 @@ The split layout is designed to position items horizontally, with one item filli
 | -- | -- | -- |
 | `.pf-l-split` | `<div>`, `<section>`, or `<article>` | Initiates the split layout. |
 | `.pf-l-split__item` | `<div>` | Initiates a split item. **Required** |
-| `.pf-m-gutter` | `.pf-l-split` | Adds space between children by using the globally defined gutter value. |
-| `.pf-m-wrap` | `.pf-l-split` | Sets the split layout to wrap. |
+| `.pf-m-gutter` | `.pf-l-split` | Adds a gutter between children. |
 | `.pf-m-fill` | `.pf-l-split__item` | Specifies which item(s) should fill the avaiable horizontal space. |

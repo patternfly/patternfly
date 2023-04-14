@@ -37,7 +37,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   // Primary
   --pf-c-dropdown__toggle--m-primary--Color: var(--pf-global--Color--light-100);
-  --pf-c-dropdown__toggle--m-primary--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-dropdown__toggle--m-primary--BorderRadius: var(--pf-global--BorderRadius--normal);
   --pf-c-dropdown__toggle--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-dropdown__toggle--m-primary--hover--BackgroundColor: var(--pf-global--primary-color--200);
   --pf-c-dropdown__toggle--m-primary--focus--BackgroundColor: var(--pf-global--primary-color--200);
@@ -47,7 +47,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
 
   // Secondary
   --pf-c-dropdown__toggle--m-secondary--Color: var(--pf-global--primary-color--100);
-  --pf-c-dropdown__toggle--m-secondary--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-dropdown__toggle--m-secondary--BorderRadius: var(--pf-global--BorderRadius--normal);
   --pf-c-dropdown__toggle--m-secondary--BackgroundColor: transparent;
   --pf-c-dropdown__toggle--m-secondary--before--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-dropdown__toggle--m-secondary--hover--before--BorderWidth: var(--pf-global--BorderWidth--md);
@@ -81,7 +81,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__toggle--m-split-button--m-action__toggle-button--MarginRight: calc(-1 * var(--pf-global--BorderWidth--sm));
   --pf-c-dropdown__toggle--m-split-button__toggle-check__input--TranslateY: #{pf-size-prem(-1px)};
   --pf-c-dropdown__toggle--m-split-button__toggle-text--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-dropdown__toggle--m-split-button--child--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-dropdown__toggle--m-split-button--child--BorderRadius: var(--pf-global--BorderRadius--normal);
 
   // Split button
   --pf-c-dropdown__toggle--m-split-button--m-primary--child--BorderRadius: var(--pf-c-dropdown__toggle--m-split-button--child--BorderRadius);
@@ -140,7 +140,7 @@ $pf-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "
   --pf-c-dropdown__menu-item--Color: var(--pf-global--Color--dark-100);
   --pf-c-dropdown__menu-item--hover--Color: var(--pf-global--Color--dark-100);
   --pf-c-dropdown__menu-item--disabled--Color: var(--pf-global--Color--dark-200);
-  --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
   --pf-c-dropdown__menu-item--disabled--BackgroundColor: transparent;
   --pf-c-dropdown__menu-item--m-text--Color: var(--pf-global--Color--dark-200);
 

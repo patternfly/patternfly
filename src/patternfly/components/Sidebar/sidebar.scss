@@ -2,8 +2,7 @@ $pf-c-sidebar--breakpoint-map--width: build-breakpoint-map("base", "sm", "md", "
 $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
 .pf-c-sidebar {
-  --pf-c-sidebar--inset: var(--pf-global--spacer--md);
-  --pf-c-sidebar--xl--inset: var(--pf-global--spacer--lg);
+  --pf-c-sidebar--inset: var(--pf-global--inset--page);
   --pf-c-sidebar--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-sidebar--BorderWidth--base: var(--pf-global--BorderWidth--sm);
   --pf-c-sidebar--BorderColor--base: var(--pf-global--BorderColor--100);
@@ -42,7 +41,7 @@ $pf-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --pf-c-sidebar__main--child--MarginTop: 0;
 
   // Gutter
-  --pf-c-sidebar--m-gutter__main--Gap: var(--pf-c-sidebar--inset);
+  --pf-c-sidebar--m-gutter__main--Gap: var(--pf-global--gutter);
 
   // Border
   --pf-c-sidebar__main--m-border--before--Display: none;

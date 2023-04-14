@@ -6,5 +6,5 @@
 }
 
 .tabs-example-block--m-color-scheme--light-300 {
-  --tabs-example-block--BackgroundColor: var(--pf-global--BackgroundColor--light-300);
+  --tabs-example-block--BackgroundColor: var(--pf-global--BackgroundColor--light-200);
 }

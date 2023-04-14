@@ -88,8 +88,8 @@
   --pf-global--BackgroundColor--150: #{$pf-global--BackgroundColor--150};
   --pf-global--BackgroundColor--200: #{$pf-global--BackgroundColor--200};
   --pf-global--BackgroundColor--light-100: #{$pf-global--BackgroundColor--light-100};
+  --pf-global--BackgroundColor--light-150: #{$pf-global--BackgroundColor--light-150};
   --pf-global--BackgroundColor--light-200: #{$pf-global--BackgroundColor--light-200};
-  --pf-global--BackgroundColor--light-300: #{$pf-global--BackgroundColor--light-300};
   --pf-global--BackgroundColor--dark-100: #{$pf-global--BackgroundColor--dark-100};
   --pf-global--BackgroundColor--dark-200: #{$pf-global--BackgroundColor--dark-200};
   --pf-global--BackgroundColor--dark-300: #{$pf-global--BackgroundColor--dark-300};
@@ -97,14 +97,17 @@
   --pf-global--BackgroundColor--dark-transparent-100: #{$pf-global--BackgroundColor--dark-transparent-100};
   --pf-global--BackgroundColor--dark-transparent-200: #{$pf-global--BackgroundColor--dark-transparent-200};
 
+  // Semantic
+  --pf-global--BackgroundColor--primary: #{$pf-global--BackgroundColor--primary};
+  --pf-global--BackgroundColor--secondary: #{$pf-global--BackgroundColor--secondary};
+  --pf-global--BackgroundColor--subtle: #{$pf-global--BackgroundColor--subtle};
+  --pf-global--BackgroundColor--floating: #{$pf-global--BackgroundColor--floating};
+
   // Text color
   --pf-global--Color--100: #{$pf-global--Color--100};
   --pf-global--Color--200: #{$pf-global--Color--200};
-  --pf-global--Color--300: #{$pf-global--Color--300};
-  --pf-global--Color--400: #{$pf-global--Color--400};
   --pf-global--Color--light-100: #{$pf-global--Color--light-100};
   --pf-global--Color--light-200: #{$pf-global--Color--light-200};
-  --pf-global--Color--light-300: #{$pf-global--Color--light-300};
   --pf-global--Color--dark-100: #{$pf-global--Color--dark-100};
   --pf-global--Color--dark-200: #{$pf-global--Color--dark-200};
 
@@ -122,7 +125,6 @@
   --pf-global--primary-color--200: #{$pf-global--primary-color--200};
   --pf-global--primary-color--light-100: #{$pf-global--primary-color--light-100};
   --pf-global--primary-color--dark-100: #{$pf-global--primary-color--dark-100};
-  --pf-global--secondary-color--100: #{$pf-global--secondary-color--100};
   --pf-global--custom-color--100: #{$pf-global--custom-color--100};
   --pf-global--custom-color--200: #{$pf-global--custom-color--200};
   --pf-global--custom-color--300: #{$pf-global--custom-color--300};
@@ -135,6 +137,32 @@
   --pf-global--danger-color--100: #{$pf-global--danger-color--100};
   --pf-global--danger-color--200: #{$pf-global--danger-color--200};
   --pf-global--danger-color--300: #{$pf-global--danger-color--300};
+
+  // Semantic theme colors
+  --pf-global--primary-color: #{$pf-global--primary-color};
+  --pf-global--primary-color--text: #{$pf-global--primary-color--text};
+  --pf-global--primary-color--icon: #{$pf-global--primary-color--icon};
+  --pf-global--primary-color--active: #{$pf-global--primary-color--active};
+  --pf-global--custom-color: #{$pf-global--custom-color};
+  --pf-global--custom-color--text: #{$pf-global--custom-color--text};
+  --pf-global--custom-color--icon: #{$pf-global--custom-color--icon};
+  --pf-global--custom-color--active: #{$pf-global--custom-color--active};
+  --pf-global--success-color: #{$pf-global--success-color};
+  --pf-global--success-color--text: #{$pf-global--success-color--text};
+  --pf-global--success-color--icon: #{$pf-global--success-color--icon};
+  --pf-global--success-color--active: #{$pf-global--success-color--active};
+  --pf-global--info-color: #{$pf-global--info-color};
+  --pf-global--info-color--text: #{$pf-global--info-color--text};
+  --pf-global--info-color--icon: #{$pf-global--info-color--icon};
+  --pf-global--info-color--active: #{$pf-global--info-color--active};
+  --pf-global--warning-color: #{$pf-global--warning-color};
+  --pf-global--warning-color--text: #{$pf-global--warning-color--text};
+  --pf-global--warning-color--icon: #{$pf-global--warning-color--icon};
+  --pf-global--warning-color--active: #{$pf-global--warning-color--active};
+  --pf-global--danger-color: #{$pf-global--danger-color};
+  --pf-global--danger-color--text: #{$pf-global--danger-color--text};
+  --pf-global--danger-color--icon: #{$pf-global--danger-color--icon};
+  --pf-global--danger-color--active: #{$pf-global--danger-color--active};
 
   // Shadows
   --pf-global--BoxShadow--sm: #{$pf-global--BoxShadow--sm};
@@ -178,9 +206,15 @@
   // Form spacer
   --pf-global--spacer--form-element: #{$pf-global--spacer--form-element};
 
+  // Inset
+  --pf-global--inset--page: #{$pf-global--inset--page};
+
   // Gutter
   --pf-global--gutter: #{$pf-global--gutter};
-  --pf-global--gutter--md: #{$pf-global--gutter--md};
+  --pf-global--gutter--compact: #{$pf-global--gutter--compact};
+  --pf-global--gutter--grouped: #{$pf-global--gutter--grouped};
+  --pf-global--gutter--grouped--compact: #{$pf-global--gutter--grouped--compact};
+  --pf-global--gutter--icon: #{$pf-global--gutter--icon}; // this should probably be a spacer, not a gutter?
 
   // Z-Index
   --pf-global--ZIndex--xs: #{$pf-global--ZIndex--xs};
@@ -199,11 +233,11 @@
   --pf-global--breakpoint--2xl: #{$pf-global--breakpoint--2xl};
 
   // Vertical breakpoints
-  --pf-global--height-breakpoint--sm: #{$pf-global--height-breakpoint--sm};
-  --pf-global--height-breakpoint--md: #{$pf-global--height-breakpoint--md};
-  --pf-global--height-breakpoint--lg: #{$pf-global--height-breakpoint--lg};
-  --pf-global--height-breakpoint--xl: #{$pf-global--height-breakpoint--xl};
-  --pf-global--height-breakpoint--2xl: #{$pf-global--height-breakpoint--2xl};
+  --pf-global--breakpoint--height--sm: #{$pf-global--breakpoint--height--sm};
+  --pf-global--breakpoint--height--md: #{$pf-global--breakpoint--height--md};
+  --pf-global--breakpoint--height--lg: #{$pf-global--breakpoint--height--lg};
+  --pf-global--breakpoint--height--xl: #{$pf-global--breakpoint--height--xl};
+  --pf-global--breakpoint--height--2xl: #{$pf-global--breakpoint--height--2xl};
 
   // Links
   --pf-global--link--Color: #{$pf-global--link--Color};
@@ -226,12 +260,17 @@
   --pf-global--BorderColor--300: #{$pf-global--BorderColor--300};
   --pf-global--BorderColor--dark-100: #{$pf-global--BorderColor--dark-100};
   --pf-global--BorderColor--light-100: #{$pf-global--BorderColor--light-100};
-  --pf-global--BorderRadius--sm: #{$pf-global--BorderRadius--sm};
-  --pf-global--BorderRadius--lg: #{$pf-global--BorderRadius--lg};
+  --pf-global--BorderRadius--normal: #{$pf-global--BorderRadius--normal};
+  --pf-global--BorderRadius--pill: #{$pf-global--BorderRadius--pill};
+  --pf-global--BorderRadius--circle: #{$pf-global--BorderRadius--circle};
 
   // Icons
-  --pf-global--icon--Color--light: #{$pf-global--icon--Color--light};
-  --pf-global--icon--Color--dark: #{$pf-global--icon--Color--dark};
+  --pf-global--icon--Color: #{$pf-global--icon--Color};
+  --pf-global--icon--action--Color: #{$pf-global--icon--action--Color};
+  --pf-global--icon--action--hover--Color: #{$pf-global--icon--action--hover--Color};
+  --pf-global--icon--action--focus--Color: #{$pf-global--icon--action--focus--Color};
+  --pf-global--icon--action--active--Color: #{$pf-global--icon--action--active--Color};
+  --pf-global--icon--action--expanded--Color: #{$pf-global--icon--action--expanded--Color};
   --pf-global--icon--FontSize--sm: #{$pf-global--icon--FontSize--sm};
   --pf-global--icon--FontSize--md: #{$pf-global--icon--FontSize--md};
   --pf-global--icon--FontSize--lg: #{$pf-global--icon--FontSize--lg};
@@ -243,12 +282,6 @@
   --pf-global--FontFamily--sans-serif: #{$pf-global--FontFamily--sans-serif};
   --pf-global--FontFamily--heading--sans-serif: #{$pf-global--FontFamily--heading--sans-serif};
   --pf-global--FontFamily--monospace: #{$pf-global--FontFamily--monospace};
-  --pf-global--FontFamily--redhat-updated--sans-serif: #{$pf-global--FontFamily--redhat-updated--sans-serif};
-  --pf-global--FontFamily--redhat-updated--heading--sans-serif: #{$pf-global--FontFamily--redhat-updated--heading--sans-serif};
-  --pf-global--FontFamily--redhat--monospace: #{$pf-global--FontFamily--redhat--monospace};
-  --pf-global--FontFamily--redhatVF--sans-serif: #{$pf-global--FontFamily--redhatVF--sans-serif};
-  --pf-global--FontFamily--redhatVF--heading--sans-serif: #{$pf-global--FontFamily--redhatVF--heading--sans-serif};
-  --pf-global--FontFamily--redhatVF--monospace: #{$pf-global--FontFamily--redhatVF--monospace};
 
   // Font size
   --pf-global--FontSize--4xl: #{$pf-global--FontSize--4xl};
@@ -261,7 +294,6 @@
   --pf-global--FontSize--xs: #{$pf-global--FontSize--xs};
 
   // Font weight
-  --pf-global--FontWeight--light: #{$pf-global--FontWeight--light};
   --pf-global--FontWeight--normal: #{$pf-global--FontWeight--normal};
   --pf-global--FontWeight--bold: #{$pf-global--FontWeight--bold};
 
@@ -282,24 +314,6 @@
   // A11y
   --pf-global--target-size--MinWidth: #{$pf-global--target-size--MinWidth};
   --pf-global--target-size--MinHeight: #{$pf-global--target-size--MinHeight};
-}
-
-// RedHatFont updated font overrides
-.pf-m-redhat-updated-font {
-  --pf-global--FontFamily--sans-serif: var(--pf-global--FontFamily--redhat-updated--sans-serif);
-  --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--redhat-updated--heading--sans-serif);
-}
-
-// RedHatMono font overrides
-.pf-m-redhatmono-font {
-  --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--redhat--monospace);
-}
-
-// RedHat variable font overrides
-.pf-m-redhatVF-font {
-  --pf-global--FontFamily--sans-serif: var(--pf-global--FontFamily--redhatVF--sans-serif);
-  --pf-global--FontFamily--heading--sans-serif: var(--pf-global--FontFamily--redhatVF--heading--sans-serif);
-  --pf-global--FontFamily--monospace: var(--pf-global--FontFamily--redhatVF--monospace);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

@@ -30,23 +30,23 @@
   @if $point == "" or not $point or $point == "base" {
     @content;
   } @else if $point == "sm" {
-    @media screen and (min-height: $pf-global--height-breakpoint--sm) {
+    @media screen and (min-height: $pf-global--breakpoint--height--sm) {
       @content;
     }
   } @else if $point == "md" {
-    @media screen and (min-height: $pf-global--height-breakpoint--md) {
+    @media screen and (min-height: $pf-global--breakpoint--height--md) {
       @content;
     }
   } @else if $point == "lg" {
-    @media screen and (min-height: $pf-global--height-breakpoint--lg) {
+    @media screen and (min-height: $pf-global--breakpoint--height--lg) {
       @content;
     }
   } @else if $point == "xl" {
-    @media screen and (min-height: $pf-global--height-breakpoint--xl) {
+    @media screen and (min-height: $pf-global--breakpoint--height--xl) {
       @content;
     }
   } @else if $point == "2xl" {
-    @media screen and (min-height: $pf-global--height-breakpoint--2xl) {
+    @media screen and (min-height: $pf-global--breakpoint--height--2xl) {
       @content;
     }
   }
@@ -70,7 +70,7 @@
 
 // non-responsive, base only                @include pf-utility-builder($sass-map)
 // responsive, including all breakpoints    @include pf-utility-builder($sass-map, $pf-global--breakpoint-list)
-// responsive height breakpoints            @include pf-utility-builder($sass-map, $pf-global--height-breakpoint-list, 'height')
+// responsive height breakpoints            @include pf-utility-builder($sass-map, $pf-global--breakpoint--height-list, 'height')
 
 // ## Passing individual utilities values
 // ===============================================================================================

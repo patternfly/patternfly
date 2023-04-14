@@ -22,10 +22,10 @@
 
   // item
   --pf-c-toggle-group__item--item--MarginLeft: calc(-1 * var(--pf-global--BorderWidth--sm));
-  --pf-c-toggle-group__item--first-child__button--BorderTopLeftRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-toggle-group__item--first-child__button--BorderBottomLeftRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-toggle-group__item--last-child__button--BorderTopRightRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-toggle-group__item--last-child__button--BorderBottomRightRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-toggle-group__item--first-child__button--BorderTopLeftRadius: var(--pf-global--BorderRadius--normal);
+  --pf-c-toggle-group__item--first-child__button--BorderBottomLeftRadius: var(--pf-global--BorderRadius--normal);
+  --pf-c-toggle-group__item--last-child__button--BorderTopRightRadius: var(--pf-global--BorderRadius--normal);
+  --pf-c-toggle-group__item--last-child__button--BorderBottomRightRadius: var(--pf-global--BorderRadius--normal);
 
   // icon
   --pf-c-toggle-group__icon--text--MarginLeft: var(--pf-global--spacer--sm);

@@ -5,6 +5,7 @@ $pf-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .pf-c-toolbar {
+  --pf-c-toolbar--inset: var(--pf-global--inset--page);
   --pf-c-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-toolbar--RowGap--base: var(--pf-global--spacer--lg); // row-gap between toolbar content elements
   --pf-c-toolbar--RowGap: var(--pf-c-toolbar--RowGap--base);
@@ -30,17 +31,13 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   // Content
   --pf-c-toolbar__content--Display: flex;
   --pf-c-toolbar__content--RowGap: var(--pf-c-toolbar--RowGap--base);
-  --pf-c-toolbar__content--PaddingRight: var(--pf-global--spacer--md); // remove at breaking change
-  --pf-c-toolbar__content--PaddingLeft: var(--pf-global--spacer--md); // remove at breaking change
+  --pf-c-toolbar__content--PaddingRight: var(--pf-c-toolbar--inset);
+  --pf-c-toolbar__content--PaddingLeft: var(--pf-c-toolbar--inset);
 
   // Content section
   --pf-c-toolbar__content-section--Display: flex;
   --pf-c-toolbar__content-section--AlignItems: baseline;
   --pf-c-toolbar__content-section--RowGap: var(--pf-c-toolbar--item--RowGap--base);
-
-  // Insets
-  --pf-c-toolbar--m-page-insets--inset: var(--pf-global--spacer--md); // make this the default inset at breaking change
-  --pf-c-toolbar--m-page-insets--xl--inset: var(--pf-global--spacer--lg); // make this the default inset at breaking change
 
   // Expandable content
   --pf-c-toolbar__expandable-content--Display: grid;
@@ -55,7 +52,7 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
   --pf-c-toolbar__expandable-content--BackgroundColor: var(--pf-c-toolbar--BackgroundColor);
 
   // Expanded
-  --pf-c-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--gutter--md);
+  --pf-c-toolbar__expandable-content--m-expanded--GridRowGap: var(--pf-global--gutter--grouped); // TODO: this changed from 24px to 16px (lg to md) - that ok?
 
   // Chip container
   --pf-c-toolbar__group--m-chip-container--MarginTop: calc(var(--pf-global--spacer--md) * -1);
@@ -130,21 +127,12 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
     --pf-c-toolbar__expandable-content--PaddingLeft: var(--pf-c-toolbar__expandable-content--lg--PaddingLeft);
   }
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-toolbar--m-page-insets--inset: var(--pf-c-toolbar--m-page-insets--xl--inset);
-  }
-
   position: relative;
   display: grid;
   row-gap: var(--pf-c-toolbar--RowGap);
   padding-top: var(--pf-c-toolbar--PaddingTop);
   padding-bottom: var(--pf-c-toolbar--PaddingBottom);
   background-color: var(--pf-c-toolbar--BackgroundColor);
-
-  &.pf-m-page-insets {
-    --pf-c-toolbar__content--PaddingRight: var(--pf-c-toolbar--m-page-insets--inset);
-    --pf-c-toolbar__content--PaddingLeft: var(--pf-c-toolbar--m-page-insets--inset);
-  }
 
   &.pf-m-sticky {
     position: sticky;
@@ -584,8 +572,6 @@ $pf-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl"
       @each $spacer, $spacer-value in $pf-c-toolbar--inset-map {
         &.pf-m-inset-#{$spacer}#{$breakpoint-name} {
           --pf-c-toolbar--inset: #{$spacer-value};
-          --pf-c-toolbar__content--PaddingRight: var(--pf-c-toolbar--inset);
-          --pf-c-toolbar__content--PaddingLeft: var(--pf-c-toolbar--inset);
         }
       }
     }

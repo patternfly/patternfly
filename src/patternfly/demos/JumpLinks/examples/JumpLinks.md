@@ -12,7 +12,7 @@ section: components
 {{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
     {{#> sidebar jump-links-template--id="jump-links-collapsed-mobile-example-jump-links"}}
-      {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
+      {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky"}}
         {{#> page-main-section page-main-section--modifier=reset}}
           {{#> jump-links jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md"}}
             {{> jump-links-header}}
@@ -37,7 +37,7 @@ section: components
 {{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
     {{#> sidebar jump-links-template--id="jump-links-vertical-expanded-mobile-example-jump-links"}}
-      {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
+      {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky"}}
         {{#> page-main-section page-main-section--modifier=reset}}
           {{#> jump-links jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expanded"}}
             {{> jump-links-header}}
@@ -62,7 +62,7 @@ section: components
 {{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
     {{#> sidebar jump-links-template--id="jump-links-vertical-toggle-text-mobile-example-jump-links"}}
-      {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky pf-m-gutter"}}
+      {{#> sidebar-panel sidebar-panel--modifier="pf-m-sticky"}}
         {{#> page-main-section page-main-section--modifier=reset}}
           {{#> jump-links jump-links--IsExpandable="true" jump-links--modifier="pf-m-vertical pf-m-non-expandable-on-md"}}
             {{> jump-links-header}}

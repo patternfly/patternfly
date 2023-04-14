@@ -50,7 +50,7 @@
 
   // Primary
   --pf-c-menu-toggle--m-primary--Color: var(--pf-global--Color--light-100);
-  --pf-c-menu-toggle--m-primary--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-menu-toggle--m-primary--BorderRadius: var(--pf-global--BorderRadius--normal);
   --pf-c-menu-toggle--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
   --pf-c-menu-toggle--m-primary--hover--BackgroundColor: var(--pf-global--primary-color--200);
   --pf-c-menu-toggle--m-primary--focus--BackgroundColor: var(--pf-global--primary-color--200);
@@ -60,7 +60,7 @@
 
   // Secondary
   --pf-c-menu-toggle--m-secondary--Color: var(--pf-global--primary-color--100);
-  --pf-c-menu-toggle--m-secondary--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-menu-toggle--m-secondary--BorderRadius: var(--pf-global--BorderRadius--normal);
   --pf-c-menu-toggle--m-secondary--BackgroundColor: transparent;
   --pf-c-menu-toggle--m-secondary--before--BorderWidth: var(--pf-global--BorderWidth--sm);
   --pf-c-menu-toggle--m-secondary--hover--before--BorderWidth: var(--pf-global--BorderWidth--md);
@@ -135,7 +135,7 @@
   --pf-c-menu-toggle--m-split-button--m-action--child--focus--after--BorderBottomColor: var(--pf-global--active-color--100);
   --pf-c-menu-toggle--m-split-button--m-action--child--active--after--BorderBottomWidth: var(--pf-global--BorderWidth--md);
   --pf-c-menu-toggle--m-split-button--m-action--child--active--after--BorderBottomColor: var(--pf-global--active-color--100);
-  --pf-c-menu-toggle--m-split-button--m-action--child--BorderRadius: var(--pf-global--BorderRadius--sm);
+  --pf-c-menu-toggle--m-split-button--m-action--child--BorderRadius: var(--pf-global--BorderRadius--normal);
 
   // Split button action, primary
   --pf-c-menu-toggle--m-split-button--m-action--m-primary--child--BackgroundColor: var(--pf-global--primary-color--100);
