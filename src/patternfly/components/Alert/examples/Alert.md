@@ -455,6 +455,18 @@ cssPrefix: pf-c-alert
 | `.pf-c-alert-group__item` | `<li>` | Creates an alert group item. **Required** |
 
 ### Toast alert group
+
+An alert group that includes the `.pf-m-toast` modifier becomes a toast alert group with unique positioning in the top-right corner of the window. `.pf-c-alert-group` is required to create a toast alert group.
+
+Every toast alert must include a close button to dismiss the alert.
+
+When toast alerts include a link or action, these elements are not announced as interactive elements by screen readers. Whenever you include a link or button, incorporate it into the message so that it’s clear to the user how to access the same contents or action without clicking the link or button directly in the toast. For example, if your toast alert displays a message “The build is complete. Go to the Builds page to download,” the screen reader user is given instructions on how to find their build for download.
+
+For sighted users, interactive elements can be included in this message in one of the following ways:
+
+- Using a link to the Builds page: "The build is complete. Go to the [Builds](#) page to download" using `<a href="#">Builds</a>`
+- Using a button to download: "The build is complete. Go to the Builds page to <button class="pf-c-button pf-m-link pf-m-inline" type="button">download</button>" using `<button class="pf-c-button pf-m-link pf-m-inline type="button">download</button>`
+
 ```hbs isFullscreen
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
   {{#> alert-item}}
@@ -514,30 +526,9 @@ cssPrefix: pf-c-alert
 {{/alert-group}}
 ```
 
-### Overview
-An alert group that includes the `.pf-m-toast` modifier becomes a toast alert group with unique positioning in the top-right corner of the window. `.pf-c-alert-group` is required to create a toast alert group.
-
-Every toast alert must include a close button to dismiss the alert.
-
-When toast alerts include a link or action, these elements are not announced as interactive elements by screen readers. Whenever you include a link or button, incorporate it into the message so that it’s clear to the user how to access the same contents or action without clicking the link or button directly in the toast. For example, if your toast alert displays a message “The build is complete. Go to the Builds page to download,” the screen reader user is given instructions on how to find their build for download.
-
-For sighted users, interactive elements can be included in this message in one of the following ways:
-
-- Using a link to the Builds page: “The build is complete. Go to the [Builds]() page to download” using `<a href="url">Builds</a>`
-- Using a button to download: “The build is complete. Go to the Builds page to [download]()" using `<button class="pf-c-button pf-m-link pf-m-inline type="button">download</button>`
-
 ## Documentation
 
-### Alert groups
-Alert groups are used to contain and align consecutive alerts. Groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
-
-### Alert group modifiers
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-m-toast`| `.pf-c-alert-group` | Applies toast alert styling to an alert group. |
-| `.pf-c-alert-group__overflow-button` | `<button>` | Applies overflow button styling to an alert group overflow button. |
-
-### Usage
+### Alert usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-alert` | `<div>` | Initiates the alert component. Always use with a status modifier class. **Required** |
@@ -558,3 +549,14 @@ Alert groups are used to contain and align consecutive alerts. Groups can either
 | `.pf-m-expandable` | `.pf-c-alert` | Applies expandable styles to the alert. |
 | `.pf-m-expanded` | `.pf-c-alert.pf-m-expandable` | Applies expanded styles to an expandable alert. |
 | `.pf-m-truncate` | `.pf-c-alert__title` | Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-c-alert__title--max-lines` (the default value is `1`). |
+
+### Alert group overview
+Alert groups are used to contain and align consecutive alerts. Groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
+
+### Alert group usage
+| Class | Applied to | Outcome |
+| -- | -- | -- |
+| `.pf-c-alert-group`| `<ul>` | Initiaites the alert group component. **Required** |
+| `.pf-c-alert-group__item`| `<li>` | Defines an alert group item. **Required** |
+| `.pf-c-alert-group__overflow-button` | `<button>` | Applies overflow button styling to an alert group overflow button. |
+| `.pf-m-toast`| `.pf-c-alert-group` | Applies toast alert styling to an alert group. |
