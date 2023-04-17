@@ -31,7 +31,7 @@ An inline spinner inherits its font-size, so its size will match the content aro
 
 ### Custom size
 ```hbs
-{{#> spinner  spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
+{{#> spinner spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
 ```
 
 ## Documentation
