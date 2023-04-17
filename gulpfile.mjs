@@ -90,9 +90,8 @@ export async function buildWebpack() {
   await docsFrameworkBuild('all', themeCLIOptions);
 }
 
-function startWebpackDevServer(cb) {
-  start(themeCLIOptions);
-  cb();
+async function startWebpackDevServer() {
+  await start(themeCLIOptions);
 }
 
 const buildSrc = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD));
