@@ -8,38 +8,10 @@ cssPrefix: pf-c-spinner
 
 ### Basic
 ```hbs
-{{#> spinner spinner--IsSvg="true"}}Loading...{{/spinner}}
-```
-
-### Sizes
-```hbs
-{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
-
-{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
-
-{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-lg"}}Loading...{{/spinner}}
-
-{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
-```
-
-### Inline
-An inline spinner inherits its font-size, so its size will match the content around it.
-
-```hbs isBeta
-{{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-inline"}}Loading...{{/spinner}}
-```
-
-### Custom size
-```hbs
-{{#> spinner spinner--IsSvg="true" spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
-```
-
-### Basic (legacy)
-```hbs
 {{#> spinner}}Loading...{{/spinner}}
 ```
 
-### Sizes (legacy)
+### Sizes
 ```hbs
 {{#> spinner spinner--modifier="pf-m-sm"}}Loading...{{/spinner}}
 
@@ -50,6 +22,17 @@ An inline spinner inherits its font-size, so its size will match the content aro
 {{#> spinner spinner--modifier="pf-m-xl"}}Loading...{{/spinner}}
 ```
 
+### Inline
+An inline spinner inherits its font-size, so its size will match the content around it.
+
+```hbs isBeta
+{{#> spinner spinner--modifier="pf-m-inline"}}Loading...{{/spinner}}
+```
+
+### Custom size
+```hbs
+{{#> spinner spinner--attribute='style="--pf-c-spinner--diameter: 80px;"'}}Loading...{{/spinner}}
+```
 
 ## Documentation
 ### Accessibility
@@ -70,14 +53,6 @@ Note: A [live region](https://developer.mozilla.org/en-US/docs/Web/Accessibility
 | `.pf-c-spinner` | `<svg>` |  Creates a spinner component. The default is an extra large spinner. **Required**|
 | `.pf-c-spinner__path` | `<circle>` |  Creates a spinner circle component. **Required**|
 | `--pf-c-spinner--diameter` | `.pf-c-spinner` | Modifies the value for `--pf-c-spinner--diameter` declaration. |
-
-### Usage (legacy)
-| Class | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-spinner` | `<span>` |  Creates a spinner component. The default is an extra large spinner. **Required**|
-| `.pf-c-spinner__clipper` | `<span>` |  Creates the spinning line. **Required**|
-| `.pf-c-spinner__lead-ball` | `<span>` |  Rounds out the beginning of the spinning line. **Required**|
-| `.pf-c-spinner__tail-ball` | `<span>` |  Rounds out the end of the spinning line. **Required**|
 
 ### Modifiers
 | Class | Applied to | Outcome |

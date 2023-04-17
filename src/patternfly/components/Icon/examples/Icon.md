@@ -182,7 +182,7 @@ Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
     <i class="fas fa-check-circle" aria-hidden="true"></i>
   {{/icon-content}}
   {{#> icon-progress}}
-    {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
+    {{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
   {{/icon-progress}}
 {{/icon}}
 
@@ -191,7 +191,7 @@ Inline with size specified: {{#> icon icon--modifier="pf-m-sm pf-m-inline"}}
     <i class="fas fa-check-circle" aria-hidden="true"></i>
   {{/icon-content}}
   {{#> icon-progress}}
-    {{#> spinner spinner--IsSvg="true" spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
+    {{#> spinner spinner--modifier="pf-m-md"}}Loading...{{/spinner}}
   {{/icon-progress}}
 {{/icon}}
 ```
