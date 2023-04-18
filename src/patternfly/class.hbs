@@ -1,0 +1,65 @@
+{{!-- {{log this}} --}}
+
+{{setVariable 'local--class' class--name}}
+{{setVariable 'local--modifier' (concat @root.local--class '--modifier')}}
+{{log @root }}
+{{log this.data.root.local--modifier }}
+{{!-- options={{options }}
+options={{@root }} --}}
+{{!-- {{log (getVariable local--modifier) }} --}}
+{{!-- local--class={{ log @root.local--class }}
+local--modifier={{ log @root.local--modifier }}
+{{ log data }} --}}
+
+{{!-- {{setVariable 'mod' (concat (getVariable local--class) '--modifier')}} --}}
+{{!-- {{setVariable comp--mod @root.local--mod}} --}}
+{{!-- {{log (getVariable @root.local--mod)}} --}}
+
+
+
+{{!-- {{setVariable 'versioned--class' (concat (pfv) local--class)}}
+{{#if class--version}}
+  {{setVariable 'pfv' (concat (pfv) class--version)}}
+{{else}}
+  {{setVariable 'pfv' (pfv)}}
+{{/if}} --}}
+
+
+{{!-- local--value={{getVariable 'local--mod'}} --}}
+{{!--   {{options.data.local--mod}} --}}
+
+{{!-- {{ log local--mod local--class }}
+{{ log options }} --}}
+{{!-- {{this[(concat class--name '--modifier')]}} --}}
+{{!-- {{@root.local--mod}}
+{{@root.versioned--class}} --}}
+
+
+{{!-- local--mod={{local--mod}}
+comp--mod={{comp--mod}} --}}
+
+{{!-- {{@root.local--mod}} --}}
+{{!-- {{@root.local--mod}} --}}
+{{!-- {{this.test--version}} --}}
+
+{{!-- {{setVariable 'class--modifier' class--modifier}} --}}
+{{!-- {{setVariable 'local--class' class--name}} --}}
+{{!-- {{setVariable 'local--class' component--class}} --}}
+
+{{!-- {{setVariable (concat @root.local--class '--modifier') class--modifier}} --}}
+
+{{!-- {{log @root.class--modifier}} --}}
+
+
+
+
+{{!-- local--class={{@root.local--class}}
+versioned--class={{@root.versioned--class}}
+pfv={{@root.pfv}}
+class--modifier={{@root.class--modifier}} --}}
+{{!-- {{concat 'local--class' '--modifier'}}
+{{getVariable 'test--modifier'}} --}}
+
+
+{{!-- class="{{class--name}}  {{@root.versioned--class}}{{#if local--mod}} {{local--mod}}{{/if}}" --}}
+class="pf-v-{{class--name}}{{#if class--mod}} {{class--mod}}{{/if}}"

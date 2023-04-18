@@ -1,7 +1,7 @@
 ---
 id: 'Icon'
 section: components
-cssPrefix: pf-v5-c-icon
+cssPrefix: pf-v5-icon
 ---
 
 ## Examples
@@ -205,11 +205,11 @@ Refer to the [icons](/guidelines/icons) page for information about the PatternFl
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-icon` | `<span>`, `<div>` | Initiates an icon component. **Required**  |
-| `.pf-v5-c-icon__content` | `<span>`, `<div>` | Initiates the icon content. **Required**  |
-| `.pf-v5-c-icon__progress` | `<span>`, `<div>` | Initiates a container for a progress spinner.  |
-| `.pf-m-inline` | `.pf-v5-c-icon` | Displays the icon inline with text, and allows the icon to inherit the size and color of the parent. |
-| `.pf-m-[sm,md,lg,xl]` | `.pf-v5-c-icon` | Modifies the icon container to be small, medium, large, or extra large. |
-| `.pf-m-[sm,md,lg,xl]` | `.pf-v5-c-icon__content`, `pf-v5-c-icon__progress` | Modifies the icon content or progress element to be small, medium, large, or extra large. |
-| `.pf-m-in-progress` | `.pf-v5-c-icon` | Shows the progress element in place of the icon content.  |
-| `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-custom`  | `.pf-v5-c-icon__content` | Modifies the icon content to use a status color.  |
+| `.pf-v5-icon` | `<span>`, `<div>` | Initiates an icon component. **Required**  |
+| `.pf-v5-icon__content` | `<span>`, `<div>` | Initiates the icon content. **Required**  |
+| `.pf-v5-icon__progress` | `<span>`, `<div>` | Initiates a container for a progress spinner.  |
+| `.pf-m-inline` | `.pf-v5-icon` | Displays the icon inline with text, and allows the icon to inherit the size and color of the parent. |
+| `.pf-m-[sm,md,lg,xl]` | `.pf-v5-icon` | Modifies the icon container to be small, medium, large, or extra large. |
+| `.pf-m-[sm,md,lg,xl]` | `.pf-v5-icon__content`, `pf-v5-icon__progress` | Modifies the icon content or progress element to be small, medium, large, or extra large. |
+| `.pf-m-in-progress` | `.pf-v5-icon` | Shows the progress element in place of the icon content.  |
+| `.pf-m-danger`, `.pf-m-warning`, `.pf-m-success`, `.pf-m-info`, `.pf-m-custom`  | `.pf-v5-icon__content` | Modifies the icon content to use a status color.  |

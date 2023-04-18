@@ -1,0 +1,26 @@
+// Component variables follow this formula:
+// --#{$test-demo}__element--modifier--state--PropertyCamelCase
+// @debug $test-demo; // check your variable names located in src/patternfly/sass-utilities/component-namespaces
+
+.#{$test-demo} {
+  // Example block variable
+  --#{$test-demo}--Color: var(--#{$pf-global}--Color--dark);
+
+  // Example modifier variable
+  --#{$test-demo}--m-danger--BackgroundColor: var(--#{$pf-global}--danger-color);
+
+  // Example element variable
+  --#{$test-demo}__element--FontSize: var(--#{$pf-global}--FontSize--2xl);
+
+  color: var(--#{$test-demo}--Color);
+
+  // Modifier
+  &.pf-m-danger {
+    background-color: var(--#{$test-demo}--m-danger--BackgroundColor);
+  }
+}
+
+// Element
+.#{$test-demo}__element {
+  font-size: var(--#{$test-demo}__element--FontSize);
+}

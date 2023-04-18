@@ -49,7 +49,7 @@
   --#{$notification-badge}__count--MarginLeft: var(--#{$pf-global}--spacer--xs);
 
   // Attention icon
-  --#{$notification-badge}--pf-v5-icon-attention-bell--LineHeight: var(--#{$pf-global}--LineHeight--sm);
+  --#{$notification-badge}--pf-v5-c-icon-attention-bell--LineHeight: var(--#{$pf-global}--LineHeight--sm);
 
   position: relative;
   display: inline-block;
@@ -85,7 +85,7 @@
   .#{$icon}-attention-bell,
   .#{$icon}-bell {
     display: inline-block;
-    line-height: var(--#{$notification-badge}--pf-v5-icon-attention-bell--LineHeight);
+    line-height: var(--#{$notification-badge}--pf-v5-c-icon-attention-bell--LineHeight);
 
     &::before {
       vertical-align: bottom;

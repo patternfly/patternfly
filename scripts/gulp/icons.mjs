@@ -72,7 +72,7 @@ export function pfIconFont() {
         path: path.join(__dirname, 'icons_template.scss'),
         targetPath: 'pficon.scss',
         fontPath: './',
-        cssClass: 'pf-v5-c-icon',
+        cssClass: 'pf-v5-icon',
         // Assign next available unicode (for new icons)
         firstGlyph: nextUnicodeHex,
         // Reference saved unicodes (for existing icons)

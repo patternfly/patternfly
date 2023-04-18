@@ -1,0 +1,4 @@
+@import url("https://unpkg.com/@patternfly/patternfly@4.224.4/patternfly-no-reset.css");
+@import url("https://unpkg.com/@patternfly/patternfly@4.224.4/patternfly-addons.css");
+
+.pf-v5-c-card {}

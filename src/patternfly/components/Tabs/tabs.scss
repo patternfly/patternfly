@@ -696,11 +696,11 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   display: flex;
 
   .#{$button} {
-    --#{button}--FontSize: var(--#{$tabs}__item-action--c-button--FontSize);
-    --#{button}--PaddingTop: var(--#{$tabs}__item-action--c-button--PaddingTop);
-    --#{button}--PaddingRight: var(--#{$tabs}__item-action--c-button--PaddingRight);
-    --#{button}--PaddingBottom: var(--#{$tabs}__item-action--c-button--PaddingBottom);
-    --#{button}--PaddingLeft: var(--#{$tabs}__item-action--c-button--PaddingLeft);
+    --#{$button}--FontSize: var(--#{$tabs}__item-action--c-button--FontSize);
+    --#{$button}--PaddingTop: var(--#{$tabs}__item-action--c-button--PaddingTop);
+    --#{$button}--PaddingRight: var(--#{$tabs}__item-action--c-button--PaddingRight);
+    --#{$button}--PaddingBottom: var(--#{$tabs}__item-action--c-button--PaddingBottom);
+    --#{$button}--PaddingLeft: var(--#{$tabs}__item-action--c-button--PaddingLeft);
 
     outline-offset: var(--#{$tabs}__item-action--c-button--OutlineOffset);
   }
@@ -767,9 +767,9 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   }
 
   .#{$button} {
-    --#{button}--FontSize: var(--#{$tabs}__add--c-button--FontSize);
-    --#{button}--PaddingTop: var(--#{$tabs}__add--c-button--PaddingTop);
-    --#{button}--PaddingBottom: var(--#{$tabs}__add--c-button--PaddingBottom);
+    --#{$button}--FontSize: var(--#{$tabs}__add--c-button--FontSize);
+    --#{$button}--PaddingTop: var(--#{$tabs}__add--c-button--PaddingTop);
+    --#{$button}--PaddingBottom: var(--#{$tabs}__add--c-button--PaddingBottom);
 
     outline-offset: var(--#{$tabs}__add--c-button--OutlineOffset);
   }

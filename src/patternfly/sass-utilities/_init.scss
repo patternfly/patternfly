@@ -1,3 +1,4 @@
+// stylelint-disable scss/dollar-variable-pattern
 $version-root: 5 !default;
 
 // Patternfly options
@@ -9,3 +10,4 @@ $pf-prefix: #{$pf-global--namespace} + #{$pf-global--version} !default;
 
 // Global variable, namespace prefix and version
 $pf-global: #{$pf-prefix} + '-global' !default;
+// stylelint-enable

@@ -14,12 +14,12 @@ root{{@root.version}} --}}
 
 {{!-- {{assignVar 'class--name' 'card'}} --}}
 
-<div
-  {{#if card--attribute}}
-    {{{card--attribute}}}
+<div {{> class class--name='test'}}
+  {{#if test--attribute}}
+    {{{test--attribute}}}
   {{/if}}
-  {{#if card--id}}
-    id="{{{card--id}}}"
+  {{#if test--id}}
+    id="{{{test--id}}}"
   {{/if}}>
   {{> @partial-block}}
 </div>

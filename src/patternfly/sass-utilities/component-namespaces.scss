@@ -123,7 +123,7 @@ $helper-text: #{$pf-prefix} + 'c-helper-text';
 $hint: #{$pf-prefix} + 'c-hint';
 
 // Icon
-$icon: #{$pf-prefix} + 'c-icon';
+$icon: #{$pf-prefix} + 'icon';
 
 // Inline Edit
 $inline-edit: #{$pf-prefix} + 'c-inline-edit';
@@ -244,6 +244,9 @@ $table: #{$pf-prefix} + 'c-table';
 
 // Tabs
 $tabs: #{$pf-prefix} + 'c-tabs';
+
+// Text Input Group
+$test-demo: #{$pf-prefix} + 'c-test-demo';
 
 // Text Input Group
 $text-input-group: #{$pf-prefix} + 'c-text-input-group';
