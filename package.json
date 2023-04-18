@@ -46,7 +46,7 @@
     "@patternfly/patternfly-a11y": "4.3.1",
     "@patternfly/react-code-editor": "5.0.0-alpha.54",
     "@patternfly/react-core": "5.0.0-alpha.53",
-    "@patternfly/react-table": "5.0.0-alpha.54",
+    "@patternfly/react-table": "5.0.0-alpha.74",
     "@starptech/prettyhtml": "^0.10.0",
     "cheerio": "^1.0.0-rc.12",
     "commander": "^10.0.0",
