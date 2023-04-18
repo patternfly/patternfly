@@ -445,15 +445,6 @@ cssPrefix: pf-c-alert
 {{/alert-group}}
 ```
 
-### Overview
-`.pf-c-alert-group` is optional when only one alert is needed. It becomes required when more than one alert is used in a list.
-
-### Usage
-| Attribute | Applied to | Outcome |
-| -- | -- | -- |
-| `.pf-c-alert-group` | `<ul>` | Creates an alert group component. **Required** |
-| `.pf-c-alert-group__item` | `<li>` | Creates an alert group item. **Required** |
-
 ### Toast alert group
 
 An alert group that includes the `.pf-m-toast` modifier becomes a toast alert group with unique positioning in the top-right corner of the window. `.pf-c-alert-group` is required to create a toast alert group.
@@ -551,12 +542,12 @@ For sighted users, interactive elements can be included in this message in one o
 | `.pf-m-truncate` | `.pf-c-alert__title` | Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-c-alert__title--max-lines` (the default value is `1`). |
 
 ### Alert group overview
-Alert groups are used to contain and align consecutive alerts. Groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
+The alert component is used to contain and align consecutive alerts. It is optional when only one alert is needed. It becomes required when more than one alert is used in a list. Alert groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
 
 ### Alert group usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-alert-group`| `<ul>` | Initiaites the alert group component. **Required** |
-| `.pf-c-alert-group__item`| `<li>` | Defines an alert group item. **Required** |
+| `.pf-c-alert-group` | `<ul>` | Creates an alert group component. **Required** |
+| `.pf-c-alert-group__item` | `<li>` | Creates an alert group item. **Required** |
 | `.pf-c-alert-group__overflow-button` | `<button>` | Applies overflow button styling to an alert group overflow button. |
 | `.pf-m-toast`| `.pf-c-alert-group` | Applies toast alert styling to an alert group. |
