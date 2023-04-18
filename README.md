@@ -5,7 +5,7 @@
 - This assumes an environment is already set up for npm packages - if not, please use npm init following the steps at [https://docs.npmjs.com/getting-started/using-a-package.json](https://docs.npmjs.com/getting-started/using-a-package.json).
 - run `npm install @patternfly/patternfly --save`
 
-When you install PatternFly 4, the package includes:
+When you install PatternFly 5, the package includes:
 
 - a single file for the entire compiled library: `node_modules/@patternfly/patternfly/patternfly.css`
 - individual files with each component compiled separately: `node_modules/@patternfly/patternfly/<ComponentName>/styles.css`
@@ -16,9 +16,9 @@ Any of the files above are meant for use in consuming the library. The recommend
 
 ## Development
 
-**PatternFly 5 Development requires Node v12.0.0 or greater**
+**PatternFly 5 Development requires Node v16.0.0 or greater**
 
-To setup the PatternFly 4 development environment:
+To setup the PatternFly 5 development environment:
 
 - clone the project
 - run `yarn install` from the project root
@@ -106,7 +106,7 @@ If you have any suggestions about ways that we can improve how we use this tool,
 [How do I use CSS variables to customize the library?](https://pf4.patternfly.org/guidelines#variables)
 
 #### Browser support
-PatternFly 4 is supported on the latest two major versions of the following browsers:
+PatternFly 5 is supported on the latest two major versions of the following browsers:
 
 - Chrome
 - Firefox

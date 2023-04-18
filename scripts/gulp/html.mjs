@@ -148,18 +148,20 @@ function onHBSChange(file) {
   glob.sync(mdGlob).forEach(mdFile => onMDChange(mdFile));
 }
 
-export function watchHBS(hbsFiles) {
+export function watchHBS(hbsFiles, cb) {
   const watcher = watch(hbsFiles, { delay: 0 });
 
   watcher.on('change', onHBSChange);
   watcher.on('add', onHBSChange);
+  cb();
 }
 
-export function watchMD(mdFiles) {
+export function watchMD(mdFiles, cb) {
   const watcher = watch(mdFiles, { delay: 0 });
 
   watcher.on('change', onMDChange);
   watcher.on('add', onMDChange);
+  cb();
 }
 
 // Helper which allows a booleans value to be inversed, similar to how notting a variable with ! works in regular JS

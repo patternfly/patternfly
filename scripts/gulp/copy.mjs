@@ -42,8 +42,9 @@ export function copyDocs() {
   return src(docFiles).pipe(dest('dist/docs'));
 }
 
-export function watchCopyDocs() {
+export function watchCopyDocs(cb) {
   const watcher = watch(docFiles, { delay: 0 });
   watcher.on('change', copyDocs);
   watcher.on('add', copyDocs);
+  cb();
 }
