@@ -1972,14 +1972,14 @@
     puppeteer-cluster "^0.23.0"
     xmldoc "^1.1.2"
 
-"@patternfly/react-code-editor@5.0.0-alpha.54":
-  version "5.0.0-alpha.54"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-5.0.0-alpha.54.tgz#45f1d6b11ab08506cfd31afe3a29eeb39f896824"
-  integrity sha512-W/abnUH430TeDnU9bTZrLOQpO7EkWHAvuWBOoq1T+6eR+ac1WGu46cPenMhnVsU9UgptmxwZk+aA6EQYqPL+TA==
+"@patternfly/react-code-editor@5.0.0-alpha.73":
+  version "5.0.0-alpha.73"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-code-editor/-/react-code-editor-5.0.0-alpha.73.tgz#b44abe75df721b708a9061d5184331343b5a45bf"
+  integrity sha512-cbk/OsmL4zCAP79I7UV/aV0We3qq3GoSIUYcDZooVmaqADj5T0eCYc/tHrm/BQiWfEymK4SdTxeGfZk1kA2Ahw==
   dependencies:
-    "@patternfly/react-core" "^5.0.0-alpha.53"
-    "@patternfly/react-icons" "^5.0.0-alpha.8"
-    "@patternfly/react-styles" "^5.0.0-alpha.6"
+    "@patternfly/react-core" "^5.0.0-alpha.72"
+    "@patternfly/react-icons" "^5.0.0-alpha.10"
+    "@patternfly/react-styles" "^5.0.0-alpha.7"
     react-dropzone "14.2.3"
     tslib "^2.5.0"
 
@@ -1989,18 +1989,6 @@
   integrity sha512-4fqwJxMBWSakfvi1e4V7PeQufoThm+MP1+rfWgAaLP/QGnX0ocfRkzd+zPMDdeOmAzaAuii7txBkXpS6bgVuTg==
   dependencies:
     "@patternfly/react-icons" "^5.0.0-alpha.8"
-    "@patternfly/react-styles" "^5.0.0-alpha.6"
-    "@patternfly/react-tokens" "^5.0.0-alpha.6"
-    focus-trap "7.4.0"
-    react-dropzone "^14.2.3"
-    tslib "^2.5.0"
-
-"@patternfly/react-core@^5.0.0-alpha.53":
-  version "5.0.0-alpha.63"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-alpha.63.tgz#f50a9f6808647d11c8c0f5d1bf99f16068b4d408"
-  integrity sha512-PdbQFUOz2j0VS2eLJfN+qGBzQahC3KklEzkp1u1gSc+EDD6s0wu2vjmeBozfWcs6cwJfDIRzcgA4sLaWMUKrpA==
-  dependencies:
-    "@patternfly/react-icons" "^5.0.0-alpha.10"
     "@patternfly/react-styles" "^5.0.0-alpha.6"
     "@patternfly/react-tokens" "^5.0.0-alpha.6"
     focus-trap "7.4.0"
