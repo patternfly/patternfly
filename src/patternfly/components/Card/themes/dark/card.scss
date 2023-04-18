@@ -3,12 +3,12 @@
 @mixin pf-v5-theme-dark-card() {
   .#{$card},
   .#{$card}.pf-m-non-selectable-raised {
-    -#{$card}--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
+    --#{$card}--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
 
     // Hoverable/selectable raised
-    -#{$card}--m-hoverable-raised--hover--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
-    -#{$card}--m-selectable-raised--hover--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
-    -#{$card}--m-selectable-raised--focus--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
-    -#{$card}--m-selectable-raised--active--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
+    --#{$card}--m-hoverable-raised--hover--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
+    --#{$card}--m-selectable-raised--hover--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
+    --#{$card}--m-selectable-raised--focus--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
+    --#{$card}--m-selectable-raised--active--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
   }
 }

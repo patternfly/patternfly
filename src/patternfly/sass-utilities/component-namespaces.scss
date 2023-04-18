@@ -123,7 +123,7 @@ $helper-text: #{$pf-prefix} + 'c-helper-text';
 $hint: #{$pf-prefix} + 'c-hint';
 
 // Icon
-$icon: #{$pf-prefix} + 'icon';
+$icon: #{$pf-prefix} + 'c-icon';
 
 // Inline Edit
 $inline-edit: #{$pf-prefix} + 'c-inline-edit';
@@ -214,6 +214,12 @@ $sidebar: #{$pf-prefix} + 'c-sidebar';
 
 // Simple List
 $simple-list: #{$pf-prefix} + 'c-simple-list';
+
+// Scroll Inner Wrapper
+$scroll-inner-wrapper: #{$pf-prefix} + 'c-scroll-inner-wrapper';
+
+// Scroll Outer Wrapper
+$scroll-outer-wrapper: #{$pf-prefix} + 'c-scroll-outer-wrapper';
 
 // Skeleton
 $skeleton: #{$pf-prefix} + 'c-skeleton';

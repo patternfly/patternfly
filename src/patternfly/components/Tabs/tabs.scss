@@ -305,7 +305,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     }
 
     .#{$tabs}__item-action .#{$button} {
-      --#{button}--m-plain--disabled--Color: var(--#{$tabs}--m-box__item-action--c-button--disabled--BackgroundColor);
+      --#{$button}--m-plain--disabled--Color: var(--#{$tabs}--m-box__item-action--c-button--disabled--BackgroundColor);
     }
   }
 

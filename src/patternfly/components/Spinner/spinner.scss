@@ -42,11 +42,11 @@
 }
 
 // stylelint-disable selector-no-qualifying-type
-svg.pf-c-spinner {
-  --pf-c-spinner--diameter: var(--pf-global--icon--FontSize--xl);
-  --pf-c-spinner--AnimationDuration: 1.4s;
-  --pf-c-spinner--AnimationTimingFunction: linear;
-  --pf-c-spinner--stroke-width: 10;
+svg.#{$spinner} {
+  --#{$spinner}--diameter: var(--#{$pf-global}--icon--FontSize--xl);
+  --#{$spinner}--AnimationDuration: 1.4s;
+  --#{$spinner}--AnimationTimingFunction: linear;
+  --#{$spinner}--stroke-width: 10;
 
   // path
   --#{$spinner}__path--Stroke: var(--#{$spinner}--Color);

@@ -563,7 +563,7 @@
   // Limit shadow to a child of modal and main-wizard since we can ensure wizard footer is fixed in those usages
   // Make a regular style in a breaking change release
   .#{$page}__main-wizard &,
-  .#{modal-box} &,
+  .#{$modal-box} &,
   .#{$drawer} > & {
     box-shadow: var(--#{$wizard}__footer--BoxShadow);
   }

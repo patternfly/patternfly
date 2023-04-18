@@ -2,8 +2,8 @@
 
 @mixin pf-v5-theme-dark-tabs() {
   .#{$tabs} {
-    --#{tabs}__scroll-button--BackgroundColor: transparent;
-    --#{tabs}__link--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
-    --#{tabs}--m-color-scheme--light-300__link--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+    --#{$tabs}__scroll-button--BackgroundColor: transparent;
+    --#{$tabs}__link--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+    --#{$tabs}--m-color-scheme--light-300__link--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
   }
 }

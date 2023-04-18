@@ -46,19 +46,19 @@
   }
 }
 
-.#{$pf-prefix}scroll-outer-wrapper {
-  --#{$pf-prefix}scroll-outer-wrapper--MinHeight: #{pf-size-prem(400px)};
-  --#{$pf-prefix}scroll-outer-wrapper--MaxHeight: 100%;
+.#{$scroll-outer-wrapper} {
+  --#{$scroll-outer-wrapper}--MinHeight: #{pf-size-prem(400px)};
+  --#{$scroll-outer-wrapper}--MaxHeight: 100%;
 
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  min-height: var(--#{$pf-prefix}scroll-outer-wrapper--MinHeight);
-  max-height: var(--#{$pf-prefix}scroll-outer-wrapper--MaxHeight);
+  min-height: var(--#{$scroll-outer-wrapper}--MinHeight);
+  max-height: var(--#{$scroll-outer-wrapper}--MaxHeight);
   overflow: hidden;
 }
 
-.#{$pf-prefix}scroll-inner-wrapper {
+.#{$scroll-inner-wrapper} {
   display: flex;
   flex-direction: column;
   max-width: 100%;
