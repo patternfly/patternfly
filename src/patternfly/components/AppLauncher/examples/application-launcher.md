@@ -211,7 +211,7 @@ import './application-launcher.css'
 {{#> app-launcher app-launcher--id="app-launcher-favorites" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-menu-search}}
-      {{> search-input}}
+      {{> text-input-group--search-input text-input-group-text-input--aria-label="Filter applications" text-input-group-text-input--placeholder="Search"}}
     {{/app-launcher-menu-search}}
     {{#> app-launcher-group}}
       {{#> app-launcher-group-title}}

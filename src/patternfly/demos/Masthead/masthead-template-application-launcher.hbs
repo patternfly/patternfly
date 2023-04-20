@@ -1,7 +1,7 @@
 {{#> app-launcher app-launcher--id=(concat masthead--id '-application-launcher') app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu app-launcher-menu--modifier="pf-m-align-right"}}
     {{#> app-launcher-menu-search}}
-      {{> search-input search-input--placeholder="Filter by name"}}
+      {{> text-input-group--search-input text-input-group-text-input--aria-label="Search input" text-input-group-text-input--placeholder="Filer by name"}}
     {{/app-launcher-menu-search}}
     {{#> app-launcher-group}}
       {{#> app-launcher-group-title}}

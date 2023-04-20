@@ -1729,7 +1729,7 @@ import './Menu.css'
 {{#> menu menu--id="plain-with-search-and-footer-example" menu--modifier="pf-m-plain"}}
   {{#> menu-search}}
     {{#> menu-search-input}}
-      {{> search-input}}
+      {{> menu--search-input}}
     {{/menu-search-input}}
   {{/menu-search}}
   {{> divider}}
@@ -1749,7 +1749,7 @@ import './Menu.css'
 {{#> menu menu--id="plain-scrollable-with-search-and-footer-example" menu--modifier="pf-m-plain pf-m-scrollable"}}
   {{#> menu-search}}
     {{#> menu-search-input}}
-      {{> search-input}}
+      {{> menu--search-input}}
     {{/menu-search-input}}
   {{/menu-search}}
   {{> divider}}
