@@ -62,7 +62,7 @@
         "after-dollar-variable"
       ]
     }],
-    "scss/dollar-variable-pattern": ["^pf-", {"ignore": "local"}],
+    "scss/dollar-variable-pattern": ["^pf-v5-", {"ignore": "local"}],
     "scss/double-slash-comment-empty-line-before": ["always", {
       "except": ["first-nested"],
       "ignore": [

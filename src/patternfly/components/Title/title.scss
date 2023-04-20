@@ -1,7 +1,7 @@
 // @debug $title; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 .#{$title} {
-  --#{$title}--FontFamily: var(--#{$pf-global}--FontFamily--heading--sans-serif);
+  --#{$title}--FontFamily: var(--#{$pf-global}--FontFamily--heading);
 
   // 4xl
   --#{$title}--m-4xl--LineHeight: var(--#{$pf-global}--LineHeight--sm);

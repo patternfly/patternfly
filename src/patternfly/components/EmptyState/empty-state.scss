@@ -25,7 +25,7 @@
   --#{$empty-state}--m-xl__icon--FontSize: #{pf-size-prem(100px)};
 
   // Title text
-  --#{$empty-state}__title-text--FontFamily: var(--#{$pf-global}--FontFamily--heading--sans-serif);
+  --#{$empty-state}__title-text--FontFamily: var(--#{$pf-global}--FontFamily--heading);
   --#{$empty-state}__title-text--FontSize: var(--#{$pf-global}--FontSize--xl);
   --#{$empty-state}__title-text--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$empty-state}__title-text--LineHeight: var(--#{$pf-global}--LineHeight--md);
