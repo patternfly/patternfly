@@ -404,7 +404,10 @@ cssPrefix: pf-c-alert
 ```
 
 ## Alert group examples
+
 ### Static alert group
+An alert group is optional when only one static alert is needed. It becomes required when more than one alert is used in a list.
+
 ```hbs
 {{#> alert-group}}
   {{#> alert-item}}
@@ -446,8 +449,7 @@ cssPrefix: pf-c-alert
 ```
 
 ### Toast alert group
-
-An alert group that includes the `.pf-m-toast` modifier becomes a toast alert group with unique positioning in the top-right corner of the window. `.pf-c-alert-group` is required to create a toast alert group.
+An alert group is required to display toast alerts. An alert group that includes the `.pf-m-toast` modifier becomes a toast alert group with unique positioning in the top-right corner of the window.
 
 Every toast alert must include a close button to dismiss the alert.
 
@@ -519,6 +521,9 @@ For sighted users, interactive elements can be included in this message in one o
 
 ## Documentation
 
+### Alert overview
+Add a modifier class to the default alert to change the color: `.pf-m-success`, `.pf-m-danger`, `.pf-m-warning`, or `.pf-m-info`.
+
 ### Alert usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
@@ -542,7 +547,7 @@ For sighted users, interactive elements can be included in this message in one o
 | `.pf-m-truncate` | `.pf-c-alert__title` | Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-c-alert__title--max-lines` (the default value is `1`). |
 
 ### Alert group overview
-The alert component is used to contain and align consecutive alerts. It is optional when only one alert is needed. It becomes required when more than one alert is used in a list. Alert groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
+The alert component is used to contain and align consecutive alerts.  Alert groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
 
 ### Alert group usage
 | Class | Applied to | Outcome |
