@@ -1,6 +1,7 @@
 ---
 id: 'Context selector'
 section: components
+subsection: menus
 ---
 
 ## Examples

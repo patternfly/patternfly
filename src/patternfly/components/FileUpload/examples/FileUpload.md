@@ -1,5 +1,5 @@
 ---
-id: Text file upload
+id: Simple file upload
 section: components
 subsection: file-upload
 cssPrefix: pf-c-file-upload
