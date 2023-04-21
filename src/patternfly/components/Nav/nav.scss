@@ -28,6 +28,10 @@
   --#{$nav}--m-light__subnav__link--active--after--BorderColor: var(--#{$pf-global}--BorderColor--dark-100);
   --#{$nav}--m-light__subnav__link--m-current--after--BorderColor: var(--#{$pf-global}--active-color--100);
 
+  // List
+  --#{$nav}__list--PaddingTop: var(--pf-global--spacer--sm);
+  --#{$nav}__list--PaddingBottom: var(--pf-global--spacer--md);
+
   // Item
   --#{$nav}__item--MarginTop: 0;
   --#{$nav}__item--m-current--not--m-expanded__link--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-400);
@@ -524,6 +528,9 @@
     overflow: hidden;
 
     .#{$nav}__list {
+      --#{$nav}__list--PaddingTop: 0;
+      --#{$nav}__list--PaddingBottom: 0;
+      
       flex: 1;
       max-width: 100%;
       overflow-x: auto;
@@ -731,13 +738,14 @@
 .#{$nav}__list {
   position: relative;
   display: block;
+  padding-top: var(--#{$nav}__list--PaddingTop);
+  padding-bottom: var(--#{$nav}__list--PaddingBottom);
 }
 
 // Borders
 .#{$nav}__item {
   position: relative;
-  margin-top: var(--#{$nav}__item--MarginTop);
-
+  
   &.pf-m-expandable {
     --#{$nav}__link--before--BorderBottomWidth: 0;
 
@@ -751,6 +759,10 @@
     }
   }
 
+  &:not(:first-child) {
+    margin-top: var(--#{$nav}__item--MarginTop);
+  }
+  
   .#{$nav}__item {
     &:not(.pf-m-expanded) .#{$nav}__toggle-icon {
       transform: rotate(0);
@@ -1000,7 +1012,6 @@
   --#{$nav}--c-divider--PaddingLeft: var(--#{$nav}__subnav--c-divider--PaddingLeft);
 
   max-height: var(--#{$nav}__subnav--MaxHeight);
-  padding-bottom: var(--#{$nav}__subnav--PaddingBottom);
   padding-left: var(--#{$nav}__subnav--PaddingLeft);
   transition: var(--#{$nav}--Transition);
 
