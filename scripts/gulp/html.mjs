@@ -25,8 +25,14 @@ hbsInstance.registerHelper('removeWhiteSpaceForPrettier', () => {
   return 'removeWhiteSpaceForPrettier';
 })
 
-hbsInstance.registerHelper('ifEquals', (arg1, arg2, options) => {
-  return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
+hbsInstance.registerHelper('ifEquals', function () {
+  const args = Array.prototype.slice.call(arguments, 0, -1);
+  const options = arguments[arguments.length - 1];
+  const allEqual = args.every(function (expression) {
+    return args[0] === expression;
+  });
+
+  return allEqual ? options.fn(this) : options.inverse(this);
 });
 
 // Using ifEquals else if with helpers
