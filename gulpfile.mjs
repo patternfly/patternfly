@@ -1,10 +1,11 @@
 import fs from'fs';
+import path from 'path';
 import gulp from'gulp';
 import rimraf from'rimraf';
 import { copyFA, copySource, copyAssets, copyDocs, watchCopyDocs } from'./scripts/gulp/copy.mjs';
 import { compileSASS, minifyCSS, watchSASS } from'./scripts/gulp/sass.mjs';
 import { pfIconFont as definedPfIconFont, pfIcons as definedPfIcons } from'./scripts/gulp/icons.mjs';
-import { compileHBS, compileMD, watchHBS, watchMD } from'./scripts/gulp/html.mjs';
+import { compileHBS, compileMD, watchHBS, watchMD, watchHelpers } from'./scripts/gulp/html.mjs';
 import { lintCSSComments, lintCSSFunctions } from'./scripts/gulp/lint.mjs';
 import { generateSnippets } from'./scripts/gulp/snippets.mjs';
 import { start } from '@patternfly/documentation-framework/scripts/cli/start.js';
@@ -22,6 +23,7 @@ const sassFiles = [
 ];
 const hbsFiles = ['./src/patternfly/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];
+const helperFiles = ['./scripts/helpers.mjs'];
 
 export function clean(cb) {
   const cleanGlobs = [
@@ -72,6 +74,10 @@ function watchSrcMD(cb) {
   return watchMD(mdFiles, cb);
 }
 
+function watchSrcHelpers(cb) {
+  return watchHelpers(helperFiles, hbsFiles, cb);
+}
+
 function generateWorkspaceSnippets() {
   return generateSnippets('workspace/**/index.html');
 }
@@ -92,11 +98,14 @@ export async function buildWebpack() {
 
 async function startWebpackDevServer() {
   await start(themeCLIOptions);
+
+  // temporary auto deletion of public dir due to docs-framework bug
+  rimraf(path.join(process.cwd(), 'public'), {}, () => {})
 }
 
 const buildSrc = parallel(compileSrcSASS, series(compileSrcHBS, compileSrcMD));
 const buildDocs = series(buildSrc, copyDocs);
-const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, startWebpackDevServer);
+const watchAll = parallel(watchSrcSASS, watchSrcHBS, watchSrcMD, watchCopyDocs, watchSrcHelpers, startWebpackDevServer);
 
 // Builds `dist` folder
 export const buildPatternfly = parallel(series(buildDocs, minifyCSS), pfIcons, copyFA, copySourceFiles);
@@ -111,8 +120,6 @@ export function pfIconFont() {
   return definedPfIconFont();
 }
 
-export const develop = series(buildPatternfly, buildWebpack, watchAll);
+export const develop = series(buildPatternfly, watchAll);
 
 export const lintCSS = parallel(lintCSSFunctions, lintCSSComments);
-
-
