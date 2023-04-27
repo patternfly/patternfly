@@ -11,12 +11,6 @@ wrapperTag: div
 {{> page-template page-template--id="page-demo-basic"}}
 ```
 
-### Full height page
-Using the `.pf-m-full-height` modifier class on the page component eliminates the need to ensure that the `<html>` and `<body>` tags, and any other ancestors of `.pf-c-page`, have height set to 100%.
-```hbs isFullscreen
-{{> page-template page-template--id="page-demo-full-height" page-template--modifier="pf-m-full-height"}}
-```
-
 ### Multiple sidebar body elements
 ```hbs isFullscreen
 {{> page-template page-template--id="multiple-sidebar-body-elements-demo"}}
@@ -142,6 +136,3 @@ Using the `.pf-m-full-height` modifier class on the page component eliminates th
   {{/page-main-section}}
 {{/inline}}
 ```
-
-## Documentation
-To make the page component fill the full height of the viewport, it is recommended to add `height: 100%;` to all ancestor elements of the page component. Alternatively, use the `.pf-m-full-height` modifier class on the page component.

@@ -254,7 +254,7 @@ import './Page.css'
 
 ## Documentation
 ### Overview
-This component provides the basic chrome for a page, including sidebar, header, and main areas. To make the page component take up the full height of the viewport, it is recommended to add `height: 100%;` to all ancestor elements of the page component.
+This component provides the basic chrome for a page, including sidebar, header, and main areas.
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
@@ -271,7 +271,6 @@ This component provides the basic chrome for a page, including sidebar, header, 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-c-page` | `<div>` |   Declares the page component. |
-| `.pf-m-full-height` | `.pf-c-page` |   Sets the page to be full height. Eliminates the need to ensure that all ancestors of `.pf-c-page` have height of 100% set. |
 | `.pf-c-page__header` | `<header>` |   Declares the page header. |
 | `.pf-c-page__header-brand` | `<div>` |   Creates a header container to nest the brand component. |
 | `.pf-c-page__header-brand-toggle` | `<div>` |   Creates a container to nest the sidebar toggle. |

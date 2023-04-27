@@ -203,7 +203,9 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     "main";
   grid-template-rows: max-content 1fr;
   grid-template-columns: 1fr;
-    height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100%;
   background-color: var(--pf-c-page--BackgroundColor);
 
   @media (min-width: $pf-global--breakpoint--xl) {
@@ -212,13 +214,6 @@ $pf-c-page--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
       "nav main";
     grid-template-columns: max-content 1fr;
     }
-
-  // full height
-  &.pf-m-full-height {
-    height: 100vh;
-    height: 100dvh;
-    max-height: 100%;
-  }
 }
 
 // Header
