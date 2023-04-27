@@ -787,6 +787,60 @@ Ordering - Ordering can be applied to nested <code>.pf-l-flex</code> and <code>.
 {{/l-flex}}
 ```
 
+### Gap
+```hbs
+{{#> l-flex l-flex--modifier="pf-m-gap pf-m-column" l-flex--attribute="style='height: 500px; align-content: start;'"}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none"}}
+    Item - none
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-xs"}}
+    Item - xs
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
+    Item - sm
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
+    Item - md
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-lg"}}
+    Item - lg
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-xl"}}
+    Item - xl
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-2xl"}}
+    Item - 2xl
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-3xl"}}
+    Item - 3xl
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-none"}}
+    Item - none
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-xs"}}
+    Item - xs
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
+    Item - sm
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-md"}}
+    Item - md
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-lg"}}
+    Item - lg
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-xl"}}
+    Item - xl
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-2xl"}}
+    Item - 2xl
+  {{/l-flex-item}}
+  {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-3xl"}}
+    Item - 3xl
+  {{/l-flex-item}}
+{{/l-flex}}
+```
+
 ### Usage
 
 | Class | Applied to | Outcome |

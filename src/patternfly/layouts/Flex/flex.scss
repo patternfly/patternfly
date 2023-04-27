@@ -1,6 +1,7 @@
 // Always keep list of spacers and breakpoints up-to-date
 $pf-l-flex--breakpoint-map: build-breakpoint-map();
 $pf-l-flex--spacer-map: build-spacer-map();
+$pf-l-flex--gap-map: build-spacer-map("base", "none", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl");
 $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--spacer-map);
 
 .pf-l-flex {
@@ -10,33 +11,35 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
   --pf-l-flex--m-row--AlignItems: baseline;
   --pf-l-flex--m-row-reverse--AlignItems: baseline;
   --pf-l-flex--item--Order: 0;
-
-  // Default values: these get reset based on modifier usage
-  --pf-l-flex--spacer-base: var(--pf-global--spacer--md);
-  --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+  --pf-l-flex--spacer--column--base: var(--pf-global--spacer--lg); // default spacer/gap for columns
+  --pf-l-flex--spacer--row--base: var(--pf-global--spacer--sm); // default spacer/gap for rows
+  --pf-l-flex--RowGap: var(--pf-l-flex--spacer--row--base); 
+  --pf-l-flex--ColumnGap: 0;
+  --pf-l-flex--m-gap--RowGap: var(--pf-l-flex--spacer--row--base);
+  --pf-l-flex--m-gap--ColumnGap: var(--pf-l-flex--spacer--column--base);
+  --pf-l-flex--m-row-gap--RowGap: var(--pf-l-flex--spacer--row--base);
+  --pf-l-flex--m-column-gap--ColumnGap: var(--pf-l-flex--spacer--column--base);
 
   // Emit spacer css variables that map to requested spacer values
   @include pf-emit-properties($pf-l-flex--variable-map);
 
   display: var(--pf-l-flex--Display);
   flex-wrap: var(--pf-l-flex--FlexWrap);
+  gap: var(--pf-l-flex--RowGap) var(--pf-l-flex--ColumnGap);
   align-items: var(--pf-l-flex--AlignItems);
-
-  &:last-child {
-    --pf-l-flex--spacer: 0;
-  }
 }
 
 // stylelint-disable no-duplicate-selectors, max-nesting-depth
 
 // Item
 .pf-l-flex > * {
-  // reset spacer
-  --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
+  // set/reset layout spacers on children, since the parent flex layout can be a child of another flex layout and needs these values from its parent
+  --pf-l-flex--spacer--column: var(--pf-l-flex--spacer, var(--pf-l-flex--spacer--column--base));
+  --pf-l-flex--spacer--row: var(--pf-l-flex--spacer, var(--pf-l-flex--spacer--row--base));
 
   order: var(--pf-l-flex--item--Order);
   max-width: 100%;
-  margin-right: var(--pf-l-flex--spacer);
+  margin-right: var(--pf-l-flex--spacer--column);
 
   // don't set base value for --pf-l-flex--item--Order as it defaults to 0
   @media screen and (min-width: $pf-global--breakpoint--sm) {
@@ -81,11 +84,14 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
 
       // flex-direction
       &.pf-m-column#{$breakpoint-name} {
+        --pf-l-flex--RowGap: 0;
+        --pf-l-flex--ColumnGap: var(--pf-l-flex--spacer--column--base);
+
         flex-direction: column;
         align-items: normal;
 
         > * {
-          margin: 0 0 var(--pf-l-flex--spacer) 0;
+          margin: 0 0 var(--pf-l-flex--spacer--row) 0;
         }
       }
 
@@ -95,7 +101,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
         align-items: normal;
 
         > * {
-          margin: var(--pf-l-flex--spacer) 0 0 0;
+          margin: var(--pf-l-flex--spacer--row) 0 0 0;
         }
       }
 
@@ -106,7 +112,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
 
         // unset styling set for .pf-m-column
         > * {
-          margin: 0 var(--pf-l-flex--spacer) 0 0;
+          margin: 0 var(--pf-l-flex--spacer--column) 0 0;
         }
       }
 
@@ -117,7 +123,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
 
         // unset styling set for .pf-m-column
         > * {
-          margin: 0 0 0 var(--pf-l-flex--spacer);
+          margin: 0 0 0 var(--pf-l-flex--spacer--column);
         }
       }
 
@@ -276,7 +282,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
     }
   }
 
-  // .pf-m-space-items-{size}{-on-breakpoint}
+  // .pf-m-space-items-{size}{-on-[breakpoint]}
   @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
@@ -295,7 +301,7 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
     }
   }
 
-  // .pf-m-spacer-{size}{-on-breakpoint}
+  // .pf-m-spacer-{size}{-on-[breakpoint]}
   @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
@@ -307,6 +313,84 @@ $pf-l-flex--variable-map: build-variable-map("pf-l-flex--spacer", $pf-l-flex--sp
           &:last-child {
             --pf-l-flex--spacer: var(#{map-get($pf-l-flex--variable-map, $spacer-value)});
           }
+        }
+      }
+    }
+  }
+
+    // .pf-m-gap{-[size]}{-on-[breakpoint]}
+    @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
+      $pf-l-flex--gap--selectors: ();
+
+      @include pf-apply-breakpoint($breakpoint) {
+        @each $spacer, $value in $pf-l-flex--gap-map {
+          $breakpoint-name: if($breakpoint == "base", "", -on-#{$breakpoint});
+          $spacer-name: if($spacer == "base", "", -#{$spacer});
+          $spacer-row: if($spacer == "base", var(--pf-l-flex--m-gap--RowGap), $value);
+          $spacer-column: if($spacer == "base", var(--pf-l-flex--m-gap--ColumnGap), $value);
+          $selector: ".pf-m-gap#{$spacer-name}#{$breakpoint-name}";
+          $pf-l-flex--gap--selectors: append($pf-l-flex--gap--selectors, $selector, $separator: comma);
+  
+          &#{$selector} {
+            --pf-l-flex--RowGap: #{$spacer-row};
+            --pf-l-flex--ColumnGap: #{$spacer-column};
+          }
+        }
+
+        &:is(#{$pf-l-flex--gap--selectors}) {
+          > * {
+            --pf-l-flex--spacer--row: 0;
+            --pf-l-flex--spacer--column: 0;
+          }
+        }
+      }
+    }
+
+  // .pf-m-row-gap{-[size]}{-on-[breakpoint]}
+  @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
+    @include pf-apply-breakpoint($breakpoint) {
+      $pf-l-flex--row-gap--selectors: ();
+
+      @each $spacer, $value in $pf-l-flex--gap-map {
+        $breakpoint-name: if($breakpoint == "base", "", -on-#{$breakpoint});
+        $spacer-name: if($spacer == "base", "", -#{$spacer});
+        $spacer-value: if($spacer == "base", var(--pf-l-flex--m-row-gap--RowGap), $value);
+        $selector: ".pf-m-row-gap#{$spacer-name}#{$breakpoint-name}";
+        $pf-l-flex--row-gap--selectors: append($pf-l-flex--row-gap--selectors, $selector, $separator: comma);
+
+       &#{$selector} {
+          --pf-l-flex--RowGap: #{$spacer-value};
+        }
+      }
+
+      &:is(#{$pf-l-flex--row-gap--selectors}) {
+        > * {
+          --pf-l-flex--spacer--row: 0;
+        }
+      }
+    }
+  }
+
+  // .pf-m-column-gap{-[size]}{-on-[breakpoint]}
+  @each $breakpoint, $breakpoint-value in $pf-l-flex--breakpoint-map {
+    $pf-l-flex--column-gap--selectors: ();
+
+    @include pf-apply-breakpoint($breakpoint) {
+      @each $spacer, $value in $pf-l-flex--gap-map {
+        $breakpoint-name: if($breakpoint == "base", "", -on-#{$breakpoint});
+        $spacer-name: if($spacer == "base", "", -#{$spacer});
+        $spacer-value: if($spacer == "base", var(--pf-l-flex--m-column-gap--ColumnGap), $value);
+        $selector: ".pf-m-column-gap#{$spacer-name}#{$breakpoint-name}";
+        $pf-l-flex--column-gap--selectors: append($pf-l-flex--column-gap--selectors, $selector, $separator: comma);
+
+        &#{$selector} {
+          --pf-l-flex--ColumnGap: #{$spacer-value};
+        }
+      }
+
+      &:is(#{$pf-l-flex--column-gap--selectors}) {
+        > * {
+          --pf-l-flex--spacer--column: 0;
         }
       }
     }

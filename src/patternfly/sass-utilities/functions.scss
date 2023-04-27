@@ -93,10 +93,12 @@
   }
 
   @each $spacer in $map-items {
-    @if not map-has-key($pf-global--spacer-map, $spacer) and $spacer != "none" {
-      $map: map-merge($map, ("invalid spacer #{$spacer}": null));
-    } @else if $spacer == "none" {
+    @if $spacer == "none" {
       $map: map-merge($map, ($spacer: 0));
+    } @else if $spacer == "base" {
+      $map: map-merge($map, ($spacer: null));
+    } @else if not map-has-key($pf-global--spacer-map, $spacer) {
+      $map: map-merge($map, ("invalid spacer #{$spacer}": null));
     } @else {
       $map: map-merge($map, ($spacer: map-get($pf-global--spacer-map, #{$spacer})));
     }
