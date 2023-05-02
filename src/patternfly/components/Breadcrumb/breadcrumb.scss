@@ -5,7 +5,7 @@
   --pf-c-breadcrumb__item--MarginRight: var(--pf-global--spacer--sm);
 
   // Breadcrumb divider
-  --pf-c-breadcrumb__item-divider--Color: var(--pf-global--BorderColor--200);
+  --pf-c-breadcrumb__item-divider--Color: var(--pf-global--icon--Color--dark);
   --pf-c-breadcrumb__item-divider--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-breadcrumb__item-divider--FontSize: var(--pf-global--FontSize--sm);
 
@@ -117,11 +117,4 @@
 // Consider revisiting this in a breaking change release
 .pf-c-breadcrumb__list > :first-child .pf-c-breadcrumb__item-divider {
   display: none;
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/breadcrumb";
-
-@include pf-theme-dark {
-  @include pf-theme-dark-breadcrumb;
 }

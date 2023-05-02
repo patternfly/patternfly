@@ -27,9 +27,6 @@ $pf-global--disabled-color--100: $pf-color-black-400; // disabled text on regula
 $pf-global--disabled-color--200: $pf-color-black-500; // disabled background color
 $pf-global--disabled-color--300: $pf-color-black-200; // disabled text on disabled background color - except form elements
 
-// icons
-$pf-global--icon--Color--light: $pf-color-black-300;
-
 // theme color resets
 $pf-global--Color--dark-100: $pf-global--Color--100;
 $pf-global--Color--dark-200: $pf-global--Color--200;
@@ -52,7 +49,7 @@ $pf-global--BackgroundColor--dark-200: $pf-global--BackgroundColor--200;
 $pf-global--BackgroundColor--dark-300: $pf-global--BackgroundColor--300;
 $pf-global--BackgroundColor--dark-400: $pf-global--BackgroundColor--400;
 $pf-global--icon--Color--light: $pf-color-black-200;
-$pf-global--icon--Color--dark: $pf-color-black-200;
+$pf-global--icon--Color--dark: $pf-color-black-50;
 
 // Shadows
 // small
