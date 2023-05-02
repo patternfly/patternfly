@@ -1,20 +1,4 @@
-{{!-- Use init at root component, remove elsewhere --}}
-{{!-- {{#> init init--class="card" card=(concat (ternary card--class-update card--class-update (pfv)) 'card')}} --}}
-{{!-- {{{{def name="something"}}}}
-  stuff
-{{{{/def}}}}
-{{> something}} --}}
-
-{{!-- (concat (ternary component--version component--version (pfv)) component-name) --}}
-{{!-- {{assignVar 'version' 'v5'}} --}}
-
-{{!-- root{{@root.component--class}}
-root{{@root.version}} --}}
-{{!-- {{assignVar 'component--class' 'card'}} --}}
-
-{{!-- {{assignVar 'class--name' 'card'}} --}}
-
-<div
+<div class="{{pfv}}card{{#if card--modifier}} {{card--modifier}}{{/if}}"
   {{#if card--attribute}}
     {{{card--attribute}}}
   {{/if}}
@@ -23,5 +7,3 @@ root{{@root.version}} --}}
   {{/if}}>
   {{> @partial-block}}
 </div>
-
-{{!-- {{> component name="card"}} --}}
