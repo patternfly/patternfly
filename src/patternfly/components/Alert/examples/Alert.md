@@ -458,7 +458,7 @@ When toast alerts include a link or action, these elements are not announced as 
 For sighted users, interactive elements can be included in this message in one of the following ways:
 
 - Using a link to the Builds page: "The build is complete. Go to the [Builds](#) page to download" using `<a href="#">Builds</a>`
-- Using a button to download: "The build is complete. Go to the Builds page to <button class="pf-c-button pf-m-link pf-m-inline" type="button">download</button>" using `<button class="pf-c-button pf-m-link pf-m-inline type="button">download</button>`
+- Using a button to download: "The build is complete. Go to the Builds page to <button class="pf-v5-c-button pf-m-link pf-m-inline" type="button">download</button>" using `<button class="pf-v5-c-button pf-m-link pf-m-inline type="button">download</button>`
 
 ```hbs isFullscreen
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
@@ -533,8 +533,8 @@ Add a modifier class to the default alert to change the color: `.pf-m-success`, 
 | `.pf-v5-c-alert__icon` | `<div>` | Defines the alert icon. **Required** |
 | `.pf-v5-c-alert__title` | `<p>, <h1-h6>` | Defines the alert title. **Required** |
 | `.pf-v5-c-alert__description` | `<div>` | Defines the alert description area. |
-| `.pf-v5-c-alert__action` | `<div>` | Defines the action button wrapper. Should contain `.pf-c-button.pf-m-plain` for close action or `.pf-c-button.pf-m-link` for link text. It should only include one action. |
-| `.pf-v5-c-alert__action-group` | `<div>` | Defines the action button group. Should contain `.pf-c-button.pf-m-link.pf-m-inline` for inline link text. **Note:** only inline link buttons are supported in the alert action group. |
+| `.pf-v5-c-alert__action` | `<div>` | Defines the action button wrapper. Should contain `.pf-v5-c-button.pf-m-plain` for close action or `.pf-v5-c-button.pf-m-link` for link text. It should only include one action. |
+| `.pf-v5-c-alert__action-group` | `<div>` | Defines the action button group. Should contain `.pf-v5-c-button.pf-m-link.pf-m-inline` for inline link text. **Note:** only inline link buttons are supported in the alert action group. |
 | `.pf-m-custom` | `.pf-v5-c-alert` | Applies custom status styling. |
 | `.pf-m-success` | `.pf-v5-c-alert` | Applies success status styling. |
 | `.pf-m-danger` | `.pf-v5-c-alert` | Applies danger status styling. |

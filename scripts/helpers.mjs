@@ -1,5 +1,3 @@
-import { patternflyNS, patternflyVersion } from './init.mjs';
-
 /** Ignore the object appended by handlebars. */
 export const concat = (...params) => {
   if (typeof params[params.length - 1] === 'object') {
@@ -43,36 +41,3 @@ export const ternary = (testValue, trueValue, fallback) => {
 
 /** Helper which allows a booleans value to be inversed, similar to how notting a variable with ! works in regular JS */
 export const inverse = (bool) => (bool ? null : 'true');
-
-export const setVariable = (varName, varValue, options) => {
-  if (!options.data.root) {
-    options.data.root = {};
-  }
-
-  options.data.root[varName] = varValue;
-
-  // return options;
-  // console.log(options.data);
-};
-
-export const getVariable = (varValue, options) => {
-  console.log('options', options);
-
-  return options.data.root[varValue];
-};
-
-export const pfv = (type) => {
-  const namespace = patternflyNS;
-  let version = patternflyVersion;
-  let prefix = 'c-';
-
-  if (type === 'unset-prefix') {
-    prefix = '';
-  } else if (type === 'unset-version') {
-    version = '';
-  } else if (type.length) {
-    prefix = type + '-';
-  }
-
-  return namespace + version + prefix;
-};
