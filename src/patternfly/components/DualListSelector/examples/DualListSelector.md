@@ -946,7 +946,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{/dual-list-selector-menu}}
     {{/dual-list-selector-pane}}
   {{/dual-list-selector}}
-  <div class="pf-screen-reader" aria-live="assertive">
+  <div class="{{pfv 'unset-prefix'}}screen-reader" aria-live="assertive">
     This is the aria-live section that provides real-time feedback to the user.
   </div>
 {{/wrapper}}

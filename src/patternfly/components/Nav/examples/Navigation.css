@@ -17,11 +17,11 @@
 #ws-core-c-navigation-nav-with-flyout .pf-v5-c-nav,
 #ws-core-c-navigation-grouped-nav-no-titles-no-margin-top {
   padding: 0;
-  background-color: var(--pf-v5-global--BackgroundColor--dark-300);
+  background-color: var(--pf-v5--global--BackgroundColor--dark-300);
 }
 
 #ws-core-c-navigation-expandable-third-level .pf-v5-c-nav {
-  background-color: var(--pf-v5-global--BackgroundColor--dark-300);
+  background-color: var(--pf-v5--global--BackgroundColor--dark-300);
 }
 
 #ws-core-c-navigation-horizontal-in-masthead,

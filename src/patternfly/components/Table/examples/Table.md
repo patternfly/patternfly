@@ -3951,7 +3951,7 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{/table-tr}}
     {{/table-tbody}}
   {{/table}}
-  <div class="pf-screen-reader" aria-live="assertive">
+  <div class="{{pfv 'unset-prefix'}}screen-reader" aria-live="assertive">
     This is the aria-live section that provides real-time feedback to the user.
   </div>
 {{/wrapper}}

@@ -182,14 +182,14 @@ import './Spacing.css'
 | -- | -- |
 | `auto` |  auto |
 | `0` | 0 |
-| `xs` | var(--pf-v5-global--spacer--xs) |
-| `sm` | var(--pf-v5-global--spacer--sm) |
-| `md` | var(--pf-v5-global--spacer--md) |
-| `lg` | var(--pf-v5-global--spacer--lg) |
-| `xl` | var(--pf-v5-global--spacer--xl) |
-| `2xl` | var(--pf-v5-global--spacer--2xl) |
-| `3xl` | var(--pf-v5-global--spacer--3xl) |
-| `4xl` | var(--pf-v5-global--spacer--4xl) |
+| `xs` | var(--pf-v5--global--spacer--xs) |
+| `sm` | var(--pf-v5--global--spacer--sm) |
+| `md` | var(--pf-v5--global--spacer--md) |
+| `lg` | var(--pf-v5--global--spacer--lg) |
+| `xl` | var(--pf-v5--global--spacer--xl) |
+| `2xl` | var(--pf-v5--global--spacer--2xl) |
+| `3xl` | var(--pf-v5--global--spacer--3xl) |
+| `4xl` | var(--pf-v5--global--spacer--4xl) |
 
 ### Usage
 | Class | Applied to | Outcome |

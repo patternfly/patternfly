@@ -946,7 +946,7 @@ When a list item includes more than one block of content, it can be difficult fo
     {{/data-list-item-row}}
   {{/data-list-item}}
 {{/data-list}}
-<div class="pf-screen-reader" aria-live="assertive">
+<div class="{{pfv 'unset-prefix'}}screen-reader" aria-live="assertive">
   This is the aria-live section that provides real-time feedback to the user.
 </div>
 ```

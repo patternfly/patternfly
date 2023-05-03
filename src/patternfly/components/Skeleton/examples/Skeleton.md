@@ -53,31 +53,31 @@ import './Skeleton.css'
 
 ### Text modifiers
 ```hbs
---pf-v5-global--FontSize--4xl
+--pf-v5--global--FontSize--4xl
 {{#> skeleton skeleton--modifier="pf-m-text-4xl"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--3xl
+--pf-v5--global--FontSize--3xl
 {{#> skeleton skeleton--modifier="pf-m-text-3xl"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--2xl
+--pf-v5--global--FontSize--2xl
 {{#> skeleton skeleton--modifier="pf-m-text-2xl"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--xl
+--pf-v5--global--FontSize--xl
 {{#> skeleton skeleton--modifier="pf-m-text-xl"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--lg
+--pf-v5--global--FontSize--lg
 {{#> skeleton skeleton--modifier="pf-m-text-lg"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--md
+--pf-v5--global--FontSize--md
 {{#> skeleton skeleton--modifier="pf-m-text-md"}}
 {{/skeleton}}
 <br/>
---pf-v5-global--FontSize--sm
+--pf-v5--global--FontSize--sm
 {{#> skeleton skeleton--modifier="pf-m-text-sm"}}
 {{/skeleton}}
 ```

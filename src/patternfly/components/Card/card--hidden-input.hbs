@@ -1,5 +1,5 @@
 {{#> radio radio--modifier="pf-m-standalone"}}
-  {{#> radio-input radio-input--modifier="pf-screen-reader" radio-input--attribute=(concat 'id="' card--id '-sr-only-radio" name="' card--id '-sr-only-radio" aria-labelledby="' card--id '" ' card--hidden-input--IsDisabled )}}{{/radio-input}}
+  {{#> radio-input radio-input--modifier="{{pfv 'unset-prefix'}}screen-reader" radio-input--attribute=(concat 'id="' card--id '-sr-only-radio" name="' card--id '-sr-only-radio" aria-labelledby="' card--id '" ' card--hidden-input--IsDisabled )}}{{/radio-input}}
   {{#if card--IsClickable}}
     {{#> radio-label radio-label--modifier=(ternary card--hidden-input--IsDisabled ' pf-m-disabled' '') radio-label--attribute=(concat 'id="' card--id '-sr-only-radio-label" name="' card--id '" for="' card--id '-sr-only-radio" name="' card--id '-sr-only-radio"')}}{{/radio-label}}
   {{/if}}

@@ -134,5 +134,5 @@ cssPrefix: pf-v5-c-masthead
 | `.pf-v5-c-masthead__brand` | `<a>, <div>` | Initiates the masthead content component. |
 | `.pf-v5-c-masthead__content` | `<div>` | Initiates the masthead content component. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v5-c-masthead` | Modifies masthead horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-light` | `.pf-v5-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-v5-global--BackgroundColor--100`. |
-| `.pf-m-light-200` | `.pf-v5-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-v5-global--BackgroundColor--200`. |
+| `.pf-m-light` | `.pf-v5-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-v5--global--BackgroundColor--100`. |
+| `.pf-m-light-200` | `.pf-v5-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-v5--global--BackgroundColor--200`. |

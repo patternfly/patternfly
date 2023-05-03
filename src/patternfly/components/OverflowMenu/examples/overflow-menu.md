@@ -9,7 +9,7 @@ import './overflow-menu.css'
 ## Introduction
 The overflow menu component condenses actions inside `.pf-v5-c-overflow-menu__content` container into a single dropdown button wrapped in `.pf-v5-c-overflow-menu__control`.
 
-The overflow menu relies on groups (`.pf-v5-c-overflow-menu__group`) and items (`.pf-v5-c-overflow-menu__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-v5-c-toolbar--spacer--base`, whose value is `--pf-v5-global--spacer--md` or 16px.
+The overflow menu relies on groups (`.pf-v5-c-overflow-menu__group`) and items (`.pf-v5-c-overflow-menu__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-v5-c-toolbar--spacer--base`, whose value is `--pf-v5--global--spacer--md` or 16px.
 
 ### Simple collapsed
 ```hbs
