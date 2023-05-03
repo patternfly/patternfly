@@ -104,7 +104,7 @@ cssPrefix: pf-v5-c-code-editor
     {{#> code-editor-keyboard-shortcuts}}
       {{#> button button--modifier="pf-m-link"}}
         {{#> button-icon button-icon--modifier="pf-m-start"}}
-          <i class="pf-v5-c-icon pf-v5-c-icon-help" aria-hidden="true"></i>
+          <i class="pf-v5-icon pf-v5-icon-help" aria-hidden="true"></i>
         {{/button-icon}}
         View shortcuts
       {{/button}}

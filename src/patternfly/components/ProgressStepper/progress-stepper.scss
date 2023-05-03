@@ -354,7 +354,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
   // Align pficons with the font awesome icons
   // stylelint-disable
-  .pficon {
+  .pf-v5-icon {
     margin-top: var(--#{$progress}-stepper__pficon--MarginTop);
   }
 

@@ -1,3 +1,6 @@
+// Patternfly previous version support
+import './patternfly-docs.version.css';
+
 // Patternfly
 import '../dist/patternfly.css';
 
@@ -6,6 +9,3 @@ import '../dist/patternfly-addons.css';
 
 // Global theme CSS
 import '@patternfly/documentation-framework/global.css';
-
-import '../../pf4/dist/patternfly-base-no-globals.css';
-import '../../pf4/dist/patternfly-addons.css';
