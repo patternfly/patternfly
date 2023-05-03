@@ -1,7 +1,7 @@
 {{#> l-flex l-flex--modifier="pf-m-flex-1 pf-m-align-self-stretch pf-m-align-items-stretch"}}
   {{#> card card--modifier="pf-m-plain" l-flex--modifier=reset l-flex-item--modifier=reset}}
     {{#> card-body}}
-      {{#> l-flex l-flex--modifier="pf-m-column {{pfv 'u'}}h-100 pf-m-space-items-sm"}}
+      {{#> l-flex l-flex--modifier=(concat 'pf-m-column ' (pfv 'u') 'h-100 pf-m-space-items-sm')}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column-on-md pf-m-row-on-lg pf-m-spacer-md-on-md pf-m-spacer-sm-on-lg"}}
           {{#> label-group label-group--id="label-group-overflow"}}
             {{#> label-group-main}}
@@ -43,7 +43,7 @@
             {{/if}}
           </p>
         {{/l-flex-item}}
-        {{#> l-flex l-flex--modifier="pf-m-grow pf-m-column pf-m-row-on-lg pf-m-justify-content-flex-end pf-m-justify-content-flex-start-on-lg pf-m-align-content-flex-end-on-lg" l-flex--attribute='style="row-gap: var(--#{$pf-global}--spacer--md);"'}}
+        {{#> l-flex l-flex--modifier="pf-m-grow pf-m-column pf-m-row-on-lg pf-m-justify-content-flex-end pf-m-justify-content-flex-start-on-lg pf-m-align-content-flex-end-on-lg" l-flex--attribute='style="row-gap: var(--pf-v5--global--spacer--md);"'}}
           {{#if card-template-expandable-status-card--HasIncident}}
             {{#> l-flex-item l-flex-item--attribute='style="margin-bottom: -.25em"'}}
               {{> label label--color="red" label-text--value="Incident"}}

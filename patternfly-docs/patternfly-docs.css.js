@@ -1,6 +1,3 @@
-// Patternfly previous version support
-import './patternfly-docs.version.css';
-
 // Patternfly
 import '../dist/patternfly.css';
 

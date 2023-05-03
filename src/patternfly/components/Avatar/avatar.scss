@@ -5,7 +5,7 @@ $pf-v5-c-avatar--sizes: "sm", "md", "lg", "xl";
 .#{$avatar} {
   --#{$avatar}--BorderColor: transparent;
   --#{$avatar}--BorderWidth: 0;
-  --#{$avatar}--BorderRadius: var(--#{pf-global}--BorderRadius--lg);
+  --#{$avatar}--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
   --#{$avatar}--Width: #{pf-size-prem(36px)};
   --#{$avatar}--Height: #{pf-size-prem(36px)};
   --#{$avatar}--m-sm--Width: #{pf-size-prem(24px)};
@@ -18,12 +18,12 @@ $pf-v5-c-avatar--sizes: "sm", "md", "lg", "xl";
   --#{$avatar}--m-xl--Height: #{pf-size-prem(128px)};
 
   // Light
-  --#{$avatar}--m-light--BorderColor: var(--#{pf-global}--BorderColor--dark-100);
-  --#{$avatar}--m-light--BorderWidth: var(--#{pf-global}--BorderWidth--sm);
+  --#{$avatar}--m-light--BorderColor: var(--#{$pf-global}--BorderColor--dark-100);
+  --#{$avatar}--m-light--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
 
   // Dark
-  --#{$avatar}--m-dark--BorderColor: var(--#{pf-global}--palette--black-700);
-  --#{$avatar}--m-dark--BorderWidth: var(--#{pf-global}--BorderWidth--sm);
+  --#{$avatar}--m-dark--BorderColor: var(--#{$pf-global}--palette--black-700);
+  --#{$avatar}--m-dark--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
 
   width: var(--#{$avatar}--Width);
   height: var(--#{$avatar}--Height);
