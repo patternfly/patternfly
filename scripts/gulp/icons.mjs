@@ -88,7 +88,7 @@ export function pfIconFont() {
         // Trigger off emitted 'glyphs' event to generate pficon/unicode matches, combine w/FA & write to JSON file
         .on('glyphs', (glyphs, options) => {
           const pfUnicodesMap = glyphs.reduce((obj, glyph) => {
-            obj[`pf-icon-${glyph.name}`] = glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase();
+            obj[`pf-v5-icon-${glyph.name}`] = glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase();
             return obj;
           }, {});
           const iconUnicodes = {
