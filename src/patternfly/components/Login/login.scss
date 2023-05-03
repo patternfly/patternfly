@@ -39,7 +39,7 @@
   // main
   --#{$login}__main--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
   --#{$login}__main--MarginBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$login}__main--BoxShadow: var(--#{$pf-global}-BoxShadow--xl);
+  --#{$login}__main--BoxShadow: var(--#{$pf-global}--BoxShadow--xl);
 
   @media (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$login}__main--MarginBottom: 0;
