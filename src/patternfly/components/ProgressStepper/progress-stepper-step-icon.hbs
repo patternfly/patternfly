@@ -7,9 +7,9 @@
     {{#if progress-stepper-step--IsInfo}}
       <i class="fas fa-info-circle" aria-hidden="true"></i>
     {{else if progress-stepper-step--IsInProgress}}
-      <i class="pf-v5-icon pf-v5-icon-resources-full" aria-hidden="true"></i>
+      <i class="pf-v5-c-icon pf-v5-c-icon-resources-full" aria-hidden="true"></i>
     {{else if progress-stepper-step--IsInProgressAlt}}
-      <i class="pf-v5-icon pf-v5-icon-in-progress" aria-hidden="true"></i>
+      <i class="pf-v5-c-icon pf-v5-c-icon-in-progress" aria-hidden="true"></i>
     {{else if progress-stepper-step--IsComplete}}
       <i class="fas fa-check-circle" aria-hidden="true"></i>
     {{else if progress-stepper-step--IsFailure}}
@@ -19,7 +19,7 @@
     {{else if progress-stepper-step--IsPending}}
 
     {{else if progress-stepper-step--IsPendingAlt}}
-      <i class="pf-v5-icon pf-v5-icon-pending" aria-hidden="true"></i>
+      <i class="pf-v5-c-icon pf-v5-c-icon-pending" aria-hidden="true"></i>
     {{else}}
       {{>@partial-block}}
     {{/if}}

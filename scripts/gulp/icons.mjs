@@ -72,7 +72,7 @@ export function pfIconFont() {
         path: path.join(__dirname, 'icons_template.scss'),
         targetPath: 'pficon.scss',
         fontPath: './',
-        cssClass: 'pf-v5-icon',
+        cssClass: 'pf-v5-c-icon',
         // Assign next available unicode (for new icons)
         firstGlyph: nextUnicodeHex,
         // Reference saved unicodes (for existing icons)
@@ -88,7 +88,7 @@ export function pfIconFont() {
         // Trigger off emitted 'glyphs' event to generate pficon/unicode matches, combine w/FA & write to JSON file
         .on('glyphs', (glyphs, options) => {
           const pfUnicodesMap = glyphs.reduce((obj, glyph) => {
-            obj[`pf-v5-icon-${glyph.name}`] = glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase();
+            obj[`pf-icon-${glyph.name}`] = glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase();
             return obj;
           }, {});
           const iconUnicodes = {
@@ -100,4 +100,3 @@ export function pfIconFont() {
     )
     .pipe(dest('./src/patternfly/assets/pficon/'))
 }
-

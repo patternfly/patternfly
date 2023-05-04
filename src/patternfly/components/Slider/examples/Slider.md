@@ -11,7 +11,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="8"
   slider--value-now="5"
-  slider--attribute='style="--pf-v5-slider--value: 62.5%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 62.5%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -37,7 +37,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-slider--value: 50%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -49,7 +49,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-slider--value: 50%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -68,7 +68,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="8"
   slider--value-now="5"
-  slider--attribute='style="--pf-v5-slider--value: 62.5%; --pf-v5-slider__value--c-form-control--width-chars: 1;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 62.5%; --pf-v5-c-slider__value--c-form-control--width-chars: 1;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -96,7 +96,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-slider--value: 50%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -127,7 +127,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-slider--value: 50%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -152,7 +152,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-slider--value: 50%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -175,7 +175,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-slider--value: 50%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
   }}
   {{#> slider-actions}}
     {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Minus"'}}
@@ -199,7 +199,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-slider--value: 50%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -228,7 +228,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-slider--value: 50%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -259,7 +259,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="8"
   slider--value-now="5"
-  slider--attribute='style="--pf-v5-slider--value: 62.5%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 62.5%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}
@@ -285,7 +285,7 @@ cssPrefix: pf-v5-c-slider
   slider--value-min="0"
   slider--value-max="100"
   slider--value-now="50"
-  slider--attribute='style="--pf-v5-slider--value: 50%;"'
+  slider--attribute='style="--pf-v5-c-slider--value: 50%;"'
   }}
   {{#> slider-main}}
     {{> slider-rail}}

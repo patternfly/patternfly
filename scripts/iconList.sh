@@ -11,5 +11,5 @@ echo "| --- | --- | --- |" >> $ICON_OUT
 
 grep ':' < $ICON_SRC | while read line; do
   CLASS=`echo $line | cut -d '"' -f2`
-  echo '|' $CLASS '| <i class="pf-v5-icon pf-v5-icon-'$CLASS'"></i> | &lt;i class=&quot;pf-v5-icon pf-v5-icon-'$CLASS'&quot;&gt;&lt;/i&gt;'
+  echo '|' $CLASS '| <i class="pf-v5-c-icon pf-v5-c-icon-'$CLASS'"></i> | &lt;i class=&quot;pf-v5-c-icon pf-v5-c-icon-'$CLASS'&quot;&gt;&lt;/i&gt;'
 done >> $ICON_OUT
