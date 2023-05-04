@@ -3,7 +3,6 @@
 .#{$about-modal-box} {
   // Component variables
   --#{$about-modal-box}--BackgroundColor: var(--#{$pf-global}--palette--black-1000); // Modal uses a non-standard background color
-  --#{$about-modal-box}--BackgroundImage: url("#{$pf-v5-global--image-path}/pfbg-icon.svg");
   --#{$about-modal-box}--BackgroundPosition: bottom right;
   --#{$about-modal-box}--BackgroundSize--min-width: 200px;
   --#{$about-modal-box}--BackgroundSize--width: 60%;
@@ -54,11 +53,6 @@
   --#{$about-modal-box}__close--c-button--Height: calc(var(--#{$about-modal-box}__close--c-button--FontSize) * 2);
   --#{$about-modal-box}__close--c-button--BackgroundColor: var(--#{$pf-global}--palette--black-1000); // Close button uses a non-standard background color
   --#{$about-modal-box}__close--c-button--hover--BackgroundColor: #{rgba($pf-v5-color-black-1000, .4)};
-
-  // hero image
-  --#{$about-modal-box}__hero--sm--BackgroundImage: url("#{$pf-v5-global--image-path}/pfbg_992@2x.jpg");
-  --#{$about-modal-box}__hero--sm--BackgroundPosition: top left;
-  --#{$about-modal-box}__hero--sm--BackgroundSize: cover;
 
   // Brand img
   --#{$about-modal-box}__brand-image--Height: #{pf-size-prem(40px)};
@@ -116,7 +110,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--#{$about-modal-box}--BackgroundColor); // Because this component is always dark, set the background color
-  background-image: var(--#{$about-modal-box}--BackgroundImage);
+  background-image: var(--#{$about-modal-box}--BackgroundImage, none);
   background-repeat: no-repeat;
   background-position: var(--#{$about-modal-box}--BackgroundPosition);
   background-size: var(--#{$about-modal-box}--BackgroundSize);
@@ -198,11 +192,11 @@
 
   @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
     grid-area: 1 / 2;
-    justify-content: center; // center the close over the narrow hero image
+    justify-content: center;
   }
 
   @media only screen and (min-width: $pf-v5-global--breakpoint--lg) {
-    justify-content: flex-end; // align flex end the close over the narrow hero image
+    justify-content: flex-end;
   }
 
   // Close button
@@ -221,21 +215,6 @@
     &:hover {
       --#{$about-modal-box}__close--c-button--BackgroundColor: var(--#{$about-modal-box}__close--c-button--hover--BackgroundColor);
     }
-  }
-}
-
-// Hero
-.#{$about-modal-box}__hero {
-  display: none; // Don't display the hero at the narrowest breakpoint
-
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
-    display: block;
-    grid-area: hero;
-    background-image: var(--#{$about-modal-box}__hero--sm--BackgroundImage);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: var(--#{$about-modal-box}__hero--sm--BackgroundPosition);
-    background-size: var(--#{$about-modal-box}__hero--sm--BackgroundSize);
   }
 }
 

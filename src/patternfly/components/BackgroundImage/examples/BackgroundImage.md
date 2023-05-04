@@ -13,16 +13,10 @@ cssPrefix: pf-v5-c-background-image
 ## Documentation
 
 ### Overview
-This component puts an image on the background.
-
-### Customizing the background image
-In order to use a custom image, pass a new value to the `--pf-v5-c-background-image--BackgroundImage` CSS variable. For example:
-
-```css
---pf-v5-c-background-image--BackgroundImage: url("custom/image/path");
-```
+In order to set the background image to be used, set the `--pf-v5-c-background-image--BackgroundImage` CSS variable to the path of the image. For example: `--pf-v5-c-background-image--BackgroundImage: url(custom/path/image.jpg);`
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-background-image` | `*` |  A fixed background image is applied to the background of the page. |
+| `.pf-v5-c-background-image` | `*` | A fixed background image is applied to the background of the page. |
+| `--pf-v5-c-background-image--BackgroundImage` | `.pf-v5-c-background-image` | Sets the background image to be used. **Required** |
