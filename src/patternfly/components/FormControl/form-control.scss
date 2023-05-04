@@ -1,33 +1,6 @@
-// @debug $form-control; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-// Input - success
-$pf-v5-c-form-control--success--Color: $pf-v5-global--success-color--100 !default;
-$pf-v5-c-form-control--success--Coordinates: "M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" !default;
-
-// Input - warning
-$pf-v5-c-form-control--m-warning--Color: $pf-v5-global--warning-color--100 !default;
-$pf-v5-c-form-control--m-warning--Coordinates: "M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z" !default;
-
-// Input - invalid
-$pf-v5-c-form-control--invalid--Color: $pf-v5-global--danger-color--100 !default;
-$pf-v5-c-form-control--invalid--Coordinates: "M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z" !default;
-$pf-v5-c-form-control__select--Coordinates: "M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" !default;
-$pf-v5-c-form-control__select--ViewBox: "320" !default;
-
-// Input - search
-// Remove at breaking change
-$pf-v5-c-form-control--m-search--Color: $pf-v5-global--icon--Color--light !default;
-$pf-v5-c-form-control--m-search--Coordinates: "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" !default;
-
-// Calendar
-$pf-v5-c-form-control--m-calendar--Color: $pf-v5-global--icon--Color--light !default;
-$pf-v5-c-form-control--m-calendar--Coordinates: "M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z" !default;
-
-// Clock
-$pf-v5-c-form-control--m-clock--Color: $pf-v5-global--icon--Color--light !default;
-$pf-v5-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" !default;
-
 .#{$form-control} {
   // Component
+  --#{$form-control}--ColumnGap: var(--#{$pf-global}--spacer--sm);
   --#{$form-control}--Color: var(--#{$pf-global}--Color--100);
   --#{$form-control}--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$form-control}--LineHeight: var(--#{$pf-global}--LineHeight--md);
@@ -38,7 +11,7 @@ $pf-v5-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 2
   --#{$form-control}--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
   --#{$form-control}--BorderRadius: 0;
   --#{$form-control}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$form-control}--Width: 100%;
+  --#{$form-control}--Width: auto;
   --#{$form-control}--Height: calc(var(--#{$form-control}--FontSize) * var(--#{$form-control}--LineHeight) + var(--#{$form-control}--BorderWidth) * 2 + var(--#{$form-control}--PaddingTop) + var(--#{$form-control}--PaddingBottom)); // Needed for various browsers that compute height of form elements differently
 
   // padding
@@ -83,161 +56,111 @@ $pf-v5-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 2
   --#{$form-control}--readonly--m-plain--inset--base: 0;
 
   // Input m-success -- rename vars to m-success in breaking change release
-  --#{$form-control}--success--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$form-control}--success--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--success--BorderBottomWidth));
-  --#{$form-control}--success--BorderBottomColor: var(--#{$pf-global}--success-color--100);
-  --#{$form-control}--success--PaddingRight: var(--#{$pf-global}--spacer--xl);
-  --#{$form-control}--success--BackgroundPositionX: calc(100% - var(--#{$form-control}--PaddingLeft));
-  --#{$form-control}--success--BackgroundPositionY: center;
-  --#{$form-control}--success--BackgroundPosition: var(--#{$form-control}--success--BackgroundPositionX) var(--#{$form-control}--success--BackgroundPositionY);
-  --#{$form-control}--success--BackgroundSizeX: var(--#{$form-control}--FontSize);
-  --#{$form-control}--success--BackgroundSizeY: var(--#{$form-control}--FontSize);
-  --#{$form-control}--success--BackgroundSize: var(--#{$form-control}--success--BackgroundSizeX) var(--#{$form-control}--success--BackgroundSizeY);
-  --#{$form-control}--success--BackgroundUrl: #{pf-bg-svg($pf-v5-c-form-control--success--Coordinates, $svg-color: $pf-v5-c-form-control--success--Color)};
+  --#{$form-control}--m-success--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$form-control}--m-success--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--m-success--BorderBottomWidth));
+  --#{$form-control}--m-success--BorderBottomColor: var(--#{$pf-global}--success-color--100);
+  --#{$form-control}--m-success--PaddingRight: var(--#{$pf-global}--spacer--xl);
 
   // Input m-warning
   --#{$form-control}--m-warning--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
   --#{$form-control}--m-warning--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--m-warning--BorderBottomWidth));
   --#{$form-control}--m-warning--BorderBottomColor: var(--#{$pf-global}--warning-color--100);
   --#{$form-control}--m-warning--PaddingRight: var(--#{$pf-global}--spacer--xl);
-  --#{$form-control}--m-warning--BackgroundPositionX: calc(100% - calc(var(--#{$form-control}--PaddingLeft) - #{pf-size-prem(1px)}));
-  --#{$form-control}--m-warning--BackgroundPositionY: center;
-  --#{$form-control}--m-warning--BackgroundPosition: var(--#{$form-control}--m-warning--BackgroundPositionX) var(--#{$form-control}--m-warning--BackgroundPositionY);
-  --#{$form-control}--m-warning--BackgroundSizeX: #{pf-size-prem(20px)};
-  --#{$form-control}--m-warning--BackgroundSizeY: var(--#{$form-control}--FontSize);
-  --#{$form-control}--m-warning--BackgroundSize: var(--#{$form-control}--m-warning--BackgroundSizeX) var(--#{$form-control}--m-warning--BackgroundSizeY);
-  --#{$form-control}--m-warning--BackgroundUrl: #{pf-bg-svg($pf-v5-c-form-control--m-warning--Coordinates, $svg-color: $pf-v5-c-form-control--m-warning--Color)};
 
   // Input invalid
   --#{$form-control}--invalid--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
   --#{$form-control}--invalid--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--invalid--BorderBottomWidth));
   --#{$form-control}--invalid--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
   --#{$form-control}--invalid--PaddingRight: var(--#{$pf-global}--spacer--xl);
-  --#{$form-control}--invalid--BackgroundPositionX: calc(100% - var(--#{$form-control}--PaddingLeft));
-  --#{$form-control}--invalid--BackgroundPositionY: center;
-  --#{$form-control}--invalid--BackgroundPosition: var(--#{$form-control}--invalid--BackgroundPositionX) var(--#{$form-control}--invalid--BackgroundPositionY);
-  --#{$form-control}--invalid--BackgroundSizeX: var(--#{$form-control}--FontSize);
-  --#{$form-control}--invalid--BackgroundSizeY: var(--#{$form-control}--FontSize);
-  --#{$form-control}--invalid--BackgroundSize: var(--#{$form-control}--invalid--BackgroundSizeX) var(--#{$form-control}--invalid--BackgroundSizeY);
-  --#{$form-control}--invalid--BackgroundUrl: #{pf-bg-svg($pf-v5-c-form-control--invalid--Coordinates, $svg-color: $pf-v5-c-form-control--invalid--Color)};
-  --#{$form-control}--invalid--exclamation--Background: var(--#{$form-control}--invalid--BackgroundUrl) var(--#{$form-control}--invalid--BackgroundPosition) / var(--#{$form-control}--invalid--BackgroundSize) no-repeat;
-  --#{$form-control}--invalid--Background: var(--#{$form-control}--BackgroundColor) var(--#{$form-control}--invalid--exclamation--Background); // remove in breaking change
+  --#{$form-control}--invalid--IconWidth: var(--#{$form-control}--FontSize);
 
-  // Input m-search
-  // Remove at breaking change
-  --#{$form-control}--m-search--PaddingLeft: var(--#{$pf-global}--spacer--xl);
-  --#{$form-control}--m-search--BackgroundPosition: var(--#{$form-control}--PaddingRight);
-  --#{$form-control}--m-search--BackgroundSize: var(--#{$form-control}--FontSize) var(--#{$form-control}--FontSize);
-  --#{$form-control}--m-search--BackgroundUrl: #{pf-bg-svg($pf-v5-c-form-control--m-search--Coordinates, $svg-color: $pf-v5-c-form-control--m-search--Color)};
 
   // Input m-icon
-  --#{$form-control}--m-icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-icon--BackgroundSizeX) + var(--#{$form-control}--m-icon--icon--spacer));
-  --#{$form-control}--m-icon--BackgroundUrl: none;
-  --#{$form-control}--m-icon--BackgroundPositionX: calc(100% - var(--#{$form-control}--inset--base));
-  --#{$form-control}--m-icon--BackgroundPositionY: center;
-  --#{$form-control}--m-icon--BackgroundSizeX: var(--#{$form-control}--FontSize);
-  --#{$form-control}--m-icon--BackgroundSizeY: var(--#{$form-control}--FontSize);
+  --#{$form-control}--m-icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-icon--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer));
+  --#{$form-control}--m-icon--IconWidth: var(--#{$form-control}--FontSize);
   --#{$form-control}--m-icon--icon--spacer: var(--#{$pf-global}--spacer--sm);
-  --#{$form-control}--m-icon--icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--invalid--BackgroundSizeX) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}--m-icon--BackgroundSizeX) + var(--#{$form-control}--m-icon--icon--spacer));
-  --#{$form-control}--m-icon--icon--BackgroundPositionX: calc(var(--#{$form-control}--m-icon--BackgroundPositionX) - var(--#{$form-control}--m-icon--icon--spacer) - var(--#{$form-control}--invalid--BackgroundSizeX));
-  --#{$form-control}--m-icon--invalid--BackgroundUrl: var(--#{$form-control}--invalid--BackgroundUrl), var(--#{$form-control}--m-icon--BackgroundUrl);
-  --#{$form-control}--m-icon--invalid--BackgroundPosition: var(--#{$form-control}--invalid--BackgroundPosition), var(--#{$form-control}--m-icon--icon--BackgroundPositionX) var(--#{$form-control}--m-icon--BackgroundPositionY);
-  --#{$form-control}--m-icon--invalid--BackgroundSize: var(--#{$form-control}--invalid--BackgroundSize), var(--#{$form-control}--m-icon--BackgroundSizeX) var(--#{$form-control}--m-icon--BackgroundSizeY);
-  --#{$form-control}--m-icon--success--BackgroundUrl: var(--#{$form-control}--success--BackgroundUrl), var(--#{$form-control}--m-icon--BackgroundUrl);
-  --#{$form-control}--m-icon--success--BackgroundPosition: var(--#{$form-control}--success--BackgroundPosition), var(--#{$form-control}--m-icon--icon--BackgroundPositionX) var(--#{$form-control}--m-icon--BackgroundPositionY);
-  --#{$form-control}--m-icon--success--BackgroundSize: var(--#{$form-control}--success--BackgroundSize), var(--#{$form-control}--m-icon--BackgroundSizeX) var(--#{$form-control}--m-icon--BackgroundSizeY);
-  --#{$form-control}--m-icon--m-warning--BackgroundUrl: var(--#{$form-control}--m-warning--BackgroundUrl), var(--#{$form-control}--m-icon--BackgroundUrl);
-  --#{$form-control}--m-icon--m-warning--BackgroundPosition: var(--#{$form-control}--m-warning--BackgroundPosition), var(--#{$form-control}--m-icon--icon--BackgroundPositionX) var(--#{$form-control}--m-icon--BackgroundPositionY);
-  --#{$form-control}--m-icon--m-warning--BackgroundSize: var(--#{$form-control}--m-warning--BackgroundSize), var(--#{$form-control}--m-icon--BackgroundSizeX) var(--#{$form-control}--m-icon--BackgroundSizeY);
-
-  // Input m-calendar
-  --#{$form-control}--m-calendar--BackgroundUrl: #{pf-bg-svg($pf-v5-c-form-control--m-calendar--Coordinates, $svg-color: $pf-v5-c-form-control--m-calendar--Color)};
-
-  // Input m-clock
-  --#{$form-control}--m-clock--BackgroundUrl: #{pf-bg-svg($pf-v5-c-form-control--m-clock--Coordinates, $svg-color: $pf-v5-c-form-control--m-clock--Color)};
-
+  --#{$form-control}--m-icon--icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--invalid--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}--m-icon--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer));
+ 
   // Select -- rename __select to --select in a breaking change release
-  --#{$form-control}__select--PaddingRight: calc(var(--#{$pf-global}--spacer--lg) + var(--#{$form-control}--BorderWidth) + var(--#{$form-control}--BorderWidth));
-  --#{$form-control}__select--PaddingLeft: calc(var(--#{$pf-global}--spacer--sm) - var(--#{$form-control}--BorderWidth));
-  --#{$form-control}__select--BackgroundUrl: #{pf-bg-svg($pf-v5-c-form-control__select--Coordinates, $pf-v5-c-form-control__select--ViewBox)};
-  --#{$form-control}__select--BackgroundSize: .625em; // Calculated from react-icon SVG viewbox
-  --#{$form-control}__select--BackgroundPositionX: calc(100% - var(--#{$pf-global}--spacer--md) + 1px);
-  --#{$form-control}__select--BackgroundPositionY: center;
-  --#{$form-control}__select--BackgroundPosition: var(--#{$form-control}__select--BackgroundPositionX) var(--#{$form-control}__select--BackgroundPositionY);
+  --#{$form-control}--select--PaddingRight: calc(var(--#{$pf-global}--spacer--lg) + var(--#{$form-control}--BorderWidth) + var(--#{$form-control}--BorderWidth));
+  --#{$form-control}--select--PaddingLeft: calc(var(--#{$pf-global}--spacer--sm) - var(--#{$form-control}--BorderWidth));
 
   // Select success
-  --#{$form-control}__select--success--PaddingRight: var(--#{$pf-global}--spacer--3xl);
-  --#{$form-control}__select--success--BackgroundPosition: calc(var(--#{$form-control}__select--BackgroundPositionX) - var(--#{$pf-global}--spacer--lg));
+  --#{$form-control}--select--success--PaddingRight: var(--#{$pf-global}--spacer--3xl);
 
   // Select warning
-  --#{$form-control}__select--m-warning--PaddingRight: var(--#{$pf-global}--spacer--3xl);
-  --#{$form-control}__select--m-warning--BackgroundPosition: calc(var(--#{$form-control}__select--BackgroundPositionX) - var(--#{$pf-global}--spacer--lg) + #{pf-size-prem(1px)});
+  --#{$form-control}--select--m-warning--PaddingRight: var(--#{$pf-global}--spacer--3xl);
 
   // Select invalid
-  --#{$form-control}__select--invalid--PaddingRight: var(--#{$pf-global}--spacer--3xl);
-  --#{$form-control}__select--invalid--BackgroundPosition: calc(var(--#{$form-control}__select--BackgroundPositionX) - var(--#{$pf-global}--spacer--lg));
+  --#{$form-control}--select--invalid--PaddingRight: var(--#{$pf-global}--spacer--3xl);
 
   // Textarea
   --#{$form-control}--textarea--Width: var(--#{$form-control}--Width);
   --#{$form-control}--textarea--Height: auto;
 
-  // Textarea success
-  --#{$form-control}--textarea--success--BackgroundPositionY: var(--#{$form-control}--PaddingLeft); // update to use --#{$form-control}--inset--base at breaking change
+  // Form control icon 
+  --#{$form-control}__icon--Color: var(--#{$pf-global}--icon--Color--light);
+  --#{$form-control}__icon--success--Color: var(--#{$pf-global}--success-color--100);
+  --#{$form-control}__icon--warning--Color: var(--#{$pf-global}--warning-color--100);
+  --#{$form-control}__icon--invalid--Color: var(--#{$pf-global}--danger-color--100);
+  --#{$form-control}__icon--disabled--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - (2 * var(--#{$form-control}--BorderWidth)));
 
-  // Textarea warning
-  --#{$form-control}--textarea--m-warning--BackgroundPositionY: var(--#{$form-control}--PaddingLeft); // update to use --#{$form-control}--inset--base at breaking change
+  // Form control utilities
+  --#{$form-control}__utilities--Gap: var(--#{$pf-global}--spacer--sm);
+  --#{$form-control}__utilities--PaddingTop: var(--#{$form-control}--inset--base);
+  --#{$form-control}__utilities--PaddingRight: var(--#{$form-control}--inset--base);
+  --#{$form-control}__utilities--PaddingLeft: var(--#{$form-control}--inset--base);
 
-  // Textarea invalid
-  --#{$form-control}--textarea--invalid--BackgroundPositionY: var(--#{$form-control}--PaddingLeft); // update to use --#{$form-control}--inset--base at breaking change
-
-  // Icon sprite
-  // --#{$form-control}--m-icon-sprite--success--BackgroundUrl: url("#{$pf-v5-global--image-path}/status-icon-sprite.svg#success");
-  // --#{$form-control}--m-icon-sprite--m-warning--BackgroundUrl: url("#{$pf-v5-global--image-path}/status-icon-sprite.svg#warning");
-  // --#{$form-control}--m-icon-sprite--invalid--BackgroundUrl: url("#{$pf-v5-global--image-path}/status-icon-sprite.svg#invalid");
-  // --#{$form-control}--m-icon-sprite__select--BackgroundUrl: url("#{$pf-v5-global--image-path}/status-icon-sprite.svg#select");
-  // --#{$form-control}--m-icon-sprite--m-search--BackgroundUrl: url("#{$pf-v5-global--image-path}/status-icon-sprite.svg#search");
-  // --#{$form-control}--m-icon-sprite--m-calendar--BackgroundUrl: url("#{$pf-v5-global--image-path}/status-icon-sprite.svg#calendar");
-  // --#{$form-control}--m-icon-sprite--m-clock--BackgroundUrl: url("#{$pf-v5-global--image-path}/status-icon-sprite.svg#clock");
-  --#{$form-control}--m-icon-sprite__select--BackgroundSize: var(--#{$form-control}--FontSize);
-  --#{$form-control}--m-icon-sprite__select--BackgroundPositionX: calc(100% - var(--#{$pf-global}--spacer--md) + 7px);
-  --#{$form-control}--m-icon-sprite__select--success--BackgroundPosition: calc(100% - var(--#{$pf-global}--spacer--md) + 1px - var(--#{$pf-global}--spacer--lg));
-  --#{$form-control}--m-icon-sprite__select--m-warning--BackgroundPosition: calc(100% - var(--#{$pf-global}--spacer--md) - var(--#{$pf-global}--spacer--lg) + #{pf-size-prem(1px)});
-  --#{$form-control}--m-icon-sprite__select--invalid--BackgroundPosition: calc(100% - var(--#{$pf-global}--spacer--md) - var(--#{$pf-global}--spacer--lg));
+  // Form control select toggle icon
+  --#{$form-control}__toggle-icon--PaddingRight: var(--#{$form-control}--inset--base);
+  --#{$form-control}__toggle-icon--PaddingLeft: var(--#{$form-control}--inset--base);
+  --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - (2 * var(--#{$form-control}--BorderWidth)));
+  --#{$form-control}__toggle-icon--Color: var(--#{$pf-global}--Color--100);
+  --#{$form-control}--disabled__toggle-icon--Color: var(--#{$pf-global}--disabled-color--100);
 
   // This component always needs to be light
   @include pf-v5-t-light("--#{$form-control}--Color");
 
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: var(--#{$form-control}--ColumnGap);
+  align-items: flex-start;
   width: var(--#{$form-control}--Width);
-  padding: var(--#{$form-control}--PaddingTop) var(--#{$form-control}--PaddingRight) var(--#{$form-control}--PaddingBottom) var(--#{$form-control}--PaddingLeft);
   font-size: var(--#{$form-control}--FontSize);
   line-height: var(--#{$form-control}--LineHeight);
   background-color: var(--#{$form-control}--BackgroundColor);
-  background-repeat: no-repeat;
   border: var(--#{$form-control}--BorderWidth) solid;
   border-color: var(--#{$form-control}--BorderTopColor) var(--#{$form-control}--BorderRightColor) var(--#{$form-control}--BorderBottomColor) var(--#{$form-control}--BorderLeftColor);
   border-radius: var(--#{$form-control}--BorderRadius);
-  // stylelint-disable
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  // stylelint-enable
 
-  &::placeholder {
-    color: var(--#{$form-control}--placeholder--Color); // update to set --#{$form-control}--Color in breaking change - also look for any other place to do that in this component
+  & > :is(input, select, textarea) {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    padding: var(--#{$form-control}--PaddingTop) var(--#{$form-control}--PaddingRight) var(--#{$form-control}--PaddingBottom) var(--#{$form-control}--PaddingLeft);
+    color: var(--#{$form-control}--Color);
+    background-color: transparent;
+    border: none;
+    // stylelint-disable
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    // stylelint-enable
   }
 
-  &:not(textarea) {
-    height: var(--#{$form-control}--Height);
-
-    // truncate overflow text
+  & > *::placeholder {
+    color: var(--#{$form-control}--placeholder--Color); // TODO update to set --#{$form-control}--Color in breaking change - also look for any other place to do that in this component
+  }
+  
+  & > :is(input, select) {
     text-overflow: ellipsis;
   }
 
-  &[readonly] {
-    background-color: var(--#{$form-control}--readonly--BackgroundColor);
+  &.pf-m-readonly {
+    --#{$form-control}--BackgroundColor: var(--#{$form-control}--readonly--BackgroundColor);
 
     // stylelint-disable selector-not-notation
-    // update to single :not() in breaking change
-    &:not(.pf-m-success):not([aria-invalid="true"]) {
+    &:not(.pf-m-success, .pf-m-warning, .pf-m-error,[aria-invalid="true"]) {
       &:hover {
         --#{$form-control}--BorderBottomColor: var(--#{$form-control}--readonly--hover--BorderBottomColor);
       }
@@ -263,196 +186,168 @@ $pf-v5-c-form-control--m-clock--Coordinates: "M256 8C119 8 8 119 8 256s111 248 2
 
   &:focus {
     --#{$form-control}--BorderBottomColor: var(--#{$form-control}--focus--BorderBottomColor);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--focus--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--focus--BorderBottomWidth));
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--focus--PaddingBottom);
 
-    padding-bottom: var(--#{$form-control}--focus--PaddingBottom); // Can't redefine --#{$form-control}--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
     border-bottom-width: var(--#{$form-control}--focus--BorderBottomWidth);
   }
 
   &.pf-m-expanded {
     --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-expanded--BorderBottomColor);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-expanded--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-expanded--BorderBottomWidth));
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-expanded--PaddingBottom);
 
-    padding-bottom: var(--#{$form-control}--m-expanded--PaddingBottom); // Can't redefine --#{$form-control}--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
     border-bottom-width: var(--#{$form-control}--m-expanded--BorderBottomWidth);
   }
 
-  &:disabled {
+  &.pf-m-disabled {
     --#{$form-control}--BackgroundColor: var(--#{$form-control}--disabled--BackgroundColor);
+    --#{$form-control}--Color: var(--#{$form-control}--disabled--Color);
+    --#{$form-control}__toggle-icon--Color: var(--#{$form-control}--disabled__toggle-icon--Color);
 
-    color: var(--#{$form-control}--disabled--Color);
     cursor: not-allowed;
     border-color: var(--#{$form-control}--disabled--BorderColor);
   }
 
-  &[aria-invalid="true"] {
+  &.pf-m-error {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--invalid--PaddingRight);
     --#{$form-control}--BorderBottomColor: var(--#{$form-control}--invalid--BorderBottomColor);
+    --#{$form-control}__icon--Color: var(--#{$form-control}__icon--invalid--Color);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--invalid--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--invalid--BorderBottomWidth));
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--invalid--PaddingBottom);
 
-    padding-bottom: var(--#{$form-control}--invalid--PaddingBottom); // Can't redefine --#{$form-control}--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
-    background-image: var(--#{$form-control}--invalid--BackgroundUrl);
-    background-position: var(--#{$form-control}--invalid--BackgroundPosition);
-    background-size: var(--#{$form-control}--invalid--BackgroundSize);
     border-bottom-width: var(--#{$form-control}--invalid--BorderBottomWidth);
 
     &.pf-m-icon {
       --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--icon--PaddingRight);
-
-      background-image: var(--#{$form-control}--m-icon--invalid--BackgroundUrl);
-      background-position: var(--#{$form-control}--m-icon--invalid--BackgroundPosition);
-      background-size: var(--#{$form-control}--m-icon--invalid--BackgroundSize);
     }
   }
 
   &.pf-m-success {
-    --#{$form-control}--PaddingRight: var(--#{$form-control}--success--PaddingRight);
-    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--success--BorderBottomColor);
+    --#{$form-control}--PaddingRight: var(--#{$form-control}--m-success--PaddingRight);
+    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-success--BorderBottomColor);
+    --#{$form-control}__icon--Color: var(--#{$form-control}__icon--success--Color);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-success--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-success--BorderBottomWidth));
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-success--PaddingBottom);
 
-    padding-bottom: var(--#{$form-control}--success--PaddingBottom); // Can't redefine --#{$form-control}--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
-    background-image: var(--#{$form-control}--success--BackgroundUrl);
-    background-position: var(--#{$form-control}--success--BackgroundPosition);
-    background-size: var(--#{$form-control}--success--BackgroundSize);
-    border-bottom-width: var(--#{$form-control}--success--BorderBottomWidth);
+    border-bottom-width: var(--#{$form-control}--m-success--BorderBottomWidth);
 
     &.pf-m-icon {
       --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--icon--PaddingRight);
-
-      background-image: var(--#{$form-control}--m-icon--success--BackgroundUrl);
-      background-position: var(--#{$form-control}--m-icon--success--BackgroundPosition);
-      background-size: var(--#{$form-control}--m-icon--success--BackgroundSize);
     }
   }
 
   &.pf-m-warning {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-warning--PaddingRight);
     --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-warning--BorderBottomColor);
+    --#{$form-control}__icon--Color: var(--#{$form-control}__icon--warning--Color);
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-warning--PaddingBottom);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-warning--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-warning--BorderBottomWidth));
 
-    padding-bottom: var(--#{$form-control}--m-warning--PaddingBottom); // Can't redefine --#{$form-control}--PaddingBottom b/c the hover padding bottom uses the focus padding var to compute it's padding
-    background-image: var(--#{$form-control}--m-warning--BackgroundUrl);
-    background-position: var(--#{$form-control}--m-warning--BackgroundPosition);
-    background-size: var(--#{$form-control}--m-warning--BackgroundSize);
     border-bottom-width: var(--#{$form-control}--m-warning--BorderBottomWidth);
 
     &.pf-m-icon {
       --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--icon--PaddingRight);
-
-      background-image: var(--#{$form-control}--m-icon--m-warning--BackgroundUrl);
-      background-position: var(--#{$form-control}--m-icon--m-warning--BackgroundPosition);
-      background-size: var(--#{$form-control}--m-icon--m-warning--BackgroundSize);
     }
-  }
-
-  // Remove at breaking change
-  &.pf-m-search {
-    --#{$form-control}--PaddingLeft: var(--#{$form-control}--m-search--PaddingLeft);
-
-    background-image: var(--#{$form-control}--m-search--BackgroundUrl);
-    background-position: var(--#{$form-control}--m-search--BackgroundPosition);
-    background-size: var(--#{$form-control}--m-search--BackgroundSize);
   }
 
   &.pf-m-icon {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--PaddingRight);
-
-    background-image: var(--#{$form-control}--m-icon--BackgroundUrl);
-    background-position: var(--#{$form-control}--m-icon--BackgroundPositionX) var(--#{$form-control}--m-icon--BackgroundPositionY);
-    background-size: var(--#{$form-control}--m-icon--BackgroundSizeX) var(--#{$form-control}--m-icon--BackgroundSizeY);
-
-    &.pf-m-calendar {
-      --#{$form-control}--m-icon--BackgroundUrl: var(--#{$form-control}--m-calendar--BackgroundUrl);
-    }
-
-    &.pf-m-clock {
-      --#{$form-control}--m-icon--BackgroundUrl: var(--#{$form-control}--m-clock--BackgroundUrl);
-    }
   }
 
-  &.pf-m-icon-sprite {
-    --#{$form-control}--success--BackgroundUrl: var(--#{$form-control}--m-icon-sprite--success--BackgroundUrl);
-    --#{$form-control}--m-warning--BackgroundUrl: var(--#{$form-control}--m-icon-sprite--m-warning--BackgroundUrl);
-    --#{$form-control}--invalid--BackgroundUrl: var(--#{$form-control}--m-icon-sprite--invalid--BackgroundUrl);
-    --#{$form-control}__select--BackgroundUrl: var(--#{$form-control}--m-icon-sprite__select--BackgroundUrl);
-    --#{$form-control}--m-search--BackgroundUrl: var(--#{$form-control}--m-icon-sprite--m-search--BackgroundUrl);
-    --#{$form-control}--m-calendar--BackgroundUrl: var(--#{$form-control}--m-icon-sprite--m-calendar--BackgroundUrl);
-    --#{$form-control}--m-clock--BackgroundUrl: var(--#{$form-control}--m-icon-sprite--m-clock--BackgroundUrl);
-    --#{$form-control}__select--BackgroundSize: var(--#{$form-control}--m-icon-sprite__select--BackgroundSize);
-    --#{$form-control}__select--BackgroundPositionX: var(--#{$form-control}--m-icon-sprite__select--BackgroundPositionX);
-    --#{$form-control}__select--success--BackgroundPosition: var(--#{$form-control}--m-icon-sprite__select--success--BackgroundPosition);
-    --#{$form-control}__select--m-warning--BackgroundPosition: var(--#{$form-control}--m-icon-sprite__select--m-warning--BackgroundPosition);
-    --#{$form-control}__select--invalid--BackgroundPosition: var(--#{$form-control}--m-icon-sprite__select--invalid--BackgroundPosition);
-  }
-
-  @at-root select#{&} {
-    --#{$form-control}--PaddingRight: var(--#{$form-control}__select--PaddingRight);
-    --#{$form-control}--PaddingLeft: var(--#{$form-control}__select--PaddingLeft);
-
-    background-image: var(--#{$form-control}__select--BackgroundUrl);
-    background-position: var(--#{$form-control}__select--BackgroundPosition);
-    background-size: var(--#{$form-control}__select--BackgroundSize);
+  & > select {
+    --#{$form-control}--PaddingRight: var(--#{$form-control}--select--PaddingRight);
+    --#{$form-control}--PaddingLeft: var(--#{$form-control}--select--PaddingLeft);
 
     // Firefox's select text has additional padding
     // stylelint-disable-next-line
     @-moz-document url-prefix() {
-      --#{$form-control}--PaddingRight: calc(var(--#{$form-control}__select--PaddingRight) - 1px);
-      --#{$form-control}--PaddingLeft: calc(var(--#{$form-control}__select--PaddingLeft) - 4px);
+      --#{$form-control}--PaddingRight: calc(var(--#{$form-control}--select--PaddingRight) - 1px);
+      --#{$form-control}--PaddingLeft: calc(var(--#{$form-control}--select--PaddingLeft) - 4px);
     }
 
-    &[aria-invalid="true"] {
-      --#{$form-control}--PaddingRight: var(--#{$form-control}__select--invalid--PaddingRight);
-      --#{$form-control}--invalid--BackgroundPosition: var(--#{$form-control}__select--invalid--BackgroundPosition); // drop this declaration and use the __select var directly in the background-position below in breaking change release
-
-      background-image: var(--#{$form-control}__select--BackgroundUrl), var(--#{$form-control}--invalid--BackgroundUrl);
-      background-position: var(--#{$form-control}__select--BackgroundPosition), var(--#{$form-control}--invalid--BackgroundPosition);
-      background-size: var(--#{$form-control}__select--BackgroundSize), var(--#{$form-control}--invalid--BackgroundSize);
+    .pf-m-error {
+      --#{$form-control}--PaddingRight: var(--#{$form-control}--select--invalid--PaddingRight);
     }
 
-    &.pf-m-success {
-      --#{$form-control}--PaddingRight: var(--#{$form-control}__select--success--PaddingRight);
-      --#{$form-control}--success--BackgroundPosition: var(--#{$form-control}__select--success--BackgroundPosition); // drop this declaration and use the __select var directly in the background-position below in breaking change release
-
-      background-image: var(--#{$form-control}__select--BackgroundUrl), var(--#{$form-control}--success--BackgroundUrl);
-      background-position: var(--#{$form-control}__select--BackgroundPosition), var(--#{$form-control}--success--BackgroundPosition);
-      background-size: var(--#{$form-control}__select--BackgroundSize), var(--#{$form-control}--success--BackgroundSize);
+    .pf-m-success {
+      --#{$form-control}--PaddingRight: var(--#{$form-control}--select--success--PaddingRight);
     }
 
-    &.pf-m-warning {
-      --#{$form-control}--PaddingRight: var(--#{$form-control}__select--m-warning--PaddingRight);
-
-      background-image: var(--#{$form-control}__select--BackgroundUrl), var(--#{$form-control}--m-warning--BackgroundUrl);
-      background-position: var(--#{$form-control}__select--BackgroundPosition), var(--#{$form-control}__select--m-warning--BackgroundPosition);
-      background-size: var(--#{$form-control}__select--BackgroundSize), var(--#{$form-control}--m-warning--BackgroundSize);
-    }
-
-    &.pf-m-placeholder {
-      color: var(--#{$form-control}--placeholder--Color);
-
-      * {
-        color: var(--#{$form-control}--placeholder--child--Color);
-
-        // stylelint-disable max-nesting-depth
-        &:disabled {
-          color: revert;
-        }
-        // stylelint-enable
-      }
+    .pf-m-warning {
+      --#{$form-control}--PaddingRight: var(--#{$form-control}--select--m-warning--PaddingRight);
     }
   }
 
-  @at-root textarea#{&} {
-    --#{$form-control}--success--BackgroundPositionY: var(--#{$form-control}--textarea--success--BackgroundPositionY);
-    --#{$form-control}--invalid--BackgroundPositionY: var(--#{$form-control}--textarea--invalid--BackgroundPositionY);
-    --#{$form-control}--m-warning--BackgroundPositionY: var(--#{$form-control}--textarea--m-warning--BackgroundPositionY);
+  // TODO FIX THIS
+  &.pf-m-placeholder > select {
+    --#{$form-control}--Color: var(--#{$form-control}--placeholder--Color);
 
+    > * {
+      --#{$form-control}--Color: var(--#{$form-control}--placeholder--child--Color);
+
+      // stylelint-disable max-nesting-depth
+      &:disabled {
+        color: revert;
+      }
+      // stylelint-enable
+    }
+  }
+  
+  & > textarea {
     width: var(--#{$form-control}--textarea--Width);
     height: var(--#{$form-control}--textarea--Height);
     vertical-align: bottom;
   }
 
-  &.pf-m-resize-vertical {
+  &.pf-m-resize-vertical > textarea {
     resize: vertical;
   }
 
-  &.pf-m-resize-horizontal {
+  &:has(textarea),
+  &.pf-m-resize-horizontal{
+    min-width: fit-content;
+  }
+
+  &.pf-m-resize-horizontal > textarea{
     resize: horizontal;
   }
+}
+
+.#{$form-control}__icon {
+  display: flex;
+  align-items: center;
+  height: var(--#{$form-control}__icon--Height);
+  color: var(--#{$form-control}__icon--Color);
+}
+
+.#{$form-control}__toggle-icon {
+  display: flex;
+  grid-row: 1 / 2;
+  grid-column: 3;
+  align-items: center;
+  height: var(--#{$form-control}__toggle-icon--Height);
+  padding-right: var(--#{$form-control}__toggle-icon--PaddingRight);
+  padding-left: var(--#{$form-control}__toggle-icon--PaddingLeft);
+  color: var(--#{$form-control}__toggle-icon--Color);
+  pointer-events: none;
+}
+
+.#{$form-control}__utilities {
+  display: flex;
+  flex-wrap: nowrap;
+  grid-row: 1 / 2;
+  grid-column: 2;
+  gap: var(--#{$form-control}__utilities--Gap);
+  align-items: flex-start;
+  padding-right: var(--#{$form-control}__utilities--PaddingRight);
+  padding-left: var(--#{$form-control}__utilities--PaddingLeft);
+  pointer-events: none;
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

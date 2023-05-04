@@ -1,0 +1,16 @@
+<select class="{{pfv}}form-control--select {{#if form-control-select--IsExpanded}} pf-m-expanded{{/if}}{{#if form-control-select--modifier}} {{form-control-select--modifier}}{{/if}}"
+    {{#if form-control--IsDisabled}} disabled{{/if}}
+    {{#if form-control--IsReadonly}} readonly{{/if}}
+    {{#if form-control--IsRequired}} required{{/if}}
+    {{#if form-control--attribute}}
+      {{{form-control--attribute}}}
+    {{/if}}
+>{{#if @partial-block}}{{> @partial-block}}{{/if}}</select>
+{{#> form-control-utilities}}
+  {{#ifAny form-control--HasIcon form-control--IsError form-control--IsSuccess form-control--IsWarning }}
+    {{> form-control-template-status}}
+  {{/ifAny}}
+  <div class="{{pfv}}form-control__toggle-icon">
+  <i class="fas fa-caret-down" aria-hidden="true"></i>
+  </div>
+{{/form-control-utilities}}

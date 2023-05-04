@@ -1,5 +1,38 @@
-<{{controlType}} class="{{pfv}}form-control{{#if form-control--IsExpanded}} pf-m-expanded{{/if}}{{#if form-control--modifier}} {{form-control--modifier}}{{/if}}"
-  {{#if form-control--attribute}}
-    {{{form-control--attribute}}}
-	{{/if}}
-{{#if input}}>{{else}}>{{#if @partial-block}}{{> @partial-block}}{{/if}}</{{controlType}}>{{/if}}
+<div class="{{pfv}}form-control
+  {{#if form-control--IsExpanded}} pf-m-expanded{{/if}}
+  {{#if form-control--IsDisabled}} pf-m-disabled{{/if}}
+  {{#if form-control--IsReadonly}} pf-m-readonly{{/if}}
+  {{#if form-control--IsRequired}} pf-m-required{{/if}}
+  {{#if form-control--IsPlaceholder}} pf-m-placeholder{{/if}}
+  {{#if form-control--IsPlain}} pf-m-plain{{/if}}
+  {{#if form-control--IsSuccess}} pf-m-success{{/if}}
+  {{#if form-control--IsWarning}} pf-m-warning{{/if}}
+  {{#if form-control--IsError}} pf-m-error{{/if}}
+  {{#if form-control--HasIcon}} pf-m-icon{{/if}}
+  {{#if form-control--modifier}} {{form-control--modifier}}{{/if}}
+">
+  {{#ifEquals controlType "select"}}
+    {{> form-control-select}}
+  {{else}}
+    <{{controlType}} class="{{pfv}}form-control--{{controlType}}{{#if form-control--modifier}} {{form-control--modifier}}{{/if}}"
+      {{#if form-control--IsDisabled}} disabled{{/if}}
+      {{#if form-control--IsReadonly}} readonly{{/if}}
+      {{#if form-control--IsRequired}} required{{/if}}
+      {{#if form-control--attribute}}
+        {{{form-control--attribute}}}
+      {{/if}}
+    {{#if input}}>{{else}}>{{#if @partial-block}}{{> @partial-block}}{{/if}}</{{controlType}}>{{/if}}
+    {{#ifAny form-control--HasIcon form-control--IsError form-control--IsSuccess form-control--IsWarning }}
+      {{#> form-control-utilities}}
+        {{#ifEquals form-control--HasIcon "clock"}}
+          {{> form-control-icon}}
+        {{else ifEquals form-control--HasIcon "calendar-alt"}}
+          {{> form-control-icon}}
+        {{else if form-control--HasIcon}}
+          {{> form-control-icon}}
+        {{/ifEquals}}
+        {{> form-control-template-status}}
+      {{/form-control-utilities}}
+    {{/ifAny}}
+  {{/ifEquals}}
+</div>
