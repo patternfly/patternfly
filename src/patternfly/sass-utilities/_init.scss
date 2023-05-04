@@ -9,5 +9,5 @@ $pf-global--version: 'v#{$version-root}-' !default;
 $pf-prefix: #{$pf-global--namespace} + #{$pf-global--version} !default;
 
 // Global variable, namespace prefix and version
-$pf-global: #{$pf-prefix} + '-global' !default;
+$pf-global: #{$pf-prefix} + 'global' !default;
 // stylelint-enable
