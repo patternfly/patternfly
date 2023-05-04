@@ -1,96 +1,98 @@
-.pf-c-chip-group {
-  @include pf-t-light; // force the container follow the light theme
+// @debug $chip-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$chip}-group {
+  @include pf-v5-t-light; // force the container follow the light theme
 
   // Chip group - spaces main and close
   // column-gap spacer supports legacy chip group
-  --pf-c-chip-group--PaddingTop: 0;
-  --pf-c-chip-group--PaddingRight: 0;
-  --pf-c-chip-group--PaddingBottom: 0;
-  --pf-c-chip-group--PaddingLeft: 0;
-  --pf-c-chip-group--RowGap: var(--pf-global--spacer--sm);
-  --pf-c-chip-group--ColumnGap: 0;
+  --#{$chip}-group--PaddingTop: 0;
+  --#{$chip}-group--PaddingRight: 0;
+  --#{$chip}-group--PaddingBottom: 0;
+  --#{$chip}-group--PaddingLeft: 0;
+  --#{$chip}-group--RowGap: var(--#{$pf-global}--spacer--sm);
+  --#{$chip}-group--ColumnGap: 0;
 
   // Chip group main - spaces the category label and list
-  --pf-c-chip-group__main--RowGap: var(--pf-global--spacer--xs);
-  --pf-c-chip-group__main--ColumnGap: var(--pf-global--spacer--sm);
+  --#{$chip}-group__main--RowGap: var(--#{$pf-global}--spacer--xs);
+  --#{$chip}-group__main--ColumnGap: var(--#{$pf-global}--spacer--sm);
 
   // Chip group list - spaces the chips
-  --pf-c-chip-group__list--RowGap: var(--pf-global--spacer--xs);
-  --pf-c-chip-group__list--ColumnGap: var(--pf-global--spacer--xs);
+  --#{$chip}-group__list--RowGap: var(--#{$pf-global}--spacer--xs);
+  --#{$chip}-group__list--ColumnGap: var(--#{$pf-global}--spacer--xs);
 
   // Category modifier
-  --pf-c-chip-group--m-category--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-chip-group--m-category--PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-chip-group--m-category--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-chip-group--m-category--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-chip-group--m-category--BorderRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-chip-group--m-category--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --#{$chip}-group--m-category--PaddingTop: var(--#{$pf-global}--spacer--xs);
+  --#{$chip}-group--m-category--PaddingRight: var(--#{$pf-global}--spacer--xs);
+  --#{$chip}-group--m-category--PaddingBottom: var(--#{$pf-global}--spacer--xs);
+  --#{$chip}-group--m-category--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$chip}-group--m-category--BorderRadius: var(--#{$pf-global}--BorderRadius--sm);
+  --#{$chip}-group--m-category--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
 
   // Label in group
-  --pf-c-chip-group__label--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-chip-group__label--MaxWidth: 18ch;
+  --#{$chip}-group__label--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$chip}-group__label--MaxWidth: 18ch;
 
   // Chip group close - negative margin stretches height for click area
-  --pf-c-chip-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-chip-group__close--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
+  --#{$chip}-group__close--MarginTop: calc(var(--#{$pf-global}--spacer--xs) * -1);
+  --#{$chip}-group__close--MarginBottom: calc(var(--#{$pf-global}--spacer--xs) * -1);
 
-  row-gap: var(--pf-c-chip-group--RowGap);
-  column-gap: var(--pf-c-chip-group--ColumnGap);
+  row-gap: var(--#{$chip}-group--RowGap);
+  column-gap: var(--#{$chip}-group--ColumnGap);
   max-width: 100%;
-  padding-top: var(--pf-c-chip-group--PaddingTop);
-  padding-right: var(--pf-c-chip-group--PaddingRight);
-  padding-bottom: var(--pf-c-chip-group--PaddingBottom);
-  padding-left: var(--pf-c-chip-group--PaddingLeft);
+  padding-top: var(--#{$chip}-group--PaddingTop);
+  padding-right: var(--#{$chip}-group--PaddingRight);
+  padding-bottom: var(--#{$chip}-group--PaddingBottom);
+  padding-left: var(--#{$chip}-group--PaddingLeft);
 
   &.pf-m-category {
-    --pf-c-chip-group--PaddingTop: var(--pf-c-chip-group--m-category--PaddingTop);
-    --pf-c-chip-group--PaddingRight: var(--pf-c-chip-group--m-category--PaddingRight);
-    --pf-c-chip-group--PaddingBottom: var(--pf-c-chip-group--m-category--PaddingBottom);
-    --pf-c-chip-group--PaddingLeft: var(--pf-c-chip-group--m-category--PaddingLeft);
+    --#{$chip}-group--PaddingTop: var(--#{$chip}-group--m-category--PaddingTop);
+    --#{$chip}-group--PaddingRight: var(--#{$chip}-group--m-category--PaddingRight);
+    --#{$chip}-group--PaddingBottom: var(--#{$chip}-group--m-category--PaddingBottom);
+    --#{$chip}-group--PaddingLeft: var(--#{$chip}-group--m-category--PaddingLeft);
 
-    background-color: var(--pf-c-chip-group--m-category--BackgroundColor);
-    border-radius: var(--pf-c-chip-group--m-category--BorderRadius);
+    background-color: var(--#{$chip}-group--m-category--BackgroundColor);
+    border-radius: var(--#{$chip}-group--m-category--BorderRadius);
   }
 }
 
-.pf-c-chip-group__main {
+.#{$chip}-group__main {
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  row-gap: var(--pf-c-chip-group__main--RowGap);
-  column-gap: var(--pf-c-chip-group__main--ColumnGap);
+  row-gap: var(--#{$chip}-group__main--RowGap);
+  column-gap: var(--#{$chip}-group__main--ColumnGap);
   align-items: baseline;
   min-width: 0;
 }
 
-.pf-c-chip-group,
-.pf-c-chip-group__list {
+.#{$chip}-group,
+.#{$chip}-group__list {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   min-width: 0;
 }
 
-.pf-c-chip-group__list {
-  row-gap: var(--pf-c-chip-group__list--RowGap);
-  column-gap: var(--pf-c-chip-group__list--ColumnGap);
+.#{$chip}-group__list {
+  row-gap: var(--#{$chip}-group__list--RowGap);
+  column-gap: var(--#{$chip}-group__list--ColumnGap);
 }
 
-.pf-c-chip-group__list-item {
+.#{$chip}-group__list-item {
   display: inline-flex;
   min-width: 0;
 }
 
-.pf-c-chip-group__label {
-  @include pf-text-overflow;
+.#{$chip}-group__label {
+  @include pf-v5-text-overflow;
 
-  max-width: var(--pf-c-chip-group__label--MaxWidth);
-  font-size: var(--pf-c-chip-group__label--FontSize);
+  max-width: var(--#{$chip}-group__label--MaxWidth);
+  font-size: var(--#{$chip}-group__label--FontSize);
 }
 
-.pf-c-chip-group__close {
+.#{$chip}-group__close {
   display: flex;
   align-self: flex-start;
-  margin-top: var(--pf-c-chip-group__close--MarginTop);
-  margin-bottom: var(--pf-c-chip-group__close--MarginBottom);
+  margin-top: var(--#{$chip}-group__close--MarginTop);
+  margin-bottom: var(--#{$chip}-group__close--MarginBottom);
 }

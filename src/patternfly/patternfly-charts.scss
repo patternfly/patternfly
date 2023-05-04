@@ -1,8 +1,7 @@
 @import "base/chart-globals";
-
 // stylelint-disable
 
-.pf-c-chart {
+.#{$chart} {
   // Color blending mode
   svg g[clip-path] {
     mix-blend-mode: multiply;
@@ -11,411 +10,410 @@
 
 :root {
   // Chart colors
-
   // blue
-  --pf-chart-color-blue-100: #{$pf-chart-color-blue-100};
-  --pf-chart-color-blue-200: #{$pf-chart-color-blue-200};
-  --pf-chart-color-blue-300: #{$pf-chart-color-blue-300};
-  --pf-chart-color-blue-400: #{$pf-chart-color-blue-400};
-  --pf-chart-color-blue-500: #{$pf-chart-color-blue-500};
+  --#{$chart}-color-blue-100: #{$pf-v5-chart-color-blue-100};
+  --#{$chart}-color-blue-200: #{$pf-v5-chart-color-blue-200};
+  --#{$chart}-color-blue-300: #{$pf-v5-chart-color-blue-300};
+  --#{$chart}-color-blue-400: #{$pf-v5-chart-color-blue-400};
+  --#{$chart}-color-blue-500: #{$pf-v5-chart-color-blue-500};
 
   // green
-  --pf-chart-color-green-100: #{$pf-chart-color-green-100};
-  --pf-chart-color-green-200: #{$pf-chart-color-green-200};
-  --pf-chart-color-green-300: #{$pf-chart-color-green-300};
-  --pf-chart-color-green-400: #{$pf-chart-color-green-400};
-  --pf-chart-color-green-500: #{$pf-chart-color-green-500};
+  --#{$chart}-color-green-100: #{$pf-v5-chart-color-green-100};
+  --#{$chart}-color-green-200: #{$pf-v5-chart-color-green-200};
+  --#{$chart}-color-green-300: #{$pf-v5-chart-color-green-300};
+  --#{$chart}-color-green-400: #{$pf-v5-chart-color-green-400};
+  --#{$chart}-color-green-500: #{$pf-v5-chart-color-green-500};
 
   // cyan
-  --pf-chart-color-cyan-100: #{$pf-chart-color-cyan-100};
-  --pf-chart-color-cyan-200: #{$pf-chart-color-cyan-200};
-  --pf-chart-color-cyan-300: #{$pf-chart-color-cyan-300};
-  --pf-chart-color-cyan-400: #{$pf-chart-color-cyan-400};
-  --pf-chart-color-cyan-500: #{$pf-chart-color-cyan-500};
+  --#{$chart}-color-cyan-100: #{$pf-v5-chart-color-cyan-100};
+  --#{$chart}-color-cyan-200: #{$pf-v5-chart-color-cyan-200};
+  --#{$chart}-color-cyan-300: #{$pf-v5-chart-color-cyan-300};
+  --#{$chart}-color-cyan-400: #{$pf-v5-chart-color-cyan-400};
+  --#{$chart}-color-cyan-500: #{$pf-v5-chart-color-cyan-500};
 
   // purple
-  --pf-chart-color-purple-100: #{$pf-chart-color-purple-100};
-  --pf-chart-color-purple-200: #{$pf-chart-color-purple-200};
-  --pf-chart-color-purple-300: #{$pf-chart-color-purple-300};
-  --pf-chart-color-purple-400: #{$pf-chart-color-purple-400};
-  --pf-chart-color-purple-500: #{$pf-chart-color-purple-500};
+  --#{$chart}-color-purple-100: #{$pf-v5-chart-color-purple-100};
+  --#{$chart}-color-purple-200: #{$pf-v5-chart-color-purple-200};
+  --#{$chart}-color-purple-300: #{$pf-v5-chart-color-purple-300};
+  --#{$chart}-color-purple-400: #{$pf-v5-chart-color-purple-400};
+  --#{$chart}-color-purple-500: #{$pf-v5-chart-color-purple-500};
 
   // gold
-  --pf-chart-color-gold-100: #{$pf-chart-color-gold-100};
-  --pf-chart-color-gold-200: #{$pf-chart-color-gold-200};
-  --pf-chart-color-gold-300: #{$pf-chart-color-gold-300};
-  --pf-chart-color-gold-400: #{$pf-chart-color-gold-400};
-  --pf-chart-color-gold-500: #{$pf-chart-color-gold-500};
+  --#{$chart}-color-gold-100: #{$pf-v5-chart-color-gold-100};
+  --#{$chart}-color-gold-200: #{$pf-v5-chart-color-gold-200};
+  --#{$chart}-color-gold-300: #{$pf-v5-chart-color-gold-300};
+  --#{$chart}-color-gold-400: #{$pf-v5-chart-color-gold-400};
+  --#{$chart}-color-gold-500: #{$pf-v5-chart-color-gold-500};
 
   // orange
-  --pf-chart-color-orange-100: #{$pf-chart-color-orange-100};
-  --pf-chart-color-orange-200: #{$pf-chart-color-orange-200};
-  --pf-chart-color-orange-300: #{$pf-chart-color-orange-300};
-  --pf-chart-color-orange-400: #{$pf-chart-color-orange-400};
-  --pf-chart-color-orange-500: #{$pf-chart-color-orange-500};
+  --#{$chart}-color-orange-100: #{$pf-v5-chart-color-orange-100};
+  --#{$chart}-color-orange-200: #{$pf-v5-chart-color-orange-200};
+  --#{$chart}-color-orange-300: #{$pf-v5-chart-color-orange-300};
+  --#{$chart}-color-orange-400: #{$pf-v5-chart-color-orange-400};
+  --#{$chart}-color-orange-500: #{$pf-v5-chart-color-orange-500};
 
   // red
-  --pf-chart-color-red-100: #{$pf-chart-color-red-100};
-  --pf-chart-color-red-200: #{$pf-chart-color-red-200};
-  --pf-chart-color-red-300: #{$pf-chart-color-red-300};
-  --pf-chart-color-red-400: #{$pf-chart-color-red-400};
-  --pf-chart-color-red-500: #{$pf-chart-color-red-500};
+  --#{$chart}-color-red-100: #{$pf-v5-chart-color-red-100};
+  --#{$chart}-color-red-200: #{$pf-v5-chart-color-red-200};
+  --#{$chart}-color-red-300: #{$pf-v5-chart-color-red-300};
+  --#{$chart}-color-red-400: #{$pf-v5-chart-color-red-400};
+  --#{$chart}-color-red-500: #{$pf-v5-chart-color-red-500};
 
   // black
-  --pf-chart-color-black-100: #{$pf-chart-color-black-100};
-  --pf-chart-color-black-200: #{$pf-chart-color-black-200};
-  --pf-chart-color-black-300: #{$pf-chart-color-black-300};
-  --pf-chart-color-black-400: #{$pf-chart-color-black-400};
-  --pf-chart-color-black-500: #{$pf-chart-color-black-500};
+  --#{$chart}-color-black-100: #{$pf-v5-chart-color-black-100};
+  --#{$chart}-color-black-200: #{$pf-v5-chart-color-black-200};
+  --#{$chart}-color-black-300: #{$pf-v5-chart-color-black-300};
+  --#{$chart}-color-black-400: #{$pf-v5-chart-color-black-400};
+  --#{$chart}-color-black-500: #{$pf-v5-chart-color-black-500};
 
   // typography
-  --pf-chart-global--FontSize--xs: #{$pf-chart-global--FontSize--xs};
-  --pf-chart-global--FontSize--sm: #{$pf-chart-global--FontSize--sm};
-  --pf-chart-global--FontSize--lg: #{$pf-chart-global--FontSize--lg};
-  --pf-chart-global--FontSize--2xl: #{$pf-chart-global--FontSize--2xl};
-  --pf-chart-global--FontFamily: #{$pf-chart-global--FontFamily};
-  --pf-chart-global--letter-spacing: #{$pf-chart-global--letter-spacing};
+  --#{$chart}-global--FontSize--xs: #{$pf-v5-chart-global--FontSize--xs};
+  --#{$chart}-global--FontSize--sm: #{$pf-v5-chart-global--FontSize--sm};
+  --#{$chart}-global--FontSize--lg: #{$pf-v5-chart-global--FontSize--lg};
+  --#{$chart}-global--FontSize--2xl: #{$pf-v5-chart-global--FontSize--2xl};
+  --#{$chart}-global--FontFamily: #{$pf-v5-chart-global--FontFamily};
+  --#{$chart}-global--letter-spacing: #{$pf-v5-chart-global--letter-spacing};
 
   // label
-  --pf-chart-global--label--Padding: #{$pf-chart-global--label--Padding};
-  --pf-chart-global--label--Margin: #{$pf-chart-global--label--Margin};
-  --pf-chart-global--label--stroke: #{$pf-chart-global--label--stroke};
-  --pf-chart-global--label--text-anchor: #{$pf-chart-global--label--text-anchor};
-  --pf-chart-global--label--stroke--Width: #{$pf-chart-global--label--stroke--Width};
-  --pf-chart-global--label--Fill: #{$pf-chart-global--label--Fill};
+  --#{$chart}-global--label--Padding: #{$pf-v5-chart-global--label--Padding};
+  --#{$chart}-global--label--Margin: #{$pf-v5-chart-global--label--Margin};
+  --#{$chart}-global--label--stroke: #{$pf-v5-chart-global--label--stroke};
+  --#{$chart}-global--label--text-anchor: #{$pf-v5-chart-global--label--text-anchor};
+  --#{$chart}-global--label--stroke--Width: #{$pf-v5-chart-global--label--stroke--Width};
+  --#{$chart}-global--label--Fill: #{$pf-v5-chart-global--label--Fill};
 
   // Layout Props
-  --pf-chart-global--layout--Padding: #{$pf-chart-global--layout--Padding};
-  --pf-chart-global--layout--Height: #{$pf-chart-global--layout--Height};
-  --pf-chart-global--layout--Width: #{$pf-chart-global--layout--Width};
+  --#{$chart}-global--layout--Padding: #{$pf-v5-chart-global--layout--Padding};
+  --#{$chart}-global--layout--Height: #{$pf-v5-chart-global--layout--Height};
+  --#{$chart}-global--layout--Width: #{$pf-v5-chart-global--layout--Width};
 
   // Stroke and Border Width
-  --pf-chart-global--stroke--Width--xs: #{$pf-chart-global--stroke--Width--xs};
-  --pf-chart-global--stroke--Width--sm: #{$pf-chart-global--stroke--Width--sm};
-  --pf-chart-global--BorderWidth--xs: #{$pf-chart-global--BorderWidth--xs};
-  --pf-chart-global--BorderWidth--sm: #{$pf-chart-global--BorderWidth--sm};
-  --pf-chart-global--BorderWidth--lg: #{$pf-chart-global--BorderWidth--lg};
+  --#{$chart}-global--stroke--Width--xs: #{$pf-v5-chart-global--stroke--Width--xs};
+  --#{$chart}-global--stroke--Width--sm: #{$pf-v5-chart-global--stroke--Width--sm};
+  --#{$chart}-global--BorderWidth--xs: #{$pf-v5-chart-global--BorderWidth--xs};
+  --#{$chart}-global--BorderWidth--sm: #{$pf-v5-chart-global--BorderWidth--sm};
+  --#{$chart}-global--BorderWidth--lg: #{$pf-v5-chart-global--BorderWidth--lg};
 
   // Stroke
-  --pf-chart-global--stroke-line-cap: #{$pf-chart-global--stroke-line-cap};
-  --pf-chart-global--stroke-line-join: #{$pf-chart-global--stroke-line-join};
+  --#{$chart}-global--stroke-line-cap: #{$pf-v5-chart-global--stroke-line-cap};
+  --#{$chart}-global--stroke-line-join: #{$pf-v5-chart-global--stroke-line-join};
 
   // Fills and Strokes
-  --pf-chart-global--danger--Color--100: #{$pf-chart-global--danger--Color--100};
-  --pf-chart-global--warning--Color--100: #{$pf-chart-global--warning--Color--100};
-  --pf-chart-global--warning--Color--200: #{$pf-chart-global--warning--Color--200};
-  --pf-chart-global--success--Color--100: #{$pf-chart-global--success--Color--100};
-  --pf-chart-global--Fill--Color--900: #{$pf-chart-global--Fill--Color--900};
-  --pf-chart-global--Fill--Color--700: #{$pf-chart-global--Fill--Color--700};
-  --pf-chart-global--Fill--Color--500: #{$pf-chart-global--Fill--Color--500};
-  --pf-chart-global--Fill--Color--400: #{$pf-chart-global--Fill--Color--400};
-  --pf-chart-global--Fill--Color--300: #{$pf-chart-global--Fill--Color--300};
-  --pf-chart-global--Fill--Color--200: #{$pf-chart-global--Fill--Color--200};
-  --pf-chart-global--Fill--Color--white: #{$pf-chart-global--Fill--Color--white};
+  --#{$chart}-global--danger--Color--100: #{$pf-v5-chart-global--danger--Color--100};
+  --#{$chart}-global--warning--Color--100: #{$pf-v5-chart-global--warning--Color--100};
+  --#{$chart}-global--warning--Color--200: #{$pf-v5-chart-global--warning--Color--200};
+  --#{$chart}-global--success--Color--100: #{$pf-v5-chart-global--success--Color--100};
+  --#{$chart}-global--Fill--Color--900: #{$pf-v5-chart-global--Fill--Color--900};
+  --#{$chart}-global--Fill--Color--700: #{$pf-v5-chart-global--Fill--Color--700};
+  --#{$chart}-global--Fill--Color--500: #{$pf-v5-chart-global--Fill--Color--500};
+  --#{$chart}-global--Fill--Color--400: #{$pf-v5-chart-global--Fill--Color--400};
+  --#{$chart}-global--Fill--Color--300: #{$pf-v5-chart-global--Fill--Color--300};
+  --#{$chart}-global--Fill--Color--200: #{$pf-v5-chart-global--Fill--Color--200};
+  --#{$chart}-global--Fill--Color--white: #{$pf-v5-chart-global--Fill--Color--white};
 
   // Individual Charts
 
   // Area Chart
-  --pf-chart-area--Opacity: #{$pf-chart-area--Opacity};
-  --pf-chart-area--stroke--Width: #{$pf-chart-area--stroke--Width};
-  --pf-chart-area--data--Fill: #{$pf-chart-area--data--Fill};
+  --#{$chart}-area--Opacity: #{$pf-v5-chart-area--Opacity};
+  --#{$chart}-area--stroke--Width: #{$pf-v5-chart-area--stroke--Width};
+  --#{$chart}-area--data--Fill: #{$pf-v5-chart-area--data--Fill};
 
   // Axis Chart
-  --pf-chart-axis--axis--stroke--Width: #{$pf-chart-axis--axis--stroke--Width};
-  --pf-chart-axis--axis--stroke--Color: #{$pf-chart-axis--axis--stroke--Color};
-  --pf-chart-axis--axis--Fill: #{$pf-chart-axis--axis--Fill};
-  --pf-chart-axis--axis-label--Padding: #{$pf-chart-axis--axis-label--Padding};
-  --pf-chart-axis--axis-label--stroke--Color: #{$pf-chart-axis--axis-label--stroke--Color};
-  --pf-chart-axis--grid--Fill: #{$pf-chart-axis--grid--Fill};
-  --pf-chart-axis--grid--stroke--Color: #{$pf-chart-axis--grid--stroke--Color};
-  --pf-chart-axis--grid--PointerEvents: #{$pf-chart-axis--grid--PointerEvents};
-  --pf-chart-axis--tick--Fill: #{$pf-chart-axis--tick--Fill};
-  --pf-chart-axis--tick--Size: #{$pf-chart-axis--tick--Size};
-  --pf-chart-axis--tick--Width: #{$pf-chart-axis--tick--Width};
-  --pf-chart-axis--tick--stroke--Color: #{$pf-chart-axis--tick--stroke--Color};
-  --pf-chart-axis--tick-label--Fill: #{$pf-chart-axis--tick-label--Fill};
+  --#{$chart}-axis--axis--stroke--Width: #{$pf-v5-chart-axis--axis--stroke--Width};
+  --#{$chart}-axis--axis--stroke--Color: #{$pf-v5-chart-axis--axis--stroke--Color};
+  --#{$chart}-axis--axis--Fill: #{$pf-v5-chart-axis--axis--Fill};
+  --#{$chart}-axis--axis-label--Padding: #{$pf-v5-chart-axis--axis-label--Padding};
+  --#{$chart}-axis--axis-label--stroke--Color: #{$pf-v5-chart-axis--axis-label--stroke--Color};
+  --#{$chart}-axis--grid--Fill: #{$pf-v5-chart-axis--grid--Fill};
+  --#{$chart}-axis--grid--stroke--Color: #{$pf-v5-chart-axis--grid--stroke--Color};
+  --#{$chart}-axis--grid--PointerEvents: #{$pf-v5-chart-axis--grid--PointerEvents};
+  --#{$chart}-axis--tick--Fill: #{$pf-v5-chart-axis--tick--Fill};
+  --#{$chart}-axis--tick--Size: #{$pf-v5-chart-axis--tick--Size};
+  --#{$chart}-axis--tick--Width: #{$pf-v5-chart-axis--tick--Width};
+  --#{$chart}-axis--tick--stroke--Color: #{$pf-v5-chart-axis--tick--stroke--Color};
+  --#{$chart}-axis--tick-label--Fill: #{$pf-v5-chart-axis--tick-label--Fill};
 
   // Bar Chart
-  --pf-chart-bar--Width: #{$pf-chart-bar--Width};
-  --pf-chart-bar--data--stroke: #{$pf-chart-bar--data--stroke};
-  --pf-chart-bar--data--Fill: #{$pf-chart-bar--data--Fill};
-  --pf-chart-bar--data--Padding: #{$pf-chart-bar--data--Padding};
-  --pf-chart-bar--data-stroke--Width: #{$pf-chart-bar--data-stroke--Width};
+  --#{$chart}-bar--Width: #{$pf-v5-chart-bar--Width};
+  --#{$chart}-bar--data--stroke: #{$pf-v5-chart-bar--data--stroke};
+  --#{$chart}-bar--data--Fill: #{$pf-v5-chart-bar--data--Fill};
+  --#{$chart}-bar--data--Padding: #{$pf-v5-chart-bar--data--Padding};
+  --#{$chart}-bar--data-stroke--Width: #{$pf-v5-chart-bar--data-stroke--Width};
 
   // Box Plot Chart
-  --pf-chart-boxplot--max--Padding: #{$pf-chart-boxplot--max--Padding};
-  --pf-chart-boxplot--max--stroke--Color: #{$pf-chart-boxplot--max--stroke--Color};
-  --pf-chart-boxplot--max--stroke--Width: #{$pf-chart-boxplot--max--stroke--Width};
-  --pf-chart-boxplot--median--Padding: #{$pf-chart-boxplot--median--Padding};
-  --pf-chart-boxplot--median--stroke--Color: #{$pf-chart-boxplot--median--stroke--Color};
-  --pf-chart-boxplot--median--stroke--Width: #{$pf-chart-boxplot--median--stroke--Width};
-  --pf-chart-boxplot--min--Padding: #{$pf-chart-boxplot--min--Padding};
-  --pf-chart-boxplot--min--stroke--Width: #{$pf-chart-boxplot--min--stroke--Width};
-  --pf-chart-boxplot--min--stroke--Color: #{$pf-chart-boxplot--min--stroke--Color};
-  --pf-chart-boxplot--lower-quartile--Padding: #{$pf-chart-boxplot--lower-quartile--Padding};
-  --pf-chart-boxplot--lower-quartile--Fill: #{$pf-chart-boxplot--lower-quartile--Fill};
-  --pf-chart-boxplot--upper-quartile--Padding: #{$pf-chart-boxplot--upper-quartile--Padding};
-  --pf-chart-boxplot--upper-quartile--Fill: #{$pf-chart-boxplot--upper-quartile--Fill};
-  --pf-chart-boxplot--box--Width: #{$pf-chart-boxplot--box--Width};
+  --#{$chart}-boxplot--max--Padding: #{$pf-v5-chart-boxplot--max--Padding};
+  --#{$chart}-boxplot--max--stroke--Color: #{$pf-v5-chart-boxplot--max--stroke--Color};
+  --#{$chart}-boxplot--max--stroke--Width: #{$pf-v5-chart-boxplot--max--stroke--Width};
+  --#{$chart}-boxplot--median--Padding: #{$pf-v5-chart-boxplot--median--Padding};
+  --#{$chart}-boxplot--median--stroke--Color: #{$pf-v5-chart-boxplot--median--stroke--Color};
+  --#{$chart}-boxplot--median--stroke--Width: #{$pf-v5-chart-boxplot--median--stroke--Width};
+  --#{$chart}-boxplot--min--Padding: #{$pf-v5-chart-boxplot--min--Padding};
+  --#{$chart}-boxplot--min--stroke--Width: #{$pf-v5-chart-boxplot--min--stroke--Width};
+  --#{$chart}-boxplot--min--stroke--Color: #{$pf-v5-chart-boxplot--min--stroke--Color};
+  --#{$chart}-boxplot--lower-quartile--Padding: #{$pf-v5-chart-boxplot--lower-quartile--Padding};
+  --#{$chart}-boxplot--lower-quartile--Fill: #{$pf-v5-chart-boxplot--lower-quartile--Fill};
+  --#{$chart}-boxplot--upper-quartile--Padding: #{$pf-v5-chart-boxplot--upper-quartile--Padding};
+  --#{$chart}-boxplot--upper-quartile--Fill: #{$pf-v5-chart-boxplot--upper-quartile--Fill};
+  --#{$chart}-boxplot--box--Width: #{$pf-v5-chart-boxplot--box--Width};
 
   // Bullet Chart
-  --pf-chart-bullet--axis--tick--count: #{$pf-chart-bullet--axis--tick--count};
-  --pf-chart-bullet--comparative-measure--Fill--Color: #{$pf-chart-bullet--comparative-measure--Fill--Color};
-  --pf-chart-bullet--comparative-measure--stroke--Color: #{$pf-chart-bullet--comparative-measure--stroke--Color};
-  --pf-chart-bullet--comparative-measure--stroke--Width: #{$pf-chart-bullet--comparative-measure--stroke--Width};
-  --pf-chart-bullet--comparative-measure--error--Fill--Color: #{$pf-chart-bullet--comparative-measure--error--Fill--Color};
-  --pf-chart-bullet--comparative-measure--error--stroke--Color: #{$pf-chart-bullet--comparative-measure--error--stroke--Color};
-  --pf-chart-bullet--comparative-measure--error--stroke--Width: #{$pf-chart-bullet--comparative-measure--error--stroke--Width};
-  --pf-chart-bullet--comparative-measure--error--Width: #{$pf-chart-bullet--comparative-measure--error--Width};
-  --pf-chart-bullet--comparative-measure--warning--Fill--Color: #{$pf-chart-bullet--comparative-measure--warning--Fill--Color};
-  --pf-chart-bullet--comparative-measure--warning--stroke--Color: #{$pf-chart-bullet--comparative-measure--warning--stroke--Color};
-  --pf-chart-bullet--comparative-measure--warning--stroke--Width: #{$pf-chart-bullet--comparative-measure--warning--stroke--Width};
-  --pf-chart-bullet--comparative-measure--warning--Width: #{$pf-chart-bullet--comparative-measure--warning--Width};
-  --pf-chart-bullet--comparative-measure--Width: #{$pf-chart-bullet--comparative-measure--Width};
-  --pf-chart-bullet--group-title--divider--Fill--Color: #{$pf-chart-bullet--group-title--divider--Fill--Color};
-  --pf-chart-bullet--group-title--divider--stroke--Color: #{$pf-chart-bullet--group-title--divider--stroke--Color};
-  --pf-chart-bullet--group-title--divider--stroke--Width: #{$pf-chart-bullet--group-title--divider--stroke--Width};
-  --pf-chart-bullet--Height: #{$pf-chart-bullet--Height};
-  --pf-chart-bullet--label--title--Fill: #{$pf-chart-bullet--label--title--Fill};
-  --pf-chart-bullet--label--grouptitle--Fill: #{$pf-chart-bullet--label--grouptitle--Fill};
-  --pf-chart-bullet--label--subtitle--Fill: #{$pf-chart-bullet--label--subtitle--Fill};
-  --pf-chart-bullet--primary-measure--dot--size: #{$pf-chart-bullet--primary-measure--dot--size};
-  --pf-chart-bullet--primary-measure--segmented--Width: #{$pf-chart-bullet--primary-measure--segmented--Width};
-  --pf-chart-bullet--negative-measure--ColorScale--100: #{$pf-chart-color-red-100};
-  --pf-chart-bullet--negative-measure--ColorScale--200: #{$pf-chart-color-red-200};
-  --pf-chart-bullet--negative-measure--ColorScale--300: #{$pf-chart-color-red-300};
-  --pf-chart-bullet--negative-measure--ColorScale--400: #{$pf-chart-color-red-400};
-  --pf-chart-bullet--negative-measure--ColorScale--500: #{$pf-chart-color-red-500};
-  --pf-chart-bullet--qualitative-range--Width: #{$pf-chart-bullet--qualitative-range--Width};
-  --pf-chart-bullet--qualitative-range--ColorScale--100: #{$pf-chart-color-black-100};
-  --pf-chart-bullet--qualitative-range--ColorScale--200: #{$pf-chart-color-black-200};
-  --pf-chart-bullet--qualitative-range--ColorScale--300: #{$pf-chart-color-black-300};
-  --pf-chart-bullet--qualitative-range--ColorScale--400: #{$pf-chart-color-black-400};
-  --pf-chart-bullet--qualitative-range--ColorScale--500: #{$pf-chart-color-black-500};
+  --#{$chart}-bullet--axis--tick--count: #{$pf-v5-chart-bullet--axis--tick--count};
+  --#{$chart}-bullet--comparative-measure--Fill--Color: #{$pf-v5-chart-bullet--comparative-measure--Fill--Color};
+  --#{$chart}-bullet--comparative-measure--stroke--Color: #{$pf-v5-chart-bullet--comparative-measure--stroke--Color};
+  --#{$chart}-bullet--comparative-measure--stroke--Width: #{$pf-v5-chart-bullet--comparative-measure--stroke--Width};
+  --#{$chart}-bullet--comparative-measure--error--Fill--Color: #{$pf-v5-chart-bullet--comparative-measure--error--Fill--Color};
+  --#{$chart}-bullet--comparative-measure--error--stroke--Color: #{$pf-v5-chart-bullet--comparative-measure--error--stroke--Color};
+  --#{$chart}-bullet--comparative-measure--error--stroke--Width: #{$pf-v5-chart-bullet--comparative-measure--error--stroke--Width};
+  --#{$chart}-bullet--comparative-measure--error--Width: #{$pf-v5-chart-bullet--comparative-measure--error--Width};
+  --#{$chart}-bullet--comparative-measure--warning--Fill--Color: #{$pf-v5-chart-bullet--comparative-measure--warning--Fill--Color};
+  --#{$chart}-bullet--comparative-measure--warning--stroke--Color: #{$pf-v5-chart-bullet--comparative-measure--warning--stroke--Color};
+  --#{$chart}-bullet--comparative-measure--warning--stroke--Width: #{$pf-v5-chart-bullet--comparative-measure--warning--stroke--Width};
+  --#{$chart}-bullet--comparative-measure--warning--Width: #{$pf-v5-chart-bullet--comparative-measure--warning--Width};
+  --#{$chart}-bullet--comparative-measure--Width: #{$pf-v5-chart-bullet--comparative-measure--Width};
+  --#{$chart}-bullet--group-title--divider--Fill--Color: #{$pf-v5-chart-bullet--group-title--divider--Fill--Color};
+  --#{$chart}-bullet--group-title--divider--stroke--Color: #{$pf-v5-chart-bullet--group-title--divider--stroke--Color};
+  --#{$chart}-bullet--group-title--divider--stroke--Width: #{$pf-v5-chart-bullet--group-title--divider--stroke--Width};
+  --#{$chart}-bullet--Height: #{$pf-v5-chart-bullet--Height};
+  --#{$chart}-bullet--label--title--Fill: #{$pf-v5-chart-bullet--label--title--Fill};
+  --#{$chart}-bullet--label--grouptitle--Fill: #{$pf-v5-chart-bullet--label--grouptitle--Fill};
+  --#{$chart}-bullet--label--subtitle--Fill: #{$pf-v5-chart-bullet--label--subtitle--Fill};
+  --#{$chart}-bullet--primary-measure--dot--size: #{$pf-v5-chart-bullet--primary-measure--dot--size};
+  --#{$chart}-bullet--primary-measure--segmented--Width: #{$pf-v5-chart-bullet--primary-measure--segmented--Width};
+  --#{$chart}-bullet--negative-measure--ColorScale--100: #{$pf-v5-chart-color-red-100};
+  --#{$chart}-bullet--negative-measure--ColorScale--200: #{$pf-v5-chart-color-red-200};
+  --#{$chart}-bullet--negative-measure--ColorScale--300: #{$pf-v5-chart-color-red-300};
+  --#{$chart}-bullet--negative-measure--ColorScale--400: #{$pf-v5-chart-color-red-400};
+  --#{$chart}-bullet--negative-measure--ColorScale--500: #{$pf-v5-chart-color-red-500};
+  --#{$chart}-bullet--qualitative-range--Width: #{$pf-v5-chart-bullet--qualitative-range--Width};
+  --#{$chart}-bullet--qualitative-range--ColorScale--100: #{$pf-v5-chart-color-black-100};
+  --#{$chart}-bullet--qualitative-range--ColorScale--200: #{$pf-v5-chart-color-black-200};
+  --#{$chart}-bullet--qualitative-range--ColorScale--300: #{$pf-v5-chart-color-black-300};
+  --#{$chart}-bullet--qualitative-range--ColorScale--400: #{$pf-v5-chart-color-black-400};
+  --#{$chart}-bullet--qualitative-range--ColorScale--500: #{$pf-v5-chart-color-black-500};
 
   // Candlestick
-  --pf-chart-candelstick--data--stroke--Width: #{$pf-chart-candelstick--data--stroke--Width};
-  --pf-chart-candelstick--data--stroke--Color: #{$pf-chart-candelstick--data--stroke--Color};
-  --pf-chart-candelstick--candle--positive--Color: #{$pf-chart-candelstick--candle--positive--Color};
-  --pf-chart-candelstick--candle--negative--Color: #{$pf-chart-candelstick--candle--negative--Color};
+  --#{$chart}-candelstick--data--stroke--Width: #{$pf-v5-chart-candelstick--data--stroke--Width};
+  --#{$chart}-candelstick--data--stroke--Color: #{$pf-v5-chart-candelstick--data--stroke--Color};
+  --#{$chart}-candelstick--candle--positive--Color: #{$pf-v5-chart-candelstick--candle--positive--Color};
+  --#{$chart}-candelstick--candle--negative--Color: #{$pf-v5-chart-candelstick--candle--negative--Color};
 
   // Container
-  --pf-chart-container--cursor--line--Fill: #{$pf-chart-container--cursor--line--Fill};
+  --#{$chart}-container--cursor--line--Fill: #{$pf-v5-chart-container--cursor--line--Fill};
 
   // Simple Donut Chart
-  --pf-chart-donut--label--title--Fill: #{$pf-chart-donut--label--title--Fill};
-  --pf-chart-donut--label--subtitle--Fill: #{$pf-chart-donut--label--subtitle--Fill};
-  --pf-chart-donut--label--subtitle--position: #{$pf-chart-donut--label--subtitle--position};
-  --pf-chart-donut--pie--Height: #{$pf-chart-donut--pie--Height};
-  --pf-chart-donut--pie--angle--Padding: #{$pf-chart-donut--pie--angle--Padding};
-  --pf-chart-donut--pie--Padding: #{$pf-chart-donut--pie--Padding};
-  --pf-chart-donut--pie--Width: #{$pf-chart-donut--pie--Width};
+  --#{$chart}-donut--label--title--Fill: #{$pf-v5-chart-donut--label--title--Fill};
+  --#{$chart}-donut--label--subtitle--Fill: #{$pf-v5-chart-donut--label--subtitle--Fill};
+  --#{$chart}-donut--label--subtitle--position: #{$pf-v5-chart-donut--label--subtitle--position};
+  --#{$chart}-donut--pie--Height: #{$pf-v5-chart-donut--pie--Height};
+  --#{$chart}-donut--pie--angle--Padding: #{$pf-v5-chart-donut--pie--angle--Padding};
+  --#{$chart}-donut--pie--Padding: #{$pf-v5-chart-donut--pie--Padding};
+  --#{$chart}-donut--pie--Width: #{$pf-v5-chart-donut--pie--Width};
 
   // Donut Threshold Chart
-  --pf-chart-donut--threshold--first--Color: #{$pf-chart-donut--threshold--first--Color};
-  --pf-chart-donut--threshold--second--Color: #{$pf-chart-donut--threshold--second--Color};
-  --pf-chart-donut--threshold--third--Color: #{$pf-chart-donut--threshold--third--Color};
-  --pf-chart-donut--threshold--warning--Color: #{$pf-chart-donut--threshold--warning--Color};
-  --pf-chart-donut--threshold--danger--Color: #{$pf-chart-donut--threshold--danger--Color};
-  --pf-chart-donut--threshold--dynamic--pie--Height: #{$pf-chart-donut--threshold--dynamic--pie--Height};
-  --pf-chart-donut--threshold--dynamic--pie--Padding: #{$pf-chart-donut--threshold--dynamic--pie--Padding};
-  --pf-chart-donut--threshold--dynamic--pie--Width: #{$pf-chart-donut--threshold--dynamic--pie--Width};
-  --pf-chart-donut--threshold--static--pie--Height: #{$pf-chart-donut--threshold--static--pie--Height};
-  --pf-chart-donut--threshold--static--pie--angle--Padding: #{$pf-chart-donut--threshold--static--pie--angle--Padding};
-  --pf-chart-donut--threshold--static--pie--Padding: #{$pf-chart-donut--threshold--static--pie--Padding};
-  --pf-chart-donut--threshold--static--pie--Width: #{$pf-chart-donut--threshold--static--pie--Width};
+  --#{$chart}-donut--threshold--first--Color: #{$pf-v5-chart-donut--threshold--first--Color};
+  --#{$chart}-donut--threshold--second--Color: #{$pf-v5-chart-donut--threshold--second--Color};
+  --#{$chart}-donut--threshold--third--Color: #{$pf-v5-chart-donut--threshold--third--Color};
+  --#{$chart}-donut--threshold--warning--Color: #{$pf-v5-chart-donut--threshold--warning--Color};
+  --#{$chart}-donut--threshold--danger--Color: #{$pf-v5-chart-donut--threshold--danger--Color};
+  --#{$chart}-donut--threshold--dynamic--pie--Height: #{$pf-v5-chart-donut--threshold--dynamic--pie--Height};
+  --#{$chart}-donut--threshold--dynamic--pie--Padding: #{$pf-v5-chart-donut--threshold--dynamic--pie--Padding};
+  --#{$chart}-donut--threshold--dynamic--pie--Width: #{$pf-v5-chart-donut--threshold--dynamic--pie--Width};
+  --#{$chart}-donut--threshold--static--pie--Height: #{$pf-v5-chart-donut--threshold--static--pie--Height};
+  --#{$chart}-donut--threshold--static--pie--angle--Padding: #{$pf-v5-chart-donut--threshold--static--pie--angle--Padding};
+  --#{$chart}-donut--threshold--static--pie--Padding: #{$pf-v5-chart-donut--threshold--static--pie--Padding};
+  --#{$chart}-donut--threshold--static--pie--Width: #{$pf-v5-chart-donut--threshold--static--pie--Width};
 
   // Donut Utilization Chart
-  --pf-chart-donut--utilization--dynamic--pie--Height: #{$pf-chart-donut--utilization--dynamic--pie--Height};
-  --pf-chart-donut--utilization--dynamic--pie--angle--Padding: #{$pf-chart-donut--utilization--dynamic--pie--angle--Padding};
-  --pf-chart-donut--utilization--dynamic--pie--Padding: #{$pf-chart-donut--utilization--dynamic--pie--Padding};
-  --pf-chart-donut--utilization--dynamic--pie--Width: #{$pf-chart-donut--utilization--dynamic--pie--Width};
-  --pf-chart-donut--utilization--static--pie--Padding: #{$pf-chart-donut--utilization--static--pie--Padding};
+  --#{$chart}-donut--utilization--dynamic--pie--Height: #{$pf-v5-chart-donut--utilization--dynamic--pie--Height};
+  --#{$chart}-donut--utilization--dynamic--pie--angle--Padding: #{$pf-v5-chart-donut--utilization--dynamic--pie--angle--Padding};
+  --#{$chart}-donut--utilization--dynamic--pie--Padding: #{$pf-v5-chart-donut--utilization--dynamic--pie--Padding};
+  --#{$chart}-donut--utilization--dynamic--pie--Width: #{$pf-v5-chart-donut--utilization--dynamic--pie--Width};
+  --#{$chart}-donut--utilization--static--pie--Padding: #{$pf-v5-chart-donut--utilization--static--pie--Padding};
 
   // Error Bar
-  --pf-chart-errorbar--BorderWidth: #{$pf-chart-errorbar--BorderWidth};
-  --pf-chart-errorbar--data--Fill: #{$pf-chart-errorbar--data--Fill};
-  --pf-chart-errorbar--data--Opacity: #{$pf-chart-errorbar--data--Opacity};
-  --pf-chart-errorbar--data-stroke--Width: #{$pf-chart-errorbar--data-stroke--Width};
-  --pf-chart-errorbar--data-stroke--Color: #{$pf-chart-errorbar--data-stroke--Color};
+  --#{$chart}-errorbar--BorderWidth: #{$pf-v5-chart-errorbar--BorderWidth};
+  --#{$chart}-errorbar--data--Fill: #{$pf-v5-chart-errorbar--data--Fill};
+  --#{$chart}-errorbar--data--Opacity: #{$pf-v5-chart-errorbar--data--Opacity};
+  --#{$chart}-errorbar--data-stroke--Width: #{$pf-v5-chart-errorbar--data-stroke--Width};
+  --#{$chart}-errorbar--data-stroke--Color: #{$pf-v5-chart-errorbar--data-stroke--Color};
 
   // Legend
-  --pf-chart-legend--gutter--Width: #{$pf-chart-legend--gutter--Width};
-  --pf-chart-legend--orientation: #{$pf-chart-legend--orientation};
-  --pf-chart-legend--position: #{$pf-chart-legend--position};
-  --pf-chart-legend--title--orientation: #{$pf-chart-legend--title--orientation};
-  --pf-chart-legend--data--type: #{$pf-chart-legend--data--type};
-  --pf-chart-legend--title--Padding: #{$pf-chart-legend--title--Padding};
-  --pf-chart-legend--Margin: #{$pf-chart-legend--Margin};
+  --#{$chart}-legend--gutter--Width: #{$pf-v5-chart-legend--gutter--Width};
+  --#{$chart}-legend--orientation: #{$pf-v5-chart-legend--orientation};
+  --#{$chart}-legend--position: #{$pf-v5-chart-legend--position};
+  --#{$chart}-legend--title--orientation: #{$pf-v5-chart-legend--title--orientation};
+  --#{$chart}-legend--data--type: #{$pf-v5-chart-legend--data--type};
+  --#{$chart}-legend--title--Padding: #{$pf-v5-chart-legend--title--Padding};
+  --#{$chart}-legend--Margin: #{$pf-v5-chart-legend--Margin};
 
   // Line Chart
-  --pf-chart-line--data--Fill: #{$pf-chart-line--data--Fill};
-  --pf-chart-line--data--Opacity: #{$pf-chart-line--data--Opacity};
-  --pf-chart-line--data--stroke--Width: #{$pf-chart-line--data--stroke--Width};
-  --pf-chart-line--data--stroke--Color: #{$pf-chart-line--data--stroke--Color};
+  --#{$chart}-line--data--Fill: #{$pf-v5-chart-line--data--Fill};
+  --#{$chart}-line--data--Opacity: #{$pf-v5-chart-line--data--Opacity};
+  --#{$chart}-line--data--stroke--Width: #{$pf-v5-chart-line--data--stroke--Width};
+  --#{$chart}-line--data--stroke--Color: #{$pf-v5-chart-line--data--stroke--Color};
 
   // Pie Chart
-  --pf-chart-pie--Padding: #{$pf-chart-pie--Padding};
-  --pf-chart-pie--data--Padding: #{$pf-chart-pie--data--Padding};
-  --pf-chart-pie--data--stroke--Width: #{$pf-chart-pie--data--stroke--Width};
-  --pf-chart-pie--data--stroke--Color: #{$pf-chart-pie--data--stroke--Color};
-  --pf-chart-pie--labels--Padding: #{$pf-chart-pie--labels--Padding};
-  --pf-chart-pie--Height: #{$pf-chart-pie--Height};
-  --pf-chart-pie--Width: #{$pf-chart-pie--Width};
+  --#{$chart}-pie--Padding: #{$pf-v5-chart-pie--Padding};
+  --#{$chart}-pie--data--Padding: #{$pf-v5-chart-pie--data--Padding};
+  --#{$chart}-pie--data--stroke--Width: #{$pf-v5-chart-pie--data--stroke--Width};
+  --#{$chart}-pie--data--stroke--Color: #{$pf-v5-chart-pie--data--stroke--Color};
+  --#{$chart}-pie--labels--Padding: #{$pf-v5-chart-pie--labels--Padding};
+  --#{$chart}-pie--Height: #{$pf-v5-chart-pie--Height};
+  --#{$chart}-pie--Width: #{$pf-v5-chart-pie--Width};
 
   // Scatter Chart
-  --pf-chart-scatter--data--stroke--Color: #{$pf-chart-scatter--data--stroke--Color};
-  --pf-chart-scatter--data--stroke--Width: #{$pf-chart-scatter--data--stroke--Width};
-  --pf-chart-scatter--data--Opacity: #{$pf-chart-scatter--data--Opacity};
-  --pf-chart-scatter--data--Fill: #{$pf-chart-scatter--data--Fill};
-  --pf-chart-scatter--active--size: #{$pf-chart-scatter--active--size};
-  --pf-chart-scatter--size: #{$pf-chart-scatter--size};
+  --#{$chart}-scatter--data--stroke--Color: #{$pf-v5-chart-scatter--data--stroke--Color};
+  --#{$chart}-scatter--data--stroke--Width: #{$pf-v5-chart-scatter--data--stroke--Width};
+  --#{$chart}-scatter--data--Opacity: #{$pf-v5-chart-scatter--data--Opacity};
+  --#{$chart}-scatter--data--Fill: #{$pf-v5-chart-scatter--data--Fill};
+  --#{$chart}-scatter--active--size: #{$pf-v5-chart-scatter--active--size};
+  --#{$chart}-scatter--size: #{$pf-v5-chart-scatter--size};
 
   // Scatter Chart
-  --pf-chart-stack--data--stroke--Width: #{$pf-chart-stack--data--stroke--Width};
+  --#{$chart}-stack--data--stroke--Width: #{$pf-v5-chart-stack--data--stroke--Width};
 
   // Threshold
-  --pf-chart-threshold--stroke-dash-array: #{$pf-chart-threshold--stroke-dash-array};
-  --pf-chart-threshold--stroke--Width: #{$pf-chart-threshold--stroke--Width};
+  --#{$chart}-threshold--stroke-dash-array: #{$pf-v5-chart-threshold--stroke-dash-array};
+  --#{$chart}-threshold--stroke--Width: #{$pf-v5-chart-threshold--stroke--Width};
 
   // Tooltip
-  --pf-chart-tooltip--corner-radius: #{$pf-chart-tooltip--corner-radius};
-  --pf-chart-tooltip--pointer-length: #{$pf-chart-tooltip--pointer-length};
-  --pf-chart-tooltip--Fill: #{$pf-chart-tooltip--Fill};
-  --pf-chart-tooltip--flyoutStyle--corner-radius: #{$pf-chart-tooltip--flyoutStyle--corner-radius};
-  --pf-chart-tooltip--flyoutStyle--stroke--Width: #{$pf-chart-tooltip--flyoutStyle--stroke--Width};
-  --pf-chart-tooltip--flyoutStyle--PointerEvents: #{$pf-chart-tooltip--flyoutStyle--PointerEvents};
-  --pf-chart-tooltip--flyoutStyle--stroke--Color: #{$pf-chart-tooltip--flyoutStyle--stroke--Color};
-  --pf-chart-tooltip--flyoutStyle--Fill: #{$pf-chart-tooltip--flyoutStyle--Fill};
-  --pf-chart-tooltip--pointer--Width: #{$pf-chart-tooltip--pointer--Width};
-  --pf-chart-tooltip--Padding: #{$pf-chart-tooltip--Padding};
-  --pf-chart-tooltip--PointerEvents: #{$pf-chart-tooltip--PointerEvents};
+  --#{$chart}-tooltip--corner-radius: #{$pf-v5-chart-tooltip--corner-radius};
+  --#{$chart}-tooltip--pointer-length: #{$pf-v5-chart-tooltip--pointer-length};
+  --#{$chart}-tooltip--Fill: #{$pf-v5-chart-tooltip--Fill};
+  --#{$chart}-tooltip--flyoutStyle--corner-radius: #{$pf-v5-chart-tooltip--flyoutStyle--corner-radius};
+  --#{$chart}-tooltip--flyoutStyle--stroke--Width: #{$pf-v5-chart-tooltip--flyoutStyle--stroke--Width};
+  --#{$chart}-tooltip--flyoutStyle--PointerEvents: #{$pf-v5-chart-tooltip--flyoutStyle--PointerEvents};
+  --#{$chart}-tooltip--flyoutStyle--stroke--Color: #{$pf-v5-chart-tooltip--flyoutStyle--stroke--Color};
+  --#{$chart}-tooltip--flyoutStyle--Fill: #{$pf-v5-chart-tooltip--flyoutStyle--Fill};
+  --#{$chart}-tooltip--pointer--Width: #{$pf-v5-chart-tooltip--pointer--Width};
+  --#{$chart}-tooltip--Padding: #{$pf-v5-chart-tooltip--Padding};
+  --#{$chart}-tooltip--PointerEvents: #{$pf-v5-chart-tooltip--PointerEvents};
 
   // Voronoi Chart
-  --pf-chart-voronoi--data--Fill: #{$pf-chart-voronoi--data--Fill};
-  --pf-chart-voronoi--data--stroke--Color: #{$pf-chart-voronoi--data--stroke--Color};
-  --pf-chart-voronoi--data--stroke--Width: #{$pf-chart-voronoi--data--stroke--Width};
-  --pf-chart-voronoi--labels--Padding: #{$pf-chart-voronoi--labels--Padding};
-  --pf-chart-voronoi--labels--Fill: #{$pf-chart-voronoi--labels--Fill};
-  --pf-chart-voronoi--labels--PointerEvents: #{$pf-chart-voronoi--labels--PointerEvents};
-  --pf-chart-voronoi--flyout--stroke--Width: #{$pf-chart-voronoi--flyout--stroke--Width};
-  --pf-chart-voronoi--flyout--PointerEvents: #{$pf-chart-voronoi--flyout--PointerEvents};
-  --pf-chart-voronoi--flyout--stroke--Color: #{$pf-chart-voronoi--flyout--stroke--Color};
-  --pf-chart-voronoi--flyout--stroke--Fill: #{$pf-chart-voronoi--flyout--stroke--Fill};
-  --pf-chart-voronoi--flyout--PointerEvents: #{$pf-chart-voronoi--flyout--PointerEvents};
+  --#{$chart}-voronoi--data--Fill: #{$pf-v5-chart-voronoi--data--Fill};
+  --#{$chart}-voronoi--data--stroke--Color: #{$pf-v5-chart-voronoi--data--stroke--Color};
+  --#{$chart}-voronoi--data--stroke--Width: #{$pf-v5-chart-voronoi--data--stroke--Width};
+  --#{$chart}-voronoi--labels--Padding: #{$pf-v5-chart-voronoi--labels--Padding};
+  --#{$chart}-voronoi--labels--Fill: #{$pf-v5-chart-voronoi--labels--Fill};
+  --#{$chart}-voronoi--labels--PointerEvents: #{$pf-v5-chart-voronoi--labels--PointerEvents};
+  --#{$chart}-voronoi--flyout--stroke--Width: #{$pf-v5-chart-voronoi--flyout--stroke--Width};
+  --#{$chart}-voronoi--flyout--PointerEvents: #{$pf-v5-chart-voronoi--flyout--PointerEvents};
+  --#{$chart}-voronoi--flyout--stroke--Color: #{$pf-v5-chart-voronoi--flyout--stroke--Color};
+  --#{$chart}-voronoi--flyout--stroke--Fill: #{$pf-v5-chart-voronoi--flyout--stroke--Fill};
+  --#{$chart}-voronoi--flyout--PointerEvents: #{$pf-v5-chart-voronoi--flyout--PointerEvents};
 
   // Theme color scales
 
   // blue
-  --pf-chart-theme--blue--ColorScale--100: #{$pf-chart-theme--blue--ColorScale--100};
-  --pf-chart-theme--blue--ColorScale--200: #{$pf-chart-theme--blue--ColorScale--200};
-  --pf-chart-theme--blue--ColorScale--300: #{$pf-chart-theme--blue--ColorScale--300};
-  --pf-chart-theme--blue--ColorScale--400: #{$pf-chart-theme--blue--ColorScale--400};
-  --pf-chart-theme--blue--ColorScale--500: #{$pf-chart-theme--blue--ColorScale--500};
+  --#{$chart}-theme--blue--ColorScale--100: #{$pf-v5-chart-theme--blue--ColorScale--100};
+  --#{$chart}-theme--blue--ColorScale--200: #{$pf-v5-chart-theme--blue--ColorScale--200};
+  --#{$chart}-theme--blue--ColorScale--300: #{$pf-v5-chart-theme--blue--ColorScale--300};
+  --#{$chart}-theme--blue--ColorScale--400: #{$pf-v5-chart-theme--blue--ColorScale--400};
+  --#{$chart}-theme--blue--ColorScale--500: #{$pf-v5-chart-theme--blue--ColorScale--500};
 
   // cyan
-  --pf-chart-theme--cyan--ColorScale--100: #{$pf-chart-theme--cyan--ColorScale--100};
-  --pf-chart-theme--cyan--ColorScale--200: #{$pf-chart-theme--cyan--ColorScale--200};
-  --pf-chart-theme--cyan--ColorScale--300: #{$pf-chart-theme--cyan--ColorScale--300};
-  --pf-chart-theme--cyan--ColorScale--400: #{$pf-chart-theme--cyan--ColorScale--400};
-  --pf-chart-theme--cyan--ColorScale--500: #{$pf-chart-theme--cyan--ColorScale--500};
+  --#{$chart}-theme--cyan--ColorScale--100: #{$pf-v5-chart-theme--cyan--ColorScale--100};
+  --#{$chart}-theme--cyan--ColorScale--200: #{$pf-v5-chart-theme--cyan--ColorScale--200};
+  --#{$chart}-theme--cyan--ColorScale--300: #{$pf-v5-chart-theme--cyan--ColorScale--300};
+  --#{$chart}-theme--cyan--ColorScale--400: #{$pf-v5-chart-theme--cyan--ColorScale--400};
+  --#{$chart}-theme--cyan--ColorScale--500: #{$pf-v5-chart-theme--cyan--ColorScale--500};
 
   // gold
-  --pf-chart-theme--gold--ColorScale--100: #{$pf-chart-theme--gold--ColorScale--100};
-  --pf-chart-theme--gold--ColorScale--200: #{$pf-chart-theme--gold--ColorScale--200};
-  --pf-chart-theme--gold--ColorScale--300: #{$pf-chart-theme--gold--ColorScale--300};
-  --pf-chart-theme--gold--ColorScale--400: #{$pf-chart-theme--gold--ColorScale--400};
-  --pf-chart-theme--gold--ColorScale--500: #{$pf-chart-theme--gold--ColorScale--500};
+  --#{$chart}-theme--gold--ColorScale--100: #{$pf-v5-chart-theme--gold--ColorScale--100};
+  --#{$chart}-theme--gold--ColorScale--200: #{$pf-v5-chart-theme--gold--ColorScale--200};
+  --#{$chart}-theme--gold--ColorScale--300: #{$pf-v5-chart-theme--gold--ColorScale--300};
+  --#{$chart}-theme--gold--ColorScale--400: #{$pf-v5-chart-theme--gold--ColorScale--400};
+  --#{$chart}-theme--gold--ColorScale--500: #{$pf-v5-chart-theme--gold--ColorScale--500};
 
     // gray
-  --pf-chart-theme--gray--ColorScale--100: #{$pf-chart-theme--gray--ColorScale--100};
-  --pf-chart-theme--gray--ColorScale--200: #{$pf-chart-theme--gray--ColorScale--200};
-  --pf-chart-theme--gray--ColorScale--300: #{$pf-chart-theme--gray--ColorScale--300};
-  --pf-chart-theme--gray--ColorScale--400: #{$pf-chart-theme--gray--ColorScale--400};
-  --pf-chart-theme--gray--ColorScale--500: #{$pf-chart-theme--gray--ColorScale--500};
+  --#{$chart}-theme--gray--ColorScale--100: #{$pf-v5-chart-theme--gray--ColorScale--100};
+  --#{$chart}-theme--gray--ColorScale--200: #{$pf-v5-chart-theme--gray--ColorScale--200};
+  --#{$chart}-theme--gray--ColorScale--300: #{$pf-v5-chart-theme--gray--ColorScale--300};
+  --#{$chart}-theme--gray--ColorScale--400: #{$pf-v5-chart-theme--gray--ColorScale--400};
+  --#{$chart}-theme--gray--ColorScale--500: #{$pf-v5-chart-theme--gray--ColorScale--500};
 
   // green
-  --pf-chart-theme--green--ColorScale--100: #{$pf-chart-theme--green--ColorScale--100};
-  --pf-chart-theme--green--ColorScale--200: #{$pf-chart-theme--green--ColorScale--200};
-  --pf-chart-theme--green--ColorScale--300: #{$pf-chart-theme--green--ColorScale--300};
-  --pf-chart-theme--green--ColorScale--400: #{$pf-chart-theme--green--ColorScale--400};
-  --pf-chart-theme--green--ColorScale--500: #{$pf-chart-theme--green--ColorScale--500};
+  --#{$chart}-theme--green--ColorScale--100: #{$pf-v5-chart-theme--green--ColorScale--100};
+  --#{$chart}-theme--green--ColorScale--200: #{$pf-v5-chart-theme--green--ColorScale--200};
+  --#{$chart}-theme--green--ColorScale--300: #{$pf-v5-chart-theme--green--ColorScale--300};
+  --#{$chart}-theme--green--ColorScale--400: #{$pf-v5-chart-theme--green--ColorScale--400};
+  --#{$chart}-theme--green--ColorScale--500: #{$pf-v5-chart-theme--green--ColorScale--500};
 
   // multi ordered
-  --pf-chart-theme--multi-color-ordered--ColorScale--100: #{$pf-chart-theme--multi-color-ordered--ColorScale--100};
-  --pf-chart-theme--multi-color-ordered--ColorScale--200: #{$pf-chart-theme--multi-color-ordered--ColorScale--200};
-  --pf-chart-theme--multi-color-ordered--ColorScale--300: #{$pf-chart-theme--multi-color-ordered--ColorScale--300};
-  --pf-chart-theme--multi-color-ordered--ColorScale--400: #{$pf-chart-theme--multi-color-ordered--ColorScale--400};
-  --pf-chart-theme--multi-color-ordered--ColorScale--500: #{$pf-chart-theme--multi-color-ordered--ColorScale--500};
-  --pf-chart-theme--multi-color-ordered--ColorScale--600: #{$pf-chart-theme--multi-color-ordered--ColorScale--600};
-  --pf-chart-theme--multi-color-ordered--ColorScale--700: #{$pf-chart-theme--multi-color-ordered--ColorScale--700};
-  --pf-chart-theme--multi-color-ordered--ColorScale--800: #{$pf-chart-theme--multi-color-ordered--ColorScale--800};
-  --pf-chart-theme--multi-color-ordered--ColorScale--900: #{$pf-chart-theme--multi-color-ordered--ColorScale--900};
-  --pf-chart-theme--multi-color-ordered--ColorScale--1000: #{$pf-chart-theme--multi-color-ordered--ColorScale--1000};
-  --pf-chart-theme--multi-color-ordered--ColorScale--1100: #{$pf-chart-theme--multi-color-ordered--ColorScale--1100};
-  --pf-chart-theme--multi-color-ordered--ColorScale--1200: #{$pf-chart-theme--multi-color-ordered--ColorScale--1200};
-  --pf-chart-theme--multi-color-ordered--ColorScale--1300: #{$pf-chart-theme--multi-color-ordered--ColorScale--1300};
-  --pf-chart-theme--multi-color-ordered--ColorScale--1400: #{$pf-chart-theme--multi-color-ordered--ColorScale--1400};
-  --pf-chart-theme--multi-color-ordered--ColorScale--1500: #{$pf-chart-theme--multi-color-ordered--ColorScale--1500};
-  --pf-chart-theme--multi-color-ordered--ColorScale--1600: #{$pf-chart-theme--multi-color-ordered--ColorScale--1600};
-  --pf-chart-theme--multi-color-ordered--ColorScale--1700: #{$pf-chart-theme--multi-color-ordered--ColorScale--1700};
-  --pf-chart-theme--multi-color-ordered--ColorScale--1800: #{$pf-chart-theme--multi-color-ordered--ColorScale--1800};
-  --pf-chart-theme--multi-color-ordered--ColorScale--1900: #{$pf-chart-theme--multi-color-ordered--ColorScale--1900};
-  --pf-chart-theme--multi-color-ordered--ColorScale--2000: #{$pf-chart-theme--multi-color-ordered--ColorScale--2000};
-  --pf-chart-theme--multi-color-ordered--ColorScale--2100: #{$pf-chart-theme--multi-color-ordered--ColorScale--2100};
-  --pf-chart-theme--multi-color-ordered--ColorScale--2200: #{$pf-chart-theme--multi-color-ordered--ColorScale--2200};
-  --pf-chart-theme--multi-color-ordered--ColorScale--2300: #{$pf-chart-theme--multi-color-ordered--ColorScale--2300};
-  --pf-chart-theme--multi-color-ordered--ColorScale--2400: #{$pf-chart-theme--multi-color-ordered--ColorScale--2400};
-  --pf-chart-theme--multi-color-ordered--ColorScale--2500: #{$pf-chart-theme--multi-color-ordered--ColorScale--2500};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--100: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--100};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--200: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--200};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--300: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--300};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--400: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--400};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--500: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--500};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--600: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--600};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--700: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--700};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--800: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--800};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--900: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--900};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1000: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--1000};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1100: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--1100};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1200: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--1200};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1300: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--1300};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1400: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--1400};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1500: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--1500};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1600: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--1600};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1700: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--1700};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1800: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--1800};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--1900: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--1900};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2000: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--2000};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2100: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--2100};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2200: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--2200};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2300: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--2300};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2400: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--2400};
+  --#{$chart}-theme--multi-color-ordered--ColorScale--2500: #{$pf-v5-chart-theme--multi-color-ordered--ColorScale--2500};
 
   // multi unordered
-  --pf-chart-theme--multi-color-unordered--ColorScale--100: #{$pf-chart-theme--multi-color-unordered--ColorScale--100};
-  --pf-chart-theme--multi-color-unordered--ColorScale--200: #{$pf-chart-theme--multi-color-unordered--ColorScale--200};
-  --pf-chart-theme--multi-color-unordered--ColorScale--300: #{$pf-chart-theme--multi-color-unordered--ColorScale--300};
-  --pf-chart-theme--multi-color-unordered--ColorScale--400: #{$pf-chart-theme--multi-color-unordered--ColorScale--400};
-  --pf-chart-theme--multi-color-unordered--ColorScale--500: #{$pf-chart-theme--multi-color-unordered--ColorScale--500};
-  --pf-chart-theme--multi-color-unordered--ColorScale--600: #{$pf-chart-theme--multi-color-unordered--ColorScale--600};
-  --pf-chart-theme--multi-color-unordered--ColorScale--700: #{$pf-chart-theme--multi-color-unordered--ColorScale--700};
-  --pf-chart-theme--multi-color-unordered--ColorScale--800: #{$pf-chart-theme--multi-color-unordered--ColorScale--800};
-  --pf-chart-theme--multi-color-unordered--ColorScale--900: #{$pf-chart-theme--multi-color-unordered--ColorScale--900};
-  --pf-chart-theme--multi-color-unordered--ColorScale--1000: #{$pf-chart-theme--multi-color-unordered--ColorScale--1000};
-  --pf-chart-theme--multi-color-unordered--ColorScale--1100: #{$pf-chart-theme--multi-color-unordered--ColorScale--1100};
-  --pf-chart-theme--multi-color-unordered--ColorScale--1200: #{$pf-chart-theme--multi-color-unordered--ColorScale--1200};
-  --pf-chart-theme--multi-color-unordered--ColorScale--1300: #{$pf-chart-theme--multi-color-unordered--ColorScale--1300};
-  --pf-chart-theme--multi-color-unordered--ColorScale--1400: #{$pf-chart-theme--multi-color-unordered--ColorScale--1400};
-  --pf-chart-theme--multi-color-unordered--ColorScale--1500: #{$pf-chart-theme--multi-color-unordered--ColorScale--1500};
-  --pf-chart-theme--multi-color-unordered--ColorScale--1600: #{$pf-chart-theme--multi-color-unordered--ColorScale--1600};
-  --pf-chart-theme--multi-color-unordered--ColorScale--1700: #{$pf-chart-theme--multi-color-unordered--ColorScale--1700};
-  --pf-chart-theme--multi-color-unordered--ColorScale--1800: #{$pf-chart-theme--multi-color-unordered--ColorScale--1800};
-  --pf-chart-theme--multi-color-unordered--ColorScale--1900: #{$pf-chart-theme--multi-color-unordered--ColorScale--1900};
-  --pf-chart-theme--multi-color-unordered--ColorScale--2000: #{$pf-chart-theme--multi-color-unordered--ColorScale--2000};
-  --pf-chart-theme--multi-color-unordered--ColorScale--2100: #{$pf-chart-theme--multi-color-unordered--ColorScale--2100};
-  --pf-chart-theme--multi-color-unordered--ColorScale--2200: #{$pf-chart-theme--multi-color-unordered--ColorScale--2200};
-  --pf-chart-theme--multi-color-unordered--ColorScale--2300: #{$pf-chart-theme--multi-color-unordered--ColorScale--2300};
-  --pf-chart-theme--multi-color-unordered--ColorScale--2400: #{$pf-chart-theme--multi-color-unordered--ColorScale--2400};
-  --pf-chart-theme--multi-color-unordered--ColorScale--2500: #{$pf-chart-theme--multi-color-unordered--ColorScale--2500};
-  --pf-chart-theme--multi-color-unordered--ColorScale--2600: #{$pf-chart-theme--multi-color-unordered--ColorScale--2600};
-  --pf-chart-theme--multi-color-unordered--ColorScale--2700: #{$pf-chart-theme--multi-color-unordered--ColorScale--2700};
-  --pf-chart-theme--multi-color-unordered--ColorScale--2800: #{$pf-chart-theme--multi-color-unordered--ColorScale--2800};
-  --pf-chart-theme--multi-color-unordered--ColorScale--2900: #{$pf-chart-theme--multi-color-unordered--ColorScale--2900};
-  --pf-chart-theme--multi-color-unordered--ColorScale--3000: #{$pf-chart-theme--multi-color-unordered--ColorScale--3000};
-  --pf-chart-theme--multi-color-unordered--ColorScale--3100: #{$pf-chart-theme--multi-color-unordered--ColorScale--3100};
-  --pf-chart-theme--multi-color-unordered--ColorScale--3200: #{$pf-chart-theme--multi-color-unordered--ColorScale--3200};
-  --pf-chart-theme--multi-color-unordered--ColorScale--3300: #{$pf-chart-theme--multi-color-unordered--ColorScale--3300};
-  --pf-chart-theme--multi-color-unordered--ColorScale--3400: #{$pf-chart-theme--multi-color-unordered--ColorScale--3400};
-  --pf-chart-theme--multi-color-unordered--ColorScale--3500: #{$pf-chart-theme--multi-color-unordered--ColorScale--3500};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--100: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--100};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--200: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--200};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--300: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--300};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--400: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--400};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--500: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--500};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--600: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--600};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--700: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--700};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--800: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--800};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--900: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--900};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1000: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--1000};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1100: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--1100};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1200: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--1200};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1300: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--1300};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1400: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--1400};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1500: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--1500};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1600: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--1600};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1700: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--1700};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1800: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--1800};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--1900: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--1900};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2000: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--2000};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2100: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--2100};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2200: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--2200};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2300: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--2300};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2400: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--2400};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2500: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--2500};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2600: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--2600};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2700: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--2700};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2800: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--2800};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--2900: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--2900};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3000: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--3000};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3100: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--3100};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3200: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--3200};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3300: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--3300};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3400: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--3400};
+  --#{$chart}-theme--multi-color-unordered--ColorScale--3500: #{$pf-v5-chart-theme--multi-color-unordered--ColorScale--3500};
 
   // orange
-  --pf-chart-theme--orange--ColorScale--100: #{$pf-chart-theme--orange--ColorScale--100};
-  --pf-chart-theme--orange--ColorScale--200: #{$pf-chart-theme--orange--ColorScale--200};
-  --pf-chart-theme--orange--ColorScale--300: #{$pf-chart-theme--orange--ColorScale--300};
-  --pf-chart-theme--orange--ColorScale--400: #{$pf-chart-theme--orange--ColorScale--400};
-  --pf-chart-theme--orange--ColorScale--500: #{$pf-chart-theme--orange--ColorScale--500};
+  --#{$chart}-theme--orange--ColorScale--100: #{$pf-v5-chart-theme--orange--ColorScale--100};
+  --#{$chart}-theme--orange--ColorScale--200: #{$pf-v5-chart-theme--orange--ColorScale--200};
+  --#{$chart}-theme--orange--ColorScale--300: #{$pf-v5-chart-theme--orange--ColorScale--300};
+  --#{$chart}-theme--orange--ColorScale--400: #{$pf-v5-chart-theme--orange--ColorScale--400};
+  --#{$chart}-theme--orange--ColorScale--500: #{$pf-v5-chart-theme--orange--ColorScale--500};
 
   // purple
-  --pf-chart-theme--purple--ColorScale--100: #{$pf-chart-theme--purple--ColorScale--100};
-  --pf-chart-theme--purple--ColorScale--200: #{$pf-chart-theme--purple--ColorScale--200};
-  --pf-chart-theme--purple--ColorScale--300: #{$pf-chart-theme--purple--ColorScale--300};
-  --pf-chart-theme--purple--ColorScale--400: #{$pf-chart-theme--purple--ColorScale--400};
-  --pf-chart-theme--purple--ColorScale--500: #{$pf-chart-theme--purple--ColorScale--500};
+  --#{$chart}-theme--purple--ColorScale--100: #{$pf-v5-chart-theme--purple--ColorScale--100};
+  --#{$chart}-theme--purple--ColorScale--200: #{$pf-v5-chart-theme--purple--ColorScale--200};
+  --#{$chart}-theme--purple--ColorScale--300: #{$pf-v5-chart-theme--purple--ColorScale--300};
+  --#{$chart}-theme--purple--ColorScale--400: #{$pf-v5-chart-theme--purple--ColorScale--400};
+  --#{$chart}-theme--purple--ColorScale--500: #{$pf-v5-chart-theme--purple--ColorScale--500};
 }

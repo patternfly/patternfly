@@ -1,154 +1,156 @@
-.pf-c-label-group {
+// @debug $label-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$label-group} {
   // Label group - spaces main with the close button
-  --pf-c-label-group--RowGap: var(--pf-global--spacer--sm);
-  --pf-c-label-group--ColumnGap: 0;
-  --pf-c-label-group-m-vertical--RowGap: var(--pf-global--spacer--sm);
-  --pf-c-label-group-m-vertical--ColumnGap: var(--pf-global--spacer--sm);
+  --#{$label-group}--RowGap: var(--#{$pf-global}--spacer--sm);
+  --#{$label-group}--ColumnGap: 0;
+  --#{$label-group}--m-vertical--RowGap: var(--#{$pf-global}--spacer--sm);
+  --#{$label-group}--m-vertical--ColumnGap: var(--#{$pf-global}--spacer--sm);
 
   // Main - spaces the category label with the list
-  --pf-c-label-group__main--RowGap: var(--pf-global--spacer--xs);
-  --pf-c-label-group__main--ColumnGap: var(--pf-global--spacer--sm);
-  --pf-c-label-group-m-vertical__main--RowGap: var(--pf-global--spacer--sm);
-  --pf-c-label-group-m-vertical__main--ColumnGap: var(--pf-global--spacer--xs);
+  --#{$label-group}__main--RowGap: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}__main--ColumnGap: var(--#{$pf-global}--spacer--sm);
+  --#{$label-group}--m-vertical__main--RowGap: var(--#{$pf-global}--spacer--sm);
+  --#{$label-group}--m-vertical__main--ColumnGap: var(--#{$pf-global}--spacer--xs);
 
   // List - spaces the items
-  --pf-c-label-group__list--RowGap: var(--pf-global--spacer--xs);
-  --pf-c-label-group__list--ColumnGap: var(--pf-global--spacer--xs);
-  --pf-c-label-group-m-vertical__list--RowGap: var(--pf-global--spacer--xs);
-  --pf-c-label-group-m-vertical__list--ColumnGap: var(--pf-global--spacer--xs);
+  --#{$label-group}__list--RowGap: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}__list--ColumnGap: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}--m-vertical__list--RowGap: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}--m-vertical__list--ColumnGap: var(--#{$pf-global}--spacer--xs);
 
   // Category
-  --pf-c-label-group--m-category--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-label-group--m-category--PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-label-group--m-category--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-label-group--m-category--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-label-group--m-vertical--m-category--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-label-group--m-category--BorderRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-label-group--m-category--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-label-group--m-category--BorderColor: var(--pf-global--BorderColor--300);
-  --pf-c-label-group--m-category--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --#{$label-group}--m-category--PaddingTop: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}--m-category--PaddingRight: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}--m-category--PaddingBottom: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}--m-category--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$label-group}--m-vertical--m-category--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$label-group}--m-category--BorderRadius: var(--#{$pf-global}--BorderRadius--sm);
+  --#{$label-group}--m-category--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$label-group}--m-category--BorderColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$label-group}--m-category--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
 
   // Label
-  --pf-c-label-group__label--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-label-group__label--MaxWidth: 18ch;
+  --#{$label-group}__label--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$label-group}__label--MaxWidth: 18ch;
 
   // Close
-  --pf-c-label-group__close--MarginTop: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-label-group__close--MarginBottom: calc(var(--pf-global--spacer--xs) * -1);
-  --pf-c-label-group--m-vertical__close--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-label-group--m-vertical__close--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-label-group--m-vertical__close--c-button--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-label-group--m-vertical__close--c-button--PaddingLeft: var(--pf-global--spacer--sm);
+  --#{$label-group}__close--MarginTop: calc(var(--#{$pf-global}--spacer--xs) * -1);
+  --#{$label-group}__close--MarginBottom: calc(var(--#{$pf-global}--spacer--xs) * -1);
+  --#{$label-group}--m-vertical__close--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$label-group}--m-vertical__close--MarginRight: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$label-group}--m-vertical__close--c-button--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$label-group}--m-vertical__close--c-button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
 
   // Textarea
-  --pf-c-label-group__textarea--MinWidth: #{pf-size-prem(200px)};
-  --pf-c-label-group__textarea--PaddingTop: #{pf-size-prem(2px)};
-  --pf-c-label-group__textarea--PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-label-group__textarea--PaddingBottom: 0;
-  --pf-c-label-group__textarea--PaddingLeft: var(--pf-global--spacer--xs);
+  --#{$label-group}__textarea--MinWidth: #{pf-size-prem(200px)};
+  --#{$label-group}__textarea--PaddingTop: #{pf-size-prem(2px)};
+  --#{$label-group}__textarea--PaddingRight: var(--#{$pf-global}--spacer--xs);
+  --#{$label-group}__textarea--PaddingBottom: 0;
+  --#{$label-group}__textarea--PaddingLeft: var(--#{$pf-global}--spacer--xs);
 
   display: inline-flex;
-  row-gap: var(--pf-c-label-group--RowGap);
-  column-gap: var(--pf-c-label-group--ColumnGap);
+  row-gap: var(--#{$label-group}--RowGap);
+  column-gap: var(--#{$label-group}--ColumnGap);
   align-items: center;
 
   &.pf-m-category {
-    padding-top: var(--pf-c-label-group--m-category--PaddingTop);
-    padding-right: var(--pf-c-label-group--m-category--PaddingRight);
-    padding-bottom: var(--pf-c-label-group--m-category--PaddingBottom);
-    padding-left: var(--pf-c-label-group--m-category--PaddingLeft);
-    background-color: var(--pf-c-label-group--m-category--BackgroundColor);
-    border: var(--pf-c-label-group--m-category--BorderWidth) solid var(--pf-c-label-group--m-category--BorderColor);
-    border-radius: var(--pf-c-label-group--m-category--BorderRadius);
+    padding-top: var(--#{$label-group}--m-category--PaddingTop);
+    padding-right: var(--#{$label-group}--m-category--PaddingRight);
+    padding-bottom: var(--#{$label-group}--m-category--PaddingBottom);
+    padding-left: var(--#{$label-group}--m-category--PaddingLeft);
+    background-color: var(--#{$label-group}--m-category--BackgroundColor);
+    border: var(--#{$label-group}--m-category--BorderWidth) solid var(--#{$label-group}--m-category--BorderColor);
+    border-radius: var(--#{$label-group}--m-category--BorderRadius);
   }
 
   &.pf-m-vertical {
-    --pf-c-label-group--RowGap: var(--pf-c-label-group-m-vertical--RowGap);
-    --pf-c-label-group--ColumnGap: var(--pf-c-label-group-m-vertical--ColumnGap);
-    --pf-c-label-group__main--RowGap: var(--pf-c-label-group-m-vertical__main--RowGap);
-    --pf-c-label-group__main--ColumnGap: var(--pf-c-label-group-m-vertical__main--ColumnGap);
-    --pf-c-label-group__list--RowGap: var(--pf-c-label-group-m-vertical__list--RowGap);
-    --pf-c-label-group__list--ColumnGap: var(--pf-c-label-group-m-vertical__list--ColumnGap);
-    --pf-c-label-group__close--MarginTop: var(--pf-c-label-group--m-vertical__close--MarginTop);
-    --pf-c-label-group__close--MarginLeft: var(--pf-c-label-group--m-vertical__close--MarginLeft);
-    --pf-c-label-group__close--MarginBottom: 0;
-    --pf-c-label-group__close--MarginRight: var(--pf-c-label-group--m-vertical__close--MarginRight);
-    --pf-c-label-group--m-category--PaddingRight: var(--pf-c-label-group--m-vertical--m-category--PaddingRight);
+    --#{$label-group}--RowGap: var(--#{$label-group}--m-vertical--RowGap);
+    --#{$label-group}--ColumnGap: var(--#{$label-group}--m-vertical--ColumnGap);
+    --#{$label-group}__main--RowGap: var(--#{$label-group}--m-vertical__main--RowGap);
+    --#{$label-group}__main--ColumnGap: var(--#{$label-group}--m-vertical__main--ColumnGap);
+    --#{$label-group}__list--RowGap: var(--#{$label-group}--m-vertical__list--RowGap);
+    --#{$label-group}__list--ColumnGap: var(--#{$label-group}--m-vertical__list--ColumnGap);
+    --#{$label-group}__close--MarginTop: var(--#{$label-group}--m-vertical__close--MarginTop);
+    --#{$label-group}__close--MarginLeft: var(--#{$label-group}--m-vertical__close--MarginLeft);
+    --#{$label-group}__close--MarginBottom: 0;
+    --#{$label-group}__close--MarginRight: var(--#{$label-group}--m-vertical__close--MarginRight);
+    --#{$label-group}--m-category--PaddingRight: var(--#{$label-group}--m-vertical--m-category--PaddingRight);
 
-    &.pf-c-label-group {
+    &.#{$label-group} {
       align-items: flex-start;
     }
 
-    .pf-c-label-group__list {
+    .#{$label-group}__list {
       flex-direction: column;
       align-items: flex-start;
     }
 
-    .pf-c-label-group__main {
+    .#{$label-group}__main {
       flex-direction: column;
     }
 
-    .pf-c-label-group__close .pf-c-button {
-      --pf-c-button--PaddingLeft: var(--pf-c-label-group--m-vertical__close--c-button--PaddingLeft);
-      --pf-c-button--PaddingRight: var(--pf-c-label-group--m-vertical__close--c-button--PaddingRight);
+    .#{$label-group}__close .#{$button} {
+      --#{$button}--PaddingLeft: var(--#{$label-group}--m-vertical__close--c-button--PaddingLeft);
+      --#{$button}--PaddingRight: var(--#{$label-group}--m-vertical__close--c-button--PaddingRight);
     }
   }
 
   &.pf-m-editable {
     &,
-    .pf-c-label-group__main,
-    .pf-c-label-group__list {
+    .#{$label-group}__main,
+    .#{$label-group}__list {
       display: flex;
     }
 
-    .pf-c-label-group__main,
-    .pf-c-label-group__list,
-    .pf-c-label-group__list-item.pf-m-textarea,
-    .pf-c-label-group__textarea {
+    .#{$label-group}__main,
+    .#{$label-group}__list,
+    .#{$label-group}__list-item.pf-m-textarea,
+    .#{$label-group}__textarea {
       flex: 1;
     }
   }
 }
 
-.pf-c-label-group__main {
+.#{$label-group}__main {
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  row-gap: var(--pf-c-label-group__main--RowGap);
-  column-gap: var(--pf-c-label-group__main--ColumnGap);
+  row-gap: var(--#{$label-group}__main--RowGap);
+  column-gap: var(--#{$label-group}__main--ColumnGap);
   align-items: baseline;
 }
 
-.pf-c-label-group__list {
+.#{$label-group}__list {
   display: inline-flex;
   flex-wrap: wrap;
-  row-gap: var(--pf-c-label-group__list--RowGap);
-  column-gap: var(--pf-c-label-group__list--ColumnGap);
+  row-gap: var(--#{$label-group}__list--RowGap);
+  column-gap: var(--#{$label-group}__list--ColumnGap);
 }
 
-.pf-c-label-group__list-item {
+.#{$label-group}__list-item {
   display: inline-flex;
 }
 
-.pf-c-label-group__label {
-  @include pf-text-overflow;
+.#{$label-group}__label {
+  @include pf-v5-text-overflow;
 
-  max-width: var(--pf-c-label-group__label--MaxWidth);
-  font-size: var(--pf-c-label-group__label--FontSize);
+  max-width: var(--#{$label-group}__label--MaxWidth);
+  font-size: var(--#{$label-group}__label--FontSize);
 }
 
-.pf-c-label-group__close {
+.#{$label-group}__close {
   display: flex;
   align-self: start;
-  margin-top: var(--pf-c-label-group__close--MarginTop);
-  margin-right: var(--pf-c-label-group__close--MarginRight);
-  margin-bottom: var(--pf-c-label-group__close--MarginBottom);
-  margin-left: var(--pf-c-label-group__close--MarginLeft);
+  margin-top: var(--#{$label-group}__close--MarginTop);
+  margin-right: var(--#{$label-group}__close--MarginRight);
+  margin-bottom: var(--#{$label-group}__close--MarginBottom);
+  margin-left: var(--#{$label-group}__close--MarginLeft);
 }
 
-.pf-c-label-group__textarea {
-  min-width: var(--pf-c-label-group__textarea--MinWidth);
-  padding: var(--pf-c-label-group__textarea--PaddingTop) var(--pf-c-label-group__textarea--PaddingRight) var(--pf-c-label-group__textarea--PaddingBottom) var(--pf-c-label-group__textarea--PaddingLeft);
+.#{$label-group}__textarea {
+  min-width: var(--#{$label-group}__textarea--MinWidth);
+  padding: var(--#{$label-group}__textarea--PaddingTop) var(--#{$label-group}__textarea--PaddingRight) var(--#{$label-group}__textarea--PaddingBottom) var(--#{$label-group}__textarea--PaddingLeft);
   white-space: nowrap;
   resize: none;
   border: 0;

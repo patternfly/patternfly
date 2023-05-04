@@ -1,88 +1,90 @@
-.pf-c-empty-state {
-  --pf-c-empty-state--PaddingTop: var(--pf-global--spacer--xl);
-  --pf-c-empty-state--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-empty-state--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-empty-state--PaddingLeft: var(--pf-global--spacer--xl);
-  --pf-c-empty-state--m-xs--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-empty-state--m-xs--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-empty-state--m-xs--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-empty-state--m-xs--PaddingLeft: var(--pf-global--spacer--md);
+// @debug $empty-state; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$empty-state} {
+  --#{$empty-state}--PaddingTop: var(--#{$pf-global}--spacer--xl);
+  --#{$empty-state}--PaddingRight: var(--#{$pf-global}--spacer--xl);
+  --#{$empty-state}--PaddingBottom: var(--#{$pf-global}--spacer--xl);
+  --#{$empty-state}--PaddingLeft: var(--#{$pf-global}--spacer--xl);
+  --#{$empty-state}--m-xs--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$empty-state}--m-xs--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$empty-state}--m-xs--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$empty-state}--m-xs--PaddingLeft: var(--#{$pf-global}--spacer--md);
 
   // Content
-  --pf-c-empty-state__content--MaxWidth: none;
-  --pf-c-empty-state--m-xs__content--MaxWidth: #{pf-size-prem(350px)};
-  --pf-c-empty-state--m-sm__content--MaxWidth: #{pf-size-prem(400px)};
-  --pf-c-empty-state--m-lg__content--MaxWidth: #{pf-size-prem(600px)};
+  --#{$empty-state}__content--MaxWidth: none;
+  --#{$empty-state}--m-xs__content--MaxWidth: #{pf-size-prem(350px)};
+  --#{$empty-state}--m-sm__content--MaxWidth: #{pf-size-prem(400px)};
+  --#{$empty-state}--m-lg__content--MaxWidth: #{pf-size-prem(600px)};
 
   // Icon
-  --pf-c-empty-state__icon--MarginBottom: var(--pf-global--spacer--lg);
-  --pf-c-empty-state__icon--FontSize: var(--pf-global--icon--FontSize--xl);
-  --pf-c-empty-state__icon--Color: var(--pf-global--icon--Color--light);
-  --pf-c-empty-state--m-xs__icon--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-empty-state--m-xl__icon--MarginBottom: var(--pf-global--spacer--xl);
-  --pf-c-empty-state--m-xl__icon--FontSize: #{pf-size-prem(100px)};
+  --#{$empty-state}__icon--MarginBottom: var(--#{$pf-global}--spacer--lg);
+  --#{$empty-state}__icon--FontSize: var(--#{$pf-global}--icon--FontSize--xl);
+  --#{$empty-state}__icon--Color: var(--#{$pf-global}--icon--Color--light);
+  --#{$empty-state}--m-xs__icon--MarginBottom: var(--#{$pf-global}--spacer--md);
+  --#{$empty-state}--m-xl__icon--MarginBottom: var(--#{$pf-global}--spacer--xl);
+  --#{$empty-state}--m-xl__icon--FontSize: #{pf-size-prem(100px)};
 
   // Title text
-  --pf-c-empty-state__title-text--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
-  --pf-c-empty-state__title-text--FontSize: var(--pf-global--FontSize--xl);
-  --pf-c-empty-state__title-text--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-empty-state__title-text--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-empty-state--m-xs__title-text--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-empty-state--m-xl__title-text--FontSize: var(--pf-global--FontSize--4xl);
-  --pf-c-empty-state--m-xl__title-text--LineHeight: var(--pf-global--LineHeight--sm);
+  --#{$empty-state}__title-text--FontFamily: var(--#{$pf-global}--FontFamily--heading--sans-serif);
+  --#{$empty-state}__title-text--FontSize: var(--#{$pf-global}--FontSize--xl);
+  --#{$empty-state}__title-text--FontWeight: var(--#{$pf-global}--FontWeight--normal);
+  --#{$empty-state}__title-text--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$empty-state}--m-xs__title-text--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$empty-state}--m-xl__title-text--FontSize: var(--#{$pf-global}--FontSize--4xl);
+  --#{$empty-state}--m-xl__title-text--LineHeight: var(--#{$pf-global}--LineHeight--sm);
 
   // Body
-  --pf-c-empty-state__body--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-empty-state__body--Color: var(--pf-global--Color--200);
-  --pf-c-empty-state--body--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-empty-state--m-xs__body--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-empty-state--m-xs__body--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-empty-state--m-xl__body--FontSize: var(--pf-global--FontSize--xl);
-  --pf-c-empty-state--m-xl__body--MarginTop: var(--pf-global--spacer--lg);
+  --#{$empty-state}__body--MarginTop: var(--#{$pf-global}--spacer--md);
+  --#{$empty-state}__body--Color: var(--#{$pf-global}--Color--200);
+  --#{$empty-state}--body--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$empty-state}--m-xs__body--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$empty-state}--m-xs__body--MarginTop: var(--#{$pf-global}--spacer--md);
+  --#{$empty-state}--m-xl__body--FontSize: var(--#{$pf-global}--FontSize--xl);
+  --#{$empty-state}--m-xl__body--MarginTop: var(--#{$pf-global}--spacer--lg);
 
   // Footer
-  --pf-c-empty-state__footer--RowGap: var(--pf-global--spacer--sm);
-  --pf-c-empty-state__footer--MarginTop: var(--pf-global--spacer--xl);
-  --pf-c-empty-state--m-xs__footer--MarginTop: var(--pf-global--spacer--md);
+  --#{$empty-state}__footer--RowGap: var(--#{$pf-global}--spacer--sm);
+  --#{$empty-state}__footer--MarginTop: var(--#{$pf-global}--spacer--xl);
+  --#{$empty-state}--m-xs__footer--MarginTop: var(--#{$pf-global}--spacer--md);
 
   // Actions
-  --pf-c-empty-state__actions--RowGap: var(--pf-global--spacer--xs);
-  --pf-c-empty-state__actions--ColumnGap: var(--pf-global--spacer--xs);
+  --#{$empty-state}__actions--RowGap: var(--#{$pf-global}--spacer--xs);
+  --#{$empty-state}__actions--ColumnGap: var(--#{$pf-global}--spacer--xs);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--pf-c-empty-state--PaddingTop) var(--pf-c-empty-state--PaddingRight) var(--pf-c-empty-state--PaddingBottom) var(--pf-c-empty-state--PaddingLeft);
+  padding: var(--#{$empty-state}--PaddingTop) var(--#{$empty-state}--PaddingRight) var(--#{$empty-state}--PaddingBottom) var(--#{$empty-state}--PaddingLeft);
   text-align: center;
 
   &.pf-m-xs {
-    --pf-c-empty-state--PaddingTop: var(--pf-c-empty-state--m-xs--PaddingTop);
-    --pf-c-empty-state--PaddingRight: var(--pf-c-empty-state--m-xs--PaddingRight);
-    --pf-c-empty-state--PaddingBottom: var(--pf-c-empty-state--m-xs--PaddingBottom);
-    --pf-c-empty-state--PaddingLeft: var(--pf-c-empty-state--m-xs--PaddingLeft);
-    --pf-c-empty-state__title-text--FontSize: var(--pf-c-empty-state--m-xs__title-text--FontSize);
-    --pf-c-empty-state__content--MaxWidth: var(--pf-c-empty-state--m-xs__content--MaxWidth);
-    --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xs__icon--MarginBottom);
-    --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xs__body--MarginTop);
-    --pf-c-empty-state--body--FontSize: var(--pf-c-empty-state--m-xs__body--FontSize);
-    --pf-c-empty-state__footer--MarginTop: var(--pf-c-empty-state--m-xs__footer--MarginTop);
+    --#{$empty-state}--PaddingTop: var(--#{$empty-state}--m-xs--PaddingTop);
+    --#{$empty-state}--PaddingRight: var(--#{$empty-state}--m-xs--PaddingRight);
+    --#{$empty-state}--PaddingBottom: var(--#{$empty-state}--m-xs--PaddingBottom);
+    --#{$empty-state}--PaddingLeft: var(--#{$empty-state}--m-xs--PaddingLeft);
+    --#{$empty-state}__title-text--FontSize: var(--#{$empty-state}--m-xs__title-text--FontSize);
+    --#{$empty-state}__content--MaxWidth: var(--#{$empty-state}--m-xs__content--MaxWidth);
+    --#{$empty-state}__icon--MarginBottom: var(--#{$empty-state}--m-xs__icon--MarginBottom);
+    --#{$empty-state}__body--MarginTop: var(--#{$empty-state}--m-xs__body--MarginTop);
+    --#{$empty-state}--body--FontSize: var(--#{$empty-state}--m-xs__body--FontSize);
+    --#{$empty-state}__footer--MarginTop: var(--#{$empty-state}--m-xs__footer--MarginTop);
   }
 
   &.pf-m-sm {
-    --pf-c-empty-state__content--MaxWidth: var(--pf-c-empty-state--m-sm__content--MaxWidth);
+    --#{$empty-state}__content--MaxWidth: var(--#{$empty-state}--m-sm__content--MaxWidth);
   }
 
   &.pf-m-lg {
-    --pf-c-empty-state__content--MaxWidth: var(--pf-c-empty-state--m-lg__content--MaxWidth);
+    --#{$empty-state}__content--MaxWidth: var(--#{$empty-state}--m-lg__content--MaxWidth);
   }
 
   &.pf-m-xl {
-    --pf-c-empty-state__body--MarginTop: var(--pf-c-empty-state--m-xl__body--MarginTop);
-    --pf-c-empty-state--body--FontSize: var(--pf-c-empty-state--m-xl__body--FontSize);
-    --pf-c-empty-state__icon--MarginBottom: var(--pf-c-empty-state--m-xl__icon--MarginBottom);
-    --pf-c-empty-state__icon--FontSize: var(--pf-c-empty-state--m-xl__icon--FontSize);
-    --pf-c-empty-state__title-text--FontSize: var(--pf-c-empty-state--m-xl__title-text--FontSize);
-    --pf-c-empty-state__title-text--LineHeight: var(--pf-c-empty-state--m-xl__title-text--LineHeight);
+    --#{$empty-state}__body--MarginTop: var(--#{$empty-state}--m-xl__body--MarginTop);
+    --#{$empty-state}--body--FontSize: var(--#{$empty-state}--m-xl__body--FontSize);
+    --#{$empty-state}__icon--MarginBottom: var(--#{$empty-state}--m-xl__icon--MarginBottom);
+    --#{$empty-state}__icon--FontSize: var(--#{$empty-state}--m-xl__icon--FontSize);
+    --#{$empty-state}__title-text--FontSize: var(--#{$empty-state}--m-xl__title-text--FontSize);
+    --#{$empty-state}__title-text--LineHeight: var(--#{$empty-state}--m-xl__title-text--LineHeight);
   }
 
   &.pf-m-full-height {
@@ -90,41 +92,41 @@
   }
 }
 
-.pf-c-empty-state__content {
-  max-width: var(--pf-c-empty-state__content--MaxWidth);
+.#{$empty-state}__content {
+  max-width: var(--#{$empty-state}__content--MaxWidth);
 }
 
-.pf-c-empty-state__icon {
-  margin-bottom: var(--pf-c-empty-state__icon--MarginBottom);
-  font-size: var(--pf-c-empty-state__icon--FontSize);
+.#{$empty-state}__icon {
+  margin-bottom: var(--#{$empty-state}__icon--MarginBottom);
+  font-size: var(--#{$empty-state}__icon--FontSize);
   line-height: 1;
-  color: var(--pf-c-empty-state__icon--Color);
+  color: var(--#{$empty-state}__icon--Color);
 }
 
-.pf-c-empty-state__title-text {
-  font-family: var(--pf-c-empty-state__title-text--FontFamily);
-  font-size: var(--pf-c-empty-state__title-text--FontSize);
-  font-weight: var(--pf-c-empty-state__title-text--FontWeight);
-  line-height: var(--pf-c-empty-state__title-text--LineHeight);
+.#{$empty-state}__title-text {
+  font-family: var(--#{$empty-state}__title-text--FontFamily);
+  font-size: var(--#{$empty-state}__title-text--FontSize);
+  font-weight: var(--#{$empty-state}__title-text--FontWeight);
+  line-height: var(--#{$empty-state}__title-text--LineHeight);
 }
 
-.pf-c-empty-state__body {
-  margin-top: var(--pf-c-empty-state__body--MarginTop);
-  font-size: var(--pf-c-empty-state--body--FontSize);
-  color: var(--pf-c-empty-state__body--Color);
+.#{$empty-state}__body {
+  margin-top: var(--#{$empty-state}__body--MarginTop);
+  font-size: var(--#{$empty-state}--body--FontSize);
+  color: var(--#{$empty-state}__body--Color);
 }
 
-.pf-c-empty-state__footer {
+.#{$empty-state}__footer {
   display: flex;
   flex-direction: column;
-  row-gap: var(--pf-c-empty-state__footer--RowGap);
+  row-gap: var(--#{$empty-state}__footer--RowGap);
   align-items: center;
-  margin-top: var(--pf-c-empty-state__footer--MarginTop);
+  margin-top: var(--#{$empty-state}__footer--MarginTop);
 }
 
-.pf-c-empty-state__actions {
+.#{$empty-state}__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--pf-c-empty-state__actions--RowGap) var(--pf-c-empty-state__actions--ColumnGap);
+  gap: var(--#{$empty-state}__actions--RowGap) var(--#{$empty-state}__actions--ColumnGap);
   justify-content: center;
 }

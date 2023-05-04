@@ -1,8 +1,8 @@
-<h2 class="pf-c-notification-drawer__list-item-header-title{{#if notification-drawer-list-item-header-title--modifier}} {{notification-drawer-list-item-header-title--modifier}}{{/if}}"
+<h2 class="{{pfv}}notification-drawer__list-item-header-title{{#if notification-drawer-list-item-header-title--modifier}} {{notification-drawer-list-item-header-title--modifier}}{{/if}}"
   {{#if notification-drawer-list-item-header-title--attribute}}
     {{{notification-drawer-list-item-header-title--attribute}}}
   {{/if}}>
-  <span class="pf-screen-reader">
+  <span class="{{pfv 'unset-prefix'}}screen-reader">
     {{#if notification-drawer-list-item--IsInfo}}
       Info notification:
     {{else if notification-drawer-list-item--IsWarning}}

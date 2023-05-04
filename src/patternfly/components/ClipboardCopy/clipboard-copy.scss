@@ -1,53 +1,55 @@
-.pf-c-clipboard-copy {
+// @debug $clipboard-copy; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$clipboard-copy} {
   // Toggle icon
-  --pf-c-clipboard-copy__toggle-icon--Transition: .2s ease-in 0s;
-  --pf-c-clipboard-copy--m-expanded__toggle-icon--Rotate: 90deg;
+  --#{$clipboard-copy}__toggle-icon--Transition: .2s ease-in 0s;
+  --#{$clipboard-copy}--m-expanded__toggle-icon--Rotate: 90deg;
 
   // Clipboard copy expanded content
-  --pf-c-clipboard-copy__expandable-content--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-clipboard-copy__expandable-content--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-clipboard-copy__expandable-content--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-clipboard-copy__expandable-content--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-clipboard-copy__expandable-content--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
-  --pf-c-clipboard-copy__expandable-content--BorderTopWidth: 0;
-  --pf-c-clipboard-copy__expandable-content--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-clipboard-copy__expandable-content--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-clipboard-copy__expandable-content--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-clipboard-copy__expandable-content--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-clipboard-copy__expandable-content--OutlineOffset: calc(-1 * var(--pf-global--spacer--xs));
+  --#{$clipboard-copy}__expandable-content--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$clipboard-copy}__expandable-content--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$clipboard-copy}__expandable-content--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$clipboard-copy}__expandable-content--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$clipboard-copy}__expandable-content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
+  --#{$clipboard-copy}__expandable-content--BorderTopWidth: 0;
+  --#{$clipboard-copy}__expandable-content--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$clipboard-copy}__expandable-content--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$clipboard-copy}__expandable-content--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$clipboard-copy}__expandable-content--BorderColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$clipboard-copy}__expandable-content--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
 
   // Inline
-  --pf-c-clipboard-copy--m-inline--PaddingTop: 0; // remove at breaking change
-  --pf-c-clipboard-copy--m-inline--PaddingBottom: 0; // remove at breaking change
-  --pf-c-clipboard-copy--m-inline--PaddingLeft: var(--pf-global--spacer--xs);
-  --pf-c-clipboard-copy--m-inline--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --#{$clipboard-copy}--m-inline--PaddingTop: 0; // remove at breaking change
+  --#{$clipboard-copy}--m-inline--PaddingBottom: 0; // remove at breaking change
+  --#{$clipboard-copy}--m-inline--PaddingLeft: var(--#{$pf-global}--spacer--xs);
+  --#{$clipboard-copy}--m-inline--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
 
   // Text
-  --pf-c-clipboard-copy__text--m-code--FontFamily: var(--pf-global--FontFamily--monospace);
-  --pf-c-clipboard-copy__text--m-code--FontSize: var(--pf-global--FontSize--sm);
+  --#{$clipboard-copy}__text--m-code--FontFamily: var(--#{$pf-global}--FontFamily--monospace);
+  --#{$clipboard-copy}__text--m-code--FontSize: var(--#{$pf-global}--FontSize--sm);
 
   // Actions
-  --pf-c-clipboard-copy__actions-item--MarginTop: calc(-1 * var(--pf-global--spacer--form-element));
-  --pf-c-clipboard-copy__actions-item--MarginBottom: calc(-1 * var(--pf-global--spacer--form-element));
-  --pf-c-clipboard-copy__actions-item--button--PaddingTop: var(--pf-global--spacer--xs);
-  --pf-c-clipboard-copy__actions-item--button--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-clipboard-copy__actions-item--button--PaddingBottom: var(--pf-global--spacer--xs);
-  --pf-c-clipboard-copy__actions-item--button--PaddingLeft: var(--pf-global--spacer--sm);
+  --#{$clipboard-copy}__actions-item--MarginTop: calc(-1 * var(--#{$pf-global}--spacer--form-element));
+  --#{$clipboard-copy}__actions-item--MarginBottom: calc(-1 * var(--#{$pf-global}--spacer--form-element));
+  --#{$clipboard-copy}__actions-item--button--PaddingTop: var(--#{$pf-global}--spacer--xs);
+  --#{$clipboard-copy}__actions-item--button--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$clipboard-copy}__actions-item--button--PaddingBottom: var(--#{$pf-global}--spacer--xs);
+  --#{$clipboard-copy}__actions-item--button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
 
   // Toggle button expanded
   &.pf-m-expanded {
-    .pf-c-clipboard-copy__toggle-icon {
-      transform: rotate(var(--pf-c-clipboard-copy--m-expanded__toggle-icon--Rotate));
+    .#{$clipboard-copy}__toggle-icon {
+      transform: rotate(var(--#{$clipboard-copy}--m-expanded__toggle-icon--Rotate));
     }
   }
 
   &.pf-m-inline {
     display: inline;
-    padding-top: var(--pf-c-clipboard-copy--m-inline--PaddingTop);
-    padding-bottom: var(--pf-c-clipboard-copy--m-inline--PaddingBottom);
-    padding-left: var(--pf-c-clipboard-copy--m-inline--PaddingLeft);
+    padding-top: var(--#{$clipboard-copy}--m-inline--PaddingTop);
+    padding-bottom: var(--#{$clipboard-copy}--m-inline--PaddingBottom);
+    padding-left: var(--#{$clipboard-copy}--m-inline--PaddingLeft);
     white-space: nowrap;
-    background-color: var(--pf-c-clipboard-copy--m-inline--BackgroundColor);
+    background-color: var(--#{$clipboard-copy}--m-inline--BackgroundColor);
 
     &.pf-m-block {
       display: block;
@@ -55,7 +57,7 @@
   }
 }
 
-.pf-c-clipboard-copy__group {
+.#{$clipboard-copy}__group {
   display: flex;
 
   > * + * {
@@ -63,53 +65,53 @@
   }
 }
 
-.pf-c-clipboard-copy__toggle-icon {
-  transition: var(--pf-c-clipboard-copy__toggle-icon--Transition);
+.#{$clipboard-copy}__toggle-icon {
+  transition: var(--#{$clipboard-copy}__toggle-icon--Transition);
 }
 
-.pf-c-clipboard-copy__expandable-content {
-  padding: var(--pf-c-clipboard-copy__expandable-content--PaddingTop) var(--pf-c-clipboard-copy__expandable-content--PaddingRight) var(--pf-c-clipboard-copy__expandable-content--PaddingBottom) var(--pf-c-clipboard-copy__expandable-content--PaddingLeft);
+.#{$clipboard-copy}__expandable-content {
+  padding: var(--#{$clipboard-copy}__expandable-content--PaddingTop) var(--#{$clipboard-copy}__expandable-content--PaddingRight) var(--#{$clipboard-copy}__expandable-content--PaddingBottom) var(--#{$clipboard-copy}__expandable-content--PaddingLeft);
   word-wrap: break-word;
-  background-color: var(--pf-c-clipboard-copy__expandable-content--BackgroundColor);
+  background-color: var(--#{$clipboard-copy}__expandable-content--BackgroundColor);
   background-clip: padding-box;
-  border: solid var(--pf-c-clipboard-copy__expandable-content--BorderColor);
-  border-width: var(--pf-c-clipboard-copy__expandable-content--BorderTopWidth) var(--pf-c-clipboard-copy__expandable-content--BorderRightWidth) var(--pf-c-clipboard-copy__expandable-content--BorderBottomWidth) var(--pf-c-clipboard-copy__expandable-content--BorderLeftWidth);
-  box-shadow: var(--pf-c-clipboard-copy__expandable-content--BoxShadow);
+  border: solid var(--#{$clipboard-copy}__expandable-content--BorderColor);
+  border-width: var(--#{$clipboard-copy}__expandable-content--BorderTopWidth) var(--#{$clipboard-copy}__expandable-content--BorderRightWidth) var(--#{$clipboard-copy}__expandable-content--BorderBottomWidth) var(--#{$clipboard-copy}__expandable-content--BorderLeftWidth);
+  box-shadow: var(--#{$clipboard-copy}__expandable-content--BoxShadow);
 
   pre {
     white-space: pre-wrap;
   }
 }
 
-.pf-c-clipboard-copy__text {
+.#{$clipboard-copy}__text {
   word-break: break-word;
   white-space: normal;
 
   &.pf-m-code {
-    font-family: var(--pf-c-clipboard-copy__text--m-code--FontFamily);
-    font-size: var(--pf-c-clipboard-copy__text--m-code--FontSize);
+    font-family: var(--#{$clipboard-copy}__text--m-code--FontFamily);
+    font-size: var(--#{$clipboard-copy}__text--m-code--FontSize);
   }
 }
 
-.pf-c-clipboard-copy__actions {
+.#{$clipboard-copy}__actions {
   display: inline-flex;
 }
 
-.pf-c-clipboard-copy__actions-item {
-  margin-top: calc(-1 * var(--pf-c-clipboard-copy__actions-item--button--PaddingTop));
-  margin-bottom: calc(-1 * var(--pf-c-clipboard-copy__actions-item--button--PaddingBottom));
+.#{$clipboard-copy}__actions-item {
+  margin-top: calc(-1 * var(--#{$clipboard-copy}__actions-item--button--PaddingTop));
+  margin-bottom: calc(-1 * var(--#{$clipboard-copy}__actions-item--button--PaddingBottom));
 
-  .pf-c-button {
-    --pf-c-button--PaddingTop: var(--pf-c-clipboard-copy__actions-item--button--PaddingTop);
-    --pf-c-button--PaddingRight: var(--pf-c-clipboard-copy__actions-item--button--PaddingRight);
-    --pf-c-button--PaddingBottom: var(--pf-c-clipboard-copy__actions-item--button--PaddingBottom);
-    --pf-c-button--PaddingLeft: var(--pf-c-clipboard-copy__actions-item--button--PaddingLeft);
+  .#{$button} {
+    --#{$button}--PaddingTop: var(--#{$clipboard-copy}__actions-item--button--PaddingTop);
+    --#{$button}--PaddingRight: var(--#{$clipboard-copy}__actions-item--button--PaddingRight);
+    --#{$button}--PaddingBottom: var(--#{$clipboard-copy}__actions-item--button--PaddingBottom);
+    --#{$button}--PaddingLeft: var(--#{$clipboard-copy}__actions-item--button--PaddingLeft);
   }
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/clipboard-copy";
 
-@include pf-theme-dark {
-  @include pf-theme-dark-clipboard-copy;
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-clipboard-copy;
 }

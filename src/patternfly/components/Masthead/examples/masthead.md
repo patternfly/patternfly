@@ -1,7 +1,7 @@
 ---
 id: 'Masthead'
 section: components
-cssPrefix: pf-c-masthead
+cssPrefix: pf-v5-c-masthead
 ---
 
 ## Examples
@@ -128,11 +128,11 @@ cssPrefix: pf-c-masthead
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-masthead` | `<header>` | Initiates the masthead component. **Required** |
-| `.pf-c-masthead__main` | `<div>` | Initiates the masthead main component. **Required** |
-| `.pf-c-masthead__toggle` | `<span>` | Initiates the masthead toggle component. |
-| `.pf-c-masthead__brand` | `<a>, <div>` | Initiates the masthead content component. |
-| `.pf-c-masthead__content` | `<div>` | Initiates the masthead content component. |
-| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-c-masthead` | Modifies masthead horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-light` | `.pf-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-global--BackgroundColor--100`. |
-| `.pf-m-light-200` | `.pf-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-global--BackgroundColor--200`. |
+| `.pf-v5-c-masthead` | `<header>` | Initiates the masthead component. **Required** |
+| `.pf-v5-c-masthead__main` | `<div>` | Initiates the masthead main component. **Required** |
+| `.pf-v5-c-masthead__toggle` | `<span>` | Initiates the masthead toggle component. |
+| `.pf-v5-c-masthead__brand` | `<a>, <div>` | Initiates the masthead content component. |
+| `.pf-v5-c-masthead__content` | `<div>` | Initiates the masthead content component. |
+| `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v5-c-masthead` | Modifies masthead horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-light` | `.pf-v5-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-v5--global--BackgroundColor--100`. |
+| `.pf-m-light-200` | `.pf-v5-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-v5--global--BackgroundColor--200`. |

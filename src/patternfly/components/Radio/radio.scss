@@ -1,77 +1,79 @@
-.pf-c-radio {
-  --pf-c-radio--GridGap: var(--pf-global--spacer--xs) var(--pf-global--spacer--sm);
-  --pf-c-radio__label--disabled--Color: var(--pf-global--disabled-color--100);
-  --pf-c-radio__label--Color: var(--pf-global--Color--100);
-  --pf-c-radio__label--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-radio__label--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-radio__label--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-radio__input--Height: var(--pf-c-radio__label--FontSize);
-  --pf-c-radio__input--MarginTop: calc(((var(--pf-c-radio__label--FontSize) * var(--pf-c-radio__label--LineHeight)) - var(--pf-c-radio__input--Height)) / 2);
-  --pf-c-radio__input--first-child--MarginLeft: #{pf-size-prem(1px)};
-  --pf-c-radio__input--last-child--MarginRight: #{pf-size-prem(1px)};
-  --pf-c-radio__description--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-radio__description--Color: var(--pf-global--Color--200);
-  --pf-c-radio__body--MarginTop: var(--pf-global--spacer--sm);
+// @debug $radio; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$radio} {
+  --#{$radio}--GridGap: var(--#{$pf-global}--spacer--xs) var(--#{$pf-global}--spacer--sm);
+  --#{$radio}__label--disabled--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$radio}__label--Color: var(--#{$pf-global}--Color--100);
+  --#{$radio}__label--FontWeight: var(--#{$pf-global}--FontWeight--normal);
+  --#{$radio}__label--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$radio}__label--LineHeight: var(--#{$pf-global}--LineHeight--sm);
+  --#{$radio}__input--Height: var(--#{$radio}__label--FontSize);
+  --#{$radio}__input--MarginTop: calc(((var(--#{$radio}__label--FontSize) * var(--#{$radio}__label--LineHeight)) - var(--#{$radio}__input--Height)) / 2);
+  --#{$radio}__input--first-child--MarginLeft: #{pf-size-prem(1px)};
+  --#{$radio}__input--last-child--MarginRight: #{pf-size-prem(1px)};
+  --#{$radio}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$radio}__description--Color: var(--#{$pf-global}--Color--200);
+  --#{$radio}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
 
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: var(--pf-c-radio--GridGap);
+  grid-gap: var(--#{$radio}--GridGap);
 
   &.pf-m-standalone {
-    --pf-c-radio--GridGap: 0;
-    --pf-c-radio__input--Height: auto;
-    --pf-c-radio__input--MarginTop: 0;
+    --#{$radio}--GridGap: 0;
+    --#{$radio}__input--Height: auto;
+    --#{$radio}__input--MarginTop: 0;
 
     display: inline-grid;
     line-height: 1;
   }
 }
 
-.pf-c-radio__label {
-  font-size: var(--pf-c-radio__label--FontSize);
-  font-weight: var(--pf-c-radio__label--FontWeight);
-  line-height: var(--pf-c-radio__label--LineHeight);
-  color: var(--pf-c-radio__label--Color);
+.#{$radio}__label {
+  font-size: var(--#{$radio}__label--FontSize);
+  font-weight: var(--#{$radio}__label--FontWeight);
+  line-height: var(--#{$radio}__label--LineHeight);
+  color: var(--#{$radio}__label--Color);
 }
 
-.pf-c-radio__input {
-  height: var(--pf-c-radio__input--Height);
-  margin-top: var(--pf-c-radio__input--MarginTop);
+.#{$radio}__input {
+  height: var(--#{$radio}__input--Height);
+  margin-top: var(--#{$radio}__input--MarginTop);
 
   // fixes a chrome issue where the left edge is cut off in a container with overflow hidden
   &:first-child {
-    margin-left: var(--pf-c-radio__input--first-child--MarginLeft);
+    margin-left: var(--#{$radio}__input--first-child--MarginLeft);
   }
 
   // fixes a chrome issue where the right edge is cut off in a container with overflow hidden
   &:last-child {
-    margin-right: var(--pf-c-radio__input--last-child--MarginRight);
+    margin-right: var(--#{$radio}__input--last-child--MarginRight);
   }
 }
 
-.pf-c-radio__description {
+.#{$radio}__description {
   grid-column: 2;
-  font-size: var(--pf-c-radio__description--FontSize);
-  color: var(--pf-c-radio__description--Color);
+  font-size: var(--#{$radio}__description--FontSize);
+  color: var(--#{$radio}__description--Color);
 }
 
-.pf-c-radio__body {
+.#{$radio}__body {
   grid-column: 2;
-  margin-top: var(--pf-c-radio__body--MarginTop);
+  margin-top: var(--#{$radio}__body--MarginTop);
 }
 
-.pf-c-radio__label,
-.pf-c-radio__input {
+.#{$radio}__label,
+.#{$radio}__input {
   justify-self: start;
 
-  @at-root label.pf-c-radio,
+  @at-root label.#{$radio},
   & {
     cursor: pointer;
   }
 
   &:disabled,
   &.pf-m-disabled {
-    --pf-c-radio__label--Color: var(--pf-c-radio__label--disabled--Color);
+    --#{$radio}__label--Color: var(--#{$radio}__label--disabled--Color);
 
     cursor: not-allowed;
   }

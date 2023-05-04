@@ -1,7 +1,7 @@
 ---
 id: Alert
 section: components
-cssPrefix: pf-c-alert
+cssPrefix: pf-v5-c-alert
 ---
 
 ## Alert examples
@@ -145,12 +145,12 @@ cssPrefix: pf-c-alert
 <br>
 {{#> alert alert--modifier="pf-m-success" alert--attribute='aria-label="Success alert with title truncation at 2 lines"'}}
   {{> alert-icon alert-icon--type="check-circle"}}
-  {{#> alert-title alert-title--modifier="pf-m-truncate" alert-title--attribute='style="--pf-c-alert__title--max-lines: 2"'}}
+  {{#> alert-title alert-title--modifier="pf-m-truncate" alert-title--attribute='style="--pf-v5-c-alert__title--max-lines: 2"'}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque cursus enim fringilla tincidunt. Proin lobortis aliquam dictum. Nam vel ullamcorper nulla, nec blandit dolor. Vivamus pellentesque neque justo, nec accumsan nulla rhoncus id. Suspendisse mollis, tortor quis faucibus volutpat, sem leo fringilla turpis, ac lacinia augue metus in nulla. Cras vestibulum lacinia orci. Pellentesque sodales consequat interdum. Sed porttitor tincidunt metus nec iaculis. Pellentesque non commodo justo. Morbi feugiat rhoncus neque, vitae facilisis diam aliquam nec. Sed dapibus vitae quam at tristique. Nunc vel commodo mi. Mauris et rhoncus leo.
   {{/alert-title}}
   {{#> alert-description}}
-    This example uses ".pf-m-truncate" and sets "--pf-c-alert__title--max-lines: 2" to limit title to two lines and truncate any overflow text with ellipses.
+    This example uses ".pf-m-truncate" and sets "--pf-v5-c-alert__title--max-lines: 2" to limit title to two lines and truncate any overflow text with ellipses.
   {{/alert-description}}
 {{/alert}}
 ```
@@ -458,7 +458,7 @@ When toast alerts include a link or action, these elements are not announced as 
 For sighted users, interactive elements can be included in this message in one of the following ways:
 
 - Using a link to the Builds page: "The build is complete. Go to the [Builds](#) page to download" using `<a href="#">Builds</a>`
-- Using a button to download: "The build is complete. Go to the Builds page to <button class="pf-c-button pf-m-link pf-m-inline" type="button">download</button>" using `<button class="pf-c-button pf-m-link pf-m-inline type="button">download</button>`
+- Using a button to download: "The build is complete. Go to the Builds page to <button class="pf-v5-c-button pf-m-link pf-m-inline" type="button">download</button>" using `<button class="pf-v5-c-button pf-m-link pf-m-inline type="button">download</button>`
 
 ```hbs isFullscreen
 {{#> alert-group alert-group--modifier="pf-m-toast"}}
@@ -527,24 +527,24 @@ Add a modifier class to the default alert to change the color: `.pf-m-success`, 
 ### Alert usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-alert` | `<div>` | Initiates the alert component. Always use with a status modifier class. **Required** |
-| `.pf-c-alert__toggle` | `<div>` | Defines the expandable alert toggle icon. **Required for expandable alerts** |
-| `.pf-c-alert__toggle-icon` | `<span>` | Defines the expandable alert toggle icon. **Required for expandable alerts** |
-| `.pf-c-alert__icon` | `<div>` | Defines the alert icon. **Required** |
-| `.pf-c-alert__title` | `<p>, <h1-h6>` | Defines the alert title. **Required** |
-| `.pf-c-alert__description` | `<div>` | Defines the alert description area. |
-| `.pf-c-alert__action` | `<div>` | Defines the action button wrapper. Should contain `.pf-c-button.pf-m-plain` for close action or `.pf-c-button.pf-m-link` for link text. It should only include one action. |
-| `.pf-c-alert__action-group` | `<div>` | Defines the action button group. Should contain `.pf-c-button.pf-m-link.pf-m-inline` for inline link text. **Note:** only inline link buttons are supported in the alert action group. |
-| `.pf-m-custom` | `.pf-c-alert` | Applies custom status styling. |
-| `.pf-m-success` | `.pf-c-alert` | Applies success status styling. |
-| `.pf-m-danger` | `.pf-c-alert` | Applies danger status styling. |
-| `.pf-m-warning` | `.pf-c-alert` | Applies warning status styling. |
-| `.pf-m-info` | `.pf-c-alert` | Applies info status styling. |
-| `.pf-m-inline` | `.pf-c-alert` | Applies inline styling. |
-| `.pf-m-plain` | `.pf-c-alert.pf-m-inline` | Applies plain styling to an inline alert. |
-| `.pf-m-expandable` | `.pf-c-alert` | Applies expandable styles to the alert. |
-| `.pf-m-expanded` | `.pf-c-alert.pf-m-expandable` | Applies expanded styles to an expandable alert. |
-| `.pf-m-truncate` | `.pf-c-alert__title` | Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-c-alert__title--max-lines` (the default value is `1`). |
+| `.pf-v5-c-alert` | `<div>` | Initiates the alert component. Always use with a status modifier class. **Required** |
+| `.pf-v5-c-alert__toggle` | `<div>` | Defines the expandable alert toggle icon. **Required for expandable alerts** |
+| `.pf-v5-c-alert__toggle-icon` | `<span>` | Defines the expandable alert toggle icon. **Required for expandable alerts** |
+| `.pf-v5-c-alert__icon` | `<div>` | Defines the alert icon. **Required** |
+| `.pf-v5-c-alert__title` | `<p>, <h1-h6>` | Defines the alert title. **Required** |
+| `.pf-v5-c-alert__description` | `<div>` | Defines the alert description area. |
+| `.pf-v5-c-alert__action` | `<div>` | Defines the action button wrapper. Should contain `.pf-v5-c-button.pf-m-plain` for close action or `.pf-v5-c-button.pf-m-link` for link text. It should only include one action. |
+| `.pf-v5-c-alert__action-group` | `<div>` | Defines the action button group. Should contain `.pf-v5-c-button.pf-m-link.pf-m-inline` for inline link text. **Note:** only inline link buttons are supported in the alert action group. |
+| `.pf-m-custom` | `.pf-v5-c-alert` | Applies custom status styling. |
+| `.pf-m-success` | `.pf-v5-c-alert` | Applies success status styling. |
+| `.pf-m-danger` | `.pf-v5-c-alert` | Applies danger status styling. |
+| `.pf-m-warning` | `.pf-v5-c-alert` | Applies warning status styling. |
+| `.pf-m-info` | `.pf-v5-c-alert` | Applies info status styling. |
+| `.pf-m-inline` | `.pf-v5-c-alert` | Applies inline styling. |
+| `.pf-m-plain` | `.pf-v5-c-alert.pf-m-inline` | Applies plain styling to an inline alert. |
+| `.pf-m-expandable` | `.pf-v5-c-alert` | Applies expandable styles to the alert. |
+| `.pf-m-expanded` | `.pf-v5-c-alert.pf-m-expandable` | Applies expanded styles to an expandable alert. |
+| `.pf-m-truncate` | `.pf-v5-c-alert__title` | Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-v5-c-alert__title--max-lines` (the default value is `1`). |
 
 ### Alert group overview
 The alert component is used to contain and align consecutive alerts.  Alert groups can either be embedded alongside a page's content or in the top-right corner as a toast group using the `.pf-m-toast` modifier.
@@ -552,7 +552,7 @@ The alert component is used to contain and align consecutive alerts.  Alert grou
 ### Alert group usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-alert-group` | `<ul>` | Creates an alert group component. **Required** |
-| `.pf-c-alert-group__item` | `<li>` | Creates an alert group item. **Required** |
-| `.pf-c-alert-group__overflow-button` | `<button>` | Applies overflow button styling to an alert group overflow button. |
-| `.pf-m-toast`| `.pf-c-alert-group` | Applies toast alert styling to an alert group. |
+| `.pf-v5-c-alert-group` | `<ul>` | Creates an alert group component. **Required** |
+| `.pf-v5-c-alert-group__item` | `<li>` | Creates an alert group item. **Required** |
+| `.pf-v5-c-alert-group__overflow-button` | `<button>` | Applies overflow button styling to an alert group overflow button. |
+| `.pf-m-toast`| `.pf-v5-c-alert-group` | Applies toast alert styling to an alert group. |

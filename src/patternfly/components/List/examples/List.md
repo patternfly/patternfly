@@ -1,7 +1,7 @@
 ---
 id: List
 section: components
-cssPrefix: pf-c-list
+cssPrefix: pf-v5-c-list
 ---
 
 ## Examples
@@ -155,8 +155,8 @@ Non-inline lists can be nested up to any level.
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-list` | `<ul>, <ol>` | Initiates a list. **Required**  |
-| `.pf-m-inline` | `.pf-c-list` | Displays list items inline. |
-| `.pf-m-plain` | `.pf-c-list` |  Removes the list marker and base indentation. |
-| `.pf-m-bordered` | `.pf-c-list` | Add horizontal divider between items in a list. |
-| `.pf-m-icon-lg` | `.pf-c-list` | Show all the icons or logos in the list large. |
+| `.pf-v5-c-list` | `<ul>, <ol>` | Initiates a list. **Required**  |
+| `.pf-m-inline` | `.pf-v5-c-list` | Displays list items inline. |
+| `.pf-m-plain` | `.pf-v5-c-list` |  Removes the list marker and base indentation. |
+| `.pf-m-bordered` | `.pf-v5-c-list` | Add horizontal divider between items in a list. |
+| `.pf-m-icon-lg` | `.pf-v5-c-list` | Show all the icons or logos in the list large. |

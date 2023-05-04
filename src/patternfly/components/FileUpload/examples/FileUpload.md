@@ -2,7 +2,7 @@
 id: Simple file upload
 section: components
 subsection: file-upload
-cssPrefix: pf-c-file-upload
+cssPrefix: pf-v5-c-file-upload
 ---
 
 ## Examples
@@ -186,9 +186,9 @@ cssPrefix: pf-c-file-upload
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-file-upload` | `<div>`, `<form>` | Initiates the file upload component. **Required**. |
-| `.pf-c-file-upload__file-select` | `<div>` | Initiates the file select element. **Required** |
-| `.pf-c-file-upload__file-details` | `<div>` | Initiates the file details element. **Required** |
-| `.pf-c-file-upload__file-details-spinner` | `<div>` | Initiates the file details element. **Required** |
-| `.pf-m-drag-hover` | `.pf-c-file-upload` | Modifies file upload for when an element is dragged or dropped inside of its container. |
-| `.pf-m-loading` | `.pf-c-file-upload` | Modifies file upload for the loading state. |
+| `.pf-v5-c-file-upload` | `<div>`, `<form>` | Initiates the file upload component. **Required**. |
+| `.pf-v5-c-file-upload__file-select` | `<div>` | Initiates the file select element. **Required** |
+| `.pf-v5-c-file-upload__file-details` | `<div>` | Initiates the file details element. **Required** |
+| `.pf-v5-c-file-upload__file-details-spinner` | `<div>` | Initiates the file details element. **Required** |
+| `.pf-m-drag-hover` | `.pf-v5-c-file-upload` | Modifies file upload for when an element is dragged or dropped inside of its container. |
+| `.pf-m-loading` | `.pf-v5-c-file-upload` | Modifies file upload for the loading state. |

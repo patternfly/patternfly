@@ -1,13 +1,13 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-drawer() {
-  .pf-c-drawer {
-    --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--400);
-    --pf-c-drawer__splitter--BackgroundColor: transparent;
+@mixin pf-v5-theme-dark-drawer() {
+  .#{$drawer} {
+    --#{$drawer}__panel--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+    --#{$drawer}__splitter--BackgroundColor: transparent;
 
     &.pf-m-inline,
     &.pf-m-static {
-      --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
+      --#{$drawer}__panel--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
     }
   }
 }

@@ -1,7 +1,7 @@
 ---
 id: 'Search input'
 section: components
-cssPrefix: pf-c-search-input
+cssPrefix: pf-v5-c-search-input
 ---
 
 import './SearchInput.css'
@@ -197,37 +197,37 @@ import './SearchInput.css'
 ### Accessibility
 | Attributes | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-hidden="true"` | `.pf-c-search-input__icon > *` | Hides the search icon from assistive technologies. **Required** |
-| `aria-label="Previous"` | `.pf-c-search-input__nav > .pf-c-button` | Provides an accessible label for the previous nav button. **Required** |
-| `aria-label="Next"` | `.pf-c-search-input__nav > .pf-c-button` | Provides an accessible label for the next nav button. **Required** |
-| `aria-label="[descriptive text]"` | `.pf-c-search-input__text-input` | Provides an accessible label for the search input. **Required** |
-| `aria-label="Clear"` | `.pf-c-search-input__clear > .pf-c-button` | Provides an accessible label for the clear button. **Required** |
-| `aria-label="Search"` | `.pf-c-button` | Provides an accessible label for the search button. **Required** |
-| `aria-label="Advanced search"` | `.pf-c-button` | Provides an accessible label for the advanced search toggle. **Required** |
-| `aria-expanded="[true/false]"` | `.pf-c-button` | Indicates whether the advanced search menu is expanded or collapsed. **Required** |
-| `id` | `.pf-c-search-input__text-input` | Assigns an ID that is used with `aria-labelledby` on `.pf-c-search-input__menu-list`. **Required when using autocomplete** |
-| `aria-labelledby="[id of text input]"` | `.pf-c-search-input__menu-list` | Gives the menu list an accessible label. **Required when using autocomplete** |
-| `disabled` | `.pf-c-search-input__text-input.pf-m-hint` | Disables the hint text input from being submitted with the search input. **Required when using hint text** |
-| `aria-hidden="true"` | `.pf-c-search-input__text-input.pf-m-hint` | Hides the hint text input from assistive technology. **Required when using hint text** |
+| `aria-hidden="true"` | `.pf-v5-c-search-input__icon > *` | Hides the search icon from assistive technologies. **Required** |
+| `aria-label="Previous"` | `.pf-v5-c-search-input__nav > .pf-v5-c-button` | Provides an accessible label for the previous nav button. **Required** |
+| `aria-label="Next"` | `.pf-v5-c-search-input__nav > .pf-v5-c-button` | Provides an accessible label for the next nav button. **Required** |
+| `aria-label="[descriptive text]"` | `.pf-v5-c-search-input__text-input` | Provides an accessible label for the search input. **Required** |
+| `aria-label="Clear"` | `.pf-v5-c-search-input__clear > .pf-v5-c-button` | Provides an accessible label for the clear button. **Required** |
+| `aria-label="Search"` | `.pf-v5-c-button` | Provides an accessible label for the search button. **Required** |
+| `aria-label="Advanced search"` | `.pf-v5-c-button` | Provides an accessible label for the advanced search toggle. **Required** |
+| `aria-expanded="[true/false]"` | `.pf-v5-c-button` | Indicates whether the advanced search menu is expanded or collapsed. **Required** |
+| `id` | `.pf-v5-c-search-input__text-input` | Assigns an ID that is used with `aria-labelledby` on `.pf-v5-c-search-input__menu-list`. **Required when using autocomplete** |
+| `aria-labelledby="[id of text input]"` | `.pf-v5-c-search-input__menu-list` | Gives the menu list an accessible label. **Required when using autocomplete** |
+| `disabled` | `.pf-v5-c-search-input__text-input.pf-m-hint` | Disables the hint text input from being submitted with the search input. **Required when using hint text** |
+| `aria-hidden="true"` | `.pf-v5-c-search-input__text-input.pf-m-hint` | Hides the hint text input from assistive technology. **Required when using hint text** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-search-input` | `<div>` | Initiates the custom search input component. **Required** |
-| `.pf-c-search-input__bar` | `<div>` | Initiates the custom search input bar. **Required** |
-| `.pf-c-search-input__text` | `<span>` | Initiates the text area. **Required** |
-| `.pf-c-search-input__text-input` | `<input>` | Initiates the search input. **Required** |
-| `.pf-c-search-input__icon` | `<span>` | Initiates the search icon container. **Required** |
-| `.pf-c-search-input__utilities` | `<span>` | Initiates the utilities area beside the search input. |
-| `.pf-c-search-input__count` | `<span>` | Initiates the item count container. |
-| `.pf-c-search-input__nav` | `<span>` | Initiates the navigable buttons container. |
-| `.pf-c-search-input__clear` | `<span>` | Initiates the clear button container. **Required when there is text in the search input** |
-| `.pf-c-search-input__menu` | `<div>` | Initiates the search input dropdown menu. |
-| `.pf-c-search-input__menu-body` | `<div>` | Initiates the search input dropdown menu body element. |
-| `.pf-c-search-input__menu-list` | `<div>` | Initiates the search input dropdown menu list. |
-| `.pf-c-search-input__menu-list-item` | `<div>` | Initiates the search input dropdown menu list item. |
-| `.pf-c-search-input__menu-item` | `<div>` | Initiates the search input dropdown menu item. |
-| `.pf-c-search-input__menu-item-text` | `<span>` | Initiates the search input dropdown menu item text. |
-| `.pf-m-top` | `.pf-c-search-input__menu` | Modifies the menu to display above the toggle. |
-| `.pf-m-static` | `.pf-c-search-input__menu` | Modifies the menu to be statically positioned to support custom positioning. |
-| `.pf-m-hint` | `.pf-c-search-input__text-input` | Modifies the text input for hint text styles. |
+| `.pf-v5-c-search-input` | `<div>` | Initiates the custom search input component. **Required** |
+| `.pf-v5-c-search-input__bar` | `<div>` | Initiates the custom search input bar. **Required** |
+| `.pf-v5-c-search-input__text` | `<span>` | Initiates the text area. **Required** |
+| `.pf-v5-c-search-input__text-input` | `<input>` | Initiates the search input. **Required** |
+| `.pf-v5-c-search-input__icon` | `<span>` | Initiates the search icon container. **Required** |
+| `.pf-v5-c-search-input__utilities` | `<span>` | Initiates the utilities area beside the search input. |
+| `.pf-v5-c-search-input__count` | `<span>` | Initiates the item count container. |
+| `.pf-v5-c-search-input__nav` | `<span>` | Initiates the navigable buttons container. |
+| `.pf-v5-c-search-input__clear` | `<span>` | Initiates the clear button container. **Required when there is text in the search input** |
+| `.pf-v5-c-search-input__menu` | `<div>` | Initiates the search input dropdown menu. |
+| `.pf-v5-c-search-input__menu-body` | `<div>` | Initiates the search input dropdown menu body element. |
+| `.pf-v5-c-search-input__menu-list` | `<div>` | Initiates the search input dropdown menu list. |
+| `.pf-v5-c-search-input__menu-list-item` | `<div>` | Initiates the search input dropdown menu list item. |
+| `.pf-v5-c-search-input__menu-item` | `<div>` | Initiates the search input dropdown menu item. |
+| `.pf-v5-c-search-input__menu-item-text` | `<span>` | Initiates the search input dropdown menu item text. |
+| `.pf-m-top` | `.pf-v5-c-search-input__menu` | Modifies the menu to display above the toggle. |
+| `.pf-m-static` | `.pf-v5-c-search-input__menu` | Modifies the menu to be statically positioned to support custom positioning. |
+| `.pf-m-hint` | `.pf-v5-c-search-input__text-input` | Modifies the text input for hint text styles. |

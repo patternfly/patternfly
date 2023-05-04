@@ -83,7 +83,7 @@ section: components
       {{/modal-box-title}}
     {{/modal-box-header}}
     {{#> modal-box-body}}
-      <p id="modal-md-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>
+      <p id="modal-md-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-v5-c-modal-box__body"</p>
       <p>Form here</p>
     {{/modal-box-body}}
     {{#> modal-box-footer}}
@@ -111,7 +111,7 @@ section: components
       {{/modal-box-title}}
     {{/modal-box-header}}
     {{#> modal-box-body}}
-      <p id="modal-lg-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>
+      <p id="modal-lg-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-v5-c-modal-box__body"</p>
       <p>Form here</p>
     {{/modal-box-body}}
     {{#> modal-box-footer}}
@@ -139,7 +139,7 @@ section: components
       {{/modal-box-title}}
     {{/modal-box-header}}
     {{#> modal-box-body}}
-      <p id="modal-top-aligned-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-c-modal-box__body"</p>
+      <p id="modal-top-aligned-description">The "aria-describedby" attribute can be applied to any text that adequately describes the modal's purpose. It does not have to be assigned to ".pf-v5-c-modal-box__body"</p>
       <p>Form here</p>
     {{/modal-box-body}}
     {{#> modal-box-footer}}

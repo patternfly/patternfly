@@ -2,7 +2,7 @@
 id: Timestamp
 beta: true
 section: components
-cssPrefix: pf-c-timestamp
+cssPrefix: pf-v5-c-timestamp
 ---
 
 ## Examples
@@ -39,7 +39,7 @@ cssPrefix: pf-c-timestamp
 
 {{#> timestamp}}
   {{#> timestamp-text timestamp-text--attribute='datetime="2022-07-15T10:00"'}}
-    1 hour ago 
+    1 hour ago
   {{/timestamp-text}}
 {{/timestamp}}
 
@@ -59,6 +59,6 @@ cssPrefix: pf-c-timestamp
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-timestamp` | `<span>` | Creates a timestamp. **Required** |
-| `.pf-c-timestamp__text` | `<time>` | Creates the visual text of the timestamp. **Required** |
-| `.pf-m-help-text`| `.pf-c-timestamp` | Modifies styling for a timestamp that has help text. |
+| `.pf-v5-c-timestamp` | `<span>` | Creates a timestamp. **Required** |
+| `.pf-v5-c-timestamp__text` | `<time>` | Creates the visual text of the timestamp. **Required** |
+| `.pf-m-help-text`| `.pf-v5-c-timestamp` | Modifies styling for a timestamp that has help text. |

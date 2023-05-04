@@ -181,7 +181,7 @@ import './Card.css'
 
 ### Details card
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 260px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 260px;"'}}
   {{#> card}}
     {{#> card-title}}
       {{#> title titleType="h2" title--modifier="pf-m-xl"}}
@@ -300,35 +300,35 @@ import './Card.css'
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
-      {{#> card card--modifier="pf-u-text-align-center"}}
+      {{#> card card--modifier="pf-v5-u-text-align-center"}}
         {{> card-title card-title-text--value="5 Clusters"}}
         {{#> card-body}}
-          <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+          <i class="fas fa-check-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
         {{/card-body}}
       {{/card}}
-      {{#> card card--modifier="pf-u-text-align-center"}}
+      {{#> card card--modifier="pf-v5-u-text-align-center"}}
         {{> card-title card-title-text--value="15 Clusters"}}
         {{#> card-body}}
-          <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+          <i class="fas fa-exclamation-triangle pf-v5-u-warning-color-100" aria-hidden="true"></i>
         {{/card-body}}
       {{/card}}
-      {{#> card card--modifier="pf-u-text-align-center"}}
+      {{#> card card--modifier="pf-v5-u-text-align-center"}}
         {{> card-title card-title-text--value="3 Clusters"}}
         {{#> card-body}}
-          <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
+          <i class="fas fa-times-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
         {{/card-body}}
       {{/card}}
     {{/gallery}}
   {{/grid-item}}
   {{#> grid-item}}
     {{#> gallery gallery--modifier="pf-m-gutter"}}
-      {{#> card card--modifier="pf-u-text-align-center"}}
+      {{#> card card--modifier="pf-v5-u-text-align-center"}}
         {{> card-title card-title-text--value="10 Hosts"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-circle pf-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">2</a>
@@ -337,7 +337,7 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle pf-v5-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">1</a>
@@ -346,13 +346,13 @@ import './Card.css'
           {{/l-flex}}
         {{/card-body}}
       {{/card}}
-      {{#> card card--modifier="pf-u-text-align-center"}}
+      {{#> card card--modifier="pf-v5-u-text-align-center"}}
         {{> card-title card-title-text--value="50 Hosts"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">5</a>
@@ -361,7 +361,7 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-times-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">12</a>
@@ -370,13 +370,13 @@ import './Card.css'
           {{/l-flex}}
         {{/card-body}}
       {{/card}}
-      {{#> card card--modifier="pf-u-text-align-center"}}
+      {{#> card card--modifier="pf-v5-u-text-align-center"}}
         {{> card-title card-title-text--value="12 Hosts"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle pf-v5-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">2</a>
@@ -385,7 +385,7 @@ import './Card.css'
             {{> divider divider--modifier="pf-m-vertical"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-times-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 <a href="#">7</a>
@@ -397,14 +397,14 @@ import './Card.css'
     {{/gallery}}
   {{/grid-item}}
   {{#> grid-item}}
-    {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 260px;"'}}
+    {{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 260px;"'}}
       {{#> card}}
-        {{> card-title card-title-text--value="13 Hosts" card-title-text--modifier="pf-u-text-align-center"}}
+        {{> card-title card-title-text--value="13 Hosts" card-title-text--modifier="pf-v5-u-text-align-center"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
             {{#> l-flex newcontext}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-times-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">2 errors</a>
@@ -413,7 +413,7 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle pf-v5-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">1 warnings</a>
@@ -424,12 +424,12 @@ import './Card.css'
         {{/card-body}}
       {{/card}}
       {{#> card}}
-        {{> card-title card-title-text--value="3 Hosts" card-title--modifier="pf-u-text-align-center"}}
+        {{> card-title card-title-text--value="3 Hosts" card-title--modifier="pf-v5-u-text-align-center"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
             {{#> l-flex newcontext}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">2 successes</a>
@@ -438,7 +438,7 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle pf-v5-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">3 warnings</a>
@@ -449,12 +449,12 @@ import './Card.css'
         {{/card-body}}
       {{/card}}
       {{#> card}}
-        {{> card-title card-title-text--value="50 Hosts" card-title--modifier="pf-u-text-align-center"}}
+        {{> card-title card-title-text--value="50 Hosts" card-title--modifier="pf-v5-u-text-align-center"}}
         {{#> card-body}}
           {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
             {{#> l-flex newcontext}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle pf-v5-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">7 warnings</a>
@@ -463,7 +463,7 @@ import './Card.css'
             {{/l-flex}}
             {{#> l-flex}}
               {{#> l-flex-item}}
-                <i class="fas fa-times-circle pf-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-times-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> stack}}
                 <a href="#">1 error</a>
@@ -625,7 +625,7 @@ import './Card.css'
 
 ### Utilization card 1
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-1-example"}}
     {{#> card-title card-title--id=(concat card--id '-title1')}}
       {{#> title title--modifier="pf-m-lg" titleType="h2"}}
@@ -662,7 +662,7 @@ import './Card.css'
 
 ### Utilization card 2
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-2-example"}}
     {{#> card-title card-title--id=(concat card--id '-title1')}}
       {{#> title title--modifier="pf-m-lg" titleType="h2"}}
@@ -699,9 +699,9 @@ import './Card.css'
 ```hbs
 <b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
 <br><br>
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-3-example"}}
-    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
+    {{#> card-header card-header--modifier="pf-v5-u-align-items-flex-start"}}
       {{#> card-header-main}}
         {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=('style="padding-top: 3px;"')}}
           {{#> title title--modifier="pf-m-lg" titleType="h2"}}
@@ -719,7 +719,7 @@ import './Card.css'
       {{#> l-flex l-flex--modifier="pf-m-column"}}
         <span>System</span>
         {{#> l-flex newcontext}}
-          <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+          <i class="fas fa-exclamation-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
           <a hfer="#">25 incidents detected</a>
         {{/l-flex}}
         {{> card-demo--chart card-demo--chart--IsStackChart="true"}}
@@ -734,7 +734,7 @@ import './Card.css'
 
 ### Utilization card 4
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="utilization-card-4-example"}}
     {{#> card-title card-title--id=(concat card--id '-title1')}}
       {{#> title title--modifier="pf-m-lg" titleType="h2"}}
@@ -767,7 +767,7 @@ import './Card.css'
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 1" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 1" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-v5-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
     {{#> card-expandable-content}}
@@ -780,7 +780,7 @@ import './Card.css'
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 2" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 2" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-v5-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -788,7 +788,7 @@ import './Card.css'
     {{#> card-header card-header--modifier="pf-m-toggle-right"}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 3" card-title--id=(concat card--id '-title"') card-title-text--modifier="pf-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 3" card-title--id=(concat card--id '-title"') card-title-text--modifier="pf-v5-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -811,7 +811,7 @@ import './Card.css'
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 1" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 1" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-v5-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
     {{#> card-expandable-content}}
@@ -824,7 +824,7 @@ import './Card.css'
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 2" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 2" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-v5-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -832,7 +832,7 @@ import './Card.css'
     {{#> card-header}}
       {{> card-header-toggle}}
       {{#> card-header-main}}
-        {{> card-title card-title-text--value="CPU 3" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-u-font-weight-light"}}
+        {{> card-title card-title-text--value="CPU 3" card-title--id=(concat card--id '-title') card-title-text--modifier="pf-v5-u-font-weight-light"}}
       {{/card-header-main}}
     {{/card-header}}
   {{/card}}
@@ -855,7 +855,7 @@ import './Card.css'
     {{#> accordion}}
       {{#> accordion-toggle accordion-toggle--IsExpanded="true" accordion-toggle--attribute='aria-expanded="true"'}}
         {{#> accordion-toggle-text}}
-          <span class="pf-u-font-weight-light">
+          <span class="pf-v5-u-font-weight-light">
             CPU 1
           </span>
         {{/accordion-toggle-text}}
@@ -869,7 +869,7 @@ import './Card.css'
 
       {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
         {{#> accordion-toggle-text}}
-          <span class="pf-u-font-weight-light">
+          <span class="pf-v5-u-font-weight-light">
             CPU 2
           </span>
         {{/accordion-toggle-text}}
@@ -881,7 +881,7 @@ import './Card.css'
 
       {{#> accordion-toggle accordion-toggle--attribute='aria-expanded="false"'}}
         {{#> accordion-toggle-text}}
-          <span class="pf-u-font-weight-light">
+          <span class="pf-v5-u-font-weight-light">
             CPU 3
           </span>
         {{/accordion-toggle-text}}
@@ -899,7 +899,7 @@ import './Card.css'
 ```hbs
 <b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
 <br><br>
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="trend-card-1-example"}}
     {{#> card-header}}
       {{#> card-header-main}}
@@ -908,7 +908,7 @@ import './Card.css'
             1,050,765 IOPS
           {{/title}}
         {{/card-title}}
-        <span class="pf-u-color-200">
+        <span class="pf-v5-u-color-200">
           Workload
         </span>
       {{/card-header-main}}
@@ -927,7 +927,7 @@ import './Card.css'
 
 ### Trend card 2
 ```hbs
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="trend-card-2-example"}}
     {{#> card-header}}
       {{#> card-header-main}}
@@ -939,7 +939,7 @@ import './Card.css'
                   842 TB
                 {{/title}}
               {{/card-title}}
-              <span class="pf-u-color-200">
+              <span class="pf-v5-u-color-200">
                 Storage capacity
               </span>
             {{/l-flex}}
@@ -964,9 +964,9 @@ import './Card.css'
 ```hbs
 <b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
 <br><br>
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="card-log-view-example"}}
-    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
+    {{#> card-header card-header--modifier="pf-v5-u-align-items-flex-start"}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
         {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Most recent
@@ -990,7 +990,7 @@ import './Card.css'
             Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:02 am</time>
+            <time class="pf-v5-u-color-200 pf-v5-u-font-size-sm">Jun 17, 11:02 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1001,7 +1001,7 @@ import './Card.css'
             Successfully assigned default/example to ip-10-0-130-149.ec2.internal
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:13 am</time>
+            <time class="pf-v5-u-color-200 pf-v5-u-font-size-sm">Jun 17, 11:13 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1012,7 +1012,7 @@ import './Card.css'
             Pulling image "openshift/hello-openshift"
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:59 am</time>
+            <time class="pf-v5-u-color-200 pf-v5-u-font-size-sm">Jun 17, 10:59 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1023,7 +1023,7 @@ import './Card.css'
             Created container hello-openshift
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:45 am</time>
+            <time class="pf-v5-u-color-200 pf-v5-u-font-size-sm">Jun 17, 10:45 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
       {{/description-list}}
@@ -1040,9 +1040,9 @@ import './Card.css'
 ```hbs
 <b>Note:</b> Custom CSS is used in this demo to align the card title and select toggle text to <code>baseline</code> alignment.
 <br><br>
-{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-l-gallery--GridTemplateColumns--min: 360px;"'}}
+{{#> gallery gallery--modifier="pf-m-gutter" gallery--attribute='style="--pf-v5-l-gallery--GridTemplateColumns--min: 360px;"'}}
   {{#> card card--id="card-events-view-example"}}
-    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
+    {{#> card-header card-header--modifier="pf-v5-u-align-items-flex-start"}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
         {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Status
@@ -1062,7 +1062,7 @@ import './Card.css'
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item}}
-                <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Readiness probe failed
@@ -1073,14 +1073,14 @@ import './Card.css'
             Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:02 am</time>
+            <time class="pf-v5-u-color-200 pf-v5-u-font-size-sm">Jun 17, 11:02 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Successful assignment
@@ -1091,7 +1091,7 @@ import './Card.css'
             Successfully assigned default/example to ip-10-0-130-149.ec2.internal
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:13 am</time>
+            <time class="pf-v5-u-color-200 pf-v5-u-font-size-sm">Jun 17, 11:13 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -1109,14 +1109,14 @@ import './Card.css'
             Pulling image "openshift/hello-openshift"
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:59 am</time>
+            <time class="pf-v5-u-color-200 pf-v5-u-font-size-sm">Jun 17, 10:59 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item}}
-                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Created container
@@ -1127,7 +1127,7 @@ import './Card.css'
             Created container hello-openshift
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:45 am</time>
+            <time class="pf-v5-u-color-200 pf-v5-u-font-size-sm">Jun 17, 10:45 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
       {{/description-list}}

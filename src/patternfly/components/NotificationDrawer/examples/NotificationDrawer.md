@@ -1,7 +1,7 @@
 ---
 id: Notification drawer
 section: components
-cssPrefix: pf-c-notification-drawer
+cssPrefix: pf-v5-c-notification-drawer
 ---
 
 ## Examples
@@ -107,42 +107,42 @@ cssPrefix: pf-c-notification-drawer
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-expanded="false"` | `.pf-c-notification-drawer__group-toggle` | Indicates that the group notification list is hidden. |
-| `aria-expanded="true"` | `.pf-c-notification-drawer__group-toggle` | Indicates that the group notification list is visible. |
-| `hidden` | `.pf-c-notification-drawer__list` | Indicates that the group notification list is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
-| `tabindex="0"` | `.pf-c-notification-drawer__list-item.pf-m-hoverable` | Inserts the hoverable list item into the tab order of the page so that it is focusable. |
-| `aria-hidden="true"` | `.pf-c-notification-drawer__group-toggle-icon > *`, `.pf-c-notification-drawer__list-item-header-icon > *` | Hides icon for assistive technologies. |
+| `aria-expanded="false"` | `.pf-v5-c-notification-drawer__group-toggle` | Indicates that the group notification list is hidden. |
+| `aria-expanded="true"` | `.pf-v5-c-notification-drawer__group-toggle` | Indicates that the group notification list is visible. |
+| `hidden` | `.pf-v5-c-notification-drawer__list` | Indicates that the group notification list is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
+| `tabindex="0"` | `.pf-v5-c-notification-drawer__list-item.pf-m-hoverable` | Inserts the hoverable list item into the tab order of the page so that it is focusable. |
+| `aria-hidden="true"` | `.pf-v5-c-notification-drawer__group-toggle-icon > *`, `.pf-v5-c-notification-drawer__list-item-header-icon > *` | Hides icon for assistive technologies. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-notification-drawer` | `<div>` | Initiates the notification drawer. **Required** |
-| `.pf-c-notification-drawer__header` | `<div>` | Initiates the notification drawer header. **Required** |
-| `.pf-c-notification-drawer__header-title` | `<h1>` | Initiates the notification drawer header title. **Required** |
-| `.pf-c-notification-drawer__header-status` | `<span>` | Initiates the notification drawer header status. |
-| `.pf-c-notification-drawer__header-action` | `<div>` | Initiates the notification drawer header action. |
-| `.pf-c-notification-drawer__header-action-close` | `<div>` | Initiates the notification drawer header action button. |
-| `.pf-c-notification-drawer__body` | `<div>` | Initiates the notification drawer body. **Required** |
-| `.pf-c-notification-drawer__list` | `<ul>` | Initiates a notification list. **Required** |
-| `.pf-c-notification-drawer__list-item` | `<li>` | Initiates a notification list item. Always use with a state modifier class. **Required** |
-| `.pf-c-notification-drawer__list-item-header` | `<div>` | Initiates a notification list item header. **Required** |
-| `.pf-c-notification-drawer__list-item-header-icon` | `<span>` | Initiates a notification list item header icon. **Required** |
-| `.pf-c-notification-drawer__list-item-header-title` | `<h2>` | Initiates a notification list item header title. **Required** |
-| `.pf-c-notification-drawer__list-item-action` | `<div>` | Initiates a notification list item action. |
-| `.pf-c-notification-drawer__list-item-description` | `<div>` | Initiates a notification list item description. **Required** |
-| `.pf-c-notification-drawer__list-item-timestamp` | `<div>` | Initiates a notification list item timestamp. **Required** |
-| `.pf-c-notification-drawer__group-list` | `<div>` | Initiates a notification group list. **Required when notifications are grouped** |
-| `.pf-c-notification-drawer__group` | `<section>` | Initiates a notification group. **Required** |
-| `.pf-c-notification-drawer__group-toggle` | `<button>` | Initiates a notification group toggle. **Required** |
-| `.pf-c-notification-drawer__group-title` | `<div>` | Initiates a notification group toggle title. **Required** |
-| `.pf-c-notification-drawer__group-count` | `<div>` | Initiates a notification group toggle count. |
-| `.pf-c-notification-drawer__group-icon` | `<span>` | Initiates a notification group toggle icon. **Required** |
-| `.pf-m-custom` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the custom state. |
-| `.pf-m-info` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the info state. |
-| `.pf-m-warning` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the warning state. |
-| `.pf-m-danger` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the danger state. |
-| `.pf-m-success` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the success state. |
-| `.pf-m-read` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item for the read state. |
-| `.pf-m-hoverable` | `.pf-c-notification-drawer__list-item` | Modifies a notification list item hover states to inidicate it is clickable. |
-| `.pf-m-expanded` | `.pf-c-notification-drawer__group` | Modifies a notification group for the expanded state. |
-| `.pf-m-truncate` | `.pf-c-notification-drawer__list-item-header-title` |  Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-c-notification-drawer__list-item-header-title--max-lines` (the default value is `1`). |
+| `.pf-v5-c-notification-drawer` | `<div>` | Initiates the notification drawer. **Required** |
+| `.pf-v5-c-notification-drawer__header` | `<div>` | Initiates the notification drawer header. **Required** |
+| `.pf-v5-c-notification-drawer__header-title` | `<h1>` | Initiates the notification drawer header title. **Required** |
+| `.pf-v5-c-notification-drawer__header-status` | `<span>` | Initiates the notification drawer header status. |
+| `.pf-v5-c-notification-drawer__header-action` | `<div>` | Initiates the notification drawer header action. |
+| `.pf-v5-c-notification-drawer__header-action-close` | `<div>` | Initiates the notification drawer header action button. |
+| `.pf-v5-c-notification-drawer__body` | `<div>` | Initiates the notification drawer body. **Required** |
+| `.pf-v5-c-notification-drawer__list` | `<ul>` | Initiates a notification list. **Required** |
+| `.pf-v5-c-notification-drawer__list-item` | `<li>` | Initiates a notification list item. Always use with a state modifier class. **Required** |
+| `.pf-v5-c-notification-drawer__list-item-header` | `<div>` | Initiates a notification list item header. **Required** |
+| `.pf-v5-c-notification-drawer__list-item-header-icon` | `<span>` | Initiates a notification list item header icon. **Required** |
+| `.pf-v5-c-notification-drawer__list-item-header-title` | `<h2>` | Initiates a notification list item header title. **Required** |
+| `.pf-v5-c-notification-drawer__list-item-action` | `<div>` | Initiates a notification list item action. |
+| `.pf-v5-c-notification-drawer__list-item-description` | `<div>` | Initiates a notification list item description. **Required** |
+| `.pf-v5-c-notification-drawer__list-item-timestamp` | `<div>` | Initiates a notification list item timestamp. **Required** |
+| `.pf-v5-c-notification-drawer__group-list` | `<div>` | Initiates a notification group list. **Required when notifications are grouped** |
+| `.pf-v5-c-notification-drawer__group` | `<section>` | Initiates a notification group. **Required** |
+| `.pf-v5-c-notification-drawer__group-toggle` | `<button>` | Initiates a notification group toggle. **Required** |
+| `.pf-v5-c-notification-drawer__group-title` | `<div>` | Initiates a notification group toggle title. **Required** |
+| `.pf-v5-c-notification-drawer__group-count` | `<div>` | Initiates a notification group toggle count. |
+| `.pf-v5-c-notification-drawer__group-icon` | `<span>` | Initiates a notification group toggle icon. **Required** |
+| `.pf-m-custom` | `.pf-v5-c-notification-drawer__list-item` | Modifies a notification list item for the custom state. |
+| `.pf-m-info` | `.pf-v5-c-notification-drawer__list-item` | Modifies a notification list item for the info state. |
+| `.pf-m-warning` | `.pf-v5-c-notification-drawer__list-item` | Modifies a notification list item for the warning state. |
+| `.pf-m-danger` | `.pf-v5-c-notification-drawer__list-item` | Modifies a notification list item for the danger state. |
+| `.pf-m-success` | `.pf-v5-c-notification-drawer__list-item` | Modifies a notification list item for the success state. |
+| `.pf-m-read` | `.pf-v5-c-notification-drawer__list-item` | Modifies a notification list item for the read state. |
+| `.pf-m-hoverable` | `.pf-v5-c-notification-drawer__list-item` | Modifies a notification list item hover states to inidicate it is clickable. |
+| `.pf-m-expanded` | `.pf-v5-c-notification-drawer__group` | Modifies a notification group for the expanded state. |
+| `.pf-m-truncate` | `.pf-v5-c-notification-drawer__list-item-header-title` |  Modifies the title to display a single line and truncate any overflow text with ellipses. **Note:** you can specify the max number of lines to show by setting the `--pf-v5-c-notification-drawer__list-item-header-title--max-lines` (the default value is `1`). |

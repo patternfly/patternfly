@@ -1,13 +1,13 @@
 <{{#if table-td--type}}{{table-td--type}}{{else}}td{{/if}} class="
-  {{~#if table-td--toggle}} pf-c-table__toggle{{/if}}
-  {{~#if table-td--check}} pf-c-table__check{{/if}}
-  {{~#if table-td--action}} pf-c-table__action{{/if}}
-  {{~#if table-td--icon}} pf-c-table__icon{{/if}}
-  {{~#if table-td--compound-expansion-toggle}} pf-c-table__compound-expansion-toggle{{/if}}
-  {{~#if table-td--IsStickyColumn}} pf-c-table__sticky-column{{/if}}
-  {{~#if table-td--IsFavorite}} pf-c-table__favorite{{/if}}
+  {{~#if table-td--toggle}} {{pfv}}table__toggle{{/if}}
+  {{~#if table-td--check}} {{pfv}}table__check{{/if}}
+  {{~#if table-td--action}} {{pfv}}table__action{{/if}}
+  {{~#if table-td--icon}} {{pfv}}table__icon{{/if}}
+  {{~#if table-td--compound-expansion-toggle}} {{pfv}}table__compound-expansion-toggle{{/if}}
+  {{~#if table-td--IsStickyColumn}} {{pfv}}table__sticky-column{{/if}}
+  {{~#if table-td--IsFavorite}} {{pfv}}table__favorite{{/if}}
   {{~#if table-td--IsFavorited}} pf-m-favorited{{/if}}
-  {{~#if table-td--IsDraggable}} pf-c-table__draggable{{/if}}
+  {{~#if table-td--IsDraggable}} {{pfv}}table__draggable{{/if}}
   {{~#if table-td--modifier}} {{table-td--modifier}}{{/if}}"
   {{#unless table-td--IsEmpty}}
     {{#unless table-td--type}}
@@ -26,7 +26,7 @@
   {{/if}}>
   {{#unless table-td--IsEmpty}}
     {{#if table-td--toggle}}
-      <button class="pf-c-button pf-m-plain{{#if table-tr--expanded}} pf-m-expanded{{/if}}" {{#if table-td--button--attribute}}{{{table-td--button--attribute}}}{{/if}} {{#if table-tr--expanded}}aria-expanded="true"{{/if}}>
+      <button class="{{pfv}}button pf-m-plain{{#if table-tr--expanded}} pf-m-expanded{{/if}}" {{#if table-td--button--attribute}}{{{table-td--button--attribute}}}{{/if}} {{#if table-tr--expanded}}aria-expanded="true"{{/if}}>
         {{> table-toggle-icon}}
       </button>
     {{else if table-td--compound-expansion-toggle}}

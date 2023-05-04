@@ -1,9 +1,9 @@
-.pf-c-draggable {
+.pf-v5-c-draggable {
   padding: .25em;
 }
 
-.pf-c-draggable.pf-m-dragging {
-  --pf-c-draggable--m-dragging--BackgroundColor: var(--pf-global--BackgroundColor--100);
+.pf-v5-c-draggable.pf-m-dragging {
+  --pf-v5-c-draggable--m-dragging--BackgroundColor: var(--pf-v5--global--BackgroundColor--100);
 
   position: absolute;
   top: 23%;

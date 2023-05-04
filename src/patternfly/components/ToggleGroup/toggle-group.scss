@@ -1,93 +1,95 @@
-.pf-c-toggle-group {
+// @debug $toggle-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$toggle-group} {
   // button
-  --pf-c-toggle-group__button--PaddingTop: var(--pf-global--spacer--form-element);
-  --pf-c-toggle-group__button--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-toggle-group__button--PaddingBottom: var(--pf-global--spacer--form-element);
-  --pf-c-toggle-group__button--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-toggle-group__button--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-toggle-group__button--LineHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md));
-  --pf-c-toggle-group__button--Color: var(--pf-global--Color--100);
-  --pf-c-toggle-group__button--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-toggle-group__button--ZIndex: auto;
-  --pf-c-toggle-group__button--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-toggle-group__button--hover--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-toggle-group__button--hover--before--BorderColor: var(--pf-global--BorderColor--200);
-  --pf-c-toggle-group__button--focus--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-toggle-group__button--focus--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-toggle-group__button--focus--before--BorderColor: var(--pf-global--BorderColor--200);
-  --pf-c-toggle-group__button--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
-  --pf-c-toggle-group__button--disabled--Color: var(--pf-global--disabled-color--100);
-  --pf-c-toggle-group__button--before--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-toggle-group__button--before--BorderColor: var(--pf-global--BorderColor--100);
+  --#{$toggle-group}__button--PaddingTop: var(--#{$pf-global}--spacer--form-element);
+  --#{$toggle-group}__button--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$toggle-group}__button--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
+  --#{$toggle-group}__button--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$toggle-group}__button--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$toggle-group}__button--LineHeight: calc(var(--#{$pf-global}--FontSize--md) * var(--#{$pf-global}--LineHeight--md));
+  --#{$toggle-group}__button--Color: var(--#{$pf-global}--Color--100);
+  --#{$toggle-group}__button--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$toggle-group}__button--ZIndex: auto;
+  --#{$toggle-group}__button--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$toggle-group}__button--hover--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$toggle-group}__button--hover--before--BorderColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$toggle-group}__button--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$toggle-group}__button--focus--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$toggle-group}__button--focus--before--BorderColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$toggle-group}__button--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+  --#{$toggle-group}__button--disabled--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$toggle-group}__button--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$toggle-group}__button--before--BorderColor: var(--#{$pf-global}--BorderColor--100);
 
   // item
-  --pf-c-toggle-group__item--item--MarginLeft: calc(-1 * var(--pf-global--BorderWidth--sm));
-  --pf-c-toggle-group__item--first-child__button--BorderTopLeftRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-toggle-group__item--first-child__button--BorderBottomLeftRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-toggle-group__item--last-child__button--BorderTopRightRadius: var(--pf-global--BorderRadius--sm);
-  --pf-c-toggle-group__item--last-child__button--BorderBottomRightRadius: var(--pf-global--BorderRadius--sm);
+  --#{$toggle-group}__item--item--MarginLeft: calc(-1 * var(--#{$pf-global}--BorderWidth--sm));
+  --#{$toggle-group}__item--first-child__button--BorderTopLeftRadius: var(--#{$pf-global}--BorderRadius--sm);
+  --#{$toggle-group}__item--first-child__button--BorderBottomLeftRadius: var(--#{$pf-global}--BorderRadius--sm);
+  --#{$toggle-group}__item--last-child__button--BorderTopRightRadius: var(--#{$pf-global}--BorderRadius--sm);
+  --#{$toggle-group}__item--last-child__button--BorderBottomRightRadius: var(--#{$pf-global}--BorderRadius--sm);
 
   // icon
-  --pf-c-toggle-group__icon--text--MarginLeft: var(--pf-global--spacer--sm);
+  --#{$toggle-group}__icon--text--MarginLeft: var(--#{$pf-global}--spacer--sm);
 
   // Selected
-  --pf-c-toggle-group__button--m-selected--BackgroundColor: var(--pf-global--palette--blue-50);
-  --pf-c-toggle-group__button--m-selected--before--BorderColor: var(--pf-global--primary-color--100);
-  --pf-c-toggle-group__button--m-selected--ZIndex: var(--pf-global--ZIndex--xs);
+  --#{$toggle-group}__button--m-selected--BackgroundColor: var(--#{$pf-global}--palette--blue-50);
+  --#{$toggle-group}__button--m-selected--before--BorderColor: var(--#{$pf-global}--primary-color--100);
+  --#{$toggle-group}__button--m-selected--ZIndex: var(--#{$pf-global}--ZIndex--xs);
 
   // Compact
-  --pf-c-toggle-group--m-compact__button--PaddingTop: 0;
-  --pf-c-toggle-group--m-compact__button--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-toggle-group--m-compact__button--PaddingBottom: 0;
-  --pf-c-toggle-group--m-compact__button--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-toggle-group--m-compact__button--FontSize: var(--pf-global--FontSize--xs);
+  --#{$toggle-group}--m-compact__button--PaddingTop: 0;
+  --#{$toggle-group}--m-compact__button--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$toggle-group}--m-compact__button--PaddingBottom: 0;
+  --#{$toggle-group}--m-compact__button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$toggle-group}--m-compact__button--FontSize: var(--#{$pf-global}--FontSize--xs);
 
   display: flex;
 
   &.pf-m-compact {
-    --pf-c-toggle-group__button--PaddingTop: var(--pf-c-toggle-group--m-compact__button--PaddingTop);
-    --pf-c-toggle-group__button--PaddingRight: var(--pf-c-toggle-group--m-compact__button--PaddingRight);
-    --pf-c-toggle-group__button--PaddingBottom: var(--pf-c-toggle-group--m-compact__button--PaddingBottom);
-    --pf-c-toggle-group__button--PaddingLeft: var(--pf-c-toggle-group--m-compact__button--PaddingLeft);
-    --pf-c-toggle-group__button--FontSize: var(--pf-c-toggle-group--m-compact__button--FontSize);
+    --#{$toggle-group}__button--PaddingTop: var(--#{$toggle-group}--m-compact__button--PaddingTop);
+    --#{$toggle-group}__button--PaddingRight: var(--#{$toggle-group}--m-compact__button--PaddingRight);
+    --#{$toggle-group}__button--PaddingBottom: var(--#{$toggle-group}--m-compact__button--PaddingBottom);
+    --#{$toggle-group}__button--PaddingLeft: var(--#{$toggle-group}--m-compact__button--PaddingLeft);
+    --#{$toggle-group}__button--FontSize: var(--#{$toggle-group}--m-compact__button--FontSize);
   }
 }
 
-.pf-c-toggle-group__item {
+.#{$toggle-group}__item {
   & + & {
-    margin-left: var(--pf-c-toggle-group__item--item--MarginLeft);
+    margin-left: var(--#{$toggle-group}__item--item--MarginLeft);
   }
 
   &:first-child {
-    .pf-c-toggle-group__button {
+    .#{$toggle-group}__button {
       &,
       &::before {
-        border-top-left-radius: var(--pf-c-toggle-group__item--first-child__button--BorderTopLeftRadius);
-        border-bottom-left-radius: var(--pf-c-toggle-group__item--first-child__button--BorderBottomLeftRadius);
+        border-top-left-radius: var(--#{$toggle-group}__item--first-child__button--BorderTopLeftRadius);
+        border-bottom-left-radius: var(--#{$toggle-group}__item--first-child__button--BorderBottomLeftRadius);
       }
     }
   }
 
   &:last-child {
-    .pf-c-toggle-group__button {
+    .#{$toggle-group}__button {
       &,
       &::before {
-        border-top-right-radius: var(--pf-c-toggle-group__item--last-child__button--BorderTopRightRadius);
-        border-bottom-right-radius: var(--pf-c-toggle-group__item--last-child__button--BorderBottomRightRadius);
+        border-top-right-radius: var(--#{$toggle-group}__item--last-child__button--BorderTopRightRadius);
+        border-bottom-right-radius: var(--#{$toggle-group}__item--last-child__button--BorderBottomRightRadius);
       }
     }
   }
 }
 
-.pf-c-toggle-group__button {
+.#{$toggle-group}__button {
   position: relative;
-  z-index: var(--pf-c-toggle-group__button--ZIndex);
+  z-index: var(--#{$toggle-group}__button--ZIndex);
   display: inline-flex;
-  padding: var(--pf-c-toggle-group__button--PaddingTop) var(--pf-c-toggle-group__button--PaddingRight) var(--pf-c-toggle-group__button--PaddingBottom) var(--pf-c-toggle-group__button--PaddingLeft);
-  font-size: var(--pf-c-toggle-group__button--FontSize);
-  line-height: var(--pf-c-toggle-group__button--LineHeight);
-  color: var(--pf-c-toggle-group__button--Color);
-  background-color: var(--pf-c-toggle-group__button--BackgroundColor);
+  padding: var(--#{$toggle-group}__button--PaddingTop) var(--#{$toggle-group}__button--PaddingRight) var(--#{$toggle-group}__button--PaddingBottom) var(--#{$toggle-group}__button--PaddingLeft);
+  font-size: var(--#{$toggle-group}__button--FontSize);
+  line-height: var(--#{$toggle-group}__button--LineHeight);
+  color: var(--#{$toggle-group}__button--Color);
+  background-color: var(--#{$toggle-group}__button--BackgroundColor);
   border: 0;
 
   &::before {
@@ -98,46 +100,46 @@
     left: 0;
     pointer-events: none;
     content: "";
-    border: var(--pf-c-toggle-group__button--before--BorderWidth) solid var(--pf-c-toggle-group__button--before--BorderColor);
+    border: var(--#{$toggle-group}__button--before--BorderWidth) solid var(--#{$toggle-group}__button--before--BorderColor);
   }
 
   &:hover {
-    --pf-c-toggle-group__button--BackgroundColor: var(--pf-c-toggle-group__button--hover--BackgroundColor);
-    --pf-c-toggle-group__button--ZIndex: var(--pf-c-toggle-group__button--hover--ZIndex);
-    --pf-c-toggle-group__button--before--BorderColor: var(--pf-c-toggle-group__button--hover--before--BorderColor);
+    --#{$toggle-group}__button--BackgroundColor: var(--#{$toggle-group}__button--hover--BackgroundColor);
+    --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--hover--ZIndex);
+    --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--hover--before--BorderColor);
 
     text-decoration: none;
   }
 
   &:focus {
-    --pf-c-toggle-group__button--BackgroundColor: var(--pf-c-toggle-group__button--focus--BackgroundColor);
-    --pf-c-toggle-group__button--ZIndex: var(--pf-c-toggle-group__button--focus--ZIndex);
-    --pf-c-toggle-group__button--before--BorderColor: var(--pf-c-toggle-group__button--focus--before--BorderColor);
+    --#{$toggle-group}__button--BackgroundColor: var(--#{$toggle-group}__button--focus--BackgroundColor);
+    --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--focus--ZIndex);
+    --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--focus--before--BorderColor);
   }
 
   &.pf-m-selected {
-    --pf-c-toggle-group__button--BackgroundColor: var(--pf-c-toggle-group__button--m-selected--BackgroundColor);
-    --pf-c-toggle-group__button--ZIndex: var(--pf-c-toggle-group__button--m-selected--ZIndex);
-    --pf-c-toggle-group__button--before--BorderColor: var(--pf-c-toggle-group__button--m-selected--before--BorderColor);
+    --#{$toggle-group}__button--BackgroundColor: var(--#{$toggle-group}__button--m-selected--BackgroundColor);
+    --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--m-selected--ZIndex);
+    --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--m-selected--before--BorderColor);
   }
 
   &:disabled,
   &.pf-m-disabled {
-    --pf-c-toggle-group__button--BackgroundColor: var(--pf-c-toggle-group__button--disabled--BackgroundColor);
-    --pf-c-toggle-group__button--Color: var(--pf-c-toggle-group__button--disabled--Color);
+    --#{$toggle-group}__button--BackgroundColor: var(--#{$toggle-group}__button--disabled--BackgroundColor);
+    --#{$toggle-group}__button--Color: var(--#{$toggle-group}__button--disabled--Color);
 
     pointer-events: none;
   }
 }
 
-.pf-c-toggle-group__icon + .pf-c-toggle-group__text,
-.pf-c-toggle-group__text + .pf-c-toggle-group__icon {
-  margin-left: var(--pf-c-toggle-group__icon--text--MarginLeft);
+.#{$toggle-group}__icon + .#{$toggle-group}__text,
+.#{$toggle-group}__text + .#{$toggle-group}__icon {
+  margin-left: var(--#{$toggle-group}__icon--text--MarginLeft);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/toggle-group";
 
-@include pf-theme-dark {
-  @include pf-theme-dark-toggle-group;
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-toggle-group;
 }

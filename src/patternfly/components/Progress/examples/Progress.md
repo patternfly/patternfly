@@ -1,7 +1,7 @@
 ---
 id: Progress
 section: components
-cssPrefix: pf-c-progress
+cssPrefix: pf-v5-c-progress
 ---
 
 ## Examples
@@ -165,7 +165,7 @@ cssPrefix: pf-c-progress
   progress--modifier="pf-m-outside pf-m-lg"
   progress__id="progress-outside-static-width-4-example"
   progress-measure--modifier="pf-m-static-width"
-  progress--attribute='style="--pf-c-progress__measure--m-static-width--MinWidth: 6ch;"'
+  progress--attribute='style="--pf-v5-c-progress__measure--m-static-width--MinWidth: 6ch;"'
 }}
 {{/progress}}
 <br>
@@ -177,7 +177,7 @@ cssPrefix: pf-c-progress
   progress--modifier="pf-m-outside pf-m-lg"
   progress__id="progress-outside-static-width-5-example"
   progress-measure--modifier="pf-m-static-width"
-  progress--attribute='style="--pf-c-progress__measure--m-static-width--MinWidth: 6ch;"'
+  progress--attribute='style="--pf-v5-c-progress__measure--m-static-width--MinWidth: 6ch;"'
 }}
 {{/progress}}
 <br>
@@ -189,7 +189,7 @@ cssPrefix: pf-c-progress
   progress--modifier="pf-m-outside pf-m-lg"
   progress__id="progress-outside-static-width-6-example"
   progress-measure--modifier="pf-m-static-width"
-  progress--attribute='style="--pf-c-progress__measure--m-static-width--MinWidth: 6ch;"'
+  progress--attribute='style="--pf-v5-c-progress__measure--m-static-width--MinWidth: 6ch;"'
 }}
 {{/progress}}
 ```
@@ -287,34 +287,34 @@ If this component is describing the loading progress of a particular region of a
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="progressbar"` | `.pf-c-progress__bar` |  This role is used for an element that displays the progress status for a task that takes a long time or consists of several steps. |
-| `aria-valuenow=""` | `.pf-c-progress__bar` |  This value needs to be updated as progress continues. |
-| `aria-valuemin="0"` | `.pf-c-progress__bar` |  The minimum value for the progress bar. |
-| `aria-valuemax="100"` | `.pf-c-progress__bar` |  The maximum value for the progress bar. If the progress is only defined using `aria-valuenow` (e.g a percentage), the value should be set to "100". If the progress is defined using `aria-valuetext`, then this value can be a number other than 100. For example, if `aria-valuetext` is "2 of 5 units", then `aria-valuemax` can be "5" and `aria-valuenow` can be "2". |
-| `aria-label="[id of .pf-c-progress__description]"` | `.pf-c-progress__bar` | Provides an accessible name for the progress component. |
-| `aria-labelledby="[id element that labels the progress]"` | `.pf-c-progress__bar` | Provides an accessible name for the progress component. |
-| `aria-describedby="[id of element that describes the progress]"` | `.pf-c-progress__bar` | Provides an accessible description for the progress component. |
-| `aria-valuetext="[loading state]"` | `.pf-c-progress__bar` |  Provide a text string that communicates current status. Only use if the important information about status is included in the text string. Do not use if percentage is the most important value to communicate. Some screen readers will ignore the percentage value determined from `aria-valuenow` when `aria-valuetext` is used. |
-| `aria-hidden="true"` | `.pf-c-progress__status` |  Hides the visible progress bar status from screen readers. This information is communicated by the aria attributes defined on the `.pf-c-progress__bar` element. |
+| `role="progressbar"` | `.pf-v5-c-progress__bar` |  This role is used for an element that displays the progress status for a task that takes a long time or consists of several steps. |
+| `aria-valuenow=""` | `.pf-v5-c-progress__bar` |  This value needs to be updated as progress continues. |
+| `aria-valuemin="0"` | `.pf-v5-c-progress__bar` |  The minimum value for the progress bar. |
+| `aria-valuemax="100"` | `.pf-v5-c-progress__bar` |  The maximum value for the progress bar. If the progress is only defined using `aria-valuenow` (e.g a percentage), the value should be set to "100". If the progress is defined using `aria-valuetext`, then this value can be a number other than 100. For example, if `aria-valuetext` is "2 of 5 units", then `aria-valuemax` can be "5" and `aria-valuenow` can be "2". |
+| `aria-label="[id of .pf-v5-c-progress__description]"` | `.pf-v5-c-progress__bar` | Provides an accessible name for the progress component. |
+| `aria-labelledby="[id element that labels the progress]"` | `.pf-v5-c-progress__bar` | Provides an accessible name for the progress component. |
+| `aria-describedby="[id of element that describes the progress]"` | `.pf-v5-c-progress__bar` | Provides an accessible description for the progress component. |
+| `aria-valuetext="[loading state]"` | `.pf-v5-c-progress__bar` |  Provide a text string that communicates current status. Only use if the important information about status is included in the text string. Do not use if percentage is the most important value to communicate. Some screen readers will ignore the percentage value determined from `aria-valuenow` when `aria-valuetext` is used. |
+| `aria-hidden="true"` | `.pf-v5-c-progress__status` |  Hides the visible progress bar status from screen readers. This information is communicated by the aria attributes defined on the `.pf-v5-c-progress__bar` element. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-progress` | `<div>` |  Initiates a progress component. |
-| `.pf-c-progress__description` | `<div>` |  The description for a progress bar. |
-| `.pf-c-progress__status` | `<div>` |  Displays the % of progress and status icons. |
-| `.pf-c-progress__measure` | `<span>` |  Displays the % complete. |
-| `.pf-c-progress__status-icon` | `<span>` |  Displays the status icon. (optional) |
-| `.pf-c-progress__bar` | `<div>` |  Displays across the entire width and represents the completed state. |
-| `.pf-c-progress__indicator` | `<div>` |  Displays with the `.pf-c-progress__bar` to indicate the progress so far. |
-| `.pf-c-progress__helper-text` | `<div>` |  Displays additional text below the progress bar. (optional) |
-| `.pf-m-lg` | `.pf-c-progress` |  Modifies the progress bar to be larger. |
-| `.pf-m-sm` | `.pf-c-progress` |  Modifies the progress bar to be smaller. |
-| `.pf-m-inside` | `.pf-c-progress` |  Shows the measure within the progress indicator. NOTE: This option requires `.pf-m-lg`.|
-| `.pf-m-outside` | `.pf-c-progress` |  Shows the measure and status icon to the right of the progress bar. |
-| `.pf-m-singleline` | `.pf-c-progress` | Modifies the progress component to exist on one row. If a measure is needed, use with `.pf-m-inside` or `.pf-m-outside`|
-| `.pf-m-success` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a success state. |
-| `.pf-m-warning` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a warning state. |
-| `.pf-m-danger` | `.pf-c-progress` |  Changes the appearance of the progess component to indicate a danger (failure) state. |
-| `.pf-m-truncate` | `.pf-c-progress__description` | Modifies the description to display a single line and truncate any overflow text with ellipses. |
-| `.pf-m-static-width` | `.pf-c-progress.pf-m-outside .pf-c-progress__measure` | Modifies the measure element to have a static `min-width` that will hold 0-100%. Overridable by setting `--pf-c-progress__measure--m-static-width--MinWidth`. |
+| `.pf-v5-c-progress` | `<div>` |  Initiates a progress component. |
+| `.pf-v5-c-progress__description` | `<div>` |  The description for a progress bar. |
+| `.pf-v5-c-progress__status` | `<div>` |  Displays the % of progress and status icons. |
+| `.pf-v5-c-progress__measure` | `<span>` |  Displays the % complete. |
+| `.pf-v5-c-progress__status-icon` | `<span>` |  Displays the status icon. (optional) |
+| `.pf-v5-c-progress__bar` | `<div>` |  Displays across the entire width and represents the completed state. |
+| `.pf-v5-c-progress__indicator` | `<div>` |  Displays with the `.pf-v5-c-progress__bar` to indicate the progress so far. |
+| `.pf-v5-c-progress__helper-text` | `<div>` |  Displays additional text below the progress bar. (optional) |
+| `.pf-m-lg` | `.pf-v5-c-progress` |  Modifies the progress bar to be larger. |
+| `.pf-m-sm` | `.pf-v5-c-progress` |  Modifies the progress bar to be smaller. |
+| `.pf-m-inside` | `.pf-v5-c-progress` |  Shows the measure within the progress indicator. NOTE: This option requires `.pf-m-lg`.|
+| `.pf-m-outside` | `.pf-v5-c-progress` |  Shows the measure and status icon to the right of the progress bar. |
+| `.pf-m-singleline` | `.pf-v5-c-progress` | Modifies the progress component to exist on one row. If a measure is needed, use with `.pf-m-inside` or `.pf-m-outside`|
+| `.pf-m-success` | `.pf-v5-c-progress` |  Changes the appearance of the progess component to indicate a success state. |
+| `.pf-m-warning` | `.pf-v5-c-progress` |  Changes the appearance of the progess component to indicate a warning state. |
+| `.pf-m-danger` | `.pf-v5-c-progress` |  Changes the appearance of the progess component to indicate a danger (failure) state. |
+| `.pf-m-truncate` | `.pf-v5-c-progress__description` | Modifies the description to display a single line and truncate any overflow text with ellipses. |
+| `.pf-m-static-width` | `.pf-v5-c-progress.pf-m-outside .pf-v5-c-progress__measure` | Modifies the measure element to have a static `min-width` that will hold 0-100%. Overridable by setting `--pf-v5-c-progress__measure--m-static-width--MinWidth`. |

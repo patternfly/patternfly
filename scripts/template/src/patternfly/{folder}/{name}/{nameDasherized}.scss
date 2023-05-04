@@ -1,26 +1,28 @@
 // Component variables follow this formula:
-// --{nameBEM}__element--modifier--state--PropertyCamelCase
+// --#{${nameDasherized}}__element--modifier--state--PropertyCamelCase
+// @debug ${nameDasherized}; // check your variable names located in src/patternfly/sass-utilities/component-namespaces
 
 // The value of component scoped variables is always defined by a global variable:
-.{nameBEM} {
+
+.#{${nameDasherized}} {
   // Example block variable
-  --{nameBEM}--Color: var(--pf-global--Color--dark);
+  --#{${nameDasherized}}--Color: var(--#{$pf-global}--Color--dark);
 
   // Example modifier variable
-  --{nameBEM}--m-danger--BackgroundColor: var(--pf-global--danger-color);
+  --#{${nameDasherized}}--m-danger--BackgroundColor: var(--#{$pf-global}--danger-color);
 
   // Example element variable
-  --{nameBEM}__element--FontSize: var(--pf-global--FontSize--2xl);
+  --#{${nameDasherized}}__element--FontSize: var(--#{$pf-global}--FontSize--2xl);
 
-  color: var(--{nameBEM}--Color);
+  color: var(--#{${nameDasherized}}--Color);
 
   // Modifier
   &.pf-m-danger {
-    background-color: var(--{nameBEM}--m-danger--BackgroundColor);
+    background-color: var(--#{${nameDasherized}}--m-danger--BackgroundColor);
   }
 }
 
 // Element
-.{nameBEM}__element {
-  font-size: var(--{nameBEM}__element--FontSize);
+.#{${nameDasherized}}__element {
+  font-size: var(--#{${nameDasherized}}__element--FontSize);
 }

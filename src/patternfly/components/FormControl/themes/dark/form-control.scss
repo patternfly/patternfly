@@ -1,18 +1,18 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-form-control() {
-  .pf-c-form-control {
-    --pf-c-form-control__select--BackgroundUrl: #{pf-bg-svg($pf-c-form-control__select--Coordinates, $pf-c-form-control__select--ViewBox, $pf-global--Color--100)};
-    --pf-c-form-control--BorderTopColor: transparent;
-    --pf-c-form-control--BorderRightColor: transparent;
-    --pf-c-form-control--BorderBottomColor: var(--pf-global--BorderColor--400);
-    --pf-c-form-control--BorderLeftColor: transparent;
-    --pf-c-form-control--BackgroundColor: var(--pf-global--BackgroundColor--400);
-    --pf-c-form-control--disabled--Color: var(--pf-global--palette--black-300);
-    --pf-c-form-control--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
-    --pf-c-form-control--readonly--BackgroundColor: var(--pf-global--disabled-color--200);
+@mixin pf-v5-theme-dark-form-control() {
+  .#{$form-control} {
+    --#{$form-control}__select--BackgroundUrl: #{pf-bg-svg($pf-v5-c-form-control__select--Coordinates, $pf-v5-c-form-control__select--ViewBox, $pf-v5-global--Color--100)};
+    --#{$form-control}--BorderTopColor: transparent;
+    --#{$form-control}--BorderRightColor: transparent;
+    --#{$form-control}--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
+    --#{$form-control}--BorderLeftColor: transparent;
+    --#{$form-control}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+    --#{$form-control}--disabled--Color: var(--#{$pf-global}--palette--black-300);
+    --#{$form-control}--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+    --#{$form-control}--readonly--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
 
-    color: var(--pf-global--Color--100);
+    color: var(--#{$pf-global}--Color--100);
 
     // chrome's calendar icon for type="date"
     &::-webkit-calendar-picker-indicator {
@@ -20,7 +20,7 @@
     }
 
     &[readonly] {
-      border-bottom-color: var(--pf-global--palette--black-700); // should be a var?
+      border-bottom-color: var(--#{$pf-global}--palette--black-700); // should be a var?
     }
   }
 }

@@ -1,7 +1,7 @@
 ---
 id: Table
 section: components
-cssPrefix: pf-c-table
+cssPrefix: pf-v5-c-table
 ---
 
 import './Table.css'
@@ -116,16 +116,16 @@ import './Table.css'
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required** |
-| `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
+| `role="grid"` | `.pf-v5-c-table` | Identifies the element that serves as the grid widget container. **Required** |
+| `aria-label` | `.pf-v5-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
 | `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
 
 ### Basic table usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table` | `<table>` | Initiates a table element. **Required** |
-| `.pf-c-table__caption` | `<caption>` | Initiates a table caption. |
+| `.pf-v5-c-table` | `<table>` | Initiates a table element. **Required** |
+| `.pf-v5-c-table__caption` | `<caption>` | Initiates a table caption. |
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
 ## Responsive table behavior
@@ -134,8 +134,8 @@ These classes can be used to ensure that the table changes between the tabular a
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-grid` | `.pf-c-table` | Changes tabular layout to responsive, grid based layout. This approach requires JavaScript to set this class at some prescribed viewport width value. |
+| `.pf-m-grid-md`, `.pf-m-grid-lg`, `.pf-m-grid-xl`, `.pf-m-grid-2xl` | `.pf-v5-c-table` | Changes tabular layout to responsive, grid based layout at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-grid` | `.pf-v5-c-table` | Changes tabular layout to responsive, grid based layout. This approach requires JavaScript to set this class at some prescribed viewport width value. |
 
 ## Sortable
 
@@ -242,21 +242,21 @@ These classes can be used to ensure that the table changes between the tabular a
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-sort=[ascending or descending]` | `.pf-c-table__sort` | Indicates if columns in a table are sorted in ascending or descending order. For each table, authors __SHOULD__ apply aria-sort to only one header at a time. **Required** |
+| `aria-sort=[ascending or descending]` | `.pf-v5-c-table__sort` | Indicates if columns in a table are sorted in ascending or descending order. For each table, authors __SHOULD__ apply aria-sort to only one header at a time. **Required** |
 
 ### Sortable usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__sort` | `<th>` | Initiates a table header sort cell. **Required for sortable table columns** |
-| `.pf-c-table__button` | `<button>`, `<a>` | Initiates a table header sort cell button. If sorting a table row generates a unique URL that can be used as the `href` value for this element, use an `<a>`. Otherwise, use a `<button>`. **Required for sortable table columns** |
-| `.pf-c-table__button-content` | `<div>` | Initiates a table header sort cell button content container. **Required for sortable table columns** Note: this is only necessary because `<button>` does not support`display: grid`. |
-| `.pf-c-table__sort-indicator` | `.pf-c-table__sort > .pf-c-table__button > span` | Initiates a sort indicator. **Required for sortable table columns** |
-| `.pf-m-selected` | `.pf-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
-| `.pf-m-help` | `.pf-c-table__sort`, `.pf-c-table th` | Modifies a sortable table header to accommodate a help tooltip. **Required for sortable table columns with help tooltips** |
-| `.fa-arrows-alt-v` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
-| `.fa-long-arrow-alt-up` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
-| `.fa-long-arrow-alt-down` | `.pf-c-table__sort > .pf-c-table__button > .pf-c-table__sort-indicator > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
+| `.pf-v5-c-table__sort` | `<th>` | Initiates a table header sort cell. **Required for sortable table columns** |
+| `.pf-v5-c-table__button` | `<button>`, `<a>` | Initiates a table header sort cell button. If sorting a table row generates a unique URL that can be used as the `href` value for this element, use an `<a>`. Otherwise, use a `<button>`. **Required for sortable table columns** |
+| `.pf-v5-c-table__button-content` | `<div>` | Initiates a table header sort cell button content container. **Required for sortable table columns** Note: this is only necessary because `<button>` does not support`display: grid`. |
+| `.pf-v5-c-table__sort-indicator` | `.pf-v5-c-table__sort > .pf-v5-c-table__button > span` | Initiates a sort indicator. **Required for sortable table columns** |
+| `.pf-m-selected` | `.pf-v5-c-table__sort` | Modifies for sort selected state. **Required for sortable table columns** |
+| `.pf-m-help` | `.pf-v5-c-table__sort`, `.pf-v5-c-table th` | Modifies a sortable table header to accommodate a help tooltip. **Required for sortable table columns with help tooltips** |
+| `.fa-arrows-alt-v` | `.pf-v5-c-table__sort > .pf-v5-c-table__button > .pf-v5-c-table__sort-indicator > .fas` | Initiates icon within unsorted, sortable table header. **Required for sortable table columns** |
+| `.fa-long-arrow-alt-up` | `.pf-v5-c-table__sort > .pf-v5-c-table__button > .pf-v5-c-table__sort-indicator > .fas` | Initiates icon within ascending sorted and selected, sortable table header. **Required for sortable table columns** |
+| `.fa-long-arrow-alt-down` | `.pf-v5-c-table__sort > .pf-v5-c-table__button > .pf-v5-c-table__sort-indicator > .fas` | Initiates icon within descending sorted and selected, sortable table header. **Required for sortable table columns** |
 
 ### Overflow menu usage, desktop
 ```hbs
@@ -641,16 +641,16 @@ When header cells are empty or they contain interactive elements, `<th>` should 
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-labelledby="[row_header_id]"` or `aria-label="[descriptive text]` | `.pf-c-table__check input` | Provides an accessible name for the checkbox or radio input. **Required** |
-| `id` | row header `<th> > *` | Provides an accessible description for the checkbox or radio. **Required if using `aria-labelledby` for `.pf-c-table__check input`** |
+| `aria-labelledby="[row_header_id]"` or `aria-label="[descriptive text]` | `.pf-v5-c-table__check input` | Provides an accessible name for the checkbox or radio input. **Required** |
+| `id` | row header `<th> > *` | Provides an accessible description for the checkbox or radio. **Required if using `aria-labelledby` for `.pf-v5-c-table__check input`** |
 
 ### Checkboxes, radio select, and actions usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__check` | `<th>`, `<td>` | Initiates a checkbox or radio input table cell. |
-| `.pf-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
-| `.pf-c-table__inline-edit-action` | `<th>`, `<td>` | Initiates an inline edit action table cell. |
+| `.pf-v5-c-table__check` | `<th>`, `<td>` | Initiates a checkbox or radio input table cell. |
+| `.pf-v5-c-table__action` | `<th>`, `<td>` | Initiates an action table cell. |
+| `.pf-v5-c-table__inline-edit-action` | `<th>`, `<td>` | Initiates an inline edit action table cell. |
 
 ## Expandable
 
@@ -1181,28 +1181,28 @@ Note: Table column widths will respond automatically when toggling expanded rows
 {{/table}}
 ```
 
-Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.pf-c-table__expandable-row-content`. For no padding add `.pf-m-no-padding` to `.pf-c-table__expandable-row` > `<td>`
+Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in `.pf-v5-c-table__expandable-row-content`. For no padding add `.pf-m-no-padding` to `.pf-v5-c-table__expandable-row` > `<td>`
 
 ### Expandable accessibility
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `hidden` | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
-| `aria-expanded="true"` | `.pf-c-table__toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
-| `aria-label="[descriptive text]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides an accessible name for toggle button. **Required**|
-| `aria-labelledby="[title_cell_id] [button_id]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides an accessible description for toggle button. **Required** |
-| `id="[button_id]"` | `.pf-c-table__toggle` > `.pf-c-button` | Provides a reference for toggle button description. **Required** |
-| `aria-controls="[id of element the button controls]"` | `.pf-c-table__toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
+| `hidden` | `.pf-v5-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
+| `aria-expanded="true"` | `.pf-v5-c-table__toggle` > `.pf-v5-c-button` | Indicates that the row is visible. **Required**|
+| `aria-label="[descriptive text]"` | `.pf-v5-c-table__toggle` > `.pf-v5-c-button` | Provides an accessible name for toggle button. **Required**|
+| `aria-labelledby="[title_cell_id] [button_id]"` | `.pf-v5-c-table__toggle` > `.pf-v5-c-button` | Provides an accessible description for toggle button. **Required** |
+| `id="[button_id]"` | `.pf-v5-c-table__toggle` > `.pf-v5-c-button` | Provides a reference for toggle button description. **Required** |
+| `aria-controls="[id of element the button controls]"` | `.pf-v5-c-table__toggle` > `.pf-v5-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
 
 ### Expandable usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__toggle-icon` | `<span>` | Initiates the table toggle icon wrapper. |
-| `.pf-c-table__expandable-row` | `<tr>` | Initiates an expandable row. |
-| `.pf-c-table__expandable-row-content` | `.pf-c-table__expandable-row` > `<td>` > `<div>` | Initiates an expandable row content wrapper. |
-| `.pf-m-expanded` | `.pf-c-table__toggle` > `.pf-c-button`, `.pf-c-table__expandable-row` | Modifies for expanded state. |
-| `.pf-m-no-padding` | `.pf-c-table__expandable-row` > `<td>` | Modifies the expandable row to have no padding. |
+| `.pf-v5-c-table__toggle-icon` | `<span>` | Initiates the table toggle icon wrapper. |
+| `.pf-v5-c-table__expandable-row` | `<tr>` | Initiates an expandable row. |
+| `.pf-v5-c-table__expandable-row-content` | `.pf-v5-c-table__expandable-row` > `<td>` > `<div>` | Initiates an expandable row content wrapper. |
+| `.pf-m-expanded` | `.pf-v5-c-table__toggle` > `.pf-v5-c-button`, `.pf-v5-c-table__expandable-row` | Modifies for expanded state. |
+| `.pf-m-no-padding` | `.pf-v5-c-table__expandable-row` > `<td>` | Modifies the expandable row to have no padding. |
 
 ## Compound expansion
 
@@ -1377,17 +1377,17 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `hidden` | `.pf-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
-| `aria-expanded="true"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Indicates that the row is visible. **Required**|
-| `aria-controls="[id of element the button controls]"` | `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
+| `hidden` | `.pf-v5-c-table__expandable-row` | Indicates that the expandable content is hidden. **Required** |
+| `aria-expanded="true"` | `.pf-v5-c-table__compound-expansion-toggle` > `.pf-v5-c-button` | Indicates that the row is visible. **Required**|
+| `aria-controls="[id of element the button controls]"` | `.pf-v5-c-table__compound-expansion-toggle` > `.pf-v5-c-button` | Identifies the expanded content controlled by the toggle button. **Required** |
 
 ### Compound expansion usage
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__control-row` | `.pf-c-table__expandable > <tr>` | Modifies a compound expandable table control row. |
-| `.pf-m-expanded` | `<tbody>`, `.pf-c-table__compound-expansion-toggle` > `.pf-c-button` | Modifies a tbody with a row and an expandable row. |
-| `.pf-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
+| `.pf-v5-c-table__control-row` | `.pf-v5-c-table__expandable > <tr>` | Modifies a compound expandable table control row. |
+| `.pf-m-expanded` | `<tbody>`, `.pf-v5-c-table__compound-expansion-toggle` > `.pf-v5-c-button` | Modifies a tbody with a row and an expandable row. |
+| `.pf-v5-c-table__compound-expansion-toggle` | `<td>` | Modifies a `<td>` on active/focus. |
 
 ## Compact variant
 
@@ -1572,7 +1572,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{> table-td table-td--IsEmpty="true"}}
       {{> table-td table-td--IsEmpty="true"}}
       {{#> table-td table-td--attribute=(concat 'colspan="4" id="' table--id '-content' table-tr--index '"')}}
-        <div class="pf-c-table__expandable-row-content">
+        <div class="pf-v5-c-table__expandable-row-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
       {{/table-td}}
@@ -1711,7 +1711,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="'table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
       {{> table-td table-td--IsEmpty="true"}}
       {{> table-td table-td--IsEmpty="true"}}
       {{#> table-td table-td--attribute='colspan="2"'}}
@@ -1776,7 +1776,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
       {{/table-td}}
     {{/table-tr}}
 
-    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="'table--id '-content' table-tr--index '"')}}
+    {{#> table-tr table-tr--expandable="true" table-tr--IsExpanded="true" table-tr--attribute=(concat 'id="' table--id '-content' table-tr--index '"')}}
       {{#> table-td table-td--attribute='colspan="4"'}}
         {{#> table-expandable-row-content}}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -1825,7 +1825,7 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-compact` | `.pf-c-table` | Modifies for a compact table. |
+| `.pf-m-compact` | `.pf-v5-c-table` | Modifies for a compact table. |
 
 ## Clickable
 
@@ -1881,13 +1881,13 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 ### Clickable accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `tabindex="0"` | `.pf-c-table tbody.pf-m-clickable` | Inserts the clickable table element into the tab order of the page so that it is focusable. **Required** |
+| `tabindex="0"` | `.pf-v5-c-table tbody.pf-m-clickable` | Inserts the clickable table element into the tab order of the page so that it is focusable. **Required** |
 
 ### Clickable and selected usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-clickable` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a tbody or tr table element to be clickable. |
-| `.pf-m-selected` | `.pf-c-table tbody`, `.pf-c-table tr` | Modifies a selectable tbody or tr table element to be selected. |
+| `.pf-m-clickable` | `.pf-v5-c-table tbody`, `.pf-v5-c-table tr` | Modifies a tbody or tr table element to be clickable. |
+| `.pf-m-selected` | `.pf-v5-c-table tbody`, `.pf-v5-c-table tr` | Modifies a selectable tbody or tr table element to be selected. |
 
 ## Tree table
 
@@ -1915,29 +1915,29 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="treegrid"` | `.pf-c-table.pf-m-tree-view` | Identifies the `table` as a treegrid. **Place on the outermost `table` only** |
-| `role="row"` | `.pf-c-table.pf-m-tree-view tr` | Identifies the `tr` element as a `row`. The row role is not an implicit semantic for the tr element when in a treegrid. |
-| `role="gridcell"` | `.pf-c-table.pf-m-tree-view tr` | Identifies the `td` as a gridcell. The `gridcell` role is not an implicit semantic for the td element when in a treegrid. |
-| `tabindex="-1"` | `.pf-c-table.pf-m-tree-view tr` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
-| `tabindex="0"` | `.pf-c-table.pf-m-tree-view tr` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
-| `aria-expanded="false"` | `.pf-c-table.pf-m-tree-view tr` | For an expandable item, indicates the parent node is closed, i.e., the descendant elements are not visible. |
-| `aria-expanded="true"` | `.pf-c-table.pf-m-tree-view tr.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
-| `aria-level="number"` | `.pf-c-table.pf-m-tree-view tr` | Defines the level of the row in the hierarchical treegrid structure. Counting is one-based. Root rows have aria-level=“1”. |
-| `aria-setsize="number"` | `.pf-c-table.pf-m-tree-view tr` | Defines the number of rows in the set of rows that are in the same branch and at the same level within the hierarchy. |
-| `aria-posinset="number"` | `.pf-c-table.pf-m-tree-view tr` | Defines the position of the row within the set of other rows that are in the same branch and at the same level within the hierarchy. Counting is one-based, not zero-based. |
+| `role="treegrid"` | `.pf-v5-c-table.pf-m-tree-view` | Identifies the `table` as a treegrid. **Place on the outermost `table` only** |
+| `role="row"` | `.pf-v5-c-table.pf-m-tree-view tr` | Identifies the `tr` element as a `row`. The row role is not an implicit semantic for the tr element when in a treegrid. |
+| `role="gridcell"` | `.pf-v5-c-table.pf-m-tree-view tr` | Identifies the `td` as a gridcell. The `gridcell` role is not an implicit semantic for the td element when in a treegrid. |
+| `tabindex="-1"` | `.pf-v5-c-table.pf-m-tree-view tr` | Makes the element with the treeitem role focusable without including it in the tab sequence of the page. |
+| `tabindex="0"` | `.pf-v5-c-table.pf-m-tree-view tr` | Includes the element with the treeitem role in the tab sequence. Only one treeitem in the tree has tabindex="0". When the user moves focus in the tree, the element included in the tab sequence changes to the element with focus. |
+| `aria-expanded="false"` | `.pf-v5-c-table.pf-m-tree-view tr` | For an expandable item, indicates the parent node is closed, i.e., the descendant elements are not visible. |
+| `aria-expanded="true"` | `.pf-v5-c-table.pf-m-tree-view tr.pf-m-expanded` | Indicates the parent node is open, i.e., the descendant elements are visible. |
+| `aria-level="number"` | `.pf-v5-c-table.pf-m-tree-view tr` | Defines the level of the row in the hierarchical treegrid structure. Counting is one-based. Root rows have aria-level=“1”. |
+| `aria-setsize="number"` | `.pf-v5-c-table.pf-m-tree-view tr` | Defines the number of rows in the set of rows that are in the same branch and at the same level within the hierarchy. |
+| `aria-posinset="number"` | `.pf-v5-c-table.pf-m-tree-view tr` | Defines the position of the row within the set of other rows that are in the same branch and at the same level within the hierarchy. Counting is one-based, not zero-based. |
 
 ### Tree table usage
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__tree-view-main` | `<div>` | Initiates a tree view table main container. **Required with tree view** |
-| `.pf-c-table__tree-view-text` | `<div>` | Initiates a tree view table text element. **Required with tree view** |
-| `.pf-c-table__tree-view-icon` | `<span>` | Initiates a tree view icon wrapper. **Required with tree view** |
-| `.pf-c-table__tree-view-title-header-cell` | `<th>` | Initiates a tree view title header cell. **Required with tree view** |
-| `.pf-c-table__tree-view-details-toggle` | `<span>` | Initiates a tree view details toggle container. |
-| `.pf-c-table__tree-view-details-toggle-icon` | `<span>` | Initiates a tree view details toggle icon. |
+| `.pf-v5-c-table__tree-view-main` | `<div>` | Initiates a tree view table main container. **Required with tree view** |
+| `.pf-v5-c-table__tree-view-text` | `<div>` | Initiates a tree view table text element. **Required with tree view** |
+| `.pf-v5-c-table__tree-view-icon` | `<span>` | Initiates a tree view icon wrapper. **Required with tree view** |
+| `.pf-v5-c-table__tree-view-title-header-cell` | `<th>` | Initiates a tree view title header cell. **Required with tree view** |
+| `.pf-v5-c-table__tree-view-details-toggle` | `<span>` | Initiates a tree view details toggle container. |
+| `.pf-v5-c-table__tree-view-details-toggle-icon` | `<span>` | Initiates a tree view details toggle icon. |
 | `.pf-m-treeview-details-expanded` | `<tr>` | Modifies a tbody with a row and an expandable row. |
-| `.pf-m-no-inset` | `.pf-c-table.pf-m-tree-view` , `.pf-c-table.pf-m-tree-view <tr>` | Modifies a tree view `.pf-c-table__tree-view-main` indentation. |
+| `.pf-m-no-inset` | `.pf-v5-c-table.pf-m-tree-view` , `.pf-v5-c-table.pf-m-tree-view <tr>` | Modifies a tree view `.pf-v5-c-table__tree-view-main` indentation. |
 
 ## Borderless variant
 
@@ -2581,8 +2581,8 @@ Note: To apply padding to `.pf-c-table__expandable-row`, wrap the content in `.p
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-no-border-rows` | `.pf-c-table.pf-m-compact` | Modifies to remove borders between rows. **Note: Does not affect `.pf-c-table__control-row`.** |
-| `.pf-m-expandable` | `.pf-c-table.pf-m-compact` | Indicates that the table has expandable rows. |
+| `.pf-m-no-border-rows` | `.pf-v5-c-table.pf-m-compact` | Modifies to remove borders between rows. **Note: Does not affect `.pf-v5-c-table__control-row`.** |
+| `.pf-m-expandable` | `.pf-v5-c-table.pf-m-compact` | Indicates that the table has expandable rows. |
 
 ## Width modifiers
 
@@ -2796,12 +2796,12 @@ Width modifiers control the width of the columns. To control the responsive beha
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-c-table tr > *` | Hides a table cell at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes), or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
-| `.pf-m-visible{-on-[breakpoint]}` | `.pf-c-table tr > *` | Shows a table cell at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v5-c-table tr > *` | Hides a table cell at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes), or hides it at all breakpoints with `.pf-m-hidden`. **Note: Needs to apply to all cells in the column you want to hide.** |
+| `.pf-m-visible{-on-[breakpoint]}` | `.pf-v5-c-table tr > *` | Shows a table cell at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 
 ## Text control modifiers
 
-To better control table cell behavior, PatternFly provides a series of modifiers to help contextually control layout. By default, `thead` cells are set to truncate, whereas `tbody` cells are set to wrap. Both `th` and `td` cells use a set of shared css properties mapped to customizable css variable values. Because only the shared css variables are changed by the modifier selector and not the properties, the modifier can be applied to any parent element up until `.pf-c-table` itself [`thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text`].
+To better control table cell behavior, PatternFly provides a series of modifiers to help contextually control layout. By default, `thead` cells are set to truncate, whereas `tbody` cells are set to wrap. Both `th` and `td` cells use a set of shared css properties mapped to customizable css variable values. Because only the shared css variables are changed by the modifier selector and not the properties, the modifier can be applied to any parent element up until `.pf-v5-c-table` itself [`thead`, `tbody`, `tr`, `th`, `td`, `.pf-v5-c-table__text`].
 
 ### Text control example
 ```hbs
@@ -2846,13 +2846,13 @@ To better control table cell behavior, PatternFly provides a series of modifiers
 {{/table}}
 ```
 
-By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-c-table__text` wrapper on table cell content. In addition to `.pf-c-table__text`, all PatternFly layouts can be used in table cells and contain table text elements.
+By default, truncation and wrapping settings do not affect the grid layout, but text will fallback gracefully by passively wrapping long strings. Truncation and wrapping settings will persist with the addition of a `.pf-v5-c-table__text` wrapper on table cell content. In addition to `.pf-v5-c-table__text`, all PatternFly layouts can be used in table cells and contain table text elements.
 
 ### Text control using the table text element example
 ```hbs
 {{#> table table--grid="true" table--modifier="pf-m-grid-md" table--id="table-text-element-example" table--attribute='aria-label="This is a simple table example"'}}
   {{#> table-caption}}
-    This table contains <code>.pf-c-table__text</code>&nbsp; examples. The <code>.pf-c-table__text</code>&nbsp; element can be using alone or in a nested configuration.
+    This table contains <code>.pf-v5-c-table__text</code>&nbsp; examples. The <code>.pf-v5-c-table__text</code>&nbsp; element can be using alone or in a nested configuration.
   {{/table-caption}}
   {{#> table-thead}}
     {{#> table-tr}}
@@ -2874,26 +2874,26 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
       {{/table-th}}
       {{#> table-td table-td--modifier="pf-m-truncate" table-td--data-label="Truncating text"}}
         {{#> table-text}}
-          This table cell contains a single <code>`.pf-c-table__text`</code>&nbsp; wrapper with the parent table cell applying <code>`.pf-m-truncate`</code>. The child <code>`.pf-c-table__text`</code>&nbsp; element will inherit the modifier settings and apply to the grid layout.
+          This table cell contains a single <code>`.pf-v5-c-table__text`</code>&nbsp; wrapper with the parent table cell applying <code>`.pf-m-truncate`</code>. The child <code>`.pf-v5-c-table__text`</code>&nbsp; element will inherit the modifier settings and apply to the grid layout.
         {{/table-text}}
       {{/table-td}}
     {{/table-tr}}
     {{#> table-tr}}
       {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
         {{#> table-text table-text--type="div"}}
-          <b><code>.pf-l-stack</code></b>
+          <b><code>.pf-v5-l-stack</code></b>
         {{/table-text}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Truncating text"}}
         {{#> stack stack--modifier="pf-m-gutter"}}
           {{#> stack-item}}
             {{#> table-text table-text--modifier="" table-text--type="div"}}
-              Because <code>.pf-m-grid</code>&nbsp; applies a grid layout to <code>.pf-c-table</code>, child elements will stack in the grid layout. To prevent this, wrap multiple elements with a div or use a PatternFly layout.
+              Because <code>.pf-m-grid</code>&nbsp; applies a grid layout to <code>.pf-v5-c-table</code>, child elements will stack in the grid layout. To prevent this, wrap multiple elements with a div or use a PatternFly layout.
             {{/table-text}}
           {{/stack-item}}
           {{#> stack-item}}
             {{#> table-text table-text--modifier="" table-text--type="p"}}
-              The <b><code>.pf-c-table__text</code>&nbsp;element</b>&nbsp; can additionally be nested, like in this example. The next <code>.pf-c-table__text</code> element has a very long url whose width needs be constrained.
+              The <b><code>.pf-v5-c-table__text</code>&nbsp;element</b>&nbsp; can additionally be nested, like in this example. The next <code>.pf-v5-c-table__text</code> element has a very long url whose width needs be constrained.
             {{/table-text}}
           {{/stack-item}}
           {{#> stack-item}}
@@ -2903,7 +2903,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
           {{/stack-item}}
           {{#> stack-item}}
             {{#> table-text table-text--modifier="" table-text--type="p"}}
-              This <b><code>.pf-c-table__text</code>&nbsp;element</b>&nbsp; applies its own built in grid layout <b><code>.pf-m-stack</code></b>&nbsp;as well as a gutter <b><code>.pf-m-gutter</code></b>.
+              This <b><code>.pf-v5-c-table__text</code>&nbsp;element</b>&nbsp; applies its own built in grid layout <b><code>.pf-m-stack</code></b>&nbsp;as well as a gutter <b><code>.pf-m-gutter</code></b>.
             {{/table-text}}
           {{/stack-item}}
         {{/stack}}
@@ -2912,7 +2912,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{#> table-tr}}
       {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
         {{#> table-text table-text--type="div"}}
-          <b><code>.pf-l-flex</code></b>
+          <b><code>.pf-v5-l-flex</code></b>
         {{/table-text}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Truncating text"}}
@@ -2933,7 +2933,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{#> table-tr}}
       {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
         {{#> table-text table-text--type="div"}}
-          <b><code>.pf-l-flex</code></b>
+          <b><code>.pf-v5-l-flex</code></b>
         {{/table-text}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Truncating text"}}
@@ -2958,7 +2958,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
           {{/l-flex}}
           {{#> l-flex-item}}
             {{#> table-text newcontext table-text--type="p"}}
-              This is paragraph that we want to wrap. It doesn't need a modifier and has no extra long strings. Any modifier available for the flex layout can be used here.
+              This is paragraph that we want to wrap. It doesn' t need a modifier and has no extra long strings. Any modifier available for the flex layout can be used here.
             {{/table-text}}
           {{/l-flex-item}}
           {{#> l-flex-item}}
@@ -2972,7 +2972,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
     {{#> table-tr}}
       {{#> table-th table-th--data-label="Element" table-th--modifier="pf-m-fit-content" table-th--isRowHeader="true" table-th--attribute='scope="row"'}}
         {{#> table-text table-text--type="div"}}
-          <b><code>.pf-l-grid</code></b>
+          <b><code>.pf-v5-l-grid</code></b>
         {{/table-text}}
       {{/table-th}}
       {{#> table-td table-td--data-label="Truncating text"}}
@@ -2991,7 +2991,7 @@ By default, truncation and wrapping settings do not affect the grid layout, but 
           {{/grid-item}}
           {{#> grid-item}}
             {{#> table-text table-text--modifier="" table-text--type="p"}}
-              This is paragraph that we want to wrap. It doesn't need a modifier and has no extra long strings. Any modifier available for the flex layout can be used here.
+              This is paragraph that we want to wrap. It doesn' t need a modifier and has no extra long strings. Any modifier available for the flex layout can be used here.
             {{/table-text}}
           {{/grid-item}}
           {{#> grid-item}}
@@ -3145,12 +3145,12 @@ Add a [width modifier](#width-modifiers) to `thead th` to limit string length or
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__text` | `th > *`, `td > *` | Initiates a table text element. |
-| `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Sets table cell content to wrap. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>tbody</code> cells. |
-| `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Sets text to truncate based on a minimum width and available space adjacent table cells.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>thead</code> cells. |
-| `.pf-m-nowrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Unsets min/max width and sets whitespace to nowrap.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is specifically beneficial for cell's whose <code>thead th</code> cells are blank. The following example highlights link text that should display inline. Be careful with this modifier, it will prioritize its cell's content above all other cell's contents. |
-| `.pf-m-fit-content` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Fit column width to cell content.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
-| `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-c-table__text` | Breaks long strings to break wherever necessary as defined by the table layout. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
+| `.pf-v5-c-table__text` | `th > *`, `td > *` | Initiates a table text element. |
+| `.pf-m-wrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-v5-c-table__text` | Sets table cell content to wrap. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>tbody</code> cells. |
+| `.pf-m-truncate` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-v5-c-table__text` | Sets text to truncate based on a minimum width and available space adjacent table cells.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is the default behavior for <code>thead</code> cells. |
+| `.pf-m-nowrap` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-v5-c-table__text` | Unsets min/max width and sets whitespace to nowrap.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. This is specifically beneficial for cell's whose <code>thead th</code> cells are blank. The following example highlights link text that should display inline. Be careful with this modifier, it will prioritize its cell's content above all other cell's contents. |
+| `.pf-m-fit-content` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-v5-c-table__text` | Fit column width to cell content.  If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
+| `.pf-m-break-word` | `thead`, `tbody`, `tr`, `th`, `td`, `.pf-v5-c-table__text` | Breaks long strings to break wherever necessary as defined by the table layout. If applied to `thead`, `tbody` or `tr`, then all child cells will be affected. |
 
 ## Sticky table modifiers
 
@@ -3164,7 +3164,7 @@ There are a few ways this can be handled:
 
 ### Sticky header
 ```hbs
-<div class="pf-c-scroll-inner-wrapper">
+<div class="pf-v5-c-scroll-inner-wrapper">
   {{#> table table--id="table-sticky-header" table--grid="true" table--modifier="pf-m-grid-md pf-m-sticky-header" table--attribute='aria-label="This is a table with sticky header cells"'}}
     {{#> table-thead}}
       {{#> table-tr}}
@@ -3265,7 +3265,7 @@ There are a few ways this can be handled:
 
 ### Sticky column
 ```hbs
-<div class="pf-c-scroll-inner-wrapper">
+<div class="pf-v5-c-scroll-inner-wrapper">
   {{> table--scrollable
       table--scrollable--id="sticky-column-example"
       table--scrollable--Column1IsStickyColumn=true
@@ -3276,7 +3276,7 @@ There are a few ways this can be handled:
 
 ### Multiple sticky columns
 ```hbs
-<div class="pf-c-scroll-inner-wrapper">
+<div class="pf-v5-c-scroll-inner-wrapper">
   {{> table--scrollable
       table--scrollable--id="sticky-multi-column-example"
       table--scrollable--Column1IsStickyColumn=true
@@ -3288,8 +3288,8 @@ There are a few ways this can be handled:
 
 ### Sticky columns and header
 ```hbs
-<div class="pf-c-scroll-outer-wrapper">
-  <div class="pf-c-scroll-inner-wrapper">
+<div class="pf-v5-c-scroll-outer-wrapper">
+  <div class="pf-v5-c-scroll-inner-wrapper">
     {{> table--scrollable table--scrollable--id="sticky-header-columns-example"
         table--scrollable--modifier="pf-m-sticky-header"
         table--scrollable--Column1IsStickyColumn=true
@@ -3303,7 +3303,7 @@ There are a few ways this can be handled:
 ### Sticky right column
 
 ```hbs
-<div class="pf-c-scroll-inner-wrapper">
+<div class="pf-v5-c-scroll-inner-wrapper">
   {{> table--scrollable
       table--scrollable--id="sticky-right-column-example"
       table--scrollable--ColumnLastIsStickyColumn=true
@@ -3313,22 +3313,22 @@ There are a few ways this can be handled:
 
 ### Sticky table usage
 
-For sticky columns to function correctly, the parent table's width must be controlled with `.pf-c-scroll-inner-wrapper`. For sticky columns and sticky headers to function correctly, the parent table needs an inner and outer wrapper (`.pf-c-scroll-outer-wrapper` and `.pf-c-scroll-inner-wrapper`)
+For sticky columns to function correctly, the parent table's width must be controlled with `.pf-v5-c-scroll-inner-wrapper`. For sticky columns and sticky headers to function correctly, the parent table needs an inner and outer wrapper (`.pf-v5-c-scroll-outer-wrapper` and `.pf-v5-c-scroll-inner-wrapper`)
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-sticky-header` | `.pf-c-table` | Makes the table cells in `<thead>` sticky to the top of the table on scroll. |
-| `.pf-c-scroll-outer-wrapper` | `<div>` | Initiates a table container sticky columns outer wrapper. |
-| `.pf-c-scroll-inner-wrapper` | `<div>` | Initiates a table container sticky columns inner wrapper. |
-| `.pf-c-table__sticky-cell` | `<th>`, `<td>` | Initiates a sticky table cell. |
-| `.pf-m-right` | `.pf-c-table__sticky-cell` | Initiates a sticky, right-hand table cell. |
-| `.pf-m-left` | `.pf-c-table__sticky-cell` | Initiates a sticky, left-hand table cell. |
+| `.pf-m-sticky-header` | `.pf-v5-c-table` | Makes the table cells in `<thead>` sticky to the top of the table on scroll. |
+| `.pf-v5-c-scroll-outer-wrapper` | `<div>` | Initiates a table container sticky columns outer wrapper. |
+| `.pf-v5-c-scroll-inner-wrapper` | `<div>` | Initiates a table container sticky columns inner wrapper. |
+| `.pf-v5-c-table__sticky-cell` | `<th>`, `<td>` | Initiates a sticky table cell. |
+| `.pf-m-right` | `.pf-v5-c-table__sticky-cell` | Initiates a sticky, right-hand table cell. |
+| `.pf-m-left` | `.pf-v5-c-table__sticky-cell` | Initiates a sticky, left-hand table cell. |
 
 
 ## Nested column headers
 ### Nested column headers and expandable rows
 ```hbs
-<div class="pf-c-scroll-inner-wrapper">
+<div class="pf-v5-c-scroll-inner-wrapper">
   {{#> table table--id="nested-columns-expandable-example" table--expandable="true" table--grid="true" table--attribute='aria-label="This is a nested column header table example"' table--HasToggles="true" table--HasChecks="true" table--HasActions="true"}}
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
@@ -3347,13 +3347,13 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{/table-tr}}
 
       {{#> table-tr table-tr--modifier="pf-m-first-cell-offset-reset"}}
-        {{#> table-th table-th--attribute='scope="col"'table-th--modifier="pf-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v5-c-table__subhead"}}
           Design lead
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v5-c-table__subhead"}}
           Interaction design
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-c-table__subhead pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--modifier="pf-v5-c-table__subhead pf-m-border-right"}}
           Visual designers
         {{/table-th}}
       {{/table-tr}}
@@ -3440,7 +3440,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 
 ### Nested column headers example
 ```hbs
-<div class="pf-c-scroll-inner-wrapper">
+<div class="pf-v5-c-scroll-inner-wrapper">
   {{#> table table--id="table-nested-column-headers-example" table--grid="true" table--attribute='aria-label="This is a nested column header table example"'}}
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
@@ -3465,19 +3465,19 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{/table-tr}}
 
       {{#> table-tr}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v5-c-table__subhead"}}
           Source
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v5-c-table__subhead"}}
           Destination
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v5-c-table__subhead pf-m-fit-content pf-m-border-right"}}
           Date & Time
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v5-c-table__subhead pf-m-fit-content"}}
           Source
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v5-c-table__subhead pf-m-fit-content pf-m-border-right"}}
           Destination
         {{/table-th}}
       {{/table-tr}}
@@ -3501,7 +3501,7 @@ For sticky columns to function correctly, the parent table's width must be contr
 
 ### Nested column headers, sticky header
 ```hbs
-<div class="pf-c-scroll-inner-wrapper">
+<div class="pf-v5-c-scroll-inner-wrapper">
   {{#> table table--id="table-nested-column-headers-sticky-header-example" table--modifier="pf-m-grid-md pf-m-sticky-header" table--grid="true" table--attribute='aria-label="This is a sticky nested column header table example"'}}
     {{#> table-thead table-thead--modifier="pf-m-nested-column-header"}}
       {{#> table-tr}}
@@ -3526,19 +3526,19 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{/table-tr}}
 
       {{#> table-tr}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v5-c-table__subhead"}}
           Source
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v5-c-table__subhead"}}
           Destination
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v5-c-table__subhead pf-m-fit-content pf-m-border-right"}}
           Date & Time
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v5-c-table__subhead pf-m-fit-content"}}
           Source
         {{/table-th}}
-        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-c-table__subhead pf-m-fit-content pf-m-border-right"}}
+        {{#> table-th table-th--attribute='scope="col"' table-th--sortable="true" table-th--modifier="pf-v5-c-table__subhead pf-m-fit-content pf-m-border-right"}}
           Destination
         {{/table-th}}
       {{/table-tr}}
@@ -3828,17 +3828,17 @@ For sticky columns to function correctly, the parent table's width must be contr
 ### Favorites accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="grid"` | `.pf-c-table` | Identifies the element that serves as the grid widget container. **Required** |
-| `aria-label` | `.pf-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
+| `role="grid"` | `.pf-v5-c-table` | Identifies the element that serves as the grid widget container. **Required** |
+| `aria-label` | `.pf-v5-c-table` | Provides an accessible name for the table when a descriptive `<caption>` or `<h*>` is not available. **Required in the absence of `<caption>` or `<h*>`** |
 | `data-label="[td description]"` | `<td>` | This attribute replaces table header in mobile viewport. It is rendered by `::before` pseudo element. |
 
 
 ### Favorites usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__favorite` | `td` | Initiates a favorite table body cell. |
-| `.pf-m-favorited` | `.pf-c-table__favorite` | Modifies a favorite cell for the favorited state. |
-| `.pf-m-favorite` | `.pf-c-table__sort` | Modifies a sortable table header cell for use with a favorites column. |
+| `.pf-v5-c-table__favorite` | `td` | Initiates a favorite table body cell. |
+| `.pf-m-favorited` | `.pf-v5-c-table__favorite` | Modifies a favorite cell for the favorited state. |
+| `.pf-m-favorite` | `.pf-v5-c-table__sort` | Modifies a sortable table header cell for use with a favorites column. |
 
 ## Draggable rows
 
@@ -3951,7 +3951,7 @@ For sticky columns to function correctly, the parent table's width must be contr
       {{/table-tr}}
     {{/table-tbody}}
   {{/table}}
-  <div class="pf-screen-reader" aria-live="assertive">
+  <div class="{{pfv 'unset-prefix'}}screen-reader" aria-live="assertive">
     This is the aria-live section that provides real-time feedback to the user.
   </div>
 {{/wrapper}}
@@ -3960,21 +3960,21 @@ For sticky columns to function correctly, the parent table's width must be contr
 ### Draggable rows accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-pressed="true or false"` | `.pf-c-table__draggable .pf-c-button` | Indicates whether the button is currently pressed or not.  |
+| `aria-pressed="true or false"` | `.pf-v5-c-table__draggable .pf-v5-c-button` | Indicates whether the button is currently pressed or not.  |
 | `aria-live` | `[element with live text]` | To give screen reader users live feedback about what's happening during interaction with the table, both during drag and drop interactions and keyboard interactions. **Highly Recommended** |
-| `aria-describedby="[id value of applicable content]"` | `.pf-c-table__draggable .pf-c-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. The example here uses a `<div id="table-draggable-rows-help"></div>`. **Highly recommended** |
-| `aria-labelledby="[id of .pf-c-table__draggable .pf-c-button] [id of row title text]"` | `.pf-c-table__draggable .pf-c-button` | Provides an accessible name for the draggable button. |
-| `id="[]"` | `.pf-c-table__draggable .pf-c-button`, `[element with row title text]` | Gives the button and the text element accessible IDs. |
+| `aria-describedby="[id value of applicable content]"` | `.pf-v5-c-table__draggable .pf-v5-c-button` | Gives the draggable button an accessible description by referring to the textual content that describes how to use the button to drag elements. The example here uses a `<div id="table-draggable-rows-help"></div>`. **Highly recommended** |
+| `aria-labelledby="[id of .pf-v5-c-table__draggable .pf-v5-c-button] [id of row title text]"` | `.pf-v5-c-table__draggable .pf-v5-c-button` | Provides an accessible name for the draggable button. |
+| `id="[]"` | `.pf-v5-c-table__draggable .pf-v5-c-button`, `[element with row title text]` | Gives the button and the text element accessible IDs. |
 
 ### Draggable rows usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-table__draggable` | `<td>` | Initiates a draggable table cell. |
-| `.pf-m-drag-over` | `.pf-c-table` | Modifies the table to indicate that a draggable item is being dragged over the table. |
+| `.pf-v5-c-table__draggable` | `<td>` | Initiates a draggable table cell. |
+| `.pf-m-drag-over` | `.pf-v5-c-table` | Modifies the table to indicate that a draggable item is being dragged over the table. |
 
 ## Striped
 
-Basic striped table rows are supported on tables with a single `<tbody>` element and expandable tables by applying `.pf-m-striped` to the `.pf-c-table` element, which applies striped styling to odd table rows. For more complex tables, `.pf-m-striped` can be applied directly to the `<tbody>` and `<tr>` elements. The class `.pf-m-striped-even` can be applied to `<tbody>` elements to apply striped styling to the even rows in the table body. This is for use in tables with multiple `<tbody>` elements where even row striping may be needed to ensure visual consistency.
+Basic striped table rows are supported on tables with a single `<tbody>` element and expandable tables by applying `.pf-m-striped` to the `.pf-v5-c-table` element, which applies striped styling to odd table rows. For more complex tables, `.pf-m-striped` can be applied directly to the `<tbody>` and `<tr>` elements. The class `.pf-m-striped-even` can be applied to `<tbody>` elements to apply striped styling to the even rows in the table body. This is for use in tables with multiple `<tbody>` elements where even row striping may be needed to ensure visual consistency.
 
 ### Striped table example
 ```hbs
@@ -4488,14 +4488,14 @@ Basic striped table rows are supported on tables with a single `<tbody>` element
 
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-striped` | `.pf-c-table`, `tbody`, `tr` | Modifies odd table rows to be striped. |
+| `.pf-m-striped` | `.pf-v5-c-table`, `tbody`, `tr` | Modifies odd table rows to be striped. |
 | `.pf-m-striped-even` | `tbody` | Modifies even table rows to be striped. For use in tables with multiple `tbody` elements where adjacent `tbody` elements need even row striping to maintain visual consistency. |
 
 ## Documentation
 
 ### Overview
 
-Because the table component is not used for layout and presents tabular data only, it requires the use of `role="grid"`. Expandable table content (`.pf-c-table__expandable-content`) is placed within a singular `<td>` per expandable row, that can span multiple columns.
+Because the table component is not used for layout and presents tabular data only, it requires the use of `role="grid"`. Expandable table content (`.pf-v5-c-table__expandable-content`) is placed within a singular `<td>` per expandable row, that can span multiple columns.
 
 ### Role="grid"
 
@@ -4516,4 +4516,3 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 - One action button, positioned in the last cell of a non-expandable row.
 - Tabular data.
 - Compact presentation modifier (not compatible with expandable table).
-

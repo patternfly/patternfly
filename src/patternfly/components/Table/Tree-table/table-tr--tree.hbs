@@ -1,5 +1,5 @@
 {{#> table-tr table-tr--attribute='role="row"' table-tr--tree--HasActions=table-tr--HasActions}}
-  {{#> table-th table-th--modifier="pf-c-table__tree-view-title-cell"}}
+  {{#> table-th table-th--modifier="pf-v5-c-table__tree-view-title-cell"}}
     {{#> table-tree-view-main}}
       {{#unless (concat table-tr--tree--IsLeaf table-tr--HasNoPosinset table--HasNoPosinset)}}
         {{> table-td table-td--type="span" table-td--toggle="true" table-td--button--attribute=(concat 'aria-labelledby="' table--id '-node-' table-tr--tree--index ' ' table--id '-expandable-toggle-' table-tr--tree--index '" id="' table--id '-expandable-toggle-' table-tr--tree--index '" aria-label="Details"')}}

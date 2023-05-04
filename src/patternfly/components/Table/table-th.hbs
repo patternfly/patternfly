@@ -1,13 +1,13 @@
 <th class="{{#if table-th--modifier}} {{table-th--modifier}}{{/if}}
-  {{#if table-th--compound-expansion-toggle}} pf-c-table__compound-expansion-toggle{{/if}}
-  {{#if table-th--sortable}} pf-c-table__sort{{/if}}
-  {{#if table-th--IsSortable}} pf-c-table__sort{{/if}}
-  {{#if table-th--IsStickyLeft}} pf-c-table__sticky-cell pf-m-left{{/if}}
-  {{#if table-th--IsStickyRight}} pf-c-table__sticky-cell pf-m-right{{/if}}
-  {{#if table-th--toggle}} pf-c-table__toggle{{/if}}
-  {{#if table-th--check}} pf-c-table__check{{/if}}
-  {{#if table-th--action}} pf-c-table__action{{/if}}
-  {{#if table-th--icon}} pf-c-table__icon{{/if}}
+  {{#if table-th--compound-expansion-toggle}} {{pfv}}table__compound-expansion-toggle{{/if}}
+  {{#if table-th--sortable}} {{pfv}}table__sort{{/if}}
+  {{#if table-th--IsSortable}} {{pfv}}table__sort{{/if}}
+  {{#if table-th--IsStickyLeft}} {{pfv}}table__sticky-cell pf-m-left{{/if}}
+  {{#if table-th--IsStickyRight}} {{pfv}}table__sticky-cell pf-m-right{{/if}}
+  {{#if table-th--toggle}} {{pfv}}table__toggle{{/if}}
+  {{#if table-th--check}} {{pfv}}table__check{{/if}}
+  {{#if table-th--action}} {{pfv}}table__action{{/if}}
+  {{#if table-th--icon}} {{pfv}}table__icon{{/if}}
   {{#if table-th--sortable-wrap}} pf-m-wrap{{/if}}
   {{#if table-th--selected}} pf-m-selected{{/if}}
   {{#if table-th--IsColumnHelp}} pf-m-help{{/if}}
@@ -38,7 +38,7 @@
     {{{table-th--attribute}}}
   {{/if}}>
   {{#if table-th--IsColumnHelp}}
-    <div class="pf-c-table__column-help">
+    <div class="{{pfv}}table__column-help">
   {{/if}}
   {{#if table-th--sortable}}
     {{#> table-button}}

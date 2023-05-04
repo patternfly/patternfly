@@ -15,8 +15,8 @@
   position: relative;
 }
 
-.ws-example-wrapper .pf-c-menu,
-.ws-example-wrapper .pf-c-panel {
+.ws-example-wrapper .pf-v5-c-menu,
+.ws-example-wrapper .pf-v5-c-panel {
   position: absolute;
   top: 40px;
   width: 100%;

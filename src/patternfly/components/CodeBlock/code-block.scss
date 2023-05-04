@@ -1,38 +1,40 @@
-.pf-c-code-block {
-  --pf-c-code-block--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-code-block__header--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-code-block__header--BorderBottomColor: var(--pf-global--BorderColor--100);
-  --pf-c-code-block__content--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-code-block__content--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-code-block__content--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-code-block__content--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-code-block__pre--FontFamily: var(--pf-global--FontFamily--monospace);
-  --pf-c-code-block__pre--FontSize: var(--pf-global--FontSize--sm);
+// @debug $code-block; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-  background-color: var(--pf-c-code-block--BackgroundColor);
+.#{$code-block} {
+  --#{$code-block}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$code-block}__header--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$code-block}__header--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$code-block}__content--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$code-block}__content--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$code-block}__content--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$code-block}__content--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$code-block}__pre--FontFamily: var(--#{$pf-global}--FontFamily--monospace);
+  --#{$code-block}__pre--FontSize: var(--#{$pf-global}--FontSize--sm);
+
+  background-color: var(--#{$code-block}--BackgroundColor);
 }
 
-.pf-c-code-block__header {
+.#{$code-block}__header {
   display: flex;
-  border-bottom: var(--pf-c-code-block__header--BorderBottomWidth) solid var(--pf-c-code-block__header--BorderBottomColor);
+  border-bottom: var(--#{$code-block}__header--BorderBottomWidth) solid var(--#{$code-block}__header--BorderBottomColor);
 }
 
-.pf-c-code-block__actions {
+.#{$code-block}__actions {
   display: flex;
   margin-left: auto;
 }
 
-.pf-c-code-block__content {
-  padding: var(--pf-c-code-block__content--PaddingTop) var(--pf-c-code-block__content--PaddingRight) var(--pf-c-code-block__content--PaddingBottom) var(--pf-c-code-block__content--PaddingLeft);
+.#{$code-block}__content {
+  padding: var(--#{$code-block}__content--PaddingTop) var(--#{$code-block}__content--PaddingRight) var(--#{$code-block}__content--PaddingBottom) var(--#{$code-block}__content--PaddingLeft);
 }
 
-.pf-c-code-block__pre {
-  font-family: var(--pf-c-code-block__pre--FontFamily);
-  font-size: var(--pf-c-code-block__pre--FontSize);
+.#{$code-block}__pre {
+  font-family: var(--#{$code-block}__pre--FontFamily);
+  font-size: var(--#{$code-block}__pre--FontSize);
   overflow-wrap: break-word;
   white-space: pre-wrap;
 }
 
-.pf-c-code-block__code {
-  font-family: var(--pf-c-code-block__code--FontFamily, inherit);
+.#{$code-block}__code {
+  font-family: var(--#{$code-block}__code--FontFamily, inherit);
 }

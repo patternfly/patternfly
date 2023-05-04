@@ -1,7 +1,7 @@
 ---
 id: 'Label group'
 section: components
-cssPrefix: pf-c-label-group
+cssPrefix: pf-v5-c-label-group
 ---
 
 ## Examples
@@ -266,7 +266,7 @@ cssPrefix: pf-c-label-group
 ```
 
 In addition to the JavaScript management of [editable labels](/components/label#editable), dynamic label groups also need:
-* `.pf-c-label-group.pf-m-editable` onClick event should (excluding labels within) set focus on `.pf-c-label-group__textarea`
+* `.pf-v5-c-label-group.pf-m-editable` onClick event should (excluding labels within) set focus on `.pf-v5-c-label-group__textarea`
 
 ### Editable labels, dynamic label group
 ``` hbs isBeta
@@ -469,24 +469,24 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="list"` | `.pf-c-label-group__list` | Indicates that the label group list is a list element. This role is redundant since `.pf-c-label-group__list` is a `<ul>` but is required for screen readers to announce the list propertly. **Required** |
-| `aria-label="[button label text]"` | `.pf-c-label-group__close > button` |  Provides an accessible name for a label group close button when an icon is used instead of text. Required when an icon is used with no supporting text. **Required** |
-| `aria-labelledby="[id value of .pf-c-label-group__close > button] [id value of .pf-c-label-group__label]"` | `.pf-c-label-group__close > button` | Provides an accessible name for the button. **Required** |
-| `aria-label="[label text]"` | `.pf-c-label-group__textarea` | Provides an accessible name for the textarea. **Required** |
-| `row="1"` | `.pf-c-label-group__textarea` | Indicates that the label group textarea is one row. **Required** |
-| `tabindex="0"` | `.pf-c-label-group__textarea` | Inserts the label group textarea into the tab order of the page so that it is focusable. **Required** |
+| `role="list"` | `.pf-v5-c-label-group__list` | Indicates that the label group list is a list element. This role is redundant since `.pf-v5-c-label-group__list` is a `<ul>` but is required for screen readers to announce the list propertly. **Required** |
+| `aria-label="[button label text]"` | `.pf-v5-c-label-group__close > button` |  Provides an accessible name for a label group close button when an icon is used instead of text. Required when an icon is used with no supporting text. **Required** |
+| `aria-labelledby="[id value of .pf-v5-c-label-group__close > button] [id value of .pf-v5-c-label-group__label]"` | `.pf-v5-c-label-group__close > button` | Provides an accessible name for the button. **Required** |
+| `aria-label="[label text]"` | `.pf-v5-c-label-group__textarea` | Provides an accessible name for the textarea. **Required** |
+| `row="1"` | `.pf-v5-c-label-group__textarea` | Indicates that the label group textarea is one row. **Required** |
+| `tabindex="0"` | `.pf-v5-c-label-group__textarea` | Inserts the label group textarea into the tab order of the page so that it is focusable. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-label-group` | `<div>` | Initiates the label group component. **Required.** |
-| `.pf-c-label-group__list` | `<ul>` | Initiates the container for a list of labels. **Required.** |
-| `.pf-c-label-group__list-item` | `<li>` | Initiates the list item inside of the label group. **Required.** |
-| `.pf-c-label-group__main` | `<div>` | Initiates the main element in the label group. **Required when label and list are present** |
-| `.pf-c-label-group__textarea` | `<textarea>` | Initiates the textarea element in the label group. **Required when label group is editable** |
-| `.pf-c-label-group__label` | `<span>` | Initiates the label to be used in the label group. |
-| `.pf-c-label-group__close` | `<div>` | Initiates the container used for the button to remove the label group. |
-| `.pf-c-button` | `.pf-c-label-group__close <button>` | Initiates the button used to remove the label group. |
-| `.pf-m-editable` | `.pf-c-label-group` | Modifies the label group to support editable styling. |
-| `.pf-m-category` | `.pf-c-label-group` | Modifies the label group to support category styling. |
-| `.pf-m-textarea` | `.pf-c-label-group__list-item` | Modifies the label group list item to support textarea. |
+| `.pf-v5-c-label-group` | `<div>` | Initiates the label group component. **Required.** |
+| `.pf-v5-c-label-group__list` | `<ul>` | Initiates the container for a list of labels. **Required.** |
+| `.pf-v5-c-label-group__list-item` | `<li>` | Initiates the list item inside of the label group. **Required.** |
+| `.pf-v5-c-label-group__main` | `<div>` | Initiates the main element in the label group. **Required when label and list are present** |
+| `.pf-v5-c-label-group__textarea` | `<textarea>` | Initiates the textarea element in the label group. **Required when label group is editable** |
+| `.pf-v5-c-label-group__label` | `<span>` | Initiates the label to be used in the label group. |
+| `.pf-v5-c-label-group__close` | `<div>` | Initiates the container used for the button to remove the label group. |
+| `.pf-v5-c-button` | `.pf-v5-c-label-group__close <button>` | Initiates the button used to remove the label group. |
+| `.pf-m-editable` | `.pf-v5-c-label-group` | Modifies the label group to support editable styling. |
+| `.pf-m-category` | `.pf-v5-c-label-group` | Modifies the label group to support category styling. |
+| `.pf-m-textarea` | `.pf-v5-c-label-group__list-item` | Modifies the label group list item to support textarea. |

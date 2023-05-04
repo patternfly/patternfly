@@ -21,7 +21,7 @@ section: components
       {{#> tabs-template-pod-tab-content}}
         {{#> l-flex l-flex--modifier="pf-m-column"}}
           {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-lg"}}
-            {{> title titleType="h2" title--modifier="pf-m-lg pf-u-mt-sm" title--text="Pod details" title--attribute=(concat 'id="' tabs-template-pod-tab-content--id '-details-title"')}}
+            {{> title titleType="h2" title--modifier="pf-m-lg pf-v5-u-mt-sm" title--text="Pod details" title--attribute=(concat 'id="' tabs-template-pod-tab-content--id '-details-title"')}}
           {{/l-flex-item}}
           {{#> l-flex-item}}
             {{#> description-list description-list--modifier="pf-m-2-col-on-lg" description-list--attribute=(concat 'aria-labelledby="' tabs-template-pod-tab-content--id '-details-title"')}}

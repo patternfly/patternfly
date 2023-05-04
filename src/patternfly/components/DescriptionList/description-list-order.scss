@@ -1,13 +1,13 @@
-$pf-c-description-list-order--breakpoint-map: build-breakpoint-map();
-$pf-c-description-list-order--limit: 12;
+$pf-v5-c-description-list-order--breakpoint-map: build-breakpoint-map();
+$pf-v5-c-description-list-order--limit: 12;
 
 // stylelint-disable max-nesting-depth
-.pf-c-description-list__group {
-  @each $breakpoint, $breakpoint-value in $pf-c-description-list-order--breakpoint-map {
+.#{$description-list}__group {
+  @each $breakpoint, $breakpoint-value in $pf-v5-c-description-list-order--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
-    @include pf-apply-breakpoint($breakpoint) {
-      @for $i from 0 through $pf-c-description-list-order--limit {
+    @include pf-v5-apply-breakpoint($breakpoint) {
+      @for $i from 0 through $pf-v5-c-description-list-order--limit {
         .pf-m-order-#{$i}#{$breakpoint-name} {
           order: #{$i};
         }
@@ -18,7 +18,7 @@ $pf-c-description-list-order--limit: 12;
       }
 
       .pf-m-order-last#{$breakpoint-name} {
-        order: #{$pf-c-description-list-order--limit + 1};
+        order: #{$pf-v5-c-description-list-order--limit + 1};
       }
     }
   }
