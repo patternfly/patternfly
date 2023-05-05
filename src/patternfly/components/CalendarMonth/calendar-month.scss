@@ -1,7 +1,4 @@
-// @debug $calendar-month; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-
 .#{$calendar-month} {
-  --#{$calendar-month}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$calendar-month}--PaddingTop: var(--#{$pf-global}--spacer--lg);
   --#{$calendar-month}--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$calendar-month}--PaddingBottom: var(--#{$pf-global}--spacer--md);
@@ -49,7 +46,7 @@
   --#{$calendar-month}__dates-cell--m-in-range--m-end-range--before--Right: 50%;
   --#{$calendar-month}__dates-cell--m-in-range__date--hover--BackgroundColor: var(--#{$pf-global}--palette--blue-100);
   --#{$calendar-month}__dates-cell--m-in-range__date--focus--BackgroundColor: var(--#{$pf-global}--palette--blue-100);
-  --#{$calendar-month}__dates-cell--m-adjacent-month__date--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$calendar-month}__dates-cell--m-adjacent-month__date--Color: var(--#{$pf-global}--Color--200);
 
   // date button
   --#{$calendar-month}__date--Width: 4ch;
@@ -71,7 +68,6 @@
   flex-direction: column;
   padding: var(--#{$calendar-month}--PaddingTop) var(--#{$calendar-month}--PaddingRight) var(--#{$calendar-month}--PaddingBottom) var(--#{$calendar-month}--PaddingLeft);
   font-size: var(--#{$calendar-month}--FontSize);
-  background-color: var(--#{$calendar-month}--BackgroundColor);
 }
 
 .#{$calendar-month}__header {
