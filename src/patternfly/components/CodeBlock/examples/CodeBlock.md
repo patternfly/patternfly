@@ -1,7 +1,7 @@
 ---
 id: 'Code block'
 section: components
-cssPrefix: pf-c-code-block
+cssPrefix: pf-v5-c-code-block
 ---
 
 ## Examples
@@ -128,10 +128,10 @@ url: https://raw.githubusercontent.com/Azure-Samples/helm-charts/master/docs
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-code-block` | `<div>` | Initiates the code block component. **Required** |
-| `.pf-c-code-block__header` | `<div>` | Initiates the code block header. |
-| `.pf-c-code-block__actions` | `<div>` | Initiates the code block actions. |
-| `.pf-c-code-block__actions-item` | `<div>` | Initiates a code block action item. |
-| `.pf-c-code-block__content` | `<div>` | Initiates the code block content. **Required** |
-| `.pf-c-code-block__pre` | `<pre>` | Initiates the code block `<pre>` element. **Required** |
-| `.pf-c-code-block__code` | `<code>` | Initiates the code block `<code>` element. **Required** |
+| `.pf-v5-c-code-block` | `<div>` | Initiates the code block component. **Required** |
+| `.pf-v5-c-code-block__header` | `<div>` | Initiates the code block header. |
+| `.pf-v5-c-code-block__actions` | `<div>` | Initiates the code block actions. |
+| `.pf-v5-c-code-block__actions-item` | `<div>` | Initiates a code block action item. |
+| `.pf-v5-c-code-block__content` | `<div>` | Initiates the code block content. **Required** |
+| `.pf-v5-c-code-block__pre` | `<pre>` | Initiates the code block `<pre>` element. **Required** |
+| `.pf-v5-c-code-block__code` | `<code>` | Initiates the code block `<code>` element. **Required** |

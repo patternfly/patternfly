@@ -1,7 +1,7 @@
 ---
 id: Tile
 section: components
-cssPrefix: pf-c-tile
+cssPrefix: pf-v5-c-tile
 ---
 
 import './Tile.css'
@@ -410,18 +410,18 @@ import './Tile.css'
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `tabindex="0"` | `.pf-c-tile` | Inserts the tile into the tab order of the page so that it is focusable. **Required** |
-| `tabindex="-1"` | `.pf-c-tile` | Removes the tile from keyboard focus when it is disabled. |
+| `tabindex="0"` | `.pf-v5-c-tile` | Inserts the tile into the tab order of the page so that it is focusable. **Required** |
+| `tabindex="-1"` | `.pf-v5-c-tile` | Removes the tile from keyboard focus when it is disabled. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-tile` | `<div>` | Initiates a tile. **Required**  |
-| `.pf-c-tile__header` | `<div>` | Initiates the tile header. |
-| `.pf-c-tile__title` | `<div>` | Initiates the tile title. |
-| `.pf-c-tile__icon` | `<div>` | Initiates the tile icon or image. |
-| `.pf-c-tile__body` | `<div>` | Initiates the tile body. |
-| `.pf-m-selected` | `.pf-c-tile` | Modifies the tile for the selected state. |
-| `.pf-m-disabled` | `.pf-c-tile` | Modifies the tile for the disabled state. |
-| `.pf-m-stacked` | `.pf-c-tile__header` | Modifies the tile header to be stacked vertically. |
-| `.pf-m-display-lg` | `.pf-c-tile` | Modifies the tile to have large display styling. |
+| `.pf-v5-c-tile` | `<div>` | Initiates a tile. **Required**  |
+| `.pf-v5-c-tile__header` | `<div>` | Initiates the tile header. |
+| `.pf-v5-c-tile__title` | `<div>` | Initiates the tile title. |
+| `.pf-v5-c-tile__icon` | `<div>` | Initiates the tile icon or image. |
+| `.pf-v5-c-tile__body` | `<div>` | Initiates the tile body. |
+| `.pf-m-selected` | `.pf-v5-c-tile` | Modifies the tile for the selected state. |
+| `.pf-m-disabled` | `.pf-v5-c-tile` | Modifies the tile for the disabled state. |
+| `.pf-m-stacked` | `.pf-v5-c-tile__header` | Modifies the tile header to be stacked vertically. |
+| `.pf-m-display-lg` | `.pf-v5-c-tile` | Modifies the tile to have large display styling. |

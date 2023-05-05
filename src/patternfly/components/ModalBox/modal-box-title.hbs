@@ -1,4 +1,4 @@
-<{{#if modal-box-title--type}}{{modal-box-title--type}}{{else}}h1{{/if}} class="pf-c-modal-box__title{{#if modal-box-title--IsIcon}} pf-m-icon{{/if}}{{#if modal-box-title--modifier}} {{modal-box-title--modifier}}{{/if}}"
+<{{#if modal-box-title--type}}{{modal-box-title--type}}{{else}}h1{{/if}} class="{{pfv}}modal-box__title{{#if modal-box-title--IsIcon}} pf-m-icon{{/if}}{{#if modal-box-title--modifier}} {{modal-box-title--modifier}}{{/if}}"
   {{#if modal-box-title--attribute}}
     {{{modal-box-title--attribute}}}
   {{/if}}>
@@ -6,7 +6,7 @@
     {{> modal-box-title-icon}}
   {{/if}}
   {{#if modal-box--IsAlert}}
-    <span class="pf-u-screen-reader">
+    <span class="{{pfv 'u'}}screen-reader">
       {{#if modal-box--IsCustomAlert}}
         Default
       {{else if modal-box--IsInfoAlert}}

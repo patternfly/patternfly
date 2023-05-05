@@ -2,7 +2,7 @@
 id: Dropdown
 section: components
 subsection: menus
-cssPrefix: pf-c-dropdown
+cssPrefix: pf-v5-c-dropdown
 ---
 
 import './Dropdown.css'
@@ -181,54 +181,54 @@ The dropdown menu can contain either links or buttons, depending on the expected
 
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
-| `aria-expanded="false"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` |  Indicates that the menu is hidden. |
-| `aria-expanded="true"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` |  Indicates that the menu is visible. |
-| `aria-label="Actions"` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-check`, `.pf-c-dropdown__toggle-button` | Provides an accessible name for the dropdown when an icon is used instead of text. **Required when icon is used with no supporting text**. |
-| `aria-hidden="true"` | `.pf-c-dropdown__toggle-icon`, `<i>`, `.pf-c-dropdown__toggle-check .pf-c-dropdown__toggle-text` | Hides the icon from assistive technologies. |
-| `hidden` | `.pf-c-dropdown__menu` | Indicates that the menu is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
-| `aria-labelledby="{toggle button id}"` | `.pf-c-dropdown__menu` | Gives the menu an accessible name by referring to the element that toggles the menu. |
-| `aria-labelledby="{checkbox id} {toggle text id}"` | `.pf-m-split-button .pf-c-dropdown__toggle-check > input[type="checkbox"]` | Gives the checkbox an accessible name by referring to the element by which it is described. |
-| `disabled` | `.pf-c-dropdown__toggle`, `.pf-c-dropdown__toggle-button`, `.pf-c-dropdown__toggle-check > input[type="checkbox"]` | Disables the dropdown toggle and removes it from keyboard focus. |
-| `disabled` | `button.pf-c-dropdown__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
-| `aria-disabled="true"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, indicates that it is unavailable. |
-| `tabindex="-1"` | `a.pf-c-dropdown__menu-item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `aria-expanded="false"` | `.pf-v5-c-dropdown__toggle`, `.pf-v5-c-dropdown__toggle-check`, `.pf-v5-c-dropdown__toggle-button` |  Indicates that the menu is hidden. |
+| `aria-expanded="true"` | `.pf-v5-c-dropdown__toggle`, `.pf-v5-c-dropdown__toggle-check`, `.pf-v5-c-dropdown__toggle-button` |  Indicates that the menu is visible. |
+| `aria-label="Actions"` | `.pf-v5-c-dropdown__toggle`, `.pf-v5-c-dropdown__toggle-check`, `.pf-v5-c-dropdown__toggle-button` | Provides an accessible name for the dropdown when an icon is used instead of text. **Required when icon is used with no supporting text**. |
+| `aria-hidden="true"` | `.pf-v5-c-dropdown__toggle-icon`, `<i>`, `.pf-v5-c-dropdown__toggle-check .pf-v5-c-dropdown__toggle-text` | Hides the icon from assistive technologies. |
+| `hidden` | `.pf-v5-c-dropdown__menu` | Indicates that the menu is hidden so that it isn't visible in the UI and isn't accessed by assistive technologies. |
+| `aria-labelledby="{toggle button id}"` | `.pf-v5-c-dropdown__menu` | Gives the menu an accessible name by referring to the element that toggles the menu. |
+| `aria-labelledby="{checkbox id} {toggle text id}"` | `.pf-m-split-button .pf-v5-c-dropdown__toggle-check > input[type="checkbox"]` | Gives the checkbox an accessible name by referring to the element by which it is described. |
+| `disabled` | `.pf-v5-c-dropdown__toggle`, `.pf-v5-c-dropdown__toggle-button`, `.pf-v5-c-dropdown__toggle-check > input[type="checkbox"]` | Disables the dropdown toggle and removes it from keyboard focus. |
+| `disabled` | `button.pf-v5-c-dropdown__menu-item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
+| `aria-disabled="true"` | `a.pf-v5-c-dropdown__menu-item` | When the menu item uses a link element, indicates that it is unavailable. |
+| `tabindex="-1"` | `a.pf-v5-c-dropdown__menu-item` | When the menu item uses a link element, removes it from keyboard focus. |
 
 ### Usage
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-dropdown` | `<div>` | Defines the parent wrapper of the dropdown. |
-| `.pf-c-dropdown__toggle` | `<button>` | Defines the dropdown toggle. |
-| `.pf-c-dropdown__toggle-icon` | `<span>` | Defines the dropdown toggle icon. |
-| `.pf-c-dropdown__toggle-text` | `<span>` | Defines the dropdown toggle text. **Required when text is present, adds truncation**. |
-| `.pf-c-dropdown__toggle-check` | `<label>` | Defines a checkbox in the toggle area of a split button dropdown. |
-| `.pf-c-dropdown__toggle-button` | `<button>` | Defines the toggle button for a split button dropdown. |
-| `.pf-c-dropdown__toggle-progress` | `<span>` | Defines the progress element to indicate a dropdown action is in progress. |
-| `.pf-c-dropdown__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. |
-| `.pf-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page. |
-| `.pf-c-dropdown__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
-| `.pf-c-dropdown__menu-item-description` | `<div>` | Defines the wrapper for the menu item description. |
-| `.pf-c-dropdown__menu-item-main` | `<div>` | Defines the wrapper for the menu item main element. Use when the description element is present. |
-| `.pf-c-dropdown__toggle-image` | `<span>` | Defines the wrapper for the dropdown toggle button image. |
-| `.pf-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page. |
-| `.pf-c-dropdown__group` | `<section>` | Defines a group of items in a dropdown. **Required when there is more than one group in a dropdown**. |
-| `.pf-c-dropdown__group-title` | `<h1>` | Defines the title for a group of items in the dropdown menu. |
-| `.pf-m-expanded` | `.pf-c-dropdown` | Modifies for the expanded state. |
-| `.pf-m-top` | `.pf-c-dropdown` | Modifies to display the menu above the toggle. |
-| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-c-dropdown__menu` | Modifies to display the menu aligned to the left edge of the toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-c-dropdown__menu` | Modifies to display the menu aligned to the right edge of the toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-static` | `.pf-c-dropdown__menu` | Modifies a dropdown menu to be statically positioned to support custom positioning. |
-| `.pf-m-split-button` | `.pf-c-dropdown__toggle` | Modifies the dropdown toggle area to allow for interactive elements. |
-| `.pf-m-action` | `.pf-c-dropdown__toggle.pf-m-split-button` | Modifies the dropdown toggle for when an action is placed beside a toggle button in a split button dropdown. |
-| `.pf-m-text` | `.pf-c-dropdown__menu-item` | Modifies a menu item to be non-interactive text. |
-| `.pf-m-plain` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with no border. |
-| `.pf-m-text` | `.pf-c-dropdown__toggle` | Modifies the dropdown toggle for the text variation. |
-| `.pf-m-primary` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with primary styles. |
-| `.pf-m-secondary` | `.pf-c-dropdown__toggle` | Modifies to display the toggle with secondary styles. |
-| `.pf-m-full-height` | `.pf-c-dropdown` | Modifies a dropdown to full height of parent. See masthead for use. |
-| `.pf-m-disabled` | `a.pf-c-dropdown__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-c-dropdown__menu-item` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__menu-item`. |
-| `.pf-m-disabled` | `div.pf-c-dropdown__toggle` | Modifies to display the dropdown toggle as disabled. This applies to `div.pf-c-dropdown__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-dropdown__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-dropdown__toggle`. |
-| `.pf-m-icon` | `.pf-c-dropdown__menu-item` | Modifies an item to support adding an icon. |
-| `.pf-m-active` | `.pf-c-dropdown__toggle` | Modifies the dropdown menu toggle for the active state. |
-| `.pf-m-description` | `.pf-c-dropdown__menu-item` | Modifies an item to support adding a description. |
-| `.pf-m-in-progress` | `.pf-c-dropdown__toggle-check` | Modifies a toggle check element to indicate the check action is in progress. |
+| `.pf-v5-c-dropdown` | `<div>` | Defines the parent wrapper of the dropdown. |
+| `.pf-v5-c-dropdown__toggle` | `<button>` | Defines the dropdown toggle. |
+| `.pf-v5-c-dropdown__toggle-icon` | `<span>` | Defines the dropdown toggle icon. |
+| `.pf-v5-c-dropdown__toggle-text` | `<span>` | Defines the dropdown toggle text. **Required when text is present, adds truncation**. |
+| `.pf-v5-c-dropdown__toggle-check` | `<label>` | Defines a checkbox in the toggle area of a split button dropdown. |
+| `.pf-v5-c-dropdown__toggle-button` | `<button>` | Defines the toggle button for a split button dropdown. |
+| `.pf-v5-c-dropdown__toggle-progress` | `<span>` | Defines the progress element to indicate a dropdown action is in progress. |
+| `.pf-v5-c-dropdown__menu` | `<ul>`, `<div>` | Defines the parent wrapper of the menu items. |
+| `.pf-v5-c-dropdown__menu-item` | `<a>` | Defines a menu item that navigates to another page. |
+| `.pf-v5-c-dropdown__menu-item-icon` | `<span>` | Defines the wrapper for the menu item icon. |
+| `.pf-v5-c-dropdown__menu-item-description` | `<div>` | Defines the wrapper for the menu item description. |
+| `.pf-v5-c-dropdown__menu-item-main` | `<div>` | Defines the wrapper for the menu item main element. Use when the description element is present. |
+| `.pf-v5-c-dropdown__toggle-image` | `<span>` | Defines the wrapper for the dropdown toggle button image. |
+| `.pf-v5-c-dropdown__menu-item` | `<button>` | Defines a menu item that performs an action on the current page. |
+| `.pf-v5-c-dropdown__group` | `<section>` | Defines a group of items in a dropdown. **Required when there is more than one group in a dropdown**. |
+| `.pf-v5-c-dropdown__group-title` | `<h1>` | Defines the title for a group of items in the dropdown menu. |
+| `.pf-m-expanded` | `.pf-v5-c-dropdown` | Modifies for the expanded state. |
+| `.pf-m-top` | `.pf-v5-c-dropdown` | Modifies to display the menu above the toggle. |
+| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-v5-c-dropdown__menu` | Modifies to display the menu aligned to the left edge of the toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-v5-c-dropdown__menu` | Modifies to display the menu aligned to the right edge of the toggle at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-static` | `.pf-v5-c-dropdown__menu` | Modifies a dropdown menu to be statically positioned to support custom positioning. |
+| `.pf-m-split-button` | `.pf-v5-c-dropdown__toggle` | Modifies the dropdown toggle area to allow for interactive elements. |
+| `.pf-m-action` | `.pf-v5-c-dropdown__toggle.pf-m-split-button` | Modifies the dropdown toggle for when an action is placed beside a toggle button in a split button dropdown. |
+| `.pf-m-text` | `.pf-v5-c-dropdown__menu-item` | Modifies a menu item to be non-interactive text. |
+| `.pf-m-plain` | `.pf-v5-c-dropdown__toggle` | Modifies to display the toggle with no border. |
+| `.pf-m-text` | `.pf-v5-c-dropdown__toggle` | Modifies the dropdown toggle for the text variation. |
+| `.pf-m-primary` | `.pf-v5-c-dropdown__toggle` | Modifies to display the toggle with primary styles. |
+| `.pf-m-secondary` | `.pf-v5-c-dropdown__toggle` | Modifies to display the toggle with secondary styles. |
+| `.pf-m-full-height` | `.pf-v5-c-dropdown` | Modifies a dropdown to full height of parent. See masthead for use. |
+| `.pf-m-disabled` | `a.pf-v5-c-dropdown__menu-item` | Modifies to display the menu item as disabled. This applies to `a.pf-v5-c-dropdown__menu-item` and should not be used in lieu of the `disabled` attribute on `button.pf-v5-c-dropdown__menu-item`. |
+| `.pf-m-disabled` | `div.pf-v5-c-dropdown__toggle` | Modifies to display the dropdown toggle as disabled. This applies to `div.pf-v5-c-dropdown__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-v5-c-dropdown__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-v5-c-dropdown__toggle`. |
+| `.pf-m-icon` | `.pf-v5-c-dropdown__menu-item` | Modifies an item to support adding an icon. |
+| `.pf-m-active` | `.pf-v5-c-dropdown__toggle` | Modifies the dropdown menu toggle for the active state. |
+| `.pf-m-description` | `.pf-v5-c-dropdown__menu-item` | Modifies an item to support adding a description. |
+| `.pf-m-in-progress` | `.pf-v5-c-dropdown__toggle-check` | Modifies a toggle check element to indicate the check action is in progress. |

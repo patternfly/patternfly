@@ -1,20 +1,20 @@
 {{#if select--IsDisabled}}
   {{#> form-control controlType="input"
     input="true"
-    form-control--modifier="pf-c-select__toggle-typeahead"
+    form-control--modifier="pf-v5-c-select__toggle-typeahead"
     form-control--attribute=(concat 'type="text" id="' select--id '-typeahead" aria-label="Type to filter" placeholder="' select-typeahead--Placeholder '" disabled')}}
   {{/form-control}}
 {{else}}
   {{#if select--IsInvalid}}
     {{#> form-control controlType="input"
       input="true"
-      form-control--modifier="pf-c-select__toggle-typeahead"
+      form-control--modifier="pf-v5-c-select__toggle-typeahead"
       form-control--attribute=(concat 'type="text" id="' select--id '-typeahead" aria-invalid="true" value="Invalid" aria-label="Type to filter" placeholder="' select-typeahead--Placeholder '"')}}
     {{/form-control}}
   {{else}}
     {{#> form-control controlType="input"
       input="true"
-      form-control--modifier="pf-c-select__toggle-typeahead"
+      form-control--modifier="pf-v5-c-select__toggle-typeahead"
       form-control--attribute=(concat 'type="text" id="' select--id '-typeahead" aria-label="Type to filter" placeholder="' select-typeahead--Placeholder '"')}}
     {{/form-control}}
   {{/if}}

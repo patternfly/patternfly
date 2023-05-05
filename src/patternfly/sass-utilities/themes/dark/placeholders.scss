@@ -1,10 +1,10 @@
-%pf-theme-dark--t-dark {
+%pf-v5-theme-dark--t-dark {
   // global
-  --pf-global--Color--100: #{$pf-global--Color--100};
-  --pf-global--Color--200: #{$pf-global--Color--200};
-  --pf-global--BorderColor--100: #{$pf-global--BorderColor--100};
-  --pf-global--primary-color--100: #{$pf-global--primary-color--100};
-  --pf-global--link--Color: #{$pf-global--link--Color};
-  --pf-global--link--Color--hover: #{$pf-global--link--Color--hover};
-  --pf-global--BackgroundColor--100: #{$pf-global--BackgroundColor--100};
+  --#{$pf-global}--Color--100: #{$pf-v5-global--Color--100};
+  --#{$pf-global}--Color--200: #{$pf-v5-global--Color--200};
+  --#{$pf-global}--BorderColor--100: #{$pf-v5-global--BorderColor--100};
+  --#{$pf-global}--primary-color--100: #{$pf-v5-global--primary-color--100};
+  --#{$pf-global}--link--Color: #{$pf-v5-global--link--Color};
+  --#{$pf-global}--link--Color--hover: #{$pf-v5-global--link--Color--hover};
+  --#{$pf-global}--BackgroundColor--100: #{$pf-v5-global--BackgroundColor--100};
 }

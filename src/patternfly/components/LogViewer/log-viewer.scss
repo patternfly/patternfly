@@ -1,228 +1,230 @@
-.pf-c-log-viewer {
-  --pf-c-log-viewer--Height: 100%;
-  --pf-c-log-viewer--MaxHeight: auto;
-  --pf-c-log-viewer--m-line-numbers__index--Display: inline;
+// @debug $log-viewer; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$log-viewer} {
+  --#{$log-viewer}--Height: 100%;
+  --#{$log-viewer}--MaxHeight: auto;
+  --#{$log-viewer}--m-line-numbers__index--Display: inline;
 
   // Header
-  --pf-c-log-viewer__header--MarginBottom: var(--pf-global--spacer--sm);
+  --#{$log-viewer}__header--MarginBottom: var(--#{$pf-global}--spacer--sm);
 
   // Main
-  --pf-c-log-viewer__main--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-log-viewer__main--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-log-viewer__main--BorderColor: var(--pf-global--BorderColor--100);
+  --#{$log-viewer}__main--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$log-viewer}__main--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$log-viewer}__main--BorderColor: var(--#{$pf-global}--BorderColor--100);
 
   // Scroll container
-  --pf-c-log-viewer__scroll-container--Height: #{pf-size-prem(600px)};
-  --pf-c-log-viewer__scroll-container--PaddingTop: var(--pf-global--spacer--sm);
-  --pf-c-log-viewer__scroll-container--PaddingBottom: var(--pf-global--spacer--sm);
+  --#{$log-viewer}__scroll-container--Height: #{pf-size-prem(600px)};
+  --#{$log-viewer}__scroll-container--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$log-viewer}__scroll-container--PaddingBottom: var(--#{$pf-global}--spacer--sm);
 
   // Main ::after
-  --pf-c-log-viewer--m-line-numbers__main--before--Top: 0;
-  --pf-c-log-viewer--m-line-numbers__main--before--Bottom: 0;
-  --pf-c-log-viewer--m-line-numbers__main--before--Width: var(--pf-global--BorderWidth--sm);
-  --pf-c-log-viewer--m-line-numbers__main--before--BackgroundColor: var(--pf-global--BorderColor--100);
+  --#{$log-viewer}--m-line-numbers__main--before--Top: 0;
+  --#{$log-viewer}--m-line-numbers__main--before--Bottom: 0;
+  --#{$log-viewer}--m-line-numbers__main--before--Width: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$log-viewer}--m-line-numbers__main--before--BackgroundColor: var(--#{$pf-global}--BorderColor--100);
 
   // List
-  --pf-c-log-viewer__list--Height: auto;
-  --pf-c-log-viewer--m-line-numbers__list--Left: var(--pf-c-log-viewer__index--Width);
-  --pf-c-log-viewer__list--FontFamily: var(--pf-global--FontFamily--monospace);
-  --pf-c-log-viewer__list--FontSize: var(--pf-global--FontSize--sm);
+  --#{$log-viewer}__list--Height: auto;
+  --#{$log-viewer}--m-line-numbers__list--Left: var(--#{$log-viewer}__index--Width);
+  --#{$log-viewer}__list--FontFamily: var(--#{$pf-global}--FontFamily--monospace);
+  --#{$log-viewer}__list--FontSize: var(--#{$pf-global}--FontSize--sm);
 
   // Index
-  --pf-c-log-viewer__index--Display: none;
-  --pf-c-log-viewer__index--Width: #{pf-size-prem(65px)}; // default width
-  --pf-c-log-viewer__index--PaddingRight: var(--pf-global--spacer--xl);
-  --pf-c-log-viewer__index--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-log-viewer__index--Color: var(--pf-global--Color--200);
-  --pf-c-log-viewer__index--BackgroundColor: transparent;
-  --pf-c-log-viewer--line-number-chars: 4.4; // it's close enough to the existing default
-  --pf-c-log-viewer--m-line-number-chars__index--PaddingRight: var(--pf-global--spacer--xs);
-  --pf-c-log-viewer--m-line-number-chars__index--Width: calc(1ch * var(--pf-c-log-viewer--line-number-chars) + var(--pf-c-log-viewer__index--PaddingRight) + var(--pf-c-log-viewer__index--PaddingLeft));
+  --#{$log-viewer}__index--Display: none;
+  --#{$log-viewer}__index--Width: #{pf-size-prem(65px)}; // default width
+  --#{$log-viewer}__index--PaddingRight: var(--#{$pf-global}--spacer--xl);
+  --#{$log-viewer}__index--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$log-viewer}__index--Color: var(--#{$pf-global}--Color--200);
+  --#{$log-viewer}__index--BackgroundColor: transparent;
+  --#{$log-viewer}--line-number-chars: 4.4; // it's close enough to the existing default
+  --#{$log-viewer}--m-line-number-chars__index--PaddingRight: var(--#{$pf-global}--spacer--xs);
+  --#{$log-viewer}--m-line-number-chars__index--Width: calc(1ch * var(--#{$log-viewer}--line-number-chars) + var(--#{$log-viewer}__index--PaddingRight) + var(--#{$log-viewer}__index--PaddingLeft));
 
   // Text
-  --pf-c-log-viewer__text--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-log-viewer__text--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-log-viewer__text--Color: var(--pf-global--Color--100);
-  --pf-c-log-viewer__text--WordBreak: break-all;
-  --pf-c-log-viewer__text--WhiteSpace: break-spaces;
-  --pf-c-log-viewer__text--LineBreak: anywhere;
-  --pf-c-log-viewer--m-nowrap__text--WhiteSpace: nowrap;
-  --pf-c-log-viewer__string--m-match--Color: var(--pf-global--palette--gold-700);
-  --pf-c-log-viewer__string--m-match--BackgroundColor: var(--pf-global--palette--gold-100);
-  --pf-c-log-viewer__string--m-current--Color: var(--pf-global--palette--gold-700);
-  --pf-c-log-viewer__string--m-current--BackgroundColor: var(--pf-global--palette--gold-400);
+  --#{$log-viewer}__text--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$log-viewer}__text--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$log-viewer}__text--Color: var(--#{$pf-global}--Color--100);
+  --#{$log-viewer}__text--WordBreak: break-all;
+  --#{$log-viewer}__text--WhiteSpace: break-spaces;
+  --#{$log-viewer}__text--LineBreak: anywhere;
+  --#{$log-viewer}--m-nowrap__text--WhiteSpace: nowrap;
+  --#{$log-viewer}__string--m-match--Color: var(--#{$pf-global}--palette--gold-700);
+  --#{$log-viewer}__string--m-match--BackgroundColor: var(--#{$pf-global}--palette--gold-100);
+  --#{$log-viewer}__string--m-current--Color: var(--#{$pf-global}--palette--gold-700);
+  --#{$log-viewer}__string--m-current--BackgroundColor: var(--#{$pf-global}--palette--gold-400);
 
   // Timestamp
-  --pf-c-log-viewer__timestamp--FontWeight: var(--pf-global--FontWeight--bold);
+  --#{$log-viewer}__timestamp--FontWeight: var(--#{$pf-global}--FontWeight--bold);
 
   // Toolbar
-  --pf-c-log-viewer--c-toolbar--PaddingTop: 0;
-  --pf-c-log-viewer--c-toolbar--PaddingBottom: 0;
-  --pf-c-log-viewer--c-toolbar__content--PaddingRight: 0;
-  --pf-c-log-viewer--c-toolbar__content--PaddingLeft: 0;
-  --pf-c-log-viewer--c-toolbar__group--m-toggle-group--spacer: 0;
-  --pf-c-log-viewer--c-toolbar__group--m-toggle-group--m-show--spacer: var(--pf-global--spacer--sm);
+  --#{$log-viewer}--c-toolbar--PaddingTop: 0;
+  --#{$log-viewer}--c-toolbar--PaddingBottom: 0;
+  --#{$log-viewer}--c-toolbar__content--PaddingRight: 0;
+  --#{$log-viewer}--c-toolbar__content--PaddingLeft: 0;
+  --#{$log-viewer}--c-toolbar__group--m-toggle-group--spacer: 0;
+  --#{$log-viewer}--c-toolbar__group--m-toggle-group--m-show--spacer: var(--#{$pf-global}--spacer--sm);
 
   // Dark theme
-  --pf-c-log-viewer--m-dark__main--BorderWidth: 0;
+  --#{$log-viewer}--m-dark__main--BorderWidth: 0;
 
   &.pf-m-dark {
-    --pf-c-log-viewer__main--BorderWidth: var(--pf-c-log-viewer--m-dark__main--BorderWidth);
+    --#{$log-viewer}__main--BorderWidth: var(--#{$log-viewer}--m-dark__main--BorderWidth);
 
-    .pf-c-log-viewer__main {
-      @include pf-t-dark;
+    .#{$log-viewer}__main {
+      @include pf-v5-t-dark;
 
-      --pf-c-log-viewer__main--BackgroundColor: var(--pf-global--BackgroundColor--100);
-      --pf-c-log-viewer__main--BorderColor: var(--pf-global--BorderColor--100);
-      --pf-c-log-viewer__text--Color: var(--pf-global--Color--100);
-      --pf-c-log-viewer__index--Color: var(--pf-global--Color--200);
-      --pf-c-log-viewer--m-line-numbers__main--before--BackgroundColor: var(--pf-global--BorderColor--100);
+      --#{$log-viewer}__main--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+      --#{$log-viewer}__main--BorderColor: var(--#{$pf-global}--BorderColor--100);
+      --#{$log-viewer}__text--Color: var(--#{$pf-global}--Color--100);
+      --#{$log-viewer}__index--Color: var(--#{$pf-global}--Color--200);
+      --#{$log-viewer}--m-line-numbers__main--before--BackgroundColor: var(--#{$pf-global}--BorderColor--100);
     }
   }
 
   display: flex;
   flex-direction: column;
-  height: var(--pf-c-log-viewer--Height);
-  max-height: var(--pf-c-log-viewer--MaxHeight);
+  height: var(--#{$log-viewer}--Height);
+  max-height: var(--#{$log-viewer}--MaxHeight);
 
   &.pf-m-wrap-text {
     word-break: break-all;
   }
 
   &.pf-m-nowrap {
-    --pf-c-log-viewer__text--WhiteSpace: var(--pf-c-log-viewer--m-nowrap__text--WhiteSpace);
+    --#{$log-viewer}__text--WhiteSpace: var(--#{$log-viewer}--m-nowrap__text--WhiteSpace);
   }
 
   &.pf-m-line-numbers {
-    --pf-c-log-viewer__index--Display: var(--pf-c-log-viewer--m-line-numbers__index--Display);
+    --#{$log-viewer}__index--Display: var(--#{$log-viewer}--m-line-numbers__index--Display);
 
-    .pf-c-log-viewer__list {
+    .#{$log-viewer}__list {
       position: absolute;
       right: 0;
-      left: var(--pf-c-log-viewer--m-line-numbers__list--Left);
+      left: var(--#{$log-viewer}--m-line-numbers__list--Left);
 
       // Divider
       &::before {
         position: absolute;
-        top: var(--pf-c-log-viewer--m-line-numbers__main--before--Top); // rename these vars at a breaking change
-        bottom: var(--pf-c-log-viewer--m-line-numbers__main--before--Bottom);
+        top: var(--#{$log-viewer}--m-line-numbers__main--before--Top); // rename these vars at a breaking change
+        bottom: var(--#{$log-viewer}--m-line-numbers__main--before--Bottom);
         left: 0;
-        width: var(--pf-c-log-viewer--m-line-numbers__main--before--Width);
+        width: var(--#{$log-viewer}--m-line-numbers__main--before--Width);
         content: "";
-        background: var(--pf-c-log-viewer--m-line-numbers__main--before--BackgroundColor);
+        background: var(--#{$log-viewer}--m-line-numbers__main--before--BackgroundColor);
       }
     }
   }
 
   &.pf-m-line-number-chars {
-    --pf-c-log-viewer__index--PaddingRight: var(--pf-c-log-viewer--m-line-number-chars__index--PaddingRight);
-    --pf-c-log-viewer__index--Width: var(--pf-c-log-viewer--m-line-number-chars__index--Width);
+    --#{$log-viewer}__index--PaddingRight: var(--#{$log-viewer}--m-line-number-chars__index--PaddingRight);
+    --#{$log-viewer}__index--Width: var(--#{$log-viewer}--m-line-number-chars__index--Width);
   }
 
   // Nested toolbar
-  .pf-c-toolbar {
-    --pf-c-toolbar--PaddingTop: var(--pf-c-log-viewer--c-toolbar--PaddingTop);
-    --pf-c-toolbar--PaddingBottom: var(--pf-c-log-viewer--c-toolbar--PaddingBottom);
-    --pf-c-toolbar__content--PaddingRight: var(--pf-c-log-viewer--c-toolbar__content--PaddingRight);
-    --pf-c-toolbar__content--PaddingLeft: var(--pf-c-log-viewer--c-toolbar__content--PaddingLeft);
-    --pf-c-toolbar__group--m-toggle-group--spacer: 0;
-    --pf-c-toolbar__group--m-toggle-group--m-show--spacer: var(--pf-c-log-viewer--c-toolbar__group--m-toggle-group--m-show--spacer);
+  .#{$toolbar} {
+    --#{$toolbar}--PaddingTop: var(--#{$log-viewer}--c-toolbar--PaddingTop);
+    --#{$toolbar}--PaddingBottom: var(--#{$log-viewer}--c-toolbar--PaddingBottom);
+    --#{$toolbar}__content--PaddingRight: var(--#{$log-viewer}--c-toolbar__content--PaddingRight);
+    --#{$toolbar}__content--PaddingLeft: var(--#{$log-viewer}--c-toolbar__content--PaddingLeft);
+    --#{$toolbar}__group--m-toggle-group--spacer: 0;
+    --#{$toolbar}__group--m-toggle-group--m-show--spacer: var(--#{$log-viewer}--c-toolbar__group--m-toggle-group--m-show--spacer);
   }
 
-  .pf-c-toolbar__content-section {
+  .#{$toolbar}__content-section {
     flex-wrap: nowrap;
   }
 
-  .pf-c-search-input {
+  .#{$search-input} {
     width: 100%;
   }
 }
 
 // Header
-.pf-c-log-viewer__header {
-  margin-bottom: var(--pf-c-log-viewer__header--MarginBottom);
+.#{$log-viewer}__header {
+  margin-bottom: var(--#{$log-viewer}__header--MarginBottom);
 }
 
 // Main
-.pf-c-log-viewer__main {
+.#{$log-viewer}__main {
   display: flex;
   flex-direction: column;
   min-height: 0;
-  background-color: var(--pf-c-log-viewer__main--BackgroundColor);
-  border: var(--pf-c-log-viewer__main--BorderWidth) solid var(--pf-c-log-viewer__main--BorderColor);
+  background-color: var(--#{$log-viewer}__main--BackgroundColor);
+  border: var(--#{$log-viewer}__main--BorderWidth) solid var(--#{$log-viewer}__main--BorderColor);
 }
 
-.pf-c-log-viewer__scroll-container {
+.#{$log-viewer}__scroll-container {
   position: relative;
-  height: var(--pf-c-log-viewer__scroll-container--Height);
-  padding-top: var(--pf-c-log-viewer__scroll-container--PaddingTop);
-  padding-bottom: var(--pf-c-log-viewer__scroll-container--PaddingBottom);
+  height: var(--#{$log-viewer}__scroll-container--Height);
+  padding-top: var(--#{$log-viewer}__scroll-container--PaddingTop);
+  padding-bottom: var(--#{$log-viewer}__scroll-container--PaddingBottom);
   overflow: auto;
   will-change: transform;
   direction: ltr;
 }
 
 // List
-.pf-c-log-viewer__list {
+.#{$log-viewer}__list {
   position: relative;
-  height: var(--pf-c-log-viewer__list--Height);
-  font-family: var(--pf-c-log-viewer__list--FontFamily);
-  font-size: var(--pf-c-log-viewer__list--FontSize);
+  height: var(--#{$log-viewer}__list--Height);
+  font-family: var(--#{$log-viewer}__list--FontFamily);
+  font-size: var(--#{$log-viewer}__list--FontSize);
 }
 
-.pf-c-log-viewer__list-item {
+.#{$log-viewer}__list-item {
   left: 0;
   width: 100%;
 }
 
-.pf-c-log-viewer__string {
+.#{$log-viewer}__string {
   &.pf-m-match {
-    color: var(--pf-c-log-viewer__string--m-match--Color, inherit);
-    background-color: var(--pf-c-log-viewer__string--m-match--BackgroundColor);
+    color: var(--#{$log-viewer}__string--m-match--Color, inherit);
+    background-color: var(--#{$log-viewer}__string--m-match--BackgroundColor);
   }
 
   &.pf-m-current {
-    color: var(--pf-c-log-viewer__string--m-current--Color, inherit);
-    background-color: var(--pf-c-log-viewer__string--m-current--BackgroundColor);
+    color: var(--#{$log-viewer}__string--m-current--Color, inherit);
+    background-color: var(--#{$log-viewer}__string--m-current--BackgroundColor);
   }
 }
 
 // Index
-.pf-c-log-viewer__index {
+.#{$log-viewer}__index {
   position: fixed;
   left: 0;
-  display: var(--pf-c-log-viewer__index--Display);
-  width: var(--pf-c-log-viewer__index--Width);
-  padding-right: var(--pf-c-log-viewer__index--PaddingRight);
-  padding-left: var(--pf-c-log-viewer__index--PaddingLeft);
-  font-family: var(--pf-c-log-viewer__index--FontFamily, inherit);
-  font-size: var(--pf-c-log-viewer__index--FontSize, inherit);
-  color: var(--pf-c-log-viewer__index--Color);
+  display: var(--#{$log-viewer}__index--Display);
+  width: var(--#{$log-viewer}__index--Width);
+  padding-right: var(--#{$log-viewer}__index--PaddingRight);
+  padding-left: var(--#{$log-viewer}__index--PaddingLeft);
+  font-family: var(--#{$log-viewer}__index--FontFamily, inherit);
+  font-size: var(--#{$log-viewer}__index--FontSize, inherit);
+  color: var(--#{$log-viewer}__index--Color);
   user-select: none;
-  background-color: var(--pf-c-log-viewer__index--BackgroundColor);
+  background-color: var(--#{$log-viewer}__index--BackgroundColor);
 }
 
 // Text
-.pf-c-log-viewer__text {
+.#{$log-viewer}__text {
   display: block;
-  padding-right: var(--pf-c-log-viewer__text--PaddingRight);
-  padding-left: var(--pf-c-log-viewer__text--PaddingLeft);
-  font-family: var(--pf-c-log-viewer__text--FontFamily, inherit);
-  font-size: var(--pf-c-log-viewer__text--FontSize, inherit);
-  color: var(--pf-c-log-viewer__text--Color);
-  word-break: var(--pf-c-log-viewer__text--WordBreak);
-  white-space: var(--pf-c-log-viewer__text--WhiteSpace);
-  line-break: var(--pf-c-log-viewer__text--LineBreak);
+  padding-right: var(--#{$log-viewer}__text--PaddingRight);
+  padding-left: var(--#{$log-viewer}__text--PaddingLeft);
+  font-family: var(--#{$log-viewer}__text--FontFamily, inherit);
+  font-size: var(--#{$log-viewer}__text--FontSize, inherit);
+  color: var(--#{$log-viewer}__text--Color);
+  word-break: var(--#{$log-viewer}__text--WordBreak);
+  white-space: var(--#{$log-viewer}__text--WhiteSpace);
+  line-break: var(--#{$log-viewer}__text--LineBreak);
 }
 
 // Timestamp
-.pf-c-log-viewer__timestamp {
-  font-weight: var(--pf-c-log-viewer__timestamp--FontWeight);
+.#{$log-viewer}__timestamp {
+  font-weight: var(--#{$log-viewer}__timestamp--FontWeight);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/log-viewer";
 
-@include pf-theme-dark {
-  @include pf-theme-dark-log-viewer;
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-log-viewer;
 }

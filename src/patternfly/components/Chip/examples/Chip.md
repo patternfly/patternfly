@@ -1,7 +1,7 @@
 ---
 id: Chip
 section: components
-cssPrefix: pf-c-chip
+cssPrefix: pf-v5-c-chip
 ---
 
 ## Examples
@@ -91,17 +91,17 @@ A Chip is used to display items that have been filtered or selected from a large
 ## Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-label="[button label text]"` | `.pf-c-button` |  Provides an accessible name for the button when an icon is used instead of text. Required when an icon is used with no supporting text. |
-| `aria-labelledby="[id value of .pf-c-button]"` | `.pf-c-button` | Gives the button an accessible name by referring to the element that provides the position of the button within a list. Required when the button is being removed. |
+| `aria-label="[button label text]"` | `.pf-v5-c-button` |  Provides an accessible name for the button when an icon is used instead of text. Required when an icon is used with no supporting text. |
+| `aria-labelledby="[id value of .pf-v5-c-button]"` | `.pf-v5-c-button` | Gives the button an accessible name by referring to the element that provides the position of the button within a list. Required when the button is being removed. |
 | `aria-hidden="true"` | `<i>` |  Hides the icon from assistive technologies. |
 
 ## Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-chip` | `<div>`, `<button>`, | Initiates the chip component. Use a `<button>` with overflow chips **Required** |
-| `.pf-c-chip__content` | `<span>` | Creates a content wrapper for the chip. **Required** |
-| `.pf-c-chip__text` | `<span>` | Initiates the text inside the chip. **Required** |
-| `.pf-c-chip__icon` | `<span>` | Initiates the icon inside the chip. |
-| `.pf-c-chip__actions` | `<span>` | Creates a wrapper for chip actions. **Required for removable chips** |
-| `.pf-m-overflow` | `button.pf-c-chip` | Applies styling of the overflow chip. |
-| `.pf-m-draggable` | `.pf-c-chip` | Modifies the chip to be in the draggable state. |
+| `.pf-v5-c-chip` | `<div>`, `<button>`, | Initiates the chip component. Use a `<button>` with overflow chips **Required** |
+| `.pf-v5-c-chip__content` | `<span>` | Creates a content wrapper for the chip. **Required** |
+| `.pf-v5-c-chip__text` | `<span>` | Initiates the text inside the chip. **Required** |
+| `.pf-v5-c-chip__icon` | `<span>` | Initiates the icon inside the chip. |
+| `.pf-v5-c-chip__actions` | `<span>` | Creates a wrapper for chip actions. **Required for removable chips** |
+| `.pf-m-overflow` | `button.pf-v5-c-chip` | Applies styling of the overflow chip. |
+| `.pf-m-draggable` | `.pf-v5-c-chip` | Modifies the chip to be in the draggable state. |

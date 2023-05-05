@@ -1,112 +1,114 @@
-.pf-c-content {
+// @debug $content; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$content} {
   // Body
-  --pf-c-content--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-content--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-content--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-content--FontWeight: var(--pf-global--FontWeight--normal);
+  --#{$content}--MarginBottom: var(--#{$pf-global}--spacer--md);
+  --#{$content}--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$content}--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // this ensures color is not overridden
-  --pf-c-content--Color: var(--pf-global--Color--100);
+  --#{$content}--Color: var(--#{$pf-global}--Color--100);
 
   // Headings
-  --pf-c-content--heading--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
+  --#{$content}--heading--FontFamily: var(--#{$pf-global}--FontFamily--heading--sans-serif);
 
   // h1
-  --pf-c-content--h1--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-content--h1--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-content--h1--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-content--h1--FontSize: var(--pf-global--FontSize--2xl);
-  --pf-c-content--h1--FontWeight: var(--pf-global--FontWeight--normal);
+  --#{$content}--h1--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h1--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h1--LineHeight: var(--#{$pf-global}--LineHeight--sm);
+  --#{$content}--h1--FontSize: var(--#{$pf-global}--FontSize--2xl);
+  --#{$content}--h1--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // h2
-  --pf-c-content--h2--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-content--h2--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-content--h2--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-content--h2--FontSize: var(--pf-global--FontSize--xl);
-  --pf-c-content--h2--FontWeight: var(--pf-global--FontWeight--normal);
+  --#{$content}--h2--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h2--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h2--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--h2--FontSize: var(--#{$pf-global}--FontSize--xl);
+  --#{$content}--h2--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // h3
-  --pf-c-content--h3--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-content--h3--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-content--h3--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-content--h3--FontSize: var(--pf-global--FontSize--lg);
-  --pf-c-content--h3--FontWeight: var(--pf-global--FontWeight--normal);
+  --#{$content}--h3--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h3--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h3--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--h3--FontSize: var(--#{$pf-global}--FontSize--lg);
+  --#{$content}--h3--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // h4
-  --pf-c-content--h4--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-content--h4--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-content--h4--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-content--h4--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-content--h4--FontWeight: var(--pf-global--FontWeight--normal);
+  --#{$content}--h4--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h4--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h4--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--h4--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$content}--h4--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // h5
-  --pf-c-content--h5--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-content--h5--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-content--h5--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-content--h5--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-content--h5--FontWeight: var(--pf-global--FontWeight--normal);
+  --#{$content}--h5--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h5--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h5--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--h5--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$content}--h5--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // h6
-  --pf-c-content--h6--MarginTop: var(--pf-global--spacer--lg);
-  --pf-c-content--h6--MarginBottom: var(--pf-global--spacer--sm);
-  --pf-c-content--h6--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-content--h6--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-content--h6--FontWeight: var(--pf-global--FontWeight--normal);
+  --#{$content}--h6--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h6--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h6--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--h6--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$content}--h6--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // Small text
-  --pf-c-content--small--MarginBottom: var(--pf-global--spacer--md);
-  --pf-c-content--small--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-content--small--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-content--small--Color: var(--pf-global--Color--200);
+  --#{$content}--small--MarginBottom: var(--#{$pf-global}--spacer--md);
+  --#{$content}--small--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--small--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$content}--small--Color: var(--#{$pf-global}--Color--200);
 
   // Links
-  --pf-c-content--a--Color: var(--pf-global--link--Color);
-  --pf-c-content--a--TextDecoration: var(--pf-global--link--TextDecoration);
-  --pf-c-content--a--hover--Color: var(--pf-global--link--Color--hover);
-  --pf-c-content--a--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
-  --pf-c-content--a--visited--Color: var(--pf-global--link--Color--visited);
+  --#{$content}--a--Color: var(--#{$pf-global}--link--Color);
+  --#{$content}--a--TextDecoration: var(--#{$pf-global}--link--TextDecoration);
+  --#{$content}--a--hover--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$content}--a--hover--TextDecoration: var(--#{$pf-global}--link--TextDecoration--hover);
+  --#{$content}--a--visited--Color: var(--#{$pf-global}--link--Color--visited);
 
   // Blockquote
-  --pf-c-content--blockquote--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-content--blockquote--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-content--blockquote--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-content--blockquote--PaddingLeft: var(--pf-global--spacer--md);
-  --pf-c-content--blockquote--Color: var(--pf-global--Color--200);
-  --pf-c-content--blockquote--BorderLeftColor: var(--pf-global--BorderColor--100);
-  --pf-c-content--blockquote--BorderLeftWidth: var(--pf-global--BorderWidth--lg);
+  --#{$content}--blockquote--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$content}--blockquote--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$content}--blockquote--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$content}--blockquote--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$content}--blockquote--Color: var(--#{$pf-global}--Color--200);
+  --#{$content}--blockquote--BorderLeftColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$content}--blockquote--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--lg);
 
   // Lists
-  --pf-c-content--ol--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ol--MarginLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ol--nested--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-content--ol--nested--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-content--ul--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ul--MarginLeft: var(--pf-global--spacer--lg);
-  --pf-c-content--ul--nested--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-content--ul--nested--MarginLeft: var(--pf-global--spacer--sm);
-  --pf-c-content--ul--ListStyle: var(--pf-global--ListStyle);
-  --pf-c-content--li--MarginTop: var(--pf-global--spacer--sm);
-  --pf-c-content--dl--ColumnGap: var(--pf-global--spacer--2xl);
-  --pf-c-content--dl--RowGap: var(--pf-global--spacer--md);
-  --pf-c-content--dt--FontWeight: var(--pf-global--FontWeight--bold);
-  --pf-c-content--dt--MarginTop: var(--pf-global--spacer--md);
-  --pf-c-content--dt--sm--MarginTop: 0;
+  --#{$content}--ol--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--ol--MarginLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--ol--nested--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--ol--nested--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--ul--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--ul--MarginLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--ul--nested--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--ul--nested--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--ul--ListStyle: var(--#{$pf-global}--ListStyle);
+  --#{$content}--li--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--dl--ColumnGap: var(--#{$pf-global}--spacer--2xl);
+  --#{$content}--dl--RowGap: var(--#{$pf-global}--spacer--md);
+  --#{$content}--dt--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$content}--dt--MarginTop: var(--#{$pf-global}--spacer--md);
+  --#{$content}--dt--sm--MarginTop: 0;
 
   // hr
-  --pf-c-content--hr--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-content--hr--BackgroundColor: var(--pf-global--BorderColor--100);
+  --#{$content}--hr--Height: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$content}--hr--BackgroundColor: var(--#{$pf-global}--BorderColor--100);
 
-  font-size: var(--pf-c-content--FontSize);
-  line-height: var(--pf-c-content--LineHeight);
-  color: var(--pf-c-content--Color);
+  font-size: var(--#{$content}--FontSize);
+  line-height: var(--#{$content}--LineHeight);
+  color: var(--#{$content}--Color);
 
   a {
-    color: var(--pf-c-content--a--Color);
-    text-decoration: var(--pf-c-content--a--TextDecoration);
+    color: var(--#{$content}--a--Color);
+    text-decoration: var(--#{$content}--a--TextDecoration);
 
     &:hover {
-      --pf-c-content--a--Color: var(--pf-c-content--a--hover--Color);
-      --pf-c-content--a--TextDecoration: var(--pf-c-content--a--hover--TextDecoration);
+      --#{$content}--a--Color: var(--#{$content}--a--hover--Color);
+      --#{$content}--a--TextDecoration: var(--#{$content}--a--hover--TextDecoration);
     }
   }
 
@@ -114,13 +116,13 @@
   &.pf-m-visited a,
   a.pf-m-visited {
     &:visited {
-      color: var(--pf-c-content--a--visited--Color);
+      color: var(--#{$content}--a--visited--Color);
     }
   }
   // stylelint-enable
 
   li + li {
-    margin-top: var(--pf-c-content--li--MarginTop);
+    margin-top: var(--#{$content}--li--MarginTop);
   }
 
   p,
@@ -134,7 +136,7 @@
   hr {
     &:not(:last-child) {
       // This variable name doesn't reflect the selector, it's an excpection to the variable system.
-      margin-bottom: var(--pf-c-content--MarginBottom);
+      margin-bottom: var(--#{$content}--MarginBottom);
     }
   }
 
@@ -145,7 +147,7 @@
   h5,
   h6 {
     margin: 0;
-    font-family: var(--pf-c-content--heading--FontFamily);
+    font-family: var(--#{$content}--heading--FontFamily);
 
     &:first-child {
       margin-top: 0;
@@ -170,108 +172,108 @@
   }
 
   h1 {
-    margin-top: var(--pf-c-content--h1--MarginTop);
-    margin-bottom: var(--pf-c-content--h1--MarginBottom);
-    font-size: var(--pf-c-content--h1--FontSize);
-    font-weight: var(--pf-c-content--h1--FontWeight);
-    line-height: var(--pf-c-content--h1--LineHeight);
+    margin-top: var(--#{$content}--h1--MarginTop);
+    margin-bottom: var(--#{$content}--h1--MarginBottom);
+    font-size: var(--#{$content}--h1--FontSize);
+    font-weight: var(--#{$content}--h1--FontWeight);
+    line-height: var(--#{$content}--h1--LineHeight);
   }
 
   h2 {
-    margin-top: var(--pf-c-content--h2--MarginTop);
-    margin-bottom: var(--pf-c-content--h2--MarginBottom);
-    font-size: var(--pf-c-content--h2--FontSize);
-    font-weight: var(--pf-c-content--h2--FontWeight);
-    line-height: var(--pf-c-content--h2--LineHeight);
+    margin-top: var(--#{$content}--h2--MarginTop);
+    margin-bottom: var(--#{$content}--h2--MarginBottom);
+    font-size: var(--#{$content}--h2--FontSize);
+    font-weight: var(--#{$content}--h2--FontWeight);
+    line-height: var(--#{$content}--h2--LineHeight);
   }
 
   h3 {
-    margin-top: var(--pf-c-content--h3--MarginTop);
-    margin-bottom: var(--pf-c-content--h3--MarginBottom);
-    font-size: var(--pf-c-content--h3--FontSize);
-    font-weight: var(--pf-c-content--h3--FontWeight);
-    line-height: var(--pf-c-content--h3--LineHeight);
+    margin-top: var(--#{$content}--h3--MarginTop);
+    margin-bottom: var(--#{$content}--h3--MarginBottom);
+    font-size: var(--#{$content}--h3--FontSize);
+    font-weight: var(--#{$content}--h3--FontWeight);
+    line-height: var(--#{$content}--h3--LineHeight);
   }
 
   h4 {
-    margin-top: var(--pf-c-content--h4--MarginTop);
-    margin-bottom: var(--pf-c-content--h4--MarginBottom);
-    font-size: var(--pf-c-content--h4--FontSize);
-    font-weight: var(--pf-c-content--h4--FontWeight);
-    line-height: var(--pf-c-content--h4--LineHeight);
+    margin-top: var(--#{$content}--h4--MarginTop);
+    margin-bottom: var(--#{$content}--h4--MarginBottom);
+    font-size: var(--#{$content}--h4--FontSize);
+    font-weight: var(--#{$content}--h4--FontWeight);
+    line-height: var(--#{$content}--h4--LineHeight);
   }
 
   h5 {
-    margin-top: var(--pf-c-content--h5--MarginTop);
-    margin-bottom: var(--pf-c-content--h5--MarginBottom);
-    font-size: var(--pf-c-content--h5--FontSize);
-    font-weight: var(--pf-c-content--h5--FontWeight);
-    line-height: var(--pf-c-content--h5--LineHeight);
+    margin-top: var(--#{$content}--h5--MarginTop);
+    margin-bottom: var(--#{$content}--h5--MarginBottom);
+    font-size: var(--#{$content}--h5--FontSize);
+    font-weight: var(--#{$content}--h5--FontWeight);
+    line-height: var(--#{$content}--h5--LineHeight);
   }
 
   h6 {
-    margin-top: var(--pf-c-content--h6--MarginTop);
-    margin-bottom: var(--pf-c-content--h6--MarginBottom);
-    font-size: var(--pf-c-content--h6--FontSize);
-    font-weight: var(--pf-c-content--h6--FontWeight);
-    line-height: var(--pf-c-content--h6--LineHeight);
+    margin-top: var(--#{$content}--h6--MarginTop);
+    margin-bottom: var(--#{$content}--h6--MarginBottom);
+    font-size: var(--#{$content}--h6--FontSize);
+    font-weight: var(--#{$content}--h6--FontWeight);
+    line-height: var(--#{$content}--h6--LineHeight);
   }
 
   small {
     display: block;
-    font-size: var(--pf-c-content--small--FontSize);
-    line-height: var(--pf-c-content--small--LineHeight);
-    color: var(--pf-c-content--small--Color);
+    font-size: var(--#{$content}--small--FontSize);
+    line-height: var(--#{$content}--small--LineHeight);
+    color: var(--#{$content}--small--Color);
 
     &:not(:last-child) {
-      margin-bottom: var(--pf-c-content--small--MarginBottom);
+      margin-bottom: var(--#{$content}--small--MarginBottom);
     }
   }
 
   blockquote {
-    padding: var(--pf-c-content--blockquote--PaddingTop) var(--pf-c-content--blockquote--PaddingRight) var(--pf-c-content--blockquote--PaddingBottom) var(--pf-c-content--blockquote--PaddingLeft);
-    color: var(--pf-c-content--blockquote--Color);
-    border-left: var(--pf-c-content--blockquote--BorderLeftWidth) solid var(--pf-c-content--blockquote--BorderLeftColor);
+    padding: var(--#{$content}--blockquote--PaddingTop) var(--#{$content}--blockquote--PaddingRight) var(--#{$content}--blockquote--PaddingBottom) var(--#{$content}--blockquote--PaddingLeft);
+    color: var(--#{$content}--blockquote--Color);
+    border-left: var(--#{$content}--blockquote--BorderLeftWidth) solid var(--#{$content}--blockquote--BorderLeftColor);
   }
 
   hr {
-    height: var(--pf-c-content--hr--Height);
-    background-color: var(--pf-c-content--hr--BackgroundColor);
+    height: var(--#{$content}--hr--Height);
+    background-color: var(--#{$content}--hr--BackgroundColor);
     border: none;
   }
 
   ol {
-    padding-left: var(--pf-c-content--ol--PaddingLeft);
-    margin-left: var(--pf-c-content--ol--MarginLeft);
+    padding-left: var(--#{$content}--ol--PaddingLeft);
+    margin-left: var(--#{$content}--ol--MarginLeft);
 
     ul {
-      --pf-c-content--ul--MarginLeft: var(--pf-c-content--ul--nested--MarginLeft);
+      --#{$content}--ul--MarginLeft: var(--#{$content}--ul--nested--MarginLeft);
 
-      margin-top: var(--pf-c-content--ul--nested--MarginTop);
+      margin-top: var(--#{$content}--ul--nested--MarginTop);
     }
 
     ol {
-      --pf-c-content--ol--MarginLeft: var(--pf-c-content--ol--nested--MarginLeft);
+      --#{$content}--ol--MarginLeft: var(--#{$content}--ol--nested--MarginLeft);
 
-      margin-top: var(--pf-c-content--ol--nested--MarginTop);
+      margin-top: var(--#{$content}--ol--nested--MarginTop);
     }
   }
 
   ul {
-    padding-left: var(--pf-c-content--ul--PaddingLeft);
-    margin-left: var(--pf-c-content--ul--MarginLeft);
-    list-style: var(--pf-c-content--ul--ListStyle);
+    padding-left: var(--#{$content}--ul--PaddingLeft);
+    margin-left: var(--#{$content}--ul--MarginLeft);
+    list-style: var(--#{$content}--ul--ListStyle);
 
     ul {
-      --pf-c-content--ul--MarginLeft: var(--pf-c-content--ul--nested--MarginLeft);
+      --#{$content}--ul--MarginLeft: var(--#{$content}--ul--nested--MarginLeft);
 
-      margin-top: var(--pf-c-content--ul--nested--MarginTop);
+      margin-top: var(--#{$content}--ul--nested--MarginTop);
     }
 
     ol {
-      --pf-c-content--ol--MarginLeft: var(--pf-c-content--ol--nested--MarginLeft);
+      --#{$content}--ol--MarginLeft: var(--#{$content}--ol--nested--MarginLeft);
 
-      margin-top: var(--pf-c-content--ol--nested--MarginTop);
+      margin-top: var(--#{$content}--ol--nested--MarginTop);
     }
   }
 
@@ -279,31 +281,31 @@
     display: grid;
     grid-template-columns: 1fr;
 
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
       grid-template: auto / auto 1fr;
-      grid-row-gap: var(--pf-c-content--dl--RowGap);
-      grid-column-gap: var(--pf-c-content--dl--ColumnGap);
+      grid-row-gap: var(--#{$content}--dl--RowGap);
+      grid-column-gap: var(--#{$content}--dl--ColumnGap);
     }
   }
 
   dt {
-    font-weight: var(--pf-c-content--dt--FontWeight);
+    font-weight: var(--#{$content}--dt--FontWeight);
 
     &:not(:first-child) {
-      margin-top: var(--pf-c-content--dt--MarginTop);
+      margin-top: var(--#{$content}--dt--MarginTop);
 
-      @media screen and (min-width: $pf-global--breakpoint--sm) {
-        --pf-c-content--dt--MarginTop: var(--pf-c-content--dt--sm--MarginTop);
+      @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+        --#{$content}--dt--MarginTop: var(--#{$content}--dt--sm--MarginTop);
       }
     }
 
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
       grid-column: 1;
     }
   }
 
   dd {
-    @media screen and (min-width: $pf-global--breakpoint--sm) {
+    @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
       grid-column: 2;
     }
   }

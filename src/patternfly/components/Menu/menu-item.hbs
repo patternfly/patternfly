@@ -1,4 +1,4 @@
-<{{#if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else if menu-list-item--IsCheckbox}}label{{else}}button{{/if}} class="pf-c-menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}
+<{{#if menu-item--IsLink}}a{{else if menu-item--type}}{{menu-item--type}}{{else if menu-list-item--IsCheckbox}}label{{else}}button{{/if}} class="{{pfv}}menu__item{{#if menu-item--modifier}} {{menu-item--modifier}}{{/if}}
   {{~#if menu-list-item--IsCurrent}} pf-m-current{{/if}}"
   {{#if menu-list-item--IsCheckbox}}
     for="{{menu--id}}-check-{{menu-list-item--id}}"

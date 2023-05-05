@@ -1,4 +1,4 @@
-<{{#if select-menu--type}}{{select-menu--type}}{{else}}ul{{/if}} class="pf-c-select__menu{{#if select-menu--modifier}} {{select-menu--modifier}}{{/if}}"
+<{{#if select-menu--type}}{{select-menu--type}}{{else}}ul{{/if}} class="{{pfv}}select__menu{{#if select-menu--modifier}} {{select-menu--modifier}}{{/if}}"
   {{#unless select-menu--type}}
     role="listbox"
   {{/unless}}
@@ -35,7 +35,7 @@
         </li>
       {{/if}}
       {{#if select--IsLoading}}
-        <li role="presentation" class="pf-c-select__list-item pf-m-loading">
+        <li role="presentation" class="{{pfv}}select__list-item pf-m-loading">
           {{#> spinner spinner--modifier="pf-m-lg"}}Loading items{{/spinner}}
         </li>
       {{/if}}

@@ -1,7 +1,7 @@
 ---
 id: Button
 section: components
-cssPrefix: pf-c-button
+cssPrefix: pf-v5-c-button
 ---
 
 import './Button.css'
@@ -382,38 +382,38 @@ Semantic buttons and links are important for usability as well as accessibility.
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-pressed="true or false"` | `.pf-c-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. **Required when button is a toggle** |
-| `aria-label="[button label text]"` | `.pf-c-button.pf-m-plain` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
-| `aria-label="[descriptive text]"` | `a.pf-c-button`, `span.pf-c-button.pf-m-link.pf-m-inline` | The button component's text should adequately describe its purpose. If it does not, `aria-label` can provide more detailed interaction information. |
-| `disabled` | `button.pf-c-button` | When a button element is used, indicates that it is unavailable and removes it from keyboard focus. **Required when button is disabled** |
-| `aria-disabled="true"` | `button.pf-c-button` | When a button element is used, indicates that it is unavailable but does not prevent keyboard or hover interactions. Used when a disabled button provides interactive elements like a tooltip. |
-| `aria-disabled="true"` | `a.pf-c-button.pf-m-disabled`, `span.pf-c-button.pf-m-link.pf-m-inline.pf-m-disabled` | When a non-button element is used, indicates that it is unavailable. **Required when element is disabled** |
-| `aria-expanded="true"` | `.pf-c-button.pf-m-expanded` | Indicates that the expanded content element is visible. **Required** |
-| `tabindex="-1"` | `a.pf-c-button.pf-m-disabled`, `span.pf-c-button.pf-m-link.pf-m-inline.pf-m-disabled` | When a non-button element is used, removes it from keyboard focus. **Required when element is disabled** |
-| `tabindex="0"` | `span.pf-c-button.pf-m-link.pf-m-inline` | Inserts the span into the tab order of the page so that it is focusable. **Required when the element is a span** |
+| `aria-pressed="true or false"` | `.pf-v5-c-button` | Indicates that the button is a toggle. When set to "true", `pf-m-active` should also be set so that the button displays in an active state. **Required when button is a toggle** |
+| `aria-label="[button label text]"` | `.pf-v5-c-button.pf-m-plain` | Provides an accessible name for the button when an icon is used instead of text. **Required when icon is used with no supporting text** |
+| `aria-label="[descriptive text]"` | `a.pf-v5-c-button`, `span.pf-v5-c-button.pf-m-link.pf-m-inline` | The button component's text should adequately describe its purpose. If it does not, `aria-label` can provide more detailed interaction information. |
+| `disabled` | `button.pf-v5-c-button` | When a button element is used, indicates that it is unavailable and removes it from keyboard focus. **Required when button is disabled** |
+| `aria-disabled="true"` | `button.pf-v5-c-button` | When a button element is used, indicates that it is unavailable but does not prevent keyboard or hover interactions. Used when a disabled button provides interactive elements like a tooltip. |
+| `aria-disabled="true"` | `a.pf-v5-c-button.pf-m-disabled`, `span.pf-v5-c-button.pf-m-link.pf-m-inline.pf-m-disabled` | When a non-button element is used, indicates that it is unavailable. **Required when element is disabled** |
+| `aria-expanded="true"` | `.pf-v5-c-button.pf-m-expanded` | Indicates that the expanded content element is visible. **Required** |
+| `tabindex="-1"` | `a.pf-v5-c-button.pf-m-disabled`, `span.pf-v5-c-button.pf-m-link.pf-m-inline.pf-m-disabled` | When a non-button element is used, removes it from keyboard focus. **Required when element is disabled** |
+| `tabindex="0"` | `span.pf-v5-c-button.pf-m-link.pf-m-inline` | Inserts the span into the tab order of the page so that it is focusable. **Required when the element is a span** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
-| `.pf-c-button__icon` | `<span>` | Initiates a button icon. |
-| `.pf-c-button__progress` | `<span>` | Initiates a button progress container. |
-| `.pf-c-button__count` | `<span>` | Initiates a button count container. **Note:** Count should only be used on link buttons.|
-| `.pf-m-primary` | `.pf-c-button` | Modifies for primary styles. |
-| `.pf-m-secondary` | `.pf-c-button` | Modifies for secondary styles. |
-| `.pf-m-tertiary` | `.pf-c-button` | Modifies for tertiary styles. |
-| `.pf-m-danger` | `.pf-c-button` | Modifies for danger styles. |
-| `.pf-m-link` | `.pf-c-button` | Modifies for link styles. This button has no background or border and is styled as a link. This button would commonly appear in a form and may include an icon. |
-| `.pf-m-plain` | `.pf-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for `.pf-m-plain` icon buttons such as close, expand, kebab, etc. |
-| `.pf-m-inline` | `.pf-c-button.pf-m-link` | Modifies for inline styles. This button is presented similar to a normal link and has no padding and is displayed inline with other inline content. When used as a `<span>`, the text will flow inline with text around it. |
-| `.pf-m-block` | `.pf-c-button` | Creates a block level button. |
-| `.pf-m-control` | `.pf-c-button` | Modifies for control styles. **Note:** This modifier should only be used when using buttons in the Input Group or Clipboard Copy components. |
-| `.pf-m-expanded` | `.pf-c-button.pf-m-control` | Modifies a control button for the expanded state. |
-| `.pf-m-start` | `.pf-c-button__icon` | Applies right spacing to an icon inside of a button when the icon comes before text. |
-| `.pf-m-end` | `.pf-c-button__icon` | Applies left spacing to an icon inside of a button when the icon comes after text. |
-| `.pf-m-active` | `.pf-c-button` | Forces display of the active state of the button. This modifier should be used when `aria-pressed` is set to true so that the button displays in an active state. |
-| `.pf-m-small` | `.pf-c-button` | Modifies the button so that it has small font size. |
-| `.pf-m-aria-disabled` | `.pf-c-button` | Modifies a button to be visually disabled, yet is still focusable. |
-| `.pf-m-display-lg` | `.pf-c-button`, `pf-c-button.pf-m-link` | Modifies the button and link button for large display styling. For example, use this modifier to achieve "call to action" styles. |
-| `.pf-m-progress` | `.pf-c-button` | Indicates that the button supports the progress state. **Note:** Not used with the plain variation. |
-| `.pf-m-in-progress` | `.pf-c-button` | Indicates that the button is in the in progress state. |
+| `.pf-v5-c-button` | `<button>` |  Initiates a button. Always use it with a modifier class. **Required** |
+| `.pf-v5-c-button__icon` | `<span>` | Initiates a button icon. |
+| `.pf-v5-c-button__progress` | `<span>` | Initiates a button progress container. |
+| `.pf-v5-c-button__count` | `<span>` | Initiates a button count container. **Note:** Count should only be used on link buttons.|
+| `.pf-m-primary` | `.pf-v5-c-button` | Modifies for primary styles. |
+| `.pf-m-secondary` | `.pf-v5-c-button` | Modifies for secondary styles. |
+| `.pf-m-tertiary` | `.pf-v5-c-button` | Modifies for tertiary styles. |
+| `.pf-m-danger` | `.pf-v5-c-button` | Modifies for danger styles. |
+| `.pf-m-link` | `.pf-v5-c-button` | Modifies for link styles. This button has no background or border and is styled as a link. This button would commonly appear in a form and may include an icon. |
+| `.pf-m-plain` | `.pf-v5-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for `.pf-m-plain` icon buttons such as close, expand, kebab, etc. |
+| `.pf-m-inline` | `.pf-v5-c-button.pf-m-link` | Modifies for inline styles. This button is presented similar to a normal link and has no padding and is displayed inline with other inline content. When used as a `<span>`, the text will flow inline with text around it. |
+| `.pf-m-block` | `.pf-v5-c-button` | Creates a block level button. |
+| `.pf-m-control` | `.pf-v5-c-button` | Modifies for control styles. **Note:** This modifier should only be used when using buttons in the Input Group or Clipboard Copy components. |
+| `.pf-m-expanded` | `.pf-v5-c-button.pf-m-control` | Modifies a control button for the expanded state. |
+| `.pf-m-start` | `.pf-v5-c-button__icon` | Applies right spacing to an icon inside of a button when the icon comes before text. |
+| `.pf-m-end` | `.pf-v5-c-button__icon` | Applies left spacing to an icon inside of a button when the icon comes after text. |
+| `.pf-m-active` | `.pf-v5-c-button` | Forces display of the active state of the button. This modifier should be used when `aria-pressed` is set to true so that the button displays in an active state. |
+| `.pf-m-small` | `.pf-v5-c-button` | Modifies the button so that it has small font size. |
+| `.pf-m-aria-disabled` | `.pf-v5-c-button` | Modifies a button to be visually disabled, yet is still focusable. |
+| `.pf-m-display-lg` | `.pf-v5-c-button`, `pf-v5-c-button.pf-m-link` | Modifies the button and link button for large display styling. For example, use this modifier to achieve "call to action" styles. |
+| `.pf-m-progress` | `.pf-v5-c-button` | Indicates that the button supports the progress state. **Note:** Not used with the plain variation. |
+| `.pf-m-in-progress` | `.pf-v5-c-button` | Indicates that the button is in the in progress state. |

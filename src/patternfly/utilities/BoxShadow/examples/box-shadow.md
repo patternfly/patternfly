@@ -8,83 +8,83 @@ import './box-shadow.css'
 ## Examples
 ### Small
 ```hbs
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-sm"}}
   Regular
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-top"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-sm-top"}}
   Top
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-right"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-sm-right"}}
   Right
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-bottom"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-sm-bottom"}}
   Bottom
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-sm-left"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-sm-left"}}
   Left
 {{/box-shadow}}
 ```
 
 ### Medium
 ```hbs
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-md"}}
   Regular
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-top"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-md-top"}}
   Top
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-right"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-md-right"}}
   Right
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-bottom"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-md-bottom"}}
   Bottom
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-md-left"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-md-left"}}
   Left
 {{/box-shadow}}
 ```
 
 ### Large
 ```hbs
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-lg"}}
   Regular
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-top"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-lg-top"}}
   Top
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-right"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-lg-right"}}
   Right
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-bottom"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-lg-bottom"}}
   Bottom
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-lg-left"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-lg-left"}}
   Left
 {{/box-shadow}}
 ```
 
 ### Extra large
 ```hbs
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-xl"}}
   Regular
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl-top"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-xl-top"}}
   Top
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl-right"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-xl-right"}}
   Right
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl-bottom"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-xl-bottom"}}
   Bottom
 {{/box-shadow}}
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-xl-left"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-xl-left"}}
   Left
 {{/box-shadow}}
 ```
 
 ### Inset
 ```hbs
-{{#> box-shadow box-shadow--modifier="pf-u-box-shadow-inset"}}
+{{#> box-shadow box-shadow--modifier="pf-v5-u-box-shadow-inset"}}
   Regular
 {{/box-shadow}}
 ```
@@ -96,23 +96,23 @@ Box shadow utility
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-u-box-shadow-sm` | `*` |  Applies box-shadow small. |
-| `.pf-u-box-shadow-sm-top` | `*` |  Applies box-shadow small top. |
-| `.pf-u-box-shadow-sm-right` | `*` |  Applies box-shadow small right. |
-| `.pf-u-box-shadow-sm-bottom` | `*` |  Applies box-shadow small bottom. |
-| `.pf-u-box-shadow-sm-left` | `*` |  Applies box-shadow small left. |
-| `.pf-u-box-shadow-md` | `*` |  Applies box-shadow medium. |
-| `.pf-u-box-shadow-md-top` | `*` |  Applies box-shadow medium top. |
-| `.pf-u-box-shadow-md-right` | `*` |  Applies box-shadow medium right. |
-| `.pf-u-box-shadow-md-bottom` | `*` |  Applies box-shadow medium bottom. |
-| `.pf-u-box-shadow-md-left` | `*` |  Applies box-shadow medium left. |
-| `.pf-u-box-shadow-lg` | `*` |  Applies box-shadow large. |
-| `.pf-u-box-shadow-lg-top` | `*` |  Applies box-shadow large top. |
-| `.pf-u-box-shadow-lg-right` | `*` |  Applies box-shadow large right. |
-| `.pf-u-box-shadow-lg-bottom` | `*` |  Applies box-shadow large bottom. |
-| `.pf-u-box-shadow-lg-left` | `*` |  Applies box-shadow large left. |
-| `.pf-u-box-shadow-xl` | `*` |  Applies box-shadow x-large. |
-| `.pf-u-box-shadow-xl-top` | `*` |  Applies box-shadow x-large top. |
-| `.pf-u-box-shadow-xl-right` | `*` |  Applies box-shadow x-large right. |
-| `.pf-u-box-shadow-xl-bottom` | `*` |  Applies box-shadow x-large bottom. |
-| `.pf-u-box-shadow-xl-left` | `*` |  Applies box-shadow x-large left. |
+| `.pf-v5-u-box-shadow-sm` | `*` |  Applies box-shadow small. |
+| `.pf-v5-u-box-shadow-sm-top` | `*` |  Applies box-shadow small top. |
+| `.pf-v5-u-box-shadow-sm-right` | `*` |  Applies box-shadow small right. |
+| `.pf-v5-u-box-shadow-sm-bottom` | `*` |  Applies box-shadow small bottom. |
+| `.pf-v5-u-box-shadow-sm-left` | `*` |  Applies box-shadow small left. |
+| `.pf-v5-u-box-shadow-md` | `*` |  Applies box-shadow medium. |
+| `.pf-v5-u-box-shadow-md-top` | `*` |  Applies box-shadow medium top. |
+| `.pf-v5-u-box-shadow-md-right` | `*` |  Applies box-shadow medium right. |
+| `.pf-v5-u-box-shadow-md-bottom` | `*` |  Applies box-shadow medium bottom. |
+| `.pf-v5-u-box-shadow-md-left` | `*` |  Applies box-shadow medium left. |
+| `.pf-v5-u-box-shadow-lg` | `*` |  Applies box-shadow large. |
+| `.pf-v5-u-box-shadow-lg-top` | `*` |  Applies box-shadow large top. |
+| `.pf-v5-u-box-shadow-lg-right` | `*` |  Applies box-shadow large right. |
+| `.pf-v5-u-box-shadow-lg-bottom` | `*` |  Applies box-shadow large bottom. |
+| `.pf-v5-u-box-shadow-lg-left` | `*` |  Applies box-shadow large left. |
+| `.pf-v5-u-box-shadow-xl` | `*` |  Applies box-shadow x-large. |
+| `.pf-v5-u-box-shadow-xl-top` | `*` |  Applies box-shadow x-large top. |
+| `.pf-v5-u-box-shadow-xl-right` | `*` |  Applies box-shadow x-large right. |
+| `.pf-v5-u-box-shadow-xl-bottom` | `*` |  Applies box-shadow x-large bottom. |
+| `.pf-v5-u-box-shadow-xl-left` | `*` |  Applies box-shadow x-large left. |

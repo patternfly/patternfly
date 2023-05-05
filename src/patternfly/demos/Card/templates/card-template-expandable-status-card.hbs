@@ -1,7 +1,7 @@
 {{#> l-flex l-flex--modifier="pf-m-flex-1 pf-m-align-self-stretch pf-m-align-items-stretch"}}
   {{#> card card--modifier="pf-m-plain" l-flex--modifier=reset l-flex-item--modifier=reset}}
     {{#> card-body}}
-      {{#> l-flex l-flex--modifier="pf-m-column pf-u-h-100 pf-m-space-items-sm"}}
+      {{#> l-flex l-flex--modifier=(concat 'pf-m-column ' (pfv 'u') 'h-100 pf-m-space-items-sm')}}
         {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column-on-md pf-m-row-on-lg pf-m-spacer-md-on-md pf-m-spacer-sm-on-lg"}}
           {{#> label-group label-group--id="label-group-overflow"}}
             {{#> label-group-main}}
@@ -12,7 +12,7 @@
                       {{#if card-template-expandable-status-card--label-icon}}
                         {{{card-template-expandable-status-card--label-icon}}}
                       {{else}}
-                        <i class="pf-icon pf-icon-port" aria-hidden="true"></i>
+                        <i class="pf-v5-c-icon pf-v5-c-icon-port" aria-hidden="true"></i>
                       {{/if}}
                     {{/label-icon}}
                     {{> label-text label-text--value=(ternary card-template-expandable-status-card--label-text card-template-expandable-status-card--label-text 'Performance')}}
@@ -43,7 +43,7 @@
             {{/if}}
           </p>
         {{/l-flex-item}}
-        {{#> l-flex l-flex--modifier="pf-m-grow pf-m-column pf-m-row-on-lg pf-m-justify-content-flex-end pf-m-justify-content-flex-start-on-lg pf-m-align-content-flex-end-on-lg" l-flex--attribute='style="row-gap: var(--pf-global--spacer--md);"'}}
+        {{#> l-flex l-flex--modifier="pf-m-grow pf-m-column pf-m-row-on-lg pf-m-justify-content-flex-end pf-m-justify-content-flex-start-on-lg pf-m-align-content-flex-end-on-lg" l-flex--attribute='style="row-gap: var(--pf-v5-global--spacer--md);"'}}
           {{#if card-template-expandable-status-card--HasIncident}}
             {{#> l-flex-item l-flex-item--attribute='style="margin-bottom: -.25em"'}}
               {{> label label--color="red" label-text--value="Incident"}}
@@ -51,11 +51,11 @@
           {{/if}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-align-items-center pf-m-nowrap"}}
             {{#if card-template-expandable-status-card--RequiresReboot}}
-              <i class="pf-icon pf-icon-on pf-u-danger-color-100" style="line-height: 1" aria-hidden="true"></i>
-              <p class="pf-u-color-200">System reboot <b class="pf-u-color-100">is</b> required</p>
+              <i class="pf-v5-c-icon pf-v5-c-icon-on {{pfv 'u'}}danger-color-100" style="line-height: 1" aria-hidden="true"></i>
+              <p class="{{pfv 'u'}}color-200">System reboot <b class="{{pfv 'u'}}color-100">is</b> required</p>
             {{else}}
-              <i class="pf-icon pf-icon-on pf-u-color-400" style="line-height: 1" aria-hidden="true"></i>
-              <p class="pf-u-color-200">System reboot <b class="pf-u-color-100">is not</b> required</p>
+              <i class="pf-v5-c-icon pf-v5-c-icon-on {{pfv 'u'}}color-400" style="line-height: 1" aria-hidden="true"></i>
+              <p class="{{pfv 'u'}}color-200">System reboot <b class="{{pfv 'u'}}color-100">is not</b> required</p>
             {{/if}}
           {{/l-flex}}
         {{/l-flex}}

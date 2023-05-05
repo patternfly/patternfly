@@ -1,4 +1,4 @@
-<{{#if accordion--IsDefinitionList}}dd{{else}}div{{/if}} class="pf-c-accordion__expandable-content{{#if accordion-expandable-content--IsExpanded}} pf-m-expanded{{/if}}{{#if accordion-expandable-content--IsFixed}} pf-m-fixed{{/if}}{{#if accordion-expandable-content--modifier}} {{accordion-expandable-content--modifier}}{{/if}}"
+<{{#if accordion--IsDefinitionList}}dd{{else}}div{{/if}} class="{{pfv}}accordion__expandable-content{{#if accordion-expandable-content--IsExpanded}} pf-m-expanded{{/if}}{{#if accordion-expandable-content--IsFixed}} pf-m-fixed{{/if}}{{#if accordion-expandable-content--modifier}} {{accordion-expandable-content--modifier}}{{/if}}"
   {{#unless accordion-expandable-content--IsExpanded}}hidden{{/unless}}
   {{#if accordion-expandable-content--IsFixed}}
     {{#unless accordion-expandable-content--HasNoScrollbar}}

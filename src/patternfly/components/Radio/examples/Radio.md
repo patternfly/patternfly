@@ -2,7 +2,7 @@
 id: Radio
 section: components
 subsection: forms
-cssPrefix: pf-c-radio
+cssPrefix: pf-v5-c-radio
 ---
 
 ## Examples
@@ -108,10 +108,10 @@ If you extend this component or modify the styles of this component, then make s
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-radio` | `<div>`, `<label>` |  Initiates the radio component. **Required**  |
-| `.pf-c-radio__input` | `<input type="radio">` |  Initiates a radio input. **Required**  |
-| `.pf-c-radio__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
-| `.pf-c-radio__description` | `<span>` | Initiates a radio description. |
-| `.pf-c-radio__body` | `<span>` | Initiates a radio body. |
-| `.pf-m-standalone` | `.pf-c-radio` |  Modifies the radio component for use with a standalone `<input type="radio">`. **Required when there is no label** |
-| `.pf-m-disabled` | `.pf-c-radio__label` |  Modifies the radio component for the disabled state. **Required when input is disabled** |
+| `.pf-v5-c-radio` | `<div>`, `<label>` |  Initiates the radio component. **Required**  |
+| `.pf-v5-c-radio__input` | `<input type="radio">` |  Initiates a radio input. **Required**  |
+| `.pf-v5-c-radio__label` | `<label>`, `<span>` |  Initiates a label. **Required**  |
+| `.pf-v5-c-radio__description` | `<span>` | Initiates a radio description. |
+| `.pf-v5-c-radio__body` | `<span>` | Initiates a radio body. |
+| `.pf-m-standalone` | `.pf-v5-c-radio` |  Modifies the radio component for use with a standalone `<input type="radio">`. **Required when there is no label** |
+| `.pf-m-disabled` | `.pf-v5-c-radio__label` |  Modifies the radio component for the disabled state. **Required when input is disabled** |

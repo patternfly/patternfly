@@ -1,14 +1,14 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-wizard() {
-  .pf-c-wizard {
-    --pf-c-wizard__header--BackgroundColor: var(--pf-global--palette--black-1000);
-    --pf-c-wizard__nav-link--before--BackgroundColor: var(--pf-global--palette--black-500);
-    --pf-c-wizard__nav-link--m-disabled--Color: var(--pf-global--disabled-color--300);
-    --pf-c-wizard__nav-link--m-disabled--before--Color: var(--pf-global--disabled-color--300);
+@mixin pf-v5-theme-dark-wizard() {
+  .#{$wizard} {
+    --#{$wizard}__header--BackgroundColor: var(--#{$pf-global}--palette--black-1000);
+    --#{$wizard}__nav-link--before--BackgroundColor: var(--#{$pf-global}--palette--black-500);
+    --#{$wizard}__nav-link--m-disabled--Color: var(--#{$pf-global}--disabled-color--300);
+    --#{$wizard}__nav-link--m-disabled--before--Color: var(--#{$pf-global}--disabled-color--300);
   }
 
-  .pf-c-wizard__header {
-    @include pf-theme-dark--t-dark;
+  .#{$wizard}__header {
+    @include pf-v5-theme-dark--t-dark;
   }
 }

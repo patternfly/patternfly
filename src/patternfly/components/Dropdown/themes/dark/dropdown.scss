@@ -1,25 +1,25 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-dropdown() {
-  .pf-c-dropdown {
-    --pf-c-dropdown__toggle--BackgroundColor: var(--pf-global--BackgroundColor--400);
-    --pf-c-dropdown__toggle--before--BorderTopColor: transparent;
-    --pf-c-dropdown__toggle--before--BorderRightColor: transparent;
-    --pf-c-dropdown__toggle--before--BorderBottomColor: var(--pf-global--BorderColor--400);
-    --pf-c-dropdown__toggle--before--BorderLeftColor: transparent;
-    --pf-c-dropdown__toggle--disabled--BackgroundColor: var(--pf-global--palette--black-500);
-    --pf-c-dropdown__toggle--m-primary--BackgroundColor: var(--pf-global--primary-color--300);
-    --pf-c-dropdown__menu--BackgroundColor: var(--pf-global--BackgroundColor--300);
-    --pf-c-dropdown__menu--Top: 100%;
-    --pf-c-dropdown--m-top__menu--TranslateY: -100%;
-    --pf-c-dropdown__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
+@mixin pf-v5-theme-dark-dropdown() {
+  .#{$dropdown} {
+    --#{$dropdown}__toggle--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+    --#{$dropdown}__toggle--before--BorderTopColor: transparent;
+    --#{$dropdown}__toggle--before--BorderRightColor: transparent;
+    --#{$dropdown}__toggle--before--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
+    --#{$dropdown}__toggle--before--BorderLeftColor: transparent;
+    --#{$dropdown}__toggle--disabled--BackgroundColor: var(--#{$pf-global}--palette--black-500);
+    --#{$dropdown}__toggle--m-primary--BackgroundColor: var(--#{$pf-global}--primary-color--300);
+    --#{$dropdown}__menu--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$dropdown}__menu--Top: 100%;
+    --#{$dropdown}--m-top__menu--TranslateY: -100%;
+    --#{$dropdown}__menu-item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
   }
 
-  .pf-c-dropdown__toggle {
+  .#{$dropdown}__toggle {
     &:not(.pf-m-plain) {
       &:disabled,
       &.pf-m-disabled {
-        color: var(--pf-global--palette--black-100); // should be a global var?
+        color: var(--#{$pf-global}--palette--black-100); // should be a global var?
       }
     }
 

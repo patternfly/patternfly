@@ -1,7 +1,7 @@
 ---
 id: Modal
 section: components
-cssPrefix: pf-c-modal-box
+cssPrefix: pf-v5-c-modal-box
 ---
 
 import './ModalBox.css'
@@ -291,45 +291,45 @@ import './ModalBox.css'
 
 ## Documentation
 ### Overview
-A modal box is a generic rectangular container that can be used to build modals. A modal box can have the following sections: header, title, description, body, and footer. With normal use of the modal, a title or body is required. Alternatively, no child elements can be used, and the `.pf-c-modal-box` container will  serve as a generic container with no padding for custom modal content. If no `.pf-c-modal-box__title` is used, `aria-label="[title of modal]"` must be provided for `.pf-c-modal-box`.
+A modal box is a generic rectangular container that can be used to build modals. A modal box can have the following sections: header, title, description, body, and footer. With normal use of the modal, a title or body is required. Alternatively, no child elements can be used, and the `.pf-v5-c-modal-box` container will  serve as a generic container with no padding for custom modal content. If no `.pf-v5-c-modal-box__title` is used, `aria-label="[title of modal]"` must be provided for `.pf-v5-c-modal-box`.
 
 
 ### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
-| `role="dialog"` | `.pf-c-modal-box` | Identifies the element that serves as the modal container. **Required** |
-| `aria-labelledby="[id value of .pf-c-modal-box__title or custom modal title]"` | `.pf-c-modal-box` | Gives the modal an accessible name by referring to the element that provides the dialog title. **Required when .pf-c-title is present** |
-| `aria-label="[title of modal]"` | `.pf-c-modal-box` | Gives the modal an accessible name. **Required when `.pf-c-modal-box__title` is _not_ present** |
-| `aria-describedby="[id value of applicable content]"` | `.pf-c-modal-box` | Gives the modal an accessible description by referring to the modal content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the modal. |
-| `aria-modal="true"` | `.pf-c-modal-box` | Tells assistive technologies that the windows underneath the current modal are not available for interaction. **Required**|
-| `aria-label="Close"` | `.pf-c-modal-box__close .pf-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
-| `aria-hidden="true"` | Parent element containing the page contents when modal is open | Hides main contents of the page from screen readers. The element with `.pf-c-modal-box` must not be a descendent of the element with `aria-hidden="true"`. For more info see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
-| `form="[id of form in modal body]"` | `.pf-c-modal-box__footer .pf-c-button` | Associates a submit button in the modal footer with a form in the modal body. For use when the submit button is outside of the `<form>` that the button submits. |
-| `tabindex="0"` | `.pf-c-modal-box__body` | If a modal box body has overflow content that triggers a scrollbar, to ensure that the content is keyboard accessible, the body must include either a focusable element within the scrollable region or the body itself must be focusable by adding `tabindex="0"`. |
+| `role="dialog"` | `.pf-v5-c-modal-box` | Identifies the element that serves as the modal container. **Required** |
+| `aria-labelledby="[id value of .pf-v5-c-modal-box__title or custom modal title]"` | `.pf-v5-c-modal-box` | Gives the modal an accessible name by referring to the element that provides the dialog title. **Required when .pf-v5-c-title is present** |
+| `aria-label="[title of modal]"` | `.pf-v5-c-modal-box` | Gives the modal an accessible name. **Required when `.pf-v5-c-modal-box__title` is _not_ present** |
+| `aria-describedby="[id value of applicable content]"` | `.pf-v5-c-modal-box` | Gives the modal an accessible description by referring to the modal content that describes the primary message or purpose of the dialog. Not used if there is no static text that describes the modal. |
+| `aria-modal="true"` | `.pf-v5-c-modal-box` | Tells assistive technologies that the windows underneath the current modal are not available for interaction. **Required**|
+| `aria-label="Close"` | `.pf-v5-c-modal-box__close .pf-v5-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
+| `aria-hidden="true"` | Parent element containing the page contents when modal is open | Hides main contents of the page from screen readers. The element with `.pf-v5-c-modal-box` must not be a descendent of the element with `aria-hidden="true"`. For more info see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
+| `form="[id of form in modal body]"` | `.pf-v5-c-modal-box__footer .pf-v5-c-button` | Associates a submit button in the modal footer with a form in the modal body. For use when the submit button is outside of the `<form>` that the button submits. |
+| `tabindex="0"` | `.pf-v5-c-modal-box__body` | If a modal box body has overflow content that triggers a scrollbar, to ensure that the content is keyboard accessible, the body must include either a focusable element within the scrollable region or the body itself must be focusable by adding `tabindex="0"`. |
 
 ### Usage
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-modal-box` | `<div>` | Initiates a modal box. **Required** |
-| `.pf-c-modal-box__close` | `<div>` | Creates a container for the modal box close button. **Required** if there is a close button. |
-| `.pf-c-button.pf-m-plain` | `<button>` | Initiates a modal box close button. |
-| `.pf-c-modal-box__header` | `<header>` | Initiates a modal box header. **Required** if using a `.pf-c-modal-box__title`. |
-| `.pf-c-modal-box__header-main` | `<div>` | Initiates a modal box header main container. **Required** when `pf-c-modal-box__header-help` is used. |
-| `.pf-c-modal-box__header-help` | `<div>` | Initiates the help button container in the modal box header actions. |
-| `.pf-c-modal-box__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`, `<div>` | Initiates a modal box title. **Required** if using a modal description. |
-| `.pf-c-modal-box__title-icon` | `<span>` | Initiates a container for the modal box title icon. |
-| `.pf-c-modal-box__title-text` | `<span>` | Initiates a container for the modal box title text. |
-| `.pf-c-modal-box__description` | `<div>` | Initiates a modal box description. |
-| `.pf-c-modal-box__body` | `<div>` | Initiates a modal box body. |
-| `.pf-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
-| `.pf-m-sm` | `.pf-c-modal-box` | Modifies for a small modal box width. |
-| `.pf-m-md` | `.pf-c-modal-box` | Modifies for a medium modal box width. |
-| `.pf-m-lg` | `.pf-c-modal-box` | Modifies for a large modal box width. |
-| `.pf-m-align-top` | `.pf-c-modal-box` | Modifies for top alignment.  |
-| `.pf-m-icon` | `.pf-c-modal-box__title` | Modifies the title layout to accommodate an icon. |
-| `.pf-m-custom` | `.pf-c-modal-box` | Modifies for the custom alert state. |
-| `.pf-m-info` | `.pf-c-modal-box` | Modifies for the info alert state. |
-| `.pf-m-success` | `.pf-c-modal-box` | Modifies for the success alert state. |
-| `.pf-m-warning` | `.pf-c-modal-box` | Modifies for the warning alert state. |
-| `.pf-m-danger` | `.pf-c-modal-box` | Modifies for the danger alert state. |
-| `.pf-m-help` | `.pf-c-modal-box__header` | Modifies the modal box header to support the help action |
+| `.pf-v5-c-modal-box` | `<div>` | Initiates a modal box. **Required** |
+| `.pf-v5-c-modal-box__close` | `<div>` | Creates a container for the modal box close button. **Required** if there is a close button. |
+| `.pf-v5-c-button.pf-m-plain` | `<button>` | Initiates a modal box close button. |
+| `.pf-v5-c-modal-box__header` | `<header>` | Initiates a modal box header. **Required** if using a `.pf-v5-c-modal-box__title`. |
+| `.pf-v5-c-modal-box__header-main` | `<div>` | Initiates a modal box header main container. **Required** when `pf-v5-c-modal-box__header-help` is used. |
+| `.pf-v5-c-modal-box__header-help` | `<div>` | Initiates the help button container in the modal box header actions. |
+| `.pf-v5-c-modal-box__title` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`, `<div>` | Initiates a modal box title. **Required** if using a modal description. |
+| `.pf-v5-c-modal-box__title-icon` | `<span>` | Initiates a container for the modal box title icon. |
+| `.pf-v5-c-modal-box__title-text` | `<span>` | Initiates a container for the modal box title text. |
+| `.pf-v5-c-modal-box__description` | `<div>` | Initiates a modal box description. |
+| `.pf-v5-c-modal-box__body` | `<div>` | Initiates a modal box body. |
+| `.pf-v5-c-modal-box__footer` | `<footer>` | Initiates a modal box footer. |
+| `.pf-m-sm` | `.pf-v5-c-modal-box` | Modifies for a small modal box width. |
+| `.pf-m-md` | `.pf-v5-c-modal-box` | Modifies for a medium modal box width. |
+| `.pf-m-lg` | `.pf-v5-c-modal-box` | Modifies for a large modal box width. |
+| `.pf-m-align-top` | `.pf-v5-c-modal-box` | Modifies for top alignment.  |
+| `.pf-m-icon` | `.pf-v5-c-modal-box__title` | Modifies the title layout to accommodate an icon. |
+| `.pf-m-custom` | `.pf-v5-c-modal-box` | Modifies for the custom alert state. |
+| `.pf-m-info` | `.pf-v5-c-modal-box` | Modifies for the info alert state. |
+| `.pf-m-success` | `.pf-v5-c-modal-box` | Modifies for the success alert state. |
+| `.pf-m-warning` | `.pf-v5-c-modal-box` | Modifies for the warning alert state. |
+| `.pf-m-danger` | `.pf-v5-c-modal-box` | Modifies for the danger alert state. |
+| `.pf-m-help` | `.pf-v5-c-modal-box__header` | Modifies the modal box header to support the help action |

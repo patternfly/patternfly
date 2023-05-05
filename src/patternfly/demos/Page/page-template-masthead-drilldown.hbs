@@ -5,16 +5,16 @@
         {{#> menu-list-item menu-list-item--IsDisabled="true"}}
           {{#> menu-item}}
             {{#> menu-item-description}}
-              <div class="pf-u-font-size-sm">Username:</div>
-              <div class="pf-u-font-size-md">mshaksho@redhat.com</div>
+              <div class="{{pfv 'u'}}font-size-sm">Username:</div>
+              <div class="{{pfv 'u'}}font-size-md">mshaksho@redhat.com</div>
             {{/menu-item-description}}
           {{/menu-item}}
         {{/menu-list-item}}
         {{#> menu-list-item menu-list-item--IsDisabled="true"}}
           {{#> menu-item}}
             {{#> menu-item-description}}
-              <div class="pf-u-font-size-sm">Account number:</div>
-              <div class="pf-u-font-size-md">123456789</div>
+              <div class="{{pfv 'u'}}font-size-sm">Account number:</div>
+              <div class="{{pfv 'u'}}font-size-md">123456789</div>
             {{/menu-item-description}}
           {{/menu-item}}
         {{/menu-list-item}}
@@ -36,9 +36,9 @@
           {{/menu}}
         {{/menu-list-item}}
 
-        {{#> menu-list-item menu--IsDrilledInReset="true" menu-list-item--IsExpandable="true" menu-list-item--text="Help" menu-list-item--IsDrillDown="true" menu-list-item--icon="pf-icon pf-icon-help"}}
+        {{#> menu-list-item menu--IsDrilledInReset="true" menu-list-item--IsExpandable="true" menu-list-item--text="Help" menu-list-item--IsDrillDown="true" menu-list-item--icon="pf-v5-c-icon pf-v5-c-icon-help"}}
           {{#> menu menu--IsSubmenu="true" menu--modifier="" menu--id=(concat menu--id  '-list-2') menu--attribute=''}}
-            {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Help" menu-list-item--icon="pf-icon pf-icon-help"}}
+            {{> menu-list-item newcontext menu-list-item--IsDrillUp="true" menu-list-item--text="Help" menu-list-item--icon="pf-v5-c-icon pf-v5-c-icon-help"}}
             {{> divider divider--type="li"}}
             {{> menu-list-item newcontext menu-list-item--text="Support options" menu-item--IsLink="true"}}
             {{> menu-list-item newcontext menu-list-item--text="Open support case" menu-item--IsLink="true"}}

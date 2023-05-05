@@ -2,7 +2,7 @@
 id: Select
 section: components
 subsection: menus
-cssPrefix: pf-c-select
+cssPrefix: pf-v5-c-select
 ---
 
 import './Select.css'
@@ -39,17 +39,17 @@ The single select should be used when the user is selecting an option from a lis
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select` | `<div>` |  Initiates a custom select. |
-| `.pf-c-select__toggle` | `<button>` |  Initiates a custom toggle. |
-| `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates a custom select toggle wrapper. |
-| `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
-| `.pf-c-select__menu` | `<ul>` |  Initiates the custom select dropdown menu. |
-| `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the custom select dropdown menu. |
-| `.pf-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
-| `.pf-m-top` | `.pf-c-select` |  Modifies the select menu to display above the toggle. |
-| `.pf-m-align-right` | `.pf-c-select__menu` |  Modifies the select menu to display right aligned to the toggle. |
-| `.pf-m-static` | `.pf-c-select__menu` |  Modifies the select menu to be statically positioned to support custom positioning. |
-| `.pf-m-active` | `.pf-c-select` | Forces display of the active state of the toggle. |
+| `.pf-v5-c-select` | `<div>` |  Initiates a custom select. |
+| `.pf-v5-c-select__toggle` | `<button>` |  Initiates a custom toggle. |
+| `.pf-v5-c-select__toggle-wrapper` | `<div>` |  Initiates a custom select toggle wrapper. |
+| `.pf-v5-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
+| `.pf-v5-c-select__menu` | `<ul>` |  Initiates the custom select dropdown menu. |
+| `.pf-v5-c-select__menu-item` | `<li>` |  Initiates the items in the custom select dropdown menu. |
+| `.pf-v5-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
+| `.pf-m-top` | `.pf-v5-c-select` |  Modifies the select menu to display above the toggle. |
+| `.pf-m-align-right` | `.pf-v5-c-select__menu` |  Modifies the select menu to display right aligned to the toggle. |
+| `.pf-m-static` | `.pf-v5-c-select__menu` |  Modifies the select menu to be statically positioned to support custom positioning. |
+| `.pf-m-active` | `.pf-v5-c-select` | Forces display of the active state of the toggle. |
 
 ## States
 ### Disabled
@@ -83,26 +83,26 @@ The single select should be used when the user is selecting an option from a lis
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-invalid="true"` | `.pf-c-select__toggle` | Indicates that the select is in the invalid state. |
-| `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
-| `disabled` | `.pf-c-select__toggle` | Disables the dropdown toggle and removes it from keyboard focus. |
+| `aria-invalid="true"` | `.pf-v5-c-select__toggle` | Indicates that the select is in the invalid state. |
+| `aria-selected="true"` | `.pf-v5-c-select__menu-item` | Should be set programmatically to indicate the active item. |
+| `disabled` | `.pf-v5-c-select__toggle` | Disables the dropdown toggle and removes it from keyboard focus. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select` | `<div>` |  Initiates the select component. |
-| `.pf-c-select__toggle` | `<button>` |  Initiates the select toggle. |
-| `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
-| `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
-| `.pf-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
-| `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
-| `.pf-c-select__menu-item-icon` | `<span>` |  Initiates the selected item icon wrapper. |
-| `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
-| `.pf-m-success` | `.pf-c-select` | Modifies select component for the success state. |
-| `.pf-m-warning` | `.pf-c-select` | Modifies select component for the warning state. |
-| `.pf-m-invalid` | `.pf-c-select` | Modifies select component for the invalid state. |
-| `.pf-m-selected` | `.pf-c-select__menu-item` |  Indicates the menu item is selected. |
-| `.pf-m-disabled` | `div.pf-c-select__toggle` | Modifies to display the select toggle as disabled. This applies to `div.pf-c-select__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-c-select__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-c-select__toggle`|
+| `.pf-v5-c-select` | `<div>` |  Initiates the select component. |
+| `.pf-v5-c-select__toggle` | `<button>` |  Initiates the select toggle. |
+| `.pf-v5-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
+| `.pf-v5-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
+| `.pf-v5-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
+| `.pf-v5-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
+| `.pf-v5-c-select__menu-item-icon` | `<span>` |  Initiates the selected item icon wrapper. |
+| `.pf-m-expanded` | `.pf-v5-c-select` |  Indicates the select is expanded. |
+| `.pf-m-success` | `.pf-v5-c-select` | Modifies select component for the success state. |
+| `.pf-m-warning` | `.pf-v5-c-select` | Modifies select component for the warning state. |
+| `.pf-m-invalid` | `.pf-v5-c-select` | Modifies select component for the invalid state. |
+| `.pf-m-selected` | `.pf-v5-c-select__menu-item` |  Indicates the menu item is selected. |
+| `.pf-m-disabled` | `div.pf-v5-c-select__toggle` | Modifies to display the select toggle as disabled. This applies to `div.pf-v5-c-select__toggle` and should not be used in lieu of the `disabled` attribute on `button.pf-v5-c-select__toggle`. When this is used, `disabled` should also be added to any form elements in `div.pf-v5-c-select__toggle`|
 
 ## Typeahead
 ### Single with typeahead
@@ -140,23 +140,23 @@ The single select typeahead should be used when the user is selecting one option
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
+| `aria-selected="true"` | `.pf-v5-c-select__menu-item` | Should be set programmatically to indicate the active item. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select` | `<div>` |  Initiates the select component. |
-| `.pf-c-select__toggle` | `<div>` |  Initiates the select toggle. |
-| `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
-| `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |
-| `.pf-c-select__toggle-clear` | `button.pf-c-button.pf-m-plain` |  Initiates a clear button in the toggle. |
-| `.pf-c-select__toggle-button` | `button.pf-c-button.pf-m-plain` | Initiates a toggle button. |
-| `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret icon. |
-| `.pf-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
-| `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
-| `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
-| `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
-| `.pf-m-focus` | `.pf-c-select__menu-item` |  Modifies the menu item to apply `:focus` styling. For use when navigating the menu items by keyboard when the typeahead input field has browser focus. |
+| `.pf-v5-c-select` | `<div>` |  Initiates the select component. |
+| `.pf-v5-c-select__toggle` | `<div>` |  Initiates the select toggle. |
+| `.pf-v5-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
+| `.pf-v5-c-select__toggle-typeahead` | `input.pf-v5-c-form-control` |  Initiates the input field for typeahead. |
+| `.pf-v5-c-select__toggle-clear` | `button.pf-v5-c-button.pf-m-plain` |  Initiates a clear button in the toggle. |
+| `.pf-v5-c-select__toggle-button` | `button.pf-v5-c-button.pf-m-plain` | Initiates a toggle button. |
+| `.pf-v5-c-select__toggle-arrow` | `<span>` |  Initiates the caret icon. |
+| `.pf-v5-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
+| `.pf-v5-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
+| `.pf-m-expanded` | `.pf-v5-c-select` |  Indicates the select is expanded. |
+| `.pf-m-typeahead` | `.pf-v5-c-select__toggle` |  Indicates the select has a typeahead. |
+| `.pf-m-focus` | `.pf-v5-c-select__menu-item` |  Modifies the menu item to apply `:focus` styling. For use when navigating the menu items by keyboard when the typeahead input field has browser focus. |
 
 ## Typeahead multiselect
 ### Select multi with typeahead
@@ -188,23 +188,23 @@ The multiselect should be used when the user is selecting multiple items from a 
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-selected="true"` | `.pf-c-select__menu-item` | Should be set programmatically to indicate the active item. |
+| `aria-selected="true"` | `.pf-v5-c-select__menu-item` | Should be set programmatically to indicate the active item. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select` | `<div>` |  Initiates the select component. |
-| `.pf-c-select__toggle` | `<div>` |  Initiates the select toggle. |
-| `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper so that chips and input field can wrap together. |
-| `.pf-c-chip` | `<div>` |  Initiates a chip. (See [chip component](/components/chip) for more details) |
-| `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |
-| `.pf-c-select__toggle-clear` | `button.pf-m-plain` |  Initiates a clear button in the toggle. |
-| `.pf-c-select__toggle-button` | `<button>` | Initiates a toggle button. |
-| `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret icon. |
-| `.pf-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
-| `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
-| `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
-| `.pf-m-typeahead` | `.pf-c-select__toggle` |  Indicates the select has a typeahead. |
+| `.pf-v5-c-select` | `<div>` |  Initiates the select component. |
+| `.pf-v5-c-select__toggle` | `<div>` |  Initiates the select toggle. |
+| `.pf-v5-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper so that chips and input field can wrap together. |
+| `.pf-v5-c-chip` | `<div>` |  Initiates a chip. (See [chip component](/components/chip) for more details) |
+| `.pf-v5-c-select__toggle-typeahead` | `input.pf-v5-c-form-control` |  Initiates the input field for typeahead. |
+| `.pf-v5-c-select__toggle-clear` | `button.pf-m-plain` |  Initiates a clear button in the toggle. |
+| `.pf-v5-c-select__toggle-button` | `<button>` | Initiates a toggle button. |
+| `.pf-v5-c-select__toggle-arrow` | `<span>` |  Initiates the caret icon. |
+| `.pf-v5-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
+| `.pf-v5-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
+| `.pf-m-expanded` | `.pf-v5-c-select` |  Indicates the select is expanded. |
+| `.pf-m-typeahead` | `.pf-v5-c-select__toggle` |  Indicates the select has a typeahead. |
 
 ## Checkbox
 ### Checkbox select
@@ -254,25 +254,25 @@ The checkbox select can select multiple items using checkboxes. The number of it
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select` | `<div>` | Initiates the select component. |
-| `.pf-c-select__toggle` | `<button>` | Initiates the select toggle. |
-| `.pf-c-select__toggle-wrapper` | `<div>` | Initiates the select toggle wrapper so that chips and input field can wrap together. |
-| `.pf-c-chip` | `<div>` | Initiates a chip. (See [chip component](/components/chip) for more details) |
-| `.pf-c-select__toggle-typeahead` | `input.pf-c-form-control` |  Initiates the input field for typeahead. |
-| `.pf-c-select__toggle-badge` | `<div>` | Initiates a container for a badge to indicate the number of items checked. * note: This should contain an unread badge * |
-| `.pf-c-select__toggle-clear` | `button.pf-m-plain` | Initiates a clear button in the toggle. |
-| `.pf-c-select__toggle-arrow` | `<span>` | Initiates the caret to toggle the dropdown. |
-| `.pf-c-select__menu` | `<div>` | Initiates the select dropdown menu. |
-| `.pf-c-select__menu-item` | `div.pf-c-check` | Initiates the items in the select dropdown menu. |
-| `.pf-c-select__menu-item-row` | `<span>` | Initiates a menu item row for use with positioning other elements before/after the item text. |
-| `.pf-c-select__menu-item-text` | `<span>` | Initiates the menu item row text. |
-| `.pf-c-select__menu-item-count` | `<span>` | Initiates the menu item row count. |
-| `.pf-c-select__menu-fieldset` | `<fieldset>` | Initiates a fieldset for the items in a checkbox select. |
-| `.pf-c-select__menu-group` | `<div>` | Initiates a group within a select menu. |
-| `.pf-c-select__menu-group-title` | `<div>` | Initiates a title for a group with a select menu. |
-| `.pf-c-select__menu-search` | `<div>` | Initiates a container for the search input group. |
-| `.pf-m-expanded` | `.pf-c-select` | Indicates the select is expanded. |
-| `.pf-m-typeahead` | `.pf-c-select__toggle` | Indicates the select has a typeahead. |
+| `.pf-v5-c-select` | `<div>` | Initiates the select component. |
+| `.pf-v5-c-select__toggle` | `<button>` | Initiates the select toggle. |
+| `.pf-v5-c-select__toggle-wrapper` | `<div>` | Initiates the select toggle wrapper so that chips and input field can wrap together. |
+| `.pf-v5-c-chip` | `<div>` | Initiates a chip. (See [chip component](/components/chip) for more details) |
+| `.pf-v5-c-select__toggle-typeahead` | `input.pf-v5-c-form-control` |  Initiates the input field for typeahead. |
+| `.pf-v5-c-select__toggle-badge` | `<div>` | Initiates a container for a badge to indicate the number of items checked. * note: This should contain an unread badge * |
+| `.pf-v5-c-select__toggle-clear` | `button.pf-m-plain` | Initiates a clear button in the toggle. |
+| `.pf-v5-c-select__toggle-arrow` | `<span>` | Initiates the caret to toggle the dropdown. |
+| `.pf-v5-c-select__menu` | `<div>` | Initiates the select dropdown menu. |
+| `.pf-v5-c-select__menu-item` | `div.pf-v5-c-check` | Initiates the items in the select dropdown menu. |
+| `.pf-v5-c-select__menu-item-row` | `<span>` | Initiates a menu item row for use with positioning other elements before/after the item text. |
+| `.pf-v5-c-select__menu-item-text` | `<span>` | Initiates the menu item row text. |
+| `.pf-v5-c-select__menu-item-count` | `<span>` | Initiates the menu item row count. |
+| `.pf-v5-c-select__menu-fieldset` | `<fieldset>` | Initiates a fieldset for the items in a checkbox select. |
+| `.pf-v5-c-select__menu-group` | `<div>` | Initiates a group within a select menu. |
+| `.pf-v5-c-select__menu-group-title` | `<div>` | Initiates a title for a group with a select menu. |
+| `.pf-v5-c-select__menu-search` | `<div>` | Initiates a container for the search input group. |
+| `.pf-m-expanded` | `.pf-v5-c-select` | Indicates the select is expanded. |
+| `.pf-m-typeahead` | `.pf-v5-c-select__toggle` | Indicates the select has a typeahead. |
 
 ## Plain
 ### Plain toggle
@@ -294,16 +294,16 @@ The plain select variation should be used when you do not want a border applied 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select` | `<div>` |  Initiates the select component. |
-| `.pf-c-select__toggle` | `<button>` |  Initiates the select toggle. |
-| `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
-| `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
-| `.pf-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
-| `.pf-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
-| `.pf-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
-| `.pf-m-expanded` | `.pf-c-select` |  Indicates the select is expanded. |
-| `.pf-m-plain` | `.pf-c-select__toggle` |  Modifies to display the toggle with no border. |
-| `.pf-m-selected` | `.pf-c-select__menu-item` |  Indicates the menu item is selected. |
+| `.pf-v5-c-select` | `<div>` |  Initiates the select component. |
+| `.pf-v5-c-select__toggle` | `<button>` |  Initiates the select toggle. |
+| `.pf-v5-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
+| `.pf-v5-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
+| `.pf-v5-c-select__menu` | `<ul>` |  Initiates the select dropdown menu. |
+| `.pf-v5-c-select__menu-item` | `<li>` |  Initiates the items in the select dropdown menu. |
+| `.pf-v5-c-select__menu-item-icon` | `<i>` |  Initiates the selected item icon. |
+| `.pf-m-expanded` | `.pf-v5-c-select` |  Indicates the select is expanded. |
+| `.pf-m-plain` | `.pf-v5-c-select__toggle` |  Modifies to display the toggle with no border. |
+| `.pf-m-selected` | `.pf-v5-c-select__menu-item` |  Indicates the menu item is selected. |
 
 ## Icon
 ### Toggle icon
@@ -316,16 +316,16 @@ The plain select variation should be used when you do not want a border applied 
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-hidden="true"` | `.pf-c-select__toggle-icon` | Hides the icon from assistive technologies.
+| `aria-hidden="true"` | `.pf-v5-c-select__toggle-icon` | Hides the icon from assistive technologies.
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select` | `<div>` |  Initiates the select component. |
-| `.pf-c-select__toggle` | `<button>` |  Initiates the select toggle. |
-| `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
-| `.pf-c-select__toggle-icon` | `<span>` |  Initiates the icon in the dropdown toggle. |
-| `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
+| `.pf-v5-c-select` | `<div>` |  Initiates the select component. |
+| `.pf-v5-c-select__toggle` | `<button>` |  Initiates the select toggle. |
+| `.pf-v5-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
+| `.pf-v5-c-select__toggle-icon` | `<span>` |  Initiates the icon in the dropdown toggle. |
+| `.pf-v5-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
 
 ## Panel
 ### Panel menu
@@ -338,11 +338,11 @@ The plain select variation should be used when you do not want a border applied 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select` | `<div>` |  Initiates the select component. |
-| `.pf-c-select__toggle` | `<button>` |  Initiates the select toggle. |
-| `.pf-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
-| `.pf-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
-| `.pf-c-select__menu` | `<div>` |  Initiates the select dropdown menu. |
+| `.pf-v5-c-select` | `<div>` |  Initiates the select component. |
+| `.pf-v5-c-select__toggle` | `<button>` |  Initiates the select toggle. |
+| `.pf-v5-c-select__toggle-wrapper` | `<div>` |  Initiates the select toggle wrapper. |
+| `.pf-v5-c-select__toggle-arrow` | `<span>` |  Initiates the caret to toggle the dropdown. |
+| `.pf-v5-c-select__menu` | `<div>` |  Initiates the select dropdown menu. |
 
 ## Description
 ### Item description
@@ -362,9 +362,9 @@ The plain select variation should be used when you do not want a border applied 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select__menu-item-description` | `<span>` |  Initiates the select menu item description element. |
-| `.pf-c-select__menu-item-main` | `<span>` | Initiates the select menu item main element. Used when the description element is present. |
-| `.pf-m-description` | `.pf-c-select__menu-item` | Modifies the select menu item when selected to accommodate the description element. |
+| `.pf-v5-c-select__menu-item-description` | `<span>` |  Initiates the select menu item description element. |
+| `.pf-v5-c-select__menu-item-main` | `<span>` | Initiates the select menu item main element. Used when the description element is present. |
+| `.pf-m-description` | `.pf-v5-c-select__menu-item` | Modifies the select menu item when selected to accommodate the description element. |
 
 ## Favorites
 ### Menu item favorites
@@ -377,17 +377,17 @@ The plain select variation should be used when you do not want a border applied 
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-label="Not starred"` | `.pf-c-select__menu-wrapper > .pf-c-select__menu-item.pf-m-action` | Provides an accessible label indicating that the favorite action is not selected. |
-| `aria-label="Starred"` | `.pf-c-select__menu-wrapper.pf-m-favorite > .pf-c-select__menu-item.pf-m-action` | Provides an accessible label indicating that the favorite action is selected. |
+| `aria-label="Not starred"` | `.pf-v5-c-select__menu-wrapper > .pf-v5-c-select__menu-item.pf-m-action` | Provides an accessible label indicating that the favorite action is not selected. |
+| `aria-label="Starred"` | `.pf-v5-c-select__menu-wrapper.pf-m-favorite > .pf-v5-c-select__menu-item.pf-m-action` | Provides an accessible label indicating that the favorite action is selected. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select__menu-wrapper` | `<li>` | Defines a menu wrapper for use with multiple actionable items in a single item row. |
-| `.pf-m-favorite` | `.pf-c-select__menu-wrapper` | Modifies wrapper to indicate that the item row has been favorited. |
-| `.pf-m-favorite-action` | `.pf-c-select__menu-item` | Modifies an item for favorite styles. |
-| `.pf-m-link` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item for link styles. |
-| `.pf-m-action` | `.pf-c-select__menu-item.pf-m-wrapper > .pf-c-select__menu-item` | Modifies item to for action styles. |
+| `.pf-v5-c-select__menu-wrapper` | `<li>` | Defines a menu wrapper for use with multiple actionable items in a single item row. |
+| `.pf-m-favorite` | `.pf-v5-c-select__menu-wrapper` | Modifies wrapper to indicate that the item row has been favorited. |
+| `.pf-m-favorite-action` | `.pf-v5-c-select__menu-item` | Modifies an item for favorite styles. |
+| `.pf-m-link` | `.pf-v5-c-select__menu-item.pf-m-wrapper > .pf-v5-c-select__menu-item` | Modifies item for link styles. |
+| `.pf-m-action` | `.pf-v5-c-select__menu-item.pf-m-wrapper > .pf-v5-c-select__menu-item` | Modifies item to for action styles. |
 
 ## View more
 ### View more menu item
@@ -400,7 +400,7 @@ The plain select variation should be used when you do not want a border applied 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-load` | `.pf-c-select__menu-item` | Modifies a menu item for load styles. |
+| `.pf-m-load` | `.pf-v5-c-select__menu-item` | Modifies a menu item for load styles. |
 
 ## Loading
 ### Loading menu item
@@ -413,8 +413,8 @@ The plain select variation should be used when you do not want a border applied 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select__list-item` | `<li>` | Defines a list item element in the select menu. |
-| `.pf-m-loading` | `.pf-c-select__list-item` | Modifies a list item for loading styles. |
+| `.pf-v5-c-select__list-item` | `<li>` | Defines a list item element in the select menu. |
+| `.pf-m-loading` | `.pf-v5-c-select__list-item` | Modifies a list item for loading styles. |
 
 ## Footer
 ### Menu footer
@@ -427,8 +427,8 @@ The plain select variation should be used when you do not want a border applied 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-select__menu-footer` | `<div>` | Defines a menu footer. |
-| `.pf-c-select__menu-list` | `<ul>` | Defines the menu list when the list is placed in `div.pf-c-select__menu`. |
+| `.pf-v5-c-select__menu-footer` | `<div>` | Defines a menu footer. |
+| `.pf-v5-c-select__menu-list` | `<ul>` | Defines the menu list when the list is placed in `div.pf-v5-c-select__menu`. |
 
 ## Placeholder
 ### Placeholder collapsed
@@ -462,7 +462,7 @@ The plain select variation should be used when you do not want a border applied 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-placeholder` | `.pf-c-select__toggle` | Modifies the toggle for placeholder styles. |
+| `.pf-m-placeholder` | `.pf-v5-c-select__toggle` | Modifies the toggle for placeholder styles. |
 
 ## Documentation
 ### Overview

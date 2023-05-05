@@ -1,7 +1,7 @@
-<th class="pf-c-calendar-month__day{{#if calendar-month-day--modifier}} {{calendar-month-day--modifier}}{{/if}}"
+<th class="{{pfv}}calendar-month__day{{#if calendar-month-day--modifier}} {{calendar-month-day--modifier}}{{/if}}"
   {{#if calendar-month-day--attribute}}
     {{{calendar-month-day--attribute}}}
   {{/if}}>
-  <span class="pf-screen-reader">{{calendar-month-day--day}}</span>
+  <span class="{{pfv 'unset-prefix'}}screen-reader">{{calendar-month-day--day}}</span>
   <span aria-hidden="true">{{calendar-month-day--label}}</span>
 </th>

@@ -1,5 +1,5 @@
 {{#if brand--IsPicture}}
-  <picture class="pf-c-brand pf-m-picture{{#if brand--modifier}} {{brand--modifier}}{{/if}}"
+  <picture class="{{pfv}}brand pf-m-picture{{#if brand--modifier}} {{brand--modifier}}{{/if}}"
     {{#if brand--attribute}}
       {{{brand--attribute}}}
     {{/if}}>
@@ -28,7 +28,7 @@
     {{/if}}
   </picture>
 {{else}}
-  <img class="pf-c-brand{{#if brand--modifier}} {{brand--modifier}}{{/if}}"
+  <img class="{{pfv}}brand{{#if brand--modifier}} {{brand--modifier}}{{/if}}"
     {{#if brand--attribute}}
       {{{brand--attribute}}}
     {{/if}}>

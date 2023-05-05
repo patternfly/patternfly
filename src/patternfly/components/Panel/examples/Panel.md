@@ -1,7 +1,7 @@
 ---
 id: 'Panel'
 section: components
-cssPrefix: pf-c-panel
+cssPrefix: pf-v5-c-panel
 ---
 
 ## Examples
@@ -140,11 +140,11 @@ cssPrefix: pf-c-panel
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-panel` | `<div>` | Initiates the panel. **Required** |
-| `.pf-c-panel__header` | `<div>` | Initiates the panel header. |
-| `.pf-c-panel__main` | `<div>` | Initiates the panel main content. |
-| `.pf-c-panel__main-body` | `<div>` | Initiates a panel content body container. |
-| `.pf-c-panel__footer` | `<div>` | Initiates the panel footer. |
-| `.pf-m-bordered` | `.pf-c-panel` | Modifies the panel for bordered styles. |
-| `.pf-m-raised` | `.pf-c-panel` | Modifies the panel for raised styles. |
-| `.pf-m-scrollable` | `.pf-c-panel` | Modifies the panel for scrollable styles. |
+| `.pf-v5-c-panel` | `<div>` | Initiates the panel. **Required** |
+| `.pf-v5-c-panel__header` | `<div>` | Initiates the panel header. |
+| `.pf-v5-c-panel__main` | `<div>` | Initiates the panel main content. |
+| `.pf-v5-c-panel__main-body` | `<div>` | Initiates a panel content body container. |
+| `.pf-v5-c-panel__footer` | `<div>` | Initiates the panel footer. |
+| `.pf-m-bordered` | `.pf-v5-c-panel` | Modifies the panel for bordered styles. |
+| `.pf-m-raised` | `.pf-v5-c-panel` | Modifies the panel for raised styles. |
+| `.pf-m-scrollable` | `.pf-v5-c-panel` | Modifies the panel for scrollable styles. |
