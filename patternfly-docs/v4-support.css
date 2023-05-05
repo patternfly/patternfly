@@ -1,0 +1,5 @@
+@import 'https://unpkg.com/@patternfly/patternfly@4.224.2/patternfly-no-reset.css';
+@import 'https://unpkg.com/@patternfly/patternfly@4.224.2/patternfly-addons.css';
+
+@import '../dist/patternfly-font-map.css';
+@import '../dist/patternfly-base-no-globals-theme-dark-unversioned.css';

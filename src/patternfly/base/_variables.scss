@@ -290,6 +290,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "./themes/dark/variables";
 
-@include pf-v5-theme-dark($pf-v5-theme-dark-prefix: ":root") {
+@include pf-v5-theme-dark {
   @include pf-v5-theme-dark-variables;
 }

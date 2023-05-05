@@ -296,8 +296,8 @@
 }
 
 // Dark theme style block
-@mixin pf-v5-theme-dark($pf-v5-theme-dark-class: ".pf-v5-theme-dark", $pf-v5-theme-dark-prefix: "") {
-  #{$pf-v5-theme-dark-prefix}:where(#{$pf-v5-theme-dark-class}) {
+@mixin pf-v5-theme-dark($theme-dark-class: $pf-v5--theme-dark--class, $theme-dark-target: $pf-v5--theme-dark--target) {
+  #{$theme-dark-target}:where(#{$theme-dark-class}) {
     @content;
   }
 }
