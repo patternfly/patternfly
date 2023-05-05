@@ -4,13 +4,14 @@ import iconfontCss from 'gulp-iconfont-css';
 import generateIcons from '../../src/icons/generateIcons.mjs';
 import path from 'path';
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+import { patternflyNamespace, patternflyVersion } from '../init.mjs';
 
 const { src, dest } = gulp;
 
 import * as url from 'url';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-const pficonFontName = 'pficon';
+const pficonFontName =  patternflyNamespace + patternflyVersion + 'icon';
 let maxCodepoint = 0;
 
 // functions to parse icon names/unicodes from sass file && write to json file
@@ -72,7 +73,7 @@ export function pfIconFont() {
         path: path.join(__dirname, 'icons_template.scss'),
         targetPath: 'pficon.scss',
         fontPath: './',
-        cssClass: 'pf-v5-c-icon',
+        cssClass: pficonFontName,
         // Assign next available unicode (for new icons)
         firstGlyph: nextUnicodeHex,
         // Reference saved unicodes (for existing icons)
