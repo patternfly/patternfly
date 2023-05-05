@@ -11,7 +11,7 @@
     --#{$input-group}__item--m-box--BorderLeftColor: transparent;
     --#{$input-group}__item--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
     --#{$input-group}__item--m-disabled--BorderBottomColor: transparent;
-    --#{$input-group}__text--m-disabled--Color: var(--#{$pf-global}--palette--black-100);
+    --#{$input-group}__item--m-disabled__text--Color: var(--#{$pf-global}--disabled-color--300);
 
     > * + * {
       --#{$input-group}__item--m-box--BorderLeftColor: var(--#{$input-group}__item--BorderLeftColor);
