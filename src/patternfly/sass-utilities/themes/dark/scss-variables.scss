@@ -23,9 +23,12 @@ $pf-v5-global--danger-color--200: $pf-v5-color-red-8888;
 $pf-v5-global--link--Color: $pf-v5-color-blue-300;
 $pf-v5-global--link--Color--hover: $pf-v5-color-blue-200;
 $pf-v5-global--link--Color--visited: $pf-v5-color-purple-300;
-$pf-v5-global--disabled-color--100: $pf-v5-color-black-400; // disabled text on regular background color
+$pf-v5-global--disabled-color--100: $pf-v5-color-black-400; // disabled text on regular background color - this doesn't have enough contrast in most cases
 $pf-v5-global--disabled-color--200: $pf-v5-color-black-500; // disabled background color
-$pf-v5-global--disabled-color--300: $pf-v5-color-black-200; // disabled text on disabled background color - except form elements
+$pf-v5-global--disabled-color--300: $pf-v5-color-black-200; // disabled text on disabled or floating background color - except form elements
+
+// icons
+$pf-v5-global--icon--Color--light: $pf-v5-color-black-300;
 
 // theme color resets
 $pf-v5-global--Color--dark-100: $pf-v5-global--Color--100;

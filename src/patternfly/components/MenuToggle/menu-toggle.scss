@@ -360,9 +360,10 @@
     }
 
     > .#{$check} {
-      --#{$menu-toggle}--PaddingRight: 0;
-      --#{$check}__input--MarginTop: 0;
-      --#{$check}__label--Color: currentcolor;
+      --pf-c-menu-toggle--PaddingRight: 0;
+      --pf-c-check__input--MarginTop: 0;
+      --pf-c-check__label--Color: currentcolor;
+      --pf-c-check__label--disabled--Color: currentcolor;
 
       align-items: center;
       align-self: stretch;
@@ -469,8 +470,6 @@
     // disable accent border
     &.pf-m-disabled,
     &:disabled {
-      --#{$menu-toggle}--m-split-button--child--BackgroundColor: var(--#{$menu-toggle}--m-split-button--child--disabled--BackgroundColor);
-      --#{$menu-toggle}--m-split-button--child--Color: var(--#{$menu-toggle}--m-split-button--child--disabled--Color);
       --#{$menu-toggle}--m-split-button--m-action--child--BorderLeftColor: transparent;
 
       &::before,

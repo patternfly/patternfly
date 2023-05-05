@@ -9,6 +9,7 @@
     --#{$label}--m-red--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
     --#{$label}--m-purple--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
     --#{$label}--m-cyan--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$label}--m-gold--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
     --#{$label}__content--before--BorderWidth: 0;
     --#{$label}__content--before--BorderColor: transparent;
     --#{$label}__content--link--hover--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
@@ -43,5 +44,10 @@
     --#{$label}--m-outline--m-cyan__content--before--BorderColor: var(--#{$pf-global}--palette--cyan-100);
     --#{$label}--m-outline--m-cyan__content--link--hover--before--BorderColor: var(--#{$pf-global}--palette--cyan-100);
     --#{$label}--m-outline--m-cyan__content--link--focus--before--BorderColor: var(--#{$pf-global}--palette--cyan-100);
+    --#{$label}--m-gold__content--Color: var(--#{$pf-global}--palette--gold-300);
+    --#{$label}--m-outline--m-gold__content--Color: var(--#{$pf-global}--palette--gold-300);
+    --#{$label}--m-outline--m-gold__content--before--BorderColor: var(--#{$pf-global}--palette--gold-100);
+    --#{$label}--m-outline--m-gold__content--link--hover--before--BorderColor: var(--#{$pf-global}--palette--gold-100);
+    --#{$label}--m-outline--m-gold__content--link--focus--before--BorderColor: var(--#{$pf-global}--palette--gold-100);
   }
 }

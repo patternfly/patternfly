@@ -251,7 +251,7 @@ cssPrefix: pf-v5-c-dual-list-selector
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
-        1 of 5 items selected
+        3 of 5 items selected
       {{/dual-list-selector-status-text}}
     {{/dual-list-selector-status}}
     {{#> dual-list-selector-menu}}

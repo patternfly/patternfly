@@ -186,6 +186,7 @@
   font-weight: var(--#{$app-launcher}__menu-item--FontWeight);
   color: var(--#{$app-launcher}__menu-item--Color);
   white-space: nowrap;
+  background: none;
   border: 0;
 
   &:hover,

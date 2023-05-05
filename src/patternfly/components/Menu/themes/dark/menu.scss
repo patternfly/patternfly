@@ -5,6 +5,6 @@
     --#{$menu}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
     --#{$menu}__list-item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
     --#{$menu}__list-item--focus-within--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
-    --#{$menu}__list-item--m-disabled__item--Color: var(--#{$pf-global}--Color--200); // global var?
+    --#{$menu}__list-item--m-disabled__item--Color: var(--#{$pf-global}--disabled-color--300);
   }
 }
