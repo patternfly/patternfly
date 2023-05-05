@@ -36,34 +36,53 @@
 }
 
 .#{$droppable} {
-  $pf-v5-global--BackgroundColor--100: #fff;
-  $pf-v5-c-droppable--m-dragging--after--BackgroundColor: rgba($pf-v5-global--BackgroundColor--100, .6);
-
-  --#{$droppable}--m-dragging--after--BackgroundColor: #{$pf-v5-c-droppable--m-dragging--after--BackgroundColor}; // allows for rbga() so we can combine background and border in single element
+  --#{$droppable}--before--BackgroundColor: transparent;
+  --#{$droppable}--before--Opacity: 0;
+  --#{$droppable}--after--BorderWidth: 0;
+  --#{$droppable}--after--BorderColor: transparent;
+  --#{$droppable}--m-dragging--before--BackgroundColor: var(--#{$pf-global}--palette--white);
+  --#{$droppable}--m-dragging--before--Opacity: .6;
   --#{$droppable}--m-dragging--after--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$droppable}--m-dragging--after--BorderColor: var(--#{$pf-global}--active-color--100);
   --#{$droppable}--m-drag-outside--after--BorderColor: var(--#{$pf-global}--danger-color--100);
 
-  &.pf-m-dragging {
-    position: relative;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    content: "";
+  }
 
-    &::after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      pointer-events: none;
-      content: "";
-    }
+  &::before {
+    background-color: var(-#{$droppable}--before--BackgroundColor);
+    opacity: var(-#{$droppable}--before--Opacity);
   }
 
   &::after {
-    background-color: var(--#{$droppable}--m-dragging--after--BackgroundColor);
-    border: var(--#{$droppable}--m-dragging--after--BorderWidth) solid var(--#{$droppable}--m-dragging--after--BorderColor);
+    border: var(-#{$droppable}--after--BorderWidth, 0) solid var(-#{$droppable}--after--BorderColor, transparent);
+  }
+
+  &.pf-m-dragging {
+    --#{$droppable}--before--BackgroundColor: var(-#{$droppable}--m-dragging--before--BackgroundColor);
+    --#{$droppable}--before--Opacity: var(-#{$droppable}--m-dragging--before--Opacity);
+    --#{$droppable}--after--BorderWidth: var(-#{$droppable}--m-dragging--after--BorderWidth);
+    --#{$droppable}--after--BorderColor: var(-#{$droppable}--m-dragging--after--BorderColor);
+
+    position: relative;
   }
 
   &.pf-m-drag-outside {
     --#{$droppable}--m-dragging--after--BorderColor: var(--#{$droppable}--m-drag-outside--after--BorderColor);
   }
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/drag-drop";
+
+@include pf-theme-dark {
+  @include pf-theme-dark-drag-drop;
 }

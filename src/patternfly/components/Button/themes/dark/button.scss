@@ -3,9 +3,10 @@
 @mixin pf-v5-theme-dark-button() {
   .#{$button} {
     --#{$button}--disabled--Color: var(--#{$pf-global}--disabled-color--300);
-    --#{$button}--m-primary--BackgroundColor: var(--#{$pf-global}--primary-color--300); // should blue-400 be a primary-color?
+    --#{$button}--m-primary--BackgroundColor: var(--#{$pf-global}--primary-color--300);
+    --#{$button}--m-primary--Color: var(--#{$pf-global}--primary-color--400);
     --#{$button}--m-tertiary--after--BorderColor: var(--#{$pf-global}--BorderColor--100);
-    --#{$button}--m-tertiary--Color: var(--#{$pf-global}--palette--black-100); // global variable for this?
+    --#{$button}--m-tertiary--Color: var(--#{$pf-global}--palette--black-100);
     --#{$button}--m-tertiary--hover--after--BorderColor: var(--#{$pf-global}--BorderColor--100);
     --#{$button}--m-tertiary--hover--Color: var(--#{$pf-global}--palette--black-100);
     --#{$button}--m-tertiary--focus--after--BorderColor: var(--#{$pf-global}--BorderColor--100);

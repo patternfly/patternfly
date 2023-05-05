@@ -6,9 +6,9 @@
     &.pf-m-red,
     &.pf-m-green,
     &.pf-m-gold {
-      color: var(--#{$pf-global}--palette--black-900);
+      --#{$banner}--Color: var(--#{$pf-global}--palette--black-900);
     }
 
-    @include pf-v5-theme-dark--t-dark;
+    @include pf-v5-theme-dark--t-dark(false);
   }
 }

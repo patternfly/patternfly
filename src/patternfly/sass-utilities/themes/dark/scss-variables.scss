@@ -15,6 +15,8 @@ $pf-v5-global--Color--200: $pf-v5-color-black-200; // secondary text color
 $pf-v5-global--active-color--100: $pf-v5-color-blue-300;
 $pf-v5-global--primary-color--100: $pf-v5-color-blue-300; // primary blue against dark background - background, text, etc
 $pf-v5-global--primary-color--300: $pf-v5-color-blue-400; // primary blue with white text on top for contrast
+$pf-v5-global--primary-color--400: $pf-v5-color-white; // text color on top of primary--300
+$pf-v5-global--custom-color--200: $pf-v5-color-cyan-200;
 $pf-v5-global--success-color--100: $pf-v5-color-green-400;
 $pf-v5-global--warning-color--100: $pf-v5-color-gold-400;
 $pf-v5-global--warning-color--200: $pf-v5-color-gold-300;
@@ -23,7 +25,7 @@ $pf-v5-global--danger-color--200: $pf-v5-color-red-8888;
 $pf-v5-global--link--Color: $pf-v5-color-blue-300;
 $pf-v5-global--link--Color--hover: $pf-v5-color-blue-200;
 $pf-v5-global--link--Color--visited: $pf-v5-color-purple-300;
-$pf-v5-global--disabled-color--100: $pf-v5-color-black-400; // disabled text on regular background color - this doesn't have enough contrast in most cases
+$pf-v5-global--disabled-color--100: $pf-v5-color-black-300; // disabled text on regular background color
 $pf-v5-global--disabled-color--200: $pf-v5-color-black-500; // disabled background color
 $pf-v5-global--disabled-color--300: $pf-v5-color-black-200; // disabled text on disabled or floating background color - except form elements
 

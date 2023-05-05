@@ -34,6 +34,7 @@
 
   // Selected
   --#{$toggle-group}__button--m-selected--BackgroundColor: var(--#{$pf-global}--palette--blue-50);
+  --#{$toggle-group}__button--m-selected--Color: initial;
   --#{$toggle-group}__button--m-selected--before--BorderColor: var(--#{$pf-global}--primary-color--100);
   --#{$toggle-group}__button--m-selected--ZIndex: var(--#{$pf-global}--ZIndex--xs);
 
@@ -119,6 +120,7 @@
 
   &.pf-m-selected {
     --#{$toggle-group}__button--BackgroundColor: var(--#{$toggle-group}__button--m-selected--BackgroundColor);
+    --#{$toggle-group}__button--Color: var(--#{$toggle-group}__button--m-selected--Color, inherit);
     --#{$toggle-group}__button--ZIndex: var(--#{$toggle-group}__button--m-selected--ZIndex);
     --#{$toggle-group}__button--before--BorderColor: var(--#{$toggle-group}__button--m-selected--before--BorderColor);
   }

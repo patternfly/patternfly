@@ -1,0 +1,7 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-theme-dark-drag-drop() {
+  .pf-c-droppable {
+    --pf-c-droppable--m-dragging--before--Opacity: .2;
+  }
+}

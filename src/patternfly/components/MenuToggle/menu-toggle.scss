@@ -120,7 +120,7 @@
 
   // Split button, child
   --#{$menu-toggle}--m-split-button--child--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$menu-toggle}--m-split-button--child--disabled--Color: var(--#{$pf-global}--Color--dark-200);
+  --#{$menu-toggle}--m-split-button--child--disabled--Color: var(--#{$pf-global}--disabled-color--100);
   --#{$menu-toggle}--m-split-button--child--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
   --#{$menu-toggle}--m-split-button--first-child--PaddingRight: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}--m-split-button--last-child--PaddingLeft: 0;
@@ -360,7 +360,7 @@
     }
 
     > .#{$check} {
-      --pf-c-menu-toggle--PaddingRight: 0;
+      --#{$menu-toggle}--PaddingRight: 0;
       --pf-c-check__input--MarginTop: 0;
       --pf-c-check__label--Color: currentcolor;
       --pf-c-check__label--disabled--Color: currentcolor;

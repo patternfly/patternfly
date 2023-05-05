@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-v5-theme-dark-dropdown() {
+@mixin pf-theme-dark-dropdown() {
   .#{$dropdown} {
     --#{$dropdown}__toggle--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
     --#{$dropdown}__toggle--before--BorderTopColor: transparent;
@@ -8,7 +8,9 @@
     --#{$dropdown}__toggle--before--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
     --#{$dropdown}__toggle--before--BorderLeftColor: transparent;
     --#{$dropdown}__toggle--disabled--BackgroundColor: var(--#{$pf-global}--palette--black-500);
+    --#{$dropdown}__toggle--m-split-button--m-primary--child--BackgroundColor: var(--#{$pf-global}--primary-color--300);
     --#{$dropdown}__toggle--m-primary--BackgroundColor: var(--#{$pf-global}--primary-color--300);
+    --#{$dropdown}__toggle--m-primary--Color: var(--#{$pf-global}--primary-color--400);
     --#{$dropdown}__menu--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
     --#{$dropdown}__menu--Top: 100%;
     --#{$dropdown}--m-top__menu--TranslateY: -100%;
