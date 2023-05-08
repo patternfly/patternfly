@@ -213,6 +213,7 @@
     justify-content: center;
     width: var(--#{$about-modal-box}__close--c-button--Width);
     height: var(--#{$about-modal-box}__close--c-button--Height);
+    padding: 0;
     font-size: var(--#{$about-modal-box}__close--c-button--FontSize);
     color: var(--#{$about-modal-box}__close--c-button--Color);
     background-color: var(--#{$about-modal-box}__close--c-button--BackgroundColor);
