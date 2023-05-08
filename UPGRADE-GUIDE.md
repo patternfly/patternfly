@@ -34,7 +34,7 @@ We've cleaned up our root directory a little in [(#2960)](https://github.com/pat
 - `patternfly-fonts.css to` to `base/patternfly-fonts.css`
 - `patternfly-globals.css` to `base/patternfly-globals.css`
 - `patternfly-icons.css` to `base/patternfly-icons.css`
-- `patternfly-pf-icons.css` to `base/patternfly-pf-icons.css`
+- `patternfly-pficons.css` to `base/patternfly-pficons.css`
 - `patternfly-shield-inheritable.css` to `base/patternfly-shield-inheritable.css`
 - `patternfly-shield-noninheritable.css` to `base/patternfly-shield-noninheritable.css`
 - `patternfly-themes.css` to `base/patternfly-themes.css`
