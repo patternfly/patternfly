@@ -1,11 +1,13 @@
-.pf-c-background-image {
-  --pf-c-background-image--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
-  --pf-c-background-image--BackgroundImage: url("#{$pf-global--image-path}/pfbg-icon.svg");
-  --pf-c-background-image--BackgroundPosition: bottom right;
-  --pf-c-background-image--BackgroundSize--min-width: 200px;
-  --pf-c-background-image--BackgroundSize--width: 60%;
-  --pf-c-background-image--BackgroundSize--max-width: 600px;
-  --pf-c-background-image--BackgroundSize: clamp(var(--pf-c-background-image--BackgroundSize--min-width), var(--pf-c-background-image--BackgroundSize--width), var(--pf-c-background-image--BackgroundSize--max-width));
+// @debug $background-image; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$background-image} {
+  --#{$background-image}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
+  --#{$background-image}--BackgroundImage: url("#{$pf-v5-global--image-path}/pfbg-icon.svg");
+  --#{$background-image}--BackgroundPosition: bottom right;
+  --#{$background-image}--BackgroundSize--min-width: 200px;
+  --#{$background-image}--BackgroundSize--width: 60%;
+  --#{$background-image}--BackgroundSize--max-width: 600px;
+  --#{$background-image}--BackgroundSize: clamp(var(--#{$background-image}--BackgroundSize--min-width), var(--#{$background-image}--BackgroundSize--width), var(--#{$background-image}--BackgroundSize--max-width));
 
   position: fixed;
   top: 0;
@@ -13,9 +15,9 @@
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-color: var(--pf-c-background-image--BackgroundColor);
-  background-image: var(--pf-c-background-image--BackgroundImage);
+  background-color: var(--#{$background-image}--BackgroundColor);
+  background-image: var(--#{$background-image}--BackgroundImage);
   background-repeat: no-repeat;
-  background-position: var(--pf-c-background-image--BackgroundPosition);
-  background-size: var(--pf-c-background-image--BackgroundSize);
+  background-position: var(--#{$background-image}--BackgroundPosition);
+  background-size: var(--#{$background-image}--BackgroundSize);
 }

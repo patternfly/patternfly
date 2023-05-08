@@ -1,77 +1,79 @@
-.pf-c-check {
-  --pf-c-check--GridGap: var(--pf-global--spacer--xs) var(--pf-global--spacer--sm);
-  --pf-c-check__label--disabled--Color: var(--pf-global--disabled-color--100);
-  --pf-c-check__label--Color: var(--pf-global--Color--100);
-  --pf-c-check__label--FontWeight: var(--pf-global--FontWeight--normal);
-  --pf-c-check__label--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-check__label--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-check__input--Height: var(--pf-c-check__label--FontSize);
-  --pf-c-check__input--MarginTop: calc(((var(--pf-c-check__label--FontSize) * var(--pf-c-check__label--LineHeight)) - var(--pf-c-check__input--Height)) / 2);
-  --pf-c-check__description--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-check__description--Color: var(--pf-global--Color--200);
-  --pf-c-check__body--MarginTop: var(--pf-global--spacer--sm);
+// @debug $check; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$check} {
+  --#{$check}--GridGap: var(--#{$pf-global}--spacer--xs) var(--#{$pf-global}--spacer--sm);
+  --#{$check}__label--disabled--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$check}__label--Color: var(--#{$pf-global}--Color--100);
+  --#{$check}__label--FontWeight: var(--#{$pf-global}--FontWeight--normal);
+  --#{$check}__label--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$check}__label--LineHeight: var(--#{$pf-global}--LineHeight--sm);
+  --#{$check}__input--Height: var(--#{$check}__label--FontSize);
+  --#{$check}__input--MarginTop: calc(((var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight)) - var(--#{$check}__input--Height)) / 2);
+  --#{$check}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$check}__description--Color: var(--#{$pf-global}--Color--200);
+  --#{$check}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
 
   // Required checkbox
-  --pf-c-check__label-required--MarginLeft: var(--pf-global--spacer--xs);
-  --pf-c-check__label-required--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-check__label-required--Color: var(--pf-global--danger-color--100);
+  --#{$check}__label-required--MarginLeft: var(--#{$pf-global}--spacer--xs);
+  --#{$check}__label-required--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$check}__label-required--Color: var(--#{$pf-global}--danger-color--100);
 
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: var(--pf-c-check--GridGap);
+  grid-gap: var(--#{$check}--GridGap);
 
   &.pf-m-standalone {
-    --pf-c-check--GridGap: 0;
-    --pf-c-check__input--Height: auto;
-    --pf-c-check__input--MarginTop: 0;
+    --#{$check}--GridGap: 0;
+    --#{$check}__input--Height: auto;
+    --#{$check}__input--MarginTop: 0;
 
     display: inline-grid;
     line-height: 1;
   }
 }
 
-.pf-c-check__label {
-  font-size: var(--pf-c-check__label--FontSize);
-  font-weight: var(--pf-c-check__label--FontWeight);
-  line-height: var(--pf-c-check__label--LineHeight);
-  color: var(--pf-c-check__label--Color);
+.#{$check}__label {
+  font-size: var(--#{$check}__label--FontSize);
+  font-weight: var(--#{$check}__label--FontWeight);
+  line-height: var(--#{$check}__label--LineHeight);
+  color: var(--#{$check}__label--Color);
 }
 
-.pf-c-check__input {
-  height: var(--pf-c-check__input--Height);
-  margin-top: var(--pf-c-check__input--MarginTop);
+.#{$check}__input {
+  height: var(--#{$check}__input--Height);
+  margin-top: var(--#{$check}__input--MarginTop);
 }
 
-.pf-c-check__description {
+.#{$check}__description {
   grid-column: 2;
-  font-size: var(--pf-c-check__description--FontSize);
-  color: var(--pf-c-check__description--Color);
+  font-size: var(--#{$check}__description--FontSize);
+  color: var(--#{$check}__description--Color);
 }
 
-.pf-c-check__body {
+.#{$check}__body {
   grid-column: 2;
-  margin-top: var(--pf-c-check__body--MarginTop);
+  margin-top: var(--#{$check}__body--MarginTop);
 }
 
-.pf-c-check__label,
-.pf-c-check__input {
+.#{$check}__label,
+.#{$check}__input {
   justify-self: start;
 
-  @at-root label.pf-c-check,
+  @at-root label.#{$check},
   & {
     cursor: pointer;
   }
 
   &:disabled,
   &.pf-m-disabled {
-    --pf-c-check__label--Color: var(--pf-c-check__label--disabled--Color);
+    --#{$check}__label--Color: var(--#{$check}__label--disabled--Color);
 
     cursor: not-allowed;
   }
 }
 
-.pf-c-check__label-required {
-  margin-left: var(--pf-c-check__label-required--MarginLeft);
-  font-size: var(--pf-c-check__label-required--FontSize);
-  color: var(--pf-c-check__label-required--Color);
+.#{$check}__label-required {
+  margin-left: var(--#{$check}__label-required--MarginLeft);
+  font-size: var(--#{$check}__label-required--FontSize);
+  color: var(--#{$check}__label-required--Color);
 }

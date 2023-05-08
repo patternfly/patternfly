@@ -7,7 +7,7 @@
 {{/if}}
 
 {{#* inline "__tree-view-node"}}
-  <{{# if tree-view-node--type}}{{tree-view-node--type}}{{else}}button{{/if}} class="pf-c-tree-view__node
+  <{{# if tree-view-node--type}}{{tree-view-node--type}}{{else}}button{{/if}} class="{{pfv}}tree-view__node
     {{~#if tree-view-node--IsSelectable}} pf-m-selectable{{/if}}
     {{#if tree-view-node--modifier}} {{tree-view-node--modifier}}{{/if}}"
     {{#if tree-view-node--type}}

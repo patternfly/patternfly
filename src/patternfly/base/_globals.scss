@@ -1,5 +1,5 @@
 // Reset - based on minireset.css v0.0.3 | MIT License github.com/jgthms/minireset.css
-@if $pf-global--enable-reset {
+@if $pf-v5-global--enable-reset {
   :where(
     html,
     body,
@@ -31,7 +31,7 @@
 }
 
 // Normalize
-@if $pf-global--enable-normalize {
+@if $pf-v5-global--enable-normalize {
   *,
   :where(
     *::before,
@@ -48,10 +48,10 @@
   }
 
   :where(body) {
-    font-family: var(--pf-global--FontFamily--sans-serif);
-    font-size: var(--pf-global--FontSize--md);
-    font-weight: var(--pf-global--FontWeight--normal);
-    line-height: var(--pf-global--LineHeight--md);
+    font-family: var(--#{$pf-global}--FontFamily--sans-serif);
+    font-size: var(--#{$pf-global}--FontSize--md);
+    font-weight: var(--#{$pf-global}--FontWeight--normal);
+    line-height: var(--#{$pf-global}--LineHeight--md);
   }
 
   :where(
@@ -63,7 +63,7 @@
     h6
    ) {
     font-size: 100%;
-    font-weight: var(--pf-global--FontWeight--normal);
+    font-weight: var(--#{$pf-global}--FontWeight--normal);
   }
 
   :where(ul) {
@@ -80,8 +80,8 @@
     margin: 0;
     font-family: inherit;
     font-size: 100%;
-    line-height: var(--pf-global--LineHeight--md);
-    color: var(--pf-global--Color--100);
+    line-height: var(--#{$pf-global}--LineHeight--md);
+    color: var(--#{$pf-global}--Color--100);
   }
 
   :where(
@@ -117,18 +117,18 @@
     code,
     pre
   ) {
-    font-family: var(--pf-global--FontFamily--monospace);
+    font-family: var(--#{$pf-global}--FontFamily--monospace);
   }
 
   :where(a) {
-    font-weight: var(--pf-global--link--FontWeight);
-    color: var(--pf-global--link--Color);
-    text-decoration: var(--pf-global--link--TextDecoration);
+    font-weight: var(--#{$pf-global}--link--FontWeight);
+    color: var(--#{$pf-global}--link--Color);
+    text-decoration: var(--#{$pf-global}--link--TextDecoration);
   }
 
   :where(a:hover) {
-    --pf-global--link--Color: var(--pf-global--link--Color--hover);
-    --pf-global--link--TextDecoration: var(--pf-global--link--TextDecoration--hover);
+    --#{$pf-global}--link--Color: var(--#{$pf-global}--link--Color--hover);
+    --#{$pf-global}--link--TextDecoration: var(--#{$pf-global}--link--TextDecoration--hover);
   }
 
   :where(
@@ -142,6 +142,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "./themes/dark/globals";
 
-@include pf-theme-dark($pf-theme-dark-prefix: ":root") {
-  @include pf-theme-dark-globals;
+@include pf-v5-theme-dark($pf-v5-theme-dark-prefix: ":root") {
+  @include pf-v5-theme-dark-globals;
 }

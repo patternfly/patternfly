@@ -1,7 +1,7 @@
 // Set common reset styles for patternfly components
 
-.pf-screen-reader {
-  @include pf-u-screen-reader; // for use with assistive technologies
+.#{$pf-prefix}screen-reader {
+  @include pf-v5-u-screen-reader; // for use with assistive technologies
 
   &.pf-m-full-size {
     width: 100%;
@@ -13,6 +13,6 @@
   }
 }
 
-.pf-m-tabular-nums {
+.#{$pf-prefix}m-tabular-nums {
   font-variant-numeric: tabular-nums;
 }

@@ -1,80 +1,82 @@
-.pf-c-breadcrumb {
+// @debug $breadcrumb; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$breadcrumb} {
   // Breadcrumb item
-  --pf-c-breadcrumb__item--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-breadcrumb__item--LineHeight: var(--pf-global--LineHeight--sm);
-  --pf-c-breadcrumb__item--MarginRight: var(--pf-global--spacer--sm);
+  --#{$breadcrumb}__item--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$breadcrumb}__item--LineHeight: var(--#{$pf-global}--LineHeight--sm);
+  --#{$breadcrumb}__item--MarginRight: var(--#{$pf-global}--spacer--sm);
 
   // Breadcrumb divider
-  --pf-c-breadcrumb__item-divider--Color: var(--pf-global--icon--Color--dark);
-  --pf-c-breadcrumb__item-divider--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-breadcrumb__item-divider--FontSize: var(--pf-global--FontSize--sm);
+  --#{$breadcrumb}__item-divider--Color: var(--#{$pf-global}--icon--Color--dark);
+  --#{$breadcrumb}__item-divider--MarginRight: var(--#{$pf-global}--spacer--sm);
+  --#{$breadcrumb}__item-divider--FontSize: var(--#{$pf-global}--FontSize--sm);
 
   // Breadcrumb link
-  --pf-c-breadcrumb__link--Color: var(--pf-global--link--Color);
-  --pf-c-breadcrumb__link--TextDecoration: var(--pf-global--link--TextDecoration);
-  --pf-c-breadcrumb__link--hover--Color: var(--pf-global--link--Color--hover);
-  --pf-c-breadcrumb__link--hover--TextDecoration: var(--pf-global--link--TextDecoration--hover);
-  --pf-c-breadcrumb__link--m-current--Color: var(--pf-global--Color--100);
-  --pf-c-breadcrumb__link--BackgroundColor: transparent;
+  --#{$breadcrumb}__link--Color: var(--#{$pf-global}--link--Color);
+  --#{$breadcrumb}__link--TextDecoration: var(--#{$pf-global}--link--TextDecoration);
+  --#{$breadcrumb}__link--hover--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$breadcrumb}__link--hover--TextDecoration: var(--#{$pf-global}--link--TextDecoration--hover);
+  --#{$breadcrumb}__link--m-current--Color: var(--#{$pf-global}--Color--100);
+  --#{$breadcrumb}__link--BackgroundColor: transparent;
 
   // Heading
-  --pf-c-breadcrumb__heading--FontSize: var(--pf-global--FontSize--sm);
+  --#{$breadcrumb}__heading--FontSize: var(--#{$pf-global}--FontSize--sm);
 
   // breadcrumb dropdown
-  --pf-c-breadcrumb__dropdown--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-breadcrumb__dropdown--MarginRight: calc(var(--pf-c-breadcrumb__item--MarginRight) * -1);
-  --pf-c-breadcrumb__dropdown--MarginBottom: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-breadcrumb__dropdown--MarginLeft: calc(var(--pf-c-breadcrumb__item-divider--MarginRight) * -1);
+  --#{$breadcrumb}__dropdown--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$breadcrumb}__dropdown--MarginRight: calc(var(--#{$breadcrumb}__item--MarginRight) * -1);
+  --#{$breadcrumb}__dropdown--MarginBottom: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$breadcrumb}__dropdown--MarginLeft: calc(var(--#{$breadcrumb}__item-divider--MarginRight) * -1);
 
   // breadcrumb toggle
-  --pf-c-breadcrumb__dropdown--c-dropdown__toggle--LineHeight: var(--pf-global--LineHeight--sm);
+  --#{$breadcrumb}__dropdown--c-dropdown__toggle--LineHeight: var(--#{$pf-global}--LineHeight--sm);
 
   display: inline-flex;
 }
 
 // Breadcrumb list
-.pf-c-breadcrumb__list {
+.#{$breadcrumb}__list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
 // Breadcrumb list item
-.pf-c-breadcrumb__item {
+.#{$breadcrumb}__item {
   display: flex;
   align-items: baseline;
-  font-size: var(--pf-c-breadcrumb__item--FontSize);
-  font-weight: var(--pf-c-breadcrumb__item--FontWeight);
-  line-height: var(--pf-c-breadcrumb__item--LineHeight);
+  font-size: var(--#{$breadcrumb}__item--FontSize);
+  font-weight: var(--#{$breadcrumb}__item--FontWeight);
+  line-height: var(--#{$breadcrumb}__item--LineHeight);
   white-space: nowrap; // Keeps the item-divider and __link text on the same line
   list-style: none;
 
   &:not(:last-child) {
-    margin-right: var(--pf-c-breadcrumb__item--MarginRight);
+    margin-right: var(--#{$breadcrumb}__item--MarginRight);
   }
 }
 
 // Breadcrumb divider
-.pf-c-breadcrumb__item-divider {
-  margin-right: var(--pf-c-breadcrumb__item-divider--MarginRight);
-  font-size: var(--pf-c-breadcrumb__item-divider--FontSize);
+.#{$breadcrumb}__item-divider {
+  margin-right: var(--#{$breadcrumb}__item-divider--MarginRight);
+  font-size: var(--#{$breadcrumb}__item-divider--FontSize);
   line-height: 1;
-  color: var(--pf-c-breadcrumb__item-divider--Color);
+  color: var(--#{$breadcrumb}__item-divider--Color);
 }
 
 // Breadcrumb link
-.pf-c-breadcrumb__link {
+.#{$breadcrumb}__link {
   font-size: inherit;
-  font-weight: var(--pf-c-breadcrumb__link--FontWeight);
+  font-weight: var(--#{$breadcrumb}__link--FontWeight);
   line-height: inherit;
-  color: var(--pf-c-breadcrumb__link--Color);
-  text-decoration: var(--pf-c-breadcrumb__link--TextDecoration);
+  color: var(--#{$breadcrumb}__link--Color);
+  text-decoration: var(--#{$breadcrumb}__link--TextDecoration);
   word-break: break-word;
-  background-color: var(--pf-c-breadcrumb__link--BackgroundColor);
+  background-color: var(--#{$breadcrumb}__link--BackgroundColor);
 
   &:hover {
-    --pf-c-breadcrumb__link--Color: var(--pf-c-breadcrumb__link--hover--Color);
-    --pf-c-breadcrumb__link--TextDecoration: var(--pf-c-breadcrumb__link--hover--TextDecoration);
+    --#{$breadcrumb}__link--Color: var(--#{$breadcrumb}__link--hover--Color);
+    --#{$breadcrumb}__link--TextDecoration: var(--#{$breadcrumb}__link--hover--TextDecoration);
   }
 
 
@@ -84,7 +86,7 @@
 
     &,
     &:hover {
-      color: var(--pf-c-breadcrumb__link--m-current--Color);
+      color: var(--#{$breadcrumb}__link--m-current--Color);
       text-decoration: none;
     }
   }
@@ -95,26 +97,26 @@
   }
 }
 
-.pf-c-breadcrumb__dropdown {
-  margin: var(--pf-c-breadcrumb__dropdown--MarginTop) var(--pf-c-breadcrumb__dropdown--MarginRight) var(--pf-c-breadcrumb__dropdown--MarginBottom) var(--pf-c-breadcrumb__dropdown--MarginLeft);
+.#{$breadcrumb}__dropdown {
+  margin: var(--#{$breadcrumb}__dropdown--MarginTop) var(--#{$breadcrumb}__dropdown--MarginRight) var(--#{$breadcrumb}__dropdown--MarginBottom) var(--#{$breadcrumb}__dropdown--MarginLeft);
 
-  .pf-c-dropdown__toggle {
-    line-height: var(--pf-c-breadcrumb__dropdown--c-dropdown__toggle--LineHeight);
+  .#{$dropdown}__toggle {
+    line-height: var(--#{$breadcrumb}__dropdown--c-dropdown__toggle--LineHeight);
   }
 }
 
-.pf-c-breadcrumb__heading {
+.#{$breadcrumb}__heading {
   display: inline;
-  font-size: var(--pf-c-breadcrumb__heading--FontSize);
+  font-size: var(--#{$breadcrumb}__heading--FontSize);
 }
 
-.pf-c-breadcrumb__link,
-.pf-c-breadcrumb__heading {
+.#{$breadcrumb}__link,
+.#{$breadcrumb}__heading {
   white-space: normal;
 }
 
 // Hide divider of first child - required for react since dividers are included in each item
 // Consider revisiting this in a breaking change release
-.pf-c-breadcrumb__list > :first-child .pf-c-breadcrumb__item-divider {
+.#{$breadcrumb}__list > :first-child .#{$breadcrumb}__item-divider {
   display: none;
 }

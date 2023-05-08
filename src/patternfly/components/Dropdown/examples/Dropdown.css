@@ -51,7 +51,7 @@
   min-height: 210px;
 }
 
-[id^="ws-core-c-dropdown-split-button"] .pf-c-dropdown:not(:last-child) {
+[id^="ws-core-c-dropdown-split-button"] .pf-v5-c-dropdown:not(:last-child) {
   margin-right: 4px;
 }
 

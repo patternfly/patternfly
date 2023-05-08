@@ -1,9 +1,9 @@
-<{{#if check-label--type}}{{check-label--type}}{{else}}label{{/if}} class="pf-c-check__label{{#if check-label--IsDisabled}} pf-m-disabled{{/if}}{{#if check-label--modifier}} {{check-label--modifier}}{{/if}}"
+<{{#if check-label--type}}{{check-label--type}}{{else}}label{{/if}} class="{{pfv}}check__label{{#if check-label--IsDisabled}} pf-m-disabled{{/if}}{{#if check-label--modifier}} {{check-label--modifier}}{{/if}}"
   {{#if check-label--attribute}}
     {{{check-label--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-  {{#if check--IsRequired}} 
+  {{#if check--IsRequired}}
     {{> check-label-required}}
   {{/if}}
 </{{#if check-label--type}}{{check-label--type}}{{else}}label{{/if}}>

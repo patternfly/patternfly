@@ -42,7 +42,7 @@
   {{/toolbar-item}}
 {{/toolbar-group}}
 {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-sm"}}
-  {{#> dropdown dropdown--modifier="pf-m-full-height" dropdown--id=(concat masthead--id "-profile") dropdown--attribute='style="--pf-c-dropdown--MaxWidth: 20ch;"' dropdown--IsExpanded=masthead-template-content-icon-group--profile-dropdown--IsExpanded}}
+  {{#> dropdown dropdown--modifier="pf-m-full-height" dropdown--id=(concat masthead--id "-profile") dropdown--attribute='style="--pf-v5-c-dropdown--MaxWidth: 20ch;"' dropdown--IsExpanded=masthead-template-content-icon-group--profile-dropdown--IsExpanded}}
     {{#> dropdown-toggle}}
       {{#> dropdown-toggle-image}}
         {{> avatar}}
@@ -53,8 +53,8 @@
     {{/dropdown-toggle}}
     {{#> dropdown-menu dropdown-menu--type="div"}}
       {{#> dropdown-group}}
-        {{> dropdown-menu-item dropdown-menu-item--text='<div class="pf-u-font-size-sm">Account number:</div><div>123456789</div>' dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
-        {{> dropdown-menu-item dropdown-menu-item--text='<div class="pf-u-font-size-sm">Username:</div><div>mshaksho@redhat.com</div>' dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
+        {{> dropdown-menu-item dropdown-menu-item--text='<div class="pf-v5-u-font-size-sm">Account number:</div><div>123456789</div>' dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
+        {{> dropdown-menu-item dropdown-menu-item--text='<div class="pf-v5-u-font-size-sm">Username:</div><div>mshaksho@redhat.com</div>' dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
       {{/dropdown-group}}
       {{> divider}}
       {{#> dropdown-group}}

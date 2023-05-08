@@ -1,6 +1,6 @@
 {{#> reset grid--attribute=reset grid-item--attribute=reset grid--modifier=reset grid-item--modifier=reset l-flex--attribute=reset l-flex-item--attribute=reset l-flex--modifier=reset l-flex-item--modifier=reset}}
   {{#> card card--id=card-template-events--id}}
-    {{#> card-header card-header00--modifier="pf-u-align-items-flex-start"}}
+    {{#> card-header card-header00--modifier="pf-v5-u-align-items-flex-start"}}
       {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
         {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Status
@@ -18,7 +18,7 @@
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
-                <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-circle {{pfv 'u'}}danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Readiness probe failed
@@ -29,14 +29,14 @@
             Readiness probe failed: Get https://10.131.0.7:5000/healthz: dial tcp 10.131.0.7:5000: connect: connection refused
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:02 am</time>
+            <time class="{{pfv 'u'}}color-200 {{pfv 'u'}}font-size-sm">Jun 17, 11:02 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
-                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Successful assignment
@@ -47,7 +47,7 @@
             Successfully assigned default/example to ip-10-0-130-149.ec2.internal
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 11:13 am</time>
+            <time class="{{pfv 'u'}}color-200 {{pfv 'u'}}font-size-sm">Jun 17, 11:13 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
@@ -65,14 +65,14 @@
             Pulling image "openshift/hello-openshift"
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:59 am</time>
+            <time class="{{pfv 'u'}}color-200 {{pfv 'u'}}font-size-sm">Jun 17, 10:59 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
-                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Created container
@@ -83,7 +83,7 @@
             Created container hello-openshift
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:45 am</time>
+            <time class="{{pfv 'u'}}color-200 {{pfv 'u'}}font-size-sm">Jun 17, 10:45 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
 
@@ -91,7 +91,7 @@
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
-                <i class="fas fa-exclamation-triangle pf-u-warning-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-triangle {{pfv 'u'}}warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 CPU utilitization over 50%
@@ -102,7 +102,7 @@
             Migrated 2 pods to other hosts
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:33 am</time>
+            <time class="{{pfv 'u'}}color-200 {{pfv 'u'}}font-size-sm">Jun 17, 10:33 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
 
@@ -110,7 +110,7 @@
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
-                <i class="fas fa-exclamation-circle pf-u-danger-color-100" aria-hidden="true"></i>
+                <i class="fas fa-exclamation-circle {{pfv 'u'}}danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Rook-osd-10-328949
@@ -121,7 +121,7 @@
             Rebuild initiated as Disk 5 failed
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:33 am</time>
+            <time class="{{pfv 'u'}}color-200 {{pfv 'u'}}font-size-sm">Jun 17, 10:33 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
 
@@ -129,7 +129,7 @@
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
-                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Created container
@@ -140,7 +140,7 @@
             Created container hello-openshift-123
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:31 am</time>
+            <time class="{{pfv 'u'}}color-200 {{pfv 'u'}}font-size-sm">Jun 17, 10:31 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
 
@@ -148,7 +148,7 @@
           {{#> description-list-term}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
               {{#> l-flex-item l-flex-item--modifier="pf-m-spacer-sm"}}
-                <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
               {{#> l-flex-item}}
                 Created container
@@ -159,7 +159,7 @@
             Created container hello-openshift-456
           {{/description-list-description}}
           {{#> description-list-description}}
-            <time class="pf-u-color-200 pf-u-font-size-sm">Jun 17, 10:30 am</time>
+            <time class="{{pfv 'u'}}color-200 {{pfv 'u'}}font-size-sm">Jun 17, 10:30 am</time>
           {{/description-list-description}}
         {{/description-list-group}}
       {{/description-list}}

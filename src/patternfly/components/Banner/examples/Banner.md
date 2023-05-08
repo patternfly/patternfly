@@ -1,7 +1,7 @@
 ---
 id: 'Banner'
 section: components
-cssPrefix: pf-c-banner
+cssPrefix: pf-v5-c-banner
 ---
 
 ## Examples
@@ -16,7 +16,7 @@ Banners can be styled with one of 5 different colors. A basic banner should only
 <br>
 
 {{#> banner banner--modifier="pf-m-blue"}}
-  Blue banner 
+  Blue banner
 {{/banner}}
 
 <br>
@@ -42,32 +42,32 @@ Banners can be styled with one of 5 different colors. A basic banner should only
 
 ```hbs
 {{#> banner}}
-  Default banner with a 
+  Default banner with a
   <a href="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples">
   link</a>
 {{/banner}}
 <br>
 {{#> banner}}
-  Default banner with a 
+  Default banner with a
   <a class="pf-m-disabled" role="link" aria-disabled="true">
   disabled link</a>
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-blue"}}
-  Blue banner with an 
+  Blue banner with an
   {{#> button button--modifier="pf-m-inline pf-m-link"}}
     inline link button
   {{/button}}
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-gold"}}
-  Gold banner with an 
+  Gold banner with an
   {{#> button button--IsAnchor="true" button--url="https://www.w3.org/TR/WCAG20-TECHS/ARIA8.html#ARIA8-examples" button--modifier="pf-m-inline pf-m-link"}}
   inline link button (anchor){{/button}}
 {{/banner}}
 <br>
 {{#> banner banner--modifier="pf-m-red"}}
-  Red banner with a 
+  Red banner with a
   {{#> button button--modifier="pf-m-link pf-m-inline" button--attribute="disabled"}}
     disabled inline link button
   {{/button}}
@@ -153,9 +153,9 @@ Add a modifier class to the default banner to change the presentation: `.pf-m-bl
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-banner` | `<div>` |  Initiates a banner. **Required** |
-| `.pf-m-blue` | `.pf-c-banner` |  Modifies banner for blue styling. |
-| `.pf-m-red` | `.pf-c-banner` |  Modifies banner for red styling. |
-| `.pf-m-green` | `.pf-c-banner` |  Modifies banner for green styling. |
-| `.pf-m-gold` | `.pf-c-banner` |  Modifies banner for gold styling. |
-| `.pf-m-sticky` | `.pf-c-banner` |  Modifies banner to be sticky to the top of its container. |
+| `.pf-v5-c-banner` | `<div>` |  Initiates a banner. **Required** |
+| `.pf-m-blue` | `.pf-v5-c-banner` |  Modifies banner for blue styling. |
+| `.pf-m-red` | `.pf-v5-c-banner` |  Modifies banner for red styling. |
+| `.pf-m-green` | `.pf-v5-c-banner` |  Modifies banner for green styling. |
+| `.pf-m-gold` | `.pf-v5-c-banner` |  Modifies banner for gold styling. |
+| `.pf-m-sticky` | `.pf-v5-c-banner` |  Modifies banner to be sticky to the top of its container. |

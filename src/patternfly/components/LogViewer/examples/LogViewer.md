@@ -1,7 +1,7 @@
 ---
 id: 'Log viewer'
 section: extensions
-cssPrefix: pf-c-log-viewer
+cssPrefix: pf-v5-c-log-viewer
 ---
 
 import './LogViewer.css';
@@ -10,7 +10,7 @@ import './LogViewer.css';
 
 ### Basic
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-basic-example" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Basic log viewer"}}
+{{#> log-viewer log-viewer--id="log-viewer-basic-example" log-viewer--attribute='style="--pf-v5-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Basic log viewer"}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
@@ -26,7 +26,7 @@ import './LogViewer.css';
 
 ### With line number chars specified
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-line-number-chars-example" log-viewer--HasLineNumbers="true" log-viewer--modifier="pf-m-line-number-chars" log-viewer--attribute='style="--pf-c-log-viewer--line-number-chars: 6"' log-viewer--aria-label="Log viewer with line numbers"}}
+{{#> log-viewer log-viewer--id="log-viewer-line-number-chars-example" log-viewer--HasLineNumbers="true" log-viewer--modifier="pf-m-line-number-chars" log-viewer--attribute='style="--pf-v5-c-log-viewer--line-number-chars: 6"' log-viewer--aria-label="Log viewer with line numbers"}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
@@ -34,7 +34,7 @@ import './LogViewer.css';
 
 ### With text wrapping
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-text-wrap-example" log-viewer--HasLineNumbers="true" log-viewer--TextWraps="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer with text wrapping"}}
+{{#> log-viewer log-viewer--id="log-viewer-text-wrap-example" log-viewer--HasLineNumbers="true" log-viewer--TextWraps="true" log-viewer--attribute='style="--pf-v5-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer with text wrapping"}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
@@ -42,7 +42,7 @@ import './LogViewer.css';
 
 ### Without text wrapping
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-text-nowrap-example" log-viewer--HasLineNumbers="true" log-viewer--NoWrap="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer without text wrapping"}}
+{{#> log-viewer log-viewer--id="log-viewer-text-nowrap-example" log-viewer--HasLineNumbers="true" log-viewer--NoWrap="true" log-viewer--attribute='style="--pf-v5-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer without text wrapping"}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
@@ -50,7 +50,7 @@ import './LogViewer.css';
 
 ### With search results
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-search-results-example" log-viewer--HasLineNumbers="true" log-viewer--IsMatch="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px;"' log-viewer--aria-label="Log viewer with search results"}}
+{{#> log-viewer log-viewer--id="log-viewer-search-results-example" log-viewer--HasLineNumbers="true" log-viewer--IsMatch="true" log-viewer--attribute='style="--pf-v5-c-log-viewer__index--Width: 75px;"' log-viewer--aria-label="Log viewer with search results"}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
@@ -58,7 +58,7 @@ import './LogViewer.css';
 
 ### With max height
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-max-height-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px; --pf-c-log-viewer--MaxHeight: 300px;"' log-viewer--aria-label="Log viewer with max height"}}
+{{#> log-viewer log-viewer--id="log-viewer-max-height-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-v5-c-log-viewer__index--Width: 75px; --pf-v5-c-log-viewer--MaxHeight: 300px;"' log-viewer--aria-label="Log viewer with max height"}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
@@ -66,7 +66,7 @@ import './LogViewer.css';
 
 ### With dropdown, drilldown, search expanded
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-dropdowns-expanded-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer with dropdown, drilldown, search expanded"}}
+{{#> log-viewer log-viewer--id="log-viewer-dropdowns-expanded-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-v5-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer with dropdown, drilldown, search expanded"}}
   {{> __log-viewer-toolbar dropdown--IsExpanded="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
@@ -74,7 +74,7 @@ import './LogViewer.css';
 
 ### With popover open
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-popover-expanded-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer with popover open"}}
+{{#> log-viewer log-viewer--id="log-viewer-popover-expanded-example" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-v5-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Log viewer with popover open"}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
 {{/log-viewer}}
@@ -109,7 +109,7 @@ import './LogViewer.css';
 
 ### Dark
 ```hbs
-{{#> log-viewer log-viewer--id="log-viewer-dark-example" log-viewer--IsMatch="true" log-viewer--modifier="pf-m-dark" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Dark log viewer"}}
+{{#> log-viewer log-viewer--id="log-viewer-dark-example" log-viewer--IsMatch="true" log-viewer--modifier="pf-m-dark" log-viewer--HasLineNumbers="true" log-viewer--attribute='style="--pf-v5-c-log-viewer__index--Width: 75px"' log-viewer--aria-label="Dark log viewer"}}
   {{> __log-viewer-toolbar menu--IsHidden="true"}}
   {{> __log-viewer-main}}
   {{#> button button--modifier="pf-m-primary"}}Jump to the bottom{{/button}}
@@ -122,32 +122,32 @@ import './LogViewer.css';
 
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
-| `aria-label="Log viewer"` | `.pf-c-log-viewer` | Provides an accessible label for the log viewer. |
-| `role="log"` | `.pf-c-log-viewer__main` | Identifies an element that creates a live region where new information is added in a meaningful order and old information may disappear. **Required** |
-| `aria-live="polite"` | `.pf-c-log-viewer__list` | Allows assistive technologies to automatically read new content within the aria-live region on the place where the text is displayed. |
-| `aria-atomic="true"` | `.pf-c-log-viewer__list` | Allows assistive technologies to notify a user when log messages are added. |
-| `tabindex="0"` | `.pf-c-log-viewer`, `.pf-c-log-viewer__list` | Inserts the element into the tab order of the page so that it is focusable. **Required** |
-| `aria-hidden="true"` | `.pf-c-log-viewer__index` | Hides an index from assistive technologies. |
+| `aria-label="Log viewer"` | `.pf-v5-c-log-viewer` | Provides an accessible label for the log viewer. |
+| `role="log"` | `.pf-v5-c-log-viewer__main` | Identifies an element that creates a live region where new information is added in a meaningful order and old information may disappear. **Required** |
+| `aria-live="polite"` | `.pf-v5-c-log-viewer__list` | Allows assistive technologies to automatically read new content within the aria-live region on the place where the text is displayed. |
+| `aria-atomic="true"` | `.pf-v5-c-log-viewer__list` | Allows assistive technologies to notify a user when log messages are added. |
+| `tabindex="0"` | `.pf-v5-c-log-viewer`, `.pf-v5-c-log-viewer__list` | Inserts the element into the tab order of the page so that it is focusable. **Required** |
+| `aria-hidden="true"` | `.pf-v5-c-log-viewer__index` | Hides an index from assistive technologies. |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-log-viewer` | `<div>` | Initiates a log viewer. **Required** |
-| `.pf-c-log-viewer__header` | `<div>` | Initiates the header container for a log viewer. **Required** |
-| `.pf-c-log-viewer__main` | `<div>` | Initiates the main container for a log viewer. **Required** |
-| `.pf-c-log-viewer__scroll-container` | `<div>` | Initiates the scroll container for a log viewer. **Required** |
-| `.pf-c-log-viewer__list` | `<ul>` | Initiates the log viewer list. **Required** |
-| `.pf-c-log-viewer__list-item` | `<li>` | Initiates a log viewer list item. **Required** |
-| `.pf-c-log-viewer__index` | `<span>` | Initiates a log viewer index element. **Required for numbered list** |
-| `.pf-c-log-viewer__text` | `<div>` | Initiates a log viewer text element. **Required** |
-| `.pf-c-log-viewer__string` | `<span>` | Initiates a log viewer string element. |
-| `.pf-c-log-viewer__timestamp` | `<div>` | Initiates a log viewer text element. **Required** |
-| `.pf-m-wrap-text` | `.pf-c-log-viewer` | Modifies the log viewer text to wrap. |
-| `.pf-m-nowrap` | `.pf-c-log-viewer` | Modifies the log viewer text to not wrap. |
-| `.pf-m-line-numbers` | `.pf-c-log-viewer` | Modifies the log viewer to display line numbers. |
-| `.pf-m-line-number-chars` | `.pf-c-log-viewer` | Modifies the log viewer allow for a custom line number column size. Use with `--pf-c-log-viewer--line-number-chars`. |
-| `.pf-m-dark` | `.pf-c-log-viewer` | Modifies the log viewer content for dark theme. |
-| `.pf-m-match` | `.pf-c-log-viewer__string` | Indicates a string is a search result. |
-| `.pf-m-current` | `.pf-c-log-viewer__string` | Indicates a string is the current search result. |
-| `--pf-c-log-viewer--line-number-chars` | `.pf-c-log-viewer` | With a number passed as the value, modifies the width of the line number column to show the specified number of characters. |
-| `--pf-c-log-viewer--MaxHeight{-on-[breakpoint]}: {height}` | `.pf-c-log-viewer` |  Modifies the height value of a log viewer at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-v5-c-log-viewer` | `<div>` | Initiates a log viewer. **Required** |
+| `.pf-v5-c-log-viewer__header` | `<div>` | Initiates the header container for a log viewer. **Required** |
+| `.pf-v5-c-log-viewer__main` | `<div>` | Initiates the main container for a log viewer. **Required** |
+| `.pf-v5-c-log-viewer__scroll-container` | `<div>` | Initiates the scroll container for a log viewer. **Required** |
+| `.pf-v5-c-log-viewer__list` | `<ul>` | Initiates the log viewer list. **Required** |
+| `.pf-v5-c-log-viewer__list-item` | `<li>` | Initiates a log viewer list item. **Required** |
+| `.pf-v5-c-log-viewer__index` | `<span>` | Initiates a log viewer index element. **Required for numbered list** |
+| `.pf-v5-c-log-viewer__text` | `<div>` | Initiates a log viewer text element. **Required** |
+| `.pf-v5-c-log-viewer__string` | `<span>` | Initiates a log viewer string element. |
+| `.pf-v5-c-log-viewer__timestamp` | `<div>` | Initiates a log viewer text element. **Required** |
+| `.pf-m-wrap-text` | `.pf-v5-c-log-viewer` | Modifies the log viewer text to wrap. |
+| `.pf-m-nowrap` | `.pf-v5-c-log-viewer` | Modifies the log viewer text to not wrap. |
+| `.pf-m-line-numbers` | `.pf-v5-c-log-viewer` | Modifies the log viewer to display line numbers. |
+| `.pf-m-line-number-chars` | `.pf-v5-c-log-viewer` | Modifies the log viewer allow for a custom line number column size. Use with `--pf-v5-c-log-viewer--line-number-chars`. |
+| `.pf-m-dark` | `.pf-v5-c-log-viewer` | Modifies the log viewer content for dark theme. |
+| `.pf-m-match` | `.pf-v5-c-log-viewer__string` | Indicates a string is a search result. |
+| `.pf-m-current` | `.pf-v5-c-log-viewer__string` | Indicates a string is the current search result. |
+| `--pf-v5-c-log-viewer--line-number-chars` | `.pf-v5-c-log-viewer` | With a number passed as the value, modifies the width of the line number column to show the specified number of characters. |
+| `--pf-v5-c-log-viewer--MaxHeight{-on-[breakpoint]}: {height}` | `.pf-v5-c-log-viewer` |  Modifies the height value of a log viewer at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

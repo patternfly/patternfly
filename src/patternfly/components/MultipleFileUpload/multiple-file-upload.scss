@@ -1,214 +1,216 @@
-.pf-c-multiple-file-upload {
-  --pf-c-multiple-file-upload--GridTemplateColumns: 1fr;
-  --pf-c-multiple-file-upload--Gap: var(--pf-global--spacer--lg);
+// @debug $multiple-file-upload; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$multiple-file-upload} {
+  --#{$multiple-file-upload}--GridTemplateColumns: 1fr;
+  --#{$multiple-file-upload}--Gap: var(--#{$pf-global}--spacer--lg);
 
   // main
-  --pf-c-multiple-file-upload__main--TextAlign: center;
-  --pf-c-multiple-file-upload__main--GridTemplateColumns: auto;
-  --pf-c-multiple-file-upload__main--GridTemplateRows: auto;
-  --pf-c-multiple-file-upload__main--GridTemplateAreas:
+  --#{$multiple-file-upload}__main--TextAlign: center;
+  --#{$multiple-file-upload}__main--GridTemplateColumns: auto;
+  --#{$multiple-file-upload}__main--GridTemplateRows: auto;
+  --#{$multiple-file-upload}__main--GridTemplateAreas:
     "title"
     "upload"
     "info";
-  --pf-c-multiple-file-upload__main--Gap: var(--pf-global--spacer--md);
-  --pf-c-multiple-file-upload__main--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-multiple-file-upload__main--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-multiple-file-upload__main--PaddingBottom: var(--pf-global--spacer--xl);
-  --pf-c-multiple-file-upload__main--PaddingLeft: var(--pf-global--spacer--lg);
-  --pf-c-multiple-file-upload__main--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-multiple-file-upload__main--BorderStyle: dashed;
-  --pf-c-multiple-file-upload__main--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-multiple-file-upload__main--BackgroundColor: var(--pf-global--BackgroundColor--100);
+  --#{$multiple-file-upload}__main--Gap: var(--#{$pf-global}--spacer--md);
+  --#{$multiple-file-upload}__main--PaddingTop: var(--#{$pf-global}--spacer--lg);
+  --#{$multiple-file-upload}__main--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$multiple-file-upload}__main--PaddingBottom: var(--#{$pf-global}--spacer--xl);
+  --#{$multiple-file-upload}__main--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$multiple-file-upload}__main--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$multiple-file-upload}__main--BorderStyle: dashed;
+  --#{$multiple-file-upload}__main--BorderColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$multiple-file-upload}__main--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
 
   // title
-  --pf-c-multiple-file-upload__title--Display: grid;
-  --pf-c-multiple-file-upload__title--GridTemplateColumns: auto;
-  --pf-c-multiple-file-upload__title--Gap: var(--pf-global--spacer--sm);
+  --#{$multiple-file-upload}__title--Display: grid;
+  --#{$multiple-file-upload}__title--GridTemplateColumns: auto;
+  --#{$multiple-file-upload}__title--Gap: var(--#{$pf-global}--spacer--sm);
 
   // title icon
-  --pf-c-multiple-file-upload__title-icon--Color: var(--pf-global--icon--Color--dark);
+  --#{$multiple-file-upload}__title-icon--Color: var(--#{$pf-global}--icon--Color--dark);
 
   // title text separator
-  --pf-c-multiple-file-upload__title-text-separator--Display: block;
-  --pf-c-multiple-file-upload__title-text-separator--MarginTop: var(--pf-global--spacer--sm);
+  --#{$multiple-file-upload}__title-text-separator--Display: block;
+  --#{$multiple-file-upload}__title-text-separator--MarginTop: var(--#{$pf-global}--spacer--sm);
 
   // info
-  --pf-c-multiple-file-upload__info--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-multiple-file-upload__info--Color: var(--pf-global--Color--200);
-  --pf-c-multiple-file-upload__info--MarginTop: var(--pf-global--spacer--sm);
+  --#{$multiple-file-upload}__info--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$multiple-file-upload}__info--Color: var(--#{$pf-global}--Color--200);
+  --#{$multiple-file-upload}__info--MarginTop: var(--#{$pf-global}--spacer--sm);
 
   // drag-over
-  --pf-c-multiple-file-upload--m-drag-over__main--BorderStyle: solid;
-  --pf-c-multiple-file-upload--m-drag-over__main--BorderColor: var(--pf-global--active-color--100);
-  --pf-c-multiple-file-upload--m-drag-over__main--BackgroundColor: var(--pf-global--palette--blue-50);
-  --pf-c-multiple-file-upload--m-drag-over__main__title-icon--Color: var(--pf-global--active-color--100);
-  --pf-c-multiple-file-upload--m-drag-over__main__title-text--Color: var(--pf-global--active-color--100);
-  --pf-c-multiple-file-upload--m-drag-over__main__info--Color: var(--pf-global--active-color--100);
+  --#{$multiple-file-upload}--m-drag-over__main--BorderStyle: solid;
+  --#{$multiple-file-upload}--m-drag-over__main--BorderColor: var(--#{$pf-global}--active-color--100);
+  --#{$multiple-file-upload}--m-drag-over__main--BackgroundColor: var(--#{$pf-global}--palette--blue-50);
+  --#{$multiple-file-upload}--m-drag-over__main__title-icon--Color: var(--#{$pf-global}--active-color--100);
+  --#{$multiple-file-upload}--m-drag-over__main__title-text--Color: var(--#{$pf-global}--active-color--100);
+  --#{$multiple-file-upload}--m-drag-over__main__info--Color: var(--#{$pf-global}--active-color--100);
 
   // horizontal
-  --pf-c-multiple-file-upload--m-horizontal--GridTemplateColumns: fit-content(100%);
-  --pf-c-multiple-file-upload--m-horizontal__main--TextAlign: left;
-  --pf-c-multiple-file-upload--m-horizontal__main--GridTemplateColumns: 1fr auto;
-  --pf-c-multiple-file-upload--m-horizontal__main--GridTemplateAreas:
+  --#{$multiple-file-upload}--m-horizontal--GridTemplateColumns: fit-content(100%);
+  --#{$multiple-file-upload}--m-horizontal__main--TextAlign: left;
+  --#{$multiple-file-upload}--m-horizontal__main--GridTemplateColumns: 1fr auto;
+  --#{$multiple-file-upload}--m-horizontal__main--GridTemplateAreas:
     "title upload"
     "info upload";
-  --pf-c-multiple-file-upload--m-horizontal__main--Gap: var(--pf-global--spacer--sm) var(--pf-global--spacer--2xl);
-  --pf-c-multiple-file-upload--m-horizontal__main--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-multiple-file-upload--m-horizontal__title--GridTemplateColumns: auto 1fr;
-  --pf-c-multiple-file-upload--m-horizontal__title--Gap: var(--pf-global--spacer--xs);
-  --pf-c-multiple-file-upload--m-horizontal__title-text-separator--Display: inline;
-  --pf-c-multiple-file-upload--m-horizontal__title-text-separator--MarginTop: 0;
-  --pf-c-multiple-file-upload--m-horizontal__info--MarginTop: 0;
+  --#{$multiple-file-upload}--m-horizontal__main--Gap: var(--#{$pf-global}--spacer--sm) var(--#{$pf-global}--spacer--2xl);
+  --#{$multiple-file-upload}--m-horizontal__main--PaddingBottom: var(--#{$pf-global}--spacer--lg);
+  --#{$multiple-file-upload}--m-horizontal__title--GridTemplateColumns: auto 1fr;
+  --#{$multiple-file-upload}--m-horizontal__title--Gap: var(--#{$pf-global}--spacer--xs);
+  --#{$multiple-file-upload}--m-horizontal__title-text-separator--Display: inline;
+  --#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginTop: 0;
+  --#{$multiple-file-upload}--m-horizontal__info--MarginTop: 0;
 
   // status progress
-  --pf-c-multiple-file-upload__status-progress--GridTemplateColumns: auto 1fr;
-  --pf-c-multiple-file-upload__status-progress--Gap: var(--pf-global--spacer--sm);
+  --#{$multiple-file-upload}__status-progress--GridTemplateColumns: auto 1fr;
+  --#{$multiple-file-upload}__status-progress--Gap: var(--#{$pf-global}--spacer--sm);
 
   // status progress icon
-  --pf-c-multiple-file-upload__status-progress-icon--Color: var(--pf-global--Color--200);
+  --#{$multiple-file-upload}__status-progress-icon--Color: var(--#{$pf-global}--icon--Color--dark);
 
   // status item
-  --pf-c-multiple-file-upload__status-item--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-multiple-file-upload__status-item--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-multiple-file-upload__status-item--first-child--PaddingTop: 0;
-  --pf-c-multiple-file-upload__status-item--GridTemplateColumns: auto 1fr auto;
-  --pf-c-multiple-file-upload__status-item--Gap: var(--pf-global--spacer--sm);
-  --pf-c-multiple-file-upload__status-item--BorderWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-multiple-file-upload__status-item--BorderColor: var(--pf-global--BorderColor--100);
+  --#{$multiple-file-upload}__status-item--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$multiple-file-upload}__status-item--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$multiple-file-upload}__status-item--first-child--PaddingTop: 0;
+  --#{$multiple-file-upload}__status-item--GridTemplateColumns: auto 1fr auto;
+  --#{$multiple-file-upload}__status-item--Gap: var(--#{$pf-global}--spacer--sm);
+  --#{$multiple-file-upload}__status-item--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$multiple-file-upload}__status-item--BorderColor: var(--#{$pf-global}--BorderColor--100);
 
   // status item icon
-  --pf-c-multiple-file-upload__status-item-icon--Color: var(--pf-global--icon--Color--dark);
+  --#{$multiple-file-upload}__status-item-icon--Color: var(--#{$pf-global}--icon--Color--dark);
 
   // status item close
-  --pf-c-multiple-file-upload__status-item-close--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
+  --#{$multiple-file-upload}__status-item-close--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
 
   // status item progress
-  --pf-c-multiple-file-upload__status-item-progress--GridTemplateColumns: fit-content(100%) max-content;
-  --pf-c-multiple-file-upload__status-item-progress--Gap: var(--pf-global--spacer--sm);
+  --#{$multiple-file-upload}__status-item-progress--GridTemplateColumns: fit-content(100%) max-content;
+  --#{$multiple-file-upload}__status-item-progress--Gap: var(--#{$pf-global}--spacer--sm);
 
   // status item progress text
-  --pf-c-multiple-file-upload__status-item-progress-text--Color: var(--pf-global--primary-color--100);
+  --#{$multiple-file-upload}__status-item-progress-text--Color: var(--#{$pf-global}--primary-color--100);
 
   // status item progress size
-  --pf-c-multiple-file-upload__status-item-progress-size--Color: var(--pf-global--Color--200);
+  --#{$multiple-file-upload}__status-item-progress-size--Color: var(--#{$pf-global}--Color--200);
 
   display: grid;
-  grid-template-columns: var(--pf-c-multiple-file-upload--GridTemplateColumns);
-  gap: var(--pf-c-multiple-file-upload--Gap);
+  grid-template-columns: var(--#{$multiple-file-upload}--GridTemplateColumns);
+  gap: var(--#{$multiple-file-upload}--Gap);
 
   &.pf-m-horizontal {
-    --pf-c-multiple-file-upload--GridTemplateColumns: var(--pf-c-multiple-file-upload--m-horizontal--GridTemplateColumns);
-    --pf-c-multiple-file-upload__main--TextAlign: var(--pf-c-multiple-file-upload--m-horizontal__main--TextAlign);
-    --pf-c-multiple-file-upload__main--GridTemplateColumns: var(--pf-c-multiple-file-upload--m-horizontal__main--GridTemplateColumns);
-    --pf-c-multiple-file-upload__main--GridTemplateAreas: var(--pf-c-multiple-file-upload--m-horizontal__main--GridTemplateAreas);
-    --pf-c-multiple-file-upload__main--Gap: var(--pf-c-multiple-file-upload--m-horizontal__main--Gap);
-    --pf-c-multiple-file-upload__main--PaddingBottom: var(--pf-c-multiple-file-upload--m-horizontal__main--PaddingBottom);
-    --pf-c-multiple-file-upload__title--GridTemplateColumns: var(--pf-c-multiple-file-upload--m-horizontal__title--GridTemplateColumns);
-    --pf-c-multiple-file-upload__title--Gap: var(--pf-c-multiple-file-upload--m-horizontal__title--Gap);
-    --pf-c-multiple-file-upload__title-text-separator--Display: var(--pf-c-multiple-file-upload--m-horizontal__title-text-separator--Display);
-    --pf-c-multiple-file-upload__title-text-separator--MarginTop: var(--pf-c-multiple-file-upload--m-horizontal__title-text-separator--MarginTop);
-    --pf-c-multiple-file-upload__info--MarginTop: var(--pf-c-multiple-file-upload--m-horizontal__info--MarginTop);
+    --#{$multiple-file-upload}--GridTemplateColumns: var(--#{$multiple-file-upload}--m-horizontal--GridTemplateColumns);
+    --#{$multiple-file-upload}__main--TextAlign: var(--#{$multiple-file-upload}--m-horizontal__main--TextAlign);
+    --#{$multiple-file-upload}__main--GridTemplateColumns: var(--#{$multiple-file-upload}--m-horizontal__main--GridTemplateColumns);
+    --#{$multiple-file-upload}__main--GridTemplateAreas: var(--#{$multiple-file-upload}--m-horizontal__main--GridTemplateAreas);
+    --#{$multiple-file-upload}__main--Gap: var(--#{$multiple-file-upload}--m-horizontal__main--Gap);
+    --#{$multiple-file-upload}__main--PaddingBottom: var(--#{$multiple-file-upload}--m-horizontal__main--PaddingBottom);
+    --#{$multiple-file-upload}__title--GridTemplateColumns: var(--#{$multiple-file-upload}--m-horizontal__title--GridTemplateColumns);
+    --#{$multiple-file-upload}__title--Gap: var(--#{$multiple-file-upload}--m-horizontal__title--Gap);
+    --#{$multiple-file-upload}__title-text-separator--Display: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--Display);
+    --#{$multiple-file-upload}__title-text-separator--MarginTop: var(--#{$multiple-file-upload}--m-horizontal__title-text-separator--MarginTop);
+    --#{$multiple-file-upload}__info--MarginTop: var(--#{$multiple-file-upload}--m-horizontal__info--MarginTop);
   }
 
   &.pf-m-drag-over {
-    --pf-c-multiple-file-upload__main--BorderStyle: var(--pf-c-multiple-file-upload--m-drag-over__main--BorderStyle);
-    --pf-c-multiple-file-upload__main--BorderColor: var(--pf-c-multiple-file-upload--m-drag-over__main--BorderColor);
-    --pf-c-multiple-file-upload__main--BackgroundColor: var(--pf-c-multiple-file-upload--m-drag-over__main--BackgroundColor);
-    --pf-c-multiple-file-upload__title-icon--Color: var(--pf-c-multiple-file-upload--m-drag-over__main__title-icon--Color);
-    --pf-c-multiple-file-upload__title-text--Color: var(--pf-c-multiple-file-upload--m-drag-over__main__title-text--Color);
-    --pf-c-multiple-file-upload__info--Color: var(--pf-c-multiple-file-upload--m-drag-over__main__info--Color);
+    --#{$multiple-file-upload}__main--BorderStyle: var(--#{$multiple-file-upload}--m-drag-over__main--BorderStyle);
+    --#{$multiple-file-upload}__main--BorderColor: var(--#{$multiple-file-upload}--m-drag-over__main--BorderColor);
+    --#{$multiple-file-upload}__main--BackgroundColor: var(--#{$multiple-file-upload}--m-drag-over__main--BackgroundColor);
+    --#{$multiple-file-upload}__title-icon--Color: var(--#{$multiple-file-upload}--m-drag-over__main__title-icon--Color);
+    --#{$multiple-file-upload}__title-text--Color: var(--#{$multiple-file-upload}--m-drag-over__main__title-text--Color);
+    --#{$multiple-file-upload}__info--Color: var(--#{$multiple-file-upload}--m-drag-over__main__info--Color);
   }
 }
 
-.pf-c-multiple-file-upload__main {
+.#{$multiple-file-upload}__main {
   display: grid;
-  grid-template-areas: var(--pf-c-multiple-file-upload__main--GridTemplateAreas);
-  grid-template-rows: var(--pf-c-multiple-file-upload__main--GridTemplateRows);
-  grid-template-columns: var(--pf-c-multiple-file-upload__main--GridTemplateColumns);
-  gap: var(--pf-c-multiple-file-upload__main--Gap);
-  padding: var(--pf-c-multiple-file-upload__main--PaddingTop) var(--pf-c-multiple-file-upload__main--PaddingRight) var(--pf-c-multiple-file-upload__main--PaddingBottom) var(--pf-c-multiple-file-upload__main--PaddingLeft);
-  text-align: var(--pf-c-multiple-file-upload__main--TextAlign);
-  background-color: var(--pf-c-multiple-file-upload__main--BackgroundColor);
-  border: var(--pf-c-multiple-file-upload__main--BorderWidth) var(--pf-c-multiple-file-upload__main--BorderStyle) var(--pf-c-multiple-file-upload__main--BorderColor);
+  grid-template-areas: var(--#{$multiple-file-upload}__main--GridTemplateAreas);
+  grid-template-rows: var(--#{$multiple-file-upload}__main--GridTemplateRows);
+  grid-template-columns: var(--#{$multiple-file-upload}__main--GridTemplateColumns);
+  gap: var(--#{$multiple-file-upload}__main--Gap);
+  padding: var(--#{$multiple-file-upload}__main--PaddingTop) var(--#{$multiple-file-upload}__main--PaddingRight) var(--#{$multiple-file-upload}__main--PaddingBottom) var(--#{$multiple-file-upload}__main--PaddingLeft);
+  text-align: var(--#{$multiple-file-upload}__main--TextAlign);
+  background-color: var(--#{$multiple-file-upload}__main--BackgroundColor);
+  border: var(--#{$multiple-file-upload}__main--BorderWidth) var(--#{$multiple-file-upload}__main--BorderStyle) var(--#{$multiple-file-upload}__main--BorderColor);
 }
 
-.pf-c-multiple-file-upload__title {
-  display: var(--pf-c-multiple-file-upload__title--Display);
+.#{$multiple-file-upload}__title {
+  display: var(--#{$multiple-file-upload}__title--Display);
   grid-area: title;
-  grid-template-columns: var(--pf-c-multiple-file-upload__title--GridTemplateColumns);
-  gap: var(--pf-c-multiple-file-upload__title--Gap);
+  grid-template-columns: var(--#{$multiple-file-upload}__title--GridTemplateColumns);
+  gap: var(--#{$multiple-file-upload}__title--Gap);
 }
 
-.pf-c-multiple-file-upload__title-icon {
-  color: var(--pf-c-multiple-file-upload__title-icon--Color);
+.#{$multiple-file-upload}__title-icon {
+  color: var(--#{$multiple-file-upload}__title-icon--Color);
 }
 
-.pf-c-multiple-file-upload__title-text {
-  color: var(--pf-c-multiple-file-upload__title-text--Color, inherit);
+.#{$multiple-file-upload}__title-text {
+  color: var(--#{$multiple-file-upload}__title-text--Color, inherit);
 }
 
-.pf-c-multiple-file-upload__title-text-separator {
-  display: var(--pf-c-multiple-file-upload__title-text-separator--Display);
-  margin-top: var(--pf-c-multiple-file-upload__title-text-separator--MarginTop);
+.#{$multiple-file-upload}__title-text-separator {
+  display: var(--#{$multiple-file-upload}__title-text-separator--Display);
+  margin-top: var(--#{$multiple-file-upload}__title-text-separator--MarginTop);
 }
 
-.pf-c-multiple-file-upload__upload {
+.#{$multiple-file-upload}__upload {
   grid-area: upload;
 }
 
-.pf-c-multiple-file-upload__info {
+.#{$multiple-file-upload}__info {
   grid-area: info;
-  margin-top: var(--pf-c-multiple-file-upload__info--MarginTop);
-  font-size: var(--pf-c-multiple-file-upload__info--FontSize);
-  color: var(--pf-c-multiple-file-upload__info--Color);
+  margin-top: var(--#{$multiple-file-upload}__info--MarginTop);
+  font-size: var(--#{$multiple-file-upload}__info--FontSize);
+  color: var(--#{$multiple-file-upload}__info--Color);
 }
 
-.pf-c-multiple-file-upload__status,
-.pf-c-multiple-file-upload__status-item-main {
+.#{$multiple-file-upload}__status,
+.#{$multiple-file-upload}__status-item-main {
   min-width: 0;
 }
 
-.pf-c-multiple-file-upload__status-progress {
+.#{$multiple-file-upload}__status-progress {
   display: grid;
-  grid-template-columns: var(--pf-c-multiple-file-upload__status-progress--GridTemplateColumns);
-  gap: var(--pf-c-multiple-file-upload__status-progress--Gap);
+  grid-template-columns: var(--#{$multiple-file-upload}__status-progress--GridTemplateColumns);
+  gap: var(--#{$multiple-file-upload}__status-progress--Gap);
 }
 
-.pf-c-multiple-file-upload__status-progress-icon {
-  color: var(--pf-c-multiple-file-upload__status-progress-icon--Color);
+.#{$multiple-file-upload}__status-progress-icon {
+  color: var(--#{$multiple-file-upload}__status-progress-icon--Color);
 }
 
-.pf-c-multiple-file-upload__status-item {
+.#{$multiple-file-upload}__status-item {
   display: grid;
-  grid-template-columns: var(--pf-c-multiple-file-upload__status-item--GridTemplateColumns);
-  gap: var(--pf-c-multiple-file-upload__status-item--Gap);
-  padding-top: var(--pf-c-multiple-file-upload__status-item--PaddingTop);
-  padding-bottom: var(--pf-c-multiple-file-upload__status-item--PaddingBottom);
-  border-bottom: var(--pf-c-multiple-file-upload__status-item--BorderWidth) solid var(--pf-c-multiple-file-upload__status-item--BorderColor);
+  grid-template-columns: var(--#{$multiple-file-upload}__status-item--GridTemplateColumns);
+  gap: var(--#{$multiple-file-upload}__status-item--Gap);
+  padding-top: var(--#{$multiple-file-upload}__status-item--PaddingTop);
+  padding-bottom: var(--#{$multiple-file-upload}__status-item--PaddingBottom);
+  border-bottom: var(--#{$multiple-file-upload}__status-item--BorderWidth) solid var(--#{$multiple-file-upload}__status-item--BorderColor);
 
   &:first-child {
-    --pf-c-multiple-file-upload__status-item--PaddingTop: var(--pf-c-multiple-file-upload__status-item--first-child--PaddingTop);
+    --#{$multiple-file-upload}__status-item--PaddingTop: var(--#{$multiple-file-upload}__status-item--first-child--PaddingTop);
   }
 }
 
-.pf-c-multiple-file-upload__status-item-icon {
-  color: var(--pf-c-multiple-file-upload__status-item-icon--Color);
+.#{$multiple-file-upload}__status-item-icon {
+  color: var(--#{$multiple-file-upload}__status-item-icon--Color);
 }
 
-.pf-c-multiple-file-upload__status-item-close {
-  margin-top: var(--pf-c-multiple-file-upload__status-item-close--MarginTop);
+.#{$multiple-file-upload}__status-item-close {
+  margin-top: var(--#{$multiple-file-upload}__status-item-close--MarginTop);
 }
 
-.pf-c-multiple-file-upload__status-item-progress {
+.#{$multiple-file-upload}__status-item-progress {
   display: grid;
-  grid-template-columns: var(--pf-c-multiple-file-upload__status-item-progress--GridTemplateColumns);
-  gap: var(--pf-c-multiple-file-upload__status-item-progress--Gap);
+  grid-template-columns: var(--#{$multiple-file-upload}__status-item-progress--GridTemplateColumns);
+  gap: var(--#{$multiple-file-upload}__status-item-progress--Gap);
 }
 
-.pf-c-multiple-file-upload__status-item-progress-text {
-  color: var(--pf-c-multiple-file-upload__status-item-progress-text--Color);
+.#{$multiple-file-upload}__status-item-progress-text {
+  color: var(--#{$multiple-file-upload}__status-item-progress-text--Color);
 }
 
-.pf-c-multiple-file-upload__status-item-progress-size {
-  color: var(--pf-c-multiple-file-upload__status-item-progress-size--Color);
+.#{$multiple-file-upload}__status-item-progress-size {
+  color: var(--#{$multiple-file-upload}__status-item-progress-size--Color);
 }

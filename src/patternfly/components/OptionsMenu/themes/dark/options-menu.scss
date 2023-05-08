@@ -1,19 +1,19 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-options-menu() {
-  .pf-c-options-menu {
-    --pf-c-options-menu__toggle--BackgroundColor: var(--pf-global--BackgroundColor--400);
-    --pf-c-options-menu__toggle--BorderTopColor: transparent;
-    --pf-c-options-menu__toggle--BorderRightColor: transparent;
-    --pf-c-options-menu__toggle--BorderBottomColor: var(--pf-global--BorderColor--400);
-    --pf-c-options-menu__toggle--BorderLeftColor: transparent;
-    --pf-c-options-menu__toggle--disabled--BackgroundColor: var(--pf-global--palette--black-500);
-    --pf-c-options-menu__menu--BackgroundColor: var(--pf-global--BackgroundColor--300);
-    --pf-c-options-menu__menu-item--hover--BackgroundColor: var(--pf-global--BackgroundColor--400);
-    --pf-c-options-menu__menu--Top: 100%;
+@mixin pf-v5-theme-dark-options-menu() {
+  .#{$options-menu} {
+    --#{$options-menu}__toggle--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+    --#{$options-menu}__toggle--BorderTopColor: transparent;
+    --#{$options-menu}__toggle--BorderRightColor: transparent;
+    --#{$options-menu}__toggle--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
+    --#{$options-menu}__toggle--BorderLeftColor: transparent;
+    --#{$options-menu}__toggle--disabled--BackgroundColor: var(--#{$pf-global}--palette--black-500);
+    --#{$options-menu}__menu--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$options-menu}__menu-item--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+    --#{$options-menu}__menu--Top: 100%;
   }
 
-  .pf-c-options-menu__toggle {
+  .#{$options-menu}__toggle {
     &.pf-m-plain {
       background: transparent;
     }

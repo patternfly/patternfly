@@ -1,8 +1,8 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-tooltip() {
-  .pf-c-tooltip {
-    --pf-c-tooltip__content--BackgroundColor: var(--pf-global--BackgroundColor--300);
-    --pf-c-tooltip__arrow--BackgroundColor: var(--pf-global--BackgroundColor--300);
+@mixin pf-v5-theme-dark-tooltip() {
+  .#{$tooltip} {
+    --#{$tooltip}__content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$tooltip}__arrow--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
   }
 }

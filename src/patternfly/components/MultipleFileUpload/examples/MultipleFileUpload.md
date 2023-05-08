@@ -2,7 +2,7 @@
 id: 'Multiple file upload'
 section: components
 subsection: file-upload
-cssPrefix: pf-c-multiple-file-upload
+cssPrefix: pf-v5-c-multiple-file-upload
 ---
 
 ## Examples
@@ -46,23 +46,23 @@ cssPrefix: pf-c-multiple-file-upload
 ### Usage
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-multiple-file-upload` | `<div>` | Initiates the multiple file upload component. **Required** |
-| `.pf-c-multiple-file-upload__main` | `<div>` | Defines the main section. |
-| `.pf-c-multiple-file-upload__title` | `<div>` | Defines the title. |
-| `.pf-c-multiple-file-upload__title-icon` | `<div>` | Defines the title icon. |
-| `.pf-c-multiple-file-upload__title-text` | `<div>` | Defines the title text. |
-| `.pf-c-multiple-file-upload__title-text-separator` | `<div>` | Defines the title text separator. |
-| `.pf-c-multiple-file-upload__upload` | `<div>` | Defines the upload button. |
-| `.pf-c-multiple-file-upload__info` | `<div>` | Defines the info section. |
-| `.pf-c-multiple-file-upload__status` | `<div>` | Defines the status section. |
-| `.pf-c-multiple-file-upload__status-progress` | `<div>` | Defines the status toggle progress. |
-| `.pf-c-multiple-file-upload__status-progress-icon` | `<div>` | Defines the status toggle progress icon. |
-| `.pf-c-multiple-file-upload__status-progress-text` | `<div>` | Defines the status toggle progress text. |
-| `.pf-c-multiple-file-upload__status-list` | `<div>` | Defines the status item list. |
-| `.pf-c-multiple-file-upload__status-item` | `<div>` | Defines a status item. |
-| `.pf-c-multiple-file-upload__status-item-icon` | `<div>` | Defines the status item icon. |
-| `.pf-c-multiple-file-upload__status-item-main` | `<div>` | Defines the status item main progress section. |
-| `.pf-c-multiple-file-upload__status-item-close` | `<div>` | Defines the status item close button. |
-| `.pf-c-multiple-file-upload__status-item-progress` | `<div>` | Defines the status item progress description. |
-| `.pf-c-multiple-file-upload__status-item-progress-text` | `<div>` | Defines the status item progress description text. |
-| `.pf-c-multiple-file-upload__status-item-progress-size` | `<div>` | Defines the status item progress description size. |
+| `.pf-v5-c-multiple-file-upload` | `<div>` | Initiates the multiple file upload component. **Required** |
+| `.pf-v5-c-multiple-file-upload__main` | `<div>` | Defines the main section. |
+| `.pf-v5-c-multiple-file-upload__title` | `<div>` | Defines the title. |
+| `.pf-v5-c-multiple-file-upload__title-icon` | `<div>` | Defines the title icon. |
+| `.pf-v5-c-multiple-file-upload__title-text` | `<div>` | Defines the title text. |
+| `.pf-v5-c-multiple-file-upload__title-text-separator` | `<div>` | Defines the title text separator. |
+| `.pf-v5-c-multiple-file-upload__upload` | `<div>` | Defines the upload button. |
+| `.pf-v5-c-multiple-file-upload__info` | `<div>` | Defines the info section. |
+| `.pf-v5-c-multiple-file-upload__status` | `<div>` | Defines the status section. |
+| `.pf-v5-c-multiple-file-upload__status-progress` | `<div>` | Defines the status toggle progress. |
+| `.pf-v5-c-multiple-file-upload__status-progress-icon` | `<div>` | Defines the status toggle progress icon. |
+| `.pf-v5-c-multiple-file-upload__status-progress-text` | `<div>` | Defines the status toggle progress text. |
+| `.pf-v5-c-multiple-file-upload__status-list` | `<div>` | Defines the status item list. |
+| `.pf-v5-c-multiple-file-upload__status-item` | `<div>` | Defines a status item. |
+| `.pf-v5-c-multiple-file-upload__status-item-icon` | `<div>` | Defines the status item icon. |
+| `.pf-v5-c-multiple-file-upload__status-item-main` | `<div>` | Defines the status item main progress section. |
+| `.pf-v5-c-multiple-file-upload__status-item-close` | `<div>` | Defines the status item close button. |
+| `.pf-v5-c-multiple-file-upload__status-item-progress` | `<div>` | Defines the status item progress description. |
+| `.pf-v5-c-multiple-file-upload__status-item-progress-text` | `<div>` | Defines the status item progress description text. |
+| `.pf-v5-c-multiple-file-upload__status-item-progress-size` | `<div>` | Defines the status item progress description size. |

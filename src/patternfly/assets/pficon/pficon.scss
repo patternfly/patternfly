@@ -1,9 +1,9 @@
 @font-face {
 	font-family: 'pficon';
-	src: url('#{$pf-global--fonticon-path}/pficon.woff2') format('woff2');
+	src: url('#{$pf-v5-global--fonticon-path}/pficon.woff2') format('woff2');
 }
 
-@mixin pf-icon-styles {
+@mixin pf-v5-c-icon-styles {
 	font-family: 'pficon';
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -15,11 +15,11 @@
 	text-transform: none;
 }
 
-%pf-icon {
-	@include pf-icon-styles;
+%pf-v5-c-icon {
+	@include pf-v5-c-icon-styles;
 }
 
-@function pf-icon-char($filename) {
+@function pf-v5-c-icon-char($filename) {
 	$char: '';
 
 	@if $filename == add-circle-o {
@@ -410,398 +410,398 @@
 	@return $char;
 }
 
-@mixin pf-icon($filename, $insert: before, $extend: true) {
+@mixin pf-v5-c-icon($filename, $insert: before, $extend: true) {
 	&:#{$insert} {
 		@if $extend {
-			@extend %pf-icon;
+			@extend %pf-v5-c-icon;
 		} @else {
-			@include pf-icon-styles;
+			@include pf-v5-c-icon-styles;
 		}
-		content: pf-icon-char($filename);
+		content: pf-v5-c-icon-char($filename);
 	}
 }
 
-.pf-icon-add-circle-o {
-	@include pf-icon(add-circle-o);
+.pf-v5-c-icon-add-circle-o {
+	@include pf-v5-c-icon(add-circle-o);
 }
-.pf-icon-ansible-tower {
-	@include pf-icon(ansible-tower);
+.pf-v5-c-icon-ansible-tower {
+	@include pf-v5-c-icon(ansible-tower);
 }
-.pf-icon-applications {
-	@include pf-icon(applications);
+.pf-v5-c-icon-applications {
+	@include pf-v5-c-icon(applications);
 }
-.pf-icon-arrow {
-	@include pf-icon(arrow);
+.pf-v5-c-icon-arrow {
+	@include pf-v5-c-icon(arrow);
 }
-.pf-icon-asleep {
-	@include pf-icon(asleep);
+.pf-v5-c-icon-asleep {
+	@include pf-v5-c-icon(asleep);
 }
-.pf-icon-attention-bell {
-	@include pf-icon(attention-bell);
+.pf-v5-c-icon-attention-bell {
+	@include pf-v5-c-icon(attention-bell);
 }
-.pf-icon-automation {
-	@include pf-icon(automation);
+.pf-v5-c-icon-automation {
+	@include pf-v5-c-icon(automation);
 }
-.pf-icon-bell {
-	@include pf-icon(bell);
+.pf-v5-c-icon-bell {
+	@include pf-v5-c-icon(bell);
 }
-.pf-icon-blueprint {
-	@include pf-icon(blueprint);
+.pf-v5-c-icon-blueprint {
+	@include pf-v5-c-icon(blueprint);
 }
-.pf-icon-build {
-	@include pf-icon(build);
+.pf-v5-c-icon-build {
+	@include pf-v5-c-icon(build);
 }
-.pf-icon-builder-image {
-	@include pf-icon(builder-image);
+.pf-v5-c-icon-builder-image {
+	@include pf-v5-c-icon(builder-image);
 }
-.pf-icon-bundle {
-	@include pf-icon(bundle);
+.pf-v5-c-icon-bundle {
+	@include pf-v5-c-icon(bundle);
 }
-.pf-icon-catalog {
-	@include pf-icon(catalog);
+.pf-v5-c-icon-catalog {
+	@include pf-v5-c-icon(catalog);
 }
-.pf-icon-chat {
-	@include pf-icon(chat);
+.pf-v5-c-icon-chat {
+	@include pf-v5-c-icon(chat);
 }
-.pf-icon-close {
-	@include pf-icon(close);
+.pf-v5-c-icon-close {
+	@include pf-v5-c-icon(close);
 }
-.pf-icon-cloud-security {
-	@include pf-icon(cloud-security);
+.pf-v5-c-icon-cloud-security {
+	@include pf-v5-c-icon(cloud-security);
 }
-.pf-icon-cloud-tenant {
-	@include pf-icon(cloud-tenant);
+.pf-v5-c-icon-cloud-tenant {
+	@include pf-v5-c-icon(cloud-tenant);
 }
-.pf-icon-cluster {
-	@include pf-icon(cluster);
+.pf-v5-c-icon-cluster {
+	@include pf-v5-c-icon(cluster);
 }
-.pf-icon-connected {
-	@include pf-icon(connected);
+.pf-v5-c-icon-connected {
+	@include pf-v5-c-icon(connected);
 }
-.pf-icon-container-node {
-	@include pf-icon(container-node);
+.pf-v5-c-icon-container-node {
+	@include pf-v5-c-icon(container-node);
 }
-.pf-icon-cpu {
-	@include pf-icon(cpu);
+.pf-v5-c-icon-cpu {
+	@include pf-v5-c-icon(cpu);
 }
-.pf-icon-critical-risk {
-	@include pf-icon(critical-risk);
+.pf-v5-c-icon-critical-risk {
+	@include pf-v5-c-icon(critical-risk);
 }
-.pf-icon-data-processor {
-	@include pf-icon(data-processor);
+.pf-v5-c-icon-data-processor {
+	@include pf-v5-c-icon(data-processor);
 }
-.pf-icon-data-sink {
-	@include pf-icon(data-sink);
+.pf-v5-c-icon-data-sink {
+	@include pf-v5-c-icon(data-sink);
 }
-.pf-icon-data-source {
-	@include pf-icon(data-source);
+.pf-v5-c-icon-data-source {
+	@include pf-v5-c-icon(data-source);
 }
-.pf-icon-degraded {
-	@include pf-icon(degraded);
+.pf-v5-c-icon-degraded {
+	@include pf-v5-c-icon(degraded);
 }
-.pf-icon-disconnected {
-	@include pf-icon(disconnected);
+.pf-v5-c-icon-disconnected {
+	@include pf-v5-c-icon(disconnected);
 }
-.pf-icon-domain {
-	@include pf-icon(domain);
+.pf-v5-c-icon-domain {
+	@include pf-v5-c-icon(domain);
 }
-.pf-icon-edit {
-	@include pf-icon(edit);
+.pf-v5-c-icon-edit {
+	@include pf-v5-c-icon(edit);
 }
-.pf-icon-enhancement {
-	@include pf-icon(enhancement);
+.pf-v5-c-icon-enhancement {
+	@include pf-v5-c-icon(enhancement);
 }
-.pf-icon-enterprise {
-	@include pf-icon(enterprise);
+.pf-v5-c-icon-enterprise {
+	@include pf-v5-c-icon(enterprise);
 }
-.pf-icon-equalizer {
-	@include pf-icon(equalizer);
+.pf-v5-c-icon-equalizer {
+	@include pf-v5-c-icon(equalizer);
 }
-.pf-icon-error-circle-o {
-	@include pf-icon(error-circle-o);
+.pf-v5-c-icon-error-circle-o {
+	@include pf-v5-c-icon(error-circle-o);
 }
-.pf-icon-export {
-	@include pf-icon(export);
+.pf-v5-c-icon-export {
+	@include pf-v5-c-icon(export);
 }
-.pf-icon-filter {
-	@include pf-icon(filter);
+.pf-v5-c-icon-filter {
+	@include pf-v5-c-icon(filter);
 }
-.pf-icon-flavor {
-	@include pf-icon(flavor);
+.pf-v5-c-icon-flavor {
+	@include pf-v5-c-icon(flavor);
 }
-.pf-icon-folder-close {
-	@include pf-icon(folder-close);
+.pf-v5-c-icon-folder-close {
+	@include pf-v5-c-icon(folder-close);
 }
-.pf-icon-folder-open {
-	@include pf-icon(folder-open);
+.pf-v5-c-icon-folder-open {
+	@include pf-v5-c-icon(folder-open);
 }
-.pf-icon-globe-route {
-	@include pf-icon(globe-route);
+.pf-v5-c-icon-globe-route {
+	@include pf-v5-c-icon(globe-route);
 }
-.pf-icon-help {
-	@include pf-icon(help);
+.pf-v5-c-icon-help {
+	@include pf-v5-c-icon(help);
 }
-.pf-icon-history {
-	@include pf-icon(history);
+.pf-v5-c-icon-history {
+	@include pf-v5-c-icon(history);
 }
-.pf-icon-home {
-	@include pf-icon(home);
+.pf-v5-c-icon-home {
+	@include pf-v5-c-icon(home);
 }
-.pf-icon-import {
-	@include pf-icon(import);
+.pf-v5-c-icon-import {
+	@include pf-v5-c-icon(import);
 }
-.pf-icon-in-progress {
-	@include pf-icon(in-progress);
+.pf-v5-c-icon-in-progress {
+	@include pf-v5-c-icon(in-progress);
 }
-.pf-icon-info {
-	@include pf-icon(info);
+.pf-v5-c-icon-info {
+	@include pf-v5-c-icon(info);
 }
-.pf-icon-infrastructure {
-	@include pf-icon(infrastructure);
+.pf-v5-c-icon-infrastructure {
+	@include pf-v5-c-icon(infrastructure);
 }
-.pf-icon-integration {
-	@include pf-icon(integration);
+.pf-v5-c-icon-integration {
+	@include pf-v5-c-icon(integration);
 }
-.pf-icon-key {
-	@include pf-icon(key);
+.pf-v5-c-icon-key {
+	@include pf-v5-c-icon(key);
 }
-.pf-icon-locked {
-	@include pf-icon(locked);
+.pf-v5-c-icon-locked {
+	@include pf-v5-c-icon(locked);
 }
-.pf-icon-maintenance {
-	@include pf-icon(maintenance);
+.pf-v5-c-icon-maintenance {
+	@include pf-v5-c-icon(maintenance);
 }
-.pf-icon-memory {
-	@include pf-icon(memory);
+.pf-v5-c-icon-memory {
+	@include pf-v5-c-icon(memory);
 }
-.pf-icon-messages {
-	@include pf-icon(messages);
+.pf-v5-c-icon-messages {
+	@include pf-v5-c-icon(messages);
 }
-.pf-icon-middleware {
-	@include pf-icon(middleware);
+.pf-v5-c-icon-middleware {
+	@include pf-v5-c-icon(middleware);
 }
-.pf-icon-migration {
-	@include pf-icon(migration);
+.pf-v5-c-icon-migration {
+	@include pf-v5-c-icon(migration);
 }
-.pf-icon-module {
-	@include pf-icon(module);
+.pf-v5-c-icon-module {
+	@include pf-v5-c-icon(module);
 }
-.pf-icon-monitoring {
-	@include pf-icon(monitoring);
+.pf-v5-c-icon-monitoring {
+	@include pf-v5-c-icon(monitoring);
 }
-.pf-icon-namespaces {
-	@include pf-icon(namespaces);
+.pf-v5-c-icon-namespaces {
+	@include pf-v5-c-icon(namespaces);
 }
-.pf-icon-network {
-	@include pf-icon(network);
+.pf-v5-c-icon-network {
+	@include pf-v5-c-icon(network);
 }
-.pf-icon-new-process {
-	@include pf-icon(new-process);
+.pf-v5-c-icon-new-process {
+	@include pf-v5-c-icon(new-process);
 }
-.pf-icon-not-started {
-	@include pf-icon(not-started);
+.pf-v5-c-icon-not-started {
+	@include pf-v5-c-icon(not-started);
 }
-.pf-icon-off {
-	@include pf-icon(off);
+.pf-v5-c-icon-off {
+	@include pf-v5-c-icon(off);
 }
-.pf-icon-ok {
-	@include pf-icon(ok);
+.pf-v5-c-icon-ok {
+	@include pf-v5-c-icon(ok);
 }
-.pf-icon-on-running {
-	@include pf-icon(on-running);
+.pf-v5-c-icon-on-running {
+	@include pf-v5-c-icon(on-running);
 }
-.pf-icon-on {
-	@include pf-icon(on);
+.pf-v5-c-icon-on {
+	@include pf-v5-c-icon(on);
 }
-.pf-icon-open-drawer-right {
-	@include pf-icon(open-drawer-right);
+.pf-v5-c-icon-open-drawer-right {
+	@include pf-v5-c-icon(open-drawer-right);
 }
-.pf-icon-openshift {
-	@include pf-icon(openshift);
+.pf-v5-c-icon-openshift {
+	@include pf-v5-c-icon(openshift);
 }
-.pf-icon-openstack {
-	@include pf-icon(openstack);
+.pf-v5-c-icon-openstack {
+	@include pf-v5-c-icon(openstack);
 }
-.pf-icon-optimize {
-	@include pf-icon(optimize);
+.pf-v5-c-icon-optimize {
+	@include pf-v5-c-icon(optimize);
 }
-.pf-icon-orders {
-	@include pf-icon(orders);
+.pf-v5-c-icon-orders {
+	@include pf-v5-c-icon(orders);
 }
-.pf-icon-os-image {
-	@include pf-icon(os-image);
+.pf-v5-c-icon-os-image {
+	@include pf-v5-c-icon(os-image);
 }
-.pf-icon-package {
-	@include pf-icon(package);
+.pf-v5-c-icon-package {
+	@include pf-v5-c-icon(package);
 }
-.pf-icon-panel-close {
-	@include pf-icon(panel-close);
+.pf-v5-c-icon-panel-close {
+	@include pf-v5-c-icon(panel-close);
 }
-.pf-icon-panel-open {
-	@include pf-icon(panel-open);
+.pf-v5-c-icon-panel-open {
+	@include pf-v5-c-icon(panel-open);
 }
-.pf-icon-paused {
-	@include pf-icon(paused);
+.pf-v5-c-icon-paused {
+	@include pf-v5-c-icon(paused);
 }
-.pf-icon-pending {
-	@include pf-icon(pending);
+.pf-v5-c-icon-pending {
+	@include pf-v5-c-icon(pending);
 }
-.pf-icon-pficon-dragdrop {
-	@include pf-icon(pficon-dragdrop);
+.pf-v5-c-icon-pficon-dragdrop {
+	@include pf-v5-c-icon(pficon-dragdrop);
 }
-.pf-icon-pficon-history {
-	@include pf-icon(pficon-history);
+.pf-v5-c-icon-pficon-history {
+	@include pf-v5-c-icon(pficon-history);
 }
-.pf-icon-pficon-network-range {
-	@include pf-icon(pficon-network-range);
+.pf-v5-c-icon-pficon-network-range {
+	@include pf-v5-c-icon(pficon-network-range);
 }
-.pf-icon-pficon-satellite {
-	@include pf-icon(pficon-satellite);
+.pf-v5-c-icon-pficon-satellite {
+	@include pf-v5-c-icon(pficon-satellite);
 }
-.pf-icon-pficon-sort-common-asc {
-	@include pf-icon(pficon-sort-common-asc);
+.pf-v5-c-icon-pficon-sort-common-asc {
+	@include pf-v5-c-icon(pficon-sort-common-asc);
 }
-.pf-icon-pficon-sort-common-desc {
-	@include pf-icon(pficon-sort-common-desc);
+.pf-v5-c-icon-pficon-sort-common-desc {
+	@include pf-v5-c-icon(pficon-sort-common-desc);
 }
-.pf-icon-pficon-template {
-	@include pf-icon(pficon-template);
+.pf-v5-c-icon-pficon-template {
+	@include pf-v5-c-icon(pficon-template);
 }
-.pf-icon-pficon-vcenter {
-	@include pf-icon(pficon-vcenter);
+.pf-v5-c-icon-pficon-vcenter {
+	@include pf-v5-c-icon(pficon-vcenter);
 }
-.pf-icon-plugged {
-	@include pf-icon(plugged);
+.pf-v5-c-icon-plugged {
+	@include pf-v5-c-icon(plugged);
 }
-.pf-icon-port {
-	@include pf-icon(port);
+.pf-v5-c-icon-port {
+	@include pf-v5-c-icon(port);
 }
-.pf-icon-print {
-	@include pf-icon(print);
+.pf-v5-c-icon-print {
+	@include pf-v5-c-icon(print);
 }
-.pf-icon-private {
-	@include pf-icon(private);
+.pf-v5-c-icon-private {
+	@include pf-v5-c-icon(private);
 }
-.pf-icon-process-automation {
-	@include pf-icon(process-automation);
+.pf-v5-c-icon-process-automation {
+	@include pf-v5-c-icon(process-automation);
 }
-.pf-icon-project {
-	@include pf-icon(project);
+.pf-v5-c-icon-project {
+	@include pf-v5-c-icon(project);
 }
-.pf-icon-rebalance {
-	@include pf-icon(rebalance);
+.pf-v5-c-icon-rebalance {
+	@include pf-v5-c-icon(rebalance);
 }
-.pf-icon-rebooting {
-	@include pf-icon(rebooting);
+.pf-v5-c-icon-rebooting {
+	@include pf-v5-c-icon(rebooting);
 }
-.pf-icon-regions {
-	@include pf-icon(regions);
+.pf-v5-c-icon-regions {
+	@include pf-v5-c-icon(regions);
 }
-.pf-icon-registry {
-	@include pf-icon(registry);
+.pf-v5-c-icon-registry {
+	@include pf-v5-c-icon(registry);
 }
-.pf-icon-remove2 {
-	@include pf-icon(remove2);
+.pf-v5-c-icon-remove2 {
+	@include pf-v5-c-icon(remove2);
 }
-.pf-icon-replicator {
-	@include pf-icon(replicator);
+.pf-v5-c-icon-replicator {
+	@include pf-v5-c-icon(replicator);
 }
-.pf-icon-repository {
-	@include pf-icon(repository);
+.pf-v5-c-icon-repository {
+	@include pf-v5-c-icon(repository);
 }
-.pf-icon-resource-pool {
-	@include pf-icon(resource-pool);
+.pf-v5-c-icon-resource-pool {
+	@include pf-v5-c-icon(resource-pool);
 }
-.pf-icon-resources-almost-empty {
-	@include pf-icon(resources-almost-empty);
+.pf-v5-c-icon-resources-almost-empty {
+	@include pf-v5-c-icon(resources-almost-empty);
 }
-.pf-icon-resources-almost-full {
-	@include pf-icon(resources-almost-full);
+.pf-v5-c-icon-resources-almost-full {
+	@include pf-v5-c-icon(resources-almost-full);
 }
-.pf-icon-resources-empty {
-	@include pf-icon(resources-empty);
+.pf-v5-c-icon-resources-empty {
+	@include pf-v5-c-icon(resources-empty);
 }
-.pf-icon-resources-full {
-	@include pf-icon(resources-full);
+.pf-v5-c-icon-resources-full {
+	@include pf-v5-c-icon(resources-full);
 }
-.pf-icon-running {
-	@include pf-icon(running);
+.pf-v5-c-icon-running {
+	@include pf-v5-c-icon(running);
 }
-.pf-icon-save {
-	@include pf-icon(save);
+.pf-v5-c-icon-save {
+	@include pf-v5-c-icon(save);
 }
-.pf-icon-screen {
-	@include pf-icon(screen);
+.pf-v5-c-icon-screen {
+	@include pf-v5-c-icon(screen);
 }
-.pf-icon-security {
-	@include pf-icon(security);
+.pf-v5-c-icon-security {
+	@include pf-v5-c-icon(security);
 }
-.pf-icon-server-group {
-	@include pf-icon(server-group);
+.pf-v5-c-icon-server-group {
+	@include pf-v5-c-icon(server-group);
 }
-.pf-icon-server {
-	@include pf-icon(server);
+.pf-v5-c-icon-server {
+	@include pf-v5-c-icon(server);
 }
-.pf-icon-service-catalog {
-	@include pf-icon(service-catalog);
+.pf-v5-c-icon-service-catalog {
+	@include pf-v5-c-icon(service-catalog);
 }
-.pf-icon-service {
-	@include pf-icon(service);
+.pf-v5-c-icon-service {
+	@include pf-v5-c-icon(service);
 }
-.pf-icon-services {
-	@include pf-icon(services);
+.pf-v5-c-icon-services {
+	@include pf-v5-c-icon(services);
 }
-.pf-icon-spinner {
-	@include pf-icon(spinner);
+.pf-v5-c-icon-spinner {
+	@include pf-v5-c-icon(spinner);
 }
-.pf-icon-spinner2 {
-	@include pf-icon(spinner2);
+.pf-v5-c-icon-spinner2 {
+	@include pf-v5-c-icon(spinner2);
 }
-.pf-icon-storage-domain {
-	@include pf-icon(storage-domain);
+.pf-v5-c-icon-storage-domain {
+	@include pf-v5-c-icon(storage-domain);
 }
-.pf-icon-task {
-	@include pf-icon(task);
+.pf-v5-c-icon-task {
+	@include pf-v5-c-icon(task);
 }
-.pf-icon-tenant {
-	@include pf-icon(tenant);
+.pf-v5-c-icon-tenant {
+	@include pf-v5-c-icon(tenant);
 }
-.pf-icon-thumb-tack {
-	@include pf-icon(thumb-tack);
+.pf-v5-c-icon-thumb-tack {
+	@include pf-v5-c-icon(thumb-tack);
 }
-.pf-icon-topology {
-	@include pf-icon(topology);
+.pf-v5-c-icon-topology {
+	@include pf-v5-c-icon(topology);
 }
-.pf-icon-trend-down {
-	@include pf-icon(trend-down);
+.pf-v5-c-icon-trend-down {
+	@include pf-v5-c-icon(trend-down);
 }
-.pf-icon-trend-up {
-	@include pf-icon(trend-up);
+.pf-v5-c-icon-trend-up {
+	@include pf-v5-c-icon(trend-up);
 }
-.pf-icon-unknown {
-	@include pf-icon(unknown);
+.pf-v5-c-icon-unknown {
+	@include pf-v5-c-icon(unknown);
 }
-.pf-icon-unlocked {
-	@include pf-icon(unlocked);
+.pf-v5-c-icon-unlocked {
+	@include pf-v5-c-icon(unlocked);
 }
-.pf-icon-unplugged {
-	@include pf-icon(unplugged);
+.pf-v5-c-icon-unplugged {
+	@include pf-v5-c-icon(unplugged);
 }
-.pf-icon-user {
-	@include pf-icon(user);
+.pf-v5-c-icon-user {
+	@include pf-v5-c-icon(user);
 }
-.pf-icon-users {
-	@include pf-icon(users);
+.pf-v5-c-icon-users {
+	@include pf-v5-c-icon(users);
 }
-.pf-icon-virtual-machine {
-	@include pf-icon(virtual-machine);
+.pf-v5-c-icon-virtual-machine {
+	@include pf-v5-c-icon(virtual-machine);
 }
-.pf-icon-volume {
-	@include pf-icon(volume);
+.pf-v5-c-icon-volume {
+	@include pf-v5-c-icon(volume);
 }
-.pf-icon-warning-triangle {
-	@include pf-icon(warning-triangle);
+.pf-v5-c-icon-warning-triangle {
+	@include pf-v5-c-icon(warning-triangle);
 }
-.pf-icon-zone {
-	@include pf-icon(zone);
+.pf-v5-c-icon-zone {
+	@include pf-v5-c-icon(zone);
 }

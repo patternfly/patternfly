@@ -1,39 +1,42 @@
 @import "../../../sass-utilities/colors";
 @import "../../../sass-utilities/scss-variables";
+// stylelint-disable scss/dollar-variable-pattern
+$chart: #{$pf-prefix} + 'c-chart';
+// stylelint-enable
 
 // Chart colors
 
 // blue
-$pf-chart-color-blue-100: #add6ff;
-$pf-chart-color-blue-200: #85c2ff;
-$pf-chart-color-blue-300: #47a3ff;
-$pf-chart-color-blue-400: #0a85ff;
-$pf-chart-color-blue-500: $pf-color-blue-400;
+$pf-v5-chart-color-blue-100: #add6ff;
+$pf-v5-chart-color-blue-200: #85c2ff;
+$pf-v5-chart-color-blue-300: #47a3ff;
+$pf-v5-chart-color-blue-400: #0a85ff;
+$pf-v5-chart-color-blue-500: $pf-v5-color-blue-400;
 
 // green
-$pf-chart-color-green-100: #d6eed3;
-$pf-chart-color-green-200: #aedca7;
-$pf-chart-color-green-300: #85cb7c;
-$pf-chart-color-green-400: #5cb950;
-$pf-chart-color-green-500: $pf-color-green-500;
+$pf-v5-chart-color-green-100: #d6eed3;
+$pf-v5-chart-color-green-200: #aedca7;
+$pf-v5-chart-color-green-300: #85cb7c;
+$pf-v5-chart-color-green-400: #5cb950;
+$pf-v5-chart-color-green-500: $pf-v5-color-green-500;
 
 // cyan
-$pf-chart-color-cyan-100: #b9feff;
-$pf-chart-color-cyan-200: #86fdff;
-$pf-chart-color-cyan-300: #00b5b8;
-$pf-chart-color-cyan-400: #008c8f;
-$pf-chart-color-cyan-500: $pf-color-cyan-400;
+$pf-v5-chart-color-cyan-100: #b9feff;
+$pf-v5-chart-color-cyan-200: #86fdff;
+$pf-v5-chart-color-cyan-300: #00b5b8;
+$pf-v5-chart-color-cyan-400: #008c8f;
+$pf-v5-chart-color-cyan-500: $pf-v5-color-cyan-400;
 
 // purple
-$pf-chart-color-purple-100: #cec8e4;
-$pf-chart-color-purple-200: #a99fd1;
-$pf-chart-color-purple-300: #9183c3;
-$pf-chart-color-purple-400: #7968b6;
-$pf-chart-color-purple-500: $pf-color-purple-500;
+$pf-v5-chart-color-purple-100: #cec8e4;
+$pf-v5-chart-color-purple-200: #a99fd1;
+$pf-v5-chart-color-purple-300: #9183c3;
+$pf-v5-chart-color-purple-400: #7968b6;
+$pf-v5-chart-color-purple-500: $pf-v5-color-purple-500;
 
 // red
-$pf-chart-color-red-100: #ffadad;
-$pf-chart-color-red-200: #ff7070;
-$pf-chart-color-red-300: #ff4747;
-$pf-chart-color-red-400: #ff0a0a;
-$pf-chart-color-red-500: $pf-color-red-200;
+$pf-v5-chart-color-red-100: #ffadad;
+$pf-v5-chart-color-red-200: #ff7070;
+$pf-v5-chart-color-red-300: #ff4747;
+$pf-v5-chart-color-red-400: #ff0a0a;
+$pf-v5-chart-color-red-500: $pf-v5-color-red-200;

@@ -118,7 +118,7 @@ wrapperTag: div
   {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-m-light"}}
     {{#> content}}
       <h1>Centering page sections</h1>
-      <p>When a width limited page section is wider than the value of <code>--pf-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.</p>
+      <p>When a width limited page section is wider than the value of <code>--pf-v5-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.</p>
       <p>All of the page sections on this page are centered.</p>
     {{/content~}}
   {{/page-main-section}}
@@ -127,10 +127,10 @@ wrapperTag: div
     {{> page-template-gallery-cards}}
   {{/page-main-section}}
   {{> divider}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-u-text-align-center"}}
+  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center pf-v5-u-text-align-center"}}
     {{#> card}}
       {{#> card-body}}
-        <p>The content in this section is also centered using the <code>.pf-u-text-align-center</code> utility class.</p>
+        <p>The content in this section is also centered using the <code>.pf-v5-u-text-align-center</code> utility class.</p>
       {{/card-body}}
     {{/card}}
   {{/page-main-section}}

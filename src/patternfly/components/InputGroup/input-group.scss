@@ -1,77 +1,79 @@
-.pf-c-input-group {
+// @debug $input-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$input-group} {
   // Input group
-  --pf-c-input-group--child--ZIndex: var(--pf-global--ZIndex--xs);
+  --#{$input-group}--child--ZIndex: var(--#{$pf-global}--ZIndex--xs);
 
   // Input group item
-  --pf-c-input-group__item--offset: var(--pf-global--BorderWidth--sm);
-  --pf-c-input-group__item--MarginLeft: calc(var(--pf-c-input-group__item--offset) * -1);
-  --pf-c-input-group__item--BorderWidth--base: var(--pf-c-input-group__item--offset);
-  --pf-c-input-group__item--BorderColor--base: var(--pf-global--BorderColor--300);
-  --pf-c-input-group__item--BorderColor--accent: var(--pf-global--BorderColor--200);
-  --pf-c-input-group__item--BackgroundColor: transparent;
+  --#{$input-group}__item--offset: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$input-group}__item--MarginLeft: calc(var(--#{$input-group}__item--offset) * -1);
+  --#{$input-group}__item--BorderWidth--base: var(--#{$input-group}__item--offset);
+  --#{$input-group}__item--BorderColor--base: var(--#{$pf-global}--BorderColor--300);
+  --#{$input-group}__item--BorderColor--accent: var(--#{$pf-global}--BorderColor--200);
+  --#{$input-group}__item--BackgroundColor: transparent;
 
   // Input group item, box variant
-  --pf-c-input-group__item--m-box--PaddingRight: var(--pf-global--spacer--sm);
-  --pf-c-input-group__item--m-box--PaddingLeft: var(--pf-global--spacer--sm);
-  --pf-c-input-group__item--m-box--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-input-group__item--m-box--BorderWidth: var(--pf-c-input-group__item--offset);
-  --pf-c-input-group__item--m-box--BorderTopColor: var(--pf-c-input-group__item--BorderColor--base);
-  --pf-c-input-group__item--m-box--BorderRightColor: var(--pf-c-input-group__item--BorderColor--base);
-  --pf-c-input-group__item--m-box--BorderBottomColor: var(--pf-c-input-group__item--BorderColor--accent);
-  --pf-c-input-group__item--m-box--BorderLeftColor: var(--pf-c-input-group__item--BorderColor--base);
+  --#{$input-group}__item--m-box--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$input-group}__item--m-box--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$input-group}__item--m-box--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$input-group}__item--m-box--BorderWidth: var(--#{$input-group}__item--offset);
+  --#{$input-group}__item--m-box--BorderTopColor: var(--#{$input-group}__item--BorderColor--base);
+  --#{$input-group}__item--m-box--BorderRightColor: var(--#{$input-group}__item--BorderColor--base);
+  --#{$input-group}__item--m-box--BorderBottomColor: var(--#{$input-group}__item--BorderColor--accent);
+  --#{$input-group}__item--m-box--BorderLeftColor: var(--#{$input-group}__item--BorderColor--base);
 
   // Input group item, plain variant
-  --pf-c-input-group__item--m-plain--BackgroundColor: transparent;
+  --#{$input-group}__item--m-plain--BackgroundColor: transparent;
 
   // Input group text
-  --pf-c-input-group__text--FontSize: var(--pf-global--FontSize--md);
-  --pf-c-input-group__text--Color: var(--pf-global--Color--dark-200);
+  --#{$input-group}__text--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$input-group}__text--Color: var(--#{$pf-global}--Color--dark-200);
 
   // Input group text, disabled variant
-  --pf-c-input-group__item--m-disabled__text--Color: var(--pf-global--disabled-color--100);
-  --pf-c-input-group__item--m-disabled--BorderBottomColor: transparent;
-  --pf-c-input-group__item--m-disabled--BackgroundColor: var(--pf-global--disabled-color--300);
+  --#{$input-group}__item--m-disabled__text--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$input-group}__item--m-disabled--BorderBottomColor: transparent;
+  --#{$input-group}__item--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
 
   // Form control
-  --pf-c-input-group--c-form-control--invalid--ZIndex: var(--pf-global--ZIndex--xs);
-  --pf-c-input-group--c-form-control--MarginRight: 0;
+  --#{$input-group}--c-form-control--invalid--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$input-group}--c-form-control--MarginRight: 0;
 
   display: flex;
   width: 100%;
 }
 
-.pf-c-input-group__item {
+.#{$input-group}__item {
   position: relative; // stack items without explicit z-index
   display: flex;
-  min-width: var(--pf-c-input-group__item--MinWidth, revert);
-  max-width: var(--pf-c-input-group__item--MaxWidth, revert);
-  background-color: var(--pf-c-input-group__item--BackgroundColor);
-  border-color: var(--pf-c-input-group__item--m-box--BorderTopColor) var(--pf-c-input-group__item--m-box--BorderRightColor) var(--pf-c-input-group__item--m-box--BorderBottomColor) var(--pf-c-input-group__item--m-box--BorderLeftColor);
+  min-width: var(--#{$input-group}__item--MinWidth, revert);
+  max-width: var(--#{$input-group}__item--MaxWidth, revert);
+  background-color: var(--#{$input-group}__item--BackgroundColor);
+  border-color: var(--#{$input-group}__item--m-box--BorderTopColor) var(--#{$input-group}__item--m-box--BorderRightColor) var(--#{$input-group}__item--m-box--BorderBottomColor) var(--#{$input-group}__item--m-box--BorderLeftColor);
 
   &:where(:not(:first-child)) {
-    margin-left: var(--pf-c-input-group__item--MarginLeft);
+    margin-left: var(--#{$input-group}__item--MarginLeft);
   }
 
   &.pf-m-box {
-    --pf-c-input-group__item--BackgroundColor: var(--pf-c-input-group__item--m-box--BackgroundColor);
+    --#{$input-group}__item--BackgroundColor: var(--#{$input-group}__item--m-box--BackgroundColor);
 
-    padding-right: var(--pf-c-input-group__item--m-box--PaddingRight);
-    padding-left: var(--pf-c-input-group__item--m-box--PaddingLeft);
-    border: var(--pf-c-input-group__item--m-box--BorderWidth) solid;
-    border-color: var(--pf-c-input-group__item--m-box--BorderTopColor) var(--pf-c-input-group__item--m-box--BorderRightColor) var(--pf-c-input-group__item--m-box--BorderBottomColor) var(--pf-c-input-group__item--m-box--BorderLeftColor);
+    padding-right: var(--#{$input-group}__item--m-box--PaddingRight);
+    padding-left: var(--#{$input-group}__item--m-box--PaddingLeft);
+    border: var(--#{$input-group}__item--m-box--BorderWidth) solid;
+    border-color: var(--#{$input-group}__item--m-box--BorderTopColor) var(--#{$input-group}__item--m-box--BorderRightColor) var(--#{$input-group}__item--m-box--BorderBottomColor) var(--#{$input-group}__item--m-box--BorderLeftColor);
   }
 
   &.pf-m-plain {
-    --pf-c-input-group__item--MarginLeft: 0;
-    --pf-c-input-group__item--BackgroundColor: var(--pf-c-input-group__item--m-plain--BackgroundColor);
+    --#{$input-group}__item--MarginLeft: 0;
+    --#{$input-group}__item--BackgroundColor: var(--#{$input-group}__item--m-plain--BackgroundColor);
 
     border: none;
   }
 
   &.pf-m-disabled {
-    --pf-c-input-group__item--BackgroundColor: var(--pf-c-input-group__item--m-disabled--BackgroundColor);
-    --pf-c-input-group__item--m-box--BorderBottomColor: var(--pf-c-input-group__item--m-disabled--BorderBottomColor);
-    --pf-c-input-group__text--Color: var(--pf-c-input-group__item--m-disabled__text--Color);
+    --#{$input-group}__item--BackgroundColor: var(--#{$input-group}__item--m-disabled--BackgroundColor);
+    --#{$input-group}__item--m-box--BorderBottomColor: var(--#{$input-group}__item--m-disabled--BorderBottomColor);
+    --#{$input-group}__text--Color: var(--#{$input-group}__item--m-disabled__text--Color);
   }
 
   &.pf-m-fill {
@@ -79,10 +81,10 @@
   }
 }
 
-.pf-c-input-group__text {
+.#{$input-group}__text {
   align-self: center;
-  font-size: var(--pf-c-input-group__text--FontSize);
-  color: var(--pf-c-input-group__text--Color);
+  font-size: var(--#{$input-group}__text--FontSize);
+  color: var(--#{$input-group}__text--Color);
 
   @at-root label#{&} {
     cursor: pointer;
@@ -92,6 +94,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/input-group";
 
-@include pf-theme-dark {
-  @include pf-theme-dark-input-group;
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-input-group;
 }

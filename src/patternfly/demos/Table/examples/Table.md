@@ -187,9 +187,9 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl" page-main-section--IsLimitWidth="true"}}
-    <div class="pf-c-scroll-outer-wrapper">
+    <div class="pf-v5-c-scroll-outer-wrapper">
       {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
-      <div class="pf-c-scroll-inner-wrapper">
+      <div class="pf-v5-c-scroll-inner-wrapper">
         {{> table--scrollable
             table--scrollable--id="sticky-first-column-demo-table"
             table--scrollable--th--modifier--cell-1-modifier="pf-m-border-right"
@@ -207,9 +207,9 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidth="true"}}
-    <div class="pf-c-scroll-outer-wrapper">
+    <div class="pf-v5-c-scroll-outer-wrapper">
       {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
-      <div class="pf-c-scroll-inner-wrapper">
+      <div class="pf-v5-c-scroll-inner-wrapper">
         {{>
             table--scrollable
             table--scrollable--id="sticky-multiple-columns-demo-table"
@@ -229,9 +229,9 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidths="true"}}
-    <div class="pf-c-scroll-outer-wrapper">
+    <div class="pf-v5-c-scroll-outer-wrapper">
       {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
-      <div class="pf-c-scroll-inner-wrapper">
+      <div class="pf-v5-c-scroll-inner-wrapper">
         {{> table--scrollable
             table--scrollable--id="sticky-header-and-multiple-columns-demo-table"
             table--scrollable--modifier="pf-m-sticky-header"
@@ -251,9 +251,9 @@ import './Table.css'
 
 {{#*inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-xl pf-m-overflow-scroll" page-main-section--IsLimitWidths="true"}}
-    <div class="pf-c-scroll-outer-wrapper">
+    <div class="pf-v5-c-scroll-outer-wrapper">
       {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
-      <div class="pf-c-scroll-inner-wrapper">
+      <div class="pf-v5-c-scroll-inner-wrapper">
         {{> table--scrollable
             table--scrollable--id="sticky-right-column-example"
             table--scrollable--th--modifier--cell-9-modifier="pf-m-truncate pf-m-border-left"
@@ -299,7 +299,7 @@ By default, table cell alignment is set to baseline. This retains vertical align
         {{#> table-tr}}
           {{#> table-td table-td--data-label="Repository name"}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
-              {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
+              {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-v5-u-mt-sm"}}
                 <div class="table-demo-icon">
                   {{> icon-red-hat}}
                 </div>
@@ -308,7 +308,7 @@ By default, table cell alignment is set to baseline. This retains vertical align
                 {{#> title title--modifier="pf-m-xl"}}
                   Repository 1
                 {{/title}}
-                <span class="pf-u-font-size-sm">
+                <span class="pf-v5-u-font-size-sm">
                   2.6.6 provided by Red Hat Inc
                 </span>
               {{/l-flex}}
@@ -331,7 +331,7 @@ By default, table cell alignment is set to baseline. This retains vertical align
         {{#> table-tr}}
           {{#> table-td table-td--data-label="Repository name"}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
-              {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
+              {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-v5-u-mt-sm"}}
                 <div class="table-demo-icon">
                   {{> icon-github}}
                 </div>
@@ -340,7 +340,7 @@ By default, table cell alignment is set to baseline. This retains vertical align
                 {{#> title title--modifier="pf-m-xl"}}
                   Repository 2
                 {{/title}}
-                <span class="pf-u-font-size-sm">
+                <span class="pf-v5-u-font-size-sm">
                   2.6.6 provided by Github
                 </span>
               {{/l-flex}}
@@ -363,7 +363,7 @@ By default, table cell alignment is set to baseline. This retains vertical align
         {{#> table-tr}}
           {{#> table-td table-td--data-label="Repository name"}}
             {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
-              {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-u-mt-sm"}}
+              {{#> l-flex l-flex--modifier="pf-m-align-self-flex-start pf-v5-u-mt-sm"}}
                 <div class="table-demo-icon">
                   {{> icon-google}}
                 </div>
@@ -372,7 +372,7 @@ By default, table cell alignment is set to baseline. This retains vertical align
                 {{#> title title--modifier="pf-m-xl"}}
                   Repository 3
                 {{/title}}
-                <span class="pf-u-font-size-sm">
+                <span class="pf-v5-u-font-size-sm">
                   1.2.3 provided by Google
                 </span>
               {{/l-flex}}
