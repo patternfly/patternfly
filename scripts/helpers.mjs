@@ -31,6 +31,32 @@ export const ifEquals = function () {
   return allEqual ? options.fn(this) : options.inverse(this);
 };
 
+// Using ifAny else if with helpers
+// {{#ifAny A B C}}
+//   this if A or B or C
+// {{else ifAny D E}}
+//   this if D or E
+// {{else}}
+//   something else
+// {{/ifAny}}
+
+export const ifAny = function () {
+  const args = Array.prototype.slice.call(arguments, 0, -1);
+  const options = arguments[arguments.length - 1];
+  const anyTruthy = args.some(arg => arg);
+
+  return anyTruthy ? options.fn(this) : options.inverse(this);
+};
+
+// export const ifAnyHELP = function () {
+//   const args = Array.prototype.slice.call(arguments, 0, -1);
+//   const options = arguments[arguments.length - 1];
+//   const anyTruthy = args.some(arg => arg);
+//   };
+
+// return anyTruthy ? options.fn(this) : options.inverse(this);
+// };
+
 /** Using ternary
 if custom value for select--width: {{#> select select--width='160px'}}Filter by name{{/select}}
 else custom value for select--width: {{#> select)}}Filter by name{{/select}}
