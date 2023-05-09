@@ -1,0 +1,69 @@
+// @debug $alert-group; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+// Tabs
+.#{$alert-group} {
+  // Alert group variables
+  --#{$alert-group}__item--MarginTop: var(--#{$pf-global}--spacer--sm);
+
+  // Toast variables
+  --#{$alert-group}--m-toast--Top: var(--#{$pf-global}--spacer--2xl);
+  --#{$alert-group}--m-toast--Right: var(--#{$pf-global}--spacer--xl);
+  --#{$alert-group}--m-toast--MaxWidth: #{pf-size-prem(600px)};
+  --#{$alert-group}--m-toast--ZIndex: var(--#{$pf-global}--ZIndex--2xl);
+
+  // Overflow button
+  --#{$alert-group}__overflow-button--BorderWidth: 0;
+  --#{$alert-group}__overflow-button--PaddingTop: var(--#{$pf-global}--spacer--lg);
+  --#{$alert-group}__overflow-button--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$alert-group}__overflow-button--PaddingBottom: var(--#{$pf-global}--spacer--lg);
+  --#{$alert-group}__overflow-button--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$alert-group}__overflow-button--Color: var(--#{$pf-global}--link--Color);
+  --#{$alert-group}__overflow-button--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
+  --#{$alert-group}__overflow-button--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$alert-group}__overflow-button--hover--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$alert-group}__overflow-button--hover--BoxShadow: var(--#{$pf-global}--BoxShadow--lg), var(--#{$pf-global}--BoxShadow--lg-bottom);
+  --#{$alert-group}__overflow-button--focus--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$alert-group}__overflow-button--focus--BoxShadow: var(--#{$pf-global}--BoxShadow--lg), var(--#{$pf-global}--BoxShadow--lg-bottom);
+  --#{$alert-group}__overflow-button--active--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$alert-group}__overflow-button--active--BoxShadow: var(--#{$pf-global}--BoxShadow--lg), var(--#{$pf-global}--BoxShadow--lg-bottom);
+
+  // Spacing between alerts
+  > * + * {
+    margin-top: var(--#{$alert-group}__item--MarginTop);
+  }
+
+  // Toast positioning modifier
+  &.pf-m-toast {
+    position: fixed;
+    top: var(--#{$alert-group}--m-toast--Top);
+    right: var(--#{$alert-group}--m-toast--Right);
+    z-index: var(--#{$alert-group}--m-toast--ZIndex);
+    width: calc(100% - calc(var(--#{$alert-group}--m-toast--Right) * 2));
+    max-width: var(--#{$alert-group}--m-toast--MaxWidth);
+  }
+}
+
+.#{$alert-group}__overflow-button {
+  position: relative;
+  width: 100%;
+  padding: var(--#{$alert-group}__overflow-button--PaddingTop) var(--#{$alert-group}__overflow-button--PaddingRight) var(--#{$alert-group}__overflow-button--PaddingBottom) var(--#{$alert-group}__overflow-button--PaddingLeft);
+  color: var(--#{$alert-group}__overflow-button--Color);
+  background-color: var(--#{$alert-group}__overflow-button--BackgroundColor);
+  border-width: var(--#{$alert-group}__overflow-button--BorderWidth);
+  box-shadow: var(--#{$alert-group}__overflow-button--BoxShadow);
+
+  &:hover {
+    --#{$alert-group}__overflow-button--Color: var(--#{$alert-group}__overflow-button--hover--Color);
+    --#{$alert-group}__overflow-button--BoxShadow: var(--#{$alert-group}__overflow-button--hover--BoxShadow);
+  }
+
+  &:focus {
+    --#{$alert-group}__overflow-button--Color: var(--#{$alert-group}__overflow-button--focus--Color);
+    --#{$alert-group}__overflow-button--BoxShadow: var(--#{$alert-group}__overflow-button--focus--BoxShadow);
+  }
+
+  &:active {
+    --#{$alert-group}__overflow-button--Color: var(--#{$alert-group}__overflow-button--active--Color);
+    --#{$alert-group}__overflow-button--BoxShadow: var(--#{$alert-group}__overflow-button--active--BoxShadow);
+  }
+}

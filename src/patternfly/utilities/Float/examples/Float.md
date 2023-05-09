@@ -20,10 +20,10 @@ import './Float.css'
 
 ## Documentation
 ### Overview
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-u-text-left-on-lg**
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v5-u-text-left-on-lg**
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-u-float-left{-on-[breakpoint]}` | `*` |  Float element left |
-| `.pf-u-float-right{-on-[breakpoint]}` | `*` |  Float element right |
+| `.pf-v5-u-float-left{-on-[breakpoint]}` | `*` |  Float element left |
+| `.pf-v5-u-float-right{-on-[breakpoint]}` | `*` |  Float element right |

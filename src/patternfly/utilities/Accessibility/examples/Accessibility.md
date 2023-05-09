@@ -15,7 +15,7 @@ Content available only to screen reader, open inspector to investigate
 ### Visible
 ```hbs
 {{#> accessibility accessibility--type="visible"}}
-    This class unsets .pf-u-screen-reader and .pf-screen-reader. It will be visible.
+    This class unsets .pf-v5-u-screen-reader and .pf-screen-reader. It will be visible.
 {{/accessibility}}
 ```
 
@@ -29,10 +29,10 @@ The text underneath is hidden.
 
 ## Documentation
 ### Overview
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-u-screen-reader-on-lg**
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v5-u-screen-reader-on-lg**
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-u-screen-reader{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |
-| `.pf-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-u-screen-reader` and `.pf-screen-reader` |
+| `.pf-v5-u-screen-reader{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |
+| `.pf-v5-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-v5-u-screen-reader` and `.pf-screen-reader` |

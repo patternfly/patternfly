@@ -21,7 +21,7 @@ Layouts are the containers that allow for organizing and grouping its immediate 
 
 - A layout never imposes padding or element styles on its children.
 
-The classes are prefixed with `-l` (after the PatternFly prefix `pf-`), for example: `.pf-l-split` or `.pf-l-stack`.
+The classes are prefixed with `-l` (after the PatternFly prefix `pf-`), for example: `.pf-v5-l-split` or `.pf-v5-l-stack`.
 
 ### Components
 
@@ -32,7 +32,7 @@ Components are modular and independent structures concerned with how a thing loo
 - The first element in a component should never use top margins and should touch the top of its component.
 - Components should include semantic markup and necessary ARIA tags to implement the [accessibility guidelines](/accessibility-guide).
 
-The parent container of a component is prefixed with `-c` (after the PatternFly prefix `pf-`), for example: `.pf-c-alert` or `.pf-c-button`.
+The parent container of a component is prefixed with `-c` (after the PatternFly prefix `pf-` and version `v5-`), for example: `.pf-v5-c-alert` or `.pf-v5-c-button`.
 
 ### When to create a new component
 
@@ -48,7 +48,7 @@ PatternFly is made up of isolated components that don't allow dependencies. Ther
 
 However, from time to time it is recognized that an exception to the PatternFly styling may be needed for a special case. For those instances, utility classes are supplied to assist in allowing minor styling changes without creating the need for adding custom CSS.
 
-A utility class is prefixed with `-u` (after the PatternFly prefix `pf-`), for example: `.pf-u-align-content-center`.
+A utility class is prefixed with `-u` (after the PatternFly prefix `pf-`), for example: `.pf-v5-u-align-content-center`.
 
 ### Demos
 
@@ -99,8 +99,8 @@ For example a global variable setup would look like:
 
 The second layer is scoped to themeable component custom properties. This setup allows for consistency across components, generates a common language between designers and developers, and gives granular control to authors. The rules are as follows:
 
-- They follow this general formula `--pf-c-block[__element][--modifier][--state][--breakpoint][--pseudo-element][[--child]|[--tag]|[--c-component]]--PropertyCamelCase`.
-  - `--pf-c-block` refers to the block, usually the component or layout name (i.e., `--pf-c-alert`).
+- They follow this general formula `--pf-v5-c-block[__element][--modifier][--state][--breakpoint][--pseudo-element][[--child]|[--tag]|[--c-component]]--PropertyCamelCase`.
+  - `--pf-v5-c-block` refers to the block, usually the component or layout name (i.e., `--pf-v5-c-alert`).
   - `__element` refers to the element inside of the block (i.e., `__title`).
   - `--modifier` refers to a modifier class such as `.pf-m-danger`, and is prefixed with `m-` in the component variable (i.e., `--m-danger`).
   - `--state` is something like `hover` or `active`.
@@ -115,35 +115,35 @@ For example:
 
 ```scss
 // Component scoped variables are always defined by global variables
---pf-c-alert--Padding: var(--pf-global--spacer--xl);
---pf-c-alert--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
---pf-c-alert__title--FontSize: var(--pf-global--FontSize--2xl);
+--pf-v5-c-alert--Padding: var(--pf-global--spacer--xl);
+--pf-v5-c-alert--hover--BackgroundColor: var(--pf-global--BackgroundColor--200);
+--pf-v5-c-alert__title--FontSize: var(--pf-global--FontSize--2xl);
 
 // --block--PropertyCamelCase
-.pf-c-alert {
-  padding: var(--pf-c-alert--Padding);
+.pf-v5-c-alert {
+  padding: var(--pf-v5-c-alert--Padding);
 }
 
 // --block--state--PropertyCamelCase
-.pf-c-alert {
+.pf-v5-c-alert {
   &:hover {
-    background-color: var(--pf-c-alert--hover--BackgroundColor);
+    background-color: var(--pf-v5-c-alert--hover--BackgroundColor);
   }
 }
 
 // --block__element--PropertyCamelCase
-.pf-c-alert__title {
-  font-size: var(--pf-c-alert__title--FontSize);
+.pf-v5-c-alert__title {
+  font-size: var(--pf-v5-c-alert__title--FontSize);
 }
 
 // A more complex example
-.pf-c-switch {
+.pf-v5-c-switch {
   @media (max-width: $pf-global--breakpoint--sm) {
-    .pf-c-switch__input {
+    .pf-v5-c-switch__input {
       &:disabled {
-        ~ .pf-c-switch__toggle {
+        ~ .pf-v5-c-switch__toggle {
           &::before {
-            background-color: var(--pf-c-switch--sm__input--disabled__toggle--before--BackgroundColor);
+            background-color: var(--pf-v5-c-switch--sm__input--disabled__toggle--before--BackgroundColor);
           }
         }
       }
@@ -330,11 +330,11 @@ To make sure you are writing mobile first, always do `min-width`:
 States of a component should be included as a nested element. This includes hover, focus, and active states:
 
 ```scss
-.pf-c-button {
-  background: var(--pf-c-button--Background);
+.pf-v5-c-button {
+  background: var(--pf-v5-c-button--Background);
 
   &:hover {
-    background: var(--pf-c-button--hover--Background);
+    background: var(--pf-v5-c-button--hover--Background);
   }
 }
 ```

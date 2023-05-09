@@ -2,7 +2,7 @@
   {{#> card card--id=(concat card-template-gallery--id '-card-empty-state') card--modifier="pf-m-selectable-raised pf-m-compact"}}
     {{#> bullseye}}
       {{#> empty-state empty-state--modifier="pf-m-xs"}}
-        <i class="fas fa-plus-circle pf-c-empty-state__icon"></i>
+        <i class="fas fa-plus-circle {{pfv}}empty-state__icon"></i>
         {{> card-title card-title-text--value="Add a new card to your page" card-title-text--modifier="pf-m-md"}}
         {{#> empty-state-secondary}}
           {{#> button button--modifier="pf-m-link"}}

@@ -1,9 +1,9 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-tabs() {
-  .pf-c-tabs {
-    --pf-c-tabs__scroll-button--BackgroundColor: transparent;
-    --pf-c-tabs__link--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
-    --pf-c-tabs--m-color-scheme--light-300__link--disabled--BackgroundColor: var(--pf-global--disabled-color--200);
+@mixin pf-v5-theme-dark-tabs() {
+  .#{$tabs} {
+    --#{$tabs}__scroll-button--BackgroundColor: transparent;
+    --#{$tabs}__link--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+    --#{$tabs}--m-color-scheme--light-300__link--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
   }
 }

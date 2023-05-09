@@ -5,7 +5,7 @@
         {{> label label--color="cyan" label-text--value="P"}}
       {{/l-flex-item}}
       {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-        <span class="pf-c-table__text pf-m-truncate">
+        <span class="{{pfv}}table__text pf-m-truncate">
           <a href="#">api-pod-source-name</a>
         </span>
       {{/l-flex-item}}
@@ -17,7 +17,7 @@
         {{> label label--color="cyan" label-text--value="P"}}
       {{/l-flex-item}}
       {{#> l-flex-item l-flex-item--modifier="pf-m-flex-1"}}
-        <span class="pf-c-table__text pf-m-truncate">
+        <span class="{{pfv}}table__text pf-m-truncate">
           <a href="#">api-pod-destination-name</a>
         </span>
       {{/l-flex-item}}
@@ -26,19 +26,19 @@
   {{#> table-td table-td--data-label="Date & time"}}
     {{#> stack}}
       <span>June 22, 2021</span>
-      <span class="pf-u-color-200">3:58:24 PM</span>
+      <span class="{{pfv 'u'}}color-200">3:58:24 PM</span>
     {{/stack}}
   {{/table-td}}
   {{#> table-td table-td--data-label="Source"}}
     {{#> stack}}
       <span>443</span>
-      <span class="pf-u-color-200">(HTTPS)</span>
+      <span class="{{pfv 'u'}}color-200">(HTTPS)</span>
     {{/stack}}
   {{/table-td}}
   {{#> table-td table-td--data-label="Destination"}}
     {{#> stack}}
       <span>24</span>
-      <span class="pf-u-color-200">(smtp)</span>
+      <span class="{{pfv 'u'}}color-200">(smtp)</span>
     {{/stack}}
   {{/table-td}}
   {{#> table-td table-td--data-label="Protocol"}}

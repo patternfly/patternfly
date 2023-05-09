@@ -1,6 +1,6 @@
 {{#> reset grid--attribute=reset grid-item--attribute=reset grid--modifier=reset grid-item--modifier=reset l-flex--attribute=reset l-flex-item--attribute=reset l-flex--modifier=reset l-flex-item--modifier=reset}}
   {{#> card card--id=card-template-data-list--id}}
-    {{#> card-header card-header--modifier="pf-u-align-items-flex-start"}}
+    {{#> card-header card-header--modifier="pf-v5-u-align-items-flex-start"}}
       {{#> card-title card-title--id=(concat card--id '-title1')}}
         {{#> title title--modifier="pf-m-lg" titleType="h2"}}
           Inventory
@@ -18,7 +18,7 @@
               <a href="#">
                 {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                   <span>3</span>
-                  <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                  <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
                 {{/l-flex}}
               </a>
             {{/data-list-cell}}
@@ -35,7 +35,7 @@
               <a href="#">
                 {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                   <span>8</span>
-                  <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                  <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
                 {{/l-flex}}
               </a>
             {{/data-list-cell}}
@@ -52,7 +52,7 @@
               <a href="#">
                 {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                   <span>20</span>
-                  <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                  <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
                 {{/l-flex}}
               </a>
             {{/data-list-cell}}
@@ -69,7 +69,7 @@
               <a href="#">
                 {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                   <span>12</span>
-                  <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                  <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
                 {{/l-flex}}
               </a>
             {{/data-list-cell}}
@@ -86,7 +86,7 @@
               <a href="#">
                 {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
                   <span>18</span>
-                  <i class="fas fa-check-circle pf-u-success-color-100" aria-hidden="true"></i>
+                  <i class="fas fa-check-circle {{pfv 'u'}}success-color-100" aria-hidden="true"></i>
                 {{/l-flex}}
               </a>
             {{/data-list-cell}}

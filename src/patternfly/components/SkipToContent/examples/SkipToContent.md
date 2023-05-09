@@ -1,7 +1,7 @@
 ---
 id: Skip to content
 section: components
-cssPrefix: pf-c-skip-to-content
+cssPrefix: pf-v5-c-skip-to-content
 ---
 
 ## Examples
@@ -108,14 +108,14 @@ Press tab to skip to content at the bottom of the page.
 ### Overview
 Skip to content allows screen reader and keyboard users to bypass navigation rather than tabbing through it.
 
-When using `.pf-c-skip-to-content` you must provide an `href` attribute whose value corresponds to the `id` attribute of the primary content container for your application. In most cases this is the `<main>` element. For a demo of this, navigate to a [page demo](/components/page/html-demos) and note the use of `tabindex="-1"`, which allows the element to receive focus programmatically.
+When using `.pf-v5-c-skip-to-content` you must provide an `href` attribute whose value corresponds to the `id` attribute of the primary content container for your application. In most cases this is the `<main>` element. For a demo of this, navigate to a [page demo](/components/page/html-demos) and note the use of `tabindex="-1"`, which allows the element to receive focus programmatically.
 
 ### Accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `href="[id of main container]"` | `.pf-c-skip-to-content` | Sends focus to the primary content container. **Required** |
+| `href="[id of main container]"` | `.pf-v5-c-skip-to-content` | Sends focus to the primary content container. **Required** |
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-skip-to-content` | `<a>` |  initiates the skip to content link. |
+| `.pf-v5-c-skip-to-content` | `<a>` |  initiates the skip to content link. |

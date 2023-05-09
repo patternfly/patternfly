@@ -7,18 +7,18 @@
   position: relative;
 }
 
-#ws-html-demos-c-card-status-card-expanded-with-popover .pf-c-popover {
+#ws-html-demos-c-card-status-card-expanded-with-popover .pf-v5-c-popover {
   position: absolute;
   margin-top: -12px;
   z-index: 1000;
   transform: translateY(-50%);
-  left: calc(100% + var(--pf-c-popover__arrow--Width) + var(--pf-global--spacer--sm));
+  left: calc(100% + var(--pf-v5-c-popover__arrow--Width) + var(--pf-v5-global--spacer--sm));
 }
 
-#ws-html-demos-c-card-status-card-expanded-with-popover .pf-c-table {
-  --pf-c-table__expandable-row--after--BorderLeftWidth: 0;
-  --pf-c-table__expandable-row--after--BorderColor: transparent;
-  --pf-c-table--m-compact--cell--first-last-child--PaddingLeft: var(--pf-global--spacer--sm);
+#ws-html-demos-c-card-status-card-expanded-with-popover .pf-v5-c-table {
+  --pf-v5-c-table__expandable-row--after--BorderLeftWidth: 0;
+  --pf-v5-c-table__expandable-row--after--BorderColor: transparent;
+  --pf-v5-c-table--m-compact--cell--first-last-child--PaddingLeft: var(--pf-v5-global--spacer--sm);
 }
 
 .ws-chart {

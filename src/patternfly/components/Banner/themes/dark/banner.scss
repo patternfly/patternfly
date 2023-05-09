@@ -1,7 +1,7 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-banner() {
-  .pf-c-banner {
+@mixin pf-v5-theme-dark-banner() {
+  .#{$banner} {
     &.pf-m-info,
     &.pf-m-blue,
     &.pf-m-danger,
@@ -10,9 +10,9 @@
     &.pf-m-green,
     &.pf-m-warning,
     &.pf-m-gold {
-      color: var(--pf-global--palette--black-900);
+      color: var(--#{$pf-global}--palette--black-900);
     }
 
-    @include pf-theme-dark--t-dark;
+    @include pf-v5-theme-dark--t-dark;
   }
 }

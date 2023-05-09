@@ -1,14 +1,14 @@
-.ws-core-u-flex .pf-u-display-flex,
+.ws-core-u-flex .pf-v5-u-display-flex,
 .ws-core-u-flex .ws-example-flex-item,
-.ws-core-u-flex .pf-u-display-inline-flex {
+.ws-core-u-flex .pf-v5-u-display-inline-flex {
   flex-wrap: wrap;
   padding: .5rem !important;
   border: 2px dashed #393f44;
 }
 
-#ws-core-u-flex-aligned-items .pf-u-display-flex,
-#ws-core-u-flex-aligned-self .pf-u-display-flex,
-#ws-core-u-flex-aligned-content .pf-u-display-flex {
+#ws-core-u-flex-aligned-items .pf-v5-u-display-flex,
+#ws-core-u-flex-aligned-self .pf-v5-u-display-flex,
+#ws-core-u-flex-aligned-content .pf-v5-u-display-flex {
   min-height: 160px;
 }
 

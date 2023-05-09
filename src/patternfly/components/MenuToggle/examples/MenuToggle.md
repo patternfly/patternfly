@@ -2,7 +2,7 @@
 id: 'Menu toggle'
 section: components
 subsection: menus
-cssPrefix: pf-c-menu-toggle
+cssPrefix: pf-v5-c-menu-toggle
 ---
 
 import './MenuToggle.css'
@@ -568,28 +568,28 @@ import './MenuToggle.css'
 ### Accessibility
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-expanded="true"` | `.pf-c-menu-toggle`, `.pf-c-menu-toggle__button` | Indicates that the menu toggle component is in the expanded state. |
-| `aria-expanded="false"` | `.pf-c-menu-toggle`, `.pf-c-menu-toggle__button` | Indicates that the menu toggle component is in the collapsed state. |
-| `aria-label="Descriptive text"` | `.pf-c-menu-toggle.pf-m-plain` | Gives the plain menu toggle component an accessible label. |
-| `disabled` | `.pf-c-menu-toggle`, `.pf-c-menu-toggle__button` | Indicates that the menu toggle component is disabled. |
+| `aria-expanded="true"` | `.pf-v5-c-menu-toggle`, `.pf-v5-c-menu-toggle__button` | Indicates that the menu toggle component is in the expanded state. |
+| `aria-expanded="false"` | `.pf-v5-c-menu-toggle`, `.pf-v5-c-menu-toggle__button` | Indicates that the menu toggle component is in the collapsed state. |
+| `aria-label="Descriptive text"` | `.pf-v5-c-menu-toggle.pf-m-plain` | Gives the plain menu toggle component an accessible label. |
+| `disabled` | `.pf-v5-c-menu-toggle`, `.pf-v5-c-menu-toggle__button` | Indicates that the menu toggle component is disabled. |
 
 ### Usage
 
 | Class | Applied | Outcome |
 | -- | -- | -- |
-| `.pf-c-menu-toggle` | `<button>` | Initiates the menu toggle component. |
-| `.pf-c-menu-toggle__icon` | `<span>` | Defines the menu toggle component icon/image. |
-| `.pf-c-menu-toggle__text` | `<span>` | Defines the menu toggle component text. |
-| `.pf-c-menu-toggle__count` | `<span>` | Defines the menu toggle component count. |
-| `.pf-c-menu-toggle__controls` | `<span>` | Defines the menu toggle component controls. |
-| `.pf-c-menu-toggle__toggle-icon` | `<span>` | Defines the menu toggle component toggle/arrow icon. |
-| `.pf-c-menu-toggle__button` | `<button>` | Initiates the menu toggle button. |
-| `.pf-m-split-button` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the split button variation. |
-| `.pf-m-action` | `.pf-c-menu-toggle.pf-m-split-button` | Modifies the menu toggle component for the action, split button variation. |
-| `.pf-m-disabled` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the disabled variation. |
-| `.pf-m-primary` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the primary variation. |
-| `.pf-m-secondary` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the secondary variation. |
-| `.pf-m-text` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the text variation. |
-| `.pf-m-plain` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the plain variation. |
-| `.pf-m-expanded` | `.pf-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
-| `.pf-m-full-height` | `.pf-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |
+| `.pf-v5-c-menu-toggle` | `<button>` | Initiates the menu toggle component. |
+| `.pf-v5-c-menu-toggle__icon` | `<span>` | Defines the menu toggle component icon/image. |
+| `.pf-v5-c-menu-toggle__text` | `<span>` | Defines the menu toggle component text. |
+| `.pf-v5-c-menu-toggle__count` | `<span>` | Defines the menu toggle component count. |
+| `.pf-v5-c-menu-toggle__controls` | `<span>` | Defines the menu toggle component controls. |
+| `.pf-v5-c-menu-toggle__toggle-icon` | `<span>` | Defines the menu toggle component toggle/arrow icon. |
+| `.pf-v5-c-menu-toggle__button` | `<button>` | Initiates the menu toggle button. |
+| `.pf-m-split-button` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the split button variation. |
+| `.pf-m-action` | `.pf-v5-c-menu-toggle.pf-m-split-button` | Modifies the menu toggle component for the action, split button variation. |
+| `.pf-m-disabled` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the disabled variation. |
+| `.pf-m-primary` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the primary variation. |
+| `.pf-m-secondary` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the secondary variation. |
+| `.pf-m-text` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the text variation. |
+| `.pf-m-plain` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the plain variation. |
+| `.pf-m-expanded` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component for the expanded state. |
+| `.pf-m-full-height` | `.pf-v5-c-menu-toggle` | Modifies the menu toggle component to full height of parent. |

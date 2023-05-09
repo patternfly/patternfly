@@ -1,8 +1,8 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-date-picker() {
-  .pf-c-date-picker {
-    --pf-c-date-picker__calendar--BackgroundColor: var(--pf-global--BackgroundColor--300);
-    --pf-c-date-picker__calendar--Top: 100%;
+@mixin pf-v5-theme-dark-date-picker() {
+  .#{$date-picker} {
+    --#{$date-picker}__calendar--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$date-picker}__calendar--Top: 100%;
   }
 }

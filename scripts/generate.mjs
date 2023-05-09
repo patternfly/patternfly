@@ -30,7 +30,7 @@ function generateFolders(componentName, otherNames, options) {
       [/{name}/g, name],
       [/{nameDasherized}/g, dasherized],
       [/{nameTitle}/g, titlize(name)],
-      [/{nameBEM}/g, `pf-${options.folder[0]}-${dasherized}`]
+      [/{nameBEM}/g, `pf-v5-${options.folder[0]}-${dasherized}`]
     ];
     const templateReplace = str => {
       let res = str;

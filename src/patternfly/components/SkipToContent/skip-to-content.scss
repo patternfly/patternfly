@@ -1,14 +1,16 @@
-.pf-c-skip-to-content {
-  --pf-c-skip-to-content--Top: var(--pf-global--spacer--md);
-  --pf-c-skip-to-content--ZIndex: var(--pf-global--ZIndex--2xl);
-  --pf-c-skip-to-content--focus--Left: var(--pf-global--spacer--md);
+// @debug $skip-to-content; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$skip-to-content} {
+  --#{$skip-to-content}--Top: var(--#{$pf-global}--spacer--md);
+  --#{$skip-to-content}--ZIndex: var(--#{$pf-global}--ZIndex--2xl);
+  --#{$skip-to-content}--focus--Left: var(--#{$pf-global}--spacer--md);
 
   position: absolute;
-  top: var(--pf-c-skip-to-content--Top);
+  top: var(--#{$skip-to-content}--Top);
   left: -300%; // moves off screen
-  z-index: var(--pf-c-skip-to-content--ZIndex);
+  z-index: var(--#{$skip-to-content}--ZIndex);
 
   &:focus-within {
-    left: var(--pf-c-skip-to-content--focus--Left);
+    left: var(--#{$skip-to-content}--focus--Left);
   }
 }

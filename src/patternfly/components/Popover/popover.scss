@@ -1,141 +1,143 @@
-.pf-c-popover {
+// @debug $popover; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
+.#{$popover} {
   // Component
-  --pf-c-popover--FontSize: var(--pf-global--FontSize--sm);
-  --pf-c-popover--MinWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
-  --pf-c-popover--MaxWidth: calc(var(--pf-c-popover__content--PaddingLeft) + var(--pf-c-popover__content--PaddingRight) + #{pf-size-prem(300px)});
-  --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--lg);
+  --#{$popover}--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$popover}--MinWidth: calc(var(--#{$popover}__content--PaddingLeft) + var(--#{$popover}__content--PaddingRight) + #{pf-size-prem(300px)});
+  --#{$popover}--MaxWidth: calc(var(--#{$popover}__content--PaddingLeft) + var(--#{$popover}__content--PaddingRight) + #{pf-size-prem(300px)});
+  --#{$popover}--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
 
   // Title icon colors for states
-  --pf-c-popover--m-danger__title-icon--Color: var(--pf-global--danger-color--100);
-  --pf-c-popover--m-warning__title-icon--Color: var(--pf-global--warning-color--100);
-  --pf-c-popover--m-success__title-icon--Color: var(--pf-global--success-color--100);
-  --pf-c-popover--m-info__title-icon--Color: var(--pf-global--info-color--100);
-  --pf-c-popover--m-custom__title-icon--Color: var(--pf-global--custom-color--200);
+  --#{$popover}--m-danger__title-icon--Color: var(--#{$pf-global}--danger-color--100);
+  --#{$popover}--m-warning__title-icon--Color: var(--#{$pf-global}--warning-color--100);
+  --#{$popover}--m-success__title-icon--Color: var(--#{$pf-global}--success-color--100);
+  --#{$popover}--m-info__title-icon--Color: var(--#{$pf-global}--info-color--100);
+  --#{$popover}--m-custom__title-icon--Color: var(--#{$pf-global}--custom-color--200);
 
   // Title text colors for states
-  --pf-c-popover--m-danger__title-text--Color: var(--pf-global--danger-color--200);
-  --pf-c-popover--m-warning__title-text--Color: var(--pf-global--warning-color--200);
-  --pf-c-popover--m-success__title-text--Color: var(--pf-global--success-color--200);
-  --pf-c-popover--m-info__title-text--Color: var(--pf-global--info-color--200);
-  --pf-c-popover--m-custom__title-text--Color: var(--pf-global--custom-color--300);
+  --#{$popover}--m-danger__title-text--Color: var(--#{$pf-global}--danger-color--200);
+  --#{$popover}--m-warning__title-text--Color: var(--#{$pf-global}--warning-color--200);
+  --#{$popover}--m-success__title-text--Color: var(--#{$pf-global}--success-color--200);
+  --#{$popover}--m-info__title-text--Color: var(--#{$pf-global}--info-color--200);
+  --#{$popover}--m-custom__title-text--Color: var(--#{$pf-global}--custom-color--300);
 
   // Content
-  --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-popover__content--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-popover__content--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-popover__content--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-popover__content--PaddingLeft: var(--pf-global--spacer--md);
+  --#{$popover}__content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$popover}__content--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$popover}__content--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$popover}__content--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$popover}__content--PaddingLeft: var(--#{$pf-global}--spacer--md);
 
   // Arrow
-  --pf-c-popover__arrow--Width: var(--pf-global--arrow--width-lg);
-  --pf-c-popover__arrow--Height: var(--pf-global--arrow--width-lg);
-  --pf-c-popover__arrow--BoxShadow: var(--pf-global--BoxShadow--lg);
-  --pf-c-popover__arrow--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-popover__arrow--m-top--TranslateX: -50%;
-  --pf-c-popover__arrow--m-top--TranslateY: 50%;
-  --pf-c-popover__arrow--m-top--Rotate: 45deg;
-  --pf-c-popover__arrow--m-right--TranslateX: -50%;
-  --pf-c-popover__arrow--m-right--TranslateY: -50%;
-  --pf-c-popover__arrow--m-right--Rotate: 45deg;
-  --pf-c-popover__arrow--m-bottom--TranslateX: -50%;
-  --pf-c-popover__arrow--m-bottom--TranslateY: -50%;
-  --pf-c-popover__arrow--m-bottom--Rotate: 45deg;
-  --pf-c-popover__arrow--m-left--TranslateX: 50%;
-  --pf-c-popover__arrow--m-left--TranslateY: -50%;
-  --pf-c-popover__arrow--m-left--Rotate: 45deg;
+  --#{$popover}__arrow--Width: var(--#{$pf-global}--arrow--width-lg);
+  --#{$popover}__arrow--Height: var(--#{$pf-global}--arrow--width-lg);
+  --#{$popover}__arrow--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
+  --#{$popover}__arrow--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$popover}__arrow--m-top--TranslateX: -50%;
+  --#{$popover}__arrow--m-top--TranslateY: 50%;
+  --#{$popover}__arrow--m-top--Rotate: 45deg;
+  --#{$popover}__arrow--m-right--TranslateX: -50%;
+  --#{$popover}__arrow--m-right--TranslateY: -50%;
+  --#{$popover}__arrow--m-right--Rotate: 45deg;
+  --#{$popover}__arrow--m-bottom--TranslateX: -50%;
+  --#{$popover}__arrow--m-bottom--TranslateY: -50%;
+  --#{$popover}__arrow--m-bottom--Rotate: 45deg;
+  --#{$popover}__arrow--m-left--TranslateX: 50%;
+  --#{$popover}__arrow--m-left--TranslateY: -50%;
+  --#{$popover}__arrow--m-left--Rotate: 45deg;
 
   // Close
-  --pf-c-popover__close--Top: calc(var(--pf-c-popover__content--PaddingTop) - var(--pf-global--spacer--form-element)); // align top of button with top of text
-  --pf-c-popover__close--Right: calc(var(--pf-c-popover__content--PaddingRight) - var(--pf-global--spacer--md)); // align right of content
-  --pf-c-popover__close--sibling--PaddingRight: var(--pf-global--spacer--2xl);
+  --#{$popover}__close--Top: calc(var(--#{$popover}__content--PaddingTop) - var(--#{$pf-global}--spacer--form-element)); // align top of button with top of text
+  --#{$popover}__close--Right: calc(var(--#{$popover}__content--PaddingRight) - var(--#{$pf-global}--spacer--md)); // align right of content
+  --#{$popover}__close--sibling--PaddingRight: var(--#{$pf-global}--spacer--2xl);
 
   // Header
-  --pf-c-popover__header--MarginBottom: var(--pf-global--spacer--sm);
+  --#{$popover}__header--MarginBottom: var(--#{$pf-global}--spacer--sm);
 
   // Title text
-  --pf-c-popover__title-text--LineHeight: var(--pf-global--LineHeight--md);
-  --pf-c-popover__title-text--FontFamily: var(--pf-global--FontFamily--heading--sans-serif);
-  --pf-c-popover__title-text--FontSize: var(--pf-global--FontSize--md);
+  --#{$popover}__title-text--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$popover}__title-text--FontFamily: var(--#{$pf-global}--FontFamily--heading--sans-serif);
+  --#{$popover}__title-text--FontSize: var(--#{$pf-global}--FontSize--md);
 
   // Title icon
-  --pf-c-popover__title-icon--MarginRight: var(--pf-global--spacer--sm);
-  --pf-c-popover__title-icon--Color: var(--pf-global--Color--100);
-  --pf-c-popover__title-icon--FontSize: var(--pf-global--FontSize--md);
+  --#{$popover}__title-icon--MarginRight: var(--#{$pf-global}--spacer--sm);
+  --#{$popover}__title-icon--Color: var(--#{$pf-global}--Color--100);
+  --#{$popover}__title-icon--FontSize: var(--#{$pf-global}--FontSize--md);
 
   // Footer
-  --pf-c-popover__footer--MarginTop: var(--pf-global--spacer--md);
+  --#{$popover}__footer--MarginTop: var(--#{$pf-global}--spacer--md);
 
   position: relative;
-  min-width: var(--pf-c-popover--MinWidth);
-  max-width: var(--pf-c-popover--MaxWidth);
-  font-size: var(--pf-c-popover--FontSize);
-  box-shadow: var(--pf-c-popover--BoxShadow);
+  min-width: var(--#{$popover}--MinWidth);
+  max-width: var(--#{$popover}--MaxWidth);
+  font-size: var(--#{$popover}--FontSize);
+  box-shadow: var(--#{$popover}--BoxShadow);
 
   &.pf-m-no-padding {
     // Use px values below so the min/max-width calc() doesn't break
     // stylelint-disable length-zero-no-unit
-    --pf-c-popover__content--PaddingTop: 0px;
-    --pf-c-popover__content--PaddingRight: 0px;
-    --pf-c-popover__content--PaddingBottom: 0px;
-    --pf-c-popover__content--PaddingLeft: 0px;
+    --#{$popover}__content--PaddingTop: 0px;
+    --#{$popover}__content--PaddingRight: 0px;
+    --#{$popover}__content--PaddingBottom: 0px;
+    --#{$popover}__content--PaddingLeft: 0px;
     // stylelint-enable
   }
 
   &.pf-m-width-auto {
-    --pf-c-popover--MinWidth: auto;
-    --pf-c-popover--MaxWidth: none;
+    --#{$popover}--MinWidth: auto;
+    --#{$popover}--MaxWidth: none;
   }
 
   &.pf-m-top,
   &.pf-m-top-left,
   &.pf-m-top-right {
-    .pf-c-popover__arrow {
+    .#{$popover}__arrow {
       bottom: 0;
       left: 50%;
-      transform: translateX(var(--pf-c-popover__arrow--m-top--TranslateX)) translateY(var(--pf-c-popover__arrow--m-top--TranslateY)) rotate(var(--pf-c-popover__arrow--m-top--Rotate));
+      transform: translateX(var(--#{$popover}__arrow--m-top--TranslateX)) translateY(var(--#{$popover}__arrow--m-top--TranslateY)) rotate(var(--#{$popover}__arrow--m-top--Rotate));
     }
   }
 
   &.pf-m-bottom,
   &.pf-m-bottom-left,
   &.pf-m-bottom-right {
-    .pf-c-popover__arrow {
+    .#{$popover}__arrow {
       top: 0;
       left: 50%;
-      transform: translateX(var(--pf-c-popover__arrow--m-bottom--TranslateX)) translateY(var(--pf-c-popover__arrow--m-bottom--TranslateY)) rotate(var(--pf-c-popover__arrow--m-bottom--Rotate));
+      transform: translateX(var(--#{$popover}__arrow--m-bottom--TranslateX)) translateY(var(--#{$popover}__arrow--m-bottom--TranslateY)) rotate(var(--#{$popover}__arrow--m-bottom--Rotate));
     }
   }
 
   &.pf-m-left,
   &.pf-m-left-top,
   &.pf-m-left-bottom {
-    .pf-c-popover__arrow {
+    .#{$popover}__arrow {
       top: 50%;
       right: 0;
-      transform: translateX(var(--pf-c-popover__arrow--m-left--TranslateX)) translateY(var(--pf-c-popover__arrow--m-left--TranslateY)) rotate(var(--pf-c-popover__arrow--m-left--Rotate));
+      transform: translateX(var(--#{$popover}__arrow--m-left--TranslateX)) translateY(var(--#{$popover}__arrow--m-left--TranslateY)) rotate(var(--#{$popover}__arrow--m-left--Rotate));
     }
   }
 
   &.pf-m-right,
   &.pf-m-right-top,
   &.pf-m-right-bottom {
-    .pf-c-popover__arrow {
+    .#{$popover}__arrow {
       top: 50%;
       left: 0;
-      transform: translateX(var(--pf-c-popover__arrow--m-right--TranslateX)) translateY(var(--pf-c-popover__arrow--m-right--TranslateY)) rotate(var(--pf-c-popover__arrow--m-right--Rotate));
+      transform: translateX(var(--#{$popover}__arrow--m-right--TranslateX)) translateY(var(--#{$popover}__arrow--m-right--TranslateY)) rotate(var(--#{$popover}__arrow--m-right--Rotate));
     }
   }
 
   &.pf-m-left-top,
   &.pf-m-right-top {
-    .pf-c-popover__arrow {
-      top: var(--pf-c-popover__arrow--Height);
+    .#{$popover}__arrow {
+      top: var(--#{$popover}__arrow--Height);
     }
   }
 
   &.pf-m-left-bottom,
   &.pf-m-right-bottom {
-    .pf-c-popover__arrow {
+    .#{$popover}__arrow {
       top: auto;
       bottom: 0;
     }
@@ -143,106 +145,106 @@
 
   &.pf-m-top-left,
   &.pf-m-bottom-left {
-    .pf-c-popover__arrow {
-      left: var(--pf-c-popover__arrow--Width);
+    .#{$popover}__arrow {
+      left: var(--#{$popover}__arrow--Width);
     }
   }
 
   &.pf-m-top-right,
   &.pf-m-bottom-right {
-    .pf-c-popover__arrow {
+    .#{$popover}__arrow {
       right: 0;
       left: auto;
     }
   }
 
   &.pf-m-danger {
-    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-danger__title-icon--Color);
-    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-danger__title-text--Color);
+    --#{$popover}__title-icon--Color: var(--#{$popover}--m-danger__title-icon--Color);
+    --#{$popover}__title-text--Color: var(--#{$popover}--m-danger__title-text--Color);
   }
 
   &.pf-m-warning {
-    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-warning__title-icon--Color);
-    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-warning__title-text--Color);
+    --#{$popover}__title-icon--Color: var(--#{$popover}--m-warning__title-icon--Color);
+    --#{$popover}__title-text--Color: var(--#{$popover}--m-warning__title-text--Color);
   }
 
   &.pf-m-success {
-    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-success__title-icon--Color);
-    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-success__title-text--Color);
+    --#{$popover}__title-icon--Color: var(--#{$popover}--m-success__title-icon--Color);
+    --#{$popover}__title-text--Color: var(--#{$popover}--m-success__title-text--Color);
   }
 
   &.pf-m-custom {
-    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-custom__title-icon--Color);
-    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-custom__title-text--Color);
+    --#{$popover}__title-icon--Color: var(--#{$popover}--m-custom__title-icon--Color);
+    --#{$popover}__title-text--Color: var(--#{$popover}--m-custom__title-text--Color);
   }
 
   &.pf-m-info {
-    --pf-c-popover__title-icon--Color: var(--pf-c-popover--m-info__title-icon--Color);
-    --pf-c-popover__title-text--Color: var(--pf-c-popover--m-info__title-text--Color);
+    --#{$popover}__title-icon--Color: var(--#{$popover}--m-info__title-icon--Color);
+    --#{$popover}__title-text--Color: var(--#{$popover}--m-info__title-text--Color);
   }
 }
 
-.pf-c-popover__content {
+.#{$popover}__content {
   position: relative;
-  padding: var(--pf-c-popover__content--PaddingTop) var(--pf-c-popover__content--PaddingRight) var(--pf-c-popover__content--PaddingBottom) var(--pf-c-popover__content--PaddingLeft);
-  background-color: var(--pf-c-popover__content--BackgroundColor);
+  padding: var(--#{$popover}__content--PaddingTop) var(--#{$popover}__content--PaddingRight) var(--#{$popover}__content--PaddingBottom) var(--#{$popover}__content--PaddingLeft);
+  background-color: var(--#{$popover}__content--BackgroundColor);
 }
 
 // Close button
-.pf-c-popover__close {
+.#{$popover}__close {
   position: absolute;
-  top: var(--pf-c-popover__close--Top);
-  right: var(--pf-c-popover__close--Right);
+  top: var(--#{$popover}__close--Top);
+  right: var(--#{$popover}__close--Right);
 
   // Create room for the close button
   + * {
-    padding-right: var(--pf-c-popover__close--sibling--PaddingRight);
+    padding-right: var(--#{$popover}__close--sibling--PaddingRight);
   }
 }
 
-.pf-c-popover__arrow {
+.#{$popover}__arrow {
   position: absolute;
-  width: var(--pf-c-popover__arrow--Width);
-  height: var(--pf-c-popover__arrow--Height);
+  width: var(--#{$popover}__arrow--Width);
+  height: var(--#{$popover}__arrow--Height);
   pointer-events: none;
-  background-color: var(--pf-c-popover__arrow--BackgroundColor);
-  box-shadow: var(--pf-c-popover__arrow--BoxShadow);
+  background-color: var(--#{$popover}__arrow--BackgroundColor);
+  box-shadow: var(--#{$popover}__arrow--BoxShadow);
 }
 
-.pf-c-popover__header {
-  margin-bottom: var(--pf-c-popover__header--MarginBottom);
+.#{$popover}__header {
+  margin-bottom: var(--#{$popover}__header--MarginBottom);
 }
 
-.pf-c-popover__title {
+.#{$popover}__title {
   display: flex;
   flex: 0 0 auto;
 }
 
-.pf-c-popover__title-icon {
-  margin-right: var(--pf-c-popover__title-icon--MarginRight);
-  font-size: var(--pf-c-popover__title-icon--FontSize);
-  color: var(--pf-c-popover__title-icon--Color);
+.#{$popover}__title-icon {
+  margin-right: var(--#{$popover}__title-icon--MarginRight);
+  font-size: var(--#{$popover}__title-icon--FontSize);
+  color: var(--#{$popover}__title-icon--Color);
 }
 
-.pf-c-popover__title-text {
-  font-family: var(--pf-c-popover__title-text--FontFamily);
-  font-size: var(--pf-c-popover__title-text--FontSize);
-  line-height: var(--pf-c-popover__title-text--LineHeight);
-  color: var(--pf-c-popover__title-text--Color, inherit);
+.#{$popover}__title-text {
+  font-family: var(--#{$popover}__title-text--FontFamily);
+  font-size: var(--#{$popover}__title-text--FontSize);
+  line-height: var(--#{$popover}__title-text--LineHeight);
+  color: var(--#{$popover}__title-text--Color, inherit);
 }
 
 // Body
-.pf-c-popover__body {
+.#{$popover}__body {
   word-wrap: break-word;
 }
 
-.pf-c-popover__footer {
-  margin-top: var(--pf-c-popover__footer--MarginTop);
+.#{$popover}__footer {
+  margin-top: var(--#{$popover}__footer--MarginTop);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/popover";
 
-@include pf-theme-dark {
-  @include pf-theme-dark-popover;
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-popover;
 }

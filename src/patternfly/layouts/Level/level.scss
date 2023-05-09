@@ -1,5 +1,5 @@
-.pf-l-level {
-  --pf-l-level--m-gutter--MarginRight: var(--pf-global--gutter);
+.#{$level} {
+  --#{$level}--m-gutter--MarginRight: var(--#{$pf-global}--gutter);
 
   display: flex;
   flex-wrap: wrap;
@@ -7,6 +7,6 @@
   justify-content: space-between;
 
   &.pf-m-gutter > *:not(:last-child) {
-    margin-right: var(--pf-l-level--m-gutter--MarginRight);
+    margin-right: var(--#{$level}--m-gutter--MarginRight);
   }
 }

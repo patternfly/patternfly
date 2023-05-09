@@ -1,4 +1,4 @@
-{{#> toolbar-item toolbar-item--modifier="pf-m-search-filter" toolbar-item--attribute=(concat 'style="--pf-c-toolbar__item--Width: ' __log-viewer-toolbar-search-filter--Width '"')}}
+{{#> toolbar-item toolbar-item--modifier="pf-m-search-filter" toolbar-item--attribute=(concat 'style="--pf-v5-c-toolbar__item--Width: ' __log-viewer-toolbar-search-filter--Width '"')}}
   {{#if __log-viewer-toolbar--IsMatch}}
     {{> text-input-group--search-input text-input-group-text-input--placeholder="Find" text-input-group--value="openshift" text-input-group--search-input--count="1 / 10" text-input-group--search-input--IsNavigable="true" text-input-group--search-input--IsFirstMatch="true"}}
   {{else}}

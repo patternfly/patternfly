@@ -1,22 +1,22 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-input-group() {
-  .pf-c-input-group {
-    --pf-c-input-group__item--BorderLeftWidth: var(--pf-c-input-group__item--BorderWidth--base);
-    --pf-c-input-group__item--BorderLeftColor: var(--pf-global--palette--black-700);
-    --pf-c-input-group__item--m-box--BackgroundColor: var(--pf-global--BackgroundColor--400);
-    --pf-c-input-group__item--m-box--BorderTopColor: transparent;
-    --pf-c-input-group__item--m-box--BorderRightColor: transparent;
-    --pf-c-input-group__item--m-box--BorderBottomColor: var(--pf-global--BorderColor--400);
-    --pf-c-input-group__item--m-box--BorderLeftColor: transparent;
-    --pf-c-input-group__item--m-disabled--BackgroundColor: var(--pf-global--disabled-color--200);
-    --pf-c-input-group__item--m-disabled--BorderBottomColor: transparent;
-    --pf-c-input-group__text--m-disabled--Color: var(--pf-global--palette--black-100);
+@mixin pf-v5-theme-dark-input-group() {
+  .#{$input-group} {
+    --#{$input-group}__item--BorderLeftWidth: var(--#{$input-group}__item--BorderWidth--base);
+    --#{$input-group}__item--BorderLeftColor: var(--#{$pf-global}--palette--black-700);
+    --#{$input-group}__item--m-box--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+    --#{$input-group}__item--m-box--BorderTopColor: transparent;
+    --#{$input-group}__item--m-box--BorderRightColor: transparent;
+    --#{$input-group}__item--m-box--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
+    --#{$input-group}__item--m-box--BorderLeftColor: transparent;
+    --#{$input-group}__item--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+    --#{$input-group}__item--m-disabled--BorderBottomColor: transparent;
+    --#{$input-group}__text--m-disabled--Color: var(--#{$pf-global}--palette--black-100);
 
     > * + * {
-      --pf-c-input-group__item--m-box--BorderLeftColor: var(--pf-c-input-group__item--BorderLeftColor);
+      --#{$input-group}__item--m-box--BorderLeftColor: var(--#{$input-group}__item--BorderLeftColor);
 
-      border-left: var(--pf-c-input-group__item--BorderLeftWidth) solid var(--pf-c-input-group__item--BorderLeftColor);
+      border-left: var(--#{$input-group}__item--BorderLeftWidth) solid var(--#{$input-group}__item--BorderLeftColor);
     }
   }
 }

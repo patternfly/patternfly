@@ -1,7 +1,7 @@
 ---
 id: Badge
 section: components
-cssPrefix: pf-c-badge
+cssPrefix: pf-v5-c-badge
 ---
 
 ## Examples
@@ -39,11 +39,11 @@ cssPrefix: pf-c-badge
 
 ## Documentation
 ### Overview
-Always add a modifier class. Never use the class `.pf-c-badge` on its own.
+Always add a modifier class. Never use the class `.pf-v5-c-badge` on its own.
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-c-badge` | `<span>` | Initiates a badge. **Always use with a modifier class.** |
-| `.pf-m-read` | `.pf-c-badge` | Applies read badge styling. |
-| `.pf-m-unread` | `.pf-c-badge` | Applies unread badge styling. |
+| `.pf-v5-c-badge` | `<span>` | Initiates a badge. **Always use with a modifier class.** |
+| `.pf-m-read` | `.pf-v5-c-badge` | Applies read badge styling. |
+| `.pf-m-unread` | `.pf-v5-c-badge` | Applies unread badge styling. |

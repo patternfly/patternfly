@@ -1,163 +1,164 @@
-$pf-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl");
-$pf-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
-$pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
+// @debug $drawer; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+$pf-v5-c-drawer--breakpoint-map: build-breakpoint-map("base", "lg", "xl", "2xl");
+$pf-v5-c-drawer--breakpoint-map--width: build-breakpoint-map("base", "lg", "xl", "2xl");
+$pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
-.pf-c-drawer {
+.#{$drawer} {
   // Section
-  --pf-c-drawer__section--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-drawer__section--m-light-200--BackgroundColor: var(--pf-global--BackgroundColor--200);
+  --#{$drawer}__section--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$drawer}__section--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
 
   // Content
-  --pf-c-drawer__content--FlexBasis: 100%;
-  --pf-c-drawer__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-drawer__content--m-light-200--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-drawer__content--ZIndex: var(--pf-global--ZIndex--xs);
+  --#{$drawer}__content--FlexBasis: 100%;
+  --#{$drawer}__content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$drawer}__content--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$drawer}__content--ZIndex: var(--#{$pf-global}--ZIndex--xs);
 
   // Panel
-  --pf-c-drawer__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
-  --pf-c-drawer__panel--MaxHeight: auto;
-  --pf-c-drawer__panel--ZIndex: var(--pf-global--ZIndex--sm);
-  --pf-c-drawer__panel--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-drawer__panel--m-light-200--BackgroundColor: var(--pf-global--BackgroundColor--200);
-  --pf-c-drawer__panel--TransitionDuration: var(--pf-global--TransitionDuration);
-  --pf-c-drawer__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
-  --pf-c-drawer__panel--FlexBasis: 100%;
-  --pf-c-drawer__panel--md--FlexBasis--min: #{pf-size-prem(24px)};
-  --pf-c-drawer__panel--md--FlexBasis: 50%;
-  --pf-c-drawer__panel--md--FlexBasis--max: 100%;
-  --pf-c-drawer__panel--xl--MinWidth: #{pf-size-prem(450px)};
-  --pf-c-drawer__panel--xl--FlexBasis: #{pf-size-prem(450px)};
-  --pf-c-drawer--m-panel-bottom__panel--md--MinHeight: 50%;
-  --pf-c-drawer--m-panel-bottom__panel--xl--MinHeight: #{pf-size-prem(300px)};
-  --pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis: #{pf-size-prem(300px)};
-  --pf-c-drawer__panel--m-resizable--FlexDirection: row;
-  --pf-c-drawer__panel--m-resizable--md--FlexBasis--min: var(--pf-c-drawer__splitter--m-vertical--Width);
-  --pf-c-drawer__panel--m-resizable--MinWidth: #{pf-size-prem(24px)};
-  --pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection: column;
-  --pf-c-drawer--m-panel-bottom__panel--m-resizable--md--FlexBasis--min: #{pf-size-prem(24px)};
-  --pf-c-drawer--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
+  --#{$drawer}__panel--MinWidth: 50%; // change to __panel--md--MinWidth at breaking change
+  --#{$drawer}__panel--MaxHeight: auto;
+  --#{$drawer}__panel--ZIndex: var(--#{$pf-global}--ZIndex--sm);
+  --#{$drawer}__panel--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$drawer}__panel--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$drawer}__panel--TransitionDuration: var(--#{$pf-global}--TransitionDuration);
+  --#{$drawer}__panel--TransitionProperty: margin, transform, box-shadow, flex-basis;
+  --#{$drawer}__panel--FlexBasis: 100%;
+  --#{$drawer}__panel--md--FlexBasis--min: #{pf-size-prem(24px)};
+  --#{$drawer}__panel--md--FlexBasis: 50%;
+  --#{$drawer}__panel--md--FlexBasis--max: 100%;
+  --#{$drawer}__panel--xl--MinWidth: #{pf-size-prem(450px)};
+  --#{$drawer}__panel--xl--FlexBasis: #{pf-size-prem(450px)};
+  --#{$drawer}--m-panel-bottom__panel--md--MinHeight: 50%;
+  --#{$drawer}--m-panel-bottom__panel--xl--MinHeight: #{pf-size-prem(300px)};
+  --#{$drawer}--m-panel-bottom__panel--xl--FlexBasis: #{pf-size-prem(300px)};
+  --#{$drawer}__panel--m-resizable--FlexDirection: row;
+  --#{$drawer}__panel--m-resizable--md--FlexBasis--min: var(--#{$drawer}__splitter--m-vertical--Width);
+  --#{$drawer}__panel--m-resizable--MinWidth: #{pf-size-prem(24px)};
+  --#{$drawer}--m-panel-bottom__panel--m-resizable--FlexDirection: column;
+  --#{$drawer}--m-panel-bottom__panel--m-resizable--md--FlexBasis--min: #{pf-size-prem(24px)};
+  --#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight: #{pf-size-prem(24px)};
 
   // Child padding
-  --pf-c-drawer--child--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-drawer--child--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-drawer--child--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-drawer--child--PaddingLeft: var(--pf-global--spacer--md);
+  --#{$drawer}--child--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$drawer}--child--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$drawer}--child--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$drawer}--child--PaddingLeft: var(--#{$pf-global}--spacer--md);
 
   // Responsive child padding
-  --pf-c-drawer--child--md--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-drawer--child--md--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-drawer--child--md--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-drawer--child--md--PaddingLeft: var(--pf-global--spacer--lg);
+  --#{$drawer}--child--md--PaddingTop: var(--#{$pf-global}--spacer--lg);
+  --#{$drawer}--child--md--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$drawer}--child--md--PaddingBottom: var(--#{$pf-global}--spacer--lg);
+  --#{$drawer}--child--md--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
   // Modified padding, child padding
-  --pf-c-drawer--child--m-padding--PaddingTop: var(--pf-global--spacer--md);
-  --pf-c-drawer--child--m-padding--PaddingRight: var(--pf-global--spacer--md);
-  --pf-c-drawer--child--m-padding--PaddingBottom: var(--pf-global--spacer--md);
-  --pf-c-drawer--child--m-padding--PaddingLeft: var(--pf-global--spacer--md);
+  --#{$drawer}--child--m-padding--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$drawer}--child--m-padding--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$drawer}--child--m-padding--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$drawer}--child--m-padding--PaddingLeft: var(--#{$pf-global}--spacer--md);
 
   // Responsive, modified padding, child padding
-  --pf-c-drawer--child--m-padding--md--PaddingTop: var(--pf-global--spacer--lg);
-  --pf-c-drawer--child--m-padding--md--PaddingRight: var(--pf-global--spacer--lg);
-  --pf-c-drawer--child--m-padding--md--PaddingBottom: var(--pf-global--spacer--lg);
-  --pf-c-drawer--child--m-padding--md--PaddingLeft: var(--pf-global--spacer--lg);
+  --#{$drawer}--child--m-padding--md--PaddingTop: var(--#{$pf-global}--spacer--lg);
+  --#{$drawer}--child--m-padding--md--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$drawer}--child--m-padding--md--PaddingBottom: var(--#{$pf-global}--spacer--lg);
+  --#{$drawer}--child--m-padding--md--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
   // Content
-  --pf-c-drawer__content--child--PaddingTop: 0;
-  --pf-c-drawer__content--child--PaddingRight: 0;
-  --pf-c-drawer__content--child--PaddingBottom: 0;
-  --pf-c-drawer__content--child--PaddingLeft: 0;
+  --#{$drawer}__content--child--PaddingTop: 0;
+  --#{$drawer}__content--child--PaddingRight: 0;
+  --#{$drawer}__content--child--PaddingBottom: 0;
+  --#{$drawer}__content--child--PaddingLeft: 0;
 
   // Splitter
-  --pf-c-drawer__splitter--Height: #{pf-size-prem(9px)};
-  --pf-c-drawer__splitter--Width: 100%;
-  --pf-c-drawer__splitter--BackgroundColor: var(--pf-global--BackgroundColor--100);
-  --pf-c-drawer__splitter--Cursor: row-resize;
-  --pf-c-drawer__splitter--m-vertical--Height: 100%;
-  --pf-c-drawer__splitter--m-vertical--Width: #{pf-size-prem(9px)};
-  --pf-c-drawer__splitter--m-vertical--Cursor: col-resize;
-  --pf-c-drawer--m-inline__splitter--focus--OutlineOffset: #{pf-size-prem(-1px)};
+  --#{$drawer}__splitter--Height: #{pf-size-prem(9px)};
+  --#{$drawer}__splitter--Width: 100%;
+  --#{$drawer}__splitter--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$drawer}__splitter--Cursor: row-resize;
+  --#{$drawer}__splitter--m-vertical--Height: 100%;
+  --#{$drawer}__splitter--m-vertical--Width: #{pf-size-prem(9px)};
+  --#{$drawer}__splitter--m-vertical--Cursor: col-resize;
+  --#{$drawer}--m-inline__splitter--focus--OutlineOffset: #{pf-size-prem(-1px)};
 
   // Splitter border
-  --pf-c-drawer__splitter--after--BorderColor: var(--pf-global--BorderColor--100);
-  --pf-c-drawer__splitter--after--border-width--base: var(--pf-global--BorderWidth--sm);
-  --pf-c-drawer__splitter--after--BorderTopWidth: 0;
-  --pf-c-drawer__splitter--after--BorderRightWidth: var(--pf-c-drawer__splitter--after--border-width--base);
-  --pf-c-drawer__splitter--after--BorderBottomWidth: 0;
-  --pf-c-drawer__splitter--after--BorderLeftWidth: 0;
-  --pf-c-drawer--m-panel-left__splitter--after--BorderLeftWidth: var(--pf-c-drawer__splitter--after--border-width--base);
-  --pf-c-drawer--m-panel-bottom__splitter--after--BorderBottomWidth: var(--pf-c-drawer__splitter--after--border-width--base);
-  --pf-c-drawer--m-inline__splitter--m-vertical--Width: #{pf-size-prem(10px)};
-  --pf-c-drawer--m-inline__splitter-handle--Left: 50%;
-  --pf-c-drawer--m-inline__splitter--after--BorderRightWidth: var(--pf-c-drawer__splitter--after--border-width--base);
-  --pf-c-drawer--m-inline__splitter--after--BorderLeftWidth: var(--pf-c-drawer__splitter--after--border-width--base);
-  --pf-c-drawer--m-inline--m-panel-bottom__splitter--Height: #{pf-size-prem(10px)};
-  --pf-c-drawer--m-inline--m-panel-bottom__splitter-handle--Top: 50%;
-  --pf-c-drawer--m-inline--m-panel-bottom__splitter--after--BorderTopWidth: var(--pf-c-drawer__splitter--after--border-width--base);
+  --#{$drawer}__splitter--after--BorderColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$drawer}__splitter--after--border-width--base: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__splitter--after--BorderTopWidth: 0;
+  --#{$drawer}__splitter--after--BorderRightWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}__splitter--after--BorderBottomWidth: 0;
+  --#{$drawer}__splitter--after--BorderLeftWidth: 0;
+  --#{$drawer}--m-panel-left__splitter--after--BorderLeftWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}--m-panel-bottom__splitter--after--BorderBottomWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}--m-inline__splitter--m-vertical--Width: #{pf-size-prem(10px)};
+  --#{$drawer}--m-inline__splitter-handle--Left: 50%;
+  --#{$drawer}--m-inline__splitter--after--BorderRightWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}--m-inline__splitter--after--BorderLeftWidth: var(--#{$drawer}__splitter--after--border-width--base);
+  --#{$drawer}--m-inline--m-panel-bottom__splitter--Height: #{pf-size-prem(10px)};
+  --#{$drawer}--m-inline--m-panel-bottom__splitter-handle--Top: 50%;
+  --#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderTopWidth: var(--#{$drawer}__splitter--after--border-width--base);
 
   // Splitter handle
-  --pf-c-drawer__splitter-handle--Top: 50%;
-  --pf-c-drawer__splitter-handle--Left: calc(50% - var(--pf-c-drawer__splitter--after--border-width--base));
-  --pf-c-drawer--m-panel-left__splitter-handle--Left: 50%;
-  --pf-c-drawer--m-panel-bottom__splitter-handle--Top: calc(50% - var(--pf-c-drawer__splitter--after--border-width--base));
+  --#{$drawer}__splitter-handle--Top: 50%;
+  --#{$drawer}__splitter-handle--Left: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
+  --#{$drawer}--m-panel-left__splitter-handle--Left: 50%;
+  --#{$drawer}--m-panel-bottom__splitter-handle--Top: calc(50% - var(--#{$drawer}__splitter--after--border-width--base));
 
   // Splitter handle line
-  --pf-c-drawer__splitter-handle--after--BorderColor: var(--pf-global--Color--200);
-  --pf-c-drawer__splitter-handle--after--BorderTopWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-drawer__splitter-handle--after--BorderRightWidth: 0;
-  --pf-c-drawer__splitter-handle--after--BorderBottomWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-drawer__splitter-handle--after--BorderLeftWidth: 0;
-  --pf-c-drawer__splitter--hover__splitter-handle--after--BorderColor: var(--pf-global--Color--100);
-  --pf-c-drawer__splitter--focus__splitter-handle--after--BorderColor: var(--pf-global--Color--100);
-  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderTopWidth: 0;
-  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderRightWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderBottomWidth: 0;
-  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderLeftWidth: var(--pf-global--BorderWidth--sm);
-  --pf-c-drawer__splitter-handle--after--Width: #{pf-size-prem(12px)};
-  --pf-c-drawer__splitter-handle--after--Height: #{pf-size-prem(4px)};
-  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--Width: #{pf-size-prem(4px)};
-  --pf-c-drawer__splitter--m-vertical__splitter-handle--after--Height: #{pf-size-prem(12px)};
+  --#{$drawer}__splitter-handle--after--BorderColor: var(--#{$pf-global}--Color--200);
+  --#{$drawer}__splitter-handle--after--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__splitter-handle--after--BorderRightWidth: 0;
+  --#{$drawer}__splitter-handle--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__splitter-handle--after--BorderLeftWidth: 0;
+  --#{$drawer}__splitter--hover__splitter-handle--after--BorderColor: var(--#{$pf-global}--Color--100);
+  --#{$drawer}__splitter--focus__splitter-handle--after--BorderColor: var(--#{$pf-global}--Color--100);
+  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderTopWidth: 0;
+  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderBottomWidth: 0;
+  --#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__splitter-handle--after--Width: #{pf-size-prem(12px)};
+  --#{$drawer}__splitter-handle--after--Height: #{pf-size-prem(4px)};
+  --#{$drawer}__splitter--m-vertical__splitter-handle--after--Width: #{pf-size-prem(4px)};
+  --#{$drawer}__splitter--m-vertical__splitter-handle--after--Height: #{pf-size-prem(12px)};
 
-  @media screen and (min-width: $pf-global--breakpoint--md) {
+  @media screen and (min-width: $pf-v5-global--breakpoint--md) {
     // Responsive child padding
-    --pf-c-drawer--child--PaddingTop: var(--pf-c-drawer--child--md--PaddingTop);
-    --pf-c-drawer--child--PaddingRight: var(--pf-c-drawer--child--md--PaddingRight);
-    --pf-c-drawer--child--PaddingBottom: var(--pf-c-drawer--child--md--PaddingBottom);
-    --pf-c-drawer--child--PaddingLeft: var(--pf-c-drawer--child--md--PaddingLeft);
+    --#{$drawer}--child--PaddingTop: var(--#{$drawer}--child--md--PaddingTop);
+    --#{$drawer}--child--PaddingRight: var(--#{$drawer}--child--md--PaddingRight);
+    --#{$drawer}--child--PaddingBottom: var(--#{$drawer}--child--md--PaddingBottom);
+    --#{$drawer}--child--PaddingLeft: var(--#{$drawer}--child--md--PaddingLeft);
 
     // Responsive, modified padding, child padding
-    --pf-c-drawer--child--m-padding--PaddingTop: var(--pf-c-drawer--child--m-padding--md--PaddingTop);
-    --pf-c-drawer--child--m-padding--PaddingRight: var(--pf-c-drawer--child--m-padding--md--PaddingRight);
-    --pf-c-drawer--child--m-padding--PaddingBottom: var(--pf-c-drawer--child--m-padding--md--PaddingBottom);
-    --pf-c-drawer--child--m-padding--PaddingLeft: var(--pf-c-drawer--child--m-padding--md--PaddingLeft);
+    --#{$drawer}--child--m-padding--PaddingTop: var(--#{$drawer}--child--m-padding--md--PaddingTop);
+    --#{$drawer}--child--m-padding--PaddingRight: var(--#{$drawer}--child--m-padding--md--PaddingRight);
+    --#{$drawer}--child--m-padding--PaddingBottom: var(--#{$drawer}--child--m-padding--md--PaddingBottom);
+    --#{$drawer}--child--m-padding--PaddingLeft: var(--#{$drawer}--child--m-padding--md--PaddingLeft);
   }
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-drawer__panel--MinWidth: var(--pf-c-drawer__panel--xl--MinWidth);
+  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+    --#{$drawer}__panel--MinWidth: var(--#{$drawer}__panel--xl--MinWidth);
 
     &.pf-m-panel-bottom {
-      --pf-c-drawer__panel--MinWidth: auto;
-      --pf-c-drawer__panel--MinHeight: var(--pf-c-drawer--m-panel-bottom__panel--xl--MinHeight);
+      --#{$drawer}__panel--MinWidth: auto;
+      --#{$drawer}__panel--MinHeight: var(--#{$drawer}--m-panel-bottom__panel--xl--MinHeight);
     }
   }
 
   // Actions
-  --pf-c-drawer__actions--MarginTop: calc(var(--pf-global--spacer--form-element) * -1);
-  --pf-c-drawer__actions--MarginRight: calc(var(--pf-global--spacer--form-element) * -1);
+  --#{$drawer}__actions--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$drawer}__actions--MarginRight: calc(var(--#{$pf-global}--spacer--form-element) * -1);
 
   // Box shadow
-  --pf-c-drawer__panel--BoxShadow: none;
-  --pf-c-drawer--m-expanded__panel--BoxShadow: var(--pf-global--BoxShadow--lg-left);
-  --pf-c-drawer--m-expanded--m-panel-left__panel--BoxShadow: var(--pf-global--BoxShadow--lg-right);
-  --pf-c-drawer--m-expanded--m-panel-bottom__panel--BoxShadow: var(--pf-global--BoxShadow--lg-top);
+  --#{$drawer}__panel--BoxShadow: none;
+  --#{$drawer}--m-expanded__panel--BoxShadow: var(--#{$pf-global}--BoxShadow--lg-left);
+  --#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow: var(--#{$pf-global}--BoxShadow--lg-right);
+  --#{$drawer}--m-expanded--m-panel-bottom__panel--BoxShadow: var(--#{$pf-global}--BoxShadow--lg-top);
 
   // Divider
-  --pf-c-drawer__panel--after--Width: var(--pf-global--BorderWidth--sm);
-  --pf-c-drawer--m-panel-bottom__panel--after--Height: var(--pf-global--BorderWidth--sm);
-  --pf-c-drawer__panel--after--BackgroundColor: transparent;
-  --pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor: var(--pf-global--BorderColor--100);
-  --pf-c-drawer--m-inline__panel--PaddingLeft: var(--pf-c-drawer__panel--after--Width);
-  --pf-c-drawer--m-panel-left--m-inline__panel--PaddingRight: var(--pf-c-drawer__panel--after--Width);
-  --pf-c-drawer--m-panel-bottom--m-inline__panel--PaddingTop: var(--pf-c-drawer__panel--after--Width);
+  --#{$drawer}__panel--after--Width: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}--m-panel-bottom__panel--after--Height: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$drawer}__panel--after--BackgroundColor: transparent;
+  --#{$drawer}--m-inline--m-expanded__panel--after--BackgroundColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$drawer}--m-inline__panel--PaddingLeft: var(--#{$drawer}__panel--after--Width);
+  --#{$drawer}--m-panel-left--m-inline__panel--PaddingRight: var(--#{$drawer}__panel--after--Width);
+  --#{$drawer}--m-panel-bottom--m-inline__panel--PaddingTop: var(--#{$drawer}__panel--after--Width);
 
   display: flex;
   flex-direction: column;
@@ -166,80 +167,80 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   &.pf-m-inline,
   &.pf-m-static {
-    > .pf-c-drawer__main > .pf-c-drawer__panel:not(.pf-m-no-border, .pf-m-resizable) {
-      padding-left: var(--pf-c-drawer--m-inline__panel--PaddingLeft);
+    > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
+      padding-left: var(--#{$drawer}--m-inline__panel--PaddingLeft);
     }
   }
 
-  &.pf-m-panel-left > .pf-c-drawer__main {
-    > .pf-c-drawer__panel {
+  &.pf-m-panel-left > .#{$drawer}__main {
+    > .#{$drawer}__panel {
       order: 0;
-      margin-right: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
+      margin-right: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
       transform: translateX(-100%);
     }
 
-    > .pf-c-drawer__content {
+    > .#{$drawer}__content {
       order: 1;
     }
   }
 
-  &.pf-m-panel-bottom > .pf-c-drawer__main {
+  &.pf-m-panel-bottom > .#{$drawer}__main {
     flex-direction: column;
   }
 
   // Expanded
   // stylelint-disable selector-max-class
   &.pf-m-expanded {
-    > .pf-c-drawer__main > .pf-c-drawer__panel {
+    > .#{$drawer}__main > .#{$drawer}__panel {
       transform: translateX(-100%);
     }
 
-    &.pf-m-panel-left > .pf-c-drawer__main > .pf-c-drawer__panel {
+    &.pf-m-panel-left > .#{$drawer}__main > .#{$drawer}__panel {
       transform: translateX(0);
     }
 
-    &.pf-m-panel-bottom > .pf-c-drawer__main > .pf-c-drawer__panel {
+    &.pf-m-panel-bottom > .#{$drawer}__main > .#{$drawer}__panel {
       transform: translate(0, -100%);
     }
   }
   // stylelint-enable
 
   &.pf-m-resizing {
-    --pf-c-drawer__panel--TransitionProperty: none;
+    --#{$drawer}__panel--TransitionProperty: none;
 
     pointer-events: none;
 
-    .pf-c-drawer__splitter {
+    .#{$drawer}__splitter {
       pointer-events: auto;
     }
   }
 }
 
 // Header area
-.pf-c-drawer__section {
+.#{$drawer}__section {
   flex-grow: 0;
-  background-color: var(--pf-c-drawer__section--BackgroundColor);
+  background-color: var(--#{$drawer}__section--BackgroundColor);
 
   &.pf-m-no-background {
-    --pf-c-drawer__section--BackgroundColor: transparent;
+    --#{$drawer}__section--BackgroundColor: transparent;
   }
 
   &.pf-m-light-200 {
-    --pf-c-drawer__section--BackgroundColor: var(--pf-c-drawer__section--m-light-200--BackgroundColor);
+    --#{$drawer}__section--BackgroundColor: var(--#{$drawer}__section--m-light-200--BackgroundColor);
   }
 }
 
 // Main area
-.pf-c-drawer__main {
+.#{$drawer}__main {
   display: flex;
   flex: 1;
   overflow: hidden;
 }
 
 // Content / panel
-.pf-c-drawer__content,
-.pf-c-drawer__panel,
-.pf-c-drawer__panel-main {
+.#{$drawer}__content,
+.#{$drawer}__panel,
+.#{$drawer}__panel-main {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -247,83 +248,83 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 // Content
-.pf-c-drawer__content {
-  z-index: var(--pf-c-drawer__content--ZIndex);
-  flex-basis: var(--pf-c-drawer__content--FlexBasis);
+.#{$drawer}__content {
+  z-index: var(--#{$drawer}__content--ZIndex);
+  flex-basis: var(--#{$drawer}__content--FlexBasis);
   order: 0;
-  background-color: var(--pf-c-drawer__content--BackgroundColor);
+  background-color: var(--#{$drawer}__content--BackgroundColor);
 
   &.pf-m-no-background {
-    --pf-c-drawer__content--BackgroundColor: transparent;
+    --#{$drawer}__content--BackgroundColor: transparent;
   }
 
   &.pf-m-light-200 {
-    --pf-c-drawer__content--BackgroundColor: var(--pf-c-drawer__content--m-light-200--BackgroundColor);
+    --#{$drawer}__content--BackgroundColor: var(--#{$drawer}__content--m-light-200--BackgroundColor);
   }
 
-  > .pf-c-drawer__body {
-    padding: var(--pf-c-drawer__content--child--PaddingTop) var(--pf-c-drawer__content--child--PaddingRight) var(--pf-c-drawer__content--child--PaddingBottom) var(--pf-c-drawer__content--child--PaddingLeft);
+  > .#{$drawer}__body {
+    padding: var(--#{$drawer}__content--child--PaddingTop) var(--#{$drawer}__content--child--PaddingRight) var(--#{$drawer}__content--child--PaddingBottom) var(--#{$drawer}__content--child--PaddingLeft);
   }
 }
 
 // Panel
-.pf-c-drawer__panel {
+.#{$drawer}__panel {
   position: relative;
-  z-index: var(--pf-c-drawer__panel--ZIndex);
-  flex-basis: var(--pf-c-drawer__panel--FlexBasis);
+  z-index: var(--#{$drawer}__panel--ZIndex);
+  flex-basis: var(--#{$drawer}__panel--FlexBasis);
   order: 1;
-  max-height: var(--pf-c-drawer__panel--MaxHeight);
+  max-height: var(--#{$drawer}__panel--MaxHeight);
   overflow: auto;
-  background-color: var(--pf-c-drawer__panel--BackgroundColor);
-  box-shadow: var(--pf-c-drawer__panel--BoxShadow);
-  transition-duration: var(--pf-c-drawer__panel--TransitionDuration);
-  transition-property: var(--pf-c-drawer__panel--TransitionProperty);
+  background-color: var(--#{$drawer}__panel--BackgroundColor);
+  box-shadow: var(--#{$drawer}__panel--BoxShadow);
+  transition-duration: var(--#{$drawer}__panel--TransitionDuration);
+  transition-property: var(--#{$drawer}__panel--TransitionProperty);
   -webkit-overflow-scrolling: touch;
 
   &::after {
     position: absolute;
     top: 0;
     left: 0;
-    width: var(--pf-c-drawer__panel--after--Width);
+    width: var(--#{$drawer}__panel--after--Width);
     height: 100%;
     content: "";
-    background-color: var(--pf-c-drawer__panel--after--BackgroundColor);
+    background-color: var(--#{$drawer}__panel--after--BackgroundColor);
   }
 
   &.pf-m-no-background {
-    --pf-c-drawer__panel--BackgroundColor: transparent;
+    --#{$drawer}__panel--BackgroundColor: transparent;
   }
 
   &.pf-m-light-200 {
-    --pf-c-drawer__panel--BackgroundColor: var(--pf-c-drawer__panel--m-light-200--BackgroundColor);
+    --#{$drawer}__panel--BackgroundColor: var(--#{$drawer}__panel--m-light-200--BackgroundColor);
   }
 
-  @media screen and (min-width: $pf-global--breakpoint--md) {
-    --pf-c-drawer__panel--FlexBasis:
+  @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+    --#{$drawer}__panel--FlexBasis:
       max(
-        var(--pf-c-drawer__panel--md--FlexBasis--min),
-        min(var(--pf-c-drawer__panel--md--FlexBasis), var(--pf-c-drawer__panel--md--FlexBasis--max))
+        var(--#{$drawer}__panel--md--FlexBasis--min),
+        min(var(--#{$drawer}__panel--md--FlexBasis), var(--#{$drawer}__panel--md--FlexBasis--max))
       );
   }
 
-  @media screen and (min-width: $pf-global--breakpoint--xl) {
-    --pf-c-drawer__panel--md--FlexBasis: var(--pf-c-drawer__panel--xl--FlexBasis);
+  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+    --#{$drawer}__panel--md--FlexBasis: var(--#{$drawer}__panel--xl--FlexBasis);
 
-    .pf-c-drawer.pf-m-panel-bottom & {
-      --pf-c-drawer__panel--md--FlexBasis: var(--pf-c-drawer--m-panel-bottom__panel--xl--FlexBasis);
+    .#{$drawer}.pf-m-panel-bottom & {
+      --#{$drawer}__panel--md--FlexBasis: var(--#{$drawer}--m-panel-bottom__panel--xl--FlexBasis);
     }
   }
 }
 
-.pf-c-drawer__panel-main {
+.#{$drawer}__panel-main {
   flex-grow: 1;
 }
 
 // Remove tab focus
-@include pf-animate-remove-tab-focus(".pf-c-drawer__panel", var(--pf-c-drawer__panel--TransitionDuration));
+@include pf-v5-animate-remove-tab-focus(".#{$drawer}__panel", var(--#{$drawer}__panel--TransitionDuration));
 
 // Panel head
-.pf-c-drawer__head {
+.#{$drawer}__head {
   display: grid;
   grid-template-columns: auto;
   grid-auto-columns: max-content;
@@ -334,25 +335,25 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 // Panel actions
-.pf-c-drawer__actions {
+.#{$drawer}__actions {
   display: flex;
   grid-row: 1;
   grid-column: 2;
   align-self: baseline;
-  margin-top: var(--pf-c-drawer__actions--MarginTop);
-  margin-right: var(--pf-c-drawer__actions--MarginRight);
+  margin-top: var(--#{$drawer}__actions--MarginTop);
+  margin-right: var(--#{$drawer}__actions--MarginRight);
 }
 
 // Modified content children
-.pf-c-drawer__body {
-  padding: var(--pf-c-drawer--child--PaddingTop) var(--pf-c-drawer--child--PaddingRight) var(--pf-c-drawer--child--PaddingBottom) var(--pf-c-drawer--child--PaddingLeft);
+.#{$drawer}__body {
+  padding: var(--#{$drawer}--child--PaddingTop) var(--#{$drawer}--child--PaddingRight) var(--#{$drawer}--child--PaddingBottom) var(--#{$drawer}--child--PaddingLeft);
 
   // No padding
   &.pf-m-no-padding {
     padding: 0;
 
-    > .pf-c-drawer__actions,
-    > .pf-c-drawer__head > .pf-c-drawer__actions {
+    > .#{$drawer}__actions,
+    > .#{$drawer}__head > .#{$drawer}__actions {
       margin-top: 0;
       margin-right: 0;
     }
@@ -360,7 +361,7 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   // Padding
   &.pf-m-padding {
-    padding: var(--pf-c-drawer--child--m-padding--PaddingTop) var(--pf-c-drawer--child--m-padding--PaddingRight) var(--pf-c-drawer--child--m-padding--PaddingBottom) var(--pf-c-drawer--child--m-padding--PaddingLeft);
+    padding: var(--#{$drawer}--child--m-padding--PaddingTop) var(--#{$drawer}--child--m-padding--PaddingRight) var(--#{$drawer}--child--m-padding--PaddingBottom) var(--#{$drawer}--child--m-padding--PaddingLeft);
   }
 
   &:not(.pf-m-no-padding) + * {
@@ -373,36 +374,36 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 }
 
 // Page level drawer - move to page component in breaking change
-.pf-c-drawer__body > .pf-c-page__main {
+.#{$drawer}__body > .#{$page}__main {
   height: 100%;
 }
 
-.pf-c-drawer__splitter {
+.#{$drawer}__splitter {
   position: relative;
   display: none;
-  width: var(--pf-c-drawer__splitter--Width);
-  height: var(--pf-c-drawer__splitter--Height);
-  cursor: var(--pf-c-drawer__splitter--Cursor);
-  background-color: var(--pf-c-drawer__splitter--BackgroundColor);
+  width: var(--#{$drawer}__splitter--Width);
+  height: var(--#{$drawer}__splitter--Height);
+  cursor: var(--#{$drawer}__splitter--Cursor);
+  background-color: var(--#{$drawer}__splitter--BackgroundColor);
 
   &.pf-m-vertical {
-    --pf-c-drawer__splitter--Height: var(--pf-c-drawer__splitter--m-vertical--Height);
-    --pf-c-drawer__splitter--Width: var(--pf-c-drawer__splitter--m-vertical--Width);
-    --pf-c-drawer__splitter--Cursor: var(--pf-c-drawer__splitter--m-vertical--Cursor);
-    --pf-c-drawer__splitter-handle--after--Width: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--Width);
-    --pf-c-drawer__splitter-handle--after--Height: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--Height);
-    --pf-c-drawer__splitter-handle--after--BorderTopWidth: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderTopWidth);
-    --pf-c-drawer__splitter-handle--after--BorderRightWidth: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderRightWidth);
-    --pf-c-drawer__splitter-handle--after--BorderBottomWidth: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderBottomWidth);
-    --pf-c-drawer__splitter-handle--after--BorderLeftWidth: var(--pf-c-drawer__splitter--m-vertical__splitter-handle--after--BorderLeftWidth);
+    --#{$drawer}__splitter--Height: var(--#{$drawer}__splitter--m-vertical--Height);
+    --#{$drawer}__splitter--Width: var(--#{$drawer}__splitter--m-vertical--Width);
+    --#{$drawer}__splitter--Cursor: var(--#{$drawer}__splitter--m-vertical--Cursor);
+    --#{$drawer}__splitter-handle--after--Width: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--Width);
+    --#{$drawer}__splitter-handle--after--Height: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--Height);
+    --#{$drawer}__splitter-handle--after--BorderTopWidth: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderTopWidth);
+    --#{$drawer}__splitter-handle--after--BorderRightWidth: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderRightWidth);
+    --#{$drawer}__splitter-handle--after--BorderBottomWidth: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderBottomWidth);
+    --#{$drawer}__splitter-handle--after--BorderLeftWidth: var(--#{$drawer}__splitter--m-vertical__splitter-handle--after--BorderLeftWidth);
   }
 
   &:hover {
-    --pf-c-drawer__splitter-handle--after--BorderColor: var(--pf-c-drawer__splitter--hover__splitter-handle--after--BorderColor);
+    --#{$drawer}__splitter-handle--after--BorderColor: var(--#{$drawer}__splitter--hover__splitter-handle--after--BorderColor);
   }
 
   &:focus {
-    --pf-c-drawer__splitter-handle--after--BorderColor: var(--pf-c-drawer__splitter--focus__splitter-handle--after--BorderColor);
+    --#{$drawer}__splitter-handle--after--BorderColor: var(--#{$drawer}__splitter--focus__splitter-handle--after--BorderColor);
   }
 
   &::after {
@@ -412,262 +413,262 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     bottom: 0;
     left: 0;
     content: "";
-    border: solid var(--pf-c-drawer__splitter--after--BorderColor);
-    border-width: var(--pf-c-drawer__splitter--after--BorderTopWidth) var(--pf-c-drawer__splitter--after--BorderRightWidth) var(--pf-c-drawer__splitter--after--BorderBottomWidth) var(--pf-c-drawer__splitter--after--BorderLeftWidth);
+    border: solid var(--#{$drawer}__splitter--after--BorderColor);
+    border-width: var(--#{$drawer}__splitter--after--BorderTopWidth) var(--#{$drawer}__splitter--after--BorderRightWidth) var(--#{$drawer}__splitter--after--BorderBottomWidth) var(--#{$drawer}__splitter--after--BorderLeftWidth);
   }
 }
 
-.pf-c-drawer__splitter-handle {
+.#{$drawer}__splitter-handle {
   position: absolute;
-  top: var(--pf-c-drawer__splitter-handle--Top);
-  left: var(--pf-c-drawer__splitter-handle--Left);
+  top: var(--#{$drawer}__splitter-handle--Top);
+  left: var(--#{$drawer}__splitter-handle--Left);
   transform: translate(-50%, -50%);
 
   &::after {
     display: block;
-    width: var(--pf-c-drawer__splitter-handle--after--Width);
-    height: var(--pf-c-drawer__splitter-handle--after--Height);
+    width: var(--#{$drawer}__splitter-handle--after--Width);
+    height: var(--#{$drawer}__splitter-handle--after--Height);
     content: "";
-    border-color: var(--pf-c-drawer__splitter-handle--after--BorderColor);
+    border-color: var(--#{$drawer}__splitter-handle--after--BorderColor);
     border-style: solid;
-    border-width: var(--pf-c-drawer__splitter-handle--after--BorderTopWidth) var(--pf-c-drawer__splitter-handle--after--BorderRightWidth) var(--pf-c-drawer__splitter-handle--after--BorderBottomWidth) var(--pf-c-drawer__splitter-handle--after--BorderLeftWidth);
+    border-width: var(--#{$drawer}__splitter-handle--after--BorderTopWidth) var(--#{$drawer}__splitter-handle--after--BorderRightWidth) var(--#{$drawer}__splitter-handle--after--BorderBottomWidth) var(--#{$drawer}__splitter-handle--after--BorderLeftWidth);
   }
 }
 
 // Layout modifications happen after md breakpoint
-@media screen and (min-width: $pf-global--breakpoint--md) {
+@media screen and (min-width: $pf-v5-global--breakpoint--md) {
   // Default
-  .pf-c-drawer {
-    min-width: var(--pf-c-drawer__panel--MinWidth);
+  .#{$drawer} {
+    min-width: var(--#{$drawer}__panel--MinWidth);
 
     // stylelint-disable selector-max-class
     // Expanded
-    &.pf-m-expanded > .pf-c-drawer__main {
-      > .pf-c-drawer__panel {
-        box-shadow: var(--pf-c-drawer--m-expanded__panel--BoxShadow);
+    &.pf-m-expanded > .#{$drawer}__main {
+      > .#{$drawer}__panel {
+        box-shadow: var(--#{$drawer}--m-expanded__panel--BoxShadow);
       }
     }
 
-    > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
-      --pf-c-drawer__panel--md--FlexBasis--min: var(--pf-c-drawer__panel--m-resizable--md--FlexBasis--min);
+    > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
+      --#{$drawer}__panel--md--FlexBasis--min: var(--#{$drawer}__panel--m-resizable--md--FlexBasis--min);
 
-      flex-direction: var(--pf-c-drawer__panel--m-resizable--FlexDirection);
-      min-width: var(--pf-c-drawer__panel--m-resizable--MinWidth);
+      flex-direction: var(--#{$drawer}__panel--m-resizable--FlexDirection);
+      min-width: var(--#{$drawer}__panel--m-resizable--MinWidth);
 
       &::after {
         width: 0;
         height: 0;
       }
 
-      > .pf-c-drawer__splitter {
+      > .#{$drawer}__splitter {
         flex-shrink: 0;
       }
 
-      > .pf-c-drawer__panel-main {
+      > .#{$drawer}__panel-main {
         flex-shrink: 1;
       }
     }
   }
 
   // Panel left
-  .pf-c-drawer.pf-m-panel-left {
-    --pf-c-drawer--m-expanded__panel--BoxShadow: var(--pf-c-drawer--m-expanded--m-panel-left__panel--BoxShadow);
+  .#{$drawer}.pf-m-panel-left {
+    --#{$drawer}--m-expanded__panel--BoxShadow: var(--#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow);
 
     &.pf-m-inline,
     &.pf-m-static {
-      > .pf-c-drawer__main > .pf-c-drawer__panel:not(.pf-m-no-border, .pf-m-resizable) {
-        padding-right: var(--pf-c-drawer--m-panel-left--m-inline__panel--PaddingRight);
+      > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
+        padding-right: var(--#{$drawer}--m-panel-left--m-inline__panel--PaddingRight);
         padding-left: 0;
       }
     }
 
-    &.pf-m-expanded > .pf-c-drawer__main > .pf-c-drawer__panel {
+    &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel {
       transform: translateX(0);
     }
 
-    > .pf-c-drawer__main > .pf-c-drawer__panel::after {
+    > .#{$drawer}__main > .#{$drawer}__panel::after {
       right: 0;
       left: auto;
     }
 
-    > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
-      > .pf-c-drawer__splitter {
-        --pf-c-drawer__splitter-handle--Left: var(--pf-c-drawer--m-panel-left__splitter-handle--Left);
-        --pf-c-drawer__splitter--after--BorderRightWidth: 0;
-        --pf-c-drawer__splitter--after--BorderLeftWidth: var(--pf-c-drawer--m-panel-left__splitter--after--BorderLeftWidth);
+    > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
+      > .#{$drawer}__splitter {
+        --#{$drawer}__splitter-handle--Left: var(--#{$drawer}--m-panel-left__splitter-handle--Left);
+        --#{$drawer}__splitter--after--BorderRightWidth: 0;
+        --#{$drawer}__splitter--after--BorderLeftWidth: var(--#{$drawer}--m-panel-left__splitter--after--BorderLeftWidth);
 
         order: 1;
       }
     }
   }
 
-  .pf-c-drawer.pf-m-panel-bottom {
-    --pf-c-drawer--m-expanded__panel--BoxShadow: var(--pf-c-drawer--m-expanded--m-panel-bottom__panel--BoxShadow);
-    --pf-c-drawer__panel--MaxHeight: 100%;
-    --pf-c-drawer__panel--FlexBasis--min: var(--pf-c-drawer--m-panel-bottom__panel--FlexBasis--min);
+  .#{$drawer}.pf-m-panel-bottom {
+    --#{$drawer}--m-expanded__panel--BoxShadow: var(--#{$drawer}--m-expanded--m-panel-bottom__panel--BoxShadow);
+    --#{$drawer}__panel--MaxHeight: 100%;
+    --#{$drawer}__panel--FlexBasis--min: var(--#{$drawer}--m-panel-bottom__panel--FlexBasis--min);
 
     min-width: auto;
-    min-height: var(--pf-c-drawer--m-panel-bottom__panel--md--MinHeight);
+    min-height: var(--#{$drawer}--m-panel-bottom__panel--md--MinHeight);
 
     &.pf-m-inline,
     &.pf-m-static {
-      > .pf-c-drawer__main > .pf-c-drawer__panel:not(.pf-m-no-border, .pf-m-resizable) {
-        padding-top: var(--pf-c-drawer--m-panel-bottom--m-inline__panel--PaddingTop);
+      > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
+        padding-top: var(--#{$drawer}--m-panel-bottom--m-inline__panel--PaddingTop);
         padding-left: 0;
       }
     }
 
-    > .pf-c-drawer__main > .pf-c-drawer__panel::after {
+    > .#{$drawer}__main > .#{$drawer}__panel::after {
       top: 0;
       left: auto;
       width: 100%;
-      height: var(--pf-c-drawer--m-panel-bottom__panel--after--Height);
+      height: var(--#{$drawer}--m-panel-bottom__panel--after--Height);
     }
 
-    > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
-      --pf-c-drawer__panel--md--FlexBasis--min: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--md--FlexBasis--min);
-      --pf-c-drawer__panel--m-resizable--FlexDirection: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--FlexDirection);
-      --pf-c-drawer__panel--m-resizable--MinWidth: 0;
+    > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
+      --#{$drawer}__panel--md--FlexBasis--min: var(--#{$drawer}--m-panel-bottom__panel--m-resizable--md--FlexBasis--min);
+      --#{$drawer}__panel--m-resizable--FlexDirection: var(--#{$drawer}--m-panel-bottom__panel--m-resizable--FlexDirection);
+      --#{$drawer}__panel--m-resizable--MinWidth: 0;
 
-      min-height: var(--pf-c-drawer--m-panel-bottom__panel--m-resizable--MinHeight);
+      min-height: var(--#{$drawer}--m-panel-bottom__panel--m-resizable--MinHeight);
 
-      > .pf-c-drawer__splitter {
-        --pf-c-drawer__splitter-handle--Top: var(--pf-c-drawer--m-panel-bottom__splitter-handle--Top);
-        --pf-c-drawer__splitter--after--BorderRightWidth: 0;
-        --pf-c-drawer__splitter--after--BorderBottomWidth: var(--pf-c-drawer--m-panel-bottom__splitter--after--BorderBottomWidth);
+      > .#{$drawer}__splitter {
+        --#{$drawer}__splitter-handle--Top: var(--#{$drawer}--m-panel-bottom__splitter-handle--Top);
+        --#{$drawer}__splitter--after--BorderRightWidth: 0;
+        --#{$drawer}__splitter--after--BorderBottomWidth: var(--#{$drawer}--m-panel-bottom__splitter--after--BorderBottomWidth);
       }
     }
   }
 
-  .pf-c-drawer.pf-m-inline {
-    > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
-      > .pf-c-drawer__splitter {
-        --pf-c-drawer__splitter--m-vertical--Width: var(--pf-c-drawer--m-inline__splitter--m-vertical--Width);
-        --pf-c-drawer__splitter-handle--Left: var(--pf-c-drawer--m-inline__splitter-handle--Left);
-        --pf-c-drawer__splitter--after--BorderRightWidth: var(--pf-c-drawer--m-inline__splitter--after--BorderRightWidth);
-        --pf-c-drawer__splitter--after--BorderLeftWidth: var(--pf-c-drawer--m-inline__splitter--after--BorderLeftWidth);
+  .#{$drawer}.pf-m-inline {
+    > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
+      > .#{$drawer}__splitter {
+        --#{$drawer}__splitter--m-vertical--Width: var(--#{$drawer}--m-inline__splitter--m-vertical--Width);
+        --#{$drawer}__splitter-handle--Left: var(--#{$drawer}--m-inline__splitter-handle--Left);
+        --#{$drawer}__splitter--after--BorderRightWidth: var(--#{$drawer}--m-inline__splitter--after--BorderRightWidth);
+        --#{$drawer}__splitter--after--BorderLeftWidth: var(--#{$drawer}--m-inline__splitter--after--BorderLeftWidth);
 
-        outline-offset: var(--pf-c-drawer--m-inline__splitter--focus--OutlineOffset);
+        outline-offset: var(--#{$drawer}--m-inline__splitter--focus--OutlineOffset);
       }
     }
 
     &.pf-m-panel-bottom {
-      > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-resizable {
-        > .pf-c-drawer__splitter {
-          --pf-c-drawer__splitter--Height: var(--pf-c-drawer--m-inline--m-panel-bottom__splitter--Height);
-          --pf-c-drawer__splitter-handle--Top: var(--pf-c-drawer--m-inline--m-panel-bottom__splitter-handle--Top);
-          --pf-c-drawer__splitter--after--BorderTopWidth: var(--pf-c-drawer--m-inline--m-panel-bottom__splitter--after--BorderTopWidth);
-          --pf-c-drawer__splitter--after--BorderRightWidth: 0;
-          --pf-c-drawer__splitter--after--BorderLeftWidth: 0;
+      > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
+        > .#{$drawer}__splitter {
+          --#{$drawer}__splitter--Height: var(--#{$drawer}--m-inline--m-panel-bottom__splitter--Height);
+          --#{$drawer}__splitter-handle--Top: var(--#{$drawer}--m-inline--m-panel-bottom__splitter-handle--Top);
+          --#{$drawer}__splitter--after--BorderTopWidth: var(--#{$drawer}--m-inline--m-panel-bottom__splitter--after--BorderTopWidth);
+          --#{$drawer}__splitter--after--BorderRightWidth: 0;
+          --#{$drawer}__splitter--after--BorderLeftWidth: 0;
         }
       }
     }
   }
 
   // Border
-  .pf-c-drawer > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-no-border,
-  .pf-c-drawer.pf-m-panel-left > .pf-c-drawer__main > .pf-c-drawer__panel.pf-m-no-border {
-    --pf-c-drawer--m-expanded__panel--BoxShadow: none;
+  .#{$drawer} > .#{$drawer}__main > .#{$drawer}__panel.pf-m-no-border,
+  .#{$drawer}.pf-m-panel-left > .#{$drawer}__main > .#{$drawer}__panel.pf-m-no-border {
+    --#{$drawer}--m-expanded__panel--BoxShadow: none;
   }
   // stylelint-enable
 
-  .pf-c-drawer__splitter {
+  .#{$drawer}__splitter {
     display: block;
   }
 }
 
 // Responsive width modifiers
-@each $breakpoint, $breakpoint-value in $pf-c-drawer--breakpoint-map--width {
+@each $breakpoint, $breakpoint-value in $pf-v5-c-drawer--breakpoint-map--width {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
   @if $breakpoint == "base" {
     $breakpoint: "md";
   }
 
-  @include pf-apply-breakpoint($breakpoint) {
-    @each $width-value in $pf-c-drawer__panel--list--width {
-      .pf-c-drawer__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
-        --pf-c-drawer__panel--md--FlexBasis: #{percentage(div($width-value, 100))};
+  @include pf-v5-apply-breakpoint($breakpoint) {
+    @each $width-value in $pf-v5-c-drawer__panel--list--width {
+      .#{$drawer}__panel.pf-m-width-#{$width-value}#{$breakpoint-name} {
+        --#{$drawer}__panel--md--FlexBasis: #{percentage(div($width-value, 100))};
       }
     }
   }
 }
 
 // Responsive modifiers
-@each $breakpoint, $breakpoint-value in $pf-c-drawer--breakpoint-map {
+@each $breakpoint, $breakpoint-value in $pf-v5-c-drawer--breakpoint-map {
   $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
   @if $breakpoint == "base" {
     $breakpoint: "md";
   }
 
-  @include pf-apply-breakpoint($breakpoint) {
+  @include pf-v5-apply-breakpoint($breakpoint) {
     // Drawer and inline
-    .pf-c-drawer.pf-m-inline#{$breakpoint-name},
-    .pf-c-drawer.pf-m-static#{$breakpoint-name} {
-      > .pf-c-drawer__main > .pf-c-drawer__content {
+    .#{$drawer}.pf-m-inline#{$breakpoint-name},
+    .#{$drawer}.pf-m-static#{$breakpoint-name} {
+      > .#{$drawer}__main > .#{$drawer}__content {
         flex-shrink: 1;
       }
 
-      > .pf-c-drawer__main > .pf-c-drawer__panel {
-        --pf-c-drawer--m-expanded__panel--BoxShadow: none;
+      > .#{$drawer}__main > .#{$drawer}__panel {
+        --#{$drawer}--m-expanded__panel--BoxShadow: none;
 
         &:not(.pf-m-no-border)::after {
-          background-color: var(--pf-c-drawer--m-inline--m-expanded__panel--after--BackgroundColor);
+          background-color: var(--#{$drawer}--m-inline--m-expanded__panel--after--BackgroundColor);
         }
       }
     }
 
     // Drawer inline
-    .pf-c-drawer.pf-m-inline#{$breakpoint-name} {
-      > .pf-c-drawer__main > .pf-c-drawer__content {
+    .#{$drawer}.pf-m-inline#{$breakpoint-name} {
+      > .#{$drawer}__main > .#{$drawer}__content {
         overflow-x: auto;
       }
 
-      > .pf-c-drawer__main > .pf-c-drawer__panel {
-        margin-left: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
+      > .#{$drawer}__main > .#{$drawer}__panel {
+        margin-left: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
         transform: translateX(100%);
       }
 
       // stylelint-disable selector-max-class, selector-max-combinators, selector-max-compound-selectors
       // Inline, expanded
-      &.pf-m-expanded > .pf-c-drawer__main > .pf-c-drawer__panel {
+      &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel {
         margin-left: 0;
         transform: translateX(0);
       }
 
-      > .pf-c-drawer__main > .pf-c-drawer__panel > .pf-c-drawer__body > .pf-c-drawer__head .pf-c-drawer__close {
+      > .#{$drawer}__main > .#{$drawer}__panel > .#{$drawer}__body > .#{$drawer}__head .#{$drawer}__close {
         display: unset;
       }
 
       // Panel left
       &.pf-m-panel-left {
-        > .pf-c-drawer__main > .pf-c-drawer__panel {
-          margin-right: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
+        > .#{$drawer}__main > .#{$drawer}__panel {
+          margin-right: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
           margin-left: 0;
           transform: translateX(-100%);
         }
 
         // Inline, expanded, panel left
-        &.pf-m-expanded > .pf-c-drawer__main > .pf-c-drawer__panel {
+        &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel {
           margin-right: 0;
           transform: translateX(0);
         }
 
-        > .pf-c-drawer__main > .pf-c-drawer__panel > .pf-c-drawer__body > .pf-c-drawer__head .pf-c-drawer__close {
+        > .#{$drawer}__main > .#{$drawer}__panel > .#{$drawer}__body > .#{$drawer}__head .#{$drawer}__close {
           display: unset;
         }
       }
 
       // Panel bottom
       &.pf-m-panel-bottom {
-        > .pf-c-drawer__main > .pf-c-drawer__panel {
-          margin-bottom: calc(var(--pf-c-drawer__panel--FlexBasis) * -1);
+        > .#{$drawer}__main > .#{$drawer}__panel {
+          margin-bottom: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
           transform: translateY(100%);
         }
 
         // Inline, expanded, panel left
-        &.pf-m-expanded > .pf-c-drawer__main > .pf-c-drawer__panel {
+        &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel {
           margin-bottom: 0;
           transform: translateY(0);
         }
@@ -676,26 +677,26 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     // Static
-    .pf-c-drawer.pf-m-static#{$breakpoint-name} {
-      > .pf-c-drawer__main > .pf-c-drawer__panel {
+    .#{$drawer}.pf-m-static#{$breakpoint-name} {
+      > .#{$drawer}__main > .#{$drawer}__panel {
         transform: translateX(0);
       }
 
       // stylelint-disable max-nesting-depth, selector-max-class, selector-max-combinators, selector-max-compound-selectors
       &.pf-m-panel-left {
-        > .pf-c-drawer__main > .pf-c-drawer__panel {
+        > .#{$drawer}__main > .#{$drawer}__panel {
           margin-right: 0;
           transform: translateX(0);
         }
       }
 
       &.pf-m-panel-bottom {
-        > .pf-c-drawer__main > .pf-c-drawer__panel {
+        > .#{$drawer}__main > .#{$drawer}__panel {
           transform: translateX(0);
         }
       }
 
-      > .pf-c-drawer__main > .pf-c-drawer__panel > .pf-c-drawer__body > .pf-c-drawer__head .pf-c-drawer__close {
+      > .#{$drawer}__main > .#{$drawer}__panel > .#{$drawer}__body > .#{$drawer}__head .#{$drawer}__close {
         display: none;
       }
       // stylelint-enable
@@ -706,6 +707,6 @@ $pf-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/drawer";
 
-@include pf-theme-dark {
-  @include pf-theme-dark-drawer;
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-drawer;
 }

@@ -9,42 +9,42 @@ import './Display.css'
 ### Inline block
 ```hbs
 {{#> display display--type="inline-block"}}
-  .pf-u-display-inline-block
+  .pf-v5-u-display-inline-block
 {{/display}}
 ```
 
 ### Block
 ```hbs
 {{#> display display--type="block"}}
-  .pf-u-display-block
+  .pf-v5-u-display-block
 {{/display}}
 ```
 
 ### Flex
 ```hbs
 {{#> display display--type="flex"}}
-  .pf-u-display-flex
+  .pf-v5-u-display-flex
 {{/display}}
 ```
 
 ### Inline flex
 ```hbs
 {{#> display display--type="inline-flex"}}
-  .pf-u-display-inline-flex
+  .pf-v5-u-display-inline-flex
 {{/display}}
 ```
 
 ### Grid
 ```hbs
 {{#> display display--type="grid"}}
-  .pf-u-display-grid
+  .pf-v5-u-display-grid
 {{/display}}
 ```
 
 ### Inline
 ```hbs
 {{#> display display--type="inline"}}
-  .pf-u-display-inline
+  .pf-v5-u-display-inline
 {{/display}}
 ```
 
@@ -85,17 +85,17 @@ import './Display.css'
 
 ## Documentation
 ### Overview
-[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-u-display-inline-block-on-lg**
+[Breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) is optional. Breakpoints: base (no breakpoint value), `-on-sm`, `-on-md`, `-on-lg`, and `-on-xl`. **Example .pf-v5-u-display-inline-block-on-lg**
 
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-u-display-inline-block{-on-[breakpoint]}` | `*` |  Sets display: inline-block |
-| `.pf-u-display-block{-on-[breakpoint]}` | `*` |  Sets display: block |
-| `.pf-u-display-inline{-on-[breakpoint]}` | `*` |  Sets display: inline |
-| `.pf-u-display-flex{-on-[breakpoint]}` | `*` |  Sets display: flex |
-| `.pf-u-display-inline-flex{-on-[breakpoint]}` | `*` |  Sets display: inline-flex |
-| `.pf-u-display-table{-on-[breakpoint]}` | `*` |  Sets display: table |
-| `.pf-u-display-table-row{-on-[breakpoint]}` | `*` |  Sets display: table-row |
-| `.pf-u-display-table-cell{-on-[breakpoint]}` | `*` |  Sets display: table-cell |
-| `.pf-u-display-none{-on-[breakpoint]}` | `*` |  Sets display: none |
+| `.pf-v5-u-display-inline-block{-on-[breakpoint]}` | `*` |  Sets display: inline-block |
+| `.pf-v5-u-display-block{-on-[breakpoint]}` | `*` |  Sets display: block |
+| `.pf-v5-u-display-inline{-on-[breakpoint]}` | `*` |  Sets display: inline |
+| `.pf-v5-u-display-flex{-on-[breakpoint]}` | `*` |  Sets display: flex |
+| `.pf-v5-u-display-inline-flex{-on-[breakpoint]}` | `*` |  Sets display: inline-flex |
+| `.pf-v5-u-display-table{-on-[breakpoint]}` | `*` |  Sets display: table |
+| `.pf-v5-u-display-table-row{-on-[breakpoint]}` | `*` |  Sets display: table-row |
+| `.pf-v5-u-display-table-cell{-on-[breakpoint]}` | `*` |  Sets display: table-cell |
+| `.pf-v5-u-display-none{-on-[breakpoint]}` | `*` |  Sets display: none |

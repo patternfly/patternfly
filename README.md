@@ -42,7 +42,7 @@ Options:
 
 #### Examples
 
-To create a "Test component" component (`.pf-c-test-component`), run:
+To create a "Test component" component (`.pf-v5-c-test-component`), run:
 
 `node generate TestComponent`
 
