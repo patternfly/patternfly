@@ -6,7 +6,7 @@
 
   // Header
   --#{$wizard}__header--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
-  --#{$wizard}__header--ZIndex: var(--#{$pf-global}--ZIndex--md);
+  --#{$wizard}__header--ZIndex: auto;
   --#{$wizard}__header--PaddingTop: var(--#{$pf-global}--spacer--lg);
   --#{$wizard}__header--PaddingRight: var(--#{$pf-global}--spacer--md);
   --#{$wizard}__header--PaddingBottom: var(--#{$pf-global}--spacer--lg);
@@ -86,7 +86,7 @@
 
   // Toggle
   --#{$wizard}__toggle--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$wizard}__toggle--ZIndex: var(--#{$pf-global}--ZIndex--md);
+  --#{$wizard}__toggle--ZIndex: var(--#{$pf-global}--ZIndex--xs);
   --#{$wizard}__toggle--BoxShadow: var(--#{$pf-global}--BoxShadow--md-bottom);
   --#{$wizard}__toggle--PaddingTop: var(--#{$pf-global}--spacer--lg);
   --#{$wizard}__toggle--PaddingRight: var(--#{$pf-global}--spacer--md);
@@ -116,7 +116,7 @@
   --#{$wizard}__toggle--m-expanded__toggle-icon--Rotate: 180deg;
 
   // Nav
-  --#{$wizard}__nav--ZIndex: var(--#{$pf-global}--ZIndex--sm);
+  --#{$wizard}__nav--ZIndex: var(--#{$pf-global}--ZIndex--xs);
   --#{$wizard}__nav--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$wizard}__nav--BoxShadow: var(--#{$pf-global}--BoxShadow--md-bottom);
   --#{$wizard}__nav--Width: 100%;
@@ -166,7 +166,7 @@
   --#{$wizard}__outer-wrap--MinHeight: #{pf-size-prem(250px)};
 
   // Main
-  --#{$wizard}__main--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$wizard}__main--ZIndex: auto;
 
   // Body
   --#{$wizard}__main-body--PaddingTop: var(--#{$pf-global}--spacer--md);
@@ -187,7 +187,7 @@
 
   // Footer
   --#{$wizard}__footer--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$wizard}__footer--ZIndex: var(--#{$pf-global}--ZIndex--sm);
+  --#{$wizard}__footer--ZIndex: var(--#{$pf-global}--ZIndex--xs);
   --#{$wizard}__footer--PaddingTop: var(--#{$pf-global}--spacer--md);
   --#{$wizard}__footer--PaddingRight: var(--#{$pf-global}--spacer--md);
   --#{$wizard}__footer--PaddingBottom: var(--#{$pf-global}--spacer--sm);
