@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ICON_SRC='./src/icons/definitions/pficons.json'
+ICON_SRC='./src/icons/definitions/pficons.mjs'
 ICON_OUT='./patternfly-docs/site/pages/icons.md'
 
 echo "---" > $ICON_OUT
