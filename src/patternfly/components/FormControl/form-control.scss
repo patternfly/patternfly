@@ -110,7 +110,6 @@
   --#{$form-control}__utilities--Gap: var(--#{$pf-global}--spacer--sm);
   --#{$form-control}__utilities--PaddingTop: var(--#{$form-control}--inset--base);
   --#{$form-control}__utilities--PaddingRight: var(--#{$form-control}--inset--base);
-  --#{$form-control}__utilities--PaddingLeft: var(--#{$form-control}--inset--base);
 
   // Form control select toggle icon
   --#{$form-control}__toggle-icon--PaddingRight: var(--#{$form-control}--inset--base);
@@ -126,7 +125,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   column-gap: var(--#{$form-control}--ColumnGap);
-  align-items: flex-start;
+  align-items: start;
   width: var(--#{$form-control}--Width);
   font-size: var(--#{$form-control}--FontSize);
   line-height: var(--#{$form-control}--LineHeight);
@@ -135,7 +134,7 @@
   border-color: var(--#{$form-control}--BorderTopColor) var(--#{$form-control}--BorderRightColor) var(--#{$form-control}--BorderBottomColor) var(--#{$form-control}--BorderLeftColor);
   border-radius: var(--#{$form-control}--BorderRadius);
 
-  & > :is(input, select, textarea) {
+  > :is(input, select, textarea) {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
     padding: var(--#{$form-control}--PaddingTop) var(--#{$form-control}--PaddingRight) var(--#{$form-control}--PaddingBottom) var(--#{$form-control}--PaddingLeft);
@@ -148,11 +147,11 @@
     // stylelint-enable
   }
 
-  & > *::placeholder {
+  > ::placeholder {
     color: var(--#{$form-control}--placeholder--Color); // TODO update to set --#{$form-control}--Color in breaking change - also look for any other place to do that in this component
   }
   
-  & > :is(input, select) {
+  > :is(input, select) {
     text-overflow: ellipsis;
   }
 
@@ -160,7 +159,7 @@
     --#{$form-control}--BackgroundColor: var(--#{$form-control}--readonly--BackgroundColor);
 
     // stylelint-disable selector-not-notation
-    &:not(.pf-m-success, .pf-m-warning, .pf-m-error,[aria-invalid="true"]) {
+    &:not(.pf-m-success, .pf-m-warning, .pf-m-error) {
       &:hover {
         --#{$form-control}--BorderBottomColor: var(--#{$form-control}--readonly--hover--BorderBottomColor);
       }
@@ -260,7 +259,7 @@
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--PaddingRight);
   }
 
-  & > select {
+  > select {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--select--PaddingRight);
     --#{$form-control}--PaddingLeft: var(--#{$form-control}--select--PaddingLeft);
 
@@ -284,7 +283,7 @@
     }
   }
 
-  // TODO FIX THIS
+  // TODO Is the intention that a select with placeholder always has lighter text, or should only the placeholder have that color?
   &.pf-m-placeholder > select {
     --#{$form-control}--Color: var(--#{$form-control}--placeholder--Color);
 
@@ -299,7 +298,7 @@
     }
   }
   
-  & > textarea {
+  > textarea {
     width: var(--#{$form-control}--textarea--Width);
     height: var(--#{$form-control}--textarea--Height);
     vertical-align: bottom;
@@ -310,7 +309,7 @@
   }
 
   &:has(textarea),
-  &.pf-m-resize-horizontal{
+  &.pf-m-resize-horizontal {
     min-width: fit-content;
   }
 
@@ -346,7 +345,6 @@
   gap: var(--#{$form-control}__utilities--Gap);
   align-items: flex-start;
   padding-right: var(--#{$form-control}__utilities--PaddingRight);
-  padding-left: var(--#{$form-control}__utilities--PaddingLeft);
   pointer-events: none;
 }
 
