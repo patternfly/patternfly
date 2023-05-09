@@ -166,7 +166,7 @@
   --#{$wizard}__outer-wrap--MinHeight: #{pf-size-prem(250px)};
 
   // Main
---#{$wizard}__main--ZIndex: auto;
+  --#{$wizard}__main--ZIndex: auto;
 
   // Body
   --#{$wizard}__main-body--PaddingTop: var(--#{$pf-global}--spacer--md);
