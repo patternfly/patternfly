@@ -29,8 +29,8 @@
   --#{$nav}--m-light__subnav__link--m-current--after--BorderColor: var(--#{$pf-global}--active-color--100);
 
   // List
-  --#{$nav}__list--PaddingTop: var(--pf-global--spacer--sm);
-  --#{$nav}__list--PaddingBottom: var(--pf-global--spacer--md);
+  --#{$nav}__list--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__list--PaddingBottom: var(--#{$pf-global}--spacer--md);
 
   // Item
   --#{$nav}__item--MarginTop: 0;
