@@ -101,7 +101,7 @@ cssPrefix: pf-v5-c-tree-view
 ```hbs
 {{#> tree-view}}
   {{#> tree-view-search}}
-    {{> search-input}}
+    {{> text-input-group--search-input text-input-group-text-input--aria-label="Filter menu items" text-input-group-text-input--placeholder="Search"}}
   {{/tree-view-search}}
   {{> divider}}
   {{#> tree-view-list tree-view-list--IsRoot="true"}}
