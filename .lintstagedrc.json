@@ -3,6 +3,6 @@
     "eslint --fix"
   ],
   "*.scss": [
-    "stylelint --fix"
+    "stylelint --fix --config=.stylelintrc_logical"
   ]
 }

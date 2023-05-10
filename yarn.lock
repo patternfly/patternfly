@@ -13672,6 +13672,11 @@ stylelint-scss@^4.4.0:
     postcss-selector-parser "^6.0.6"
     postcss-value-parser "^4.1.0"
 
+stylelint-use-logical-spec@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-use-logical-spec/-/stylelint-use-logical-spec-5.0.0.tgz#5903e38ea37cb4277ea4f7d29e9a997772afab5f"
+  integrity sha512-uLF876lrsGVWFPQ8haGhfDfsTyAzPoJq2AAExuSzE2V1uC8uCmuy6S66NseiEwcf0AGqWzS56kPVzF/hVvWIjA==
+
 stylelint-value-no-unknown-custom-properties@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/stylelint-value-no-unknown-custom-properties/-/stylelint-value-no-unknown-custom-properties-4.0.0.tgz"
