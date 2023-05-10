@@ -370,10 +370,10 @@
         background-color: var(--#{$table}--BorderColor);
       }
 
-      tr:not(:nth-last-child(2)) {
+      > tr:not(:nth-last-child(2)) {
         // stylelint-disable max-nesting-depth
-        th,
-        td {
+        th:where(.#{$table}__th),
+        td:where(.#{$table}__td) {
           &:not([rowspan]) {
             --#{$table}--cell--PaddingBottom: var(--#{$table}--thead--m-nested-column-header--tr--PaddingBottom);
           }
@@ -384,12 +384,12 @@
   }
 
   &:not(.pf-m-sticky-header) > .pf-m-nested-column-header {
-    tr:not(:last-child) {
+    > tr:not(:last-child) {
       border-bottom: 0; // hard reset tr borders in nested headers
 
       // stylelint-disable max-nesting-depth
-      th,
-      td {
+      th:where(.#{$table}__th),
+      td:where(.#{$table}__td) {
         &:not([rowspan]) {
           --#{$table}--cell--PaddingBottom: var(--#{$table}--thead--m-nested-column-header--tr--PaddingBottom);
         }
@@ -424,7 +424,7 @@
   }
 
   // Table cell
-  tr > * {
+  tr > :where(.#{$table}__th, .#{$table}__td) {
     @include pf-v5-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
 
     // set position relative for ::before/::after borders
@@ -495,7 +495,7 @@
   }
 
   // Table caption
-  caption {
+  > caption {
     padding-top: var(--#{$table}-caption--PaddingTop);
     padding-bottom: var(--#{$table}-caption--PaddingBottom);
     padding-left: var(--#{$table}-caption--PaddingLeft);
@@ -506,7 +506,7 @@
   }
 
   // Table header cell
-  thead {
+  > thead {
     --#{$table}--cell--FontSize: var(--#{$table}--thead--cell--FontSize);
     --#{$table}--cell--FontWeight: var(--#{$table}--thead--cell--FontWeight);
 
@@ -518,8 +518,8 @@
         outline-offset: var(--#{$table}--thead--m-nested-column-header--button--OutlineOffset);
       }
 
-      th,
-      td,
+      th:where(.#{$table}__th),
+      td:where(.#{$table}__td),
       input {
         vertical-align: middle;
       }
@@ -530,8 +530,8 @@
       }
 
       tr:not(:first-child) {
-        th,
-        td {
+        th:where(.#{$table}__th),
+        td:where(.#{$table}__td) {
           &:not([rowspan]) {
             --#{$table}--cell--PaddingTop: var(--#{$table}--thead--m-nested-column-header--tr--PaddingTop);
           }
@@ -550,7 +550,7 @@
 
   // Table body cell
   // stylelint-disable
-  tbody {
+  > tbody {
     --#{$table}--cell--PaddingTop: var(--#{$table}--tbody--cell--PaddingTop);
     --#{$table}--cell--PaddingBottom: var(--#{$table}--tbody--cell--PaddingBottom);
 
@@ -607,7 +607,7 @@
     min-width: var(--#{$table}__sort--MinWidth);
   }
 
-  .pf-m-help {
+  :where(.#{$table}__th).pf-m-help {
     min-width: var(--#{$table}--th--m-help--MinWidth);
   }
 
@@ -675,120 +675,128 @@
   }
 
   // tr clickable
-  tr.pf-m-clickable {
-    cursor: pointer;
-    background-color: var(--#{$table}--tr--m-clickable--BackgroundColor);
-    outline-offset: var(--#{$table}--tr--m-clickable--OutlineOffset);
-    box-shadow: var(--#{$table}--tr--m-clickable--BoxShadow);
+  tr:where(.#{$table}__tr) {
+    &.pf-m-clickable {
+      cursor: pointer;
+      background-color: var(--#{$table}--tr--m-clickable--BackgroundColor);
+      outline-offset: var(--#{$table}--tr--m-clickable--OutlineOffset);
+      box-shadow: var(--#{$table}--tr--m-clickable--BoxShadow);
 
-    &:hover,
-    &:focus,
-    &:active {
-      &:not(.pf-m-selected) + tr.pf-m-selected {
-        box-shadow: var(--#{$table}--tr--m-clickable--m-selected--BoxShadow);
+      &:hover,
+      &:focus,
+      &:active {
+        // stylelint-disable max-nesting-depth
+        &:not(.pf-m-selected) + tr.pf-m-selected {
+          box-shadow: var(--#{$table}--tr--m-clickable--m-selected--BoxShadow);
+        }
+        // stylelint-enable
+      }
+
+      &:hover {
+        --#{$table}--tr--m-clickable--BoxShadow: var(--#{$table}--tr--m-clickable--hover--BoxShadow);
+        --#{$table}--tr--m-clickable--BackgroundColor: var(--#{$table}--tr--m-clickable--hover--BackgroundColor);
+      }
+
+      &:focus {
+        --#{$table}--tr--m-clickable--BoxShadow: var(--#{$table}--tr--m-clickable--focus--BoxShadow);
+        --#{$table}--tr--m-clickable--BackgroundColor: var(--#{$table}--tr--m-clickable--focus--BackgroundColor);
+      }
+
+      &:active {
+        --#{$table}--tr--m-clickable--BoxShadow: var(--#{$table}--tr--m-clickable--active--BoxShadow);
+        --#{$table}--tr--m-clickable--BackgroundColor: var(--#{$table}--tr--m-clickable--active--BackgroundColor);
       }
     }
 
-    &:hover {
-      --#{$table}--tr--m-clickable--BoxShadow: var(--#{$table}--tr--m-clickable--hover--BoxShadow);
-      --#{$table}--tr--m-clickable--BackgroundColor: var(--#{$table}--tr--m-clickable--hover--BackgroundColor);
+    // tr selected
+    &.pf-m-selected {
+      --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}--tr--m-selected--after--BorderLeftWidth);
+      --#{$table}__expandable-row--after--BorderColor: var(--#{$table}--tr--m-selected--after--BorderLeftColor);
+
+      position: relative;
+      background-color: var(--#{$table}--tr--m-selected--BackgroundColor);
+      outline-offset: var(--#{$table}--tr--m-selected--OutlineOffset);
+      box-shadow: var(--#{$table}--tr--m-selected--BoxShadow);
+
+      & + tr.pf-m-selected {
+        box-shadow: var(--#{$table}--tr--m-selected--m-selected--BoxShadow);
+      }
+
+      & + tr.pf-m-selected:hover {
+        box-shadow: var(--#{$table}--tr--m-selected--tr--m-selected--hover--BoxShadow);
+      }
+
+      &:hover + tr.pf-m-selected {
+        box-shadow: var(--#{$table}--tr--m-selected--hover--m-selected--BoxShadow);
+      }
     }
 
-    &:focus {
-      --#{$table}--tr--m-clickable--BoxShadow: var(--#{$table}--tr--m-clickable--focus--BoxShadow);
-      --#{$table}--tr--m-clickable--BackgroundColor: var(--#{$table}--tr--m-clickable--focus--BackgroundColor);
+    &.pf-m-first-cell-offset-reset {
+      --#{$table}--cell--first-last-child--PaddingLeft: var(--#{$table}--tr--m-first-cell-offset-reset--cell--PaddingLeft);
     }
-
-    &:active {
-      --#{$table}--tr--m-clickable--BoxShadow: var(--#{$table}--tr--m-clickable--active--BoxShadow);
-      --#{$table}--tr--m-clickable--BackgroundColor: var(--#{$table}--tr--m-clickable--active--BackgroundColor);
-    }
-  }
-
-  // tr selected
-  tr.pf-m-selected {
-    --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}--tr--m-selected--after--BorderLeftWidth);
-    --#{$table}__expandable-row--after--BorderColor: var(--#{$table}--tr--m-selected--after--BorderLeftColor);
-
-    position: relative;
-    background-color: var(--#{$table}--tr--m-selected--BackgroundColor);
-    outline-offset: var(--#{$table}--tr--m-selected--OutlineOffset);
-    box-shadow: var(--#{$table}--tr--m-selected--BoxShadow);
-
-    & + tr.pf-m-selected {
-      box-shadow: var(--#{$table}--tr--m-selected--m-selected--BoxShadow);
-    }
-
-    & + tr.pf-m-selected:hover {
-      box-shadow: var(--#{$table}--tr--m-selected--tr--m-selected--hover--BoxShadow);
-    }
-
-    &:hover + tr.pf-m-selected {
-      box-shadow: var(--#{$table}--tr--m-selected--hover--m-selected--BoxShadow);
-    }
-  }
-
-  tr.pf-m-first-cell-offset-reset {
-    --#{$table}--cell--first-last-child--PaddingLeft: var(--#{$table}--tr--m-first-cell-offset-reset--cell--PaddingLeft);
   }
 
   // tbody clickable
-  tbody.pf-m-clickable {
-    cursor: pointer;
-    background-color: var(--#{$table}--tbody--m-clickable--BackgroundColor);
-    outline-offset: var(--#{$table}--tbody--m-clickable--OutlineOffset);
-    box-shadow: var(--#{$table}--tbody--m-clickable--BoxShadow);
+  // stylelint-disable no-duplicate-selectors
+  > tbody {
+    &.pf-m-clickable {
+      cursor: pointer;
+      background-color: var(--#{$table}--tbody--m-clickable--BackgroundColor);
+      outline-offset: var(--#{$table}--tbody--m-clickable--OutlineOffset);
+      box-shadow: var(--#{$table}--tbody--m-clickable--BoxShadow);
 
-    &.pf-m-expanded:not(.pf-m-selected) {
-      --#{$table}__expandable-row--after--BorderColor: var(--#{$table}--tbody--m-clickable--m-expanded--BorderColor);
-    }
+      &.pf-m-expanded:not(.pf-m-selected) {
+        --#{$table}__expandable-row--after--BorderColor: var(--#{$table}--tbody--m-clickable--m-expanded--BorderColor);
+      }
 
-    &:hover,
-    &:focus,
-    &:active {
-      &:not(.pf-m-selected) + tbody.pf-m-selected {
-        box-shadow: var(--#{$table}--tbody--m-clickable--m-selected--hover--tr--BoxShadow);
+      &:hover,
+      &:focus,
+      &:active {
+        // stylelint-disable max-nesting-depth
+        &:not(.pf-m-selected) + tbody.pf-m-selected {
+          box-shadow: var(--#{$table}--tbody--m-clickable--m-selected--hover--tr--BoxShadow);
+        }
+        // stylelint-enable
+      }
+
+      &:hover {
+        --#{$table}--tbody--m-clickable--BoxShadow: var(--#{$table}--tbody--m-clickable--hover--BoxShadow);
+        --#{$table}--tbody--m-clickable--BackgroundColor: var(--#{$table}--tbody--m-clickable--hover--BackgroundColor);
+      }
+
+      &:focus {
+        --#{$table}--tbody--m-clickable--BoxShadow: var(--#{$table}--tbody--m-clickable--focus--BoxShadow);
+        --#{$table}--tbody--m-clickable--BackgroundColor: var(--#{$table}--tbody--m-clickable--focus--BackgroundColor);
+      }
+
+      &:active {
+        --#{$table}--tbody--m-clickable--BoxShadow: var(--#{$table}--tbody--m-clickable--active--BoxShadow);
+        --#{$table}--tbody--m-clickable--BackgroundColor: var(--#{$table}--tbody--m-clickable--active--BackgroundColor);
       }
     }
 
-    &:hover {
-      --#{$table}--tbody--m-clickable--BoxShadow: var(--#{$table}--tbody--m-clickable--hover--BoxShadow);
-      --#{$table}--tbody--m-clickable--BackgroundColor: var(--#{$table}--tbody--m-clickable--hover--BackgroundColor);
-    }
+    // tbody selected
+    &.pf-m-selected {
+      --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}--tbody--m-selected--after--BorderLeftWidth);
+      --#{$table}__expandable-row--after--BorderColor: var(--#{$table}--tbody--m-selected--after--BorderLeftColor);
 
-    &:focus {
-      --#{$table}--tbody--m-clickable--BoxShadow: var(--#{$table}--tbody--m-clickable--focus--BoxShadow);
-      --#{$table}--tbody--m-clickable--BackgroundColor: var(--#{$table}--tbody--m-clickable--focus--BackgroundColor);
-    }
+      background-color: var(--#{$table}--tbody--m-selected--BackgroundColor);
+      outline-offset: var(--#{$table}--tbody--m-selected--OutlineOffset);
+      box-shadow: var(--#{$table}--tbody--m-selected--BoxShadow);
 
-    &:active {
-      --#{$table}--tbody--m-clickable--BoxShadow: var(--#{$table}--tbody--m-clickable--active--BoxShadow);
-      --#{$table}--tbody--m-clickable--BackgroundColor: var(--#{$table}--tbody--m-clickable--active--BackgroundColor);
-    }
-  }
+      & + tbody.pf-m-selected {
+        --#{$table}--tbody--m-selected--BoxShadow: var(--#{$table}--tbody--m-selected--m-selected--BoxShadow);
+      }
 
-  // tbody selected
-  tbody.pf-m-selected {
-    --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}--tbody--m-selected--after--BorderLeftWidth);
-    --#{$table}__expandable-row--after--BorderColor: var(--#{$table}--tbody--m-selected--after--BorderLeftColor);
+      & + tbody.pf-m-selected:hover {
+        box-shadow: var(--#{$table}--tbody--m-selected--tbody--m-selected--hover--BoxShadow);
+      }
 
-    background-color: var(--#{$table}--tbody--m-selected--BackgroundColor);
-    outline-offset: var(--#{$table}--tbody--m-selected--OutlineOffset);
-    box-shadow: var(--#{$table}--tbody--m-selected--BoxShadow);
-
-    & + tbody.pf-m-selected {
-      --#{$table}--tbody--m-selected--BoxShadow: var(--#{$table}--tbody--m-selected--m-selected--BoxShadow);
-    }
-
-    & + tbody.pf-m-selected:hover {
-      box-shadow: var(--#{$table}--tbody--m-selected--tbody--m-selected--hover--BoxShadow);
-    }
-
-    &:hover + tbody.pf-m-selected {
-      box-shadow: var(--#{$table}--tbody--m-selected--hover--tbody--m-selected--BoxShadow);
+      &:hover + tbody.pf-m-selected {
+        box-shadow: var(--#{$table}--tbody--m-selected--hover--tbody--m-selected--BoxShadow);
+      }
     }
   }
-  // stylelint-enable
 
   &.pf-m-drag-over {
     overflow-anchor: none;
@@ -891,7 +899,6 @@
     min-width: auto;
   }
 
-  // stylelint-disable
   .#{$table} thead.pf-m-nowrap &,
   .#{$table} tr.pf-m-nowrap &,
   .#{$table} th.pf-m-nowrap & {
@@ -912,7 +919,6 @@
   .#{$table} th.pf-m-truncate & {
     grid-template-columns: auto max-content;
   }
-  // stylelint-enable
 }
 
 // Minimize padding
@@ -1215,8 +1221,8 @@
   }
 
   // stylelint-disable
-  td,
-  th {
+  td:where(.#{$table}__td),
+  th:where(.#{$table}__th) {
     &.pf-m-no-padding {
       padding: 0 0 0 var(--#{$table}__expandable-row--after--border-width--base); // set padding-left to adjust for left border.
 
@@ -1248,7 +1254,7 @@
 // Nested table
 // ==================================================================
 .#{$table} .#{$table} {
-  tr > * {
+  tr > :where(.#{$table}__th, .#{$table}__td) {
     // First child padding left
     &:first-child {
       --#{$table}--cell--PaddingLeft: var(--#{$table}--nested--first-last-child--PaddingLeft);

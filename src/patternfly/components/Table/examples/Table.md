@@ -125,7 +125,9 @@ import './Table.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v5-c-table` | `<table>` | Initiates a table element. **Required** |
-| `.pf-v5-c-table__caption` | `<caption>` | Initiates a table caption. |
+| `.pf-v5-c-table__tr` | `<th>` | Initiates a table row. **Required** |
+| `.pf-v5-c-table__th` | `<th>` | Initiates a table header cell. **Required** |
+| `.pf-v5-c-table__td` | `<td>` | Initiates a table data cell. **Required** |
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
 ## Responsive table behavior

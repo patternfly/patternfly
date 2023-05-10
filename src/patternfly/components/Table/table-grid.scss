@@ -151,7 +151,7 @@
   border: none;
 
   // reset cell modifications
-  tr > * {
+  > :where(tbody) > tr > * {
     width: auto;
     min-width: 0;
     max-width: none;
@@ -172,12 +172,12 @@
   }
 
   // Thead
-  thead {
+  > thead {
     display: none;
   }
 
   // Tbody
-  tbody {
+  > tbody {
     display: block;
 
     &:first-of-type {

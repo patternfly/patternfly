@@ -216,16 +216,16 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     padding-right: var(--#{$table}__tree-view-text--PaddingRight);
   }
 
-  thead th {
+  thead th:where(.#{$table}__th) {
     display: none;
   }
 
-  td {
+  td:where(.#{$table}__td) {
     display: none;
   }
 
   // Standard td, in standard row (non-expandable)
-  td[data-label] {
+  td:where(.#{$table}__td)[data-label] {
     grid-column: 1;
     grid-column-gap: var(--#{$table}--m-tree-view-grid--tbody--cell--GridColumnGap);
 
@@ -245,7 +245,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     }
   }
 
-  tr.pf-m-tree-view-details-expanded {
+  tr:where(.#{$table}__tr).pf-m-tree-view-details-expanded {
     padding-bottom: var(--#{$table}--m-tree-view-grid--m-tree-view-details-expanded--PaddingBottom);
 
     td[data-label] {
