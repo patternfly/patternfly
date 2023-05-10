@@ -28,7 +28,7 @@
   --#{$multiple-file-upload}__title--Gap: var(--#{$pf-global}--spacer--sm);
 
   // title icon
-  --#{$multiple-file-upload}__title-icon--Color: var(--#{$pf-global}--Color--200);
+  --#{$multiple-file-upload}__title-icon--Color: var(--#{$pf-global}--icon--Color--dark);
 
   // title text separator
   --#{$multiple-file-upload}__title-text-separator--Display: block;
@@ -67,7 +67,7 @@
   --#{$multiple-file-upload}__status-progress--Gap: var(--#{$pf-global}--spacer--sm);
 
   // status progress icon
-  --#{$multiple-file-upload}__status-progress-icon--Color: var(--#{$pf-global}--Color--200);
+  --#{$multiple-file-upload}__status-progress-icon--Color: var(--#{$pf-global}--icon--Color--dark);
 
   // status item
   --#{$multiple-file-upload}__status-item--PaddingTop: var(--#{$pf-global}--spacer--md);
@@ -79,7 +79,7 @@
   --#{$multiple-file-upload}__status-item--BorderColor: var(--#{$pf-global}--BorderColor--100);
 
   // status item icon
-  --#{$multiple-file-upload}__status-item-icon--Color: var(--#{$pf-global}--Color--200);
+  --#{$multiple-file-upload}__status-item-icon--Color: var(--#{$pf-global}--icon--Color--dark);
 
   // status item close
   --#{$multiple-file-upload}__status-item-close--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);

@@ -1,7 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-breadcrumb() {
-  .#{$breadcrumb} {
-    --#{$breadcrumb}__item-divider--Color: var(--#{$pf-global}--BorderColor--100);
-  }
-}

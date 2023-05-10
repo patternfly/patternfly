@@ -37,8 +37,7 @@
 
   // Icon
   --#{$text-input-group}__icon--Left: var(--#{$pf-global}--spacer--sm);
-  --#{$text-input-group}__icon--Color: var(--#{$pf-global}--Color--200);
-  --#{$text-input-group}__text--hover__icon--Color: var(--#{$pf-global}--Color--100);
+  --#{$text-input-group}__icon--Color: var(--#{$pf-global}--icon--Color--dark);
   --#{$text-input-group}__icon--TranslateY: -50%;
 
   // Utilities
@@ -129,11 +128,6 @@
 
   &::after {
     border-bottom: var(--#{$text-input-group}__text--after--BorderBottomWidth) solid var(--#{$text-input-group}__text--after--BorderBottomColor);
-  }
-
-  &:hover,
-  &:focus-within {
-    --#{$text-input-group}__icon--Color: var(--#{$text-input-group}__text--hover__icon--Color);
   }
 
   &:focus-within {
