@@ -14,7 +14,8 @@ The flex layout provides two ways of spacing its direct children.
 - [Spacing system](#spacing-system)
   - The spacing system applies a margin between the flex layout's direct children to create space between items along the main axis only. The benefit of the spacing system is that it allows for variable spacing between direct children. Use the spacing system when individual flex items along the main axis require a different spacer than sibling items.
 - [Gap spacing](#gap-spacing)
-  - Gap spacing uses flex `gap` to space the flex layout's direct children, and can be applied to space rows (`row-gap`), columns (`column-gap`), or both (`gap`). The benefit of gap spacing is that item wrapping is improved and improved item spacing that works better with CSS flex's logical layout properties. E.g., spacing in RTL layouts that rely on logical properties is improved. Use the gap system when all direct children should use the same spacer for rows, columns, or both. **Note** using `gap` along the main axis will override any other spacing applied using the spacing system.
+  - Gap spacing uses flex `gap` to space the flex layout's direct children, and can be applied to space rows (`row-gap`), columns (`column-gap`), or both (`gap`). The benefit of gap spacing is that item wrapping is improved and improved item spacing that works better with CSS flex's logical layout properties. E.g., spacing in RTL layouts that rely on logical properties is improved. Use the gap system when all direct children should use the same spacer for rows, columns, or both. 
+  - **Note** using `gap` along the main axis will override any other spacing applied using the spacing system.
 
 ### Breakpoints
 [Breakpoints](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes) `-on-sm`, `-on-md`, `-on-lg`, `-on-xl`, and `-on-2xl` are provided.
