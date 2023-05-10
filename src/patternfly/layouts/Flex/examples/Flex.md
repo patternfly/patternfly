@@ -10,7 +10,7 @@ import './Flex.css'
 The flex layout is based on the CSS Flex properties where the layout determines how a flex item will grow or shrink to fit the space available in its container. By default, a flex layout uses the [spacing system](#spacing-system) to space children along the main axis and [gap spacing](#gap-spacing) to space any wrapping children along the cross axis, `flex-wrap` is set to `wrap`, and `align-items` is set to `baseline`. The flex layout is infinitely nestable and can be nested to group items within.
 
 ### Spacing
-The flex layout provides to ways of spacing its direct children.
+The flex layout provides two ways of spacing its direct children.
 - [Spacing system](#spacing-system)
   - The spacing system applies a margin between the flex layout's direct children to create space between items along the main axis only. The benefit of the spacing system is that it allows for variable spacing between direct children. Use the spacing system when individual flex items along the main axis require a different spacer than sibling items.
 - [Gap spacing](#gap-spacing)
