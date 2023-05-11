@@ -81,26 +81,23 @@
   @return $map;
 }
 
+
 // Build spacer map
 // Based on $pf-v5-global--spacer-map
-@function build-spacer-map($base: false, $map-items...) {
+@function build-spacer-map($map-items...) {
   $map: ();
 
-  @if $base {
-    $map: map-merge($map, ("base": null));
-  }
-  
   @if length($map-items) == 0 {
-    $map: map-merge($map, ("none": 0));
+    $map: ("none": 0);
     $map: map-merge($map, $pf-v5-global--spacer-map);
     $map: map-remove($map, "auto", "0");
   }
 
   @each $spacer in $map-items {
-    @if $spacer == "none" {
-      $map: map-merge($map, ($spacer: 0));
-    } @else if not map-has-key($pf-v5-global--spacer-map, $spacer) {
+    @if not map-has-key($pf-v5-global--spacer-map, $spacer) and $spacer != "none" {
       $map: map-merge($map, ("invalid spacer #{$spacer}": null));
+    } @else if $spacer == "none" {
+      $map: map-merge($map, ($spacer: 0));
     } @else {
       $map: map-merge($map, ($spacer: map-get($pf-v5-global--spacer-map, #{$spacer})));
     }
