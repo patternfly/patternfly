@@ -1984,7 +1984,19 @@
     react-dropzone "14.2.3"
     tslib "^2.5.0"
 
-"@patternfly/react-core@5.0.0-alpha.91", "@patternfly/react-core@^5.0.0-alpha.91":
+"@patternfly/react-core@5.0.0-alpha.98":
+  version "5.0.0-alpha.98"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-alpha.98.tgz#98b0921b95ccc223bfa2501634e0bb7d793ce9e6"
+  integrity sha512-LouTqxWPtvzK3834i1JW5kTjDoqIWnvbioZaRIJOuL3eGgBYk+ORpoa9EZ8j4r+NQWxeogMFgxzsP9Oe04xjcQ==
+  dependencies:
+    "@patternfly/react-icons" "^5.0.0-alpha.14"
+    "@patternfly/react-styles" "^5.0.0-alpha.10"
+    "@patternfly/react-tokens" "^5.0.0-alpha.9"
+    focus-trap "7.4.1"
+    react-dropzone "^14.2.3"
+    tslib "^2.5.0"
+
+"@patternfly/react-core@^5.0.0-alpha.91":
   version "5.0.0-alpha.91"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-alpha.91.tgz#ce0bbb9a207bf345be8cb99f0a261623779a4ce9"
   integrity sha512-1OoSTjEVG/Lm+1u2msiEBc3Y71HeFPjWmC84RQaIOOBH/qlNBIrcIiyWIhJYW2c0VkVKT5A0scnsn+Cy6k+x5g==
@@ -6321,6 +6333,13 @@ focus-trap@7.4.0:
   integrity sha512-yI7FwUqU4TVb+7t6PaQ3spT/42r/KLEi8mtdGoQo2li/kFzmu9URmalTvw7xCCJtSOyhBxscvEAmvjeN9iHARg==
   dependencies:
     tabbable "^6.1.1"
+
+focus-trap@7.4.1:
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-7.4.1.tgz#321cd8313c75f6c22ed3c472e04b913e5ee2eb5a"
+  integrity sha512-rnXP5ERIjlo1gEZp7hQb4ekYqUxRuSDQeyWvxhahH3/GkWtd8h8g1C8Eu/KGpuvbUWNVeogK0kuzzrM4u2Z9jA==
+  dependencies:
+    tabbable "^6.1.2"
 
 follow-redirects@1.5.10:
   version "1.5.10"
@@ -13877,6 +13896,11 @@ tabbable@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-6.1.1.tgz#40cfead5ed11be49043f04436ef924c8890186a0"
   integrity sha512-4kl5w+nCB44EVRdO0g/UGoOp3vlwgycUVtkk/7DPyeLZUCuNFFKCFG6/t/DgHLrUPHjrZg6s5tNm+56Q2B0xyg==
+
+tabbable@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-6.1.2.tgz#b0d3ca81d582d48a80f71b267d1434b1469a3703"
+  integrity sha512-qCN98uP7i9z0fIS4amQ5zbGBOq+OSigYeGvPy7NDk8Y9yncqDZ9pRPgfsc2PJIVM9RrJj7GIfuRgmjoUU9zTHQ==
 
 table@^6.8.1:
   version "6.8.1"
