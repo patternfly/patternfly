@@ -246,7 +246,11 @@
 	@if $filename == monitoring {
 		$char: '\E95A';
 	}
-  
+
+	@if $filename == multicluster {
+		$char: '\E97C';
+	}
+	
 	@if $filename == namespaces {
 		$char: '\E95B';
 	}
@@ -716,6 +720,9 @@
 }
 .pf-v5-pficon-monitoring {
 	@include pf-v5-pficon(monitoring);
+}
+.pf-v5-pficon-multicluster {
+	@include pf-v5-pficon(multicluster);
 }
 .pf-v5-pficon-namespaces {
 	@include pf-v5-pficon(namespaces);

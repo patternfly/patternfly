@@ -59,6 +59,7 @@ id: Icons
 | migration | <i class="pf-v5-pficon pf-v5-pficon-migration"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-migration&quot;&gt;&lt;/i&gt;
 | module | <i class="pf-v5-pficon pf-v5-pficon-module"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-module&quot;&gt;&lt;/i&gt;
 | monitoring | <i class="pf-v5-pficon pf-v5-pficon-monitoring"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-monitoring&quot;&gt;&lt;/i&gt;
+| multicluster | <i class="pf-v5-pficon pf-v5-pficon-multicluster"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-multicluster&quot;&gt;&lt;/i&gt;
 | namespaces | <i class="pf-v5-pficon pf-v5-pficon-namespaces"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-namespaces&quot;&gt;&lt;/i&gt;
 | not-started | <i class="pf-v5-pficon pf-v5-pficon-not-started"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-not-started&quot;&gt;&lt;/i&gt;
 | network | <i class="pf-v5-pficon pf-v5-pficon-network"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-network&quot;&gt;&lt;/i&gt;
