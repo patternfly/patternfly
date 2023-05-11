@@ -1,4 +1,4 @@
-import { patternflyNS, patternflyVersion } from './init.mjs';
+import { patternflyNamespace, patternflyVersion } from './init.mjs';
 
 /** Ignore the object appended by handlebars. */
 export const concat = (...params) => {
@@ -45,7 +45,7 @@ export const ternary = (testValue, trueValue, fallback) => {
 export const inverse = (bool) => (bool ? null : 'true');
 
 export const pfv = (type) => {
-  const namespace = patternflyNS;
+  const namespace = patternflyNamespace;
   let version = patternflyVersion;
   let prefix = 'c-';
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ICON_SRC='./src/icons/definitions/pf-icons.json'
+ICON_SRC='./src/icons/definitions/pficons.mjs'
 ICON_OUT='./patternfly-docs/site/pages/icons.md'
 
 echo "---" > $ICON_OUT
@@ -11,5 +11,5 @@ echo "| --- | --- | --- |" >> $ICON_OUT
 
 grep ':' < $ICON_SRC | while read line; do
   CLASS=`echo $line | cut -d '"' -f2`
-  echo '|' $CLASS '| <i class="pf-v5-c-icon pf-v5-c-icon-'$CLASS'"></i> | &lt;i class=&quot;pf-v5-c-icon pf-v5-c-icon-'$CLASS'&quot;&gt;&lt;/i&gt;'
+  echo '|' $CLASS '| <i class="pf-v5-pficon pf-v5-pficon-'$CLASS'"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-'$CLASS'&quot;&gt;&lt;/i&gt;'
 done >> $ICON_OUT

@@ -4,13 +4,14 @@ import iconfontCss from 'gulp-iconfont-css';
 import generateIcons from '../../src/icons/generateIcons.mjs';
 import path from 'path';
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+import { patternflyNamespace, patternflyVersion } from '../init.mjs';
 
 const { src, dest } = gulp;
 
 import * as url from 'url';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-const pficonFontName = 'pficon';
+const pficonFontName = patternflyNamespace + patternflyVersion + 'pficon';
 let maxCodepoint = 0;
 
 // functions to parse icon names/unicodes from sass file && write to json file
@@ -53,14 +54,14 @@ export function pfIconFont() {
   );
   const faUnicodesObj = buildUnicodesMap(faUnicodeMatches, false);
 
-  // parse existing pf-icon names/unicodes
+  // parse existing pficon names/unicodes
   const pficonUnicodeMatches = getIconNamesUnicodes(
     '../../src/patternfly/assets/pficon/pficon.scss',
     /@if\s\$filename\s==\s(\S*)\s\S\n\s*\$char:\s'\\([a-zA-Z0-9]*)'/g
   );
   const pficonUnicodesObj = buildUnicodesMap(pficonUnicodeMatches, true);
 
-  // Calculate next available unicode (for any new pf-icons)
+  // Calculate next available unicode (for any new pficons)
   const nextCodepoint = maxCodepoint + 1;
   const nextUnicodeHex = '0x' + nextCodepoint.toString(16).toUpperCase();
 
@@ -72,7 +73,7 @@ export function pfIconFont() {
         path: path.join(__dirname, 'icons_template.scss'),
         targetPath: 'pficon.scss',
         fontPath: './',
-        cssClass: 'pf-v5-c-icon',
+        cssClass: pficonFontName,
         // Assign next available unicode (for new icons)
         firstGlyph: nextUnicodeHex,
         // Reference saved unicodes (for existing icons)
@@ -88,7 +89,7 @@ export function pfIconFont() {
         // Trigger off emitted 'glyphs' event to generate pficon/unicode matches, combine w/FA & write to JSON file
         .on('glyphs', (glyphs, options) => {
           const pfUnicodesMap = glyphs.reduce((obj, glyph) => {
-            obj[`pf-icon-${glyph.name}`] = glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase();
+            obj[`pficon-${glyph.name}`] = glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase();
             return obj;
           }, {});
           const iconUnicodes = {

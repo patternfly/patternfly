@@ -6,7 +6,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 const plop = await nodePlop(path.resolve(__dirname, './generatorConfig.mjs'));
 const pascalCase = plop.getHelper('pascalCase');
-import { pfIcons } from './definitions/pf-icons.mjs';
+import { pfIcons } from './definitions/pficons.mjs';
 
 export default () =>
   new Promise((resolve, reject) => {
