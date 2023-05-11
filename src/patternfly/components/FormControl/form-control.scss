@@ -69,31 +69,31 @@
   --#{$form-control}--m-warning--PaddingRight: var(--#{$pf-global}--spacer--xl);
 
   // Input invalid
-  --#{$form-control}--invalid--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$form-control}--invalid--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--invalid--BorderBottomWidth));
-  --#{$form-control}--invalid--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
-  --#{$form-control}--invalid--PaddingRight: var(--#{$pf-global}--spacer--xl);
-  --#{$form-control}--invalid--IconWidth: var(--#{$form-control}--FontSize);
+  --#{$form-control}--m-error--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
+  --#{$form-control}--m-error--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$form-control}--m-error--BorderBottomWidth));
+  --#{$form-control}--m-error--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
+  --#{$form-control}--m-error--PaddingRight: var(--#{$pf-global}--spacer--xl);
+  --#{$form-control}--m-error--IconWidth: var(--#{$form-control}--FontSize);
 
 
   // Input m-icon
   --#{$form-control}--m-icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-icon--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer));
   --#{$form-control}--m-icon--IconWidth: var(--#{$form-control}--FontSize);
   --#{$form-control}--m-icon--icon--spacer: var(--#{$pf-global}--spacer--sm);
-  --#{$form-control}--m-icon--icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--invalid--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}--m-icon--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer));
+  --#{$form-control}--m-icon--icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-error--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}--m-icon--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer));
  
   // Select -- rename __select to --select in a breaking change release
   --#{$form-control}--select--PaddingRight: calc(var(--#{$pf-global}--spacer--lg) + var(--#{$form-control}--BorderWidth) + var(--#{$form-control}--BorderWidth));
   --#{$form-control}--select--PaddingLeft: calc(var(--#{$pf-global}--spacer--sm) - var(--#{$form-control}--BorderWidth));
 
   // Select success
-  --#{$form-control}--select--success--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+  --#{$form-control}--select--m-success--PaddingRight: var(--#{$pf-global}--spacer--3xl);
 
   // Select warning
   --#{$form-control}--select--m-warning--PaddingRight: var(--#{$pf-global}--spacer--3xl);
 
   // Select invalid
-  --#{$form-control}--select--invalid--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+  --#{$form-control}--select--m-error--PaddingRight: var(--#{$pf-global}--spacer--3xl);
 
   // Textarea
   --#{$form-control}--textarea--Width: var(--#{$form-control}--Width);
@@ -104,7 +104,7 @@
   --#{$form-control}__icon--m-status--Color: var(--#{$pf-global}--icon--Color--light);
   --#{$form-control}--m-success__icon--Color: var(--#{$pf-global}--success-color--100);
   --#{$form-control}--m-warning__icon--Color: var(--#{$pf-global}--warning-color--100);
-  --#{$form-control}--invalid__icon--Color: var(--#{$pf-global}--danger-color--100);
+  --#{$form-control}--m-error__icon--Color: var(--#{$pf-global}--danger-color--100);
   --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - (2 * var(--#{$form-control}--BorderWidth)));
 
   // Form control utilities
@@ -213,14 +213,14 @@
   }
 
   &.pf-m-error {
-    --#{$form-control}--PaddingRight: var(--#{$form-control}--invalid--PaddingRight);
-    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--invalid--BorderBottomColor);
-    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--invalid__icon--Color);
-    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--invalid--BorderBottomWidth));
-    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--invalid--BorderBottomWidth));
-    --#{$form-control}--PaddingBottom: var(--#{$form-control}--invalid--PaddingBottom);
+    --#{$form-control}--PaddingRight: var(--#{$form-control}--m-error--PaddingRight);
+    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-error--BorderBottomColor);
+    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-error__icon--Color);
+    --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-error--BorderBottomWidth));
+    --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-error--BorderBottomWidth));
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-error--PaddingBottom);
 
-    border-bottom-width: var(--#{$form-control}--invalid--BorderBottomWidth);
+    border-bottom-width: var(--#{$form-control}--m-error--BorderBottomWidth);
 
     &.pf-m-icon {
       --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--icon--PaddingRight);
@@ -273,11 +273,11 @@
     }
 
     .pf-m-error {
-      --#{$form-control}--PaddingRight: var(--#{$form-control}--select--invalid--PaddingRight);
+      --#{$form-control}--PaddingRight: var(--#{$form-control}--select--m-error--PaddingRight);
     }
 
     .pf-m-success {
-      --#{$form-control}--PaddingRight: var(--#{$form-control}--select--success--PaddingRight);
+      --#{$form-control}--PaddingRight: var(--#{$form-control}--select--m-success--PaddingRight);
     }
 
     .pf-m-warning {
