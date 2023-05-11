@@ -126,7 +126,7 @@ Standard
 Readonly
 {{/form-control}}
 <br>
-{{#> form-control controlType="textarea" form-control--IsPlain='true' form-control--attribute='name="textarea-readonly-plain" id="textarea-readonly-plain" aria-label="Readonly plain textarea example"'}}
+{{#> form-control controlType="textarea" form-control--IsPlain='true' form-control--IsReadonly="true" form-control--attribute='name="textarea-readonly-plain" id="textarea-readonly-plain" aria-label="Readonly plain textarea example"'}}
 Readonly plain
 {{/form-control}}
 <br>
@@ -153,6 +153,10 @@ Resizes vertically
 {{#> form-control controlType="textarea" form-control--attribute='name="textarea-resize-horizontal" id="textarea-resize-horizontal" aria-label="Resize horizontal textarea example"' form-control--modifier="pf-m-resize-horizontal"}}
 Resizes horizontally
 {{/form-control}}
+<br>
+{{#> form-control controlType="textarea" form-control--attribute='name="textarea-resize-both" id="textarea-resize-both" aria-label="Resize both textarea example"' form-control--modifier="pf-m-resize-both"}}
+Resizes in both directions
+{{/form-control}}
 ```
 
 ## Documentation
@@ -169,15 +173,19 @@ Resizes horizontally
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v5-c-form-control` | `<div>` |  Initiates a container for an input, textarea or select. For styling of checkboxes or radios see the [checkbox component](/components/checkbox) or [radio component](/components/radio). **Required**  |
-| `.pf-v5-c-form-control` | `<input>`,`<textarea>`, `<select>` |  Initiates an input, textarea or select.  **Required**  |
-| `.pf-m-resize-vertical` | `textarea.pf-m-form-control` | Modifies a `textarea.pf-v5-c-form-control` element so it can only be resized vertically along the y-axis. |
-| `.pf-m-resize-horizontal` | `textarea.pf-m-form-control` | Modifies a `textarea.pf-v5-c-form-control` element so it can only be resized horizontally along the x-axis. |
+| `.pf-v5-c-form-control__utilities` | `<div>` |  Initiates a container for elements like icons to be associated with the form control.  |
+| `.pf-v5-c-form-control__icon` | `<div>` |  Creates a container for an icon associated with a text input.  |
+| `.pf-v5-c-form-control__toggle-icon` | `<div>` |  Initiates a toggle icon for a form select.  |
+| `.pf-m-resize-vertical` | `.pf-m-form-control` | Modifies a `pf-v5-c-form-control` element containing a text area so it can only be resized vertically. |
+| `.pf-m-resize-horizontal` | `.pf-m-form-control` | Modifies a `.pf-v5-c-form-control` element containing a textarea so it can only be resized horizontally. |
+| `.pf-m-resize-both` | `.pf-m-form-control` | Modifies a `.pf-v5-c-form-control` element containing a textarea so it resizes in both directions. |
+| `.pf-m-icon` | `.pf-v5-c-form-control` | Modifies a form control to allow for an icon. |
 | `.pf-m-readonly` | `.pf-v5-c-form-control` | Modifies a form control for a readonly input, textarea, or select.|
 | `.pf-m-disabled` | `.pf-v5-c-form-control` | Modifies a form control for a disabled input, textarea, or select.|
 | `.pf-m-success` | `.pf-v5-c-form-control` | Modifies a form control for the success state. |
 | `.pf-m-warning` | `.pf-v5-c-form-control` | Modifies a form control for the warning state. |
 | `.pf-m-error` | `.pf-v5-c-form-control` | Modifies a form control for the error (invalid) state. |
-| `.pf-v5-c-form-control__icon` | `div` | Creates a container for an icon associated with a text input.
 | `.pf-m-expanded` | `.pf-v5-c-form-control` | Modifies a form control for the expanded state. This is used when clicking in the text input toggles something open/closed. |
 | `.pf-m-placeholder` | `.pf-v5-c-form-control` | Modifies a form select for placeholder styles. This modifier is set programatically based on the chosen option. |
 | `.pf-m-plain` | `.pf-v5-c-form-control` | Modifies a form control containing an `<input>` or `<textarea>` with a `readonly` attribute to be presented as normal text. |
+| `.pf-m-status`| `.pf-v5-c-form-control__icon` | Modified a form control icon to show status.

@@ -14,7 +14,7 @@
   {{#ifEquals controlType "select"}}
     {{> form-control-select}}
   {{else}}
-    <{{controlType}} class="{{#if form-control--modifier}} {{form-control--modifier}}{{/if}}"
+    <{{controlType}}
       {{#if form-control--IsDisabled}} disabled{{/if}}
       {{#if form-control--IsReadonly}} readonly{{/if}}
       {{#if form-control--IsRequired}} required{{/if}}

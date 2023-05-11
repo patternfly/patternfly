@@ -4,6 +4,7 @@
   --#{$form-control}--Color: var(--#{$pf-global}--Color--100);
   --#{$form-control}--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$form-control}--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$form-control}--Resize: none;
   --#{$form-control}--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$form-control}--BorderTopColor: var(--#{$pf-global}--BorderColor--300);
   --#{$form-control}--BorderRightColor: var(--#{$pf-global}--BorderColor--300);
@@ -129,6 +130,7 @@
   width: var(--#{$form-control}--Width);
   font-size: var(--#{$form-control}--FontSize);
   line-height: var(--#{$form-control}--LineHeight);
+  resize: var(--#{$form-control}--Resize);
   background-color: var(--#{$form-control}--BackgroundColor);
   border: var(--#{$form-control}--BorderWidth) solid;
   border-color: var(--#{$form-control}--BorderTopColor) var(--#{$form-control}--BorderRightColor) var(--#{$form-control}--BorderBottomColor) var(--#{$form-control}--BorderLeftColor);
@@ -298,22 +300,30 @@
   }
   
   > textarea {
-    width: var(--#{$form-control}--textarea--Width);
-    height: var(--#{$form-control}--textarea--Height);
+    width: 100%;
+    height: 100%;
     vertical-align: bottom;
+    resize: none;
   }
 
-  &.pf-m-resize-vertical > textarea {
-    resize: vertical;
+  &.pf-m-resize-vertical {
+    --#{$form-control}--Resize: vertical;
+
+    overflow: auto;
   }
 
   &.pf-m-resize-horizontal {
-    min-width: fit-content;
+    --#{$form-control}--Resize: horizontal;
+
+    overflow: auto;
   }
 
-  &.pf-m-resize-horizontal > textarea {
-    resize: horizontal;
+  &.pf-m-resize-both {
+    --#{$form-control}--Resize: both;
+
+    overflow: auto;
   }
+
 }
 
 .#{$form-control}__icon {
