@@ -536,28 +536,29 @@
     }
   }
 
+  :where([class*='#{$table}']),
+  :where(&) > :is(thead, tbody) {
+
+    // No wrap
+    &.pf-m-nowrap {
+      background: green;
+      --#{$table}--cell--Overflow: auto;
+    }
+
+    // Fit content
+    &.pf-m-fit-content {
+      width: auto;
+      white-space: normal;
+    }
+
+    // Truncate
+    &.pf-m-truncate {
+      --#{$table}--cell--MaxWidth: 100%;
+    }
+  }
+
   [class*="pf-m-width"] {
     --#{$table}--cell--Width: auto;
-  }
-}
-
-:where([class*='#{$table}']),
-:where([class*='#{$table}'] > :is(thead, tbody)) {
-
-  // No wrap
-  &.pf-m-nowrap {
-    --#{$table}--cell--Overflow: auto;
-  }
-
-  // Fit content
-  &.pf-m-fit-content {
-    width: auto;
-    white-space: normal;
-  }
-
-  // Truncate
-  &.pf-m-truncate {
-    --#{$table}--cell--MaxWidth: 100%;
   }
 }
 

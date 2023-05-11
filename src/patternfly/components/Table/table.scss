@@ -614,44 +614,46 @@
     }
   }
 
-  thead,
-  .pf-m-truncate {
-    --#{$table}--cell--MinWidth: var(--#{$table}--m-truncate--cell--MinWidth);
-    --#{$table}--cell--MaxWidth: var(--#{$table}--m-truncate--cell--MaxWidth);
-    --#{$table}--cell--Overflow: hidden;
-    --#{$table}--cell--TextOverflow: ellipsis;
-    --#{$table}--cell--WhiteSpace: nowrap;
-  }
+  :where([class*='#{$table}']),
+  :where(&) > :is(thead, tbody) {
+    &.pf-m-truncate {
+      --#{$table}--cell--MinWidth: var(--#{$table}--m-truncate--cell--MinWidth);
+      --#{$table}--cell--MaxWidth: var(--#{$table}--m-truncate--cell--MaxWidth);
+      --#{$table}--cell--Overflow: hidden;
+      --#{$table}--cell--TextOverflow: ellipsis;
+      --#{$table}--cell--WhiteSpace: nowrap;
+    }
 
-  .pf-m-wrap {
-    --#{$table}--cell--MinWidth: 0;
-    --#{$table}--cell--MaxWidth: none;
-    --#{$table}--cell--Overflow: visible;
-    --#{$table}--cell--TextOverflow: clip;
-    --#{$table}--cell--WhiteSpace: normal;
-  }
+    *.pf-m-wrap {
+      --#{$table}--cell--MinWidth: 0;
+      --#{$table}--cell--MaxWidth: none;
+      --#{$table}--cell--Overflow: visible;
+      --#{$table}--cell--TextOverflow: clip;
+      --#{$table}--cell--WhiteSpace: normal;
+    }
 
-  .pf-m-nowrap {
-    --#{$table}--cell--MinWidth: 0;
-    --#{$table}--cell--MaxWidth: none;
-    --#{$table}--cell--Overflow: visible;
-    --#{$table}--cell--TextOverflow: clip;
-    --#{$table}--cell--WhiteSpace: nowrap;
-  }
+    &.pf-m-nowrap {
+      --#{$table}--cell--MinWidth: 0;
+      --#{$table}--cell--MaxWidth: none;
+      --#{$table}--cell--Overflow: visible;
+      --#{$table}--cell--TextOverflow: clip;
+      --#{$table}--cell--WhiteSpace: nowrap;
+    }
 
-  .#{$table}__icon,
-  .pf-m-fit-content {
-    --#{$table}--cell--MinWidth: fit-content;
-    --#{$table}--cell--MaxWidth: none;
-    --#{$table}--cell--Width: 1%;
-    --#{$table}--cell--Overflow: visible;
-    --#{$table}--cell--TextOverflow: clip;
-    --#{$table}--cell--WhiteSpace: nowrap;
-  }
+    .#{$table}__icon,
+    &.pf-m-fit-content {
+      --#{$table}--cell--MinWidth: fit-content;
+      --#{$table}--cell--MaxWidth: none;
+      --#{$table}--cell--Width: 1%;
+      --#{$table}--cell--Overflow: visible;
+      --#{$table}--cell--TextOverflow: clip;
+      --#{$table}--cell--WhiteSpace: nowrap;
+    }
 
-  .pf-m-break-word {
-    --#{$table}--cell--WordBreak: break-word;
-    --#{$table}--cell--WhiteSpace: normal;
+    &.pf-m-break-word {
+      --#{$table}--cell--WordBreak: break-word;
+      --#{$table}--cell--WhiteSpace: normal;
+    }
   }
 
   // stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors
@@ -902,24 +904,24 @@
     min-width: auto;
   }
 
-  .#{$table} thead.pf-m-nowrap &,
-  .#{$table} tr.pf-m-nowrap &,
-  .#{$table} th.pf-m-nowrap & {
+  .#{$table} > thead.pf-m-nowrap &,
+  .#{$table} tr:where(.#{$table}__tr).pf-m-nowrap &,
+  .#{$table} th:where(.#{$table}__th).pf-m-nowrap & {
     grid-template-columns: min-content max-content;
   }
 
-  .#{$table} thead.pf-m-fit-content &,
-  .#{$table} tr.pf-m-fit-content &,
-  .#{$table} th.pf-m-fit-content & {
+  .#{$table} > thead.pf-m-fit-content &,
+  .#{$table} tr:where(.#{$table}__tr).pf-m-fit-content &,
+  .#{$table} th:where(.#{$table}__th).pf-m-fit-content & {
     grid-template-columns: fit-content max-content;
   }
 
-  .#{$table} thead.pf-m-wrap &,
-  .#{$table} tr.pf-m-wrap &,
-  .#{$table} th.pf-m-wrap &,
-  .#{$table} thead.pf-m-truncate &,
-  .#{$table} tr.pf-m-truncate &,
-  .#{$table} th.pf-m-truncate & {
+  .#{$table} > thead.pf-m-wrap &,
+  .#{$table} tr:where(.#{$table}__tr).pf-m-wrap &,
+  .#{$table} th:where(.#{$table}__th).pf-m-wrap &,
+  .#{$table} > thead.pf-m-truncate &,
+  .#{$table} tr:where(.#{$table}__tr).pf-m-truncate &,
+  .#{$table} th:where(.#{$table}__th).pf-m-truncate & {
     grid-template-columns: auto max-content;
   }
 }
@@ -1219,7 +1221,7 @@
   box-shadow: 0 0 0 0 transparent;
 
   &,
-  td:first-child::after {
+  td:where(.#{$table}__td):first-child::after {
     transition: var(--#{$table}__expandable-row--Transition);
   }
 
@@ -1278,7 +1280,7 @@
   --#{$table}--cell--PaddingBottom: var(--#{$table}--m-compact--cell--PaddingBottom);
   --#{$table}--cell--PaddingRight: var(--#{$table}--m-compact--cell--PaddingLeft);
 
-  tr {
+  tr:where(.#{$table}__tr) {
     --#{$table}--cell--PaddingLeft: var(--#{$table}--m-compact--cell--PaddingLeft);
     --#{$table}--cell--PaddingRight: var(--#{$table}--m-compact--cell--PaddingRight);
 
