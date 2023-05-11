@@ -4517,7 +4517,3 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 - One action button, positioned in the last cell of a non-expandable row.
 - Tabular data.
 - Compact presentation modifier (not compatible with expandable table).
-
-<script>
-  console.log('hello', this, @root)
-</script>

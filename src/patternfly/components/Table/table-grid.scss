@@ -151,7 +151,7 @@
   border: none;
 
   // reset cell modifications
-  :where(.#{$table}__tr) > * {
+  tr:where(.#{$table}__tr) > * {
     width: auto;
     min-width: 0;
     max-width: none;
@@ -536,30 +536,28 @@
     }
   }
 
-
-  :where([class*='#{$table}']),
-  :where([class*='#{$table}'] > :is(thead, tbody)) {
-
-    // No wrap
-    &.pf-m-nowrap {
-      background: green;
-      --#{$table}--cell--Overflow: auto;
-    }
-
-    // Fit content
-    &.pf-m-fit-content {
-      width: auto;
-      white-space: normal;
-    }
-
-    // Truncate
-    &.pf-m-truncate {
-      --#{$table}--cell--MaxWidth: 100%;
-    }
-  }
-
   [class*="pf-m-width"] {
     --#{$table}--cell--Width: auto;
+  }
+}
+
+:where([class*='#{$table}']),
+:where([class*='#{$table}'] > :is(thead, tbody)) {
+
+  // No wrap
+  &.pf-m-nowrap {
+    --#{$table}--cell--Overflow: auto;
+  }
+
+  // Fit content
+  &.pf-m-fit-content {
+    width: auto;
+    white-space: normal;
+  }
+
+  // Truncate
+  &.pf-m-truncate {
+    --#{$table}--cell--MaxWidth: 100%;
   }
 }
 

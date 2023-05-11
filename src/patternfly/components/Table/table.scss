@@ -413,7 +413,7 @@
 
   // Standard table row (non-expandable)
   // exclude expandable rows
-  tr:not(.#{$table}__expandable-row) {
+  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
     border-bottom: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
 
     // stylelint-disable-next-line
@@ -514,13 +514,13 @@
 
     // stylelint-disable
     &.pf-m-nested-column-header {
-      button {
+      button:where(.#{$button}) {
         outline-offset: var(--#{$table}--thead--m-nested-column-header--button--OutlineOffset);
       }
 
       th:where(.#{$table}__th),
       td:where(.#{$table}__td),
-      input {
+      input:where(.#{$check}__input) {
         vertical-align: middle;
       }
 
@@ -577,7 +577,7 @@
 
     // Check table cell
     .#{$table}__check {
-      input {
+      input:where(.#{$check}__input) {
         margin-top: var(--#{$table}__check--input--MarginTop);
         vertical-align: top;
       }
@@ -968,7 +968,7 @@
     transform: rotate(var(--#{$table}__toggle--c-button__toggle-icon--Rotate));
   }
 
-  svg {
+  > svg {
     pointer-events: none;
   }
 }
