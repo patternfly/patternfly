@@ -41,12 +41,12 @@
   --#{$form-control}--placeholder--child--Color: var(--#{$pf-global}--Color--100);
 
   // input disabled style
-  --#{$form-control}--disabled--Color: var(--#{$pf-global}--disabled-color--100);
-  --#{$form-control}--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
-  --#{$form-control}--disabled--BorderColor: transparent;
+  --#{$form-control}--m-disabled--Color: var(--#{$pf-global}--m-disabled-color--100);
+  --#{$form-control}--m-disabled--BackgroundColor: var(--#{$pf-global}--m-disabled-color--300);
+  --#{$form-control}--m-disabled--BorderColor: transparent;
 
   // input readonly style
-  --#{$form-control}--readonly--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
+  --#{$form-control}--readonly--BackgroundColor: var(--#{$pf-global}--m-disabled-color--300);
   --#{$form-control}--readonly--hover--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
   --#{$form-control}--readonly--focus--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$pf-global}--BorderWidth--sm));
   --#{$form-control}--readonly--focus--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
@@ -102,9 +102,9 @@
   // Form control icon 
   --#{$form-control}__icon--Color: var(--#{$pf-global}--icon--Color--light);
   --#{$form-control}__icon--m-status--Color: var(--#{$pf-global}--icon--Color--light);
-  --#{$form-control}--m-success__icon--Color: var(--#{$pf-global}--success-color--100);
-  --#{$form-control}--m-warning__icon--Color: var(--#{$pf-global}--warning-color--100);
-  --#{$form-control}--m-error__icon--Color: var(--#{$pf-global}--danger-color--100);
+  --#{$form-control}--m-success__icon--m-status--Color: var(--#{$pf-global}--success-color--100);
+  --#{$form-control}--m-warning__icon--m-status--Color: var(--#{$pf-global}--warning-color--100);
+  --#{$form-control}--m-error__icon--m-status--Color: var(--#{$pf-global}--danger-color--100);
   --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - (2 * var(--#{$form-control}--BorderWidth)));
 
   // Form control utilities
@@ -117,7 +117,7 @@
   --#{$form-control}__toggle-icon--PaddingLeft: var(--#{$form-control}--inset--base);
   --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - (2 * var(--#{$form-control}--BorderWidth)));
   --#{$form-control}__toggle-icon--Color: var(--#{$pf-global}--Color--100);
-  --#{$form-control}--disabled__toggle-icon--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$form-control}--m-disabled__toggle-icon--Color: var(--#{$pf-global}--m-disabled-color--100);
 
   // This component always needs to be light
   @include pf-v5-t-light("--#{$form-control}--Color");
@@ -204,18 +204,18 @@
   }
 
   &.pf-m-disabled {
-    --#{$form-control}--BackgroundColor: var(--#{$form-control}--disabled--BackgroundColor);
-    --#{$form-control}--Color: var(--#{$form-control}--disabled--Color);
-    --#{$form-control}__toggle-icon--Color: var(--#{$form-control}--disabled__toggle-icon--Color);
+    --#{$form-control}--BackgroundColor: var(--#{$form-control}--m-disabled--BackgroundColor);
+    --#{$form-control}--Color: var(--#{$form-control}--m-disabled--Color);
+    --#{$form-control}__toggle-icon--Color: var(--#{$form-control}--m-disabled__toggle-icon--Color);
 
     cursor: not-allowed;
-    border-color: var(--#{$form-control}--disabled--BorderColor);
+    border-color: var(--#{$form-control}--m-disabled--BorderColor);
   }
 
   &.pf-m-error {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-error--PaddingRight);
     --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-error--BorderBottomColor);
-    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-error__icon--Color);
+    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-error__icon--m-status--Color);
     --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-error--BorderBottomWidth));
     --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-error--BorderBottomWidth));
     --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-error--PaddingBottom);
@@ -231,7 +231,7 @@
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-success--PaddingRight);
     --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-success--PaddingBottom);
     --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-success--BorderBottomColor);
-    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-success__icon--Color);
+    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-success__icon--m-status--Color);
     --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-success--BorderBottomWidth));
     --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-success--BorderBottomWidth));
 
@@ -246,7 +246,7 @@
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-warning--PaddingRight);
     --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-warning--PaddingBottom);
     --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-warning--BorderBottomColor);
-    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-warning__icon--Color);
+    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-warning__icon--m-status--Color);
     --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-warning--BorderBottomWidth));
     --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-warning--BorderBottomWidth));
 

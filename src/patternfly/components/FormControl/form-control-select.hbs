@@ -7,7 +7,7 @@
     {{/if}}
 >{{#if @partial-block}}{{> @partial-block}}{{/if}}</select>
 {{#> form-control-utilities}}
-  {{#ifAny form-control--HasIcon form-control--IsError form-control--IsSuccess form-control--IsWarning }}
+  {{#ifAny form-control--HasIcon form-control--IsError form-control--IsSuccess form-control--IsWarning}}
     {{> form-control-template-status}}
   {{/ifAny}}
   <div class="{{pfv}}form-control__toggle-icon">
