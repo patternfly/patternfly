@@ -2,7 +2,6 @@
 
 .#{$background-image} {
   --#{$background-image}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
-  --#{$background-image}--BackgroundImage: url("#{$pf-v5-global--image-path}/pfbg-icon.svg");
   --#{$background-image}--BackgroundPosition: bottom right;
   --#{$background-image}--BackgroundSize--min-width: 200px;
   --#{$background-image}--BackgroundSize--width: 60%;
@@ -16,7 +15,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--#{$background-image}--BackgroundColor);
-  background-image: var(--#{$background-image}--BackgroundImage);
+  background-image: var(--#{$background-image}--BackgroundImage, none);
   background-repeat: no-repeat;
   background-position: var(--#{$background-image}--BackgroundPosition);
   background-size: var(--#{$background-image}--BackgroundSize);

@@ -33,17 +33,12 @@ cssPrefix: pf-v5-c-about-modal-box
 ```
 
 ## Documentation
+In order to add a background image, set the `--pf-v5-c-about-modal-box--BackgroundImage` CSS variable to the path of the image. For example: `--pf-v5-c-about-modal-box--BackgroundImage: url(custom/path/image.jpg);`
+
 ### Accessibility
 | Attribute | Applies to | Outcome |
 | -- | -- | -- |
 | `aria-label="Close Dialog"` | `.pf-v5-c-modal-box__close .pf-v5-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required** |
-
-### Customizing the background image
-In order to use a custom image, pass a new value to the `--pf-v5-c-about-modal-box--BackgroundImage` CSS variable. For example:
-
-```css
---pf-v5-c-about-modal-box--BackgroundImage: url("custom/image/path");
-```
 
 ### Usage
 | Class | Applied to | Outcome |
@@ -56,3 +51,4 @@ In order to use a custom image, pass a new value to the `--pf-v5-c-about-modal-b
 | `.pf-v5-c-about-modal-box__content` |  `<div>` |  Initiates a modal box content cell. |
 | `.pf-v5-c-about-modal-box__body` |  `<div>` |  Initiates a modal box body cell. |
 | `.pf-v5-c-about-modal-box__strapline` |  `<p>` |  Initiates a modal box strapline cell. |
+| `--pf-v5-c-about-modal-box--BackgroundImage` |  `.pf-v5-c-about-modal-box` |  Sets the background image for the about modal. |
