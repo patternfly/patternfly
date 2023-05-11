@@ -624,7 +624,7 @@
       --#{$table}--cell--WhiteSpace: nowrap;
     }
 
-    *.pf-m-wrap {
+    &.pf-m-wrap {
       --#{$table}--cell--MinWidth: 0;
       --#{$table}--cell--MaxWidth: none;
       --#{$table}--cell--Overflow: visible;
@@ -723,15 +723,15 @@
       outline-offset: var(--#{$table}--tr--m-selected--OutlineOffset);
       box-shadow: var(--#{$table}--tr--m-selected--BoxShadow);
 
-      & + tr.pf-m-selected {
+      & + tr:where(.#{$table}__tr).pf-m-selected {
         box-shadow: var(--#{$table}--tr--m-selected--m-selected--BoxShadow);
       }
 
-      & + tr.pf-m-selected:hover {
+      & + tr:where(.#{$table}__tr).pf-m-selected:hover {
         box-shadow: var(--#{$table}--tr--m-selected--tr--m-selected--hover--BoxShadow);
       }
 
-      &:hover + tr.pf-m-selected {
+      &:hover + tr:where(.#{$table}__tr).pf-m-selected {
         box-shadow: var(--#{$table}--tr--m-selected--hover--m-selected--BoxShadow);
       }
     }

@@ -197,7 +197,7 @@
 
   // The last tr should always have a border width of 1px
   tr:where(.#{$table}__tr):last-child,
-  tbody:last-of-type:not(:only-of-type) > tr {
+  > tbody:last-of-type:not(:only-of-type) > tr {
     border-bottom-width: var(--#{$table}-tr--responsive--last-child--BorderBottomWidth);
   }
 
@@ -384,8 +384,8 @@
       content: none;
     }
 
-    td:where(.#{$table}__td),
-    th:where(.#{$table}__th) {
+    th:where(.#{$table}__th),
+    td:where(.#{$table}__td) {
       &.pf-m-no-padding {
         .#{$table}__expandable-row-content {
           padding: 0;
@@ -541,7 +541,6 @@
 
     // No wrap
     &.pf-m-nowrap {
-      background: green;
       --#{$table}--cell--Overflow: auto;
     }
 
