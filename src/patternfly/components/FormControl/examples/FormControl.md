@@ -5,8 +5,6 @@ subsection: forms
 cssPrefix: pf-v5-c-form-control
 ---
 
-import './FormControl.css'
-
 ## Examples
 ### Input
 
