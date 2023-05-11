@@ -186,25 +186,25 @@
   }
 
   // Remove the border from the body inside of the nested table
-  table.pf-m-compact > tbody {
+  .#{$table}.pf-m-compact > tbody {
     border-top: 0;
   }
 
   // Table row
-  tr:not(.#{$table}__expandable-row) {
+  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
     border-bottom: var(--#{$table}-tr--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
   }
 
   // The last tr should always have a border width of 1px
-  tr:last-child,
+  tr:where(.#{$table}__tr):last-child,
   tbody:last-of-type:not(:only-of-type) > tr {
     border-bottom-width: var(--#{$table}-tr--responsive--last-child--BorderBottomWidth);
   }
 
-  tbody.pf-m-expanded {
+  > tbody.pf-m-expanded {
     border-bottom: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
 
-    tr:not(.#{$table}__expandable-row) {
+    > tr:not(.#{$table}__expandable-row) {
       border-bottom: 0;
     }
 
@@ -213,14 +213,14 @@
     }
   }
 
-  tr.pf-m-selected {
+  tr:where(.#{$table}__tr).pf-m-selected {
     --#{$table}__expandable-row--after--BorderLeftWidth: 0;
     --#{$table}__expandable-row--after--BorderColor: transparent;
   }
 
   // Standard table row (non-expandable)
   // exclude expandable rows
-  tr:not(.#{$table}__expandable-row) {
+  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
     display: grid;
     grid-template-columns: 1fr;
     height: auto;
@@ -265,7 +265,8 @@
   }
 
   // Standard td, in standard row (non-expandable)
-  [data-label] {
+  :where(.#{$table}__th)[data-label],
+  :where(.#{$table}__td)[data-label] {
     // default pf-v5-hidden-visible() mixin is called in table.scss. redefining variable here
     --#{$table}--cell--hidden-visible--Display: var(--#{$table}--m-grid--cell--hidden-visible--Display);
 
@@ -288,7 +289,7 @@
     }
   }
 
-  tr > * {
+  tr:where(.#{$table}__tr) > * {
     // Remove first child padding left
     &:first-child {
       --#{$table}--cell--PaddingLeft: 0;
@@ -309,7 +310,7 @@
 
     border: 0;
 
-    tr:not(.#{$table}__expandable-row) + tr:not(.#{$table}__expandable-row) {
+    tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) + tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
       --#{$table}-tr--responsive--PaddingTop: 0;
     }
   }
@@ -322,7 +323,7 @@
 
   // Compound expansion responsive
   // Tbody
-  tbody {
+  > tbody {
     position: relative;
 
     &::after {
@@ -338,7 +339,7 @@
     &.pf-m-expanded {
       --#{$table}--tbody--after--BorderLeftWidth: var(--#{$table}--tbody--after--border-width--base);
 
-      & tbody {
+      & :where(.#{$table}) > tbody {
         --#{$table}--tbody--after--BorderLeftWidth: 0;
       }
     }
@@ -383,7 +384,8 @@
       content: none;
     }
 
-    td, th {
+    td:where(.#{$table}__td),
+    th:where(.#{$table}__th) {
       &.pf-m-no-padding {
         .#{$table}__expandable-row-content {
           padding: 0;
@@ -402,7 +404,7 @@
   }
 
   // tr selected
-  tbody.pf-m-hoverable {
+  :where(.#{$table}) > tbody.pf-m-hoverable {
     --#{$table}--tbody--after--BorderLeftWidth: 0;
     --#{$table}--tbody--after--BorderLeftColor: transparent;
 
@@ -434,7 +436,7 @@
 
 
   // tr selected
-  tr.pf-m-selected {
+  tr:where(.#{$table}__tr).pf-m-selected {
     &::after {
       content: '';
       position: absolute;
@@ -447,7 +449,7 @@
   }
 
   // Set defaults
-  tr:not(.#{$table}__expandable-row) {
+  tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
     .#{$table}__toggle,
     .#{$table}__check,
     .#{$table}__favorite,
@@ -534,19 +536,26 @@
     }
   }
 
-  // No wrap
-  .pf-m-nowrap {
-    --#{$table}--cell--Overflow: auto;
-  }
 
-  // Fit content
-  .pf-m-fit-content {
-    width: auto;
-    white-space: normal;
-  }
+  :where([class*='#{$table}']),
+  :where([class*='#{$table}'] > :is(thead, tbody, tr)) {
 
-  .pf-m-truncate {
-    --#{$table}--cell--MaxWidth: 100%;
+    // No wrap
+    &.pf-m-nowrap {
+      background: green;
+      --#{$table}--cell--Overflow: auto;
+    }
+
+    // Fit content
+    &.pf-m-fit-content {
+      width: auto;
+      white-space: normal;
+    }
+
+    // Truncate
+    &.pf-m-truncate {
+      --#{$table}--cell--MaxWidth: 100%;
+    }
   }
 
   [class*="pf-m-width"] {
