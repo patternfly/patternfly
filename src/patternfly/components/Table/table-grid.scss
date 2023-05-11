@@ -151,7 +151,7 @@
   border: none;
 
   // reset cell modifications
-  > :where(tbody) > tr > * {
+  :where(.#{$table}__tr) > * {
     width: auto;
     min-width: 0;
     max-width: none;
@@ -538,7 +538,7 @@
 
 
   :where([class*='#{$table}']),
-  :where([class*='#{$table}'] > :is(thead, tbody, tr)) {
+  :where([class*='#{$table}'] > :is(thead, tbody)) {
 
     // No wrap
     &.pf-m-nowrap {

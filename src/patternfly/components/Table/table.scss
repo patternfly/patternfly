@@ -370,7 +370,7 @@
         background-color: var(--#{$table}--BorderColor);
       }
 
-      > tr:not(:nth-last-child(2)) {
+      tr:where(.#{$table}__tr):not(:nth-last-child(2)) {
         // stylelint-disable max-nesting-depth
         th:where(.#{$table}__th),
         td:where(.#{$table}__td) {
@@ -384,7 +384,7 @@
   }
 
   &:not(.pf-m-sticky-header) > .pf-m-nested-column-header {
-    > tr:not(:last-child) {
+    tr:where(.#{$table}__tr):not(:last-child) {
       border-bottom: 0; // hard reset tr borders in nested headers
 
       // stylelint-disable max-nesting-depth
@@ -424,7 +424,7 @@
   }
 
   // Table cell
-  tr > :where(.#{$table}__th, .#{$table}__td) {
+  tr:where(.#{$table}__tr) > * {
     @include pf-v5-hidden-visible(var(--#{$table}--cell--hidden-visible--Display));
 
     // set position relative for ::before/::after borders
@@ -529,7 +529,7 @@
         align-items: center;
       }
 
-      tr:not(:first-child) {
+      tr:where(.#{$table}__tr):not(:first-child) {
         th:where(.#{$table}__th),
         td:where(.#{$table}__td) {
           &:not([rowspan]) {
@@ -607,8 +607,11 @@
     min-width: var(--#{$table}__sort--MinWidth);
   }
 
-  :where(.#{$table}__th).pf-m-help {
-    min-width: var(--#{$table}--th--m-help--MinWidth);
+  :where(.#{$table}__th)[data-label],
+  :where(.#{$table}__td)[data-label] {
+    &.pf-m-help {
+      min-width: var(--#{$table}--th--m-help--MinWidth);
+    }
   }
 
   thead,
@@ -1254,7 +1257,7 @@
 // Nested table
 // ==================================================================
 .#{$table} .#{$table} {
-  tr > :where(.#{$table}__th, .#{$table}__td) {
+  tr:where(.#{$table}__tr) > * {
     // First child padding left
     &:first-child {
       --#{$table}--cell--PaddingLeft: var(--#{$table}--nested--first-last-child--PaddingLeft);
@@ -1274,7 +1277,6 @@
   --#{$table}--cell--PaddingTop: var(--#{$table}--m-compact--cell--PaddingTop);
   --#{$table}--cell--PaddingBottom: var(--#{$table}--m-compact--cell--PaddingBottom);
   --#{$table}--cell--PaddingRight: var(--#{$table}--m-compact--cell--PaddingLeft);
-
 
   tr {
     --#{$table}--cell--PaddingLeft: var(--#{$table}--m-compact--cell--PaddingLeft);
@@ -1301,7 +1303,7 @@
 
   // Thead only
   thead {
-    th,
+    th:where(.#{$table}__tr),
     .#{$table}__toggle {
       --#{$table}--cell--PaddingTop: var(--#{$table}--m-compact-th--PaddingTop);
       --#{$table}--cell--PaddingBottom: var(--#{$table}--m-compact-th--PaddingBottom);
@@ -1326,7 +1328,7 @@
   }
 
   // nested tables
-  .#{$table} & tr > * {
+  .#{$table} & tr:where(.#{$table}__tr) > * {
     &:first-child {
       --#{$table}--cell--PaddingLeft: var(--#{$table}--nested--first-last-child--PaddingLeft);
     }

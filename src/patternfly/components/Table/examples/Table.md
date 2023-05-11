@@ -113,7 +113,6 @@ import './Table.css'
 ```
 
 ### Basic table accessibility
-
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="grid"` | `.pf-v5-c-table` | Identifies the element that serves as the grid widget container. **Required** |
@@ -125,7 +124,7 @@ import './Table.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v5-c-table` | `<table>` | Initiates a table element. **Required** |
-| `.pf-v5-c-table__tr` | `<th>` | Initiates a table row. **Required** |
+| `.pf-v5-c-table__tr` | `<tr>` | Initiates a table row. **Required** |
 | `.pf-v5-c-table__th` | `<th>` | Initiates a table header cell. **Required** |
 | `.pf-v5-c-table__td` | `<td>` | Initiates a table data cell. **Required** |
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
@@ -4518,3 +4517,7 @@ By default, all table header cells are set to `white-space: nowrap`. If a `<th>`
 - One action button, positioned in the last cell of a non-expandable row.
 - Tabular data.
 - Compact presentation modifier (not compatible with expandable table).
+
+<script>
+  console.log('hello', this, @root)
+</script>

@@ -48,7 +48,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     }
 
     @for $i from 2 through $pf-v5-c-tree-view--MaxDepth {
-      tr[aria-level="#{$i}"] {
+      tr:where(#{$table}__tr)[aria-level="#{$i}"] {
         --#{$table}__tree-view-main--PaddingLeft: calc(var(--#{$table}__tree-view-main--nested-indent--base) * #{$i - 1} + var(--#{$table}__tree-view-main--indent--base));
       }
     }
@@ -173,7 +173,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   --#{$table}--m-tree-view-grid--c-dropdown--MarginTop: calc(#{pf-size-prem(6px)} * -1);
   --#{$table}--m-tree-view-grid--c-dropdown--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
 
-  tbody tr {
+  tbody tr:where(#{$table}__tr) {
     position: relative;
     outline-offset: var(--#{$table}--m-tree-view-grid--tr--OutlineOffset);
     border: none;
@@ -189,13 +189,13 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     }
   }
 
-  tr:not([hidden]) {
+  tr:where(#{$table}__tr):not([hidden]) {
     display: grid;
     grid-template-columns: 1fr max-content;
   }
 
   // target node rows
-  tr[aria-expanded] {
+  tr:where(#{$table}__tr)[aria-expanded] {
     .#{$table}__tree-view-title-cell {
       --#{$table}--cell--PaddingTop: var(--#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingTop);
     }
@@ -205,7 +205,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     }
   }
 
-  td:not(.#{$table}__tree-view-title-cell) {
+  td:where(#{$table}__tr):not(.#{$table}__tree-view-title-cell) {
     --#{$table}--cell--PaddingTop: var(--#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop);
     --#{$table}--cell--PaddingBottom: var(--#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom);
 
@@ -248,7 +248,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   tr:where(.#{$table}__tr).pf-m-tree-view-details-expanded {
     padding-bottom: var(--#{$table}--m-tree-view-grid--m-tree-view-details-expanded--PaddingBottom);
 
-    td[data-label] {
+    td:where(#{$table}__td)[data-label] {
       display: grid;
     }
   }
@@ -289,7 +289,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   }
 
   @for $i from 2 through $pf-v5-c-tree-view--MaxDepth {
-    tr[aria-level="#{$i}"] {
+    tr:where(#{$table}__tr)[aria-level="#{$i}"] {
       --#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft: calc(var(--#{$table}__tree-view-main--nested-indent--base) * #{$i - 1} + var(--#{$table}__tree-view-main--indent--base)); // indent, plus indent level, plus
     }
   }
