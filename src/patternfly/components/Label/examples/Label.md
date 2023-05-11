@@ -208,7 +208,7 @@ This style of label is used to add new labels to a label group.
 {{> label label--IsAdd=true label-text--value="Add Label"}}
 ```
 
-### Basic label grouo
+### Basic label group
 Use a label group to display multiple labels at once.
 
 ```hbs
