@@ -100,10 +100,10 @@
 
   // Form control icon 
   --#{$form-control}__icon--Color: var(--#{$pf-global}--icon--Color--light);
-  --#{$form-control}__icon--success--Color: var(--#{$pf-global}--success-color--100);
-  --#{$form-control}__icon--warning--Color: var(--#{$pf-global}--warning-color--100);
-  --#{$form-control}__icon--invalid--Color: var(--#{$pf-global}--danger-color--100);
-  --#{$form-control}__icon--disabled--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$form-control}__icon--m-status--Color: var(--#{$pf-global}--icon--Color--light);
+  --#{$form-control}--m-success__icon--Color: var(--#{$pf-global}--success-color--100);
+  --#{$form-control}--m-warning__icon--Color: var(--#{$pf-global}--warning-color--100);
+  --#{$form-control}--invalid__icon--Color: var(--#{$pf-global}--danger-color--100);
   --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - (2 * var(--#{$form-control}--BorderWidth)));
 
   // Form control utilities
@@ -213,7 +213,7 @@
   &.pf-m-error {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--invalid--PaddingRight);
     --#{$form-control}--BorderBottomColor: var(--#{$form-control}--invalid--BorderBottomColor);
-    --#{$form-control}__icon--Color: var(--#{$form-control}__icon--invalid--Color);
+    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--invalid__icon--Color);
     --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--invalid--BorderBottomWidth));
     --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--invalid--BorderBottomWidth));
     --#{$form-control}--PaddingBottom: var(--#{$form-control}--invalid--PaddingBottom);
@@ -227,11 +227,11 @@
 
   &.pf-m-success {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-success--PaddingRight);
+    --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-success--PaddingBottom);
     --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-success--BorderBottomColor);
-    --#{$form-control}__icon--Color: var(--#{$form-control}__icon--success--Color);
+    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-success__icon--Color);
     --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-success--BorderBottomWidth));
     --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-success--BorderBottomWidth));
-    --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-success--PaddingBottom);
 
     border-bottom-width: var(--#{$form-control}--m-success--BorderBottomWidth);
 
@@ -242,9 +242,9 @@
 
   &.pf-m-warning {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-warning--PaddingRight);
-    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-warning--BorderBottomColor);
-    --#{$form-control}__icon--Color: var(--#{$form-control}__icon--warning--Color);
     --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-warning--PaddingBottom);
+    --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-warning--BorderBottomColor);
+    --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-warning__icon--Color);
     --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-warning--BorderBottomWidth));
     --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-warning--BorderBottomWidth));
 
@@ -283,7 +283,6 @@
     }
   }
 
-  // TODO Is the intention that a select with placeholder always has lighter text, or should only the placeholder have that color?
   &.pf-m-placeholder > select {
     --#{$form-control}--Color: var(--#{$form-control}--placeholder--Color);
 
@@ -308,12 +307,11 @@
     resize: vertical;
   }
 
-  &:has(textarea),
   &.pf-m-resize-horizontal {
     min-width: fit-content;
   }
 
-  &.pf-m-resize-horizontal > textarea{
+  &.pf-m-resize-horizontal > textarea {
     resize: horizontal;
   }
 }
@@ -323,6 +321,10 @@
   align-items: center;
   height: var(--#{$form-control}__icon--Height);
   color: var(--#{$form-control}__icon--Color);
+
+  &.pf-m-status {
+    --#{$form-control}__icon--Color: var(--#{$form-control}__icon--m-status--Color);
+  }
 }
 
 .#{$form-control}__toggle-icon {

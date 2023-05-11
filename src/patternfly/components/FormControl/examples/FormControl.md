@@ -33,9 +33,9 @@ import './FormControl.css'
 <br>
 {{> form-control controlType="input" input="true" form-control--HasIcon="calendar" form-control--attribute='type="text" value="Calendar" id="input-calendar" name="input-calendar" aria-label="Calendar input example"'}}
 <br>
-{{> form-control controlType="input" input="true" form-control--HasIcon="clock" form-control--attribute='type="text" value="Clock" id="input-clock" name="input-clock" aria-label="Clock input example"'}}
+{{> form-control controlType="input" input="true" form-control--IsWarning="true" form-control--HasIcon="clock" form-control--attribute='type="text" value="Clock (invalid)" id="input-clock" name="input-clock" aria-label="Clock input example"'}}
 <br>
-{{> form-control controlType="input" input="true" form-control--IsWarning="true" form-control--HasIcon="bell" form-control--attribute='type="text" value="Custom icon" id="input-custom-icon" name="custom-icon" aria-label="Custom icon input example"'}}
+{{> form-control controlType="input" input="true" form-control--HasIcon="bell" form-control--attribute='type="text" value="Custom icon" id="input-custom-icon" name="custom-icon" aria-label="Custom icon input example"'}}
 ```
 
 ### Select

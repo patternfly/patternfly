@@ -1,7 +1,7 @@
 {{#if form-control--IsSuccess}}
-  {{> form-control-icon form-control--HasIcon="check-circle"}}
+  {{> form-control-icon form-control-icon--IsStatus="true" form-control--HasIcon="check-circle"}}
 {{else if form-control--IsWarning}}
-  {{> form-control-icon form-control--HasIcon="exclamation-triangle"}}
+  {{> form-control-icon form-control-icon--IsStatus="true" form-control--HasIcon="exclamation-triangle"}}
 {{else if form-control--IsError}}
-  {{> form-control-icon form-control--HasIcon="exclamation-circle"}}
+  {{> form-control-icon form-control-icon--IsStatus="true" form-control--HasIcon="exclamation-circle"}}
 {{/if}}
