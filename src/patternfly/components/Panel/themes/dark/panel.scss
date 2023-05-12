@@ -1,7 +1,7 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-theme-dark-panel() {
-  .pf-c-panel {
-    --pf-c-panel--m-raised--BackgroundColor: var(--pf-global--BackgroundColor--300);
+@mixin pf-v5-theme-dark-panel() {
+  .#{$panel} {
+    --#{$panel}--m-raised--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
   }
 }

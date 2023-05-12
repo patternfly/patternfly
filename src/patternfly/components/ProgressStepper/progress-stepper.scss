@@ -384,20 +384,12 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 }
 
 // Step title
-<<<<<<< HEAD
 .#{$progress-stepper}__step-title {
   font-size: var(--#{$progress-stepper}__step-title--FontSize);
   font-weight: var(--#{$progress-stepper}__step-title--FontWeight);
   color: var(--#{$progress-stepper}__step-title--Color);
   text-align: var(--#{$progress-stepper}__step-title--TextAlign);
-=======
-.#{$progress}__step-title {
-  font-size: var(--#{$progress}__step-title--FontSize);
-  font-weight: var(--#{$progress}__step-title--FontWeight);
-  color: var(--#{$progress}__step-title--Color);
-  text-align: var(--#{$progress}__step-title--TextAlign);
   background:none;
->>>>>>> 27ae2e7d (chore(theme): updates)
   border: 0;
 
   &.pf-m-help-text {

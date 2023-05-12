@@ -361,9 +361,9 @@
 
     > .#{$check} {
       --#{$menu-toggle}--PaddingRight: 0;
-      --pf-c-check__input--MarginTop: 0;
-      --pf-c-check__label--Color: currentcolor;
-      --pf-c-check__label--disabled--Color: currentcolor;
+      --#{$check}__input--MarginTop: 0;
+      --#{$check}__label--Color: currentcolor;
+      --#{$check}__label--disabled--Color: currentcolor;
 
       align-items: center;
       align-self: stretch;

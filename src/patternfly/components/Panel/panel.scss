@@ -105,6 +105,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/panel";
 
-@include pf-theme-dark {
-  @include pf-theme-dark-panel;
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-panel;
 }

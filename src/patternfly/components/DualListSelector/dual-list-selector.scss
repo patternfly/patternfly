@@ -336,6 +336,6 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/dual-list-selector";
 
-@include pf-theme-dark {
-  @include pf-theme-dark-dual-list-selector;
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-dual-list-selector;
 }

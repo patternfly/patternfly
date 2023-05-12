@@ -58,19 +58,19 @@
   }
 
   &::before {
-    background-color: var(-#{$droppable}--before--BackgroundColor);
-    opacity: var(-#{$droppable}--before--Opacity);
+    background-color: var(--#{$droppable}--before--BackgroundColor);
+    opacity: var(--#{$droppable}--before--Opacity);
   }
 
   &::after {
-    border: var(-#{$droppable}--after--BorderWidth, 0) solid var(-#{$droppable}--after--BorderColor, transparent);
+    border: var(--#{$droppable}--after--BorderWidth, 0) solid var(--#{$droppable}--after--BorderColor, transparent);
   }
 
   &.pf-m-dragging {
-    --#{$droppable}--before--BackgroundColor: var(-#{$droppable}--m-dragging--before--BackgroundColor);
-    --#{$droppable}--before--Opacity: var(-#{$droppable}--m-dragging--before--Opacity);
-    --#{$droppable}--after--BorderWidth: var(-#{$droppable}--m-dragging--after--BorderWidth);
-    --#{$droppable}--after--BorderColor: var(-#{$droppable}--m-dragging--after--BorderColor);
+    --#{$droppable}--before--BackgroundColor: var(--#{$droppable}--m-dragging--before--BackgroundColor);
+    --#{$droppable}--before--Opacity: var(--#{$droppable}--m-dragging--before--Opacity);
+    --#{$droppable}--after--BorderWidth: var(--#{$droppable}--m-dragging--after--BorderWidth);
+    --#{$droppable}--after--BorderColor: var(--#{$droppable}--m-dragging--after--BorderColor);
 
     position: relative;
   }
@@ -83,6 +83,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/drag-drop";
 
-@include pf-theme-dark {
-  @include pf-theme-dark-drag-drop;
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-drag-drop;
 }
