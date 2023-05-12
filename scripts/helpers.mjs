@@ -1,4 +1,83 @@
+import Handlebars from 'handlebars';
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
+import { getParams } from './params.mjs';
+
+export const kebabCase = (string) => {
+  return string.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/[\s_]+/g, '-').toLowerCase();
+}
+
+export const setVar = (varName, varValue, options) => {
+  if (!options.data) {
+    options.data = {};
+  }
+
+  options.data[varName] = varValue;
+};
+
+export const getVar = (varValue, that, options) => {
+  const mappedVariableName = options.data[varValue];
+
+  return that[mappedVariableName];
+};
+
+export const setRoot = (varName, varValue, options) => {
+  if (!options.data.root) {
+    options.data.root = {};
+  }
+
+  options.data.root[varName] = varValue;
+};
+
+export const getRoot = (varValue, that, options) => {
+  const mappedVariableName = options.data.root[varValue];
+
+  return that[mappedVariableName];
+};
+
+export const init = (options, setGlobal = false, ...params) => {
+  if (setGlobal) {
+    setVar('test', 'thing', options);
+  };
+
+  Object.values(params).forEach(param => {
+    setVar((`${param}` + '--' + `${param}`), ('component--' + `${param}`), options);
+    console.log('here')
+  });
+}
+
+// Create paramater list
+export const loadParams = function(className, target, list, root = false, options) {
+  let paramList = getParams();
+  paramList = paramList[list];
+
+  paramList.forEach((param) => {
+    setVar((`${className}` + '-' + `${param}`), (`${target}` + '--' + `${param}`), options);
+  })
+}
+
+export const constructPrefix = (prefix, namespace = patternflyNamespace, version = patternflyVersion, type = 'c') => {
+  if (prefix.length) {
+    namespace = null;
+    version = null;
+    type = null;
+  } else {
+    prefix = namespace + version + (type + '-');
+  }
+
+  return prefix;
+}
+
+// export const registerExample = function(name, context, options) {
+export const debug = (optionalValue, options) => {
+  console.log('Current Context');
+  console.log('====================');
+  console.log(this);
+  if (optionalValue) {
+    console.log('Value');
+    console.log('====================');
+    console.log(optionalValue);
+  }
+}
 
 /** Ignore the object appended by handlebars. */
 export const concat = (...params) => {
@@ -39,7 +118,6 @@ export const ifEquals = function () {
 // {{else}}
 //   something else
 // {{/ifAny}}
-
 export const ifAny = function () {
   const args = Array.prototype.slice.call(arguments, 0, -1);
   const options = arguments[arguments.length - 1];
@@ -61,18 +139,34 @@ export const ternary = (testValue, trueValue, fallback) => {
 /** Helper which allows a booleans value to be inversed, similar to how notting a variable with ! works in regular JS */
 export const inverse = (bool) => (bool ? null : 'true');
 
-export const pfv = (type) => {
-  const namespace = patternflyNamespace;
-  let version = patternflyVersion;
-  let prefix = 'c-';
+export const pfv = (type = '', namespace = '', version = '') => {
+  let el = 'c-';
+  let ns = patternflyNamespace;
+  let vn = patternflyVersion;
 
-  if (type === 'unset-prefix') {
-    prefix = '';
-  } else if (type === 'unset-version') {
-    version = '';
-  } else if (type.length) {
-    prefix = type + '-';
+  if (type.length) {
+    if (type === 'unset-type') {
+      el = '';
+    } else {
+      el = type + '-';
+    }
   }
 
-  return namespace + version + prefix;
+  if (namespace.length) {
+    ns = namespace + '-';
+  }
+
+  if (version.length) {
+    vn = version + '-';
+  }
+
+  if (namespace === 'unset-namespace') {
+    ns = '';
+  }
+
+  if (version === 'unset-version') {
+    vn = '';
+  }
+
+  return ns + vn + el;
 };

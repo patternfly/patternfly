@@ -1,12 +1,13 @@
 {{#>
   config
-  className='{nameDasherized}'
-  theme=''
+  className='example-component'
+  theme='penta'
 }}
 
 <div class="{{> set-class}}"
   {{> set-attribute}}>
   {{> @partial-block}}
+  {{debug}}
 </div>
 
 {{/config}}

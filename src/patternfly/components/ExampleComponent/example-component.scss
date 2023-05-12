@@ -1,0 +1,19 @@
+// Component variables follow this formula:
+// --#{$example-component}__element--modifier--state--PropertyCamelCase
+// @debug $example-component; // check your variable names located in src/patternfly/sass-utilities/component-namespaces
+
+// The value of component scoped variables is always defined by a global variable:
+
+.#{$example-component} {
+  // Example block variable
+  --#{$example-component}--Display: grid;
+  --#{$example-component}--Gap: var(--#{$pf-global}--gutter--md);
+
+  display: var(--#{$example-component}--Display);
+  gap: var(--#{$example-component}--Gap);
+}
+
+// Element
+.#{$example-component}__element {
+  font-size: var(--#{$example-component}__element--FontSize);
+}

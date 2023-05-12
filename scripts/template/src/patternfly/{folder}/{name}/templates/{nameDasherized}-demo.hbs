@@ -1,0 +1,17 @@
+{{#each ({name}Demo)}}
+  {{#> {nameDasherized} {nameDasherized}--index=@index {nameDasherized}--id=(concat '{nameDasherized}-' @index)}}
+    {{#> {nameDasherized}-title {nameDasherized}--id=(concat 'testing-' @index)}}
+      {{@index}}{{this.name}}
+    {{/{nameDasherized}-title}}
+    {{#> {nameDasherized}-body}}
+      Age: {{this.age}}
+      Index: {{@index}}
+    {{/{nameDasherized}-body}}
+    {{#> {nameDasherized}-footer}}
+      {{this.items.shoes}}
+      {{this.items.bike}}
+      {{this.items.url}}
+    {{/{nameDasherized}-footer}}
+    {{{html}}}
+  {{/{nameDasherized}}}
+{{/each}}

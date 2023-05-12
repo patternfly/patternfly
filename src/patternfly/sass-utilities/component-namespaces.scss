@@ -1,3 +1,6 @@
+// Example component
+$example-component: #{$pf-prefix} + 'c-base-component';
+
 // Globally scoped component variables
 // About Modal Box
 // stylelint-disable scss/dollar-variable-pattern
@@ -241,9 +244,6 @@ $table: #{$pf-prefix} + 'c-table';
 
 // Tabs
 $tabs: #{$pf-prefix} + 'c-tabs';
-
-// Text Input Group
-$test-demo: #{$pf-prefix} + 'c-test-demo';
 
 // Text Input Group
 $text-input-group: #{$pf-prefix} + 'c-text-input-group';

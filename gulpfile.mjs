@@ -23,7 +23,7 @@ const sassFiles = [
 ];
 const hbsFiles = ['./src/patternfly/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];
-const helperFiles = ['./scripts/helpers.mjs'];
+const helperFiles = ['./scripts/init.mjs', './scripts/params.mjs', './src/**/*.mjs', './scripts/helpers.mjs'];
 
 export function clean(cb) {
   const cleanGlobs = [

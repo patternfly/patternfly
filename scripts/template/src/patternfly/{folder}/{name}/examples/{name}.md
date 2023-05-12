@@ -12,5 +12,9 @@ cssPrefix: {nameBEM}
   Basic example content
 {{/{nameDasherized}}}
 ```
+### Demo
+```hbs
+{{> {nameDasherized}-demo}}
+```
 
 ## Documentation

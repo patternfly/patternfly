@@ -143,24 +143,26 @@ async function registerHelpers(file) {
 
   const changedHelpers = [];
 
+  registeredHelpers[file] = registeredHelpers[file] || {};
+
   // purge any deleted helpers
-  Object.keys(registeredHelpers).forEach((registeredHelperName) => {
+  Object.keys(registeredHelpers[file]).forEach((registeredHelperName) => {
     const helperRemoved = !helpers[registeredHelperName];
     if (helperRemoved) {
       hbsInstance.unregisterHelper(registeredHelperName);
-      delete registeredHelpers[registeredHelperName];
+      delete registeredHelpers[file][registeredHelperName];
       changedHelpers.push(registeredHelperName);
     }
   });
 
   // register new helpers / re-register changed helpers
   Object.keys(helpers || {}).forEach((helperName) => {
-    const currentFunctionality = registeredHelpers[helperName];
+    const currentFunctionality = registeredHelpers[file][helperName];
     const newFunctionality = helpers[helperName];
     const functionalityIsChanged = currentFunctionality?.toString() !== newFunctionality.toString();
 
     if (functionalityIsChanged) {
-      registeredHelpers[helperName] = newFunctionality;
+      registeredHelpers[file][helperName] = newFunctionality;
       changedHelpers.push(helperName);
       hbsInstance.registerHelper(helperName, newFunctionality);
     }

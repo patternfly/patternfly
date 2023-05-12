@@ -1,0 +1,9 @@
+{{#each (exampleArray)}}
+  {{#> example-component}}
+    {{#> example-component-body}}
+      {{#> list}}
+        <li>{{this.content}} {{@key}}</li>
+      {{/list}}
+    {{/example-component-body}}
+  {{/example-component}}
+{{/each}}

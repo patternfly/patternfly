@@ -1,0 +1,10 @@
+{{setVar 'component-root' (kebabCase this.className)}}
+{{setVar 'component-modifier' (concat @component-root '--modifier')}}
+
+{{!-- render prefix + className --}}
+{{constructPrefix}}{{this.className}}
+
+{{!-- component modifiers --}}
+{{#if (getVar 'component-modifier' this)}}
+  {{getVar 'component-modifier' this}}
+{{/if}}

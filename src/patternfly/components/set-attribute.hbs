@@ -1,0 +1,16 @@
+{{!-- load default parameters here --}}
+
+{{loadParams 'component' @component-root 'defaultPrefixes' options}}
+{{loadParams 'component' @component-root 'defaultAttributes' options}}
+
+{{#if set-attribute--form-attributes}}
+  {{loadParams 'component' @component-root 'formAttributes' options}}
+{{/if}}
+
+{{#if (getVar 'component-attribute' this)}}
+  {{{getVar 'component-attribute' this}}}
+{{/if}}
+
+{{#if (getVar 'component-id' this)}}
+  id="{{getVar 'component-id' this}}"
+{{/if}}

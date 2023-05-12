@@ -5,6 +5,7 @@ import through2 from 'through2';
 import prettyhtml from '@starptech/prettyhtml';
 import cheerio from 'cheerio';
 import { hbsInstance, hbsFileMap } from './html.mjs';
+import { params } from '../../params.mjs';
 
 const { src } = gulp;
 
@@ -36,6 +37,7 @@ export function generateSnippets(htmlIndexFiles) {
     try {
       const template = hbsInstance.compile(partial);
       const templateContext = {
+        PREFIXPARAMS: params,
         PLACEHOLDER: '$PLACEHOLDER',
         ...fileDefaults[partialName]
       };
