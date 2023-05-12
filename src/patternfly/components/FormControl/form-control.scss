@@ -37,24 +37,24 @@
   --#{$form-control}--m-expanded--BorderBottomColor: var(--#{$pf-global}--primary-color--100);
 
   // input placeholder style
-  --#{$form-control}--placeholder--Color: var(--#{$pf-global}--Color--dark-200);
-  --#{$form-control}--placeholder--child--Color: var(--#{$pf-global}--Color--100);
+  --#{$form-control}--m-placeholder--Color: var(--#{$pf-global}--Color--dark-200);
+  --#{$form-control}--m-placeholder--child--Color: var(--#{$pf-global}--Color--100);
 
   // input disabled style
-  --#{$form-control}--m-disabled--Color: var(--#{$pf-global}--m-disabled-color--100);
-  --#{$form-control}--m-disabled--BackgroundColor: var(--#{$pf-global}--m-disabled-color--300);
+  --#{$form-control}--m-disabled--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$form-control}--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
   --#{$form-control}--m-disabled--BorderColor: transparent;
 
   // input readonly style
-  --#{$form-control}--readonly--BackgroundColor: var(--#{$pf-global}--m-disabled-color--300);
-  --#{$form-control}--readonly--hover--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$form-control}--readonly--focus--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$pf-global}--BorderWidth--sm));
-  --#{$form-control}--readonly--focus--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$form-control}--readonly--focus--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$form-control}--m-readonly--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
+  --#{$form-control}--m-readonly--hover--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
+  --#{$form-control}--m-readonly--focus--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$pf-global}--BorderWidth--sm));
+  --#{$form-control}--m-readonly--focus--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form-control}--m-readonly--focus--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
 
   // input readonly plain style
-  --#{$form-control}--readonly--m-plain--BackgroundColor: transparent;
-  --#{$form-control}--readonly--m-plain--inset--base: 0;
+  --#{$form-control}--m-readonly--m-plain--BackgroundColor: transparent;
+  --#{$form-control}--m-readonly--m-plain--inset--base: 0;
 
   // Input m-success -- rename vars to m-success in breaking change release
   --#{$form-control}--m-success--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
@@ -81,19 +81,17 @@
   --#{$form-control}--m-icon--IconWidth: var(--#{$form-control}--FontSize);
   --#{$form-control}--m-icon--icon--spacer: var(--#{$pf-global}--spacer--sm);
   --#{$form-control}--m-icon--icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-error--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}--m-icon--IconWidth) + var(--#{$form-control}--m-icon--icon--spacer));
- 
-  // Select -- rename __select to --select in a breaking change release
-  --#{$form-control}--select--PaddingRight: calc(var(--#{$pf-global}--spacer--lg) + var(--#{$form-control}--BorderWidth) + var(--#{$form-control}--BorderWidth));
-  --#{$form-control}--select--PaddingLeft: calc(var(--#{$pf-global}--spacer--sm) - var(--#{$form-control}--BorderWidth));
+  --#{$form-control}__select--PaddingRight: calc(var(--#{$pf-global}--spacer--lg) + var(--#{$form-control}--BorderWidth) + var(--#{$form-control}--BorderWidth));
+  --#{$form-control}__select--PaddingLeft: calc(var(--#{$pf-global}--spacer--sm) - var(--#{$form-control}--BorderWidth));
 
   // Select success
-  --#{$form-control}--select--m-success--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+  --#{$form-control}__select--m-success--m-status--PaddingRight: var(--#{$pf-global}--spacer--3xl);
 
   // Select warning
-  --#{$form-control}--select--m-warning--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+  --#{$form-control}__select--m-warning--m-status--PaddingRight: var(--#{$pf-global}--spacer--3xl);
 
   // Select invalid
-  --#{$form-control}--select--m-error--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+  --#{$form-control}__select--m-error--m-status--PaddingRight: var(--#{$pf-global}--spacer--3xl);
 
   // Textarea
   --#{$form-control}--textarea--Width: var(--#{$form-control}--Width);
@@ -117,7 +115,7 @@
   --#{$form-control}__toggle-icon--PaddingLeft: var(--#{$form-control}--inset--base);
   --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - (2 * var(--#{$form-control}--BorderWidth)));
   --#{$form-control}__toggle-icon--Color: var(--#{$pf-global}--Color--100);
-  --#{$form-control}--m-disabled__toggle-icon--Color: var(--#{$pf-global}--m-disabled-color--100);
+  --#{$form-control}--m-disabled__toggle-icon--Color: var(--#{$pf-global}--disabled-color--100);
 
   // This component always needs to be light
   @include pf-v5-t-light("--#{$form-control}--Color");
@@ -150,7 +148,7 @@
   }
 
   > ::placeholder {
-    color: var(--#{$form-control}--placeholder--Color); // TODO update to set --#{$form-control}--Color in breaking change - also look for any other place to do that in this component
+    color: var(--#{$form-control}--m-placeholder--Color); // TODO update to set --#{$form-control}--Color in breaking change - also look for any other place to do that in this component
   }
   
   > :is(input, select) {
@@ -158,24 +156,24 @@
   }
 
   &.pf-m-readonly {
-    --#{$form-control}--BackgroundColor: var(--#{$form-control}--readonly--BackgroundColor);
+    --#{$form-control}--BackgroundColor: var(--#{$form-control}--m-readonly--BackgroundColor);
 
     // stylelint-disable selector-not-notation
     &:not(.pf-m-success, .pf-m-warning, .pf-m-error) {
       &:hover {
-        --#{$form-control}--BorderBottomColor: var(--#{$form-control}--readonly--hover--BorderBottomColor);
+        --#{$form-control}--BorderBottomColor: var(--#{$form-control}--m-readonly--hover--BorderBottomColor);
       }
 
       &:focus {
-        --#{$form-control}--focus--PaddingBottom: var(--#{$form-control}--readonly--focus--PaddingBottom);
-        --#{$form-control}--focus--BorderBottomWidth: var(--#{$form-control}--readonly--focus--BorderBottomWidth);
-        --#{$form-control}--focus--BorderBottomColor: var(--#{$form-control}--readonly--focus--BorderBottomColor);
+        --#{$form-control}--focus--PaddingBottom: var(--#{$form-control}--m-readonly--focus--PaddingBottom);
+        --#{$form-control}--focus--BorderBottomWidth: var(--#{$form-control}--m-readonly--focus--BorderBottomWidth);
+        --#{$form-control}--focus--BorderBottomColor: var(--#{$form-control}--m-readonly--focus--BorderBottomColor);
       }
     }
 
     &.pf-m-plain {
-      --#{$form-control}--readonly--BackgroundColor: var(--#{$form-control}--readonly--m-plain--BackgroundColor);
-      --#{$form-control}--inset--base: var(--#{$form-control}--readonly--m-plain--inset--base);
+      --#{$form-control}--m-readonly--BackgroundColor: var(--#{$form-control}--m-readonly--m-plain--BackgroundColor);
+      --#{$form-control}--inset--base: var(--#{$form-control}--m-readonly--m-plain--inset--base);
 
       border-color: transparent;
     }
@@ -219,6 +217,7 @@
     --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-error--BorderBottomWidth));
     --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-error--BorderBottomWidth));
     --#{$form-control}--PaddingBottom: var(--#{$form-control}--m-error--PaddingBottom);
+    --#{$form-control}__select--PaddingRight: var(--#{$form-control}__select--m-error--m-status--PaddingRight);
 
     border-bottom-width: var(--#{$form-control}--m-error--BorderBottomWidth);
 
@@ -234,6 +233,7 @@
     --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-success__icon--m-status--Color);
     --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-success--BorderBottomWidth));
     --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-success--BorderBottomWidth));
+    --#{$form-control}__select--PaddingRight: var(--#{$form-control}__select--m-success--m-status--PaddingRight);
 
     border-bottom-width: var(--#{$form-control}--m-success--BorderBottomWidth);
 
@@ -249,6 +249,7 @@
     --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-warning__icon--m-status--Color);
     --#{$form-control}__icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-warning--BorderBottomWidth));
     --#{$form-control}__toggle-icon--Height: calc(var(--#{$form-control}--Height) - var(--#{$form-control}--m-warning--BorderBottomWidth));
+    --#{$form-control}__select--PaddingRight: var(--#{$form-control}__select--m-warning--m-status--PaddingRight);
 
     border-bottom-width: var(--#{$form-control}--m-warning--BorderBottomWidth);
 
@@ -262,34 +263,22 @@
   }
 
   > select {
-    --#{$form-control}--PaddingRight: var(--#{$form-control}--select--PaddingRight);
-    --#{$form-control}--PaddingLeft: var(--#{$form-control}--select--PaddingLeft);
+    --#{$form-control}--PaddingRight: var(--#{$form-control}__select--PaddingRight);
+    --#{$form-control}--PaddingLeft: var(--#{$form-control}__select--PaddingLeft);
 
     // Firefox's select text has additional padding
     // stylelint-disable-next-line
     @-moz-document url-prefix() {
-      --#{$form-control}--PaddingRight: calc(var(--#{$form-control}--select--PaddingRight) - 1px);
-      --#{$form-control}--PaddingLeft: calc(var(--#{$form-control}--select--PaddingLeft) - 4px);
-    }
-
-    .pf-m-error {
-      --#{$form-control}--PaddingRight: var(--#{$form-control}--select--m-error--PaddingRight);
-    }
-
-    .pf-m-success {
-      --#{$form-control}--PaddingRight: var(--#{$form-control}--select--m-success--PaddingRight);
-    }
-
-    .pf-m-warning {
-      --#{$form-control}--PaddingRight: var(--#{$form-control}--select--m-warning--PaddingRight);
+      --#{$form-control}--PaddingRight: calc(var(--#{$form-control}__select--PaddingRight) - 1px);
+      --#{$form-control}--PaddingLeft: calc(var(--#{$form-control}__select--PaddingLeft) - 4px);
     }
   }
 
   &.pf-m-placeholder > select {
-    --#{$form-control}--Color: var(--#{$form-control}--placeholder--Color);
+    --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--Color);
 
     > * {
-      --#{$form-control}--Color: var(--#{$form-control}--placeholder--child--Color);
+      --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--child--Color);
 
       // stylelint-disable max-nesting-depth
       &:disabled {
