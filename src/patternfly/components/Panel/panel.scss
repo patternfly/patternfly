@@ -16,9 +16,9 @@
   --#{$panel}--m-bordered--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
 
   // raised
-  --#{$panel}--m-raised--BoxShadow: var(#{$panel}--BoxShadow--md);
-  --#{$panel}--m-raised--ZIndex: var(#{$panel}--ZIndex--sm);
-  --#{$panel}--m-raised--BackgroundColor: var(#{$panel}--BackgroundColor--100);
+  --#{$panel}--m-raised--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
+  --#{$panel}--m-raised--ZIndex: var(--#{$pf-global}--ZIndex--sm);
+  --#{$panel}--m-raised--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
 
   // header
   --#{$panel}__header--PaddingTop: var(--#{$pf-global}--spacer--md);
