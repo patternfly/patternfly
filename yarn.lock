@@ -1984,10 +1984,10 @@
     react-dropzone "14.2.3"
     tslib "^2.5.0"
 
-"@patternfly/react-core@5.0.0-alpha.98":
-  version "5.0.0-alpha.98"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-alpha.98.tgz#98b0921b95ccc223bfa2501634e0bb7d793ce9e6"
-  integrity sha512-LouTqxWPtvzK3834i1JW5kTjDoqIWnvbioZaRIJOuL3eGgBYk+ORpoa9EZ8j4r+NQWxeogMFgxzsP9Oe04xjcQ==
+"@patternfly/react-core@5.0.0-alpha.99":
+  version "5.0.0-alpha.99"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-alpha.99.tgz#23c9124e3575192fe1e0b0bd4abb4eebc21afd8c"
+  integrity sha512-a3neoDV0LdzQrf21LJ789CZCux8Sk4gj/n2bWc82PIZI7QAVusp8GKDSrNf5MtSSSe5RBE+0k4RqigzhkGiJ3w==
   dependencies:
     "@patternfly/react-icons" "^5.0.0-alpha.14"
     "@patternfly/react-styles" "^5.0.0-alpha.10"
