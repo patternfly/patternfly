@@ -2,7 +2,6 @@
 
 @mixin pf-v5-theme-dark-form-control() {
   .#{$form-control} {
-    --#{$form-control}__select--BackgroundUrl: #{pf-bg-svg($pf-v5-c-form-control__select--Coordinates, $pf-v5-c-form-control__select--ViewBox, $pf-v5-global--Color--100)};
     --#{$form-control}--BorderTopColor: transparent;
     --#{$form-control}--BorderRightColor: transparent;
     --#{$form-control}--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
@@ -19,7 +18,7 @@
       filter: #{"invert(1)"};
     }
 
-    &[readonly] {
+    &.pf-m-readonly {
       border-bottom-color: var(--#{$pf-global}--palette--black-700); // should be a var?
     }
   }

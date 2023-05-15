@@ -30,7 +30,6 @@
   }
 
   .#{$form-control} {
-    display: inline-flex;
     width: var(--#{$number-input}--c-form-control--Width);
     text-align: right;
 
