@@ -30,7 +30,7 @@
 
   // List
   --#{$nav}__list--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$nav}__list--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__list--PaddingBottom: var(--#{$pf-global}--spacer--sm);
 
   // Item
   --#{$nav}__item--MarginTop: 0;
@@ -178,7 +178,7 @@
   --#{$nav}--m-horizontal-subnav__link--m-current--after--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
 
   // Subnav
-  --#{$nav}__subnav--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__subnav--PaddingBottom: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__subnav--xl--PaddingLeft: var(--#{$nav}__link--PaddingLeft);
   --#{$nav}__subnav__link--MarginTop: 0;
   --#{$nav}__subnav__link--PaddingTop: var(--#{$pf-global}--spacer--sm);
@@ -1012,6 +1012,7 @@
   --#{$nav}--c-divider--PaddingLeft: var(--#{$nav}__subnav--c-divider--PaddingLeft);
 
   max-height: var(--#{$nav}__subnav--MaxHeight);
+  padding-bottom: var(--#{$nav}__subnav--PaddingBottom);
   padding-left: var(--#{$nav}__subnav--PaddingLeft);
   transition: var(--#{$nav}--Transition);
 
@@ -1019,6 +1020,10 @@
     --#{$nav}__link--FontSize: var(--#{$nav}__subnav__subnav__link--FontSize);
     --#{$nav}__link--PaddingLeft: var(--#{$nav}__subnav__subnav__link--PaddingLeft);
     --#{$nav}__subnav--PaddingLeft: var(--#{$nav}__subnav__subnav--PaddingLeft);
+  }
+
+  > .#{$nav}__list {
+    --#{$nav}__list--PaddingTop: 0;
   }
 
 
@@ -1093,6 +1098,10 @@
 
   &.pf-m-no-title {
     --#{$nav}__section--MarginTop: 0;
+  }
+
+  > .#{$nav}__list {
+    --#{$nav}__list--PaddingBottom: 0;
   }
 }
 
