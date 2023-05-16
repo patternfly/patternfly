@@ -1846,11 +1846,11 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
-  {{#> wrapper table-tr--IsClickable="true" table-tr--basic--title="Clickable"}}
+  {{#> table-tbody table-tr--IsClickable="true" table-tr--basic--title="Clickable"}}
     {{> table-tr--basic table-tr--basic--index="1"}}
     {{> table-tr--basic table-tr--basic--index="2" table-tr--IsSelected="true" table-tr--basic--title="<b>Clicked</b>"}}
     {{> table-tr--basic table-tr--basic--index="3"}}
-  {{/wrapper}}
+  {{/table-tbody}}
 {{/table}}
 ```
 
