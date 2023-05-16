@@ -113,7 +113,6 @@ import './Table.css'
 ```
 
 ### Basic table accessibility
-
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `role="grid"` | `.pf-v5-c-table` | Identifies the element that serves as the grid widget container. **Required** |
@@ -125,6 +124,12 @@ import './Table.css'
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v5-c-table` | `<table>` | Initiates a table element. **Required** |
+| `.pf-v5-c-table__thead` | `<tr>` | Initiates a table header. **Required** |
+| `.pf-v5-c-table__tbody` | `<tr>` | Initiates a table body. **Required** |
+| `.pf-v5-c-table__tfoot` | `<tr>` | Initiates a table footer. |
+| `.pf-v5-c-table__tr` | `<tr>` | Initiates a table row. **Required** |
+| `.pf-v5-c-table__th` | `<th>` | Initiates a table header cell. **Required** |
+| `.pf-v5-c-table__td` | `<td>` | Initiates a table data cell. **Required** |
 | `.pf-v5-c-table__caption` | `<caption>` | Initiates a table caption. |
 | `.pf-m-center` | `<th>`, `<td>` | Modifies cell to center its contents. |
 
@@ -1841,11 +1846,11 @@ Note: To apply padding to `.pf-v5-c-table__expandable-row`, wrap the content in 
       {{> table-td table-td--IsEmpty="true"}}
     {{/table-tr}}
   {{/table-thead}}
-  {{#> wrapper table-tr--IsClickable="true" table-tr--basic--title="Clickable"}}
+  {{#> table-tbody table-tr--IsClickable="true" table-tr--basic--title="Clickable"}}
     {{> table-tr--basic table-tr--basic--index="1"}}
     {{> table-tr--basic table-tr--basic--index="2" table-tr--IsSelected="true" table-tr--basic--title="<b>Clicked</b>"}}
     {{> table-tr--basic table-tr--basic--index="3"}}
-  {{/wrapper}}
+  {{/table-tbody}}
 {{/table}}
 ```
 
