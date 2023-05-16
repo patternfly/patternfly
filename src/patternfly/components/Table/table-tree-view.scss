@@ -48,7 +48,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     }
 
     @for $i from 2 through $pf-v5-c-tree-view--MaxDepth {
-      tr:where(#{$table}__tr)[aria-level="#{$i}"] {
+      tr:where(.#{$table}__tr)[aria-level="#{$i}"] {
         --#{$table}__tree-view-main--PaddingLeft: calc(var(--#{$table}__tree-view-main--nested-indent--base) * #{$i - 1} + var(--#{$table}__tree-view-main--indent--base));
       }
     }
@@ -134,10 +134,10 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   --#{$table}--m-tree-view-grid--tr--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
 
   // tbody cells
-  --#{$table}--m-tree-view-grid--tbody--cell--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$table}--m-tree-view-grid--tbody--cell--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft: var(--#{$table}__tree-view-main--indent--base);
-  --#{$table}--m-tree-view-grid--tbody--cell--GridColumnGap: var(--#{$pf-global}--spacer--sm);
+  --#{$table}--m-tree-view-grid__tbody--cell--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$table}--m-tree-view-grid__tbody--cell--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft: var(--#{$table}__tree-view-main--indent--base);
+  --#{$table}--m-tree-view-grid__tbody--cell--GridColumnGap: var(--#{$pf-global}--spacer--sm);
 
   // action
   --#{$table}--m-tree-view-grid--c-table__action--PaddingTop: var(--#{$pf-global}--spacer--md);
@@ -150,9 +150,9 @@ $pf-v5-c-tree-view--MaxDepth: 10;
 
   // node cells
   --#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingTop: var(--#{$pf-global}--spacer--xl);
-  --#{$table}--m-tree-view-grid--td--data-label--GridTemplateColumns: repeat(auto-fit, minmax(150px, 1fr));
-  --#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop: var(--#{$pf-global}--spacer--xs);
-  --#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom: var(--#{$pf-global}--spacer--xs);
+  --#{$table}--m-tree-view-grid__td--data-label--GridTemplateColumns: repeat(auto-fit, minmax(150px, 1fr));
+  --#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingTop: var(--#{$pf-global}--spacer--xs);
+  --#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingBottom: var(--#{$pf-global}--spacer--xs);
 
   // main
   --#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--MarginRight: 0;
@@ -162,8 +162,8 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   --#{$table}__tree-view-text--PaddingRight: var(--#{$pf-global}--spacer--sm);
 
   // tbody cells
-  --#{$table}--tbody--cell--PaddingTop: var(--#{$table}--m-tree-view-grid--tbody--cell--PaddingTop);
-  --#{$table}--tbody--cell--PaddingBottom: var(--#{$table}--m-tree-view-grid--tbody--cell--PaddingBottom);
+  --#{$table}__tbody--cell--PaddingTop: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingTop);
+  --#{$table}__tbody--cell--PaddingBottom: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingBottom);
 
   // toggle
   --#{$table}__tree-view-details-toggle--MarginTop: calc(#{pf-size-prem(6px)} * -1);
@@ -173,7 +173,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   --#{$table}--m-tree-view-grid--c-dropdown--MarginTop: calc(#{pf-size-prem(6px)} * -1);
   --#{$table}--m-tree-view-grid--c-dropdown--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
 
-  tbody tr:where(#{$table}__tr) {
+  tbody:where(.#{$table}__tbody) tr:where(.#{$table}__tr) {
     position: relative;
     outline-offset: var(--#{$table}--m-tree-view-grid--tr--OutlineOffset);
     border: none;
@@ -183,19 +183,19 @@ $pf-v5-c-tree-view--MaxDepth: 10;
       top: 0;
       right: 0;
       bottom: 0;
-      left: var(--#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft);
+      left: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft);
       border-bottom: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
       content: '';
     }
   }
 
-  tr:where(#{$table}__tr):not([hidden]) {
+  tr:where(.#{$table}__tr):not([hidden]) {
     display: grid;
     grid-template-columns: 1fr max-content;
   }
 
   // target node rows
-  tr:where(#{$table}__tr)[aria-expanded] {
+  tr:where(.#{$table}__tr)[aria-expanded] {
     .#{$table}__tree-view-title-cell {
       --#{$table}--cell--PaddingTop: var(--#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingTop);
     }
@@ -205,18 +205,18 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     }
   }
 
-  td:where(#{$table}__tr):not(.#{$table}__tree-view-title-cell) {
-    --#{$table}--cell--PaddingTop: var(--#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop);
-    --#{$table}--cell--PaddingBottom: var(--#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom);
+  td:where(.#{$table}__td):not(.#{$table}__tree-view-title-cell) {
+    --#{$table}--cell--PaddingTop: var(--#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingTop);
+    --#{$table}--cell--PaddingBottom: var(--#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingBottom);
 
-    padding-left: var(--#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft);
+    padding-left: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft);
   }
 
   .#{$table}__tree-view-text {
     padding-right: var(--#{$table}__tree-view-text--PaddingRight);
   }
 
-  thead th:where(.#{$table}__th) {
+  thead:where(.#{$table}__thead) th:where(.#{$table}__th) {
     display: none;
   }
 
@@ -227,10 +227,10 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   // Standard td, in standard row (non-expandable)
   td:where(.#{$table}__td)[data-label] {
     grid-column: 1;
-    grid-column-gap: var(--#{$table}--m-tree-view-grid--tbody--cell--GridColumnGap);
+    grid-column-gap: var(--#{$table}--m-tree-view-grid__tbody--cell--GridColumnGap);
 
     // use minmax func to contain possible text modifier width
-    grid-template-columns: var(--#{$table}--m-tree-view-grid--td--data-label--GridTemplateColumns);
+    grid-template-columns: var(--#{$table}--m-tree-view-grid__td--data-label--GridTemplateColumns);
     align-items: start;
 
     // set contents of td to start at column two of td grid
@@ -248,7 +248,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   tr:where(.#{$table}__tr).pf-m-tree-view-details-expanded {
     padding-bottom: var(--#{$table}--m-tree-view-grid--m-tree-view-details-expanded--PaddingBottom);
 
-    td:where(#{$table}__td)[data-label] {
+    td:where(.#{$table}__td)[data-label] {
       display: grid;
     }
   }
@@ -264,9 +264,9 @@ $pf-v5-c-tree-view--MaxDepth: 10;
 
   .#{$table}__action {
     --#{$table}--cell--Width: auto;
-    --#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingLeft);
-    --#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingTop: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingTop);
-    --#{$table}--m-tree-view-grid--td--not--c-table__tree-view-title-cell--PaddingBottom: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingBottom);
+    --#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingLeft);
+    --#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingTop: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingTop);
+    --#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingBottom: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingBottom);
 
     grid-column: 2;
     grid-row: 1;
@@ -289,8 +289,8 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   }
 
   @for $i from 2 through $pf-v5-c-tree-view--MaxDepth {
-    tr:where(#{$table}__tr)[aria-level="#{$i}"] {
-      --#{$table}--m-tree-view-grid--tbody--cell--PaddingLeft: calc(var(--#{$table}__tree-view-main--nested-indent--base) * #{$i - 1} + var(--#{$table}__tree-view-main--indent--base)); // indent, plus indent level, plus
+    tr:where(.#{$table}__tr)[aria-level="#{$i}"] {
+      --#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft: calc(var(--#{$table}__tree-view-main--nested-indent--base) * #{$i - 1} + var(--#{$table}__tree-view-main--indent--base)); // indent, plus indent level, plus
     }
   }
 }

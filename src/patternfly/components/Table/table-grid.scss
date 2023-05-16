@@ -41,42 +41,42 @@
   --#{$table}--responsive--BorderColor: var(--#{$pf-global}--BorderColor--300);
 
   // Body
-  --#{$table}--tbody--responsive--border-width--base: var(--#{$pf-global}--spacer--sm);
-  --#{$table}--tbody--after--border-width--base: var(--#{$pf-global}--BorderWidth--lg);
-  --#{$table}--tbody--after--BorderLeftWidth: 0;
-  --#{$table}--tbody--after--BorderColor: var(--#{$pf-global}--active-color--100);
+  --#{$table}__tbody--responsive--border-width--base: var(--#{$pf-global}--spacer--sm);
+  --#{$table}__tbody--after--border-width--base: var(--#{$pf-global}--BorderWidth--lg);
+  --#{$table}__tbody--after--BorderLeftWidth: 0;
+  --#{$table}__tbody--after--BorderColor: var(--#{$pf-global}--active-color--100);
 
   // Row
-  --#{$table}-tr--responsive--border-width--base: var(--#{$pf-global}--spacer--sm);
-  --#{$table}-tr--responsive--last-child--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$table}-tr--responsive--GridColumnGap: var(--#{$pf-global}--spacer--md);
-  --#{$table}-tr--responsive--MarginTop: var(--#{$pf-global}--spacer--sm);
-  --#{$table}-tr--responsive--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$table}-tr--responsive--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$table}-tr--responsive--xl--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$table}-tr--responsive--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$table}-tr--responsive--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$table}-tr--responsive--xl--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$table}__tr--responsive--border-width--base: var(--#{$pf-global}--spacer--sm);
+  --#{$table}__tr--responsive--last-child--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$table}__tr--responsive--GridColumnGap: var(--#{$pf-global}--spacer--md);
+  --#{$table}__tr--responsive--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$table}__tr--responsive--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$table}__tr--responsive--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$table}__tr--responsive--xl--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$table}__tr--responsive--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$table}__tr--responsive--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$table}__tr--responsive--xl--PaddingLeft: var(--#{$pf-global}--spacer--md);
 
   @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
-    --#{$table}-tr--responsive--PaddingRight: var(--#{$table}-tr--responsive--xl--PaddingRight);
-    --#{$table}-tr--responsive--PaddingLeft: var(--#{$table}-tr--responsive--xl--PaddingLeft);
+    --#{$table}__tr--responsive--PaddingRight: var(--#{$table}__tr--responsive--xl--PaddingRight);
+    --#{$table}__tr--responsive--PaddingLeft: var(--#{$table}__tr--responsive--xl--PaddingLeft);
   }
 
-  --#{$table}-tr--responsive--nested-table--PaddingTop: var(--#{$pf-global}--spacer--xl);
-  --#{$table}-tr--responsive--nested-table--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$table}-tr--responsive--nested-table--PaddingBottom: var(--#{$pf-global}--spacer--xl);
-  --#{$table}-tr--responsive--nested-table--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$table}__tr--responsive--nested-table--PaddingTop: var(--#{$pf-global}--spacer--xl);
+  --#{$table}__tr--responsive--nested-table--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$table}__tr--responsive--nested-table--PaddingBottom: var(--#{$pf-global}--spacer--xl);
+  --#{$table}__tr--responsive--nested-table--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
   // expandable
-  --#{$table}--tbody--after--tr--BorderLeftWidth: 0;
-  --#{$table}--tbody--after--tr--BorderLeftColor: transparent;
-  --#{$table}--tbody--m-expanded--after--tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
-  --#{$table}--tbody--m-expanded--after--tr--BorderLeftColor: var(--#{$pf-global}--active-color--400);
+  --#{$table}__tbody--after__tr--BorderLeftWidth: 0;
+  --#{$table}__tbody--after__tr--BorderLeftColor: transparent;
+  --#{$table}__tbody--m-expanded--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
+  --#{$table}__tbody--m-expanded--after__tr--BorderLeftColor: var(--#{$pf-global}--active-color--400);
 
   // selected
-  --#{$table}--tbody--m-selected--after--tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
-  --#{$table}--tbody--m-selected--after--tr--BorderLeftColor: var(--#{$pf-global}--active-color--100);
+  --#{$table}__tbody--m-selected--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
+  --#{$table}__tbody--m-selected--after__tr--BorderLeftColor: var(--#{$pf-global}--active-color--100);
 
   // Cell display
   --#{$table}--m-grid--cell--hidden-visible--Display: grid;
@@ -96,10 +96,10 @@
   --#{$table}--cell--responsive--PaddingLeft: 0;
 
   // Compact table
-  --#{$table}--m-compact-tr--responsive--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$table}--m-compact-tr--responsive--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$table}--m-compact-tr-td--responsive--PaddingTop: var(--#{$pf-global}--spacer--xs);
-  --#{$table}--m-compact-tr-td--responsive--PaddingBottom: var(--#{$pf-global}--spacer--xs);
+  --#{$table}--m-compact__tr--responsive--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$table}--m-compact__tr--responsive--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$table}--m-compact__tr__td--responsive--PaddingTop: var(--#{$pf-global}--spacer--xs);
+  --#{$table}--m-compact__tr__td--responsive--PaddingBottom: var(--#{$pf-global}--spacer--xs);
   --#{$table}--m-compact__action--responsive--MarginTop: calc(var(--#{$pf-global}--spacer--xs) * -1);
   --#{$table}--m-compact__action--responsive--MarginBottom: calc(var(--#{$pf-global}--spacer--xs) * -1);
   --#{$table}--m-compact__toggle--c-button--responsive--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
@@ -172,44 +172,44 @@
   }
 
   // Thead
-  > thead {
+  thead:where(.#{$table}__thead) {
     display: none;
   }
 
   // Tbody
-  > tbody {
+  tbody:where(.#{$table}__tbody) {
     display: block;
 
     &:first-of-type {
-      border-top: var(--#{$table}--tbody--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
+      border-top: var(--#{$table}__tbody--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
     }
   }
 
   // Remove the border from the body inside of the nested table
-  .#{$table}.pf-m-compact > tbody {
+  .#{$table}.pf-m-compact > tbody:where(.#{$table}__tbody) {
     border-top: 0;
   }
 
   // Table row
   tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-    border-bottom: var(--#{$table}-tr--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
+    border-bottom: var(--#{$table}__tr--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
   }
 
   // The last tr should always have a border width of 1px
   tr:where(.#{$table}__tr):last-child,
-  > tbody:last-of-type:not(:only-of-type) > tr {
-    border-bottom-width: var(--#{$table}-tr--responsive--last-child--BorderBottomWidth);
+  tbody:where(.#{$table}__tbody):last-of-type:not(:only-of-type) > tr:where(.#{$table}__tr) {
+    border-bottom-width: var(--#{$table}__tr--responsive--last-child--BorderBottomWidth);
   }
 
-  > tbody.pf-m-expanded {
+  tbody:where(.#{$table}__tbody).pf-m-expanded {
     border-bottom: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
 
-    > tr:not(.#{$table}__expandable-row) {
+    tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
       border-bottom: 0;
     }
 
     &:not(:last-of-type) {
-      border-bottom: var(--#{$table}--tbody--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
+      border-bottom: var(--#{$table}__tbody--responsive--border-width--base) solid var(--#{$table}--responsive--BorderColor);
     }
   }
 
@@ -227,10 +227,10 @@
 
     // set subsequent auto column width to max-content
     grid-auto-columns: max-content;
-    grid-column-gap: var(--#{$table}-tr--responsive--GridColumnGap);
+    grid-column-gap: var(--#{$table}__tr--responsive--GridColumnGap);
 
     // set base variables to reset later
-    padding: var(--#{$table}-tr--responsive--PaddingTop) var(--#{$table}-tr--responsive--PaddingRight) var(--#{$table}-tr--responsive--PaddingBottom) var(--#{$table}-tr--responsive--PaddingLeft);
+    padding: var(--#{$table}__tr--responsive--PaddingTop) var(--#{$table}__tr--responsive--PaddingRight) var(--#{$table}__tr--responsive--PaddingBottom) var(--#{$table}__tr--responsive--PaddingLeft);
 
     // Reset td padding
     & > * {
@@ -244,10 +244,10 @@
   }
 
   &.pf-m-compact {
-    --#{$table}-tr--responsive--PaddingTop: var(--#{$table}--m-compact-tr--responsive--PaddingTop);
-    --#{$table}-tr--responsive--PaddingBottom: var(--#{$table}--m-compact-tr--responsive--PaddingBottom);
-    --#{$table}--cell--responsive--PaddingTop: var(--#{$table}--m-compact-tr-td--responsive--PaddingTop);
-    --#{$table}--cell--responsive--PaddingBottom: var(--#{$table}--m-compact-tr-td--responsive--PaddingBottom);
+    --#{$table}__tr--responsive--PaddingTop: var(--#{$table}--m-compact__tr--responsive--PaddingTop);
+    --#{$table}__tr--responsive--PaddingBottom: var(--#{$table}--m-compact__tr--responsive--PaddingBottom);
+    --#{$table}--cell--responsive--PaddingTop: var(--#{$table}--m-compact__tr__td--responsive--PaddingTop);
+    --#{$table}--cell--responsive--PaddingBottom: var(--#{$table}--m-compact__tr__td--responsive--PaddingBottom);
     --#{$table}__check--input--MarginTop: 0;
 
     .#{$table}__action {
@@ -265,8 +265,7 @@
   }
 
   // Standard td, in standard row (non-expandable)
-  :where(.#{$table}__th)[data-label],
-  :where(.#{$table}__td)[data-label] {
+  :where(.#{$table}__th, .#{$table}__td)[data-label] {
     // default pf-v5-hidden-visible() mixin is called in table.scss. redefining variable here
     --#{$table}--cell--hidden-visible--Display: var(--#{$table}--m-grid--cell--hidden-visible--Display);
 
@@ -303,15 +302,15 @@
 
   // nested tables
   .#{$table} {
-    --#{$table}-tr--responsive--PaddingTop: var(--#{$table}-tr--responsive--nested-table--PaddingTop);
-    --#{$table}-tr--responsive--PaddingRight: var(--#{$table}-tr--responsive--nested-table--PaddingRight);
-    --#{$table}-tr--responsive--PaddingBottom: var(--#{$table}-tr--responsive--nested-table--PaddingBottom);
-    --#{$table}-tr--responsive--PaddingLeft: var(--#{$table}-tr--responsive--nested-table--PaddingLeft);
+    --#{$table}__tr--responsive--PaddingTop: var(--#{$table}__tr--responsive--nested-table--PaddingTop);
+    --#{$table}__tr--responsive--PaddingRight: var(--#{$table}__tr--responsive--nested-table--PaddingRight);
+    --#{$table}__tr--responsive--PaddingBottom: var(--#{$table}__tr--responsive--nested-table--PaddingBottom);
+    --#{$table}__tr--responsive--PaddingLeft: var(--#{$table}__tr--responsive--nested-table--PaddingLeft);
 
     border: 0;
 
     tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) + tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-      --#{$table}-tr--responsive--PaddingTop: 0;
+      --#{$table}__tr--responsive--PaddingTop: 0;
     }
   }
 
@@ -323,7 +322,7 @@
 
   // Compound expansion responsive
   // Tbody
-  > tbody {
+  tbody:where(.#{$table}__tbody) {
     position: relative;
 
     &::after {
@@ -333,18 +332,18 @@
       left: 0;
       content: "";
       border: 0;
-      border-left: var(--#{$table}--tbody--after--BorderLeftWidth) solid var(--#{$table}--tbody--after--BorderColor);
+      border-left: var(--#{$table}__tbody--after--BorderLeftWidth) solid var(--#{$table}__tbody--after--BorderColor);
     }
 
     &.pf-m-expanded {
-      --#{$table}--tbody--after--BorderLeftWidth: var(--#{$table}--tbody--after--border-width--base);
+      --#{$table}__tbody--after--BorderLeftWidth: var(--#{$table}__tbody--after--border-width--base);
 
-      & :where(.#{$table}) > tbody {
-        --#{$table}--tbody--after--BorderLeftWidth: 0;
+      & tbody:where(.#{$table}__tbody) {
+        --#{$table}__tbody--after--BorderLeftWidth: 0;
       }
     }
 
-    > tr > :first-child:not(.#{$table}__check)::after {
+    > tr:where(.#{$table}__tr) > :first-child:not(.#{$table}__check)::after {
       --#{$table}__expandable-row--after--BorderLeftWidth: 0;
 
       position: static;
@@ -404,33 +403,33 @@
   }
 
   // tr selected
-  :where(.#{$table}) > tbody.pf-m-hoverable {
-    --#{$table}--tbody--after--BorderLeftWidth: 0;
-    --#{$table}--tbody--after--BorderLeftColor: transparent;
+  tbody:where(.#{$table}__tbody).pf-m-hoverable {
+    --#{$table}__tbody--after--BorderLeftWidth: 0;
+    --#{$table}__tbody--after--BorderLeftColor: transparent;
 
     &,
-    > tr {
+    > tr:where(.#{$table}__tr) {
       position: relative;
     }
 
-    > tr::after {
+    > tr:where(.#{$table}__tr)::after {
       content: '';
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
-      width: var(--#{$table}--tbody--after--tr--BorderLeftWidth);
-      background-color: var(--#{$table}--tbody--after--tr--BorderLeftColor);
+      width: var(--#{$table}__tbody--after__tr--BorderLeftWidth);
+      background-color: var(--#{$table}__tbody--after__tr--BorderLeftColor);
     }
 
     &.pf-m-expanded {
-      --#{$table}--tbody--after--tr--BorderLeftWidth: var(--#{$table}--tbody--m-expanded--after--tr--BorderLeftWidth);
-      --#{$table}--tbody--after--tr--BorderLeftColor: var(--#{$table}--tbody--m-expanded--after--tr--BorderLeftColor);
+      --#{$table}__tbody--after__tr--BorderLeftWidth: var(--#{$table}__tbody--m-expanded--after__tr--BorderLeftWidth);
+      --#{$table}__tbody--after__tr--BorderLeftColor: var(--#{$table}__tbody--m-expanded--after__tr--BorderLeftColor);
     }
 
     &.pf-m-selected {
-      --#{$table}--tbody--after--tr--BorderLeftWidth: var(--#{$table}--tbody--m-selected--after--tr--BorderLeftWidth);
-      --#{$table}--tbody--after--tr--BorderLeftColor: var(--#{$table}--tbody--m-selected--after--tr--BorderLeftColor);
+      --#{$table}__tbody--after__tr--BorderLeftWidth: var(--#{$table}__tbody--m-selected--after__tr--BorderLeftWidth);
+      --#{$table}__tbody--after__tr--BorderLeftColor: var(--#{$table}__tbody--m-selected--after__tr--BorderLeftColor);
     }
   }
 
@@ -443,8 +442,8 @@
       top: 0;
       bottom: 0;
       left: 0;
-      width: var(--#{$table}--tr--m-selected--after--BorderLeftWidth);
-      background-color: var(--#{$table}--tr--m-selected--after--BorderLeftColor);
+      width: var(--#{$table}__tr--m-selected--after--BorderLeftWidth);
+      background-color: var(--#{$table}__tr--m-selected--after--BorderLeftColor);
     }
   }
 
@@ -536,8 +535,7 @@
     }
   }
 
-  :where([class*='#{$table}']),
-  :where(&) > :is(thead, tbody) {
+  :where(.#{$table}, .#{$table}__thead, .#{$table}__tbody, .#{$table}__tr, .#{$table}__th, .#{$table}__td, .#{$table}__text) {
 
     // No wrap
     &.pf-m-nowrap {
