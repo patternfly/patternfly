@@ -10,26 +10,26 @@ import './Text.css'
 ### Font family
 
 ```hbs
-{{#> text text--modifier="pf-v5-u-font-family-sans-serif"}}
-  Sans serif
+{{#> text text--modifier="pf-v5-u-font-family-text"}}
+  Text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-family-heading-sans-serif"}}
-  Heading sans serif
+{{#> text text--modifier="pf-v5-u-font-family-heading"}}
+  Heading
 {{/text}}
 {{#> text text--modifier="pf-v5-u-font-family-monospace"}}
   Monospace
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-family-redhatVF-sans-serif"}}
-  Red Hat variable font sans serif
+{{#> text text--modifier="pf-v5-u-font-family-text-vf"}}
+  Variable font text
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-family-redhatVF-heading-sans-serif"}}
-  Red Hat variable font heading sans serif
+{{#> text text--modifier="pf-v5-u-font-family-heading-vf"}}
+  Variable font heading
 {{/text}}
-{{#> text text--modifier="pf-v5-u-font-family-redhatVF-monospace"}}
-  Red Hat variable font monospace
+{{#> text text--modifier="pf-v5-u-font-family-monospace-vf"}}
+  Variable font monospace
 {{/text}}
-
 ```
+
 ### Font size
 
 ```hbs
@@ -72,7 +72,9 @@ import './Text.css'
   Bold
 {{/text}}
 ```
+
 ### Standard colors
+
 ```hbs
 {{#> text text--modifier="pf-v5-u-color-100"}}
   Font color 100
@@ -96,8 +98,10 @@ import './Text.css'
   Primary color 100
 {{/text}}
 ```
+
 ### Inverse colors
 These colors are best used with the ["inverse" background colors](/utilities/background-color#inverse-background-colors).
+
 ```hbs
 <div class="pf-v5-u-background-color-dark-400">
   {{#> text text--modifier="pf-v5-u-color-light-100"}}
@@ -108,7 +112,9 @@ These colors are best used with the ["inverse" background colors](/utilities/bac
   {{/text}}
 </div>
 ```
+
 ### Link colors
+
 ```hbs
   {{#> text text--modifier="pf-v5-u-link-color"}}
     Link color
@@ -134,7 +140,9 @@ These colors are best used with the ["inverse" background colors](/utilities/bac
     Visited link color
   {{/text}}
 ```
+
 ### Status and state text colors
+
 ```hbs
 {{#> text text--modifier="pf-v5-u-custom-color-100"}}
   Font color custom 100
@@ -173,7 +181,9 @@ These colors are best used with the ["inverse" background colors](/utilities/bac
   Font color danger 300
 {{/text}}
 ```
+
 ### Disabled text colors
+
 ```hbs
 {{#> text text--modifier="pf-v5-u-disabled-color-100"}}
   Font color disabled 100
@@ -184,6 +194,7 @@ These colors are best used with the ["inverse" background colors](/utilities/bac
 ```
 
 ### Icon colors
+
 ```hbs
 {{#> text text--modifier="pf-v5-u-icon-color-dark"}}
   <i class="fas fa-thumbtack" aria-hidden="true"></i>
@@ -235,30 +246,30 @@ Care should be taken especially when applying text colors, as this can have a ne
 
 ### Usage
 
-| Class                                                                  | Applied to | Outcome                                             |
-| ---------------------------------------------------------------------- | ---------- | --------------------------------------------------- |
-| `.pf-v5-u-font-size-{xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}`| `*`        | Sets font-size to xs, sm, md, lg, xl, 2xl, 3xl, or 4xl |
-| `.pf-v5-u-font-family-{sans-serif, heading-sans-serif, monospace, redhatVF-sans-serif, redhatVF-heading-sans-serif, redhatVF-monospace}`            | `*`        | Sets font-family to sans-serif, heading-sans-serif, or monospace; or Red Hat virtual font sans-serif, heading sans-serif, or monospace            |
-| `.pf-v5-u-font-weight-{light, normal, bold}{-on-[breakpoint]}`            | `*`        | Sets font-size to light, normal, or bold            |
-| `.pf-v5-u-color-{100, 200, 300, 400}{-on-[breakpoint]}`                   | `*`        | Sets font-color to color 100, 200, 300, or 400      |
-| `.pf-v5-u-active-color-{100, 400}{-on-[breakpoint]}`                      | `*`        | Sets font-color to active color 100 or 400          |
-| `.pf-v5-u-primary-color-100{-on-[breakpoint]}`                            | `*`        | Sets font-color to primary color 100                |
-| `.pf-v5-u-color-light-{100, 200}{-on-[breakpoint]}`                       | `*`        | Sets font-color to light color 100 or 200           |
-| `.pf-v5-u-link-color{-on-[breakpoint]}`                                   | `*`        | Sets font-color to link color                       |
-| `.pf-v5-u-link-color-hover{-on-[breakpoint]}`                             | `*`        | Sets font-color to hover link color                 |
-| `.pf-v5-u-link-color-light{-on-[breakpoint]}`                             | `*`        | Sets font-color to light link color                 |
-| `.pf-v5-u-link-color-light-hover{-on-[breakpoint]}`                       | `*`        | Sets font-color to light hover link color           |
-| `.pf-v5-u-link-color-dark{-on-[breakpoint]}`                              | `*`        | Sets font-color to dark link color                  |
-| `.pf-v5-u-link-color-dark-hover{-on-[breakpoint]}`                        | `*`        | Sets font-color to dark hover link color            |
-| `.pf-v5-u-link-color-visited{-on-[breakpoint]}`                           | `*`        | Sets font-color to visited link color               |
-| `.pf-v5-u-custom-color-{100, 200, 300}{-on-[breakpoint]}`                 | `*`        | Sets font-color to custom color 100, 200, or 300   |
-| `.pf-v5-u-success-color-{100, 200}{-on-[breakpoint]}`                     | `*`        | Sets font-color to success color 100 or 200         |
-| `.pf-v5-u-info-color-{100, 200}{-on-[breakpoint]}`                        | `*`        | Sets font-color to info color 100 or 200            |
-| `.pf-v5-u-warning-color-{100, 200}{-on-[breakpoint]}`                     | `*`        | Sets font-color to warning color 100 or 200         |
-| `.pf-v5-u-danger-color-{100, 200, 300}{-on-[breakpoint]}`                 | `*`        | Sets font-color to danger color 100, 200, or 300    |
-| `.pf-v5-u-disabled-color-{100, 200}{-on-[breakpoint]}`                    | `*`        | Sets font-color to disabled color 100 or 200        |
-| `.pf-v5-u-icon-color-{light, dark}{-on-[breakpoint]}`                     | `*`        | Sets font-color to light or dark icon color         |
-| `.pf-v5-u-text-break-word{-on-[breakpoint]}`                              | `*`        | Sets word-break to break-word                       |
-| `.pf-v5-u-text-nowrap{-on-[breakpoint]}`                                  | `*`        | Sets white-space to nowrap                          |
-| `.pf-v5-u-text-wrap{-on-[breakpoint]}`                                    | `*`        | Sets white-space to normal                          |
-| `.pf-v5-u-text-truncate`                                                  | `*`        | Truncates text field                                |
+| Class | Applied to | Outcome |
+| - | - | - |
+| `.pf-v5-u-font-size-{xs, sm, md, lg, xl, 2xl, 3xl, 4xl}{-on-[breakpoint]}`| `*` | Sets font-size to xs, sm, md, lg, xl, 2xl, 3xl, or 4xl |
+| `.pf-v5-u-font-family-{text, heading, monospace, text-vf, heading-vf, monospace-vf}` | `*` | Sets font-family to text, heading, or monospace, or the variable font variation of that font family |
+| `.pf-v5-u-font-weight-{normal, bold}{-on-[breakpoint]}` | `*` | Sets font-weight to light, normal, or bold |
+| `.pf-v5-u-color-{100, 200, 300, 400}{-on-[breakpoint]}` | `*` | Sets font-color to color 100, 200, 300, or 400 |
+| `.pf-v5-u-active-color-{100, 400}{-on-[breakpoint]}` | `*` | Sets font-color to active color 100 or 400 |
+| `.pf-v5-u-primary-color-100{-on-[breakpoint]}` | `*` | Sets font-color to primary color 100 |
+| `.pf-v5-u-color-light-{100, 200}{-on-[breakpoint]}` | `*` | Sets font-color to light color 100 or 200 |
+| `.pf-v5-u-link-color{-on-[breakpoint]}` | `*` | Sets font-color to link color |
+| `.pf-v5-u-link-color-hover{-on-[breakpoint]}` | `*` | Sets font-color to hover link color |
+| `.pf-v5-u-link-color-light{-on-[breakpoint]}` | `*` | Sets font-color to light link color |
+| `.pf-v5-u-link-color-light-hover{-on-[breakpoint]}` | `*` | Sets font-color to light hover link color |
+| `.pf-v5-u-link-color-dark{-on-[breakpoint]}` | `*` | Sets font-color to dark link color |
+| `.pf-v5-u-link-color-dark-hover{-on-[breakpoint]}` | `*` | Sets font-color to dark hover link color |
+| `.pf-v5-u-link-color-visited{-on-[breakpoint]}` | `*` | Sets font-color to visited link color |
+| `.pf-v5-u-custom-color-{100, 200, 300}{-on-[breakpoint]}` | `*` | Sets font-color to custom color 100, 200, or 300 |
+| `.pf-v5-u-success-color-{100, 200}{-on-[breakpoint]}` | `*` | Sets font-color to success color 100 or 200 |
+| `.pf-v5-u-info-color-{100, 200}{-on-[breakpoint]}` | `*` | Sets font-color to info color 100 or 200 |
+| `.pf-v5-u-warning-color-{100, 200}{-on-[breakpoint]}` | `*` | Sets font-color to warning color 100 or 200 |
+| `.pf-v5-u-danger-color-{100, 200, 300}{-on-[breakpoint]}` | `*` | Sets font-color to danger color 100, 200, or 300 |
+| `.pf-v5-u-disabled-color-{100, 200}{-on-[breakpoint]}` | `*` | Sets font-color to disabled color 100 or 200 |
+| `.pf-v5-u-icon-color-{light, dark}{-on-[breakpoint]}` | `*` | Sets font-color to light or dark icon color |
+| `.pf-v5-u-text-break-word{-on-[breakpoint]}` | `*` | Sets word-break to break-word |
+| `.pf-v5-u-text-nowrap{-on-[breakpoint]}` | `*` | Sets white-space to nowrap |
+| `.pf-v5-u-text-wrap{-on-[breakpoint]}` | `*` | Sets white-space to normal |
+| `.pf-v5-u-text-truncate` | `*` | Truncates text field |

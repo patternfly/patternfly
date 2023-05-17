@@ -193,15 +193,12 @@ $pf-v5-global--icon--FontSize--xl: pf-font-prem(54px) !default;
 // Fonts
 // Font family
 // stylelint-disable value-keyword-case
-$pf-v5-global--FontFamily--sans-serif: '"RedHatText", helvetica, arial, sans-serif';
-$pf-v5-global--FontFamily--heading--sans-serif: '"RedHatDisplay", helvetica, arial, sans-serif';
-$pf-v5-global--FontFamily--monospace: '"Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
-$pf-v5-global--FontFamily--redhat-updated--sans-serif: '"RedHatTextUpdated", helvetica, arial, sans-serif';
-$pf-v5-global--FontFamily--redhat-updated--heading--sans-serif: '"RedHatDisplayUpdated", helvetica, arial, sans-serif';
-$pf-v5-global--FontFamily--redhat--monospace: '"RedHatMono", "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
-$pf-v5-global--FontFamily--redhatVF--sans-serif: '"RedHatTextVF", "RedHatText", helvetica, arial, sans-serif';
-$pf-v5-global--FontFamily--redhatVF--heading--sans-serif: '"RedHatDisplayVF", "RedHatDisplay", helvetica, arial, sans-serif';
-$pf-v5-global--FontFamily--redhatVF--monospace: '"RedHatMonoVF", "RedHatMono", "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
+$pf-v5-global--FontFamily--text: '"RedHatText", helvetica, arial, sans-serif';
+$pf-v5-global--FontFamily--heading: '"RedHatDisplay", helvetica, arial, sans-serif';
+$pf-v5-global--FontFamily--monospace: '"RedHatMono", "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
+$pf-v5-global--FontFamily--text--vf: '"RedHatTextVF", "RedHatText", helvetica, arial, sans-serif';
+$pf-v5-global--FontFamily--heading--vf: '"RedHatDisplayVF", "RedHatDisplay", helvetica, arial, sans-serif';
+$pf-v5-global--FontFamily--monospace--vf: '"RedHatMonoVF", "RedHatMono", "Liberation Mono", consolas, "SFMono-Regular", menlo, monaco, "Courier New", monospace';
 // stylelint-enable value-keyword-case
 
 // Font size
@@ -215,7 +212,6 @@ $pf-v5-global--FontSize--sm: pf-font-prem(14px) !default;
 $pf-v5-global--FontSize--xs: pf-font-prem(12px) !default;
 
 // Font weight
-$pf-v5-global--FontWeight--light: 300 !default;
 $pf-v5-global--FontWeight--normal: 400 !default;
 $pf-v5-global--FontWeight--bold: 700 !default;
 

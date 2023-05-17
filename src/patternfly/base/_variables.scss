@@ -240,15 +240,12 @@
   // Fonts
 
   // Font family
-  --#{$pf-global}--FontFamily--sans-serif: #{$pf-v5-global--FontFamily--sans-serif};
-  --#{$pf-global}--FontFamily--heading--sans-serif: #{$pf-v5-global--FontFamily--heading--sans-serif};
+  --#{$pf-global}--FontFamily--text: #{$pf-v5-global--FontFamily--text};
+  --#{$pf-global}--FontFamily--heading: #{$pf-v5-global--FontFamily--heading};
   --#{$pf-global}--FontFamily--monospace: #{$pf-v5-global--FontFamily--monospace};
-  --#{$pf-global}--FontFamily--redhat-updated--sans-serif: #{$pf-v5-global--FontFamily--redhat-updated--sans-serif};
-  --#{$pf-global}--FontFamily--redhat-updated--heading--sans-serif: #{$pf-v5-global--FontFamily--redhat-updated--heading--sans-serif};
-  --#{$pf-global}--FontFamily--redhat--monospace: #{$pf-v5-global--FontFamily--redhat--monospace};
-  --#{$pf-global}--FontFamily--redhatVF--sans-serif: #{$pf-v5-global--FontFamily--redhatVF--sans-serif};
-  --#{$pf-global}--FontFamily--redhatVF--heading--sans-serif: #{$pf-v5-global--FontFamily--redhatVF--heading--sans-serif};
-  --#{$pf-global}--FontFamily--redhatVF--monospace: #{$pf-v5-global--FontFamily--redhatVF--monospace};
+  --#{$pf-global}--FontFamily--text--vf: #{$pf-v5-global--FontFamily--text--vf};
+  --#{$pf-global}--FontFamily--heading--vf: #{$pf-v5-global--FontFamily--heading--vf};
+  --#{$pf-global}--FontFamily--monospace--vf: #{$pf-v5-global--FontFamily--monospace--vf};
 
   // Font size
   --#{$pf-global}--FontSize--4xl: #{$pf-v5-global--FontSize--4xl};
@@ -261,7 +258,6 @@
   --#{$pf-global}--FontSize--xs: #{$pf-v5-global--FontSize--xs};
 
   // Font weight
-  --#{$pf-global}--FontWeight--light: #{$pf-v5-global--FontWeight--light};
   --#{$pf-global}--FontWeight--normal: #{$pf-v5-global--FontWeight--normal};
   --#{$pf-global}--FontWeight--bold: #{$pf-v5-global--FontWeight--bold};
 
@@ -284,22 +280,11 @@
   --#{$pf-global}--target-size--MinHeight: #{$pf-v5-global--target-size--MinHeight};
 }
 
-// RedHatFont updated font overrides
-.#{$pf-prefix}m-redhat-updated-font {
-  --#{$pf-global}--FontFamily--sans-serif: var(--#{$pf-global}--FontFamily--redhat-updated--sans-serif);
-  --#{$pf-global}--FontFamily--heading--sans-serif: var(--#{$pf-global}--FontFamily--redhat-updated--heading--sans-serif);
-}
-
-// RedHatMono font overrides
-.#{$pf-prefix}m-redhatmono-font {
-  --#{$pf-global}--FontFamily--monospace: var(--#{$pf-global}--FontFamily--redhat--monospace);
-}
-
-// RedHat variable font overrides
-.#{$pf-prefix}m-redhatVF-font {
-  --#{$pf-global}--FontFamily--sans-serif: var(--#{$pf-global}--FontFamily--redhatVF--sans-serif);
-  --#{$pf-global}--FontFamily--heading--sans-serif: var(--#{$pf-global}--FontFamily--redhatVF--heading--sans-serif);
-  --#{$pf-global}--FontFamily--monospace: var(--#{$pf-global}--FontFamily--redhatVF--monospace);
+// Variable font opt-in
+.pf-m-vf-font {
+  --#{$pf-global}--FontFamily--text: var(--#{$pf-global}--FontFamily--text--vf);
+  --#{$pf-global}--FontFamily--heading: var(--#{$pf-global}--FontFamily--heading--vf);
+  --#{$pf-global}--FontFamily--monospace: var(--#{$pf-global}--FontFamily--monospace--vf);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

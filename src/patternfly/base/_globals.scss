@@ -48,7 +48,7 @@
   }
 
   :where(body) {
-    font-family: var(--#{$pf-global}--FontFamily--sans-serif);
+    font-family: var(--#{$pf-global}--FontFamily--text);
     font-size: var(--#{$pf-global}--FontSize--md);
     font-weight: var(--#{$pf-global}--FontWeight--normal);
     line-height: var(--#{$pf-global}--LineHeight--md);

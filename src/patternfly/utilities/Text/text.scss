@@ -2,23 +2,23 @@
 
 // Font family options
 $pf-v5-u-font-family-options: (
-  font-family-sans-serif: (
-    font-family var(--#{$pf-global}--FontFamily--sans-serif)
+  font-family-text: (
+    font-family var(--#{$pf-global}--FontFamily--text)
   ),
-  font-family-heading-sans-serif: (
-    font-family var(--#{$pf-global}--FontFamily--heading--sans-serif)
+  font-family-heading: (
+    font-family var(--#{$pf-global}--FontFamily--heading)
   ),
   font-family-monospace: (
     font-family var(--#{$pf-global}--FontFamily--monospace)
   ),
-  font-family-redhatVF-sans-serif: (
-    font-family var(--#{$pf-global}--FontFamily--redhatVF--sans-serif)
+  font-family-text-vf: (
+    font-family var(--#{$pf-global}--FontFamily--text--vf)
   ),
-  font-family-redhatVF-heading-sans-serif: (
-    font-family var(--#{$pf-global}--FontFamily--redhatVF--heading--sans-serif)
+  font-family-heading-vf: (
+    font-family var(--#{$pf-global}--FontFamily--heading--vf)
   ),
-  font-family-redhatVF-monospace: (
-    font-family var(--#{$pf-global}--FontFamily--redhatVF--monospace)
+  font-family-monospace-vf: (
+    font-family var(--#{$pf-global}--FontFamily--monospace--vf)
   )
 );
 
@@ -56,9 +56,6 @@ $pf-v5-u-font-size-options: (
 
 // Font weight options
 $pf-v5-u-font-weight-options: (
-  font-weight-light: (
-    font-weight var(--#{$pf-global}--FontWeight--light)
-  ),
   font-weight-normal: (
     font-weight var(--#{$pf-global}--FontWeight--normal)
   ),
