@@ -1984,19 +1984,7 @@
     react-dropzone "14.2.3"
     tslib "^2.5.0"
 
-"@patternfly/react-core@5.0.0-alpha.101":
-  version "5.0.0-alpha.101"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-alpha.101.tgz#f02666982b9cff7b5dd64b1c402a1850cb65f370"
-  integrity sha512-f/ZWNUcQjKHeVYvrOtBDlFT5WNsWye4+/eoEILbfmdc2RjXEOtt/YZ8tqeFesVddUEivh0ja2Y8HLHrM+s0KPQ==
-  dependencies:
-    "@patternfly/react-icons" "^5.0.0-alpha.15"
-    "@patternfly/react-styles" "^5.0.0-alpha.11"
-    "@patternfly/react-tokens" "^5.0.0-alpha.10"
-    focus-trap "7.4.1"
-    react-dropzone "^14.2.3"
-    tslib "^2.5.0"
-
-"@patternfly/react-core@^5.0.0-alpha.102":
+"@patternfly/react-core@5.0.0-alpha.102", "@patternfly/react-core@^5.0.0-alpha.102":
   version "5.0.0-alpha.102"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-alpha.102.tgz#6963797833506eab73968f6d63fbf118e2e3f2cb"
   integrity sha512-3wO2zVchUWSIu0t/jp3wVGn8m28IH96N/V+ITVoGlUPe3Bt+LjBvVjX2vMwk/6uNStrE3LabI3VHR9akgFPm2A==
