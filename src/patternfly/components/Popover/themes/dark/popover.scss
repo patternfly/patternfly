@@ -4,7 +4,7 @@
   .#{$popover} {
     --#{$popover}__content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
     --#{$popover}__arrow--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
-    --#{$popover}--m-default__title-text--Color: var(--#{$pf-global}--custom-color--200);
+    --#{$popover}--m-custom__title-text--Color: var(--#{$pf-global}--custom-color--200);
     --#{$popover}--m-info__title-text--Color: var(--#{$pf-global}--info-color--100);
     --#{$popover}--m-success__title-text--Color: var(--#{$pf-global}--success-color--100);
   }

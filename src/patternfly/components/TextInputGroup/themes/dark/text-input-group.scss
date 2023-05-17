@@ -1,0 +1,11 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-v5-theme-dark-text-input-group() {
+  .#{$text-input-group} {
+    --#{$text-input-group}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+    --#{$text-input-group}--m-disabled--Color: var(--#{$pf-global}--disabled-color--300);
+    --#{$text-input-group}--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+    --#{$text-input-group}__text--before--BorderWidth: 0;
+    --#{$text-input-group}__text--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
+  }
+}

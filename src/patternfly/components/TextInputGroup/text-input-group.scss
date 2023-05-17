@@ -188,3 +188,10 @@
 .#{$text-input-group}__group {
   display: flex;
 }
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/text-input-group";
+
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-text-input-group;
+}

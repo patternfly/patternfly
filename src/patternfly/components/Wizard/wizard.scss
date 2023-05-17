@@ -57,7 +57,7 @@
   --#{$wizard}__nav-link--focus--Color: var(--#{$pf-global}--link--Color);
   --#{$wizard}__nav-link--m-current--Color: var(--#{$pf-global}--link--Color);
   --#{$wizard}__nav-link--m-current--FontWeight: var(--#{$pf-global}--FontWeight--normal); // remove at breaking change
-  --#{$wizard}__nav-link--m-disabled--Color: var(--#{$pf-global}--Color--dark-200);
+  --#{$wizard}__nav-link--m-disabled--Color: var(--#{$pf-global}--disabled-color--100);
   --#{$wizard}__nav-list__nav-list__nav-link--m-current--FontWeight: var(--#{$pf-global}--FontWeight--normal); // remove at breaking change
 
   // Nav link toggle icon
@@ -82,7 +82,7 @@
   --#{$wizard}__nav-link--m-current--before--BackgroundColor: var(--#{$pf-global}--active-color--100);
   --#{$wizard}__nav-link--m-current--before--Color: var(--#{$pf-global}--Color--light-100);
   --#{$wizard}__nav-link--m-disabled--before--BackgroundColor: transparent;
-  --#{$wizard}__nav-link--m-disabled--before--Color: var(--#{$pf-global}--Color--dark-200);
+  --#{$wizard}__nav-link--m-disabled--before--Color: var(--#{$pf-global}--disabled-color--100);
 
   // Toggle
   --#{$wizard}__toggle--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);

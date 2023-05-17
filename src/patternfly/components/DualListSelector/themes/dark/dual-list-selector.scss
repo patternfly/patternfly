@@ -1,0 +1,9 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-v5-theme-dark-dual-list-selector() {
+  .#{$dual-list-selector} {
+    --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+    --#{$dual-list-selector}__list-item-row--focus-within--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+    --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
+  }
+}

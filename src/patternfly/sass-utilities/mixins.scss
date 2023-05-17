@@ -168,7 +168,9 @@
 }
 
 @mixin pf-v5-t-light($color: "--#{$pf-global}--Color--100") {
-  color: var(#{$color});
+  @if $color {
+    color: var(#{$color});
+  }
 
   @extend %pf-v5-t-light;
 }

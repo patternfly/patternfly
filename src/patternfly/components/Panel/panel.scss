@@ -18,6 +18,7 @@
   // raised
   --#{$panel}--m-raised--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
   --#{$panel}--m-raised--ZIndex: var(--#{$pf-global}--ZIndex--sm);
+  --#{$panel}--m-raised--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
 
   // header
   --#{$panel}__header--PaddingTop: var(--#{$pf-global}--spacer--md);
@@ -71,6 +72,7 @@
   }
 
   &.pf-m-raised {
+    --#{$panel}--BackgroundColor: var(--#{$panel}--m-raised--BackgroundColor);
     --#{$panel}--BoxShadow: var(--#{$panel}--m-raised--BoxShadow);
     --#{$panel}--ZIndex: var(--#{$panel}--m-raised--ZIndex);
   }
@@ -98,4 +100,11 @@
 .#{$panel}__footer {
   padding: var(--#{$panel}__footer--PaddingTop) var(--#{$panel}__footer--PaddingRight) var(--#{$panel}__footer--PaddingBottom) var(--#{$panel}__footer--PaddingLeft);
   box-shadow: var(--#{$panel}__footer--BoxShadow);
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/panel";
+
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-panel;
 }

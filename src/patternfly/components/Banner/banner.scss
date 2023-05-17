@@ -26,9 +26,9 @@
 
   // modifier variables
   --#{$banner}--m-blue--BackgroundColor: var(--#{$pf-global}--palette--blue-200);
-  --#{$banner}--m-red--BackgroundColor: var(--#{$pf-global}--palette--red-100);
-  --#{$banner}--m-green--BackgroundColor: var(--#{$pf-global}--palette--green-500);
-  --#{$banner}--m-gold--BackgroundColor: var(--#{$pf-global}--palette--gold-400);
+  --#{$banner}--m-red--BackgroundColor: var(--#{$pf-global}--danger-color--100);
+  --#{$banner}--m-green--BackgroundColor: var(--#{$pf-global}--success-color--100);
+  --#{$banner}--m-gold--BackgroundColor: var(--#{$pf-global}--warning-color--100);
   --#{$banner}--m-sticky--ZIndex: var(--#{$pf-global}--ZIndex--md);
   --#{$banner}--m-sticky--BoxShadow: var(--#{$pf-global}--BoxShadow--md-bottom);
 
@@ -43,7 +43,7 @@
   background-color: var(--#{$banner}--BackgroundColor);
 
   &.pf-m-blue {
-    @include pf-v5-t-light;
+    @include pf-v5-t-light(false);
 
     --#{$banner}--BackgroundColor: var(--#{$banner}--m-blue--BackgroundColor);
   }
@@ -57,7 +57,7 @@
   }
 
   &.pf-m-gold {
-    @include pf-v5-t-light;
+    @include pf-v5-t-light(false);
 
     --#{$banner}--BackgroundColor: var(--#{$banner}--m-gold--BackgroundColor);
   }

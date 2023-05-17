@@ -34,9 +34,9 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   // List item
   --#{$dual-list-selector}__list-item-row--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$dual-list-selector}__list-item-row--BackgroundColor: transparent;
-  --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
-  --#{$dual-list-selector}__list-item-row--focus-within--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
-  --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
+  --#{$dual-list-selector}__list-item-row--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$dual-list-selector}__list-item-row--focus-within--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$dual-list-selector}__list-item-row--m-selected--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
   --#{$dual-list-selector}__list-item--m-ghost-row--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$dual-list-selector}__list-item--m-ghost-row--Opacity: .4;
 
@@ -332,3 +332,10 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   }
 }
 // stylelint-enable
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/dual-list-selector";
+
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-dual-list-selector;
+}

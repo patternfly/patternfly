@@ -4,6 +4,7 @@
   .#{$tabs} {
     --#{$tabs}__scroll-button--BackgroundColor: transparent;
     --#{$tabs}__link--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+    --#{$tabs}__link--disabled--Color: var(--#{$pf-global}--disabled-color--300);
     --#{$tabs}--m-color-scheme--light-300__link--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
   }
 }

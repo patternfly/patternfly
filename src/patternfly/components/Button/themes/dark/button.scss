@@ -3,9 +3,10 @@
 @mixin pf-v5-theme-dark-button() {
   .#{$button} {
     --#{$button}--disabled--Color: var(--#{$pf-global}--disabled-color--300);
-    --#{$button}--m-primary--BackgroundColor: var(--#{$pf-global}--primary-color--300); // should blue-400 be a primary-color?
+    --#{$button}--m-primary--BackgroundColor: var(--#{$pf-global}--primary-color--300);
+    --#{$button}--m-primary--Color: var(--#{$pf-global}--primary-color--400);
     --#{$button}--m-tertiary--after--BorderColor: var(--#{$pf-global}--BorderColor--100);
-    --#{$button}--m-tertiary--Color: var(--#{$pf-global}--palette--black-100); // global variable for this?
+    --#{$button}--m-tertiary--Color: var(--#{$pf-global}--palette--black-100);
     --#{$button}--m-tertiary--hover--after--BorderColor: var(--#{$pf-global}--BorderColor--100);
     --#{$button}--m-tertiary--hover--Color: var(--#{$pf-global}--palette--black-100);
     --#{$button}--m-tertiary--focus--after--BorderColor: var(--#{$pf-global}--BorderColor--100);
@@ -23,6 +24,7 @@
     --#{$button}--m-danger--hover--Color: var(--#{$pf-global}--palette--black-900);
     --#{$button}--m-danger--focus--Color: var(--#{$pf-global}--palette--black-900);
     --#{$button}--m-danger--active--Color: var(--#{$pf-global}--palette--black-900);
+    --#{$button}--m-link--disabled--Color: var(--#{$pf-global}--disabled-color--100);
     --#{$button}--m-control--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
     --#{$button}--m-control--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
     --#{$button}--m-control--active--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);

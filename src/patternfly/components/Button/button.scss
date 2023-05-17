@@ -111,6 +111,7 @@
   --#{$button}--m-link--active--BackgroundColor: transparent;
   --#{$button}--m-link--active--Color: var(--#{$pf-global}--link--Color--hover);
   --#{$button}--m-link--disabled--BackgroundColor: transparent;
+  --#{$button}--m-link--disabled--Color: var(--#{$pf-global}--disabled-color--100);
   --#{$button}--m-link--m-inline--FontSize: inherit;
   --#{$button}--m-link--m-inline--hover--TextDecoration: var(--#{$pf-global}--link--TextDecoration--hover);
   --#{$button}--m-link--m-inline--hover--Color: var(--#{$pf-global}--link--Color--hover);
@@ -352,6 +353,7 @@
   // Link buttons
   &.pf-m-link {
     --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-link--disabled--BackgroundColor);
+    --#{$button}--disabled--Color: var(--#{$button}--m-link--disabled--Color);
 
     color: var(--#{$button}--m-link--Color);
     background-color: var(--#{$button}--m-link--BackgroundColor);

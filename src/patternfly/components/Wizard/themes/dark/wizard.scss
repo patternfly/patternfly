@@ -4,8 +4,6 @@
   .#{$wizard} {
     --#{$wizard}__header--BackgroundColor: var(--#{$pf-global}--palette--black-1000);
     --#{$wizard}__nav-link--before--BackgroundColor: var(--#{$pf-global}--palette--black-500);
-    --#{$wizard}__nav-link--m-disabled--Color: var(--#{$pf-global}--disabled-color--300);
-    --#{$wizard}__nav-link--m-disabled--before--Color: var(--#{$pf-global}--disabled-color--300);
   }
 
   .#{$wizard}__header {
