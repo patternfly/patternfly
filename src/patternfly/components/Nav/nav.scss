@@ -993,6 +993,8 @@
 
 // Subnav
 .#{$nav}__subnav {
+  --#{$nav}__list--PaddingTop: 0;
+  --#{$nav}__list--PaddingBottom: 0;
   --#{$nav}__link--PaddingTop: var(--#{$nav}__subnav__link--PaddingTop);
   --#{$nav}__link--PaddingRight: var(--#{$nav}__subnav__link--PaddingRight);
   --#{$nav}__link--PaddingBottom: var(--#{$nav}__subnav__link--PaddingBottom);
@@ -1021,11 +1023,6 @@
     --#{$nav}__link--PaddingLeft: var(--#{$nav}__subnav__subnav__link--PaddingLeft);
     --#{$nav}__subnav--PaddingLeft: var(--#{$nav}__subnav__subnav--PaddingLeft);
   }
-
-  > .#{$nav}__list {
-    --#{$nav}__list--PaddingTop: 0;
-  }
-
 
   // remove at breaking change - not used
   &.pf-m-flyout {
@@ -1100,7 +1097,7 @@
     --#{$nav}__section--MarginTop: 0;
   }
 
-  > .#{$nav}__list {
+  &:not(:last-child) {
     --#{$nav}__list--PaddingBottom: 0;
   }
 }
