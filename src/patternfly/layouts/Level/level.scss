@@ -1,12 +1,12 @@
 .#{$level} {
-  --#{$level}--m-gutter--MarginRight: var(--#{$pf-global}--gutter);
+  --#{$level}--m-gutter--Gap: var(--#{$pf-global}--gutter);
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 
-  &.pf-m-gutter > *:not(:last-child) {
-    margin-right: var(--#{$level}--m-gutter--MarginRight);
+  &.pf-m-gutter {
+    gap: var(--#{$level}--m-gutter--Gap);
   }
 }
