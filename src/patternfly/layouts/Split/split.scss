@@ -1,5 +1,5 @@
 .#{$split} {
-  --#{$stack}--m-gutter--MarginRight: var(--#{$pf-global}--gutter);
+  --#{$stack}--m-gutter--Gap: var(--#{$pf-global}--gutter);
 
   display: flex;
   padding: 0;
@@ -14,6 +14,6 @@
   flex-grow: 1;
 }
 
-.#{$split}.pf-m-gutter > *:not(:last-child) {
-  margin-right: var(--#{$stack}--m-gutter--MarginRight);
+.#{$split}.pf-m-gutter {
+  gap: var(--#{$stack}--m-gutter--Gap);
 }

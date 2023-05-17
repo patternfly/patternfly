@@ -1,5 +1,5 @@
 .#{$stack} {
-  --#{$stack}--m-gutter--MarginBottom: var(--#{$pf-global}--gutter);
+  --#{$stack}--m-gutter--Gap: var(--#{$pf-global}--gutter);
 
   display: flex;
   flex-direction: column;
@@ -10,6 +10,6 @@
   flex-grow: 1;
 }
 
-.#{$stack}.pf-m-gutter > *:not(:last-child) {
-  margin-bottom: var(--#{$stack}--m-gutter--MarginBottom);
+.#{$stack}.pf-m-gutter {
+  gap: var(--#{$stack}--m-gutter--Gap);
 }
