@@ -1305,7 +1305,6 @@
   // Thead
   thead:where(.#{$table}__thead) {
     th:where(.#{$table}__th),
-    td:where(.#{$table}__td),
     .#{$table}__toggle {
       --#{$table}--cell--PaddingTop: var(--#{$table}--m-compact__th--PaddingTop);
       --#{$table}--cell--PaddingBottom: var(--#{$table}--m-compact__th--PaddingBottom);
