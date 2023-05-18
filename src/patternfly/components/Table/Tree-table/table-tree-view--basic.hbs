@@ -1,7 +1,7 @@
 {{#> table table--IsTree-view="true"}}
   {{#> table-thead table-tr--expanded="true"}}
     {{#> table-tr newcontext table-tr--tree--HasActions=table-tr--tree--HasActions}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--modifier="{{pfv}}table__tree-view-title-header-cell"}}
+      {{#> table-th table-th--attribute='scope="col"' table-th--modifier=(concat pfv 'table__tree-view-title-header-cell')}}
         Name
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
@@ -20,12 +20,14 @@
   {{/table-thead}}
 
   {{#if table--HasNoPosinset}}
-    {{> table-tr--tree table-tr--tree--index="1" table-tr--tree--title='Level 1, leaf 1'}}
-    {{> table-tr--tree table-tr--tree--index="2" table-tr--tree--title='Level 1, leaf 2'}}
-    {{> table-tr--tree table-tr--tree--index="3" table-tr--tree--title='Level 1, leaf 3'}}
-    {{> table-tr--tree table-tr--tree--index="4" table-tr--tree--title='Level 1, leaf 4'}}
-    {{> table-tr--tree table-tr--tree--index="5" table-tr--tree--title='Level 1, leaf 5'}}
-    {{> table-tr--tree table-tr--tree--index="6" table-tr--tree--title='Level 1, leaf 6'}}
+    {{#> table-tbody}}
+      {{> table-tr--tree table-tr--tree--index="1" table-tr--tree--title='Level 1, leaf 1'}}
+      {{> table-tr--tree table-tr--tree--index="2" table-tr--tree--title='Level 1, leaf 2'}}
+      {{> table-tr--tree table-tr--tree--index="3" table-tr--tree--title='Level 1, leaf 3'}}
+      {{> table-tr--tree table-tr--tree--index="4" table-tr--tree--title='Level 1, leaf 4'}}
+      {{> table-tr--tree table-tr--tree--index="5" table-tr--tree--title='Level 1, leaf 5'}}
+      {{> table-tr--tree table-tr--tree--index="6" table-tr--tree--title='Level 1, leaf 6'}}
+    {{/table-tbody}}
   {{else}}
     {{#> table-tbody table--IsTree-view--level="1" table--IsTree-view--setsize="1" table--IsTree-view--posinset="1"}}
       {{> table-tr--tree table-tr--tree--index="1" table-tr--expanded="true" table-tr--tree--title=(concat 'Level ' table--IsTree-view--level ' all folders')}}
