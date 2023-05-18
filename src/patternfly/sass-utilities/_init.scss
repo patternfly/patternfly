@@ -13,12 +13,14 @@ $pf-global: #{$pf-prefix} + 'global' !default;
 // stylelint-enable
 
 // Thematic variables
+// stylelint-disable scss/dollar-variable-pattern
 $pf-global--theme--namespace: $pf-global--namespace !default;
 $pf-global--theme--version: $pf-global--version !default;
 $pf-global--theme-dark--class: 'theme-dark' !default;
 $pf-global--theme-dark--placeholder--class: 't-dark' !default;
 $pf-global--theme-light--class: 'theme-light' !default;
 $pf-global--theme-light--placeholder--class: 't-light' !default;
+// stylelint-enable
 
 // Dark theme versioned variables
 $pf-v5--theme-dark--class: '.' + #{$pf-global--theme--namespace} + #{$pf-global--theme--version} + #{$pf-global--theme-dark--class} !default; // include the operator here

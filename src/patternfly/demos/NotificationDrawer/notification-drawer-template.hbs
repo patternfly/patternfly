@@ -1,0 +1,33 @@
+{{> page-template
+  page-template--id=(concat notification-drawer-template--id '-page')
+  page-template-header-tools-notification-badge--badge--modifier="pf-m-unread"
+  drawer-panel--IsOpen=notification-drawer--IsExpanded
+  notification-drawer-basic-list--AllRead=notification-drawer--IsRead
+  notification-drawer-basic-list--IsAttention=notification-drawer--IsAttention
+  masthead-template--HasNotificationDrawer="true"
+}}
+
+{{#* inline "page-template-main"}}
+  {{#> page-drawer}}
+    {{#> drawer}}
+      {{#> drawer-main}}
+        {{#> drawer-content}}
+          {{#> page-main}}
+            {{> page-template-breadcrumb}}
+            {{> page-template-title}}
+            {{> page-template-gallery}}
+          {{/page-main}}
+        {{/drawer-content}}
+        {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
+          {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}
+            {{#if notification-drawer-template--IsGroup}}
+              {{> notification-drawer-demo-groups}}
+            {{else}}
+              {{> notification-drawer-demo-basic}}
+            {{/if}}
+          {{/drawer-body}}
+        {{/drawer-panel}}
+      {{/drawer-main}}
+    {{/drawer}}
+  {{/page-drawer}}
+{{/inline}}
