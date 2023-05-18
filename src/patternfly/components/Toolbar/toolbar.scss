@@ -6,6 +6,7 @@ $pf-v5-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .#{$toolbar} {
+  --#{$toolbar}--AlignItems--base: flex-start;
   --#{$toolbar}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$toolbar}--RowGap--base: var(--#{$pf-global}--spacer--lg); // row-gap between toolbar content elements
   --#{$toolbar}--RowGap: var(--#{$toolbar}--RowGap--base);
@@ -20,7 +21,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   // Group
   --#{$toolbar}__group--Display: flex;
-  --#{$toolbar}__group--AlignItems: baseline;
+  --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--AlignItems--base);
   --#{$toolbar}__group--AlignSelf: auto;
   --#{$toolbar}__group--RowGap: var(--#{$toolbar}--item--RowGap--base);
 
@@ -28,15 +29,22 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}--m-sticky--ZIndex: var(--#{$pf-global}--ZIndex--xs);
   --#{$toolbar}--m-sticky--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom);
 
+  // Alignment options
+  --#{$toolbar}--m-align-items-center--AlignItems: center;
+  --#{$toolbar}--m-align-items-baseline--AlignItems: baseline;
+  --#{$toolbar}--m-align-self-center--AlignSelf: center;
+  --#{$toolbar}--m-align-self-baseline--AlignSelf: baseline;
+
   // Content
   --#{$toolbar}__content--Display: flex;
+  --#{$toolbar}__content--AlignItems: var(--#{$toolbar}--AlignItems--base);
   --#{$toolbar}__content--RowGap: var(--#{$toolbar}--RowGap--base);
   --#{$toolbar}__content--PaddingRight: var(--#{$pf-global}--spacer--md); // remove at breaking change
   --#{$toolbar}__content--PaddingLeft: var(--#{$pf-global}--spacer--md); // remove at breaking change
 
   // Content section
   --#{$toolbar}__content-section--Display: flex;
-  --#{$toolbar}__content-section--AlignItems: baseline;
+  --#{$toolbar}__content-section--AlignItems: var(--#{$toolbar}--AlignItems--base);
   --#{$toolbar}__content-section--RowGap: var(--#{$toolbar}--item--RowGap--base);
 
   // Insets
@@ -67,8 +75,8 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   // Spacer values
   --#{$toolbar}__item--spacer: var(--#{$toolbar}--spacer--base);
-  --#{$toolbar}__group--spacer: var(--#{$toolbar}--spacer--base);
   --#{$toolbar}__item--Width: auto;
+  --#{$toolbar}__group--spacer: var(--#{$toolbar}--spacer--base);
 
   // Toggle group
   --#{$toolbar}__group--m-toggle-group--spacer: var(--#{$pf-global}--spacer--sm);
@@ -123,7 +131,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}--m-full-height--PaddingTop: 0;
   --#{$toolbar}--m-full-height--PaddingBottom: 0;
   --#{$toolbar}--m-full-height__item--Display: flex;
-  --#{$toolbar}--m-full-height__item--AlignItems: center;
+  --#{$toolbar}--m-full-height__item--AlignItems: var(--#{$toolbar}__group--AlignItems);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
     --#{$toolbar}__expandable-content--PaddingRight: var(--#{$toolbar}__expandable-content--lg--PaddingRight);
@@ -211,6 +219,8 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 }
 
+
+
 // Group
 .#{$toolbar}__group {
   --#{$toolbar}--spacer: var(--#{$toolbar}__group--spacer);
@@ -223,19 +233,19 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   margin-right: var(--#{$toolbar}--spacer);
 
   &.pf-m-align-items-center {
-    align-items: center;
+    --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--m-align-items-center--AlignItems);
   }
 
   &.pf-m-align-items-baseline {
-    align-items: baseline;
+    --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--m-align-items-baseline--AlignItems);
   }
 
   &.pf-m-align-self-center {
-    align-self: center;
+    --#{$toolbar}__group--AlignSelf: var(--#{$toolbar}--m-align-self-center--AlignItems);
   }
 
   &.pf-m-align-self-baseline {
-    align-self: baseline;
+    --#{$toolbar}__group--AlignSelf: var(--#{$toolbar}--m-align-self-baseline--AlignItems);
   }
 
   // Button group
@@ -382,7 +392,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   position: relative;
   row-gap: var(--#{$toolbar}__content--RowGap);
-  align-items: center;
+  align-items: var(--#{$toolbar}__content--AlignItems);
   padding-right: var(--#{$toolbar}__content--PaddingRight);
   padding-left: var(--#{$toolbar}__content--PaddingLeft);
 }
@@ -396,7 +406,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   width: 100%;
 
   &.pf-m-align-items-center {
-    align-items: center;
+    --#{$toolbar}__content-section--AlignItems: var(--#{$toolbar}--m-align-items-center--AlignItems);
   }
 }
 
