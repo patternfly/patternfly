@@ -1,7 +1,7 @@
 // Always keep list of spacers and breakpoints up-to-date
 $pf-v5-l-flex--breakpoint-map: build-breakpoint-map();
 $pf-v5-l-flex--spacer-map: build-spacer-map();
-$pf-v5-l-flex--gap-map: build-spacer-map("base", "none", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl");
+$pf-v5-l-flex--gap-map: build-spacer-map("base", "none", "xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl");
 $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $pf-v5-l-flex--spacer-map);
 
 .#{$flex} {
