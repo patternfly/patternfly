@@ -75,7 +75,7 @@ Banners can be styled with one of 5 different colors. A basic banner should only
 ```
 
 ### Status
-When a banner is used to convey status, it is advised to add an icon that also conveys status visually, and to provide screen reader text using ` .pf-screen-reader ` or an equivalent.
+When a banner is used to convey status, it is advised to add an icon that also conveys status visually, and to provide screen reader text using ` .pf-v5-screen-reader ` or an equivalent.
 
 ```hbs
 {{#> banner}}
