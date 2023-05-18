@@ -120,7 +120,7 @@ The [WCAG 2.0 techniques](https://www.w3.org/TR/WCAG20-TECHS/Overview.html#conte
         <i class="..." aria-hidden="true"></i>
       </button>
       ```
-      - For non-interactive icons, include `.pf-screen-reader` text near the icon. Depending on the component, the `.pf-screen-reader` text might not be a direct sibling to the icon element. For example, in the alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-v5-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
+      - For non-interactive icons, include `.pf-v5-screen-reader` text near the icon. Depending on the component, the `.pf-v5-screen-reader` text might not be a direct sibling to the icon element. For example, in the alert component, the icon label text is adjacent to the message. This way, when `role="alert"` is added to `.pf-v5-c-alert__body` for dynamically displayed alerts, the type of message is announced along with the message text.
       ```html noLive
       <div class="pf-v5-c-alert pf-m-success" aria-label="Success alert">
         <div aria-hidden="true" class="pf-v5-c-alert__icon">

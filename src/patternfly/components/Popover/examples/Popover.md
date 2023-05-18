@@ -437,7 +437,7 @@ A popover is used to provide contextual information for another component on cli
 | `aria-modal="true"` | `.pf-v5-c-popover` | Tells assistive technologies that the windows underneath the current popover are not available for interaction. **Required**|
 | `aria-label="Close"` | `.pf-v5-c-button` | Provides an accessible name for the close button as it uses an icon instead of text. **Required**|
 | `aria-hidden="true"` | Parent element containing the page contents when the popover is open. | Hides main contents of the page from screen readers. The element with `.pf-v5-c-popover` must not be a descendent of the element with `aria-hidden="true"`. For more info, see [trapping focus](/accessibility/product-development-guide#trapping-focus). **Required** |
-| `.pf-screen-reader` | `.pf-v5-c-popover__title-text <span>` | Adds text to be read saying the alert status before the title. If `.pf-v5-c-popover__title-text` is not used to create a title, this must be added within the title. **Required for popovers that are alerts** |
+| `.pf-v5-screen-reader` | `.pf-v5-c-popover__title-text <span>` | Adds text to be read saying the alert status before the title. If `.pf-v5-c-popover__title-text` is not used to create a title, this must be added within the title. **Required for popovers that are alerts** |
 
 ### Usage
 | Class | Applied to | Outcome |

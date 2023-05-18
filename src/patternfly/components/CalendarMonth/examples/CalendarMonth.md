@@ -338,7 +338,7 @@ cssPrefix: pf-v5-c-calendar-month
 | -- | -- | -- |
 | `aria-hidden="true"` | `.pf-v5-c-calendar-month__header-nav-control > button > [icon]` | Hides the nav control icon from assistive technologies. **Required** |
 | `aria-hidden="true"` | `.pf-v5-c-calendar-month__day > span` | Hides the visual day of the month label from assistive technologies. **Required** |
-| `.pf-screen-reader` | `.pf-v5-c-calendar-month__day > span` | Hides the full day of the month text visually. **Required** |
+| `.pf-v5-screen-reader` | `.pf-v5-c-calendar-month__day > span` | Hides the full day of the month text visually. **Required** |
 | `aria-label="[Prev/Next] month"` | `.pf-v5-c-calendar-month__header-nav-control` | Provides an accessible label for the nav controls. **Required** |
 | `disabled` | `.pf-v5-c-calendar-month__date` | Indicates that a date is selected. **Required when the parent is `.pf-v5-c-calendar-month__dates-cell.pf-m-disabled`** |
 | `aria-label="[date] [month] [year]"` | `.pf-v5-c-calendar-month__date` | Provides an accessible label for the date button. **Required** |

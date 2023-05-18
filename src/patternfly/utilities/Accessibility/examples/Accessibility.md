@@ -15,7 +15,7 @@ Content available only to screen reader, open inspector to investigate
 ### Visible
 ```hbs
 {{#> accessibility accessibility--type="visible"}}
-    This class unsets .pf-v5-u-screen-reader and .pf-screen-reader. It will be visible.
+    This class unsets .pf-v5-u-screen-reader and .pf-v5-screen-reader. It will be visible.
 {{/accessibility}}
 ```
 
@@ -35,4 +35,4 @@ The text underneath is hidden.
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v5-u-screen-reader{-on-[breakpoint]}` | `*` |  Visually hides element, but leaves accessible to assistive technologies |
-| `.pf-v5-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-v5-u-screen-reader` and `.pf-screen-reader` |
+| `.pf-v5-u-visible{-on-[breakpoint]}` | `*` |  Unsets `.pf-v5-u-screen-reader` and `.pf-v5-screen-reader` |
