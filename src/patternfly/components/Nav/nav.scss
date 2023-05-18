@@ -28,6 +28,10 @@
   --#{$nav}--m-light__subnav__link--active--after--BorderColor: var(--#{$pf-global}--BorderColor--dark-100);
   --#{$nav}--m-light__subnav__link--m-current--after--BorderColor: var(--#{$pf-global}--active-color--100);
 
+  // List
+  --#{$nav}__list--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__list--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+
   // Item
   --#{$nav}__item--MarginTop: 0;
   --#{$nav}__item--m-current--not--m-expanded__link--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-400);
@@ -174,7 +178,7 @@
   --#{$nav}--m-horizontal-subnav__link--m-current--after--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
 
   // Subnav
-  --#{$nav}__subnav--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__subnav--PaddingBottom: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__subnav--xl--PaddingLeft: var(--#{$nav}__link--PaddingLeft);
   --#{$nav}__subnav__link--MarginTop: 0;
   --#{$nav}__subnav__link--PaddingTop: var(--#{$pf-global}--spacer--sm);
@@ -524,6 +528,9 @@
     overflow: hidden;
 
     .#{$nav}__list {
+      --#{$nav}__list--PaddingTop: 0;
+      --#{$nav}__list--PaddingBottom: 0;
+      
       flex: 1;
       max-width: 100%;
       overflow-x: auto;
@@ -731,13 +738,14 @@
 .#{$nav}__list {
   position: relative;
   display: block;
+  padding-top: var(--#{$nav}__list--PaddingTop);
+  padding-bottom: var(--#{$nav}__list--PaddingBottom);
 }
 
 // Borders
 .#{$nav}__item {
   position: relative;
-  margin-top: var(--#{$nav}__item--MarginTop);
-
+  
   &.pf-m-expandable {
     --#{$nav}__link--before--BorderBottomWidth: 0;
 
@@ -751,6 +759,10 @@
     }
   }
 
+  &:not(:first-child) {
+    margin-top: var(--#{$nav}__item--MarginTop);
+  }
+  
   .#{$nav}__item {
     &:not(.pf-m-expanded) .#{$nav}__toggle-icon {
       transform: rotate(0);
@@ -981,6 +993,8 @@
 
 // Subnav
 .#{$nav}__subnav {
+  --#{$nav}__list--PaddingTop: 0;
+  --#{$nav}__list--PaddingBottom: 0;
   --#{$nav}__link--PaddingTop: var(--#{$nav}__subnav__link--PaddingTop);
   --#{$nav}__link--PaddingRight: var(--#{$nav}__subnav__link--PaddingRight);
   --#{$nav}__link--PaddingBottom: var(--#{$nav}__subnav__link--PaddingBottom);
@@ -1009,7 +1023,6 @@
     --#{$nav}__link--PaddingLeft: var(--#{$nav}__subnav__subnav__link--PaddingLeft);
     --#{$nav}__subnav--PaddingLeft: var(--#{$nav}__subnav__subnav--PaddingLeft);
   }
-
 
   // remove at breaking change - not used
   &.pf-m-flyout {
@@ -1082,6 +1095,10 @@
 
   &.pf-m-no-title {
     --#{$nav}__section--MarginTop: 0;
+  }
+
+  &:not(:last-child) {
+    --#{$nav}__list--PaddingBottom: 0;
   }
 }
 
