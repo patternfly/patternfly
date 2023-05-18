@@ -30,6 +30,12 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}--m-sticky--ZIndex: var(--#{$pf-global}--ZIndex--xs);
   --#{$toolbar}--m-sticky--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom);
 
+  // Alignment options
+  --#{$toolbar}--m-align-items-center--AlignItems: center;
+  --#{$toolbar}--m-align-items-baseline--AlignItems: baseline;
+  --#{$toolbar}--m-align-self-center--AlignSelf: center;
+  --#{$toolbar}--m-align-self-baseline--AlignSelf: baseline;
+
   // Content
   --#{$toolbar}__content--Display: flex;
   --#{$toolbar}__content--AlignItems: var(--#{$toolbar}--AlignItems--base);
@@ -219,11 +225,11 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 
   &.pf-m-align-items-center {
-    align-items: center;
+    --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--m-align-items-center--AlignItems);
   }
 
   &.pf-m-align-items-baseline {
-    align-items: baseline;
+    --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--m-align-items-baseline--AlignItems);
   }
 
   &.pf-m-align-self-start {
@@ -231,11 +237,11 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 
   &.pf-m-align-self-center {
-    align-self: center;
+    --#{$toolbar}__group--AlignSelf: var(--#{$toolbar}--m-align-self-center--AlignItems);
   }
 
   &.pf-m-align-self-baseline {
-    align-self: baseline;
+    --#{$toolbar}__group--AlignSelf: var(--#{$toolbar}--m-align-self-baseline--AlignItems);
   }
 }
 
@@ -429,7 +435,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 
   &.pf-m-align-items-center {
-    align-items: center;
+    --#{$toolbar}__content-section--AlignItems: var(--#{$toolbar}--m-align-items-center--AlignItems);
   }
 
   &.pf-m-align-items-baseline {
