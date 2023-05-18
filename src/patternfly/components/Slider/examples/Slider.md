@@ -209,7 +209,7 @@ cssPrefix: pf-v5-c-slider
     {{#> slider-value slider-value--modifier="pf-m-floating"}}
       {{#> input-group}}
         {{#> input-group-item input-group-item--IsFill=true}}
-          {{> form-control controlType="input" input="true" form-control--attribute=(concat 'disabled type="number" value="' slider--value-now '" aria-label="Slider value input"')}}
+          {{> form-control form-control--IsDisabled="true" controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' slider--value-now '" aria-label="Slider value input"')}}
         {{/input-group-item}}
         {{#> input-group-item input-group-item--IsBox=true input-group-item--IsDisabled=true}}
           {{> input-group-text input-group-text--value="%"}}
@@ -303,7 +303,7 @@ cssPrefix: pf-v5-c-slider
   {{#> slider-value}}
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'disabled type="number" value="' slider--value-now '" aria-label="Slider value input"')}}
+        {{> form-control form-control--IsDisabled="true" controlType="input" input="true" form-control--attribute=(concat 'type="number" value="' slider--value-now '" aria-label="Slider value input"')}}
       {{/input-group-item}}
       {{#> input-group-item input-group-item--IsBox=true input-group-item--IsDisabled=true}}
         {{> input-group-text input-group-text--value="%"}}

@@ -12,7 +12,7 @@
   --#{$form-control}--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
   --#{$form-control}--BorderRadius: 0;
   --#{$form-control}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$form-control}--Width: auto;
+  --#{$form-control}--Width: 100%;
   --#{$form-control}--Height: calc(var(--#{$form-control}--FontSize) * var(--#{$form-control}--LineHeight) + var(--#{$form-control}--BorderWidth) * 2 + var(--#{$form-control}--PaddingTop) + var(--#{$form-control}--PaddingBottom)); // Needed for various browsers that compute height of form elements differently
 
   // padding
