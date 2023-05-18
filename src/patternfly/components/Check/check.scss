@@ -8,10 +8,10 @@
   --#{$check}__label--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$check}__label--LineHeight: var(--#{$pf-global}--LineHeight--sm);
   --#{$check}__input--Height: var(--#{$check}__label--FontSize);
-  --#{$check}__input--MarginTop: calc(((var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight)) - var(--#{$check}__input--Height)) / 2);
+  --#{$check}__input--TranslateY: calc(((var(--#{$check}__label--FontSize) * var(--#{$check}__label--LineHeight)) - var(--#{$check}__input--Height)) / 2);
   --#{$check}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$check}__description--Color: var(--#{$pf-global}--Color--200);
-  --#{$check}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$check}__body--TranslateY: var(--#{$pf-global}--spacer--sm);
 
   // Required checkbox
   --#{$check}__label-required--MarginLeft: var(--#{$pf-global}--spacer--xs);
@@ -25,7 +25,7 @@
   &.pf-m-standalone {
     --#{$check}--GridGap: 0;
     --#{$check}__input--Height: auto;
-    --#{$check}__input--MarginTop: 0;
+    --#{$check}__input--TranslateY: 0;
 
     display: inline-grid;
     line-height: 1;
@@ -41,7 +41,7 @@
 
 .#{$check}__input {
   height: var(--#{$check}__input--Height);
-  margin-top: var(--#{$check}__input--MarginTop);
+  transform: translateY(var(--#{$check}__input--TranslateY));
 }
 
 .#{$check}__description {
@@ -52,7 +52,7 @@
 
 .#{$check}__body {
   grid-column: 2;
-  margin-top: var(--#{$check}__body--MarginTop);
+  transform: translateY(var(--#{$check}__body--TranslateY));
 }
 
 .#{$check}__label,
