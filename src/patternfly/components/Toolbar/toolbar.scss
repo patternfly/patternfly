@@ -29,12 +29,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}--m-sticky--ZIndex: var(--#{$pf-global}--ZIndex--xs);
   --#{$toolbar}--m-sticky--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom);
 
-  // Alignment options
-  --#{$toolbar}--m-align-items-center--AlignItems: center;
-  --#{$toolbar}--m-align-items-baseline--AlignItems: baseline;
-  --#{$toolbar}--m-align-self-center--AlignSelf: center;
-  --#{$toolbar}--m-align-self-baseline--AlignSelf: baseline;
-
   // Content
   --#{$toolbar}__content--Display: flex;
   --#{$toolbar}__content--AlignItems: var(--#{$toolbar}--AlignItems--base);
@@ -219,8 +213,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 }
 
-
-
 // Group
 .#{$toolbar}__group {
   --#{$toolbar}--spacer: var(--#{$toolbar}__group--spacer);
@@ -232,20 +224,28 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   align-self: var(--#{$toolbar}__group--AlignSelf);
   margin-right: var(--#{$toolbar}--spacer);
 
+  &.pf-m-align-items-flex-start {
+    align-items: flex-start;
+  }
+
   &.pf-m-align-items-center {
-    --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--m-align-items-center--AlignItems);
+    align-items: center;
   }
 
   &.pf-m-align-items-baseline {
-    --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--m-align-items-baseline--AlignItems);
+    align-items: baseline;
+  }
+
+  &.pf-m-align-self-flex-start {
+    align-self: flex-start;
   }
 
   &.pf-m-align-self-center {
-    --#{$toolbar}__group--AlignSelf: var(--#{$toolbar}--m-align-self-center--AlignItems);
+    align-self: center;
   }
 
   &.pf-m-align-self-baseline {
-    --#{$toolbar}__group--AlignSelf: var(--#{$toolbar}--m-align-self-baseline--AlignItems);
+    align-self: baseline;
   }
 
   // Button group
@@ -311,6 +311,10 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   width: var(--#{$toolbar}__item--Width--base);
   min-width: var(--#{$toolbar}__item--MinWidth--base);
   margin-right: var(--#{$toolbar}--spacer);
+
+  &.pf-m-align-self-flex-start {
+    align-self: flex-start;
+  }
 
   &.pf-m-align-self-center {
     align-self: center;
@@ -405,8 +409,16 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   align-items: var(--#{$toolbar}__content-section--AlignItems);
   width: 100%;
 
+  &.pf-m-align-items-flex-start {
+    align-items: flex-start;
+  }
+
   &.pf-m-align-items-center {
-    --#{$toolbar}__content-section--AlignItems: var(--#{$toolbar}--m-align-items-center--AlignItems);
+    align-items: center;
+  }
+
+  &.pf-m-align-items-baseline {
+    align-items: baseline;
   }
 }
 
