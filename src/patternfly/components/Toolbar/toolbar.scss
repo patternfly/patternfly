@@ -211,18 +211,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
       --#{$toolbar}--spacer: 0;
     }
   }
-}
-
-// Group
-.#{$toolbar}__group {
-  --#{$toolbar}--spacer: var(--#{$toolbar}__group--spacer);
-
-  @include pf-v5-hidden-visible(var(--#{$toolbar}__group--Display));
-
-  row-gap: var(--#{$toolbar}__group--RowGap);
-  align-items: var(--#{$toolbar}__group--AlignItems);
-  align-self: var(--#{$toolbar}__group--AlignSelf);
-  margin-right: var(--#{$toolbar}--spacer);
 
   &.pf-m-align-items-flex-start {
     align-items: flex-start;
@@ -247,6 +235,18 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   &.pf-m-align-self-baseline {
     align-self: baseline;
   }
+}
+
+// Group
+.#{$toolbar}__group {
+  --#{$toolbar}--spacer: var(--#{$toolbar}__group--spacer);
+
+  @include pf-v5-hidden-visible(var(--#{$toolbar}__group--Display));
+
+  row-gap: var(--#{$toolbar}__group--RowGap);
+  align-items: var(--#{$toolbar}__group--AlignItems);
+  align-self: var(--#{$toolbar}__group--AlignSelf);
+  margin-right: var(--#{$toolbar}--spacer);
 
   // Button group
   &.pf-m-button-group {
