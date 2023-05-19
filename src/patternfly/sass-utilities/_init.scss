@@ -30,4 +30,4 @@ $pf-v5--theme-dark--placeholder--class: '.' + #{$pf-global--theme--namespace} + 
 // Light theme versioned variables
 $pf-v5--theme-light--class: '.' + #{$pf-global--theme--namespace} + #{$pf-global--theme--version} + #{$pf-global--theme-light--class} !default; // include the operator here
 $pf-v5--theme-light--target: ':root' !default; // include the operator here
-$pf-v5--theme-light--placeholder--class: '.' + #{$pf-global--theme--namespace} + #{$pf-global--theme--version} + #{$pf-global--theme-light--class} !default; // include the operator here
+$pf-v5--theme-light--placeholder--class: '.' + #{$pf-global--theme--namespace} + #{$pf-global--theme--version} + #{$pf-global--theme-light--placeholder--class} !default; // include the operator here
