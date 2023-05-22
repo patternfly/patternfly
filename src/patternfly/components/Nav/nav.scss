@@ -29,8 +29,8 @@
   --#{$nav}--m-light__subnav__link--m-current--after--BorderColor: var(--#{$pf-global}--active-color--100);
 
   // List
-  --#{$nav}__list--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$nav}__list--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__list--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__list--MarginBottom: var(--#{$pf-global}--spacer--sm);
 
   // Item
   --#{$nav}__item--MarginTop: 0;
@@ -528,8 +528,8 @@
     overflow: hidden;
 
     .#{$nav}__list {
-      --#{$nav}__list--PaddingTop: 0;
-      --#{$nav}__list--PaddingBottom: 0;
+      --#{$nav}__list--MarginTop: 0;
+      --#{$nav}__list--MarginBottom: 0;
       
       flex: 1;
       max-width: 100%;
@@ -738,8 +738,8 @@
 .#{$nav}__list {
   position: relative;
   display: block;
-  padding-top: var(--#{$nav}__list--PaddingTop);
-  padding-bottom: var(--#{$nav}__list--PaddingBottom);
+  margin-top: var(--#{$nav}__list--MarginTop);
+  margin-bottom: var(--#{$nav}__list--MarginBottom);
 }
 
 // Borders
@@ -993,8 +993,8 @@
 
 // Subnav
 .#{$nav}__subnav {
-  --#{$nav}__list--PaddingTop: 0;
-  --#{$nav}__list--PaddingBottom: 0;
+  --#{$nav}__list--MarginTop: 0;
+  --#{$nav}__list--MarginBottom: 0;
   --#{$nav}__link--PaddingTop: var(--#{$nav}__subnav__link--PaddingTop);
   --#{$nav}__link--PaddingRight: var(--#{$nav}__subnav__link--PaddingRight);
   --#{$nav}__link--PaddingBottom: var(--#{$nav}__subnav__link--PaddingBottom);
@@ -1095,10 +1095,6 @@
 
   &.pf-m-no-title {
     --#{$nav}__section--MarginTop: 0;
-  }
-
-  &:not(:last-child) {
-    --#{$nav}__list--PaddingBottom: 0;
   }
 }
 
