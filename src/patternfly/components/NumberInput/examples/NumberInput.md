@@ -144,7 +144,7 @@ cssPrefix: pf-v5-c-number-input
       {{/button}}
     {{/input-group-item}}
     {{#> input-group-item input-group-item--IsFill=true}}
-      {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="number" value="100" name="' number-input--id '-name" aria-label="Number input" disabled')}}
+      {{> form-control controlType="input" input="true" form-control--IsDisabled='true' form-control--attribute=(concat 'type="number" value="100" name="' number-input--id '-name" aria-label="Number input"')}}
     {{/input-group-item}}
     {{#> input-group-item}}
       {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus" disabled'}}

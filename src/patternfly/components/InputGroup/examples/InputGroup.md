@@ -16,7 +16,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
     {{/button}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsFill=true}}
-    {{> form-control controlType="textarea" form-control--attribute='name="textarea1" id="textarea1" aria-label="Textarea with buttons" aria-describedby="textAreaButton1"'}}
+    {{> form-control controlType="textarea" form-control--modifier="pf-m-resize-both" form-control--attribute='name="textarea1" id="textarea1" aria-label="Textarea with buttons" aria-describedby="textAreaButton1"'}}
   {{/input-group-item}}
   {{#> input-group-item}}
     {{#> button button--modifier="pf-m-control"}}
@@ -27,7 +27,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
 <br>
 {{#> input-group}}
   {{#> input-group-item input-group-item--IsFill=true}}
-    {{> form-control controlType="textarea" form-control--attribute='name="textarea2" id="textarea2" aria-label="Textarea with button" aria-describedby="textAreaButton2"'}}
+    {{> form-control controlType="textarea" form-control--modifier="pf-m-resize-both" form-control--attribute='name="textarea2" id="textarea2" aria-label="Textarea with button" aria-describedby="textAreaButton2"'}}
   {{/input-group-item}}
   {{#> input-group-item}}
     {{#> button button--modifier="pf-m-control" button--attribute='id="textAreaButton2"'}}
@@ -48,7 +48,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
     {{/button}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsFill=true}}
-    {{> form-control controlType="textarea" form-control--attribute='name="textarea3" id="textarea3" aria-label="Textarea with buttons" aria-describedby="textAreaButton3"'}}
+    {{> form-control controlType="textarea" form-control--modifier="pf-m-resize-both" form-control--attribute='name="textarea3" id="textarea3" aria-label="Textarea with buttons" aria-describedby="textAreaButton3"'}}
   {{/input-group-item}}
   {{#> input-group-item}}
     {{#> button button--modifier="pf-m-control"}}
@@ -99,7 +99,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
     {{> input-group-text input-group-text--HasAtIcon=true}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsFill=true}}
-    {{> form-control controlType="input" input=true form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example"'}}
+    {{> form-control controlType="input" input=true form-control--IsError='true' form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example"'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>

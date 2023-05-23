@@ -197,7 +197,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
   {{/inline-edit-value}}
   {{#> inline-edit-group}}
     {{#> inline-edit-input}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required value="Invalid state" aria-invalid="true" aria-label="Error state input example"')}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--IsError='true' form-control--attribute=(concat 'value="Invalid state" aria-invalid="true" aria-label="Error state input example"')}}
       {{/form-control}}
     {{/inline-edit-input}}
     {{#> inline-edit-group inline-edit-group--modifier="pf-m-action-group pf-m-icon-group"}}
@@ -252,7 +252,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             Text input disabled, description content
           {{/inline-edit-value}}
           {{#> inline-edit-input}}
-            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input disabled, description content" id="' inline-edit--id inline-edit--row 'text-input-disabled"  aria-label="Disabled text input" disabled')}}
+            {{> form-control controlType="input" input="true" form-control--IsDisabled='true' form-control--attribute=(concat 'type="text" value="Text input disabled, description content" id="' inline-edit--id inline-edit--row 'text-input-disabled" aria-label="Disabled text input"')}}
           {{/inline-edit-input}}
         {{/table-td}}
         {{#> table-td table-td--data-label="Checkboxes"}}
@@ -331,7 +331,7 @@ Inline edit **action-group** contains save and cancel actions and is only visibl
             Text input disabled, description content
           {{/inline-edit-value}}
           {{#> inline-edit-input}}
-            {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input disabled, description content" id="' inline-edit--id inline-edit--row 'text-input-disabled"  aria-label="Disabled text input" disabled')}}
+            {{> form-control controlType="input" input="true" form-control--IsDisabled='true' form-control--attribute=(concat 'type="text" value="Text input disabled, description content" id="' inline-edit--id inline-edit--row 'text-input-disabled" aria-label="Disabled text input"')}}
           {{/inline-edit-input}}
         {{/table-td}}
         {{#> table-td table-td--data-label="Checkboxes"}}
@@ -433,155 +433,5 @@ All accessibility requirements for inputs apply to elements within inline edit.
 | `.pf-m-valid` | `.pf-v5-c-inline-edit__action` | Modifies the action button state. |
 | `.pf-m-enable-editable` | `.pf-v5-c-inline-edit__action` | Exposes an inline edit action by default. |
 
-
-<!--
-### Bulk edit dl (default)
-```hbs
-{{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-dl-example-default"}}
-  {{#> inline-edit-dl}}{{/inline-edit-dl}}
-{{/inline-edit}}
-```
-
-### Bulk edit dl (active)
-```hbs
-{{#> inline-edit inline-edit--type="form" inline-edit--id="bulk-edit-dl-example-active" inline-edit--modifier="pf-m-inline-editable"}}
-  {{#> inline-edit-dl}}{{/inline-edit-dl}}
-{{/inline-edit}}
-```
-
-### Inline edit dl example
-```hbs
-{{#> list list--type="dl" list--modifier="pf-m-2-col" list--attribute=(concat 'aria-label="Inline edit description list example"')}}
-  <div>
-    <dt>Name</dt>
-    <dd>main</dd>
-  </div>
-  {{#> inline-edit inline-edit--id="inline-edit-dl-example-1"}}
-    <dt>
-      {{#> inline-edit-group}}
-        {{#> inline-edit-label}}
-          Description
-        {{/inline-edit-label}}
-        {{#> inline-edit-toggle}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-edit-button"')}}
-            <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-          {{/button}}
-        {{/inline-edit-toggle}}
-      {{/inline-edit-group}}
-    </dt>
-    <dd>
-      {{#> inline-edit-value}}
-        test cluster
-      {{/inline-edit-value}}
-      {{#> inline-edit-input}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input description content" id="' inline-edit--id '-input"')}}
-      {{/inline-edit-input}}
-    </dd>
-  {{/inline-edit}}
-
-  {{#> inline-edit inline-edit--id="inline-edit-dl-example-2" inline-edit--modifier="pf-m-inline-editable"}}
-    <dt>
-      {{#> inline-edit-group}}
-        {{#> inline-edit-label}}
-          Description (editable)
-        {{/inline-edit-label}}
-        {{#> inline-edit-toggle}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-            <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-          {{/button}}
-        {{/inline-edit-toggle}}
-      {{/inline-edit-group}}
-    </dt>
-    <dd>
-      {{#> inline-edit-value}}
-        Text input description content
-      {{/inline-edit-value}}
-      {{#> inline-edit-input}}
-        {{> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="Text input description content" id="' inline-edit--id '-input"')}}
-      {{/inline-edit-input}}
-    </dd>
-  {{/inline-edit}}
-
-  <div>
-    <dt>Tags</dt>
-    <dd>
-      {{#> chip chip--type="div" chip--modifier="pf-m-read-only"}}
-        {{#> chip-content}}
-          {{#> chip-text}}
-            alertmanager=main
-          {{/chip-text}}
-        {{/chip-content}}
-      {{/chip}}
-    </dd>
-  </div>
-
-  {{#> inline-edit inline-edit--id="inline-edit-dl-example-3"}}
-    <dt>
-      {{#> inline-edit-group}}
-        {{#> inline-edit-label}}
-          Value
-        {{/inline-edit-label}}
-        {{#> inline-edit-toggle}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-            <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-          {{/button}}
-        {{/inline-edit-toggle}}
-      {{/inline-edit-group}}
-    </dt>
-    <dd>
-      {{#> inline-edit-value}}
-        True
-      {{/inline-edit-value}}
-      {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-column"}}
-        {{#> inline-edit-input}}
-          {{#> radio}}
-            {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio1" name="' inline-edit--id '-input"')}}{{/radio-input}}
-            {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio1"')}}True{{/radio-label}}
-          {{/radio}}
-        {{/inline-edit-input}}
-        {{#> inline-edit-input}}
-          {{#> radio}}
-            {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio2" name="' inline-edit--id '-input"')}}{{/radio-input}}
-            {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio2"')}}False{{/radio-label}}
-          {{/radio}}
-        {{/inline-edit-input}}
-      {{/inline-edit-group}}
-    </dd>
-  {{/inline-edit}}
-
-  {{#> inline-edit inline-edit--id="inline-edit-dl-example-4" inline-edit--modifier="pf-m-inline-editable"}}
-    <dt>
-      {{#> inline-edit-group}}
-        {{#> inline-edit-label}}
-          Value
-        {{/inline-edit-label}}
-        {{#> inline-edit-toggle}}
-          {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'id="' inline-edit--id '-edit-button" aria-label="Edit" aria-labelledby="' inline-edit--id '-label ' inline-edit--id '-edit-button"')}}
-            <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-          {{/button}}
-        {{/inline-edit-toggle}}
-      {{/inline-edit-group}}
-    </dt>
-    <dd>
-      {{#> inline-edit-value}}
-        True
-      {{/inline-edit-value}}
-      {{#> inline-edit-group inline-edit-group--attribute='role="radiogroup" aria-label="Radio group example"' inline-edit-group--modifier="pf-m-column"}}
-        {{#> inline-edit-input}}
-          {{#> radio}}
-            {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio1" name="' inline-edit--id '-input"')}}{{/radio-input}}
-            {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio1"')}}True{{/radio-label}}
-          {{/radio}}
-        {{/inline-edit-input}}
-        {{#> inline-edit-input}}
-          {{#> radio}}
-            {{#> radio-input radio-input--attribute=(concat 'id="' inline-edit--id '-radio2" name="' inline-edit--id '-input"')}}{{/radio-input}}
-            {{#> radio-label radio-label--attribute=(concat 'for="' inline-edit--id '-radio2"')}}False{{/radio-label}}
-          {{/radio}}
-        {{/inline-edit-input}}
-      {{/inline-edit-group}}
-    </dd>
-  {{/inline-edit}}
-{{/list}}
 ```
 -->

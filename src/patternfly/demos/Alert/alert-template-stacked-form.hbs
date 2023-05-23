@@ -16,7 +16,7 @@
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form--id '-helper"')}}
+      {{#> form-control controlType="input" input="true" form-control--IsError="true" form-control--attribute=(concat 'required type="text" id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form--id '-helper"')}}
       {{/form-control}}
       {{> form-helper-text helper-text--value='Required field' helper-text-item--IsError=true}}
     {{/form-group-control}}
@@ -28,7 +28,7 @@
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="patternfly.com" id="' form-group--id '" name="' form-group--id '" required')}}
+      {{#> form-control controlType="input" input="true" form-control--IsError="true" form-control--attribute=(concat 'type="text" value="patternfly.com" id="' form-group--id '" name="' form-group--id '" required')}}
       {{/form-control}}
     {{/form-group-control}}
     {{> form-helper-text helper-text--value='Enter a valid email address: example@gmail.com' helper-text-item--IsError=true}}
@@ -39,7 +39,7 @@
         State of residence
       {{/form-label}}
     {{/form-group-label}}
-    {{#> form-control controlType="select" form-control--attribute='required aria-invalid="true" id="select-group-error" name="select-group-error" aria-label="Error state select group example"'}}
+    {{#> form-control controlType="select" form-control--IsError="true" form-control--attribute='required aria-invalid="true" id="select-group-error" name="select-group-error" aria-label="Error state select group example"'}}
         <option value="">Select a state</option>
         <option value="Option 1">CA</option>
         <option value="Option 2">FL</option>

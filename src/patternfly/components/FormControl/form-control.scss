@@ -147,6 +147,11 @@
     // stylelint-enable
   }
 
+  // Where there is support for :has, make sure the height is consistent. Height cannot be set for form elements that contain a text area.
+  &:not(:has(textarea)) {
+    height: var(--#{$form-control}--Height);
+  }
+
   > ::placeholder {
     color: var(--#{$form-control}--m-placeholder--Color); // TODO update to set --#{$form-control}--Color in breaking change - also look for any other place to do that in this component
   }
