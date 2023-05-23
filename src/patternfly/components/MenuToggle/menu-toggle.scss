@@ -152,11 +152,13 @@
 
   // Split button, controls, check
   --#{$menu-toggle}__button--BackgroundColor: transparent;
+  --#{$menu-toggle}__button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$menu-toggle}__button--PaddingRight: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}__button__controls--MarginRight: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}__button__controls--MarginLeft: var(--#{$pf-global}--spacer--sm);
 
   // Typeahead
-  --#{$menu-toggle}--m-typeahead__controls--MarginRight: var(--#{$pf-global}--spacer--md);
+  --#{$menu-toggle}--m-typeahead__controls--MarginRight: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}--m-typeahead__controls--MarginLeft: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight: var(--#{$pf-global}--spacer--sm);
 
@@ -503,6 +505,8 @@
   --#{$menu-toggle}__controls--MarginRight: var(--#{$menu-toggle}__button__controls--MarginRight);
   --#{$menu-toggle}__controls--MarginLeft: var(--#{$menu-toggle}__button__controls--MarginLeft);
 
+  padding-right: var(--#{$menu-toggle}__button--PaddingRight);
+  padding-left: var(--#{$menu-toggle}__button--PaddingLeft);
   color: inherit;
   background-color: var(--#{$menu-toggle}__button--BackgroundColor);
   border: 0;
