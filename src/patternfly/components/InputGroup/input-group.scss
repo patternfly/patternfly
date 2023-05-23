@@ -34,10 +34,6 @@
   --#{$input-group}__item--m-disabled--BorderBottomColor: transparent;
   --#{$input-group}__item--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
 
-  // Form control
-  --#{$input-group}--c-form-control--invalid--ZIndex: var(--#{$pf-global}--ZIndex--xs);
-  --#{$input-group}--c-form-control--MarginRight: 0;
-
   display: flex;
   width: 100%;
 }
