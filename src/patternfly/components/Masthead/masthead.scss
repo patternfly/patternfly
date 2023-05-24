@@ -139,6 +139,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--c-menu-toggle--m-full-height--before--BorderBottomColor: transparent;
 
   // Toolbar
+  --#{$masthead}--c-toolbar--AlignItems--base: center;
   --#{$masthead}--c-toolbar__content--PaddingRight: 0;
   --#{$masthead}--c-toolbar__content--PaddingLeft: 0;
   --#{$masthead}--c-toolbar__expandable-content--PaddingTop: var(--#{$pf-global}--spacer--md);
@@ -189,6 +190,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 
   .#{$toolbar} {
+    --#{$toolbar}--AlignItems--base: var(--#{$masthead}--c-toolbar--AlignItems--base);
     --#{$toolbar}__content--PaddingRight: var(--#{$masthead}--c-toolbar__content--PaddingRight);
     --#{$toolbar}__content--PaddingLeft: var(--#{$masthead}--c-toolbar__content--PaddingLeft);
     --#{$toolbar}__expandable-content--PaddingTop: var(--#{$masthead}--c-toolbar__expandable-content--PaddingTop);

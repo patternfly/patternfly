@@ -18,6 +18,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}__item--Display: block;
   --#{$toolbar}__item--MinWidth--base: auto;
   --#{$toolbar}__item--AlignSelf: auto;
+  --#{$toolbar}__item--AlignItems: var(--#{$toolbar}--AlignItems--base);
 
   // Group
   --#{$toolbar}__group--Display: flex;
@@ -179,8 +180,8 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
       align-self: stretch;
     }
 
-    .#{$toolbar}__item {
-      align-items: var(--#{$toolbar}--m-full-height__item--AlignItems);
+    :where(.#{$toolbar}__item) {
+      --#{$toolbar}__item--AlignItems: var(--#{$toolbar}--m-full-height__item--AlignItems);
     }
   }
 
@@ -307,10 +308,23 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   @include pf-v5-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v5-c-toolbar--breakpoint-map);
   @include pf-v5-hidden-visible(var(--#{$toolbar}__item--Display));
 
+  align-items: var(--#{$toolbar}__item--AlignItems);
   align-self: var(--#{$toolbar}__item--AlignSelf);
   width: var(--#{$toolbar}__item--Width--base);
   min-width: var(--#{$toolbar}__item--MinWidth--base);
   margin-right: var(--#{$toolbar}--spacer);
+
+  &.pf-m-align-items-flex-start {
+    align-items: flex-start;
+  }
+
+  &.pf-m-align-items-center {
+    align-items: center;
+  }
+
+  &.pf-m-align-items-baseline {
+    align-items: baseline;
+  }
 
   &.pf-m-align-self-flex-start {
     align-self: flex-start;
