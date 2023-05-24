@@ -280,13 +280,6 @@
   --#{$pf-global}--target-size--MinHeight: #{$pf-v5-global--target-size--MinHeight};
 }
 
-// Variable font opt-in
-.pf-m-vf-font {
-  --#{$pf-global}--FontFamily--text: var(--#{$pf-global}--FontFamily--text--vf);
-  --#{$pf-global}--FontFamily--heading: var(--#{$pf-global}--FontFamily--heading--vf);
-  --#{$pf-global}--FontFamily--monospace: var(--#{$pf-global}--FontFamily--monospace--vf);
-}
-
 // stylelint-disable no-invalid-position-at-import-rule
 @import "./themes/dark/variables";
 

@@ -16,3 +16,10 @@
 .#{$pf-prefix}m-tabular-nums {
   font-variant-numeric: tabular-nums;
 }
+
+// Variable font opt-in
+.#{$pf-prefix}m-vf-font {
+  --#{$pf-global}--FontFamily--text: var(--#{$pf-global}--FontFamily--text--vf);
+  --#{$pf-global}--FontFamily--heading: var(--#{$pf-global}--FontFamily--heading--vf);
+  --#{$pf-global}--FontFamily--monospace: var(--#{$pf-global}--FontFamily--monospace--vf);
+}
