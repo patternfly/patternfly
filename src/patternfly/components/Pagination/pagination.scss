@@ -18,7 +18,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-compact--child--MarginRight: var(--#{$pf-global}--spacer--sm);
 
   // dropdown
-  --#{$pagination}--c-options-menu__toggle--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$pagination}--c-menu-toggle--FontSize: var(--#{$pf-global}--FontSize--sm);
 
   // nav
   --#{$pagination}__nav--Display: none;
@@ -76,7 +76,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-top);
 
   // options menu
-  --#{$pagination}--c-options-menu--Display: none;
+  --#{$pagination}--c-menu-toggle--Display: none;
   --#{$pagination}--m-display-summary--c-options-menu--Display: none;
   --#{$pagination}--m-display-full--c-options-menu--Display: inline-flex;
 
@@ -88,7 +88,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     --#{$pagination}--m-bottom--child--MarginRight: var(--#{$pagination}--m-bottom--child--md--MarginRight);
     --#{$pagination}--m-bottom__nav-control--c-button--OutlineOffset: 0;
     --#{$pagination}--m-bottom--BoxShadow: none;
-    --#{$pagination}--c-options-menu--Display: inline-flex;
+    --#{$pagination}--c-menu-toggle--Display: inline-flex;
     --#{$pagination}__nav--Display: inline-flex;
     --#{$pagination}__total-items--Display: none;
   }
@@ -113,8 +113,9 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     margin-right: var(--#{$pagination}--child--MarginRight);
   }
 
-  .#{$options-menu} {
-    display: var(--#{$pagination}--c-options-menu--Display);
+  .#{$menu-toggle} {
+    display: var(--#{$pagination}--c-menu-toggle--Display);
+    font-size: var(--#{$pagination}--c-menu-toggle--FontSize);
   }
 
   &.pf-m-bottom {
@@ -153,7 +154,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
       display: none;
     }
 
-    .#{$options-menu} {
+    .#{$menu-toggle} {
       position: absolute;
       display: block;
     }
@@ -183,7 +184,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
         display: inline-flex;
       }
 
-      .#{$options-menu} {
+      .#{$menu-toggle} {
         position: relative;
       }
 
@@ -210,10 +211,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     @media screen and (min-width: $pf-v5-global--breakpoint--md) {
       padding: var(--#{$pagination}--m-sticky--md--PaddingTop) var(--#{$pagination}--m-sticky--md--PaddingRight) var(--#{$pagination}--m-sticky--md--PaddingBottom) var(--#{$pagination}--m-sticky--md--PaddingLeft);
     }
-  }
-
-  .#{$options-menu}__toggle {
-    font-size: var(--#{$pagination}--c-options-menu__toggle--FontSize);
   }
 
   &.pf-m-compact {
@@ -283,13 +280,13 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     @include pf-v5-apply-breakpoint($breakpoint) {
       &.pf-m-display-summary#{$breakpoint-name} {
         --#{$pagination}__nav--Display: var(--#{$pagination}--m-display-summary__nav--Display);
-        --#{$pagination}--c-options-menu--Display: var(--#{$pagination}--m-display-summary--c-options-menu--Display);
+        --#{$pagination}--c-menu-toggle--Display: var(--#{$pagination}--m-display-summary--c-options-menu--Display);
         --#{$pagination}__total-items--Display: var(--#{$pagination}--m-display-summary__total-items--Display);
       }
 
       &.pf-m-display-full#{$breakpoint-name} {
         --#{$pagination}__nav--Display: var(--#{$pagination}--m-display-full__nav--Display);
-        --#{$pagination}--c-options-menu--Display: var(--#{$pagination}--m-display-full--c-options-menu--Display);
+        --#{$pagination}--c-menu-toggle--Display: var(--#{$pagination}--m-display-full--c-options-menu--Display);
         --#{$pagination}__total-items--Display: var(--#{$pagination}--m-display-full__total-items--Display);
       }
 
