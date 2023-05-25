@@ -23,7 +23,7 @@ wrapperTag: div
           {{/form-group}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
-            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
+            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group}}
             {{#> check}}
@@ -97,12 +97,12 @@ wrapperTag: div
           {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true helper-text-item--HasIcon=true}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
-            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
+            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
             {{#> input-group}}
-              {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='input="true" type="password" id="login-demo-form-password" name="login-demo-form-password" value="abcd1234"'}}{{/form-control}}
+              {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="password" id="login-demo-form-password" name="login-demo-form-password" value="abcd1234"'}}{{/form-control}}
               {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
                 <i class="fas fa-eye" aria-hidden="true"></i>
               {{/button}}
@@ -147,12 +147,12 @@ wrapperTag: div
           {{/form-helper-text}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
-            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
+            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
             {{#> input-group}}
-              {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='input="true" type="text" id="login-demo-form-password" name="login-demo-form-password" value="abcd1234"'}}{{/form-control}}
+              {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="text" id="login-demo-form-password" name="login-demo-form-password" value="abcd1234"'}}{{/form-control}}
               {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Hide password"'}}
                 <i class="fas fa-eye-slash" aria-hidden="true"></i>
               {{/button}}
@@ -191,11 +191,11 @@ wrapperTag: div
           {{> form-helper-text helper-text--value='Invalid login credentials.' helper-text--IsHidden=true helper-text-item--IsError=true helper-text-item--HasIcon=true}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-username"' required="true"}}Username{{/form-label}}
-            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='input="true" type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
+            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="text" id="login-demo-form-username" name="login-demo-form-username"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group}}
             {{#> form-label form-label--attribute='for="login-demo-form-password"' required="true"}}Password{{/form-label}}
-            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='input="true" type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
+            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute='type="password" id="login-demo-form-password" name="login-demo-form-password"'}}{{/form-control}}
           {{/form-group}}
           {{#> form-group}}
             {{#> check}}

@@ -99,7 +99,7 @@ Use the input group to extend form controls by adding text, buttons, selects, et
     {{> input-group-text input-group-text--HasAtIcon=true}}
   {{/input-group-item}}
   {{#> input-group-item input-group-item--IsFill=true}}
-    {{> form-control controlType="input" input=true form-control--IsError='true' form-control--attribute='required type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example"'}}
+    {{> form-control controlType="input" input=true form-control--IsError='true' form-control--IsRequired='true' form-control--attribute='type="email" id="textInput7" name="textInput7" aria-invalid="true" aria-label="Error state username example"'}}
   {{/input-group-item}}
 {{/input-group}}
 <br>

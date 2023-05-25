@@ -192,7 +192,7 @@ cssPrefix: pf-v5-c-number-input
       {{/button}}
     {{/input-group-item}}
     {{#> input-group-item input-group-item--IsFill=true}}
-      {{> form-control controlType="input" input="true" form-control--modifier="pf-m-warning"  form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
+      {{> form-control controlType="input" input="true" form-control--IsWarning='true'  form-control--attribute=(concat 'type="number" value="90" name="' number-input--id '-name" aria-label="Number input"')}}
     {{/input-group-item}}
     {{#> input-group-item}}
       {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Plus"'}}
