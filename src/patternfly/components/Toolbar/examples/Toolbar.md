@@ -34,8 +34,10 @@ Toolbar relies on groups (`.pf-v5-c-toolbar__group`) and items (`.pf-v5-c-toolba
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-v5-c-toolbar > *` | Modifies toolbar element to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-v5-c-toolbar > *` | Modifies toolbar element to align right, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-align-left{-on-[breakpoint]}` | `.pf-v5-c-toolbar > *` | Modifies toolbar element to align left, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
-| `.pf-m-align-items-center` | `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group` | Modifies toolbar element to vertically align children to center. |
-| `.pf-m-align-items-baseline` | `.pf-v5-c-toolbar__group` | Modifies toolbar group to vertically align children to baseline. |
+| `.pf-m-align-items-start` | `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align children to flex-start. |
+| `.pf-m-align-items-center` | `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align children to center. |
+| `.pf-m-align-items-baseline` | `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar group to vertically align children to baseline. |
+| `.pf-m-align-self-start` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align self to flex-start. |
 | `.pf-m-align-self-center` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align self to center. |
 | `.pf-m-align-self-baseline` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align self to baseline. |
 

@@ -6,6 +6,7 @@ $pf-v5-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .#{$toolbar} {
+  --#{$toolbar}--AlignItems--base: flex-start;
   --#{$toolbar}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$toolbar}--RowGap--base: var(--#{$pf-global}--spacer--lg); // row-gap between toolbar content elements
   --#{$toolbar}--RowGap: var(--#{$toolbar}--RowGap--base);
@@ -17,10 +18,11 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}__item--Display: block;
   --#{$toolbar}__item--MinWidth--base: auto;
   --#{$toolbar}__item--AlignSelf: auto;
+  --#{$toolbar}__item--AlignItems: var(--#{$toolbar}--AlignItems--base);
 
   // Group
   --#{$toolbar}__group--Display: flex;
-  --#{$toolbar}__group--AlignItems: baseline;
+  --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--AlignItems--base);
   --#{$toolbar}__group--AlignSelf: auto;
   --#{$toolbar}__group--RowGap: var(--#{$toolbar}--item--RowGap--base);
 
@@ -30,13 +32,14 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   // Content
   --#{$toolbar}__content--Display: flex;
+  --#{$toolbar}__content--AlignItems: var(--#{$toolbar}--AlignItems--base);
   --#{$toolbar}__content--RowGap: var(--#{$toolbar}--RowGap--base);
   --#{$toolbar}__content--PaddingRight: var(--#{$pf-global}--spacer--md); // remove at breaking change
   --#{$toolbar}__content--PaddingLeft: var(--#{$pf-global}--spacer--md); // remove at breaking change
 
   // Content section
   --#{$toolbar}__content-section--Display: flex;
-  --#{$toolbar}__content-section--AlignItems: baseline;
+  --#{$toolbar}__content-section--AlignItems: var(--#{$toolbar}--AlignItems--base);
   --#{$toolbar}__content-section--RowGap: var(--#{$toolbar}--item--RowGap--base);
 
   // Insets
@@ -67,8 +70,8 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   // Spacer values
   --#{$toolbar}__item--spacer: var(--#{$toolbar}--spacer--base);
-  --#{$toolbar}__group--spacer: var(--#{$toolbar}--spacer--base);
   --#{$toolbar}__item--Width: auto;
+  --#{$toolbar}__group--spacer: var(--#{$toolbar}--spacer--base);
 
   // Toggle group
   --#{$toolbar}__group--m-toggle-group--spacer: var(--#{$pf-global}--spacer--sm);
@@ -123,7 +126,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}--m-full-height--PaddingTop: 0;
   --#{$toolbar}--m-full-height--PaddingBottom: 0;
   --#{$toolbar}--m-full-height__item--Display: flex;
-  --#{$toolbar}--m-full-height__item--AlignItems: center;
+  --#{$toolbar}--m-full-height__item--AlignItems: var(--#{$toolbar}__group--AlignItems);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
     --#{$toolbar}__expandable-content--PaddingRight: var(--#{$toolbar}__expandable-content--lg--PaddingRight);
@@ -177,8 +180,8 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
       align-self: stretch;
     }
 
-    .#{$toolbar}__item {
-      align-items: var(--#{$toolbar}--m-full-height__item--AlignItems);
+    :where(.#{$toolbar}__item) {
+      --#{$toolbar}__item--AlignItems: var(--#{$toolbar}--m-full-height__item--AlignItems);
     }
   }
 
@@ -209,6 +212,30 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
       --#{$toolbar}--spacer: 0;
     }
   }
+
+  &.pf-m-align-items-start {
+    align-items: flex-start;
+  }
+
+  &.pf-m-align-items-center {
+    align-items: center;
+  }
+
+  &.pf-m-align-items-baseline {
+    align-items: baseline;
+  }
+
+  &.pf-m-align-self-start {
+    align-self: flex-start;
+  }
+
+  &.pf-m-align-self-center {
+    align-self: center;
+  }
+
+  &.pf-m-align-self-baseline {
+    align-self: baseline;
+  }
 }
 
 // Group
@@ -221,22 +248,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   align-items: var(--#{$toolbar}__group--AlignItems);
   align-self: var(--#{$toolbar}__group--AlignSelf);
   margin-right: var(--#{$toolbar}--spacer);
-
-  &.pf-m-align-items-center {
-    align-items: center;
-  }
-
-  &.pf-m-align-items-baseline {
-    align-items: baseline;
-  }
-
-  &.pf-m-align-self-center {
-    align-self: center;
-  }
-
-  &.pf-m-align-self-baseline {
-    align-self: baseline;
-  }
 
   // Button group
   &.pf-m-button-group {
@@ -297,10 +308,27 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   @include pf-v5-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v5-c-toolbar--breakpoint-map);
   @include pf-v5-hidden-visible(var(--#{$toolbar}__item--Display));
 
+  align-items: var(--#{$toolbar}__item--AlignItems);
   align-self: var(--#{$toolbar}__item--AlignSelf);
   width: var(--#{$toolbar}__item--Width--base);
   min-width: var(--#{$toolbar}__item--MinWidth--base);
   margin-right: var(--#{$toolbar}--spacer);
+
+  &.pf-m-align-items-start {
+    align-items: flex-start;
+  }
+
+  &.pf-m-align-items-center {
+    align-items: center;
+  }
+
+  &.pf-m-align-items-baseline {
+    align-items: baseline;
+  }
+
+  &.pf-m-align-self-start {
+    align-self: flex-start;
+  }
 
   &.pf-m-align-self-center {
     align-self: center;
@@ -382,7 +410,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   position: relative;
   row-gap: var(--#{$toolbar}__content--RowGap);
-  align-items: center;
+  align-items: var(--#{$toolbar}__content--AlignItems);
   padding-right: var(--#{$toolbar}__content--PaddingRight);
   padding-left: var(--#{$toolbar}__content--PaddingLeft);
 }
@@ -395,8 +423,16 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   align-items: var(--#{$toolbar}__content-section--AlignItems);
   width: 100%;
 
+  &.pf-m-align-items-start {
+    align-items: flex-start;
+  }
+
   &.pf-m-align-items-center {
     align-items: center;
+  }
+
+  &.pf-m-align-items-baseline {
+    align-items: baseline;
   }
 }
 
