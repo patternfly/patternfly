@@ -1,0 +1,11 @@
+// This config will generate dark them updates based on 'pf-theme-dark'
+// which can be changed by updating  $pf-global--theme--namespace, $pf-global--theme--version, $pf-v5--theme-dark--class
+// $pf-global--theme-dark--placeholder--class in _init.scss
+$pf-v5-global--enable-reset: false;
+$pf-v5-global--enable-normalize: false;
+
+// stylelint-disable scss/dollar-variable-pattern
+$pf-global--theme--version: '';
+// stylelint-enable
+
+@import "./patternfly-base";
