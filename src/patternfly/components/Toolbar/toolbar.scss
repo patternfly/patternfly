@@ -213,7 +213,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     }
   }
 
-  &.pf-m-align-items-flex-start {
+  &.pf-m-align-items-start {
     align-items: flex-start;
   }
 
@@ -225,7 +225,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     align-items: baseline;
   }
 
-  &.pf-m-align-self-flex-start {
+  &.pf-m-align-self-start {
     align-self: flex-start;
   }
 
@@ -314,7 +314,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   min-width: var(--#{$toolbar}__item--MinWidth--base);
   margin-right: var(--#{$toolbar}--spacer);
 
-  &.pf-m-align-items-flex-start {
+  &.pf-m-align-items-start {
     align-items: flex-start;
   }
 
@@ -326,7 +326,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     align-items: baseline;
   }
 
-  &.pf-m-align-self-flex-start {
+  &.pf-m-align-self-start {
     align-self: flex-start;
   }
 
@@ -423,7 +423,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   align-items: var(--#{$toolbar}__content-section--AlignItems);
   width: 100%;
 
-  &.pf-m-align-items-flex-start {
+  &.pf-m-align-items-start {
     align-items: flex-start;
   }
 
