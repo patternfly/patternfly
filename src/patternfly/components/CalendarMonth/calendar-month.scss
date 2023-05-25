@@ -1,4 +1,5 @@
 .#{$calendar-month} {
+  --#{$calendar-month}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$calendar-month}--PaddingTop: var(--#{$pf-global}--spacer--lg);
   --#{$calendar-month}--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$calendar-month}--PaddingBottom: var(--#{$pf-global}--spacer--md);
@@ -68,6 +69,7 @@
   flex-direction: column;
   padding: var(--#{$calendar-month}--PaddingTop) var(--#{$calendar-month}--PaddingRight) var(--#{$calendar-month}--PaddingBottom) var(--#{$calendar-month}--PaddingLeft);
   font-size: var(--#{$calendar-month}--FontSize);
+  background-color: var(--#{$calendar-month}--BackgroundColor);
 }
 
 .#{$calendar-month}__header {
