@@ -8,7 +8,7 @@
   }
 }
 
-:root {
+:where(:root) {
   // Chart colors
   // blue
   --#{$chart}-color-blue-100: #{$pf-v5-chart-color-blue-100};
