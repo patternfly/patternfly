@@ -14,7 +14,7 @@
   {{#unless pagination--IsCompact}}
     {{#> pagination-nav-page-select}}
       {{#if pagination-nav-content--IsDisabled}}
-        {{> form-control input="true" controlType="input" form-control--attribute='disabled aria-label="Current page" type="number" min="1" max="4" value="1"'}}
+        {{> form-control input="true" controlType="input" form-control--IsDisabled='true' form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
       {{else}}
         {{> form-control input="true" controlType="input" form-control--attribute='aria-label="Current page" type="number" min="1" max="4" value="1"'}}
       {{/if}}

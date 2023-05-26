@@ -179,6 +179,10 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
         display: block;
       }
 
+      .#{$pagination}__nav-page-select {
+        display: inline-flex;
+      }
+
       .#{$options-menu} {
         position: relative;
       }
@@ -260,7 +264,9 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   .#{$form-control} {
     width: var(--#{$pagination}__nav-page-select--c-form-control--Width);
 
-    @extend %pf-v5-remove-num-arrows;
+    > :is(input) {
+      @extend %pf-v5-remove-num-arrows;
+    }
   }
 }
 

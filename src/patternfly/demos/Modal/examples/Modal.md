@@ -179,7 +179,7 @@ section: components
             {{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--id="-email"}}
@@ -190,7 +190,7 @@ section: components
             {{> form-group-label-help form-group-label-help--aria-label="More information for email field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
           {{/form-group-control}}
         {{/form-group}}
         {{#> form-group form-group--id="-address"}}
@@ -201,7 +201,7 @@ section: components
             {{> form-group-label-help form-group-label-help--aria-label="More information for address field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
           {{/form-group-label}}
           {{#> form-group-control}}
-            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+            {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
           {{/form-group-control}}
         {{/form-group}}
       {{/form}}

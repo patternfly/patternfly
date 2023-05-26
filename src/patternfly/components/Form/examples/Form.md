@@ -17,7 +17,7 @@ cssPrefix: pf-v5-c-form
       {{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=form-group--id}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
 {{/form}}
@@ -33,7 +33,7 @@ cssPrefix: pf-v5-c-form
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
   {{#> form-group form-group--id=(concat form--id '-info')}}
@@ -79,7 +79,7 @@ cssPrefix: pf-v5-c-form
       {{> form-group-label-help form-group-label-help--aria-label="More information for name field" form-group-label-help--aria-describedby=(concat form-group--id)}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
 {{/form}}
@@ -96,7 +96,7 @@ cssPrefix: pf-v5-c-form
         {{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form-section--id '-input" name="' form-section--id '-input" required')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-section--id '-input" name="' form-section--id '-input"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group}}
@@ -106,7 +106,7 @@ cssPrefix: pf-v5-c-form
         {{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form-section--id '-input-2" name="' form-section--id '-input-2" required')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-section--id '-input-2" name="' form-section--id '-input-2"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
   {{/form-section}}
@@ -121,7 +121,7 @@ cssPrefix: pf-v5-c-form
         {{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form-section--id '-input" name="' form-section--id '-input" required')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-section--id '-input" name="' form-section--id '-input"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
     {{#> form-group}}
@@ -131,7 +131,7 @@ cssPrefix: pf-v5-c-form
         {{/form-label}}
       {{/form-group-label}}
       {{#> form-group-control}}
-        {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form-section--id '-input-2" name="' form-section--id '-input-2" required')}}{{/form-control}}
+        {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-section--id '-input-2" name="' form-section--id '-input-2"')}}{{/form-control}}
       {{/form-group-control}}
     {{/form-group}}
   {{/form-section}}
@@ -148,7 +148,7 @@ cssPrefix: pf-v5-c-form
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form-group--id '-helper"')}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form-group--id '-helper"')}}
       {{/form-control}}
       {{> form-helper-text helper-text--value='This is helper text.'}}
     {{/form-group-control}}
@@ -160,7 +160,7 @@ cssPrefix: pf-v5-c-form
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control form-control--modifier="pf-m-warning" controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form-group--id '-helper"')}}
+      {{#> form-control form-control--IsWarning='true' controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form-group--id '-helper"')}}
       {{/form-control}}
       {{> form-helper-text helper-text--value='This is helper text for a warning input.' helper-text-item--IsWarning=true}}
     {{/form-group-control}}
@@ -172,7 +172,7 @@ cssPrefix: pf-v5-c-form
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'required type="text" id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form-group--id '-helper"')}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--IsError='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form-group--id '-helper"')}}
       {{/form-control}}
       {{> form-helper-text helper-text--value='This is helper text for an invalid input.' helper-text-item--IsError=true}}
     {{/form-group-control}}
@@ -184,7 +184,7 @@ cssPrefix: pf-v5-c-form
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--modifier="pf-m-success" form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form-group--id '-helper"')}}
+      {{#> form-control controlType="input" input="true" form-control--IsSuccess='true' form-control--attribute=(concat 'value="This is a valid comment"' 'type="text" id="' form-group--id '" name="' form-group--id '" aria-describedby="' form-group--id '-helper"')}}
       {{/form-control}}
       {{> form-helper-text helper-text--value='This is helper text for success input.' helper-text-item--IsSuccess=true}}
     {{/form-group-control}}
@@ -196,7 +196,7 @@ cssPrefix: pf-v5-c-form
       {{/form-label}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="textarea" form-control--attribute=(concat 'id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form-group--id '-helper"')}}
+      {{#> form-control controlType="textarea" form-control--modifier='pf-m-resize-both' form-control--IsError='true' form-control--attribute=(concat 'id="' form-group--id '" name="' form-group--id '" aria-invalid="true" aria-describedby="' form-group--id '-helper"')}}
       {{/form-control}}
       {{> form-helper-text helper-text--value='This is helper text with an icon.' helper-text-item--IsError=true helper-text-item--HasIcon=true}}
     {{/form-group-control}}
@@ -220,7 +220,7 @@ cssPrefix: pf-v5-c-form
       {{/form-group-label-info}}
     {{/form-group-label}}
     {{#> form-group-control}}
-      {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" required')}}{{/form-control}}
+      {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
     {{/form-group-control}}
   {{/form-group}}
 {{/form}}
@@ -268,7 +268,7 @@ cssPrefix: pf-v5-c-form
           {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form-group--id)}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" required')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
         {{/form-group-control}}
       {{/form-group}}
       {{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
@@ -277,7 +277,7 @@ cssPrefix: pf-v5-c-form
           {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form-group--id)}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '" required')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form-group--id '" name="' form-group--id '"')}}{{/form-control}}
         {{/form-group-control}}
       {{/form-group}}
     {{/form-field-group-body}}
@@ -324,7 +324,7 @@ cssPrefix: pf-v5-c-form
           {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
         {{/form-group-control}}
       {{/form-group}}
       {{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
@@ -333,7 +333,7 @@ cssPrefix: pf-v5-c-form
           {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
         {{/form-group-label}}
         {{#> form-group-control}}
-          {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+          {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
         {{/form-group-control}}
       {{/form-group}}
       {{#> form-field-group form-field-group--id=(concat form--id '-field-group-3') form-field-group--IsExpandable=reset}}
@@ -351,7 +351,7 @@ cssPrefix: pf-v5-c-form
               {{> form-group-label-help form-group-label-help--aria-label="More information for label 1 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
             {{/form-group-label}}
             {{#> form-group-control}}
-              {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+              {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
             {{/form-group-control}}
           {{/form-group}}
           {{#> form-group form-group--id=(concat form-field-group--id "-label2")}}
@@ -360,7 +360,7 @@ cssPrefix: pf-v5-c-form
               {{> form-group-label-help form-group-label-help--aria-label="More information for label 2 field" form-group-label-help--aria-describedby=(concat form--id form-group--id)}}
             {{/form-group-label}}
             {{#> form-group-control}}
-              {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '" required')}}{{/form-control}}
+              {{#> form-control controlType="input" input="true" form-control--IsRequired='true' form-control--attribute=(concat 'type="text" id="' form--id form-group--id '" name="' form--id form-group--id '"')}}{{/form-control}}
             {{/form-group-control}}
           {{/form-group}}
         {{/form-field-group-body}}

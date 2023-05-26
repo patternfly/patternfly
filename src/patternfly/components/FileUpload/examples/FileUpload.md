@@ -14,8 +14,9 @@ cssPrefix: pf-v5-c-file-upload
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
         {{> file-upload-text-input
+          form-control--IsReadonly="true"
           file-upload-text-input--aria-label="Drag and drop a file or upload one"
-          file-upload-text-input--attribute=(concat 'readonly placeholder="Drag and drop a file or upload one" aria-describedby="' file-upload--id '-browse"')
+          file-upload-text-input--attribute=(concat 'placeholder="Drag and drop a file or upload one" aria-describedby="' file-upload--id '-browse"')
           }}
       {{/input-group-item}}
       {{#> input-group-item}}
@@ -42,8 +43,9 @@ cssPrefix: pf-v5-c-file-upload
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
         {{> file-upload-text-input
+          form-control--IsReadonly='true'
           file-upload-text-input--aria-label="Read only filename"
-          file-upload-text-input--attribute=(concat 'readonly value="Read only filename" aria-describedby="' file-upload--id '-browse"')
+          file-upload-text-input--attribute=(concat 'value="Read only filename" aria-describedby="' file-upload--id '-browse"')
           }}
       {{/input-group-item}}
       {{#> input-group-item}}
@@ -58,7 +60,7 @@ cssPrefix: pf-v5-c-file-upload
       {{/input-group-item}}
     {{/input-group}}
   {{/file-upload-file-select}}
-  {{#> file-upload-file-details file-upload-file-details--aria-label="Text area" file-upload-file-details--attribute='readonly'}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
+  {{#> file-upload-file-details file-upload-file-details--aria-label="Text area" form-control--IsReadonly='true'}}Ssh-Rsa AAh3zJFkzjjakCJialksjfB3zJFkzzAAhhMskjjakCJialksjfB3z89z3zJFkz3 +kzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fczJFkzMAjsauoox88aaZXphBx4fc
   {{/file-upload-file-details}}
 {{/file-upload}}
 ```
@@ -70,8 +72,9 @@ cssPrefix: pf-v5-c-file-upload
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
         {{> file-upload-text-input
+          form-control--IsReadonly='true'
           file-upload-text-input--aria-label="Read only filename"
-          file-upload-text-input--attribute=(concat 'readonly value="Sample.txt" aria-describedby="' file-upload--id '-browse"')
+          file-upload-text-input--attribute=(concat 'value="Sample.txt" aria-describedby="' file-upload--id '-browse"')
           }}
       {{/input-group-item}}
       {{#> input-group-item}}
@@ -97,7 +100,10 @@ cssPrefix: pf-v5-c-file-upload
   {{#> file-upload-file-select}}
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
-        {{> file-upload-text-input file-upload-text-input--aria-label="Drag and drop a file or upload one" file-upload-text-input--attribute=(concat 'readonly placeholder="Drag and drop a file or upload one" aria-describedby="' file-upload--id '-browse"')}}
+        {{> file-upload-text-input
+          form-control--IsReadonly='true' 
+          file-upload-text-input--aria-label="Drag and drop a file or upload one"
+          file-upload-text-input--attribute=(concat 'placeholder="Drag and drop a file or upload one" aria-describedby="' file-upload--id '-browse"')}}
       {{/input-group-item}}
       {{#> input-group-item}}
         {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' file-upload--id '-browse"')}}
@@ -125,8 +131,9 @@ cssPrefix: pf-v5-c-file-upload
         {{#> input-group}}
           {{#> input-group-item input-group-item--IsFill=true}}
             {{> file-upload-text-input
+              form-control--IsRequired='true'
               file-upload-text-input--aria-label="File upload error"
-              file-upload-text-input--attribute=(concat 'required value="Sample.png"  aria-describedby="' file-upload--id '-browse"')
+              file-upload-text-input--attribute=(concat 'value="Sample.png"  aria-describedby="' file-upload--id '-browse"')
               }}
           {{/input-group-item}}
           {{#> input-group-item}}
@@ -141,7 +148,10 @@ cssPrefix: pf-v5-c-file-upload
           {{/input-group-item}}
         {{/input-group}}
       {{/file-upload-file-select}}
-      {{#> file-upload-file-details file-upload-file-details--attribute='aria-describedby="textAreaHelperText1" aria-invalid="true"' file-upload-file-details--aria-label="Empty text area"}}{{/file-upload-file-details}}
+      {{#> file-upload-file-details 
+        form-control--IsError='true'
+        file-upload-file-details--attribute='aria-describedby="textAreaHelperText1" aria-invalid="true"' 
+        file-upload-file-details--aria-label="Empty text area"}}{{/file-upload-file-details}}
     {{/file-upload}}
     {{#> form-helper-text}}
       {{> helper-text helper-text--value="We don't support this file type. Try again with a different file type." helper-text-item--id='textAreaHelperText1' helper-text-item--IsError=true}}
@@ -157,8 +167,9 @@ cssPrefix: pf-v5-c-file-upload
     {{#> input-group}}
       {{#> input-group-item input-group-item--IsFill=true}}
         {{> file-upload-text-input
+          form-control--IsReadonly='true'
           file-upload-text-input--aria-label="Read only filename"
-          file-upload-text-input--attribute=(concat 'readonly name="file-upload-loading" value="Sample.png" aria-describedby="' file-upload--id '-browse"')
+          file-upload-text-input--attribute=(concat 'name="file-upload-loading" value="Sample.png" aria-describedby="' file-upload--id '-browse"')
         }}
       {{/input-group-item}}
       {{#> input-group-item}}

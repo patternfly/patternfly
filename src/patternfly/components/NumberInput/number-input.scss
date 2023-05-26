@@ -31,9 +31,12 @@
 
   .#{$form-control} {
     width: var(--#{$number-input}--c-form-control--Width);
-    text-align: right;
 
-    @extend %pf-v5-remove-num-arrows;
+    > :is(input) {
+      text-align: right;
+
+      @extend %pf-v5-remove-num-arrows;
+    }
   }
 }
 

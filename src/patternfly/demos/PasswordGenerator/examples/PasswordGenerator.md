@@ -21,7 +21,7 @@ section: components
     {{#> form-group-control}}
       {{#> input-group}}
         {{#> input-group-item input-group-item--IsFill=true}}
-          {{> form-control controlType="input" input="true"  form-control--attribute=(concat 'required type="password" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="" placeholder="Password"')}}
+          {{> form-control controlType="input" input="true"  form-control--IsRequired='true' form-control--attribute=(concat 'type="password" id="' form--id form-group--id '" name="' form--id form-group--id '" aria-label="Password input" value="" placeholder="Password"')}}
         {{/input-group-item}}
         {{#> input-group-item}}
           {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Show password"'}}
