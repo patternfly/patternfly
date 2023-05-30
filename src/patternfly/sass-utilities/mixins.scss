@@ -295,9 +295,11 @@
   }
 }
 
-// Dark theme style block
-@mixin pf-v5-theme-dark($theme-dark-class: $pf-v5--theme-dark--class, $theme-dark-target: $pf-v5--theme-dark--target) {
-  #{$theme-dark-target}:where(#{$theme-dark-class}) {
+@mixin pf-v5-theme-dark($theme-dark-class: $pf-v5--theme-dark--class, $theme-dark-root: false) {
+  $selector: &;
+
+  :where(#{$theme-dark-class}) #{$selector},
+  #{$selector}:where(#{$theme-dark-class}) {
     @content;
   }
 }
@@ -306,6 +308,56 @@
   @each $map in $maps {
     @each $name, $val in $map {
       #{$prefix}#{$name}: #{$val};
+    }
+  }
+}
+
+// Add classes to root
+@mixin pf-v5-base-theme-root($theme: 'base') {
+  $new-selector: #{&};
+
+  @at-root {
+    @if $theme == 'base' {
+      :where(:root),
+      :where(#{$pf-v5--theme-light--class}) {
+        @content;
+      }
+    } @else if $theme == 'dark' {
+      :where(#{$pf-v5--theme-dark--class}) {
+        @content;
+      }
+    } @else {
+      :where(#{$theme}) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin pf-v5-root-vars($theme: 'base') {
+  $new-selector: #{&};
+
+  // @debug $new-selector + $pf-v5--theme-dark--class;
+  @at-root {
+    @if $theme == 'base' {
+      // $class: $pf-v5--theme-light--class + $new-selector;
+      $class: ':where(:root' + $pf-v5--theme-light--class + ')' + $new-selector;
+      :where(:root),
+      #{$class},
+      :where(#{$pf-v5--theme-light--class}) #{$new-selector} {
+        @content;
+      }
+    } @else if $theme == 'dark' {
+      $class: ':where(:root' + $pf-v5--theme-dark--class + ')' + $new-selector;
+      :where(#{$pf-v5--theme-dark--class}),
+      :where(#{$pf-v5--theme-dark--class}) #{$new-selector},
+      #{$class} {
+        @content;
+      }
+    } @else {
+      :where(#{$theme}) {
+        @content;
+      }
     }
   }
 }

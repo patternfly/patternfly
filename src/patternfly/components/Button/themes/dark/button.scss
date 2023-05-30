@@ -1,6 +1,6 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-v5-theme-dark-button() {
+@mixin pf-v5-theme-dark-button {
   .#{$button} {
     --#{$button}--disabled--Color: var(--#{$pf-global}--disabled-color--300);
     --#{$button}--m-primary--BackgroundColor: var(--#{$pf-global}--primary-color--300);

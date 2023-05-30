@@ -1,4 +1,4 @@
-:where(:root) {
+@mixin pf-v5-base-variables {
   // Colors
   // Global palette
   --#{$pf-global}--palette--black-100: #{$pf-v5-color-black-100};
@@ -280,6 +280,10 @@
   --#{$pf-global}--target-size--MinHeight: #{$pf-v5-global--target-size--MinHeight};
 }
 
+@include pf-v5-base-theme-root {
+  @include pf-v5-base-variables;
+}
+
 // Variable font opt-in
 .pf-m-vf-font {
   --#{$pf-global}--FontFamily--text: var(--#{$pf-global}--FontFamily--text--vf);
@@ -290,6 +294,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "./themes/dark/variables";
 
-@include pf-v5-theme-dark {
+@include pf-v5-base-theme-root('dark') {
   @include pf-v5-theme-dark-variables;
 }
