@@ -3,6 +3,7 @@ id: Application launcher
 section: components
 subsection: menus
 cssPrefix: pf-v5-c-app-launcher
+deprecated: true
 ---
 
 import './application-launcher.css'

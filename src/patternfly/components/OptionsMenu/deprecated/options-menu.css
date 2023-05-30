@@ -1,0 +1,25 @@
+#ws-html-deprecated-c-options-menu-single-option,
+#ws-html-deprecated-c-options-menu-plain,
+#ws-html-deprecated-c-options-menu-align-right,
+#ws-html-deprecated-c-options-menu-align-top {
+  min-height: 215px;
+}
+
+#ws-html-deprecated-c-options-menu-multiple-options {
+  min-height: 350px;
+}
+
+#ws-html-deprecated-c-options-menu-plain-with-text {
+  min-height: 280px;
+}
+
+#ws-html-deprecated-c-options-menu-align-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+#ws-html-deprecated-c-options-menu-with-groups,
+#ws-html-deprecated-c-options-menu-with-groups-and-dividers-between-groups,
+#ws-html-deprecated-c-options-menu-with-groups-and-dividers-between-items {
+  min-height: 450px;
+}

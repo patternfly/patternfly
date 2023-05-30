@@ -1,0 +1,17 @@
+.ws-html-deprecated-c-page :is(.pf-v5-c-page__sidebar, .pf-v5-c-page__main-subnav) {
+  color: var(--pf-v5-global--Color--light-100);
+}
+
+.ws-html-deprecated-c-page .pf-v5-c-page__main-section.pf-m-dark-200 {
+  color: var(--pf-v5-global--Color--dark-100);
+}
+
+#ws-html-deprecated-c-page-with-or-without-fill .ws-preview-html,
+#ws-html-deprecated-c-page-multiple-sidebar-body-elements-padding-and-fill .ws-preview-html {
+  height: 500px;
+}
+
+#ws-html-deprecated-c-page-multiple-sidebar-body-elements .ws-preview-html,
+#ws-html-deprecated-c-page-using-flex-layout .ws-preview-html {
+  height: 100%;
+}

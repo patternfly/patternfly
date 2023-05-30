@@ -1,0 +1,25 @@
+#ws-html-deprecated-c-application-launcher-aligned-right,
+#ws-html-deprecated-c-application-launcher-aligned-top,
+#ws-html-deprecated-c-application-launcher-expanded {
+  min-height: 216px;
+}
+
+#ws-html-deprecated-c-application-launcher-aligned-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#ws-html-deprecated-c-application-launcher-aligned-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+#ws-html-deprecated-c-application-launcher-with-sections-and-dividers-between-sections,
+#ws-html-deprecated-c-application-launcher-with-sections-and-dividers-between-items,
+#ws-html-deprecated-c-application-launcher-with-sections-dividers-icons-and-external-links {
+  min-height: 424px;
+}
+
+#ws-html-deprecated-c-application-launcher-favorites {
+  min-height: 540px;
+}

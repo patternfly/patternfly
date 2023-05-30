@@ -2,6 +2,7 @@
 id: 'Context selector'
 section: components
 subsection: menus
+deprecated: true
 ---
 
 ## Examples
