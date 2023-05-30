@@ -100,6 +100,7 @@
 
 .#{$code-editor}__main {
   position: relative;
+  color: var(--#{$code-editor}__main--Color, inherit);
   background-color: var(--#{$code-editor}__main--BackgroundColor);
   border: var(--#{$code-editor}__main--BorderWidth) solid;
   border-color: var(--#{$code-editor}__main--BorderColor);

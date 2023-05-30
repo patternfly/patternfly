@@ -18,9 +18,5 @@
     &::-webkit-calendar-picker-indicator {
       filter: #{"invert(1)"};
     }
-
-    &.pf-m-readonly {
-      border-bottom-color: var(--#{$pf-global}--palette--black-700); // should be a var?
-    }
   }
 }
