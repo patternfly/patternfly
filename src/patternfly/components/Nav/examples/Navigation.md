@@ -571,8 +571,8 @@ import './Navigation.css'
 {{/nav}}
 ```
 
-### Legacy tertiary
-```hbs
+### Tertiary
+```hbs isDeprecated
 {{#> nav nav--HasScroll="true" nav--IsTertiary="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -594,8 +594,8 @@ import './Navigation.css'
 {{/nav}}
 ```
 
-### Legacy tertiary overflow
-```hbs
+### Tertiary overflow
+```hbs isDeprecated
 {{#> nav nav--HasScroll="true" nav--IsTertiary="true" nav--IsScrollable="true" nav--attribute='aria-label="Local"'}}
   {{#> nav-list}}
     {{#> nav-item}}

@@ -44,8 +44,8 @@ section: components
 }}
 ```
 
-### Legacy tertiary nav
-```hbs isFullscreen
+### tertiary nav
+```hbs isFullscreen isDeprecated
 {{> page-template page-template--id="nav-legacy-teriary-example" page-template-sidebar--nav--IsExpandable="true" page-template--HasTertiaryNav="true"}}
 ```
 

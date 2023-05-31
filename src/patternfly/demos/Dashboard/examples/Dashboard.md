@@ -1,6 +1,5 @@
 ---
 id: 'Dashboard'
-beta: true
 section: patterns
 cssPrefix: pf-d-dashboard
 ---
