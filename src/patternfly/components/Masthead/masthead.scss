@@ -43,125 +43,126 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 }
 
 .#{$masthead} {
-  --#{$masthead}--PaddingLeft: var(--#{$masthead}--inset);
-  --#{$masthead}--PaddingRight: var(--#{$masthead}--inset);
-  --#{$masthead}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
+  @include pf-v5-root-vars {
+    --#{$masthead}--PaddingLeft: var(--#{$masthead}--inset);
+    --#{$masthead}--PaddingRight: var(--#{$masthead}--inset);
+    --#{$masthead}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
 
-  // Insets
-  --#{$masthead}--inset: var(--#{$pf-global}--spacer--md); // match page insets
-  --#{$masthead}--xl--inset: var(--#{$pf-global}--spacer--lg); // match page insets
+    // Insets
+    --#{$masthead}--inset: var(--#{$pf-global}--spacer--md); // match page insets
+    --#{$masthead}--xl--inset: var(--#{$pf-global}--spacer--lg); // match page insets
 
-  // Stack
-  --#{$masthead}--m-display-stack--GridTemplateColumns: max-content 1fr;
-  --#{$masthead}--m-display-stack__main--GridColumn: -1 / 1;
-  --#{$masthead}--m-display-stack__main--MinHeight: #{pf-size-prem(70px)};
-  --#{$masthead}--m-display-stack__main--Order: -1;
-  --#{$masthead}--m-display-stack__main--FlexBasis: 100%;
-  --#{$masthead}--m-display-stack__main--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$masthead}--m-display-stack__main--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$masthead}--m-display-stack__main--MarginRight: 0;
-  --#{$masthead}--m-display-stack__main--before--BorderBottom: var(--#{$masthead}__main--before--BorderBottomWidth) solid var(--#{$masthead}__main--before--BorderBottomColor);
-  --#{$masthead}--m-display-stack__toggle--GridColumn: 1;
-  --#{$masthead}--m-display-stack__content--GridColumn: 2;
-  --#{$masthead}--m-display-stack__content--MinHeight: auto;
-  --#{$masthead}--m-display-stack__content--Order: 1;
-  --#{$masthead}--m-display-stack__content--PaddingTop: 0;
-  --#{$masthead}--m-display-stack__content--PaddingBottom: 0;
-  --#{$masthead}--m-display-stack__content--MarginLeft: 0;
-  --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginRight: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginLeft: calc(var(--#{$masthead}--inset) * -1);
+    // Stack
+    --#{$masthead}--m-display-stack--GridTemplateColumns: max-content 1fr;
+    --#{$masthead}--m-display-stack__main--GridColumn: -1 / 1;
+    --#{$masthead}--m-display-stack__main--MinHeight: #{pf-size-prem(70px)};
+    --#{$masthead}--m-display-stack__main--Order: -1;
+    --#{$masthead}--m-display-stack__main--FlexBasis: 100%;
+    --#{$masthead}--m-display-stack__main--PaddingTop: var(--#{$pf-global}--spacer--sm);
+    --#{$masthead}--m-display-stack__main--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+    --#{$masthead}--m-display-stack__main--MarginRight: 0;
+    --#{$masthead}--m-display-stack__main--before--BorderBottom: var(--#{$masthead}__main--before--BorderBottomWidth) solid var(--#{$masthead}__main--before--BorderBottomColor);
+    --#{$masthead}--m-display-stack__toggle--GridColumn: 1;
+    --#{$masthead}--m-display-stack__content--GridColumn: 2;
+    --#{$masthead}--m-display-stack__content--MinHeight: auto;
+    --#{$masthead}--m-display-stack__content--Order: 1;
+    --#{$masthead}--m-display-stack__content--PaddingTop: 0;
+    --#{$masthead}--m-display-stack__content--PaddingBottom: 0;
+    --#{$masthead}--m-display-stack__content--MarginLeft: 0;
+    --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginRight: calc(var(--#{$masthead}--inset) * -1);
+    --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginLeft: calc(var(--#{$masthead}--inset) * -1);
 
-  // Inline
-  --#{$masthead}--m-display-inline--GridTemplateColumns: max-content max-content 1fr;
-  --#{$masthead}--m-display-inline__main--GridColumn: 2;
-  --#{$masthead}--m-display-inline__main--MinHeight: #{pf-size-prem(70px)};
-  --#{$masthead}--m-display-inline__main--Order: 0;
-  --#{$masthead}--m-display-inline__main--FlexBasis: auto;
-  --#{$masthead}--m-display-inline__main--PaddingTop: 0;
-  --#{$masthead}--m-display-inline__main--PaddingBottom: 0;
-  --#{$masthead}--m-display-inline__main--MarginRight: calc(var(--#{$pf-global}--spacer--lg) / 2); // split gutter
-  --#{$masthead}--m-display-inline__main--BorderBottom: 0;
-  --#{$masthead}--m-display-inline__toggle--GridColumn: 1;
-  --#{$masthead}--m-display-inline__content--GridColumn: 3;
-  --#{$masthead}--m-display-inline__content--MinHeight: #{pf-size-prem(70px)};
-  --#{$masthead}--m-display-inline__content--Order: 0;
-  --#{$masthead}--m-display-inline__content--PaddingTop: 0;
-  --#{$masthead}--m-display-inline__content--PaddingBottom: 0;
-  --#{$masthead}--m-display-inline__content--MarginLeft: calc(var(--#{$pf-global}--spacer--lg) / 2); // split gutter
-  --#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginRight: 0;
-  --#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginLeft: 0;
+    // Inline
+    --#{$masthead}--m-display-inline--GridTemplateColumns: max-content max-content 1fr;
+    --#{$masthead}--m-display-inline__main--GridColumn: 2;
+    --#{$masthead}--m-display-inline__main--MinHeight: #{pf-size-prem(70px)};
+    --#{$masthead}--m-display-inline__main--Order: 0;
+    --#{$masthead}--m-display-inline__main--FlexBasis: auto;
+    --#{$masthead}--m-display-inline__main--PaddingTop: 0;
+    --#{$masthead}--m-display-inline__main--PaddingBottom: 0;
+    --#{$masthead}--m-display-inline__main--MarginRight: calc(var(--#{$pf-global}--spacer--lg) / 2); // split gutter
+    --#{$masthead}--m-display-inline__main--BorderBottom: 0;
+    --#{$masthead}--m-display-inline__toggle--GridColumn: 1;
+    --#{$masthead}--m-display-inline__content--GridColumn: 3;
+    --#{$masthead}--m-display-inline__content--MinHeight: #{pf-size-prem(70px)};
+    --#{$masthead}--m-display-inline__content--Order: 0;
+    --#{$masthead}--m-display-inline__content--PaddingTop: 0;
+    --#{$masthead}--m-display-inline__content--PaddingBottom: 0;
+    --#{$masthead}--m-display-inline__content--MarginLeft: calc(var(--#{$pf-global}--spacer--lg) / 2); // split gutter
+    --#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginRight: 0;
+    --#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginLeft: 0;
 
-  // Main border
-  --#{$masthead}__main--before--Right: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}__main--before--Left: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}__main--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$masthead}__main--before--BorderBottomColor: var(--#{$pf-global}--palette--black-600);
+    // Main border
+    --#{$masthead}__main--before--Right: calc(var(--#{$masthead}--inset) * -1);
+    --#{$masthead}__main--before--Left: calc(var(--#{$masthead}--inset) * -1);
+    --#{$masthead}__main--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+    --#{$masthead}__main--before--BorderBottomColor: var(--#{$pf-global}--palette--black-600);
 
-  // Toggle
-  --#{$masthead}__toggle--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$masthead}__toggle--MarginLeft: calc(var(--#{$pf-global}--spacer--md) * -1); // offset by button padding
-  --#{$masthead}__toggle--c-button--FontSize: var(--#{$pf-global}--FontSize--2xl);
+    // Toggle
+    --#{$masthead}__toggle--MarginRight: var(--#{$pf-global}--spacer--sm);
+    --#{$masthead}__toggle--MarginLeft: calc(var(--#{$pf-global}--spacer--md) * -1); // offset by button padding
+    --#{$masthead}__toggle--c-button--FontSize: var(--#{$pf-global}--FontSize--2xl);
 
-  // Light 100
-  --#{$masthead}--m-light--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$masthead}--m-light__main--BorderBottomColor: var(--#{$pf-global}--BorderColor--300);
+    // Light 100
+    --#{$masthead}--m-light--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+    --#{$masthead}--m-light__main--BorderBottomColor: var(--#{$pf-global}--BorderColor--300);
 
-  // Light 200
-  --#{$masthead}--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$masthead}--m-light-200__main--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
+    // Light 200
+    --#{$masthead}--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+    --#{$masthead}--m-light-200__main--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
 
-  // Toolbar item
-  --#{$masthead}--c-toolbar__item--Display: flex;
+    // Toolbar item
+    --#{$masthead}--c-toolbar__item--Display: flex;
 
-  // Borders
-  --#{$masthead}--item-border-color--base: var(--#{$pf-global}--palette--black-800);
+    // Borders
+    --#{$masthead}--item-border-color--base: var(--#{$pf-global}--palette--black-800);
 
-  // Context selector
-  --#{$masthead}--c-context-selector--Width: auto;
-  --#{$masthead}--c-context-selector__toggle--BorderTopColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-context-selector__toggle--BorderRightColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-context-selector__toggle--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-context-selector--m-full-height__toggle--BorderTopColor: transparent;
-  --#{$masthead}--c-context-selector--m-full-height__toggle--BorderBottomColor: transparent;
+    // Context selector
+    --#{$masthead}--c-context-selector--Width: auto;
+    --#{$masthead}--c-context-selector__toggle--BorderTopColor: var(--#{$masthead}--item-border-color--base);
+    --#{$masthead}--c-context-selector__toggle--BorderRightColor: var(--#{$masthead}--item-border-color--base);
+    --#{$masthead}--c-context-selector__toggle--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
+    --#{$masthead}--c-context-selector--m-full-height__toggle--BorderTopColor: transparent;
+    --#{$masthead}--c-context-selector--m-full-height__toggle--BorderBottomColor: transparent;
 
-  // Dropdown
-  --#{$masthead}--c-dropdown__toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-dropdown__toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-dropdown__toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderTopColor: transparent;
-  --#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderBottomColor: transparent;
+    // Dropdown
+    --#{$masthead}--c-dropdown__toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
+    --#{$masthead}--c-dropdown__toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
+    --#{$masthead}--c-dropdown__toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
+    --#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderTopColor: transparent;
+    --#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderBottomColor: transparent;
 
-  // Menu toggle
-  --#{$masthead}--c-menu-toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-menu-toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-menu-toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-menu-toggle--m-full-height--before--BorderTopColor: transparent;
-  --#{$masthead}--c-menu-toggle--m-full-height--before--BorderBottomColor: transparent;
+    // Menu toggle
+    --#{$masthead}--c-menu-toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
+    --#{$masthead}--c-menu-toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
+    --#{$masthead}--c-menu-toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
+    --#{$masthead}--c-menu-toggle--m-full-height--before--BorderTopColor: transparent;
+    --#{$masthead}--c-menu-toggle--m-full-height--before--BorderBottomColor: transparent;
 
-  // Toolbar
-  --#{$masthead}--c-toolbar--AlignItems--base: center;
-  --#{$masthead}--c-toolbar__content--PaddingRight: 0;
-  --#{$masthead}--c-toolbar__content--PaddingLeft: 0;
-  --#{$masthead}--c-toolbar__expandable-content--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$masthead}--c-toolbar__expandable-content--PaddingRight: var(--#{$masthead}--inset);
-  --#{$masthead}--c-toolbar__expandable-content--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$masthead}--c-toolbar__expandable-content--PaddingLeft: var(--#{$masthead}--inset);
-  --#{$masthead}--c-toolbar__expandable-content--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$masthead}--c-toolbar__expandable-content--BorderTopColor: var(--#{$masthead}--item-border-color--base);
+    // Toolbar
+    --#{$masthead}--c-toolbar--AlignItems--base: center;
+    --#{$masthead}--c-toolbar__content--PaddingRight: 0;
+    --#{$masthead}--c-toolbar__content--PaddingLeft: 0;
+    --#{$masthead}--c-toolbar__expandable-content--PaddingTop: var(--#{$pf-global}--spacer--md);
+    --#{$masthead}--c-toolbar__expandable-content--PaddingRight: var(--#{$masthead}--inset);
+    --#{$masthead}--c-toolbar__expandable-content--PaddingBottom: var(--#{$pf-global}--spacer--md);
+    --#{$masthead}--c-toolbar__expandable-content--PaddingLeft: var(--#{$masthead}--inset);
+    --#{$masthead}--c-toolbar__expandable-content--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
+    --#{$masthead}--c-toolbar__expandable-content--BorderTopColor: var(--#{$masthead}--item-border-color--base);
 
+    // Set layout to stack by default
+    @include pf-v5-c-masthead--m-display-stack;
 
-  // Set layout to stack by default
-  @include pf-v5-c-masthead--m-display-stack;
-
-  // Set layout to inline at medium breakpoint
-  .#{$page}:where(:not(.pf-m-resize-observer)) & {
-    @media screen and (min-width: $pf-v5-global--breakpoint--md) {
-      @include pf-v5-c-masthead--m-display-inline;
+    // Set layout to inline at medium breakpoint
+    .#{$page}:where(:not(.pf-m-resize-observer)) & {
+      @media screen and (min-width: $pf-v5-global--breakpoint--md) {
+        @include pf-v5-c-masthead--m-display-inline;
+      }
     }
-  }
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$masthead}--inset: var(--#{$masthead}--xl--inset);
+    @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
+      --#{$masthead}--inset: var(--#{$masthead}--xl--inset);
+    }
   }
 
   @include pf-v5-t-dark; // force the container to follow the dark theme
@@ -362,6 +363,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/masthead";
 
-@include pf-v5-theme-dark {
+@include pf-v5-root-vars('dark') {
   @include pf-v5-theme-dark-masthead;
 }

@@ -95,9 +95,10 @@
       --#{$about-modal-box}__content--MarginBottom: var(--#{$about-modal-box}__content--sm--MarginBottom);
       --#{$about-modal-box}__content--MarginLeft: var(--#{$about-modal-box}__content--sm--MarginLeft);
     }
+
+    // This component always needs to be dark
   }
 
-  // This component always needs to be dark
   @include pf-v5-t-dark;
 
   position: relative;
