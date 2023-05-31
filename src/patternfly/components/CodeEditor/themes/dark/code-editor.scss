@@ -3,7 +3,7 @@
 @mixin pf-v5-theme-dark-code-editor() {
   .#{$code-editor} {
     --#{$code-editor}--m-read-only__main--Color: var(--#{$pf-global}--disabled-color--300);
-    --#{$code-editor}--m-read-only__main--BackgroundColor: var(--#{$pf-global}--disabled-color--100);
+    --#{$code-editor}--m-read-only__main--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
   }
 
   .#{$code-editor}__controls {

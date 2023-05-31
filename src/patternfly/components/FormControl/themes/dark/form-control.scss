@@ -10,6 +10,8 @@
     --#{$form-control}--m-disabled--Color: var(--#{$pf-global}--disabled-color--300);
     --#{$form-control}--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
     --#{$form-control}--m-readonly--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
+    --#{$form-control}--m-readonly--hover--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
+    --#{$form-control}--m-readonly--focus--BorderBottomColor:var(--#{$pf-global}--BorderColor--400);
     --#{$form-control}--m-disabled__toggle-icon--Color: var(--#{$pf-global}--disabled-color--300);
 
     color: var(--#{$pf-global}--Color--100);
