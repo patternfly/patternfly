@@ -11,7 +11,7 @@ $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
   --#{$flex}--m-row--AlignItems: baseline;
   --#{$flex}--m-row-reverse--AlignItems: baseline;
   --#{$flex}--item--Order: 0;
-  --#{$flex}--spacer--column--base: var(--#{$pf-global}--spacer--lg); // default spacer/gap for columns
+  --#{$flex}--spacer--column--base: var(--#{$pf-global}--spacer--md); // default spacer/gap for columns
   --#{$flex}--spacer--row--base: var(--#{$pf-global}--spacer--sm); // default spacer/gap for rows
   --#{$flex}--RowGap: var(--#{$flex}--spacer--row--base); 
   --#{$flex}--ColumnGap: 0;
@@ -34,8 +34,8 @@ $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 // Item
 .#{$flex} > * {
   // set/reset layout spacers on children, since the parent flex layout can be a child of another flex layout and needs these values from its parent
-  --#{$flex}--spacer--column: var(--#{$flex}--spacer, var(--#{$flex}--spacer--column--base));
-  --#{$flex}--spacer--row: var(--#{$flex}--spacer, var(--#{$flex}--spacer--row--base));
+  --#{$flex}--spacer--column: var(--#{$flex}--spacer--column--base);
+  --#{$flex}--spacer--row: var(--#{$flex}--spacer--row--base);
 
   order: var(--#{$flex}--item--Order);
   max-width: 100%;
