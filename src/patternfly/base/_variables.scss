@@ -280,10 +280,6 @@
   --#{$pf-global}--target-size--MinHeight: #{$pf-v5-global--target-size--MinHeight};
 }
 
-@include pf-v5-base-theme-root {
-  @include pf-v5-base-variables;
-}
-
 // Variable font opt-in
 .pf-m-vf-font {
   --#{$pf-global}--FontFamily--text: var(--#{$pf-global}--FontFamily--text--vf);
@@ -291,9 +287,39 @@
   --#{$pf-global}--FontFamily--monospace: var(--#{$pf-global}--FontFamily--monospace--vf);
 }
 
+@include pf-v5-theme-base-root {
+  @include pf-v5-base-variables;
+}
+
 // stylelint-disable no-invalid-position-at-import-rule
 @import "./themes/dark/variables";
 
-@include pf-v5-base-theme-root('dark') {
+@include pf-v5-theme-base-root('dark') {
   @include pf-v5-theme-dark-variables;
 }
+
+@include pf-v5-theme-base-root('light') {
+  @include pf-v5-base-variables;
+}
+
+@mixin pf-v5-penta-theme {
+  --pf-v5-global--BackgroundColor--light-100: #223822;
+  --pf-v5-global--BackgroundColor--light-200: #4f636a;
+  --pf-v5-global--BackgroundColor--light-300: #575757;
+}
+
+@mixin pf-v5-penta-theme-dark {
+  --pf-v5-global--BackgroundColor--light-100: #90ee90;
+  --pf-v5-global--BackgroundColor--light-200: #add8e6;
+  --pf-v5-global--BackgroundColor--light-300: #d3d3d3;
+}
+
+@include pf-v5-theme-base-root('pf-penta', $is-custom: true) {
+  @include pf-v5-penta-theme;
+}
+
+@include pf-v5-theme-base-root('pf-penta-dark', $is-custom: true) {
+  @include pf-v5-penta-theme-dark;
+}
+
+// stylelint-enable

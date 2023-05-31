@@ -295,15 +295,6 @@
   }
 }
 
-@mixin pf-v5-theme-dark($theme-dark-class: $pf-v5--theme-dark--class, $theme-dark-root: false) {
-  $selector: &;
-
-  :where(#{$theme-dark-class}) #{$selector},
-  #{$selector}:where(#{$theme-dark-class}) {
-    @content;
-  }
-}
-
 @mixin pf-v5-construct-global-vars($prefix: $pf-prefix--version, $maps...) {
   @each $map in $maps {
     @each $name, $val in $map {
@@ -312,52 +303,118 @@
   }
 }
 
-// Add classes to root
-@mixin pf-v5-base-theme-root($theme: 'base') {
+@function pf-v5-concat($selectors...) {
+  $mySelector: '';
+  @each $selector in $selectors {
+    $mySelector: #{$mySelector}#{$selector};
+  }
+
+  @return $mySelector;
+}
+
+@mixin pf-v5-theme-dark($theme-dark-class: #{$pf-v5--theme-dark--class}) {
   $new-selector: #{&};
 
   @at-root {
+    $joined-class: pf-v5-concat(':where(', $pf-v5--theme-dark--class, ')', $new-selector);
+
+    #{$joined-class},
+    #{$pf-v5--theme-dark--class} #{$new-selector} {
+      @content;
+    }
+  }
+}
+
+// Add classes to root
+@mixin pf-v5-theme-base-root($theme: 'base', $is-custom: false) {
+  @at-root {
+    $joined-class-dark: ':where('#{$pf-v5--theme-dark--class}')';
+    $joined-class-light: ':where('#{$pf-v5--theme-light--class}')';
+
     @if $theme == 'base' {
-      :where(:root),
-      :where(#{$pf-v5--theme-light--class}) {
+      :where(:root) {
         @content;
       }
-    } @else if $theme == 'dark' {
-      :where(#{$pf-v5--theme-dark--class}) {
+    }
+
+    @else if $theme == 'dark' {
+      #{$joined-class-dark} {
         @content;
       }
-    } @else {
-      :where(#{$theme}) {
+    }
+
+    @else if $theme == 'light' {
+      #{$joined-class-light} {
         @content;
+      }
+    }
+
+    @else {
+      @if $is-custom {
+        .#{$theme} {
+          @content;
+        }
+      } @else {
+        :where(.#{$theme}) {
+          @content;
+        }
       }
     }
   }
 }
 
-@mixin pf-v5-root-vars($theme: 'base') {
+// Add notes
+@mixin pf-v5-root-vars($theme: 'base', $is-custom: false) {
   $new-selector: #{&};
 
-  // @debug $new-selector + $pf-v5--theme-dark--class;
   @at-root {
+    $joined-class: '';
+    $child-class: '';
+
     @if $theme == 'base' {
-      // $class: $pf-v5--theme-light--class + $new-selector;
-      $class: ':where(:root' + $pf-v5--theme-light--class + ')' + $new-selector;
-      :where(:root),
-      #{$class},
-      :where(#{$pf-v5--theme-light--class}) #{$new-selector} {
-        @content;
-      }
-    } @else if $theme == 'dark' {
-      $class: ':where(:root' + $pf-v5--theme-dark--class + ')' + $new-selector;
-      :where(#{$pf-v5--theme-dark--class}),
-      :where(#{$pf-v5--theme-dark--class}) #{$new-selector},
-      #{$class} {
-        @content;
-      }
-    } @else {
-      :where(#{$theme}) {
+      :where(:root) {
         @content;
       }
     }
+
+    @else if $theme == 'dark' or 'light' {
+      @if $theme == 'dark' {
+        $joined-class: pf-v5-concat(':where(', $pf-v5--theme-dark--class, ')', $new-selector);
+        $child-class: pf-v5-concat(':where(', $pf-v5--theme-dark--class, ')', $new-selector);
+
+        #{$joined-class},
+        #{$child-class},
+        :where(#{$pf-v5--theme-dark--class}) #{$new-selector} {
+          @content;
+        }
+      }
+
+      @else if $theme == 'light' {
+        $joined-class: pf-v5-concat(':where(', $pf-v5--theme-light--class, ')', $new-selector);
+        $child-class: pf-v5-concat(':where(', $pf-v5--theme-light--class, ')', $new-selector);
+
+        #{$joined-class},
+        #{$child-class},
+        :where(#{$pf-v5--theme-light--class}) #{$new-selector} {
+          @content;
+        }
+      }
+    }
+
+    @else {
+      @if $is-custom {
+        .#{$theme} {
+          @content;
+        }
+      } @else {
+        :where(.#{$theme}) {
+          @content;
+        }
+      }
+    }
   }
+}
+
+@mixin pf-v5-vars($name: &) {
+  @content;
 }
