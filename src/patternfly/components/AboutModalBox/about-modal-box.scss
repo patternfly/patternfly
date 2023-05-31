@@ -1,98 +1,100 @@
 // @debug $about-modal-box; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 .#{$about-modal-box} {
-  // Component variables
-  --#{$about-modal-box}--BackgroundColor: var(--#{$pf-global}--palette--black-1000); // Modal uses a non-standard background color
-  --#{$about-modal-box}--BackgroundPosition: bottom right;
-  --#{$about-modal-box}--BackgroundSize--min-width: 200px;
-  --#{$about-modal-box}--BackgroundSize--width: 60%;
-  --#{$about-modal-box}--BackgroundSize--max-width: 600px;
-  --#{$about-modal-box}--BackgroundSize: clamp(var(--#{$about-modal-box}--BackgroundSize--min-width), var(--#{$about-modal-box}--BackgroundSize--width), var(--#{$about-modal-box}--BackgroundSize--max-width));
-  --#{$about-modal-box}--Height: 100%;
-  --#{$about-modal-box}--lg--Height: #{pf-size-prem(762px)}; // Height is optimized for the exact height desired
-  --#{$about-modal-box}--Width: 100%;
-  --#{$about-modal-box}--sm--GridTemplateColumns: 5fr 1fr;
-  --#{$about-modal-box}--lg--GridTemplateColumns: 1fr .6fr;
+  @include pf-v5-root-vars {
+    // Component variables
+    --#{$about-modal-box}--BackgroundColor: var(--#{$pf-global}--palette--black-1000); // Modal uses a non-standard background color
+    --#{$about-modal-box}--BackgroundPosition: bottom right;
+    --#{$about-modal-box}--BackgroundSize--min-width: 200px;
+    --#{$about-modal-box}--BackgroundSize--width: 60%;
+    --#{$about-modal-box}--BackgroundSize--max-width: 600px;
+    --#{$about-modal-box}--BackgroundSize: clamp(var(--#{$about-modal-box}--BackgroundSize--min-width), var(--#{$about-modal-box}--BackgroundSize--width), var(--#{$about-modal-box}--BackgroundSize--max-width));
+    --#{$about-modal-box}--Height: 100%;
+    --#{$about-modal-box}--lg--Height: #{pf-size-prem(762px)}; // Height is optimized for the exact height desired
+    --#{$about-modal-box}--Width: 100%;
+    --#{$about-modal-box}--sm--GridTemplateColumns: 5fr 1fr;
+    --#{$about-modal-box}--lg--GridTemplateColumns: 1fr .6fr;
 
-  // Brand
-  --#{$about-modal-box}__brand--PaddingTop: var(--#{$pf-global}--spacer--2xl);
-  --#{$about-modal-box}__brand--PaddingRight: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__brand--PaddingLeft: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__brand--PaddingBottom: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__brand--sm--PaddingRight: var(--#{$pf-global}--spacer--3xl);
-  --#{$about-modal-box}__brand--sm--PaddingLeft: var(--#{$pf-global}--spacer--3xl);
-  --#{$about-modal-box}__brand--sm--PaddingBottom: var(--#{$pf-global}--spacer--3xl);
+    // Brand
+    --#{$about-modal-box}__brand--PaddingTop: var(--#{$pf-global}--spacer--2xl);
+    --#{$about-modal-box}__brand--PaddingRight: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__brand--PaddingLeft: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__brand--PaddingBottom: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__brand--sm--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+    --#{$about-modal-box}__brand--sm--PaddingLeft: var(--#{$pf-global}--spacer--3xl);
+    --#{$about-modal-box}__brand--sm--PaddingBottom: var(--#{$pf-global}--spacer--3xl);
 
-  @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
-    --#{$about-modal-box}__brand--PaddingRight: var(--#{$about-modal-box}__brand--sm--PaddingRight);
-    --#{$about-modal-box}__brand--PaddingLeft: var(--#{$about-modal-box}__brand--sm--PaddingLeft);
-    --#{$about-modal-box}__brand--PaddingBottom: var(--#{$about-modal-box}__brand--sm--PaddingBottom);
-  }
+    @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
+      --#{$about-modal-box}__brand--PaddingRight: var(--#{$about-modal-box}__brand--sm--PaddingRight);
+      --#{$about-modal-box}__brand--PaddingLeft: var(--#{$about-modal-box}__brand--sm--PaddingLeft);
+      --#{$about-modal-box}__brand--PaddingBottom: var(--#{$about-modal-box}__brand--sm--PaddingBottom);
+    }
 
-  // Close
-  --#{$about-modal-box}__close--ZIndex: var(--#{$pf-global}--ZIndex--2xl);
-  --#{$about-modal-box}__close--PaddingTop: var(--#{$pf-global}--spacer--2xl);
-  --#{$about-modal-box}__close--PaddingRight: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__close--PaddingBottom: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__close--sm--PaddingBottom: var(--#{$pf-global}--spacer--3xl);
-  --#{$about-modal-box}__close--lg--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+    // Close
+    --#{$about-modal-box}__close--ZIndex: var(--#{$pf-global}--ZIndex--2xl);
+    --#{$about-modal-box}__close--PaddingTop: var(--#{$pf-global}--spacer--2xl);
+    --#{$about-modal-box}__close--PaddingRight: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__close--PaddingBottom: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__close--sm--PaddingBottom: var(--#{$pf-global}--spacer--3xl);
+    --#{$about-modal-box}__close--lg--PaddingRight: var(--#{$pf-global}--spacer--3xl);
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
-    --#{$about-modal-box}__close--PaddingBottom: var(--#{$about-modal-box}__close--sm--PaddingBottom);
-  }
+    @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
+      --#{$about-modal-box}__close--PaddingBottom: var(--#{$about-modal-box}__close--sm--PaddingBottom);
+    }
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--lg) {
-    --#{$about-modal-box}__close--PaddingRight: var(--#{$about-modal-box}__close--lg--PaddingRight);
-  }
+    @media only screen and (min-width: $pf-v5-global--breakpoint--lg) {
+      --#{$about-modal-box}__close--PaddingRight: var(--#{$about-modal-box}__close--lg--PaddingRight);
+    }
 
-  // Close Button
-  --#{$about-modal-box}__close--c-button--Color: var(--#{$pf-global}--Color--100);
-  --#{$about-modal-box}__close--c-button--FontSize: var(--#{$pf-global}--FontSize--xl);
-  --#{$about-modal-box}__close--c-button--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
-  --#{$about-modal-box}__close--c-button--Width: calc(var(--#{$about-modal-box}__close--c-button--FontSize) * 2); // Height and width are 2x font-size
-  --#{$about-modal-box}__close--c-button--Height: calc(var(--#{$about-modal-box}__close--c-button--FontSize) * 2);
-  --#{$about-modal-box}__close--c-button--BackgroundColor: var(--#{$pf-global}--palette--black-1000); // Close button uses a non-standard background color
-  --#{$about-modal-box}__close--c-button--hover--BackgroundColor: #{rgba($pf-v5-color-black-1000, .4)};
+    // Close Button
+    --#{$about-modal-box}__close--c-button--Color: var(--#{$pf-global}--Color--100);
+    --#{$about-modal-box}__close--c-button--FontSize: var(--#{$pf-global}--FontSize--xl);
+    --#{$about-modal-box}__close--c-button--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
+    --#{$about-modal-box}__close--c-button--Width: calc(var(--#{$about-modal-box}__close--c-button--FontSize) * 2); // Height and width are 2x font-size
+    --#{$about-modal-box}__close--c-button--Height: calc(var(--#{$about-modal-box}__close--c-button--FontSize) * 2);
+    --#{$about-modal-box}__close--c-button--BackgroundColor: var(--#{$pf-global}--palette--black-1000); // Close button uses a non-standard background color
+    --#{$about-modal-box}__close--c-button--hover--BackgroundColor: #{rgba($pf-v5-color-black-1000, .4)};
 
-  // Brand img
-  --#{$about-modal-box}__brand-image--Height: #{pf-size-prem(40px)};
+    // Brand img
+    --#{$about-modal-box}__brand-image--Height: #{pf-size-prem(40px)};
 
-  // Header
-  --#{$about-modal-box}__header--PaddingRight: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__header--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$about-modal-box}__header--PaddingLeft: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__header--sm--PaddingRight: var(--#{$pf-global}--spacer--3xl);
-  --#{$about-modal-box}__header--sm--PaddingLeft: var(--#{$pf-global}--spacer--3xl);
+    // Header
+    --#{$about-modal-box}__header--PaddingRight: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__header--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+    --#{$about-modal-box}__header--PaddingLeft: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__header--sm--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+    --#{$about-modal-box}__header--sm--PaddingLeft: var(--#{$pf-global}--spacer--3xl);
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
-    --#{$about-modal-box}__header--PaddingRight: var(--#{$about-modal-box}__header--sm--PaddingRight);
-    --#{$about-modal-box}__header--PaddingLeft: var(--#{$about-modal-box}__header--sm--PaddingLeft);
-  }
+    @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
+      --#{$about-modal-box}__header--PaddingRight: var(--#{$about-modal-box}__header--sm--PaddingRight);
+      --#{$about-modal-box}__header--PaddingLeft: var(--#{$about-modal-box}__header--sm--PaddingLeft);
+    }
 
-  // Strapline
-  --#{$about-modal-box}__strapline--PaddingTop: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__strapline--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$about-modal-box}__strapline--sm--PaddingTop: var(--#{$pf-global}--spacer--2xl);
+    // Strapline
+    --#{$about-modal-box}__strapline--PaddingTop: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__strapline--FontSize: var(--#{$pf-global}--FontSize--sm);
+    --#{$about-modal-box}__strapline--sm--PaddingTop: var(--#{$pf-global}--spacer--2xl);
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
-    --#{$about-modal-box}__strapline--PaddingTop: var(--#{$about-modal-box}__strapline--sm--PaddingTop);
-  }
+    @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
+      --#{$about-modal-box}__strapline--PaddingTop: var(--#{$about-modal-box}__strapline--sm--PaddingTop);
+    }
 
-  // Content
-  --#{$about-modal-box}__content--MarginTop: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__content--MarginRight: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__content--MarginBottom: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__content--MarginLeft: var(--#{$pf-global}--spacer--xl);
-  --#{$about-modal-box}__content--sm--MarginTop: var(--#{$pf-global}--spacer--2xl);
-  --#{$about-modal-box}__content--sm--MarginRight: var(--#{$pf-global}--spacer--3xl);
-  --#{$about-modal-box}__content--sm--MarginBottom: var(--#{$pf-global}--spacer--2xl);
-  --#{$about-modal-box}__content--sm--MarginLeft: var(--#{$pf-global}--spacer--3xl);
+    // Content
+    --#{$about-modal-box}__content--MarginTop: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__content--MarginRight: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__content--MarginBottom: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__content--MarginLeft: var(--#{$pf-global}--spacer--xl);
+    --#{$about-modal-box}__content--sm--MarginTop: var(--#{$pf-global}--spacer--2xl);
+    --#{$about-modal-box}__content--sm--MarginRight: var(--#{$pf-global}--spacer--3xl);
+    --#{$about-modal-box}__content--sm--MarginBottom: var(--#{$pf-global}--spacer--2xl);
+    --#{$about-modal-box}__content--sm--MarginLeft: var(--#{$pf-global}--spacer--3xl);
 
-  @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
-    --#{$about-modal-box}__content--MarginTop: var(--#{$about-modal-box}__content--sm--MarginTop);
-    --#{$about-modal-box}__content--MarginRight: var(--#{$about-modal-box}__content--sm--MarginRight);
-    --#{$about-modal-box}__content--MarginBottom: var(--#{$about-modal-box}__content--sm--MarginBottom);
-    --#{$about-modal-box}__content--MarginLeft: var(--#{$about-modal-box}__content--sm--MarginLeft);
+    @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
+      --#{$about-modal-box}__content--MarginTop: var(--#{$about-modal-box}__content--sm--MarginTop);
+      --#{$about-modal-box}__content--MarginRight: var(--#{$about-modal-box}__content--sm--MarginRight);
+      --#{$about-modal-box}__content--MarginBottom: var(--#{$about-modal-box}__content--sm--MarginBottom);
+      --#{$about-modal-box}__content--MarginLeft: var(--#{$about-modal-box}__content--sm--MarginLeft);
+    }
   }
 
   // This component always needs to be dark
@@ -222,6 +224,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/about-modal-box";
 
-@include pf-v5-theme-dark {
+@include pf-v5-root-vars('dark') {
   @include pf-v5-theme-dark-about-modal-box;
 }

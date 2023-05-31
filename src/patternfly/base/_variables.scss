@@ -314,11 +314,11 @@
   --pf-v5-global--BackgroundColor--light-300: #d3d3d3;
 }
 
-@include pf-v5-theme-base-root('pf-penta', $is-custom: true) {
+@include pf-v5-theme-base-root('pf-theme-penta') {
   @include pf-v5-penta-theme;
 }
 
-@include pf-v5-theme-base-root('pf-penta-dark', $is-custom: true) {
+@include pf-v5-theme-base-root('pf-theme-penta-dark') {
   @include pf-v5-penta-theme-dark;
 }
 

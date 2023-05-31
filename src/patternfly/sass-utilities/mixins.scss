@@ -303,13 +303,32 @@
   }
 }
 
+// @function pf-v5-concat($selectors...) {
+//   $mySelector: '';
+//   @each $selector in $selectors {
+//     $mySelector: #{$mySelector}#{$selector};
+//   }
+
+//   @return $mySelector;
+// }
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+      @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
 @function pf-v5-concat($selectors...) {
   $mySelector: '';
   @each $selector in $selectors {
-    $mySelector: #{$mySelector}#{$selector};
+    $mySelector: #{$mySelector} + #{$selector};
   }
 
-  @return $mySelector;
+  @return str-replace($mySelector, ' ', '');
 }
 
 @mixin pf-v5-theme-dark($theme-dark-class: #{$pf-v5--theme-dark--class}) {
@@ -328,8 +347,8 @@
 // Add classes to root
 @mixin pf-v5-theme-base-root($theme: 'base', $is-custom: false) {
   @at-root {
-    $joined-class-dark: ':where('#{$pf-v5--theme-dark--class}')';
-    $joined-class-light: ':where('#{$pf-v5--theme-light--class}')';
+    $joined-class-dark: #{$pf-v5--theme-dark--class};
+    $joined-class-light: #{$pf-v5--theme-light--class};
 
     @if $theme == 'base' {
       :where(:root) {
@@ -338,13 +357,13 @@
     }
 
     @else if $theme == 'dark' {
-      #{$joined-class-dark} {
+      :where(#{$joined-class-dark}) {
         @content;
       }
     }
 
     @else if $theme == 'light' {
-      #{$joined-class-light} {
+      :where(#{$joined-class-light}) {
         @content;
       }
     }
@@ -366,6 +385,8 @@
 // Add notes
 @mixin pf-v5-root-vars($theme: 'base', $is-custom: false) {
   $new-selector: #{&};
+  $where: ':where(';
+  $paren: ')';
 
   @at-root {
     $joined-class: '';
@@ -379,12 +400,15 @@
 
     @else if $theme == 'dark' or 'light' {
       @if $theme == 'dark' {
-        $joined-class: pf-v5-concat(':where(', $pf-v5--theme-dark--class, ')', $new-selector);
-        $child-class: pf-v5-concat(':where(', $pf-v5--theme-dark--class, ')', $new-selector);
+
+        // $joined-class: pf-v5-concat(':where(', #{$pf-v5--theme-dark--class})#{&});
+        $joined-class: pf-v5-concat(':where(', $pf-v5--theme-dark--class, ')',$new-selector);
+        $child-class: str-replace(#{$where + $pf-v5--theme-dark--class + $paren + $new-selector}, ' ', '');
+
+        // @debug $child-class;
 
         #{$joined-class},
-        #{$child-class},
-        :where(#{$pf-v5--theme-dark--class}) #{$new-selector} {
+        #{$child-class} {
           @content;
         }
       }
@@ -415,6 +439,112 @@
   }
 }
 
-@mixin pf-v5-vars($name: &) {
-  @content;
-}
+
+// @function pf-v5-concat($selectors...) {
+//   $mySelector: '';
+//   @each $selector in $selectors {
+//     $mySelector: #{$mySelector}#{$selector};
+//   }
+
+//   @return str-replace($mySelector, ' ', '');
+// }
+
+
+// @mixin pf-v5-theme-dark($theme-dark-class: #{$pf-v5--theme-dark--class}) {
+//   $new-selector: #{&};
+
+//   @at-root {
+//     $joined-class: pf-v5-concat(':where(', $pf-v5--theme-dark--class, ')', $new-selector);
+
+//     // @debug $new-selector $joined-class;
+
+//     #{$joined-class},
+//     #{$pf-v5--theme-dark--class} #{$new-selector} {
+//       @content;
+//     }
+//   }
+// }
+
+// // Add classes to root
+// @mixin pf-v5-theme-base-root($theme: 'base') {
+//   @at-root {
+//     $joined-class-dark: ':where('#{$pf-v5--theme-dark--class}')';
+//     $joined-class-light: ':where('#{$pf-v5--theme-light--class}')';
+
+//     @if $theme == 'base' {
+//       :where(:root) {
+//         @content;
+//       }
+//     }
+
+//     @else if $theme == 'dark' {
+//       #{$joined-class-dark} {
+//         @content;
+//       }
+//     }
+
+//     @else if $theme == 'light' {
+//       #{$joined-class-light} {
+//         @content;
+//       }
+//     }
+
+//     @else {
+//       :where(.#{$theme}) {
+//         @content;
+//       }
+//     }
+//   }
+// }
+
+// // Add notes
+// @mixin pf-v5-root-vars($theme: 'base', $custom: false) {
+//   $new-selector: #{&};
+
+//   @at-root {
+//     $joined-class: '';
+//     $child-class: '';
+
+//     @if $theme == 'base' {
+//       :where(:root) {
+//         @content;
+//       }
+//     }
+
+//     @else if $theme == 'dark' or 'light' {
+//       @if $theme == 'dark' {
+//         $joined-class: pf-v5-concat(":where(" , $pf-v5--theme-dark--class, ")", $new-selector);
+//         $child-class: pf-v5-concat(":where(", $pf-v5--theme-dark--class, ")", $new-selector);
+
+//         #{$joined-class},
+//         #{$child-class},
+//         :where(#{$pf-v5--theme-dark--class}) #{$new-selector} {
+//           @content;
+//         }
+//       }
+
+//       @else if $theme == 'light' {
+//         $joined-class: pf-v5-concat(':where(', $pf-v5--theme-light--class, ')', $new-selector);
+//         $child-class: pf-v5-concat(':where(', $pf-v5--theme-light--class, ')', $new-selector);
+
+//         #{$joined-class},
+//         #{$child-class},
+//         :where(#{$pf-v5--theme-light--class}) #{$new-selector} {
+//           @content;
+//         }
+//       }
+//     }
+
+//     @else {
+//       @if $custom {
+//         .#{$theme} {
+//           @content;
+//         }
+//       } @else {
+//         :where(.#{$theme}) {
+//           @content;
+//         }
+//       }
+//     }
+//   }
+// }

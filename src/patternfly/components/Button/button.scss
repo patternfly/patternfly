@@ -661,6 +661,6 @@
 // stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/button";
 
-@include pf-v5-root-vars(dark) {
+@include pf-v5-root-vars('dark') {
   @include pf-v5-theme-dark-button;
 }
