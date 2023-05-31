@@ -4,8 +4,7 @@ $pf-page-v5--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl"
 $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 // stylelint-enable
 
-// URL.com/guidelines#layout
-.#{$page} {
+:root {
   --#{$page}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
   --#{$page}--inset: var(--#{$pf-global}--spacer--md);
   --#{$page}--xl--inset: var(--#{$pf-global}--spacer--lg);
@@ -197,6 +196,10 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-wizard--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$page}__main-wizard--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
 
+  // URL.com/guidelines#layout
+}
+
+.#{$page} {
   // Base
   display: grid;
   grid-template-areas:
