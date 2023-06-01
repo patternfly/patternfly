@@ -4,15 +4,15 @@
   --#{$form-control}--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$form-control}--LineHeight: var(--#{$pf-global}--LineHeight--md);
   --#{$form-control}--Resize: none;
+  --#{$form-control}--OutlineOffset: -2px;
   --#{$form-control}--before--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$form-control}--before--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$form-control}--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form-control}--before--BorderBottomWidth: 0;
   --#{$form-control}--before--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$form-control}--before--BorderTopColor: var(--#{$pf-global}--BorderColor--300);
   --#{$form-control}--before--BorderRightColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$form-control}--before--BorderBottomColor: transparent;
   --#{$form-control}--before--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$form-control}--before--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
-  
   --#{$form-control}--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$form-control}--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
   --#{$form-control}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
@@ -54,6 +54,7 @@
   // readonly plain
   --#{$form-control}--m-readonly--m-plain--BackgroundColor: transparent;
   --#{$form-control}--m-readonly--m-plain--inset--base: 0;
+  --#{$form-control}--m-readonly--m-plain--OutlineOffset: 0;
 
   // success
   --#{$form-control}--m-success--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
@@ -132,9 +133,16 @@
     inset: 0;
     pointer-events: none;
     content: "";
-    border-color: var(--#{$form-control}--after--BorderTopColor) var(--#{$form-control}--after--BorderRightColor) var(--#{$form-control}--after--BorderBottomColor) var(--#{$form-control}--after--BorderLeftColor);
-    border-style: var(--#{$form-control}--after--BorderStyle, solid);
-    border-width: var(--#{$form-control}--after--BorderTopWidth) var(--#{$form-control}--after--BorderRightWidth) var(--#{$form-control}--after--BorderBottomWidth) var(--#{$form-control}--after--BorderLeftWidth);
+  }
+
+  &::before {
+    border-color: var(--#{$form-control}--before--BorderTopColor) var(--#{$form-control}--before--BorderRightColor) var(--#{$form-control}--before--BorderBottomColor) var(--#{$form-control}--before--BorderLeftColor);
+    border-style: var(--#{$form-control}--before--BorderStyle, solid);
+    border-width: var(--#{$form-control}--before--BorderTopWidth) var(--#{$form-control}--before--BorderRightWidth) var(--#{$form-control}--before--BorderBottomWidth) var(--#{$form-control}--before--BorderLeftWidth);
+  }
+
+  &::after {
+    border-bottom: var(--#{$form-control}--after--BorderBottomWidth) var(--#{$form-control}--after--BorderStyle, solid) var(--#{$form-control}--after--BorderBottomColor);
   }
 
   > :is(input, select, textarea) {
@@ -148,6 +156,10 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     // stylelint-enable
+
+    &:focus {
+      outline-offset: var(--#{$form-control}--OutlineOffset);
+    }
   }
 
   > ::placeholder {
@@ -171,7 +183,9 @@
     &.pf-m-plain {
       --#{$form-control}--m-readonly--BackgroundColor: var(--#{$form-control}--m-readonly--m-plain--BackgroundColor);
       --#{$form-control}--inset--base: var(--#{$form-control}--m-readonly--m-plain--inset--base);
+      --#{$form-control}--before--BorderStyle: none;
       --#{$form-control}--after--BorderStyle: none;
+      --#{$form-control}--OutlineOffset: var(--#{$form-control}--m-readonly--m-plain--OutlineOffset);
     }
   }
 
@@ -193,6 +207,7 @@
     --#{$form-control}--BackgroundColor: var(--#{$form-control}--m-disabled--BackgroundColor);
     --#{$form-control}--Color: var(--#{$form-control}--m-disabled--Color);
     --#{$form-control}__toggle-icon--Color: var(--#{$form-control}--m-disabled__toggle-icon--Color);
+    --#{$form-control}--before--BorderStyle: none;
     --#{$form-control}--after--BorderStyle: none;
 
     cursor: not-allowed;
