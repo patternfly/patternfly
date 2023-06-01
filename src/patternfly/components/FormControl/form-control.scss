@@ -180,7 +180,7 @@
     --#{$form-control}--after--after--BorderBottomColor: var(--#{$form-control}--hover--after--BorderBottomColor);
   }
 
-  &:focus {
+  &:focus-within {
     --#{$form-control}--after--BorderBottomColor: var(--#{$form-control}--focus--after--BorderBottomColor);
     --#{$form-control}--after--BorderBottomWidth: var(--#{$form-control}--focus--after--BorderBottomWidth);
   }
