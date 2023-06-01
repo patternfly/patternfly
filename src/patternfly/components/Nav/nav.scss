@@ -203,7 +203,8 @@
   --#{$nav}__subnav--c-divider--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
   // Nav section
-  --#{$nav}__section--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__section--first-child--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__section--last-child--PaddingBottom: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section__item--MarginTop: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section__link--PaddingTop: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section__link--PaddingRight: var(--#{$pf-global}--spacer--md);
@@ -228,6 +229,7 @@
   --#{$nav}__section-title--PaddingRight: var(--#{$pf-global}--spacer--md);
   --#{$nav}__section-title--PaddingBottom: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section-title--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__section-title--MarginBottom: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section-title--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$nav}__section-title--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
   --#{$nav}__section-title--FontSize: var(--#{$pf-global}--FontSize--sm);
@@ -1084,27 +1086,30 @@
   --#{$nav}__link--active--after--BorderLeftWidth: var(--#{$nav}__section__link--active--after--BorderWidth);
   --#{$nav}__link--m-current--after--BorderLeftWidth: var(--#{$nav}__section__link--m-current--after--BorderWidth);
 
+  // Lists
+  --#{$nav}__list--PaddingTop: 0;
+  --#{$nav}__list--PaddingBottom: 0;
+
   // Divider
   --#{$nav}--c-divider--MarginBottom: 0;
 
-  margin-top: var(--#{$nav}__section--MarginTop);
+  &:first-child {
+    padding-top: var(--#{$nav}__section--first-child--PaddingTop);
+  }
 
   & + & {
-    --#{$nav}__section--MarginTop: var(--#{$nav}__section--section--MarginTop);
+    margin-top: var(--#{$nav}__section--section--MarginTop);
   }
 
-  &.pf-m-no-title {
-    --#{$nav}__section--MarginTop: 0;
-  }
-
-  &:not(:last-child) {
-    --#{$nav}__list--PaddingBottom: 0;
+  &:last-child {
+    padding-bottom: var(--#{$nav}__section--last-child--PaddingBottom);
   }
 }
 
 // Section title
 .#{$nav}__section-title {
   padding: var(--#{$nav}__section-title--PaddingTop) var(--#{$nav}__section-title--PaddingRight) var(--#{$nav}__section-title--PaddingBottom) var(--#{$nav}__section-title--PaddingLeft);
+  margin-bottom: var(--#{$nav}__section-title--MarginBottom);
   font-size: var(--#{$nav}__section-title--FontSize);
   color: var(--#{$nav}__section-title--Color);
   border-bottom: var(--#{$nav}__section-title--BorderBottomWidth) solid var(--#{$nav}__section-title--BorderBottomColor);
