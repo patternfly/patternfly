@@ -147,7 +147,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--c-toolbar__expandable-content--PaddingRight: var(--#{$masthead}--inset);
   --#{$masthead}--c-toolbar__expandable-content--PaddingBottom: var(--#{$pf-global}--spacer--md);
   --#{$masthead}--c-toolbar__expandable-content--PaddingLeft: var(--#{$masthead}--inset);
-  --#{$masthead}--c-toolbar__expandable-content--before--Top: calc(var(--#{$masthead}--c-toolbar__expandable-content--PaddingTop));
   --#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$masthead}--c-toolbar__expandable-content--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
 
