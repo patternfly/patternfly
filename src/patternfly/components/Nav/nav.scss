@@ -203,8 +203,8 @@
   --#{$nav}__subnav--c-divider--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
   // Nav section
-  --#{$nav}__section--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$nav}__section--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__section--first-child--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__section--last-child--PaddingBottom: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section__item--MarginTop: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section__link--PaddingTop: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section__link--PaddingRight: var(--#{$pf-global}--spacer--md);
@@ -1094,7 +1094,7 @@
   --#{$nav}--c-divider--MarginBottom: 0;
 
   &:first-child {
-    padding-top: var(--#{$nav}__section--PaddingTop);
+    padding-top: var(--#{$nav}__section--first-child--PaddingTop);
   }
 
   & + & {
@@ -1102,7 +1102,7 @@
   }
 
   &:last-child {
-    padding-bottom: var(--#{$nav}__section--PaddingTop);
+    padding-bottom: var(--#{$nav}__section--last-child--PaddingBottom);
   }
 }
 
