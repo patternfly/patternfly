@@ -48,6 +48,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   // Expandable content
   --#{$toolbar}__expandable-content--Display: grid;
+  --#{$toolbar}__expandable-content--PaddingTop: 0;
   --#{$toolbar}__expandable-content--PaddingRight: var(--#{$toolbar}__content--PaddingRight);
   --#{$toolbar}__expandable-content--PaddingBottom: var(--#{$pf-global}--spacer--md);
   --#{$toolbar}__expandable-content--PaddingLeft: var(--#{$toolbar}__content--PaddingLeft);
@@ -445,7 +446,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   z-index: var(--#{$toolbar}__expandable-content--ZIndex);
   display: none;
   width: 100%;
-  padding: 0 var(--#{$toolbar}__expandable-content--PaddingRight) var(--#{$toolbar}__expandable-content--PaddingBottom) var(--#{$toolbar}__expandable-content--PaddingLeft);
+  padding: var(--#{$toolbar}__expandable-content--PaddingTop) var(--#{$toolbar}__expandable-content--PaddingRight) var(--#{$toolbar}__expandable-content--PaddingBottom) var(--#{$toolbar}__expandable-content--PaddingLeft);
   background-color: var(--#{$toolbar}__expandable-content--BackgroundColor);
   box-shadow: var(--#{$toolbar}__expandable-content--BoxShadow);
 

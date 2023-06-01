@@ -194,6 +194,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     --#{$toolbar}--AlignItems--base: var(--#{$masthead}--c-toolbar--AlignItems--base);
     --#{$toolbar}__content--PaddingRight: var(--#{$masthead}--c-toolbar__content--PaddingRight);
     --#{$toolbar}__content--PaddingLeft: var(--#{$masthead}--c-toolbar__content--PaddingLeft);
+    --#{$toolbar}__expandable-content--PaddingTop: var(--#{$masthead}--c-toolbar__expandable-content--PaddingTop);
     --#{$toolbar}__expandable-content--PaddingRight: var(--#{$masthead}--c-toolbar__expandable-content--PaddingRight);
     --#{$toolbar}__expandable-content--PaddingBottom: var(--#{$masthead}--c-toolbar__expandable-content--PaddingBottom);
     --#{$toolbar}__expandable-content--PaddingLeft: var(--#{$masthead}--c-toolbar__expandable-content--PaddingLeft);
@@ -207,7 +208,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   .#{$toolbar}__expandable-content {
     top: 100%;
-    padding-top: var(--#{$masthead}--c-toolbar__expandable-content--PaddingTop);
 
     &::before {
       position: absolute;
