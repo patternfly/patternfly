@@ -131,50 +131,6 @@ import './Navigation.css'
 {{/nav}}
 ```
 
-### Grouped nav, no titles, no margin top
-```hbs
-{{#> nav nav--attribute='aria-label="Global"'}}
-  {{#> nav-section nav-section--attribute='aria-label="Section one"'}}
-    {{#> nav-list}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 1
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 2
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 3
-        {{/nav-link}}
-      {{/nav-item}}
-    {{/nav-list}}
-  {{/nav-section}}
-  {{#> nav-section nav-section--attribute='aria-label="Section two"'}}
-    {{#> nav-list}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Section 2, link 1
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
-          Current link
-        {{/nav-link}}
-      {{/nav-item}}
-      {{#> nav-item}}
-        {{#> nav-link nav-link--href="#"}}
-          Link 3
-        {{/nav-link}}
-      {{/nav-item}}
-    {{/nav-list}}
-  {{/nav-section}}
-{{/nav}}
-```
-
 ### Expanded
 ```hbs
 {{#> nav nav--attribute='aria-label="Global"'}}
