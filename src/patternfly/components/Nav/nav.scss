@@ -29,8 +29,8 @@
   --#{$nav}--m-light__subnav__link--m-current--after--BorderColor: var(--#{$pf-global}--active-color--100);
 
   // List
-  --#{$nav}__list--MarginTop: var(--#{$pf-global}--spacer--sm);
-  --#{$nav}__list--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__list--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__list--PaddingBottom: var(--#{$pf-global}--spacer--sm);
 
   // Item
   --#{$nav}__item--MarginTop: 0;
@@ -203,7 +203,8 @@
   --#{$nav}__subnav--c-divider--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
   // Nav section
-  --#{$nav}__section--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__section--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__section--PaddingBottom: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section__item--MarginTop: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section__link--PaddingTop: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section__link--PaddingRight: var(--#{$pf-global}--spacer--md);
@@ -228,6 +229,7 @@
   --#{$nav}__section-title--PaddingRight: var(--#{$pf-global}--spacer--md);
   --#{$nav}__section-title--PaddingBottom: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section-title--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__section-title--MarginBottom: var(--#{$pf-global}--spacer--sm);
   --#{$nav}__section-title--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$nav}__section-title--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
   --#{$nav}__section-title--FontSize: var(--#{$pf-global}--FontSize--sm);
@@ -528,8 +530,8 @@
     overflow: hidden;
 
     .#{$nav}__list {
-      --#{$nav}__list--MarginTop: 0;
-      --#{$nav}__list--MarginBottom: 0;
+      --#{$nav}__list--PaddingTop: 0;
+      --#{$nav}__list--PaddingBottom: 0;
       
       flex: 1;
       max-width: 100%;
@@ -738,8 +740,8 @@
 .#{$nav}__list {
   position: relative;
   display: block;
-  margin-top: var(--#{$nav}__list--MarginTop);
-  margin-bottom: var(--#{$nav}__list--MarginBottom);
+  padding-top: var(--#{$nav}__list--PaddingTop);
+  padding-bottom: var(--#{$nav}__list--PaddingBottom);
 }
 
 // Borders
@@ -993,8 +995,8 @@
 
 // Subnav
 .#{$nav}__subnav {
-  --#{$nav}__list--MarginTop: 0;
-  --#{$nav}__list--MarginBottom: 0;
+  --#{$nav}__list--PaddingTop: 0;
+  --#{$nav}__list--PaddingBottom: 0;
   --#{$nav}__link--PaddingTop: var(--#{$nav}__subnav__link--PaddingTop);
   --#{$nav}__link--PaddingRight: var(--#{$nav}__subnav__link--PaddingRight);
   --#{$nav}__link--PaddingBottom: var(--#{$nav}__subnav__link--PaddingBottom);
@@ -1084,23 +1086,30 @@
   --#{$nav}__link--active--after--BorderLeftWidth: var(--#{$nav}__section__link--active--after--BorderWidth);
   --#{$nav}__link--m-current--after--BorderLeftWidth: var(--#{$nav}__section__link--m-current--after--BorderWidth);
 
+  // Lists
+  --#{$nav}__list--PaddingTop: 0;
+  --#{$nav}__list--PaddingBottom: 0;
+
   // Divider
   --#{$nav}--c-divider--MarginBottom: 0;
 
-  margin-top: var(--#{$nav}__section--MarginTop);
-
-  & + & {
-    --#{$nav}__section--MarginTop: var(--#{$nav}__section--section--MarginTop);
+  &:first-child {
+    padding-top: var(--#{$nav}__section--PaddingTop);
   }
 
-  &.pf-m-no-title {
-    --#{$nav}__section--MarginTop: 0;
+  & + & {
+    margin-top: var(--#{$nav}__section--section--MarginTop);
+  }
+
+  &:last-child {
+    padding-bottom: var(--#{$nav}__section--PaddingTop);
   }
 }
 
 // Section title
 .#{$nav}__section-title {
   padding: var(--#{$nav}__section-title--PaddingTop) var(--#{$nav}__section-title--PaddingRight) var(--#{$nav}__section-title--PaddingBottom) var(--#{$nav}__section-title--PaddingLeft);
+  margin-bottom: var(--#{$nav}__section-title--MarginBottom);
   font-size: var(--#{$nav}__section-title--FontSize);
   color: var(--#{$nav}__section-title--Color);
   border-bottom: var(--#{$nav}__section-title--BorderBottomWidth) solid var(--#{$nav}__section-title--BorderBottomColor);
