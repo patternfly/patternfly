@@ -2,16 +2,16 @@
 
 @mixin pf-v5-theme-dark-form-control() {
   .#{$form-control} {
-    --#{$form-control}--BorderTopColor: transparent;
-    --#{$form-control}--BorderRightColor: transparent;
-    --#{$form-control}--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
-    --#{$form-control}--BorderLeftColor: transparent;
+    --#{$form-control}--before--BorderTopColor: transparent;
+    --#{$form-control}--before--BorderRightColor: transparent;
+    --#{$form-control}--before--BorderLeftColor: transparent;
+    --#{$form-control}--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
     --#{$form-control}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
     --#{$form-control}--m-disabled--Color: var(--#{$pf-global}--disabled-color--300);
     --#{$form-control}--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
     --#{$form-control}--m-readonly--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
-    --#{$form-control}--m-readonly--hover--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
-    --#{$form-control}--m-readonly--focus--BorderBottomColor:var(--#{$pf-global}--BorderColor--400);
+    --#{$form-control}--m-readonly--hover--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--400);
+    --#{$form-control}--m-readonly--focus--after--BorderBottomColor:var(--#{$pf-global}--BorderColor--400);
     --#{$form-control}--m-disabled__toggle-icon--Color: var(--#{$pf-global}--disabled-color--300);
 
     color: var(--#{$pf-global}--Color--100);
