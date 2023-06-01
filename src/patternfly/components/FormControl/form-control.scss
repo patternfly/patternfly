@@ -4,14 +4,17 @@
   --#{$form-control}--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$form-control}--LineHeight: var(--#{$pf-global}--LineHeight--md);
   --#{$form-control}--Resize: none;
-  --#{$form-control}--after--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$form-control}--after--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form-control}--before--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form-control}--before--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form-control}--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form-control}--before--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form-control}--before--BorderTopColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$form-control}--before--BorderRightColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$form-control}--before--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
+  --#{$form-control}--before--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
+  
   --#{$form-control}--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$form-control}--after--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$form-control}--after--BorderTopColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$form-control}--after--BorderRightColor: var(--#{$pf-global}--BorderColor--300);
   --#{$form-control}--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$form-control}--after--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
   --#{$form-control}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$form-control}--Width: 100%;
 
