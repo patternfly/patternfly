@@ -1,13 +1,13 @@
 @import "../../../../sass-utilities/themes/dark/all";
 
-@mixin pf-v5-theme-dark-page() {
-  @at-root {
-    --#{$page}__main-section--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-    --#{$page}__header-tools--c-button--m-selected--before--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
-    --#{$page}__sidebar--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-    --#{$page}__header--BackgroundColor: var(--#{$pf-global}--palette--black-1000);
-  }
+@mixin pf-v5-theme-dark-vars {
+  --#{$page}__main-section--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+  --#{$page}__header-tools--c-button--m-selected--before--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+  --#{$page}__sidebar--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$page}__header--BackgroundColor: var(--#{$pf-global}--palette--black-1000);
+}
 
+@mixin pf-v5-theme-dark-page() {
   .#{$page}__header-tools-item {
     &.pf-m-selected {
       .#{$button} {
