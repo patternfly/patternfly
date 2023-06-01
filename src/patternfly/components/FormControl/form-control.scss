@@ -126,6 +126,7 @@
   resize: var(--#{$form-control}--Resize);
   background-color: var(--#{$form-control}--BackgroundColor);
 
+  &::before,
   &::after {
     position: absolute;
     inset: 0;
