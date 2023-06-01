@@ -159,14 +159,9 @@
 
     // stylelint-disable selector-not-notation
     &:not(.pf-m-success, .pf-m-warning, .pf-m-error) {
-      &:hover {
-        --#{$form-control}--after--BorderBottomColor: var(--#{$form-control}--m-readonly--hover--after--BorderBottomColor);
-      }
-
-      &:focus {
-        --#{$form-control}--focus--after--BorderBottomWidth: var(--#{$form-control}--m-readonly--focus--after--BorderBottomWidth);
-        --#{$form-control}--focus--after--BorderBottomColor: var(--#{$form-control}--m-readonly--focus--after--BorderBottomColor);
-      }
+      --#{$form-control}--hover--after--BorderBottomColor: var(--#{$form-control}--m-readonly--hover--after--BorderBottomColor);
+      --#{$form-control}--focus--after--BorderBottomWidth: var(--#{$form-control}--m-readonly--focus--after--BorderBottomWidth);
+      --#{$form-control}--focus--after--BorderBottomColor: var(--#{$form-control}--m-readonly--focus--after--BorderBottomColor);
     }
 
     &.pf-m-plain {
@@ -177,7 +172,7 @@
   }
 
   &:hover {
-    --#{$form-control}--after--after--BorderBottomColor: var(--#{$form-control}--hover--after--BorderBottomColor);
+    --#{$form-control}--after--BorderBottomColor: var(--#{$form-control}--hover--after--BorderBottomColor);
   }
 
   &:focus-within {
@@ -267,7 +262,6 @@
   
   > textarea {
     width: 100%;
-    height: 100%;
     vertical-align: bottom;
     resize: none;
   }
