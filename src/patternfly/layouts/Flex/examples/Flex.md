@@ -505,6 +505,15 @@ Adjusting width with `.pf-m-flex-1`. In this example, all groups are set to `.pf
     {{#> l-flex-item}}
       Flex item
     {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Flex item
+    {{/l-flex-item}}
   {{/l-flex}}
 {{/l-flex}}
 <br>

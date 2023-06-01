@@ -295,7 +295,7 @@ import './Card.css'
 {{/gallery}}
 ```
 
-### Aggregiate status card
+### Aggregate status card
 ```hbs
 {{#> grid grid--modifier="pf-m-gutter"}}
   {{#> grid-item}}
@@ -325,7 +325,7 @@ import './Card.css'
       {{#> card card--modifier="pf-v5-u-text-align-center"}}
         {{> card-title card-title-text--value="10 Hosts"}}
         {{#> card-body}}
-          {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
+          {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-exclamation-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
@@ -349,7 +349,7 @@ import './Card.css'
       {{#> card card--modifier="pf-v5-u-text-align-center"}}
         {{> card-title card-title-text--value="50 Hosts"}}
         {{#> card-body}}
-          {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
+          {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-check-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
@@ -373,7 +373,7 @@ import './Card.css'
       {{#> card card--modifier="pf-v5-u-text-align-center"}}
         {{> card-title card-title-text--value="12 Hosts"}}
         {{#> card-body}}
-          {{#> l-flex l-flex--modifier="pf-m-inline-flex"}}
+          {{#> l-flex l-flex--modifier="pf-m-inline-flex pf-m-space-items-md"}}
             {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-exclamation-triangle pf-v5-u-warning-color-100" aria-hidden="true"></i>
@@ -401,8 +401,8 @@ import './Card.css'
       {{#> card}}
         {{> card-title card-title-text--value="13 Hosts" card-title-text--modifier="pf-v5-u-text-align-center"}}
         {{#> card-body}}
-          {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
-            {{#> l-flex newcontext}}
+          {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-times-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
@@ -411,7 +411,7 @@ import './Card.css'
                 <span>subtitle</span>
               {{/stack}}
             {{/l-flex}}
-            {{#> l-flex}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-exclamation-triangle pf-v5-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
@@ -426,8 +426,8 @@ import './Card.css'
       {{#> card}}
         {{> card-title card-title-text--value="3 Hosts" card-title--modifier="pf-v5-u-text-align-center"}}
         {{#> card-body}}
-          {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
-            {{#> l-flex newcontext}}
+          {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-check-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
@@ -436,7 +436,7 @@ import './Card.css'
                 <span>subtitle</span>
               {{/stack}}
             {{/l-flex}}
-            {{#> l-flex}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-exclamation-triangle pf-v5-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
@@ -451,8 +451,8 @@ import './Card.css'
       {{#> card}}
         {{> card-title card-title-text--value="50 Hosts" card-title--modifier="pf-v5-u-text-align-center"}}
         {{#> card-body}}
-          {{#> l-flex l-flex--modifier="pf-m-justify-content-space-around"}}
-            {{#> l-flex newcontext}}
+          {{#> l-flex l-flex--modifier="pf-m-justify-content-center pf-m-space-items-md"}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-exclamation-triangle pf-v5-u-warning-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
@@ -461,7 +461,7 @@ import './Card.css'
                 <span>subtitle</span>
               {{/stack}}
             {{/l-flex}}
-            {{#> l-flex}}
+            {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-times-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
@@ -718,7 +718,7 @@ import './Card.css'
     {{#> card-body}}
       {{#> l-flex l-flex--modifier="pf-m-column"}}
         <span>System</span>
-        {{#> l-flex newcontext}}
+        {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
           <i class="fas fa-exclamation-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
           <a hfer="#">25 incidents detected</a>
         {{/l-flex}}
@@ -1060,7 +1060,7 @@ import './Card.css'
       {{#> description-list}}
         {{#> description-list-group}}
           {{#> description-list-term}}
-            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-exclamation-circle pf-v5-u-danger-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
@@ -1078,7 +1078,7 @@ import './Card.css'
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
-            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-check-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}
@@ -1096,7 +1096,7 @@ import './Card.css'
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
-            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 {{#> spinner spinner--modifier="pf-m-md" spinner--attribute='aria-label="Loading"'}}Loading...{{/spinner}}
               {{/l-flex-item}}
@@ -1114,7 +1114,7 @@ import './Card.css'
         {{/description-list-group}}
         {{#> description-list-group}}
           {{#> description-list-term}}
-            {{#> l-flex l-flex--modifier="pf-m-nowrap"}}
+            {{#> l-flex l-flex--modifier="pf-m-nowrap pf-m-space-items-sm"}}
               {{#> l-flex-item}}
                 <i class="fas fa-check-circle pf-v5-u-success-color-100" aria-hidden="true"></i>
               {{/l-flex-item}}

@@ -34,6 +34,7 @@ $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 // Item
 .#{$flex} > * {
   // set/reset layout spacers on children, since the parent flex layout can be a child of another flex layout and needs these values from its parent
+  --#{$flex}--spacer: initial;
   --#{$flex}--spacer--column: var(--#{$flex}--spacer, var(--#{$flex}--spacer--column--base));
   --#{$flex}--spacer--row: var(--#{$flex}--spacer, var(--#{$flex}--spacer--row--base));
 
