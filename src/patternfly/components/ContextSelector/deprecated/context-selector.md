@@ -3,6 +3,7 @@ id: Context selector
 section: components
 subsection: menus
 cssPrefix: pf-v5-c-context-selector
+deprecated: true
 ---
 import './context-selector.css'
 

@@ -492,8 +492,8 @@ import './Card.css'
 {{/gallery}}
 ```
 
-### Hoverable raised (deprecated)
-```hbs
+### Hoverable raised
+```hbs isDeprecated
 {{#> card card--id="card-hoverable-example" card--modifier="pf-m-hoverable-raised"}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
@@ -505,8 +505,8 @@ import './Card.css'
 {{/card}}
 ```
 
-### Selectable raised (deprecated)
-```hbs
+### Selectable raised
+```hbs isDeprecated
 {{#> card card--id="card-selectable-raised-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
@@ -518,8 +518,8 @@ import './Card.css'
 {{/card}}
 ```
 
-### Selected raised (deprecated)
-```hbs
+### Selected raised
+```hbs isDeprecated
 {{#> card card--id="card-selected-raised-example" card--modifier="pf-m-selectable-raised pf-m-selected-raised" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}
@@ -531,8 +531,8 @@ import './Card.css'
 {{/card}}
 ```
 
-### Selectable raised with a hidden input for improved screen reader accessibility (deprecated)
-```hbs
+### Selectable raised with a hidden input for improved screen reader accessibility
+```hbs isDeprecated
 {{> card-sr-input card-sr-input--attribute="aria-label='Checkbox to improve screen reader accessibility of a selectable card'"}}
 {{#> card card--id="card-selectable-raised-with-input-example" card--modifier="pf-m-selectable-raised" card--attribute='tabindex="0"'}}
   {{> card-title card-title-text--value="Title"}}
@@ -545,8 +545,8 @@ import './Card.css'
 {{/card}}
 ```
 
-### Non selectable raised (deprecated)
-```hbs
+### Non selectable raised
+```hbs isDeprecated
 {{#> card card--id="card-non-selectable-raised-example" card--modifier="pf-m-non-selectable-raised"}}
   {{> card-title card-title-text--value="Title"}}
   {{#> card-body}}

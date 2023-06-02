@@ -3,6 +3,7 @@ id: Options menu
 section: components
 subsection: menus
 cssPrefix: pf-v5-c-options-menu
+deprecated: true
 ---
 
 import './options-menu.css'

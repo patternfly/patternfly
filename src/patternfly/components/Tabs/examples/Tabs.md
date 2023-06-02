@@ -92,24 +92,24 @@ import './Tabs.css'
 {{/tabs}}
 ```
 
-### Vertical expandable example (legacy)
-```hbs
+### Vertical expandable example (deprecated)
+```hbs isDeprecated
 {{#> tabs tabs--id="vertical-expandable-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
-### Vertical expanded example (legacy)
-```hbs
+### Vertical expanded example (deprecated)
+```hbs isDeprecated
 {{#> tabs tabs--id="vertical-expanded-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--IsExpanded="true" tabs--modifier="pf-m-vertical"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
 {{/tabs}}
 ```
 
-### Vertical expandable responsive example (legacy)
-```hbs
+### Vertical expandable responsive example (deprecated)
+```hbs isDeprecated
 {{#> tabs tabs--id="vertical-expandable-responsive-legacy" tabs--IsExpandable="true" tabs--IsLegacy="true" tabs--modifier="pf-m-vertical pf-m-non-expandable-on-md pf-m-expandable-on-lg pf-m-non-expandable-on-xl"}}
   {{> tabs-toggle}}
   {{> __tabs-list __tabs-list--NoScrollButtons="true"}}
