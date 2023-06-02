@@ -3,6 +3,7 @@ id: Release notes
 section: get-started
 releaseNoteTOC: true
 ---
+
 ## 2023.01 release notes (2023-01-25)
 Packages released:
 - [@patternfly/patternfly@v4.224.2](https://www.npmjs.com/package/@patternfly/patternfly/v/4.224.2)
