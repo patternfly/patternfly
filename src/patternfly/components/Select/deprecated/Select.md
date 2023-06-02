@@ -3,6 +3,7 @@ id: Select
 section: components
 subsection: menus
 cssPrefix: pf-v5-c-select
+deprecated: true
 ---
 
 import './Select.css'

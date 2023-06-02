@@ -3,6 +3,7 @@ id: Dropdown
 section: components
 subsection: menus
 cssPrefix: pf-v5-c-dropdown
+deprecated: true
 ---
 
 import './Dropdown.css'
