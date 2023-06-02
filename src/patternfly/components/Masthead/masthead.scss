@@ -139,6 +139,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--c-menu-toggle--m-full-height--before--BorderBottomColor: transparent;
 
   // Toolbar
+  --#{$masthead}--c-toolbar--BackgroundColor: var(--#{$masthead}--BackgroundColor);
   --#{$masthead}--c-toolbar--AlignItems--base: center;
   --#{$masthead}--c-toolbar__content--PaddingRight: 0;
   --#{$masthead}--c-toolbar__content--PaddingLeft: 0;
@@ -146,9 +147,8 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--c-toolbar__expandable-content--PaddingRight: var(--#{$masthead}--inset);
   --#{$masthead}--c-toolbar__expandable-content--PaddingBottom: var(--#{$pf-global}--spacer--md);
   --#{$masthead}--c-toolbar__expandable-content--PaddingLeft: var(--#{$masthead}--inset);
-  --#{$masthead}--c-toolbar__expandable-content--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$masthead}--c-toolbar__expandable-content--BorderTopColor: var(--#{$masthead}--item-border-color--base);
-
+  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
 
   // Set layout to stack by default
   @include pf-v5-c-masthead--m-display-stack;
@@ -190,6 +190,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 
   .#{$toolbar} {
+    --#{$toolbar}--BackgroundColor: var(--#{$masthead}--c-toolbar--BackgroundColor);
     --#{$toolbar}--AlignItems--base: var(--#{$masthead}--c-toolbar--AlignItems--base);
     --#{$toolbar}__content--PaddingRight: var(--#{$masthead}--c-toolbar__content--PaddingRight);
     --#{$toolbar}__content--PaddingLeft: var(--#{$masthead}--c-toolbar__content--PaddingLeft);
@@ -206,7 +207,18 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 
   .#{$toolbar}__expandable-content {
-    border-top: var(--#{$masthead}--c-toolbar__expandable-content--BorderTopWidth) solid var(--#{$masthead}--c-toolbar__expandable-content--BorderTopColor);
+    top: 100%;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      border-top: var(--#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth) solid var(--#{$masthead}--c-toolbar__expandable-content--before--BorderTopColor);
+      box-shadow: var(--#{$toolbar}__expandable-content--before--BoxShadow);
+    }
   }
 
   .#{$menu-toggle} {
