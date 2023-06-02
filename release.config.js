@@ -13,6 +13,5 @@ module.exports = {
     '@semantic-release/github',
     ['@semantic-release/npm', { pkgRoot: 'dist' }]
   ],
-  tagFormat: 'prerelease-v${version}',
-  dryRun: true
+  tagFormat: 'prerelease-v${version}'
 };
