@@ -1,5 +1,8 @@
 module.exports = {
-  branches: ['main', { name: 'main', channel: 'prerelease' }],
+  branches: [
+    'do-not-delete',
+    { name: 'v4', channel: 'prerelease-v4', range: '4.x' }
+  ],
   analyzeCommits: {
     preset: 'angular'
   },
@@ -9,5 +12,6 @@ module.exports = {
     '@semantic-release/github',
     ['@semantic-release/npm', { pkgRoot: 'dist' }]
   ],
-  tagFormat: 'prerelease-v${version}'
+  tagFormat: 'prerelease-v${version}',
+  dryRun: true
 };

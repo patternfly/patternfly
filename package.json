@@ -92,8 +92,7 @@
     "url": "https://github.com/patternfly/patternfly.git"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "tag": "prerelease"
+    "registry": "https://registry.npmjs.org/"
   },
   "husky": {
     "hooks": {
