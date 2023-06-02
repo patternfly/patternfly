@@ -2008,25 +2008,47 @@
     react-dropzone "^14.2.3"
     tslib "^2.5.0"
 
+"@patternfly/react-core@^5.0.0-alpha.131":
+  version "5.0.0-alpha.131"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.0-alpha.131.tgz#c3cbabfdb648942181cf18122ff7157f4d835a19"
+  integrity sha512-nf8JgoAVB5bG+8Z4etJsupwCmAw+93WgBqG5u0awvihtslK7p1AJNUy00neRpd03CbS9dXq3YPDQ3aNwLRjNAw==
+  dependencies:
+    "@patternfly/react-icons" "^5.0.0-alpha.21"
+    "@patternfly/react-styles" "^5.0.0-alpha.19"
+    "@patternfly/react-tokens" "^5.0.0-alpha.16"
+    focus-trap "7.4.3"
+    react-dropzone "^14.2.3"
+    tslib "^2.5.0"
+
 "@patternfly/react-icons@^5.0.0-alpha.19":
   version "5.0.0-alpha.19"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-5.0.0-alpha.19.tgz#b94cc9352f5d2a11b8887fb9dc0732cc24c829ef"
   integrity sha512-jyVSK6f9ueIO+pI2K2njI/4qdQR9WK953IUJtQ6PtNhLHKsAHOnqwHjBUrqxWOBZ+ty5MpqHPoB9Yd34i8vcxg==
+
+"@patternfly/react-icons@^5.0.0-alpha.21":
+  version "5.0.0-alpha.21"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-5.0.0-alpha.21.tgz#1a9f70d0d417b231583fa34c663ff0d97f8698b9"
+  integrity sha512-/Z7JKlE3VHTtZCauNyGKeLD4C0Uv8atSUZH/W2Hw8wKUBjYQ45CslsuBOkRVGhm8sQqm8UXOe4nWBSekqfV29g==
 
 "@patternfly/react-styles@^5.0.0-alpha.16":
   version "5.0.0-alpha.16"
   resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-5.0.0-alpha.16.tgz#d26453c44637c122f141c2fe1f0ba1f48e52282b"
   integrity sha512-RxU8sSKY0tM40xZwk+BR5vWotP+LZOH2vqdNFEIT7a1+1Kr9qSm5ktq34gnzK0nyWUaH08qL9da4HVo3/O+R4A==
 
-"@patternfly/react-table@5.0.0-alpha.117":
-  version "5.0.0-alpha.117"
-  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-5.0.0-alpha.117.tgz#4a30f8f6996e362d0029ec92b4504bb2973d2f43"
-  integrity sha512-CnJEV6PzR4XpP9dQq0HRu4/w7g2vZErbuCtlCwaErhRopt8SH7EN5UeZ2AsdjwxjgOv9kuIq8HLr3ir6icMFjg==
+"@patternfly/react-styles@^5.0.0-alpha.19":
+  version "5.0.0-alpha.19"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-styles/-/react-styles-5.0.0-alpha.19.tgz#a95edb096e12c229ef530bf1487f40e986dfcc99"
+  integrity sha512-kslgdAfjb7cAr84s+Og4NOpQfGcn1zbrY40Yx9b1fBiP9QyyibKj3vV1RSBJRnj6KsWZeJb0meVM8OpuqR7IXQ==
+
+"@patternfly/react-table@5.0.0-alpha.135":
+  version "5.0.0-alpha.135"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-table/-/react-table-5.0.0-alpha.135.tgz#a87d046b2d5d849cc6b95edf1c7a133bb5a69d69"
+  integrity sha512-2LJIR82NB5U3VuN+CWc35nA048q3XxL3hStcXKChLM88TtBSl2kVCoX+/+nKp7awg04CLbRxFpEdyakiCZhmcw==
   dependencies:
-    "@patternfly/react-core" "^5.0.0-alpha.115"
-    "@patternfly/react-icons" "^5.0.0-alpha.19"
-    "@patternfly/react-styles" "^5.0.0-alpha.16"
-    "@patternfly/react-tokens" "^5.0.0-alpha.14"
+    "@patternfly/react-core" "^5.0.0-alpha.131"
+    "@patternfly/react-icons" "^5.0.0-alpha.21"
+    "@patternfly/react-styles" "^5.0.0-alpha.19"
+    "@patternfly/react-tokens" "^5.0.0-alpha.16"
     lodash "^4.17.19"
     tslib "^2.5.0"
 
@@ -2034,6 +2056,11 @@
   version "5.0.0-alpha.14"
   resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-5.0.0-alpha.14.tgz#fe7b61565041eebf2dc624ff8087818d1d8a0554"
   integrity sha512-RWMKRYA+616XRWQLu5o5S0tFrE5koJW0QcE9ErZuFoWmojwJ/6bg9nAWbGxzR4xwAz2ERu2Tg50fqy5vQeOhWA==
+
+"@patternfly/react-tokens@^5.0.0-alpha.16":
+  version "5.0.0-alpha.16"
+  resolved "https://registry.yarnpkg.com/@patternfly/react-tokens/-/react-tokens-5.0.0-alpha.16.tgz#07bf03b1d878322fa12c6f134fb4e4e619e5e21d"
+  integrity sha512-h/CiqKBsv2aAHiLgkcqBkDOBZosEOzWGi4P+WTKPZQ7v9aVPJ7MrMdTAjpOIiNqnLJyHmvjaox4HvISgwb0big==
 
 "@polka/url@^1.0.0-next.20":
   version "1.0.0-next.21"
@@ -6331,6 +6358,13 @@ focus-trap@7.4.2:
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-7.4.2.tgz#25ad602bfae3284639a26abbf176425d96e47561"
   integrity sha512-KMjf+H5uDWPkwSQVqE5r/+vOkP5zBWwVBoWPIZxU3gfg+M8IT+Y8s+vXQqZvHEIXyHPKHrSm6m4G4ceF98OZ8w==
+  dependencies:
+    tabbable "^6.1.2"
+
+focus-trap@7.4.3:
+  version "7.4.3"
+  resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-7.4.3.tgz#a3dae73d44df359eb92bbf37b18e173e813b16c5"
+  integrity sha512-BgSSbK4GPnS2VbtZ50VtOv1Sti6DIkj3+LkVjiWMNjLeAp1SH1UlLx3ULu/DCu4vq5R4/uvTm+zrvsMsuYmGLg==
   dependencies:
     tabbable "^6.1.2"
 
