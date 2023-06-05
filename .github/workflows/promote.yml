@@ -8,9 +8,9 @@ jobs:
   build-and-promote:
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ secrets.GH_PRACTICE_TOKEN_MAY_23 }}
-      NPM_TOKEN: ${{ secrets.NPM_PRACTICE_TOKEN_MAY_23 }}
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_PRACTICE_TOKEN_MAY_23 }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN_REDALLEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Build for promotion
