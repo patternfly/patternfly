@@ -1,14 +1,8 @@
-{{#> context-selector context-selector--modifier="pf-m-full-height" context-selector--id=(concat masthead--id '-context-selector') context-selector--label-text="Selected project" context-selector--IsExpanded=reset}}
-  {{#> context-selector-toggle context-selector-toggle--attribute=(concat 'id="' context-selector--id '-toggle"' 'aria-labelledby="' context-selector--id '-label ' context-selector--id '-toggle"')}}
-    {{#> context-selector-toggle-text}}
-      Context selector
-    {{/context-selector-toggle-text}}
-    {{> context-selector-toggle-icon}}
-  {{/context-selector-toggle}}
-  {{#> context-selector-menu}}
-    {{#> context-selector-menu-search}}
-      {{> text-input-group--search-input text-input-group-text-input--aria-label="Filter menu items" text-input-group-text-input--placeholder="Search"}}
-    {{/context-selector-menu-search}}
-    {{> __context-selector-menu-menu}}
-  {{/context-selector-menu}}
-{{/context-selector}}
+{{#> menu-toggle menu-toggle--modifier="pf-m-full-height"}}
+  {{#> menu-toggle-text}}
+    Context selector
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}

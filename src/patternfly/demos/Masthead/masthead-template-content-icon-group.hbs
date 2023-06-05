@@ -9,61 +9,32 @@
       {{> masthead-template-application-launcher app-launcher--id=(concat toolbar-group--id '-app-launcher')}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{#> dropdown dropdown--id=(concat masthead--id "-settings")}}
-        {{#> dropdown-toggle dropdown-toggle--modifier="pf-m-plain" dropdown-toggle--HasNoToggleIcon="true" dropdown-toggle--attribute='aria-label="Settings"'}}
-          <i class="fas fa-cog" aria-hidden="true"></i>
-        {{/dropdown-toggle}}
-        {{#> dropdown-menu dropdown-menu--modifier="pf-m-align-right"}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text="Settings"}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text="Use the beta release"}}
-        {{/dropdown-menu}}
-      {{/dropdown}}
+      {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Settings"'}}
+        <i class="fas fa-cog" aria-hidden="true"></i>
+      {{/menu-toggle}}
     {{/toolbar-item}}
     {{#> toolbar-item}}
-      {{#> dropdown dropdown--id=(concat masthead--id "-help")}}
-        {{#> dropdown-toggle dropdown-toggle--modifier="pf-m-plain" dropdown-toggle--HasNoToggleIcon="true" dropdown-toggle--attribute='aria-label="Help"'}}
-          <i class="fas fa-question-circle" aria-hidden="true"></i>
-        {{/dropdown-toggle}}
-        {{#> dropdown-menu dropdown-menu--modifier="pf-m-align-right"}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text="Support options"}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text="Open support case"}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text="API documentation"}}
-        {{/dropdown-menu}}
-      {{/dropdown}}
+      {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
+        <i class="fas fa-question-circle" aria-hidden="true"></i>
+      {{/menu-toggle}}
     {{/toolbar-item}}
   {{/toolbar-group}}
   {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-hidden-on-' masthead-template-content-icon-group--breakpoint)}}
-    {{#> dropdown dropdown--id=(concat masthead--id "-action") dropdown-menu--modifier="pf-m-align-right" dropdown-toggle--IsPlain="true"}}
-      {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
-        <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-      {{/menu-toggle}}
-      {{> masthead-template-drilldown menu--id=(concat masthead--id '-drilldown-menu')}}
-    {{/dropdown}}
+    {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
+      <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+    {{/menu-toggle}}
   {{/toolbar-item}}
 {{/toolbar-group}}
 {{#> toolbar-item toolbar-item--modifier="pf-m-hidden pf-m-visible-on-sm"}}
-  {{#> dropdown dropdown--modifier="pf-m-full-height" dropdown--id=(concat masthead--id "-profile") dropdown--attribute='style="--pf-v5-c-dropdown--MaxWidth: 20ch;"' dropdown--IsExpanded=masthead-template-content-icon-group--profile-dropdown--IsExpanded}}
-    {{#> dropdown-toggle}}
-      {{#> dropdown-toggle-image}}
-        {{> avatar}}
-      {{/dropdown-toggle-image}}
-      {{#> dropdown-toggle-text}}
-        Ned Username
-      {{/dropdown-toggle-text}}
-    {{/dropdown-toggle}}
-    {{#> dropdown-menu dropdown-menu--type="div"}}
-      {{#> dropdown-group}}
-        {{> dropdown-menu-item dropdown-menu-item--text='<div class="pf-v5-u-font-size-sm">Account number:</div><div>123456789</div>' dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
-        {{> dropdown-menu-item dropdown-menu-item--text='<div class="pf-v5-u-font-size-sm">Username:</div><div>mshaksho@redhat.com</div>' dropdown-menu-item--type="div" dropdown-menu-item--modifier="pf-m-text"}}
-      {{/dropdown-group}}
-      {{> divider}}
-      {{#> dropdown-group}}
-        {{#> dropdown-menu-list}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text="My profile" dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text="User management" dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text="Logout" dropdown-menu-item--type="a" dropdown-menu-item--attribute='href="#"'}}
-        {{/dropdown-menu-list}}
-      {{/dropdown-group}}
-    {{/dropdown-menu}}
-  {{/dropdown}}
+  {{#> menu-toggle menu-toggle--modifier="pf-m-full-height"}}
+    {{#> menu-toggle-icon}}
+      {{> avatar}}
+    {{/menu-toggle-icon}}
+    {{#> menu-toggle-text}}
+      Ned Username
+    {{/menu-toggle-text}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle}}
 {{/toolbar-item}}
