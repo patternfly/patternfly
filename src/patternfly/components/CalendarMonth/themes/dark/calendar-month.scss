@@ -2,6 +2,10 @@
 
 @mixin pf-v5-theme-dark-calendar-month() {
   .#{$calendar-month} {
+    // calendar month background
+    --#{$calendar-month}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+
+    // dates
     --#{$calendar-month}__dates-cell--m-current__date--BackgroundColor: var(--#{$pf-global}--palette--black-500);
     --#{$calendar-month}__dates-cell--m-selected__date--BackgroundColor: var(--#{$pf-global}--primary-color--300);
     --#{$calendar-month}__dates-cell--m-selected__date--Color: var(--#{$pf-global}--primary-color--400);
