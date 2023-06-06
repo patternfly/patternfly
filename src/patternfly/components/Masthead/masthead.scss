@@ -135,8 +135,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--c-menu-toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
   --#{$masthead}--c-menu-toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
   --#{$masthead}--c-menu-toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-menu-toggle--m-full-height--before--BorderTopColor: transparent;
-  --#{$masthead}--c-menu-toggle--m-full-height--before--BorderBottomColor: transparent;
 
   // Toolbar
   --#{$masthead}--c-toolbar--BackgroundColor: var(--#{$masthead}--BackgroundColor);
@@ -225,11 +223,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     --#{$menu-toggle}--before--BorderTopColor: var(--#{$masthead}--c-menu-toggle--before--BorderTopColor);
     --#{$menu-toggle}--before--BorderRightColor: var(--#{$masthead}--c-menu-toggle--before--BorderRightColor);
     --#{$menu-toggle}--before--BorderLeftColor: var(--#{$masthead}--c-menu-toggle--before--BorderLeftColor);
-
-    &.pf-m-full-height {
-      --#{$menu-toggle}--before--BorderTopColor: var(--#{$masthead}--c-menu-toggle--m-full-height--before--BorderTopColor);
-      --#{$menu-toggle}--before--BorderBottomColor: var(--#{$masthead}--c-menu-toggle--m-full-height--before--BorderBottomColor);
-    }
+    --#{$menu-toggle}--m-full-height__toggle--after--BorderBottomWidth: 0;
   }
 
   .#{$context-selector} {

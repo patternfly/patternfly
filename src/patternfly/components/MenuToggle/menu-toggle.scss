@@ -110,6 +110,7 @@
   --#{$menu-toggle}--m-full-height--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$menu-toggle}--m-full-height--PaddingLeft: var(--#{$pf-global}--spacer--lg);
   --#{$menu-toggle}--m-full-height__toggle--before--BorderTopWidth: 0;
+  --#{$menu-toggle}--m-full-height__toggle--after--BorderBottomWidth:  var(--#{$pf-global}--BorderWidth--sm);
   --#{$menu-toggle}--m-full-height--m-expanded--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--xl);
   --#{$menu-toggle}--m-full-height--hover--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--xl);
   --#{$menu-toggle}--m-full-height--focus--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--xl);
@@ -264,6 +265,19 @@
     }
   }
 
+  &.pf-m-full-height {
+    --#{$menu-toggle}--PaddingRight: var(--#{$menu-toggle}--m-full-height--PaddingRight);
+    --#{$menu-toggle}--PaddingLeft: var(--#{$menu-toggle}--m-full-height--PaddingLeft);
+    --#{$menu-toggle}--before--BorderTopWidth: var(--#{$menu-toggle}--m-full-height__toggle--before--BorderTopWidth);
+    --#{$menu-toggle}--after--BorderBottomWidth: var(--#{$menu-toggle}--m-full-height__toggle--after--BorderBottomWidth);
+    --#{$menu-toggle}--m-expanded--after--BorderBottomWidth: var(--#{$menu-toggle}--m-full-height--m-expanded--after--BorderBottomWidth);
+    --#{$menu-toggle}--hover--after--BorderBottomWidth: var(--#{$menu-toggle}--m-full-height--hover--after--BorderBottomWidth);
+    --#{$menu-toggle}--focus--after--BorderBottomWidth: var(--#{$menu-toggle}--m-full-height--focus--after--BorderBottomWidth);
+    --#{$menu-toggle}--active--after--BorderBottomWidth: var(--#{$menu-toggle}--m-full-height--active--after--BorderBottomWidth);
+
+    height: 100%;
+  }
+
   &:hover {
     --#{$menu-toggle}--BackgroundColor: var(--#{$menu-toggle}--hover--BackgroundColor);
     --#{$menu-toggle}--after--BorderBottomWidth: var(--#{$menu-toggle}--hover--after--BorderBottomWidth);
@@ -314,18 +328,6 @@
     &::after {
       border: 0;
     }
-  }
-
-  &.pf-m-full-height {
-    --#{$menu-toggle}--PaddingRight: var(--#{$menu-toggle}--m-full-height--PaddingRight);
-    --#{$menu-toggle}--PaddingLeft: var(--#{$menu-toggle}--m-full-height--PaddingLeft);
-    --#{$menu-toggle}--before--BorderTopWidth: var(--#{$menu-toggle}--m-full-height__toggle--before--BorderTopWidth);
-    --#{$menu-toggle}--m-expanded--after--BorderBottomWidth: var(--#{$menu-toggle}--m-full-height--m-expanded--after--BorderBottomWidth);
-    --#{$menu-toggle}--hover--after--BorderBottomWidth: var(--#{$menu-toggle}--m-full-height--hover--after--BorderBottomWidth);
-    --#{$menu-toggle}--focus--after--BorderBottomWidth: var(--#{$menu-toggle}--m-full-height--focus--after--BorderBottomWidth);
-    --#{$menu-toggle}--active--after--BorderBottomWidth: var(--#{$menu-toggle}--m-full-height--active--after--BorderBottomWidth);
-
-    height: 100%;
   }
 
   &.pf-m-typeahead {

@@ -19,7 +19,8 @@
     --#{$menu-toggle}--m-split-button--child--disabled--Color: var(--#{$pf-global}--disabled-color--300);
     --#{$menu-toggle}--m-split-button--child--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--200);
 
-    &.pf-m-plain {
+    &.pf-m-plain,
+    &.pf-m-full-height {
       background: transparent;
     }
   }
