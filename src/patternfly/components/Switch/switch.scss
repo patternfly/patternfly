@@ -11,6 +11,10 @@
   --#{$switch}__toggle-icon--Color: var(--#{$pf-global}--Color--light-100);
   --#{$switch}__toggle-icon--Left: calc(var(--#{$switch}--FontSize) * .4);
   --#{$switch}__toggle-icon--Offset: #{pf-size-prem(2px)}; // this value is created to handle sizing of the toggle and therefore the width of the toggle and its transform value.
+  --#{$switch}__toggle-icon-disabled--FontSize: calc(var(--#{$switch}--FontSize) * .625); // We don't use an icon font-size here because this value allows the icon to scale relative to the switch's font-size.
+  --#{$switch}__toggle-icon-disabled--Color: var(--pf-v5-global--palette--black-150);
+  --#{$switch}__toggle-icon-disabled--Left: calc(var(--#{$switch}--FontSize) * .4);
+  --#{$switch}__toggle-icon-disabled--Offset: #{pf-size-prem(2px)};
 
   // Switch
   --#{$switch}--LineHeight: var(--#{$pf-global}--LineHeight--md);
@@ -18,6 +22,7 @@
 
   // Switch input
   --#{$switch}__input--checked__toggle--BackgroundColor: var(--#{$pf-global}--primary-color--100);
+  --#{$switch}__input--checked__toggle--before--TranslateX: calc(100% + var(--#{$switch}__toggle-icon--Offset));
   --#{$switch}__input--checked__toggle--before--TranslateX: calc(100% + var(--#{$switch}__toggle-icon--Offset));
   --#{$switch}__input--checked__label--Color: var(--#{$pf-global}--Color--dark-100);
   --#{$switch}__input--not-checked__label--Color: var(--#{$pf-global}--disabled-color--100);
@@ -33,6 +38,7 @@
   --#{$switch}__toggle--BackgroundColor: var(--#{$pf-global}--palette--black-500);
   --#{$switch}__toggle--BorderRadius: var(--#{$switch}__toggle--Height);
   --#{$switch}__toggle--before--Width: calc(var(--#{$switch}--FontSize) - var(--#{$switch}__toggle-icon--Offset));
+  --#{$switch}__toggle--before--Width: calc(var(--#{$switch}--FontSize) - var(--#{$switch}__toggle-icon-disabled--Offset));
   --#{$switch}__toggle--before--Height: var(--#{$switch}__toggle--before--Width);
   --#{$switch}__toggle--before--Top: calc((var(--#{$switch}__toggle--Height) - var(--#{$switch}__toggle--before--Height)) / 2);
   --#{$switch}__toggle--before--Left: var(--#{$switch}__toggle--before--Top);
@@ -41,6 +47,7 @@
   --#{$switch}__toggle--before--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
   --#{$switch}__toggle--before--Transition: transform .25s ease 0s;
   --#{$switch}__toggle--Width: calc(var(--#{$switch}__toggle--Height) + var(--#{$switch}__toggle-icon--Offset) + var(--#{$switch}__toggle--before--Width));
+  --#{$switch}__toggle--Width: calc(var(--#{$switch}__toggle--Height) + var(--#{$switch}__toggle-icon-disabled--Offset) + var(--#{$switch}__toggle--before--Width));
 
   // Switch label
   --#{$switch}__label--Color: var(--#{$pf-global}--Color--dark-100);
@@ -163,6 +170,17 @@
   align-items: center;
   font-size: var(--#{$switch}__toggle-icon--FontSize);
   color: var(--#{$switch}__toggle-icon--Color);
+}
+
+.#{$switch}__toggle-icon-disabled {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--#{$switch}__toggle-icon-disabled--Left);
+  display: flex;
+  align-items: center;
+  font-size: var(--#{$switch}__toggle-icon-disabled--FontSize);
+  color: var(--#{$switch}__toggle-icon-disabled--Color);
 }
 
 .#{$switch}__label {
