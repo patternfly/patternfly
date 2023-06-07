@@ -4,7 +4,7 @@
   .#{$switch} {
     --#{$switch}__toggle-icon--Color: var(--#{$pf-global}--BackgroundColor--100);
     --#{$switch}__input--not-checked__label--Color: var(--#{$pf-global}--Color--100);
-    --#{$switch}__input--disabled__toggle--before--BackgroundColor: var(--#{$pf-global}--disabled-color--100);
+    --#{$switch}__input--disabled__toggle--before--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
     --#{$switch}__toggle--before--BoxShadow: none;
   }
 }
