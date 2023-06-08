@@ -22,11 +22,5 @@ module.exports = sourceMD => {
   sourceMD(utilitiesMdFiles, 'html');
   sourceMD(deprecatedComponentsMdFiles, 'html-deprecated');
 
-  sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos');
-
-  // Release notes
-  sourceMD(require.resolve('../RELEASE-NOTES.md'), 'html');
-
-  // Upgrade guides
-  sourceMD(require.resolve('../UPGRADE-GUIDE.md'), 'html');
+  sourceMD(path.join(coreDocsPath, 'demos/**/*.md'), 'html-demos'
 };
