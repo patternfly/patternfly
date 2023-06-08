@@ -6,5 +6,6 @@
     --#{$switch}__input--not-checked__label--Color: var(--#{$pf-global}--Color--100);
     --#{$switch}__input--disabled__toggle--before--BackgroundColor: var(--#{$pf-global}--disabled-color--100);
     --#{$switch}__toggle--before--BoxShadow: none;
+    --#{$switch}__input--disabled__toggle-icon--Color: var(--#{$pf-global}--disabled-color--100);
   }
 }

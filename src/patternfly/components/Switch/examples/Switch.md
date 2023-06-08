@@ -105,7 +105,7 @@ cssPrefix: pf-v5-c-switch
 {{#> switch switch--attribute='for="switch-with-icon-disabled-1"'}}
   {{#> switch-input switch-input--id="switch-with-icon-disabled-1" switch-input--attribute='disabled checked'}}{{/switch-input}}
   {{#> switch-toggle}}
-    {{#> switch-toggle-icon-disabled}}{{/switch-toggle-icon-disabled}}
+    {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
   {{/switch-toggle}}
 {{/switch}}
 <br/>
@@ -114,7 +114,7 @@ cssPrefix: pf-v5-c-switch
   {{#> switch-input switch-input--id="switch-with-icon-disabled-2" switch-input--attribute='disabled'}}
   {{/switch-input}}
   {{#> switch-toggle}}
-    {{#> switch-toggle-icon-disabled}}{{/switch-toggle-icon-disabled}}
+    {{#> switch-toggle-icon}}{{/switch-toggle-icon}}
   {{/switch-toggle}}
 {{/switch}}
 ```

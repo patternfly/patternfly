@@ -11,6 +11,7 @@
   --#{$switch}__toggle-icon--Color: var(--#{$pf-global}--Color--light-100);
   --#{$switch}__toggle-icon--Left: calc(var(--#{$switch}--FontSize) * .4);
   --#{$switch}__toggle-icon--Offset: #{pf-size-prem(2px)}; // this value is created to handle sizing of the toggle and therefore the width of the toggle and its transform value.
+  --#{$switch}__input--disabled__toggle-icon--Color: var(--#{$pf-global}--palette--black-150);
 
   // Switch
   --#{$switch}--LineHeight: var(--#{$pf-global}--LineHeight--md);
@@ -121,6 +122,8 @@
     }
 
     ~ .#{$switch}__toggle {
+      --#{$switch}__toggle-icon--Color: var(--#{$switch}__input--disabled__toggle-icon--Color);
+
       cursor: not-allowed;
       background-color: var(--#{$switch}__input--disabled__toggle--BackgroundColor);
 
