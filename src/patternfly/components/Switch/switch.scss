@@ -11,6 +11,8 @@
   --#{$switch}__toggle-icon--Color: var(--#{$pf-global}--Color--light-100);
   --#{$switch}__toggle-icon--Left: calc(var(--#{$switch}--FontSize) * .4);
   --#{$switch}__toggle-icon--Offset: #{pf-size-prem(2px)}; // this value is created to handle sizing of the toggle and therefore the width of the toggle and its transform value.
+  
+  // Switch icon disabled
   --#{$switch}__toggle-icon-disabled--FontSize: calc(var(--#{$switch}--FontSize) * .625); // We don't use an icon font-size here because this value allows the icon to scale relative to the switch's font-size.
   --#{$switch}__toggle-icon-disabled--Color: var(--pf-v5-global--palette--black-150);
   --#{$switch}__toggle-icon-disabled--Left: calc(var(--#{$switch}--FontSize) * .4);

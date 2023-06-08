@@ -100,9 +100,6 @@ cssPrefix: pf-v5-c-switch
   {{#> switch-label switch-label--id="switch-disabled-2-on" switch-label--modifier="pf-m-on" switch-label--attribute='aria-hidden="true"'}}Message when on{{/switch-label}}
   {{#> switch-label switch-label--id="switch-disabled-2-off" switch-label--modifier="pf-m-off" switch-label--attribute='aria-hidden="true"'}}Message when off{{/switch-label}}
 {{/switch}}
-
-
-
 <br/>
 <br/>
 {{#> switch switch--attribute='for="switch-with-icon-disabled-1"'}}
