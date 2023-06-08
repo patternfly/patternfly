@@ -50,7 +50,7 @@ section: components
 ```
 
 ### Light theme sidebar and nav
-```hbs isFullscreen
+```hbs isFullscreen isDeprecated
 {{> page-template
       page-template--id="nav-light-theme-example"
       page-template-sidebar--nav--IsExpandable="true"
