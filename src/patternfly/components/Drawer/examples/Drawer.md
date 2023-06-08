@@ -257,9 +257,9 @@ import './Drawer.css'
 {{/drawer}}
 ```
 
-### Panel with light-200 background
+### Panel with secondary background
 ```hbs
-{{#> drawer drawer--id="panel-with-light-200-background" drawer-panel--IsOpen="true"}}
+{{#> drawer drawer--id="panel-with-secondary-background" drawer-panel--IsOpen="true"}}
  {{#> drawer-main}}
     {{#> drawer-content}}
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium est a porttitor vehicula. Quisque vel commodo urna. Morbi mattis rutrum ante, id vehicula ex accumsan ut. Morbi viverra, eros vel porttitor facilisis, eros purus aliquet erat, nec lobortis felis elit pulvinar sem. Vivamus vulputate, risus eget commodo eleifend, eros nibh porta quam, vitae lacinia leo libero at magna. Maecenas aliquam sagittis orci, et posuere nisi ultrices sit amet. Aliquam ex odio, malesuada sed posuere quis, pellentesque at mauris. Phasellus venenatis massa ex, eget pulvinar libero auctor pretium. Aliquam erat volutpat. Duis euismod justo in quam ullamcorper, in commodo massa vulputate.
@@ -317,7 +317,7 @@ import './Drawer.css'
 | `.pf-m-padding` | `.pf-v5-c-drawer__body` | Modifies the element to add padding. |
 | `.pf-m-no-padding` | `.pf-v5-c-drawer__body` | Modifies the element to remove padding. |
 | `.pf-m-no-background` | `.pf-v5-c-drawer__section`, `.pf-v5-c-drawer__content`, `.pf-v5-c-drawer__panel` | Modifies the drawer body/panel background color to transparent. |
-| `.pf-m-light-200` | `.pf-v5-c-drawer__section`, `.pf-v5-c-drawer__content`, `.pf-v5-c-drawer__panel` | Modifies the drawer body/panel background color to light grey. |
+| `.pf-m-light-200` | `.pf-v5-c-drawer__section`, `.pf-v5-c-drawer__content`, `.pf-v5-c-drawer__panel` | Modifies the body/panel to use the secondary background color. |
 | `.pf-m-width-{25, 33, 50, 66, 75, 100}{-on-[breakpoint]}` | `.pf-v5-c-drawer__panel` | Modifies the drawer panel width at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-resizable` | `.pf-v5-c-drawer__panel` | Modifies the drawer panel to be resizable. Intended for use with the `.pf-v5-c-drawer__splitter` element. |
 | `--pf-v5-c-drawer__panel--md--FlexBasis--min` | `.pf-v5-c-drawer__panel` | Defines the drawer panel minimum size. |

@@ -584,7 +584,7 @@ import './Navigation.css'
 ```
 
 ### Default in light mode
-```hbs
+```hbs isDeprecated
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item}}
@@ -612,7 +612,7 @@ import './Navigation.css'
 ```
 
 ### Expanded in light mode
-```hbs
+```hbs isDeprecated
 {{#> nav nav--attribute='aria-label="Global"' nav--modifier="pf-m-light"}}
   {{#> nav-list}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true" nav-item--current="true"}}
