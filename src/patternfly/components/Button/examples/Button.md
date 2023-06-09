@@ -403,6 +403,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-secondary` | `.pf-v5-c-button` | Modifies for secondary styles. |
 | `.pf-m-tertiary` | `.pf-v5-c-button` | Modifies for tertiary styles. |
 | `.pf-m-danger` | `.pf-v5-c-button` | Modifies for danger styles. |
+| `.pf-m-warning` | `.pf-v5-c-button` | Modifies for warning styles. |
 | `.pf-m-link` | `.pf-v5-c-button` | Modifies for link styles. This button has no background or border and is styled as a link. This button would commonly appear in a form and may include an icon. |
 | `.pf-m-plain` | `.pf-v5-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for `.pf-m-plain` icon buttons such as close, expand, kebab, etc. |
 | `.pf-m-inline` | `.pf-v5-c-button.pf-m-link` | Modifies for inline styles. This button is presented similar to a normal link and has no padding and is displayed inline with other inline content. When used as a `<span>`, the text will flow inline with text around it. |
