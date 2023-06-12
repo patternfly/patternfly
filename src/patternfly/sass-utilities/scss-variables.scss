@@ -185,6 +185,10 @@ $pf-v5-global--BorderRadius--lg:        30em !default; // This is a sufficiently
 // Icons
 $pf-v5-global--icon--Color--light: $pf-v5-color-black-600 !default;
 $pf-v5-global--icon--Color--dark: $pf-v5-color-black-900 !default;
+$pf-v5-global--icon--Color--light--light: $pf-v5-color-black-200 !default;
+$pf-v5-global--icon--Color--dark--light: $pf-v5-color-white !default;
+$pf-v5-global--icon--Color--light--dark: $pf-v5-color-black-600 !default;
+$pf-v5-global--icon--Color--dark--dark: $pf-v5-color-black-900 !default;
 $pf-v5-global--icon--FontSize--sm: pf-font-prem(12px) !default;
 $pf-v5-global--icon--FontSize--md: pf-font-prem(16px) !default;
 $pf-v5-global--icon--FontSize--lg: pf-font-prem(24px) !default;

@@ -31,8 +31,8 @@
   --#{$text-input-group}__text-input--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
   --#{$text-input-group}__text-input--PaddingLeft: var(--#{$pf-global}--spacer--sm);
   --#{$text-input-group}__text-input--MinWidth: 12ch;
-  --#{$text-input-group}__text-input--m-hint--Color: var(--#{$pf-global}--Color--dark-200); // matches placeholder text color
-  --#{$text-input-group}__text-input--placeholder--Color: var(--#{$pf-global}--Color--dark-200);
+  --#{$text-input-group}__text-input--m-hint--Color: var(--#{$pf-global}--Color--200); // matches placeholder text color
+  --#{$text-input-group}__text-input--placeholder--Color: var(--#{$pf-global}--Color--200);
   --#{$text-input-group}__text-input--BackgroundColor: transparent;
 
   // Icon
