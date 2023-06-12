@@ -2,6 +2,7 @@
 
 .#{$about-modal-box} {
   // Component variables
+  --#{$about-modal-box}--BackgroundImage: none;
   --#{$about-modal-box}--BackgroundColor: var(--#{$pf-global}--palette--black-1000); // Modal uses a non-standard background color
   --#{$about-modal-box}--BackgroundPosition: bottom right;
   --#{$about-modal-box}--BackgroundSize--min-width: 200px;
@@ -110,7 +111,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   background-color: var(--#{$about-modal-box}--BackgroundColor); // Because this component is always dark, set the background color
-  background-image: var(--#{$about-modal-box}--BackgroundImage, none);
+  background-image: var(--#{$about-modal-box}--BackgroundImage);
   background-repeat: no-repeat;
   background-position: var(--#{$about-modal-box}--BackgroundPosition);
   background-size: var(--#{$about-modal-box}--BackgroundSize);
