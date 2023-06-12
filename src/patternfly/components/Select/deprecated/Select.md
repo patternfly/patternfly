@@ -217,35 +217,35 @@ The multiselect should be used when the user is selecting multiple items from a 
 
 ### Checkbox expanded
 ```hbs
-{{#> select select--id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--IsMultiSelect="true"}}
+{{#> select select--id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" }}
   Filter
 {{/select}}
 ```
 
 ### Checkbox expanded and selected with groups
 ```hbs
-{{#> select select--id="select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true" select--IsMultiSelect="true"}}
+{{#> select select--id="select-checkbox-expanded-selected" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Checkbox expanded and selected with groups and filter
 ```hbs
-{{#> select select--id="select-checkbox-expanded-selected-filter-example" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true" select--IsFilterable="true" select--IsMultiSelect="true"}}
+{{#> select select--id="select-checkbox-expanded-selected-filter-example" select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true" select--HasGroups="true" select--IsFilterable="true"}}
   Filter by status
 {{/select}}
 ```
 
 ### Checkbox expanded without badge
 ```hbs
-{{#> select select--id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--IsNoBadge="true" select--IsMultiSelect="true"}}
+{{#> select select--id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--IsNoBadge="true" }}
   Filter
 {{/select}}
 ```
 
 ### Checkbox with counts
 ```hbs
-{{#> select select--id="select-checkbox-counts" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--HasCounts="true" select--IsMultiSelect="true"}}
+{{#> select select--id="select-checkbox-counts" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--HasCounts="true" }}
   Filter
 {{/select}}
 ```
@@ -355,7 +355,7 @@ The plain select variation should be used when you do not want a border applied 
 
 ### Checkbox item description
 ```hbs
-{{#> select select--id="select-checkbox-description" select--IsCheckboxSelect="true" select--IsExpanded="true" select--IsMultiSelect="true"}}
+{{#> select select--id="select-checkbox-description" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
   Filter
 {{/select}}
 ```

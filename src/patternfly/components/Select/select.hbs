@@ -12,11 +12,11 @@
   {{/if}}>
   {{!-- hidden spans for a11y --}}
   {{#unless select--HasCustomLabel}}
-    {{#if select--IsMultiSelect}}
+    {{#ifAny select--IsMultiSelect select--IsCheckboxSelect}}
       <span id="{{select--id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose many{{/if}}</span>
     {{else}}
       <span id="{{select--id}}-label" hidden>{{#if select-typeahead--Placeholder}} {{select-typeahead--Placeholder}}{{else}}Choose one{{/if}}</span>
-    {{/if}}
+    {{/ifAny}}
   {{/unless}}
 
   {{#if select--IsCustom}}
