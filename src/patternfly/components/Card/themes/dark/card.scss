@@ -4,6 +4,8 @@
   .#{$card},
   .#{$card}.pf-m-non-selectable-raised {
     --#{$card}--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
+    --#{$card}--m-selectable--m-disabled--BackgroundColor: var(--#{$pf-global}--palette--black-700);
+    --#{$card}--m-selectable--m-clickable--m-current--BackgroundColor: var(--#{$pf-global}--BackgroundColor--150);
 
     // Hoverable/selectable raised
     --#{$card}--m-hoverable-raised--hover--BoxShadow: var(--#{$pf-global}--BoxShadow--lg);
