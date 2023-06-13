@@ -183,12 +183,12 @@ $pf-v5-global--BorderRadius--sm:        3px !default;
 $pf-v5-global--BorderRadius--lg:        30em !default; // This is a sufficiently large number to ensure in most cases that the ends are evenly rounded.
 
 // Icons
-$pf-v5-global--icon--Color--light: $pf-v5-color-black-600 !default;
-$pf-v5-global--icon--Color--dark: $pf-v5-color-black-900 !default;
-$pf-v5-global--icon--Color--light--light: $pf-v5-color-black-200 !default;
-$pf-v5-global--icon--Color--dark--light: $pf-v5-color-white !default;
-$pf-v5-global--icon--Color--light--dark: $pf-v5-color-black-600 !default;
-$pf-v5-global--icon--Color--dark--dark: $pf-v5-color-black-900 !default;
+$pf-v5-global--icon--Color--light: $pf-v5-color-black-600 !default; // actionable icon color - eg, plain button default color
+$pf-v5-global--icon--Color--dark: $pf-v5-color-black-900 !default; // static icon color and hover/focus color for actionable icons - eg, plain button hover color
+$pf-v5-global--icon--Color--light--light: $pf-v5-color-black-200 !default; // "lighter" icon color for actionable icons - for use in pf-[v]-t-dark
+$pf-v5-global--icon--Color--dark--light: $pf-v5-color-white !default; // "lighter" icon color for static icons - for use in pf-[v]-t-dark
+$pf-v5-global--icon--Color--light--dark: $pf-v5-color-black-600 !default; // "darker" icon color for actionable icons - for use in pf-[v]-t-light
+$pf-v5-global--icon--Color--dark--dark: $pf-v5-color-black-900 !default; // "darker" icon color for static icons - for use in pf-[v]-t-light
 $pf-v5-global--icon--FontSize--sm: pf-font-prem(12px) !default;
 $pf-v5-global--icon--FontSize--md: pf-font-prem(16px) !default;
 $pf-v5-global--icon--FontSize--lg: pf-font-prem(24px) !default;
