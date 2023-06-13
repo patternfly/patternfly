@@ -7,7 +7,8 @@
 #ws-html-deprecated-c-select-loading-menu-item,
 #ws-html-deprecated-c-select-placeholder-expanded,
 #ws-html-deprecated-c-select-placeholder-item-disabled,
-#ws-html-deprecated-c-select-placeholder-item-enabled {
+#ws-html-deprecated-c-select-placeholder-item-enabled,
+#ws-html-deprecated-c-select-multi-with-typeahead-invalid {
   min-height: 330px;
 }
 
