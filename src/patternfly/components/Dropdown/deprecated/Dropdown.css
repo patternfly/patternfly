@@ -1,0 +1,64 @@
+#ws-html-deprecated-c-dropdown-badge-toggle,
+#ws-html-deprecated-c-dropdown-badge-drillup-toggle,
+#ws-html-deprecated-c-dropdown-expanded,
+#ws-html-deprecated-c-dropdown-kebab,
+#ws-html-deprecated-c-dropdown-kebab-align-right,
+#ws-html-deprecated-c-dropdown-align-right,
+#ws-html-deprecated-c-dropdown-align-on-different-breakpoint,
+#ws-html-deprecated-c-dropdown-align-top,
+#ws-html-deprecated-c-dropdown-primary-toggle,
+#ws-html-deprecated-c-dropdown-secondary-toggle,
+#ws-html-deprecated-c-dropdown-menu-item-icons,
+#ws-html-deprecated-c-dropdown-aria-disabled-items,
+#ws-html-deprecated-c-dropdown-plain-with-text {
+  min-height: 310px;
+}
+
+#ws-html-deprecated-c-dropdown-kebab-align-right,
+#ws-html-deprecated-c-dropdown-align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#ws-html-deprecated-c-dropdown-align-on-different-breakpoint {
+  display: flex;
+  justify-content: center;
+}
+
+#ws-html-deprecated-c-dropdown-align-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+#ws-html-deprecated-c-dropdown-with-groups,
+#ws-html-deprecated-c-dropdown-with-groups-and-dividers-between-groups {
+  min-height: 440px;
+}
+
+#ws-html-deprecated-c-dropdown-with-groups-and-dividers-between-items {
+  min-height: 460px;
+}
+
+#ws-html-deprecated-c-dropdown-dropdown-with-image-and-text .ws-preview-html {
+  min-height: 19rem;
+}
+
+#ws-html-deprecated-c-dropdown-split-button-checkbox,
+#ws-html-deprecated-c-dropdown-split-button-action,
+#ws-html-deprecated-c-dropdown-split-button-primary-checkbox,
+#ws-html-deprecated-c-dropdown-split-button-primary-action,
+#ws-html-deprecated-c-dropdown-split-button-secondary-action {
+  min-height: 210px;
+}
+
+[id^="ws-html-deprecated-c-dropdown-split-button"] .pf-v5-c-dropdown:not(:last-child) {
+  margin-right: 4px;
+}
+
+#ws-html-deprecated-c-dropdown-panel {
+  min-height: 130px;
+}
+
+#ws-html-deprecated-c-dropdown-dropdown-with-description {
+  min-height: 400px;
+}
