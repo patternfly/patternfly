@@ -30,7 +30,8 @@ $pf-v5-global--disabled-color--200: $pf-v5-color-black-500; // disabled backgrou
 $pf-v5-global--disabled-color--300: $pf-v5-color-black-200; // disabled text on disabled or floating background color - except form elements
 
 // icons
-$pf-v5-global--icon--Color--light: $pf-v5-color-black-300;
+$pf-v5-global--icon--Color--light: $pf-v5-color-black-200;
+$pf-v5-global--icon--Color--dark: $pf-v5-color-black-50;
 
 // theme color resets
 $pf-v5-global--Color--dark-100: $pf-v5-global--Color--100;
@@ -53,8 +54,10 @@ $pf-v5-global--BackgroundColor--dark-100: $pf-v5-global--BackgroundColor--100;
 $pf-v5-global--BackgroundColor--dark-200: $pf-v5-global--BackgroundColor--200;
 $pf-v5-global--BackgroundColor--dark-300: $pf-v5-global--BackgroundColor--300;
 $pf-v5-global--BackgroundColor--dark-400: $pf-v5-global--BackgroundColor--400;
-$pf-v5-global--icon--Color--light: $pf-v5-color-black-200;
-$pf-v5-global--icon--Color--dark: $pf-v5-color-black-50;
+$pf-v5-global--icon--Color--light--dark: $pf-v5-global--icon--Color--light;
+$pf-v5-global--icon--Color--dark--dark: $pf-v5-global--icon--Color--dark;
+$pf-v5-global--icon--Color--light--light: $pf-v5-global--icon--Color--light;
+$pf-v5-global--icon--Color--dark--light: $pf-v5-global--icon--Color--dark;
 
 // Shadows
 // small
