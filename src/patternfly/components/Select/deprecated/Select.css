@@ -30,7 +30,8 @@
 }
 
 #ws-html-deprecated-c-select-multi-with-typeahead-chip-group-expanded,
-#ws-html-deprecated-c-select-menu-footer {
+#ws-html-deprecated-c-select-menu-footer,
+#ws-html-deprecated-c-select-checkbox-item-description {
   min-height: 365px;
 }
 
@@ -46,8 +47,7 @@
   min-height: 120px;
 }
 
-#ws-html-deprecated-c-select-item-description,
-#ws-html-deprecated-c-select-checkbox-item-description {
+#ws-html-deprecated-c-select-item-description {
   min-height: 400px;
 }
 
