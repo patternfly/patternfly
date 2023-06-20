@@ -16,11 +16,6 @@
       {{/select-menu-item}}
     </li>
     <li role="presentation">
-      {{#> select-menu-item select-menu-item--IsSelected="true"}}
-        Menu item selected
-      {{/select-menu-item}}
-    </li>
-    <li role="presentation">
       {{#> select-menu-item select-menu-item--Description="This is a description."}}
         Menu item description
       {{/select-menu-item}}
@@ -30,6 +25,11 @@
         {{#> select-menu-item-main}}
           Menu item description disabled
         {{/select-menu-item-main}}
+      {{/select-menu-item}}
+    </li>
+    <li role="presentation">
+      {{#> select-menu-item select-menu-item--Description="This is a description." select-menu-item--IsSelected="true"}}
+        Menu item description selected
       {{/select-menu-item}}
     </li>
     <li role="presentation">
