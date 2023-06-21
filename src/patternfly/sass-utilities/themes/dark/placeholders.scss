@@ -1,5 +1,7 @@
-%pf-v5-theme-dark--t-dark {
-  .#{$button} {
-    --#{$button}--m-primary--BackgroundColor: var(--#{$pf-global}--primary-color--300);
+@if not $pf-v5-global--placeholders-loaded {
+  %pf-v5-theme-dark--t-dark {
+    .#{$button} {
+      --#{$button}--m-primary--BackgroundColor: var(--#{$pf-global}--primary-color--300);
+    }
   }
 }
