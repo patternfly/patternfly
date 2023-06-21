@@ -28,7 +28,11 @@
     {{/if}}
   </picture>
 {{else}}
-  <img class="{{pfv}}brand{{#if brand--modifier}} {{brand--modifier}}{{/if}}"
+  <img class="{{pfv}}brand pf-theme-toggle--dark {{#if brand--modifier}} {{brand--modifier}}{{/if}}"
+    {{#if brand--attribute--white}}
+      {{{brand--attribute--white}}}
+    {{/if}}>
+    <img class="{{pfv}}brand pf-theme-toggle--light {{#if brand--modifier}} {{brand--modifier}}{{/if}}"
     {{#if brand--attribute}}
       {{{brand--attribute}}}
     {{/if}}>

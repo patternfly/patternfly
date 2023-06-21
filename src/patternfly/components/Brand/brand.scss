@@ -8,11 +8,41 @@ $pf-v5-c-brand--breakpoint-map: build-breakpoint-map();
   width: var(--#{$brand}--Width--base);
   height: var(--#{$brand}--Height--base);
 
+  :where(.pf-v5-theme-dark) &.pf-theme-toggle--light,
+  &.pf-theme-toggle--dark {
+    display: none;
+  }
+  
+  :where(.pf-v5-theme-dark) &.pf-theme-toggle--dark {
+    display: block;
+  }
+
   @include pf-v5-build-css-variable-stack("--#{$brand}--Width--base", "--#{$brand}--Width", $pf-v5-c-brand--breakpoint-map);
   @include pf-v5-build-css-variable-stack("--#{$brand}--Height--base", "--#{$brand}--Height", $pf-v5-c-brand--breakpoint-map);
+
 
   &.pf-m-picture {
     display: inline-flex;
     max-width: 100%; // move to _globals.scss at breaking change
   }
+
+  :where(.pf-v5-theme-dark) &.pf-m-picture > source.pf-theme-toggle--light, source.pf-theme-toggle--dark {
+    display: none;
+  }
+
+  :where(.pf-v5-theme-dark) &.pf-m-picture > img.pf-theme-toggle--light,  img.pf-theme-toggle--dark {
+    display: none;
+  }
+
+  :where(.pf-v5-theme-dark)  &.pf-m-picture > img.pf-theme-toggle--dark, source.pf-theme-toggle--dark {
+    display: block;
+  }
+
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/brand";
+
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-brand;
 }

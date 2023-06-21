@@ -6,7 +6,10 @@ section: components
 ## Examples
 ### Basic
 ```hbs
-{{> brand brand--attribute='src="/assets/images/pf_logo.svg" alt="PatternFly logo"'}}
+{{> brand 
+    brand--attribute='src="/assets/images/pf_logo.svg" alt="PatternFly logo"'
+    brand--attribute--white='src="/assets/images/pf_logo_white.svg" alt="PatternFly logo"'
+  }}
 ```
 
 ### Responsive
