@@ -1360,6 +1360,22 @@ import './Menu.css'
             <i class="fas fa-fw fa-bars" aria-hidden="true"></i>
           {{/menu-item-action}}
         {{/menu-list-item}}
+        {{#> menu-list-item menu-list-item--IsAriaDisabled="true"}}
+          {{#> menu-item}}
+            {{#> menu-item-main}}
+              {{#> menu-item-text}}
+                Item 5 aria-disabled
+              {{/menu-item-text}}
+              {{> menu-item-select-icon}}
+            {{/menu-item-main}}
+            {{#> menu-item-description}}
+              This is a description
+            {{/menu-item-description}}
+          {{/menu-item}}
+          {{#> menu-item-action menu-item-action--attribute='aria-label="Copy"'}}
+            <i class="fas fa-fw fa-ellipsis-v" aria-hidden="true"></i>
+          {{/menu-item-action}}
+        {{/menu-list-item}}
       {{/menu-list}}
     {{/menu-group}}
   {{/menu-content}}
@@ -1785,14 +1801,15 @@ import './Menu.css'
 ## Documentation
 
 ### Accessibility
+
 | Attribute | Applied | Outcome |
 | -- | -- | -- |
 | `role="menu"` | `.pf-v5-c-menu__list` | Declares `.pf-v5-c-menu__list` as a menu. |
 | `disabled` | `button.pf-v5-c-menu__item` | When the menu item uses a button element, indicates that it is unavailable and removes it from keyboard focus. |
 | `role="menuitem"` | `.pf-v5-c-menu__item`, `.pf-v5-c-menu__list-item` (checkbox) | Assigns `.pf-v5-c-menu__item` as an option in a set of choices contained by a menu. |
 | `role="none"` | `.pf-v5-c-menu__list-item` | Removes semantic meaning from `.pf-v5-c-menu__list-item`. |
-| `aria-disabled="true"` | `a.pf-v5-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
-| `tabindex="-1"` | `a.pf-v5-c-menu__item` | When the menu item uses a link element, removes it from keyboard focus. |
+| `aria-disabled="true"` | `.pf-v5-c-menu__item` | Indicates to assistive technologies that the menu item is disabled, but still allows it to be focusable via keyboard. Additional click prevention may be required. |
+| `tabindex="-1"` | `a.pf-v5-c-menu__item` | When the menu item uses a link element and has `aria-disabled="true"` passed in, removes it from keyboard focus. This is similar to passing `disabled` to a menu item that uses a button element. |
 | `aria-hidden="true"` | `.pf-v5-c-menu__item-icon`, `.pf-v5-c-menu__item-action-icon`, `.pf-v5-c-menu__item-external-icon`, `.pf-v5-c-menu__item-toggle-icon`, `.pf-v5-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
 | `aria-label="Not starred"` | `.pf-v5-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
 | `aria-label="Starred"` | `.pf-v5-c-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |
@@ -1836,11 +1853,13 @@ import './Menu.css'
 | `.pf-m-current` | `.pf-v5-c-menu__list-item` | Modifies a list item for current styles. |
 | `.pf-m-load` | `.pf-v5-c-menu__list-item` | Modifies a list item for "load more" styles. |
 | `.pf-m-loading` | `.pf-v5-c-menu__list-item` | Modifies a list item for loading styles. |
+| `.pf-m-disabled` | `.pf-v5-c-menu__list-item` | Modifies a list item for disabled styling. |
+| `.pf-m-aria-disabled` | `.pf-v5-c-menu__list-item` | Modifies a list item for aria-disabled styling. |
 | `.pf-m-drilldown` | `.pf-v5-c-menu` | Modifies the menu so that all nested `.pf-v5-c-menu` elements "drill down". |
 | `.pf-m-current-path` | `.pf-v5-c-menu.pf-m-drilldown .pf-v5-c-menu__list-item` | Modifies the menu list item for current path state. |
 | `.pf-m-drilled-in` | `.pf-v5-c-menu.pf-m-drilldown, .pf-v5-c-menu.pf-m-drilldown .pf-v5-c-menu` | Modifies the menu list for drilled in state. |
 | `.pf-m-static` | `.pf-v5-c-menu.pf-m-drilldown .pf-v5-c-menu` | Modifies the menu list for drilled static state. |
-| `.pf-m-danger` | `pf-v5-c-menu__item-text` | Modifies a list item for danger styles. |
+| `.pf-m-danger` | `.pf-v5-c-menu__item-text` | Modifies a list item for danger styles. |
 | `--pf-v5-c-menu--Width: {width}` | `.pf-v5-c-menu` | Modifies the width of the menu. The default value is `auto`. |
 | `--pf-v5-c-menu__content--MaxHeight: {height}` | `.pf-v5-c-menu__content` | Modifies the height of the menu content. Update this value when header and/or footer elements are intended to be fixed. |
 | `--pf-v5-c-menu__content--Height: {height}` | `.pf-v5-c-menu` | Modifies the height of the drilldown menu content. The default value is `auto`. |
