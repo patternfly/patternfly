@@ -50,6 +50,24 @@ import './Menu.css'
           {{/menu-item-main}}
         {{/menu-item}}
       {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--IsAriaDisabled="true"}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+            Aria-disabled action
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
+      {{#> menu-list-item menu-list-item--IsAriaDisabled="true"}}
+        {{#> menu-item menu-item--IsLink="true"}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+            Aria-disabled link
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
+      {{/menu-list-item}}
     {{/menu-list}}
   {{/menu-content}}
 {{/menu}}

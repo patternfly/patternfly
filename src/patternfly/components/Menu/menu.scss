@@ -553,7 +553,8 @@
     --#{$menu}__list-item--Color: var(--#{$menu}__list-item--focus-within--Color, inherit);
   }
 
-  &.pf-m-disabled {
+  &.pf-m-disabled,
+  &.pf-m-aria-disabled {
     --#{$menu}__list-item--hover--BackgroundColor: transparent;
     --#{$menu}__list-item--focus-within--BackgroundColor: transparent;
     --#{$menu}__item--Color: var(--#{$menu}__list-item--m-disabled__item--Color);
@@ -615,7 +616,7 @@
     }
   }
 
-  @at-root label#{&}:where(:not([disabled], .pf-m-disabled)) {
+  @at-root label#{&}:where(:not([disabled], .pf-m-disabled, .pf-m-aria-disabled)) {
     cursor: pointer;
   }
 }
@@ -724,7 +725,8 @@
     --#{$menu}__item-action--Color: var(--#{$menu}__item-action--hover--Color);
   }
 
-  &:disabled {
+  &:disabled,
+  &.pf-m-aria-disabled {
     --#{$menu}__item-action--Color: var(--#{$menu}__item-action--disabled--Color);
   }
 }
