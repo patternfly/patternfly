@@ -1,0 +1,86 @@
+{
+  "extends": [
+    "stylelint-config-recess-order",
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss"
+  ],
+  "ignoreFiles": [
+    "./src/patternfly/assets/fontawesome/*.scss",
+    "./src/patternfly/assets/pficon/*.scss",
+    "./scripts/template/**/*.scss",
+    "./scripts/gulp/*.scss"
+  ],
+  "rules": {
+    "at-rule-empty-line-before": [ "always", {
+      "except": [
+        "blockless-after-same-name-blockless",
+        "first-nested"
+      ],
+      "ignore": ["after-comment"],
+      "ignoreAtRules": "else"
+    }],
+    "alpha-value-notation": null,
+    "annotation-no-unknown": [ true, {
+      "ignoreAnnotations": [
+        "=",
+        "default"
+      ]
+    }],
+    "color-function-notation": null,
+    "color-named": "never",
+    "comment-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": [
+        "after-comment",
+        "stylelint-commands"
+      ]
+    }],
+    "declaration-block-no-redundant-longhand-properties": null,
+    "declaration-no-important": true,
+    "font-weight-notation": "numeric",
+    "import-notation": "string",
+    "keyframes-name-pattern": null,
+    "max-nesting-depth": 3,
+    "no-descending-specificity": null,
+    "no-unknown-animations": true,
+    "order/order": [
+      "custom-properties",
+      "declarations"
+    ],
+    "scss/declaration-nested-properties": "never",
+    "scss/dollar-variable-colon-space-after": "at-least-one-space",
+    "scss/dollar-variable-colon-space-before": "never",
+    "scss/dollar-variable-empty-line-before": ["always", {
+      "except": [
+        "first-nested",
+        "after-comment",
+        "after-dollar-variable"
+      ]
+    }],
+    "scss/dollar-variable-pattern": ["^pf-v5-", {"ignore": "local"}],
+    "scss/double-slash-comment-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": [
+        "between-comments",
+        "stylelint-commands"
+      ]
+    }],
+    "scss/double-slash-comment-whitespace-inside": "always",
+    "scss/at-mixin-pattern": "^pf-",
+    "scss/no-global-function-names": null,
+    "scss/percent-placeholder-pattern": "^pf-",
+    "selector-class-pattern": "pf-",
+    "selector-max-attribute": 2,
+    "selector-max-class": 4,
+    "selector-max-combinators": 4,
+    "selector-max-compound-selectors": 4,
+    "selector-max-id": 0,
+    "selector-max-type": 2,
+    "selector-nested-pattern": "^(?!.*&[-_])",
+    "selector-no-qualifying-type": true
+  }
+}
