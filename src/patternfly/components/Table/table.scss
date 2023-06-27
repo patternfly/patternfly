@@ -11,13 +11,13 @@
   // ============================================================ //
 
   // Base
-  --#{$table}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$table}--BorderColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$table}--border-width--base: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$table}--BackgroundColor: var(--pf--global-—background—-color-—primary);
+  --#{$table}--BorderColor: var(--pf--global--border--color);
+  --#{$table}--border-width--base: var(--pf--global--border--width--regular--border--size);
 
   // Caption
-  --#{$table}__caption--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$table}__caption--Color: var(--#{$pf-global}--Color--200);
+  --#{$table}__caption--FontSize: var(--pf--global--font--size--body);
+  --#{$table}__caption--Color: var(--pf--global--text--color--subtle);
   --#{$table}__caption--PaddingTop: var(--#{$pf-global}--spacer--md);
   --#{$table}__caption--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$table}__caption--PaddingBottom: var(--#{$pf-global}--spacer--md);
@@ -31,8 +31,8 @@
   }
 
   // Thead
-  --#{$table}__thead--cell--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$table}__thead--cell--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$table}__thead--cell--FontSize: var(--pf--global--font--size--body);
+  --#{$table}__thead--cell--FontWeight: var(--pf--global--font--weight--body--bold);
 
   // Tbody cell
   --#{$table}__tbody--cell--PaddingTop: var(--#{$pf-global}--spacer--lg);
@@ -45,7 +45,7 @@
   --#{$table}--cell--Padding--base: var(--#{$pf-global}--spacer--md);
   --#{$table}--cell--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$table}--cell--FontWeight: var(--#{$pf-global}--FontWeight--normal);
-  --#{$table}--cell--Color: var(--#{$pf-global}--Color--100);
+  --#{$table}--cell--Color: var(--pf--global--text--color--regular);
   --#{$table}--cell--PaddingTop: var(--#{$table}--cell--Padding--base);
   --#{$table}--cell--PaddingRight: var(--#{$table}--cell--Padding--base);
   --#{$table}--cell--PaddingBottom: var(--#{$table}--cell--Padding--base);
@@ -66,10 +66,10 @@
   --#{$table}--cell--WordBreak: normal;
 
   // Border
-  --#{$table}--cell--m-border-right--before--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$table}--cell--m-border-right--before--BorderRightColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$table}--cell--m-border-left--before--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$table}--cell--m-border-left--before--BorderLeftColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$table}--cell--m-border-right--before--BorderRightWidth: var(--pf--global--border--width--regular--border--size);
+  --#{$table}--cell--m-border-right--before--BorderRightColor: var(--pf--global--border--color);
+  --#{$table}--cell--m-border-left--before--BorderLeftWidth: var(--pf--global--border--width--regular--border--size);
+  --#{$table}--cell--m-border-left--before--BorderLeftColor: var(--pf--global--border--color);
 
   // Help
   --#{$table}--cell--m-help--MinWidth: 11ch;
@@ -95,10 +95,10 @@
 
   // Button
   --#{$table}__button--BackgroundColor: transparent;
-  --#{$table}__button--Color: var(--#{$pf-global}--Color--100);
-  --#{$table}__button--hover--Color: var(--#{$pf-global}--Color--100);
-  --#{$table}__button--focus--Color: var(--#{$pf-global}--Color--100);
-  --#{$table}__button--active--Color: var(--#{$pf-global}--Color--100);
+  --#{$table}__button--Color: var(--pf--global--text--color--regular);
+  --#{$table}__button--hover--Color: var(--pf--global--text--color--regular);
+  --#{$table}__button--focus--Color: var(--pf--global--text--color--regular);
+  --#{$table}__button--active--Color: var(--pf--global--text--color--regular);
   --#{$table}__button--OutlineOffset: calc(var(--#{$pf-global}--BorderWidth--lg) * -1);
 
   // Compact
@@ -107,21 +107,21 @@
 
   // Check
   --#{$table}__check--input--MarginTop: #{pf-size-prem(4px)};
-  --#{$table}__check--input--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$table}__check--input--FontSize: var(--pf--global--font--weight--size--body);
 
   // Favorite
-  --#{$table}--cell--m-favorite--Color: var(--#{$pf-global}--Color--light-300);
-  --#{$table}__favorite--c-button--Color: var(--#{$pf-global}--Color--light-300);
-  --#{$table}__favorite--c-button--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$table}--cell--m-favorite--Color: var(--pf--global--text--color--subtle);
+  --#{$table}__favorite--c-button--Color: var(--pf--global--text--color--subtle);
+  --#{$table}__favorite--c-button--FontSize: var(--pf--global--font--size--body);
   --#{$table}__favorite--c-button--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
   --#{$table}__favorite--c-button--MarginRight: calc(var(--#{$pf-global}--spacer--md) * -1);
   --#{$table}__favorite--c-button--MarginBottom: calc(var(--#{$pf-global}--spacer--form-element) * -1);
   --#{$table}__favorite--c-button--MarginLeft: calc(var(--#{$pf-global}--spacer--md) * -1);
   --#{$table}__favorite--m-favorited--c-button--Color: var(--#{$pf-global}--palette--gold-400);
-  --#{$table}__sort--m-favorite__button__text--Color: var(--#{$pf-global}--Color--200);
-  --#{$table}__sort--m-favorite__button--hover__text--Color: var(--#{$pf-global}--Color--100);
-  --#{$table}__sort--m-favorite__button--focus__text--Color: var(--#{$pf-global}--Color--100);
-  --#{$table}__sort--m-favorite__button--active__text--Color: var(--#{$pf-global}--Color--100);
+  --#{$table}__sort--m-favorite__button__text--Color: var(--pf--global--text--color--subtle);
+  --#{$table}__sort--m-favorite__button--hover__text--Color: var(--pf--global--text--color--regular);
+  --#{$table}__sort--m-favorite__button--focus__text--Color: var(--pf--global--text--color--regular);
+  --#{$table}__sort--m-favorite__button--active__text--Color: var(--pf--global--text--color--regular);
 
   // Draggable
   --#{$table}__draggable--c-button--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
@@ -131,7 +131,7 @@
 
   // Ghost row
   --#{$table}__tr--m-ghost-row--Opacity: .4;
-  --#{$table}__tr--m-ghost-row--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$table}__tr--m-ghost-row--BackgroundColor: var(-—pf--global-—background—-color-—primary);
 
   // Action
   --#{$table}__action--PaddingTop: 0;
@@ -158,7 +158,7 @@
   --#{$table}__expandable-row--after--Bottom: calc(var(--#{$table}--border-width--base) * -1);
   --#{$table}__expandable-row--after--border-width--base: var(--#{$pf-global}--BorderWidth--lg);
   --#{$table}__expandable-row--after--BorderLeftWidth: 0;
-  --#{$table}__expandable-row--after--BorderColor: var(--#{$pf-global}--active-color--100);
+  --#{$table}__expandable-row--after--BorderColor: var(--pf--global--border--color--active);
 
   // Icon inline
   --#{$table}__icon-inline--MarginRight: var(--#{$pf-global}--spacer--sm);
@@ -174,8 +174,8 @@
   --#{$table}__sort__button--MarginTop: calc(var(--#{$table}__sort__button--PaddingTop) * -1);
   --#{$table}__sort__button--MarginBottom: calc(var(--#{$table}__sort__button--PaddingBottom) * -1);
   --#{$table}__sort__button--MarginLeft: calc(var(--#{$table}__sort__button--PaddingLeft) * -1);
-  --#{$table}__sort__button--Color: var(--#{$pf-global}--Color--100);
-  --#{$table}__sort--m-selected__button--Color: var(--#{$pf-global}--active-color--100);
+  --#{$table}__sort__button--Color: var(--pf--global--text--color--regular);
+  --#{$table}__sort--m-selected__button--Color: var(--pf--global--border--color--active);
   --#{$table}__sort--m-help--MinWidth: 15ch;
 
   // Sort text
@@ -185,12 +185,12 @@
   --#{$table}__sort__button--active__text--Color: currentcolor;
 
   // Sort indicator
-  --#{$table}__sort-indicator--Color: var(--#{$pf-global}--disabled-color--200);
+  --#{$table}__sort-indicator--Color: var(--pf--global--icon--color--subtle);
   --#{$table}__sort-indicator--MarginLeft: var(--#{$pf-global}--spacer--md);
-  --#{$table}__sort--m-selected__sort-indicator--Color: var(--#{$pf-global}--active-color--100);
-  --#{$table}__sort__button--hover__sort-indicator--Color: var(--#{$pf-global}--Color--100);
-  --#{$table}__sort__button--active__sort-indicator--Color: var(--#{$pf-global}--Color--100);
-  --#{$table}__sort__button--focus__sort-indicator--Color: var(--#{$pf-global}--Color--100);
+  --#{$table}__sort--m-selected__sort-indicator--Color: var(--pf--global--border--color--active);
+  --#{$table}__sort__button--hover__sort-indicator--Color: var(--pf--global--text--color--regular);
+  --#{$table}__sort__button--active__sort-indicator--Color: var(--pf--global--text--color--regular);
+  --#{$table}__sort__button--focus__sort-indicator--Color: var(--pf--global--text--color--regular);
 
   // Help
   --#{$table}__th--m-help--MinWidth: 11ch;
@@ -204,14 +204,14 @@
   --#{$table}__column-help--c-button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
 
   // Compound expansion toggle button
-  --#{$table}__compound-expansion-toggle__button--Color: var(--#{$pf-global}--active-color--100);
-  --#{$table}__compound-expansion-toggle__button--hover--Color: var(--#{$pf-global}--link--Color--hover);
-  --#{$table}__compound-expansion-toggle__button--focus--Color: var(--#{$pf-global}--link--Color--hover);
-  --#{$table}__compound-expansion-toggle__button--active--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$table}__compound-expansion-toggle__button--Color: var(--pf--global--icon--color--brand);
+  --#{$table}__compound-expansion-toggle__button--hover--Color: var(--pf--global--icon--color--brand--hover);
+  --#{$table}__compound-expansion-toggle__button--focus--Color: var(--pf--global--icon--color--brand--hover);
+  --#{$table}__compound-expansion-toggle__button--active--Color: var(--pf--global--icon--color--brand--active);
 
   // ::before border treatment
-  --#{$table}__compound-expansion-toggle__button--before--border-width--base: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$table}__compound-expansion-toggle__button--before--BorderColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$table}__compound-expansion-toggle__button--before--border-width--base: var(--pf--global--border--width--regular--border--size);
+  --#{$table}__compound-expansion-toggle__button--before--BorderColor: var(--pf--global--border--color);
   --#{$table}__compound-expansion-toggle__button--before--BorderRightWidth: 0;
   --#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth: 0;
   --#{$table}__compound-expansion-toggle__button--before--Bottom: calc(var(--#{$table}__compound-expansion-toggle__button--before--border-width--base) * -1);
@@ -219,7 +219,7 @@
 
   // ::before border treatment
   --#{$table}__compound-expansion-toggle__button--after--border-width--base: var(--#{$pf-global}--BorderWidth--lg);
-  --#{$table}__compound-expansion-toggle__button--after--BorderColor: var(--#{$pf-global}--primary-color--100);
+  --#{$table}__compound-expansion-toggle__button--after--BorderColor: var(--pf--global--border--color--active);
   --#{$table}__compound-expansion-toggle__button--after--BorderTopWidth: 0;
   --#{$table}__compound-expansion-toggle__button--after--Top: calc(var(--#{$table}__compound-expansion-toggle__button--before--border-width--base) * -1);
   --#{$table}__compound-expansion-toggle__button--after--Left: calc(var(--#{$table}__compound-expansion-toggle__button--before--border-width--base) * -1);
@@ -235,7 +235,7 @@
   --#{$table}--m-compact--cell--first-last-child--PaddingRight: var(--#{$pf-global}--spacer--md);
   --#{$table}--m-compact--cell--first-last-child--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
   --#{$table}--m-compact--cell--first-last-child--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$table}--m-compact--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$table}--m-compact--FontSize: var(--pf--global--font--size--body);
   --#{$table}--m-compact__expandable-row-content--PaddingTop: var(--#{$pf-global}--spacer--lg);
   --#{$table}--m-compact__expandable-row-content--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$table}--m-compact__expandable-row-content--PaddingBottom: var(--#{$pf-global}--spacer--lg);
@@ -246,56 +246,56 @@
   --#{$table}--nested--first-last-child--PaddingLeft: var(--#{$table}--m-compact--cell--first-last-child--PaddingRight);
 
   // Modifier - expandable row expanded
-  --#{$table}__expandable-row--m-expanded--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$table}__expandable-row--m-expanded--BorderBottomColor: var(--pf--global--border--color);
 
   // tr clickable
   --#{$table}__tr--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
   --#{$table}__tr--m-clickable--BackgroundColor: transparent;
   --#{$table}__tr--m-clickable--BoxShadow: none;
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
-  --#{$table}__tr--m-clickable--hover--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$table}__tr--m-clickable--focus--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$table}__tr--m-clickable--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$table}__tr--m-clickable--active--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$table}__tr--m-clickable--active--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$table}__tr--m-clickable--m-selected--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom) inset, var(--#{$pf-global}--BoxShadow--sm-bottom);
+  --#{$table}__tr--m-clickable--hover--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
+  --#{$table}__tr--m-clickable--hover--BackgroundColor: var(-—pf--global-—background—-color-—primary);
+  --#{$table}__tr--m-clickable--focus--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
+  --#{$table}__tr--m-clickable--focus--BackgroundColor: var(-—pf--global-—background—-color-—primary);
+  --#{$table}__tr--m-clickable--active--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
+  --#{$table}__tr--m-clickable--active--BackgroundColor: var(-—pf--global-—background—-color-—primary);
+  --#{$table}__tr--m-clickable--m-selected--BoxShadow: var(--pf--global--shadow--small--bottom--color) inset, var(--pf--global--shadow--small--bottom--color);
 
   // tr selected
   --#{$table}__tr--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tr--m-selected--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$table}__tr--m-selected--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--#{$pf-global}--BoxShadow--sm-bottom);
+  --#{$table}__tr--m-selected--BackgroundColor: var(-—pf--global-—background—-color-—primary);
+  --#{$table}__tr--m-selected--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
   --#{$table}__tr--m-selected--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
   --#{$table}__tr--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
-  --#{$table}__tr--m-selected--after--BorderLeftColor: var(--#{$pf-global}--active-color--100);
-  --#{$table}__tr--m-selected--m-selected--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom) inset, var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--#{$pf-global}--BoxShadow--sm-bottom);
+  --#{$table}__tr--m-selected--after--BorderLeftColor: var(--pf--global--border--color--active);
+  --#{$table}__tr--m-selected--m-selected--BoxShadow: var(--pf--global--shadow--small--bottom--color);
+  --#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow: var(--pf--global--shadow--small--bottom--color) inset, var(--pf--global--shadow--small--bottom--color);
+  --#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
 
   // tbody clickable
   --#{$table}__tbody--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
   --#{$table}__tbody--m-clickable--BoxShadow: none;
   --#{$table}__tbody--m-clickable--BackgroundColor: transparent;
   --#{$table}__tbody--m-clickable--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
-  --#{$table}__tbody--m-clickable--hover--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$table}__tbody--m-clickable--focus--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$table}__tbody--m-clickable--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$table}__tbody--m-clickable--active--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$table}__tbody--m-clickable--active--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$table}__tbody--m-clickable--m-expanded--BorderColor: var(--#{$pf-global}--active-color--400);
-  --#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom) inset, var(--#{$pf-global}--BoxShadow--sm-bottom);
+  --#{$table}__tbody--m-clickable--hover--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
+  --#{$table}__tbody--m-clickable--hover--BackgroundColor: var(-—pf--global-—background—-color-—primary);
+  --#{$table}__tbody--m-clickable--focus--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
+  --#{$table}__tbody--m-clickable--focus--BackgroundColor: var(-—pf--global-—background—-color-—primary);
+  --#{$table}__tbody--m-clickable--active--BoxShadow: var(--#{$table}__tbody--m-clickable--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
+  --#{$table}__tbody--m-clickable--active--BackgroundColor: var(-—pf--global-—background—-color-—primary);
+  --#{$table}__tbody--m-clickable--m-expanded--BorderColor: var(--pf--global);
+  --#{$table}__tbody--m-clickable--m-selected--hover__tr--BoxShadow: var(--pf--global--shadow--small--bottom--color) inset, var(--pf--global--shadow--small--bottom--color);
 
   // tbody selected
-  --#{$table}__tbody--m-selected--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$table}__tbody--m-selected--BackgroundColor: var(-—pf--global-—background—-color-—primary);
   --#{$table}__tbody--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tbody--m-selected--BoxShadow: var(--#{$table}__tbody--m-selected--BoxShadow--top), var(--#{$pf-global}--BoxShadow--sm-bottom);
+  --#{$table}__tbody--m-selected--BoxShadow: var(--#{$table}__tbody--m-selected--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
   --#{$table}__tbody--m-selected--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
   --#{$table}__tbody--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
-  --#{$table}__tbody--m-selected--after--BorderLeftColor: var(--#{$pf-global}--active-color--100);
-  --#{$table}__tbody--m-selected--m-selected--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$table}__tbody--m-selected--hover__tbody--m-selected--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom) inset, var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$table}__tbody--m-selected__tbody--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--#{$pf-global}--BoxShadow--sm-bottom);
+  --#{$table}__tbody--m-selected--after--BorderLeftColor: var(--pf--global--border--color--active);
+  --#{$table}__tbody--m-selected--m-selected--BoxShadow: var(--pf--global--shadow--small--bottom--color);
+  --#{$table}__tbody--m-selected--hover__tbody--m-selected--BoxShadow: var(--pf--global--shadow--small--bottom--color) inset, var(--pf--global--shadow--small--bottom--color);
+  --#{$table}__tbody--m-selected__tbody--m-selected--hover--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
 
   // Nested column header
   --#{$table}__thead--m-nested-column-header--button--OutlineOffset: #{pf-size-prem(-3px)};
@@ -303,10 +303,10 @@
   --#{$table}__thead--m-nested-column-header__tr--PaddingBottom: var(--#{$pf-global}--spacer--xs);
 
   // Subhead
-  --#{$table}__subhead--Color: var(--#{$pf-global}--Color--200);
+  --#{$table}__subhead--Color: var(--pf--global--text--color--subtle);
 
   // Striped
-  --#{$table}--m-striped__tr--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-200);
+  --#{$table}--m-striped__tr--BackgroundColor: var(--pf--global--background--color--primary);
 
   // Sticky
   --#{$table}--m-sticky-header--cell--ZIndex: var(--#{$pf-global}--ZIndex--xs);

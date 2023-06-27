@@ -45,7 +45,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$masthead} {
   --#{$masthead}--PaddingLeft: var(--#{$masthead}--inset);
   --#{$masthead}--PaddingRight: var(--#{$masthead}--inset);
-  --#{$masthead}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
+  --#{$masthead}--BackgroundColor: var(--pf--global--background--color--inverse);
 
   // Insets
   --#{$masthead}--inset: var(--#{$pf-global}--spacer--md); // match page insets
@@ -94,7 +94,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   // Main border
   --#{$masthead}__main--before--Right: calc(var(--#{$masthead}--inset) * -1);
   --#{$masthead}__main--before--Left: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}__main--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$masthead}__main--before--BorderBottomWidth: var(--pf--global--border--width);
   --#{$masthead}__main--before--BorderBottomColor: var(--#{$pf-global}--palette--black-600);
 
   // Toggle
@@ -103,18 +103,18 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__toggle--c-button--FontSize: var(--#{$pf-global}--FontSize--2xl);
 
   // Light 100
-  --#{$masthead}--m-light--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$masthead}--m-light--BackgroundColor: var(--pf--global--background--color--primary);
   --#{$masthead}--m-light__main--BorderBottomColor: var(--#{$pf-global}--BorderColor--300);
 
   // Light 200
-  --#{$masthead}--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$masthead}--m-light-200__main--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$masthead}--m-light-200--BackgroundColor: var(--pf--global--background--color--secondary);
+  --#{$masthead}--m-light-200__main--BorderBottomColor: var(--pf--global--border--color);
 
   // Toolbar item
   --#{$masthead}--c-toolbar__item--Display: flex;
 
   // Borders
-  --#{$masthead}--item-border-color--base: var(--#{$pf-global}--palette--black-800);
+  --#{$masthead}--item-border-color--base: var(--pf--global--border--color);
 
   // Context selector
   --#{$masthead}--c-context-selector--Width: auto;
@@ -145,7 +145,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--c-toolbar__expandable-content--PaddingRight: var(--#{$masthead}--inset);
   --#{$masthead}--c-toolbar__expandable-content--PaddingBottom: var(--#{$pf-global}--spacer--md);
   --#{$masthead}--c-toolbar__expandable-content--PaddingLeft: var(--#{$masthead}--inset);
-  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth: var(--pf--global--border--width);
   --#{$masthead}--c-toolbar__expandable-content--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
 
   // Set layout to stack by default
@@ -162,8 +162,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     --#{$masthead}--inset: var(--#{$masthead}--xl--inset);
   }
 
-  @include pf-v5-t-dark; // force the container to follow the dark theme
-
   position: relative;
   display: grid;
   grid-template-columns: var(--#{$masthead}--GridTemplateColumns);
@@ -174,15 +172,11 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   background-color: var(--#{$masthead}--BackgroundColor);
 
   &.pf-m-light {
-    @include pf-v5-t-light;
-
     --#{$masthead}--BackgroundColor: var(--#{$masthead}--m-light--BackgroundColor);
     --#{$masthead}__main--BorderBottomColor: var(--#{$masthead}--m-light__main--BorderBottomColor);
   }
 
   &.pf-m-light-200 {
-    @include pf-v5-t-light;
-
     --#{$masthead}--BackgroundColor: var(--#{$masthead}--m-light-200--BackgroundColor);
     --#{$masthead}__main--BorderBottomColor: var(--#{$masthead}--m-light-200__main--BorderBottomColor);
   }
