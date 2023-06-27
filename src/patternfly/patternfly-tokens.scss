@@ -261,8 +261,12 @@
   --pf--global--font--weight--body--200: 600;
   --pf--global--font--weight--heading--100: 500;
   --pf--global--font--weight--heading--200: 600;
-  --pf--global--font-family--red-hat--display: red hat display;
-  --pf--global--font-family--red-hat--text: red hat text;
+  --pf--global--font-family--100: RedHatText;
+  --pf--global--font-family--200: RedHatDisplay;
+  --pf--global--font-family--300: RedHatMono;
+  --pf--global--font-family--text: red hat text;
+  --pf--global--font-family--text: red hat text;
+  --pf--global--font-family--text: red hat text;
   --pf--global--icon--color--brand--active: var(--pf--global--color--base--blue-500);
   --pf--global--icon--color--brand: var(--pf--global--color--base--blue-400);
   --pf--global--icon--color--brand--hover: var(--pf--global--color--base--blue-500);
