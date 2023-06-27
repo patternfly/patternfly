@@ -290,3 +290,7 @@
 @include pf-v5-theme-dark {
   @include pf-v5-theme-dark-variables;
 }
+
+
+@import "../patternfly-tokens.scss";
+@import "../patternfly-tokens-dark.scss";
