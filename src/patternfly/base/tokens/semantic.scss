@@ -14,9 +14,9 @@
   --pf--global--background--color--action--plain--hover--blend: var(--pf--global--mix-blend-mode--100);
   --pf--global--background--color--action--plain--hover--alt: var(--pf--global--background--color--100);
 
-  --pf--global--control--background--color: var(--pf--global--background--color--primary);
+  --pf--global--background--color--control: var(--pf--global--background--color--primary);
   --pf--global--background--color--highlight: var(--pf--global--background--color--highlight--100);
-  --pf--global--background--color--highlight-active: var(--pf--global--background--color--highlight--200);
+  --pf--global--background--color--highlight--active: var(--pf--global--background--color--highlight--200);
   --pf--global--background--color--inverse: var(--pf--global--background--color--400);
   --pf--global--background--color--disabled: var(--pf--global--disabled-color--200);
 
@@ -78,7 +78,7 @@
   --pf--global--text--color--inverse: var(--pf--global--text-color--300);
   --pf--global--text--color--disabled: var(--pf--global--disabled-color--300);
   --pf--global--text--color--disabled--light: var(--pf--global--disabled-color--100);
-  --pf--global--text--color--placeholder: var(--pf--global--text-color--200);
+  --pf--global--text--color--placeholder: var(--pf--global--text--color--subtle);
   --pf--global--link--text--color: var(--pf--global--link--Color--100);
   --pf--global--link--text--color--hover: var(--pf--global--link--Color--200);
   --pf--global--link--text--color--visited: var(--pf--global--link--Color--300);
