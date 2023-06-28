@@ -552,6 +552,19 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 // Main & Drawer
+.#{$page}__main {
+  background-color: var(--pf--global--background--color--primary);
+  padding-top: var(--pf--global--spacer--lg);
+  padding-right: var(--pf--global--spacer--lg);
+  padding-bottom: var(--pf--global--spacer--lg);
+  padding-left: var(--pf--global--spacer--lg);
+  margin-top: 0; 
+  margin-right: var(--pf--global--spacer--lg);
+  margin-bottom: var(--pf--global--spacer--lg);
+  margin-left: var(--pf--global--spacer--lg);
+  border-radius: var(--pf--global--border--radius--large);
+}
+
 .#{$page}__main,
 .#{$page}__drawer {
   z-index: var(--#{$page}__main--ZIndex);
