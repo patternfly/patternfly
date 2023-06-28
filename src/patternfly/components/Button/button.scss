@@ -25,7 +25,7 @@
   --#{$button}--active--after--BorderWidth: var(--pf--global--border--width--200);
 
   // Disabled state variables
-  --#{$button}--disabled--Color: var(--pf--global--text--color--disabled--light);
+  --#{$button}--disabled--Color: var(--pf--global--text--color--disabled);
   --#{$button}--disabled--BackgroundColor: var(--pf--global--background--color--disabled);
   --#{$button}--disabled--after--BorderColor: transparent;
 
@@ -145,7 +145,7 @@
   --#{$button}--m-plain--disabled--BackgroundColor: transparent;
 
   // Control Button
-  --#{$button}--m-control--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$button}--m-control--BackgroundColor: var(--pf--global--background--color--primary);
   --#{$button}--m-control--Color: var(--pf--global--text--color--inverse);
   --#{$button}--m-control--BorderRadius: 0;
   --#{$button}--m-control--after--BorderWidth: var(--pf-global--border--width--100);
@@ -154,19 +154,19 @@
   --#{$button}--m-control--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
   --#{$button}--m-control--after--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
   --#{$button}--m-control--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
-  --#{$button}--m-control--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$button}--m-control--hover--BackgroundColor: var(--pf--global--background--color--primary);
   --#{$button}--m-control--hover--Color: var(--pf--global--text--color--inverse);
   --#{$button}--m-control--hover--after--BorderBottomWidth: var(--pf--global--border--width--200);
   --#{$button}--m-control--hover--after--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$button}--m-control--active--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$button}--m-control--active--BackgroundColor: var(--pf--global--background--color--primary);
   --#{$button}--m-control--active--Color: var(--pf--global--text--color--inverse);
   --#{$button}--m-control--active--after--BorderBottomWidth: var(--pf--global--border--width--200);
   --#{$button}--m-control--active--after--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$button}--m-control--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$button}--m-control--focus--BackgroundColor: var(--pf--global--background--color--primary);
   --#{$button}--m-control--focus--Color: var(--pf--global--text--color--inverse);
   --#{$button}--m-control--focus--after--BorderBottomWidth: var(--pf--global--border--width--200);
   --#{$button}--m-control--focus--after--BorderBottomColor: var(--#{$pf-global}--active-color--100);
-  --#{$button}--m-control--m-expanded--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$button}--m-control--m-expanded--BackgroundColor: var(--pf--global--background--color--primary);
   --#{$button}--m-control--m-expanded--Color: var(--pf--global--text--color--inverse);
   --#{$button}--m-control--m-expanded--after--BorderBottomWidth: var(--pf--global--border--width--200);
   --#{$button}--m-control--m-expanded--after--BorderBottomColor: var(--#{$pf-global}--active-color--100);
