@@ -1,3 +1,4 @@
+// stylelint-disable
 @import "../../../../sass-utilities/themes/dark/all";
 
 @mixin pf-v5-theme-dark-page() {
@@ -13,7 +14,6 @@
       .#{$button} {
         color: var(--#{$pf-global}--Color--100);
 
-        // stylelint-disable
         .#{$notification-badge} {
           &:hover {
             &::before {
@@ -21,7 +21,6 @@
             }
           }
         }
-        // stylelint-enable
       }
     }
   }

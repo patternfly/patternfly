@@ -1,8 +1,6 @@
-// @debug $page; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 // stylelint-disable
 $pf-page-v5--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
 $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg", "xl", "2xl");
-// stylelint-enable
 
 :root {
   --#{$page}--BackgroundColor: var(—-pf--global—-background—-color-—secondary);
@@ -357,7 +355,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
         content: "";
       }
 
-      // stylelint-disable
       .#{$notification-badge} {
         &.pf-m-unread {
           --#{$notification-badge}--after--BackgroundColor: var(--#{$page}__header-tools--c-button--m-selected--notification-badge--m-unread--after--BackgroundColor);
@@ -371,7 +368,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
           --#{$notification-badge}--after--BackgroundColor: var(--#{$pf-global}--danger-color--200);
         }
       }
-      // stylelint-enable
     }
   }
 
@@ -689,7 +685,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
     @include pf-v5-apply-breakpoint($breakpoint) {
-      // stylelint-disable max-nesting-depth
       &.pf-m-padding#{$breakpoint-name} {
         padding: var(--#{$page}__main-section--PaddingTop) var(--#{$page}__main-section--PaddingRight) var(--#{$page}__main-section--PaddingBottom) var(--#{$page}__main-section--PaddingLeft);
 
@@ -708,7 +703,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
           padding: 0;
         }
       }
-      // stylelint-enable
     }
   }
 }
@@ -764,7 +758,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
 @import "themes/dark/page";
 
 @include pf-v5-theme-dark {

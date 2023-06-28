@@ -291,5 +291,8 @@
   @include pf-v5-theme-dark-variables;
 }
 
-// @import "../patternfly-tokens";
-// @import "../patternfly-tokens-dark";
+@import "../base/tokens/colors";
+@import "../base/tokens/palette";
+@import "../base/tokens/semantic";
+@import "../base/tokens/palette-dark";
+@import "../base/tokens/semantic-dark";

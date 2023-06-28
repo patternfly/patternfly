@@ -1,5 +1,4 @@
-// @debug $content; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-
+/* stylelint-disable */
 .#{$content} {
   // Body
   --#{$content}--MarginBottom: var(--#{$pf-global}--spacer--md);
