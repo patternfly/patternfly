@@ -49,10 +49,10 @@
   }
 
   :where(body) {
-    font-family: var(--pf--global--font--body--font-family);
-    font-size: var(--pf--global--font--body--font-size);
-    font-weight: var(--pf--global--font--body--font-weight);
-    line-height: var(--pf--global--font--body--line-height);
+    font-family: var(--pf--global--font--family--body);
+    font-size: var(--pf--global--font--size--body);
+    font-weight: var(--pf--global--font--weight--body);
+    line-height: var(--pf--global--font--line-height--body);
   }
 
   :where(
@@ -64,7 +64,7 @@
     h6
    ) {
     font-size: 100%;
-    font-weight: var(--pf--global--font--body--font-weight);
+    font-weight: var(--pf--global--font--weight--body);
   }
 
   :where(ul) {
@@ -81,8 +81,8 @@
     margin: 0;
     font-family: inherit;
     font-size: 100%;
-    line-height: var(--#{$pf-global}--LineHeight--md);
-    color: var(--pf--global--font--body--text--color);
+    line-height: var(--pf--global--font--line-height--body);
+    color: var(--pf--global--text--color--regular);
   }
 
   :where(
@@ -124,12 +124,16 @@
   :where(a) {
     font-weight: var(--#{$pf-global}--link--FontWeight);
     color: var(--pf--global--link--text--color);
-    text-decoration: var(--#{$pf-global}--link--TextDecoration);
+    text-decoration: var(--pf--global--link--text-decoration);
   }
 
   :where(a:hover) {
     --#{$pf-global}--link--Color: var(--pf--global--link--text--color--hover);
-    --#{$pf-global}--link--TextDecoration: var(--#{$pf-global}--link--TextDecoration--hover);
+    --#{$pf-global}--link--TextDecoration: var(--pf--global--link--text-decoration--hover);
+  }
+
+  :where(a:visited) {
+    --#{$pf-global}--link--Color: var(--pf--global--link--text--color--visited);
   }
 
   :where(

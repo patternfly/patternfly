@@ -2,69 +2,69 @@
 .#{$content} {
   // Body
   --#{$content}--MarginBottom: var(--#{$pf-global}--spacer--md);
-  --#{$content}--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$content}--FontSize: var(--pf--global--font--body--font-size);
-  --#{$content}--FontWeight: var(--pf--global--font--body--font-weight);
+  --#{$content}--LineHeight: var(--pf--global--font--line-height--body);
+  --#{$content}--FontSize: var(--pf--global--font-size--body);
+  --#{$content}--FontWeight: var(--pf--global--font-weight--body);
 
   // this ensures color is not overridden
-  --#{$content}--Color: var(--pf--global--font--body--color);
+  --#{$content}--Color: var(--pf--global--text--color--regular);
 
   // Headings
-  --#{$content}--heading--FontFamily: var(--pf--global--font--heading--font-family);
+  --#{$content}--heading--FontFamily: var(--pf--global--font--family--heading);
 
   // h1
   --#{$content}--h1--MarginTop: var(--#{$pf-global}--spacer--lg);
   --#{$content}--h1--MarginBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$content}--h1--LineHeight: var(--#{$pf-global}--LineHeight--sm);
-  --#{$content}--h1--FontSize: var(--pf--global--font--heading--xxl--fontsize);
-  --#{$content}--h1--FontWeight: var(--pf--global--font--heading--xxl--font-weight);
+  --#{$content}--h1--LineHeight: var(--pf--global--font--line-height--heading);
+  --#{$content}--h1--FontSize: var(--pf--global--font--size--heading--2xl);
+  --#{$content}--h1--FontWeight: var(--pf--global--font--weight--heading);
 
   // h2
   --#{$content}--h2--MarginTop: var(--#{$pf-global}--spacer--lg);
   --#{$content}--h2--MarginBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$content}--h2--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$content}--h2--FontSize: var(--pf--global--font--heading--xl--font-size);
-  --#{$content}--h2--FontWeight: var(--pf--global--font--heading--xl--font-weight);
+  --#{$content}--h2--LineHeight: var(--pf--global--font--line-height--heading);
+  --#{$content}--h2--FontSize: var(--pf--global--font--size--heading--xl);
+  --#{$content}--h2--FontWeight: var(--pf--global--font--weight--heading);
 
   // h3
   --#{$content}--h3--MarginTop: var(--#{$pf-global}--spacer--lg);
   --#{$content}--h3--MarginBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$content}--h3--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$content}--h3--FontSize: var(--pf--global--font--heading--lg--font-size);
-  --#{$content}--h3--FontWeight: var(--pf--global--font--heading--lg--font-weight);
+  --#{$content}--h3--LineHeight: var(--pf--global--font--line-height--heading);
+  --#{$content}--h3--FontSize: var(--pf--global--font--size--heading--lg);
+  --#{$content}--h3--FontWeight: var(--pf--global--font--weight--heading);
 
   // h4
   --#{$content}--h4--MarginTop: var(--#{$pf-global}--spacer--lg);
   --#{$content}--h4--MarginBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$content}--h4--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$content}--h4--FontSize: var(--pf--global--font--heading--md--font-size);
-  --#{$content}--h4--FontWeight: var(--pf--global--font--heading--md--font-weight);
+  --#{$content}--h4--LineHeight: var(--pf--global--font--line-height--heading);
+  --#{$content}--h4--FontSize: var(--pf--global--font--size--heading--md);
+  --#{$content}--h4--FontWeight: var(--pf--global--font--weight--heading);
 
   // h5
   --#{$content}--h5--MarginTop: var(--#{$pf-global}--spacer--lg);
   --#{$content}--h5--MarginBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$content}--h5--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$content}--h5--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$content}--h5--FontWeight: var(--#{$pf-global}--FontWeight--normal);
+  --#{$content}--h5--LineHeight: var(--pf--global--font--line-height--heading);
+  --#{$content}--h5--FontSize: var(--pf--global--font--size--heading--sm);
+  --#{$content}--h5--FontWeight: var(--pf--global--font--weight--heading);
 
   // h6
   --#{$content}--h6--MarginTop: var(--#{$pf-global}--spacer--lg);
   --#{$content}--h6--MarginBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$content}--h6--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$content}--h6--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$content}--h6--FontWeight: var(--#{$pf-global}--FontWeight--normal);
+  --#{$content}--h6--LineHeight: var(--pf--global--font--line-height--heading);
+  --#{$content}--h6--FontSize: var(--pf--global--font--size--heading--xs);
+  --#{$content}--h6--FontWeight: var(--pf--global--font--weight--heading);
 
   // Small text
   --#{$content}--small--MarginBottom: var(--#{$pf-global}--spacer--md);
-  --#{$content}--small--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--small--LineHeight: var(--pf--global--font--line-height--heading);
   --#{$content}--small--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$content}--small--Color: var(--#{$pf-global}--Color--200);
 
   // Links
   --#{$content}--a--Color: var(--pf--global--link--text--color);
-  --#{$content}--a--TextDecoration: var(—pf--global—-link—-text-decoration);
+  --#{$content}--a--TextDecoration: var(--pf--global--link--text-decoration);
   --#{$content}--a--hover--Color: var(--pf--global--link--text--color--hover);
-  --#{$content}--a--hover--TextDecoration: var(—pf--global—-link—-text-decoration--hover);
+  --#{$content}--a--hover--TextDecoration: var(--pf--global--link--text-decoration--hover);
   --#{$content}--a--visited--Color: var(--pf--global--link--text--color--visited);
 
   // Blockquote
@@ -98,7 +98,7 @@
   --#{$content}--hr--BackgroundColor: var(--#{$pf-global}--BorderColor--100);
 
   font-size: var(--#{$content}--FontSize);
-  line-height: var(--#{$content}--LineHeight);
+  line-height: var(--pf--global--font--line-height--body);
   color: var(--#{$content}--Color);
 
   a {
