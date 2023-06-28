@@ -4,7 +4,9 @@
     - theme
 
 --}}
-{{config-init}}
-
+{{#temp (object name="steve" age=40 array_example=(array true 2 "3"))}}
+{{!-- set root, modifier, and attribute --}}
+{{> config-init}}
+{{debug}}
 {{!-- add functions here --}}
 {{> @partial-block}}

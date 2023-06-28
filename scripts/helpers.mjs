@@ -2,6 +2,14 @@ import Handlebars from 'handlebars';
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
 import { getParams } from './params.mjs';
 
+export const object = function({ hash }) {
+  return hash;
+}
+
+export const array = function() {
+  return Array.from(arguments).slice(0, arguments.length - 1);
+}
+
 export const kebabCase = (string) => {
   return string.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/[\s_]+/g, '-').toLowerCase();
 }

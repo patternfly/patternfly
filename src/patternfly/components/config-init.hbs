@@ -1,0 +1,8 @@
+{{!-- set root --}}
+{{setVar 'component-root' (kebabCase this.className)}}
+
+{{!-- call root, set modifier --}}
+{{setVar 'component-modifier' (concat @component-root '--modifier')}}
+
+{{!-- call root, set attribute --}}
+{{setVar 'component-attribute' (concat @component-root '--attribute')}}
