@@ -64,6 +64,20 @@ import './Button.css'
 {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
+
+<span style="font-size: 12px;">
+  <span>Inline plain button</span>
+  {{#> button button--modifier="pf-m-plain pf-m-inline" button--attribute='aria-label="Remove"'}}
+    <i class="fas fa-times" aria-hidden="true"></i>
+  {{/button}}
+</span>
+
+<span style="font-size: 24px;">
+  <span>Inline plain button</span>
+  {{#> button button--modifier="pf-m-plain pf-m-inline" button--attribute='aria-label="Remove"'}}
+    <i class="fas fa-times" aria-hidden="true"></i>
+  {{/button}}
+</span>
 <br><br>
 {{#> button button--modifier="pf-m-control"}}
   Control

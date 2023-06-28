@@ -143,6 +143,12 @@
   --#{$button}--m-plain--active--Color: var(--#{$pf-global}--Color--100);
   --#{$button}--m-plain--disabled--Color: var(--#{$pf-global}--disabled-color--200);
   --#{$button}--m-plain--disabled--BackgroundColor: transparent;
+  --#{$button}--m-plain--m-inline--FontSize: inherit;
+  --#{$button}--m-plain--m-inline--PaddingTop: 0;
+  --#{$button}--m-plain--m-inline--PaddingRight: var(--#{$pf-global}--spacer--sm);;
+  --#{$button}--m-plain--m-inline--PaddingBottom: 0;
+  --#{$button}--m-plain--m-inline--PaddingLeft: var(--#{$pf-global}--spacer--sm);;
+  --#{$button}--m-plain--m-inline--LineHeight: normal;
 
   // Control Button
   --#{$button}--m-control--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
@@ -558,6 +564,12 @@
 
     color: var(--#{$button}--m-plain--Color);
     background-color: var(--#{$button}--m-plain--BackgroundColor);
+
+    &.pf-m-inline {
+      padding: var(--#{$button}--m-plain--m-inline--PaddingTop) var(--#{$button}--m-plain--m-inline--PaddingRight) var(--#{$button}--m-plain--m-inline--PaddingBottom) var(--#{$button}--m-plain--m-inline--PaddingLeft);
+      font-size: var(--#{$button}--m-plain--m-inline--FontSize);
+      line-height: var(--#{$button}--m-plain--m-inline--LineHeight);
+    }
 
     &:hover {
       --#{$button}--m-plain--Color: var(--#{$button}--m-plain--hover--Color);
