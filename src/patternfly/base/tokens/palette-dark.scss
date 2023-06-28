@@ -1,0 +1,75 @@
+/* stylelint-disable */
+:root {
+  // backgrounds
+  --pf-global--background--color--100: var(--pf-color-black);
+  --pf-global--background--color--200: var(--pf-color-gray-800);
+  --pf-global--background--color--300: var(--pf-color-gray-700);
+  --pf-global--background--color--400: var(--pf-color-gray-100);
+  --pf-global--background--color--500: var(--pf-color-gold-300);
+  --pf-global--background--color--600: var(--pf-color-gold-400);
+
+  // text
+  --pf-global--text-color--100: var(--pf-color-gray-100);
+  --pf-global--text-color--200: var(--pf-color-gray-400);
+  --pf-global--text-color--300: var(--pf-color-gray-900);
+
+  // disabled
+  --pf-global--color--disabled--100: var(--pf-color-gray-400);
+  --pf-global--color--disabled--200: var(--pf-color-gray-500);
+  --pf-global--color--disabled--300: var(--pf-color-gray-600);
+
+  // brand
+  --pf-global--color--brand--100: var(--pf-color-blue-400);
+  --pf-global--color--brand--200: var(--pf-color-blue-300);
+  --pf-global--color--brand--300: var(--pf-color-blue-200);
+
+  // status
+  --pf-global--color--custom--100: var(--pf-color-cyan-400);
+  --pf-global--color--custom--200: var(--pf-color-cyan-300);
+  --pf-global--color--success--100: var(--pf-color-green-300);
+  --pf-global--color--success--200: var(--pf-color-green-200);
+  --pf-global--color--info--100: var(--pf-color-blue-300);
+  --pf-global--color--info--200: var(--pf-color-blue-400);
+  --pf-global--color--warning--100: var(--pf-color-gold-400);
+  --pf-global--color--warning--200: var(--pf-color-gold-300);
+  --pf-global--color--danger--100: var(--pf-color-orangered-300);
+  --pf-global--color--danger--200: var(--pf-color-orangered-200);
+
+  // link
+  --pf-global--link--color--100: var(--pf-color-blue-300);
+  --pf-global--link--color--200: var(--pf-color-blue-200);
+  --pf-global--link--color--300: var(--pf-color-purple-300);
+
+  // icons colors
+  --pf-global--icon--color--100: var(--pf-color-gray-100);
+  --pf-global--icon--color--200: var(--pf-color-gray-400);
+  --pf-global--icon--color--300: var(--pf-color-gray-900);
+
+  // blend modes 
+  --pf-global--mix-blend-mode--100: screen;
+
+  // border color
+  --pf-global--border--color--100: var(--pf-color-gray-600);
+  --pf-global--border--color--200: var(--pf-color-gray-500);
+
+  // border width
+  --pf-global--border--width--100: 1px;
+  --pf-global--border--width--200: 2px;
+  --pf-global--border--width--300: 3px;
+
+  // border radius
+  --pf-global--border--radius--100: 4px;
+  --pf-global--border--radius--200: 6px;
+  --pf-global--border--radius--300: 16px;
+  --pf-global--border--radius--400: 24px;
+  --pf-global--border--radius--500: 999px;
+
+  // shadows
+  --pf-global--box-shadow--sm: 0, 1, 2, 0 rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--sm-top: 0, -1, 2, 0 rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--sm-right: 1, 0, 2, 0 rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--sm-bottom: 0, 1, 2, 0 rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--sm-left: -1, 0, 2, 0 rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--md: 0, 4, 8, 0 rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--lg: 0, 8, 24, 0 rgba(0, 0, 0, 50%);
+}

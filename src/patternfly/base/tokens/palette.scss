@@ -1,0 +1,117 @@
+/* stylelint-disable */
+:root {
+  // background color
+  --pf-global--background--color--100: var(--pf--color--white);
+  --pf-global--background--color--200: var(--pf--color--gray--100);
+  --pf-global--background--color--300: var(--pf--color--gray--200);
+  --pf-global--background--color--400: var(--pf--color--gray--800);
+  --pf-global--background--color--500: var(--pf--color--gold--300);
+  --pf-global--background--color--600: var(--pf--color--gold--400);
+
+  // text color
+  --pf-global--text--color--100: var(--pf--color--gray--900);
+  --pf-global--text--color--200: var(--pf--color--gray--500);
+  --pf-global--text--color--300: var(--pf--color--white);
+
+  // disabled color
+  --pf-global--color--disabled--100: var(--pf--color--gray--400);
+  --pf-global--color--disabled--200: var(--pf--color--gray--500);
+  --pf-global--color--disabled--400: var(--pf--color--gray--600);
+
+  // brand color
+  --pf-global--color--brand--100: var(--pf--color--blue--300);
+  --pf-global--color--brand--200: var(--pf--color--blue--400);
+  --pf-global--color--brand--300: var(--pf--color--blue--500);
+
+  // status color
+  --pf-global--color--custom--100: var(--pf--color--cyan--400);
+  --pf-global--color--custom--200: var(--pf--color--cyan--500);
+  --pf-global--color--success--100: var(--pf--color--green--400);
+  --pf-global--color--success--200: var(--pf--color--green--500);
+  --pf-global--color--info--100: var(--pf--color--purple--400);
+  --pf-global--color--info--200: var(--pf--color--purple--500);
+  --pf-global--color--warning--100: var(--pf--color--gold--400);
+  --pf-global--color--warning--200: var(--pf--color--gold--500);
+  --pf-global--color--danger--100: var(--pf--color--orangered--400);
+  --pf-global--color--danger--200: var(--pf--color--orangered--500);
+
+  // link color
+  --pf-global--link--color--100: var(--pf--color--blue--400);
+  --pf-global--link--color--200: var(--pf--color--blue--500);
+  --pf-global--link--color--300: var(--pf--color--purple--400);
+
+  // icon color
+  --pf-global--icon--color--100: var(--pf--color--gray--900);
+  --pf-global--icon--color--200: var(--pf--color--gray--500);
+  --pf-global--icon--color--300: var(--pf--color--white);
+
+  // icon size
+  --pf-global--icon--size--100: 12px;
+  --pf-global--icon--size--200: 16px;
+  --pf-global--icon--size--300: 24px;
+  --pf-global--icon--size--400: 56px;
+
+  // text-decoration
+  --pf-global--text-decoration--100: none;
+  --pf-global--text-decoration--200: underline;
+
+  // mix-blend-mode
+  --pf-global--mix-blend-mode--100: multiply;
+
+  // border-color
+  --pf-global--border--color--100: var(--pf--color--gray--300);
+  --pf-global--border--color--200: var(--pf--color--gray--400);
+
+
+  // box-shadow
+  --pf-global--box-shadow--sm: 0, 1, 2, 0 rgba(0, 0, 0, 0,0,0, 16%);
+  --pf-global--box-shadow--sm--top: 0, -1, 2, 0 rgba(0, 0, 0, 16%);
+  --pf-global--box-shadow--sm--bottom: 0, 1, 2, 0 rgba(0, 0, 0, 16%);
+  --pf-global--box-shadow--sm--left: -1, 0, 2, 0 rgba(0, 0, 0, 16%);
+  --pf-global--box-shadow--sm--right: 1, 0, 2, 0 rgba(0, 0, 0, 16%);
+  --pf-global--box-shadow--md: 0, 4, 8, 0 rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--md--top: 0, -4, 8, 0 rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--md--bottom: 0, 4, 8, 0 rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--md--left: -4, 0, 8, 0 rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--md--right: 4, 0, 8, 0 rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--lg: 0, 8, 24, 0 rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--lg--top: 0, -8, 24, 0 rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--lg--bottom: 0, 8, 24, 0 rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--lg--left: -8, 0, 24, 0 rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--lg--right: 8, 0, 24, 0 rgba(0, 0, 0, 12%);
+
+  // spacers
+  --pf-global--spacer--xs: 4px;
+  --pf-global--spacer--sm: 8px;
+  --pf-global--spacer--md: 16px;
+  --pf-global--spacer--lg: 24px;
+  --pf-global--spacer--xl: 32px;
+  --pf-global--spacer--2xl: 48px;
+  --pf-global--spacer--3xl: 64px;
+  --pf-global--spacer--4xl: 80px;
+
+  // gutters 
+  --pf-global--gutter: 16px
+  --pf-global--gutter-compact: 8px
+  
+
+  // font
+  --pf--global--font--family--100: RedHatText;
+  --pf--global--font--family--200: RedHatDisplay;
+  --pf--global--font--family--300: RedHatMono;
+  --pf--global--font--line-height--100: 1.3;
+  --pf--global--font--line-height--200: 1.5;
+  --pf--global--font--weight--body--100: 400;
+  --pf--global--font--weight--body--200: 600;
+  --pf--global--font--weight--heading--100: 700; // what should this be?
+  --pf--global--font--weight--heading--200: 700;
+  --pf--global--font--size--body--100: 12px;
+  --pf--global--font--size--body--200: 14px;
+  --pf--global--font--size--body--300: 16px;
+  --pf--global--font--size--heading--100: 16px;
+  --pf--global--font--size--heading--200: 18px;
+  --pf--global--font--size--heading--300: 20px;
+  --pf--global--font--size--heading--400: 22px;
+  --pf--global--font--size--heading--500: 28px;
+  --pf--global--font--size--heading--600: 36px;
+}
