@@ -16,7 +16,7 @@
   // disabled color
   --pf--global--color--disabled--100: var(--pf--global--color--gray--400);
   --pf--global--color--disabled--200: var(--pf--global--color--gray--500);
-  --pf--global--color--disabled--400: var(--pf--global--color--gray--600);
+  --pf--global--color--disabled--300: var(--pf--global--color--gray--600);
 
   // brand color
   --pf--global--color--brand--100: var(--pf--global--color--blue--300);
@@ -63,8 +63,8 @@
   --pf--global--border--color--200: var(--pf--global--color--gray--400);
 
   // border color
-  --pf--global--border--color--100: var(--pf--global--color-gray-600);
-  --pf--global--border--color--200: var(--pf--global--color-gray-500);
+  --pf--global--border--color--100: var(--pf--global--color--gray--600);
+  --pf--global--border--color--200: var(--pf--global--color--gray--500);
 
   // border width
   --pf--global--border--width--100: 1px;
