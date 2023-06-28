@@ -1,5 +1,5 @@
 // stylelint-disable
-:where(.pf-v5-theme-dark) {
+:root:where(.pf-v5-theme-dark) {
   // backgrounds
   --pf--global--background--color--100: var(--pf--global--color--black);
   --pf--global--background--color--200: var(--pf--global--color--gray--800);

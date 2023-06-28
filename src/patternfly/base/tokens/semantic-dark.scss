@@ -1,10 +1,10 @@
 // stylelint-disable
-:where(.pf-v5-theme-dark) {
+:root:where(.pf-v5-theme-dark) {
   // backgrounds
-  --pf--global--background--color--primary: var(--pf--global--BackgroundColor--200);
-  --pf--global--background--color--primary--hover: var(--pf--global--BackgroundColor--300);
-  --pf--global--background--color--primary--selected: var(--pf--global--BackgroundColor--300);
-  --pf--global--background--color--secondary: var(--pf--global--BackgroundColor--100);
+  --pf--global--background--color--primary: var(--pf--global--background--color--200);
+  --pf--global--background--color--primary--hover: var(--pf--global--background--color--300);
+  --pf--global--background--color--primary--selected: var(--pf--global--background--color--300);
+  --pf--global--background--color--secondary: var(--pf--global--background--color--100);
   --pf--global--background--color--secondary--hover: var(--pf--global--background--color--200);
   --pf--global--background--color--secondary--selected: var(--pf--global--background--color--200);
   --pf--global--background--color--floating: var(--pf--global--background--color--300);
@@ -16,7 +16,7 @@
   --pf--global--background--color--control: var(--pf--global--background--color--300);
   --pf--global--background--color--highlight: var(--pf--global--background--color--highlight--100);
   --pf--global--background--color--highlight--active: var(--pf--global--background--color--highlight--200);
-  --pf--global--background--color--inverse: var(--pf--global--BackgroundColor--400);
+  --pf--global--background--color--inverse: var(--pf--global--background--color--400);
   --pf--global--background--color--disabled: var(--pf--global--disabled--color--200);
 
   --pf--global--color--brand: var(--pf--global--color--brand--200);
