@@ -202,4 +202,12 @@
   --pf--global--font--size--heading--lg: var(--pf--global--font--size--heading--400);
   --pf--global--font--size--heading--xl: var(--pf--global--font--size--heading--500);
   --pf--global--font--size--heading--2xl: var(--pf--global--font--size--heading--600);
+
+  // gutters 
+  --pf--global--gutter: var(--pf--global--spacer--md);
+  --pf--global--gutter--compact: var(--pf--global--spacer--sm);
+
+  // insets 
+  --pf--global--inset: var(--pf--global--spacer--lg);
+  --pf--global--inset--compact: var(--pf--global--spacer--md);
 }
