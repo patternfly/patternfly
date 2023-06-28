@@ -1,0 +1,13 @@
+{{!--
+  config options:
+    - className
+    - theme
+
+--}}
+{{#temp (object name="steve" age=40 array_example=(array true 2 "3"))}}
+
+{{!-- set component root, modifier, and attribute variables --}}
+{{> config-init}}
+{{debug}}
+{{!-- add functions here --}}
+{{> @partial-block}}

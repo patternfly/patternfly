@@ -1,17 +1,19 @@
 .#{$table} {
+  // stylelint-disable
   --#{$table}__sticky-cell--MinWidth--base: #{pf-size-prem(200px)};
   --#{$table}__sticky-cell--MinWidth: var(--#{$table}__sticky-cell--MinWidth--base);
   --#{$table}__sticky-cell--ZIndex: var(--#{$pf-global}--ZIndex--xs);
   --#{$table}__sticky-cell--Right: auto;
   --#{$table}__sticky-cell--Left: auto;
-  --#{$table}__sticky-cell--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$table}__sticky-cell--m-border-right--before--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$table}__sticky-cell--m-border-right--before--BorderRightColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$table}__sticky-cell--m-border-left--before--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$table}__sticky-cell--m-border-left--before--BorderLeftColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$table}__sticky-cell--BackgroundColor: var(--pf--global--background--color--primary);
+  --#{$table}__sticky-cell--m-border-right--before--BorderRightWidth: var(--pf--global--border--width);
+  --#{$table}__sticky-cell--m-border-right--before--BorderRightColor: var(--pf--global--border--color);
+  --#{$table}__sticky-cell--m-border-left--before--BorderLeftWidth: var(--pf--global--border--width);
+  --#{$table}__sticky-cell--m-border-left--before--BorderLeftColor: var(--pf--global--border--color);
   --#{$table}__sticky-cell--m-right--Right: 0;
   --#{$table}__sticky-cell--m-left--Left: 0;
   --#{$table}--m-sticky-header__sticky-cell--ZIndex: calc(var(--#{$table}__sticky-cell--ZIndex) + 1);
+  // stylelint-enable
 
   .#{$table}__sticky-cell {
     --#{$table}--cell--Overflow: visible;
