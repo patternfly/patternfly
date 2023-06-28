@@ -401,6 +401,11 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   background-color: var(--#{$page}__sidebar--BackgroundColor);
   transition: var(--#{$page}__sidebar--Transition);
   transform: translateX(var(--#{$page}__sidebar--TranslateX)) translateZ(var(--#{$page}__sidebar--TranslateZ));
+  padding-top: 0;
+  padding-right: var(--pf--global--spacer--lg);
+  padding-bottom: var(--pf--global--spacer--lg);
+  padding-left: var(--pf--global--spacer--lg);
+
 
   // Mobile
   // Expanded nav
