@@ -49,11 +49,11 @@
   --pf-global--mix-blend-mode--100: screen;
 
   // shadows
-  --pf-global--box-shadow--sm: 0, 1, 2, 0 rgba(0, 0, 0, 50%);
-  --pf-global--box-shadow--sm-top: 0, -1, 2, 0 rgba(0, 0, 0, 50%);
-  --pf-global--box-shadow--sm-right: 1, 0, 2, 0 rgba(0, 0, 0, 50%);
-  --pf-global--box-shadow--sm-bottom: 0, 1, 2, 0 rgba(0, 0, 0, 50%);
-  --pf-global--box-shadow--sm-left: -1, 0, 2, 0 rgba(0, 0, 0, 50%);
-  --pf-global--box-shadow--md: 0, 4, 8, 0 rgba(0, 0, 0, 50%);
-  --pf-global--box-shadow--lg: 0, 8, 24, 0 rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--sm: 0px 1px 2px, 0px rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--sm-top: 0px, -1px, 2px, 0px rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--sm-right: 1px, 0px, 2px, 0px rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--sm-bottom: 0px, 1px, 2px, 0px rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--sm-left: -1px, 0px, 2px, 0px rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--md: 0px, 4px, 8px, 0px rgba(0, 0, 0, 50%);
+  --pf-global--box-shadow--lg: 0px, 8px, 24px, 0px rgba(0, 0, 0, 50%);
 }

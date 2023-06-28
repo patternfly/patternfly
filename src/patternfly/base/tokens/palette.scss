@@ -80,21 +80,21 @@
   
 
   // box-shadow
-  --pf-global--box-shadow--sm: 0, 1, 2, 0 rgba(0, 0, 0, 0,0,0, 16%);
-  --pf-global--box-shadow--sm--top: 0, -1, 2, 0 rgba(0, 0, 0, 16%);
-  --pf-global--box-shadow--sm--bottom: 0, 1, 2, 0 rgba(0, 0, 0, 16%);
-  --pf-global--box-shadow--sm--left: -1, 0, 2, 0 rgba(0, 0, 0, 16%);
-  --pf-global--box-shadow--sm--right: 1, 0, 2, 0 rgba(0, 0, 0, 16%);
-  --pf-global--box-shadow--md: 0, 4, 8, 0 rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--md--top: 0, -4, 8, 0 rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--md--bottom: 0, 4, 8, 0 rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--md--left: -4, 0, 8, 0 rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--md--right: 4, 0, 8, 0 rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--lg: 0, 8, 24, 0 rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--lg--top: 0, -8, 24, 0 rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--lg--bottom: 0, 8, 24, 0 rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--lg--left: -8, 0, 24, 0 rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--lg--right: 8, 0, 24, 0 rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--sm: 0px, 1px, 2px, 0px rgba(0, 0, 0, 0,0,0, 16%);
+  --pf-global--box-shadow--sm--top: 0px, -1px, 2px, 0px rgba(0, 0, 0, 16%);
+  --pf-global--box-shadow--sm--bottom: 0px, 1px, 2px, 0px rgba(0, 0, 0, 16%);
+  --pf-global--box-shadow--sm--left: -1px, 0px, 2px, 0px rgba(0, 0, 0, 16%);
+  --pf-global--box-shadow--sm--right: 1px, 0px, 2px, 0px rgba(0, 0, 0, 16%);
+  --pf-global--box-shadow--md: 0px, 4px, 8px, 0px rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--md--top: 0px, -4px, 8px, 0px rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--md--bottom: 0px, 4px, 8px, 0px rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--md--left: -4px, 0px, 8px, 0px rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--md--right: 4px, 0px, 8px, 0px rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--lg: 0px, 8px, 24px, 0px rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--lg--top: 0px, -8px, 24px, 0px rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--lg--bottom: 0px, 8px, 24px, 0px rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--lg--left: -8px, 0px, 24px, 0px rgba(0, 0, 0, 12%);
+  --pf-global--box-shadow--lg--right: 8px, 0px, 24px, 0px rgba(0, 0, 0, 12%);
 
   // spacers
   --pf-global--spacer--xs: 4px;
@@ -107,8 +107,8 @@
   --pf-global--spacer--4xl: 80px;
 
   // gutters 
-  --pf-global--gutter: 16px
-  --pf-global--gutter-compact: 8px
+  --pf-global--gutter: 16px;
+  --pf-global--gutter-compact: 8px;
 
   // font
   --pf--global--font--family--100: RedHatText;
