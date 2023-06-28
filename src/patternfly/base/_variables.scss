@@ -291,8 +291,8 @@
   @include pf-v5-theme-dark-variables;
 }
 
-@import "../base/tokens/colors";
-@import "../base/tokens/palette";
-@import "../base/tokens/semantic";
-@import "../base/tokens/palette-dark";
-@import "../base/tokens/semantic-dark";
+@import "./tokens/colors";
+@import "./tokens/palette";
+@import "./tokens/semantic";
+@import "./tokens/palette-dark";
+@import "./tokens/semantic-dark";

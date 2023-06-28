@@ -1,114 +1,114 @@
 // stylelint-disable
 :root {
   // background color
-  --pf-global--background--color--100: var(--pf--color--white);
-  --pf-global--background--color--200: var(--pf--color--gray--100);
-  --pf-global--background--color--300: var(--pf--color--gray--200);
-  --pf-global--background--color--400: var(--pf--color--gray--800);
-  --pf-global--background--color--500: var(--pf--color--gold--300);
-  --pf-global--background--color--600: var(--pf--color--gold--400);
+  --pf--global--background--color--100: var(--pf--global--color--white);
+  --pf--global--background--color--200: var(--pf--global--color--gray--100);
+  --pf--global--background--color--300: var(--pf--global--color--gray--200);
+  --pf--global--background--color--400: var(--pf--global--color--gray--800);
+  --pf--global--background--color--500: var(--pf--global--color--gold--300);
+  --pf--global--background--color--600: var(--pf--global--color--gold--400);
 
   // text color
-  --pf-global--text--color--100: var(--pf--color--gray--900);
-  --pf-global--text--color--200: var(--pf--color--gray--500);
-  --pf-global--text--color--300: var(--pf--color--white);
+  --pf--global--text--color--100: var(--pf--global--color--gray--900);
+  --pf--global--text--color--200: var(--pf--global--color--gray--500);
+  --pf--global--text--color--300: var(--pf--global--color--white);
 
   // disabled color
-  --pf-global--color--disabled--100: var(--pf--color--gray--400);
-  --pf-global--color--disabled--200: var(--pf--color--gray--500);
-  --pf-global--color--disabled--400: var(--pf--color--gray--600);
+  --pf--global--color--disabled--100: var(--pf--global--color--gray--400);
+  --pf--global--color--disabled--200: var(--pf--global--color--gray--500);
+  --pf--global--color--disabled--400: var(--pf--global--color--gray--600);
 
   // brand color
-  --pf-global--color--brand--100: var(--pf--color--blue--300);
-  --pf-global--color--brand--200: var(--pf--color--blue--400);
-  --pf-global--color--brand--300: var(--pf--color--blue--500);
+  --pf--global--color--brand--100: var(--pf--global--color--blue--300);
+  --pf--global--color--brand--200: var(--pf--global--color--blue--400);
+  --pf--global--color--brand--300: var(--pf--global--color--blue--500);
 
   // status color
-  --pf-global--color--custom--100: var(--pf--color--cyan--400);
-  --pf-global--color--custom--200: var(--pf--color--cyan--500);
-  --pf-global--color--success--100: var(--pf--color--green--400);
-  --pf-global--color--success--200: var(--pf--color--green--500);
-  --pf-global--color--info--100: var(--pf--color--purple--400);
-  --pf-global--color--info--200: var(--pf--color--purple--500);
-  --pf-global--color--warning--100: var(--pf--color--gold--400);
-  --pf-global--color--warning--200: var(--pf--color--gold--500);
-  --pf-global--color--danger--100: var(--pf--color--orangered--400);
-  --pf-global--color--danger--200: var(--pf--color--orangered--500);
+  --pf--global--color--custom--100: var(--pf--global--color--cyan--400);
+  --pf--global--color--custom--200: var(--pf--global--color--cyan--500);
+  --pf--global--color--success--100: var(--pf--global--color--green--400);
+  --pf--global--color--success--200: var(--pf--global--color--green--500);
+  --pf--global--color--info--100: var(--pf--global--color--purple--400);
+  --pf--global--color--info--200: var(--pf--global--color--purple--500);
+  --pf--global--color--warning--100: var(--pf--global--color--gold--400);
+  --pf--global--color--warning--200: var(--pf--global--color--gold--500);
+  --pf--global--color--danger--100: var(--pf--global--color--orangered--400);
+  --pf--global--color--danger--200: var(--pf--global--color--orangered--500);
 
   // link color
-  --pf-global--link--color--100: var(--pf--color--blue--400);
-  --pf-global--link--color--200: var(--pf--color--blue--500);
-  --pf-global--link--color--300: var(--pf--color--purple--400);
+  --pf--global--link--color--100: var(--pf--global--color--blue--400);
+  --pf--global--link--color--200: var(--pf--global--color--blue--500);
+  --pf--global--link--color--300: var(--pf--global--color--purple--400);
 
   // icon color
-  --pf-global--icon--color--100: var(--pf--color--gray--900);
-  --pf-global--icon--color--200: var(--pf--color--gray--500);
-  --pf-global--icon--color--300: var(--pf--color--white);
+  --pf--global--icon--color--100: var(--pf--global--color--gray--900);
+  --pf--global--icon--color--200: var(--pf--global--color--gray--500);
+  --pf--global--icon--color--300: var(--pf--global--color--white);
 
   // icon size
-  --pf-global--icon--size--100: 12px;
-  --pf-global--icon--size--200: 16px;
-  --pf-global--icon--size--300: 24px;
-  --pf-global--icon--size--400: 56px;
+  --pf--global--icon--size--100: 12px;
+  --pf--global--icon--size--200: 16px;
+  --pf--global--icon--size--300: 24px;
+  --pf--global--icon--size--400: 56px;
 
   // text-decoration
-  --pf-global--text-decoration--100: none;
-  --pf-global--text-decoration--200: underline;
+  --pf--global--text-decoration--100: none;
+  --pf--global--text-decoration--200: underline;
 
   // mix-blend-mode
-  --pf-global--mix-blend-mode--100: multiply;
+  --pf--global--mix-blend-mode--100: multiply;
 
   // border-color
-  --pf-global--border--color--100: var(--pf--color--gray--300);
-  --pf-global--border--color--200: var(--pf--color--gray--400);
+  --pf--global--border--color--100: var(--pf--global--color--gray--300);
+  --pf--global--border--color--200: var(--pf--global--color--gray--400);
 
   // border color
-  --pf-global--border--color--100: var(--pf-color-gray-600);
-  --pf-global--border--color--200: var(--pf-color-gray-500);
+  --pf--global--border--color--100: var(--pf--global--color-gray-600);
+  --pf--global--border--color--200: var(--pf--global--color-gray-500);
 
   // border width
-  --pf-global--border--width--100: 1px;
-  --pf-global--border--width--200: 2px;
-  --pf-global--border--width--300: 3px;
+  --pf--global--border--width--100: 1px;
+  --pf--global--border--width--200: 2px;
+  --pf--global--border--width--300: 3px;
 
   // border radius
-  --pf-global--border--radius--100: 4px;
-  --pf-global--border--radius--200: 6px;
-  --pf-global--border--radius--300: 16px;
-  --pf-global--border--radius--400: 24px;
-  --pf-global--border--radius--500: 999px;
+  --pf--global--border--radius--100: 4px;
+  --pf--global--border--radius--200: 6px;
+  --pf--global--border--radius--300: 16px;
+  --pf--global--border--radius--400: 24px;
+  --pf--global--border--radius--500: 999px;
   
 
   // box-shadow
-  --pf-global--box-shadow--sm: 0px, 1px, 2px, 0px rgba(0, 0, 0, 0,0,0, 16%);
-  --pf-global--box-shadow--sm--top: 0px, -1px, 2px, 0px rgba(0, 0, 0, 16%);
-  --pf-global--box-shadow--sm--bottom: 0px, 1px, 2px, 0px rgba(0, 0, 0, 16%);
-  --pf-global--box-shadow--sm--left: -1px, 0px, 2px, 0px rgba(0, 0, 0, 16%);
-  --pf-global--box-shadow--sm--right: 1px, 0px, 2px, 0px rgba(0, 0, 0, 16%);
-  --pf-global--box-shadow--md: 0px, 4px, 8px, 0px rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--md--top: 0px, -4px, 8px, 0px rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--md--bottom: 0px, 4px, 8px, 0px rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--md--left: -4px, 0px, 8px, 0px rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--md--right: 4px, 0px, 8px, 0px rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--lg: 0px, 8px, 24px, 0px rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--lg--top: 0px, -8px, 24px, 0px rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--lg--bottom: 0px, 8px, 24px, 0px rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--lg--left: -8px, 0px, 24px, 0px rgba(0, 0, 0, 12%);
-  --pf-global--box-shadow--lg--right: 8px, 0px, 24px, 0px rgba(0, 0, 0, 12%);
+  --pf--global--box-shadow--sm: 0px, 1px, 2px, 0px rgba(0, 0, 0, 0,0,0, 16%);
+  --pf--global--box-shadow--sm--top: 0px, -1px, 2px, 0px rgba(0, 0, 0, 16%);
+  --pf--global--box-shadow--sm--bottom: 0px, 1px, 2px, 0px rgba(0, 0, 0, 16%);
+  --pf--global--box-shadow--sm--left: -1px, 0px, 2px, 0px rgba(0, 0, 0, 16%);
+  --pf--global--box-shadow--sm--right: 1px, 0px, 2px, 0px rgba(0, 0, 0, 16%);
+  --pf--global--box-shadow--md: 0px, 4px, 8px, 0px rgba(0, 0, 0, 12%);
+  --pf--global--box-shadow--md--top: 0px, -4px, 8px, 0px rgba(0, 0, 0, 12%);
+  --pf--global--box-shadow--md--bottom: 0px, 4px, 8px, 0px rgba(0, 0, 0, 12%);
+  --pf--global--box-shadow--md--left: -4px, 0px, 8px, 0px rgba(0, 0, 0, 12%);
+  --pf--global--box-shadow--md--right: 4px, 0px, 8px, 0px rgba(0, 0, 0, 12%);
+  --pf--global--box-shadow--lg: 0px, 8px, 24px, 0px rgba(0, 0, 0, 12%);
+  --pf--global--box-shadow--lg--top: 0px, -8px, 24px, 0px rgba(0, 0, 0, 12%);
+  --pf--global--box-shadow--lg--bottom: 0px, 8px, 24px, 0px rgba(0, 0, 0, 12%);
+  --pf--global--box-shadow--lg--left: -8px, 0px, 24px, 0px rgba(0, 0, 0, 12%);
+  --pf--global--box-shadow--lg--right: 8px, 0px, 24px, 0px rgba(0, 0, 0, 12%);
 
   // spacers
-  --pf-global--spacer--xs: 4px;
-  --pf-global--spacer--sm: 8px;
-  --pf-global--spacer--md: 16px;
-  --pf-global--spacer--lg: 24px;
-  --pf-global--spacer--xl: 32px;
-  --pf-global--spacer--2xl: 48px;
-  --pf-global--spacer--3xl: 64px;
-  --pf-global--spacer--4xl: 80px;
+  --pf--global--spacer--xs: 4px;
+  --pf--global--spacer--sm: 8px;
+  --pf--global--spacer--md: 16px;
+  --pf--global--spacer--lg: 24px;
+  --pf--global--spacer--xl: 32px;
+  --pf--global--spacer--2xl: 48px;
+  --pf--global--spacer--3xl: 64px;
+  --pf--global--spacer--4xl: 80px;
 
   // gutters 
-  --pf-global--gutter: 16px;
-  --pf-global--gutter-compact: 8px;
+  --pf--global--gutter: 16px;
+  --pf--global--gutter-compact: 8px;
 
   // font
   --pf--global--font--family--100: RedHatText;

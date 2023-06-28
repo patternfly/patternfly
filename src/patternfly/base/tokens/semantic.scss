@@ -18,31 +18,31 @@
   --pf--global--background--color--highlight: var(--pf--global--background--color--highlight--100);
   --pf--global--background--color--highlight--active: var(--pf--global--background--color--highlight--200);
   --pf--global--background--color--inverse: var(--pf--global--background--color--400);
-  --pf--global--background--color--disabled: var(--pf--global--disabled-color--200);
+  --pf--global--background--color--disabled: var(--pf--global--color--disabled--200);
 
-  --pf--global--color--brand: var(--pf--global--brand-color--200);
-  --pf--global--color--brand--hover: var(--pf--global--brand-color--300);
-  --pf--global--color--brand--active: var(--pf--global--brand-color--300);
+  --pf--global--color--brand: var(--pf--global--color--brand--200);
+  --pf--global--color--brand--hover: var(--pf--global--color--brand--300);
+  --pf--global--color--brand--active: var(--pf--global--color--brand--300);
 
-  --pf--global--color--custom: var(--pf--global--custom-color--100);
-  --pf--global--color--custom--hover: var(--pf--global--custom-color--200);
-  --pf--global--color--custom--active: var(--pf--global--custom-color--200);
+  --pf--global--color--custom: var(--pf--global--color--custom--100);
+  --pf--global--color--custom--hover: var(--pf--global--color--custom--200);
+  --pf--global--color--custom--active: var(--pf--global--color--custom--200);
 
-  --pf--global--color--success: var(--pf--global--success-color--100);
-  --pf--global--color--success--hover: var(--pf--global--success-color--200);
-  --pf--global--color--success--active: var(--pf--global--success-color--200);
+  --pf--global--color--success: var(--pf--global--color--success--100);
+  --pf--global--color--success--hover: var(--pf--global--color--success--200);
+  --pf--global--color--success--active: var(--pf--global--color--success--200);
 
-  --pf--global--color--warning: var(--pf--global--warning-color--100);
-  --pf--global--color--warning--hover: var(--pf--global--warning-color--200);
-  --pf--global--color--warning--active: var(--pf--global--warning-color--200);
+  --pf--global--color--warning: var(--pf--global--color--warning--100);
+  --pf--global--color--warning--hover: var(--pf--global--color--warning--200);
+  --pf--global--color--warning--active: var(--pf--global--color--warning--200);
 
-  --pf--global--color--danger: var(--pf--global--danger-color--100);
-  --pf--global--color--danger--hover: var(--pf--global--danger-color--200);
-  --pf--global--color--danger--active: var(--pf--global--danger-color--200);
+  --pf--global--color--danger: var(--pf--global--color--danger--100);
+  --pf--global--color--danger--hover: var(--pf--global--color--danger--200);
+  --pf--global--color--danger--active: var(--pf--global--color--danger--200);
 
-  --pf--global--color--info: var(--pf--global--info-color--100);
-  --pf--global--color--info--hover: var(--pf--global--info-color--200);
-  --pf--global--color--info--active: var(--pf--global--info-color--200);
+  --pf--global--color--info: var(--pf--global--color--info--100);
+  --pf--global--color--info--hover: var(--pf--global--color--info--200);
+  --pf--global--color--info--active: var(--pf--global--color--info--200);
   --pf--global--icon--color--on-brand: var(--pf--global--icon--color--inverse);
   --pf--global--icon--color--on-brand--hover: var(--pf--global--icon--color--inverse);
   --pf--global--text--color--on-brand: var(--pf--global--icon--color--inverse);
@@ -73,95 +73,95 @@
   --pf--global--text--color--on-info: var(--pf--global--text--color--inverse);
   --pf--global--text--color--on-info--hover: var(--pf--global--text--color--inverse);
 
-  --pf--global--text--color--regular: var(--pf--global--text-color--100);
-  --pf--global--text--color--subtle: var(--pf--global--text-color--200);
-  --pf--global--text--color--inverse: var(--pf--global--text-color--300);
-  --pf--global--text--color--disabled: var(--pf--global--disabled-color--300);
-  --pf--global--text--color--disabled--light: var(--pf--global--disabled-color--100);
+  --pf--global--text--color--regular: var(--pf--global--color--text--100);
+  --pf--global--text--color--subtle: var(--pf--global--color--text--200);
+  --pf--global--text--color--inverse: var(--pf--global--color--text--300);
+  --pf--global--text--color--disabled: var(--pf--global--color--disabled--300);
+  --pf--global--text--color--disabled--light: var(--pf--global--color--disabled--100);
   --pf--global--text--color--placeholder: var(--pf--global--text--color--subtle);
-  --pf--global--link--text--color: var(--pf--global--link--Color--100);
-  --pf--global--link--text--color--hover: var(--pf--global--link--Color--200);
-  --pf--global--link--text--color--visited: var(--pf--global--link--Color--300);
+  --pf--global--link--text--color: var(--pf--global--link--color--100);
+  --pf--global--link--text--color--hover: var(--pf--global--link--color--200);
+  --pf--global--link--text--color--visited: var(--pf--global--link--color--300);
 
   --pf--global--link--text-decoration: var(--pf--global--text-decoration--200);
   --pf--global--link--text-decoration--hover: var(--pf--global--text-decoration--200);
 
-  --pf--global--text--color--brand: var(--pf--global--brand-color);
-  --pf--global--text--color--brand--hover: var(--pf--global--brand-color-hover);
-  --pf--global--text--color--brand--active: var(--pf--global--brand-color-active);
+  --pf--global--text--color--brand: var(--pf--global--color--brand);
+  --pf--global--text--color--brand--hover: var(--pf--global--color--brand-hover);
+  --pf--global--text--color--brand--active: var(--pf--global--color--brand-active);
 
-  --pf--global--text--color--custom: var(--pf--global--custom-color);
-  --pf--global--text--color--custom--hover: var(--pf--global--custom-color-hover);
-  --pf--global--text--color--custom--active: var(--pf--global--custom-color-active);
+  --pf--global--text--color--custom: var(--pf--global--color--custom);
+  --pf--global--text--color--custom--hover: var(--pf--global--color--custom-hover);
+  --pf--global--text--color--custom--active: var(--pf--global--color--custom-active);
 
-  --pf--global--text--color--success: var(--pf--global--success-color);
-  --pf--global--text--color--success--hover: var(--pf--global--success-color-hover);
-  --pf--global--text--color--success--active: var(--pf--global--success-color-active);
+  --pf--global--text--color--success: var(--pf--global--color--success);
+  --pf--global--text--color--success--hover: var(--pf--global--color--success-hover);
+  --pf--global--text--color--success--active: var(--pf--global--color--success-active);
 
-  --pf--global--text--color--warning: var(--pf--global--warning-color);
-  --pf--global--text--color--warning--hover: var(--pf--global--warning-color-hover);
-  --pf--global--text--color--warning--active: var(--pf--global--warning-color-active);
+  --pf--global--text--color--warning: var(--pf--global--color--warning);
+  --pf--global--text--color--warning--hover: var(--pf--global--color--warning-hover);
+  --pf--global--text--color--warning--active: var(--pf--global--color--warning-active);
 
-  --pf--global--text--color--danger: var(--pf--global--danger-color);
-  --pf--global--text--color--danger--hover: var(--pf--global--danger-color-hover);
-  --pf--global--text--color--danger--active: var(--pf--global--danger-color-active);
+  --pf--global--text--color--danger: var(--pf--global--color--danger);
+  --pf--global--text--color--danger--hover: var(--pf--global--color--danger-hover);
+  --pf--global--text--color--danger--active: var(--pf--global--color--danger-active);
 
-  --pf--global--text--color--info: var(--pf--global--info-color);
-  --pf--global--text--color--info-hover: var(--pf--global--info-color-hover);
-  --pf--global--text--color--info-active: var(--pf--global--info-color-active);
+  --pf--global--text--color--info: var(--pf--global--color--info);
+  --pf--global--text--color--info-hover: var(--pf--global--color--info-hover);
+  --pf--global--text--color--info-active: var(--pf--global--color--info-active);
 
-  --pf--global--icon--color--brand: var(--pf--global--brand-color);
-  --pf--global--icon--color--brand--hover: var(--pf--global--brand-color--hover);
-  --pf--global--icon--color--brand--active: var(--pf--global--brand-color--active);
+  --pf--global--icon--color--brand: var(--pf--global--color--brand);
+  --pf--global--icon--color--brand--hover: var(--pf--global--color--brand--hover);
+  --pf--global--icon--color--brand--active: var(--pf--global--color--brand--active);
 
-  --pf--global--icon--color--custom: var(--pf--global--custom-color);
-  --pf--global--icon--color--custom--hover: var(--pf--global--custom-color--hover);
-  --pf--global--icon--color--custom--active: var(--pf--global--custom-color--active);
+  --pf--global--icon--color--custom: var(--pf--global--color--custom);
+  --pf--global--icon--color--custom--hover: var(--pf--global--color--custom--hover);
+  --pf--global--icon--color--custom--active: var(--pf--global--color--custom--active);
 
-  --pf--global--icon--color--success: var(--pf--global--success-color);
-  --pf--global--icon--color--success--hover: var(--pf--global--success-color--hover);
-  --pf--global--icon--color--success--active: var(--pf--global--success-color--active);
+  --pf--global--icon--color--success: var(--pf--global--color--success);
+  --pf--global--icon--color--success--hover: var(--pf--global--color--success--hover);
+  --pf--global--icon--color--success--active: var(--pf--global--color--success--active);
 
-  --pf--global--icon--color--warning: var(--pf--global--warning-color);
-  --pf--global--icon--color--warning--hover: var(--pf--global--warning-color--hover);
-  --pf--global--icon--color--warning--active: var(--pf--global--warning-color--active);
+  --pf--global--icon--color--warning: var(--pf--global--color--warning);
+  --pf--global--icon--color--warning--hover: var(--pf--global--color--warning--hover);
+  --pf--global--icon--color--warning--active: var(--pf--global--color--warning--active);
 
-  --pf--global--icon--color--danger: var(--pf--global--danger-color);
-  --pf--global--icon--color--danger--hover: var(--pf--global--danger-color--hover);
-  --pf--global--icon--color--danger--active: var(--pf--global--danger-color--active);
+  --pf--global--icon--color--danger: var(--pf--global--color--danger);
+  --pf--global--icon--color--danger--hover: var(--pf--global--color--danger--hover);
+  --pf--global--icon--color--danger--active: var(--pf--global--color--danger--active);
 
-  --pf--global--icon--color--info: var(--pf--global--info-color);
-  --pf--global--icon--color--info--hover: var(--pf--global--info-color--hover);
-  --pf--global--icon--color--info--active: var(--pf--global--info-color--active);
+  --pf--global--icon--color--info: var(--pf--global--color--info);
+  --pf--global--icon--color--info--hover: var(--pf--global--color--info--hover);
+  --pf--global--icon--color--info--active: var(--pf--global--color--info--active);
 
-  --pf--global--border--color--brand: var(--pf--global--brand-color);
-  --pf--global--border--color--brand--hover: var(--pf--global--brand-color--hover);
-  --pf--global--border--color--brand--active: var(--pf--global--brand-color--hover);
+  --pf--global--border--color--brand: var(--pf--global--color--brand);
+  --pf--global--border--color--brand--hover: var(--pf--global--color--brand--hover);
+  --pf--global--border--color--brand--active: var(--pf--global--color--brand--hover);
 
-  --pf--global--border--color--custom: var(--pf--global--custom-color);
-  --pf--global--border--color--custom--hover: var(--pf--global--custom-color--hover);
-  --pf--global--border--color--custom--active: var(--pf--global--custom-color--hover);
+  --pf--global--border--color--custom: var(--pf--global--color--custom);
+  --pf--global--border--color--custom--hover: var(--pf--global--color--custom--hover);
+  --pf--global--border--color--custom--active: var(--pf--global--color--custom--hover);
 
-  --pf--global--border--color--success: var(--pf--global--success-color);
-  --pf--global--border--color--success--hover: var(--pf--global--success-color--hover);
-  --pf--global--border--color--success--active: var(--pf--global--success-color--active);
+  --pf--global--border--color--success: var(--pf--global--color--success);
+  --pf--global--border--color--success--hover: var(--pf--global--color--success--hover);
+  --pf--global--border--color--success--active: var(--pf--global--color--success--active);
 
-  --pf--global--border--color--warning: var(--pf--global--warning-color);
-  --pf--global--border--color--warning--hover: var(--pf--global--warning-color--hover);
-  --pf--global--border--color--danger--active: var(--pf--global--warning-color--active);
+  --pf--global--border--color--warning: var(--pf--global--color--warning);
+  --pf--global--border--color--warning--hover: var(--pf--global--color--warning--hover);
+  --pf--global--border--color--danger--active: var(--pf--global--color--warning--active);
 
-  --pf--global--border--color--danger: var(--pf--global--danger-color);
-  --pf--global--border--color--danger--hover: var(--pf--global--danger-color--hover);
-  --pf--global--border--color--danger--active: var(--pf--global--danger-color--active);
+  --pf--global--border--color--danger: var(--pf--global--color--danger);
+  --pf--global--border--color--danger--hover: var(--pf--global--color--danger--hover);
+  --pf--global--border--color--danger--active: var(--pf--global--color--danger--active);
 
-  --pf--global--border--color-info: var(--pf--global--info-color);
-  --pf--global--border--color--info--hover: var(--pf--global--info-color--hover);
-  --pf--global--border--color--info--active: var(--pf--global--info-color--active);
+  --pf--global--border--color-info: var(--pf--global--color--info);
+  --pf--global--border--color--info--hover: var(--pf--global--color--info--hover);
+  --pf--global--border--color--info--active: var(--pf--global--color--info--active);
 
   --pf--global--icon--color--regular: var(--pf--global--icon--color--100);
   --pf--global--icon--color--subtle: var(--pf--global--icon--color--200);
   --pf--global--icon--color--inverse: var(--pf--global--icon--color--300);
-  --pf--global--icon--color--disabled: var(--pf--global--disabled-color--300);
+  --pf--global--icon--color--disabled: var(--pf--global--color--disabled--300);
 
   --pf--global--border--color: var(--pf--global--border--color--100);
   --pf--global--border--color--hover: var(--pf--global--color--brand--100);
