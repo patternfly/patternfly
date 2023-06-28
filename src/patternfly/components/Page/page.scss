@@ -8,7 +8,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--xl--inset: var(--pf--global--spacer--xl);
 
   // Header
-  --#{$page}__header--BackgroundColor: var(—-pf--global—-background—-color—-secondary);
+  --#{$page}__header--BackgroundColor: var(--pf--global--background--color--secondary);
   --#{$page}__header--ZIndex: var(--#{$pf-global}--ZIndex--md);
   --#{$page}__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
 
@@ -181,7 +181,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-tabs--PaddingRight: 0;
   --#{$page}__main-tabs--PaddingBottom: 0;
   --#{$page}__main-tabs--PaddingLeft: 0;
-  --#{$page}__main-tabs--BackgroundColor: var(—-pf--global—-background—-color-—primary);
+  --#{$page}__main-tabs--BackgroundColor: var(--pf--global--background--color--primary);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$page}__main-breadcrumb--PaddingRight: var(--#{$page}__main-breadcrumb--xl--PaddingRight);

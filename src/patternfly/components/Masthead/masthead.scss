@@ -45,7 +45,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$masthead} {
   --#{$masthead}--PaddingLeft: var(--#{$masthead}--inset);
   --#{$masthead}--PaddingRight: var(--#{$masthead}--inset);
-  --#{$masthead}--BackgroundColor: var(--pf--global--background--color--inverse);
+  --#{$masthead}--BackgroundColor: var(--pf--global--background--color--secondary);
 
   // Insets
   --#{$masthead}--inset: var(--#{$pf-global}--spacer--md); // match page insets
