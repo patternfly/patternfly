@@ -1,4 +1,4 @@
-// @debug $masthead; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+// stylelint-disable
 $pf-v5-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
