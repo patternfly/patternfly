@@ -48,22 +48,6 @@
   // blend modes 
   --pf-global--mix-blend-mode--100: screen;
 
-  // border color
-  --pf-global--border--color--100: var(--pf-color-gray-600);
-  --pf-global--border--color--200: var(--pf-color-gray-500);
-
-  // border width
-  --pf-global--border--width--100: 1px;
-  --pf-global--border--width--200: 2px;
-  --pf-global--border--width--300: 3px;
-
-  // border radius
-  --pf-global--border--radius--100: 4px;
-  --pf-global--border--radius--200: 6px;
-  --pf-global--border--radius--300: 16px;
-  --pf-global--border--radius--400: 24px;
-  --pf-global--border--radius--500: 999px;
-
   // shadows
   --pf-global--box-shadow--sm: 0, 1, 2, 0 rgba(0, 0, 0, 50%);
   --pf-global--box-shadow--sm-top: 0, -1, 2, 0 rgba(0, 0, 0, 50%);
