@@ -227,16 +227,17 @@
   --#{$nav}__section--section--MarginTop: var(--#{$pf-global}--spacer--xl);
 
   // Nav section title
-  --#{$nav}__section-title--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$nav}__section-title--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$nav}__section-title--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$nav}__section-title--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$nav}__section-title--MarginBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$nav}__section-title--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$nav}__section-title--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$nav}__section-title--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$nav}__section-title--Color: var(--#{$pf-global}--Color--light-100);
-  --#{$nav}__section-title--BorderBottomColor: var(--#{$pf-global}--BackgroundColor--dark-200);
+  --#{$nav}__section-title--PaddingTop: var(--pf--global--spacer--sm);
+  --#{$nav}__section-title--PaddingRight: var(--pf--global--spacer-md);
+  --#{$nav}__section-title--PaddingBottom: var(--pf--global--spacer--sm);
+  --#{$nav}__section-title--PaddingLeft: var(--pf--global--spacer--md);
+  --#{$nav}__section-title--MarginBottom: var(--pf--global--spacer--sm);
+  --#{$nav}__section-title--xl--PaddingRight: var(--pf--global--spacer--lg);
+  --#{$nav}__section-title--xl--PaddingLeft: var(--pf--global--spacer--lg);
+  --#{$nav}__section-title--FontSize: var(--pf--global--font--size--body);
+  --#{$nav}__section-title--FontWeight: var(--pf--global--font--weight--heading);
+  --#{$nav}__section-title--Color: var(--pf--global--text--color--regular);
+  --#{$nav}__section-title--BorderBottomColor: transparent; // var(--#{$pf-global}--BackgroundColor--dark-200);
   --#{$nav}__section-title--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
 
   // Scroll buttons
@@ -1115,6 +1116,7 @@
   padding: var(--#{$nav}__section-title--PaddingTop) var(--#{$nav}__section-title--PaddingRight) var(--#{$nav}__section-title--PaddingBottom) var(--#{$nav}__section-title--PaddingLeft);
   margin-bottom: var(--#{$nav}__section-title--MarginBottom);
   font-size: var(--#{$nav}__section-title--FontSize);
+  font-weight: var(--#{$nav}__section-title--FontWeight);
   color: var(--#{$nav}__section-title--Color);
   border-bottom: var(--#{$nav}__section-title--BorderBottomWidth) solid var(--#{$nav}__section-title--BorderBottomColor);
 }
