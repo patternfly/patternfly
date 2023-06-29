@@ -6,7 +6,7 @@ wrapperTag: div
 
 ## Demos
 
-### Primary-detail expanded
+### Hackathon demo app
 
 ```hbs isFullscreen
 {{#> page page--id="page-id"}}
@@ -59,7 +59,7 @@ wrapperTag: div
   {{#> page-sidebar page-sidebar--ExcludeSidebarBody=true}}
     {{#> page-sidebar-header}}
       {{#> page-sidebar-title}}
-        PatternFly navigation product name
+        PatternFly Navigation Product Name
       {{/page-sidebar-title}}
     {{/page-sidebar-header}}
     {{#> page-sidebar-body}}
@@ -147,13 +147,13 @@ wrapperTag: div
     {{> page-template-breadcrumb}}
     {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=(concat 'pf-m-light ' page-template-title--modifier)}}
       {{#> content}}
-        <h1>
+        <h3>
           {{~#if page-template-title--title}}
             {{page-template-title--title}}
           {{else}}
             Penta Hackathon Demo Page
           {{/if}}
-        </h1>
+        </h3>
         <p>
           {{~#if page-template-title--description}}
             {{page-template-title--description}}
