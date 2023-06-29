@@ -2,10 +2,10 @@
 //stylelint-disable
 .#{$button} {
   // Component
-  --#{$button}--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$button}--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$button}--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$button}--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$button}--PaddingTop: var(--pf--global--spacer--sm);
+  --#{$button}--PaddingRight: var(--pf--global--spacer--lg);
+  --#{$button}--PaddingBottom: var(--pf--global--spacer--sm);
+  --#{$button}--PaddingLeft: var(--pf--global--spacer--lg);
   --#{$button}--LineHeight: var(--#{$pf-global}--LineHeight--md);
   --#{$button}--FontWeight: var(--pf--global--font--weight--body);
   --#{$button}--FontSize: var(--pf--global--font--size--body--md);
@@ -135,15 +135,15 @@
 
   // Plain btn
   --#{$button}--m-plain--BackgroundColor: var(--pf--global--background--color--action--plain);
-  --#{$button}--m-plain--Color: var(--pf--global--text--color--subtle);
-  --#{$button}--m-plain--hover--BackgroundColor: var(--pf--global--background--color--action--plain);
+  --#{$button}--m-plain--BorderRadius: var(--pf--global--border--radius--small);
+  --#{$button}--m-plain--Color: var(--pf--global--icon--color--regular);
+  --#{$button}--m-plain--hover--BackgroundColor: var(--pf--global--background--color--action--plain--hover);
   --#{$button}--m-plain--hover--Color: var(--pf--global--text--color);
-  --#{$button}--m-plain--focus--BackgroundColor: var(--pf--global--background--color--action--plain);
-  --#{$button}--m-plain--focus--Color: var(--pf--global--text--color);
-  --#{$button}--m-plain--active--BackgroundColor: var(--pf--global--background--color--action--plain);
-  --#{$button}--m-plain--active--Color: var(--pf--global--text--color);
-  --#{$button}--m-plain--disabled--Color: var(--pf--global--background--color--disabled);
-  --#{$button}--m-plain--disabled--BackgroundColor: transparent;
+  --#{$button}--m-plain--PaddingTop: var(--pf--global--spacer--sm);
+  --#{$button}--m-plain--PaddingRight: var(--pf--global--spacer--sm);
+  --#{$button}--m-plain--PaddingBottom: var(--pf--global--spacer--sm);
+  --#{$button}--m-plain--PaddingLeft: var(--pf--global--spacer--sm);
+
 
   // Control Button
   --#{$button}--m-control--BackgroundColor: var(--pf--global--background--color--control);
@@ -284,12 +284,6 @@
     &:focus {
       --#{$button}--m-primary--Color: var(--#{$button}--m-primary--focus--Color);
       --#{$button}--m-primary--BackgroundColor: var(--#{$button}--m-primary--focus--BackgroundColor);
-    }
-
-    &:active,
-    &.pf-m-active {
-      --#{$button}--m-primary--Color: var(--#{$button}--m-primary--active--Color);
-      --#{$button}--m-primary--BackgroundColor: var(--#{$button}--m-primary--active--BackgroundColor);
     }
 
     .#{$badge}.pf-m-unread {
@@ -555,24 +549,20 @@
   &.pf-m-plain {
     --#{$button}--disabled--Color: var(--#{$button}--m-plain--disabled--Color);
     --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-plain--disabled--BackgroundColor);
+    --#{$button}--PaddingTop: var(--#{$button}--m-plain--PaddingTop);
+    --#{$button}--PaddingRight: var(--#{$button}--m-plain--PaddingRight);
+    --#{$button}--PaddingBottom: var(--#{$button}--m-plain--PaddingBottom);
+    --#{$button}--PaddingLeft: var(--#{$button}--m-plain--PaddingLeft);
+    --#{$button}--BorderRadius: var(--#{$button}--m-plain--BorderRadius);
 
     color: var(--#{$button}--m-plain--Color);
     background-color: var(--#{$button}--m-plain--BackgroundColor);
 
-    &:hover {
-      --#{$button}--m-plain--Color: var(--#{$button}--m-plain--hover--Color);
+    &:hover,
+    &:focus,
+    &:active {
       --#{$button}--m-plain--BackgroundColor: var(--#{$button}--m-plain--hover--BackgroundColor);
-    }
-
-    &:active,
-    &.pf-m-active {
-      --#{$button}--m-plain--Color: var(--#{$button}--m-plain--active--Color);
-      --#{$button}--m-plain--BackgroundColor: var(--#{$button}--m-plain--active--BackgroundColor);
-    }
-
-    &:focus {
-      --#{$button}--m-plain--Color: var(--#{$button}--m-plain--focus--Color);
-      --#{$button}--m-plain--BackgroundColor: var(--#{$button}--m-plain--focus--BackgroundColor);
+      mix-blend-mode: var(--pf--global--background--color--action--plain--hover--blend);
     }
   }
 
@@ -660,11 +650,4 @@
   display: inline-flex;
   align-items: center;
   margin-left: var(--#{$button}__count--MarginLeft);
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/button";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-button;
 }

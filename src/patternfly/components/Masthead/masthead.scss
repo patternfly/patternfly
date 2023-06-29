@@ -48,8 +48,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--BackgroundColor: var(--pf--global--background--color--secondary);
 
   // Insets
-  --#{$masthead}--inset: var(--#{$pf-global}--spacer--md); // match page insets
-  --#{$masthead}--xl--inset: var(--#{$pf-global}--spacer--lg); // match page insets
+  --#{$masthead}--inset: var(--pf--global--spacer--lg); // match page insets
 
   // Stack
   --#{$masthead}--m-display-stack--GridTemplateColumns: max-content 1fr;
@@ -156,10 +155,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     @media screen and (min-width: $pf-v5-global--breakpoint--md) {
       @include pf-v5-c-masthead--m-display-inline;
     }
-  }
-
-  @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$masthead}--inset: var(--#{$masthead}--xl--inset);
   }
 
   position: relative;
@@ -280,20 +275,22 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 }
 
+.#{$masthead}__logo {
+  display: flex;
+  gap: var(--pf--global--spacer--md);
+}
+
 // Content
 .#{$masthead}__content {
   display: flex;
   flex-grow: 1;
   flex-shrink: 1;
-  grid-column: var(--#{$masthead}__content--GridColumn);
-  grid-column-end: -1; // force content to right edge or full available width
   align-items: center;
   align-self: stretch;
   order: var(--#{$masthead}__content--Order);
   min-height: var(--#{$masthead}__content--MinHeight);
   padding-top: var(--#{$masthead}__content--PaddingTop);
   padding-bottom: var(--#{$masthead}__content--PaddingBottom);
-  margin-left: var(--#{$masthead}__content--MarginLeft);
 
   &:only-child {
     --#{$masthead}__content--MarginLeft: 0;
@@ -325,11 +322,10 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$masthead}__toggle {
   grid-column: var(--#{$masthead}__toggle--GridColumn);
   align-self: center;
-  margin-right: var(--#{$masthead}__toggle--MarginRight);
-  margin-left: var(--#{$masthead}__toggle--MarginLeft);
 
   .#{$button} {
     --#{$button}--FontSize: var(--#{$masthead}__toggle--c-button--FontSize);
+    margin-left: calc(-1 * var(--#{$button}--m-plain--PaddingLeft));
   }
 }
 

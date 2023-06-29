@@ -896,8 +896,6 @@
   display: flex;
   align-items: baseline;
   padding: var(--#{$nav}__link--PaddingTop) var(--#{$nav}__link--PaddingRight) var(--#{$nav}__link--PaddingBottom) var(--#{$nav}__link--PaddingLeft);
-  font-size: var(--#{$nav}__link--FontSize);
-  font-weight: var(--#{$nav}__link--FontWeight);
   color: var(--#{$nav}__link--Color);
   background-color: var(--#{$nav}__link--BackgroundColor);
   border-radius: var(--#{$nav}__link--BorderRadius);
@@ -1179,11 +1177,4 @@
       left: 0;
     }
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/nav";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-nav;
 }

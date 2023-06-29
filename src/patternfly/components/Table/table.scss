@@ -10,7 +10,7 @@
   // Base
   --#{$table}--BackgroundColor: var(--pf--global--background--color--primary);
   --#{$table}--BorderColor: var(--pf--global--border--color);
-  --#{$table}--border-width--base: var(--pf--global--border--width--regular--border--size);
+  --#{$table}--border-width--base: var(--pf--global--border--width--divider);
 
   // Caption
   --#{$table}__caption--FontSize: var(--pf--global--font--size--body);
@@ -40,8 +40,8 @@
 
   // Th / td shared variables
   --#{$table}--cell--Padding--base: var(--#{$pf-global}--spacer--md);
-  --#{$table}--cell--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$table}--cell--FontWeight: var(--#{$pf-global}--FontWeight--normal);
+  --#{$table}--cell--FontSize: var(--pf--global--font--size--body);
+  --#{$table}--cell--FontWeight: var(--pf--global--font--weight--body);
   --#{$table}--cell--Color: var(--pf--global--text--color--regular);
   --#{$table}--cell--PaddingTop: var(--#{$table}--cell--Padding--base);
   --#{$table}--cell--PaddingRight: var(--#{$table}--cell--Padding--base);
@@ -249,18 +249,15 @@
   --#{$table}__tr--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
   --#{$table}__tr--m-clickable--BackgroundColor: transparent;
   --#{$table}__tr--m-clickable--BoxShadow: none;
+  --#{$table}__tr--m-clickable--BorderRadius: var(--pf--global--border--radius--small);
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
   --#{$table}__tr--m-clickable--hover--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
-  --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf--global--background--color--primary);
-  --#{$table}__tr--m-clickable--focus--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
-  --#{$table}__tr--m-clickable--focus--BackgroundColor: var(--pf--global--background--color--primary);
-  --#{$table}__tr--m-clickable--active--BoxShadow: var(--#{$table}__tr--m-clickable--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
-  --#{$table}__tr--m-clickable--active--BackgroundColor: var(--pf--global--background--color--primary);
+  --#{$table}__tr--m-clickable--hover--BackgroundColor: var(--pf--global--background--color--primary--hover);
   --#{$table}__tr--m-clickable--m-selected--BoxShadow: var(--pf--global--shadow--small--bottom--color) inset, var(--pf--global--shadow--small--bottom--color);
 
   // tr selected
   --#{$table}__tr--m-selected--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
-  --#{$table}__tr--m-selected--BackgroundColor: var(--pf--global--background--color--primary);
+  --#{$table}__tr--m-selected--BackgroundColor: var(--pf--global--background--color--primary--hover);
   --#{$table}__tr--m-selected--BoxShadow: var(--#{$table}__tr--m-selected--BoxShadow--top), var(--pf--global--shadow--small--bottom--color);
   --#{$table}__tr--m-selected--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
   --#{$table}__tr--m-selected--after--BorderLeftWidth: calc(2 * var(--#{$table}__expandable-row--after--border-width--base));
@@ -675,61 +672,44 @@
     }
   }
 
+  tr.pf-m-clickable:last-child {
+    border-bottom-color: transparent;
+  }
+
+  thead tr {
+    --pf-v5-c-table--BorderColor: 0;
+  }
+
   // tr clickable
   tr:where(.#{$table}__tr) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
+      border-radius: var(--#{$table}__tr--m-clickable--BorderRadius);
+    }
+
     &.pf-m-clickable {
       cursor: pointer;
-      background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
-      outline-offset: var(--#{$table}__tr--m-clickable--OutlineOffset);
-      box-shadow: var(--#{$table}__tr--m-clickable--BoxShadow);
+
+      > * {
+        position: relative;
+      }
+
 
       &:hover,
       &:focus,
       &:active {
-        
-        &:not(.pf-m-selected) + tr:where(.#{$table}__tr).pf-m-selected {
-          box-shadow: var(--#{$table}__tr--m-clickable--m-selected--BoxShadow);
-        }
-        
-      }
-
-      &:hover {
-        --#{$table}__tr--m-clickable--BoxShadow: var(--#{$table}__tr--m-clickable--hover--BoxShadow);
         --#{$table}__tr--m-clickable--BackgroundColor: var(--#{$table}__tr--m-clickable--hover--BackgroundColor);
-      }
-
-      &:focus {
-        --#{$table}__tr--m-clickable--BoxShadow: var(--#{$table}__tr--m-clickable--focus--BoxShadow);
-        --#{$table}__tr--m-clickable--BackgroundColor: var(--#{$table}__tr--m-clickable--focus--BackgroundColor);
-      }
-
-      &:active {
-        --#{$table}__tr--m-clickable--BoxShadow: var(--#{$table}__tr--m-clickable--active--BoxShadow);
-        --#{$table}__tr--m-clickable--BackgroundColor: var(--#{$table}__tr--m-clickable--active--BackgroundColor);
       }
     }
 
     // tr selected
     &.pf-m-selected {
-      --#{$table}__expandable-row--after--BorderLeftWidth: var(--#{$table}__tr--m-selected--after--BorderLeftWidth);
-      --#{$table}__expandable-row--after--BorderColor: var(--#{$table}__tr--m-selected--after--BorderLeftColor);
-
-      position: relative;
-      background-color: var(--#{$table}__tr--m-selected--BackgroundColor);
-      outline-offset: var(--#{$table}__tr--m-selected--OutlineOffset);
-      box-shadow: var(--#{$table}__tr--m-selected--BoxShadow);
-
-      & + tr:where(.#{$table}__tr).pf-m-selected {
-        box-shadow: var(--#{$table}__tr--m-selected--m-selected--BoxShadow);
-      }
-
-      & + tr:where(.#{$table}__tr).pf-m-selected:hover {
-        box-shadow: var(--#{$table}__tr--m-selected__tr--m-selected--hover--BoxShadow);
-      }
-
-      &:hover + tr:where(.#{$table}__tr).pf-m-selected {
-        box-shadow: var(--#{$table}__tr--m-selected--hover__tr--m-selected--BoxShadow);
-      }
+      --#{$table}__tr--m-clickable--BackgroundColor: var(--#{$table}__tr--m-selected--BackgroundColor);
     }
 
     &.pf-m-first-cell-offset-reset {

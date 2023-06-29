@@ -128,12 +128,12 @@
   }
 
   :where(a:hover) {
-    --#{$pf-global}--link--Color: var(--pf--global--link--text--color--hover);
-    --#{$pf-global}--link--TextDecoration: var(--pf--global--link--text-decoration--hover);
+    color: var(--pf--global--link--text--color--hover);
+    text-decoration: var(--pf--global--link--text-decoration--hover);
   }
 
   :where(a:visited) {
-    --#{$pf-global}--link--Color: var(--pf--global--link--text--color--visited);
+    color: var(--pf--global--link--text--color--visited);
   }
 
   :where(

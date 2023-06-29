@@ -11,13 +11,15 @@ wrapperTag: div
 ```hbs isFullscreen
 {{#> page page--id="page-id"}}
   {{#> masthead masthead--id="masthead-id" masthead--modifier=masthead-template--modifier masthead-template-content-icon-group--breakpoint="lg"}}
-    {{> masthead-toggle}}
-    {{#> masthead-main}}
-      {{#> masthead-brand}}
-        {{> brand brand--modifier="pf-m-light" brand--attribute='src="/assets/images/PF-IconLogo-color.svg" style="--pf-v5-c-brand--Width: 37px;" alt="PatternFly logo"'}}
-        {{> brand brand--modifier="pf-m-dark" brand--attribute='src="/assets/images/PF-IconLogo-Reverse.svg" style="--pf-v5-c-brand--Width: 37px;" alt="PatternFly logo"'}}
-      {{/masthead-brand}}
-    {{/masthead-main}}
+    {{#> masthead-logo}}
+      {{> masthead-toggle}}
+      {{#> masthead-main}}
+        {{#> masthead-brand}}
+          {{> brand brand--modifier="pf-m-light" brand--attribute='src="/assets/images/PF-IconLogo-color.svg" style="--pf-v5-c-brand--Width: 37px;" alt="PatternFly logo"'}}
+          {{> brand brand--modifier="pf-m-dark" brand--attribute='src="/assets/images/PF-IconLogo-Reverse.svg" style="--pf-v5-c-brand--Width: 37px;" alt="PatternFly logo"'}}
+        {{/masthead-brand}}
+      {{/masthead-main}}
+    {{/masthead-logo}}
     {{#> masthead-content}}
       {{#> toolbar}}
         {{#> toolbar-content}}
@@ -32,22 +34,36 @@ wrapperTag: div
                 {{/menu-toggle-controls}}
               {{/menu-toggle}}
             {{/toolbar-item}}
-            {{> masthead-template-content-icon-group}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+              {{#> toolbar-item}}
+                {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
+                  <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
+                {{/menu-toggle}}
+              {{/toolbar-item}}
+              {{#> toolbar-item}}
+                {{#> menu-toggle}}
+                  {{#> menu-toggle-text}}
+                    Alex dev
+                  {{/menu-toggle-text}}
+                  {{#> menu-toggle-controls}}
+                    {{> menu-toggle-toggle-icon}}
+                  {{/menu-toggle-controls}}
+                {{/menu-toggle}}
+              {{/toolbar-item}}
+            {{/toolbar-group}}
           {{/toolbar-content-section}}
         {{/toolbar-content}}
       {{/toolbar}}
     {{/masthead-content}}
   {{/masthead}}
-{{#> page-sidebar page-sidebar--ExcludeSidebarBody=true}}
-{{#> page-sidebar-body}}
-  {{#> content}}
-    <h3>
-        PatternFly Navigation Product Name
-    </h3>
-  {{/content}}
-{{/page-sidebar-body}}
-{{#> page-sidebar-body}}
-{{#> nav nav--attribute='aria-label="Global"'}}
+  {{#> page-sidebar page-sidebar--ExcludeSidebarBody=true}}
+    {{#> page-sidebar-header}}
+      {{#> page-sidebar-title}}
+        PatternFly navigation product name
+      {{/page-sidebar-title}}
+    {{/page-sidebar-header}}
+    {{#> page-sidebar-body}}
+      {{#> nav nav--attribute='aria-label="Global"'}}
         {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
           {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
             Cluster
@@ -124,35 +140,273 @@ wrapperTag: div
         {{/nav-section}}
       {{/nav}}
     {{/page-sidebar-body}}
-{{/page-sidebar}}
+  {{/page-sidebar}}
 
-{{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-{{> page-template-breadcrumb}}
+  {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
+  {{#> page-main-list}}
+    {{> page-template-breadcrumb}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=(concat 'pf-m-light ' page-template-title--modifier)}}
+      {{#> content}}
+        <h1>
+          {{~#if page-template-title--title}}
+            {{page-template-title--title}}
+          {{else}}
+            Penta Hackathon Demo Page
+          {{/if}}
+        </h1>
+        <p>
+          {{~#if page-template-title--description}}
+            {{page-template-title--description}}
+          {{else}}
+            A showcase of our new tokens being applied to create a new theme.
+          {{/if}}
+        </p>
+      {{/content}}
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=page-template-gallery--modifier page-main-section--attribute=page-template-gallery--attribute}}
+      {{#> toolbar toolbar--id="toolbar-simple-example" toolbar--modifier="pf-m-inset-none"}}
+        {{#> toolbar-content}}
+          {{#> toolbar-content-section}}
+            {{#> toolbar-item}}
+              {{#> menu-toggle}}
+                {{#> menu-toggle-text}}
+                  Dropdown menu
+                {{/menu-toggle-text}}
+                {{#> menu-toggle-controls}}
+                  {{> menu-toggle-toggle-icon}}
+                {{/menu-toggle-controls}}
+              {{/menu-toggle}}
+            {{/toolbar-item}}
+            {{#> toolbar-item}}
+              {{#> menu-toggle}}
+                {{#> menu-toggle-text}}
+                  Another one
+                {{/menu-toggle-text}}
+                {{#> menu-toggle-controls}}
+                  {{> menu-toggle-toggle-icon}}
+                {{/menu-toggle-controls}}
+              {{/menu-toggle}}
+            {{/toolbar-item}}
+            {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+              {{#> toolbar-group toolbar-group--modifier="pf-m-icon-button-group"}}
+                {{#> toolbar-item}}
+                  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                    <i class="fas fa-columns" aria-hidden="true"></i>
+                  {{/button}}
+                {{/toolbar-item}}
+                {{#> toolbar-item}}
+                  {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                    <i class="fas fa-cog" aria-hidden="true"></i>
+                  {{/button}}
+                {{/toolbar-item}}
+              {{/toolbar-group}}
+              {{#> toolbar-item}}
+                {{#> button button--modifier="pf-m-primary"}}
+                  Primary
+                {{/button}}
+              {{/toolbar-item}}
+            {{/toolbar-group}}
+          {{/toolbar-content-section}}
+        {{/toolbar-content}}
+      {{/toolbar}}
+      {{#> table table--id=(concat page--id '-table') table--grid="true" table--modifier=(concat 'pf-m-grid-md ' table-simple-table--modifier) table--attribute='aria-label="This is a table with checkboxes"'}}
+        {{#> table-thead}}
+          {{#> table-tr}}
+            {{#> table-td table-td--check="true"}}
+              {{#> check check--modifier="pf-m-standalone"}}
+                {{#> check-input check-input--attribute=(concat 'name="checkrow1" aria-labelledby="' table--id '-node1"')}}{{/check-input}}
+              {{/check}}
+            {{/table-td}}
+            {{#> table-th table-th--attribute='scope="col"'}}
+              Repositories
+            {{/table-th}}
+            {{#> table-th table-th--attribute='scope="col"'}}
+              Branches
+            {{/table-th}}
+            {{#> table-th table-th--attribute='scope="col"'}}
+              Pull requests
+            {{/table-th}}
+            {{#> table-th table-th--attribute='scope="col"'}}
+              Workspaces
+            {{/table-th}}
+            {{#> table-th table-th--attribute='scope="col"'}}
+              Last commit
+            {{/table-th}}
+            {{> table-td table-td--IsEmpty="true"}}
+            {{> table-td table-td--IsEmpty="true"}}
+          {{/table-tr}}
+        {{/table-thead}}
 
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=(concat 'pf-m-light ' page-template-title--modifier)}}
-    {{#> content}}
-      <h1>
-        {{~#if page-template-title--title}}
-          {{page-template-title--title}}
-        {{else}}
-          Penta Hackathon Demo Page
-        {{/if}}
-      </h1>
-      <p>
-        {{~#if page-template-title--description}}
-          {{page-template-title--description}}
-        {{else}}
-          A showcase of our new tokens being applied to create a new theme.
-        {{/if}}
-      </p>
-    {{/content}}
-  {{/page-main-section}}
-  {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier=page-template-gallery--modifier page-main-section--attribute=page-template-gallery--attribute}}
-    {{> toolbar-template toolbar--id=(concat page--id '-toolbar') toolbar-template--HasBulkSelect="true" toolbar-template--HasToggleGroup="true" toolbar-template--HasSearchFilter="true" toolbar-template--HasSortButton="true" toolbar-template--HasOverflowMenu="true"}}
-    {{> table-simple-table}}
-    {{> table-pagination-footer}}
-  {{/page-main-section}}
-{{/page-main}}
+        {{#> table-tbody table-tr--IsClickable="true" table-tr--basic--title="Clickable"}}
+          {{#> table-tr}}
+            {{#> table-td table-td--check="true"}}
+              {{#> check check--modifier="pf-m-standalone"}}
+                {{#> check-input check-input--attribute=(concat 'name="checkrow1" aria-labelledby="' table--id '-node1"')}}{{/check-input}}
+              {{/check}}
+            {{/table-td}}
+            {{#> table-th table-th--data-label="Repository name"}}
+              <div>
+                <div id="{{table--id}}-node1">Node 1</div>
+              </div>
+            {{/table-th}}
+            {{#> table-td table-td--data-label="Branches"}}
+              <span><i class="fas fa-code-branch"></i> 10</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Pull requests"}}
+              <span><i class="fas fa-code"></i> 25</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Workspaces"}}
+              <span><i class="fas fa-cube"></i> 5</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Last commit"}}
+              2 days ago
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Action"}}
+              <a href="/some/path">Action link</a>
+            {{/table-td}}
+            {{#> table-td table-td--action="true"}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
+              {{/button}}
+            {{/table-td}}
+          {{/table-tr}}
+
+          {{#> table-tr table-tr--IsSelected="true"}}
+            {{#> table-td table-td--check="true"}}
+              {{#> check check--modifier="pf-m-standalone"}}
+                {{#> check-input check-input--attribute=(concat 'name="checkrow2" aria-labelledby="' table--id '-node2" checked')}}{{/check-input}}
+              {{/check}}
+            {{/table-td}}
+            {{#> table-th table-th--data-label="Repository name"}}
+              <div>
+                <div id="{{table--id}}-node2">Node 2</div>
+              </div>
+            {{/table-th}}
+            {{#> table-td table-td--data-label="Branches"}}
+              <span><i class="fas fa-code-branch"></i> 8</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Pull requests"}}
+              <span><i class="fas fa-code"></i> 30</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Workspaces"}}
+              <span><i class="fas fa-cube"></i> 2</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Last commit"}}
+              2 days ago
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Action"}}
+              <a href="/some/path">Action link</a>
+            {{/table-td}}
+            {{#> table-td table-td--action="true"}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
+              {{/button}}
+            {{/table-td}}
+          {{/table-tr}}
+
+          {{#> table-tr}}
+            {{#> table-td table-td--check="true"}}
+              {{#> check check--modifier="pf-m-standalone"}}
+                {{#> check-input check-input--attribute=(concat 'name="checkrow3" aria-labelledby="' table--id '-node3"')}}{{/check-input}}
+              {{/check}}
+            {{/table-td}}
+            {{#> table-th table-th--data-label="Repository name"}}
+              <div>
+                <div id="{{table--id}}-node3">Node 3</div>
+              </div>
+            {{/table-th}}
+            {{#> table-td table-td--data-label="Branches"}}
+              <span><i class="fas fa-code-branch"></i> 12</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Pull requests"}}
+              <span><i class="fas fa-code"></i> 48</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Workspaces"}}
+              <span><i class="fas fa-cube"></i> 13</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Last commit"}}
+              30 days ago
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Action"}}
+              <a href="#">Action link</a>
+            {{/table-td}}
+            {{#> table-td table-td--action="true"}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
+              {{/button}}
+            {{/table-td}}
+          {{/table-tr}}
+
+          {{#> table-tr}}
+            {{#> table-td table-td--check="true"}}
+              {{#> check check--modifier="pf-m-standalone"}}
+                {{#> check-input check-input--attribute=(concat 'name="checkrow4" aria-labelledby="' table--id '-node4"')}}{{/check-input}}
+              {{/check}}
+            {{/table-td}}
+            {{#> table-th table-th--data-label="Repository name"}}
+              <div>
+                <div id="{{table--id}}-node4">Node 4</div>
+              </div>
+            {{/table-th}}
+            {{#> table-td table-td--data-label="Branches"}}
+              <span><i class="fas fa-code-branch"></i> 3</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Pull requests"}}
+              <span><i class="fas fa-code"></i> 8</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Workspaces"}}
+              <span><i class="fas fa-cube"></i> 20</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Last commit"}}
+              8 days ago
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Action"}}
+              <a href="/some/path">Action link</a>
+            {{/table-td}}
+            {{#> table-td table-td--action="true"}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
+              {{/button}}
+            {{/table-td}}
+          {{/table-tr}}
+
+          {{#> table-tr}}
+            {{#> table-td table-td--check="true"}}
+              {{#> check check--modifier="pf-m-standalone"}}
+                {{#> check-input check-input--attribute=(concat 'name="checkrow5" aria-labelledby="' table--id '-node5"')}}{{/check-input}}
+              {{/check}}
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Repository name"}}
+              <div>
+                <div id="{{table--id}}-node5">Node 5</div>
+              </div>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Branches"}}
+              <span><i class="fas fa-code-branch"></i> 34</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Pull requests"}}
+              <span><i class="fas fa-code"></i> 21</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Workspaces"}}
+              <span><i class="fas fa-cube"></i> 26</span>
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Last commit"}}
+              2 days ago
+            {{/table-td}}
+            {{#> table-td table-td--data-label="Action"}}
+              <a href="/some/path">Action link</a>
+            {{/table-td}}
+            {{#> table-td table-td--action="true"}}
+              {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Remove"'}}
+                <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
+              {{/button}}
+            {{/table-td}}
+          {{/table-tr}}
+        {{/table-tbody}}
+      {{/table}}
+    {{/page-main-section}}
+    {{/page-main-list}}
+  {{/page-main}}
 {{/page}}
 ```
 
