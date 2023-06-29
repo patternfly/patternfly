@@ -1,15 +1,15 @@
-// @debug $menu-toggle; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+// stylelint-disable
 
 .#{$menu-toggle} {
-  --#{$menu-toggle}--BorderRadius: 0;
-  --#{$menu-toggle}--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$menu-toggle}--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$menu-toggle}--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
-  --#{$menu-toggle}--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$menu-toggle}--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$menu-toggle}--Color: var(--#{$pf-global}--Color--100);
+  --#{$menu-toggle}--BorderRadius: var(--pf--global--border--radius--small);
+  --#{$menu-toggle}--PaddingTop: var(--pf--global--spacer--sm);
+  --#{$menu-toggle}--PaddingRight: var(--pf--global--spacer--md);
+  --#{$menu-toggle}--PaddingBottom: var(--pf--global--spacer--sm);
+  --#{$menu-toggle}--PaddingLeft: var(--pf--global--spacer--md);
+  --#{$menu-toggle}--FontSize: var(--pf--global--font--size--body);
+  --#{$menu-toggle}--Color: var(--pf--global--text--color--regular);
   --#{$menu-toggle}--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$menu-toggle}--BackgroundColor: transparent;
+  --#{$menu-toggle}--BackgroundColor: var(--pf--global--background--color--control);
 
   // Border base
   --#{$menu-toggle}--before--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
@@ -21,9 +21,6 @@
   --#{$menu-toggle}--before--BorderBottomColor: transparent;
   --#{$menu-toggle}--before--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
 
-  // Border accent
-  --#{$menu-toggle}--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$menu-toggle}--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
 
   // Hover
   --#{$menu-toggle}--hover--BackgroundColor: transparent;
@@ -99,7 +96,8 @@
   --#{$menu-toggle}__controls--MarginRight: 0;
 
   // Toggle icon
-  --#{$menu-toggle}__toggle-icon--MarginRight: var(--#{$pf-global}--spacer--sm);
+  --#{$menu-toggle}__toggle-icon--MarginRight: 0;
+  --#{$menu-toggle}__toggle-icon--Color: var(--pf--global--icon--color--regular);
   --#{$menu-toggle}--m-plain__toggle-icon--Color: var(--#{$pf-global}--Color--200);
   --#{$menu-toggle}--m-plain--hover__toggle-icon--Color: var(--#{$pf-global}--Color--100);
   --#{$menu-toggle}--m-plain--active__toggle-icon--Color: var(--#{$pf-global}--Color--100);
@@ -176,10 +174,13 @@
   cursor: pointer;
   background-color: var(--#{$menu-toggle}--BackgroundColor);
   border: 0;
-  border-radius: var(--#{$menu-toggle}--BorderRadius);
 
-  &::before,
-  &::after {
+  &,
+  &::before {
+    border-radius: var(--#{$menu-toggle}--BorderRadius);
+  }
+
+  &::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -190,13 +191,7 @@
   }
 
   &::before {
-    border-color: var(--#{$menu-toggle}--before--BorderTopColor) var(--#{$menu-toggle}--before--BorderRightColor) var(--#{$menu-toggle}--before--BorderBottomColor) var(--#{$menu-toggle}--before--BorderLeftColor);
-    border-style: solid;
-    border-width: var(--#{$menu-toggle}--before--BorderTopWidth) var(--#{$menu-toggle}--before--BorderRightWidth) var(--#{$menu-toggle}--before--BorderBottomWidth) var(--#{$menu-toggle}--before--BorderLeftWidth);
-  }
-
-  &::after {
-    border-bottom: var(--#{$menu-toggle}--after--BorderBottomWidth) solid var(--#{$menu-toggle}--after--BorderBottomColor);
+    border: var(--pf--global--border--width--control) solid var(--pf--global--border--color--control);
   }
 
   &.pf-m-primary {
@@ -553,12 +548,5 @@
 
 .#{$menu-toggle}__toggle-icon {
   margin-right: var(--#{$menu-toggle}__toggle-icon--MarginRight);
-  color: var(--#{$menu-toggle}__toggle-icon--Color, inherit);
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/menu-toggle";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-menu-toggle;
+  color: var(--#{$menu-toggle}__toggle-icon--Color);
 }

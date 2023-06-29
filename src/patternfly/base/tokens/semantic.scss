@@ -154,7 +154,7 @@
   --pf--global--border--color--danger--hover: var(--pf--global--color--danger--hover);
   --pf--global--border--color--danger--active: var(--pf--global--color--danger--active);
 
-  --pf--global--border--color-info: var(--pf--global--color--info);
+  --pf--global--border--color--info: var(--pf--global--color--info);
   --pf--global--border--color--info--hover: var(--pf--global--color--info--hover);
   --pf--global--border--color--info--active: var(--pf--global--color--info--active);
 
@@ -167,15 +167,20 @@
   --pf--global--border--color--hover: var(--pf--global--color--brand--100);
   --pf--global--border--color--active: var(--pf--global--color--brand--300);
 
+  --pf--global--border--color--control: var(--pf--global--border--color--100);
+  --pf--global--border--color--control--hover: var(--pf--global--color--brand--100);
+  --pf--global--border--color--control--active: var(--pf--global--color--brand--200);
+
+  --pf--global--border--width--control: var(--pf--global--border--width--100);
+  --pf--global--border--width--control--hover: var(--pf--global--border--width--100);
+  --pf--global--border--width--control--active: var(--pf--global--border--width--200);
+
   --pf--global--border--width--divider: var(--pf--global--border--width--100);
   --pf--global--border--width--divider--hover: var(--pf--global--border--width--100);
   --pf--global--border--width--divider--active: var(--pf--global--border--width--100);
   --pf--global--border--width--button: var(--pf--global--border--width--100);
   --pf--global--border--width--button--hover: var(--pf--global--border--width--200);
   --pf--global--border--width--button--active: var(--pf--global--border--width--200);
-  --pf--global--border--width--control: var(--pf--global--border--width--100);
-  --pf--global--border--width--control--hover: var(--pf--global--border--width--100);
-  --pf--global--border--width--control--active: var(--pf--global--border--width--200);
 
   --pf--global--border--radius--tiny: var(--pf--global--border--radius--100);
   --pf--global--border--radius--small: var(--pf--global--border--radius--200);

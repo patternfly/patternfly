@@ -15,4 +15,16 @@ $pf-v5-c-brand--breakpoint-map: build-breakpoint-map();
     display: inline-flex;
     max-width: 100%; // move to _globals.scss at breaking change
   }
+
+  &.pf-m-dark {
+    display: none;
+  }
+
+  :where(.pf-v5-theme-dark) &.pf-m-light {
+    display: none;
+  }
+
+  :where(.pf-v5-theme-dark) &.pf-m-dark {
+    display: block;
+  }
 }
