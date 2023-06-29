@@ -13,9 +13,9 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
 
   // Header brand
-  --#{$page}__header-brand--PaddingLeft: var(--pf-global--spacer--md);
-  --#{$page}__header-brand--xl--PaddingRight: var(--pf-global--spacer--xl);
-  --#{$page}__header-brand--xl--PaddingLeft: var(--pf-global--spacer--xl);
+  --#{$page}__header-brand--PaddingLeft: var(--pf--global--spacer--md);
+  --#{$page}__header-brand--xl--PaddingRight: var(--pf--global--spacer--xl);
+  --#{$page}__header-brand--xl--PaddingLeft: var(--pf--global--spacer--xl);
 
   @media (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$page}__header-brand--PaddingLeft: var(--#{$page}__header-brand--xl--PaddingLeft);
@@ -23,13 +23,13 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Toggle
-  --#{$page}__header-sidebar-toggle__c-button--PaddingTop: var(--pf-global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--PaddingRight: var(--pf-global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--PaddingBottom: var(--pf-global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--PaddingLeft: var(--pf-global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--MarginRight: var(--pf-global--spacer--sm);
+  --#{$page}__header-sidebar-toggle__c-button--PaddingTop: var(--pf--global--spacer--sm);
+  --#{$page}__header-sidebar-toggle__c-button--PaddingRight: var(--pf--global--spacer--sm);
+  --#{$page}__header-sidebar-toggle__c-button--PaddingBottom: var(--pf--global--spacer--sm);
+  --#{$page}__header-sidebar-toggle__c-button--PaddingLeft: var(--pf--global--spacer--sm);
+  --#{$page}__header-sidebar-toggle__c-button--MarginRight: var(--pf--global--spacer--sm);
   --#{$page}__header-sidebar-toggle__c-button--MarginLeft: calc(var(--#{$page}__header-sidebar-toggle__c-button--PaddingLeft) * -1);
-  --#{$page}__header-sidebar-toggle__c-button--FontSize: var(--pf-global--icon--size--300);
+  --#{$page}__header-sidebar-toggle__c-button--FontSize: var(--pf--global--icon--size--300);
 
   // Header brand link
   --#{$page}__header-brand-link--c-brand--MaxHeight: #{pf-size-prem(60px)};
@@ -37,8 +37,8 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Header nav
   --#{$page}__header-nav--BackgroundColor: var(--pf--global--background--color--secondary);
   --#{$page}__header-nav--xl--BackgroundColor: transparent;
-  --#{$page}__header-nav--xl--PaddingRight: var(--pf-global--spacer--xl);
-  --#{$page}__header-nav--xl--PaddingLeft: var(--pf-global--spacer--xl);
+  --#{$page}__header-nav--xl--PaddingRight: var(--pf--global--spacer--xl);
+  --#{$page}__header-nav--xl--PaddingLeft: var(--pf--global--spacer--xl);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$page}__header-nav--BackgroundColor: var(--#{$page}__header-nav--xl--BackgroundColor);
@@ -47,10 +47,10 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Header tools
-  --#{$page}__header-tools--MarginRight: var(--pf-global--spacer--md);
-  --#{$page}__header-tools--xl--MarginRight: var(--pf-global--spacer--lg);
-  --#{$page}__header-tools--c-avatar--MarginLeft: var(--pf-global--spacer--md);
-  --#{$page}__header-tools-group--MarginLeft: var(--pf-global--spacer--xl);
+  --#{$page}__header-tools--MarginRight: var(--pf--global--spacer--md);
+  --#{$page}__header-tools--xl--MarginRight: var(--pf--global--spacer--lg);
+  --#{$page}__header-tools--c-avatar--MarginLeft: var(--pf--global--spacer--md);
+  --#{$page}__header-tools-group--MarginLeft: var(--pf--global--spacer--xl);
   --#{$page}__header-tools-group--Display: flex;
   --#{$page}__header-tools-item--Display: block;
 
@@ -103,22 +103,23 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main--ZIndex: var(--#{$pf-global}--ZIndex--xs);
 
   // Main section
-  --#{$page}__main-section--PaddingTop: var(--pf-global--spacer--md);
-  --#{$page}__main-section--PaddingRight: var(--pf-global--spacer--md);
-  --#{$page}__main-section--PaddingBottom: var(--pf-global--spacer--md);
-  --#{$page}__main-section--PaddingLeft: var(--pf-global--spacer--md);
-  --#{$page}__main-section--xl--PaddingTop: var(--pf-global--spacer--xl);
-  --#{$page}__main-section--xl--PaddingRight: var(--pf-global--spacer--xl);
-  --#{$page}__main-section--xl--PaddingBottom: var(--pf-global--spacer--xl);
-  --#{$page}__main-section--xl--PaddingLeft: var(--pf-global--spacer--xl);
-  --#{$page}__main-breadcrumb--main-section--PaddingTop: var(--pf-global--spacer--md);
-  --#{$page}__main-section--BackgroundColor: var(--pf--global--background--color--primary);
-  --#{$page}__main-section--m-light--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
-  --#{$page}__main-section--m-light-100--BackgroundColor: var(--#{$pf-global}--BackgroundColor--150);
-  --#{$page}__main-section--m-dark-100--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-transparent-100);
-  --#{$page}__main-section--m-dark-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-transparent-200);
-  --#{$page}__main-breadcrumb--page__main-tabs--PaddingTop: var(--pf-global--spacer--md);
-  --#{$page}__main-nav--page__main-tabs--PaddingTop: var(--pf-global--spacer--md);
+  --#{$page}__main-section--MarginTop: var(--pf--global--spacer--md);
+  --#{$page}__main-section--PaddingTop: var(--pf--global--spacer--md);
+  --#{$page}__main-section--PaddingRight: var(--pf--global--spacer--md);
+  --#{$page}__main-section--PaddingBottom: var(--pf--global--spacer--md);
+  --#{$page}__main-section--PaddingLeft: var(--pf--global--spacer--md);
+  --#{$page}__main-section--xl--PaddingTop: var(--pf--global--spacer--xl);
+  --#{$page}__main-section--xl--PaddingRight: var(--pf--global--spacer--xl);
+  --#{$page}__main-section--xl--PaddingBottom: var(--pf--global--spacer--xl);
+  --#{$page}__main-section--xl--PaddingLeft: var(--pf--global--spacer--xl);
+  --#{$page}__main-breadcrumb--main-section--PaddingTop: var(--pf--global--spacer--md);
+  --#{$page}__main-section--BackgroundColor: transparent; 
+  --#{$page}__main-section--m-light--BackgroundColor: transparent; 
+  --#{$page}__main-section--m-light-100--BackgroundColor: transparent;
+  --#{$page}__main-section--m-dark-100--BackgroundColor: transparent;
+  --#{$page}__main-section--m-dark-200--BackgroundColor: transparent;
+  --#{$page}__main-breadcrumb--page__main-tabs--PaddingTop: var(--pf--global--spacer--md);
+  --#{$page}__main-nav--page__main-tabs--PaddingTop: var(--pf--global--spacer--md);
 
   // Limit width
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
@@ -168,13 +169,13 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Main section breadcrumb
   --#{$page}__main-breadcrumb--BackgroundColor: var(--pf--global--background--color--primary);
-  --#{$page}__main-breadcrumb--PaddingTop: var(--pf-global--spacer--md);
-  --#{$page}__main-breadcrumb--PaddingRight: var(--pf-global--spacer--md);
+  --#{$page}__main-breadcrumb--PaddingTop: var(--pf--global--spacer--md);
+  --#{$page}__main-breadcrumb--PaddingRight: var(--pf--global--spacer--md);
   --#{$page}__main-breadcrumb--PaddingBottom: 0;
   --#{$page}__main-breadcrumb--PaddingLeft: var(--pf--global--spacer--md);
-  --#{$page}__main-breadcrumb--m-sticky-top--PaddingBottom: var(--pf-global--spacer--md);
-  --#{$page}__main-breadcrumb--xl--PaddingRight: var(--pf-global--spacer--lg);
-  --#{$page}__main-breadcrumb--xl--PaddingLeft: var(--pf-global--spacer--lg);
+  --#{$page}__main-breadcrumb--m-sticky-top--PaddingBottom: var(--pf--global--spacer--md);
+  --#{$page}__main-breadcrumb--xl--PaddingRight: var(--pf--global--spacer--lg);
+  --#{$page}__main-breadcrumb--xl--PaddingLeft: var(--pf--global--spacer--lg);
 
   // Main section tabs
   --#{$page}__main-tabs--PaddingTop: 0;
@@ -774,10 +775,4 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   > .#{$drawer} {
     flex: 1 0 auto;
   }
-}
-
-@import "themes/dark/page";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-page;
 }
