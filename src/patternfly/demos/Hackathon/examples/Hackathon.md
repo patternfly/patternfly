@@ -39,8 +39,15 @@ wrapperTag: div
     {{/masthead-content}}
   {{/masthead}}
 {{#> page-sidebar page-sidebar--ExcludeSidebarBody=true}}
-    {{#> page-sidebar-body}}
-      {{#> nav nav--attribute='aria-label="Global"'}}
+{{#> page-sidebar-body}}
+  {{#> content}}
+    <h3>
+        PatternFly Navigation Product Name
+    </h3>
+  {{/content}}
+{{/page-sidebar-body}}
+{{#> page-sidebar-body}}
+{{#> nav nav--attribute='aria-label="Global"'}}
         {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
           {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
             Cluster
