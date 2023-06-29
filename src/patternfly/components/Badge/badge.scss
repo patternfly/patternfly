@@ -37,6 +37,18 @@
     --#{$badge}--Color: var(--#{$badge}--m-unread--Color);
     --#{$badge}--BackgroundColor: var(--#{$badge}--m-unread--BackgroundColor);
   }
+
+  &.pf-m-dark {
+    display: none;
+  }
+
+  :where(.pf-v5-theme-dark) &.pf-m-light {
+    display: none;
+  }
+
+  :where(.pf-v5-theme-dark) &.pf-m-light {
+    display: block;
+  }
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
