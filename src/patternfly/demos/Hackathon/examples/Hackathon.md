@@ -37,7 +37,91 @@ wrapperTag: div
       {{/toolbar}}
     {{/masthead-content}}
   {{/masthead}}
-  {{> page-template-sidebar}}
+{{#> page-sidebar page-sidebar--ExcludeSidebarBody=true}}
+    {{#> page-sidebar-body}}
+
+
+{{#> nav nav--attribute='aria-label="Global"'}}
+  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title1"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title1"'}}
+      Cluster
+    {{/nav-section-title}}
+    {{#> nav-list}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Dashboard
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Builds
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Compute
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Networking
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Observe
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Operators
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#" nav-link--current="true"}}
+          Applications
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Workloads
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+  {{#> nav-section nav-section--attribute='aria-labelledby="grouped-title2"'}}
+    {{#> nav-section-title nav-section-title--attribute='id="grouped-title2"'}}
+      Settings
+    {{/nav-section-title}}
+    {{#> nav-list}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          User Management
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Administration
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Import YAML
+        {{/nav-link}}
+      {{/nav-item}}
+      {{#> nav-item}}
+        {{#> nav-link nav-link--href="#"}}
+          Help and Support
+        {{/nav-link}}
+      {{/nav-item}}
+    {{/nav-list}}
+  {{/nav-section}}
+{{/nav}}
+
+
+    {{/page-sidebar-body}}
+{{/page-sidebar}}
+
   {{> page-template-main}}
 {{/page}}
 ```
