@@ -26,7 +26,7 @@ export const exampleObject = () => (
   }
 );
 
-export const buildMe = function(object) {
+export const buildMe = (object) => {
   const myObj = {};
   // console.log(object.count);
 
@@ -34,7 +34,7 @@ export const buildMe = function(object) {
 
   for (let i = 1; i < count + 1; i++) {
     // myObj.key = 'tess';
-    myObj[object.key + '-' + i] = globalContent.page.mainTitle;
+    myObj[object.name + '-' + i] = globalContent.page.mainTitle;
     // myObj = myObj[i];
     // console.log(i);
     // console.log(Object.keys(object));
@@ -50,11 +50,13 @@ export const buildMe = function(object) {
   return myObj;
 }
 
-export const cardContent = buildMe({
-  key: 'name',
-  count: 10,
-  request: ['title', 'subtitle', 'content', 'link']
-});
+export const cardContent = () => (
+  buildMe({
+    name: 'card',
+    count: 10,
+    request: ['title', 'subtitle', 'content', 'link']
+  }
+));
 
 // console.log(cardContent);
 
