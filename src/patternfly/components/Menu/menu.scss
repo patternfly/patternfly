@@ -726,6 +726,7 @@
   }
 
   &:disabled,
+  &.pf-m-disabled,
   &.pf-m-aria-disabled {
     --#{$menu}__item-action--Color: var(--#{$menu}__item-action--disabled--Color);
   }
