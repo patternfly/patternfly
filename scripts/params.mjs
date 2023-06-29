@@ -7,3 +7,41 @@ export const getParams = () => {
 
   return params;
 };
+
+export const defaultNames = ({
+  users: [
+    { username: 'alan', firstName: 'Alan', lastName: 'Johnson', email: 'alan@test.com' },
+    { username: 'allison', firstName: 'Allison', lastName: 'House', email: 'allison@test.com' },
+    { username: 'ryan', firstName: 'Ryan', lastName: 'Carson', email: 'ryan@test.com' }
+  ]
+});
+
+export const globalContent = {
+  page: {
+    mainTitle: ['Red Hat OpenShift Service on AWS', 'Red Hat Ansible Automation', 'Microsoft Azure Red Hat OpenShift'],
+    mainSubTitle: ['Subtitle 1', 'Subtitle 2', 'Subtitle 3']
+  },
+  table: {
+    th: [
+
+    ],
+    title: {
+
+    },
+    subtitle: {
+
+    }
+  },
+  general: {
+    name: 'patternfly',
+    content: 'Working repo for PatternFly 4 <a href="https://pf4.patternfly.org/">patternfly</a>',
+    count1: '3',
+    count2: '6',
+    count3: '2',
+    more: {
+      option1: 'this 1',
+      option2: 'this 2',
+      option3: 'this 3'
+    }
+  }
+};

@@ -97,6 +97,21 @@ Note: strings need single quotes, booleans, data, variables, etc do not need quo
 | **constructPrefix** | Constructs pf prefix. | `{{constructPrefix}}`
 | **debug** | Logs component parameters | `{{debug}}`, `{{debug options}}`, `{{> example-component-object example-component-body--modifier='testing' (debug)}}`
 
+| Config | Description | Usage
+| ----------- | ----------- | ----------- | ----------- |
+| **isRoot** | Used once, at the component root, to load global content. | `{{config isRoot=true}}`
+
+
+
+```
+{{>
+    config
+    className='pf-v5-component'
+    isRoot=true
+}}
+```
+
+
 ### Current issues
 * Code gets very repetitive when developing demos
 * Hard to track accessibility with current tooling

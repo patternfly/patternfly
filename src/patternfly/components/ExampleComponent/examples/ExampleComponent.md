@@ -6,19 +6,32 @@ cssPrefix: pf-v5-c-example-component
 ---
 
 ## Examples
+### Test
+```hbs
+
+{{#each example-component-content}}
+  {{#> example-component example-component-body--modifier='testing' }}
+  {{/example-component}}
+{{/each}}
+```
+
 ### Basic
 ```hbs
-{{#> example-component example-component-body--modifier='testing'}}
-  {{#> example-component-title}}
-    Basic example title
-  {{/example-component-title}}
-  {{#> example-component-body}}
-    Basic example body
-  {{/example-component-body}}
-  {{#> example-component-footer}}
-    Basic example footer
-  {{/example-component-footer}}
-{{/example-component}}
+{{#each cardContent}}
+  {{#> example-component example-component-body--modifier='testing' }}
+    {{@key}}
+    {{#> example-component-title}}
+      Basic example title
+    {{/example-component-title}}
+    {{#> example-component-body}}
+      Basic example body
+    {{/example-component-body}}
+    {{#> example-component-footer}}
+      Basic example footer
+    {{/example-component-footer}}
+  {{/example-component}}
+{{/each}}
+
 ```
 ### Object iteration
 ```hbs

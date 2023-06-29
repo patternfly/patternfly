@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
-import { getParams } from './params.mjs';
+import { getParams, globalContent } from './params.mjs';
 
 export const object = function({ hash }) {
   return hash;
@@ -9,6 +9,28 @@ export const object = function({ hash }) {
 export const array = function() {
   return Array.from(arguments).slice(0, arguments.length - 1);
 }
+
+// export const buildMe = function(object, globalContent) {
+//   let myObj = {};
+//   // console.log(object.count);
+
+//   const count = object.count;
+
+//   for (let i = 0; i < count; i++) {
+//     // myObj = myObj[i];
+//     console.log(i);
+//     // console.log(Object.keys(object));
+//     // console.log('hey');
+//   }
+
+//   // for (const property in object) {
+//   //   console.log(`${property}: ${object[property]}`);
+//   // }
+
+
+
+//   return myObj;
+// }
 
 export const kebabCase = (string) => {
   return string.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/[\s_]+/g, '-').toLowerCase();

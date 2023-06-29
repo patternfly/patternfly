@@ -21,7 +21,7 @@ const sassFiles = [
   // No need to compile component theme sass files to empty css files
   '!./src/patternfly/components/**/themes/**/*.scss'
 ];
-const hbsFiles = ['./src/patternfly/**/*.hbs'];
+const hbsFiles = ['./src/patternfly/*.hbs', './src/patternfly/**/*.hbs', './src/patternfly/**/**/*.hbs'];
 const mdFiles = ['./src/patternfly/**/*.md'];
 const helperFiles = ['./scripts/init.mjs', './scripts/params.mjs', './src/**/*.mjs', './scripts/helpers.mjs'];
 
