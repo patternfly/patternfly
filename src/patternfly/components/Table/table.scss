@@ -32,8 +32,8 @@
   --#{$table}__thead--cell--FontWeight: var(--pf--global--font--weight--body--bold);
 
   // Tbody cell
-  --#{$table}__tbody--cell--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$table}__tbody--cell--PaddingBottom: var(--#{$pf-global}--spacer--lg);
+  --#{$table}__tbody--cell--PaddingTop: var(--pf--global--spacer--md);
+  --#{$table}__tbody--cell--PaddingBottom: var(--pf--global--spacer--md);
 
   // Tr
   --#{$table}__tr--BoxShadow--top--base: 0 #{pf-size-prem(-3px)} #{pf-size-prem(4px)} #{pf-size-prem(-2px)} rgba(3,3,3,.08);

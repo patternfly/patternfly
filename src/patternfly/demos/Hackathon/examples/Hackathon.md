@@ -59,7 +59,8 @@ wrapperTag: div
   {{#> page-sidebar page-sidebar--ExcludeSidebarBody=true}}
     {{#> page-sidebar-header}}
       {{#> page-sidebar-title}}
-        PatternFly Navigation Product Name
+        PatternFly Navigation<br>
+        Product Name
       {{/page-sidebar-title}}
     {{/page-sidebar-header}}
     {{#> page-sidebar-body}}

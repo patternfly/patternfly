@@ -86,7 +86,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-header--BorderBottomColor: var(--pf--global--border--color);
   --#{$page}__sidebar-header--PaddingTop: var(--pf--global--spacer--sm);
   --#{$page}__sidebar-header--PaddingBottom: var(--pf--global--spacer--md);
-  --#{$page}__sidebar-title--FontSize: var(--pf--global--font--size--heading--sm);
+  --#{$page}__sidebar-title--FontSize: var(--pf--global--font--size--heading--xs);
   --#{$page}__sidebar-title--LineHeight: var(--pf--global--font--line-height--heading);
   --#{$page}__sidebar-title--FontFamily: var(--pf--global--font--family--heading);
   --#{$page}__sidebar-title--FontWeight: var(--pf--global--font--weight--heading--bold);
@@ -553,6 +553,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main-list {
   background-color: var(--pf--global--background--color--primary);
   margin-bottom: var(--pf--global--spacer--lg);
+  padding-bottom: var(--pf--global--spacer--lg);
   border-radius: var(--pf--global--border--radius--large);
 }
 
