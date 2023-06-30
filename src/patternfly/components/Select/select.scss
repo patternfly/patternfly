@@ -76,9 +76,6 @@
   // Typeahead form
   --#{$select}__toggle-typeahead--MinWidth: #{pf-size-prem(120px)};
 
-  // This is really var(--#{$form-control}--PaddingBottom) but has to be recalculated instead of reusing another component's variable
-  --#{$select}__toggle-typeahead--focus--PaddingBottom: calc(var(--#{$pf-global}--spacer--form-element) - var(--#{$pf-global}--BorderWidth--md));
-
   // Toggle text
   --#{$select}__toggle--m-placeholder__toggle-text--Color: var(--#{$pf-global}--Color--dark-200);
 
@@ -355,7 +352,6 @@
       --#{$form-control}--invalid--BackgroundUrl: none;
 
       position: relative;
-      height: auto;
     }
   }
 
@@ -415,12 +411,6 @@
     margin-right: var(--#{$select}__toggle-wrapper--not-last-child--MarginRight);
   }
 
-  // Remove during breaking change
-  // if there is an input in the toggle-wrapper, then give it a negative top margin to match the typeahead top padding
-  > .#{$form-control} {
-    margin-top: calc(-1 * var(--#{$select}__toggle-wrapper--m-typeahead--PaddingTop));
-  }
-
   // a chip group needs a bottom margin to make some space between the chip group and typeahead input box if it wraps
   .#{$chip}-group {
     margin-top: var(--#{$select}__toggle-wrapper--c-chip-group--MarginTop);
@@ -455,13 +445,10 @@
 
   &.#{$form-control} {
     background-color: var(--#{$select}__toggle-typeahead--BackgroundColor);
-    border-top: var(--#{$select}__toggle-typeahead--BorderTop); // remove and define border-top-color w/ &.#{$form-control} at breaking change
-    border-right: var(--#{$select}__toggle-typeahead--BorderRight);
-    border-bottom-color: transparent;
-    border-left: var(--#{$select}__toggle-typeahead--BorderLeft);
 
-    &:focus {
-      padding-bottom: var(--#{$select}__toggle-typeahead--focus--PaddingBottom); // remove at breaking change
+    &::before,
+    &::after {
+      border: 0;
     }
   }
 }
