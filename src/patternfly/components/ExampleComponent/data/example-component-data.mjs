@@ -28,24 +28,16 @@ export const exampleObject = () => (
 
 export const buildMe = (object) => {
   const myObj = {};
-  // console.log(object.count);
-
   const count = object.count;
 
   for (let i = 1; i < count + 1; i++) {
-    // myObj.key = 'tess';
+    while (i < object.request.length) {
+      console.log(globalContent[object.request[i]]);
+    }
     myObj[object.name + '-' + i] = globalContent.page.mainTitle;
-    // myObj = myObj[i];
-    // console.log(i);
-    // console.log(Object.keys(object));
-    // console.log('hey');
   }
 
   console.log(myObj);
-
-  // for (const property in object) {
-  //   console.log(`${property}: ${object[property]}`);
-  // }
 
   return myObj;
 }
