@@ -18,8 +18,9 @@ export const defaultNames = ({
 
 export const globalContent = {
   page: {
-    mainTitle: ['Red Hat OpenShift Service on AWS', 'Red Hat Ansible Automation', 'Microsoft Azure Red Hat OpenShift'],
-    mainSubTitle: ['Subtitle 1', 'Subtitle 2', 'Subtitle 3']
+    title: ['Red Hat OpenShift Service on AWS', 'Red Hat Ansible Automation', 'Microsoft Azure Red Hat OpenShift'],
+    subTitle: ['Subtitle 1', 'Subtitle 2', 'Subtitle 3'],
+    content: ['Lorem', 'Ipsum', 'Dolor']
   },
   table: {
     th: [

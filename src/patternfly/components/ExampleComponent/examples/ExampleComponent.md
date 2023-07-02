@@ -8,10 +8,7 @@ cssPrefix: pf-v5-c-example-component
 ## Examples
 ### Test
 ```hbs
-{{debug (cardContent)}}
-{{#each (cardContent)}}
-  <div>{{here}}here</div>
-{{/each}}
+<div>{{cardContent}}</div>
 ```
 
 ### Basic

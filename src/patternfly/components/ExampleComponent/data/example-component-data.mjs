@@ -27,28 +27,31 @@ export const exampleObject = () => (
 );
 
 export const buildMe = (object) => {
-  const myObj = {};
   const count = object.count;
+  console.log(object);
 
   for (let i = 1; i < count + 1; i++) {
-    while (i < object.request.length) {
-      console.log(globalContent[object.request[i]]);
+    const request = object.request;
+    // myObj = ;
+    if (count === request.length) {
+      i = 0;
     }
-    myObj[object.name + '-' + i] = globalContent.page.mainTitle;
+    // console.log(globalContent[request[i]]);
+    console.log(request);
+
+    // console.log(request.map(object[object.name + '-' + i].request = object.request[i]));
   }
-
-  console.log(myObj);
-
-  return myObj;
+  // return myObj;
 }
+
 
 export const cardContent = () => (
   buildMe({
     name: 'card',
     count: 10,
-    request: ['title', 'subtitle', 'content', 'link']
-  }
-));
+    request: ['page.title', 'page.subTitle', 'page.content', 'page.link']
+  })
+);
 
 // console.log(cardContent);
 

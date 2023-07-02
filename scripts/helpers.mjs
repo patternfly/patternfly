@@ -1,6 +1,7 @@
 import Handlebars from 'handlebars';
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
-import { getParams, globalContent } from './params.mjs';
+// import { getParams, globalContent } from './params.mjs';
+import { getParams } from './params.mjs';
 
 export const object = function({ hash }) {
   return hash;
@@ -26,11 +27,10 @@ export const array = function() {
 //   // for (const property in object) {
 //   //   console.log(`${property}: ${object[property]}`);
 //   // }
-
-
-
 //   return myObj;
 // }
+
+
 
 export const kebabCase = (string) => {
   return string.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/[\s_]+/g, '-').toLowerCase();
