@@ -8,14 +8,18 @@ cssPrefix: pf-v5-c-example-component
 ## Examples
 ### Test
 ```hbs
-<div>{{cardContent}}</div>
+{{#each (cardContent)}}
+  {{#> example-component example-component-body--modifier='testing' }}
+    {{debug}}
+  {{/example-component}}
+{{/each}}
+
 ```
 
 ### Basic
 ```hbs
-{{#each cardContent}}
-  {{#> example-component example-component-body--modifier='testing' }}
-    {{@key}}
+<!-- {{#each cardContent}}
+  {{#> example-component example-component-body--modifier='tes  ting' }}
     {{#> example-component-title}}
       Basic example title
     {{/example-component-title}}
@@ -26,13 +30,12 @@ cssPrefix: pf-v5-c-example-component
       Basic example footer
     {{/example-component-footer}}
   {{/example-component}}
-{{/each}}
-
+{{/each}} -->
 ```
 ### Object iteration
 ```hbs
 <!-- {{> example-component-object}} -->
-{{#example-component example-component-body--modifier='testing'}}
+{{#> example-component example-component-body--modifier='testing'}}
   test
 {{/example-component}}
 ```

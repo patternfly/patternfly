@@ -3,16 +3,18 @@ id: '{nameTitle}'
 beta: true
 section: {folder}
 cssPrefix: {nameBEM}
----
+---## Examples
 
-## Examples
 ### Basic
+
 ```hbs
 {{#> {nameDasherized}}}
   Basic example content
 {{/{nameDasherized}}}
 ```
+
 ### Demo
+
 ```hbs
 {{> {nameDasherized}-demo}}
 ```

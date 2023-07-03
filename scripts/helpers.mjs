@@ -1,7 +1,7 @@
 import Handlebars from 'handlebars';
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
-// import { getParams, globalContent } from './params.mjs';
-import { getParams } from './params.mjs';
+import { getParams, globalContent } from './params.mjs';
+// import { getParams } from './params.mjs';
 
 export const object = function({ hash }) {
   return hash;
@@ -11,29 +11,60 @@ export const array = function() {
   return Array.from(arguments).slice(0, arguments.length - 1);
 }
 
-// export const buildMe = function(object, globalContent) {
-//   let myObj = {};
-//   // console.log(object.count);
-
-//   const count = object.count;
-
-//   for (let i = 0; i < count; i++) {
-//     // myObj = myObj[i];
-//     console.log(i);
-//     // console.log(Object.keys(object));
-//     // console.log('hey');
-//   }
-
-//   // for (const property in object) {
-//   //   console.log(`${property}: ${object[property]}`);
-//   // }
-//   return myObj;
-// }
-
-
-
 export const kebabCase = (string) => {
   return string.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/[\s_]+/g, '-').toLowerCase();
+}
+
+export const buildMe = (object) => {
+  const myNewObj = {};
+  const entryObj = Object.entries(object);
+  const entryCount = Object.keys(object).length;
+  console.log(entryCount);
+
+  // object.forEach((entry) => {
+
+  //   // myNewObj[entryObj] = Object.entries.entryObj;
+  // });
+
+  // for (let i = 1; i < entryCount; i++) {
+  //   console.log(i);
+  //   myNewObj[(Object.entries[entryObj][i])] = entryObj[i];
+  // }
+
+  // console.log(myNewObj);
+
+  // for (let i = 0; i < entryCount; i++) {
+  //   myNewObj[i] = Object.keys(object[i]);
+  //   console.log(myNewObj);
+
+  //   // if (Object.keys(object)) {
+  //   //   console.log(Object.keys(object));
+  //   // }
+  //   // myNewObj[key]
+  // }
+
+  // if (Object.prototype.hasOwnProperty.call(myNewObj, 'count')) {
+  //   //
+  // }
+
+  // for (let i = 1; i < object.count; i++) {
+  // myObj[name[i]] = 'test';
+
+  // request.forEach(element => {
+  //   console.log(element);
+
+  //   // console.log(request.map(object[object.name + '-' + i].request = object.request[i]));
+  // });
+  // }
+  // if (count === request.length) {
+  //   i = 0;
+  // }
+
+  // console.log(request.map(object[object.name + '-' + i].request = object.request[i]));
+
+  // console.log(myNewObj);
+
+  return myNewObj;
 }
 
 export const setVar = (varName, varValue, options) => {
@@ -64,16 +95,16 @@ export const getRoot = (varValue, that, options) => {
   return that[mappedVariableName];
 };
 
-export const init = (options, setGlobal = false, ...params) => {
-  if (setGlobal) {
-    setVar('test', 'thing', options);
-  };
+// export const init = (options, setGlobal = false, ...params) => {
+//   if (setGlobal) {
+//     setVar('test', 'thing', options);
+//   };
 
-  Object.values(params).forEach(param => {
-    setVar((`${param}` + '--' + `${param}`), ('component--' + `${param}`), options);
-    console.log('here')
-  });
-}
+//   Object.values(params).forEach(param => {
+//     setVar((`${param}` + '--' + `${param}`), ('component--' + `${param}`), options);
+//     console.log('here')
+//   });
+// }
 
 // Create paramater list
 export const loadParams = function(className, target, list, root = false, options) {

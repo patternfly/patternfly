@@ -198,9 +198,14 @@ async function onHelperChange(file, hbsGlobPaths) {
 export function watchHelpers(helperFiles, hbsFiles, cb) {
   const watcher = watch(helperFiles, { delay: 0 });
 
+  // console.log(helperFiles);
+
   watcher.on('change', (file) => onHelperChange(file, hbsFiles));
   watcher.on('add', (file) => onHelperChange(file, hbsFiles));
+  // watcher.on('change', (file) => onHelperChange(file, helperFiles));
+  // watcher.on('add', (file) => onHelperChange(file, helperFiles));
   cb();
 }
 
 registerHelpers('scripts/helpers.mjs');
+// registerHelpers('src/patternfly/components/ExampleComponent/data/example-component-data.mjs');
