@@ -15,16 +15,32 @@ export const kebabCase = (string) => {
   return string.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/[\s_]+/g, '-').toLowerCase();
 }
 
+export const cardContent = () => (
+  buildMe({
+    card: {
+      count: 14,
+      request: ['card.title', 'card.subtitle']
+    },
+    page: {
+      count: 12,
+      request: ['page.title', 'page.subtitle']
+    }
+  })
+);
+
 export const buildMe = (object) => {
   const myNewObj = {};
   const entryObj = Object.entries(object);
-  const entryCount = Object.keys(object).length;
-  console.log(entryCount);
+  // const entryCount = Object.keys(object).length;
 
-  // object.forEach((entry) => {
+  object.forEach((entry) => {
+    myNewObj[entryObj] = entryObj;
+    // console.log(entry);
 
-  //   // myNewObj[entryObj] = Object.entries.entryObj;
-  // });
+    // myNewObj[entryObj] = Object.entries.entryObj;
+  });
+
+  // console.log(myNewObj);
 
   // for (let i = 1; i < entryCount; i++) {
   //   console.log(i);

@@ -8,12 +8,12 @@ cssPrefix: pf-v5-c-example-component
 ## Examples
 ### Test
 ```hbs
+<!-- {{cardContent}}
 {{#each (cardContent)}}
   {{#> example-component example-component-body--modifier='testing' }}
     {{debug}}
   {{/example-component}}
-{{/each}}
-
+{{/each}} -->
 ```
 
 ### Basic

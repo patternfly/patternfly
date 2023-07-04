@@ -8,6 +8,16 @@ export const getParams = () => {
   return params;
 };
 
+export const params = () => {
+  const params = {
+    defaultPrefixes: ['prefix', 'namespace', 'version', 'type'],
+    defaultAttributes: ['index', 'attribute', 'id', 'stuff', 'version', 'type'],
+    formAttributes: ['name', 'for']
+  }
+
+  return params;
+};
+
 export const defaultNames = ({
   users: [
     { username: 'alan', firstName: 'Alan', lastName: 'Johnson', email: 'alan@test.com' },

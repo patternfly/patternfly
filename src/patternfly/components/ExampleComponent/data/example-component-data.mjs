@@ -1,18 +1,18 @@
 import { buildMe } from '../../../../../scripts/helpers.mjs';
 // import { globalContent } from '../../../../../scripts/params.mjs';
 
-export const cardContent = () => (
-  buildMe({
-    card: {
-      count: 14,
-      request: ['card.title', 'card.subtitle']
-    },
-    page: {
-      count: 12,
-      request: ['page.title', 'page.subtitle']
-    }
-  })
-);
+// export const cardContent = () => (
+//   buildMe({
+//     card: {
+//       count: 14,
+//       request: ['card.title', 'card.subtitle']
+//     },
+//     page: {
+//       count: 12,
+//       request: ['page.title', 'page.subtitle']
+//     }
+//   })
+// );
 
 // export const cardContent = () => (
 //   buildMe({

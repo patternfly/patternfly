@@ -5,7 +5,7 @@ import through2 from 'through2';
 import prettyhtml from '@starptech/prettyhtml';
 import cheerio from 'cheerio';
 import { hbsInstance, hbsFileMap } from './html.mjs';
-import { params } from '../../params.mjs';
+import { params } from '../../scripts/params.mjs';
 
 const { src } = gulp;
 
