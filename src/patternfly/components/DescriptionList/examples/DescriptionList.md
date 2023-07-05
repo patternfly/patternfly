@@ -124,7 +124,7 @@ Column fill will modify the default placement of description list groups to fill
 
 ## Card variants
 
-Cards can be used as [description list group wrappers](../card#description-list-group-wrapper-card-variant). Using cards in this way applies the card body padding directly to the card and enables the use of card modifiers within description list groups.
+Cards can be used as description list group wrappers. Using cards in this way applies the card body padding directly to the card and enables the use of card modifiers within description list groups.
 
 ### Description list group wrapper as card
 ```hbs

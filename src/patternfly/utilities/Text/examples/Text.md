@@ -100,7 +100,7 @@ import './Text.css'
 ```
 
 ### Inverse colors
-These colors are best used with the ["inverse" background colors](/utilities/background-color#inverse-background-colors).
+These colors are best used with the ["inverse" background colors](/utility-classes/background-color#inverse-background-colors).
 
 ```hbs
 <div class="pf-v5-u-background-color-dark-400">
