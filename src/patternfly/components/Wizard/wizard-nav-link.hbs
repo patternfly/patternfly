@@ -10,6 +10,9 @@
   {{~#if wizard-nav-link--modifier}}
     {{wizard-nav-link--modifier}}
   {{/if}}"
+  {{#unless wizard-nav-link--IsLink}}
+    type="button"
+  {{/unless}}
   {{#if wizard-nav-link--IsCurrentPage}}
     aria-current="page"
   {{/if}}
