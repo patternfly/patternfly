@@ -172,10 +172,10 @@ Resizes in both directions
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-form-control` | `<div>` |  Initiates a container for an input, text area or select. For styling of checkboxes or radios see the [checkbox component](/components/forms/checkbox) or [radio component](/components/forms/radio). **Required**  |
-| `.pf-v5-c-form-control__utilities` | `<div>` |  Initiates a container for elements like icons to be associated with the form control.  |
-| `.pf-v5-c-form-control__icon` | `<div>` |  Creates a container for an icon associated with a form control.  |
-| `.pf-v5-c-form-control__toggle-icon` | `<div>` |  Initiates a toggle icon for a form select.  |
+| `.pf-v5-c-form-control` | `<span>` |  Initiates a container for an input, text area or select. For styling of checkboxes or radios see the [checkbox component](/components/forms/checkbox) or [radio component](/components/forms/radio). **Required**  |
+| `.pf-v5-c-form-control__utilities` | `<span>` |  Initiates a container for elements like icons to be associated with the form control.  |
+| `.pf-v5-c-form-control__icon` | `<span>` |  Creates a container for an icon associated with a form control.  |
+| `.pf-v5-c-form-control__toggle-icon` | `<span>` |  Initiates a toggle icon for a form select.  |
 | `.pf-m-resize-vertical` | `.pf-v5-c-form-control` | Modifies a form control element containing a text area so it can only be resized vertically. |
 | `.pf-m-resize-horizontal` | `.pf-v5-c-form-control` | Modifies a form control element containing a text area so it can only be resized horizontally. |
 | `.pf-m-resize-both` | `.pf-v5-c-form-control` | Modifies a `.pf-v5-c-form-control` element containing a text area so it resizes in both directions. |
