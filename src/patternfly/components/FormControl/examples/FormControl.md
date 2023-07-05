@@ -172,7 +172,7 @@ Resizes in both directions
 ### Usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-v5-c-form-control` | `<span>` |  Initiates a container for an input, text area or select. For styling of checkboxes or radios see the [checkbox component](/components/checkbox) or [radio component](/components/radio). **Required**  |
+| `.pf-v5-c-form-control` | `<span>` |  Initiates a container for an input, text area or select. For styling of checkboxes or radios see the [checkbox component](/components/forms/checkbox) or [radio component](/components/forms/radio). **Required**  |
 | `.pf-v5-c-form-control__utilities` | `<span>` |  Initiates a container for elements like icons to be associated with the form control.  |
 | `.pf-v5-c-form-control__icon` | `<span>` |  Creates a container for an icon associated with a form control.  |
 | `.pf-v5-c-form-control__toggle-icon` | `<span>` |  Initiates a toggle icon for a form select.  |
