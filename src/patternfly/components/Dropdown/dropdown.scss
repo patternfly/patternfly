@@ -80,7 +80,6 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --#{$dropdown}__toggle--m-split-button--m-action--child--PaddingLeft: var(--#{$pf-global}--spacer--sm);
   --#{$dropdown}__toggle--m-split-button--m-action--child--PaddingRight: var(--#{$pf-global}--spacer--sm);
   --#{$dropdown}__toggle--m-split-button--m-action__toggle-button--MarginRight: calc(-1 * var(--#{$pf-global}--BorderWidth--sm));
-  --#{$dropdown}__toggle--m-split-button__toggle-check__input--TranslateY: #{pf-size-prem(-1px)};
   --#{$dropdown}__toggle--m-split-button__toggle-text--MarginLeft: var(--#{$pf-global}--spacer--sm);
   --#{$dropdown}__toggle--m-split-button--child--BorderRadius: var(--#{$pf-global}--BorderRadius--sm);
 
@@ -345,7 +344,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
     .#{$dropdown}__toggle-check {
       display: flex;
-      align-items: center;
+      align-self: stretch;
       cursor: pointer;
 
       &.pf-m-in-progress {
@@ -355,9 +354,9 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
       > input,
       .#{$check} {
+        align-self: center;
         cursor: pointer;
         visibility: var(--#{$dropdown}__toggle--m-split-button__toggle-check__input--Visibility, unset);
-        transform: translateY(var(--#{$dropdown}__toggle--m-split-button__toggle-check__input--TranslateY));
       }
     }
 
@@ -637,6 +636,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 // Loading spinner
 .#{$dropdown}__toggle-progress {
   position: absolute;
+  left: var(--#{$dropdown}__toggle--m-split-button--child--PaddingLeft);
   visibility: var(--#{$dropdown}__toggle-progress--Visibility);
 
   .#{$spinner} {
