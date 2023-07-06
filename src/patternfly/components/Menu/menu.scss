@@ -556,11 +556,14 @@
   &.pf-m-disabled,
   &.pf-m-aria-disabled {
     --#{$menu}__list-item--hover--BackgroundColor: transparent;
-    --#{$menu}__list-item--focus-within--BackgroundColor: transparent;
     --#{$menu}__item--Color: var(--#{$menu}__list-item--m-disabled__item--Color);
     --#{$menu}__item-toggle-icon: var(--#{$menu}__list-item--m-disabled__item-toggle-icon--Color);
 
     pointer-events: none;
+  }
+
+  &.pf-m-disabled {
+    --#{$menu}__list-item--focus-within--BackgroundColor: transparent;
   }
 
   &.pf-m-load {
