@@ -365,7 +365,7 @@
 
     > .#{$check} {
       --#{$menu-toggle}--PaddingRight: 0;
-      --#{$check}__input--MarginTop: 0;
+      --#{$check}__input--TranslateY: 0;
       --#{$check}__label--Color: currentcolor;
       --#{$check}__label--disabled--Color: currentcolor;
 
