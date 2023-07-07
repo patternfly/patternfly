@@ -27,10 +27,6 @@
     --#{$check}__input--TranslateY: 0;
 
     display: inline-grid;
-
-    > .#{$check}__input {
-      align-self: center;
-    }
   }
 }
 
