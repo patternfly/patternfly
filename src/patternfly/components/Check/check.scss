@@ -27,6 +27,7 @@
     --#{$check}__input--TranslateY: 0;
 
     display: inline-grid;
+    align-items: normal;
 
     > .#{$check}__input {
       align-self: center;
