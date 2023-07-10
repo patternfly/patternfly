@@ -19,14 +19,6 @@ import './MenuToggle.css'
     {{> menu-toggle-toggle-icon}}
   {{/menu-toggle-controls}}
 {{/menu-toggle}}
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
-  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
-    {{#> menu-toggle-controls}}
-      {{> menu-toggle-toggle-icon}}
-    {{/menu-toggle-controls}}
-  {{/menu-toggle-button}}
-{{/menu-toggle}}
 ```
 
 ### Expanded
@@ -494,7 +486,7 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
-### With avatar and text
+### With avatar and text, full height
 ```hbs
 {{#> menu-toggle}}
   {{#> menu-toggle-icon}}

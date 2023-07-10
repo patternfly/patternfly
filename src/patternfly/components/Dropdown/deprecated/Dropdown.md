@@ -13,25 +13,6 @@ import './Dropdown.css'
 ### Expanded
 ```hbs
 {{> dropdown dropdown--id="dropdown-expanded" dropdown--IsExpanded="true" dropdown-toggle--text="Expanded dropdown"}}
-{{> dropdown dropdown--id="dropdown-split-button-disabledsss" dropdown--template--SplitButton="true" dropdown-toggle--HasCheckBox="true"}}
-{{> dropdown dropdown--id="dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
-{{#> menu-toggle}}
-  {{#> menu-toggle-text}}
-    Collapsed
-  {{/menu-toggle-text}}
-  {{#> menu-toggle-controls}}
-    {{> menu-toggle-toggle-icon}}
-  {{/menu-toggle-controls}}
-{{/menu-toggle}}
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
-  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
-    {{#> menu-toggle-controls}}
-      {{> menu-toggle-toggle-icon}}
-    {{/menu-toggle-controls}}
-  {{/menu-toggle-button}}
-{{/menu-toggle}}
-
 ```
 
 ### Collapsed

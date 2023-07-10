@@ -6,6 +6,185 @@ cssPrefix: pf-v5-c-toolbar
 
 import './Toolbar.css'
 
+### Example simple
+```hbs
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/menu-toggle-button}}
+{{/menu-toggle}}
+
+{{#> menu-toggle}}
+  {{#> menu-toggle-text}}
+    Count
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-count}}
+    {{#> badge badge--modifier="pf-m-unread"}}
+      4 selected
+    {{/badge}}
+  {{/menu-toggle-count}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+{{> dropdown dropdown--id="dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
+{{> dropdown dropdown--id="dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
+{{> dropdown dropdown--id="dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
+{{> dropdown dropdown--id="dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+
+{{> dropdown dropdown--id="dropdown-split-button-in-progress-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+
+{{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-primary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-secondary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-secondary-icon-expanded" dropdown--IsActionButton="true" dropdown-menu--HasIcons="true" dropdown-toggle--HasIconButton="true"}}
+
+{{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute='id="select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
+  <option value="" selected>Selectable placeholder</option>
+  <option value="Mr">Mr</option>
+{{/form-control}}
+<br>
+
+{{#> menu-toggle}}
+  {{#> menu-toggle-icon}}
+    {{> avatar}}
+  {{/menu-toggle-icon}}
+  {{#> menu-toggle-text}}
+    Ned Username
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+{{#> check}}
+  {{#> check-input check-input--attribute='id="check-basic" name="check-basic"'}}{{/check-input}}
+  {{#> check-label check-label--attribute='for="check-basic"'}}Check{{/check-label}}
+{{/check}}
+
+{{#> radio}}
+  {{#> radio-input radio-input--attribute='id="radio-simple" name="exampleRadioSimple"'}}{{/radio-input}}
+  {{#> radio-label radio-label--attribute='for="radio-simple"'}}Radio{{/radio-label}}
+{{/radio}}
+<br>
+<br>
+<br>
+{{> divider}}
+<br>
+<br>
+<br>
+```
+
+### Example in toolbar
+```hbs
+{{#> toolbar toolbar--id="example"}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-item}}
+        {{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
+          {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+          {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+            {{#> menu-toggle-controls}}
+              {{> menu-toggle-toggle-icon}}
+            {{/menu-toggle-controls}}
+          {{/menu-toggle-button}}
+        {{/menu-toggle}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> menu-toggle}}
+          {{#> menu-toggle-text}}
+            Count
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-count}}
+            {{#> badge badge--modifier="pf-m-unread"}}
+              4 selected
+            {{/badge}}
+          {{/menu-toggle-count}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="dropdown-split-button-in-progress-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute='id="select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
+          <option value="" selected>Selectable placeholder</option>
+          <option value="Mr">Mr</option>
+        {{/form-control}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{#> select select--id="select-success" select--IsSuccess="true"}}
+          Filter by status
+        {{/select}}
+      {{/toolbar-item}}
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+<br>
+<br>
+<br>
+{{> divider}}
+<br>
+<br>
+<br>
+{{#> toolbar toolbar--id="example-full-height" toolbar--attribute='style="height: 4rem"' toolbar--modifier='pf-m-full-height'}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-item}}
+        {{#> menu-toggle}}
+          {{#> menu-toggle-icon}}
+            {{> avatar}}
+          {{/menu-toggle-icon}}
+          {{#> menu-toggle-text}}
+            Ned Username
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        {{#> menu-toggle menu-toggle--modifier='pf-m-full-height'}}
+          {{#> menu-toggle-icon}}
+            {{> avatar}}
+          {{/menu-toggle-icon}}
+          {{#> menu-toggle-text}}
+            Ned Username
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+      {{/toolbar-item}}
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+```
+
 ## Introduction
 
 Toolbar relies on groups (`.pf-v5-c-toolbar__group`) and items (`.pf-v5-c-toolbar__item`), with default spacer values. Groups and items can be siblings and/or items can be nested within groups. Modifier selectors adjust spacing based on the type of group or item. Each modifier applies a unique CSS variable, therefore, the base spacer value for all elements can be customized and item/groups spacers can be themed individually. The default spacer value for items and groups is set to `--pf-v5-c-toolbar--spacer--base`, whose value is `--pf-v5-global--spacer--md` or 16px.
@@ -653,7 +832,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-v5-c-toolbar__content-section` | `<div>` | Initiates a toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-v5-c-toolbar__content-section` per `.pf-v5-c-toolbar__content` **Required** |
 | `.pf-v5-c-toolbar__expandable-content` | `<div>` | Initiates a toolbar expandable content section. |
 | `.pf-m-sticky` | `.pf-v5-c-toolbar` | Modifies toolbar component to be sticky to the top of its container. |
-| `.pf-m-full-height` | `.pf-v5-c-toolbar` | Modifies toolbar component to full height of its container and removes vertical padding. |
+| `.pf-m-full-height` | `.pf-v5-c-toolbar`, `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group` | Modifies toolbar component to full height of its container and removes vertical padding. |
 | `.pf-m-static` | `.pf-v5-c-toolbar` | Modifies expandable content section to position itself to the nearest absolutely positioned parent outside of the toolbar component. This is used primarily for masthead toolbar. |
 | `.pf-m-expanded` | `.pf-v5-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-bulk-select` | `.pf-v5-c-toolbar__item` | Initiates bulk select spacing. |
