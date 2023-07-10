@@ -8,7 +8,7 @@ import './Toolbar.css'
 
 ### Example simple
 ```hbs
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
+{{#> menu-toggle menu-toggle--id="1split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
@@ -31,19 +31,18 @@ import './Toolbar.css'
   {{/menu-toggle-controls}}
 {{/menu-toggle}}
 
-{{> dropdown dropdown--id="dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
-{{> dropdown dropdown--id="dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
-{{> dropdown dropdown--id="dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
-{{> dropdown dropdown--id="dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+{{> dropdown dropdown--id="1dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
+{{> dropdown dropdown--id="1dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
+{{> dropdown dropdown--id="1dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
+{{> dropdown dropdown--id="1dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
 
-{{> dropdown dropdown--id="dropdown-split-button-in-progress-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+{{> dropdown dropdown--id="1dropdown-split-button-in-progress-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
 
-{{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
-{{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-primary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
-{{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-secondary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
-{{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-secondary-icon-expanded" dropdown--IsActionButton="true" dropdown-menu--HasIcons="true" dropdown-toggle--HasIconButton="true"}}
+{{> dropdown dropdown--template--SplitButton="true" dropdown--id="1dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="1dropdown-split-button-action-primary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
+{{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="1dropdown-split-button-action-secondary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
 
-{{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute='id="select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
+{{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute='id="1select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
   <option value="" selected>Selectable placeholder</option>
   <option value="Mr">Mr</option>
 {{/form-control}}
@@ -85,7 +84,7 @@ import './Toolbar.css'
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-item}}
-        {{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
+        {{#> menu-toggle menu-toggle--id="2split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
           {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
           {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
             {{#> menu-toggle-controls}}
@@ -111,23 +110,47 @@ import './Toolbar.css'
         {{/menu-toggle}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{> dropdown dropdown--id="dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
+        {{> dropdown dropdown--id="2dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{> dropdown dropdown--id="dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
+        {{> dropdown dropdown--id="2dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{> dropdown dropdown--id="dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
+        {{#> menu-toggle}}
+          {{#> menu-toggle-icon}}
+            {{> avatar}}
+          {{/menu-toggle-icon}}
+          {{#> menu-toggle-text}}
+            Ned Username
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+      {{/toolbar-item}}
+      {{#> menu-toggle}}
+        {{#> menu-toggle-icon}}
+          {{> avatar}}
+        {{/menu-toggle-icon}}
+        {{#> menu-toggle-text}}
+          Ned Username
+        {{/menu-toggle-text}}
+        {{#> menu-toggle-controls}}
+          {{> menu-toggle-toggle-icon}}
+        {{/menu-toggle-controls}}
+      {{/menu-toggle}}
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="2dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{> dropdown dropdown--id="dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+        {{> dropdown dropdown--id="2dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{> dropdown dropdown--id="dropdown-split-button-in-progress-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+        {{> dropdown dropdown--id="2dropdown-split-button-in-progress-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
       {{/toolbar-item}}
 
       {{#> toolbar-item}}
-        {{> dropdown dropdown--template--SplitButton="true" dropdown--id="dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+        {{> dropdown dropdown--template--SplitButton="true" dropdown--id="2dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
       {{/toolbar-item}}
 
       {{#> toolbar-item}}
@@ -137,7 +160,7 @@ import './Toolbar.css'
         {{/form-control}}
       {{/toolbar-item}}
       {{#> toolbar-item}}
-        {{#> select select--id="select-success" select--IsSuccess="true"}}
+        {{#> select select--id="2select-success" select--IsSuccess="true"}}
           Filter by status
         {{/select}}
       {{/toolbar-item}}

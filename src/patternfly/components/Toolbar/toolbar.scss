@@ -6,7 +6,7 @@ $pf-v5-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .#{$toolbar} {
-  --#{$toolbar}--AlignItems--base: baseline;
+  --#{$toolbar}--AlignItems--base: start;
   --#{$toolbar}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$toolbar}--RowGap--base: var(--#{$pf-global}--spacer--lg); // row-gap between toolbar content elements
   --#{$toolbar}--RowGap: var(--#{$toolbar}--RowGap--base);
@@ -393,6 +393,10 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   // &:last-child must always come last for spacing system to work properly, as it has the same specificity as the preceding modifiers
   &:last-child {
     --#{$toolbar}--spacer: 0;
+  }
+
+  > * {
+    vertical-align: middle;
   }
 }
 

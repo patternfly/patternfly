@@ -15,6 +15,7 @@
   --#{$radio}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
 
   display: inline-grid;
+  display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--#{$radio}--GridGap);
   align-items: baseline;

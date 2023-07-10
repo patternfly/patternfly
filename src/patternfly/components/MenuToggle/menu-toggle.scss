@@ -165,7 +165,6 @@
 
   position: relative;
   display: inline-flex;
-  align-items: baseline;
   max-width: 100%;
   padding: var(--#{$menu-toggle}--PaddingTop) var(--#{$menu-toggle}--PaddingRight) var(--#{$menu-toggle}--PaddingBottom) var(--#{$menu-toggle}--PaddingLeft);
   font-size: var(--#{$menu-toggle}--FontSize);
@@ -175,6 +174,7 @@
   background-color: var(--#{$menu-toggle}--BackgroundColor);
   border: 0;
   border-radius: var(--#{$menu-toggle}--BorderRadius);
+  vertical-align: top; // fixes small bug in flex alignment
 
   &::before,
   &::after {
@@ -369,8 +369,7 @@
       --#{$check}__label--Color: currentcolor;
       --#{$check}__label--disabled--Color: currentcolor;
 
-      align-items: center;
-      align-self: stretch;
+      transform: translateY(var(--#{$menu-toggle}--#{$check}__input--TranslateY));
     }
 
     // Split button, active
@@ -526,6 +525,11 @@
   @include pf-v5-text-overflow;
 
   min-width: 0;
+}
+
+.#{$menu-toggle}__icon ~ :where(.#{$menu-toggle}__text),
+.#{$menu-toggle}__icon ~ :where(.#{$menu-toggle}__controls) {
+  align-self: center;
 }
 
 .#{$menu-toggle}__count {

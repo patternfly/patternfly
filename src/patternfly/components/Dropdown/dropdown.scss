@@ -188,6 +188,8 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --#{$dropdown}--m-full-height__toggle--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$dropdown}--m-full-height__toggle--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
+  // Check
+  --#{$dropdown}--#{$check}__input--TranslateY: #{pf-size-prem(1px)}; // nudge down slightly for perfect alignment
 
   position: relative;
   display: inline-block;
@@ -343,7 +345,8 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     }
 
     .#{$dropdown}__toggle-check {
-      align-self: stretch;
+      display: inline-flex;
+      align-items: center;
       cursor: pointer;
 
       &.pf-m-in-progress {
@@ -602,6 +605,10 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   .#{$dropdown}__toggle-text {
     @include pf-v5-text-overflow;
+  }
+
+  .#{$check}__input {
+    transform: translateY(var(--#{$dropdown}--#{$check}__input--TranslateY));
   }
 }
 

@@ -486,7 +486,7 @@ import './MenuToggle.css'
 {{/menu-toggle}}
 ```
 
-### With avatar and text, full height
+### With avatar and text
 ```hbs
 {{#> menu-toggle}}
   {{#> menu-toggle-icon}}
