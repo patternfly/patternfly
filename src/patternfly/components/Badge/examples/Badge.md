@@ -25,15 +25,19 @@ cssPrefix: pf-v5-c-badge
 ```hbs
 {{#> badge badge--modifier="pf-m-unread"}}
   7
+  {{#> screen-reader}}unread messages{{/screen-reader}}
 {{/badge}}
 {{#> badge badge--modifier="pf-m-unread"}}
   24
+  {{#> screen-reader}}unread messages{{/screen-reader}}
 {{/badge}}
 {{#> badge badge--modifier="pf-m-unread"}}
   240
+  {{#> screen-reader}}unread messages{{/screen-reader}}
 {{/badge}}
 {{#> badge badge--modifier="pf-m-unread"}}
   999+
+  {{#> screen-reader}}unread messages{{/screen-reader}}
 {{/badge}}
 ```
 
