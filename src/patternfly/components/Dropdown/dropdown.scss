@@ -189,8 +189,9 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --#{$dropdown}--m-full-height__toggle--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   max-width: 100%;
+  vertical-align: top;
 
   .#{$divider} {
     margin-top: var(--#{$dropdown}--c-divider--MarginTop);
@@ -252,7 +253,6 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   font-weight: var(--#{$dropdown}__toggle--FontWeight);
   line-height: var(--#{$dropdown}__toggle--LineHeight);
   color: var(--#{$dropdown}__toggle--Color);
-  vertical-align: top;
   background-color: var(--#{$dropdown}__toggle--BackgroundColor);
   border: none;
 

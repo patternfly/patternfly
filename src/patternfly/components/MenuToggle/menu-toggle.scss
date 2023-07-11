@@ -368,8 +368,6 @@
       --#{$menu-toggle}--PaddingRight: 0;
       --#{$check}__label--Color: currentcolor;
       --#{$check}__label--disabled--Color: currentcolor;
-
-      transform: translateY(var(--#{$menu-toggle}--#{$check}__input--TranslateY));
     }
 
     // Split button, active

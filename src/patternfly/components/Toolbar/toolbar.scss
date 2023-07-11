@@ -17,13 +17,13 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   // Item
   --#{$toolbar}__item--Display: block;
   --#{$toolbar}__item--MinWidth--base: auto;
-  --#{$toolbar}__item--AlignSelf: auto;
+  --#{$toolbar}__item--AlignSelf: baseline;
   --#{$toolbar}__item--AlignItems: var(--#{$toolbar}--AlignItems--base);
 
   // Group
   --#{$toolbar}__group--Display: flex;
   --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--AlignItems--base);
-  --#{$toolbar}__group--AlignSelf: auto;
+  --#{$toolbar}__group--AlignSelf: start;
   --#{$toolbar}__group--RowGap: var(--#{$toolbar}--item--RowGap--base);
 
   // Sticky
@@ -394,10 +394,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   // &:last-child must always come last for spacing system to work properly, as it has the same specificity as the preceding modifiers
   &:last-child {
     --#{$toolbar}--spacer: 0;
-  }
-
-  > * {
-    vertical-align: top;
   }
 }
 
