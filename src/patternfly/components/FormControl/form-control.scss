@@ -38,7 +38,6 @@
 
   // placeholder
   --#{$form-control}--m-placeholder--Color: var(--#{$pf-global}--Color--dark-200);
-  --#{$form-control}--m-placeholder--child--Color: var(--#{$pf-global}--Color--100);
 
   // disabled
   --#{$form-control}--m-disabled--Color: var(--#{$pf-global}--disabled-color--100);
@@ -266,16 +265,10 @@
   }
 
   &.pf-m-placeholder > select {
-    --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--Color);
+    color: var(--#{$form-control}--m-placeholder--Color);
 
-    > * {
-      --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--child--Color);
-
-      // stylelint-disable max-nesting-depth
-      &:disabled {
-        color: revert;
-      }
-      // stylelint-enable
+    &:disabled {
+      color: var(--#{$form-control}--m-disabled--Color);
     }
   }
   
