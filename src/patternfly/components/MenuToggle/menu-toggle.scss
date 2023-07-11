@@ -170,11 +170,11 @@
   font-size: var(--#{$menu-toggle}--FontSize);
   line-height: var(--#{$menu-toggle}--LineHeight);
   color: var(--#{$menu-toggle}--Color);
+  vertical-align: top; // fixes small bug in flex alignment
   cursor: pointer;
   background-color: var(--#{$menu-toggle}--BackgroundColor);
   border: 0;
   border-radius: var(--#{$menu-toggle}--BorderRadius);
-  vertical-align: top; // fixes small bug in flex alignment
 
   &::before,
   &::after {
