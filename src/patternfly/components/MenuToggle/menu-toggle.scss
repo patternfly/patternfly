@@ -165,12 +165,12 @@
 
   position: relative;
   display: inline-flex;
+  align-items: baseline;
   max-width: 100%;
   padding: var(--#{$menu-toggle}--PaddingTop) var(--#{$menu-toggle}--PaddingRight) var(--#{$menu-toggle}--PaddingBottom) var(--#{$menu-toggle}--PaddingLeft);
   font-size: var(--#{$menu-toggle}--FontSize);
   line-height: var(--#{$menu-toggle}--LineHeight);
   color: var(--#{$menu-toggle}--Color);
-  vertical-align: top; // fixes small bug in flex alignment
   cursor: pointer;
   background-color: var(--#{$menu-toggle}--BackgroundColor);
   border: 0;

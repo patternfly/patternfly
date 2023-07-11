@@ -95,6 +95,11 @@ import './Toolbar.css'
       {{/toolbar-item}}
 
       {{#> toolbar-item}}
+{{#> form-control controlType="textarea" form-control--IsSuccess="true" form-control--attribute='name="textarea-success" id="textarea-success" aria-label="Success state textarea example"'}}
+Success
+{{/form-control}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
         {{#> menu-toggle}}
           {{#> menu-toggle-text}}
             Count
@@ -128,17 +133,19 @@ import './Toolbar.css'
           {{/menu-toggle-controls}}
         {{/menu-toggle}}
       {{/toolbar-item}}
-      {{#> menu-toggle}}
-        {{#> menu-toggle-icon}}
-          {{> avatar}}
-        {{/menu-toggle-icon}}
-        {{#> menu-toggle-text}}
-          Ned Username
-        {{/menu-toggle-text}}
-        {{#> menu-toggle-controls}}
-          {{> menu-toggle-toggle-icon}}
-        {{/menu-toggle-controls}}
-      {{/menu-toggle}}
+      {{#> toolbar-item}}
+        {{#> menu-toggle}}
+          {{#> menu-toggle-icon}}
+            {{> avatar}}
+          {{/menu-toggle-icon}}
+          {{#> menu-toggle-text}}
+            Ned Username
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+        {{/toolbar-item}}
       {{#> toolbar-item}}
         {{> dropdown dropdown--id="2dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
       {{/toolbar-item}}
