@@ -7,6 +7,13 @@
   {{#unless dropdown--IsExpanded}}
     hidden
   {{/unless}}
+  {{#if dropdown-menu--type}}
+    {{#ifAny dropdown-menu--template--Groups dropdown--template--MenuToggleImageText}}
+      role="menu"
+    {{/ifAny}}
+  {{else}}
+    role="menu"
+  {{/if}}
   {{#if dropdown-menu--attribute}}
     {{{dropdown-menu--attribute}}}
   {{/if}}>

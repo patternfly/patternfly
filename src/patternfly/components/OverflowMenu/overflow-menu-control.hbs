@@ -28,6 +28,7 @@
       {{> @partial-block}}
     {{else}}
       <ul class="{{pfv}}dropdown__menu{{#if dropdown-menu--modifier}} {{dropdown-menu--modifier}}{{/if}}"
+        role="menu"
         aria-labelledby="{{overflow-menu--id}}-dropdown-toggle"
         {{#unless dropdown--IsExpanded}}hidden{{/unless}}
         {{#if dropdown-menu--attribute}}
