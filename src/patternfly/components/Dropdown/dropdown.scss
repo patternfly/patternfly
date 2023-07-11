@@ -606,6 +606,11 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   }
 }
 
+.#{$dropdown}__toggle-button {
+  align-self: stretch;
+  align-items: center;
+}
+
 .#{$dropdown}__toggle-text {
   flex: 1 1 auto;
   text-align: left;
