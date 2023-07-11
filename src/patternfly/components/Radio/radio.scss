@@ -7,7 +7,6 @@
   --#{$radio}__label--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$radio}__label--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$radio}__label--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$radio}__input--TranslateY: #{pf-size-prem(5px)}; // FF needs an offset
   --#{$radio}__input--first-child--MarginLeft: #{pf-size-prem(1px)};
   --#{$radio}__input--last-child--MarginRight: #{pf-size-prem(1px)};
   --#{$radio}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
@@ -20,7 +19,6 @@
 
   &.pf-m-standalone {
     --#{$radio}--GridGap: 0;
-    --#{$radio}__input--TranslateY: 0;
 
     display: inline-grid;
   }
@@ -34,11 +32,6 @@
 }
 
 .#{$radio}__input {
-  // FF misaligns checkboxes without a set height
-  // stylelint-disable property-no-vendor-prefix
-  -moz-transform: translateY(var(--#{$radio}__input--TranslateY));
-  // stylelint-enable
-
   // fixes a chrome issue where the left edge is cut off in a container with overflow hidden
   &:first-child {
     margin-left: var(--#{$radio}__input--first-child--MarginLeft);

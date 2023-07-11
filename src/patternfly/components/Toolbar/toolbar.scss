@@ -6,7 +6,7 @@ $pf-v5-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
 .#{$toolbar} {
-  --#{$toolbar}--AlignItems--base: start;
+  --#{$toolbar}--AlignItems--base: baseline;
   --#{$toolbar}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$toolbar}--RowGap--base: var(--#{$pf-global}--spacer--lg); // row-gap between toolbar content elements
   --#{$toolbar}--RowGap: var(--#{$toolbar}--RowGap--base);
@@ -324,6 +324,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   width: var(--#{$toolbar}__item--Width--base);
   min-width: var(--#{$toolbar}__item--MinWidth--base);
   margin-right: var(--#{$toolbar}--spacer);
+  vertical-align: top;
 
   &.pf-m-align-items-start {
     align-items: flex-start;
@@ -396,7 +397,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 
   > * {
-    vertical-align: middle;
+    vertical-align: top;
   }
 }
 

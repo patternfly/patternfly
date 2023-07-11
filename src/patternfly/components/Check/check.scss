@@ -60,12 +60,6 @@
   }
 }
 
-.#{$check}__label,
-.#{$check}__description,
-.#{$check}__body {
-  align-self: baseline;
-}
-
 .#{$check}__label-required {
   margin-left: var(--#{$check}__label-required--MarginLeft);
   font-size: var(--#{$check}__label-required--FontSize);
