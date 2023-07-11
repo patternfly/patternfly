@@ -190,8 +190,8 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   position: relative;
   display: inline-flex;
-  max-width: 100%;
   align-items: start;
+  max-width: 100%;
 
   .#{$divider} {
     margin-top: var(--#{$dropdown}--c-divider--MarginTop);

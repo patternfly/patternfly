@@ -22,8 +22,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   // Group
   --#{$toolbar}__group--Display: flex;
-  // --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--AlignItems--base);
-  // --#{$toolbar}__group--AlignSelf: var(--#{$toolbar}--AlignItems--base);
   --#{$toolbar}__group--RowGap: var(--#{$toolbar}--item--RowGap--base);
 
   // Sticky
