@@ -7,7 +7,6 @@
   --#{$check}__label--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$check}__label--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$check}__label--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$check}__input--TranslateY: #{pf-size-prem(1px)}; // nudge down up for perfect alignment
   --#{$check}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$check}__description--Color: var(--#{$pf-global}--Color--200);
   --#{$check}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
