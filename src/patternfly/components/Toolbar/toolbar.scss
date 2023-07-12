@@ -17,7 +17,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   // Item
   --#{$toolbar}__item--Display: flex;
   --#{$toolbar}__item--MinWidth--base: auto;
-  --#{$toolbar}__item--AlignSelf: start;
+  --#{$toolbar}__item--AlignSelf: flex-start;
   --#{$toolbar}__item--AlignItems: baseline;
 
   // Group
