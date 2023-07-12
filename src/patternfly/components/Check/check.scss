@@ -22,6 +22,8 @@
 
   &.pf-m-standalone {
     --#{$check}--GridGap: 0;
+
+    display: inline-grid;
   }
 }
 

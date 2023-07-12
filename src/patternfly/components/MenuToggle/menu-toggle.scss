@@ -368,6 +368,8 @@
       --#{$menu-toggle}--PaddingRight: 0;
       --#{$check}__label--Color: currentcolor;
       --#{$check}__label--disabled--Color: currentcolor;
+
+      align-self: stretch;
     }
 
     // Split button, active
