@@ -1,3 +1,11 @@
 // stylelint-disable
 :root {
+  --#{$pf-global}--spacer--xs: var(--pf--global--spacer--xs);
+  --#{$pf-global}--spacer--sm: var(--pf--global--spacer--sm);
+  --#{$pf-global}--spacer--md: var(--pf--global--spacer--md);
+  --#{$pf-global}--spacer--lg: var(--pf--global--spacer--lg);
+  --#{$pf-global}--spacer--xl: var(--pf--global--spacer--xl);
+  --#{$pf-global}--spacer--2xl: var(--pf--global--spacer--2xl);
+  --#{$pf-global}--spacer--3xl: var(--pf--global--spacer--3xl);
+  --#{$pf-global}--spacer--4xl: var(--pf--global--spacer--4xl);
 }

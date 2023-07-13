@@ -251,13 +251,34 @@ wrapperTag: div
               </div>
             {{/table-th}}
             {{#> table-td table-td--data-label="Branches"}}
-              <span><i class="fas fa-code-branch"></i> 10</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-code-branch"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  10
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Pull requests"}}
-              <span><i class="fas fa-code"></i> 25</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-code"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  25
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Workspaces"}}
-              <span><i class="fas fa-cube"></i> 5</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-cube"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  5
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Last commit"}}
               2 days ago
@@ -284,13 +305,34 @@ wrapperTag: div
               </div>
             {{/table-th}}
             {{#> table-td table-td--data-label="Branches"}}
-              <span><i class="fas fa-code-branch"></i> 8</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-code-branch"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  8
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Pull requests"}}
-              <span><i class="fas fa-code"></i> 30</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-code"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  30
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Workspaces"}}
-              <span><i class="fas fa-cube"></i> 2</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-cube"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  2
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Last commit"}}
               2 days ago
@@ -317,13 +359,34 @@ wrapperTag: div
               </div>
             {{/table-th}}
             {{#> table-td table-td--data-label="Branches"}}
-              <span><i class="fas fa-code-branch"></i> 12</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-code-branch"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  12
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Pull requests"}}
-              <span><i class="fas fa-code"></i> 48</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-code"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  48
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Workspaces"}}
-              <span><i class="fas fa-cube"></i> 13</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-cube"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  13
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Last commit"}}
               30 days ago
@@ -350,13 +413,34 @@ wrapperTag: div
               </div>
             {{/table-th}}
             {{#> table-td table-td--data-label="Branches"}}
-              <span><i class="fas fa-code-branch"></i> 3</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-code-branch"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  3
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Pull requests"}}
-              <span><i class="fas fa-code"></i> 8</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-code"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  8
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Workspaces"}}
-              <span><i class="fas fa-cube"></i> 20</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-cube"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  20
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Last commit"}}
               8 days ago
@@ -383,13 +467,34 @@ wrapperTag: div
               </div>
             {{/table-td}}
             {{#> table-td table-td--data-label="Branches"}}
-              <span><i class="fas fa-code-branch"></i> 34</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-code-branch"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  34
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Pull requests"}}
-              <span><i class="fas fa-code"></i> 21</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-code"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  21
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Workspaces"}}
-              <span><i class="fas fa-cube"></i> 26</span>
+              {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+                {{#> l-flex-item}}
+                  <i class="fas fa-cube"></i>
+                {{/l-flex-item}}
+                {{#> l-flex-item}}
+                  26
+                {{/l-flex-item}}
+              {{/l-flex}}
             {{/table-td}}
             {{#> table-td table-td--data-label="Last commit"}}
               2 days ago

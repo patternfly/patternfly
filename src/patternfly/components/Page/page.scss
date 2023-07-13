@@ -79,7 +79,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--TranslateZ: 0;
   --#{$page}__sidebar--m-expanded--TranslateX: 0;
   --#{$page}__sidebar--xl--TranslateX: 0;
-  --#{$page}__sidebar--MarginRight: var(--pf--global--spacer--lg);
 
   // Sidebar header
   --#{$page}__sidebar-header--BorderBottomWidth: var(--pf--global--border--width--divider);
@@ -548,6 +547,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 .#{$page}__main {
   margin-top: 0;
   margin-right: var(--pf--global--spacer--lg);
+  margin-left: var(--pf--global--spacer--lg);
 }
 
 .#{$page}__main-list {
