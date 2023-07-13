@@ -8,6 +8,7 @@ import './Toolbar.css'
 
 ### Example simple
 ```hbs
+{{> divider}}
 {{#> menu-toggle menu-toggle--id="1split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
@@ -31,7 +32,7 @@ import './Toolbar.css'
   {{/menu-toggle-controls}}
 {{/menu-toggle}}
 
-{{> dropdown dropdown--id="1dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
+{{> dropdown dropdown--id="1dropdown-split-button" dropdown--template--SplitButton="true" dropdown-toggle--HasCheckBox="true"}}
 {{> dropdown dropdown--id="1dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
 {{> dropdown dropdown--id="1dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
 {{> dropdown dropdown--id="1dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
@@ -41,7 +42,7 @@ import './Toolbar.css'
 {{> dropdown dropdown--template--SplitButton="true" dropdown--id="1dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
 {{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="1dropdown-split-button-action-primary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
 {{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="1dropdown-split-button-action-secondary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
-
+{{> divider}}
 {{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute='id="1select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
   <option value="" selected>Selectable placeholder</option>
   <option value="Mr">Mr</option>
@@ -80,11 +81,667 @@ import './Toolbar.css'
 
 ### Example in toolbar
 ```hbs
-{{#> toolbar toolbar--id="example"}}
+{{#> toolbar toolbar--id="example1"}}
   {{#> toolbar-content}}
-    {{#> toolbar-content-section}}
+    {{#> toolbar-content-section toolbar-content-section--modifier=""}}
+      {{#> toolbar-group toolbar-group--modifier="pf-m-space-items-none"}}
+
+        {{#> toolbar-item}}
+          {{#> action-list}}
+            {{#> action-list-group}}
+              {{#> action-list-item}}
+                {{#> button button--modifier="pf-m-primary"}}
+                  Next
+                {{/button}}
+              {{/action-list-item}}
+              {{#> action-list-item}}
+                {{#> button button--modifier="pf-m-secondary"}}
+                  Back
+                {{/button}}
+              {{/action-list-item}}
+            {{/action-list-group}}
+            {{#> action-list-group}}
+              {{#> action-list-item}}
+                {{#> button button--modifier="pf-m-primary"}}
+                  Submit
+                {{/button}}
+              {{/action-list-item}}
+              {{#> action-list-item}}
+                {{#> button button--modifier="pf-m-link"}}
+                  Cancel
+                {{/button}}
+              {{/action-list-item}}
+            {{/action-list-group}}
+          {{/action-list}}
+        {{/toolbar-item}}
+
+        {{#> toolbar-item toolbar-item--modifier="pf-m-label"}}
+          <div>Menu toggles</div>
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          {{#> menu-toggle menu-toggle--id="2split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
+            {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+            {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+              {{#> menu-toggle-controls}}
+                {{> menu-toggle-toggle-icon}}
+              {{/menu-toggle-controls}}
+            {{/menu-toggle-button}}
+          {{/menu-toggle}}
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          {{#> menu-toggle}}
+            {{#> menu-toggle-text}}
+              Count
+            {{/menu-toggle-text}}
+            {{#> menu-toggle-count}}
+              {{#> badge badge--modifier="pf-m-unread"}}
+                4 selected
+              {{/badge}}
+            {{/menu-toggle-count}}
+            {{#> menu-toggle-controls}}
+              {{> menu-toggle-toggle-icon}}
+            {{/menu-toggle-controls}}
+          {{/menu-toggle}}
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          {{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-text-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
+            {{> menu-toggle--check menu-toggle--check--text="10 selected"}}
+            {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+              {{#> menu-toggle-controls}}
+                {{> menu-toggle-toggle-icon}}
+              {{/menu-toggle-controls}}
+            {{/menu-toggle-button}}
+          {{/menu-toggle}}
+        {{/toolbar-item}}
+
+      {{/toolbar-group}}
+
+      {{#> toolbar-group toolbar-group--modifier="pf-m-space-items-none"}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-label"}}
+          <div>Dropdown toggles</div>
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          {{> dropdown dropdown--id="2bdropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          {{> dropdown dropdown--id="2bdropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+        {{/toolbar-item}}
+        {{#> toolbar-item}}
+          {{> dropdown dropdown--id="2bdropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
+        {{/toolbar-item}}
+      {{/toolbar-group}}
+
       {{#> toolbar-item}}
-        {{#> menu-toggle menu-toggle--id="2split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
+        {{> dropdown dropdown--template--SplitButton="true" dropdown--id="2bdropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="2bdropdown-split-button-action-primary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute='id="2select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
+          <option value="" selected>Selectable placeholder</option>
+          <option value="Mr">Mr</option>
+        {{/form-control}}
+      {{/toolbar-item}}
+
+      <!-- {{#> toolbar-item}}
+        {{#> menu-toggle}}
+          {{#> menu-toggle-icon}}
+            {{> avatar}}
+          {{/menu-toggle-icon}}
+          {{#> menu-toggle-text}}
+            Ned Username
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+      {{/toolbar-item}} -->
+
+      {{#> toolbar-item toolbar-item--modifier="pf-m-form-control"}}
+        {{#> check}}
+          {{#> check-input check-input--attribute='id="check-basic2" name="check-basic"'}}{{/check-input}}
+          {{#> check-label check-label--attribute='for="check-basic2"'}}Check{{/check-label}}
+        {{/check}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item toolbar-item--modifier="pf-m-form-control"}}
+        {{#> radio}}
+          {{#> radio-input radio-input--attribute='id="radio-simple2" name="exampleRadioSimple"'}}{{/radio-input}}
+          {{#> radio-label radio-label--attribute='for="radio-simple2"'}}Radio{{/radio-label}}
+        {{/radio}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item toolbar-item--modifier="pf-m-info pf-m-sm"}}
+        {{#> badge badge--modifier="pf-m-unread"}}
+          7
+        {{/badge}}
+        {{#> badge badge--modifier="pf-m-unread"}}
+          24
+        {{/badge}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item toolbar-item--modifier="pf-m-info pf-m-sm"}}
+        {{#> breadcrumb}}
+          {{#> breadcrumb-list}}
+            {{#> breadcrumb-item}}
+              {{> breadcrumb-item-divider}}
+              {{#> breadcrumb-link}}
+                Section home
+              {{/breadcrumb-link}}
+            {{/breadcrumb-item}}
+            {{#> breadcrumb-item}}
+              {{> breadcrumb-item-divider}}
+              {{#> breadcrumb-link}}
+                Section title
+              {{/breadcrumb-link}}
+            {{/breadcrumb-item}}
+            {{#> breadcrumb-item}}
+              {{> breadcrumb-item-divider}}
+              {{#> breadcrumb-link}}
+                Section title
+              {{/breadcrumb-link}}
+            {{/breadcrumb-item}}
+            {{#> breadcrumb-item}}
+              {{> breadcrumb-item-divider}}
+              {{#> breadcrumb-link breadcrumb-link--current="true"}}
+                Section landing
+              {{/breadcrumb-link}}
+            {{/breadcrumb-item}}
+          {{/breadcrumb-list}}
+        {{/breadcrumb}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> button button--modifier="pf-m-primary"}}
+          Primary
+        {{/button}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item toolbar-item--modifier="pf-m-info"}}
+        {{#> chip chip--type="div"}}
+          {{#> chip-content}}
+            {{#> chip-text chip-text--attribute='id="chip_one"'}}
+              Chip
+            {{/chip-text}}
+          {{/chip-content}}
+          {{#> chip-actions}}
+            {{#> button button--modifier="pf-m-plain" button--attribute='aria-labelledby="remove_chip_one chip_one" aria-label="Remove" id="remove_chip_one"'}}
+              <i class="fas fa-times" aria-hidden="true"></i>
+            {{/button}}
+          {{/chip-actions}}
+        {{/chip}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item toolbar-item--modifier="pf-m-info"}}
+        {{#> chip-group chip-group--id="simple-inline-chip-group-overflow"}}
+          {{#> chip-group-main}}
+            {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
+              {{#> chip-group-list-item}}
+                {{#> chip}}
+                  {{#> chip-content}}
+                    {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_one_select_collapsed"')}}
+                      Chip one
+                    {{/chip-text}}
+                  {{/chip-content}}
+                  {{#> chip-actions}}
+                    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_one_select_collapsed ' chip-group--id 'chip_one_select_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_one_select_collapsed"')}}
+                      <i class="fas fa-times" aria-hidden="true"></i>
+                    {{/button}}
+                  {{/chip-actions}}
+                {{/chip}}
+              {{/chip-group-list-item}}
+              {{#> chip-group-list-item}}
+                {{#> chip}}
+                  {{#> chip-content}}
+                    {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_two_select_collapsed"')}}
+                    Chip two
+                    {{/chip-text}}
+                  {{/chip-content}}
+                  {{#> chip-actions}}
+                    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_two_select_collapsed ' chip-group--id 'chip_two_select_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_two_select_collapsed"')}}
+                      <i class="fas fa-times" aria-hidden="true"></i>
+                    {{/button}}
+                  {{/chip-actions}}
+                {{/chip}}
+              {{/chip-group-list-item}}
+              {{#> chip-group-list-item}}
+                {{#> chip}}
+                  {{#> chip-content}}
+                    {{#> chip-text chip-text--attribute=(concat 'id="' chip-group--id 'chip_three_select_collapsed"')}}
+                    Chip three
+                    {{/chip-text}}
+                  {{/chip-content}}
+                  {{#> chip-actions}}
+                    {{#> button button--modifier="pf-m-plain" button--attribute=(concat 'aria-labelledby="' chip-group--id 'remove_chip_three_select_collapsed ' chip-group--id 'chip_three_select_collapsed" aria-label="Remove" id="' chip-group--id 'remove_chip_three_select_collapsed"')}}
+                      <i class="fas fa-times" aria-hidden="true"></i>
+                    {{/button}}
+                  {{/chip-actions}}
+                {{/chip}}
+              {{/chip-group-list-item}}
+              {{#> chip-group-list-item}}
+                {{#> chip chip--type="button" chip--modifier="pf-m-overflow"}}
+                  {{#> chip-content}}
+                    {{#> chip-text}}
+                      2 more
+                    {{/chip-text}}
+                  {{/chip-content}}
+                {{/chip}}
+              {{/chip-group-list-item}}
+            {{/chip-group-list}}
+          {{/chip-group-main}}
+        {{/chip-group}}
+      {{/toolbar-item}}
+      {{#> toolbar-item}}
+        <form class="pf-v5-c-form pf-m-horizontal" novalidate="">
+          <div class="pf-v5-c-form__group">
+            <div class="pf-v5-c-form__group-label"><label class="pf-v5-c-form__label" for="form-horizontal-name">
+                <span class="pf-v5-c-form__label-text">Name</span>&nbsp;<span class="pf-v5-c-form__label-required" aria-hidden="true">*</span></label>
+            </div>
+            <div class="pf-v5-c-form__group-control">
+              <span class="pf-v5-c-form-control pf-m-required">
+                <input required="" type="text" id="form-horizontal-name" name="form-horizontal-name">
+              </span>
+            </div>
+          </div>
+        </form>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> clipboard-copy clipboard-copy--id="basic-editable"}}
+          {{#> clipboard-copy-group}}
+            {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'type="text" value="This is editable" id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
+            {{/form-control}}
+            {{#> button button--modifier="pf-m-control" button--attribute=(concat 'aria-label="Copy to clipboard" id="' clipboard-copy--id '-copy-button" aria-labelledby="' clipboard-copy--id '-copy-button ' clipboard-copy--id '-text-input"')}}
+              <i class="fas fa-copy" aria-hidden="true"></i>
+            {{/button}}
+          {{/clipboard-copy-group}}
+        {{/clipboard-copy}}
+        <br />
+        {{#> clipboard-copy clipboard-copy--id="basic-readonly"}}
+          {{#> clipboard-copy-group}}
+            {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'type="text" value="This is read-only" id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
+            {{/form-control}}
+            {{#> button button--modifier="pf-m-control" button--attribute=(concat 'aria-label="Copy to clipboard" id="' clipboard-copy--id '-copy-button" aria-labelledby="' clipboard-copy--id '-copy-button ' clipboard-copy--id '-text-input"')}}
+              <i class="fas fa-copy" aria-hidden="true"></i>
+            {{/button}}
+          {{/clipboard-copy-group}}
+        {{/clipboard-copy}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+<nav class="pf-v5-c-nav pf-m-horizontal" aria-label="Global">
+  <button class="pf-v5-c-nav__scroll-button" disabled="" aria-label="Scroll left">
+    <i class="fas fa-angle-left" aria-hidden="true"></i>
+  </button>
+  <ul class="pf-v5-c-nav__list" role="list">
+    <li class="pf-v5-c-nav__item">
+      <a href="#" class="pf-v5-c-nav__link pf-m-current" aria-current="page">Item 1</a>
+    </li>
+    <li class="pf-v5-c-nav__item">
+      <a href="#" class="pf-v5-c-nav__link">Item 2</a>
+    </li>
+    <li class="pf-v5-c-nav__item">
+      <a href="#" class="pf-v5-c-nav__link">Item 3</a>
+    </li>
+  </ul>
+  <button class="pf-v5-c-nav__scroll-button" disabled="" aria-label="Scroll right">
+    <i class="fas fa-angle-right" aria-hidden="true"></i>
+  </button>
+</nav>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item toolbar-item--modifier="pf-m-info pf-m-sm"}}
+<div class="pf-v5-c-helper-text">
+  <div class="pf-v5-c-helper-text__item">
+    <span class="pf-v5-c-helper-text__item-text">This is default helper text</span>
+  </div>
+    </div>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item toolbar-item--modifier="pf-m-info"}}
+<span class="pf-v5-c-icon pf-m-lg">
+  <span class="pf-v5-c-icon__content">
+    <i class="fas fa-cog" aria-hidden="true"></i>
+  </span>
+    </span>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+<div class="pf-v5-c-input-group">
+  <div class="pf-v5-c-input-group__item pf-m-fill">
+    <span class="pf-v5-c-form-control">
+      <input type="text" id="textInput13" name="textInput13" aria-label="Input example with popover">
+    </span>
+  </div>
+  <div class="pf-v5-c-input-group__item">
+    <button class="pf-v5-c-button pf-m-control" type="button" aria-label="Popover for input">
+      <i class="fas fa-question-circle" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+<span class="pf-v5-c-label pf-m-orange">
+  <span class="pf-v5-c-label__content">
+    <span class="pf-v5-c-label__text">Orange</span>
+  </span>
+</span>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item toolbar-item--modifier="pf-m-info"}}
+<ul class="pf-v5-c-list pf-m-inline" role="list">
+  <li>Inline list item 1</li>
+  <li>Inline list item 2</li>
+  <li>Inline list item 3</li>
+</ul>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+<nav class="pf-v5-c-app-launcher" aria-label="Application launcher" id="application-launcher-collapsed">
+  <button class="pf-v5-c-app-launcher__toggle" type="button" id="application-launcher-collapsed-button" aria-expanded="false" aria-label="Application launcher">
+    <i class="fas fa-th" aria-hidden="true"></i>
+  </button>
+  <ul class="pf-v5-c-app-launcher__menu" aria-labelledby="application-launcher-collapsed-button" role="list" hidden="">
+    <li>
+      <a class="pf-v5-c-app-launcher__menu-item" href="#">Link</a>
+    </li>
+    <li>
+      <button class="pf-v5-c-app-launcher__menu-item" type="button">Action</button>
+    </li>
+    <li class="pf-v5-c-divider" role="separator"></li>
+    <li>
+      <a class="pf-v5-c-app-launcher__menu-item pf-m-disabled" href="#" aria-disabled="true" tabindex="-1">Disabled link</a>
+    </li>
+  </ul>
+</nav>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+<div class="pf-v5-c-options-menu">
+  <button class="pf-v5-c-options-menu__toggle" type="button" id="options-menu-single-example-toggle" aria-haspopup="listbox" aria-expanded="false">
+    <span class="pf-v5-c-options-menu__toggle-text">Options menu</span>
+    <div class="pf-v5-c-options-menu__toggle-icon">
+      <i class="fas fa-caret-down" aria-hidden="true"></i>
+    </div>
+  </button>
+  <ul class="pf-v5-c-options-menu__menu" aria-labelledby="options-menu-single-example-toggle" hidden="">
+    <li>
+      <button class="pf-v5-c-options-menu__menu-item" type="button">Option 1</button>
+    </li>
+    <li>
+      <button class="pf-v5-c-options-menu__menu-item" type="button">
+        Option 2
+        <div class="pf-v5-c-options-menu__menu-item-icon">
+          <i class="fas fa-check" aria-hidden="true"></i>
+        </div>
+      </button>
+    </li>
+    <li>
+      <button class="pf-v5-c-options-menu__menu-item" type="button">Option 3</button>
+    </li>
+  </ul>
+</div>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+<div class="pf-v5-c-select">
+  <span id="select-single-label" hidden="">Choose one</span>
+
+  <button class="pf-v5-c-select__toggle" type="button" id="select-single-toggle" aria-haspopup="true" aria-expanded="false" aria-labelledby="select-single-label select-single-toggle">
+    <div class="pf-v5-c-select__toggle-wrapper">
+      <span class="pf-v5-c-select__toggle-text">Filter by status</span>
+    </div>
+    <span class="pf-v5-c-select__toggle-arrow">
+      <i class="fas fa-caret-down" aria-hidden="true"></i>
+    </span>
+  </button>
+
+  <ul class="pf-v5-c-select__menu" role="listbox" aria-labelledby="select-single-label" hidden="">
+    <li role="presentation">
+      <button class="pf-v5-c-select__menu-item" role="option">Running</button>
+    </li>
+    <li role="presentation">
+      <button class="pf-v5-c-select__menu-item pf-m-selected" role="option" aria-selected="true">
+        Stopped
+        <span class="pf-v5-c-select__menu-item-icon">
+          <i class="fas fa-check" aria-hidden="true"></i>
+        </span>
+      </button>
+    </li>
+    <li role="presentation">
+      <button class="pf-v5-c-select__menu-item" role="option">Down</button>
+    </li>
+    <li role="presentation">
+      <button class="pf-v5-c-select__menu-item" role="option">Degraded</button>
+    </li>
+    <li role="presentation">
+      <button class="pf-v5-c-select__menu-item" role="option">Needs maintenance</button>
+    </li>
+  </ul>
+</div>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+<button class="pf-v5-c-button pf-m-plain" type="button" aria-label="Notifications">
+    <span class="pf-v5-c-notification-badge pf-m-read">
+      <i class="pf-v5-pficon-bell" aria-hidden="true"></i>
+    </span>
+  </button>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item tooblar-item--modifier="pf-m-info"}}
+<label class="pf-v5-c-switch" for="switch-with-label-1">
+  <input class="pf-v5-c-switch__input" type="checkbox" id="switch-with-label-1" aria-labelledby="switch-with-label-1-on" checked="">
+
+  <span class="pf-v5-c-switch__toggle"></span>
+
+  <span class="pf-v5-c-switch__label pf-m-on" id="switch-with-label-1-on" aria-hidden="true">Message when on</span>
+
+  <span class="pf-v5-c-switch__label pf-m-off" id="switch-with-label-1-off" aria-hidden="true">Message when off</span>
+</label>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+<div class="pf-v5-c-tabs" id="default-tabs">
+  <button class="pf-v5-c-tabs__scroll-button" type="button" disabled="" aria-hidden="true" aria-label="Scroll left">
+    <i class="fas fa-angle-left" aria-hidden="true"></i>
+  </button>
+  <ul class="pf-v5-c-tabs__list">
+    <li class="pf-v5-c-tabs__item">
+      <button type="button" class="pf-v5-c-tabs__link" id="default-tabs-users-link">
+        <span class="pf-v5-c-tabs__item-text">Users</span>
+      </button>
+    </li>
+    <li class="pf-v5-c-tabs__item pf-m-current">
+      <button type="button" class="pf-v5-c-tabs__link" id="default-tabs-containers-link">
+        <span class="pf-v5-c-tabs__item-text">Containers</span>
+      </button>
+    </li>
+    <li class="pf-v5-c-tabs__item">
+      <button type="button" class="pf-v5-c-tabs__link" id="default-tabs-database-link">
+        <span class="pf-v5-c-tabs__item-text">Database</span>
+      </button>
+    </li>
+
+    <li class="pf-v5-c-tabs__item">
+      <button type="button" class="pf-v5-c-tabs__link" disabled="" id="default-tabs-disabled-link">
+        <span class="pf-v5-c-tabs__item-text">Disabled</span>
+      </button>
+    </li>
+    <li class="pf-v5-c-tabs__item">
+      <button type="button" class="pf-v5-c-tabs__link pf-m-aria-disabled" aria-disabled="true" id="default-tabs-aria-disabled-link">
+        <span class="pf-v5-c-tabs__item-text">ARIA disabled</span>
+      </button>
+    </li>
+    <li class="pf-v5-c-tabs__item">
+      <button type="button" class="pf-v5-c-tabs__link" id="default-tabs-network-wired-link">
+        <span class="pf-v5-c-tabs__item-text">Network</span>
+      </button>
+    </li>
+  </ul>
+
+  <button class="pf-v5-c-tabs__scroll-button" type="button" disabled="" aria-hidden="true" aria-label="Scroll right">
+    <i class="fas fa-angle-right" aria-hidden="true"></i>
+  </button>
+</div>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+<div class="pf-v5-c-text-input-group">
+  <div class="pf-v5-c-text-input-group__main">
+    <div class="pf-v5-c-chip-group">
+      <div class="pf-v5-c-chip-group__main">
+        <ul class="pf-v5-c-chip-group__list" role="list" aria-label="Chip group list">
+          <li class="pf-v5-c-chip-group__list-item">
+            <div class="pf-v5-c-chip">
+              <span class="pf-v5-c-chip__content">
+                <span class="pf-v5-c-chip__text" id="text-input-group-filters-chip-group-chip_one_select_collapsed">Chip one</span>
+              </span>
+              <span class="pf-v5-c-chip__actions">
+                <button class="pf-v5-c-button pf-m-plain" type="button" aria-labelledby="text-input-group-filters-chip-group-remove_chip_one_select_collapsed text-input-group-filters-chip-group-chip_one_select_collapsed" aria-label="Remove" id="text-input-group-filters-chip-group-remove_chip_one_select_collapsed">
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </li>
+          <li class="pf-v5-c-chip-group__list-item">
+            <div class="pf-v5-c-chip">
+              <span class="pf-v5-c-chip__content">
+                <span class="pf-v5-c-chip__text" id="text-input-group-filters-chip-group-chip_two_select_collapsed">Chip two</span>
+              </span>
+              <span class="pf-v5-c-chip__actions">
+                <button class="pf-v5-c-button pf-m-plain" type="button" aria-labelledby="text-input-group-filters-chip-group-remove_chip_two_select_collapsed text-input-group-filters-chip-group-chip_two_select_collapsed" aria-label="Remove" id="text-input-group-filters-chip-group-remove_chip_two_select_collapsed">
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </li>
+          <li class="pf-v5-c-chip-group__list-item">
+            <div class="pf-v5-c-chip">
+              <span class="pf-v5-c-chip__content">
+                <span class="pf-v5-c-chip__text" id="text-input-group-filters-chip-group-chip_three_select_collapsed">Chip three</span>
+              </span>
+              <span class="pf-v5-c-chip__actions">
+                <button class="pf-v5-c-button pf-m-plain" type="button" aria-labelledby="text-input-group-filters-chip-group-remove_chip_three_select_collapsed text-input-group-filters-chip-group-chip_three_select_collapsed" aria-label="Remove" id="text-input-group-filters-chip-group-remove_chip_three_select_collapsed">
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </li>
+          <li class="pf-v5-c-chip-group__list-item">
+            <div class="pf-v5-c-chip">
+              <span class="pf-v5-c-chip__content">
+                <span class="pf-v5-c-chip__text" id="text-input-group-filters-chip-group-chip_four_select_collapsed">Chip four</span>
+              </span>
+              <span class="pf-v5-c-chip__actions">
+                <button class="pf-v5-c-button pf-m-plain" type="button" aria-labelledby="text-input-group-filters-chip-group-remove_chip_four_select_collapsed text-input-group-filters-chip-group-chip_four_select_collapsed" aria-label="Remove" id="text-input-group-filters-chip-group-remove_chip_four_select_collapsed">
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </li>
+          <li class="pf-v5-c-chip-group__list-item">
+            <div class="pf-v5-c-chip">
+              <span class="pf-v5-c-chip__content">
+                <span class="pf-v5-c-chip__text" id="text-input-group-filters-chip-group-chip_five_select_collapsed">Chip five</span>
+              </span>
+              <span class="pf-v5-c-chip__actions">
+                <button class="pf-v5-c-button pf-m-plain" type="button" aria-labelledby="text-input-group-filters-chip-group-remove_chip_five_select_collapsed text-input-group-filters-chip-group-chip_five_select_collapsed" aria-label="Remove" id="text-input-group-filters-chip-group-remove_chip_five_select_collapsed">
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </li>
+          <li class="pf-v5-c-chip-group__list-item">
+            <div class="pf-v5-c-chip">
+              <span class="pf-v5-c-chip__content">
+                <span class="pf-v5-c-chip__text" id="text-input-group-filters-chip-group-chip_six_select_collapsed">Chip six</span>
+              </span>
+              <span class="pf-v5-c-chip__actions">
+                <button class="pf-v5-c-button pf-m-plain" type="button" aria-labelledby="text-input-group-filters-chip-group-remove_chip_six_select_collapsed text-input-group-filters-chip-group-chip_six_select_collapsed" aria-label="Remove" id="text-input-group-filters-chip-group-remove_chip_six_select_collapsed">
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </li>
+          <li class="pf-v5-c-chip-group__list-item">
+            <button class="pf-v5-c-chip pf-m-overflow">
+              <span class="pf-v5-c-chip__content">
+                <span class="pf-v5-c-chip__text">8 more</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <span class="pf-v5-c-text-input-group__text">
+      <input class="pf-v5-c-text-input-group__text-input" type="text" value="" aria-label="Type to filter">
+    </span>
+  </div>
+  <div class="pf-v5-c-text-input-group__utilities">
+    <button class="pf-v5-c-button pf-m-plain" type="button" aria-label="Clear input">
+      <i class="fas fa-times fa-fw" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+<div class="pf-v5-c-toggle-group">
+  <div class="pf-v5-c-toggle-group__item">
+    <button class="pf-v5-c-toggle-group__button" type="button">
+      <span class="pf-v5-c-toggle-group__text">Option 1</span>
+    </button>
+  </div>
+  <div class="pf-v5-c-toggle-group__item">
+    <button class="pf-v5-c-toggle-group__button" type="button">
+      <span class="pf-v5-c-toggle-group__text">Option 2</span>
+    </button>
+  </div>
+  <div class="pf-v5-c-toggle-group__item">
+    <button class="pf-v5-c-toggle-group__button" type="button">
+      <span class="pf-v5-c-toggle-group__text">Option 3</span>
+    </button>
+  </div>
+</div>
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+
+      {{/toolbar-item}}
+
+
+    {{/toolbar-content-section}}
+
+    {{#> toolbar-content-section}}
+      {{#> pagination}}
+        {{> pagination-total-items-content}}
+        {{> pagination-options-menu pagination-options-menu--id="pagination-options-menu-top-example"}}
+        {{> pagination-nav-content pagination-nav--aria-label="Pagination nav - top example"}}
+      {{/pagination}}
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- {{#> toolbar toolbar--id="example2"}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section toolbar-content-section--modifier="pf-m-space-items-none"}}
+
+      {{#> toolbar-item}}
+        {{#> menu-toggle menu-toggle--id="3split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
           {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
           {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
             {{#> menu-toggle-controls}}
@@ -94,11 +751,6 @@ import './Toolbar.css'
         {{/menu-toggle}}
       {{/toolbar-item}}
 
-      {{#> toolbar-item}}
-{{#> form-control controlType="textarea" form-control--IsSuccess="true" form-control--attribute='name="textarea-success" id="textarea-success" aria-label="Success state textarea example"'}}
-Success
-{{/form-control}}
-      {{/toolbar-item}}
       {{#> toolbar-item}}
         {{#> menu-toggle}}
           {{#> menu-toggle-text}}
@@ -114,58 +766,173 @@ Success
           {{/menu-toggle-controls}}
         {{/menu-toggle}}
       {{/toolbar-item}}
+
       {{#> toolbar-item}}
-        {{> dropdown dropdown--id="2dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        {{> dropdown dropdown--id="2dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        {{#> menu-toggle}}
-          {{#> menu-toggle-icon}}
-            {{> avatar}}
-          {{/menu-toggle-icon}}
-          {{#> menu-toggle-text}}
-            Ned Username
-          {{/menu-toggle-text}}
-          {{#> menu-toggle-controls}}
-            {{> menu-toggle-toggle-icon}}
-          {{/menu-toggle-controls}}
-        {{/menu-toggle}}
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        {{#> menu-toggle}}
-          {{#> menu-toggle-icon}}
-            {{> avatar}}
-          {{/menu-toggle-icon}}
-          {{#> menu-toggle-text}}
-            Ned Username
-          {{/menu-toggle-text}}
-          {{#> menu-toggle-controls}}
-            {{> menu-toggle-toggle-icon}}
-          {{/menu-toggle-controls}}
-        {{/menu-toggle}}
-        {{/toolbar-item}}
-      {{#> toolbar-item}}
-        {{> dropdown dropdown--id="2dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        {{> dropdown dropdown--id="2dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
-      {{/toolbar-item}}
-      {{#> toolbar-item}}
-        {{> dropdown dropdown--id="2dropdown-split-button-in-progress-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+        {{> dropdown dropdown--id="3dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
       {{/toolbar-item}}
 
       {{#> toolbar-item}}
-        {{> dropdown dropdown--template--SplitButton="true" dropdown--id="2dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+        {{> dropdown dropdown--id="3dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
       {{/toolbar-item}}
 
       {{#> toolbar-item}}
-        {{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute='id="select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
+        {{> dropdown dropdown--id="3dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="3dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="3dropdown-split-button-in-progress-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--template--SplitButton="true" dropdown--id="3dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown-toggle--modifier="pf-m-primary" dropdown--template--SplitButton="true" dropdown--id="3dropdown-split-button-action-primary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown-toggle--modifier="pf-m-secondary" dropdown--template--SplitButton="true" dropdown--id="3dropdown-split-button-action-secondary" dropdown--IsActionButton="true" dropdown-toggle--HasActionButton="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute='id="3select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
           <option value="" selected>Selectable placeholder</option>
           <option value="Mr">Mr</option>
         {{/form-control}}
       {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> menu-toggle}}
+          {{#> menu-toggle-icon}}
+            {{> avatar}}
+          {{/menu-toggle-icon}}
+          {{#> menu-toggle-text}}
+            Ned Username
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> check}}
+          {{#> check-input check-input--attribute='id="check-basic2" name="check-basic"'}}{{/check-input}}
+          {{#> check-label check-label--attribute='for="check-basic2"'}}Check{{/check-label}}
+        {{/check}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> radio}}
+          {{#> radio-input radio-input--attribute='id="radio-simple2" name="exampleRadioSimple"'}}{{/radio-input}}
+          {{#> radio-label radio-label--attribute='for="radio-simple2"'}}Radio{{/radio-label}}
+        {{/radio}}
+      {{/toolbar-item}}
+
+    {{/toolbar-content-section}}
+  {{/toolbar-content}}
+{{/toolbar}}
+
+{{#> toolbar toolbar--id="example2"}}
+  {{#> toolbar-content}}
+    {{#> toolbar-content-section}}
+      {{#> toolbar-item}}
+        {{#> menu-toggle menu-toggle--id="3split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
+          {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
+          {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+            {{#> menu-toggle-controls}}
+              {{> menu-toggle-toggle-icon}}
+            {{/menu-toggle-controls}}
+          {{/menu-toggle-button}}
+        {{/menu-toggle}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> form-control controlType="textarea" form-control--IsSuccess="true" form-control--attribute='name="textarea-success" id="textarea-success" aria-label="Success state textarea example"'}}
+        Success
+        {{/form-control}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> menu-toggle}}
+          {{#> menu-toggle-text}}
+            Count
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-count}}
+            {{#> badge badge--modifier="pf-m-unread"}}
+              4 selected
+            {{/badge}}
+          {{/menu-toggle-count}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="3dropdown-split-button" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="3dropdown-split-button-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> menu-toggle}}
+          {{#> menu-toggle-icon}}
+            {{> avatar}}
+          {{/menu-toggle-icon}}
+          {{#> menu-toggle-text}}
+            Ned Username
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> menu-toggle}}
+          {{#> menu-toggle-icon}}
+            {{> avatar}}
+          {{/menu-toggle-icon}}
+          {{#> menu-toggle-text}}
+            Ned Username
+          {{/menu-toggle-text}}
+          {{#> menu-toggle-controls}}
+            {{> menu-toggle-toggle-icon}}
+          {{/menu-toggle-controls}}
+        {{/menu-toggle}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="3dropdown-split-button-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="3dropdown-split-button-in-progress" dropdown--template--SplitButton="true"dropdown-toggle--HasCheckBox="true" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--id="3dropdown-split-button-in-progress-text" dropdown--template--SplitButton="true" dropdown-toggle-check--CheckboxIsChecked="true" dropdown-menu--IsBulkSelect="true" dropdown-toggle--split-button--text="10 selected" dropdown-toggle-check--IsProgress="true" dropdown-toggle-check--IsInProgress="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{> dropdown dropdown--template--SplitButton="true" dropdown--id="3dropdown-split-button-action-icon" dropdown--IsActionButton="true" dropdown-toggle--HasIconButton="true"}}
+      {{/toolbar-item}}
+
+      {{#> toolbar-item}}
+        {{#> form-control controlType="select" form-control--IsPlaceholder="true" form-control--attribute='id="3select-selectable-placeholder" name="select-selectable-placeholder" aria-label="Selectable placeholder select example"'}}
+          <option value="" selected>Selectable placeholder</option>
+          <option value="Mr">Mr</option>
+        {{/form-control}}
+      {{/toolbar-item}}
+
       {{#> toolbar-item}}
         {{#> select select--id="2select-success" select--IsSuccess="true"}}
           Filter by status
@@ -173,7 +940,7 @@ Success
       {{/toolbar-item}}
     {{/toolbar-content-section}}
   {{/toolbar-content}}
-{{/toolbar}}
+{{/toolbar}} -->
 <br>
 <br>
 <br>
@@ -717,7 +1484,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
         {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
         {{#> toolbar-group newcontext}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-resource-label')}}
+          {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-resource-label')}}
             Resource
           {{/toolbar-item}}
           {{#> toolbar-item}}
@@ -727,7 +1494,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
         {{/toolbar-group}}
         {{#> toolbar-group newcontext}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-status-label')}}
+          {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-status-label')}}
             Status
           {{/toolbar-item}}
           {{#> toolbar-item}}
@@ -737,7 +1504,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
         {{/toolbar-group}}
         {{#> toolbar-group newcontext}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-type-label')}}
+          {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-type-label')}}
             Type
           {{/toolbar-item}}
           {{#> toolbar-item}}
@@ -774,7 +1541,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
       {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--id=(concat toolbar--id '-select-checkbox-resource-expanded-label')}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--id=(concat toolbar--id '-select-checkbox-resource-expanded-label')}}
           Resource
         {{/toolbar-item}}
         {{#> toolbar-item}}
@@ -784,7 +1551,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
         {{/toolbar-item}}
       {{/toolbar-group}}
       {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--id=(concat toolbar--id '-select-checkbox-status-expanded-label')}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--id=(concat toolbar--id '-select-checkbox-status-expanded-label')}}
           Status
         {{/toolbar-item}}
         {{#> toolbar-item}}
@@ -794,7 +1561,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
         {{/toolbar-item}}
       {{/toolbar-group}}
       {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--id=(concat toolbar--id '-select-checkbox-type-expanded-label')}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--id=(concat toolbar--id '-select-checkbox-type-expanded-label')}}
           Type
         {{/toolbar-item}}
         {{#> toolbar-item}}
@@ -883,7 +1650,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-align-items-baseline` | `.pf-v5-c-toolbar__group` | Modifies toolbar group to vertically align children to baseline. |
 | `.pf-m-align-self-center` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align self to center. |
 | `.pf-m-align-self-baseline` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align self to baseline. |
-| `.pf-m-label` | `.pf-v5-c-toolbar__item` | Modifies toolbar item to label. |
+| `.pf-m-info` | `.pf-v5-c-toolbar__item` | Modifies toolbar item to label. |
 | `.pf-m-chip-container` | `.pf-v5-c-toolbar__content`, `.pf-v5-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
 | `.pf-m-overflow-container` | `.pf-v5-c-toolbar__item`, `.pf-v5-c-toolbar__group` | Modifies the toolbar element to hide overflow and respond to available space. Used for horizontal navigation. |
 | `.pf-m-expanded` | `.pf-v5-c-toolbar__expandable-content`, `.pf-v5-c-toolbar__toggle` | Modifies the component for the expanded state. |

@@ -60,3 +60,59 @@
 #ws-core-c-toolbar-width-control .pf-v5-c-toolbar__item {
   padding: .5rem;
 }
+
+.ws-mdx-content-content {
+  max-width: none;
+  overflow: auto;
+  min-width: 12000px;
+}
+
+.pf-v5-c-page__main {
+  overflow: auto;
+}
+
+.pf-v5-c-jump-links {
+  display: none;
+}
+
+.pf-v5-c-toolbar__content-section {
+  position: relative;
+}
+
+/* .pf-v5-c-toolbar__content::before,
+.pf-v5-c-toolbar__content::after,*/
+.pf-v5-c-toolbar__content-section::after,
+.pf-v5-c-toolbar__content-section::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 1px;
+  border-bottom: 1px solid lightblue;
+  z-index: 999;
+}
+/*
+.pf-v5-c-toolbar__content::before {
+  top: -3px;
+}
+
+.pf-v5-c-toolbar__content::after {
+  bottom: -3px;
+} */
+
+.pf-v5-c-toolbar__content-section::before {
+  top: 9px;
+}
+
+
+.pf-v5-c-toolbar__content-section::after {
+  bottom: 12px;
+}
+
+.pf-v5-c-toolbar__content-section {
+  border: 1px solid lightpink;
+  overflow: auto;
+}
+
+.pf-v5-c-toolbar__content-section {
+  flex-wrap: nowrap;
+}

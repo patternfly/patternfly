@@ -23,6 +23,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   // Group
   --#{$toolbar}__group--Display: flex;
   --#{$toolbar}__group--RowGap: var(--#{$toolbar}--item--RowGap--base);
+  --#{$toolbar}__group--AlignSelf: var(--#{$toolbar}--AlignItems--base);
 
   // Sticky
   --#{$toolbar}--m-sticky--ZIndex: var(--#{$pf-global}--ZIndex--xs);
@@ -114,12 +115,16 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}__item--m-chip-group--spacer: var(--#{$pf-global}--spacer--sm);
 
   // Label
-  --#{$toolbar}__item--m-label--spacer: var(--#{$toolbar}__item--spacer);
-  --#{$toolbar}__item--m-label--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$toolbar}__item--m-info--spacer: var(--#{$toolbar}__item--spacer);
+  --#{$toolbar}__item--m-info--TranslateY: var(--pf-v5-global--spacer--form-element);
+  --#{$toolbar}__item--m-info--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+
+  // Input
+  --#{$toolbar}__item--m-form-control--TranslateY: var(--pf-v5-global--spacer--form-element);
 
   // Label in expanded content
-  --#{$toolbar}__expandable-content__item--m-label--MarginBottom: calc(-1 * var(--#{$toolbar}__expandable-content--m-expanded--GridRowGap) + var(--#{$pf-global}--spacer--sm));
-  --#{$toolbar}__expandable-content__item--m-label--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$toolbar}__expandable-content__item--m-info--MarginBottom: calc(-1 * var(--#{$toolbar}__expandable-content--m-expanded--GridRowGap) + var(--#{$pf-global}--spacer--sm));
+  --#{$toolbar}__expandable-content__item--m-info--FontSize: var(--#{$pf-global}--FontSize--sm);
 
   // Toggle
   --#{$toolbar}__toggle--m-expanded__c-button--m-plain--Color: var(--#{$pf-global}--Color--100);
@@ -206,6 +211,14 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 }
 
+.#{$toolbar},
+.#{$toolbar}__content,
+.#{$toolbar}__content-section,
+.#{$toolbar}__group,
+.#{$toolbar}__item {
+  line-height: 1.5;
+}
+
 // Divider
 .#{$toolbar}__content-section,
 .#{$toolbar}__group {
@@ -254,7 +267,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   @include pf-v5-hidden-visible(var(--#{$toolbar}__group--Display));
 
   row-gap: var(--#{$toolbar}__group--RowGap);
-  align-items: var(--#{$toolbar}__group--AlignItems);
   align-self: var(--#{$toolbar}__group--AlignSelf);
   margin-right: var(--#{$toolbar}--spacer);
 
@@ -375,10 +387,25 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   // Label
   &.pf-m-label {
-    --#{$toolbar}--spacer: var(--#{$toolbar}__item--m-label--spacer);
+    --#{$toolbar}--spacer: var(--#{$toolbar}__item--m-info--spacer);
 
-    // align-self: baseline;
-    font-weight: var(--#{$toolbar}__item--m-label--FontWeight);
+    transform: translateY(var(--pf-v5-global--spacer--form-element));
+    font-weight: var(--#{$toolbar}__item--m-info--FontWeight);
+
+  }
+
+  &.pf-m-info {
+    transform: translateY(var(--pf-v5-global--spacer--form-element));
+  }
+
+  // Input
+  &.pf-m-info.pf-m-sm {
+    transform: translateY(var(--#{$pf-global}--spacer--sm));
+  }
+
+  // Input
+  &.pf-m-form-control {
+    transform: translateY(var(--#{$toolbar}__item--m-form-control--TranslateY));
   }
 
   // Total items
@@ -480,9 +507,9 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     grid-row-gap: var(--#{$toolbar}__expandable-content--m-expanded--GridRowGap);
   }
 
-  .pf-m-label {
-    margin-bottom: var(--#{$toolbar}__expandable-content__item--m-label--MarginBottom);
-    font-size: var(--#{$toolbar}__expandable-content__item--m-label--FontSize);
+  .pf-m-info {
+    margin-bottom: var(--#{$toolbar}__expandable-content__item--m-info--MarginBottom);
+    font-size: var(--#{$toolbar}__expandable-content__item--m-info--FontSize);
   }
 }
 

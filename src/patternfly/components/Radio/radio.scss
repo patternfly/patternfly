@@ -13,14 +13,18 @@
   --#{$radio}__description--Color: var(--#{$pf-global}--Color--200);
   --#{$radio}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
 
-  display: grid;
+  // display: grid;
+  display: inline-grid; // use inline flex for FF to recognize baseline alignment
   grid-template-columns: auto 1fr;
   grid-gap: var(--#{$radio}--GridGap);
+  // gap: var(--#{$radio}--GridGap);
+  align-items: baseline;
+  width: 100%;
 
   &.pf-m-standalone {
     --#{$radio}--GridGap: 0;
 
-    display: inline-grid;
+    // display: inline-grid;
   }
 }
 
@@ -32,6 +36,8 @@
 }
 
 .#{$radio}__input {
+  -moz-transform: translateY(5px);
+
   // fixes a chrome issue where the left edge is cut off in a container with overflow hidden
   &:first-child {
     margin-left: var(--#{$radio}__input--first-child--MarginLeft);
@@ -40,6 +46,10 @@
   // fixes a chrome issue where the right edge is cut off in a container with overflow hidden
   &:last-child {
     margin-right: var(--#{$radio}__input--last-child--MarginRight);
+  }
+
+  .#{$radio}.pf-m-standalone & {
+    -moz-transform: none;
   }
 }
 
