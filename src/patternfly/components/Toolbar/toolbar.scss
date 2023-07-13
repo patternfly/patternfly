@@ -136,7 +136,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}--m-full-height--PaddingTop: 0;
   --#{$toolbar}--m-full-height--PaddingBottom: 0;
   --#{$toolbar}--m-full-height__item--Display: flex;
-  --#{$toolbar}--m-full-height__item--AlignItems: var(--#{$toolbar}__group--AlignItems);
+  --#{$toolbar}--m-full-height__item--AlignItems: center;
 
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
     --#{$toolbar}__expandable-content--PaddingRight: var(--#{$toolbar}__expandable-content--lg--PaddingRight);
@@ -167,21 +167,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
   }
 
-  &.pf-m-static {
-    &,
-    .#{$toolbar}__content {
-      position: static;
-    }
-
-    .#{$toolbar}__expandable-content {
-      position: absolute;
-    }
-  }
-}
-
-.#{$toolbar},
-.#{$toolbar}__content-section,
-.#{$toolbar}__group {
   &.pf-m-full-height {
     --#{$toolbar}--PaddingTop: var(--#{$toolbar}--m-full-height--PaddingTop);
     --#{$toolbar}--PaddingBottom: var(--#{$toolbar}--m-full-height--PaddingTop);
@@ -207,6 +192,17 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
     :where(.#{$toolbar}__item) {
       --#{$toolbar}__item--AlignItems: var(--#{$toolbar}--m-full-height__item--AlignItems);
+    }
+  }
+
+  &.pf-m-static {
+    &,
+    .#{$toolbar}__content {
+      position: static;
+    }
+
+    .#{$toolbar}__expandable-content {
+      position: absolute;
     }
   }
 }
