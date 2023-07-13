@@ -211,14 +211,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 }
 
-.#{$toolbar},
-.#{$toolbar}__content,
-.#{$toolbar}__content-section,
-.#{$toolbar}__group,
-.#{$toolbar}__item {
-  line-height: 1.5;
-}
-
 // Divider
 .#{$toolbar}__content-section,
 .#{$toolbar}__group {

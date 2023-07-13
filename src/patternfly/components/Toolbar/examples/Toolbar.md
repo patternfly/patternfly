@@ -533,16 +533,16 @@ import './Toolbar.css'
   </button>
       {{/toolbar-item}}
 
-      {{#> toolbar-item tooblar-item--modifier="pf-m-info"}}
-<label class="pf-v5-c-switch" for="switch-with-label-1">
-  <input class="pf-v5-c-switch__input" type="checkbox" id="switch-with-label-1" aria-labelledby="switch-with-label-1-on" checked="">
+      {{#> toolbar-item toolbar-item--modifier="pf-m-info"}}
+        <label class="pf-v5-c-switch" for="switch-with-label-1">
+          <input class="pf-v5-c-switch__input" type="checkbox" id="switch-with-label-1" aria-labelledby="switch-with-label-1-on" checked="">
 
-  <span class="pf-v5-c-switch__toggle"></span>
+          <span class="pf-v5-c-switch__toggle"></span>
 
-  <span class="pf-v5-c-switch__label pf-m-on" id="switch-with-label-1-on" aria-hidden="true">Message when on</span>
+          <span class="pf-v5-c-switch__label pf-m-on" id="switch-with-label-1-on" aria-hidden="true">Message when on</span>
 
-  <span class="pf-v5-c-switch__label pf-m-off" id="switch-with-label-1-off" aria-hidden="true">Message when off</span>
-</label>
+          <span class="pf-v5-c-switch__label pf-m-off" id="switch-with-label-1-off" aria-hidden="true">Message when off</span>
+        </label>
       {{/toolbar-item}}
 
       {{#> toolbar-item}}

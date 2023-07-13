@@ -13,10 +13,11 @@
   --#{$radio}__description--Color: var(--#{$pf-global}--Color--200);
   --#{$radio}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
 
-  display: grid;
+  display: inline-grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--#{$radio}--GridGap);
   align-items: baseline;
+  width: 100%;
 
   &.pf-m-standalone {
     --#{$radio}--GridGap: 0;
