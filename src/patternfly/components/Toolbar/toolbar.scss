@@ -389,9 +389,8 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   &.pf-m-label {
     --#{$toolbar}--spacer: var(--#{$toolbar}__item--m-info--spacer);
 
-    transform: translateY(var(--pf-v5-global--spacer--form-element));
     font-weight: var(--#{$toolbar}__item--m-info--FontWeight);
-
+    transform: translateY(var(--pf-v5-global--spacer--form-element));
   }
 
   &.pf-m-info {

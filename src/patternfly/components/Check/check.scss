@@ -16,17 +16,13 @@
   --#{$check}__label-required--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$check}__label-required--Color: var(--#{$pf-global}--danger-color--100);
 
-  // display: grid;
-  display: inline-grid; // use inline grid for FF to recognize baseline alignment
+  display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--#{$check}--GridGap);
   align-items: baseline;
-  width: 100%;
 
   &.pf-m-standalone {
     --#{$check}--GridGap: 0;
-
-    // display: inline-grid;
   }
 }
 
@@ -48,6 +44,7 @@
   margin-top: var(--#{$check}__body--MarginTop);
 }
 
+// stylelint-disable property-no-vendor-prefix
 .#{$check}__input {
   -moz-transform: translateY(5px);
 
@@ -55,6 +52,7 @@
     -moz-transform: none;
   }
 }
+// stylelint-enable
 
 .#{$check}__label,
 .#{$check}__input {

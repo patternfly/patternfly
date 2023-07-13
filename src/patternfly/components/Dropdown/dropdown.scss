@@ -344,7 +344,6 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
     .#{$dropdown}__toggle-check {
       align-items: baseline;
-      // align-self: stretch;
       cursor: pointer;
 
       &.pf-m-in-progress {
