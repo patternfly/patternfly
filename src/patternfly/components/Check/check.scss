@@ -50,9 +50,10 @@
 // stylelint-disable property-no-vendor-prefix
 .#{$check}__input {
   align-self: baseline;
+
   -moz-transform: translateY(5px);
 
-  .#{$check}.pf-m-standalone & {
+  .#{$check} & {
     -moz-transform: none;
   }
 }
