@@ -18,7 +18,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}__item--Display: flex;
   --#{$toolbar}__item--MinWidth--base: auto;
   --#{$toolbar}__item--AlignSelf: flex-start;
-  --#{$toolbar}__item--AlignItems: baseline;
 
   // Group
   --#{$toolbar}__group--Display: flex;
@@ -317,8 +316,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   @include pf-v5-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v5-c-toolbar--breakpoint-map);
   @include pf-v5-hidden-visible(var(--#{$toolbar}__item--Display));
 
-  display: flex;
-  align-items: var(--#{$toolbar}__item--AlignItems);
   align-self: var(--#{$toolbar}__item--AlignSelf);
   width: var(--#{$toolbar}__item--Width--base);
   min-width: var(--#{$toolbar}__item--MinWidth--base);

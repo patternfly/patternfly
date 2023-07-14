@@ -90,17 +90,17 @@
   border-bottom: 1px solid lightblue;
   z-index: 999;
 }
-/*
+
 .pf-v5-c-toolbar__content::before {
   top: -3px;
 }
 
 .pf-v5-c-toolbar__content::after {
   bottom: -3px;
-} */
+}
 
 .pf-v5-c-toolbar__content-section::before {
-  top: 9px;
+  top: 10px;
 }
 
 

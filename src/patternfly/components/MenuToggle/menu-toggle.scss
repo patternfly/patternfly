@@ -165,7 +165,7 @@
 
   position: relative;
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   max-width: 100%;
   padding: var(--#{$menu-toggle}--PaddingTop) var(--#{$menu-toggle}--PaddingRight) var(--#{$menu-toggle}--PaddingBottom) var(--#{$menu-toggle}--PaddingLeft);
   font-size: var(--#{$menu-toggle}--FontSize);
@@ -368,6 +368,12 @@
       --#{$menu-toggle}--PaddingRight: 0;
       --#{$check}__label--Color: currentcolor;
       --#{$check}__label--disabled--Color: currentcolor;
+
+      align-items: inherit;
+
+      .#{$check}__input {
+        align-self: revert;
+      }
     }
 
     // Split button, active

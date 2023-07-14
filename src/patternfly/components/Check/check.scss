@@ -19,7 +19,6 @@
   display: inline-grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--#{$check}--GridGap);
-  align-items: baseline;
   width: 100%;
 
   &.pf-m-standalone {
@@ -30,6 +29,7 @@
 }
 
 .#{$check}__label {
+  align-self: baseline;
   font-size: var(--#{$check}__label--FontSize);
   font-weight: var(--#{$check}__label--FontWeight);
   line-height: var(--#{$check}__label--LineHeight);
@@ -49,6 +49,7 @@
 
 // stylelint-disable property-no-vendor-prefix
 .#{$check}__input {
+  align-self: baseline;
   -moz-transform: translateY(5px);
 
   .#{$check}.pf-m-standalone & {
