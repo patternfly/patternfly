@@ -348,6 +348,7 @@
 
   &.pf-m-split-button {
     padding: 0; // pass padding to children
+    align-items: baseline;
 
     > * {
       position: relative;
@@ -369,10 +370,15 @@
       --#{$check}__label--Color: currentcolor;
       --#{$check}__label--disabled--Color: currentcolor;
 
+      display: inline-flex;
       align-items: inherit;
 
       .#{$check}__input {
         align-self: revert;
+
+        // stylelint-disable property-no-vendor-prefix
+        -moz-transform: none;
+        // stylelint-enable
       }
     }
 

@@ -9,6 +9,27 @@ import './Toolbar.css'
 ### Example simple
 ```hbs
 {{> divider}}
+{{#> menu-toggle menu-toggle--IsPrimary="true"}}
+  {{#> menu-toggle-text}}
+    Collapsed
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
+{{#> menu-toggle menu-toggle--IsPrimary="true"}}
+  {{#> menu-toggle-icon}}
+    <i class="fas fa-cog" aria-hidden="true"></i>
+  {{/menu-toggle-icon}}
+  {{#> menu-toggle-text}}
+    Icon
+  {{/menu-toggle-text}}
+  {{#> menu-toggle-controls}}
+    {{> menu-toggle-toggle-icon}}
+  {{/menu-toggle-controls}}
+{{/menu-toggle}}
+
 {{#> menu-toggle menu-toggle--id="1split-button-checkbox-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
   {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}

@@ -24,6 +24,7 @@
   &.pf-m-standalone {
     --#{$check}--GridGap: 0;
 
+    display: inline-flex;
     width: auto;
   }
 }
@@ -50,12 +51,7 @@
 // stylelint-disable property-no-vendor-prefix
 .#{$check}__input {
   align-self: baseline;
-
   -moz-transform: translateY(5px);
-
-  .#{$check} & {
-    -moz-transform: none;
-  }
 }
 // stylelint-enable
 
