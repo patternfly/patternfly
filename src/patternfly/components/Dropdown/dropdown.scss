@@ -356,7 +356,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
         width: auto;
         cursor: pointer;
         visibility: var(--#{$dropdown}__toggle--m-split-button__toggle-check__input--Visibility, unset);
-        transform: translateY(1px);
+        transform: translateY(2px);
       }
     }
 
