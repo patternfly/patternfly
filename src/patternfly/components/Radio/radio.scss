@@ -21,6 +21,8 @@
 
   &.pf-m-standalone {
     --#{$radio}--GridGap: 0;
+
+    width: auto;
   }
 }
 

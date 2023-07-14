@@ -381,20 +381,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     transform: translateY(var(--pf-v5-global--spacer--form-element));
   }
 
-  &.pf-m-info {
-    transform: translateY(var(--pf-v5-global--spacer--form-element));
-  }
-
-  // Input
-  &.pf-m-info.pf-m-sm {
-    transform: translateY(var(--#{$pf-global}--spacer--sm));
-  }
-
-  // Input
-  &.pf-m-form-control {
-    transform: translateY(var(--#{$toolbar}__item--m-form-control--TranslateY));
-  }
-
   // Total items
   &.pf-m-pagination {
     margin-left: auto;
@@ -494,7 +480,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     grid-row-gap: var(--#{$toolbar}__expandable-content--m-expanded--GridRowGap);
   }
 
-  .pf-m-info {
+  .#{$toolbar}__item.pf-m-label {
     margin-bottom: var(--#{$toolbar}__expandable-content__item--m-info--MarginBottom);
     font-size: var(--#{$toolbar}__expandable-content__item--m-info--FontSize);
   }

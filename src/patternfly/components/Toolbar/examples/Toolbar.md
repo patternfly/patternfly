@@ -200,20 +200,6 @@ import './Toolbar.css'
         {{/menu-toggle}}
       {{/toolbar-item}} -->
 
-      {{#> toolbar-item toolbar-item--modifier="pf-m-form-control"}}
-        {{#> check}}
-          {{#> check-input check-input--attribute='id="check-basic2" name="check-basic"'}}{{/check-input}}
-          {{#> check-label check-label--attribute='for="check-basic2"'}}Check{{/check-label}}
-        {{/check}}
-      {{/toolbar-item}}
-
-      {{#> toolbar-item toolbar-item--modifier="pf-m-form-control"}}
-        {{#> radio}}
-          {{#> radio-input radio-input--attribute='id="radio-simple2" name="exampleRadioSimple"'}}{{/radio-input}}
-          {{#> radio-label radio-label--attribute='for="radio-simple2"'}}Radio{{/radio-label}}
-        {{/radio}}
-      {{/toolbar-item}}
-
       {{#> toolbar-item toolbar-item--modifier="pf-m-info pf-m-sm"}}
         {{#> badge badge--modifier="pf-m-unread"}}
           7
@@ -1484,7 +1470,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
         {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
         {{#> toolbar-group newcontext}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-resource-label')}}
+          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-resource-label')}}
             Resource
           {{/toolbar-item}}
           {{#> toolbar-item}}
@@ -1494,7 +1480,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
         {{/toolbar-group}}
         {{#> toolbar-group newcontext}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-status-label')}}
+          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-status-label')}}
             Status
           {{/toolbar-item}}
           {{#> toolbar-item}}
@@ -1504,7 +1490,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
         {{/toolbar-group}}
         {{#> toolbar-group newcontext}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-type-label')}}
+          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-type-label')}}
             Type
           {{/toolbar-item}}
           {{#> toolbar-item}}
@@ -1541,7 +1527,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
       {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--id=(concat toolbar--id '-select-checkbox-resource-expanded-label')}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--id=(concat toolbar--id '-select-checkbox-resource-expanded-label')}}
           Resource
         {{/toolbar-item}}
         {{#> toolbar-item}}
@@ -1551,7 +1537,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
         {{/toolbar-item}}
       {{/toolbar-group}}
       {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--id=(concat toolbar--id '-select-checkbox-status-expanded-label')}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--id=(concat toolbar--id '-select-checkbox-status-expanded-label')}}
           Status
         {{/toolbar-item}}
         {{#> toolbar-item}}
@@ -1561,7 +1547,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
         {{/toolbar-item}}
       {{/toolbar-group}}
       {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-info" toolbar-item--id=(concat toolbar--id '-select-checkbox-type-expanded-label')}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--id=(concat toolbar--id '-select-checkbox-type-expanded-label')}}
           Type
         {{/toolbar-item}}
         {{#> toolbar-item}}
@@ -1650,7 +1636,6 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-align-items-baseline` | `.pf-v5-c-toolbar__group` | Modifies toolbar group to vertically align children to baseline. |
 | `.pf-m-align-self-center` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align self to center. |
 | `.pf-m-align-self-baseline` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align self to baseline. |
-| `.pf-m-info` | `.pf-v5-c-toolbar__item` | Modifies toolbar item to label. |
 | `.pf-m-chip-container` | `.pf-v5-c-toolbar__content`, `.pf-v5-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
 | `.pf-m-overflow-container` | `.pf-v5-c-toolbar__item`, `.pf-v5-c-toolbar__group` | Modifies the toolbar element to hide overflow and respond to available space. Used for horizontal navigation. |
 | `.pf-m-expanded` | `.pf-v5-c-toolbar__expandable-content`, `.pf-v5-c-toolbar__toggle` | Modifies the component for the expanded state. |

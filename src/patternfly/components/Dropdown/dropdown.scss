@@ -635,6 +635,11 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   flex-shrink: 0;
   align-self: center;
   line-height: 1;
+
+  ~ :where(.#{$dropdown}__toggle-text),
+  ~ :where(.#{$dropdown}__toggle-icon) {
+    align-self: center;
+  }
 }
 
 // Loading spinner
