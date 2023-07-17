@@ -17,17 +17,15 @@
   --#{$check}__label-required--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$check}__label-required--Color: var(--#{$pf-global}--danger-color--100);
 
-  display: inline-grid;
+  display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--#{$check}--GridGap);
-  width: 100%;
 
   &.pf-m-standalone {
     --#{$check}--GridGap: 0;
     --#{$check}__input--TranslateY--moz: 0;
 
-    display: inline-flex;
-    width: auto;
+    display: inline-grid;
   }
 }
 
