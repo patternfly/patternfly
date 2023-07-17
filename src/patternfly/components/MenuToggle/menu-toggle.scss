@@ -524,7 +524,6 @@
 }
 
 .#{$menu-toggle}__icon {
-  display: inline-flex;
   flex-shrink: 0;
   align-self: center;
   margin-right: var(--#{$menu-toggle}__icon--MarginRight);
