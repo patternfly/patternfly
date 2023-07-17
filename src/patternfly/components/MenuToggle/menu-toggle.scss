@@ -369,8 +369,8 @@
       --#{$check}__label--Color: currentcolor;
       --#{$check}__label--disabled--Color: currentcolor;
 
-      align-self: stretch;
       align-items: center;
+      align-self: stretch;
 
       .#{$check}__input {
         align-self: revert;
