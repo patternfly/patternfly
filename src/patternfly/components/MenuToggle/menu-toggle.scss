@@ -347,8 +347,8 @@
   }
 
   &.pf-m-split-button {
-    padding: 0; // pass padding to children
     align-items: baseline;
+    padding: 0; // pass padding to children
 
     > * {
       position: relative;

@@ -7,6 +7,7 @@
   --#{$radio}__label--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$radio}__label--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$radio}__label--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$radio}__input--TranslateY--moz: 5px;
   --#{$radio}__input--first-child--MarginLeft: #{pf-size-prem(1px)};
   --#{$radio}__input--last-child--MarginRight: #{pf-size-prem(1px)};
   --#{$radio}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
@@ -21,6 +22,7 @@
 
   &.pf-m-standalone {
     --#{$radio}--GridGap: 0;
+    --#{$radio}__input--TranslateY--moz: 0;
 
     width: auto;
   }
@@ -35,7 +37,7 @@
 
 .#{$radio}__input {
   // stylelint-disable property-no-vendor-prefix
-  -moz-transform: translateY(5px);
+  -moz-transform: translateY(var(--#{$radio}__input--TranslateY--moz));
   // stylelint-enable
 
   // fixes a chrome issue where the left edge is cut off in a container with overflow hidden
@@ -46,12 +48,6 @@
   // fixes a chrome issue where the right edge is cut off in a container with overflow hidden
   &:last-child {
     margin-right: var(--#{$radio}__input--last-child--MarginRight);
-  }
-
-  .#{$radio}.pf-m-standalone & {
-    // stylelint-disable property-no-vendor-prefix
-    -moz-transform: none;
-    // stylelint-enable
   }
 }
 

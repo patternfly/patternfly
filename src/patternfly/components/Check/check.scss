@@ -7,6 +7,7 @@
   --#{$check}__label--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$check}__label--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$check}__label--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$check}__input--TranslateY--moz: 5px;
   --#{$check}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$check}__description--Color: var(--#{$pf-global}--Color--200);
   --#{$check}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
@@ -23,6 +24,7 @@
 
   &.pf-m-standalone {
     --#{$check}--GridGap: 0;
+    --#{$check}__input--TranslateY--moz: 0;
 
     display: inline-flex;
     width: auto;
@@ -51,7 +53,7 @@
 // stylelint-disable property-no-vendor-prefix
 .#{$check}__input {
   align-self: baseline;
-  -moz-transform: translateY(5px);
+  -moz-transform: translateY(var(--#{$check}__input--TranslateY--moz));
 }
 // stylelint-enable
 
