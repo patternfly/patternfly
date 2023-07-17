@@ -377,7 +377,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     --#{$toolbar}--spacer: var(--#{$toolbar}__item--m-label--spacer);
 
     font-weight: var(--#{$toolbar}__item--m-info--FontWeight);
-    transform: translateY(var(--pf-v5-global--spacer--form-element));
+    transform: translateY(var(--#{$pf-global}--spacer--form-element));
   }
 
   // Total items
