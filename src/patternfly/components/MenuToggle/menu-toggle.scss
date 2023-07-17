@@ -347,7 +347,6 @@
   }
 
   &.pf-m-split-button {
-    align-items: baseline;
     padding: 0; // pass padding to children
 
     > * {
@@ -371,6 +370,7 @@
       --#{$check}__label--disabled--Color: currentcolor;
 
       align-self: stretch;
+      align-items: center;
 
       .#{$check}__input {
         align-self: revert;
@@ -515,6 +515,7 @@
   --#{$menu-toggle}__controls--MarginRight: var(--#{$menu-toggle}__button__controls--MarginRight);
   --#{$menu-toggle}__controls--MarginLeft: var(--#{$menu-toggle}__button__controls--MarginLeft);
 
+  align-self: baseline;
   padding-right: var(--#{$menu-toggle}__button--PaddingRight);
   padding-left: var(--#{$menu-toggle}__button--PaddingLeft);
   color: inherit;
