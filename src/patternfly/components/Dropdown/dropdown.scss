@@ -343,6 +343,9 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     }
 
     .#{$dropdown}__toggle-check {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
       cursor: pointer;
 
       &.pf-m-in-progress {
@@ -352,7 +355,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
       > input,
       .#{$check} {
-        align-self: baseline;
+        align-self: revert;
         width: auto;
         cursor: pointer;
         visibility: var(--#{$dropdown}__toggle--m-split-button__toggle-check__input--Visibility, unset);
