@@ -153,6 +153,7 @@
 
   // Split button, controls, check
   --#{$menu-toggle}__button--BackgroundColor: transparent;
+  --#{$menu-toggle}__button--AlignSelf: baseline;
   --#{$menu-toggle}__button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}__button--PaddingRight: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}__button__controls--MarginRight: var(--#{$pf-global}--spacer--sm);
@@ -162,6 +163,7 @@
   --#{$menu-toggle}--m-typeahead__controls--MarginRight: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}--m-typeahead__controls--MarginLeft: var(--#{$pf-global}--spacer--sm);
   --#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight: var(--#{$pf-global}--spacer--sm);
+  --#{$menu-toggle}--m-typeahead__button--AlignSelf: center;
 
   position: relative;
   display: inline-flex;
@@ -334,6 +336,7 @@
   &.pf-m-typeahead {
     --#{$menu-toggle}__button__controls--MarginRight: var(--#{$menu-toggle}--m-typeahead__controls--MarginRight);
     --#{$menu-toggle}__button__controls--MarginLeft: var(--#{$menu-toggle}--m-typeahead__controls--MarginLeft);
+    --#{$menu-toggle}__button--AlignSelf: var(--#{$menu-toggle}--m-typeahead__button--AlignSelf);
 
     align-items: stretch;
     padding: 0;
@@ -515,7 +518,7 @@
   --#{$menu-toggle}__controls--MarginRight: var(--#{$menu-toggle}__button__controls--MarginRight);
   --#{$menu-toggle}__controls--MarginLeft: var(--#{$menu-toggle}__button__controls--MarginLeft);
 
-  align-self: baseline;
+  align-self: var(--#{$menu-toggle}__button--AlignSelf);
   padding-right: var(--#{$menu-toggle}__button--PaddingRight);
   padding-left: var(--#{$menu-toggle}__button--PaddingLeft);
   color: inherit;
@@ -536,16 +539,9 @@
   min-width: 0;
 }
 
-.#{$menu-toggle}__icon ~ :where(.#{$menu-toggle}__text),
-.#{$menu-toggle}__icon ~ :where(.#{$menu-toggle}__controls) {
-  align-self: center;
-}
-
 .#{$menu-toggle}__count {
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
-  align-self: center;
   margin-left: var(--#{$menu-toggle}__count--MarginLeft);
 }
 

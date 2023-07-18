@@ -15,8 +15,9 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}--item--RowGap--base: var(--#{$pf-global}--spacer--xs); // shared row-gap for items and groups
 
   // Item
-  --#{$toolbar}__item--Display: block;
+  --#{$toolbar}__item--Display: flex;
   --#{$toolbar}__item--MinWidth--base: auto;
+  --#{$toolbar}__item--AlignItems: var(--#{$toolbar}--AlignItems--base);
   --#{$toolbar}__item--AlignSelf: var(--#{$toolbar}--AlignItems--base);
 
   // Group
@@ -115,16 +116,16 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}__item--m-chip-group--spacer: var(--#{$pf-global}--spacer--sm);
 
   // Label
-  --#{$toolbar}__item--m-info--spacer: var(--#{$toolbar}__item--spacer);
-  --#{$toolbar}__item--m-info--TranslateY: var(--pf-v5-global--spacer--form-element);
-  --#{$toolbar}__item--m-info--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$toolbar}__item--m-label--spacer: var(--#{$toolbar}__item--spacer);
+  --#{$toolbar}__item--m-label--TranslateY: var(--pf-v5-global--spacer--form-element);
+  --#{$toolbar}__item--m-label--FontWeight: var(--#{$pf-global}--FontWeight--bold);
 
   // Input
   --#{$toolbar}__item--m-form-control--TranslateY: var(--pf-v5-global--spacer--form-element);
 
   // Label in expanded content
-  --#{$toolbar}__expandable-content__item--m-info--MarginBottom: calc(-1 * var(--#{$toolbar}__expandable-content--m-expanded--GridRowGap) + var(--#{$pf-global}--spacer--sm));
-  --#{$toolbar}__expandable-content__item--m-info--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$toolbar}__expandable-content__item--m-label--MarginBottom: calc(-1 * var(--#{$toolbar}__expandable-content--m-expanded--GridRowGap) + var(--#{$pf-global}--spacer--sm));
+  --#{$toolbar}__expandable-content__item--m-label--FontSize: var(--#{$pf-global}--FontSize--sm);
 
   // Toggle
   --#{$toolbar}__toggle--m-expanded__c-button--m-plain--Color: var(--#{$pf-global}--Color--100);
@@ -318,6 +319,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   @include pf-v5-build-css-variable-stack("--#{$toolbar}__item--MinWidth--base", "--#{$toolbar}__item--MinWidth", $pf-v5-c-toolbar--breakpoint-map);
   @include pf-v5-hidden-visible(var(--#{$toolbar}__item--Display));
 
+  align-items: var(--#{$toolbar}__item--AlignItems);
   align-self: var(--#{$toolbar}__item--AlignSelf);
   width: var(--#{$toolbar}__item--Width--base);
   min-width: var(--#{$toolbar}__item--MinWidth--base);
@@ -376,7 +378,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   &.pf-m-label {
     --#{$toolbar}--spacer: var(--#{$toolbar}__item--m-label--spacer);
 
-    font-weight: var(--#{$toolbar}__item--m-info--FontWeight);
+    font-weight: var(--#{$toolbar}__item--m-label--FontWeight);
     transform: translateY(var(--#{$pf-global}--spacer--form-element));
   }
 
@@ -480,8 +482,8 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 
   .#{$toolbar}__item.pf-m-label {
-    margin-bottom: var(--#{$toolbar}__expandable-content__item--m-info--MarginBottom);
-    font-size: var(--#{$toolbar}__expandable-content__item--m-info--FontSize);
+    margin-bottom: var(--#{$toolbar}__expandable-content__item--m-label--MarginBottom);
+    font-size: var(--#{$toolbar}__expandable-content__item--m-label--FontSize);
   }
 }
 
