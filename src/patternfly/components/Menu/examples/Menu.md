@@ -1620,7 +1620,13 @@ import './Menu.css'
         {{/menu-item}}
       {{/menu-list-item}}
       {{#> menu-list-item menu-list-item--modifier="pf-m-loading"}}
-        {{#> spinner spinner--modifier="pf-m-lg"}}Loading items{{/spinner}}
+        {{#> menu-item}}
+          {{#> menu-item-main}}
+            {{#> menu-item-text}}
+              {{#> spinner spinner--modifier="pf-m-lg"}}Loading items{{/spinner}}
+            {{/menu-item-text}}
+          {{/menu-item-main}}
+        {{/menu-item}}
       {{/menu-list-item}}
     {{/menu-list}}
   {{/menu-content}}
