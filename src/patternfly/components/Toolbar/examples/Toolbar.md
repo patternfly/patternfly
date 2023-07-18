@@ -653,7 +653,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-v5-c-toolbar__content-section` | `<div>` | Initiates a toolbar content section. This is used to separate static elements from dynamic elements within a content container. There should be no more than one `.pf-v5-c-toolbar__content-section` per `.pf-v5-c-toolbar__content` **Required** |
 | `.pf-v5-c-toolbar__expandable-content` | `<div>` | Initiates a toolbar expandable content section. |
 | `.pf-m-sticky` | `.pf-v5-c-toolbar` | Modifies toolbar component to be sticky to the top of its container. |
-| `.pf-m-full-height` | `.pf-v5-c-toolbar` | Modifies toolbar component to full height of its container and removes vertical padding. |
+| `.pf-m-full-height` | `.pf-v5-c-toolbar`, `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group` | Modifies toolbar component to full height of its container and removes vertical padding. |
 | `.pf-m-static` | `.pf-v5-c-toolbar` | Modifies expandable content section to position itself to the nearest absolutely positioned parent outside of the toolbar component. This is used primarily for masthead toolbar. |
 | `.pf-m-expanded` | `.pf-v5-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
 | `.pf-m-bulk-select` | `.pf-v5-c-toolbar__item` | Initiates bulk select spacing. |
@@ -674,7 +674,6 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-align-items-baseline` | `.pf-v5-c-toolbar__group` | Modifies toolbar group to vertically align children to baseline. |
 | `.pf-m-align-self-center` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align self to center. |
 | `.pf-m-align-self-baseline` | `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__item` | Modifies toolbar element to vertically align self to baseline. |
-| `.pf-m-label` | `.pf-v5-c-toolbar__item` | Modifies toolbar item to label. |
 | `.pf-m-chip-container` | `.pf-v5-c-toolbar__content`, `.pf-v5-c-toolbar__group` | Modifies the toolbar element for applied filters layout. |
 | `.pf-m-overflow-container` | `.pf-v5-c-toolbar__item`, `.pf-v5-c-toolbar__group` | Modifies the toolbar element to hide overflow and respond to available space. Used for horizontal navigation. |
 | `.pf-m-expanded` | `.pf-v5-c-toolbar__expandable-content`, `.pf-v5-c-toolbar__toggle` | Modifies the component for the expanded state. |

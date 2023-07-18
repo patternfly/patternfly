@@ -80,7 +80,6 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --#{$dropdown}__toggle--m-split-button--m-action--child--PaddingLeft: var(--#{$pf-global}--spacer--sm);
   --#{$dropdown}__toggle--m-split-button--m-action--child--PaddingRight: var(--#{$pf-global}--spacer--sm);
   --#{$dropdown}__toggle--m-split-button--m-action__toggle-button--MarginRight: calc(-1 * var(--#{$pf-global}--BorderWidth--sm));
-  --#{$dropdown}__toggle--m-split-button__toggle-check__input--TranslateY: #{pf-size-prem(-1px)};
   --#{$dropdown}__toggle--m-split-button__toggle-text--MarginLeft: var(--#{$pf-global}--spacer--sm);
   --#{$dropdown}__toggle--m-split-button--child--BorderRadius: var(--#{$pf-global}--BorderRadius--sm);
 
@@ -189,9 +188,9 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   --#{$dropdown}--m-full-height__toggle--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$dropdown}--m-full-height__toggle--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
-
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: start;
   max-width: 100%;
 
   .#{$divider} {
@@ -244,7 +243,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
 .#{$dropdown}__toggle {
   position: relative;
-  display: flex;
+  display: inline-flex;
   column-gap: var(--#{$dropdown}__toggle--ColumnGap);
   align-items: center;
   min-width: var(--#{$dropdown}__toggle--MinWidth);
@@ -346,6 +345,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     .#{$dropdown}__toggle-check {
       display: flex;
       align-items: center;
+      overflow: hidden;
       cursor: pointer;
 
       &.pf-m-in-progress {
@@ -355,9 +355,16 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
       > input,
       .#{$check} {
+        align-self: revert;
+        width: auto;
         cursor: pointer;
         visibility: var(--#{$dropdown}__toggle--m-split-button__toggle-check__input--Visibility, unset);
-        transform: translateY(var(--#{$dropdown}__toggle--m-split-button__toggle-check__input--TranslateY));
+      }
+
+      .#{$check}__input {
+        // stylelint-disable property-no-vendor-prefix
+        -moz-transform: none;
+        // stylelint-enable
       }
     }
 
@@ -608,6 +615,10 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   }
 }
 
+.#{$dropdown}__toggle-button {
+  align-self: baseline;
+}
+
 .#{$dropdown}__toggle-text {
   flex: 1 1 auto;
   text-align: left;
@@ -630,13 +641,13 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 .#{$dropdown}__toggle-image {
   display: inline-flex;
   flex-shrink: 0;
-  align-self: center;
   line-height: 1;
 }
 
 // Loading spinner
 .#{$dropdown}__toggle-progress {
   position: absolute;
+  left: var(--#{$dropdown}__toggle--m-split-button--child--PaddingLeft);
   visibility: var(--#{$dropdown}__toggle-progress--Visibility);
 
   .#{$spinner} {

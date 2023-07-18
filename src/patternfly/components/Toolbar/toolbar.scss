@@ -15,20 +15,26 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}--item--RowGap--base: var(--#{$pf-global}--spacer--xs); // shared row-gap for items and groups
 
   // Item
-  --#{$toolbar}__item--Display: block;
+  --#{$toolbar}__item--Display: flex;
   --#{$toolbar}__item--MinWidth--base: auto;
-  --#{$toolbar}__item--AlignSelf: auto;
   --#{$toolbar}__item--AlignItems: var(--#{$toolbar}--AlignItems--base);
+  --#{$toolbar}__item--AlignSelf: var(--#{$toolbar}--AlignItems--base);
 
   // Group
   --#{$toolbar}__group--Display: flex;
+  --#{$toolbar}__group--RowGap: var(--#{$toolbar}--item--RowGap--base);
   --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--AlignItems--base);
   --#{$toolbar}__group--AlignSelf: auto;
-  --#{$toolbar}__group--RowGap: var(--#{$toolbar}--item--RowGap--base);
 
   // Sticky
   --#{$toolbar}--m-sticky--ZIndex: var(--#{$pf-global}--ZIndex--xs);
   --#{$toolbar}--m-sticky--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom);
+
+  // Alignment options
+  --#{$toolbar}--m-align-items-center--AlignItems: center;
+  --#{$toolbar}--m-align-items-baseline--AlignItems: baseline;
+  --#{$toolbar}--m-align-self-center--AlignSelf: center;
+  --#{$toolbar}--m-align-self-baseline--AlignSelf: baseline;
 
   // Content
   --#{$toolbar}__content--Display: flex;
@@ -111,7 +117,11 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   // Label
   --#{$toolbar}__item--m-label--spacer: var(--#{$toolbar}__item--spacer);
+  --#{$toolbar}__item--m-label--TranslateY: var(--pf-v5-global--spacer--form-element);
   --#{$toolbar}__item--m-label--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+
+  // Input
+  --#{$toolbar}__item--m-form-control--TranslateY: var(--pf-v5-global--spacer--form-element);
 
   // Label in expanded content
   --#{$toolbar}__expandable-content__item--m-label--MarginBottom: calc(-1 * var(--#{$toolbar}__expandable-content--m-expanded--GridRowGap) + var(--#{$pf-global}--spacer--sm));
@@ -127,7 +137,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}--m-full-height--PaddingTop: 0;
   --#{$toolbar}--m-full-height--PaddingBottom: 0;
   --#{$toolbar}--m-full-height__item--Display: flex;
-  --#{$toolbar}--m-full-height__item--AlignItems: var(--#{$toolbar}__group--AlignItems);
+  --#{$toolbar}--m-full-height__item--AlignItems: center;
 
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
     --#{$toolbar}__expandable-content--PaddingRight: var(--#{$toolbar}__expandable-content--lg--PaddingRight);
@@ -219,11 +229,11 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 
   &.pf-m-align-items-center {
-    align-items: center;
+    --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--m-align-items-center--AlignItems);
   }
 
   &.pf-m-align-items-baseline {
-    align-items: baseline;
+    --#{$toolbar}__group--AlignItems: var(--#{$toolbar}--m-align-items-baseline--AlignItems);
   }
 
   &.pf-m-align-self-start {
@@ -231,11 +241,11 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 
   &.pf-m-align-self-center {
-    align-self: center;
+    --#{$toolbar}__group--AlignSelf: var(--#{$toolbar}--m-align-self-center--AlignItems);
   }
 
   &.pf-m-align-self-baseline {
-    align-self: baseline;
+    --#{$toolbar}__group--AlignSelf: var(--#{$toolbar}--m-align-self-baseline--AlignItems);
   }
 }
 
@@ -369,6 +379,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     --#{$toolbar}--spacer: var(--#{$toolbar}__item--m-label--spacer);
 
     font-weight: var(--#{$toolbar}__item--m-label--FontWeight);
+    transform: translateY(var(--#{$pf-global}--spacer--form-element));
   }
 
   // Total items
@@ -429,7 +440,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   }
 
   &.pf-m-align-items-center {
-    align-items: center;
+    --#{$toolbar}__content-section--AlignItems: var(--#{$toolbar}--m-align-items-center--AlignItems);
   }
 
   &.pf-m-align-items-baseline {
@@ -470,7 +481,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     grid-row-gap: var(--#{$toolbar}__expandable-content--m-expanded--GridRowGap);
   }
 
-  .pf-m-label {
+  .#{$toolbar}__item.pf-m-label {
     margin-bottom: var(--#{$toolbar}__expandable-content__item--m-label--MarginBottom);
     font-size: var(--#{$toolbar}__expandable-content__item--m-label--FontSize);
   }

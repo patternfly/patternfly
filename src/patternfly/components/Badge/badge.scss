@@ -24,6 +24,7 @@
   font-weight: var(--#{$badge}--FontWeight);
   color: var(--#{$badge}--Color);
   text-align: center;
+  white-space: nowrap;
   background-color: var(--#{$badge}--BackgroundColor);
   border-radius: var(--#{$badge}--BorderRadius);
 
