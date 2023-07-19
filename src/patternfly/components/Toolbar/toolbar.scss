@@ -369,7 +369,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     --#{$toolbar}--spacer: var(--#{$toolbar}__item--m-search-filter--spacer);
   }
 
-  // Search filter
+  // Chip group
   &.pf-m-chip-group {
     --#{$toolbar}--spacer: var(--#{$toolbar}__item--m-chip-group--spacer);
   }
@@ -499,11 +499,13 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   .#{$toolbar}__item {
     --#{$toolbar}--spacer: var(--#{$toolbar}__item--spacer);
+    --#{$toolbar}__item--AlignSelf: auto;
 
     margin-top: var(--#{$toolbar}__group--m-chip-container__item--MarginTop);
   }
 
   .#{$toolbar}__group {
+    --#{$toolbar}__group--AlignItems: center;
     --#{$toolbar}--spacer: var(--#{$toolbar}__group--spacer);
 
     display: flex;
