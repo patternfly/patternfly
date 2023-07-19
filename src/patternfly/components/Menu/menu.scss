@@ -558,12 +558,16 @@
     --#{$menu}__list-item--hover--BackgroundColor: transparent;
     --#{$menu}__item--Color: var(--#{$menu}__list-item--m-disabled__item--Color);
     --#{$menu}__item-toggle-icon: var(--#{$menu}__list-item--m-disabled__item-toggle-icon--Color);
+  }
+  
+  &.pf-m-disabled {
+    --#{$menu}__list-item--focus-within--BackgroundColor: transparent;
 
     pointer-events: none;
   }
 
-  &.pf-m-disabled {
-    --#{$menu}__list-item--focus-within--BackgroundColor: transparent;
+  &.pf-m-aria-disabled .#{$menu}__item {
+    cursor: default;
   }
 
   &.pf-m-load {
