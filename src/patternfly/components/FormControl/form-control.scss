@@ -38,6 +38,8 @@
 
   // placeholder
   --#{$form-control}--m-placeholder--Color: var(--#{$pf-global}--Color--dark-200);
+  --#{$form-control}--m-placeholder--child--Color: var(--#{$pf-global}--Color--100);
+  --#{$form-control}--m-placeholder--child--disabled--Color: var(--#{$form-control}--m-disabled--Color);
 
   // disabled
   --#{$form-control}--m-disabled--Color: var(--#{$pf-global}--disabled-color--100);
@@ -265,13 +267,24 @@
   }
 
   &.pf-m-placeholder > select {
-    color: var(--#{$form-control}--m-placeholder--Color);
+    --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--Color);
 
     &:disabled {
-      color: var(--#{$form-control}--m-disabled--Color);
+      --#{$form-control}--Color: var(--#{$form-control}--m-disabled--Color);
     }
-  }
-  
+
+    * {
+      // color: var(--#{$form-control}--m-placeholder--child--Color);
+      --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--child--Color);
+
+      // stylelint-disable max-nesting-depth
+      &:disabled {
+        --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--child--disabled--Color);
+      }
+    }
+    // stylelint-enable
+  }  
+
   > textarea {
     width: 100%;
     height: 100%;

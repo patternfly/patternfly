@@ -42,9 +42,10 @@ cssPrefix: pf-v5-c-form-control
   <option value="" selected>Selectable placeholder</option>
   <option value="Mr">Mr</option>
   <option value="Miss">Miss</option>
-  <option value="Mrs">Mrs</option>
+  <option value="Mrs" >Mrs</option>
   <option value="Ms">Ms</option>
   <option value="Dr">Dr</option>
+  <option value="Dr" disabled>Disabled option</option>
   <option value="Other">Other</option>
 {{/form-control}}
 <br>
@@ -65,7 +66,7 @@ cssPrefix: pf-v5-c-form-control
   </optgroup>
   <optgroup label="Group 2">
     <option value="Option 3">The third option</option>
-    <option value="Option 4">The fourth option</option>
+    <option value="Option 4" disabled>The fourth option (disabled)</option>
   </optgroup>
 {{/form-control}}
 <br>
@@ -97,7 +98,7 @@ cssPrefix: pf-v5-c-form-control
   <option value="">Invalid option</option>
   <optgroup label="Group 1">
     <option value="Option 1">The first option</option>
-    <option value="Option 2">The second option</option>
+    <option value="Option 2" >The second option</option>
   </optgroup>
   <optgroup label="Group 2">
     <option value="Option 3">The third option</option>
