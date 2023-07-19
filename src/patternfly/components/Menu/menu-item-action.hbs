@@ -1,7 +1,9 @@
-<button class="{{pfv}}menu__item-action{{#if menu-item-action--IsFavorite}} pf-m-favorite{{/if}}{{#if menu-item-action--IsFavorited}} pf-m-favorited{{/if}}{{#if menu-item-action--modifier}} {{menu-item-action--modifier}}{{/if}}"
+<button class="{{pfv}}menu__item-action{{#if menu-item-action--IsFavorite}} pf-m-favorite{{/if}}{{#if menu-item-action--IsFavorited}} pf-m-favorited{{/if}}{{#if menu-list-item--IsAriaDisabled}} pf-m-aria-disabled{{/if}}{{#if menu-item-action--modifier}} {{menu-item-action--modifier}}{{/if}}"
   type="button"
   {{#if menu-list-item--IsDisabled}}
     disabled
+  {{else if menu-list-item--IsAriaDisabled}}
+    aria-disabled="true"
   {{/if}}
   {{#if menu-item-action--IsFavorited}}
     aria-label="Starred"
