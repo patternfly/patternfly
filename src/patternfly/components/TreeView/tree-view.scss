@@ -1,5 +1,5 @@
 // @debug $tree-view; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-$pf-v5-c-tree-view--MaxNesting: 10;
+$pf-v5-c-tree-view--MaxNesting: 10 !default;
 
 .#{$tree-view} {
   --#{$tree-view}--PaddingTop: var(--#{$pf-global}--spacer--sm);
