@@ -75,7 +75,7 @@ When making visual changes to a full page example, new example preview screensho
 [For more information on using CSS and Sass, refer to our guidelines.](/guidelines)
 
 ### Custom icon guidelines
-[For more incormation on custom icons, refer to our guidelines.](/adding-custom-icons)
+[For more information on custom icons, refer to our guidelines.](/adding-custom-icons)
 
 ## Beta components
 
