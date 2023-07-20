@@ -14,10 +14,7 @@ module.exports = {
     { section: 'extensions' }
   ],
   topNavItems: [
-    {
-      text: 'Accessibility',
-      path: '/accessibility-guide'
-    },
+    
     {
       text: 'Contribute',
       path: '/contribution'
@@ -25,10 +22,6 @@ module.exports = {
     {
       text: 'Guidelines',
       path: '/guidelines'
-    },
-    {
-      text: 'Upgrade guide',
-      path: '/upgrade-guide'
     },
     {
       text: 'Icons',
