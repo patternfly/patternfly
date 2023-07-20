@@ -14,7 +14,6 @@ module.exports = {
     { section: 'extensions' }
   ],
   topNavItems: [
-    
     {
       text: 'Contribute',
       path: '/contribution'
