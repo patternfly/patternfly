@@ -26,6 +26,10 @@ module.exports = {
     {
       text: 'Icons',
       path: '/icons'
+    },
+    {
+      text: 'Custom icons',
+      path: '/adding-custom-icons'
     }
   ],
   port: 8001
