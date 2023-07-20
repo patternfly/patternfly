@@ -446,7 +446,7 @@ cssPrefix: ['pf-v5-c-chip', 'pf-v5-c-chip-group']
 
 ### Chip group with removable categories 
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-removable"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-removable" chip-group--HasCategoryText="true"}}
   {{#> chip-group-main}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
