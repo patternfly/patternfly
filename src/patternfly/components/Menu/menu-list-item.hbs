@@ -1,16 +1,16 @@
 <li class="{{pfv}}menu__list-item
-  {{~#unless menu-list-item--IsCurrentReset}}
+  {{#unless menu-list-item--IsCurrentReset}}
     {{#if menu-list-item--IsCurrentPath}} pf-m-current-path{{/if}}
   {{/unless}}
-  {{~#if menu-list-item--IsDisabled}}
+  {{#if menu-list-item--IsDisabled}}
     pf-m-disabled
-  {{~else if menu-list-item--IsAriaDisabled}}
+  {{else if menu-list-item--IsAriaDisabled}}
     pf-m-aria-disabled
   {{/if}}
-  {{~#if menu-list-item--IsDrillUp}}
+  {{#if menu-list-item--IsDrillUp}}
     pf-m-drill-up
   {{/if}}
-  {{~#if menu-list-item--modifier}} {{menu-list-item--modifier}}{{/if}}"
+  {{#if menu-list-item--modifier}} {{menu-list-item--modifier}}{{/if}}"
   {{#if menu-list-item--IsCheckbox}}
     role="menuitem"
   {{else}}
@@ -75,6 +75,8 @@
         {{/menu-item-text}}
       {{/menu-item-main}}
     {{/menu-item}}
+  {{else if menu-item--text}}
+    {{> menu-item}}
   {{/if}}
   {{#if @partial-block}}
     {{> @partial-block}}

@@ -129,7 +129,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}__item--m-form-control--TranslateY: var(--#{$pf-global}--spacer--form-element);
 
   // Label in expanded content
-  --#{$toolbar}__expandable-content__item--m-label--MarginBottom: calc(-1 * var(--#{$toolbar}__expandable-content--m-expanded--GridRowGap) + var(--#{$pf-global}--spacer--sm));
+  --#{$toolbar}__expandable-content__item--m-label--MarginBottom: calc(-1 * var(--#{$pf-global}--spacer--sm));
   --#{$toolbar}__expandable-content__item--m-label--FontSize: var(--#{$pf-global}--FontSize--sm);
 
   // Toggle
@@ -465,6 +465,10 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
 // Expandable content
 .#{$toolbar}__expandable-content {
+  .#{$menu-toggle} {
+    width: 100%;
+  }
+
   position: absolute;
   inset-block-start: calc(100% + var(--#{$toolbar}__content--RowGap));
   inset-inline-start: 0;

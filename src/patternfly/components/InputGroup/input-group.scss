@@ -35,6 +35,7 @@
   --#{$input-group}__item--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
 
   display: flex;
+  align-items: flex-start;
   width: 100%;
 }
 

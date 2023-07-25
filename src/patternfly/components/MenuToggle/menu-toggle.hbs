@@ -1,17 +1,17 @@
 <{{#if menu-toggle--IsDiv}}div{{else}}button{{/if}} class="{{pfv}}menu-toggle
-  {{~#if menu-toggle--IsPrimary}}
+  {{#if menu-toggle--IsPrimary}}
     pf-m-primary
   {{/if}}
-  {{~#if menu-toggle--IsSecondary}}
+  {{#if menu-toggle--IsSecondary}}
     pf-m-secondary
   {{/if}}
-  {{~#if menu-toggle--IsPlain}}
+  {{#if menu-toggle--IsPlain}}
     pf-m-plain
   {{/if}}
-  {{~#if menu-toggle--IsText}}
+  {{#if menu-toggle--IsText}}
     pf-m-text
   {{/if}}
-  {{~#if menu-toggle--IsExpanded}}
+  {{#if menu-toggle--IsExpanded}}
     pf-m-expanded
   {{/if}}
   {{#if menu-toggle--IsTypeahead}}
@@ -19,10 +19,10 @@
   {{/if}}
   {{#if menu-toggle--IsSplitButton}}
     pf-m-split-button
-    {{~#if menu-toggle--IsAction}}
+    {{#if menu-toggle--IsAction}}
       pf-m-action
     {{/if}}
-    {{~#if menu-toggle--IsDisabled}}
+    {{#if menu-toggle--IsDisabled}}
       pf-m-disabled
     {{/if}}
   {{/if}}
@@ -34,12 +34,40 @@
     {{else}}
       aria-expanded="false"
     {{/if}}
-    {{~#if menu-toggle--IsDisabled}}
+    {{#if menu-toggle--IsDisabled}}
       disabled
     {{/if}}
   {{/unless}}
+  {{#if menu-toggle--id}}
+    id="{{menu-toggle--id}}"
+  {{/if}}
   {{#if menu-toggle--attribute}}
     {{{menu-toggle--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if menu-toggle--IsCheck}}
+    {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
+  {{/if}}
+  {{#if menu-toggle--icon}}
+    {{> menu-toggle-icon}}
+  {{/if}}
+  {{#if menu-toggle--text}}
+    {{> menu-toggle-text}}
+  {{/if}}
+  {{#if menu-toggle--badge--count}}
+    {{#> menu-toggle-count}}
+      {{> badge badge--modifier="pf-m-unread" badge--text=menu-toggle--badge--count}}
+    {{/menu-toggle-count}}
+  {{/if}}
+  {{#ifAny menu-toggle--IsPlain @partial-block}}
+    {{#if menu-toggle--HasKebab}}
+      <i class="fas fa-ellipsis-v" aria-hidden=true></i>
+    {{/if}}
+    {{#if @partial-block}}
+      {{> @partial-block}}
+    {{/if}}
+  {{else}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/ifAny}}
 </{{#if menu-toggle--IsDiv}}div{{else}}button{{/if}}>
