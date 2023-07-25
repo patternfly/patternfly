@@ -116,10 +116,14 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   // Label
   --#{$toolbar}__item--m-label--spacer: var(--#{$toolbar}__item--spacer);
+  // Disable stylelint for Hackathon work
+  // stylelint-disable-next-line
   --#{$toolbar}__item--m-label--TranslateY: var(--pf-v5-global--spacer--form-element);
   --#{$toolbar}__item--m-label--FontWeight: var(--#{$pf-global}--FontWeight--bold);
 
   // Input
+  // Disable stylelint for Hackathon work
+  // stylelint-disable-next-line
   --#{$toolbar}__item--m-form-control--TranslateY: var(--pf-v5-global--spacer--form-element);
 
   // Label in expanded content
