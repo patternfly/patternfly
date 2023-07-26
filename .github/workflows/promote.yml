@@ -25,5 +25,6 @@ jobs:
           echo "Tag name from github.ref_name: ${{  github.ref_name }}"
       - name: Manual publish
         run: |
+          cd dist
           npm version ${{ github.ref_name }} --git-tag-version false
           npm publish --tag=latest
