@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build for promotion
-        run: yarn install --frozen-lockfile && yarn build-patternfly
+        run: yarn install --frozen-lockfile && yarn build
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
