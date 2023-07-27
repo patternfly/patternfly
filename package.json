@@ -102,7 +102,6 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "tag": "prerelease",
     "access": "public"
   }
 }
