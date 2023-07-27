@@ -58,7 +58,7 @@ jobs:
         if: always()
       - run: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
         name: Avoid Unknown Host for github.com
-      - run: npx semantic-release@19.0.5
+      - run: npx semantic-release@19.0.5 --dry-run
         env:
           HUSKY: 0
         name: Release to NPM
