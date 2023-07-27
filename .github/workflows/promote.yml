@@ -27,6 +27,6 @@ jobs:
         run: |
           cd dist
           npm version ${{ github.ref_name }} --git-tag-version false
-          npm publish --tag=latest
+          npm publish --tag latest
         env:
           HUSKY: 0
