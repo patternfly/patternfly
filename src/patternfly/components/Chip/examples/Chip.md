@@ -85,7 +85,7 @@ cssPrefix: ['pf-v5-c-chip', 'pf-v5-c-chip-group']
 
 ### Simple inline chip group with overflow
 ```hbs
-{{#> chip-group chip-group--id="simple-inline-chip-group-overflow"}}
+{{#> chip-group chip-group--id="simple-inline-chip-group-overflow" chip-group--aria-label="simple inline chip group with overflow"}}
   {{#> chip-group-main}}
     {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
       {{#> chip-group-list-item}}
@@ -146,7 +146,7 @@ cssPrefix: ['pf-v5-c-chip', 'pf-v5-c-chip-group']
 
 ### Simple inline chip group expanded
 ```hbs
-{{#> chip-group chip-group--id="simple-inline-chip-group-expanded"}}
+{{#> chip-group chip-group--id="simple-inline-chip-group-expanded" chip-group--aria-label="simple inline chip group expanded"}}
   {{#> chip-group-main}}
     {{#> chip-group-list chip-group-list--attribute='aria-label="Chip group list"'}}
       {{#> chip-group-list-item}}
@@ -235,7 +235,7 @@ cssPrefix: ['pf-v5-c-chip', 'pf-v5-c-chip-group']
 
 ### Chip group with categories
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories" chip-group--HasCategoryText="true"}}
   {{#> chip-group-main}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
@@ -290,7 +290,7 @@ cssPrefix: ['pf-v5-c-chip', 'pf-v5-c-chip-group']
 
 ### Chip group with categories and overflow
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow" chip-group--HasCategoryText="true"}}
   {{#> chip-group-main}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
@@ -354,7 +354,7 @@ cssPrefix: ['pf-v5-c-chip', 'pf-v5-c-chip-group']
 
 ### Chip group with categories and overflow expanded
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow-expanded"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-overflow-expanded" chip-group--HasCategoryText="true"}}
   {{#> chip-group-main}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
@@ -446,7 +446,7 @@ cssPrefix: ['pf-v5-c-chip', 'pf-v5-c-chip-group']
 
 ### Chip group with removable categories 
 ```hbs
-{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-removable"}}
+{{#> chip-group chip-group--modifier="pf-m-category" chip-group--id="chip-group-with-categories-removable" chip-group--HasCategoryText="true"}}
   {{#> chip-group-main}}
     {{#> chip-group-label chip-group-label--attribute=(concat 'id="' chip-group--id '-label"')}}
       Category one
