@@ -667,7 +667,7 @@
 .#{$menu}__item-description {
   font-size: var(--#{$menu}__item-description--FontSize);
   color: var(--#{$menu}__item-description--Color);
-  word-break: break-all;
+  word-break: break-word;
 }
 
 // General icon
