@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs-extra';
-import glob from 'glob';
+import { glob } from 'glob';
 import gulp from 'gulp';
 import through2 from 'through2';
 import { unified } from 'unified';

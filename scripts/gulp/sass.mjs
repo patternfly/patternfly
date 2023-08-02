@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs-extra';
 import gulp from 'gulp';
-import sass from 'sass';
+import * as sass from 'sass';
 import stylelint from 'stylelint';
 import sassGraph from 'sass-graph';
 import postcss from 'gulp-postcss';

@@ -46,6 +46,7 @@
     "import-notation": "string",
     "keyframes-name-pattern": null,
     "max-nesting-depth": 3,
+    "media-query-no-invalid": null,
     "no-descending-specificity": null,
     "no-unknown-animations": true,
     "order/order": [
