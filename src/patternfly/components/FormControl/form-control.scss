@@ -206,6 +206,7 @@
   &.pf-m-disabled {
     --#{$form-control}--BackgroundColor: var(--#{$form-control}--m-disabled--BackgroundColor);
     --#{$form-control}--Color: var(--#{$form-control}--m-disabled--Color);
+    --#{$form-control}--m-placeholder--Color: var(--#{$form-control}--m-disabled--Color);
     --#{$form-control}__toggle-icon--Color: var(--#{$form-control}--m-disabled__toggle-icon--Color);
     --#{$form-control}--before--BorderStyle: none;
     --#{$form-control}--after--BorderStyle: none;
@@ -268,7 +269,7 @@
   &.pf-m-placeholder > select {
     --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--Color);
 
-    > * {
+    * {
       --#{$form-control}--Color: var(--#{$form-control}--m-placeholder--child--Color);
 
       // stylelint-disable max-nesting-depth
@@ -278,7 +279,7 @@
       // stylelint-enable
     }
   }
-  
+
   > textarea {
     width: 100%;
     height: 100%;
