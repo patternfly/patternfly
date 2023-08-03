@@ -570,7 +570,7 @@ import './MenuToggle.css'
 | -- | -- | -- |
 | `aria-expanded="true"` | `.pf-v5-c-menu-toggle`, `.pf-v5-c-menu-toggle__button` | Indicates that the menu toggle component is in the expanded state. |
 | `aria-expanded="false"` | `.pf-v5-c-menu-toggle`, `.pf-v5-c-menu-toggle__button` | Indicates that the menu toggle component is in the collapsed state. |
-| `aria-label="Descriptive text"` | `.pf-v5-c-menu-toggle.pf-m-plain` | Gives the plain menu toggle component an accessible label. |
+| `aria-label="Descriptive text"` | `.pf-v5-c-menu-toggle`, `.pf-v5-c-menu-toggle.pf-m-plain` | Gives the menu toggle component an accessible label. Used whenever there is no text visible in the menu toggle. Often, plain modifiers are used when the menu toggle only contains an icon. |
 | `disabled` | `.pf-v5-c-menu-toggle`, `.pf-v5-c-menu-toggle__button` | Indicates that the menu toggle component is disabled. |
 
 ### Usage

@@ -1811,6 +1811,7 @@ import './Menu.css'
 | `aria-disabled="true"` | `.pf-v5-c-menu__item` | Indicates to assistive technologies that the menu item is disabled, but still allows it to be focusable via keyboard. Additional click prevention may be required. |
 | `tabindex="-1"` | `a.pf-v5-c-menu__item` | When the menu item uses a link element and has `aria-disabled="true"` passed in, removes it from keyboard focus. This is similar to passing `disabled` to a menu item that uses a button element. |
 | `aria-hidden="true"` | `.pf-v5-c-menu__item-icon`, `.pf-v5-c-menu__item-action-icon`, `.pf-v5-c-menu__item-external-icon`, `.pf-v5-c-menu__item-toggle-icon`, `.pf-v5-c-menu__item-select-icon` | Hides the icon from assistive technologies. |
+| `aria-label="Descriptive text"` | `.pf-v5-c-menu__item-action-icon` | There should always be descriptive text on an action icon because there is no visible descriptive text labelling the icon. |
 | `aria-label="Not starred"` | `.pf-v5-c-menu__item-action-icon.pf-m-favorite` | Provides an accessible label indicating that the favorite action is not selected. |
 | `aria-label="Starred"` | `.pf-v5-c-menu__item-action-icon.pf-m-favorite.pf-m-favorited` | Provides an accessible label indicating that the favorite action is selected. |
 
