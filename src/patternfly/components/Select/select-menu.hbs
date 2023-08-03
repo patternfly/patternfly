@@ -36,7 +36,9 @@
       {{/if}}
       {{#if select--IsLoading}}
         <li role="presentation" class="{{pfv}}select__list-item pf-m-loading">
-          {{#> spinner spinner--modifier="pf-m-lg"}}Loading items{{/spinner}}
+          {{#> select-menu-item}}
+            {{#> spinner spinner--modifier="pf-m-lg"}}Loading items{{/spinner}}
+          {{/select-menu-item}}
         </li>
       {{/if}}
     {{/if}}

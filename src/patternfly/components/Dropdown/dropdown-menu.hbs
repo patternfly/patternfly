@@ -7,6 +7,9 @@
   {{#unless dropdown--IsExpanded}}
     hidden
   {{/unless}}
+  {{#unless dropdown--HasCustomContent}}
+    role="menu"
+  {{/unless}}
   {{#if dropdown-menu--attribute}}
     {{{dropdown-menu--attribute}}}
   {{/if}}>

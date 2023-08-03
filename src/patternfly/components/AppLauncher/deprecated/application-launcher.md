@@ -13,10 +13,10 @@ import './application-launcher.css'
 ```hbs
 {{#> app-launcher app-launcher--id="application-launcher-collapsed"}}
   {{#> app-launcher-menu}}
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
     {{> divider divider--type="li"}}
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
 ```
@@ -25,10 +25,10 @@ import './application-launcher.css'
 ```hbs
 {{#> app-launcher app-launcher--id="application-launcher-disabled" app-launcher--IsDisabled="true"}}
   {{#> app-launcher-menu}}
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
     {{> divider divider--type="li"}}
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
 ```
@@ -37,10 +37,10 @@ import './application-launcher.css'
 ```hbs
 {{#> app-launcher app-launcher--id="application-launcher-expanded" app-launcher--IsExpanded="true"}}
   {{#> app-launcher-menu}}
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
     {{> divider divider--type="li"}}
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
 ```
@@ -49,10 +49,10 @@ import './application-launcher.css'
 ```hbs
 {{#> app-launcher app-launcher--id="application-launcher-aligned-right" app-launcher--IsExpanded="true"}}
   {{#> app-launcher-menu app-launcher-menu--modifier="pf-m-align-right"}}
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
     {{> divider divider--type="li"}}
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
 ```
@@ -61,10 +61,10 @@ import './application-launcher.css'
 ```hbs
 {{#> app-launcher app-launcher--id="application-launcher-aligned-top" app-launcher--IsExpanded="true" app-launcher--modifier="pf-m-top"}}
   {{#> app-launcher-menu}}
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--type="button"}}Action{{/app-launcher-menu-item}}</li>
     {{> divider divider--type="li"}}
-    <li>{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
+    <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-disabled" app-launcher-menu-item--attribute='href="#" aria-disabled="true" tabindex="-1"'}}Disabled link{{/app-launcher-menu-item}}</li>
   {{/app-launcher-menu}}
 {{/app-launcher}}
 ```
@@ -74,8 +74,8 @@ import './application-launcher.css'
 {{#> app-launcher app-launcher--id="application-launcher-divided-sections" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
-      <ul role="list">
-        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link not in group{{/app-launcher-menu-item}}</li>
+      <ul role="menu">
+        <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link not in group{{/app-launcher-menu-item}}</li>
       </ul>
     {{/app-launcher-group}}
     {{> divider}}
@@ -83,9 +83,9 @@ import './application-launcher.css'
       {{#> app-launcher-group-title}}
         Group 1
       {{/app-launcher-group-title}}
-      <ul role="list">
-        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
-        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
+      <ul role="menu">
+        <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
+        <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
       </ul>
     {{/app-launcher-group}}
     {{> divider}}
@@ -93,9 +93,9 @@ import './application-launcher.css'
       {{#> app-launcher-group-title}}
         Group 2
       {{/app-launcher-group-title}}
-      <ul role="list">
-        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
-        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
+      <ul role="menu">
+        <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
+        <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
       </ul>
     {{/app-launcher-group}}
   {{/app-launcher-menu}}
@@ -107,8 +107,8 @@ import './application-launcher.css'
 {{#> app-launcher app-launcher--id="application-launcher-divided-items" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
-      <ul role="list">
-        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link not in group{{/app-launcher-menu-item}}</li>
+      <ul role="menu">
+        <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Link not in group{{/app-launcher-menu-item}}</li>
         {{> divider divider--type="li"}}
       </ul>
     {{/app-launcher-group}}
@@ -116,9 +116,9 @@ import './application-launcher.css'
       {{#> app-launcher-group-title}}
         Group 1
       {{/app-launcher-group-title}}
-      <ul role="list">
-        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
-        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
+      <ul role="menu">
+        <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
+        <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 1 link{{/app-launcher-menu-item}}</li>
         {{> divider divider--type="li"}}
       </ul>
     {{/app-launcher-group}}
@@ -126,9 +126,9 @@ import './application-launcher.css'
       {{#> app-launcher-group-title}}
         Group 2
       {{/app-launcher-group-title}}
-      <ul role="list">
-        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
-        <li>{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
+      <ul role="menu">
+        <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
+        <li role="none">{{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}Group 2 link{{/app-launcher-menu-item}}</li>
       </ul>
     {{/app-launcher-group}}
   {{/app-launcher-menu}}
@@ -140,8 +140,8 @@ import './application-launcher.css'
 {{#> app-launcher app-launcher--id="application-launcher-sections-dividers-icons-links" app-launcher--IsExpanded="true" app-launcher--IsGrouped="true"}}
   {{#> app-launcher-menu}}
     {{#> app-launcher-group}}
-      <ul role="list">
-        <li>
+      <ul role="menu">
+        <li role="none">
           {{#> app-launcher-menu-item app-launcher-menu-item--attribute='href="#"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
@@ -156,8 +156,8 @@ import './application-launcher.css'
       {{#> app-launcher-group-title}}
         Group 1
       {{/app-launcher-group-title}}
-      <ul role="list">
-        <li>
+      <ul role="menu">
+        <li role="none">
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
@@ -166,7 +166,7 @@ import './application-launcher.css'
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
         </li>
-        <li>
+        <li role="none">
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
@@ -182,8 +182,8 @@ import './application-launcher.css'
       {{#> app-launcher-group-title}}
         Group 2
       {{/app-launcher-group-title}}
-      <ul role="list">
-        <li>
+      <ul role="menu">
+        <li role="none">
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
@@ -192,7 +192,7 @@ import './application-launcher.css'
             {{> app-launcher-menu-item-external-icon}}
           {{/app-launcher-menu-item}}
         </li>
-        <li>
+        <li role="none">
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-external" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
               <img src="/assets/images/pf-logo-small.svg" alt="PatternFly logo">
@@ -218,7 +218,7 @@ import './application-launcher.css'
       {{#> app-launcher-group-title}}
         Favorites
       {{/app-launcher-group-title}}
-      <ul role="list">
+      <ul role="menu">
         {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-external pf-m-favorite"}}
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
@@ -250,7 +250,7 @@ import './application-launcher.css'
       {{#> app-launcher-group-title}}
         Group 1
       {{/app-launcher-group-title}}
-      <ul role="list">
+      <ul role="menu">
         {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-external"}}
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}
@@ -282,7 +282,7 @@ import './application-launcher.css'
       {{#> app-launcher-group-title}}
         Group 2
       {{/app-launcher-group-title}}
-      <ul role="list">
+      <ul role="menu">
         {{#> app-launcher-menu-wrapper app-launcher-menu-wrapper--type="li" app-launcher-menu-wrapper--modifier="pf-m-external pf-m-favorite"}}
           {{#> app-launcher-menu-item app-launcher-menu-item--modifier="pf-m-link" app-launcher-menu-item--attribute='href="#" target="_blank"'}}
             {{#> app-launcher-menu-item-icon}}

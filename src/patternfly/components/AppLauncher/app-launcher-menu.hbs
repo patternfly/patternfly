@@ -1,7 +1,7 @@
 <{{#if app-launcher--IsGrouped}}div{{else}}ul{{/if}} class="{{pfv}}app-launcher__menu{{#if app-launcher-menu--modifier}} {{app-launcher-menu--modifier}}{{/if}}"
   {{#unless app-launcher--IsGrouped}}
     aria-labelledby="{{app-launcher--id}}-button"
-    role="list"
+    role="menu"
   {{/unless}}
   {{#unless app-launcher--IsExpanded}}hidden{{/unless}}
   {{#if app-launcher-menu--attribute}}
@@ -9,3 +9,4 @@
   {{/if}}>
   {{> @partial-block}}
 </{{#if app-launcher--IsGrouped}}div{{else}}ul{{/if}}>
+

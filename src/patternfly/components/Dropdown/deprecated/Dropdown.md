@@ -138,7 +138,7 @@ import './Dropdown.css'
 
 ### Panel
 ```hbs
-{{#> dropdown dropdown--id="dropdown-panel" dropdown--IsExpanded="true"}}
+{{#> dropdown dropdown--id="dropdown-panel" dropdown--IsExpanded="true" dropdown--HasCustomContent="true"}}
   {{> dropdown-toggle dropdown-toggle--text="Expanded dropdown"}}
   {{#> dropdown-menu dropdown-menu--type="div"}}
     [Panel contents here]
