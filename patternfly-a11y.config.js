@@ -10,9 +10,22 @@ const urls = Object.keys(fullscreenRoutes)
       return key;
     } else {
       const path = fullscreenRoutes[key].path
-      if (path.match(/\/demos\/.*\/html-demos$/g)) {
+      if (path.match(/\/patterns\/.*\/html-demos$/g)) {
         return path.replace(/\/html-demos$/, '');
       } else {
+        if (
+          path.includes('/application-launcher/') |
+          path.includes('/options-menu/') |
+          path.includes('/dropdown/') |
+          path.includes('/select/')
+        ) {
+          return path.replace(/\/html-deprecated$/, '')
+        } else if (
+          path.includes('/password-generator/') |
+          path.includes('/password-strength/')
+        ) {
+          return path.replace(/\/html-demos$/, '');
+        }
         return path.replace(/\/html$/, '')
       }
     }
