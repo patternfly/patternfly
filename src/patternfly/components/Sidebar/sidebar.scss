@@ -39,7 +39,7 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}__main--FlexDirection: column;
   --#{$sidebar}__main--md--FlexDirection: row;
   --#{$sidebar}__main--AlignItems: stretch;
-  --#{$sidebar}__main--md--AlignItems: start;
+  --#{$sidebar}__main--md--AlignItems: flex-start;
   --#{$sidebar}__main--child--MarginTop: 0;
 
   // Gutter
@@ -65,7 +65,7 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}--m-stack--m-panel-right__panel--Order: -1;
 
   // Split
-  --#{$sidebar}--m-split__main--AlignItems: start;
+  --#{$sidebar}--m-split__main--AlignItems: flex-start;
   --#{$sidebar}--m-split__main--FlexDirection: row;
   --#{$sidebar}--m-split__panel--Position: static;
   --#{$sidebar}--m-split__panel--Top: auto;
