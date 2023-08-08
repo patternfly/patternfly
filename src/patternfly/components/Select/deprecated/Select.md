@@ -114,13 +114,13 @@ The single select should be used when the user is selecting an option from a lis
 
 ### Single with typeahead expanded
 ```hbs
-{{#> select select-toggle--type="div" select--id="select-single-typeahead-expanded" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select--IsCurrentlyTyping="true" select--ItemIsSelected="true" select-typeahead--Placeholder="New"}}
+{{#> select select-toggle--type="div" select--id="select-single-typeahead-expanded" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select--IsCurrentlyTyping="true" select--ItemIsSelected="true" select-typeahead--Placeholder="Choose a state" select-typeahead--Value="New"}}
 {{/select}}
 ```
 
 ### Single with typeahead expanded and selected
 ```hbs
-{{#> select select-toggle--type="div" select--id="select-single-typeahead-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select-typeahead--Placeholder="New Mexico"}}
+{{#> select select-toggle--type="div" select--id="select-single-typeahead-expanded-selected" select--ItemIsSelected="true" select--IsExpanded="true" select--IsTypeahead="true" select-toggle--type="div" select-typeahead--Placeholder="Choose a state" select-typeahead--Value="New Mexico"}}
 {{/select}}
 ```
 
@@ -174,7 +174,7 @@ The single select typeahead should be used when the user is selecting one option
 
 ### Multi with typeahead (chip group collapsed)
 ```hbs
-{{#> select select-toggle--type="div" select--id="select-multi-typeahead-expanded-selected" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsCurrentlyTyping="true" select-typeahead--Placeholder="New"}}
+{{#> select select-toggle--type="div" select--id="select-multi-typeahead-expanded-selected" select--IsMultiSelect="true" select--IsExpanded="true" select--IsTypeahead="true" select--ItemIsSelected="true" select--IsCurrentlyTyping="true" select-typeahead--Placeholder="Choose states" select-typeahead--Value="New"}}
 {{/select}}
 ```
 
@@ -217,7 +217,7 @@ The multiselect should be used when the user is selecting multiple items from a 
 
 ### Checkbox expanded
 ```hbs
-{{#> select select--id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true"}}
+{{#> select select--id="select-checkbox-expanded" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" }}
   Filter
 {{/select}}
 ```
@@ -238,14 +238,14 @@ The multiselect should be used when the user is selecting multiple items from a 
 
 ### Checkbox expanded without badge
 ```hbs
-{{#> select select--id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--IsNoBadge="true"}}
+{{#> select select--id="select-checkbox-without-badge" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--IsNoBadge="true" }}
   Filter
 {{/select}}
 ```
 
 ### Checkbox with counts
 ```hbs
-{{#> select select--id="select-checkbox-counts" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--HasCounts="true"}}
+{{#> select select--id="select-checkbox-counts" select--IsChecked="true" select--IsCheckboxSelect="true" select--IsExpanded="true" select--HasCounts="true" }}
   Filter
 {{/select}}
 ```

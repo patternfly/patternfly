@@ -12,6 +12,7 @@
     "build:pficons": "gulp pfIcons",
     "build:pficonfont": "gulp pfIconFont",
     "clean": "gulp clean",
+    "superclean": "npm install && npm run clean && git clean -dfx",
     "dev": "gulp develop",
     "develop": "gulp develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
