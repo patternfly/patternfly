@@ -11,13 +11,13 @@ section: patterns
 {{#* inline "page-template-section"}}
   {{#> page-main-section page-main-section--modifier="pf-m-light pf-m-no-padding"}}
     {{> toolbar-template
-          toolbar-template--id=(concat page-template--id '-toolbar')
-          toolbar-template--modifier="pf-m-page-insets"
-          toolbar-template--HasToggleGroup="true"
-          toolbar-template--HasBulkSelect="true"
-          toolbar-template--HasOverflowMenu="true"
-          toolbar-template--HasFilter="true"
-    }}
+        toolbar-template--id=(concat page-template--id '-toolbar')
+        toolbar-template--modifier="pf-m-page-insets"
+        toolbar-template--HasToggleGroup=true
+        toolbar-template--HasBulkSelect=true
+        toolbar-template--HasOverflowMenu=true
+        toolbar-template--HasFilter=true
+      }}
   {{/page-main-section}}
   {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
     {{> card-template-gallery card-template-gallery--id="card-view-basic-example-gallery"}}

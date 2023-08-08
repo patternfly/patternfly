@@ -1,3 +1,7 @@
 {{#> toolbar-item toolbar-item--modifier="pf-m-bulk-select"}}
-  {{> menu-toggle menu-toggle--id=(concat toolbar--id '-bulk-select') menu-toggle--IsSplitButton=true menu-toggle--IsCheck=true}}
+  {{> menu-toggle
+      menu-toggle--IsDiv=true
+      menu-toggle--IsSplitButton=true menu-toggle--IsCheck=true
+      menu-toggle--id=(concat toolbar--id '-bulk-select')
+    }}
 {{/toolbar-item}}

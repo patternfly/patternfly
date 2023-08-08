@@ -310,17 +310,18 @@ section: components
   {{#> tabs-template tabs-template--id=(concat page-template--id "-tabs")}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light" tab-content--id=(concat tabs-template--id '-tabs')}}
       {{> toolbar-template
-        toolbar-template--id=(concat tabs-template--id '-toolbar')
-        toolbar-template--modifier="pf-m-page-insets"
-        toolbar-template--HasToggleGroup="true"
-        toolbar-template--HasFilter="true"
-        toolbar-template--HasNoPagination="true"
-        toolbar-template--HasSortButton="true"
-        toolbar-template--HasOverflowMenu="true"
-        toolbar-template--HasOverflowMenuSecondButton="true"
-        toolbar-template--OverflowButton1Text="Generate"
-        toolbar-template--OverflowButton2Text="Deploy"
-        toolbar-template--filterText="Name"}}
+          toolbar-template--id=(concat tabs-template--id '-toolbar')
+          toolbar-template--modifier="pf-m-page-insets"
+          toolbar-template--HasToggleGroup=true
+          toolbar-template--HasFilter=true
+          toolbar-template--HasNoPagination=true
+          toolbar-template--HasSortButton=true
+          toolbar-template--HasOverflowMenu=true
+          toolbar-template--HasOverflowMenuSecondButton=true
+          toolbar-template--OverflowButton1Text="Generate"
+          toolbar-template--OverflowButton2Text="Deploy"
+          toolbar-template--filterText="Name"
+        }}
       {{> divider}}
       {{#> drawer drawer--id=(concat tabs-template--id '-tabs') primary-detail-template-template--id=(concat tabs-template--id '-tabs') drawer-panel--IsOpen="true" drawer--modifier="pf-m-inline"}}
         {{#> drawer-main}}

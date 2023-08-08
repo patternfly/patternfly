@@ -312,7 +312,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
           {{/toolbar-item}}
           {{#> toolbar-item}}
             {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
                 menu-toggle--text='Risk'
               }}
           {{/toolbar-item}}
@@ -344,7 +344,7 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
         {{/toolbar-item}}
         {{#> toolbar-item}}
           {{> menu-toggle
-              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
+              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
               menu-toggle--text='Risk'
             }}
         {{/toolbar-item}}
@@ -402,7 +402,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
           {{#> toolbar-item}}
             {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
                 menu-toggle--text='Risk'
               }}
           {{/toolbar-item}}
@@ -448,7 +448,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
         {{/toolbar-item}}
         {{#> toolbar-item}}
           {{> menu-toggle
-              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
+              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
               menu-toggle--text='Risk'
             }}
         {{/toolbar-item}}
@@ -482,7 +482,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
           {{/toolbar-item}}
           {{#> toolbar-item}}
             {{> menu-toggle
-                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
                 menu-toggle--text='Risk'
               }}
           {{/toolbar-item}}
@@ -493,7 +493,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{/toolbar-content-section}}
   {{/toolbar-content}}
   {{#> toolbar-content toolbar-content--modifier="pf-m-chip-container"}}
-    {{#> toolbar-group toolbar-group--modifier=""}}
+    {{#> toolbar-group toolbar-group--modifier=reset}}
       {{> toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat toolbar--id '-chip-group-status')}}
       {{> toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat toolbar--id '-chip-group-risk')}}
     {{/toolbar-group}}
@@ -511,7 +511,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
         {{> toolbar-toggle}}
-        {{#> toolbar-group newcontext}}
+        {{#> toolbar-group toolbar-group--modifier=reset}}
           {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-resource-label')}}
             Resource
           {{/toolbar-item}}
@@ -523,7 +523,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
               }}
           {{/toolbar-item}}
         {{/toolbar-group}}
-        {{#> toolbar-group newcontext}}
+        {{#> toolbar-group toolbar-group--modifier=reset}}
           {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-status-label')}}
             Status
           {{/toolbar-item}}
@@ -534,7 +534,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
               }}
           {{/toolbar-item}}
         {{/toolbar-group}}
-        {{#> toolbar-group newcontext}}
+        {{#> toolbar-group toolbar-group--modifier=reset}}
           {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-type-label')}}
             Type
           {{/toolbar-item}}

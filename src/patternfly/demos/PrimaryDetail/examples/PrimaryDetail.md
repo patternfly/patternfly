@@ -22,14 +22,14 @@ wrapperTag: div
         <!-- Content -->
         {{#> drawer-content}}
           {{> toolbar-template
-                toolbar-template--id=(concat drawer--id '-toolbar')
-                toolbar-template--modifier="pf-m-page-insets"
-                toolbar-template--HasFilterGroup="true"
-                toolbar-template--HasOverflowMenu="true"
-                toolbar-template--HasSearchFilter="true"
-                toolbar-template--HasSortButton="true"
-                toolbar-template--HasToggleGroup="true"
-          }}
+              toolbar-template--id=(concat drawer--id '-toolbar')
+              toolbar-template--modifier="pf-m-page-insets"
+              toolbar-template--HasFilterGroup=true
+              toolbar-template--HasOverflowMenu=true
+              toolbar-template--HasSearchFilter=true
+              toolbar-template--HasSortButton=true
+              toolbar-template--HasToggleGroup=true
+            }}
           {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
@@ -71,14 +71,14 @@ wrapperTag: div
         <!-- Content -->
         {{#> drawer-content}}
           {{> toolbar-template
-                toolbar-template--id=(concat drawer--id '-toolbar')
-                toolbar-template--modifier="pf-m-page-insets"
-                toolbar-template--HasFilterGroup="true"
-                toolbar-template--HasOverflowMenu="true"
-                toolbar-template--HasSearchFilter="true"
-                toolbar-template--HasSortButton="true"
-                toolbar-template--HasToggleGroup="true"
-          }}
+              toolbar-template--id=(concat drawer--id '-toolbar')
+              toolbar-template--modifier="pf-m-page-insets"
+              toolbar-template--HasFilterGroup=true
+              toolbar-template--HasOverflowMenu=true
+              toolbar-template--HasSearchFilter=true
+              toolbar-template--HasSortButton=true
+              toolbar-template--HasToggleGroup=true
+            }}
           {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
@@ -116,13 +116,13 @@ wrapperTag: div
         <!-- Content -->
         {{#> drawer-content drawer-content--modifier="pf-m-no-background" drawer-body--modifier="pf-m-padding"}}
           {{> toolbar-template
-                toolbar-template--id=(concat drawer--id '-toolbar')
-                toolbar-template--modifier="pf-m-page-insets"
-                toolbar-template--HasFilterGroup="true"
-                toolbar-template--HasOverflowMenu="true"
-                toolbar-template--HasSortButton="true"
-                toolbar-template--HasToggleGroup="true"
-          }}
+              toolbar-template--id=(concat drawer--id '-toolbar')
+              toolbar-template--modifier="pf-m-page-insets"
+              toolbar-template--HasFilterGroup=true
+              toolbar-template--HasOverflowMenu=true
+              toolbar-template--HasSortButton=true
+              toolbar-template--HasToggleGroup=true
+            }}
           {{> data-list-simple-data-list}}
         {{/drawer-content}}
 
@@ -156,16 +156,16 @@ wrapperTag: div
 
       {{#> drawer-section}}
         {{> toolbar-template
-              toolbar-template--id=(concat drawer--id '-toolbar')
-              toolbar-template--modifier="pf-m-page-insets"
-              toolbar-template--HasBulkSelect="true"
-              toolbar-template--HasSearchFilter="true"
-              toolbar-template--HasSortButton="true"
-              toolbar-template--HasToggleGroup="true"
-              toolbar-template--HasOverflowMenu="true"
-              toolbar-template--HasOverflowMenuSecondButton="true"
-              toolbar-template--HasViewToggle="true"
-        }}
+            toolbar-template--id=(concat drawer--id '-toolbar')
+            toolbar-template--modifier="pf-m-page-insets"
+            toolbar-template--HasBulkSelect=true
+            toolbar-template--HasSearchFilter=true
+            toolbar-template--HasSortButton=true
+            toolbar-template--HasToggleGroup=true
+            toolbar-template--HasOverflowMenu=true
+            toolbar-template--HasOverflowMenuSecondButton=true
+            toolbar-template--HasViewToggle=true
+          }}
         {{> divider divider--type="div"}}
       {{/drawer-section}}
 
@@ -282,12 +282,12 @@ wrapperTag: div
       <!-- Content -->
       {{#> drawer-content}}
         {{> toolbar-template
-              toolbar-template--id=(concat drawer--id '-toolbar')
-              toolbar-template--modifier="pf-m-page-insets"
-              toolbar-template--HasDropdown="true"
-              toolbar-template--HasOverflowMenu="true"
-              toolbar-template--HasOverflowMenuSecondButton="true"
-        }}
+            toolbar-template--id=(concat drawer--id '-toolbar')
+            toolbar-template--modifier="pf-m-page-insets"
+            toolbar-template--HasDropdown=true
+            toolbar-template--HasOverflowMenu=true
+            toolbar-template--HasOverflowMenuSecondButton=true
+          }}
         {{> data-list-simple-data-list}}
       {{/drawer-content}}
 

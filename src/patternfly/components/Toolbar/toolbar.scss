@@ -408,6 +408,10 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   &:last-child {
     --#{$toolbar}--spacer: 0;
   }
+
+  .#{$panel} {
+    --#{$panel}--MinWidth: 100%;
+  }
 }
 
 .#{$toolbar}__group,
