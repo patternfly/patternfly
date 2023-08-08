@@ -1,7 +1,7 @@
 <ul{{#if options-menu-list--modifier}} class="{{options-menu-list--modifier}}"{{/if}}
-  {{#if options-menu-list--role}} role="{{options-menu-list--role}}"{{/if}}
+  role="{{ternary options-menu-list--role options-menu-list--role "group"}}"
   {{#if options-menu-list--attribute}}
     {{{options-menu-list--attribute}}}
   {{/if}}>
   {{> @partial-block}}
-</section>
+</ul>
