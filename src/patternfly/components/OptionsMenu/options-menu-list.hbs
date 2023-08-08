@@ -1,0 +1,7 @@
+<ul{{#if options-menu-list--modifier}} class="{{options-menu-list--modifier}}"{{/if}}
+  role="{{ternary options-menu-list--role options-menu-list--role "group"}}"
+  {{#if options-menu-list--attribute}}
+    {{{options-menu-list--attribute}}}
+  {{/if}}>
+  {{> @partial-block}}
+</ul>
