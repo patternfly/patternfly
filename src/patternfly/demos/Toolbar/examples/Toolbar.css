@@ -13,3 +13,13 @@
 #ws-html-demos-c-toolbar-toolbar-attribute-value-search-filter-on-mobile {
   min-height: 175px;
 }
+
+.pf-v5-c-menu-toggle + .pf-v5-c-panel {
+  position: absolute;
+  top: calc(100% + 2px);
+  z-index: var(--pf-v5-global--ZIndex--sm);
+}
+
+.ws-html-demos-c-toolbar .pf-v5-c-toolbar__item {
+  position: relative;
+}

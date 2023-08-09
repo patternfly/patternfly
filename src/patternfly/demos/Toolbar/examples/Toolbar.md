@@ -16,7 +16,10 @@ import './Toolbar.css'
         {{> toolbar-toggle}}
         {{> toolbar-item-search-filter}}
       {{/toolbar-group}}
-      {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content=true toolbar-overflow-menu-example--control=true}}
+      {{> toolbar-overflow-menu-example
+          toolbar-overflow-menu-example--content=true
+          toolbar-overflow-menu-example--control=true
+        }}
       {{#> toolbar-item toolbar-item--modifier=(concat 'pf-m-pagination ' toolbar-item-pagination--modifier)}}
         {{#> pagination pagination--modifier="pf-m-compact pf-m-hidden pf-m-visible-on-md"}}
           {{#> pagination pagination--IsCompact=true}}
@@ -55,19 +58,31 @@ import './Toolbar.css'
                       }}
                   {{/input-group-item}}
                   {{#> input-group-item}}
-                    {{#> date-picker date-picker--id=(concat toolbar--id "-helper-text") helper-text--value="MM/DD/YYYY"}}
+                    {{#> date-picker date-picker--id=(concat toolbar--id '-helper-text') helper-text--value='MM/DD/YYYY'}}
                       {{#> input-group}}
-                        {{> form-control controlType="input" input=true form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
-                        {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
+                        {{> form-control
+                            controlType='input'
+                            input=true
+                            form-control--attribute=(concat 'type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')
+                          }}
+                        {{#> button button--modifier='pf-m-control' button--attribute='aria-label="Toggle date picker"'}}
                           <i class="fas fa-calendar-alt" aria-hidden=true></i>
                         {{/button}}
                       {{/input-group}}
                     {{/date-picker}}
                   {{/input-group-item}}
                   {{#> input-group-item}}
-                    {{#> date-picker date-picker--id=(concat toolbar--id "-invalid") helper-text--value="Max: 08/10/2022" helper-text--IsError=true}}
+                    {{#> date-picker
+                          date-picker--id=(concat toolbar--id '-invalid') helper-text--value="Max: 08/10/2022" helper-text--IsError=true}}
                       {{#> input-group}}
-                        {{> form-control controlType="input" input=true form-control--IsError='true' form-control--attribute=(concat 'aria-invalid=true type="text" value="2020-03-05" id="' date-picker--id '-input" name="' date-picker--id '-input" aria-label="Date picker"')}}
+                        {{> form-control
+                            input=true
+                            form-control--IsError=true
+                            controlType='input'
+                            form-control--attribute=(concat 'aria-invalid=true type="text" value="2020-03-05" id="'
+                            date-picker--id '-input" name="'
+                            date-picker--id '-input" aria-label="Date picker"')
+                          }}
                         {{#> button button--modifier="pf-m-control" button--attribute='aria-label="Toggle date picker"'}}
                           <i class="fas fa-calendar-alt" aria-hidden=true></i>
                         {{/button}}
@@ -134,13 +149,13 @@ import './Toolbar.css'
                 menu-toggle--icon='filter'
               }}
           {{/toolbar-item}}
-          {{#> toolbar-item toolbar-item--IsRelative=true}}
+          {{#> toolbar-item}}
             {{> menu-toggle
                 menu-toggle--id=(concat toolbar--id '-menu-toggle-stopped')
                 menu-toggle--text='Stopped'
                 menu-toggle--IsExpanded=true
               }}
-            {{#> panel panel--IsPopper=true}}
+            {{#> panel}}
               {{#> menu menu--width='175px'}}
                 {{#> menu-content}}
                   {{#> menu-group}}
@@ -200,13 +215,13 @@ import './Toolbar.css'
             menu-toggle--icon='filter'
           }}
       {{/toolbar-item}}
-      {{#> toolbar-item toolbar-item--IsRelative=true}}
+      {{#> toolbar-item}}
         {{> menu-toggle
             menu-toggle--id=(concat toolbar--id '-menu-toggle-stopped')
             menu-toggle--text='Stopped'
             menu-toggle--IsExpanded=true
           }}
-        {{#> panel panel--IsPopper=true}}
+        {{#> panel}}
           {{#> menu menu--width='175px'}}
             {{#> menu-content}}
               {{#> menu-group}}
@@ -243,13 +258,13 @@ import './Toolbar.css'
                 menu-toggle--icon='filter'
               }}
           {{/toolbar-item}}
-          {{#> toolbar-item toolbar-item--IsRelative=true}}
+          {{#> toolbar-item}}
             {{> menu-toggle
                 menu-toggle--id=(concat toolbar--id '-menu-toggle-filter-by-status')
                 menu-toggle--text='Filter by status'
                 menu-toggle--IsExpanded=true
               }}
-            {{#> panel panel--IsPopper=true}}
+            {{#> panel}}
               {{#> menu menu--id=(concat toolbar--id '-status-menu')}}
                 {{#> menu-content}}
                   {{#> menu-list}}
@@ -373,13 +388,13 @@ import './Toolbar.css'
               menu-toggle--icon='filter'
             }}
         {{/toolbar-item}}
-        {{#> toolbar-item toolbar-item--IsRelative=true}}
+        {{#> toolbar-item}}
           {{> menu-toggle
               menu-toggle--id=(concat toolbar--id '-menu-toggle-filter-by-status')
               menu-toggle--text='Filter by status'
               menu-toggle--IsExpanded=true
             }}
-          {{#> panel panel--IsPopper=true}}
+          {{#> panel}}
             {{#> menu menu--id=(concat toolbar--id '-status-menu')}}
               {{#> menu-content}}
                 {{#> menu-list}}

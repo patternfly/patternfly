@@ -14,7 +14,7 @@
   {{#if menu-list-item--IsCheckbox}}
     role="menuitem"
   {{else}}
-    role="group"
+    role="{{ternary menu-list-item--role menu-list-item--role "group"}}"
   {{/if}}
   {{#if menu-list-item--attribute}}
     {{{menu-list-item--attribute}}}
