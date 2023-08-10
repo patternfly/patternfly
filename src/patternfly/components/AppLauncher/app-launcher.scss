@@ -93,8 +93,8 @@
   }
 
   .#{$divider} {
-    margin-top: var(--#{$app-launcher}--c-divider--MarginTop);
-    margin-bottom: var(--#{$app-launcher}--c-divider--MarginBottom);
+    margin-block-start: var(--#{$app-launcher}--c-divider--MarginTop);
+    margin-block-end: var(--#{$app-launcher}--c-divider--MarginBottom);
 
     // Support divider as last item in group to separate groups
     &:last-child {
@@ -104,7 +104,10 @@
 }
 
 .#{$app-launcher}__toggle {
-  padding: var(--#{$app-launcher}__toggle--PaddingTop) var(--#{$app-launcher}__toggle--PaddingRight) var(--#{$app-launcher}__toggle--PaddingBottom) var(--#{$app-launcher}__toggle--PaddingLeft);
+  padding-block-start: var(--#{$app-launcher}__toggle--PaddingTop);
+  padding-block-end: var(--#{$app-launcher}__toggle--PaddingBottom);
+  padding-inline-start: var(--#{$app-launcher}__toggle--PaddingLeft);
+  padding-inline-end: var(--#{$app-launcher}__toggle--PaddingRight);
   color: var(--#{$app-launcher}__toggle--Color);
   background-color: var(--#{$app-launcher}__toggle--BackgroundColor);
   border: none;
@@ -131,17 +134,17 @@
 
 .#{$app-launcher}__menu {
   position: absolute;
-  top: var(--#{$app-launcher}__menu--Top);
+  inset-block-start: var(--#{$app-launcher}__menu--Top);
   z-index: var(--#{$app-launcher}__menu--ZIndex);
   min-width: 100%;
-  padding-top: var(--#{$app-launcher}__menu--PaddingTop);
-  padding-bottom: var(--#{$app-launcher}__menu--PaddingBottom);
+  padding-block-start: var(--#{$app-launcher}__menu--PaddingTop);
+  padding-block-end: var(--#{$app-launcher}__menu--PaddingBottom);
   background-color: var(--#{$app-launcher}__menu--BackgroundColor);
   background-clip: padding-box;
   box-shadow: var(--#{$app-launcher}__menu--BoxShadow);
 
   &.pf-m-align-right {
-    right: 0;
+   inset-inline-end: 0;
   }
 
   .#{$app-launcher}.pf-m-top & {
@@ -154,19 +157,22 @@
     --#{$app-launcher}--m-top__menu--TranslateY: 0;
 
     position: static;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+    inset-block-start: auto;
+    inset-block-end: auto;
+    inset-inline-start: auto;
+    inset-inline-end: auto;
     z-index: auto;
     min-width: min-content;
   }
 }
 
 .#{$app-launcher}__menu-search {
-  padding: var(--#{$app-launcher}__menu-search--PaddingTop) var(--#{$app-launcher}__menu-search--PaddingRight) var(--#{$app-launcher}__menu-search--PaddingBottom) var(--#{$app-launcher}__menu-search--PaddingLeft);
-  margin-bottom: var(--#{$app-launcher}__menu-search--MarginBottom);
-  border-bottom: var(--#{$app-launcher}__menu-search--BottomBorderWidth) solid var(--#{$app-launcher}__menu-search--BottomBorderColor);
+  padding-block-start: var(--#{$app-launcher}__menu-search--PaddingTop);
+  padding-block-end: var(--#{$app-launcher}__menu-search--PaddingBottom);
+  padding-inline-start: var(--#{$app-launcher}__menu-search--PaddingLeft);
+  padding-inline-end: var(--#{$app-launcher}__menu-search--PaddingRight);
+  margin-block-end: var(--#{$app-launcher}__menu-search--MarginBottom);
+  border-block-end: var(--#{$app-launcher}__menu-search--BottomBorderWidth) solid var(--#{$app-launcher}__menu-search--BottomBorderColor);
 }
 
 .#{$app-launcher}__menu-wrapper {
@@ -182,7 +188,10 @@
   display: flex;
   align-items: center;
   width: var(--#{$app-launcher}__menu-item--Width);
-  padding: var(--#{$app-launcher}__menu-item--PaddingTop) var(--#{$app-launcher}__menu-item--PaddingRight) var(--#{$app-launcher}__menu-item--PaddingBottom) var(--#{$app-launcher}__menu-item--PaddingLeft);
+  padding-block-start: var(--#{$app-launcher}__menu-item--PaddingTop);
+  padding-block-end: var(--#{$app-launcher}__menu-item--PaddingBottom);
+  padding-inline-start: var(--#{$app-launcher}__menu-item--PaddingLeft);
+  padding-inline-end: var(--#{$app-launcher}__menu-item--PaddingRight);
   font-weight: var(--#{$app-launcher}__menu-item--FontWeight);
   color: var(--#{$app-launcher}__menu-item--Color);
   white-space: nowrap;
@@ -258,7 +267,7 @@
   justify-content: center;
   width: var(--#{$app-launcher}__menu-item-icon--Width);
   height: var(--#{$app-launcher}__menu-item-icon--Height);
-  margin-right: var(--#{$app-launcher}__menu-item-icon--MarginRight);
+  margin-inline-end: var(--#{$app-launcher}__menu-item-icon--MarginRight);
 
   > * {
     max-width: 100%;
@@ -267,8 +276,8 @@
 }
 
 .#{$app-launcher}__menu-item-external-icon {
-  padding-left: var(--#{$app-launcher}__menu-item-external-icon--PaddingLeft);
-  margin-left: auto;
+  padding-inline-start: var(--#{$app-launcher}__menu-item-external-icon--PaddingLeft);
+  margin-inline-start: auto;
   font-size: var(--#{$app-launcher}__menu-item-external-icon--FontSize);
   color: var(--#{$app-launcher}__menu-item-external-icon--Color);
   opacity: 0;
@@ -277,15 +286,15 @@
 
 .#{$app-launcher}__group {
   & + & {
-    padding-top: var(--#{$app-launcher}__group--group--PaddingTop);
+    padding-block-start: var(--#{$app-launcher}__group--group--PaddingTop);
   }
 }
 
 .#{$app-launcher}__group-title {
-  padding-top: var(--#{$app-launcher}__group-title--PaddingTop);
-  padding-right: var(--#{$app-launcher}__group-title--PaddingRight);
-  padding-bottom: var(--#{$app-launcher}__group-title--PaddingBottom);
-  padding-left: var(--#{$app-launcher}__group-title--PaddingLeft);
+  padding-block-start: var(--#{$app-launcher}__group-title--PaddingTop);
+  padding-block-end: var(--#{$app-launcher}__group-title--PaddingBottom);
+  padding-inline-start: var(--#{$app-launcher}__group-title--PaddingLeft);
+  padding-inline-end: var(--#{$app-launcher}__group-title--PaddingRight);
   font-size: var(--#{$app-launcher}__group-title--FontSize);
   font-weight: var(--#{$app-launcher}__group-title--FontWeight);
   color: var(--#{$app-launcher}__group-title--Color);

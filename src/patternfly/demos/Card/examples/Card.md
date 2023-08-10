@@ -703,7 +703,7 @@ import './Card.css'
   {{#> card card--id="utilization-card-3-example"}}
     {{#> card-header card-header--modifier="pf-v5-u-align-items-flex-start"}}
       {{#> card-header-main}}
-        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=('style="padding-top: 3px;"')}}
+        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=('style="padding-block-start: 3px;"')}}
           {{#> title title--modifier="pf-m-lg" titleType="h2"}}
             Recommendations
           {{/title}}
@@ -912,7 +912,7 @@ import './Card.css'
           Workload
         </span>
       {{/card-header-main}}
-      {{#> card-actions card-actions--modifier="pf-m-no-offset" card-actions--attribute='style="padding-top: 1px;"'}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset" card-actions--attribute='style="padding-block-start: 1px;"'}}
         {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Filter
         {{/select}}
@@ -973,7 +973,7 @@ import './Card.css'
         {{/select}}
       {{/card-actions}}
       {{#> card-header-main}}
-        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=(concat 'style="padding-top: 3px;"')}}
+        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=(concat 'style="padding-block-start: 3px;"')}}
           {{#> title title--modifier="pf-m-lg" titleType="h2"}}
             Activity
           {{/title}}
@@ -1049,7 +1049,7 @@ import './Card.css'
         {{/select}}
       {{/card-actions}}
       {{#> card-header-main}}
-        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=(concat 'style="padding-top: 3px;"')}}
+        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=(concat 'style="padding-block-start: 3px;"')}}
           {{#> title title--modifier="pf-m-lg" titleType="h2"}}
             Events
           {{/title}}

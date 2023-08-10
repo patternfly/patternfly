@@ -58,10 +58,7 @@
 
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     pointer-events: none;
     content: "";
     border: var(--#{$panel}--before--BorderWidth) solid var(--#{$panel}--before--BorderColor);
@@ -85,7 +82,10 @@
 }
 
 .#{$panel}__header {
-  padding: var(--#{$panel}__header--PaddingTop) var(--#{$panel}__header--PaddingRight) var(--#{$panel}__header--PaddingBottom) var(--#{$panel}__header--PaddingLeft);
+  padding-block-start: var(--#{$panel}__header--PaddingTop);
+  padding-block-end: var(--#{$panel}__header--PaddingBottom);
+  padding-inline-start: var(--#{$panel}__header--PaddingLeft);
+  padding-inline-end: var(--#{$panel}__header--PaddingRight);
 }
 
 .#{$panel}__main {
@@ -94,11 +94,17 @@
 }
 
 .#{$panel}__main-body {
-  padding: var(--#{$panel}__main-body--PaddingTop) var(--#{$panel}__main-body--PaddingRight) var(--#{$panel}__main-body--PaddingBottom) var(--#{$panel}__main-body--PaddingLeft);
+  padding-block-start: var(--#{$panel}__main-body--PaddingTop);
+  padding-block-end: var(--#{$panel}__main-body--PaddingBottom);
+  padding-inline-start: var(--#{$panel}__main-body--PaddingLeft);
+  padding-inline-end: var(--#{$panel}__main-body--PaddingRight);
 }
 
 .#{$panel}__footer {
-  padding: var(--#{$panel}__footer--PaddingTop) var(--#{$panel}__footer--PaddingRight) var(--#{$panel}__footer--PaddingBottom) var(--#{$panel}__footer--PaddingLeft);
+  padding-block-start: var(--#{$panel}__footer--PaddingTop);
+  padding-block-end: var(--#{$panel}__footer--PaddingBottom);
+  padding-inline-start: var(--#{$panel}__footer--PaddingLeft);
+  padding-inline-end: var(--#{$panel}__footer--PaddingRight);
   box-shadow: var(--#{$panel}__footer--BoxShadow);
 }
 

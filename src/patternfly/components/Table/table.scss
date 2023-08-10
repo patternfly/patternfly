@@ -332,7 +332,7 @@
     position: relative;
 
     thead:where(.#{$table}__thead) tr:where(.#{$table}__tr) {
-      border-bottom: 0;
+      border-block-end: 0;
 
       > * {
         z-index: var(--#{$table}--m-sticky-header--cell--ZIndex); // set z-index here to allow sticky column to override
@@ -343,17 +343,17 @@
     > thead:where(.#{$table}__thead):not(.pf-m-nested-column-header) {
       > tr:where(.#{$table}__tr) > * {
         position: sticky;
-        top: 0;
+       inset-block-start: 0;
         background: var(--#{$table}--BackgroundColor);
 
         // stylelint-disable-next-line
         &::after {
           position: absolute;
-          right: 0;
-          bottom: 0;
-          left: 0;
+          inset-block-end: 0;
+          inset-inline-start: 0;
+          inset-inline-end: 0;
           content: "";
-          border-bottom: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+          border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
         }
       }
     }
@@ -361,7 +361,7 @@
     // nested column header
     > .pf-m-nested-column-header {
       position: sticky;
-      top: 0;
+     inset-block-start: 0;
       z-index: var(--#{$pf-global}--ZIndex--xs);
       background: var(--#{$table}--BackgroundColor);
 
@@ -385,7 +385,7 @@
 
   &:not(.pf-m-sticky-header) > .pf-m-nested-column-header {
     tr:where(.#{$table}__tr):not(:last-child) {
-      border-bottom: 0; // hard reset tr borders in nested headers
+      border-block-end: 0; // hard reset tr borders in nested headers
 
       // stylelint-disable max-nesting-depth
       th:where(.#{$table}__th),
@@ -414,7 +414,7 @@
   // Standard table row (non-expandable)
   // exclude expandable rows
   tr:where(.#{$table}__tr):not(.#{$table}__expandable-row) {
-    border-bottom: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+    border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
 
     // stylelint-disable-next-line
     &.pf-m-ghost-row {
@@ -432,7 +432,10 @@
     width: var(--#{$table}--cell--Width);
     min-width: var(--#{$table}--cell--MinWidth);
     max-width: var(--#{$table}--cell--MaxWidth);
-    padding: var(--#{$table}--cell--PaddingTop) var(--#{$table}--cell--PaddingRight) var(--#{$table}--cell--PaddingBottom) var(--#{$table}--cell--PaddingLeft);
+    padding-block-start: var(--#{$table}--cell--PaddingTop);
+    padding-block-end: var(--#{$table}--cell--PaddingBottom);
+    padding-inline-start: var(--#{$table}--cell--PaddingLeft);
+    padding-inline-end: var(--#{$table}--cell--PaddingRight);
 
     // default settings
     overflow: var(--#{$table}--cell--Overflow);
@@ -474,34 +477,34 @@
       --#{$table}--cell--Overflow: visible;
     }
 
-    &.pf-m-border-right::before,
-    &.pf-m-border-left::before {
+    &.pf-m-border-inline-end::before,
+    &.pf-m-border-inline-start::before {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset-block-start: 0;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
       pointer-events: none;
       content: "";
     }
 
-    &.pf-m-border-right::before {
-      border-right: var(--#{$table}--cell--m-border-right--before--BorderRightWidth) solid var(--#{$table}--cell--m-border-right--before--BorderRightColor);
+    &.pf-m-border-inline-end::before {
+      border-inline-end: var(--#{$table}--cell--m-border-right--before--BorderRightWidth) solid var(--#{$table}--cell--m-border-right--before--BorderRightColor);
     }
 
-    &.pf-m-border-left::before {
-      border-left: var(--#{$table}--cell--m-border-left--before--BorderLeftWidth) solid var(--#{$table}--cell--m-border-left--before--BorderLeftColor);
+    &.pf-m-border-inline-start::before {
+      border-inline-start: var(--#{$table}--cell--m-border-left--before--BorderLeftWidth) solid var(--#{$table}--cell--m-border-left--before--BorderLeftColor);
     }
   }
 
   // Table caption
   caption:where(.#{$table}__caption) {
-    padding-top: var(--#{$table}__caption--PaddingTop);
-    padding-bottom: var(--#{$table}__caption--PaddingBottom);
-    padding-left: var(--#{$table}__caption--PaddingLeft);
+    padding-block-start: var(--#{$table}__caption--PaddingTop);
+    padding-block-end: var(--#{$table}__caption--PaddingBottom);
+    padding-inline-start: var(--#{$table}__caption--PaddingLeft);
     font-size: var(--#{$table}__caption--FontSize);
     color: var(--#{$table}__caption--Color);
-    text-align: left;
+    text-align: start;
     background-color: var(--#{$table}--BackgroundColor);
   }
 
@@ -564,26 +567,26 @@
       position: absolute;
 
       // offset top to extend above tr border
-      top: var(--#{$table}__expandable-row--after--Top);
-      bottom: var(--#{$table}__expandable-row--after--Bottom);
-      left: 0;
+     inset-block-start: var(--#{$table}__expandable-row--after--Top);
+     inset-block-end: var(--#{$table}__expandable-row--after--Bottom);
+     inset-inline-start: 0;
       content: "";
 
       // add border left
       background-color: transparent;
-      border-left: var(--#{$table}__expandable-row--after--BorderLeftWidth) solid var(--#{$table}__expandable-row--after--BorderColor);
+      border-inline-start: var(--#{$table}__expandable-row--after--BorderLeftWidth) solid var(--#{$table}__expandable-row--after--BorderColor);
     }
 
     // Check table cell
     .#{$table}__check {
       input:where(.#{$check}__input) {
-        margin-top: var(--#{$table}__check--input--MarginTop);
+        margin-block-start: var(--#{$table}__check--input--MarginTop);
         vertical-align: top;
       }
     }
 
     &.pf-m-expanded > :first-child:not(.#{$table}__control-row) {
-      border-bottom-width: 0;
+      border-block-end-width: 0;
     }
   }
   // stylelint-enable
@@ -658,10 +661,10 @@
   // stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors
   &.pf-m-no-border-rows > tbody:where(.#{$table}__tbody) {
     > tr:where(.#{$table}__tr) {
-      border-bottom: 0;
+      border-block-end: 0;
 
       > :first-child::after {
-        border-left: 0;
+        border-inline-start: 0;
       }
     }
 
@@ -670,11 +673,11 @@
     }
 
     &.pf-m-expanded > .#{$table}__control-row {
-      border-bottom: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+      border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
     }
 
     .#{$table}__control-row > .#{$table}__compound-expansion-toggle:first-child > ::before {
-      border-left-width: 0;
+      border-inline-start-width: 0;
     }
   }
 
@@ -839,11 +842,14 @@
 .#{$table}__button {
   position: static;
   width: 100%;
-  padding: var(--#{$table}--cell--PaddingTop) var(--#{$table}--cell--PaddingRight) var(--#{$table}--cell--PaddingBottom) var(--#{$table}--cell--PaddingLeft);
+  padding-block-start: var(--#{$table}--cell--PaddingTop);
+  padding-block-end: var(--#{$table}--cell--PaddingBottom);
+  padding-inline-start: var(--#{$table}--cell--PaddingLeft);
+  padding-inline-end: var(--#{$table}--cell--PaddingRight);
   font-size: inherit;
   font-weight: inherit;
   color: var(--#{$table}__button--Color);
-  text-align: left;
+  text-align: start;
   white-space: inherit;
   user-select: text;
   background-color: var(--#{$table}__button--BackgroundColor);
@@ -852,10 +858,10 @@
   // Define clickable area with invisible ::before pseudo
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     cursor: pointer;
     content: "";
   }
@@ -954,8 +960,8 @@
   vertical-align: top;
 
   .#{$button} {
-    margin-top: var(--#{$table}__toggle--c-button--MarginTop);
-    margin-bottom: var(--#{$table}__toggle--c-button--MarginBottom);
+    margin-block-start: var(--#{$table}__toggle--c-button--MarginTop);
+    margin-block-end: var(--#{$table}__toggle--c-button--MarginBottom);
 
     &.pf-m-expanded {
       .#{$table}__toggle-icon {
@@ -986,7 +992,10 @@
   label {
     display: block;
     padding: inherit;
-    margin: calc(var(--#{$table}--cell--PaddingTop) * -1) calc(var(--#{$table}--cell--PaddingRight) * -1) calc(var(--#{$table}--cell--PaddingBottom) * -1) calc(var(--#{$table}--cell--PaddingLeft) * -1);
+    margin-block-start: calc(var(--#{$table}--cell--PaddingTop) * -1);
+    margin-block-end: calc(var(--#{$table}--cell--PaddingBottom) * -1);
+    margin-inline-start: calc(var(--#{$table}--cell--PaddingLeft) * -1);
+    margin-inline-end: calc(var(--#{$table}--cell--PaddingRight) * -1);
   }
 }
 
@@ -996,7 +1005,10 @@
     --#{$button}--m-plain--Color: var(--#{$table}__favorite--c-button--Color);
     --#{$button}--FontSize: var(--#{$table}__favorite--c-button--FontSize);
 
-    margin: var(--#{$table}__favorite--c-button--MarginTop) var(--#{$table}__favorite--c-button--MarginRight) var(--#{$table}__favorite--c-button--MarginBottom) var(--#{$table}__favorite--c-button--MarginLeft);
+    margin-block-start: var(--#{$table}__favorite--c-button--MarginTop);
+    margin-block-end: var(--#{$table}__favorite--c-button--MarginBottom);
+    margin-inline-start: var(--#{$table}__favorite--c-button--MarginLeft);
+    margin-inline-end: var(--#{$table}__favorite--c-button--MarginRight);
 
     @at-root .pf-m-favorited#{&} {
       --#{$button}--m-plain--Color: var(--#{$table}__favorite--m-favorited--c-button--Color);
@@ -1007,7 +1019,10 @@
 // Draggable
 .#{$table}__draggable {
   .#{$button} {
-    margin: var(--#{$table}__draggable--c-button--MarginTop) var(--#{$table}__draggable--c-button--MarginRight) var(--#{$table}__draggable--c-button--MarginBottom) var(--#{$table}__draggable--c-button--MarginLeft);
+    margin-block-start: var(--#{$table}__draggable--c-button--MarginTop);
+    margin-block-end: var(--#{$table}__draggable--c-button--MarginBottom);
+    margin-inline-start: var(--#{$table}__draggable--c-button--MarginLeft);
+    margin-inline-end: var(--#{$table}__draggable--c-button--MarginRight);
     cursor: grab;
 
     &:active {
@@ -1024,13 +1039,13 @@
   --#{$table}--cell--PaddingBottom: 0;
   --#{$table}--cell--PaddingLeft: var(--#{$table}__action--PaddingLeft);
 
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
   vertical-align: middle;
 }
 
 .#{$table}__action {
-  text-align: right;
+  text-align: end;
 }
 
 // Inline edit
@@ -1038,7 +1053,7 @@
   --#{$table}--cell--PaddingLeft: 0;
   --#{$table}--cell--PaddingRight: 0;
 
-  text-align: right;
+  text-align: end;
 }
 
 // Compound expansion toggle
@@ -1071,28 +1086,28 @@
   .#{$table}__button::before,
   .#{$table}__button::after {
     position: absolute;
-    right: 0;
+   inset-inline-end: 0;
     content: "";
     border-style: solid;
     border-width: 0;
   }
 
   .#{$table}__button::before {
-    top: 0;
-    bottom: var(--#{$table}__compound-expansion-toggle__button--before--Bottom);
-    left: var(--#{$table}__compound-expansion-toggle__button--before--Left);
+   inset-block-start: 0;
+   inset-block-end: var(--#{$table}__compound-expansion-toggle__button--before--Bottom);
+   inset-inline-start: var(--#{$table}__compound-expansion-toggle__button--before--Left);
     border-color: var(--#{$table}__compound-expansion-toggle__button--before--BorderColor);
-    border-right-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderRightWidth);
-    border-left-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth);
+    border-inline-start-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderLeftWidth);
+    border-inline-end-width: var(--#{$table}__compound-expansion-toggle__button--before--BorderRightWidth);
   }
 
   .#{$table}__button::after {
     // overlap previous row's border
-    top: var(--#{$table}__compound-expansion-toggle__button--after--Top);
-    left: var(--#{$table}__compound-expansion-toggle__button--after--Left);
+   inset-block-start: var(--#{$table}__compound-expansion-toggle__button--after--Top);
+   inset-inline-start: var(--#{$table}__compound-expansion-toggle__button--after--Left);
     pointer-events: none;
     border-color: var(--#{$table}__compound-expansion-toggle__button--after--BorderColor);
-    border-top-width: var(--#{$table}__compound-expansion-toggle__button--after--BorderTopWidth);
+    border-block-start-width: var(--#{$table}__compound-expansion-toggle__button--after--BorderTopWidth);
   }
 
   &:hover,
@@ -1110,7 +1125,7 @@
 
   &.pf-m-expanded {
     .#{$table}__button::before {
-      border-bottom: var(--#{$table}--BackgroundColor) solid var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
+      border-block-end: var(--#{$table}--BackgroundColor) solid var(--#{$table}__compound-expansion-toggle__button--before--border-width--base);
     }
 
     &:first-child {
@@ -1131,15 +1146,15 @@
 }
 
 .#{$table}__column-help-action {
-  margin-left: var(--#{$table}__column-help--MarginLeft);
+  margin-inline-start: var(--#{$table}__column-help--MarginLeft);
   transform: translateY(var(--#{$table}__column-help--TranslateY));
 
   .#{$button} {
     --#{$button}--PaddingRight: var(--#{$table}__column-help--c-button--PaddingRight);
     --#{$button}--PaddingLeft: var(--#{$table}__column-help--c-button--PaddingLeft);
 
-    margin-top: var(--#{$table}__column-help--c-button--MarginTop);
-    margin-bottom: var(--#{$table}__column-help--c-button--MarginBottom);
+    margin-block-start: var(--#{$table}__column-help--c-button--MarginTop);
+    margin-block-end: var(--#{$table}__column-help--c-button--MarginBottom);
     font-size: inherit;
     line-height: 1;
   }
@@ -1156,9 +1171,9 @@
 
     display: flex;
     width: auto;
-    margin-top: var(--#{$table}__sort__button--MarginTop);
-    margin-bottom: var(--#{$table}__sort__button--MarginBottom);
-    margin-left: var(--#{$table}__sort__button--MarginLeft);
+    margin-block-start: var(--#{$table}__sort__button--MarginTop);
+    margin-block-end: var(--#{$table}__sort__button--MarginBottom);
+    margin-inline-start: var(--#{$table}__sort__button--MarginLeft);
 
     &:hover {
       --#{$table}__sort-indicator--Color: var(--#{$table}__sort__button--hover__sort-indicator--Color);
@@ -1204,7 +1219,7 @@
 // Sort indicator
 .#{$table}__sort-indicator {
   grid-column: 2;
-  margin-left: var(--#{$table}__sort-indicator--MarginLeft);
+  margin-inline-start: var(--#{$table}__sort-indicator--MarginLeft);
   color: var(--#{$table}__sort-indicator--Color);
   pointer-events: none;
 }
@@ -1216,7 +1231,7 @@
   --#{$table}--cell--PaddingBottom: 0;
 
   position: relative;
-  border-bottom: 0 solid transparent;
+  border-block-end: 0 solid transparent;
   box-shadow: 0 0 0 0 transparent;
 
   &,
@@ -1228,7 +1243,10 @@
   td:where(.#{$table}__td),
   th:where(.#{$table}__th) {
     &.pf-m-no-padding {
-      padding: 0 0 0 var(--#{$table}__expandable-row--after--border-width--base); // set padding-left to adjust for left border.
+      padding-block-start: 0;
+      padding-inline-end: 0;
+      padding-block-end: 0;
+      padding-inline-start: var(--#{$table}__expandable-row--after--border-width--base); // set padding-left to adjust for left border.
 
       .#{$table}__expandable-row-content {
         padding: 0;
@@ -1238,14 +1256,14 @@
   // stylelint-enable
 
   .#{$table}__expandable-row-content {
-    padding-top: var(--#{$table}__expandable-row-content--PaddingTop);
-    padding-bottom: var(--#{$table}__expandable-row-content--PaddingBottom);
+    padding-block-start: var(--#{$table}__expandable-row-content--PaddingTop);
+    padding-block-end: var(--#{$table}__expandable-row-content--PaddingBottom);
   }
 
   // Modifier - Expanded tr
   &.pf-m-expanded {
-    border-bottom-color: var(--#{$table}__expandable-row--m-expanded--BorderBottomColor);
-    border-bottom-width: var(--#{$table}--border-width--base);
+    border-block-end-color: var(--#{$table}__expandable-row--m-expanded--BorderBottomColor);
+    border-block-end-width: var(--#{$table}--border-width--base);
     box-shadow: var(--#{$table}__expandable-row--m-expanded--BoxShadow);
   }
 
@@ -1352,7 +1370,7 @@
   align-items: center;
 
   > :not(:last-child) {
-    margin-right: var(--#{$table}__icon-inline--MarginRight);
+    margin-inline-end: var(--#{$table}__icon-inline--MarginRight);
   }
 }
 

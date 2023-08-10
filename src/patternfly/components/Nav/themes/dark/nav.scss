@@ -22,11 +22,11 @@
 
   .#{$nav}__link {
     &::before {
-      bottom: 0;
+     inset-block-end: 0;
     }
 
     &::after {
-      top: var(--#{$nav}__item--item__link--after--Top);
+     inset-block-start: var(--#{$nav}__item--item__link--after--Top);
     }
   }
 

@@ -137,7 +137,10 @@
 .#{$about-modal-box}__brand {
   display: flex;
   grid-area: brand;
-  padding: var(--#{$about-modal-box}__brand--PaddingTop) var(--#{$about-modal-box}__brand--PaddingRight) var(--#{$about-modal-box}__brand--PaddingBottom) var(--#{$about-modal-box}__brand--PaddingLeft);
+  padding-block-start: var(--#{$about-modal-box}__brand--PaddingTop);
+  padding-block-end: var(--#{$about-modal-box}__brand--PaddingBottom);
+  padding-inline-start: var(--#{$about-modal-box}__brand--PaddingLeft);
+  padding-inline-end: var(--#{$about-modal-box}__brand--PaddingRight);
 }
 
 .#{$about-modal-box}__brand-image {
@@ -149,15 +152,15 @@
   display: flex;
   flex-direction: column;
   grid-area: header;
-  padding-right: var(--#{$about-modal-box}__header--PaddingRight);
-  padding-bottom: var(--#{$about-modal-box}__header--PaddingBottom);
-  padding-left: var(--#{$about-modal-box}__header--PaddingLeft);
+  padding-block-end: var(--#{$about-modal-box}__header--PaddingBottom);
+  padding-inline-start: var(--#{$about-modal-box}__header--PaddingLeft);
+  padding-inline-end: var(--#{$about-modal-box}__header--PaddingRight);
 }
 
 // Strapline
 .#{$about-modal-box}__strapline {
-  padding-top: var(--#{$about-modal-box}__strapline--PaddingTop);
-  margin-top: auto;
+  padding-block-start: var(--#{$about-modal-box}__strapline--PaddingTop);
+  margin-block-start: auto;
   font-size: var(--#{$about-modal-box}__strapline--FontSize);
 }
 
@@ -166,12 +169,15 @@
   display: flex;
   flex-direction: column;
   grid-area: content;
-  margin: var(--#{$about-modal-box}__content--MarginTop) var(--#{$about-modal-box}__content--MarginRight) var(--#{$about-modal-box}__content--MarginBottom) var(--#{$about-modal-box}__content--MarginLeft); // Using margin instead of padding to prevent scrollbar extending to top of content block
+  margin-block-start: var(--#{$about-modal-box}__content--MarginTop);
+  margin-block-end: var(--#{$about-modal-box}__content--MarginBottom);
+  margin-inline-start: var(--#{$about-modal-box}__content--MarginLeft); // Using margin instead of padding to prevent scrollbar extending to top of content block
+  margin-inline-end: var(--#{$about-modal-box}__content--MarginRight);
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
   word-break: break-word;
+  -webkit-overflow-scrolling: touch;
 
   @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
     overflow: visible;
@@ -182,14 +188,14 @@
 // Close
 .#{$about-modal-box}__close {
   position: sticky;
-  top: 0;
+  inset-block-start: 0;
   display: flex;
   grid-area: close;
   align-items: flex-start;
   justify-content: flex-end;
-  padding-top: var(--#{$about-modal-box}__close--PaddingTop);
-  padding-right: var(--#{$about-modal-box}__close--PaddingRight);
-  padding-bottom: var(--#{$about-modal-box}__close--PaddingBottom);
+  padding-block-start: var(--#{$about-modal-box}__close--PaddingTop);
+  padding-block-end: var(--#{$about-modal-box}__close--PaddingBottom);
+  padding-inline-end: var(--#{$about-modal-box}__close--PaddingRight);
 
   @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
     grid-area: 1 / 2;

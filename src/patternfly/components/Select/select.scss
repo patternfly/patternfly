@@ -218,8 +218,8 @@
   width: 100%;
 
   .#{$divider} {
-    margin-top: var(--#{$select}-menu--c-divider--MarginTop);
-    margin-bottom: var(--#{$select}-menu--c-divider--MarginBottom);
+    margin-block-start: var(--#{$select}-menu--c-divider--MarginTop);
+    margin-block-end: var(--#{$select}-menu--c-divider--MarginBottom);
 
     // Support divider as last item in group to separate groups
     &:last-child {
@@ -269,7 +269,10 @@
   justify-content: space-between;
   width: 100%;
   min-width: var(--#{$select}__toggle--MinWidth);
-  padding: var(--#{$select}__toggle--PaddingTop) var(--#{$select}__toggle--PaddingRight) var(--#{$select}__toggle--PaddingBottom) var(--#{$select}__toggle--PaddingLeft);
+  padding-block-start: var(--#{$select}__toggle--PaddingTop);
+  padding-block-end: var(--#{$select}__toggle--PaddingBottom);
+  padding-inline-start: var(--#{$select}__toggle--PaddingLeft);
+  padding-inline-end: var(--#{$select}__toggle--PaddingRight);
   font-size: var(--#{$select}__toggle--FontSize);
   font-weight: var(--#{$select}__toggle--FontWeight);
   line-height: var(--#{$select}__toggle--LineHeight);
@@ -294,14 +297,14 @@
     --#{$select}__toggle--before--BorderWidth-base: var(--#{$select}__toggle--before--BorderTopWidth) var(--#{$select}__toggle--before--BorderRightWidth) var(--#{$select}__toggle--before--BorderBottomWidth) var(--#{$select}__toggle--before--BorderLeftWidth); // remove at breaking change
 
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     content: "";
-    border-color: var(--#{$select}__toggle--before--BorderTopColor) var(--#{$select}__toggle--before--BorderRightColor) var(--#{$select}__toggle--before--BorderBottomColor) var(--#{$select}__toggle--before--BorderLeftColor);
     border-style: solid;
     border-width: var(--#{$select}__toggle--before--BorderWidth, var(--#{$select}__toggle--before--BorderWidth-base));
+    border-block-start-color: var(--#{$select}__toggle--before--BorderTopColor);
+    border-block-end-color: var(--#{$select}__toggle--before--BorderBottomColor);
+    border-inline-start-color: var(--#{$select}__toggle--before--BorderLeftColor);
+    border-inline-end-color: var(--#{$select}__toggle--before--BorderRightColor);
   }
 
   &:hover {
@@ -356,9 +359,9 @@
   }
 
   .#{$select}__toggle-clear {
-    padding-right: var(--#{$select}__toggle-clear--PaddingRight);
-    padding-left: var(--#{$select}__toggle-clear--PaddingLeft);
-    margin-left: auto;
+    padding-inline-start: var(--#{$select}__toggle-clear--PaddingLeft);
+    padding-inline-end: var(--#{$select}__toggle-clear--PaddingRight);
+    margin-inline-start: auto;
   }
 
   .#{$select}__toggle-button {
@@ -366,7 +369,7 @@
   }
 
   .#{$select}__toggle-clear + .#{$select}__toggle-button {
-    padding-left: var(--#{$select}__toggle-clear--toggle-button--PaddingLeft);
+    padding-inline-start: var(--#{$select}__toggle-clear--toggle-button--PaddingLeft);
   }
 
   &.pf-m-placeholder {
@@ -378,8 +381,8 @@
   color: var(--#{$select}__toggle-arrow--Color, inherit);
 
   * + & {
-    margin-right: var(--#{$select}__toggle-arrow--MarginRight);
-    margin-left: var(--#{$select}__toggle-arrow--MarginLeft);
+    margin-inline-start: var(--#{$select}__toggle-arrow--MarginLeft);
+    margin-inline-end: var(--#{$select}__toggle-arrow--MarginRight);
   }
   // stylelint-disable-next-line
   .#{$select}.pf-m-top.pf-m-expanded & {
@@ -408,33 +411,33 @@
 
   // Add space between children
   > :not(:last-child) {
-    margin-right: var(--#{$select}__toggle-wrapper--not-last-child--MarginRight);
+    margin-inline-end: var(--#{$select}__toggle-wrapper--not-last-child--MarginRight);
   }
 
   // a chip group needs a bottom margin to make some space between the chip group and typeahead input box if it wraps
   .#{$chip}-group {
-    margin-top: var(--#{$select}__toggle-wrapper--c-chip-group--MarginTop);
-    margin-bottom: var(--#{$select}__toggle-wrapper--c-chip-group--MarginBottom);
+    margin-block-start: var(--#{$select}__toggle-wrapper--c-chip-group--MarginTop);
+    margin-block-end: var(--#{$select}__toggle-wrapper--c-chip-group--MarginBottom);
   }
 
   // When the input is the first thing then use a negative left padding so it matches the toggle container
   > .#{$select}__toggle-typeahead:first-child {
-    margin-left: calc(-1 * var(--#{$select}__toggle--PaddingLeft));
+    margin-inline-start: calc(-1 * var(--#{$select}__toggle--PaddingLeft));
   }
 }
 
 .#{$select}__toggle-icon + .#{$select}__toggle-text {
-  margin-left: var(--#{$select}__toggle-icon--toggle-text--MarginLeft);
+  margin-inline-start: var(--#{$select}__toggle-icon--toggle-text--MarginLeft);
 }
 
 .#{$select}__toggle-status-icon {
-  margin-left: var(--#{$select}__toggle-status-icon--MarginLeft);
+  margin-inline-start: var(--#{$select}__toggle-status-icon--MarginLeft);
   color: var(--#{$select}__toggle-status-icon--Color);
 }
 
 .#{$select}__toggle-badge {
   display: flex;
-  padding-left: var(--#{$select}__toggle-badge--PaddingLeft);
+  padding-inline-start: var(--#{$select}__toggle-badge--PaddingLeft);
 }
 
 .#{$select}__toggle-typeahead {
@@ -455,22 +458,22 @@
 
 .#{$select}__menu {
   position: absolute;
-  top: var(--#{$select}__menu--Top);
+ inset-block-start: var(--#{$select}__menu--Top);
   z-index: var(--#{$select}__menu--ZIndex);
   width: var(--#{$select}__menu--Width);
   min-width: var(--#{$select}__menu--MinWidth);
-  padding-top: var(--#{$select}__menu--PaddingTop);
-  padding-bottom: var(--#{$select}__menu--PaddingBottom);
+  padding-block-start: var(--#{$select}__menu--PaddingTop);
+  padding-block-end: var(--#{$select}__menu--PaddingBottom);
   background-color: var(--#{$select}__menu--BackgroundColor);
   background-clip: padding-box;
   box-shadow: var(--#{$select}__menu--BoxShadow);
 
   &.pf-m-align-right {
-    right: 0;
+   inset-inline-end: 0;
   }
 
   .#{$select}.pf-m-top & {
-    top: 0;
+   inset-block-start: 0;
     transform: translateY(var(--#{$select}__menu--m-top--TranslateY));
   }
 
@@ -478,10 +481,7 @@
     --#{$select}__menu--m-top--TranslateY: 0;
 
     position: static;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+    inset: auto;
     z-index: auto;
     min-width: min-content;
   }
@@ -504,12 +504,15 @@
 .#{$select}__menu-item {
   position: relative;
   width: var(--#{$select}__menu-item--Width);
-  padding: var(--#{$select}__menu-item--PaddingTop) var(--#{$select}__menu-item--PaddingRight) var(--#{$select}__menu-item--PaddingBottom) var(--#{$select}__menu-item--PaddingLeft);
+  padding-block-start: var(--#{$select}__menu-item--PaddingTop);
+  padding-block-end: var(--#{$select}__menu-item--PaddingBottom);
+  padding-inline-start: var(--#{$select}__menu-item--PaddingLeft);
+  padding-inline-end: var(--#{$select}__menu-item--PaddingRight);
   font-size: var(--#{$select}__menu-item--FontSize);
   font-weight: var(--#{$select}__menu-item--FontWeight);
   line-height: var(--#{$select}__menu-item--LineHeight);
   color: var(--#{$select}__menu-item--Color);
-  text-align: left;
+  text-align: start;
   white-space: nowrap;
   background-color: transparent;
   border: none;
@@ -617,7 +620,7 @@
 
 .#{$select}__list-item {
   &.pf-m-loading {
-    padding-top: var(--#{$select}__list-item--m-loading--PaddingTop);
+    padding-block-start: var(--#{$select}__list-item--m-loading--PaddingTop);
     text-align: center;
   }
 }
@@ -625,7 +628,7 @@
 .#{$select}__menu-item-main {
   position: relative;
   display: block;
-  padding-right: var(--#{$select}__menu-item-main--PaddingRight);
+  padding-inline-end: var(--#{$select}__menu-item-main--PaddingRight);
   white-space: nowrap;
 }
 
@@ -639,22 +642,22 @@
 
 .#{$select}__menu-item-count {
   align-self: center;
-  margin-left: var(--#{$select}__menu-item-count--MarginLeft);
+  margin-inline-start: var(--#{$select}__menu-item-count--MarginLeft);
   font-size: var(--#{$select}__menu-item-count--FontSize);
   color: var(--#{$select}__menu-item-count--Color);
 }
 
 .#{$select}__menu-item-description {
   display: block;
-  padding-right: var(--#{$select}__menu-item-description--PaddingRight);
+  padding-inline-end: var(--#{$select}__menu-item-description--PaddingRight);
   font-size: var(--#{$select}__menu-item-description--FontSize);
   color: var(--#{$select}__menu-item-description--Color);
 }
 
 .#{$select}__menu-item-icon {
   position: absolute;
-  top: var(--#{$select}__menu-item-icon--Top);
-  right: var(--#{$select}__menu-item-icon--Right);
+  inset-block-start: var(--#{$select}__menu-item-icon--Top);
+  inset-inline-end: var(--#{$select}__menu-item-icon--Right);
   font-size: var(--#{$select}__menu-item-icon--FontSize);
   color: var(--#{$select}__menu-item-icon--Color);
   transform: translateY(var(--#{$select}__menu-item-icon--TranslateY));
@@ -672,27 +675,33 @@
 }
 
 .#{$select}__menu-group + .#{$select}__menu-group {
-  padding-top: var(--#{$select}__menu-group--menu-group--PaddingTop);
+  padding-block-start: var(--#{$select}__menu-group--menu-group--PaddingTop);
 }
 
 .#{$select}__menu-search {
-  padding: var(--#{$select}__menu-search--PaddingTop) var(--#{$select}__menu-search--PaddingRight) var(--#{$select}__menu-search--PaddingBottom) var(--#{$select}__menu-search--PaddingLeft);
+  padding-block-start: var(--#{$select}__menu-search--PaddingTop);
+  padding-block-end: var(--#{$select}__menu-search--PaddingBottom);
+  padding-inline-start: var(--#{$select}__menu-search--PaddingLeft);
+  padding-inline-end: var(--#{$select}__menu-search--PaddingRight);
 }
 
 .#{$select}__menu-group-title {
-  padding-top: var(--#{$select}__menu-group-title--PaddingTop);
-  padding-right: var(--#{$select}__menu-group-title--PaddingRight);
-  padding-bottom: var(--#{$select}__menu-group-title--PaddingBottom);
-  padding-left: var(--#{$select}__menu-group-title--PaddingLeft);
+  padding-block-start: var(--#{$select}__menu-group-title--PaddingTop);
+  padding-block-end: var(--#{$select}__menu-group-title--PaddingBottom);
+  padding-inline-start: var(--#{$select}__menu-group-title--PaddingLeft);
+  padding-inline-end: var(--#{$select}__menu-group-title--PaddingRight);
   font-size: var(--#{$select}__menu-group-title--FontSize);
   font-weight: var(--#{$select}__menu-group-title--FontWeight);
   color: var(--#{$select}__menu-group-title--Color);
 }
 
 .#{$select}__menu-footer {
-  padding: var(--#{$select}__menu-footer--PaddingTop) var(--#{$select}__menu-footer--PaddingRight) var(--#{$select}__menu-footer--PaddingBottom) var(--#{$select}__menu-footer--PaddingLeft);
-  margin-top: var(--#{$select}__menu-footer--MarginTop);
-  margin-bottom: var(--#{$select}__menu-footer--MarginBottom);
+  padding-block-start: var(--#{$select}__menu-footer--PaddingTop);
+  padding-block-end: var(--#{$select}__menu-footer--PaddingBottom);
+  padding-inline-start: var(--#{$select}__menu-footer--PaddingLeft);
+  padding-inline-end: var(--#{$select}__menu-footer--PaddingRight);
+  margin-block-start: var(--#{$select}__menu-footer--MarginTop);
+  margin-block-end: var(--#{$select}__menu-footer--MarginBottom);
   box-shadow: var(--#{$select}__menu-footer--BoxShadow);
 }
 

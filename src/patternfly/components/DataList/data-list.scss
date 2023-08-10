@@ -167,7 +167,7 @@
   font-size: var(--#{$data-list}--FontSize);
   line-height: var(--#{$data-list}--LineHeight);
   overflow-wrap: break-word;
-  border-top: var(--#{$data-list}--BorderTopWidth) solid var(--#{$data-list}--BorderTopColor);
+  border-block-start: var(--#{$data-list}--BorderTopWidth) solid var(--#{$data-list}--BorderTopColor);
 
   &.pf-m-compact {
     --#{$data-list}__check--FontSize: var(--#{$data-list}--m-compact__check--FontSize);
@@ -233,13 +233,13 @@
   display: flex;
   flex-direction: column;
   background-color: var(--#{$data-list}__item--BackgroundColor);
-  border-bottom: var(--#{$data-list}__item--BorderBottomWidth) solid var(--#{$data-list}__item--BorderBottomColor);
+  border-block-end: var(--#{$data-list}__item--BorderBottomWidth) solid var(--#{$data-list}__item--BorderBottomColor);
 
   &::before {
     position: absolute;
-    top: var(--#{$data-list}__item--before--Top);
-    bottom: 0;
-    left: 0;
+    inset-block-start: var(--#{$data-list}__item--before--Top);
+    inset-block-end: 0;
+    inset-inline-start: 0;
     width: var(--#{$data-list}__item--before--Width);
     content: "";
     background-color: var(--#{$data-list}__item--before--BackgroundColor);
@@ -262,7 +262,7 @@
 
         // stylelint-disable
         + .#{$data-list}__item {
-          border-top: var(--#{$data-list}__item--m-clickable--hover--item--BorderTopWidth) solid var(--#{$data-list}__item--m-clickable--hover--item--BorderTopColor);
+          border-block-start: var(--#{$data-list}__item--m-clickable--hover--item--BorderTopWidth) solid var(--#{$data-list}__item--m-clickable--hover--item--BorderTopColor);
         }
         // stylelint-enable
       }
@@ -292,10 +292,10 @@
   &.pf-m-ghost-row {
     &::after {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset-block-start: 0;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
       content: "";
       background-color: var(--#{$data-list}__item--m-ghost-row--after--BackgroundColor);
       opacity: var(--#{$data-list}__item--m-ghost-row--after--Opacity);
@@ -310,19 +310,19 @@
 .#{$data-list}__item-row {
   display: flex;
   flex-wrap: nowrap;
-  padding-right: var(--#{$data-list}__item-row--PaddingRight);
-  padding-left: var(--#{$data-list}__item-row--PaddingLeft);
+  padding-inline-start: var(--#{$data-list}__item-row--PaddingLeft);
+  padding-inline-end: var(--#{$data-list}__item-row--PaddingRight);
 }
 
 .#{$data-list}__item-control {
   display: flex;
   flex-wrap: nowrap;
-  padding-top: var(--#{$data-list}__item-control--PaddingTop);
-  padding-bottom: var(--#{$data-list}__item-control--PaddingBottom);
-  margin-right: var(--#{$data-list}__item-control--MarginRight);
+  padding-block-start: var(--#{$data-list}__item-control--PaddingTop);
+  padding-block-end: var(--#{$data-list}__item-control--PaddingBottom);
+  margin-inline-end: var(--#{$data-list}__item-control--MarginRight);
 
   > *:not(:last-child) {
-    margin-right: var(--#{$data-list}__item-control--not-last-child--MarginRight);
+    margin-inline-end: var(--#{$data-list}__item-control--not-last-child--MarginRight);
   }
 }
 
@@ -331,7 +331,7 @@
   align-items: center;
   align-self: flex-start;
   height: var(--#{$data-list}__check--Height);
-  margin-top: var(--#{$data-list}__check--MarginTop);
+  margin-block-start: var(--#{$data-list}__check--MarginTop);
 
   > input {
     cursor: pointer;
@@ -341,8 +341,13 @@
 .#{$data-list}__item-draggable-button {
   display: flex;
   flex-direction: column; // fixes safari alignment
-  padding: var(--#{$data-list}__item-draggable-button--PaddingTop) var(--#{$data-list}__item-draggable-button--PaddingRight) var(--#{$data-list}__item-draggable-button--PaddingBottom) var(--#{$data-list}__item-draggable-button--PaddingLeft);
-  margin: var(--#{$data-list}__item-draggable-button--MarginTop) 0 var(--#{$data-list}__item-draggable-button--MarginBottom) var(--#{$data-list}__item-draggable-button--MarginLeft);
+  padding-block-start: var(--#{$data-list}__item-draggable-button--PaddingTop);
+  padding-block-end: var(--#{$data-list}__item-draggable-button--PaddingBottom);
+  padding-inline-start: var(--#{$data-list}__item-draggable-button--PaddingLeft);
+  padding-inline-end: var(--#{$data-list}__item-draggable-button--PaddingRight);
+  margin-block-start: var(--#{$data-list}__item-draggable-button--MarginTop);
+  margin-block-end: var(--#{$data-list}__item-draggable-button--MarginBottom);
+  margin-inline-start: var(--#{$data-list}__item-draggable-button--MarginLeft);
   background-color: var(--#{$data-list}__item-draggable-button--BackgroundColor);
   border: 0;
 
@@ -376,24 +381,26 @@
 
   align-content: flex-start;
   align-items: flex-start;
-  padding-top: var(--#{$data-list}__item-action--PaddingTop);
-  padding-bottom: var(--#{$data-list}__item-action--PaddingBottom);
-  margin-left: var(--#{$data-list}__item-action--MarginLeft);
+  padding-block-start: var(--#{$data-list}__item-action--PaddingTop);
+  padding-block-end: var(--#{$data-list}__item-action--PaddingBottom);
+  margin-inline-start: var(--#{$data-list}__item-action--MarginLeft);
 
   > *:not(:last-child) {
-    margin-right: var(--#{$data-list}__item-action--not-last-child--MarginRight);
+    margin-inline-end: var(--#{$data-list}__item-action--not-last-child--MarginRight);
   }
 
   // offset action button
   .#{$data-list}__action {
-    margin-top: var(--#{$data-list}__action--MarginTop);
-    margin-bottom: var(--#{$data-list}__item-action__action--MarginBottom);
+    margin-block-start: var(--#{$data-list}__action--MarginTop);
+    margin-block-end: var(--#{$data-list}__item-action__action--MarginBottom);
   }
 }
 
 // toggle
 .#{$data-list}__toggle {
-  margin: var(--#{$data-list}__toggle--MarginTop) 0 var(--#{$data-list}__toggle--MarginBottom) var(--#{$data-list}__toggle--MarginLeft);
+  margin-block-start: var(--#{$data-list}__toggle--MarginTop);
+  margin-block-end: var(--#{$data-list}__toggle--MarginBottom);
+  margin-inline-start: var(--#{$data-list}__toggle--MarginLeft);
 }
 
 // toggle icon rotate
@@ -414,29 +421,29 @@
 .#{$data-list}__cell {
   flex: 1;
   grid-column: 1 / -1;
-  padding-top: var(--#{$data-list}__cell--PaddingTop);
-  padding-bottom: var(--#{$data-list}__cell--PaddingBottom);
+  padding-block-start: var(--#{$data-list}__cell--PaddingTop);
+  padding-block-end: var(--#{$data-list}__cell--PaddingBottom);
 
   // for all subsequent .#{$data-list}__cell's, set to full width
   & + & {
     flex: 1 0 100%;
     order: 1;
-    padding-top: var(--#{$data-list}__cell--cell--PaddingTop);
+    padding-block-start: var(--#{$data-list}__cell--cell--PaddingTop);
   }
 
   &.pf-m-icon {
     flex-grow: 0;
     grid-column: 1 / 2;
-    margin-right: var(--#{$data-list}__cell--m-icon--MarginRight);
+    margin-inline-end: var(--#{$data-list}__cell--m-icon--MarginRight);
   }
 
   &.pf-m-icon + & {
     grid-column: 2 / 3;
-    padding-top: var(--#{$data-list}__cell--m-icon--cell--PaddingTop);
+    padding-block-start: var(--#{$data-list}__cell--m-icon--cell--PaddingTop);
   }
 
   &.pf-m-align-right {
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 }
 
@@ -461,14 +468,17 @@
   overflow-y: auto;
 
   .#{$data-list}__expandable-content-body {
-    padding: var(--#{$data-list}__expandable-content-body--PaddingTop) var(--#{$data-list}__expandable-content-body--PaddingRight) var(--#{$data-list}__expandable-content-body--PaddingBottom) var(--#{$data-list}__expandable-content-body--PaddingLeft);
+    padding-block-start: var(--#{$data-list}__expandable-content-body--PaddingTop);
+    padding-block-end: var(--#{$data-list}__expandable-content-body--PaddingBottom);
+    padding-inline-start: var(--#{$data-list}__expandable-content-body--PaddingLeft);
+    padding-inline-end: var(--#{$data-list}__expandable-content-body--PaddingRight);
 
     > .#{$data-list} {
-      margin-left: var(--#{$data-list}--MarginLeft);
+      margin-inline-start: var(--#{$data-list}--MarginLeft);
     }
 
     .#{$data-list}__item:last-child {
-      border-bottom: 0;
+      border-block-end: 0;
     }
 
     .#{$data-list}__item-row {

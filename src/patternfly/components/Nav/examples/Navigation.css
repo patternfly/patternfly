@@ -58,6 +58,6 @@
 
 #ws-core-c-navigation-nav-with-flyout .pf-v5-c-menu.pf-m-flyout.pf-m-nav {
   position: absolute;
-  top: 168px;
-  left: 256px;
+ inset-block-start: 168px;
+ inset-inline-start: 256px;
 }

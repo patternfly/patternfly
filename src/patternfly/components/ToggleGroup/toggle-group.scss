@@ -58,15 +58,15 @@
 
 .#{$toggle-group}__item {
   & + & {
-    margin-left: var(--#{$toggle-group}__item--item--MarginLeft);
+    margin-inline-start: var(--#{$toggle-group}__item--item--MarginLeft);
   }
 
   &:first-child {
     .#{$toggle-group}__button {
       &,
       &::before {
-        border-top-left-radius: var(--#{$toggle-group}__item--first-child__button--BorderTopLeftRadius);
-        border-bottom-left-radius: var(--#{$toggle-group}__item--first-child__button--BorderBottomLeftRadius);
+        border-start-start-radius: var(--#{$toggle-group}__item--first-child__button--BorderTopLeftRadius);
+        border-end-start-radius: var(--#{$toggle-group}__item--first-child__button--BorderBottomLeftRadius);
       }
     }
   }
@@ -75,8 +75,8 @@
     .#{$toggle-group}__button {
       &,
       &::before {
-        border-top-right-radius: var(--#{$toggle-group}__item--last-child__button--BorderTopRightRadius);
-        border-bottom-right-radius: var(--#{$toggle-group}__item--last-child__button--BorderBottomRightRadius);
+        border-start-end-radius: var(--#{$toggle-group}__item--last-child__button--BorderTopRightRadius);
+        border-end-end-radius: var(--#{$toggle-group}__item--last-child__button--BorderBottomRightRadius);
       }
     }
   }
@@ -86,7 +86,10 @@
   position: relative;
   z-index: var(--#{$toggle-group}__button--ZIndex);
   display: inline-flex;
-  padding: var(--#{$toggle-group}__button--PaddingTop) var(--#{$toggle-group}__button--PaddingRight) var(--#{$toggle-group}__button--PaddingBottom) var(--#{$toggle-group}__button--PaddingLeft);
+  padding-block-start: var(--#{$toggle-group}__button--PaddingTop);
+  padding-block-end: var(--#{$toggle-group}__button--PaddingBottom);
+  padding-inline-start: var(--#{$toggle-group}__button--PaddingLeft);
+  padding-inline-end: var(--#{$toggle-group}__button--PaddingRight);
   font-size: var(--#{$toggle-group}__button--FontSize);
   line-height: var(--#{$toggle-group}__button--LineHeight);
   color: var(--#{$toggle-group}__button--Color);
@@ -95,10 +98,10 @@
 
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+   inset-block-start: 0;
+   inset-block-end: 0;
+   inset-inline-start: 0;
+   inset-inline-end: 0;
     pointer-events: none;
     content: "";
     border: var(--#{$toggle-group}__button--before--BorderWidth) solid var(--#{$toggle-group}__button--before--BorderColor);
@@ -136,7 +139,7 @@
 
 .#{$toggle-group}__icon + .#{$toggle-group}__text,
 .#{$toggle-group}__text + .#{$toggle-group}__icon {
-  margin-left: var(--#{$toggle-group}__icon--text--MarginLeft);
+  margin-inline-start: var(--#{$toggle-group}__icon--text--MarginLeft);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

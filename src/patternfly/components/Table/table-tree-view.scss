@@ -60,14 +60,14 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   display: flex;
   align-items: baseline;
   min-width: 0;
-  padding-left: var(--#{$table}__tree-view-main--PaddingLeft);
-  margin-left: var(--#{$table}__tree-view-main--MarginLeft);
-  text-align: left;
+  padding-inline-start: var(--#{$table}__tree-view-main--PaddingLeft);
+  margin-inline-start: var(--#{$table}__tree-view-main--MarginLeft);
+  text-align: start;
   cursor: pointer;
 
   > .#{$table}__toggle {
     position: var(--#{$table}--m-tree-view__toggle--Position);
-    left: var(--#{$table}--m-tree-view__toggle--Left);
+   inset-inline-start: var(--#{$table}--m-tree-view__toggle--Left);
     transform: translateX(var(--#{$table}--m-tree-view__toggle--TranslateX));
 
     .#{$table}__toggle-icon {
@@ -76,13 +76,13 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   }
 
   > .#{$table}__check {
-    margin-right: var(--#{$table}__tree-view-main--c-table__check--MarginRight);
+    margin-inline-end: var(--#{$table}__tree-view-main--c-table__check--MarginRight);
   }
 
   > .#{$table}__check label {
-    padding-right: var(--#{$table}__tree-view-main--c-table__check--PaddingRight);
-    padding-left: var(--#{$table}__tree-view-main--c-table__check--PaddingLeft);
-    margin: 0 calc(var(--#{$table}__tree-view-main--c-table__check--MarginRight) * -1) 0 0;
+    padding-inline-start: var(--#{$table}__tree-view-main--c-table__check--PaddingLeft);
+    padding-inline-end: var(--#{$table}__tree-view-main--c-table__check--PaddingRight);
+    margin-inline-end: calc(var(--#{$table}__tree-view-main--c-table__check--MarginRight) * -1);
   }
 }
 
@@ -92,7 +92,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
 
 .#{$table}__tree-view-icon {
   min-width: var(--#{$table}__tree-view-icon--MinWidth);
-  margin-right: var(--#{$table}__tree-view-icon--MarginRight);
+  margin-inline-end: var(--#{$table}__tree-view-icon--MarginRight);
 }
 
 .#{$table}__tree-view-details-toggle {
@@ -180,11 +180,11 @@ $pf-v5-c-tree-view--MaxDepth: 10;
 
     &::before {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft);
-      border-bottom: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+     inset-block-start: 0;
+     inset-inline-end: 0;
+     inset-block-end: 0;
+     inset-inline-start: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft);
+      border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
       content: '';
     }
   }
@@ -209,11 +209,11 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     --#{$table}--cell--PaddingTop: var(--#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingTop);
     --#{$table}--cell--PaddingBottom: var(--#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingBottom);
 
-    padding-left: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft);
+    padding-inline-start: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft);
   }
 
   .#{$table}__tree-view-text {
-    padding-right: var(--#{$table}__tree-view-text--PaddingRight);
+    padding-inline-end: var(--#{$table}__tree-view-text--PaddingRight);
   }
 
   thead:where(.#{$table}__thead) th:where(.#{$table}__th) {
@@ -240,13 +240,13 @@ $pf-v5-c-tree-view--MaxDepth: 10;
 
     &::before {
       font-weight: bold;
-      text-align: left;
+      text-align: start;
       content: attr(data-label);
     }
   }
 
   tr:where(.#{$table}__tr).pf-m-tree-view-details-expanded {
-    padding-bottom: var(--#{$table}--m-tree-view-grid--m-tree-view-details-expanded--PaddingBottom);
+    padding-block-end: var(--#{$table}--m-tree-view-grid--m-tree-view-details-expanded--PaddingBottom);
 
     td:where(.#{$table}__td)[data-label] {
       display: grid;
@@ -272,20 +272,20 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     grid-row: 1;
 
     > .#{$dropdown} {
-      margin-top: var(--#{$table}--m-tree-view-grid--c-dropdown--MarginTop);
-      margin-bottom: var(--#{$table}--m-tree-view-grid--c-dropdown--MarginBottom);
+      margin-block-start: var(--#{$table}--m-tree-view-grid--c-dropdown--MarginTop);
+      margin-block-end: var(--#{$table}--m-tree-view-grid--c-dropdown--MarginBottom);
     }
   }
 
   .#{$table}__tree-view-main > .#{$table}__check {
-    margin-right: var(--#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--MarginRight);
-    margin-left: auto;
+    margin-inline-end: var(--#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--MarginRight);
+    margin-inline-start: auto;
     order: var(--#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--Order);
   }
 
   .#{$table}__tree-view-details-toggle {
-    margin-top: var(--#{$table}__tree-view-details-toggle--MarginTop);
-    margin-bottom: var(--#{$table}__tree-view-details-toggle--MarginBottom);
+    margin-block-start: var(--#{$table}__tree-view-details-toggle--MarginTop);
+    margin-block-end: var(--#{$table}__tree-view-details-toggle--MarginBottom);
   }
 
   @for $i from 2 through $pf-v5-c-tree-view--MaxDepth {

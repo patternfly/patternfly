@@ -144,8 +144,8 @@
 
   &::before {
     position: absolute;
-    top: var(--#{$switch}__toggle--before--Top);
-    left: var(--#{$switch}__toggle--before--Left);
+   inset-block-start: var(--#{$switch}__toggle--before--Top);
+   inset-inline-start: var(--#{$switch}__toggle--before--Left);
     display: block;
     width: var(--#{$switch}__toggle--before--Width);
     height: var(--#{$switch}__toggle--before--Height);
@@ -159,9 +159,9 @@
 
 .#{$switch}__toggle-icon {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: var(--#{$switch}__toggle-icon--Left);
+ inset-block-start: 0;
+ inset-block-end: 0;
+ inset-inline-start: var(--#{$switch}__toggle-icon--Left);
   display: flex;
   align-items: center;
   font-size: var(--#{$switch}__toggle-icon--FontSize);

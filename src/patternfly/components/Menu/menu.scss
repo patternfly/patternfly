@@ -221,7 +221,7 @@
   --#{$menu}--m-nav--c-menu--m-top--Bottom: calc(0 + var(--#{$menu}--m-nav--c-menu--m-top--bottom-offset));
   --#{$menu}--m-nav__list-item--first-child--c-menu--Top: 0;
 
-  top: var(--#{$menu}--Top);
+ inset-block-start: var(--#{$menu}--Top);
   z-index: var(--#{$menu}--ZIndex);
   width: var(--#{$menu}--Width);
   min-width: var(--#{$menu}--MinWidth);
@@ -235,19 +235,18 @@
   }
 
   .#{$divider} {
-    margin-top: var(--#{$menu}--c-divider--MarginTop);
-    margin-bottom: var(--#{$menu}--c-divider--MarginBottom);
+    margin-block-start: var(--#{$menu}--c-divider--MarginTop);
+    margin-block-end: var(--#{$menu}--c-divider--MarginBottom);
   }
 
   // nested flyout menu
   & &.pf-m-flyout,
   &.pf-m-flyout & {
     position: absolute;
-    top: var(--#{$menu}--m-flyout__menu--Top);
-    right: var(--#{$menu}--m-flyout__menu--Right);
-    bottom: var(--#{$menu}--m-flyout__menu--Bottom);
-    left: var(--#{$menu}--m-flyout__menu--Left);
-
+    inset-block-start: var(--#{$menu}--m-flyout__menu--Top);
+    inset-block-end: var(--#{$menu}--m-flyout__menu--Bottom);
+    inset-inline-start: var(--#{$menu}--m-flyout__menu--Left);
+    inset-inline-end: var(--#{$menu}--m-flyout__menu--Right);
 
     .#{$menu}__content {
       overflow-y: visible;
@@ -293,8 +292,8 @@
       --#{$menu}--BoxShadow: none;
 
       position: absolute;
-      top: var(--#{$menu}--m-drilldown--c-menu--Top);
-      left: 100%;
+     inset-block-start: var(--#{$menu}--m-drilldown--c-menu--Top);
+     inset-inline-start: 100%;
       width: 100%;
       transition: var(--#{$menu}--m-drilldown--c-menu--Transition);
 
@@ -402,21 +401,21 @@
 
       &::before {
         position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
+       inset-block-end: 0;
+       inset-inline-start: 0;
+       inset-inline-end: 0;
         content: "";
-        border-bottom: var(--#{$menu}--m-nav__item--before--BorderBottomWidth) solid var(--#{$menu}--m-nav__item--before--BorderBottomColor);
+        border-block-end: var(--#{$menu}--m-nav__item--before--BorderBottomWidth) solid var(--#{$menu}--m-nav__item--before--BorderBottomColor);
       }
 
       &:hover {
         &::after {
           position: absolute;
-          top: var(--#{$menu}--m-nav__item--hover--after--Top);
-          bottom: 0;
-          left: 0;
+         inset-block-start: var(--#{$menu}--m-nav__item--hover--after--Top);
+         inset-block-end: 0;
+         inset-inline-start: 0;
           content: "";
-          border-left: var(--#{$menu}--m-nav__item--hover--after--BorderLeftWidth) solid var(--#{$menu}--m-nav__item--hover--after--BorderLeftColor);
+          border-inline-start: var(--#{$menu}--m-nav__item--hover--after--BorderLeftWidth) solid var(--#{$menu}--m-nav__item--hover--after--BorderLeftColor);
         }
       }
     }
@@ -429,20 +428,20 @@
 
   &.pf-m-flyout.pf-m-nav,
   &.pf-m-flyout.pf-m-nav & {
-    top: var(--#{$menu}--m-nav--c-menu--Top);
-    left: var(--#{$menu}--m-nav--c-menu--Left);
+   inset-block-start: var(--#{$menu}--m-nav--c-menu--Top);
+   inset-inline-start: var(--#{$menu}--m-nav--c-menu--Left);
 
     // stylelint-disable selector-max-class
     &.pf-m-top {
       --#{$menu}--m-nav--c-menu--Top: auto;
 
-      bottom: var(--#{$menu}--m-nav--c-menu--m-top--Bottom);
+     inset-block-end: var(--#{$menu}--m-nav--c-menu--m-top--Bottom);
     }
 
     &.pf-m-left {
       --#{$menu}--m-nav--c-menu--Left: auto;
 
-      right: var(--#{$menu}--m-nav--c-menu--m-left--Right);
+     inset-inline-end: var(--#{$menu}--m-nav--c-menu--m-left--Right);
     }
 
     .#{$menu}__list-item:first-child {
@@ -461,7 +460,10 @@
   display: flex;
   align-items: center;
   min-height: var(--#{$menu}__breadcrumb--MinHeight);
-  padding: var(--#{$menu}__breadcrumb--PaddingTop) var(--#{$menu}__breadcrumb--PaddingRight) var(--#{$menu}__breadcrumb--PaddingBottom) var(--#{$menu}__breadcrumb--PaddingLeft);
+  padding-block-start: var(--#{$menu}__breadcrumb--PaddingTop);
+  padding-block-end: var(--#{$menu}__breadcrumb--PaddingBottom);
+  padding-inline-start: var(--#{$menu}__breadcrumb--PaddingLeft);
+  padding-inline-end: var(--#{$menu}__breadcrumb--PaddingRight);
 
   .#{$breadcrumb} {
     --#{$breadcrumb}__item--FontSize: var(--#{$menu}__breadcrumb--c-breadcrumb__item--FontSize);
@@ -486,18 +488,18 @@
   --#{$menu}__item--PaddingBottom: var(--#{$menu}__header--c-menu__item--PaddingBottom);
   --#{$menu}__item--PaddingLeft: var(--#{$menu}__header--c-menu__item--PaddingLeft);
 
-  padding-top: var(--#{$menu}__header--PaddingTop);
-  padding-right: var(--#{$menu}__header--PaddingRight);
-  padding-bottom: var(--#{$menu}__header--PaddingBottom);
-  padding-left: var(--#{$menu}__header--PaddingLeft);
+  padding-block-start: var(--#{$menu}__header--PaddingTop);
+  padding-block-end: var(--#{$menu}__header--PaddingBottom);
+  padding-inline-start: var(--#{$menu}__header--PaddingLeft);
+  padding-inline-end: var(--#{$menu}__header--PaddingRight);
 
   > .#{$menu}__item {
     --#{$menu}__item--BackgroundColor: var(--#{$menu}__header--c-menu__item--BackgroundColor);
 
-    margin-top: var(--#{$menu}__header--c-menu__item--MarginTop);
-    margin-right: var(--#{$menu}__header--c-menu__item--MarginRight);
-    margin-bottom: var(--#{$menu}__header--c-menu__item--MarginBottom);
-    margin-left: var(--#{$menu}__header--c-menu__item--MarginLeft);
+    margin-block-start: var(--#{$menu}__header--c-menu__item--MarginTop);
+    margin-block-end: var(--#{$menu}__header--c-menu__item--MarginBottom);
+    margin-inline-start: var(--#{$menu}__header--c-menu__item--MarginLeft);
+    margin-inline-end: var(--#{$menu}__header--c-menu__item--MarginRight);
 
     &:hover {
       --#{$menu}__item--BackgroundColor: var(--#{$menu}__header--c-menu__item--hover--BackgroundColor);
@@ -515,22 +517,22 @@
 
 // Search
 .#{$menu}__search {
-  padding-top: var(--#{$menu}__search--PaddingTop);
-  padding-right: var(--#{$menu}__search--PaddingRight);
-  padding-bottom: var(--#{$menu}__search--PaddingBottom);
-  padding-left: var(--#{$menu}__search--PaddingLeft);
+  padding-block-start: var(--#{$menu}__search--PaddingTop);
+  padding-block-end: var(--#{$menu}__search--PaddingBottom);
+  padding-inline-start: var(--#{$menu}__search--PaddingLeft);
+  padding-inline-end: var(--#{$menu}__search--PaddingRight);
 }
 
 // List
 .#{$menu}__list {
   @include pf-v5-hidden-visible(var(--#{$menu}__list--Display));
 
-  padding-top: var(--#{$menu}__list--PaddingTop);
-  padding-bottom: var(--#{$menu}__list--PaddingBottom);
+  padding-block-start: var(--#{$menu}__list--PaddingTop);
+  padding-block-end: var(--#{$menu}__list--PaddingBottom);
 
   > .#{$divider} {
-    margin-top: var(--#{$menu}__list--c-divider--MarginTop);
-    margin-bottom: var(--#{$menu}__list--c-divider--MarginBottom);
+    margin-block-start: var(--#{$menu}__list--c-divider--MarginTop);
+    margin-block-end: var(--#{$menu}__list--c-divider--MarginBottom);
   }
 }
 
@@ -581,7 +583,7 @@
     --#{$menu}__list-item--focus-within--BackgroundColor: transparent;
 
     justify-content: center;
-    padding-top: var(--#{$menu}__list-item--m-loading--PaddingTop);
+    padding-block-start: var(--#{$menu}__list-item--m-loading--PaddingTop);
     overflow: hidden; // prevents spinner rotation from overflowing
   }
 
@@ -596,15 +598,15 @@
   flex-basis: 100%;
   flex-direction: column;
   min-width: 0;
-  padding-top: var(--#{$menu}__item--PaddingTop);
-  padding-right: var(--#{$menu}__item--PaddingRight);
-  padding-bottom: var(--#{$menu}__item--PaddingBottom);
-  padding-left: var(--#{$menu}__item--PaddingLeft);
+  padding-block-start: var(--#{$menu}__item--PaddingTop);
+  padding-block-end: var(--#{$menu}__item--PaddingBottom);
+  padding-inline-start: var(--#{$menu}__item--PaddingLeft);
+  padding-inline-end: var(--#{$menu}__item--PaddingRight);
   font-size: var(--#{$menu}__item--FontSize);
   font-weight: var(--#{$menu}__item--FontWeight);
   line-height: var(--#{$menu}__item--LineHeight);
   color: var(--#{$menu}__item--Color);
-  text-align: left;
+  text-align: start;
   background-color: var(--#{$menu}__item--BackgroundColor);
   border: none;
 
@@ -635,7 +637,7 @@
 }
 
 .#{$menu}__item-external-icon {
-  margin-left: var(--#{$menu}__item-external-icon--MarginLeft);
+  margin-inline-start: var(--#{$menu}__item-external-icon--MarginLeft);
   font-size: var(--#{$menu}__item-external-icon--FontSize);
   color: var(--#{$menu}__item-external-icon--Color);
   opacity: var(--#{$menu}__item-external-icon--Opacity);
@@ -655,9 +657,9 @@
 
 // Group title
 .#{$menu}__group-title {
-  padding-top: var(--#{$menu}__group-title--PaddingTop);
-  padding-right: var(--#{$menu}__group-title--PaddingRight);
-  padding-left: var(--#{$menu}__group-title--PaddingLeft);
+  padding-block-start: var(--#{$menu}__group-title--PaddingTop);
+  padding-inline-start: var(--#{$menu}__group-title--PaddingLeft);
+  padding-inline-end: var(--#{$menu}__group-title--PaddingRight);
   font-size: var(--#{$menu}__group-title--FontSize);
   font-weight: var(--#{$menu}__group-title--FontWeight);
   color: var(--#{$menu}__group-title--Color);
@@ -672,34 +674,34 @@
 
 // General icon
 .#{$menu}__item-icon {
-  margin-right: var(--#{$menu}__item-icon--MarginRight);
+  margin-inline-end: var(--#{$menu}__item-icon--MarginRight);
 }
 
 // Check
 .#{$menu}__item-check {
   display: flex;
   align-items: center;
-  margin-right: var(--#{$menu}__item-check--MarginRight);
+  margin-inline-end: var(--#{$menu}__item-check--MarginRight);
 }
 
 // Toggle icon
 .#{$menu}__item-toggle-icon {
-  padding-right: var(--#{$menu}__item-toggle-icon--PaddingRight);
-  padding-left: var(--#{$menu}__item-toggle-icon--PaddingLeft);
+  padding-inline-start: var(--#{$menu}__item-toggle-icon--PaddingLeft);
+  padding-inline-end: var(--#{$menu}__item-toggle-icon--PaddingRight);
   color: var(--#{$menu}__item-toggle-icon, inherit);
 }
 
 .#{$menu}__item-text + .#{$menu}__item-toggle-icon {
-  margin-left: var(--#{$menu}__item-text--item-toggle-icon--MarginLeft);
+  margin-inline-start: var(--#{$menu}__item-text--item-toggle-icon--MarginLeft);
 }
 
 .#{$menu}__item-toggle-icon + .#{$menu}__item-text {
-  margin-left: var(--#{$menu}__item-toggle-icon--item-text--MarginLeft);
+  margin-inline-start: var(--#{$menu}__item-toggle-icon--item-text--MarginLeft);
 }
 
 // Select icon
 .#{$menu}__item-select-icon {
-  margin-left: var(--#{$menu}__item-select-icon--MarginLeft);
+  margin-inline-start: var(--#{$menu}__item-select-icon--MarginLeft);
   font-size: var(--#{$menu}__item-select-icon--FontSize);
   color: var(--#{$menu}__item-select-icon--Color);
   opacity: 0;
@@ -708,10 +710,10 @@
 // Actions
 .#{$menu}__item-action {
   display: flex;
-  padding-top: var(--#{$menu}__item-action--PaddingTop);
-  padding-right: var(--#{$menu}__item-action--PaddingRight);
-  padding-bottom: var(--#{$menu}__item-action--PaddingBottom);
-  padding-left: var(--#{$menu}__item-action--PaddingLeft);
+  padding-block-start: var(--#{$menu}__item-action--PaddingTop);
+  padding-block-end: var(--#{$menu}__item-action--PaddingBottom);
+  padding-inline-start: var(--#{$menu}__item-action--PaddingLeft);
+  padding-inline-end: var(--#{$menu}__item-action--PaddingRight);
   color: var(--#{$menu}__item-action--Color);
   background-color: var(--#{$menu}__item-action--BackgroundColor);
   border: none;
@@ -747,18 +749,18 @@
 
 .#{$menu}__footer {
   position: relative;
-  padding: var(--#{$menu}__footer--PaddingTop) var(--#{$menu}__footer--PaddingRight) var(--#{$menu}__footer--PaddingBottom) var(--#{$menu}__footer--PaddingLeft);
+  padding-block-start: var(--#{$menu}__footer--PaddingTop);
+  padding-block-start: var(--#{$menu}__footer--PaddingBottom);
+  padding-inline-end: var(--#{$menu}__footer--PaddingRight);
+  padding-inline-end: var(--#{$menu}__footer--PaddingLeft);
   box-shadow: var(--#{$menu}__footer--BoxShadow);
 
   &::after {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     pointer-events: none;
     content: "";
-    border-top: var(--#{$menu}__footer--after--BorderTopWidth) solid var(--#{$menu}__footer--after--BorderTopColor);
+    border-block-start: var(--#{$menu}__footer--after--BorderTopWidth) solid var(--#{$menu}__footer--after--BorderTopColor);
   }
 }
 

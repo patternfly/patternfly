@@ -294,17 +294,17 @@ $pf-v5-global--height-breakpoint-name-map: (
 // Spacer properties
 $pf-v5-global--spacer-properties-map: (
   "m":  "margin",
-  "mt": "margin-top",
-  "mr": "margin-right",
-  "mb": "margin-bottom",
-  "ml": "margin-left",
+  "mt": "margin-block-start",
+  "mr": "margin-inline-end",
+  "mb": "margin-block-end",
+  "ml": "margin-inline-start",
   "mx": null,
   "my": null,
   "p":  "padding",
-  "pt": "padding-top",
-  "pr": "padding-right",
-  "pb": "padding-bottom",
-  "pl": "padding-left",
+  "pt": "padding-block-start",
+  "pr": "padding-inline-end",
+  "pb": "padding-block-end",
+  "pl": "padding-inline-start",
   "px": null,
   "py": null
 );

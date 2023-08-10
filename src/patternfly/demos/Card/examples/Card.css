@@ -1,5 +1,5 @@
 #ws-html-demos-c-card-status-card-expanded-with-popover {
-  padding-top: 180px;
+  padding-block-start: 180px;
 }
 
 #ws-html-demos-c-card-status-card-expanded-with-popover #carview-demo--popover-parent,
@@ -9,10 +9,10 @@
 
 #ws-html-demos-c-card-status-card-expanded-with-popover .pf-v5-c-popover {
   position: absolute;
-  margin-top: -12px;
+  margin-block-start: -12px;
   z-index: 1000;
   transform: translateY(-50%);
-  left: calc(100% + var(--pf-v5-c-popover__arrow--Width) + var(--pf-v5-global--spacer--sm));
+ inset-inline-start: calc(100% + var(--pf-v5-c-popover__arrow--Width) + var(--pf-v5-global--spacer--sm));
 }
 
 #ws-html-demos-c-card-status-card-expanded-with-popover .pf-v5-c-table {

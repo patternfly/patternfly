@@ -65,7 +65,7 @@
   --#{$modal-box}__footer--PaddingLeft: var(--#{$pf-global}--spacer--lg);
 
   // Footer buttons
-  --#{$modal-box}__footer--c-button--MarginRight: var(--#{$pf-global}--spacer--md); // Button spacer is used to manipulate margin-left and/or margin-right values at various breakpoints, with a single value.
+  --#{$modal-box}__footer--c-button--MarginRight: var(--#{$pf-global}--spacer--md); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
   --#{$modal-box}__footer--c-button--sm--MarginRight: calc(var(--#{$modal-box}__footer--c-button--MarginRight) / 2);
 
   position: relative;
@@ -91,7 +91,7 @@
   }
 
   &.pf-m-align-top {
-    top: var(--#{$modal-box}--m-align-top--MarginTop);
+   inset-block-start: var(--#{$modal-box}--m-align-top--MarginTop);
     align-self: flex-start;
     max-width: var(--#{$modal-box}--m-align-top--MaxWidth);
     max-height: var(--#{$modal-box}--m-align-top--MaxHeight);
@@ -121,11 +121,11 @@
 // Close button
 .#{$modal-box}__close {
   position: absolute;
-  top: var(--#{$modal-box}__close--Top);
-  right: var(--#{$modal-box}__close--Right);
+ inset-block-start: var(--#{$modal-box}__close--Top);
+ inset-inline-end: var(--#{$modal-box}__close--Right);
 
   + * {
-    margin-right: var(--#{$modal-box}__close--sibling--MarginRight); // Create room for the close button
+    margin-inline-end: var(--#{$modal-box}__close--sibling--MarginRight); // Create room for the close button
   }
 }
 
@@ -133,9 +133,9 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  padding-top: var(--#{$modal-box}__header--PaddingTop);
-  padding-right: var(--#{$modal-box}__header--PaddingRight);
-  padding-left: var(--#{$modal-box}__header--PaddingLeft);
+  padding-block-start: var(--#{$modal-box}__header--PaddingTop);
+  padding-inline-start: var(--#{$modal-box}__header--PaddingLeft);
+  padding-inline-end: var(--#{$modal-box}__header--PaddingRight);
 
   &.pf-m-help {
     display: flex;
@@ -143,7 +143,7 @@
   }
 
   &:last-child {
-    padding-bottom: var(--#{$modal-box}__header--last-child--PaddingBottom);
+    padding-block-end: var(--#{$modal-box}__header--last-child--PaddingBottom);
   }
 
   + .#{$modal-box}__body {
@@ -173,21 +173,21 @@
 }
 
 .#{$modal-box}__title-icon {
-  margin-right: var(--#{$modal-box}__title-icon--MarginRight);
+  margin-inline-end: var(--#{$modal-box}__title-icon--MarginRight);
   color: var(--#{$modal-box}__title-icon--Color);
 }
 
 .#{$modal-box}__description {
-  padding-top: var(--#{$modal-box}__description--PaddingTop);
+  padding-block-start: var(--#{$modal-box}__description--PaddingTop);
 }
 
 // Body
 .#{$modal-box}__body {
   flex: 1 1 auto;
   min-height: var(--#{$modal-box}__body--MinHeight);
-  padding-top: var(--#{$modal-box}__body--PaddingTop);
-  padding-right: var(--#{$modal-box}__body--PaddingRight);
-  padding-left: var(--#{$modal-box}__body--PaddingLeft);
+  padding-block-start: var(--#{$modal-box}__body--PaddingTop);
+  padding-inline-start: var(--#{$modal-box}__body--PaddingLeft);
+  padding-inline-end: var(--#{$modal-box}__body--PaddingRight);
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -195,7 +195,7 @@
   -webkit-overflow-scrolling: touch;
 
   &:last-child {
-    padding-bottom: var(--#{$modal-box}__body--last-child--PaddingBottom);
+    padding-block-end: var(--#{$modal-box}__body--last-child--PaddingBottom);
   }
 }
 
@@ -204,14 +204,14 @@
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  padding-top: var(--#{$modal-box}__footer--PaddingTop);
-  padding-right: var(--#{$modal-box}__footer--PaddingRight);
-  padding-bottom: var(--#{$modal-box}__footer--PaddingBottom);
-  padding-left: var(--#{$modal-box}__footer--PaddingLeft);
+  padding-block-start: var(--#{$modal-box}__footer--PaddingTop);
+  padding-block-end: var(--#{$modal-box}__footer--PaddingBottom);
+  padding-inline-start: var(--#{$modal-box}__footer--PaddingLeft);
+  padding-inline-end: var(--#{$modal-box}__footer--PaddingRight);
 
   // Base margin left and right equal for buttons when wrapped
   > .#{$button}:not(:last-child) {
-    margin-right: var(--#{$modal-box}__footer--c-button--MarginRight);
+    margin-inline-end: var(--#{$modal-box}__footer--c-button--MarginRight);
 
     @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
       --#{$modal-box}__footer--c-button--MarginRight: var(--#{$modal-box}__footer--c-button--sm--MarginRight);

@@ -100,15 +100,15 @@
 
     .#{$log-viewer}__list {
       position: absolute;
-      right: 0;
-      left: var(--#{$log-viewer}--m-line-numbers__list--Left);
+      inset-inline-start: var(--#{$log-viewer}--m-line-numbers__list--Left);
+      inset-inline-end: 0;
 
       // Divider
       &::before {
         position: absolute;
-        top: var(--#{$log-viewer}--m-line-numbers__main--before--Top); // rename these vars at a breaking change
-        bottom: var(--#{$log-viewer}--m-line-numbers__main--before--Bottom);
-        left: 0;
+       inset-block-start: var(--#{$log-viewer}--m-line-numbers__main--before--Top); // rename these vars at a breaking change
+       inset-block-end: var(--#{$log-viewer}--m-line-numbers__main--before--Bottom);
+       inset-inline-start: 0;
         width: var(--#{$log-viewer}--m-line-numbers__main--before--Width);
         content: "";
         background: var(--#{$log-viewer}--m-line-numbers__main--before--BackgroundColor);
@@ -138,7 +138,7 @@
 
 // Header
 .#{$log-viewer}__header {
-  margin-bottom: var(--#{$log-viewer}__header--MarginBottom);
+  margin-block-end: var(--#{$log-viewer}__header--MarginBottom);
 }
 
 // Main
@@ -153,8 +153,8 @@
 .#{$log-viewer}__scroll-container {
   position: relative;
   height: var(--#{$log-viewer}__scroll-container--Height);
-  padding-top: var(--#{$log-viewer}__scroll-container--PaddingTop);
-  padding-bottom: var(--#{$log-viewer}__scroll-container--PaddingBottom);
+  padding-block-start: var(--#{$log-viewer}__scroll-container--PaddingTop);
+  padding-block-end: var(--#{$log-viewer}__scroll-container--PaddingBottom);
   overflow: auto;
   will-change: transform;
   direction: ltr;
@@ -169,7 +169,7 @@
 }
 
 .#{$log-viewer}__list-item {
-  left: 0;
+ inset-inline-start: 0;
   width: 100%;
 }
 
@@ -188,11 +188,11 @@
 // Index
 .#{$log-viewer}__index {
   position: fixed;
-  left: 0;
+  inset-inline-start: 0;
   display: var(--#{$log-viewer}__index--Display);
   width: var(--#{$log-viewer}__index--Width);
-  padding-right: var(--#{$log-viewer}__index--PaddingRight);
-  padding-left: var(--#{$log-viewer}__index--PaddingLeft);
+  padding-inline-start: var(--#{$log-viewer}__index--PaddingLeft);
+  padding-inline-end: var(--#{$log-viewer}__index--PaddingRight);
   font-family: var(--#{$log-viewer}__index--FontFamily, inherit);
   font-size: var(--#{$log-viewer}__index--FontSize, inherit);
   color: var(--#{$log-viewer}__index--Color);
@@ -203,8 +203,8 @@
 // Text
 .#{$log-viewer}__text {
   display: block;
-  padding-right: var(--#{$log-viewer}__text--PaddingRight);
-  padding-left: var(--#{$log-viewer}__text--PaddingLeft);
+  padding-inline-start: var(--#{$log-viewer}__text--PaddingLeft);
+  padding-inline-end: var(--#{$log-viewer}__text--PaddingRight);
   font-family: var(--#{$log-viewer}__text--FontFamily, inherit);
   font-size: var(--#{$log-viewer}__text--FontSize, inherit);
   color: var(--#{$log-viewer}__text--Color);

@@ -18,19 +18,19 @@
     --#{$table}--m-sticky-header--cell--ZIndex: var(--#{$table}--m-sticky-header__sticky-cell--ZIndex);
 
     position: sticky;
-    right: var(--#{$table}__sticky-cell--Right);
-    left: var(--#{$table}__sticky-cell--Left);
+    inset-inline-start: var(--#{$table}__sticky-cell--Left);
+    inset-inline-end: var(--#{$table}__sticky-cell--Right);
     z-index: var(--#{$table}__sticky-cell--ZIndex);
     min-width: var(--#{$table}__sticky-cell--MinWidth);
     background-color: var(--#{$table}__sticky-cell--BackgroundColor);
     background-clip: padding-box;
 
-    &.pf-m-border-right::before {
+    &.pf-m-border-inline-end::before {
       --#{$table}--cell--m-border-right--before--BorderRightWidth: var(--#{$table}__sticky-cell--m-border-right--before--BorderRightWidth);
       --#{$table}--cell--m-border-right--before--BorderRightColor: var(--#{$table}__sticky-cell--m-border-right--before--BorderRightColor);
     }
 
-    &.pf-m-border-left::before {
+    &.pf-m-border-inline-start::before {
       --#{$table}--cell--m-border-left--before--BorderLeftWidth: var(--#{$table}__sticky-cell--m-border-left--before--BorderLeftWidth);
       --#{$table}--cell--m-border-left--before--BorderLeftColor: var(--#{$table}__sticky-cell--m-border-left--before--BorderLeftColor);
     }

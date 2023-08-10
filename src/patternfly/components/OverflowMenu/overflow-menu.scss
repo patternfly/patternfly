@@ -64,7 +64,7 @@
 .#{$overflow-menu}__control,
 .#{$overflow-menu}__group,
 .#{$overflow-menu}__item {
-  margin-right: var(--#{$overflow-menu}--spacer);
+  margin-inline-end: var(--#{$overflow-menu}--spacer);
 
   &:last-child {
     --#{$overflow-menu}--spacer: 0;
@@ -80,7 +80,7 @@
   }
 
   > .#{$divider}.pf-m-vertical {
-    margin-right: var(--#{$overflow-menu}--spacer);
+    margin-inline-end: var(--#{$overflow-menu}--spacer);
 
     &:last-child {
       --#{$overflow-menu}--spacer: 0;

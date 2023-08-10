@@ -210,7 +210,10 @@
 
   position: relative;
   display: inline-block;
-  padding: var(--#{$button}--PaddingTop) var(--#{$button}--PaddingRight) var(--#{$button}--PaddingBottom) var(--#{$button}--PaddingLeft);
+  padding-block-start: var(--#{$button}--PaddingTop);
+  padding-block-end: var(--#{$button}--PaddingBottom);
+  padding-inline-start: var(--#{$button}--PaddingLeft);
+  padding-inline-end: var(--#{$button}--PaddingRight);
   font-size: var(--#{$button}--FontSize);
   font-weight: var(--#{$button}--FontWeight);
   line-height: var(--#{$button}--LineHeight);
@@ -222,10 +225,10 @@
 
   &::after {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     pointer-events: none;
     content: "";
     border: var(--#{$button}--after--BorderWidth) solid;
@@ -381,8 +384,11 @@
       --#{$button}__progress--Left: var(--#{$button}--m-link--m-inline__progress--Left);
 
       display: inline;
-      padding: var(--#{$button}--m-link--m-inline--PaddingTop) var(--#{$button}--m-link--m-inline--PaddingRight) var(--#{$button}--m-link--m-inline--PaddingBottom) var(--#{$button}--m-link--m-inline--PaddingLeft);
-      text-align: left;
+      padding-block-start: var(--#{$button}--m-link--m-inline--PaddingTop);
+      padding-block-end: var(--#{$button}--m-link--m-inline--PaddingBottom);
+      padding-inline-start: var(--#{$button}--m-link--m-inline--PaddingLeft);
+      padding-inline-end: var(--#{$button}--m-link--m-inline--PaddingRight);
+      text-align: start;
       white-space: normal;
       cursor: pointer;
 
@@ -509,7 +515,7 @@
       --#{$button}--m-control--after--BorderBottomColor: var(--#{$button}--m-control--hover--after--BorderBottomColor);
 
       &::after {
-        border-bottom-width: var(--#{$button}--m-control--hover--after--BorderBottomWidth);
+        border-block-end-width: var(--#{$button}--m-control--hover--after--BorderBottomWidth);
       }
     }
 
@@ -520,7 +526,7 @@
       --#{$button}--m-control--after--BorderBottomColor: var(--#{$button}--m-control--active--after--BorderBottomColor);
 
       &::after {
-        border-bottom-width: var(--#{$button}--m-control--active--after--BorderBottomWidth);
+        border-block-end-width: var(--#{$button}--m-control--active--after--BorderBottomWidth);
       }
     }
 
@@ -530,7 +536,7 @@
       --#{$button}--m-control--after--BorderBottomColor: var(--#{$button}--m-control--focus--after--BorderBottomColor);
 
       &::after {
-        border-bottom-width: var(--#{$button}--m-control--focus--after--BorderBottomWidth);
+        border-block-end-width: var(--#{$button}--m-control--focus--after--BorderBottomWidth);
       }
     }
 
@@ -540,7 +546,7 @@
       --#{$button}--m-control--after--BorderBottomColor: var(--#{$button}--m-control--m-expanded--after--BorderBottomColor);
 
       &::after {
-        border-bottom-width: var(--#{$button}--m-control--m-expanded--after--BorderBottomWidth);
+        border-block-end-width: var(--#{$button}--m-control--m-expanded--after--BorderBottomWidth);
       }
     }
   }
@@ -630,18 +636,18 @@
 
 .#{$button}__icon {
   &.pf-m-start {
-    margin-right: var(--#{$button}__icon--m-start--MarginRight);
+    margin-inline-end: var(--#{$button}__icon--m-start--MarginRight);
   }
 
   &.pf-m-end {
-    margin-left: var(--#{$button}__icon--m-end--MarginLeft);
+    margin-inline-start: var(--#{$button}__icon--m-end--MarginLeft);
   }
 }
 
 .#{$button}__progress {
   position: absolute;
-  top: var(--#{$button}__progress--Top);
-  left: var(--#{$button}__progress--Left);
+  inset-block-start: var(--#{$button}__progress--Top);
+  inset-inline-start: var(--#{$button}__progress--Left);
   line-height: 1;
   transform: translate(var(--#{$button}__progress--TranslateX), var(--#{$button}__progress--TranslateY));
 
@@ -653,7 +659,7 @@
 .#{$button}__count {
   display: inline-flex;
   align-items: center;
-  margin-left: var(--#{$button}__count--MarginLeft);
+  margin-inline-start: var(--#{$button}__count--MarginLeft);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

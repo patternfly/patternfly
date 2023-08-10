@@ -52,7 +52,7 @@
 }
 
 [id^="ws-html-deprecated-c-dropdown-split-button"] .pf-v5-c-dropdown:not(:last-child) {
-  margin-right: 4px;
+  margin-inline-end: 4px;
 }
 
 #ws-html-deprecated-c-dropdown-panel {

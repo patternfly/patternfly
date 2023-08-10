@@ -176,17 +176,20 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   position: relative;
   display: flex;
   width: var(--#{$tabs}--Width);
-  padding-right: var(--#{$tabs}--inset);
-  padding-left: var(--#{$tabs}--inset);
+  padding-inline-start: var(--#{$tabs}--inset);
+  padding-inline-end: var(--#{$tabs}--inset);
   overflow: hidden; // needed for scroll button animation. limit to pf-m-scrollable in breaking change. may need new modifier so this is applied to a menu that supports scrolling, regardless of whether the scroll buttons are shown.
 
   &::before {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     border: solid var(--#{$tabs}--before--BorderColor);
-    border-width: var(--#{$tabs}--before--BorderTopWidth) var(--#{$tabs}--before--BorderRightWidth) var(--#{$tabs}--before--BorderBottomWidth) var(--#{$tabs}--before--BorderLeftWidth);
+    border-block-start-width: var(--#{$tabs}--before--BorderTopWidth);
+    border-block-end-width: var(--#{$tabs}--before--BorderBottomWidth);
+    border-inline-start-width: var(--#{$tabs}--before--BorderLeftWidth);
+    border-inline-end-width: var(--#{$tabs}--before--BorderRightWidth);
   }
 
   // Filled style
@@ -221,12 +224,12 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
     // Scroll buttons
     .#{$tabs}__scroll-button:nth-of-type(1) {
-      margin-right: 0;
+      margin-inline-end: 0;
       transform: translateX(0);
     }
 
     .#{$tabs}__scroll-button:nth-of-type(2) {
-      margin-left: 0;
+      margin-inline-start: 0;
       transform: translateX(0);
     }
   }
@@ -272,22 +275,22 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     // stylelint-disable
     // Add border to first-child
     .#{$tabs}__item.pf-m-current:first-child .#{$tabs}__link::before {
-      border-left-width: var(--#{$tabs}--m-box__item--m-current--first-child__link--before--BorderLeftWidth);
+      border-inline-start-width: var(--#{$tabs}--m-box__item--m-current--first-child__link--before--BorderLeftWidth);
     }
 
     // Add border to last-child
     .#{$tabs}__item.pf-m-current:last-child .#{$tabs}__link::before {
-      border-right-width: var(--#{$tabs}--m-box__item--m-current--last-child__link--before--BorderRightWidth);
+      border-inline-end-width: var(--#{$tabs}--m-box__item--m-current--last-child__link--before--BorderRightWidth);
     }
 
     // Collapse left border into scroll button when expanded
     &.pf-m-scrollable .#{$tabs}__item.pf-m-current:first-child .#{$tabs}__link::before {
-      left: calc(var(--#{$tabs}__link--before--border-width--base) * -1);
+     inset-inline-start: calc(var(--#{$tabs}__link--before--border-width--base) * -1);
     }
 
     // Collapse left border into list when expanded
     &.pf-m-scrollable .#{$tabs}__scroll-button:nth-of-type(2)::before {
-      left: calc(var(--#{$tabs}__link--before--border-width--base) * -1);
+     inset-inline-start: calc(var(--#{$tabs}__link--before--border-width--base) * -1);
     }
     // stylelint-enable
 
@@ -338,19 +341,22 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
       &::before {
         position: absolute;
-        right: auto;
+        inset-inline-end: auto;
         border: solid var(--#{$tabs}--m-vertical__list--before--BorderColor);
-        border-width: var(--#{$tabs}--m-vertical__list--before--BorderTopWidth) var(--#{$tabs}--m-vertical__list--before--BorderRightWidth) var(--#{$tabs}--m-vertical__list--before--BorderBottomWidth) var(--#{$tabs}--m-vertical__list--before--BorderLeftWidth);
+        border-block-start-width: var(--#{$tabs}--m-vertical__list--before--BorderTopWidth);
+        border-block-end-width: var(--#{$tabs}--m-vertical__list--before--BorderBottomWidth);
+        border-inline-start-width: var(--#{$tabs}--m-vertical__list--before--BorderLeftWidth);
+        border-inline-end-width: var(--#{$tabs}--m-vertical__list--before--BorderRightWidth);
       }
     }
 
     // Because vertical variant has no scroll buttons, move inset to first/last __item to prevent default scrolling behavior
     .#{$tabs}__item:first-child {
-      margin-top: var(--#{$tabs}--inset);
+      margin-block-start: var(--#{$tabs}--inset);
     }
 
     .#{$tabs}__item:last-child {
-      margin-bottom: var(--#{$tabs}--inset);
+      margin-block-end: var(--#{$tabs}--inset);
     }
 
     // Set hover on left border
@@ -359,7 +365,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
       --#{$tabs}__link--after--BorderLeftWidth: var(--#{$tabs}__link--after--BorderWidth);
 
       max-width: 100%;
-      text-align: left;
+      text-align: start;
     }
 
     .#{$tabs}__item-text {
@@ -403,8 +409,8 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
     --#{$tabs}__link--disabled--before--BorderLeftWidth: 0;
 
     .#{$tabs}__list::before {
-      right: 0;
-      left: auto;
+      inset-inline-start: auto;
+      inset-inline-end: 0;
     }
 
     // stylelint-disable selector-max-class
@@ -432,13 +438,13 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
     // Offset vertical border to overlap horizontal border
     .#{$tabs}__link::after {
-      top: calc(var(--#{$tabs}__link--before--border-width--base) * -1);
+     inset-block-start: calc(var(--#{$tabs}__link--before--border-width--base) * -1);
     }
 
     // Undo offset to .pf-m-current adjacent item
     .#{$tabs}__item:first-child .#{$tabs}__link::after,
     .#{$tabs}__item.pf-m-current + .#{$tabs}__item .#{$tabs}__link::after {
-      top: 0;
+     inset-block-start: 0;
     }
     // stylelint-enable
   }
@@ -465,20 +471,20 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 .#{$tabs}__toggle {
   display: var(--#{$tabs}__toggle--Display);
   align-items: center;
-  margin-bottom: var(--#{$tabs}__toggle--MarginBottom);
+  margin-block-end: var(--#{$tabs}__toggle--MarginBottom);
 }
 
 .#{$tabs}__toggle-button {
   --#{$tabs}__toggle-text--MarginLeft: var(--#{$tabs}__toggle-button__toggle-text--MarginLeft);
   --#{$tabs}__toggle-text--Color: var(--#{$tabs}__toggle-button__toggle-text--Color);
 
-  margin-top: var(--#{$tabs}__toggle-button--MarginTop);
-  margin-bottom: var(--#{$tabs}__toggle-button--MarginBottom);
-  margin-left: var(--#{$tabs}__toggle-button--MarginLeft);
+  margin-block-start: var(--#{$tabs}__toggle-button--MarginTop);
+  margin-block-end: var(--#{$tabs}__toggle-button--MarginBottom);
+  margin-inline-start: var(--#{$tabs}__toggle-button--MarginLeft);
 
   .#{$button} {
     display: flex;
-    text-align: left;
+    text-align: start;
     white-space: normal;
   }
 }
@@ -491,7 +497,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__toggle-text {
-  margin-left: var(--#{$tabs}__toggle-text--MarginLeft);
+  margin-inline-start: var(--#{$tabs}__toggle-text--MarginLeft);
   color: var(--#{$tabs}__toggle-text--Color, inherit);
 }
 
@@ -548,9 +554,9 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 .#{$tabs}__scroll-button::before,
 .#{$tabs}__add::before {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   content: "";
   border-style: solid;
 }
@@ -562,7 +568,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 .#{$tabs}__item.pf-m-action::after,
 .#{$tabs}__scroll-button::before,
 .#{$tabs}__add::before {
-  top: 0;
+ inset-block-start: 0;
 }
 
 .#{$tabs}__link,
@@ -584,7 +590,10 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   position: relative;
   display: flex;
   flex: 1;
-  padding: var(--#{$tabs}__link--PaddingTop) var(--#{$tabs}__link--PaddingRight) var(--#{$tabs}__link--PaddingBottom) var(--#{$tabs}__link--PaddingLeft);
+  padding-block-start: var(--#{$tabs}__link--PaddingTop);
+  padding-block-end: var(--#{$tabs}__link--PaddingBottom);
+  padding-inline-start: var(--#{$tabs}__link--PaddingLeft);
+  padding-inline-end: var(--#{$tabs}__link--PaddingRight);
   font-size: var(--#{$tabs}__link--FontSize);
   color: var(--#{$tabs}__link--Color);
   text-decoration: none;
@@ -594,23 +603,29 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   & {
     &::before {
       pointer-events: none;
-      border-width: var(--#{$tabs}__link--before--BorderTopWidth) var(--#{$tabs}__link--before--BorderRightWidth) var(--#{$tabs}__link--before--BorderBottomWidth) var(--#{$tabs}__link--before--BorderLeftWidth);
-      border-top-color: var(--#{$tabs}__link--before--BorderTopColor);
-      border-right-color: var(--#{$tabs}__link--before--BorderRightColor);
-      border-bottom-color: var(--#{$tabs}__link--before--BorderBottomColor);
-      border-left-color: var(--#{$tabs}__link--before--BorderLeftColor);
+      border-block-start-color: var(--#{$tabs}__link--before--BorderTopColor);
+      border-block-start-width: var(--#{$tabs}__link--before--BorderTopWidth);
+      border-block-end-color: var(--#{$tabs}__link--before--BorderBottomColor);
+      border-block-end-width: var(--#{$tabs}__link--before--BorderBottomWidth);
+      border-inline-start-color: var(--#{$tabs}__link--before--BorderLeftColor);
+      border-inline-start-width: var(--#{$tabs}__link--before--BorderLeftWidth);
+      border-inline-end-color: var(--#{$tabs}__link--before--BorderRightColor);
+      border-inline-end-width: var(--#{$tabs}__link--before--BorderRightWidth);
     }
   }
 
   @at-root .#{$tabs}__item.pf-m-action,
   & {
     &::after {
-      top: var(--#{$tabs}__link--after--Top);
-      right: var(--#{$tabs}__link--after--Right);
-      bottom: var(--#{$tabs}__link--after--Bottom);
-      left: var(--#{$tabs}__link--before--Left); // use the ::before Left value to offset the top border / overlap left border
+      inset-block-start: var(--#{$tabs}__link--after--Top);
+      inset-block-end: var(--#{$tabs}__link--after--Bottom);
+      inset-inline-start: var(--#{$tabs}__link--before--Left); // use the ::before Left value to offset the top border / overlap left border
+      inset-inline-end: var(--#{$tabs}__link--after--Right);
       border-color: var(--#{$tabs}__link--after--BorderColor);
-      border-width: var(--#{$tabs}__link--after--BorderTopWidth) var(--#{$tabs}__link--after--BorderRightWidth) var(--#{$tabs}__link--after--BorderBottomWidth) var(--#{$tabs}__link--after--BorderLeftWidth);
+      border-block-start-width: var(--#{$tabs}__link--after--BorderTopWidth);
+      border-block-end-width: var(--#{$tabs}__link--after--BorderBottomWidth);
+      border-inline-start-width: var(--#{$tabs}__link--after--BorderLeftWidth);
+      border-inline-end-width: var(--#{$tabs}__link--after--BorderRightWidth);
     }
   }
 
@@ -671,7 +686,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   // un-nest these selectors in a breaking change release
   .#{$tabs}__item-icon,
   .#{$tabs}__item-text {
-    margin-right: var(--#{$tabs}__link--child--MarginRight);
+    margin-inline-end: var(--#{$tabs}__link--child--MarginRight);
 
     &:last-child {
       --#{$tabs}__link--child--MarginRight: 0;
@@ -712,7 +727,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
 .#{$tabs}__item-action-icon {
   display: inline-block;
-  margin-top: var(--#{$tabs}__item-action-icon--MarginTop);
+  margin-block-start: var(--#{$tabs}__item-action-icon--MarginTop);
 }
 
 // Scroll buttons
@@ -734,20 +749,23 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 
   &::before {
     border-color: var(--#{$tabs}__scroll-button--before--BorderColor);
-    border-width: 0 var(--#{$tabs}__scroll-button--before--BorderRightWidth) var(--#{$tabs}__scroll-button--before--BorderBottomWidth) var(--#{$tabs}__scroll-button--before--BorderLeftWidth);
+    border-block-start-width: 0;
+    border-block-end-width: var(--#{$tabs}__scroll-button--before--BorderBottomWidth);
+    border-inline-start-width: var(--#{$tabs}__scroll-button--before--BorderLeftWidth);
+    border-inline-end-width: var(--#{$tabs}__scroll-button--before--BorderRightWidth);
   }
 
   &:nth-of-type(1) {
     --#{$tabs}__scroll-button--before--BorderRightWidth: var(--#{$tabs}__scroll-button--before--border-width--base);
 
-    margin-right: calc(var(--#{$tabs}__scroll-button--Width) * -1);
+    margin-inline-end: calc(var(--#{$tabs}__scroll-button--Width) * -1);
     transform: translateX(-100%);
   }
 
   &:nth-of-type(2) {
     --#{$tabs}__scroll-button--before--BorderLeftWidth: var(--#{$tabs}__scroll-button--before--border-width--base);
 
-    margin-left: calc(var(--#{$tabs}__scroll-button--Width) * -1);
+    margin-inline-start: calc(var(--#{$tabs}__scroll-button--Width) * -1);
     transform: translateX(100%);
   }
 
@@ -763,7 +781,7 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   display: flex;
 
   &::before {
-    border-left: var(--#{$tabs}__add--before--BorderLeftWidth) solid var(--#{$tabs}__add--before--BorderColor);
+    border-inline-start: var(--#{$tabs}__add--before--BorderLeftWidth) solid var(--#{$tabs}__add--before--BorderColor);
   }
 
   .#{$button} {

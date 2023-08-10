@@ -7,9 +7,9 @@
 
   .#{$clipboard-copy}__group {
     > * + * {
-      margin-left: 0;
+      margin-inline-start: 0;
       // stylelint-disable-next-line
-      border-left: 1px solid var(--#{$pf-global}--palette--black-700) !important;
+      border-inline-start: 1px solid var(--#{$pf-global}--palette--black-700) !important;
     }
   }
 

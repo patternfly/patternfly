@@ -40,8 +40,8 @@
   &.pf-m-top-left,
   &.pf-m-top-right {
     .#{$tooltip}__arrow {
-      bottom: 0;
-      left: 50%;
+      inset-block-end: 0;
+      inset-inline-start: 50%;
       transform: translateX(var(--#{$tooltip}__arrow--m-top--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-top--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-top--Rotate));
     }
   }
@@ -50,8 +50,8 @@
   &.pf-m-bottom-left,
   &.pf-m-bottom-right {
     .#{$tooltip}__arrow {
-      top: 0;
-      left: 50%;
+      inset-block-start: 0;
+      inset-inline-start: 50%;
       transform: translateX(var(--#{$tooltip}__arrow--m-bottom--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-bottom--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-bottom--Rotate));
     }
   }
@@ -60,8 +60,8 @@
   &.pf-m-left-top,
   &.pf-m-left-bottom {
     .#{$tooltip}__arrow {
-      top: 50%;
-      right: 0;
+      inset-block-start: 50%;
+      inset-inline-end: 0;
       transform: translateX(var(--#{$tooltip}__arrow--m-left--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-left--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-left--Rotate));
     }
   }
@@ -70,8 +70,8 @@
   &.pf-m-right-top,
   &.pf-m-right-bottom {
     .#{$tooltip}__arrow {
-      top: 50%;
-      left: 0;
+      inset-block-start: 50%;
+      inset-inline-start: 0;
       transform: translateX(var(--#{$tooltip}__arrow--m-right--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-right--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-right--Rotate));
     }
   }
@@ -79,37 +79,40 @@
   &.pf-m-left-top,
   &.pf-m-right-top {
     .#{$tooltip}__arrow {
-      top: var(--#{$tooltip}__arrow--Height);
+      inset-block-start: var(--#{$tooltip}__arrow--Height);
     }
   }
 
   &.pf-m-left-bottom,
   &.pf-m-right-bottom {
     .#{$tooltip}__arrow {
-      top: auto;
-      bottom: 0;
+      inset-block-start: auto;
+      inset-block-end: 0;
     }
   }
 
   &.pf-m-top-left,
   &.pf-m-bottom-left {
     .#{$tooltip}__arrow {
-      left: var(--#{$tooltip}__arrow--Width);
+      inset-inline-start: var(--#{$tooltip}__arrow--Width);
     }
   }
 
   &.pf-m-top-right,
   &.pf-m-bottom-right {
     .#{$tooltip}__arrow {
-      right: 0;
-      left: auto;
+      inset-inline-start: auto;
+      inset-inline-end: 0;
     }
   }
 }
 
 .#{$tooltip}__content {
   position: relative;
-  padding: var(--#{$tooltip}__content--PaddingTop) var(--#{$tooltip}__content--PaddingRight) var(--#{$tooltip}__content--PaddingBottom) var(--#{$tooltip}__content--PaddingLeft);
+  padding-block-start: var(--#{$tooltip}__content--PaddingTop);
+  padding-block-end: var(--#{$tooltip}__content--PaddingBottom);
+  padding-inline-start: var(--#{$tooltip}__content--PaddingLeft);
+  padding-inline-end: var(--#{$tooltip}__content--PaddingRight);
   font-size: var(--#{$tooltip}__content--FontSize);
   color: var(--#{$tooltip}__content--Color);
   text-align: center;
@@ -117,7 +120,7 @@
   background-color: var(--#{$tooltip}__content--BackgroundColor);
 
   &.pf-m-text-align-left {
-    text-align: left;
+    text-align: start;
   }
 }
 

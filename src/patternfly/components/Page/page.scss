@@ -255,10 +255,10 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 // Brand
 .#{$page}__header-brand {
   grid-column: 1 / 2;
-  padding-left: var(--#{$page}__header-brand--PaddingLeft);
+  padding-inline-start: var(--#{$page}__header-brand--PaddingLeft);
 
   @media (min-width: $pf-v5-global--breakpoint--xl) {
-    padding-right: var(--#{$page}__header-brand--xl--PaddingRight); // set padding right here to allow mobile view to accomodate tools
+    padding-inline-end: var(--#{$page}__header-brand--xl--PaddingRight); // set padding right here to allow mobile view to accomodate tools
   }
 }
 
@@ -276,9 +276,12 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 // Sidebar toggle
 .#{$page}__header-brand-toggle {
   .#{$button} {
-    padding: var(--#{$page}__header-sidebar-toggle__c-button--PaddingTop) var(--#{$page}__header-sidebar-toggle__c-button--PaddingRight) var(--#{$page}__header-sidebar-toggle__c-button--PaddingBottom) var(--#{$page}__header-sidebar-toggle__c-button--PaddingLeft);
-    margin-right: var(--#{$page}__header-sidebar-toggle__c-button--MarginRight);
-    margin-left: var(--#{$page}__header-sidebar-toggle__c-button--MarginLeft);
+    padding-block-start: var(--#{$page}__header-sidebar-toggle__c-button--PaddingTop);
+    padding-block-end: var(--#{$page}__header-sidebar-toggle__c-button--PaddingBottom);
+    padding-inline-start: var(--#{$page}__header-sidebar-toggle__c-button--PaddingLeft);
+    padding-inline-end: var(--#{$page}__header-sidebar-toggle__c-button--PaddingRight);
+    margin-inline-start: var(--#{$page}__header-sidebar-toggle__c-button--MarginLeft);
+    margin-inline-end: var(--#{$page}__header-sidebar-toggle__c-button--MarginRight);
     font-size: var(--#{$page}__header-sidebar-toggle__c-button--FontSize);
     line-height: 1;
   }
@@ -290,8 +293,8 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   grid-column: 1 / -1;
   align-self: stretch;
   min-width: 0;
-  padding-right: var(--#{$page}__header-nav--PaddingRight);
-  padding-left: var(--#{$page}__header-nav--PaddingLeft);
+  padding-inline-start: var(--#{$page}__header-nav--PaddingLeft);
+  padding-inline-end: var(--#{$page}__header-nav--PaddingRight);
   background-color: var(--#{$page}__header-nav--BackgroundColor);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
@@ -307,11 +310,11 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 // Header tools
 .#{$page}__header-tools {
   grid-column: 2 / 3;
-  margin-right: var(--#{$page}__header-tools--MarginRight);
-  margin-left: auto; // to push it to the right
+  margin-inline-start: auto; // to push it to the right
+  margin-inline-end: var(--#{$page}__header-tools--MarginRight);
 
   .#{$avatar} {
-    margin-left: var(--#{$page}__header-tools--c-avatar--MarginLeft);
+    margin-inline-start: var(--#{$page}__header-tools--c-avatar--MarginLeft);
   }
 
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
@@ -325,7 +328,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   align-items: center;
 
   & + & {
-    margin-left: var(--#{$page}__header-tools-group--MarginLeft);
+    margin-inline-start: var(--#{$page}__header-tools-group--MarginLeft);
   }
 }
 
@@ -348,10 +351,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
       // remove at breaking change
       &::before {
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        inset: 0;
         width: var(--#{$page}__header-tools--c-button--m-selected--before--Width); // remove at breaking change
         height: var(--#{$page}__header-tools--c-button--m-selected--before--Height); // remove at breaking change
         content: "";
@@ -430,13 +430,13 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
     --#{$page}__sidebar--BackgroundColor: var(--#{$page}__sidebar--m-light--BackgroundColor);
 
-    border-right: var(--#{$page}__sidebar--m-light--BorderRightWidth) solid var(--#{$page}__sidebar--m-light--BorderRightColor);
+    border-inline-end: var(--#{$page}__sidebar--m-light--BorderRightWidth) solid var(--#{$page}__sidebar--m-light--BorderRightColor);
   }
 }
 
 .#{$page}__sidebar-body {
-  padding-right: var(--#{$page}__sidebar-body--PaddingRight);
-  padding-left: var(--#{$page}__sidebar-body--PaddingLeft);
+  padding-inline-start: var(--#{$page}__sidebar-body--PaddingLeft);
+  padding-inline-end: var(--#{$page}__sidebar-body--PaddingRight);
 
   &:last-child {
     flex-grow: 1;
@@ -444,7 +444,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   &.pf-m-menu {
     background-color: var(--#{$pf-global}--palette--black-900);
-    border-top: var(--#{$page}__sidebar-body--m-menu--BorderTopWidth) solid var(--#{$page}__sidebar-body--m-menu--BorderTopColor);
+    border-block-start: var(--#{$page}__sidebar-body--m-menu--BorderTopWidth) solid var(--#{$page}__sidebar-body--m-menu--BorderTopColor);
 
     & + & {
       --#{$page}__sidebar-body--m-menu--BorderTopWidth: 0;
@@ -540,14 +540,14 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
       &.pf-m-sticky-top#{$breakpoint-name} {
         position: sticky;
-        top: 0;
+       inset-block-start: 0;
         z-index: var(--#{$page}--section--m-sticky-top--ZIndex);
         box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
       }
 
       &.pf-m-sticky-bottom#{$breakpoint-name} {
         position: sticky;
-        bottom: 0;
+       inset-block-end: 0;
         z-index: var(--#{$page}--section--m-sticky-bottom--ZIndex);
         box-shadow: var(--#{$page}--section--m-sticky-bottom--BoxShadow);
       }
@@ -577,9 +577,9 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main-nav {
-  padding-top: var(--#{$page}__main-nav--PaddingTop);
-  padding-right: var(--#{$page}__main-nav--PaddingRight);
-  padding-left: var(--#{$page}__main-nav--PaddingLeft);
+  padding-block-start: var(--#{$page}__main-nav--PaddingTop);
+  padding-inline-start: var(--#{$page}__main-nav--PaddingLeft);
+  padding-inline-end: var(--#{$page}__main-nav--PaddingRight);
   background-color: var(--#{$page}__main-nav--BackgroundColor);
 
   // Responsive height modifiers for sticky top/bottom
@@ -589,7 +589,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     @include pf-v5-apply-height-breakpoint($breakpoint) {
       &.pf-m-sticky-top#{$breakpoint-name},
       .#{$page}__main-group.pf-m-sticky-top#{$breakpoint-name} &:last-child {
-        padding-bottom: var(--#{$page}__main-nav--m-sticky-top--PaddingBottom);
+        padding-block-end: var(--#{$page}__main-nav--m-sticky-top--PaddingBottom);
       }
     }
   }
@@ -597,8 +597,8 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 .#{$page}__main-subnav {
   background-color: var(--#{$page}__main-subnav--BackgroundColor);
-  border-top: var(--#{$page}__main-subnav--BorderTopWidth) solid var(--#{$page}__main-subnav--BorderTopColor);
-  border-left: var(--#{$page}__main-subnav--BorderLeftWidth) solid var(--#{$page}__main-subnav--BorderLeftColor);
+  border-block-start: var(--#{$page}__main-subnav--BorderTopWidth) solid var(--#{$page}__main-subnav--BorderTopColor);
+  border-inline-start: var(--#{$page}__main-subnav--BorderLeftWidth) solid var(--#{$page}__main-subnav--BorderLeftColor);
 
   @at-root .#{$page}__sidebar {
     ~ .#{$page}__main {
@@ -614,7 +614,10 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main-breadcrumb {
-  padding: var(--#{$page}__main-breadcrumb--PaddingTop) var(--#{$page}__main-breadcrumb--PaddingRight) var(--#{$page}__main-breadcrumb--PaddingBottom) var(--#{$page}__main-breadcrumb--PaddingLeft);
+  padding-block-start: var(--#{$page}__main-breadcrumb--PaddingTop);
+  padding-block-end: var(--#{$page}__main-breadcrumb--PaddingBottom);
+  padding-inline-start: var(--#{$page}__main-breadcrumb--PaddingLeft);
+  padding-inline-end: var(--#{$page}__main-breadcrumb--PaddingRight);
   background-color: var(--#{$page}__main-breadcrumb--BackgroundColor);
 
   + .#{$page}__main-section {
@@ -635,7 +638,10 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main-tabs {
-  padding: var(--#{$page}__main-tabs--PaddingTop) var(--#{$page}__main-tabs--PaddingRight) var(--#{$page}__main-tabs--PaddingBottom) var(--#{$page}__main-tabs--PaddingLeft);
+  padding-block-start: var(--#{$page}__main-tabs--PaddingTop);
+  padding-block-end: var(--#{$page}__main-tabs--PaddingBottom);
+  padding-inline-start: var(--#{$page}__main-tabs--PaddingLeft);
+  padding-inline-end: var(--#{$page}__main-tabs--PaddingRight);
   background-color: var(--#{$page}__main-tabs--BackgroundColor);
 
   .#{$page}__main-nav + & {
@@ -662,7 +668,10 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__main-section {
-  padding: var(--#{$page}__main-section--PaddingTop) var(--#{$page}__main-section--PaddingRight) var(--#{$page}__main-section--PaddingBottom) var(--#{$page}__main-section--PaddingLeft);
+  padding-block-start: var(--#{$page}__main-section--PaddingTop);
+  padding-block-end: var(--#{$page}__main-section--PaddingBottom);
+  padding-inline-start: var(--#{$page}__main-section--PaddingLeft);
+  padding-inline-end: var(--#{$page}__main-section--PaddingRight);
   background-color: var(--#{$page}__main-section--BackgroundColor);
 
   &.pf-m-light {
@@ -691,13 +700,19 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     @include pf-v5-apply-breakpoint($breakpoint) {
       // stylelint-disable max-nesting-depth
       &.pf-m-padding#{$breakpoint-name} {
-        padding: var(--#{$page}__main-section--PaddingTop) var(--#{$page}__main-section--PaddingRight) var(--#{$page}__main-section--PaddingBottom) var(--#{$page}__main-section--PaddingLeft);
+        padding-block-start: var(--#{$page}__main-section--PaddingTop);
+        padding-block-end: var(--#{$page}__main-section--PaddingBottom);
+        padding-inline-start: var(--#{$page}__main-section--PaddingLeft);
+        padding-inline-end: var(--#{$page}__main-section--PaddingRight);
 
         &.pf-m-limit-width {
           padding: 0;
 
           .#{$page}__main-body {
-            padding: var(--#{$page}__main-section--PaddingTop) var(--#{$page}__main-section--PaddingRight) var(--#{$page}__main-section--PaddingBottom) var(--#{$page}__main-section--PaddingLeft);
+            padding-block-start: var(--#{$page}__main-section--PaddingTop);
+            padding-block-end: var(--#{$page}__main-section--PaddingBottom);
+            padding-inline-start: var(--#{$page}__main-section--PaddingLeft);
+            padding-inline-end: var(--#{$page}__main-section--PaddingRight);
           }
         }
       }
@@ -717,7 +732,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   flex: 1 1;
   min-height: 0;
   background-color: var(--#{$page}__main-wizard--BackgroundColor);
-  border-top: var(--#{$page}__main-wizard--BorderTopWidth) solid var(--#{$page}__main-wizard--BorderTopColor);
+  border-block-start: var(--#{$page}__main-wizard--BorderTopWidth) solid var(--#{$page}__main-wizard--BorderTopColor);
 
   &:first-child {
     --#{$page}__main-wizard--BorderTopWidth: 0;
@@ -738,21 +753,30 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 .#{$page}__main-body {
   .#{$page}__main-nav & {
-    padding-top: var(--#{$page}__main-nav--PaddingTop);
-    padding-right: var(--#{$page}__main-nav--PaddingRight);
-    padding-left: var(--#{$page}__main-nav--PaddingLeft);
+    padding-block-start: var(--#{$page}__main-nav--PaddingTop);
+    padding-inline-start: var(--#{$page}__main-nav--PaddingLeft);
+    padding-inline-end: var(--#{$page}__main-nav--PaddingRight);
   }
 
   .#{$page}__main-breadcrumb & {
-    padding: var(--#{$page}__main-breadcrumb--PaddingTop) var(--#{$page}__main-breadcrumb--PaddingRight) var(--#{$page}__main-breadcrumb--PaddingBottom) var(--#{$page}__main-breadcrumb--PaddingLeft);
+    padding-block-start: var(--#{$page}__main-breadcrumb--PaddingTop);
+    padding-block-end: var(--#{$page}__main-breadcrumb--PaddingBottom);
+    padding-inline-start: var(--#{$page}__main-breadcrumb--PaddingLeft);
+    padding-inline-end: var(--#{$page}__main-breadcrumb--PaddingRight);
   }
 
   .#{$page}__main-section & {
-    padding: var(--#{$page}__main-section--PaddingTop) var(--#{$page}__main-section--PaddingRight) var(--#{$page}__main-section--PaddingBottom) var(--#{$page}__main-section--PaddingLeft);
+    padding-block-start: var(--#{$page}__main-section--PaddingTop);
+    padding-block-end: var(--#{$page}__main-section--PaddingBottom);
+    padding-inline-start: var(--#{$page}__main-section--PaddingLeft);
+    padding-inline-end: var(--#{$page}__main-section--PaddingRight);
   }
 
   .#{$page}__main-tabs & {
-    padding: var(--#{$page}__main-tabs--PaddingTop) var(--#{$page}__main-tabs--PaddingRight) var(--#{$page}__main-tabs--PaddingBottom) var(--#{$page}__main-tabs--PaddingLeft);
+    padding-block-start: var(--#{$page}__main-tabs--PaddingTop);
+    padding-block-end: var(--#{$page}__main-tabs--PaddingBottom);
+    padding-inline-start: var(--#{$page}__main-tabs--PaddingLeft);
+    padding-inline-end: var(--#{$page}__main-tabs--PaddingRight);
   }
 }
 

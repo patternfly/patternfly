@@ -45,9 +45,9 @@
 
   &.pf-m-inline {
     display: inline;
-    padding-top: var(--#{$clipboard-copy}--m-inline--PaddingTop);
-    padding-bottom: var(--#{$clipboard-copy}--m-inline--PaddingBottom);
-    padding-left: var(--#{$clipboard-copy}--m-inline--PaddingLeft);
+    padding-block-start: var(--#{$clipboard-copy}--m-inline--PaddingTop);
+    padding-block-end: var(--#{$clipboard-copy}--m-inline--PaddingBottom);
+    padding-inline-start: var(--#{$clipboard-copy}--m-inline--PaddingLeft);
     white-space: nowrap;
     background-color: var(--#{$clipboard-copy}--m-inline--BackgroundColor);
 
@@ -61,7 +61,7 @@
   display: flex;
 
   > * + * {
-    margin-left: -1px;
+    margin-inline-start: -1px;
   }
 }
 
@@ -70,12 +70,18 @@
 }
 
 .#{$clipboard-copy}__expandable-content {
-  padding: var(--#{$clipboard-copy}__expandable-content--PaddingTop) var(--#{$clipboard-copy}__expandable-content--PaddingRight) var(--#{$clipboard-copy}__expandable-content--PaddingBottom) var(--#{$clipboard-copy}__expandable-content--PaddingLeft);
+  padding-block-start: var(--#{$clipboard-copy}__expandable-content--PaddingTop);
+  padding-block-end: var(--#{$clipboard-copy}__expandable-content--PaddingBottom);
+  padding-inline-start: var(--#{$clipboard-copy}__expandable-content--PaddingLeft);
+  padding-inline-end: var(--#{$clipboard-copy}__expandable-content--PaddingRight);
   word-wrap: break-word;
   background-color: var(--#{$clipboard-copy}__expandable-content--BackgroundColor);
   background-clip: padding-box;
   border: solid var(--#{$clipboard-copy}__expandable-content--BorderColor);
-  border-width: var(--#{$clipboard-copy}__expandable-content--BorderTopWidth) var(--#{$clipboard-copy}__expandable-content--BorderRightWidth) var(--#{$clipboard-copy}__expandable-content--BorderBottomWidth) var(--#{$clipboard-copy}__expandable-content--BorderLeftWidth);
+  border-block-start-width: var(--#{$clipboard-copy}__expandable-content--BorderTopWidth);
+  border-block-end-width: var(--#{$clipboard-copy}__expandable-content--BorderBottomWidth);
+  border-inline-start-width: var(--#{$clipboard-copy}__expandable-content--BorderLeftWidth);
+  border-inline-end-width: var(--#{$clipboard-copy}__expandable-content--BorderRightWidth);
   box-shadow: var(--#{$clipboard-copy}__expandable-content--BoxShadow);
 
   pre {
@@ -98,8 +104,8 @@
 }
 
 .#{$clipboard-copy}__actions-item {
-  margin-top: calc(-1 * var(--#{$clipboard-copy}__actions-item--button--PaddingTop));
-  margin-bottom: calc(-1 * var(--#{$clipboard-copy}__actions-item--button--PaddingBottom));
+  margin-block-start: calc(-1 * var(--#{$clipboard-copy}__actions-item--button--PaddingTop));
+  margin-block-end: calc(-1 * var(--#{$clipboard-copy}__actions-item--button--PaddingBottom));
 
   .#{$button} {
     --#{$button}--PaddingTop: var(--#{$clipboard-copy}__actions-item--button--PaddingTop);

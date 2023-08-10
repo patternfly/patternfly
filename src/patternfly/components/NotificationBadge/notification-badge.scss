@@ -53,17 +53,23 @@
 
   position: relative;
   display: inline-block;
-  padding: var(--#{$notification-badge}--PaddingTop) var(--#{$notification-badge}--PaddingRight) var(--#{$notification-badge}--PaddingBottom) var(--#{$notification-badge}--PaddingLeft);
-  margin: var(--#{$notification-badge}--MarginTop) var(--#{$notification-badge}--MarginRight) var(--#{$notification-badge}--MarginBottom) var(--#{$notification-badge}--MarginLeft);
+  padding-block-start: var(--#{$notification-badge}--PaddingTop);
+  padding-block-end: var(--#{$notification-badge}--PaddingBottom);
+  padding-inline-start: var(--#{$notification-badge}--PaddingLeft);
+  padding-inline-end: var(--#{$notification-badge}--PaddingRight);
+  margin-block-start: var(--#{$notification-badge}--MarginTop);
+  margin-block-end: var(--#{$notification-badge}--MarginBottom);
+  margin-inline-start: var(--#{$notification-badge}--MarginLeft);
+  margin-inline-end: var(--#{$notification-badge}--MarginRight);
   background-color: var(--#{$notification-badge}--after--BackgroundColor); // rename this at breaking change
   border-radius: var(--#{$notification-badge}--after--BorderRadius); // renamie this at breaking change
 
   &::before { // update all --after vars to --before at breaking change
     position: absolute;
-    top: var(--#{$notification-badge}--after--Top); // replace this var with 0 at breaking change
-    right: var(--#{$notification-badge}--after--Right); // replace this var with 0 at breaking change
-    bottom: 0;
-    left: 0;
+    inset-block-start: var(--#{$notification-badge}--after--Top); // replace this var with 0 at breaking change
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: var(--#{$notification-badge}--after--Right); // replace this var with 0 at breaking change
     width: var(--#{$notification-badge}--after--Width); // remove at breaking change
     height: var(--#{$notification-badge}--after--Height); // remove at breaking change
     content: "";
@@ -128,7 +134,7 @@
 }
 
 .#{$notification-badge}__count {
-  margin-left: var(--#{$notification-badge}__count--MarginLeft);
+  margin-inline-start: var(--#{$notification-badge}__count--MarginLeft);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
