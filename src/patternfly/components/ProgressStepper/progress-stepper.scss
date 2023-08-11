@@ -133,7 +133,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}--GridTemplateRows: auto 1fr;
 
   // Step connector variables
-  --#{$progress-stepper}__step-connector--JustifyContent: start;
+  --#{$progress-stepper}__step-connector--JustifyContent: flex-start;
 
   // Step icon variables
   --#{$progress-stepper}__step-icon--ZIndex: var(--#{$pf-global}--ZIndex--xs);

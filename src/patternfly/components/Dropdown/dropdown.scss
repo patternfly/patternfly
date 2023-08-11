@@ -190,7 +190,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   position: relative;
   display: inline-flex;
-  align-items: start;
+  align-items: flex-start;
   max-width: 100%;
 
   .#{$divider} {
@@ -755,7 +755,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
     &.pf-m-description {
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
     }
 
     .#{$dropdown}__menu-item-main {
