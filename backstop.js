@@ -2,16 +2,18 @@ const config = require('./backstop.config');
 const scenarios = [];
 const viewports = [];
 
-config.relativeUrls.map(relativeUrl => (
-  scenarios.push({
-    label: (relativeUrl.url || relativeUrl),
-    url: `${config.baseUrl}${relativeUrl}`,
+config.relativeUrls.map(relativeUrl => {
+  const url = (relativeUrl.url || relativeUrl);
+  const fullUrl = `${config.baseUrl}${url}`;
+  return scenarios.push({
+    label: url,
+    url: fullUrl,
     delay: (relativeUrl.delay || 100), // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
     readySelector: '.ws-theme-switch-full-page',
     removeSelectors: ['.ws-theme-switch-full-page'],
     misMatchThreshold: 0.1
   })
-));
+});
 
 Object.keys(config.viewports).map(viewport => (
   viewports.push({
