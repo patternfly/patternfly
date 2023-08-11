@@ -124,9 +124,12 @@
         inset-inline-start: 0;
         inset-inline-end: 0;
         content: "";
-        border: solid var(--#{$accordion}--m-bordered__toggle--before--BorderColor);
+        border-color: var(--#{$accordion}--m-bordered__toggle--before--BorderColor);
+        border-style: solid;
         border-block-start-width: var(--#{$accordion}--m-bordered__toggle--before--BorderTopWidth);
         border-block-end-width: var(--#{$accordion}--m-bordered__toggle--before--BorderBottomWidth);
+        border-inline-start-width: 0;
+        border-inline-end-width: 0;
       }
 
       &.pf-m-expanded {

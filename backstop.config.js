@@ -1,5 +1,4 @@
 const viewports = {
-  /*
   mobile: {
     width: 320,
     height: 480
@@ -8,14 +7,13 @@ const viewports = {
     width: 1024,
     height: 768
   },
-  */
   desktop: {
     width: 1280,
     height: 1024
   }
 };
 
-const baseUrl = 'http://localhost:8001';
+const baseUrl = 'http://localhost:5000';
 
 const relativeUrls = [
   '/components/about-modal/html-demos/basic',
