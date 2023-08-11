@@ -141,7 +141,7 @@
 
 .#{$label-group}__close {
   display: flex;
-  align-self: start;
+  align-self: flex-start;
   margin-top: var(--#{$label-group}__close--MarginTop);
   margin-right: var(--#{$label-group}__close--MarginRight);
   margin-bottom: var(--#{$label-group}__close--MarginBottom);
