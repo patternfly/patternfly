@@ -397,7 +397,10 @@ const relativeUrls = [
   '/components/login-page/html/with-language-selector',
   '/components/masthead/html-demos/advanced-integration-with-menu-options',
   '/components/masthead/html-demos/basic',
-  '/components/masthead/html-demos/horizontal-nav',
+  {
+    url: '/components/masthead/html-demos/horizontal-nav',
+    delay: 1000
+  },
   '/components/masthead/html-demos/with-context-selector-and-dropdown',
   '/components/masthead/html-demos/with-expandable-search-collapsed',
   '/components/masthead/html-demos/with-expandable-search-expanded',
@@ -582,8 +585,14 @@ const relativeUrls = [
   '/components/navigation/html-demos/default-nav',
   '/components/navigation/html-demos/expandable-nav',
   '/components/navigation/html-demos/grouped-nav',
-  '/components/navigation/html-demos/horizontal-nav',
-  '/components/navigation/html-demos/horizontal-nav-with-horizontal-subnav',
+  {
+    url: '/components/navigation/html-demos/horizontal-nav',
+    delay: 1000
+  },
+  {
+    url: '/components/navigation/html-demos/horizontal-nav-with-horizontal-subnav',
+    delay: 1000
+  },
   '/components/navigation/html-demos/horizontal-subnav',
   '/components/navigation/html-demos/light-theme-sidebar-and-nav',
   '/components/navigation/html-demos/tertiary-nav',
@@ -640,14 +649,20 @@ const relativeUrls = [
   '/components/page/html-demos/sticky-section-bottom',
   '/components/page/html-demos/sticky-section-group',
   '/components/page/html-deprecated/centered-section',
-  '/components/page/html-deprecated/horizontal-nav',
+  {
+    url: '/components/page/html-deprecated/horizontal-nav',
+    delay: 1000
+  },
   '/components/page/html-deprecated/main-section-padding',
   '/components/page/html-deprecated/main-section-variations',
   '/components/page/html-deprecated/multiple-sidebar-body-elements-padding-and-fill',
   '/components/page/html-deprecated/vertical-nav',
   '/components/page/html-deprecated/with-or-without-fill',
   '/components/page/html/centered-section',
-  '/components/page/html/horizontal-nav',
+  {
+    url: '/components/page/html/horizontal-nav',
+    delay: 1000
+  },
   '/components/page/html/main-section-padding',
   '/components/page/html/main-section-variations',
   '/components/page/html/multiple-sidebar-body-elements-padding-and-fill',
