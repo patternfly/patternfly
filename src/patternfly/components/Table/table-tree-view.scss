@@ -82,6 +82,9 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   > .#{$table}__check label {
     padding-inline-start: var(--#{$table}__tree-view-main--c-table__check--PaddingLeft);
     padding-inline-end: var(--#{$table}__tree-view-main--c-table__check--PaddingRight);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
     margin-inline-end: calc(var(--#{$table}__tree-view-main--c-table__check--MarginRight) * -1);
   }
 }
@@ -99,7 +102,6 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   display: none;
 }
 
-// stylelint-disable
 @mixin pf-tree-view-grid {
   .pf-m-tree-view-grid.#{$table} {
     @content;
@@ -150,7 +152,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
 
   // node cells
   --#{$table}--m-tree-view-grid__tr--expanded__tree-view-title-cell--PaddingTop: var(--#{$pf-global}--spacer--xl);
-  --#{$table}--m-tree-view-grid__td--data-label--GridTemplateColumns: repeat(auto-fit, minmax(150px, 1fr));
+  --#{$table}--m-tree-view-grid__td--data-label--GridTemplateColumns: repeat(auto-fit, minmax(150px, 1fr)); // use minmax func to contain possible text modifier width
   --#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingTop: var(--#{$pf-global}--spacer--xs);
   --#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingBottom: var(--#{$pf-global}--spacer--xs);
 
@@ -175,17 +177,17 @@ $pf-v5-c-tree-view--MaxDepth: 10;
 
   tbody:where(.#{$table}__tbody) tr:where(.#{$table}__tr) {
     position: relative;
-    outline-offset: var(--#{$table}--m-tree-view-grid--tr--OutlineOffset);
     border: none;
+    outline-offset: var(--#{$table}--m-tree-view-grid--tr--OutlineOffset);
 
     &::before {
       position: absolute;
-     inset-block-start: 0;
-     inset-inline-end: 0;
-     inset-block-end: 0;
-     inset-inline-start: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft);
-      border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
+      inset-block-start: 0;
+      inset-block-end: 0;
+      inset-inline-start: var(--#{$table}--m-tree-view-grid__tbody--cell--PaddingLeft);
+      inset-inline-end: 0;
       content: '';
+      border-block-end: var(--#{$table}--border-width--base) solid var(--#{$table}--BorderColor);
     }
   }
 
@@ -226,11 +228,9 @@ $pf-v5-c-tree-view--MaxDepth: 10;
 
   // Standard td, in standard row (non-expandable)
   td:where(.#{$table}__td)[data-label] {
+    grid-template-columns: var(--#{$table}--m-tree-view-grid__td--data-label--GridTemplateColumns);
     grid-column: 1;
     grid-column-gap: var(--#{$table}--m-tree-view-grid__tbody--cell--GridColumnGap);
-
-    // use minmax func to contain possible text modifier width
-    grid-template-columns: var(--#{$table}--m-tree-view-grid__td--data-label--GridTemplateColumns);
     align-items: start;
 
     // set contents of td to start at column two of td grid
@@ -239,7 +239,7 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     }
 
     &::before {
-      font-weight: bold;
+      font-weight: var(--#{$pf-global}--FontWeight--bold);;
       text-align: start;
       content: attr(data-label);
     }
@@ -268,8 +268,8 @@ $pf-v5-c-tree-view--MaxDepth: 10;
     --#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingTop: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingTop);
     --#{$table}--m-tree-view-grid__td--not--c-table__tree-view-title-cell--PaddingBottom: var(--#{$table}--m-tree-view-grid--c-table__action--PaddingBottom);
 
-    grid-column: 2;
     grid-row: 1;
+    grid-column: 2;
 
     > .#{$dropdown} {
       margin-block-start: var(--#{$table}--m-tree-view-grid--c-dropdown--MarginTop);
@@ -278,9 +278,9 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   }
 
   .#{$table}__tree-view-main > .#{$table}__check {
-    margin-inline-end: var(--#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--MarginRight);
-    margin-inline-start: auto;
     order: var(--#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--Order);
+    margin-inline-start: auto;
+    margin-inline-end: var(--#{$table}--m-tree-view-mobile__tree-view-main--c-table__check--MarginRight);
   }
 
   .#{$table}__tree-view-details-toggle {

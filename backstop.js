@@ -6,7 +6,7 @@ config.relativeUrls.map(relativeUrl => (
   scenarios.push({
     label: relativeUrl,
     url: `${config.baseUrl}${relativeUrl}`,
-    delay: 50, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
+    delay: 100, // a small timeout allows wiggle room for the page to fully render. increase as needed if you're getting rendering related false positives.
     readySelector: '.ws-theme-switch-full-page',
     removeSelectors: ['.ws-theme-switch-full-page'],
     misMatchThreshold: 0.1

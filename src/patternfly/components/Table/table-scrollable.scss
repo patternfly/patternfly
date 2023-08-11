@@ -25,12 +25,12 @@
     background-color: var(--#{$table}__sticky-cell--BackgroundColor);
     background-clip: padding-box;
 
-    &.pf-m-border-inline-end::before {
+    &.pf-m-border-right::before {
       --#{$table}--cell--m-border-right--before--BorderRightWidth: var(--#{$table}__sticky-cell--m-border-right--before--BorderRightWidth);
       --#{$table}--cell--m-border-right--before--BorderRightColor: var(--#{$table}__sticky-cell--m-border-right--before--BorderRightColor);
     }
 
-    &.pf-m-border-inline-start::before {
+    &.pf-m-border-left::before {
       --#{$table}--cell--m-border-left--before--BorderLeftWidth: var(--#{$table}__sticky-cell--m-border-left--before--BorderLeftWidth);
       --#{$table}--cell--m-border-left--before--BorderLeftColor: var(--#{$table}__sticky-cell--m-border-left--before--BorderLeftColor);
     }

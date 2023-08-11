@@ -750,9 +750,9 @@
 .#{$menu}__footer {
   position: relative;
   padding-block-start: var(--#{$menu}__footer--PaddingTop);
-  padding-block-start: var(--#{$menu}__footer--PaddingBottom);
+  padding-block-end: var(--#{$menu}__footer--PaddingBottom);
+  padding-inline-start: var(--#{$menu}__footer--PaddingLeft);
   padding-inline-end: var(--#{$menu}__footer--PaddingRight);
-  padding-inline-end: var(--#{$menu}__footer--PaddingLeft);
   box-shadow: var(--#{$menu}__footer--BoxShadow);
 
   &::after {

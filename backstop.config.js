@@ -1,4 +1,5 @@
 const viewports = {
+  /*
   mobile: {
     width: 320,
     height: 480
@@ -7,6 +8,7 @@ const viewports = {
     width: 1024,
     height: 768
   },
+  */
   desktop: {
     width: 1280,
     height: 1024

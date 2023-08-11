@@ -477,8 +477,8 @@
       --#{$table}--cell--Overflow: visible;
     }
 
-    &.pf-m-border-inline-end::before,
-    &.pf-m-border-inline-start::before {
+    &.pf-m-border-right::before,
+    &.pf-m-border-left::before {
       position: absolute;
       inset-block-start: 0;
       inset-block-end: 0;
@@ -488,11 +488,11 @@
       content: "";
     }
 
-    &.pf-m-border-inline-end::before {
+    &.pf-m-border-right::before {
       border-inline-end: var(--#{$table}--cell--m-border-right--before--BorderRightWidth) solid var(--#{$table}--cell--m-border-right--before--BorderRightColor);
     }
 
-    &.pf-m-border-inline-start::before {
+    &.pf-m-border-left::before {
       border-inline-start: var(--#{$table}--cell--m-border-left--before--BorderLeftWidth) solid var(--#{$table}--cell--m-border-left--before--BorderLeftColor);
     }
   }
