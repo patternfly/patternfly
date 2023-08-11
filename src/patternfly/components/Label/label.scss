@@ -187,7 +187,10 @@
 
   position: relative;
   max-width: var(--#{$label}--MaxWidth);
-  padding-block-start: var(--#{$label}--PaddingTop) var(--#{$label}--PaddingRight) var(--#{$label}--PaddingBottom) var(--#{$label}--PaddingLeft);
+  padding-block-start: var(--#{$label}--PaddingTop);
+  padding-block-end: var(--#{$label}--PaddingBottom);
+  padding-inline-start: var(--#{$label}--PaddingLeft);
+  padding-inline-end: var(--#{$label}--PaddingRight);
   font-size: var(--#{$label}--FontSize);
   color: var(--#{$label}--Color);
   white-space: nowrap;
