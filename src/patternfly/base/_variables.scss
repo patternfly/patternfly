@@ -290,3 +290,7 @@
 @include pf-v5-theme-dark {
   @include pf-v5-theme-dark-variables;
 }
+
+@import "./tokens/tokens-palette";
+@import "./tokens/tokens-default";
+@import "./tokens/tokens-dark";
