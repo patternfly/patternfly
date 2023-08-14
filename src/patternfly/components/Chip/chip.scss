@@ -26,6 +26,7 @@
   // chip text
   --#{$chip}__text--Color: var(--#{$pf-global}--Color--100);
   --#{$chip}__text--MaxWidth: 16ch;
+  --#{$chip}__c-badge--MarginLeft: var(--#{$pf-global}--spacer--xs);
 
   // chip actions
   --#{$chip}__actions--FontSize: var(--#{$pf-global}--FontSize--xs);
@@ -92,6 +93,10 @@
   position: relative;
   max-width: var(--#{$chip}__text--MaxWidth);
   color: var(--#{$chip}__text--Color);
+
+  .#{$badge} {
+    margin-left: var(--#{$chip}__c-badge--MarginLeft); // remove in breaking change
+  }
 }
 
 .#{$chip}__icon + .#{$chip}__text,
