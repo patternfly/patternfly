@@ -41,12 +41,12 @@
 
   // fixes a chrome issue where the left edge is cut off in a container with overflow hidden
   &:first-child {
-    margin-left: var(--#{$radio}__input--first-child--MarginLeft);
+    margin-inline-start: var(--#{$radio}__input--first-child--MarginLeft);
   }
 
   // fixes a chrome issue where the right edge is cut off in a container with overflow hidden
   &:last-child {
-    margin-right: var(--#{$radio}__input--last-child--MarginRight);
+    margin-inline-end: var(--#{$radio}__input--last-child--MarginRight);
   }
 }
 
@@ -58,7 +58,7 @@
 
 .#{$radio}__body {
   grid-column: 2;
-  margin-top: var(--#{$radio}__body--MarginTop);
+  margin-block-start: var(--#{$radio}__body--MarginTop);
 }
 
 .#{$radio}__label,

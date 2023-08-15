@@ -49,7 +49,7 @@
 
   // horizontal
   --#{$multiple-file-upload}--m-horizontal--GridTemplateColumns: fit-content(100%);
-  --#{$multiple-file-upload}--m-horizontal__main--TextAlign: left;
+  --#{$multiple-file-upload}--m-horizontal__main--TextAlign: start;
   --#{$multiple-file-upload}--m-horizontal__main--GridTemplateColumns: 1fr auto;
   --#{$multiple-file-upload}--m-horizontal__main--GridTemplateAreas:
     "title upload"
@@ -128,7 +128,10 @@
   grid-template-rows: var(--#{$multiple-file-upload}__main--GridTemplateRows);
   grid-template-columns: var(--#{$multiple-file-upload}__main--GridTemplateColumns);
   gap: var(--#{$multiple-file-upload}__main--Gap);
-  padding: var(--#{$multiple-file-upload}__main--PaddingTop) var(--#{$multiple-file-upload}__main--PaddingRight) var(--#{$multiple-file-upload}__main--PaddingBottom) var(--#{$multiple-file-upload}__main--PaddingLeft);
+  padding-block-start: var(--#{$multiple-file-upload}__main--PaddingTop);
+  padding-block-end: var(--#{$multiple-file-upload}__main--PaddingBottom);
+  padding-inline-start: var(--#{$multiple-file-upload}__main--PaddingLeft);
+  padding-inline-end: var(--#{$multiple-file-upload}__main--PaddingRight);
   text-align: var(--#{$multiple-file-upload}__main--TextAlign);
   background-color: var(--#{$multiple-file-upload}__main--BackgroundColor);
   border: var(--#{$multiple-file-upload}__main--BorderWidth) var(--#{$multiple-file-upload}__main--BorderStyle) var(--#{$multiple-file-upload}__main--BorderColor);
@@ -151,7 +154,7 @@
 
 .#{$multiple-file-upload}__title-text-separator {
   display: var(--#{$multiple-file-upload}__title-text-separator--Display);
-  margin-top: var(--#{$multiple-file-upload}__title-text-separator--MarginTop);
+  margin-block-start: var(--#{$multiple-file-upload}__title-text-separator--MarginTop);
 }
 
 .#{$multiple-file-upload}__upload {
@@ -160,7 +163,7 @@
 
 .#{$multiple-file-upload}__info {
   grid-area: info;
-  margin-top: var(--#{$multiple-file-upload}__info--MarginTop);
+  margin-block-start: var(--#{$multiple-file-upload}__info--MarginTop);
   font-size: var(--#{$multiple-file-upload}__info--FontSize);
   color: var(--#{$multiple-file-upload}__info--Color);
 }
@@ -184,9 +187,9 @@
   display: grid;
   grid-template-columns: var(--#{$multiple-file-upload}__status-item--GridTemplateColumns);
   gap: var(--#{$multiple-file-upload}__status-item--Gap);
-  padding-top: var(--#{$multiple-file-upload}__status-item--PaddingTop);
-  padding-bottom: var(--#{$multiple-file-upload}__status-item--PaddingBottom);
-  border-bottom: var(--#{$multiple-file-upload}__status-item--BorderWidth) solid var(--#{$multiple-file-upload}__status-item--BorderColor);
+  padding-block-start: var(--#{$multiple-file-upload}__status-item--PaddingTop);
+  padding-block-end: var(--#{$multiple-file-upload}__status-item--PaddingBottom);
+  border-block-end: var(--#{$multiple-file-upload}__status-item--BorderWidth) solid var(--#{$multiple-file-upload}__status-item--BorderColor);
 
   &:first-child {
     --#{$multiple-file-upload}__status-item--PaddingTop: var(--#{$multiple-file-upload}__status-item--first-child--PaddingTop);
@@ -198,7 +201,7 @@
 }
 
 .#{$multiple-file-upload}__status-item-close {
-  margin-top: var(--#{$multiple-file-upload}__status-item-close--MarginTop);
+  margin-block-start: var(--#{$multiple-file-upload}__status-item-close--MarginTop);
 }
 
 .#{$multiple-file-upload}__status-item-progress {

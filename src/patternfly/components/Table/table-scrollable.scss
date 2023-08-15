@@ -18,8 +18,8 @@
     --#{$table}--m-sticky-header--cell--ZIndex: var(--#{$table}--m-sticky-header__sticky-cell--ZIndex);
 
     position: sticky;
-    right: var(--#{$table}__sticky-cell--Right);
-    left: var(--#{$table}__sticky-cell--Left);
+    inset-inline-start: var(--#{$table}__sticky-cell--Left);
+    inset-inline-end: var(--#{$table}__sticky-cell--Right);
     z-index: var(--#{$table}__sticky-cell--ZIndex);
     min-width: var(--#{$table}__sticky-cell--MinWidth);
     background-color: var(--#{$table}__sticky-cell--BackgroundColor);

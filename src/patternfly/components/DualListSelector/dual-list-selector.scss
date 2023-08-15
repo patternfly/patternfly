@@ -115,7 +115,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 
 .#{$dual-list-selector}__header {
   grid-area: var(--#{$dual-list-selector}__header--GridArea);
-  margin-bottom: var(--#{$dual-list-selector}__header--MarginBottom);
+  margin-block-end: var(--#{$dual-list-selector}__header--MarginBottom);
 }
 
 .#{$dual-list-selector}__title-text {
@@ -125,7 +125,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 .#{$dual-list-selector}__tools {
   display: flex;
   grid-area: var(--#{$dual-list-selector}__tools--GridArea);
-  margin-bottom: var(--#{$dual-list-selector}__tools--MarginBottom);
+  margin-block-end: var(--#{$dual-list-selector}__tools--MarginBottom);
 }
 
 .#{$dual-list-selector}__tools-filter {
@@ -136,14 +136,14 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   display: flex;
 
   .#{$dual-list-selector}__tools-filter ~ & {
-    margin-left: var(--#{$dual-list-selector}__tools-filter--tools-actions--MarginLeft);
+    margin-inline-start: var(--#{$dual-list-selector}__tools-filter--tools-actions--MarginLeft);
   }
 }
 
 .#{$dual-list-selector}__status {
   display: flex;
   grid-area: var(--#{$dual-list-selector}__status--GridArea);
-  margin-bottom: var(--#{$dual-list-selector}__status--MarginBottom);
+  margin-block-end: var(--#{$dual-list-selector}__status--MarginBottom);
 }
 
 .#{$dual-list-selector}__status-text {
@@ -169,8 +169,8 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 
     .#{$dual-list-selector}__item-toggle {
       position: absolute;
-      top: 0;
-      left: var(--#{$dual-list-selector}__list__list__item-toggle--Left);
+     inset-block-start: 0;
+     inset-inline-start: var(--#{$dual-list-selector}__list__list__item-toggle--Left);
       transform: translateX(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX));
     }
   }
@@ -265,12 +265,15 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 .#{$dual-list-selector}__item {
   position: relative;
   width: 100%;
-  padding: var(--#{$dual-list-selector}__item--PaddingTop) var(--#{$dual-list-selector}__item--PaddingRight) var(--#{$dual-list-selector}__item--PaddingBottom) var(--#{$dual-list-selector}__item--PaddingLeft);
+  padding-block-start: var(--#{$dual-list-selector}__item--PaddingTop);
+  padding-block-end: var(--#{$dual-list-selector}__item--PaddingBottom);
+  padding-inline-start: var(--#{$dual-list-selector}__item--PaddingLeft);
+  padding-inline-end: var(--#{$dual-list-selector}__item--PaddingRight);
   cursor: pointer;
 }
 
 .#{$dual-list-selector}__item-count {
-  margin-left: var(--#{$dual-list-selector}__item-count--Marginleft);
+  margin-inline-start: var(--#{$dual-list-selector}__item-count--Marginleft);
 
   .#{$badge}.pf-m-read {
     --#{$badge}--m-read--BackgroundColor: var(--#{$dual-list-selector}__item--c-badge--m-read--BackgroundColor);
@@ -287,8 +290,8 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 .#{$dual-list-selector}__controls {
   grid-area: var(--#{$dual-list-selector}__controls--GridArea);
   align-self: center;
-  padding-right: var(--#{$dual-list-selector}__controls--PaddingRight);
-  padding-left: var(--#{$dual-list-selector}__controls--PaddingLeft);
+  padding-inline-start: var(--#{$dual-list-selector}__controls--PaddingLeft);
+  padding-inline-end: var(--#{$dual-list-selector}__controls--PaddingRight);
 }
 
 .#{$dual-list-selector}__item-main {
@@ -297,15 +300,18 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 .#{$dual-list-selector}__item-toggle {
-  padding: var(--#{$dual-list-selector}__item-toggle--PaddingTop) var(--#{$dual-list-selector}__item-toggle--PaddingRight) var(--#{$dual-list-selector}__item-toggle--PaddingBottom) var(--#{$dual-list-selector}__item-toggle--PaddingLeft);
-  margin-top: var(--#{$dual-list-selector}__item-toggle--MarginTop);
-  margin-bottom: var(--#{$dual-list-selector}__item-toggle--MarginBottom);
+  padding-block-start: var(--#{$dual-list-selector}__item-toggle--PaddingTop);
+  padding-block-end: var(--#{$dual-list-selector}__item-toggle--PaddingBottom);
+  padding-inline-start: var(--#{$dual-list-selector}__item-toggle--PaddingLeft);
+  padding-inline-end: var(--#{$dual-list-selector}__item-toggle--PaddingRight);
+  margin-block-start: var(--#{$dual-list-selector}__item-toggle--MarginTop);
+  margin-block-end: var(--#{$dual-list-selector}__item-toggle--MarginBottom);
 }
 
 .#{$dual-list-selector}__item-check {
   display: flex;
   align-items: center;
-  margin-right: var(--#{$dual-list-selector}__item-check--MarginRight);
+  margin-inline-end: var(--#{$dual-list-selector}__item-check--MarginRight);
 }
 
 .#{$dual-list-selector}__item-toggle-icon {

@@ -120,8 +120,8 @@
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  padding-top: var(--#{$login}--PaddingTop);
-  padding-bottom: var(--#{$login}--PaddingBottom);
+  padding-block-start: var(--#{$login}--PaddingTop);
+  padding-block-end: var(--#{$login}--PaddingBottom);
 
   @media (min-width: $pf-v5-global--breakpoint--sm) {
     align-items: center;
@@ -142,8 +142,8 @@
     grid-template-columns: var(--#{$login}__container--xl--GridTemplateColumns);
     grid-column-gap: var(--#{$login}__container--xl--GridColumnGap);
     justify-content: center;
-    padding-right: var(--#{$login}__container--PaddingRight);
-    padding-left: var(--#{$login}__container--PaddingLeft);
+    padding-inline-start: var(--#{$login}__container--PaddingLeft);
+    padding-inline-end: var(--#{$login}__container--PaddingRight);
   }
 }
 
@@ -151,33 +151,33 @@
   @include pf-v5-t-dark;
 
   grid-area: header;
-  padding-right: var(--#{$login}__header--PaddingRight);
-  padding-left: var(--#{$login}__header--PaddingLeft);
+  padding-inline-start: var(--#{$login}__header--PaddingLeft);
+  padding-inline-end: var(--#{$login}__header--PaddingRight);
 
   @media (min-width: $pf-v5-global--breakpoint--xl) {
-    margin-top: var(--#{$login}__header--xl--MarginTop);
+    margin-block-start: var(--#{$login}__header--xl--MarginTop);
   }
 
   .#{$brand} {
-    margin-bottom: var(--#{$login}__header--c-brand--MarginBottom);
+    margin-block-end: var(--#{$login}__header--c-brand--MarginBottom);
   }
 }
 
 .#{$login}__main {
   grid-area: main;
   align-self: start;
-  margin-bottom: var(--#{$login}__main--MarginBottom);
+  margin-block-end: var(--#{$login}__main--MarginBottom);
   background-color: var(--#{$login}__main--BackgroundColor);
   box-shadow: var(--#{$login}__main--BoxShadow);
 
   // If the first child isn't a header, then we need to put the header's top padding there
   > :first-child:not(.#{$login}__main-header) {
-    padding-top: var(--#{$login}__main-header--PaddingTop);
+    padding-block-start: var(--#{$login}__main-header--PaddingTop);
   }
 
   // If the last child isn't the footer, then we need to put the footer's bottom padding there
   > :last-child:not(.#{$login}__main-footer) {
-    padding-bottom: var(--#{$login}__main-footer--PaddingBottom);
+    padding-block-end: var(--#{$login}__main-footer--PaddingBottom);
   }
 }
 
@@ -187,7 +187,10 @@
   row-gap: var(--#{$login}__main-header--RowGap);
   column-gap: var(--#{$login}__main-header--ColumnGap);
   align-items: center;
-  padding: var(--#{$login}__main-header--PaddingTop) var(--#{$login}__main-header--PaddingRight) var(--#{$login}__main-header--PaddingBottom) var(--#{$login}__main-header--PaddingLeft);
+  padding-block-start: var(--#{$login}__main-header--PaddingTop);
+  padding-block-end: var(--#{$login}__main-header--PaddingBottom);
+  padding-inline-start: var(--#{$login}__main-header--PaddingLeft);
+  padding-inline-end: var(--#{$login}__main-header--PaddingRight);
 
   @media (min-width: $pf-v5-global--breakpoint--md) {
     grid-template-columns: 1fr auto;
@@ -214,14 +217,14 @@
 
 .#{$login}__main-header-desc {
   grid-column: 1 / -1;
-  margin-bottom: var(--#{$login}__main-header-desc--MarginBottom);
+  margin-block-end: var(--#{$login}__main-header-desc--MarginBottom);
   font-size: var(--#{$login}__main-header-desc--FontSize);
 }
 
 .#{$login}__main-body {
-  padding-right: var(--#{$login}__main-body--PaddingRight);
-  padding-bottom: var(--#{$login}__main-body--PaddingBottom);
-  padding-left: var(--#{$login}__main-body--PaddingLeft);
+  padding-block-end: var(--#{$login}__main-body--PaddingBottom);
+  padding-inline-start: var(--#{$login}__main-body--PaddingLeft);
+  padding-inline-end: var(--#{$login}__main-body--PaddingRight);
 }
 
 .#{$login}__main-footer {
@@ -229,7 +232,7 @@
   flex-wrap: wrap;
 
   .#{$title} {
-    margin-bottom: var(--#{$login}__main-footer--c-title--MarginBottom);
+    margin-block-end: var(--#{$login}__main-footer--c-title--MarginBottom);
     text-align: center;
   }
 
@@ -242,13 +245,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: var(--#{$login}__main-footer-links--PaddingTop) var(--#{$login}__main-footer-links--PaddingRight) var(--#{$login}__main-footer-links--PaddingBottom) var(--#{$login}__main-footer-links--PaddingLeft);
+  padding-block-start: var(--#{$login}__main-footer-links--PaddingTop);
+  padding-block-end: var(--#{$login}__main-footer-links--PaddingBottom);
+  padding-inline-start: var(--#{$login}__main-footer-links--PaddingLeft);
+  padding-inline-end: var(--#{$login}__main-footer-links--PaddingRight);
 }
 
 .#{$login}__main-footer-links-item {
-  padding-right: var(--#{$login}__main-footer-links-item--PaddingRight);
-  padding-left: var(--#{$login}__main-footer-links-item--PaddingLeft);
-  margin-bottom: var(--#{$login}__main-footer-links-item--MarginBottom);
+  padding-inline-start: var(--#{$login}__main-footer-links-item--PaddingLeft);
+  padding-inline-end: var(--#{$login}__main-footer-links-item--PaddingRight);
+  margin-block-end: var(--#{$login}__main-footer-links-item--MarginBottom);
 }
 
 .#{$login}__main-footer-links-item-link {
@@ -268,12 +274,15 @@
 }
 
 .#{$login}__main-footer-band {
-  padding: var(--#{$login}__main-footer-band--PaddingTop) var(--#{$login}__main-footer-band--PaddingRight) var(--#{$login}__main-footer-band--PaddingBottom) var(--#{$login}__main-footer-band--PaddingLeft);
+  padding-block-start: var(--#{$login}__main-footer-band--PaddingTop);
+  padding-block-end: var(--#{$login}__main-footer-band--PaddingBottom);
+  padding-inline-start: var(--#{$login}__main-footer-band--PaddingLeft);
+  padding-inline-end: var(--#{$login}__main-footer-band--PaddingRight);
   text-align: center;
-  border-top: var(--#{$login}__main-footer-band--BorderTopWidth) solid var(--#{$login}__main-footer-band--BorderTopColor);
+  border-block-start: var(--#{$login}__main-footer-band--BorderTopWidth) solid var(--#{$login}__main-footer-band--BorderTopColor);
 
   > * + * {
-    padding-top: var(--#{$login}__main-footer-band-item--PaddingTop);
+    padding-block-start: var(--#{$login}__main-footer-band-item--PaddingTop);
   }
 }
 
@@ -281,8 +290,8 @@
   @include pf-v5-t-dark;
 
   grid-area: footer;
-  padding-right: var(--#{$login}__footer--PaddingRight);
-  padding-left: var(--#{$login}__footer--PaddingLeft);
+  padding-inline-start: var(--#{$login}__footer--PaddingLeft);
+  padding-inline-end: var(--#{$login}__footer--PaddingRight);
 
   .#{$list} {
     a {
@@ -290,7 +299,7 @@
     }
 
     &:not(:only-child) { // paragraph text might not always be included.
-      padding-top: var(--#{$login}__footer--c-list--PaddingTop);
+      padding-block-start: var(--#{$login}__footer--c-list--PaddingTop);
     }
   }
 }

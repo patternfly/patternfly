@@ -45,7 +45,7 @@
 
 .#{$check}__body {
   grid-column: 2;
-  margin-top: var(--#{$check}__body--MarginTop);
+  margin-block-start: var(--#{$check}__body--MarginTop);
 }
 
 // stylelint-disable property-no-vendor-prefix
@@ -73,7 +73,7 @@
 }
 
 .#{$check}__label-required {
-  margin-left: var(--#{$check}__label-required--MarginLeft);
+  margin-inline-start: var(--#{$check}__label-required--MarginLeft);
   font-size: var(--#{$check}__label-required--FontSize);
   color: var(--#{$check}__label-required--Color);
 }

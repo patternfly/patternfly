@@ -214,9 +214,9 @@
   &.pf-m-non-selectable-raised {
     &::before {
       position: absolute;
-      right: var(--#{$card}--m-selectable-raised--before--Right);
-      bottom: var(--#{$card}--m-selectable-raised--before--Bottom);
-      left: var(--#{$card}--m-selectable-raised--before--Left);
+      inset-block-end: var(--#{$card}--m-selectable-raised--before--Bottom);
+      inset-inline-start: var(--#{$card}--m-selectable-raised--before--Left);
+      inset-inline-end: var(--#{$card}--m-selectable-raised--before--Right);
       height: var(--#{$card}--m-selectable-raised--before--Height);
       content: "";
       background-color: var(--#{$card}--m-selectable-raised--before--BackgroundColor);
@@ -329,7 +329,7 @@
     & + .#{$card}__title,
     & + .#{$card}__body,
     & + .#{$card}__footer {
-      padding-top: var(--#{$card}--c-divider--child--PaddingTop);
+      padding-block-start: var(--#{$card}--c-divider--child--PaddingTop);
     }
   }
 }
@@ -362,7 +362,10 @@
 
 .#{$card}__header-toggle {
   align-self: flex-start;
-  margin: var(--#{$card}__header-toggle--MarginTop) var(--#{$card}__header-toggle--MarginRight) var(--#{$card}__header-toggle--MarginBottom) var(--#{$card}__header-toggle--MarginLeft);
+  margin-block-start: var(--#{$card}__header-toggle--MarginTop);
+  margin-block-end: var(--#{$card}__header-toggle--MarginBottom);
+  margin-inline-start: var(--#{$card}__header-toggle--MarginLeft);
+  margin-inline-end: var(--#{$card}__header-toggle--MarginRight);
 }
 
 .#{$card}__header-toggle-icon {
@@ -383,8 +386,10 @@
   align-items: center;
   align-self: flex-start;
   order: 1;
-  padding-left: var(--#{$card}__actions--PaddingLeft);
-  margin: var(--#{$card}__actions--MarginTop) 0 var(--#{$card}__actions--MarginBottom) auto;
+  padding-inline-start: var(--#{$card}__actions--PaddingLeft);
+  margin-block-start: var(--#{$card}__actions--MarginTop);
+  margin-block-end: var(--#{$card}__actions--MarginBottom);
+  margin-inline-start: auto;
 
   + .#{$card}__title,
   + .#{$card}__body,
@@ -455,19 +460,19 @@
 .#{$card}__title,
 .#{$card}__body,
 .#{$card}__footer {
-  padding-right: var(--#{$card}--child--PaddingRight);
-  padding-bottom: var(--#{$card}--child--PaddingBottom);
-  padding-left: var(--#{$card}--child--PaddingLeft);
+  padding-block-end: var(--#{$card}--child--PaddingBottom);
+  padding-inline-start: var(--#{$card}--child--PaddingLeft);
+  padding-inline-end: var(--#{$card}--child--PaddingRight);
 
   &:first-child {
-    padding-top: var(--#{$card}--first-child--PaddingTop);
+    padding-block-start: var(--#{$card}--first-child--PaddingTop);
   }
 }
 
 .#{$card}__header,
 .#{$card}__title {
   &:not(:last-child) {
-    padding-bottom: var(--#{$card}__title--not--last-child--PaddingBottom);
+    padding-block-end: var(--#{$card}__title--not--last-child--PaddingBottom);
   }
 }
 
@@ -490,10 +495,10 @@
 // for the selectable raised
 .#{$card}__sr-input:focus + .#{$card}::after {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   content: "";
   border: var(--#{$card}__input--focus--BorderWidth) solid var(--#{$card}__input--focus--BorderColor);
 }

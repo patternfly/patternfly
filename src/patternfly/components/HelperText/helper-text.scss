@@ -81,7 +81,7 @@
 }
 
 .#{$helper-text}__item-icon {
-  margin-right: var(--#{$helper-text}__item-icon--MarginRight);
+  margin-inline-end: var(--#{$helper-text}__item-icon--MarginRight);
   color: var(--#{$helper-text}__item-icon--Color);
 }
 

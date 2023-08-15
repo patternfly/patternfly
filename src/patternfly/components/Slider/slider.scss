@@ -100,8 +100,8 @@
 }
 
 .#{$slider}__rail {
-  padding-top: var(--#{$slider}__rail--PaddingTop);
-  padding-bottom: var(--#{$slider}__rail--PaddingBottom);
+  padding-block-start: var(--#{$slider}__rail--PaddingTop);
+  padding-block-end: var(--#{$slider}__rail--PaddingBottom);
 }
 
 .#{$slider}__rail-track {
@@ -110,10 +110,7 @@
 
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     content: "";
     background:
       linear-gradient(
@@ -134,8 +131,8 @@
 
 .#{$slider}__step {
   position: absolute;
-  top: 0;
-  left: var(--#{$slider}__step--Left); // set programmatically as an inline style
+ inset-block-start: 0;
+ inset-inline-start: var(--#{$slider}__step--Left); // set programmatically as an inline style
   content: "";
 
   &.pf-m-active {
@@ -155,8 +152,8 @@
 
 .#{$slider}__step-tick {
   position: absolute;
-  top: var(--#{$slider}__step-tick--Top);
-  left: 0;
+ inset-block-start: var(--#{$slider}__step-tick--Top);
+ inset-inline-start: 0;
   width: var(--#{$slider}__step-tick--Width);
   height: var(--#{$slider}__step-tick--Height);
   background-color: var(--#{$slider}__step-tick--BackgroundColor);
@@ -166,15 +163,15 @@
 
 .#{$slider}__step-label {
   position: absolute;
-  top: var(--#{$slider}__step-label--Top);
+ inset-block-start: var(--#{$slider}__step-label--Top);
   word-break: normal;
   transform: translateX(var(--#{$slider}__step-label--TranslateX));
 }
 
 .#{$slider}__thumb {
   position: absolute;
-  top: var(--#{$slider}__thumb--Top);
-  left: var(--#{$slider}__thumb--Left);
+ inset-block-start: var(--#{$slider}__thumb--Top);
+ inset-inline-start: var(--#{$slider}__thumb--Left);
   width: var(--#{$slider}__thumb--Width);
   height: var(--#{$slider}__thumb--Height);
   cursor: pointer;
@@ -185,8 +182,8 @@
 
   &::before {
     position: absolute;
-    top: 50%;
-    left: 50%;
+   inset-block-start: 50%;
+   inset-inline-start: 50%;
     width: var(--#{$slider}__thumb--before--Width);
     height: var(--#{$slider}__thumb--before--Height);
     content: "";
@@ -210,14 +207,14 @@
 }
 
 .#{$slider}__value {
-  margin-left: var(--#{$slider}__value--MarginLeft);
+  margin-inline-start: var(--#{$slider}__value--MarginLeft);
 
   &.pf-m-floating {
     --#{$slider}__value--MarginLeft: 0;
 
     position: absolute;
-    top: 0;
-    left: var(--#{$slider}__value--m-floating--Left);
+   inset-block-start: 0;
+   inset-inline-start: var(--#{$slider}__value--m-floating--Left);
     z-index: var(--#{$slider}__value--m-floating--ZIndex);
     transform: translate(var(--#{$slider}__value--m-floating--TranslateX), var(--#{$slider}__value--m-floating--TranslateY));
   }
@@ -229,11 +226,11 @@
 
 .#{$slider}__actions {
   display: flex;
-  margin-right: var(--#{$slider}__actions--MarginRight);
+  margin-inline-end: var(--#{$slider}__actions--MarginRight);
 
   .#{$slider}__main ~ & {
     --#{$slider}__actions--MarginRight: 0;
 
-    margin-left: var(--#{$slider}__main--actions--MarginLeft);
+    margin-inline-start: var(--#{$slider}__main--actions--MarginLeft);
   }
 }

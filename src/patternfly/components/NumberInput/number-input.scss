@@ -33,7 +33,7 @@
     width: var(--#{$number-input}--c-form-control--Width);
 
     > :is(input) {
-      text-align: right;
+      text-align: end;
 
       @extend %pf-v5-remove-num-arrows;
     }
@@ -42,7 +42,7 @@
 
 .#{$input-group} + .#{$number-input}__unit,
 .#{$number-input}__unit + .#{$input-group} {
-  margin-left: var(--#{$number-input}__unit--c-input-group--MarginLeft);
+  margin-inline-start: var(--#{$number-input}__unit--c-input-group--MarginLeft);
 }
 
 .#{$number-input}__icon {

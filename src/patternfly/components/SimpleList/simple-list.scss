@@ -38,11 +38,14 @@
 .#{$simple-list}__item-link {
   display: block;
   width: 100%;
-  padding: var(--#{$simple-list}__item-link--PaddingTop) var(--#{$simple-list}__item-link--PaddingRight) var(--#{$simple-list}__item-link--PaddingBottom) var(--#{$simple-list}__item-link--PaddingLeft);
+  padding-block-start: var(--#{$simple-list}__item-link--PaddingTop);
+  padding-block-end: var(--#{$simple-list}__item-link--PaddingBottom);
+  padding-inline-start: var(--#{$simple-list}__item-link--PaddingLeft);
+  padding-inline-end: var(--#{$simple-list}__item-link--PaddingRight);
   font-size: var(--#{$simple-list}__item-link--FontSize);
   font-weight: var(--#{$simple-list}__item-link--FontWeight);
   color: var(--#{$simple-list}__item-link--Color);
-  text-align: left;
+  text-align: start;
   background-color: var(--#{$simple-list}__item-link--BackgroundColor);
   border: none;
 
@@ -73,14 +76,17 @@
 }
 
 .#{$simple-list}__title {
-  padding: var(--#{$simple-list}__title--PaddingTop) var(--#{$simple-list}__title--PaddingRight) var(--#{$simple-list}__title--PaddingBottom) var(--#{$simple-list}__title--PaddingLeft);
+  padding-block-start: var(--#{$simple-list}__title--PaddingTop);
+  padding-block-end: var(--#{$simple-list}__title--PaddingBottom);
+  padding-inline-start: var(--#{$simple-list}__title--PaddingLeft);
+  padding-inline-end: var(--#{$simple-list}__title--PaddingRight);
   font-size: var(--#{$simple-list}__title--FontSize);
   font-weight: var(--#{$simple-list}__title--FontWeight);
   color: var(--#{$simple-list}__title--Color);
 }
 
 .#{$simple-list}__section + .#{$simple-list}__section {
-  margin-top: var(--#{$simple-list}__section--section--MarginTop);
+  margin-block-start: var(--#{$simple-list}__section--section--MarginTop);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

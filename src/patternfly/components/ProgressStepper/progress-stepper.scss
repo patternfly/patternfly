@@ -151,7 +151,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
   // Step Title variables
   --#{$progress-stepper}__step-title--Color: var(--#{$pf-global}--Color--100);
-  --#{$progress-stepper}__step-title--TextAlign: left;
+  --#{$progress-stepper}__step-title--TextAlign: start;
   --#{$progress-stepper}__step-title--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$progress-stepper}__step-title--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$progress-stepper}__step--m-current__step-title--FontWeight: var(--#{$pf-global}--FontWeight--bold);
@@ -179,7 +179,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   --#{$progress-stepper}__step-description--MarginTop: var(--#{$pf-global}--spacer--xs);
   --#{$progress-stepper}__step-description--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$progress-stepper}__step-description--Color: var(--#{$pf-global}--Color--200);
-  --#{$progress-stepper}__step-description--TextAlign: left;
+  --#{$progress-stepper}__step-description--TextAlign: start;
 
   // Vertical by default
   @include pf-v5-c-progress-stepper--m-vertical;
@@ -216,7 +216,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     }
 
     .#{$progress-stepper}__step:not(:last-of-type) > .#{$progress-stepper}__step-connector::before {
-      left: var(--#{$progress-stepper}--m-center__step-connector--before--Left);
+     inset-inline-start: var(--#{$progress-stepper}--m-center__step-connector--before--Left);
     }
 
     // If not compact variant, swap borders from connector to main
@@ -250,11 +250,11 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
     .#{$progress-stepper}__step-connector {
       grid-row: var(--#{$progress-stepper}--m-compact__step-connector--GridRow);
       min-width: var(--#{$progress-stepper}--m-compact__step-connector--MinWidth);
-      padding-bottom: var(--#{$progress-stepper}--m-compact__step-connector--PaddingBottom);
+      padding-block-end: var(--#{$progress-stepper}--m-compact__step-connector--PaddingBottom);
     }
 
     .#{$progress-stepper}__step-main {
-      margin-bottom: var(--#{$progress-stepper}--m-compact__step-main--MarginBottom);
+      margin-block-end: var(--#{$progress-stepper}--m-compact__step-main--MarginBottom);
     }
 
     .#{$progress-stepper}__step:not(.pf-m-current) .#{$progress-stepper}__step-main {
@@ -327,13 +327,13 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
   .#{$progress-stepper}__step:not(:last-of-type) > &::before {
     position: absolute;
-    top: var(--#{$progress-stepper}__step-connector--before--Top); // half the height
-    left: var(--#{$progress-stepper}__step-connector--before--Left);
+   inset-block-start: var(--#{$progress-stepper}__step-connector--before--Top); // half the height
+   inset-inline-start: var(--#{$progress-stepper}__step-connector--before--Left);
     width: var(--#{$progress-stepper}__step-connector--before--Width);
     height: var(--#{$progress-stepper}__step-connector--before--Height);
     content: "";
-    border-right: var(--#{$progress-stepper}__step-connector--before--BorderRightWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderRightColor);
-    border-bottom: var(--#{$progress-stepper}__step-connector--before--BorderBottomWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderBottomColor);
+    border-block-end: var(--#{$progress-stepper}__step-connector--before--BorderBottomWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderBottomColor);
+    border-inline-end: var(--#{$progress-stepper}__step-connector--before--BorderRightWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderRightColor);
     transform: var(--#{$progress-stepper}__step-connector--before--Transform);
   }
 }
@@ -355,12 +355,12 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
   // Align pficons with the font awesome icons
   // stylelint-disable
   .pf-v5-pficon {
-    margin-top: var(--#{$progress-stepper}__pficon--MarginTop);
+    margin-block-start: var(--#{$progress-stepper}__pficon--MarginTop);
   }
 
   // Push the triangle up to fit inside the circle
   .fa-exclamation-triangle {
-    margin-top: var(--#{$progress-stepper}__fa-exclamation-triangle--MarginTop);
+    margin-block-start: var(--#{$progress-stepper}__fa-exclamation-triangle--MarginTop);
   }
   // stylelint-enable
 }
@@ -368,18 +368,21 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 // Step main
 .#{$progress-stepper}__step-main {
   min-width: 0;
-  margin: var(--#{$progress-stepper}__step-main--MarginTop) var(--#{$progress-stepper}__step-main--MarginRight) var(--#{$progress-stepper}__step-main--MarginBottom) var(--#{$progress-stepper}__step-main--MarginLeft);
+  margin-block-start: var(--#{$progress-stepper}__step-main--MarginTop);
+  margin-block-end: var(--#{$progress-stepper}__step-main--MarginBottom);
+  margin-inline-start: var(--#{$progress-stepper}__step-main--MarginLeft);
+  margin-inline-end: var(--#{$progress-stepper}__step-main--MarginRight);
   text-align: var(--#{$progress-stepper}--step-main--TextAlign, auto);
   overflow-wrap: anywhere;
 
   // Draw a new border for vertical alignment using step main
   .#{$progress-stepper}__step:not(:last-of-type) > &::before {
     position: absolute;
-    top: calc(100% + var(--#{$progress-stepper}__step-main--MarginTop));
-    left: calc(50% - calc(var(--#{$progress-stepper}__step-connector--before--BorderRightWidth) / 2));
+   inset-block-start: calc(100% + var(--#{$progress-stepper}__step-main--MarginTop));
+   inset-inline-start: calc(50% - calc(var(--#{$progress-stepper}__step-connector--before--BorderRightWidth) / 2));
     width: auto;
     height: calc(var(--#{$progress-stepper}__step-main--MarginTop) + var(--#{$progress-stepper}__step-main--MarginBottom));
-    border-right: var(--#{$progress-stepper}__step-connector--before--BorderRightWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderRightColor);
+    border-inline-end: var(--#{$progress-stepper}__step-connector--before--BorderRightWidth) solid var(--#{$progress-stepper}__step-connector--before--BorderRightColor);
   }
 }
 
@@ -414,7 +417,7 @@ $pf-v5-c-progress-stepper--breakpoint-map: build-breakpoint-map();
 
 // Step description
 .#{$progress-stepper}__step-description {
-  margin-top: var(--#{$progress-stepper}__step-description--MarginTop);
+  margin-block-start: var(--#{$progress-stepper}__step-description--MarginTop);
   font-size: var(--#{$progress-stepper}__step-description--FontSize);
   color: var(--#{$progress-stepper}__step-description--Color);
   text-align: var(--#{$progress-stepper}__step-description--TextAlign);

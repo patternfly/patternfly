@@ -168,14 +168,14 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   &.pf-m-inline,
   &.pf-m-static {
     > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
-      padding-left: var(--#{$drawer}--m-inline__panel--PaddingLeft);
+      padding-inline-start: var(--#{$drawer}--m-inline__panel--PaddingLeft);
     }
   }
 
   &.pf-m-panel-left > .#{$drawer}__main {
     > .#{$drawer}__panel {
       order: 0;
-      margin-right: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
+      margin-inline-end: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
       transform: translateX(-100%);
     }
 
@@ -263,7 +263,10 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   }
 
   > .#{$drawer}__body {
-    padding: var(--#{$drawer}__content--child--PaddingTop) var(--#{$drawer}__content--child--PaddingRight) var(--#{$drawer}__content--child--PaddingBottom) var(--#{$drawer}__content--child--PaddingLeft);
+    padding-block-start: var(--#{$drawer}__content--child--PaddingTop);
+    padding-block-end: var(--#{$drawer}__content--child--PaddingBottom);
+    padding-inline-start: var(--#{$drawer}__content--child--PaddingLeft);
+    padding-inline-end: var(--#{$drawer}__content--child--PaddingRight);
   }
 }
 
@@ -283,8 +286,8 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   &::after {
     position: absolute;
-    top: 0;
-    left: 0;
+   inset-block-start: 0;
+   inset-inline-start: 0;
     width: var(--#{$drawer}__panel--after--Width);
     height: 100%;
     content: "";
@@ -340,13 +343,16 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   grid-row: 1;
   grid-column: 2;
   align-self: baseline;
-  margin-top: var(--#{$drawer}__actions--MarginTop);
-  margin-right: var(--#{$drawer}__actions--MarginRight);
+  margin-block-start: var(--#{$drawer}__actions--MarginTop);
+  margin-inline-end: var(--#{$drawer}__actions--MarginRight);
 }
 
 // Modified content children
 .#{$drawer}__body {
-  padding: var(--#{$drawer}--child--PaddingTop) var(--#{$drawer}--child--PaddingRight) var(--#{$drawer}--child--PaddingBottom) var(--#{$drawer}--child--PaddingLeft);
+  padding-block-start: var(--#{$drawer}--child--PaddingTop);
+  padding-block-end: var(--#{$drawer}--child--PaddingBottom);
+  padding-inline-start: var(--#{$drawer}--child--PaddingLeft);
+  padding-inline-end: var(--#{$drawer}--child--PaddingRight);
 
   // No padding
   &.pf-m-no-padding {
@@ -354,18 +360,21 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
     > .#{$drawer}__actions,
     > .#{$drawer}__head > .#{$drawer}__actions {
-      margin-top: 0;
-      margin-right: 0;
+      margin-block-start: 0;
+      margin-inline-end: 0;
     }
   }
 
   // Padding
   &.pf-m-padding {
-    padding: var(--#{$drawer}--child--m-padding--PaddingTop) var(--#{$drawer}--child--m-padding--PaddingRight) var(--#{$drawer}--child--m-padding--PaddingBottom) var(--#{$drawer}--child--m-padding--PaddingLeft);
+    padding-block-start: var(--#{$drawer}--child--m-padding--PaddingTop);
+    padding-block-end: var(--#{$drawer}--child--m-padding--PaddingBottom);
+    padding-inline-start: var(--#{$drawer}--child--m-padding--PaddingLeft);
+    padding-inline-end: var(--#{$drawer}--child--m-padding--PaddingRight);
   }
 
   &:not(.pf-m-no-padding) + * {
-    padding-top: 0;
+    padding-block-start: 0;
   }
 
   &:last-child {
@@ -408,20 +417,23 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   &::after {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     content: "";
     border: solid var(--#{$drawer}__splitter--after--BorderColor);
-    border-width: var(--#{$drawer}__splitter--after--BorderTopWidth) var(--#{$drawer}__splitter--after--BorderRightWidth) var(--#{$drawer}__splitter--after--BorderBottomWidth) var(--#{$drawer}__splitter--after--BorderLeftWidth);
+    border-block-start-width: var(--#{$drawer}__splitter--after--BorderTopWidth);
+    border-block-end-width: var(--#{$drawer}__splitter--after--BorderBottomWidth);
+    border-inline-start-width: var(--#{$drawer}__splitter--after--BorderLeftWidth);
+    border-inline-end-width: var(--#{$drawer}__splitter--after--BorderRightWidth);
   }
 }
 
 .#{$drawer}__splitter-handle {
   position: absolute;
-  top: var(--#{$drawer}__splitter-handle--Top);
-  left: var(--#{$drawer}__splitter-handle--Left);
+ inset-block-start: var(--#{$drawer}__splitter-handle--Top);
+ inset-inline-start: var(--#{$drawer}__splitter-handle--Left);
   transform: translate(-50%, -50%);
 
   &::after {
@@ -431,7 +443,10 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     content: "";
     border-color: var(--#{$drawer}__splitter-handle--after--BorderColor);
     border-style: solid;
-    border-width: var(--#{$drawer}__splitter-handle--after--BorderTopWidth) var(--#{$drawer}__splitter-handle--after--BorderRightWidth) var(--#{$drawer}__splitter-handle--after--BorderBottomWidth) var(--#{$drawer}__splitter-handle--after--BorderLeftWidth);
+    border-block-start-width: var(--#{$drawer}__splitter-handle--after--BorderTopWidth);
+    border-block-end-width: var(--#{$drawer}__splitter-handle--after--BorderBottomWidth);
+    border-inline-start-width: var(--#{$drawer}__splitter-handle--after--BorderLeftWidth);
+    border-inline-end-width: var(--#{$drawer}__splitter-handle--after--BorderRightWidth);
   }
 }
 
@@ -477,8 +492,8 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     &.pf-m-inline,
     &.pf-m-static {
       > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
-        padding-right: var(--#{$drawer}--m-panel-left--m-inline__panel--PaddingRight);
-        padding-left: 0;
+        padding-inline-start: 0;
+        padding-inline-end: var(--#{$drawer}--m-panel-left--m-inline__panel--PaddingRight);
       }
     }
 
@@ -487,8 +502,8 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     }
 
     > .#{$drawer}__main > .#{$drawer}__panel::after {
-      right: 0;
-      left: auto;
+      inset-inline-start: auto;
+      inset-inline-end: 0;
     }
 
     > .#{$drawer}__main > .#{$drawer}__panel.pf-m-resizable {
@@ -513,14 +528,14 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     &.pf-m-inline,
     &.pf-m-static {
       > .#{$drawer}__main > .#{$drawer}__panel:not(.pf-m-no-border, .pf-m-resizable) {
-        padding-top: var(--#{$drawer}--m-panel-bottom--m-inline__panel--PaddingTop);
-        padding-left: 0;
+        padding-block-start: var(--#{$drawer}--m-panel-bottom--m-inline__panel--PaddingTop);
+        padding-inline-start: 0;
       }
     }
 
     > .#{$drawer}__main > .#{$drawer}__panel::after {
-      top: 0;
-      left: auto;
+     inset-block-start: 0;
+     inset-inline-start: auto;
       width: 100%;
       height: var(--#{$drawer}--m-panel-bottom__panel--after--Height);
     }
@@ -626,14 +641,14 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       }
 
       > .#{$drawer}__main > .#{$drawer}__panel {
-        margin-left: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
+        margin-inline-start: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
         transform: translateX(100%);
       }
 
       // stylelint-disable selector-max-class, selector-max-combinators, selector-max-compound-selectors
       // Inline, expanded
       &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel {
-        margin-left: 0;
+        margin-inline-start: 0;
         transform: translateX(0);
       }
 
@@ -644,14 +659,14 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       // Panel left
       &.pf-m-panel-left {
         > .#{$drawer}__main > .#{$drawer}__panel {
-          margin-right: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
-          margin-left: 0;
+          margin-inline-start: 0;
+          margin-inline-end: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
           transform: translateX(-100%);
         }
 
         // Inline, expanded, panel left
         &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel {
-          margin-right: 0;
+          margin-inline-end: 0;
           transform: translateX(0);
         }
 
@@ -663,13 +678,13 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       // Panel bottom
       &.pf-m-panel-bottom {
         > .#{$drawer}__main > .#{$drawer}__panel {
-          margin-bottom: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
+          margin-block-end: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
           transform: translateY(100%);
         }
 
         // Inline, expanded, panel left
         &.pf-m-expanded > .#{$drawer}__main > .#{$drawer}__panel {
-          margin-bottom: 0;
+          margin-block-end: 0;
           transform: translateY(0);
         }
       }
@@ -685,7 +700,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
       // stylelint-disable max-nesting-depth, selector-max-class, selector-max-combinators, selector-max-compound-selectors
       &.pf-m-panel-left {
         > .#{$drawer}__main > .#{$drawer}__panel {
-          margin-right: 0;
+          margin-inline-end: 0;
           transform: translateX(0);
         }
       }

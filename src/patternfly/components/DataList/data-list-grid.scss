@@ -43,14 +43,14 @@
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
-    padding-bottom: var(--#{$data-list}__item-content--md--PaddingBottom);
+    padding-block-end: var(--#{$data-list}__item-content--md--PaddingBottom);
   }
 
   .#{$data-list}__cell {
     // stylelint-disable selector-not-notation
     // update to single :not() in breaking change
     &:not(:last-child):not(.pf-m-icon) {
-      margin-right: var(--#{$data-list}__cell--MarginRight);
+      margin-inline-end: var(--#{$data-list}__cell--MarginRight);
     }
 
     // for all subsequent .#{$data-list}__cell's, set to full width
@@ -60,7 +60,7 @@
     }
 
     &.pf-m-align-right {
-      margin-left: auto;
+      margin-inline-start: auto;
     }
 
     &.pf-m-no-fill {

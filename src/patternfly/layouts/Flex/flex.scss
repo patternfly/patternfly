@@ -40,7 +40,7 @@ $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
   order: var(--#{$flex}--item--Order);
   max-width: 100%;
-  margin-right: var(--#{$flex}--spacer--column);
+  margin-inline-end: var(--#{$flex}--spacer--column);
 
   // don't set base value for --#{$flex}--item--Order as it defaults to 0
   @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
@@ -92,7 +92,10 @@ $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         align-items: normal;
 
         > * {
-          margin: 0 0 var(--#{$flex}--spacer--row) 0;
+          margin-block-start: 0;
+          margin-block-end: var(--#{$flex}--spacer--row);
+          margin-inline-start: 0;
+          margin-inline-end: 0;
         }
       }
 
@@ -102,7 +105,10 @@ $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
         align-items: normal;
 
         > * {
-          margin: var(--#{$flex}--spacer--row) 0 0 0;
+          margin-block-start: var(--#{$flex}--spacer--row);
+          margin-block-end: 0;
+          margin-inline-start: 0;
+          margin-inline-end: 0;
         }
       }
 
@@ -113,7 +119,10 @@ $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
         // unset styling set for .pf-m-column
         > * {
-          margin: 0 var(--#{$flex}--spacer--column) 0 0;
+          margin-block-start: 0;
+          margin-block-end: 0;
+          margin-inline-start: 0;
+          margin-inline-end: var(--#{$flex}--spacer--column);
         }
       }
 
@@ -124,7 +133,10 @@ $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
         // unset styling set for .pf-m-column
         > * {
-          margin: 0 0 0 var(--#{$flex}--spacer--column);
+          margin-block-start: 0;
+          margin-block-end: 0;
+          margin-inline-start: var(--#{$flex}--spacer--column);
+          margin-inline-end: 0;
         }
       }
 
@@ -215,11 +227,11 @@ $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
       // alignment
       > .pf-m-align-right#{$breakpoint-name} {
-        margin-left: auto;
+        margin-inline-start: auto;
       }
 
       > .pf-m-align-left#{$breakpoint-name} {
-        margin-left: 0;
+        margin-inline-start: 0;
       }
 
       // item properties
@@ -233,7 +245,7 @@ $pf-v5-l-flex--variable-map: build-variable-map("#{$pf-prefix}l-flex--spacer", $
 
       > .pf-m-full-width#{$breakpoint-name} {
         width: 100%;
-        margin-right: 0;
+        margin-inline-end: 0;
       }
 
       > .pf-m-flex-1#{$breakpoint-name} {

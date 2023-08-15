@@ -136,19 +136,28 @@
   }
 
   &::before {
-    border-color: var(--#{$form-control}--before--BorderTopColor) var(--#{$form-control}--before--BorderRightColor) var(--#{$form-control}--before--BorderBottomColor) var(--#{$form-control}--before--BorderLeftColor);
     border-style: var(--#{$form-control}--before--BorderStyle, solid);
-    border-width: var(--#{$form-control}--before--BorderTopWidth) var(--#{$form-control}--before--BorderRightWidth) var(--#{$form-control}--before--BorderBottomWidth) var(--#{$form-control}--before--BorderLeftWidth);
+    border-block-start-color: var(--#{$form-control}--before--BorderTopColor);
+    border-block-start-width: var(--#{$form-control}--before--BorderTopWidth);
+    border-block-end-color: var(--#{$form-control}--before--BorderBottomColor);
+    border-block-end-width: var(--#{$form-control}--before--BorderBottomWidth);
+    border-inline-start-color: var(--#{$form-control}--before--BorderLeftColor);
+    border-inline-start-width: var(--#{$form-control}--before--BorderLeftWidth);
+    border-inline-end-color: var(--#{$form-control}--before--BorderRightColor);
+    border-inline-end-width: var(--#{$form-control}--before--BorderRightWidth);
   }
 
   &::after {
-    border-bottom: var(--#{$form-control}--after--BorderBottomWidth) var(--#{$form-control}--after--BorderStyle, solid) var(--#{$form-control}--after--BorderBottomColor);
+    border-block-end: var(--#{$form-control}--after--BorderBottomWidth) var(--#{$form-control}--after--BorderStyle, solid) var(--#{$form-control}--after--BorderBottomColor);
   }
 
   > :is(input, select, textarea) {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
-    padding: var(--#{$form-control}--PaddingTop) var(--#{$form-control}--PaddingRight) var(--#{$form-control}--PaddingBottom) var(--#{$form-control}--PaddingLeft);
+    padding-block-start: var(--#{$form-control}--PaddingTop);
+    padding-block-end: var(--#{$form-control}--PaddingBottom);
+    padding-inline-start: var(--#{$form-control}--PaddingLeft);
+    padding-inline-end: var(--#{$form-control}--PaddingRight);
     color: var(--#{$form-control}--Color);
     background-color: transparent;
     border: none;
@@ -308,7 +317,7 @@
 }
 
 .#{$form-control}__icon {
-  padding-top: var(--#{$form-control}__icon--PaddingTop);
+  padding-block-start: var(--#{$form-control}__icon--PaddingTop);
   color: var(--#{$form-control}__icon--Color);
 
   &.pf-m-status {
@@ -319,9 +328,9 @@
 .#{$form-control}__toggle-icon {
   grid-row: 1 / 2;
   grid-column: 3;
-  padding-top: var(--#{$form-control}__toggle-icon--PaddingTop);
-  padding-right: var(--#{$form-control}__toggle-icon--PaddingRight);
-  padding-left: var(--#{$form-control}__toggle-icon--PaddingLeft);
+  padding-block-start: var(--#{$form-control}__toggle-icon--PaddingTop);
+  padding-inline-start: var(--#{$form-control}__toggle-icon--PaddingLeft);
+  padding-inline-end: var(--#{$form-control}__toggle-icon--PaddingRight);
   color: var(--#{$form-control}__toggle-icon--Color);
   pointer-events: none;
 }
@@ -332,7 +341,7 @@
   grid-row: 1 / 2;
   grid-column: 2;
   gap: var(--#{$form-control}__utilities--Gap);
-  padding-right: var(--#{$form-control}__utilities--PaddingRight);
+  padding-inline-end: var(--#{$form-control}__utilities--PaddingRight);
   pointer-events: none;
 }
 

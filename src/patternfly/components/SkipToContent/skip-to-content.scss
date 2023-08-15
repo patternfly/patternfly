@@ -6,11 +6,11 @@
   --#{$skip-to-content}--focus--Left: var(--#{$pf-global}--spacer--md);
 
   position: absolute;
-  top: var(--#{$skip-to-content}--Top);
-  left: -300%; // moves off screen
+ inset-block-start: var(--#{$skip-to-content}--Top);
+ inset-inline-start: -300%; // moves off screen
   z-index: var(--#{$skip-to-content}--ZIndex);
 
   &:focus-within {
-    left: var(--#{$skip-to-content}--focus--Left);
+   inset-inline-start: var(--#{$skip-to-content}--focus--Left);
   }
 }

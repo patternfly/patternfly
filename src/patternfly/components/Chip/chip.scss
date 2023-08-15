@@ -50,17 +50,20 @@
   display: inline-flex;
   align-items: center;
   min-width: 0;
-  padding: var(--#{$chip}--PaddingTop) var(--#{$chip}--PaddingRight) var(--#{$chip}--PaddingBottom) var(--#{$chip}--PaddingLeft);
+  padding-block-start: var(--#{$chip}--PaddingTop);
+  padding-block-end: var(--#{$chip}--PaddingBottom);
+  padding-inline-start: var(--#{$chip}--PaddingLeft);
+  padding-inline-end: var(--#{$chip}--PaddingRight);
   list-style: none;
   background-color: var(--#{$chip}--BackgroundColor);
   border-radius: var(--#{$chip}--BorderRadius);
 
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     content: "";
     border: var(--#{$chip}--before--BorderWidth) solid var(--#{$chip}--before--BorderColor);
     border-radius: var(--#{$chip}--before--BorderRadius);
@@ -101,7 +104,7 @@
 
 .#{$chip}__icon + .#{$chip}__text,
 .#{$chip}__text + .#{$chip}__icon {
-  margin-left: var(--#{$chip}__icon--MarginLeft);
+  margin-inline-start: var(--#{$chip}__icon--MarginLeft);
 }
 
 .#{$chip}__content {
@@ -122,9 +125,9 @@
     --#{$button}--PaddingLeft: var(--#{$chip}__actions--c-button--PaddingLeft);
     --#{$button}--FontSize: var(--#{$chip}__actions--c-button--FontSize);
 
-    margin-top: var(--#{$chip}__actions--c-button--MarginTop);
-    margin-right: var(--#{$chip}__actions--c-button--MarginRight);
-    margin-bottom: var(--#{$chip}__actions--c-button--MarginBottom);
+    margin-block-start: var(--#{$chip}__actions--c-button--MarginTop);
+    margin-block-end: var(--#{$chip}__actions--c-button--MarginBottom);
+    margin-inline-end: var(--#{$chip}__actions--c-button--MarginRight);
     line-height: 1;
   }
 }

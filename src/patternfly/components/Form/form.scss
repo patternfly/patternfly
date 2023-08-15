@@ -185,7 +185,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   &.pf-m-horizontal {
     &.pf-m-align-right {
       .#{$form}__label {
-        text-align: right;
+        text-align: end;
       }
     }
 
@@ -199,7 +199,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
       }
 
       .#{$form}__group-label {
-        padding-top: var(--#{$form}--m-horizontal__group-label--md--PaddingTop);
+        padding-block-start: var(--#{$form}--m-horizontal__group-label--md--PaddingTop);
 
         // stylelint-disable-next-line
         &.pf-m-no-padding-top {
@@ -222,7 +222,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
 .#{$form}__group {
   &.pf-m-action {
-    margin-top: var(--#{$form}__group--m-action--MarginTop);
+    margin-block-start: var(--#{$form}__group--m-action--MarginTop);
     overflow: hidden; // keeps the negative bottom margin bottom on .#{$form}__actions from triggering overflow
   }
 }
@@ -233,12 +233,12 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   & + .#{$form}__group:not(.pf-m-action),
   &:not(:first-child) {
-    margin-top: var(--#{$form}__section--MarginTop);
+    margin-block-start: var(--#{$form}__section--MarginTop);
   }
 }
 
 .#{$form}__section-title {
-  margin-bottom: var(--#{$form}__section-title--MarginBottom);
+  margin-block-end: var(--#{$form}__section-title--MarginBottom);
   font-size: var(--#{$form}__section-title--FontSize);
   font-weight: var(--#{$form}__section-title--FontWeight);
 }
@@ -246,7 +246,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 .#{$form}__group-label {
   --#{$form}__helper-text--MarginTop: 0;
 
-  padding-bottom: var(--#{$form}__group-label--PaddingBottom);
+  padding-block-end: var(--#{$form}__group-label--PaddingBottom);
 
   &.pf-m-info {
     display: flex;
@@ -259,7 +259,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__group-label-info {
-  margin-left: var(--#{$form}__group-label-info--MarginLeft);
+  margin-inline-start: var(--#{$form}__group-label-info--MarginLeft);
   font-size: var(--#{$form}__group-label-info--FontSize);
 }
 
@@ -289,20 +289,20 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__label-required {
-  margin-left: var(--#{$form}__label-required--MarginLeft);
+  margin-inline-start: var(--#{$form}__label-required--MarginLeft);
   font-size: var(--#{$form}__label-required--FontSize);
   color: var(--#{$form}__label-required--Color);
 }
 
 .#{$form}__group-label-help {
-  padding-top: var(--#{$form}__group-label-help--PaddingTop);
-  padding-right: var(--#{$form}__group-label-help--PaddingRight);
-  padding-bottom: var(--#{$form}__group-label-help--PaddingBottom);
-  padding-left: var(--#{$form}__group-label-help--PaddingLeft);
-  margin-top: var(--#{$form}__group-label-help--MarginTop);
-  margin-right: var(--#{$form}__group-label-help--MarginRight);
-  margin-bottom: var(--#{$form}__group-label-help--MarginBottom);
-  margin-left: var(--#{$form}__group-label-help--MarginLeft);
+  padding-block-start: var(--#{$form}__group-label-help--PaddingTop);
+  padding-block-end: var(--#{$form}__group-label-help--PaddingBottom);
+  padding-inline-start: var(--#{$form}__group-label-help--PaddingLeft);
+  padding-inline-end: var(--#{$form}__group-label-help--PaddingRight);
+  margin-block-start: var(--#{$form}__group-label-help--MarginTop);
+  margin-block-end: var(--#{$form}__group-label-help--MarginBottom);
+  margin-inline-start: var(--#{$form}__group-label-help--MarginLeft);
+  margin-inline-end: var(--#{$form}__group-label-help--MarginRight);
   font-size: var(--#{$form}__group-label-help--FontSize);
   line-height: 1;
   color: var(--#{$form}__group-label-help--Color);
@@ -327,7 +327,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
     flex-flow: row wrap;
 
     > * {
-      margin-right: var(--#{$form}__group-control--m-inline--child--MarginRight);
+      margin-inline-end: var(--#{$form}__group-control--m-inline--child--MarginRight);
     }
 
     > :last-child {
@@ -345,12 +345,12 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   .#{$form}__helper-text:first-child {
     --#{$form}__helper-text--MarginTop: 0;
 
-    margin-bottom: var(--#{$form}__group-control__helper-text--MarginBottom);
+    margin-block-end: var(--#{$form}__group-control__helper-text--MarginBottom);
   }
 }
 
 .#{$form}__helper-text {
-  margin-top: var(--#{$form}__helper-text--MarginTop);
+  margin-block-start: var(--#{$form}__helper-text--MarginTop);
   font-size: var(--#{$form}__helper-text--FontSize);
   color: var(--#{$form}__helper-text--Color);
 
@@ -377,7 +377,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__helper-text-icon {
-  margin-right: var(--#{$form}__helper-text-icon--MarginRight);
+  margin-inline-end: var(--#{$form}__helper-text-icon--MarginRight);
   font-size: var(--#{$form}__helper-text-icon--FontSize);
 }
 
@@ -389,16 +389,16 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 .#{$form}__actions {
   display: flex;
   flex-wrap: wrap;
-  margin-top: var(--#{$form}__actions--MarginTop);
-  margin-right: var(--#{$form}__actions--MarginRight);
-  margin-bottom: var(--#{$form}__actions--MarginBottom);
-  margin-left: var(--#{$form}__actions--MarginLeft);
+  margin-block-start: var(--#{$form}__actions--MarginTop);
+  margin-block-end: var(--#{$form}__actions--MarginBottom);
+  margin-inline-start: var(--#{$form}__actions--MarginLeft);
+  margin-inline-end: var(--#{$form}__actions--MarginRight);
 
   > * {
-    margin-top: var(--#{$form}__actions--child--MarginTop);
-    margin-right: var(--#{$form}__actions--child--MarginRight);
-    margin-bottom: var(--#{$form}__actions--child--MarginBottom);
-    margin-left: var(--#{$form}__actions--child--MarginLeft);
+    margin-block-start: var(--#{$form}__actions--child--MarginTop);
+    margin-block-end: var(--#{$form}__actions--child--MarginBottom);
+    margin-inline-start: var(--#{$form}__actions--child--MarginLeft);
+    margin-inline-end: var(--#{$form}__actions--child--MarginRight);
   }
 }
 
@@ -407,8 +407,8 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   display: grid;
   grid-template-columns: minmax(var(--#{$form}__field-group--GridTemplateColumns--toggle), max-content) 1fr;
-  border-top: var(--#{$form}__field-group--BorderTopWidth) solid var(--#{$form}__field-group--BorderTopColor);
-  border-bottom: var(--#{$form}__field-group--BorderBottomWidth) solid var(--#{$form}__field-group--BorderBottomColor);
+  border-block-start: var(--#{$form}__field-group--BorderTopWidth) solid var(--#{$form}__field-group--BorderTopColor);
+  border-block-end: var(--#{$form}__field-group--BorderBottomWidth) solid var(--#{$form}__field-group--BorderBottomColor);
 
   &:last-child {
     --#{$form}__field-group--BorderBottomWidth: 0;
@@ -420,7 +420,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   }
 
   & + & {
-    margin-top: var(--#{$form}__field-group--field-group--MarginTop);
+    margin-block-start: var(--#{$form}__field-group--field-group--MarginTop);
   }
 
   // nested
@@ -446,8 +446,8 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 .#{$form}__field-group-toggle {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
-  padding-top: var(--#{$form}__field-group-toggle--PaddingTop);
-  padding-right: var(--#{$form}__field-group-toggle--PaddingRight);
+  padding-block-start: var(--#{$form}__field-group-toggle--PaddingTop);
+  padding-inline-end: var(--#{$form}__field-group-toggle--PaddingRight);
 
   + .#{$form}__field-group-header {
     --#{$form}__field-group-header--GridColumn: var(--#{$form}__field-group-toggle--field-group-header--GridColumn);
@@ -455,8 +455,8 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__field-group-toggle-button {
-  margin-top: var(--#{$form}__field-group-toggle-button--MarginTop);
-  margin-bottom: var(--#{$form}__field-group-toggle-button--MarginBottom);
+  margin-block-start: var(--#{$form}__field-group-toggle-button--MarginTop);
+  margin-block-end: var(--#{$form}__field-group-toggle-button--MarginBottom);
 }
 
 .#{$form}__field-group-toggle-icon {
@@ -472,8 +472,8 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   grid-row: 1 / 2;
   grid-column: var(--#{$form}__field-group-header--GridColumn);
   align-items: flex-start;
-  padding-top: var(--#{$form}__field-group-header--PaddingTop);
-  padding-bottom: var(--#{$form}__field-group-header--PaddingBottom);
+  padding-block-start: var(--#{$form}__field-group-header--PaddingTop);
+  padding-block-end: var(--#{$form}__field-group-header--PaddingBottom);
 }
 
 .#{$form}__field-group-header-main {
@@ -491,14 +491,14 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__field-group-header-description {
-  margin-top: var(--#{$form}__field-group-header-description--MarginTop);
+  margin-block-start: var(--#{$form}__field-group-header-description--MarginTop);
   color: var(--#{$form}__field-group-header-description--Color);
 }
 
 .#{$form}__field-group-header-actions {
-  margin-top: var(--#{$form}__field-group-header-actions--MarginTop);
-  margin-bottom: var(--#{$form}__field-group-header-actions--MarginBottom);
-  margin-left: var(--#{$form}__field-group-header-actions--MarginLeft);
+  margin-block-start: var(--#{$form}__field-group-header-actions--MarginTop);
+  margin-block-end: var(--#{$form}__field-group-header-actions--MarginBottom);
+  margin-inline-start: var(--#{$form}__field-group-header-actions--MarginLeft);
   white-space: nowrap;
 }
 
@@ -506,8 +506,8 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   display: grid;
   grid-column: var(--#{$form}__field-group-body--GridColumn);
   gap: var(--#{$form}__field-group-body--Gap);
-  padding-top: var(--#{$form}__field-group-body--PaddingTop);
-  padding-bottom: var(--#{$form}__field-group-body--PaddingBottom);
+  padding-block-start: var(--#{$form}__field-group-body--PaddingTop);
+  padding-block-end: var(--#{$form}__field-group-body--PaddingBottom);
 
   > .#{$form}__field-group {
     &:first-child {
@@ -516,7 +516,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
     }
 
     &:last-child {
-      margin-bottom: var(--#{$form}__field-group-body__field-group--last-child--MarginBottom);
+      margin-block-end: var(--#{$form}__field-group-body__field-group--last-child--MarginBottom);
     }
   }
 }

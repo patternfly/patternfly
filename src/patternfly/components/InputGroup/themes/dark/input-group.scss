@@ -16,7 +16,7 @@
     > * + * {
       --#{$input-group}__item--m-box--BorderLeftColor: var(--#{$input-group}__item--BorderLeftColor);
 
-      border-left: var(--#{$input-group}__item--BorderLeftWidth) solid var(--#{$input-group}__item--BorderLeftColor);
+      border-inline-start: var(--#{$input-group}__item--BorderLeftWidth) solid var(--#{$input-group}__item--BorderLeftColor);
     }
   }
 }
