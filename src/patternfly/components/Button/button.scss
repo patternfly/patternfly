@@ -566,7 +566,10 @@
     background-color: var(--#{$button}--m-plain--BackgroundColor);
 
     &.pf-m-inline {
-      padding: var(--#{$button}--m-plain--m-inline--PaddingTop) var(--#{$button}--m-plain--m-inline--PaddingRight) var(--#{$button}--m-plain--m-inline--PaddingBottom) var(--#{$button}--m-plain--m-inline--PaddingLeft);
+      padding-block-start: var(--#{$button}--m-plain--m-inline--PaddingTop);
+      padding-block-end: var(--#{$button}--m-plain--m-inline--PaddingBottom);
+      padding-inline-start: var(--#{$button}--m-plain--m-inline--PaddingLeft);
+      padding-inline-end: var(--#{$button}--m-plain--m-inline--PaddingRight);
       font-size: var(--#{$button}--m-plain--m-inline--FontSize);
       line-height: var(--#{$button}--m-plain--m-inline--LineHeight);
     }
