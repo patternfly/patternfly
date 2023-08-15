@@ -119,6 +119,7 @@ id: Icons
 | storage-domain | <i class="pf-v5-pficon pf-v5-pficon-storage-domain"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-storage-domain&quot;&gt;&lt;/i&gt;
 | task | <i class="pf-v5-pficon pf-v5-pficon-task"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-task&quot;&gt;&lt;/i&gt;
 | tenant | <i class="pf-v5-pficon pf-v5-pficon-tenant"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-tenant&quot;&gt;&lt;/i&gt;
+| treeview | <i class="pf-v5-pficon pf-v5-pficon-treeview"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-treeview&quot;&gt;&lt;/i&gt;
 | thumb-tack | <i class="pf-v5-pficon pf-v5-pficon-thumb-tack"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-thumb-tack&quot;&gt;&lt;/i&gt;
 | topology | <i class="pf-v5-pficon pf-v5-pficon-topology"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-topology&quot;&gt;&lt;/i&gt;
 | trend-down | <i class="pf-v5-pficon pf-v5-pficon-trend-down"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-trend-down&quot;&gt;&lt;/i&gt;
