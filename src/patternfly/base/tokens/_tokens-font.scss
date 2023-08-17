@@ -1,0 +1,58 @@
+// FONT TOKENS
+// Manually added from hackathon values
+// Currently not being exported from Figma because they are styles rather than variables
+// The ability to make font variables is reportedly coming by the end of the year
+
+//  stylelint-disable custom-property-pattern
+
+:root {
+// Base tokens for fonts
+  --pf-t--global--font--family--100: redhattext;
+  --pf-t--global--font--family--200: redhatdisplay;
+  --pf-t--global--font--family--300: redhatmono;
+  --pf-t--global--font--line-height--100: 1.3;
+  --pf-t--global--font--line-height--200: 1.5;
+  --pf-t--global--font--weight--body--100: 400;
+  --pf-t--global--font--weight--body--200: 600;
+  --pf-t--global--font--weight--heading--100: 700; // what should this be?
+  --pf-t--global--font--weight--heading--200: 700;
+  --pf-t--global--font--size--body--100: 12px;
+  --pf-t--global--font--size--body--200: 14px;
+  --pf-t--global--font--size--body--300: 16px;
+  --pf-t--global--font--size--heading--100: 16px;
+  --pf-t--global--font--size--heading--200: 18px;
+  --pf-t--global--font--size--heading--300: 20px;
+  --pf-t--global--font--size--heading--400: 24px;
+  --pf-t--global--font--size--heading--500: 28px;
+  --pf-t--global--font--size--heading--600: 36px;
+
+// Semantic tokens for fonts
+  --pf-t--global--font--family--body: var(--pf-t--global--font--family--100);
+  --pf-t--global--font--family--heading: var(--pf-t--global--font--family--200);
+  --pf-t--global--font--family--mono: var(--pf-t--global--font--family--300);
+  --pf-t--global--font--line-height--body: var(--pf-t--global--font--line-height--100);
+  --pf-t--global--font--line-height--heading: var(--pf-t--global--font--line-height--200);
+  --pf-t--global--font--weight--body: var(--pf-t--global--font--weight--body--100);
+  --pf-t--global--font--weight--body--bold: var(--pf-t--global--font--weight--body--200);
+  --pf-t--global--font--weight--heading: var(--pf-t--global--font--weight--heading--100);
+  --pf-t--global--font--weight--heading--bold: var(--pf-t--global--font--weight--heading--200);
+  --pf-t--global--font--size--body--sm: var(--pf-t--global--font--size--body--100);
+  --pf-t--global--font--size--body--md: var(--pf-t--global--font--size--body--200);
+  --pf-t--global--font--size--body--lg: var(--pf-t--global--font--size--body--300);
+  --pf-t--global--font--size--body: var(--pf-t--global--font--size--body--md);
+  --pf-t--global--font--size--heading--xs: var(--pf-t--global--font--size--heading--100);
+  --pf-t--global--font--size--heading--sm: var(--pf-t--global--font--size--heading--200);
+  --pf-t--global--font--size--heading--md: var(--pf-t--global--font--size--heading--300);
+  --pf-t--global--font--size--heading--lg: var(--pf-t--global--font--size--heading--400);
+  --pf-t--global--font--size--heading--xl: var(--pf-t--global--font--size--heading--500);
+  --pf-t--global--font--size--heading--2xl: var(--pf-t--global--font--size--heading--600);
+
+  // Other missing ones
+  // text-decoration
+  --pf-t--global--text-decoration--100: none;
+  --pf-t--global--text-decoration--200: underline;
+  --pf--global--link--text-decoration: var(--pf--global--text-decoration--200);
+  --pf--global--link--text-decoration--hover: var(--pf--global--text-decoration--200);
+}
+
+//  stylelint-enable custom-property-pattern
