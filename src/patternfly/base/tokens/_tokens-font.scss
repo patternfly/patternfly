@@ -3,8 +3,6 @@
 // Currently not being exported from Figma because they are styles rather than variables
 // The ability to make font variables is reportedly coming by the end of the year
 
-//  stylelint-disable custom-property-pattern
-
 :root {
 // Base tokens for fonts
   --pf-t--global--font--family--100: redhattext;
@@ -51,8 +49,10 @@
   // text-decoration
   --pf-t--global--text-decoration--100: none;
   --pf-t--global--text-decoration--200: underline;
-  --pf--global--link--text-decoration: var(--pf--global--text-decoration--200);
-  --pf--global--link--text-decoration--hover: var(--pf--global--text-decoration--200);
-}
+  --pf-t--global--link--text-decoration: var(--pf-t--global--text-decoration--200);
+  --pf-t--global--link--text-decoration--hover: var(--pf-t--global--text-decoration--200);
 
-//  stylelint-enable custom-property-pattern
+  // blend modes 
+  --pf-t--global--mix-blend-mode--100: screen;
+  --pf-t--global--background--color--action--plain--hover--blend: var(--pf-t--global--mix-blend-mode--100);
+}
