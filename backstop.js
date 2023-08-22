@@ -27,10 +27,11 @@ module.exports = {
   id: 'pf-core',
   viewports,
   scenarios,
-  onReadyScript: 'onReady.js',
+  onReadyScript: 'puppet/onReady.js',
   report: ['browser'],
   engine: 'puppeteer',
   engineOptions: {
+    headless: 'new',
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox'

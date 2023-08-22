@@ -98,7 +98,7 @@
   color: var(--#{$chip}__text--Color);
 
   .#{$badge} {
-    margin-left: var(--#{$chip}__c-badge--MarginLeft); // remove in breaking change
+    margin-inline-start: var(--#{$chip}__c-badge--MarginLeft); // remove in breaking change
   }
 }
 

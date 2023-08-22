@@ -1,3 +1,4 @@
+// Viewports to test against
 const viewports = {
   mobile: {
     width: 320,
@@ -13,8 +14,21 @@ const viewports = {
   }
 };
 
-const baseUrl = 'http://localhost:5000';
+// Base URL for the test relative URLs - defaults to the PF core default dev server
+const baseUrl = 'http://localhost:8001';
 
+// Relative URLs to test
+// These can be regular array item with the URL as the item, or an object with a 'url' item for the URL and additional items for scenario options outlined at https://github.com/garris/BackstopJS#advanced-scenarios
+/* For example
+  const relativeUrls = [
+  '/components/about-modal/html-demos/basic',
+  {
+    url: '/components/about-modal/html/basic',
+    delay: 1000,
+    hoverSelectors: [".my-nav-menu-item",".my-nav-menu-dropdown-item"]
+  },
+  '/components/accordion/html/bordered',
+*/
 const relativeUrls = [
   '/components/about-modal/html-demos/basic',
   '/components/about-modal/html/basic',
@@ -397,10 +411,7 @@ const relativeUrls = [
   '/components/login-page/html/with-language-selector',
   '/components/masthead/html-demos/advanced-integration-with-menu-options',
   '/components/masthead/html-demos/basic',
-  {
-    url: '/components/masthead/html-demos/horizontal-nav',
-    delay: 1000
-  },
+  '/components/masthead/html-demos/horizontal-nav',
   '/components/masthead/html-demos/with-context-selector-and-dropdown',
   '/components/masthead/html-demos/with-expandable-search-collapsed',
   '/components/masthead/html-demos/with-expandable-search-expanded',
@@ -585,14 +596,8 @@ const relativeUrls = [
   '/components/navigation/html-demos/default-nav',
   '/components/navigation/html-demos/expandable-nav',
   '/components/navigation/html-demos/grouped-nav',
-  {
-    url: '/components/navigation/html-demos/horizontal-nav',
-    delay: 1000
-  },
-  {
-    url: '/components/navigation/html-demos/horizontal-nav-with-horizontal-subnav',
-    delay: 1000
-  },
+  '/components/navigation/html-demos/horizontal-nav',
+  '/components/navigation/html-demos/horizontal-nav-with-horizontal-subnav',
   '/components/navigation/html-demos/horizontal-subnav',
   '/components/navigation/html-demos/light-theme-sidebar-and-nav',
   '/components/navigation/html-demos/tertiary-nav',
@@ -649,20 +654,14 @@ const relativeUrls = [
   '/components/page/html-demos/sticky-section-bottom',
   '/components/page/html-demos/sticky-section-group',
   '/components/page/html-deprecated/centered-section',
-  {
-    url: '/components/page/html-deprecated/horizontal-nav',
-    delay: 1000
-  },
+  '/components/page/html-deprecated/horizontal-nav',
   '/components/page/html-deprecated/main-section-padding',
   '/components/page/html-deprecated/main-section-variations',
   '/components/page/html-deprecated/multiple-sidebar-body-elements-padding-and-fill',
   '/components/page/html-deprecated/vertical-nav',
   '/components/page/html-deprecated/with-or-without-fill',
   '/components/page/html/centered-section',
-  {
-    url: '/components/page/html/horizontal-nav',
-    delay: 1000
-  },
+  '/components/page/html/horizontal-nav',
   '/components/page/html/main-section-padding',
   '/components/page/html/main-section-variations',
   '/components/page/html/multiple-sidebar-body-elements-padding-and-fill',

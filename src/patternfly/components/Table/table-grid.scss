@@ -100,6 +100,7 @@
   --#{$table}--m-compact__tr--responsive--PaddingBottom: var(--#{$pf-global}--spacer--sm);
   --#{$table}--m-compact__tr__td--responsive--PaddingTop: var(--#{$pf-global}--spacer--xs);
   --#{$table}--m-compact__tr__td--responsive--PaddingBottom: var(--#{$pf-global}--spacer--xs);
+  --#{$table}--m-compact__check--responsive--MarginTop: #{pf-size-prem(7px)};
   --#{$table}--m-compact__action--responsive--MarginTop: calc(var(--#{$pf-global}--spacer--xs) * -1);
   --#{$table}--m-compact__action--responsive--MarginBottom: calc(var(--#{$pf-global}--spacer--xs) * -1);
   --#{$table}--m-compact__toggle--c-button--responsive--MarginBottom: calc(#{pf-size-prem(6px)} * -1);
@@ -254,6 +255,7 @@
     --#{$table}__tr--responsive--PaddingBottom: var(--#{$table}--m-compact__tr--responsive--PaddingBottom);
     --#{$table}--cell--responsive--PaddingTop: var(--#{$table}--m-compact__tr__td--responsive--PaddingTop);
     --#{$table}--cell--responsive--PaddingBottom: var(--#{$table}--m-compact__tr__td--responsive--PaddingBottom);
+    --#{$table}__check--responsive--MarginTop: var(--#{$table}--m-compact__check--responsive--MarginTop);
     --#{$table}__check--input--MarginTop: 0;
 
     .#{$table}__action {
@@ -493,6 +495,7 @@
   .#{$table}__check {
     margin-block-start: var(--#{$table}__check--responsive--MarginTop);
     margin-inline-start: var(--#{$table}__check--responsive--MarginLeft);
+    line-height: 1;
 
     ~ .#{$table}__favorite {
       margin-inline-start: var(--#{$table}--m-grid__check--favorite--MarginLeft);
@@ -504,6 +507,11 @@
 
     ~ .#{$table}__action {
       margin-inline-start: var(--#{$table}__action--responsive--MarginLeft);
+    }
+
+    label {
+      display: inline-block;
+      margin: 0;
     }
   }
 
