@@ -4,6 +4,7 @@ module.exports = {
   hasFooter: false,
   hasVersionSwitcher: false,
   hasDarkThemeSwitcher: true,
+  hasRTLSwitcher: true,
   sideNavItems: [
     { section: 'get-started' },
     { section: 'developer-resources' },
