@@ -68,6 +68,15 @@ When making visual changes to a full page example, new example preview screensho
 - CSS developers should ensure that animation is well documented and communicated to the respective React developer.
 - Once the component/enhancement is complete it should receive sign off from a visual designer who can then update the master sketch file with any changes.
 
+### Handlebars guidelines 
+[For information on how to contribute, refer to our guidelines.](/contribution)
+
+### CSS/Sass guidelines
+[For more information on using CSS and Sass, refer to our guidelines.](/guidelines)
+
+### Custom icon guidelines
+[For more information on custom icons, refer to our guidelines.](/adding-custom-icons)
+
 ## Beta components
 
 When creating a brand new component, it should be released as beta in order to get feedback.
@@ -112,3 +121,4 @@ PatternFly 5 is supported on the latest two major versions of the following brow
 - Firefox
 - Safari
 - Edge
+

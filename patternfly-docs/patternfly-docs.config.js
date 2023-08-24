@@ -16,10 +16,6 @@ module.exports = {
   ],
   topNavItems: [
     {
-      text: 'Accessibility',
-      path: '/accessibility-guide'
-    },
-    {
       text: 'Contribute',
       path: '/contribution'
     },
@@ -28,12 +24,12 @@ module.exports = {
       path: '/guidelines'
     },
     {
-      text: 'Upgrade guide',
-      path: '/upgrade-guide'
-    },
-    {
       text: 'Icons',
       path: '/icons'
+    },
+    {
+      text: 'Custom icons',
+      path: '/adding-custom-icons'
     }
   ],
   port: 8001
