@@ -309,3 +309,12 @@
     }
   }
 }
+
+@mixin pf-v5-rtl($transform: null) {
+  @at-root :where(.ws-dir-rtl, [dir="rtl"]) & {
+    @if $transform == 'flip-inline' {
+      scale: -1 1;
+    }
+    @content
+  }
+}

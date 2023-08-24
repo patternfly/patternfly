@@ -433,7 +433,7 @@ import './Wizard.css'
       {{#> wizard-main}}
         {{#> bullseye}}
           {{#> empty-state empty-state--modifier="pf-m-lg"}}
-            {{#> empty-state-icon empty-state-icon--type="cogs"}}{{/empty-state-icon}}
+            {{#> empty-state-icon empty-state-icon--type="cogs" empty-state-icon--modifier="pf-v5-m-rtl-flip-inline"}}{{/empty-state-icon}}
             {{#> empty-state-title empty-state-title--attribute=(concat 'id="' wizard--id '-empty-state-title"')}}
               {{#> empty-state-title-text}}
                 Validating credentials

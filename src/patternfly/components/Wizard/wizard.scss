@@ -337,6 +337,8 @@
 .#{$wizard}__toggle-separator {
   margin-inline-start: var(--#{$wizard}__toggle-separator--MarginLeft);
   color: var(--#{$wizard}__toggle-separator--Color);
+
+  @include pf-v5-rtl("flip-inline");
 }
 
 .#{$wizard}__toggle-icon {
@@ -460,8 +462,8 @@
   @at-root .#{$wizard}__toggle-num,
   &::before {
     position: absolute;
-   inset-block-start: var(--#{$wizard}__nav-link--before--Top);
-   inset-inline-start: 0;
+    inset-block-start: var(--#{$wizard}__nav-link--before--Top);
+    inset-inline-start: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -473,6 +475,10 @@
     background-color: var(--#{$wizard}__nav-link--before--BackgroundColor);
     border-radius: var(--#{$wizard}__nav-link--before--BorderRadius);
     transform: translateX(var(--#{$wizard}__nav-link--before--TranslateX));
+
+    @include pf-v5-rtl {
+      transform: translateX(calc(var(--#{$wizard}__nav-link--before--TranslateX) * -1));
+    }
   }
 
   // Nav step number
