@@ -700,7 +700,7 @@ In addition to the JavaScript management of [editable labels](/components/label#
 ### Label group accessibility
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `role="list"` | `.pf-v5-c-label-group__list` | Indicates that the label group list is a list element. This role is redundant since `.pf-v5-c-label-group__list` is a `<ul>` but is required for screen readers to announce the list propertly. **Required** |
+| `role="list"` | `.pf-v5-c-label-group__list` | Indicates that the label group list is a list element. This role is redundant since `.pf-v5-c-label-group__list` is a `<ul>` but is required for screen readers to announce the list properly. **Required** |
 | `aria-label="[button label text]"` | `.pf-v5-c-label-group__close > button` |  Provides an accessible name for a label group close button when an icon is used instead of text. Required when an icon is used with no supporting text. **Required** |
 | `aria-labelledby="[id value of .pf-v5-c-label-group__close > button] [id value of .pf-v5-c-label-group__label]"` | `.pf-v5-c-label-group__close > button` | Provides an accessible name for the button. **Required** |
 | `aria-label="[label text]"` | `.pf-v5-c-label-group__textarea` | Provides an accessible name for the textarea. **Required** |

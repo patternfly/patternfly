@@ -282,6 +282,9 @@
   // A11y
   --#{$pf-global}--target-size--MinWidth: #{$pf-v5-global--target-size--MinWidth};
   --#{$pf-global}--target-size--MinHeight: #{$pf-v5-global--target-size--MinHeight};
+
+  // RTL
+  --#{$pf-global}--rtl--transform--flip: 1;
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

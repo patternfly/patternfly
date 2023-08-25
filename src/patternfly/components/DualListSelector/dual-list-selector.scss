@@ -169,9 +169,9 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 
     .#{$dual-list-selector}__item-toggle {
       position: absolute;
-     inset-block-start: 0;
-     inset-inline-start: var(--#{$dual-list-selector}__list__list__item-toggle--Left);
-      transform: translateX(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX));
+      inset-block-start: 0;
+      inset-inline-start: var(--#{$dual-list-selector}__list__list__item-toggle--Left);
+      transform: translateX(calc(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX) * var(--#{$pf-global}--rtl--transform--flip)));
     }
   }
 
@@ -292,6 +292,10 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   align-self: center;
   padding-inline-start: var(--#{$dual-list-selector}__controls--PaddingLeft);
   padding-inline-end: var(--#{$dual-list-selector}__controls--PaddingRight);
+}
+
+:is(.#{$dual-list-selector}__controls-item, .#{$dual-list-selector}__item-toggle-icon) {
+  @include pf-v5-rtl("flip-inline");
 }
 
 .#{$dual-list-selector}__item-main {

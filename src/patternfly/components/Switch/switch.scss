@@ -88,7 +88,7 @@
       background-color: var(--#{$switch}__input--checked__toggle--BackgroundColor);
 
       &::before {
-        transform: translateX(var(--#{$switch}__input--checked__toggle--before--TranslateX));
+        transform: translateX(calc(var(--#{$switch}__input--checked__toggle--before--TranslateX) * var(--#{$pf-global}--rtl--transform--flip)));
       }
     }
 
