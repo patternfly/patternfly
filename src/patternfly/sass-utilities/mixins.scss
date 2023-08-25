@@ -311,7 +311,7 @@
 }
 
 @mixin pf-v5-rtl($transform: null) {
-  @at-root :where(.ws-dir-rtl, [dir="rtl"]) & {
+  @at-root :where(.ws-dir-rtl, .#{$pf-prefix}m-dir-rtl, [dir="rtl"]) & {
     @if $transform == 'flip-inline' {
       scale: -1 1;
     }
