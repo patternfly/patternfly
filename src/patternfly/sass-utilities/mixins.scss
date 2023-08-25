@@ -310,11 +310,27 @@
   }
 }
 
+// Applies custom styles to support RTL
 @mixin pf-v5-rtl($transform: null) {
-  @at-root :where(.ws-dir-rtl, .#{$pf-prefix}m-dir-rtl, [dir="rtl"]) & {
-    @if $transform == 'flip-inline' {
-      scale: -1 1;
+  // resets property used to inverse transform values calc()s in RTL
+  @if $transform == "transform-flip-revert" {
+    --#{$pf-global}--rtl--transform--flip: 1;
+  } @else {
+    // establishes the selectors used to target RTL
+    // remove .ws-dir-rtl before releasing RTL
+    @at-root :where(.ws-dir-rtl, .#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
+      // sets property used in calcs to inverse transform values
+      @if $transform == "transform-flip" {
+        --#{$pf-global}--rtl--transform--flip: -1;
+      }
+
+      // flips something horizontally/inline. relies upon scale/scale() not already being used for the element
+      @if $transform == 'flip-inline' {
+        scale: -1 1;
+      }
+
+      // any custom CSS to apply within the selectors that target RTL
+      @content
     }
-    @content
   }
 }

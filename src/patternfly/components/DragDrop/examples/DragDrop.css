@@ -6,8 +6,8 @@
   --pf-v5-c-draggable--m-dragging--BackgroundColor: var(--pf-v5-global--BackgroundColor--100);
 
   position: absolute;
- inset-block-start: 23%;
- inset-inline-start: .5em;
+  inset-block-start: 23%;
+  inset-inline-start: .5em;
   z-index: 9999;
   width: 100%;
 }

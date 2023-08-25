@@ -26,13 +26,20 @@
 
 // RTL helpers
 .#{$pf-prefix}m-dir-rtl {
+  @include pf-v5-rtl("transform-flip");
+
   direction: rtl;
 }
 
-.#{$pf-prefix}m-dir-ltr {
+.#{$pf-prefix}m-dir-ltr,
+.ws-dir-ltr {
+  @include pf-v5-rtl("transform-flip-revert");
+
   direction: ltr;
 }
 
 .#{$pf-prefix}m-rtl-flip-inline {
   @include pf-v5-rtl("flip-inline");
 }
+
+@include pf-v5-rtl("transform-flip");

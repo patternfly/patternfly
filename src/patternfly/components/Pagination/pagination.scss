@@ -237,6 +237,8 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
 // nav control
 .#{$pagination}__nav-control {
+  @include pf-v5-rtl("flip-inline");
+
   .#{$button} {
     padding-inline-start: var(--#{$pagination}__nav-control--c-button--PaddingLeft);
     padding-inline-end: var(--#{$pagination}__nav-control--c-button--PaddingRight);
@@ -246,8 +248,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   .#{$pagination}.pf-m-compact & + & {
     margin-inline-start: var(--#{$pagination}--m-compact__nav-control--nav-control--MarginLeft);
   }
-
-  @include pf-v5-rtl("flip-inline");
 }
 
 // nav page element

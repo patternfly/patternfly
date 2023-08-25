@@ -171,11 +171,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
       position: absolute;
       inset-block-start: 0;
       inset-inline-start: var(--#{$dual-list-selector}__list__list__item-toggle--Left);
-      transform: translateX(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX));
-
-      @include pf-v5-rtl {
-        transform: translateX(calc(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX) * -1));
-      }
+      transform: translateX(calc(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX) * var(--#{$pf-global}--rtl--transform--flip)));
     }
   }
 
@@ -298,8 +294,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
   padding-inline-end: var(--#{$dual-list-selector}__controls--PaddingRight);
 }
 
-.#{$dual-list-selector}__controls-item,
-.#{$dual-list-selector}__item-toggle-icon {
+:is(.#{$dual-list-selector}__controls-item, .#{$dual-list-selector}__item-toggle-icon) {
   @include pf-v5-rtl("flip-inline");
 }
 

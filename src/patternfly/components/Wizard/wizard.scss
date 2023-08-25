@@ -335,10 +335,10 @@
 }
 
 .#{$wizard}__toggle-separator {
+  @include pf-v5-rtl("flip-inline");
+
   margin-inline-start: var(--#{$wizard}__toggle-separator--MarginLeft);
   color: var(--#{$wizard}__toggle-separator--Color);
-
-  @include pf-v5-rtl("flip-inline");
 }
 
 .#{$wizard}__toggle-icon {
@@ -474,11 +474,7 @@
     color: var(--#{$wizard}__nav-link--before--Color);
     background-color: var(--#{$wizard}__nav-link--before--BackgroundColor);
     border-radius: var(--#{$wizard}__nav-link--before--BorderRadius);
-    transform: translateX(var(--#{$wizard}__nav-link--before--TranslateX));
-
-    @include pf-v5-rtl {
-      transform: translateX(calc(var(--#{$wizard}__nav-link--before--TranslateX) * -1));
-    }
+    transform: translateX(calc(var(--#{$wizard}__nav-link--before--TranslateX) * var(--#{$pf-global}--rtl--transform--flip)));
   }
 
   // Nav step number
@@ -534,6 +530,8 @@
 }
 
 .#{$wizard}__nav-link-toggle-icon {
+  @include pf-v5-rtl("flip-inline");
+
   display: inline-block;
   transition: var(--#{$wizard}__nav-link-toggle-icon--Transition);
   transform: rotate(var(--#{$wizard}__nav-link-toggle-icon--Rotate));
