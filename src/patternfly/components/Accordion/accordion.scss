@@ -230,6 +230,8 @@
 }
 
 .#{$accordion}__toggle-icon {
+  @include pf-v5-rtl('flip-inline');
+  
   transition: var(--#{$accordion}__toggle-icon--Transition);
 }
 

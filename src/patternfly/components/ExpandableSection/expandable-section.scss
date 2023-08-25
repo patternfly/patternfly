@@ -147,6 +147,8 @@
 }
 
 .#{$expandable-section}__toggle-icon {
+  @include pf-v5-rtl('flip-inline');
+
   min-width: var(--#{$expandable-section}__toggle-icon--MinWidth);
   color: var(--#{$expandable-section}__toggle-icon--Color);
   transition: var(--#{$expandable-section}__toggle-icon--Transition);
