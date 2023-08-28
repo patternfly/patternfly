@@ -359,7 +359,7 @@
   scale: -1 1;
 }
 
-@mixin pf-v5-mirror-inline-rtl {
+@mixin pf-v5-mirror-inline-on-rtl {
   @include pf-v5-rtl {
     @include pf-v5-mirror-inline;
   }

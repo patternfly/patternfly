@@ -335,7 +335,7 @@
 }
 
 .#{$wizard}__toggle-separator {
-  @include pf-v5-mirror-inline-rtl;
+  @include pf-v5-mirror-inline-on-rtl;
 
   margin-inline-start: var(--#{$wizard}__toggle-separator--MarginLeft);
   color: var(--#{$wizard}__toggle-separator--Color);
@@ -534,7 +534,7 @@
 }
 
 .#{$wizard}__nav-link-toggle-icon {
-  @include pf-v5-mirror-inline-rtl;
+  @include pf-v5-mirror-inline-on-rtl;
 
   display: inline-block;
   transition: var(--#{$wizard}__nav-link-toggle-icon--Transition);

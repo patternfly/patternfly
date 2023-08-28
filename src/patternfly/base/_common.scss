@@ -43,5 +43,5 @@
 
 // Mirrors/flips something horizontally/inline in RTL
 .#{$pf-prefix}m-mirror-inline-rtl {
-  @include pf-v5-mirror-inline-rtl;
+  @include pf-v5-mirror-inline-on-rtl;
 }

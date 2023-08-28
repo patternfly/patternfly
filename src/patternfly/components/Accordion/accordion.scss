@@ -230,7 +230,7 @@
 }
 
 .#{$accordion}__toggle-icon {
-  @include pf-v5-mirror-inline-rtl;
+  @include pf-v5-mirror-inline-on-rtl;
 
   transition: var(--#{$accordion}__toggle-icon--Transition);
 }

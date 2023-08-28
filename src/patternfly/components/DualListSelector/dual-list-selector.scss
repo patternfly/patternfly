@@ -299,7 +299,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 :is(.#{$dual-list-selector}__controls-item, .#{$dual-list-selector}__item-toggle-icon) {
-  @include pf-v5-mirror-inline-rtl;
+  @include pf-v5-mirror-inline-on-rtl;
 }
 
 .#{$dual-list-selector}__item-main {
