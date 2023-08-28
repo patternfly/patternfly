@@ -307,6 +307,8 @@
 }
 
 .#{$notification-drawer}__group-toggle-icon {
+  @include pf-v5-rtl('flip-inline');
+
   margin-inline-end: var(--#{$notification-drawer}__group-toggle-icon--MarginRight);
   color: var(--#{$notification-drawer}__group-toggle-icon--Color);
   transition: var(--#{$notification-drawer}__group-toggle-icon--Transition);
