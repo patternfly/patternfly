@@ -13,6 +13,12 @@
   --#{$slider}__rail-track--before--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
   --#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop: var(--#{$slider}--value);
 
+  @include pf-v5-bidirectional-style(
+    $prop: --#{$slider}__rail-track--before--fill--direction, 
+    $ltr-val: right,
+    $rtl-val: left
+  );
+
   // steps
   --#{$slider}__steps--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$slider}__steps--Height: var(--#{$slider}__steps--FontSize);
@@ -114,7 +120,7 @@
     content: "";
     background:
       linear-gradient(
-        to right,
+        to var(--#{$slider}__rail-track--before--fill--direction),
         var(--#{$slider}__rail-track--before--fill--BackgroundColor),
         var(--#{$slider}__rail-track--before--fill--BackgroundColor) var(--#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop),
         var(--#{$slider}__rail-track--before--base--BackgroundColor) var(--#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop)
@@ -131,8 +137,8 @@
 
 .#{$slider}__step {
   position: absolute;
- inset-block-start: 0;
- inset-inline-start: var(--#{$slider}__step--Left); // set programmatically as an inline style
+  inset-block-start: 0;
+  inset-inline-start: var(--#{$slider}__step--Left); // set programmatically as an inline style
   content: "";
 
   &.pf-m-active {
@@ -151,44 +157,64 @@
 }
 
 .#{$slider}__step-tick {
+  @include pf-v5-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translateX(var(--#{$slider}__step-tick--TranslateX)),
+    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$slider}__step-tick--TranslateX))})
+  );
+
   position: absolute;
- inset-block-start: var(--#{$slider}__step-tick--Top);
- inset-inline-start: 0;
+  inset-block-start: var(--#{$slider}__step-tick--Top);
+  inset-inline-start: 0;
   width: var(--#{$slider}__step-tick--Width);
   height: var(--#{$slider}__step-tick--Height);
   background-color: var(--#{$slider}__step-tick--BackgroundColor);
   border-radius: var(--#{$slider}__step-tick--BorderRadius);
-  transform: translateX(var(--#{$slider}__step-tick--TranslateX));
 }
 
 .#{$slider}__step-label {
+  @include pf-v5-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translateX(var(--#{$slider}__step-label--TranslateX)),
+    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$slider}__step-label--TranslateX))})
+  );
+
   position: absolute;
- inset-block-start: var(--#{$slider}__step-label--Top);
+  inset-block-start: var(--#{$slider}__step-label--Top);
   word-break: normal;
-  transform: translateX(var(--#{$slider}__step-label--TranslateX));
 }
 
 .#{$slider}__thumb {
+  @include pf-v5-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translate(var(--#{$slider}__thumb--TranslateX), var(--#{$slider}__thumb--TranslateY)),
+    $rtl-val: translate(#{pf-v5-calc-inverse(var(--#{$slider}__thumb--TranslateX))}, var(--#{$slider}__thumb--TranslateY))
+  );
+
   position: absolute;
- inset-block-start: var(--#{$slider}__thumb--Top);
- inset-inline-start: var(--#{$slider}__thumb--Left);
+  inset-block-start: var(--#{$slider}__thumb--Top);
+  inset-inline-start: var(--#{$slider}__thumb--Left);
   width: var(--#{$slider}__thumb--Width);
   height: var(--#{$slider}__thumb--Height);
   cursor: pointer;
   background-color: var(--#{$slider}__thumb--BackgroundColor);
   border-radius: var(--#{$slider}__thumb--BorderRadius);
   box-shadow: var(--#{$slider}__thumb--BoxShadow);
-  transform: translate(var(--#{$slider}__thumb--TranslateX), var(--#{$slider}__thumb--TranslateY));
 
   &::before {
+    @include pf-v5-bidirectional-style(
+      $prop: transform,
+      $ltr-val: translate(var(--#{$slider}__thumb--before--TranslateX), var(--#{$slider}__thumb--before--TranslateY)),
+      $rtl-val: translate(#{pf-v5-calc-inverse(var(--#{$slider}__thumb--before--TranslateX))}, var(--#{$slider}__thumb--before--TranslateY))
+    );
+
     position: absolute;
-   inset-block-start: 50%;
-   inset-inline-start: 50%;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
     width: var(--#{$slider}__thumb--before--Width);
     height: var(--#{$slider}__thumb--before--Height);
     content: "";
     border-radius: var(--#{$slider}__thumb--before--BorderRadius);
-    transform: translate(var(--#{$slider}__thumb--before--TranslateX), var(--#{$slider}__thumb--before--TranslateY));
   }
 
   &:hover {
@@ -210,13 +236,18 @@
   margin-inline-start: var(--#{$slider}__value--MarginLeft);
 
   &.pf-m-floating {
+    @include pf-v5-bidirectional-style(
+      $prop: transform,
+      $ltr-val: translate(var(--#{$slider}__value--m-floating--TranslateX), var(--#{$slider}__value--m-floating--TranslateY)),
+      $rtl-val: translate(#{pf-v5-calc-inverse(var(--#{$slider}__value--m-floating--TranslateX))}, var(--#{$slider}__value--m-floating--TranslateY)),
+    );
+
     --#{$slider}__value--MarginLeft: 0;
 
     position: absolute;
-   inset-block-start: 0;
-   inset-inline-start: var(--#{$slider}__value--m-floating--Left);
+    inset-block-start: 0;
+    inset-inline-start: var(--#{$slider}__value--m-floating--Left);
     z-index: var(--#{$slider}__value--m-floating--ZIndex);
-    transform: translate(var(--#{$slider}__value--m-floating--TranslateX), var(--#{$slider}__value--m-floating--TranslateY));
   }
 
   .#{$form-control} {

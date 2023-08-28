@@ -25,21 +25,23 @@
 }
 
 // RTL helpers
+
+// Sets a block to RTL
 .#{$pf-prefix}m-dir-rtl {
-  @include pf-v5-rtl("transform-flip");
+  @include pf-v5-set-inverse;
 
   direction: rtl;
 }
 
+// Sets a block to LTR
 .#{$pf-prefix}m-dir-ltr,
 .ws-dir-ltr {
-  @include pf-v5-rtl("transform-flip-revert");
+  @include pf-v5-set-inverse(false);
 
   direction: ltr;
 }
 
-.#{$pf-prefix}m-rtl-flip-inline {
-  @include pf-v5-rtl("flip-inline");
+// Mirrors/flips something horizontally/inline in RTL
+.#{$pf-prefix}m-mirror-inline-rtl {
+  @include pf-v5-mirror-inline-on-rtl;
 }
-
-@include pf-v5-rtl("transform-flip");

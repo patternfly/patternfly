@@ -335,7 +335,7 @@
 }
 
 .#{$wizard}__toggle-separator {
-  @include pf-v5-rtl("flip-inline");
+  @include pf-v5-mirror-inline-on-rtl;
 
   margin-inline-start: var(--#{$wizard}__toggle-separator--MarginLeft);
   color: var(--#{$wizard}__toggle-separator--Color);
@@ -461,6 +461,12 @@
   // Common step number styles
   @at-root .#{$wizard}__toggle-num,
   &::before {
+    @include pf-v5-bidirectional-style(
+      $prop: transform,
+      $ltr-val: translateX(var(--#{$wizard}__nav-link--before--TranslateX)),
+      $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$wizard}__nav-link--before--TranslateX))})
+    );
+
     position: absolute;
     inset-block-start: var(--#{$wizard}__nav-link--before--Top);
     inset-inline-start: 0;
@@ -474,7 +480,6 @@
     color: var(--#{$wizard}__nav-link--before--Color);
     background-color: var(--#{$wizard}__nav-link--before--BackgroundColor);
     border-radius: var(--#{$wizard}__nav-link--before--BorderRadius);
-    transform: translateX(calc(var(--#{$wizard}__nav-link--before--TranslateX) * var(--#{$pf-global}--rtl--transform--flip)));
   }
 
   // Nav step number
@@ -530,7 +535,7 @@
 }
 
 .#{$wizard}__nav-link-toggle-icon {
-  @include pf-v5-rtl("flip-inline");
+  @include pf-v5-mirror-inline-on-rtl;
 
   display: inline-block;
   transition: var(--#{$wizard}__nav-link-toggle-icon--Transition);
