@@ -88,7 +88,7 @@
       background-color: var(--#{$switch}__input--checked__toggle--BackgroundColor);
 
       &::before {
-        @include pf-v5-rtl-style(transform,
+        @include pf-v5-bidirectional-style(transform,
           translateX(var(--#{$switch}__input--checked__toggle--before--TranslateX)),
           translateX(#{pf-v5-calc-inverse(var(--#{$switch}__input--checked__toggle--before--TranslateX))})
         );

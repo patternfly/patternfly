@@ -13,7 +13,7 @@
   --#{$slider}__rail-track--before--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
   --#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop: var(--#{$slider}--value);
 
-  @include pf-v5-rtl-style("--#{$slider}__rail-track--before--fill--direction", "right", "left");
+  @include pf-v5-bidirectional-style("--#{$slider}__rail-track--before--fill--direction", "right", "left");
 
   // steps
   --#{$slider}__steps--FontSize: var(--#{$pf-global}--FontSize--sm);
@@ -153,7 +153,7 @@
 }
 
 .#{$slider}__step-tick {
-  @include pf-v5-rtl-style(transform,
+  @include pf-v5-bidirectional-style(transform,
     translateX(var(--#{$slider}__step-tick--TranslateX)),
     translateX(#{pf-v5-calc-inverse(var(--#{$slider}__step-tick--TranslateX))})
   );
@@ -168,7 +168,7 @@
 }
 
 .#{$slider}__step-label {
-  @include pf-v5-rtl-style(transform,
+  @include pf-v5-bidirectional-style(transform,
     translateX(var(--#{$slider}__step-label--TranslateX)),
     translateX(#{pf-v5-calc-inverse(var(--#{$slider}__step-label--TranslateX))})
   );
@@ -179,7 +179,7 @@
 }
 
 .#{$slider}__thumb {
-  @include pf-v5-rtl-style(transform,
+  @include pf-v5-bidirectional-style(transform,
     translate(var(--#{$slider}__thumb--TranslateX), var(--#{$slider}__thumb--TranslateY)),
     translate(#{pf-v5-calc-inverse(var(--#{$slider}__thumb--TranslateX))}, var(--#{$slider}__thumb--TranslateY))
   );
@@ -195,7 +195,7 @@
   box-shadow: var(--#{$slider}__thumb--BoxShadow);
 
   &::before {
-    @include pf-v5-rtl-style(transform,
+    @include pf-v5-bidirectional-style(transform,
       translate(var(--#{$slider}__thumb--before--TranslateX), var(--#{$slider}__thumb--before--TranslateY)),
       translate(#{pf-v5-calc-inverse(var(--#{$slider}__thumb--before--TranslateX))}, var(--#{$slider}__thumb--before--TranslateY))
     );
@@ -228,7 +228,7 @@
   margin-inline-start: var(--#{$slider}__value--MarginLeft);
 
   &.pf-m-floating {
-    @include pf-v5-rtl-style(transform,
+    @include pf-v5-bidirectional-style(transform,
       translate(var(--#{$slider}__value--m-floating--TranslateX), var(--#{$slider}__value--m-floating--TranslateY)),
       translate(#{pf-v5-calc-inverse(var(--#{$slider}__value--m-floating--TranslateX))}, var(--#{$slider}__value--m-floating--TranslateY)),
     );

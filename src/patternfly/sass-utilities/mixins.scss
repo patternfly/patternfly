@@ -329,14 +329,16 @@
   }
 }
 
+// Used to create the LTR selector for LTR specific styles
 @mixin pf-v5-ltr {
   @at-root :where(.ws-dir-ltr, .#{$pf-prefix}m-dir-ltr, [dir="ltr"]) #{&} {
     @content;
   }
 }
+
 // Creates a default/LTR declaration, and an RTL declaration.
 
-// @include pf-v5-rtl-style(background, blue, red)
+// @include pf-v5-bidirectional-style(background, blue, red)
 
 // renders as
 
@@ -344,7 +346,7 @@
 // [dir="rtl"] {
 //   background: red;
 // }
-@mixin pf-v5-rtl-style($prop, $ltr-val, $rtl-val) {
+@mixin pf-v5-bidirectional-style($prop, $ltr-val, $rtl-val) {
   #{$prop}: #{$ltr-val};
 
   @include pf-v5-rtl {

@@ -461,7 +461,7 @@
   // Common step number styles
   @at-root .#{$wizard}__toggle-num,
   &::before {
-    @include pf-v5-rtl-style(transform,
+    @include pf-v5-bidirectional-style(transform,
       translateX(var(--#{$wizard}__nav-link--before--TranslateX)),
       translateX(#{pf-v5-calc-inverse(var(--#{$wizard}__nav-link--before--TranslateX))})
     );
