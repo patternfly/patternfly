@@ -13,7 +13,11 @@
   --#{$slider}__rail-track--before--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
   --#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop: var(--#{$slider}--value);
 
-  @include pf-v5-bidirectional-style("--#{$slider}__rail-track--before--fill--direction", "right", "left");
+  @include pf-v5-bidirectional-style(
+    $prop: "--#{$slider}__rail-track--before--fill--direction", 
+    $lrt-val: "right", 
+    $rtl-val: "left"
+  );
 
   // steps
   --#{$slider}__steps--FontSize: var(--#{$pf-global}--FontSize--sm);
