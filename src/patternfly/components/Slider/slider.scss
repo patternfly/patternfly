@@ -157,9 +157,10 @@
 }
 
 .#{$slider}__step-tick {
-  @include pf-v5-bidirectional-style(transform,
-    translateX(var(--#{$slider}__step-tick--TranslateX)),
-    translateX(#{pf-v5-calc-inverse(var(--#{$slider}__step-tick--TranslateX))})
+  @include pf-v5-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translateX(var(--#{$slider}__step-tick--TranslateX)),
+    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$slider}__step-tick--TranslateX))})
   );
 
   position: absolute;
