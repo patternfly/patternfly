@@ -14,9 +14,9 @@
   --#{$slider}__rail-track--before--fill--BackgroundColor--gradient-stop: var(--#{$slider}--value);
 
   @include pf-v5-bidirectional-style(
-    $prop: "--#{$slider}__rail-track--before--fill--direction", 
-    $lrt-val: "right", 
-    $rtl-val: "left"
+    $prop: --#{$slider}__rail-track--before--fill--direction, 
+    $ltr-val: right,
+    $rtl-val: left
   );
 
   // steps
