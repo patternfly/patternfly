@@ -168,10 +168,11 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
     --#{$dual-list-selector}__item-toggle--MarginBottom: 0;
 
     .#{$dual-list-selector}__item-toggle {
-      @include pf-v5-bidirectional-style(transform,
-        translateX(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX)),
-        translateX(#{pf-v5-calc-inverse(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX))}),
-      );
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX)),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX))}),
+      ); 
 
       position: absolute;
       inset-block-start: 0;
