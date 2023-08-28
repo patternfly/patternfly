@@ -179,9 +179,10 @@
 }
 
 .#{$slider}__thumb {
-  @include pf-v5-bidirectional-style(transform,
-    translate(var(--#{$slider}__thumb--TranslateX), var(--#{$slider}__thumb--TranslateY)),
-    translate(#{pf-v5-calc-inverse(var(--#{$slider}__thumb--TranslateX))}, var(--#{$slider}__thumb--TranslateY))
+  @include pf-v5-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translate(var(--#{$slider}__thumb--TranslateX), var(--#{$slider}__thumb--TranslateY)),
+    $rtl-val: translate(#{pf-v5-calc-inverse(var(--#{$slider}__thumb--TranslateX))}, var(--#{$slider}__thumb--TranslateY))
   );
 
   position: absolute;
