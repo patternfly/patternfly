@@ -329,6 +329,11 @@
   }
 }
 
+@mixin pf-v5-ltr {
+  @at-root :where(.ws-dir-ltr, .#{$pf-prefix}m-dir-ltr, [dir="ltr"]) #{&} {
+    @content;
+  }
+}
 // Creates a default/LTR declaration, and an RTL declaration.
 
 // @include pf-v5-rtl-style(background, blue, red)
