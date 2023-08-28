@@ -7,37 +7,25 @@
   {{/if}}
   {{#if nav-item--IsFlyout}}
     aria-haspopup="true"
-    {{#if nav-item--expanded}}
-      aria-expanded="true"
-    {{else}}
-      aria-expanded="false"
-    {{/if}}
   {{/if}}
-  {{#if nav-item--IsDrilldown}}
+  {{#ifAny nav-item--IsFlyout nav-item--IsDrilldown nav-item--expandable}}
     {{#if nav-item--expanded}}
       aria-expanded="true"
     {{else}}
       aria-expanded="false"
     {{/if}}
-  {{/if}}
-  {{#if nav-item--expandable}}
-    {{#if nav-item--expanded}}
-      aria-expanded="true"
-    {{else}}
-      aria-expanded="false"
-    {{/if}}
-  {{/if}}>
+  {{/ifAny}}>
   {{#if nav-item--IsDrillup}}
     {{> nav-toggle nav-toggle--modifier="pf-m-start"}}
   {{/if}}
-  {{> @partial-block}}
-  {{#if nav-item--expandable}}
-    {{> nav-toggle}}
+  {{#if nav-item--HasTextWrapper}}
+    {{#> nav-link-text}}
+      {{> @partial-block}}
+    {{/nav-link-text}}
+  {{else}}
+    {{> @partial-block}}
   {{/if}}
-  {{#if nav-item--IsFlyout}}
+  {{#ifAny nav-item--expandable nav-item--IsFlyout nav-item--IsDrilldown}}
     {{> nav-toggle}}
-  {{/if}}
-  {{#if nav-item--IsDrilldown}}
-    {{> nav-toggle}}
-  {{/if}}
+  {{/ifAny}}
 </{{#if nav-item--expandable}}button{{else}}a{{/if}}>
