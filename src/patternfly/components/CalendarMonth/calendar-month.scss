@@ -81,6 +81,8 @@
 }
 
 .#{$calendar-month}__header-nav-control {
+  @include pf-v5-mirror-inline-on-rtl;
+
   margin-inline-start: var(--#{$calendar-month}__header-nav-control--MarginLeft);
   margin-inline-end: var(--#{$calendar-month}__header-nav-control--MarginRight);
 
