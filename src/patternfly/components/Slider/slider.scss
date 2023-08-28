@@ -168,9 +168,10 @@
 }
 
 .#{$slider}__step-label {
-  @include pf-v5-bidirectional-style(transform,
-    translateX(var(--#{$slider}__step-label--TranslateX)),
-    translateX(#{pf-v5-calc-inverse(var(--#{$slider}__step-label--TranslateX))})
+  @include pf-v5-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translateX(var(--#{$slider}__step-label--TranslateX)),
+    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$slider}__step-label--TranslateX))})
   );
 
   position: absolute;
