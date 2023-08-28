@@ -228,9 +228,10 @@
   margin-inline-start: var(--#{$slider}__value--MarginLeft);
 
   &.pf-m-floating {
-    @include pf-v5-bidirectional-style(transform,
-      translate(var(--#{$slider}__value--m-floating--TranslateX), var(--#{$slider}__value--m-floating--TranslateY)),
-      translate(#{pf-v5-calc-inverse(var(--#{$slider}__value--m-floating--TranslateX))}, var(--#{$slider}__value--m-floating--TranslateY)),
+    @include pf-v5-bidirectional-style(
+      $prop: transform,
+      $ltr-val: translate(var(--#{$slider}__value--m-floating--TranslateX), var(--#{$slider}__value--m-floating--TranslateY)),
+      $rtl-val: translate(#{pf-v5-calc-inverse(var(--#{$slider}__value--m-floating--TranslateX))}, var(--#{$slider}__value--m-floating--TranslateY)),
     );
 
     --#{$slider}__value--MarginLeft: 0;
