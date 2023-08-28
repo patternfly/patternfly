@@ -310,27 +310,55 @@
   }
 }
 
-// Applies custom styles to support RTL
-@mixin pf-v5-rtl($transform: null) {
-  // resets property used to inverse transform values calc()s in RTL
-  @if $transform == "transform-flip-revert" {
-    --#{$pf-global}--rtl--transform--flip: 1;
-  } @else {
-    // establishes the selectors used to target RTL
-    // remove .ws-dir-rtl before releasing RTL
-    @at-root :where(.ws-dir-rtl, .#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
-      // sets property used in calcs to inverse transform values
-      @if $transform == "transform-flip" {
-        --#{$pf-global}--rtl--transform--flip: -1;
-      }
+// RTL helpers
 
-      // flips something horizontally/inline. relies upon scale/scale() not already being used for the element
-      @if $transform == 'flip-inline' {
-        scale: -1 1;
-      }
+// Used to create the RTL selector for RTL specific styles
 
-      // any custom CSS to apply within the selectors that target RTL
-      @content
-    }
+// @include pf-v5-rtl {
+//   background: red; 
+// }
+
+// renders as
+
+// [dir="rtl"] {
+//   background: red;
+// }
+@mixin pf-v5-rtl {
+  @at-root :where(.ws-dir-rtl, .#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
+    @content;
   }
+}
+
+// Creates a default/LTR declaration, and an RTL declaration.
+
+// @include pf-v5-rtl-style(background, blue, red)
+
+// renders as
+
+// background: blue;
+// [dir="rtl"] {
+//   background: red;
+// }
+@mixin pf-v5-rtl-style($prop, $ltr-val, $rtl-val) {
+  #{$prop}: #{$ltr-val};
+
+  @include pf-v5-rtl {
+    #{$prop}: #{$rtl-val};
+  }
+}
+
+// Mirrors/flips something horizontally/inline. Relies upon scale/scale() not already being used for the element. Can be extended to take arguments to use different methods other than scale().
+@mixin pf-v5-mirror-inline {
+  scale: -1 1;
+}
+
+@mixin pf-v5-mirror-inline-rtl {
+  @include pf-v5-rtl {
+    @include pf-v5-mirror-inline;
+  }
+}
+
+// Declares a global inverse multiplier var used for returning the inverse of a number. Defined within blocks that reference the global var in calc() functions to conditionally return the default or inverse value of a number.
+@mixin pf-v5-set-inverse($val: true) {
+  --#{$pf-global}--inverse--multiplier: #{if($val, -1, 1)};
 }

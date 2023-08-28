@@ -115,3 +115,9 @@
 
   @return $new-map;
 }
+
+// Returns a calc() with the inverse of a value used for RTL. Most commonly used as the inverse/negative of a value in a transform function (eg, translate(), rotate(), scale(), etc)
+// Shouldn't be used on an existing LTR style as adding a calc() in an existing style could be breaking. Should used within an RTL selector, which is basically an opt-in.
+@function pf-v5-calc-inverse($val, $multiplier: var(--#{$pf-global}--inverse--multiplier)) {
+  @return calc(#{$val} * #{$multiplier});
+}

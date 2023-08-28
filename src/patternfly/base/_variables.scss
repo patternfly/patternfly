@@ -284,7 +284,7 @@
   --#{$pf-global}--target-size--MinHeight: #{$pf-v5-global--target-size--MinHeight};
 
   // RTL
-  --#{$pf-global}--rtl--transform--flip: 1;
+  --#{$pf-global}--inverse--multiplier: 1;
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

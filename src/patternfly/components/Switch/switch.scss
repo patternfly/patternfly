@@ -88,7 +88,10 @@
       background-color: var(--#{$switch}__input--checked__toggle--BackgroundColor);
 
       &::before {
-        transform: translateX(calc(var(--#{$switch}__input--checked__toggle--before--TranslateX) * var(--#{$pf-global}--rtl--transform--flip)));
+        @include pf-v5-rtl-style(transform,
+          translateX(var(--#{$switch}__input--checked__toggle--before--TranslateX)),
+          translateX(#{pf-v5-calc-inverse(var(--#{$switch}__input--checked__toggle--before--TranslateX))})
+        );
       }
     }
 

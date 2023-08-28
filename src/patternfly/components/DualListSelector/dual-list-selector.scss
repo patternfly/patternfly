@@ -168,10 +168,14 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
     --#{$dual-list-selector}__item-toggle--MarginBottom: 0;
 
     .#{$dual-list-selector}__item-toggle {
+      @include pf-v5-rtl-style(transform,
+        translateX(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX)),
+        translateX(#{pf-v5-calc-inverse(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX))}),
+      );
+
       position: absolute;
       inset-block-start: 0;
       inset-inline-start: var(--#{$dual-list-selector}__list__list__item-toggle--Left);
-      transform: translateX(calc(var(--#{$dual-list-selector}__list__list__item-toggle--TranslateX) * var(--#{$pf-global}--rtl--transform--flip)));
     }
   }
 
@@ -295,7 +299,7 @@ $pf-v5-c-dual-list-selector__item--MaxNesting: 10;
 }
 
 :is(.#{$dual-list-selector}__controls-item, .#{$dual-list-selector}__item-toggle-icon) {
-  @include pf-v5-rtl("flip-inline");
+  @include pf-v5-mirror-inline-rtl;
 }
 
 .#{$dual-list-selector}__item-main {
