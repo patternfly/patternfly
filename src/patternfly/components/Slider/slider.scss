@@ -195,9 +195,10 @@
   box-shadow: var(--#{$slider}__thumb--BoxShadow);
 
   &::before {
-    @include pf-v5-bidirectional-style(transform,
-      translate(var(--#{$slider}__thumb--before--TranslateX), var(--#{$slider}__thumb--before--TranslateY)),
-      translate(#{pf-v5-calc-inverse(var(--#{$slider}__thumb--before--TranslateX))}, var(--#{$slider}__thumb--before--TranslateY))
+    @include pf-v5-bidirectional-style(
+      $prop: transform,
+      $ltr-val: translate(var(--#{$slider}__thumb--before--TranslateX), var(--#{$slider}__thumb--before--TranslateY)),
+      $rtl-val: translate(#{pf-v5-calc-inverse(var(--#{$slider}__thumb--before--TranslateX))}, var(--#{$slider}__thumb--before--TranslateY))
     );
 
     position: absolute;
