@@ -53,6 +53,13 @@
   --pf-t--global--link--text-decoration--hover: var(--pf-t--global--text-decoration--200);
 
   // blend modes 
-  --pf-t--global--mix-blend-mode--100: screen;
+  --pf-t--global--mix-blend-mode--100: multiply;
+
+  // --pf-t--global--mix-blend-mode--100: screen; For dark mode, use screen
   --pf-t--global--background--color--action--plain--hover--blend: var(--pf-t--global--mix-blend-mode--100);
+
+  // semantic border width
+  --pf-t--global--border--width--control--default: var(--pf-t--global--border--width--100);
+  --pf-t--global--border--width--control--hover: var(--pf-t--global--border--width--100);
+  --pf-t--global--border--width--control--active: var(--pf-t--global--border--width--200);
 }

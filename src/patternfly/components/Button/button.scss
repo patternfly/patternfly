@@ -136,7 +136,6 @@
   --#{$button}--m-link--m-danger--active--Color: var(--pf-t--global--text--color--status--danger--active);
 
   // Plain btn
-  // TODO 
   --#{$button}--m-plain--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$button}--m-plain--Color: var(--pf-t--global--icon--color--regular);
   --#{$button}--m-plain--hover--BackgroundColor: --pf-t--global--background--color--action--plain--hover;
@@ -148,6 +147,9 @@
   --#{$button}--m-plain--disabled--Color: var(--pf-t--global--icon--color--disabled);
   --#{$button}--m-plain--disabled--BackgroundColor: transparent;
 
+  // TODO this token needs to be added to figma
+  --pf-t--global--background--color--action--plain--hover--blend: var(--pf-t--global--mix-blend-mode--100);
+
   // Control Button
   --#{$button}--m-control--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$button}--m-control--Color: var(--pf-t--global--text--color--subtle);
@@ -155,7 +157,7 @@
   --#{$button}--m-control--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --#{$button}--m-control--after--BorderTopColor: var(--pf-t--global--border--color--default);
   --#{$button}--m-control--after--BorderRightColor: var(--pf-t--global--border--color--default);
-  --#{$button}--m-control--after--BorderBottomColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$button}--m-control--after--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$button}--m-control--after--BorderLeftColor: var(--pf-t--global--border--color--default);
   --#{$button}--m-control--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$button}--m-control--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
