@@ -208,6 +208,7 @@ Refer to the [icons](/design-foundations/icons) page for information about the P
 | `.pf-v5-c-icon` | `<span>`, `<div>` | Initiates an icon component. **Required**  |
 | `.pf-v5-c-icon__content` | `<span>`, `<div>` | Initiates the icon content. **Required**  |
 | `.pf-v5-c-icon__progress` | `<span>`, `<div>` | Initiates a container for a progress spinner.  |
+| `.pf-m-dir-ltr` | `.pf-v5-c-icon` | Overrides default rtl mirroring. |
 | `.pf-m-inline` | `.pf-v5-c-icon` | Displays the icon inline with text, and allows the icon to inherit the size and color of the parent. |
 | `.pf-m-[sm,md,lg,xl]` | `.pf-v5-c-icon` | Modifies the icon container to be small, medium, large, or extra large. |
 | `.pf-m-[sm,md,lg,xl]` | `.pf-v5-c-icon__content`, `pf-v5-c-icon__progress` | Modifies the icon content or progress element to be small, medium, large, or extra large. |

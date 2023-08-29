@@ -29,6 +29,18 @@
 .#{$truncate}__start + .#{$truncate}__end {
   overflow: visible;
   direction: ltr;
+
+  &.pf-m-file-extension {
+    @include pf-v5-bidirectional-style (
+      $prop: 'direction',
+      $ltr-val: 'ltr',
+      $rtl-val: 'rtl'
+    );
+
+    &::before {
+      content: '.';
+    }
+  }
 }
 
 // safari not supported

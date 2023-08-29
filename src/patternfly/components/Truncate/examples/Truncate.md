@@ -14,8 +14,8 @@ The truncate component contains two child elements, `.pf-v5-c-truncate__start` a
 ### Default
 ```hbs
 <div class="pf-v5-c-truncate--example">
-  {{#> truncate truncate--id="default-truncation-example"}}
-    {{> truncate-start truncate-start--text="Vestibulum interdum risus et enim faucibus, sit amet molestie est accumsan."}}
+  {{#> truncate truncate--id='default-truncation-example'}}
+    {{> truncate-start truncate-start--text='Vestibulum interdum risus et enim faucibus, sit amet molestie est accumsan.'}}
   {{/truncate}}
 </div>
 ```
@@ -23,9 +23,19 @@ The truncate component contains two child elements, `.pf-v5-c-truncate__start` a
 ### Middle
 ```hbs
 <div class="pf-v5-c-truncate--example">
-  {{#> truncate truncate--id="middle-of-line-truncation-example"}}
-    {{> truncate-start truncate-start--text="redhat_logo_black_and_white_reversed_simple_with_fedora_con"}}
-    {{> truncate-end truncate-end--text="tainer.zip"}}
+  {{#> truncate truncate--id='middle-of-line-truncation-example'}}
+    {{> truncate-start truncate-start--text='Vestibulum interdum risus et enim faucibus,&nbsp;'}}
+    {{> truncate-end truncate-end--text='sit amet molestie est accumsan.'}}
+  {{/truncate}}
+</div>
+```
+
+### File extension
+```hbs
+<div class="pf-v5-c-truncate--example">
+  {{#> truncate truncate--id='middle-of-line-truncation-example'}}
+    {{> truncate-start truncate-start--text='redhat_logo_black_and_white_reversed_simple_with_fedora_con'}}
+    {{> truncate-end truncate-end--text='zip' isFileExtension=true}}
   {{/truncate}}
 </div>
 ```
@@ -33,8 +43,8 @@ The truncate component contains two child elements, `.pf-v5-c-truncate__start` a
 ### Start
 ```hbs
 <div class="pf-v5-c-truncate--example">
-  {{#> truncate truncate--id="start-truncation-example"}}
-    {{> truncate-end truncate-end--text="Vestibulum interdum risus et enim faucibus, sit amet molestie est accumsan.&lrm;"}}
+  {{#> truncate truncate--id='start-truncation-example'}}
+    {{> truncate-end truncate-end--text='Vestibulum interdum risus et enim faucibus, sit amet molestie est accumsan.&lrm;'}}
   {{/truncate}}
 </div>
 ```
@@ -48,3 +58,4 @@ The truncate component contains two child elements, `.pf-v5-c-truncate__start` a
 | `.pf-v5-c-truncate` | `<span>` | Initiates the truncate component. |
 | `.pf-v5-c-truncate__start` | `<span>` | Defines the truncate component starting text. |
 | `.pf-v5-c-truncate__end` | `<span>` | Defines the truncate component ending text. |
+| `.pf-m-file-extension` | `.pf-v5-c-truncate__end` | Modifies for file extension styles. |

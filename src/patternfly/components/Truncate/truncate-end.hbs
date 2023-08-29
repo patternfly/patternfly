@@ -1,4 +1,8 @@
-<span class="{{pfv}}truncate__end{{#if truncate-end--modifier}} {{truncate-end--modifier}}{{/if}}"
+<span class="{{pfv}}truncate__end
+  {{#if isFileExtension}}
+    pf-m-file-extension
+  {{/if}}
+  {{#if truncate-end--modifier}} {{truncate-end--modifier}}{{/if}}"
   {{#if truncate-end--attribute}}
     {{{truncate-end--attribute}}}
   {{/if}}>
