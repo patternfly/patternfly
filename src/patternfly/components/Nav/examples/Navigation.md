@@ -715,10 +715,10 @@ When using anything other than a text node for the link text, wrap the link text
       {{/nav-link}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--expanded="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link2"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-link-text-link2"'}}
         Link 2 <small>(small text)</small>
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link2"'}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-link-text-link2"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent nav-item--HasTextWrapper=true}}
             {{#> nav-link nav-link--href="#"}}
@@ -736,11 +736,11 @@ When using anything other than a text node for the link text, wrap the link text
       {{/nav-subnav}}
     {{/nav-item}}
     {{#> nav-item nav-item--expandable="true" nav-item--current="true"}}
-      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-mixed-link4"'}}
+      {{#> nav-link nav-link--href="#" nav-link--attribute='id="nav-link-text-link4"'}}
         Link 3
         <strong>(strong text)</strong>
       {{/nav-link}}
-      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-mixed-link4"'}}
+      {{#> nav-subnav nav-subnav--attribute='aria-labelledby="nav-link-text-link4"'}}
         {{#> nav-list}}
           {{#> nav-item newcontent}}
             {{#> nav-link nav-link--href="#"}}
