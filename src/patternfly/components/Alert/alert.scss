@@ -199,7 +199,7 @@
 }
 
 .#{$alert}__toggle-icon {
-  @include pf-v5-rtl('flip-inline');
+  @include pf-v5-mirror-inline-on-rtl;
   
   display: inline-block;
   transition: var(--#{$alert}__toggle-icon--Transition);
