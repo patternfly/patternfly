@@ -282,7 +282,11 @@
       // target first list in menu
       > .#{$menu}__content > .#{$menu}__list,
       > .#{$menu}__list {
-        transform: translateX(-100%);
+        @include pf-v5-bidirectional-style(
+          $prop: transform,
+          $ltr-val: translateX(-100%),
+          $rtl-val: translateX(100%)
+        );
       }
       // stylelint-enable
     }
@@ -299,8 +303,11 @@
 
       // stylelint-disable selector-max-class
       &.pf-m-drilled-in {
-        transform: translateX(-100%);
-      }
+        @include pf-v5-bidirectional-style(
+          $prop: transform,
+          $ltr-val: translateX(-100%),
+          $rtl-val: translateX(100%)
+        );      }
       // stylelint-enable
     }
 

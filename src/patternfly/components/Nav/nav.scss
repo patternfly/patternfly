@@ -508,6 +508,8 @@
   }
 
   .#{$menu}__item-toggle-icon {
+    @include pf-v5-mirror-inline-on-rtl;
+
     margin-inline-start: calc(var(--#{$menu}__item-toggle-icon--PaddingLeft) * -1);
   }
 
@@ -1064,6 +1066,8 @@
   display: inline-block;
   transition: var(--#{$nav}__toggle-icon--Transition);
 
+  @include pf-v5-mirror-inline-on-rtl;
+
   .#{$nav}__item.pf-m-expanded & {
     transform: rotate(var(--#{$nav}__item--m-expanded__toggle-icon--Rotate));
   }
@@ -1132,6 +1136,12 @@
   opacity: 0;
   transition: var(--#{$nav}__scroll-button--Transition);
 
+  // Mirror only the contents to avoid flipping the borders
+  // TODO at breaking change, add an icon wrapper to be mirrored
+  > * {
+    @include pf-v5-mirror-inline-on-rtl;
+  }
+
   &::before {
     position: absolute;
     inset-block-start: 0;
@@ -1163,8 +1173,13 @@
     --#{$nav}__scroll-button--before--BorderRightWidth: var(--#{$nav}__scroll-button--before--BorderWidth);
 
     margin-inline-end: calc(var(--#{$nav}__scroll-button--Width) * -1);
-    transform: translateX(-100%);
 
+    @include pf-v5-bidirectional-style(
+      $prop: transform,
+      $ltr-val: translateX(-100%),
+      $rtl-val: translateX(100%)
+    );
+  
     &::before {
      inset-inline-end: 0;
     }
@@ -1174,7 +1189,12 @@
     --#{$nav}__scroll-button--before--BorderLeftWidth: var(--#{$nav}__scroll-button--before--BorderWidth);
 
     margin-inline-start: calc(var(--#{$nav}__scroll-button--Width) * -1);
-    transform: translateX(100%);
+    
+    @include pf-v5-bidirectional-style(
+      $prop: transform,
+      $ltr-val: translateX(100%),
+      $rtl-val: translateX(-100%)
+    );
 
     &::before {
      inset-inline-start: 0;
