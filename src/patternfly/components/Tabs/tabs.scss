@@ -490,6 +490,8 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   display: inline-block;
   color: var(--#{$tabs}__toggle-icon--Color);
   transition: var(--#{$tabs}__toggle-icon--Transition);
