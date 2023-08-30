@@ -404,7 +404,12 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   -webkit-overflow-scrolling: touch;
   background-color: var(--#{$page}__sidebar--BackgroundColor);
   transition: var(--#{$page}__sidebar--Transition);
-  transform: translateX(var(--#{$page}__sidebar--TranslateX)) translateZ(var(--#{$page}__sidebar--TranslateZ));
+
+  @include pf-v5-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translateX(var(--#{$page}__sidebar--TranslateX)) translateZ(var(--#{$page}__sidebar--TranslateZ)),
+    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$page}__sidebar--TranslateX))}) translateZ(var(--#{$page}__sidebar--TranslateZ))
+  );
 
   // Mobile
   // Expanded nav
