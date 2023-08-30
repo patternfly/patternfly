@@ -164,7 +164,7 @@ import './Card.css'
 ```hbs
 {{#> card card--id="card-demo-horizontal-split-example" card--modifier="pf-m-flat"}}
   {{#> grid grid--modifier="pf-m-all-6-col-on-md"}}
-    {{#> grid-item grid-item--modifier="pf-d-card__media-item" grid-item--attribute='style="min-height: 200px; background: center / cover url(\'/assets/images/pfbg_992@2x.jpg\'); "'}}
+    {{#> grid-item grid-item--attribute='style="min-height: 200px; background: no-repeat bottom right / auto 75% url(/assets/images/pfbg-icon.svg) black;"'}}
     {{/grid-item}}
     {{#> grid-item}}
       {{> card-title card-title-text--value="Headline"}}
