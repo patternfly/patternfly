@@ -369,6 +369,8 @@
 }
 
 .#{$card}__header-toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   display: inline-block;
   transition: var(--#{$card}__header-toggle-icon--Transition);
 }
