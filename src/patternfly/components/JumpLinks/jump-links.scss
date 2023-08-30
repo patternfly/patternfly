@@ -230,6 +230,8 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 }
 
 .#{$jump-links}__toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   display: inline-block;
   color: var(--#{$jump-links}__toggle-icon--Color);
   transition: var(--#{$jump-links}__toggle-icon--Transition);
