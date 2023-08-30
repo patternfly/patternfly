@@ -42,12 +42,6 @@
   width: var(--#{$icon}--Width);
   height: var(--#{$icon}--Height);
 
-  @include pf-v5-mirror-inline-on-rtl;
-
-  &.pf-m-dir-ltr {
-    direction: ltr;
-  }
-
   // Inline modifier
   &.pf-m-inline {
     --#{$icon}--Width: var(--#{$icon}--m-inline--Width);
@@ -150,7 +144,7 @@
 // Progress element
 .#{$icon}__progress {
   position: absolute;
- inset-block-start: calc(50% + calc(.5 * var(--#{$icon}__content--svg--VerticalAlign)));
+  inset-block-start: calc(50% + calc(.5 * var(--#{$icon}__content--svg--VerticalAlign)));
   opacity: var(--#{$icon}__progress--Opacity, 0);
   transform: translateY(calc(-50% - calc(.5 * var(--#{$icon}__content--svg--VerticalAlign))));
 }
