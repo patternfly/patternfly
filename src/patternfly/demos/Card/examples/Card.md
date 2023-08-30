@@ -68,7 +68,7 @@ import './Card.css'
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
             {{> label label--color="blue" label-text--value="Set up your cluster" label-icon--value="info-circle"}}
-            <p>Continue setting up your cluster to access all you cain in the Console</p>
+            <p>Continue setting up your cluster to access all you can in the Console</p>
             {{#> list list--modifier="pf-m-plain"}}
               <li>
                 <a href="#">Add identity provider</a>
@@ -84,7 +84,11 @@ import './Card.css'
           {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all set up cluster steps
             {{#> button-icon button-icon--modifier="pf-m-end"}}
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              {{#> icon icon--modifier="pf-v5-m-mirror-inline-rtl"}}
+                {{#> icon-content}}
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                {{/icon-content}}
+              {{/icon}}
             {{/button-icon}}
           {{/button}}
         {{/l-flex}}
@@ -104,7 +108,11 @@ import './Card.css'
          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all guided tours
             {{#> button-icon button-icon--modifier="pf-m-end"}}
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              {{#> icon icon--modifier="pf-v5-m-mirror-inline-rtl"}}
+                {{#> icon-content}}
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                {{/icon-content}}
+              {{/icon}}
             {{/button-icon}}
           {{/button}}
         {{/l-flex}}
@@ -127,7 +135,11 @@ import './Card.css'
           {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all quick starts
             {{#> button-icon button-icon--modifier="pf-m-end"}}
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              {{#> icon icon--modifier="pf-v5-m-mirror-inline-rtl"}}
+                {{#> icon-content}}
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                {{/icon-content}}
+              {{/icon}}
             {{/button-icon}}
           {{/button}}
         {{/l-flex}}
@@ -150,7 +162,11 @@ import './Card.css'
           {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all learning resources
             {{#> button-icon button-icon--modifier="pf-m-end"}}
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              {{#> icon icon--modifier="pf-v5-m-mirror-inline-rtl"}}
+                {{#> icon-content}}
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                {{/icon-content}}
+              {{/icon}}
             {{/button-icon}}
           {{/button}}
         {{/l-flex}}
