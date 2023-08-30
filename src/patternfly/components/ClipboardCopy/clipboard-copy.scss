@@ -66,6 +66,8 @@
 }
 
 .#{$clipboard-copy}__toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   transition: var(--#{$clipboard-copy}__toggle-icon--Transition);
 }
 
