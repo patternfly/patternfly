@@ -282,7 +282,11 @@
       // target first list in menu
       > .#{$menu}__content > .#{$menu}__list,
       > .#{$menu}__list {
-        transform: translateX(-100%);
+        @include pf-v5-bidirectional-style(
+          $prop: transform,
+          $ltr-val: translateX(-100%),
+          $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)})
+        );    
       }
       // stylelint-enable
     }
@@ -299,7 +303,11 @@
 
       // stylelint-disable selector-max-class
       &.pf-m-drilled-in {
-        transform: translateX(-100%);
+        @include pf-v5-bidirectional-style(
+          $prop: transform,
+          $ltr-val: translateX(-100%),
+          $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)})
+        );
       }
       // stylelint-enable
     }
@@ -686,6 +694,8 @@
 
 // Toggle icon
 .#{$menu}__item-toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+  
   padding-inline-start: var(--#{$menu}__item-toggle-icon--PaddingLeft);
   padding-inline-end: var(--#{$menu}__item-toggle-icon--PaddingRight);
   color: var(--#{$menu}__item-toggle-icon, inherit);
