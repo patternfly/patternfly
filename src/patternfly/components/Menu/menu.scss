@@ -285,8 +285,8 @@
         @include pf-v5-bidirectional-style(
           $prop: transform,
           $ltr-val: translateX(-100%),
-          $rtl-val: translateX(100%)
-        );
+          $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)})
+        );    
       }
       // stylelint-enable
     }
@@ -306,8 +306,9 @@
         @include pf-v5-bidirectional-style(
           $prop: transform,
           $ltr-val: translateX(-100%),
-          $rtl-val: translateX(100%)
-        );      }
+          $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)})
+        );
+      }
       // stylelint-enable
     }
 
@@ -693,6 +694,8 @@
 
 // Toggle icon
 .#{$menu}__item-toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+  
   padding-inline-start: var(--#{$menu}__item-toggle-icon--PaddingLeft);
   padding-inline-end: var(--#{$menu}__item-toggle-icon--PaddingRight);
   color: var(--#{$menu}__item-toggle-icon, inherit);

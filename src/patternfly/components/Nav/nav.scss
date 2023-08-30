@@ -1177,7 +1177,7 @@
     @include pf-v5-bidirectional-style(
       $prop: transform,
       $ltr-val: translateX(-100%),
-      $rtl-val: translateX(100%)
+      $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)})
     );
   
     &::before {
@@ -1189,11 +1189,11 @@
     --#{$nav}__scroll-button--before--BorderLeftWidth: var(--#{$nav}__scroll-button--before--BorderWidth);
 
     margin-inline-start: calc(var(--#{$nav}__scroll-button--Width) * -1);
-    
+
     @include pf-v5-bidirectional-style(
       $prop: transform,
       $ltr-val: translateX(100%),
-      $rtl-val: translateX(-100%)
+      $rtl-val: translateX(#{pf-v5-calc-inverse(100%)})
     );
 
     &::before {
