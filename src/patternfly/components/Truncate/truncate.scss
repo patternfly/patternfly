@@ -30,16 +30,17 @@
   overflow: visible;
   direction: ltr;
 
-  &.pf-m-file-extension {
-    @include pf-v5-bidirectional-style (
-      $prop: 'direction',
-      $ltr-val: 'ltr',
-      $rtl-val: 'rtl'
-    );
+}
 
-    &::before {
-      content: '.';
-    }
+.#{$truncate}__file-extension {
+  @include pf-v5-bidirectional-style (
+    $prop: 'direction',
+    $ltr-val: 'ltr',
+    $rtl-val: 'rtl'
+  );
+
+  &::before {
+    content: '.';
   }
 }
 
