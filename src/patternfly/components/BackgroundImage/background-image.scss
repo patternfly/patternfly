@@ -18,6 +18,11 @@
   background-color: var(--#{$background-image}--BackgroundColor);
   background-image: var(--#{$background-image}--BackgroundImage);
   background-repeat: no-repeat;
-  background-position: var(--#{$background-image}--BackgroundPosition);
   background-size: var(--#{$background-image}--BackgroundSize);
+
+  @include pf-v5-bidirectional-style(
+    $prop: background-position,
+    $ltr-val: var(--#{$background-image}--BackgroundPosition),
+    $rtl-val: bottom left
+  );
 }
