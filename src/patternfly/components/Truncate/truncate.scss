@@ -23,30 +23,30 @@
 
 // End
 .#{$truncate}__end {
-  @include pf-v5-bidirectional-style {
-    $prop: direction;
-    $ltr-value: rtl;
-    $rtl-value: ltr;
-  }
+  @include pf-v5-bidirectional-style (
+    $prop: direction,
+    $ltr-value: rtl,
+    $rtl-value: ltr
+  )
 }
 
 .#{$truncate}__start + .#{$truncate}__end {
   overflow: visible;
 
-  @include pf-v5-bidirectional-style {
-    $prop: direction;
-    $ltr-value: ltr;
-    $rtl-value: rtl;
-  }
+  @include pf-v5-bidirectional-style (
+    $prop: direction,
+    $ltr-value: ltr,
+    $rtl-value: rtl
+  )
 }
 
 // safari not supported
 @supports (-webkit-hyphens: none) {
   .#{$truncate}__end {
-    @include pf-v5-bidirectional-style {
-      $prop: direction;
-      $ltr-value: ltr;
-      $rtl-value: rtl;
-    }
+    @include pf-v5-bidirectional-style (
+      $prop: direction,
+      $ltr-value: ltr,
+      $rtl-value: rtl
+    )
   }
 }
