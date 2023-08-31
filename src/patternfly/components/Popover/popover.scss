@@ -88,73 +88,129 @@
     --#{$popover}--MaxWidth: none;
   }
 
-  &.pf-m-top,
-  &.pf-m-top-left,
-  &.pf-m-top-right {
+  &:is(
+    .pf-m-top,
+    .pf-m-top-left,
+    .pf-m-top-right,
+    .pf-m-block-start,
+    .pf-m-block-start-inline-start,
+    .pf-m-block-start-inline-end
+  ) {
     .#{$popover}__arrow {
-     inset-block-end: 0;
-     inset-inline-start: 50%;
-      transform: translateX(var(--#{$popover}__arrow--m-top--TranslateX)) translateY(var(--#{$popover}__arrow--m-top--TranslateY)) rotate(var(--#{$popover}__arrow--m-top--Rotate));
+      inset-block-end: 0;
+      inset-inline-start: 50%;
+
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(var(--#{$popover}__arrow--m-top--TranslateX)) translateY(var(--#{$popover}__arrow--m-top--TranslateY)) rotate(var(--#{$popover}__arrow--m-top--Rotate)),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$popover}__arrow--m-top--TranslateX))}) translateY(var(--#{$popover}__arrow--m-top--TranslateY)) rotate(var(--#{$popover}__arrow--m-top--Rotate))
+      );
     }
   }
 
-  &.pf-m-bottom,
-  &.pf-m-bottom-left,
-  &.pf-m-bottom-right {
+  &:is(
+    .pf-m-bottom,
+    .pf-m-bottom-left,
+    .pf-m-bottom-right,
+    .pf-m-block-end,
+    .pf-m-block-end-inline-start,
+    .pf-m-block-end-inline-end
+  ) {
     .#{$popover}__arrow {
-     inset-block-start: 0;
-     inset-inline-start: 50%;
-      transform: translateX(var(--#{$popover}__arrow--m-bottom--TranslateX)) translateY(var(--#{$popover}__arrow--m-bottom--TranslateY)) rotate(var(--#{$popover}__arrow--m-bottom--Rotate));
+      inset-block-start: 0;
+      inset-inline-start: 50%;
+
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(var(--#{$popover}__arrow--m-bottom--TranslateX)) translateY(var(--#{$popover}__arrow--m-bottom--TranslateY)) rotate(var(--#{$popover}__arrow--m-bottom--Rotate)),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$popover}__arrow--m-bottom--TranslateX))}) translateY(var(--#{$popover}__arrow--m-bottom--TranslateY)) rotate(var(--#{$popover}__arrow--m-bottom--Rotate))
+      );
     }
   }
 
-  &.pf-m-left,
-  &.pf-m-left-top,
-  &.pf-m-left-bottom {
+  &:is(
+    .pf-m-left,
+    .pf-m-left-top,
+    .pf-m-left-bottom,
+    .pf-m-inline-start,
+    .pf-m-inline-start-block-start,
+    .pf-m-inline-start-block-end
+  ) {
     .#{$popover}__arrow {
-     inset-block-start: 50%;
-     inset-inline-end: 0;
-      transform: translateX(var(--#{$popover}__arrow--m-left--TranslateX)) translateY(var(--#{$popover}__arrow--m-left--TranslateY)) rotate(var(--#{$popover}__arrow--m-left--Rotate));
+      inset-block-start: 50%;
+      inset-inline-end: 0;
+
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(var(--#{$popover}__arrow--m-left--TranslateX)) translateY(var(--#{$popover}__arrow--m-left--TranslateY)) rotate(var(--#{$popover}__arrow--m-left--Rotate)),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$popover}__arrow--m-left--TranslateX))}) translateY(var(--#{$popover}__arrow--m-left--TranslateY)) rotate(var(--#{$popover}__arrow--m-left--Rotate))
+      );
     }
   }
 
-  &.pf-m-right,
-  &.pf-m-right-top,
-  &.pf-m-right-bottom {
+  &:is(
+    .pf-m-right,
+    .pf-m-right-top,
+    .pf-m-right-bottom,
+    .pf-m-inline-end,
+    .pf-m-inline-end-block-start,
+    .pf-m-inline-end-block-end
+  ) {
     .#{$popover}__arrow {
-     inset-block-start: 50%;
-     inset-inline-start: 0;
-      transform: translateX(var(--#{$popover}__arrow--m-right--TranslateX)) translateY(var(--#{$popover}__arrow--m-right--TranslateY)) rotate(var(--#{$popover}__arrow--m-right--Rotate));
+      inset-block-start: 50%;
+      inset-inline-start: 0;
+
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(var(--#{$popover}__arrow--m-right--TranslateX)) translateY(var(--#{$popover}__arrow--m-right--TranslateY)) rotate(var(--#{$popover}__arrow--m-right--Rotate)),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$popover}__arrow--m-right--TranslateX))}) translateY(var(--#{$popover}__arrow--m-right--TranslateY)) rotate(var(--#{$popover}__arrow--m-right--Rotate))
+      );
     }
   }
 
-  &.pf-m-left-top,
-  &.pf-m-right-top {
+  &:is(
+    .pf-m-left-top,
+    .pf-m-right-top,
+    .pf-m-inline-start-block-start,
+    .pf-m-inline-end-block-start
+  ) {
     .#{$popover}__arrow {
-     inset-block-start: var(--#{$popover}__arrow--Height);
+      inset-block-start: var(--#{$popover}__arrow--Height);
     }
   }
 
-  &.pf-m-left-bottom,
-  &.pf-m-right-bottom {
+  &:is(
+    .pf-m-left-bottom,
+    .pf-m-right-bottom,
+    .pf-m-inline-start-block-end,
+    .pf-m-inline-end-block-end
+  ) {
     .#{$popover}__arrow {
-     inset-block-start: auto;
-     inset-block-end: 0;
+      inset-block-start: auto;
+      inset-block-end: 0;
     }
   }
 
-  &.pf-m-top-left,
-  &.pf-m-bottom-left {
+  &:is(
+    .pf-m-top-left,
+    .pf-m-bottom-left,
+    .pf-m-block-start-inline-start,
+    .pf-m-block-end-inline-start
+  ) {
     .#{$popover}__arrow {
-     inset-inline-start: var(--#{$popover}__arrow--Width);
+      inset-inline-start: var(--#{$popover}__arrow--Width);
     }
   }
 
-  &.pf-m-top-right,
-  &.pf-m-bottom-right {
+  &:is(
+    .pf-m-top-right,
+    .pf-m-bottom-right,
+    .pf-m-block-start-inline-end,
+    .pf-m-block-end-inline-end
+  ) {
     .#{$popover}__arrow {
-     inset-inline-start: auto;
-     inset-inline-end: 0;
+      inset-inline-start: auto;
+      inset-inline-end: 0;
     }
   }
 
@@ -196,8 +252,8 @@
 // Close button
 .#{$popover}__close {
   position: absolute;
- inset-block-start: var(--#{$popover}__close--Top);
- inset-inline-end: var(--#{$popover}__close--Right);
+  inset-block-start: var(--#{$popover}__close--Top);
+  inset-inline-end: var(--#{$popover}__close--Right);
 
   // Create room for the close button
   + * {
