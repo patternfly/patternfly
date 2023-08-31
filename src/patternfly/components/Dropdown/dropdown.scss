@@ -784,6 +784,8 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 }
 
 .#{$dropdown}__menu-item-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
