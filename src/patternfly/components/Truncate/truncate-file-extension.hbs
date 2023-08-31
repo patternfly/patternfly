@@ -2,7 +2,7 @@
   {{#if truncate-file-extension--attribute}}
     {{{truncate-file-extension--attribute}}}
   {{/if}}>
-  {{#if truncate-file-extension--text}}
+  {{#if truncate-file-extension--text}}{{removeWhiteSpaceForPrettier}}
     {{{truncate-file-extension--text}}}
   {{else if @partial-block}}
     {{> @partial-block}}

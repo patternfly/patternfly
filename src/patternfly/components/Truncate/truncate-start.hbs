@@ -8,7 +8,7 @@
   {{#if @partial-block}}
     {{> @partial-block}}
   {{/if}}
-  {{#if truncate-file-extension--text}}
-    {{> truncate-file-extension}}
-  {{/if}}
 </span>
+{{#if truncate-file-extension--text}}
+  {{removeWhiteSpaceForPrettier}}{{> truncate-file-extension}}
+{{/if}}

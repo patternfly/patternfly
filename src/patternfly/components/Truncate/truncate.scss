@@ -23,24 +23,20 @@
 
 // End
 .#{$truncate}__end {
-  direction: rtl;
+  @include pf-v5-bidirectional-style {
+    $prop: direction;
+    $ltr-value: rtl;
+    $rtl-value: ltr;
+  }
 }
 
 .#{$truncate}__start + .#{$truncate}__end {
   overflow: visible;
-  direction: ltr;
 
-}
-
-.#{$truncate}__file-extension {
-  @include pf-v5-bidirectional-style (
-    $prop: 'direction',
-    $ltr-val: 'ltr',
-    $rtl-val: 'rtl'
-  );
-
-  &::before {
-    content: '.';
+  @include pf-v5-bidirectional-style {
+    $prop: direction;
+    $ltr-value: ltr;
+    $rtl-value: rtl;
   }
 }
 
