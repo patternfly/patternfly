@@ -445,7 +445,6 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   color: var(--#{$tree-view}__node-toggle--Color);
   background-color: var(--#{$tree-view}__node-toggle--BackgroundColor);
   border: 0;
-  transform: translateX(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX));
 
   @include pf-v5-bidirectional-style(
     $prop: transform,
