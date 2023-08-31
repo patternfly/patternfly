@@ -35,11 +35,13 @@
       --#{$table}--cell--m-border-left--before--BorderLeftColor: var(--#{$table}__sticky-cell--m-border-left--before--BorderLeftColor);
     }
 
-    &.pf-m-right {
+    &.pf-m-right, 
+    &.pf-m-inline-end {
       --#{$table}__sticky-cell--Right: var(--#{$table}__sticky-cell--m-right--Right);
     }
 
-    &.pf-m-left {
+    &.pf-m-left, 
+    &.pf-m-inline-start {
       --#{$table}__sticky-cell--Left: var(--#{$table}__sticky-cell--m-left--Left);
     }
 

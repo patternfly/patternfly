@@ -66,9 +66,14 @@ $pf-v5-c-tree-view--MaxDepth: 10;
   cursor: pointer;
 
   > .#{$table}__toggle {
+    @include pf-v5-bidirectional-style (
+      $prop: 'transform',
+      $ltr-val: translateX(var(--#{$table}--m-tree-view__toggle--TranslateX)),
+      $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$table}--m-tree-view__toggle--TranslateX))})
+    );
+
     position: var(--#{$table}--m-tree-view__toggle--Position);
-   inset-inline-start: var(--#{$table}--m-tree-view__toggle--Left);
-    transform: translateX(var(--#{$table}--m-tree-view__toggle--TranslateX));
+    inset-inline-start: var(--#{$table}--m-tree-view__toggle--Left);
 
     .#{$table}__toggle-icon {
       min-width: var(--#{$table}--m-tree-view__toggle__toggle-icon--MinWidth);

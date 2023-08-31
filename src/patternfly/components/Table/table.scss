@@ -971,6 +971,8 @@
   }
 
   .#{$table}__toggle-icon {
+    @include pf-v5-mirror-inline-on-rtl;
+
     transition: var(--#{$table}__toggle--c-button__toggle-icon--Transition);
     transform: rotate(var(--#{$table}__toggle--c-button__toggle-icon--Rotate));
   }
