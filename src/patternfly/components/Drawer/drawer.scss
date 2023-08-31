@@ -147,9 +147,18 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
   // Box shadow
   --#{$drawer}__panel--BoxShadow: none;
-  --#{$drawer}--m-expanded__panel--BoxShadow: var(--#{$pf-global}--BoxShadow--lg-left);
-  --#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow: var(--#{$pf-global}--BoxShadow--lg-right);
   --#{$drawer}--m-expanded--m-panel-bottom__panel--BoxShadow: var(--#{$pf-global}--BoxShadow--lg-top);
+
+  @include pf-v5-bidirectional-style(
+    $prop: --#{$drawer}--m-expanded__panel--BoxShadow,
+    $ltr-val: var(--#{$pf-global}--BoxShadow--lg-left),
+    $rtl-val: var(--#{$pf-global}--BoxShadow--lg-right)
+  ); 
+  @include pf-v5-bidirectional-style(
+    $prop: --#{$drawer}--m-expanded--m-panel-left__panel--BoxShadow,
+    $ltr-val: var(--#{$pf-global}--BoxShadow--lg-right),
+    $rtl-val: var(--#{$pf-global}--BoxShadow--lg-left)
+  ); 
 
   // Divider
   --#{$drawer}__panel--after--Width: var(--#{$pf-global}--BorderWidth--sm);
@@ -176,7 +185,12 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
     > .#{$drawer}__panel {
       order: 0;
       margin-inline-end: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
-      transform: translateX(-100%);
+
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(-100%),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)}),
+      ); 
     }
 
     > .#{$drawer}__content {
@@ -192,7 +206,11 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   // stylelint-disable selector-max-class
   &.pf-m-expanded {
     > .#{$drawer}__main > .#{$drawer}__panel {
-      transform: translateX(-100%);
+      @include pf-v5-bidirectional-style(
+        $prop: transform,
+        $ltr-val: translateX(-100%),
+        $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)}),
+      ); 
     }
 
     &.pf-m-panel-left > .#{$drawer}__main > .#{$drawer}__panel {
@@ -432,9 +450,15 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
 .#{$drawer}__splitter-handle {
   position: absolute;
- inset-block-start: var(--#{$drawer}__splitter-handle--Top);
- inset-inline-start: var(--#{$drawer}__splitter-handle--Left);
-  transform: translate(-50%, -50%);
+  inset-block-start: var(--#{$drawer}__splitter-handle--Top);
+  inset-inline-start: var(--#{$drawer}__splitter-handle--Left);
+
+  @include pf-v5-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translate(-50%, -50%),
+    $rtl-val: translate(#{pf-v5-calc-inverse(-50%)}, -50%),
+  ); 
+
 
   &::after {
     display: block;
@@ -642,7 +666,12 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
 
       > .#{$drawer}__main > .#{$drawer}__panel {
         margin-inline-start: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
-        transform: translateX(100%);
+
+        @include pf-v5-bidirectional-style(
+          $prop: transform,
+          $ltr-val: translateX(100%),
+          $rtl-val: translateX(#{pf-v5-calc-inverse(100%)}),
+        ); 
       }
 
       // stylelint-disable selector-max-class, selector-max-combinators, selector-max-compound-selectors
@@ -661,7 +690,12 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
         > .#{$drawer}__main > .#{$drawer}__panel {
           margin-inline-start: 0;
           margin-inline-end: calc(var(--#{$drawer}__panel--FlexBasis) * -1);
-          transform: translateX(-100%);
+
+          @include pf-v5-bidirectional-style(
+            $prop: transform,
+            $ltr-val: translateX(-100%),
+            $rtl-val: translateX(#{pf-v5-calc-inverse(-100%)}),
+          ); 
         }
 
         // Inline, expanded, panel left
