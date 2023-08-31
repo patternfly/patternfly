@@ -332,6 +332,8 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 }
 
 .#{$tree-view}__node-toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   display: inline-block;
   min-width: var(--#{$tree-view}__node-toggle-icon--MinWidth);
   text-align: center;
@@ -429,8 +431,8 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
 
 .#{$tree-view}__node-toggle {
   position: var(--#{$tree-view}__node-toggle--Position);
- inset-block-start: var(--#{$tree-view}__list-item__list-item__node-toggle--Top);
- inset-inline-start: var(--#{$tree-view}__list-item__list-item__node-toggle--Left);
+  inset-block-start: var(--#{$tree-view}__list-item__list-item__node-toggle--Top);
+  inset-inline-start: var(--#{$tree-view}__list-item__list-item__node-toggle--Left);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -444,6 +446,12 @@ $pf-v5-c-tree-view--MaxNesting: 10 !default;
   background-color: var(--#{$tree-view}__node-toggle--BackgroundColor);
   border: 0;
   transform: translateX(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX));
+
+  @include pf-v5-bidirectional-style(
+    $prop: transform,
+    $ltr-val: translateX(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX)),
+    $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$tree-view}__list-item__list-item__node-toggle--TranslateX))})
+  );
 }
 
 .#{$tree-view}__node-title,
