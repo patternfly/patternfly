@@ -490,6 +490,8 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   display: inline-block;
   color: var(--#{$tabs}__toggle-icon--Color);
   transition: var(--#{$tabs}__toggle-icon--Transition);
@@ -700,6 +702,8 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
 }
 
 .#{$tabs}__link-toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   align-self: end;
   font-size: var(--#{$tabs}__link-toggle-icon--FontSize);
   color: var(--#{$tabs}__link-toggle-icon--Color);
@@ -740,6 +744,10 @@ $pf-v5-c-tabs--spacer-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl
   outline-offset: var(--#{$tabs}__scroll-button--OutlineOffset);
   opacity: 0;
   transition: margin var(--#{$tabs}__scroll-button--TransitionDuration--margin), transform var(--#{$tabs}__scroll-button--TransitionDuration--transform), opacity var(--#{$tabs}__scroll-button--TransitionDuration--opacity);
+
+  > * {
+    @include pf-v5-mirror-inline-on-rtl; // in breaking change, add an icon wrapper and move this style to the wrapper
+  }
 
   &:hover,
   &:active,
