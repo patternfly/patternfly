@@ -43,6 +43,10 @@
 // safari not supported
 @supports (-webkit-hyphens: none) {
   .#{$truncate}__end {
-    direction: ltr;
+    @include pf-v5-bidirectional-style {
+      $prop: direction;
+      $ltr-value: ltr;
+      $rtl-value: rtl;
+    }
   }
 }
