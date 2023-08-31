@@ -1,0 +1,17 @@
+.pf-theme-toggle--dark,
+:where(.pf-v5-theme-dark) .pf-theme-toggle--light {
+  display: none;
+}
+
+.pf-m-picture.pf-theme-toggle--dark,
+:where(.pf-v5-theme-dark) .pf-m-picture.pf-theme-toggle--light {
+  display: none;
+}
+
+:where(.pf-v5-theme-dark) .pf-theme-toggle--dark {
+  display: revert;
+}
+
+:where(.pf-v5-theme-dark) .pf-m-picture.pf-theme-toggle--dark {
+  display: inline-flex;
+}

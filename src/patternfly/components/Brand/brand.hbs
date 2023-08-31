@@ -1,5 +1,11 @@
 {{#if brand--IsPicture}}
-  <picture class="{{pfv}}brand pf-m-picture{{#if brand--modifier}} {{brand--modifier}}{{/if}}"
+  <picture class="{{pfv}}brand pf-m-picture
+    {{#if brand--modifier}} {{brand--modifier}}{{/if}}
+    {{#if brand--IsDark}} 
+      pf-theme-toggle--dark
+    {{else}}
+      pf-theme-toggle--light
+    {{/if}}"
     {{#if brand--attribute}}
       {{{brand--attribute}}}
     {{/if}}>
@@ -24,15 +30,11 @@
     {{#if brand--img-url--base}}
       <img src="{{brand--img-url--base}}" alt="Fallback patternFly default logo">
     {{else}}
-      <img src="/assets/images/pf-c-brand__logo-base.jpg" alt="Fallback patternFly default logo">
+      <img src="/assets/images/pf_logo.svg" alt="Fallback patternFly default logo">
     {{/if}}
   </picture>
 {{else}}
-  <img class="{{pfv}}brand pf-theme-toggle--dark {{#if brand--modifier}} {{brand--modifier}}{{/if}}"
-    {{#if brand--attribute--white}}
-      {{{brand--attribute--white}}}
-    {{/if}}>
-    <img class="{{pfv}}brand pf-theme-toggle--light {{#if brand--modifier}} {{brand--modifier}}{{/if}}"
+  <img class="{{pfv}}brand{{#if brand--modifier}} {{brand--modifier}}{{/if}}"
     {{#if brand--attribute}}
       {{{brand--attribute}}}
     {{/if}}>

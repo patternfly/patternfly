@@ -8,6 +8,7 @@ $pf-v5-c-brand--breakpoint-map: build-breakpoint-map();
   width: var(--#{$brand}--Width--base);
   height: var(--#{$brand}--Height--base);
 
+/*
   :where(.pf-v5-theme-dark) &.pf-theme-toggle--light,
   &.pf-theme-toggle--dark {
     display: none;
@@ -16,6 +17,7 @@ $pf-v5-c-brand--breakpoint-map: build-breakpoint-map();
   :where(.pf-v5-theme-dark) &.pf-theme-toggle--dark {
     display: block;
   }
+*/
 
   @include pf-v5-build-css-variable-stack("--#{$brand}--Width--base", "--#{$brand}--Width", $pf-v5-c-brand--breakpoint-map);
   @include pf-v5-build-css-variable-stack("--#{$brand}--Height--base", "--#{$brand}--Height", $pf-v5-c-brand--breakpoint-map);
@@ -41,8 +43,8 @@ $pf-v5-c-brand--breakpoint-map: build-breakpoint-map();
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/brand";
+// @import "themes/dark/brand";
 
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-brand;
-}
+// @include pf-v5-theme-dark {
+//   @include pf-v5-theme-dark-brand;
+// }
