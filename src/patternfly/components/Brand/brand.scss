@@ -8,16 +8,6 @@ $pf-v5-c-brand--breakpoint-map: build-breakpoint-map();
   width: var(--#{$brand}--Width--base);
   height: var(--#{$brand}--Height--base);
 
-/*
-  :where(.pf-v5-theme-dark) &.pf-theme-toggle--light,
-  &.pf-theme-toggle--dark {
-    display: none;
-  }
-  
-  :where(.pf-v5-theme-dark) &.pf-theme-toggle--dark {
-    display: block;
-  }
-*/
 
   @include pf-v5-build-css-variable-stack("--#{$brand}--Width--base", "--#{$brand}--Width", $pf-v5-c-brand--breakpoint-map);
   @include pf-v5-build-css-variable-stack("--#{$brand}--Height--base", "--#{$brand}--Height", $pf-v5-c-brand--breakpoint-map);
