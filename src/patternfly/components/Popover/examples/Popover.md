@@ -452,10 +452,10 @@ A popover is used to provide contextual information for another component on cli
 | `.pf-v5-c-popover__title-text` | `<h1>`,`<h2>`,`<h3>`,`<h4>`,`<h5>`,`<h6>`,`<span>` | Creates the popover title text. |
 | `.pf-v5-c-popover__body` | `<div>` |  The popover's body text. **Required** |
 | `.pf-v5-c-popover__footer` | `<footer>` | Initiates a popover footer. |
-| `.pf-m-left{-top/bottom}` | `.pf-v5-c-popover` | Positions the popover to the left (or left top/left bottom) of the element. |
-| `.pf-m-right{-top/bottom}` | `.pf-v5-c-popover` | Positions the popover to the right (or right top/right bottom) of the element. |
-| `.pf-m-top{-left/right}` | `.pf-v5-c-popover` | Positions the popover to the top (or top left/top right) of the element. |
-| `.pf-m-bottom{-left/right}` | `.pf-v5-c-popover` | Positions the popover to the bottom (or bottom left/bottom right) of the element. |
+| `.pf-m-left{-top/bottom}`, `.pf-m-inline-start{-block-start/block-end}` | `.pf-v5-c-popover` | Positions the popover to the left (or left top/left bottom) of the element. |
+| `.pf-m-right{-top/bottom}`, `.pf-m-inline-end{-block-start/block-end}` | `.pf-v5-c-popover` | Positions the popover to the right (or right top/right bottom) of the element. |
+| `.pf-m-top{-left/right}`, `.pf-m-block-start{-inline-start/inline-end}` | `.pf-v5-c-popover` | Positions the popover to the top (or top left/top right) of the element. |
+| `.pf-m-bottom{-left/right}`, `.pf-m-block-end{-inline-start/inline-end}` | `.pf-v5-c-popover` | Positions the popover to the bottom (or bottom left/bottom right) of the element. |
 | `.pf-m-no-padding` | `.pf-v5-c-popover` | Removes the outer padding from the popover content. |
 | `.pf-m-width-auto` | `.pf-v5-c-popover` | Allows popover width to be defined by the popover content. |
 | `.pf-m-custom` | `.pf-v5-c-popover` | Modifies for the custom alert state. |

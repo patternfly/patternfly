@@ -1,10 +1,4 @@
 .ws-core-c-popover .ws-preview-html {
-  position: relative;
- }
-
- .ws-core-c-popover .pf-v5-c-popover {
-   position: absolute;
-  inset-block-start: 50%;
-  inset-inline-start: 50%;
-   transform: translate(-50%, -50%);
- }
+  display: grid;
+  place-items: center;
+}
