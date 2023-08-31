@@ -315,7 +315,7 @@
 // Used to create the RTL selector for RTL specific styles
 
 // @include pf-v5-rtl {
-//   background: red; 
+//   background: red;
 // }
 
 // renders as
@@ -324,14 +324,14 @@
 //   background: red;
 // }
 @mixin pf-v5-rtl {
-  @at-root :where(.ws-dir-rtl, .#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
+  @at-root :where(.ws-dir-rtl, .#{$pf-prefix}m-dir-rtl, [dir="rtl"], [direction="rtl"]) #{&} {
     @content;
   }
 }
 
 // Used to create the LTR selector for LTR specific styles
 @mixin pf-v5-ltr {
-  @at-root :where(.ws-dir-ltr, .#{$pf-prefix}m-dir-ltr, [dir="ltr"]) #{&} {
+  @at-root :where(.ws-dir-ltr, .#{$pf-prefix}m-dir-ltr, [dir="ltr"], [direction="ltr"]) #{&} {
     @content;
   }
 }

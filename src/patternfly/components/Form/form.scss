@@ -311,6 +311,16 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   border: 0;
   transform: translateY(var(--#{$form}__group-label-help--TranslateY));
 
+  @include pf-v5-bidirectional-style(
+    $prop: display,
+    $ltr-val: inline,
+    $rtl-val: inline-flex,
+  );
+
+  @include pf-v5-rtl {
+    --#{$form}__group-label-help--TranslateY: 0;
+  };
+
   &:hover {
     --#{$form}__group-label-help--Color: var(--#{$form}__group-label-help--hover--Color);
   }
