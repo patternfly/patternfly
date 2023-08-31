@@ -405,6 +405,8 @@
 
 // toggle icon rotate
 .#{$data-list}__toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   height: var(--#{$data-list}__toggle-icon--Height);
   pointer-events: none;
   transition: var(--#{$data-list}__toggle-icon--Transition);
