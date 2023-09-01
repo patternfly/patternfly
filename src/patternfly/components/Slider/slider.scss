@@ -1,8 +1,8 @@
 // @debug $slider; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 .#{$slider} {
-  // should always be set inline
-  --#{$slider}--value: 0;
+  --#{$slider}--value: 0; // should always be set inline
+  --#{$slider}__step--Left: 0; // should always be set inline
 
   // rail
   --#{$slider}__rail--PaddingTop: var(--#{$pf-global}--spacer--md);
