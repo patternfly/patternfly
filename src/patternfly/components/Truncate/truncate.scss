@@ -23,17 +23,30 @@
 
 // End
 .#{$truncate}__end {
-  direction: rtl;
+  @include pf-v5-bidirectional-style (
+    $prop: direction,
+    $ltr-val: rtl,
+    $rtl-val: ltr
+  )
 }
 
 .#{$truncate}__start + .#{$truncate}__end {
   overflow: visible;
-  direction: ltr;
+
+  @include pf-v5-bidirectional-style (
+    $prop: direction,
+    $ltr-val: ltr,
+    $rtl-val: rtl
+  )
 }
 
 // safari not supported
 @supports (-webkit-hyphens: none) {
   .#{$truncate}__end {
-    direction: ltr;
+    @include pf-v5-bidirectional-style (
+      $prop: direction,
+      $ltr-val: ltr,
+      $rtl-val: rtl
+    )
   }
 }
