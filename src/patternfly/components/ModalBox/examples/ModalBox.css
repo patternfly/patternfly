@@ -1,6 +1,4 @@
 .ws-core-c-modal .ws-preview-html {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 }
