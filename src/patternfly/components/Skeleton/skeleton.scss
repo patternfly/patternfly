@@ -73,6 +73,8 @@
   }
 
   &::after {
+    @include pf-v5-mirror-inline-on-rtl;
+
     position: absolute;
     inset: 0;
     display: block;
