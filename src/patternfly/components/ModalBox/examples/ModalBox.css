@@ -1,10 +1,6 @@
 .ws-core-c-modal .ws-preview-html {
   position: relative;
-}
-
-.ws-core-c-modal .pf-v5-c-modal-box {
-  position: absolute;
- inset-block-start: 50%;
- inset-inline-start: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
