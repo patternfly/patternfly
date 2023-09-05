@@ -1,4 +1,5 @@
 .ws-core-c-modal .ws-preview-html {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
