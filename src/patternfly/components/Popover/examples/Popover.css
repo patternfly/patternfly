@@ -1,4 +1,5 @@
 .ws-core-c-popover .ws-preview-html {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
