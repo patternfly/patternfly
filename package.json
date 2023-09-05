@@ -106,5 +106,8 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "dependencies": {
+    "backstopjs": "^6.2.2"
   }
 }
