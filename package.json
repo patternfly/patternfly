@@ -51,6 +51,7 @@
     "@patternfly/react-core": "5.0.0",
     "@patternfly/react-table": "5.0.0",
     "@starptech/prettyhtml": "^0.10.0",
+    "backstopjs": "^6.2.2",
     "cheerio": "^1.0.0-rc.12",
     "commander": "^11.0.0",
     "cssnano": "^6.0.1",
@@ -106,8 +107,5 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
-  },
-  "dependencies": {
-    "backstopjs": "^6.2.2"
   }
 }
