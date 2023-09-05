@@ -1,4 +1,4 @@
-.ws-core-c-navigation:not([id*="tertiary"]):not([id*="light-mode"]) .ws-preview-html {
+.ws-core-c-navigation:not([id*="tertiary"]):not([id*="light-mode"]) .pf-v5-c-nav{
   background-color: var(--pf-v5-global--BackgroundColor--dark-300);
 }
 
