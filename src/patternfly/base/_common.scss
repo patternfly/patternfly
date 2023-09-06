@@ -34,8 +34,7 @@
 }
 
 // Sets a block to LTR
-.#{$pf-prefix}m-dir-ltr,
-.ws-dir-ltr {
+.#{$pf-prefix}m-dir-ltr {
   @include pf-v5-set-inverse(false);
 
   direction: ltr;
