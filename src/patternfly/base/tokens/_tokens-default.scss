@@ -3,29 +3,29 @@
  * Generated on Mon, 14 Aug 2023 18:12:00 GMT
  */
 
-//  stylelint-disable custom-property-pattern
  :root {
   --pf-t--global--background--color--action--plain--default: rgba(255, 255, 255, 0.0000);
-  --pf-t--global--spacer--800: 80;
-  --pf-t--global--spacer--700: 64;
-  --pf-t--global--spacer--600: 48;
-  --pf-t--global--spacer--500: 32;
-  --pf-t--global--spacer--400: 24;
-  --pf-t--global--spacer--300: 16;
-  --pf-t--global--spacer--200: 8;
-  --pf-t--global--spacer--100: 4;
-  --pf-t--global--icon--size--400: 56;
-  --pf-t--global--icon--size--300: 24;
-  --pf-t--global--icon--size--200: 16;
-  --pf-t--global--icon--size--100: 12;
-  --pf-t--global--border--width--300: 3;
-  --pf-t--global--border--width--200: 2;
-  --pf-t--global--border--width--100: 1;
-  --pf-t--global--border--radius--500: 999;
-  --pf-t--global--border--radius--400: 24;
-  --pf-t--global--border--radius--300: 16;
-  --pf-t--global--border--radius--200: 6;
-  --pf-t--global--border--radius--100: 4;
+  --pf-t--global--spacer--800: 80px;
+  --pf-t--global--spacer--700: 64px;
+  --pf-t--global--spacer--600: 48px;
+  --pf-t--global--spacer--500: 32px;
+  --pf-t--global--spacer--400: 24px;
+  --pf-t--global--spacer--300: 16px;
+  --pf-t--global--spacer--200: 8px;
+  --pf-t--global--spacer--100: 4px;
+  --pf-t--global--icon--size--400: 56px;
+  --pf-t--global--icon--size--300: 24px;
+  --pf-t--global--icon--size--200: 16px;
+  --pf-t--global--icon--size--100: 12px;
+  --pf-t--global--border--width--300: 3px;
+  --pf-t--global--border--width--200: 2px;
+  --pf-t--global--border--width--100: 1px;
+  --pf-t--global--border--radius--500: 999px;
+  --pf-t--global--border--radius--400: 24px;
+  --pf-t--global--border--radius--300: 16px;
+  --pf-t--global--border--radius--200: 6px;
+  --pf-t--global--border--radius--100: 4px;
+  --pf-t--global--border--radius--000: 0px;
   --pf-t--global--background--color--highlight--200: var(--pf-t--color--gold--400);
   --pf-t--global--background--color--highlight--100: var(--pf-t--color--gold--300);
   --pf-t--global--background--color--400: var(--pf-t--color--gray--800);
@@ -83,37 +83,38 @@
   --pf-t--global--color--nonstatus--purple--100: var(--pf-t--color--purple--200);
   --pf-t--global--color--favorite--200: var(--pf-t--color--gold--500);
   --pf-t--global--color--favorite--100: var(--pf-t--color--gold--400);
-  --pf-t--global--spacer--sm: 8;
-  --pf-t--global--spacer--xl: 32;
-  --pf-t--global--spacer--xs: 4;
-  --pf-t--global--spacer--2xl: 48;
-  --pf-t--global--spacer--lg: 24;
-  --pf-t--global--spacer--md: 16;
-  --pf-t--global--spacer--3xl: 64;
-  --pf-t--global--spacer--4xl: 80;
+  --pf-t--global--spacer--sm: 8px; // TODO these should be base values
+  --pf-t--global--spacer--xl: 32px;
+  --pf-t--global--spacer--xs: 4px;
+  --pf-t--global--spacer--2xl: 48px;
+  --pf-t--global--spacer--lg: 24px;
+  --pf-t--global--spacer--md: 16px;
+  --pf-t--global--spacer--3xl: 64px;
+  --pf-t--global--spacer--4xl: 80px;
   --pf-t--global--icon--color--300: var(--pf-t--color--white);
   --pf-t--global--icon--color--200: var(--pf-t--color--gray--500);
   --pf-t--global--icon--color--100: var(--pf-t--color--gray--900);
-  --pf-t--global--icon--size--sm: 12;
-  --pf-t--global--icon--size--md: 16;
-  --pf-t--global--icon--size--lg: 24;
-  --pf-t--global--icon--size--xl: 56;
+  --pf-t--global--icon--size--sm: 12px;
+  --pf-t--global--icon--size--md: 16px;
+  --pf-t--global--icon--size--lg: 24px;
+  --pf-t--global--icon--size--xl: 56px;
   --pf-t--global--border--color--200: var(--pf-t--color--gray--400);
   --pf-t--global--border--color--100: var(--pf-t--color--gray--300);
-  --pf-t--global--border--width--divider--default: 1;
-  --pf-t--global--border--width--divider--hover: 1;
-  --pf-t--global--border--width--divider--active: 1;
-  --pf-t--global--border--width--control--hover: 1;
-  --pf-t--global--border--width--control--active: 2;
-  --pf-t--global--border--width--control--default: 1;
-  --pf-t--global--border--width--button--hover: 2;
-  --pf-t--global--border--width--button--default: 1;
-  --pf-t--global--border--width--button--active: 2;
-  --pf-t--global--border--radius--pill: 999;
-  --pf-t--global--border--radius--tiny: 4;
-  --pf-t--global--border--radius--medium: 16;
-  --pf-t--global--border--radius--large: 24;
-  --pf-t--global--border--radius--small: 6;
+  --pf-t--global--border--width--divider--default: 1px;
+  --pf-t--global--border--width--divider--hover: 1px;
+  --pf-t--global--border--width--divider--active: 1px;
+  --pf-t--global--border--width--control--hover: 1px;
+  --pf-t--global--border--width--control--active: 2px;
+  --pf-t--global--border--width--control--default: 1px;
+  --pf-t--global--border--width--button--hover: 2px;
+  --pf-t--global--border--width--button--default: 1px;
+  --pf-t--global--border--width--button--active: 2px;
+  --pf-t--global--border--radius--pill: var(--pf-t--global--border--radius--500); // changed to base value
+  --pf-t--global--border--radius--tiny: var(--pf-t--global--border--radius--100); // changed to base value
+  --pf-t--global--border--radius--medium: var(--pf-t--global--border--radius--300); // changed to base value
+  --pf-t--global--border--radius--large: var(--pf-t--global--border--radius--400); // changed to base value
+  --pf-t--global--border--radius--small: var(--pf-t--global--border--radius--200); // changed to base value
+  --pf-t--global--border--radius--sharp: var(--pf-t--global--border--radius--000); // changed to base value
   --pf-t--global--background--color--secondary--selected: var(--pf-t--global--background--color--300);
   --pf-t--global--background--color--secondary--default: var(--pf-t--global--background--color--200);
   --pf-t--global--background--color--secondary--hover: var(--pf-t--global--background--color--300);
@@ -222,6 +223,7 @@
   --pf-t--global--background--color--control--default: var(--pf-t--global--background--color--primary--default);
   --pf-t--global--text--color--on-brand--hover: var(--pf-t--global--icon--color--inverse);
   --pf-t--global--text--color--on-brand--default: var(--pf-t--global--icon--color--inverse);
+  --pf-t--global--text--color--on-brand--active: var(--pf-t--global--icon--color--inverse); // added this
   --pf-t--global--text--color--placeholder: var(--pf-t--global--text--color--subtle);
   --pf-t--global--text--color--brand--default: var(--pf-t--global--color--brand--default);
   --pf-t--global--text--color--brand--hover: var(--pf-t--global--color--brand--hover);
@@ -339,4 +341,3 @@
   --pf-t--global--border--color--status--info--hover: var(--pf-t--global--color--status--info--hover);
   --pf-t--global--border--color--status--info--default: var(--pf-t--global--color--status--info--default);
 }
-//  stylelint-enable custom-property-pattern
