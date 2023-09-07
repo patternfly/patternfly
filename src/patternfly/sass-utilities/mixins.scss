@@ -324,14 +324,14 @@
 //   background: red;
 // }
 @mixin pf-v5-rtl {
-  @at-root :where(.ws-dir-rtl, .#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
+  @at-root :where(.#{$pf-prefix}m-dir-rtl, [dir="rtl"]) #{&} {
     @content;
   }
 }
 
 // Used to create the LTR selector for LTR specific styles
 @mixin pf-v5-ltr {
-  @at-root :where(.ws-dir-ltr, .#{$pf-prefix}m-dir-ltr, [dir="ltr"]) #{&} {
+  @at-root :where(.#{$pf-prefix}m-dir-ltr, [dir="ltr"]) #{&} {
     @content;
   }
 }
