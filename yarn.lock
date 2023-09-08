@@ -2177,19 +2177,7 @@
     react-dropzone "14.2.3"
     tslib "^2.5.0"
 
-"@patternfly/react-core@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/@patternfly/react-core/-/react-core-5.0.0.tgz"
-  integrity sha512-kewRVFhLw0Dvt8250pqrO47sVRx8E93sMGZbHQomJnZdachYeQ9STnQTP2gvOBq/GPnMei0LZLv0T99g8mPE4w==
-  dependencies:
-    "@patternfly/react-icons" "^5.0.0"
-    "@patternfly/react-styles" "^5.0.0"
-    "@patternfly/react-tokens" "^5.0.0"
-    focus-trap "7.4.3"
-    react-dropzone "^14.2.3"
-    tslib "^2.5.0"
-
-"@patternfly/react-core@^5.0.1":
+"@patternfly/react-core@5.0.1", "@patternfly/react-core@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@patternfly/react-core/-/react-core-5.0.1.tgz#474456a6bf173c421ba285d7371fd635b9b63f46"
   integrity sha512-Eevd+8ACLFV733J+cpo4FRgNtRBObIgmUcrqLjf9H99jZ1hFpBgacFyHiALFi2cuoNVGmdEzskFl+4c7Uo0n+w==
@@ -2201,20 +2189,10 @@
     react-dropzone "^14.2.3"
     tslib "^2.5.0"
 
-"@patternfly/react-icons@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/@patternfly/react-icons/-/react-icons-5.0.0.tgz"
-  integrity sha512-GG5Y/UYl0h346MyDU9U650Csaq4Mxk8S6U8XC7ERk/xIrRr2RF67O2uY7zKBDMTNLYdBvPzgc2s3OMV1+d2/mg==
-
 "@patternfly/react-icons@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-5.0.1.tgz#bb4c8054a843b98b83a0eaa8bd8634bb39d6cea8"
   integrity sha512-MduetDRzve3eRlKAioM/UxmVuPyFccdeBWAKhbN4SBn7RaZWS7kO7/xZzNkpeT5pqQIeAACvz3uiV2/3uAf38w==
-
-"@patternfly/react-styles@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/@patternfly/react-styles/-/react-styles-5.0.0.tgz"
-  integrity sha512-xbSCgjx+fPrXbIzUznwTFWtJEbzVS0Wn4zrejdKJYQTY+4YcuPlFkeq2tl3syzwGsaYMpHiFwQiTaKyTvlwtuw==
 
 "@patternfly/react-styles@^5.0.1":
   version "5.0.1"
@@ -2232,11 +2210,6 @@
     "@patternfly/react-tokens" "^5.0.1"
     lodash "^4.17.19"
     tslib "^2.5.0"
-
-"@patternfly/react-tokens@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.npmjs.org/@patternfly/react-tokens/-/react-tokens-5.0.0.tgz"
-  integrity sha512-to2CXIZ6WTuzBcjLZ+nXi5LhnYkSIDu3RBMRZwrplmECOoUWv87CC+2T0EVxtASRtpQfikjD2PDKMsif5i0BxQ==
 
 "@patternfly/react-tokens@^5.0.1":
   version "5.0.1"
