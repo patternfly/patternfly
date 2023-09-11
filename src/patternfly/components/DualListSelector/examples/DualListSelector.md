@@ -20,16 +20,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -90,16 +81,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -129,16 +111,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -199,16 +172,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -238,16 +202,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -308,16 +263,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -347,16 +293,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -417,16 +354,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -459,16 +387,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -529,16 +448,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -572,16 +482,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -668,16 +569,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -707,16 +599,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text}}
@@ -796,16 +679,7 @@ cssPrefix: pf-v5-c-dual-list-selector
       {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
       {{/dual-list-selector-tools-filter}}
-      {{#> dual-list-selector-tools-actions}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-          {{/button}}
-        {{/dual-list-selector-tools-actions-item}}
-        {{#> dual-list-selector-tools-actions-item}}
-          {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-        {{/dual-list-selector-tools-actions-item}}
-      {{/dual-list-selector-tools-actions}}
+      {{> dual-list-selector--actions}}
     {{/dual-list-selector-tools}}
     {{#> dual-list-selector-status}}
       {{#> dual-list-selector-status-text
@@ -848,16 +722,7 @@ cssPrefix: pf-v5-c-dual-list-selector
         {{#> dual-list-selector-tools-filter}}
         {{> text-input-group--search-input text-input-group-text-input--aria-label="Available search input"}}
         {{/dual-list-selector-tools-filter}}
-        {{#> dual-list-selector-tools-actions}}
-          {{#> dual-list-selector-tools-actions-item}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-              <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-            {{/button}}
-          {{/dual-list-selector-tools-actions-item}}
-          {{#> dual-list-selector-tools-actions-item}}
-            {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-          {{/dual-list-selector-tools-actions-item}}
-        {{/dual-list-selector-tools-actions}}
+        {{> dual-list-selector--actions}}
       {{/dual-list-selector-tools}}
       {{#> dual-list-selector-status}}
         {{#> dual-list-selector-status-text}}
@@ -912,16 +777,7 @@ cssPrefix: pf-v5-c-dual-list-selector
         {{#> dual-list-selector-tools-filter}}
           {{> text-input-group--search-input text-input-group-text-input--aria-label="Chosen search input"}}
         {{/dual-list-selector-tools-filter}}
-        {{#> dual-list-selector-tools-actions}}
-          {{#> dual-list-selector-tools-actions-item}}
-            {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-              <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
-            {{/button}}
-          {{/dual-list-selector-tools-actions-item}}
-          {{#> dual-list-selector-tools-actions-item}}
-            {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
-          {{/dual-list-selector-tools-actions-item}}
-        {{/dual-list-selector-tools-actions}}
+        {{> dual-list-selector--actions}}
       {{/dual-list-selector-tools}}
       {{#> dual-list-selector-status}}
         {{#> dual-list-selector-status-text}}
