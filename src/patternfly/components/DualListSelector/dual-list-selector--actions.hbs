@@ -1,0 +1,10 @@
+{{#> dual-list-selector-tools-actions}}
+  {{#> dual-list-selector-tools-actions-item}}
+    {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
+      <i class="fas fa-sort-amount-down {{pfv "unset-prefix"}}m-mirror-inline-rtl" aria-hidden="true"></i>
+    {{/button}}
+  {{/dual-list-selector-tools-actions-item}}
+  {{#> dual-list-selector-tools-actions-item}}
+    {{> dropdown dropdown--id=(concat "dropdown-kebab-" dual-list-selector-pane--id) dropdown-toggle--IsPlain="true"}}
+  {{/dual-list-selector-tools-actions-item}}
+{{/dual-list-selector-tools-actions}}

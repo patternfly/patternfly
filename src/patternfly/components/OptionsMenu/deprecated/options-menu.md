@@ -66,21 +66,21 @@ import './options-menu.css'
 ```hbs
 {{#> options-menu options-menu--id="options-menu-plain-disabled-example" options-menu-toggle--IsDisabled="true"}}
   {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
-    <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+    <i class="fas fa-sort-amount-down {{pfv "unset-prefix"}}m-mirror-inline-rtl" aria-hidden="true"></i>
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}
 
 {{#> options-menu options-menu--id="options-menu-plain-example"}}
   {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
-    <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+    <i class="fas fa-sort-amount-down {{pfv "unset-prefix"}}m-mirror-inline-rtl" aria-hidden="true"></i>
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}
 
 {{#> options-menu options-menu--IsExpanded="true" options-menu--id="options-menu-plain-expanded-example"}}
   {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
-    <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+    <i class="fas fa-sort-amount-down {{pfv "unset-prefix"}}m-mirror-inline-rtl" aria-hidden="true"></i>
   {{/options-menu-toggle}}
   {{> options-menu-single}}
 {{/options-menu}}
