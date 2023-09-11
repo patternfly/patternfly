@@ -15,6 +15,13 @@
   --#{$about-modal-box}--sm--GridTemplateColumns: 5fr 1fr;
   --#{$about-modal-box}--lg--GridTemplateColumns: 1fr .6fr;
 
+  @include pf-v5-bidirectional-style(
+    $prop: --#{$about-modal-box}--BackgroundPosition,
+    $ltr-val: bottom right,
+    $rtl-val: bottom left
+  );
+
+
   // Brand
   --#{$about-modal-box}__brand--PaddingTop: var(--#{$pf-global}--spacer--2xl);
   --#{$about-modal-box}__brand--PaddingRight: var(--#{$pf-global}--spacer--xl);
