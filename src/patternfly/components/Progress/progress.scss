@@ -175,6 +175,15 @@
   color: var(--#{$progress}__status-icon--Color);
 }
 
+.#{$progress}__bar::before,
+.#{$progress}__indicator {
+  // disable linter as the indicator element should always grow ltr
+  // stylelint-disable liberty/use-logical-spec
+  top: 0;
+  left: 0;
+  // stylelint-enable
+}
+
 // The progress__bar is a white underlay with a semi-transparent color on top, which matches the progress__indicator color
 .#{$progress}__bar {
   position: relative;
@@ -186,8 +195,6 @@
 
   &::before {
     position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 0;
     width: 100%;
     height: 100%;
     content: "";
@@ -200,11 +207,8 @@
 // It is assumed that the width of the progress__indicator is set inline or via Javascript
 .#{$progress}__indicator {
   position: absolute; // position absolute to bring above the semi-transparent bar overlay
-  inset-block-start: 0;
-  inset-inline-start: 0;
   height: var(--#{$progress}__indicator--Height);
   background-color: var(--#{$progress}__indicator--BackgroundColor);
-  direction: ltr;
 }
 
 .#{$progress}__helper-text {
