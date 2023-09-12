@@ -1,11 +1,17 @@
 {{#> breadcrumb-item}}
   {{> breadcrumb-item-divider}}
   {{#> breadcrumb-dropdown}}
-    {{#> dropdown dropdown--id=(concat breadcrumb--id '-breadcrumb-dropdown')}}
-      {{> dropdown-toggle dropdown-toggle--IsBadge="true"}}
-      {{#> dropdown-menu}}
-        {{> @partial-block}}
-      {{/dropdown-menu}}
-    {{/dropdown}}
+    {{#> menu-toggle menu-toggle--IsPlain="true"}}
+      {{#> badge badge--modifier="pf-m-read"}}
+        {{menu-toggle--badge--text}} <i class="fas fa-caret-down" aria-hidden="true"></i>
+      {{/badge}}
+    {{/menu-toggle}}
+    {{#> menu newcontext menu-item-toggle-icon--IsDrillup=true}}
+      {{#> menu-content}}
+        {{#> menu-list}}
+          {{> @partial-block}}
+        {{/menu-list}}
+      {{/menu-content}}
+    {{/menu}}
   {{/breadcrumb-dropdown}}
 {{/breadcrumb-item}}
