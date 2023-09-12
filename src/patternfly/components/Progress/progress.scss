@@ -186,8 +186,8 @@
 
   &::before {
     position: absolute;
-   inset-block-start: 0;
-   inset-inline-start: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     width: 100%;
     height: 100%;
     content: "";
@@ -200,10 +200,11 @@
 // It is assumed that the width of the progress__indicator is set inline or via Javascript
 .#{$progress}__indicator {
   position: absolute; // position absolute to bring above the semi-transparent bar overlay
- inset-block-start: 0;
- inset-inline-start: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   height: var(--#{$progress}__indicator--Height);
   background-color: var(--#{$progress}__indicator--BackgroundColor);
+  direction: ltr;
 }
 
 .#{$progress}__helper-text {
