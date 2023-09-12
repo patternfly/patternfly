@@ -135,6 +135,11 @@
   // stylelint-enable selector-class-pattern
 }
 
+.#{$code-editor}__code,
+.#{$code-editor}__header {
+  direction: ltr;
+}
+
 .#{$code-editor}__header + .#{$code-editor}__main {
   border-block-start-width: 0;
 }
