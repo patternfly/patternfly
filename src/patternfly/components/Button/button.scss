@@ -144,12 +144,6 @@
   --#{$button}--m-plain--disabled--Color: var(--#{$pf-global}--disabled-color--200);
   --#{$button}--m-plain--disabled--BackgroundColor: transparent;
 
-    // Plain compact button
-    --#{$button}--m-plain--m-compact--PaddingTop: 0;
-    --#{$button}--m-plain--m-compact--PaddingRight: 0;
-    --#{$button}--m-plain--m-compact--PaddingBottom: 0;
-    --#{$button}--m-plain--m-compact--PaddingLeft: 0;
-
   // Control Button
   --#{$button}--m-control--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$button}--m-control--Color: var(--#{$pf-global}--Color--100);
@@ -565,13 +559,8 @@
     color: var(--#{$button}--m-plain--Color);
     background-color: var(--#{$button}--m-plain--BackgroundColor);
 
-    &.pf-m-compact {
-      --#{$button}--PaddingTop: var(--#{$button}--m-plain--m-compact--PaddingTop);
-      --#{$button}--PaddingRight: var(--#{$button}--m-plain--m-compact--PaddingRight);
-      --#{$button}--PaddingBottom: var(--#{$button}--m-plain--m-compact--PaddingBottom);
-      --#{$button}--PaddingLeft: var(--#{$button}--m-plain--m-compact--PaddingLeft);
-  
-      line-height: 1;
+    &.pf-m-no-padding {
+      padding: 0;
     }
 
     &:hover {

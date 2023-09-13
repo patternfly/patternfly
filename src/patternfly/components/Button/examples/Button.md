@@ -66,8 +66,8 @@ import './Button.css'
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 <br>
-<span>Compact plain button: </span>
-{{#> button button--modifier="pf-m-plain pf-m-compact" button--attribute='aria-label="Remove"'}}
+<span>No padding plain button: </span>
+{{#> button button--modifier="pf-m-plain pf-m-no-padding" button--attribute='aria-label="Remove"'}}
   <i class="fas fa-times" aria-hidden="true"></i>
 {{/button}}
 <br><br>
@@ -411,7 +411,7 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-warning` | `.pf-v5-c-button` | Modifies for warning styles. |
 | `.pf-m-link` | `.pf-v5-c-button` | Modifies for link styles. This button has no background or border and is styled as a link. This button would commonly appear in a form and may include an icon. |
 | `.pf-m-plain` | `.pf-v5-c-button` | Modifies for icon styles. This button has no background or border, uses a standard text color, and is used for `.pf-m-plain` icon buttons such as close, expand, kebab, etc. |
-| `.pf-m-compact` | `.pf-v5-c-button.pf-m-plain` | Modifies a plain button to remove padding. |
+| `.pf-m-no-padding` | `.pf-v5-c-button.pf-m-plain` | Modifies a plain button to remove padding. |
 | `.pf-m-inline` | `.pf-v5-c-button.pf-m-link` | Modifies for inline styles. This button is presented similar to a normal link and has no padding and is displayed inline with other inline content. When used as a `<span>`, the text will flow inline with text around it. |
 | `.pf-m-block` | `.pf-v5-c-button` | Creates a block level button. |
 | `.pf-m-control` | `.pf-v5-c-button` | Modifies for control styles. **Note:** This modifier should only be used when using buttons in the Input Group or Clipboard Copy components. |
