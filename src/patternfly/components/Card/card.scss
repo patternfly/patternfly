@@ -58,7 +58,7 @@
   --#{$card}--m-selectable--m-clickable--hover--BoxShadow: var(--#{$pf-global}--BoxShadow--sm);
 
   // Selected selectable AND clickable card
-  --#{$card}--m-selectable--m-clickable--m-selected--BorderColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$card}--m-selectable--m-clickable--m-selected--BorderColor: transparent;
   --#{$card}--m-selectable--m-clickable--m-selected--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
 
   // Clicked (pf-m-current) selectable AND clickable card
