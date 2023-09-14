@@ -1,4 +1,13 @@
-<div class="{{pfv}}toolbar__item{{#if toolbar-item--modifier}} {{toolbar-item--modifier}}{{/if}}"
+<div class="{{pfv}}toolbar__item
+  {{#if toolbar-item--IsLabel}}
+    pf-m-label
+  {{/if}}
+  {{#if toolbar-item--IsFormElement}}
+    pf-m-form-element
+  {{/if}}
+  {{#if toolbar-item--modifier}}
+    {{toolbar-item--modifier}}
+  {{/if}}"
   {{#if toolbar-item--id}}
     id="{{toolbar-item--id}}"
   {{/if}}

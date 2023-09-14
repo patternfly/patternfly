@@ -184,10 +184,10 @@
   &::before,
   &::after {
     position: absolute;
-   inset-block-start: 0;
-   inset-block-end: 0;
-   inset-inline-start: 0;
-   inset-inline-end: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     pointer-events: none;
     content: "";
   }
@@ -388,11 +388,7 @@
       align-self: stretch;
 
       .#{$check}__input {
-        align-self: revert;
-
-        // stylelint-disable property-no-vendor-prefix
-        -moz-transform: none;
-        // stylelint-enable
+        align-self: center;
       }
     }
 

@@ -6,6 +6,7 @@ cssPrefix: pf-v5-c-menu-toggle
 ---
 
 import './MenuToggle.css'
+import '../../Check/examples/Check.css'
 
 ## Examples
 

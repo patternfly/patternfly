@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <{{#ifAny radio--IsStandalone radio--IsLabelWrapped}}label{{else if radio--type}}{{radio--type}}{{else}}div{{/ifAny}} class="{{pfv}}radio
   {{#if radio--IsStandalone}}
     pf-m-standalone
@@ -39,3 +40,31 @@
     {{/if}}
   {{/attribute-config}}
 </{{#ifAny radio--IsStandalone radio--IsLabelWrapped}}label{{else if radio--type}}{{radio--type}}{{else}}div{{/ifAny}}>
+=======
+{{!--
+  Options:
+  radio--name: string
+    action: generates name, for, and id
+  radio--text: string
+    action: generates label text
+  radio--IsReversed: bool
+
+--}}
+
+<{{#if radio--type}}{{radio--type}}{{else}}div{{/if}} class="{{pfv}}radio{{#if radio--modifier}} {{radio--modifier}}{{/if}}"
+  {{#if radio--attribute}}
+    {{{radio--attribute}}}
+  {{/if}}>
+  {{#if radio--name}}
+    {{#if radio--IsReversed}}
+      {{> radio-label}}
+      {{> radio-input}}
+    {{else}}
+      {{> radio-input}}
+      {{> radio-label}}
+    {{/if}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
+</{{#if radio--type}}{{radio--type}}{{else}}div{{/if}}>
+>>>>>>> ce3bee9ab (fix(input-alignment): fixes vertical alignment)

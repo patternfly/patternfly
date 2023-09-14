@@ -1,0 +1,52 @@
+.pf-v5-c-radio,
+.pf-v5-c-radio__label,
+.pf-v5-c-radio__input {
+  position: relative;
+}
+
+.pf-v5-c-radio::before,
+.pf-v5-c-radio::after,
+.pf-v5-c-radio__label::before,
+.pf-v5-c-radio__label::after,
+.pf-v5-c-radio__input::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  height: 1px;
+  z-index: 999;
+  opacity: .75;
+  pointer-events: none;
+}
+
+.pf-v5-c-radio::before,
+.pf-v5-c-radio::after {
+  background-color: lightsalmon;
+}
+
+.pf-v5-c-radio__label::before,
+.pf-v5-c-radio__label::after {
+  left: -40px;
+  background-color: lightblue;
+}
+
+.pf-v5-c-radio::before {
+  top: 4px;
+}
+
+.pf-v5-c-radio::after {
+  top: 19px;
+}
+
+.pf-v5-c-radio__label::before {
+  top: 7px;
+}
+
+.pf-v5-c-radio__label::after {
+  top: 16px;
+}
+
+.pf-v5-c-radio__input::before {
+  background-color: limegreen;
+  top: calc(50% - .5px);
+  width: 500px;
+}

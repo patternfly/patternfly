@@ -117,11 +117,16 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   // Label
   --#{$toolbar}__item--m-label--spacer: var(--#{$toolbar}__item--spacer);
-  --#{$toolbar}__item--m-label--TranslateY: var(--pf-v5-global--spacer--form-element);
+  --#{$toolbar}__item--m-label--TranslateY: var(--#{$pf-global}--spacer--form-element);
   --#{$toolbar}__item--m-label--FontWeight: var(--#{$pf-global}--FontWeight--bold);
 
+  // Form control inline
+  --#{$toolbar}__item--m-form-element--spacer: var(--#{$toolbar}__item--spacer);
+  --#{$toolbar}__item--m-form-element--TranslateY: var(--#{$pf-global}--spacer--form-element);
+  --#{$toolbar}__item--m-form-element--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+
   // Input
-  --#{$toolbar}__item--m-form-control--TranslateY: var(--pf-v5-global--spacer--form-element);
+  --#{$toolbar}__item--m-form-control--TranslateY: var(--#{$pf-global}--spacer--form-element);
 
   // Label in expanded content
   --#{$toolbar}__expandable-content__item--m-label--MarginBottom: calc(-1 * var(--#{$toolbar}__expandable-content--m-expanded--GridRowGap) + var(--#{$pf-global}--spacer--sm));
@@ -379,7 +384,15 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
     --#{$toolbar}--spacer: var(--#{$toolbar}__item--m-label--spacer);
 
     font-weight: var(--#{$toolbar}__item--m-label--FontWeight);
-    transform: translateY(var(--#{$pf-global}--spacer--form-element));
+    transform: translateY(var(--#{$toolbar}__item--m-label--TranslateY));
+  }
+
+  // Form element
+  &.pf-m-form-element {
+    --#{$toolbar}--spacer: var(--#{$toolbar}__item--m-form-element--spacer);
+
+    font-weight: var(--#{$toolbar}__item--m-form-element--FontWeight);
+    transform: translateY(var(--#{$toolbar}__item--m-form-element--TranslateY));
   }
 
   // Total items
