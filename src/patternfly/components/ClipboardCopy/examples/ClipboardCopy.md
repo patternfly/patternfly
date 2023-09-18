@@ -95,6 +95,59 @@ cssPrefix: pf-v5-c-clipboard-copy
     This is an editable version of the copy to clipboard component that has an expandable section. Got a lot of text here, need to see all of it? Click that arrow on the left side and check out the resulting expansion.
   {{/clipboard-copy-expandable-content}}
 {{/clipboard-copy}}
+<br>
+<h4>Code</h4>
+{{#> clipboard-copy clipboard-copy--IsCode=true clipboard-copy--id="expandable-not-expanded-code"}}
+  {{#> clipboard-copy-group}}
+    {{#> button button--modifier="pf-m-control" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-labelledby="' clipboard-copy--id '-toggle ' clipboard-copy--id '-text-input" aria-controls="' clipboard-copy--id '-content"')}}
+      {{> clipboard-copy-toggle-icon}}
+    {{/button}}
+    {{#> form-control controlType="input" input="true" form-control--attribute=(concat 'dir="ltr" type="text" value="{ &quot;menu&quot;: {     &quot;id&quot;: &quot;file&quot;,     &quot;value&quot;: &quot;File&quot;,     &quot;popup&quot;: {       &quot;menuitem&quot;: [         {&quot;value&quot;: &quot;New&quot;, &quot;onclick&quot;: &quot;CreateNewDoc()&quot;},         {&quot;value&quot;: &quot;Open&quot;, &quot;onclick&quot;: &quot;OpenDoc()&quot;},         {&quot;value&quot;: &quot;Close&quot;, &quot;onclick&quot;: &quot;CloseDoc()&quot;}       ]     }   }} " id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
+    {{/form-control}}
+    {{#> button button--modifier="pf-m-control" button--attribute=(concat 'aria-label="Copy to clipboard" id="' clipboard-copy--id '-copy-button" aria-labelledby="' clipboard-copy--id '-copy-button ' clipboard-copy--id '-text-input"')}}
+      <i class="fas fa-copy" aria-hidden="true"></i>
+    {{/button}}
+  {{/clipboard-copy-group}}
+  {{#> clipboard-copy-expandable-content clipboard-copy-expandable-content--attribute=(concat 'id="' clipboard-copy--id '-content"')}}
+{ "menu": {
+  "id": "file",
+  "value": "File",
+  "popup": {
+    "menuitem": [
+      {"value": "New", "onclick": "CreateNewDoc()"},
+      {"value": "Open", "onclick": "OpenDoc()"},
+      {"value": "Close", "onclick": "CloseDoc()"}
+    ]
+  }
+}} 
+  {{/clipboard-copy-expandable-content}}
+{{/clipboard-copy}}
+<br>
+{{#> clipboard-copy clipboard-copy--IsCode=true clipboard-copy--id="expandable-expanded-code" clipboard-copy--IsExpanded="true"}}
+  {{#> clipboard-copy-group}}
+    {{#> button button--modifier="pf-m-control pf-m-expanded" button--attribute=(concat 'id="' clipboard-copy--id '-toggle" aria-labelledby="' clipboard-copy--id '-toggle ' clipboard-copy--id '-text-input" aria-controls="' clipboard-copy--id '-content"')}}
+      {{> clipboard-copy-toggle-icon}}
+    {{/button}}
+    {{#> form-control controlType="input" input="true" form-control--IsReadonly="true" form-control--attribute=(concat 'dir="ltr" type="text" value="{ &quot;menu&quot;: {     &quot;id&quot;: &quot;file&quot;,     &quot;value&quot;: &quot;File&quot;,     &quot;popup&quot;: {       &quot;menuitem&quot;: [         {&quot;value&quot;: &quot;New&quot;, &quot;onclick&quot;: &quot;CreateNewDoc()&quot;},         {&quot;value&quot;: &quot;Open&quot;, &quot;onclick&quot;: &quot;OpenDoc()&quot;},         {&quot;value&quot;: &quot;Close&quot;, &quot;onclick&quot;: &quot;CloseDoc()&quot;}       ]     }   }} " id="' clipboard-copy--id '-text-input" aria-label="Copyable input"')}}
+    {{/form-control}}
+    {{#> button button--modifier="pf-m-control" button--attribute=(concat 'aria-label="Copy to clipboard" id="' clipboard-copy--id '-copy-button" aria-labelledby="' clipboard-copy--id '-copy-button ' clipboard-copy--id '-text-input"')}}
+      <i class="fas fa-copy" aria-hidden="true"></i>
+    {{/button}}
+  {{/clipboard-copy-group}}
+  {{#> clipboard-copy-expandable-content clipboard-copy-expandable-content--attribute=(concat 'contenteditable="true" id="' clipboard-copy--id '-content"')}}
+{ "menu": {
+  "id": "file",
+  "value": "File",
+  "popup": {
+    "menuitem": [
+      {"value": "New", "onclick": "CreateNewDoc()"},
+      {"value": "Open", "onclick": "OpenDoc()"},
+      {"value": "Close", "onclick": "CloseDoc()"}
+    ]
+  }
+}}
+  {{/clipboard-copy-expandable-content}}
+{{/clipboard-copy}}
 ```
 
 ### Inline compact
