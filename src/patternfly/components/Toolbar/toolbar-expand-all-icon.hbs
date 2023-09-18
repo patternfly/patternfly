@@ -2,5 +2,9 @@
   {{#if toolbar-expand-all-icon--attribute}}
     {{{toolbar-expand-all-icon--attribute}}}
   {{/if}}>
-  <i class="fas fa-angle-right" aria-hidden="true"></i>
+  {{#> icon icon--modifier=(concat (pfv 'unset-prefix') 'm-mirror-inline-rtl')}}
+    {{#> icon-content}}
+      <i class="fas fa-angle-right" aria-hidden="true"></i>
+    {{/icon-content}}
+  {{/icon}}
 </span>
