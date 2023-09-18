@@ -3,5 +3,11 @@
   {{#if clipboard-copy-expandable-content--attribute}}
     {{{clipboard-copy-expandable-content--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if clipboard-copy--IsCode}}
+    <pre dir="ltr">
+      {{~> @partial-block~}}
+    </pre>
+  {{else}}
+    {{> @partial-block}}
+  {{/if}}
 </div>
