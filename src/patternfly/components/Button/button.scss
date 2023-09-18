@@ -559,6 +559,10 @@
     color: var(--#{$button}--m-plain--Color);
     background-color: var(--#{$button}--m-plain--BackgroundColor);
 
+    &.pf-m-no-padding {
+      padding: 0;
+    }
+
     &:hover {
       --#{$button}--m-plain--Color: var(--#{$button}--m-plain--hover--Color);
       --#{$button}--m-plain--BackgroundColor: var(--#{$button}--m-plain--hover--BackgroundColor);
