@@ -409,6 +409,8 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   display: inline-block;
   transition: var(--#{$toolbar}__expand-all-icon--Transition);
   transform: rotate(var(--#{$toolbar}__expand-all-icon--Rotate));
+
+  // @include pf-v5-mirror-inline-on-rtl; - TODO: mirror this icon in breaking change
 }
 
 .#{$toolbar}__content,
