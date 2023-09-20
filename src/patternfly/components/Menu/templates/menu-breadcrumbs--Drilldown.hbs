@@ -28,8 +28,23 @@
           {{/breadcrumb-link}}
         {{/breadcrumb-item}}
 
-        {{#> menu-breadcrumbs--dropdown dropdown-toggle--Badge--text="1" dropdown--IsExpanded="true"}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text='<span class="pf-v5-c-dropdown__menu-item-icon"><i class="fas fa-angle-left" aria-hidden="true"></i></span>Edit'}}
+        {{#> menu-breadcrumbs--dropdown menu-toggle--badge--text="1" menu-toggle--IsExpanded=true}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-icon}}
+                  {{#> icon shouldMirrorRTL=true}}
+                    {{#> icon-content}}
+                      <i class="fas fa-angle-left" aria-hidden="true"></i>
+                    {{/icon-content}}
+                  {{/icon}}
+                {{/menu-item-icon}}
+                {{#> menu-item-text}}
+                  Edit
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
         {{/menu-breadcrumbs--dropdown}}
 
         {{#> breadcrumb-item}}
@@ -50,9 +65,39 @@
           {{/breadcrumb-link}}
         {{/breadcrumb-item}}
 
-        {{#> menu-breadcrumbs--dropdown dropdown-toggle--Badge--text="2" dropdown--IsExpanded="true"}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text='<span class="pf-v5-c-dropdown__menu-item-icon"><i class="fas fa-angle-left" aria-hidden="true"></i></span>Edit'}}
-          {{> dropdown-menu-list-item dropdown-menu-item--text='<span class="pf-v5-c-dropdown__menu-item-icon"><i class="fas fa-angle-left" aria-hidden="true"></i></span>Deployment'}}
+        {{#> menu-breadcrumbs--dropdown menu-toggle--badge--text="2" menu-toggle--IsExpanded=true}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-icon}}
+                  {{#> icon shouldMirrorRTL=true}}
+                    {{#> icon-content}}
+                      <i class="fas fa-angle-left" aria-hidden="true"></i>
+                    {{/icon-content}}
+                  {{/icon}}
+                {{/menu-item-icon}}
+                {{#> menu-item-text}}
+                  Edit
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
+          {{#> menu-list-item}}
+            {{#> menu-item}}
+              {{#> menu-item-main}}
+                {{#> menu-item-icon}}
+                  {{#> icon shouldMirrorRTL=true}}
+                    {{#> icon-content}}
+                      <i class="fas fa-angle-left" aria-hidden="true"></i>
+                    {{/icon-content}}
+                  {{/icon}}
+                {{/menu-item-icon}}
+                {{#> menu-item-text}}
+                  Deployment
+                {{/menu-item-text}}
+              {{/menu-item-main}}
+            {{/menu-item}}
+          {{/menu-list-item}}
         {{/menu-breadcrumbs--dropdown}}
 
         {{#> breadcrumb-item}}
