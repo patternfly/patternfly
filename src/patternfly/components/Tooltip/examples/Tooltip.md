@@ -92,8 +92,8 @@ A tooltip is used to provide contextual information for another component on hov
 | `.pf-v5-c-tooltip` | `<div>` |  Creates a tooltip. Always use with a modifier class that positions the tooltip relative to the element it describes. **Required**|
 | `.pf-v5-c-tooltip__arrow` | `<div>` |  Creates an arrow pointing towards the element the tooltip describes. **Required** |
 | `.pf-v5-c-tooltip__content` | `<div>` |  Creates the body of the tooltip. **Required** |
-| `.pf-m-left{-top/bottom}`, `.pf-m-inline-start{-block-start/block-end}` | `.pf-v5-c-tooltip` | Positions the tooltip to the left (or left top/left bottom) of the element. |
-| `.pf-m-right{-top/bottom}`, `.pf-m-inline-end{-block-start/block-end}` | `.pf-v5-c-tooltip` | Positions the tooltip to the right (or right top/right bottom) of the element. |
-| `.pf-m-top{-left/right}`, `.pf-m-block-start{-inline-start/inline-end}` | `.pf-v5-c-tooltip` | Positions the tooltip to the top (or top left/top right) of the element. |
-| `.pf-m-bottom{-left/right}`, `.pf-m-block-start{-inline-start/inline-end}` | `.pf-v5-c-tooltip` | Positions the tooltip to the bottom (or bottom left/bottom right) of the element. |
-| `.pf-m-text-align-left`, `.pf-m-text-align-start` | `.pf-v5-c-tooltip__content` | Modifies tooltip content to text align left. |
+| `.pf-m-left{-top/bottom}` | `.pf-v5-c-tooltip` | Positions the tooltip to the left (or left top/left bottom) of the element. |
+| `.pf-m-right{-top/bottom}` | `.pf-v5-c-tooltip` | Positions the tooltip to the right (or right top/right bottom) of the element. |
+| `.pf-m-top{-left/right}` | `.pf-v5-c-tooltip` | Positions the tooltip to the top (or top left/top right) of the element. |
+| `.pf-m-bottom{-left/right}` | `.pf-v5-c-tooltip` | Positions the tooltip to the bottom (or bottom left/bottom right) of the element. |
+| `.pf-m-text-align-left` | `.pf-v5-c-tooltip__content` | Modifies tooltip content to text align left. |

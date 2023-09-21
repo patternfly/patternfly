@@ -91,127 +91,81 @@
   &:is(
     .pf-m-top,
     .pf-m-top-left,
-    .pf-m-top-right,
-    .pf-m-block-start,
-    .pf-m-block-start-inline-start,
-    .pf-m-block-start-inline-end
+    .pf-m-top-right
   ) {
-    .#{$popover}__arrow {
-      inset-block-end: 0;
-      inset-inline-start: 50%;
-
-      @include pf-v5-bidirectional-style(
-        $prop: transform,
-        $ltr-val: translateX(var(--#{$popover}__arrow--m-top--TranslateX)) translateY(var(--#{$popover}__arrow--m-top--TranslateY)) rotate(var(--#{$popover}__arrow--m-top--Rotate)),
-        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$popover}__arrow--m-top--TranslateX))}) translateY(var(--#{$popover}__arrow--m-top--TranslateY)) rotate(var(--#{$popover}__arrow--m-top--Rotate))
-      );
-    }
+    --#{$popover}__arrow--Bottom: var(--#{$popover}--m-top--Bottom, 0);
+    --#{$popover}__arrow--Left: var(--#{$popover}--m-top--Left, 50%);
+    --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-top--TranslateX);
+    --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-top--TranslateY);
+    --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-top--Rotate);
   }
 
   &:is(
     .pf-m-bottom,
     .pf-m-bottom-left,
-    .pf-m-bottom-right,
-    .pf-m-block-end,
-    .pf-m-block-end-inline-start,
-    .pf-m-block-end-inline-end
-  ) {
-    .#{$popover}__arrow {
-      inset-block-start: 0;
-      inset-inline-start: 50%;
-
-      @include pf-v5-bidirectional-style(
-        $prop: transform,
-        $ltr-val: translateX(var(--#{$popover}__arrow--m-bottom--TranslateX)) translateY(var(--#{$popover}__arrow--m-bottom--TranslateY)) rotate(var(--#{$popover}__arrow--m-bottom--Rotate)),
-        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$popover}__arrow--m-bottom--TranslateX))}) translateY(var(--#{$popover}__arrow--m-bottom--TranslateY)) rotate(var(--#{$popover}__arrow--m-bottom--Rotate))
-      );
-    }
+    .pf-m-bottom-right
+   ) {
+    --#{$popover}__arrow--Top: var(--#{$popover}--m-bottom--Top, 0);
+    --#{$popover}__arrow--Left: var(--#{$popover}--m-bottom--Left, 50%);
+    --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-bottom--TranslateX);
+    --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-bottom--TranslateY);
+    --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-bottom--Rotate);
   }
 
   &:is(
     .pf-m-left,
     .pf-m-left-top,
-    .pf-m-left-bottom,
-    .pf-m-inline-start,
-    .pf-m-inline-start-block-start,
-    .pf-m-inline-start-block-end
+    .pf-m-left-bottom
   ) {
-    .#{$popover}__arrow {
-      inset-block-start: 50%;
-      inset-inline-end: 0;
-
-      @include pf-v5-bidirectional-style(
-        $prop: transform,
-        $ltr-val: translateX(var(--#{$popover}__arrow--m-left--TranslateX)) translateY(var(--#{$popover}__arrow--m-left--TranslateY)) rotate(var(--#{$popover}__arrow--m-left--Rotate)),
-        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$popover}__arrow--m-left--TranslateX))}) translateY(var(--#{$popover}__arrow--m-left--TranslateY)) rotate(var(--#{$popover}__arrow--m-left--Rotate))
-      );
-    }
+    --#{$popover}__arrow--Top: var(--#{$popover}--m-left--Top, 50%);
+    --#{$popover}__arrow--Right: var(--#{$popover}--m-left--Right, 0);
+    --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-left--TranslateX);
+    --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-left--TranslateY);
+    --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-left--Rotate);
   }
 
   &:is(
     .pf-m-right,
     .pf-m-right-top,
-    .pf-m-right-bottom,
-    .pf-m-inline-end,
-    .pf-m-inline-end-block-start,
-    .pf-m-inline-end-block-end
+    .pf-m-right-bottom
   ) {
-    .#{$popover}__arrow {
-      inset-block-start: 50%;
-      inset-inline-start: 0;
-
-      @include pf-v5-bidirectional-style(
-        $prop: transform,
-        $ltr-val: translateX(var(--#{$popover}__arrow--m-right--TranslateX)) translateY(var(--#{$popover}__arrow--m-right--TranslateY)) rotate(var(--#{$popover}__arrow--m-right--Rotate)),
-        $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$popover}__arrow--m-right--TranslateX))}) translateY(var(--#{$popover}__arrow--m-right--TranslateY)) rotate(var(--#{$popover}__arrow--m-right--Rotate))
-      );
-    }
+    --#{$popover}__arrow--Top: var(--#{$popover}--m-right--Top, 50%);
+    --#{$popover}__arrow--Left: var(--#{$popover}--m-right--Left, 0);
+    --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-right--TranslateX);
+    --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-right--TranslateY);
+    --#{$popover}__arrow--Rotate: var(--#{$popover}__arrow--m-right--Rotate);
   }
 
   &:is(
     .pf-m-left-top,
-    .pf-m-right-top,
-    .pf-m-inline-start-block-start,
-    .pf-m-inline-end-block-start
+    .pf-m-right-top
   ) {
-    .#{$popover}__arrow {
-      inset-block-start: var(--#{$popover}__arrow--Height);
-    }
+    --#{$popover}__arrow--Top: 0;
+    --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-top--TranslateY);
   }
 
   &:is(
     .pf-m-left-bottom,
-    .pf-m-right-bottom,
-    .pf-m-inline-start-block-end,
-    .pf-m-inline-end-block-end
+    .pf-m-right-bottom
   ) {
-    .#{$popover}__arrow {
-      inset-block-start: auto;
-      inset-block-end: 0;
-    }
+    --#{$popover}__arrow--Top: auto;
+    --#{$popover}__arrow--Bottom: 0;
   }
 
   &:is(
     .pf-m-top-left,
-    .pf-m-bottom-left,
-    .pf-m-block-start-inline-start,
-    .pf-m-block-end-inline-start
+    .pf-m-bottom-left
   ) {
-    .#{$popover}__arrow {
-      inset-inline-start: var(--#{$popover}__arrow--Width);
-    }
+    --#{$popover}__arrow--Left: 0;
+    --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-left--TranslateX);
   }
 
   &:is(
     .pf-m-top-right,
-    .pf-m-bottom-right,
-    .pf-m-block-start-inline-end,
-    .pf-m-block-end-inline-end
+    .pf-m-bottom-right
   ) {
-    .#{$popover}__arrow {
-      inset-inline-start: auto;
-      inset-inline-end: 0;
-    }
+    --#{$popover}__arrow--Right: 0;
+    --#{$popover}__arrow--Left: auto;
   }
 
   &.pf-m-danger {
@@ -244,7 +198,7 @@
   position: relative;
   padding-block-start: var(--#{$popover}__content--PaddingTop);
   padding-block-end: var(--#{$popover}__content--PaddingBottom);
-  padding-inline-start: var(--#{$popover}__content--PaddingLeft); 
+  padding-inline-start: var(--#{$popover}__content--PaddingLeft);
   padding-inline-end: var(--#{$popover}__content--PaddingRight);
   background-color: var(--#{$popover}__content--BackgroundColor);
 }
@@ -263,11 +217,18 @@
 
 .#{$popover}__arrow {
   position: absolute;
+  /* stylelint-disable liberty/use-logical-spec */
+  top: var(--#{$popover}__arrow--Top, auto);
+  right: var(--#{$popover}__arrow--Right, auto);
+  bottom: var(--#{$popover}__arrow--Bottom, auto);
+  left: var(--#{$popover}__arrow--Left, auto);
+  /* stylelint-enable */
   width: var(--#{$popover}__arrow--Width);
   height: var(--#{$popover}__arrow--Height);
   pointer-events: none;
   background-color: var(--#{$popover}__arrow--BackgroundColor);
   box-shadow: var(--#{$popover}__arrow--BoxShadow);
+  transform: translateX(var(--#{$popover}__arrow--TranslateX, 0)) translateY(var(--#{$popover}__arrow--TranslateY, 0)) rotate(var(--#{$popover}__arrow--Rotate, 0));
 }
 
 .#{$popover}__header {
