@@ -1,4 +1,6 @@
+// import Handlebars from 'handlebars';
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
+import ResizeObserver from 'resize-observer-polyfill';
 
 /** Ignore the object appended by handlebars. */
 export const concat = (...params) => {
@@ -76,3 +78,15 @@ export const pfv = (type) => {
 
   return namespace + version + prefix;
 };
+
+// export const registerExample = function(name, context, options) {
+export const debug = (optionalValue, options) => {
+  console.log('Current Context');
+  console.log('====================');
+  console.log(this);
+  if (optionalValue) {
+    console.log('Value');
+    console.log('====================');
+    console.log(optionalValue);
+  }
+}

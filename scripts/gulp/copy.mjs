@@ -36,7 +36,7 @@ export function copySource() {
   ]);
 }
 
-const docFiles = ['src/site/**', 'src/patternfly/**/examples/*.css', 'src/patternfly/**/deprecated/*.css'];
+const docFiles = ['src/site/**', 'src/patternfly/**/examples/*.css', 'src/patternfly/**/examples/*.js', 'src/patternfly/**/deprecated/*.css'];
 
 export function copyDocs() {
   return src(docFiles).pipe(dest('dist/docs'));

@@ -1,0 +1,10 @@
+// @debug $resize-observer; // check your variable names located in src/patternfly/sass-utilities/component-namespaces
+
+.#{$resize-observer} {
+  display: block;
+
+  &[data-size="lg"] {
+    background: red;
+  }
+}
+
