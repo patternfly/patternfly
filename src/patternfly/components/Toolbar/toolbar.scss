@@ -7,7 +7,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
 .#{$toolbar} {
   --#{$toolbar}--AlignItems--base: flex-start;
-  --#{$toolbar}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$toolbar}--RowGap--base: var(--#{$pf-global}--spacer--lg); // row-gap between toolbar content elements
   --#{$toolbar}--RowGap: var(--#{$toolbar}--RowGap--base);
   --#{$toolbar}--PaddingTop: var(--#{$pf-global}--spacer--md);
