@@ -62,4 +62,33 @@
   --pf-t--global--border--width--control--default: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--control--hover: var(--pf-t--global--border--width--100);
   --pf-t--global--border--width--control--active: var(--pf-t--global--border--width--200);
+
+  // box-shadow
+  --pf-t--global--box-shadow--sm: 0px 1px 2px 0px rgb(0 0 0 / 16%);
+  --pf-t--global--box-shadow--sm--top: 0px -1px 2px 0px rgb(0 0 0 / 16%);
+  --pf-t--global--box-shadow--sm--bottom: 0px 1px 2px 0px rgb(0 0 0 / 16%);
+  --pf-t--global--box-shadow--sm--left: -1px 0px 2px 0px rgb(0 0 0 / 16%);
+  --pf-t--global--box-shadow--sm--right: 1px 0px 2px 0px rgb(0 0 0 / 16%);
+  --pf-t--global--box-shadow--md: 0px 4px 8px 0px rgb(0 0 0 / 12%);
+  --pf-t--global--box-shadow--md--top: 0px -4px 8px 0px rgb(0 0 0 / 12%);
+  --pf-t--global--box-shadow--md--bottom: 0px 4px 8px 0px rgb(0 0 0 / 12%);
+  --pf-t--global--box-shadow--md--left: -4px 0px 8px 0px rgb(0 0 0 / 12%);
+  --pf-t--global--box-shadow--md--right: 4px 0px 8px 0px rgb(0 0 0 / 12%);
+  --pf-t--global--box-shadow--lg: 0px 8px 24px 0px rgb(0 0 0 / 12%);
+  --pf-t--global--box-shadow--lg--top: 0px -8px 24px 0px rgb(0 0 0 / 12%);
+  --pf-t--global--box-shadow--lg--bottom: 0px 8px 24px 0px rgb(0 0 0 / 12%);
+  --pf-t--global--box-shadow--lg--left: -8px 0px 24px 0px rgb(0 0 0 / 12%);
+  --pf-t--global--box-shadow--lg--right: 8px 0px 24px 0px rgb(0 0 0 / 12%);
+
+  // DARK shadows
+  // TODO: move into a dark token file
+  // shadows
+  // --pf-t--global--box-shadow--sm: 0px 1px 2px 0px rgb(0 0 0 / 50%);
+  // --pf-t--global--box-shadow--sm-top: 0px -1px 2px 0px rgb(0 0 0 / 50%);
+  // --pf-t--global--box-shadow--sm-right: 1px 0px 2px 0px rgb(0 0 0 / 50%);
+  // --pf-t--global--box-shadow--sm-bottom: 0px 1px 2px 0px rgb(0 0 0 / 50%);
+  // --pf-t--global--box-shadow--sm-left: -1px 0px 2px 0px rgb(0 0 0 / 50%);
+  // --pf-t--global--box-shadow--md: 0px 4px 8px 0px rgb(0 0 0 / 50%);
+  // --pf-t--global--box-shadow--lg: 0px 8px 24px 0px rgb(0 0 0 / 50%);
+
 }
