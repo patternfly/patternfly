@@ -1,4 +1,13 @@
-<{{#if check--type}}{{check--type}}{{else}}div{{/if}} class="{{pfv}}check{{#if check--modifier}} {{check--modifier}}{{/if}}"
+<{{#if check--IsStandalone}}label{{else if check--type}}{{check--type}}{{else}}div{{/if}} class="{{pfv}}check
+  {{#if check--IsStandalone}}
+    pf-m-standalone
+  {{/if}}
+  {{#if check--modifier}}
+    {{check--modifier}}
+  {{/if}}"
+  {{#if check--id}}
+    id="{{check--id}}"
+  {{/if}}
   {{#if check--attribute}}
     {{{check--attribute}}}
   {{/if}}>
@@ -6,4 +15,4 @@
     check-input--IsDisabled=check--IsDisabled
     check-label--IsDisabled=check--IsDisabled
   }}
-</{{#if check--type}}{{check--type}}{{else}}div{{/if}}>
+</{{#if check--IsStandalone}}label{{else if check--type}}{{check--type}}{{else}}div{{/if}}>

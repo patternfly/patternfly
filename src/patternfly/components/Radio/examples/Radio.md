@@ -53,37 +53,29 @@ cssPrefix: pf-v5-c-radio
 
 ### With description
 ```hbs
-{{#> radio}}
-  {{#> radio-input radio-input--attribute='id="radio-description" name="exampleRadioDescription"'}}{{/radio-input}}
-  {{#> radio-label radio-label--attribute='for="radio-description"'}}Radio with description{{/radio-label}}
-  {{#> radio-description}}
-    Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
-  {{/radio-description}}
+{{#> radio radio--id="radio-with-description" radio--HasDescription=true}}
+  {{> radio-input}}
+  {{> radio-label radio-label--text="Radio with description"}}
+  {{> radio-description radio-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."}}
 {{/radio}}
 ```
 
 ### With body
 ```hbs
-{{#> radio}}
-  {{#> radio-input radio-input--attribute='id="radio-body" name="exampleRadioBody"'}}{{/radio-input}}
-  {{#> radio-label radio-label--attribute='for="radio-body"'}}Radio with body{{/radio-label}}
-  {{#> radio-body}}
-    This is where custom content goes.
-  {{/radio-body}}
+{{#> radio radio--id="radio-with-body" radio--HasBodyText=true}}
+  {{> radio-input}}
+  {{> radio-label radio-label--text="Radio with body"}}
+  {{> radio-body radio-body--text="This is where custom content goes."}}
 {{/radio}}
 ```
 
 ### With description and body
 ```hbs
-{{#> radio}}
-  {{#> radio-input radio-input--attribute='id="radio-description-body" name="exampleRadioDescriptionBody"'}}{{/radio-input}}
-  {{#> radio-label radio-label--attribute='for="radio-description-body"'}}Radio with description and body{{/radio-label}}
-  {{#> radio-description}}
-    Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
-  {{/radio-description}}
-  {{#> radio-body}}
-    This is where custom content goes.
-  {{/radio-body}}
+{{#> radio radio--id="radio-with-description-body" radio--HasDescription=true radio--HasBodyText=true}}
+  {{> radio-input}}
+  {{> radio-label radio-label--text="Radio with description and body"}}
+  {{> radio-description radio-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."}}
+  {{> radio-body radio-body--text="This is where custom content goes."}}
 {{/radio}}
 ```
 
@@ -104,6 +96,7 @@ If you extend this component or modify the styles of this component, then make s
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `disabled` | `<input type="radio">` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
+| `aria-describedby` | `.pf-v5-c-radio__input` |  When using `.pf-v5-c-radio__description` or `.pf-v5-c-radio__body` make use of this on the input. |
 
 ### Usage
 | Class | Applied to | Outcome |

@@ -202,9 +202,9 @@ import './MenuToggle.css'
 
 ### Split button (checkbox)
 ```hbs
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDisabled="true" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
-  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-disabled-example" menu-toggle--IsDisabled=true menu-toggle--IsDiv=true menu-toggle--IsSplitButton=true}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle=true}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
     {{/menu-toggle-controls}}
@@ -213,9 +213,9 @@ import './MenuToggle.css'
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
-  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-example" menu-toggle--IsDiv=true menu-toggle--IsSplitButton=true}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle=true}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
     {{/menu-toggle-controls}}
@@ -224,9 +224,9 @@ import './MenuToggle.css'
 
 &nbsp;
 
-{{#> menu-toggle menu-toggle--id="split-button-checkbox-expanded-example" menu-toggle--IsExpanded="true" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true"}}
-  {{> menu-toggle--check menu-toggle--check--IsStandalone="true"}}
-  {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
+{{#> menu-toggle menu-toggle--id="split-button-checkbox-expanded-example" menu-toggle--IsExpanded=true menu-toggle--IsDiv=true menu-toggle--IsSplitButton=true}}
+  {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
+  {{#> menu-toggle-button menu-toggle-button--IsToggle=true}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}
     {{/menu-toggle-controls}}
@@ -237,7 +237,7 @@ import './MenuToggle.css'
 ### Split button (checkbox with toggle text)
 ```hbs
 {{#> menu-toggle menu-toggle--id="split-button-checkbox-with-toggle-text-disabled-example" menu-toggle--IsDiv="true" menu-toggle--IsSplitButton="true" menu-toggle--IsDisabled="true"}}
-  {{> menu-toggle--check menu-toggle--check--text="10 selected" check--IsDisabled="true"}}
+  {{> menu-toggle--check menu-toggle--check--text="10 selected" check--IsDisabled=true}}
   {{#> menu-toggle-button menu-toggle-button--IsToggle="true"}}
     {{#> menu-toggle-controls}}
       {{> menu-toggle-toggle-icon}}

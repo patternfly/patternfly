@@ -1,8 +1,21 @@
-<{{#if check-label--type}}{{check-label--type}}{{else}}label{{/if}} class="{{pfv}}check__label{{#if check-label--IsDisabled}} pf-m-disabled{{/if}}{{#if check-label--modifier}} {{check-label--modifier}}{{/if}}"
+<{{#if check-label--type}}{{check-label--type}}{{else}}label{{/if}} class="{{pfv}}check__label
+  {{#if check-label--IsDisabled}}
+    pf-m-disabled
+  {{/if}}
+  {{#if check-label--modifier}}
+    {{check-label--modifier}}
+  {{/if}}"
+  {{#if check--id}}
+    for="{{check--id}}-input"
+  {{/if}}
   {{#if check-label--attribute}}
     {{{check-label--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if check-label--text}}
+    {{check-label--text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
   {{#if check--IsRequired}}
     {{> check-label-required}}
   {{/if}}

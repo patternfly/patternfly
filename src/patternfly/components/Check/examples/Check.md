@@ -60,34 +60,28 @@ cssPrefix: pf-v5-c-check
 
 ### With description
 ```hbs
-{{#> check}}
-  {{#> check-input check-input--attribute='id="check-with-description" name="check-with-description"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check-with-description"'}}Check with description{{/check-label}}
-  {{#> check-description}}
-    Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
-  {{/check-description}}
+{{#> check check--id="check-with-description" check--HasDescription=true}}
+  {{> check-input}}
+  {{> check-label check-label--text="Check with description"}}
+  {{> check-description check-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."}}
 {{/check}}
 ```
 
 ### With body
 ```hbs
-{{#> check}}
-  {{#> check-input check-input--attribute='id="check-with-body" name="check-with-body"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check-with-body"'}}Check with body{{/check-label}}
-  {{#> check-body}}
-    This is where custom content goes.
-  {{/check-body}}
+{{#> check check--id="check-with-body" check--HasBodyText=true}}
+  {{> check-input}}
+  {{> check-label check-label--text="Check with body"}}
+  {{> check-body check-body--text="This is where custom content goes."}}
 {{/check}}
 ```
 
 ### With description and body
 ```hbs
-{{#> check}}
-  {{#> check-input check-input--attribute='id="check-with-description-body" name="check-with-description-body"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check-with-description-body"'}}Check with description and body{{/check-label}}
-  {{#> check-description}}
-    Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP.
-  {{/check-description}}
+{{#> check check--id="check-with-description-body" check--HasDescription=true check--HasBodyText=true}}
+  {{> check-input}}
+  {{> check-label check-label--text="Check with description and body"}}
+  {{> check-description check-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."}}
   {{#> check-body}}
     This is where custom content goes.
   {{/check-body}}
@@ -112,6 +106,7 @@ If you extend this component or modify the styles of this component, then make s
 | -- | -- | -- |
 | `disabled` | `.pf-v5-c-check__input` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
 | `required` | `.pf-v5-c-check__input` | Indicates that the element is required. |
+| `aria-describedby` | `.pf-v5-c-check__input` |  When using `.pf-v5-c-check__description` or `.pf-v5-c-check__body` make use of this on the input. |
 
 ### Usage
 | Class | Applied to | Outcome |

@@ -1,5 +1,18 @@
 <input class="{{pfv}}radio__input{{#if radio-input--modifier}} {{radio-input--modifier}}{{/if}}"
   type="radio"
+  {{#ifAny radio-description--text radio--HasDescription radio-body--text radio--HasBodyText}}
+    aria-describedby="
+    {{#ifAny radio-description--text radio--HasDescription}}
+      {{radio--id}}-description
+    {{/ifAny}}
+    {{#ifAny radio-body--text radio--HasBodyText}}
+      {{radio--id}}-body
+    {{/ifAny}}"
+  {{/ifAny}}
+  {{#if radio--id}}
+    id="{{radio--id}}-input"
+    name="{{radio--id}}-input"
+  {{/if}}
   {{#if radio-input--attribute}}
     {{{radio-input--attribute}}}
   {{/if}}>
