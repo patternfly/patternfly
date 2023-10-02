@@ -4,8 +4,6 @@ section: components
 subsection: forms
 ---
 
-import '../../../components/Radio/examples/Radio.css'
-
 ## Demos
 ### Basic
 ```hbs

@@ -26,6 +26,8 @@
   &.pf-m-standalone {
     --#{$check}--GridGap: 0;
     --#{$check}__input--TranslateY: none;
+
+    display: inline-grid;
   }
 }
 
@@ -36,7 +38,7 @@
   -moz-transform: translateY(var(--#{$check}__input--TranslateY--moz)); // remove at breaking change - no longer needed
   // stylelint-enable
 
- // find height of single label, divide by two, offset by 50% of own height
+  // find height of single label, divide by two, offset by 50% of own height
   transform: translateY(var(--#{$check}__input--TranslateY));
 }
 

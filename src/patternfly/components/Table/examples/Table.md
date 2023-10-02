@@ -9,7 +9,7 @@ import './Table.css'
 # Examples
 
 ## Basic table
-<!--
+
 ### Basic table example
 ```hbs
 {{#> table table--id="table-basic" table--grid="true" table--modifier="pf-m-grid-md" table--attribute='aria-label="This is a simple table example"'}}
@@ -416,13 +416,9 @@ These classes can be used to ensure that the table changes between the tabular a
     {{/table-tr}}
   {{/table-tbody}}
 {{/table}}
-``` -->
+```
 
 ## With checkboxes, radio select, and actions
-
-import '../../Radio/examples/Radio.css'
-import '../../Check/examples/Check.css'
-
 
 ### Checkboxes and actions example
 ```hbs
@@ -430,8 +426,8 @@ import '../../Check/examples/Check.css'
   {{#> table-thead}}
     {{#> table-tr table-tr--index="thead"}}
       {{> table--check table--check--IsThead="true"}}
-      {{#> table-th table-th--attribute='scope="col"' table-th--IsWrap=true}}
-        Repositories asdfasdfasdf sadf asdfasdf asdf asdfads fasdf dsf asd fadsf asdfasd fasdf asdfdsafsadf
+      {{#> table-th table-th--attribute='scope="col"'}}
+        Repositories
       {{/table-th}}
       {{#> table-th table-th--attribute='scope="col"'}}
         Branches

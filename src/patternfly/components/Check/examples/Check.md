@@ -5,16 +5,7 @@ subsection: forms
 cssPrefix: pf-v5-c-check
 ---
 
-import './Check.css'
-
 ## Examples
-### Wrapping
-```hbs
-{{#> check}}
-  {{#> check-input check-input--attribute='id="check-basicx" name="check-basicx"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check-basicx"'}}Check with a very long title where text wraps, lets see what it does. Check with a very long title where text wraps, lets see what it does{{/check-label}}
-{{/check}}
-```
 
 ### Basic
 ```hbs
