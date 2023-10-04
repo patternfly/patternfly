@@ -5,10 +5,12 @@ cssPrefix: pf-v5-c-resize-observer
 ---
 
 import './ResizeObserver.css'
+import './ResizeObserver.js'
 
 ## Examples
 ### Basic
 ```hbs
+
 {{#> resize-observer
      resize-observer--id='basic-example'
      resize-observer--data-size-sm='0'
@@ -123,4 +125,6 @@ The resize observer component provides...
 | -- | -- | -- |
 | `.pf-v5-c-resize-observer` | `<div>` |  Initiates a resize observer. **Required** |
 
-import '/dist/components/ResizeObserver/ResizeObserver.js'
+<!-- import './ResizeObserver.js' -->
+
+<!-- <script src="./ResizeObserver.js" /> -->

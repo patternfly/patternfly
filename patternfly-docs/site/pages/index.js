@@ -11,9 +11,3 @@ const HomePage = () => (
 );
 
 export default HomePage;
-
-window.onload = () => {
-  if (window.location.pathname !== '/') {
-    window.location = '/';
-  }
-};
