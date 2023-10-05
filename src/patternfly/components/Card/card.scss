@@ -8,6 +8,8 @@
   --#{$card}--child--PaddingBottom: var(--#{$pf-global}--spacer--lg);
   --#{$card}--child--PaddingLeft: var(--#{$pf-global}--spacer--lg);
   --#{$card}--c-divider--child--PaddingTop: var(--#{$pf-global}--spacer--lg);
+  --#{$card}__header--m-wrap--RowGap: var(--#{$pf-global}--spacer--sm);
+  --#{$card}__header--m-wrap--ColumnGap: var(--#{$pf-global}--spacer--md);
   --#{$card}__title--not--last-child--PaddingBottom: var(--#{$pf-global}--spacer--md);
   --#{$card}__title-text--FontFamily: var(--#{$pf-global}--FontFamily--heading);
   --#{$card}__title-text--FontSize: var(--#{$pf-global}--FontSize--md);
@@ -27,7 +29,6 @@
   --#{$card}__header-toggle--MarginLeft: calc(var(--#{$pf-global}--spacer--md) * -1);
   --#{$card}__header-toggle-icon--Transition: var(--#{$pf-global}--Transition);
   --#{$card}--m-expanded__header-toggle-icon--Rotate: 90deg;
-
 
   // Selectable/Clickable
   --#{$card}--m-selectable--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
@@ -339,13 +340,6 @@
   flex-direction: row;
   align-items: center;
 
-  .#{$card}__title {
-    --#{$card}--first-child--PaddingTop: 0;
-    --#{$card}__title--not--last-child--PaddingBottom: 0;
-
-    padding: 0;
-  }
-
   &.pf-m-toggle-right {
     --#{$card}__header-toggle--MarginRight: var(--#{$card}__header--m-toggle-right--toggle--MarginRight);
     --#{$card}__header-toggle--MarginLeft: var(--#{$card}__header--m-toggle-right--toggle--MarginLeft);
@@ -353,6 +347,33 @@
     .#{$card}__header-toggle {
       order: 2;
     }
+  }
+
+  &.pf-m-wrap {
+    --pf-v5-c-card__actions--PaddingLeft: 0;
+    
+    gap: var(--#{$card}__header--m-wrap--RowGap) var(--#{$card}__header--m-wrap--ColumnGap);
+
+    &,
+    .#{$card}__actions {
+      flex-wrap: wrap;
+      row-gap: var(--#{$card}__header--m-wrap--RowGap);
+    }
+
+    .#{$card}__actions {
+      + * {
+        margin-inline-end: auto;
+      }
+
+      margin-inline-start: 0
+    }
+  }
+
+  .#{$card}__title {
+    --#{$card}--first-child--PaddingTop: 0;
+    --#{$card}__title--not--last-child--PaddingBottom: 0;
+
+    padding: 0;
   }
 }
 

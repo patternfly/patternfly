@@ -709,6 +709,25 @@ import './Card.css'
 {{/card}}
 ```
 
+### Card with header that wraps
+```hbs isBeta
+{{#> card}}
+  {{#> card-header card-header--modifier="pf-m-wrap"}}
+    {{#> card-actions card-actions--modifier="pf-m-no-offset"}}
+      {{#> button button--modifier="pf-m-primary"}}Primary action{{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}Secondary action{{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}Secondary action{{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}Secondary action{{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}Secondary action{{/button}}
+    {{/card-actions}}
+    {{> card-title card-title-text--value="This is a longer card title that takes up more space"}}
+  {{/card-header}}
+  {{#> card-body}}
+    This is the card body
+  {{/card-body}}
+{{/card}}
+```
+
 ## Documentation
 ### Overview
 A card is a generic rectangular container that can be used to build other components. Use a default card for regular page content and the compact variation for dashboard or small cards.
@@ -731,6 +750,7 @@ A card is a generic rectangular container that can be used to build other compon
 | `.pf-v5-c-card__sr-input` | `<input>` | Creates an input which, when focused, makes a following `.pf-v5-c-card` appear focused. |
 | `.pf-m-compact` | `.pf-v5-c-card` | Creates a compact variation of the card component that involves smaller font sizes and spacing. This variation is for use on dashboards and where a smaller card is preferred. |
 | `.pf-m-display-lg` | `.pf-v5-c-card` | Creates a large variation of the card component that involves larger font sizes and spacing. This variation is for marketing use cases. |
+| `.pf-m-wrap` | `.pf-v5-c-card__header` | Modifies the card header to wrap its children. |
 | `.pf-m-no-fill` | `.pf-v5-c-card__body` | Sets a `.pf-v5-c-card__body` not to fill the available space in `.pf-v5-c-card`. `.pf-m-no-fill` can be added to multiple card bodies. |
 | `.pf-m-selectable` | `.pf-v5-c-card` | Modifies a card to be selectable.  |
 | `.pf-m-clickable` | `.pf-v5-c-card` | Modifies a card to be clickable. |
