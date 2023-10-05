@@ -8,91 +8,62 @@ cssPrefix: pf-v5-c-check
 ## Examples
 ### Basic
 ```hbs
-{{#> check}}
-  {{#> check-input check-input--attribute='id="check-basic" name="check-basic"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check-basic"'}}Check{{/check-label}}
-{{/check}}
+{{> check check--id="basic-example" check-label--text="Check"}}
 ```
 
 ### Required
 ```hbs
-{{#> check check--IsRequired="true"}}
-  {{#> check-input check-input--attribute='id="check-required" name="check-required"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check-required"'}}Check{{/check-label}}
-{{/check}}
+{{> check check--id="check-required" check-label--text="Check" check--IsRequired=true}}
 ```
 
 ### Checked
 ```hbs
-{{#> check}}
-  {{#> check-input check-input--attribute='id="check-checked" name="check-checked" checked'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check-checked"'}}Check checked{{/check-label}}
-{{/check}}
+{{> check check--id="check-checked" check-label--text="Check checked"}}
 ```
 
 ### Label wrapping input
 ```hbs
-{{#> check check--type="label" check--attribute='for="check-label-wrapping-input"'}}
-  {{#> check-input check-input--attribute='id="check-label-wrapping-input" name="check-label-wrapping-input"'}}{{/check-input}}
-  {{#> check-label check-label--type="span"}}Check label wraps input{{/check-label}}
-{{/check}}
+{{> check check--id="check-label-wrapping-input" check-label--text="Check label wraps input" check--IsLabelWrapped=true}}
 ```
 
 ### Reversed
 ```hbs
-{{#> check}}
-  {{#> check-label check-label--attribute='for="check-reversed"'}}Check reversed{{/check-label}}
-  {{#> check-input check-input--attribute='id="check-reversed" name="check-reversed"'}}{{/check-input}}
-{{/check}}
+{{> check check--id="check-reversed" check-label--text="Check reversed" check--IsReversed=true}}
 ```
 
 ### Disabled
 ```hbs
-{{#> check check--isDisabled="true"}}
-  {{#> check-input check-input--attribute='id="check-disabled" name="check-disabled"'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check-disabled"'}}Check disabled{{/check-label}}
-{{/check}}
-{{#> check check--IsDisabled="true"}}
-  {{#> check-input check-input--attribute='id="check-disabled-2" name="check-disabled-2" checked'}}{{/check-input}}
-  {{#> check-label check-label--attribute='for="check-disabled-2"'}}Check disabled checked{{/check-label}}
-{{/check}}
+{{> check check--id="check-disabled" check-label--text="Check disabled" check--IsDisabled=true}}
+{{> check check--id="check-disabled-checked" check-label--text="Check disabled checked" check--IsDisabled=true check-input--IsChecked=true}}
 ```
 
 ### With description
 ```hbs
-{{#> check check--id="check-with-description" check--HasDescription=true}}
-  {{> check-input}}
-  {{> check-label check-label--text="Check with description"}}
-  {{> check-description check-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."}}
-{{/check}}
+{{> check
+    check--id="check-with-description" 
+    check-label--text="Check with description" 
+    check-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."
+  }}
 ```
 
 ### With body
 ```hbs
-{{#> check check--id="check-with-body" check--HasBodyText=true}}
-  {{> check-input}}
-  {{> check-label check-label--text="Check with body"}}
-  {{> check-body check-body--text="This is where custom content goes."}}
-{{/check}}
+{{> check check--id="check-with-body" check-label--text="Check with body" check-body--text="This is where custom content goes."}}
 ```
 
 ### With description and body
 ```hbs
-{{#> check check--id="check-with-description-body" check--HasDescription=true check--HasBodyText=true}}
-  {{> check-input}}
-  {{> check-label check-label--text="Check with description and body"}}
-  {{> check-description check-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."}}
-  {{#> check-body}}
-    This is where custom content goes.
-  {{/check-body}}
-{{/check}}
+{{> check
+    check--id="check-with-description-body"
+    check-label--text="Check with description and body"
+    check-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."
+    check-body--text="This is where custom content goes."
+  }}
 ```
 
 ### Standalone input
 ```hbs
-{{#> check check--modifier="pf-m-standalone"}}
-  {{#> check-input check-input--attribute='id="check-standalone-input" name="check-standalone-input" aria-label="Standalone input"'}}{{/check-input}}
-{{/check}}
+{{> check check--id="standalone-input" check--IsStandalone=true}}
 ```
 
 ## Documentation
@@ -106,7 +77,7 @@ If you extend this component or modify the styles of this component, then make s
 | -- | -- | -- |
 | `disabled` | `.pf-v5-c-check__input` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
 | `required` | `.pf-v5-c-check__input` | Indicates that the element is required. |
-| `aria-describedby` | `.pf-v5-c-check__input` |  When using `.pf-v5-c-check__description` or `.pf-v5-c-check__body` make use of this on the input. |
+| `aria-describedby` | `.pf-v5-c-check__input` |  When using `.pf-v5-c-check__description` make use of this on the input. |
 
 ### Usage
 | Class | Applied to | Outcome |

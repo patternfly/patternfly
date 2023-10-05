@@ -1,7 +1,13 @@
-<{{#if radio-label--type}}{{radio-label--type}}{{else}}label{{/if}} class="{{pfv}}radio__label{{#if radio-label--modifier}} {{radio-label--modifier}}{{/if}}"
-  {{#if radio--id}}
-    for="{{radio--id}}-input"
+<{{#if radio--IsLabelWrapped}}span{{else if radio-label--type}}{{radio-label--type}}{{else}}label{{/if}} class="{{pfv}}radio__label
+  {{#if radio-label--IsDisabled}}
+    pf-m-disabled
   {{/if}}
+  {{#if radio-label--modifier}}
+    {{radio-label--modifier}}
+  {{/if}}"
+  {{#unless radio--IsLabelWrapped}}
+    for="{{radio--id}}-input"
+  {{/unless}}
   {{#if radio-label--attribute}}
     {{{radio-label--attribute}}}
   {{/if}}>
@@ -10,4 +16,7 @@
   {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}
-</{{#if radio-label--type}}{{radio-label--type}}{{else}}label{{/if}}>
+  {{#if radio--IsRequired}}
+    {{> radio-label-required}}
+  {{/if}}
+</{{#if radio--IsLabelWrapped}}span{{else if radio-label--type}}{{radio-label--type}}{{else}}label{{/if}}>

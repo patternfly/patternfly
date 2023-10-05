@@ -1,18 +1,1 @@
-{{#> id-wrapper check--id=(concat menu-toggle--id '-check')}}
-  {{#if menu-toggle--check--IsStandalone}}
-    {{#> check check--IsStandalone=true check--IsDisabled=menu-toggle--IsDisabled}}
-      {{> check-input}}
-    {{/check}}
-  {{else}}
-    {{#> check check--type="label" check--IsDisabled=menu-toggle--IsDisabled}}
-      {{> check-input}}
-      {{#> check-label check-label--IsDisabled=menu-toggle--IsDisabled check-label--type="span"}}
-        {{#if menu-toggle--check--text}}
-          {{menu-toggle--check--text}}
-        {{else}}
-          Label
-        {{/if}}
-      {{/check-label}}
-    {{/check}}
-  {{/if}}
-{{/id-wrapper}}
+{{> check check--id=(concat menu-toggle--id '-check') check--IsLabelWrapped=true}}

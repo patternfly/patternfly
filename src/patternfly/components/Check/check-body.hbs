@@ -1,12 +1,9 @@
 <span class="{{pfv}}check__body{{#if check-body--modifier}} {{check-body--modifier}}{{/if}}"
-  {{#ifAny check-body--text check--HasBodyText}}
-    id="{{check--id}}-body"
-  {{/ifAny}}
   {{#if check-body--attribute}}
     {{{check-body--attribute}}}
   {{/if}}>
-  {{#if check-label--text}}
-    {{check-label--text}}
+  {{#if check-body--text}}
+    {{check-body--text}}
   {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}

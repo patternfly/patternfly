@@ -1,18 +1,10 @@
 <input class="{{pfv}}check__input{{#if check-input--modifier}} {{check-input--modifier}}{{/if}}"
   type="checkbox"
-  {{#ifAny check-description--text check--HasDescription check-body--text check--HasBodyText}}
-    aria-describedby="
-    {{#ifAny check-description--text check--HasDescription}}
-      {{check--id}}-description
-    {{/ifAny}}
-    {{#ifAny check-body--text check--HasBodyText}}
-      {{check--id}}-body
-    {{/ifAny}}"
-  {{/ifAny}}
-  {{#if check--id}}
-    id="{{check--id}}-input"
-    name="{{check--id}}-input"
+  {{#if check-description--text}}
+    aria-describedby="{{check--id}}-description"
   {{/if}}
+  id="{{check--id}}-input"
+  name="{{check--id}}-input"
   {{#if check--IsStandalone}}
     aria-label="{{#if check--standalone--label}}{{check--standalone--label}}{{else}}Standalone check{{/if}}"
   {{/if}}

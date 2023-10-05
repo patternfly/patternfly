@@ -1,12 +1,9 @@
 <span class="{{pfv}}radio__body{{#if radio-body--modifier}} {{radio-body--modifier}}{{/if}}"
-  {{#ifAny radio-body--text radio--HasBodyText}}
-    id="{{radio--id}}-body"
-  {{/ifAny}}
   {{#if radio-body--attribute}}
     {{{radio-body--attribute}}}
   {{/if}}>
-  {{#if radio-label--text}}
-    {{radio-label--text}}
+  {{#if radio-body--text}}
+    {{radio-body--text}}
   {{else if @partial-block}}
     {{> @partial-block}}
   {{/if}}

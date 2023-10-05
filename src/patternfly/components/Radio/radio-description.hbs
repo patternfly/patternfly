@@ -1,7 +1,7 @@
 <span class="{{pfv}}radio__description{{#if radio-description--modifier}} {{radio-description--modifier}}{{/if}}"
-  {{#ifAny radio-description--text radio--HasDescriptionText}}
+  {{#if radio-description--text}}
     id="{{radio--id}}-description"
-  {{/ifAny}}
+  {{/if}}
   {{#if radio-description--attribute}}
     {{{radio-description--attribute}}}
   {{/if}}>

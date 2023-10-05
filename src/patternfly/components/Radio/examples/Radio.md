@@ -8,82 +8,59 @@ cssPrefix: pf-v5-c-radio
 ## Examples
 ### Basic
 ```hbs
-{{#> radio}}
-  {{#> radio-input radio-input--attribute='id="radio-simple" name="exampleRadioSimple"'}}{{/radio-input}}
-  {{#> radio-label radio-label--attribute='for="radio-simple"'}}Radio{{/radio-label}}
-{{/radio}}
+{{> radio radio--id="radio-basic" radio-label--text="Basic radio"}}
 ```
 
 ### Checked
 ```hbs
-{{#> radio}}
-  {{#> radio-input radio-input--attribute='id="radio-checked" name="exampleRadioChecked" checked'}}{{/radio-input}}
-  {{#> radio-label radio-label--attribute='for="radio-checked"'}}Radio checked{{/radio-label}}
-{{/radio}}
+{{> radio radio--id="radio-checked" radio-label--text="Radio checked" radio--IsChecked=true}}
 ```
 
 ### Label wrapping input
 ```hbs
-{{#> radio radio--type="label" radio--attribute='for="radio-wrap"'}}
-  {{#> radio-input radio-input--attribute='id="radio-wrap" name="exampleRadioWrap"'}}{{/radio-input}}
-  {{#> radio-label radio-label--type="span"}}Radio label wraps input{{/radio-label}}
-{{/radio}}
+{{> radio radio--id="radio-label-wrapping-input" radio-label--text="Radio label wraps input" radio--IsLabelWrapped=true}}
 ```
 
 ### Reversed
 ```hbs
-{{#> radio}}
-  {{#> radio-label radio-label--attribute='for="radio-rev"'}}Radio reversed{{/radio-label}}
-  {{#> radio-input radio-input--attribute='id="radio-rev" name="exampleRadioReversed"'}}{{/radio-input}}
-{{/radio}}
+{{> radio radio--id="radio-reversed" radio-label--text="Radio reversed" radio--IsReversed=true}}
 ```
 
 ### Disabled
 ```hbs
-{{#> radio}}
-  {{#> radio-input radio-input--attribute='id="radio-disabled" name="exampleRadioDisabled" disabled'}}{{/radio-input}}
-  {{#> radio-label radio-label--modifier="pf-m-disabled" radio-label--attribute='for="radio-disabled"'}}Radio disabled{{/radio-label}}
-{{/radio}}
-
-{{#> radio}}
-  {{#> radio-input radio-input--attribute='id="radio-disabled-checked" name="exampleRadioDisabledChecked" disabled checked'}}{{/radio-input}}
-  {{#> radio-label radio-label--modifier="pf-m-disabled" radio-label--attribute='for="radio-disabled-checked"'}}Radio disabled checked{{/radio-label}}
-{{/radio}}
+{{> radio radio--id="radio-disabled" radio-input--text="Radio disabled" radio--IsDisabled=true}}
+{{> radio radio--id="radio-disabled" radio-input--text="Radio disabled" radio--IsDisabled=true radio--IsChecked=true}}
 ```
 
 ### With description
 ```hbs
-{{#> radio radio--id="radio-with-description" radio--HasDescription=true}}
-  {{> radio-input}}
-  {{> radio-label radio-label--text="Radio with description"}}
-  {{> radio-description radio-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."}}
-{{/radio}}
+{{> radio
+    radio--id="radio-with-description"
+    radio-label--text="Radio with description"
+    radio-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."
+  }}
 ```
 
 ### With body
 ```hbs
-{{#> radio radio--id="radio-with-body" radio--HasBodyText=true}}
-  {{> radio-input}}
-  {{> radio-label radio-label--text="Radio with body"}}
-  {{> radio-body radio-body--text="This is where custom content goes."}}
-{{/radio}}
+{{> radio
+    radio--id="radio-with-body"
+    radio-label--text="Radio with body"
+    radio-body--text="This is where custom content goes."}}
 ```
 
 ### With description and body
 ```hbs
-{{#> radio radio--id="radio-with-description-body" radio--HasDescription=true radio--HasBodyText=true}}
-  {{> radio-input}}
-  {{> radio-label radio-label--text="Radio with description and body"}}
-  {{> radio-description radio-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."}}
-  {{> radio-body radio-body--text="This is where custom content goes."}}
-{{/radio}}
+{{> radio
+    radio--id="radio-with-description-body"
+    radio-label--text="Radio with description and body"
+    radio-body--text="This is where custom content goes."
+  }}
 ```
 
 ### Standalone input
 ```hbs
-{{#> radio radio--modifier="pf-m-standalone"}}
-  {{#> radio-input radio-input--attribute='id="radio-standalone" name="exampleRadioStandalone" aria-label="Standalone input"'}}{{/radio-input}}
-{{/radio}}
+{{> radio radio--id="radio-standalon-input" radio--IsStandalone=true}}
 ```
 
 ## Documentation
@@ -96,7 +73,7 @@ If you extend this component or modify the styles of this component, then make s
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `disabled` | `<input type="radio">` | Indicates that the element is unavailable and removes it from keyboard focus. **Required when input is disabled** |
-| `aria-describedby` | `.pf-v5-c-radio__input` |  When using `.pf-v5-c-radio__description` or `.pf-v5-c-radio__body` make use of this on the input. |
+| `aria-describedby` | `.pf-v5-c-radio__input` |  When using `.pf-v5-c-radio__description` make use of this on the input. |
 
 ### Usage
 | Class | Applied to | Outcome |
