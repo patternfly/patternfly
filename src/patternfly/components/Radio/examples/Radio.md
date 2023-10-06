@@ -8,34 +8,34 @@ cssPrefix: pf-v5-c-radio
 ## Examples
 ### Basic
 ```hbs
-{{> radio radio--id="radio-basic" radio-label--text="Basic radio"}}
+{{> radio radio--id="radio-basic-example" radio-label--text="Basic radio"}}
 ```
 
 ### Checked
 ```hbs
-{{> radio radio--id="radio-checked" radio-label--text="Radio checked" radio--IsChecked=true}}
+{{> radio radio--id="radio-checked-example" radio-label--text="Radio checked" radio--IsChecked=true}}
 ```
 
 ### Label wrapping input
 ```hbs
-{{> radio radio--id="radio-label-wrapping-input" radio-label--text="Radio label wraps input" radio--IsLabelWrapped=true}}
+{{> radio radio--id="radio-label-wrapping-input-example" radio-label--text="Radio label wraps input" radio--IsLabelWrapped=true}}
 ```
 
 ### Reversed
 ```hbs
-{{> radio radio--id="radio-reversed" radio-label--text="Radio reversed" radio--IsReversed=true}}
+{{> radio radio--id="radio-reversed-example" radio-label--text="Radio reversed" radio--IsReversed=true}}
 ```
 
 ### Disabled
 ```hbs
-{{> radio radio--id="radio-disabled" radio-input--text="Radio disabled" radio--IsDisabled=true}}
-{{> radio radio--id="radio-disabled" radio-input--text="Radio disabled" radio--IsDisabled=true radio--IsChecked=true}}
+{{> radio radio--id="radio-disabled-example" radio-input--text="Radio disabled" radio--IsDisabled=true}}
+{{> radio radio--id="radio-disabled-checked-example" radio-input--text="Radio disabled" radio--IsDisabled=true radio--IsChecked=true}}
 ```
 
 ### With description
 ```hbs
 {{> radio
-    radio--id="radio-with-description"
+    radio--id="radio-with-description-exmaple"
     radio-label--text="Radio with description"
     radio-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."
   }}
@@ -44,7 +44,7 @@ cssPrefix: pf-v5-c-radio
 ### With body
 ```hbs
 {{> radio
-    radio--id="radio-with-body"
+    radio--id="radio-with-body-example"
     radio-label--text="Radio with body"
     radio-body--text="This is where custom content goes."}}
 ```
@@ -52,7 +52,7 @@ cssPrefix: pf-v5-c-radio
 ### With description and body
 ```hbs
 {{> radio
-    radio--id="radio-with-description-body"
+    radio--id="radio-with-description-body-example"
     radio-label--text="Radio with description and body"
     radio-body--text="This is where custom content goes."
   }}
@@ -60,7 +60,7 @@ cssPrefix: pf-v5-c-radio
 
 ### Standalone input
 ```hbs
-{{> radio radio--id="radio-standalon-input" radio--IsStandalone=true}}
+{{> radio radio--id="radio-standalon-input-example" radio--IsStandalone=true}}
 ```
 
 ## Documentation

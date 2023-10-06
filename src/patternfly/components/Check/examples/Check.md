@@ -8,39 +8,39 @@ cssPrefix: pf-v5-c-check
 ## Examples
 ### Basic
 ```hbs
-{{> check check--id="basic-example" check-label--text="Check"}}
+{{> check check--id="basic-example-example" check-label--text="Check"}}
 ```
 
 ### Required
 ```hbs
-{{> check check--id="check-required" check-label--text="Check" check--IsRequired=true}}
+{{> check check--id="check-required-example" check-label--text="Check" check--IsRequired=true}}
 ```
 
 ### Checked
 ```hbs
-{{> check check--id="check-checked" check-label--text="Check checked"}}
+{{> check check--id="check-checked-example" check-label--text="Check checked"}}
 ```
 
 ### Label wrapping input
 ```hbs
-{{> check check--id="check-label-wrapping-input" check-label--text="Check label wraps input" check--IsLabelWrapped=true}}
+{{> check check--id="check-label-wrapping-input-example" check-label--text="Check label wraps input" check--IsLabelWrapped=true}}
 ```
 
 ### Reversed
 ```hbs
-{{> check check--id="check-reversed" check-label--text="Check reversed" check--IsReversed=true}}
+{{> check check--id="check-reversed-example" check-label--text="Check reversed" check--IsReversed=true}}
 ```
 
 ### Disabled
 ```hbs
-{{> check check--id="check-disabled" check-label--text="Check disabled" check--IsDisabled=true}}
-{{> check check--id="check-disabled-checked" check-label--text="Check disabled checked" check--IsDisabled=true check-input--IsChecked=true}}
+{{> check check--id="check-disabled-example" check-label--text="Check disabled" check--IsDisabled=true}}
+{{> check check--id="check-disabled-checked-example" check-label--text="Check disabled checked" check--IsDisabled=true check-input--IsChecked=true}}
 ```
 
 ### With description
 ```hbs
 {{> check
-    check--id="check-with-description" 
+    check--id="check-with-example-description-example" 
     check-label--text="Check with description" 
     check-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."
   }}
@@ -48,13 +48,13 @@ cssPrefix: pf-v5-c-check
 
 ### With body
 ```hbs
-{{> check check--id="check-with-body" check-label--text="Check with body" check-body--text="This is where custom content goes."}}
+{{> check check--id="check-with-example-body-example" check-label--text="Check with body" check-body--text="This is where custom content goes."}}
 ```
 
 ### With description and body
 ```hbs
 {{> check
-    check--id="check-with-description-body"
+    check--id="check-with-example-description-body-example"
     check-label--text="Check with description and body"
     check-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."
     check-body--text="This is where custom content goes."
@@ -63,7 +63,7 @@ cssPrefix: pf-v5-c-check
 
 ### Standalone input
 ```hbs
-{{> check check--id="standalone-input" check--IsStandalone=true}}
+{{> check check--id="standalone-input-example" check--IsStandalone=true check--IsLabelWrapped=true}}
 ```
 
 ## Documentation
