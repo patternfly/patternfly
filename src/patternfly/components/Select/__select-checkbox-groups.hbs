@@ -7,27 +7,12 @@
     {{#> select-menu-group-title select-menu-group-title--attribute=(concat 'id="' select--id '-group-status"')}}
       Status
     {{/select-menu-group-title}}
-    {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat 'aria-labelledby="' select--id '-group-status"')}}
-      {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-running"') check--modifier="pf-v5-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-running" name="running"')}}{{/check-input}}
-        {{#> check-label check-label--type="span"}}Running{{/check-label}}
-      {{/check}}
-      {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-stopped"') check--modifier="pf-v5-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-stopped" name="stopped"')}}{{/check-input}}
-        {{#> check-label check-label--type="span"}}Stopped{{/check-label}}
-      {{/check}}
-      {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-down"') check--modifier="pf-v5-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-down" name="down"')}}{{/check-input}}
-        {{#> check-label check-label--type="span"}}Down{{/check-label}}
-      {{/check}}
-      {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-degraded"') check--modifier="pf-v5-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-degraded" name="degraded"')}}{{/check-input}}
-        {{#> check-label check-label--type="span"}}Degraded{{/check-label}}
-      {{/check}}
-      {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-needsMaintenance"') check--modifier="pf-v5-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-needsMaintenance" name="needsMaintenance"')}}{{/check-input}}
-        {{#> check-label check-label--type="span"}}Needs maintenance{{/check-label}}
-      {{/check}}
+    {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat 'aria-labelledby="' select--id '-group-status"') check--modifier="pf-v5-c-select__menu-item" check--IsLabelWrapped=true}}
+      {{> check check--id=(concat select--id '-check-running') check-label--text="Running"}}
+      {{> check check--id=(concat select--id '-check-stopped') check-label--text="Stopped"}}
+      {{> check check--id=(concat select--id '-check-down') check-label--text="Down"}}
+      {{> check check--id=(concat select--id '-check-degraded') check-label--text="Degraded"}}
+      {{> check check--id=(concat select--id '-check-needs-maintenance') check-label--text="Needs maintenance" check-input--IsChecked=true}}
     {{/select-menu-fieldset}}
   {{/select-menu-group}}
   {{#> select-menu-group}}
@@ -35,18 +20,9 @@
       Vendor
     {{/select-menu-group-title}}
     {{#> select-menu-fieldset select-menu-fieldset--attribute=(concat 'aria-labelledby="' select--id '-group-vendor"')}}
-      {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-dell"') check--modifier="pf-v5-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-dell" name="dell"')}}{{/check-input}}
-        {{#> check-label check-label--type="span"}}Dell{{/check-label}}
-      {{/check}}
-      {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-samsung"') check--modifier="pf-v5-c-select__menu-item pf-m-disabled"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-samsung" name="samsung" disabled')}}{{/check-input}}
-        {{#> check-label check-label--type="span" check-label--modifier="pf-m-disabled"}}Samsung{{/check-label}}
-      {{/check}}
-      {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-hp"') check--modifier="pf-v5-c-select__menu-item"}}
-        {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-hp" name="hp"')}}{{/check-input}}
-        {{#> check-label check-label--type="span"}}Hewlett-Packard{{/check-label}}
-      {{/check}}
+      {{> check check--id=(concat select--id '-check-dell') check-label--text="Dell"}}
+      {{> check check--id=(concat select--id '-check-Samsung') check-label--text="Samsung" check--IsDisabled=true}}
+      {{> check check--id=(concat select--id '-check-Hp') check-label--text="Hewlett-Packard"}}
     {{/select-menu-fieldset}}
   {{/select-menu-group}}
 </div>
