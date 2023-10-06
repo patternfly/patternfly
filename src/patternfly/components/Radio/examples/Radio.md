@@ -28,8 +28,8 @@ cssPrefix: pf-v5-c-radio
 
 ### Disabled
 ```hbs
-{{> radio radio--id="radio-disabled-example" radio-input--text="Radio disabled" radio--IsDisabled=true}}
-{{> radio radio--id="radio-disabled-checked-example" radio-input--text="Radio disabled" radio--IsDisabled=true radio--IsChecked=true}}
+{{> radio radio--id="radio-disabled-example" radio-label--text="Radio disabled" radio--IsDisabled=true}}
+{{> radio radio--id="radio-disabled-checked-example" radio-label--text="Radio disabled" radio--IsDisabled=true radio--IsChecked=true}}
 ```
 
 ### With description
@@ -54,6 +54,7 @@ cssPrefix: pf-v5-c-radio
 {{> radio
     radio--id="radio-with-description-body-example"
     radio-label--text="Radio with description and body"
+    radio-description--text="Single-tenant cloud service hosted and managed by Red Hat that offers high-availability enterprise-grade clusters in a virtual private cloud on AWS od GCP."
     radio-body--text="This is where custom content goes."
   }}
 ```
