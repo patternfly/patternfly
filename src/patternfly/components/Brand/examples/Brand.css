@@ -1,17 +1,12 @@
-.pf-theme-toggle--dark,
-:where(.pf-v5-theme-dark) .pf-theme-toggle--light {
+.show-dark,
+:where(.pf-v5-theme-dark) .show-light {
   display: none;
 }
 
-.pf-m-picture.pf-theme-toggle--dark,
-:where(.pf-v5-theme-dark) .pf-m-picture.pf-theme-toggle--light {
-  display: none;
-}
-
-:where(.pf-v5-theme-dark) .pf-theme-toggle--dark {
+:where(.pf-v5-theme-dark) .show-dark {
   display: revert;
 }
 
-:where(.pf-v5-theme-dark) .pf-m-picture.pf-theme-toggle--dark {
+:where(.pf-v5-theme-dark) .show-dark .pf-m-picture {
   display: inline-flex;
 }

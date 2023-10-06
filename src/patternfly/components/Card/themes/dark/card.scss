@@ -3,14 +3,6 @@
 @mixin pf-v5-theme-dark-card() {
   .#{$card},
   .#{$card}.pf-m-non-selectable-raised {
-    img.pf-theme-toggle--dark {
-      display: block;
-    }
-
-    img.pf-theme-toggle--light {
-      display: none;
-    }
-
     --#{$card}--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
 
     // Selectable

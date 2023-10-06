@@ -1,11 +1,5 @@
 {{#if brand--IsPicture}}
-  <picture class="{{pfv}}brand pf-m-picture
-    {{#if brand--modifier}} {{brand--modifier}}{{/if}}
-    {{#if brand--IsDark}} 
-      pf-theme-toggle--dark
-    {{else}}
-      pf-theme-toggle--light
-    {{/if}}"
+  <picture class="{{pfv}}brand pf-m-picture{{#if brand--modifier}} {{brand--modifier}}{{/if}}"
     {{#if brand--attribute}}
       {{{brand--attribute}}}
     {{/if}}>

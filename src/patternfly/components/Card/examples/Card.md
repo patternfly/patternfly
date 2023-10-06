@@ -25,8 +25,7 @@ import './Card.css'
 {{#> card card--id="card-action-example-1"}}
   {{#> card-header}}
     {{#> card-header-main}}
-      <img class="pf-theme-toggle--light" src="/assets/images/pf_logo.svg" width="300px" alt="Logo">
-      <img class="pf-theme-toggle--dark" src="/assets/images/pf_logo_white.svg" width="300px" alt="Logo">
+      {{> pf_logo_white pf_logo_white--attribute='width="300px"'}}
     {{/card-header-main}}
     {{#> card-actions}}
       {{> card--dropdown}}
@@ -104,8 +103,7 @@ import './Card.css'
 {{#> card card--id="card-image-head-example"}}
   {{#> card-header}}
     {{#> card-header-main}}
-      <img class="pf-theme-toggle--light" src="/assets/images/pf_logo.svg" width="300px" alt="Logo">
-      <img class="pf-theme-toggle--dark" src="/assets/images/pf_logo_white.svg" width="300px" alt="Logo">
+      {{> pf_logo_white pf_logo_white--attribute='width="300px"'}}
     {{/card-header-main}}
   {{/card-header}}
   {{> card-title card-title-text--value="Title"}}
