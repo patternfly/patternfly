@@ -1,4 +1,4 @@
-<{{#ifAny check--IsStandalone check--IsLabelWrapped}}label{{else if check--type}}{{check--type}}{{else}}div{{/ifAny}} class="{{pfv}}check
+<{{#if check--IsLabelWrapped}}label{{else if check--type}}{{check--type}}{{else}}div{{/if}} class="{{pfv}}check
   {{#if check--IsStandalone}}
     pf-m-standalone
   {{/if}}
@@ -38,4 +38,4 @@
       {{> check-body}}
     {{/if}}
   {{/attribute-config}}
-</{{#ifAny check--IsStandalone check--IsLabelWrapped}}label{{else if check--type}}{{check--type}}{{else}}div{{/ifAny}}>
+</{{#if check--IsLabelWrapped}}label{{else if check--type}}{{check--type}}{{else}}div{{/if}}>
