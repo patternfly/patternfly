@@ -5,7 +5,9 @@
   {{#if check--modifier}}
     {{check--modifier}}
   {{/if}}"
-  id="{{#if check--id}}{{check--id}}-check{{else}}'check'{{/if}}"
+  {{#if check--id}}
+    id="{{check--id}}"
+  {{/if}}
   {{#if check--IsLabelWrapped}}
     for="{{check--id}}-input"
   {{/if}}

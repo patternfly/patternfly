@@ -3,8 +3,10 @@
   {{#if check-description--text}}
     aria-describedby="{{check--id}}-description"
   {{/if}}
-  id="{{check--id}}-input"
-  name="{{check--id}}-input"
+  {{#if check--id}}
+    id="{{check--id}}-input"
+    name="{{check--id}}-input"
+  {{/if}}
   {{#if check--IsStandalone}}
     aria-label="{{#if check--standalone--label}}{{check--standalone--label}}{{else}}Standalone check{{/if}}"
   {{/if}}
