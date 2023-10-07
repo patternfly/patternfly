@@ -1,5 +1,21 @@
 <input class="{{pfv}}radio__input{{#if radio-input--modifier}} {{radio-input--modifier}}{{/if}}"
   type="radio"
+  {{#if radio-description--text}}
+    aria-describedby="{{radio--id}}-description"
+  {{/if}}
+  {{#if radio--id}}
+    id="{{radio--id}}-input"
+    name="{{radio--id}}-input"
+  {{/if}}
+  {{#if radio--IsStandalone}}
+    aria-label="{{#if radio--standalone--label}}{{radio--standalone--label}}{{else}}Standalone radio{{/if}}"
+  {{/if}}
+  {{#if radio--IsChecked}}
+    checked
+  {{/if}}
+  {{#if radio-input--IsDisabled}}
+    disabled
+  {{/if}}
   {{#if radio-input--attribute}}
     {{{radio-input--attribute}}}
   {{/if}}>

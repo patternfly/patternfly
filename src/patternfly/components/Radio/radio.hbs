@@ -1,6 +1,41 @@
-<{{#if radio--type}}{{radio--type}}{{else}}div{{/if}} class="{{pfv}}radio{{#if radio--modifier}} {{radio--modifier}}{{/if}}"
+<{{#ifAny radio--IsStandalone radio--IsLabelWrapped}}label{{else if radio--type}}{{radio--type}}{{else}}div{{/ifAny}} class="{{pfv}}radio
+  {{#if radio--IsStandalone}}
+    pf-m-standalone
+  {{/if}}
+  {{#if radio--modifier}}
+    {{radio--modifier}}
+  {{/if}}"
+  {{#if radio--id}}
+    id="{{radio--id}}"
+  {{/if}}
+  {{#if radio--IsLabelWrapped}}
+    for="{{radio--id}}-input"
+  {{/if}}
   {{#if radio--attribute}}
     {{{radio--attribute}}}
   {{/if}}>
-  {{>@partial-block}}
-</{{#if radio--type}}{{radio--type}}{{else}}div{{/if}}>
+  {{#> attribute-config
+      radio-input--IsDisabled=radio--IsDisabled
+      radio-label--IsDisabled=radio--IsDisabled
+    }}
+    {{#if radio-label--text}}
+      {{#if radio--IsReversed}}
+        {{> radio-label}}
+      {{/if}}
+        {{> radio-input}}
+      {{#unless radio--IsReversed}}
+        {{> radio-label}}
+      {{/unless}}
+    {{else if radio--IsStandalone}}
+      {{> radio-input}}
+    {{else if @partial-block}}
+      {{> @partial-block}}
+    {{/if}}
+    {{#if radio-description--text}}
+      {{> radio-description}}
+    {{/if}}
+    {{#if radio-body--text}}
+      {{> radio-body}}
+    {{/if}}
+  {{/attribute-config}}
+</{{#ifAny radio--IsStandalone radio--IsLabelWrapped}}label{{else if radio--type}}{{radio--type}}{{else}}div{{/ifAny}}>

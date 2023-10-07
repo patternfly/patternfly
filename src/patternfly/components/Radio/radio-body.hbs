@@ -2,5 +2,9 @@
   {{#if radio-body--attribute}}
     {{{radio-body--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if radio-body--text}}
+    {{radio-body--text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </span>

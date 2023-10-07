@@ -2,5 +2,9 @@
   {{#if check-body--attribute}}
     {{{check-body--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
+  {{#if check-body--text}}
+    {{check-body--text}}
+  {{else if @partial-block}}
+    {{> @partial-block}}
+  {{/if}}
 </span>

@@ -1,5 +1,15 @@
 <input class="{{pfv}}check__input{{#if check-input--modifier}} {{check-input--modifier}}{{/if}}"
   type="checkbox"
+  {{#if check-description--text}}
+    aria-describedby="{{check--id}}-description"
+  {{/if}}
+  {{#if check--id}}
+    id="{{check--id}}-input"
+    name="{{check--id}}-input"
+  {{/if}}
+  {{#if check--IsStandalone}}
+    aria-label="{{#if check--standalone--label}}{{check--standalone--label}}{{else}}Standalone check{{/if}}"
+  {{/if}}
   {{#if check-input--IsChecked}}
     checked
   {{/if}}
