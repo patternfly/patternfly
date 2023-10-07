@@ -6,7 +6,6 @@ cssPrefix: pf-v5-c-check
 ---
 
 ## Examples
-
 ### Basic
 ```hbs
 {{> check check--id="basic-example-example" check-label--text="Check"}}

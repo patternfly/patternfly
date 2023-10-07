@@ -6,11 +6,6 @@ cssPrefix: pf-v5-c-radio
 ---
 
 ## Examples
-### Wrapping label
-```hbs
-{{> radio radio--name='simple-radio' radio--text='Radio with a very long title where text wraps, lets see what it does. Radio with a very long title where text wraps, lets see what it does'}}
-```
-
 ### Basic
 ```hbs
 {{> radio radio--id="radio-basic-example" radio-label--text="Basic radio"}}
