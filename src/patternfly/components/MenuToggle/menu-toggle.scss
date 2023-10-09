@@ -1,52 +1,52 @@
 // @debug $menu-toggle; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 .#{$menu-toggle} {
-  --#{$menu-toggle}--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$menu-toggle}--PaddingTop: var(--pf-t--global--spacer--sm); // TODO semantic spacer for form elements?
-  --#{$menu-toggle}--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--PaddingBottom: var(--pf-t--global--spacer--sm); // TODO semantic spacer?
-  --#{$menu-toggle}--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--FontSize: var(--pf-t--global--font--size--body--md);
-  --#{$menu-toggle}--Color: var(--pf-t--global--text--color--regular);
-  --#{$menu-toggle}--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$menu-toggle}--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$menu-toggle}--BorderWidth: var(--pf-t--global--border--width--control--default);
-  --#{$menu-toggle}--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$menu-toggle}--hover--BorderWidth: var(--pf-t--global--border--width--control--hover);
-  --#{$menu-toggle}--hover--BorderColor: var(--pf-t--global--border--color--hover);
-  --#{$menu-toggle}--active--BorderWidth: var(--pf-t--global--border--width--control--active);
-  --#{$menu-toggle}--active--BorderColor: var(--pf-t--global--border--color--active);
+  --#{$menu-toggle}--BorderRadius: var(--#{$token}global--border--radius--small);
+  --#{$menu-toggle}--PaddingTop: var(--#{$token}global--spacer--sm); // TODO semantic spacer for form elements?
+  --#{$menu-toggle}--PaddingRight: var(--#{$token}global--spacer--sm);
+  --#{$menu-toggle}--PaddingBottom: var(--#{$token}global--spacer--sm); // TODO semantic spacer?
+  --#{$menu-toggle}--PaddingLeft: var(--#{$token}global--spacer--sm);
+  --#{$menu-toggle}--FontSize: var(--#{$token}global--font--size--body--md);
+  --#{$menu-toggle}--Color: var(--#{$token}global--text--color--regular);
+  --#{$menu-toggle}--LineHeight: var(--#{$token}global--font--line-height--body);
+  --#{$menu-toggle}--BackgroundColor: var(--#{$token}global--background--color--control--default);
+  --#{$menu-toggle}--BorderWidth: var(--#{$token}global--border--width--control--default);
+  --#{$menu-toggle}--BorderColor: var(--#{$token}global--border--color--default);
+  --#{$menu-toggle}--hover--BorderWidth: var(--#{$token}global--border--width--control--hover);
+  --#{$menu-toggle}--hover--BorderColor: var(--#{$token}global--border--color--hover);
+  --#{$menu-toggle}--active--BorderWidth: var(--#{$token}global--border--width--control--active);
+  --#{$menu-toggle}--active--BorderColor: var(--#{$token}global--border--color--active);
 
   // Border base
-  --#{$menu-toggle}--before--BorderTopWidth: var(--pf-t--global--border--width--control--default);
-  --#{$menu-toggle}--before--BorderRightWidth: var(--pf-t--global--border--width--control--default);
-  --#{$menu-toggle}--before--BorderBottomWidth: var(--pf-t--global--border--width--control--default);
-  --#{$menu-toggle}--before--BorderLeftWidth: var(--pf-t--global--border--width--control--default);
-  --#{$menu-toggle}--before--BorderTopColor: var(--pf-t--global--border--color--default);
-  --#{$menu-toggle}--before--BorderRightColor: var(--pf-t--global--border--color--default);
-  --#{$menu-toggle}--before--BorderBottomColor: var(--pf-t--global--border--color--default);
-  --#{$menu-toggle}--before--BorderLeftColor: var(--pf-t--global--border--color--default);
+  --#{$menu-toggle}--before--BorderTopWidth: var(--#{$token}global--border--width--control--default);
+  --#{$menu-toggle}--before--BorderRightWidth: var(--#{$token}global--border--width--control--default);
+  --#{$menu-toggle}--before--BorderBottomWidth: var(--#{$token}global--border--width--control--default);
+  --#{$menu-toggle}--before--BorderLeftWidth: var(--#{$token}global--border--width--control--default);
+  --#{$menu-toggle}--before--BorderTopColor: var(--#{$token}global--border--color--default);
+  --#{$menu-toggle}--before--BorderRightColor: var(--#{$token}global--border--color--default);
+  --#{$menu-toggle}--before--BorderBottomColor: var(--#{$token}global--border--color--default);
+  --#{$menu-toggle}--before--BorderLeftColor: var(--#{$token}global--border--color--default);
 
   // Hover
   --#{$menu-toggle}--hover--BackgroundColor: transparent;
-  --#{$menu-toggle}--hover--after--BorderBottomWidth: var(--pf-t--global--border--width--control--hover);
-  --#{$menu-toggle}--hover--after--BorderBottomColor: var(--pf-t--global--border--color--hover);
+  --#{$menu-toggle}--hover--after--BorderBottomWidth: var(--#{$token}global--border--width--control--hover);
+  --#{$menu-toggle}--hover--after--BorderBottomColor: var(--#{$token}global--border--color--hover);
 
   // Focus
   --#{$menu-toggle}--focus--BackgroundColor: transparent;
-  --#{$menu-toggle}--focus--after--BorderBottomWidth: var(--pf-t--global--border--width--control--active);
-  --#{$menu-toggle}--focus--after--BorderBottomColor: var(--pf-t--global--border--color--active);
+  --#{$menu-toggle}--focus--after--BorderBottomWidth: var(--#{$token}global--border--width--control--active);
+  --#{$menu-toggle}--focus--after--BorderBottomColor: var(--#{$token}global--border--color--active);
 
   // Active
   --#{$menu-toggle}--active--BackgroundColor: transparent;
-  --#{$menu-toggle}--active--after--BorderBottomWidth: var(--pf-t--global--border--width--control--active);
-  --#{$menu-toggle}--active--after--BorderBottomColor: var(--pf-t--global--border--color--active);
+  --#{$menu-toggle}--active--after--BorderBottomWidth: var(--#{$token}global--border--width--control--active);
+  --#{$menu-toggle}--active--after--BorderBottomColor: var(--#{$token}global--border--color--active);
 
   // Expanded
   --#{$menu-toggle}--m-expanded--Color: var(--#{$pf-global}--Color--100);
   --#{$menu-toggle}--m-expanded--BackgroundColor: transparent;
-  --#{$menu-toggle}--m-expanded--after--BorderBottomWidth: var(--pf-t--global--border--width--control--active);
-  --#{$menu-toggle}--m-expanded--after--BorderBottomColor: var(--pf-t--global--border--color--active);
+  --#{$menu-toggle}--m-expanded--after--BorderBottomWidth: var(--#{$token}global--border--width--control--active);
+  --#{$menu-toggle}--m-expanded--after--BorderBottomColor: var(--#{$token}global--border--color--active);
 
   // Disabled
   --#{$menu-toggle}--disabled--Color: var(--#{$pf-global}--disabled-color--100);
@@ -89,19 +89,19 @@
   --#{$menu-toggle}--m-plain--m-expanded--Color: var(--#{$pf-global}--Color--100);
 
   // Icon
-  --#{$menu-toggle}__icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}__icon--MarginRight: var(--#{$token}global--spacer--sm);
 
   // Count
-  --#{$menu-toggle}__count--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}__count--MarginLeft: var(--#{$token}global--spacer--sm);
 
   // Controls -- update element/vars to "control" in breaking change
-  --#{$menu-toggle}__controls--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}__controls--PaddingLeft: var(--#{$token}global--spacer--sm);
   --#{$menu-toggle}__controls--MarginLeft: auto;
   --#{$menu-toggle}__controls--MarginRight: 0;
 
   // Toggle icon
-  --#{$menu-toggle}__toggle-icon--MarginRight: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--m-plain__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$menu-toggle}__toggle-icon--MarginRight: var(--#{$token}global--spacer--sm);
+  --#{$menu-toggle}--m-plain__toggle-icon--Color: var(--#{$token}global--icon--color--regular);
   --#{$menu-toggle}--m-plain--hover__toggle-icon--Color: var(--#{$pf-global}--Color--100);
   --#{$menu-toggle}--m-plain--active__toggle-icon--Color: var(--#{$pf-global}--Color--100);
   --#{$menu-toggle}--m-plain--focus__toggle-icon--Color: var(--#{$pf-global}--Color--100);
@@ -123,7 +123,7 @@
   --#{$menu-toggle}--m-split-button--child--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
   --#{$menu-toggle}--m-split-button--child--disabled--Color: var(--#{$pf-global}--disabled-color--100);
   --#{$menu-toggle}--m-split-button--child--disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
-  --#{$menu-toggle}--m-split-button--first-child--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--m-split-button--first-child--PaddingRight: var(--#{$token}global--spacer--sm);
   --#{$menu-toggle}--m-split-button--last-child--PaddingLeft: 0;
 
   // Split button, action
@@ -154,15 +154,15 @@
   // Split button, controls, check
   --#{$menu-toggle}__button--BackgroundColor: transparent;
   --#{$menu-toggle}__button--AlignSelf: baseline;
-  --#{$menu-toggle}__button--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}__button--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}__button__controls--MarginRight: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}__button__controls--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}__button--PaddingLeft: var(--#{$token}global--spacer--sm);
+  --#{$menu-toggle}__button--PaddingRight: var(--#{$token}global--spacer--sm);
+  --#{$menu-toggle}__button__controls--MarginRight: var(--#{$token}global--spacer--sm);
+  --#{$menu-toggle}__button__controls--MarginLeft: var(--#{$token}global--spacer--sm);
 
   // Typeahead
-  --#{$menu-toggle}--m-typeahead__controls--MarginRight: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--m-typeahead__controls--MarginLeft: var(--pf-t--global--spacer--sm);
-  --#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$menu-toggle}--m-typeahead__controls--MarginRight: var(--#{$token}global--spacer--sm);
+  --#{$menu-toggle}--m-typeahead__controls--MarginLeft: var(--#{$token}global--spacer--sm);
+  --#{$menu-toggle}--m-typeahead--c-text-input-group__utilities--c-button--PaddingRight: var(--#{$token}global--spacer--sm);
   --#{$menu-toggle}--m-typeahead__button--AlignSelf: center;
 
   position: relative;

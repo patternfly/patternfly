@@ -39,7 +39,7 @@
         "stylelint-commands"
       ]
     }],
-    "custom-property-pattern": "^pf-(v5|t-)-(color|global|[lcud])-.+$",
+    "custom-property-pattern": "^pf-(v5|t-v1-)-(color|global|[lcud])-.+$",
     "declaration-block-no-redundant-longhand-properties": null,
     "declaration-no-important": true,
     "font-weight-notation": "numeric",

@@ -5,19 +5,19 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 // stylelint-enable
 
 :root {
-  --#{$page}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$page}--inset: var(--pf-t--global--spacer--md);
-  --#{$page}--xl--inset: var(--pf-t--global--spacer--xl);
+  --#{$page}--BackgroundColor: var(--#{$token}global--background--color--secondary--default);
+  --#{$page}--inset: var(--#{$token}global--spacer--md);
+  --#{$page}--xl--inset: var(--#{$token}global--spacer--xl);
 
   // Header
-  --#{$page}__header--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$page}__header--BackgroundColor: var(--#{$token}global--background--color--secondary--default);
   --#{$page}__header--ZIndex: var(--#{$pf-global}--ZIndex--md);
   --#{$page}__header--MinHeight: #{pf-size-prem(76px)}; // fixed height for header to ensure consistency across screen sizes.
 
   // Header brand
-  --#{$page}__header-brand--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$page}__header-brand--xl--PaddingRight: var(--pf-t--global--spacer--xl);
-  --#{$page}__header-brand--xl--PaddingLeft: var(--pf-t--global--spacer--xl);
+  --#{$page}__header-brand--PaddingLeft: var(--#{$token}global--spacer--md);
+  --#{$page}__header-brand--xl--PaddingRight: var(--#{$token}global--spacer--xl);
+  --#{$page}__header-brand--xl--PaddingLeft: var(--#{$token}global--spacer--xl);
 
   @media (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$page}__header-brand--PaddingLeft: var(--#{$page}__header-brand--xl--PaddingLeft);
@@ -25,22 +25,22 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Toggle
-  --#{$page}__header-sidebar-toggle__c-button--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$page}__header-sidebar-toggle__c-button--MarginRight: var(--pf-t--global--spacer--md);
+  --#{$page}__header-sidebar-toggle__c-button--PaddingTop: var(--#{$token}global--spacer--sm);
+  --#{$page}__header-sidebar-toggle__c-button--PaddingRight: var(--#{$token}global--spacer--sm);
+  --#{$page}__header-sidebar-toggle__c-button--PaddingBottom: var(--#{$token}global--spacer--sm);
+  --#{$page}__header-sidebar-toggle__c-button--PaddingLeft: var(--#{$token}global--spacer--sm);
+  --#{$page}__header-sidebar-toggle__c-button--MarginRight: var(--#{$token}global--spacer--md);
   --#{$page}__header-sidebar-toggle__c-button--MarginLeft: calc(var(--#{$page}__header-sidebar-toggle__c-button--PaddingLeft) * -1);
-  --#{$page}__header-sidebar-toggle__c-button--FontSize: var(--pf-t--global--icon--size--lg);
+  --#{$page}__header-sidebar-toggle__c-button--FontSize: var(--#{$token}global--icon--size--lg);
 
   // Header brand link
   --#{$page}__header-brand-link--c-brand--MaxHeight: #{pf-size-prem(60px)};
 
   // Header nav
-  --#{$page}__header-nav--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$page}__header-nav--BackgroundColor: var(--#{$token}global--background--color--secondary--default);
   --#{$page}__header-nav--xl--BackgroundColor: transparent;
-  --#{$page}__header-nav--xl--PaddingRight: var(--pf-t--global--spacer--xl);
-  --#{$page}__header-nav--xl--PaddingLeft: var(--pf-t--global--spacer--xl);
+  --#{$page}__header-nav--xl--PaddingRight: var(--#{$token}global--spacer--xl);
+  --#{$page}__header-nav--xl--PaddingLeft: var(--#{$token}global--spacer--xl);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$page}__header-nav--BackgroundColor: var(--#{$page}__header-nav--xl--BackgroundColor);
@@ -49,10 +49,10 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   }
 
   // Header tools
-  --#{$page}__header-tools--MarginRight: var(--pf-t--global--spacer--md);
-  --#{$page}__header-tools--xl--MarginRight: var(--pf-t--global--spacer--lg);
-  --#{$page}__header-tools--c-avatar--MarginLeft: var(--pf-t--global--spacer--md);
-  --#{$page}__header-tools-group--MarginLeft: var(--pf-t--global--spacer--xl);
+  --#{$page}__header-tools--MarginRight: var(--#{$token}global--spacer--md);
+  --#{$page}__header-tools--xl--MarginRight: var(--#{$token}global--spacer--lg);
+  --#{$page}__header-tools--c-avatar--MarginLeft: var(--#{$token}global--spacer--md);
+  --#{$page}__header-tools-group--MarginLeft: var(--#{$token}global--spacer--xl);
   --#{$page}__header-tools-group--Display: flex;
   --#{$page}__header-tools-item--Display: block;
 
@@ -77,7 +77,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   // Sidebar
   --#{$page}__sidebar--ZIndex: var(--#{$pf-global}--ZIndex--sm);
   --#{$page}__sidebar--Width: #{pf-size-prem(290px)};
-  --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$page}__sidebar--BackgroundColor: var(--#{$token}global--background--color--secondary--default);
   --#{$page}__sidebar--m-light--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
   --#{$page}__sidebar--m-light--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$page}__sidebar--m-light--BorderRightColor: var(--#{$pf-global}--BorderColor--100);
@@ -89,14 +89,14 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--xl--TranslateX: 0;
 
   // Sidebar header
-  --#{$page}__sidebar-header--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$page}__sidebar-header--BorderBottomColor: var(--pf-t--global--border--color--default);
-  --#{$page}__sidebar-header--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$page}__sidebar-header--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$page}__sidebar-title--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$page}__sidebar-title--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$page}__sidebar-title--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$page}__sidebar-title--FontWeight: var(--pf-t--global--font--weight--heading--bold);
+  --#{$page}__sidebar-header--BorderBottomWidth: var(--#{$token}global--border--width--divider--default);
+  --#{$page}__sidebar-header--BorderBottomColor: var(--#{$token}global--border--color--default);
+  --#{$page}__sidebar-header--PaddingTop: var(--#{$token}global--spacer--sm);
+  --#{$page}__sidebar-header--PaddingBottom: var(--#{$token}global--spacer--md);
+  --#{$page}__sidebar-title--FontSize: var(--#{$token}global--font--size--heading--xs);
+  --#{$page}__sidebar-title--LineHeight: var(--#{$token}global--font--line-height--heading);
+  --#{$page}__sidebar-title--FontFamily: var(--#{$token}global--font--family--heading);
+  --#{$page}__sidebar-title--FontWeight: var(--#{$token}global--font--weight--heading--bold);
   
   // Sidebar body
   --#{$page}__sidebar-body--PaddingRight: 0;
@@ -115,19 +115,19 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main--ZIndex: var(--#{$pf-global}--ZIndex--xs);
 
   // Main section
-  --#{$page}__main-section--MarginTop: var(--pf-t--global--spacer--md);
-  --#{$page}__main-section--PaddingTop: var(--pf-t--global--spacer--lg);
-  --#{$page}__main-section--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$page}__main-section--MarginTop: var(--#{$token}global--spacer--md);
+  --#{$page}__main-section--PaddingTop: var(--#{$token}global--spacer--lg);
+  --#{$page}__main-section--PaddingRight: var(--#{$token}global--spacer--lg);
   --#{$page}__main-section--PaddingBottom: 0;
-  --#{$page}__main-section--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$page}__main-breadcrumb--main-section--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$page}__main-section--PaddingLeft: var(--#{$token}global--spacer--lg);
+  --#{$page}__main-breadcrumb--main-section--PaddingTop: var(--#{$token}global--spacer--md);
   --#{$page}__main-section--BackgroundColor: transparent;
   --#{$page}__main-section--m-light--BackgroundColor: transparent;
   --#{$page}__main-section--m-light-100--BackgroundColor: transparent;
   --#{$page}__main-section--m-dark-100--BackgroundColor: transparent;
   --#{$page}__main-section--m-dark-200--BackgroundColor: transparent;
-  --#{$page}__main-breadcrumb--page__main-tabs--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$page}__main-nav--page__main-tabs--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$page}__main-breadcrumb--page__main-tabs--PaddingTop: var(--#{$token}global--spacer--md);
+  --#{$page}__main-nav--page__main-tabs--PaddingTop: var(--#{$token}global--spacer--md);
 
   // Limit width
   --#{$page}--section--m-limit-width--MaxWidth: calc(#{pf-size-prem(2000px)} - var(--#{$page}__sidebar--Width));
@@ -164,10 +164,10 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 
   // Main section breadcrumb
-  --#{$page}__main-breadcrumb--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$page}__main-breadcrumb--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$page}__main-breadcrumb--PaddingTop: var(--#{$token}global--spacer--md);
+  --#{$page}__main-breadcrumb--PaddingRight: var(--#{$token}global--spacer--md);
   --#{$page}__main-breadcrumb--PaddingBottom: 0;
-  --#{$page}__main-breadcrumb--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$page}__main-breadcrumb--PaddingLeft: var(--#{$token}global--spacer--lg);
 
   // Main section tabs
   --#{$page}__main-tabs--PaddingTop: 0;
@@ -383,8 +383,8 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   grid-column-start: 1;
   width: var(--#{$page}__sidebar--Width);
   padding-top: 0;
-  padding-bottom: var(--pf-t--global--spacer--lg);
-  padding-left: var(--pf-t--global--spacer--lg);
+  padding-bottom: var(--#{$token}global--spacer--lg);
+  padding-left: var(--#{$token}global--spacer--lg);
   margin-right: var(--#{$page}__sidebar--MarginRight); // TODO need variable
   overflow-x: hidden;
   overflow-y: auto;
@@ -558,15 +558,15 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 // Main & Drawer
 .#{$page}__main {
   margin-top: 0;
-  margin-right: var(--pf-t--global--spacer--lg);
-  margin-left: var(--pf-t--global--spacer--lg);
+  margin-right: var(--#{$token}global--spacer--lg);
+  margin-left: var(--#{$token}global--spacer--lg);
 }
 
 .#{$page}__main-list {
-  padding-bottom: var(--pf-t--global--spacer--lg);
-  margin-bottom: var(--pf-t--global--spacer--lg);
-  background-color: var(--pf-t--global--background--color--primary--default);
-  border-radius: var(--pf-t--global--border--radius--large);
+  padding-bottom: var(--#{$token}global--spacer--lg);
+  margin-bottom: var(--#{$token}global--spacer--lg);
+  background-color: var(--#{$token}global--background--color--primary--default);
+  border-radius: var(--#{$token}global--border--radius--large);
 }
 
 .#{$page}__main,

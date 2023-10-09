@@ -45,10 +45,10 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 .#{$masthead} {
   --#{$masthead}--PaddingLeft: var(--#{$masthead}--inset);
   --#{$masthead}--PaddingRight: var(--#{$masthead}--inset);
-  --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$masthead}--BackgroundColor: var(--#{$token}global--background--color--secondary--default);
 
   // Insets
-  --#{$masthead}--inset: var(--pf-t--global--spacer--lg); // match page insets
+  --#{$masthead}--inset: var(--#{$token}global--spacer--lg); // match page insets
   --#{$masthead}--xl--inset: var(--#{$pf-global}--spacer--lg); // match page insets
 
   // Stack
@@ -94,7 +94,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   // Main border
   --#{$masthead}__main--before--Right: calc(var(--#{$masthead}--inset) * -1);
   --#{$masthead}__main--before--Left: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}__main--before--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$masthead}__main--before--BorderBottomWidth: var(--#{$token}global--border--width--divider--default);
   --#{$masthead}__main--before--BorderBottomColor: var(--#{$pf-global}--palette--black-600);
 
   // Toggle
@@ -103,18 +103,18 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__toggle--c-button--FontSize: var(--#{$pf-global}--FontSize--2xl);
 
   // Light 100
-  --#{$masthead}--m-light--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$masthead}--m-light--BackgroundColor: var(--#{$token}global--background--color--primary--default);
   --#{$masthead}--m-light__main--BorderBottomColor: var(--#{$pf-global}--BorderColor--300);
 
   // Light 200
-  --#{$masthead}--m-light-200--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$masthead}--m-light-200__main--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$masthead}--m-light-200--BackgroundColor: var(--#{$token}global--background--color--secondary--default);
+  --#{$masthead}--m-light-200__main--BorderBottomColor: var(--#{$token}global--border--color--default);
 
   // Toolbar item
   --#{$masthead}--c-toolbar__item--Display: flex;
 
   // Borders
-  --#{$masthead}--item-border-color--base: var(--pf-t--global--border--color--default);
+  --#{$masthead}--item-border-color--base: var(--#{$token}global--border--color--default);
 
   // Context selector
   --#{$masthead}--c-context-selector--Width: auto;
@@ -145,7 +145,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--c-toolbar__expandable-content--PaddingRight: var(--#{$masthead}--inset);
   --#{$masthead}--c-toolbar__expandable-content--PaddingBottom: var(--#{$pf-global}--spacer--md);
   --#{$masthead}--c-toolbar__expandable-content--PaddingLeft: var(--#{$masthead}--inset);
-  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth: var(--#{$token}global--border--width--divider--default);
   --#{$masthead}--c-toolbar__expandable-content--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
 
   // Set layout to stack by default
@@ -288,7 +288,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
 .#{$masthead}__logo {
   display: flex;
-  gap: var(--pf-t--global--spacer--md);
+  gap: var(--#{$token}global--spacer--md);
 }
 
 // Content

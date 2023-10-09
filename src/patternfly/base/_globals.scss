@@ -49,10 +49,10 @@
 
   // TODO
   :where(body) {
-    font-family: var(--pf-t--global--font--family--body);
-    font-size: var(--pf-t--global--font--size--body);
-    font-weight: var(--pf-t--global--font--weight--body);
-    line-height: var(--pf-t--global--font--line-height--body);
+    font-family: var(--#{$token}global--font--family--body);
+    font-size: var(--#{$token}global--font--size--body);
+    font-weight: var(--#{$token}global--font--weight--body);
+    line-height: var(--#{$token}global--font--line-height--body);
   }
 
   :where(
@@ -64,7 +64,7 @@
     h6
    ) {
     font-size: 100%;
-    font-weight: var(--pf-t--global--font--weight--body);
+    font-weight: var(--#{$token}global--font--weight--body);
   }
 
   :where(ul) {
@@ -81,8 +81,8 @@
     margin: 0;
     font-family: inherit;
     font-size: 100%;
-    line-height: var(--pf-t--global--font--line-height--body);
-    color: var(--pf-t--global--text--color--regular);
+    line-height: var(--#{$token}global--font--line-height--body);
+    color: var(--#{$token}global--text--color--regular);
   }
 
   :where(
@@ -118,17 +118,17 @@
     code,
     pre
   ) {
-    font-family: var(--pf-t--global--font--family--mono);
+    font-family: var(--#{$token}global--font--family--mono);
   }
 
   :where(a) {
-    color: var(--pf-t--global--text--color--link--default);
-    text-decoration: var(--pf-t--global--link--text-decoration);
+    color: var(--#{$token}global--text--color--link--default);
+    text-decoration: var(--#{$token}global--link--text-decoration);
   }
 
   :where(a:hover) {
-    --#{$pf-global}--link--Color: var(--pf-t--global--text--color--link--hover);
-    --#{$pf-global}--link--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
+    --#{$pf-global}--link--Color: var(--#{$token}global--text--color--link--hover);
+    --#{$pf-global}--link--TextDecoration: var(--#{$token}global--link--text-decoration--hover);
   }
 
   :where(

@@ -1,15 +1,21 @@
 // stylelint-disable scss/dollar-variable-pattern
 $version-root: 5 !default;
+$version-token: 1 !default;
 
 // Patternfly options
 $pf-global--namespace: 'pf-' !default;
 $pf-global--version: 'v#{$version-root}-' !default;
+$pf-token-version: 'v#{$version-token}--' !default;
 
 // Namespace prefix and version
 $pf-prefix: #{$pf-global--namespace} + #{$pf-global--version} !default;
 
 // Global variable, namespace prefix and version
 $pf-global: #{$pf-prefix} + 'global' !default;
+
+// Token prefix and version
+$token: #{$pf-global--namespace} + 't-' + #{$pf-token-version} !default;
+
 // stylelint-enable
 
 // Thematic variables
