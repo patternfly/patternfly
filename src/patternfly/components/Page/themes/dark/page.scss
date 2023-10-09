@@ -27,7 +27,7 @@
   }
 
   .#{$page}__sidebar {
-    border-right: var(--#{$pf-global}--BorderWidth--sm) solid var(--#{$pf-global}--BorderColor--100);
+    border-inline-end: var(--#{$pf-global}--BorderWidth--sm) solid var(--#{$pf-global}--BorderColor--100);
   }
 
   .#{$page}__main-nav {

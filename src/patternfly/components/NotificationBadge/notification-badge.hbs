@@ -14,6 +14,9 @@
     {{#if notification-badge--attribute}}
       {{{notification-badge--attribute}}}
     {{/if}}>
+    {{!-- TODO in Breaking Change: Add a wrapper element around the icon to follow
+          how other components' markup is structured for icons
+     --}}
     <i class="
       {{~#if notification-badge--IsTask}}
         pf-v5-pficon-task

@@ -39,10 +39,10 @@
   row-gap: var(--#{$chip}-group--RowGap);
   column-gap: var(--#{$chip}-group--ColumnGap);
   max-width: 100%;
-  padding-top: var(--#{$chip}-group--PaddingTop);
-  padding-right: var(--#{$chip}-group--PaddingRight);
-  padding-bottom: var(--#{$chip}-group--PaddingBottom);
-  padding-left: var(--#{$chip}-group--PaddingLeft);
+  padding-block-start: var(--#{$chip}-group--PaddingTop);
+  padding-block-end: var(--#{$chip}-group--PaddingBottom);
+  padding-inline-start: var(--#{$chip}-group--PaddingLeft);
+  padding-inline-end: var(--#{$chip}-group--PaddingRight);
 
   &.pf-m-category {
     --#{$chip}-group--PaddingTop: var(--#{$chip}-group--m-category--PaddingTop);
@@ -93,6 +93,6 @@
 .#{$chip}-group__close {
   display: flex;
   align-self: flex-start;
-  margin-top: var(--#{$chip}-group__close--MarginTop);
-  margin-bottom: var(--#{$chip}-group__close--MarginBottom);
+  margin-block-start: var(--#{$chip}-group__close--MarginTop);
+  margin-block-end: var(--#{$chip}-group__close--MarginBottom);
 }

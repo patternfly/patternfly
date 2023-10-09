@@ -95,13 +95,13 @@
   }
 
   > :first-child:not(.#{$text-input-group}__text) {
-    margin-left: var(--#{$text-input-group}__main--first-child--not--text-input--MarginLeft);
+    margin-inline-start: var(--#{$text-input-group}__main--first-child--not--text-input--MarginLeft);
   }
 
   .#{$chip-group}__main {
-    padding-top: var(--#{$text-input-group}--c-chip-group__main--PaddingTop);
-    padding-right: var(--#{$text-input-group}--c-chip-group__main--PaddingRight);
-    padding-bottom: var(--#{$text-input-group}--c-chip-group__main--PaddingBottom);
+    padding-block-start: var(--#{$text-input-group}--c-chip-group__main--PaddingTop);
+    padding-block-end: var(--#{$text-input-group}--c-chip-group__main--PaddingBottom);
+    padding-inline-end: var(--#{$text-input-group}--c-chip-group__main--PaddingRight);
   }
 }
 
@@ -114,10 +114,7 @@
   &::before,
   &::after {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     pointer-events: none;
     content: "";
   }
@@ -127,7 +124,7 @@
   }
 
   &::after {
-    border-bottom: var(--#{$text-input-group}__text--after--BorderBottomWidth) solid var(--#{$text-input-group}__text--after--BorderBottomColor);
+    border-block-end: var(--#{$text-input-group}__text--after--BorderBottomWidth) solid var(--#{$text-input-group}__text--after--BorderBottomColor);
   }
 
   &:focus-within {
@@ -138,8 +135,8 @@
 
 .#{$text-input-group}__icon {
   position: absolute;
-  top: 50%;
-  left: var(--#{$text-input-group}__icon--Left);
+ inset-block-start: 50%;
+ inset-inline-start: var(--#{$text-input-group}__icon--Left);
   color: var(--#{$text-input-group}__icon--Color);
   transform: translateY(var(--#{$text-input-group}__icon--TranslateY));
 }
@@ -150,7 +147,10 @@
   position: relative;
   width: 100%;
   min-width: var(--#{$text-input-group}__text-input--MinWidth);
-  padding: var(--#{$text-input-group}__text-input--PaddingTop) var(--#{$text-input-group}__text-input--PaddingRight) var(--#{$text-input-group}__text-input--PaddingBottom) var(--#{$text-input-group}__text-input--PaddingLeft);
+  padding-block-start: var(--#{$text-input-group}__text-input--PaddingTop);
+  padding-block-end: var(--#{$text-input-group}__text-input--PaddingBottom);
+  padding-inline-start: var(--#{$text-input-group}__text-input--PaddingLeft);
+  padding-inline-end: var(--#{$text-input-group}__text-input--PaddingRight);
   background-color: var(--#{$text-input-group}__text-input--BackgroundColor);
   border: 0;
 
@@ -171,11 +171,11 @@
 .#{$text-input-group}__utilities {
   display: flex;
   align-items: center;
-  margin-right: var(--#{$text-input-group}__utilities--MarginRight);
-  margin-left: var(--#{$text-input-group}__utilities--MarginLeft);
+  margin-inline-start: var(--#{$text-input-group}__utilities--MarginLeft);
+  margin-inline-end: var(--#{$text-input-group}__utilities--MarginRight);
 
   > * + * {
-    margin-left: var(--#{$text-input-group}__utilities--child--MarginLeft);
+    margin-inline-start: var(--#{$text-input-group}__utilities--child--MarginLeft);
   }
 
   .#{$button} {

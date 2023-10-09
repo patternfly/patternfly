@@ -576,7 +576,7 @@ The chip group requires the [chip component](#chip-overview). **All single chip 
 
 | Attributes for closable chip group button | Applied to | Outcome |
 | -- | -- | -- |
-| `role="list"` | `.pf-v5-c-chip-group__list` | Indicates that the chip group list is a list element. This role is redundant since `.pf-v5-c-chip-group__list` is a `<ul>` but is required for screen readers to announce the list propertly. **Required** |
+| `role="list"` | `.pf-v5-c-chip-group__list` | Indicates that the chip group list is a list element. This role is redundant since `.pf-v5-c-chip-group__list` is a `<ul>` but is required for screen readers to announce the list properly. **Required** |
 | `aria-label="[button label text]"` | `.pf-v5-c-chip-group__close > button` |  Provides an accessible name for a chip group close when an icon is used instead of text. Required when an icon is used with no supporting text. **Required** |
 | `aria-labelledby="[id value of .pf-v5-c-chip-group__close > button] [id value of .pf-v5-c-chip-group__label]"` | `.pf-v5-c-chip-group__close > button` | Provides an accessible name for the button. **Required** |
 

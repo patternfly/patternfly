@@ -114,18 +114,22 @@
   &.pf-m-bordered {
     --#{$accordion}__toggle--after--Top: var(--#{$accordion}--m-bordered__toggle--after--Top);
 
-    border-top: var(--#{$accordion}--m-bordered--BorderTopWidth) solid var(--#{$accordion}--m-bordered--BorderTopColor);
+    border-block-start: var(--#{$accordion}--m-bordered--BorderTopWidth) solid var(--#{$accordion}--m-bordered--BorderTopColor);
 
     .#{$accordion}__toggle {
       &::before {
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        inset-block-start: 0;
+        inset-block-end: 0;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
         content: "";
-        border: solid var(--#{$accordion}--m-bordered__toggle--before--BorderColor);
-        border-width: var(--#{$accordion}--m-bordered__toggle--before--BorderTopWidth) 0 var(--#{$accordion}--m-bordered__toggle--before--BorderBottomWidth);
+        border-color: var(--#{$accordion}--m-bordered__toggle--before--BorderColor);
+        border-style: solid;
+        border-block-start-width: var(--#{$accordion}--m-bordered__toggle--before--BorderTopWidth);
+        border-block-end-width: var(--#{$accordion}--m-bordered__toggle--before--BorderBottomWidth);
+        border-inline-start-width: 0;
+        border-inline-end-width: 0;
       }
 
       &.pf-m-expanded {
@@ -139,13 +143,13 @@
         .#{$accordion}__expandable-content-body:last-child {
           &::before {
             position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+            inset-block-start: 0;
+            inset-block-end: 0;
+            inset-inline-start: 0;
+            inset-inline-end: 0;
             pointer-events: none;
             content: "";
-            border-bottom: var(--#{$accordion}--m-bordered__expandable-content--m-expanded__expandable-content-body--last-child--before--BorderBottomWidth) solid var(--#{$accordion}--m-bordered__expandable-content--m-expanded__expandable-content-body--last-child--before--BorderBottomColor);
+            border-block-end: var(--#{$accordion}--m-bordered__expandable-content--m-expanded__expandable-content-body--last-child--before--BorderBottomWidth) solid var(--#{$accordion}--m-bordered__expandable-content--m-expanded__expandable-content-body--last-child--before--BorderBottomColor);
           }
         }
       }
@@ -160,7 +164,10 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: var(--#{$accordion}__toggle--PaddingTop) var(--#{$accordion}__toggle--PaddingRight) var(--#{$accordion}__toggle--PaddingBottom) var(--#{$accordion}__toggle--PaddingLeft);
+  padding-block-start: var(--#{$accordion}__toggle--PaddingTop);
+  padding-block-end: var(--#{$accordion}__toggle--PaddingBottom);
+  padding-inline-start: var(--#{$accordion}__toggle--PaddingLeft);
+  padding-inline-end: var(--#{$accordion}__toggle--PaddingRight);
   font-family: var(--#{$accordion}__toggle--FontFamily, inherit);
   font-size: var(--#{$accordion}__toggle--FontSize, inherit);
   background-color: var(--#{$accordion}__toggle--BackgroundColor);
@@ -168,9 +175,9 @@
 
   &::after {
     position: absolute;
-    top: var(--#{$accordion}__toggle--after--Top);
-    bottom: 0;
-    left: 0;
+    inset-block-start: var(--#{$accordion}__toggle--after--Top);
+    inset-block-end: 0;
+    inset-inline-start: 0;
     width: var(--#{$accordion}__toggle--after--Width);
     content: "";
     background-color: var(--#{$accordion}__toggle--after--BackgroundColor);
@@ -223,6 +230,8 @@
 }
 
 .#{$accordion}__toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   transition: var(--#{$accordion}__toggle-icon--Transition);
 }
 
@@ -242,13 +251,16 @@
 
 .#{$accordion}__expandable-content-body {
   position: relative;
-  padding: var(--#{$accordion}__expandable-content-body--PaddingTop) var(--#{$accordion}__expandable-content-body--PaddingRight) var(--#{$accordion}__expandable-content-body--PaddingBottom) var(--#{$accordion}__expandable-content-body--PaddingLeft);
+  padding-block-start: var(--#{$accordion}__expandable-content-body--PaddingTop);
+  padding-block-end: var(--#{$accordion}__expandable-content-body--PaddingBottom);
+  padding-inline-start: var(--#{$accordion}__expandable-content-body--PaddingLeft);
+  padding-inline-end: var(--#{$accordion}__expandable-content-body--PaddingRight);
 
   &::after {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
     width: var(--#{$accordion}__expandable-content-body--after--Width);
     content: "";
     background-color: var(--#{$accordion}__expandable-content-body--after--BackgroundColor);

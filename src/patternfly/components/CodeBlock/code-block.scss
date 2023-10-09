@@ -16,16 +16,19 @@
 
 .#{$code-block}__header {
   display: flex;
-  border-bottom: var(--#{$code-block}__header--BorderBottomWidth) solid var(--#{$code-block}__header--BorderBottomColor);
+  border-block-end: var(--#{$code-block}__header--BorderBottomWidth) solid var(--#{$code-block}__header--BorderBottomColor);
 }
 
 .#{$code-block}__actions {
   display: flex;
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 
 .#{$code-block}__content {
-  padding: var(--#{$code-block}__content--PaddingTop) var(--#{$code-block}__content--PaddingRight) var(--#{$code-block}__content--PaddingBottom) var(--#{$code-block}__content--PaddingLeft);
+  padding-block-start: var(--#{$code-block}__content--PaddingTop);
+  padding-block-end: var(--#{$code-block}__content--PaddingBottom);
+  padding-inline-start: var(--#{$code-block}__content--PaddingLeft);
+  padding-inline-end: var(--#{$code-block}__content--PaddingRight);
 }
 
 .#{$code-block}__pre {

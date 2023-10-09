@@ -1,10 +1,5 @@
 .ws-core-c-popover .ws-preview-html {
-  position: relative;
- }
-
- .ws-core-c-popover .pf-v5-c-popover {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
- }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

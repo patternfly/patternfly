@@ -274,7 +274,7 @@ import './Card.css'
 {{/gallery}}
 ```
 
-### Single Selectable
+### Single selectable
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter"}}
 
@@ -401,7 +401,7 @@ import './Card.css'
 {{/gallery}}
 ```
 
-### Clickable and Selectable
+### Clickable and selectable
 ```hbs
 {{#> gallery gallery--modifier="pf-m-gutter"}}
 

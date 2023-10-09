@@ -187,7 +187,10 @@
 
   position: relative;
   max-width: var(--#{$label}--MaxWidth);
-  padding: var(--#{$label}--PaddingTop) var(--#{$label}--PaddingRight) var(--#{$label}--PaddingBottom) var(--#{$label}--PaddingLeft);
+  padding-block-start: var(--#{$label}--PaddingTop);
+  padding-block-end: var(--#{$label}--PaddingBottom);
+  padding-inline-start: var(--#{$label}--PaddingLeft);
+  padding-inline-end: var(--#{$label}--PaddingRight);
   font-size: var(--#{$label}--FontSize);
   color: var(--#{$label}--Color);
   white-space: nowrap;
@@ -415,10 +418,7 @@
 
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     pointer-events: none;
     content: "";
     border: var(--#{$label}__content--before--BorderWidth) solid var(--#{$label}__content--before--BorderColor);
@@ -459,12 +459,12 @@
 }
 
 .#{$label}__icon {
-  margin-right: var(--#{$label}__icon--MarginRight);
+  margin-inline-end: var(--#{$label}__icon--MarginRight);
   color: var(--#{$label}__icon--Color);
 }
 
 .#{$label}__actions {
-  margin-right: var(--#{$label}__actions--MarginRight);
+  margin-inline-end: var(--#{$label}__actions--MarginRight);
   font-size: var(--#{$label}__actions--FontSize);
 
   .#{$button} {
@@ -474,8 +474,8 @@
     --#{$button}--PaddingBottom: var(--#{$label}__actions--c-button--PaddingBottom);
     --#{$button}--PaddingLeft: var(--#{$label}__actions--c-button--PaddingLeft);
 
-    margin-top: var(--#{$label}__actions--c-button--MarginTop);
-    margin-bottom: var(--#{$label}__actions--c-button--MarginBottom);
+    margin-block-start: var(--#{$label}__actions--c-button--MarginTop);
+    margin-block-end: var(--#{$label}__actions--c-button--MarginBottom);
   }
 }
 

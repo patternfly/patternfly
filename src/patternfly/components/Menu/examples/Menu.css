@@ -16,3 +16,11 @@
   align-items: flex-end;
   justify-content: flex-end;
 }
+
+:is([id="ws-core-c-menu-drilldown-with-breadcrumbs---level-3"], [id="ws-core-c-menu-drilldown-with-breadcrumbs---level-4"]) {
+  position: relative;
+}
+
+:is([id="ws-core-c-menu-drilldown-with-breadcrumbs---level-3"], [id="ws-core-c-menu-drilldown-with-breadcrumbs---level-4"]) .pf-v5-c-breadcrumb__dropdown .pf-v5-c-menu {
+  position: absolute;
+}

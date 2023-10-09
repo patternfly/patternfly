@@ -54,7 +54,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--#{$empty-state}--PaddingTop) var(--#{$empty-state}--PaddingRight) var(--#{$empty-state}--PaddingBottom) var(--#{$empty-state}--PaddingLeft);
+  padding-block-start: var(--#{$empty-state}--PaddingTop);
+  padding-block-end: var(--#{$empty-state}--PaddingBottom);
+  padding-inline-start: var(--#{$empty-state}--PaddingLeft);
+  padding-inline-end: var(--#{$empty-state}--PaddingRight);
   text-align: center;
 
   &.pf-m-xs {
@@ -97,7 +100,7 @@
 }
 
 .#{$empty-state}__icon {
-  margin-bottom: var(--#{$empty-state}__icon--MarginBottom);
+  margin-block-end: var(--#{$empty-state}__icon--MarginBottom);
   font-size: var(--#{$empty-state}__icon--FontSize);
   line-height: 1;
   color: var(--#{$empty-state}__icon--Color);
@@ -111,7 +114,7 @@
 }
 
 .#{$empty-state}__body {
-  margin-top: var(--#{$empty-state}__body--MarginTop);
+  margin-block-start: var(--#{$empty-state}__body--MarginTop);
   font-size: var(--#{$empty-state}--body--FontSize);
   color: var(--#{$empty-state}__body--Color);
 }
@@ -121,7 +124,7 @@
   flex-direction: column;
   row-gap: var(--#{$empty-state}__footer--RowGap);
   align-items: center;
-  margin-top: var(--#{$empty-state}__footer--MarginTop);
+  margin-block-start: var(--#{$empty-state}__footer--MarginTop);
 }
 
 .#{$empty-state}__actions {

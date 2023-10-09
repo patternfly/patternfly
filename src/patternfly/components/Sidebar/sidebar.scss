@@ -39,7 +39,7 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}__main--FlexDirection: column;
   --#{$sidebar}__main--md--FlexDirection: row;
   --#{$sidebar}__main--AlignItems: stretch;
-  --#{$sidebar}__main--md--AlignItems: start;
+  --#{$sidebar}__main--md--AlignItems: flex-start;
   --#{$sidebar}__main--child--MarginTop: 0;
 
   // Gutter
@@ -65,7 +65,7 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
   --#{$sidebar}--m-stack--m-panel-right__panel--Order: -1;
 
   // Split
-  --#{$sidebar}--m-split__main--AlignItems: start;
+  --#{$sidebar}--m-split__main--AlignItems: flex-start;
   --#{$sidebar}--m-split__main--FlexDirection: row;
   --#{$sidebar}--m-split__panel--Position: static;
   --#{$sidebar}--m-split__panel--Top: auto;
@@ -164,12 +164,15 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 
 .#{$sidebar}__panel {
   position: var(--#{$sidebar}__panel--Position);
-  top: var(--#{$sidebar}__panel--Top);
+  inset-block-start: var(--#{$sidebar}__panel--Top);
   z-index: var(--#{$sidebar}__panel--ZIndex);
   flex-basis: var(--#{$sidebar}__panel--FlexBasis);
   flex-shrink: 0;
   order: var(--#{$sidebar}__panel--Order);
-  padding: var(--#{$sidebar}__panel--PaddingTop) var(--#{$sidebar}__panel--PaddingRight) var(--#{$sidebar}__panel--PaddingBottom) var(--#{$sidebar}__panel--PaddingLeft);
+  padding-block-start: var(--#{$sidebar}__panel--PaddingTop);
+  padding-block-end: var(--#{$sidebar}__panel--PaddingBottom);
+  padding-inline-start: var(--#{$sidebar}__panel--PaddingLeft);
+  padding-inline-end: var(--#{$sidebar}__panel--PaddingRight);
   background-color: var(--#{$sidebar}__panel--BackgroundColor);
   box-shadow: var(--#{$sidebar}__panel--BoxShadow);
 
@@ -194,7 +197,10 @@ $pf-v5-c-sidebar__panel--list--width: ("default", 25, 33, 50, 66, 75, 100);
 .#{$sidebar}__content {
   flex-grow: 1;
   order: var(--#{$sidebar}__content--Order);
-  padding: var(--#{$sidebar}__content--PaddingTop) var(--#{$sidebar}__content--PaddingRight) var(--#{$sidebar}__content--PaddingBottom) var(--#{$sidebar}__content--PaddingLeft);
+  padding-block-start: var(--#{$sidebar}__content--PaddingTop);
+  padding-block-end: var(--#{$sidebar}__content--PaddingBottom);
+  padding-inline-start: var(--#{$sidebar}__content--PaddingLeft);
+  padding-inline-end: var(--#{$sidebar}__content--PaddingRight);
   background-color: var(--#{$sidebar}__content--BackgroundColor);
 
   &.pf-m-padding {

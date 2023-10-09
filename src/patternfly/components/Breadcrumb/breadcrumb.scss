@@ -52,13 +52,15 @@
   list-style: none;
 
   &:not(:last-child) {
-    margin-right: var(--#{$breadcrumb}__item--MarginRight);
+    margin-inline-end: var(--#{$breadcrumb}__item--MarginRight);
   }
 }
 
 // Breadcrumb divider
 .#{$breadcrumb}__item-divider {
-  margin-right: var(--#{$breadcrumb}__item-divider--MarginRight);
+  @include pf-v5-mirror-inline-on-rtl;
+
+  margin-inline-end: var(--#{$breadcrumb}__item-divider--MarginRight);
   font-size: var(--#{$breadcrumb}__item-divider--FontSize);
   line-height: 1;
   color: var(--#{$breadcrumb}__item-divider--Color);
@@ -98,7 +100,10 @@
 }
 
 .#{$breadcrumb}__dropdown {
-  margin: var(--#{$breadcrumb}__dropdown--MarginTop) var(--#{$breadcrumb}__dropdown--MarginRight) var(--#{$breadcrumb}__dropdown--MarginBottom) var(--#{$breadcrumb}__dropdown--MarginLeft);
+  margin-block-start: var(--#{$breadcrumb}__dropdown--MarginTop);
+  margin-block-end: var(--#{$breadcrumb}__dropdown--MarginBottom);
+  margin-inline-start: var(--#{$breadcrumb}__dropdown--MarginLeft);
+  margin-inline-end: var(--#{$breadcrumb}__dropdown--MarginRight);
 
   .#{$dropdown}__toggle {
     line-height: var(--#{$breadcrumb}__dropdown--c-dropdown__toggle--LineHeight);

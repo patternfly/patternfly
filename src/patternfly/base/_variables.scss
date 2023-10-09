@@ -282,6 +282,13 @@
   // A11y
   --#{$pf-global}--target-size--MinWidth: #{$pf-v5-global--target-size--MinWidth};
   --#{$pf-global}--target-size--MinHeight: #{$pf-v5-global--target-size--MinHeight};
+
+  // RTL
+  @include pf-v5-set-inverse(false);
+}
+
+@include pf-v5-rtl {
+  @include pf-v5-set-inverse;
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

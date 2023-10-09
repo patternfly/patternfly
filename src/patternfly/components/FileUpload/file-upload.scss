@@ -27,10 +27,7 @@
   &.pf-m-drag-hover {
     &::before {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset: 0;
       z-index: var(--#{$file-upload}--m-drag-hover--before--ZIndex);
       content: "";
       border: var(--#{$file-upload}--m-drag-hover--before--BorderWidth) solid var(--#{$file-upload}--m-drag-hover--before--BorderColor);
@@ -38,10 +35,7 @@
 
     &::after {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset: 0;
       content: "";
       background-color: var(--#{$file-upload}--m-drag-hover--after--BackgroundColor);
       opacity: var(--#{$file-upload}--m-drag-hover--after--Opacity);
@@ -54,10 +48,10 @@
 
       &::before {
         position: absolute;
-        top: 0;
-        right: var(--#{$file-upload}--m-loading__file-details--before--Left);
-        bottom: var(--#{$file-upload}--m-loading__file-details--before--Left);
-        left: var(--#{$file-upload}--m-loading__file-details--before--Left);
+        inset-block-start: 0;
+        inset-block-end: var(--#{$file-upload}--m-loading__file-details--before--Left);
+        inset-inline-start: var(--#{$file-upload}--m-loading__file-details--before--Left);
+        inset-inline-end: var(--#{$file-upload}--m-loading__file-details--before--Left);
         content: "";
         background-color: var(--#{$file-upload}--m-loading__file-details--before--BackgroundColor);
       }
@@ -78,13 +72,13 @@
   .#{$form-control} {
     flex: 1 1 auto;
     min-height: var(--#{$file-upload}__file-details__c-form-control--MinHeight);
-    border-top: 0;
+    border-block-start: 0;
   }
 }
 
 .#{$file-upload}__file-details-spinner {
   position: absolute;
-  top: 50%;
-  left: 50%;
+ inset-block-start: 50%;
+ inset-inline-start: 50%;
   transform: translate(-50%, -50%);
 }

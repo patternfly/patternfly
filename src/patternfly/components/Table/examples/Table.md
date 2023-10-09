@@ -3326,8 +3326,8 @@ For sticky columns to function correctly, the parent table's width must be contr
 | `.pf-v5-c-scroll-outer-wrapper` | `<div>` | Initiates a table container sticky columns outer wrapper. |
 | `.pf-v5-c-scroll-inner-wrapper` | `<div>` | Initiates a table container sticky columns inner wrapper. |
 | `.pf-v5-c-table__sticky-cell` | `<th>`, `<td>` | Initiates a sticky table cell. |
-| `.pf-m-right` | `.pf-v5-c-table__sticky-cell` | Initiates a sticky, right-hand table cell. |
-| `.pf-m-left` | `.pf-v5-c-table__sticky-cell` | Initiates a sticky, left-hand table cell. |
+| `.pf-m-right`, `.pf-m-inline-end` | `.pf-v5-c-table__sticky-cell` | Initiates a sticky, right-hand (in LTR) or left-hand (in RTL) table cell. |
+| `.pf-m-left`, `.pf-m-inline-start` | `.pf-v5-c-table__sticky-cell` | Initiates a sticky, left-hand (in LTR) or right-hand (in RTL) table cell. |
 
 
 ## Nested column headers

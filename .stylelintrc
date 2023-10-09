@@ -6,7 +6,8 @@
   ],
   "plugins": [
     "stylelint-order",
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-use-logical-spec"
   ],
   "ignoreFiles": [
     "./src/patternfly/assets/fontawesome/*.scss",
@@ -45,6 +46,7 @@
     "font-weight-notation": "numeric",
     "import-notation": "string",
     "keyframes-name-pattern": null,
+    "liberty/use-logical-spec": ["always", { "except": ["width", "max-width", "min-width", "height", "max-height", "min-height"] }],
     "max-nesting-depth": 3,
     "media-query-no-invalid": null,
     "no-descending-specificity": null,

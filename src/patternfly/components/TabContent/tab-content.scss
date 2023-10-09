@@ -36,7 +36,10 @@
 
 // Body
 .#{$tab-content}__body {
-  padding: var(--#{$tab-content}__body--PaddingTop) var(--#{$tab-content}__body--PaddingRight) var(--#{$tab-content}__body--PaddingBottom) var(--#{$tab-content}__body--PaddingLeft);
+  padding-block-start: var(--#{$tab-content}__body--PaddingTop);
+  padding-block-end: var(--#{$tab-content}__body--PaddingBottom);
+  padding-inline-start: var(--#{$tab-content}__body--PaddingLeft);
+  padding-inline-end: var(--#{$tab-content}__body--PaddingRight);
 
   &.pf-m-padding {
     --#{$tab-content}__body--PaddingTop: var(--#{$tab-content}__body--m-padding--PaddingTop);

@@ -121,6 +121,7 @@ id: Icons
 | tenant | <i class="pf-v5-pficon pf-v5-pficon-tenant"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-tenant&quot;&gt;&lt;/i&gt;
 | thumb-tack | <i class="pf-v5-pficon pf-v5-pficon-thumb-tack"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-thumb-tack&quot;&gt;&lt;/i&gt;
 | topology | <i class="pf-v5-pficon pf-v5-pficon-topology"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-topology&quot;&gt;&lt;/i&gt;
+| treeview | <i class="pf-v5-pficon pf-v5-pficon-treeview"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-treeview&quot;&gt;&lt;/i&gt;
 | trend-down | <i class="pf-v5-pficon pf-v5-pficon-trend-down"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-trend-down&quot;&gt;&lt;/i&gt;
 | trend-up | <i class="pf-v5-pficon pf-v5-pficon-trend-up"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-trend-up&quot;&gt;&lt;/i&gt;
 | unknown | <i class="pf-v5-pficon pf-v5-pficon-unknown"></i> | &lt;i class=&quot;pf-v5-pficon pf-v5-pficon-unknown&quot;&gt;&lt;/i&gt;

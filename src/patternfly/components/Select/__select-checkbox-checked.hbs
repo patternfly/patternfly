@@ -9,26 +9,11 @@
     {{/select-menu-search}}
     {{> divider}}
   {{/if}}
-  {{#> select-menu-fieldset select-menu-fieldset--attribute='aria-label="Select input"'}}
-    {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-active"') check--modifier="pf-v5-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-active" name="' select--id '-active"')}}{{/check-input}}
-      {{#> check-label check-label--type="span"}}Active{{/check-label}}
-    {{/check}}
-    {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-canceled"') check--modifier="pf-v5-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-canceled" name="' select--id '-canceled" checked')}}{{/check-input}}
-      {{#> check-label check-label--type="span"}}Canceled{{/check-label}}
-    {{/check}}
-    {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-paused"') check--modifier="pf-v5-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-paused" name="' select--id '-paused" checked')}}{{/check-input}}
-      {{#> check-label check-label--type="span"}}Paused{{/check-label}}
-    {{/check}}
-    {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-warning"') check--modifier="pf-v5-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-warning" name="' select--id '-warning"')}}{{/check-input}}
-      {{#> check-label check-label--type="span"}}Warning{{/check-label}}
-    {{/check}}
-    {{#> check check--type="label" check--attribute=(concat 'for="' select--id '-restarted"') check--modifier="pf-v5-c-select__menu-item"}}
-      {{#> check-input check-input--attribute=(concat 'type="checkbox" id="' select--id '-restarted" name="' select--id '-restarted" checked')}}{{/check-input}}
-      {{#> check-label check-label--type="span"}}Restarted{{/check-label}}
-    {{/check}}
+  {{#> select-menu-fieldset select-menu-fieldset--attribute='aria-label="Select input"' check--modifier="pf-v5-c-select__menu-item" check--IsLabelWrapped=true}}
+    {{> check check--id=(concat select--id '-check-active') check-label--text="Active" check-input--IsChecked=true}}
+    {{> check check--id=(concat select--id '-check-canceled') check-label--text="Canceled" check-input--IsChecked=true}}
+    {{> check check--id=(concat select--id '-check-paused') check-label--text="Paused"}}
+    {{> check check--id=(concat select--id '-check-warning') check-label--text="Warning" check-input--IsChecked=true}}
+    {{> check check--id=(concat select--id '-check-restarted') check-label--text="Restarted"}}
   {{/select-menu-fieldset}}
 </div>

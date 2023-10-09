@@ -18,8 +18,8 @@
     --#{$table}--m-sticky-header--cell--ZIndex: var(--#{$table}--m-sticky-header__sticky-cell--ZIndex);
 
     position: sticky;
-    right: var(--#{$table}__sticky-cell--Right);
-    left: var(--#{$table}__sticky-cell--Left);
+    inset-inline-start: var(--#{$table}__sticky-cell--Left);
+    inset-inline-end: var(--#{$table}__sticky-cell--Right);
     z-index: var(--#{$table}__sticky-cell--ZIndex);
     min-width: var(--#{$table}__sticky-cell--MinWidth);
     background-color: var(--#{$table}__sticky-cell--BackgroundColor);
@@ -35,11 +35,13 @@
       --#{$table}--cell--m-border-left--before--BorderLeftColor: var(--#{$table}__sticky-cell--m-border-left--before--BorderLeftColor);
     }
 
-    &.pf-m-right {
+    &.pf-m-right, 
+    &.pf-m-inline-end {
       --#{$table}__sticky-cell--Right: var(--#{$table}__sticky-cell--m-right--Right);
     }
 
-    &.pf-m-left {
+    &.pf-m-left, 
+    &.pf-m-inline-start {
       --#{$table}__sticky-cell--Left: var(--#{$table}__sticky-cell--m-left--Left);
     }
 

@@ -61,12 +61,12 @@
 
   &::before {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     pointer-events: none;
     content: "";
-    border-bottom: var(--#{$code-editor}__header--before--BorderBottomWidth) solid var(--#{$code-editor}__header--before--BorderBottomColor);
+    border-block-end: var(--#{$code-editor}__header--before--BorderBottomWidth) solid var(--#{$code-editor}__header--before--BorderBottomColor);
   }
 }
 
@@ -86,7 +86,7 @@
 
     &:disabled {
       &::after {
-        border-bottom-color: var(--#{$code-editor}__controls--c-button--m-control--disabled--after--BorderBottomColor);
+        border-block-end-color: var(--#{$code-editor}__controls--c-button--m-control--disabled--after--BorderBottomColor);
       }
     }
   }
@@ -94,8 +94,8 @@
 
 .#{$code-editor}__header-main {
   flex-grow: 1;
-  padding-right: var(--#{$code-editor}__header-main--PaddingRight);
-  padding-left: var(--#{$code-editor}__header-main--PaddingLeft);
+  padding-inline-start: var(--#{$code-editor}__header-main--PaddingLeft);
+  padding-inline-end: var(--#{$code-editor}__header-main--PaddingRight);
 }
 
 .#{$code-editor}__main {
@@ -108,10 +108,10 @@
   &.pf-m-drag-hover {
     &::after {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset-block-start: 0;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
       content: "";
       background-color: var(--#{$code-editor}__main--m-drag-hover--after--BackgroundColor);
       opacity: var(--#{$code-editor}__main--m-drag-hover--after--Opacity);
@@ -119,10 +119,10 @@
 
     &::before {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset-block-start: 0;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      inset-inline-end: 0;
       content: "";
       border: var(--#{$code-editor}__main--m-drag-hover--before--BorderWidth) solid var(--#{$code-editor}__main--m-drag-hover--before--BorderColor);
     }
@@ -136,12 +136,15 @@
 }
 
 .#{$code-editor}__header + .#{$code-editor}__main {
-  border-top-width: 0;
+  border-block-start-width: 0;
 }
 
 .#{$code-editor}__code {
   position: relative;
-  padding: var(--#{$code-editor}__code--PaddingTop) var(--#{$code-editor}__code--PaddingRight) var(--#{$code-editor}__code--PaddingBottom) var(--#{$code-editor}__code--PaddingLeft);
+  padding-block-start: var(--#{$code-editor}__code--PaddingTop);
+  padding-block-end: var(--#{$code-editor}__code--PaddingBottom);
+  padding-inline-start: var(--#{$code-editor}__code--PaddingLeft);
+  padding-inline-end: var(--#{$code-editor}__code--PaddingRight);
 
   .#{$code-editor}__code-pre {
     font-family: var(--#{$code-editor}__code-pre--FontFamily);
@@ -154,17 +157,23 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: var(--#{$code-editor}__tab--PaddingTop) var(--#{$code-editor}__tab--PaddingRight) var(--#{$code-editor}__tab--PaddingBottom) var(--#{$code-editor}__tab--PaddingLeft);
-  margin-left: auto; // remove at breaking change
+  padding-block-start: var(--#{$code-editor}__tab--PaddingTop);
+  padding-block-end: var(--#{$code-editor}__tab--PaddingBottom);
+  padding-inline-start: var(--#{$code-editor}__tab--PaddingLeft);
+  padding-inline-end: var(--#{$code-editor}__tab--PaddingRight);
+  margin-inline-start: auto; // remove at breaking change
   color: var(--#{$code-editor}__tab--Color);
   background-color: var(--#{$code-editor}__tab--BackgroundColor);
   border-color: var(--#{$code-editor}__tab--BorderColor);
   border-style: solid;
-  border-width: var(--#{$code-editor}__tab--BorderTopWidth) var(--#{$code-editor}__tab--BorderRightWidth) var(--#{$code-editor}__tab--BorderBottomWidth) var(--#{$code-editor}__tab--BorderLeftWidth);
+  border-block-start-width: var(--#{$code-editor}__tab--BorderTopWidth);
+  border-block-end-width: var(--#{$code-editor}__tab--BorderBottomWidth);
+  border-inline-start-width: var(--#{$code-editor}__tab--BorderLeftWidth);
+  border-inline-end-width: var(--#{$code-editor}__tab--BorderRightWidth);
 }
 
 .#{$code-editor}__tab-icon + .#{$code-editor}__tab-text {
-  margin-left: var(--#{$code-editor}__tab-icon--text--MarginLeft);
+  margin-inline-start: var(--#{$code-editor}__tab-icon--text--MarginLeft);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

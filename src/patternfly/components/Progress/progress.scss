@@ -93,7 +93,7 @@
 
       &.pf-m-static-width {
         min-width: var(--#{$progress}__measure--m-static-width--MinWidth);
-        text-align: left;
+        text-align: start;
       }
     }
 
@@ -166,13 +166,22 @@
   gap: var(--#{$progress}__status--Gap);
   align-items: flex-start;
   justify-content: flex-end;
-  text-align: right;
+  text-align: end;
   word-break: break-word;
 }
 
 // the progress__status-icon is an icon displayed always in the upper right
 .#{$progress}__status-icon {
   color: var(--#{$progress}__status-icon--Color);
+}
+
+.#{$progress}__bar::before,
+.#{$progress}__indicator {
+  // disable linter as the indicator element should always grow ltr
+  // stylelint-disable liberty/use-logical-spec
+  top: 0;
+  left: 0;
+  // stylelint-enable
 }
 
 // The progress__bar is a white underlay with a semi-transparent color on top, which matches the progress__indicator color
@@ -186,8 +195,6 @@
 
   &::before {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     content: "";
@@ -200,8 +207,6 @@
 // It is assumed that the width of the progress__indicator is set inline or via Javascript
 .#{$progress}__indicator {
   position: absolute; // position absolute to bring above the semi-transparent bar overlay
-  top: 0;
-  left: 0;
   height: var(--#{$progress}__indicator--Height);
   background-color: var(--#{$progress}__indicator--BackgroundColor);
 }
@@ -209,7 +214,7 @@
 .#{$progress}__helper-text {
   grid-row: 3 / 4;
   grid-column: 1 / 3;
-  margin-top: var(--#{$progress}__helper-text--MarginTop);
+  margin-block-start: var(--#{$progress}__helper-text--MarginTop);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

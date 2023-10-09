@@ -104,13 +104,13 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  padding-right: var(--#{$pagination}--PaddingRight);
-  padding-left: var(--#{$pagination}--PaddingLeft);
+  padding-inline-start: var(--#{$pagination}--PaddingLeft);
+  padding-inline-end: var(--#{$pagination}--PaddingRight);
 
   // stylelint-disable selector-not-notation
   // update to single :not() in breaking change
   > *:not(:last-child):not(.#{$pagination}__total-items) {
-    margin-right: var(--#{$pagination}--child--MarginRight);
+    margin-inline-end: var(--#{$pagination}--child--MarginRight);
   }
 
   .#{$menu-toggle} {
@@ -135,7 +135,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     }
 
     position: sticky;
-    bottom: var(--#{$pagination}--m-bottom--Bottom);
+   inset-block-end: var(--#{$pagination}--m-bottom--Bottom);
     justify-content: center;
     background-color: var(--#{$pagination}--m-bottom--BackgroundColor);
     box-shadow: var(--#{$pagination}--m-bottom--BoxShadow);
@@ -172,7 +172,10 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
       position: relative;
       justify-content: flex-end;
-      padding: var(--#{$pagination}--m-bottom--md--PaddingTop) var(--#{$pagination}--m-bottom--md--PaddingRight) var(--#{$pagination}--m-bottom--md--PaddingBottom) var(--#{$pagination}--m-bottom--md--PaddingLeft);
+      padding-block-start: var(--#{$pagination}--m-bottom--md--PaddingTop);
+      padding-block-end: var(--#{$pagination}--m-bottom--md--PaddingBottom);
+      padding-inline-start: var(--#{$pagination}--m-bottom--md--PaddingLeft);
+      padding-inline-end: var(--#{$pagination}--m-bottom--md--PaddingRight);
 
       .#{$pagination}__nav-control.pf-m-first,
       .#{$pagination}__nav-control.pf-m-last,
@@ -199,17 +202,20 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     --#{$pagination}--m-bottom--Bottom: 0;
 
     position: sticky;
-    top: var(--#{$pagination}--m-sticky--Top);
+    inset-block-start: var(--#{$pagination}--m-sticky--Top);
     z-index: var(--#{$pagination}--m-sticky--ZIndex);
-    padding-top: var(--#{$pagination}--m-sticky--PaddingTop);
-    padding-right: var(--#{$pagination}--m-sticky--PaddingRight);
-    padding-bottom: var(--#{$pagination}--m-sticky--PaddingBottom);
-    padding-left: var(--#{$pagination}--m-sticky--PaddingLeft);
+    padding-block-start: var(--#{$pagination}--m-sticky--PaddingTop);
+    padding-block-end: var(--#{$pagination}--m-sticky--PaddingBottom);
+    padding-inline-start: var(--#{$pagination}--m-sticky--PaddingLeft);
+    padding-inline-end: var(--#{$pagination}--m-sticky--PaddingRight);
     background-color: var(--#{$pagination}--m-sticky--BackgroundColor);
     box-shadow: var(--#{$pagination}--m-sticky--BoxShadow);
 
     @media screen and (min-width: $pf-v5-global--breakpoint--md) {
-      padding: var(--#{$pagination}--m-sticky--md--PaddingTop) var(--#{$pagination}--m-sticky--md--PaddingRight) var(--#{$pagination}--m-sticky--md--PaddingBottom) var(--#{$pagination}--m-sticky--md--PaddingLeft);
+      padding-block-start: var(--#{$pagination}--m-sticky--md--PaddingTop);
+      padding-block-end: var(--#{$pagination}--m-sticky--md--PaddingBottom);
+      padding-inline-start: var(--#{$pagination}--m-sticky--md--PaddingLeft);
+      padding-inline-end: var(--#{$pagination}--m-sticky--md--PaddingRight);
     }
   }
 
@@ -231,14 +237,16 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
 // nav control
 .#{$pagination}__nav-control {
+  @include pf-v5-mirror-inline-on-rtl;
+
   .#{$button} {
-    padding-right: var(--#{$pagination}__nav-control--c-button--PaddingRight);
-    padding-left: var(--#{$pagination}__nav-control--c-button--PaddingLeft);
+    padding-inline-start: var(--#{$pagination}__nav-control--c-button--PaddingLeft);
+    padding-inline-end: var(--#{$pagination}__nav-control--c-button--PaddingRight);
     font-size: var(--#{$pagination}__nav-control--c-button--FontSize);
   }
 
   .#{$pagination}.pf-m-compact & + & {
-    margin-left: var(--#{$pagination}--m-compact__nav-control--nav-control--MarginLeft);
+    margin-inline-start: var(--#{$pagination}--m-compact__nav-control--nav-control--MarginLeft);
   }
 }
 
@@ -246,15 +254,15 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 .#{$pagination}__nav-page-select {
   display: flex;
   align-items: center;
-  padding-right: var(--#{$pagination}__nav-page-select--PaddingRight);
-  padding-left: var(--#{$pagination}__nav-page-select--PaddingLeft);
+  padding-inline-start: var(--#{$pagination}__nav-page-select--PaddingLeft);
+  padding-inline-end: var(--#{$pagination}__nav-page-select--PaddingRight);
 
   > * {
     font-size: var(--#{$pagination}__nav-page-select--FontSize);
     white-space: nowrap;
 
     &:not(:last-child) {
-      margin-right: var(--#{$pagination}__nav-page-select--child--MarginRight);
+      margin-inline-end: var(--#{$pagination}__nav-page-select--child--MarginRight);
     }
   }
 

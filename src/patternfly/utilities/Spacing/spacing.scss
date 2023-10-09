@@ -19,26 +19,22 @@
 
             // If margin x property, set left and right margins
             @if $property == "mx" {
-              margin-right: #{$spacer-value};
-              margin-left: #{$spacer-value};
+              margin-inline: #{$spacer-value};
             }
 
             // If padding x property, set left and right padding
             @else if $property == "my" {
-              margin-top: #{$spacer-value};
-              margin-bottom: #{$spacer-value};
+              margin-block: #{$spacer-value};
             }
 
             // If margin y property, set top and bottom margins
             @else if $property == "px" {
-              padding-right: #{$spacer-value};
-              padding-left: #{$spacer-value};
+              padding-inline: #{$spacer-value};
             }
 
             // If padding y property, set top and bottom padding
             @else if $property == "py" {
-              padding-top: #{$spacer-value};
-              padding-bottom: #{$spacer-value};
+              padding-block: #{$spacer-value};
             }
 
             @else {
