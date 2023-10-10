@@ -24,7 +24,7 @@
   align-items: baseline;
 
   > * {
-    margin-right: var(--#{$inline-edit}__group--item--MarginRight);
+    margin-inline-end: var(--#{$inline-edit}__group--item--MarginRight);
   }
 
   &.pf-m-icon-group {
@@ -33,7 +33,7 @@
 
   // Footer
   &.pf-m-footer {
-    margin-top: var(--#{$inline-edit}__group--m-footer--MarginTop);
+    margin-block-start: var(--#{$inline-edit}__group--m-footer--MarginTop);
   }
 
   // Column
@@ -102,8 +102,8 @@
 
 // offset button by top padding
 .#{$inline-edit}__label + .#{$inline-edit}__action.pf-m-enable > .#{$button} {
-  margin-top: calc(var(--#{$button}--PaddingTop) * -1);
-  margin-bottom: calc(var(--#{$button}--PaddingBottom) * -1);
+  margin-block-start: calc(var(--#{$button}--PaddingTop) * -1);
+  margin-block-end: calc(var(--#{$button}--PaddingBottom) * -1);
 }
 
 .#{$inline-edit}__label.pf-m-bold {

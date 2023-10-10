@@ -122,7 +122,7 @@
   // stylelint-enable
 
   li + li {
-    margin-top: var(--#{$content}--li--MarginTop);
+    margin-block-start: var(--#{$content}--li--MarginTop);
   }
 
   p,
@@ -136,7 +136,7 @@
   hr {
     &:not(:last-child) {
       // This variable name doesn't reflect the selector, it's an excpection to the variable system.
-      margin-bottom: var(--#{$content}--MarginBottom);
+      margin-block-end: var(--#{$content}--MarginBottom);
     }
   }
 
@@ -150,11 +150,11 @@
     font-family: var(--#{$content}--heading--FontFamily);
 
     &:first-child {
-      margin-top: 0;
+      margin-block-start: 0;
     }
 
     &:last-child {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
   }
 
@@ -164,56 +164,56 @@
 
     // stylelint-disable selector-no-qualifying-type
     &.pf-m-plain {
-      padding-left: 0;
-      margin-left: 0;
+      padding-inline-start: 0;
+      margin-inline-start: 0;
       list-style: none;
     }
     // stylelint-enable
   }
 
   h1 {
-    margin-top: var(--#{$content}--h1--MarginTop);
-    margin-bottom: var(--#{$content}--h1--MarginBottom);
+    margin-block-start: var(--#{$content}--h1--MarginTop);
+    margin-block-end: var(--#{$content}--h1--MarginBottom);
     font-size: var(--#{$content}--h1--FontSize);
     font-weight: var(--#{$content}--h1--FontWeight);
     line-height: var(--#{$content}--h1--LineHeight);
   }
 
   h2 {
-    margin-top: var(--#{$content}--h2--MarginTop);
-    margin-bottom: var(--#{$content}--h2--MarginBottom);
+    margin-block-start: var(--#{$content}--h2--MarginTop);
+    margin-block-end: var(--#{$content}--h2--MarginBottom);
     font-size: var(--#{$content}--h2--FontSize);
     font-weight: var(--#{$content}--h2--FontWeight);
     line-height: var(--#{$content}--h2--LineHeight);
   }
 
   h3 {
-    margin-top: var(--#{$content}--h3--MarginTop);
-    margin-bottom: var(--#{$content}--h3--MarginBottom);
+    margin-block-start: var(--#{$content}--h3--MarginTop);
+    margin-block-end: var(--#{$content}--h3--MarginBottom);
     font-size: var(--#{$content}--h3--FontSize);
     font-weight: var(--#{$content}--h3--FontWeight);
     line-height: var(--#{$content}--h3--LineHeight);
   }
 
   h4 {
-    margin-top: var(--#{$content}--h4--MarginTop);
-    margin-bottom: var(--#{$content}--h4--MarginBottom);
+    margin-block-start: var(--#{$content}--h4--MarginTop);
+    margin-block-end: var(--#{$content}--h4--MarginBottom);
     font-size: var(--#{$content}--h4--FontSize);
     font-weight: var(--#{$content}--h4--FontWeight);
     line-height: var(--#{$content}--h4--LineHeight);
   }
 
   h5 {
-    margin-top: var(--#{$content}--h5--MarginTop);
-    margin-bottom: var(--#{$content}--h5--MarginBottom);
+    margin-block-start: var(--#{$content}--h5--MarginTop);
+    margin-block-end: var(--#{$content}--h5--MarginBottom);
     font-size: var(--#{$content}--h5--FontSize);
     font-weight: var(--#{$content}--h5--FontWeight);
     line-height: var(--#{$content}--h5--LineHeight);
   }
 
   h6 {
-    margin-top: var(--#{$content}--h6--MarginTop);
-    margin-bottom: var(--#{$content}--h6--MarginBottom);
+    margin-block-start: var(--#{$content}--h6--MarginTop);
+    margin-block-end: var(--#{$content}--h6--MarginBottom);
     font-size: var(--#{$content}--h6--FontSize);
     font-weight: var(--#{$content}--h6--FontWeight);
     line-height: var(--#{$content}--h6--LineHeight);
@@ -226,14 +226,17 @@
     color: var(--#{$content}--small--Color);
 
     &:not(:last-child) {
-      margin-bottom: var(--#{$content}--small--MarginBottom);
+      margin-block-end: var(--#{$content}--small--MarginBottom);
     }
   }
 
   blockquote {
-    padding: var(--#{$content}--blockquote--PaddingTop) var(--#{$content}--blockquote--PaddingRight) var(--#{$content}--blockquote--PaddingBottom) var(--#{$content}--blockquote--PaddingLeft);
+    padding-block-start: var(--#{$content}--blockquote--PaddingTop);
+    padding-block-end: var(--#{$content}--blockquote--PaddingBottom);
+    padding-inline-start: var(--#{$content}--blockquote--PaddingLeft);
+    padding-inline-end: var(--#{$content}--blockquote--PaddingRight);
     color: var(--#{$content}--blockquote--Color);
-    border-left: var(--#{$content}--blockquote--BorderLeftWidth) solid var(--#{$content}--blockquote--BorderLeftColor);
+    border-inline-start: var(--#{$content}--blockquote--BorderLeftWidth) solid var(--#{$content}--blockquote--BorderLeftColor);
   }
 
   hr {
@@ -243,37 +246,37 @@
   }
 
   ol {
-    padding-left: var(--#{$content}--ol--PaddingLeft);
-    margin-left: var(--#{$content}--ol--MarginLeft);
+    padding-inline-start: var(--#{$content}--ol--PaddingLeft);
+    margin-inline-start: var(--#{$content}--ol--MarginLeft);
 
     ul {
       --#{$content}--ul--MarginLeft: var(--#{$content}--ul--nested--MarginLeft);
 
-      margin-top: var(--#{$content}--ul--nested--MarginTop);
+      margin-block-start: var(--#{$content}--ul--nested--MarginTop);
     }
 
     ol {
       --#{$content}--ol--MarginLeft: var(--#{$content}--ol--nested--MarginLeft);
 
-      margin-top: var(--#{$content}--ol--nested--MarginTop);
+      margin-block-start: var(--#{$content}--ol--nested--MarginTop);
     }
   }
 
   ul {
-    padding-left: var(--#{$content}--ul--PaddingLeft);
-    margin-left: var(--#{$content}--ul--MarginLeft);
+    padding-inline-start: var(--#{$content}--ul--PaddingLeft);
+    margin-inline-start: var(--#{$content}--ul--MarginLeft);
     list-style: var(--#{$content}--ul--ListStyle);
 
     ul {
       --#{$content}--ul--MarginLeft: var(--#{$content}--ul--nested--MarginLeft);
 
-      margin-top: var(--#{$content}--ul--nested--MarginTop);
+      margin-block-start: var(--#{$content}--ul--nested--MarginTop);
     }
 
     ol {
       --#{$content}--ol--MarginLeft: var(--#{$content}--ol--nested--MarginLeft);
 
-      margin-top: var(--#{$content}--ol--nested--MarginTop);
+      margin-block-start: var(--#{$content}--ol--nested--MarginTop);
     }
   }
 
@@ -292,7 +295,7 @@
     font-weight: var(--#{$content}--dt--FontWeight);
 
     &:not(:first-child) {
-      margin-top: var(--#{$content}--dt--MarginTop);
+      margin-block-start: var(--#{$content}--dt--MarginTop);
 
       @media screen and (min-width: $pf-v5-global--breakpoint--sm) {
         --#{$content}--dt--MarginTop: var(--#{$content}--dt--sm--MarginTop);

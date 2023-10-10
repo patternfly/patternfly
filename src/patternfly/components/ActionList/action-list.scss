@@ -15,12 +15,12 @@
   align-items: center;
 
   > * + * {
-    margin-left: var(--#{$action-list}--child--spacer);
+    margin-inline-start: var(--#{$action-list}--child--spacer);
   }
 
   > * + .#{$action-list}__group,
   .#{$action-list}__group + * {
-    margin-left: var(--#{$action-list}--group--spacer);
+    margin-inline-start: var(--#{$action-list}--group--spacer);
   }
 
   &.pf-m-icons {

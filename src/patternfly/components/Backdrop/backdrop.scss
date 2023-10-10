@@ -6,8 +6,8 @@
   --#{$backdrop}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-transparent-100);
 
   position: var(--#{$backdrop}--Position);
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   z-index: var(--#{$backdrop}--ZIndex);
   width: 100%;
   height: 100%;

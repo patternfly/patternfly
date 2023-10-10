@@ -28,7 +28,10 @@
   display: grid;
   grid-template-columns: 1fr auto;
   grid-row-gap: var(--#{$hint}--GridRowGap);
-  padding: var(--#{$hint}--PaddingTop) var(--#{$hint}--PaddingRight) var(--#{$hint}--PaddingBottom) var(--#{$hint}--PaddingLeft);
+  padding-block-start: var(--#{$hint}--PaddingTop);
+  padding-block-end: var(--#{$hint}--PaddingBottom);
+  padding-inline-start: var(--#{$hint}--PaddingLeft);
+  padding-inline-end: var(--#{$hint}--PaddingRight);
   color: var(--#{$hint}--Color);
   background-color: var(--#{$hint}--BackgroundColor);
   border: var(--#{$hint}--BorderWidth) solid var(--#{$hint}--BorderColor);
@@ -36,7 +39,7 @@
 
   // Remove this when the inline link button is updated
   .#{$button}.pf-m-link.pf-m-inline {
-    text-align: left;
+    text-align: start;
     white-space: normal;
   }
 }
@@ -46,12 +49,12 @@
   grid-row: 1;
   grid-column: 2;
   grid-auto-flow: column;
-  margin-left: var(--#{$hint}__actions--MarginLeft);
-  text-align: right;
+  margin-inline-start: var(--#{$hint}__actions--MarginLeft);
+  text-align: end;
 
   // Only applies to the plain dropdown
   .#{$dropdown} .#{$dropdown}__toggle.pf-m-plain {
-    margin-top: var(--#{$hint}__actions--c-dropdown--MarginTop);
+    margin-block-start: var(--#{$hint}__actions--c-dropdown--MarginTop);
   }
 
   + .#{$hint}__body {
@@ -72,7 +75,7 @@
   grid-column: 1 / -1;
 
   > :not(:last-child) {
-    margin-right: var(--#{$hint}__footer--child--MarginRight);
+    margin-inline-end: var(--#{$hint}__footer--child--MarginRight);
   }
 }
 

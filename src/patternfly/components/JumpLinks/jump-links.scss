@@ -129,21 +129,21 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   position: relative;
   display: var(--#{$jump-links}__list--Display);
   flex-direction: var(--#{$jump-links}__list--FlexDirection);
-  padding-top: var(--#{$jump-links}__list--PaddingTop);
-  padding-right: var(--#{$jump-links}__list--PaddingRight);
-  padding-bottom: var(--#{$jump-links}__list--PaddingBottom);
-  padding-left: var(--#{$jump-links}__list--PaddingLeft);
+  padding-block-start: var(--#{$jump-links}__list--PaddingTop);
+  padding-block-end: var(--#{$jump-links}__list--PaddingBottom);
+  padding-inline-start: var(--#{$jump-links}__list--PaddingLeft);
+  padding-inline-end: var(--#{$jump-links}__list--PaddingRight);
 
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     pointer-events: none;
     content: "";
     border: solid var(--#{$jump-links}__list--before--BorderColor);
-    border-width: var(--#{$jump-links}__list--before--BorderTopWidth) var(--#{$jump-links}__list--before--BorderRightWidth) var(--#{$jump-links}__list--before--BorderBottomWidth) var(--#{$jump-links}__list--before--BorderLeftWidth);
+    border-block-start-width: var(--#{$jump-links}__list--before--BorderTopWidth);
+    border-block-end-width: var(--#{$jump-links}__list--before--BorderBottomWidth);
+    border-inline-start-width: var(--#{$jump-links}__list--before--BorderLeftWidth);
+    border-inline-end-width: var(--#{$jump-links}__list--before--BorderRightWidth);
   }
 
   .#{$jump-links}__list {
@@ -153,7 +153,7 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
     --#{$jump-links}__link--PaddingBottom: var(--#{$jump-links}__list__list__link--PaddingBottom);
     --#{$jump-links}__link--PaddingLeft: var(--#{$jump-links}__list__list__link--PaddingLeft);
 
-    margin-top: var(--#{$jump-links}__list__list--MarginTop);
+    margin-block-start: var(--#{$jump-links}__list__list--MarginTop);
   }
 }
 
@@ -161,10 +161,10 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
   position: relative;
   display: flex;
   flex: 1;
-  padding-top: var(--#{$jump-links}__link--PaddingTop);
-  padding-right: var(--#{$jump-links}__link--PaddingRight);
-  padding-bottom: var(--#{$jump-links}__link--PaddingBottom);
-  padding-left: var(--#{$jump-links}__link--PaddingLeft);
+  padding-block-start: var(--#{$jump-links}__link--PaddingTop);
+  padding-block-end: var(--#{$jump-links}__link--PaddingBottom);
+  padding-inline-start: var(--#{$jump-links}__link--PaddingLeft);
+  padding-inline-end: var(--#{$jump-links}__link--PaddingRight);
   text-decoration: none;
   outline-offset: var(--#{$jump-links}__link--OutlineOffset);
 
@@ -178,15 +178,15 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     pointer-events: none;
     content: "";
     border-color: var(--#{$jump-links}__link--before--BorderColor);
     border-style: solid;
-    border-width: var(--#{$jump-links}__link--before--BorderTopWidth) var(--#{$jump-links}__link--before--BorderRightWidth) var(--#{$jump-links}__link--before--BorderBottomWidth) var(--#{$jump-links}__link--before--BorderLeftWidth);
+    border-block-start-width: var(--#{$jump-links}__link--before--BorderTopWidth);
+    border-block-end-width: var(--#{$jump-links}__link--before--BorderBottomWidth);
+    border-inline-start-width: var(--#{$jump-links}__link--before--BorderLeftWidth);
+    border-inline-end-width: var(--#{$jump-links}__link--before--BorderRightWidth);
   }
 }
 
@@ -209,7 +209,7 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
 .#{$jump-links}__label {
   display: var(--#{$jump-links}__label--Display);
-  margin-bottom: var(--#{$jump-links}__label--MarginBottom);
+  margin-block-end: var(--#{$jump-links}__label--MarginBottom);
 }
 
 .#{$jump-links}__main {
@@ -219,9 +219,9 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 
 .#{$jump-links}__toggle {
   display: var(--#{$jump-links}__toggle--Display);
-  margin-top: var(--#{$jump-links}__toggle--MarginTop);
-  margin-bottom: var(--#{$jump-links}__toggle--MarginBottom);
-  margin-left: var(--#{$jump-links}__toggle--MarginLeft);
+  margin-block-start: var(--#{$jump-links}__toggle--MarginTop);
+  margin-block-end: var(--#{$jump-links}__toggle--MarginBottom);
+  margin-inline-start: var(--#{$jump-links}__toggle--MarginLeft);
 
   .#{$button} {
     display: flex;
@@ -230,6 +230,8 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 }
 
 .#{$jump-links}__toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   display: inline-block;
   color: var(--#{$jump-links}__toggle-icon--Color);
   transition: var(--#{$jump-links}__toggle-icon--Transition);
@@ -237,6 +239,6 @@ $pf-v5-c-jump-links--m-expandable--breakpoint-map: build-breakpoint-map("base", 
 }
 
 .#{$jump-links}__toggle-text {
-  margin-left: var(--#{$jump-links}__toggle-text--MarginLeft);
+  margin-inline-start: var(--#{$jump-links}__toggle-text--MarginLeft);
   color: var(--#{$jump-links}__toggle-text--Color);
 }

@@ -3,8 +3,8 @@
   {{#if select-multi--attribute}}
     {{{select-multi-attribute}}}
   {{/if}}>
-  {{#> select-menu-fieldset select-menu-fieldset--attribute='aria-label="Select input"'}}
-    {{#> select-menu-item-check select-menu-item-check--IsChecked="checked" select-menu-item-check--name="active"}}
+  {{#> select-menu-fieldset select-menu-fieldset--attribute='aria-label="Select input"' check--modifier=(concat 'pf-v5-c-select__menu-item ' select-menu-item-check--modifier)}}
+    {{#> select-menu-item-check check-input--IsChecked=true select-menu-item-check--name="active"}}
       {{#> select-menu-item-row}}
         {{#> select-menu-item-text}}
           Active

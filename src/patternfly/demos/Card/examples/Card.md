@@ -68,7 +68,7 @@ import './Card.css'
         {{#> l-flex l-flex--modifier="pf-m-space-items-lg pf-m-column pf-m-align-items-flex-start"}}
           {{#> l-flex l-flex--modifier="pf-m-space-items-sm pf-m-column pf-m-align-items-flex-start pf-m-grow"}}
             {{> label label--color="blue" label-text--value="Set up your cluster" label-icon--value="info-circle"}}
-            <p>Continue setting up your cluster to access all you cain in the Console</p>
+            <p>Continue setting up your cluster to access all you can in the Console</p>
             {{#> list list--modifier="pf-m-plain"}}
               <li>
                 <a href="#">Add identity provider</a>
@@ -84,7 +84,11 @@ import './Card.css'
           {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all set up cluster steps
             {{#> button-icon button-icon--modifier="pf-m-end"}}
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              {{#> icon icon--modifier="pf-v5-m-mirror-inline-rtl"}}
+                {{#> icon-content}}
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                {{/icon-content}}
+              {{/icon}}
             {{/button-icon}}
           {{/button}}
         {{/l-flex}}
@@ -104,7 +108,11 @@ import './Card.css'
          {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all guided tours
             {{#> button-icon button-icon--modifier="pf-m-end"}}
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              {{#> icon icon--modifier="pf-v5-m-mirror-inline-rtl"}}
+                {{#> icon-content}}
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                {{/icon-content}}
+              {{/icon}}
             {{/button-icon}}
           {{/button}}
         {{/l-flex}}
@@ -127,7 +135,11 @@ import './Card.css'
           {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all quick starts
             {{#> button-icon button-icon--modifier="pf-m-end"}}
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              {{#> icon icon--modifier="pf-v5-m-mirror-inline-rtl"}}
+                {{#> icon-content}}
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                {{/icon-content}}
+              {{/icon}}
             {{/button-icon}}
           {{/button}}
         {{/l-flex}}
@@ -150,7 +162,11 @@ import './Card.css'
           {{#> button button--IsAnchor="true" button--modifier="pf-m-link pf-m-inline" button--url="#"}}
             View all learning resources
             {{#> button-icon button-icon--modifier="pf-m-end"}}
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              {{#> icon icon--modifier="pf-v5-m-mirror-inline-rtl"}}
+                {{#> icon-content}}
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                {{/icon-content}}
+              {{/icon}}
             {{/button-icon}}
           {{/button}}
         {{/l-flex}}
@@ -164,7 +180,7 @@ import './Card.css'
 ```hbs
 {{#> card card--id="card-demo-horizontal-split-example" card--modifier="pf-m-flat"}}
   {{#> grid grid--modifier="pf-m-all-6-col-on-md"}}
-    {{#> grid-item grid-item--modifier="pf-d-card__media-item" grid-item--attribute='style="min-height: 200px; background: center / cover url(\'/assets/images/pfbg_992@2x.jpg\'); "'}}
+    {{#> grid-item grid-item--attribute='style="min-height: 200px; background: no-repeat bottom right / auto 75% url(/assets/images/pfbg-icon.svg) black;"'}}
     {{/grid-item}}
     {{#> grid-item}}
       {{> card-title card-title-text--value="Headline"}}
@@ -703,7 +719,7 @@ import './Card.css'
   {{#> card card--id="utilization-card-3-example"}}
     {{#> card-header card-header--modifier="pf-v5-u-align-items-flex-start"}}
       {{#> card-header-main}}
-        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=('style="padding-top: 3px;"')}}
+        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=('style="padding-block-start: 3px;"')}}
           {{#> title title--modifier="pf-m-lg" titleType="h2"}}
             Recommendations
           {{/title}}
@@ -912,7 +928,7 @@ import './Card.css'
           Workload
         </span>
       {{/card-header-main}}
-      {{#> card-actions card-actions--modifier="pf-m-no-offset" card-actions--attribute='style="padding-top: 1px;"'}}
+      {{#> card-actions card-actions--modifier="pf-m-no-offset" card-actions--attribute='style="padding-block-start: 1px;"'}}
         {{#> select select--id=(concat card--id '-select-dropdown') select-menu--modifier="pf-m-align-right" select-toggle--modifier="pf-m-plain"}}
           Filter
         {{/select}}
@@ -973,7 +989,7 @@ import './Card.css'
         {{/select}}
       {{/card-actions}}
       {{#> card-header-main}}
-        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=(concat 'style="padding-top: 3px;"')}}
+        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=(concat 'style="padding-block-start: 3px;"')}}
           {{#> title title--modifier="pf-m-lg" titleType="h2"}}
             Activity
           {{/title}}
@@ -1049,7 +1065,7 @@ import './Card.css'
         {{/select}}
       {{/card-actions}}
       {{#> card-header-main}}
-        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=(concat 'style="padding-top: 3px;"')}}
+        {{#> card-title card-title--id=(concat card--id '-title1') card-title--attribute=(concat 'style="padding-block-start: 3px;"')}}
           {{#> title title--modifier="pf-m-lg" titleType="h2"}}
             Events
           {{/title}}

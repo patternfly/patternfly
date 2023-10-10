@@ -159,13 +159,13 @@
       align-self: stretch;
 
       &::before {
-        border-top-width: var(--#{$context-selector}--m-full-height__toggle--before--BorderTopWidth);
+        border-block-start-width: var(--#{$context-selector}--m-full-height__toggle--before--BorderTopWidth);
       }
     }
 
     &:hover {
       .#{$context-selector}__toggle::before {
-        border-bottom-width: var(--#{$context-selector}--m-full-height__toggle--hover--BorderBottomWidth);
+        border-block-end-width: var(--#{$context-selector}--m-full-height__toggle--hover--BorderBottomWidth);
       }
     }
   }
@@ -200,7 +200,10 @@
   column-gap: var(--#{$context-selector}__toggle--ColumnGap);
   align-items: center;
   width: 100%;
-  padding: var(--#{$context-selector}__toggle--PaddingTop) var(--#{$context-selector}__toggle--PaddingRight) var(--#{$context-selector}__toggle--PaddingBottom) var(--#{$context-selector}__toggle--PaddingLeft);
+  padding-block-start: var(--#{$context-selector}__toggle--PaddingTop);
+  padding-block-end: var(--#{$context-selector}__toggle--PaddingBottom);
+  padding-inline-start: var(--#{$context-selector}__toggle--PaddingLeft);
+  padding-inline-end: var(--#{$context-selector}__toggle--PaddingRight);
   color: var(--#{$context-selector}__toggle--Color);
   white-space: nowrap;
   cursor: pointer;
@@ -209,20 +212,23 @@
 
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     content: "";
     border: var(--#{$context-selector}__toggle--BorderWidth) solid;
-    border-color: var(--#{$context-selector}__toggle--BorderTopColor) var(--#{$context-selector}__toggle--BorderRightColor) var(--#{$context-selector}__toggle--BorderBottomColor) var(--#{$context-selector}__toggle--BorderLeftColor);
+    border-block-start-color: var(--#{$context-selector}__toggle--BorderTopColor);
+    border-block-end-color: var(--#{$context-selector}__toggle--BorderBottomColor);
+    border-inline-start-color: var(--#{$context-selector}__toggle--BorderLeftColor);
+    border-inline-end-color: var(--#{$context-selector}__toggle--BorderRightColor);
   }
 
   &:hover {
     &::before {
       --#{$context-selector}__toggle--BorderBottomColor: var(--#{$context-selector}__toggle--hover--BorderBottomColor);
 
-      border-bottom-width: var(--#{$context-selector}__toggle--hover--BorderBottomWidth);
+      border-block-end-width: var(--#{$context-selector}__toggle--hover--BorderBottomWidth);
     }
   }
 
@@ -232,7 +238,7 @@
     &::before {
       --#{$context-selector}__toggle--BorderBottomColor: var(--#{$context-selector}__toggle--active--BorderBottomColor);
 
-      border-bottom-width: var(--#{$context-selector}__toggle--active--BorderBottomWidth);
+      border-block-end-width: var(--#{$context-selector}__toggle--active--BorderBottomWidth);
     }
   }
 
@@ -240,7 +246,7 @@
     &::before {
       --#{$context-selector}__toggle--BorderBottomColor: var(--#{$context-selector}__toggle--expanded--BorderBottomColor);
 
-      border-bottom-width: var(--#{$context-selector}__toggle--expanded--BorderBottomWidth);
+      border-block-end-width: var(--#{$context-selector}__toggle--expanded--BorderBottomWidth);
     }
   }
 
@@ -286,13 +292,13 @@
     font-size: var(--#{$context-selector}__toggle-text--FontSize);
     font-weight: var(--#{$context-selector}__toggle-text--FontWeight);
     line-height: var(--#{$context-selector}__toggle-text--LineHeight);
-    text-align: left;
+    text-align: start;
   }
 }
 
 .#{$context-selector}__toggle-icon {
-  padding-right: var(--#{$context-selector}__toggle-icon--PaddingRight);
-  padding-left: var(--#{$context-selector}__toggle-icon--PaddingLeft);
+  padding-inline-start: var(--#{$context-selector}__toggle-icon--PaddingLeft);
+  padding-inline-end: var(--#{$context-selector}__toggle-icon--PaddingRight);
   color: var(--#{$context-selector}__toggle-icon--Color, inherit);
 }
 
@@ -300,7 +306,7 @@
   @include pf-v5-t-light;
 
   position: absolute;
-  top: var(--#{$context-selector}__menu--Top);
+  inset-block-start: var(--#{$context-selector}__menu--Top);
   z-index: var(--#{$context-selector}__menu--ZIndex);
   min-width: 100%;
   background-color: var(--#{$context-selector}__menu--BackgroundColor);
@@ -309,10 +315,10 @@
 
   &.pf-m-static {
     position: static;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+    inset-block-start: auto;
+    inset-block-end: auto;
+    inset-inline-start: auto;
+    inset-inline-end: auto;
     z-index: auto;
     min-width: min-content;
   }
@@ -320,19 +326,25 @@
 
 .#{$context-selector}__menu-search {
   position: relative;
-  padding: var(--#{$context-selector}__menu-search--PaddingTop) var(--#{$context-selector}__menu-search--PaddingRight) var(--#{$context-selector}__menu-search--PaddingBottom) var(--#{$context-selector}__menu-search--PaddingLeft);
-  border-bottom: var(--#{$context-selector}__menu-search--BorderBottomWidth) solid var(--#{$context-selector}__menu-search--BorderBottomColor);
+  padding-block-start: var(--#{$context-selector}__menu-search--PaddingTop);
+  padding-block-end: var(--#{$context-selector}__menu-search--PaddingBottom);
+  padding-inline-start: var(--#{$context-selector}__menu-search--PaddingLeft);
+  padding-inline-end: var(--#{$context-selector}__menu-search--PaddingRight);
+  border-block-end: var(--#{$context-selector}__menu-search--BorderBottomWidth) solid var(--#{$context-selector}__menu-search--BorderBottomColor);
 }
 
 .#{$context-selector}__menu-footer {
-  padding: var(--#{$context-selector}__menu-footer--PaddingTop) var(--#{$context-selector}__menu-footer--PaddingRight) var(--#{$context-selector}__menu-footer--PaddingBottom) var(--#{$context-selector}__menu-footer--PaddingLeft);
+  padding-block-start: var(--#{$context-selector}__menu-footer--PaddingTop);
+  padding-block-end: var(--#{$context-selector}__menu-footer--PaddingBottom);
+  padding-inline-start: var(--#{$context-selector}__menu-footer--PaddingLeft);
+  padding-inline-end: var(--#{$context-selector}__menu-footer--PaddingRight);
   box-shadow: var(--#{$context-selector}__menu-footer--BoxShadow);
 }
 
 .#{$context-selector}__menu-list {
   max-height: var(--#{$context-selector}__menu-list--MaxHeight);
-  padding-top: var(--#{$context-selector}__menu-list--PaddingTop);
-  padding-bottom: var(--#{$context-selector}__menu-list--PaddingBottom);
+  padding-block-start: var(--#{$context-selector}__menu-list--PaddingTop);
+  padding-block-end: var(--#{$context-selector}__menu-list--PaddingBottom);
   overflow-y: auto;
 }
 
@@ -340,7 +352,10 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: var(--#{$context-selector}__menu-list-item--PaddingTop) var(--#{$context-selector}__menu-list-item--PaddingRight) var(--#{$context-selector}__menu-list-item--PaddingBottom) var(--#{$context-selector}__menu-list-item--PaddingLeft);
+  padding-block-start: var(--#{$context-selector}__menu-list-item--PaddingTop);
+  padding-block-end: var(--#{$context-selector}__menu-list-item--PaddingBottom);
+  padding-inline-start: var(--#{$context-selector}__menu-list-item--PaddingLeft);
+  padding-inline-end: var(--#{$context-selector}__menu-list-item--PaddingRight);
   color: var(--#{$context-selector}__menu-list-item--Color);
   white-space: nowrap;
   background-color: var(--#{$context-selector}__menu-list-item--BackgroundColor);

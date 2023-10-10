@@ -3,15 +3,20 @@
 .#{$background-image} {
   --#{$background-image}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
   --#{$background-image}--BackgroundImage: none;
-  --#{$background-image}--BackgroundPosition: bottom right;
   --#{$background-image}--BackgroundSize--min-width: 200px;
   --#{$background-image}--BackgroundSize--width: 60%;
   --#{$background-image}--BackgroundSize--max-width: 600px;
   --#{$background-image}--BackgroundSize: clamp(var(--#{$background-image}--BackgroundSize--min-width), var(--#{$background-image}--BackgroundSize--width), var(--#{$background-image}--BackgroundSize--max-width));
 
+  @include pf-v5-bidirectional-style(
+    $prop: --#{$background-image}--BackgroundPosition,
+    $ltr-val: bottom right,
+    $rtl-val: bottom left
+  );
+
   position: fixed;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   z-index: -1;
   width: 100%;
   height: 100%;

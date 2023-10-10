@@ -23,3 +23,24 @@
   --#{$pf-global}--FontFamily--heading: var(--#{$pf-global}--FontFamily--heading--vf);
   --#{$pf-global}--FontFamily--monospace: var(--#{$pf-global}--FontFamily--monospace--vf);
 }
+
+// RTL helpers
+
+// Sets a block to RTL
+.#{$pf-prefix}m-dir-rtl {
+  @include pf-v5-set-inverse;
+
+  direction: rtl;
+}
+
+// Sets a block to LTR
+.#{$pf-prefix}m-dir-ltr {
+  @include pf-v5-set-inverse(false);
+
+  direction: ltr;
+}
+
+// Mirrors/flips something horizontally/inline in RTL
+.#{$pf-prefix}m-mirror-inline-rtl {
+  @include pf-v5-mirror-inline-on-rtl;
+}

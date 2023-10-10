@@ -36,7 +36,10 @@
   @include pf-v5-text-overflow;
 
   flex-shrink: 0;
-  padding: var(--#{$banner}--PaddingTop) var(--#{$banner}--PaddingRight) var(--#{$banner}--PaddingBottom) var(--#{$banner}--PaddingLeft);
+  padding-block-start: var(--#{$banner}--PaddingTop);
+  padding-block-end: var(--#{$banner}--PaddingBottom);
+  padding-inline-start: var(--#{$banner}--PaddingLeft);
+  padding-inline-end: var(--#{$banner}--PaddingRight);
   font-size: var(--#{$banner}--FontSize);
   color: var(--#{$banner}--Color);
   white-space: nowrap;
@@ -64,7 +67,7 @@
 
   &.pf-m-sticky {
     position: sticky;
-    top: 0;
+    inset-block-start: 0;
     z-index: var(--#{$banner}--m-sticky--ZIndex);
     box-shadow: var(--#{$banner}--m-sticky--BoxShadow);
   }

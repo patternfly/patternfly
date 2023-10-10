@@ -44,7 +44,7 @@
     &.pf-m-control:disabled {
       &::after {
         border: 0;
-        border-bottom: var(--#{$pf-global}--BorderWidth--sm) solid var(--#{$pf-global}--palette--black-700);
+        border-block-end: var(--#{$pf-global}--BorderWidth--sm) solid var(--#{$pf-global}--palette--black-700);
       }
     }
   }

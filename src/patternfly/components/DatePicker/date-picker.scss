@@ -21,7 +21,7 @@
 }
 
 .#{$date-picker}__helper-text {
-  margin-top: var(--#{$date-picker}__helper-text--MarginTop);
+  margin-block-start: var(--#{$date-picker}__helper-text--MarginTop);
 }
 
 .#{$date-picker}__input {
@@ -32,9 +32,9 @@
 
 .#{$date-picker}__calendar {
   position: absolute;
-  top: var(--#{$date-picker}__calendar--Top);
-  right: var(--#{$date-picker}__calendar--Right);
-  left: var(--#{$date-picker}__calendar--Left);
+  inset-block-start: var(--#{$date-picker}__calendar--Top);
+  inset-inline-start: var(--#{$date-picker}__calendar--Left);
+  inset-inline-end: var(--#{$date-picker}__calendar--Right);
   z-index: var(--#{$date-picker}__calendar--ZIndex);
   background-color: var(--#{$date-picker}__calendar--BackgroundColor);
   box-shadow: var(--#{$date-picker}__calendar--BoxShadow);
@@ -54,10 +54,10 @@
     --#{$date-picker}--m-top__calendar--TranslateY: 0;
 
     position: static;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+    inset-block-start: auto;
+    inset-block-end: auto;
+    inset-inline-start: auto;
+    inset-inline-end: auto;
     z-index: auto;
     min-width: min-content;
   }

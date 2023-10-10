@@ -241,14 +241,17 @@
 
   position: relative;
   z-index: var(--#{$wizard}__header--ZIndex);
-  padding: var(--#{$wizard}__header--PaddingTop) var(--#{$wizard}__header--PaddingRight) var(--#{$wizard}__header--PaddingBottom) var(--#{$wizard}__header--PaddingLeft);
+  padding-block-start: var(--#{$wizard}__header--PaddingTop);
+  padding-block-end: var(--#{$wizard}__header--PaddingBottom);
+  padding-inline-start: var(--#{$wizard}__header--PaddingLeft);
+  padding-inline-end: var(--#{$wizard}__header--PaddingRight);
   background-color: var(--#{$wizard}__header--BackgroundColor);
 
   // Nested selector to match button component color specificity
   .#{$wizard}__close {
     position: absolute;
-    top: var(--#{$wizard}__close--Top);
-    right: var(--#{$wizard}__close--Right);
+   inset-block-start: var(--#{$wizard}__close--Top);
+   inset-inline-end: var(--#{$wizard}__close--Right);
 
     button {
       font-size: var(--#{$wizard}__close--FontSize);
@@ -257,7 +260,7 @@
 }
 
 .#{$wizard}__title {
-  padding-right: var(--#{$wizard}__title--PaddingRight);
+  padding-inline-end: var(--#{$wizard}__title--PaddingRight);
   word-wrap: break-word;
 }
 
@@ -270,7 +273,7 @@
 
 .#{$wizard}__description {
   display: none;
-  padding-top: var(--#{$wizard}__description--PaddingTop);
+  padding-block-start: var(--#{$wizard}__description--PaddingTop);
   color: var(--#{$wizard}__description--Color);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
@@ -284,7 +287,10 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: var(--#{$wizard}__toggle--PaddingTop) var(--#{$wizard}__toggle--PaddingRight) var(--#{$wizard}__toggle--PaddingBottom) var(--#{$wizard}__toggle--PaddingLeft);
+  padding-block-start: var(--#{$wizard}__toggle--PaddingTop);
+  padding-block-end: var(--#{$wizard}__toggle--PaddingBottom);
+  padding-inline-start: var(--#{$wizard}__toggle--PaddingLeft);
+  padding-inline-end: var(--#{$wizard}__toggle--PaddingRight);
   background-color: var(--#{$wizard}__toggle--BackgroundColor);
   border: 0;
   box-shadow: var(--#{$wizard}__toggle--BoxShadow);
@@ -296,7 +302,7 @@
   &.pf-m-expanded {
     --#{$wizard}__toggle--BoxShadow: none;
 
-    border-bottom: var(--#{$wizard}__toggle--m-expanded--BorderBottomWidth) solid var(--#{$wizard}__toggle--m-expanded--BorderBottomColor);
+    border-block-end: var(--#{$wizard}__toggle--m-expanded--BorderBottomWidth) solid var(--#{$wizard}__toggle--m-expanded--BorderBottomColor);
 
     .#{$wizard}__toggle-icon {
       transform: rotate(var(--#{$wizard}__toggle--m-expanded__toggle-icon--Rotate));
@@ -309,18 +315,18 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  margin-right: var(--#{$wizard}__toggle-list--MarginRight);
-  margin-bottom: var(--#{$wizard}__toggle-list--MarginBottom);
+  margin-block-end: var(--#{$wizard}__toggle-list--MarginBottom);
+  margin-inline-end: var(--#{$wizard}__toggle-list--MarginRight);
   list-style: none;
 }
 
 .#{$wizard}__toggle-list-item {
-  margin-bottom: var(--#{$wizard}__toggle-list-item--MarginBottom);
-  text-align: left;
+  margin-block-end: var(--#{$wizard}__toggle-list-item--MarginBottom);
+  text-align: start;
   word-break: break-word;
 
   &:not(:last-child) {
-    margin-right: var(--#{$wizard}__toggle-list-item--not-last-child--MarginRight);
+    margin-inline-end: var(--#{$wizard}__toggle-list-item--not-last-child--MarginRight);
   }
 }
 
@@ -329,7 +335,9 @@
 }
 
 .#{$wizard}__toggle-separator {
-  margin-left: var(--#{$wizard}__toggle-separator--MarginLeft);
+  @include pf-v5-mirror-inline-on-rtl;
+
+  margin-inline-start: var(--#{$wizard}__toggle-separator--MarginLeft);
   color: var(--#{$wizard}__toggle-separator--Color);
 }
 
@@ -346,7 +354,7 @@
   background-color: var(--#{$wizard}__outer-wrap--BackgroundColor);
 
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
-    padding-left: var(--#{$wizard}__outer-wrap--lg--PaddingLeft);
+    padding-inline-start: var(--#{$wizard}__outer-wrap--lg--PaddingLeft);
   }
 }
 
@@ -364,8 +372,8 @@
 
 .#{$wizard}__nav {
   position: absolute;
-  top: 0;
-  left: 0;
+ inset-block-start: 0;
+ inset-inline-start: 0;
   z-index: var(--#{$wizard}__nav--ZIndex);
   display: none;
   width: var(--#{$wizard}__nav--Width);
@@ -382,23 +390,23 @@
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
     display: block;
     height: 100%;
-    border-right: var(--#{$wizard}__nav--lg--BorderRightWidth) solid var(--#{$wizard}__nav--lg--BorderRightColor);
+    border-inline-end: var(--#{$wizard}__nav--lg--BorderRightWidth) solid var(--#{$wizard}__nav--lg--BorderRightColor);
   }
 }
 
 .#{$wizard}__nav-list {
-  padding-top: var(--#{$wizard}__nav-list--PaddingTop);
-  padding-right: var(--#{$wizard}__nav-list--PaddingRight);
-  padding-bottom: var(--#{$wizard}__nav-list--PaddingBottom);
-  padding-left: var(--#{$wizard}__nav-list--PaddingLeft);
+  padding-block-start: var(--#{$wizard}__nav-list--PaddingTop);
+  padding-block-end: var(--#{$wizard}__nav-list--PaddingBottom);
+  padding-inline-start: var(--#{$wizard}__nav-list--PaddingLeft);
+  padding-inline-end: var(--#{$wizard}__nav-list--PaddingRight);
   list-style: none;
   counter-reset: wizard-nav-count;
 
   // Nested sub menus
   & & {
     padding: 0;
-    margin-top: var(--#{$wizard}__nav-list--nested--MarginTop);
-    margin-left: var(--#{$wizard}__nav-list--nested--MarginLeft);
+    margin-block-start: var(--#{$wizard}__nav-list--nested--MarginTop);
+    margin-inline-start: var(--#{$wizard}__nav-list--nested--MarginLeft);
 
     // Reset styles for nested nav links
     .#{$wizard}__nav-link {
@@ -415,7 +423,7 @@
 
 .#{$wizard}__nav-item {
   & + & {
-    margin-top: var(--#{$wizard}__nav-item--MarginTop);
+    margin-block-start: var(--#{$wizard}__nav-item--MarginTop);
   }
 
   &.pf-m-expandable {
@@ -444,7 +452,7 @@
   display: inline-block;
   width: 100%;
   color: var(--#{$wizard}__nav-link--Color);
-  text-align: left; // needed for when the item is a button
+  text-align: start; // needed for when the item is a button
   text-decoration: var(--#{$wizard}__nav-link--TextDecoration);
   word-break: break-word;
   background-color: var(--#{$wizard}__nav-link--BackgroundColor);
@@ -453,9 +461,15 @@
   // Common step number styles
   @at-root .#{$wizard}__toggle-num,
   &::before {
+    @include pf-v5-bidirectional-style(
+      $prop: transform,
+      $ltr-val: translateX(var(--#{$wizard}__nav-link--before--TranslateX)),
+      $rtl-val: translateX(#{pf-v5-calc-inverse(var(--#{$wizard}__nav-link--before--TranslateX))})
+    );
+
     position: absolute;
-    top: var(--#{$wizard}__nav-link--before--Top);
-    left: 0;
+    inset-block-start: var(--#{$wizard}__nav-link--before--Top);
+    inset-inline-start: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -466,12 +480,11 @@
     color: var(--#{$wizard}__nav-link--before--Color);
     background-color: var(--#{$wizard}__nav-link--before--BackgroundColor);
     border-radius: var(--#{$wizard}__nav-link--before--BorderRadius);
-    transform: translateX(var(--#{$wizard}__nav-link--before--TranslateX));
   }
 
   // Nav step number
   &::before {
-    top: 0;
+   inset-block-start: 0;
     content: counter(wizard-nav-count);
     counter-increment: wizard-nav-count;
   }
@@ -516,12 +529,14 @@
 }
 
 .#{$wizard}__nav-link-toggle {
-  padding-right: var(--#{$wizard}__nav-link-toggle--PaddingRight);
-  padding-left: var(--#{$wizard}__nav-link-toggle--PaddingLeft);
+  padding-inline-start: var(--#{$wizard}__nav-link-toggle--PaddingLeft);
+  padding-inline-end: var(--#{$wizard}__nav-link-toggle--PaddingRight);
   color: var(--#{$wizard}__nav-link-toggle--Color);
 }
 
 .#{$wizard}__nav-link-toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   display: inline-block;
   transition: var(--#{$wizard}__nav-link-toggle-icon--Transition);
   transform: rotate(var(--#{$wizard}__nav-link-toggle-icon--Rotate));
@@ -536,7 +551,10 @@
 }
 
 .#{$wizard}__main-body {
-  padding: var(--#{$wizard}__main-body--PaddingTop) var(--#{$wizard}__main-body--PaddingRight) var(--#{$wizard}__main-body--PaddingBottom) var(--#{$wizard}__main-body--PaddingLeft);
+  padding-block-start: var(--#{$wizard}__main-body--PaddingTop);
+  padding-block-end: var(--#{$wizard}__main-body--PaddingBottom);
+  padding-inline-start: var(--#{$wizard}__main-body--PaddingLeft);
+  padding-inline-end: var(--#{$wizard}__main-body--PaddingRight);
 
   &.pf-m-no-padding {
     padding: 0;
@@ -549,14 +567,17 @@
   display: flex;
   flex-shrink: 0;
   flex-wrap: wrap;
-  padding: var(--#{$wizard}__footer--PaddingTop) var(--#{$wizard}__footer--PaddingRight) var(--#{$wizard}__footer--PaddingBottom) var(--#{$wizard}__footer--PaddingLeft);
+  padding-block-start: var(--#{$wizard}__footer--PaddingTop);
+  padding-block-end: var(--#{$wizard}__footer--PaddingBottom);
+  padding-inline-start: var(--#{$wizard}__footer--PaddingLeft);
+  padding-inline-end: var(--#{$wizard}__footer--PaddingRight);
   background-color: var(--#{$wizard}__footer--BackgroundColor);
 
   > * {
-    margin-bottom: var(--#{$wizard}__footer--child--MarginBottom);
+    margin-block-end: var(--#{$wizard}__footer--child--MarginBottom);
 
     &:not(:last-child) {
-      margin-right: var(--#{$wizard}__footer--child--MarginRight);
+      margin-inline-end: var(--#{$wizard}__footer--child--MarginRight);
     }
   }
 
@@ -570,7 +591,7 @@
 }
 
 .#{$wizard}__footer-cancel {
-  margin-left: var(--#{$wizard}__footer-cancel--MarginLeft);
+  margin-inline-start: var(--#{$wizard}__footer-cancel--MarginLeft);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

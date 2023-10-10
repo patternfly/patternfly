@@ -627,7 +627,7 @@ Adjusting width with `.pf-m-flex-1`. In this example, all groups are set to `.pf
 ## Alignment
 
 ### Basic align right example
-Aligning right with `.pf-m-align-right`. This solution will always align element right by setting margin-left: auto, including when wrapped.
+Aligning right with `.pf-m-align-right`. This solution will always align element right by setting margin-inline-start: auto, including when wrapped.
 
 ```hbs
 {{#> l-flex l-flex--modifier="ws-example-flex-border"}}
@@ -822,8 +822,8 @@ Aligning right with `.pf-m-align-right`. This solution will always align element
 ### Alignment usage
 | Class | Applied to | Outcome |
 | -- | -- | -- |
-| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Modifies margin-left property to auto. |
-| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Resets margin-left property 0. |
+| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Modifies margin-inline-start property to auto. |
+| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Resets margin-inline-start property 0. |
 | `.pf-m-align-self-flex-start{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Modifies align-self property to flex-start. |
 | `.pf-m-align-self-flex-end{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Modifies align-self property to flex-end. |
 | `.pf-m-align-self-flex-center{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Modifies align-self property to center. |
@@ -1051,8 +1051,8 @@ Ordering - Ordering can be applied to nested `.pf-v5-l-flex` and `.pf-v5-l-flex_
 | `.pf-m-align-content-stretch{-on-[breakpoint]}` | `.pf-v5-l-flex` | Modifies the flex layout align-content property to stretch. |
 | `.pf-m-align-content-space-between{-on-[breakpoint]}` | `.pf-v5-l-flex` | Modifies the flex layout align-content property to space-between. |
 | `.pf-m-align-content-space-around{-on-[breakpoint]}` | `.pf-v5-l-flex` | Modifies the flex layout align-content property to space-around. |
-| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Resets the flex layout element margin-left property to 0. |
-| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Modifies the flex layout element margin-left property to auto. |
+| `.pf-m-align-left{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Resets the flex layout element margin-inline-start property to 0. |
+| `.pf-m-align-right{-on-[breakpoint]}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Modifies the flex layout element margin-inline-start property to auto. |
 | `--pf-v5-l-flex--item--Order{-on-[breakpoint]}: {order}` | `.pf-v5-l-flex > .pf-v5-l-flex`, `.pf-v5-l-flex__item` | Modifies the flex layout element order property. |
 
 ### Spacer system usage

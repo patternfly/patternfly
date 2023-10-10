@@ -46,7 +46,7 @@ Options: [
       {{#if toolbar-template--HasSortButton}}
         {{#> toolbar-item}}
           {{#> button button--modifier="pf-m-plain" button--attribute='aria-label="Sort"'}}
-            <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+            <i class="fas fa-sort-amount-down {{pfv "unset-prefix"}}m-mirror-inline-rtl" aria-hidden="true"></i>
           {{/button}}
         {{/toolbar-item}}
       {{/if}}
@@ -56,7 +56,7 @@ Options: [
         {{#> toolbar-item toolbar-item--modifier="pf-m-hidden-on-xl"}}
           {{#> options-menu options-menu--IsExpanded="true" options-menu--id="{{toolbar--id}}-sort-mobile-menu"}}
             {{#> options-menu-toggle options-menu-toggle--modifier="pf-m-plain" options-menu-toggle--attribute='aria-label="Sort by"'}}
-              <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+              <i class="fas fa-sort-amount-down {{pfv "unset-prefix"}}m-mirror-inline-rtl" aria-hidden="true"></i>
             {{/options-menu-toggle}}
             {{#> options-menu-menu}}
               {{#> options-menu-menu-item options-menu-menu-item--IsSelected="true"}}

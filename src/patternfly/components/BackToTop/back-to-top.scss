@@ -17,8 +17,8 @@
   }
 
   position: absolute;
-  right: var(--#{$back-to-top}--Right);
-  bottom: var(--#{$back-to-top}--Bottom);
+  inset-block-end: var(--#{$back-to-top}--Bottom);
+  inset-inline-end: var(--#{$back-to-top}--Right);
 
   &.pf-m-hidden {
     display: none;

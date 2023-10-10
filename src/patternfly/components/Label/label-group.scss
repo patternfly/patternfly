@@ -55,10 +55,10 @@
   align-items: center;
 
   &.pf-m-category {
-    padding-top: var(--#{$label-group}--m-category--PaddingTop);
-    padding-right: var(--#{$label-group}--m-category--PaddingRight);
-    padding-bottom: var(--#{$label-group}--m-category--PaddingBottom);
-    padding-left: var(--#{$label-group}--m-category--PaddingLeft);
+    padding-block-start: var(--#{$label-group}--m-category--PaddingTop);
+    padding-block-end: var(--#{$label-group}--m-category--PaddingBottom);
+    padding-inline-start: var(--#{$label-group}--m-category--PaddingLeft);
+    padding-inline-end: var(--#{$label-group}--m-category--PaddingRight);
     background-color: var(--#{$label-group}--m-category--BackgroundColor);
     border: var(--#{$label-group}--m-category--BorderWidth) solid var(--#{$label-group}--m-category--BorderColor);
     border-radius: var(--#{$label-group}--m-category--BorderRadius);
@@ -141,16 +141,19 @@
 
 .#{$label-group}__close {
   display: flex;
-  align-self: start;
-  margin-top: var(--#{$label-group}__close--MarginTop);
-  margin-right: var(--#{$label-group}__close--MarginRight);
-  margin-bottom: var(--#{$label-group}__close--MarginBottom);
-  margin-left: var(--#{$label-group}__close--MarginLeft);
+  align-self: flex-start;
+  margin-block-start: var(--#{$label-group}__close--MarginTop);
+  margin-block-end: var(--#{$label-group}__close--MarginBottom);
+  margin-inline-start: var(--#{$label-group}__close--MarginLeft);
+  margin-inline-end: var(--#{$label-group}__close--MarginRight);
 }
 
 .#{$label-group}__textarea {
   min-width: var(--#{$label-group}__textarea--MinWidth);
-  padding: var(--#{$label-group}__textarea--PaddingTop) var(--#{$label-group}__textarea--PaddingRight) var(--#{$label-group}__textarea--PaddingBottom) var(--#{$label-group}__textarea--PaddingLeft);
+  padding-block-start: var(--#{$label-group}__textarea--PaddingTop);
+  padding-block-end: var(--#{$label-group}__textarea--PaddingBottom);
+  padding-inline-start: var(--#{$label-group}__textarea--PaddingLeft);
+  padding-inline-end: var(--#{$label-group}__textarea--PaddingRight);
   white-space: nowrap;
   resize: none;
   border: 0;

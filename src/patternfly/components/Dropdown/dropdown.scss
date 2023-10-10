@@ -190,12 +190,12 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   position: relative;
   display: inline-flex;
-  align-items: start;
+  align-items: flex-start;
   max-width: 100%;
 
   .#{$divider} {
-    margin-top: var(--#{$dropdown}--c-divider--MarginTop);
-    margin-bottom: var(--#{$dropdown}--c-divider--MarginBottom);
+    margin-block-start: var(--#{$dropdown}--c-divider--MarginTop);
+    margin-block-end: var(--#{$dropdown}--c-divider--MarginBottom);
 
     // Support divider as last item in group to separate groups
     &:last-child {
@@ -205,7 +205,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
   > .#{$menu} {
     position: absolute;
-    top: var(--#{$dropdown}--c-menu--Top);
+   inset-block-start: var(--#{$dropdown}--c-menu--Top);
     z-index: var(--#{$dropdown}--c-menu--ZIndex);
   }
 
@@ -224,13 +224,13 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
       align-self: stretch;
 
       &::before {
-        border-top-width: var(--#{$dropdown}--m-full-height__toggle--before--BorderTopWidth);
+        border-block-start-width: var(--#{$dropdown}--m-full-height__toggle--before--BorderTopWidth);
       }
     }
 
     &:hover {
       .#{$dropdown}__toggle::before {
-        border-bottom-width: var(--#{$dropdown}--m-full-height__toggle--hover--before--BorderBottomWidth);
+        border-block-end-width: var(--#{$dropdown}--m-full-height__toggle--hover--before--BorderBottomWidth);
       }
     }
   }
@@ -248,7 +248,10 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   align-items: center;
   min-width: var(--#{$dropdown}__toggle--MinWidth);
   max-width: 100%;
-  padding: var(--#{$dropdown}__toggle--PaddingTop) var(--#{$dropdown}__toggle--PaddingRight) var(--#{$dropdown}__toggle--PaddingBottom) var(--#{$dropdown}__toggle--PaddingLeft);
+  padding-block-start: var(--#{$dropdown}__toggle--PaddingTop);
+  padding-block-end: var(--#{$dropdown}__toggle--PaddingBottom);
+  padding-inline-start: var(--#{$dropdown}__toggle--PaddingLeft);
+  padding-inline-end: var(--#{$dropdown}__toggle--PaddingRight);
   font-size: var(--#{$dropdown}__toggle--FontSize);
   font-weight: var(--#{$dropdown}__toggle--FontWeight);
   line-height: var(--#{$dropdown}__toggle--LineHeight);
@@ -259,13 +262,16 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   &::before,
   &.pf-m-action .#{$dropdown}__toggle-button::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     content: "";
     border: var(--#{$dropdown}__toggle--before--BorderWidth) solid;
-    border-color: var(--#{$dropdown}__toggle--before--BorderTopColor) var(--#{$dropdown}__toggle--before--BorderRightColor) var(--#{$dropdown}__toggle--before--BorderBottomColor) var(--#{$dropdown}__toggle--before--BorderLeftColor);
+    border-block-start-color: var(--#{$dropdown}__toggle--before--BorderTopColor);
+    border-block-end-color: var(--#{$dropdown}__toggle--before--BorderBottomColor);
+    border-inline-start-color: var(--#{$dropdown}__toggle--before--BorderLeftColor);
+    border-inline-end-color: var(--#{$dropdown}__toggle--before--BorderRightColor);
   }
 
   &.pf-m-disabled,
@@ -296,10 +302,10 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
     > * {
       position: relative;
-      padding-top: var(--#{$dropdown}__toggle--m-split-button--child--PaddingTop);
-      padding-right: var(--#{$dropdown}__toggle--m-split-button--child--PaddingRight);
-      padding-bottom: var(--#{$dropdown}__toggle--m-split-button--child--PaddingBottom);
-      padding-left: var(--#{$dropdown}__toggle--m-split-button--child--PaddingLeft);
+      padding-block-start: var(--#{$dropdown}__toggle--m-split-button--child--PaddingTop);
+      padding-block-end: var(--#{$dropdown}__toggle--m-split-button--child--PaddingBottom);
+      padding-inline-start: var(--#{$dropdown}__toggle--m-split-button--child--PaddingLeft);
+      padding-inline-end: var(--#{$dropdown}__toggle--m-split-button--child--PaddingRight);
 
       &:first-child {
         --#{$dropdown}__toggle--m-split-button--child--PaddingLeft: var(--#{$dropdown}__toggle--m-split-button--first-child--PaddingLeft);
@@ -315,11 +321,11 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
       --#{$dropdown}__toggle--m-split-button--child--PaddingLeft: var(--#{$dropdown}__toggle--m-split-button--m-action--child--PaddingLeft);
 
       .#{$dropdown}__toggle-button {
-        margin-right: var(--#{$dropdown}__toggle--m-split-button--m-action__toggle-button--MarginRight);
+        margin-inline-end: var(--#{$dropdown}__toggle--m-split-button--m-action__toggle-button--MarginRight);
 
         // stylelint-disable max-nesting-depth
         &::before {
-          border-left: 0;
+          border-inline-start: 0;
         }
 
         &:last-child {
@@ -331,7 +337,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
       &.pf-m-primary {
         // stylelint-disable max-nesting-depth, selector-max-class
         > :not(:first-child) {
-          border-left: var(--#{$dropdown}__toggle--m-split-button--m-primary--m-action--child--BorderLeftWidth) solid var(--#{$dropdown}__toggle--m-split-button--m-primary--m-action--child--BorderLeftColor);
+          border-inline-start: var(--#{$dropdown}__toggle--m-split-button--m-primary--m-action--child--BorderLeftWidth) solid var(--#{$dropdown}__toggle--m-split-button--m-primary--m-action--child--BorderLeftColor);
         }
 
         &.pf-m-disabled,
@@ -375,7 +381,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     }
 
     .#{$dropdown}__toggle-text {
-      margin-left: var(--#{$dropdown}__toggle--m-split-button__toggle-text--MarginLeft);
+      margin-inline-start: var(--#{$dropdown}__toggle--m-split-button__toggle-text--MarginLeft);
     }
   }
 
@@ -402,13 +408,13 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     }
 
     > :first-child {
-      border-top-left-radius: var(--#{$dropdown}__toggle--m-split-button--m-primary--child--BorderRadius);
-      border-bottom-left-radius: var(--#{$dropdown}__toggle--m-split-button--m-primary--child--BorderRadius);
+      border-start-start-radius: var(--#{$dropdown}__toggle--m-split-button--m-primary--child--BorderRadius);
+      border-end-start-radius: var(--#{$dropdown}__toggle--m-split-button--m-primary--child--BorderRadius);
     }
 
     > :last-child {
-      border-top-right-radius: var(--#{$dropdown}__toggle--m-split-button--m-primary--child--BorderRadius);
-      border-bottom-right-radius: var(--#{$dropdown}__toggle--m-split-button--m-primary--child--BorderRadius);
+      border-start-end-radius: var(--#{$dropdown}__toggle--m-split-button--m-primary--child--BorderRadius);
+      border-end-end-radius: var(--#{$dropdown}__toggle--m-split-button--m-primary--child--BorderRadius);
     }
   }
 
@@ -426,7 +432,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     &::before {
       --#{$dropdown}__toggle--before--BorderBottomColor: var(--#{$dropdown}__toggle--focus--before--BorderBottomColor);
 
-      border-bottom-width: var(--#{$dropdown}__toggle--focus--before--BorderBottomWidth);
+      border-block-end-width: var(--#{$dropdown}__toggle--focus--before--BorderBottomWidth);
     }
   }
 
@@ -436,7 +442,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     &::before {
       --#{$dropdown}__toggle--before--BorderBottomColor: var(--#{$dropdown}__toggle--active--before--BorderBottomColor);
 
-      border-bottom-width: var(--#{$dropdown}__toggle--active--before--BorderBottomWidth);
+      border-block-end-width: var(--#{$dropdown}__toggle--active--before--BorderBottomWidth);
     }
   }
 
@@ -445,7 +451,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     &::before {
       --#{$dropdown}__toggle--before--BorderBottomColor: var(--#{$dropdown}--m-expanded__toggle--before--BorderBottomColor);
 
-      border-bottom-width: var(--#{$dropdown}--m-expanded__toggle--before--BorderBottomWidth);
+      border-block-end-width: var(--#{$dropdown}--m-expanded__toggle--before--BorderBottomWidth);
     }
   }
 
@@ -579,21 +585,21 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
       }
 
       &:first-child::before {
-        border-top-left-radius: var(--#{$dropdown}__toggle--m-split-button--child--BorderRadius);
-        border-bottom-left-radius: var(--#{$dropdown}__toggle--m-split-button--child--BorderRadius);
+        border-start-start-radius: var(--#{$dropdown}__toggle--m-split-button--child--BorderRadius);
+        border-end-start-radius: var(--#{$dropdown}__toggle--m-split-button--child--BorderRadius);
       }
 
       &:last-child::before {
-        border-top-right-radius: var(--#{$dropdown}__toggle--m-split-button--child--BorderRadius);
-        border-bottom-right-radius: var(--#{$dropdown}__toggle--m-split-button--child--BorderRadius);
+        border-start-end-radius: var(--#{$dropdown}__toggle--m-split-button--child--BorderRadius);
+        border-end-end-radius: var(--#{$dropdown}__toggle--m-split-button--child--BorderRadius);
       }
 
       &:not(:first-child)::before {
-        border-left: var(--#{$dropdown}__toggle--m-secondary--m-split-button--child--before--BorderWidth--base) solid var(--#{$dropdown}__toggle--m-secondary--m-split-button--child--before--BorderColor--base);
+        border-inline-start: var(--#{$dropdown}__toggle--m-secondary--m-split-button--child--before--BorderWidth--base) solid var(--#{$dropdown}__toggle--m-secondary--m-split-button--child--before--BorderColor--base);
       }
 
       &:not(:last-child)::before {
-        border-right: 0;
+        border-inline-end: 0;
       }
     }
 
@@ -621,13 +627,13 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
 .#{$dropdown}__toggle-text {
   flex: 1 1 auto;
-  text-align: left;
+  text-align: start;
 }
 
 .#{$dropdown}__toggle-icon {
-  padding-right: var(--#{$dropdown}__toggle-icon--PaddingRight);
-  padding-left: var(--#{$dropdown}__toggle-icon--PaddingLeft);
-  margin-left: var(--#{$dropdown}__toggle-icon--MarginLeft);
+  padding-inline-start: var(--#{$dropdown}__toggle-icon--PaddingLeft);
+  padding-inline-end: var(--#{$dropdown}__toggle-icon--PaddingRight);
+  margin-inline-start: var(--#{$dropdown}__toggle-icon--MarginLeft);
   line-height: var(--#{$dropdown}__toggle-icon--LineHeight);
   color: var(--#{$dropdown}__toggle-icon--Color, inherit);
 
@@ -647,7 +653,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 // Loading spinner
 .#{$dropdown}__toggle-progress {
   position: absolute;
-  left: var(--#{$dropdown}__toggle--m-split-button--child--PaddingLeft);
+ inset-inline-start: var(--#{$dropdown}__toggle--m-split-button--child--PaddingLeft);
   visibility: var(--#{$dropdown}__toggle-progress--Visibility);
 
   .#{$spinner} {
@@ -657,10 +663,10 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
 .#{$dropdown}__menu {
   position: absolute;
-  top: var(--#{$dropdown}__menu--Top);
+ inset-block-start: var(--#{$dropdown}__menu--Top);
   z-index: var(--#{$dropdown}__menu--ZIndex);
-  padding-top: var(--#{$dropdown}__menu--PaddingTop);
-  padding-bottom: var(--#{$dropdown}__menu--PaddingBottom);
+  padding-block-start: var(--#{$dropdown}__menu--PaddingTop);
+  padding-block-end: var(--#{$dropdown}__menu--PaddingBottom);
   background: var(--#{$dropdown}__menu--BackgroundColor);
   background-clip: padding-box;
   box-shadow: var(--#{$dropdown}__menu--BoxShadow);
@@ -669,10 +675,10 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
     --#{$dropdown}--m-top__menu--TranslateY: 0;
 
     position: static;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+    inset-block-start: auto;
+    inset-block-end: auto;
+    inset-inline-start: auto;
+    inset-inline-end: auto;
     z-index: auto;
     min-width: min-content;
   }
@@ -687,12 +693,12 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
     @include pf-v5-apply-breakpoint($breakpoint) {
       &.pf-m-align-right#{$breakpoint-name} {
-        right: 0;
+       inset-inline-end: 0;
       }
 
       // unset alignment set for .pf-m-align-right
       &.pf-m-align-left#{$breakpoint-name} {
-        right: auto;
+       inset-inline-end: auto;
       }
     }
   }
@@ -715,12 +721,15 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 .#{$dropdown}__menu-item {
   display: block;
   width: 100%;
-  padding: var(--#{$dropdown}__menu-item--PaddingTop) var(--#{$dropdown}__menu-item--PaddingRight) var(--#{$dropdown}__menu-item--PaddingBottom) var(--#{$dropdown}__menu-item--PaddingLeft);
+  padding-block-start: var(--#{$dropdown}__menu-item--PaddingTop);
+  padding-block-end: var(--#{$dropdown}__menu-item--PaddingBottom);
+  padding-inline-start: var(--#{$dropdown}__menu-item--PaddingLeft);
+  padding-inline-end: var(--#{$dropdown}__menu-item--PaddingRight);
   font-size: var(--#{$dropdown}__menu-item--FontSize);
   font-weight: var(--#{$dropdown}__menu-item--FontWeight);
   line-height: var(--#{$dropdown}__menu-item--LineHeight);
   color: var(--#{$dropdown}__menu-item--Color);
-  text-align: left;
+  text-align: start;
   white-space: nowrap;
   background-color: var(--#{$dropdown}__menu-item--BackgroundColor);
   border: none;
@@ -755,7 +764,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
     &.pf-m-description {
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
     }
 
     .#{$dropdown}__menu-item-main {
@@ -780,7 +789,7 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
   justify-content: center;
   width: var(--#{$dropdown}__menu-item-icon--Width);
   height: var(--#{$dropdown}__menu-item-icon--Height);
-  margin-right: var(--#{$dropdown}__menu-item-icon--MarginRight);
+  margin-inline-end: var(--#{$dropdown}__menu-item-icon--MarginRight);
 
   > * {
     max-width: 100%;
@@ -794,14 +803,14 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 }
 
 .#{$dropdown}__group + .#{$dropdown}__group {
-  padding-top: var(--#{$dropdown}__group--group--PaddingTop);
+  padding-block-start: var(--#{$dropdown}__group--group--PaddingTop);
 }
 
 .#{$dropdown}__group-title {
-  padding-top: var(--#{$dropdown}__group-title--PaddingTop);
-  padding-right: var(--#{$dropdown}__group-title--PaddingRight);
-  padding-bottom: var(--#{$dropdown}__group-title--PaddingBottom);
-  padding-left: var(--#{$dropdown}__group-title--PaddingLeft);
+  padding-block-start: var(--#{$dropdown}__group-title--PaddingTop);
+  padding-block-end: var(--#{$dropdown}__group-title--PaddingBottom);
+  padding-inline-start: var(--#{$dropdown}__group-title--PaddingLeft);
+  padding-inline-end: var(--#{$dropdown}__group-title--PaddingRight);
   font-size: var(--#{$dropdown}__group-title--FontSize);
   font-weight: var(--#{$dropdown}__group-title--FontWeight);
   color: var(--#{$dropdown}__group-title--Color);

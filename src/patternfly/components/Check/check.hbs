@@ -1,9 +1,41 @@
-<{{#if check--type}}{{check--type}}{{else}}div{{/if}} class="{{pfv}}check{{#if check--modifier}} {{check--modifier}}{{/if}}"
+<{{#if check--IsLabelWrapped}}label{{else if check--type}}{{check--type}}{{else}}div{{/if}} class="{{pfv}}check
+  {{#if check--IsStandalone}}
+    pf-m-standalone
+  {{/if}}
+  {{#if check--modifier}}
+    {{check--modifier}}
+  {{/if}}"
+  {{#if check--id}}
+    id="{{check--id}}"
+  {{/if}}
+  {{#if check--IsLabelWrapped}}
+    for="{{check--id}}-input"
+  {{/if}}
   {{#if check--attribute}}
     {{{check--attribute}}}
   {{/if}}>
-  {{> @partial-block
-    check-input--IsDisabled=check--IsDisabled
-    check-label--IsDisabled=check--IsDisabled
-  }}
-</{{#if check--type}}{{check--type}}{{else}}div{{/if}}>
+  {{#> attribute-config
+      check-input--IsDisabled=check--IsDisabled
+      check-label--IsDisabled=check--IsDisabled
+    }}
+    {{#if check-label--text}}
+      {{#if check--IsReversed}}
+        {{> check-label}}
+      {{/if}}
+      {{> check-input}}
+      {{#unless check--IsReversed}}
+        {{> check-label}}
+      {{/unless}}
+    {{else if check--IsStandalone}}
+      {{> check-input}}
+    {{else if @partial-block}}
+      {{> @partial-block}}
+    {{/if}}
+    {{#if check-description--text}}
+      {{> check-description}}
+    {{/if}}
+    {{#if check-body--text}}
+      {{> check-body}}
+    {{/if}}
+  {{/attribute-config}}
+</{{#if check--IsLabelWrapped}}label{{else if check--type}}{{check--type}}{{else}}div{{/if}}>

@@ -19,6 +19,6 @@
   }
 
   .#{$context-selector}__menu-footer {
-    border-top: 1px solid var(--#{$pf-global}--BorderColor--300);
+    border-block-start: 1px solid var(--#{$pf-global}--BorderColor--300);
   }
 }

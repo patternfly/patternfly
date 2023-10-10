@@ -6,8 +6,8 @@
   display: none;
   position: absolute;
   z-index: 9999;
-  top: 52px;
-  right: 78px;
+ inset-block-start: 52px;
+ inset-inline-end: 78px;
 }
 
 @media screen and (min-width: 992px) {

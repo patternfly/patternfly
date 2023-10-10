@@ -5,7 +5,7 @@
 .ws-example-wrapper .pf-v5-c-menu,
 .ws-example-wrapper .pf-v5-c-panel {
   position: absolute;
-  top: 40px;
+ inset-block-start: 40px;
   width: 100%;
 }
 

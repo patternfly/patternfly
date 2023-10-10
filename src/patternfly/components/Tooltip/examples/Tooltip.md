@@ -4,6 +4,8 @@ section: components
 cssPrefix: pf-v5-c-tooltip
 ---
 
+import "./Tooltip.css"
+
 ## Examples
 ### Top
 ```hbs

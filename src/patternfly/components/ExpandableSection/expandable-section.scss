@@ -86,9 +86,9 @@
 
     &::after {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
+     inset-block-start: 0;
+     inset-block-end: 0;
+     inset-inline-start: 0;
       width: var(--#{$expandable-section}--m-display-lg--after--Width);
       content: "";
       background-color: var(--#{$expandable-section}--m-display-lg--after--BackgroundColor);
@@ -123,8 +123,11 @@
 
 .#{$expandable-section}__toggle {
   display: flex;
-  padding: var(--#{$expandable-section}__toggle--PaddingTop) var(--#{$expandable-section}__toggle--PaddingRight) var(--#{$expandable-section}__toggle--PaddingBottom) var(--#{$expandable-section}__toggle--PaddingLeft);
-  margin-top: var(--#{$expandable-section}__toggle--MarginTop);
+  padding-block-start: var(--#{$expandable-section}__toggle--PaddingTop);
+  padding-block-end: var(--#{$expandable-section}__toggle--PaddingBottom);
+  padding-inline-start: var(--#{$expandable-section}__toggle--PaddingLeft);
+  padding-inline-end: var(--#{$expandable-section}__toggle--PaddingRight);
+  margin-block-start: var(--#{$expandable-section}__toggle--MarginTop);
   color: var(--#{$expandable-section}__toggle--Color);
   background-color: var(--#{$expandable-section}__toggle--BackgroundColor);
   border: none;
@@ -144,6 +147,8 @@
 }
 
 .#{$expandable-section}__toggle-icon {
+  @include pf-v5-mirror-inline-on-rtl;
+
   min-width: var(--#{$expandable-section}__toggle-icon--MinWidth);
   color: var(--#{$expandable-section}__toggle-icon--Color);
   transition: var(--#{$expandable-section}__toggle-icon--Transition);
@@ -155,13 +160,13 @@
 }
 
 .#{$expandable-section}__toggle-text {
-  margin-left: var(--#{$expandable-section}__toggle-text--MarginLeft);
+  margin-inline-start: var(--#{$expandable-section}__toggle-text--MarginLeft);
 }
 
 .#{$expandable-section}__content {
   max-width: var(--#{$expandable-section}__content--MaxWidth);
-  padding-right: var(--#{$expandable-section}__content--PaddingRight);
-  padding-bottom: var(--#{$expandable-section}__content--PaddingBottom);
-  padding-left: var(--#{$expandable-section}__content--PaddingLeft);
-  margin-top: var(--#{$expandable-section}__content--MarginTop);
+  padding-block-end: var(--#{$expandable-section}__content--PaddingBottom);
+  padding-inline-start: var(--#{$expandable-section}__content--PaddingLeft);
+  padding-inline-end: var(--#{$expandable-section}__content--PaddingRight);
+  margin-block-start: var(--#{$expandable-section}__content--MarginTop);
 }

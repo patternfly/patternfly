@@ -18,8 +18,8 @@
 
   display: inline-block;
   min-width: var(--#{$badge}--MinWidth);
-  padding-right: var(--#{$badge}--PaddingRight);
-  padding-left: var(--#{$badge}--PaddingLeft);
+  padding-inline-start: var(--#{$badge}--PaddingLeft);
+  padding-inline-end: var(--#{$badge}--PaddingRight);
   font-size: var(--#{$badge}--FontSize);
   font-weight: var(--#{$badge}--FontWeight);
   color: var(--#{$badge}--Color);

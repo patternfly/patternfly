@@ -36,80 +36,93 @@
   max-width: var(--#{$tooltip}--MaxWidth);
   box-shadow: var(--#{$tooltip}--BoxShadow);
 
-  &.pf-m-top,
-  &.pf-m-top-left,
-  &.pf-m-top-right {
-    .#{$tooltip}__arrow {
-      bottom: 0;
-      left: 50%;
-      transform: translateX(var(--#{$tooltip}__arrow--m-top--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-top--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-top--Rotate));
-    }
+  &:is(
+    .pf-m-top,
+    .pf-m-top-left,
+    .pf-m-top-right
+  ) {
+    --#{$tooltip}__arrow--Bottom: var(--#{$tooltip}--m-top--Bottom, 0);
+    --#{$tooltip}__arrow--Left: var(--#{$tooltip}--m-top--Left, 50%);
+    --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-top--TranslateX);
+    --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-top--TranslateY);
+    --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-top--Rotate);
   }
 
-  &.pf-m-bottom,
-  &.pf-m-bottom-left,
-  &.pf-m-bottom-right {
-    .#{$tooltip}__arrow {
-      top: 0;
-      left: 50%;
-      transform: translateX(var(--#{$tooltip}__arrow--m-bottom--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-bottom--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-bottom--Rotate));
-    }
+  &:is(
+    .pf-m-bottom,
+    .pf-m-bottom-left,
+    .pf-m-bottom-right
+   ) {
+    --#{$tooltip}__arrow--Top: var(--#{$tooltip}--m-bottom--Top, 0);
+    --#{$tooltip}__arrow--Left: var(--#{$tooltip}--m-bottom--Left, 50%);
+    --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-bottom--TranslateX);
+    --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-bottom--TranslateY);
+    --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-bottom--Rotate);
   }
 
-  &.pf-m-left,
-  &.pf-m-left-top,
-  &.pf-m-left-bottom {
-    .#{$tooltip}__arrow {
-      top: 50%;
-      right: 0;
-      transform: translateX(var(--#{$tooltip}__arrow--m-left--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-left--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-left--Rotate));
-    }
+  &:is(
+    .pf-m-left,
+    .pf-m-left-top,
+    .pf-m-left-bottom
+  ) {
+    --#{$tooltip}__arrow--Top: var(--#{$tooltip}--m-left--Top, 50%);
+    --#{$tooltip}__arrow--Right: var(--#{$tooltip}--m-left--Right, 0);
+    --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-left--TranslateX);
+    --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-left--TranslateY);
+    --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-left--Rotate);
   }
 
-  &.pf-m-right,
-  &.pf-m-right-top,
-  &.pf-m-right-bottom {
-    .#{$tooltip}__arrow {
-      top: 50%;
-      left: 0;
-      transform: translateX(var(--#{$tooltip}__arrow--m-right--TranslateX)) translateY(var(--#{$tooltip}__arrow--m-right--TranslateY)) rotate(var(--#{$tooltip}__arrow--m-right--Rotate));
-    }
+  &:is(
+    .pf-m-right,
+    .pf-m-right-top,
+    .pf-m-right-bottom
+  ) {
+    --#{$tooltip}__arrow--Top: var(--#{$tooltip}--m-right--Top, 50%);
+    --#{$tooltip}__arrow--Left: var(--#{$tooltip}--m-right--Left, 0);
+    --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-right--TranslateX);
+    --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-right--TranslateY);
+    --#{$tooltip}__arrow--Rotate: var(--#{$tooltip}__arrow--m-right--Rotate);
   }
 
-  &.pf-m-left-top,
-  &.pf-m-right-top {
-    .#{$tooltip}__arrow {
-      top: var(--#{$tooltip}__arrow--Height);
-    }
+  &:is(
+    .pf-m-left-top,
+    .pf-m-right-top
+  ) {
+    --#{$tooltip}__arrow--Top: 0;
+    --#{$tooltip}__arrow--TranslateY: var(--#{$tooltip}__arrow--m-top--TranslateY);
   }
 
-  &.pf-m-left-bottom,
-  &.pf-m-right-bottom {
-    .#{$tooltip}__arrow {
-      top: auto;
-      bottom: 0;
-    }
+  &:is(
+    .pf-m-left-bottom,
+    .pf-m-right-bottom
+  ) {
+    --#{$tooltip}__arrow--Top: auto;
+    --#{$tooltip}__arrow--Bottom: 0;
   }
 
-  &.pf-m-top-left,
-  &.pf-m-bottom-left {
-    .#{$tooltip}__arrow {
-      left: var(--#{$tooltip}__arrow--Width);
-    }
+  &:is(
+    .pf-m-top-left,
+    .pf-m-bottom-left
+  ) {
+    --#{$tooltip}__arrow--Left: 0;
+    --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-left--TranslateX);
   }
 
-  &.pf-m-top-right,
-  &.pf-m-bottom-right {
-    .#{$tooltip}__arrow {
-      right: 0;
-      left: auto;
-    }
+  &:is(
+    .pf-m-top-right,
+    .pf-m-bottom-right
+  ) {
+    --#{$tooltip}__arrow--Right: 0;
+    --#{$tooltip}__arrow--Left: auto;
   }
 }
 
 .#{$tooltip}__content {
   position: relative;
-  padding: var(--#{$tooltip}__content--PaddingTop) var(--#{$tooltip}__content--PaddingRight) var(--#{$tooltip}__content--PaddingBottom) var(--#{$tooltip}__content--PaddingLeft);
+  padding-block-start: var(--#{$tooltip}__content--PaddingTop);
+  padding-block-end: var(--#{$tooltip}__content--PaddingBottom);
+  padding-inline-start: var(--#{$tooltip}__content--PaddingLeft);
+  padding-inline-end: var(--#{$tooltip}__content--PaddingRight);
   font-size: var(--#{$tooltip}__content--FontSize);
   color: var(--#{$tooltip}__content--Color);
   text-align: center;
@@ -117,17 +130,24 @@
   background-color: var(--#{$tooltip}__content--BackgroundColor);
 
   &.pf-m-text-align-left {
-    text-align: left;
+    text-align: start;
   }
 }
 
 .#{$tooltip}__arrow {
   position: absolute;
+  /* stylelint-disable liberty/use-logical-spec */
+  top: var(--#{$tooltip}__arrow--Top, auto);
+  right: var(--#{$tooltip}__arrow--Right, auto);
+  bottom: var(--#{$tooltip}__arrow--Bottom, auto);
+  left: var(--#{$tooltip}__arrow--Left, auto);
+  /* stylelint-enable */
   width: var(--#{$tooltip}__arrow--Width);
   height: var(--#{$tooltip}__arrow--Height);
   pointer-events: none;
   background-color: var(--#{$tooltip}__arrow--BackgroundColor);
   box-shadow: var(--#{$tooltip}__arrow--BoxShadow);
+  transform: translateX(var(--#{$tooltip}__arrow--TranslateX, 0)) translateY(var(--#{$tooltip}__arrow--TranslateY, 0)) rotate(var(--#{$tooltip}__arrow--Rotate, 0));
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

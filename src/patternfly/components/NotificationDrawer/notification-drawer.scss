@@ -111,7 +111,10 @@
   display: flex;
   flex-shrink: 0;
   align-items: baseline;
-  padding: var(--#{$notification-drawer}__header--PaddingTop) var(--#{$notification-drawer}__header--PaddingRight) var(--#{$notification-drawer}__header--PaddingBottom) var(--#{$notification-drawer}__header--PaddingLeft);
+  padding-block-start: var(--#{$notification-drawer}__header--PaddingTop);
+  padding-block-end: var(--#{$notification-drawer}__header--PaddingBottom);
+  padding-inline-start: var(--#{$notification-drawer}__header--PaddingLeft);
+  padding-inline-end: var(--#{$notification-drawer}__header--PaddingRight);
   background-color: var(--#{$notification-drawer}__header--BackgroundColor);
   box-shadow: var(--#{$notification-drawer}__header--BoxShadow);
 }
@@ -121,13 +124,13 @@
 }
 
 .#{$notification-drawer}__header-status {
-  margin-left: var(--#{$notification-drawer}__header-status--MarginLeft);
+  margin-inline-start: var(--#{$notification-drawer}__header-status--MarginLeft);
 }
 
 .#{$notification-drawer}__header-action {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 
 .#{$notification-drawer}__body {
@@ -140,9 +143,12 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr auto;
-  padding: var(--#{$notification-drawer}__list-item--PaddingTop) var(--#{$notification-drawer}__list-item--PaddingRight) var(--#{$notification-drawer}__list-item--PaddingBottom) var(--#{$notification-drawer}__list-item--PaddingLeft);
+  padding-block-start: var(--#{$notification-drawer}__list-item--PaddingTop);
+  padding-block-end: var(--#{$notification-drawer}__list-item--PaddingBottom);
+  padding-inline-start: var(--#{$notification-drawer}__list-item--PaddingLeft);
+  padding-inline-end: var(--#{$notification-drawer}__list-item--PaddingRight);
   background-color: var(--#{$notification-drawer}__list-item--BackgroundColor);
-  border-bottom: var(--#{$notification-drawer}__list-item--BorderBottomWidth) solid var(--#{$notification-drawer}__list-item--BorderBottomColor);
+  border-block-end: var(--#{$notification-drawer}__list-item--BorderBottomWidth) solid var(--#{$notification-drawer}__list-item--BorderBottomColor);
   outline-offset: var(--#{$notification-drawer}__list-item--OutlineOffset);
   box-shadow: var(--#{$notification-drawer}__list-item--BoxShadow);
 
@@ -158,8 +164,8 @@
 
   &::before {
     position: absolute;
-    top: var(--#{$notification-drawer}__list-item--before--Top);
-    bottom: var(--#{$notification-drawer}__list-item--before--Bottom);
+   inset-block-start: var(--#{$notification-drawer}__list-item--before--Top);
+   inset-block-end: var(--#{$notification-drawer}__list-item--before--Bottom);
     width: var(--#{$notification-drawer}__list-item--before--Width);
     content: "";
     background-color: var(--#{$notification-drawer}__list-item--before--BackgroundColor);
@@ -216,11 +222,11 @@
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   align-items: baseline;
-  margin-bottom: var(--#{$notification-drawer}__list-item-header--MarginBottom);
+  margin-block-end: var(--#{$notification-drawer}__list-item-header--MarginBottom);
 }
 
 .#{$notification-drawer}__list-item-header-icon {
-  margin-right: var(--#{$notification-drawer}__list-item-header-icon--MarginRight);
+  margin-inline-end: var(--#{$notification-drawer}__list-item-header-icon--MarginRight);
   color: var(--#{$notification-drawer}__list-item-header-icon--Color);
 }
 
@@ -241,7 +247,7 @@
 .#{$notification-drawer}__list-item-description {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
-  margin-bottom: var(--#{$notification-drawer}__list-item-description--MarginBottom);
+  margin-block-end: var(--#{$notification-drawer}__list-item-description--MarginBottom);
   word-break: break-word;
 }
 
@@ -262,7 +268,7 @@
     min-height: var(--#{$notification-drawer}__group--m-expanded--MinHeight);
 
     + .#{$notification-drawer}__group {
-      border-top: var(--#{$notification-drawer}__group--m-expanded--group--BorderTopWidth) solid var(--#{$notification-drawer}__group--m-expanded--group--BorderTopColor);
+      border-block-start: var(--#{$notification-drawer}__group--m-expanded--group--BorderTopWidth) solid var(--#{$notification-drawer}__group--m-expanded--group--BorderTopColor);
     }
   }
 
@@ -276,10 +282,13 @@
   display: flex;
   align-items: baseline;
   width: 100%;
-  padding: var(--#{$notification-drawer}__group-toggle--PaddingTop) var(--#{$notification-drawer}__group-toggle--PaddingRight) var(--#{$notification-drawer}__group-toggle--PaddingBottom) var(--#{$notification-drawer}__group-toggle--PaddingLeft);
+  padding-block-start: var(--#{$notification-drawer}__group-toggle--PaddingTop);
+  padding-block-end: var(--#{$notification-drawer}__group-toggle--PaddingBottom);
+  padding-inline-start: var(--#{$notification-drawer}__group-toggle--PaddingLeft);
+  padding-inline-end: var(--#{$notification-drawer}__group-toggle--PaddingRight);
   background-color: var(--#{$notification-drawer}__group-toggle--BackgroundColor);
-  border: solid var(--#{$notification-drawer}__group-toggle--BorderColor);
-  border-width: 0 0 var(--#{$notification-drawer}__group-toggle--BorderBottomWidth) 0;
+  border: 0 solid var(--#{$notification-drawer}__group-toggle--BorderColor);
+  border-block-end-width: var(--#{$notification-drawer}__group-toggle--BorderBottomWidth);
   outline-offset: var(--#{$notification-drawer}__group-toggle--OutlineOffset);
 }
 
@@ -287,18 +296,20 @@
   @include pf-v5-line-clamp("var(--#{$notification-drawer}__group-toggle-title--max-lines)");
 
   flex: 1;
-  margin-right: var(--#{$notification-drawer}__group-toggle-title--MarginRight);
-  text-align: left;
+  margin-inline-end: var(--#{$notification-drawer}__group-toggle-title--MarginRight);
+  text-align: start;
   word-break: break-word;
 }
 
 .#{$notification-drawer}__group-toggle-count {
-  margin-right: var(--#{$notification-drawer}__group-toggle-count--MarginRight);
-  margin-left: auto;
+  margin-inline-start: auto;
+  margin-inline-end: var(--#{$notification-drawer}__group-toggle-count--MarginRight);
 }
 
 .#{$notification-drawer}__group-toggle-icon {
-  margin-right: var(--#{$notification-drawer}__group-toggle-icon--MarginRight);
+  @include pf-v5-mirror-inline-on-rtl;
+
+  margin-inline-end: var(--#{$notification-drawer}__group-toggle-icon--MarginRight);
   color: var(--#{$notification-drawer}__group-toggle-icon--Color);
   transition: var(--#{$notification-drawer}__group-toggle-icon--Transition);
 
