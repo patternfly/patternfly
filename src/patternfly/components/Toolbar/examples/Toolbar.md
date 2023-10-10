@@ -656,16 +656,18 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | `.pf-m-full-height` | `.pf-v5-c-toolbar`, `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__group` | Modifies toolbar component to full height of its container and removes vertical padding. |
 | `.pf-m-static` | `.pf-v5-c-toolbar` | Modifies expandable content section to position itself to the nearest absolutely positioned parent outside of the toolbar component. This is used primarily for masthead toolbar. |
 | `.pf-m-expanded` | `.pf-v5-c-toolbar__expandable-content` | Modifies expandable content section for the expanded state. |
-| `.pf-m-bulk-select` | `.pf-v5-c-toolbar__item` | Initiates bulk select spacing. |
-| `.pf-m-overflow-menu` | `.pf-v5-c-toolbar__item` | Initiates overflow menu spacing. |
-| `.pf-m-pagination` | `.pf-v5-c-toolbar__item` | Initiates pagination spacing and margin. |
-| `.pf-m-search-filter` | `.pf-v5-c-toolbar__item` | Initiates search filter spacing. |
-| `.pf-m-chip-group` | `.pf-v5-c-toolbar__item` | Initiates chip group spacing. |
-| `.pf-m-expand-all` | `.pf-v5-c-toolbar__item` | Initiates an item for an expand all button. |
+| `.pf-m-label` | `.pf-v5-c-toolbar__item` | Modifies label vertical positioning. |
+| `.pf-m-form-element` | `.pf-v5-c-toolbar__item` | Modifies form element vertical positioning. |
+| `.pf-m-bulk-select` | `.pf-v5-c-toolbar__item` | Modifies bulk select spacing. |
+| `.pf-m-overflow-menu` | `.pf-v5-c-toolbar__item` | Modifies overflow menu spacing. |
+| `.pf-m-pagination` | `.pf-v5-c-toolbar__item` | Modifies pagination spacing and margin. |
+| `.pf-m-search-filter` | `.pf-v5-c-toolbar__item` | Modifies search filter spacing. |
+| `.pf-m-chip-group` | `.pf-v5-c-toolbar__item` | Modifies chip group spacing. |
+| `.pf-m-expand-all` | `.pf-v5-c-toolbar__item` | Modifies an item for an expand all button. |
 | `.pf-m-expanded` | `.pf-v5-c-toolbar__item.pf-m-expand-all` | Modifies an expand all button for the expanded state. |
-| `.pf-m-button-group` | `.pf-v5-c-toolbar__group` | Initiates button group spacing. |
-| `.pf-m-icon-button-group` | `.pf-v5-c-toolbar__group` | Initiates icon button group spacing. |
-| `.pf-m-filter-group` | `.pf-v5-c-toolbar__group` | Initiates filter group spacing. |
+| `.pf-m-button-group` | `.pf-v5-c-toolbar__group` | Modifies button group spacing. |
+| `.pf-m-icon-button-group` | `.pf-v5-c-toolbar__group` | Modifies icon button group spacing. |
+| `.pf-m-filter-group` | `.pf-v5-c-toolbar__group` | Modifies filter group spacing. |
 | `.pf-m-hidden{-on-[breakpoint]}` | `.pf-v5-c-toolbar__content`, `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__item`, `.pf-v5-c-toolbar__group` | Modifies toolbar element to be hidden, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-visible{-on-[breakpoint]}` | `.pf-v5-c-toolbar__content`, `.pf-v5-c-toolbar__content-section`, `.pf-v5-c-toolbar__item`, `.pf-v5-c-toolbar__group` | Modifies toolbar element to be shown, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
 | `.pf-m-align-right{-on-[breakpoint]}` | `.pf-v5-c-toolbar > *` | Modifies toolbar element to align right, at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |

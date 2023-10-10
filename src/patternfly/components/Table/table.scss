@@ -106,7 +106,8 @@
   --#{$table}--m-compact__toggle--PaddingBottom: 0;
 
   // Check
-  --#{$table}__check--input--MarginTop: #{pf-size-prem(4px)};
+  --#{$table}__check--input--MarginTop: #{pf-size-prem(3px)};
+  --#{$table}__thead__check--input--TranslateY: var(--#{$table}__check--input--MarginTop);
   --#{$table}__check--input--FontSize: var(--#{$pf-global}--FontSize--md);
 
   // Favorite
@@ -992,12 +993,17 @@
   }
 
   label {
-    display: block;
+    display: inline-flex;
     padding: inherit;
     margin-block-start: calc(var(--#{$table}--cell--PaddingTop) * -1);
     margin-block-end: calc(var(--#{$table}--cell--PaddingBottom) * -1);
     margin-inline-start: calc(var(--#{$table}--cell--PaddingLeft) * -1);
     margin-inline-end: calc(var(--#{$table}--cell--PaddingRight) * -1);
+
+  }
+
+  @at-root .#{$table}__thead .#{$check}.pf-m-standalone {
+    --#{$check}__input--TranslateY: var(--#{$table}__thead__check--input--TranslateY);
   }
 }
 
