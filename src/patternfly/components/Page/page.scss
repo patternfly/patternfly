@@ -382,10 +382,10 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   grid-row-start: 2;
   grid-column-start: 1;
   width: var(--#{$page}__sidebar--Width);
-  padding-top: 0;
-  padding-bottom: var(--pf-t--global--spacer--lg);
-  padding-left: var(--pf-t--global--spacer--lg);
-  margin-right: var(--#{$page}__sidebar--MarginRight); // TODO need variable
+  padding-block-start: 0;
+  padding-block-end: var(--pf-t--global--spacer--lg);
+  padding-inline-start: var(--pf-t--global--spacer--lg);
+  margin-inline-end: var(--#{$page}__sidebar--MarginRight); // TODO need variable
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -427,9 +427,9 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__sidebar-header {
-  padding-top: var(--#{$page}__sidebar-header--PaddingTop);
-  padding-bottom: var(--#{$page}__sidebar-header--PaddingBottom);
-  border-bottom: var(--#{$page}__sidebar-header--BorderBottomWidth) solid var(--#{$page}__sidebar-header--BorderBottomColor);
+  padding-block-start: var(--#{$page}__sidebar-header--PaddingTop);
+  padding-block-end: var(--#{$page}__sidebar-header--PaddingBottom);
+  border-block-end: var(--#{$page}__sidebar-header--BorderBottomWidth) solid var(--#{$page}__sidebar-header--BorderBottomColor);
 }
 
 .#{$page}__sidebar-title {
@@ -562,14 +562,14 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 // Main & Drawer
 .#{$page}__main {
-  margin-top: 0;
-  margin-right: var(--pf-t--global--spacer--lg);
-  margin-left: var(--pf-t--global--spacer--lg);
+  margin-block-start: 0;
+  margin-inline-start: var(--pf-t--global--spacer--lg);
+  margin-inline-end: var(--pf-t--global--spacer--lg);
 }
 
 .#{$page}__main-list {
-  padding-bottom: var(--pf-t--global--spacer--lg);
-  margin-bottom: var(--pf-t--global--spacer--lg);
+  padding-block-end: var(--pf-t--global--spacer--lg);
+  margin-block-end: var(--pf-t--global--spacer--lg);
   background-color: var(--pf-t--global--background--color--primary--default);
   border-radius: var(--pf-t--global--border--radius--large);
 }
