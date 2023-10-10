@@ -16,7 +16,6 @@ import './Brand.css'
 
 <div class="show-dark">
 {{> brand 
-  brand--modifier="pf-theme-toggle--dark"
   brand--attribute='src="/assets/images/pf_logo_white.svg" alt="PatternFly logo"' brand--IsDark="true"
 }}
 </div>
