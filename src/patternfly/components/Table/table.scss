@@ -686,7 +686,7 @@
   }
 
   tr.pf-m-clickable:last-child {
-    border-bottom-color: transparent;
+    border-block-end-color: transparent;
   }
 
   // tr clickable
@@ -996,7 +996,6 @@
     margin-block-end: calc(var(--#{$table}--cell--PaddingBottom) * -1);
     margin-inline-start: calc(var(--#{$table}--cell--PaddingLeft) * -1);
     margin-inline-end: calc(var(--#{$table}--cell--PaddingRight) * -1);
-
   }
 
   @at-root .#{$table}__thead .#{$check}.pf-m-standalone {
