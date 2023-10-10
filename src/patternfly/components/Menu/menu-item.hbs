@@ -36,8 +36,11 @@
   {{#ifAny menu--HasChecks menu-list-item--IsCheckbox}}
     {{#> menu-item-main}}
       {{#> menu-item-check}}
-        {{#> check check--type="span" check--IsDisabled=menu-list-item--IsDisabled check-input--IsChecked=(ternary menu-item--IsChecked true menu-list-item--IsChecked)}}
-          {{> check-input check-input--attribute=(concat 'id="' menu--id '-check-' menu-list-item--id '" name="' menu--id '-check-' menu-list-item--id '"')}}
+        {{#> check
+          check--id=(concat menu--id '-check-' menu-list-item--id)
+          check--IsStandalone=true
+          check--IsDisabled=menu-list-item--IsDisabled
+          check-input--IsChecked=(ternary menu-item--IsChecked true menu-list-item--IsChecked)}}
         {{/check}}
       {{/menu-item-check}}
       {{#> menu-item-text}}

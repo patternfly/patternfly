@@ -2,11 +2,11 @@
   {{#if toolbar-toggle--attribute}}
     {{{toolbar-toggle--attribute}}}
   {{/if}}>
-  {{#> menu-toggle menu-toggle--IsPlain=true menu-toggle--IsExpanded=toolbar-toggle--IsExpanded menu-toggle--attribute=(concat 'aria-label="Show filters" aria-controls="' toolbar--id '-expandable-content"')}}
-    {{#if toolbar-toggle--icon}}
-      <i class="fas {{toolbar-toggle--icon}}" aria-hidden="true"></i>
-    {{else}}
-      <i class="fas fa-filter" aria-hidden="true"></i>
-    {{/if}}
+  {{#> menu-toggle
+        menu-toggle--IsPlain=true
+        menu-toggle--IsExpanded=toolbar-toggle--IsExpanded
+        menu-toggle--attribute=(concat 'aria-label="Show filters" aria-controls="' toolbar--id '-expandable-content"')
+      }}
+    <i class="fas {{#if toolbar-toggle--icon}}{{toolbar-toggle--icon}}{{else}}fa-filter{{/if}}" aria-hidden="true"></i>
   {{/menu-toggle}}
 </div>

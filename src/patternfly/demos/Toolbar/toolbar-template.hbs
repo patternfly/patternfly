@@ -35,7 +35,7 @@ Options: [
       {{!-- toggle group --}}
       {{#if toolbar-template--HasToggleGroup}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
-          {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
+          {{> toolbar-toggle}}
           {{> toolbar-template-content}}
         {{/toolbar-group}}
       {{else}}

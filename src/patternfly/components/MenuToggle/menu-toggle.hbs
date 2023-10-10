@@ -45,7 +45,11 @@
     {{{menu-toggle--attribute}}}
   {{/if}}>
   {{#if menu-toggle--IsCheck}}
-    {{> menu-toggle--check menu-toggle--check--IsStandalone=true}}
+    {{> check
+        check--id=(concat menu-toggle--id '-check')
+        check--IsLabelWrapped=true
+        check--IsStandalone=true
+      }}
   {{/if}}
   {{#if menu-toggle--icon}}
     {{> menu-toggle-icon}}
