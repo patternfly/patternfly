@@ -197,7 +197,7 @@
   }
 
   &::after {
-    border-bottom: var(--#{$menu-toggle}--after--BorderWidth) solid var(--#{$menu-toggle}--after--BorderColor);
+    border-block-end: var(--#{$menu-toggle}--after--BorderWidth) solid var(--#{$menu-toggle}--after--BorderColor);
   }
 
   &.pf-m-primary {
@@ -532,13 +532,8 @@
 }
 
 .#{$menu-toggle}__toggle-icon {
-<<<<<<< HEAD
   margin-inline-end: var(--#{$menu-toggle}__toggle-icon--MarginRight);
-  color: var(--#{$menu-toggle}__toggle-icon--Color, inherit);
-=======
-  margin-right: var(--#{$menu-toggle}__toggle-icon--MarginRight);
   color: var(--#{$menu-toggle}__toggle-icon--Color);
->>>>>>> 750849722 (feat(menu-toggle): add in work from hackathon (#5931))
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
