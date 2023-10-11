@@ -19,6 +19,8 @@
   --#{$accordion}__toggle--after--Width: var(--#{$pf-global}--BorderWidth--lg);
   --#{$accordion}__toggle--m-expanded--after--BackgroundColor: var(--#{$pf-global}--primary-color--100);
   --#{$accordion}__toggle--BackgroundColor: transparent;
+  --#{$accordion}__toggle--JustifyContent: space-between;
+  --#{$accordion}__toggle--ColumnGap: 0;
 
   // accordion toggle text
   --#{$accordion}__toggle-text--MaxWidth: calc(100% - var(--#{$pf-global}--spacer--lg));
@@ -84,6 +86,11 @@
   @include pf-v5-t-light;
 
   background-color: var(--#{$accordion}--BackgroundColor);
+
+  &.pf-m-start {
+    --#{$accordion}__toggle--JustifyContent: start;
+    --#{$accordion}__toggle--ColumnGap: var(--#{$pf-global}--spacer--md);
+  }
 
   &.pf-m-display-lg {
     --#{$accordion}__toggle--PaddingTop: var(--#{$accordion}--m-display-lg__toggle--PaddingTop);
@@ -161,8 +168,9 @@
 .#{$accordion}__toggle {
   position: relative;
   display: flex;
+  column-gap: var(--#{$accordion}__toggle--ColumnGap);
   align-items: center;
-  justify-content: space-between;
+  justify-content: var(--#{$accordion}__toggle--JustifyContent);
   width: 100%;
   padding-block-start: var(--#{$accordion}__toggle--PaddingTop);
   padding-block-end: var(--#{$accordion}__toggle--PaddingBottom);
