@@ -147,9 +147,6 @@
   --#{$button}--m-plain--disabled--Color: var(--pf-t--global--icon--color--disabled);
   --#{$button}--m-plain--disabled--BackgroundColor: transparent;
 
-  // TODO this token needs to be added to figma
-  --pf-t--global--background--color--action--plain--hover--blend: var(--pf-t--global--mix-blend-mode--100);
-
   // Control Button
   --#{$button}--m-control--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$button}--m-control--Color: var(--pf-t--global--text--color--subtle);
