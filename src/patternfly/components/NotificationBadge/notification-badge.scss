@@ -43,16 +43,19 @@
   align-items: center;
   justify-content: center;
   min-width: var(--#{$notification-badge}--MinWidth);
-  padding: var(--#{$notification-badge}--PaddingTop) var(--#{$notification-badge}--PaddingRight) var(--#{$notification-badge}--PaddingBottom) var(--#{$notification-badge}--PaddingLeft);
+  padding-block-start: var(--#{$notification-badge}--PaddingTop);
+  padding-block-end: var(--#{$notification-badge}--PaddingBottom);
+  padding-inline-start: var(--#{$notification-badge}--PaddingLeft);
+  padding-inline-end: var(--#{$notification-badge}--PaddingRight);
   background-color: var(--#{$notification-badge}--BackgroundColor);
   border-radius: var(--#{$notification-badge}--BorderRadius);
 
   &::before {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     content: "";
     border: var(--#{$notification-badge}--before--BorderWidth) solid var(--#{$notification-badge}--before--BorderColor);
     border-radius: var(--#{$notification-badge}--BorderRadius);
