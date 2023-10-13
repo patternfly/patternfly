@@ -37,12 +37,10 @@
 }
 
 .#{$notification-badge} {
-  position: relative;
   display: inline-flex;
   gap: var(--#{$notification-badge}--Gap);
   align-items: center;
   justify-content: center;
-  min-width: var(--#{$notification-badge}--MinWidth);
   padding-block-start: var(--#{$notification-badge}--PaddingTop);
   padding-block-end: var(--#{$notification-badge}--PaddingBottom);
   padding-inline-start: var(--#{$notification-badge}--PaddingLeft);
