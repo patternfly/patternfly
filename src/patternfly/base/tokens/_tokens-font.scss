@@ -4,7 +4,7 @@
 // The ability to make font variables is reportedly coming by the end of the year
 
 :root {
-// Base tokens for fonts
+  // Base tokens for fonts
   --pf-t--global--font--family--100: redhattext;
   --pf-t--global--font--family--200: redhatdisplay;
   --pf-t--global--font--family--300: redhatmono;
@@ -24,7 +24,7 @@
   --pf-t--global--font--size--heading--500: 28px;
   --pf-t--global--font--size--heading--600: 36px;
 
-// Semantic tokens for fonts
+  // Semantic tokens for fonts
   --pf-t--global--font--family--body: var(--pf-t--global--font--family--100);
   --pf-t--global--font--family--heading: var(--pf-t--global--font--family--200);
   --pf-t--global--font--family--mono: var(--pf-t--global--font--family--300);
@@ -54,8 +54,7 @@
 
   // blend modes 
   --pf-t--global--mix-blend-mode--100: multiply;
-
-  // --pf-t--global--mix-blend-mode--100: screen; For dark mode, use screen
+  --pf-t--global--mix-blend-mode--200: screen;
   --pf-t--global--background--color--action--plain--hover--blend: var(--pf-t--global--mix-blend-mode--100);
 
   // semantic border width
@@ -80,15 +79,18 @@
   --pf-t--global--box-shadow--lg--left: -8px 0px 24px 0px rgb(0 0 0 / 12%);
   --pf-t--global--box-shadow--lg--right: 8px 0px 24px 0px rgb(0 0 0 / 12%);
 
-  // DARK shadows
-  // TODO: move into a dark token file
-  // shadows
-  // --pf-t--global--box-shadow--sm: 0px 1px 2px 0px rgb(0 0 0 / 50%);
-  // --pf-t--global--box-shadow--sm-top: 0px -1px 2px 0px rgb(0 0 0 / 50%);
-  // --pf-t--global--box-shadow--sm-right: 1px 0px 2px 0px rgb(0 0 0 / 50%);
-  // --pf-t--global--box-shadow--sm-bottom: 0px 1px 2px 0px rgb(0 0 0 / 50%);
-  // --pf-t--global--box-shadow--sm-left: -1px 0px 2px 0px rgb(0 0 0 / 50%);
-  // --pf-t--global--box-shadow--md: 0px 4px 8px 0px rgb(0 0 0 / 50%);
-  // --pf-t--global--box-shadow--lg: 0px 8px 24px 0px rgb(0 0 0 / 50%);
+  &:where(.pf-v5-theme-dark) {
+    // blend mode
+    --pf-t--global--background--color--action--plain--hover--blend: var(--pf-t--global--mix-blend-mode--200);
 
+    // box shadow
+    --pf-t--global--box-shadow--sm: 0px 1px 2px 0px rgb(0 0 0 / 50%);
+    --pf-t--global--box-shadow--sm-top: 0px -1px 2px 0px rgb(0 0 0 / 50%);
+    --pf-t--global--box-shadow--sm-right: 1px 0px 2px 0px rgb(0 0 0 / 50%);
+    --pf-t--global--box-shadow--sm-bottom: 0px 1px 2px 0px rgb(0 0 0 / 50%);
+    --pf-t--global--box-shadow--sm-left: -1px 0px 2px 0px rgb(0 0 0 / 50%);
+    --pf-t--global--box-shadow--md: 0px 4px 8px 0px rgb(0 0 0 / 50%);
+    --pf-t--global--box-shadow--lg: 0px 8px 24px 0px rgb(0 0 0 / 50%);
+  }
 }
+
