@@ -2,6 +2,108 @@
 $pf-v5-c-masthead--breakpoint-map: build-breakpoint-map();
 $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
+:root {
+  --#{$masthead}--PaddingLeft: var(--#{$masthead}--inset);
+  --#{$masthead}--PaddingRight: var(--#{$masthead}--inset);
+  --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+
+  // Insets
+  --#{$masthead}--inset: var(--pf-t--global--spacer--md); // match page insets
+  --#{$masthead}--xl--inset: var(--pf-t--global--spacer--lg); // match page insets
+
+  // Stack
+  --#{$masthead}--m-display-stack--GridTemplateColumns: max-content 1fr;
+  --#{$masthead}--m-display-stack__main--GridColumn: -1 / 1;
+  --#{$masthead}--m-display-stack__main--MinHeight: #{pf-size-prem(70px)};
+  --#{$masthead}--m-display-stack__main--Order: -1;
+  --#{$masthead}--m-display-stack__main--FlexBasis: 100%;
+  --#{$masthead}--m-display-stack__main--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$masthead}--m-display-stack__main--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$masthead}--m-display-stack__main--MarginRight: 0;
+  --#{$masthead}--m-display-stack__main--before--BorderBottom: var(--#{$masthead}__main--before--BorderBottomWidth) solid var(--#{$masthead}__main--before--BorderBottomColor);
+  --#{$masthead}--m-display-stack__toggle--GridColumn: 1;
+  --#{$masthead}--m-display-stack__content--GridColumn: 2;
+  --#{$masthead}--m-display-stack__content--MinHeight: auto;
+  --#{$masthead}--m-display-stack__content--Order: 1;
+  --#{$masthead}--m-display-stack__content--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$masthead}--m-display-stack__content--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$masthead}--m-display-stack__content--MarginLeft: 0;
+  --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginRight: calc(var(--#{$masthead}--inset) * -1);
+  --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginLeft: calc(var(--#{$masthead}--inset) * -1);
+
+  // Inline
+  --#{$masthead}--m-display-inline--GridTemplateColumns: max-content max-content 1fr;
+  --#{$masthead}--m-display-inline__main--GridColumn: 2;
+  --#{$masthead}--m-display-inline__main--MinHeight: #{pf-size-prem(70px)};
+  --#{$masthead}--m-display-inline__main--Order: 0;
+  --#{$masthead}--m-display-inline__main--FlexBasis: auto;
+  --#{$masthead}--m-display-inline__main--PaddingTop: 0;
+  --#{$masthead}--m-display-inline__main--PaddingBottom: 0;
+  --#{$masthead}--m-display-inline__main--MarginRight: calc(var(--pf-t--global--spacer--lg) / 2); // split gutter
+  --#{$masthead}--m-display-inline__main--BorderBottom: 0;
+  --#{$masthead}--m-display-inline__toggle--GridColumn: 1;
+  --#{$masthead}--m-display-inline__content--GridColumn: 3;
+  --#{$masthead}--m-display-inline__content--MinHeight: #{pf-size-prem(70px)};
+  --#{$masthead}--m-display-inline__content--Order: 0;
+  --#{$masthead}--m-display-inline__content--PaddingTop: 0;
+  --#{$masthead}--m-display-inline__content--PaddingBottom: 0;
+  --#{$masthead}--m-display-inline__content--MarginLeft: calc(var(--pf-t--global--spacer--lg) / 2); // split gutter
+  --#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginRight: 0;
+  --#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginLeft: 0;
+
+  // Main border
+  --#{$masthead}__main--before--Right: calc(var(--#{$masthead}--inset) * -1);
+  --#{$masthead}__main--before--Left: calc(var(--#{$masthead}--inset) * -1);
+  --#{$masthead}__main--before--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$masthead}__main--before--BorderBottomColor: var(--pf-t--global--border--color--100);
+
+  // Content
+  --#{$masthead}__content--Gap: var(--pf-t--global--spacer--sm);
+
+  // Toggle
+  --#{$masthead}__toggle--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$masthead}__toggle--MarginLeft: calc(var(--pf-t--global--spacer--sm) * -1); // offset by button padding
+  --#{$masthead}__toggle--c-button--FontSize: var(--pf-t--global--icon--size--lg);
+
+  // Toolbar item
+  --#{$masthead}--c-toolbar__item--Display: flex;
+
+  // Borders
+  --#{$masthead}--item-border-color--base: var(--pf-t--global--border--color--default);
+
+  // Context selector
+  --#{$masthead}--c-context-selector--Width: auto;
+  --#{$masthead}--c-context-selector__toggle--BorderTopColor: var(--#{$masthead}--item-border-color--base);
+  --#{$masthead}--c-context-selector__toggle--BorderRightColor: var(--#{$masthead}--item-border-color--base);
+  --#{$masthead}--c-context-selector__toggle--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
+  --#{$masthead}--c-context-selector--m-full-height__toggle--BorderTopColor: transparent;
+  --#{$masthead}--c-context-selector--m-full-height__toggle--BorderBottomColor: transparent;
+
+  // Dropdown
+  --#{$masthead}--c-dropdown__toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
+  --#{$masthead}--c-dropdown__toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
+  --#{$masthead}--c-dropdown__toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
+  --#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderTopColor: transparent;
+  --#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderBottomColor: transparent;
+
+  // Menu toggle
+  --#{$masthead}--c-menu-toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
+  --#{$masthead}--c-menu-toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
+  --#{$masthead}--c-menu-toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
+
+  // Toolbar
+  --#{$masthead}--c-toolbar--BackgroundColor: var(--#{$masthead}--BackgroundColor);
+  --#{$masthead}--c-toolbar--AlignItems--base: center;
+  --#{$masthead}--c-toolbar__content--PaddingRight: 0;
+  --#{$masthead}--c-toolbar__content--PaddingLeft: 0;
+  --#{$masthead}--c-toolbar__expandable-content--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$masthead}--c-toolbar__expandable-content--PaddingRight: var(--#{$masthead}--inset);
+  --#{$masthead}--c-toolbar__expandable-content--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$masthead}--c-toolbar__expandable-content--PaddingLeft: var(--#{$masthead}--inset);
+  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
+}
+
 @mixin pf-v5-c-masthead--m-display-stack {
   --#{$masthead}--GridTemplateColumns: var(--#{$masthead}--m-display-stack--GridTemplateColumns);
   --#{$masthead}__main--GridColumn: var(--#{$masthead}--m-display-stack__main--GridColumn);
@@ -43,116 +145,38 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 }
 
 .#{$masthead} {
-  --#{$masthead}--PaddingLeft: var(--#{$masthead}--inset);
-  --#{$masthead}--PaddingRight: var(--#{$masthead}--inset);
-  --#{$masthead}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-
-  // Insets
-  --#{$masthead}--inset: var(--pf-t--global--spacer--lg); // match page insets
-  --#{$masthead}--xl--inset: var(--#{$pf-global}--spacer--lg); // match page insets
-
-  // Stack
-  --#{$masthead}--m-display-stack--GridTemplateColumns: max-content 1fr;
-  --#{$masthead}--m-display-stack__main--GridColumn: -1 / 1;
-  --#{$masthead}--m-display-stack__main--MinHeight: #{pf-size-prem(70px)};
-  --#{$masthead}--m-display-stack__main--Order: -1;
-  --#{$masthead}--m-display-stack__main--FlexBasis: 100%;
-  --#{$masthead}--m-display-stack__main--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$masthead}--m-display-stack__main--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$masthead}--m-display-stack__main--MarginRight: 0;
-  --#{$masthead}--m-display-stack__main--before--BorderBottom: var(--#{$masthead}__main--before--BorderBottomWidth) solid var(--#{$masthead}__main--before--BorderBottomColor);
-  --#{$masthead}--m-display-stack__toggle--GridColumn: 1;
-  --#{$masthead}--m-display-stack__content--GridColumn: 2;
-  --#{$masthead}--m-display-stack__content--MinHeight: auto;
-  --#{$masthead}--m-display-stack__content--Order: 1;
-  --#{$masthead}--m-display-stack__content--PaddingTop: 0;
-  --#{$masthead}--m-display-stack__content--PaddingBottom: 0;
-  --#{$masthead}--m-display-stack__content--MarginLeft: 0;
-  --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginRight: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginLeft: calc(var(--#{$masthead}--inset) * -1);
-
-  // Inline
-  --#{$masthead}--m-display-inline--GridTemplateColumns: max-content max-content 1fr;
-  --#{$masthead}--m-display-inline__main--GridColumn: 2;
-  --#{$masthead}--m-display-inline__main--MinHeight: #{pf-size-prem(70px)};
-  --#{$masthead}--m-display-inline__main--Order: 0;
-  --#{$masthead}--m-display-inline__main--FlexBasis: auto;
-  --#{$masthead}--m-display-inline__main--PaddingTop: 0;
-  --#{$masthead}--m-display-inline__main--PaddingBottom: 0;
-  --#{$masthead}--m-display-inline__main--MarginRight: calc(var(--#{$pf-global}--spacer--lg) / 2); // split gutter
-  --#{$masthead}--m-display-inline__main--BorderBottom: 0;
-  --#{$masthead}--m-display-inline__toggle--GridColumn: 1;
-  --#{$masthead}--m-display-inline__content--GridColumn: 3;
-  --#{$masthead}--m-display-inline__content--MinHeight: #{pf-size-prem(70px)};
-  --#{$masthead}--m-display-inline__content--Order: 0;
-  --#{$masthead}--m-display-inline__content--PaddingTop: 0;
-  --#{$masthead}--m-display-inline__content--PaddingBottom: 0;
-  --#{$masthead}--m-display-inline__content--MarginLeft: calc(var(--#{$pf-global}--spacer--lg) / 2); // split gutter
-  --#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginRight: 0;
-  --#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginLeft: 0;
-
-  // Main border
-  --#{$masthead}__main--before--Right: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}__main--before--Left: calc(var(--#{$masthead}--inset) * -1);
-  --#{$masthead}__main--before--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$masthead}__main--before--BorderBottomColor: var(--#{$pf-global}--palette--black-600);
-
-  // Toggle
-  --#{$masthead}__toggle--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$masthead}__toggle--MarginLeft: calc(var(--#{$pf-global}--spacer--md) * -1); // offset by button padding
-  --#{$masthead}__toggle--c-button--FontSize: var(--#{$pf-global}--FontSize--2xl);
-
-  // Light 100
-  --#{$masthead}--m-light--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$masthead}--m-light__main--BorderBottomColor: var(--#{$pf-global}--BorderColor--300);
-
-  // Light 200
-  --#{$masthead}--m-light-200--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-  --#{$masthead}--m-light-200__main--BorderBottomColor: var(--pf-t--global--border--color--default);
-
-  // Toolbar item
-  --#{$masthead}--c-toolbar__item--Display: flex;
-
-  // Borders
-  --#{$masthead}--item-border-color--base: var(--pf-t--global--border--color--default);
+  // Toolbar
+  --#{$toolbar}--BackgroundColor: var(--#{$masthead}--c-toolbar--BackgroundColor);
+  --#{$toolbar}--AlignItems--base: var(--#{$masthead}--c-toolbar--AlignItems--base);
+  --#{$toolbar}__content--PaddingRight: var(--#{$masthead}--c-toolbar__content--PaddingRight);
+  --#{$toolbar}__content--PaddingLeft: var(--#{$masthead}--c-toolbar__content--PaddingLeft);
+  --#{$toolbar}__expandable-content--PaddingTop: var(--#{$masthead}--c-toolbar__expandable-content--PaddingTop);
+  --#{$toolbar}__expandable-content--PaddingRight: var(--#{$masthead}--c-toolbar__expandable-content--PaddingRight);
+  --#{$toolbar}__expandable-content--PaddingBottom: var(--#{$masthead}--c-toolbar__expandable-content--PaddingBottom);
+  --#{$toolbar}__expandable-content--PaddingLeft: var(--#{$masthead}--c-toolbar__expandable-content--PaddingLeft);
 
   // Context selector
-  --#{$masthead}--c-context-selector--Width: auto;
-  --#{$masthead}--c-context-selector__toggle--BorderTopColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-context-selector__toggle--BorderRightColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-context-selector__toggle--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-context-selector--m-full-height__toggle--BorderTopColor: transparent;
-  --#{$masthead}--c-context-selector--m-full-height__toggle--BorderBottomColor: transparent;
+  --#{$context-selector}--Width: var(--#{$masthead}--c-context-selector--Width);
+  --#{$context-selector}__toggle--BorderTopColor: var(--#{$masthead}--c-context-selector__toggle--BorderTopColor);
+  --#{$context-selector}__toggle--BorderRightColor: var(--#{$masthead}--c-context-selector__toggle--BorderRightColor);
+  --#{$context-selector}__toggle--BorderLeftColor: var(--#{$masthead}--c-context-selector__toggle--BorderLeftColor);
 
   // Dropdown
-  --#{$masthead}--c-dropdown__toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-dropdown__toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-dropdown__toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderTopColor: transparent;
-  --#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderBottomColor: transparent;
+  --#{$dropdown}__toggle--before--BorderTopColor: var(--#{$masthead}--c-dropdown__toggle--before--BorderTopColor);
+  --#{$dropdown}__toggle--before--BorderRightColor: var(--#{$masthead}--c-dropdown__toggle--before--BorderRightColor);
+  --#{$dropdown}__toggle--before--BorderLeftColor: var(--#{$masthead}--c-dropdown__toggle--before--BorderLeftColor);
 
   // Menu toggle
-  --#{$masthead}--c-menu-toggle--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-menu-toggle--before--BorderRightColor: var(--#{$masthead}--item-border-color--base);
-  --#{$masthead}--c-menu-toggle--before--BorderLeftColor: var(--#{$masthead}--item-border-color--base);
-
-  // Toolbar
-  --#{$masthead}--c-toolbar--BackgroundColor: var(--#{$masthead}--BackgroundColor);
-  --#{$masthead}--c-toolbar--AlignItems--base: center;
-  --#{$masthead}--c-toolbar__content--PaddingRight: 0;
-  --#{$masthead}--c-toolbar__content--PaddingLeft: 0;
-  --#{$masthead}--c-toolbar__expandable-content--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$masthead}--c-toolbar__expandable-content--PaddingRight: var(--#{$masthead}--inset);
-  --#{$masthead}--c-toolbar__expandable-content--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$masthead}--c-toolbar__expandable-content--PaddingLeft: var(--#{$masthead}--inset);
-  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$masthead}--c-toolbar__expandable-content--before--BorderTopColor: var(--#{$masthead}--item-border-color--base);
+  --#{$menu-toggle}--before--BorderTopColor: var(--#{$masthead}--c-menu-toggle--before--BorderTopColor);
+  --#{$menu-toggle}--before--BorderRightColor: var(--#{$masthead}--c-menu-toggle--before--BorderRightColor);
+  --#{$menu-toggle}--before--BorderLeftColor: var(--#{$masthead}--c-menu-toggle--before--BorderLeftColor);
+  --#{$menu-toggle}--m-full-height__toggle--after--BorderBottomWidth: 0;
 
   // Set layout to stack by default
   @include pf-v5-c-masthead--m-display-stack;
 
   // Set layout to inline at medium breakpoint
-  .#{$page}:where(:not(.pf-m-resize-observer)) & {
+  :where(:not(.pf-m-resize-observer)) & {
     @media screen and (min-width: $pf-v5-global--breakpoint--md) {
       @include pf-v5-c-masthead--m-display-inline;
     }
@@ -161,8 +185,6 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$masthead}--inset: var(--#{$masthead}--xl--inset);
   }
-
-  @include pf-v5-t-dark; // force the container to follow the dark theme
 
   position: relative;
   display: grid;
@@ -173,30 +195,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   padding-inline-end: var(--#{$masthead}--PaddingRight);
   background-color: var(--#{$masthead}--BackgroundColor);
 
-  &.pf-m-light {
-    @include pf-v5-t-light;
-
-    --#{$masthead}--BackgroundColor: var(--#{$masthead}--m-light--BackgroundColor);
-    --#{$masthead}__main--BorderBottomColor: var(--#{$masthead}--m-light__main--BorderBottomColor);
-  }
-
-  &.pf-m-light-200 {
-    @include pf-v5-t-light;
-
-    --#{$masthead}--BackgroundColor: var(--#{$masthead}--m-light-200--BackgroundColor);
-    --#{$masthead}__main--BorderBottomColor: var(--#{$masthead}--m-light-200__main--BorderBottomColor);
-  }
-
   .#{$toolbar} {
-    --#{$toolbar}--BackgroundColor: var(--#{$masthead}--c-toolbar--BackgroundColor);
-    --#{$toolbar}--AlignItems--base: var(--#{$masthead}--c-toolbar--AlignItems--base);
-    --#{$toolbar}__content--PaddingRight: var(--#{$masthead}--c-toolbar__content--PaddingRight);
-    --#{$toolbar}__content--PaddingLeft: var(--#{$masthead}--c-toolbar__content--PaddingLeft);
-    --#{$toolbar}__expandable-content--PaddingTop: var(--#{$masthead}--c-toolbar__expandable-content--PaddingTop);
-    --#{$toolbar}__expandable-content--PaddingRight: var(--#{$masthead}--c-toolbar__expandable-content--PaddingRight);
-    --#{$toolbar}__expandable-content--PaddingBottom: var(--#{$masthead}--c-toolbar__expandable-content--PaddingBottom);
-    --#{$toolbar}__expandable-content--PaddingLeft: var(--#{$masthead}--c-toolbar__expandable-content--PaddingLeft);
-
     width: 100%;
   }
 
@@ -205,7 +204,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   }
 
   .#{$toolbar}__expandable-content {
-   inset-block-start: 100%;
+    inset-block-start: 100%;
 
     &::before {
       position: absolute;
@@ -216,42 +215,18 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     }
   }
 
-  .#{$menu-toggle} {
-    --#{$menu-toggle}--before--BorderTopColor: var(--#{$masthead}--c-menu-toggle--before--BorderTopColor);
-    --#{$menu-toggle}--before--BorderRightColor: var(--#{$masthead}--c-menu-toggle--before--BorderRightColor);
-    --#{$menu-toggle}--before--BorderLeftColor: var(--#{$masthead}--c-menu-toggle--before--BorderLeftColor);
-    --#{$menu-toggle}--m-full-height__toggle--after--BorderBottomWidth: 0;
+  .#{$context-selector}.pf-m-full-height {
+    --#{$context-selector}__toggle--BorderTopColor: var(--#{$masthead}--c-context-selector--m-full-height__toggle--BorderTopColor);
+    --#{$context-selector}__toggle--BorderBottomColor: var(--#{$masthead}--c-context-selector--m-full-height__toggle--BorderBottomColor);
   }
 
-  .#{$context-selector} {
-    --#{$context-selector}--Width: var(--#{$masthead}--c-context-selector--Width);
-    --#{$context-selector}__toggle--BorderTopColor: var(--#{$masthead}--c-context-selector__toggle--BorderTopColor);
-    --#{$context-selector}__toggle--BorderRightColor: var(--#{$masthead}--c-context-selector__toggle--BorderRightColor);
-    --#{$context-selector}__toggle--BorderLeftColor: var(--#{$masthead}--c-context-selector__toggle--BorderLeftColor);
-
-    &.pf-m-full-height {
-      --#{$context-selector}__toggle--BorderTopColor: var(--#{$masthead}--c-context-selector--m-full-height__toggle--BorderTopColor);
-      --#{$context-selector}__toggle--BorderBottomColor: var(--#{$masthead}--c-context-selector--m-full-height__toggle--BorderBottomColor);
-    }
-  }
-
-  .#{$dropdown} {
-    --#{$dropdown}__toggle--before--BorderTopColor: var(--#{$masthead}--c-dropdown__toggle--before--BorderTopColor);
-    --#{$dropdown}__toggle--before--BorderRightColor: var(--#{$masthead}--c-dropdown__toggle--before--BorderRightColor);
-    --#{$dropdown}__toggle--before--BorderLeftColor: var(--#{$masthead}--c-dropdown__toggle--before--BorderLeftColor);
-
-    &.pf-m-full-height {
-      --#{$dropdown}__toggle--before--BorderTopColor: var(--#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderTopColor);
-      --#{$dropdown}__toggle--before--BorderBottomColor: var(--#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderBottomColor);
-    }
+  .#{$dropdown}.pf-m-full-height {
+    --#{$dropdown}__toggle--before--BorderTopColor: var(--#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderTopColor);
+    --#{$dropdown}__toggle--before--BorderBottomColor: var(--#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderBottomColor);
   }
 
   .#{$nav} {
     align-self: stretch;
-  }
-
-  .#{$button}.pf-m-plain {
-    @include pf-v5-t-dark(--#{$button}--m-plain--Color); // for all plain buttons, especially inside other components (.pf-v5-c-input-group), for dark mode
   }
 }
 
@@ -295,6 +270,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   flex-shrink: 1;
   grid-column: var(--#{$masthead}__content--GridColumn);
   grid-column-end: -1; // force content to right edge or full available width
+  gap: var(--#{$masthead}__content--Gap);
   align-items: center;
   align-self: stretch;
   order: var(--#{$masthead}__content--Order);
@@ -364,12 +340,4 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
       }
     }
   }
-}
-// stylelint-enable
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/masthead";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-masthead;
 }
