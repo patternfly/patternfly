@@ -55,7 +55,7 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__main--before--Right: calc(var(--#{$masthead}--inset) * -1);
   --#{$masthead}__main--before--Left: calc(var(--#{$masthead}--inset) * -1);
   --#{$masthead}__main--before--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
-  --#{$masthead}__main--before--BorderBottomColor: var(--pf-t--global--border--color--100);
+  --#{$masthead}__main--before--BorderBottomColor: var(--pf-t--global--border--color--default);
 
   // Content
   --#{$masthead}__content--Gap: var(--pf-t--global--spacer--sm);
