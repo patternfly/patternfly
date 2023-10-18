@@ -97,7 +97,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-title--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$page}__sidebar-title--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$page}__sidebar-title--FontWeight: var(--pf-t--global--font--weight--heading--bold);
-  
+
   // Sidebar body
   --#{$page}__sidebar-body--PaddingRight: 0;
   --#{$page}__sidebar-body--PaddingLeft: 0;
@@ -206,8 +206,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 // Header
 .#{$page}__header,
 .#{$page} > .#{$masthead} {
-  --#{$masthead}--m-display-inline--GridTemplateColumns: var(--#{$page}__sidebar--Width) 1fr;
-  
   z-index: var(--#{$page}__header--ZIndex);
   grid-area: header;
 }
