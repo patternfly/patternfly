@@ -74,7 +74,7 @@
   cursor: pointer;
   opacity: 0;
 
-  &:focus ~ .#{$switch}__toggle {
+  &:focus-visible ~ .#{$switch}__toggle {
     outline: var(--#{$switch}__input--focus__toggle--OutlineWidth) solid var(--#{$switch}__input--focus__toggle--OutlineColor);
     outline-offset: var(--#{$switch}__input--focus__toggle--OutlineOffset);
   }
