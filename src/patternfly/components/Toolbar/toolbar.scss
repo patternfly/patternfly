@@ -5,7 +5,7 @@ $pf-v5-c-toolbar--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg",
 $pf-v5-c-toolbar--spacer-map: build-spacer-map("none", "sm", "md", "lg");
 $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-.#{$toolbar} {
+:root {
   --#{$toolbar}--AlignItems--base: flex-start;
   --#{$toolbar}--RowGap--base: var(--#{$pf-global}--spacer--lg); // row-gap between toolbar content elements
   --#{$toolbar}--RowGap: var(--#{$toolbar}--RowGap--base);
@@ -137,7 +137,9 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   --#{$toolbar}--m-full-height--PaddingBottom: 0;
   --#{$toolbar}--m-full-height__item--Display: flex;
   --#{$toolbar}--m-full-height__item--AlignItems: center;
+}
 
+.#{$toolbar} {
   @media screen and (min-width: $pf-v5-global--breakpoint--lg) {
     --#{$toolbar}__expandable-content--PaddingRight: var(--#{$toolbar}__expandable-content--lg--PaddingRight);
     --#{$toolbar}__expandable-content--PaddingBottom: var(--#{$toolbar}__expandable-content--lg--PaddingBottom);
@@ -162,7 +164,7 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
   &.pf-m-sticky {
     position: sticky;
-   inset-block-start: 0;
+    inset-block-start: 0;
     z-index: var(--#{$toolbar}--m-sticky--ZIndex);
     box-shadow: var(--#{$toolbar}--m-sticky--BoxShadow);
   }
