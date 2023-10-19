@@ -180,12 +180,8 @@
   background-color: var(--#{$menu-toggle}--BackgroundColor);
   border: 0;
 
-  &,
-  &::before {
-    border-radius: var(--#{$menu-toggle}--BorderRadius);
-  }
-
-  &::before {
+  &::before,
+  &::after {
     position: absolute;
     inset-block-start: 0;
     inset-block-end: 0;
@@ -193,11 +189,22 @@
     inset-inline-end: 0;
     pointer-events: none;
     content: "";
-    border: var(--#{$menu-toggle}--BorderWidth) solid var(--#{$menu-toggle}--BorderColor);
+  }
+
+  &::before {
+    border-style: solid;
+    border-block-start-color: var(--#{$menu-toggle}--before--BorderTopColor);
+    border-block-start-width: var(--#{$menu-toggle}--before--BorderTopWidth);
+    border-block-end-color: var(--#{$menu-toggle}--before--BorderBottomColor);
+    border-block-end-width: var(--#{$menu-toggle}--before--BorderBottomWidth);
+    border-inline-start-color: var(--#{$menu-toggle}--before--BorderLeftColor);
+    border-inline-start-width: var(--#{$menu-toggle}--before--BorderLeftWidth);
+    border-inline-end-color: var(--#{$menu-toggle}--before--BorderRightColor);
+    border-inline-end-width: var(--#{$menu-toggle}--before--BorderRightWidth);
   }
 
   &::after {
-    border-block-end: var(--#{$menu-toggle}--after--BorderWidth) solid var(--#{$menu-toggle}--after--BorderColor);
+    border-block-end: var(--#{$menu-toggle}--after--BorderBottomWidth) solid var(--#{$menu-toggle}--after--BorderBottomColor);
   }
 
   &.pf-m-primary {
@@ -360,11 +367,7 @@
       align-self: stretch;
 
       .#{$check}__input {
-        align-self: revert;
-
-        // stylelint-disable property-no-vendor-prefix
-        -moz-transform: none;
-        // stylelint-enable
+        align-self: center;
       }
     }
 
@@ -537,7 +540,7 @@
 
 .#{$menu-toggle}__toggle-icon {
   margin-inline-end: var(--#{$menu-toggle}__toggle-icon--MarginRight);
-  color: var(--#{$menu-toggle}__toggle-icon--Color);
+  color: var(--#{$menu-toggle}__toggle-icon--Color, inherit);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule
