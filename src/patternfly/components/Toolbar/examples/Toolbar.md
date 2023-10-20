@@ -255,19 +255,13 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
         {{#> toolbar-item}}
-          {{#> select select--id=(concat toolbar--id '-select-checkbox-filter1')}}
-            Filter 1
-          {{/select}}
+          {{> menu-toggle menu-toggle--id=(concat toolbar--id '-toggle-1') menu-toggle--text='Filter 1'}}
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#> select select--id=(concat toolbar--id '-select-checkbox-filter2')}}
-            Filter 2
-          {{/select}}
+          {{> menu-toggle menu-toggle--id=(concat toolbar--id '-toggle-2') menu-toggle--text='Filter 2'}}
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#> select select--id=(concat toolbar--id '-select-checkbox-filter3')}}
-            Filter 3
-          {{/select}}
+          {{> menu-toggle menu-toggle--id=(concat toolbar--id '-toggle-3') menu-toggle--text='Filter 3'}}
         {{/toolbar-item}}
       {{/toolbar-group}}
       {{> toolbar-icon-button-group-example}}
@@ -307,18 +301,20 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
-        {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
+        {{> toolbar-toggle}}
         {{> toolbar-item-search-filter}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
-              Status
-            {{/select}}
+            {{> menu-toggle
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
+                menu-toggle--text='Status'
+              }}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
-              Risk
-            {{/select}}
+            {{> menu-toggle
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
+                menu-toggle--text='Risk'
+              }}
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
@@ -334,21 +330,23 @@ In some instances, it may be necessary to adjust spacing explicitly where items 
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+        {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
       {{/toolbar-group}}
     {{/toolbar-content-section}}
-    {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
+    {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded=true}}
       {{> toolbar-item-search-filter button--id="expandable-content"}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
         {{#> toolbar-item}}
-          {{#> select select--id=(concat toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true"}}
-            Status
-          {{/select}}
+          {{> menu-toggle
+              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
+              menu-toggle--text='Status'
+            }}
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#> select select--id=(concat toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
-            Risk
-          {{/select}}
+          {{> menu-toggle
+              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
+              menu-toggle--text='Risk'
+            }}
         {{/toolbar-item}}
       {{/toolbar-group}}
     {{/toolbar-expandable-content}}
@@ -365,7 +363,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `hidden` | `.pf-v5-c-toolbar__item`, `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__toggle`, `.pf-v5-c-toolbar__expandable-content` |  Indicates that the toggle group element is hidden. **Required** |
-| `aria-expanded="true"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Indicates that the expandable content is visible. **Required** |
+| `aria-expanded=true` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Indicates that the expandable content is visible. **Required** |
 | `aria-expanded="false"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Indicates the the expandable content is hidden. **Required** |
 | `aria-controls="[id of expandable content]"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Identifies the expanded content controlled by the toggle button. **Required** |
 | `id="[expandable-content_id]"` | `.pf-v5-c-toolbar__expandable-content` | Provides a reference for toggle button description. **Required** |
@@ -374,7 +372,7 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
-| `aria-haspopup="true"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` | When expandable content appears above content (mobile viewport), `aria-haspopup="true"` should be applied to indicate that focus should be trapped. **Required** |
+| `aria-haspopup=true` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` | When expandable content appears above content (mobile viewport), `aria-haspopup=true` should be applied to indicate that focus should be trapped. **Required** |
 
 ### Usage
 
@@ -393,22 +391,24 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{#> toolbar-content-section}}
       {{> toolbar-item-bulk-select}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
+        {{> toolbar-toggle}}
         {{> toolbar-item-search-filter button--id="content"}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true"}}
-              Status
-            {{/select}}
+            {{> menu-toggle
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
+                menu-toggle--text='Status'
+              }}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
-              Risk
-            {{/select}}
+            {{> menu-toggle
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
+                menu-toggle--text='Risk'
+              }}
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--control=true}}
     {{/toolbar-content-section}}
     {{#> toolbar-expandable-content}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-chip-container"}}
@@ -433,22 +433,24 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{#> toolbar-content-section}}
       {{> toolbar-item-bulk-select}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+        {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--control=true}}
     {{/toolbar-content-section}}
-    {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
+    {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded=true}}
       {{> toolbar-item-search-filter button--id="expanded-content"}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
         {{#> toolbar-item}}
-          {{#> select select--id=(concat toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true"}}
-            Status
-          {{/select}}
+          {{> menu-toggle
+              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
+              menu-toggle--text='Status'
+            }}
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#> select select--id=(concat toolbar--id '-select-checkbox-risk-expanded') select--IsCheckboxSelect="true"}}
-            Risk
-          {{/select}}
+          {{> menu-toggle
+              menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
+              menu-toggle--text='Risk'
+            }}
         {{/toolbar-item}}
       {{/toolbar-group}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-chip-container"}}
@@ -470,26 +472,28 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
     {{#> toolbar-content-section}}
       {{> toolbar-item-bulk-select}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show"}}
-        {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
+        {{> toolbar-toggle}}
         {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
           {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true"}}
-              Status
-            {{/select}}
+            {{> menu-toggle
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-status')
+                menu-toggle--text='Status'
+              }}
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true"}}
-              Risk
-            {{/select}}
+            {{> menu-toggle
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-checkbox-risk')
+                menu-toggle--text='Risk'
+              }}
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true"}}
-      {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content="true" toolbar-overflow-menu-example--control="true"}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true}}
+      {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content=true toolbar-overflow-menu-example--control=true}}
     {{/toolbar-content-section}}
   {{/toolbar-content}}
   {{#> toolbar-content toolbar-content--modifier="pf-m-chip-container"}}
-    {{#> toolbar-group toolbar-group--modifier=""}}
+    {{#> toolbar-group toolbar-group--modifier=reset}}
       {{> toolbar-item-chip-group chip-group--label="Status" chip-group--id=(concat toolbar--id '-chip-group-status')}}
       {{> toolbar-item-chip-group chip-group--label="Risk" chip-group--id=(concat toolbar--id '-chip-group-risk')}}
     {{/toolbar-group}}
@@ -506,40 +510,44 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
-        {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
-        {{#> toolbar-group newcontext}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-resource-label')}}
+        {{> toolbar-toggle}}
+        {{#> toolbar-group toolbar-group--modifier=reset}}
+          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-resource-label')}}
             Resource
           {{/toolbar-item}}
+
           {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-resource') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
-              Pod
-            {{/select}}
+            {{> menu-toggle
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-resource')
+                menu-toggle--text='Pod'
+              }}
           {{/toolbar-item}}
         {{/toolbar-group}}
-        {{#> toolbar-group newcontext}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-status-label')}}
+        {{#> toolbar-group toolbar-group--modifier=reset}}
+          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-status-label')}}
             Status
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
-              Running
-            {{/select}}
+            {{> menu-toggle
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-status')
+                menu-toggle--text='Running'
+              }}
           {{/toolbar-item}}
         {{/toolbar-group}}
-        {{#> toolbar-group newcontext}}
-          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden="true"' toolbar-item--id=(concat toolbar--id '-select-checkbox-type-label')}}
+        {{#> toolbar-group toolbar-group--modifier=reset}}
+          {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-type-label')}}
             Type
           {{/toolbar-item}}
           {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-type') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
-              Any
-            {{/select}}
+            {{> menu-toggle
+                menu-toggle--id=(concat toolbar--id '-menu-toggle-type')
+                menu-toggle--text='Any'
+              }}
           {{/toolbar-item}}
         {{/toolbar-group}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true"}}
-      {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content="true" toolbar-overflow-menu-example--control="true"}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true}}
+      {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content=true toolbar-overflow-menu-example--control=true}}
     {{/toolbar-content-section}}
     {{> toolbar-expandable-content}}
   {{/toolbar-content}}
@@ -559,39 +567,43 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
   {{#> toolbar-content}}
     {{#> toolbar-content-section}}
       {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group"}}
-        {{> toolbar-toggle toolbar-toggle--modifier="pf-m-expanded" toolbar-toggle--IsExpanded="true"}}
+        {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
       {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true" toolbar-icon-button-group-example--control="true"}}
+      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu=true toolbar-icon-button-group-example--control=true}}
     {{/toolbar-content-section}}
-    {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded="true"}}
+    {{#> toolbar-expandable-content toolbar-expandable-content--IsExpanded=true}}
       {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--id=(concat toolbar--id '-select-checkbox-resource-expanded-label')}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-resource-label')}}
           Resource
         {{/toolbar-item}}
+
         {{#> toolbar-item}}
-          {{#> select select--id=(concat toolbar--id '-select-checkbox-resource-expanded') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
-            Pod
-          {{/select}}
+          {{> menu-toggle
+              menu-toggle--id=(concat toolbar--id '-menu-toggle-resource')
+              menu-toggle--text='Pod'
+            }}
         {{/toolbar-item}}
       {{/toolbar-group}}
-      {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--id=(concat toolbar--id '-select-checkbox-status-expanded-label')}}
+      {{#> toolbar-group newcontext}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-status-label')}}
           Status
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#> select select--id=(concat toolbar--id '-select-checkbox-status-expanded') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
-            Running
-          {{/select}}
+          {{> menu-toggle
+              menu-toggle--id=(concat toolbar--id '-menu-toggle-status')
+              menu-toggle--text='Running'
+            }}
         {{/toolbar-item}}
       {{/toolbar-group}}
-      {{#> toolbar-group}}
-        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--id=(concat toolbar--id '-select-checkbox-type-expanded-label')}}
+      {{#> toolbar-group newcontext}}
+        {{#> toolbar-item toolbar-item--modifier="pf-m-label" toolbar-item--attribute='aria-hidden=true' toolbar-item--id=(concat toolbar--id '-menu-toggle-type-label')}}
           Type
         {{/toolbar-item}}
         {{#> toolbar-item}}
-          {{#> select select--id=(concat toolbar--id '-select-checkbox-type-expanded') select--IsCheckboxSelect="true" select--HasCustomLabel="true"}}
-            Any
-          {{/select}}
+          {{> menu-toggle
+              menu-toggle--id=(concat toolbar--id '-menu-toggle-type')
+              menu-toggle--text='Any'
+            }}
         {{/toolbar-item}}
       {{/toolbar-group}}
     {{/toolbar-expandable-content}}
@@ -602,36 +614,6 @@ The `.pf-m-toggle-group` controls when, and at which breakpoint, filters will be
       {{> toolbar-item-bulk-select}}
       {{> toolbar-item-pagination}}
     {{/toolbar-content-section}}
-  {{/toolbar-content}}
-{{/toolbar}}
-```
-
-### Expanded elements
-```hbs
-{{#> toolbar toolbar--id="toolbar-expanded-elements-example"}}
-  {{#> toolbar-content}}
-    {{#> toolbar-content-section}}
-      {{> toolbar-item-bulk-select}}
-      {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-xl"}}
-        {{> toolbar-toggle toolbar-toggle--IsExpanded="false"}}
-        {{> toolbar-item-search-filter button--id="content"}}
-        {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
-          {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-status') select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true"}}
-              Status
-            {{/select}}
-          {{/toolbar-item}}
-          {{#> toolbar-item}}
-            {{#> select select--id=(concat toolbar--id '-select-checkbox-risk') select--IsCheckboxSelect="true" select--IsChecked="true" select--IsExpanded="true"}}
-              Risk
-            {{/select}}
-          {{/toolbar-item}}
-        {{/toolbar-group}}
-      {{/toolbar-group}}
-      {{> toolbar-icon-button-group-example toolbar-icon-button-group-example--IsOverflowMenu="true"}}
-      {{> toolbar-overflow-menu-example toolbar-overflow-menu-example--content="true" toolbar-overflow-menu-example--control="true" toolbar-overflow-menu-example--IsExpanded="true"}}
-    {{/toolbar-content-section}}
-    {{> toolbar-expandable-content}}
   {{/toolbar-content}}
 {{/toolbar}}
 ```
@@ -687,7 +669,7 @@ As the toolbar component is a hybrid layout and component, some of its elements 
 | Attribute | Applied to | Outcome |
 | -- | -- | -- |
 | `hidden` | `.pf-v5-c-toolbar__item`, `.pf-v5-c-toolbar__group`, `.pf-v5-c-toolbar__toggle`, `.pf-v5-c-toolbar__expandable-content` |  Indicates that the toolbar element is hidden. **Required** |
-| `aria-expanded="true"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Indicates that the expandable content is visible. **Required** |
+| `aria-expanded=true` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Indicates that the expandable content is visible. **Required** |
 | `aria-expanded="false"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Indicates the the expandable content is hidden. **Required** |
 | `aria-controls="[id of expandable content]"` | `.pf-v5-c-toolbar__toggle > .pf-v5-c-button` |  Identifies the expanded content controlled by the toggle button. **Required** |
 | `id="[expandable-content_id]"` | `.pf-v5-c-toolbar__expandable-content` | Provides a reference for toggle button description. **Required** |
