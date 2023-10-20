@@ -408,10 +408,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
   &:last-child {
     --#{$toolbar}--spacer: 0;
   }
-
-  .#{$panel} {
-    --#{$panel}--MinWidth: 100%;
-  }
 }
 
 .#{$toolbar}__group,
@@ -469,10 +465,6 @@ $pf-v5-c-toolbar--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2
 
 // Expandable content
 .#{$toolbar}__expandable-content {
-  .#{$menu-toggle} {
-    width: 100%;
-  }
-
   position: absolute;
   inset-block-start: calc(100% + var(--#{$toolbar}__content--RowGap));
   inset-inline-start: 0;
