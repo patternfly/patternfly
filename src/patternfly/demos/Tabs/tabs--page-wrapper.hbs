@@ -2,6 +2,8 @@
   {{> page-template-header}}
   {{> page-template-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{> @partial-block}}
+    {{#> page-main-list}}
+      {{> @partial-block}}
+    {{/page-main-list}}
   {{/page-main}}
 {{/page}}

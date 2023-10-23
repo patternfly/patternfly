@@ -1,3 +1,5 @@
 {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-  {{> page-template-main-content}}
+  {{#> page-main-list}}
+    {{> page-template-main-content}}
+  {{/page-main-list}}
 {{/page-main}}
