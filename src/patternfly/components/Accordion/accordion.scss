@@ -22,6 +22,10 @@
   --#{$accordion}__toggle--JustifyContent: space-between;
   --#{$accordion}__toggle--ColumnGap: 0;
 
+  // Accordion toggle toggle-start modifier
+  --#{$accordion}--m-toggle-start__toggle--JustifyContent: start;
+  --#{$accordion}--m-toggle-start__toggle--ColumnGap: var(--#{$pf-global}--spacer--md);
+
   // accordion toggle text
   --#{$accordion}__toggle-text--MaxWidth: calc(100% - var(--#{$pf-global}--spacer--lg));
   --#{$accordion}__toggle--hover__toggle-text--Color: var(--#{$pf-global}--link--Color);
@@ -87,9 +91,9 @@
 
   background-color: var(--#{$accordion}--BackgroundColor);
 
-  &.pf-m-start {
-    --#{$accordion}__toggle--JustifyContent: start;
-    --#{$accordion}__toggle--ColumnGap: var(--#{$pf-global}--spacer--md);
+  &.pf-m-toggle-start {
+    --#{$accordion}__toggle--JustifyContent: var(--#{$accordion}--m-toggle-start__toggle--JustifyContent);
+    --#{$accordion}__toggle--ColumnGap: var(--#{$accordion}--m-toggle-start__toggle--ColumnGap);
   }
 
   &.pf-m-display-lg {

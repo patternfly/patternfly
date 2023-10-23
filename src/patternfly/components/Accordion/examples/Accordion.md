@@ -297,8 +297,8 @@ cssPrefix: pf-v5-c-accordion
 
 ### Toggle icon at start
 
-```hbs
-{{#> accordion accordion--IsStartAligned="true"}}
+```hbs isBeta
+{{#> accordion accordion--IsStartAligned=true}}
   {{#> accordion-toggle}}
     {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
     {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
@@ -371,6 +371,6 @@ In these examples `.pf-v5-c-accordion` uses `<dl>`, `.pf-v5-c-accordion__toggle`
 | `.pf-v5-c-accordion__expandable-content-body` | `<div>` | Initiates expandable content body. **Required** |
 | `.pf-m-bordered` | `.pf-v5-c-accordion` | Modifies the accordion to add borders between items. |
 | `.pf-m-display-lg` | `.pf-v5-c-accordion` | Modifies the accordion for large display styling. This variation is for marketing/web use cases. |
-| `.pf-m-start` | `.pf-v5-c-accordion` | Modifies accordion styling when accordion toggle icons are rendered at the start of the toggle, before the toggle text. |
+| `.pf-m-toggle-start` | `.pf-v5-c-accordion` | Modifies accordion styling when accordion toggle icons are rendered at the start of the toggle, before the toggle text. |
 | `.pf-m-expanded` | `.pf-v5-c-accordion__toggle`, `.pf-v5-c-accordion__expandable-content` | Modifies the accordion button and expandable content for the expanded state. |
 | `.pf-m-fixed` | `.pf-v5-c-accordion__expandable-content` | Modifies the expandable content for the fixed state. |
