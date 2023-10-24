@@ -12,7 +12,8 @@ import './ResizeObserver.js'
 ```hbs
 
 {{#> resize-observer
-     resize-observer--id='basic-example'
+     resize-observer--modifier="test"
+     resize-observer--id='basic-example1'
      resize-observer--data-size-sm='0'
      resize-observer--data-size-md='300'
      resize-observer--data-size-lg='600'
@@ -124,7 +125,3 @@ The resize observer component provides...
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v5-c-resize-observer` | `<div>` |  Initiates a resize observer. **Required** |
-
-<!-- import './ResizeObserver.js' -->
-
-<!-- <script src="./ResizeObserver.js" /> -->

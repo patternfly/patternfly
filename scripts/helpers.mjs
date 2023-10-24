@@ -1,6 +1,6 @@
 // import Handlebars from 'handlebars';
 import { patternflyNamespace, patternflyVersion } from './init.mjs';
-import ResizeObserver from 'resize-observer-polyfill';
+// import ResizeObserver from 'resize-observer-polyfill';
 
 /** Ignore the object appended by handlebars. */
 export const concat = (...params) => {
