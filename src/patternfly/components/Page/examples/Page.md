@@ -25,17 +25,15 @@ import './Page.css'
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-list}}
-      {{#> page-main-section}}
-        This is a default <code>.pf-v5-c-page__main-section</code>.
-      {{/page-main-section}}
-      {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
-        This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
-      {{/page-main-section}}
-      {{#> page-main-section}}
-        This is a default <code>.pf-v5-c-page__main-section</code>.
-      {{/page-main-section}}
-    {{/page-main-list}}
+    {{#> page-main-section}}
+      This is a default <code>.pf-v5-c-page__main-section</code>.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
+      This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
+    {{/page-main-section}}
+    {{#> page-main-section}}
+      This is a default <code>.pf-v5-c-page__main-section</code>.
+    {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
@@ -53,17 +51,15 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main}}
-    {{#> page-main-list}}
-      {{#> page-main-section}}
-        This is a default <code>.pf-v5-c-page__main-section</code>.
-      {{/page-main-section}}
-      {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
-        This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
-      {{/page-main-section}}
-      {{#> page-main-section}}
-        This is a default <code>.pf-v5-c-page__main-section</code>.
-      {{/page-main-section}}
-    {{/page-main-list}}
+    {{#> page-main-section}}
+      This is a default <code>.pf-v5-c-page__main-section</code>.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
+      This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
+    {{/page-main-section}}
+    {{#> page-main-section}}
+      This is a default <code>.pf-v5-c-page__main-section</code>.
+    {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
@@ -92,10 +88,8 @@ import './Page.css'
     {{/page-sidebar-body}}
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-list}}
-      {{#> page-main-section}}
-      {{/page-main-section}}
-    {{/page-main-list}}
+    {{#> page-main-section}}
+    {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
@@ -113,17 +107,15 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main}}
-    {{#> page-main-list}}
-      {{#> page-main-section}}
-        A regular page section.
-      {{/page-main-section}}
-      {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
-        This section uses <code>.pf-m-fill</code> to fill the available space.
-      {{/page-main-section}}
-      {{#> page-main-section page-main-section--modifier="pf-m-no-fill"}}
-        This section uses <code>.pf-m-no-fill</code> to not fill the available space.
-      {{/page-main-section}}
-    {{/page-main-list}}
+    {{#> page-main-section}}
+      A regular page section.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
+      This section uses <code>.pf-m-fill</code> to fill the available space.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-fill"}}
+      This section uses <code>.pf-m-no-fill</code> to not fill the available space.
+    {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
@@ -144,17 +136,15 @@ import './Page.css'
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-list}}
-      {{#> page-main-section}}
-        This <code>.pf-v5-c-page__main-section</code> has default padding.
-      {{/page-main-section}}
-      {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
-        This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-no-padding</code> to remove all padding.
-      {{/page-main-section}}
-      {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
-        This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-no-padding .pf-m-padding-on-md</code> to remove padding up to the <code>md</code> breakpoint.
-      {{/page-main-section}}
-    {{/page-main-list}}
+    {{#> page-main-section}}
+      This <code>.pf-v5-c-page__main-section</code> has default padding.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
+      This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-no-padding</code> to remove all padding.
+    {{/page-main-section}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
+      This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-no-padding .pf-m-padding-on-md</code> to remove padding up to the <code>md</code> breakpoint.
+    {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
@@ -175,29 +165,27 @@ import './Page.css'
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-list}}
-      {{#> page-main-subnav}}
-        <code>.pf-v5-c-page__main-subnav</code> for horizontal subnav navigation
-      {{/page-main-subnav}}
-      {{#> page-main-nav}}
-        <code>.pf-v5-c-page__main-nav</code> for tertiary navigation
-      {{/page-main-nav}}
-      {{#> page-main-tabs}}
-        <code>.pf-v5-c-page__main-tabs</code> for tabs
-      {{/page-main-tabs}}
-      {{#> page-main-group}}
-        <code>.pf-v5-c-page__main-group</code> for a group of page sections
-      {{/page-main-group}}
-      {{#> page-main-breadcrumb}}
-        <code>.pf-v5-c-page__main-breadcrumb</code> for breadcrumbs
-      {{/page-main-breadcrumb}}
-      {{#> page-main-section}}
-        <code>.pf-v5-c-page__main-section</code> for main sections
-      {{/page-main-section}}
-      {{#> page-main-wizard}}
-        <code>.pf-v5-c-page__main-wizard</code> for wizards
-      {{/page-main-wizard}}
-    {{/page-main-list}}
+    {{#> page-main-subnav}}
+      <code>.pf-v5-c-page__main-subnav</code> for horizontal subnav navigation
+    {{/page-main-subnav}}
+    {{#> page-main-nav}}
+      <code>.pf-v5-c-page__main-nav</code> for tertiary navigation
+    {{/page-main-nav}}
+    {{#> page-main-tabs}}
+      <code>.pf-v5-c-page__main-tabs</code> for tabs
+    {{/page-main-tabs}}
+    {{#> page-main-group}}
+      <code>.pf-v5-c-page__main-group</code> for a group of page sections
+    {{/page-main-group}}
+    {{#> page-main-breadcrumb}}
+      <code>.pf-v5-c-page__main-breadcrumb</code> for breadcrumbs
+    {{/page-main-breadcrumb}}
+    {{#> page-main-section}}
+      <code>.pf-v5-c-page__main-section</code> for main sections
+    {{/page-main-section}}
+    {{#> page-main-wizard}}
+      <code>.pf-v5-c-page__main-wizard</code> for wizards
+    {{/page-main-wizard}}
   {{/page-main}}
 {{/page}}
 ```
@@ -215,17 +203,15 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main}}
-    {{#> page-main-list}}
-      {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
-        {{#> card}}
-          {{#> card-body}}
-            When a width limited page section is wider than the value of <code>--pf-v5-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.
-            <br><br>
-            The content in this example is placed in a card to better illustrate how the section behaves when it is centered. A card is not required to center a page section.
-          {{/card-body}}
-        {{/card}}
-      {{/page-main-section}}
-    {{/page-main-list}}
+    {{#> page-main-section page-main-section--IsLimitWidth="true" page-main-section--modifier="pf-m-align-center"}}
+      {{#> card}}
+        {{#> card-body}}
+          When a width limited page section is wider than the value of <code>--pf-v5-c-page--section--m-limit-width--MaxWidth</code>, the section will be centered in the main section.
+          <br><br>
+          The content in this example is placed in a card to better illustrate how the section behaves when it is centered. A card is not required to center a page section.
+        {{/card-body}}
+      {{/card}}
+    {{/page-main-section}}
   {{/page-main}}
 {{/page}}
 ```
@@ -249,7 +235,6 @@ This component provides the basic chrome for a page, including sidebar and main 
 | `.pf-v5-c-page__sidebar` | `<aside>` |   Declares the page sidebar. |
 | `.pf-v5-c-page__sidebar-body` | `<div>` | Creates a wrapper within the sidebar to hold content. **Note: The last/only `.pf-v5-c-page__sidebar-body` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.** |
 | `.pf-v5-c-page__main` | `<main>` |   Declares the main page area. |
-| `.pf-v5-c-page__main-list` | `<div>` |   Declares the main page list area. |
 | `.pf-v5-c-page__main-nav` | `<section>` |   Creates a container to nest the navigation component in the main page area. |
 | `.pf-v5-c-page__main-breadcrumb` | `<section>` |   Creates a container to nest the breadcrumb component in the main page area. |
 | `.pf-v5-c-page__main-section` | `<section>` |  Creates a section container in the main page area. **Note: The last/only `.pf-v5-c-page__main-section` element will grow to fill the availble vertical space. You can change this behavior using `.pf-m-fill` and `.pf-m-no-fill`, which are documented below.**  |

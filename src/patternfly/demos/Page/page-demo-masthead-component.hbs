@@ -4,10 +4,8 @@
   {{/page-header}}
   {{> page-template-sidebar}}
   {{#> page-main page-main--attribute=(concat 'id="main-content-' page--id '"')}}
-    {{#> page-main-list}}
-      {{> page-template-title page-template-title--modifier="pf-m-shadow-bottom"}}
-      {{> page-template-gallery page-template-gallery--modifier="pf-m-overflow-scroll"}}
-      {{> page-template-footer page-template-footer--modifier="pf-m-shadow-top"}}
-    {{/page-main-list}}
+    {{> page-template-title page-template-title--modifier="pf-m-shadow-bottom"}}
+    {{> page-template-gallery page-template-gallery--modifier="pf-m-overflow-scroll"}}
+    {{> page-template-footer page-template-footer--modifier="pf-m-shadow-top"}}
   {{/page-main}}
 {{/page}}

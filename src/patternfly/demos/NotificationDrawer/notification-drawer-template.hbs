@@ -12,11 +12,11 @@
     {{#> drawer}}
       {{#> drawer-main}}
         {{#> drawer-content}}
-          {{#> page-main-list}}
+          {{#> page-main}} // TODO should this be a page-main-list so there is not a duplicate main tag?
             {{> page-template-breadcrumb}}
             {{> page-template-title}}
             {{> page-template-gallery}}
-          {{/page-main-list}}
+          {{/page-main}}
         {{/drawer-content}}
         {{#> drawer-panel drawer-panel--modifier="pf-m-width-33"}}
           {{#> drawer-body drawer-body--modifier="pf-m-no-padding"}}

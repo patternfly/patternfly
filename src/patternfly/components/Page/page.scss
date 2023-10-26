@@ -56,20 +56,9 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__header-tools-group--Display: flex;
   --#{$page}__header-tools-item--Display: block;
 
-  // Header tools notification badge
-  // --#{$page}__header-tools-item--c-notification-badge--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-200);
-  // --#{$page}__header-tools--c-button--notification-badge--m-unread--after--BackgroundColor: var(--#{$pf-global}--primary-color--200);
-  // --#{$page}__header-tools--c-button--notification-badge--m-attention--after--BackgroundColor: var(--#{$pf-global}--danger-color--200);
-  // --#{$page}__header-tools--c-button--m-selected--notification-badge--m-unread--after--BackgroundColor: var(--#{$pf-global}--primary-color--200);
-  // --#{$page}__header-tools--c-button--m-selected--notification-badge--m-attention--after--BackgroundColor: var(--#{$pf-global}--danger-color--200);
-
   // Header tools group button
   --#{$page}__header-tools--c-button--m-selected--before--Width: auto;
   --#{$page}__header-tools--c-button--m-selected--before--Height: auto;
-
-  // --#{$page}__header-tools--c-button--m-selected--before--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-200);
-  // --#{$page}__header-tools--c-button--m-selected--before--BorderRadius: var(--#{$pf-global}--BorderRadius--sm); // TODO remove at breaking change
-  // --#{$page}__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor: transparent; // TODO remove at breaking change
 
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$page}__header-tools--MarginRight: var(--#{$page}__header-tools--xl--MarginRight);
@@ -79,16 +68,16 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--ZIndex: var(--#{$pf-global}--ZIndex--sm);
   --#{$page}__sidebar--Width: #{pf-size-prem(290px)};
   --#{$page}__sidebar--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
-
-  // --#{$page}__sidebar--m-light--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
-  // --#{$page}__sidebar--m-light--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
-  // --#{$page}__sidebar--m-light--BorderRightColor: var(--#{$pf-global}--BorderColor--100);
   --#{$page}__sidebar--BoxShadow: none;
   --#{$page}__sidebar--Transition: var(--#{$pf-global}--Transition);
   --#{$page}__sidebar--TranslateX: -100%;
   --#{$page}__sidebar--TranslateZ: 0;
   --#{$page}__sidebar--m-expanded--TranslateX: 0;
   --#{$page}__sidebar--xl--TranslateX: 0;
+  --#{$page}__sidebar--MarginRight: var(--pf-t--global--spacer--md); // TODO check this
+  --#{$page}__sidebar--PaddingBlockEnd: var(--pf-t--global--spacer--lg); // TODO check this
+  --#{$page}__sidebar--PaddingInlineStart: var(--pf-t--global--spacer--lg); // TODO check this
+
 
   // Sidebar header
   --#{$page}__sidebar-header--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
@@ -116,6 +105,12 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
   // Main
   --#{$page}__main--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$page}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$page}__main--MarginInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$page}__main--MarginInlineEnd: var(--pf-t--global--spacer--lg);
+  --#{$page}__main--BorderRadius: var(--pf-t--global--border--radius--large);
+  --#{$page}__main--BorderWidth: var(--pf-t--global--border--width--300); // TODO
+  --#{$page}__main--BorderColor: var(--#{$page}__main--BackgroundColor); // Border should match the background to blend in
 
   // Main section
   --#{$page}__main-section--MarginTop: var(--pf-t--global--spacer--md);
@@ -124,11 +119,8 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-section--PaddingBottom: 0;
   --#{$page}__main-section--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$page}__main-breadcrumb--main-section--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$page}__main-section--BackgroundColor: var(--pf-t--global--background--color--primary--default); // transparent;
-  --#{$page}__main-section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default); // TODO or is this transparent;
-  // --#{$page}__main-section--m-light-100--BackgroundColor: purple; // transparent;
-  // --#{$page}__main-section--m-dark-100--BackgroundColor: green; // transparent;
-  // --#{$page}__main-section--m-dark-200--BackgroundColor: cyan; // transparent;
+  --#{$page}__main-section--BackgroundColor: var(--pf-t--global--background--color--primary--default); // TODO or transparent; ?
+  --#{$page}__main-section--m-secondary--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$page}__main-breadcrumb--page__main-tabs--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$page}__main-nav--page__main-tabs--PaddingTop: var(--pf-t--global--spacer--md);
 
@@ -183,9 +175,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__main-wizard--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$page}__main-wizard--BorderTopColor: var(--pf-t--global--border--color--default);
   --#{$page}__main-wizard--BorderTopWidth: var(--pf-t--global--border--width--button--default);
-  
-  // --#{$page}__main-wizard--m-light-200--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-}
+  }
 
 .#{$page} {
   // Base
@@ -218,8 +208,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__header {
-  @include pf-v5-t-dark; // force the container to follow the dark theme
-
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -326,51 +314,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   @include pf-v5-hidden-visible(var(--#{$page}__header-tools-item--Display));
 }
 
-  // &.pf-m-selected {
-  //   .#{$button} {
-  //     background-color: var(--#{$page}__header-tools--c-button--m-selected--before--BackgroundColor); // update at breaking change
-  //     border-radius: var(--#{$page}__header-tools--c-button--m-selected--before--BorderRadius); // update at breaking change
-
-  //     // remove at breaking change
-  //     // &::before {
-  //     //   position: absolute;
-  //     //   inset: 0;
-  //     //   width: var(--#{$page}__header-tools--c-button--m-selected--before--Width); // remove at breaking change
-  //     //   height: var(--#{$page}__header-tools--c-button--m-selected--before--Height); // remove at breaking change
-  //     //   content: "";
-  //     // }
-
-  //     // // stylelint-disable
-  //     // .#{$notification-badge} {
-  //     //   &.pf-m-unread {
-  //     //     --#{$notification-badge}--after--BackgroundColor: var(--#{$page}__header-tools--c-button--m-selected--notification-badge--m-unread--after--BackgroundColor);
-
-  //     //     &::after {
-  //     //       border-color: var(--#{$page}__header-tools--c-button--m-selected--c-notification-badge--m-unread--after--BorderColor);
-  //     //     }
-  //     //   }
-
-  //     //   &.pf-m-attention {
-  //     //     --#{$notification-badge}--after--BackgroundColor: var(--#{$pf-global}--danger-color--200);
-  //     //   }
-  //     // }
-  //     // // stylelint-enable
-  //   }
-  // }
-
-  // .#{$button}:focus {
-  //   .#{$notification-badge} {
-  //     &.pf-m-unread {
-  //       --#{$notification-badge}--after--BackgroundColor: var(--#{$page}__header-tools--c-button--notification-badge--m-unread--after--BackgroundColor);
-  //     }
-
-  //     &.pf-m-attention {
-  //       --#{$notification-badge}--after--BackgroundColor: var(--#{$page}__header-tools--c-button--notification-badge--m-attention--after--BackgroundColor);
-  //     }
-  //   }
-  // }
-// }
-
 // Sidebar
 .#{$page}__sidebar {
   z-index: var(--#{$page}__sidebar--ZIndex);
@@ -383,7 +326,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   padding-block-start: 0;
   padding-block-end: var(--pf-t--global--spacer--lg);
   padding-inline-start: var(--pf-t--global--spacer--lg);
-  margin-inline-end: var(--#{$page}__sidebar--MarginRight); // TODO need variable
+  margin-inline-end: var(--#{$page}__sidebar--MarginRight);
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -414,14 +357,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     max-width: 0;
     overflow: hidden;
   }
-
-  // &.pf-m-light {
-  //   @include pf-v5-t-light;
-
-  //   --#{$page}__sidebar--BackgroundColor: var(--#{$page}__sidebar--m-light--BackgroundColor);
-
-  //   border-inline-end: var(--#{$page}__sidebar--m-light--BorderRightWidth) solid var(--#{$page}__sidebar--m-light--BorderRightColor);
-  // }
 }
 
 .#{$page}__sidebar-header {
@@ -543,7 +478,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
       &.pf-m-sticky-top#{$breakpoint-name} {
         position: sticky;
-       inset-block-start: 0;
+        inset-block-start: 0;
         z-index: var(--#{$page}--section--m-sticky-top--ZIndex);
         box-shadow: var(--#{$page}--section--m-sticky-top--BoxShadow);
       }
@@ -560,18 +495,14 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 
 // Main & Drawer
 .#{$page}__main {
+  align-self: start;
+  max-height: 100%;
   margin-block-start: 0;
-  margin-inline-start: var(--pf-t--global--spacer--lg);
-  margin-inline-end: var(--pf-t--global--spacer--lg);
-}
-
-.#{$page}__main-list {
-  padding-block-start: var(--pf-t--global--spacer--lg);
-  padding-block-end: var(--pf-t--global--spacer--lg);
-  margin-block-end: var(--pf-t--global--spacer--lg);
-  background-color: var(--pf-t--global--background--color--primary--default);
-  border: 8px solid var(--pf-t--color--white); // TODO experimenting with rounded border
-  border-radius: var(--pf-t--global--border--radius--large);
+  margin-inline-start: var(--#{$page}__main--MarginInlineStart);
+  margin-inline-end: var(--#{$page}__main--MarginInlineEnd);
+  background: var(--#{$page}--#{$page}__main--BackgroundColor);
+  border: var(--#{$page}__main--BorderWidth) solid var(--#{$page}__main--BorderColor);
+  border-radius: var(--#{$page}__main--BorderRadius);
 }
 
 .#{$page}__main,
@@ -697,18 +628,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
     --#{$page}__main-section--BackgroundColor: var(--#{$page}__main-section--m-secondary--BackgroundColor);
   }
 
-  // &.pf-m-light-100 {
-  //   --#{$page}__main-section--BackgroundColor: var(--#{$page}__main-section--m-light-100--BackgroundColor);
-  // }
-
-  // &.pf-m-dark-100 {
-  //   --#{$page}__main-section--BackgroundColor: var(--#{$page}__main-section--m-dark-100--BackgroundColor);
-  // }
-
-  // &.pf-m-dark-200 {
-  //   --#{$page}__main-section--BackgroundColor: var(--#{$page}__main-section--m-dark-200--BackgroundColor);
-  // }
-
   @each $breakpoint, $breakpoint-value in $pf-page-v5--breakpoint-map {
     $breakpoint-name: if($breakpoint != "base", -on-#{$breakpoint}, "");
 
@@ -752,10 +671,6 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   &:first-child {
     --#{$page}__main-wizard--BorderTopWidth: 0;
   }
-
-  // &.pf-m-light-200 {
-  //   --#{$page}__main-wizard--BackgroundColor: var(--#{$page}__main-wizard--m-light-200--BackgroundColor);
-  // }
 }
 
 .#{$page}__main-wizard .#{$page}__main-body {
