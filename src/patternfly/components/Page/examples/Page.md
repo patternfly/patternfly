@@ -25,14 +25,11 @@ import './Page.css'
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-section page-main-section--modifier="pf-m-dark-100"}}
-      This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-dark-100</code>.
+    {{#> page-main-section}}
+      This is a default <code>.pf-v5-c-page__main-section</code>.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-dark-200"}}
-      This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-dark-200</code>.
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
-      This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-light</code>.
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
+      This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
     {{/page-main-section}}
     {{#> page-main-section}}
       This is a default <code>.pf-v5-c-page__main-section</code>.
@@ -54,13 +51,14 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main}}
-    {{#> page-main-section page-main-section--modifier="pf-m-dark-100"}}
+    {{#> page-main-section}}
+      This is a default <code>.pf-v5-c-page__main-section</code>.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-dark-200"}}
-    {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-secondary"}}
+      This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-secondary</code>.
     {{/page-main-section}}
     {{#> page-main-section}}
+      This is a default <code>.pf-v5-c-page__main-section</code>.
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -90,7 +88,7 @@ import './Page.css'
     {{/page-sidebar-body}}
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+    {{#> page-main-section}}
     {{/page-main-section}}
   {{/page-main}}
 {{/page}}
@@ -109,13 +107,13 @@ import './Page.css'
     {{> masthead-content}}
   {{/masthead}}
   {{#> page-main}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light"}}
+    {{#> page-main-section}}
       A regular page section.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-fill"}}
       This section uses <code>.pf-m-fill</code> to fill the available space.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-light pf-m-no-fill"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-fill"}}
       This section uses <code>.pf-m-no-fill</code> to not fill the available space.
     {{/page-main-section}}
   {{/page-main}}
@@ -141,7 +139,7 @@ import './Page.css'
     {{#> page-main-section}}
       This <code>.pf-v5-c-page__main-section</code> has default padding.
     {{/page-main-section}}
-    {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-light"}}
+    {{#> page-main-section page-main-section--modifier="pf-m-no-padding"}}
       This <code>.pf-v5-c-page__main-section</code> uses <code>.pf-m-no-padding</code> to remove all padding.
     {{/page-main-section}}
     {{#> page-main-section page-main-section--modifier="pf-m-no-padding pf-m-padding-on-md"}}
