@@ -253,7 +253,6 @@
   --#{$table}__tr--m-clickable--BoxShadow--top: var(--#{$table}__tr--BoxShadow--top--base);
   --#{$table}__tr--m-clickable--BackgroundColor: transparent;
   --#{$table}__tr--m-clickable--BoxShadow: none;
-  --#{$table}__tr--m-clickable--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$table}__tr--m-clickable--OutlineOffset: calc(-1 * var(--#{$pf-global}--spacer--xs));
 
   // TODO Shadow tokens START HERE AGAIN
@@ -691,18 +690,9 @@
 
   // tr clickable
   tr:where(.#{$table}__tr) {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      inset:0;
-      content: "";
-      background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
-      border-radius: var(--#{$table}__tr--m-clickable--BorderRadius);
-    }
-
     &.pf-m-clickable {
       cursor: pointer;
+      background-color: var(--#{$table}__tr--m-clickable--BackgroundColor);
       outline-offset: var(--#{$table}__tr--m-clickable--OutlineOffset);
       box-shadow: var(--#{$table}__tr--m-clickable--BoxShadow);
 
