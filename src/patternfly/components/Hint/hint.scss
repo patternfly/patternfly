@@ -1,30 +1,34 @@
 // @debug $hint; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$hint} {
-  --#{$hint}--GridRowGap: var(--#{$pf-global}--spacer--md);
-  --#{$hint}--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$hint}--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$hint}--PaddingBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$hint}--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$hint}--BackgroundColor: var(--#{$pf-global}--palette--blue-50);
-  --#{$hint}--BorderColor: var(--#{$pf-global}--palette--blue-100);
-  --#{$hint}--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$hint}--BoxShadow: var(--#{$pf-global}--BoxShadow--sm);
-  --#{$hint}--Color: var(--#{$pf-global}--Color--100);
+:root {
+  --#{$hint}--GridRowGap: var(--pf-t--global--spacer--md);
+  --#{$hint}--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$hint}--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$hint}--PaddingBottom: var(--pf-t--global--spacer--lg);
+  --#{$hint}--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$hint}--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$hint}--BorderColor: var(--pf-t--global--border--color--status--info--default);
+  --#{$hint}--BorderWidth: var(--pf-t--global--border--width--200); // TODO - need sematic variable
+  --#{$hint}--BorderRadius: var(--pf-t--global--border--radius--large);
+  --#{$hint}--Color: var(--pf-t--global--text--color--regular);
 
   // Hint Title
-  --#{$hint}__title--FontSize: var(--#{$pf-global}--FontSize--lg);
+  --#{$hint}__title--FontSize: var(--pf-t--global--font--size--heading--xs);
+  --#{$hint}__title--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$hint}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
 
   // Hint Body
-  --#{$hint}__body--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$hint}__body--FontSize: var(--pf-t--global--font--size--body--md);
 
   // Hint Footer
-  --#{$hint}__footer--child--MarginRight: var(--#{$pf-global}--spacer--md);
+  --#{$hint}__footer--child--MarginRight: var(--pf-t--global--spacer--md);
 
   // Hint Actions
-  --#{$hint}__actions--MarginLeft: var(--#{$pf-global}--spacer--2xl);
-  --#{$hint}__actions--c-dropdown--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$hint}__actions--MarginLeft: var(--pf-t--global--spacer--2xl);
+  --#{$hint}__actions--c-dropdown--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1); // TODO form element spacer
+}
 
+.#{$hint} {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-row-gap: var(--#{$hint}--GridRowGap);
@@ -35,7 +39,7 @@
   color: var(--#{$hint}--Color);
   background-color: var(--#{$hint}--BackgroundColor);
   border: var(--#{$hint}--BorderWidth) solid var(--#{$hint}--BorderColor);
-  box-shadow: var(--#{$hint}--BoxShadow);
+  border-radius: var(--#{$hint}--BorderRadius);
 
   // Remove this when the inline link button is updated
   .#{$button}.pf-m-link.pf-m-inline {
@@ -63,7 +67,10 @@
 }
 
 .#{$hint}__title {
+  align-self: center;
   font-size: var(--#{$hint}__title--FontSize);
+  font-weight: var(--#{$hint}__title--FontWeight);
+  line-height: var(--#{$hint}__title--LineHeight);
 }
 
 .#{$hint}__body {
@@ -77,11 +84,4 @@
   > :not(:last-child) {
     margin-inline-end: var(--#{$hint}__footer--child--MarginRight);
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/hint";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-hint;
 }
