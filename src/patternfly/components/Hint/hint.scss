@@ -1,7 +1,7 @@
 // @debug $hint; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 :root {
-  --#{$hint}--GridRowGap: var(--pf-t--global--spacer--md);
+  --#{$hint}--GridRowGap: var(--pf-t--global--spacer--sm);
   --#{$hint}--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$hint}--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$hint}--PaddingBottom: var(--pf-t--global--spacer--lg);
@@ -21,6 +21,7 @@
   --#{$hint}__body--FontSize: var(--pf-t--global--font--size--body--md);
 
   // Hint Footer
+  --#{$hint}__footer--MarginTop: var(--pf-t--global--spacer--sm);
   --#{$hint}__footer--child--MarginRight: var(--pf-t--global--spacer--md);
 
   // Hint Actions
@@ -80,6 +81,7 @@
 
 .#{$hint}__footer {
   grid-column: 1 / -1;
+  margin-block-start: var(--#{$hint}__footer--MarginTop);
 
   > :not(:last-child) {
     margin-inline-end: var(--#{$hint}__footer--child--MarginRight);
