@@ -47,7 +47,6 @@
     height: 100%;
   }
 
-  // TODO
   :where(body) {
     font-family: var(--pf-t--global--font--family--body);
     font-size: var(--pf-t--global--font--size--body);
@@ -139,9 +138,3 @@
   }
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "./themes/dark/globals";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-globals;
-}
