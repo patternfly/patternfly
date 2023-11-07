@@ -4,12 +4,14 @@ section: components
 cssPrefix: pf-v5-c-notification-badge
 ---
 
+import './NotificationBadge.css'
+
 ## Examples
 
 ### Basic
 
 ```hbs
-<div>
+<div class="pf-v5-t-dark">
   {{> notification-badge notification-badge--aria-label="Notifications"}}
   {{> notification-badge notification-badge--IsUnread="true" notification-badge--aria-label="Unread notifications"}}
   {{> notification-badge notification-badge--IsAttention="true" notification-badge--aria-label="Attention notifications"}}
@@ -25,7 +27,7 @@ cssPrefix: pf-v5-c-notification-badge
 ### With count
 
 ```hbs
-<div>
+<div class="pf-v5-t-dark">
   {{#> wrapper notification-badge--count="24"}}
     {{> notification-badge notification-badge--aria-label=(concat notification-badge--count " notifications")}}
     {{> notification-badge notification-badge--IsUnread="true" notification-badge--aria-label=(concat notification-badge--count " unread notifications")}}
@@ -43,7 +45,7 @@ cssPrefix: pf-v5-c-notification-badge
 ### Expanded
 
 ```hbs
-<div>
+<div class="pf-v5-t-dark">
   {{#> wrapper notification-badge--IsExpanded="true"}}
     {{> notification-badge notification-badge--aria-label="Notifications"}}
     {{> notification-badge notification-badge--IsUnread="true" notification-badge--aria-label="Unread notifications"}}
@@ -61,7 +63,7 @@ cssPrefix: pf-v5-c-notification-badge
 ## Documentation
 
 ### Overview
-Always add a modifier class to indicate read, unread, or attention state. Never use the class `.pf-v5-c-notification-badge` on its own.
+Always add a modifier class to indicate read, unread, or attention state. Never use the class `.pf-v5-c-notification-badge` on its own. This component is designed to be used within a dark component such as the [masthead](/components/masthead).
 
 ### Accessibility
 Be sure that the component associated with this indicator handles screen reader text indicating read or unread notifications.

@@ -1,0 +1,69 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-v5-theme-dark-page() {
+  &:root {
+    --#{$page}__main-section--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
+    --#{$page}__header-tools--c-button--m-selected--before--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$page}__sidebar--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+    --#{$page}__header--BackgroundColor: var(--#{$pf-global}--palette--black-1000);
+  }
+
+  .#{$page}__header-tools-item {
+    &.pf-m-selected {
+      .#{$button} {
+        color: var(--#{$pf-global}--Color--100);
+
+        // stylelint-disable
+        .#{$notification-badge} {
+          &:hover {
+            &::before {
+              background-color: var(--#{$page}__header-tools--c-button--m-selected--before--BackgroundColor);
+            }
+          }
+        }
+        // stylelint-enable
+      }
+    }
+  }
+
+  .#{$page}__sidebar {
+    border-inline-end: var(--#{$pf-global}--BorderWidth--sm) solid var(--#{$pf-global}--BorderColor--100);
+  }
+
+  .#{$page}__main-nav {
+    &.pf-m-sticky-top,
+    &.pf-m-sticky-bottom {
+      --#{$page}__main-nav--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    }
+  }
+
+  .#{$page}__main-breadcrumb {
+    &.pf-m-sticky-top,
+    &.pf-m-sticky-bottom {
+      --#{$page}__main-breadcrumb--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    }
+  }
+
+  .#{$page}__main-group {
+    &.pf-m-sticky-top,
+    &.pf-m-sticky-bottom {
+      --#{$page}__main-section--m-light--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+      --#{$page}__main-section--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+      --#{$page}__main-breadcrumb--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+      --#{$page}__main-nav--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    }
+  }
+
+  .#{$page}__main-section {
+    &.pf-m-sticky-top,
+    &.pf-m-sticky-bottom {
+      --#{$page}__main-section--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    }
+  }
+
+  .#{$page}__sidebar-body.pf-m-menu .#{$context-selector},
+  .#{$page}__main-section[class*="pf-m-dark-"],
+  .#{$page}__header {
+    @include pf-v5-theme-dark--t-dark;
+  }
+}

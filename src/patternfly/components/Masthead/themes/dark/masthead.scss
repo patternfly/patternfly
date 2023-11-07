@@ -1,0 +1,14 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-v5-theme-dark-masthead() {
+  .#{$masthead} {
+    --#{$masthead}--BackgroundColor: var(--#{$pf-global}--palette--black-1000);
+    --#{$masthead}--item-border-color--base: var(--#{$pf-global}--BorderColor--100);
+
+    .#{$toolbar} {
+      --#{$toolbar}--BackgroundColor: var(--#{$pf-global}--palette--black-1000);
+    }
+
+    @include pf-v5-theme-dark--t-dark;
+  }
+}

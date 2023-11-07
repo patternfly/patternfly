@@ -38,19 +38,19 @@
   // ============================================================ //
 
   // Table
-  --#{$table}--responsive--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$table}--responsive--BorderColor: var(--#{$pf-global}--BorderColor--300);
 
   // Body
-  --#{$table}__tbody--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__tbody--responsive--border-width--base: var(--#{$pf-global}--spacer--sm);
   --#{$table}__tbody--after--border-width--base: var(--#{$pf-global}--BorderWidth--lg);
   --#{$table}__tbody--after--BorderLeftWidth: 0;
-  --#{$table}__tbody--after--BorderColor: var(--pf-t--global--border--color--active);
+  --#{$table}__tbody--after--BorderColor: var(--#{$pf-global}--active-color--100);
 
   // Row
-  --#{$table}__tr--responsive--border-width--base: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__tr--responsive--border-width--base: var(--#{$pf-global}--spacer--sm);
   --#{$table}__tr--responsive--last-child--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$table}__tr--responsive--GridColumnGap: var(--#{$pf-global}--spacer--md);
-  --#{$table}__tr--responsive--MarginTop: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__tr--responsive--MarginTop: var(--#{$pf-global}--spacer--sm);
   --#{$table}__tr--responsive--PaddingTop: var(--#{$pf-global}--spacer--md);
   --#{$table}__tr--responsive--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$table}__tr--responsive--xl--PaddingRight: var(--#{$pf-global}--spacer--md);
@@ -76,7 +76,7 @@
 
   // selected
   --#{$table}__tbody--m-selected--after__tr--BorderLeftWidth: var(--#{$table}__expandable-row--after--border-width--base);
-  --#{$table}__tbody--m-selected--after__tr--BorderLeftColor: var(--pf-t--global--border--color--active);
+  --#{$table}__tbody--m-selected--after__tr--BorderLeftColor: var(--#{$pf-global}--active-color--100);
 
   // Cell display
   --#{$table}--m-grid--cell--hidden-visible--Display: grid;
@@ -110,7 +110,7 @@
   --#{$table}__expandable-row-content--responsive--PaddingLeft: var(--#{$pf-global}--spacer--lg);
   --#{$table}__expandable-row-content--responsive--xl--PaddingRight: var(--#{$pf-global}--spacer--md);
   --#{$table}__expandable-row-content--responsive--xl--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$table}__expandable-row-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$table}__expandable-row-content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
 
   @media screen and (max-width: $pf-v5-global--breakpoint--xl) {
     --#{$table}__expandable-row-content--responsive--PaddingRight: var(--#{$table}__expandable-row-content--responsive--xl--PaddingRight);
@@ -118,7 +118,7 @@
   }
 
   // Check
-  --#{$table}__check--responsive--MarginLeft: var(--pf-t--global--border--width--divider--default);
+  --#{$table}__check--responsive--MarginLeft: var(--#{$pf-global}--spacer--sm);
   --#{$table}__check--responsive--MarginTop: #{pf-size-prem(14px)};
 
   // Favorite

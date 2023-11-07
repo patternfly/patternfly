@@ -270,8 +270,7 @@ $pf-v5-c-drawer__panel--list--width: (25, 33, 50, 66, 75, 100);
   z-index: var(--#{$drawer}__content--ZIndex);
   flex-basis: var(--#{$drawer}__content--FlexBasis);
   order: 0;
-
-  // background-color: var(--#{$drawer}__content--BackgroundColor);
+  background-color: var(--#{$drawer}__content--BackgroundColor);
 
   &.pf-m-no-background {
     --#{$drawer}__content--BackgroundColor: transparent;

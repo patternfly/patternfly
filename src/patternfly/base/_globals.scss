@@ -47,12 +47,11 @@
     height: 100%;
   }
 
-  // TODO
   :where(body) {
-    font-family: var(--pf-t--global--font--family--body);
-    font-size: var(--pf-t--global--font--size--body);
-    font-weight: var(--pf-t--global--font--weight--body);
-    line-height: var(--pf-t--global--font--line-height--body);
+    font-family: var(--#{$pf-global}--FontFamily--text);
+    font-size: var(--#{$pf-global}--FontSize--md);
+    font-weight: var(--#{$pf-global}--FontWeight--normal);
+    line-height: var(--#{$pf-global}--LineHeight--md);
   }
 
   :where(
@@ -64,7 +63,7 @@
     h6
    ) {
     font-size: 100%;
-    font-weight: var(--pf-t--global--font--weight--body);
+    font-weight: var(--#{$pf-global}--FontWeight--normal);
   }
 
   :where(ul) {
@@ -81,8 +80,8 @@
     margin: 0;
     font-family: inherit;
     font-size: 100%;
-    line-height: var(--pf-t--global--font--line-height--body);
-    color: var(--pf-t--global--text--color--regular);
+    line-height: var(--#{$pf-global}--LineHeight--md);
+    color: var(--#{$pf-global}--Color--100);
   }
 
   :where(
@@ -118,17 +117,18 @@
     code,
     pre
   ) {
-    font-family: var(--pf-t--global--font--family--mono);
+    font-family: var(--#{$pf-global}--FontFamily--monospace);
   }
 
   :where(a) {
-    color: var(--pf-t--global--text--color--link--default);
-    text-decoration: var(--pf-t--global--link--text-decoration);
+    font-weight: var(--#{$pf-global}--link--FontWeight);
+    color: var(--#{$pf-global}--link--Color);
+    text-decoration: var(--#{$pf-global}--link--TextDecoration);
   }
 
   :where(a:hover) {
-    --#{$pf-global}--link--Color: var(--pf-t--global--text--color--link--hover);
-    --#{$pf-global}--link--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
+    --#{$pf-global}--link--Color: var(--#{$pf-global}--link--Color--hover);
+    --#{$pf-global}--link--TextDecoration: var(--#{$pf-global}--link--TextDecoration--hover);
   }
 
   :where(

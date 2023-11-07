@@ -284,7 +284,7 @@ cssPrefix: ['pf-v5-c-alert','pf-v5-c-alert-group']
   {{> alert-icon alert-icon--type="cog"}}
   {{#> alert-title}}
     {{#> screen-reader}}Success alert:{{/screen-reader}}
-      Success alert title (inline)
+      Success alert title
   {{/alert-title}}
 {{/alert}}
 ```
