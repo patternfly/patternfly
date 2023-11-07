@@ -132,12 +132,12 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}--section--m-sticky-top--ZIndex: var(--#{$pf-global}--ZIndex--md);
   --#{$page}--section--m-sticky-top--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
   --#{$page}--section--m-sticky-bottom--ZIndex: var(--#{$pf-global}--ZIndex--md);
-  --#{$page}--section--m-sticky-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm-top);
+  --#{$page}--section--m-sticky-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
 
   // Shadows
-  --#{$page}--section--m-shadow-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm-bottom);
+  --#{$page}--section--m-shadow-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
   --#{$page}--section--m-shadow-bottom--ZIndex: var(--#{$pf-global}--ZIndex--xs);
-  --#{$page}--section--m-shadow-top--BoxShadow: var(--pf-t--global--box-shadow--sm-top);
+  --#{$page}--section--m-shadow-top--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$page}--section--m-shadow-top--ZIndex: var(--#{$pf-global}--ZIndex--xs);
 
   // Main section horizontal nav
