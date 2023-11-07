@@ -45,8 +45,8 @@ import './Toolbar.css'
     {{#> toolbar toolbar--id="toolbar-with-validation-example"}}
       {{#> toolbar-content}}
         {{#> toolbar-content-section}}
-          {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-2xl"}}
-            {{> toolbar-toggle}}
+          {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg"}}
+            {{> toolbar-toggle toolbar-toggle--IsExpanded=false}}
             {{#> toolbar-group toolbar-group--modifier="pf-m-filter-group"}}
               {{#> toolbar-item}}
                 {{#> input-group input-group--attribute=(concat 'aria-label="search filter" role="group"')}}

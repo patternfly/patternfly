@@ -14,10 +14,6 @@
   --#{$button}--BorderWidth: var(--pf-t--global--border--width--button--default);
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--TextDecoration: none;
-  --#{$button}--BorderStartStartRadius: var(--#{$button}--BorderRadius);
-  --#{$button}--BorderStartEndRadius: var(--#{$button}--BorderRadius);
-  --#{$button}--BorderEndStartRadius: var(--#{$button}--BorderRadius);
-  --#{$button}--BorderEndEndRadius: var(--#{$button}--BorderRadius);
   --#{$button}--MixBlendMode: normal;
 
   // Hover
@@ -289,11 +285,10 @@
   user-select: none;
   background-color: var(--#{$button}--BackgroundColor);
   border: 0;
-  border-start-start-radius: var(--#{$button}--BorderStartStartRadius);
-  border-start-end-radius: var(--#{$button}--BorderStartEndRadius);
-  border-end-start-radius: var(--#{$button}--BorderEndStartRadius);
-  border-end-end-radius: var(--#{$button}--BorderEndEndRadius);
-  mix-blend-mode: var(--#{$button}--MixBlendMode);
+  border-start-start-radius: var(--#{$button}--BorderStartStartRadius, var(--#{$button}--BorderRadius));
+  border-start-end-radius: var(--#{$button}--BorderStartEndRadius, var(--#{$button}--BorderRadius));
+  border-end-start-radius: var(--#{$button}--BorderEndStartRadius, var(--#{$button}--BorderRadius));
+  border-end-end-radius: var(--#{$button}--BorderEndEndRadius, var(--#{$button}--BorderRadius));
 
   &::after {
     position: absolute;

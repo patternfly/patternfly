@@ -18,27 +18,20 @@
   min-height: 28rem;
 }
 
+#ws-core-c-toolbar-adjusted-group-column-gap .pf-v5-c-toolbar,
+#ws-core-c-toolbar-adjusted-group-column-gap .pf-v5-c-toolbar__group,
 #ws-core-e-toolbar-simple .pf-v5-c-toolbar,
 #ws-core-e-toolbar-simple .pf-v5-c-toolbar__group,
-#ws-core-e-toolbar-simple .pf-v5-c-toolbar__item,
 #ws-core-e-toolbar-adjusted-spacers .pf-v5-c-toolbar,
-#ws-core-e-toolbar-adjusted-spacers .pf-v5-c-toolbar__item,
 #ws-core-e-toolbar-adjusted-group-spacers .pf-v5-c-toolbar,
-#ws-core-e-toolbar-adjusted-group-spacers .pf-v5-c-toolbar__item,
 #ws-core-c-toolbar-simple .pf-v5-c-toolbar,
 #ws-core-c-toolbar-simple .pf-v5-c-toolbar__group,
-#ws-core-c-toolbar-simple .pf-v5-c-toolbar__item,
 #ws-core-c-toolbar-adjusted-spacers .pf-v5-c-toolbar,
-#ws-core-c-toolbar-adjusted-spacers .pf-v5-c-toolbar__item,
 #ws-core-c-toolbar-adjusted-group-spacers .pf-v5-c-toolbar,
-#ws-core-c-toolbar-adjusted-group-spacers .pf-v5-c-toolbar__item,
 #ws-core-c-toolbar-insets .pf-v5-c-toolbar,
-#ws-core-c-toolbar-insets .pf-v5-c-toolbar__item,
 #ws-core-c-toolbar-page-insets .pf-v5-c-toolbar,
-#ws-core-c-toolbar-page-insets .pf-v5-c-toolbar__item,
-#ws-core-c-toolbar-width-control .pf-v5-c-toolbar,
-#ws-core-c-toolbar-width-control .pf-v5-c-toolbar__item {
-  border: 2px dashed #393f44;
+#ws-core-c-toolbar-width-control .pf-v5-c-toolbar {
+  border: var(--pf-t--global--border--width--control--default) dashed var(--pf-t--global--border--color--default);
 }
 
 #ws-core-e-toolbar-simple .pf-v5-c-toolbar__group .pf-v5-c-toolbar__item,
@@ -46,17 +39,35 @@
   border: none;
 }
 
+#ws-core-c-toolbar-adjusted-group-column-gap .pf-v5-c-toolbar__item,
 #ws-core-e-toolbar-simple .pf-v5-c-toolbar__item,
 #ws-core-e-toolbar-adjusted-spacers .pf-v5-c-toolbar__item,
 #ws-core-e-toolbar-adjusted-group-spacers .pf-v5-c-toolbar__item,
 #ws-core-c-toolbar-simple .pf-v5-c-toolbar__item,
 #ws-core-c-toolbar-adjusted-spacers .pf-v5-c-toolbar__item,
 #ws-core-c-toolbar-adjusted-group-spacers .pf-v5-c-toolbar__item,
-#ws-core-c-toolbar-insets .pf-v5-c-toolbar,
 #ws-core-c-toolbar-insets .pf-v5-c-toolbar__item,
-#ws-core-c-toolbar-page-insets .pf-v5-c-toolbar,
 #ws-core-c-toolbar-page-insets .pf-v5-c-toolbar__item,
-#ws-core-c-toolbar-width-control .pf-v5-c-toolbar,
 #ws-core-c-toolbar-width-control .pf-v5-c-toolbar__item {
-  padding: .5rem;
+  padding-block: .25rem;
+  padding-inline: .5rem;
+}
+
+#ws-core-c-toolbar-adjusted-group-column-gap .pf-v5-c-toolbar__item,
+#ws-core-e-toolbar-simple .pf-v5-c-toolbar__item,
+#ws-core-e-toolbar-adjusted-spacers .pf-v5-c-toolbar__item,
+#ws-core-e-toolbar-adjusted-group-spacers .pf-v5-c-toolbar__item,
+#ws-core-c-toolbar-simple .pf-v5-c-toolbar__item,
+#ws-core-c-toolbar-adjusted-spacers .pf-v5-c-toolbar__item,
+#ws-core-c-toolbar-adjusted-group-spacers .pf-v5-c-toolbar__item,
+#ws-core-c-toolbar-insets .pf-v5-c-toolbar__item,
+#ws-core-c-toolbar-page-insets .pf-v5-c-toolbar__item,
+#ws-core-c-toolbar-width-control .pf-v5-c-toolbar__item {
+  background-color: var(--pf-t--global--background--color--secondary--default);
+}
+
+.ws-core-c-toolbar .ws-preview-html {
+  resize: horizontal;
+  overflow: hidden;
+  border: var(--pf-t--global--border--width--box--default) solid var(--pf-t--global--border--color--brand--default);
 }

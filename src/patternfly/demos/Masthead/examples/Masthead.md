@@ -11,7 +11,7 @@ wrapperTag: div
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+    {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
       {{#> toolbar-item}}
         {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
           <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
@@ -43,7 +43,7 @@ wrapperTag: div
         {{/menu-toggle}}
       {{/toolbar-item}}
     {{/toolbar-group}}
-    {{#> toolbar-item toolbar-item--modifier="pf-m-align-right"}}
+    {{#> toolbar-item toolbar-item--modifier="pf-m-align-end"}}
       {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
         <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
       {{/menu-toggle}}
@@ -58,8 +58,8 @@ wrapperTag: div
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show pf-m-align-right"}}
-      {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
+    {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show pf-m-align-end"}}
+      {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
       {{> toolbar-item-search-filter button--id=(concat masthead--id '-content')}}
     {{/toolbar-group}}
     {{#> toolbar-item}}
@@ -78,8 +78,8 @@ wrapperTag: div
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg pf-m-align-right"}}
-      {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
+    {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show-on-lg pf-m-align-end"}}
+      {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
       {{> toolbar-item-search-filter button--id=(concat masthead--id '-content')}}
     {{/toolbar-group}}
     {{#> toolbar-item}}
@@ -98,7 +98,7 @@ wrapperTag: div
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+    {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
       {{#> toolbar-item}}
         {{#> input-group input-group--IsPlain=true}}
           {{#> input-group-item input-group-item--IsPlain=true}}
@@ -118,7 +118,7 @@ wrapperTag: div
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-align-right"}}
+    {{#> toolbar-group toolbar-group--modifier="pf-m-align-end"}}
       {{#> toolbar-item}}
         {{#> input-group input-group--IsPlain=true}}
           {{#> input-group-item input-group-item--IsFill=true}}
@@ -165,8 +165,8 @@ wrapperTag: div
 
 {{#*inline "masthead-template-content-toolbar-content"}}
   {{#> toolbar-content-section}}
-    {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show pf-m-align-right"}}
-      {{> toolbar-toggle toolbar-toggle--IsExpanded=true}}
+    {{#> toolbar-group toolbar-group--modifier="pf-m-toggle-group pf-m-show pf-m-align-end"}}
+      {{> toolbar-toggle toolbar-toggle--IsExpanded="true"}}
     {{/toolbar-group}}
     {{#> toolbar-item}}
       {{#> menu-toggle menu-toggle--IsPlain="true" menu-toggle--attribute='aria-label="Actions"'}}
