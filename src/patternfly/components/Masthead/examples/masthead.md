@@ -28,16 +28,18 @@ cssPrefix: pf-v5-c-masthead
     {{/masthead-brand}}
   {{/masthead-main}}
   {{#> masthead-content}}
-    <span>Content</span>
-    {{#> button button--modifier="pf-m-primary pf-v5-u-text-align-right"}}
-      Primary
-    {{/button}}
-    {{#> button button--modifier="pf-m-secondary"}}
-      Secondary
-    {{/button}}
-    {{#> button button--modifier="pf-m-tertiary"}}
-      Tertiary
-    {{/button}}
+    {{#> l-flex}}
+      <span>Content</span>
+      {{#> button button--modifier="pf-m-primary"}}
+        Primary
+      {{/button}}
+      {{#> button button--modifier="pf-m-secondary"}}
+        Secondary
+      {{/button}}
+      {{#> button button--modifier="pf-m-tertiary"}}
+        Tertiary
+      {{/button}}
+    {{/l-flex}}
   {{/masthead-content}}
 {{/masthead}}
 ```
@@ -81,6 +83,32 @@ cssPrefix: pf-v5-c-masthead
 {{/masthead}}
 ```
 
+### Light variant
+```hbs
+{{#> masthead masthead--id="light-masthead" masthead--ColorVariant="light"}}
+  {{> masthead-toggle}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
+{{/masthead}}
+```
+
+### Light 200 variant
+```hbs
+{{#> masthead masthead--id="light-200-masthead" masthead--ColorVariant="light-200"}}
+  {{> masthead-toggle}}
+  {{#> masthead-main}}
+    {{#> masthead-brand}}
+      Logo
+    {{/masthead-brand}}
+  {{/masthead-main}}
+  {{> masthead-content}}
+{{/masthead}}
+```
+
 ### Insets
 ```hbs
 {{#> masthead masthead--id="inset-masthead" masthead--modifier="pf-m-inset-sm"}}
@@ -106,3 +134,5 @@ cssPrefix: pf-v5-c-masthead
 | `.pf-v5-c-masthead__brand` | `<a>, <div>` | Initiates the masthead content component. |
 | `.pf-v5-c-masthead__content` | `<div>` | Initiates the masthead content component. |
 | `.pf-m-inset-{none, sm, md, lg, xl, 2xl}{-on-[breakpoint]}` | `.pf-v5-c-masthead` | Modifies masthead horizontal padding at optional [breakpoint](/developer-resources/global-css-variables#breakpoint-variables-and-class-suffixes). |
+| `.pf-m-light` | `.pf-v5-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-v5-global--BackgroundColor--100`. |
+| `.pf-m-light-200` | `.pf-v5-c-masthead` |  Modifies a masthead component to have a light theme with a background color of `--pf-v5-global--BackgroundColor--200`. |

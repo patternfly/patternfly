@@ -1,0 +1,17 @@
+@import "../../../../sass-utilities/themes/dark/all";
+
+@mixin pf-v5-theme-dark-alert() {
+  .#{$alert} {
+    --#{$alert}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$alert}--m-custom__title--Color: var(--#{$pf-global}--custom-color--200);
+    --#{$alert}--m-success__title--Color: var(--#{$pf-global}--success-color--100);
+    --#{$alert}--m-danger__title--Color: var(--#{$pf-global}--danger-color--100);
+    --#{$alert}--m-warning__title--Color: var(--#{$pf-global}--warning-color--100);
+    --#{$alert}--m-info__title--Color: var(--#{$pf-global}--info-color--100);
+    --#{$alert}--m-inline--m-custom--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$alert}--m-inline--m-success--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$alert}--m-inline--m-danger--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$alert}--m-inline--m-warning--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+    --#{$alert}--m-inline--m-info--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
+  }
+}

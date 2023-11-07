@@ -2,101 +2,101 @@
 
 .#{$content} {
   // Body
-  --#{$content}--MarginBottom: var(--pf-t--global--spacer--md);
-  --#{$content}--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$content}--FontSize: var(--pf-t--global--font--size--body);
-  --#{$content}--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$content}--MarginBottom: var(--#{$pf-global}--spacer--md);
+  --#{$content}--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$content}--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // this ensures color is not overridden
-  --#{$content}--Color: var(--pf-t--global--text--color--regular);
+  --#{$content}--Color: var(--#{$pf-global}--Color--100);
 
   // Headings
-  --#{$content}--heading--FontFamily: var(--pf-t--global--font--family--heading);
+  --#{$content}--heading--FontFamily: var(--#{$pf-global}--FontFamily--heading);
 
   // h1
-  --#{$content}--h1--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h1--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$content}--h1--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h1--FontSize: var(--pf-t--global--font--size--heading--lg);
-  --#{$content}--h1--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$content}--h1--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h1--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h1--LineHeight: var(--#{$pf-global}--LineHeight--sm);
+  --#{$content}--h1--FontSize: var(--#{$pf-global}--FontSize--2xl);
+  --#{$content}--h1--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // h2
-  --#{$content}--h2--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h2--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$content}--h2--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h2--FontSize: var(--pf-t--global--font--size--heading--md);
-  --#{$content}--h2--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$content}--h2--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h2--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h2--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--h2--FontSize: var(--#{$pf-global}--FontSize--xl);
+  --#{$content}--h2--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // h3
-  --#{$content}--h3--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h3--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$content}--h3--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h3--FontSize: var(--pf-t--global--font--size--heading--sm);
-  --#{$content}--h3--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$content}--h3--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h3--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h3--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--h3--FontSize: var(--#{$pf-global}--FontSize--lg);
+  --#{$content}--h3--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // h4
-  --#{$content}--h4--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h4--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$content}--h4--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h4--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$content}--h4--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$content}--h4--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h4--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h4--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--h4--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$content}--h4--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // h5
-  --#{$content}--h5--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h5--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$content}--h5--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h5--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$content}--h5--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$content}--h5--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h5--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h5--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--h5--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$content}--h5--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // h6
-  --#{$content}--h6--MarginTop: var(--pf-t--global--spacer--lg);
-  --#{$content}--h6--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$content}--h6--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h6--FontSize: var(--pf-t--global--font--size--heading--xs);
-  --#{$content}--h6--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$content}--h6--MarginTop: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--h6--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--h6--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--h6--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$content}--h6--FontWeight: var(--#{$pf-global}--FontWeight--normal);
 
   // Small text
-  --#{$content}--small--MarginBottom: var(--pf-t--global--spacer--md);
-  --#{$content}--small--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$content}--small--FontSize: var(--pf-t--global--font--size--body--sm);
-  --#{$content}--small--Color: var(--pf-t--global--text--color--subtle);
+  --#{$content}--small--MarginBottom: var(--#{$pf-global}--spacer--md);
+  --#{$content}--small--LineHeight: var(--#{$pf-global}--LineHeight--md);
+  --#{$content}--small--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$content}--small--Color: var(--#{$pf-global}--Color--200);
 
   // Links
-  --#{$content}--a--Color: var(--pf-t--global--text--color--link--default);
-  --#{$content}--a--TextDecoration: var(--pf-t--global--link--text-decoration);
-  --#{$content}--a--hover--Color: var(--pf-t--global--text--color--link--hover);
-  --#{$content}--a--hover--TextDecoration: var(--pf-t--global--link--text-decoration);
-  --#{$content}--a--visited--Color: var(--pf-t--global--text--color--link--visited);
+  --#{$content}--a--Color: var(--#{$pf-global}--link--Color);
+  --#{$content}--a--TextDecoration: var(--#{$pf-global}--link--TextDecoration);
+  --#{$content}--a--hover--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$content}--a--hover--TextDecoration: var(--#{$pf-global}--link--TextDecoration--hover);
+  --#{$content}--a--visited--Color: var(--#{$pf-global}--link--Color--visited);
 
   // Blockquote
-  --#{$content}--blockquote--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$content}--blockquote--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$content}--blockquote--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$content}--blockquote--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$content}--blockquote--Color: var(--pf-t--global--text--color--subtle);
-  --#{$content}--blockquote--BorderLeftColor: var(--pf-t--global--border--color--default);
-  --#{$content}--blockquote--BorderLeftWidth: var(--pf-t--global--border--width--300); // TODO semantic value?
+  --#{$content}--blockquote--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$content}--blockquote--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$content}--blockquote--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$content}--blockquote--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$content}--blockquote--Color: var(--#{$pf-global}--Color--200);
+  --#{$content}--blockquote--BorderLeftColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$content}--blockquote--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--lg);
 
   // Lists
-  --#{$content}--ol--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$content}--ol--MarginLeft: var(--pf-t--global--spacer--lg);
-  --#{$content}--ol--nested--MarginTop: var(--pf-t--global--spacer--sm);
-  --#{$content}--ol--nested--MarginLeft: var(--pf-t--global--spacer--sm);
-  --#{$content}--ul--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$content}--ul--MarginLeft: var(--pf-t--global--spacer--lg);
-  --#{$content}--ul--nested--MarginTop: var(--pf-t--global--spacer--sm);
-  --#{$content}--ul--nested--MarginLeft: var(--pf-t--global--spacer--sm);
-  --#{$content}--ul--ListStyle: var(--#{$pf-global}--ListStyle); // TODO
-  --#{$content}--li--MarginTop: var(--pf-t--global--spacer--sm);
-  --#{$content}--dl--ColumnGap: var(--pf-t--global--spacer--2xl);
-  --#{$content}--dl--RowGap: var(--pf-t--global--spacer--md);
-  --#{$content}--dt--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  --#{$content}--dt--MarginTop: var(--pf-t--global--spacer--md);
+  --#{$content}--ol--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--ol--MarginLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--ol--nested--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--ol--nested--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--ul--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--ul--MarginLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$content}--ul--nested--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--ul--nested--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--ul--ListStyle: var(--#{$pf-global}--ListStyle);
+  --#{$content}--li--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$content}--dl--ColumnGap: var(--#{$pf-global}--spacer--2xl);
+  --#{$content}--dl--RowGap: var(--#{$pf-global}--spacer--md);
+  --#{$content}--dt--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$content}--dt--MarginTop: var(--#{$pf-global}--spacer--md);
   --#{$content}--dt--sm--MarginTop: 0;
 
   // hr
-  --#{$content}--hr--Height: var(--pf-t--global--border--width--divider--default);
-  --#{$content}--hr--BackgroundColor: var(--pf-t--global--border--color--default);
+  --#{$content}--hr--Height: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$content}--hr--BackgroundColor: var(--#{$pf-global}--BorderColor--100);
 
   font-size: var(--#{$content}--FontSize);
   line-height: var(--#{$content}--LineHeight);

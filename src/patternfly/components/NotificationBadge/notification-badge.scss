@@ -1,50 +1,58 @@
 // @debug $notification-badge; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root {
-  --#{$notification-badge}--BackgroundColor: transparent;
-  --#{$notification-badge}--MinWidth: 40px;
-  --#{$notification-badge}--Gap: var(--pf-t--global--spacer--xs);
-  --#{$notification-badge}--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$notification-badge}--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$notification-badge}--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$notification-badge}--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$notification-badge}--MarginTop: calc(-1 * var(--pf-t--global--spacer--sm));
-  --#{$notification-badge}--MarginRight: calc(-1 * var(--pf-t--global--spacer--sm));
-  --#{$notification-badge}--MarginBottom: calc(-1 * var(--pf-t--global--spacer--sm));
-  --#{$notification-badge}--MarginLeft: calc(-1 * var(--pf-t--global--spacer--sm));
+.#{$notification-badge} {
+  --#{$notification-badge}--PaddingTop: var(--#{$pf-global}--spacer--form-element);
+  --#{$notification-badge}--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$notification-badge}--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
+  --#{$notification-badge}--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$notification-badge}--MarginTop: calc(-1 * var(--#{$pf-global}--spacer--form-element));
+  --#{$notification-badge}--MarginRight: calc(-1 * var(--#{$pf-global}--spacer--md));
+  --#{$notification-badge}--MarginBottom: calc(-1 * var(--#{$pf-global}--spacer--form-element));
+  --#{$notification-badge}--MarginLeft: calc(-1 * var(--#{$pf-global}--spacer--md));
 
-  // ::before border treatment
-  --#{$notification-badge}--before--BorderColor: transparent;
-  --#{$notification-badge}--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$notification-badge}--before--BorderWidth: var(--pf-t--global--border--width--control--default);
+  // update all --after variables to --before at breaking change
+  // ::after border treatment
+  --#{$notification-badge}--after--BorderColor: transparent; // remove at breaking change
+  --#{$notification-badge}--after--BorderRadius: var(--#{$pf-global}--BorderRadius--sm);
+  --#{$notification-badge}--after--BorderWidth: 0; // remove at breaking change
+  --#{$notification-badge}--after--Top: 0; // remove at breaking change
+  --#{$notification-badge}--after--Right: 0; // remove at breaking change
+  --#{$notification-badge}--after--Width: auto; // remove at breaking change
+  --#{$notification-badge}--after--Height: auto; // remove at breaking change
+  --#{$notification-badge}--after--BackgroundColor: transparent;
+
+  // This translation works for the Bell icon, although adjusted for a happy medium between FF and Chrome.
+  // If other icons are used, a modifier may need to be created to allow for proper positioning on that icon.
+  --#{$notification-badge}--after--TranslateX: 0; // remove at breaking change
+  --#{$notification-badge}--after--TranslateY: 0; // remove at breaking change
+
+  // The icon is normalized to be square in order to facilitate consistency in positioning
+  --#{$notification-badge}__i--Width: auto; // remove at breaking change
+  --#{$notification-badge}__i--Height: auto; // remove at breaking change
 
   // Modifiers
-  --#{$notification-badge}--m-read--Color: var(--pf-t--global--text--color--regular);
-  --#{$notification-badge}--m-read--before--BorderColor: var(--pf-t--global--border--color--default);
-  --#{$notification-badge}--m-read--hover--before--BorderColor: var(--pf-t--global--border--color--hover);
-  --#{$notification-badge}--m-read--m-expanded--before--BorderColor: var(--pf-t--global--border--color--active);
-  --#{$notification-badge}--m-read--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$notification-badge}--m-read--m-expanded--BackgroundColor: var(--pf-t--global--background--color--control--default);
-  --#{$notification-badge}--m-read--m-expanded--before--BorderColor: var(--pf-t--global--border--color--active);
+  --#{$notification-badge}--m-read--after--BorderColor: transparent; // remove at breaking change
+  --#{$notification-badge}--m-read--after--BackgroundColor: transparent;
+  --#{$notification-badge}--m-read--m-expanded--after--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-200);
 
   // Unread
-  --#{$notification-badge}--m-unread--Color: var(--pf-t--global--icon--color--on-brand--default);
-  --#{$notification-badge}--m-unread--BackgroundColor: var(--pf-t--global--color--brand--default);
-  --#{$notification-badge}--m-unread--hover--BackgroundColor: var(--pf-t--global--color--brand--hover);
-  --#{$notification-badge}--m-unread--m-expanded--BackgroundColor: var(--pf-t--global--color--brand--active);
+  --#{$notification-badge}--m-unread--Color: var(--#{$pf-global}--Color--light-100);
+  --#{$notification-badge}--m-unread--after--BackgroundColor: var(--#{$pf-global}--active-color--100);
+  --#{$notification-badge}--m-unread--hover--after--BackgroundColor: var(--#{$pf-global}--primary-color--200);
+  --#{$notification-badge}--m-unread--m-expanded--after--BackgroundColor: var(--#{$pf-global}--primary-color--200);
 
   // Attention
-  --#{$notification-badge}--m-attention--Color: var(--pf-t--global--icon--color--status--on-danger--default);
-  --#{$notification-badge}--m-attention--BackgroundColor: var(--pf-t--global--color--status--danger--default);
-  --#{$notification-badge}--m-attention--hover--BackgroundColor: var(--pf-t--global--color--status--danger--hover);
-  --#{$notification-badge}--m-attention--m-expanded--BackgroundColor: var(--pf-t--global--color--status--danger--active);
-}
+  --#{$notification-badge}--m-attention--Color: var(--#{$pf-global}--Color--light-100);
+  --#{$notification-badge}--m-attention--after--BackgroundColor: var(--#{$pf-global}--danger-color--100);
+  --#{$notification-badge}--m-attention--hover--after--BackgroundColor: var(--#{$pf-global}--danger-color--200);
+  --#{$notification-badge}--m-attention--m-expanded--after--BackgroundColor: var(--#{$pf-global}--danger-color--200);
+  --#{$notification-badge}__count--MarginLeft: var(--#{$pf-global}--spacer--xs);
 
-.#{$notification-badge} {
-  display: inline-flex;
-  gap: var(--#{$notification-badge}--Gap);
-  align-items: center;
-  justify-content: center;
+  // Attention icon
+  --#{$notification-badge}--pf-v5-pficon-attention-bell--LineHeight: var(--#{$pf-global}--LineHeight--sm);
+
+  position: relative;
+  display: inline-block;
   padding-block-start: var(--#{$notification-badge}--PaddingTop);
   padding-block-end: var(--#{$notification-badge}--PaddingBottom);
   padding-inline-start: var(--#{$notification-badge}--PaddingLeft);
@@ -53,56 +61,85 @@
   margin-block-end: var(--#{$notification-badge}--MarginBottom);
   margin-inline-start: var(--#{$notification-badge}--MarginLeft);
   margin-inline-end: var(--#{$notification-badge}--MarginRight);
-  background-color: var(--#{$notification-badge}--BackgroundColor);
-  border-radius: var(--#{$notification-badge}--BorderRadius);
+  background-color: var(--#{$notification-badge}--after--BackgroundColor); // rename this at breaking change
+  border-radius: var(--#{$notification-badge}--after--BorderRadius); // renamie this at breaking change
 
-  &::before {
+  &::before { // update all --after vars to --before at breaking change
     position: absolute;
-    inset-block-start: 0;
+    inset-block-start: var(--#{$notification-badge}--after--Top); // replace this var with 0 at breaking change
     inset-block-end: 0;
     inset-inline-start: 0;
-    inset-inline-end: 0;
+    inset-inline-end: var(--#{$notification-badge}--after--Right); // replace this var with 0 at breaking change
+    width: var(--#{$notification-badge}--after--Width); // remove at breaking change
+    height: var(--#{$notification-badge}--after--Height); // remove at breaking change
     content: "";
-    border: var(--#{$notification-badge}--before--BorderWidth) solid var(--#{$notification-badge}--before--BorderColor);
-    border-radius: var(--#{$notification-badge}--BorderRadius);
-    transform: translate(var(--#{$notification-badge}--before--TranslateX), var(--#{$notification-badge}--before--TranslateY));
+    border: var(--#{$notification-badge}--after--BorderWidth) solid var(--#{$notification-badge}--after--BorderColor);
+    border-radius: var(--#{$notification-badge}--after--BorderRadius);
+    transform: translate(var(--#{$notification-badge}--after--TranslateX), var(--#{$notification-badge}--after--TranslateY));
   }
 
-  &.pf-m-read {
-    --#{$notification-badge}--BackgroundColor: var(--#{$notification-badge}--m-read--BackgroundColor);
-    --#{$notification-badge}--before--BorderColor: var(--#{$notification-badge}--m-read--before--BorderColor);
+  & > i {
+    width: var(--#{$notification-badge}__i--Width);
+    height: var(--#{$notification-badge}__i--Height);
+  }
 
-    color: var(--#{$notification-badge}--m-read--Color, inherit);
+  // set children to relative so they appear above ::before
+  & > * {
+    position: relative;
+  }
 
-    &:hover {
-      --#{$notification-badge}--before--BorderColor: var(--#{$notification-badge}--m-read--hover--before--BorderColor);
+  .#{$icon}-attention-bell,
+  .#{$icon}-bell {
+    display: inline-block;
+    line-height: var(--#{$notification-badge}--pf-v5-pficon-attention-bell--LineHeight);
+
+    &::before {
+      vertical-align: bottom;
     }
   }
 
+  &.pf-m-read {
+    --#{$notification-badge}--after--BackgroundColor: var(--#{$notification-badge}--m-read--after--BackgroundColor);
+    --#{$notification-badge}--after--BorderColor: var(--#{$notification-badge}--m-read--after--BorderColor);
+
+    color: var(--#{$notification-badge}--m-read--Color, inherit);
+  }
+
   &.pf-m-unread {
-    --#{$notification-badge}--BackgroundColor: var(--#{$notification-badge}--m-unread--BackgroundColor);
+    --#{$notification-badge}--after--BackgroundColor: var(--#{$notification-badge}--m-unread--after--BackgroundColor);
 
     color: var(--#{$notification-badge}--m-unread--Color);
 
     &:hover {
-      --#{$notification-badge}--BackgroundColor: var(--#{$notification-badge}--m-unread--hover--BackgroundColor);
+      --#{$notification-badge}--after--BackgroundColor: var(--#{$notification-badge}--m-unread--hover--after--BackgroundColor);
     }
   }
 
   &.pf-m-attention {
-    --#{$notification-badge}--BackgroundColor: var(--#{$notification-badge}--m-attention--BackgroundColor);
+    --#{$notification-badge}--after--BackgroundColor: var(--#{$notification-badge}--m-attention--after--BackgroundColor);
 
     color: var(--#{$notification-badge}--m-attention--Color);
 
     &:hover {
-      --#{$notification-badge}--m-attention--BackgroundColor: var(--#{$notification-badge}--m-attention--hover--BackgroundColor);
+      --#{$notification-badge}--m-attention--after--BackgroundColor: var(--#{$notification-badge}--m-attention--hover--after--BackgroundColor);
     }
   }
 
   &.pf-m-expanded {
-    --#{$notification-badge}--m-read--BackgroundColor: var(--#{$notification-badge}--m-read--m-expanded--BackgroundColor);
-    --#{$notification-badge}--m-read--before--BorderColor: var(--#{$notification-badge}--m-read--m-expanded--before--BorderColor);
-    --#{$notification-badge}--m-unread--BackgroundColor: var(--#{$notification-badge}--m-unread--m-expanded--BackgroundColor);
-    --#{$notification-badge}--m-attention--BackgroundColor: var(--#{$notification-badge}--m-attention--m-expanded--BackgroundColor);
+    --#{$notification-badge}--m-read--Color: var(--#{$pf-global}--Color--light-100);
+    --#{$notification-badge}--m-read--after--BackgroundColor: var(--#{$notification-badge}--m-read--m-expanded--after--BackgroundColor);
+    --#{$notification-badge}--m-unread--after--BackgroundColor: var(--#{$notification-badge}--m-unread--m-expanded--after--BackgroundColor);
+    --#{$notification-badge}--m-attention--after--BackgroundColor: var(--#{$notification-badge}--m-attention--m-expanded--after--BackgroundColor);
   }
+}
+
+.#{$notification-badge}__count {
+  margin-inline-start: var(--#{$notification-badge}__count--MarginLeft);
+}
+
+// stylelint-disable no-invalid-position-at-import-rule
+@import "themes/dark/notification-badge";
+
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-notification-badge;
 }

@@ -1,23 +1,25 @@
+// @debug $nav; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
+
 .#{$nav} {
   --#{$nav}--Transition: var(--#{$pf-global}--Transition);
 
   // Light theme
   --#{$nav}--m-light__item--before--BorderColor: var(--#{$pf-global}--BorderColor--300);
   --#{$nav}--m-light__item--m-current--not--m-expanded__link--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
-  --#{$nav}--m-light__link--Color: var(--pf-t--global--text--color--subtle);
-  --#{$nav}--m-light__link--hover--Color: var(--pf-t--global--text--color--subtle);
-  --#{$nav}--m-light__link--focus--Color: var(--pf-t--global--text--color--subtle);
-  --#{$nav}--m-light__link--active--Color: var(--pf-t--global--text--color--subtle);
-  --#{$nav}--m-light__link--m-current--Color: var(--pf-t--global--text--color--regular);
-  --#{$nav}--m-light__link--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$nav}--m-light__link--focus--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$nav}--m-light__link--active--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$nav}--m-light__link--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$nav}--m-light__link--Color: var(--#{$pf-global}--Color--dark-100);
+  --#{$nav}--m-light__link--hover--Color: var(--#{$pf-global}--Color--dark-100);
+  --#{$nav}--m-light__link--focus--Color: var(--#{$pf-global}--Color--dark-100);
+  --#{$nav}--m-light__link--active--Color: var(--#{$pf-global}--Color--dark-100);
+  --#{$nav}--m-light__link--m-current--Color: var(--#{$pf-global}--Color--dark-100);
+  --#{$nav}--m-light__link--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
+  --#{$nav}--m-light__link--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
+  --#{$nav}--m-light__link--active--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
+  --#{$nav}--m-light__link--m-current--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-300);
   --#{$nav}--m-light__link--before--BorderColor: var(--#{$pf-global}--BorderColor--300);
   --#{$nav}--m-light__link--after--BorderColor: var(--#{$pf-global}--active-color--100);
   --#{$nav}--m-light__link--m-current--after--BorderColor: var(--#{$pf-global}--active-color--100);
-  --#{$nav}--m-light__section-title--Color: var(--pf-t--global--text--color--regular);
-  --#{$nav}--m-light__section-title--BorderBottomColor: transparent;
+  --#{$nav}--m-light__section-title--Color: var(--#{$pf-global}--Color--dark-200);
+  --#{$nav}--m-light__section-title--BorderBottomColor: var(--#{$pf-global}--BorderColor--300);
   --#{$nav}--m-light--c-divider--BackgroundColor: var(--#{$pf-global}--BorderColor--300);
 
   // Light subnav
@@ -34,40 +36,38 @@
   --#{$nav}__item--MarginTop: 0;
   --#{$nav}__item--m-current--not--m-expanded__link--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-400);
   --#{$nav}__link--m-current--not--m-expanded__link--after--BorderWidth: var(--#{$pf-global}--BorderWidth--xl);
-  --#{$nav}__item__item__link--PaddingRight: var(--pf-t--global--spacer--xl);
+  --#{$nav}__item__item__link--PaddingRight: var(--#{$pf-global}--spacer--xl);
   --#{$nav}__item__item__toggle--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$nav}__item__toggle-icon--Rotate: 0;
   --#{$nav}__item--m-expanded__toggle-icon--Rotate: 90deg;
-  --#{$nav}__item--BorderRadius: var(--pf-t--global--border--radius--small);
 
   // Item ::before borders
   --#{$nav}__item--before--BorderColor: var(--#{$pf-global}--BackgroundColor--dark-200);
   --#{$nav}__item--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
 
   // Link
-  --#{$nav}__link--FontSize: var(--pf-t--global--font--size--body);
-  --#{$nav}__link--FontWeight: var(--pf-t--global--font--weight--body);
-  --#{$nav}__link--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$nav}__link--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$nav}__link--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$nav}__link--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$nav}__link--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$nav}__link--xl--PaddingRight: var(--pf-t--global--spacer--lg);
-  --#{$nav}__link--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$nav}__link--Color: var(--pf-t--global--text--color--subtle);
-  --#{$nav}__link--hover--Color: var(--pf-t--global--text--color--subtle);
-  --#{$nav}__link--focus--Color: var(--pf-t--global--text--color--subtle);
-  --#{$nav}__link--active--Color: var(--pf-t--global--text--color--subtle);
-  --#{$nav}__link--m-current--Color: var(--pf-t--global--text--color--regular);
+  --#{$nav}__link--FontSize: var(--#{$pf-global}--FontSize--md);
+  --#{$nav}__link--FontWeight: var(--#{$pf-global}--FontWeight--normal);
+  --#{$nav}__link--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__link--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__link--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__link--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__link--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$nav}__link--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$nav}__link--Color: var(--#{$pf-global}--Color--light-100);
+  --#{$nav}__link--hover--Color: var(--#{$pf-global}--Color--light-100);
+  --#{$nav}__link--focus--Color: var(--#{$pf-global}--Color--light-100);
+  --#{$nav}__link--active--Color: var(--#{$pf-global}--Color--light-100);
+  --#{$nav}__link--m-current--Color: var(--#{$pf-global}--Color--light-100);
   --#{$nav}__link--BackgroundColor: transparent;
-  --#{$nav}__link--hover--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$nav}__link--focus--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$nav}__link--active--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$nav}__link--m-current--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$nav}__link--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-200);
+  --#{$nav}__link--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-200);
+  --#{$nav}__link--active--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-200);
+  --#{$nav}__link--m-current--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-400);
   --#{$nav}__link--OutlineOffset: calc(var(--#{$pf-global}--spacer--xs) * -1);
 
   // Link ::before borders
-  --#{$nav}__link--before--BorderColor: transparent;
+  --#{$nav}__link--before--BorderColor: var(--#{$pf-global}--BackgroundColor--dark-200);
   --#{$nav}__link--before--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
   --#{$nav}__link--hover--before--BorderBottomWidth: 0;
   --#{$nav}__link--focus--before--BorderBottomWidth: 0;
@@ -225,16 +225,16 @@
   --#{$nav}__section--section--MarginTop: var(--#{$pf-global}--spacer--xl);
 
   // Nav section title
-  --#{$nav}__section-title--PaddingTop: var(--pf-t--global--spacer--sm);
-  --#{$nav}__section-title--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$nav}__section-title--PaddingBottom: var(--pf-t--global--spacer--sm);
-  --#{$nav}__section-title--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$nav}__section-title--MarginBottom: var(--pf-t--global--spacer--sm);
-  --#{$nav}__section-title--xl--PaddingRight: var(--pf-t--global--spacer--xl);
-  --#{$nav}__section-title--xl--PaddingLeft: var(--pf-t--global--spacer--xl);
-  --#{$nav}__section-title--FontSize: var(--pf-t--global--font--size--body);
-  --#{$nav}__section-title--Color: var(--pf-t--global--text--color--regular);
-  --#{$nav}__section-title--BorderBottomColor: transparent;
+  --#{$nav}__section-title--PaddingTop: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__section-title--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__section-title--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__section-title--PaddingLeft: var(--#{$pf-global}--spacer--md);
+  --#{$nav}__section-title--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$nav}__section-title--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
+  --#{$nav}__section-title--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$nav}__section-title--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$nav}__section-title--Color: var(--#{$pf-global}--Color--light-100);
+  --#{$nav}__section-title--BorderBottomColor: var(--#{$pf-global}--BackgroundColor--dark-200);
   --#{$nav}__section-title--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
 
   // Scroll buttons
