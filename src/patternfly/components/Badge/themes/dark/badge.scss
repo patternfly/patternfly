@@ -1,9 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-badge() {
-  .#{$badge} {
-    --#{$badge}--m-read--BackgroundColor: var(--#{$pf-global}--palette--black-500);
-    --#{$badge}--m-unread--Color: var(--#{$pf-global}--primary-color--400);
-    --#{$badge}--m-unread--BackgroundColor: var(--#{$pf-global}--primary-color--300);
-  }
-}
