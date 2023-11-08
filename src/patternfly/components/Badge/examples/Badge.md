@@ -41,6 +41,12 @@ cssPrefix: pf-v5-c-badge
 {{/badge}}
 ```
 
+### Badge as toggle
+```hbs
+{{> badge badge--text="7" badge--modifier="pf-m-read" badge--HasToggle=true}}
+{{> badge badge--text="7" badge--IsUnread=true badge--HasToggle=true}}
+```
+
 ## Documentation
 ### Overview
 Always add a modifier class. Never use the class `.pf-v5-c-badge` on its own.
@@ -49,5 +55,6 @@ Always add a modifier class. Never use the class `.pf-v5-c-badge` on its own.
 | Class | Applied to | Outcome |
 | -- | -- | -- |
 | `.pf-v5-c-badge` | `<span>` | Initiates a badge. **Always use with a modifier class.** |
+| `.pf-v5-c-badge__toggle-icon` | `<span>` | Initiates a badge toggle icon. |
 | `.pf-m-read` | `.pf-v5-c-badge` | Applies read badge styling. |
 | `.pf-m-unread` | `.pf-v5-c-badge` | Applies unread badge styling. |
