@@ -1,4 +1,6 @@
-<span class="{{pfv}}badge{{#if badge--modifier}} {{badge--modifier}}{{/if}}"
+<span class="{{pfv}}badge
+  {{#if badge--IsUnread}}pf-m-unread {{/if}}
+  {{#if badge--modifier}} {{badge--modifier}}{{/if}}"
   {{#if badge--attribute}}
     {{{badge--attribute}}}
   {{/if}}>
@@ -6,5 +8,11 @@
     {{badge--text}}
   {{else if @partial-block}}
     {{> @partial-block}}
+  {{/if}}
+  {{#if badge--IsUnread}}
+    {{#> screen-reader}}unread messages{{/screen-reader}}
+  {{/if}}
+  {{#if badge--HasToggle}}
+    {{> badge-icon}}
   {{/if}}
 </span>
