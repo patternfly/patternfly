@@ -9,7 +9,7 @@ cssPrefix: pf-v5-c-about-modal-box
 ```hbs isFullscreen
 {{#> about-modal-box}}
   {{#> about-modal-box-brand}}
-    {{> about-modal-box-brand-image about-modal-box-brand-image--attribute='src="/assets/images/pf_mini_logo_white.svg" alt="PatternFly brand logo"'}}
+    {{> about-modal-box-brand-image about-modal-box-brand-image--attribute='src="/assets/images/PF-IconLogo.svg" alt="PatternFly brand logo"'}}
   {{/about-modal-box-brand}}
   {{#> about-modal-box-close}}
     {{#> button button--attribute='aria-label="Close dialog"' button--modifier="pf-m-plain"}}
