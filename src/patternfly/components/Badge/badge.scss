@@ -1,21 +1,29 @@
 // @debug $badge; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$badge} {
+:root {
   // Component
-  --#{$badge}--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
-  --#{$badge}--FontSize: var(--#{$pf-global}--FontSize--xs);
-  --#{$badge}--FontWeight: var(--#{$pf-global}--FontWeight--bold);
-  --#{$badge}--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$badge}--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$badge}--Color: var(--#{$pf-global}--Color--dark-100);
-  --#{$badge}--MinWidth: var(--#{$pf-global}--spacer--xl);
+  --#{$badge}--BorderRadius: var(--pf-t--global--border--radius--pill);
+  --#{$badge}--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$badge}--FontWeight: var(--pf-t--global--font--weight--body--bold); // TODO - design calls for 500/semi-bold, do we need a token for that or is bold ok
+  --#{$badge}--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$badge}--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$badge}--Color: var(--pf-t--global--text--color--nonstatus--on-gray--default);
+  --#{$badge}--MinWidth: var(--pf-t--global--spacer--xl);
+
+  // Toggle icon
+  --#{$badge}__toggle-icon--MarginLeft: var(--pf-t--global--spacer--xs);
+  --#{$badge}__toggle-icon--Color: var(--pf-t--global--icon--color--nonstatus--on-gray--default);
 
   // Modifiers
-  --#{$badge}--m-read--BackgroundColor: var(--#{$pf-global}--BackgroundColor--200);
-  --#{$badge}--m-read--Color: var(--#{$pf-global}--Color--dark-100);
-  --#{$badge}--m-unread--BackgroundColor: var(--#{$pf-global}--primary-color--100);
-  --#{$badge}--m-unread--Color: var(--#{$pf-global}--Color--light-100);
+  --#{$badge}--m-read--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
+  --#{$badge}--m-read--Color: var(--pf-t--global--text--color--nonstatus--on-gray--default);
+  --#{$badge}--m-read__toggle-icon--Color: var(--pf-t--global--icon--color--nonstatus--on-gray--default);
+  --#{$badge}--m-unread--BackgroundColor: var(--pf-t--global--color--brand--default);
+  --#{$badge}--m-unread--Color: var(--pf-t--global--text--color--on-brand--default);
+  --#{$badge}--m-unread__toggle-icon--Color: var(--pf-t--global--icon--color--on-brand--default);
+}
 
+.#{$badge} {
   display: inline-block;
   min-width: var(--#{$badge}--MinWidth);
   padding-inline-start: var(--#{$badge}--PaddingLeft);
@@ -31,17 +39,17 @@
   &.pf-m-read {
     --#{$badge}--Color: var(--#{$badge}--m-read--Color);
     --#{$badge}--BackgroundColor: var(--#{$badge}--m-read--BackgroundColor);
+    --#{$badge}__toggle-icon--Color: var(--#{$badge}--m-read__toggle-icon--Color);
   }
 
   &.pf-m-unread {
     --#{$badge}--Color: var(--#{$badge}--m-unread--Color);
     --#{$badge}--BackgroundColor: var(--#{$badge}--m-unread--BackgroundColor);
+    --#{$badge}__toggle-icon--Color: var(--#{$badge}--m-unread__toggle-icon--Color);
   }
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/badge";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-badge;
+.#{$badge}__toggle-icon {
+  margin-inline-start: var(--#{$badge}__toggle-icon--MarginLeft);
+  color: var(--#{$badge}__toggle-icon--Color);
 }
