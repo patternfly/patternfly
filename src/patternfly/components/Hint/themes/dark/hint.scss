@@ -1,8 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-hint() {
-  .#{$hint} {
-    --#{$hint}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--400);
-    --#{$hint}--BorderColor: var(--#{$pf-global}--BorderColor--300);
-  }
-}
