@@ -7,7 +7,6 @@
   --#{$about-modal-box}--BackgroundPosition: bottom right;
   --#{$about-modal-box}--BackgroundSize--width: 100%;
   --#{$about-modal-box}--BackgroundSize: contain;
-  --#{$about-modal-box}--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$about-modal-box}--Height: 100%;
   --#{$about-modal-box}--lg--Height: #{pf-size-prem(762px)}; // Height is optimized for the exact height desired
   --#{$about-modal-box}--Width: 100%;
@@ -116,7 +115,6 @@
   background-repeat: no-repeat;
   background-position: var(--#{$about-modal-box}--BackgroundPosition);
   background-size: var(--#{$about-modal-box}--BackgroundSize);
-  border-radius: var(--#{$about-modal-box}--BorderRadius);
 
   @media only screen and (min-width: $pf-v5-global--breakpoint--sm) {
     grid-template-areas:
