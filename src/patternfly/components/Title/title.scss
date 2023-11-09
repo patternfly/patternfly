@@ -37,27 +37,27 @@
   // HEADING modifiers 
   // h1
   --#{$title}--m-h1--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h1--FontSize: var(--pf-t--global--font--size--heading--2xl);
+  --#{$title}--m-h1--FontSize: var(--pf-t--global--font--size--heading--lg);
   --#{$title}--m-h1--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h2
   --#{$title}--m-h2--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h2--FontSize: var(--pf-t--global--font--size--heading--xl);
+  --#{$title}--m-h2--FontSize: var(--pf-t--global--font--size--heading-md);
   --#{$title}--m-h2--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h3
   --#{$title}--m-h3--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h3--FontSize: var(--pf-t--global--font--size--heading--lg);
+  --#{$title}--m-h3--FontSize: var(--pf-t--global--font--size--heading--sm);
   --#{$title}--m-h3--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h4
   --#{$title}--m-h4--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h4--FontSize: var(--pf-t--global--font--size--heading--md);
+  --#{$title}--m-h4--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$title}--m-h4--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h5
   --#{$title}--m-h5--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h5--FontSize: var(--pf-t--global--font--size--heading--sm);
+  --#{$title}--m-h5--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$title}--m-h5--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h6
@@ -107,38 +107,38 @@
   }
 
   &.pf-m-h1 {
-    font-size: var(--#{$title}--m-4xl--FontSize);
-    font-weight: var(--#{$title}--m-4xl--FontWeight);
-    line-height: var(--#{$title}--m-4xl--LineHeight);
+    font-size: var(--#{$title}--m-h1--FontSize);
+    font-weight: var(--#{$title}--m-h1--FontWeight);
+    line-height: var(--#{$title}--m-h1--LineHeight);
   }
 
   &.pf-m-h2 {
-    font-size: var(--#{$title}--m-3xl--FontSize);
-    font-weight: var(--#{$title}--m-3xl--FontWeight);
-    line-height: var(--#{$title}--m-3xl--LineHeight);
+    font-size: var(--#{$title}--m-h2--FontSize);
+    font-weight: var(--#{$title}--m-h2--FontWeight);
+    line-height: var(--#{$title}--m-h2--LineHeight);
   }
 
   &.pf-m-h3 {
-    font-size: var(--#{$title}--m-2xl--FontSize);
-    font-weight: var(--#{$title}--m-2xl--FontWeight);
-    line-height: var(--#{$title}--m-2xl--LineHeight);
+    font-size: var(--#{$title}--m-h3--FontSize);
+    font-weight: var(--#{$title}--m-h3--FontWeight);
+    line-height: var(--#{$title}--m-h3--LineHeight);
   }
 
   &.pf-m-h4 {
-    font-size: var(--#{$title}--m-xl--FontSize);
-    font-weight: var(--#{$title}--m-xl--FontWeight);
-    line-height: var(--#{$title}--m-xl--LineHeight);
+    font-size: var(--#{$title}--m-h4--FontSize);
+    font-weight: var(--#{$title}--m-h4--FontWeight);
+    line-height: var(--#{$title}--m-h4--LineHeight);
   }
 
   &.pf-m-h5 {
-    font-size: var(--#{$title}--m-lg--FontSize);
-    font-weight: var(--#{$title}--m-lg--FontWeight);
-    line-height: var(--#{$title}--m-lg--LineHeight);
+    font-size: var(--#{$title}--m-h5--FontSize);
+    font-weight: var(--#{$title}--m-h5--FontWeight);
+    line-height: var(--#{$title}--m-h5--LineHeight);
   }
 
   &.pf-m-h6 {
-    font-size: var(--#{$title}--m-md--FontSize);
-    font-weight: var(--#{$title}--m-md--FontWeight);
-    line-height: var(--#{$title}--m-md--LineHeight);
+    font-size: var(--#{$title}--m-h6--FontSize);
+    font-weight: var(--#{$title}--m-h6--FontWeight);
+    line-height: var(--#{$title}--m-h6--LineHeight);
   }
 }
