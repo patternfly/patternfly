@@ -80,7 +80,7 @@
   width: var(--#{$modal-box}--Width);
   max-width: var(--#{$modal-box}--MaxWidth);
   max-height: var(--#{$modal-box}--MaxHeight);
-  overflow: hidden;
+  overflow: auto;
   background-color: var(--#{$modal-box}--BackgroundColor);
   border-radius: var(--#{$modal-box}--BorderRadius);
   box-shadow: var(--#{$modal-box}--BoxShadow);
