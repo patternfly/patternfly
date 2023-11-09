@@ -581,7 +581,6 @@
 
     &:hover,
     &:focus {
-      --#{$button}--m-plain--Color: var(--#{$button}--m-plain--hover--Color);
       --#{$button}--m-plain--BackgroundColor: var(--#{$button}--m-plain--hover--BackgroundColor);
 
       mix-blend-mode: var(--pf-t--global--background--color--action--plain--hover--blend);
