@@ -76,7 +76,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar--xl--TranslateX: 0;
   --#{$page}__sidebar--MarginRight: 0;
   --#{$page}__sidebar--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
-  --#{$page}__sidebar--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --#{$page}__sidebar--PaddingInlineStart: 0;
 
 
   // Sidebar header
@@ -84,6 +84,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   --#{$page}__sidebar-header--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$page}__sidebar-header--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$page}__sidebar-header--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$page}__sidebar-title--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$page}__sidebar-title--FontSize: var(--pf-t--global--font--size--heading--xs);
   --#{$page}__sidebar-title--LineHeight: var(--pf-t--global--font--line-height--heading);
   --#{$page}__sidebar-title--FontFamily: var(--pf-t--global--font--family--heading);
@@ -323,8 +324,8 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
   grid-column-start: 1;
   width: var(--#{$page}__sidebar--Width);
   padding-block-start: 0;
-  padding-block-end: var(--pf-t--global--spacer--lg);
-  padding-inline-start: var(--pf-t--global--spacer--lg);
+  padding-block-end: var(--#{$page}__sidebar--PaddingBlockEnd);
+  padding-inline-start: var(--#{$page}__sidebar--PaddingInlineStart);
   margin-inline-end: var(--#{$page}__sidebar--MarginRight);
   overflow-x: hidden;
   overflow-y: auto;
@@ -365,6 +366,7 @@ $pf-page-v5--height-breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg
 }
 
 .#{$page}__sidebar-title {
+  padding-inline-start: var(--#{$page}__sidebar-title--PaddingLeft);
   font-family: var(--#{$page}__sidebar-title--FontFamily);
   font-size: var(--#{$page}__sidebar-title--FontSize);
   font-weight: var(--#{$page}__sidebar-title--FontWeight);
