@@ -2,25 +2,25 @@
 
 .#{$breadcrumb} {
   // Breadcrumb item
-  --#{$breadcrumb}__item--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$breadcrumb}__item--LineHeight: var(--#{$pf-global}--LineHeight--sm);
-  --#{$breadcrumb}__item--MarginRight: var(--#{$pf-global}--spacer--sm);
+  --#{$breadcrumb}__item--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$breadcrumb}__item--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$breadcrumb}__item--MarginRight: var(--pf-t--global--spacer--sm);
 
   // Breadcrumb divider
-  --#{$breadcrumb}__item-divider--Color: var(--#{$pf-global}--icon--Color--dark);
-  --#{$breadcrumb}__item-divider--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$breadcrumb}__item-divider--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$breadcrumb}__item-divider--Color: var(--pf-t--global--icon--color--regular);
+  --#{$breadcrumb}__item-divider--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$breadcrumb}__item-divider--FontSize: var( --pf-t--global--font--size--body--sm);
 
   // Breadcrumb link
-  --#{$breadcrumb}__link--Color: var(--#{$pf-global}--link--Color);
-  --#{$breadcrumb}__link--TextDecoration: var(--#{$pf-global}--link--TextDecoration);
-  --#{$breadcrumb}__link--hover--Color: var(--#{$pf-global}--link--Color--hover);
-  --#{$breadcrumb}__link--hover--TextDecoration: var(--#{$pf-global}--link--TextDecoration--hover);
-  --#{$breadcrumb}__link--m-current--Color: var(--#{$pf-global}--Color--100);
+  --#{$breadcrumb}__link--Color: var(--pf-t--global--text--color--link--default);
+  --#{$breadcrumb}__link--TextDecoration: var(--pf-t--global--link--text-decoration);
+  --#{$breadcrumb}__link--hover--Color: var(--pf-t--global--text--color--link--hover);
+  --#{$breadcrumb}__link--hover--TextDecoration: var(--pf-t--global--link--text-decoration--hover);
+  --#{$breadcrumb}__link--m-current--Color: var(--pf-t--global--text--color--regular);
   --#{$breadcrumb}__link--BackgroundColor: transparent;
 
   // Heading
-  --#{$breadcrumb}__heading--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$breadcrumb}__heading--FontSize: var( --pf-t--global--font--size--body--sm);
 
   // breadcrumb dropdown
   --#{$breadcrumb}__dropdown--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
@@ -29,7 +29,7 @@
   --#{$breadcrumb}__dropdown--MarginLeft: calc(var(--#{$breadcrumb}__item-divider--MarginRight) * -1);
 
   // breadcrumb toggle
-  --#{$breadcrumb}__dropdown--c-dropdown__toggle--LineHeight: var(--#{$pf-global}--LineHeight--sm);
+  --#{$breadcrumb}__dropdown--c-dropdown__toggle--LineHeight: var(--pf-t--global--font--line-height--body);
 
   display: inline-flex;
 }
