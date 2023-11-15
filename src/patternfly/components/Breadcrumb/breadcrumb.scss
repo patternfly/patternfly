@@ -23,9 +23,9 @@
   --#{$breadcrumb}__heading--FontSize: var( --pf-t--global--font--size--body--sm);
 
   // breadcrumb dropdown
-  --#{$breadcrumb}__dropdown--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$breadcrumb}__dropdown--MarginTop: calc(var(--pf-t--global--spacer--sm) * -1); // TODO: check with design as this replaces --#{$pf-global}--spacer--form-element (6px) with spacer--sm (8px)
   --#{$breadcrumb}__dropdown--MarginRight: calc(var(--#{$breadcrumb}__item--MarginRight) * -1);
-  --#{$breadcrumb}__dropdown--MarginBottom: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$breadcrumb}__dropdown--MarginBottom: calc(var(--pf-t--global--spacer--sm) * -1); // TODO: same as above
   --#{$breadcrumb}__dropdown--MarginLeft: calc(var(--#{$breadcrumb}__item-divider--MarginRight) * -1);
 
   // breadcrumb toggle
