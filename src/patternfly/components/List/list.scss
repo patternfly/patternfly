@@ -2,29 +2,29 @@
 
 .#{$list} {
   // list
-  --#{$list}--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$list}--nested--MarginTop: var(--#{$pf-global}--spacer--sm);
-  --#{$list}--nested--MarginLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$list}--ul--ListStyle: var(--#{$pf-global}--ListStyle);
-  --#{$list}--li--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$list}--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$list}--nested--MarginTop: var(--pf-t--global--spacer--sm);
+  --#{$list}--nested--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$list}--ul--ListStyle: var(--#{$pf-global}--ListStyle); // TODO add token?
+  --#{$list}--li--MarginTop: var(--pf-t--global--spacer--sm);
 
   // inline
-  --#{$list}--m-inline--li--MarginRight: var(--#{$pf-global}--spacer--lg);
+  --#{$list}--m-inline--li--MarginRight: var(--pf-t--global--spacer--lg);
 
   // bordered
-  --#{$list}--m-bordered--li--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$list}--m-bordered--li--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$list}--m-bordered--li--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$list}--m-bordered--li--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$list}--m-bordered--li--BorderBottomColor: var(--pf-t--global--border--color--default);
+  --#{$list}--m-bordered--li--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
 
   // icon
-  --#{$list}__item-icon--MinWidth: var(--#{$pf-global}--icon--FontSize--sm);
-  --#{$list}__item-icon--MarginTop: #{pf-size-prem(6px)};
-  --#{$list}__item-icon--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$list}__item-icon--Color: var(--#{$pf-global}--icon--Color--dark);
-  --#{$list}__item-icon--FontSize: var(--#{$pf-global}--icon--FontSize--sm);
-  --#{$list}--m-icon-lg__item-icon--MinWidth: var(--#{$pf-global}--icon--FontSize--lg);
-  --#{$list}--m-icon-lg__item-icon--MarginRight: var(--#{$pf-global}--spacer--md);
-  --#{$list}--m-icon-lg__item-icon--FontSize: var(--#{$pf-global}--icon--FontSize--lg);
+  --#{$list}__item-icon--MinWidth: var(--pf-t--global--icon--size--sm);
+  --#{$list}__item-icon--MarginTop: var(--pf-t--global--spacer--xs);
+  --#{$list}__item-icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$list}__item-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$list}__item-icon--FontSize: var(--pf-t--global--icon--size--sm);
+  --#{$list}--m-icon-lg__item-icon--MinWidth: var(--pf-t--global--icon--size--lg);
+  --#{$list}--m-icon-lg__item-icon--MarginRight: var(--pf-t--global--spacer--md);
+  --#{$list}--m-icon-lg__item-icon--FontSize: var(--pf-t--global--icon--size--lg);
 
   padding-inline-start: var(--#{$list}--PaddingLeft);
 
