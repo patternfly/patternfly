@@ -1,11 +1,15 @@
 // @debug $button; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$button} {
+:root {
   // Component
   --#{$button}--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$button}--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$button}--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$button}--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$button}--Display: inline-block;
+  --#{$button}--Flex: auto;
+  --#{$button}--AlignItems: auto;
+  --#{$button}--JustifyItems: auto;
   --#{$button}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$button}--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$button}--FontSize: var(--pf-t--global--font--size--body--default);
@@ -13,6 +17,10 @@
   --#{$button}--BorderRadius: var(--pf-t--global--border--radius--pill);
   --#{$button}--after--BorderColor: transparent;
   --#{$button}--after--BorderWidth: var(--pf-t--global--border--width--button--default);
+  --#{$button}--start-start--Radius--BorderRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--start-end--Radius--BorderRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--end-start--Radius--BorderRadius: var(--#{$button}--BorderRadius);
+  --#{$button}--end-end--Radius--BorderRadius: var(--#{$button}--BorderRadius);
 
   // Hover state variables
   --#{$button}--hover--after--BorderWidth: var(--pf-t--global--border--width--button--hover);
@@ -103,7 +111,7 @@
   --#{$button}--m-danger--active--Color: var(--pf-t--global--text--color--status--on-danger--hover);
 
   // Link btn
-  --#{$button}--m-link--BackgroundColor: transparent;
+    --#{$button}--m-link--BackgroundColor: transparent;
   --#{$button}--m-link--Color: var(--pf-t--global--text--color--link--default);
   --#{$button}--m-link--hover--BackgroundColor: transparent;
   --#{$button}--m-link--hover--Color: var(--pf-t--global--text--color--link--hover);
@@ -215,8 +223,16 @@
   --#{$button}--m-primary__c-badge--BorderColor: var(--pf-t--global--border--color--default);
   --#{$button}--m-primary__c-badge--BorderWidth: var(--pf-t--global--border--width--300); // used only for primary, unread, not disabled
 
+  // Button Icon RTL
+  --#{$button}--m-RTL-static__icon: scale(1);
+}
+
+.#{$button} {
   position: relative;
-  display: inline-block;
+  display: var(--#{$button}--Display);
+  flex: var(--#{$button}--Flex);
+  align-items: var(--#{$button}--AlignItems);
+  justify-content: var(--#{$button}--JustifyContent);
   padding-block-start: var(--#{$button}--PaddingTop);
   padding-block-end: var(--#{$button}--PaddingBottom);
   padding-inline-start: var(--#{$button}--PaddingLeft);
@@ -228,7 +244,15 @@
   white-space: nowrap;
   user-select: none;
   border: 0;
-  border-radius: var(--#{$button}--BorderRadius);
+  border-start-start-radius: var(--#{$button}--start-start--Radius--BorderRadius);
+  border-start-end-radius: var(--#{$button}--start-end--Radius--BorderRadius);
+  border-end-start-radius: var(--#{$button}--end-start--Radius--BorderRadius);
+  border-end-end-radius: var(--#{$button}--end-end--Radius--BorderRadius);
+
+  // apply line-height to all children, including fa fonts
+  > * {
+    line-height: var(--#{$button}--LineHeight);
+  }
 
   &::after {
     position: absolute;
@@ -240,7 +264,7 @@
     content: "";
     border: var(--#{$button}--after--BorderWidth) solid;
     border-color: var(--#{$button}--after--BorderColor);
-    border-radius: var(--#{$button}--BorderRadius);
+    border-radius: inherit;
   }
 
   &:hover {
@@ -362,7 +386,7 @@
 
   // Link buttons
   &.pf-m-link {
-    --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-link--disabled--BackgroundColor);
+        --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-link--disabled--BackgroundColor);
     --#{$button}--disabled--Color: var(--#{$button}--m-link--disabled--Color);
 
     color: var(--#{$button}--m-link--Color);
@@ -654,6 +678,12 @@
       }
     }
   }
+
+  &.pf-m-RTL-icon-static {
+    .#{$button}__icon {
+      @include pf-v5-mirror-inline-on-rtl
+    }
+  }
 }
 
 .#{$button}__icon {
@@ -683,10 +713,3 @@
   align-items: center;
   margin-inline-start: var(--#{$button}__count--MarginLeft);
 }
-
-// // stylelint-disable no-invalid-position-at-import-rule
-// @import "themes/dark/button";
-
-// @include pf-v5-theme-dark {
-//   @include pf-v5-theme-dark-button;
-// }

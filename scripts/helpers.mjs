@@ -95,14 +95,13 @@ export const stringToLower = function (string) {
 export const dasherize = (...params) => {
   let newString = '';
 
-  params.forEach(element => {
+  params.forEach(function(element, i) {
     if (typeof element === 'string') {
-      element = element.replace(/[^\p{L}\p{N}\p{Z}]/gu, '').replace(/\s/g, '-').toLowerCase();
-      newString += element.toLowerCase();
+      newString += element.replace(/[A-Z]/g, m => '-' + m.toLowerCase().replace(/\s/g, ''));
     }
   });
 
-  return newString;
+  return newString
 };
 
 // ======================================================================================

@@ -36,7 +36,7 @@ import './Button.css'
 <br>
 <br>
 {{#> button button--modifier="pf-m-link"}}
-  {{#> button-icon button-icon--modifier="pf-m-start"}}
+  {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link
@@ -44,13 +44,13 @@ import './Button.css'
 
 {{#> button button--modifier="pf-m-link"}}
   Link
-  {{#> button-icon button-icon--modifier="pf-m-end"}}
+  {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-link pf-m-danger"}}
-  {{#> button-icon button-icon--modifier="pf-m-start"}}
+  {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link danger
@@ -109,14 +109,14 @@ import './Button.css'
 
 {{#> button button--modifier="pf-m-link pf-m-small"}}
   Link
-  {{#> button-icon button-icon--modifier="pf-m-end"}}
+  {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-link pf-m-danger pf-m-small"}}
   Link danger
-  {{#> button-icon button-icon--modifier="pf-m-end"}}
+  {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
 {{/button}}
@@ -156,14 +156,14 @@ import './Button.css'
 {{/button}}
 
 {{#> button button--modifier="pf-m-link" button--attribute="disabled"}}
-  {{#> button-icon button-icon--modifier="pf-m-start"}}
+  {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link disabled
 {{/button}}
 
 {{#> button button--modifier="pf-m-link pf-m-danger" button--attribute="disabled"}}
-  {{#> button-icon button-icon--modifier="pf-m-start"}}
+  {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link danger disabled
@@ -209,14 +209,14 @@ import './Button.css'
 {{/button}}
 
 {{#> button button--modifier="pf-m-link pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
-  {{#> button-icon button-icon--modifier="pf-m-start"}}
+  {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link disabled
 {{/button}}
 
 {{#> button button--modifier="pf-m-link pf-m-danger pf-m-aria-disabled" button--attribute='aria-disabled="true"'}}
-  {{#> button-icon button-icon--modifier="pf-m-start"}}
+  {{#> button-icon}}
     <i class="fas fa-plus-circle" aria-hidden="true"></i>
   {{/button-icon}}
   Link danger disabled
@@ -309,14 +309,14 @@ Sed hendrerit nisi in cursus maximus. Ut malesuada nisi turpis, in condimentum v
 
 {{#> button button--modifier="pf-m-link pf-m-display-lg"}}
   Call to action
-  {{#> button-icon button-icon--modifier="pf-m-end"}}
+  {{#> button-icon}}
     <i class="fas fa-arrow-right" aria-hidden="true"></i>
   {{/button-icon}}
 {{/button}}
 
 {{#> button button--modifier="pf-m-link pf-m-inline pf-m-display-lg"}}
   Call to action
-  {{#> button-icon button-icon--modifier="pf-m-end"}}
+  {{#> button-icon}}
     <i class="fas fa-arrow-right" aria-hidden="true"></i>
   {{/button-icon}}
 {{/button}}
@@ -416,8 +416,6 @@ Semantic buttons and links are important for usability as well as accessibility.
 | `.pf-m-block` | `.pf-v5-c-button` | Creates a block level button. |
 | `.pf-m-control` | `.pf-v5-c-button` | Modifies for control styles. **Note:** This modifier should only be used when using buttons in the Input Group or Clipboard Copy components. |
 | `.pf-m-expanded` | `.pf-v5-c-button.pf-m-control` | Modifies a control button for the expanded state. |
-| `.pf-m-start` | `.pf-v5-c-button__icon` | Applies right spacing to an icon inside of a button when the icon comes before text. |
-| `.pf-m-end` | `.pf-v5-c-button__icon` | Applies left spacing to an icon inside of a button when the icon comes after text. |
 | `.pf-m-active` | `.pf-v5-c-button` | Forces display of the active state of the button. This modifier should be used when `aria-pressed` is set to true so that the button displays in an active state. |
 | `.pf-m-small` | `.pf-v5-c-button` | Modifies the button so that it has small font size. |
 | `.pf-m-aria-disabled` | `.pf-v5-c-button` | Modifies a button to be visually disabled, yet is still focusable. |

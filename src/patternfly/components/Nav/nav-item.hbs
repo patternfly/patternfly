@@ -1,16 +1,16 @@
 <li class="{{pfv}}nav__item
   {{setModifiers
-    nav-item--expandable='pf-m-expandable'
+    nav-item--IsExpandable='pf-m-expandable'
+    nav-item--IsExpandable='pf-m-expandable'
     nav-item--IsDrilldown='pf-m-drilldown'
     nav-item--IsFlyout='pf-m-flyout'
     nav-item--modifier=nav--modifier
   }}
   {{#unless nav-item--IsFlyout}}
-    {{#if nav-item--expanded}}
+    {{#ifAny nav-item--expanded nav-item--IsExpanded}}
       pf-m-expanded
-    {{/if}}
+    {{/ifAny}}
   {{/unless}}"
-
   {{#if nav-item--attribute}}
     {{{nav-item--attribute}}}
   {{/if}}>

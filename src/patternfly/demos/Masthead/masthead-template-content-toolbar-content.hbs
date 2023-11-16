@@ -6,7 +6,7 @@
   {{/if}}
   {{#if masthead-template--HasHorizontalNav}}
     {{#> toolbar-item toolbar-item--modifier="pf-m-overflow-container" toolbar-item--attribute='style="--pf-v5-c-toolbar__item--MinWidth: 18ch;"'}}
-      {{#> nav nav--HasScroll="true" nav--IsHorizontal="true" nav--IsScrollable="true" nav--attribute=(concat 'id="' masthead-q-id '-horizontal-nav" aria-label="Global"')}}
+      {{#> nav nav--HasScroll=true nav--IsHorizontal=true nav--IsScrollable=true nav--HasScroll=true nav--attribute=(concat 'id="' masthead--id '-horizontal-nav" aria-label="Global"')}}
         {{#> nav-list}}
           {{#> nav-item}}
             {{#> nav-link nav-link--href="#"}}
