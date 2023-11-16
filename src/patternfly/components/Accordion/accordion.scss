@@ -19,9 +19,8 @@
   --#{$accordion}__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$accordion}__toggle--focus--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$accordion}__toggle--FontFamily: var(--pf-t--global--font--family--body);
-  --#{$accordion}__toggle--FontSize: var(--pf-t--global--font--size--body--md);
-  --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--200);
+  --#{$accordion}__toggle--active--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
+  --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
 
   // Accordion toggle toggle-start modifier
   --#{$accordion}--m-toggle-start__toggle--JustifyContent: start;
@@ -41,7 +40,7 @@
   --#{$accordion}__expandable-content--MarginBottom: var(--pf-t--global--spacer--md);
   --#{$accordion}__expandable-content--MarginLeft: var(--pf-t--global--spacer--md);
   --#{$accordion}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
-  --#{$accordion}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--200);
+  --#{$accordion}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$accordion}__expandable-content--Color: var(--pf-t--global--text--color--regular);
   --#{$accordion}__expandable-content--FontSize: var(--pf-t--global--font--size--body--md);
   --#{$accordion}__expandable-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
@@ -59,7 +58,7 @@
   --#{$accordion}--m-display-lg__toggle--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$accordion}--m-display-lg__toggle--m-expanded--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$accordion}--m-display-lg__toggle--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$accordion}--m-display-lg__toggle--FontFamily: var(--pf-t--global--font--family--body);
+  --#{$accordion}--m-display-lg__toggle--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$accordion}--m-display-lg__toggle--FontSize: var(--pf-t--global--font--size--heading--sm);
   --#{$accordion}--m-display-lg__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--bold);
   --#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--bold);
@@ -132,8 +131,8 @@
   padding-block-end: var(--#{$accordion}__toggle--PaddingBottom);
   padding-inline-start: var(--#{$accordion}__toggle--PaddingLeft);
   padding-inline-end: var(--#{$accordion}__toggle--PaddingRight);
-  font-family: var(--#{$accordion}__toggle--FontFamily);
-  font-size: var(--#{$accordion}__toggle--FontSize);
+  font-family: var(--#{$accordion}__toggle--FontFamily, inherit);
+  font-size: var(--#{$accordion}__toggle--FontSize, inherit);
   text-align: start;
   background-color: var(--#{$accordion}__toggle--BackgroundColor);
   border: 0;
@@ -145,6 +144,10 @@
 
   &:focus {
     background-color: var(--#{$accordion}__toggle--focus--BackgroundColor);
+  }
+
+  &:active {
+    background-color: var(--#{$accordion}__toggle--active--BackgroundColor);
   }
 }
 
