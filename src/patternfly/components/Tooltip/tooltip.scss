@@ -9,15 +9,15 @@
   --#{$tooltip}__content--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$tooltip}__content--PaddingBottom: var(--pf-t--global--spacer--sm);
   --#{$tooltip}__content--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$tooltip}__content--Color: var(--pf-t--global--text--color--300);
-  --#{$tooltip}__content--BackgroundColor: var(--pf-t--global--background--color--400);
+  --#{$tooltip}__content--Color: var(--pf-t--global--text--color--inverse);
+  --#{$tooltip}__content--BackgroundColor: var(--pf-t--global--background--color--inverse--default);
   --#{$tooltip}__content--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$tooltip}__content--BorderRadius: var(--pf-t--global--border--radius--small);
   
   // Arrow variables
   --#{$tooltip}__arrow--Width: #{pf-size-prem(15px)};
   --#{$tooltip}__arrow--Height: #{pf-size-prem(15px)};
-  --#{$tooltip}__arrow--BackgroundColor: var(--pf-t--global--background--color--400);
+  --#{$tooltip}__arrow--BackgroundColor: var(--pf-t--global--background--color--inverse--default);
   --#{$tooltip}__arrow--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$tooltip}__arrow--m-top--TranslateX: -50%;
   --#{$tooltip}__arrow--m-top--TranslateY: 50%;
