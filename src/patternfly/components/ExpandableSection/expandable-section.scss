@@ -49,6 +49,8 @@
   --#{$expandable-section}--m-display-lg__content--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$expandable-section}--m-display-lg__content--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$expandable-section}--m-display-lg__content--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$expandable-section}--m-expanded--m-display-lg__toggle--BorderRadius: var(--pf-t--global--border--radius--medium) var(--pf-t--global--border--radius--medium) 0 0;
+
 
   // Indented
   --#{$expandable-section}--m-indented__content--PaddingLeft--base: calc(var(--#{$expandable-section}__toggle--ColumnGap) + var(--#{$expandable-section}__toggle-icon--MinWidth));
@@ -70,6 +72,7 @@
     --#{$expandable-section}__toggle-icon--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--Rotate);
     --#{$expandable-section}__toggle-icon--m-expand-top--Rotate: var(--#{$expandable-section}--m-expanded__toggle-icon--m-expand-top--Rotate);
     --#{$expandable-section}--m-display-lg--after--BackgroundColor: var(--#{$expandable-section}--m-display-lg--m-expanded--after--BackgroundColor);
+    --#{$expandable-section}--m-display-lg__toggle--BorderRadius: var(--#{$expandable-section}--m-expanded--m-display-lg__toggle--BorderRadius);
   }
 
   &.pf-m-limit-width {
