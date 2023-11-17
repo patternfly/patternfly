@@ -1,17 +1,17 @@
-<{{#if menu-toggle--IsDiv}}div{{else}}button{{/if}} class="{{pfv}}menu-toggle
-  {{~#if menu-toggle--IsPrimary}}
+<{{#ifAny menu-toggle--IsDiv menu-toggle--IsSplitButton}}div{{else}}button{{/ifAny}} class="{{pfv}}menu-toggle
+  {{#if menu-toggle--IsPrimary}}
     pf-m-primary
   {{/if}}
-  {{~#if menu-toggle--IsSecondary}}
+  {{#if menu-toggle--IsSecondary}}
     pf-m-secondary
   {{/if}}
-  {{~#if menu-toggle--IsPlain}}
+  {{#if menu-toggle--IsPlain}}
     pf-m-plain
   {{/if}}
-  {{~#if menu-toggle--IsText}}
+  {{#if menu-toggle--IsText}}
     pf-m-text
   {{/if}}
-  {{~#if menu-toggle--IsExpanded}}
+  {{#if menu-toggle--IsExpanded}}
     pf-m-expanded
   {{/if}}
   {{#if menu-toggle--IsTypeahead}}
@@ -19,27 +19,59 @@
   {{/if}}
   {{#if menu-toggle--IsSplitButton}}
     pf-m-split-button
-    {{~#if menu-toggle--IsAction}}
+    {{#if menu-toggle--IsAction}}
       pf-m-action
     {{/if}}
-    {{~#if menu-toggle--IsDisabled}}
+    {{#if menu-toggle--IsDisabled}}
       pf-m-disabled
     {{/if}}
   {{/if}}
   {{#if menu-toggle--modifier}} {{menu-toggle--modifier}}{{/if}}"
-  {{#unless menu-toggle--IsDiv}}
+  {{#unless (concat menu-toggle--IsDiv menu-toggle--IsSplitButton)}}
     type="button"
     {{#if menu-toggle--IsExpanded}}
       aria-expanded="true"
     {{else}}
       aria-expanded="false"
     {{/if}}
-    {{~#if menu-toggle--IsDisabled}}
+    {{#if menu-toggle--IsDisabled}}
       disabled
     {{/if}}
   {{/unless}}
+  {{#if menu-toggle--id}}
+    id="{{menu-toggle--id}}"
+  {{/if}}
   {{#if menu-toggle--attribute}}
     {{{menu-toggle--attribute}}}
   {{/if}}>
-  {{> @partial-block}}
-</{{#if menu-toggle--IsDiv}}div{{else}}button{{/if}}>
+  {{#if menu-toggle--IsCheck}}
+    {{> check
+        check--id=(concat menu-toggle--id '-check')
+        check--IsLabelWrapped=true
+        check--IsStandalone=true
+      }}
+  {{/if}}
+  {{#if menu-toggle--icon}}
+    {{> menu-toggle-icon}}
+  {{/if}}
+  {{#if menu-toggle--text}}
+    {{> menu-toggle-text}}
+  {{/if}}
+  {{#if menu-toggle--badge--count}}
+    {{#> menu-toggle-count}}
+      {{> badge badge--modifier="pf-m-unread" badge--text=menu-toggle--badge--count}}
+    {{/menu-toggle-count}}
+  {{/if}}
+  {{#ifAny menu-toggle--IsPlain @partial-block}}
+    {{#if menu-toggle--HasKebab}}
+      <i class="fas fa-ellipsis-v" aria-hidden=true></i>
+    {{/if}}
+    {{#if @partial-block}}
+      {{> @partial-block}}
+    {{/if}}
+  {{else}}
+    {{#> menu-toggle-controls}}
+      {{> menu-toggle-toggle-icon}}
+    {{/menu-toggle-controls}}
+  {{/ifAny}}
+</{{#ifAny menu-toggle--IsDiv menu-toggle--IsSplitButton}}div{{else}}button{{/ifAny}}>

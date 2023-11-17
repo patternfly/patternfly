@@ -34,7 +34,7 @@
 @if $pf-v5-global--enable-normalize {
   *,
   *::before,
-  *::after  {
+  *::after {
     box-sizing: border-box;
   }
 

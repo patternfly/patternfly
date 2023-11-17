@@ -575,14 +575,12 @@
     color: var(--#{$button}--m-plain--Color);
     background-color: var(--#{$button}--m-plain--BackgroundColor);
 
-
     &.pf-m-no-padding {
       padding: 0;
     }
 
     &:hover,
-    &:focus,
-    &:active {
+    &:focus {
       --#{$button}--m-plain--BackgroundColor: var(--#{$button}--m-plain--hover--BackgroundColor);
 
       mix-blend-mode: var(--pf-t--global--background--color--action--plain--hover--blend);

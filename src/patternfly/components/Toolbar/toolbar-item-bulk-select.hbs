@@ -1,3 +1,13 @@
 {{#> toolbar-item toolbar-item--modifier="pf-m-bulk-select"}}
-  {{#> dropdown dropdown--template--SplitButton="true" dropdown--id=(concat toolbar--id '-bulk-select') dropdown-menu--IsBulkSelect="true"}}{{/dropdown}}
+  {{#> menu-toggle
+      menu-toggle--IsCheck=true
+      menu-toggle--IsSplitButton=true
+      menu-toggle--id=(concat toolbar--id '-check')
+    }}
+    {{#> menu-toggle-button menu-toggle--id=(concat toolbar--id '-menu-toggle') menu-toggle-button--IsToggle=true}}
+      {{#> menu-toggle-controls}}
+        {{> menu-toggle-toggle-icon}}
+      {{/menu-toggle-controls}}
+    {{/menu-toggle-button}}
+  {{/menu-toggle}}
 {{/toolbar-item}}

@@ -361,16 +361,12 @@ $pf-v5-c-dropdown--breakpoint-map: build-breakpoint-map("base", "sm", "md", "lg"
 
       > input,
       .#{$check} {
+        --#{$check}__input--TranslateY: none;
+
         align-self: revert;
         width: auto;
         cursor: pointer;
         visibility: var(--#{$dropdown}__toggle--m-split-button__toggle-check__input--Visibility, unset);
-      }
-
-      .#{$check}__input {
-        // stylelint-disable property-no-vendor-prefix
-        -moz-transform: none;
-        // stylelint-enable
       }
     }
 

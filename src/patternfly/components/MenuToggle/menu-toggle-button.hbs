@@ -14,7 +14,9 @@
   {{#if menu-toggle-button--attribute}}
     {{{menu-toggle-button--attribute}}}
   {{/if}}>
-  {{#if @partial-block}}
+  {{#if menu-toggle__button--text}}
+    {{menu-toggle__button--text}}
+  {{else if @partial-block}}
     {{> @partial-block}}
   {{else}}
     <i class="fas fa-caret-down" aria-hidden="true"></i>

@@ -360,11 +360,7 @@
       align-self: stretch;
 
       .#{$check}__input {
-        align-self: revert;
-
-        // stylelint-disable property-no-vendor-prefix
-        -moz-transform: none;
-        // stylelint-enable
+        align-self: center;
       }
     }
 
@@ -537,7 +533,7 @@
 
 .#{$menu-toggle}__toggle-icon {
   margin-inline-end: var(--#{$menu-toggle}__toggle-icon--MarginRight);
-  color: var(--#{$menu-toggle}__toggle-icon--Color);
+  color: var(--#{$menu-toggle}__toggle-icon--Color, inherit);
 }
 
 // stylelint-disable no-invalid-position-at-import-rule

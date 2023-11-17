@@ -232,6 +232,7 @@ cssPrefix: pf-v5-c-accordion
 ```
 
 ### Large bordered
+
 ```hbs
 {{#> accordion accordion--modifier="pf-m-display-lg pf-m-bordered"}}
   {{#> accordion-toggle}}
@@ -294,6 +295,62 @@ cssPrefix: pf-v5-c-accordion
 {{/accordion}}
 ```
 
+### Toggle icon at start
+
+```hbs isBeta
+{{#> accordion accordion--IsStartAligned=true}}
+  {{#> accordion-toggle}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+    {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
+  {{/accordion-toggle}}
+  {{#> accordion-expandable-content}}
+    {{#> accordion-expandable-content-body}}
+      This text is hidden
+    {{/accordion-expandable-content-body}}
+  {{/accordion-expandable-content}}
+
+  {{#> accordion-toggle}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+    {{#> accordion-toggle-text}}Item two{{/accordion-toggle-text}}
+  {{/accordion-toggle}}
+  {{#> accordion-expandable-content}}
+    {{#> accordion-expandable-content-body}}
+      This text is hidden
+    {{/accordion-expandable-content-body}}
+  {{/accordion-expandable-content}}
+
+  {{#> accordion-toggle}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+    {{#> accordion-toggle-text}}Item three{{/accordion-toggle-text}}
+  {{/accordion-toggle}}
+  {{#> accordion-expandable-content}}
+    {{#> accordion-expandable-content-body}}
+      This text is hidden
+    {{/accordion-expandable-content-body}}
+  {{/accordion-expandable-content}}
+
+  {{#> accordion-toggle accordion-toggle--IsExpanded="true"}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+    {{#> accordion-toggle-text}}Item four{{/accordion-toggle-text}}
+  {{/accordion-toggle}}
+  {{#> accordion-expandable-content accordion-expandable-content--IsExpanded="true"}}
+    {{#> accordion-expandable-content-body}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    {{/accordion-expandable-content-body}}
+  {{/accordion-expandable-content}}
+
+  {{#> accordion-toggle}}
+    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+    {{#> accordion-toggle-text}}Item five{{/accordion-toggle-text}}
+  {{/accordion-toggle}}
+  {{#> accordion-expandable-content}}
+    {{#> accordion-expandable-content-body}}
+      This text is hidden
+    {{/accordion-expandable-content-body}}
+  {{/accordion-expandable-content}}
+{{/accordion}}
+```
+
 ## Documentation
 ### Overview
 There are two variations to build the accordion component:
@@ -314,5 +371,6 @@ In these examples `.pf-v5-c-accordion` uses `<dl>`, `.pf-v5-c-accordion__toggle`
 | `.pf-v5-c-accordion__expandable-content-body` | `<div>` | Initiates expandable content body. **Required** |
 | `.pf-m-bordered` | `.pf-v5-c-accordion` | Modifies the accordion to add borders between items. |
 | `.pf-m-display-lg` | `.pf-v5-c-accordion` | Modifies the accordion for large display styling. This variation is for marketing/web use cases. |
+| `.pf-m-toggle-start` | `.pf-v5-c-accordion` | Modifies accordion styling when accordion toggle icons are rendered at the start of the toggle, before the toggle text. |
 | `.pf-m-expanded` | `.pf-v5-c-accordion__toggle`, `.pf-v5-c-accordion__expandable-content` | Modifies the accordion button and expandable content for the expanded state. |
 | `.pf-m-fixed` | `.pf-v5-c-accordion__expandable-content` | Modifies the expandable content for the fixed state. |

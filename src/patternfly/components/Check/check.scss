@@ -7,7 +7,8 @@
   --#{$check}__label--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$check}__label--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$check}__label--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$check}__input--TranslateY--moz: 5px;
+  --#{$check}__input--TranslateY: calc((var(--pf-v5-c-check__label--LineHeight) * var(--pf-v5-c-check__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
+  --#{$check}__input--TranslateY--moz: var(--#{$check}__input--TranslateY); // remove at breaking change
   --#{$check}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
   --#{$check}__description--Color: var(--#{$pf-global}--Color--200);
   --#{$check}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
@@ -20,17 +21,28 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--#{$check}--GridGap);
+  align-items: baseline;
 
   &.pf-m-standalone {
     --#{$check}--GridGap: 0;
-    --#{$check}__input--TranslateY--moz: 0;
+    --#{$check}__input--TranslateY: none;
 
     display: inline-grid;
   }
 }
 
+.#{$check}__input {
+  align-self: start;
+
+  // stylelint-disable property-no-vendor-prefix
+  -moz-transform: translateY(var(--#{$check}__input--TranslateY--moz)); // remove at breaking change - no longer needed
+  // stylelint-enable
+
+  // find height of single label, divide by two, offset by 50% of own height
+  transform: translateY(var(--#{$check}__input--TranslateY));
+}
+
 .#{$check}__label {
-  align-self: baseline;
   font-size: var(--#{$check}__label--FontSize);
   font-weight: var(--#{$check}__label--FontWeight);
   line-height: var(--#{$check}__label--LineHeight);
@@ -47,13 +59,6 @@
   grid-column: 2;
   margin-block-start: var(--#{$check}__body--MarginTop);
 }
-
-// stylelint-disable property-no-vendor-prefix
-.#{$check}__input {
-  align-self: baseline;
-  -moz-transform: translateY(var(--#{$check}__input--TranslateY--moz));
-}
-// stylelint-enable
 
 .#{$check}__label,
 .#{$check}__input {

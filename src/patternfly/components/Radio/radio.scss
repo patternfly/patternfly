@@ -7,7 +7,8 @@
   --#{$radio}__label--FontWeight: var(--#{$pf-global}--FontWeight--normal);
   --#{$radio}__label--FontSize: var(--#{$pf-global}--FontSize--md);
   --#{$radio}__label--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$radio}__input--TranslateY--moz: 5px;
+  --#{$radio}__input--TranslateY: calc((var(--pf-v5-c-radio__label--LineHeight) * var(--pf-v5-c-radio__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
+  --#{$radio}__input--TranslateY--moz: var(--#{$radio}__input--TranslateY); // remove at breaking change
   --#{$radio}__input--first-child--MarginLeft: #{pf-size-prem(1px)};
   --#{$radio}__input--last-child--MarginRight: #{pf-size-prem(1px)};
   --#{$radio}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
@@ -21,23 +22,21 @@
 
   &.pf-m-standalone {
     --#{$radio}--GridGap: 0;
-    --#{$radio}__input--TranslateY--moz: 0;
+    --#{$radio}__input--TranslateY: none;
 
-    width: auto;
+    display: inline-grid;
   }
 }
 
-.#{$radio}__label {
-  font-size: var(--#{$radio}__label--FontSize);
-  font-weight: var(--#{$radio}__label--FontWeight);
-  line-height: var(--#{$radio}__label--LineHeight);
-  color: var(--#{$radio}__label--Color);
-}
-
 .#{$radio}__input {
+  align-self: start;
+
   // stylelint-disable property-no-vendor-prefix
-  -moz-transform: translateY(var(--#{$radio}__input--TranslateY--moz));
+  -moz-transform: translateY(var(--#{$radio}__input--TranslateY--moz)); // remove at breaking change - no longer needed
   // stylelint-enable
+
+  // find height of single label, divide by two, offset by 50% of own height
+  transform: translateY(var(--#{$radio}__input--TranslateY));
 
   // fixes a chrome issue where the left edge is cut off in a container with overflow hidden
   &:first-child {
@@ -48,6 +47,13 @@
   &:last-child {
     margin-inline-end: var(--#{$radio}__input--last-child--MarginRight);
   }
+}
+
+.#{$radio}__label {
+  font-size: var(--#{$radio}__label--FontSize);
+  font-weight: var(--#{$radio}__label--FontWeight);
+  line-height: var(--#{$radio}__label--LineHeight);
+  color: var(--#{$radio}__label--Color);
 }
 
 .#{$radio}__description {
