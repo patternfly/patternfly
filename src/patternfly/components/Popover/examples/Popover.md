@@ -236,7 +236,9 @@ import './Popover.css'
 {{#> popover popover--modifier="pf-m-right pf-m-no-padding" popover--attribute='aria-label="Popover with no padding example" aria-describedby="popover-no-padding-body"'}}
   {{#> popover-content}}
     {{#> popover-body popover-body--attribute='id="popover-no-padding-body"'}}
-      This popover has no padding and is intended for use with content that has its own spacing and should touch the edges of the popover container.
+      <div class="ws-popover-no-padding-content">
+        This popover has no padding itself. Instead it is intended for use with content that has its own padding that prevents it from touching the popover container's edges.
+      </div>
     {{/popover-body}}
   {{/popover-content}}
 {{/popover}}

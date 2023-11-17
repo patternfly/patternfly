@@ -16,13 +16,6 @@
   --#{$popover}--m-info__title-icon--Color: var(--pf-t--global--icon--color--status--info--default);
   --#{$popover}--m-custom__title-icon--Color: var(--pf-t--global--icon--color--status--custom--default);
 
-  // Title text colors for states
-  --#{$popover}--m-danger__title-text--Color: var(--pf-t--global--text--color--status--danger--default);
-  --#{$popover}--m-warning__title-text--Color: var(--pf-t--global--text--color--status--warning--default);
-  --#{$popover}--m-success__title-text--Color: var(--pf-t--global--text--color--status--success--default);
-  --#{$popover}--m-info__title-text--Color: var(--pf-t--global--text--color--status--info--default);
-  --#{$popover}--m-custom__title-text--Color: var(--pf-t--global--text--color--status--custom--default);
-
   // Content
   --#{$popover}__content--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$popover}__content--PaddingTop: var(--pf-t--global--spacer--md);
@@ -32,8 +25,8 @@
   --#{$popover}__content--BorderRadius: var(--pf-t--global--border--radius--medium);
 
   // Arrow
-  --#{$popover}__arrow--Width: #{pf-size-prem(25px)};
-  --#{$popover}__arrow--Height: #{pf-size-prem(25px)};
+  --#{$popover}__arrow--Width: #{pf-size-prem(15px)};
+  --#{$popover}__arrow--Height: #{pf-size-prem(15px)};
   --#{$popover}__arrow--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$popover}__arrow--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$popover}__arrow--m-top--TranslateX: -50%;
@@ -50,17 +43,17 @@
   --#{$popover}__arrow--m-left--Rotate: 45deg;
 
   // Close
-  --#{$popover}__close--Top: calc(var(--#{$popover}__content--PaddingTop) - var(--pf-t--global--spacer--sm)); // align top of button with top of text
-  --#{$popover}__close--Right: calc(var(--#{$popover}__content--PaddingRight)); // align right of content
+  --#{$popover}__close--Top: calc(var(--#{$popover}__content--PaddingTop) - (var(--pf-t--global--spacer--xs) * 1.5)); // align top of button with top of text
+  --#{$popover}__close--Right: var(--#{$popover}__content--PaddingRight); // align right of content
   --#{$popover}__close--sibling--PaddingRight: var(--pf-t--global--spacer--2xl);
 
   // Header
   --#{$popover}__header--MarginBottom: var(--pf-t--global--spacer--sm);
 
   // Title text
-  --#{$popover}__title-text--LineHeight: var(--pf-t--global--font--line-height--heading);
+  --#{$popover}__title-text--Color: var(--pf-t--global--text--color--regular);
   --#{$popover}__title-text--FontFamily: var(--pf-t--global--font--family--heading);
-  --#{$popover}__title-text--FontSize: var(--pf-t--global--font--size--heading--xs);
+  --#{$popover}__title-text--FontSize: var(--pf-t--global--font--size--body--lg);
 
   // Title icon
   --#{$popover}__title-icon--MarginRight: var(--pf-t--global--spacer--sm);
@@ -108,7 +101,7 @@
     .pf-m-bottom,
     .pf-m-bottom-left,
     .pf-m-bottom-right
-   ) {
+  ) {
     --#{$popover}__arrow--Top: var(--#{$popover}--m-bottom--Top, 0);
     --#{$popover}__arrow--Left: var(--#{$popover}--m-bottom--Left, 50%);
     --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-bottom--TranslateX);
@@ -174,27 +167,22 @@
 
   &.pf-m-danger {
     --#{$popover}__title-icon--Color: var(--#{$popover}--m-danger__title-icon--Color);
-    --#{$popover}__title-text--Color: var(--#{$popover}--m-danger__title-text--Color);
   }
 
   &.pf-m-warning {
     --#{$popover}__title-icon--Color: var(--#{$popover}--m-warning__title-icon--Color);
-    --#{$popover}__title-text--Color: var(--#{$popover}--m-warning__title-text--Color);
   }
 
   &.pf-m-success {
     --#{$popover}__title-icon--Color: var(--#{$popover}--m-success__title-icon--Color);
-    --#{$popover}__title-text--Color: var(--#{$popover}--m-success__title-text--Color);
   }
 
   &.pf-m-custom {
     --#{$popover}__title-icon--Color: var(--#{$popover}--m-custom__title-icon--Color);
-    --#{$popover}__title-text--Color: var(--#{$popover}--m-custom__title-text--Color);
   }
 
   &.pf-m-info {
     --#{$popover}__title-icon--Color: var(--#{$popover}--m-info__title-icon--Color);
-    --#{$popover}__title-text--Color: var(--#{$popover}--m-info__title-text--Color);
   }
 }
 
@@ -254,8 +242,7 @@
 .#{$popover}__title-text {
   font-family: var(--#{$popover}__title-text--FontFamily);
   font-size: var(--#{$popover}__title-text--FontSize);
-  line-height: var(--#{$popover}__title-text--LineHeight);
-  color: var(--#{$popover}__title-text--Color, inherit);
+  color: var(--#{$popover}__title-text--Color);
 }
 
 // Body
