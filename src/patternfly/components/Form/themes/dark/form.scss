@@ -1,7 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-form() {
-  .#{$form}{
-    --#{$form}__helper-text--m-success--Color: var(--#{$pf-global}--success-color--100);
-  }
-}

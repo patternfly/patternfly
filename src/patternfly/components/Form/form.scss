@@ -24,13 +24,13 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   }
 }
 
-.#{$form} {
-  --#{$form}--GridGap: var(--#{$pf-global}--gutter--md);
+:root {
+  --#{$form}--GridGap: var(--pf-t--global--spacer--lg); // TODO gutter token variable
 
   // Group
-  --#{$form}__group--m-action--MarginTop: var(--#{$pf-global}--spacer--xl);
+  --#{$form}__group--m-action--MarginTop: var(--pf-t--global--spacer--xl);
   --#{$form}--m-horizontal__group-label--md--GridColumnWidth: #{pf-size-prem(150px)};
-  --#{$form}--m-horizontal__group-label--md--GridColumnGap: var(--#{$pf-global}--spacer--md);
+  --#{$form}--m-horizontal__group-label--md--GridColumnGap: var(--pf-t--global--spacer--md);
   --#{$form}--m-horizontal__group-control--md--GridColumnWidth: 1fr;
 
   // limit width
@@ -52,8 +52,8 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // plus the border width used by the text inputs is 1px
   // So we need to adjust by 21 - 16.1 + 1 = 5.9px
 
-  --#{$form}--m-horizontal__group-label--md--PaddingTop: calc((((((var(--#{$pf-global}--FontSize--md) * var(--#{$pf-global}--LineHeight--md)) + (2 * var(--#{$pf-global}--BorderWidth--sm))) - var(--#{$pf-global}--FontSize--md)) / 2) + var(--#{$pf-global}--FontSize--md)) - ((((var(--#{$pf-global}--FontSize--sm) * var(--#{$pf-global}--LineHeight--sm)) - var(--#{$pf-global}--FontSize--sm)) / 2) + var(--#{$pf-global}--FontSize--sm)) + var(--#{$pf-global}--BorderWidth--sm));
-  --#{$form}__group-label--PaddingBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$form}--m-horizontal__group-label--md--PaddingTop: calc((((((var(--pf-t--global--font--size--body) * var(--pf-t--global--font--line-height--body)) + (2 * var(--pf-t--global--border--width--control--default))) - var(--pf-t--global--font--size--body)) / 2) + var(--pf-t--global--font--size--body)) - ((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) + var(--pf-t--global--border--width--control--default)); // TODO Not yet right
+  --#{$form}__group-label--PaddingBottom: var(--pf-t--global--spacer--sm);
 
   // Use the no-padding modifier to align form groups that aren't text inputs
   // Use the formula above, except
@@ -62,123 +62,119 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // - controls like checkboxes use the medium font and small line height
   // - This comes out to a difference of 2.3px.
   --#{$form}--m-horizontal__group-label--m-no-padding--md--PaddingTop: 0;
-  --#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY: calc(((((var(--#{$pf-global}--FontSize--sm) * var(--#{$pf-global}--LineHeight--sm)) - var(--#{$pf-global}--FontSize--sm)) / 2) + var(--#{$pf-global}--FontSize--sm)) - ((((var(--#{$pf-global}--FontSize--md) * var(--#{$pf-global}--LineHeight--sm)) - var(--#{$pf-global}--FontSize--md)) / 2) + var(--#{$pf-global}--FontSize--md)));
+  --#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY: calc(((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) - ((((var(--pf-t--global--font--size--body) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body)) / 2) + var(--pf-t--global--font--size--body))); // TODO
 
   // Label
-  --#{$form}__label--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$form}__label--LineHeight: var(--#{$pf-global}--LineHeight--sm);
-  --#{$form}__label--m-disabled--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$form}__label--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$form}__label--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$form}__label--m-disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$form}__label--hover--Cursor: pointer;
   --#{$form}__label--m-disabled--hover--Cursor: not-allowed;
 
   // Label text
-  --#{$form}__label-text--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$form}__label-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Required labels
-  --#{$form}__label-required--MarginLeft: var(--#{$pf-global}--spacer--xs);
-  --#{$form}__label-required--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$form}__label-required--Color: var(--#{$pf-global}--danger-color--100);
+  --#{$form}__label-required--MarginLeft: var(--pf-t--global--spacer--xs);
+  --#{$form}__label-required--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$form}__label-required--Color: var(--pf-t--global--color--status--danger--default);
 
   // Field level help
   --#{$form}__group-label-help--BackgroundColor: transparent;
-  --#{$form}__group-label-help--PaddingTop: var(--#{$pf-global}--spacer--xs);
-  --#{$form}__group-label-help--PaddingRight: var(--#{$pf-global}--spacer--xs);
-  --#{$form}__group-label-help--PaddingBottom: var(--#{$pf-global}--spacer--xs);
-  --#{$form}__group-label-help--PaddingLeft: var(--#{$pf-global}--spacer--xs);
+  --#{$form}__group-label-help--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$form}__group-label-help--PaddingRight: var(--pf-t--global--spacer--xs);
+  --#{$form}__group-label-help--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$form}__group-label-help--PaddingLeft: var(--pf-t--global--spacer--xs);
   --#{$form}__group-label-help--MarginTop: calc(var(--#{$form}__group-label-help--PaddingTop) * -1);
   --#{$form}__group-label-help--MarginRight: calc(var(--#{$form}__group-label-help--PaddingRight) * -1);
   --#{$form}__group-label-help--MarginBottom: calc(var(--#{$form}__group-label-help--PaddingBottom) * -1);
-  --#{$form}__group-label-help--MarginLeft: calc(var(--#{$form}__group-label-help--PaddingLeft) * -1 + var(--#{$pf-global}--spacer--xs));
-  --#{$form}__group-label-help--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$form}__group-label-help--MarginLeft: calc(var(--#{$form}__group-label-help--PaddingLeft) * -1 + var(--pf-t--global--spacer--xs));
+  --#{$form}__group-label-help--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$form}__group-label-help--TranslateY: #{pf-size-prem(2px)};
-  --#{$form}__group-label-help--Color: var(--#{$pf-global}--Color--200);
-  --#{$form}__group-label-help--hover--Color: var(--#{$pf-global}--Color--100);
-  --#{$form}__group-label-help--focus--Color: var(--#{$pf-global}--Color--100);
+  --#{$form}__group-label-help--Color: var(--pf-t--global--icon--color--regular);
+  --#{$form}__group-label-help--hover--Color: var(--pf-t--global--icon--color--brand--default); // TODO check?
+  --#{$form}__group-label-help--focus--Color: var(--pf-t--global--icon--color--brand--hover);
 
   // Form group label info
-  --#{$form}__group-label-info--MarginLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$form}__group-label-info--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$form}__group-label-info--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$form}__group-label-info--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // Group control
-  --#{$form}__group-control--m-inline--child--MarginRight: var(--#{$pf-global}--spacer--lg);
-  --#{$form}__group-control__helper-text--MarginBottom: var(--#{$pf-global}--spacer--xs);
-  --#{$form}__group-control--m-stack--Gap: var(--#{$pf-global}--spacer--sm);
+  --#{$form}__group-control--m-inline--child--MarginRight: var(--pf-t--global--spacer--lg);
+  --#{$form}__group-control__helper-text--MarginBottom: var(--pf-t--global--spacer--xs);
+  --#{$form}__group-control--m-stack--Gap: var(--pf-t--global--spacer--sm);
   --#{$form}__group-control--m-stack__helper-text--MarginTop: calc(var(--#{$form}__group-control--m-stack--Gap) * -1 + var(--#{$form}__helper-text--MarginTop--base));
 
   // Actions
-  --#{$form}__actions--child--MarginTop: var(--#{$pf-global}--spacer--sm);
-  --#{$form}__actions--child--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$form}__actions--child--MarginBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$form}__actions--child--MarginLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$form}__actions--child--MarginTop: var(--pf-t--global--spacer--sm);
+  --#{$form}__actions--child--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$form}__actions--child--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$form}__actions--child--MarginLeft: var(--pf-t--global--spacer--sm);
   --#{$form}__actions--MarginTop: calc(var(--#{$form}__actions--child--MarginTop) * -1);
   --#{$form}__actions--MarginRight: calc(var(--#{$form}__actions--child--MarginRight) * -1);
   --#{$form}__actions--MarginBottom: calc(var(--#{$form}__actions--child--MarginBottom) * -1);
   --#{$form}__actions--MarginLeft: calc(var(--#{$form}__actions--child--MarginLeft) * -1);
 
   // Helper text
-  --#{$form}__helper-text--MarginTop--base: var(--#{$pf-global}--spacer--xs);
+  --#{$form}__helper-text--MarginTop--base: var(--pf-t--global--spacer--xs);
   --#{$form}__helper-text--MarginTop: var(--#{$form}__helper-text--MarginTop--base);
-  --#{$form}__helper-text--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$form}__helper-text--Color: var(--#{$pf-global}--Color--100);
+  --#{$form}__helper-text--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$form}__helper-text--Color: var(--pf-t--global--text--color--regular);
 
-  // here
   // Helper text icon
-  --#{$form}__helper-text-icon--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$form}__helper-text-icon--MarginRight: var(--#{$pf-global}--spacer--xs);
-
-  // States
-  --#{$form}__helper-text--m-success--Color: var(--#{$pf-global}--success-color--200);
-  --#{$form}__helper-text--m-warning--Color: var(--#{$pf-global}--warning-color--200);
-  --#{$form}__helper-text--m-error--Color: var(--#{$pf-global}--danger-color--100);
+  --#{$form}__helper-text-icon--FontSize: var(--pf-t--global--font--size--body--md);
+  --#{$form}__helper-text-icon--MarginRight: var(--pf-t--global--spacer--xs);
 
   // Section
-  --#{$form}__section--MarginTop: var(--#{$pf-global}--spacer--xl);
-  --#{$form}__section--Gap: var(--#{$pf-global}--gutter--md);
+  --#{$form}__section--MarginTop: var(--pf-t--global--spacer--xl);
+  --#{$form}__section--Gap: var(--pf-t--global--spacer--md); // TODO gutter token?
 
   // Section title
-  --#{$form}__section-title--FontSize: var(--#{$pf-global}--FontSize--lg);
-  --#{$form}__section-title--FontWeight: var(--#{$pf-global}--FontWeight--bold);
-  --#{$form}__section-title--MarginBottom: calc(var(--#{$pf-global}--spacer--sm) * -1);
+  --#{$form}__section-title--FontSize: var(--pf-t--global--font--size--heading--xs);
+  --#{$form}__section-title--FontWeight: var(--pf-t--global--font--weight--heading);
+  --#{$form}__section-title--MarginBottom: calc(var(--pf-t--global--spacer--sm) * -1); 
 
   // Field groups
-  --#{$form}__field-group--border-width-base: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form}__field-group--border-width-base: var(--pf-t--global--border--width--divider--default);
   --#{$form}__field-group--BorderTopWidth: var(--#{$form}__field-group--border-width-base);
-  --#{$form}__field-group--BorderTopColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$form}__field-group--BorderTopColor: var(--pf-t--global--border--color--default);
   --#{$form}__field-group--BorderBottomWidth: var(--#{$form}__field-group--border-width-base);
-  --#{$form}__field-group--BorderBottomColor: var(--#{$pf-global}--BorderColor--100);
+  --#{$form}__field-group--BorderBottomColor: var(--pf-t--global--border--color--default);
   --#{$form}__field-group--field-group--MarginTop: calc(var(--#{$form}--GridGap) * -1);
-  --#{$form}__field-group--GridTemplateColumns--toggle: calc(var(--#{$pf-global}--spacer--md) * 2 + var(--#{$form}__field-group-toggle-icon--MinWidth) + var(--#{$pf-global}--spacer--xs)); // based off of the expected width of the group toggle, for use to define a column when the toggle is not present
-  --#{$form}__field-group-toggle--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$form}__field-group-toggle--PaddingRight: var(--#{$pf-global}--spacer--xs);
-  --#{$form}__field-group__field-group__field-group-toggle--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$form}__field-group-header-toggle--BorderWidth--base: var(--#{$pf-global}--BorderWidth--sm);
+  --#{$form}__field-group--GridTemplateColumns--toggle: calc(var(--pf-t--global--spacer--md) * 2 + var(--#{$form}__field-group-toggle-icon--MinWidth) + var(--pf-t--global--spacer--xs)); // based off of the expected width of the group toggle, for use to define a column when the toggle is not present
+  --#{$form}__field-group-toggle--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$form}__field-group-toggle--PaddingRight: var(--pf-t--global--spacer--xs);
+  --#{$form}__field-group__field-group__field-group-toggle--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$form}__field-group-header-toggle--BorderWidth--base: var(--pf-t--global--border--width--divider--default);
   --#{$form}__field-group__field-group--field-group__field-group-toggle--after--BorderTopWidth: var(--#{$form}__field-group-header-toggle--BorderWidth--base);
-  --#{$form}__field-group-toggle-button--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
-  --#{$form}__field-group-toggle-button--MarginBottom: calc(var(--#{$pf-global}--spacer--form-element) * -1);
+  --#{$form}__field-group-toggle-button--MarginTop: calc(var(--pf-t--global--spacer--form-element) * -1);
+  --#{$form}__field-group-toggle-button--MarginBottom: calc(var(--pf-t--global--spacer--form-element) * -1);
   --#{$form}__field-group-toggle-icon--Transition: var(--#{$pf-global}--Transition);
-  --#{$form}__field-group-toggle-icon--MinWidth: var(--#{$pf-global}--FontSize--md);
+  --#{$form}__field-group-toggle-icon--MinWidth: var(--pf-t--global--font--size--body);
   --#{$form}__field-group-toggle-icon--Rotate: 0;
   --#{$form}__field-group--m-expanded__toggle-icon--Rotate: 90deg;
-  --#{$form}__field-group-header--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$form}__field-group-header--PaddingBottom: var(--#{$pf-global}--spacer--md);
+  --#{$form}__field-group-header--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$form}__field-group-header--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$form}__field-group-header--GridColumn: 1 / 3;
-  --#{$form}__field-group__field-group__field-group-header--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$form}__field-group__field-group__field-group-header--PaddingBottom: var(--#{$pf-global}--spacer--lg);
+  --#{$form}__field-group__field-group__field-group-header--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$form}__field-group__field-group__field-group-header--PaddingBottom: var(--pf-t--global--spacer--lg);
   --#{$form}__field-group-toggle--field-group-header--GridColumn: 2 / 3;
   --#{$form}__field-group__field-group--field-group__field-group-header--after--BorderTopWidth: var(--#{$form}__field-group-header-toggle--BorderWidth--base);
-  --#{$form}__field-group-header-description--MarginTop: var(--#{$pf-global}--spacer--xs);
-  --#{$form}__field-group-header-description--Color: var(--#{$pf-global}--Color--200);
-  --#{$form}__field-group-header-actions--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
-  --#{$form}__field-group-header-actions--MarginBottom: calc(var(--#{$pf-global}--spacer--form-element) * -1);
-  --#{$form}__field-group-header-actions--MarginLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$form}__field-group-body--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$form}__field-group-body--PaddingBottom: var(--#{$pf-global}--spacer--lg);
+  --#{$form}__field-group-header-description--MarginTop: var(--pf-t--global--spacer--xs);
+  --#{$form}__field-group-header-description--Color: var(--pf-t--global--text--color--subtle);
+  --#{$form}__field-group-header-actions--MarginTop: calc(var(--pf-t--global--spacer--form-element) * -1);
+  --#{$form}__field-group-header-actions--MarginBottom: calc(var(--pf-t--global--spacer--form-element) * -1);
+  --#{$form}__field-group-header-actions--MarginLeft: var(--pf-t--global--spacer--sm);
+  --#{$form}__field-group-body--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$form}__field-group-body--PaddingBottom: var(--pf-t--global--spacer--lg);
   --#{$form}__field-group-body--Gap: var(--#{$form}--GridGap);
   --#{$form}__field-group-body--GridColumn: 2 / 3;
   --#{$form}__field-group__field-group__field-group-body--GridColumn: 1 / 3;
   --#{$form}__field-group__field-group__field-group-toggle--field-group-body--GridColumn: 2 / 3;
   --#{$form}__field-group-body__field-group--last-child--MarginBottom: calc(var(--#{$form}__field-group-body--PaddingBottom) * -1);
+}
 
+.#{$form} {
   display: grid;
   gap: var(--#{$form}--GridGap);
 
@@ -351,20 +347,6 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
 .#{$form}__helper-text {
   margin-block-start: var(--#{$form}__helper-text--MarginTop);
-  font-size: var(--#{$form}__helper-text--FontSize);
-  color: var(--#{$form}__helper-text--Color);
-
-  &.pf-m-error {
-    --#{$form}__helper-text--Color: var(--#{$form}__helper-text--m-error--Color);
-  }
-
-  &.pf-m-success {
-    --#{$form}__helper-text--Color: var(--#{$form}__helper-text--m-success--Color);
-  }
-
-  &.pf-m-warning {
-    --#{$form}__helper-text--Color: var(--#{$form}__helper-text--m-warning--Color);
-  }
 
   &.pf-m-inactive {
     display: none;
@@ -523,9 +505,3 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   }
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/form";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-form;
-}

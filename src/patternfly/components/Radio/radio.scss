@@ -1,24 +1,27 @@
 // @debug $radio; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$radio} {
-  --#{$radio}--GridGap: var(--#{$pf-global}--spacer--xs) var(--#{$pf-global}--spacer--sm);
-  --#{$radio}__label--disabled--Color: var(--#{$pf-global}--disabled-color--100);
-  --#{$radio}__label--Color: var(--#{$pf-global}--Color--100);
-  --#{$radio}__label--FontWeight: var(--#{$pf-global}--FontWeight--normal);
-  --#{$radio}__label--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$radio}__label--LineHeight: var(--#{$pf-global}--LineHeight--md);
-  --#{$radio}__input--TranslateY: calc((var(--pf-v5-c-radio__label--LineHeight) * var(--pf-v5-c-radio__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
-  --#{$radio}__input--TranslateY--moz: var(--#{$radio}__input--TranslateY); // remove at breaking change
+:root {
+  --#{$radio}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--md);
+  --#{$radio}--AccentColor: var(--pf-t--global--icon--color--brand--default);
+  --#{$radio}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
+  --#{$radio}__label--Color: var(--pf-t--global--text--color--regular);
+  --#{$radio}__label--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$radio}__label--FontSize: var(--pf-t--global--font--size--body);
+  --#{$radio}__label--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$radio}__input--TranslateY--moz: 5px;
   --#{$radio}__input--first-child--MarginLeft: #{pf-size-prem(1px)};
   --#{$radio}__input--last-child--MarginRight: #{pf-size-prem(1px)};
-  --#{$radio}__description--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$radio}__description--Color: var(--#{$pf-global}--Color--200);
-  --#{$radio}__body--MarginTop: var(--#{$pf-global}--spacer--sm);
+  --#{$radio}__description--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$radio}__description--Color: var(--pf-t--global--text--color--subtle);
+  --#{$radio}__body--MarginTop: var(--pf-t--global--spacer--sm);
+}
 
+.#{$radio} {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: var(--#{$radio}--GridGap);
   align-items: baseline;
+  accent-color: var(--#{$radio}--AccentColor);
 
   &.pf-m-standalone {
     --#{$radio}--GridGap: 0;

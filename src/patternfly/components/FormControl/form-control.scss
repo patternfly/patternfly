@@ -1,121 +1,120 @@
-.#{$form-control} {
-  --#{$form-control}--ColumnGap: var(--#{$pf-global}--spacer--sm);
-  --#{$form-control}--Color: var(--#{$pf-global}--Color--100);
-  --#{$form-control}--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$form-control}--LineHeight: var(--#{$pf-global}--LineHeight--md);
+:root {
+  --#{$form-control}--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$form-control}--Color: var(--pf-t--global--text--color--regular);
+  --#{$form-control}--FontSize: var(--pf-t--global--font--size--body);
+  --#{$form-control}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$form-control}--Resize: none;
-  --#{$form-control}--OutlineOffset: -2px;
-  --#{$form-control}--before--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$form-control}--before--BorderRightWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$form-control}--before--BorderBottomWidth: 0;
-  --#{$form-control}--before--BorderLeftWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$form-control}--before--BorderTopColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$form-control}--before--BorderRightColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$form-control}--before--BorderBottomColor: transparent;
-  --#{$form-control}--before--BorderLeftColor: var(--#{$pf-global}--BorderColor--300);
-  --#{$form-control}--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$form-control}--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$form-control}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
+  --#{$form-control}--OutlineOffset: -6px;
+  --#{$form-control}--BorderRadius: var(--pf-t--global--border--radius--small);
+  --#{$form-control}--before--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$form-control}--before--BorderColor: var(--pf-t--global--border--color--default);
+  --#{$form-control}--before--BorderRadius: var(--#{$form-control}--BorderRadius);
+  --#{$form-control}--after--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$form-control}--after--BorderColor: transparent;
+  --#{$form-control}--after--BorderRadius: var(--#{$form-control}--BorderRadius);
+  --#{$form-control}--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --#{$form-control}--Width: 100%;
 
   // padding
-  --#{$form-control}--inset--base: var(--#{$pf-global}--spacer--sm);
-  --#{$form-control}--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$form-control}--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
+  --#{$form-control}--inset--base: var(--pf-t--global--spacer--md);
+  --#{$form-control}--PaddingTop: var(--pf-t--global--spacer--sm); // (--#{$pf-global}--spacer--form-element);
+  --#{$form-control}--PaddingBottom: var(--pf-t--global--spacer--sm); // var(--#{$pf-global}--spacer--form-element);
   --#{$form-control}--PaddingRight: var(--#{$form-control}--inset--base);
   --#{$form-control}--PaddingLeft: var(--#{$form-control}--inset--base);
 
   // hover
-  --#{$form-control}--hover--after--BorderBottomColor: var(--#{$pf-global}--primary-color--100);
+  --#{$form-control}--hover--after--BorderWidth: var(--pf-t--global--border--width--control--hover);
+  --#{$form-control}--hover--after--BorderColor: var(--pf-t--global--border--color--hover);
 
   // focus
-  --#{$form-control}--focus--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$form-control}--focus--after--BorderBottomColor: var(--#{$pf-global}--primary-color--100);
+  --#{$form-control}--focus--after--BorderWidth: var(--pf-t--global--border--width--control--active);
+  --#{$form-control}--focus--after--BorderColor: var(--pf-t--global--border--color--active);
 
   // expanded
-  --#{$form-control}--m-expanded--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$form-control}--m-expanded--after--BorderBottomColor: var(--#{$pf-global}--primary-color--100);
+  --#{$form-control}--m-expanded--after--BorderWidth: var(--pf-t--global--border--width--control--active);
+  --#{$form-control}--m-expanded--after--BorderColor: var(--pf-t--global--border--color--active);
 
   // placeholder
-  --#{$form-control}--m-placeholder--Color: var(--#{$pf-global}--Color--dark-200);
-  --#{$form-control}--m-placeholder--child--Color: var(--#{$pf-global}--Color--100);
+  --#{$form-control}--m-placeholder--Color: var(--pf-t--global--text--color--placeholder);
+  --#{$form-control}--m-placeholder--child--Color: var(--pf-t--global--text--color--regular);
 
   // disabled
-  --#{$form-control}--m-disabled--Color: var(--#{$pf-global}--disabled-color--100);
-  --#{$form-control}--m-disabled--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
+  --#{$form-control}--m-disabled--Color: var(--pf-t--global--icon--color--on-disabled);
+  --#{$form-control}--m-disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
   --#{$form-control}--m-disabled--after--BorderColor: transparent;
 
   // readonly
-  --#{$form-control}--m-readonly--BackgroundColor: var(--#{$pf-global}--disabled-color--300);
-  --#{$form-control}--m-readonly--hover--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
-  --#{$form-control}--m-readonly--focus--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$form-control}--m-readonly--focus--after--BorderBottomColor: var(--#{$pf-global}--BorderColor--200);
+  // TODO check these values
+  --#{$form-control}--m-readonly--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
+  --#{$form-control}--m-readonly--BorderColor: transparent;
+  --#{$form-control}--m-readonly--hover--after--BorderColor: revert; // var(--#{$form-control}--m-readonly--BackgroundColor);
+  --#{$form-control}--m-readonly--focus--after--BorderWidth: var(--pf-t--global--border--width--control--active);
+  --#{$form-control}--m-readonly--focus--after--BorderColor: var(--pf-t--global--border--color--active);
 
   // readonly plain
   --#{$form-control}--m-readonly--m-plain--BackgroundColor: transparent;
   --#{$form-control}--m-readonly--m-plain--inset--base: 0;
-  --#{$form-control}--m-readonly--m-plain--OutlineOffset: 0;
+  --#{$form-control}--m-readonly--m-plain--OutlineOffset: 0; // TODO change this if we want it to match the others
 
   // success
-  --#{$form-control}--m-success--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$form-control}--m-success--after--BorderBottomColor: var(--#{$pf-global}--success-color--100);
-  --#{$form-control}--m-success--PaddingRight: var(--#{$pf-global}--spacer--xl);
+  --#{$form-control}--m-success--after--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$form-control}--m-success--after--BorderColor: var(--pf-t--global--border--color--status--success--default);
+  --#{$form-control}--m-success--PaddingRight: var(--pf-t--global--spacer--xl);
 
   // warning
-  --#{$form-control}--m-warning--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$form-control}--m-warning--after--BorderBottomColor: var(--#{$pf-global}--warning-color--100);
-  --#{$form-control}--m-warning--PaddingRight: var(--#{$pf-global}--spacer--xl);
+  --#{$form-control}--m-warning--after--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$form-control}--m-warning--after--BorderColor: var(--pf-t--global--border--color--status--warning--default);
+  --#{$form-control}--m-warning--PaddingRight: var(--pf-t--global--spacer--xl);
 
   // error
-  --#{$form-control}--m-error--after--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--md);
-  --#{$form-control}--m-error--after--BorderBottomColor: var(--#{$pf-global}--danger-color--100);
-  --#{$form-control}--m-error--PaddingRight: var(--#{$pf-global}--spacer--xl);
+  --#{$form-control}--m-error--after--BorderWidth: var(--pf-t--global--border--width--control--default);
+  --#{$form-control}--m-error--after--BorderColor: var(--pf-t--global--border--color--status--danger--default);
+  --#{$form-control}--m-error--PaddingRight: var(--pf-t--global--spacer--xl);
   --#{$form-control}--m-error--icon--width: var(--#{$form-control}--FontSize);
 
   // custom icon
   --#{$form-control}--m-icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--m-icon--icon--spacer));
   --#{$form-control}--m-icon--icon--width: var(--#{$form-control}--FontSize);
-  --#{$form-control}--m-icon--icon--spacer: var(--#{$pf-global}--spacer--sm);
+  --#{$form-control}--m-icon--icon--spacer: var(--pf-t--global--spacer--sm);
   --#{$form-control}--m-icon--icon--PaddingRight: calc(var(--#{$form-control}--inset--base) + var(--#{$form-control}--m-error--icon--width) + var(--#{$form-control}--m-icon--icon--spacer) + var(--#{$form-control}--m-icon--icon--width) + var(--#{$form-control}--m-icon--icon--spacer));
-  --#{$form-control}__select--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$form-control}__select--PaddingLeft: var(--#{$pf-global}--spacer--sm);
+  --#{$form-control}__select--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$form-control}__select--PaddingLeft: var(--pf-t--global--spacer--md);
 
   // Select success
-  --#{$form-control}__select--m-success--m-status--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+  --#{$form-control}__select--m-success--m-status--PaddingRight: var(--pf-t--global--spacer--3xl);
 
   // Select warning
-  --#{$form-control}__select--m-warning--m-status--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+  --#{$form-control}__select--m-warning--m-status--PaddingRight: var(--pf-t--global--spacer--3xl);
 
   // Select invalid
-  --#{$form-control}__select--m-error--m-status--PaddingRight: var(--#{$pf-global}--spacer--3xl);
+  --#{$form-control}__select--m-error--m-status--PaddingRight: var(--pf-t--global--spacer--3xl);
 
   // Textarea
   --#{$form-control}--textarea--Width: var(--#{$form-control}--Width);
   --#{$form-control}--textarea--Height: auto;
 
   // Form control icon 
-  --#{$form-control}__icon--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$form-control}__icon--Color: var(--#{$pf-global}--icon--Color--light);
-  --#{$form-control}__icon--m-status--Color: var(--#{$pf-global}--icon--Color--light);
-  --#{$form-control}--m-success__icon--m-status--Color: var(--#{$pf-global}--success-color--100);
-  --#{$form-control}--m-warning__icon--m-status--Color: var(--#{$pf-global}--warning-color--100);
-  --#{$form-control}--m-error__icon--m-status--Color: var(--#{$pf-global}--danger-color--100);
+  --#{$form-control}__icon--PaddingTop: var(--pf-t--global--spacer--sm); // var(--#{$pf-global}--spacer--form-element);
+  --#{$form-control}__icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$form-control}__icon--m-status--Color: var(--pf-t--global--icon--color--regular);
+  --#{$form-control}--m-success__icon--m-status--Color: var(--pf-t--global--icon--color--status--success--default);
+  --#{$form-control}--m-warning__icon--m-status--Color: var(--pf-t--global--icon--color--status--warning--default);
+  --#{$form-control}--m-error__icon--m-status--Color: var(--pf-t--global--icon--color--status--danger--default);
 
   // Form control utilities
-  --#{$form-control}__utilities--Gap: var(--#{$pf-global}--spacer--sm);
+  --#{$form-control}__utilities--Gap: var(--pf-t--global--spacer--sm);
   --#{$form-control}__utilities--PaddingTop: var(--#{$form-control}--inset--base);
   --#{$form-control}__utilities--PaddingRight: var(--#{$form-control}--inset--base);
 
   // Form control select toggle icon
-  --#{$form-control}__toggle-icon--PaddingTop: var(--#{$pf-global}--spacer--form-element);
+  --#{$form-control}__toggle-icon--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$form-control}__toggle-icon--PaddingRight: var(--#{$form-control}--inset--base);
   --#{$form-control}__toggle-icon--PaddingLeft: var(--#{$form-control}--inset--base);
-  --#{$form-control}__toggle-icon--Color: var(--#{$pf-global}--Color--100);
-  --#{$form-control}--m-disabled__toggle-icon--Color: var(--#{$pf-global}--disabled-color--100);
+  --#{$form-control}__toggle-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$form-control}--m-disabled__toggle-icon--Color: var(--pf-t--global--icon--color--disabled);
+}
 
-  // This component always needs to be light
-  @include pf-v5-t-light("--#{$form-control}--Color");
-
+.#{$form-control} {
   position: relative;
   display: grid;
   grid-template-columns: 1fr auto;
@@ -126,6 +125,7 @@
   line-height: var(--#{$form-control}--LineHeight);
   resize: var(--#{$form-control}--Resize);
   background-color: var(--#{$form-control}--BackgroundColor);
+  border-radius: var(--#{$form-control}--BorderRadius);
 
   &::before,
   &::after {
@@ -136,19 +136,15 @@
   }
 
   &::before {
+    border-color: var(--#{$form-control}--before--BorderColor);
     border-style: var(--#{$form-control}--before--BorderStyle, solid);
-    border-block-start-color: var(--#{$form-control}--before--BorderTopColor);
-    border-block-start-width: var(--#{$form-control}--before--BorderTopWidth);
-    border-block-end-color: var(--#{$form-control}--before--BorderBottomColor);
-    border-block-end-width: var(--#{$form-control}--before--BorderBottomWidth);
-    border-inline-start-color: var(--#{$form-control}--before--BorderLeftColor);
-    border-inline-start-width: var(--#{$form-control}--before--BorderLeftWidth);
-    border-inline-end-color: var(--#{$form-control}--before--BorderRightColor);
-    border-inline-end-width: var(--#{$form-control}--before--BorderRightWidth);
+    border-width: var(--#{$form-control}--before--BorderWidth);
+    border-radius: var(--#{$form-control}--before--BorderRadius);
   }
 
   &::after {
-    border-block-end: var(--#{$form-control}--after--BorderBottomWidth) var(--#{$form-control}--after--BorderStyle, solid) var(--#{$form-control}--after--BorderBottomColor);
+    border: var(--#{$form-control}--after--BorderWidth) var(--#{$form-control}--after--BorderStyle, solid) var(--#{$form-control}--after--BorderColor);
+    border-radius: var(--#{$form-control}--before--BorderRadius);
   }
 
   > :is(input, select, textarea) {
@@ -161,6 +157,8 @@
     color: var(--#{$form-control}--Color);
     background-color: transparent;
     border: none;
+    border-radius: var(--#{$form-control}--BorderRadius);
+
     // stylelint-disable
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -181,12 +179,17 @@
 
   &.pf-m-readonly {
     --#{$form-control}--BackgroundColor: var(--#{$form-control}--m-readonly--BackgroundColor);
+    --#{$form-control}--BorderColor: var(--#{$form-control}--m-readonly--BorderColor);
+    
+    &:hover {
+      --#{$form-control}--hover--after--BorderColor: var(--#{$form-control}--m-readonly--hover--after--BorderColor);
+    }
 
     // stylelint-disable selector-not-notation
     &:not(.pf-m-success, .pf-m-warning, .pf-m-error) {
-      --#{$form-control}--hover--after--BorderBottomColor: var(--#{$form-control}--m-readonly--hover--after--BorderBottomColor);
-      --#{$form-control}--focus--after--BorderBottomWidth: var(--#{$form-control}--m-readonly--focus--after--BorderBottomWidth);
-      --#{$form-control}--focus--after--BorderBottomColor: var(--#{$form-control}--m-readonly--focus--after--BorderBottomColor);
+      --#{$form-control}--hover--after--BorderColor: var(--#{$form-control}--m-readonly--hover--after--BorderColor);
+      --#{$form-control}--focus--after--BorderWidth: var(--#{$form-control}--m-readonly--focus--after--BorderWidth);
+      --#{$form-control}--focus--after--BorderColor: var(--#{$form-control}--m-readonly--focus--after--BorderColor);
     }
 
     &.pf-m-plain {
@@ -199,17 +202,18 @@
   }
 
   &:hover {
-    --#{$form-control}--after--BorderBottomColor: var(--#{$form-control}--hover--after--BorderBottomColor);
+    --#{$form-control}--after--BorderColor: var(--#{$form-control}--hover--after--BorderColor);
+    --#{$form-control}--after--BorderWidth: var(--#{$form-control}--hover--after--BorderWidth);
   }
 
-  &:focus-within {
-    --#{$form-control}--after--BorderBottomColor: var(--#{$form-control}--focus--after--BorderBottomColor);
-    --#{$form-control}--after--BorderBottomWidth: var(--#{$form-control}--focus--after--BorderBottomWidth);
-  }
+  // &:focus-within {
+  //   --#{$form-control}--after--BorderColor: var(--#{$form-control}--focus--after--BorderColor);
+  //   --#{$form-control}--after--BorderWidth: var(--#{$form-control}--focus--after--BorderWidth);
+  // }
 
   &.pf-m-expanded {
-    --#{$form-control}--after--BorderBottomColor: var(--#{$form-control}--m-expanded--after--BorderBottomColor);
-    --#{$form-control}--after--BorderBottomWidth: var(--#{$form-control}--m-expanded--after--BorderBottomWidth);
+    --#{$form-control}--after--BorderColor: var(--#{$form-control}--m-expanded--after--BorderColor);
+    --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-expanded--after--BorderWidth);
   }
 
   &.pf-m-disabled {
@@ -225,10 +229,10 @@
 
   &.pf-m-error {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-error--PaddingRight);
-    --#{$form-control}--after--BorderBottomColor: var(--#{$form-control}--m-error--after--BorderBottomColor);
+    --#{$form-control}--after--BorderColor: var(--#{$form-control}--m-error--after--BorderColor);
     --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-error__icon--m-status--Color);
     --#{$form-control}__select--PaddingRight: var(--#{$form-control}__select--m-error--m-status--PaddingRight);
-    --#{$form-control}--after--BorderBottomWidth: var(--#{$form-control}--m-error--after--BorderBottomWidth);
+    --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-error--after--BorderWidth);
 
     &.pf-m-icon {
       --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--icon--PaddingRight);
@@ -237,10 +241,10 @@
 
   &.pf-m-success {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-success--PaddingRight);
-    --#{$form-control}--after--BorderBottomColor: var(--#{$form-control}--m-success--after--BorderBottomColor);
+    --#{$form-control}--after--BorderColor: var(--#{$form-control}--m-success--after--BorderColor);
     --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-success__icon--m-status--Color);
     --#{$form-control}__select--PaddingRight: var(--#{$form-control}__select--m-success--m-status--PaddingRight);
-    --#{$form-control}--after--BorderBottomWidth: var(--#{$form-control}--m-success--after--BorderBottomWidth);
+    --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-success--after--BorderWidth);
 
     &.pf-m-icon {
       --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--icon--PaddingRight);
@@ -249,10 +253,10 @@
 
   &.pf-m-warning {
     --#{$form-control}--PaddingRight: var(--#{$form-control}--m-warning--PaddingRight);
-    --#{$form-control}--after--BorderBottomColor: var(--#{$form-control}--m-warning--after--BorderBottomColor);
+    --#{$form-control}--after--BorderColor: var(--#{$form-control}--m-warning--after--BorderColor);
     --#{$form-control}__icon--m-status--Color: var(--#{$form-control}--m-warning__icon--m-status--Color);
     --#{$form-control}__select--PaddingRight: var(--#{$form-control}__select--m-warning--m-status--PaddingRight);
-    --#{$form-control}--after--BorderBottomWidth: var(--#{$form-control}--m-warning--after--BorderBottomWidth);
+    --#{$form-control}--after--BorderWidth: var(--#{$form-control}--m-warning--after--BorderWidth);
 
     &.pf-m-icon {
       --#{$form-control}--PaddingRight: var(--#{$form-control}--m-icon--icon--PaddingRight);
@@ -345,9 +349,6 @@
   pointer-events: none;
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/form-control";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-form-control;
+select ~ .#{$form-control}__utilities {
+--pf-v5-c-form-control__utilities--PaddingRight: 0;
 }
