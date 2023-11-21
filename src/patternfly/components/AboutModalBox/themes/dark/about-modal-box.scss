@@ -1,7 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-about-modal-box() {
-  .#{$about-modal-box} {
-    @include pf-v5-theme-dark--t-dark;
-  }
-}
