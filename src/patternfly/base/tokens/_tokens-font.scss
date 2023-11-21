@@ -5,9 +5,9 @@
 
 :root {
   // Base tokens for fonts
-  --pf-t--global--font--family--100: redhattext;
-  --pf-t--global--font--family--200: redhatdisplay;
-  --pf-t--global--font--family--300: redhatmono;
+  --pf-t--global--font--family--100: redhattextvf, redhattext, helvetica, arial, sans-serif;
+  --pf-t--global--font--family--200: redhatdisplayvf, redhatdisplay, helvetica, arial, sans-serif;
+  --pf-t--global--font--family--300: redhatmonovf, redhatmono, liberationmono, consolas, sfmono-regular, menlo, monaco, courier new, monospace;
   --pf-t--global--font--line-height--100: 1.3;
   --pf-t--global--font--line-height--200: 1.5;
   --pf-t--global--font--weight--body--100: 400;
@@ -44,6 +44,15 @@
   --pf-t--global--font--size--heading--lg: var(--pf-t--global--font--size--heading--400);
   --pf-t--global--font--size--heading--xl: var(--pf-t--global--font--size--heading--500);
   --pf-t--global--font--size--heading--2xl: var(--pf-t--global--font--size--heading--600);
+
+  // Legacy/non-variable font opt-in
+  --pf-t--global--font--family--body--legacy: redhattext, helvetica, arial, sans-serif;
+  --pf-t--global--font--family--heading--legacy: redhatdisplay, helvetica, arial, sans-serif;
+  --pf-t--global--font--family--mono--legacy: redhatmono, liberationmono, consolas, sfmono-regular, menlo, monaco, courier new, monospace;
+  --pf-t--global--font--weight--body--legacy: 400;
+  --pf-t--global--font--weight--body--bold--legacy: 700;
+  --pf-t--global--font--weight--heading--legacy: 400;
+  --pf-t--global--font--weight--heading--bold--legacy: 700;
 
   // Other missing ones
   // text-decoration
