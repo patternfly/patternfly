@@ -1,73 +1,80 @@
 // @debug $modal-box; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$modal-box} {
-  --#{$modal-box}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$modal-box}--BoxShadow: var(--#{$pf-global}--BoxShadow--xl);
-  --#{$modal-box}--ZIndex: var(--#{$pf-global}--ZIndex--xl);
+:root {
+  --#{$modal-box}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
+  --#{$modal-box}--BorderRadius: var(--pf-t--global--border--radius--large);
+  --#{$modal-box}--BoxShadow: var(--pf-t--global--box-shadow--lg);
+  --#{$modal-box}--ZIndex: var(--#{$pf-global}--ZIndex--xl); // TODO use a z-index token
   --#{$modal-box}--Width: 100%;
-  --#{$modal-box}--MaxWidth: calc(100% - var(--#{$pf-global}--spacer--xl)); // Ensure modal has gutters at full width
+  --#{$modal-box}--MaxWidth: calc(100% - var(--pf-t--global--spacer--xl)); // Ensure modal has gutters at full width
   --#{$modal-box}--m-sm--sm--MaxWidth: #{pf-size-prem(560px)}; // MaxWidth is based on optimal line length for reading
   --#{$modal-box}--m-md--Width: #{pf-size-prem(840px)};
   --#{$modal-box}--m-lg--lg--MaxWidth: #{pf-size-prem(1120px)};
-  --#{$modal-box}--MaxHeight: calc(100% - var(--#{$pf-global}--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
-  --#{$modal-box}--m-align-top--spacer: var(--#{$pf-global}--spacer--sm);
-  --#{$modal-box}--m-align-top--xl--spacer: var(--#{$pf-global}--spacer--xl);
-  --#{$modal-box}--m-align-top--MarginTop: var(--#{$modal-box}--m-align-top--spacer); // Rename to --Top at breaking change
-  --#{$modal-box}--m-align-top--MaxHeight: calc(100% - min(var(--#{$modal-box}--m-align-top--spacer), var(--#{$pf-global}--spacer--2xl)) - var(--#{$modal-box}--m-align-top--spacer));
-  --#{$modal-box}--m-align-top--MaxWidth: calc(100% - min(var(--#{$modal-box}--m-align-top--spacer) * 2, var(--#{$pf-global}--spacer--xl)));
+  --#{$modal-box}--MaxHeight: calc(100% - var(--pf-t--global--spacer--2xl)); // MaxHeight ensures that the modal will not go off the screen and instead the body will scroll
+  --#{$modal-box}--m-align-top--spacer: var(--pf-t--global--spacer--sm);
+  --#{$modal-box}--m-align-top--xl--spacer: var(--pf-t--global--spacer--xl);
+  --#{$modal-box}--m-align-top--Top: var(--#{$modal-box}--m-align-top--spacer);
+  --#{$modal-box}--m-align-top--MaxHeight: calc(100% - min(var(--#{$modal-box}--m-align-top--spacer), var(--pf-t--global--spacer--2xl)) - var(--#{$modal-box}--m-align-top--spacer));
+  --#{$modal-box}--m-align-top--MaxWidth: calc(100% - min(var(--#{$modal-box}--m-align-top--spacer) * 2, var(--pf-t--global--spacer--xl)));
 
   // States
-  --#{$modal-box}--m-danger__title-icon--Color: var(--#{$pf-global}--danger-color--100);
-  --#{$modal-box}--m-warning__title-icon--Color: var(--#{$pf-global}--warning-color--100);
-  --#{$modal-box}--m-success__title-icon--Color: var(--#{$pf-global}--success-color--100);
-  --#{$modal-box}--m-info__title-icon--Color: var(--#{$pf-global}--info-color--100);
-  --#{$modal-box}--m-custom__title-icon--Color: var(--#{$pf-global}--custom-color--200);
+  --#{$modal-box}--m-danger__title-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$modal-box}--m-warning__title-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
+  --#{$modal-box}--m-success__title-icon--Color: var(--pf-t--global--icon--color--status--success--default);
+  --#{$modal-box}--m-info__title-icon--Color: var(--pf-t--global--icon--color--status--info--default);
+  --#{$modal-box}--m-custom__title-icon--Color: var(--pf-t--global--icon--color--status--custom--default);
 
   @media (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$modal-box}--m-align-top--spacer: var(--#{$modal-box}--m-align-top--xl--spacer);
   }
 
   // Header
-  --#{$modal-box}__header--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$modal-box}__header--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$modal-box}__header--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$modal-box}__header--last-child--PaddingBottom: var(--#{$pf-global}--spacer--lg);
+  --#{$modal-box}__header--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--Gap: var(--pf-t--global--spacer--md);
+
+  // Header main
+  --#{$modal-box}__header-main--Gap: var(--pf-t--global--spacer--md);
 
   // Title
-  --#{$modal-box}__title--LineHeight: var(--#{$pf-global}--LineHeight--sm);
-  --#{$modal-box}__title--FontFamily: var(--#{$pf-global}--FontFamily--heading);
-  --#{$modal-box}__title--FontSize: var(--#{$pf-global}--FontSize--2xl);
+  --#{$modal-box}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
+  --#{$modal-box}__title--FontFamily: var(--pf-t--global--font--family--heading);
+  --#{$modal-box}__title--FontSize: var(--pf-t--global--font--size--heading--md);
 
   // Title icon
-  --#{$modal-box}__title-icon--MarginRight: var(--#{$pf-global}--spacer--sm);
-  --#{$modal-box}__title-icon--Color: var(--#{$pf-global}--Color--100);
+  --#{$modal-box}__title-icon--MarginRight: var(--pf-t--global--spacer--sm);
+  --#{$modal-box}__title-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // Description
-  --#{$modal-box}__description--PaddingTop: var(--#{$pf-global}--spacer--xs);
-
+  --#{$modal-box}__description--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$modal-box}__description--Color: var(--pf-t--global--text--color--subtle);
+  
   // Body
-  --#{$modal-box}__body--MinHeight: calc(var(--#{$pf-global}--FontSize--md) * var(--#{$pf-global}--LineHeight--md)); // Allow for at least 1 line of content in the body
-  --#{$modal-box}__body--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$modal-box}__body--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$modal-box}__body--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$modal-box}__body--last-child--PaddingBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$modal-box}__header--body--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$modal-box}__body--MinHeight: calc(var(--pf-t--global--font--size--body) * var(--pf-t--global--font--line-height--body)); // Allow for at least 1 line of content in the body
+  --#{$modal-box}__body--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__body--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__body--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__body--last-child--PaddingBottom: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--body--PaddingTop: var(--pf-t--global--spacer--md);
 
   // Close
-  --#{$modal-box}__close--Top: calc(var(--#{$pf-global}--spacer--lg));
-  --#{$modal-box}__close--Right: var(--#{$pf-global}--spacer--md);
-  --#{$modal-box}__close--sibling--MarginRight: calc(var(--#{$pf-global}--spacer--xl) + var(--#{$pf-global}--spacer--sm));
+  --#{$modal-box}__close--Top: var(--pf-v5-c-modal-box__header--PaddingTop); // calc(var(--pf-t--global--spacer--md));
+  --#{$modal-box}__close--Right: var(--pf-v5-c-modal-box__header--PaddingRight); // var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__close--sibling--MarginRight: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm));
 
   // Footer
-  --#{$modal-box}__footer--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$modal-box}__footer--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$modal-box}__footer--PaddingBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$modal-box}__footer--PaddingLeft: var(--#{$pf-global}--spacer--lg);
+  --#{$modal-box}__footer--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__footer--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__footer--PaddingBottom: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__footer--PaddingLeft: var(--pf-t--global--spacer--lg);
 
   // Footer buttons
-  --#{$modal-box}__footer--c-button--MarginRight: var(--#{$pf-global}--spacer--md); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
+  --#{$modal-box}__footer--c-button--MarginRight: var(--pf-t--global--spacer--md); // Button spacer is used to manipulate margin-inline-start and/or margin-right values at various breakpoints, with a single value.
   --#{$modal-box}__footer--c-button--sm--MarginRight: calc(var(--#{$modal-box}__footer--c-button--MarginRight) / 2);
+}
 
+.#{$modal-box} {
   position: relative;
   z-index: var(--#{$modal-box}--ZIndex);
   display: flex;
@@ -75,7 +82,9 @@
   width: var(--#{$modal-box}--Width);
   max-width: var(--#{$modal-box}--MaxWidth);
   max-height: var(--#{$modal-box}--MaxHeight);
+  overflow: auto;
   background-color: var(--#{$modal-box}--BackgroundColor);
+  border-radius: var(--#{$modal-box}--BorderRadius);
   box-shadow: var(--#{$modal-box}--BoxShadow);
 
   &.pf-m-sm {
@@ -91,7 +100,7 @@
   }
 
   &.pf-m-align-top {
-   inset-block-start: var(--#{$modal-box}--m-align-top--MarginTop);
+    inset-block-start: var(--#{$modal-box}--m-align-top--Top);
     align-self: flex-start;
     max-width: var(--#{$modal-box}--m-align-top--MaxWidth);
     max-height: var(--#{$modal-box}--m-align-top--MaxHeight);
@@ -133,6 +142,7 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  gap: var(--#{$modal-box}__header--Gap);
   padding-block-start: var(--#{$modal-box}__header--PaddingTop);
   padding-inline-start: var(--#{$modal-box}__header--PaddingLeft);
   padding-inline-end: var(--#{$modal-box}__header--PaddingRight);
@@ -142,17 +152,16 @@
     flex-direction: row;
   }
 
-  &:last-child {
-    padding-block-end: var(--#{$modal-box}__header--last-child--PaddingBottom);
-  }
-
   + .#{$modal-box}__body {
     --#{$modal-box}__body--PaddingTop: var(--#{$modal-box}__header--body--PaddingTop);
   }
 }
 
 .#{$modal-box}__header-main {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  gap: var(--#{$modal-box}__header-main--Gap);
   min-width: 0;
 }
 
@@ -179,6 +188,8 @@
 
 .#{$modal-box}__description {
   padding-block-start: var(--#{$modal-box}__description--PaddingTop);
+  font-size: var(--#{$modal-box}__description--FontSize);
+  color: var(--#{$modal-box}__description--Color);
 }
 
 // Body
@@ -217,11 +228,4 @@
       --#{$modal-box}__footer--c-button--MarginRight: var(--#{$modal-box}__footer--c-button--sm--MarginRight);
     }
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/modal-box";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-modal-box;
 }

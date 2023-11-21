@@ -1,7 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-modal-box() {
-  .#{$modal-box} {
-    --#{$modal-box}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
-  }
-}
