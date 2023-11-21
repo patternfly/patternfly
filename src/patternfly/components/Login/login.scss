@@ -1,11 +1,11 @@
 // @debug $login; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$login} {
-  --#{$login}--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$login}--PaddingBottom: var(--#{$pf-global}--spacer--lg);
+:root {
+  --#{$login}--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$login}--PaddingBottom: var(--pf-t--global--spacer--lg);
 
   // container
-  --#{$login}__container--xl--GridColumnGap: var(--#{$pf-global}--spacer--3xl);
+  --#{$login}__container--xl--GridColumnGap: var(--pf-t--global--spacer--3xl);
   --#{$login}__container--MaxWidth: #{pf-size-prem(500px)}; // This is a magic number to prevent the login layout grow more than what's defined in the specs.
   --#{$login}__container--xl--MaxWidth: none;
   --#{$login}__container--PaddingLeft: #{pf-size-prem(98px)};
@@ -17,19 +17,19 @@
   }
 
   // header
-  --#{$login}__header--MarginBottom: var(--#{$pf-global}--spacer--md);
-  --#{$login}__header--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$login}__header--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$login}__header--MarginBottom: var(--pf-t--global--spacer--md);
+  --#{$login}__header--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$login}__header--PaddingRight: var(--pf-t--global--spacer--md);
 
   @media (min-width: $pf-v5-global--breakpoint--sm) {
     --#{$login}__header--PaddingRight: 0;
     --#{$login}__header--PaddingLeft: 0;
   }
 
-  --#{$login}__header--xl--MarginBottom: var(--#{$pf-global}--spacer--2xl);
-  --#{$login}__header--xl--MarginTop: var(--#{$pf-global}--spacer--3xl);
-  --#{$login}__header--c-brand--MarginBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$login}__header--c-brand--xl--MarginBottom: var(--#{$pf-global}--spacer--2xl);
+  --#{$login}__header--xl--MarginBottom: var(--pf-t--global--spacer--2xl);
+  --#{$login}__header--xl--MarginTop: var(--pf-t--global--spacer--3xl);
+  --#{$login}__header--c-brand--MarginBottom: var(--pf-t--global--spacer--lg);
+  --#{$login}__header--c-brand--xl--MarginBottom: var(--pf-t--global--spacer--2xl);
 
   @media (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$login}__header--MarginBottom: var(--#{$login}__header--xl--MarginBottom);
@@ -37,28 +37,28 @@
   }
 
   // main
-  --#{$login}__main--BackgroundColor: var(--#{$pf-global}--BackgroundColor--light-100);
-  --#{$login}__main--MarginBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$login}__main--BoxShadow: var(--#{$pf-global}--BoxShadow--xl);
+  --#{$login}__main--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$login}__main--MarginBottom: var(--pf-t--global--spacer--lg);
+  --#{$login}__main--BorderRadius: var(--pf-t--global--border--radius--large);
 
   @media (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$login}__main--MarginBottom: 0;
   }
 
   // main header
-  --#{$login}__main-header--PaddingTop: var(--#{$pf-global}--spacer--2xl);
-  --#{$login}__main-header--PaddingRight: var(--#{$pf-global}--spacer--xl);
-  --#{$login}__main-header--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$login}__main-header--PaddingLeft: var(--#{$pf-global}--spacer--xl);
-  --#{$login}__main-header--md--PaddingRight: var(--#{$pf-global}--spacer--2xl);
-  --#{$login}__main-header--md--PaddingLeft: var(--#{$pf-global}--spacer--2xl);
-  --#{$login}__main-header--ColumnGap: var(--#{$pf-global}--spacer--md);
-  --#{$login}__main-header--RowGap: var(--#{$pf-global}--spacer--md);
+  --#{$login}__main-header--PaddingTop: var(--pf-t--global--spacer--2xl);
+  --#{$login}__main-header--PaddingRight: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-header--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$login}__main-header--PaddingLeft: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-header--md--PaddingRight: var(--pf-t--global--spacer--2xl);
+  --#{$login}__main-header--md--PaddingLeft: var(--pf-t--global--spacer--2xl);
+  --#{$login}__main-header--ColumnGap: var(--pf-t--global--spacer--md);
+  --#{$login}__main-header--RowGap: var(--pf-t--global--spacer--md);
 
   // main header desc
-  --#{$login}__main-header-desc--MarginBottom: var(--#{$pf-global}--spacer--sm);
+  --#{$login}__main-header-desc--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$login}__main-header-desc--md--MarginBottom: 0;
-  --#{$login}__main-header-desc--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$login}__main-header-desc--FontSize: var(--pf-t--global--font--size--body--md);
 
 
   @media (min-width: $pf-v5-global--breakpoint--md) {
@@ -68,11 +68,11 @@
   }
 
   // main body
-  --#{$login}__main-body--PaddingRight: var(--#{$pf-global}--spacer--xl);
-  --#{$login}__main-body--PaddingBottom: var(--#{$pf-global}--spacer--xl);
-  --#{$login}__main-body--PaddingLeft: var(--#{$pf-global}--spacer--xl);
-  --#{$login}__main-body--md--PaddingRight: var(--#{$pf-global}--spacer--2xl);
-  --#{$login}__main-body--md--PaddingLeft: var(--#{$pf-global}--spacer--2xl);
+  --#{$login}__main-body--PaddingRight: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-body--PaddingBottom: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-body--PaddingLeft: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-body--md--PaddingRight: var(--pf-t--global--spacer--2xl);
+  --#{$login}__main-body--md--PaddingLeft: var(--pf-t--global--spacer--2xl);
 
   @media (min-width: $pf-v5-global--breakpoint--md) {
     --#{$login}__main-body--PaddingRight: var(--#{$login}__main-body--md--PaddingRight);
@@ -80,43 +80,45 @@
   }
 
   // main footer
-  --#{$login}__main-footer--PaddingBottom: var(--#{$pf-global}--spacer--3xl);
-  --#{$login}__main-footer--c-title--MarginBottom: var(--#{$pf-global}--spacer--md);
-  --#{$login}__main-footer-links--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$login}__main-footer-links--PaddingRight: var(--#{$pf-global}--spacer--3xl);
-  --#{$login}__main-footer-links--PaddingBottom: var(--#{$pf-global}--spacer--xl);
-  --#{$login}__main-footer-links--PaddingLeft: var(--#{$pf-global}--spacer--3xl);
-  --#{$login}__main-footer-links-item--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$login}__main-footer-links-item--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$login}__main-footer-links-item--MarginBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$login}__main-footer-links-item-link-svg--Fill: var(--#{$pf-global}--icon--Color--light);
-  --#{$login}__main-footer-links-item-link-svg--Width: var(--#{$pf-global}--icon--FontSize--lg);
-  --#{$login}__main-footer-links-item-link-svg--Height: var(--#{$pf-global}--icon--FontSize--lg);
-  --#{$login}__main-footer-links-item-link-svg--hover--Fill: var(--#{$pf-global}--icon--Color--dark);
-  --#{$login}__main-footer-band--PaddingTop: var(--#{$pf-global}--spacer--lg);
-  --#{$login}__main-footer-band--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$login}__main-footer-band--PaddingBottom: var(--#{$pf-global}--spacer--lg);
-  --#{$login}__main-footer-band--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$login}__main-footer-band--BorderTopColor: var(--#{$pf-global}--BorderColor--100);
-  --#{$login}__main-footer-band--BorderTopWidth: var(--#{$pf-global}--BorderWidth--sm);
-  --#{$login}__main-footer-band-item--PaddingTop: var(--#{$pf-global}--spacer--md);
+  --#{$login}__main-footer--PaddingBottom: var(--pf-t--global--spacer--3xl);
+  --#{$login}__main-footer--c-title--MarginBottom: var(--pf-t--global--spacer--md);
+  --#{$login}__main-footer-links--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$login}__main-footer-links--PaddingRight: var(--pf-t--global--spacer--3xl);
+  --#{$login}__main-footer-links--PaddingBottom: var(--pf-t--global--spacer--xl);
+  --#{$login}__main-footer-links--PaddingLeft: var(--pf-t--global--spacer--3xl);
+  --#{$login}__main-footer-links-item--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$login}__main-footer-links-item--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$login}__main-footer-links-item--MarginBottom: var(--pf-t--global--spacer--sm);
+  --#{$login}__main-footer-links-item-link-svg--Fill: var(--pf-t--global--icon--color--subtle);
+  --#{$login}__main-footer-links-item-link-svg--Width: var(--pf-t--global--icon--size--lg);
+  --#{$login}__main-footer-links-item-link-svg--Height: var(--pf-t--global--icon--size--lg);
+  --#{$login}__main-footer-links-item-link-svg--hover--Fill: var(--pf-t--global--icon--color--nonstatus--hover); // TODO is this needed?
+  --#{$login}__main-footer-band--PaddingTop: var(--pf-t--global--spacer--lg);
+  --#{$login}__main-footer-band--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$login}__main-footer-band--PaddingBottom: var(--pf-t--global--spacer--lg);
+  --#{$login}__main-footer-band--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$login}__main-footer-band--BorderTopColor: var(--pf-t--global--border--color--default);
+  --#{$login}__main-footer-band--BorderTopWidth: var(--pf-t--global--border--width--divider--default);
+  --#{$login}__main-footer-band-item--PaddingTop: var(--pf-t--global--spacer--md);
 
   // footer
-  --#{$login}__footer--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$login}__footer--PaddingRight: var(--#{$pf-global}--spacer--md);
+  --#{$login}__footer--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$login}__footer--PaddingRight: var(--pf-t--global--spacer--md);
 
   @media (min-width: $pf-v5-global--breakpoint--sm) {
     --#{$login}__footer--PaddingRight: 0;
     --#{$login}__footer--PaddingLeft: 0;
   }
 
-  --#{$login}__footer--c-list--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$login}__footer--c-list--xl--PaddingTop: var(--#{$pf-global}--spacer--2xl);
+  --#{$login}__footer--c-list--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$login}__footer--c-list--xl--PaddingTop: var(--pf-t--global--spacer--2xl);
 
   @media (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$login}__footer--c-list--PaddingTop: var(--#{$login}__footer--c-list--xl--PaddingTop);
   }
+}
 
+.#{$login} {
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -148,8 +150,6 @@
 }
 
 .#{$login}__header {
-  @include pf-v5-t-dark;
-
   grid-area: header;
   padding-inline-start: var(--#{$login}__header--PaddingLeft);
   padding-inline-end: var(--#{$login}__header--PaddingRight);
@@ -168,7 +168,7 @@
   align-self: start;
   margin-block-end: var(--#{$login}__main--MarginBottom);
   background-color: var(--#{$login}__main--BackgroundColor);
-  box-shadow: var(--#{$login}__main--BoxShadow);
+  border-radius: var(--#{$login}__main--BorderRadius);
 
   // If the first child isn't a header, then we need to put the header's top padding there
   > :first-child:not(.#{$login}__main-header) {
@@ -287,8 +287,6 @@
 }
 
 .#{$login}__footer {
-  @include pf-v5-t-dark;
-
   grid-area: footer;
   padding-inline-start: var(--#{$login}__footer--PaddingLeft);
   padding-inline-end: var(--#{$login}__footer--PaddingRight);
@@ -304,9 +302,3 @@
   }
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/login";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-login;
-}
