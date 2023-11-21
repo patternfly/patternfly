@@ -4,7 +4,7 @@
   --#{$modal-box}--BackgroundColor: var(--pf-t--global--background--color--floating--default);
   --#{$modal-box}--BorderRadius: var(--pf-t--global--border--radius--large);
   --#{$modal-box}--BoxShadow: var(--pf-t--global--box-shadow--lg);
-  --#{$modal-box}--ZIndex: var(--#{$pf-global}--ZIndex--xl); // TODO
+  --#{$modal-box}--ZIndex: var(--#{$pf-global}--ZIndex--xl); // TODO use a z-index token
   --#{$modal-box}--Width: 100%;
   --#{$modal-box}--MaxWidth: calc(100% - var(--pf-t--global--spacer--xl)); // Ensure modal has gutters at full width
   --#{$modal-box}--m-sm--sm--MaxWidth: #{pf-size-prem(560px)}; // MaxWidth is based on optimal line length for reading
@@ -32,7 +32,10 @@
   --#{$modal-box}__header--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__header--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__header--PaddingLeft: var(--pf-t--global--spacer--lg);
-  --#{$modal-box}__header--last-child--PaddingBottom: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__header--Gap: var(--pf-t--global--spacer--md);
+
+  // Header main
+  --#{$modal-box}__header-main--Gap: var(--pf-t--global--spacer--md);
 
   // Title
   --#{$modal-box}__title--LineHeight: var(--pf-t--global--font--line-height--heading);
@@ -44,7 +47,7 @@
   --#{$modal-box}__title-icon--Color: var(--pf-t--global--icon--color--regular);
 
   // Description
-  --#{$modal-box}__description--PaddingTop: var(--pf-t--global--spacer--xs);
+  // --#{$modal-box}__description--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$modal-box}__description--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$modal-box}__description--Color: var(--pf-t--global--text--color--subtle);
   
@@ -57,8 +60,8 @@
   --#{$modal-box}__header--body--PaddingTop: var(--pf-t--global--spacer--md);
 
   // Close
-  --#{$modal-box}__close--Top: calc(var(--pf-t--global--spacer--md));
-  --#{$modal-box}__close--Right: var(--pf-t--global--spacer--lg);
+  --#{$modal-box}__close--Top: var(--pf-v5-c-modal-box__header--PaddingTop); // calc(var(--pf-t--global--spacer--md));
+  --#{$modal-box}__close--Right: var(--pf-v5-c-modal-box__header--PaddingRight); // var(--pf-t--global--spacer--lg);
   --#{$modal-box}__close--sibling--MarginRight: calc(var(--pf-t--global--spacer--xl) + var(--pf-t--global--spacer--sm));
 
   // Footer
@@ -140,6 +143,7 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  gap: var(--#{$modal-box}__header--Gap);
   padding-block-start: var(--#{$modal-box}__header--PaddingTop);
   padding-inline-start: var(--#{$modal-box}__header--PaddingLeft);
   padding-inline-end: var(--#{$modal-box}__header--PaddingRight);
@@ -149,17 +153,16 @@
     flex-direction: row;
   }
 
-  &:last-child {
-    padding-block-end: var(--#{$modal-box}__header--last-child--PaddingBottom);
-  }
-
   + .#{$modal-box}__body {
     --#{$modal-box}__body--PaddingTop: var(--#{$modal-box}__header--body--PaddingTop);
   }
 }
 
 .#{$modal-box}__header-main {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  gap: var(--#{$modal-box}__header-main--Gap);
   min-width: 0;
 }
 
