@@ -6,17 +6,11 @@ cssPrefix: pf-v5-c-banner
 
 ## Examples
 ### Basic
-Banners can be styled with one of 5 different colors. A basic banner should only be used when the banner color does not represent status or severity.
+Banners can be styled with one of 9 different nonstatus colors. A nonstatus banner should only be used when the banner color does not represent status or severity.
 
 ```hbs
 {{#> banner}}
   Default banner
-{{/banner}}
-
-<br>
-
-{{#> banner banner--modifier="pf-m-blue"}}
-  Blue banner
 {{/banner}}
 
 <br>
@@ -27,14 +21,44 @@ Banners can be styled with one of 5 different colors. A basic banner should only
 
 <br>
 
-{{#> banner banner--modifier="pf-m-green"}}
-  Green banner
+{{#> banner banner--modifier="pf-m-orangered"}}
+  Orangered banner
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-orange"}}
+  Orange banner
 {{/banner}}
 
 <br>
 
 {{#> banner banner--modifier="pf-m-gold"}}
   Gold banner
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-green"}}
+  Green banner
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-cyan"}}
+  Cyan banner
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-blue"}}
+  Blue banner
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-purple"}}
+  Purple banner
 {{/banner}}
 ```
 
@@ -78,49 +102,7 @@ Banners can be styled with one of 5 different colors. A basic banner should only
 When a banner is used to convey status, it is advised to add an icon that also conveys status visually, and to provide screen reader text using ` .pf-v5-screen-reader ` or an equivalent.
 
 ```hbs
-{{#> banner}}
-  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
-    {{#> l-flex-item}}
-      {{#> screen-reader}}Default banner:{{/screen-reader}}
-      <i class="fas fa-bell" aria-hidden="true"></i>
-    {{/l-flex-item}}
-    {{#> l-flex-item}}
-      Default banner
-    {{/l-flex-item}}
-  {{/l-flex}}
-{{/banner}}
-
-<br>
-
-{{#> banner banner--modifier="pf-m-blue"}}
-  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
-    {{#> l-flex-item}}
-      {{#> screen-reader}}Info banner:{{/screen-reader}}
-      <i class="fas fa-info-circle" aria-hidden="true"></i>
-    {{/l-flex-item}}
-    {{#> l-flex-item}}
-      Info banner
-    {{/l-flex-item}}
-  {{/l-flex}}
-{{/banner}}
-
-<br>
-
-{{#> banner banner--modifier="pf-m-red"}}
-  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
-    {{#> l-flex-item}}
-      {{#> screen-reader}}Danger banner:{{/screen-reader}}
-      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
-    {{/l-flex-item}}
-    {{#> l-flex-item}}
-      Danger banner
-    {{/l-flex-item}}
-  {{/l-flex}}
-{{/banner}}
-
-<br>
-
-{{#> banner banner--modifier="pf-m-green"}}
+{{#> banner banner--modifier="pf-m-success"}}
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Success banner:{{/screen-reader}}
@@ -134,7 +116,7 @@ When a banner is used to convey status, it is advised to add an icon that also c
 
 <br>
 
-{{#> banner banner--modifier="pf-m-gold"}}
+{{#> banner banner--modifier="pf-m-warning"}}
   {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
     {{#> l-flex-item}}
       {{#> screen-reader}}Warning banner:{{/screen-reader}}
@@ -142,6 +124,48 @@ When a banner is used to convey status, it is advised to add an icon that also c
     {{/l-flex-item}}
     {{#> l-flex-item}}
       Warning banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-danger"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Danger banner:{{/screen-reader}}
+      <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Danger banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-info"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Custom status banner:{{/screen-reader}}
+      <i class="fas fa-info-circle" aria-hidden="true"></i>
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Info banner
+    {{/l-flex-item}}
+  {{/l-flex}}
+{{/banner}}
+
+<br>
+
+{{#> banner banner--modifier="pf-m-custom"}}
+  {{#> l-flex l-flex--modifier="pf-m-space-items-sm"}}
+    {{#> l-flex-item}}
+      {{#> screen-reader}}Custom status banner:{{/screen-reader}}
+      <i class="fas fa-bell" aria-hidden="true"></i>
+    {{/l-flex-item}}
+    {{#> l-flex-item}}
+      Custom banner
     {{/l-flex-item}}
   {{/l-flex}}
 {{/banner}}
