@@ -17,7 +17,17 @@ cssPrefix: pf-v5-c-expandable-section
 
 ### Expanded
 ```hbs
-{{#> expandable-section expandable-section--IsExpanded="true"}}
+{{#> expandable-section expandable-section--IsExpanded=true}}
+  {{> expandable-section-toggle}}
+  {{#> expandable-section-content}}
+    This content is visible only when the component is expanded.
+  {{/expandable-section-content}}
+{{/expandable-section}}
+```
+
+### Indented
+```hbs
+{{#> expandable-section expandable-section--IsExpanded=true expandable-section--IsIndented=true}}
   {{> expandable-section-toggle}}
   {{#> expandable-section-content}}
     This content is visible only when the component is expanded.
@@ -28,7 +38,7 @@ cssPrefix: pf-v5-c-expandable-section
 ### Disclosure variation (hidden)
 
 ```hbs
-{{#> expandable-section expandable-section--IsDisplayLg="true"}}
+{{#> expandable-section expandable-section--IsDisplayLg=true}}
   {{> expandable-section-toggle}}
   {{#> expandable-section-content}}
     This content is visible only when the component is expanded.
@@ -39,7 +49,7 @@ cssPrefix: pf-v5-c-expandable-section
 ### Disclosure variation (expanded)
 
 ```hbs
-{{#> expandable-section expandable-section--IsDisplayLg="true" expandable-section--IsExpanded="true"}}
+{{#> expandable-section expandable-section--IsDisplayLg=true expandable-section--IsExpanded=true}}
   {{> expandable-section-toggle}}
   {{#> expandable-section-content}}
     This content is visible only when the component is expanded.
@@ -47,9 +57,20 @@ cssPrefix: pf-v5-c-expandable-section
 {{/expandable-section}}
 ```
 
-### Detached toggle
+### Disclosure variation (indented)
+
 ```hbs
-{{#> stack stack--modifier="pf-m-gutter" expandable-section--id="detached-toggle" expandable-section--IsDetached="true" expandable-section--IsExpanded="true"}}
+{{#> expandable-section expandable-section--IsDisplayLg=true expandable-section--IsExpanded=true expandable-section--IsIndented=true}}
+  {{> expandable-section-toggle}}
+  {{#> expandable-section-content}}
+    This content is visible only when the component is expanded.
+  {{/expandable-section-content}}
+{{/expandable-section}}
+```
+
+### Detached
+```hbs
+{{#> stack stack--modifier="pf-m-gutter" expandable-section--id="detached-toggle" expandable-section--IsDetached=true expandable-section--IsExpanded=true}}
   {{#> stack-item}}
     {{#> expandable-section}}
       {{#> expandable-section-content}}
@@ -67,19 +88,9 @@ cssPrefix: pf-v5-c-expandable-section
 {{/stack}}
 ```
 
-### Indented
+### Truncate expansion (hidden)
 ```hbs
-{{#> expandable-section expandable-section--IsExpanded="true" expandable-section--IsIndented="true"}}
-  {{> expandable-section-toggle}}
-  {{#> expandable-section-content}}
-    This content is visible only when the component is expanded.
-  {{/expandable-section-content}}
-{{/expandable-section}}
-```
-
-### Truncate expansion
-```hbs
-{{#> expandable-section expandable-section--IsTruncate="true"}}
+{{#> expandable-section expandable-section--IsTruncate=true}}
   {{#> expandable-section-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus, diam vitae eleifend consequat, metus sapien posuere quam, ut tincidunt nunc enim eget sapien. Mauris ac dui imperdiet dolor dignissim efficitur laoreet quis erat. Proin turpis leo, malesuada eget urna et, tristique mollis odio. Ut mattis nulla lorem, elementum hendrerit nunc molestie vitae. Proin massa sem, bibendum id urna in, viverra porta neque. Ut ut mi ac lacus rhoncus mollis id quis sem. Suspendisse non justo elementum, dictum eros nec, hendrerit sapien. Mauris aliquet, est sit amet tincidunt vehicula, purus est hendrerit arcu, vitae egestas odio lorem ut lacus. In et neque non metus viverra rhoncus quis non purus. Integer id venenatis tortor. Nulla sollicitudin convallis tellus, at porta eros volutpat in. Curabitur rhoncus rhoncus nisi, sit amet tincidunt dolor efficitur vitae. Integer purus neque, porta non odio lobortis, accumsan elementum risus. Pellentesque viverra id lacus a cursus. Etiam eu pulvinar risus. Etiam ultrices nec urna id consequat.
   {{/expandable-section-content}}
@@ -87,9 +98,9 @@ cssPrefix: pf-v5-c-expandable-section
 {{/expandable-section}}
 ```
 
-### Truncate expansion expanded
+### Truncate expansion (expanded)
 ```hbs
-{{#> expandable-section expandable-section--IsTruncate="true" expandable-section--IsExpanded="true"}}
+{{#> expandable-section expandable-section--IsTruncate=true expandable-section--IsExpanded=true}}
   {{#> expandable-section-content}}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus finibus, diam vitae eleifend consequat, metus sapien posuere quam, ut tincidunt nunc enim eget sapien. Mauris ac dui imperdiet dolor dignissim efficitur laoreet quis erat. Proin turpis leo, malesuada eget urna et, tristique mollis odio. Ut mattis nulla lorem, elementum hendrerit nunc molestie vitae. Proin massa sem, bibendum id urna in, viverra porta neque. Ut ut mi ac lacus rhoncus mollis id quis sem. Suspendisse non justo elementum, dictum eros nec, hendrerit sapien. Mauris aliquet, est sit amet tincidunt vehicula, purus est hendrerit arcu, vitae egestas odio lorem ut lacus. In et neque non metus viverra rhoncus quis non purus. Integer id venenatis tortor. Nulla sollicitudin convallis tellus, at porta eros volutpat in. Curabitur rhoncus rhoncus nisi, sit amet tincidunt dolor efficitur vitae. Integer purus neque, porta non odio lobortis, accumsan elementum risus. Pellentesque viverra id lacus a cursus. Etiam eu pulvinar risus. Etiam ultrices nec urna id consequat.
   {{/expandable-section-content}}
