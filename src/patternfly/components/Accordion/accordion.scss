@@ -67,7 +67,7 @@
   
   // bordered
   --#{$accordion}--m-bordered--RowGap: 0;
-  --#{$accordion}__item--m-bordered--BorderBottomWidth: var(--pf-t--global--border--width--100);
+  --#{$accordion}__item--m-bordered--BorderBottomWidth: var(--pf-t--global--border--width--divider--default);
   --#{$accordion}__item--m-bordered--BorderBottomColor: var(--pf-t--global--border--color--default);
 }
 
