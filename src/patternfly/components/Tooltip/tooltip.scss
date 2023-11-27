@@ -1,24 +1,24 @@
 // @debug $tooltip; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-
-.#{$tooltip} {
+:root {
   // Component variables
   --#{$tooltip}--MaxWidth: #{pf-size-prem(300px)};
-  --#{$tooltip}--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
-
+  --#{$tooltip}--BoxShadow: var(--pf-t--global--box-shadow--md);
+  
   // Content variables
-  --#{$tooltip}__content--PaddingTop: var(--#{$pf-global}--spacer--sm);
-  --#{$tooltip}__content--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$tooltip}__content--PaddingBottom: var(--#{$pf-global}--spacer--sm);
-  --#{$tooltip}__content--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$tooltip}__content--Color: var(--#{$pf-global}--Color--light-100);
-  --#{$tooltip}__content--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
-  --#{$tooltip}__content--FontSize: var(--#{$pf-global}--FontSize--sm);
-
+  --#{$tooltip}__content--PaddingTop: var(--pf-t--global--spacer--sm);
+  --#{$tooltip}__content--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$tooltip}__content--PaddingBottom: var(--pf-t--global--spacer--sm);
+  --#{$tooltip}__content--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$tooltip}__content--Color: var(--pf-t--global--text--color--inverse);
+  --#{$tooltip}__content--BackgroundColor: var(--pf-t--global--background--color--inverse--default);
+  --#{$tooltip}__content--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$tooltip}__content--BorderRadius: var(--pf-t--global--border--radius--small);
+  
   // Arrow variables
   --#{$tooltip}__arrow--Width: #{pf-size-prem(15px)};
   --#{$tooltip}__arrow--Height: #{pf-size-prem(15px)};
-  --#{$tooltip}__arrow--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-100);
-  --#{$tooltip}__arrow--BoxShadow: var(--#{$pf-global}--BoxShadow--md);
+  --#{$tooltip}__arrow--BackgroundColor: var(--pf-t--global--background--color--inverse--default);
+  --#{$tooltip}__arrow--BoxShadow: var(--pf-t--global--box-shadow--md);
   --#{$tooltip}__arrow--m-top--TranslateX: -50%;
   --#{$tooltip}__arrow--m-top--TranslateY: 50%;
   --#{$tooltip}__arrow--m-top--Rotate: 45deg;
@@ -31,7 +31,9 @@
   --#{$tooltip}__arrow--m-left--TranslateX: 50%;
   --#{$tooltip}__arrow--m-left--TranslateY: -50%;
   --#{$tooltip}__arrow--m-left--Rotate: 45deg;
+}
 
+.#{$tooltip} {
   position: relative;
   max-width: var(--#{$tooltip}--MaxWidth);
   box-shadow: var(--#{$tooltip}--BoxShadow);
@@ -52,7 +54,7 @@
     .pf-m-bottom,
     .pf-m-bottom-left,
     .pf-m-bottom-right
-   ) {
+    ) {
     --#{$tooltip}__arrow--Top: var(--#{$tooltip}--m-bottom--Top, 0);
     --#{$tooltip}__arrow--Left: var(--#{$tooltip}--m-bottom--Left, 50%);
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-bottom--TranslateX);
@@ -128,6 +130,7 @@
   text-align: center;
   word-break: break-word;
   background-color: var(--#{$tooltip}__content--BackgroundColor);
+  border-radius: var(--#{$tooltip}__content--BorderRadius);
 
   &.pf-m-text-align-left {
     text-align: start;
@@ -148,11 +151,4 @@
   background-color: var(--#{$tooltip}__arrow--BackgroundColor);
   box-shadow: var(--#{$tooltip}__arrow--BoxShadow);
   transform: translateX(var(--#{$tooltip}__arrow--TranslateX, 0)) translateY(var(--#{$tooltip}__arrow--TranslateY, 0)) rotate(var(--#{$tooltip}__arrow--Rotate, 0));
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/tooltip";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-tooltip;
 }
