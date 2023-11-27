@@ -23,8 +23,7 @@
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
 
   // Accordion toggle toggle-start modifier
-  --#{$accordion}--m-toggle-start__toggle--JustifyContent: start;
-  --#{$accordion}--m-toggle-start__toggle--ColumnGap: var(--#{$pf-global}--spacer--md);
+  --#{$accordion}--m-toggle-start__toggle--ColumnGap: var(--pf-t--global--spacer--md);
 
   // accordion toggle text
   --#{$accordion}__toggle-text--Color: var(--pf-t--global--text--color--regular);
@@ -78,7 +77,6 @@
   background-color: var(--#{$accordion}--BackgroundColor);
 
   &.pf-m-toggle-start {
-    --#{$accordion}__toggle--JustifyContent: var(--#{$accordion}--m-toggle-start__toggle--JustifyContent);
     --#{$accordion}__toggle--ColumnGap: var(--#{$accordion}--m-toggle-start__toggle--ColumnGap);
   }
 

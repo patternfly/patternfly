@@ -341,55 +341,65 @@ cssPrefix: pf-v5-c-accordion
 
 ```hbs isBeta
 {{#> accordion accordion--IsStartAligned=true}}
-  {{#> accordion-toggle}}
-    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
-    {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
-  {{/accordion-toggle}}
-  {{#> accordion-expandable-content}}
-    {{#> accordion-expandable-content-body}}
-      This text is hidden
-    {{/accordion-expandable-content-body}}
-  {{/accordion-expandable-content}}
+  {{#> accordion-item}}
+    {{#> accordion-toggle}}
+      {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+      {{#> accordion-toggle-text}}Item one{{/accordion-toggle-text}}
+    {{/accordion-toggle}}
+    {{#> accordion-expandable-content}}
+      {{#> accordion-expandable-content-body}}
+        This text is hidden
+      {{/accordion-expandable-content-body}}
+    {{/accordion-expandable-content}}
+  {{/accordion-item}}
 
-  {{#> accordion-toggle}}
-    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
-    {{#> accordion-toggle-text}}Item two{{/accordion-toggle-text}}
-  {{/accordion-toggle}}
-  {{#> accordion-expandable-content}}
-    {{#> accordion-expandable-content-body}}
-      This text is hidden
-    {{/accordion-expandable-content-body}}
-  {{/accordion-expandable-content}}
+  {{#> accordion-item}}
+    {{#> accordion-toggle}}
+      {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+      {{#> accordion-toggle-text}}Item two{{/accordion-toggle-text}}
+    {{/accordion-toggle}}
+    {{#> accordion-expandable-content}}
+      {{#> accordion-expandable-content-body}}
+        This text is hidden
+      {{/accordion-expandable-content-body}}
+    {{/accordion-expandable-content}}
+  {{/accordion-item}}
 
-  {{#> accordion-toggle}}
-    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
-    {{#> accordion-toggle-text}}Item three{{/accordion-toggle-text}}
-  {{/accordion-toggle}}
-  {{#> accordion-expandable-content}}
-    {{#> accordion-expandable-content-body}}
-      This text is hidden
-    {{/accordion-expandable-content-body}}
-  {{/accordion-expandable-content}}
+  {{#> accordion-item}}
+    {{#> accordion-toggle}}
+      {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+      {{#> accordion-toggle-text}}Item three{{/accordion-toggle-text}}
+    {{/accordion-toggle}}
+    {{#> accordion-expandable-content}}
+      {{#> accordion-expandable-content-body}}
+        This text is hidden
+      {{/accordion-expandable-content-body}}
+    {{/accordion-expandable-content}}
+  {{/accordion-item}}
 
-  {{#> accordion-toggle accordion-toggle--IsExpanded="true"}}
-    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
-    {{#> accordion-toggle-text}}Item four{{/accordion-toggle-text}}
-  {{/accordion-toggle}}
-  {{#> accordion-expandable-content accordion-expandable-content--IsExpanded="true"}}
-    {{#> accordion-expandable-content-body}}
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    {{/accordion-expandable-content-body}}
-  {{/accordion-expandable-content}}
+  {{#> accordion-item accordion-item--IsExpanded=true}}
+    {{#> accordion-toggle}}
+      {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+      {{#> accordion-toggle-text}}Item four{{/accordion-toggle-text}}
+    {{/accordion-toggle}}
+    {{#> accordion-expandable-content}}
+      {{#> accordion-expandable-content-body}}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis molestie lorem lacinia dolor aliquet faucibus. Suspendisse gravida imperdiet accumsan. Aenean auctor lorem justo, vitae tincidunt enim blandit vel. Aenean quis tempus dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      {{/accordion-expandable-content-body}}
+    {{/accordion-expandable-content}}
+  {{/accordion-item}}
 
-  {{#> accordion-toggle}}
-    {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
-    {{#> accordion-toggle-text}}Item five{{/accordion-toggle-text}}
-  {{/accordion-toggle}}
-  {{#> accordion-expandable-content}}
-    {{#> accordion-expandable-content-body}}
-      This text is hidden
-    {{/accordion-expandable-content-body}}
-  {{/accordion-expandable-content}}
+  {{#> accordion-item}}
+    {{#> accordion-toggle}}
+      {{#> accordion-toggle-icon}}{{/accordion-toggle-icon}}
+      {{#> accordion-toggle-text}}Item five{{/accordion-toggle-text}}
+    {{/accordion-toggle}}
+    {{#> accordion-expandable-content}}
+      {{#> accordion-expandable-content-body}}
+        This text is hidden
+      {{/accordion-expandable-content-body}}
+    {{/accordion-expandable-content}}
+  {{/accordion-item}}
 {{/accordion}}
 ```
 
