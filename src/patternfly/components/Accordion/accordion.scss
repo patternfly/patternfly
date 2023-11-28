@@ -18,8 +18,6 @@
   --#{$accordion}__toggle--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$accordion}__toggle--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$accordion}__toggle--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$accordion}__toggle--focus--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
-  --#{$accordion}__toggle--active--BackgroundColor: var(--pf-t--global--background--color--action--plain--hover);
   --#{$accordion}__toggle--BorderRadius: var(--pf-t--global--border--radius--small);
 
   // Accordion toggle toggle-start modifier
@@ -136,16 +134,8 @@
   border: 0;
   border-radius: var(--#{$accordion}__toggle--BorderRadius);
 
-  &:hover {
+  &:is(:hover, :focus) {
     background-color: var(--#{$accordion}__toggle--hover--BackgroundColor);
-  }
-
-  &:focus {
-    background-color: var(--#{$accordion}__toggle--focus--BackgroundColor);
-  }
-
-  &:active {
-    background-color: var(--#{$accordion}__toggle--active--BackgroundColor);
   }
 }
 
