@@ -3,10 +3,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.ws-popover-no-padding-content {
-  padding-block-start: 24px;
-  padding-block-end: 24px;
-  padding-inline-start: 24px;
-  padding-inline-end: 24px;
-}

@@ -41,6 +41,10 @@
   --#{$popover}__arrow--m-left--TranslateX: 50%;
   --#{$popover}__arrow--m-left--TranslateY: -50%;
   --#{$popover}__arrow--m-left--Rotate: 45deg;
+  --#{$popover}__arrow--m-inline-top--Top: var(--pf-t--global--border--radius--medium);
+  --#{$popover}__arrow--m-inline-bottom--Bottom: var(--pf-t--global--border--radius--medium);
+  --#{$popover}__arrow--m-block-left--Left: var(--pf-t--global--border--radius--medium);
+  --#{$popover}__arrow--m-block-right--Right: var(--pf-t--global--border--radius--medium);
 
   // Close
   --#{$popover}__close--Top: calc(var(--#{$popover}__content--PaddingTop) - (var(--pf-t--global--spacer--xs) * 1.5)); // align top of button with top of text
@@ -137,7 +141,7 @@
     .pf-m-left-top,
     .pf-m-right-top
   ) {
-    --#{$popover}__arrow--Top: 0;
+    --#{$popover}__arrow--Top: var(--#{$popover}__arrow--m-inline-top--Top);
     --#{$popover}__arrow--TranslateY: var(--#{$popover}__arrow--m-top--TranslateY);
   }
 
@@ -146,14 +150,14 @@
     .pf-m-right-bottom
   ) {
     --#{$popover}__arrow--Top: auto;
-    --#{$popover}__arrow--Bottom: 0;
+    --#{$popover}__arrow--Bottom: var(--#{$popover}__arrow--m-inline-bottom--Bottom);
   }
 
   &:is(
     .pf-m-top-left,
     .pf-m-bottom-left
   ) {
-    --#{$popover}__arrow--Left: 0;
+    --#{$popover}__arrow--Left: var(--#{$popover}__arrow--m-block-left--Left);
     --#{$popover}__arrow--TranslateX: var(--#{$popover}__arrow--m-left--TranslateX);
   }
 
@@ -161,7 +165,7 @@
     .pf-m-top-right,
     .pf-m-bottom-right
   ) {
-    --#{$popover}__arrow--Right: 0;
+    --#{$popover}__arrow--Right: var(--#{$popover}__arrow--m-block-right--Right);
     --#{$popover}__arrow--Left: auto;
   }
 
@@ -252,11 +256,4 @@
 
 .#{$popover}__footer {
   margin-block-start: var(--#{$popover}__footer--MarginTop);
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/popover";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-popover;
 }
