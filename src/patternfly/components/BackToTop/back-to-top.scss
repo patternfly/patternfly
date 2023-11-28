@@ -1,21 +1,23 @@
 // @debug $back-to-top; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$back-to-top} {
-  --#{$back-to-top}--Right: var(--#{$pf-global}--spacer--2xl);
-  --#{$back-to-top}--Bottom: var(--#{$pf-global}--spacer--lg);
-  --#{$back-to-top}--md--Bottom: var(--#{$pf-global}--spacer--2xl);
-  --#{$back-to-top}--c-button--FontSize: var(--#{$pf-global}--FontSize--xs);
-  --#{$back-to-top}--c-button--BorderRadius: var(--#{$pf-global}--BorderRadius--lg);
-  --#{$back-to-top}--c-button--PaddingTop: var(--#{$pf-global}--spacer--xs);
-  --#{$back-to-top}--c-button--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$back-to-top}--c-button--PaddingBottom: var(--#{$pf-global}--spacer--xs);
-  --#{$back-to-top}--c-button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$back-to-top}--c-button--BoxShadow: var(--#{$pf-global}--BoxShadow--lg-bottom);
+:root {
+  --#{$back-to-top}--Right: var(--pf-t--global--spacer--2xl);
+  --#{$back-to-top}--Bottom: var(--pf-t--global--spacer--lg);
+  --#{$back-to-top}--md--Bottom: var(--pf-t--global--spacer--2xl);
+  --#{$back-to-top}--c-button--FontSize: var(--pf-t--global--font--size--body--sm);
+  --#{$back-to-top}--c-button--BorderRadius: var(--pf-t--global--border--radius--large);
+  --#{$back-to-top}--c-button--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$back-to-top}--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$back-to-top}--c-button--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$back-to-top}--c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$back-to-top}--c-button--BoxShadow: var(--pf-t--global--box-shadow--lg--bottom);
 
   @media (min-width: $pf-v5-global--breakpoint--md) {
     --#{$back-to-top}--Bottom: var(--#{$back-to-top}--md--Bottom);
   }
+}
 
+.#{$back-to-top} {
   position: absolute;
   inset-block-end: var(--#{$back-to-top}--Bottom);
   inset-inline-end: var(--#{$back-to-top}--Right);
