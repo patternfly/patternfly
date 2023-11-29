@@ -54,7 +54,7 @@
     .pf-m-bottom,
     .pf-m-bottom-left,
     .pf-m-bottom-right
-    ) {
+  ) {
     --#{$tooltip}__arrow--Top: var(--#{$tooltip}--m-bottom--Top, 0);
     --#{$tooltip}__arrow--Left: var(--#{$tooltip}--m-bottom--Left, 50%);
     --#{$tooltip}__arrow--TranslateX: var(--#{$tooltip}__arrow--m-bottom--TranslateX);
