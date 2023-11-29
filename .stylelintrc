@@ -1,7 +1,6 @@
 {
   "extends": [
     "stylelint-config-recess-order",
-    "stylelint-config-standard",
     "stylelint-config-standard-scss"
   ],
   "plugins": [

@@ -136,12 +136,12 @@
 
 .#{$tooltip}__arrow {
   position: absolute;
-  /* stylelint-disable liberty/use-logical-spec */
+  // stylelint-disable liberty/use-logical-spec
   top: var(--#{$tooltip}__arrow--Top, auto);
   right: var(--#{$tooltip}__arrow--Right, auto);
   bottom: var(--#{$tooltip}__arrow--Bottom, auto);
   left: var(--#{$tooltip}__arrow--Left, auto);
-  /* stylelint-enable */
+  // stylelint-enable
   width: var(--#{$tooltip}__arrow--Width);
   height: var(--#{$tooltip}__arrow--Height);
   pointer-events: none;

@@ -217,12 +217,12 @@
 
 .#{$popover}__arrow {
   position: absolute;
-  /* stylelint-disable liberty/use-logical-spec */
+  // stylelint-disable liberty/use-logical-spec
   top: var(--#{$popover}__arrow--Top, auto);
   right: var(--#{$popover}__arrow--Right, auto);
   bottom: var(--#{$popover}__arrow--Bottom, auto);
   left: var(--#{$popover}__arrow--Left, auto);
-  /* stylelint-enable */
+  // stylelint-enable
   width: var(--#{$popover}__arrow--Width);
   height: var(--#{$popover}__arrow--Height);
   pointer-events: none;
