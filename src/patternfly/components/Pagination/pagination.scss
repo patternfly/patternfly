@@ -2,79 +2,72 @@
 $pf-v5-c-pagination--breakpoint-map: build-breakpoint-map();
 $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "xl", "2xl");
 
-.#{$pagination} {
+:root {
   --#{$pagination}--inset: 0;
   --#{$pagination}--PaddingRight: var(--#{$pagination}--inset);
   --#{$pagination}--PaddingLeft: var(--#{$pagination}--inset);
-
+  --#{$pagination}--ColumnGap: var(--pf-t--global--spacer--lg);
+  
   // Page insets
-  --#{$pagination}--m-page-insets--inset: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-page-insets--xl--inset: var(--#{$pf-global}--spacer--lg);
-
-  // children
-  --#{$pagination}--child--MarginRight: var(--#{$pf-global}--spacer--lg);
-  --#{$pagination}--m-bottom--child--MarginRight: 0;
-  --#{$pagination}--m-bottom--child--md--MarginRight: var(--#{$pf-global}--spacer--lg);
-  --#{$pagination}--m-compact--child--MarginRight: var(--#{$pf-global}--spacer--sm);
-
+  --#{$pagination}--m-page-insets--inset: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-page-insets--xl--inset: var(--pf-t--global--spacer--lg);
+    
   // dropdown
-  --#{$pagination}--c-menu-toggle--FontSize: var(--#{$pf-global}--FontSize--sm);
-
+  --#{$pagination}--c-menu-toggle--FontSize: var(--pf-t--global--font--size--body--md);
+  
   // nav
   --#{$pagination}__nav--Display: none;
   --#{$pagination}--m-display-summary__nav--Display: none;
   --#{$pagination}--m-display-full__nav--Display: inline-flex;
-
+  --#{$pagination}__nav--ColumnGap: var(--pf-t--global--spacer--sm);
+  
   // nav control
-  --#{$pagination}__nav-control--c-button--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$pagination}__nav-control--c-button--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$pagination}__nav-control--c-button--FontSize: var(--#{$pf-global}--FontSize--md);
-  --#{$pagination}--m-bottom__nav-control--c-button--OutlineOffset: calc(var(--#{$pf-global}--spacer--xs) * -1);
-  --#{$pagination}--m-bottom__nav-control--c-button--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-bottom__nav-control--c-button--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-bottom__nav-control--c-button--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingTop: var(--#{$pf-global}--spacer--form-element);
-  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingRight: var(--#{$pf-global}--spacer--sm);
-  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingBottom: var(--#{$pf-global}--spacer--form-element);
-  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingLeft: var(--#{$pf-global}--spacer--sm);
-  --#{$pagination}--m-compact__nav-control--nav-control--MarginLeft: var(--#{$pf-global}--spacer--md);
-
+  --#{$pagination}__nav-control--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$pagination}__nav-control--c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
+  --#{$pagination}__nav-control--c-button--FontSize: var(--pf-t--global--font--size--body--md);
+  --#{$pagination}--m-bottom__nav-control--c-button--OutlineOffset: calc(var(--pf-t--global--spacer--xs) * -1);
+  --#{$pagination}--m-bottom__nav-control--c-button--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-bottom__nav-control--c-button--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-bottom__nav-control--c-button--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingTop: var(--pf-t--global--spacer--sm); // TODO: replace with form element token
+  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingRight: var(--pf-t--global--spacer--sm);
+  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingBottom: var(--pf-t--global--spacer--sm); // TODO: replace with form element token
+  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingLeft: var(--pf-t--global--spacer--sm);
+  
   // nav page select
-  --#{$pagination}__nav-page-select--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$pagination}__nav-page-select--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}__nav-page-select--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}__nav-page-select--child--MarginRight: var(--#{$pf-global}--spacer--xs);
-  --#{$pagination}__nav-page-select--c-form-control--width-base: calc(var(--#{$pf-global}--spacer--sm) * 2 + var(--#{$pf-global}--BorderWidth--sm) * 2);
+  --#{$pagination}__nav-page-select--FontSize: var(--pf-t--global--font--size--body--md);
+  --#{$pagination}__nav-page-select--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$pagination}__nav-page-select--c-form-control--width-base: calc(var(--pf-t--global--spacer--sm) * 2 + var(--pf-t--global--border--width--100) * 2); // TODO: replace border width token with semantic token
   --#{$pagination}__nav-page-select--c-form-control--width-chars: 2;
   --#{$pagination}__nav-page-select--c-form-control--Width: calc(var(--#{$pagination}__nav-page-select--c-form-control--width-base) + (var(--#{$pagination}__nav-page-select--c-form-control--width-chars) * 1ch));
-
+  
   // total items
   --#{$pagination}__total-items--Display: block;
   --#{$pagination}--m-display-summary__total-items--Display: block;
   --#{$pagination}--m-display-full__total-items--Display: none;
-
+  
   // top
-  --#{$pagination}--m-sticky--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$pagination}--m-sticky--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-bottom);
-  --#{$pagination}--m-sticky--md--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-sticky--md--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-sticky--md--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-sticky--md--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-sticky--ZIndex: var(--#{$pf-global}--ZIndex--xs);
+  --#{$pagination}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$pagination}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
+  --#{$pagination}--m-sticky--md--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-sticky--md--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-sticky--md--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-sticky--md--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-sticky--ZIndex: 100; // TODO: replace with z-index token
   --#{$pagination}--m-sticky--Top: 0;
-
+  
   // bottom
-  --#{$pagination}--m-bottom--BackgroundColor: var(--#{$pf-global}--BackgroundColor--100);
-  --#{$pagination}--m-bottom--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-top);
+  --#{$pagination}--m-bottom--BackgroundColor: var(--pf-t--global--background--color--primary--default);
+  --#{$pagination}--m-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$pagination}--m-bottom--Bottom: 0;
-  --#{$pagination}--m-bottom--md--PaddingTop: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-bottom--md--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-bottom--md--PaddingBottom: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-bottom--md--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$pagination}--m-bottom--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$pagination}--m-bottom--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--#{$pf-global}--BoxShadow--sm-top);
-
+  --#{$pagination}--m-bottom--md--PaddingTop: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-bottom--md--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-bottom--md--PaddingBottom: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-bottom--md--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$pagination}--m-bottom--xl--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$pagination}--m-bottom--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
+  
   // options menu
   --#{$pagination}--c-menu-toggle--Display: none;
   --#{$pagination}--m-display-summary--c-menu-toggle--Display: none;
@@ -85,33 +78,29 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     --#{$pagination}--m-bottom__nav-control--c-button--PaddingRight: var(--#{$pagination}--m-bottom__nav-control--c-button--md--PaddingRight);
     --#{$pagination}--m-bottom__nav-control--c-button--PaddingBottom: var(--#{$pagination}--m-bottom__nav-control--c-button--md--PaddingBottom);
     --#{$pagination}--m-bottom__nav-control--c-button--PaddingLeft: var(--#{$pagination}--m-bottom__nav-control--c-button--md--PaddingLeft);
-    --#{$pagination}--m-bottom--child--MarginRight: var(--#{$pagination}--m-bottom--child--md--MarginRight);
     --#{$pagination}--m-bottom__nav-control--c-button--OutlineOffset: 0;
     --#{$pagination}--m-bottom--BoxShadow: none;
     --#{$pagination}--c-menu-toggle--Display: inline-flex;
     --#{$pagination}__nav--Display: inline-flex;
     --#{$pagination}__total-items--Display: none;
   }
-
+  
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$pagination}--m-bottom--md--PaddingRight: var(--#{$pagination}--m-bottom--xl--PaddingRight);
     --#{$pagination}--m-bottom--md--PaddingLeft: var(--#{$pagination}--m-bottom--xl--PaddingLeft);
     --#{$pagination}__scroll-button--Width: var(--#{$pagination}__scroll-button--xl--Width);
     --#{$pagination}--m-page-insets--inset: var(--#{$pagination}--m-page-insets--xl--inset);
   }
+}
 
+.#{$pagination} {
   display: flex;
   flex-wrap: wrap;
+  column-gap: var(--#{$pagination}--ColumnGap);
   align-items: center;
   justify-content: flex-end;
   padding-inline-start: var(--#{$pagination}--PaddingLeft);
   padding-inline-end: var(--#{$pagination}--PaddingRight);
-
-  // stylelint-disable selector-not-notation
-  // update to single :not() in breaking change
-  > *:not(:last-child):not(.#{$pagination}__total-items) {
-    margin-inline-end: var(--#{$pagination}--child--MarginRight);
-  }
 
   .#{$menu-toggle} {
     display: var(--#{$pagination}--c-menu-toggle--Display);
@@ -119,7 +108,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   }
 
   &.pf-m-bottom {
-    --#{$pagination}--child--MarginRight: var(--#{$pagination}--m-bottom--child--MarginRight);
     --#{$pagination}__nav-control--c-button--PaddingRight: var(--#{$pagination}--m-bottom__nav-control--c-button--PaddingRight);
     --#{$pagination}__nav-control--c-button--PaddingLeft: var(--#{$pagination}--m-bottom__nav-control--c-button--PaddingRight);
     --#{$pagination}--m-sticky--BoxShadow: var(--#{$pagination}--m-bottom--m-sticky--BoxShadow);
@@ -135,7 +123,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     }
 
     position: sticky;
-   inset-block-end: var(--#{$pagination}--m-bottom--Bottom);
+    inset-block-end: var(--#{$pagination}--m-bottom--Bottom);
     justify-content: center;
     background-color: var(--#{$pagination}--m-bottom--BackgroundColor);
     box-shadow: var(--#{$pagination}--m-bottom--BoxShadow);
@@ -219,10 +207,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     }
   }
 
-  &.pf-m-compact {
-    --#{$pagination}--child--MarginRight: var(--#{$pagination}--m-compact--child--MarginRight);
-  }
-
   &.pf-m-page-insets {
     --#{$pagination}--inset: var(--#{$pagination}--m-page-insets--inset);
   }
@@ -232,6 +216,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 // nav
 .#{$pagination}__nav {
   display: var(--#{$pagination}__nav--Display);
+  column-gap: var(--#{$pagination}__nav--ColumnGap);
   justify-content: flex-end;
 }
 
@@ -244,26 +229,17 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     padding-inline-end: var(--#{$pagination}__nav-control--c-button--PaddingRight);
     font-size: var(--#{$pagination}__nav-control--c-button--FontSize);
   }
-
-  .#{$pagination}.pf-m-compact & + & {
-    margin-inline-start: var(--#{$pagination}--m-compact__nav-control--nav-control--MarginLeft);
-  }
 }
 
 // nav page element
 .#{$pagination}__nav-page-select {
   display: flex;
+  column-gap: var(--#{$pagination}__nav-page-select--ColumnGap);
   align-items: center;
-  padding-inline-start: var(--#{$pagination}__nav-page-select--PaddingLeft);
-  padding-inline-end: var(--#{$pagination}__nav-page-select--PaddingRight);
 
   > * {
     font-size: var(--#{$pagination}__nav-page-select--FontSize);
     white-space: nowrap;
-
-    &:not(:last-child) {
-      margin-inline-end: var(--#{$pagination}__nav-page-select--child--MarginRight);
-    }
   }
 
   .#{$form-control} {
@@ -307,10 +283,3 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   }
 }
 // stylelint-enable
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/pagination";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-pagination;
-}
