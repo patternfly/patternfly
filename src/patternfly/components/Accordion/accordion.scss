@@ -57,7 +57,7 @@
   --#{$accordion}--m-display-lg__toggle--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$accordion}--m-display-lg__toggle--FontFamily: var(--pf-t--global--font--family--heading);
   --#{$accordion}--m-display-lg__toggle--FontSize: var(--pf-t--global--font--size--heading--sm);
-  --#{$accordion}--m-display-lg__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--bold);
+  --#{$accordion}--m-display-lg__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading);
   --#{$accordion}--m-display-lg__toggle--m-expanded__toggle-text--FontWeight: var(--pf-t--global--font--weight--heading--bold);
   --#{$accordion}--m-display-lg__expandable-content--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$accordion}--m-display-lg__expandable-content--Color: var(--pf-t--global--text--color--regular);
@@ -135,7 +135,7 @@
   border-radius: var(--#{$accordion}__toggle--BorderRadius);
 
   &:is(:hover, :focus) {
-    background-color: var(--#{$accordion}__toggle--hover--BackgroundColor);
+    --#{$accordion}__toggle--BackgroundColor: var(--#{$accordion}__toggle--hover--BackgroundColor);
   }
 }
 
