@@ -1,9 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-accordion() {
-  .#{$accordion} {
-    --#{$accordion}__toggle--hover--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
-    --#{$accordion}__toggle--focus--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
-    --#{$accordion}__toggle--active--BackgroundColor: var(--#{$pf-global}--BackgroundColor--300);
-  }
-}
