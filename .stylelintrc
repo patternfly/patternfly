@@ -42,6 +42,9 @@
     "custom-property-pattern": "^pf-v5-(global|[lcud])-.+$",
     "declaration-block-no-redundant-longhand-properties": null,
     "declaration-no-important": true,
+    "declaration-property-value-disallowed-list": {
+      "/^--/": ["/^:/"]
+    },
     "font-weight-notation": "numeric",
     "import-notation": "string",
     "keyframes-name-pattern": null,
