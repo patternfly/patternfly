@@ -111,7 +111,7 @@
   --#{$button}--m-danger--active--Color: var(--pf-t--global--text--color--status--on-danger--hover);
 
   // Link btn
-    --#{$button}--m-link--BackgroundColor: transparent;
+  --#{$button}--m-link--BackgroundColor: transparent;
   --#{$button}--m-link--Color: var(--pf-t--global--text--color--link--default);
   --#{$button}--m-link--hover--BackgroundColor: transparent;
   --#{$button}--m-link--hover--Color: var(--pf-t--global--text--color--link--hover);
@@ -386,7 +386,7 @@
 
   // Link buttons
   &.pf-m-link {
-        --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-link--disabled--BackgroundColor);
+    --#{$button}--disabled--BackgroundColor: var(--#{$button}--m-link--disabled--BackgroundColor);
     --#{$button}--disabled--Color: var(--#{$button}--m-link--disabled--Color);
 
     color: var(--#{$button}--m-link--Color);

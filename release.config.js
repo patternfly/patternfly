@@ -9,11 +9,19 @@ module.exports = {
     preset: 'angular'
   },
   plugins: [
-    '@semantic-release/commit-analyzer',
+    [
+      '@semantic-release/commit-analyzer',
+      {
+        preset: 'angular',
+        parserOpts: {
+          noteKeywords: ['BREAKING-CHANGE']
+        }
+      }
+    ],
     '@semantic-release/release-notes-generator',
     '@semantic-release/github',
     ['@semantic-release/npm', { pkgRoot: 'dist' }]
   ],
-  tagFormat: 'alpha-v${version}',
+  tagFormat: 'prerelease-v${version}',
   dryRun: true
 };

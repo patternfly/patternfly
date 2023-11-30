@@ -28,6 +28,8 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}--m-display-stack__content--PaddingTop: var(--pf-t--global--spacer--xs);
   --#{$masthead}--m-display-stack__content--PaddingBottom: var(--pf-t--global--spacer--xs);
   --#{$masthead}--m-display-stack__content--MarginLeft: 0;
+  --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginRight: calc(var(--#{$masthead}--inset) * -1);
+  --#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginLeft: calc(var(--#{$masthead}--inset) * -1);
 
   // Inline
   --#{$masthead}--m-display-inline--GridTemplateColumns: max-content max-content 1fr;
@@ -118,6 +120,8 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__content--PaddingTop: var(--#{$masthead}--m-display-stack__content--PaddingTop);
   --#{$masthead}__content--PaddingBottom: var(--#{$masthead}--m-display-stack__content--PaddingBottom);
   --#{$masthead}__content--MarginLeft: var(--#{$masthead}--m-display-stack__content--MarginLeft);
+  --#{$masthead}__content--c-nav--m-horizontal--MarginRight: var(--#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginRight);
+  --#{$masthead}__content--c-nav--m-horizontal--MarginLeft: var(--#{$masthead}--m-display-stack__content--c-nav--m-horizontal--MarginLeft);
 }
 
 @mixin pf-v5-c-masthead--m-display-inline {
@@ -136,6 +140,8 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
   --#{$masthead}__content--PaddingTop: var(--#{$masthead}--m-display-inline__content--PaddingTop);
   --#{$masthead}__content--PaddingBottom: var(--#{$masthead}--m-display-inline__content--PaddingBottom);
   --#{$masthead}__content--MarginLeft: var(--#{$masthead}--m-display-inline__content--MarginLeft);
+  --#{$masthead}__content--c-nav--m-horizontal--MarginRight: var(--#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginRight);
+  --#{$masthead}__content--c-nav--m-horizontal--MarginLeft: var(--#{$masthead}--m-display-inline__content--c-nav--m-horizontal--MarginLeft);
 }
 
 .#{$masthead} {
@@ -218,6 +224,10 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
     --#{$dropdown}__toggle--before--BorderTopColor: var(--#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderTopColor);
     --#{$dropdown}__toggle--before--BorderBottomColor: var(--#{$masthead}--c-dropdown--m-full-height__toggle--before--BorderBottomColor);
   }
+
+  .#{$nav} {
+    align-self: stretch;
+  }
 }
 
 // Main
@@ -271,6 +281,11 @@ $pf-v5-c-masthead--inset-map: build-spacer-map("none", "sm", "md", "lg", "xl", "
 
   &:only-child {
     --#{$masthead}__content--MarginLeft: 0;
+  }
+
+  .#{$nav}.pf-m-horizontal {
+    margin-inline-start: var(--#{$masthead}__content--c-nav--m-horizontal--MarginLeft);
+    margin-inline-end: var(--#{$masthead}__content--c-nav--m-horizontal--MarginRight);
   }
 
   .#{$masthead}__toggle ~ & {

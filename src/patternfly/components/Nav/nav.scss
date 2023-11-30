@@ -1,150 +1,122 @@
-:root {
-  // Nav
-  --#{$nav}--Display: flex;
-  --#{$nav}--FlexDirection: column;
+:root,
+:where(.#{$nav}) {
+  // * Nav - base vars
+  --#{$nav}--PaddingBlockStart: var(--pf-t--global--spacer--md);
+  --#{$nav}--PaddingBlockEnd: var(--pf-t--global--spacer--md);
+  --#{$nav}--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$nav}--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+
+  // * Nav - mapped vars
+  --#{$nav}--PaddingBlock: var(--#{$nav}--PaddingBlockStart) var(--#{$nav}--PaddingBlockEnd);
+  --#{$nav}--PaddingInline: var(--#{$nav}--PaddingInlineStart) var(--#{$nav}--PaddingInlineEnd);
+
+  // * Nav
   --#{$nav}--RowGap: var(--pf-t--global--spacer--lg);
-  --#{$nav}--Padding--base: var(--pf-t--global--spacer--lg);
-  --#{$nav}--PaddingInlineStart: var(--#{$nav}--Padding--base);
-  --#{$nav}--PaddingInlineEnd: var(--#{$nav}--Padding--base);
-  --#{$nav}--PaddingBlockStart: var(--#{$nav}--Padding--base);
-  --#{$nav}--PaddingBlockEnd: var(--#{$nav}--Padding--base);
+  --#{$nav}--ColumnGap: var(--pf-t--global--spacer--sm);
+  --#{$nav}--AlignItems: baseline;
+  --#{$nav}--FontSize: var(--pf-t--global--font--size--body);
+  --#{$nav}--FontWeight: var(--pf-t--global--font--weight--body);
+  --#{$nav}--LineHeight: var(--pf-t--global--font--line-height--body);
   --#{$nav}--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$nav}--Transition: var(--#{$pf-global}--Transition); // TODO: replace with global variable when available
 
-  // Nav list
-  --#{$nav}__list--RowGap: var(--pf-t--global--spacer--sm);
-  --#{$nav}__list--MarginBlockEnd: var(--pf-t--global--spacer--xs);
+  // * Nav list
+  --#{$nav}__list--RowGap: var(--pf-t--global--spacer--sm); // shared value for standard nav children
+  --#{$nav}__list--ColumnGap: var(--pf-t--global--spacer--xs);
   --#{$nav}__list--ScrollSnapTypeAxis: x;
   --#{$nav}__list--ScrollSnapTypeStrictness: proximity;
   --#{$nav}__list--ScrollSnapType: var(--#{$nav}__list--ScrollSnapTypeAxis) var(--#{$nav}__list--ScrollSnapTypeStrictness);
   --#{$nav}__item--ScrollSnapAlign: end;
 
-  // Nav link
-  --#{$nav}__link--clickable-inset--block-start: 0;
-  --#{$nav}__link--clickable-inset--block-end: calc(var(--#{$nav}__list--RowGap) * -1); // default setting, update for horizontal nav
-  --#{$nav}__link--clickable-inset--inline-start: 0;
-  --#{$nav}__link--clickable-inset--inline-end: 0;
-  --#{$nav}__item--m-expanded--extra-padding--block-end: var(--pf-t--global--spacer--sm);
+  // * Nav section title
+  --#{$nav}__section-title--FontSize: var(--pf-t--global--font--size--body--md);
+  --#{$nav}__section-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
+  --#{$nav}__section-title--Color: var(--pf-t--global--text--color--regular);
 
-  // Nav toggle icon
+  // * Nav toggle icon
+  --#{$nav}__item--RowGap: var(--#{$nav}__list--RowGap);
   --#{$nav}__item__toggle-icon--Rotate: 0;
   --#{$nav}__item--m-expanded__toggle-icon--Rotate: 90deg;
-  --#{$nav}__item__link--MarginBlockEnd: 0;
-  --#{$nav}__item--m-expanded__link--MarginBlockEnd: var(--pf-t--global--spacer--sm);
 
-  // Nav link
-  --#{$nav}__link--AlignItems: baseline;
-  --#{$nav}__link--ColumnGap: var(--pf-t--global--spacer--sm);
-  --#{$nav}__link--PaddingBlockStart: var(--pf-t--global--spacer--sm);
-  --#{$nav}__link--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
-  --#{$nav}__link--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$nav}__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
+  // * Nav item expandable
+  --#{$nav}__item--m-expanded--MarginBlockEnd: var(--pf-t--global--spacer--sm);
+
+  // * Nav - base vars
+  --#{$nav}__link--PaddingBlockStart: var(--pf-t--global--spacer--sm); // shared value for standard nav children
+  --#{$nav}__link--PaddingBlockEnd: var(--pf-t--global--spacer--sm); // shared value for standard nav children
+  --#{$nav}__link--PaddingInlineStart: var(--pf-t--global--spacer--md); // shared value for standard nav children
+  --#{$nav}__link--PaddingInlineEnd: var(--pf-t--global--spacer--md); // shared value for standard nav children
+
+  // * Nav - mapped vars
+  --#{$nav}__link--PaddingBlock: var(--#{$nav}__link--PaddingBlockStart) var(--#{$nav}__link--PaddingBlockEnd); // shared value for standard nav children
+  --#{$nav}__link--PaddingInline: var(--#{$nav}__link--PaddingInlineStart) var(--#{$nav}__link--PaddingInlineEnd); // shared value for standard nav children
+
+  // * Nav link
   --#{$nav}__link--BorderRadius: var(--pf-t--global--border--radius--small);
-  --#{$nav}__link--FontSize: var(--pf-t--global--font--size--body);
-  --#{$nav}__link--FontWeight: var(--pf-t--global--font--weight--body);
-  --#{$nav}__link--LineHeight: var(--pf-t--global--font--line-height--body);
+  --#{$nav}__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--default);
   --#{$nav}__link--WhiteSpace: normal;
-  --#{$nav}__link--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt);
   --#{$nav}__link--Color: var(--pf-t--global--text--color--subtle);
   --#{$nav}__link--hover--Color: var(--pf-t--global--text--color--regular);
   --#{$nav}__link--focus--Color: var(--pf-t--global--text--color--regular);
   --#{$nav}__link--active--Color: var(--pf-t--global--text--color--regular);
   --#{$nav}__link--hover--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--hover);
   --#{$nav}__link--focus--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--hover);
-  --#{$nav}__link--active--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--selected);
-  --#{$nav}__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--selected);
+  --#{$nav}__link--active--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--hover);
+  --#{$nav}__link--m-current--BackgroundColor: var(--pf-t--global--background--color--action--plain--alt--clicked);
   --#{$nav}__link--m-current--Color: var(--pf-t--global--text--color--regular);
 
-  // Nav link clickable area
-  --#{$nav}__link--clickable-area--inset-block-start: 0;
-  --#{$nav}__link--clickable-area--inset-block-end: 0;
-  --#{$nav}__link--clickable-area--inset-inline-start: 0;
-  --#{$nav}__link--clickable-area--inset-inline-end: 0;
-
-  // Nav section
-  --#{$nav}__section--RowGap: var(--pf-t--global--spacer--sm);
-
-  // Nav section title
-  --#{$nav}__section-title--PaddingInlineStart: var(--pf-t--global--spacer--md);
-  --#{$nav}__section-title--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$nav}__section-title--FontSize: var(--pf-t--global--font--size--body--md);
-  --#{$nav}__section-title--FontWeight: var(--pf-t--global--font--weight--body--bold);
-  --#{$nav}__section-title--Color: var(--pf-t--global--text--color--regular);
-
-  // Nav subnav
-  --#{$nav}__subnav--RowGap: var(--pf-t--global--spacer--xs);
+  // * Nav subnav
+  --#{$nav}__subnav--RowGap: var(--pf-t--global--border--width--extra-strong);
   --#{$nav}__subnav--PaddingInlineStart: var(--pf-t--global--spacer--lg);
 
-  // Nav subnav list
-  --#{$nav}__subnav__list--RowGap: var(--pf-t--global--spacer--xs);
-
-  // Nav scroll button
+  // * Nav scroll button
   --#{$nav}__scroll-button--MinWidth: #{$pf-v5-global--target-size--MinWidth};
   --#{$nav}__scroll-button--BorderColor: var(--pf-t--global--border--color--default);
   --#{$nav}__scroll-button--BorderWidth: var(--pf-t--global--border--width--divider--default);
   --#{$nav}__scroll-button--BorderRadius: var(--pf-t--global--border--radius--pill);
 
-  // Nav toggle
+  // * Nav toggle
   --#{$nav}__toggle--PaddingInlineStart: var(--pf-t--global--spacer--sm);
   --#{$nav}__toggle--PaddingInlineEnd: var(--pf-t--global--spacer--sm);
-  --#{$nav}__toggle--TranslateY: calc((var(--#{$nav}__link--LineHeight) * var(--#{$nav}__link--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
+  --#{$nav}__toggle--TranslateY: calc((var(--#{$nav}--LineHeight) * var(--#{$nav}--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
 
-  // Nav horizontal
-  --#{$nav}--m-horizontal--Display: inline-flex;
-  --#{$nav}--m-horizontal--Padding: 0;
-  --#{$nav}--m-horizontal--FlexDirection: row;
+  // * Nav link clickable inset
+  --#{$nav}__link--clickable-inset--InlineStart: 0;
+  --#{$nav}__link--clickable-inset--InlineEnd: 0;
+  --#{$nav}__link--clickable-inset--Inline: var(--#{$nav}__link--clickable-inset--InlineStart) var(--#{$nav}__link--clickable-inset--InlineEnd);
+
+  // * Nav horizontal
   --#{$nav}--m-horizontal--BorderRadius: var(--pf-t--global--border--radius--pill);
+
+  // * Nav horizontal list
+  --#{$nav}--m-horizontal__list--ColumnGap: var(--pf-t--global--spacer--xs);
+
+  // * Nav horizontal list - base vars
   --#{$nav}--m-horizontal__list--PaddingBlockStart: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--pf-t--global--spacer--sm);
   --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--pf-t--global--spacer--md);
   --#{$nav}--m-horizontal__list--PaddingInlineEnd: var(--pf-t--global--spacer--md);
-  --#{$nav}--m-horizontal__list--ColumnGap: var(--pf-t--global--spacer--xs);
-  --#{$nav}--m-horizontal__link--AlignItems: center;
-  --#{$nav}--m-horizontal__link--WhiteSpace: nowrap;
-  --#{$nav}--m-horizontal__link--clickable-inset--block-start: calc(var(--#{$nav}--m-horizontal__list--PaddingBlockStart) * -1);
-  --#{$nav}--m-horizontal__link--clickable-inset--block-end: calc(var(--#{$nav}--m-horizontal__list--PaddingBlockEnd) * -1);
-  --#{$nav}--m-horizontal__link--clickable-inset--inline-start: calc(var(--#{$nav}--m-horizontal__list--ColumnGap) * -1);
-  --#{$nav}--m-horizontal__link--clickable-inset--inline-end: 0;
 
-  // Nav scrollable
-  --#{$nav}--m-scrollable__list--PaddingInlineStart: var(--pf-t--global--spacer--xs);
-  --#{$nav}--m-scrollable__list--PaddingInlineEnd: var(--pf-t--global--spacer--xs);
+  // * Nav horizontal list - mapped vars
+  --#{$nav}--m-horizontal__list--PaddingBlock: var(--#{$nav}--m-horizontal__list--PaddingBlockStart) var(--#{$nav}--m-horizontal__list--PaddingBlockEnd);
+  --#{$nav}--m-horizontal__list--PaddingInline: var(--#{$nav}--m-horizontal__list--PaddingInlineStart) var(--#{$nav}--m-horizontal__list--PaddingInlineEnd);
 
-  // Nav horizontal subnav link
+  // * Nav horizontal link - base vars
   --#{$nav}--m-horizontal--m-subnav__link--PaddingBlockStart: var(--pf-t--global--spacer--xs);
   --#{$nav}--m-horizontal--m-subnav__link--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineStart: var(--pf-t--global--spacer--md);
+  --#{$nav}--m-horizontal--m-subnav__link--PaddingInlineEnd: var(--pf-t--global--spacer--md);
 
-  // Nav horizontal subnav list
-  --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart: var(--pf-t--global--spacer--xs);
-  --#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd: var(--pf-t--global--spacer--xs);
+  // * Nav horizontal link - mapped vars
+  --#{$nav}--m-horizontal--m-subnav__link--PaddingBlock: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart) var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
+  --#{$nav}--m-horizontal--m-subnav__link--PaddingInline: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart) var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineEnd);
 
-  // Nav flyout variant ====================================== //
 
-  // stylelint-disable length-zero-no-unit
-  // Needs a unit because of type checking for use in calc()
-  --#{$nav}__item--m-flyout--c-menu--top-offset: 0px;
-  --#{$nav}__item--m-flyout--c-menu--left-offset: #{pf-size-prem(4px)};
-  --#{$nav}__item--m-flyout--c-menu--m-top--bottom-offset: 0px;
-  --#{$nav}__item--m-flyout--c-menu--m-left--right-offset: #{pf-size-prem(4px)};
-  // stylelint-enable
+  // * Nav horizontal subnav link
+  --#{$nav}--m-horizontal--m-subnav__link--PaddingBlock: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart) var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
 
-  // Nav enu
-  --#{$nav}__item--m-flyout--c-menu--Top: calc(0px + var(--#{$nav}__item--m-flyout--c-menu--top-offset));
-  --#{$nav}__item--m-flyout--c-menu--c-menu--Top: calc(var(--#{$nav}__item--m-flyout--c-menu--Top) - var(--#{$nav}__item--before--BorderWidth));
-  --#{$nav}__item--m-flyout--c-menu__list-item--first-child--c-menu--Top: 0;
-  --#{$nav}__item--m-flyout--c-menu--Left: calc(100% - var(--#{$nav}__item--m-flyout--c-menu--left-offset));
-  --#{$nav}__item--m-flyout--c-menu--m-left--Right: calc(100% - var(--#{$nav}__item--m-flyout--c-menu--m-left--right-offset));
-
-  // Nav menu flyout
-  --#{$nav}--c-menu--m-flyout--left-offset: #{pf-size-prem(4px)};
-  --#{$nav}--c-menu--m-flyout--m-left--right-offset: #{pf-size-prem(4px)};
-  --#{$nav}--c-menu--m-flyout--Top: 0;
-  --#{$nav}--c-menu--m-flyout--c-menu--Top: calc(var(--#{$nav}--c-menu--m-flyout--Top) * -1);
-  --#{$nav}--c-menu--m-flyout--c-menu--Right: auto;
-  --#{$nav}--c-menu--m-flyout--c-menu--Bottom: auto;
-  --#{$nav}--c-menu--m-flyout--c-menu--Left: calc(100% - var(--#{$nav}--c-menu--m-flyout--left-offset));
-  --#{$nav}--c-menu--m-flyout--m-left--Right: calc(100% - var(--#{$nav}--c-menu--m-flyout--m-left--right-offset));
-  --#{$nav}--c-menu--m-flyout--m-top--Bottom: 0;
+  // * Nav horizontal scrollable
+  --pf-v5-c-nav--horizontal-scrollable--PaddingInlineStart: var(--pf-t--global--border--width--extra-strong);
 }
 
 .#{$nav},
@@ -152,8 +124,7 @@
 .#{$nav}__subnav,
 .#{$nav}__list,
 .#{$nav}__item {
-  display: var(--#{$nav}--Display);
-  flex-direction: var(--#{$nav}--FlexDirection);
+  display: grid;
 }
 
 // Transition interactive elements
@@ -165,22 +136,22 @@
   transition: var(--#{$nav}--Transition);
 }
 
-// Nav root
+// - Nav root
 .#{$nav} {
   --#{$menu}--MinWidth: 100%;
 
   position: relative;
   row-gap: var(--#{$nav}--RowGap);
   max-width: 100%;
-  padding-block-start: var(--#{$nav}--PaddingBlockStart);
-  padding-block-end: var(--#{$nav}--PaddingBlockEnd);
-  padding-inline-start: var(--#{$nav}--PaddingInlineStart);
-  padding-inline-end: var(--#{$nav}--PaddingInlineEnd);
+  padding-block: var(--#{$nav}--PaddingBlock);
+  padding-inline: var(--#{$nav}--PaddingInline);
+  font-size: var(--#{$nav}--FontSize);
+  font-weight: var(--#{$nav}--FontWeight);
+  line-height: var(--#{$nav}--LineHeight);
   background-color: var(--#{$nav}--BackgroundColor);
 
   &:where(.pf-m-scrollable) {
-    --#{$nav}__list--PaddingInlineStart: var(--#{$nav}--m-scrollable__list--PaddingInlineStart);
-    --#{$nav}__list--PaddingInlineEnd: var(--#{$nav}--m-scrollable__list--PaddingInlineEnd);
+    padding-inline: var(--#{$nav}--m-scrollable__list--PaddingInline);
   }
 
   &.pf-m-overflow-hidden {
@@ -194,90 +165,79 @@
   &.pf-m-fill {
     flex-grow: 1;
   }
+
 }
 
-// Nav section
+[class^="#{$nav}"][hidden] {
+  display: none;
+}
+
+// Magic value calcs
+.#{$nav}__nav,
+.#{$nav}__list,
+.#{$nav}__subnav {
+  // These variables need to remove local to list and subnav to be recalculated upon row gap setting updates
+  --#{$nav}__item--RowGap--row-offset: calc(var(--#{$nav}__list--RowGap) / 2 * -1); // row gap offset calcs 1/2 height of row gap
+  --#{$nav}__link--clickable-inset--Block: var(--#{$nav}__item--RowGap--row-offset); // set link's clickable area offset based on 1/2 row gap
+  --#{$nav}__button--RowGap--row-offset: calc(var(--#{$nav}__item--RowGap) * -1); // match extra bottom paddings applied to expanded nav_links
+}
+
+// - Nav list
+.#{$nav}__list {
+  row-gap: var(--#{$nav}__list--RowGap);
+  column-gap: var(--#{$nav}__list--ColumnGap);
+}
+
+// - Nav subnav
+.#{$nav}__subnav {
+  --#{$nav}__list--RowGap: var(--#{$nav}__subnav--RowGap); // this value is passed to --#{$nav}__item--RowGap--row-offset and updates clickable area based on value passed
+
+  padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
+}
+
+// - Nav item
+.#{$nav}__item {
+  row-gap: var(--#{$nav}__item--RowGap); // no fallback here as this value is used to calc clickable offsets
+  scroll-snap-align: var(--#{$nav}__item--ScrollSnapAlign);
+
+  > .#{$nav}__link[button] {
+    margin-block-end: var(--#{$nav}__button--RowGap--row-offset);
+  }
+
+  &.pf-m-expanded:where(:is(:not(:only-child, :last-child))) {
+    margin-block-end: var(--#{$nav}__item--RowGap);
+
+    + .#{$nav}__item > .#{$nav}__link::before {
+      inset-block-start: calc(var(--#{$nav}__item--RowGap) * -1 - var(--#{$nav}__list--RowGap));
+    }
+  }
+}
+
+// - Nav section
 .#{$nav}__section {
-  row-gap: var(--#{$nav}__section--RowGap);
+  row-gap: var(--#{$nav}__section--RowGap, var(--#{$nav}__list--RowGap));
 }
 
-// Nav section title
+// - Nav section title
 .#{$nav}__section-title {
-  padding-inline-start: var(--#{$nav}__section-title--PaddingInlineStart);
-  padding-inline-end: var(--#{$nav}__section-title--PaddingInlineEnd);
+  padding-inline: var(--#{$nav}__section-title--PaddingInline, var(--#{$nav}__link--PaddingInline));
   font-size: var(--#{$nav}__section-title--FontSize);
   font-weight: var(--#{$nav}__section-title--FontWeight);
   color: var(--#{$nav}__section-title--Color);
 }
 
-// Nav list
-.#{$nav}__list {
-  --#{$divider}--after--Inset: calc(var(--#{$nav}__link--PaddingBlockStart) * 2); // Nav match link padding
-  --#{$nav}__link--clickable-offset--block-end: calc(var(--#{$nav}__list--RowGap) * -1);
-
-  row-gap: var(--#{$nav}__list--RowGap);
-}
-
-// Nav subnav
-.#{$nav}__subnav {
-  --#{$nav}__list--RowGap: var(--#{$nav}__subnav--RowGap);
-  --#{$nav}__link--clickable-inset--block-end: calc(var(--#{$nav}__subnav__list--RowGap) * -1);
-
-  padding-inline-start: var(--#{$nav}__subnav--PaddingInlineStart); // indent nested lists
-}
-
-// Nav item
-.#{$nav}__item {
-  scroll-snap-align: var(--#{$nav}__item--ScrollSnapAlign);
-
-  // set margin-block-end to zero to support transition
-  &.pf-m-expandable {
-    margin-block-end: var(--#{$nav}__item__link--MarginBlockEnd);
-
-    // add margin of --pf-t--global--spacer--sm to item that combines for total of --pf-t--global--spacer--md with row-gap
-    &:is(.pf-m-expanded:where(:not(:only-child, :last-child))) {
-      margin-block-end: var(--#{$nav}__item--m-expanded__link--MarginBlockEnd);
-    }
-  }
-
-  // clickable areas
-  &:last-child .#{$nav}__link:before {
-    inset-block-start: 0;
-  }
-
-  &:last-child:not(.pf-m-expanded) > .#{$nav}__link::before,
-  &.pf-m-expandable:not(.pf-m-expanded) {
-    @at-root .#{$nav}:where(:not(.pf-m-horizontal)) {
-      inset-block-end: 0;
-    }
-  }
-
-  &.pf-m-expanded + & > {
-    .#{$nav}__link:before {
-      inset-block-start: calc(var(--#{$nav}__item--m-expanded__link--MarginBlockEnd) * -1 - var(--#{$nav}__list--RowGap));
-    }
-  }
-}
-
-// Nav link
+// - Nav link
 .#{$nav}__link {
   position: relative;
   display: flex;
-  flex-direction: row;
-  column-gap: var(--#{$nav}__link--ColumnGap);
-  align-items: var(--#{$nav}__link--AlignItems);
-  width: 100%;
-  padding-block-start: var(--#{$nav}__link--PaddingBlockStart);
-  padding-block-end: var(--#{$nav}__link--PaddingBlockEnd);
-  padding-inline-start: var(--#{$nav}__link--PaddingInlineStart);
-  padding-inline-end: var(--#{$nav}__link--PaddingInlineEnd);
-  font-size: var(--#{$nav}__link--FontSize);
-  font-weight: var(--#{$nav}__link--FontWeight);
-  line-height: var(--#{$nav}__link--LineHeight);
+  column-gap: var(--#{$nav}__link--ColumnGap, var(--#{$nav}--ColumnGap));
+  align-items: var(--#{$nav}__link--AlignItems, var(--#{$nav}--AlignItems));
+  padding-block: var(--#{$nav}__link--PaddingBlock);
+  padding-inline: var(--#{$nav}__link--PaddingInline);
+  font-size: var(--#{$nav}__link--FontSize, inherit);
+  font-weight: var(--#{$nav}__link--FontWeight, inherit);
+  line-height: var(--#{$nav}__link--LineHeight, inherit);
   color: var(--#{$nav}__link--Color);
-  text-align: start;
-  text-decoration: none;
-  white-space: var(--#{$nav}__link--WhiteSpace);
   background-color: var(--#{$nav}__link--BackgroundColor);
   border: none;
   border-radius: var(--#{$nav}__link--BorderRadius);
@@ -285,12 +245,14 @@
   // adjust clickable target area to consume space between items to prevent cursor flicker
   &::before {
     position: absolute;
-    inset-block-start: var(--#{$nav}__link--clickable-inset--block-start);
-    inset-block-end: var(--#{$nav}__link--clickable-inset--block-end);
-    inset-inline-start: var(--#{$nav}__link--clickable-inset--inline-start);
-    inset-inline-end: var(--#{$nav}__link--clickable-inset--inline-end);
+    inset-block: var(--#{$nav}__link--clickable-inset--Block);
+    inset-inline: var(--#{$nav}__link--clickable-inset--Inline);
     content: "";
-    border: var(--pf-t--global--border--width--divider--default) dotted var(--pf-t--global--border--color--default);
+    border: 1px dotted;
+  }
+
+  &[aria-expanded="true"]::before {
+    inset-block-end: calc(var(--#{$nav}__item--RowGap) * -1);
   }
 
   // explicitly set background-color prop to avoid affecting child elements settings
@@ -315,18 +277,9 @@
     color: var(--#{$nav}__link--m-current--Color);
     background-color: var(--#{$nav}__link--m-current--BackgroundColor);
   }
-
-  .#{$nav}__item.pf-m-expanded > & {
-    margin-block-end: var(--#{$nav}__item--m-expanded__link--MarginBlockEnd);
-
-    // clickable area - adjust height to compensate for expanded nav items
-    &::before {
-      inset-block-end: calc(var(--#{$nav}__item--m-expanded__link--MarginBlockEnd) * -1);
-    }
-  }
 }
 
-// Nav toggle caret
+// - Nav toggle caret
 .#{$nav}__toggle {
   flex: none;
   align-self: start;
@@ -336,7 +289,7 @@
   transform: translateY(var(--#{$nav}__toggle--TranslateY));
 }
 
-// Nav toggle icon
+// - Nav toggle icon
 .#{$nav}__toggle-icon {
   display: inline-block;
   transform: rotate(var(--#{$nav}__item__toggle-icon--Rotate));
@@ -352,13 +305,14 @@
   }
 }
 
-// Nav scroll buttons
+// - Nav scroll buttons
 .#{$nav}__scroll-button {
   --#{$button}--Display: flex;
   --#{$button}--Flex: 1;
   --#{$button}--AlignItems: center;
   --#{$button}--JustifyContent: center;
 
+  // - Nav button
   position: relative;
   display: flex;
   flex: none;
@@ -368,10 +322,8 @@
 
   &::before {
     position: absolute;
-    inset-block-start: 0;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
+    inset-block: 0;
+    inset-inline: 0;
     content: "";
   }
 
@@ -404,73 +356,58 @@
   }
 }
 
-// Nav horizontal
-.#{$nav}.pf-m-horizontal {
-  --#{$nav}--Display: var(--#{$nav}--m-horizontal--Display);
-  --#{$nav}--FlexDirection: var(--#{$nav}--m-horizontal--FlexDirection);
-
-  // Nav horizontal list
-  // --#{$nav}__list--RowGap: var(--#{$nav}--m-horizontal__list--RowGap);
-  --#{$nav}__list--ColumnGap: var(--#{$nav}--m-horizontal__list--ColumnGap);
-
-  // Nav horizontal link
-  --#{$nav}__link--AlignSelf: var(--#{$nav}--m-horizontal__link--AlignSelf);
-  --#{$nav}__link--AlignItems:  var(--#{$nav}--m-horizontal__link--AlignItems);
-  --#{$nav}__link--WhiteSpace: var(--#{$nav}--m-horizontal__link--WhiteSpace);
-
-  // Nav horizontal link clickable
-  // extend clickable area to ltr/rtl edges, swap values
-  --#{$nav}__link--clickable-inset--block-start: calc(var(--#{$nav}--m-horizontal__list--PaddingBlockStart) * -1);
-  --#{$nav}__link--clickable-inset--block-end: calc(var(--#{$nav}--m-horizontal__list--PaddingBlockEnd) * -1);
-
-  padding: var(--#{$nav}--m-horizontal--Padding);
+// - Nav horizontal
+.#{$nav}:where(.pf-m-horizontal) {
+  padding: 0;
   overflow: hidden;
   border-radius: var(--#{$nav}--m-horizontal--BorderRadius);
 
-  .#{$nav}__scroll-button + .#{$nav}__list {
-    --#{$nav}--m-horizontal__list--PaddingInlineStart: var(--#{$nav}--m-horizontal__list--ColumnGap);
-    --#{$nav}--m-horizontal__list--PaddingInlineEnd: var(--#{$nav}--m-horizontal__list--ColumnGap);
+  &, // - Nav horizontal
+  .#{$nav}__section, // - Nav horizontal section
+  .#{$nav}__subnav, // - Nav horizontal subnav
+  .#{$nav}__list, // - Nav horizontal list
+  .#{$nav}__item { // - Nav horizontal item
+    display: flex;
   }
 
-  .#{$nav}__link::before {
-    inset-block-start: var(--#{$nav}--m-horizontal__link--clickable-inset--block-start);
-    inset-block-end: var(--#{$nav}--m-horizontal__link--clickable-inset--block-end);
-    inset-inline-start: var(--#{$nav}--m-horizontal__link--clickable-inset--inline-start);
-    inset-inline-end: var(--#{$nav}--m-horizontal__link--clickable-inset--inline-end);
-  }
-
+  // - Nav horizontal list
   .#{$nav}__list {
-    column-gap: var(--#{$nav}--m-horizontal__list--ColumnGap);
-    padding-block-start: var(--#{$nav}--m-horizontal__list--PaddingBlockStart);
-    padding-block-end: var(--#{$nav}--m-horizontal__list--PaddingBlockEnd);
-    padding-inline-start: var(--#{$nav}--m-horizontal__list--PaddingInlineStart);
-    padding-inline-end: var(--#{$nav}--m-horizontal__list--PaddingInlineEnd);
+    padding-block: var(--#{$nav}--m-horizontal__list--PaddingBlock);
+    padding-inline: var(--#{$nav}--m-horizontal__list--PaddingInline);
     overflow-x: auto;
     white-space: nowrap;
     scroll-snap-type: var(--#{$nav}__list--ScrollSnapType);
     -webkit-overflow-scrolling: touch;
 
     @include pf-v5-overflow-hide-scroll;
-
-    // extend clickable area to ltr/rtl edges, swap values
-    .#{$nav}__item:first-child {
-      --#{$nav}__link--clickable-area--inset-inline-start: calc(var(--#{$nav}--m-horizontal__list--PaddingInlineStart) * -1);
-    }
-
-    // extend clickable area to ltr/rtl edges, swap values
-    .#{$nav}__item:last-child {
-      --#{$nav}__link--clickable-area--inset-inline-end: calc(var(--#{$nav}--m-horizontal__list--PaddingInlineStart) * -1);
-    }
   }
 
+  // - Nav link before
+  .#{$nav}__link::before {
+    // offset vertical clickable area by list padding start/end
+    inset-block-start: calc(var(--#{$nav}--m-horizontal__list--PaddingBlockStart) * -1);
+    inset-block-end: calc(var(--#{$nav}--m-horizontal__list--PaddingBlockEnd) * -1);
+    inset-inline-start: calc(var(--#{$nav}--m-horizontal__list--ColumnGap) / 2 * -1);
+    inset-inline-end: calc(var(--#{$nav}--m-horizontal__list--ColumnGap) / 2 * -1);
+  }
+
+  // - Nav subnav
   &.pf-m-subnav {
-    --#{$nav}__link--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlockStart);
-    --#{$nav}__link--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart);
-    --#{$nav}--m-horizontal__list--PaddingBlockStart: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart);
-    --#{$nav}--m-horizontal__list--PaddingBlockEnd: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
-  }
-}
+    // - Nav subnav link
+    --#{$nav}__link--PaddingBlock: var(--#{$nav}--m-horizontal--m-subnav__link--PaddingBlock);
 
-[class^="#{$nav}"][hidden] {
-  display: none;
+    // - Nav subnav list
+    --#{$nav}__list--PaddingBlock: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockStart) var(--#{$nav}--m-horizontal--m-subnav__list--PaddingBlockEnd);
+    --#{$nav}__list--PaddingInline: var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart) var(--#{$nav}--m-horizontal--m-subnav__list--PaddingInlineStart);
+  }
+
+  // - Nav scrollable
+  .#{$nav}__scroll-button + .#{$nav}__list {
+    padding-inline-start: var(--pf-v5-c-nav--horizontal-scrollable--PaddingInlineStart);
+
+    // offset clickable area for first child by padding update
+    > :first-child .#{$nav}__link::before {
+      inset-inline-start: calc(var(--#{$nav}--m-horizontal__list--ColumnGap) / 2 * -1 - var(--pf-v5-c-nav--horizontal-scrollable--PaddingInlineStart));
+    }
+  }
 }
