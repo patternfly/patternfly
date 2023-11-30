@@ -197,9 +197,9 @@ import './PageHeader.css'
     Navigation
   {{/page-sidebar}}
   {{#> page-main}}
-    {{#> page-main-nav}}
+    {{#> page-main-subnav}}
       <code>.pf-v5-c-page__main-subnav</code> for horizontal subnav navigation
-    {{/page-main-nav}}
+    {{/page-main-subnav}}
     {{#> page-main-nav}}
       <code>.pf-v5-c-page__main-nav</code> for tertiary navigation
     {{/page-main-nav}}

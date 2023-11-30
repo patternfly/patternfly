@@ -37,11 +37,6 @@ import './Navigation.css'
 ## New Expandable
 ```hbs
 {{#> nav nav--id='new-expandable-example'}}
-  {{#> nav-section nav-section--id='Cluster' nav-section-title--text='Cluster'}}
-    {{#> nav-list}}
-      {{> nav-item nav-link nav-link--text='Dashboard'}}
-    {{/nav-list}}
-  {{/nav-section}}
   {{#> nav-list}}
     {{> nav-item nav-link nav-link--text='Dashboard'}}
     {{> nav-item nav-link nav-link--text='Builds'}}

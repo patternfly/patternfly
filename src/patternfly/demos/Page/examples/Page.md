@@ -45,7 +45,6 @@ wrapperTag: div
       page-template--id="page-demo-sticky-top-horizontal-subnav"
       page-template-gallery--IsLongGallery="true"
       page-template--HasHorizontalSubnav="true"
-      nav--HasContainer=true
       page-template-horizontal-subnav--modifier="pf-m-sticky-top"
 }}
 ```
@@ -56,7 +55,6 @@ wrapperTag: div
       page-template--id="page-demo-sticky-top-breadcrumb"
       page-template-gallery--IsLongGallery="true"
       page-template-breadcrumb--modifier="pf-m-sticky-top"
-      nav--HasContainer=true
 }}
 ```
 
