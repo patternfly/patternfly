@@ -1,16 +1,18 @@
 // @debug $skip-to-content; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$skip-to-content} {
-  --#{$skip-to-content}--Top: var(--#{$pf-global}--spacer--md);
+:root {
+  --#{$skip-to-content}--Top: var(--pf-t--global--spacer--md);
   --#{$skip-to-content}--ZIndex: var(--#{$pf-global}--ZIndex--2xl);
-  --#{$skip-to-content}--focus--Left: var(--#{$pf-global}--spacer--md);
+  --#{$skip-to-content}--focus--Left: var(--pf-t--global--spacer--md);
+}
 
+.#{$skip-to-content} {
   position: absolute;
- inset-block-start: var(--#{$skip-to-content}--Top);
- inset-inline-start: -300%; // moves off screen
+  inset-block-start: var(--#{$skip-to-content}--Top);
+  inset-inline-start: -300%; // moves off screen
   z-index: var(--#{$skip-to-content}--ZIndex);
 
   &:focus-within {
-   inset-inline-start: var(--#{$skip-to-content}--focus--Left);
+    inset-inline-start: var(--#{$skip-to-content}--focus--Left);
   }
 }
