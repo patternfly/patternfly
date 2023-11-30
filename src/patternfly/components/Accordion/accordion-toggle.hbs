@@ -1,6 +1,6 @@
-<{{#if accordion--IsDefinitionList}}dt>{{else}}h3>{{/if}}<button class="{{pfv}}accordion__toggle{{#if accordion-toggle--IsExpanded}} pf-m-expanded{{/if}}{{#if accordion-toggle--modifier}} {{accordion-toggle--modifier}}{{/if}}"
+<{{#if accordion--IsDefinitionList}}dt>{{else}}h3>{{/if}}<button class="{{pfv}}accordion__toggle{{#if accordion-toggle--modifier}} {{accordion-toggle--modifier}}{{/if}}"
   type="button"
-  {{#if accordion-toggle--IsExpanded}}
+  {{#if accordion-item--IsExpanded}}
    aria-expanded="true"
   {{else}}
    aria-expanded="false"
