@@ -11,7 +11,6 @@
   --#{$check}__input--TranslateY--moz: 5px;
   --#{$check}__description--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$check}__description--Color: var(--pf-t--global--text--color--subtle);
-  --#{$check}__body--MarginTop: var(--pf-t--global--spacer--sm);
 
   // Required checkbox
   --#{$check}__label-required--MarginLeft: var(--pf-t--global--spacer--xs);
@@ -59,7 +58,6 @@
 
 .#{$check}__body {
   grid-column: 2;
-  margin-block-start: var(--#{$check}__body--MarginTop);
 }
 
 .#{$check}__label,
