@@ -11,41 +11,25 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   // Page insets
   --#{$pagination}--m-page-insets--inset: var(--pf-t--global--spacer--md);
   --#{$pagination}--m-page-insets--xl--inset: var(--pf-t--global--spacer--lg);
-    
-  // dropdown
-  --#{$pagination}--c-menu-toggle--FontSize: var(--pf-t--global--font--size--body--md);
   
   // nav
   --#{$pagination}__nav--Display: none;
   --#{$pagination}--m-display-summary__nav--Display: none;
   --#{$pagination}--m-display-full__nav--Display: inline-flex;
   --#{$pagination}__nav--ColumnGap: var(--pf-t--global--spacer--sm);
-  
-  // nav control
-  --#{$pagination}__nav-control--c-button--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$pagination}__nav-control--c-button--PaddingLeft: var(--pf-t--global--spacer--sm);
-  --#{$pagination}__nav-control--c-button--FontSize: var(--pf-t--global--font--size--body--md);
-  --#{$pagination}--m-bottom__nav-control--c-button--OutlineOffset: calc(var(--pf-t--global--spacer--xs) * -1);
-  --#{$pagination}--m-bottom__nav-control--c-button--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-bottom__nav-control--c-button--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-bottom__nav-control--c-button--PaddingRight: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingTop: var(--pf-t--global--spacer--sm); // TODO: replace with form element token
-  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingRight: var(--pf-t--global--spacer--sm);
-  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingBottom: var(--pf-t--global--spacer--sm); // TODO: replace with form element token
-  --#{$pagination}--m-bottom__nav-control--c-button--md--PaddingLeft: var(--pf-t--global--spacer--sm);
-  
+
   // nav page select
   --#{$pagination}__nav-page-select--FontSize: var(--pf-t--global--font--size--body--md);
   --#{$pagination}__nav-page-select--ColumnGap: var(--pf-t--global--spacer--sm);
   --#{$pagination}__nav-page-select--c-form-control--width-base: calc(var(--pf-t--global--spacer--sm) * 2 + var(--pf-t--global--border--width--100) * 2); // TODO: replace border width token with semantic token
   --#{$pagination}__nav-page-select--c-form-control--width-chars: 2;
   --#{$pagination}__nav-page-select--c-form-control--Width: calc(var(--#{$pagination}__nav-page-select--c-form-control--width-base) + (var(--#{$pagination}__nav-page-select--c-form-control--width-chars) * 1ch));
-  
+
   // total items
   --#{$pagination}__total-items--Display: block;
   --#{$pagination}--m-display-summary__total-items--Display: block;
   --#{$pagination}--m-display-full__total-items--Display: none;
-  
+
   // top
   --#{$pagination}--m-sticky--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$pagination}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--bottom);
@@ -55,7 +39,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-sticky--md--PaddingLeft: var(--pf-t--global--spacer--md);
   --#{$pagination}--m-sticky--ZIndex: 100; // TODO: replace with z-index token
   --#{$pagination}--m-sticky--Top: 0;
-  
+
   // bottom
   --#{$pagination}--m-bottom--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$pagination}--m-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
@@ -67,24 +51,19 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--xl--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
-  
+
   // options menu
-  --#{$pagination}--c-menu-toggle--Display: none;
-  --#{$pagination}--m-display-summary--c-menu-toggle--Display: none;
-  --#{$pagination}--m-display-full--c-menu-toggle--Display: inline-flex;
+  --#{$pagination}__page-menu--Display: none;
+  --#{$pagination}--m-display-summary__page-menu--Display: none;
+  --#{$pagination}--m-display-full__page-menu--Display: inline-flex;
 
   @media screen and (min-width: $pf-v5-global--breakpoint--md) {
-    --#{$pagination}--m-bottom__nav-control--c-button--PaddingTop: var(--#{$pagination}--m-bottom__nav-control--c-button--md--PaddingTop);
-    --#{$pagination}--m-bottom__nav-control--c-button--PaddingRight: var(--#{$pagination}--m-bottom__nav-control--c-button--md--PaddingRight);
-    --#{$pagination}--m-bottom__nav-control--c-button--PaddingBottom: var(--#{$pagination}--m-bottom__nav-control--c-button--md--PaddingBottom);
-    --#{$pagination}--m-bottom__nav-control--c-button--PaddingLeft: var(--#{$pagination}--m-bottom__nav-control--c-button--md--PaddingLeft);
-    --#{$pagination}--m-bottom__nav-control--c-button--OutlineOffset: 0;
     --#{$pagination}--m-bottom--BoxShadow: none;
-    --#{$pagination}--c-menu-toggle--Display: inline-flex;
+    --#{$pagination}__page-menu--Display: inline-flex;
     --#{$pagination}__nav--Display: inline-flex;
     --#{$pagination}__total-items--Display: none;
   }
-  
+
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
     --#{$pagination}--m-bottom--md--PaddingRight: var(--#{$pagination}--m-bottom--xl--PaddingRight);
     --#{$pagination}--m-bottom--md--PaddingLeft: var(--#{$pagination}--m-bottom--xl--PaddingLeft);
@@ -102,25 +81,13 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   padding-inline-start: var(--#{$pagination}--PaddingLeft);
   padding-inline-end: var(--#{$pagination}--PaddingRight);
 
-  .#{$menu-toggle} {
-    display: var(--#{$pagination}--c-menu-toggle--Display);
-    font-size: var(--#{$pagination}--c-menu-toggle--FontSize);
+  .#{$pagination}__page-menu {
+    display: var(--#{$pagination}__page-menu--Display);
   }
 
   &.pf-m-bottom {
-    --#{$pagination}__nav-control--c-button--PaddingRight: var(--#{$pagination}--m-bottom__nav-control--c-button--PaddingRight);
-    --#{$pagination}__nav-control--c-button--PaddingLeft: var(--#{$pagination}--m-bottom__nav-control--c-button--PaddingRight);
     --#{$pagination}--m-sticky--BoxShadow: var(--#{$pagination}--m-bottom--m-sticky--BoxShadow);
     --#{$pagination}--m-sticky--Top: auto;
-
-    .#{$pagination}__nav-control {
-      .#{$button} {
-        --#{$button}--PaddingTop: var(--#{$pagination}--m-bottom__nav-control--c-button--PaddingTop);
-        --#{$button}--PaddingBottom: var(--#{$pagination}--m-bottom__nav-control--c-button--PaddingBottom);
-
-        outline-offset: var(--#{$pagination}--m-bottom__nav-control--c-button--OutlineOffset);
-      }
-    }
 
     position: sticky;
     inset-block-end: var(--#{$pagination}--m-bottom--Bottom);
@@ -142,7 +109,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
       display: none;
     }
 
-    .#{$menu-toggle} {
+    .#{$pagination}__page-menu {
       position: absolute;
       display: block;
     }
@@ -175,7 +142,7 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
         display: inline-flex;
       }
 
-      .#{$menu-toggle} {
+      .#{$pagination}__page-menu {
         position: relative;
       }
 
@@ -223,12 +190,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 // nav control
 .#{$pagination}__nav-control {
   @include pf-v5-mirror-inline-on-rtl;
-
-  .#{$button} {
-    padding-inline-start: var(--#{$pagination}__nav-control--c-button--PaddingLeft);
-    padding-inline-end: var(--#{$pagination}__nav-control--c-button--PaddingRight);
-    font-size: var(--#{$pagination}__nav-control--c-button--FontSize);
-  }
 }
 
 // nav page element
@@ -264,13 +225,13 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     @include pf-v5-apply-breakpoint($breakpoint) {
       &.pf-m-display-summary#{$breakpoint-name} {
         --#{$pagination}__nav--Display: var(--#{$pagination}--m-display-summary__nav--Display);
-        --#{$pagination}--c-menu-toggle--Display: var(--#{$pagination}--m-display-summary--c-menu-toggle--Display);
+        --#{$pagination}__page-menu--Display: var(--#{$pagination}--m-display-summary__page-menu--Display);
         --#{$pagination}__total-items--Display: var(--#{$pagination}--m-display-summary__total-items--Display);
       }
 
       &.pf-m-display-full#{$breakpoint-name} {
         --#{$pagination}__nav--Display: var(--#{$pagination}--m-display-full__nav--Display);
-        --#{$pagination}--c-menu-toggle--Display: var(--#{$pagination}--m-display-full--c-menu-toggle--Display);
+        --#{$pagination}__page-menu--Display: var(--#{$pagination}--m-display-full__page-menu--Display);
         --#{$pagination}__total-items--Display: var(--#{$pagination}--m-display-full__total-items--Display);
       }
 
