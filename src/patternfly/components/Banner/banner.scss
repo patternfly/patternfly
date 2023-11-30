@@ -1,15 +1,15 @@
 // @debug $banner; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-.#{$banner} {
-  --#{$banner}--PaddingTop: var(--#{$pf-global}--spacer--xs);
-  --#{$banner}--PaddingRight: var(--#{$pf-global}--spacer--md);
-  --#{$banner}--md--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$banner}--PaddingBottom: var(--#{$pf-global}--spacer--xs);
-  --#{$banner}--PaddingLeft: var(--#{$pf-global}--spacer--md);
-  --#{$banner}--md--PaddingLeft: var(--#{$pf-global}--spacer--lg);
-  --#{$banner}--FontSize: var(--#{$pf-global}--FontSize--sm);
-  --#{$banner}--Color: var(--#{$pf-global}--Color--100);
-  --#{$banner}--BackgroundColor: var(--#{$pf-global}--BackgroundColor--dark-400);
+:root {
+  --#{$banner}--PaddingTop: var(--pf-t--global--spacer--xs);
+  --#{$banner}--PaddingRight: var(--pf-t--global--spacer--md);
+  --#{$banner}--md--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$banner}--PaddingBottom: var(--pf-t--global--spacer--xs);
+  --#{$banner}--PaddingLeft: var(--pf-t--global--spacer--md);
+  --#{$banner}--md--PaddingLeft: var(--pf-t--global--spacer--lg);
+  --#{$banner}--FontSize: var(--pf-t--global--font--size--body);
+  --#{$banner}--Color: var(--pf-t--global--text--color--nonstatus--on-gray--default);
+  --#{$banner}--BackgroundColor: var(--pf-t--global--color--nonstatus--gray--default);
 
   @media (min-width: $pf-v5-global--breakpoint--md) {
     --#{$banner}--PaddingRight: var(--#{$banner}--md--PaddingRight);
@@ -20,21 +20,46 @@
   --#{$banner}--link--Color: var(--#{$banner}--Color);
   --#{$banner}--link--TextDecoration: underline;
   --#{$banner}--link--hover--Color: var(--#{$banner}--Color);
-  --#{$banner}--link--hover--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$banner}--link--hover--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$banner}--link--disabled--Color: var(--#{$banner}--Color);
   --#{$banner}--link--disabled--TextDecoration: none;
 
   // modifier variables
-  --#{$banner}--m-blue--BackgroundColor: var(--#{$pf-global}--palette--blue-200);
-  --#{$banner}--m-red--BackgroundColor: var(--#{$pf-global}--danger-color--100);
-  --#{$banner}--m-green--BackgroundColor: var(--#{$pf-global}--success-color--100);
-  --#{$banner}--m-gold--BackgroundColor: var(--#{$pf-global}--warning-color--100);
   --#{$banner}--m-sticky--ZIndex: var(--#{$pf-global}--ZIndex--md);
-  --#{$banner}--m-sticky--BoxShadow: var(--#{$pf-global}--BoxShadow--md-bottom);
+  --#{$banner}--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--md);
 
-  @include pf-v5-t-dark;
-  @include pf-v5-text-overflow;
+  // status modifier variables
+  --#{$banner}--m-danger--BackgroundColor: var(--pf-t--global--color--status--danger--default);
+  --#{$banner}--m-danger--Color: var(--pf-t--global--text--color--status--on-danger--default);
+  --#{$banner}--m-success--BackgroundColor: var(--pf-t--global--color--status--success--default);
+  --#{$banner}--m-success--Color: var(--pf-t--global--text--color--status--on-success--default);
+  --#{$banner}--m-warning--BackgroundColor: var(--pf-t--global--color--status--warning--default);
+  --#{$banner}--m-warning--Color: var(--pf-t--global--text--color--status--on-warning--default);
+  --#{$banner}--m-info--BackgroundColor: var(--pf-t--global--color--status--info--default);
+  --#{$banner}--m-info--Color: var(--pf-t--global--text--color--status--on-info--default);
+  --#{$banner}--m-custom--BackgroundColor: var(--pf-t--global--color--status--custom--default);
+  --#{$banner}--m-custom--Color: var(--pf-t--global--text--color--status--on-custom--default);
 
+  // nonstatus modifier variables
+  --#{$banner}--m-red--BackgroundColor: var(--pf-t--global--color--nonstatus--red--default);
+  --#{$banner}--m-red--Color: var(--pf-t--global--text--color--nonstatus--on-red--default);
+  --#{$banner}--m-orangered--BackgroundColor: var(--pf-t--global--color--nonstatus--orangered--default);
+  --#{$banner}--m-orangered--Color: var(--pf-t--global--text--color--nonstatus--on-orangered--default);
+  --#{$banner}--m-orange--BackgroundColor: var(--pf-t--global--color--nonstatus--orange--default);
+  --#{$banner}--m-orange--Color: var(--pf-t--global--text--color--nonstatus--on-orange--default);
+  --#{$banner}--m-gold--BackgroundColor: var(--pf-t--global--color--nonstatus--gold--default);
+  --#{$banner}--m-gold--Color: var(--pf-t--global--text--color--nonstatus--on-gold--default);
+  --#{$banner}--m-green--BackgroundColor: var(--pf-t--global--color--nonstatus--green--default);
+  --#{$banner}--m-green--Color: var(--pf-t--global--text--color--nonstatus--on-green--default);
+  --#{$banner}--m-cyan--BackgroundColor: var(--pf-t--global--color--nonstatus--cyan--default);
+  --#{$banner}--m-cyan--Color: var(--pf-t--global--text--color--nonstatus--on-cyan--default);
+  --#{$banner}--m-blue--BackgroundColor: var(--pf-t--global--color--nonstatus--blue--default);
+  --#{$banner}--m-blue--Color: var(--pf-t--global--text--color--nonstatus--on-blue--default);
+  --#{$banner}--m-purple--BackgroundColor: var(--pf-t--global--color--nonstatus--purple--default);
+  --#{$banner}--m-purple--Color: var(--pf-t--global--text--color--nonstatus--on-purple--default);
+}
+
+.#{$banner} {
   flex-shrink: 0;
   padding-block-start: var(--#{$banner}--PaddingTop);
   padding-block-end: var(--#{$banner}--PaddingBottom);
@@ -45,24 +70,64 @@
   white-space: nowrap;
   background-color: var(--#{$banner}--BackgroundColor);
 
-  &.pf-m-blue {
-    @include pf-v5-t-light(false);
+  &.pf-m-danger {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-danger--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-danger--Color);
+  }
 
-    --#{$banner}--BackgroundColor: var(--#{$banner}--m-blue--BackgroundColor);
+  &.pf-m-success {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-success--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-success--Color);
+  }
+
+  &.pf-m-warning {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-warning--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-warning--Color);
+  }
+
+  &.pf-m-info {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-info--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-info--Color);
   }
 
   &.pf-m-red {
     --#{$banner}--BackgroundColor: var(--#{$banner}--m-red--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-red--Color);
+  }
+  
+  &.pf-m-orangered {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-orangered--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-orangered--Color);
+  }
+
+  &.pf-m-orange {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-orange--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-orange--Color);
+  }
+
+  &.pf-m-gold {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-gold--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-gold--Color);
   }
 
   &.pf-m-green {
     --#{$banner}--BackgroundColor: var(--#{$banner}--m-green--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-green--Color);
   }
 
-  &.pf-m-gold {
-    @include pf-v5-t-light(false);
+  &.pf-m-cyan {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-cyan--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-cyan--Color);
+  }
 
-    --#{$banner}--BackgroundColor: var(--#{$banner}--m-gold--BackgroundColor);
+  &.pf-m-blue {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-blue--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-blue--Color);
+  }
+
+  &.pf-m-purple {
+    --#{$banner}--BackgroundColor: var(--#{$banner}--m-purple--BackgroundColor);
+    --#{$banner}--Color: var(--#{$banner}--m-purple--Color);
   }
 
   &.pf-m-sticky {
@@ -112,11 +177,4 @@
       cursor: not-allowed;
     }
   }
-}
-
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/banner";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-banner;
 }
