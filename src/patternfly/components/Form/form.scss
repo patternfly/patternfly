@@ -25,9 +25,10 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 :root {
-  --#{$form}--GridGap: var(--pf-t--global--spacer--lg); // TODO gutter token variable
+  --#{$form}--GridGap: var(--pf-t--global--spacer--lg);
 
   // Group
+  --#{$form}__group--Gap: var(--pf-t--global--spacer--sm);
   --#{$form}__group--m-action--MarginTop: var(--pf-t--global--spacer--xl);
   --#{$form}--m-horizontal__group-label--md--GridColumnWidth: #{pf-size-prem(150px)};
   --#{$form}--m-horizontal__group-label--md--GridColumnGap: var(--pf-t--global--spacer--md);
@@ -52,7 +53,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // plus the border width used by the text inputs is 1px
   // So we need to adjust by 21 - 16.1 + 1 = 5.9px
 
-  --#{$form}--m-horizontal__group-label--md--PaddingTop: calc((((((var(--pf-t--global--font--size--body) * var(--pf-t--global--font--line-height--body)) + (2 * var(--pf-t--global--border--width--control--default))) - var(--pf-t--global--font--size--body)) / 2) + var(--pf-t--global--font--size--body)) - ((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) + var(--pf-t--global--border--width--control--default)); // TODO Not yet right
+  --#{$form}--m-horizontal__group-label--md--PaddingTop: calc((((((var(--pf-t--global--font--size--body) * var(--pf-t--global--font--line-height--body)) + (2 * var(--pf-t--global--border--width--control--default))) - var(--pf-t--global--font--size--body)) / 2) + var(--pf-t--global--font--size--body)) - ((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) + var(--pf-t--global--border--width--control--default));
   --#{$form}__group-label--PaddingBottom: var(--pf-t--global--spacer--sm);
 
   // Use the no-padding modifier to align form groups that aren't text inputs
@@ -62,7 +63,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // - controls like checkboxes use the medium font and small line height
   // - This comes out to a difference of 2.3px.
   --#{$form}--m-horizontal__group-label--m-no-padding--md--PaddingTop: 0;
-  --#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY: calc(((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) - ((((var(--pf-t--global--font--size--body) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body)) / 2) + var(--pf-t--global--font--size--body))); // TODO
+  --#{$form}--m-horizontal__group-label--m-no-padding--md--TranslateY: calc(((((var(--pf-t--global--font--size--body--sm) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body--sm)) / 2) + var(--pf-t--global--font--size--body--sm)) - ((((var(--pf-t--global--font--size--body) * var(--pf-t--global--font--line-height--body)) - var(--pf-t--global--font--size--body)) / 2) + var(--pf-t--global--font--size--body)));
 
   // Label
   --#{$form}__label--FontSize: var(--pf-t--global--font--size--body--sm);
@@ -92,7 +93,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   --#{$form}__group-label-help--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$form}__group-label-help--TranslateY: #{pf-size-prem(2px)};
   --#{$form}__group-label-help--Color: var(--pf-t--global--icon--color--regular);
-  --#{$form}__group-label-help--hover--Color: var(--pf-t--global--icon--color--brand--default); // TODO check?
+  --#{$form}__group-label-help--hover--Color: var(--pf-t--global--icon--color--regular);
   --#{$form}__group-label-help--focus--Color: var(--pf-t--global--icon--color--brand--hover);
 
   // Form group label info
@@ -102,6 +103,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   // Group control
   --#{$form}__group-control--m-inline--child--MarginRight: var(--pf-t--global--spacer--lg);
   --#{$form}__group-control__helper-text--MarginBottom: var(--pf-t--global--spacer--xs);
+  --#{$form}__group-control--Gap: var(--pf-t--global--spacer--sm);
   --#{$form}__group-control--m-stack--Gap: var(--pf-t--global--spacer--sm);
   --#{$form}__group-control--m-stack__helper-text--MarginTop: calc(var(--#{$form}__group-control--m-stack--Gap) * -1 + var(--#{$form}__helper-text--MarginTop--base));
 
@@ -127,7 +129,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   // Section
   --#{$form}__section--MarginTop: var(--pf-t--global--spacer--xl);
-  --#{$form}__section--Gap: var(--pf-t--global--spacer--md); // TODO gutter token?
+  --#{$form}__section--Gap: var(--pf-t--global--spacer--md);
 
   // Section title
   --#{$form}__section-title--FontSize: var(--pf-t--global--font--size--heading--xs);
@@ -217,6 +219,10 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$form}__group--Gap);
+
   &.pf-m-action {
     margin-block-start: var(--#{$form}__group--m-action--MarginTop);
     overflow: hidden; // keeps the negative bottom margin bottom on .#{$form}__actions from triggering overflow
@@ -242,7 +248,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 .#{$form}__group-label {
   --#{$form}__helper-text--MarginTop: 0;
 
-  padding-block-end: var(--#{$form}__group-label--PaddingBottom);
+  // padding-block-end: var(--#{$form}__group-label--PaddingBottom);
 
   &.pf-m-info {
     display: flex;
@@ -255,7 +261,7 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__group-label-info {
-  margin-inline-start: var(--#{$form}__group-label-info--MarginLeft);
+  // margin-inline-start: var(--#{$form}__group-label-info--MarginLeft);
   font-size: var(--#{$form}__group-label-info--FontSize);
 }
 
@@ -318,6 +324,9 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
 
 .#{$form}__group-control {
+  display: grid;
+  gap: var(--#{$form}__group-control--Gap);
+
   &.pf-m-inline {
     display: flex;
     flex-flow: row wrap;
@@ -333,9 +342,9 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 
   &.pf-m-stack {
     --#{$form}__helper-text--MarginTop: var(--#{$form}__group-control--m-stack__helper-text--MarginTop);
+    --#{$form}__group-control--Gap: var(--#{$form}__group-control--m-stack--Gap);
 
     display: grid;
-    gap: var(--#{$form}__group-control--m-stack--Gap);
   }
 
   .#{$form}__helper-text:first-child {

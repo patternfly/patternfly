@@ -44,17 +44,16 @@
   --#{$form-control}--m-disabled--after--BorderColor: transparent;
 
   // readonly
-  // TODO check these values
   --#{$form-control}--m-readonly--BackgroundColor: var(--pf-t--global--background--color--secondary--default);
   --#{$form-control}--m-readonly--BorderColor: transparent;
-  --#{$form-control}--m-readonly--hover--after--BorderColor: revert; // var(--#{$form-control}--m-readonly--BackgroundColor);
+  --#{$form-control}--m-readonly--hover--after--BorderColor: revert;
   --#{$form-control}--m-readonly--focus--after--BorderWidth: var(--pf-t--global--border--width--control--active);
   --#{$form-control}--m-readonly--focus--after--BorderColor: var(--pf-t--global--border--color--active);
 
   // readonly plain
   --#{$form-control}--m-readonly--m-plain--BackgroundColor: transparent;
   --#{$form-control}--m-readonly--m-plain--inset--base: 0;
-  --#{$form-control}--m-readonly--m-plain--OutlineOffset: 0; // TODO change this if we want it to match the others
+  --#{$form-control}--m-readonly--m-plain--OutlineOffset: 0;
 
   // success
   --#{$form-control}--m-success--after--BorderWidth: var(--pf-t--global--border--width--control--default);
@@ -94,7 +93,7 @@
   --#{$form-control}--textarea--Height: auto;
 
   // Form control icon 
-  --#{$form-control}__icon--PaddingTop: var(--pf-t--global--spacer--sm); // var(--#{$pf-global}--spacer--form-element);
+  --#{$form-control}__icon--PaddingTop: var(--pf-t--global--spacer--sm);
   --#{$form-control}__icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$form-control}__icon--m-status--Color: var(--pf-t--global--icon--color--regular);
   --#{$form-control}--m-success__icon--m-status--Color: var(--pf-t--global--icon--color--status--success--default);
