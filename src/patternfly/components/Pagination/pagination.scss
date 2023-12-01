@@ -4,8 +4,6 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
 
 :root {
   --#{$pagination}--inset: 0;
-  --#{$pagination}--PaddingRight: var(--#{$pagination}--inset);
-  --#{$pagination}--PaddingLeft: var(--#{$pagination}--inset);
   --#{$pagination}--ColumnGap: var(--pf-t--global--spacer--lg);
   
   // Page insets
@@ -78,8 +76,8 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   column-gap: var(--#{$pagination}--ColumnGap);
   align-items: center;
   justify-content: flex-end;
-  padding-inline-start: var(--#{$pagination}--PaddingLeft);
-  padding-inline-end: var(--#{$pagination}--PaddingRight);
+  padding-inline-start: var(--#{$pagination}--inset);
+  padding-inline-end: var(--#{$pagination}--inset);
 
   .#{$pagination}__page-menu {
     display: var(--#{$pagination}__page-menu--Display);
