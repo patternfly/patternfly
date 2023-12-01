@@ -20,9 +20,9 @@
   --#{$empty-state}__icon--MarginBottom: var(--pf-t--global--spacer--lg);
   --#{$empty-state}__icon--FontSize: var(--pf-t--global--icon--size--xl);
   --#{$empty-state}__icon--Color: var(--pf-t--global--icon--color--subtle);
-  --#{$empty-state}--m-xs__icon--MarginBottom: var(--pf-t--global--spacer--md);
+  --#{$empty-state}--m-xs__icon--MarginBottom: var(--pf-t--global--spacer--lg);
   --#{$empty-state}--m-xl__icon--MarginBottom: var(--pf-t--global--spacer--xl);
-  --#{$empty-state}--m-xl__icon--FontSize: #{pf-size-prem(100px)};
+  --#{$empty-state}--m-xl__icon--FontSize: var(--pf-t--global--icon--size--2xl);
 
   // Status variant icon color
   --#{$empty-state}--m-danger__icon--Color: var(--pf-t--global--icon--color--status--danger--default);
@@ -44,13 +44,13 @@
   --#{$empty-state}__body--MarginTop: var(--pf-t--global--spacer--md);
   --#{$empty-state}__body--Color: var(--pf-t--global--text--color--subtle);
   --#{$empty-state}--body--FontSize: var(--pf-t--global--font--size--body--lg);
-  --#{$empty-state}--m-xs__body--FontSize: var(--pf-t--global--font--size--body);
+  --#{$empty-state}--m-xs__body--FontSize: var(--pf-t--global--font--size--body--lg);
   --#{$empty-state}--m-xs__body--MarginTop: var(--pf-t--global--spacer--md);
   --#{$empty-state}--m-xl__body--FontSize: var(--pf-t--global--font--size--body--lg);
-  --#{$empty-state}--m-xl__body--MarginTop: var(--pf-t--global--spacer--lg);
+  --#{$empty-state}--m-xl__body--MarginTop: var(--pf-t--global--spacer--xl);
 
   // Footer
-  --#{$empty-state}__footer--RowGap: var(--pf-t--global--spacer--md);
+  --#{$empty-state}__footer--RowGap: var(--pf-t--global--spacer--sm);
   --#{$empty-state}__footer--MarginTop: var(--pf-t--global--spacer--xl);
   --#{$empty-state}--m-xs__footer--MarginTop: var(--pf-t--global--spacer--md);
 
