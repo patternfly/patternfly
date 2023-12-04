@@ -136,3 +136,9 @@
   }
 }
 
+// stylelint-disable no-invalid-position-at-import-rule
+@import "./themes/dark/globals";
+
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-globals;
+}
