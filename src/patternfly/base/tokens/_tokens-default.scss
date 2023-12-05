@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 04 Dec 2023 20:30:10 GMT
+ * Generated on Tue, 05 Dec 2023 16:11:05 GMT
  */
 
 :root {
@@ -109,14 +109,14 @@
   --pf-t--global--Zindex--md: 300;
   --pf-t--global--Zindex--sm: 200;
   --pf-t--global--Zindex--xs: 100;
-  --pf-t--global--font--size--4xl: 36px;
-  --pf-t--global--font--size--3xl: 28px;
-  --pf-t--global--font--size--2xl: 22px;
-  --pf-t--global--font--size--xl: 20px;
-  --pf-t--global--font--size--lg: 18px;
-  --pf-t--global--font--size--md: 16px;
-  --pf-t--global--font--size--sm: 14px;
-  --pf-t--global--font--size--xs: 12px;
+  --pf-t--global--font--size--4xl: var(--pf-t--global--font--size--800);
+  --pf-t--global--font--size--3xl: var(--pf-t--global--font--size--700);
+  --pf-t--global--font--size--2xl: var(--pf-t--global--font--size--600);
+  --pf-t--global--font--size--xl: var(--pf-t--global--font--size--500);
+  --pf-t--global--font--size--lg: var(--pf-t--global--font--size--400);
+  --pf-t--global--font--size--md: var(--pf-t--global--font--size--300);
+  --pf-t--global--font--size--sm: var(--pf-t--global--font--size--200);
+  --pf-t--global--font--size--xs: var(--pf-t--global--font--size--100);
   --pf-t--global--border--color--200: var(--pf-t--color--gray--40);
   --pf-t--global--border--color--100: var(--pf-t--color--gray--30);
   --pf-t--global--border--radius--pill: var(--pf-t--global--border--radius--500);
@@ -244,15 +244,15 @@
   --pf-t--global--background--color--primary--default: var(--pf-t--global--background--color--100);
   --pf-t--global--background--color--highlight--clicked: var(--pf-t--global--background--color--highlight--200);
   --pf-t--global--background--color--highlight--default: var(--pf-t--global--background--color--highlight--100);
-  --pf-t--global--font--size--heading--h6: 16px;
-  --pf-t--global--font--size--heading--h5: 16px;
-  --pf-t--global--font--size--heading--h4: 16px;
-  --pf-t--global--font--size--heading--h3: 18px;
-  --pf-t--global--font--size--heading--h2: 20px;
-  --pf-t--global--font--size--heading--h1: 22px;
-  --pf-t--global--font--size--body--large: 16px;
-  --pf-t--global--font--size--body--default: 14px;
-  --pf-t--global--font--size--body--small: 12px;
+  --pf-t--global--font--size--heading--h6: var(--pf-t--global--font--size--md);
+  --pf-t--global--font--size--heading--h5: var(--pf-t--global--font--size--md);
+  --pf-t--global--font--size--heading--h4: var(--pf-t--global--font--size--md);
+  --pf-t--global--font--size--heading--h3: var(--pf-t--global--font--size--lg);
+  --pf-t--global--font--size--heading--h2: var(--pf-t--global--font--size--xl);
+  --pf-t--global--font--size--heading--h1: var(--pf-t--global--font--size--2xl);
+  --pf-t--global--font--size--body--large: var(--pf-t--global--font--size--md);
+  --pf-t--global--font--size--body--default: var(--pf-t--global--font--size--sm);
+  --pf-t--global--font--size--body--small: var(--pf-t--global--font--size--xs);
   --pf-t--global--border--color--nonstatus--gray--clicked: var(--pf-t--global--color--nonstatus--gray--300);
   --pf-t--global--border--color--nonstatus--gray--hover: var(--pf-t--global--color--nonstatus--gray--300);
   --pf-t--global--border--color--nonstatus--gray--default: var(--pf-t--global--color--nonstatus--gray--200);
@@ -450,14 +450,14 @@
   --pf-t--global--icon--color--brand--clicked: var(--pf-t--global--color--brand--clicked);
   --pf-t--global--icon--color--brand--hover: var(--pf-t--global--color--brand--hover);
   --pf-t--global--icon--color--brand--default: var(--pf-t--global--color--brand--default);
-  --pf-t--global--icon--size--body--large: 16px;
-  --pf-t--global--icon--size--body--default: 14px;
-  --pf-t--global--icon--size--body--small: 12px;
-  --pf-t--global--icon--size--heading--h6: 16px;
-  --pf-t--global--icon--size--heading--h5: 16px;
-  --pf-t--global--icon--size--heading--h4: 16px;
-  --pf-t--global--icon--size--heading--h3: 18px;
-  --pf-t--global--icon--size--heading--h2: 20px;
-  --pf-t--global--icon--size--heading--h1: 22px;
+  --pf-t--global--icon--size--body--large: var(--pf-t--global--font--size--body--large);
+  --pf-t--global--icon--size--body--default: var(--pf-t--global--font--size--body--default);
+  --pf-t--global--icon--size--body--small: var(--pf-t--global--font--size--body--small);
+  --pf-t--global--icon--size--heading--h6: var(--pf-t--global--font--size--heading--h6);
+  --pf-t--global--icon--size--heading--h5: var(--pf-t--global--font--size--heading--h5);
+  --pf-t--global--icon--size--heading--h4: var(--pf-t--global--font--size--heading--h4);
+  --pf-t--global--icon--size--heading--h3: var(--pf-t--global--font--size--heading--h3);
+  --pf-t--global--icon--size--heading--h2: var(--pf-t--global--font--size--heading--h2);
+  --pf-t--global--icon--size--heading--h1: var(--pf-t--global--font--size--heading--h1);
   --pf-t--global--color--status--read--on-secondary: var(--pf-t--global--background--color--control--default);
 }
