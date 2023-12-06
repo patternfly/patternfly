@@ -1,35 +1,35 @@
 // @debug $helper-text; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 .#{$helper-text} {
-  --#{$helper-text}--Gap: var(--#{$pf-global}--spacer--xs);
-  --#{$helper-text}--FontSize: var(--#{$pf-global}--FontSize--sm);
+  --#{$helper-text}--Gap: var(--pf-t--global--spacer--xs);
+  --#{$helper-text}--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // item
-  --#{$helper-text}__item-icon--Color: var(--#{$pf-global}--Color--100);
-  --#{$helper-text}__item-text--Color: var(--#{$pf-global}--Color--100);
-  --#{$helper-text}__item-icon--m-indeterminate--Color: var(--#{$pf-global}--Color--200);
-  --#{$helper-text}__item-text--m-indeterminate--Color: var(--#{$pf-global}--Color--200);
-  --#{$helper-text}__item-icon--m-warning--Color: var(--#{$pf-global}--warning-color--100);
-  --#{$helper-text}__item-text--m-warning--Color: var(--#{$pf-global}--warning-color--200);
-  --#{$helper-text}__item-icon--m-success--Color: var(--#{$pf-global}--success-color--100);
-  --#{$helper-text}__item-text--m-success--Color: var(--#{$pf-global}--success-color--200);
-  --#{$helper-text}__item-icon--m-error--Color: var(--#{$pf-global}--danger-color--100);
-  --#{$helper-text}__item-text--m-error--Color: var(--#{$pf-global}--danger-color--200);
+  --#{$helper-text}__item-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$helper-text}__item-text--Color: var(--pf-t--global--text--color--regular);
+  --#{$helper-text}__item-icon--m-indeterminate--Color: var(--pf-t--global--icon--color--subtle);
+  --#{$helper-text}__item-text--m-indeterminate--Color: var(--pf-t--global--text--color--subtle);
+  --#{$helper-text}__item-icon--m-warning--Color: var(--pf-t--global--icon--color--status--warning--default);
+  --#{$helper-text}__item-text--m-warning--Color: var(--pf-t--global--text--color--regular);
+  --#{$helper-text}__item-icon--m-success--Color: var(--pf-t--global--icon--color--status--success--default);
+  --#{$helper-text}__item-text--m-success--Color: var(--pf-t--global--text--color--regular);
+  --#{$helper-text}__item-icon--m-error--Color: var(--pf-t--global--icon--color--status--danger--default);
+  --#{$helper-text}__item-text--m-error--Color: var(--pf-t--global--text--color--regular);
 
   // dynamic
-  --#{$helper-text}--m-dynamic__item-icon--Color: var(--#{$pf-global}--Color--100);
-  --#{$helper-text}--m-dynamic__item-text--Color: var(--#{$pf-global}--Color--100);
-  --#{$helper-text}--m-dynamic--m-indeterminate__item-icon--Color: var(--#{$pf-global}--Color--200);
-  --#{$helper-text}--m-dynamic--m-indeterminate__item-text--Color: var(--#{$pf-global}--Color--200);
-  --#{$helper-text}--m-dynamic--m-warning__item-icon--Color: var(--#{$pf-global}--warning-color--100);
+  --#{$helper-text}--m-dynamic__item-icon--Color: var(--pf-t--global--icon--color--regular);
+  --#{$helper-text}--m-dynamic__item-text--Color: var(--pf-t--global--text--color--regular);
+  --#{$helper-text}--m-dynamic--m-indeterminate__item-icon--Color: var(--pf-t--global--icon--color--subtle);
+  --#{$helper-text}--m-dynamic--m-indeterminate__item-text--Color: var(--pf-t--global--text--color--subtle);
+  --#{$helper-text}--m-dynamic--m-warning__item-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
   --#{$helper-text}--m-dynamic--m-warning__item-text--Color: var(--#{$pf-global}--Color--200);
-  --#{$helper-text}--m-dynamic--m-success__item-icon--Color: var(--#{$pf-global}--success-color--100);
+  --#{$helper-text}--m-dynamic--m-success__item-icon--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$helper-text}--m-dynamic--m-success__item-text--Color: var(--#{$pf-global}--Color--200);
-  --#{$helper-text}--m-dynamic--m-error__item-icon--Color: var(--#{$pf-global}--danger-color--100);
+  --#{$helper-text}--m-dynamic--m-error__item-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
   --#{$helper-text}--m-dynamic--m-error__item-text--Color: var(--#{$pf-global}--Color--100);
 
   // icon
-  --#{$helper-text}__item-icon--MarginRight: var(--#{$pf-global}--spacer--xs);
+  --#{$helper-text}__item-icon--MarginRight: var(--pf-t--global--spacer--xs);
 
   // text
 
