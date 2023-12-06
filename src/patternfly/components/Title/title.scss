@@ -37,32 +37,32 @@
   // HEADING modifiers 
   // h1
   --#{$title}--m-h1--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h1--FontSize: var(--pf-t--global--font--size--heading--lg);
+  --#{$title}--m-h1--FontSize: var(--pf-t--global--font--size--heading--h1);
   --#{$title}--m-h1--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h2
   --#{$title}--m-h2--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h2--FontSize: var(--pf-t--global--font--size--heading--md);
+  --#{$title}--m-h2--FontSize: var(--pf-t--global--font--size--heading--h2);
   --#{$title}--m-h2--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h3
   --#{$title}--m-h3--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h3--FontSize: var(--pf-t--global--font--size--heading--sm);
+  --#{$title}--m-h3--FontSize: var(--pf-t--global--font--size--heading--h3);
   --#{$title}--m-h3--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h4
   --#{$title}--m-h4--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h4--FontSize: var(--pf-t--global--font--size--heading--xs);
+  --#{$title}--m-h4--FontSize: var(--pf-t--global--font--size--heading--h4);
   --#{$title}--m-h4--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h5
   --#{$title}--m-h5--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h5--FontSize: var(--pf-t--global--font--size--heading--xs);
+  --#{$title}--m-h5--FontSize: var(--pf-t--global--font--size--heading--h5);
   --#{$title}--m-h5--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h6
   --#{$title}--m-h6--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$title}--m-h6--FontSize: var(--pf-t--global--font--size--heading--xs);
+  --#{$title}--m-h6--FontSize: var(--pf-t--global--font--size--heading--h6);
   --#{$title}--m-h6--FontWeight: var(--pf-t--global--font--weight--heading);
 }
 

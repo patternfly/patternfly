@@ -4,7 +4,7 @@
   // Body
   --#{$content}--MarginBottom: var(--pf-t--global--spacer--md);
   --#{$content}--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$content}--FontSize: var(--pf-t--global--font--size--body);
+  --#{$content}--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$content}--FontWeight: var(--pf-t--global--font--weight--body);
 
   // this ensures color is not overridden
@@ -17,42 +17,42 @@
   --#{$content}--h1--MarginTop: var(--pf-t--global--spacer--lg);
   --#{$content}--h1--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$content}--h1--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h1--FontSize: var(--pf-t--global--font--size--heading--lg);
+  --#{$content}--h1--FontSize: var(--pf-t--global--font--size--heading--h1);
   --#{$content}--h1--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h2
   --#{$content}--h2--MarginTop: var(--pf-t--global--spacer--lg);
   --#{$content}--h2--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$content}--h2--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h2--FontSize: var(--pf-t--global--font--size--heading--md);
+  --#{$content}--h2--FontSize: var(--pf-t--global--font--size--heading--h2);
   --#{$content}--h2--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h3
   --#{$content}--h3--MarginTop: var(--pf-t--global--spacer--lg);
   --#{$content}--h3--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$content}--h3--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h3--FontSize: var(--pf-t--global--font--size--heading--sm);
+  --#{$content}--h3--FontSize: var(--pf-t--global--font--size--heading--h3);
   --#{$content}--h3--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h4
   --#{$content}--h4--MarginTop: var(--pf-t--global--spacer--lg);
   --#{$content}--h4--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$content}--h4--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h4--FontSize: var(--pf-t--global--font--size--heading--xs);
+  --#{$content}--h4--FontSize: var(--pf-t--global--font--size--heading--h4);
   --#{$content}--h4--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h5
   --#{$content}--h5--MarginTop: var(--pf-t--global--spacer--lg);
   --#{$content}--h5--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$content}--h5--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h5--FontSize: var(--pf-t--global--font--size--heading--xs);
+  --#{$content}--h5--FontSize: var(--pf-t--global--font--size--heading--h5);
   --#{$content}--h5--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // h6
   --#{$content}--h6--MarginTop: var(--pf-t--global--spacer--lg);
   --#{$content}--h6--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$content}--h6--LineHeight: var(--pf-t--global--font--line-height--heading);
-  --#{$content}--h6--FontSize: var(--pf-t--global--font--size--heading--xs);
+  --#{$content}--h6--FontSize: var(--pf-t--global--font--size--heading--h6);
   --#{$content}--h6--FontWeight: var(--pf-t--global--font--weight--heading);
 
   // Small text

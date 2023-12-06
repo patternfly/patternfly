@@ -39,7 +39,7 @@
   --#{$accordion}__expandable-content--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$accordion}__expandable-content--BorderRadius: var(--pf-t--global--border--radius--small);
   --#{$accordion}__expandable-content--Color: var(--pf-t--global--text--color--regular);
-  --#{$accordion}__expandable-content--FontSize: var(--pf-t--global--font--size--body--md);
+  --#{$accordion}__expandable-content--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$accordion}__expandable-content--m-fixed--MaxHeight: #{pf-size-prem(150px)};
 
   // accordion expandable content body
