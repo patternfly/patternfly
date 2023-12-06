@@ -51,7 +51,7 @@
   --#{$modal-box}__description--Color: var(--pf-t--global--text--color--subtle);
   
   // Body
-  --#{$modal-box}__body--MinHeight: calc(var(--pf-t--global--font--size--body) * var(--pf-t--global--font--line-height--body)); // Allow for at least 1 line of content in the body
+  --#{$modal-box}__body--MinHeight: calc(var(--pf-t--global--font--size--body--default) * var(--pf-t--global--font--line-height--body)); // Allow for at least 1 line of content in the body
   --#{$modal-box}__body--PaddingTop: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__body--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$modal-box}__body--PaddingLeft: var(--pf-t--global--spacer--lg);

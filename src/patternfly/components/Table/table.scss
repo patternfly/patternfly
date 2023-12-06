@@ -16,7 +16,7 @@
   --#{$table}--border-width--base: var(--pf-t--global--border--width--divider--default);
 
   // Caption
-  --#{$table}__caption--FontSize: var(--pf-t--global--font--size--body);
+  --#{$table}__caption--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}__caption--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__caption--PaddingTop: var(--#{$pf-global}--spacer--md);
   --#{$table}__caption--PaddingRight: var(--#{$pf-global}--spacer--lg);
@@ -31,7 +31,7 @@
   }
 
   // Thead
-  --#{$table}__thead--cell--FontSize: var(--pf-t--global--font--size--body);
+  --#{$table}__thead--cell--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}__thead--cell--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // Tbody cell
@@ -43,7 +43,7 @@
 
   // Th / td shared variables
   --#{$table}--cell--Padding--base: var(--#{$pf-global}--spacer--md);
-  --#{$table}--cell--FontSize: var(--pf-t--global--font--size--body);
+  --#{$table}--cell--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}--cell--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$table}--cell--Color: var(--pf-t--global--text--color--regular);
   --#{$table}--cell--PaddingTop: var(--#{$table}--cell--Padding--base);
@@ -108,12 +108,12 @@
   // Check
   --#{$table}__check--input--MarginTop: #{pf-size-prem(3px)};
   --#{$table}__thead__check--input--TranslateY: var(--#{$table}__check--input--MarginTop);
-  --#{$table}__check--input--FontSize: var(--pf-t--global--font--size--body);
+  --#{$table}__check--input--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Favorite
   --#{$table}--cell--m-favorite--Color: var(--pf-t--global--text--color--subtle);
   --#{$table}__favorite--c-button--Color: var(--pf-t--global--text--color--subtle);
-  --#{$table}__favorite--c-button--FontSize: var(--pf-t--global--font--size--body);
+  --#{$table}__favorite--c-button--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}__favorite--c-button--MarginTop: calc(var(--#{$pf-global}--spacer--form-element) * -1);
   --#{$table}__favorite--c-button--MarginRight: calc(var(--#{$pf-global}--spacer--md) * -1);
   --#{$table}__favorite--c-button--MarginBottom: calc(var(--#{$pf-global}--spacer--form-element) * -1);
@@ -236,7 +236,7 @@
   --#{$table}--m-compact--cell--first-last-child--PaddingRight: var(--#{$pf-global}--spacer--md);
   --#{$table}--m-compact--cell--first-last-child--xl--PaddingLeft: var(--#{$pf-global}--spacer--lg);
   --#{$table}--m-compact--cell--first-last-child--xl--PaddingRight: var(--#{$pf-global}--spacer--lg);
-  --#{$table}--m-compact--FontSize: var(--pf-t--global--font--size--body);
+  --#{$table}--m-compact--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$table}--m-compact__expandable-row-content--PaddingTop: var(--#{$pf-global}--spacer--lg);
   --#{$table}--m-compact__expandable-row-content--PaddingRight: var(--#{$pf-global}--spacer--lg);
   --#{$table}--m-compact__expandable-row-content--PaddingBottom: var(--#{$pf-global}--spacer--lg);
