@@ -15,19 +15,6 @@
   --pf-t--global--font--weight--heading--100: 700;
   --pf-t--global--font--weight--heading--200: 700;
 
-  // TODO these are sm/def/lg? CAN BE REMOVED?
-  --pf-t--global--font--size--body--100: 12px;
-  --pf-t--global--font--size--body--200: 14px;
-  --pf-t--global--font--size--body--300: 16px;
-
-  // TODO these are h1-h6 NOT USED
-  --pf-t--global--font--size--heading--100: 16px;
-  --pf-t--global--font--size--heading--200: 18px;
-  --pf-t--global--font--size--heading--300: 20px;
-  --pf-t--global--font--size--heading--400: 22px;
-  --pf-t--global--font--size--heading--500: 28px;
-  --pf-t--global--font--size--heading--600: 36px;
-
   // Semantic tokens for fonts
   --pf-t--global--font--family--body: var(--pf-t--global--font--family--100);
   --pf-t--global--font--family--heading: var(--pf-t--global--font--family--200);
@@ -39,19 +26,13 @@
   --pf-t--global--font--weight--heading: var(--pf-t--global--font--weight--heading--100);
   --pf-t--global--font--weight--heading--bold: var(--pf-t--global--font--weight--heading--200);
 
-  // TODO USED IN COMPONENTS
-  --pf-t--global--font--size--body--sm: var(--pf-t--global--font--size--body--100); // now SMALL
-  --pf-t--global--font--size--body--md: var(--pf-t--global--font--size--body--200); // REMOVED
-  --pf-t--global--font--size--body--lg: var(--pf-t--global--font--size--body--300); // now LARGE
-  --pf-t--global--font--size--body: var(--pf-t--global--font--size--body--md); // REMOVED
-
-  // TODO USED IN COMPONENTS these are now h1-h6
-  --pf-t--global--font--size--heading--xs: var(--pf-t--global--font--size--heading--100);
-  --pf-t--global--font--size--heading--sm: var(--pf-t--global--font--size--heading--200);
-  --pf-t--global--font--size--heading--md: var(--pf-t--global--font--size--heading--300);
-  --pf-t--global--font--size--heading--lg: var(--pf-t--global--font--size--heading--400);
-  --pf-t--global--font--size--heading--xl: var(--pf-t--global--font--size--heading--500);
-  --pf-t--global--font--size--heading--2xl: var(--pf-t--global--font--size--heading--600);
+  // TODO Maintaining these in addition to the h1-h6 sizes
+  --pf-t--global--font--size--heading--xs: var(--pf-t--global--font--size--md);
+  --pf-t--global--font--size--heading--sm: var(--pf-t--global--font--size--lg);
+  --pf-t--global--font--size--heading--md: var(--pf-t--global--font--size--xl);
+  --pf-t--global--font--size--heading--lg: var(--pf-t--global--font--size--2xl);
+  --pf-t--global--font--size--heading--xl: var(--pf-t--global--font--size--3xl);
+  --pf-t--global--font--size--heading--2xl: var(--pf-t--global--font--size--4xl);
 
   // Legacy/non-variable font opt-in
   --pf-t--global--font--family--body--legacy: redhattext, helvetica, arial, sans-serif;
