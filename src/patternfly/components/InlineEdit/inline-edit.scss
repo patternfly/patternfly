@@ -2,20 +2,20 @@
 
 .#{$inline-edit} {
   // Group
-  --#{$inline-edit}__group--item--MarginRight: var(--#{$pf-global}--spacer--sm);
+  --#{$inline-edit}__group--item--MarginRight: var(--pf-t--global--spacer--sm);
 
   // Valid action
-  --#{$inline-edit}__action--c-button--m-valid--m-plain--Color: var(--#{$pf-global}--link--Color);
-  --#{$inline-edit}__action--c-button--m-valid--m-plain--hover--Color: var(--#{$pf-global}--link--Color--hover);
+  --#{$inline-edit}__action--c-button--m-valid--m-plain--Color: var(--pf-t--global--icon--color--brand--default);
+  --#{$inline-edit}__action--c-button--m-valid--m-plain--hover--Color: var(--pf-t--global--icon--color--brand--hover);
 
   // Icon button
   --#{$inline-edit}__action--m-icon-group--item--MarginRight: 0;
 
   // Footer group
-  --#{$inline-edit}__group--m-footer--MarginTop: var(--#{$pf-global}--spacer--xl);
+  --#{$inline-edit}__group--m-footer--MarginTop: var(--pf-t--global--spacer--xl);
 
   // Label
-  --#{$inline-edit}__label--m-bold--FontWeight: var(--#{$pf-global}--FontWeight--bold);
+  --#{$inline-edit}__label--m-bold--FontWeight: var(--pf-t--global--font--weight--body--bold);
 }
 
 // Group
