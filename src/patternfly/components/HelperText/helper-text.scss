@@ -1,20 +1,23 @@
 // @debug $helper-text; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
-
-.#{$helper-text} {
+:root {
   --#{$helper-text}--Gap: var(--pf-t--global--spacer--xs);
   --#{$helper-text}--FontSize: var(--pf-t--global--font--size--body--sm);
 
   // item
   --#{$helper-text}__item-icon--Color: var(--pf-t--global--icon--color--regular);
   --#{$helper-text}__item-text--Color: var(--pf-t--global--text--color--regular);
+  --#{$helper-text}__item--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$helper-text}__item-icon--m-indeterminate--Color: var(--pf-t--global--icon--color--subtle);
   --#{$helper-text}__item-text--m-indeterminate--Color: var(--pf-t--global--text--color--subtle);
   --#{$helper-text}__item-icon--m-warning--Color: var(--pf-t--global--icon--color--status--warning--default);
   --#{$helper-text}__item-text--m-warning--Color: var(--pf-t--global--text--color--regular);
+  --#{$helper-text}__item--m-warning--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$helper-text}__item-icon--m-success--Color: var(--pf-t--global--icon--color--status--success--default);
   --#{$helper-text}__item-text--m-success--Color: var(--pf-t--global--text--color--regular);
+  --#{$helper-text}__item--m-success--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$helper-text}__item-icon--m-error--Color: var(--pf-t--global--icon--color--status--danger--default);
   --#{$helper-text}__item-text--m-error--Color: var(--pf-t--global--text--color--regular);
+  --#{$helper-text}__item--m-error--FontWeight: var(--pf-t--global--font--weight--body--bold);
 
   // dynamic
   --#{$helper-text}--m-dynamic__item-icon--Color: var(--pf-t--global--icon--color--regular);
@@ -22,15 +25,17 @@
   --#{$helper-text}--m-dynamic--m-indeterminate__item-icon--Color: var(--pf-t--global--icon--color--subtle);
   --#{$helper-text}--m-dynamic--m-indeterminate__item-text--Color: var(--pf-t--global--text--color--subtle);
   --#{$helper-text}--m-dynamic--m-warning__item-icon--Color: var(--pf-t--global--icon--color--status--warning--default);
-  --#{$helper-text}--m-dynamic--m-warning__item-text--Color: var(--#{$pf-global}--Color--200);
+  --#{$helper-text}--m-dynamic--m-warning__item-text--Color: var(--pf-t--global--text--color--regular);
+  --#{$helper-text}--m-dynamic--m-warning__item--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --#{$helper-text}--m-dynamic--m-success__item-icon--Color: var(--pf-t--global--icon--color--status--success--default);
-  --#{$helper-text}--m-dynamic--m-success__item-text--Color: var(--#{$pf-global}--Color--200);
+  --#{$helper-text}--m-dynamic--m-success__item-text--Color: var(--pf-t--global--text--color--regular);
   --#{$helper-text}--m-dynamic--m-error__item-icon--Color: var(--pf-t--global--icon--color--status--danger--default);
-  --#{$helper-text}--m-dynamic--m-error__item-text--Color: var(--#{$pf-global}--Color--100);
+  --#{$helper-text}--m-dynamic--m-error__item-text--Color: var(--pf-t--global--text--color--regular);
 
   // icon
   --#{$helper-text}__item-icon--MarginRight: var(--pf-t--global--spacer--xs);
-
+}
+.#{$helper-text} {
   // text
 
   display: grid;
@@ -45,15 +50,18 @@
 
 .#{$helper-text}__item {
   display: flex;
+  font-weight: var(--#{$helper-text}__item--FontWeight);
+
 
   &.pf-m-indeterminate {
     --#{$helper-text}__item-icon--Color: var(--#{$helper-text}__item-icon--m-indeterminate--Color);
     --#{$helper-text}__item-text--Color: var(--#{$helper-text}__item-text--m-indeterminate--Color);
     --#{$helper-text}--m-dynamic__item-icon--Color: var(--#{$helper-text}--m-dynamic--m-indeterminate__item-icon--Color);
-    --#{$helper-text}--m-dynamic__item-text--Color: var(--#{$helper-text}--m-dynamic--m-indeterminate__item-text--Color);
+    --#{$helper-text}--m-dynamic__item-text--Color: var(--#{$helper-text}--m-dynamic--m-warning__item-text--Color);
   }
 
   &.pf-m-warning {
+    --#{$helper-text}__item--FontWeight: var(--#{$helper-text}__item--m-warning--FontWeight);
     --#{$helper-text}__item-icon--Color: var(--#{$helper-text}__item-icon--m-warning--Color);
     --#{$helper-text}__item-text--Color: var(--#{$helper-text}__item-text--m-warning--Color);
     --#{$helper-text}--m-dynamic__item-icon--Color: var(--#{$helper-text}--m-dynamic--m-warning__item-icon--Color);
@@ -61,13 +69,16 @@
   }
 
   &.pf-m-success {
+    --#{$helper-text}__item--FontWeight: var(--#{$helper-text}__item--m-success--FontWeight);
     --#{$helper-text}__item-icon--Color: var(--#{$helper-text}__item-icon--m-success--Color);
     --#{$helper-text}__item-text--Color: var(--#{$helper-text}__item-text--m-success--Color);
     --#{$helper-text}--m-dynamic__item-icon--Color: var(--#{$helper-text}--m-dynamic--m-success__item-icon--Color);
     --#{$helper-text}--m-dynamic__item-text--Color: var(--#{$helper-text}--m-dynamic--m-success__item-text--Color);
+    
   }
 
   &.pf-m-error {
+    --#{$helper-text}__item--FontWeight: var(--#{$helper-text}__item--m-error--FontWeight);
     --#{$helper-text}__item-icon--Color: var(--#{$helper-text}__item-icon--m-error--Color);
     --#{$helper-text}__item-text--Color: var(--#{$helper-text}__item-text--m-error--Color);
     --#{$helper-text}--m-dynamic__item-icon--Color: var(--#{$helper-text}--m-dynamic--m-error__item-icon--Color);
@@ -89,9 +100,3 @@
   color: var(--#{$helper-text}__item-text--Color);
 }
 
-// stylelint-disable no-invalid-position-at-import-rule
-@import "themes/dark/helper-text";
-
-@include pf-v5-theme-dark {
-  @include pf-v5-theme-dark-helper-text;
-}
