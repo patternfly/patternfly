@@ -388,6 +388,8 @@
       align-self: stretch;
 
       .#{$check}__input {
+        --#{$check}__input--TranslateY: 0;
+
         align-self: center;
       }
     }
