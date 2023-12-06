@@ -50,6 +50,7 @@
     font-size: var(--pf-t--global--font--size--body);
     font-weight: var(--pf-t--global--font--weight--body);
     line-height: var(--pf-t--global--font--line-height--body);
+    color: var(--pf-t--global--text--color--regular);
   }
 
   :where(
@@ -136,3 +137,9 @@
   }
 }
 
+// stylelint-disable no-invalid-position-at-import-rule
+@import "./themes/dark/globals";
+
+@include pf-v5-theme-dark {
+  @include pf-v5-theme-dark-globals;
+}
