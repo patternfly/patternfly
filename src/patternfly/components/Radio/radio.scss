@@ -1,14 +1,14 @@
 // @debug $radio; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
 :root {
-  --#{$radio}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--md);
+  --#{$radio}--GridGap: var(--pf-t--global--spacer--sm) var(--pf-t--global--spacer--sm);
   --#{$radio}--AccentColor: var(--pf-t--global--icon--color--brand--default);
   --#{$radio}__label--disabled--Color: var(--pf-t--global--text--color--disabled);
   --#{$radio}__label--Color: var(--pf-t--global--text--color--regular);
   --#{$radio}__label--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$radio}__label--FontSize: var(--pf-t--global--font--size--body);
   --#{$radio}__label--LineHeight: var(--pf-t--global--font--line-height--body);
-  --#{$radio}__input--TranslateY--moz: 5px;
+  --#{$radio}__input--TranslateY: calc((var(--#{$radio}__label--LineHeight) * var(--#{$radio}__label--FontSize) / 2 ) - 50%); // find height of single label, divide by two, offset by 50% of own height
   --#{$radio}__input--first-child--MarginLeft: #{pf-size-prem(1px)};
   --#{$radio}__input--last-child--MarginRight: #{pf-size-prem(1px)};
   --#{$radio}__description--FontSize: var(--pf-t--global--font--size--body--sm);
@@ -33,10 +33,6 @@
 
 .#{$radio}__input {
   align-self: start;
-
-  // stylelint-disable property-no-vendor-prefix
-  -moz-transform: translateY(var(--#{$radio}__input--TranslateY--moz)); // remove at breaking change - no longer needed
-  // stylelint-enable
 
   // find height of single label, divide by two, offset by 50% of own height
   transform: translateY(var(--#{$radio}__input--TranslateY));
