@@ -11,7 +11,7 @@
     "icon title action"
     ". description description"
     ". actiongroup actiongroup";
-  --#{$alert}--BorderWidth: var(--pf-t--global--border--width--200);
+  --#{$alert}--BorderWidth: var(--pf-t--global--border--width--box--status--default);
   --#{$alert}--BorderColor: transparent;
   --#{$alert}--BorderRadius: var(--pf-t--global--border--radius--medium);
   --#{$alert}--PaddingTop: var(--pf-t--global--spacer--md);
