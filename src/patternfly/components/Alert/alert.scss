@@ -18,7 +18,7 @@
   --#{$alert}--PaddingRight: var(--pf-t--global--spacer--md);
   --#{$alert}--PaddingBottom: var(--pf-t--global--spacer--md);
   --#{$alert}--PaddingLeft: var(--pf-t--global--spacer--md);
-  --#{$alert}--FontSize: var(--pf-t--global--font--size--body);
+  --#{$alert}--FontSize: var(--pf-t--global--font--size--body--default);
 
   // Toggle
   --#{$alert}__toggle--MarginTop: calc(-1 * var(--#{$pf-global}--spacer--form-element) - #{pf-size-prem(1px)});

@@ -58,7 +58,7 @@
   // main header desc
   --#{$login}__main-header-desc--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$login}__main-header-desc--md--MarginBottom: 0;
-  --#{$login}__main-header-desc--FontSize: var(--pf-t--global--font--size--body--md);
+  --#{$login}__main-header-desc--FontSize: var(--pf-t--global--font--size--body--default);
 
 
   @media (min-width: $pf-v5-global--breakpoint--md) {

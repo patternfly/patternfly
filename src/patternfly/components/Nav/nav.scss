@@ -45,7 +45,7 @@
   --#{$nav}__item--before--BorderWidth: var(--#{$pf-global}--BorderWidth--sm);
 
   // Link
-  --#{$nav}__link--FontSize: var(--pf-t--global--font--size--body);
+  --#{$nav}__link--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$nav}__link--FontWeight: var(--pf-t--global--font--weight--body);
   --#{$nav}__link--PaddingTop: var(--pf-t--global--spacer--md);
   --#{$nav}__link--PaddingRight: var(--pf-t--global--spacer--md);
@@ -232,7 +232,7 @@
   --#{$nav}__section-title--MarginBottom: var(--pf-t--global--spacer--sm);
   --#{$nav}__section-title--xl--PaddingRight: var(--pf-t--global--spacer--xl);
   --#{$nav}__section-title--xl--PaddingLeft: var(--pf-t--global--spacer--xl);
-  --#{$nav}__section-title--FontSize: var(--pf-t--global--font--size--body);
+  --#{$nav}__section-title--FontSize: var(--pf-t--global--font--size--body--default);
   --#{$nav}__section-title--Color: var(--pf-t--global--text--color--regular);
   --#{$nav}__section-title--BorderBottomColor: transparent;
   --#{$nav}__section-title--BorderBottomWidth: var(--#{$pf-global}--BorderWidth--sm);
