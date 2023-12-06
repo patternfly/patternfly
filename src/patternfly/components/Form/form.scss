@@ -221,6 +221,8 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
 }
 
 .#{$form}__group {
+  min-width: 0;
+
   &.pf-m-action {
     margin-block-start: var(--#{$form}__group--m-action--MarginTop);
     overflow: hidden; // keeps the negative bottom margin bottom on .#{$form}__actions from triggering overflow
@@ -320,8 +322,9 @@ $pf-v5-c-form--m-horizontal--breakpoint-map: build-breakpoint-map("sm", "md", "l
   }
 }
 
-
 .#{$form}__group-control {
+  min-width: 0;
+
   &.pf-m-inline {
     display: flex;
     flex-flow: row wrap;
