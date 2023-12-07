@@ -1,7 +1,0 @@
-@import "../../../../sass-utilities/themes/dark/all";
-
-@mixin pf-v5-theme-dark-helper-text() {
-  .#{$helper-text} {
-    --#{$helper-text}__item-text--m-success--Color: var(--#{$pf-global}--success-color--100);
-  }
-}
