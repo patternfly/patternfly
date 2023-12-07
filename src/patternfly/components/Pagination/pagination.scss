@@ -42,10 +42,10 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   --#{$pagination}--m-bottom--BackgroundColor: var(--pf-t--global--background--color--primary--default);
   --#{$pagination}--m-bottom--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
   --#{$pagination}--m-bottom--Bottom: 0;
+  --#{$pagination}--m-bottom--PaddingRight: var(--pf-t--global--spacer--lg);
+  --#{$pagination}--m-bottom--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--md--PaddingTop: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-bottom--md--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--md--PaddingBottom: var(--pf-t--global--spacer--md);
-  --#{$pagination}--m-bottom--md--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--xl--PaddingRight: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--xl--PaddingLeft: var(--pf-t--global--spacer--lg);
   --#{$pagination}--m-bottom--m-sticky--BoxShadow: var(--pf-t--global--box-shadow--sm--top);
@@ -63,8 +63,8 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
   }
 
   @media screen and (min-width: $pf-v5-global--breakpoint--xl) {
-    --#{$pagination}--m-bottom--md--PaddingRight: var(--#{$pagination}--m-bottom--xl--PaddingRight);
-    --#{$pagination}--m-bottom--md--PaddingLeft: var(--#{$pagination}--m-bottom--xl--PaddingLeft);
+    --#{$pagination}--m-bottom--PaddingRight: var(--#{$pagination}--m-bottom--xl--PaddingRight);
+    --#{$pagination}--m-bottom--PaddingLeft: var(--#{$pagination}--m-bottom--xl--PaddingLeft);
     --#{$pagination}__scroll-button--Width: var(--#{$pagination}__scroll-button--xl--Width);
     --#{$pagination}--m-page-insets--inset: var(--#{$pagination}--m-page-insets--xl--inset);
   }
@@ -90,8 +90,8 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     position: sticky;
     inset-block-end: var(--#{$pagination}--m-bottom--Bottom);
     justify-content: center;
-    padding-inline-start: var(--#{$pagination}--m-bottom--md--PaddingLeft);
-    padding-inline-end: var(--#{$pagination}--m-bottom--md--PaddingRight);
+    padding-inline-start: var(--#{$pagination}--m-bottom--PaddingLeft);
+    padding-inline-end: var(--#{$pagination}--m-bottom--PaddingRight);
     background-color: var(--#{$pagination}--m-bottom--BackgroundColor);
     box-shadow: var(--#{$pagination}--m-bottom--BoxShadow);
 
