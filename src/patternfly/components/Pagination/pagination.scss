@@ -90,10 +90,10 @@ $pf-v5-c-pagination--variable-map: build-spacer-map("none", "sm", "md", "lg", "x
     position: sticky;
     inset-block-end: var(--#{$pagination}--m-bottom--Bottom);
     justify-content: center;
-    background-color: var(--#{$pagination}--m-bottom--BackgroundColor);
-    box-shadow: var(--#{$pagination}--m-bottom--BoxShadow);
     padding-inline-start: var(--#{$pagination}--m-bottom--md--PaddingLeft);
     padding-inline-end: var(--#{$pagination}--m-bottom--md--PaddingRight);
+    background-color: var(--#{$pagination}--m-bottom--BackgroundColor);
+    box-shadow: var(--#{$pagination}--m-bottom--BoxShadow);
 
     &.pf-m-static {
       --#{$pagination}--m-bottom--MarginTop: 0;
