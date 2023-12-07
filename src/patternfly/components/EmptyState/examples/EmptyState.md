@@ -56,6 +56,7 @@ cssPrefix: pf-v5-c-empty-state
 ```hbs
 {{#> empty-state empty-state--modifier="pf-m-xs"}}
   {{#> empty-state-header}}
+    {{> empty-state-icon}}
     {{#> empty-state-title}}
       {{#> empty-state-title-text}}
         Empty state
@@ -64,7 +65,7 @@ cssPrefix: pf-v5-c-empty-state
   {{/empty-state-header}}
 
   {{#> empty-state-body}}
-    This represents an the empty state pattern in PatternFly. Hopefully it's simple enough to use but flexible enough to meet a variety of needs.
+    This represents an the empty state pattern in PatternFly. The icon is optional.
   {{/empty-state-body}}
 
   {{#> empty-state-footer}}
