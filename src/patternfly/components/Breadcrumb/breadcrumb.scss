@@ -1,6 +1,6 @@
 // @debug $breadcrumb; // check your variable names located in src/patternfly/sass-utilities/component-namespaces.scss
 
-:root {
+:root, .#{$breadcrumb} {
   // Breadcrumb item
   --#{$breadcrumb}__item--FontSize: var(--pf-t--global--font--size--body--sm);
   --#{$breadcrumb}__item--LineHeight: var(--pf-t--global--font--line-height--body);
