@@ -126,7 +126,6 @@
 
 .#{$empty-state}__content {
   max-width: var(--#{$empty-state}__content--MaxWidth);
-  max-width: var(--#{$empty-state}__content--RowGap);
 }
 
 .#{$empty-state}__icon {
