@@ -18,7 +18,7 @@ cssPrefix: pf-v5-c-check
 
 ### Checked
 ```hbs
-{{> check check--id="check-checked-example" check-label--text="Check checked"}}
+{{> check check--id="check-checked-example" check-label--text="Check checked" check-input--IsChecked=true}}
 ```
 
 ### Label wrapping input

@@ -29,7 +29,7 @@ cssPrefix: pf-v5-c-radio
 ### Disabled
 ```hbs
 {{> radio radio--id="radio-disabled-example" radio-label--text="Radio disabled" radio--IsDisabled=true}}
-{{> radio radio--id="radio-disabled-checked-example" radio-label--text="Radio disabled" radio--IsDisabled=true radio--IsChecked=true}}
+{{> radio radio--id="radio-disabled-checked-example" radio-label--text="Radio disabled checked" radio--IsDisabled=true radio--IsChecked=true}}
 ```
 
 ### With description
