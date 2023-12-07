@@ -1,6 +1,6 @@
-{{#> check check--modifier="pf-m-standalone"}}
-  {{#> check-input check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check" aria-labelledby="' card--id ' "')}}{{/check-input}}
-  {{#if card--IsSelectable}}
-    {{#> check-label check-label--attribute=(concat 'id="' card--id '-check-label" name="' card--id '-check" for="' card--id '-check" name="' card--id '-check"')}}{{/check-label}}
-  {{/if}}
-{{/check}}
+{{> check
+    check--IsStandalone=(inverse card--IsSelectable)
+    check-label--text=(ternary card--IsSelectable " " false)
+    check-label--attribute=(concat 'id="' card--id '-check-label" name="' card--id '-check" for="' card--id '-check" name="' card--id '-check"')
+    check-input--attribute=(concat 'id="' card--id '-check" name="' card--id '-check" aria-labelledby="' card--id ' "')
+  }}
