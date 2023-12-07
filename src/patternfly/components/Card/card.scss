@@ -149,6 +149,14 @@
   box-shadow: var(--#{$card}--BoxShadow);
 
   // SELECTABLE CARDS, CLICKABLE CARDS
+  &.pf-m-selectable {
+    // disables the gap since these have an empty label
+    // TODO - update/refactor selectable check/radio to use the standalone varioation with a <label> on the outer parent component class element
+    .#{$card}__selectable-actions :is(.#{$check}, .#{$radio}) {
+      gap: 0;
+    }
+  }
+
   &.pf-m-selectable,
   &.pf-m-clickable {
     isolation: isolate;
